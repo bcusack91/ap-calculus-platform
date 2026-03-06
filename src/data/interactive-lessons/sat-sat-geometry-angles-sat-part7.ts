@@ -2,82 +2,71 @@ export const satGeometryPart7Data = {
   topicSlug: 'sat-geometry-angles-sat',
   sections: [
     {
-      id: 'sat-geom-p7-intro',
+      id: 'geo7-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Review & Mixed Practice
+      content: `# Geometry Review & SAT Strategy
 
-**Part 7 of 7 — Review & Mixed Practice**
+**Part 7 of 7 — Comprehensive Review**
 
-Mixed geometry problems
+### Formula Quick Reference
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+| Category | Key Formulas |
+|---|---|
+| **Angles** | Triangle sum $= 180°$, exterior angle $=$ sum of remotes |
+| **Triangles** | $A = \\frac{1}{2}bh$, Pythagorean theorem: $a^2 + b^2 = c^2$ |
+| **Special △** | 30-60-90: $x, x\\sqrt{3}, 2x$; 45-45-90: $x, x, x\\sqrt{2}$ |
+| **Circles** | $C = 2\\pi r$, $A = \\pi r^2$, sector $= \\frac{\\theta}{360}$ of full |
+| **Volume** | Cylinder $= \\pi r^2 h$, Cone $= \\frac{1}{3}\\pi r^2 h$, Sphere $= \\frac{4}{3}\\pi r^3$ |
+| **Coordinate** | $d = \\sqrt{\\Delta x^2 + \\Delta y^2}$, circle: $(x-h)^2 + (y-k)^2 = r^2$ |
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Common SAT Geometry Question Patterns
+
+1. **"Find the missing angle"** → Use angle sum rules
+2. **"Find the area of the shaded region"** → Total minus unshaded
+3. **"Similar triangles"** → Set up proportions
+4. **"Volume word problem"** → Identify the shape, plug into formula
+5. **"Coordinate geometry"** → Distance, midpoint, or circle equation
+
+### Strategy: Draw It
+
+If the SAT doesn't give you a figure, **draw one yourself**. Even a rough sketch helps you avoid errors.
+
+If they DO give you a figure:
+- **"Not drawn to scale"** → Don't trust visual proportions
+- **"Figure drawn to scale"** → You can estimate to eliminate wrong answers
+
+### Top 3 Geometry Mistakes
+
+1. Using the wrong formula (mixing up circumference and area)
+2. Forgetting to take the square root when finding radius from area
+3. Not converting units (e.g., diameter given but formula needs radius)`
     },
     {
-      id: 'sat-geom-p7-check',
+      id: 'geo7-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Geometry Comprehensive Review** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-geom-p7-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-geom-p7-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: 'A right triangle has legs 5 and 12. What is the area?',
+            options: ['$30$', '$60$', '$13$', '$17$'],
+            correctAnswer: 0,
+            explanation: 'Area $= \\frac{1}{2}(5)(12) = 30$. Note: the hypotenuse is $13$ (5-12-13 triple) but that\'s the perimeter trap—the question asks for area.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'A cylinder has volume $200\\pi$ and radius 5. What is its height?',
+            options: ['$8$', '$40$', '$4$', '$10$'],
+            correctAnswer: 0,
+            explanation: '$V = \\pi r^2 h$ → $200\\pi = \\pi(25)h$ → $h = \\frac{200}{25} = 8$.'
+          },
+          {
+            question: 'Two similar triangles have areas 16 and 64. What is the ratio of their corresponding sides?',
+            options: ['$1:2$', '$1:4$', '$1:8$', '$4:16$'],
+            correctAnswer: 0,
+            explanation: 'Area ratio $= $ (side ratio)$^2$. So $\\frac{16}{64} = \\frac{1}{4} = k^2$, meaning $k = \\frac{1}{2}$. Side ratio is $1:2$.'
           }
         ]
       }
     }
   ]
-}
+};

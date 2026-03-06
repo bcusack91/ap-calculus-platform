@@ -4,6 +4,9 @@ import { ContactForm } from "@/components/contact-form";
 export const metadata: Metadata = {
   title: "Contact Us | Study Mondo",
   description: "Get in touch with Study Mondo - we'd love to hear your feedback, questions, or suggestions",
+  alternates: {
+    canonical: 'https://www.studymondo.com/contact',
+  },
 };
 
 export default function ContactPage() {

@@ -5,10 +5,14 @@ export const metadata: Metadata = {
   title: 'SAT Prep | Free Digital SAT Practice',
   description:
     'Comprehensive SAT preparation with practice tests, diagnostic assessments, interactive lessons, exit quizzes, and a score predictor. Free for all students.',
+  alternates: {
+    canonical: 'https://www.studymondo.com/sat',
+  },
   openGraph: {
     title: 'SAT Prep | Free Digital SAT Practice',
     description:
       'Master the Digital SAT with full-length practice tests, diagnostic assessments, 35+ topic quizzes, and personalized score predictions.',
+    url: 'https://www.studymondo.com/sat',
   },
 }
 

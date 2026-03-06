@@ -237,6 +237,19 @@ a:focus-visible {
   }
 }
 
+/* Dark mode scrollbar override for manual theme toggle */
+.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #6b21a8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
+
 /* Blockquote styling for interactive lessons */
 blockquote {
   background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
@@ -263,5 +276,105 @@ blockquote h2 {
   
   blockquote h2 {
     color: #a78bfa;
+  }
+}
+
+.dark blockquote {
+  background: linear-gradient(135deg, #667eea25 0%, #764ba225 100%);
+  border-left: 4px solid #7c3aed;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.dark blockquote h2 {
+  color: #a78bfa;
+}
+
+/**
+ * Gradient text accessibility: provides a solid fallback color for
+ * browsers/contexts that can't render gradient-clipped text, ensuring
+ * sufficient contrast against both light and dark backgrounds.
+ */
+.gradient-text-accessible {
+  color: #7c3aed; /* purple-600 — WCAG AA contrast on white bg */
+}
+
+.dark .gradient-text-accessible {
+  color: #a78bfa; /* purple-400 — WCAG AA contrast on dark bg */
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .gradient-text-accessible {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .dark .gradient-text-accessible {
+    color: transparent;
+  }
+}
+
+/* Respect prefers-reduced-motion for all scale/hover animations */
+@media (prefers-reduced-motion: reduce) {
+  .hover\:scale-105 {
+    transform: none !important;
+  }
+
+  .hover\:scale-\[1\.01\] {
+    transform: none !important;
+  }
+
+  .animate-pulse,
+  .animate-confetti,
+  .animate-celebration-pop {
+    animation: none !important;
+  }
+}
+
+/* Print-friendly styles — hide chrome, ads, and non-essential UI */
+@media print {
+  nav,
+  footer,
+  aside,
+  .no-print,
+  [data-ad-slot],
+  ins.adsbygoogle,
+  .adsbygoogle,
+  iframe[src*="googlesyndication"],
+  iframe[src*="googleads"],
+  button,
+  .social-share {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #555;
+  }
+
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    color: #000 !important;
+  }
+
+  img, pre, table {
+    page-break-inside: avoid;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
   }
 }

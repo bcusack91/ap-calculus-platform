@@ -2,82 +2,61 @@ export const satExpressionPart5Data = {
   topicSlug: 'sat-expression-ideas-sat',
   sections: [
     {
-      id: 'sat-expr-p5-intro',
+      id: 'ei5-intro',
       type: 'text' as const,
-      content: `
-# ✏️ Concision & Redundancy
+      content: `# Style, Tone, and Audience
 
-**Part 5 of 7 — Concision & Redundancy**
+**Part 5 of 7 — Matching Register and Purpose**
 
-Eliminating wordiness and redundant phrases
+The SAT tests whether you can adjust language to fit the passage's style, audience, and purpose.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Register Levels
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+| Register | Audience | Example |
+|---|---|---|
+| **Formal/Academic** | Scholars, specialists | "The data substantiate the hypothesis" |
+| **Professional** | General educated audience | "The study supports the theory" |
+| **Informal** | Friends, casual setting | "The study totally backs it up" |
+
+### The SAT almost always uses **professional** register. But occasionally you'll see:
+- **Science passages:** More formal, technical vocabulary
+- **Literary narratives:** More descriptive, figurative
+- **Social science:** Analytical, balanced
+
+### Consistency Rule
+
+Within a single passage, tone must stay consistent. If a passage is formal throughout, inserting a casual phrase is wrong.
+
+❌ "The researchers meticulously documented each specimen and they basically found a lot of new stuff."  
+✅ "The researchers meticulously documented each specimen and identified several previously unknown species."
+
+### Audience-Appropriate Detail
+
+When the question asks about what information to include:
+- **Expert audience:** Can skip basic definitions
+- **General audience:** Needs brief explanations of technical terms
+- **The SAT reader:** Assumed to be a general educated reader`
     },
     {
-      id: 'sat-expr-p5-check',
+      id: 'ei5-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Style & Tone Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-expr-p5-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-expr-p5-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: 'In a formal scientific passage, which phrase best replaces "Scientists figured out that the gene was messed up"?',
+            options: ['Researchers determined that the gene contained a deleterious mutation', 'Scientists found that the gene was broken', 'The gene was found to be messed up by researchers', 'Science people discovered a gene problem'],
+            correctAnswer: 0,
+            explanation: '"Researchers determined" is formal and precise. "Deleterious mutation" is proper scientific terminology. The other options use informal language ("broken," "messed up," "science people") inappropriate for an academic passage.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'A passage about art history consistently uses formal language. Which sentence best fits? "Monet\'s late works _____."',
+            options: ['demonstrate an increasingly abstract approach to color and light', 'are really amazing and beautiful paintings', 'show he was getting into different stuff toward the end', 'basically changed how everyone thought about art'],
+            correctAnswer: 0,
+            explanation: '"Demonstrate" and "increasingly abstract approach" match formal art criticism tone. The other options are too casual for the passage\'s established register.'
           }
         ]
       }
     }
   ]
-}
+};

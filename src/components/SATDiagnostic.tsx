@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
+import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import type {
   DiagnosticTestData,
   DiagnosticQuestion,
@@ -17,10 +18,7 @@ function renderLatex(text: string): string {
     (_, block: string | undefined, inline: string | undefined) => {
       const expr = block ?? inline ?? ''
       try {
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        const katex = require('katex')
-        return katex.renderToString(expr, {
-          throwOnError: false,
+        return renderKatexSync(expr, {
           displayMode: !!block,
         })
       } catch {
@@ -62,6 +60,9 @@ export default function DiagnosticTest({
   >(testData.questions.map((_, i) => ({ questionIndex: i, selectedIndex: null })))
   const [timeRemaining, setTimeRemaining] = useState(testData.timeLimitMinutes * 60)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+
+  // Pre-load KaTeX lazily on mount
+  useEffect(() => { preloadKatex() }, [])
 
   const currentQuestion = testData.questions[currentIndex]
   const currentAnswer = answers[currentIndex]

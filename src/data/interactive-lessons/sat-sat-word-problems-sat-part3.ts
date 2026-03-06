@@ -2,82 +2,52 @@ export const satWordProblemsPart3Data = {
   topicSlug: 'sat-word-problems-sat',
   sections: [
     {
-      id: 'sat-word-p3-intro',
+      id: 'wp3-intro',
       type: 'text' as const,
-      content: `
-# 🏃 Rate & Distance Problems
+      content: `# Rate × Time = Distance
 
-**Part 3 of 7 — Rate & Distance Problems**
+**Part 3 of 7 — Motion & Work Problems**
 
-$d = rt$, relative speed, meeting/catching up problems
+### The Core Formula
+$$\text{Distance} = \text{Rate} \times \text{Time} \quad (d = rt)$$
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+Rearranged: $r = d/t$ and $t = d/r$
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Same Direction Problems
+Two objects starting at the same point, going the same way:
+- The faster one gets farther ahead over time
+- Gap = (faster speed − slower speed) × time
+
+### Opposite Direction Problems
+Two objects starting at the same point, going opposite directions:
+- **Combined rate** = speed₁ + speed₂
+- Total distance apart = combined rate × time
+
+### Meeting Problems
+Two objects starting at different points, moving toward each other:
+- They cover the distance between them at a **combined rate**
+- Time to meet = total distance ÷ (speed₁ + speed₂)
+
+**Example:** City A and B are 300 miles apart. Train 1 leaves A at 60 mph, Train 2 leaves B at 40 mph. When do they meet?
+- Combined rate = 60 + 40 = 100 mph
+- Time = 300/100 = **3 hours**
+
+### Round Trip Problems
+- Average speed for a round trip ≠ average of the two speeds
+- Use: average speed = total distance / total time`
     },
     {
-      id: 'sat-word-p3-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-word-p3-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-word-p3-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'wp3-q1',
+      type: 'quiz' as const,
+      question: 'A cyclist rides 20 miles at 10 mph, then rides back the same route at 20 mph. What is the average speed for the round trip?',
+      options: [
+        '15 mph',
+        '13.3 mph',
+        '12 mph',
+        '14 mph'
+      ],
+      correctAnswer: 1,
+      explanation: 'Total distance = 20 + 20 = 40 miles. Time out = 20/10 = 2 hours. Time back = 20/20 = 1 hour. Total time = 3 hours. Average speed = 40/3 ≈ 13.3 mph. Note: this is NOT (10+20)/2 = 15.'
     }
   ]
-}
+};

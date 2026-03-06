@@ -1,30 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { unstable_cache } from 'next/cache'
 
-// Simple in-memory cache for search results (avoids duplicate DB hits)
-const searchCache = new Map<string, { data: unknown; ts: number }>()
-const CACHE_TTL = 60_000 // 1 minute
-
-export async function GET(request: NextRequest) {
-  try {
-    const { searchParams } = request.nextUrl
-    const q = searchParams.get('q')?.trim()
-
-    if (!q || q.length < 2) {
-      return NextResponse.json({ results: [], query: q })
-    }
-
-    // Check cache
-    const cacheKey = q.toLowerCase()
-    const cached = searchCache.get(cacheKey)
-    if (cached && Date.now() - cached.ts < CACHE_TTL) {
-      return NextResponse.json(cached.data)
-    }
-
-    // Split query into terms for AND-matching
+// Server-side search with Next.js cache (works in serverless environments)
+const cachedSearch = unstable_cache(
+  async (q: string) => {
     const terms = q.split(/\s+/).filter(Boolean).slice(0, 5)
 
-    // Build OR conditions per term for topics — must match ALL terms
     const topicWhere = terms.length > 1
       ? {
           AND: terms.map((term) => ({
@@ -43,7 +25,6 @@ export async function GET(request: NextRequest) {
           ],
         }
 
-    // Search topics, courses, and categories in parallel
     const [topics, courses, categories] = await Promise.all([
       prisma.topic.findMany({
         where: topicWhere,
@@ -89,13 +70,12 @@ export async function GET(request: NextRequest) {
       }),
     ])
 
-    // Score results for relevance (exact title match > partial > description only)
     const scoreTopic = (t: { title: string; description: string | null }) => {
       const ql = q.toLowerCase()
       if (t.title.toLowerCase() === ql) return 100
       if (t.title.toLowerCase().startsWith(ql)) return 80
       if (t.title.toLowerCase().includes(ql)) return 60
-      return 30 // description match
+      return 30
     }
 
     const results = [
@@ -105,7 +85,7 @@ export async function GET(request: NextRequest) {
         description: c.description,
         href: `/courses/${c.slug}`,
         context: '',
-        _score: 90, // Courses always rank high
+        _score: 90,
       })),
       ...categories.map((c) => ({
         type: 'category' as const,
@@ -125,18 +105,24 @@ export async function GET(request: NextRequest) {
       })),
     ]
       .sort((a, b) => b._score - a._score)
-      .map(({ _score, ...rest }) => rest) // Strip internal score
+      .map(({ _score, ...rest }) => rest)
 
-    const response = { results, query: q, total: results.length }
+    return { results, query: q, total: results.length }
+  },
+  undefined,
+  { revalidate: 60, tags: ['search'] }
+)
 
-    // Store in cache
-    searchCache.set(cacheKey, { data: response, ts: Date.now() })
-    // Evict old entries if cache grows
-    if (searchCache.size > 200) {
-      const oldest = [...searchCache.entries()].sort((a, b) => a[1].ts - b[1].ts)
-      for (let i = 0; i < 50; i++) searchCache.delete(oldest[i][0])
+export async function GET(request: NextRequest) {
+  try {
+    const { searchParams } = request.nextUrl
+    const q = searchParams.get('q')?.trim()
+
+    if (!q || q.length < 2) {
+      return NextResponse.json({ results: [], query: q })
     }
 
+    const response = await cachedSearch(q.toLowerCase())
     return NextResponse.json(response)
   } catch (error) {
     console.error('Search error:', error)

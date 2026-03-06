@@ -2,82 +2,63 @@ export const satCalcStrategyPart2Data = {
   topicSlug: 'sat-calculator-strategy-sat',
   sections: [
     {
-      id: 'sat-calc-p2-intro',
+      id: 'cs2-intro',
       type: 'text' as const,
-      content: `
-# 📊 Graphing Calculator Tips
+      content: `# Desmos Graphing Fundamentals
 
-**Part 2 of 7 — Graphing Calculator Tips**
+**Part 2 of 7 — Essential Desmos Skills for the SAT**
 
-Using graphs to find intersections, zeros, and extrema
+### Entering Equations
+- Type equations directly: `y = 2x + 3`
+- Use `^` for exponents: `y = x^2 - 4`
+- Use `sqrt()` for square roots: `y = sqrt(x + 1)`
+- Fractions: type `(2/3)x` or use the fraction template
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Finding Key Features
+| What You Need | What to Do in Desmos |
+|---|---|
+| x-intercepts (zeros) | Graph the equation, click where it crosses x-axis |
+| y-intercept | Look at where the graph crosses y-axis |
+| Vertex of parabola | Click the minimum/maximum point |
+| Intersection of two graphs | Enter both equations, click the intersection dot |
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### The Table Feature
+Click the equation number → "Table" to see exact x/y pairs. This is powerful for:
+- Verifying which point satisfies an equation
+- Finding a pattern in function values
+- Checking if a point is on a line
+
+### Sliders
+If you type `y = ax + b`, Desmos creates sliders for `a` and `b`. This helps you:
+- Match a graph to given constraints
+- Understand how changing a coefficient affects the graph
+- Find parameter values that satisfy conditions`
     },
     {
-      id: 'sat-calc-p2-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
+      id: 'cs2-q1',
+      type: 'quiz' as const,
+      question: 'To find where two lines intersect using Desmos, you should:',
+      options: [
+        'Enter one equation and use the table to guess',
+        'Enter both equations and click the intersection point',
+        'Solve by hand — Desmos cannot find intersections',
+        'Use the slider feature to match the lines'
+      ],
+      correctAnswer: 1,
+      explanation: 'Enter both equations (e.g., y = 2x + 1 and y = -x + 7) into Desmos. Where the graphs cross, a dot appears — click it to see the exact (x, y) coordinates.'
     },
     {
-      id: 'sat-calc-p2-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-calc-p2-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'cs2-q2',
+      type: 'quiz' as const,
+      question: 'You need to find the vertex of y = -2x² + 8x - 3. The fastest Desmos method is:',
+      options: [
+        'Complete the square by hand',
+        'Use the -b/2a formula',
+        'Graph it and click the maximum point',
+        'Create a table and scan values'
+      ],
+      correctAnswer: 2,
+      explanation: 'Type y = -2x² + 8x - 3 into Desmos. Since a is negative, the parabola opens downward. Click the highest point to see the vertex coordinates (2, 5). This takes about 5 seconds.'
     }
   ]
-}
+};

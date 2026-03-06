@@ -215,6 +215,9 @@ export default function FlashcardStudySession({ topicSlug, onComplete }: Flashca
       {/* Card */}
       <div
         onClick={() => !flipped && setFlipped(true)}
+        role="region"
+        aria-live="polite"
+        aria-label={flipped ? 'Flashcard answer' : 'Flashcard question'}
         className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 min-h-[16rem] flex flex-col items-center justify-center cursor-pointer transition-all hover:shadow-xl ${
           !flipped ? 'hover:scale-[1.01]' : ''
         }`}

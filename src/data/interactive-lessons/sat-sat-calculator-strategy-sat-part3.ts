@@ -2,82 +2,60 @@ export const satCalcStrategyPart3Data = {
   topicSlug: 'sat-calculator-strategy-sat',
   sections: [
     {
-      id: 'sat-calc-p3-intro',
+      id: 'cs3-intro',
       type: 'text' as const,
-      content: `
-# 🔢 Table Features
+      content: `# Solving Systems with Desmos
 
-**Part 3 of 7 — Table Features**
+**Part 3 of 7 — Graphical Solutions to Systems**
 
-Using tables to test values and identify patterns
+### Why Desmos Excels at Systems
+Algebraically solving systems can be tedious (substitution, elimination). Desmos finds the intersection in seconds.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Method: Graph Both Equations
+1. Enter equation 1: `y = 3x - 2`
+2. Enter equation 2: `y = -x + 6`
+3. Click the intersection dot → **(2, 4)**
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Systems with No Solution
+If the lines are **parallel** (same slope, different y-intercept), there is no intersection. Desmos shows no dot — the graphs never touch.
+
+### Systems with Infinite Solutions
+If both equations represent the **same line**, they overlap completely. This happens when one equation is a multiple of the other.
+
+### Non-Linear Systems
+Desmos handles these effortlessly:
+- Line + parabola → 0, 1, or 2 intersections
+- Two parabolas → 0, 1, 2, 3, or 4 intersections
+- Line + circle → 0, 1, or 2 intersections
+
+### SAT Trap: "How many solutions?"
+Instead of solving algebraically, graph both equations and **count the intersection points**. This is one of the biggest time-savers on the SAT.`
     },
     {
-      id: 'sat-calc-p3-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
+      id: 'cs3-q1',
+      type: 'quiz' as const,
+      question: 'The system y = x² and y = 4 has how many solutions? (Think graphically)',
+      options: [
+        '0',
+        '1',
+        '2',
+        '4'
+      ],
+      correctAnswer: 2,
+      explanation: 'y = x² is a parabola opening upward, and y = 4 is a horizontal line. They intersect at two points: (2, 4) and (-2, 4). In Desmos you\'d see two intersection dots.'
     },
     {
-      id: 'sat-calc-p3-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-calc-p3-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'cs3-q2',
+      type: 'quiz' as const,
+      question: 'If you graph two linear equations in Desmos and see parallel lines, the system has:',
+      options: [
+        'Exactly one solution',
+        'Exactly two solutions',
+        'No solution',
+        'Infinitely many solutions'
+      ],
+      correctAnswer: 2,
+      explanation: 'Parallel lines never intersect, so the system has no solution. On the SAT, this often means the answer is "no solution" or the problem asks you to find the slope/y-intercept that creates parallel lines.'
     }
   ]
-}
+};

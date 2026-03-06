@@ -1,6 +1,9 @@
 import { MetadataRoute } from 'next'
 import { prisma } from '@/lib/prisma'
 import { getAllInteractiveSlugs } from '@/data/interactive-lessons/registry'
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
 
 export const revalidate = 3600 // Revalidate every hour
 
@@ -62,6 +65,86 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
+    },
+    // SAT pages
+    {
+      url: `${baseUrl}/sat`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/sat-practice`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/sat-diagnostic`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/sat-daily-question`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/sat-score-predictor`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/sat-study-plans`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/sat-grid-in`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    // Additional pages
+    {
+      url: `${baseUrl}/dashboard`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/onboarding`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/join-class`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/topics`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/teacher`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/premium`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
   ]
 
@@ -131,5 +214,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
-  return [...staticPages, ...coursePages, ...topicPages, ...interactivePages, ...categoryPages, ...flashcardPages, ...leaderboardPage]
+  // Blog pages
+  const blogDir = path.join(process.cwd(), 'content/blog')
+  let blogPages: MetadataRoute.Sitemap = []
+  if (fs.existsSync(blogDir)) {
+    const blogFiles = fs.readdirSync(blogDir).filter((f) => f.endsWith('.mdx'))
+    blogPages = [
+      {
+        url: `${baseUrl}/blog`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      },
+      ...blogFiles.map((filename) => {
+        const filePath = path.join(blogDir, filename)
+        const fileContent = fs.readFileSync(filePath, 'utf-8')
+        const { data } = matter(fileContent)
+        return {
+          url: `${baseUrl}/blog/${filename.replace(/\.mdx$/, '')}`,
+          lastModified: data.date ? new Date(data.date) : new Date(),
+          changeFrequency: 'monthly' as const,
+          priority: 0.7,
+        }
+      }),
+    ]
+  }
+
+  return [...staticPages, ...coursePages, ...topicPages, ...interactivePages, ...categoryPages, ...flashcardPages, ...leaderboardPage, ...blogPages]
 }

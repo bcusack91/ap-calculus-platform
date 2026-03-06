@@ -2,82 +2,63 @@ export const satRWStrategyPart1Data = {
   topicSlug: 'sat-reading-writing-strategy-sat',
   sections: [
     {
-      id: 'sat-read-p1-intro',
+      id: 'rw1-intro',
       type: 'text' as const,
-      content: `
-# ⏱️ Time Management
+      content: `# R&W Module Strategy: Sentence Structure & Boundaries
 
-**Part 1 of 7 — Time Management**
+**Part 1 of 7 — Run-ons, Fragments, and Sentence Combining**
 
-Pacing strategies for the reading & writing sections
+The SAT Writing section tests your ability to identify and fix sentence structure errors. These appear in nearly every test.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Run-on Sentences (Comma Splices)
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+A **run-on** joins two independent clauses incorrectly.
+
+❌ "The experiment failed, the researchers tried again."
+
+**Four ways to fix a run-on:**
+
+| Fix | Example |
+|---|---|
+| Period | "The experiment failed. The researchers tried again." |
+| Semicolon | "The experiment failed; the researchers tried again." |
+| Comma + conjunction | "The experiment failed, so the researchers tried again." |
+| Subordinate clause | "Because the experiment failed, the researchers tried again." |
+
+### Fragments
+
+A **fragment** lacks a subject, verb, or complete thought.
+
+❌ "Running through the park on a sunny afternoon."  
+✅ "She was running through the park on a sunny afternoon."
+
+❌ "Which caused significant delays in the project."  
+✅ "The supply shortage caused significant delays in the project."
+
+### SAT Trap ⚠️
+
+Long sentences aren't automatically run-ons. A sentence can be 40+ words and still be grammatically correct if properly structured. Similarly, short "sentences" can be fragments.`
     },
     {
-      id: 'sat-read-p1-check',
+      id: 'rw1-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Sentence Structure Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-read-p1-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-read-p1-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: 'Which correctly fixes this run-on? "The museum opened in 1923, it quickly became a cultural landmark."',
+            options: ['The museum opened in 1923; it quickly became a cultural landmark.', 'The museum opened in 1923 it quickly became a cultural landmark.', 'The museum opened in 1923, becoming a cultural landmark quickly.', 'The museum, opened in 1923, it quickly became a cultural landmark.'],
+            correctAnswer: 0,
+            explanation: 'A semicolon correctly joins two related independent clauses. The original is a comma splice (two independent clauses joined by just a comma). Option C changes the meaning, and D creates a new error.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'Which is a sentence fragment? (A) "Although she studied for weeks." (B) "She studied for weeks." (C) "She studied for weeks and passed the exam."',
+            options: ['A—"Although" makes it a dependent clause that can\'t stand alone', 'B—it\'s too short to be a complete sentence', 'C—compound sentences are fragments', 'None of these are fragments'],
+            correctAnswer: 0,
+            explanation: '"Although she studied for weeks" is a dependent clause—it has a subject and verb but starts with a subordinating conjunction ("although") that makes it incomplete. It needs an independent clause to finish the thought.'
           }
         ]
       }
     }
   ]
-}
+};

@@ -1,16 +1,44 @@
 'use client'
 
 import Link from 'next/link'
-import { useSession, signOut } from 'next-auth/react'
-import { useState, useEffect, useRef } from 'react'
-import AvatarDisplay from './AvatarDisplay'
+import { useSession } from 'next-auth/react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import ThemeToggle from './ThemeToggle'
 import { AvatarData } from '@/types/avatar'
+import { NavMobileMenu } from './NavMobileMenu'
+import { NavUserMenu } from './NavUserMenu'
 
 interface CourseLink {
   slug: string
   name: string
   icon: string | null
+}
+
+/** Arrow-key navigation inside dropdown menus */
+function useDropdownKeyNav(containerRef: React.RefObject<HTMLDivElement | null>, isOpen: boolean) {
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (!isOpen || !containerRef.current) return
+    const items = containerRef.current.querySelectorAll<HTMLElement>('a, button:not([aria-haspopup])')
+    if (items.length === 0) return
+
+    const idx = Array.from(items).indexOf(document.activeElement as HTMLElement)
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      items[(idx + 1) % items.length].focus()
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      items[(idx - 1 + items.length) % items.length].focus()
+    } else if (e.key === 'Home') {
+      e.preventDefault()
+      items[0].focus()
+    } else if (e.key === 'End') {
+      e.preventDefault()
+      items[items.length - 1].focus()
+    }
+  }, [isOpen, containerRef])
+
+  return handleKeyDown
 }
 
 export function Navbar() {
@@ -23,24 +51,29 @@ export function Navbar() {
   const [courses, setCourses] = useState<CourseLink[]>([])
   const coursesRef = useRef<HTMLDivElement>(null)
   const moreRef = useRef<HTMLDivElement>(null)
-  const userMenuRef = useRef<HTMLDivElement>(null)
+
+  const coursesKeyNav = useDropdownKeyNav(coursesRef, coursesOpen)
+  const moreKeyNav = useDropdownKeyNav(moreRef, moreOpen)
 
   const isPremium = session?.user?.role === 'PREMIUM'
   const isTeacher = session?.user?.role === 'TEACHER' || session?.user?.role === 'ADMIN'
   const isAdmin = session?.user?.role === 'ADMIN'
 
-  // Fetch navbar data (courses + avatar) in a single request, cached in sessionStorage
+  // Fetch navbar data (courses + avatar) in a single request, cached in sessionStorage with TTL
   useEffect(() => {
     const cacheKey = session ? 'navData-auth' : 'navData-anon'
     const cached = sessionStorage.getItem(cacheKey)
     if (cached) {
       try {
         const parsed = JSON.parse(cached)
-        const timeoutId = setTimeout(() => {
-          setCourses(parsed.courses ?? [])
-          if (parsed.avatarData) setAvatarData(parsed.avatarData)
-        }, 0)
-        return () => clearTimeout(timeoutId)
+        // Use cached data if under 5 minutes old
+        if (parsed._ts && Date.now() - parsed._ts < 5 * 60 * 1000) {
+          const timeoutId = setTimeout(() => {
+            setCourses(parsed.courses ?? [])
+            if (parsed.avatarData) setAvatarData(parsed.avatarData)
+          }, 0)
+          return () => clearTimeout(timeoutId)
+        }
       } catch { /* fetch fresh */ }
     }
 
@@ -49,7 +82,7 @@ export function Navbar() {
       .then(data => {
         setCourses(data.courses ?? [])
         if (data.avatarData) setAvatarData(data.avatarData)
-        sessionStorage.setItem(cacheKey, JSON.stringify(data))
+        sessionStorage.setItem(cacheKey, JSON.stringify({ ...data, _ts: Date.now() }))
       })
       .catch(err => console.error('Error fetching navbar data:', err))
   }, [session])
@@ -62,9 +95,6 @@ export function Navbar() {
       }
       if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
         setMoreOpen(false)
-      }
-      if (userMenuRef.current && !userMenuRef.current.contains(e.target as Node)) {
-        setUserMenuOpen(false)
       }
     }
     function handleKeyDown(e: KeyboardEvent) {
@@ -123,7 +153,7 @@ export function Navbar() {
             </Link>
 
             {/* Courses Dropdown */}
-            <div ref={coursesRef} className="relative">
+            <div ref={coursesRef} className="relative" onKeyDown={coursesKeyNav}>
               <button
                 onClick={() => { setCoursesOpen(!coursesOpen); setMoreOpen(false); setUserMenuOpen(false) }}
                 className="transition-colors hover:text-foreground/80 flex items-center gap-1"
@@ -134,11 +164,12 @@ export function Navbar() {
                 {chevronSvg(coursesOpen)}
               </button>
               {coursesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50">
+                <div role="menu" className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50">
                   {courses.map((course) => (
                     <Link
                       key={course.slug}
                       href={`/courses/${course.slug}`}
+                      role="menuitem"
                       className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
                       onClick={() => setCoursesOpen(false)}
                     >
@@ -164,7 +195,7 @@ export function Navbar() {
             </Link>
 
             {/* More Dropdown */}
-            <div ref={moreRef} className="relative">
+            <div ref={moreRef} className="relative" onKeyDown={moreKeyNav}>
               <button
                 onClick={() => { setMoreOpen(!moreOpen); setCoursesOpen(false); setUserMenuOpen(false) }}
                 className="transition-colors hover:text-foreground/80 flex items-center gap-1"
@@ -175,14 +206,14 @@ export function Navbar() {
                 {chevronSvg(moreOpen)}
               </button>
               {moreOpen && (
-                <div className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50">
-                  <Link href="/leaderboard" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
+                <div role="menu" className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50">
+                  <Link href="/leaderboard" role="menuitem" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     🏆 Leaderboard
                   </Link>
-                  <Link href="/about" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
+                  <Link href="/about" role="menuitem" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     ℹ️ About
                   </Link>
-                  <Link href="/contact" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
+                  <Link href="/contact" role="menuitem" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setMoreOpen(false)}>
                     ✉️ Contact
                   </Link>
                 </div>
@@ -203,70 +234,16 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-3">
             {session ? (
               /* User Menu Dropdown */
-              <div ref={userMenuRef} className="relative">
-                <button
-                  onClick={() => { setUserMenuOpen(!userMenuOpen); setCoursesOpen(false); setMoreOpen(false) }}
-                  className="flex items-center gap-2 rounded-full pl-3 pr-1 py-1 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                  aria-haspopup="true"
-                  aria-expanded={userMenuOpen}
-                  aria-label="User menu"
-                >
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 max-w-[120px] truncate">
-                    {session.user?.name || session.user?.email}
-                  </span>
-                  {isPremium && (
-                    <span className="inline-flex items-center px-1.5 py-0.5 text-[10px] font-bold rounded-full bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 dark:from-purple-900 dark:to-blue-900 dark:text-purple-200">
-                      ✨ PRO
-                    </span>
-                  )}
-                  <AvatarDisplay avatarData={avatarData} size={34} className="ring-2 ring-purple-500 dark:ring-purple-400 rounded-full" />
-                </button>
-                {userMenuOpen && (
-                  <div className="absolute top-full right-0 mt-2 w-56 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50">
-                    {/* User info header */}
-                    <div className="px-4 py-2 border-b border-gray-100 dark:border-gray-700">
-                      <p className="text-sm font-medium text-gray-900 dark:text-gray-100 truncate">{session.user?.name}</p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 truncate">{session.user?.email}</p>
-                    </div>
-
-                    <Link href="/dashboard" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setUserMenuOpen(false)}>
-                      📊 Dashboard
-                    </Link>
-                    <Link href="/profile" className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-colors" onClick={() => setUserMenuOpen(false)}>
-                      👤 Profile
-                    </Link>
-
-                    {isTeacher && (
-                      <>
-                        <div className="my-1 border-t border-gray-100 dark:border-gray-700" />
-                        <Link href="/teacher" className="flex items-center gap-2 px-4 py-2 text-sm text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors" onClick={() => setUserMenuOpen(false)}>
-                          🏫 Teacher Dashboard
-                        </Link>
-                      </>
-                    )}
-                    {isAdmin && (
-                      <Link href="/admin" className="flex items-center gap-2 px-4 py-2 text-sm text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/30 transition-colors" onClick={() => setUserMenuOpen(false)}>
-                        🛡️ Admin Panel
-                      </Link>
-                    )}
-
-                    <div className="my-1 border-t border-gray-100 dark:border-gray-700" />
-
-                    {!isPremium && (
-                      <Link href="/pricing" className="flex items-center gap-2 px-4 py-2 text-sm text-amber-600 dark:text-amber-400 font-semibold hover:bg-amber-50 dark:hover:bg-amber-900/30 transition-colors" onClick={() => setUserMenuOpen(false)}>
-                        💎 Upgrade to Premium
-                      </Link>
-                    )}
-
-                    <button
-                      onClick={() => { setUserMenuOpen(false); signOut() }}
-                      className="flex items-center gap-2 w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                    >
-                      🚪 Sign Out
-                    </button>
-                  </div>
-                )}
-              </div>
+              <NavUserMenu
+                session={session}
+                avatarData={avatarData}
+                isPremium={isPremium}
+                isTeacher={isTeacher}
+                isAdmin={isAdmin}
+                isOpen={userMenuOpen}
+                onToggle={() => { setUserMenuOpen(!userMenuOpen); setCoursesOpen(false); setMoreOpen(false) }}
+                onClose={() => setUserMenuOpen(false)}
+              />
             ) : (
               <div className="flex items-center space-x-2">
                 <Link
@@ -301,101 +278,14 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t" role="menu" aria-label="Mobile navigation">
-          <div className="space-y-1 px-4 pb-3 pt-2">
-            <Link href="/topics" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={() => setMobileMenuOpen(false)}>
-              Topics
-            </Link>
-            {/* Mobile Courses List */}
-            <div className="px-3 py-2">
-              <div className="text-base font-medium text-gray-500 dark:text-gray-400 mb-1">Courses</div>
-              {courses.map((course) => (
-                <Link
-                  key={course.slug}
-                  href={`/courses/${course.slug}`}
-                  className="block pl-4 py-1.5 text-sm hover:bg-accent rounded-md"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {course.icon || '📚'} {course.name}
-                </Link>
-              ))}
-            </div>
-            <Link href="/flashcards" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={() => setMobileMenuOpen(false)}>
-              Flashcards
-            </Link>
-            <Link href="/competitive" className="block px-3 py-2 text-base font-medium text-purple-600 dark:text-purple-400 hover:bg-accent rounded-md" onClick={() => setMobileMenuOpen(false)}>
-              🎮 Competitive Mode
-            </Link>
-            <Link href="/leaderboard" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={() => setMobileMenuOpen(false)}>
-              🏆 Leaderboard
-            </Link>
-            <Link href="/pricing" className="block px-3 py-2 text-base font-medium text-amber-600 dark:text-amber-400 hover:bg-accent rounded-md" onClick={() => setMobileMenuOpen(false)}>
-              💎 Pricing
-            </Link>
-            <Link href="/about" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={() => setMobileMenuOpen(false)}>
-              About
-            </Link>
-            <Link href="/contact" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={() => setMobileMenuOpen(false)}>
-              Contact
-            </Link>
-            <Link href="/search" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={() => setMobileMenuOpen(false)}>
-              🔍 Search
-            </Link>
-            
-            {/* Mobile Auth Section */}
-            <div className="pt-4 border-t mt-2">
-              {session ? (
-                <div className="space-y-2">
-                  <Link href="/dashboard" className="block px-3 py-2 text-base font-medium text-purple-600 dark:text-purple-400 hover:bg-accent rounded-md" onClick={() => setMobileMenuOpen(false)}>
-                    📊 Dashboard
-                  </Link>
-                  <Link href="/profile" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={() => setMobileMenuOpen(false)}>
-                    👤 Profile
-                  </Link>
-                  {isTeacher && (
-                    <Link href="/teacher" className="block px-3 py-2 text-base font-medium text-blue-600 dark:text-blue-400 hover:bg-accent rounded-md" onClick={() => setMobileMenuOpen(false)}>
-                      🏫 Teacher Dashboard
-                    </Link>
-                  )}
-                  {isAdmin && (
-                    <Link href="/admin" className="block px-3 py-2 text-base font-medium text-red-600 dark:text-red-400 hover:bg-accent rounded-md" onClick={() => setMobileMenuOpen(false)}>
-                      🛡️ Admin Panel
-                    </Link>
-                  )}
-                  <Link href="/profile" className="flex items-center gap-3 px-3 py-2 hover:bg-accent rounded-md" onClick={() => setMobileMenuOpen(false)}>
-                    <AvatarDisplay avatarData={avatarData} size={40} className="ring-2 ring-purple-500 dark:ring-purple-400 rounded-full" />
-                    <div className="text-sm text-gray-700 dark:text-gray-300">
-                      {session.user?.name || session.user?.email}
-                    </div>
-                  </Link>
-                  <button
-                    onClick={() => { setMobileMenuOpen(false); signOut() }}
-                    className="block w-full text-left px-3 py-2 text-base font-medium hover:bg-accent rounded-md"
-                  >
-                    Sign Out
-                  </button>
-                </div>
-              ) : (
-                <div className="space-y-2">
-                  <Link
-                    href="/auth/signin"
-                    className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Sign In
-                  </Link>
-                  <Link
-                    href="/auth/signup"
-                    className="block px-3 py-2 text-base font-medium bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-md text-center"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Sign Up
-                  </Link>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
+        <NavMobileMenu
+          session={session}
+          courses={courses}
+          avatarData={avatarData}
+          isTeacher={isTeacher}
+          isAdmin={isAdmin}
+          onClose={() => setMobileMenuOpen(false)}
+        />
       )}
     </nav>
     </header>

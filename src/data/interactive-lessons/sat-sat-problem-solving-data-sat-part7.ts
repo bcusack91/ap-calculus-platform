@@ -2,82 +2,57 @@ export const satProbSolvDataPart7Data = {
   topicSlug: 'sat-problem-solving-data-sat',
   sections: [
     {
-      id: 'sat-prob-p7-intro',
+      id: 'psd7-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Review & Mixed Practice
+      content: `# Problem Solving & Data Review
 
-**Part 7 of 7 — Review & Mixed Practice**
+**Part 7 of 7 — Mixed Practice & Strategy**
 
-Mixed data analysis problems
+### Topic Checklist
+✓ Ratios, rates, proportions, and unit conversion
+✓ Percent increase/decrease and successive changes
+✓ Two-way tables and conditional probability
+✓ Mean, median, standard deviation, and outliers
+✓ Scatterplots, line of best fit, and residuals
+✓ Probability, expected value, and counting
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### SAT Strategy for This Section
+1. **Read the question last** — scan the table/graph first to understand the data
+2. **Identify what the denominators should be** — marginal vs. conditional probability
+3. **Watch for traps**: part-to-part vs. part-to-whole ratios
+4. **Use estimation** — if a scatterplot has a clear trend, estimate before calculating
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Common Mistakes
+- Confusing "percent increase" with "percentage points"
+- Using the wrong total for conditional probability
+- Forgetting that percent change compounds (not additive)
+- Extrapolating beyond the data range when the question asks for interpolation`
     },
     {
-      id: 'sat-prob-p7-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
+      id: 'psd7-q1',
+      type: 'quiz' as const,
+      question: 'A population grows from 1,000 to 1,210 over 2 years with constant percent growth. What is the annual growth rate?',
+      options: [
+        '10%',
+        '10.5%',
+        '21%',
+        '21.5%'
+      ],
+      correctAnswer: 0,
+      explanation: '1,000 × r² = 1,210 → r² = 1.21 → r = 1.1 → 10% annual growth. Check: 1,000 × 1.1 = 1,100. Then 1,100 × 1.1 = 1,210. ✓ Note: it\'s NOT 21%/2 = 10.5% — growth compounds.'
     },
     {
-      id: 'sat-prob-p7-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-prob-p7-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'psd7-q2',
+      type: 'quiz' as const,
+      question: 'In a two-way table, 60 out of 200 surveyed prefer Brand A. Of those 60, 45 are female. What is P(Female | Brand A)?',
+      options: [
+        '45/200',
+        '60/200',
+        '45/60',
+        '45/140'
+      ],
+      correctAnswer: 2,
+      explanation: '"Given Brand A" restricts to the 60 who prefer Brand A. Of those, 45 are female. P(Female | Brand A) = 45/60 = 3/4 = 75%.'
     }
   ]
-}
+};

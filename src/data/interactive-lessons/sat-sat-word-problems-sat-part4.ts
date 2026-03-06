@@ -2,82 +2,48 @@ export const satWordProblemsPart4Data = {
   topicSlug: 'sat-word-problems-sat',
   sections: [
     {
-      id: 'sat-word-p4-intro',
+      id: 'wp4-intro',
       type: 'text' as const,
-      content: `
-# 🔢 Mixture & Concentration
+      content: `# Mixture & Cost Problems
 
-**Part 4 of 7 — Mixture & Concentration**
+**Part 4 of 7 — Combining Values Strategically**
 
-Mixing solutions, weighted averages, alligation
+### Mixture Framework
+$$\text{amount₁ × concentration₁} + \text{amount₂ × concentration₂} = \text{total amount × final concentration}$$
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+**Example:** How many liters of 30% acid should be mixed with 10 L of 60% acid to get a 50% solution?
+- Let $x$ = liters of 30% acid
+- $0.30x + 0.60(10) = 0.50(x + 10)$
+- $0.30x + 6 = 0.50x + 5$
+- $1 = 0.20x$
+- $x = 5$ liters
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Cost/Revenue Problems
+**Revenue** = price × quantity
+**Profit** = revenue − cost
+
+**Example:** Adult tickets cost \$12, child tickets cost \$8. 200 tickets sold for \$2,000 total.
+- Let $a$ = adult tickets: $a + c = 200$ and $12a + 8c = 2000$
+- From first equation: $c = 200 - a$
+- $12a + 8(200 - a) = 2000$
+- $12a + 1600 - 8a = 2000$
+- $4a = 400 → a = 100$ adults, $c = 100$ children
+
+### Weighted Average
+$$\text{Weighted avg} = \frac{\sum (\text{value × weight})}{\sum \text{weights}}$$`
     },
     {
-      id: 'sat-word-p4-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-word-p4-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-word-p4-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'wp4-q1',
+      type: 'quiz' as const,
+      question: 'A store sells pens for $2 and notebooks for $5. If 50 items are sold for $175 total, how many pens were sold?',
+      options: [
+        '15',
+        '25',
+        '30',
+        '35'
+      ],
+      correctAnswer: 1,
+      explanation: 'Let p = pens, n = notebooks. p + n = 50 and 2p + 5n = 175. From first: n = 50 − p. Substitute: 2p + 5(50 − p) = 175 → 2p + 250 − 5p = 175 → −3p = −75 → p = 25.'
     }
   ]
-}
+};

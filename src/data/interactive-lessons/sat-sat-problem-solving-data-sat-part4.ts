@@ -2,82 +2,52 @@ export const satProbSolvDataPart4Data = {
   topicSlug: 'sat-problem-solving-data-sat',
   sections: [
     {
-      id: 'sat-prob-p4-intro',
+      id: 'psd4-intro',
       type: 'text' as const,
-      content: `
-# 📐 Counting & Combinations
+      content: `# Statistics: Center, Spread & Shape
 
-**Part 4 of 7 — Counting & Combinations**
+**Part 4 of 7 — Mean, Median, Standard Deviation**
 
-Fundamental counting principle, permutations, combinations
+### Measures of Center
+- **Mean** = sum of all values / count. Sensitive to outliers.
+- **Median** = middle value when sorted. Resistant to outliers.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### When to Use Mean vs. Median
+- **Symmetric data** → mean ≈ median, use either
+- **Skewed data or outliers** → median is more representative
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Standard Deviation
+Measures how spread out data is from the mean.
+- **Low SD** → data points close to mean (consistent)
+- **High SD** → data points far from mean (variable)
+
+You **won't** calculate SD on the SAT, but you must **compare** SDs:
+- {10, 10, 10, 10, 10} → SD = 0 (no spread)
+- {8, 9, 10, 11, 12} → small SD
+- {1, 3, 10, 17, 19} → large SD
+
+### Effect of Adding/Removing Values
+- Adding a value **equal to the mean** → mean unchanged, SD decreases
+- Adding an **outlier** → mean shifts toward outlier, SD increases
+- Removing an **outlier** → mean moves away from outlier, SD decreases
+
+### Shape of Distributions
+- **Right-skewed** (tail to right): mean > median
+- **Left-skewed** (tail to left): mean < median
+- **Symmetric**: mean ≈ median`
     },
     {
-      id: 'sat-prob-p4-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-prob-p4-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-prob-p4-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'psd4-q1',
+      type: 'quiz' as const,
+      question: 'A dataset has values {2, 3, 3, 4, 4, 4, 5, 5, 100}. Which is the better measure of center?',
+      options: [
+        'Mean, because it uses all values',
+        'Median, because the outlier 100 pulls the mean far from typical values',
+        'Mode, because 4 appears most often',
+        'Range, because it shows the full spread'
+      ],
+      correctAnswer: 1,
+      explanation: 'The outlier 100 drags the mean to about 14.4, but most values are 2-5. The median (4) better represents the typical value. On the SAT, when data has outliers, the median is usually the better measure.'
     }
   ]
-}
+};

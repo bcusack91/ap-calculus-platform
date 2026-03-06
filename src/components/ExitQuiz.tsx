@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useMemo } from 'react'
-import katex from 'katex'
+import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
 
 interface ExitQuizQuestion {
@@ -24,18 +24,18 @@ interface ExitQuizProps {
   mustRedoUnit: boolean // from last attempt
 }
 
-// Minimal LaTeX rendering using KaTeX
+// Minimal LaTeX rendering using KaTeX (uses lazy-loaded module)
 // The regex (?:[^$\\]|\\.)+ handles escaped dollar signs (\$) inside math
 function renderLatex(text: string): string {
   try {
     // Replace display math $$...$$ first
     let result = text.replace(/\$\$((?:[^$\\]|\\.)+)\$\$/g, (_match, latex) => {
-      try { return katex.renderToString(latex.trim(), { throwOnError: false, displayMode: true }) }
+      try { return renderKatexSync(latex.trim(), { displayMode: true }) }
       catch { return latex }
     })
     // Then inline math $...$
     result = result.replace(/\$((?:[^$\\]|\\.)+)\$/g, (_match, latex) => {
-      try { return katex.renderToString(latex.trim(), { throwOnError: false, displayMode: false }) }
+      try { return renderKatexSync(latex.trim(), { displayMode: false }) }
       catch { return latex }
     })
     return result
@@ -61,20 +61,24 @@ export default function ExitQuiz({
   const [quizComplete, setQuizComplete] = useState(false)
   const [startTime] = useState(Date.now())
   const [submitting, setSubmitting] = useState(false)
+  const [katexReady, setKatexReady] = useState(false)
   void topicSlug // will be used by the submit API
+
+  // Eagerly load KaTeX on mount
+  useEffect(() => { preloadKatex().then(() => setKatexReady(true)) }, [])
 
   const question = questions[currentQuestion]
   const totalQuestions = questions.length
 
   // Precompute rendered HTML for the current question
-  const renderedQuestion = useMemo(() => renderLatex(question?.question || ''), [question?.question])
+  const renderedQuestion = useMemo(() => renderLatex(question?.question || ''), [question?.question, katexReady])
   const renderedOptions = useMemo(
     () => (question?.options || []).map(o => renderLatex(o)),
-    [question?.options]
+    [question?.options, katexReady]
   )
   const renderedExplanation = useMemo(
     () => renderLatex(question?.explanation || ''),
-    [question?.explanation]
+    [question?.explanation, katexReady]
   )
 
   const handleSelectAnswer = (index: number) => {

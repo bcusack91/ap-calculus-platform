@@ -1,83 +1,52 @@
-export const satTestDayPart2Data = {
+export const satTestDayStrategyPart2Data = {
   topicSlug: 'sat-test-day-strategy-sat',
   sections: [
     {
-      id: 'sat-test-p2-intro',
+      id: 'tds2-intro',
       type: 'text' as const,
-      content: `
-# 😴 Night Before & Morning Of
+      content: `# Time Management on the Digital SAT
 
-**Part 2 of 7 — Night Before & Morning Of**
+**Part 2 of 7 — Pace Yourself for Maximum Score**
 
-Sleep, nutrition, arrival time, and mindset
+### Time Per Question
+| Section | Time | Questions | Per Question |
+|---|---|---|---|
+| R&W Module | 32 min | 27 Qs | ~71 seconds |
+| Math Module | 35 min | 22 Qs | ~95 seconds |
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### The Two-Pass Strategy
+**Pass 1 (first ~60% of time):** Answer every question you can solve quickly. Skip any question that takes more than 90 seconds.
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+**Pass 2 (remaining ~40% of time):** Return to flagged/skipped questions. By now you've banked time from the easy ones.
+
+### Flagging Strategy
+- **Flag and move on** if you've spent 90+ seconds without progress
+- **Flag and answer** — always put SOMETHING down before moving on (no penalty for wrong answers)
+- Return to flagged questions with fresh eyes
+
+### The Last 2 Minutes
+- Scan for any unanswered questions
+- Verify you haven't misread any questions
+- Don't change answers unless you're genuinely sure
+
+### Common Time Traps
+- Re-reading a passage 3+ times (limit to 2 reads max)
+- Doing algebra when Desmos would be faster
+- Second-guessing your first instinct
+- Spending 3+ minutes on one question while easy ones wait`
     },
     {
-      id: 'sat-test-p2-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-test-p2-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-test-p2-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'tds2-q1',
+      type: 'quiz' as const,
+      question: 'You have been working on a Math question for 2 minutes with no clear path forward. What should you do?',
+      options: [
+        'Keep working — you are close',
+        'Flag it, put your best guess, and move on to easier questions',
+        'Skip it entirely and leave it blank',
+        'Start over with a completely different approach'
+      ],
+      correctAnswer: 1,
+      explanation: 'After 2 minutes, the opportunity cost is high — easier questions are waiting. Flag it for review, select your best guess (no penalty for guessing), and come back with fresh eyes if time permits.'
     }
   ]
-}
+};

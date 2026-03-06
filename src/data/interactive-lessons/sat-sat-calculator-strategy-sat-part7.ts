@@ -2,82 +2,58 @@ export const satCalcStrategyPart7Data = {
   topicSlug: 'sat-calculator-strategy-sat',
   sections: [
     {
-      id: 'sat-calc-p7-intro',
+      id: 'cs7-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Practice Without Over-Relying
+      content: `# Calculator Strategy Review & Timed Practice
 
-**Part 7 of 7 — Practice Without Over-Relying**
+**Part 7 of 7 — Putting It All Together**
 
-Knowing when to put the calculator down
+### Decision Flowchart
+1. **Read the problem** — What is it asking?
+2. **Can I solve this in < 30 seconds by hand?** → Do it mentally
+3. **Does it involve a system, graph, or ugly numbers?** → Use Desmos
+4. **Am I stuck after 1 minute?** → Try graphing the scenario or backsolving with answer choices
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Speed Benchmarks
+| Task | Target Time |
+|---|---|
+| Simple equation (3x + 5 = 20) | 10-15 seconds, no calculator |
+| System of equations (graph method) | 20-30 seconds with Desmos |
+| Quadratic zeros | 15-20 seconds if factorable, 20-30 seconds with Desmos |
+| Regression from data | 30-45 seconds with Desmos |
+| Graph analysis (vertex, intercepts) | 15-25 seconds with Desmos |
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Common Calculator Mistakes
+- **Parentheses errors**: `2/3x` ≠ `(2/3)x` in Desmos
+- **Not zooming**: The intersection might be off-screen — zoom out!
+- **Over-reliance**: Don't use Desmos for 2 + 3
+- **Forgetting to verify**: Calculator gives numbers, but does the answer make sense in context?`
     },
     {
-      id: 'sat-calc-p7-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
+      id: 'cs7-q1',
+      type: 'quiz' as const,
+      question: 'A problem asks: "For what value of k does the system y = 3x + k and y = 3x - 5 have no solution?" The fastest approach is:',
+      options: [
+        'Graph both in Desmos and adjust the slider for k',
+        'Recognize that both have slope 3, so they are parallel when k ≠ -5, meaning any k ≠ -5 gives no solution',
+        'Set 3x + k = 3x - 5 and solve for k',
+        'Substitute test values for k'
+      ],
+      correctAnswer: 1,
+      explanation: 'Both lines have slope 3 (parallel). They only overlap when k = -5 (same line). For ANY other value of k, the lines are parallel with no intersection. This is conceptual — no calculator needed. The answer is "any value except -5."'
     },
     {
-      id: 'sat-calc-p7-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-calc-p7-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'cs7-q2',
+      type: 'quiz' as const,
+      question: 'Which of these SAT Math problems would take the LONGEST to solve without a calculator?',
+      options: [
+        'What is 15% of 200?',
+        'Find the intersection of y = x² - 3x + 1 and y = 2x - 3',
+        'Solve: 7x = 49',
+        'What is the slope of the line through (0, 3) and (4, 11)?'
+      ],
+      correctAnswer: 1,
+      explanation: 'Finding the intersection of a quadratic and a line requires setting x² - 3x + 1 = 2x - 3, solving x² - 5x + 4 = 0, factoring, and finding y-values. With Desmos, graph both and click — done in 10 seconds.'
     }
   ]
-}
+};

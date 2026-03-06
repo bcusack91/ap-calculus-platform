@@ -1,65 +1,499 @@
 /**
- * Exit Quiz — SAT Linear Inequalities and Graphs
- * 40 questions: solving inequalities, graphing, compound, absolute value, word problems
+ * Exit Quiz Question Pool — SAT Linear Inequalities & Graphs
+ * 40 questions with randomized numeric generation.
  */
-export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
-interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
-function randInt(a: number, b: number) { return Math.floor(Math.random() * (b - a + 1)) + a }
-function randNonZero(a: number, b: number) { let n = 0; while (n === 0) n = randInt(a, b); return n }
-function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
-function makeOptions(c: number, s = 3) { const d = new Set<number>(); while (d.size < 3) { const v = c + randInt(-s * 2, s * 2); if (v !== c) d.add(v) }; const all = shuffle([c, ...d]); return { options: all.map(String), correctIndex: all.indexOf(c) } }
-function makeStringOptions(c: string, o: string[]) { const u = o.filter(x => x !== c).slice(0, 3); while (u.length < 3) u.push('None of the above'); const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
+
+export interface ExitQuizQuestion {
+  id: string
+  question: string
+  options: string[]
+  correctIndex: number
+  explanation: string
+  category: string
+}
+
+interface QuestionTemplate {
+  id: string
+  category: string
+  generate: () => ExitQuizQuestion
+}
+
+function randInt(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+function makeOptions(correct: number, spread: number = 2): { options: string[]; correctIndex: number } {
+  const distractors = new Set<number>()
+  while (distractors.size < 3) {
+    const d = correct + randInt(-spread * 3, spread * 3)
+    if (d !== correct) distractors.add(d)
+  }
+  const all = [correct, ...distractors]
+  const shuffled = shuffle(all)
+  return { options: shuffled.map(String), correctIndex: shuffled.indexOf(correct) }
+}
+
+function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
+  const unique = others.filter(o => o !== correct).slice(0, 3)
+  while (unique.length < 3) unique.push('None of the above')
+  const all = shuffle([correct, ...unique])
+  return { options: all, correctIndex: all.indexOf(correct) }
+}
 
 const questionPool: QuestionTemplate[] = [
-  { id: 'li-q1', category: 'Solving Inequalities', generate() { const a = randNonZero(2, 6); const b = randInt(-10, 10); const x = Math.ceil(b / a); const { options, correctIndex } = makeStringOptions(`$x \\ge ${x}$`, [`$x \\le ${x}$`, `$x > ${x}$`, `$x < ${x}$`]); return { id: this.id, category: this.category, question: `Solve: $${a}x \\ge ${b}$`, options, correctIndex, explanation: `Divide both sides by ${a}: $x \\ge ${b}/${a}$, which simplifies to $x \\ge ${x}$.` } } },
-  { id: 'li-q2', category: 'Solving Inequalities', generate() { const a = randNonZero(-6, -2); const b = randInt(1, 20); const x = Math.floor(b / a); const { options, correctIndex } = makeStringOptions(`$x \\le ${x}$`, [`$x \\ge ${x}$`, `$x < ${x}$`, `$x > ${x}$`]); return { id: this.id, category: this.category, question: `Solve: $${a}x \\ge ${b}$.\n(Remember to flip the inequality when dividing by a negative!)`, options, correctIndex, explanation: `Dividing by ${a} (negative) flips the sign: $x \\le ${x}$.` } } },
-  { id: 'li-q3', category: 'Solving Inequalities', generate() { const a = randNonZero(2, 5); const b = randInt(1, 10); const c = randInt(11, 30); const x = Math.ceil((c - b) / a); const { options, correctIndex } = makeOptions(x, 3); return { id: this.id, category: this.category, question: `Solve $${a}x + ${b} < ${c}$. What is the greatest integer $x$ can be?`, options, correctIndex, explanation: `$${a}x < ${c - b}$, so $x < ${(c - b) / a}$. Greatest integer: ${x - 1} or ${x} depending on exactness.` } } },
-  { id: 'li-q4', category: 'Solving Inequalities', generate() { const a = randNonZero(2, 4); const b = randInt(-5, 5); const c = randInt(1, 10); const val = (c - b); const { options, correctIndex } = makeStringOptions(`$x > ${val / a}$`, [`$x < ${val / a}$`, `$x \\ge ${val / a}$`, `$x \\le ${val / a}$`]); return { id: this.id, category: this.category, question: `Solve: $${a}x + ${b} > ${c}$`, options, correctIndex, explanation: `Subtract ${b}: $${a}x > ${val}$. Divide by ${a}: $x > ${val / a}$.` } } },
-  { id: 'li-q5', category: 'Solving Inequalities', generate() { const a = randNonZero(2, 5); const b = randInt(1, 10); const { options, correctIndex } = makeStringOptions('Flip the inequality sign', ['Keep the inequality sign', 'Remove the inequality', 'Square both sides']); return { id: this.id, category: this.category, question: `When dividing both sides of an inequality by a negative number, you must:`, options, correctIndex, explanation: `Dividing by a negative reverses the direction of the inequality.` } } },
-  { id: 'li-q6', category: 'Graphing', generate() { const { options, correctIndex } = makeStringOptions('Open circle at 3, shade left', ['Closed circle at 3, shade left', 'Open circle at 3, shade right', 'Closed circle at 3, shade right']); return { id: this.id, category: this.category, question: `Which describes the graph of $x < 3$ on a number line?`, options, correctIndex, explanation: `$x < 3$: open circle (not included) at 3, shade left (values less than 3).` } } },
-  { id: 'li-q7', category: 'Graphing', generate() { const { options, correctIndex } = makeStringOptions('Closed circle at -2, shade right', ['Open circle at -2, shade right', 'Closed circle at -2, shade left', 'Open circle at -2, shade left']); return { id: this.id, category: this.category, question: `Which describes the graph of $x \\ge -2$?`, options, correctIndex, explanation: `$x \\ge -2$: closed circle (included) at -2, shade right.` } } },
-  { id: 'li-q8', category: 'Graphing', generate() { const m = randNonZero(1, 3); const b = randInt(-4, 4); const { options, correctIndex } = makeStringOptions('Dashed line, shade below', ['Solid line, shade below', 'Dashed line, shade above', 'Solid line, shade above']); return { id: this.id, category: this.category, question: `To graph $y < ${m}x + ${b}$, you would draw a:`, options, correctIndex, explanation: `Strict inequality (<) → dashed line. $y <$ means shade below.` } } },
-  { id: 'li-q9', category: 'Graphing', generate() { const m = randNonZero(-3, 3); const b = randInt(-5, 5); const { options, correctIndex } = makeStringOptions('Solid line, shade above', ['Dashed line, shade above', 'Solid line, shade below', 'Dashed line, shade below']); return { id: this.id, category: this.category, question: `To graph $y \\ge ${m}x + ${b}$, you draw:`, options, correctIndex, explanation: `Non-strict (≥) → solid line. $y \\ge$ means shade above.` } } },
-  { id: 'li-q10', category: 'Graphing', generate() { const x = randInt(-3, 3); const y = randInt(-3, 3); const m = randNonZero(1, 3); const b = y - m * x - 1; const check = y < m * x + b + 1 ? 'Yes' : 'No'; const { options, correctIndex } = makeStringOptions(check, ['Yes', 'No', 'On the boundary']); return { id: this.id, category: this.category, question: `Is $(${x}, ${y})$ in the solution of $y < ${m}x + ${b + 1}$?`, options, correctIndex, explanation: `Check: $${y} < ${m}(${x}) + ${b + 1} = ${m * x + b + 1}$. ${y} < ${m * x + b + 1}: ${check}.` } } },
-  { id: 'li-q11', category: 'Compound Inequalities', generate() { const a = randInt(-5, 0); const b = randInt(1, 8); const { options, correctIndex } = makeStringOptions(`$${a} \\le x \\le ${b}$`, [`$x \\le ${a}$ or $x \\ge ${b}$`, `$${a} < x < ${b}$`, `$x < ${a}$ and $x > ${b}$`]); return { id: this.id, category: this.category, question: `Solve: $${a} \\le x$ AND $x \\le ${b}$`, options, correctIndex, explanation: `The AND of both gives $${a} \\le x \\le ${b}$.` } } },
-  { id: 'li-q12', category: 'Compound Inequalities', generate() { const a = randInt(-3, 0); const b = randInt(3, 8); const { options, correctIndex } = makeStringOptions(`$x < ${a}$ or $x > ${b}$`, [`$${a} < x < ${b}$`, `$x \\le ${a}$ and $x \\ge ${b}$`, `$${a} \\le x \\le ${b}$`]); return { id: this.id, category: this.category, question: `Solve: $x < ${a}$ OR $x > ${b}$`, options, correctIndex, explanation: `OR means the union: values less than ${a} or greater than ${b}.` } } },
-  { id: 'li-q13', category: 'Compound Inequalities', generate() { const lo = randInt(1, 5); const hi = lo + randInt(3, 8); const mid = randInt(lo, hi); const count = hi - lo + 1; const { options, correctIndex } = makeOptions(count, 3); return { id: this.id, category: this.category, question: `How many integers satisfy $${lo} \\le x \\le ${hi}$?`, options, correctIndex, explanation: `Integers from ${lo} to ${hi} inclusive: $${hi} - ${lo} + 1 = ${count}$.` } } },
-  { id: 'li-q14', category: 'Compound Inequalities', generate() { const a = randInt(1, 5); const b = a + randInt(4, 10); const c = randInt(2, 4); const lo = Math.ceil(a / c); const hi = Math.floor(b / c); const { options, correctIndex } = makeStringOptions(`$${lo} \\le x \\le ${hi}$`, [`$${lo} < x < ${hi}$`, `$x = ${lo}$`, `No solution`]); return { id: this.id, category: this.category, question: `Solve: $${a} \\le ${c}x \\le ${b}$`, options, correctIndex, explanation: `Divide all parts by ${c}: $${a / c} \\le x \\le ${b / c}$.` } } },
-  { id: 'li-q15', category: 'Compound Inequalities', generate() { const a = randInt(-10, -1); const b = randInt(1, 10); const { options, correctIndex } = makeStringOptions(`$${a} < x < ${b}$`, [`$x < ${a}$ or $x > ${b}$`, `$x = ${a}$ or $x = ${b}$`, `All real numbers`]); return { id: this.id, category: this.category, question: `Solve: $|x - ${Math.floor((a + b) / 2)}| < ${Math.floor((b - a) / 2)}$ (approximately)`, options, correctIndex, explanation: `The absolute value inequality gives a range centered around the midpoint.` } } },
-  { id: 'li-q16', category: 'Absolute Value', generate() { const a = randInt(1, 8); const { options, correctIndex } = makeStringOptions(`$-${a} < x < ${a}$`, [`$x < -${a}$ or $x > ${a}$`, `$x = ${a}$ or $x = -${a}$`, `$-${a} \\le x \\le ${a}$`]); return { id: this.id, category: this.category, question: `Solve: $|x| < ${a}$`, options, correctIndex, explanation: `$|x| < ${a}$ means $-${a} < x < ${a}$.` } } },
-  { id: 'li-q17', category: 'Absolute Value', generate() { const a = randInt(2, 7); const { options, correctIndex } = makeStringOptions(`$x < -${a}$ or $x > ${a}$`, [`$-${a} < x < ${a}$`, `$x = \\pm ${a}$`, `$-${a} \\le x \\le ${a}$`]); return { id: this.id, category: this.category, question: `Solve: $|x| > ${a}$`, options, correctIndex, explanation: `$|x| > ${a}$ means $x < -${a}$ or $x > ${a}$.` } } },
-  { id: 'li-q18', category: 'Absolute Value', generate() { const c = randInt(1, 5); const d = randInt(1, 6); const lo = c - d; const hi = c + d; const { options, correctIndex } = makeStringOptions(`$${lo} \\le x \\le ${hi}$`, [`$x \\le ${lo}$ or $x \\ge ${hi}$`, `$${lo} < x < ${hi}$`, `No solution`]); return { id: this.id, category: this.category, question: `Solve: $|x - ${c}| \\le ${d}$`, options, correctIndex, explanation: `$|x - ${c}| \\le ${d}$ → $-${d} \\le x - ${c} \\le ${d}$ → $${lo} \\le x \\le ${hi}$.` } } },
-  { id: 'li-q19', category: 'Absolute Value', generate() { const c = randInt(1, 5); const d = randInt(1, 6); const lo = c - d; const hi = c + d; const { options, correctIndex } = makeStringOptions(`$x < ${lo}$ or $x > ${hi}$`, [`$${lo} < x < ${hi}$`, `$${lo} \\le x \\le ${hi}$`, `No solution`]); return { id: this.id, category: this.category, question: `Solve: $|x - ${c}| > ${d}$`, options, correctIndex, explanation: `$|x - ${c}| > ${d}$ → $x - ${c} < -${d}$ or $x - ${c} > ${d}$ → $x < ${lo}$ or $x > ${hi}$.` } } },
-  { id: 'li-q20', category: 'Absolute Value', generate() { const { options, correctIndex } = makeStringOptions('No solution', ['$x = 0$', 'All real numbers', '$x = -3$']); return { id: this.id, category: this.category, question: `Solve: $|x + 1| < -3$`, options, correctIndex, explanation: `Absolute value is always ≥ 0, so it can never be less than -3. No solution.` } } },
-  { id: 'li-q21', category: 'Word Problems', generate() { const target = randInt(80, 95); const s1 = randInt(60, 90); const s2 = randInt(65, 95); const s3 = randInt(70, 90); const need = 4 * target - s1 - s2 - s3; const { options, correctIndex } = makeOptions(need, 5); return { id: this.id, category: this.category, question: `To average at least ${target} on 4 tests with scores ${s1}, ${s2}, ${s3}, what minimum score is needed on the 4th test?`, options, correctIndex, explanation: `Need total ≥ ${4 * target}. Current total = ${s1 + s2 + s3}. Need ≥ ${need}.` } } },
-  { id: 'li-q22', category: 'Word Problems', generate() { const fixed = randInt(20, 50); const per = randInt(2, 8); const budget = randInt(80, 200); const max = Math.floor((budget - fixed) / per); const { options, correctIndex } = makeOptions(max, 4); return { id: this.id, category: this.category, question: `A taxi costs \\$${fixed} plus \\$${per}/mile. With \\$${budget}, what's the maximum whole miles?`, options, correctIndex, explanation: `$${fixed} + ${per}m \\le ${budget}$ → $m \\le ${(budget - fixed) / per}$ → max ${max} miles.` } } },
-  { id: 'li-q23', category: 'Word Problems', generate() { const rate = randInt(10, 20); const bonus = randInt(50, 100); const target = randInt(300, 600); const minH = Math.ceil((target - bonus) / rate); const { options, correctIndex } = makeOptions(minH, 3); return { id: this.id, category: this.category, question: `You earn \\$${rate}/hour plus a \\$${bonus} bonus. To earn at least \\$${target}, minimum hours needed?`, options, correctIndex, explanation: `$${rate}h + ${bonus} \\ge ${target}$ → $h \\ge ${(target - bonus) / rate}$ → at least ${minH} hours.` } } },
-  { id: 'li-q24', category: 'Word Problems', generate() { const n = randInt(3, 8); const min = randInt(70, 85); const total = min * n; const { options, correctIndex } = makeOptions(total, 15); return { id: this.id, category: this.category, question: `The average of ${n} numbers must be at least ${min}. What is the minimum sum?`, options, correctIndex, explanation: `Minimum sum = ${n} × ${min} = ${total}.` } } },
-  { id: 'li-q25', category: 'Word Problems', generate() { const p = randInt(5, 15); const c = randInt(100, 300); const s = randInt(20, 40); const breakEven = Math.ceil(c / (s - p)); const { options, correctIndex } = makeOptions(breakEven, 5); return { id: this.id, category: this.category, question: `Cost is \\$${p}/unit to make, with \\$${c} fixed costs. Selling at \\$${s}/unit, minimum units to profit?`, options, correctIndex, explanation: `Profit when $${s}n > ${p}n + ${c}$ → $${s - p}n > ${c}$ → $n > ${c / (s - p)}$ → at least ${breakEven} units.` } } },
-  // More graphing and SAT-style
-  { id: 'li-q26', category: 'Graphing', generate() { const { options, correctIndex } = makeStringOptions('The region where the shadings overlap', ['The union of all shaded regions', 'Only the boundary lines', 'The region outside both inequalities']); return { id: this.id, category: this.category, question: `When graphing a system of linear inequalities, the solution is:`, options, correctIndex, explanation: `The solution to a system of inequalities is the intersection (overlap) of all individual solution regions.` } } },
-  { id: 'li-q27', category: 'Graphing', generate() { const { options, correctIndex } = makeStringOptions('$(0, 0)$', ['$(3, 5)$', '$(−2, 4)$', '$(1, 6)$']); return { id: this.id, category: this.category, question: `Which point satisfies both $y \\le 2x + 3$ and $y \\ge -x + 1$ and $x \\ge -1$?`, options, correctIndex, explanation: `Check $(0,0)$: $0 \\le 3$ ✓, $0 \\ge 1$? No. Let me recheck — $0 \\ge -0 + 1 = 1$? $0 \\ge 1$ is false. Actually $(1, 2)$ might work better. The question tests substitution skills.` } } },
-  { id: 'li-q28', category: 'SAT-Style', generate() { const a = randNonZero(2, 5); const b = randInt(1, 10); const x = randInt(1, 8); const valLeft = a * x + b; const { options, correctIndex } = makeStringOptions(valLeft > 20 ? 'True' : 'False', ['True', 'False', 'Cannot determine']); return { id: this.id, category: this.category, question: `If $x = ${x}$, is $${a}x + ${b} > 20$ true?`, options, correctIndex, explanation: `$${a}(${x}) + ${b} = ${valLeft}$. ${valLeft} > 20 is ${valLeft > 20 ? 'true' : 'false'}.` } } },
-  { id: 'li-q29', category: 'SAT-Style', generate() { const n = randInt(3, 8); const total = n * 75; const needed = total; const { options, correctIndex } = makeOptions(needed, 20); return { id: this.id, category: this.category, question: `The average of ${n} test scores must be at least 75. What minimum total is needed?`, options, correctIndex, explanation: `Total ≥ ${n} × 75 = ${needed}.` } } },
-  { id: 'li-q30', category: 'SAT-Style', generate() { const m = randNonZero(-3, 3); const b = randInt(-5, 5); const pX = randInt(-3, 3); const pY = m * pX + b - 2; const check = pY < m * pX + b; const { options, correctIndex } = makeStringOptions(check ? 'In the solution region' : 'Not in the solution region', ['In the solution region', 'Not in the solution region', 'On the boundary line']); return { id: this.id, category: this.category, question: `Is $(${pX}, ${pY})$ in the solution of $y < ${m}x + ${b}$?`, options, correctIndex, explanation: `$${pY} < ${m}(${pX}) + ${b} = ${m * pX + b}$? ${pY} < ${m * pX + b}: ${check}.` } } },
-  { id: 'li-q31', category: 'Solving Inequalities', generate() { const a = randNonZero(2, 5); const b = randInt(-10, 10); const c = randInt(-5, 15); const val = c - b; const { options, correctIndex } = makeStringOptions(`$x < \\frac{${val}}{${a}}$`, [`$x > \\frac{${val}}{${a}}$`, `$x \\le \\frac{${val}}{${a}}$`, `$x \\ge \\frac{${val}}{${a}}$`]); return { id: this.id, category: this.category, question: `Solve: $${a}x + ${b} < ${c}$`, options, correctIndex, explanation: `$${a}x < ${val}$ → $x < \\frac{${val}}{${a}}$.` } } },
-  { id: 'li-q32', category: 'Solving Inequalities', generate() { const a = randNonZero(-5, -2); const b = randInt(1, 10); const c = randInt(-10, 0); const val = c - b; const { options, correctIndex } = makeStringOptions(`$x \\le \\frac{${val}}{${a}}$`, [`$x \\ge \\frac{${val}}{${a}}$`, `$x < \\frac{${val}}{${a}}$`, `$x > \\frac{${val}}{${a}}$`]); return { id: this.id, category: this.category, question: `Solve: $${a}x + ${b} \\ge ${c}$`, options, correctIndex, explanation: `$${a}x \\ge ${val}$. Dividing by ${a} (negative) flips: $x \\le \\frac{${val}}{${a}}$.` } } },
-  { id: 'li-q33', category: 'Graphing', generate() { const { options, correctIndex } = makeStringOptions('A half-plane', ['A line segment', 'A single point', 'A parabola']); return { id: this.id, category: this.category, question: `The solution set of a linear inequality in two variables is:`, options, correctIndex, explanation: `A linear inequality in two variables defines a half-plane (one side of a line).` } } },
-  { id: 'li-q34', category: 'Compound Inequalities', generate() { const a = randInt(1, 3); const b = randInt(5, 10); const c = randInt(2, 4); const { options, correctIndex } = makeStringOptions(`$\\frac{${a}}{${c}} < x < \\frac{${b}}{${c}}$`, [`$x < \\frac{${a}}{${c}}$ or $x > \\frac{${b}}{${c}}$`, `$x = \\frac{${a}}{${c}}$`, 'No solution']); return { id: this.id, category: this.category, question: `Solve: $${a} < ${c}x < ${b}$`, options, correctIndex, explanation: `Divide all parts by ${c}: $\\frac{${a}}{${c}} < x < \\frac{${b}}{${c}}$.` } } },
-  { id: 'li-q35', category: 'SAT-Style', generate() { const budget = randInt(50, 100); const priceA = randInt(3, 8); const priceB = randInt(5, 12); const { options, correctIndex } = makeStringOptions(`$${priceA}x + ${priceB}y \\le ${budget}$`, [`$${priceA}x + ${priceB}y \\ge ${budget}$`, `$${priceA}x + ${priceB}y = ${budget}$`, `$${priceA}x + ${priceB}y < 0$`]); return { id: this.id, category: this.category, question: `Item A costs \\$${priceA} and item B costs \\$${priceB}. With a \\$${budget} budget, which inequality models the constraint?`, options, correctIndex, explanation: `Total cost $${priceA}x + ${priceB}y$ must not exceed budget: $\\le ${budget}$.` } } },
-  { id: 'li-q36', category: 'SAT-Style', generate() { const total = randInt(20, 40); const { options, correctIndex } = makeStringOptions(`$x + y \\le ${total}$, $x \\ge 0$, $y \\ge 0$`, [`$x + y \\ge ${total}$`, `$xy \\le ${total}$`, `$x - y \\le ${total}$`]); return { id: this.id, category: this.category, question: `A store can stock at most ${total} items of types A and B. Which system models this? ($x$ = type A, $y$ = type B)`, options, correctIndex, explanation: `$x + y \\le ${total}$ with $x \\ge 0$, $y \\ge 0$ (can't have negative items).` } } },
-  { id: 'li-q37', category: 'Absolute Value', generate() { const c = randInt(2, 8); const { options, correctIndex } = makeStringOptions('All real numbers', ['$x = 0$', 'No solution', `$x = ${c}$`]); return { id: this.id, category: this.category, question: `Solve: $|x + 1| \\ge -${c}$`, options, correctIndex, explanation: `Absolute value is always ≥ 0 ≥ -${c}, so all real numbers satisfy this.` } } },
-  { id: 'li-q38', category: 'Word Problems', generate() { const minAge = randInt(16, 18); const maxAge = randInt(60, 65); const { options, correctIndex } = makeStringOptions(`$${minAge} \\le a \\le ${maxAge}$`, [`$a \\ge ${minAge}$`, `$a \\le ${maxAge}$`, `$a = ${minAge}$ or $a = ${maxAge}$`]); return { id: this.id, category: this.category, question: `To work at a company, age $a$ must be at least ${minAge} and at most ${maxAge}. Write the inequality.`, options, correctIndex, explanation: `$${minAge} \\le a \\le ${maxAge}$ represents the valid age range.` } } },
-  { id: 'li-q39', category: 'Word Problems', generate() { const base = randInt(500, 1000); const comm = randInt(5, 15); const goal = randInt(2000, 5000); const minSales = Math.ceil((goal - base) * 100 / comm); const { options, correctIndex } = makeOptions(Math.ceil((goal - base) / (comm / 100)), 200); return { id: this.id, category: this.category, question: `Salary is \\$${base} + ${comm}% commission. To earn at least \\$${goal}, minimum sales needed?`, options, correctIndex, explanation: `$${base} + 0.${comm < 10 ? '0' + comm : comm} \\cdot s \\ge ${goal}$. Solve for $s$.` } } },
-  { id: 'li-q40', category: 'SAT-Style', generate() { const a = randInt(2, 6); const b = randInt(1, 10); const soln = Math.ceil(b / a); const { options, correctIndex } = makeOptions(soln, 2); return { id: this.id, category: this.category, question: `What is the smallest positive integer $n$ such that $${a}n \\ge ${b}$?`, options, correctIndex, explanation: `$n \\ge ${b / a}$. The smallest positive integer is ${soln}.` } } },
+  {
+    id: 'liq-q1',
+    category: 'Slope-Intercept Inequalities',
+
+    generate() {
+      const m = randInt(1, 5)
+      const b = randInt(-8, 8)
+      const ops = ['<', '>', '\\u2264', '\\u2265']
+      const op = ops[randInt(0, 3)]
+      const correct = `y ${op} ${m}x ${b >= 0 ? '+ ' + b : '- ' + Math.abs(b)}`
+      return { id: this.id, category: this.category, question: `A line has slope ${m} and y-intercept ${b}. Which inequality represents all points on or below the line?`, ...makeStringOptions(correct, [`y > ${m}x + ${b}`, `y = ${m}x + ${b}`, `x ${op} ${m}y + ${b}`]), explanation: `The line equation is y = ${m}x + ${b}. Points below use y < or y \\u2264.` }
+    }
+  },
+  {
+    id: 'liq-q2',
+    category: 'Slope-Intercept Inequalities',
+
+    generate() {
+      const m = randInt(-4, -1)
+      const b = randInt(1, 10)
+      const correct = `y > ${m}x + ${b}`
+      return { id: this.id, category: this.category, question: `Which inequality represents the region above the line y = ${m}x + ${b}?`, ...makeStringOptions(correct, [`y < ${m}x + ${b}`, `y = ${m}x + ${b}`, `y \\u2264 ${m}x + ${b}`]), explanation: `The region above a line is represented by y > mx + b.` }
+    }
+  },
+  {
+    id: 'liq-q3',
+    category: 'Slope-Intercept Inequalities',
+
+    generate() {
+      const m = randInt(1, 3)
+      const b = randInt(-5, 5)
+      const x = randInt(0, 6)
+      const boundary = m * x + b
+      const testY = boundary + randInt(1, 5)
+      const correct = testY > boundary ? 'Above the line (satisfies y > mx + b)' : 'Below the line'
+      return { id: this.id, category: this.category, question: `Does the point (${x}, ${testY}) satisfy y > ${m}x + ${b}? The boundary value at x = ${x} is ${boundary}.`, ...makeStringOptions(correct, ['Below the line', 'On the line exactly', 'Cannot be determined']), explanation: `At x = ${x}, mx + b = ${boundary}. Since ${testY} > ${boundary}, the point is above the line.` }
+    }
+  },
+  {
+    id: 'liq-q4',
+    category: 'Slope-Intercept Inequalities',
+
+    generate() {
+      const m = randInt(1, 4)
+      const b = randInt(-6, 6)
+      const correct = 'Dashed (strict inequality excludes boundary)'
+      return { id: this.id, category: this.category, question: `When graphing y < ${m}x + ${b}, what type of boundary line is used?`, ...makeStringOptions(correct, ['Solid line', 'Dotted then solid', 'No boundary line']), explanation: 'Strict inequalities (< or >) use dashed lines because points on the line are NOT included.' }
+    }
+  },
+  {
+    id: 'liq-q5',
+    category: 'Slope-Intercept Inequalities',
+
+    generate() {
+      const m = randInt(1, 3)
+      const b = randInt(1, 8)
+      const correct = 'Solid (includes boundary points)'
+      return { id: this.id, category: this.category, question: `When graphing y \\u2265 ${m}x + ${b}, what type of boundary line is used?`, ...makeStringOptions(correct, ['Dashed line', 'No boundary', 'Double line']), explanation: 'Non-strict inequalities (\\u2264 or \\u2265) use solid lines because boundary points ARE included.' }
+    }
+  },
+  {
+    id: 'liq-q6',
+    category: 'Slope-Intercept Inequalities',
+
+    generate() {
+      const a = randInt(1, 4)
+      const b = randInt(1, 6)
+      const total = randInt(20, 50)
+      const correct = `${a}x + ${b}y \\u2264 ${total}`
+      return { id: this.id, category: this.category, question: `A store sells item A for $${a} and item B for $${b}. A customer has $${total}. Which inequality models the possible purchase combinations?`, ...makeStringOptions(correct, [`${a}x + ${b}y \\u2265 ${total}`, `${a}x + ${b}y = ${total}`, `${a}x - ${b}y \\u2264 ${total}`]), explanation: `Total cost ${a}x + ${b}y must not exceed budget ${total}, so we use \\u2264.` }
+    }
+  },
+  {
+    id: 'liq-q7',
+    category: 'Slope-Intercept Inequalities',
+
+    generate() {
+      const m = randInt(2, 5)
+      const b = randInt(-4, 4)
+      const correct = `(0, ${b - 1})`
+      return { id: this.id, category: this.category, question: `Which point is in the solution region of y < ${m}x + ${b}?`, ...makeStringOptions(correct, [`(0, ${b + 1})`, `(0, ${b})`, `(1, ${m + b + 2})`]), explanation: `At x = 0, the boundary is y = ${b}. Since ${b - 1} < ${b}, the point (0, ${b - 1}) satisfies y < ${m}x + ${b}.` }
+    }
+  },
+  {
+    id: 'liq-q8',
+    category: 'Slope-Intercept Inequalities',
+
+    generate() {
+      const m = randInt(1, 3)
+      const b = randInt(0, 5)
+      const correct = 'The half-plane below the line, not including the line'
+      return { id: this.id, category: this.category, question: `Describe the solution set of y < ${m}x + ${b}.`, ...makeStringOptions(correct, ['The half-plane above the line', 'Only points on the line', 'The entire coordinate plane']), explanation: 'y < mx + b represents all points strictly below the boundary line.' }
+    }
+  },
+  {
+    id: 'liq-q9',
+    category: 'Systems of Inequalities',
+
+    generate() {
+      const m1 = randInt(1, 3); const b1 = randInt(0, 5)
+      const m2 = randInt(-3, -1); const b2 = randInt(1, 8)
+      const correct = 'The overlapping shaded region of both inequalities'
+      return { id: this.id, category: this.category, question: `What does the solution set of y \\u2264 ${m1}x + ${b1} AND y \\u2265 ${m2}x + ${b2} represent?`, ...makeStringOptions(correct, ['The union of both regions', 'Only the boundary lines', 'No solution exists']), explanation: 'A system of inequalities is solved by the intersection (overlap) of the individual solution regions.' }
+    }
+  },
+  {
+    id: 'liq-q10',
+    category: 'Systems of Inequalities',
+
+    generate() {
+      const a = randInt(2, 5); const b = randInt(2, 5); const c = randInt(20, 40)
+      const correct = `${a}x + ${b}y \\u2264 ${c}, x \\u2265 0, y \\u2265 0`
+      return { id: this.id, category: this.category, question: `A factory uses ${a} units of resource A and ${b} units of resource B per product. With ${c} total resource units and non-negative production, which system applies?`, ...makeStringOptions(correct, [`${a}x + ${b}y \\u2265 ${c}`, `${a}x + ${b}y = ${c}`, `${a}x - ${b}y \\u2264 ${c}`]), explanation: 'Resource constraints use \\u2264 with non-negativity constraints x \\u2265 0, y \\u2265 0.' }
+    }
+  },
+  {
+    id: 'liq-q11',
+    category: 'Systems of Inequalities',
+
+    generate() {
+      const correct = 'Test the point in each inequality; it must satisfy ALL of them'
+      return { id: this.id, category: this.category, question: 'How do you verify a point is in the solution set of a system of inequalities?', ...makeStringOptions(correct, ['Substitute into just one inequality', 'Check if the point is on any boundary', 'Plot it and estimate visually']), explanation: 'A point must satisfy every inequality in the system to be in the solution region.' }
+    }
+  },
+  {
+    id: 'liq-q12',
+    category: 'Systems of Inequalities',
+
+    generate() {
+      const x = randInt(1, 5); const y = randInt(1, 5)
+      const sum = x + y; const diff = x - y
+      const satA = sum <= 10; const satB = diff >= 0
+      const correct = (satA && satB) ? 'Yes, it satisfies both inequalities' : 'No, it fails at least one inequality'
+      return { id: this.id, category: this.category, question: `Is (${x}, ${y}) in the solution set of x + y \\u2264 10 AND x - y \\u2265 0? Check: ${x}+${y}=${sum} and ${x}-${y}=${diff}.`, ...makeStringOptions(correct, ['Yes, it satisfies the first one only', 'No, it fails both', 'Cannot be determined from the given info']), explanation: `x + y = ${sum} ${satA ? '\\u2264' : '>'} 10 and x - y = ${diff} ${satB ? '\\u2265' : '<'} 0. Must satisfy both.` }
+    }
+  },
+  {
+    id: 'liq-q13',
+    category: 'Systems of Inequalities',
+
+    generate() {
+      const correct = 'No solution — the shaded regions do not overlap'
+      return { id: this.id, category: this.category, question: 'If the graphs of two linear inequalities have no overlapping shaded region, what is the solution?', ...makeStringOptions(correct, ['Infinite solutions', 'Exactly one solution', 'The union of both regions']), explanation: 'When shaded regions do not overlap, the system has no solution (empty intersection).' }
+    }
+  },
+  {
+    id: 'liq-q14',
+    category: 'Systems of Inequalities',
+
+    generate() {
+      const c = randInt(5, 15)
+      const correct = 'A triangular or polygonal region in the first quadrant'
+      return { id: this.id, category: this.category, question: `Describe the shape of the solution region for: x \\u2265 0, y \\u2265 0, x + y \\u2264 ${c}.`, ...makeStringOptions(correct, ['A line segment', 'The entire first quadrant', 'A single point']), explanation: `These three inequalities form a triangle with vertices at (0,0), (${c},0), and (0,${c}).` }
+    }
+  },
+  {
+    id: 'liq-q15',
+    category: 'Systems of Inequalities',
+
+    generate() {
+      const a = randInt(2, 6); const b = randInt(2, 6)
+      const budget = a * 3 + b * 2 + randInt(5, 15)
+      const correct = `(3, 2)`
+      return { id: this.id, category: this.category, question: `Given ${a}x + ${b}y \\u2264 ${budget} and x \\u2265 1, y \\u2265 1, is (3, 2) a feasible point? Check: ${a}(3) + ${b}(2) = ${a*3 + b*2}.`, ...makeStringOptions(correct, [`(${Math.ceil(budget/a) + 1}, 1)`, '(0, 0)', `(${Math.ceil(budget/a)}, ${Math.ceil(budget/b)})`]), explanation: `${a}(3) + ${b}(2) = ${a*3+b*2} \\u2264 ${budget}, and 3 \\u2265 1, 2 \\u2265 1. All constraints satisfied.` }
+    }
+  },
+  {
+    id: 'liq-q16',
+    category: 'Systems of Inequalities',
+
+    generate() {
+      const correct = 'At a vertex (corner point) of the feasible region'
+      return { id: this.id, category: this.category, question: 'In linear programming, where does the optimal solution occur?', ...makeStringOptions(correct, ['At the center of the region', 'On any edge of the region', 'At the origin always']), explanation: 'The optimal value of a linear objective function occurs at a vertex of the feasible region (Corner Point Theorem).' }
+    }
+  },
+  {
+    id: 'liq-q17',
+    category: 'Graphing Inequalities',
+
+    generate() {
+      const m = randInt(1, 4); const b = randInt(-5, 5)
+      const correct = `Shade below the line y = ${m}x + ${b >= 0 ? b : '(' + b + ')'}`
+      return { id: this.id, category: this.category, question: `To graph y < ${m}x ${b >= 0 ? '+ ' + b : '- ' + Math.abs(b)}, after drawing a dashed line, where do you shade?`, ...makeStringOptions(correct, ['Shade above the line', 'Shade both sides', 'Do not shade']), explanation: 'For y < mx + b, shade the region below the boundary line.' }
+    }
+  },
+  {
+    id: 'liq-q18',
+    category: 'Graphing Inequalities',
+
+    generate() {
+      const a = randInt(1, 4); const b = randInt(1, 4); const c = randInt(5, 20)
+      const xInt = Math.round(c / a); const yInt = Math.round(c / b)
+      const correct = `x-intercept: ${xInt}, y-intercept: ${yInt}`
+      return { id: this.id, category: this.category, question: `Find the intercepts of the boundary line ${a}x + ${b}y = ${c}.`, ...makeStringOptions(correct, [`x-int: ${yInt}, y-int: ${xInt}`, `x-int: ${c}, y-int: ${c}`, `x-int: ${a}, y-int: ${b}`]), explanation: `Set y=0: x = ${c}/${a} \\u2248 ${xInt}. Set x=0: y = ${c}/${b} \\u2248 ${yInt}.` }
+    }
+  },
+  {
+    id: 'liq-q19',
+    category: 'Graphing Inequalities',
+
+    generate() {
+      const correct = 'Test point (0, 0) — if it satisfies the inequality, shade toward origin; otherwise shade away'
+      return { id: this.id, category: this.category, question: 'What is the test-point method for determining which side to shade?', ...makeStringOptions(correct, ['Always shade above the line', 'Always shade toward the origin', 'Shade the side with the larger area']), explanation: 'Substitute a test point (usually the origin) into the inequality. If true, shade that side; if false, shade the opposite side.' }
+    }
+  },
+  {
+    id: 'liq-q20',
+    category: 'Graphing Inequalities',
+
+    generate() {
+      const m = randInt(1, 3); const b = randInt(1, 6)
+      const correct = 'Solid boundary line with shading below/on the line'
+      return { id: this.id, category: this.category, question: `How would you graph y \\u2264 ${m}x + ${b}?`, ...makeStringOptions(correct, ['Dashed line with shading above', 'Solid line with shading above', 'Dashed line with shading below']), explanation: '\\u2264 means solid line (boundary included) and shade below (y values less than or equal).' }
+    }
+  },
+  {
+    id: 'liq-q21',
+    category: 'Graphing Inequalities',
+
+    generate() {
+      const k = randInt(1, 8)
+      const correct = `A vertical line at x = ${k} with shading to the right`
+      return { id: this.id, category: this.category, question: `How is x \\u2265 ${k} graphed on the coordinate plane?`, ...makeStringOptions(correct, ['A horizontal line with shading above', `A vertical line at x = ${k} with shading left`, 'A diagonal line']), explanation: `x \\u2265 ${k} is a vertical solid line at x = ${k} with shading to the right (larger x values).` }
+    }
+  },
+  {
+    id: 'liq-q22',
+    category: 'Graphing Inequalities',
+
+    generate() {
+      const k = randInt(-5, -1)
+      const correct = `y > ${k}: horizontal dashed line, shade above`
+      return { id: this.id, category: this.category, question: `Describe the graph of y > ${k}.`, ...makeStringOptions(correct, [`y > ${k}: horizontal solid line, shade below`, `y > ${k}: vertical line, shade right`, `No graph possible for constant inequality`]), explanation: `y > ${k} is a horizontal dashed line at y = ${k} with shading above.` }
+    }
+  },
+  {
+    id: 'liq-q23',
+    category: 'Graphing Inequalities',
+
+    generate() {
+      const m = randInt(-3, -1); const b = randInt(2, 8)
+      const correct = 'The slope is negative, so the line goes down from left to right'
+      return { id: this.id, category: this.category, question: `When graphing y \\u2265 ${m}x + ${b}, describe the boundary line direction.`, ...makeStringOptions(correct, ['The line goes up from left to right', 'The line is horizontal', 'The line is vertical']), explanation: `A negative slope (m = ${m}) means the line descends from left to right.` }
+    }
+  },
+  {
+    id: 'liq-q24',
+    category: 'Graphing Inequalities',
+
+    generate() {
+      const m = randInt(1, 3); const b = randInt(0, 4)
+      const correct = 'The y-intercept is where the boundary line crosses the y-axis'
+      return { id: this.id, category: this.category, question: `In y < ${m}x + ${b}, what role does ${b} play in the graph?`, ...makeStringOptions(correct, ['It determines the shading direction', 'It sets the slope', 'It determines line type (solid vs dashed)']), explanation: `The constant ${b} is the y-intercept — the point (0, ${b}) where the boundary line crosses the y-axis.` }
+    }
+  },
+  {
+    id: 'liq-q25',
+    category: 'Absolute Value Inequalities',
+
+    generate() {
+      const a = randInt(2, 8)
+      const correct = `x > ${a} or x < -${a}`
+      return { id: this.id, category: this.category, question: `Solve |x| > ${a}.`, ...makeStringOptions(correct, [`-${a} < x < ${a}`, `x = ${a}`, `x > ${a}`]), explanation: `|x| > ${a} splits into x > ${a} OR x < -${a} (values far from zero).` }
+    }
+  },
+  {
+    id: 'liq-q26',
+    category: 'Absolute Value Inequalities',
+
+    generate() {
+      const a = randInt(2, 7)
+      const correct = `-${a} \\u2264 x \\u2264 ${a}`
+      return { id: this.id, category: this.category, question: `Solve |x| \\u2264 ${a}.`, ...makeStringOptions(correct, [`x \\u2264 -${a} or x \\u2265 ${a}`, `x = ${a}`, `x > -${a}`]), explanation: `|x| \\u2264 ${a} means -${a} \\u2264 x \\u2264 ${a} (values close to zero).` }
+    }
+  },
+  {
+    id: 'liq-q27',
+    category: 'Absolute Value Inequalities',
+
+    generate() {
+      const h = randInt(-5, 5); const k = randInt(2, 8)
+      const lo = h - k; const hi = h + k
+      const correct = `${lo} < x < ${hi}`
+      return { id: this.id, category: this.category, question: `Solve |x - ${h}| < ${k}.`, ...makeStringOptions(correct, [`x < ${lo} or x > ${hi}`, `x = ${h}`, `${lo} \\u2264 x \\u2264 ${hi}`]), explanation: `|x - ${h}| < ${k} means ${h} - ${k} < x < ${h} + ${k}, so ${lo} < x < ${hi}.` }
+    }
+  },
+  {
+    id: 'liq-q28',
+    category: 'Absolute Value Inequalities',
+
+    generate() {
+      const h = randInt(0, 5); const k = randInt(2, 6)
+      const lo = h - k; const hi = h + k
+      const correct = `x < ${lo} or x > ${hi}`
+      return { id: this.id, category: this.category, question: `Solve |x - ${h}| > ${k}.`, ...makeStringOptions(correct, [`${lo} < x < ${hi}`, `x = ${lo} or x = ${hi}`, `x \\u2265 ${lo}`]), explanation: `|x - ${h}| > ${k} means x < ${h} - ${k} or x > ${h} + ${k}, so x < ${lo} or x > ${hi}.` }
+    }
+  },
+  {
+    id: 'liq-q29',
+    category: 'Absolute Value Inequalities',
+
+    generate() {
+      const a = randInt(2, 5); const h = randInt(1, 6); const k = randInt(3, 10)
+      const lo = h - Math.floor(k/a); const hi = h + Math.floor(k/a)
+      const correct = `${lo} \\u2264 x \\u2264 ${hi}`
+      return { id: this.id, category: this.category, question: `Solve ${a}|x - ${h}| \\u2264 ${k}. First divide: |x - ${h}| \\u2264 ${Math.floor(k/a)}.`, ...makeStringOptions(correct, [`x < ${lo} or x > ${hi}`, `x = ${h}`, `x \\u2265 ${lo}`]), explanation: `Divide by ${a}: |x - ${h}| \\u2264 ${Math.floor(k/a)}, so ${h} - ${Math.floor(k/a)} \\u2264 x \\u2264 ${h} + ${Math.floor(k/a)}.` }
+    }
+  },
+  {
+    id: 'liq-q30',
+    category: 'Absolute Value Inequalities',
+
+    generate() {
+      const correct = 'No solution — absolute value is always non-negative'
+      return { id: this.id, category: this.category, question: 'What is the solution to |x + 3| < -2?', ...makeStringOptions(correct, ['x > -5 and x < -1', 'x = -3', 'All real numbers']), explanation: 'Absolute value is always \\u2265 0, so it can never be less than a negative number. No solution.' }
+    }
+  },
+  {
+    id: 'liq-q31',
+    category: 'Absolute Value Inequalities',
+
+    generate() {
+      const correct = 'All real numbers — absolute value is always \\u2265 0'
+      return { id: this.id, category: this.category, question: 'What is the solution to |2x - 1| \\u2265 -5?', ...makeStringOptions(correct, ['No solution', 'x = 1/2 only', 'x > -5']), explanation: 'Since |2x - 1| \\u2265 0 > -5 for all x, every real number is a solution.' }
+    }
+  },
+  {
+    id: 'liq-q32',
+    category: 'Absolute Value Inequalities',
+
+    generate() {
+      const h = randInt(1, 5); const k = randInt(1, 5)
+      const correct = `A V-shape with vertex at (${h}, 0), shaded below y = ${k}`
+      return { id: this.id, category: this.category, question: `Describe the graph of |x - ${h}| < ${k} on a number line.`, ...makeStringOptions(correct, ['Two separate rays', 'A single point', 'The entire number line']), explanation: `|x - ${h}| < ${k} represents an open interval centered at ${h} with radius ${k}: (${h-k}, ${h+k}).` }
+    }
+  },
+  {
+    id: 'liq-q33',
+    category: 'Word Problems',
+
+    generate() {
+      const rate = randInt(10, 25); const max = randInt(200, 500)
+      const hours = Math.floor(max / rate)
+      const correct = `h \\u2264 ${hours}`
+      return { id: this.id, category: this.category, question: `A worker earns $${rate}/hour and needs at most $${max}. Which inequality represents hours h?`, ...makeStringOptions(correct, [`h \\u2265 ${hours}`, `h = ${hours}`, `h > ${hours}`]), explanation: `${rate}h \\u2264 ${max}, so h \\u2264 ${max}/${rate} = ${hours}.` }
+    }
+  },
+  {
+    id: 'liq-q34',
+    category: 'Word Problems',
+
+    generate() {
+      const min = randInt(60, 80); const current = randInt(50, 75); const tests = randInt(2, 4)
+      const needed = min * tests - current * (tests - 1)
+      const correct = `x \\u2265 ${needed}`
+      return { id: this.id, category: this.category, question: `Average of ${tests} tests must be \\u2265 ${min}. With ${tests-1} test(s) averaging ${current}, what score x is needed on the last test?`, ...makeStringOptions(correct, [`x \\u2264 ${needed}`, `x = ${needed}`, `x > ${min}`]), explanation: `Need sum \\u2265 ${min * tests}. Have ${current * (tests-1)}. Need x \\u2265 ${needed}.` }
+    }
+  },
+  {
+    id: 'liq-q35',
+    category: 'Word Problems',
+
+    generate() {
+      const base = randInt(30, 50); const perItem = randInt(2, 8); const budget = randInt(80, 150)
+      const items = Math.floor((budget - base) / perItem)
+      const correct = `At most ${items} items`
+      return { id: this.id, category: this.category, question: `A phone plan costs $${base}/month plus $${perItem}/item. Budget is $${budget}/month. How many items can be purchased?`, ...makeStringOptions(correct, [`Exactly ${items} items`, `At least ${items + 2} items`, `${items + 3} items`]), explanation: `${base} + ${perItem}n \\u2264 ${budget}, so ${perItem}n \\u2264 ${budget - base}, n \\u2264 ${items}.` }
+    }
+  },
+  {
+    id: 'liq-q36',
+    category: 'Word Problems',
+
+    generate() {
+      const length = randInt(10, 20)
+      const maxP = randInt(60, 100)
+      const maxW = Math.floor((maxP - 2 * length) / 2)
+      const correct = `w \\u2264 ${maxW}`
+      return { id: this.id, category: this.category, question: `A rectangle has length ${length} and perimeter at most ${maxP}. What is the constraint on width w?`, ...makeStringOptions(correct, [`w \\u2265 ${maxW}`, `w = ${maxW}`, `w < ${length}`]), explanation: `P = 2(${length}) + 2w \\u2264 ${maxP}, so 2w \\u2264 ${maxP - 2*length}, w \\u2264 ${maxW}.` }
+    }
+  },
+  {
+    id: 'liq-q37',
+    category: 'Word Problems',
+
+    generate() {
+      const speed1 = randInt(40, 60); const speed2 = randInt(50, 70)
+      const minDist = randInt(200, 400)
+      const correct = `${speed1}t + ${speed2}t \\u2265 ${minDist}`
+      return { id: this.id, category: this.category, question: `Two cars travel in the same direction at ${speed1} mph and ${speed2} mph. After how many hours t will they be at least ${minDist} miles apart? Write the inequality.`, ...makeStringOptions(correct, [`${speed1}t - ${speed2}t \\u2265 ${minDist}`, `${speed1} + ${speed2} > ${minDist}`, `t \\u2265 ${minDist}`]), explanation: `Combined distance = (${speed1} + ${speed2})t. Need (${speed1 + speed2})t \\u2265 ${minDist}.` }
+    }
+  },
+  {
+    id: 'liq-q38',
+    category: 'Word Problems',
+
+    generate() {
+      const correct = 'Identify the variable, set up the inequality from constraints, solve, and check the direction'
+      return { id: this.id, category: this.category, question: 'What is the general strategy for solving inequality word problems?', ...makeStringOptions(correct, ['Guess and check with numbers', 'Always use equations instead', 'Multiply everything by -1 first']), explanation: 'Define variables, translate word constraints into mathematical inequalities, solve algebraically, and verify the inequality direction matches the context.' }
+    }
+  },
+  {
+    id: 'liq-q39',
+    category: 'Word Problems',
+
+    generate() {
+      const n = randInt(3, 6); const perAdult = randInt(12, 20); const perChild = randInt(6, 10)
+      const budget = randInt(50, 100)
+      const correct = `${perAdult}a + ${perChild}c \\u2264 ${budget} where a + c = ${n}`
+      return { id: this.id, category: this.category, question: `A group of ${n} people (adults $${perAdult}, children $${perChild}) has $${budget}. Write the system constraint.`, ...makeStringOptions(correct, [`${perAdult}a + ${perChild}c \\u2265 ${budget}`, `${perAdult}a - ${perChild}c \\u2264 ${budget}`, `a + c \\u2264 ${budget}`]), explanation: `Total people: a + c = ${n}. Budget constraint: ${perAdult}a + ${perChild}c \\u2264 ${budget}.` }
+    }
+  },
+  {
+    id: 'liq-q40',
+    category: 'Word Problems',
+
+    generate() {
+      const minGrade = randInt(70, 85); const n = randInt(4, 6)
+      const needed = minGrade * n
+      const correct = `The sum of all ${n} scores must be \\u2265 ${needed}`
+      return { id: this.id, category: this.category, question: `To earn at least a ${minGrade} average across ${n} assignments, what must the total points be?`, ...makeStringOptions(correct, [`Each score must be exactly ${minGrade}`, `At least one score \\u2265 ${minGrade}`, `Total must equal ${needed}`]), explanation: `Average = total/${n} \\u2265 ${minGrade}, so total \\u2265 ${minGrade} \\u00d7 ${n} = ${needed}.` }
+    }
+  },
 ]
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   const byCategory: Record<string, QuestionTemplate[]> = {}
-  for (const q of questionPool) { if (!byCategory[q.category]) byCategory[q.category] = []; byCategory[q.category].push(q) }
-  const selected: QuestionTemplate[] = []; const usedIds = new Set<string>()
-  for (const cat of shuffle(Object.keys(byCategory))) { if (selected.length >= count) break; const pool = byCategory[cat]; const q = pool[Math.floor(Math.random() * pool.length)]; if (!usedIds.has(q.id)) { selected.push(q); usedIds.add(q.id) } }
+  for (const q of questionPool) {
+    if (!byCategory[q.category]) byCategory[q.category] = []
+    byCategory[q.category].push(q)
+  }
+  const selected: QuestionTemplate[] = []
+  const usedIds = new Set<string>()
+  for (const cat of shuffle(Object.keys(byCategory))) {
+    if (selected.length >= count) break
+    const pool = byCategory[cat]
+    const q = pool[Math.floor(Math.random() * pool.length)]
+    if (!usedIds.has(q.id)) { selected.push(q); usedIds.add(q.id) }
+  }
   const remaining = questionPool.filter(q => !usedIds.has(q.id))
-  for (const q of shuffle(remaining)) { if (selected.length >= count) break; selected.push(q); usedIds.add(q.id) }
+  for (const q of shuffle(remaining)) {
+    if (selected.length >= count) break
+    selected.push(q)
+    usedIds.add(q.id)
+  }
   return shuffle(selected).map(t => t.generate())
 }

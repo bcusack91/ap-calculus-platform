@@ -2,194 +2,78 @@ export const satExponentialFnPart4Data = {
   topicSlug: 'sat-exponential-functions-sat',
   sections: [
     {
-      id: 'sat-ef4-intro',
+      id: 'ef4-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Exponential vs Linear
+      content: `# Exponential Functions
 
-**Part 4 of 7 — Constant Ratio vs Constant Difference, Tables, Graphs & SAT Strategies**
+**Part 4 of 7 — Half-Life and Doubling Time**
 
-The SAT frequently asks you to determine whether data follows a **linear** or **exponential** pattern.
+### Half-Life
 
-| Property | Linear | Exponential |
-|----------|--------|-------------|
-| Defining feature | Constant **difference** | Constant **ratio** |
-| General form | $f(x) = mx + b$ | $f(x) = a \\cdot b^x$ |
-| Graph shape | Straight line | Curved (J-shape or decaying) |
-| Rate of change | Constant (slope $m$) | Proportional to current value |
+The amount remaining after time $t$:
 
-**Quick test from a table:**
-1. Compute successive **differences**: $f(x+1) - f(x)$.
-2. Compute successive **ratios**: $f(x+1) / f(x)$.
-3. If differences are constant → **linear**. If ratios are constant → **exponential**.
-      `
+$$A(t) = A_0 \\left(\\frac{1}{2}\\right)^{t/h}$$
+
+Where $h$ = half-life (time to lose half).
+
+**Example:** A 400g sample has a half-life of 5 days.
+
+After 15 days: $A = 400(1/2)^{15/5} = 400(1/2)^3 = 400(1/8) = 50$ grams
+
+### Doubling Time
+
+$$A(t) = A_0 \\cdot 2^{t/d}$$
+
+Where $d$ = doubling time.
+
+**Example:** A population of 1000 doubles every 7 years.
+
+After 21 years: $A = 1000 \\cdot 2^{21/7} = 1000 \\cdot 2^3 = 8000$
+
+### Finding Half-Life from Decay Rate
+
+If something decays by $r\\%$ per period:
+- Decay factor: $b = 1 - r/100$
+- Half-life: solve $b^h = 1/2$ → $h = \\frac{\\ln(1/2)}{\\ln(b)}$
+
+On the SAT, you can often solve by testing: "After how many periods does the amount drop below half?"`
     },
     {
-      id: 'sat-ef4-examples',
-      type: 'text' as const,
-      content: `
-## Side-by-Side Comparison
-
-**Linear data:**
-
-| $x$ | $f(x)$ | Difference |
-|-----|--------|------------|
-| 0 | 3 | — |
-| 1 | 7 | 4 |
-| 2 | 11 | 4 |
-| 3 | 15 | 4 |
-| 4 | 19 | 4 |
-
-Constant difference $= 4$, so $f(x) = 4x + 3$.
-
-**Exponential data:**
-
-| $x$ | $g(x)$ | Ratio |
-|-----|--------|-------|
-| 0 | 3 | — |
-| 1 | 6 | 2 |
-| 2 | 12 | 2 |
-| 3 | 24 | 2 |
-| 4 | 48 | 2 |
-
-Constant ratio $= 2$, so $g(x) = 3 \\cdot 2^x$.
-
-**Key observation:** At first the values may look similar, but exponential functions *eventually* outpace linear ones — always.
-
-$$\\text{For large } x: \\quad a \\cdot b^x \\gg mx + b \\quad (b > 1)$$
-
-**SAT Trap:** Some tables have only 2–3 rows. Both difference and ratio may *look* constant with limited data. Use $x = 0$ as your anchor and check at least 3 consecutive values.
-      `
-    },
-    {
-      id: 'sat-ef4-mcq1',
+      id: 'ef4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Linear or Exponential?** 🔍
-      `,
+      content: '**Half-Life & Doubling** 🎯',
       exercise: {
         questions: [
           {
-            question: 'A function has values $f(0)=5$, $f(1)=10$, $f(2)=20$, $f(3)=40$. Is this linear or exponential, and what is the function?',
-            options: ['Linear: $f(x) = 5x + 5$', 'Exponential: $f(x) = 5 \\cdot 2^x$', 'Linear: $f(x) = 10x - 5$', 'Exponential: $f(x) = 2 \\cdot 5^x$'],
-            correctAnswer: 1,
-            explanation: 'Ratios: $10/5=2, 20/10=2, 40/20=2$. Constant ratio $= 2$, initial value $= 5$, so $f(x) = 5 \\cdot 2^x$.'
-          },
-          {
-            question: 'Which of the following tables shows exponential growth?\n\n(A) $2, 6, 10, 14$ (B) $2, 6, 18, 54$ (C) $2, 4, 8, 14$ (D) $2, 5, 10, 17$',
-            options: ['Table A', 'Table B', 'Table C', 'Table D'],
-            correctAnswer: 1,
-            explanation: 'Table B: $6/2=3, 18/6=3, 54/18=3$ — constant ratio of 3. The others have non-constant ratios.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-ef4-graphs',
-      type: 'text' as const,
-      content: `
-## Graphs: Linear vs Exponential
-
-**Linear graph:**
-- Straight line
-- Constant slope
-- Crosses the $y$-axis at $b$
-
-**Exponential growth graph ($b > 1$):**
-- J-shaped curve
-- Starts slowly, then rises steeply
-- Has a **horizontal asymptote** at $y = 0$
-- Never touches the $x$-axis (always positive if $a > 0$)
-
-**Exponential decay graph ($0 < b < 1$):**
-- Starts high, decreases toward zero
-- Also has a horizontal asymptote at $y = 0$
-- Never reaches zero
-
-**SAT Graph-Reading Strategy:**
-1. Check if the graph is a straight line → linear.
-2. If curved, check if it approaches a horizontal line → likely exponential.
-3. Read two points and verify: is the ratio constant?
-
-**Important:** A quadratic ($y = ax^2 + bx + c$) is also curved, but it's symmetric (U-shaped or inverted U). Exponential curves are *not* symmetric.
-      `
-    },
-    {
-      id: 'sat-ef4-input1',
-      type: 'input-boxes' as const,
-      content: `
-**Classify and Model** 🧮
-
-| $x$ | $h(x)$ |
-|-----|--------|
-| 0 | 2 |
-| 1 | 8 |
-| 2 | 32 |
-| 3 | 128 |
-
-1) What is the common ratio $b$?
-2) What is the initial value $a$?
-3) What is $h(5)$?
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['4', '2', '2048'],
-        hint1: '$b = h(1)/h(0) = 8/2$.',
-        hint2: '$a = h(0) = 2$.',
-        hint3: '$h(5) = 2 \\cdot 4^5 = 2 \\cdot 1024$.',
-        explanation: '$b = 4$, $a = 2$, so $h(x) = 2 \\cdot 4^x$. Then $h(5) = 2 \\cdot 4^5 = 2 \\cdot 1024 = 2048$.'
-      }
-    },
-    {
-      id: 'sat-ef4-dropdown1',
-      type: 'dropdown-select' as const,
-      content: `
-**Key Distinctions** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'For large $x$, which type of function eventually grows faster?',
-            options: ['Linear', 'Exponential (with $b > 1$)', 'They grow at the same rate', 'It depends on the coefficients']
-          },
-          {
-            label: 'A table has constant differences of 5. The function is …',
-            options: ['Exponential', 'Linear', 'Quadratic', 'Logarithmic']
-          },
-          {
-            label: 'An exponential growth curve has a horizontal asymptote at …',
-            options: ['$y = 1$', '$y = a$', '$y = 0$', 'There is no asymptote']
-          }
-        ],
-        correctAnswers: ['Exponential (with $b > 1$)', 'Linear', '$y = 0$'],
-        hint1: 'Exponential growth eventually outpaces any polynomial, including linear.',
-        hint2: 'Constant differences = constant rate of change = linear.',
-        hint3: 'For $f(x) = a \\cdot b^x$ with $b > 1$, as $x \\to -\\infty$, $f(x) \\to 0$.',
-        explanation: 'Exponential always wins for large $x$. Constant differences → linear. The basic exponential has asymptote $y = 0$.'
-      }
-    },
-    {
-      id: 'sat-ef4-sat',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'At time $t=0$, Carlos has \$100. Each year the amount doubles. Elena also starts with \$100, but she adds \$100 each year. After how many years does Carlos first have strictly more money than Elena?',
-            options: ['After 2 years', 'After 3 years', 'After 4 years', 'After 5 years'],
+            question: 'A radioactive substance has a half-life of 10 years. If you start with 800 grams, how much remains after 30 years?',
+            options: ['$100$ grams', '$200$ grams', '$400$ grams', '$50$ grams'],
             correctAnswer: 0,
-            explanation: 'Carlos: $100 \\cdot 2^t$. Elena: $100 + 100t$. At $t=1$: Carlos $= 200$, Elena $= 200$ (tied). At $t=2$: Carlos $= 400$, Elena $= 300$. Carlos first has strictly more after 2 years.'
+            explanation: '30 years = 3 half-lives. $800 \\times (1/2)^3 = 800/8 = 100$ grams.'
           },
           {
-            question: 'A scientist measures a quantity every hour: $10, 15, 22.5, 33.75, \\ldots$ Which model best fits this data?',
-            options: ['$f(t) = 10 + 5t$', '$f(t) = 10 \\cdot (1.5)^t$', '$f(t) = 5t^2 + 10$', '$f(t) = 15^t$'],
-            correctAnswer: 1,
-            explanation: 'Ratios: $15/10 = 1.5$, $22.5/15 = 1.5$, $33.75/22.5 = 1.5$. Constant ratio of $1.5$ with initial value $10$, so $f(t) = 10(1.5)^t$.'
+            question: 'A colony of bacteria doubles every 4 hours. Starting with 50, how long until there are 3,200?',
+            options: ['$24$ hours', '$20$ hours', '$16$ hours', '$32$ hours'],
+            correctAnswer: 0,
+            explanation: '$50 \\to 100 \\to 200 \\to 400 \\to 800 \\to 1600 \\to 3200$. That is 6 doublings × 4 hours = 24 hours. Or: $50 \\cdot 2^{t/4} = 3200$ → $2^{t/4} = 64 = 2^6$ → $t = 24$.'
+          },
+          {
+            question: 'A car loses 20% of its value each year. After approximately how many years is it worth half its original value?',
+            options: ['About $3$ years', 'About $2.5$ years', 'About $5$ years', 'About $4$ years'],
+            correctAnswer: 0,
+            explanation: 'Each year: $\\times 0.80$. After 3 years: $0.80^3 = 0.512 ≈ 0.5$. So about 3 years to lose half its value.'
           }
         ]
       }
+    },
+    {
+      id: 'ef4-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 4
+
+- Half-life: $A = A_0(1/2)^{t/h}$. After $n$ half-lives, multiply by $(1/2)^n$
+- Doubling time: $A = A_0 \\cdot 2^{t/d}$. After $n$ doublings, multiply by $2^n$
+- Count the number of half-lives or doublings first for quick mental math
+- Finding half-life from percent decay: solve $b^h = 0.5$`
     }
   ]
 };

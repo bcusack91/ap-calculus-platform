@@ -2,82 +2,60 @@ export const satWordProblemsPart7Data = {
   topicSlug: 'sat-word-problems-sat',
   sections: [
     {
-      id: 'sat-word-p7-intro',
+      id: 'wp7-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Review & Mixed Practice
+      content: `# Word Problem Review & Strategy
 
-**Part 7 of 7 — Review & Mixed Practice**
+**Part 7 of 7 — Putting It All Together**
 
-Mixed word problems like the real SAT
+### The 4-Step Word Problem Method
+1. **Read twice** — first for understanding, second for details
+2. **Define variables** — write "Let x = ..."
+3. **Build the equation** — translate sentence by sentence
+4. **Solve and CHECK** — does your answer make sense in context?
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Common SAT Word Problem Traps
+| Trap | Example |
+|---|---|
+| Answering the wrong question | "How old will she be in 5 years?" (don't give current age) |
+| Wrong units | Found hours but need minutes → multiply by 60 |
+| Negative/impossible answers | A length can't be -3 feet |
+| "Less than" order | "5 less than x" is x - 5, not 5 - x |
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### When to Use Each Strategy
+| Problem Type | Best Approach |
+|---|---|
+| Linear relationship in context | Set up equation, solve |
+| Exponential growth/decay | Identify base, exponent, plug into formula |
+| System of two unknowns | Two equations, two variables |
+| Rate/distance/time | d = rt, possibly combined rates |
+| "How many integers..." | Inequality, count values |`
     },
     {
-      id: 'sat-word-p7-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
+      id: 'wp7-q1',
+      type: 'quiz' as const,
+      question: 'A phone plan costs $30/month plus $0.10 per text. Another plan costs $50/month with unlimited texts. How many texts make the plans equal?',
+      options: [
+        '100',
+        '150',
+        '200',
+        '300'
+      ],
+      correctAnswer: 2,
+      explanation: 'Set costs equal: 30 + 0.10t = 50. Solve: 0.10t = 20 → t = 200 texts. Below 200 texts, the first plan is cheaper. Above 200, the unlimited plan wins.'
     },
     {
-      id: 'sat-word-p7-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-word-p7-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'wp7-q2',
+      type: 'quiz' as const,
+      question: 'A pool is being filled at 3 gallons/min and drained at 1 gallon/min simultaneously. If it holds 400 gallons, how long until it is full?',
+      options: [
+        '100 min',
+        '133 min',
+        '200 min',
+        '400 min'
+      ],
+      correctAnswer: 2,
+      explanation: 'Net fill rate = 3 − 1 = 2 gallons/min. Time = 400/2 = 200 minutes. The drain slows the filling, so it takes longer than 400/3 ≈ 133 minutes.'
     }
   ]
-}
+};

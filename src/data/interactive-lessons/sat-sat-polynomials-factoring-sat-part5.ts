@@ -2,82 +2,74 @@ export const satPolynomialsPart5Data = {
   topicSlug: 'sat-polynomials-factoring-sat',
   sections: [
     {
-      id: 'sat-poly-p5-intro',
+      id: 'pf5-intro',
       type: 'text' as const,
-      content: `
-# ⚡ Special Factoring Patterns
+      content: `# Polynomials & Factoring
 
-**Part 5 of 7 — Special Factoring Patterns**
+**Part 5 of 7 — Rational Expressions**
 
-Difference of squares, perfect square trinomials, sum/diff of cubes
+### Simplifying Rational Expressions
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+A rational expression is a fraction with polynomials:
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+$$\\frac{x^2 - 9}{x^2 + 5x + 6} = \\frac{(x+3)(x-3)}{(x+2)(x+3)} = \\frac{x - 3}{x + 2} \\quad (x \\neq -3)$$
+
+**Steps:** Factor numerator and denominator, then cancel common factors.
+
+### Multiplying & Dividing
+
+**Multiply:** Factor, cancel, then multiply what remains.
+
+$$\\frac{x^2 - 4}{x + 1} \\cdot \\frac{x + 1}{x - 2} = \\frac{(x+2)(x-2)}{x+1} \\cdot \\frac{x+1}{x-2} = x + 2$$
+
+**Divide:** Flip the second fraction and multiply.
+
+### Adding & Subtracting
+
+Find a common denominator:
+
+$$\\frac{2}{x+1} + \\frac{3}{x-1} = \\frac{2(x-1) + 3(x+1)}{(x+1)(x-1)} = \\frac{5x + 1}{x^2 - 1}$$
+
+### Undefined Values (Domain Restrictions)
+
+A rational expression is undefined when the denominator equals zero. The SAT asks: "What value of $x$ makes the expression undefined?"`
     },
     {
-      id: 'sat-poly-p5-check',
+      id: 'pf5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Rational Expressions** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
+            question: 'Simplify: $\\frac{x^2 + 4x + 3}{x^2 - 1}$',
+            options: ['$\\frac{x + 3}{x - 1}$', '$\\frac{x + 1}{x - 1}$', '$\\frac{x + 3}{x + 1}$', '$\\frac{4x + 3}{-1}$'],
+            correctAnswer: 0,
+            explanation: 'Factor: $\\frac{(x+1)(x+3)}{(x+1)(x-1)} = \\frac{x+3}{x-1}$ (cancel $(x+1)$, $x \\neq -1$).'
+          },
+          {
+            question: 'For what value of $x$ is $\\frac{5}{x^2 - 4}$ undefined?',
+            options: ['$x = 2$ and $x = -2$', '$x = 4$ only', '$x = 2$ only', '$x = 0$'],
+            correctAnswer: 0,
+            explanation: 'Denominator $= 0$: $x^2 - 4 = 0$ → $(x-2)(x+2) = 0$ → $x = 2$ or $x = -2$.'
+          },
+          {
+            question: '$\\frac{1}{x} + \\frac{1}{x+2} = $',
+            options: ['$\\frac{2x + 2}{x(x+2)}$', '$\\frac{2}{2x + 2}$', '$\\frac{1}{x^2 + 2x}$', '$\\frac{2}{x(x+2)}$'],
+            correctAnswer: 0,
+            explanation: 'Common denominator is $x(x+2)$: $\\frac{x+2}{x(x+2)} + \\frac{x}{x(x+2)} = \\frac{2x+2}{x(x+2)}$.'
           }
         ]
       }
     },
     {
-      id: 'sat-poly-p5-detail',
+      id: 'pf5-summary',
       type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
+      content: `### Key Takeaways — Part 5
 
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-poly-p5-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+- **Always factor first** before simplifying rational expressions
+- Cancel only common **factors** (not terms!)
+- Undefined when denominator = 0
+- To add/subtract fractions: find common denominator, combine numerators`
     }
   ]
-}
+};

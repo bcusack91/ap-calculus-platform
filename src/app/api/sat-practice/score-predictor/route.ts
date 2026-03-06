@@ -133,11 +133,11 @@ export async function GET() {
     // From diagnostics
     for (const d of diagnosticTests) {
       try {
-        const parsed = JSON.parse(d.results)
+        const parsed = d.results as Record<string, unknown>
         if (parsed.estimatedScore) {
           trendData.push({
             date: d.createdAt.toISOString(),
-            score: parsed.estimatedScore,
+            score: parsed.estimatedScore as number,
             source: 'diagnostic',
           })
         }

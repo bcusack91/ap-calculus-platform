@@ -2,136 +2,76 @@ export const satDataStatsPart6Data = {
   topicSlug: 'sat-data-statistics-sat',
   sections: [
     {
-      id: 'sat-ds6-intro',
+      id: 'ds6-intro',
       type: 'text' as const,
-      content: `
-# 🔎 Study Design & Sampling
+      content: `# Data Analysis & Statistics
 
-**Part 6 of 7 — Experiments, Surveys, and Bias**
+**Part 6 of 7 — Sampling and Study Design**
 
-| Study Type | Description | Shows Causation? |
-|-----------|-----------|:---------------:|
-| **Observational** | Observe without intervening | ❌ Only association |
-| **Survey** | Ask questions | ❌ Only association |
-| **Experiment** | Assign treatments, measure effects | ✅ Yes (if randomized) |
+### Types of Studies
 
-**The golden rule:** Only a **randomized controlled experiment** establishes cause and effect.
+| Type | Description | Can show causation? |
+|------|-------------|-------------------|
+| Observational | Observe without intervention | No (only association) |
+| Experiment | Randomly assign treatments | Yes! |
+| Survey | Ask questions | No (only opinion) |
 
-**SAT phrasing clues:**
-- ✅ "suggests an **association** between X and Y" — always valid
-- ❌ "**proves** X **causes** Y" — only valid for randomized experiments
-      `
+### Random Sampling
+
+A sample is **representative** if every member of the population has an equal chance of being selected.
+
+- **Random sample**: conclusions can be generalized to the population
+- **Convenience sample** (e.g., only surveying friends): results may be biased
+
+### Bias
+
+- **Selection bias**: sample doesn't represent the population
+- **Response bias**: wording of questions influences answers
+- **Voluntary response bias**: only people with strong opinions respond
+
+### SAT Wording to Watch For
+
+❌ "The study **proves** that X causes Y" — only experiments with random assignment can suggest causation.
+
+✓ "The study suggests an **association** between X and Y" — appropriate for observational studies.`
     },
     {
-      id: 'sat-ds6-check',
+      id: 'ds6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Study Design** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Researchers found breakfast eaters score higher on tests. No one was assigned to eat or skip. Valid conclusion?',
-            options: [
-              'Breakfast causes higher scores',
-              'There is an association between breakfast and scores',
-              'Skipping breakfast has no effect',
-              'The study proves breakfast is beneficial'
-            ],
-            correctAnswer: 1,
-            explanation: 'This is observational — no random assignment. We can only claim **association**, not causation. A confounders (more sleep, better health) could explain it.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-ds6-sampling',
-      type: 'text' as const,
-      content: `
-**Sampling Methods & Bias**
-
-| Method | How It Works | Quality |
-|--------|-------------|---------|
-| **Simple random sample** | Every member has equal chance | ✅ Gold standard |
-| **Stratified** | Divide into groups, sample from each | ✅ Ensures representation |
-| **Convenience** | Whoever is easiest to reach | ❌ Usually biased |
-| **Voluntary response** | People choose to participate | ❌ Strong opinions overrepresented |
-
-**Common biases:**
-- **Selection bias:** Sample doesn't represent the population
-- **Response bias:** Questions worded to influence answers
-- **Undercoverage:** Some groups excluded from sampling
-
-**Example:** Surveying only cafeteria students = convenience sampling with selection bias — students who bring lunch aren't included.
-      `
-    },
-    {
-      id: 'sat-ds6-practice',
-      type: 'input-boxes' as const,
-      content: `
-**Answer each question.** 🧮
-
-1) A population has 10,000 people. 500 are randomly selected. What is the sample size?
-
-2) "Don't you agree taxes are too high?" is an example of what type of bias? Enter: 1 = Selection, 2 = Response, 3 = Undercoverage
-
-3) A poll of 2,500 people has margin of error approximately $1/\\sqrt{n}$. What is the approximate margin of error as a percentage? (Round to nearest whole number)
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['500', '2', '2'],
-        hint1: 'Sample size = number selected, not population size.',
-        hint2: '"Don\'t you agree..." is a leading question.',
-        hint3: '$1/\\sqrt{2500} = 1/50 = 0.02 = 2\\%$.',
-        explanation: '1) 500. 2) Response bias — leading wording. 3) $1/\\sqrt{2500} = 2\\%$.'
-      }
-    },
-    {
-      id: 'sat-ds6-margin',
-      type: 'text' as const,
-      content: `
-**Margin of Error and Confidence**
-
-Key facts for the SAT:
-- **Larger sample** → smaller margin of error
-- **To halve the margin of error:** quadruple the sample size (because margin ∝ $1/\\sqrt{n}$)
-- A 95% confidence interval means: if we repeated this survey many times, ~95% of intervals would contain the true value
-
-**SAT phrasing:** "We are 95% confident that between 54% and 62% of adults support the policy" means the sample proportion ± margin of error = the interval.
-      `
-    },
-    {
-      id: 'sat-ds6-sat-style',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A poll of 400 voters has margin of error 5%. To reduce it to 2.5%, how many voters should be polled?',
-            options: [
-              '800',
-              '1200',
-              '1600',
-              '2000'
-            ],
-            correctAnswer: 2,
-            explanation: 'Halving the margin requires quadrupling the sample: $400 \\times 4 = 1600$. Margin ∝ $1/\\sqrt{n}$.'
+            question: 'A researcher surveys students in the library about study habits. Why might this sample be biased?',
+            options: ['Students in the library may study more than the average student', 'The library is too quiet for surveys', 'All students study equally', 'Libraries are representative of all locations'],
+            correctAnswer: 0,
+            explanation: 'This is selection bias — library-goers likely study more, making the sample unrepresentative of all students.'
           },
           {
-            question: 'To determine if a drug lowers blood pressure, which design best establishes causation?',
-            options: [
-              'Survey patients about their blood pressure',
-              'Observe patients who choose the drug',
-              'Randomly assign patients to drug vs. placebo',
-              'Interview doctors about effectiveness'
-            ],
-            correctAnswer: 2,
-            explanation: 'Only a randomized controlled experiment (random assignment to treatment vs. control) can establish causation.'
+            question: 'A study finds that ice cream sales and drowning rates are positively correlated. Can we conclude ice cream causes drowning?',
+            options: ['No — this is observational, a confounding variable (hot weather) likely explains both', 'Yes — the correlation is clear', 'Only if the sample size is large', 'Yes — if the p-value is small'],
+            correctAnswer: 0,
+            explanation: 'Correlation ≠ causation. Hot weather is a confounding variable that increases both ice cream sales and swimming (leading to more drownings).'
+          },
+          {
+            question: 'Which study design can establish a cause-and-effect relationship?',
+            options: ['Randomized controlled experiment', 'Observational study with a large sample', 'Survey with random sampling', 'Any study with a control group'],
+            correctAnswer: 0,
+            explanation: 'Only a randomized controlled experiment (random assignment to treatment/control groups) can establish causation.'
           }
         ]
       }
+    },
+    {
+      id: 'ds6-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 6
+
+- Only **randomized experiments** can show causation
+- Observational studies show **association**, not causation
+- Random sampling → results generalize to the population
+- Watch for bias: selection, response, and voluntary response bias
+- **Confounding variables** can create misleading correlations`
     }
   ]
-}
+};

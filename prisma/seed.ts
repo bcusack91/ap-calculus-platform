@@ -222,6 +222,29 @@ $$\\frac{d}{dx}(x^3 + 2x^2 - 5x + 7) = 3x^2 + 4x - 5$$
     ]
   })
 
+  // Seed email subscribers for development
+  await prisma.emailSubscriber.upsert({
+    where: { email: 'test@example.com' },
+    update: {},
+    create: {
+      email: 'test@example.com',
+      source: 'seed',
+      interests: ['ap-calculus', 'ap-physics'],
+      verified: true,
+    },
+  })
+
+  await prisma.emailSubscriber.upsert({
+    where: { email: 'unverified@example.com' },
+    update: {},
+    create: {
+      email: 'unverified@example.com',
+      source: 'footer',
+      interests: ['sat'],
+      verified: false,
+    },
+  })
+
   console.log('Seed data created successfully!')
 }
 

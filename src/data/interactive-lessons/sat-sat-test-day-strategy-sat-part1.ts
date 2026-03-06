@@ -1,83 +1,54 @@
-export const satTestDayPart1Data = {
+export const satTestDayStrategyPart1Data = {
   topicSlug: 'sat-test-day-strategy-sat',
   sections: [
     {
-      id: 'sat-test-p1-intro',
+      id: 'tds1-intro',
       type: 'text' as const,
-      content: `
-# 📋 Before Test Day
+      content: `# Digital SAT: Format & Structure
 
-**Part 1 of 7 — Before Test Day**
+**Part 1 of 7 — Know What You're Walking Into**
 
-Registration, materials checklist, study schedule in final week
+### The Digital SAT Format (2024+)
+| Section | Modules | Questions | Time | Focus |
+|---|---|---|---|---|
+| Reading & Writing | 2 | 27 each (54 total) | 32 min each (64 min) | Comprehension, grammar, rhetoric |
+| Math | 2 | 22 each (44 total) | 35 min each (70 min) | Algebra, geometry, problem solving |
+| **Total** | **4** | **98** | **134 min** | |
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Adaptive Testing
+- **Module 1** = mix of easy, medium, hard questions
+- **Module 2** = difficulty adjusts based on Module 1 performance
+  - Did well on Module 1? → Module 2 is harder (higher score ceiling)
+  - Struggled on Module 1? → Module 2 is easier (lower score ceiling)
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### What This Means for You
+- **Every Module 1 question matters** — it determines your Module 2 difficulty
+- Module 2 hard = access to 600-800 range per section
+- Module 2 easy = score capped around 200-500 per section
+
+### Scoring
+- R&W: 200-800
+- Math: 200-800
+- **Total: 400-1600**
+
+### Built-in Tools
+- Desmos graphing calculator (all Math questions)
+- Highlight & annotate (R&W passages)
+- Mark for review (flag questions to return to within a module)
+- Timer (always visible)`
     },
     {
-      id: 'sat-test-p1-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-test-p1-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-test-p1-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'tds1-q1',
+      type: 'quiz' as const,
+      question: 'On the Digital SAT, if you perform well on Math Module 1, what happens?',
+      options: [
+        'You skip Module 2',
+        'Module 2 becomes harder, giving access to higher scores',
+        'Module 2 stays the same difficulty',
+        'You get extra time on Module 2'
+      ],
+      correctAnswer: 1,
+      explanation: 'The Digital SAT is adaptive: strong Module 1 performance unlocks a harder Module 2, which has questions that can push your score to 700-800. A weaker Module 1 leads to an easier Module 2 with a lower score ceiling.'
     }
   ]
-}
+};

@@ -3,13 +3,28 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
+import dynamic from 'next/dynamic'
 import {
   generateFullTest,
   generateMiniTest,
   PRACTICE_TESTS,
   type SATFullTest,
 } from '@/data/sat-practice/test-generator'
-import { SATTestWrapper } from '@/components/SATFullTest'
+
+const SATTestWrapper = dynamic(
+  () => import('@/components/SATFullTest').then(mod => mod.SATTestWrapper),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="animate-pulse rounded-xl bg-gray-100 dark:bg-gray-800 p-8 min-h-[400px]">
+        <div className="h-8 w-64 bg-gray-200 dark:bg-gray-700 rounded mb-6" />
+        <div className="h-4 w-full bg-gray-200 dark:bg-gray-700 rounded mb-2" />
+        <div className="h-4 w-5/6 bg-gray-200 dark:bg-gray-700 rounded mb-2" />
+        <div className="h-4 w-4/6 bg-gray-200 dark:bg-gray-700 rounded" />
+      </div>
+    ),
+  }
+)
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -81,8 +96,8 @@ export default function SATPracticePage() {
   }, [status, fetchHistory])
 
   // Start test
-  const startTest = useCallback((testNumber: number, format: 'full' | 'mini') => {
-    const test = format === 'full' ? generateFullTest(testNumber) : generateMiniTest(testNumber)
+  const startTest = useCallback(async (testNumber: number, format: 'full' | 'mini') => {
+    const test = format === 'full' ? await generateFullTest(testNumber) : await generateMiniTest(testNumber)
     setActiveTest(test)
   }, [])
 

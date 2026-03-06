@@ -2,82 +2,72 @@ export const satPolynomialsPart1Data = {
   topicSlug: 'sat-polynomials-factoring-sat',
   sections: [
     {
-      id: 'sat-poly-p1-intro',
+      id: 'pf1-intro',
       type: 'text' as const,
-      content: `
-# 🔢 Polynomial Basics
+      content: `# Polynomials & Factoring
 
 **Part 1 of 7 — Polynomial Basics**
 
-Degree, leading coefficient, end behavior, standard form
+### What is a Polynomial?
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+A polynomial is an expression with one or more terms: $a_nx^n + a_{n-1}x^{n-1} + \\cdots + a_1x + a_0$
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+- **Degree**: highest power of $x$ (e.g., $3x^4 + 2x - 1$ has degree 4)
+- **Leading coefficient**: coefficient of the highest-degree term
+- **Constant term**: the term with no variable ($a_0$)
+
+### Adding & Subtracting Polynomials
+
+Combine **like terms** (same variable and exponent):
+
+$(3x^2 + 5x - 2) + (x^2 - 3x + 7) = 4x^2 + 2x + 5$
+
+$(3x^2 + 5x - 2) - (x^2 - 3x + 7) = 3x^2 + 5x - 2 - x^2 + 3x - 7 = 2x^2 + 8x - 9$
+
+**Subtraction trap**: distribute the negative sign to ALL terms in the second polynomial!
+
+### Multiplying Polynomials
+
+Use distribution (FOIL for binomials):
+
+$(2x + 3)(x - 4) = 2x^2 - 8x + 3x - 12 = 2x^2 - 5x - 12$`
     },
     {
-      id: 'sat-poly-p1-check',
+      id: 'pf1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Polynomial Operations** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
+            question: 'What is the degree of $5x^3 - 2x^5 + 7x$?',
+            options: ['$5$', '$3$', '$1$', '$7$'],
+            correctAnswer: 0,
+            explanation: 'The highest power of $x$ is $5$ (from $-2x^5$). Don\'t be fooled by term order — the degree is the highest exponent appearing.'
+          },
+          {
+            question: '$(4x^2 - 3x + 1) - (2x^2 + x - 5) = $',
+            options: ['$2x^2 - 4x + 6$', '$2x^2 - 2x - 4$', '$6x^2 - 4x + 6$', '$2x^2 - 4x - 4$'],
+            correctAnswer: 0,
+            explanation: 'Distribute the negative: $4x^2 - 3x + 1 - 2x^2 - x + 5 = 2x^2 - 4x + 6$. Be careful with $-(-5) = +5$.'
+          },
+          {
+            question: 'What is the coefficient of $x$ in the product $(x + 4)(x - 2)$?',
+            options: ['$2$', '$-2$', '$4$', '$-8$'],
+            correctAnswer: 0,
+            explanation: 'FOIL: $x^2 - 2x + 4x - 8 = x^2 + 2x - 8$. The coefficient of $x$ is $2$.'
           }
         ]
       }
     },
     {
-      id: 'sat-poly-p1-detail',
+      id: 'pf1-summary',
       type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
+      content: `### Key Takeaways — Part 1
 
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-poly-p1-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+- Degree = highest exponent; leading coefficient = coefficient of that term
+- When subtracting polynomials, distribute the negative to EVERY term
+- Multiply polynomials using distribution (FOIL is just distribution for two binomials)
+- Combine like terms as the final step`
     }
   ]
-}
+};

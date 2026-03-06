@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import { courseMeta, defaultCourseMeta, sectionOrder } from "@/data/course-metadata";
 import DynamicStats from "@/components/DynamicStats";
+import { InArticleAd } from "@/components/ad-banner";
 
 export const revalidate = 3600; // ISR: revalidate every hour
 
@@ -44,37 +45,7 @@ export default async function Home() {
   const totalCourses = dbCourses.length;
   return (
     <div className="flex flex-col">
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'WebSite',
-            name: 'Study Mondo',
-            url: 'https://www.studymondo.com',
-            description: 'Free math and science study platform with 24 courses, 700+ topics, flashcards, and interactive lessons.',
-            potentialAction: {
-              '@type': 'SearchAction',
-              target: 'https://www.studymondo.com/search?q={search_term_string}',
-              'query-input': 'required name=search_term_string',
-            },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'Study Mondo',
-            url: 'https://www.studymondo.com',
-            logo: 'https://www.studymondo.com/favicon.svg',
-            description: 'Free educational platform for math and science students from Grade 4 through AP and test prep.',
-          }),
-        }}
-      />
+      {/* JSON-LD structured data is already injected globally via layout.tsx — no duplicates needed here */}
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-cyan-50 dark:from-purple-950 dark:via-gray-900 dark:to-blue-950 py-20 sm:py-32">
@@ -98,7 +69,7 @@ export default async function Home() {
                 <path d="M29 44 Q32 48 35 44" stroke="#7C3AED" strokeWidth="1.5" fill="none"/>
               </svg>
             </span>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl gradient-text-accessible bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600">
               Master Math & Science
             </h1>
             <p className="mt-4 text-base font-semibold tracking-wide uppercase text-purple-700 dark:text-purple-400">
@@ -164,7 +135,7 @@ export default async function Home() {
                           {course.description}
                         </p>
                         <div className="mt-4 flex items-center text-sm font-semibold">
-                          <span className={`bg-gradient-to-r ${course.gradient} bg-clip-text text-transparent`}>
+                          <span className={`bg-gradient-to-r ${course.gradient} gradient-text-accessible`}>
                             Explore Course →
                           </span>
                         </div>
@@ -177,6 +148,11 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      {/* Ad placement between courses and features */}
+      <div className="container py-8">
+        <InArticleAd />
+      </div>
 
       {/* Features Section */}
       <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-900">

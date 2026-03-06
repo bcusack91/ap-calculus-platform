@@ -7,7 +7,10 @@ import { CookieConsent } from "@/components/cookie-consent";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import AdSenseScript from "@/components/AdSenseScript";
 import { Footer } from "@/components/footer";
+import { WebVitals } from "@/components/web-vitals";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,6 +24,10 @@ export const metadata: Metadata = {
     "Study Mondo offers free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology — created by educators to help you ace your exams.",
   alternates: {
     canonical: "https://www.studymondo.com",
+    languages: {
+      "en": "https://www.studymondo.com",
+      "x-default": "https://www.studymondo.com",
+    },
   },
   manifest: "/site.webmanifest",
   other: {
@@ -83,6 +90,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Preconnect to external origins for faster resource loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         {/* JSON-LD structured data */}
         <script
           type="application/ld+json"
@@ -108,10 +120,23 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Register service worker for offline support */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js').catch(function() {});
+                });
+              }
+            `,
+          }}
+        />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         {gaId && <GoogleAnalytics measurementId={gaId} />}
         {adsenseClientId && <AdSenseScript clientId={adsenseClientId} />}
+        <WebVitals />
         <Providers>
           <div className="flex min-h-screen flex-col">
             <a
@@ -126,6 +151,8 @@ export default function RootLayout({
           </div>
           <CookieConsent />
         </Providers>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

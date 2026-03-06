@@ -60,6 +60,11 @@ export default function CorrectAnswerCelebration({ show, onDone }: CorrectAnswer
 
   return (
     <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
+      {/* Screen reader announcement */}
+      <div role="status" aria-live="assertive" className="sr-only">
+        {message}
+      </div>
+
       {/* Confetti particles */}
       {particles.map((p) => (
         <span

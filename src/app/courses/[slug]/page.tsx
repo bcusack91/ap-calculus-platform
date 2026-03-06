@@ -2,9 +2,19 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
+import { InArticleAd } from '@/components/ad-banner'
+import { breadcrumbJsonLd } from '@/lib/jsonld'
 
 // ISR: revalidate content every hour
 export const revalidate = 3600
+
+// Pre-render all course pages at build time for faster TTFB and better crawlability
+export async function generateStaticParams() {
+  const courses = await prisma.course.findMany({
+    select: { slug: true },
+  })
+  return courses.map((course) => ({ slug: course.slug }))
+}
 
 interface CoursePageProps {
   params: Promise<{
@@ -112,6 +122,16 @@ export default async function CoursePage({ params }: CoursePageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd([
+            { name: 'Home', url: '/' },
+            { name: 'Courses', url: '/topics' },
+            { name: course.name, url: `/courses/${course.slug}` },
+          ])),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Course',
@@ -196,6 +216,9 @@ export default async function CoursePage({ params }: CoursePageProps) {
             </p>
           </div>
         </div>
+
+        {/* Ad placement after course overview */}
+        <InArticleAd />
 
         {/* Categories Grid */}
         {allCategories.length > 0 ? (

@@ -2,149 +2,77 @@ export const satLinearEquationsPart3Data = {
   topicSlug: 'sat-linear-equations-sat',
   sections: [
     {
-      id: 'sat-l3-intro',
+      id: 'le3-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Linear Inequalities
+      content: `# Linear Equations & Inequalities
 
-**Part 3 of 7 — Solving and Graphing Inequalities**
+**Part 3 of 7 — Linear Inequalities**
 
-Linear inequalities work just like equations, with **one critical difference**: when you **multiply or divide by a negative number**, you must **flip the inequality sign**.
+The SAT tests inequalities in both algebraic and graphical form.
 
-**Inequality symbols:**
-| Symbol | Meaning | Graph |
-|--------|---------|-------|
-| $<$ | less than | open circle |
-| $>$ | greater than | open circle |
-| $\\leq$ | less than or equal to | closed circle |
-| $\\geq$ | greater than or equal to | closed circle |
-      `
-    },
-    {
-      id: 'sat-l3-check1',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When solving an inequality, when do you flip the inequality sign?',
-            options: [
-              'When you add a negative number to both sides',
-              'When you subtract from both sides',
-              'When you multiply or divide both sides by a negative number',
-              'Whenever you move a term to the other side'
-            ],
-            correctAnswer: 2,
-            explanation: 'You only flip the inequality sign when multiplying or dividing both sides by a negative number. Adding or subtracting (positive or negative) never changes the direction.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-l3-solving',
-      type: 'text' as const,
-      content: `
-**Solving Inequalities — Just Like Equations (Almost)**
+### Solving Linear Inequalities
 
-**Example 1:** Solve $2x + 3 > 11$
+Same rules as equations EXCEPT: **flip the inequality sign when multiplying or dividing by a negative**.
 
-Subtract 3: $2x > 8$
+**Example:**
+$$-3x + 6 > 12$$
+$$-3x > 6$$
+$$x < -2 \\quad \\text{(flip!)}$$
 
-Divide by 2: $x > 4$
+### Compound Inequalities
 
-No sign flip needed — we divided by positive 2.
+$$-1 < 2x + 3 \\leq 9$$
 
----
-
-**Example 2:** Solve $-3x + 6 \\leq 15$
-
-Subtract 6: $-3x \\leq 9$
-
-Divide by $-3$ → **FLIP!** $x \\geq -3$
-
----
-
-**Why does the sign flip?** Think about it: if $2 < 5$, then multiplying both by $-1$ gives $-2$ and $-5$. But $-2 > -5$. Negation reverses the order!
-      `
-    },
-    {
-      id: 'sat-l3-practice1',
-      type: 'input-boxes' as const,
-      content: `
-**Solve each inequality for $x$.** Write your answer as a number only (the boundary value). 🧮
-
-1) $4x - 7 > 13$ → $x > $ ?
-
-2) $-5x + 2 \\leq 27$ → $x \\geq $ ?
-
-3) $\\frac{x}{2} + 3 < 10$ → $x < $ ?
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['5', '-5', '14'],
-        hint1: 'For #1: Add 7 → $4x > 20$. Divide by 4 (positive, so no flip).',
-        hint2: 'For #2: Subtract 2 → $-5x \\leq 25$. Divide by $-5$ and FLIP the sign!',
-        hint3: 'For #3: Subtract 3 → $\\frac{x}{2} < 7$. Multiply by 2.',
-        explanation: '1) $4x > 20 \\Rightarrow x > 5$. 2) $-5x \\leq 25 \\Rightarrow x \\geq -5$ (flipped!). 3) $\\frac{x}{2} < 7 \\Rightarrow x < 14$.'
-      }
-    },
-    {
-      id: 'sat-l3-compound',
-      type: 'text' as const,
-      content: `
-**Compound Inequalities**
-
-A **compound inequality** combines two inequalities. The SAT loves these!
-
-**Example:** Solve $-3 < 2x + 1 \\leq 7$
-
-Solve both parts at once by performing the same operation on all three parts:
-
-Subtract 1: $-4 < 2x \\leq 6$
+Subtract 3 from all parts: $-4 < 2x \\leq 6$
 
 Divide by 2: $-2 < x \\leq 3$
 
-This means $x$ is greater than $-2$ AND less than or equal to 3.
+### Graphing Inequalities
 
----
+- $y > mx + b$: shade **above** the line, **dashed** boundary
+- $y \\leq mx + b$: shade **below** the line, **solid** boundary
+- The solution to a system of inequalities is the **overlap** region
 
-**SAT Tip:** When you see a compound inequality like $a < bx + c < d$, treat all three parts as one unit. Whatever you do to the middle, do to both ends.
-      `
+### SAT Pattern ⚠️
+
+The SAT loves: "Which point is in the solution set of $y > 2x - 1$ and $y < -x + 5$?" Plug each answer choice into BOTH inequalities and check.`
     },
     {
-      id: 'sat-l3-sat-style',
+      id: 'le3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
+      content: '**Inequalities** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which value of $x$ satisfies the inequality $-2x + 8 > 14$?',
-            options: [
-              '$x = -5$',
-              '$x = -3$',
-              '$x = -2$',
-              '$x = 3$'
-            ],
+            question: 'If $-2x + 5 > 11$, which represents all solutions?',
+            options: ['$x < -3$', '$x > -3$', '$x < 3$', '$x > 3$'],
             correctAnswer: 0,
-            explanation: 'Solve: $-2x > 6 \\Rightarrow x < -3$ (flip!). Only $x = -5$ is less than $-3$. You can verify: $-2(-5) + 8 = 18 > 14$ ✓.'
+            explanation: '$-2x > 6$ → $x < -3$ (flip the sign when dividing by $-2$). This is the most common SAT inequality trap.'
           },
           {
-            question: 'If $1 \\leq 3x - 5 \\leq 16$, what is the greatest possible integer value of $x$?',
-            options: [
-              '$5$',
-              '$6$',
-              '$7$',
-              '$8$'
-            ],
-            correctAnswer: 2,
-            explanation: 'Add 5 to all parts: $6 \\leq 3x \\leq 21$. Divide by 3: $2 \\leq x \\leq 7$. The greatest integer is $7$.'
+            question: 'Which point is in the solution set of $y > x + 1$ and $y < -x + 5$?',
+            options: ['$(1, 3)$', '$(0, 0)$', '$(3, 1)$', '$(4, 4)$'],
+            correctAnswer: 0,
+            explanation: 'Check $(1, 3)$: Is $3 > 1 + 1 = 2$? Yes. Is $3 < -1 + 5 = 4$? Yes. Both satisfied. The other points fail at least one inequality.'
+          },
+          {
+            question: 'If $-5 \\leq 3x + 1 < 10$, what is the range of $x$?',
+            options: ['$-2 \\leq x < 3$', '$-2 < x \\leq 3$', '$-1 \\leq x < 3$', '$-2 \\leq x < 4$'],
+            correctAnswer: 0,
+            explanation: 'Subtract 1: $-6 \\leq 3x < 9$. Divide by 3: $-2 \\leq x < 3$. The inequality types (≤ vs <) are preserved when dividing by a positive number.'
           }
         ]
       }
+    },
+    {
+      id: 'le3-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 3
+
+- **Flip the inequality** when multiplying/dividing by a negative
+- Compound inequalities: perform the same operation on all three parts
+- Graphing: $>$ or $<$ = dashed line; $\\geq$ or $\\leq$ = solid line
+- To check a point: plug into both inequalities — both must be true`
     }
   ]
-}
+};

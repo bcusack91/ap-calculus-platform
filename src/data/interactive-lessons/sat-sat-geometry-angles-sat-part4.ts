@@ -2,82 +2,70 @@ export const satGeometryPart4Data = {
   topicSlug: 'sat-geometry-angles-sat',
   sections: [
     {
-      id: 'sat-geom-p4-intro',
+      id: 'geo4-intro',
       type: 'text' as const,
-      content: `
-# 📏 Similar & Congruent Triangles
+      content: `# Circles: Arc Length, Sector Area, Central Angles
 
-**Part 4 of 7 — Similar & Congruent Triangles**
+**Part 4 of 7 — Circle Geometry**
 
-AA, SAS, SSS similarity and congruence criteria
+### Circle Fundamentals
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+| Property | Formula |
+|---|---|
+| Circumference | $C = 2\\pi r = \\pi d$ |
+| Area | $A = \\pi r^2$ |
+| Arc length | $L = \\frac{\\theta}{360°} \\times 2\\pi r$ |
+| Sector area | $A_{\\text{sector}} = \\frac{\\theta}{360°} \\times \\pi r^2$ |
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+Where $\\theta$ is the central angle in degrees.
+
+### The Proportion Rule
+
+A central angle of $\\theta°$ creates an arc that is $\\frac{\\theta}{360}$ of the full circle. This fraction applies to BOTH arc length AND sector area.
+
+**Example:** A circle with radius 10 has a central angle of $72°$.
+
+- Arc length $= \\frac{72}{360} \\times 2\\pi(10) = \\frac{1}{5} \\times 20\\pi = 4\\pi$
+- Sector area $= \\frac{72}{360} \\times \\pi(10)^2 = \\frac{1}{5} \\times 100\\pi = 20\\pi$
+
+### Inscribed Angle Theorem
+
+An inscribed angle is HALF the central angle that subtends the same arc.
+
+$$\\text{Inscribed angle} = \\frac{1}{2} \\times \\text{Central angle}$$
+
+**Special case:** An inscribed angle that subtends a diameter (semicircle) is always $90°$.
+
+### Tangent Lines
+
+A tangent to a circle is perpendicular to the radius at the point of tangency (`
     },
     {
-      id: 'sat-geom-p4-check',
+      id: 'geo4-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Circle Geometry Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-geom-p4-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-geom-p4-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: 'A circle has radius 12. What is the area of a sector with central angle $90°$?',
+            options: ['$36\\pi$', '$144\\pi$', '$72\\pi$', '$12\\pi$'],
+            correctAnswer: 0,
+            explanation: 'Sector area $= \\frac{90}{360} \\times \\pi(12)^2 = \\frac{1}{4} \\times 144\\pi = 36\\pi$.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'An inscribed angle measures $35°$. What is the measure of the central angle subtending the same arc?',
+            options: ['$70°$', '$35°$', '$17.5°$', '$145°$'],
+            correctAnswer: 0,
+            explanation: 'Central angle $= 2 \\times$ inscribed angle $= 2 \\times 35° = 70°$.'
+          },
+          {
+            question: 'A circle has circumference $20\\pi$. What is its area?',
+            options: ['$100\\pi$', '$400\\pi$', '$10\\pi$', '$200\\pi$'],
+            correctAnswer: 0,
+            explanation: '$C = 2\\pi r = 20\\pi$, so $r = 10$. Area $= \\pi(10)^2 = 100\\pi$.'
           }
         ]
       }
     }
   ]
-}
+};

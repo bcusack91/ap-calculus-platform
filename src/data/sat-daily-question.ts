@@ -59,15 +59,15 @@ export interface DailyQuestion {
  * Returns today's two SAT questions (one Math, one R&W).
  * Deterministic per calendar day.
  */
-export function getDailyQuestions(): DailyQuestion[] {
+export async function getDailyQuestions(): Promise<DailyQuestion[]> {
   const day = dayOfYear()
 
   const mathSlug = MATH_SLUGS[day % MATH_SLUGS.length]
   const rwSlug = RW_SLUGS[day % RW_SLUGS.length]
 
   // Generate a small pool and pick deterministically
-  const mathPool = generateExitQuiz(mathSlug, 5)
-  const rwPool = generateExitQuiz(rwSlug, 5)
+  const mathPool = await generateExitQuiz(mathSlug, 5)
+  const rwPool = await generateExitQuiz(rwSlug, 5)
 
   const mathQ = mathPool[day % mathPool.length]
   const rwQ = rwPool[day % rwPool.length]

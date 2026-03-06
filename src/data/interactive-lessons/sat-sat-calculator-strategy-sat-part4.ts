@@ -2,82 +2,49 @@ export const satCalcStrategyPart4Data = {
   topicSlug: 'sat-calculator-strategy-sat',
   sections: [
     {
-      id: 'sat-calc-p4-intro',
+      id: 'cs4-intro',
       type: 'text' as const,
-      content: `
-# ⚡ Speed Techniques
+      content: `# Inequalities & Restrictions in Desmos
 
-**Part 4 of 7 — Speed Techniques**
+**Part 4 of 7 — Shading, Domains, and Constraints**
 
-Fraction conversion, stored values, and calculation shortcuts
+### Graphing Inequalities
+Desmos shades the solution region automatically:
+- `y > 2x + 1` → shades above the line
+- `y ≤ -x + 3` → shades below and on the line
+- Use `<`, `>`, `<=`, `>=` on your keyboard
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Systems of Inequalities
+Enter multiple inequalities. The **overlapping shaded region** is the solution set. Desmos uses different colors for each, making the overlap visible.
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Domain Restrictions
+Limit a function to certain x-values using braces:
+- `y = x^2 {0 < x < 5}` → only shows parabola between x = 0 and x = 5
+- `y = 2x + 1 {x >= 0}` → only shows the positive part
+
+### Finding Integer Solutions
+When the SAT asks "how many integer values of x satisfy both inequalities":
+1. Graph both inequalities
+2. Find the overlap region
+3. Count the integer x-values within that region
+4. The Desmos table feature helps verify specific integer points
+
+### Absolute Value Inequalities
+- `|x - 3| < 5` means the distance from 3 is less than 5
+- Graph `y = |x - 3|` and `y = 5`, and identify where the V-shape is **below** the horizontal line`
     },
     {
-      id: 'sat-calc-p4-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-calc-p4-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-calc-p4-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'cs4-q1',
+      type: 'quiz' as const,
+      question: 'To find the solution region of y ≥ x + 1 AND y < -2x + 8 in Desmos, you should:',
+      options: [
+        'Solve the system algebraically first',
+        'Enter both inequalities and look for the overlapping shaded area',
+        'Graph only the boundary lines',
+        'Use the table to test random points'
+      ],
+      correctAnswer: 1,
+      explanation: 'Enter both inequalities in Desmos. Each will shade a region. The area where both shadings overlap is the solution set. You can then identify boundary points or count integer solutions.'
     }
   ]
-}
+};

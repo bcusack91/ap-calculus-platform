@@ -2,155 +2,80 @@ export const satLinearEquationsPart6Data = {
   topicSlug: 'sat-linear-equations-sat',
   sections: [
     {
-      id: 'sat-l6-intro',
+      id: 'le6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Problem-Solving Workshop
+      content: `# Linear Equations & Inequalities
 
-**Part 6 of 7 — SAT Strategies & Common Traps**
+**Part 6 of 7 — Absolute Value and Literal Equations**
 
-Now that you know the core skills, let's focus on **SAT-specific strategies** that save time and avoid common mistakes.
+### Absolute Value Equations
 
-**Strategy 1: Backsolving (Plugging In Answer Choices)**
+$|ax + b| = c$ splits into two cases (when $c \\geq 0$):
 
-When you're stuck setting up an equation, try **plugging each answer choice** into the problem to see which one works. Start with choice B or C (the middle values) to save time.
+$$ax + b = c \\quad \\text{or} \\quad ax + b = -c$$
 
-**Example:** If $3x - 7 = 2(x + 1)$, what is $x$?
-- A) 5  B) 7  C) 9  D) 11
+**Example:** $|2x - 3| = 7$
+- Case 1: $2x - 3 = 7$ → $x = 5$
+- Case 2: $2x - 3 = -7$ → $x = -2$
 
-Try B: $3(7) - 7 = 14$ and $2(7+1) = 16$. Not equal. ❌
-Try C: $3(9) - 7 = 20$ and $2(9+1) = 20$. Equal! ✅
+⚠️ If $|ax + b| = -k$ where $k > 0$: **no solution** (absolute value is never negative).
 
-Answer: C
-      `
+### Absolute Value Inequalities
+
+- $|x| < a$: $-a < x < a$ (AND — between)
+- $|x| > a$: $x < -a$ or $x > a$ (OR — outside)
+
+### Literal Equations (Solving for a Variable)
+
+The SAT often asks you to rearrange a formula.
+
+**Example:** Solve $A = \\frac{1}{2}bh$ for $h$:
+$$h = \\frac{2A}{b}$$
+
+**Example:** Solve $F = \\frac{9}{5}C + 32$ for $C$:
+$$C = \\frac{5(F - 32)}{9}$$
+
+### SAT Strategy 💡
+
+For literal equations, treat every other variable as a number and solve normally. The algebra is the same — just letters instead of digits.`
     },
     {
-      id: 'sat-l6-check1',
+      id: 'le6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Try Backsolving** 🔍
-      `,
+      content: '**Absolute Value & Literal Equations** 🎯',
       exercise: {
         questions: [
           {
-            question: 'If $4(x - 2) = 3x + 5$, what is the value of $x$?',
-            options: [
-              '$9$',
-              '$11$',
-              '$13$',
-              '$15$'
-            ],
-            correctAnswer: 2,
-            explanation: 'Backsolve with C: $4(13 - 2) = 4(11) = 44$ and $3(13) + 5 = 39 + 5 = 44$. ✓ Or algebraically: $4x - 8 = 3x + 5 \\Rightarrow x = 13$.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-l6-strategy2',
-      type: 'text' as const,
-      content: `
-**Strategy 2: Picking Numbers**
-
-When a problem uses variables in the answer choices or asks about a general relationship, **pick easy numbers** and test.
-
-**Example:** "If $a = 2b + 3$, which expression equals $4a - 2$?"
-
-Pick $b = 1$: Then $a = 2(1) + 3 = 5$, and $4a - 2 = 18$.
-
-Now test each answer choice with $b = 1$ to see which gives 18.
-
----
-
-**Strategy 3: Watch for "No Solution" and "All Solutions" Clues**
-
-If the SAT asks *"What value of $k$ makes this equation have no solution?"*, the equation must simplify to something like $0 = 5$ (a false statement). For infinite solutions, it must become $0 = 0$ (always true).
-      `
-    },
-    {
-      id: 'sat-l6-no-solution',
-      type: 'multiple-choice' as const,
-      content: `
-**Practice: Special Solution Types** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'For what value of $a$ does the equation $a(x + 2) = 3x + 6$ have infinitely many solutions?',
-            options: [
-              '$1$',
-              '$2$',
-              '$3$',
-              '$6$'
-            ],
-            correctAnswer: 2,
-            explanation: 'Distribute: $ax + 2a = 3x + 6$. For infinitely many solutions, coefficients of $x$ must match AND constants must match: $a = 3$ and $2a = 6$. Both give $a = 3$. ✓'
+            question: 'How many solutions does $|3x + 1| = -5$ have?',
+            options: ['$0$', '$1$', '$2$', 'Infinitely many'],
+            correctAnswer: 0,
+            explanation: 'Absolute value can never equal a negative number. There are zero solutions.'
           },
           {
-            question: 'For what value of $b$ does $2(x + b) = 2x + 10$ have no solution?',
-            options: [
-              '$b = 5$',
-              '$b = 3$',
-              '$b = 10$',
-              'Any value of $b$ other than $5$'
-            ],
+            question: 'If $|x - 4| < 3$, which values of $x$ are in the solution set?',
+            options: ['$1 < x < 7$', '$x < 1 \\text{ or } x > 7$', '$-3 < x < 3$', '$x < -7 \\text{ or } x > 1$'],
+            correctAnswer: 0,
+            explanation: '$|x - 4| < 3$ means $-3 < x - 4 < 3$, so $1 < x < 7$. The "less than" case gives a compound inequality (between).'
+          },
+          {
+            question: 'If $P = 2l + 2w$, what is $w$ in terms of $P$ and $l$?',
+            options: ['$w = \\frac{P - 2l}{2}$', '$w = P - 2l$', '$w = \\frac{P}{2} - l$', 'Both A and C'],
             correctAnswer: 3,
-            explanation: "Distribute: $2x + 2b = 2x + 10$. Subtract $2x$ from both sides: $2b = 10$. When $b = 5$, this is $10 = 10$ (true), giving infinitely many solutions. For any other value of $b$ (like $3$, $7$, $10$, etc.), you get a false statement (e.g. $6 = 10$), which means no solution. The answer is any $b \\neq 5$."
+            explanation: '$2w = P - 2l$ → $w = (P - 2l)/2 = P/2 - l$. Both forms are equivalent, so both A and C are correct.'
           }
         ]
       }
     },
     {
-      id: 'sat-l6-common-traps',
+      id: 'le6-summary',
       type: 'text' as const,
-      content: `
-**Common SAT Traps with Linear Equations**
+      content: `### Key Takeaways — Part 6
 
-🚫 **Trap 1: Distributing the negative sign incorrectly**
-- $-(x - 3) = -x + 3$, NOT $-x - 3$
-
-🚫 **Trap 2: Forgetting to flip the inequality**
-- Dividing by a negative changes $<$ to $>$
-
-🚫 **Trap 3: Solving for the wrong thing**
-- If the question asks for $2x + 1$ but you solved for $x$, plug $x$ back in!
-
-🚫 **Trap 4: Not checking the domain**
-- If a word problem asks for "how many students," your answer can't be negative or a fraction
-      `
-    },
-    {
-      id: 'sat-l6-sat-style',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'If $3x + 5 = 26$, what is the value of $6x + 10$?',
-            options: [
-              '$42$',
-              '$47$',
-              '$52$',
-              '$57$'
-            ],
-            correctAnswer: 2,
-            explanation: "Notice that $6x + 10 = 2(3x + 5) = 2(26) = 52$. You don't even need to solve for $x$! This is a classic SAT shortcut."
-          },
-          {
-            question: 'A tank contains 200 gallons of water. Water drains at 8 gallons per minute. After how many minutes will the tank have exactly 40 gallons?',
-            options: [
-              '$15$',
-              '$20$',
-              '$25$',
-              '$30$'
-            ],
-            correctAnswer: 1,
-            explanation: '$200 - 8t = 40$. Subtract 200: $-8t = -160$. Divide by $-8$: $t = 20$ minutes.'
-          }
-        ]
-      }
+- $|expr| = c$ → two cases: $expr = c$ or $expr = -c$
+- $|expr| = \\text{negative}$ → **no solution**
+- $|expr| < c$ → compound inequality (between): $-c < expr < c$
+- $|expr| > c$ → two separate inequalities (outside): $expr < -c$ or $expr > c$
+- Literal equations: isolate the target variable using normal algebra steps`
     }
   ]
-}
+};

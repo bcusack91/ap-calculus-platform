@@ -2,9 +2,12 @@
 
 import { SessionProvider } from 'next-auth/react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { useState } from 'react'
 import { ToastProvider } from '@/components/ToastProvider'
 import { PreferencesProvider } from '@/components/PreferencesProvider'
+import { ConsentProvider } from '@/components/ConsentProvider'
+import { KeyboardShortcuts } from '@/components/KeyboardShortcuts'
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(() => new QueryClient({
@@ -18,11 +21,15 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <SessionProvider>
       <QueryClientProvider client={queryClient}>
-        <ToastProvider>
-          <PreferencesProvider>
-            {children}
-          </PreferencesProvider>
-        </ToastProvider>
+        <ConsentProvider>
+          <ToastProvider>
+            <PreferencesProvider>
+              <KeyboardShortcuts />
+              {children}
+            </PreferencesProvider>
+          </ToastProvider>
+        </ConsentProvider>
+        {process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
       </QueryClientProvider>
     </SessionProvider>
   )

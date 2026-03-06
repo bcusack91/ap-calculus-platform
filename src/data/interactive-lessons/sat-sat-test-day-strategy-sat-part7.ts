@@ -1,83 +1,51 @@
-export const satTestDayPart7Data = {
+export const satTestDayStrategyPart7Data = {
   topicSlug: 'sat-test-day-strategy-sat',
   sections: [
     {
-      id: 'sat-test-p7-intro',
+      id: 'tds7-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Post-Test & Score Analysis
+      content: `# During the Test: Mindset & Tactics
 
-**Part 7 of 7 — Post-Test & Score Analysis**
+**Part 7 of 7 — Performing Your Best on Test Day**
 
-Understanding your score report and planning next steps
+### Mindset Strategies
+- **"Next play" mentality** — if a question was hard, forget it. The next question is a fresh opportunity.
+- **Confidence calibration** — trust your preparation. You've practiced this.
+- **Anxiety is normal** — some nervousness improves performance. Deep breaths if it gets overwhelming.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### During Each Module
+1. **First pass (Minutes 1-20):** Work through questions in order. Flag anything that takes >90 seconds.
+2. **Second pass (Minutes 20-30):** Return to flagged questions with fresh perspective.
+3. **Final check (Last 2-3 minutes):** Scan for unanswered questions and obvious errors.
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### The Break
+- You get a **10-minute break** between R&W and Math
+- Eat your snack, drink water, use the restroom
+- **Do NOT discuss questions** with other test-takers (it only causes anxiety)
+- Light stretching or deep breathing to reset
+
+### If You're Running Out of Time
+- Answer every remaining question (guess if needed)
+- Focus on questions you've already started
+- Don't start a new complex question with 30 seconds left — guess and move on
+
+### After the Test
+- **Scores arrive in ~2 weeks**
+- You can take the SAT **up to 7 times** (most colleges see your best score)
+- If you feel bad about a section, remember: the adaptive scoring may have given you harder questions because you did well on Module 1`
     },
     {
-      id: 'sat-test-p7-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-test-p7-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-test-p7-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'tds7-q1',
+      type: 'quiz' as const,
+      question: 'During a Math module, you have 5 minutes left and 4 questions remaining. What is the best strategy?',
+      options: [
+        'Spend 5 minutes on the hardest one — it is worth the most points',
+        'Quickly attempt each, putting your best guess for any you cannot solve in ~1 minute',
+        'Guess on all 4 and use the time to double-check earlier answers',
+        'Skip them all — they are probably too hard'
+      ],
+      correctAnswer: 1,
+      explanation: 'With ~75 seconds per question, quickly attempt each one. Some may be easier than they look. If you cannot solve one in 60 seconds, make an educated guess and move to the next. Every question is worth the same — don\'t leave any blank.'
     }
   ]
-}
+};

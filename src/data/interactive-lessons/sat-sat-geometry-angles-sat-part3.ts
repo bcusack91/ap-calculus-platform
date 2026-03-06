@@ -2,82 +2,73 @@ export const satGeometryPart3Data = {
   topicSlug: 'sat-geometry-angles-sat',
   sections: [
     {
-      id: 'sat-geom-p3-intro',
+      id: 'geo3-intro',
       type: 'text' as const,
-      content: `
-# 📊 Parallel Lines & Transversals
+      content: `# Area, Perimeter, and Quadrilaterals
 
-**Part 3 of 7 — Parallel Lines & Transversals**
+**Part 3 of 7 — Polygons and Their Properties**
 
-Corresponding, alternate interior, and co-interior angles
+### Essential Area Formulas
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+| Shape | Area | Perimeter |
+|---|---|---|
+| Rectangle | $A = lw$ | $P = 2l + 2w$ |
+| Square | $A = s^2$ | $P = 4s$ |
+| Triangle | $A = \\frac{1}{2}bh$ | $P = a + b + c$ |
+| Parallelogram | $A = bh$ | $P = 2a + 2b$ |
+| Trapezoid | $A = \\frac{1}{2}(b_1 + b_2)h$ | Sum of all sides |
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Key Insight: Height ≠ Side Length
+
+The **height** (altitude) is the **perpendicular** distance from base to top. In non-right triangles and parallelograms, the height is NOT the same as a side length.
+
+### Coordinate Geometry Areas
+
+For a rectangle or right triangle on the coordinate plane:
+- Find the lengths of the sides using the distance formula or by counting grid units
+- Apply the appropriate area formula
+
+### Shaded Region Problems
+
+**Strategy:**
+$$\\text{Shaded area} = \\text{Total area} - \\text{Unshaded area}$$
+
+**Example:** A circle of radius 5 is inscribed in a square. Find the shaded area (corners).
+
+- Square area: $(2 \\times 5)^2 = 100$
+- Circle area: $\\pi(5)^2 = 25\\pi \\approx 78.54$
+- Shaded area: $100 - 25\\pi \\approx 21.46$
+
+### SAT Trap ⚠️
+
+In "shaded region" problems, make sure you subtract the RIGHT shape. Draw the overlapping shapes clearly and label dimensions.`
     },
     {
-      id: 'sat-geom-p3-check',
+      id: 'geo3-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Area & Perimeter Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-geom-p3-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-geom-p3-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: 'A trapezoid has parallel sides of length 8 and 14, with a height of 6. What is its area?',
+            options: ['$66$', '$84$', '$48$', '$132$'],
+            correctAnswer: 0,
+            explanation: '$A = \\frac{1}{2}(b_1 + b_2)h = \\frac{1}{2}(8 + 14)(6) = \\frac{1}{2}(22)(6) = 66$.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'A rectangle has area 48 and width 6. What is its perimeter?',
+            options: ['$28$', '$24$', '$20$', '$54$'],
+            correctAnswer: 0,
+            explanation: 'Length $= 48 ÷ 6 = 8$. Perimeter $= 2(8) + 2(6) = 16 + 12 = 28$.'
+          },
+          {
+            question: 'A square has a diagonal of $6\\sqrt{2}$. What is its area?',
+            options: ['$36$', '$72$', '$18$', '$6$'],
+            correctAnswer: 0,
+            explanation: 'The diagonal of a square with side $s$ is $s\\sqrt{2}$. So $s\\sqrt{2} = 6\\sqrt{2}$, meaning $s = 6$. Area $= 6^2 = 36$.'
           }
         ]
       }
     }
   ]
-}
+};

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import ProgressRing from '@/components/ProgressRing'
@@ -11,7 +12,20 @@ import AchievementToast from '@/components/AchievementToast'
 import ProgressCharts from '@/components/ProgressCharts'
 import StudyPlanner from '@/components/StudyPlanner'
 import ChallengesWidget from '@/components/ChallengesWidget'
-import FlashcardStudySession from '@/components/FlashcardStudySession'
+
+const FlashcardStudySession = dynamic(
+  () => import('@/components/FlashcardStudySession'),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="animate-pulse rounded-xl bg-gray-100 dark:bg-gray-800 p-8 min-h-[300px]">
+        <div className="h-6 w-48 bg-gray-200 dark:bg-gray-700 rounded mb-4" />
+        <div className="h-4 w-full bg-gray-200 dark:bg-gray-700 rounded mb-2" />
+        <div className="h-4 w-3/4 bg-gray-200 dark:bg-gray-700 rounded" />
+      </div>
+    ),
+  }
+)
 
 interface BookmarkEntry {
   id: string

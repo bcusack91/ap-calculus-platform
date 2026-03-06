@@ -1,20 +1,8 @@
 'use client'
 
 import { useSession } from 'next-auth/react'
-import { useEffect, useState } from 'react'
-
-// Check if the user has consented to advertising cookies
-function hasAdConsent(): boolean {
-  if (typeof window === 'undefined') return false
-  try {
-    const consent = localStorage.getItem('cookie-consent')
-    if (!consent) return false
-    const parsed = JSON.parse(consent)
-    return parsed.advertising === true
-  } catch {
-    return false
-  }
-}
+import { useEffect } from 'react'
+import { useConsent } from '@/components/ConsentProvider'
 
 interface AdBannerProps {
   slot: string
@@ -24,7 +12,7 @@ interface AdBannerProps {
 
 export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerProps) {
   const { data: session } = useSession()
-  const [consentGiven, setConsentGiven] = useState(() => hasAdConsent())
+  const { advertising: consentGiven } = useConsent()
   
   // Don't show ads to premium users
   const isPremium = session?.user?.role === 'PREMIUM'
@@ -32,28 +20,12 @@ export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerP
   // Skip ads in development to avoid initialization errors
   const isDevelopment = process.env.NODE_ENV === 'development'
 
-  // Check consent on mount and listen for changes
-  useEffect(() => {
-    // Re-check consent when storage changes (e.g. user accepts cookies)
-    const handleStorage = () => setConsentGiven(hasAdConsent())
-    window.addEventListener('storage', handleStorage)
-    
-    // Also poll briefly since cookie consent updates localStorage in the same tab
-    const interval = setInterval(() => {
-      setConsentGiven((previous) => {
-        const next = hasAdConsent()
-        return previous === next ? previous : next
-      })
-    }, 2000)
-    
-    return () => {
-      window.removeEventListener('storage', handleStorage)
-      clearInterval(interval)
-    }
-  }, [])
-
   useEffect(() => {
     if (isPremium || isDevelopment || !consentGiven) return
+
+    // Guard against pushing to an already-filled ad slot on client-side navigation
+    const adEl = document.querySelector(`ins.adsbygoogle[data-ad-slot="${slot}"]`)
+    if (adEl && adEl.getAttribute('data-ad-status')) return
 
     try {
       // @ts-expect-error Google AdSense global is injected by the script tag
@@ -61,7 +33,7 @@ export function AdBanner({ slot, format = 'auto', responsive = true }: AdBannerP
     } catch (err) {
       console.error('AdSense error:', err)
     }
-  }, [isPremium, isDevelopment, consentGiven])
+  }, [isPremium, isDevelopment, consentGiven, slot])
 
   if (isPremium) {
     return null

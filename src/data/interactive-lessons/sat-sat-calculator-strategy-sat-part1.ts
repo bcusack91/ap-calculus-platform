@@ -2,82 +2,60 @@ export const satCalcStrategyPart1Data = {
   topicSlug: 'sat-calculator-strategy-sat',
   sections: [
     {
-      id: 'sat-calc-p1-intro',
+      id: 'cs1-intro',
       type: 'text' as const,
-      content: `
-# 🖩 When to Use Your Calculator
+      content: `# Calculator Strategy: When to Use It
 
-**Part 1 of 7 — When to Use Your Calculator**
+**Part 1 of 7 — Knowing When the Calculator Helps (and Hurts)**
 
-Which problems benefit from calculator vs mental math
+The Digital SAT provides a built-in **Desmos graphing calculator** for the entire Math section. But using it on every problem wastes time.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### The 30-Second Rule
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+If a problem takes longer than **30 seconds** by hand, use the calculator. Otherwise, mental math is faster.
+
+### Problems Where Calculator HELPS
+- Systems of equations (graph both, find intersection)
+- Quadratics that don't factor cleanly
+- Problems with ugly arithmetic (large numbers, decimals)
+- Checking your algebraic work
+- Finding zeros of complex functions
+
+### Problems Where Mental Math is FASTER
+- Simple arithmetic (2/3 × 15 = 10)
+- Factoring clean quadratics ($x^2 - 5x + 6$)
+- Single-variable equations ($3x + 7 = 22$)
+- Percent problems (20% of 80 = 16)
+- Unit conversions with clean numbers
+
+### Desmos Tip: Intersection
+Type both equations, then click the intersection point to get exact coordinates — no algebra needed.`
     },
     {
-      id: 'sat-calc-p1-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
+      id: 'cs1-q1',
+      type: 'quiz' as const,
+      question: 'Which problem would benefit MOST from using the Desmos calculator?',
+      options: [
+        'What is 3/4 of 120?',
+        'Factor x² - 9',
+        'Find where y = 2x² - 3x + 1 and y = x + 2 intersect',
+        'Solve 5x = 35'
+      ],
+      correctAnswer: 2,
+      explanation: 'The system with a quadratic and linear equation has non-integer solutions — graphing both in Desmos and clicking the intersection is much faster than solving algebraically.'
     },
     {
-      id: 'sat-calc-p1-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-calc-p1-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'cs1-q2',
+      type: 'quiz' as const,
+      question: 'A student uses the calculator for every problem. What is the likely consequence?',
+      options: [
+        'They will get more answers correct',
+        'They will run out of time on harder problems',
+        'They will avoid all careless errors',
+        'The calculator will not work for some problems'
+      ],
+      correctAnswer: 1,
+      explanation: 'Using the calculator for simple problems like 3x = 15 wastes 20-30 seconds each. Over 22 Math questions, that adds up to minutes lost on harder problems that actually need more time.'
     }
   ]
-}
+};

@@ -2,82 +2,64 @@ export const satExpressionPart3Data = {
   topicSlug: 'sat-expression-ideas-sat',
   sections: [
     {
-      id: 'sat-expr-p3-intro',
+      id: 'ei3-intro',
       type: 'text' as const,
-      content: `
-# 📊 Support & Evidence
+      content: `# Effective Introductions & Conclusions
 
-**Part 3 of 7 — Support & Evidence**
+**Part 3 of 7 — Opening and Closing Sentences**
 
-Adding, revising, or removing evidence to strengthen arguments
+The SAT may ask which sentence best introduces or concludes a paragraph or passage. Strong openings and closings share specific characteristics.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Effective Topic Sentences (Paragraph Openers)
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+A good topic sentence:
+- States the paragraph's main point
+- Connects to the previous paragraph (if not the first)
+- Is general enough to cover the paragraph's content
+- Is specific enough to give direction
+
+**Test:** Can you predict what the paragraph will discuss from the topic sentence alone?
+
+✅ "While solar panels reduce electricity costs, their manufacturing process raises environmental concerns."  
+→ You can predict: the paragraph will discuss environmental downsides of solar panel production.
+
+❌ "Solar panels are interesting."  
+→ Too vague — could go anywhere.
+
+### Effective Conclusions
+
+A conclusion should:
+- NOT introduce new information
+- Synthesize or summarize the main point
+- Sometimes look forward (implications, significance)
+
+### Bad Conclusion Signals
+
+- Introduces a brand-new topic
+- Asks a question that the paragraph hasn't addressed
+- Contradicts the paragraph's argument
+- Restates the introduction word-for-word (too mechanical)`
     },
     {
-      id: 'sat-expr-p3-check',
+      id: 'ei3-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Introduction & Conclusion Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-expr-p3-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-expr-p3-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: 'A paragraph discusses how composting reduces landfill waste and produces nutrient-rich soil. Which is the best concluding sentence?',
+            options: ['By diverting organic waste from landfills and enriching soil, composting offers a practical solution to two environmental challenges simultaneously.', 'Recycling is another important environmental practice that people should consider.', 'The history of composting dates back thousands of years to ancient civilizations.', 'There are many types of composting bins available at hardware stores.'],
+            correctAnswer: 0,
+            explanation: 'A good conclusion synthesizes the paragraph\'s two main points (waste reduction + soil enrichment). Option B introduces a new topic, C goes backward to history, and D introduces commercial information not discussed.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'Which would be the best topic sentence for a paragraph about the decline of honeybee populations?',
+            options: ['Honeybee populations have declined by nearly 40% in the past decade, threatening both agriculture and ecosystem stability.', 'Honeybees are fascinating creatures that live in complex social colonies.', 'Many people are allergic to bee stings.', 'Scientists have studied insects for centuries.'],
+            correctAnswer: 0,
+            explanation: 'This topic sentence names the issue (decline), quantifies it (40%), situates it in time (past decade), and explains its significance (agriculture + ecosystems). The other options are either too general or off-topic.'
           }
         ]
       }
     }
   ]
-}
+};

@@ -59,6 +59,7 @@ model User {
   studyPlans                StudyPlan[]
   challengeParticipations   ChallengeParticipant[]
   satTestAttempts           SatTestAttempt[]
+  mcatTestAttempts          McatTestAttempt[]
 }
 
 model Account {
@@ -319,8 +320,8 @@ model DiagnosticTest {
   id        String   @id @default(cuid())
   userId    String
   category  String
-  results   String
-  weakAreas String?
+  results   Json
+  weakAreas Json?
   strengths String?
   createdAt DateTime @default(now())
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -558,7 +559,7 @@ model Leaderboard {
   scopeId   String?
   period    LeaderboardPeriod
   topicSlug String?
-  rankings  String
+  rankings  Json
   updatedAt DateTime          @updatedAt
   createdAt DateTime          @default(now())
 
@@ -1028,8 +1029,8 @@ model SatTestAttempt {
   mathTotal   Int      // Total math questions
   timeSpent   Int      @default(0) // Total time in seconds
   answers     Json     // Full answer data per section
-  weakAreas   String?  // Comma-separated weak topic areas
-  strengths   String?  // Comma-separated strong topic areas
+  weakAreas   Json?    // Array of weak topic areas
+  strengths   Json?    // Array of strong topic areas
   completed   Boolean  @default(true)
   startedAt   DateTime @default(now())
   completedAt DateTime @default(now())
@@ -1038,4 +1039,40 @@ model SatTestAttempt {
 
   @@index([userId])
   @@index([userId, testNumber])
+}
+
+model McatTestAttempt {
+  id          String   @id @default(cuid())
+  userId      String
+  sectionId   String   // e.g. 'chem-phys', 'cars', 'bio-biochem', 'psych-soc'
+  sectionName String   // Display name of the section
+  score       Int      // Scaled section score (118-132)
+  maxScore    Int      @default(132)
+  percentage  Int      // Percentage correct
+  correct     Int      // Number correct
+  total       Int      // Total questions
+  timeSpent   Int      @default(0) // Total time in seconds
+  answers     Json     // Full answer data
+  completed   Boolean  @default(true)
+  startedAt   DateTime @default(now())
+  completedAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, sectionId])
+}
+
+model EmailSubscriber {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  source      String   @default("website") // e.g. "sat-results", "topic-sidebar", "footer"
+  interests   String[] @default([])        // e.g. ["sat", "ap-calculus"]
+  verified    Boolean  @default(false)
+  unsubscribed Boolean @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([email])
+  @@index([source])
 }

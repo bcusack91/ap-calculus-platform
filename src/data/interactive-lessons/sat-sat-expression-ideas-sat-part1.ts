@@ -2,82 +2,74 @@ export const satExpressionPart1Data = {
   topicSlug: 'sat-expression-ideas-sat',
   sections: [
     {
-      id: 'sat-expr-p1-intro',
+      id: 'ei1-intro',
       type: 'text' as const,
-      content: `
-# 📝 Main Idea & Thesis
+      content: `# Effective Language Use
 
-**Part 1 of 7 — Main Idea & Thesis**
+**Part 1 of 7 — Precision and Word Choice**
 
-Identifying and strengthening the central argument
+Expression of Ideas questions test whether you can choose the most **precise**, **effective**, and **appropriate** word or phrase for a given context.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Precision Over Generality
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+The SAT rewards **specific** language over **vague** language.
+
+| Vague | Precise |
+|---|---|
+| "The results were good" | "The results showed a 23% improvement" |
+| "The politician talked about problems" | "The senator addressed income inequality" |
+| "The thing that happened" | "The earthquake that struck in March" |
+| "They did stuff about it" | "The committee implemented new regulations" |
+
+### Tone Matching
+
+Your word choice must match the passage's established tone:
+
+- **Academic/Formal:** "The findings corroborate previous research."
+- **Journalistic/Neutral:** "The study supports earlier work."
+- **Informal (rare on SAT):** "The study backs up what we already knew."
+
+The SAT will include a correct-but-wrong-tone answer choice as a trap.
+
+### Connotation Awareness
+
+Words can have similar denotations but different connotations:
+
+| Positive | Neutral | Negative |
+|---|---|---|
+| **thrifty** | economical | **cheap** |
+| **confident** | self-assured | **arrogant** |
+| **youthful** | young | **immature** |
+| **firm** | decided | **stubborn** |
+
+Choose the word whose connotation matches the author's attitude.`
     },
     {
-      id: 'sat-expr-p1-check',
+      id: 'ei1-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Precision Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-expr-p1-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-expr-p1-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: '"The scientist _____ that the species had migrated further north than any previous study had documented." Which verb is most precise?',
+            options: ['discovered', 'found out', 'knew about', 'saw'],
+            correctAnswer: 0,
+            explanation: '"Discovered" implies finding something new and previously unknown, which matches documenting something no previous study had shown. "Found out" is informal, "knew about" implies prior knowledge, and "saw" is too literal.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'In a formal academic passage about economic policy, which word best replaces "things got worse"?',
+            options: ['conditions deteriorated', 'stuff declined', 'things went downhill', 'the situation got bad'],
+            correctAnswer: 0,
+            explanation: '"Conditions deteriorated" matches academic tone perfectly. "Stuff" and "things" are informal, and "went downhill" is colloquial.'
+          },
+          {
+            question: 'A passage praises an architect\'s innovative design. Which word best describes her approach? "Her _____ approach to public spaces transformed urban design."',
+            options: ['visionary', 'weird', 'radical', 'unusual'],
+            correctAnswer: 0,
+            explanation: 'The passage praises the architect, so we need a positive connotation. "Visionary" (positive), "weird" (negative), "radical" (neutral-to-negative in this context), "unusual" (neutral but underwhelming). "Visionary" best matches the praising tone.'
           }
         ]
       }
     }
   ]
-}
+};

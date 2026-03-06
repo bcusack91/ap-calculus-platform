@@ -1,6 +1,9 @@
 import { notFound } from 'next/navigation'
 import { prisma } from '@/lib/prisma'
-import { AdBanner, InArticleAd } from '@/components/ad-banner'
+import { AdBanner, InArticleAd, SidebarAd } from '@/components/ad-banner'
+import { EmailCapture } from '@/components/email-capture'
+import { generateTopicFaqs } from '@/lib/topic-faqs'
+import { faqJsonLd } from '@/lib/jsonld'
 
 function TopicBottomAd() {
   const slot = process.env.NEXT_PUBLIC_AD_SLOT_TOPIC_BOTTOM
@@ -15,9 +18,18 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import TopicContentRenderer from '@/components/TopicContentRenderer'
 import type { ReactNode } from 'react'
+import { SocialShare } from '@/components/SocialShare'
 
 // ISR: revalidate content every hour (content rarely changes)
 export const revalidate = 3600
+
+// Pre-render all topic pages at build time for faster TTFB and better crawlability
+export async function generateStaticParams() {
+  const topics = await prisma.topic.findMany({
+    select: { slug: true },
+  })
+  return topics.map((topic) => ({ slug: topic.slug }))
+}
 
 interface TopicPageProps {
   params: Promise<{
@@ -168,6 +180,11 @@ export default async function TopicPage(props: TopicPageProps) {
   const prevTopic = currentIdx > 0 ? siblingTopics[currentIdx - 1] : null
   const nextTopic = currentIdx < siblingTopics.length - 1 ? siblingTopics[currentIdx + 1] : null
 
+  // Related topics: other topics in the same category (excluding current), limited to 6
+  const relatedTopics = siblingTopics
+    .filter((t) => t.slug !== topic.slug)
+    .slice(0, 6)
+
   /* Temporarily hidden for free tier launch - all content is free
   // Check if user has access
   if (topic.isPremium && !isPremium) {
@@ -240,6 +257,23 @@ export default async function TopicPage(props: TopicPageProps) {
           }),
         }}
       />
+      {/* FAQ JSON-LD for rich snippets */}
+      {(() => {
+        const faqs = generateTopicFaqs({
+          title: topic.title,
+          description: topic.description,
+          courseName: topic.category.course.name,
+          categoryName: topic.category.name,
+          hasPracticeProblems: topic.exampleProblems.length > 0,
+          problemCount: topic.exampleProblems.length,
+        })
+        return (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }}
+          />
+        )
+      })()}
 
       <div className="mx-auto max-w-7xl">
         <div className="flex gap-8">
@@ -265,6 +299,15 @@ export default async function TopicPage(props: TopicPageProps) {
                 </span>
               )}
               */}
+            </div>
+
+            {/* Social sharing */}
+            <div className="mb-6 social-share">
+              <SocialShare
+                url={`https://www.studymondo.com/topics/${topic.slug}`}
+                title={`${topic.title} - Study Mondo`}
+                description={topic.description}
+              />
             </div>
 
             {/* Interactive Lesson Banner - Show for all topics */}
@@ -344,7 +387,8 @@ export default async function TopicPage(props: TopicPageProps) {
                   <p className="text-muted-foreground">No example problems available yet.</p>
                 ) : (
                   topic.exampleProblems.map((problem, index: number) => (
-                    <div key={problem.id} className="bg-white dark:bg-gray-900 rounded-lg border-2 border-green-300 dark:border-green-700 p-6 shadow-md hover:shadow-lg transition-shadow">
+                    <div key={problem.id}>
+                    <div className="bg-white dark:bg-gray-900 rounded-lg border-2 border-green-300 dark:border-green-700 p-6 shadow-md hover:shadow-lg transition-shadow">
                       <div className="flex items-start justify-between mb-4">
                         <h3 className="text-lg font-semibold flex items-center gap-2">
                           <span className="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">
@@ -393,6 +437,13 @@ export default async function TopicPage(props: TopicPageProps) {
                           </ReactMarkdown>
                         </div>
                       </details>
+                    </div>
+                    {/* Ad after every 4th practice problem */}
+                    {(index + 1) % 4 === 0 && index < topic.exampleProblems.length - 1 && (
+                      <div className="my-2">
+                        <InArticleAd />
+                      </div>
+                    )}
                     </div>
                   ))
                 )}
@@ -459,6 +510,58 @@ export default async function TopicPage(props: TopicPageProps) {
               </Link>
             </div>
 
+            {/* Related Topics in this category */}
+            {relatedTopics.length > 0 && (
+              <section className="mt-12">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                  <span>📌</span> Related Topics in {topic.category.name}
+                </h2>
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {relatedTopics.map((rt) => (
+                    <Link
+                      key={rt.slug}
+                      href={`/topics/${rt.slug}`}
+                      className="block rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-purple-400 hover:shadow-md transition-all group"
+                    >
+                      <span className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors">
+                        {rt.title}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* FAQ Section for SEO + user value */}
+            <section className="mt-12">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                <span>❓</span> Frequently Asked Questions
+              </h2>
+              <div className="space-y-4">
+                {generateTopicFaqs({
+                  title: topic.title,
+                  description: topic.description,
+                  courseName: topic.category.course.name,
+                  categoryName: topic.category.name,
+                  hasPracticeProblems: topic.exampleProblems.length > 0,
+                  problemCount: topic.exampleProblems.length,
+                }).map((faq, i) => (
+                  <details
+                    key={i}
+                    className="group rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800"
+                  >
+                    <summary className="flex cursor-pointer items-center justify-between p-4 font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700/50 rounded-lg">
+                      {faq.question}
+                      <span className="ml-2 text-gray-400 transition-transform group-open:rotate-180">▾</span>
+                    </summary>
+                    <div className="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </section>
+
             {/* Bottom Ad */}
             <div className="mt-8">
               <TopicBottomAd />
@@ -509,6 +612,19 @@ export default async function TopicPage(props: TopicPageProps) {
                   </li>
                 </ul>
               </div>
+
+              {/* Email Capture */}
+              <EmailCapture
+                source="topic-sidebar"
+                interests={[topic.category.course.slug]}
+                heading="Free Study Tips"
+                description="Get weekly tips and practice problems for this course."
+                buttonText="Subscribe"
+                compact
+              />
+
+              {/* Sidebar Ad (desktop only) */}
+              <SidebarAd />
             </div>
           </aside>
         </div>

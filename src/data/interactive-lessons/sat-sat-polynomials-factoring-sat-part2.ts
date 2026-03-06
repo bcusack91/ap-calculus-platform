@@ -2,82 +2,76 @@ export const satPolynomialsPart2Data = {
   topicSlug: 'sat-polynomials-factoring-sat',
   sections: [
     {
-      id: 'sat-poly-p2-intro',
+      id: 'pf2-intro',
       type: 'text' as const,
-      content: `
-# ✖️ Multiplying Polynomials
+      content: `# Polynomials & Factoring
 
-**Part 2 of 7 — Multiplying Polynomials**
+**Part 2 of 7 — Factoring Techniques**
 
-FOIL, distribution, and special products
+### GCF Factoring
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+Always look for a Greatest Common Factor first:
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+$6x^3 + 9x^2 = 3x^2(2x + 3)$
+
+### Difference of Squares
+
+$$a^2 - b^2 = (a + b)(a - b)$$
+
+**Example:** $x^2 - 49 = (x + 7)(x - 7)$
+
+**Tricky example:** $4x^2 - 25 = (2x)^2 - 5^2 = (2x + 5)(2x - 5)$
+
+### Perfect Square Trinomials
+
+$$a^2 + 2ab + b^2 = (a + b)^2$$
+$$a^2 - 2ab + b^2 = (a - b)^2$$
+
+How to recognize: first and last terms are perfect squares, middle term is $\\pm 2 \\times \\sqrt{\\text{first}} \\times \\sqrt{\\text{last}}$.
+
+$x^2 + 10x + 25 = (x + 5)^2$ because $2(x)(5) = 10x$ ✓
+
+### Sum/Difference of Cubes (Rare on SAT)
+
+$$a^3 + b^3 = (a + b)(a^2 - ab + b^2)$$
+$$a^3 - b^3 = (a - b)(a^2 + ab + b^2)$$`
     },
     {
-      id: 'sat-poly-p2-check',
+      id: 'pf2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Factoring Patterns** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
+            question: 'Factor completely: $x^2 - 16$',
+            options: ['$(x + 4)(x - 4)$', '$(x - 4)^2$', '$(x + 4)^2$', '$(x - 8)(x + 2)$'],
+            correctAnswer: 0,
+            explanation: 'This is a difference of squares: $x^2 - 4^2 = (x + 4)(x - 4)$.'
+          },
+          {
+            question: 'Which is a perfect square trinomial?',
+            options: ['$x^2 - 14x + 49$', '$x^2 - 14x + 48$', '$x^2 + 14x - 49$', '$x^2 + 7x + 49$'],
+            correctAnswer: 0,
+            explanation: '$x^2 - 14x + 49 = (x - 7)^2$. Check: $2(x)(7) = 14x$ ✓ and $7^2 = 49$ ✓.'
+          },
+          {
+            question: 'Factor: $3x^3 - 12x$',
+            options: ['$3x(x + 2)(x - 2)$', '$3x(x^2 - 4)$', '$3(x^3 - 4x)$', '$x(3x^2 - 12)$'],
+            correctAnswer: 0,
+            explanation: 'GCF first: $3x(x^2 - 4)$. Then difference of squares: $3x(x + 2)(x - 2)$. Always factor completely!'
           }
         ]
       }
     },
     {
-      id: 'sat-poly-p2-detail',
+      id: 'pf2-summary',
       type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
+      content: `### Key Takeaways — Part 2
 
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-poly-p2-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+- Always check for GCF first
+- $a^2 - b^2 = (a+b)(a-b)$ — memorize this cold
+- Perfect square trinomials: check if middle term = $2ab$
+- "Factor completely" means keep going until no factor can be factored further`
     }
   ]
-}
+};

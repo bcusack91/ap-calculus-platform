@@ -2,82 +2,79 @@ export const satGeometryPart2Data = {
   topicSlug: 'sat-geometry-angles-sat',
   sections: [
     {
-      id: 'sat-geom-p2-intro',
+      id: 'geo2-intro',
       type: 'text' as const,
-      content: `
-# 🔺 Triangle Properties
+      content: `# Triangle Properties & Theorems
 
-**Part 2 of 7 — Triangle Properties**
+**Part 2 of 7 — Special Triangles, Similarity, Congruence**
 
-Angle sum, exterior angles, triangle inequality
+### Special Right Triangles
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+The SAT provides these in the reference sheet, but memorizing them saves time:
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+**45-45-90 Triangle:**
+- Legs: $x$, $x$
+- Hypotenuse: $x\\sqrt{2}$
+
+**30-60-90 Triangle:**
+- Short leg: $x$ (opposite 30°)
+- Long leg: $x\\sqrt{3}$ (opposite 60°)
+- Hypotenuse: $2x$ (opposite 90°)
+
+### Example
+
+A 30-60-90 triangle has a hypotenuse of 10. Find the legs.
+
+- Hypotenuse $= 2x = 10$ → $x = 5$
+- Short leg $= 5$
+- Long leg $= 5\\sqrt{3} \\approx 8.66$
+
+### Triangle Inequality Theorem
+
+For any triangle with sides $a$, $b$, $c$:
+$$a + b > c$$
+
+The sum of any two sides must exceed the third.
+
+**Example:** Can a triangle have sides 3, 5, and 9?  
+$3 + 5 = 8 < 9$ → **No!**
+
+### Similar Triangles (AA Similarity)
+
+If two angles of one triangle equal two angles of another, the triangles are **similar** (same shape, proportional sides).
+
+$$\\frac{a_1}{a_2} = \\frac{b_1}{b_2} = \\frac{c_1}{c_2}$$
+
+### SAT Trap ⚠️
+
+In 30-60-90 triangles, students often mix up which leg is which. Remember: the **shortest side** is opposite the **smallest angle** (30°).`
     },
     {
-      id: 'sat-geom-p2-check',
+      id: 'geo2-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Triangle Properties Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-geom-p2-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-geom-p2-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: 'A 45-45-90 triangle has a hypotenuse of $10\\sqrt{2}$. What is the length of each leg?',
+            options: ['$10$', '$10\\sqrt{2}$', '$5\\sqrt{2}$', '$20$'],
+            correctAnswer: 0,
+            explanation: 'Hypotenuse $= x\\sqrt{2} = 10\\sqrt{2}$, so $x = 10$. Each leg is $10$.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'Which set of three lengths CANNOT form a triangle?',
+            options: ['$2, 3, 6$', '$3, 4, 5$', '$5, 5, 8$', '$7, 10, 12$'],
+            correctAnswer: 0,
+            explanation: 'Check: $2 + 3 = 5 < 6$. The sum of the two shorter sides must EXCEED the longest side. Since $5 < 6$, these cannot form a triangle.'
+          },
+          {
+            question: 'Two similar triangles have a scale factor of $3:5$. If the perimeter of the smaller triangle is 24, what is the perimeter of the larger?',
+            options: ['$40$', '$30$', '$36$', '$72$'],
+            correctAnswer: 0,
+            explanation: 'Perimeters of similar triangles are in the same ratio as their sides: $\\frac{24}{P} = \\frac{3}{5}$ → $P = \\frac{24 \\times 5}{3} = 40$.'
           }
         ]
       }
     }
   ]
-}
+};

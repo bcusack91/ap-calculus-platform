@@ -2,82 +2,64 @@ export const satExpressionPart4Data = {
   topicSlug: 'sat-expression-ideas-sat',
   sections: [
     {
-      id: 'sat-expr-p4-intro',
+      id: 'ei4-intro',
       type: 'text' as const,
-      content: `
-# 📐 Sentence Combining
+      content: `# Synthesis & Integrating Information
 
-**Part 4 of 7 — Sentence Combining**
+**Part 4 of 7 — Combining Ideas Effectively**
 
-Combining sentences for clarity, concision, and variety
+Synthesis questions ask you to combine information from multiple sources or multiple parts of a passage into a single, coherent statement.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Combining with Relative Clauses
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+Two choppy sentences:
+- "Marie Curie discovered radium in 1898."
+- "She was the first woman to win a Nobel Prize."
+
+Combined: "Marie Curie, **who was the first woman to win a Nobel Prize**, discovered radium in 1898."
+
+### Combining with Appositives
+
+An appositive renames or describes a noun:
+- "Dr. Marcus Thompson, **a leading cardiologist at Johns Hopkins**, published the study."
+
+### Combining with Participial Phrases
+
+- "The hurricane destroyed 500 homes." + "It caused \\$2 billion in damage."
+- → "**Destroying 500 homes**, the hurricane caused \\$2 billion in damage."
+
+### Which Information to Keep?
+
+When combining, ask: **What is the most important information for the passage's purpose?**
+
+If the passage is about scientific achievement:
+✅ Keep: discovery, impact, significance
+❌ Cut: biographical trivia, exact dates (unless relevant)
+
+### SAT Trap ⚠️
+
+Trap answers combine the information correctly but **change the emphasis** or **relationship** between ideas. Always check that the relative importance of each idea is preserved.`
     },
     {
-      id: 'sat-expr-p4-check',
+      id: 'ei4-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Synthesis Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-expr-p4-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-expr-p4-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: 'Which best combines these sentences? "The Great Barrier Reef spans 2,300 kilometers. It is the world\'s largest coral reef system. It is visible from space."',
+            options: ['The Great Barrier Reef, the world\'s largest coral reef system, spans 2,300 kilometers and is visible from space.', 'Spanning 2,300 kilometers, the Great Barrier Reef is large and visible from space, being the world\'s largest coral reef system.', 'The world\'s largest coral reef system is the Great Barrier Reef, which spans 2,300 kilometers, and it is visible from space.', 'The Great Barrier Reef spans 2,300 kilometers; it is the world\'s largest coral reef system; it is visible from space.'],
+            correctAnswer: 0,
+            explanation: 'Option A uses an appositive cleanly, flows well, and preserves all three pieces of information. The other options are either wordy (B), structurally awkward (C), or just a list with semicolons (D).'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'When combining sentences on the SAT, the most important factor is:',
+            options: ['Maintaining the original meaning while improving flow', 'Making the sentence as short as possible', 'Using the most complex grammatical structure', 'Keeping every word from both original sentences'],
+            correctAnswer: 0,
+            explanation: 'The SAT values clarity and flow. You can cut words, but you must not change the meaning. Brevity and complexity are secondary to preserving meaning and improving readability.'
           }
         ]
       }
     }
   ]
-}
+};

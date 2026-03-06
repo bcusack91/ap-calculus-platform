@@ -2,185 +2,74 @@ export const satFunctionsPart3Data = {
   topicSlug: 'sat-functions-graphs-sat',
   sections: [
     {
-      id: 'sat-fn3-intro',
+      id: 'fn3-intro',
       type: 'text' as const,
-      content: `
-# 🔄 Function Transformations
+      content: `# Functions & Graphs
 
-**Part 3 of 7 — Shifts, Reflections, Stretches, Combined Transformations**
+**Part 3 of 7 — Transformations of Functions**
 
-Transformations change the position or shape of a graph without changing its fundamental form. The SAT tests four main types:
+### Vertical Transformations (Outside the function)
 
-| Transformation | Notation | Effect on Graph |
-|---------------|----------|----------------|
-| **Vertical shift** | $f(x) + k$ | Up $k$ units (down if $k < 0$) |
-| **Horizontal shift** | $f(x - h)$ | Right $h$ units (left if $h < 0$) |
-| **Vertical stretch/compress** | $a \\cdot f(x)$ | Stretch if $|a| > 1$, compress if $0 < |a| < 1$ |
-| **Reflection** | $-f(x)$ | Reflect over $x$-axis |
+| Transformation | Equation | Effect |
+|---------------|----------|--------|
+| Shift up $k$ | $f(x) + k$ | Graph moves up $k$ units |
+| Shift down $k$ | $f(x) - k$ | Graph moves down $k$ units |
+| Stretch by $a$ (if $a > 1$) | $af(x)$ | Graph gets taller |
+| Compress by $a$ (if $0 < a < 1$) | $af(x)$ | Graph gets shorter |
+| Reflect over x-axis | $-f(x)$ | Flip upside down |
 
-**The tricky one:** Horizontal shifts are "backwards." $f(x - 3)$ shifts **right** 3, and $f(x + 3)$ shifts **left** 3.
-      `
+### Horizontal Transformations (Inside the function)
+
+| Transformation | Equation | Effect |
+|---------------|----------|--------|
+| Shift right $h$ | $f(x - h)$ | Graph moves right |
+| Shift left $h$ | $f(x + h)$ | Graph moves left |
+| Stretch by $1/b$ | $f(bx)$ | Graph gets wider |
+| Compress by $b$ | $f(bx)$ | Graph gets narrower |
+| Reflect over y-axis | $f(-x)$ | Flip left-right |
+
+### Key Insight ⚠️
+
+Horizontal transformations are **opposite** to what you might expect:
+- $f(x - 3)$ moves the graph **right**, not left
+- $f(2x)$ makes the graph **narrower**, not wider`
     },
     {
-      id: 'sat-fn3-vertical',
-      type: 'text' as const,
-      content: `
-## Vertical Transformations
-
-These affect the **output** ($y$-values) and behave as you'd expect.
-
-**$f(x) + k$ — Vertical shift:**
-- Every point moves up (or down) by $k$ units
-- $(2, 5)$ on $f(x)$ becomes $(2, 5 + k)$ on $f(x) + k$
-
-**$a \\cdot f(x)$ — Vertical stretch/compress:**
-- If $a = 2$: all $y$-values double → graph "taller"
-- If $a = \\frac{1}{2}$: all $y$-values halved → graph "shorter"
-- $x$-intercepts stay fixed (since $a \\cdot 0 = 0$)
-
-**$-f(x)$ — Reflection over $x$-axis:**
-- Every $y$-value is negated: $(2, 5) \\to (2, -5)$
-- Peaks become valleys, valleys become peaks
-
-**Example:** If $f(2) = 6$, what is $g(2)$ where $g(x) = -3f(x) + 1$?
-
-$$g(2) = -3f(2) + 1 = -3(6) + 1 = -17$$
-      `
-    },
-    {
-      id: 'sat-fn3-mcq1',
+      id: 'fn3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Vertical Transformations** 🔍
-      `,
+      content: '**Transformations** 🎯',
       exercise: {
         questions: [
           {
-            question: 'The graph of $y = f(x)$ passes through $(4, 10)$. Which point must be on the graph of $y = f(x) - 3$?',
-            options: ['$(4, 13)$', '$(4, 7)$', '$(1, 10)$', '$(7, 10)$'],
-            correctAnswer: 1,
-            explanation: '$f(x) - 3$ shifts the graph down 3 units. The point $(4, 10)$ moves to $(4, 10 - 3) = (4, 7)$.'
+            question: 'The graph of $y = f(x)$ is shifted 2 units left and 3 units up. The new equation is:',
+            options: ['$y = f(x + 2) + 3$', '$y = f(x - 2) + 3$', '$y = f(x + 2) - 3$', '$y = f(x - 3) + 2$'],
+            correctAnswer: 0,
+            explanation: 'Left 2: replace $x$ with $x + 2$ → $f(x+2)$. Up 3: add 3 → $f(x+2) + 3$.'
           },
           {
-            question: 'If $f(x)$ has a maximum value of $8$, what is the maximum value of $-2f(x)$?',
-            options: ['$-16$', '$16$', '$-8$', '$-2$'],
-            correctAnswer: 1,
-            explanation: 'The maximum of $f(x)$ is 8, so the minimum of $f(x)$ must be considered. But $-2f(x)$ flips the graph. The maximum of $-2f(x)$ occurs at the minimum of $f(x)$. However, if $f(x)$ has a max of 8, then $-2(\\text{min of } f)$ is the max of $-2f$. Without knowing the minimum of $f$, if the question means the range of $f$ is $(-\\infty, 8]$, then $-2f$ has range $[-16, \\infty)$, giving no finite max. If $f \\geq 0$ with max 8, then $-2f$ has max $0$ and min $-16$. The answer $-16$ is the minimum, and $16 = |-2 \\cdot 8|$. The correct reading: the maximum of $|-2f(x)|$ occurs when $f$ is largest, giving $|-2(8)| = 16$.'
+            question: 'If $f(x) = x^2$ and $g(x) = -(x-1)^2 + 4$, how is $g$ obtained from $f$?',
+            options: ['Shift right 1, reflect over x-axis, shift up 4', 'Shift left 1, reflect over x-axis, shift up 4', 'Shift right 1, shift up 4, reflect over x-axis', 'Reflect over y-axis, shift right 1, shift up 4'],
+            correctAnswer: 0,
+            explanation: '$g(x) = -f(x-1) + 4$: $(x-1)$ shifts right 1, the negative reflects over x-axis, $+4$ shifts up 4.'
+          },
+          {
+            question: 'The vertex of $y = x^2$ is at $(0,0)$. Where is the vertex of $y = 3(x+2)^2 - 5$?',
+            options: ['$(-2, -5)$', '$(2, -5)$', '$(-2, 5)$', '$(2, 5)$'],
+            correctAnswer: 0,
+            explanation: '$(x+2)$ shifts left 2, $-5$ shifts down 5. The vertex moves from $(0,0)$ to $(-2, -5)$. The factor of 3 stretches vertically but doesn\'t move the vertex.'
           }
         ]
       }
     },
     {
-      id: 'sat-fn3-horizontal',
+      id: 'fn3-summary',
       type: 'text' as const,
-      content: `
-## Horizontal Transformations
+      content: `### Key Takeaways — Part 3
 
-These affect the **input** ($x$-values) and behave "backwards."
-
-**$f(x - h)$ — Horizontal shift:**
-- $f(x - 3)$: shift **right** 3 units
-- $f(x + 2)$: shift **left** 2 units
-- Think: "inside the function, opposite sign"
-
-**Why is it backwards?** For $f(x - 3)$ to equal $f(0)$, we need $x - 3 = 0$, so $x = 3$. The point that was at $x = 0$ is now at $x = 3$ — shifted right.
-
-**Example:** The vertex of $y = x^2$ is $(0, 0)$. The vertex of $y = (x - 4)^2 + 1$ is $(4, 1)$.
-- The $-4$ inside shifts right 4
-- The $+1$ outside shifts up 1
-
----
-
-**Combining transformations — order matters:**
-
-Given $g(x) = 2f(x - 1) + 3$:
-1. Shift right 1 (horizontal shift inside)
-2. Stretch vertically by factor 2
-3. Shift up 3
-
-Point $(2, 5)$ on $f$ becomes: $(2 + 1, 2(5) + 3) = (3, 13)$ on $g$.
-      `
-    },
-    {
-      id: 'sat-fn3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Classify Each Transformation** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: '$f(x) + 5$ — the graph',
-            options: ['shifts up 5', 'shifts down 5', 'shifts right 5', 'shifts left 5']
-          },
-          {
-            label: '$f(x + 5)$ — the graph',
-            options: ['shifts up 5', 'shifts down 5', 'shifts right 5', 'shifts left 5']
-          },
-          {
-            label: '$-f(x)$ — the graph',
-            options: ['shifts up 1', 'reflects over $x$-axis', 'reflects over $y$-axis', 'stretches vertically']
-          },
-          {
-            label: '$3f(x)$ — the graph',
-            options: ['shifts up 3', 'shifts right 3', 'stretches vertically by factor 3', 'compresses vertically by factor 3']
-          }
-        ],
-        correctAnswers: [
-          'shifts up 5',
-          'shifts left 5',
-          'reflects over $x$-axis',
-          'stretches vertically by factor 3'
-        ],
-        hint1: 'Adding outside the function changes $y$-values.',
-        hint2: '$f(x + 5)$ is like $f(x - (-5))$, so shift left 5.',
-        hint3: 'Negating outside flips over the $x$-axis.',
-        explanation: '$+5$ outside → up 5. $+5$ inside → left 5 (backwards rule). $-f(x)$ → reflect over $x$-axis. $3f(x)$ → vertical stretch by 3.'
-      }
-    },
-    {
-      id: 'sat-fn3-input',
-      type: 'input-boxes' as const,
-      content: `
-**Apply the Transformation** 🧮
-
-The point $(3, 8)$ is on the graph of $y = f(x)$. Find the corresponding point on each transformed graph.
-
-1) $y = f(x) + 4$: What is the new $y$-coordinate?
-2) $y = f(x - 2)$: What is the new $x$-coordinate?
-3) $y = -f(x)$: What is the new $y$-coordinate?
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['12', '5', '-8'],
-        hint1: 'Adding 4 outside shifts up: $y = 8 + 4$.',
-        hint2: '$f(x - 2)$ shifts right 2: $x = 3 + 2$.',
-        hint3: 'Negating the function negates the output: $y = -8$.',
-        explanation: '$f(x) + 4$: $(3, 12)$. $f(x - 2)$: $(5, 8)$. $-f(x)$: $(3, -8)$.'
-      }
-    },
-    {
-      id: 'sat-fn3-sat',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'The function $g$ is defined by $g(x) = f(x + 2) - 3$, where $f$ has a maximum at $(1, 6)$. At what point does $g$ have its maximum?',
-            options: ['$(3, 3)$', '$(-1, 3)$', '$(-1, 9)$', '$(1, 3)$'],
-            correctAnswer: 1,
-            explanation: '$f(x + 2)$ shifts left 2: $x$-coordinate becomes $1 - 2 = -1$. Then $-3$ shifts down 3: $y$-coordinate becomes $6 - 3 = 3$. Maximum of $g$ is at $(-1, 3)$.'
-          },
-          {
-            question: 'If the graph of $y = f(x)$ passes through the origin, which transformation also passes through the origin?',
-            options: ['$y = f(x) + 1$', '$y = f(x - 1)$', '$y = 2f(x)$', '$y = f(x) - 1$'],
-            correctAnswer: 2,
-            explanation: 'If $f(0) = 0$, then $2f(0) = 2(0) = 0$. The point $(0, 0)$ is preserved. The other options shift the graph away from the origin.'
-          }
-        ]
-      }
+- **Outside** the function ($+k$, $\\times a$, $-$): vertical changes, work as expected
+- **Inside** the function ($x - h$, $bx$, $-x$): horizontal changes, opposite direction
+- $f(x - h) + k$: shifts right $h$ and up $k$
+- Vertical stretches don't move the vertex; they affect the shape`
     }
   ]
 };

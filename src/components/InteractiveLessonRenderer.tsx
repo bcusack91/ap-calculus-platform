@@ -9,7 +9,7 @@ import rehypeKatex from 'rehype-katex'
 import rehypeRaw from 'rehype-raw'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
-import katex from 'katex'
+import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import { FlashcardNotification } from '@/components/flashcard-notification'
 import CorrectAnswerCelebration from '@/components/CorrectAnswerCelebration'
 import BookmarkButton from '@/components/BookmarkButton'
@@ -96,7 +96,7 @@ function InlineLatex({ text, className }: { text: string; className?: string }) 
             <span
               key={i}
               dangerouslySetInnerHTML={{
-                __html: katex.renderToString(part.content, {
+                __html: renderKatexSync(part.content, {
                   throwOnError: false,
                   displayMode: part.display,
                 })
@@ -251,6 +251,9 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
   const totalParts = preloadedParts.length || 1
   const entersCompetitiveModeOnComplete = completionDestination === 'competitive'
   const practiceModeParts = practiceModePropParts ?? []
+
+  // Pre-load KaTeX lazily on mount
+  useEffect(() => { preloadKatex() }, [])
   
   // Get initial part from URL parameter (e.g., ?part=2)
   const urlPart = searchParams.get('part')
@@ -309,7 +312,6 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
     
     queryCountRef.current++
     const usingCache = !!(forceTopicId || cachedTopicId)
-    console.log(`🔍 [Query #${queryCountRef.current}] Saving progress - ${usingCache ? '✅ Using cached ID' : '⚠️ Looking up by slug'}`)
     
     try {
       // Calculate mastery level based on overall progress
@@ -352,14 +354,12 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
       
       try {
         queryCountRef.current++
-        console.log(`🔍 [Query #${queryCountRef.current}] Loading progress`)
         const response = await fetch(`/api/progress/load?topicSlug=${topicSlug}`)
         const data = await response.json()
         
         // Cache topicId to avoid future lookups
         if (data.topicId) {
           setCachedTopicId(data.topicId)
-          console.log('✅ Topic ID cached:', data.topicId)
         }
         
         if (data.exists && data.progress) {
@@ -461,7 +461,7 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
   const currentSection = sections?.[currentSectionIndex]
   const progress = sections?.length > 0 ? ((completedSections.size) / sections.length) * 100 : 0
   
-  const handleNext = () => {
+  const handleNext = async () => {
     // Mark current section as complete when moving to next
     if (!completedSections.has(currentSectionIndex)) {
       setCompletedSections(prev => new Set([...prev, currentSectionIndex]))
@@ -495,7 +495,7 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
         window.scrollTo({ top: 0, behavior: 'smooth' })
       } else if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
         // Show exit quiz regardless of completion destination
-        const questions = generateExitQuiz(topicSlug, 10)
+        const questions = await generateExitQuiz(topicSlug, 10)
         setExitQuizQuestions(questions)
         setShowExitQuiz(true)
         window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -543,7 +543,6 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
 
   const handleSectionComplete = () => {
     if (!currentSection) return
-    console.log('🎯 Section completed:', currentSectionIndex)
     setCompletedSections(prev => new Set([...prev, currentSectionIndex]))
     
     // Trigger celebration animation for exercise completions
@@ -600,15 +599,6 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
   
   // Disable Next button if it's an exercise that hasn't been completed
   const canProceedToNext = !currentSectionRequiresCompletion || isCurrentSectionComplete
-  
-  console.log('🔍 Button State Debug:', {
-    sectionIndex: currentSectionIndex,
-    sectionType: currentSection.type,
-    requiresCompletion: currentSectionRequiresCompletion,
-    isComplete: isCurrentSectionComplete,
-    canProceed: canProceedToNext,
-    completedSections: Array.from(completedSections)
-  })
 
   // Keyboard navigation for lessons
   useLessonKeyboard({
@@ -1217,7 +1207,7 @@ function SineTable() {
                 ) : (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: katex.renderToString(row.value, { 
+                      __html: renderKatexSync(row.value, { 
                         throwOnError: false,
                         displayMode: false,
                         output: 'html'
@@ -1269,7 +1259,7 @@ function CosineTable() {
                 ) : (
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: katex.renderToString(row.value, { 
+                      __html: renderKatexSync(row.value, { 
                         throwOnError: false,
                         displayMode: false,
                         output: 'html'
@@ -1511,7 +1501,7 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
     // If it contains LaTeX commands, render with KaTeX
     if (latex.includes('\\')) {
       try {
-        const html = katex.renderToString(latex, {
+        const html = renderKatexSync(latex, {
           throwOnError: false,
           displayMode: false,
           output: 'html',
@@ -1834,7 +1824,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
     formatted = formatted.replace(/^(\d+)\/(\d+)$/gi, '\\frac{$1}{$2}')
     
     try {
-      return katex.renderToString(formatted, {
+      return renderKatexSync(formatted, {
         throwOnError: false,
         displayMode: false,
         output: 'html',
@@ -2368,7 +2358,6 @@ function MultipleChoiceQuiz({
       setCurrentQuestionIndex(currentQuestionIndex + 1)
     } else {
       // All questions answered, complete the quiz
-      console.log('✅ Quiz completed! Calling onComplete()')
       setQuizComplete(true)
       onComplete()
     }
@@ -2819,7 +2808,7 @@ function MiniBossBattle({
             <div 
               className="text-3xl font-bold text-purple-700 dark:text-purple-400 mb-4 py-2"
               dangerouslySetInnerHTML={{
-                __html: katex.renderToString(currentQuestion.question, {
+                __html: renderKatexSync(currentQuestion.question, {
                   throwOnError: false,
                   displayMode: true
                 })
@@ -2853,7 +2842,7 @@ function MiniBossBattle({
                   <div 
                     className="text-xl flex-1"
                     dangerouslySetInnerHTML={{
-                      __html: katex.renderToString(option.value, {
+                      __html: renderKatexSync(option.value, {
                         throwOnError: false,
                         displayMode: false
                       })
@@ -3070,7 +3059,7 @@ function FactoringPractice({
           <div 
             className="text-4xl font-bold text-purple-700 dark:text-purple-400 mb-6"
             dangerouslySetInnerHTML={{
-              __html: katex.renderToString(currentProblem.problem, {
+              __html: renderKatexSync(currentProblem.problem, {
                 throwOnError: false,
                 displayMode: true
               })
@@ -3096,7 +3085,7 @@ function FactoringPractice({
                 <div 
                   className="text-2xl p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border border-purple-300 dark:border-purple-700"
                   dangerouslySetInnerHTML={{
-                    __html: katex.renderToString(convertToLatex(userAnswer), {
+                    __html: renderKatexSync(convertToLatex(userAnswer), {
                       throwOnError: false,
                       displayMode: false
                     })

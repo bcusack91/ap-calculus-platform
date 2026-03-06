@@ -2,82 +2,65 @@ export const satRWStrategyPart6Data = {
   topicSlug: 'sat-reading-writing-strategy-sat',
   sections: [
     {
-      id: 'sat-read-p6-intro',
+      id: 'rw6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Common Trap Answers
+      content: `# Rhetorical Synthesis
 
-**Part 6 of 7 — Common Trap Answers**
+**Part 6 of 7 — Notes-Based Questions**
 
-Too extreme, too narrow, partially correct — how to spot them
+A new question type on the Digital SAT presents you with bullet-point **notes** from a student's research and asks you to write a sentence that accomplishes a specific goal.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Format
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+You'll see something like:
+
+**Notes:**
+- The James Webb Space Telescope (JWST) launched in December 2021
+- JWST orbits the sun at Lagrange Point 2, about 1 million miles from Earth
+- Its primary mirror is 6.5 meters in diameter, compared to Hubble's 2.4 meters  
+- JWST primarily observes infrared light, while Hubble observes visible and ultraviolet light
+
+**Question:** "The student wants to emphasize a difference between JWST and Hubble. Which choice most effectively uses the notes to accomplish this goal?"
+
+### Strategy
+
+1. **Read the goal carefully** — What does the question ask you to do?
+2. **Identify which notes are relevant** to that specific goal
+3. **Eliminate choices** that accomplish a DIFFERENT goal
+
+### Common Goals
+
+| Goal | What to Look For |
+|---|---|
+| "Emphasize a difference" | Answer must COMPARE two things |
+| "Present a key finding" | Answer must state a result or discovery |
+| "Introduce the topic to a new audience" | Answer should be general/accessible |
+| "Support the claim that X" | Answer must directly support X |
+
+### SAT Trap ⚠️
+
+All four answer choices will use information from the notes. The trap is choosing an answer that's **factually correct** but doesn't **accomplish the stated goal**. Always re-read the goal before selecting your answer.`
     },
     {
-      id: 'sat-read-p6-check',
+      id: 'rw6-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Rhetorical Synthesis Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-read-p6-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-read-p6-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: 'Notes: Prairie dogs live in underground burrow systems called "towns." Some towns contain thousands of individuals. Prairie dogs use distinct alarm calls for different predators—one call for hawks, another for coyotes. Researchers believe this represents a sophisticated language system. Goal: "Emphasize the complexity of prairie dog communication."',
+            options: ['"Prairie dogs use distinct alarm calls to differentiate between predators such as hawks and coyotes, which researchers consider a sophisticated language system."', '"Prairie dogs live in large underground burrow systems called towns that can contain thousands of individuals."', '"Researchers have studied prairie dogs to understand their underground living habitat and social behavior."', '"Prairie dogs, which live in underground towns, are found throughout the American Great Plains."'],
+            correctAnswer: 0,
+            explanation: 'The goal is about communication complexity. Only option A discusses alarm calls and language sophistication. The other options focus on habitat (B, D) or are too general (C).'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'When answering rhetorical synthesis questions, what should you do FIRST?',
+            options: ['Underline the specific goal stated in the question', 'Read all the notes carefully', 'Look at the answer choices', 'Identify the main topic of the notes'],
+            correctAnswer: 0,
+            explanation: 'The goal is everything in these questions. All answers will be factually based on the notes, but only one achieves the stated goal. Reading the goal first focuses your evaluation.'
           }
         ]
       }
     }
   ]
-}
+};

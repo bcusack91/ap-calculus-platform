@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
+import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import type { SATFullTest, SATTestQuestion, SATTestSection } from '@/data/sat-practice/test-generator'
 
 /* ------------------------------------------------------------------ */
@@ -59,10 +60,7 @@ function renderLatex(text: string): string {
     (_, block: string | undefined, inline: string | undefined) => {
       const expr = block ?? inline ?? ''
       try {
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        const katex = require('katex')
-        return katex.renderToString(expr, {
-          throwOnError: false,
+        return renderKatexSync(expr, {
           displayMode: !!block,
         })
       } catch {
@@ -880,6 +878,9 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
 export function SATTestWrapper({ test, onComplete, onCancel }: SATFullTestProps) {
   const [results, setResults] = useState<TestResults | null>(null)
   const [submitted, setSubmitted] = useState(false)
+
+  // Pre-load KaTeX lazily on mount
+  useEffect(() => { preloadKatex() }, [])
 
   const handleComplete = useCallback(
     async (testResults: TestResults) => {

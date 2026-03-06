@@ -1,6 +1,6 @@
 # Calculus Learning Platform
 
-A comprehensive AP Calculus learning platform built with Next.js 14, featuring both free ad-supported content and premium subscription features.
+A comprehensive AP Calculus learning platform built with Next.js 15, featuring both free ad-supported content and premium subscription features.
 
 ## 🌟 Features
 
@@ -22,14 +22,16 @@ A comprehensive AP Calculus learning platform built with Next.js 14, featuring b
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS
+- **Styling**: Tailwind CSS v4
 - **Database**: PostgreSQL with Prisma ORM
-- **Authentication**: NextAuth.js
+- **Authentication**: NextAuth.js v5
 - **Payments**: Stripe
 - **Math Rendering**: KaTeX (via react-markdown)
-- **State Management**: Zustand + React Query
+- **State Management**: React Query (TanStack Query)
+- **Error Monitoring**: Sentry
+- **Rate Limiting**: Upstash Redis
 
 ## 📋 Prerequisites
 

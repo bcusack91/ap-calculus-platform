@@ -40,6 +40,21 @@ function getClientIp(request: NextRequest): string {
 export async function middleware(request: NextRequest) {
   const { nextUrl } = request
 
+  // ── CSRF Origin Check for mutating API requests ──
+  if (nextUrl.pathname.startsWith('/api/') && ['POST', 'PUT', 'PATCH', 'DELETE'].includes(request.method)) {
+    const origin = request.headers.get('origin')
+    const host = request.headers.get('host')
+    if (origin && host) {
+      const originHost = new URL(origin).host
+      if (originHost !== host) {
+        return NextResponse.json(
+          { error: 'Invalid origin' },
+          { status: 403 }
+        )
+      }
+    }
+  }
+
   // ── API Rate Limiting ──
   if (nextUrl.pathname.startsWith('/api/')) {
     // Skip rate limiting for health check

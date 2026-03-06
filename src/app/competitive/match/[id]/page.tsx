@@ -2,11 +2,23 @@
 
 import { useEffect, useState, use, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import CompetitiveUnitCircle from '@/components/CompetitiveUnitCircle';
+import dynamic from 'next/dynamic';
 import AvatarDisplay from '@/components/AvatarDisplay';
 import { AvatarData } from '@/types/avatar';
-import katex from 'katex';
+import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy';
 import 'katex/dist/katex.min.css';
+
+const CompetitiveUnitCircle = dynamic(
+  () => import('@/components/CompetitiveUnitCircle'),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="animate-pulse rounded-xl bg-gray-100 dark:bg-gray-800 p-8 min-h-[300px] flex items-center justify-center">
+        <div className="h-48 w-48 rounded-full bg-gray-200 dark:bg-gray-700" />
+      </div>
+    ),
+  }
+);
 
 interface UnitCirclePosition {
   angle: number; // in degrees
@@ -99,6 +111,9 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [player2Emotion, setPlayer2Emotion] = useState<'neutral' | 'happy' | 'sad'>('neutral');
   const matchStateRef = useRef<MatchState | null>(null);
 
+  // Pre-load KaTeX lazily on mount
+  useEffect(() => { preloadKatex() }, []);
+
   useEffect(() => {
     matchStateRef.current = matchState;
   }, [matchState]);
@@ -112,7 +127,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         const match = text.match(/coordinate\s+(.+)$/);
         if (match) {
           const coordLatex = match[1].trim();
-          const rendered = katex.renderToString(coordLatex, {
+          const rendered = renderKatexSync(coordLatex, {
             throwOnError: false,
             displayMode: true,
           });
@@ -135,11 +150,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         const rendered = parts.map((part, i) => {
           if (part.startsWith('$$') && part.endsWith('$$')) {
             const latex = part.slice(2, -2);
-            const html = katex.renderToString(latex, { throwOnError: false, displayMode: true });
+            const html = renderKatexSync(latex, { throwOnError: false, displayMode: true });
             return <span key={i} dangerouslySetInnerHTML={{ __html: html }} />;
           } else if (part.startsWith('$') && part.endsWith('$')) {
             const latex = part.slice(1, -1);
-            const html = katex.renderToString(latex, { throwOnError: false, displayMode: false });
+            const html = renderKatexSync(latex, { throwOnError: false, displayMode: false });
             return <span key={i} dangerouslySetInnerHTML={{ __html: html }} />;
           }
           return <span key={i}>{part}</span>;
@@ -153,7 +168,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     // Pure backslash LaTeX without $ delimiters (e.g. \frac{1}{2})
     if (text.includes('\\')) {
       try {
-        const html = katex.renderToString(text, { throwOnError: false, displayMode: false });
+        const html = renderKatexSync(text, { throwOnError: false, displayMode: false });
         return <span dangerouslySetInnerHTML={{ __html: html }} />;
       } catch {
         // fallback to plain text
@@ -181,7 +196,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       );
 
       if (previousState && newPlayerQuestionIndex !== oldPlayerQuestionIndex) {
-        console.log('🔄 Question changed! Clearing all states. Old:', oldPlayerQuestionIndex, 'New:', newPlayerQuestionIndex);
         setFeedback(null);
         setFeedbackQuestionIndex(null);
         setSelectedPosition(null);
@@ -248,8 +262,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     const maxTime = isMultipleChoice ? settings.max * 1.5 : settings.max;
     const delay = minTime + Math.random() * (maxTime - minTime);
     
-    console.log(`🤖 Scheduling AI answer in ${Math.round(delay)}ms for AI question ${opponentQuestionIndex} (${isMultipleChoice ? 'multiple-choice' : 'unit-circle'})`);
-    
     // Schedule AI answer
     const timeoutId = setTimeout(async () => {
       try {
@@ -267,8 +279,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             answerIndex = Math.floor(Math.random() * totalOptions);
           } while (answerIndex === (aiCurrentQuestion.answerIndex || 0));
         }
-        
-        console.log(`🤖 AI submitting answer for question ${opponentQuestionIndex}: ${answerIndex} (correct: ${aiCurrentQuestion.answerIndex})`);
         
         // Submit AI answer with AI's playerId
         await fetch(`/api/competitive/match/${matchId}/answer`, {
@@ -306,24 +316,15 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   };
 
   const handleAnswer = async (answerIndex: number) => {
-    console.log('=== ANSWER HANDLER TRIGGERED ===');
-    console.log('Answer index:', answerIndex);
-    console.log('Match state exists:', !!matchState);
-    console.log('Is submitting:', isSubmitting);
-    console.log('Match status:', matchState?.status);
-    
     if (!matchState) {
-      console.log('No match state - returning');
       return;
     }
     
     if (isSubmitting) {
-      console.log('Already submitting - returning');
       return;
     }
     
     if (matchState.status === 'COMPLETED') {
-      console.log('Match completed - returning');
       return;
     }
 
@@ -331,26 +332,19 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     const playerQuestionIndex = isPlayer1 ? matchState.player1QuestionIndex : matchState.player2QuestionIndex;
     const currentQuestion = matchState.questions[playerQuestionIndex];
     
-    console.log('Current question:', currentQuestion);
-    console.log('Answered with index:', answerIndex);
-    console.log('Correct answer:', currentQuestion.answerIndex || currentQuestion.correctAnswer);
-    
     // Check if this player already answered the current question
     const alreadyAnswered = isPlayer1
       ? matchState.gameData?.player1AnsweredCurrent
       : matchState.gameData?.player2AnsweredCurrent;
     
     if (alreadyAnswered) {
-      console.log('Already answered this question');
       return;
     }
 
-    console.log('Setting selected position and submitting...');
     setSelectedPosition(answerIndex);
     setIsSubmitting(true);
 
     try {
-      console.log('Sending POST to API...');
       const startTime = Date.now();
       
       const response = await fetch(`/api/competitive/match/${matchId}/answer`, {
@@ -363,15 +357,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       });
 
       const endTime = Date.now();
-      console.log(`API response received in ${endTime - startTime}ms`);
 
       const data = await response.json();
-      console.log('Answer response:', data);
       
       const isPlayer1 = currentUserId === matchState.player1Id;
       
       if (data.correct) {
-        console.log('Answer was CORRECT!');
         setFeedback('correct');
         setFeedbackQuestionIndex(playerQuestionIndex);
         
@@ -398,7 +389,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           await fetchMatchState();
         }, 800);
       } else {
-        console.log('Answer was INCORRECT');
         setFeedback('incorrect');
         setFeedbackQuestionIndex(playerQuestionIndex);
         
@@ -482,7 +472,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     return (
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 text-center">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 text-center" role="status" aria-live="polite">
             <h1 className={`text-4xl font-bold mb-4 ${
               isTie ? 'text-gray-600 dark:text-gray-400' :
               isWinner ? 'text-green-600 dark:text-green-400' : 

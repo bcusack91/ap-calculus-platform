@@ -2,82 +2,68 @@ export const satRWStrategyPart5Data = {
   topicSlug: 'sat-reading-writing-strategy-sat',
   sections: [
     {
-      id: 'sat-read-p5-intro',
+      id: 'rw5-intro',
       type: 'text' as const,
-      content: `
-# 📝 Writing Section Approach
+      content: `# Pronoun Clarity & Agreement
 
-**Part 5 of 7 — Writing Section Approach**
+**Part 5 of 7 — Pronoun Reference and Number**
 
-Reading for errors vs reading for meaning
+Pronoun questions test two things: (1) Does the pronoun clearly refer to a specific noun? (2) Does it agree in number?
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Pronoun-Antecedent Agreement
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+The pronoun must match its antecedent (the noun it replaces) in number.
+
+| Antecedent | Correct Pronoun |
+|---|---|
+| "A student" (singular) | he/she/they (singular they is accepted on SAT) |
+| "Students" (plural) | they/their/them |
+| "The team" (collective singular) | it/its |
+| "Everyone" (singular indefinite) | their (modern) / he or she |
+
+### Ambiguous Reference
+
+❌ "When **the managers** met with **the clients**, **they** were disappointed."  
+(Who was disappointed — managers or clients?)
+
+✅ "When the managers met with the clients, **the clients** were disappointed."
+
+### SAT's Favorite Pronoun Traps
+
+**1. "It" without clear reference:**  
+❌ "The company released its earnings report, and **it** showed growth." ("It" = company or report?)
+
+**2. Singular "they" with clear antecedent — now standard on SAT:**  
+✅ "Each student should bring **their** textbook." (Accepted on modern SAT)
+
+**3. Pronoun shifts:**  
+❌ "When **one** tries hard, **you** can succeed."  
+✅ "When **one** tries hard, **one** can succeed." (or "When **you** try hard, **you** can succeed.")
+
+### Strategy
+
+For every pronoun, ask: "Can I point to EXACTLY one noun this refers to?" If not, the sentence has an error.`
     },
     {
-      id: 'sat-read-p5-check',
+      id: 'rw5-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Pronoun Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-read-p5-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-read-p5-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: '"Neither the coach nor the players have expressed _____ opinion on the new rule." Which pronoun is correct?',
+            options: ['their—agrees with "players" (nearer plural subject)', 'his—agrees with "coach" (first subject)', 'its—collective noun', 'his or her—formal agreement'],
+            correctAnswer: 0,
+            explanation: 'Like subject-verb agreement with "neither...nor," the pronoun agrees with the nearer subject. "Players" is nearer and plural, so "their" is correct.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
+            question: 'Which revision fixes the ambiguous pronoun? "The biologist showed the student her research."',
+            options: ['The biologist showed the student the biologist\'s research.', 'The biologist showed her research to the student.', 'She showed the student her research.', 'The biologist showed them her research.'],
             correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            explanation: 'Rearranging to "showed her research to the student" makes clear that "her" refers to the biologist (the subject). The original was ambiguous because "her" could refer to either person.'
           }
         ]
       }
     }
   ]
-}
+};

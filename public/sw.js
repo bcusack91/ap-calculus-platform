@@ -1,13 +1,17 @@
 // Service Worker — offline caching for Study Mondo
 // Caches app shell + static assets; serves cached content when offline.
 
-const CACHE_NAME = 'studymondo-v1'
+// Update this version string on each deploy to bust the cache.
+const CACHE_VERSION = 'v2'
+const CACHE_NAME = `studymondo-${CACHE_VERSION}`
 const OFFLINE_URL = '/offline'
 
 const PRECACHE_URLS = [
   '/',
   '/offline',
-  '/manifest.json',
+  '/site.webmanifest',
+  '/android-chrome-192x192.png',
+  '/android-chrome-512x512.png',
 ]
 
 // Install: precache critical resources

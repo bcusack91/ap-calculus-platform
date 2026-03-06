@@ -2,82 +2,61 @@ export const satReadingEvidencePart5Data = {
   topicSlug: 'sat-reading-evidence-sat',
   sections: [
     {
-      id: 'sat-read-p5-intro',
+      id: 're5-intro',
       type: 'text' as const,
-      content: `
-# 🔗 Structure & Purpose
+      content: `# Purpose & Rhetoric
 
-**Part 5 of 7 — Structure & Purpose**
+**Part 5 of 7 — Why Did the Author Write This?**
 
-Understanding why an author uses specific techniques
+Purpose questions test your ability to understand not just WHAT the author says, but WHY they structured the passage the way they did.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Author's Purpose Categories
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+| Purpose | Signal Words | Example |
+|---|---|---|
+| **Argue/Persuade** | "should," "must," "critical that" | "Schools should require financial literacy courses" |
+| **Inform/Explain** | "researchers found," "data shows" | "A 2024 study revealed that bees navigate using Earth's magnetic field" |
+| **Analyze/Evaluate** | "however," "on the other hand," "while" | "While the policy reduced crime, it disproportionately affected minority communities" |
+| **Narrate** | descriptive language, chronological | "Maria opened the letter with trembling hands" |
+| **Compare/Contrast** | "unlike," "similarly," "whereas" | "Unlike previous telescopes, JWST can detect infrared light" |
+
+### Function of a Specific Paragraph/Sentence
+
+Some questions ask: "The author includes the anecdote in lines 15-20 primarily to..."
+
+**Common functions:**
+- Provide a concrete example of an abstract concept
+- Introduce a counterargument before refuting it
+- Establish the author's credibility or emotional connection
+- Transition between two main ideas
+- Anticipate and address a potential objection
+
+### Example
+
+> "Skeptics argue that renewable energy cannot reliably power a modern grid. However, a 2024 analysis of Germany's Energiewende program shows that wind and solar provided 52% of the nation's electricity with fewer blackouts than the previous decade."
+
+**Purpose of the first sentence:** To introduce a counterargument (the skeptics' view) that the author will then refute with evidence.`
     },
     {
-      id: 'sat-read-p5-check',
+      id: 're5-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Purpose & Rhetoric Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-read-p5-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-read-p5-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: 'A passage begins with a personal anecdote about the author\'s grandmother, then shifts to discussing the economics of elder care in America. The anecdote primarily serves to:',
+            options: ['Create an emotional connection before presenting data-driven arguments', 'Prove that the author has personal expertise in elder care', 'Entertain the reader before a dry topic', 'Show that the author\'s grandmother needed better care'],
+            correctAnswer: 0,
+            explanation: 'Opening anecdotes in argumentative passages humanize the issue and create emotional investment before the author presents statistics and policy arguments. This is a standard rhetorical move.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'In a passage about ocean acidification, the author writes: "Some might argue that marine organisms have adapted to changing conditions for millions of years." This sentence primarily serves to:',
+            options: ['Acknowledge a counterargument the author will likely challenge', 'Support the author\'s central claim about adaptation', 'Shift the focus from ocean chemistry to biology', 'Conclude the author\'s argument'],
+            correctAnswer: 0,
+            explanation: '"Some might argue" is a classic signal that the author is introducing a counterargument. The author will almost certainly follow this with "However" or "But" and then present evidence against this view.'
           }
         ]
       }
     }
   ]
-}
+};

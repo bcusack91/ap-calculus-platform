@@ -1,83 +1,53 @@
-export const satTestDayPart6Data = {
+export const satTestDayStrategyPart6Data = {
   topicSlug: 'sat-test-day-strategy-sat',
   sections: [
     {
-      id: 'sat-test-p6-intro',
+      id: 'tds6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Guessing Strategy
+      content: `# The Week Before Test Day
 
-**Part 6 of 7 — Guessing Strategy**
+**Part 6 of 7 — Final Preparation Checklist**
 
-When to guess, eliminating wrong answers, no penalty for guessing
+### 7 Days Before
+- [ ] Take one final full-length practice test under real conditions
+- [ ] Review your error log — focus on patterns, not individual questions
+- [ ] Confirm your test center and registration
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### 3-4 Days Before
+- [ ] Light review only — flashcards, formula sheets, key concepts
+- [ ] **No new material** — this is reinforcement, not learning
+- [ ] Get your sleep schedule aligned (wake at test-day time)
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Night Before
+- [ ] Lay out everything: ID, admission ticket, charger, snacks
+- [ ] Check that your Bluebook app is installed and updated on your device
+- [ ] Light review (15-20 min max), then relax
+- [ ] **Sleep 8+ hours** — sleep is more valuable than last-minute cramming
+
+### Morning of Test
+- [ ] Eat a balanced breakfast (protein + complex carbs — eggs, oatmeal, banana)
+- [ ] Arrive 30 minutes early
+- [ ] Bring fully charged device + charger
+- [ ] Bring snacks for the break (granola bar, water)
+
+### What NOT To Do
+- ❌ Cram the night before (diminishing returns)
+- ❌ Try to learn new concepts (too late for that)
+- ❌ Stay up late studying (sleep deprivation costs ~100 points)
+- ❌ Change your routine (eat what you normally eat)`
     },
     {
-      id: 'sat-test-p6-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-test-p6-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-test-p6-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'tds6-q1',
+      type: 'quiz' as const,
+      question: 'Research shows that pulling an all-nighter before the SAT will most likely:',
+      options: [
+        'Improve your score by ~50 points due to extra review',
+        'Have no significant effect on performance',
+        'Decrease your score due to impaired focus, memory, and processing speed',
+        'Help with Reading but hurt Math performance'
+      ],
+      correctAnswer: 2,
+      explanation: 'Sleep deprivation impairs working memory, processing speed, and focus — all critical for SAT performance. Studies suggest sleep loss can reduce cognitive performance by 20-25%. A full night\'s sleep is worth more than any last-minute studying.'
     }
   ]
-}
+};

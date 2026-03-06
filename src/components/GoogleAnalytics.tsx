@@ -1,46 +1,12 @@
 'use client'
 
 import Script from 'next/script'
-import { useState, useEffect } from 'react'
+import { useConsent } from '@/components/ConsentProvider'
 
 export default function GoogleAnalytics({ measurementId }: { measurementId: string }) {
-  const [hasConsent, setHasConsent] = useState(false)
+  const { analytics } = useConsent()
 
-  useEffect(() => {
-    const checkConsent = () => {
-      try {
-        const consent = localStorage.getItem('cookie-consent')
-        if (consent) {
-          const parsed = JSON.parse(consent)
-          setHasConsent(!!parsed.analytics)
-        }
-      } catch {
-        // If parsing fails, don't load GA
-      }
-    }
-
-    checkConsent()
-
-    // Re-check when consent changes (listen for storage events)
-    const handleStorage = (e: StorageEvent) => {
-      if (e.key === 'cookie-consent') {
-        checkConsent()
-      }
-    }
-    window.addEventListener('storage', handleStorage)
-
-    // Also poll briefly in case consent is given on same page
-    const interval = setInterval(checkConsent, 2000)
-    const timeout = setTimeout(() => clearInterval(interval), 30000)
-
-    return () => {
-      window.removeEventListener('storage', handleStorage)
-      clearInterval(interval)
-      clearTimeout(timeout)
-    }
-  }, [])
-
-  if (!hasConsent) return null
+  if (!analytics) return null
 
   return (
     <>

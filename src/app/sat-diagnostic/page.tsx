@@ -4,14 +4,16 @@ import { useState, useEffect, useCallback } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { generateDiagnosticTest } from '@/data/sat-practice/diagnostic-generator'
-import type { DiagnosticResults } from '@/data/sat-practice/diagnostic-generator'
+import type { DiagnosticResults, DiagnosticTestData } from '@/data/sat-practice/diagnostic-generator'
 import DiagnosticTest, { DiagnosticResultsView } from '@/components/SATDiagnostic'
+import { InArticleAd } from '@/components/ad-banner'
 
 export default function SATDiagnosticPage() {
   const { status } = useSession()
   const router = useRouter()
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
+  const [testData, setTestData] = useState<DiagnosticTestData | null>(null)
   const [results, setResults] = useState<DiagnosticResults | null>(null)
   const [history, setHistory] = useState<
     { id: string; category: string; results: string; createdAt: string }[]
@@ -79,14 +81,27 @@ export default function SATDiagnosticPage() {
   }
 
   if (phase === 'testing') {
-    const testData = generateDiagnosticTest()
+    if (!testData) {
+      // Load test data asynchronously
+      generateDiagnosticTest().then(setTestData)
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+          <div className="container py-12">
+            <div className="mx-auto max-w-2xl space-y-6 text-center">
+              <div className="h-8 w-48 mx-auto animate-pulse rounded-lg bg-gray-200 dark:bg-gray-700" />
+              <p className="text-gray-500">Generating diagnostic questions…</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-teal-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container">
           <DiagnosticTest
             testData={testData}
             onComplete={handleComplete}
-            onCancel={() => setPhase('menu')}
+            onCancel={() => { setPhase('menu'); setTestData(null) }}
           />
         </div>
       </div>
@@ -101,17 +116,22 @@ export default function SATDiagnosticPage() {
             results={results}
             onRetake={() => {
               setResults(null)
+              setTestData(null)
               setPhase('testing')
             }}
             onGoToStudy={() => router.push('/dashboard')}
           />
+          {/* Ad after diagnostic results — high engagement moment */}
+          <div className="mt-8 max-w-2xl mx-auto">
+            <InArticleAd />
+          </div>
         </div>
       </div>
     )
   }
 
   // Menu
-  const lastResult = history.length > 0 ? JSON.parse(history[0].results || '{}') : null
+  const lastResult = history.length > 0 ? (history[0].results as unknown as Record<string, unknown> ?? {}) : null
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
@@ -133,13 +153,13 @@ export default function SATDiagnosticPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">
-                    {lastResult.estimatedScore ?? '—'}
+                    {String(lastResult.estimatedScore ?? '—')}
                   </p>
                   <p className="text-sm text-gray-500 dark:text-gray-400">Estimated Score</p>
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    R&W: {lastResult.rwScore ?? '—'} &middot; Math: {lastResult.mathScore ?? '—'}
+                    R&W: {String(lastResult.rwScore ?? '—')} &middot; Math: {String(lastResult.mathScore ?? '—')}
                   </p>
                   <p className="text-xs text-gray-400 dark:text-gray-500">
                     {new Date(history[0].createdAt).toLocaleDateString()}
@@ -197,14 +217,14 @@ export default function SATDiagnosticPage() {
               </h3>
               <div className="space-y-2">
                 {history.slice(1, 6).map(h => {
-                  const parsed = JSON.parse(h.results || '{}')
+                  const parsed = (h.results ?? {}) as unknown as Record<string, unknown>
                   return (
                     <div
                       key={h.id}
                       className="flex items-center justify-between rounded-lg bg-gray-50 p-3 dark:bg-gray-700/50"
                     >
                       <span className="text-sm text-gray-700 dark:text-gray-300">
-                        Score: {parsed.estimatedScore ?? '—'}
+                        Score: {String(parsed.estimatedScore ?? '—')}
                       </span>
                       <span className="text-xs text-gray-400 dark:text-gray-500">
                         {new Date(h.createdAt).toLocaleDateString()}

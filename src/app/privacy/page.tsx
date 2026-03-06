@@ -3,6 +3,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | Study Mondo",
   description: "Privacy Policy for Study Mondo - free math and science study platform",
+  alternates: {
+    canonical: 'https://www.studymondo.com/privacy',
+  },
 };
 
 export default function PrivacyPage() {

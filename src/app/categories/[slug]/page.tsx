@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
+import { breadcrumbJsonLd } from '@/lib/jsonld'
 
 // ISR: revalidate content every hour
 export const revalidate = 3600
@@ -144,6 +145,17 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
   return (
     <div className="container py-10">
+      {/* Breadcrumb JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd([
+            { name: 'Home', url: '/' },
+            { name: category.course.name, url: `/courses/${category.course.slug}` },
+            { name: category.name, url: `/categories/${category.slug}` },
+          ])),
+        }}
+      />
       <div className="mx-auto max-w-6xl">
         {/* Breadcrumb */}
         <nav className="mb-6 text-sm text-muted-foreground">

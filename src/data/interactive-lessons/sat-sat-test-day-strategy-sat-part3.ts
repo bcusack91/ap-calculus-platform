@@ -1,83 +1,56 @@
-export const satTestDayPart3Data = {
+export const satTestDayStrategyPart3Data = {
   topicSlug: 'sat-test-day-strategy-sat',
   sections: [
     {
-      id: 'sat-test-p3-intro',
+      id: 'tds3-intro',
       type: 'text' as const,
-      content: `
-# ⏱️ Time Management During the Test
+      content: `# R&W Section Strategy
 
-**Part 3 of 7 — Time Management During the Test**
+**Part 3 of 7 — Approaching Reading & Writing Questions**
 
-Pacing per section, when to skip and return
+### Digital SAT R&W Format
+Each question is a **short passage** (1-2 paragraphs) followed by **one question**. This is different from the old SAT (long passages, 10-11 questions each).
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### The SAT R&W Reading Order
+1. **Read the question stem first** — know what you're looking for
+2. **Read the passage** with purpose — underline/highlight relevant text
+3. **Answer before looking at choices** — form your own answer
+4. **Eliminate wrong answers** — cross out choices that don't match
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Question Type Strategy
+
+**Vocabulary in Context** (~6 per module):
+- Substitute each answer choice into the sentence
+- Pick the one that preserves the original meaning
+
+**Central Ideas** (~4 per module):
+- Main point, not a specific detail
+- Too narrow or too broad = wrong
+
+**Command of Evidence** (~4 per module):
+- Which quote/data best supports the claim?
+- Match the evidence to the specific claim, not the general topic
+
+**Grammar & Conventions** (~5 per module):
+- Trust your ear first, then apply rules
+- Subject-verb agreement, punctuation, and pronoun clarity are most common
+
+**Rhetoric/Expression** (~4 per module):
+- Which choice best accomplishes the stated goal?
+- Focus on the PURPOSE stated in the question`
     },
     {
-      id: 'sat-test-p3-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-test-p3-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-test-p3-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'tds3-q1',
+      type: 'quiz' as const,
+      question: 'The most effective approach to SAT R&W questions is:',
+      options: [
+        'Read the passage carefully, then read all answer choices, then reread the passage',
+        'Read the question stem first, then read the passage with purpose, then eliminate wrong answers',
+        'Skim the passage quickly, pick the answer that sounds best',
+        'Read all answer choices first, then find supporting evidence in the passage'
+      ],
+      correctAnswer: 1,
+      explanation: 'Reading the question first gives you a target — you know what to look for in the passage. This focused reading is faster and more accurate than reading the passage "cold" without knowing the question.'
     }
   ]
-}
+};

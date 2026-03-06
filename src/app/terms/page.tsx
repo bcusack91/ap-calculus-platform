@@ -3,6 +3,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service | Study Mondo",
   description: "Terms of Service for Study Mondo - free math and science study platform",
+  alternates: {
+    canonical: 'https://www.studymondo.com/terms',
+  },
 };
 
 export default function TermsPage() {

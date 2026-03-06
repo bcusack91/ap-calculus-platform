@@ -2,82 +2,51 @@ export const satCalcStrategyPart5Data = {
   topicSlug: 'sat-calculator-strategy-sat',
   sections: [
     {
-      id: 'sat-calc-p5-intro',
+      id: 'cs5-intro',
       type: 'text' as const,
-      content: `
-# 📐 Calculator for Geometry
+      content: `# Regression & Data Analysis in Desmos
 
-**Part 5 of 7 — Calculator for Geometry**
+**Part 5 of 7 — Tables, Regression, and Curve Fitting**
 
-Trig functions, unit conversions, and area/volume calculations
+### Entering Data Tables
+Click "+" → "Table" in Desmos. Enter your x and y values. Desmos plots the points automatically.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Linear Regression
+After entering data points, type: `y₁ ~ mx₁ + b`
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+Desmos finds the best-fit line and gives you:
+- **m** (slope) — the rate of change
+- **b** (y-intercept) — starting value
+- **r²** — how well the line fits (closer to 1 = better fit)
+
+### When the SAT Gives You a Scatterplot
+1. Enter the visible data points into a Desmos table
+2. Run regression to find the equation
+3. Use the equation to predict values or find the slope
+
+### Exponential Regression
+For data that curves: `y₁ ~ ab^(x₁)`
+- Good for: population growth, compound interest, radioactive decay
+
+### Quadratic Regression
+For parabolic data: `y₁ ~ ax₁² + bx₁ + c`
+- Good for: projectile motion, area problems, profit/revenue curves
+
+### Residuals
+A **residual** = actual value − predicted value. If residuals show a pattern (not random), the model is a poor fit.`
     },
     {
-      id: 'sat-calc-p5-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-calc-p5-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-calc-p5-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'cs5-q1',
+      type: 'quiz' as const,
+      question: 'In Desmos, after entering data points into a table, which expression creates a line of best fit?',
+      options: [
+        'y = mx + b',
+        'y₁ ~ mx₁ + b',
+        'f(x) = ax + b',
+        'table(x, y)'
+      ],
+      correctAnswer: 1,
+      explanation: 'The tilde (~) tells Desmos to perform regression. y₁ ~ mx₁ + b finds the best-fit linear equation. Desmos then reports the values of m and b.'
     }
   ]
-}
+};

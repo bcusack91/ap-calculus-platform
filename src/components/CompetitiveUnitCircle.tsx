@@ -29,14 +29,6 @@ export default function CompetitiveUnitCircle({
   const radius = 220;
   const dotRadius = 18;
 
-  // Debug logging
-  console.log('🎨 CompetitiveUnitCircle render:', {
-    selectedPosition,
-    correctPosition,
-    showFeedback,
-    disabled
-  });
-
   // Convert unit circle coordinates to SVG coordinates
   const toSVG = (x: number, y: number) => ({
     x: center + x * radius,
@@ -138,7 +130,6 @@ export default function CompetitiveUnitCircle({
               fill="transparent"
               className={disabled ? 'cursor-not-allowed' : 'cursor-pointer'}
               onClick={() => {
-                console.log('Circle clicked! Index:', index, 'Disabled:', disabled);
                 if (!disabled) {
                   onPositionClick(index);
                 }

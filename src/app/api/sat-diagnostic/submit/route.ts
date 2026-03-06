@@ -19,9 +19,9 @@ export async function POST(req: Request) {
       data: {
         userId: session.user.id,
         category,
-        results: typeof results === 'string' ? results : JSON.stringify(results),
-        weakAreas: weakAreas ?? null,
-        strengths: strengths ?? null,
+        results: typeof results === 'string' ? JSON.parse(results) : results,
+        weakAreas: weakAreas ? (typeof weakAreas === 'string' ? JSON.parse(weakAreas) : weakAreas) : null,
+        strengths: strengths ? (typeof strengths === 'string' ? JSON.parse(strengths) : strengths) : null,
       },
     })
 

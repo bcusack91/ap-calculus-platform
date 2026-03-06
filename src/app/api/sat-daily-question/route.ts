@@ -5,7 +5,7 @@ export const revalidate = 3600 // revalidate once per hour (questions change dai
 
 export async function GET() {
   try {
-    const questions = getDailyQuestions()
+    const questions = await getDailyQuestions()
     return NextResponse.json({
       date: new Date().toISOString().slice(0, 10),
       questions,

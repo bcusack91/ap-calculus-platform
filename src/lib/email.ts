@@ -1,19 +1,27 @@
 import nodemailer from 'nodemailer'
 
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT) || 587,
-  secure: process.env.SMTP_SECURE === 'true', // true for 465, false for 587
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-})
-
 const FROM_ADDRESS = process.env.SMTP_FROM || 'Study Mondo <noreply@studymondo.com>'
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://www.studymondo.com'
 
-function emailLayout(content: string) {
+function getTransporter() {
+  if (!process.env.SMTP_HOST) {
+    throw new Error('SMTP_HOST is not configured — email sending is disabled')
+  }
+  return nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: Number(process.env.SMTP_PORT) || 587,
+    secure: process.env.SMTP_SECURE === 'true',
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  })
+}
+
+function emailLayout(content: string, recipientEmail?: string) {
+  const unsubscribeUrl = recipientEmail
+    ? `${APP_URL}/api/unsubscribe?token=${Buffer.from(recipientEmail).toString('base64')}`
+    : null
   return `
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 480px; margin: 0 auto; padding: 32px 24px; background-color: #ffffff;">
       <div style="text-align: center; margin-bottom: 24px;">
@@ -23,6 +31,7 @@ function emailLayout(content: string) {
       <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e7eb; text-align: center;">
         <p style="color: #9ca3af; font-size: 12px; margin: 0;">
           <a href="${APP_URL}/settings" style="color: #9ca3af;">Email preferences</a> · 
+          ${unsubscribeUrl ? `<a href="${unsubscribeUrl}" style="color: #9ca3af;">Unsubscribe</a> · ` : ''}
           <a href="${APP_URL}" style="color: #9ca3af;">Study Mondo</a>
         </p>
       </div>
@@ -34,6 +43,7 @@ function emailLayout(content: string) {
  * Send a verification email with a clickable link.
  */
 export async function sendVerificationEmail(email: string, verifyUrl: string) {
+  const transporter = getTransporter()
   await transporter.sendMail({
     from: FROM_ADDRESS,
     to: email,
@@ -60,6 +70,7 @@ export async function sendVerificationEmail(email: string, verifyUrl: string) {
  * Send a password-reset email with a clickable link.
  */
 export async function sendPasswordResetEmail(email: string, resetUrl: string) {
+  const transporter = getTransporter()
   await transporter.sendMail({
     from: FROM_ADDRESS,
     to: email,
@@ -86,6 +97,7 @@ export async function sendPasswordResetEmail(email: string, resetUrl: string) {
  * Send a welcome email to new users.
  */
 export async function sendWelcomeEmail(email: string, name: string | null) {
+  const transporter = getTransporter()
   const greeting = name ? `Hi ${name}!` : 'Welcome!'
   await transporter.sendMail({
     from: FROM_ADDRESS,
@@ -130,6 +142,7 @@ export async function sendWeeklyDigest(
     minutesStudied: number
   }
 ) {
+  const transporter = getTransporter()
   const greeting = name ? `Hi ${name},` : 'Hi there,'
   await transporter.sendMail({
     from: FROM_ADDRESS,
@@ -170,7 +183,7 @@ export async function sendWeeklyDigest(
       <a href="${APP_URL}/dashboard" style="display: inline-block; background-color: #7c3aed; color: #ffffff; font-weight: 600; font-size: 16px; padding: 12px 28px; border-radius: 8px; text-decoration: none;">
         Keep Learning
       </a>
-    `),
+    `, email),
   })
 }
 
@@ -178,6 +191,7 @@ export async function sendWeeklyDigest(
  * Send a streak reminder to keep the user motivated.
  */
 export async function sendStreakReminder(email: string, name: string | null, currentStreak: number) {
+  const transporter = getTransporter()
   const greeting = name || 'there'
   await transporter.sendMail({
     from: FROM_ADDRESS,
@@ -197,6 +211,6 @@ export async function sendStreakReminder(email: string, name: string | null, cur
           Study Now
         </a>
       </div>
-    `),
+    `, email),
   })
 }

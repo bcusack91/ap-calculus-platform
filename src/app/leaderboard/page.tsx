@@ -1,12 +1,16 @@
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
+import { InArticleAd } from '@/components/ad-banner'
 
 export const revalidate = 300 // 5 minutes ISR
 
 export const metadata: Metadata = {
   title: 'Competitive Leaderboard | Study Mondo',
   description: 'See the top-ranked players in Study Mondo competitive mode, ranked by MMR.',
+  alternates: {
+    canonical: 'https://www.studymondo.com/leaderboard',
+  },
 }
 
 const rankColors: Record<string, string> = {
@@ -207,6 +211,11 @@ export default async function LeaderboardPage() {
             </div>
           </>
         )}
+
+        {/* Ad below leaderboard */}
+        <div className="mt-8">
+          <InArticleAd />
+        </div>
       </div>
     </div>
   )

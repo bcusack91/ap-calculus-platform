@@ -1,11 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 
 export function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const acceptAllRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     // Check if user has already consented
@@ -14,8 +16,33 @@ export function CookieConsent() {
       // Delay showing banner slightly for better UX
       setTimeout(() => {
         setShowBanner(true);
-        setTimeout(() => setIsVisible(true), 100);
+        setTimeout(() => {
+          setIsVisible(true);
+          // Auto-focus the primary action
+          acceptAllRef.current?.focus();
+        }, 100);
       }, 1000);
+    }
+  }, []);
+
+  // Focus trap — keep Tab cycling within the dialog
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key !== 'Tab' || !dialogRef.current) return;
+
+    const focusable = dialogRef.current.querySelectorAll<HTMLElement>(
+      'button, a[href], [tabindex]:not([tabindex="-1"]), details > summary'
+    );
+    if (focusable.length === 0) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
     }
   }, []);
 
@@ -48,11 +75,14 @@ export function CookieConsent() {
 
   return (
     <div 
+      ref={dialogRef}
       className={`fixed bottom-0 left-0 right-0 z-50 transition-all duration-300 ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
       }`}
       role="dialog"
       aria-label="Cookie consent"
+      aria-modal="true"
+      onKeyDown={handleKeyDown}
     >
       <div className="bg-white dark:bg-gray-900 border-t dark:border-gray-700 shadow-2xl">
         <div className="container py-4 sm:py-6">
@@ -101,6 +131,7 @@ export function CookieConsent() {
                 Essential Only
               </button>
               <button
+                ref={acceptAllRef}
                 onClick={acceptAll}
                 className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg shadow-sm transition-all whitespace-nowrap"
               >

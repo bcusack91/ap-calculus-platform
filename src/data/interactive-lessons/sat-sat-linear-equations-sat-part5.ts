@@ -2,143 +2,73 @@ export const satLinearEquationsPart5Data = {
   topicSlug: 'sat-linear-equations-sat',
   sections: [
     {
-      id: 'sat-l5-intro',
+      id: 'le5-intro',
       type: 'text' as const,
-      content: `
-# 📐 Modeling with Linear Equations
+      content: `# Linear Equations & Inequalities
 
-**Part 5 of 7 — Translating Words into Math**
+**Part 5 of 7 — Word Problems with Linear Models**
 
-On the SAT, many linear equation problems are wrapped in **word problems**. The math itself is usually straightforward — the hard part is setting up the equation correctly.
+The SAT tests whether you can translate real-world scenarios into linear equations.
 
-**Translation guide:**
+### Setting Up Linear Models
 
-| English | Math |
-|---------|------|
-| "is," "equals," "was" | $=$ |
-| "more than," "increased by" | $+$ |
-| "less than," "decreased by" | $-$ |
-| "times," "of," "product" | $\\times$ |
-| "per," "each," "divided by" | $\\div$ |
-| "a number," "some value" | $x$ |
-      `
+1. **Identify the variables** — what's changing? What's being measured?
+2. **Find the rate** (slope) — the per-unit change
+3. **Find the starting value** (y-intercept) — the initial amount
+
+### Common SAT Word Problem Types
+
+**Type 1 — Cost/Revenue:**
+A rideshare charges \\$3 base + \\$1.50/mile. Total cost for $m$ miles: $C = 1.50m + 3$
+
+**Type 2 — Distance/Rate/Time:**
+Two trains leave at the same time. Train A: 60 mph. Train B: 80 mph (same direction, B is behind). When does B catch A?
+- Distance A = $60t$, Distance B = $80t$
+- B catches A when $80t = 60t + d$ (where $d$ is the head start)
+
+**Type 3 — "Already...and then...":**
+A pool has 200 gallons and is being filled at 15 gallons/minute. After $t$ minutes: $V = 15t + 200$
+
+### Reading Tables on the SAT
+
+When given a table, calculate slope: $m = \\frac{\\Delta y}{\\Delta x}$ using any two rows. Then find $b$ by plugging in one point.`
     },
     {
-      id: 'sat-l5-check1',
+      id: 'le5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Word Problems** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Which equation represents: "Five more than twice a number is 17"?',
-            options: [
-              '$5 + x = 17$',
-              '$2x + 5 = 17$',
-              '$5(2x) = 17$',
-              '$2(x + 5) = 17$'
-            ],
-            correctAnswer: 1,
-            explanation: '"Twice a number" = $2x$. "Five more than" that = $2x + 5$. "Is 17" means $= 17$. So $2x + 5 = 17$.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-l5-slope-intercept',
-      type: 'text' as const,
-      content: `
-**Slope-Intercept Form: The SAT's Favorite Model**
-
-Many real-world situations follow the pattern:
-
-$$y = mx + b$$
-
-- $m$ = **rate of change** (per unit increase)
-- $b$ = **starting value** (when $x = 0$)
-
-**Example:** A plumber charges \\$50 for a house call plus \\$35 per hour.
-
-$$\\text{Cost} = 35h + 50$$
-
-- $m = 35$ → the hourly rate
-- $b = 50$ → the initial fee
-
-If a job costs \\$190, how long did it take?
-
-$$35h + 50 = 190 \\Rightarrow 35h = 140 \\Rightarrow h = 4 \\text{ hours}$$
-      `
-    },
-    {
-      id: 'sat-l5-practice',
-      type: 'input-boxes' as const,
-      content: `
-**Set up and solve.** 🧮
-
-1) A phone plan costs \\$20/month plus \\$0.05 per text. If the monthly bill is \\$32, how many texts were sent?
-
-2) A rental car costs \\$40/day plus \\$0.25/mile. A 3-day rental cost \\$210 total. How many miles were driven?
-
-3) Two consecutive integers add up to 47. What is the smaller one?
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['240', '360', '23'],
-        hint1: 'For #1: $20 + 0.05t = 32$. Subtract 20 first, then divide by 0.05.',
-        hint2: 'For #2: $40(3) + 0.25m = 210$. That gives $120 + 0.25m = 210$.',
-        hint3: 'For #3: Let the integers be $n$ and $n+1$. Then $n + (n+1) = 47$.',
-        explanation: '1) $0.05t = 12 \\Rightarrow t = 240$ texts. 2) $0.25m = 90 \\Rightarrow m = 360$ miles. 3) $2n + 1 = 47 \\Rightarrow 2n = 46 \\Rightarrow n = 23$.'
-      }
-    },
-    {
-      id: 'sat-l5-interpreting',
-      type: 'text' as const,
-      content: `
-**Interpreting Equations on the SAT**
-
-The SAT often gives you an equation and asks what a particular term **means** in context.
-
-**Example:** The equation $C = 15n + 200$ models the total cost $C$ of hosting a party where $n$ is the number of guests.
-
-- *"What does the 15 represent?"* → The cost **per additional guest** (\\$15/guest)
-- *"What does the 200 represent?"* → The **fixed cost** regardless of guest count
-
-**Key insight:** The coefficient of the variable = rate per unit. The constant = starting/fixed value.
-      `
-    },
-    {
-      id: 'sat-l5-sat-style',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: "The equation $P = 8.50h + 120$ models an employee's weekly pay $P$ where $h$ is the number of overtime hours worked. What does $120$ represent?",
-            options: [
-              'The overtime rate per hour',
-              'The total weekly pay with no overtime',
-              'The number of regular hours worked',
-              'The total overtime pay'
-            ],
-            correctAnswer: 1,
-            explanation: 'When $h = 0$ (no overtime), $P = 120$. So 120 is the base weekly pay before any overtime. The 8.50 is the overtime rate per hour.'
+            question: 'A tank contains 500 liters of water and is draining at 20 liters per minute. After how many minutes will the tank have 200 liters?',
+            options: ['$15$', '$10$', '$25$', '$20$'],
+            correctAnswer: 0,
+            explanation: '$500 - 20t = 200$ → $20t = 300$ → $t = 15$ minutes.'
           },
           {
-            question: 'A store is having a sale where every item is \\$5 off, then an additional 10% off. If the final price of an item is \\$27, what was the original price?',
-            options: [
-              '\\$32$',
-              '\\$35$',
-              '\\$36$',
-              '\\$40$'
-            ],
-            correctAnswer: 1,
-            explanation: 'After \\$5 off: $p - 5$. After 10% off: $0.90(p - 5)$. Set equal to 27: $0.90(p-5) = 27$. Divide by 0.90: $p - 5 = 30$. Add 5: $p = 35$.'
+            question: 'The table shows: when $x = 2$, $y = 11$; when $x = 5$, $y = 20$. What is $y$ when $x = 0$?',
+            options: ['$5$', '$3$', '$7$', '$1$'],
+            correctAnswer: 0,
+            explanation: 'Slope $= (20 - 11)/(5 - 2) = 9/3 = 3$. Using $(2, 11)$: $11 = 3(2) + b$ → $b = 5$. So $y = 3x + 5$ and $y(0) = 5$.'
+          },
+          {
+            question: 'A plumber charges a \\$75 service fee plus \\$50 per hour. An electrician charges \\$100 per hour with no service fee. After how many hours do they cost the same?',
+            options: ['$1.5$ hours', '$1$ hour', '$2$ hours', '$0.75$ hours'],
+            correctAnswer: 0,
+            explanation: '$75 + 50h = 100h$ → $75 = 50h$ → $h = 1.5$ hours. After 1.5 hours, both cost \\$150.'
           }
         ]
       }
+    },
+    {
+      id: 'le5-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways — Part 5
+
+- Identify slope (rate) and y-intercept (starting value) from word problems
+- "Draining/decreasing" = negative slope; "filling/increasing" = positive slope
+- From a table: slope $= \\Delta y / \\Delta x$, then plug in a point for $b$
+- "When are they equal?" → set the two expressions equal to each other`
     }
   ]
-}
+};

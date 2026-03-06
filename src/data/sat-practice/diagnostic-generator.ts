@@ -7,6 +7,7 @@
  */
 
 import { generateExitQuiz, type ExitQuizQuestion } from '../exit-quizzes'
+import { getBalancedPassages } from '../sat-passages'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -166,7 +167,7 @@ function slugToName(slug: string): string {
 /*  Generation                                                         */
 /* ------------------------------------------------------------------ */
 
-export function generateDiagnosticTest(): DiagnosticTestData {
+export async function generateDiagnosticTest(): Promise<DiagnosticTestData> {
   const questions: DiagnosticQuestion[] = []
 
   for (const domain of DIAGNOSTIC_DOMAINS) {
@@ -175,7 +176,7 @@ export function generateDiagnosticTest(): DiagnosticTestData {
 
     for (const slug of shuffledSlugs) {
       try {
-        const generated = generateExitQuiz(slug, 2)
+        const generated = await generateExitQuiz(slug, 2)
         for (const q of generated) {
           domainQuestions.push({
             ...q,
@@ -191,6 +192,25 @@ export function generateDiagnosticTest(): DiagnosticTestData {
     // Take the requested number from the pool
     const selected = shuffle(domainQuestions).slice(0, domain.questionCount)
     questions.push(...selected)
+  }
+
+  // Add 4 passage-based reading questions for comprehension & evidence domains
+  const passages = getBalancedPassages(4)
+  for (const p of passages) {
+    for (const q of p.questions) {
+      const domain = q.skill === 'evidence' ? 'evidence'
+        : q.skill === 'vocabulary-context' ? 'vocabulary'
+        : q.skill === 'inference' ? 'comprehension'
+        : 'comprehension'
+      questions.push({
+        question: q.question,
+        options: q.options,
+        correctIndex: q.correctAnswer,
+        explanation: q.explanation,
+        domain,
+        sourceSlug: `passage-${p.genre}`,
+      })
+    }
   }
 
   return {

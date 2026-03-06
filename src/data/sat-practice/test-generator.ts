@@ -14,6 +14,7 @@
  */
 
 import { generateExitQuiz, type ExitQuizQuestion } from '../exit-quizzes'
+import { getBalancedPassages, type ReadingPassage } from '../sat-passages'
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -24,6 +25,12 @@ export type SATSectionType = 'reading-writing' | 'math'
 export interface SATTestQuestion extends ExitQuizQuestion {
   section: SATSectionType
   sourceSlug: string // which quiz pool generated the question
+  passage?: {
+    id: string
+    title: string
+    genre: string
+    text: string
+  }
 }
 
 export interface SATTestSection {
@@ -107,17 +114,17 @@ function shuffle<T>(arr: T[]): T[] {
 /**
  * Generate N questions from a pool of slugs, balancing across slug sources.
  */
-function generateSectionQuestions(
+async function generateSectionQuestions(
   slugs: string[],
   count: number,
   section: SATSectionType,
-): SATTestQuestion[] {
+): Promise<SATTestQuestion[]> {
   const questionsPerSlug = Math.ceil(count / slugs.length)
   const pool: SATTestQuestion[] = []
 
   for (const slug of slugs) {
     try {
-      const questions = generateExitQuiz(slug, questionsPerSlug)
+      const questions = await generateExitQuiz(slug, questionsPerSlug)
       for (const q of questions) {
         pool.push({
           ...q,
@@ -132,6 +139,56 @@ function generateSectionQuestions(
 
   // Shuffle and take exactly count
   return shuffle(pool).slice(0, count)
+}
+
+/**
+ * Convert passage-bank entries into SATTestQuestions.
+ * Each passage produces one question (Digital SAT format).
+ */
+function passagesToTestQuestions(passages: ReadingPassage[]): SATTestQuestion[] {
+  const questions: SATTestQuestion[] = []
+  for (const p of passages) {
+    for (const q of p.questions) {
+      questions.push({
+        question: q.question,
+        options: q.options,
+        correctIndex: q.correctAnswer,
+        explanation: q.explanation,
+        section: 'reading-writing',
+        sourceSlug: `passage-${p.genre}`,
+        passage: {
+          id: p.id,
+          title: p.title,
+          genre: p.genre,
+          text: p.text,
+        },
+      })
+    }
+  }
+  return questions
+}
+
+/**
+ * Generate R&W questions with a mix of passage-based and skills-based items.
+ * Digital SAT R&W modules blend both types.
+ */
+async function generateRWQuestions(
+  count: number,
+  passageCount: number,
+): Promise<SATTestQuestion[]> {
+  const rwSlugs = [...RW_READING_SLUGS, ...RW_WRITING_SLUGS]
+
+  // Get passage-based questions
+  const passages = getBalancedPassages(passageCount)
+  const passageQs = passagesToTestQuestions(passages)
+
+  // Get remaining from exit quiz pools
+  const remaining = count - passageQs.length
+  const poolQs = remaining > 0
+    ? await generateSectionQuestions(rwSlugs, remaining, 'reading-writing')
+    : []
+
+  return shuffle([...passageQs, ...poolQs]).slice(0, count)
 }
 
 /* ------------------------------------------------------------------ */
@@ -246,9 +303,8 @@ export function analyzePerformance(
 /**
  * Generate a full-length SAT practice test (98 questions, 134 minutes).
  */
-export function generateFullTest(testNumber: number): SATFullTest {
-  const rwSlugs = [...RW_READING_SLUGS, ...RW_WRITING_SLUGS]
-
+export async function generateFullTest(testNumber: number): Promise<SATFullTest> {
+  // Each R&W module gets ~8 passage-based questions (out of 27)
   const sections: SATTestSection[] = [
     {
       id: 'rw-1',
@@ -257,7 +313,7 @@ export function generateFullTest(testNumber: number): SATFullTest {
       moduleNum: 1,
       questionCount: 27,
       timeLimitSeconds: 32 * 60, // 32 minutes
-      questions: generateSectionQuestions(rwSlugs, 27, 'reading-writing'),
+      questions: await generateRWQuestions(27, 8),
     },
     {
       id: 'rw-2',
@@ -266,7 +322,7 @@ export function generateFullTest(testNumber: number): SATFullTest {
       moduleNum: 2,
       questionCount: 27,
       timeLimitSeconds: 32 * 60,
-      questions: generateSectionQuestions(rwSlugs, 27, 'reading-writing'),
+      questions: await generateRWQuestions(27, 8),
     },
     {
       id: 'math-1',
@@ -275,7 +331,7 @@ export function generateFullTest(testNumber: number): SATFullTest {
       moduleNum: 1,
       questionCount: 22,
       timeLimitSeconds: 35 * 60, // 35 minutes
-      questions: generateSectionQuestions(MATH_SLUGS, 22, 'math'),
+      questions: await generateSectionQuestions(MATH_SLUGS, 22, 'math'),
     },
     {
       id: 'math-2',
@@ -284,7 +340,7 @@ export function generateFullTest(testNumber: number): SATFullTest {
       moduleNum: 2,
       questionCount: 22,
       timeLimitSeconds: 35 * 60,
-      questions: generateSectionQuestions(MATH_SLUGS, 22, 'math'),
+      questions: await generateSectionQuestions(MATH_SLUGS, 22, 'math'),
     },
   ]
 
@@ -301,9 +357,8 @@ export function generateFullTest(testNumber: number): SATFullTest {
  * Generate a mini practice test (49 questions, 67 minutes).
  * Good for focused practice or time-limited sessions.
  */
-export function generateMiniTest(testNumber: number): SATFullTest {
-  const rwSlugs = [...RW_READING_SLUGS, ...RW_WRITING_SLUGS]
-
+export async function generateMiniTest(testNumber: number): Promise<SATFullTest> {
+  // Mini test R&W gets ~6 passage-based questions
   const sections: SATTestSection[] = [
     {
       id: 'rw-1',
@@ -312,7 +367,7 @@ export function generateMiniTest(testNumber: number): SATFullTest {
       moduleNum: 1,
       questionCount: 27,
       timeLimitSeconds: 32 * 60,
-      questions: generateSectionQuestions(rwSlugs, 27, 'reading-writing'),
+      questions: await generateRWQuestions(27, 6),
     },
     {
       id: 'math-1',
@@ -321,7 +376,7 @@ export function generateMiniTest(testNumber: number): SATFullTest {
       moduleNum: 1,
       questionCount: 22,
       timeLimitSeconds: 35 * 60,
-      questions: generateSectionQuestions(MATH_SLUGS, 22, 'math'),
+      questions: await generateSectionQuestions(MATH_SLUGS, 22, 'math'),
     },
   ]
 

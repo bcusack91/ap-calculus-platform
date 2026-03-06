@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
+import { InArticleAd } from '@/components/ad-banner'
 
 export const revalidate = 3600 // ISR: revalidate every hour
 
@@ -90,6 +91,9 @@ export default async function FlashcardsPage() {
             ))
           )}
         </div>
+
+        {/* Ad placement after flashcard list */}
+        <InArticleAd />
 
         {/* Temporarily hidden for free tier launch
         <div className="mt-12 p-6 rounded-lg bg-purple-50 border border-purple-200">

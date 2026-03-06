@@ -7,8 +7,7 @@ import type { UserRole } from "@prisma/client"
 import bcrypt from "bcryptjs"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
-  // @ts-expect-error Adapter types diverge between @auth/core versions; functionally compatible
-  adapter: PrismaAdapter(prisma),
+  adapter: PrismaAdapter(prisma) as never,  // Type assertion: adapter is functionally compatible across auth versions
   session: { strategy: "jwt" },
   trustHost: true,
   pages: {

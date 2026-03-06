@@ -2,82 +2,74 @@ export const satGeometryPart5Data = {
   topicSlug: 'sat-geometry-angles-sat',
   sections: [
     {
-      id: 'sat-geom-p5-intro',
+      id: 'geo5-intro',
       type: 'text' as const,
-      content: `
-# 🔢 Area & Perimeter
+      content: `# Volume and Surface Area
 
-**Part 5 of 7 — Area & Perimeter**
+**Part 5 of 7 — 3D Figures**
 
-Formulas for triangles, rectangles, circles, and composite shapes
+The SAT reference sheet includes these formulas, but knowing them cold saves time.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Volume Formulas
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+| Shape | Volume |
+|---|---|
+| Rectangular prism | $V = lwh$ |
+| Cylinder | $V = \\pi r^2 h$ |
+| Cone | $V = \\frac{1}{3}\\pi r^2 h$ |
+| Sphere | $V = \\frac{4}{3}\\pi r^3$ |
+| Pyramid | $V = \\frac{1}{3}Bh$ (where $B$ = base area) |
+
+### Surface Area
+
+| Shape | Surface Area |
+|---|---|
+| Rectangular prism | $SA = 2(lw + lh + wh)$ |
+| Cylinder | $SA = 2\\pi r^2 + 2\\pi rh$ |
+| Sphere | $SA = 4\\pi r^2$ |
+
+### Common SAT Problem: Filling and Draining
+
+"A cylindrical tank has radius 3 ft and height 10 ft. Water fills it at 2 cubic feet per minute. How long until it's full?"
+
+$$V = \\pi(3)^2(10) = 90\\pi \\approx 282.7 \\text{ ft}^3$$
+$$\\text{Time} = \\frac{90\\pi}{2} = 45\\pi \\approx 141.4 \\text{ minutes}$$
+
+### Scaling Rule for 3D
+
+If dimensions are scaled by factor $k$:
+- **Lengths** scale by $k$
+- **Areas** scale by $k^2$
+- **Volumes** scale by $k^3$
+
+**Example:** If you double all dimensions of a box, its volume increases by $2^3 = 8$ times.`
     },
     {
-      id: 'sat-geom-p5-check',
+      id: 'geo5-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Volume & Surface Area Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-geom-p5-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-geom-p5-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: 'A cone and a cylinder have the same radius and height. The volume of the cone is:',
+            options: ['$\\frac{1}{3}$ of the cylinder\'s volume', '$\\frac{1}{2}$ of the cylinder\'s volume', 'Equal to the cylinder\'s volume', '$\\frac{2}{3}$ of the cylinder\'s volume'],
+            correctAnswer: 0,
+            explanation: 'Cone volume $= \\frac{1}{3}\\pi r^2 h$, cylinder volume $= \\pi r^2 h$. The cone is exactly $\\frac{1}{3}$ of the cylinder.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'A sphere has surface area $100\\pi$. What is its volume?',
+            options: ['$\\frac{500\\pi}{3}$', '$\\frac{400\\pi}{3}$', '$500\\pi$', '$100\\pi$'],
+            correctAnswer: 0,
+            explanation: '$SA = 4\\pi r^2 = 100\\pi$ → $r^2 = 25$ → $r = 5$. Volume $= \\frac{4}{3}\\pi(5)^3 = \\frac{500\\pi}{3}$.'
+          },
+          {
+            question: 'A model building is a 1:50 scale replica. If the model has volume 8 cubic inches, the real building has volume:',
+            options: ['$1{,}000{,}000$ cubic inches', '$400$ cubic inches', '$125{,}000$ cubic inches', '$50{,}000$ cubic inches'],
+            correctAnswer: 0,
+            explanation: 'Volume scales by $k^3$. Scale factor is 50, so real volume $= 8 \\times 50^3 = 8 \\times 125{,}000 = 1{,}000{,}000$ cubic inches.'
           }
         ]
       }
     }
   ]
-}
+};

@@ -1,116 +1,116 @@
 /**
  * Exit Quiz Registry — centralizes all exit quiz question pools
- * Import from here instead of individual quiz files.
+ *
+ * Uses dynamic imports so question data is lazy-loaded on demand rather
+ * than bundled into the initial page JS (~137 kB gzip savings).
  */
 
 export type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 
-// Original 9 math quizzes
-import { generateExitQuiz as genLinearEquations } from './sat-linear-equations-inequalities'
-import { generateExitQuiz as genQuadraticEquations } from './sat-quadratic-equations'
-import { generateExitQuiz as genFunctions } from './sat-functions'
-import { generateExitQuiz as genExponentsRadicals } from './sat-exponents-radicals'
-import { generateExitQuiz as genRatiosProportions } from './sat-ratios-proportions-percents'
-import { generateExitQuiz as genStatistics } from './sat-statistics-data-interpretation'
-import { generateExitQuiz as genExponentialFunctions } from './sat-exponential-functions'
-import { generateExitQuiz as genCircles } from './sat-circles'
-import { generateExitQuiz as genComplexNumbers } from './sat-complex-numbers'
+/* ------------------------------------------------------------------ */
+/*  Lazy loader map — each entry dynamically imports its quiz file     */
+/* ------------------------------------------------------------------ */
 
-// New math quizzes
-import { generateExitQuiz as genSystemsLinearEquations } from './sat-systems-linear-equations'
-import { generateExitQuiz as genLinearInequalitiesGraphs } from './sat-linear-inequalities-graphs'
-import { generateExitQuiz as genProbabilityTwoWay } from './sat-probability-two-way-tables'
-import { generateExitQuiz as genScatterplotsLineFit } from './sat-scatterplots-line-fit'
-import { generateExitQuiz as genDataStatistics } from './sat-data-statistics'
-import { generateExitQuiz as genPolynomialsFactoring } from './sat-polynomials-factoring'
-import { generateExitQuiz as genPolynomialRational } from './sat-polynomial-rational-expressions'
-import { generateExitQuiz as genNonlinearEquations } from './sat-nonlinear-equations-functions'
-import { generateExitQuiz as genGeometryTrig } from './sat-geometry-trigonometry'
-import { generateExitQuiz as genGeometryBasics } from './sat-geometry-basics'
+type QuizLoader = () => Promise<{ generateExitQuiz: (count?: number) => ExitQuizQuestion[] }>
 
-// Reading quizzes
-import { generateExitQuiz as genReadingComprehension } from './sat-reading-comprehension'
-import { generateExitQuiz as genVocabularyContext } from './sat-vocabulary-context'
-import { generateExitQuiz as genCentralIdeasDetails } from './sat-central-ideas-details'
-import { generateExitQuiz as genCommandEvidence } from './sat-command-evidence'
-import { generateExitQuiz as genFindingTextualEvidence } from './sat-finding-textual-evidence'
-
-// Writing quizzes
-import { generateExitQuiz as genGrammarUsage } from './sat-grammar-usage'
-import { generateExitQuiz as genGrammarConventions } from './sat-grammar-conventions'
-import { generateExitQuiz as genPunctuation } from './sat-punctuation'
-import { generateExitQuiz as genPunctuationCommasSemicolons } from './sat-punctuation-commas-semicolons'
-import { generateExitQuiz as genSentenceStructure } from './sat-sentence-structure'
-import { generateExitQuiz as genPronounAgreement } from './sat-pronoun-agreement'
-import { generateExitQuiz as genEffectiveLanguage } from './sat-effective-language-use'
-import { generateExitQuiz as genTransitionsOrganization } from './sat-transitions-organization'
-import { generateExitQuiz as genConcisenessRedundancy } from './sat-conciseness-redundancy'
-import { generateExitQuiz as genSubjectVerbAgreement } from './sat-subject-verb-agreement'
-
-// Strategy quizzes
-import { generateExitQuiz as genTimeManagement } from './sat-time-management'
-
-const quizGenerators: Record<string, (count?: number) => ExitQuizQuestion[]> = {
+const quizLoaders: Record<string, QuizLoader> = {
   // Original math
-  'sat-linear-equations-inequalities': genLinearEquations,
-  'sat-quadratic-equations': genQuadraticEquations,
-  'sat-functions': genFunctions,
-  'sat-exponents-radicals': genExponentsRadicals,
-  'sat-ratios-proportions-percents': genRatiosProportions,
-  'sat-statistics-data-interpretation': genStatistics,
-  'sat-exponential-functions': genExponentialFunctions,
-  'sat-circles': genCircles,
-  'sat-complex-numbers': genComplexNumbers,
+  'sat-linear-equations-inequalities': () => import('./sat-linear-equations-inequalities'),
+  'sat-quadratic-equations': () => import('./sat-quadratic-equations'),
+  'sat-functions': () => import('./sat-functions'),
+  'sat-exponents-radicals': () => import('./sat-exponents-radicals'),
+  'sat-ratios-proportions-percents': () => import('./sat-ratios-proportions-percents'),
+  'sat-statistics-data-interpretation': () => import('./sat-statistics-data-interpretation'),
+  'sat-exponential-functions': () => import('./sat-exponential-functions'),
+  'sat-circles': () => import('./sat-circles'),
+  'sat-complex-numbers': () => import('./sat-complex-numbers'),
   // New math
-  'sat-systems-linear-equations': genSystemsLinearEquations,
-  'sat-systems-equations': genSystemsLinearEquations, // alias
-  'sat-linear-inequalities-graphs': genLinearInequalitiesGraphs,
-  'sat-probability-two-way-tables': genProbabilityTwoWay,
-  'sat-scatterplots-line-fit': genScatterplotsLineFit,
-  'sat-data-statistics': genDataStatistics,
-  'sat-polynomials-factoring': genPolynomialsFactoring,
-  'sat-polynomial-rational-expressions': genPolynomialRational,
-  'sat-nonlinear-equations-functions': genNonlinearEquations,
-  'sat-geometry-trigonometry': genGeometryTrig,
-  'sat-geometry-basics': genGeometryBasics,
+  'sat-systems-linear-equations': () => import('./sat-systems-linear-equations'),
+  'sat-systems-equations': () => import('./sat-systems-linear-equations'), // alias
+  'sat-linear-inequalities-graphs': () => import('./sat-linear-inequalities-graphs'),
+  'sat-probability-two-way-tables': () => import('./sat-probability-two-way-tables'),
+  'sat-scatterplots-line-fit': () => import('./sat-scatterplots-line-fit'),
+  'sat-data-statistics': () => import('./sat-data-statistics'),
+  'sat-polynomials-factoring': () => import('./sat-polynomials-factoring'),
+  'sat-polynomial-rational-expressions': () => import('./sat-polynomial-rational-expressions'),
+  'sat-nonlinear-equations-functions': () => import('./sat-nonlinear-equations-functions'),
+  'sat-geometry-trigonometry': () => import('./sat-geometry-trigonometry'),
+  'sat-geometry-basics': () => import('./sat-geometry-basics'),
   // Reading
-  'sat-reading-comprehension': genReadingComprehension,
-  'sat-vocabulary-context': genVocabularyContext,
-  'sat-central-ideas-details': genCentralIdeasDetails,
-  'sat-command-evidence': genCommandEvidence,
-  'sat-finding-textual-evidence': genFindingTextualEvidence,
+  'sat-reading-comprehension': () => import('./sat-reading-comprehension'),
+  'sat-vocabulary-context': () => import('./sat-vocabulary-context'),
+  'sat-central-ideas-details': () => import('./sat-central-ideas-details'),
+  'sat-command-evidence': () => import('./sat-command-evidence'),
+  'sat-finding-textual-evidence': () => import('./sat-finding-textual-evidence'),
   // Writing
-  'sat-grammar-usage': genGrammarUsage,
-  'sat-grammar-conventions': genGrammarConventions,
-  'sat-punctuation': genPunctuation,
-  'sat-punctuation-commas-semicolons': genPunctuationCommasSemicolons,
-  'sat-sentence-structure': genSentenceStructure,
-  'sat-pronoun-agreement': genPronounAgreement,
-  'sat-effective-language-use': genEffectiveLanguage,
-  'sat-transitions-organization': genTransitionsOrganization,
-  'sat-conciseness-redundancy': genConcisenessRedundancy,
-  'sat-subject-verb-agreement': genSubjectVerbAgreement,
+  'sat-grammar-usage': () => import('./sat-grammar-usage'),
+  'sat-grammar-conventions': () => import('./sat-grammar-conventions'),
+  'sat-punctuation': () => import('./sat-punctuation'),
+  'sat-punctuation-commas-semicolons': () => import('./sat-punctuation-commas-semicolons'),
+  'sat-sentence-structure': () => import('./sat-sentence-structure'),
+  'sat-pronoun-agreement': () => import('./sat-pronoun-agreement'),
+  'sat-effective-language-use': () => import('./sat-effective-language-use'),
+  'sat-transitions-organization': () => import('./sat-transitions-organization'),
+  'sat-conciseness-redundancy': () => import('./sat-conciseness-redundancy'),
+  'sat-subject-verb-agreement': () => import('./sat-subject-verb-agreement'),
   // Strategy
-  'sat-time-management': genTimeManagement,
-  'sat-test-strategies': genTimeManagement, // alias
+  'sat-time-management': () => import('./sat-time-management'),
+  'sat-test-strategies': () => import('./sat-time-management'), // alias
+
+  // ═══════════════════════════════════════════════════
+  // MCAT Exit Quizzes
+  // ═══════════════════════════════════════════════════
+  // Chem/Phys
+  'mcat-general-chemistry': () => import('./mcat-general-chemistry'),
+  'mcat-general-chemistry-mcat': () => import('./mcat-general-chemistry'), // alias
+  'mcat-organic-chemistry': () => import('./mcat-organic-chemistry'),
+  'mcat-organic-chemistry-mcat': () => import('./mcat-organic-chemistry'), // alias
+  'mcat-physics-mechanics': () => import('./mcat-physics-mechanics'),
+  'mcat-physics-mechanics-mcat': () => import('./mcat-physics-mechanics'), // alias
+  'mcat-physics-electricity': () => import('./mcat-physics-electricity'),
+  'mcat-physics-electricity-mcat': () => import('./mcat-physics-electricity'), // alias
+  'mcat-biochemistry': () => import('./mcat-biochemistry'),
+  'mcat-biochemistry-foundations-mcat': () => import('./mcat-biochemistry'), // alias
+  // CARS
+  'mcat-cars': () => import('./mcat-cars'),
+  'mcat-cars-strategy-mcat': () => import('./mcat-cars'), // alias
+  'mcat-cars-passages-mcat': () => import('./mcat-cars'), // alias
+  'mcat-cars-reasoning-mcat': () => import('./mcat-cars'), // alias
+  // Bio/Biochem
+  'mcat-biology': () => import('./mcat-biology'),
+  'mcat-cell-biology-mcat': () => import('./mcat-biology'), // alias
+  'mcat-molecular-biology-mcat': () => import('./mcat-biology'), // alias
+  'mcat-microbiology-mcat': () => import('./mcat-biology'), // alias
+  'mcat-organ-systems': () => import('./mcat-organ-systems'),
+  'mcat-organ-systems-mcat': () => import('./mcat-organ-systems'), // alias
+  'mcat-anatomy-physiology-mcat': () => import('./mcat-organ-systems'), // alias
+  'mcat-genetics-evolution': () => import('./mcat-genetics-evolution'),
+  'mcat-genetics-evolution-mcat': () => import('./mcat-genetics-evolution'), // alias
+  // Psych/Soc
+  'mcat-psychology-sociology': () => import('./mcat-psychology-sociology'),
+  'mcat-psychology-behavior-mcat': () => import('./mcat-psychology-sociology'), // alias
+  'mcat-sociology-mcat': () => import('./mcat-psychology-sociology'), // alias
+  'mcat-science-passage-strategy-mcat': () => import('./mcat-psychology-sociology'), // alias
+  'mcat-test-day-strategy-mcat': () => import('./mcat-psychology-sociology'), // alias
 }
 
 /**
- * Check whether a topic slug has an exit quiz available
+ * Check whether a topic slug has an exit quiz available (synchronous).
  */
 export function hasExitQuiz(topicSlug: string): boolean {
-  return topicSlug in quizGenerators
+  return topicSlug in quizLoaders
 }
 
 /**
  * Generate an exit quiz for a given topic slug.
- * Dispatches to the appropriate question pool.
+ * Dynamically loads only the requested question pool on demand.
  */
-export function generateExitQuiz(topicSlug: string, count: number = 10): ExitQuizQuestion[] {
-  const generator = quizGenerators[topicSlug]
-  if (!generator) {
+export async function generateExitQuiz(topicSlug: string, count: number = 10): Promise<ExitQuizQuestion[]> {
+  const loader = quizLoaders[topicSlug]
+  if (!loader) {
     throw new Error(`No exit quiz found for topic: ${topicSlug}`)
   }
-  return generator(count)
+  const mod = await loader()
+  return mod.generateExitQuiz(count)
 }

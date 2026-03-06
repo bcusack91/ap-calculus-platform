@@ -1,69 +1,499 @@
 /**
- * Exit Quiz — SAT Data and Statistics
- * 40 randomized questions on mean, median, mode, standard deviation, box plots, histograms
+ * Exit Quiz Question Pool — SAT Data & Statistics
+ * 40 questions with randomized numeric generation.
  */
-export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
-interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
-function randInt(a: number, b: number) { return Math.floor(Math.random() * (b - a + 1)) + a }
-function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
-function makeStringOptions(c: string, o: string[]) { const u = o.filter(x => x !== c).slice(0, 3); while (u.length < 3) u.push('None of the above'); const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
-function makeOptions(c: number, s = 3) { const d = new Set<number>(); while (d.size < 3) { const v = c + randInt(-s * 2, s * 2); if (v !== c) d.add(v) }; const all = shuffle([c, ...d]); return { options: all.map(String), correctIndex: all.indexOf(c) } }
+
+export interface ExitQuizQuestion {
+  id: string
+  question: string
+  options: string[]
+  correctIndex: number
+  explanation: string
+  category: string
+}
+
+interface QuestionTemplate {
+  id: string
+  category: string
+  generate: () => ExitQuizQuestion
+}
+
+function randInt(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+function makeOptions(correct: number, spread: number = 2): { options: string[]; correctIndex: number } {
+  const distractors = new Set<number>()
+  while (distractors.size < 3) {
+    const d = correct + randInt(-spread * 3, spread * 3)
+    if (d !== correct) distractors.add(d)
+  }
+  const all = [correct, ...distractors]
+  const shuffled = shuffle(all)
+  return { options: shuffled.map(String), correctIndex: shuffled.indexOf(correct) }
+}
+
+function makeStringOptions(correct: string, others: string[]): { options: string[]; correctIndex: number } {
+  const unique = others.filter(o => o !== correct).slice(0, 3)
+  while (unique.length < 3) unique.push('None of the above')
+  const all = shuffle([correct, ...unique])
+  return { options: all, correctIndex: all.indexOf(correct) }
+}
 
 const questionPool: QuestionTemplate[] = [
-  { id: 'ds-q1', category: 'Mean', generate() { const a = randInt(5, 15); const b = randInt(5, 15); const c = randInt(5, 15); const d = randInt(5, 15); const e = randInt(5, 15); const sum = a+b+c+d+e; const m = sum / 5; const { options, correctIndex } = makeStringOptions(m.toFixed(1), [(m+1).toFixed(1), (m-1).toFixed(1), (m+2).toFixed(1)]); return { id: this.id, category: this.category, question: `Find the mean of {${a}, ${b}, ${c}, ${d}, ${e}}.`, options, correctIndex, explanation: `Mean = (${a}+${b}+${c}+${d}+${e}) / 5 = ${sum}/5 = ${m.toFixed(1)}.` } } },
-  { id: 'ds-q2', category: 'Mean', generate() { const n = randInt(8, 12); const avg = randInt(70, 90); const total = n * avg; const { options, correctIndex } = makeOptions(total, 20); return { id: this.id, category: this.category, question: `${n} students have a mean score of ${avg}. What is the sum of all scores?`, options, correctIndex, explanation: `Sum = mean × n = ${avg} × ${n} = ${total}.` } } },
-  { id: 'ds-q3', category: 'Mean', generate() { const n = randInt(5, 8); const avg = randInt(75, 90); const total = n * avg; const newScore = randInt(80, 100); const newAvg = ((total + newScore) / (n + 1)); const { options, correctIndex } = makeStringOptions(newAvg.toFixed(1), [(newAvg+1).toFixed(1), (newAvg-1).toFixed(1), avg.toFixed(1)]); return { id: this.id, category: this.category, question: `${n} tests average ${avg}. A new score of ${newScore} is added. New mean?`, options, correctIndex, explanation: `New sum = ${total} + ${newScore} = ${total+newScore}. New mean = ${total+newScore}/${n+1} ≈ ${newAvg.toFixed(1)}.` } } },
-  { id: 'ds-q4', category: 'Mean', generate() { const { options, correctIndex } = makeStringOptions('Sensitive to outliers', ['Not affected by outliers', 'Always equal to the median', 'Always an integer']); return { id: this.id, category: this.category, question: `Which statement about the mean is true?`, options, correctIndex, explanation: `The mean is pulled toward outliers, making it sensitive to extreme values.` } } },
-  { id: 'ds-q5', category: 'Mean', generate() { const n = randInt(4, 7); const target = randInt(80, 95); const totalNeeded = target * (n+1); const current = Array.from({length: n}, () => randInt(70, 95)); const currentSum = current.reduce((a,b) => a+b, 0); const need = totalNeeded - currentSum; const { options, correctIndex } = makeOptions(need, 5); return { id: this.id, category: this.category, question: `After ${n} tests (scores: ${current.join(', ')}), what score is needed on the next test for a ${target} average?`, options, correctIndex, explanation: `Need total ${totalNeeded}. Current sum = ${currentSum}. Need ${totalNeeded} - ${currentSum} = ${need}.` } } },
-  // Median
-  { id: 'ds-q6', category: 'Median', generate() { const vals = Array.from({length: 5}, () => randInt(1, 30)).sort((a,b) => a-b); const med = vals[2]; const disp = shuffle([...vals]); const { options, correctIndex } = makeOptions(med, 5); return { id: this.id, category: this.category, question: `Find the median of {${disp.join(', ')}}.`, options, correctIndex, explanation: `Sorted: {${vals.join(', ')}}. Middle value = ${med}.` } } },
-  { id: 'ds-q7', category: 'Median', generate() { const vals = Array.from({length: 6}, () => randInt(1, 30)).sort((a,b)=>a-b); const med = (vals[2] + vals[3]) / 2; const disp = shuffle([...vals]); const { options, correctIndex } = makeStringOptions(med.toFixed(1), [(vals[2]).toFixed(1), (vals[3]).toFixed(1), (vals[0]+vals[5]).toFixed(1)]); return { id: this.id, category: this.category, question: `Find the median of {${disp.join(', ')}}.`, options, correctIndex, explanation: `Sorted: {${vals.join(', ')}}. Median = (${vals[2]}+${vals[3]})/2 = ${med.toFixed(1)}.` } } },
-  { id: 'ds-q8', category: 'Median', generate() { const { options, correctIndex } = makeStringOptions('Not affected by outliers', ['Sensitive to outliers', 'Always larger than the mean', 'Only works for even counts']); return { id: this.id, category: this.category, question: `The median is preferred over the mean when:`, options, correctIndex, explanation: `The median is resistant to outliers, making it better for skewed distributions.` } } },
-  { id: 'ds-q9', category: 'Median', generate() { const { options, correctIndex } = makeStringOptions('Skewed right (positively skewed)', ['Skewed left', 'Symmetric', 'Bimodal']); return { id: this.id, category: this.category, question: `If mean > median for a dataset, the distribution is likely:`, options, correctIndex, explanation: `Mean > median indicates right skew (tail pulls mean up).` } } },
-  { id: 'ds-q10', category: 'Median', generate() { const { options, correctIndex } = makeStringOptions('The middle 50% of the data', ['All the data', 'The top 25%', 'The range']); return { id: this.id, category: this.category, question: `The interquartile range (IQR) represents:`, options, correctIndex, explanation: `IQR = Q3 - Q1 = the spread of the middle 50% of data.` } } },
-  // Standard Deviation
-  { id: 'ds-q11', category: 'Standard Deviation', generate() { const { options, correctIndex } = makeStringOptions('How spread out the data is from the mean', ['The middle value', 'The most common value', 'The range of data']); return { id: this.id, category: this.category, question: `Standard deviation measures:`, options, correctIndex, explanation: `SD measures the typical distance of data points from the mean.` } } },
-  { id: 'ds-q12', category: 'Standard Deviation', generate() { const val = randInt(10, 50); const { options, correctIndex } = makeStringOptions('$0$', ['Equal to the mean', String(val), 'Undefined']); return { id: this.id, category: this.category, question: `If all values in a dataset are ${val}, the standard deviation is:`, options, correctIndex, explanation: `No variation = SD of 0.` } } },
-  { id: 'ds-q13', category: 'Standard Deviation', generate() { const { options, correctIndex } = makeStringOptions('Dataset B: {1, 5, 9, 20, 50}', ['Dataset A: {10, 11, 12, 13, 14}', 'Both are equal', 'Cannot determine']); return { id: this.id, category: this.category, question: `Which dataset has a larger standard deviation?\n$A: \\{10,11,12,13,14\\}$, $B: \\{1,5,9,20,50\\}$`, options, correctIndex, explanation: `B has more spread (1 to 50 vs 10 to 14), so larger SD.` } } },
-  { id: 'ds-q14', category: 'Standard Deviation', generate() { const k = randInt(2, 5); const { options, correctIndex } = makeStringOptions(`It also doubles`, ['It stays the same', 'It quadruples', 'It halves']); return { id: this.id, category: this.category, question: `If every value in a dataset is multiplied by 2, what happens to the standard deviation?`, options, correctIndex, explanation: `Multiplying by a constant $c$ multiplies SD by $|c|$. SD × 2.` } } },
-  { id: 'ds-q15', category: 'Standard Deviation', generate() { const k = randInt(3, 10); const { options, correctIndex } = makeStringOptions('It stays the same', ['It increases by ' + k, 'It decreases', 'It becomes ' + k]); return { id: this.id, category: this.category, question: `If ${k} is added to every value, what happens to the standard deviation?`, options, correctIndex, explanation: `Adding a constant shifts all values but doesn't change the spread. SD unchanged.` } } },
-  // Box Plots
-  { id: 'ds-q16', category: 'Box Plots', generate() { const { options, correctIndex } = makeStringOptions('Minimum, Q1, median, Q3, maximum', ['Mean, median, mode, range, SD', 'Q1, Q2, Q3, Q4, Q5', 'Min, mean, median, max, SD']); return { id: this.id, category: this.category, question: `A box-and-whisker plot displays which five-number summary?`, options, correctIndex, explanation: `Box plot = {min, Q1, median, Q3, max}.` } } },
-  { id: 'ds-q17', category: 'Box Plots', generate() { const q1 = randInt(20, 40); const q3 = q1 + randInt(15, 30); const iqr = q3 - q1; const { options, correctIndex } = makeOptions(iqr, 5); return { id: this.id, category: this.category, question: `Box plot: Q1 = ${q1}, Q3 = ${q3}. What is the IQR?`, options, correctIndex, explanation: `IQR = Q3 - Q1 = ${q3} - ${q1} = ${iqr}.` } } },
-  { id: 'ds-q18', category: 'Box Plots', generate() { const q1 = randInt(30, 50); const q3 = q1 + randInt(20, 30); const iqr = q3 - q1; const fence = q3 + 1.5 * iqr; const { options, correctIndex } = makeStringOptions(fence.toFixed(1), [(q3+iqr).toFixed(1), (q1-iqr).toFixed(1), (q3+iqr*2).toFixed(1)]); return { id: this.id, category: this.category, question: `Q1=${q1}, Q3=${q3}. Upper fence for outliers = Q3 + 1.5×IQR = ?`, options, correctIndex, explanation: `IQR = ${iqr}. Upper fence = ${q3} + 1.5(${iqr}) = ${fence.toFixed(1)}.` } } },
-  { id: 'ds-q19', category: 'Box Plots', generate() { const { options, correctIndex } = makeStringOptions('The distribution is right-skewed', ['Symmetric', 'Left-skewed', 'Normal']); return { id: this.id, category: this.category, question: `A box plot has a long right whisker and short left whisker. This suggests:`, options, correctIndex, explanation: `Long right whisker = right-skew (tail extends to the right).` } } },
-  { id: 'ds-q20', category: 'Box Plots', generate() { const { options, correctIndex } = makeStringOptions('50%', ['25%', '75%', '100%']); return { id: this.id, category: this.category, question: `What percent of data falls within the box (Q1 to Q3)?`, options, correctIndex, explanation: `The box contains the middle 50% of the data.` } } },
-  // Histograms
-  { id: 'ds-q21', category: 'Histograms', generate() { const { options, correctIndex } = makeStringOptions('Frequencies of data in equal-width intervals', ['Individual data points', 'Categorical data', 'Time series data only']); return { id: this.id, category: this.category, question: `A histogram displays:`, options, correctIndex, explanation: `Histograms show the frequency distribution of continuous data in intervals (bins).` } } },
-  { id: 'ds-q22', category: 'Histograms', generate() { const { options, correctIndex } = makeStringOptions('Approximately normal (bell-shaped)', ['Uniform', 'Skewed right', 'Bimodal']); return { id: this.id, category: this.category, question: `A histogram that is symmetric with one peak in the middle is:`, options, correctIndex, explanation: `Symmetric with one central peak = approximately normal distribution.` } } },
-  { id: 'ds-q23', category: 'Histograms', generate() { const bars = [randInt(2,8), randInt(5,12), randInt(10,20), randInt(5,12), randInt(2,8)]; const total = bars.reduce((a,b)=>a+b,0); const { options, correctIndex } = makeOptions(total, 5); return { id: this.id, category: this.category, question: `A histogram has 5 bars with heights ${bars.join(', ')}. Total number of data points?`, options, correctIndex, explanation: `Total = ${bars.join(' + ')} = ${total}.` } } },
-  { id: 'ds-q24', category: 'Histograms', generate() { const { options, correctIndex } = makeStringOptions('Two peaks (bimodal)', ['One peak', 'No peaks', 'Three modes']); return { id: this.id, category: this.category, question: `A histogram has two clear humps. This distribution is described as:`, options, correctIndex, explanation: `Two distinct peaks = bimodal distribution.` } } },
-  // Percentiles
-  { id: 'ds-q25', category: 'Percentiles', generate() { const p = randInt(60, 95); const { options, correctIndex } = makeStringOptions(`${p}% of test-takers scored at or below your score`, [`You scored ${p}%`, `${100-p}% scored below you`, `You got ${p} correct`]); return { id: this.id, category: this.category, question: `Scoring at the ${p}th percentile means:`, options, correctIndex, explanation: `${p}th percentile = ${p}% of the distribution is at or below your score.` } } },
-  { id: 'ds-q26', category: 'Percentiles', generate() { const { options, correctIndex } = makeStringOptions('The median', ['The mean', 'The mode', 'Q1']); return { id: this.id, category: this.category, question: `The 50th percentile is equivalent to:`, options, correctIndex, explanation: `50th percentile = the median (half the data below, half above).` } } },
-  { id: 'ds-q27', category: 'Percentiles', generate() { const { options, correctIndex } = makeStringOptions('Q1 = 25th, Q3 = 75th', ['Q1 = 50th, Q3 = 100th', 'Q1 = 33rd, Q3 = 67th', 'Q1 = 20th, Q3 = 80th']); return { id: this.id, category: this.category, question: `Q1 and Q3 correspond to which percentiles?`, options, correctIndex, explanation: `Q1 = 25th percentile, Q3 = 75th percentile.` } } },
-  // SAT-Style
-  { id: 'ds-q28', category: 'SAT-Style', generate() { const med = randInt(70, 85); const mean = med + randInt(3, 10); const { options, correctIndex } = makeStringOptions('Skewed right — a few high outliers pull the mean up', ['Skewed left', 'Perfectly symmetric', 'Cannot be determined']); return { id: this.id, category: this.category, question: `Class test: mean = ${mean}, median = ${med}. What can you conclude about the distribution?`, options, correctIndex, explanation: `Mean > median → right-skewed. High scores pull the mean up.` } } },
-  { id: 'ds-q29', category: 'SAT-Style', generate() { const n = randInt(20, 50); const range = randInt(40, 80); const { options, correctIndex } = makeOptions(range, 10); return { id: this.id, category: this.category, question: `In a dataset of ${n} values, the minimum is ${100-range} and maximum is 100. The range is:`, options, correctIndex, explanation: `Range = max - min = 100 - ${100-range} = ${range}.` } } },
-  { id: 'ds-q30', category: 'SAT-Style', generate() { const classA = randInt(3, 8); const classB = randInt(12, 20); const { options, correctIndex } = makeStringOptions(`Class B — larger SD means more variation`, ['Class A', 'Both are equal', 'Cannot compare']); return { id: this.id, category: this.category, question: `Class A: SD = ${classA}. Class B: SD = ${classB}. Which class has more variation in scores?`, options, correctIndex, explanation: `Larger SD = more spread. ${classB} > ${classA}.` } } },
-  { id: 'ds-q31', category: 'SAT-Style', generate() { const mean = randInt(500, 600); const sd = randInt(50, 100); const z1 = mean + sd; const z2 = mean + 2*sd; const { options, correctIndex } = makeStringOptions(`Between ${mean} and ${z2}`, [`Below ${mean-2*sd}`, `Exactly ${mean}`, `Above ${z2}`]); return { id: this.id, category: this.category, question: `SAT scores: mean ${mean}, SD ${sd}. About 95% of scores fall within 2 SDs. Most scores are:`, options, correctIndex, explanation: `Within 2 SDs: ${mean-2*sd} to ${z2}. Most scores between ${mean} and ${z2}.` } } },
-  { id: 'ds-q32', category: 'Mean', generate() { const boysMean = randInt(65, 75); const girlsMean = randInt(70, 80); const nBoys = randInt(10, 20); const nGirls = randInt(10, 20); const combined = ((boysMean*nBoys + girlsMean*nGirls) / (nBoys+nGirls)); const { options, correctIndex } = makeStringOptions(combined.toFixed(1), [((boysMean+girlsMean)/2).toFixed(1), boysMean.toFixed(1), girlsMean.toFixed(1)]); return { id: this.id, category: this.category, question: `${nBoys} boys avg ${boysMean}, ${nGirls} girls avg ${girlsMean}. Combined mean?`, options, correctIndex, explanation: `Weighted: (${nBoys}×${boysMean} + ${nGirls}×${girlsMean}) / ${nBoys+nGirls} = ${combined.toFixed(1)}. It's NOT simply the average of averages.` } } },
-  { id: 'ds-q33', category: 'Median', generate() { const vals = [randInt(1,10), randInt(10,20), randInt(20,30), randInt(30,40), randInt(40,50), randInt(50,60), randInt(60,70)].sort((a,b)=>a-b); const removed = vals[6]; const newMed = (vals[2]+vals[3])/2; const { options, correctIndex } = makeStringOptions(newMed.toFixed(1), [vals[3].toFixed(1), vals[2].toFixed(1), ((vals[0]+vals[5])/2).toFixed(1)]); return { id: this.id, category: this.category, question: `Dataset: {${vals.join(', ')}}. If ${removed} is removed, new median?`, options, correctIndex, explanation: `Remove ${removed}: {${vals.slice(0,6).join(', ')}}. Median = (${vals[2]}+${vals[3]})/2 = ${newMed.toFixed(1)}.` } } },
-  { id: 'ds-q34', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('The median is more appropriate', ['The mean', 'The mode', 'The range']); return { id: this.id, category: this.category, question: `Home prices: most are \\$200K–\\$400K with a few mansions at \\$5M+. Best measure of center?`, options, correctIndex, explanation: `Outlier mansions skew the mean. Median is resistant and more representative.` } } },
-  { id: 'ds-q35', category: 'Standard Deviation', generate() { const mean = randInt(60, 80); const sd = randInt(5, 12); const score = mean + 2 * sd; const { options, correctIndex } = makeStringOptions('2 standard deviations above the mean', ['1 SD above', '1 SD below', 'At the mean']); return { id: this.id, category: this.category, question: `Mean = ${mean}, SD = ${sd}. A score of ${score} is:`, options, correctIndex, explanation: `${score} = ${mean} + 2(${sd}). Two SDs above the mean.` } } },
-  { id: 'ds-q36', category: 'Box Plots', generate() { const q1A = randInt(50, 60); const q3A = randInt(70, 80); const q1B = randInt(40, 50); const q3B = randInt(80, 95); const iqrA = q3A-q1A; const iqrB = q3B-q1B; const { options, correctIndex } = makeStringOptions(`Class B (IQR = ${iqrB})`, [`Class A (IQR = ${iqrA})`, 'Equal spread', 'Cannot determine']); return { id: this.id, category: this.category, question: `Class A: Q1=${q1A}, Q3=${q3A}. Class B: Q1=${q1B}, Q3=${q3B}. Which has more spread?`, options, correctIndex, explanation: `IQR_A = ${iqrA}, IQR_B = ${iqrB}. Larger IQR = more spread.` } } },
-  { id: 'ds-q37', category: 'Percentiles', generate() { const n = randInt(100, 500); const pctl = randInt(70, 90); const count = Math.round(n * pctl / 100); const { options, correctIndex } = makeOptions(count, 20); return { id: this.id, category: this.category, question: `${n} students took a test. How many scored at or below the ${pctl}th percentile?`, options, correctIndex, explanation: `${pctl}th percentile → ${pctl}% of ${n} = ${count} students.` } } },
-  { id: 'ds-q38', category: 'Histograms', generate() { const { options, correctIndex } = makeStringOptions('Greater bin widths show less detail', ['More bins always better', 'Bin width does not matter', 'Fewer bins better']); return { id: this.id, category: this.category, question: `How does changing histogram bin width affect the display?`, options, correctIndex, explanation: `Wider bins = less detail (smoother look). Narrower bins = more detail but noisier.` } } },
-  { id: 'ds-q39', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('The median stays the same; the mean increases', ['Both increase', 'Both stay the same', 'Mean stays; median increases']); return { id: this.id, category: this.category, question: `A class of 20 has scores 50–90. One student rescores from 85 to 150. Effect?`, options, correctIndex, explanation: `The extreme value pulls the mean up but doesn't change the median's position.` } } },
-  { id: 'ds-q40', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('Use the median and IQR', ['Use the mean and SD', 'Use the mode', 'Use the range']); return { id: this.id, category: this.category, question: `For a skewed distribution, which summary statistics are most appropriate?`, options, correctIndex, explanation: `Median and IQR are resistant to skew, unlike mean and SD.` } } },
+  {
+    id: 'ds-q1',
+    category: 'Mean Median Mode',
+
+    generate() {
+      const vals = Array.from({length: 5}, () => randInt(10, 50))
+      const sum = vals.reduce((a,b) => a+b, 0)
+      const mean = Math.round(sum / vals.length * 10) / 10
+      const { options, correctIndex } = makeOptions(Math.round(mean), 5)
+      return { id: this.id, category: this.category, question: `Find the mean of: ${vals.join(', ')}.`, options, correctIndex, explanation: `Mean = (${vals.join(' + ')}) / ${vals.length} = ${sum}/${vals.length} = ${mean}.` }
+    }
+  },
+  {
+    id: 'ds-q2',
+    category: 'Mean Median Mode',
+
+    generate() {
+      const vals = Array.from({length: 7}, () => randInt(5, 30)).sort((a,b) => a-b)
+      const median = vals[3]
+      const { options, correctIndex } = makeOptions(median, 4)
+      return { id: this.id, category: this.category, question: `Find the median of: ${vals.join(', ')}.`, options, correctIndex, explanation: `Sorted: ${vals.join(', ')}. Middle value (4th of 7) = ${median}.` }
+    }
+  },
+  {
+    id: 'ds-q3',
+    category: 'Mean Median Mode',
+
+    generate() {
+      const mode = randInt(5, 20)
+      const vals = [mode, mode, mode, randInt(1, 30), randInt(1, 30), randInt(1, 30)]
+      const correct = `${mode}`
+      return { id: this.id, category: this.category, question: `Find the mode of: ${shuffle(vals).join(', ')}.`, ...makeStringOptions(correct, [`${mode + 1}`, `${mode - 2}`, 'No mode']), explanation: `${mode} appears 3 times (most frequent), so the mode is ${mode}.` }
+    }
+  },
+  {
+    id: 'ds-q4',
+    category: 'Mean Median Mode',
+
+    generate() {
+      const vals = Array.from({length: 5}, () => randInt(10, 40))
+      const sorted = [...vals].sort((a,b) => a-b)
+      const range = sorted[sorted.length - 1] - sorted[0]
+      const { options, correctIndex } = makeOptions(range, 5)
+      return { id: this.id, category: this.category, question: `Find the range of: ${vals.join(', ')}.`, options, correctIndex, explanation: `Range = max - min = ${sorted[sorted.length-1]} - ${sorted[0]} = ${range}.` }
+    }
+  },
+  {
+    id: 'ds-q5',
+    category: 'Mean Median Mode',
+
+    generate() {
+      const n = randInt(4, 6); const target = randInt(75, 95)
+      const scores = Array.from({length: n - 1}, () => randInt(60, 100))
+      const sum = scores.reduce((a,b) => a+b, 0)
+      const needed = target * n - sum
+      const { options, correctIndex } = makeOptions(needed, 8)
+      return { id: this.id, category: this.category, question: `Current scores: ${scores.join(', ')}. What score is needed on the next test for a ${target} average?`, options, correctIndex, explanation: `Need total = ${target} \\u00d7 ${n} = ${target*n}. Have ${sum}. Need ${needed}.` }
+    }
+  },
+  {
+    id: 'ds-q6',
+    category: 'Mean Median Mode',
+
+    generate() {
+      const vals = Array.from({length: 6}, () => randInt(5, 25)).sort((a,b) => a-b)
+      const median = (vals[2] + vals[3]) / 2
+      const correct = `${median}`
+      return { id: this.id, category: this.category, question: `Find the median of this even-count set: ${vals.join(', ')}.`, ...makeStringOptions(correct, [`${vals[2]}`, `${vals[3]}`, `${vals[2] - 1}`]), explanation: `For even count, median = average of two middle values = (${vals[2]} + ${vals[3]})/2 = ${median}.` }
+    }
+  },
+  {
+    id: 'ds-q7',
+    category: 'Mean Median Mode',
+
+    generate() {
+      const vals = [10, 20, 30, 40, 50, 200]
+      const correct = 'The median is more resistant to outliers than the mean'
+      return { id: this.id, category: this.category, question: `Data: ${vals.join(', ')}. The mean is 58.3 but the median is 35. Why the big difference?`, ...makeStringOptions(correct, ['The data set is too small', 'Mean and median always differ', 'The mode affects both']), explanation: 'The outlier (200) pulls the mean up significantly but barely affects the median.' }
+    }
+  },
+  {
+    id: 'ds-q8',
+    category: 'Mean Median Mode',
+
+    generate() {
+      const n = randInt(20, 50); const mean = randInt(70, 90)
+      const total = n * mean
+      const { options, correctIndex } = makeOptions(total, 100)
+      return { id: this.id, category: this.category, question: `A class of ${n} students has a test mean of ${mean}. What is the total of all scores?`, options, correctIndex, explanation: `Total = n \\u00d7 mean = ${n} \\u00d7 ${mean} = ${total}.` }
+    }
+  },
+  {
+    id: 'ds-q9',
+    category: 'Standard Deviation',
+
+    generate() {
+      const correct = 'It measures the average distance of data points from the mean'
+      return { id: this.id, category: this.category, question: 'What does standard deviation measure?', ...makeStringOptions(correct, ['The maximum value in the data', 'The most frequent value', 'The range of the data']), explanation: 'Standard deviation quantifies how spread out data is from the mean.' }
+    }
+  },
+  {
+    id: 'ds-q10',
+    category: 'Standard Deviation',
+
+    generate() {
+      const correct = 'Set B (values more spread out from mean)'
+      return { id: this.id, category: this.category, question: 'Set A: {48, 50, 52}. Set B: {30, 50, 70}. Which has greater standard deviation?', ...makeStringOptions(correct, ['Set A', 'They are equal', 'Cannot determine']), explanation: 'Set B has values farther from the mean (50), so its standard deviation is larger.' }
+    }
+  },
+  {
+    id: 'ds-q11',
+    category: 'Standard Deviation',
+
+    generate() {
+      const sd = randInt(3, 8); const mean = randInt(60, 90)
+      const lo = mean - 2 * sd; const hi = mean + 2 * sd
+      const correct = `${lo} to ${hi}`
+      return { id: this.id, category: this.category, question: `Mean = ${mean}, SD = ${sd}. Using the 95% rule, what range contains most data?`, ...makeStringOptions(correct, [`${mean - sd} to ${mean + sd}`, `${mean} to ${hi}`, `${lo - sd} to ${hi + sd}`]), explanation: '~95% of data falls within 2 SDs: mean \\u00b1 2(SD) = ' + lo + ' to ' + hi + '.' }
+    }
+  },
+  {
+    id: 'ds-q12',
+    category: 'Standard Deviation',
+
+    generate() {
+      const correct = 'Adding the same constant to every value does NOT change the standard deviation'
+      return { id: this.id, category: this.category, question: 'If 10 is added to every data point, what happens to the standard deviation?', ...makeStringOptions(correct, ['It increases by 10', 'It doubles', 'It becomes 0']), explanation: 'Adding a constant shifts all values equally, so spread (standard deviation) stays the same.' }
+    }
+  },
+  {
+    id: 'ds-q13',
+    category: 'Standard Deviation',
+
+    generate() {
+      const k = randInt(2, 5)
+      const correct = `The standard deviation is multiplied by ${k}`
+      return { id: this.id, category: this.category, question: `If every data value is multiplied by ${k}, what happens to the standard deviation?`, ...makeStringOptions(correct, ['It stays the same', `It is multiplied by ${k*k}`, 'It becomes 0']), explanation: `Multiplying all values by ${k} multiplies the SD by |${k}| = ${k}.` }
+    }
+  },
+  {
+    id: 'ds-q14',
+    category: 'Standard Deviation',
+
+    generate() {
+      const correct = 'A z-score tells how many standard deviations a value is from the mean'
+      return { id: this.id, category: this.category, question: 'What does a z-score of 2.0 indicate?', ...makeStringOptions(correct, ['The value is twice the mean', 'The value equals 2', 'The data has 2 modes']), explanation: 'z = (x - mean)/SD. A z-score of 2.0 means the value is 2 standard deviations above the mean.' }
+    }
+  },
+  {
+    id: 'ds-q15',
+    category: 'Standard Deviation',
+
+    generate() {
+      const mean = randInt(60, 80); const sd = randInt(5, 10); const x = mean + sd * 2
+      const z = 2
+      const { options, correctIndex } = makeOptions(z, 1)
+      return { id: this.id, category: this.category, question: `Mean = ${mean}, SD = ${sd}. Find the z-score for x = ${x}.`, options, correctIndex, explanation: `z = (${x} - ${mean}) / ${sd} = ${x - mean} / ${sd} = ${z}.` }
+    }
+  },
+  {
+    id: 'ds-q16',
+    category: 'Standard Deviation',
+
+    generate() {
+      const correct = '68% within 1 SD, 95% within 2 SDs, 99.7% within 3 SDs'
+      return { id: this.id, category: this.category, question: 'State the empirical rule (68-95-99.7 rule) for normal distributions.', ...makeStringOptions(correct, ['50-75-100 rule', '70-90-100 rule', '60-80-95 rule']), explanation: 'The empirical rule: ~68% within mean \\u00b1 1 SD, ~95% within \\u00b1 2 SD, ~99.7% within \\u00b1 3 SD.' }
+    }
+  },
+  {
+    id: 'ds-q17',
+    category: 'Probability',
+
+    generate() {
+      const fav = randInt(2, 10); const total = fav + randInt(5, 20)
+      const pNum = fav; const pDen = total
+      const correct = `${pNum}/${pDen}`
+      return { id: this.id, category: this.category, question: `A bag has ${fav} red and ${total - fav} blue marbles. P(red) = ?`, ...makeStringOptions(correct, [`${total - fav}/${total}`, `${fav}/${fav}`, `1/${total}`]), explanation: `P(red) = favorable/total = ${fav}/${total}.` }
+    }
+  },
+  {
+    id: 'ds-q18',
+    category: 'Probability',
+
+    generate() {
+      const pA = randInt(10, 40); const pB = randInt(10, 40)
+      const pBoth = randInt(5, Math.min(pA, pB))
+      const pUnion = pA + pB - pBoth
+      const { options, correctIndex } = makeOptions(pUnion, 10)
+      return { id: this.id, category: this.category, question: `P(A) = ${pA}%, P(B) = ${pB}%, P(A and B) = ${pBoth}%. Find P(A or B).`, options, correctIndex, explanation: `P(A or B) = P(A) + P(B) - P(A and B) = ${pA} + ${pB} - ${pBoth} = ${pUnion}%.` }
+    }
+  },
+  {
+    id: 'ds-q19',
+    category: 'Probability',
+
+    generate() {
+      const n = randInt(3, 6)
+      const fact = [1, 1, 2, 6, 24, 120, 720][n]
+      const { options, correctIndex } = makeOptions(fact, 30)
+      return { id: this.id, category: this.category, question: `How many ways can ${n} books be arranged on a shelf?`, options, correctIndex, explanation: `${n}! = ${fact} arrangements.` }
+    }
+  },
+  {
+    id: 'ds-q20',
+    category: 'Probability',
+
+    generate() {
+      const correct = 'Multiply individual probabilities (for independent events)'
+      return { id: this.id, category: this.category, question: 'How do you find P(A and B) for two independent events?', ...makeStringOptions(correct, ['Add the probabilities', 'Subtract P(B) from P(A)', 'Divide P(A) by P(B)']), explanation: 'For independent events: P(A and B) = P(A) \\u00d7 P(B).' }
+    }
+  },
+  {
+    id: 'ds-q21',
+    category: 'Probability',
+
+    generate() {
+      const p = randInt(1, 5); const total = 6
+      const comp = total - p
+      const correct = `${comp}/${total}`
+      return { id: this.id, category: this.category, question: `P(rolling a ${p} on a die) = 1/6. What is P(NOT rolling a ${p})?`, ...makeStringOptions(correct, [`1/${total}`, `${p}/${total}`, `1/2`]), explanation: `P(not A) = 1 - P(A) = 1 - 1/6 = ${comp}/${total}.` }
+    }
+  },
+  {
+    id: 'ds-q22',
+    category: 'Probability',
+
+    generate() {
+      const n = randInt(5, 10); const r = randInt(2, 3)
+      let comb = 1
+      for (let i = 0; i < r; i++) comb = comb * (n - i) / (i + 1)
+      comb = Math.round(comb)
+      const { options, correctIndex } = makeOptions(comb, 10)
+      return { id: this.id, category: this.category, question: `How many ways to choose ${r} items from ${n}? (combinations)`, options, correctIndex, explanation: `C(${n},${r}) = ${n}! / (${r}!(${n}-${r})!) = ${comb}.` }
+    }
+  },
+  {
+    id: 'ds-q23',
+    category: 'Probability',
+
+    generate() {
+      const r = randInt(3, 8); const b = randInt(3, 8)
+      const total = r + b
+      const p1 = r; const p2 = r - 1; const den1 = total; const den2 = total - 1
+      const correct = `(${p1}/${den1}) \\u00d7 (${p2}/${den2})`
+      return { id: this.id, category: this.category, question: `${r} red, ${b} blue marbles. P(2 red without replacement)?`, ...makeStringOptions(correct, [`(${p1}/${den1}) \\u00d7 (${p1}/${den1})`, `${p1}/${den1} + ${p2}/${den2}`, `(${p1}/${den1})\\u00b2`]), explanation: 'Without replacement: P = (red/total) \\u00d7 ((red-1)/(total-1)).' }
+    }
+  },
+  {
+    id: 'ds-q24',
+    category: 'Probability',
+
+    generate() {
+      const correct = 'Expected value = sum of (outcome \\u00d7 probability) for all outcomes'
+      return { id: this.id, category: this.category, question: 'How do you calculate expected value?', ...makeStringOptions(correct, ['Take the mode of probabilities', 'Add all outcomes together', 'Multiply the largest outcome by its probability']), explanation: 'E(X) = \\u03a3[x \\u00d7 P(x)] — the weighted average of all possible outcomes.' }
+    }
+  },
+  {
+    id: 'ds-q25',
+    category: 'Scatterplots',
+
+    generate() {
+      const correct = 'Positive linear — as x increases, y also increases'
+      return { id: this.id, category: this.category, question: 'A scatterplot shows points rising from left to right in a roughly straight pattern. Describe the association.', ...makeStringOptions(correct, ['Negative linear', 'No association', 'Quadratic']), explanation: 'Points rising left to right indicate a positive linear association.' }
+    }
+  },
+  {
+    id: 'ds-q26',
+    category: 'Scatterplots',
+
+    generate() {
+      const m = randInt(2, 8); const b = randInt(-10, 10)
+      const x = randInt(5, 15)
+      const y = m * x + b
+      const { options, correctIndex } = makeOptions(y, 10)
+      return { id: this.id, category: this.category, question: `Line of best fit: y = ${m}x + ${b}. Predict y when x = ${x}.`, options, correctIndex, explanation: `y = ${m}(${x}) + ${b} = ${m*x} + ${b} = ${y}.` }
+    }
+  },
+  {
+    id: 'ds-q27',
+    category: 'Scatterplots',
+
+    generate() {
+      const r = randInt(85, 98) / 100
+      const correct = 'Strong positive correlation'
+      return { id: this.id, category: this.category, question: `r = ${r}. Describe the correlation.`, ...makeStringOptions(correct, ['Weak positive', 'Strong negative', 'No correlation']), explanation: `r close to 1 (${r}) indicates strong positive correlation.` }
+    }
+  },
+  {
+    id: 'ds-q28',
+    category: 'Scatterplots',
+
+    generate() {
+      const correct = 'r\\u00b2 tells the percentage of variation in y explained by x'
+      return { id: this.id, category: this.category, question: 'What does the coefficient of determination (r\\u00b2) represent?', ...makeStringOptions(correct, ['The slope of the regression line', 'The y-intercept', 'The number of data points']), explanation: 'r\\u00b2 indicates what fraction of the dependent variable variation is explained by the model.' }
+    }
+  },
+  {
+    id: 'ds-q29',
+    category: 'Scatterplots',
+
+    generate() {
+      const actual = randInt(40, 80); const predicted = randInt(35, 75)
+      const residual = actual - predicted
+      const { options, correctIndex } = makeOptions(residual, 8)
+      return { id: this.id, category: this.category, question: `Actual y = ${actual}, predicted y = ${predicted}. Find the residual.`, options, correctIndex, explanation: `Residual = actual - predicted = ${actual} - ${predicted} = ${residual}.` }
+    }
+  },
+  {
+    id: 'ds-q30',
+    category: 'Scatterplots',
+
+    generate() {
+      const correct = 'It is an outlier — far from the general pattern'
+      return { id: this.id, category: this.category, question: 'A point in a scatterplot is very far from the line of best fit. What is this point called?', ...makeStringOptions(correct, ['The y-intercept', 'The slope', 'A normal point']), explanation: 'Points far from the regression line are outliers or influential points.' }
+    }
+  },
+  {
+    id: 'ds-q31',
+    category: 'Scatterplots',
+
+    generate() {
+      const correct = 'Extrapolation — predicting beyond the range of the data — is unreliable'
+      return { id: this.id, category: this.category, question: 'Why is it risky to use a regression line to predict y for x-values far outside the data range?', ...makeStringOptions(correct, ['Because the line is always wrong', 'Because r = 0 outside the data', 'Because the slope changes sign']), explanation: 'Extrapolation assumes the linear pattern continues, which may not be true beyond the observed data range.' }
+    }
+  },
+  {
+    id: 'ds-q32',
+    category: 'Scatterplots',
+
+    generate() {
+      const correct = 'The slope represents the predicted change in y for each 1-unit increase in x'
+      return { id: this.id, category: this.category, question: 'In a regression equation y = mx + b, what does the slope m represent in context?', ...makeStringOptions(correct, ['The starting value of y', 'The total of all y-values', 'The average of x and y']), explanation: 'The slope is the rate of change — for every 1-unit increase in x, y changes by m units on average.' }
+    }
+  },
+  {
+    id: 'ds-q33',
+    category: 'Two-way Tables',
+
+    generate() {
+      const a = randInt(20, 50); const b = randInt(10, 40); const c = randInt(15, 45); const d = randInt(10, 35)
+      const total = a + b + c + d
+      const correct = `${a}/${total}`
+      return { id: this.id, category: this.category, question: `Two-way table: Group A Yes=${a}, No=${b}. Group B Yes=${c}, No=${d}. P(Group A and Yes) = ?`, ...makeStringOptions(correct, [`${a + c}/${total}`, `${a}/${a + b}`, `${a}/${a + c}`]), explanation: `Joint probability: ${a} out of total ${total} = ${a}/${total}.` }
+    }
+  },
+  {
+    id: 'ds-q34',
+    category: 'Two-way Tables',
+
+    generate() {
+      const yes = randInt(30, 60); const no = randInt(20, 50)
+      const rowTotal = yes + no
+      const correct = `${yes}/${rowTotal}`
+      return { id: this.id, category: this.category, question: `In a row: Yes = ${yes}, No = ${no}. Find the conditional probability P(Yes | this row).`, ...makeStringOptions(correct, [`${no}/${rowTotal}`, `${yes}/${yes + no + randInt(10,30)}`, `1/2`]), explanation: `Conditional P = ${yes} / row total ${rowTotal} = ${yes}/${rowTotal}.` }
+    }
+  },
+  {
+    id: 'ds-q35',
+    category: 'Two-way Tables',
+
+    generate() {
+      const a = randInt(15, 40); const b = randInt(15, 40); const c = randInt(15, 40); const d = randInt(15, 40)
+      const colTotal = a + c
+      const correct = `Column total for the first attribute = ${colTotal}`
+      return { id: this.id, category: this.category, question: `Top-left=${a}, bottom-left=${c}, top-right=${b}, bottom-right=${d}. What is the marginal total for the first column?`, ...makeStringOptions(correct, [`${a + b}`, `${c + d}`, `${a + b + c + d}`]), explanation: `Marginal total = sum of column: ${a} + ${c} = ${colTotal}.` }
+    }
+  },
+  {
+    id: 'ds-q36',
+    category: 'Two-way Tables',
+
+    generate() {
+      const correct = 'Compare conditional probabilities across rows/columns — if equal, variables are independent'
+      return { id: this.id, category: this.category, question: 'How do you determine if two variables in a two-way table are independent?', ...makeStringOptions(correct, ['Check if the total is even', 'See if all cells are equal', 'Add row and column totals']), explanation: 'If P(A|B) = P(A), the variables are independent. Compare conditional probabilities across groups.' }
+    }
+  },
+  {
+    id: 'ds-q37',
+    category: 'Two-way Tables',
+
+    generate() {
+      const m_y = randInt(30, 50); const m_n = randInt(20, 40)
+      const f_y = randInt(25, 45); const f_n = randInt(25, 45)
+      const totalYes = m_y + f_y
+      const grandTotal = m_y + m_n + f_y + f_n
+      const correct = `${totalYes}/${grandTotal}`
+      return { id: this.id, category: this.category, question: `Males: Yes=${m_y}, No=${m_n}. Females: Yes=${f_y}, No=${f_n}. P(Yes) overall = ?`, ...makeStringOptions(correct, [`${m_y}/${grandTotal}`, `${f_y}/${grandTotal}`, `${m_y + m_n}/${grandTotal}`]), explanation: `P(Yes) = total Yes / grand total = ${totalYes}/${grandTotal}.` }
+    }
+  },
+  {
+    id: 'ds-q38',
+    category: 'Two-way Tables',
+
+    generate() {
+      const correct = 'The relative frequency of each cell compared to its row or column total'
+      return { id: this.id, category: this.category, question: 'What is a relative frequency in a two-way table?', ...makeStringOptions(correct, ['The largest number in the table', 'The sum of all cells', 'The difference between rows']), explanation: 'Relative frequency = cell count / total (row, column, or grand total), expressed as a fraction or percentage.' }
+    }
+  },
+  {
+    id: 'ds-q39',
+    category: 'Two-way Tables',
+
+    generate() {
+      const a = randInt(10, 30); const b = randInt(10, 30); const c = randInt(10, 30); const d = randInt(10, 30)
+      const rowA = a + b; const rowB = c + d
+      const pAgivenRow1 = Math.round(a / rowA * 100)
+      const pAgivenRow2 = Math.round(c / rowB * 100)
+      const isAssoc = Math.abs(pAgivenRow1 - pAgivenRow2) > 10
+      const correct = isAssoc ? 'Yes, conditional probabilities differ significantly' : 'Possibly not — conditional probabilities are similar'
+      return { id: this.id, category: this.category, question: `Row 1: ${a}, ${b}. Row 2: ${c}, ${d}. P(col1|row1) = ${pAgivenRow1}%, P(col1|row2) = ${pAgivenRow2}%. Is there an association?`, ...makeStringOptions(correct, ['No difference at all', 'Impossible to compare', 'Only with a chi-square test']), explanation: `Difference of ${Math.abs(pAgivenRow1 - pAgivenRow2)} percentage points ${isAssoc ? 'suggests' : 'may not strongly suggest'} an association.` }
+    }
+  },
+  {
+    id: 'ds-q40',
+    category: 'Two-way Tables',
+
+    generate() {
+      const total = randInt(100, 200); const cellCount = randInt(15, 45)
+      const pct = Math.round(cellCount / total * 100)
+      const { options, correctIndex } = makeOptions(pct, 8)
+      return { id: this.id, category: this.category, question: `In a two-way table with grand total ${total}, a cell has count ${cellCount}. What percentage is this?`, options, correctIndex, explanation: `${cellCount}/${total} \\u00d7 100 = ${pct}%.` }
+    }
+  },
 ]
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   const byCategory: Record<string, QuestionTemplate[]> = {}
-  for (const q of questionPool) { if (!byCategory[q.category]) byCategory[q.category] = []; byCategory[q.category].push(q) }
-  const selected: QuestionTemplate[] = []; const usedIds = new Set<string>()
-  for (const cat of shuffle(Object.keys(byCategory))) { if (selected.length >= count) break; const pool = byCategory[cat]; const q = pool[Math.floor(Math.random() * pool.length)]; if (!usedIds.has(q.id)) { selected.push(q); usedIds.add(q.id) } }
+  for (const q of questionPool) {
+    if (!byCategory[q.category]) byCategory[q.category] = []
+    byCategory[q.category].push(q)
+  }
+  const selected: QuestionTemplate[] = []
+  const usedIds = new Set<string>()
+  for (const cat of shuffle(Object.keys(byCategory))) {
+    if (selected.length >= count) break
+    const pool = byCategory[cat]
+    const q = pool[Math.floor(Math.random() * pool.length)]
+    if (!usedIds.has(q.id)) { selected.push(q); usedIds.add(q.id) }
+  }
   const remaining = questionPool.filter(q => !usedIds.has(q.id))
-  for (const q of shuffle(remaining)) { if (selected.length >= count) break; selected.push(q); usedIds.add(q.id) }
+  for (const q of shuffle(remaining)) {
+    if (selected.length >= count) break
+    selected.push(q)
+    usedIds.add(q.id)
+  }
   return shuffle(selected).map(t => t.generate())
 }

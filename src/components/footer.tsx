@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { EmailCapture } from '@/components/email-capture'
 
 const footerLinks = {
   'Courses': [
@@ -60,7 +61,7 @@ export function Footer() {
 
           {/* Link columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
+            <nav key={title} aria-label={`Footer ${title} links`}>
               <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">{title}</h3>
               <ul className="space-y-2">
                 {links.map((link) => (
@@ -74,8 +75,18 @@ export function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </nav>
           ))}
+        </div>
+
+        {/* Email Capture */}
+        <div className="mt-10 max-w-lg mx-auto md:mx-0">
+          <EmailCapture
+            source="footer"
+            heading="Stay Ahead in School"
+            description="Free weekly study tips, practice sets, and exam strategies. Join 10,000+ students."
+            buttonText="Get Free Tips"
+          />
         </div>
 
         {/* Bottom bar */}

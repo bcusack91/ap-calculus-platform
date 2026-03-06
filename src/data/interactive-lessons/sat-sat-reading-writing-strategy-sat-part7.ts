@@ -2,82 +2,76 @@ export const satRWStrategyPart7Data = {
   topicSlug: 'sat-reading-writing-strategy-sat',
   sections: [
     {
-      id: 'sat-read-p7-intro',
+      id: 'rw7-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Full Section Practice
+      content: `# R&W Module Review & Test Strategy
 
-**Part 7 of 7 — Full Section Practice**
+**Part 7 of 7 — Putting It All Together**
 
-Timed mixed practice across all reading/writing question types
+### Digital SAT R&W Structure
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+| Module | Questions | Time | Focus |
+|---|---|---|---|
+| **Module 1** | 27 | 32 min | Mix of reading & writing |
+| **Module 2** | 27 | 32 min | Adaptive difficulty based on Module 1 |
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Question Type Distribution
+
+| Type | ~Questions Per Module |
+|---|---|
+| Craft and Structure | 6-7 |
+| Information and Ideas | 6-7 |
+| Standard English Conventions | 6-7 |
+| Expression of Ideas | 6-7 |
+
+### Time Strategy: The 70-Second Rule
+
+- 32 minutes ÷ 27 questions = ~71 seconds per question
+- **Easy questions:** 30-45 seconds (save time for harder ones)
+- **Medium questions:** 60-90 seconds
+- **Hard questions:** Flag and return if over 2 minutes
+
+### Decision Framework for Writing Questions
+
+1. Is there a grammar error? → Fix it (conventions)
+2. Is there wordiness? → Choose concise option (eliminate redundancy)
+3. Is there a transition? → Identify the relationship (addition, contrast, cause)
+4. Is it a rhetorical synthesis? → Match the stated goal
+
+### Final Tips
+
+- **Read answer choices vertically** — compare what's different between them to identify what's being tested
+- **On pronouns:** Always check what the pronoun refers to
+- **On transitions:** Cover the transition word and predict the relationship first
+- **On conciseness:** Among grammatically correct choices, shorter is usually better
+- **When stuck:** Eliminate the two most obviously wrong choices, then compare the remaining two carefully`
     },
     {
-      id: 'sat-read-p7-check',
+      id: 'rw7-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Comprehensive R&W Review** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-read-p7-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-read-p7-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: '"The study, which was conducted by researchers at MIT, _____ that sleep deprivation affects memory." Which answer is most concise and correct?',
+            options: ['found', 'was able to find out and determine', 'found and concluded definitively', 'had the finding that'],
+            correctAnswer: 0,
+            explanation: 'All convey similar meaning, but "found" is the most concise. The SAT consistently rewards eliminating unnecessary words. "Was able to find out and determine" is redundant; "had the finding that" is wordy.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'Approximately how many seconds should you spend on each R&W question?',
+            options: ['About 70 seconds (32 min ÷ 27 questions)', 'About 30 seconds to leave time for review', 'About 2 minutes per question', 'Exactly 60 seconds'],
+            correctAnswer: 0,
+            explanation: '32 minutes ÷ 27 questions = approximately 71 seconds each. Budget less time for easy questions (30-45s) and more for hard ones (up to 2 minutes), but 70 seconds is the target average.'
+          },
+          {
+            question: '"The new medication proved effective. _____, it carried fewer side effects than existing treatments." Best transition:',
+            options: ['Moreover — adds another positive point', 'However — this contrasts with effectiveness', 'Therefore — side effects are a result of effectiveness', 'For example — side effects illustrate effectiveness'],
+            correctAnswer: 0,
+            explanation: 'Both sentences present positive aspects of the medication. "Moreover" adds supporting information. "However" would imply contrast (but both points are positive). "Therefore" implies causation that isn\'t present.'
           }
         ]
       }
     }
   ]
-}
+};

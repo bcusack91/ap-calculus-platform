@@ -2,82 +2,61 @@ export const satProbSolvDataPart1Data = {
   topicSlug: 'sat-problem-solving-data-sat',
   sections: [
     {
-      id: 'sat-prob-p1-intro',
+      id: 'psd1-intro',
       type: 'text' as const,
-      content: `
-# 📊 Reading Tables & Graphs
+      content: `# Problem Solving: Ratios, Rates & Proportions
 
-**Part 1 of 7 — Reading Tables & Graphs**
+**Part 1 of 7 — Setting Up and Solving Proportions**
 
-Extracting data from tables, bar graphs, histograms, scatterplots
+This is one of the most heavily tested topics on the SAT Math section. About 25-30% of Math questions fall under Problem Solving & Data Analysis.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Ratios
+A ratio compares two quantities: If a recipe uses 3 cups flour to 2 cups sugar, the ratio is **3:2** or **3/2**.
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Setting Up Proportions
+**Cross-multiply** to solve:
+
+$$\frac{3}{5} = \frac{x}{20} \implies 3 \times 20 = 5x \implies x = 12$$
+
+### Unit Rates
+A unit rate has a denominator of 1:
+- 240 miles in 4 hours → **60 mph**
+- \$45 for 3 shirts → **\$15 per shirt**
+
+### SAT Trap: Mixing Up Parts and Wholes
+If the ratio of boys to girls is 3:5, there are **8 total parts** (not 5).
+- Boys = 3/8 of total
+- Girls = 5/8 of total
+
+### Dimensional Analysis
+Convert units by multiplying fractions:
+$$60 \frac{\text{miles}}{\text{hour}} \times \frac{1 \text{ hour}}{60 \text{ min}} = 1 \frac{\text{mile}}{\text{min}}$$`
     },
     {
-      id: 'sat-prob-p1-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
+      id: 'psd1-q1',
+      type: 'quiz' as const,
+      question: 'In a class, the ratio of students who passed to those who failed is 7:3. If 40 students took the test, how many passed?',
+      options: [
+        '7',
+        '21',
+        '28',
+        '30'
+      ],
+      correctAnswer: 2,
+      explanation: 'Total parts = 7 + 3 = 10. Students who passed = (7/10) × 40 = 28. Common trap: choosing 7 (just the ratio number) or 30 (confusing 7:3 with "7 out of 3").'
     },
     {
-      id: 'sat-prob-p1-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-prob-p1-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'psd1-q2',
+      type: 'quiz' as const,
+      question: 'A car travels 150 miles using 5 gallons of gas. At this rate, how many gallons are needed for 420 miles?',
+      options: [
+        '12',
+        '14',
+        '16',
+        '84'
+      ],
+      correctAnswer: 1,
+      explanation: 'Unit rate = 150/5 = 30 mpg. Gallons needed = 420/30 = 14 gallons. Set up: 150/5 = 420/x → 150x = 2100 → x = 14.'
     }
   ]
-}
+};

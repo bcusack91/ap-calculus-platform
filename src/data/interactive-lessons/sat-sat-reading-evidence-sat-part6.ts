@@ -2,82 +2,62 @@ export const satReadingEvidencePart6Data = {
   topicSlug: 'sat-reading-evidence-sat',
   sections: [
     {
-      id: 'sat-read-p6-intro',
+      id: 're6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Paired Passage Strategies
+      content: `# Data Interpretation in Reading
 
-**Part 6 of 7 — Paired Passage Strategies**
+**Part 6 of 7 — Charts, Graphs, and Tables in R&W**
 
-Comparing and contrasting two related passages
+The Digital SAT includes informational graphics alongside some Reading & Writing passages. You must integrate data from both the text and the visual.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Common Graphic Types
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+- **Bar charts:** Compare quantities across categories
+- **Line graphs:** Show trends over time
+- **Tables:** Present precise numerical data
+- **Scatter plots:** Show relationships between two variables
+
+### Strategy: Text + Graphic Integration
+
+1. Read the passage first to understand the main argument
+2. Examine the graphic: title, axes, labels, units
+3. Ask: "How does this graphic support or complicate the passage's claims?"
+
+### Example Question Pattern
+
+**Passage says:** "Renewable energy adoption has accelerated dramatically in the past decade."
+
+**Graph shows:** Solar installation growing from 2 GW in 2010 to 150 GW in 2023.
+
+**Question:** "Which claim from the passage is best supported by the data in the figure?"
+
+✅ Answer: The claim about dramatic acceleration—the graph shows 75x growth.
+
+### SAT Trap ⚠️
+
+- Don't confuse what the **text claims** with what the **data shows**. Sometimes the data actually **contradicts** or **qualifies** the text's claims.
+- Always check the **scale and units** on graphs. A graph that looks dramatic might only show a change from 50.0% to 50.5%.`
     },
     {
-      id: 'sat-read-p6-check',
+      id: 're6-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Data + Reading Integration** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-read-p6-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-read-p6-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: 'A passage claims "Exercise significantly improves test scores." A table shows students who exercised 30 min/day scored an average of 82%, while non-exercisers scored 78%. Does the data support the claim?',
+            options: ['Partially—the data shows improvement but "significantly" may overstate a 4-point difference', 'Yes—any improvement counts as significant', 'No—the data completely contradicts the claim', 'The data is irrelevant to the claim'],
+            correctAnswer: 0,
+            explanation: 'The data does show improvement (82 vs 78), so it partially supports the claim. But a 4-percentage-point difference might not qualify as "significant"—the word choice in the passage is stronger than the data warrants.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'When a graph appears with a passage, you should read:',
+            options: ['The passage first, then the graph title and labels, then integrate both', 'The graph first because visual data is more objective', 'Only the passage—the graph is supplementary', 'Only the graph—the passage is just context'],
+            correctAnswer: 0,
+            explanation: 'Start with the passage to understand the argument, then examine the graph with attention to title, axes, and units. Integration of both is always required for correct answers.'
           }
         ]
       }
     }
   ]
-}
+};

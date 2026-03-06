@@ -2,82 +2,67 @@ export const satExpressionPart6Data = {
   topicSlug: 'sat-expression-ideas-sat',
   sections: [
     {
-      id: 'sat-expr-p6-intro',
+      id: 'ei6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Organization & Order
+      content: `# Cohesion & Paragraph Unity
 
-**Part 6 of 7 — Organization & Order**
+**Part 6 of 7 — Keeping Paragraphs Focused**
 
-Logical ordering of sentences and paragraphs
+Cohesion questions ask whether a sentence belongs in a paragraph, or whether the paragraph maintains a consistent focus.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### The Unity Test
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+Every sentence in a paragraph should support the topic sentence. If a sentence introduces unrelated information, it should be deleted.
+
+### "Should the writer add/delete this sentence?"
+
+When you see this question type:
+
+**Reasons to ADD:**
+- Provides needed context or definition
+- Supports the paragraph's main claim with evidence
+- Creates a logical transition
+
+**Reasons to DELETE:**
+- Introduces information unrelated to the paragraph's focus
+- Repeats what's already been stated
+- Contradicts the paragraph without purpose
+
+### Example
+
+**Topic sentence:** "Urban rooftop gardens provide multiple environmental benefits."
+
+✅ Keep: "They reduce stormwater runoff by up to 50%." (supports environmental benefits)  
+✅ Keep: "Rooftop vegetation lowers building temperatures by 5-10°F." (supports environmental benefits)  
+❌ Delete: "The first rooftop garden in New York was installed in 1882." (historical trivia, not about benefits)
+
+### Logical Connectors for Cohesion
+
+Sentences should connect to each other. Look for:
+- **Pronouns** pointing back (this, these, such)
+- **Repeated key terms** or synonyms
+- **Transitions** that show the relationship`
     },
     {
-      id: 'sat-expr-p6-check',
+      id: 'ei6-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Cohesion & Unity Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-expr-p6-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-expr-p6-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: 'A paragraph argues that public libraries promote literacy. A writer wants to add: "Libraries also serve as community meeting spaces and warming centers during winter." Should this sentence be added?',
+            options: ['No—it introduces services unrelated to the paragraph\'s focus on literacy', 'Yes—it shows libraries are important', 'Yes—all library benefits should be included', 'No—the sentence is too long'],
+            correctAnswer: 0,
+            explanation: 'The paragraph is specifically about literacy. Meeting spaces and warming centers are valuable library functions but are off-topic here. Adding this would weaken the paragraph\'s focus.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: 'Which question should you ask yourself when deciding if a sentence belongs?',
+            options: ['Does this sentence directly support the paragraph\'s topic sentence?', 'Is this sentence interesting to read?', 'Is this sentence grammatically correct?', 'Is this the longest sentence in the paragraph?'],
+            correctAnswer: 0,
+            explanation: 'Paragraph unity means every sentence supports the topic. A sentence can be interesting, grammatically perfect, and any length—but if it doesn\'t support the topic sentence, it doesn\'t belong.'
           }
         ]
       }
     }
   ]
-}
+};

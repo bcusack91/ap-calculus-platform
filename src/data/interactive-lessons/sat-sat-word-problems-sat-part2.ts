@@ -2,82 +2,48 @@ export const satWordProblemsPart2Data = {
   topicSlug: 'sat-word-problems-sat',
   sections: [
     {
-      id: 'sat-word-p2-intro',
+      id: 'wp2-intro',
       type: 'text' as const,
-      content: `
-# 💰 Money & Age Problems
+      content: `# Age Problems & Number Problems
 
-**Part 2 of 7 — Money & Age Problems**
+**Part 2 of 7 — Classic SAT Word Problem Types**
 
-Classic word problem types with systematic solution methods
+### Age Problems Strategy
+1. Define variables for **current** ages
+2. Write expressions for past/future ages
+3. Set up an equation from the given relationship
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+**Example:** "Maria is 3 times as old as her son. In 12 years, she will be twice as old as him."
+- Let son's current age = $s$, Maria's current age = $3s$
+- In 12 years: son = $s + 12$, Maria = $3s + 12$
+- Equation: $3s + 12 = 2(s + 12)$
+- Solve: $3s + 12 = 2s + 24 \implies s = 12$
+- Son is 12, Maria is 36. Check: In 12 years → 24 and 48. 48 = 2(24) ✓
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Number Problems
+**Consecutive integers:** $n, n+1, n+2$
+**Consecutive even/odd:** $n, n+2, n+4$
+
+**Example:** "The sum of 3 consecutive integers is 72."
+$n + (n+1) + (n+2) = 72 \implies 3n + 3 = 72 \implies n = 23$
+The integers are 23, 24, 25.
+
+### Digit Problems
+A two-digit number with tens digit $t$ and units digit $u$ has value $10t + u$.
+"Reversing the digits" gives $10u + t$.`
     },
     {
-      id: 'sat-word-p2-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-word-p2-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-word-p2-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'wp2-q1',
+      type: 'quiz' as const,
+      question: 'A father is 4 times as old as his daughter. In 20 years, he will be twice her age. How old is the daughter now?',
+      options: [
+        '5',
+        '8',
+        '10',
+        '12'
+      ],
+      correctAnswer: 2,
+      explanation: 'Let daughter = d, father = 4d. In 20 years: 4d + 20 = 2(d + 20). Simplify: 4d + 20 = 2d + 40 → 2d = 20 → d = 10. Check: Father is 40. In 20 years: 30 and 60. 60 = 2(30) ✓'
     }
   ]
-}
+};

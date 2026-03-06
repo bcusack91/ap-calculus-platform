@@ -2,168 +2,78 @@ export const satRatiosPart2Data = {
   topicSlug: 'sat-ratios-proportions-sat',
   sections: [
     {
-      id: 'sat-rp2-intro',
+      id: 'rp2-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Proportions & Cross-Multiplication
+      content: `# Ratios, Proportions & Percentages
 
-**Part 2 of 7 — Setting Up Proportions, Cross-Multiplying & Scaling**
+**Part 2 of 7 — Percentages**
 
-A **proportion** states that two ratios are equal:
+### Percent Basics
 
-$$\\frac{a}{b} = \\frac{c}{d}$$
+$p\\%$ means $\\frac{p}{100}$.
 
-**Cross-multiplication** gives:
+- "What is 15% of 80?" → $0.15 \\times 80 = 12$
+- "12 is what percent of 80?" → $\\frac{12}{80} = 0.15 = 15\\%$
+- "12 is 15% of what?" → $12 = 0.15x$ → $x = 80$
 
-$$a \\cdot d = b \\cdot c$$
+### Percent Change
 
-This is the primary tool for solving proportion problems on the SAT.
+$$\\text{Percent change} = \\frac{\\text{New} - \\text{Old}}{\\text{Old}} \\times 100\\%$$
 
-**Example 1:** Solve $\\frac{3}{8} = \\frac{x}{24}$.
+**Example:** Price goes from \\$40 to \\$52:
+$\\frac{52 - 40}{40} \\times 100 = 30\\%$ increase
 
-$$3 \\times 24 = 8 \\times x \\implies 72 = 8x \\implies x = 9$$
+### Multiplier Method (Faster!)
 
-**Example 2:** Solve $\\frac{5}{x} = \\frac{15}{27}$.
+- Increase of $p\\%$: multiply by $1 + p/100$
+- Decrease of $p\\%$: multiply by $1 - p/100$
 
-$$5 \\times 27 = 15x \\implies 135 = 15x \\implies x = 9$$
-      `
+20% increase on \\$80: $80 \\times 1.20 = \\$96$
+
+15% discount on \\$200: $200 \\times 0.85 = \\$170$
+
+### Successive Percent Changes ⚠️
+
+A 20% increase followed by a 20% decrease is NOT back to the original!
+
+$100 \\times 1.20 = 120$, then $120 \\times 0.80 = 96$ — that's a 4% net decrease.`
     },
     {
-      id: 'sat-rp2-scaling',
-      type: 'text' as const,
-      content: `
-## Scaling Recipes & Real-World Proportions
-
-**Example 3 — Recipe Scaling:** A recipe for 4 servings calls for 6 cups of flour. How much flour is needed for 10 servings?
-
-$$\\frac{6}{4} = \\frac{x}{10} \\implies 6 \\times 10 = 4x \\implies x = 15 \\text{ cups}$$
-
-**Example 4 — Map Scale:** On a map, 2 cm represents 50 km. If two cities are 7 cm apart on the map, what is the actual distance?
-
-$$\\frac{2}{50} = \\frac{7}{d} \\implies 2d = 350 \\implies d = 175 \\text{ km}$$
-
-**Example 5 — Shadow Proportion:** A 6-foot person casts a 4-foot shadow. A tree casts a 20-foot shadow. How tall is the tree?
-
-$$\\frac{6}{4} = \\frac{h}{20} \\implies 6 \\times 20 = 4h \\implies h = 30 \\text{ feet}$$
-
-**SAT Tip:** Always put matching units in matching positions:
-
-$$\\frac{\\text{object}_1}{\\text{shadow}_1} = \\frac{\\text{object}_2}{\\text{shadow}_2}$$
-      `
-    },
-    {
-      id: 'sat-rp2-mcq1',
+      id: 'rp2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Cross-Multiplication** 🔍
-      `,
+      content: '**Percentages** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Solve: $\\frac{7}{x} = \\frac{21}{36}$',
-            options: ['$x = 9$', '$x = 12$', '$x = 14$', '$x = 18$'],
-            correctAnswer: 1,
-            explanation: '$7 \\times 36 = 21x \\implies 252 = 21x \\implies x = 12$.'
+            question: 'A shirt originally costs \\$60 and is on sale for 25% off. What is the sale price?',
+            options: ['\\$45', '\\$40', '\\$35', '\\$50'],
+            correctAnswer: 0,
+            explanation: 'Sale price = $60 \\times 0.75 = \\$45$. Or: discount = $60 \\times 0.25 = 15$, so $60 - 15 = 45$.'
           },
           {
-            question: 'A recipe for 6 cookies uses 2 eggs. How many eggs are needed for 21 cookies?',
-            options: ['$5$', '$6$', '$7$', '$8$'],
-            correctAnswer: 2,
-            explanation: '$\\frac{2}{6} = \\frac{e}{21} \\implies 2 \\times 21 = 6e \\implies e = 7$.'
+            question: 'A stock increases 50% then decreases 50%. If the initial value was \\$100, the final value is:',
+            options: ['\\$75', '\\$100', '\\$50', '\\$125'],
+            correctAnswer: 0,
+            explanation: '$100 \\times 1.50 = 150$, then $150 \\times 0.50 = 75$. This is a 25% net decrease — NOT back to \\$100!'
+          },
+          {
+            question: 'The population of a town grew from 8,000 to 10,000. The percent increase is:',
+            options: ['$25\\%$', '$20\\%$', '$80\\%$', '$2\\%$'],
+            correctAnswer: 0,
+            explanation: 'Change $= 10{,}000 - 8{,}000 = 2{,}000$. Percent $= 2000/8000 \\times 100 = 25\\%$. Always divide by the original.'
           }
         ]
       }
     },
     {
-      id: 'sat-rp2-multivar',
+      id: 'rp2-summary',
       type: 'text' as const,
-      content: `
-## Multi-Step Proportion Problems
+      content: `### Key Takeaways — Part 2
 
-Sometimes the SAT nests a proportion inside a larger problem.
-
-**Example 6:** The ratio of boys to girls in a class is $3 : 4$. The ratio of girls to teachers is $8 : 1$. If there are 3 teachers, how many boys are in the class?
-
-**Step 1:** Girls $= 8 \\times 3 = 24$.
-
-**Step 2:** $\\frac{\\text{boys}}{\\text{girls}} = \\frac{3}{4} \\implies \\frac{b}{24} = \\frac{3}{4} \\implies b = 18$.
-
-**Example 7:** If $\\frac{a}{b} = \\frac{2}{5}$ and $\\frac{b}{c} = \\frac{5}{3}$, find $\\frac{a}{c}$.
-
-$$\\frac{a}{c} = \\frac{a}{b} \\cdot \\frac{b}{c} = \\frac{2}{5} \\cdot \\frac{5}{3} = \\frac{2}{3}$$
-
-**SAT Tip:** Chain ratios by ensuring the shared quantity has the same value in both ratios. Then multiply straight across.
-      `
-    },
-    {
-      id: 'sat-rp2-input1',
-      type: 'input-boxes' as const,
-      content: `
-**Proportion Practice** 🧮
-
-1) Solve $\\frac{4}{9} = \\frac{x}{45}$.
-2) A car uses 3 gallons of gas for every 90 miles. How many gallons for 210 miles?
-3) If $\\frac{a}{b} = \\frac{3}{7}$ and $b = 35$, find $a$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['20', '7', '15'],
-        hint1: '$4 \\times 45 = 9x$.',
-        hint2: '$\\frac{3}{90} = \\frac{g}{210} \\implies 3 \\times 210 = 90g$.',
-        hint3: '$\\frac{a}{35} = \\frac{3}{7} \\implies 7a = 105$.',
-        explanation: '$x = 20$, gallons $= 7$, $a = 15$.'
-      }
-    },
-    {
-      id: 'sat-rp2-dropdown1',
-      type: 'dropdown-select' as const,
-      content: `
-**Proportion Concepts** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Cross-multiplying $\\frac{a}{b} = \\frac{c}{d}$ gives …',
-            options: ['$a + d = b + c$', '$ad = bc$', '$ac = bd$', '$a/c = b/d$']
-          },
-          {
-            label: 'In a proportion, if you multiply numerator and denominator of one side by the same number, the proportion …',
-            options: ['becomes invalid', 'stays true', 'reverses', 'doubles']
-          },
-          {
-            label: 'To find the unknown in $\\frac{5}{12} = \\frac{x}{36}$, the fastest method is …',
-            options: ['guess and check', 'cross-multiply', 'add 5 to both sides', 'subtract 12 from 36']
-          }
-        ],
-        correctAnswers: ['$ad = bc$', 'stays true', 'cross-multiply'],
-        hint1: 'Multiply diagonally.',
-        hint2: 'Equivalent fractions have the same value.',
-        hint3: '$5 \\times 36 = 12x$ is the fastest path.',
-        explanation: 'Cross-multiplication gives $ad = bc$. Scaling a fraction keeps it equivalent. Cross-multiplying is the standard technique.'
-      }
-    },
-    {
-      id: 'sat-rp2-sat',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'On a blueprint, $\\frac{1}{4}$ inch represents 3 feet. A room measures $2\\frac{1}{2}$ inches on the blueprint. What is the actual length of the room in feet?',
-            options: ['$24$', '$30$', '$36$', '$42$'],
-            correctAnswer: 1,
-            explanation: '$\\frac{0.25}{3} = \\frac{2.5}{d} \\implies 0.25d = 7.5 \\implies d = 30$ feet.'
-          },
-          {
-            question: 'If 8 machines can produce 560 widgets in 7 hours, how many widgets can 5 machines produce in 10 hours?',
-            options: ['$350$', '$400$', '$500$', '$700$'],
-            correctAnswer: 2,
-            explanation: 'Rate per machine per hour $= 560/(8 \\times 7) = 10$. With 5 machines for 10 hours: $5 \\times 10 \\times 10 = 500$.'
-          }
-        ]
-      }
+- Percent change: divide the change by the **original** (not the new) value
+- Multiplier method is fastest: increase → multiply by $(1 + r)$, decrease → $(1 - r)$
+- Successive percent changes: multiply the multipliers together
+- A% increase then A% decrease ≠ original (common SAT trap)`
     }
   ]
 };

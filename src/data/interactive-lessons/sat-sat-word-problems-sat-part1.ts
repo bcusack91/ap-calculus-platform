@@ -2,82 +2,65 @@ export const satWordProblemsPart1Data = {
   topicSlug: 'sat-word-problems-sat',
   sections: [
     {
-      id: 'sat-word-p1-intro',
+      id: 'wp1-intro',
       type: 'text' as const,
-      content: `
-# 📝 Translating Words to Math
+      content: `# Word Problems: Translating Words to Math
 
-**Part 1 of 7 — Translating Words to Math**
+**Part 1 of 7 — Building Equations from Descriptions**
 
-Key phrases → mathematical operations, setting up equations
+### Translation Guide
+| English | Math |
+|---|---|
+| "is", "equals", "was" | = |
+| "more than", "increased by", "sum" | + |
+| "less than", "decreased by", "fewer" | − |
+| "times", "of", "product" | × |
+| "per", "each", "ratio of" | ÷ |
+| "what number", "a number" | x (or another variable) |
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Common Sentence Patterns
+**"5 more than twice a number is 17"**
+$$2x + 5 = 17 \implies x = 6$$
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+**"The product of 3 and a number, decreased by 7, equals 14"**
+$$3x - 7 = 14 \implies x = 7$$
+
+### SAT Trap: "Less Than" Order
+"5 less than x" = $x - 5$ (NOT $5 - x$)
+
+"3 less than twice a number" = $2x - 3$ (NOT $3 - 2x$)
+
+### Defining Variables
+Always state what your variable represents:
+- Let $x$ = number of adult tickets
+- Let $y$ = number of child tickets
+- This prevents confusion in multi-step problems`
     },
     {
-      id: 'sat-word-p1-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
+      id: 'wp1-q1',
+      type: 'quiz' as const,
+      question: '"Six more than three times a number is 27." What equation represents this?',
+      options: [
+        '6(3x) = 27',
+        '3x + 6 = 27',
+        '3x - 6 = 27',
+        '6x + 3 = 27'
+      ],
+      correctAnswer: 1,
+      explanation: '"Three times a number" = 3x. "Six more than" = + 6. "Is" = equals. So: 3x + 6 = 27. Solving: 3x = 21, x = 7.'
     },
     {
-      id: 'sat-word-p1-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-word-p1-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'wp1-q2',
+      type: 'quiz' as const,
+      question: '"8 less than the product of 4 and y" translates to:',
+      options: [
+        '8 - 4y',
+        '4y - 8',
+        '4(y - 8)',
+        '8(4 - y)'
+      ],
+      correctAnswer: 1,
+      explanation: '"Product of 4 and y" = 4y. "8 less than [something]" = [something] − 8 = 4y − 8. Remember: "less than" reverses the order — you subtract FROM the first quantity.'
     }
   ]
-}
+};

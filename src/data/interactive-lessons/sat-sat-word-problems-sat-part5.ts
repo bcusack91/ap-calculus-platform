@@ -2,82 +2,54 @@ export const satWordProblemsPart5Data = {
   topicSlug: 'sat-word-problems-sat',
   sections: [
     {
-      id: 'sat-word-p5-intro',
+      id: 'wp5-intro',
       type: 'text' as const,
-      content: `
-# 📐 Geometry Word Problems
+      content: `# Growth & Decay Word Problems
 
-**Part 5 of 7 — Geometry Word Problems**
+**Part 5 of 7 — Exponential Models in Context**
 
-Setting up equations from geometric relationships
+### Exponential Growth Formula
+$$A = A_0(1 + r)^t$$
+- $A_0$ = initial amount
+- $r$ = growth rate (as decimal)
+- $t$ = time periods
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Exponential Decay Formula
+$$A = A_0(1 - r)^t$$
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Compound Interest
+$$A = P\left(1 + \frac{r}{n}\right)^{nt}$$
+- $P$ = principal, $r$ = annual rate, $n$ = compounds per year, $t$ = years
+
+### Population Growth
+"A town of 5,000 grows 3% per year. Population after 10 years?"
+$$A = 5000(1.03)^{10} \approx 6,720$$
+
+### Depreciation
+"A car worth \$25,000 loses 15% of its value each year. Value after 4 years?"
+$$V = 25000(0.85)^4 \approx \$13,050$$
+
+### Half-Life
+"A substance has a half-life of 6 hours. Starting with 200g, how much remains after 18 hours?"
+- 18 hours = 3 half-lives
+- $200 \times (0.5)^3 = 200 \times 0.125 = 25$ grams
+
+### SAT Tip: Identifying Growth/Decay
+- Multiplier > 1 → growth (e.g., 1.05 = 5% growth)
+- Multiplier between 0 and 1 → decay (e.g., 0.85 = 15% decay)`
     },
     {
-      id: 'sat-word-p5-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-word-p5-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-word-p5-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'wp5-q1',
+      type: 'quiz' as const,
+      question: 'A bacteria population doubles every 3 hours. Starting with 500, how many are there after 12 hours?',
+      options: [
+        '2,000',
+        '4,000',
+        '6,000',
+        '8,000'
+      ],
+      correctAnswer: 3,
+      explanation: '12 hours ÷ 3 hours = 4 doubling periods. 500 × 2⁴ = 500 × 16 = 8,000. Each doubling: 500 → 1,000 → 2,000 → 4,000 → 8,000.'
     }
   ]
-}
+};

@@ -2,82 +2,73 @@ export const satReadingEvidencePart4Data = {
   topicSlug: 'sat-reading-evidence-sat',
   sections: [
     {
-      id: 'sat-read-p4-intro',
+      id: 're4-intro',
       type: 'text' as const,
-      content: `
-# 📐 Vocabulary in Context
+      content: `# Vocabulary in Context
 
-**Part 4 of 7 — Vocabulary in Context**
+**Part 4 of 7 — Word Meaning from Context**
 
-Determining word meaning from surrounding text
+The SAT tests "words in context"—you need to determine which meaning of a word fits the passage, NOT just the most common definition.
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Strategy: Substitution Method
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+1. Read the sentence with the target word
+2. Cover the word and predict what should go there
+3. Check which answer choice matches your prediction
+
+### Example
+
+> "The company decided to **table** the proposal until the next quarterly meeting."
+
+The word "table" most nearly means:
+- A) a piece of furniture ❌
+- B) postpone ✅
+- C) present for discussion ❌ (British English meaning—less common in SAT context)
+- D) organize into rows ❌
+
+### Multiple-Meaning Words the SAT Loves
+
+| Word | Common Meaning | SAT Contextual Meaning |
+|---|---|---|
+| **Acute** | sharp, severe | perceptive, keen |
+| **Check** | verify | restrain, limit |
+| **Arrest** | detain by police | stop, halt (progress) |
+| **Qualify** | become eligible | limit, moderate (a statement) |
+| **Gravity** | force of attraction | seriousness, importance |
+| **Champion** | winner | advocate for, support |
+| **Craft** | art project | skill, careful construction |
+| **Provincial** | from a province | narrow-minded, unsophisticated |
+
+### SAT Trap ⚠️
+
+The most **obvious** definition is almost always wrong. If "table" is in the answer choices and one option is "a flat surface for eating," that's the trap. The SAT wants the **secondary** or **contextual** meaning.`
     },
     {
-      id: 'sat-read-p4-check',
+      id: 're4-quiz',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Vocabulary in Context Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-read-p4-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-read-p4-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
+            question: '"The senator sought to TEMPER her criticism of the bill with acknowledgment of its sponsors\' good intentions." In this context, "temper" most nearly means:',
+            options: ['moderate', 'anger', 'heat-treat (as metal)', 'disposition'],
+            correctAnswer: 0,
+            explanation: 'She is softening her criticism by also praising intentions. "Moderate"—to reduce the intensity of—fits perfectly. "Temper" meaning anger or heat-treating metal doesn\'t fit this context.'
+          },
           {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
+            question: '"The artist\'s PEDESTRIAN approach to the landscape disappointed critics who expected innovation." "Pedestrian" most nearly means:',
+            options: ['unimaginative and dull', 'walking on foot', 'related to foot traffic', 'methodical and thorough'],
+            correctAnswer: 0,
+            explanation: 'Critics expected innovation but were disappointed—so the approach was the opposite of innovative. "Pedestrian" meaning "ordinary, unimaginative" fits. The literal meaning (walking) is the trap.'
+          },
+          {
+            question: 'When you encounter a vocabulary-in-context question, the FIRST thing you should do is:',
+            options: ['Reread the sentence and predict a synonym BEFORE looking at the choices', 'Look at all four choices and pick the most common definition', 'Think about how you personally use the word', 'Choose the most sophisticated-sounding option'],
+            correctAnswer: 0,
+            explanation: 'Predicting before looking prevents you from being attracted to trap answers. Your prediction based on context will almost always match the correct choice.'
           }
         ]
       }
     }
   ]
-}
+};

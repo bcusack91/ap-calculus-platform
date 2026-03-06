@@ -2,82 +2,50 @@ export const satProbSolvDataPart3Data = {
   topicSlug: 'sat-problem-solving-data-sat',
   sections: [
     {
-      id: 'sat-prob-p3-intro',
+      id: 'psd3-intro',
       type: 'text' as const,
-      content: `
-# 🔢 Probability Basics
+      content: `# Two-Way Tables & Data Interpretation
 
-**Part 3 of 7 — Probability Basics**
+**Part 3 of 7 — Reading Tables and Finding Probabilities**
 
-Simple probability, two-way tables, conditional probability
+### Two-Way Tables
+These organize data by two categories. Example:
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+|  | Freshman | Sophomore | Total |
+|---|---|---|---|
+| Male | 120 | 100 | 220 |
+| Female | 130 | 150 | 280 |
+| Total | 250 | 250 | 500 |
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Conditional Probability from Tables
+"What fraction of sophomores are female?"
+- Look at the **Sophomore column**: 150 female out of 250 total = 150/250 = **3/5**
+
+### "Given that" = Restrict to a Subgroup
+"Given that a student is male, what is the probability they are a freshman?"
+- Restrict to Male row: 120 freshman out of 220 male = 120/220 = **6/11**
+
+### Marginal vs. Conditional
+- **Marginal**: P(Female) = 280/500 — uses the grand total
+- **Conditional**: P(Female | Sophomore) = 150/250 — uses a column/row total
+
+### Association vs. Independence
+Two variables are **independent** if knowing one doesn't change the probability of the other.
+- If P(Female) = P(Female | Sophomore), gender and class year are independent
+- If those probabilities differ, there's an association`
     },
     {
-      id: 'sat-prob-p3-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-prob-p3-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-prob-p3-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'psd3-q1',
+      type: 'quiz' as const,
+      question: 'Using the table: 120 male freshmen, 100 male sophomores, 130 female freshmen, 150 female sophomores (500 total). What is P(Freshman | Female)?',
+      options: [
+        '120/500',
+        '130/500',
+        '130/280',
+        '250/500'
+      ],
+      correctAnswer: 2,
+      explanation: '"Given Female" means restrict to the Female row (total 280). Female freshmen = 130. So P(Freshman | Female) = 130/280 = 13/28.'
     }
   ]
-}
+};

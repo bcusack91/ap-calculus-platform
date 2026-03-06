@@ -2,82 +2,70 @@ export const satPolynomialsPart7Data = {
   topicSlug: 'sat-polynomials-factoring-sat',
   sections: [
     {
-      id: 'sat-poly-p7-intro',
+      id: 'pf7-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Review & Mixed Practice
+      content: `# Polynomials & Factoring
 
-**Part 7 of 7 — Review & Mixed Practice**
+**Part 7 of 7 — Review & Advanced SAT Problems**
 
-Mixed factoring and polynomial problems
+### Factoring Decision Tree
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+1. **GCF?** Always check first
+2. **Two terms?** → Difference of squares ($a^2 - b^2$) or sum/difference of cubes
+3. **Three terms?** → Trinomial factoring or completing the square
+4. **Four terms?** → Factor by grouping
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Factor by Grouping
+
+$x^3 + 3x^2 + 2x + 6$:
+- Group: $(x^3 + 3x^2) + (2x + 6)$
+- Factor each group: $x^2(x + 3) + 2(x + 3)$
+- Factor the common binomial: $(x^2 + 2)(x + 3)$
+
+### Special SAT Pattern: Disguised Quadratics
+
+$x^4 - 5x^2 + 4$: let $u = x^2$:
+
+$u^2 - 5u + 4 = (u - 1)(u - 4) = (x^2 - 1)(x^2 - 4) = (x+1)(x-1)(x+2)(x-2)$
+
+This technique works whenever you see $ax^{2n} + bx^n + c$.`
     },
     {
-      id: 'sat-poly-p7-check',
+      id: 'pf7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
+      content: '**Advanced Factoring** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
+            question: 'Factor completely: $x^4 - 16$',
+            options: ['$(x^2 + 4)(x + 2)(x - 2)$', '$(x^2 + 4)(x^2 - 4)$', '$(x + 2)^2(x - 2)^2$', '$(x^2 - 4)^2$'],
+            correctAnswer: 0,
+            explanation: '$x^4 - 16 = (x^2)^2 - 4^2 = (x^2 + 4)(x^2 - 4) = (x^2 + 4)(x+2)(x-2)$. Note: $x^2 + 4$ cannot be factored further over the reals.'
+          },
+          {
+            question: 'If $x^2 + y^2 = 25$ and $xy = 12$, what is $(x + y)^2$?',
+            options: ['$49$', '$37$', '$25$', '$61$'],
+            correctAnswer: 0,
+            explanation: '$(x+y)^2 = x^2 + 2xy + y^2 = (x^2 + y^2) + 2xy = 25 + 24 = 49$. Classic algebraic identity application.'
+          },
+          {
+            question: 'Factor by grouping: $x^3 - 2x^2 + 5x - 10$',
+            options: ['$(x^2 + 5)(x - 2)$', '$(x^2 - 5)(x + 2)$', '$(x^2 + 2)(x - 5)$', '$(x^2 - 2)(x + 5)$'],
+            correctAnswer: 0,
+            explanation: 'Group: $(x^3 - 2x^2) + (5x - 10) = x^2(x - 2) + 5(x - 2) = (x^2 + 5)(x - 2)$.'
           }
         ]
       }
     },
     {
-      id: 'sat-poly-p7-detail',
+      id: 'pf7-summary',
       type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
+      content: `### Key Takeaways — Part 7
 
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-poly-p7-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+- Follow the factoring decision tree: GCF → pattern recognition → grouping
+- Factor by grouping: split into pairs, factor each, extract common binomial
+- Disguised quadratics: substitute $u = x^n$ to reveal the pattern
+- Know the identity $(x+y)^2 = x^2 + 2xy + y^2$ — it appears on the SAT frequently`
     }
   ]
-}
+};

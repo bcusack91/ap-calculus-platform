@@ -2,82 +2,50 @@ export const satProbSolvDataPart5Data = {
   topicSlug: 'sat-problem-solving-data-sat',
   sections: [
     {
-      id: 'sat-prob-p5-intro',
+      id: 'psd5-intro',
       type: 'text' as const,
-      content: `
-# 💡 Percent & Proportion in Data
+      content: `# Scatterplots & Line of Best Fit
 
-**Part 5 of 7 — Percent & Proportion in Data**
+**Part 5 of 7 — Interpreting Trends and Making Predictions**
 
-Calculating percentages from data, margin of error concepts
+### Reading Scatterplots
+- **Positive association**: as x increases, y increases (upward trend)
+- **Negative association**: as x increases, y decreases (downward trend)
+- **No association**: no visible pattern
 
-This section builds on the foundations from previous parts. Understanding these concepts is essential for SAT success.
+### Line/Curve of Best Fit
+The line that minimizes the total distance from all points. Key interpretations:
+- **Slope** = rate of change (For each 1-unit increase in x, y changes by [slope])
+- **y-intercept** = predicted y-value when x = 0
 
-**Key Concepts in This Section:**
-- Core principles and definitions
-- Step-by-step problem-solving methods
-- Common SAT question patterns
-- Strategic tips for test day
-      `
+### Making Predictions
+Use the equation to predict values:
+- If y = 2.3x + 15 models study hours vs. test score:
+- 10 hours → predicted score: 2.3(10) + 15 = **38**
+
+### Interpolation vs. Extrapolation
+- **Interpolation** (within data range): reliable predictions
+- **Extrapolation** (beyond data range): unreliable — the trend may not continue
+
+### Residuals
+Residual = actual – predicted
+- **Positive residual**: actual is above the line
+- **Negative residual**: actual is below the line
+- Random residuals → good model
+- Patterned residuals (curved) → wrong model type`
     },
     {
-      id: 'sat-prob-p5-check',
-      type: 'multiple-choice' as const,
-      content: `
-**Quick Check** 🔍
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Based on the concepts in this section, which approach is most effective?',
-            options: [
-              'Memorize formulas without understanding when to apply them',
-              'Understand the underlying concepts and practice with varied problems',
-              'Only practice problems you find easy to build confidence',
-              'Skip practice and rely on intuition during the test'
-            ],
-            correctAnswer: 1,
-            explanation: 'Understanding concepts deeply and practicing with varied problems leads to the strongest SAT performance. Memorization alone fails when problems are presented in unfamiliar contexts.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'sat-prob-p5-detail',
-      type: 'text' as const,
-      content: `
-**Detailed Concepts & Examples**
-
-This topic requires careful attention to detail. On the SAT, questions in this area test your ability to:
-
-1. **Identify** the type of problem quickly
-2. **Apply** the correct method systematically
-3. **Verify** your answer makes sense in context
-
-Work through each example carefully before attempting the practice problems below.
-      `
-    },
-    {
-      id: 'sat-prob-p5-practice',
-      type: 'multiple-choice' as const,
-      content: `
-**SAT-Style Questions** 📋
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When approaching an unfamiliar problem on the SAT, what is the best first step?',
-            options: [
-              'Guess and move on quickly',
-              'Identify what the question is actually asking for',
-              'Try every formula you know until one works',
-              'Skip it permanently'
-            ],
-            correctAnswer: 1,
-            explanation: 'Always start by identifying what the question asks. Many SAT mistakes come from solving for the wrong variable or misreading what\'s being requested.'
-          }
-        ]
-      }
+      id: 'psd5-q1',
+      type: 'quiz' as const,
+      question: 'A scatterplot shows hours studied (x) vs. test score (y) with line of best fit y = 5.2x + 42. A student who studied 8 hours scored 90. What is the residual?',
+      options: [
+        '6.4',
+        '-6.4',
+        '48',
+        '83.6'
+      ],
+      correctAnswer: 0,
+      explanation: 'Predicted score = 5.2(8) + 42 = 41.6 + 42 = 83.6. Actual score = 90. Residual = actual − predicted = 90 − 83.6 = 6.4. Positive residual means the student scored above the predicted value.'
     }
   ]
-}
+};

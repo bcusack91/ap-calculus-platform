@@ -8,6 +8,7 @@ import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import 'katex/dist/katex.min.css'
 import { formatFlashcardContent } from '@/lib/format-flashcard-content'
+import { InArticleAd } from '@/components/ad-banner'
 
 interface Flashcard {
   id: string
@@ -328,6 +329,11 @@ export default function FlashcardStudyPage() {
                 </div>
               </div>
             )}
+
+            {/* Ad between flashcard completion and navigation */}
+            <div className="my-6">
+              <InArticleAd />
+            </div>
 
             {/* Quick Navigation */}
             <div className="mt-8 bg-gradient-to-br from-purple-50 to-blue-50 border-2 border-purple-200 rounded-lg p-6">

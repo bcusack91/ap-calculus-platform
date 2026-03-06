@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef, Suspense } from 'react'
 import Link from 'next/link'
 import { useSearchParams, useRouter } from 'next/navigation'
+import { InArticleAd } from '@/components/ad-banner'
 
 interface SearchResult {
   type: 'course' | 'category' | 'topic'
@@ -275,6 +276,13 @@ function SearchContent() {
                   </Link>
                 ))}
               </div>
+            </div>
+          )}
+
+          {/* Ad after search results */}
+          {searched && results.length > 0 && (
+            <div className="mt-6">
+              <InArticleAd />
             </div>
           )}
 
