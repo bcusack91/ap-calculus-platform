@@ -13,6 +13,7 @@ const footerLinks = {
   'Features': [
     { name: 'Study Notes', href: '/topics' },
     { name: 'Flashcards', href: '/flashcards' },
+    { name: 'AP Chem Diagnostic', href: '/ap-chem-diagnostic' },
     { name: 'Competitive Mode', href: '/competitive' },
     { name: 'Leaderboard', href: '/leaderboard' },
     { name: 'Search', href: '/search' },

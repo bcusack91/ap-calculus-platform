@@ -91,6 +91,12 @@ export default function DashboardPage() {
   const [achievements, setAchievements] = useState<AchievementData[]>([])
   const [achievementStats, setAchievementStats] = useState({ unlocked: 0, total: 0 })
   const [newAchievements, setNewAchievements] = useState<string[]>([])
+  const [apChemDiagnostic, setApChemDiagnostic] = useState<{
+    estimatedAPScore?: number
+    percentage?: number
+    form?: string
+    recommendedTopics?: { slug: string; name: string; priority: string }[]
+  } | null>(null)
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -143,6 +149,18 @@ export default function DashboardPage() {
         return
       }
     }
+
+    // Fetch AP Chem diagnostic recommendations
+    try {
+      const chemRes = await fetch('/api/ap-chem-diagnostic/history')
+      if (chemRes.ok) {
+        const chemData = await chemRes.json()
+        if (chemData.attempts?.length > 0) {
+          const latest = chemData.attempts[0].results as Record<string, unknown>
+          setApChemDiagnostic(latest)
+        }
+      }
+    } catch { /* silent */ }
 
     // Check for new achievements
     try {
@@ -452,6 +470,42 @@ export default function DashboardPage() {
 
             {/* Progress Charts */}
             <ProgressCharts />
+
+            {/* AP Chemistry Diagnostic Recommendations */}
+            {apChemDiagnostic?.recommendedTopics && apChemDiagnostic.recommendedTopics.length > 0 && (
+              <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-orange-300 dark:border-orange-700 p-6 shadow-sm">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="font-bold text-gray-900 dark:text-white">🧪 AP Chemistry Study Plan</h3>
+                  <Link href="/ap-chem-diagnostic" className="text-xs text-orange-600 hover:underline dark:text-orange-400">
+                    View Results →
+                  </Link>
+                </div>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+                  Based on your diagnostic (AP Score: {apChemDiagnostic.estimatedAPScore}/5, {apChemDiagnostic.percentage}%) — review these modules:
+                </p>
+                <div className="space-y-2">
+                  {apChemDiagnostic.recommendedTopics.map((topic, i) => (
+                    <Link
+                      key={topic.slug}
+                      href={`/topics/${topic.slug}`}
+                      className="flex items-center justify-between rounded-lg border border-orange-200 dark:border-orange-700 bg-orange-50 dark:bg-orange-900/20 px-4 py-2.5 hover:border-orange-400 transition-colors group"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900/50 text-xs font-bold text-orange-700 dark:text-orange-300">{i + 1}</span>
+                        <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-orange-700 dark:group-hover:text-orange-400">{topic.name}</span>
+                        <span className={`text-xs px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>
+                          {topic.priority === 'high' ? 'High' : 'Medium'}
+                        </span>
+                      </div>
+                      <span className="text-orange-500 group-hover:translate-x-1 transition-transform">→</span>
+                    </Link>
+                  ))}
+                </div>
+                <Link href="/ap-chem-diagnostic" className="mt-3 block text-center text-sm font-medium text-orange-600 hover:text-orange-700 dark:text-orange-400">
+                  Retake Diagnostic →
+                </Link>
+              </div>
+            )}
 
             {/* Study Planner */}
             <StudyPlanner />

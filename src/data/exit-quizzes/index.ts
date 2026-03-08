@@ -118,6 +118,60 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-sociology-mcat': () => import('./mcat-psychology-sociology'), // alias
   'mcat-science-passage-strategy-mcat': () => import('./mcat-psychology-sociology'), // alias
   'mcat-test-day-strategy-mcat': () => import('./mcat-psychology-sociology'), // alias
+
+  // ═══════════════════════════════════════════════════
+  // AP Chemistry Exit Quizzes
+  // ═══════════════════════════════════════════════════
+  'ap-chemistry': () => import('./ap-chemistry'),
+  // Atomic Structure & Properties
+  'moles-molar-mass': () => import('./ap-chemistry'),
+  'electron-configuration': () => import('./ap-chemistry'),
+  'periodic-trends': () => import('./ap-chemistry'),
+  'photoelectron-spectroscopy': () => import('./ap-chemistry'),
+  // Molecular & Ionic Compound Structure
+  'types-of-chemical-bonds': () => import('./ap-chemistry'),
+  'lewis-structures-formal-charge': () => import('./ap-chemistry'),
+  'vsepr-molecular-geometry': () => import('./ap-chemistry'),
+  'hybridization-sigma-pi-bonds': () => import('./ap-chemistry'),
+  // Intermolecular Forces
+  'types-intermolecular-forces': () => import('./ap-chemistry'),
+  'properties-states-matter': () => import('./ap-chemistry'),
+  'solutions-solubility': () => import('./ap-chemistry'),
+  'ideal-gas-law': () => import('./ap-chemistry'),
+  'mixtures-separations': () => import('./ap-chemistry'),
+  // Chemical Reactions
+  'reaction-types': () => import('./ap-chemistry'),
+  'stoichiometry-limiting-reactants': () => import('./ap-chemistry'),
+  'net-ionic-equations': () => import('./ap-chemistry'),
+  'oxidation-reduction-reactions': () => import('./ap-chemistry'),
+  // Kinetics
+  'reaction-rates-and-rate-laws': () => import('./ap-chemistry'),
+  'integrated-rate-laws': () => import('./ap-chemistry'),
+  'activation-energy-arrhenius': () => import('./ap-chemistry'),
+  'reaction-mechanisms': () => import('./ap-chemistry'),
+  // Thermodynamics
+  'enthalpy-calorimetry': () => import('./ap-chemistry'),
+  'entropy-second-law': () => import('./ap-chemistry'),
+  'gibbs-free-energy': () => import('./ap-chemistry'),
+  // Equilibrium
+  'equilibrium-constants-expressions': () => import('./ap-chemistry'),
+  'le-chatelier-equilibrium-shifts': () => import('./ap-chemistry'),
+  'intro-equilibrium': () => import('./ap-chemistry'),
+  'reaction-quotient-le-chatelier': () => import('./ap-chemistry'),
+  'ice-tables-calculations': () => import('./ap-chemistry'),
+  'solubility-ksp': () => import('./ap-chemistry'),
+  // Acids & Bases
+  'acid-base-theories-ph': () => import('./ap-chemistry'),
+  'weak-acids-bases-ka-kb': () => import('./ap-chemistry'),
+  'buffer-solutions-henderson-hasselbalch': () => import('./ap-chemistry'),
+  'acid-base-titrations': () => import('./ap-chemistry'),
+  // Electrochemistry
+  'galvanic-cells-potentials': () => import('./ap-chemistry'),
+  'nernst-equation-concentration': () => import('./ap-chemistry'),
+  'electrolytic-cells-faraday': () => import('./ap-chemistry'),
+  // Thermo Applications
+  'spontaneity-free-energy-applications': () => import('./ap-chemistry'),
+  'galvanic-cells-thermo-applications': () => import('./ap-chemistry'),
 }
 
 /**
