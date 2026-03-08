@@ -249,6 +249,50 @@ export default async function CoursePage({ params }: CoursePageProps) {
           </div>
         )}
 
+        {/* AP Calculus AB Diagnostic CTA */}
+        {slug === 'ap-calculus-ab' && (
+          <div className="rounded-2xl border-2 border-purple-300 dark:border-purple-700 bg-gradient-to-r from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-8 mb-12 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                  ∫ Not sure where to start?
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Take a diagnostic test covering all 7 AP Calculus AB units. Get a personalized study plan with 3-5 modules to focus on.
+                </p>
+              </div>
+              <Link
+                href="/calcab-diagnostic"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-gradient-to-r from-purple-600 to-violet-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+              >
+                Take Diagnostic Test →
+              </Link>
+            </div>
+          </div>
+        )}
+
+        {/* AP Calculus BC Diagnostic CTA */}
+        {slug === 'ap-calculus-bc' && (
+          <div className="rounded-2xl border-2 border-violet-300 dark:border-violet-700 bg-gradient-to-r from-violet-50 to-purple-50 dark:from-violet-900/20 dark:to-purple-900/20 p-8 mb-12 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                  ∬ Not sure where to start?
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Take a diagnostic test covering AB foundations and BC-exclusive content. Get your BC score, AB subscore, and a personalized study plan.
+                </p>
+              </div>
+              <Link
+                href="/calcbc-diagnostic"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+              >
+                Take Diagnostic Test →
+              </Link>
+            </div>
+          </div>
+        )}
+
         {/* Ad placement after course overview */}
         <InArticleAd />
 

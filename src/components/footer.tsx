@@ -14,6 +14,8 @@ const footerLinks = {
     { name: 'Study Notes', href: '/topics' },
     { name: 'Flashcards', href: '/flashcards' },
     { name: 'AP Chem Diagnostic', href: '/ap-chem-diagnostic' },
+    { name: 'Calc AB Diagnostic', href: '/calcab-diagnostic' },
+    { name: 'Calc BC Diagnostic', href: '/calcbc-diagnostic' },
     { name: 'Competitive Mode', href: '/competitive' },
     { name: 'Leaderboard', href: '/leaderboard' },
     { name: 'Search', href: '/search' },

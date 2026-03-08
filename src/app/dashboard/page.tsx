@@ -97,6 +97,19 @@ export default function DashboardPage() {
     form?: string
     recommendedTopics?: { slug: string; name: string; priority: string }[]
   } | null>(null)
+  const [calcABDiagnostic, setCalcABDiagnostic] = useState<{
+    estimatedAPScore?: number
+    percentage?: number
+    form?: string
+    recommendedTopics?: { slug: string; name: string; priority: string }[]
+  } | null>(null)
+  const [calcBCDiagnostic, setCalcBCDiagnostic] = useState<{
+    estimatedAPScore?: number
+    percentage?: number
+    abSubscore?: number
+    form?: string
+    recommendedTopics?: { slug: string; name: string; priority: string }[]
+  } | null>(null)
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -158,6 +171,30 @@ export default function DashboardPage() {
         if (chemData.attempts?.length > 0) {
           const latest = chemData.attempts[0].results as Record<string, unknown>
           setApChemDiagnostic(latest)
+        }
+      }
+    } catch { /* silent */ }
+
+    // Fetch AP Calculus AB diagnostic recommendations
+    try {
+      const abRes = await fetch('/api/calcab-diagnostic/history')
+      if (abRes.ok) {
+        const abData = await abRes.json()
+        if (abData.attempts?.length > 0) {
+          const latest = abData.attempts[0].results as Record<string, unknown>
+          setCalcABDiagnostic(latest)
+        }
+      }
+    } catch { /* silent */ }
+
+    // Fetch AP Calculus BC diagnostic recommendations
+    try {
+      const bcRes = await fetch('/api/calcbc-diagnostic/history')
+      if (bcRes.ok) {
+        const bcData = await bcRes.json()
+        if (bcData.attempts?.length > 0) {
+          const latest = bcData.attempts[0].results as Record<string, unknown>
+          setCalcBCDiagnostic(latest)
         }
       }
     } catch { /* silent */ }
@@ -502,6 +539,78 @@ export default function DashboardPage() {
                   ))}
                 </div>
                 <Link href="/ap-chem-diagnostic" className="mt-3 block text-center text-sm font-medium text-orange-600 hover:text-orange-700 dark:text-orange-400">
+                  Retake Diagnostic →
+                </Link>
+              </div>
+            )}
+
+            {/* AP Calculus AB Diagnostic Recommendations */}
+            {calcABDiagnostic?.recommendedTopics && calcABDiagnostic.recommendedTopics.length > 0 && (
+              <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-purple-300 dark:border-purple-700 p-6 shadow-sm">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="font-bold text-gray-900 dark:text-white">∫ AP Calculus AB Study Plan</h3>
+                  <Link href="/calcab-diagnostic" className="text-xs text-purple-600 hover:underline dark:text-purple-400">
+                    View Results →
+                  </Link>
+                </div>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+                  Based on your diagnostic (AP Score: {calcABDiagnostic.estimatedAPScore}/5, {calcABDiagnostic.percentage}%) — review these modules:
+                </p>
+                <div className="space-y-2">
+                  {calcABDiagnostic.recommendedTopics.map((topic, i) => (
+                    <Link
+                      key={topic.slug}
+                      href={`/topics/${topic.slug}`}
+                      className="flex items-center justify-between rounded-lg border border-purple-200 dark:border-purple-700 bg-purple-50 dark:bg-purple-900/20 px-4 py-2.5 hover:border-purple-400 transition-colors group"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/50 text-xs font-bold text-purple-700 dark:text-purple-300">{i + 1}</span>
+                        <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-purple-700 dark:group-hover:text-purple-400">{topic.name}</span>
+                        <span className={`text-xs px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>
+                          {topic.priority === 'high' ? 'High' : 'Medium'}
+                        </span>
+                      </div>
+                      <span className="text-purple-500 group-hover:translate-x-1 transition-transform">→</span>
+                    </Link>
+                  ))}
+                </div>
+                <Link href="/calcab-diagnostic" className="mt-3 block text-center text-sm font-medium text-purple-600 hover:text-purple-700 dark:text-purple-400">
+                  Retake Diagnostic →
+                </Link>
+              </div>
+            )}
+
+            {/* AP Calculus BC Diagnostic Recommendations */}
+            {calcBCDiagnostic?.recommendedTopics && calcBCDiagnostic.recommendedTopics.length > 0 && (
+              <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-violet-300 dark:border-violet-700 p-6 shadow-sm">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="font-bold text-gray-900 dark:text-white">∬ AP Calculus BC Study Plan</h3>
+                  <Link href="/calcbc-diagnostic" className="text-xs text-violet-600 hover:underline dark:text-violet-400">
+                    View Results →
+                  </Link>
+                </div>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+                  Based on your diagnostic (BC: {calcBCDiagnostic.estimatedAPScore}/5, AB Subscore: {calcBCDiagnostic.abSubscore}/5, {calcBCDiagnostic.percentage}%) — review these modules:
+                </p>
+                <div className="space-y-2">
+                  {calcBCDiagnostic.recommendedTopics.map((topic, i) => (
+                    <Link
+                      key={topic.slug}
+                      href={`/topics/${topic.slug}`}
+                      className="flex items-center justify-between rounded-lg border border-violet-200 dark:border-violet-700 bg-violet-50 dark:bg-violet-900/20 px-4 py-2.5 hover:border-violet-400 transition-colors group"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-violet-100 dark:bg-violet-900/50 text-xs font-bold text-violet-700 dark:text-violet-300">{i + 1}</span>
+                        <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-violet-700 dark:group-hover:text-violet-400">{topic.name}</span>
+                        <span className={`text-xs px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>
+                          {topic.priority === 'high' ? 'High' : 'Medium'}
+                        </span>
+                      </div>
+                      <span className="text-violet-500 group-hover:translate-x-1 transition-transform">→</span>
+                    </Link>
+                  ))}
+                </div>
+                <Link href="/calcbc-diagnostic" className="mt-3 block text-center text-sm font-medium text-violet-600 hover:text-violet-700 dark:text-violet-400">
                   Retake Diagnostic →
                 </Link>
               </div>

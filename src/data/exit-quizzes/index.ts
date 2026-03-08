@@ -172,6 +172,58 @@ const quizLoaders: Record<string, QuizLoader> = {
   // Thermo Applications
   'spontaneity-free-energy-applications': () => import('./ap-chemistry'),
   'galvanic-cells-thermo-applications': () => import('./ap-chemistry'),
+
+  // ═══════════════════════════════════════════════════
+  // AP Calculus AB Exit Quizzes
+  // ═══════════════════════════════════════════════════
+  'ap-calculus-ab': () => import('./ap-calculus-ab'),
+  'limits-continuity-calcab': () => import('./ap-calculus-ab'),
+  'definition-of-derivative-calcab': () => import('./ap-calculus-ab'),
+  'basic-differentiation-rules-calcab': () => import('./ap-calculus-ab'),
+  'chain-rule-calcab': () => import('./ap-calculus-ab'),
+  'inverse-functions-derivatives-calcab': () => import('./ap-calculus-ab'),
+  'applications-of-derivatives-calcab': () => import('./ap-calculus-ab'),
+  'optimization-calcab': () => import('./ap-calculus-ab'),
+  'linearization-differentials-calcab': () => import('./ap-calculus-ab'),
+  'theorem-applications-calcab': () => import('./ap-calculus-ab'),
+  'particle-motion-calcab': () => import('./ap-calculus-ab'),
+  'definite-integrals-calcab': () => import('./ap-calculus-ab'),
+  'antiderivatives-indefinite-integrals-calcab': () => import('./ap-calculus-ab'),
+  'u-substitution-calcab': () => import('./ap-calculus-ab'),
+  'accumulation-functions-calcab': () => import('./ap-calculus-ab'),
+  'area-between-curves-calcab': () => import('./ap-calculus-ab'),
+  'volumes-of-revolution-calcab': () => import('./ap-calculus-ab'),
+  'integration-applications-calcab': () => import('./ap-calculus-ab'),
+  'differential-equations-calcab': () => import('./ap-calculus-ab'),
+  'exponential-models-calcab': () => import('./ap-calculus-ab'),
+  'tables-data-calcab': () => import('./ap-calculus-ab'),
+  'free-response-strategies-calcab': () => import('./ap-calculus-ab'),
+  'ap-exam-review-calcab': () => import('./ap-calculus-ab'),
+
+  // ═══════════════════════════════════════════════════
+  // AP Calculus BC Exit Quizzes
+  // ═══════════════════════════════════════════════════
+  'ap-calculus-bc': () => import('./ap-calculus-bc'),
+  'integration-by-parts-calcbc': () => import('./ap-calculus-bc'),
+  'partial-fractions-calcbc': () => import('./ap-calculus-bc'),
+  'improper-integrals-calcbc': () => import('./ap-calculus-bc'),
+  'advanced-integration-calcbc': () => import('./ap-calculus-bc'),
+  'parametric-curves-calculus-calcbc': () => import('./ap-calculus-bc'),
+  'polar-calculus-calcbc': () => import('./ap-calculus-bc'),
+  'vector-valued-functions-calcbc': () => import('./ap-calculus-bc'),
+  'arc-length-surface-area-calcbc': () => import('./ap-calculus-bc'),
+  'infinite-sequences-calcbc': () => import('./ap-calculus-bc'),
+  'infinite-series-calcbc': () => import('./ap-calculus-bc'),
+  'convergence-tests-summary-calcbc': () => import('./ap-calculus-bc'),
+  'alternating-series-calcbc': () => import('./ap-calculus-bc'),
+  'power-series-calcbc': () => import('./ap-calculus-bc'),
+  'taylor-maclaurin-series-calcbc': () => import('./ap-calculus-bc'),
+  'lagrange-error-bound-calcbc': () => import('./ap-calculus-bc'),
+  'series-applications-calcbc': () => import('./ap-calculus-bc'),
+  'euler-method-advanced-calcbc': () => import('./ap-calculus-bc'),
+  'logistic-models-calcbc': () => import('./ap-calculus-bc'),
+  'bc-exam-strategies-calcbc': () => import('./ap-calculus-bc'),
+  'review-connections-calcbc': () => import('./ap-calculus-bc'),
 }
 
 /**
