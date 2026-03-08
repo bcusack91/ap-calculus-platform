@@ -9,8 +9,8 @@
  * both AB-foundational and BC-exclusive domains.
  */
 
-import { calcABQuestionPool, type CalcABQuestion } from '../exit-quizzes/ap-calculus-ab'
-import { calcBCQuestionPool, type CalcBCQuestion } from '../exit-quizzes/ap-calculus-bc'
+import { calcABQuestionPool, type CalcABQuestion } from './exit-quizzes/ap-calculus-ab'
+import { calcBCQuestionPool, type CalcBCQuestion } from './exit-quizzes/ap-calculus-bc'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */

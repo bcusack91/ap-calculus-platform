@@ -6,7 +6,7 @@
  * 3-5 specific topic slugs the student should review.
  */
 
-import { apChemQuestionPool, type APChemQuestion } from '../exit-quizzes/ap-chemistry'
+import { apChemQuestionPool, type APChemQuestion } from './exit-quizzes/ap-chemistry'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */

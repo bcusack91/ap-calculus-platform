@@ -458,17 +458,11 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
 ]
 
 /** Generate an exit quiz for a specific BC topic (used by exit quiz system) */
-export function generateExitQuiz(topicSlug: string) {
-  const questions = calcBCQuestionPool
-    .filter(q => q.topicSlug === topicSlug)
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 5)
-    .map(q => ({
-      question: q.question,
-      options: q.options,
-      correctAnswer: q.correctAnswer,
-      explanation: q.explanation,
-    }))
-
-  return { topicSlug, questions }
+export function generateExitQuiz(count = 10, topicSlug?: string): CalcBCQuestion[] {
+  let pool = calcBCQuestionPool
+  if (topicSlug) {
+    const filtered = pool.filter(q => q.topicSlug === topicSlug)
+    pool = filtered.length > 0 ? filtered : pool
+  }
+  return [...pool].sort(() => Math.random() - 0.5).slice(0, count)
 }

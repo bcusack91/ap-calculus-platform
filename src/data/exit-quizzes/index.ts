@@ -12,7 +12,8 @@ import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 /*  Lazy loader map — each entry dynamically imports its quiz file     */
 /* ------------------------------------------------------------------ */
 
-type QuizLoader = () => Promise<{ generateExitQuiz: (count?: number, topicSlug?: string) => ExitQuizQuestion[] }>
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type QuizLoader = () => Promise<{ generateExitQuiz: (count?: number, topicSlug?: string) => any[] }>
 
 const quizLoaders: Record<string, QuizLoader> = {
   // Original math

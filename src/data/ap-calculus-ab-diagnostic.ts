@@ -6,7 +6,7 @@
  * 3-5 specific topic slugs the student should review.
  */
 
-import { calcABQuestionPool, type CalcABQuestion } from '../exit-quizzes/ap-calculus-ab'
+import { calcABQuestionPool, type CalcABQuestion } from './exit-quizzes/ap-calculus-ab'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */

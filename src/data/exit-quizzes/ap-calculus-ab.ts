@@ -526,17 +526,11 @@ export const calcABQuestionPool: CalcABQuestion[] = [
 ]
 
 /** Generate an exit quiz for a specific AB topic (used by exit quiz system) */
-export function generateExitQuiz(topicSlug: string) {
-  const questions = calcABQuestionPool
-    .filter(q => q.topicSlug === topicSlug)
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 5)
-    .map(q => ({
-      question: q.question,
-      options: q.options,
-      correctAnswer: q.correctAnswer,
-      explanation: q.explanation,
-    }))
-
-  return { topicSlug, questions }
+export function generateExitQuiz(count = 10, topicSlug?: string): CalcABQuestion[] {
+  let pool = calcABQuestionPool
+  if (topicSlug) {
+    const filtered = pool.filter(q => q.topicSlug === topicSlug)
+    pool = filtered.length > 0 ? filtered : pool
+  }
+  return [...pool].sort(() => Math.random() - 0.5).slice(0, count)
 }
