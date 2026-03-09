@@ -198,6 +198,24 @@ export async function GET() {
 
     const entry = user.matchmakingEntry
     if (!entry) {
+      // Queue entry may have been deleted by opponent's POST creating a match.
+      // Check if the user has an active match they should be redirected to.
+      const activeMatch = await prisma.competitiveMatch.findFirst({
+        where: {
+          status: 'IN_PROGRESS',
+          OR: [{ player1Id: user.id }, { player2Id: user.id }],
+        },
+        orderBy: { startedAt: 'desc' },
+        select: { id: true },
+      })
+
+      if (activeMatch) {
+        return NextResponse.json({
+          status: 'matched',
+          matchId: activeMatch.id,
+        })
+      }
+
       return NextResponse.json({ status: 'not_in_queue' })
     }
 
