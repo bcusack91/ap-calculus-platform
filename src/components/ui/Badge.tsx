@@ -14,7 +14,7 @@ const variantClasses: Record<BadgeVariant, string> = {
   warning: 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300',
   danger: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300',
   info: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300',
-  premium: 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300',
+  premium: 'bg-accent-light text-accent-dark dark:bg-accent-light dark:text-accent-muted',
 }
 
 export default function Badge({ children, variant = 'default', className = '' }: BadgeProps) {

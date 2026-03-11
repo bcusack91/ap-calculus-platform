@@ -3,8 +3,11 @@
 import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from 'react'
 import { useSession } from 'next-auth/react'
 
+export type ColorScheme = 'default' | 'ocean' | 'forest' | 'sunset' | 'rose'
+
 interface UserPreferences {
   theme: 'light' | 'dark' | 'system'
+  colorScheme: ColorScheme
   defaultCourse: string | null
   emailNotifications: boolean
   weeklyDigest: boolean
@@ -14,6 +17,7 @@ interface UserPreferences {
 
 const defaultPreferences: UserPreferences = {
   theme: 'system',
+  colorScheme: 'default',
   defaultCourse: null,
   emailNotifications: true,
   weeklyDigest: true,
@@ -70,6 +74,15 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
       })
       .catch(() => {/* use local */})
   }, [status])
+
+  // Apply color scheme to DOM whenever it changes
+  useEffect(() => {
+    if (preferences.colorScheme && preferences.colorScheme !== 'default') {
+      document.documentElement.setAttribute('data-scheme', preferences.colorScheme)
+    } else {
+      document.documentElement.removeAttribute('data-scheme')
+    }
+  }, [preferences.colorScheme])
 
   const updatePreference = useCallback(<K extends keyof UserPreferences>(key: K, value: UserPreferences[K]) => {
     setPreferences((prev) => {

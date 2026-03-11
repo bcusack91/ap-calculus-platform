@@ -19,9 +19,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.studymondo.com"),
-  title: "Study Mondo — Free AP Study Platform",
+  title: "Study Mondo — Free AP, SAT & MCAT Study Platform",
   description:
-    "Study Mondo offers free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology — created by educators to help you ace your exams.",
+    "Free notes, flashcards, practice problems & interactive lessons for AP Calculus, Physics, Chemistry, Biology, SAT, and MCAT — created by educators to help you ace your exams.",
   alternates: {
     canonical: "https://www.studymondo.com",
     languages: {
@@ -48,27 +48,18 @@ export const metadata: Metadata = {
     "free study resources",
   ],
   openGraph: {
-    title: "Study Mondo — Free AP Study Platform",
+    title: "Study Mondo — Free AP, SAT & MCAT Study Platform",
     description:
-      "Study Mondo offers free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology — created by educators to help you ace your exams.",
+      "Free notes, flashcards, practice problems & interactive lessons for AP Calculus, Physics, Chemistry, Biology, SAT, and MCAT — join thousands of students studying smarter.",
     url: "https://www.studymondo.com",
     siteName: "Study Mondo",
     type: "website",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Study Mondo — Free AP Study Platform",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Study Mondo — Free AP Study Platform",
+    title: "Study Mondo — Free AP, SAT & MCAT Study Platform",
     description:
-      "Free notes, flashcards, and practice problems for AP Calculus, Physics, Chemistry, and Biology.",
-    images: ["/og-image.png"],
+      "Free notes, flashcards, practice problems & interactive lessons — 100% free. Join thousands of students studying smarter.",
   },
   icons: {
     icon: [
@@ -104,7 +95,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd()) }}
         />
-        {/* Prevent flash of wrong theme */}
+        {/* Prevent flash of wrong theme / color scheme */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -114,6 +105,13 @@ export default function RootLayout({
                   var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
                   if (saved === 'dark' || (!saved && prefersDark)) {
                     document.documentElement.classList.add('dark');
+                  }
+                  var prefs = localStorage.getItem('user-preferences');
+                  if (prefs) {
+                    var p = JSON.parse(prefs);
+                    if (p.colorScheme && p.colorScheme !== 'default') {
+                      document.documentElement.setAttribute('data-scheme', p.colorScheme);
+                    }
                   }
                 } catch(e) {}
               })();
@@ -141,7 +139,7 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col">
             <a
               href="#main-content"
-              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-purple-600 focus:text-white focus:rounded"
+              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent focus:text-accent-foreground focus:rounded"
             >
               Skip to content
             </a>

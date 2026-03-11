@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import AvatarBuilder from '@/components/AvatarBuilder';
+import ColorSchemeSelector from '@/components/ColorSchemeSelector';
 import { AvatarData } from '@/types/avatar';
 
 export default function ProfilePage() {
@@ -59,9 +60,9 @@ export default function ProfilePage() {
 
   if (loading || status === 'loading') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-accent-light dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-accent mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400">Loading...</p>
         </div>
       </div>
@@ -69,7 +70,7 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-accent-light dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
@@ -77,7 +78,7 @@ export default function ProfilePage() {
             Profile Settings
           </h1>
           <p className="text-gray-600 dark:text-gray-400">
-            Customize your avatar and manage your account
+            Customize your avatar, color scheme, and manage your account
           </p>
         </div>
 
@@ -94,6 +95,11 @@ export default function ProfilePage() {
               <span className="font-medium text-gray-900 dark:text-white">{session?.user?.email || '—'}</span>
             </div>
           </div>
+        </div>
+
+        {/* Color Scheme */}
+        <div className="max-w-md mx-auto mb-8 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+          <ColorSchemeSelector />
         </div>
 
         {/* Success Message */}
@@ -114,7 +120,7 @@ export default function ProfilePage() {
         <div className="text-center mt-8">
           <button
             onClick={() => router.push('/dashboard')}
-            className="text-purple-600 dark:text-purple-400 hover:underline"
+            className="text-accent dark:text-accent-muted hover:underline"
           >
             ← Back to Dashboard
           </button>
