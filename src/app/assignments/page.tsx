@@ -150,7 +150,7 @@ export default function StudentAssignmentsPage() {
               ← Dashboard
             </Link>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">My Assignments</h1>
-            <p className="text-gray-500 mt-1">
+            <p className="text-gray-500 dark:text-gray-400 mt-1">
               {assignments.length === 0
                 ? 'No assignments yet'
                 : `${pendingCount} pending · ${completedCount} completed${overdueCount > 0 ? ` · ${overdueCount} overdue` : ''}`}
@@ -162,7 +162,7 @@ export default function StudentAssignmentsPage() {
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-12 text-center">
             <div className="text-5xl mb-4">📋</div>
             <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">No assignments yet</h2>
-            <p className="text-gray-500 mb-6">
+            <p className="text-gray-500 dark:text-gray-400 mb-6">
               {classrooms.length === 0
                 ? 'Join a classroom to receive assignments from your teacher.'
                 : 'Your teacher hasn\'t assigned anything yet. Check back later!'}
@@ -210,7 +210,7 @@ export default function StudentAssignmentsPage() {
             {/* Assignment List */}
             <div className="space-y-4">
               {filtered.length === 0 ? (
-                <div className="text-center py-12 text-gray-500">
+                <div className="text-center py-12 text-gray-500 dark:text-gray-400">
                   No assignments match the current filters.
                 </div>
               ) : (
@@ -236,7 +236,7 @@ export default function StudentAssignmentsPage() {
                               {a.description}
                             </p>
                           )}
-                          <div className="flex flex-wrap items-center gap-3 text-xs text-gray-400">
+                          <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
                             <span className="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
                               {typeInfo.label}
                             </span>

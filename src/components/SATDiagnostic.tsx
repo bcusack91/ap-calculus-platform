@@ -192,7 +192,7 @@ export default function DiagnosticTest({
           <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
             SAT Diagnostic
           </p>
-          <p className="text-xs text-gray-400 dark:text-gray-500">
+          <p className="text-xs text-gray-400 dark:text-gray-400">
             Question {currentIndex + 1} of {testData.totalQuestions} &middot; {answeredCount} answered
           </p>
         </div>
@@ -224,7 +224,7 @@ export default function DiagnosticTest({
             <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700 dark:bg-green-900/50 dark:text-green-300">
               Q{currentIndex + 1}
             </span>
-            <span className="text-xs text-gray-400 dark:text-gray-500">
+            <span className="text-xs text-gray-400 dark:text-gray-400">
               {currentQuestion.category}
             </span>
           </div>

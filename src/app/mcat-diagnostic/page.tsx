@@ -162,7 +162,7 @@ export default function MCATDiagnosticPage() {
                 </span>
                 <button
                   onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase('menu'); setTestData(null) }}
-                  className="text-sm text-gray-400 hover:text-red-500"
+                  className="text-sm text-gray-500 hover:text-red-500 dark:text-gray-400"
                 >
                   Exit
                 </button>
@@ -215,7 +215,7 @@ export default function MCATDiagnosticPage() {
               >
                 ← Previous
               </button>
-              <span className="text-xs text-gray-400">{answeredCount}/{testData.questions.length} answered</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">{answeredCount}/{testData.questions.length} answered</span>
               {currentIndex < testData.questions.length - 1 ? (
                 <button
                   onClick={() => setCurrentIndex(prev => prev + 1)}
@@ -255,21 +255,21 @@ export default function MCATDiagnosticPage() {
                 <p className="text-4xl font-black text-emerald-600 dark:text-emerald-400">
                   {results.estimatedScore}
                 </p>
-                <p className="text-xs text-gray-400">out of 528</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">out of 528</p>
               </div>
               <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
                 <p className="text-sm text-gray-500 dark:text-gray-400">Correct</p>
                 <p className="text-4xl font-black text-teal-600 dark:text-teal-400">
                   {results.totalCorrect}/{results.totalQuestions}
                 </p>
-                <p className="text-xs text-gray-400">{results.percentage}%</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">{results.percentage}%</p>
               </div>
               <div className="sm:col-span-2 lg:col-span-1 rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
                 <p className="text-sm text-gray-500 dark:text-gray-400">Performance</p>
                 <p className="text-4xl">
                   {results.percentage >= 80 ? '🎉' : results.percentage >= 60 ? '👍' : '📚'}
                 </p>
-                <p className="text-xs text-gray-400">
+                <p className="text-xs text-gray-500 dark:text-gray-400">
                   {results.percentage >= 80 ? 'Excellent' : results.percentage >= 60 ? 'Good' : 'Needs Review'}
                 </p>
               </div>
@@ -294,7 +294,7 @@ export default function MCATDiagnosticPage() {
                     <p className="text-2xl font-bold text-gray-900 dark:text-white">
                       {s.score}
                     </p>
-                    <p className="text-xs text-gray-400">out of 132</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">out of 132</p>
                   </div>
                 ))}
               </div>
@@ -420,7 +420,7 @@ export default function MCATDiagnosticPage() {
                   <p className="text-sm text-gray-600 dark:text-gray-400">
                     {String(lastResult.totalCorrect ?? '—')}/{String(lastResult.totalQuestions ?? '—')} correct
                   </p>
-                  <p className="text-xs text-gray-400 dark:text-gray-500">
+                  <p className="text-xs text-gray-400 dark:text-gray-400">
                     {new Date(history[0].createdAt).toLocaleDateString()}
                   </p>
                 </div>
@@ -485,7 +485,7 @@ export default function MCATDiagnosticPage() {
                       <span className="text-sm text-gray-700 dark:text-gray-300">
                         Score: {String(parsed.estimatedScore ?? '—')}
                       </span>
-                      <span className="text-xs text-gray-400 dark:text-gray-500">
+                      <span className="text-xs text-gray-400 dark:text-gray-400">
                         {new Date(h.createdAt).toLocaleDateString()}
                       </span>
                     </div>

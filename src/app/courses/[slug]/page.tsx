@@ -114,14 +114,14 @@ export default async function CoursePage({ params }: CoursePageProps) {
 
   // Map course colors to Tailwind classes
   const colorMap: Record<string, { bg: string; gradient: string }> = {
-    purple: { bg: 'from-purple-50 to-purple-100', gradient: 'from-purple-600 to-blue-600' },
-    blue: { bg: 'from-blue-50 to-blue-100', gradient: 'from-blue-600 to-cyan-600' },
-    green: { bg: 'from-green-50 to-green-100', gradient: 'from-green-600 to-emerald-600' },
-    teal: { bg: 'from-teal-50 to-teal-100', gradient: 'from-teal-600 to-cyan-600' },
-    indigo: { bg: 'from-indigo-50 to-indigo-100', gradient: 'from-indigo-600 to-purple-600' },
-    violet: { bg: 'from-violet-50 to-violet-100', gradient: 'from-violet-600 to-fuchsia-600' },
-    orange: { bg: 'from-orange-50 to-orange-100', gradient: 'from-orange-600 to-red-600' },
-    rose: { bg: 'from-rose-50 to-rose-100', gradient: 'from-rose-600 to-pink-600' },
+    purple: { bg: 'from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-800/30', gradient: 'from-purple-600 to-blue-600' },
+    blue: { bg: 'from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30', gradient: 'from-blue-600 to-cyan-600' },
+    green: { bg: 'from-green-50 to-green-100 dark:from-green-900/30 dark:to-green-800/30', gradient: 'from-green-600 to-emerald-600' },
+    teal: { bg: 'from-teal-50 to-teal-100 dark:from-teal-900/30 dark:to-teal-800/30', gradient: 'from-teal-600 to-cyan-600' },
+    indigo: { bg: 'from-indigo-50 to-indigo-100 dark:from-indigo-900/30 dark:to-indigo-800/30', gradient: 'from-indigo-600 to-purple-600' },
+    violet: { bg: 'from-violet-50 to-violet-100 dark:from-violet-900/30 dark:to-violet-800/30', gradient: 'from-violet-600 to-fuchsia-600' },
+    orange: { bg: 'from-orange-50 to-orange-100 dark:from-orange-900/30 dark:to-orange-800/30', gradient: 'from-orange-600 to-red-600' },
+    rose: { bg: 'from-rose-50 to-rose-100 dark:from-rose-900/30 dark:to-rose-800/30', gradient: 'from-rose-600 to-pink-600' },
   }
 
   const colors = colorMap[course.color || 'purple'] || colorMap.purple

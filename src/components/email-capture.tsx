@@ -111,7 +111,7 @@ export function EmailCapture({
             placeholder="you@example.com"
             required
             aria-describedby={errorMsg ? `email-error-${source}` : undefined}
-            className={`w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-500 dark:focus:ring-purple-800 ${compact ? 'mb-2' : 'mb-2 sm:mb-0 sm:flex-1'}`}
+            className={`w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:focus:ring-purple-800 ${compact ? 'mb-2' : 'mb-2 sm:mb-0 sm:flex-1'}`}
           />
           <button
             type="submit"
@@ -132,7 +132,7 @@ export function EmailCapture({
           </p>
         )}
 
-        <p className="text-xs text-gray-500 dark:text-gray-500">
+        <p className="text-xs text-gray-500 dark:text-gray-400">
           No spam, ever. Unsubscribe anytime.
         </p>
       </form>

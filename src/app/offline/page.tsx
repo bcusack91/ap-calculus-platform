@@ -28,7 +28,7 @@ export default function OfflinePage() {
             Go Home
           </Link>
         </div>
-        <p className="text-sm text-gray-500 dark:text-gray-500 mt-8">
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-8">
           Previously visited pages may still be available from cache.
         </p>
       </div>

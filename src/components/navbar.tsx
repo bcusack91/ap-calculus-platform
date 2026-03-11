@@ -178,7 +178,7 @@ export function Navbar() {
                     </Link>
                   ))}
                   {courses.length === 0 && (
-                    <div className="px-4 py-2 text-sm text-gray-500">Loading...</div>
+                    <div className="px-4 py-2 text-sm text-gray-500 dark:text-gray-400">Loading...</div>
                   )}
                 </div>
               )}

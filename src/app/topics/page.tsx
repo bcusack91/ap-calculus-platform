@@ -61,7 +61,7 @@ export default async function TopicsPage() {
                   <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                     {info.description}
                   </p>
-                  <p className="text-xs text-gray-500 dark:text-gray-500">
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
                     {course._count.categories} {course._count.categories === 1 ? 'category' : 'categories'}
                   </p>
                   <div className="mt-4 flex items-center text-sm font-semibold">

@@ -61,7 +61,7 @@ export default function CompetitiveUnitCircle({
         y2={center}
         stroke="currentColor"
         strokeWidth="2"
-        className="text-gray-400 dark:text-gray-500"
+        className="text-gray-400 dark:text-gray-400"
       />
       <line
         x1={center}
@@ -70,7 +70,7 @@ export default function CompetitiveUnitCircle({
         y2={center + radius + 20}
         stroke="currentColor"
         strokeWidth="2"
-        className="text-gray-400 dark:text-gray-500"
+        className="text-gray-400 dark:text-gray-400"
       />
 
       {/* Axis labels */}

@@ -106,7 +106,7 @@ export default function TeacherDashboard() {
   if (status === 'loading' || loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-2xl text-gray-500">Loading teacher dashboard...</div>
+        <div className="text-2xl text-gray-500 dark:text-gray-400">Loading teacher dashboard...</div>
       </div>
     )
   }
@@ -157,7 +157,7 @@ export default function TeacherDashboard() {
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-12 text-center">
               <div className="text-5xl mb-4">🏫</div>
               <h3 className="text-xl font-bold mb-2">No classrooms yet</h3>
-              <p className="text-gray-500 mb-6">Create your first classroom to start managing students and assignments.</p>
+              <p className="text-gray-500 dark:text-gray-400 mb-6">Create your first classroom to start managing students and assignments.</p>
               <button
                 onClick={() => setShowCreateModal(true)}
                 className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all"
@@ -203,7 +203,7 @@ export default function TeacherDashboard() {
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">📋 Upcoming Assignments</h2>
             {data.upcomingAssignments.length === 0 ? (
-              <p className="text-gray-500 text-center py-6">No upcoming assignments</p>
+              <p className="text-gray-500 dark:text-gray-400 text-center py-6">No upcoming assignments</p>
             ) : (
               <div className="space-y-3">
                 {data.upcomingAssignments.map((a) => (
@@ -218,7 +218,7 @@ export default function TeacherDashboard() {
                     <div className="flex justify-between items-start">
                       <div>
                         <h4 className="font-semibold text-gray-900 dark:text-white">{a.title}</h4>
-                        <p className="text-xs text-gray-500">{a.classroom}</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">{a.classroom}</p>
                       </div>
                       <span className="text-xs font-semibold text-green-600">
                         {a.completedCount}/{a.totalStudents} done
@@ -239,14 +239,14 @@ export default function TeacherDashboard() {
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
             <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">📝 Recent Submissions</h2>
             {data.recentSubmissions.length === 0 ? (
-              <p className="text-gray-500 text-center py-6">No submissions yet</p>
+              <p className="text-gray-500 dark:text-gray-400 text-center py-6">No submissions yet</p>
             ) : (
               <div className="space-y-3">
                 {data.recentSubmissions.slice(0, 8).map((s, i) => (
                   <div key={i} className="flex items-center justify-between p-3 rounded-xl bg-gray-50 dark:bg-gray-700/30">
                     <div>
                       <p className="font-medium text-sm text-gray-900 dark:text-white">{s.studentName}</p>
-                      <p className="text-xs text-gray-500">{s.assignmentTitle}</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">{s.assignmentTitle}</p>
                     </div>
                     <div className="text-right">
                       {s.score !== null && (
@@ -277,7 +277,7 @@ export default function TeacherDashboard() {
                   <div className="flex justify-between items-start">
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white">{c.title}</h4>
-                      <p className="text-xs text-gray-500">{c.classroom.name} • {c.topicSlug}</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">{c.classroom.name} • {c.topicSlug}</p>
                     </div>
                     <span className={`px-2 py-1 rounded-lg text-xs font-bold ${
                       c.status === 'ACTIVE' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'
@@ -285,7 +285,7 @@ export default function TeacherDashboard() {
                       {c.status}
                     </span>
                   </div>
-                  <p className="text-xs text-gray-500 mt-2">
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
                     {new Date(c.scheduledAt).toLocaleString()} — {new Date(c.endsAt).toLocaleString()}
                   </p>
                   <p className="text-xs text-gray-400 mt-1">{c._count.participants} participants</p>

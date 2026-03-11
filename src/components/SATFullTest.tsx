@@ -621,7 +621,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
           <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
             {currentSection.name}
           </p>
-          <p className="text-xs text-gray-400 dark:text-gray-500">
+          <p className="text-xs text-gray-400 dark:text-gray-400">
             Question {currentQuestionIndex + 1} of {currentSection.questionCount}
           </p>
         </div>
@@ -774,7 +774,7 @@ export default function SATFullTestComponent({ test, onComplete, onCancel }: SAT
             <span className="rounded-full bg-purple-100 px-3 py-1 text-xs font-semibold text-purple-700 dark:bg-purple-900/50 dark:text-purple-300">
               Q{currentQuestionIndex + 1}
             </span>
-            <span className="text-xs text-gray-400 dark:text-gray-500">
+            <span className="text-xs text-gray-400 dark:text-gray-400">
               {currentQuestion.category}
             </span>
           </div>
@@ -988,7 +988,7 @@ function SATResultsView({
           <p className={`text-6xl font-black ${scoreColor(results.totalScore)}`}>
             {results.totalScore}
           </p>
-          <p className="mt-1 text-sm text-gray-400">out of 1600</p>
+          <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">out of 1600</p>
         </div>
 
         {/* Score Breakdown */}

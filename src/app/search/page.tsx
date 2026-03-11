@@ -191,7 +191,7 @@ function SearchContent() {
                   <button
                     onMouseDown={(e) => e.preventDefault()}
                     onClick={() => { clearRecentSearches(); setRecentSearches([]) }}
-                    className="text-xs text-gray-400 hover:text-red-500 transition-colors"
+                    className="text-xs text-gray-500 hover:text-red-500 dark:text-gray-400 transition-colors"
                   >
                     Clear
                   </button>
@@ -219,7 +219,7 @@ function SearchContent() {
               <p className="text-sm text-gray-500 dark:text-gray-400 flex-1">
                 Found {results.length} result{results.length !== 1 ? 's' : ''}
               </p>
-              <span className="hidden sm:flex items-center gap-1 text-xs text-gray-400">
+              <span className="hidden sm:flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
                 <kbd className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded text-[10px] font-mono">↑↓</kbd>
                 navigate
                 <kbd className="px-1.5 py-0.5 bg-gray-100 dark:bg-gray-700 rounded text-[10px] font-mono ml-2">↵</kbd>
@@ -235,7 +235,7 @@ function SearchContent() {
                 <div className="text-center py-12">
                   <div className="text-4xl mb-3">😕</div>
                   <p className="text-gray-500 dark:text-gray-400 mb-2">No results found for &ldquo;{query}&rdquo;</p>
-                  <p className="text-sm text-gray-400 dark:text-gray-500">Try different keywords or check your spelling</p>
+                  <p className="text-sm text-gray-400 dark:text-gray-400">Try different keywords or check your spelling</p>
                 </div>
               )}
 
@@ -293,7 +293,7 @@ function SearchContent() {
               <p className="text-gray-500 dark:text-gray-400 mb-2">
                 Search across 24 courses and 700+ topics
               </p>
-              <p className="text-xs text-gray-400 dark:text-gray-500">
+              <p className="text-xs text-gray-400 dark:text-gray-400">
                 Start typing to find study materials instantly
               </p>
             </div>

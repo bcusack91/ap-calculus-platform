@@ -20,7 +20,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         <input
           ref={ref}
           id={inputId}
-          className={`w-full px-3 py-2 rounded-lg border text-sm transition-colors bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-accent-ring focus:border-transparent ${
+          className={`w-full px-3 py-2 rounded-lg border text-sm transition-colors bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent-ring focus:border-transparent ${
             error
               ? 'border-red-500 dark:border-red-400'
               : 'border-gray-300 dark:border-gray-600'
@@ -35,7 +35,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           </p>
         )}
         {helperText && !error && (
-          <p id={`${inputId}-helper`} className="mt-1 text-xs text-gray-500">
+          <p id={`${inputId}-helper`} className="mt-1 text-xs text-gray-500 dark:text-gray-400">
             {helperText}
           </p>
         )}

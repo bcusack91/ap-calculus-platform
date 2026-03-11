@@ -162,11 +162,11 @@ export default function OnboardingPage() {
                 >
                   <div className="text-3xl mb-3">{goal.icon}</div>
                   <div className="font-bold text-gray-900 dark:text-white">{goal.label}</div>
-                  <div className="text-sm text-gray-500 mt-1">{goal.description}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">{goal.description}</div>
                 </button>
               ))}
             </div>
-            <Link href="/dashboard" className="inline-block mt-8 text-sm text-gray-500 hover:text-purple-600">
+            <Link href="/dashboard" className="inline-block mt-8 text-sm text-gray-500 dark:text-gray-400 hover:text-purple-600">
               Skip for now →
             </Link>
           </div>
@@ -208,7 +208,7 @@ export default function OnboardingPage() {
                           <span className="text-2xl">{course.icon}</span>
                           <div>
                             <div className="font-semibold text-gray-900 dark:text-white text-sm">{course.name}</div>
-                            <div className="text-xs text-gray-500">{course.description}</div>
+                            <div className="text-xs text-gray-500 dark:text-gray-400">{course.description}</div>
                           </div>
                         </div>
                       </button>
@@ -218,7 +218,7 @@ export default function OnboardingPage() {
               ))}
             </div>
             <div className="text-center mt-6">
-              <Link href="/dashboard" className="text-sm text-gray-500 hover:text-purple-600">
+              <Link href="/dashboard" className="text-sm text-gray-500 dark:text-gray-400 hover:text-purple-600">
                 Skip for now →
               </Link>
             </div>
@@ -238,7 +238,7 @@ export default function OnboardingPage() {
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-2">
               Starting with <span className="font-semibold text-purple-600">{selectedCourse.name}</span>
             </p>
-            <p className="text-sm text-gray-500 mb-10">
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-10">
               We&apos;ll guide you through the material step by step.
               {selectedGoal === 'exam-prep' && " Focus on practice problems and flashcards for exam prep."}
               {selectedGoal === 'catch-up' && " We'll start from the fundamentals and build up."}

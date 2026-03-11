@@ -114,7 +114,7 @@ export default async function LeaderboardPage() {
                     2
                   </div>
                   <div className="font-bold text-lg text-center">{entries[1].name}</div>
-                  <div className="text-sm text-gray-500">{entries[1].mmr} MMR</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">{entries[1].mmr} MMR</div>
                   <span className={`mt-1 px-2 py-0.5 rounded-full text-xs font-semibold ${rankColors[entries[1].rank] || ''}`}>
                     {rankEmoji[entries[1].rank] || ''} {entries[1].rank}
                   </span>
@@ -126,7 +126,7 @@ export default async function LeaderboardPage() {
                     1
                   </div>
                   <div className="font-bold text-xl text-center">{entries[0].name}</div>
-                  <div className="text-sm text-gray-500">{entries[0].mmr} MMR</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">{entries[0].mmr} MMR</div>
                   <span className={`mt-1 px-2 py-0.5 rounded-full text-xs font-semibold ${rankColors[entries[0].rank] || ''}`}>
                     {rankEmoji[entries[0].rank] || ''} {entries[0].rank}
                   </span>
@@ -137,7 +137,7 @@ export default async function LeaderboardPage() {
                     3
                   </div>
                   <div className="font-bold text-lg text-center">{entries[2].name}</div>
-                  <div className="text-sm text-gray-500">{entries[2].mmr} MMR</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400">{entries[2].mmr} MMR</div>
                   <span className={`mt-1 px-2 py-0.5 rounded-full text-xs font-semibold ${rankColors[entries[2].rank] || ''}`}>
                     {rankEmoji[entries[2].rank] || ''} {entries[2].rank}
                   </span>
@@ -169,7 +169,7 @@ export default async function LeaderboardPage() {
                           entry.position <= 3 ? 'bg-yellow-50/50 dark:bg-yellow-900/10' : ''
                         }`}
                       >
-                        <td className="px-4 py-3 font-bold text-gray-500">
+                        <td className="px-4 py-3 font-bold text-gray-500 dark:text-gray-400">
                           {entry.position <= 3 ? (
                             <span className="text-lg">
                               {entry.position === 1 ? '🥇' : entry.position === 2 ? '🥈' : '🥉'}

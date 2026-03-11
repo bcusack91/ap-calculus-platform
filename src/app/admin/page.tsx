@@ -98,7 +98,7 @@ export default function AdminPanel() {
   if (status === 'loading') {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="text-2xl text-gray-500">Loading...</div>
+        <div className="text-2xl text-gray-500 dark:text-gray-400">Loading...</div>
       </div>
     )
   }
@@ -201,7 +201,7 @@ export default function AdminPanel() {
                 </div>
               </>
             ) : (
-              <p className="text-gray-500">Failed to load analytics</p>
+              <p className="text-gray-500 dark:text-gray-400">Failed to load analytics</p>
             )}
           </div>
         )}
@@ -258,7 +258,7 @@ export default function AdminPanel() {
                         <p className="font-semibold text-gray-900 dark:text-white truncate">
                           {user.name || 'No name'}
                         </p>
-                        <p className="text-sm text-gray-500 truncate">{user.email}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400 truncate">{user.email}</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3 flex-shrink-0">
@@ -283,7 +283,7 @@ export default function AdminPanel() {
         )}
 
         {users.length === 0 && search.length >= 2 && !loading && (
-          <div className="text-center py-12 text-gray-500">
+          <div className="text-center py-12 text-gray-500 dark:text-gray-400">
             No users found matching &ldquo;{search}&rdquo;
           </div>
         )}

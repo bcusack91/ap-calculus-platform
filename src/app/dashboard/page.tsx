@@ -418,7 +418,7 @@ export default function DashboardPage() {
               <span className="text-2xl">📋</span>
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white">{pendingAssignments} assignment{pendingAssignments !== 1 ? 's' : ''} pending</p>
-                <p className="text-sm text-gray-500">From your teachers — click to view</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">From your teachers — click to view</p>
               </div>
             </div>
             <span className="text-purple-600 font-semibold group-hover:translate-x-1 transition-transform">View →</span>
@@ -440,7 +440,7 @@ export default function DashboardPage() {
                       <Link key={course.slug} href={`/courses/${course.slug}`} className="block group">
                         <div className="flex items-center justify-between mb-1">
                           <span className="font-medium text-gray-900 dark:text-white group-hover:text-purple-600 transition-colors">{course.name}</span>
-                          <span className="text-sm text-gray-500">{done}/{total} topics · {pct}%</span>
+                          <span className="text-sm text-gray-500 dark:text-gray-400">{done}/{total} topics · {pct}%</span>
                         </div>
                         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                           <div className="bg-gradient-to-r from-purple-500 to-blue-500 h-2.5 rounded-full transition-all" style={{ width: `${pct}%` }} />
@@ -456,10 +456,10 @@ export default function DashboardPage() {
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-xl font-bold text-gray-900 dark:text-white">🏆 Achievements</h2>
-                <span className="text-sm text-gray-500">{achievementStats.unlocked}/{achievementStats.total} unlocked</span>
+                <span className="text-sm text-gray-500 dark:text-gray-400">{achievementStats.unlocked}/{achievementStats.total} unlocked</span>
               </div>
               {achievements.length === 0 ? (
-                <p className="text-sm text-gray-500 text-center py-4">Complete topics, review flashcards, and build streaks to earn achievements!</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 text-center py-4">Complete topics, review flashcards, and build streaks to earn achievements!</p>
               ) : (
                 <div className="grid grid-cols-4 sm:grid-cols-6 gap-3">
                   {achievements.slice(0, 12).map((a) => (
@@ -484,7 +484,7 @@ export default function DashboardPage() {
               {recentActivity.length === 0 ? (
                 <div className="text-center py-8">
                   <div className="text-4xl mb-3">📖</div>
-                  <p className="text-gray-500 mb-4">No activity yet! Start learning to see your progress here.</p>
+                  <p className="text-gray-500 dark:text-gray-400 mb-4">No activity yet! Start learning to see your progress here.</p>
                   <Link href="/" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all">Browse Courses →</Link>
                 </div>
               ) : (
@@ -493,11 +493,11 @@ export default function DashboardPage() {
                     <Link key={i} href={`/topics/${activity.topicSlug}`} className="flex items-center justify-between py-3 hover:bg-gray-50 dark:hover:bg-gray-700/50 -mx-2 px-2 rounded-lg transition-colors group">
                       <div className="min-w-0">
                         <p className="font-medium text-gray-900 dark:text-white group-hover:text-purple-600 truncate transition-colors">{activity.topicTitle}</p>
-                        <p className="text-xs text-gray-500">{activity.courseName}</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400">{activity.courseName}</p>
                       </div>
                       <div className="flex items-center gap-3 flex-shrink-0 ml-3">
                         <span className={`text-xs font-medium px-2 py-1 rounded-full ${statusColor(activity.status)}`}>{statusLabel(activity.status)}</span>
-                        <span className="text-xs text-gray-400">{timeAgo(activity.lastAccessed)}</span>
+                        <span className="text-xs text-gray-500 dark:text-gray-400">{timeAgo(activity.lastAccessed)}</span>
                       </div>
                     </Link>
                   ))}
@@ -715,7 +715,7 @@ export default function DashboardPage() {
                       <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-purple-600 truncate">{bookmark.title}</span>
                       <button
                         onClick={(e) => { e.preventDefault(); removeBookmark(bookmark.topicSlug, bookmark.part) }}
-                        className="text-gray-400 hover:text-red-500 transition-colors ml-2 flex-shrink-0"
+                        className="text-gray-500 hover:text-red-500 dark:text-gray-400 transition-colors ml-2 flex-shrink-0"
                         title="Remove bookmark"
                         aria-label={`Remove bookmark for ${bookmark.title}`}
                       >
@@ -723,7 +723,7 @@ export default function DashboardPage() {
                       </button>
                     </Link>
                   ))}
-                  {bookmarks.length > 5 && <p className="text-xs text-gray-500 pt-1">+{bookmarks.length - 5} more saved</p>}
+                  {bookmarks.length > 5 && <p className="text-xs text-gray-500 dark:text-gray-400 pt-1">+{bookmarks.length - 5} more saved</p>}
                 </div>
               </div>
             )}

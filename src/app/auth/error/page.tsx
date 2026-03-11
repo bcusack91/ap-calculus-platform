@@ -76,7 +76,7 @@ function AuthErrorContent() {
         </div>
 
         {errorCode !== 'Default' && (
-          <p className="text-xs text-gray-400 dark:text-gray-500">
+          <p className="text-xs text-gray-400 dark:text-gray-400">
             Error code: {errorCode}
           </p>
         )}

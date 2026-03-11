@@ -362,7 +362,7 @@ export default function ScorePredictorPage() {
               <p className="mt-1 text-2xl font-bold text-gray-900 dark:text-white">
                 {stats.quizPassRate}%
               </p>
-              <p className="mt-1 text-xs text-gray-400 dark:text-gray-500">
+              <p className="mt-1 text-xs text-gray-400 dark:text-gray-400">
                 {stats.totalQuizzesAttempted} quizzes taken
               </p>
             </div>
@@ -373,7 +373,7 @@ export default function ScorePredictorPage() {
               <p className="mt-1 text-2xl font-bold text-gray-900 dark:text-white">
                 {stats.recentAvg}%
               </p>
-              <p className="mt-1 text-xs text-gray-400 dark:text-gray-500">
+              <p className="mt-1 text-xs text-gray-400 dark:text-gray-400">
                 Last 10 quizzes avg
               </p>
             </div>

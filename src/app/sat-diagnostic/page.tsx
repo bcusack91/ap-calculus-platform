@@ -161,7 +161,7 @@ export default function SATDiagnosticPage() {
                   <p className="text-sm text-gray-600 dark:text-gray-400">
                     R&W: {String(lastResult.rwScore ?? '—')} &middot; Math: {String(lastResult.mathScore ?? '—')}
                   </p>
-                  <p className="text-xs text-gray-400 dark:text-gray-500">
+                  <p className="text-xs text-gray-400 dark:text-gray-400">
                     {new Date(history[0].createdAt).toLocaleDateString()}
                   </p>
                 </div>
@@ -226,7 +226,7 @@ export default function SATDiagnosticPage() {
                       <span className="text-sm text-gray-700 dark:text-gray-300">
                         Score: {String(parsed.estimatedScore ?? '—')}
                       </span>
-                      <span className="text-xs text-gray-400 dark:text-gray-500">
+                      <span className="text-xs text-gray-400 dark:text-gray-400">
                         {new Date(h.createdAt).toLocaleDateString()}
                       </span>
                     </div>

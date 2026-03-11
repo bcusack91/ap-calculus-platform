@@ -87,11 +87,11 @@ export default function ProfilePage() {
           <h2 className="font-semibold text-gray-900 dark:text-white mb-3">Account</h2>
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
-              <span className="text-gray-500">Name</span>
+              <span className="text-gray-500 dark:text-gray-400">Name</span>
               <span className="font-medium text-gray-900 dark:text-white">{session?.user?.name || '—'}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-500">Email</span>
+              <span className="text-gray-500 dark:text-gray-400">Email</span>
               <span className="font-medium text-gray-900 dark:text-white">{session?.user?.email || '—'}</span>
             </div>
           </div>

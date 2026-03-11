@@ -246,21 +246,21 @@ export default function MCATractricePage() {
                 <p className="text-4xl font-black text-emerald-600 dark:text-emerald-400">
                   {testResult.scaledScore}
                 </p>
-                <p className="text-xs text-gray-400">out of 132</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">out of 132</p>
               </div>
               <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
                 <p className="text-sm text-gray-500 dark:text-gray-400">Correct</p>
                 <p className="text-4xl font-black text-teal-600 dark:text-teal-400">
                   {testResult.correct}/{testResult.total}
                 </p>
-                <p className="text-xs text-gray-400">{testResult.percentage}%</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">{testResult.percentage}%</p>
               </div>
               <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
                 <p className="text-sm text-gray-500 dark:text-gray-400">Performance</p>
                 <p className="text-4xl font-black text-blue-600 dark:text-blue-400">
                   {testResult.percentage >= 80 ? '🎉' : testResult.percentage >= 60 ? '👍' : '📚'}
                 </p>
-                <p className="text-xs text-gray-400">
+                <p className="text-xs text-gray-500 dark:text-gray-400">
                   {testResult.percentage >= 80 ? 'Excellent' : testResult.percentage >= 60 ? 'Good' : 'Needs Review'}
                 </p>
               </div>
@@ -389,7 +389,7 @@ export default function MCATractricePage() {
                 </span>
                 <button
                   onClick={handleCancel}
-                  className="text-sm text-gray-400 hover:text-red-500"
+                  className="text-sm text-gray-500 hover:text-red-500 dark:text-gray-400"
                 >
                   Exit
                 </button>
@@ -444,7 +444,7 @@ export default function MCATractricePage() {
               >
                 ← Previous
               </button>
-              <span className="text-xs text-gray-400">
+              <span className="text-xs text-gray-500 dark:text-gray-400">
                 {answeredCount}/{activeTest.questions.length} answered
               </span>
               {currentIndex < activeTest.questions.length - 1 ? (
@@ -564,7 +564,7 @@ export default function MCATractricePage() {
                           <p className="text-lg font-bold text-emerald-600 dark:text-emerald-400">
                             {sectionStats.best}%
                           </p>
-                          <p className="text-xs text-gray-400">
+                          <p className="text-xs text-gray-500 dark:text-gray-400">
                             {sectionStats.attempts} attempt{sectionStats.attempts !== 1 ? 's' : ''}
                           </p>
                         </div>

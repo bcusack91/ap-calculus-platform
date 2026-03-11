@@ -153,7 +153,7 @@ export default function CalcABDiagnosticPage() {
               </div>
               <div className="flex items-center gap-4">
                 <span className={`text-sm font-mono font-bold ${timeRemaining < 300 ? 'text-red-500' : 'text-gray-600 dark:text-gray-400'}`}>⏱ {formatTime(timeRemaining)}</span>
-                <button onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase('menu'); setTestData(null) }} className="text-sm text-gray-400 hover:text-red-500">Exit</button>
+                <button onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase('menu'); setTestData(null) }} className="text-sm text-gray-500 hover:text-red-500 dark:text-gray-400">Exit</button>
               </div>
             </div>
 
@@ -180,7 +180,7 @@ export default function CalcABDiagnosticPage() {
 
             <div className="flex items-center justify-between">
               <button onClick={() => setCurrentIndex(p => Math.max(0, p - 1))} disabled={currentIndex === 0} className="rounded-xl border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-600 transition hover:bg-gray-50 disabled:opacity-40 dark:border-gray-600 dark:text-gray-400">← Previous</button>
-              <span className="text-xs text-gray-400">{answeredCount}/{testData.questions.length} answered</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">{answeredCount}/{testData.questions.length} answered</span>
               {currentIndex < testData.questions.length - 1 ? (
                 <button onClick={() => setCurrentIndex(p => p + 1)} className="rounded-xl bg-purple-600 px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:bg-purple-700">Next →</button>
               ) : (
@@ -207,17 +207,17 @@ export default function CalcABDiagnosticPage() {
               <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
                 <p className="text-sm text-gray-500 dark:text-gray-400">Estimated AP Score</p>
                 <p className="text-5xl font-black text-purple-600 dark:text-purple-400">{results.estimatedAPScore}</p>
-                <p className="text-xs text-gray-400">out of 5</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">out of 5</p>
               </div>
               <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
                 <p className="text-sm text-gray-500 dark:text-gray-400">Correct</p>
                 <p className="text-4xl font-black text-violet-600 dark:text-violet-400">{results.totalCorrect}/{results.totalQuestions}</p>
-                <p className="text-xs text-gray-400">{results.percentage}%</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">{results.percentage}%</p>
               </div>
               <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
                 <p className="text-sm text-gray-500 dark:text-gray-400">Performance</p>
                 <p className="text-4xl">{apScoreEmoji}</p>
-                <p className="text-xs text-gray-400">{results.percentage >= 80 ? 'Excellent' : results.percentage >= 60 ? 'Good' : 'Needs Review'}</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">{results.percentage >= 80 ? 'Excellent' : results.percentage >= 60 ? 'Good' : 'Needs Review'}</p>
               </div>
             </div>
 
@@ -351,7 +351,7 @@ export default function CalcABDiagnosticPage() {
                 </div>
                 <div className="text-right">
                   <p className="text-sm text-gray-600 dark:text-gray-400">{String(lastResult.totalCorrect ?? '—')}/{String(lastResult.totalQuestions ?? '—')} correct</p>
-                  <p className="text-xs text-gray-400 dark:text-gray-500">Form {String(lastResult.form ?? '—')} · {new Date(history[0].createdAt).toLocaleDateString()}</p>
+                  <p className="text-xs text-gray-400 dark:text-gray-400">Form {String(lastResult.form ?? '—')} · {new Date(history[0].createdAt).toLocaleDateString()}</p>
                 </div>
               </div>
             </div>
@@ -400,9 +400,9 @@ export default function CalcABDiagnosticPage() {
                     <div key={h.id} className="flex items-center justify-between rounded-lg bg-gray-50 p-3 dark:bg-gray-700/50">
                       <div className="flex items-center gap-3">
                         <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Score: {String(parsed?.estimatedAPScore ?? '—')}/5</span>
-                        <span className="text-xs text-gray-400">Form {String(parsed?.form ?? '?')}</span>
+                        <span className="text-xs text-gray-500 dark:text-gray-400">Form {String(parsed?.form ?? '?')}</span>
                       </div>
-                      <span className="text-xs text-gray-400 dark:text-gray-500">{new Date(h.createdAt).toLocaleDateString()}</span>
+                      <span className="text-xs text-gray-400 dark:text-gray-400">{new Date(h.createdAt).toLocaleDateString()}</span>
                     </div>
                   )
                 })}

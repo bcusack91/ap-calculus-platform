@@ -198,7 +198,7 @@ export default function MCATLandingPage() {
                   >
                     {f.icon}
                   </div>
-                  <span className="text-xs font-medium text-gray-400 dark:text-gray-500">
+                  <span className="text-xs font-medium text-gray-400 dark:text-gray-400">
                     {f.stats}
                   </span>
                 </div>

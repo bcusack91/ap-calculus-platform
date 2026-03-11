@@ -715,7 +715,7 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
                           ? 'bg-purple-600 text-white shadow-lg'
                           : isUnlocked
                           ? 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900/30'
-                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 cursor-not-allowed opacity-50'
+                          : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-400 cursor-not-allowed opacity-50'
                       }`}
                     >
                       {!isUnlocked && '🔒 '}Part {partNumber}: {partConfig.title}

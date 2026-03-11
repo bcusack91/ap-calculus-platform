@@ -81,7 +81,7 @@ export default function Gradebook({ classroomId }: GradebookProps) {
   }
 
   const gradeColor = (pct: number | null) => {
-    if (pct === null) return 'text-gray-400'
+    if (pct === null) return 'text-gray-500 dark:text-gray-400'
     if (pct >= 90) return 'text-green-600 dark:text-green-400'
     if (pct >= 80) return 'text-blue-600 dark:text-blue-400'
     if (pct >= 70) return 'text-yellow-600 dark:text-yellow-400'
@@ -118,7 +118,7 @@ export default function Gradebook({ classroomId }: GradebookProps) {
       <div className="p-8 text-center">
         <p className="text-3xl mb-2">📊</p>
         <p className="text-gray-500 font-medium">No assignments yet</p>
-        <p className="text-sm text-gray-400 mt-1">Create assignments to see grades here</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Create assignments to see grades here</p>
       </div>
     )
   }
@@ -173,7 +173,7 @@ export default function Gradebook({ classroomId }: GradebookProps) {
                   title={a.title}
                 >
                   <div className="truncate max-w-[80px]">{a.title}</div>
-                  {a.maxScore && <div className="text-xs text-gray-400 font-normal">/{a.maxScore}</div>}
+                  {a.maxScore && <div className="text-xs text-gray-500 dark:text-gray-400 font-normal">/{a.maxScore}</div>}
                 </th>
               ))}
               <th
@@ -192,7 +192,7 @@ export default function Gradebook({ classroomId }: GradebookProps) {
               <tr key={student.id} className="border-b border-gray-100 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-gray-700/30">
                 <td className="p-3 font-medium text-gray-900 dark:text-white sticky left-0 bg-white dark:bg-gray-800 z-10">
                   <div className="truncate max-w-[150px]">{student.name || 'Unknown'}</div>
-                  <div className="text-xs text-gray-400 truncate max-w-[150px]">{student.email}</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400 truncate max-w-[150px]">{student.email}</div>
                 </td>
                 {assignments.map((a) => {
                   const g = student.grades.find((gr) => gr.assignmentId === a.id)

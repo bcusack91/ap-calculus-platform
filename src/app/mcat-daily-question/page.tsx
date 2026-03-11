@@ -132,7 +132,7 @@ export default function MCATDailyQuestionPage() {
                               'border-red-500 bg-red-50 text-red-800 dark:bg-red-900/30 dark:text-red-300 dark:border-red-600'
                           } else {
                             cls +=
-                              'border-gray-200 text-gray-500 dark:border-gray-600 dark:text-gray-500'
+                              'border-gray-200 text-gray-500 dark:border-gray-600 dark:text-gray-400'
                           }
                         } else if (i === sel) {
                           cls +=

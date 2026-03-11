@@ -216,7 +216,7 @@ function ControlChartTab({ analytics }: { analytics: SixSigmaAnalytics }) {
         <p className="text-gray-500 dark:text-gray-400 mb-4">
           📊 Interactive control chart visualization will render here
         </p>
-        <div className="text-sm text-gray-400 dark:text-gray-500">
+        <div className="text-sm text-gray-400 dark:text-gray-400">
           (Requires chart library like Chart.js or Recharts)
         </div>
       </div>
