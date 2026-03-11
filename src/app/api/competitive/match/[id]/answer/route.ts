@@ -9,6 +9,8 @@ interface MatchGameData {
   questions?: Array<{ answerIndex?: number; options?: string[]; [key: string]: unknown }>;
   player1QuestionIndex?: number;
   player2QuestionIndex?: number;
+  player1Answers?: Array<{ questionIndex: number; answerIndex: number; correct: boolean }>;
+  player2Answers?: Array<{ questionIndex: number; answerIndex: number; correct: boolean }>;
   aiDifficulty?: 'easy' | 'medium' | 'hard';
   isPracticeMatch?: boolean;
 }
@@ -93,6 +95,16 @@ export async function POST(
     const currentQuestion = questions[questionIndex];
     const isCorrect = answerIndex === currentQuestion.answerIndex;
 
+    // Track this answer in the player's answer history
+    const answerRecord = { questionIndex, answerIndex, correct: isCorrect };
+    if (isPlayer1) {
+      if (!gameData.player1Answers) gameData.player1Answers = [];
+      gameData.player1Answers.push(answerRecord);
+    } else {
+      if (!gameData.player2Answers) gameData.player2Answers = [];
+      gameData.player2Answers.push(answerRecord);
+    }
+
     // Award/deduct points - 1 point for correct, -1 for incorrect
     if (isCorrect) {
       if (isPlayer1) {
@@ -160,6 +172,8 @@ export async function POST(
             questions,
             player1QuestionIndex,
             player2QuestionIndex,
+            player1Answers: gameData.player1Answers || [],
+            player2Answers: gameData.player2Answers || [],
             ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
             ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
           } as unknown as Prisma.InputJsonValue,
@@ -255,6 +269,8 @@ export async function POST(
             questions,
             player1QuestionIndex,
             player2QuestionIndex,
+            player1Answers: gameData.player1Answers || [],
+            player2Answers: gameData.player2Answers || [],
             ...(gameData?.aiDifficulty && { aiDifficulty: gameData.aiDifficulty }),
             ...(gameData?.isPracticeMatch && { isPracticeMatch: gameData.isPracticeMatch }),
           } as unknown as Prisma.InputJsonValue,

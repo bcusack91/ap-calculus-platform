@@ -62,6 +62,8 @@ interface MatchState {
     isPracticeMatch?: boolean;
     player1AnsweredCurrent?: boolean;
     player2AnsweredCurrent?: boolean;
+    player1Answers?: Array<{ questionIndex: number; answerIndex: number; correct: boolean }>;
+    player2Answers?: Array<{ questionIndex: number; answerIndex: number; correct: boolean }>;
     [key: string]: unknown;
   };
   status: 'IN_PROGRESS' | 'COMPLETED' | 'PENDING';
@@ -109,6 +111,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [feedbackQuestionIndex, setFeedbackQuestionIndex] = useState<number | null>(null);
   const [player1Emotion, setPlayer1Emotion] = useState<'neutral' | 'happy' | 'sad'>('neutral');
   const [player2Emotion, setPlayer2Emotion] = useState<'neutral' | 'happy' | 'sad'>('neutral');
+  const [showReview, setShowReview] = useState(false);
   const matchStateRef = useRef<MatchState | null>(null);
 
   // Pre-load KaTeX lazily on mount
@@ -468,6 +471,21 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     const playerMMRBefore = isPlayer1 ? matchState.player1MMRBefore : matchState.player2MMRBefore;
     const playerMMRAfter = isPlayer1 ? matchState.player1MMRAfter : matchState.player2MMRAfter;
     const mmrChange = playerMMRAfter && playerMMRBefore ? playerMMRAfter - playerMMRBefore : 0;
+
+    // Get this player's answer history for review
+    const playerAnswers = isPlayer1
+      ? matchState.gameData?.player1Answers || []
+      : matchState.gameData?.player2Answers || [];
+
+    // Deduplicate: keep only the last answer per questionIndex (player may have seen the same question multiple times due to cycling)
+    const answersByQuestion = new Map<number, { questionIndex: number; answerIndex: number; correct: boolean }>();
+    for (const a of playerAnswers) {
+      answersByQuestion.set(a.questionIndex, a);
+    }
+
+    const missedQuestions = Array.from(answersByQuestion.values()).filter(a => !a.correct);
+    const totalAnswered = answersByQuestion.size;
+    const totalCorrect = Array.from(answersByQuestion.values()).filter(a => a.correct).length;
     
     return (
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-12 px-4">
@@ -528,7 +546,25 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               </div>
             </div>
 
-            <div className="flex gap-4 justify-center">
+            <div className="flex gap-4 justify-center flex-wrap">
+              {missedQuestions.length > 0 && (
+                <button
+                  onClick={() => setShowReview(!showReview)}
+                  className="px-8 py-3 bg-amber-500 text-white rounded-lg hover:bg-amber-600 font-semibold flex items-center gap-2"
+                >
+                  <span>📝</span>
+                  {showReview ? 'Hide Review' : `Review Mistakes (${missedQuestions.length})`}
+                </button>
+              )}
+              {missedQuestions.length === 0 && totalAnswered > 0 && (
+                <button
+                  onClick={() => setShowReview(!showReview)}
+                  className="px-8 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 font-semibold flex items-center gap-2"
+                >
+                  <span>✨</span>
+                  {showReview ? 'Hide Review' : 'Review All Questions'}
+                </button>
+              )}
               <button
                 onClick={() => router.push('/competitive')}
                 className="px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 font-semibold"
@@ -543,6 +579,146 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               </button>
             </div>
           </div>
+
+          {/* Question Review Section */}
+          {showReview && (
+            <div className="mt-8 space-y-6">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6">
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  Match Review
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">
+                  You answered {totalCorrect} out of {totalAnswered} unique questions correctly.
+                  {missedQuestions.length > 0 && ' Review the ones you missed below.'}
+                </p>
+
+                <div className="space-y-4">
+                  {matchState.questions.map((question, qIdx) => {
+                    const answer = answersByQuestion.get(qIdx);
+                    if (!answer) return null; // Player never saw this question
+
+                    const isMultipleChoice = question.type === 'multiple-choice';
+                    const wasCorrect = answer.correct;
+
+                    return (
+                      <div
+                        key={qIdx}
+                        className={`rounded-xl border-2 p-5 transition-all ${
+                          wasCorrect
+                            ? 'border-green-200 dark:border-green-800 bg-green-50/50 dark:bg-green-900/10'
+                            : 'border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-900/10'
+                        }`}
+                      >
+                        {/* Question header */}
+                        <div className="flex items-start gap-3 mb-3">
+                          <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
+                            wasCorrect
+                              ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400'
+                              : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400'
+                          }`}>
+                            {wasCorrect ? '✓' : '✗'}
+                          </span>
+                          <div className="flex-1">
+                            <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">
+                              Question {qIdx + 1}
+                              {question.difficulty && (
+                                <span className={`ml-2 px-2 py-0.5 rounded-full text-xs font-medium ${
+                                  question.difficulty === 'easy' ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' :
+                                  question.difficulty === 'medium' ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400' :
+                                  'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400'
+                                }`}>
+                                  {question.difficulty}
+                                </span>
+                              )}
+                            </p>
+                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                              {renderPrompt(question.prompt || question.question || '')}
+                            </h3>
+                          </div>
+                        </div>
+
+                        {/* Multiple choice options */}
+                        {isMultipleChoice && question.options && (
+                          <div className="ml-11 space-y-2 mb-3">
+                            {question.options.map((option, optIdx) => {
+                              const isUserAnswer = answer.answerIndex === optIdx;
+                              const isCorrectAnswer = question.answerIndex === optIdx;
+
+                              return (
+                                <div
+                                  key={optIdx}
+                                  className={`flex items-center gap-3 p-3 rounded-lg text-sm ${
+                                    isCorrectAnswer
+                                      ? 'bg-green-100 dark:bg-green-900/20 border border-green-300 dark:border-green-700'
+                                      : isUserAnswer && !wasCorrect
+                                      ? 'bg-red-100 dark:bg-red-900/20 border border-red-300 dark:border-red-700'
+                                      : 'bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600'
+                                  }`}
+                                >
+                                  <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold ${
+                                    isCorrectAnswer
+                                      ? 'border-green-500 text-green-600 dark:text-green-400'
+                                      : isUserAnswer && !wasCorrect
+                                      ? 'border-red-500 text-red-600 dark:text-red-400'
+                                      : 'border-gray-300 dark:border-gray-500 text-gray-500 dark:text-gray-400'
+                                  }`}>
+                                    {String.fromCharCode(65 + optIdx)}
+                                  </span>
+                                  <div className="flex-1 text-gray-900 dark:text-white">
+                                    {renderPrompt(option)}
+                                  </div>
+                                  {isCorrectAnswer && (
+                                    <span className="text-green-600 dark:text-green-400 text-sm font-semibold">
+                                      ✓ Correct
+                                    </span>
+                                  )}
+                                  {isUserAnswer && !wasCorrect && (
+                                    <span className="text-red-600 dark:text-red-400 text-sm font-semibold">
+                                      Your answer
+                                    </span>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        )}
+
+                        {/* Unit circle answer display */}
+                        {!isMultipleChoice && !wasCorrect && (
+                          <div className="ml-11 mb-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 text-sm">
+                            <p className="text-gray-900 dark:text-white">
+                              <span className="text-red-600 dark:text-red-400 font-semibold">Your answer: </span>
+                              {UNIT_CIRCLE_POSITIONS[answer.answerIndex]
+                                ? `${UNIT_CIRCLE_POSITIONS[answer.answerIndex].label} (${UNIT_CIRCLE_POSITIONS[answer.answerIndex].x.toFixed(3)}, ${UNIT_CIRCLE_POSITIONS[answer.answerIndex].y.toFixed(3)})`
+                                : `Position ${answer.answerIndex}`}
+                            </p>
+                            <p className="text-gray-900 dark:text-white mt-1">
+                              <span className="text-green-600 dark:text-green-400 font-semibold">Correct answer: </span>
+                              {question.answerIndex !== undefined && UNIT_CIRCLE_POSITIONS[question.answerIndex]
+                                ? `${UNIT_CIRCLE_POSITIONS[question.answerIndex].label} (${UNIT_CIRCLE_POSITIONS[question.answerIndex].x.toFixed(3)}, ${UNIT_CIRCLE_POSITIONS[question.answerIndex].y.toFixed(3)})`
+                                : 'Unknown'}
+                            </p>
+                          </div>
+                        )}
+
+                        {/* Explanation */}
+                        {question.explanation && !wasCorrect && (
+                          <div className="ml-11 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                            <p className="text-sm font-semibold text-blue-900 dark:text-blue-300 mb-1">
+                              💡 Explanation
+                            </p>
+                            <div className="text-sm text-blue-800 dark:text-blue-400">
+                              {renderPrompt(question.explanation)}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     );
