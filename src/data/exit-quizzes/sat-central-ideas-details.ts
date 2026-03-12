@@ -71,6 +71,15 @@ const questionPool: QuestionTemplate[] = [
   { id: 'ci-q40', category: 'Supporting Details', generate() { const { options, correctIndex } = makeStringOptions('A detail that directly supports or proves the main claim', ['Any interesting fact in the passage', 'The longest sentence', 'A detail in the introduction only']); return { id: this.id, category: this.category, question: `On the SAT, "relevant supporting evidence" means:`, options, correctIndex, explanation: `Relevant evidence is a detail that directly supports the main idea being asked about.` } } },
 ]
 
+// Map question IDs to the passage they reference so the passage text is shown
+const QUESTION_PASSAGE_MAP: Record<string, number> = {
+  'ci-q6': 0, 'ci-q7': 1, 'ci-q8': 2, 'ci-q9': 3, 'ci-q10': 4,
+  'ci-q12': 0, 'ci-q13': 1, 'ci-q14': 0, 'ci-q15': 1, 'ci-q16': 2,
+  'ci-q17': 3, 'ci-q18': 4, 'ci-q19': 0, 'ci-q20': 3, 'ci-q21': 0,
+  'ci-q22': 3, 'ci-q26': 0, 'ci-q28': 1, 'ci-q29': 4, 'ci-q30': 1,
+  'ci-q31': 4, 'ci-q34': 3, 'ci-q35': 0,
+}
+
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   const byCategory: Record<string, QuestionTemplate[]> = {}
   for (const q of questionPool) { if (!byCategory[q.category]) byCategory[q.category] = []; byCategory[q.category].push(q) }
@@ -78,5 +87,12 @@ export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   for (const cat of shuffle(Object.keys(byCategory))) { if (selected.length >= count) break; const pool = byCategory[cat]; const q = pool[Math.floor(Math.random() * pool.length)]; if (!usedIds.has(q.id)) { selected.push(q); usedIds.add(q.id) } }
   const remaining = questionPool.filter(q => !usedIds.has(q.id))
   for (const q of shuffle(remaining)) { if (selected.length >= count) break; selected.push(q); usedIds.add(q.id) }
-  return shuffle(selected).map(t => t.generate())
+  return shuffle(selected).map(t => {
+    const q = t.generate()
+    const pIdx = QUESTION_PASSAGE_MAP[q.id]
+    if (pIdx !== undefined) {
+      q.question = `Read the passage:\n\n"${passages[pIdx].text}"\n\n${q.question}`
+    }
+    return q
+  })
 }
