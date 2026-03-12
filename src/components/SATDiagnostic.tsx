@@ -53,7 +53,7 @@ export default function DiagnosticTest({
   onComplete,
   onCancel,
 }: DiagnosticTestProps) {
-  const [phase, setPhase] = useState<'intro' | 'testing' | 'complete'>('intro')
+  const [phase, setPhase] = useState<'intro' | 'testing' | 'section-break' | 'complete'>('intro')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<
     { questionIndex: number; selectedIndex: number | null }[]
@@ -64,9 +64,22 @@ export default function DiagnosticTest({
   // Pre-load KaTeX lazily on mount
   useEffect(() => { preloadKatex() }, [])
 
+  // Derive section boundaries
+  const mathStartIndex = testData.questions.findIndex(q => q.section === 'math')
+  const rwCount = mathStartIndex === -1 ? testData.totalQuestions : mathStartIndex
+  const mathCount = testData.totalQuestions - rwCount
+
   const currentQuestion = testData.questions[currentIndex]
   const currentAnswer = answers[currentIndex]
   const answeredCount = answers.filter(a => a.selectedIndex !== null).length
+  const currentSection = currentQuestion?.section ?? 'reading-writing'
+  const isRW = currentSection === 'reading-writing'
+
+  // Section-specific progress
+  const sectionStart = isRW ? 0 : rwCount
+  const sectionTotal = isRW ? rwCount : mathCount
+  const sectionIndex = currentIndex - sectionStart
+  const sectionAnswered = answers.slice(sectionStart, sectionStart + sectionTotal).filter(a => a.selectedIndex !== null).length
 
   // Timer
   useEffect(() => {
@@ -86,6 +99,19 @@ export default function DiagnosticTest({
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
+
+  // Handle advancing to next question, with section break
+  const handleNext = useCallback(() => {
+    const nextIndex = currentIndex + 1
+    if (nextIndex >= testData.totalQuestions) return
+    // Show section break when crossing from R&W to Math
+    if (mathStartIndex > 0 && currentIndex < mathStartIndex && nextIndex >= mathStartIndex) {
+      if (timerRef.current) clearInterval(timerRef.current)
+      setPhase('section-break')
+    } else {
+      setCurrentIndex(nextIndex)
+    }
+  }, [currentIndex, mathStartIndex, testData.totalQuestions])
 
   const selectAnswer = useCallback(
     (optionIdx: number) => {
@@ -135,9 +161,10 @@ export default function DiagnosticTest({
               How It Works
             </h4>
             <ul className="space-y-1 text-sm text-green-700 dark:text-green-400">
-              <li>• {testData.totalQuestions} questions sampling all SAT domains</li>
+              <li>• {testData.totalQuestions} questions across 2 sections</li>
+              <li>• <strong>Section 1:</strong> Reading & Writing ({rwCount} questions)</li>
+              <li>• <strong>Section 2:</strong> Math ({mathCount} questions)</li>
               <li>• {testData.timeLimitMinutes} minute time limit</li>
-              <li>• Covers both Reading & Writing and Math sections</li>
               <li>• Instant analysis of your skill levels per domain</li>
               <li>• Personalized study recommendations</li>
             </ul>
@@ -177,6 +204,52 @@ export default function DiagnosticTest({
   }
 
   // ----------------------------------------------------------------
+  //  Section Break (R&W → Math)
+  // ----------------------------------------------------------------
+  if (phase === 'section-break') {
+    const rwAnswered = answers.slice(0, rwCount).filter(a => a.selectedIndex !== null).length
+    return (
+      <div className="mx-auto max-w-2xl">
+        <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-xl dark:border-gray-700 dark:bg-gray-800">
+          <div className="mb-6 text-center">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-green-500">
+              <svg className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+              Section 1 Complete!
+            </h2>
+            <p className="mt-2 text-gray-600 dark:text-gray-400">
+              You answered {rwAnswered} of {rwCount} Reading & Writing questions.
+            </p>
+          </div>
+
+          <div className="mb-6 rounded-xl bg-green-50 p-4 dark:bg-green-900/20">
+            <h4 className="mb-2 font-semibold text-green-800 dark:text-green-300">
+              Up Next: Math Section
+            </h4>
+            <ul className="space-y-1 text-sm text-green-700 dark:text-green-400">
+              <li>• {mathCount} questions covering Algebra, Advanced Math, Functions, Data Analysis, and Geometry</li>
+              <li>• Your timer will continue from {formatTime(timeRemaining)}</li>
+            </ul>
+          </div>
+
+          <button
+            onClick={() => {
+              setCurrentIndex(mathStartIndex)
+              setPhase('testing')
+            }}
+            className="w-full rounded-xl bg-gradient-to-r from-green-600 to-teal-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+          >
+            Continue to Math Section →
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  // ----------------------------------------------------------------
   //  Testing
   // ----------------------------------------------------------------
   if (!currentQuestion) return null
@@ -189,11 +262,18 @@ export default function DiagnosticTest({
       {/* Header */}
       <div className="mb-4 flex items-center justify-between rounded-xl border border-gray-200 bg-white p-3 shadow-sm dark:border-gray-700 dark:bg-gray-800">
         <div>
-          <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-            SAT Diagnostic
-          </p>
-          <p className="text-xs text-gray-400 dark:text-gray-400">
-            Question {currentIndex + 1} of {testData.totalQuestions} &middot; {answeredCount} answered
+          <div className="flex items-center gap-2">
+            <span className={`rounded-md px-2 py-0.5 text-xs font-bold uppercase tracking-wide ${
+              isRW
+                ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300'
+                : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300'
+            }`}>
+              {isRW ? 'Reading & Writing' : 'Math'}
+            </span>
+            <span className="text-xs text-gray-400">Section {isRW ? '1' : '2'} of 2</span>
+          </div>
+          <p className="mt-0.5 text-xs text-gray-400 dark:text-gray-400">
+            Question {sectionIndex + 1} of {sectionTotal} &middot; {sectionAnswered}/{sectionTotal} answered
           </p>
         </div>
         <div
@@ -212,8 +292,12 @@ export default function DiagnosticTest({
       {/* Progress */}
       <div className="mb-4 h-2 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-green-500 to-teal-500 transition-all duration-300"
-          style={{ width: `${((currentIndex + 1) / testData.totalQuestions) * 100}%` }}
+          className={`h-full rounded-full transition-all duration-300 ${
+            isRW
+              ? 'bg-gradient-to-r from-blue-500 to-indigo-500'
+              : 'bg-gradient-to-r from-green-500 to-teal-500'
+          }`}
+          style={{ width: `${((sectionIndex + 1) / sectionTotal) * 100}%` }}
         />
       </div>
 
@@ -221,8 +305,12 @@ export default function DiagnosticTest({
       <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-xl sm:p-8 dark:border-gray-700 dark:bg-gray-800">
         <div className="mb-6">
           <div className="mb-2 flex items-center gap-2">
-            <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700 dark:bg-green-900/50 dark:text-green-300">
-              Q{currentIndex + 1}
+            <span className={`rounded-full px-3 py-1 text-xs font-semibold ${
+              isRW
+                ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300'
+                : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300'
+            }`}>
+              Q{sectionIndex + 1}
             </span>
             <span className="text-xs text-gray-400 dark:text-gray-400">
               {currentQuestion.category}
@@ -252,14 +340,18 @@ export default function DiagnosticTest({
                 onClick={() => selectAnswer(idx)}
                 className={`flex w-full items-start gap-3 rounded-xl border-2 p-4 text-left transition ${
                   isSelected
-                    ? 'border-green-500 bg-green-50 dark:border-green-400 dark:bg-green-900/20'
+                    ? isRW
+                      ? 'border-blue-500 bg-blue-50 dark:border-blue-400 dark:bg-blue-900/20'
+                      : 'border-green-500 bg-green-50 dark:border-green-400 dark:bg-green-900/20'
                     : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-gray-500 dark:hover:bg-gray-700/50'
                 }`}
               >
                 <span
                   className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
                     isSelected
-                      ? 'bg-green-600 text-white'
+                      ? isRW
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-green-600 text-white'
                       : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-400'
                   }`}
                 >
@@ -276,8 +368,8 @@ export default function DiagnosticTest({
 
         <div className="flex items-center justify-between border-t border-gray-100 pt-4 dark:border-gray-700">
           <button
-            onClick={() => setCurrentIndex(prev => Math.max(0, prev - 1))}
-            disabled={currentIndex === 0}
+            onClick={() => setCurrentIndex(prev => Math.max(sectionStart, prev - 1))}
+            disabled={currentIndex === sectionStart}
             className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
           >
             ← Back
@@ -286,16 +378,26 @@ export default function DiagnosticTest({
           {currentIndex === testData.totalQuestions - 1 ? (
             <button
               onClick={handleSubmit}
-              className="rounded-xl bg-gradient-to-r from-green-600 to-teal-600 px-6 py-2 text-sm font-semibold text-white shadow transition hover:shadow-lg"
+              className={`rounded-xl px-6 py-2 text-sm font-semibold text-white shadow transition hover:shadow-lg ${
+                isRW
+                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600'
+                  : 'bg-gradient-to-r from-green-600 to-teal-600'
+              }`}
             >
               Submit ({answeredCount}/{testData.totalQuestions} answered)
             </button>
           ) : (
             <button
-              onClick={() => setCurrentIndex(prev => Math.min(testData.totalQuestions - 1, prev + 1))}
-              className="rounded-xl bg-gradient-to-r from-green-600 to-teal-600 px-6 py-2 text-sm font-semibold text-white shadow transition hover:shadow-lg"
+              onClick={handleNext}
+              className={`rounded-xl px-6 py-2 text-sm font-semibold text-white shadow transition hover:shadow-lg ${
+                isRW
+                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600'
+                  : 'bg-gradient-to-r from-green-600 to-teal-600'
+              }`}
             >
-              Next →
+              {mathStartIndex > 0 && currentIndex === mathStartIndex - 1
+                ? 'Continue to Math Section →'
+                : 'Next →'}
             </button>
           )}
         </div>

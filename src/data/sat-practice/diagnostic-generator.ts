@@ -17,6 +17,7 @@ export interface DiagnosticQuestion extends ExitQuizQuestion {
   domain: string
   sourceSlug: string
   passage?: string
+  section: 'reading-writing' | 'math'
 }
 
 export interface DiagnosticDomain {
@@ -169,7 +170,8 @@ function slugToName(slug: string): string {
 /* ------------------------------------------------------------------ */
 
 export async function generateDiagnosticTest(): Promise<DiagnosticTestData> {
-  const questions: DiagnosticQuestion[] = []
+  const rwQuestions: DiagnosticQuestion[] = []
+  const mathQuestions: DiagnosticQuestion[] = []
 
   for (const domain of DIAGNOSTIC_DOMAINS) {
     const domainQuestions: DiagnosticQuestion[] = []
@@ -183,6 +185,7 @@ export async function generateDiagnosticTest(): Promise<DiagnosticTestData> {
             ...q,
             domain: domain.id,
             sourceSlug: slug,
+            section: domain.section,
           })
         }
       } catch {
@@ -192,7 +195,11 @@ export async function generateDiagnosticTest(): Promise<DiagnosticTestData> {
 
     // Take the requested number from the pool
     const selected = shuffle(domainQuestions).slice(0, domain.questionCount)
-    questions.push(...selected)
+    if (domain.section === 'reading-writing') {
+      rwQuestions.push(...selected)
+    } else {
+      mathQuestions.push(...selected)
+    }
   }
 
   // Add 4 passage-based reading questions for comprehension & evidence domains
@@ -203,7 +210,7 @@ export async function generateDiagnosticTest(): Promise<DiagnosticTestData> {
         : q.skill === 'vocabulary-context' ? 'vocabulary'
         : q.skill === 'inference' ? 'comprehension'
         : 'comprehension'
-      questions.push({
+      rwQuestions.push({
         id: `diag-passage-${p.genre}-${q.question.slice(0, 20).replace(/\W/g, '')}`,
         question: q.question,
         options: q.options,
@@ -213,12 +220,16 @@ export async function generateDiagnosticTest(): Promise<DiagnosticTestData> {
         domain,
         sourceSlug: `passage-${p.genre}`,
         passage: p.text,
+        section: 'reading-writing',
       })
     }
   }
 
+  // R&W first, then Math — each section shuffled internally
+  const questions = [...shuffle(rwQuestions), ...shuffle(mathQuestions)]
+
   return {
-    questions: shuffle(questions),
+    questions,
     domains: DIAGNOSTIC_DOMAINS,
     totalQuestions: questions.length,
     timeLimitMinutes: 25,
