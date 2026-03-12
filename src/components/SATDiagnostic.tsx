@@ -228,6 +228,14 @@ export default function DiagnosticTest({
               {currentQuestion.category}
             </span>
           </div>
+          {currentQuestion.passage && (
+            <div className="mb-4 rounded-xl border border-blue-200 bg-blue-50/50 p-4 dark:border-blue-800 dark:bg-blue-900/20">
+              <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">Read the passage below, then answer the question.</p>
+              <div className="prose prose-sm max-w-none text-gray-800 dark:prose-invert dark:text-gray-200">
+                <p>{currentQuestion.passage}</p>
+              </div>
+            </div>
+          )}
           <div
             className="prose prose-lg max-w-none text-gray-900 dark:prose-invert dark:text-white"
             dangerouslySetInnerHTML={{ __html: renderLatex(currentQuestion.question) }}

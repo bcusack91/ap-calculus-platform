@@ -16,6 +16,7 @@ import { getBalancedPassages } from '../sat-passages'
 export interface DiagnosticQuestion extends ExitQuizQuestion {
   domain: string
   sourceSlug: string
+  passage?: string
 }
 
 export interface DiagnosticDomain {
@@ -211,6 +212,7 @@ export async function generateDiagnosticTest(): Promise<DiagnosticTestData> {
         category: `passage-${p.genre}`,
         domain,
         sourceSlug: `passage-${p.genre}`,
+        passage: p.text,
       })
     }
   }
