@@ -7,6 +7,7 @@ import { generateDiagnosticTest } from '@/data/sat-practice/diagnostic-generator
 import type { DiagnosticResults, DiagnosticTestData } from '@/data/sat-practice/diagnostic-generator'
 import DiagnosticTest, { DiagnosticResultsView } from '@/components/SATDiagnostic'
 import { InArticleAd } from '@/components/ad-banner'
+import 'katex/dist/katex.min.css'
 
 export default function SATDiagnosticPage() {
   const { status } = useSession()

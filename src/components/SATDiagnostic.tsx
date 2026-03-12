@@ -60,9 +60,10 @@ export default function DiagnosticTest({
   >(testData.questions.map((_, i) => ({ questionIndex: i, selectedIndex: null })))
   const [timeRemaining, setTimeRemaining] = useState(testData.timeLimitMinutes * 60)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const [katexReady, setKatexReady] = useState(false)
 
   // Pre-load KaTeX lazily on mount
-  useEffect(() => { preloadKatex() }, [])
+  useEffect(() => { preloadKatex().then(() => setKatexReady(true)) }, [])
 
   // Derive section boundaries
   const mathStartIndex = testData.questions.findIndex(q => q.section === 'math')
@@ -302,7 +303,7 @@ export default function DiagnosticTest({
       </div>
 
       {/* Question */}
-      <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-xl sm:p-8 dark:border-gray-700 dark:bg-gray-800">
+      <div key={katexReady ? 'k' : 'l'} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-xl sm:p-8 dark:border-gray-700 dark:bg-gray-800">
         <div className="mb-6">
           <div className="mb-2 flex items-center gap-2">
             <span className={`rounded-full px-3 py-1 text-xs font-semibold ${
