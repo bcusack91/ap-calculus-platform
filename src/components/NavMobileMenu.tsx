@@ -1,10 +1,12 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import { signOut } from 'next-auth/react'
 import AvatarDisplay from './AvatarDisplay'
 import type { AvatarData } from '@/types/avatar'
 import type { Session } from 'next-auth'
+import { courseMeta, sectionOrder, getCourseHref } from '@/data/course-metadata'
 
 interface CourseLink {
   slug: string
@@ -22,24 +24,49 @@ interface NavMobileMenuProps {
 }
 
 export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin, onClose }: NavMobileMenuProps) {
+  const [expandedSection, setExpandedSection] = useState<string | null>(null)
+
+  // Group courses by section
+  const grouped: Record<string, CourseLink[]> = {}
+  for (const course of courses) {
+    const meta = courseMeta[course.slug]
+    const section = meta?.section ?? 'Other'
+    if (!grouped[section]) grouped[section] = []
+    grouped[section].push(course)
+  }
+
   return (
     <div className="md:hidden border-t" role="menu" aria-label="Mobile navigation">
       <div className="space-y-1 px-4 pb-3 pt-2">
         <Link href="/topics" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={onClose}>
           Topics
         </Link>
-        {/* Mobile Courses List */}
+        {/* Mobile Courses List — categorized */}
         <div className="px-3 py-2">
           <div className="text-base font-medium text-gray-500 dark:text-gray-400 mb-1">Courses</div>
-          {courses.map((course) => (
-            <Link
-              key={course.slug}
-              href={`/courses/${course.slug}`}
-              className="block pl-4 py-1.5 text-sm hover:bg-accent rounded-md"
-              onClick={onClose}
-            >
-              {course.icon || '📚'} {course.name}
-            </Link>
+          {sectionOrder.filter(s => grouped[s]?.length).map(section => (
+            <div key={section}>
+              <button
+                className="flex items-center justify-between w-full pl-4 pr-2 py-2 text-sm font-semibold text-gray-600 dark:text-gray-400 hover:bg-accent rounded-md"
+                onClick={() => setExpandedSection(expandedSection === section ? null : section)}
+                aria-expanded={expandedSection === section}
+              >
+                {section}
+                <svg className={`h-3 w-3 transition-transform ${expandedSection === section ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {expandedSection === section && grouped[section].map(course => (
+                <Link
+                  key={course.slug}
+                  href={getCourseHref(course.slug)}
+                  className="block pl-8 py-1.5 text-sm hover:bg-accent rounded-md"
+                  onClick={onClose}
+                >
+                  {course.icon || '📚'} {course.name}
+                </Link>
+              ))}
+            </div>
           ))}
         </div>
         <Link href="/flashcards" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={onClose}>

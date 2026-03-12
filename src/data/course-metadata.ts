@@ -53,3 +53,29 @@ export const sectionOrder = [
 export function getCourseMetadata(slug: string) {
   return courseMeta[slug] ?? defaultCourseMeta
 }
+
+/**
+ * Maps course DB slugs to their dedicated hub page paths.
+ * Courses listed here will link to their hub page instead of /courses/[slug].
+ */
+export const courseHubPaths: Record<string, string> = {
+  'ap-calculus-ab': '/ap-calculus-ab',
+  'ap-calculus-bc': '/ap-calculus-bc',
+  'ap-chemistry': '/ap-chemistry',
+  'ap-biology': '/ap-biology',
+  'ap-statistics': '/ap-statistics',
+  'ap-psychology': '/ap-psychology',
+  'ap-physics-1': '/ap-physics-1',
+  'ap-physics-2': '/ap-physics-2',
+  'organic-chemistry': '/organic-chemistry',
+  'sat-prep': '/sat',
+  'act-prep': '/act',
+  'mcat-prep': '/mcat',
+}
+
+/**
+ * Returns the best link for a course: hub page if it has one, otherwise /courses/[slug].
+ */
+export function getCourseHref(slug: string): string {
+  return courseHubPaths[slug] ?? `/courses/${slug}`
+}

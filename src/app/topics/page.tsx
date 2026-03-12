@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
-import { courseMeta, defaultCourseMeta } from '@/data/course-metadata'
+import { courseMeta, defaultCourseMeta, getCourseHref } from '@/data/course-metadata'
 
 export const revalidate = 3600 // ISR: revalidate every hour
 
@@ -47,7 +47,7 @@ export default async function TopicsPage() {
             return (
               <Link
                 key={course.id}
-                href={`/courses/${course.slug}`}
+                href={getCourseHref(course.slug)}
                 className="group relative flex flex-col rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-8 shadow-sm transition-all hover:shadow-xl hover:scale-105 hover:border-transparent"
               >
                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${info.gradient} opacity-0 transition-opacity group-hover:opacity-5`}></div>

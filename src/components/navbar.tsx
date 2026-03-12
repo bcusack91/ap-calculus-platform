@@ -8,6 +8,8 @@ import { AvatarData } from '@/types/avatar'
 import { NavMobileMenu } from './NavMobileMenu'
 import { NavUserMenu } from './NavUserMenu'
 
+import { courseMeta, sectionOrder, getCourseHref } from '@/data/course-metadata'
+
 interface CourseLink {
   slug: string
   name: string
@@ -46,6 +48,7 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [avatarData, setAvatarData] = useState<AvatarData | null>(null)
   const [coursesOpen, setCoursesOpen] = useState(false)
+  const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [moreOpen, setMoreOpen] = useState(false)
   const [userMenuOpen, setUserMenuOpen] = useState(false)
   const [courses, setCourses] = useState<CourseLink[]>([])
@@ -92,6 +95,7 @@ export function Navbar() {
     function handleClick(e: MouseEvent) {
       if (coursesRef.current && !coursesRef.current.contains(e.target as Node)) {
         setCoursesOpen(false)
+        setExpandedSection(null)
       }
       if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
         setMoreOpen(false)
@@ -164,19 +168,45 @@ export function Navbar() {
                 {chevronSvg(coursesOpen)}
               </button>
               {coursesOpen && (
-                <div role="menu" className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50">
-                  {courses.map((course) => (
-                    <Link
-                      key={course.slug}
-                      href={`/courses/${course.slug}`}
-                      role="menuitem"
-                      className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
-                      onClick={() => setCoursesOpen(false)}
-                    >
-                      <span>{course.icon || '📚'}</span>
-                      {course.name}
-                    </Link>
-                  ))}
+                <div role="menu" className="absolute top-full left-0 mt-2 w-72 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-2 z-50 max-h-[70vh] overflow-y-auto">
+                  {(() => {
+                    // Group courses by section from courseMeta
+                    const grouped: Record<string, CourseLink[]> = {}
+                    for (const course of courses) {
+                      const meta = courseMeta[course.slug]
+                      const section = meta?.section ?? 'Other'
+                      if (!grouped[section]) grouped[section] = []
+                      grouped[section].push(course)
+                    }
+                    return sectionOrder
+                      .filter(s => grouped[s]?.length)
+                      .map(section => (
+                        <div key={section}>
+                          <button
+                            className="flex items-center justify-between w-full px-4 py-2.5 text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
+                            onClick={() => setExpandedSection(expandedSection === section ? null : section)}
+                            aria-expanded={expandedSection === section}
+                          >
+                            {section}
+                            <svg className={`h-3 w-3 transition-transform ${expandedSection === section ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </button>
+                          {expandedSection === section && grouped[section].map(course => (
+                            <Link
+                              key={course.slug}
+                              href={getCourseHref(course.slug)}
+                              role="menuitem"
+                              className="flex items-center gap-2 pl-6 pr-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
+                              onClick={() => { setCoursesOpen(false); setExpandedSection(null) }}
+                            >
+                              <span>{course.icon || '📚'}</span>
+                              {course.name}
+                            </Link>
+                          ))}
+                        </div>
+                      ))
+                  })()}
                   {courses.length === 0 && (
                     <div className="px-4 py-2 text-sm text-gray-500 dark:text-gray-400">Loading...</div>
                   )}
@@ -197,7 +227,7 @@ export function Navbar() {
             {/* More Dropdown */}
             <div ref={moreRef} className="relative" onKeyDown={moreKeyNav}>
               <button
-                onClick={() => { setMoreOpen(!moreOpen); setCoursesOpen(false); setUserMenuOpen(false) }}
+                onClick={() => { setMoreOpen(!moreOpen); setCoursesOpen(false); setExpandedSection(null); setUserMenuOpen(false) }}
                 className="transition-colors hover:text-foreground/80 flex items-center gap-1"
                 aria-haspopup="true"
                 aria-expanded={moreOpen}
@@ -241,7 +271,7 @@ export function Navbar() {
                 isTeacher={isTeacher}
                 isAdmin={isAdmin}
                 isOpen={userMenuOpen}
-                onToggle={() => { setUserMenuOpen(!userMenuOpen); setCoursesOpen(false); setMoreOpen(false) }}
+                onToggle={() => { setUserMenuOpen(!userMenuOpen); setCoursesOpen(false); setExpandedSection(null); setMoreOpen(false) }}
                 onClose={() => setUserMenuOpen(false)}
               />
             ) : (
