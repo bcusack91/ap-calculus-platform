@@ -1,0 +1,221 @@
+// AP Chemistry question bank for competitive mode
+
+export interface ApChemistryQuestion {
+  id: number
+  question: string
+  options: string[]
+  correctAnswer: number
+  explanation: string
+  difficulty: 'easy' | 'medium' | 'hard'
+}
+
+const allQuestions: ApChemistryQuestion[] = [
+  // --- EASY ---
+  {
+    id: 1,
+    question: 'What is the atomic number of Carbon?',
+    options: ['6', '12', '8', '14'],
+    correctAnswer: 0,
+    explanation: 'Carbon has 6 protons, so its atomic number is 6.',
+    difficulty: 'easy',
+  },
+  {
+    id: 2,
+    question: 'Which type of bond involves sharing electrons between atoms?',
+    options: ['Covalent bond', 'Ionic bond', 'Metallic bond', 'Hydrogen bond'],
+    correctAnswer: 0,
+    explanation: 'Covalent bonds form when atoms share electron pairs.',
+    difficulty: 'easy',
+  },
+  {
+    id: 3,
+    question: 'What is Avogadro\'s number?',
+    options: ['$6.022 \\times 10^{23}$', '$3.14 \\times 10^{23}$', '$6.022 \\times 10^{22}$', '$1.602 \\times 10^{-19}$'],
+    correctAnswer: 0,
+    explanation: 'Avogadro\'s number ($6.022 \\times 10^{23}$) is the number of particles in one mole of a substance.',
+    difficulty: 'easy',
+  },
+  {
+    id: 4,
+    question: 'What is the pH of a neutral solution at 25°C?',
+    options: ['7', '0', '14', '1'],
+    correctAnswer: 0,
+    explanation: 'A neutral solution has equal concentrations of H⁺ and OH⁻, giving a pH of 7.',
+    difficulty: 'easy',
+  },
+  {
+    id: 5,
+    question: 'Which gas law states that pressure and volume are inversely proportional at constant temperature?',
+    options: ['Boyle\'s Law', 'Charles\'s Law', 'Avogadro\'s Law', 'Dalton\'s Law'],
+    correctAnswer: 0,
+    explanation: 'Boyle\'s Law: $PV = k$ (at constant T and n).',
+    difficulty: 'easy',
+  },
+  {
+    id: 6,
+    question: 'What is the electron configuration of Neon (Z=10)?',
+    options: ['$1s^2 2s^2 2p^6$', '$1s^2 2s^2 2p^4$', '$1s^2 2s^2 3s^2$', '$1s^2 2s^2 2p^6 3s^1$'],
+    correctAnswer: 0,
+    explanation: 'Neon has 10 electrons filling 1s², 2s², and 2p⁶ subshells completely.',
+    difficulty: 'easy',
+  },
+  {
+    id: 7,
+    question: 'What type of reaction is: $2H_2 + O_2 \\to 2H_2O$?',
+    options: ['Synthesis (combination)', 'Decomposition', 'Single replacement', 'Double replacement'],
+    correctAnswer: 0,
+    explanation: 'Two or more reactants combine to form a single product — this is a synthesis reaction.',
+    difficulty: 'easy',
+  },
+  {
+    id: 8,
+    question: 'Which element has the highest electronegativity?',
+    options: ['Fluorine', 'Oxygen', 'Chlorine', 'Nitrogen'],
+    correctAnswer: 0,
+    explanation: 'Fluorine has the highest electronegativity (3.98 on the Pauling scale).',
+    difficulty: 'easy',
+  },
+  // --- MEDIUM ---
+  {
+    id: 9,
+    question: 'What is the molarity of a solution containing 0.5 mol NaCl in 250 mL of solution?',
+    options: ['2.0 M', '0.5 M', '0.002 M', '1.0 M'],
+    correctAnswer: 0,
+    explanation: '$M = mol/L = 0.5/0.250 = 2.0$ M.',
+    difficulty: 'medium',
+  },
+  {
+    id: 10,
+    question: 'According to Le Chatelier\'s principle, adding more reactant to an equilibrium system will:',
+    options: ['Shift equilibrium toward products', 'Shift equilibrium toward reactants', 'Have no effect', 'Stop the reaction'],
+    correctAnswer: 0,
+    explanation: 'Adding reactant increases the forward reaction rate, shifting equilibrium toward products.',
+    difficulty: 'medium',
+  },
+  {
+    id: 11,
+    question: 'What is the oxidation state of Mn in $KMnO_4$?',
+    options: ['+7', '+4', '+2', '+5'],
+    correctAnswer: 0,
+    explanation: 'K = +1, O = -2(×4 = -8). So Mn = 8 - 1 = +7.',
+    difficulty: 'medium',
+  },
+  {
+    id: 12,
+    question: 'Which thermodynamic quantity determines reaction spontaneity?',
+    options: ['Gibbs free energy ($\\Delta G$)', 'Enthalpy ($\\Delta H$)', 'Entropy ($\\Delta S$)', 'Internal energy ($\\Delta U$)'],
+    correctAnswer: 0,
+    explanation: '$\\Delta G = \\Delta H - T\\Delta S$. A negative $\\Delta G$ indicates a spontaneous process.',
+    difficulty: 'medium',
+  },
+  {
+    id: 13,
+    question: 'What shape does a molecule with 4 bonding pairs and 0 lone pairs have?',
+    options: ['Tetrahedral', 'Trigonal pyramidal', 'Bent', 'Square planar'],
+    correctAnswer: 0,
+    explanation: 'VSEPR theory: 4 bonding pairs with no lone pairs gives a tetrahedral geometry (109.5° bond angles).',
+    difficulty: 'medium',
+  },
+  {
+    id: 14,
+    question: 'Which colligative property is described by the equation $\\Delta T_b = iK_bm$?',
+    options: ['Boiling point elevation', 'Freezing point depression', 'Osmotic pressure', 'Vapor pressure lowering'],
+    correctAnswer: 0,
+    explanation: 'The boiling point elevation equation uses the molal boiling-point elevation constant $K_b$.',
+    difficulty: 'medium',
+  },
+  {
+    id: 15,
+    question: 'In a galvanic cell, which electrode is the anode?',
+    options: ['The electrode where oxidation occurs', 'The electrode where reduction occurs', 'The positive electrode', 'The electrode with higher reduction potential'],
+    correctAnswer: 0,
+    explanation: 'The anode is always where oxidation occurs. In galvanic cells, the anode is the negative terminal.',
+    difficulty: 'medium',
+  },
+  {
+    id: 16,
+    question: 'What is the hybridization of carbon in methane ($CH_4$)?',
+    options: ['$sp^3$', '$sp^2$', '$sp$', '$sp^3d$'],
+    correctAnswer: 0,
+    explanation: 'Carbon in methane has 4 bonding pairs, requiring four $sp^3$ hybrid orbitals.',
+    difficulty: 'medium',
+  },
+  // --- HARD ---
+  {
+    id: 17,
+    question: 'For the reaction $2NO + O_2 \\to 2NO_2$, if the rate law is $rate = k[NO]^2[O_2]$, what is the overall order?',
+    options: ['Third order', 'Second order', 'First order', 'Zero order'],
+    correctAnswer: 0,
+    explanation: 'Overall order = sum of exponents = 2 + 1 = 3 (third order).',
+    difficulty: 'hard',
+  },
+  {
+    id: 18,
+    question: 'What is the $K_{sp}$ expression for $PbCl_2$?',
+    options: ['$[Pb^{2+}][Cl^-]^2$', '$[Pb^{2+}]^2[Cl^-]$', '$[Pb^{2+}][Cl^-]$', '$[PbCl_2]$'],
+    correctAnswer: 0,
+    explanation: '$PbCl_2 \\rightleftharpoons Pb^{2+} + 2Cl^-$, so $K_{sp} = [Pb^{2+}][Cl^-]^2$.',
+    difficulty: 'hard',
+  },
+  {
+    id: 19,
+    question: 'Calculate the cell potential for: $Zn|Zn^{2+}||Cu^{2+}|Cu$ given $E°_{Zn} = -0.76$ V, $E°_{Cu} = +0.34$ V.',
+    options: ['$+1.10$ V', '$+0.42$ V', '$-1.10$ V', '$-0.42$ V'],
+    correctAnswer: 0,
+    explanation: '$E°_{cell} = E°_{cathode} - E°_{anode} = 0.34 - (-0.76) = +1.10$ V.',
+    difficulty: 'hard',
+  },
+  {
+    id: 20,
+    question: 'The Henderson-Hasselbalch equation is:',
+    options: ['$pH = pK_a + \\log([A^-]/[HA])$', '$pH = pK_a - \\log([A^-]/[HA])$', '$pH = pK_b + \\log([HA]/[A^-])$', '$pH = 14 - pK_a$'],
+    correctAnswer: 0,
+    explanation: 'The Henderson-Hasselbalch equation relates pH to pKₐ and the ratio of conjugate base to acid.',
+    difficulty: 'hard',
+  },
+  {
+    id: 21,
+    question: 'What is the relationship between $K_p$ and $K_c$?',
+    options: ['$K_p = K_c(RT)^{\\Delta n}$', '$K_p = K_c / RT$', '$K_p = K_c \\cdot RT$', '$K_p = K_c^2$'],
+    correctAnswer: 0,
+    explanation: '$K_p = K_c(RT)^{\\Delta n}$ where $\\Delta n$ is the change in moles of gas.',
+    difficulty: 'hard',
+  },
+  {
+    id: 22,
+    question: 'Which quantum number determines the shape of an orbital?',
+    options: ['Angular momentum ($l$)', 'Principal ($n$)', 'Magnetic ($m_l$)', 'Spin ($m_s$)'],
+    correctAnswer: 0,
+    explanation: 'The angular momentum quantum number $l$ determines orbital shape (s, p, d, f).',
+    difficulty: 'hard',
+  },
+  {
+    id: 23,
+    question: 'At the equivalence point of a strong acid-weak base titration, the pH is:',
+    options: ['Less than 7', 'Equal to 7', 'Greater than 7', 'Equal to pKa'],
+    correctAnswer: 0,
+    explanation: 'At equivalence, only the conjugate acid of the weak base remains in solution, making the solution acidic (pH < 7).',
+    difficulty: 'hard',
+  },
+  {
+    id: 24,
+    question: 'What does a positive $\\Delta S_{universe}$ indicate about a process?',
+    options: ['The process is spontaneous', 'The process is nonspontaneous', 'The system is at equilibrium', 'The enthalpy is negative'],
+    correctAnswer: 0,
+    explanation: 'The second law of thermodynamics states that spontaneous processes increase the entropy of the universe ($\\Delta S_{univ} > 0$).',
+    difficulty: 'hard',
+  },
+  {
+    id: 25,
+    question: 'In a first-order reaction, the half-life:',
+    options: ['Is independent of initial concentration', 'Doubles as concentration doubles', 'Depends on temperature only', 'Equals $1/(k[A]_0)$'],
+    correctAnswer: 0,
+    explanation: 'For first-order reactions, $t_{1/2} = \\ln 2 / k = 0.693/k$, which is independent of $[A]_0$.',
+    difficulty: 'hard',
+  },
+]
+
+export function getApChemistryQuestions(count: number = 10): ApChemistryQuestion[] {
+  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+  return shuffled.slice(0, Math.min(count, shuffled.length))
+}

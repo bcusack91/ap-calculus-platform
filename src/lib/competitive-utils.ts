@@ -1,0 +1,409 @@
+// Utility functions for competitive match gameplay
+
+import { getQuestionSet } from '@/data/competitive-questions/reflection-refraction-bank'
+import { getDerivativeQuestions } from '@/data/competitive-questions/derivatives-bank'
+import { getLimitQuestions } from '@/data/competitive-questions/limits-bank'
+import { getIntegralQuestions } from '@/data/competitive-questions/integrals-bank'
+import { getAlgebraQuestions } from '@/data/competitive-questions/algebra-bank'
+import { getAlgebra2Questions, getUnlockedAlgebra2Subtopics } from '@/data/competitive-questions/algebra2-bank'
+import { getNegativeNumbersQuestions } from '@/data/competitive-questions/negative-numbers-bank'
+import { getSatPunctuationQuestions } from '@/data/competitive-questions/sat-punctuation-bank'
+import { getSatPunctuationGeneralQuestions } from '@/data/competitive-questions/sat-punctuation-general-bank'
+import { getParametricQuestions } from '@/data/competitive-questions/parametric-equations-bank'
+import { getVectorQuestions } from '@/data/competitive-questions/vectors-bank'
+import { getPolarQuestions } from '@/data/competitive-questions/polar-coordinates-bank'
+import { getApBiologyQuestions } from '@/data/competitive-questions/ap-biology-bank'
+import { getApChemistryQuestions } from '@/data/competitive-questions/ap-chemistry-bank'
+import { getApPsychologyQuestions } from '@/data/competitive-questions/ap-psychology-bank'
+import { getApStatisticsQuestions } from '@/data/competitive-questions/ap-statistics-bank'
+import { getApPhysics1Questions } from '@/data/competitive-questions/ap-physics1-bank'
+import { getSatMathQuestions } from '@/data/competitive-questions/sat-math-bank'
+import { getSatReadingQuestions } from '@/data/competitive-questions/sat-reading-bank'
+import { getActMathQuestions } from '@/data/competitive-questions/act-math-bank'
+import { getActScienceQuestions } from '@/data/competitive-questions/act-science-bank'
+import { getOChemQuestions } from '@/data/competitive-questions/ochem-bank'
+import { getPreCalcQuestions } from '@/data/competitive-questions/precalc-bank'
+import { getGeometryQuestions } from '@/data/competitive-questions/geometry-bank'
+
+interface UnitCirclePosition {
+  angle: number;
+  x: number;
+  y: number;
+  label: string;
+}
+
+interface Question {
+  id: number;
+  type: 'find-angle' | 'find-coordinate';
+  target: UnitCirclePosition;
+  prompt: string;
+  answerIndex: number; // Index in UNIT_CIRCLE_POSITIONS array
+}
+
+type OptionQuestion = {
+  options: string[];
+  correctAnswer: number;
+  [key: string]: unknown;
+}
+
+type MatchQuestion = {
+  id: number;
+  question?: string;
+  options?: string[];
+  correctAnswer?: number;
+  answerIndex?: number;
+  explanation?: string;
+  difficulty?: unknown;
+  type?: string;
+  [key: string]: unknown;
+}
+
+// All 16 unit circle positions
+export const UNIT_CIRCLE_POSITIONS: UnitCirclePosition[] = [
+  { angle: 0, x: 1, y: 0, label: '0°' },
+  { angle: 30, x: Math.sqrt(3)/2, y: 0.5, label: '30°' },
+  { angle: 45, x: Math.sqrt(2)/2, y: Math.sqrt(2)/2, label: '45°' },
+  { angle: 60, x: 0.5, y: Math.sqrt(3)/2, label: '60°' },
+  { angle: 90, x: 0, y: 1, label: '90°' },
+  { angle: 120, x: -0.5, y: Math.sqrt(3)/2, label: '120°' },
+  { angle: 135, x: -Math.sqrt(2)/2, y: Math.sqrt(2)/2, label: '135°' },
+  { angle: 150, x: -Math.sqrt(3)/2, y: 0.5, label: '150°' },
+  { angle: 180, x: -1, y: 0, label: '180°' },
+  { angle: 210, x: -Math.sqrt(3)/2, y: -0.5, label: '210°' },
+  { angle: 225, x: -Math.sqrt(2)/2, y: -Math.sqrt(2)/2, label: '225°' },
+  { angle: 240, x: -0.5, y: -Math.sqrt(3)/2, label: '240°' },
+  { angle: 270, x: 0, y: -1, label: '270°' },
+  { angle: 300, x: 0.5, y: -Math.sqrt(3)/2, label: '300°' },
+  { angle: 315, x: Math.sqrt(2)/2, y: -Math.sqrt(2)/2, label: '315°' },
+  { angle: 330, x: Math.sqrt(3)/2, y: -0.5, label: '330°' },
+];
+
+/**
+ * Shuffle the options array of an MCQ question so the correct answer
+ * doesn't always appear at the same index. Returns a new object with
+ * shuffled options and an updated correctAnswer / answerIndex.
+ */
+function shuffleOptions(q: OptionQuestion) {
+  const correctOption = q.options[q.correctAnswer]
+  const shuffled = [...q.options]
+  // Fisher-Yates shuffle
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  const newCorrectIndex = shuffled.indexOf(correctOption)
+  return { options: shuffled, correctAnswer: newCorrectIndex, answerIndex: newCorrectIndex }
+}
+
+/**
+ * Format coordinate for display with LaTeX
+ */
+function formatCoordinate(x: number, y: number): string {
+  const formatValue = (val: number): string => {
+    if (Math.abs(val) < 0.001) return '0';
+    if (Math.abs(val - 1) < 0.001) return '1';
+    if (Math.abs(val + 1) < 0.001) return '-1';
+    if (Math.abs(val - 0.5) < 0.001) return '\\frac{1}{2}';
+    if (Math.abs(val + 0.5) < 0.001) return '-\\frac{1}{2}';
+    if (Math.abs(val - Math.sqrt(2)/2) < 0.01) return '\\frac{\\sqrt{2}}{2}';
+    if (Math.abs(val + Math.sqrt(2)/2) < 0.01) return '-\\frac{\\sqrt{2}}{2}';
+    if (Math.abs(val - Math.sqrt(3)/2) < 0.01) return '\\frac{\\sqrt{3}}{2}';
+    if (Math.abs(val + Math.sqrt(3)/2) < 0.01) return '-\\frac{\\sqrt{3}}{2}';
+    return val.toFixed(2);
+  };
+
+  return `\\left(${formatValue(x)}, ${formatValue(y)}\\right)`;
+}
+
+/**
+ * Generate 10 random questions for a match
+ * Ensures variety by mixing angle and coordinate questions
+ */
+/**
+ * Generate 10 random questions for a match
+ * Ensures variety by mixing angle and coordinate questions
+ */
+export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[]): MatchQuestion[] {
+  // If topic is reflection-refraction, use that question bank
+  if (topicSlug === 'reflection-refraction') {
+    const questions = getQuestionSet(totalQuestions)
+    return questions.map((q, i) => {
+      const serializableQuestion = Object.fromEntries(
+        Object.entries(q as unknown as Record<string, unknown>).filter(([key]) => key !== 'generateQuestion')
+      ) as { options: string[]; [key: string]: unknown }
+      const shuffled = shuffleOptions({ options: serializableQuestion.options, correctAnswer: q.correctAnswer })
+      return {
+        ...serializableQuestion,
+        id: i,
+        options: shuffled.options,
+        correctAnswer: shuffled.correctAnswer,
+        answerIndex: shuffled.answerIndex,
+        type: 'multiple-choice'
+      }
+    })
+  }
+
+  // Multiple-choice question bank topics
+  const mcqBanks: Record<string, (count?: number) => OptionQuestion[]> = {
+    'derivatives': getDerivativeQuestions as unknown as (count?: number) => OptionQuestion[],
+    'limits': getLimitQuestions as unknown as (count?: number) => OptionQuestion[],
+    'integrals': getIntegralQuestions as unknown as (count?: number) => OptionQuestion[],
+    'algebra': getAlgebraQuestions as unknown as (count?: number) => OptionQuestion[],
+    'negative-numbers-grade6': getNegativeNumbersQuestions as unknown as (count?: number) => OptionQuestion[],
+    'sat-punctuation-commas-semicolons': getSatPunctuationQuestions as unknown as (count?: number) => OptionQuestion[],
+    'sat-punctuation': getSatPunctuationGeneralQuestions as unknown as (count?: number) => OptionQuestion[],
+    'parametric-equations': getParametricQuestions as unknown as (count?: number) => OptionQuestion[],
+    'vectors': getVectorQuestions as unknown as (count?: number) => OptionQuestion[],
+    'polar-coordinates': getPolarQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-biology': getApBiologyQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-chemistry': getApChemistryQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-psychology': getApPsychologyQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-statistics': getApStatisticsQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-physics1': getApPhysics1Questions as unknown as (count?: number) => OptionQuestion[],
+    'sat-math': getSatMathQuestions as unknown as (count?: number) => OptionQuestion[],
+    'sat-reading': getSatReadingQuestions as unknown as (count?: number) => OptionQuestion[],
+    'act-math': getActMathQuestions as unknown as (count?: number) => OptionQuestion[],
+    'act-science': getActScienceQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ochem': getOChemQuestions as unknown as (count?: number) => OptionQuestion[],
+    'precalc': getPreCalcQuestions as unknown as (count?: number) => OptionQuestion[],
+    'geometry': getGeometryQuestions as unknown as (count?: number) => OptionQuestion[],
+  }
+
+  if (topicSlug && topicSlug in mcqBanks) {
+    const questions = mcqBanks[topicSlug](totalQuestions)
+    return questions.map((q: OptionQuestion, i: number) => {
+      const shuffled = shuffleOptions(q)
+      return {
+        id: i,
+        question: q.question as string,
+        options: shuffled.options,
+        correctAnswer: shuffled.correctAnswer,
+        answerIndex: shuffled.answerIndex,
+        explanation: q.explanation as string,
+        difficulty: q.difficulty,
+        type: 'multiple-choice'
+      } as MatchQuestion
+    })
+  }
+
+  // Algebra 2: filter questions to only subtopics the student has completed
+  if (topicSlug === 'algebra2') {
+    const allowedSubtopics = completedTopics ? getUnlockedAlgebra2Subtopics(completedTopics) : undefined
+    const questions = getAlgebra2Questions(totalQuestions, allowedSubtopics)
+    return (questions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+      const shuffled = shuffleOptions(q)
+      return {
+        id: i,
+        question: q.question as string,
+        options: shuffled.options,
+        correctAnswer: shuffled.correctAnswer,
+        answerIndex: shuffled.answerIndex,
+        explanation: q.explanation as string,
+        difficulty: q.difficulty,
+        type: 'multiple-choice'
+      } as MatchQuestion
+    })
+  }
+
+  // If cumulative, get mixed questions from all available topics
+  if (topicSlug === 'cumulative') {
+    return generateCumulativeQuestions(totalQuestions, completedTopics)
+  }
+  
+  // Default: unit circle questions
+  const questions: Question[] = [];
+  const usedIndices = new Set<number>();
+
+  // Ensure we have a mix of question types
+  const questionTypes: ('find-angle' | 'find-coordinate')[] = [];
+  for (let i = 0; i < totalQuestions; i++) {
+    questionTypes.push(i % 2 === 0 ? 'find-angle' : 'find-coordinate');
+  }
+  
+  // Shuffle question types
+  for (let i = questionTypes.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [questionTypes[i], questionTypes[j]] = [questionTypes[j], questionTypes[i]];
+  }
+
+  for (let i = 0; i < totalQuestions; i++) {
+    // Pick a random position that hasn't been used yet
+    let randomIndex: number;
+    do {
+      randomIndex = Math.floor(Math.random() * UNIT_CIRCLE_POSITIONS.length);
+    } while (usedIndices.has(randomIndex));
+    
+    usedIndices.add(randomIndex);
+    const position = UNIT_CIRCLE_POSITIONS[randomIndex];
+    const type = questionTypes[i];
+
+    let prompt: string;
+    if (type === 'find-angle') {
+      // Given coordinate, find angle
+      prompt = `Click the position for angle ${position.angle}°`;
+    } else {
+      // Given angle, find coordinate
+      const coord = formatCoordinate(position.x, position.y);
+      prompt = `Click the position for coordinate ${coord}`;
+    }
+
+    questions.push({
+      id: i,
+      type,
+      target: position,
+      prompt,
+      answerIndex: randomIndex, // Store the correct answer index
+    });
+  }
+
+  return questions as unknown as MatchQuestion[];
+}
+
+/**
+ * Generate cumulative questions from multiple topics
+ */
+function generateCumulativeQuestions(totalQuestions: number, completedTopics?: string[]): MatchQuestion[] {
+  const questions: MatchQuestion[] = []
+
+  // Gather questions from all MCQ banks
+  const allBankQuestions: MatchQuestion[] = []
+
+  // Unit circle questions
+  const ucQuestions = generateMatchQuestions(3, 'the-unit-circle')
+  allBankQuestions.push(...ucQuestions)
+
+  // Reflection-refraction questions
+  const rrQuestions = getQuestionSet(2).map((q, i) => {
+    const serializableQuestion = Object.fromEntries(
+      Object.entries(q as unknown as Record<string, unknown>).filter(([key]) => key !== 'generateQuestion')
+    ) as Record<string, unknown>
+    return {
+      ...serializableQuestion,
+      id: i,
+      answerIndex: q.correctAnswer,
+      type: 'multiple-choice'
+    } as MatchQuestion
+  })
+  allBankQuestions.push(...rrQuestions)
+
+  // Derivatives
+  const dQuestions = getDerivativeQuestions(2).map((q, i) => {
+    const shuffled = shuffleOptions(q as unknown as OptionQuestion)
+    return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
+  })
+  allBankQuestions.push(...dQuestions)
+
+  // Limits
+  const lQuestions = getLimitQuestions(2).map((q, i) => {
+    const shuffled = shuffleOptions(q as unknown as OptionQuestion)
+    return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
+  })
+  allBankQuestions.push(...lQuestions)
+
+  // Integrals
+  const iQuestions = getIntegralQuestions(1).map((q, i) => {
+    const shuffled = shuffleOptions(q as unknown as OptionQuestion)
+    return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
+  })
+  allBankQuestions.push(...iQuestions)
+
+  // Algebra 2 — filtered to completed subtopics only
+  const allowedSubtopics = completedTopics ? getUnlockedAlgebra2Subtopics(completedTopics) : undefined
+  const a2Questions = getAlgebra2Questions(1, allowedSubtopics).map((q, i) => {
+    const shuffled = shuffleOptions(q as unknown as OptionQuestion)
+    return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
+  })
+  allBankQuestions.push(...a2Questions)
+
+  // Parametric equations
+  const paramQuestions = getParametricQuestions(1).map((q, i) => {
+    const shuffled = shuffleOptions(q as unknown as OptionQuestion)
+    return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
+  })
+  allBankQuestions.push(...paramQuestions)
+
+  // Vectors
+  const vecQuestions = getVectorQuestions(1).map((q, i) => {
+    const shuffled = shuffleOptions(q as unknown as OptionQuestion)
+    return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
+  })
+  allBankQuestions.push(...vecQuestions)
+
+  // Polar coordinates
+  const polarQuestions = getPolarQuestions(1).map((q, i) => {
+    const shuffled = shuffleOptions(q as unknown as OptionQuestion)
+    return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
+  })
+  allBankQuestions.push(...polarQuestions)
+
+  questions.push(...allBankQuestions)
+
+  // Shuffle the combined questions
+  for (let i = questions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [questions[i], questions[j]] = [questions[j], questions[i]]
+  }
+
+  // Take only what we need and re-index
+  const result = questions.slice(0, totalQuestions)
+  result.forEach((q, i) => q.id = i)
+
+  return result
+}
+
+/**
+ * Check if the clicked position matches the target
+ */
+export function checkAnswer(
+  clickedIndex: number,
+  targetPosition: UnitCirclePosition
+): boolean {
+  const clicked = UNIT_CIRCLE_POSITIONS[clickedIndex];
+  
+  // Check if angle matches (with some tolerance for floating point)
+  return Math.abs(clicked.angle - targetPosition.angle) < 0.1;
+}
+
+/**
+ * Calculate Elo MMR change
+ */
+export function calculateMMRChange(
+  playerMMR: number,
+  opponentMMR: number,
+  playerWon: boolean,
+  totalMatches: number
+): number {
+  // Determine K-factor based on experience
+  let kFactor: number;
+  if (totalMatches < 10) {
+    kFactor = 40; // New players
+  } else if (totalMatches < 30) {
+    kFactor = 32; // Intermediate
+  } else if (playerMMR >= 2000) {
+    kFactor = 16; // High-rated players
+  } else {
+    kFactor = 24; // Experienced players
+  }
+
+  // Calculate expected score
+  const expectedScore = 1 / (1 + Math.pow(10, (opponentMMR - playerMMR) / 400));
+  
+  // Actual score (1 for win, 0 for loss, 0.5 for tie - though we don't have ties in this game)
+  const actualScore = playerWon ? 1 : 0;
+  
+  // Calculate MMR change
+  const mmrChange = Math.round(kFactor * (actualScore - expectedScore));
+  
+  return mmrChange;
+}
+
+/**
+ * Determine rank based on MMR
+ */
+export function getRankFromMMR(mmr: number): string {
+  if (mmr >= 2200) return 'Diamond';
+  if (mmr >= 1800) return 'Platinum';
+  if (mmr >= 1400) return 'Gold';
+  if (mmr >= 1000) return 'Silver';
+  return 'Bronze';
+}
