@@ -52,7 +52,7 @@ export const mcatPsychBehavPart4Data = {
         questions: [
           {
             question: `A 4-year-old child watches liquid poured from a short wide glass into a tall narrow glass and says there is now "more." This demonstrates:`,
-            options: [`Lack of conservation — a hallmark of Piaget\`s preoperational stage`, `Object permanence failure`, `Concrete operational thinking`, `Formal operational thinking'`],
+            options: ["Lack of conservation — a hallmark of Piaget's preoperational stage", "Object permanence failure", "Concrete operational thinking", "Formal operational thinking"],
             correctAnswer: 0,
             explanation: `Preoperational children (ages 2-7) lack conservation — they can't understand that quantity stays the same when appearance changes. They focus on ONE dimension (height) and ignore another (width).`
           }

@@ -46,7 +46,7 @@ export const mcatPsychBehavPart6Data = {
         questions: [
           {
             question: `A patient can understand speech perfectly but produces garbled, nonsensical output. The damaged area is most likely:`,
-            options: [`Broca\`s area (frontal lobe) — responsible for speech PRODUCTION`, `Wernicke\`s area (temporal lobe)`, `Occipital lobe`, `Cerebellum`],
+            options: ["Broca's area (frontal lobe) — responsible for speech PRODUCTION", "Wernicke's area (temporal lobe)", "Occipital lobe", "Cerebellum"],
             correctAnswer: 0,
             explanation: `Broca's area damage = Broca's aphasia (nonfluent): comprehension intact but speech production is slow, labored, agrammatic. Wernicke's damage = fluent but nonsensical speech with poor comprehension.`
           }
