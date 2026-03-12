@@ -79,6 +79,23 @@ export default function CompetitivePage() {
 
   const joinQueue = async () => {
     try {
+      // Team Battle uses separate queue endpoint and match page
+      if (selectedMode === 'TEAM_BATTLE') {
+        const res = await fetch('/api/competitive/team-queue', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topicSlug: selectedTopic })
+        })
+        const data: QueueStatus = await res.json()
+        if (data.status === 'matched') {
+          router.push(`/competitive/team-match/${data.matchId}`)
+        } else {
+          setInQueue(true)
+          setQueueStatus(data)
+        }
+        return
+      }
+
       const res = await fetch('/api/competitive/queue', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -103,7 +120,11 @@ export default function CompetitivePage() {
 
   const leaveQueue = async () => {
     try {
-      await fetch('/api/competitive/queue', { method: 'DELETE' })
+      if (selectedMode === 'TEAM_BATTLE') {
+        await fetch('/api/competitive/team-queue', { method: 'DELETE' })
+      } else {
+        await fetch('/api/competitive/queue', { method: 'DELETE' })
+      }
       setInQueue(false)
       setQueueStatus(null)
     } catch (error) {
@@ -135,23 +156,26 @@ export default function CompetitivePage() {
 
   const checkQueue = useCallback(async () => {
     try {
-      const res = await fetch('/api/competitive/queue')
+      const endpoint = selectedMode === 'TEAM_BATTLE' ? '/api/competitive/team-queue' : '/api/competitive/queue'
+      const res = await fetch(endpoint)
       const data: QueueStatus = await res.json()
 
       if (data.status === 'not_in_queue') {
         setInQueue(false)
         setQueueStatus(null)
       } else if (data.status === 'matched') {
-        // Match found! Redirect to the match
         setInQueue(false)
-        router.push(`/competitive/match/${data.matchId}`)
+        const matchUrl = selectedMode === 'TEAM_BATTLE'
+          ? `/competitive/team-match/${data.matchId}`
+          : `/competitive/match/${data.matchId}`
+        router.push(matchUrl)
       } else {
         setQueueStatus(data)
       }
     } catch (error) {
       console.error('Error checking queue:', error)
     }
-  }, [router])
+  }, [router, selectedMode])
 
   // Redirect to signin if not authenticated
   useEffect(() => {
@@ -914,7 +938,7 @@ export default function CompetitivePage() {
         </div>
 
         {/* Game Modes */}
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
           <div 
             onClick={() => setSelectedMode('SPEED_RACE')}
             className={`bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 cursor-pointer transition-all ${
@@ -936,6 +960,18 @@ export default function CompetitivePage() {
             <h3 className="text-2xl font-bold mb-2">🎯 Accuracy Challenge</h3>
             <p className="text-gray-600 dark:text-gray-400">
               Highest accuracy on 20 problems wins!
+            </p>
+          </div>
+
+          <div 
+            onClick={() => setSelectedMode('TEAM_BATTLE')}
+            className={`bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 cursor-pointer transition-all ${
+              selectedMode === 'TEAM_BATTLE' ? 'ring-4 ring-orange-500' : ''
+            }`}
+          >
+            <h3 className="text-2xl font-bold mb-2">👥 Team Battle 2v2</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Team up! First team to 15 combined points wins!
             </p>
           </div>
         </div>
@@ -985,12 +1021,22 @@ export default function CompetitivePage() {
             </div>
           ) : (
             <div className="text-center">
-              <div className="text-4xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold mb-4">Searching for opponent...</h3>
+              <div className="text-4xl mb-4">{selectedMode === 'TEAM_BATTLE' ? '👥' : '🔍'}</div>
+              <h3 className="text-2xl font-bold mb-4">
+                {selectedMode === 'TEAM_BATTLE'
+                  ? `Finding teammates... (${queueStatus?.playersInQueue || 1}/4 players)`
+                  : 'Searching for opponent...'}
+              </h3>
               <div className="text-gray-600 dark:text-gray-400 mb-6">
-                Queue Position: {queueStatus?.position || '...'}
-                <br />
-                Estimated Wait: ~{queueStatus?.estimatedWait || '...'}s
+                {selectedMode === 'TEAM_BATTLE' ? (
+                  <>Need {4 - (Number(queueStatus?.playersInQueue) || 1)} more players</>
+                ) : (
+                  <>
+                    Queue Position: {queueStatus?.position || '...'}
+                    <br />
+                    Estimated Wait: ~{queueStatus?.estimatedWait || '...'}s
+                  </>
+                )}
               </div>
               <button
                 onClick={leaveQueue}
