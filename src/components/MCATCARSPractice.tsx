@@ -35,12 +35,12 @@ export function MCATCARSPractice({ passages }: MCATCARSPracticeProps) {
       setElapsedSeconds((s) => s + 1)
     }, 1000)
     // Store interval ID on window for cleanup
-    ;(window as Record<string, unknown>).__carsTimer = interval
+    ;(window as unknown as Record<string, unknown>).__carsTimer = interval
   }
 
   const handleSubmit = () => {
     setTimerActive(false)
-    const timerId = (window as Record<string, unknown>).__carsTimer
+    const timerId = (window as unknown as Record<string, unknown>).__carsTimer
     if (timerId) clearInterval(timerId as number)
     setShowResults(true)
   }

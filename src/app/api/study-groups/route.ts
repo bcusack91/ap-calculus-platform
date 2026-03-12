@@ -18,7 +18,7 @@ export async function GET() {
           select: {
             id: true,
             name: true,
-            code: true,
+            joinCode: true,
             teacher: { select: { name: true, image: true } },
             _count: { select: { members: true } },
           },
@@ -29,10 +29,9 @@ export async function GET() {
     const groups = memberships.map(m => ({
       id: m.classroom.id,
       name: m.classroom.name,
-      code: m.classroom.code,
+      code: m.classroom.joinCode,
       memberCount: m.classroom._count.members,
-      creatorName: m.classroom.teacher.name,
-      role: m.role,
+      creatorName: m.classroom.teacher?.name ?? 'Unknown',
     }))
 
     return NextResponse.json({ groups })
@@ -62,13 +61,12 @@ export async function POST(request: Request) {
     const classroom = await prisma.classroom.create({
       data: {
         name: name.trim().slice(0, 100),
-        code,
+        joinCode: code,
         teacherId: session.user.id,
         subject: subject ?? null,
         members: {
           create: {
             userId: session.user.id,
-            role: 'TEACHER',
           },
         },
       },
@@ -78,7 +76,7 @@ export async function POST(request: Request) {
       group: {
         id: classroom.id,
         name: classroom.name,
-        code: classroom.code,
+        code: classroom.joinCode,
       },
     })
   } catch (error) {

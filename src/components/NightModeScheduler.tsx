@@ -7,21 +7,20 @@ interface NightScheduleProps {
 }
 
 export default function NightModeScheduler({ onScheduleChange }: NightScheduleProps) {
-  const [enabled, setEnabled] = useState(false)
-  const [startTime, setStartTime] = useState('20:00')
-  const [endTime, setEndTime] = useState('07:00')
-
-  useEffect(() => {
+  const [schedule] = useState(() => {
+    if (typeof window === 'undefined') return { enabled: false, start: '20:00', end: '07:00' }
     const saved = localStorage.getItem('night-mode-schedule')
     if (saved) {
       try {
         const { enabled: e, start, end } = JSON.parse(saved)
-        setEnabled(e)
-        setStartTime(start)
-        setEndTime(end)
+        return { enabled: e, start, end }
       } catch { /* silent */ }
     }
-  }, [])
+    return { enabled: false, start: '20:00', end: '07:00' }
+  })
+  const [enabled, setEnabled] = useState(schedule.enabled)
+  const [startTime, setStartTime] = useState(schedule.start)
+  const [endTime, setEndTime] = useState(schedule.end)
 
   useEffect(() => {
     if (!enabled) return

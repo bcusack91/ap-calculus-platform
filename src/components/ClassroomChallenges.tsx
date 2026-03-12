@@ -61,6 +61,7 @@ const SAMPLE_CHALLENGES: ClassChallenge[] = [
 
 export function ClassroomChallenges({ challenges = SAMPLE_CHALLENGES }: { challenges?: ClassChallenge[] }) {
   const [expanded, setExpanded] = useState<string | null>(null)
+  const [nowRef] = useState(() => Date.now())
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
@@ -70,7 +71,7 @@ export function ClassroomChallenges({ challenges = SAMPLE_CHALLENGES }: { challe
       <div className="space-y-3">
         {challenges.map(challenge => {
           const progress = Math.min(100, (challenge.current / challenge.goal) * 100)
-          const daysLeft = Math.max(0, Math.ceil((new Date(challenge.deadline).getTime() - Date.now()) / 86400000))
+          const daysLeft = Math.max(0, Math.ceil((new Date(challenge.deadline).getTime() - nowRef) / 86400000))
 
           return (
             <div

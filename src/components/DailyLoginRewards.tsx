@@ -45,25 +45,23 @@ function todayStr(): string {
 }
 
 export function DailyLoginRewards({ onClaimXP }: { onClaimXP?: (xp: number) => void }) {
-  const [state, setState] = useState<LoginState>(getLoginState)
-  const [showClaimed, setShowClaimed] = useState(false)
-
-  useEffect(() => {
+  const [state, setState] = useState<LoginState>(() => {
+    const base = getLoginState()
     const today = todayStr()
-    if (state.lastLogin === today) {
-      setState(prev => ({ ...prev, claimedToday: true }))
-    } else {
-      const yesterday = new Date()
-      yesterday.setDate(yesterday.getDate() - 1)
-      const yesterdayStr = yesterday.toISOString().split('T')[0]
-      const isConsecutive = state.lastLogin === yesterdayStr
-      setState(prev => ({
-        ...prev,
-        consecutiveDays: isConsecutive ? prev.consecutiveDays : 0,
-        claimedToday: false,
-      }))
+    if (base.lastLogin === today) {
+      return { ...base, claimedToday: true }
     }
-  }, [state.lastLogin])
+    const yesterday = new Date()
+    yesterday.setDate(yesterday.getDate() - 1)
+    const yesterdayStr = yesterday.toISOString().split('T')[0]
+    const isConsecutive = base.lastLogin === yesterdayStr
+    return {
+      ...base,
+      consecutiveDays: isConsecutive ? base.consecutiveDays : 0,
+      claimedToday: false,
+    }
+  })
+  const [showClaimed, setShowClaimed] = useState(false)
 
   useEffect(() => {
     localStorage.setItem('studymondo_daily_login', JSON.stringify(state))

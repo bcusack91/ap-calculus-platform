@@ -40,11 +40,11 @@ export async function POST(request: Request) {
         },
         quizAttempts: {
           where: {
-            createdAt: {
+            startedAt: {
               gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
             },
           },
-          select: { score: true, total: true },
+          select: { score: true, maxScore: true },
         },
       },
     })
@@ -62,7 +62,7 @@ export async function POST(request: Request) {
       const quizzesTaken = user.quizAttempts.length
       const avgScore = quizzesTaken > 0
         ? Math.round(
-            user.quizAttempts.reduce((sum, q) => sum + (q.score / q.total) * 100, 0) / quizzesTaken
+            user.quizAttempts.reduce((sum, q) => sum + (q.maxScore > 0 ? (q.score / q.maxScore) * 100 : 0), 0) / quizzesTaken
           )
         : 0
       const streak = user.dailyStreak?.currentStreak ?? 0

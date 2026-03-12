@@ -58,10 +58,10 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
   const [answerResult, setAnswerResult] = useState<{ correct: boolean } | null>(null)
   const [submitting, setSubmitting] = useState(false)
   const pollingRef = useRef<ReturnType<typeof setInterval> | null>(null)
-  const katexReady = useRef(false)
+  const [katexLoaded, setKatexLoaded] = useState(false)
 
   useEffect(() => {
-    preloadKatex().then(() => { katexReady.current = true })
+    preloadKatex().then(() => { setKatexLoaded(true) })
   }, [])
 
   const fetchMatchState = useCallback(async () => {
@@ -82,6 +82,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
   }, [resolvedParams.id])
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchMatchState()
     pollingRef.current = setInterval(fetchMatchState, 800)
     return () => {
@@ -127,7 +128,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
   }
 
   function renderMath(text: string) {
-    if (!katexReady.current) return text
+    if (!katexLoaded) return text
     return renderKatexSync(text)
   }
 

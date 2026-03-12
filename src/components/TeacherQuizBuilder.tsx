@@ -28,14 +28,14 @@ interface CustomQuiz {
 }
 
 export function TeacherQuizBuilder() {
-  const [quiz, setQuiz] = useState<CustomQuiz>({
+  const [quiz, setQuiz] = useState<CustomQuiz>(() => ({
     id: `quiz-${Date.now()}`,
     title: '',
     subject: '',
     timeLimit: 0,
     questions: [],
     createdAt: new Date().toISOString(),
-  })
+  }))
   const [currentQuestion, setCurrentQuestion] = useState<Partial<QuizQuestion>>({
     type: 'multiple-choice',
     options: ['', '', '', ''],

@@ -44,11 +44,12 @@ export function ClassAnalytics({ students = SAMPLE_STUDENTS }: { students?: Stud
     })
   }, [students, sortBy, sortDir])
 
+  const [now] = useState(() => Date.now())
   const classAvg = Math.round(students.reduce((s, st) => s + st.avgScore, 0) / students.length)
-  const activeCount = students.filter(s => {
-    const diff = (Date.now() - new Date(s.lastActive).getTime()) / 86400000
+  const activeCount = useMemo(() => students.filter(s => {
+    const diff = (now - new Date(s.lastActive).getTime()) / 86400000
     return diff <= 3
-  }).length
+  }).length, [students, now])
   const atRisk = students.filter(s => s.avgScore < 70 || s.streak === 0).length
 
   const toggleSort = (field: SortField) => {
@@ -102,7 +103,7 @@ export function ClassAnalytics({ students = SAMPLE_STUDENTS }: { students?: Stud
           </thead>
           <tbody>
             {sorted.map(student => {
-              const daysInactive = Math.floor((Date.now() - new Date(student.lastActive).getTime()) / 86400000)
+              const daysInactive = Math.floor((now - new Date(student.lastActive).getTime()) / 86400000)
               return (
                 <tr key={student.id} className="border-b border-gray-100 dark:border-gray-700/50 hover:bg-gray-50 dark:hover:bg-gray-700/30">
                   <td className="py-2 px-2 font-medium text-gray-900 dark:text-white">

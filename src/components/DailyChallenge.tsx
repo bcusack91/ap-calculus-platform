@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 
 /**
  * #185: Daily Challenge (One Hard Problem)
@@ -135,13 +135,11 @@ export function DailyChallenge({ onAwardXP }: { onAwardXP?: (xp: number) => void
   const [problem] = useState(getTodayProblem)
   const [selected, setSelected] = useState<string | null>(null)
   const [showResult, setShowResult] = useState(false)
-  const [alreadySolved, setAlreadySolved] = useState(false)
-
-  useEffect(() => {
+  const [alreadySolved, setAlreadySolved] = useState(() => {
+    if (typeof window === 'undefined') return false
     const today = new Date().toISOString().split('T')[0]
-    const solved = localStorage.getItem('studymondo_daily_challenge_date')
-    if (solved === today) setAlreadySolved(true)
-  }, [])
+    return localStorage.getItem('studymondo_daily_challenge_date') === today
+  })
 
   const submitAnswer = useCallback(() => {
     if (!selected || alreadySolved) return

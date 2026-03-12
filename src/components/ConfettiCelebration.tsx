@@ -9,6 +9,9 @@ interface ConfettiPiece {
   delay: number
   duration: number
   size: number
+  borderRadius: string
+  rotation: number
+  translateDir: string
 }
 
 interface ConfettiCelebrationProps {
@@ -29,6 +32,9 @@ export default function ConfettiCelebration({ trigger, onComplete }: ConfettiCel
       delay: Math.random() * 0.5,
       duration: 1.5 + Math.random() * 2,
       size: 6 + Math.random() * 8,
+      borderRadius: Math.random() > 0.5 ? '50%' : '2px',
+      rotation: Math.random() * 360,
+      translateDir: Math.random() > 0.5 ? '' : '-',
     }))
     setPieces(newPieces)
     setTimeout(() => {
@@ -38,6 +44,7 @@ export default function ConfettiCelebration({ trigger, onComplete }: ConfettiCel
   }, [onComplete])
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (trigger) launch()
   }, [trigger, launch])
 
@@ -54,18 +61,18 @@ export default function ConfettiCelebration({ trigger, onComplete }: ConfettiCel
             width: p.size,
             height: p.size,
             backgroundColor: p.color,
-            borderRadius: Math.random() > 0.5 ? '50%' : '2px',
-            animation: `confetti-fall ${p.duration}s ease-in ${p.delay}s forwards`,
-            transform: `rotate(${Math.random() * 360}deg)`,
+            borderRadius: p.borderRadius,
+            animation: `confetti-fall-${p.id} ${p.duration}s ease-in ${p.delay}s forwards`,
+            transform: `rotate(${p.rotation}deg)`,
           }}
         />
       ))}
-      <style>{`
-        @keyframes confetti-fall {
+      <style>{pieces.map(p => `
+        @keyframes confetti-fall-${p.id} {
           0% { top: -10px; opacity: 1; transform: rotate(0deg) translateX(0); }
-          100% { top: 110vh; opacity: 0; transform: rotate(720deg) translateX(${Math.random() > 0.5 ? '' : '-'}80px); }
+          100% { top: 110vh; opacity: 0; transform: rotate(720deg) translateX(${p.translateDir}80px); }
         }
-      `}</style>
+      `).join('')}</style>
     </div>
   )
 }

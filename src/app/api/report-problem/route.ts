@@ -19,8 +19,7 @@ export async function POST(request: Request) {
       await prisma.studentNote.create({
         data: {
           userId: session.user.id,
-          topicSlug: topicSlug ?? 'general',
-          part: 0,
+          topicSlug: topicSlug ?? 'report-general',
           content: JSON.stringify({
             type: 'problem-report',
             category,

@@ -29,14 +29,6 @@ const TIER_META: Record<Tier, { label: string; icon: string; color: string; minS
   grandmaster: { label: 'Grandmaster', icon: '🏆', color: 'text-red-500', minScore: 5000 },
 }
 
-function getTier(score: number): Tier {
-  const tiers: Tier[] = ['grandmaster', 'master', 'diamond', 'platinum', 'gold', 'silver', 'bronze']
-  for (const t of tiers) {
-    if (score >= TIER_META[t].minScore) return t
-  }
-  return 'bronze'
-}
-
 const SAMPLE_LEADERBOARD: RankedPlayer[] = [
   { id: '1', name: 'MathWhiz99', score: 5250, wins: 142, losses: 23, tier: 'grandmaster', rank: 1 },
   { id: '2', name: 'CalcMaster', score: 4800, wins: 128, losses: 31, tier: 'master', rank: 2 },

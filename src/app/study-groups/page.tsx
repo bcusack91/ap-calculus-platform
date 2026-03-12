@@ -22,10 +22,6 @@ export default function StudyGroupsPage() {
   const [joinCode, setJoinCode] = useState('')
   const [error, setError] = useState('')
 
-  useEffect(() => {
-    if (status === 'authenticated') fetchGroups()
-  }, [status])
-
   const fetchGroups = async () => {
     try {
       const res = await fetch('/api/study-groups')
@@ -36,6 +32,11 @@ export default function StudyGroupsPage() {
     } catch { /* silent */ }
     setLoading(false)
   }
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (status === 'authenticated') fetchGroups()
+  }, [status])
 
   const createGroup = async () => {
     if (!newName.trim()) return

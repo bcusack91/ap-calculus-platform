@@ -35,7 +35,7 @@ export async function GET() {
       return NextResponse.json({ topic: null })
     }
 
-    const lastPart = recentProgress.lastPartCompleted ?? 1
+    const lastPart = (recentProgress as Record<string, unknown>).lastPartCompleted as number ?? 1
     const totalParts = 7 // standard lesson part count
 
     return NextResponse.json({

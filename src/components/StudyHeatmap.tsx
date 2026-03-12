@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useMemo } from 'react'
 
 /**
  * #189: Study Heatmap on Profile
@@ -54,37 +54,31 @@ const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 const DAYS = ['', 'Mon', '', 'Wed', '', 'Fri', '']
 
 export function StudyHeatmap({ data }: { data?: StudyDay[] }) {
-  const [studyData, setStudyData] = useState<StudyDay[]>(data || [])
+  const [studyData] = useState<StudyDay[]>(() => {
+    if (data) return data
+    if (typeof window === 'undefined') return []
+    try {
+      const stored = localStorage.getItem('studymondo_study_log')
+      if (stored) return JSON.parse(stored)
+    } catch { /* ignore */ }
+    return generateSampleData()
+  })
   const [hoveredDay, setHoveredDay] = useState<StudyDay | null>(null)
 
-  useEffect(() => {
-    if (!data) {
-      // Load from localStorage or generate sample
-      try {
-        const stored = localStorage.getItem('studymondo_study_log')
-        if (stored) {
-          setStudyData(JSON.parse(stored))
-        } else {
-          setStudyData(generateSampleData())
-        }
-      } catch {
-        setStudyData(generateSampleData())
-      }
-    }
-  }, [data])
+  const displayData = data || studyData
 
   const { weeks, totalMinutes, totalDays, currentStreak, longestStreak } = useMemo(() => {
     // Group into weeks (columns)
     const weeksArr: (StudyDay | null)[][] = []
     let currentWeek: (StudyDay | null)[] = []
 
-    if (studyData.length > 0) {
-      const firstDay = new Date(studyData[0].date).getDay()
+    if (displayData.length > 0) {
+      const firstDay = new Date(displayData[0].date).getDay()
       // Pad first week
       for (let i = 0; i < firstDay; i++) currentWeek.push(null)
     }
 
-    for (const day of studyData) {
+    for (const day of displayData) {
       currentWeek.push(day)
       if (currentWeek.length === 7) {
         weeksArr.push(currentWeek)
@@ -96,21 +90,21 @@ export function StudyHeatmap({ data }: { data?: StudyDay[] }) {
       weeksArr.push(currentWeek)
     }
 
-    const totalMin = studyData.reduce((sum, d) => sum + d.minutes, 0)
-    const activeDays = studyData.filter(d => d.minutes > 0).length
+    const totalMin = displayData.reduce((sum, d) => sum + d.minutes, 0)
+    const activeDays = displayData.filter(d => d.minutes > 0).length
 
     // Calculate streaks
     let currStrk = 0
     let maxStrk = 0
     let tempStrk = 0
-    for (let i = studyData.length - 1; i >= 0; i--) {
-      if (studyData[i].minutes > 0) {
+    for (let i = displayData.length - 1; i >= 0; i--) {
+      if (displayData[i].minutes > 0) {
         tempStrk++
-        if (i === studyData.length - 1 || (i < studyData.length - 1 && studyData[i+1].minutes > 0)) {
+        if (i === displayData.length - 1 || (i < displayData.length - 1 && displayData[i+1].minutes > 0)) {
           currStrk = tempStrk
         }
       } else {
-        if (i >= studyData.length - 2) currStrk = tempStrk
+        if (i >= displayData.length - 2) currStrk = tempStrk
         maxStrk = Math.max(maxStrk, tempStrk)
         tempStrk = 0
       }
@@ -118,7 +112,7 @@ export function StudyHeatmap({ data }: { data?: StudyDay[] }) {
     maxStrk = Math.max(maxStrk, tempStrk)
 
     return { weeks: weeksArr, totalMinutes: totalMin, totalDays: activeDays, currentStreak: currStrk, longestStreak: maxStrk }
-  }, [studyData])
+  }, [displayData])
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5">

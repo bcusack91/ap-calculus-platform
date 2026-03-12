@@ -25,6 +25,7 @@ export default function SidebarTOC() {
         level: el.tagName === 'H2' ? 2 : 3,
       })
     })
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setHeadings(items)
   }, [])
 

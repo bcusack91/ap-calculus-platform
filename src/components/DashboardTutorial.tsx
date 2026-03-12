@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 interface Step {
   title: string
@@ -19,13 +19,12 @@ const STEPS: Step[] = [
 ]
 
 export default function DashboardTutorial() {
-  const [step, setStep] = useState(-1) // -1 = not showing
-  const [dismissed, setDismissed] = useState(false)
-
-  useEffect(() => {
+  const [step, setStep] = useState(() => {
+    if (typeof window === 'undefined') return -1
     const seen = localStorage.getItem('dashboard-tutorial-completed')
-    if (!seen) setStep(0)
-  }, [])
+    return seen ? -1 : 0
+  })
+  const [dismissed, setDismissed] = useState(false)
 
   const complete = () => {
     setStep(-1)

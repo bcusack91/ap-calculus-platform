@@ -8,13 +8,9 @@ interface TextToSpeechProps {
 
 export default function TextToSpeech({ text }: TextToSpeechProps) {
   const [speaking, setSpeaking] = useState(false)
-  const [supported, setSupported] = useState(false)
+  const [supported] = useState(() => typeof window !== 'undefined' && 'speechSynthesis' in window)
   const [rate, setRate] = useState(1)
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null)
-
-  useEffect(() => {
-    setSupported('speechSynthesis' in window)
-  }, [])
 
   const stop = useCallback(() => {
     speechSynthesis.cancel()

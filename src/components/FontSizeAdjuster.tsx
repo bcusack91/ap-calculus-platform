@@ -10,18 +10,19 @@ const SIZES = [
 ]
 
 export default function FontSizeAdjuster() {
-  const [size, setSize] = useState(16)
-
-  useEffect(() => {
+  const [size, setSize] = useState(() => {
+    if (typeof window === 'undefined') return 16
     const saved = localStorage.getItem('preferred-font-size')
     if (saved) {
       const parsed = parseInt(saved, 10)
-      if (parsed >= 12 && parsed <= 24) {
-        setSize(parsed)
-        document.documentElement.style.setProperty('--content-font-size', `${parsed}px`)
-      }
+      if (parsed >= 12 && parsed <= 24) return parsed
     }
-  }, [])
+    return 16
+  })
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--content-font-size', `${size}px`)
+  }, [size])
 
   const changeSize = (newSize: number) => {
     setSize(newSize)
