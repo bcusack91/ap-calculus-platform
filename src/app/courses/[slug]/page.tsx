@@ -227,71 +227,51 @@ export default async function CoursePage({ params }: CoursePageProps) {
           </div>
         </div>
 
-        {/* AP Chemistry Diagnostic CTA */}
-        {slug === 'ap-chemistry' && (
-          <div className="rounded-2xl border-2 border-orange-300 dark:border-orange-700 bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-8 mb-12 shadow-sm">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                  🧪 Not sure where to start?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Take a diagnostic test covering all 9 AP Chemistry units. Get a personalized study plan with 3-5 modules to focus on.
-                </p>
+        {/* Diagnostic Test CTA — shown for all courses that have a diagnostic */}
+        {(() => {
+          const diagnosticMap: Record<string, { href: string; icon: string; description: string; borderColor: string; bgGradient: string; btnGradient: string }> = {
+            'ap-chemistry': { href: '/ap-chem-diagnostic', icon: '🧪', description: 'Take a diagnostic test covering all 9 AP Chemistry units. Get a personalized study plan with 3-5 modules to focus on.', borderColor: 'border-orange-300 dark:border-orange-700', bgGradient: 'from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20', btnGradient: 'from-orange-600 to-red-600' },
+            'ap-calculus-ab': { href: '/calcab-diagnostic', icon: '∫', description: 'Take a diagnostic test covering all 7 AP Calculus AB units. Get a personalized study plan with 3-5 modules to focus on.', borderColor: 'border-purple-300 dark:border-purple-700', bgGradient: 'from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20', btnGradient: 'from-purple-600 to-violet-600' },
+            'ap-calculus-bc': { href: '/calcbc-diagnostic', icon: '∬', description: 'Take a diagnostic test covering AB foundations and BC-exclusive content. Get your BC score, AB subscore, and a personalized study plan.', borderColor: 'border-violet-300 dark:border-violet-700', bgGradient: 'from-violet-50 to-purple-50 dark:from-violet-900/20 dark:to-purple-900/20', btnGradient: 'from-violet-600 to-purple-600' },
+            'ap-biology': { href: '/ap-bio-diagnostic', icon: '🧬', description: 'Take a diagnostic test covering all AP Biology units. Identify your strengths and get a personalized study plan.', borderColor: 'border-green-300 dark:border-green-700', bgGradient: 'from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20', btnGradient: 'from-green-600 to-emerald-600' },
+            'ap-statistics': { href: '/ap-stats-diagnostic', icon: '📊', description: 'Take a diagnostic test covering all AP Statistics units. Find your weak areas and get a targeted study plan.', borderColor: 'border-blue-300 dark:border-blue-700', bgGradient: 'from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20', btnGradient: 'from-blue-600 to-cyan-600' },
+            'ap-psychology': { href: '/ap-psych-diagnostic', icon: '🧠', description: 'Take a diagnostic test covering all AP Psychology units. Get a personalized study plan targeting your weak areas.', borderColor: 'border-pink-300 dark:border-pink-700', bgGradient: 'from-pink-50 to-rose-50 dark:from-pink-900/20 dark:to-rose-900/20', btnGradient: 'from-pink-600 to-rose-600' },
+            'ap-physics-1': { href: '/ap-physics1-diagnostic', icon: '⚡', description: 'Take a diagnostic test covering all AP Physics 1 units. Identify your strengths and get a focused study plan.', borderColor: 'border-indigo-300 dark:border-indigo-700', bgGradient: 'from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/20', btnGradient: 'from-indigo-600 to-blue-600' },
+            'ap-physics-2': { href: '/ap-physics2-diagnostic', icon: '🔬', description: 'Take a diagnostic test covering all AP Physics 2 units. Find your weak areas and build a targeted study plan.', borderColor: 'border-teal-300 dark:border-teal-700', bgGradient: 'from-teal-50 to-cyan-50 dark:from-teal-900/20 dark:to-cyan-900/20', btnGradient: 'from-teal-600 to-cyan-600' },
+            'ap-physics-c-mechanics': { href: '/ap-physics-c-mech-diagnostic', icon: '🔧', description: 'Take a diagnostic test covering all AP Physics C: Mechanics units. Get a personalized study plan.', borderColor: 'border-slate-300 dark:border-slate-700', bgGradient: 'from-slate-50 to-gray-50 dark:from-slate-900/20 dark:to-gray-900/20', btnGradient: 'from-slate-600 to-gray-600' },
+            'ap-physics-c-em': { href: '/ap-physics-c-em-diagnostic', icon: '🧲', description: 'Take a diagnostic test covering all AP Physics C: E&M units. Identify gaps and get a targeted study plan.', borderColor: 'border-amber-300 dark:border-amber-700', bgGradient: 'from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20', btnGradient: 'from-amber-600 to-yellow-600' },
+            'organic-chemistry': { href: '/ochem-diagnostic', icon: '⚗️', description: 'Take a diagnostic test covering all Organic Chemistry topics. Get a personalized study plan for your weak areas.', borderColor: 'border-emerald-300 dark:border-emerald-700', bgGradient: 'from-emerald-50 to-green-50 dark:from-emerald-900/20 dark:to-green-900/20', btnGradient: 'from-emerald-600 to-green-600' },
+            'algebra-1': { href: '/algebra1-diagnostic', icon: '📐', description: 'Take a diagnostic test covering all Algebra 1 topics. Pinpoint areas to improve and get a study plan.', borderColor: 'border-sky-300 dark:border-sky-700', bgGradient: 'from-sky-50 to-blue-50 dark:from-sky-900/20 dark:to-blue-900/20', btnGradient: 'from-sky-600 to-blue-600' },
+            'algebra-2': { href: '/algebra2-diagnostic', icon: '📏', description: 'Take a diagnostic test covering all Algebra 2 topics. Identify your strengths and areas to work on.', borderColor: 'border-cyan-300 dark:border-cyan-700', bgGradient: 'from-cyan-50 to-sky-50 dark:from-cyan-900/20 dark:to-sky-900/20', btnGradient: 'from-cyan-600 to-sky-600' },
+            'geometry': { href: '/geometry-diagnostic', icon: '📐', description: 'Take a diagnostic test covering all Geometry topics. Build a targeted study plan for your weak areas.', borderColor: 'border-rose-300 dark:border-rose-700', bgGradient: 'from-rose-50 to-pink-50 dark:from-rose-900/20 dark:to-pink-900/20', btnGradient: 'from-rose-600 to-pink-600' },
+            'pre-algebra': { href: '/prealgebra-diagnostic', icon: '🔢', description: 'Take a diagnostic test covering all Pre-Algebra topics. Find out what to focus on with a personalized plan.', borderColor: 'border-lime-300 dark:border-lime-700', bgGradient: 'from-lime-50 to-green-50 dark:from-lime-900/20 dark:to-green-900/20', btnGradient: 'from-lime-600 to-green-600' },
+            'precalculus': { href: '/precalc-diagnostic', icon: '📈', description: 'Take a diagnostic test covering all Precalculus topics. Get a personalized plan to strengthen weak areas.', borderColor: 'border-fuchsia-300 dark:border-fuchsia-700', bgGradient: 'from-fuchsia-50 to-purple-50 dark:from-fuchsia-900/20 dark:to-purple-900/20', btnGradient: 'from-fuchsia-600 to-purple-600' },
+            'ap-precalculus': { href: '/ap-precalculus-diagnostic', icon: '📉', description: 'Take a diagnostic test covering all AP Precalculus units. Identify gaps and get a targeted study plan.', borderColor: 'border-violet-300 dark:border-violet-700', bgGradient: 'from-violet-50 to-indigo-50 dark:from-violet-900/20 dark:to-indigo-900/20', btnGradient: 'from-violet-600 to-indigo-600' },
+            'grade-8-math': { href: '/grade8-math-diagnostic', icon: '🎓', description: 'Take a diagnostic test covering all Grade 8 Math topics. Get a personalized study plan for improvement.', borderColor: 'border-yellow-300 dark:border-yellow-700', bgGradient: 'from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20', btnGradient: 'from-yellow-600 to-amber-600' },
+          }
+          const diag = diagnosticMap[slug]
+          if (!diag) return null
+          return (
+            <div className={`rounded-2xl border-2 ${diag.borderColor} bg-gradient-to-r ${diag.bgGradient} p-8 mb-12 shadow-sm`}>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                    {diag.icon} Not sure where to start?
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {diag.description}
+                  </p>
+                </div>
+                <Link
+                  href={diag.href}
+                  className={`inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-gradient-to-r ${diag.btnGradient} px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl`}
+                >
+                  Take Diagnostic Test →
+                </Link>
               </div>
-              <Link
-                href="/ap-chem-diagnostic"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-gradient-to-r from-orange-600 to-red-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
-              >
-                Take Diagnostic Test →
-              </Link>
             </div>
-          </div>
-        )}
-
-        {/* AP Calculus AB Diagnostic CTA */}
-        {slug === 'ap-calculus-ab' && (
-          <div className="rounded-2xl border-2 border-purple-300 dark:border-purple-700 bg-gradient-to-r from-purple-50 to-violet-50 dark:from-purple-900/20 dark:to-violet-900/20 p-8 mb-12 shadow-sm">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                  ∫ Not sure where to start?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Take a diagnostic test covering all 7 AP Calculus AB units. Get a personalized study plan with 3-5 modules to focus on.
-                </p>
-              </div>
-              <Link
-                href="/calcab-diagnostic"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-gradient-to-r from-purple-600 to-violet-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
-              >
-                Take Diagnostic Test →
-              </Link>
-            </div>
-          </div>
-        )}
-
-        {/* AP Calculus BC Diagnostic CTA */}
-        {slug === 'ap-calculus-bc' && (
-          <div className="rounded-2xl border-2 border-violet-300 dark:border-violet-700 bg-gradient-to-r from-violet-50 to-purple-50 dark:from-violet-900/20 dark:to-purple-900/20 p-8 mb-12 shadow-sm">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                  ∬ Not sure where to start?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Take a diagnostic test covering AB foundations and BC-exclusive content. Get your BC score, AB subscore, and a personalized study plan.
-                </p>
-              </div>
-              <Link
-                href="/calcbc-diagnostic"
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
-              >
-                Take Diagnostic Test →
-              </Link>
-            </div>
-          </div>
-        )}
+          )
+        })()}
 
         {/* Ad placement after course overview */}
         <InArticleAd />

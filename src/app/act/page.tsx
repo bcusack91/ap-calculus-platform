@@ -30,6 +30,18 @@ const features = [
     stats: '140+ lessons · All topics',
   },
   {
+    title: 'Diagnostic Test',
+    description: 'Quick assessment across all ACT sections to identify your strengths and weak areas with a personalized study plan.',
+    href: '/act-diagnostic',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+      </svg>
+    ),
+    color: 'from-green-500 to-teal-500',
+    stats: '~35 questions · 30 min',
+  },
+  {
     title: 'Flashcards',
     description: 'Review key ACT concepts, vocabulary, formulas, and science terminology with spaced-repetition flashcards.',
     href: '/flashcards',
@@ -152,10 +164,16 @@ export default function ACTLandingPage() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
-              href="/courses/act-prep"
+              href="/act-diagnostic"
               className="rounded-xl bg-gradient-to-r from-red-600 to-orange-600 px-8 py-3.5 text-lg font-semibold text-white shadow-lg transition hover:shadow-xl"
             >
-              Start Learning
+              Start with Diagnostic
+            </Link>
+            <Link
+              href="/courses/act-prep"
+              className="rounded-xl border-2 border-red-300 px-8 py-3.5 text-lg font-semibold text-red-700 transition hover:bg-red-50 dark:border-red-600 dark:text-red-400 dark:hover:bg-red-900/20"
+            >
+              Browse Lessons
             </Link>
             <Link
               href="/competitive"
