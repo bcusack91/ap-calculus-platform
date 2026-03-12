@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plane Mirror Ray Tracing</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 900px;
+        }
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+        .controls {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        button:hover:not(:disabled) {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        .step-indicator {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🪞 Plane Mirror Ray Tracing</h1>
+        <p class="subtitle">Watch how a virtual image forms step-by-step</p>
+        
+        <div class="step-indicator" id="stepIndicator">Click "Next Step" to begin</div>
+        
+        <canvas id="canvas" width="800" height="500"></canvas>
+        
+        <div class="controls">
+            <button id="btnNext" onclick="nextStep()">Next Step ▶</button>
+            <button id="btnReset" onclick="reset()">🔄 Reset</button>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        let step = 0;
+        const centerY = canvas.height / 2;
+        const mirrorX = 480;  // Moved closer to center
+        const objectX = 200;  // Adjusted for better spacing
+        
+        const steps = [
+            "Click 'Next Step' to begin",
+            "Step 1: Draw the optical axis",
+            "Step 2: Place the object",
+            "Step 3: Draw horizontal ray to mirror",
+            "Step 4: Reflect horizontal ray backwards",
+            "Step 5: Draw ray to optical axis/mirror intersection",
+            "Step 6: Reflect ray following law of reflection",
+            "Step 7: Extrapolate reflected rays backwards (dotted)",
+            "Step 8: Mark the virtual image location"
+        ];
+        
+        function updateStepIndicator() {
+            document.getElementById('stepIndicator').textContent = steps[step];
+            if (step >= steps.length - 1) {
+                document.getElementById('btnNext').disabled = true;
+                document.getElementById('btnNext').textContent = '✓ Complete';
+            }
+        }
+        
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        
+        function drawOpticalAxis() {
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([]);
+            ctx.beginPath();
+            ctx.moveTo(50, centerY);
+            ctx.lineTo(750, centerY);
+            ctx.stroke();
+            
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 16px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Optical Axis', 400, centerY - 15);
+        }
+        
+        function drawMirror() {
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 6;
+            ctx.beginPath();
+            ctx.moveTo(mirrorX, 50);
+            ctx.lineTo(mirrorX, 450);
+            ctx.stroke();
+            
+            // Shading
+            ctx.strokeStyle = '#999';
+            ctx.lineWidth = 2;
+            for (let i = 0; i < 20; i++) {
+                const y = 50 + i * 20;
+                ctx.beginPath();
+                ctx.moveTo(mirrorX, y);
+                ctx.lineTo(mirrorX + 15, y + 15);
+                ctx.stroke();
+            }
+            
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 16px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Mirror', mirrorX, 30);
+        }
+        
+        function drawObject() {
+            // Candle body
+            ctx.fillStyle = '#ff6b6b';
+            ctx.fillRect(objectX - 15, centerY - 60, 30, 60);
+            
+            // Flame
+            ctx.fillStyle = '#ffd93d';
+            ctx.beginPath();
+            ctx.arc(objectX, centerY - 65, 10, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Label
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 16px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Object', objectX, centerY + 90);
+        }
+        
+        function drawArrow(x, y, angle, color) {
+            const size = 12;
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineTo(x - size * Math.cos(angle - Math.PI / 6), y - size * Math.sin(angle - Math.PI / 6));
+            ctx.lineTo(x - size * Math.cos(angle + Math.PI / 6), y - size * Math.sin(angle + Math.PI / 6));
+            ctx.closePath();
+            ctx.fill();
+        }
+        
+        function drawHorizontalRay() {
+            ctx.strokeStyle = '#ff9800';
+            ctx.lineWidth = 3;
+            ctx.setLineDash([]);
+            ctx.beginPath();
+            ctx.moveTo(objectX, centerY - 65);
+            ctx.lineTo(mirrorX, centerY - 65);
+            ctx.stroke();
+            
+            drawArrow(mirrorX, centerY - 65, 0, '#ff9800');
+        }
+        
+        function drawHorizontalReflection() {
+            ctx.strokeStyle = '#667eea';
+            ctx.lineWidth = 3;
+            ctx.setLineDash([]);
+            ctx.beginPath();
+            ctx.moveTo(mirrorX, centerY - 65);
+            ctx.lineTo(objectX, centerY - 65);
+            ctx.stroke();
+            
+            drawArrow(objectX, centerY - 65, Math.PI, '#667eea');
+        }
+        
+        function drawCenterRay() {
+            ctx.strokeStyle = '#ff9800';
+            ctx.lineWidth = 3;
+            ctx.setLineDash([]);
+            ctx.beginPath();
+            ctx.moveTo(objectX, centerY - 65);
+            ctx.lineTo(mirrorX, centerY);
+            ctx.stroke();
+            
+            drawArrow(mirrorX, centerY, Math.atan2(centerY - (centerY - 65), mirrorX - objectX), '#ff9800');
+        }
+        
+        function drawCenterReflection() {
+            // Calculate reflection angle
+            const dy = centerY - (centerY - 65);
+            const dx = mirrorX - objectX;
+            const incidentAngle = Math.atan2(dy, dx);
+            
+            // Reflected ray has same angle on opposite side
+            const endX = objectX;
+            const endY = centerY + 65;
+            
+            ctx.strokeStyle = '#667eea';
+            ctx.lineWidth = 3;
+            ctx.setLineDash([]);
+            ctx.beginPath();
+            ctx.moveTo(mirrorX, centerY);
+            ctx.lineTo(endX, endY);
+            ctx.stroke();
+            
+            drawArrow(endX, endY, Math.atan2(endY - centerY, endX - mirrorX), '#667eea');
+        }
+        
+        function drawExtrapolation() {
+            // Virtual image is same distance behind mirror as object is in front
+            // Object at objectX (250), mirror at mirrorX (600)
+            // Virtual image at mirrorX + (mirrorX - objectX) = 600 + 350 = 950
+            const virtualImageX = mirrorX + (mirrorX - objectX);
+            
+            // Extrapolate horizontal ray backwards
+            ctx.strokeStyle = '#667eea';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([5, 5]);
+            ctx.beginPath();
+            ctx.moveTo(mirrorX, centerY - 65);
+            ctx.lineTo(virtualImageX, centerY - 65);
+            ctx.stroke();
+            
+            // Extrapolate angled ray backwards from mirror intersection point
+            // The reflected ray goes from (mirrorX, centerY) to (objectX, centerY + 65)
+            // Slope: dy/dx = 65 / (objectX - mirrorX) = 65 / -350
+            // To extrapolate backwards with same slope:
+            const reflectedDx = objectX - mirrorX; // -350
+            const reflectedDy = (centerY + 65) - centerY; // 65
+            
+            // Continue with same slope in opposite direction
+            // From (mirrorX, centerY), we need to reach (virtualImageX, centerY - 65)
+            ctx.beginPath();
+            ctx.moveTo(mirrorX, centerY);
+            ctx.lineTo(virtualImageX, centerY - 65);
+            ctx.stroke();
+        }
+        
+        function drawVirtualImage() {
+            const virtualImageX = mirrorX + (mirrorX - objectX);
+            
+            // Draw virtual candle (lighter/transparent)
+            ctx.globalAlpha = 0.5;
+            ctx.fillStyle = '#ff6b6b';
+            ctx.fillRect(virtualImageX - 15, centerY - 60, 30, 60);
+            
+            ctx.fillStyle = '#ffd93d';
+            ctx.beginPath();
+            ctx.arc(virtualImageX, centerY - 65, 10, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.globalAlpha = 1.0;
+            
+            // Label
+            ctx.fillStyle = '#2ecc71';
+            ctx.font = 'bold 16px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Virtual Image', virtualImageX - 20, centerY + 90);
+            
+            // Distance labels
+            ctx.fillStyle = '#e74c3c';
+            ctx.font = 'bold 14px Arial';
+            ctx.fillText('dₒ (−)', objectX, centerY + 120);
+            
+            ctx.fillStyle = '#2ecc71';
+            ctx.fillText('dᵢ (+)', virtualImageX - 20, centerY + 120);
+        }
+        
+        function render() {
+            clearCanvas();
+            
+            if (step >= 1) {
+                drawOpticalAxis();
+                drawMirror();
+            }
+            
+            if (step >= 2) {
+                drawObject();
+            }
+            
+            if (step >= 3) {
+                drawHorizontalRay();
+            }
+            
+            if (step >= 4) {
+                drawHorizontalReflection();
+            }
+            
+            if (step >= 5) {
+                drawCenterRay();
+            }
+            
+            if (step >= 6) {
+                drawCenterReflection();
+            }
+            
+            if (step >= 7) {
+                drawExtrapolation();
+            }
+            
+            if (step >= 8) {
+                drawVirtualImage();
+            }
+        }
+        
+        function nextStep() {
+            if (step < steps.length - 1) {
+                step++;
+                render();
+                updateStepIndicator();
+            }
+        }
+        
+        function reset() {
+            step = 0;
+            clearCanvas();
+            updateStepIndicator();
+            document.getElementById('btnNext').disabled = false;
+            document.getElementById('btnNext').textContent = 'Next Step ▶';
+        }
+        
+        // Initial render
+        updateStepIndicator();
+    </script>
+</body>
+</html>

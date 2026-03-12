@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Convention Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 900px;
+        }
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+        .controls {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        button:hover:not(:disabled) {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        button.active {
+            background: #2ecc71;
+        }
+        .info-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0f4ff;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .info-box h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+        .step-indicator {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔆 Interactive Sign Convention</h1>
+        <p class="subtitle">Learn step-by-step how sign conventions work!</p>
+        
+        <div class="step-indicator" id="stepIndicator">Step 1: Place the object</div>
+        
+        <canvas id="canvas" width="800" height="500"></canvas>
+        
+        <div class="controls">
+            <button id="btnPlaceLeft" onclick="placeObject('left')">Place Object on Left</button>
+            <button id="btnPlaceRight" onclick="placeObject('right')">Place Object on Right</button>
+            <button id="btnDrawArrow" onclick="drawArrowStep()" disabled>Draw Arrow from Object to Mirror/Lens</button>
+            <button id="btnDrawSigns" onclick="drawSignConvention()" disabled>Draw Sign Convention</button>
+            <button id="btnReset" onclick="reset()">🔄 Reset</button>
+        </div>
+        
+        <div class="info-box">
+            <h3>Instructions</h3>
+            <p id="description">Click "Place Object on Left" or "Place Object on Right" to start.</p>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // State management
+        let step = 0; // 0: initial, 1: object placed, 2: arrow drawn, 3: signs drawn
+        let objectSide = null; // 'left' or 'right'
+        let objectPos = 0;
+        
+        function updateButtons() {
+            const btnPlaceLeft = document.getElementById('btnPlaceLeft');
+            const btnPlaceRight = document.getElementById('btnPlaceRight');
+            const btnDrawArrow = document.getElementById('btnDrawArrow');
+            const btnDrawSigns = document.getElementById('btnDrawSigns');
+            
+            // Reset all buttons
+            btnPlaceLeft.disabled = false;
+            btnPlaceRight.disabled = false;
+            btnDrawArrow.disabled = true;
+            btnDrawSigns.disabled = true;
+            
+            btnPlaceLeft.classList.remove('active');
+            btnPlaceRight.classList.remove('active');
+            btnDrawArrow.classList.remove('active');
+            btnDrawSigns.classList.remove('active');
+            
+            if (step >= 1) {
+                btnPlaceLeft.disabled = true;
+                btnPlaceRight.disabled = true;
+                btnDrawArrow.disabled = false;
+                if (objectSide === 'left') btnPlaceLeft.classList.add('active');
+                if (objectSide === 'right') btnPlaceRight.classList.add('active');
+            }
+            
+            if (step >= 2) {
+                btnDrawArrow.disabled = true;
+                btnDrawArrow.classList.add('active');
+                btnDrawSigns.disabled = false;
+            }
+            
+            if (step >= 3) {
+                btnDrawSigns.disabled = true;
+                btnDrawSigns.classList.add('active');
+            }
+        }
+        
+        function updateStepIndicator() {
+            const indicator = document.getElementById('stepIndicator');
+            const descriptions = document.getElementById('description');
+            
+            if (step === 0) {
+                indicator.textContent = 'Step 1: Place the object';
+                descriptions.innerHTML = 'Click "Place Object on Left" or "Place Object on Right" to start.';
+            } else if (step === 1) {
+                indicator.textContent = 'Step 2: Draw light direction';
+                descriptions.innerHTML = `<strong>Object placed on the ${objectSide}!</strong><br>Now click "Draw Arrow from Object to Mirror/Lens" to show which way light travels.`;
+            } else if (step === 2) {
+                indicator.textContent = 'Step 3: Show sign convention';
+                descriptions.innerHTML = `<strong>Light arrow drawn!</strong><br>The light travels from ${objectSide} toward the mirror.<br>Click "Draw Sign Convention" to reveal the positive and negative regions.`;
+            } else if (step === 3) {
+                indicator.textContent = '✅ Complete! Click Reset to try again';
+                const posNeg = objectSide === 'left' ? 
+                    'Light travels LEFT → RIGHT, so RIGHT is POSITIVE (+) and LEFT is NEGATIVE (−)' :
+                    'Light travels RIGHT → LEFT, so LEFT is POSITIVE (+) and RIGHT is NEGATIVE (−)';
+                descriptions.innerHTML = `<strong>Sign convention revealed!</strong><br>${posNeg}<br><br><strong>Key Point:</strong> The direction light travels DEFINES the positive direction!`;
+            }
+        }
+        
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        
+        function drawMirror() {
+            // Draw mirror/lens at center
+            ctx.fillStyle = '#a8dadc';
+            ctx.fillRect(395, 100, 10, 300);
+            
+            // Draw axis
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(0, canvas.height / 2);
+            ctx.lineTo(canvas.width, canvas.height / 2);
+            ctx.stroke();
+            
+            // Draw mirror label
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 16px Arial';
+            ctx.textAlign = 'center';
+            ctx.save();
+            ctx.translate(400, canvas.height / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillText('Mirror/Lens', 0, -15);
+            ctx.restore();
+        }
+        
+        function drawObject(x) {
+            const centerY = canvas.height / 2;
+            const screenX = x;
+            
+            // Draw object (candle)
+            ctx.fillStyle = '#ff6b6b';
+            ctx.fillRect(screenX - 15, centerY - 60, 30, 60);
+            
+            // Draw flame
+            ctx.fillStyle = '#ffd93d';
+            ctx.beginPath();
+            ctx.arc(screenX, centerY - 65, 10, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Draw label
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 18px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Object', screenX, centerY + 90);
+        }
+        
+        function drawArrow(fromX, fromY, toX, toY, color, label) {
+            ctx.strokeStyle = color;
+            ctx.fillStyle = color;
+            ctx.lineWidth = 4;
+            
+            // Draw line
+            ctx.beginPath();
+            ctx.moveTo(fromX, fromY);
+            ctx.lineTo(toX, toY);
+            ctx.stroke();
+            
+            // Draw arrowhead
+            const angle = Math.atan2(toY - fromY, toX - fromX);
+            const arrowSize = 20;
+            ctx.beginPath();
+            ctx.moveTo(toX, toY);
+            ctx.lineTo(
+                toX - arrowSize * Math.cos(angle - Math.PI / 6),
+                toY - arrowSize * Math.sin(angle - Math.PI / 6)
+            );
+            ctx.lineTo(
+                toX - arrowSize * Math.cos(angle + Math.PI / 6),
+                toY - arrowSize * Math.sin(angle + Math.PI / 6)
+            );
+            ctx.closePath();
+            ctx.fill();
+            
+            // Draw label
+            if (label) {
+                ctx.font = 'bold 16px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillStyle = color;
+                ctx.fillText(label, (fromX + toX) / 2, fromY - 15);
+            }
+        }
+        
+        function drawSignRegions() {
+            const centerY = canvas.height / 2;
+            
+            if (objectSide === 'left') {
+                // Light goes left to right
+                // Left is negative, right is positive
+                ctx.fillStyle = 'rgba(255, 190, 11, 0.2)';
+                ctx.fillRect(0, 100, 395, 300);
+                
+                ctx.fillStyle = 'rgba(78, 205, 196, 0.2)';
+                ctx.fillRect(405, 100, 395, 300);
+                
+                // Labels
+                ctx.fillStyle = '#333';
+                ctx.font = 'bold 24px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('NEGATIVE (−)', 200, 140);
+                ctx.fillText('POSITIVE (+)', 600, 140);
+            } else {
+                // Light goes right to left
+                // Right is negative, left is positive
+                ctx.fillStyle = 'rgba(78, 205, 196, 0.2)';
+                ctx.fillRect(0, 100, 395, 300);
+                
+                ctx.fillStyle = 'rgba(255, 190, 11, 0.2)';
+                ctx.fillRect(405, 100, 395, 300);
+                
+                // Labels
+                ctx.fillStyle = '#333';
+                ctx.font = 'bold 24px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('POSITIVE (+)', 200, 140);
+                ctx.fillText('NEGATIVE (−)', 600, 140);
+            }
+        }
+        
+        function placeObject(side) {
+            if (step !== 0) return;
+            
+            objectSide = side;
+            objectPos = side === 'left' ? 150 : 650;
+            step = 1;
+            
+            render();
+            updateButtons();
+            updateStepIndicator();
+        }
+        
+        function drawArrowStep() {
+            if (step !== 1) return;
+            
+            step = 2;
+            render();
+            updateButtons();
+            updateStepIndicator();
+        }
+        
+        function drawSignConvention() {
+            if (step !== 2) return;
+            
+            step = 3;
+            render();
+            updateButtons();
+            updateStepIndicator();
+        }
+        
+        function render() {
+            clearCanvas();
+            
+            // Draw sign regions if at step 3
+            if (step >= 3) {
+                drawSignRegions();
+            }
+            
+            // Always draw mirror
+            drawMirror();
+            
+            // Draw object if placed
+            if (step >= 1) {
+                drawObject(objectPos);
+            }
+            
+            // Draw arrow if at step 2 or 3
+            if (step >= 2) {
+                const centerY = canvas.height / 2;
+                const arrowY = centerY - 75; // Draw from top of flame
+                if (objectSide === 'left') {
+                    drawArrow(objectPos, arrowY, 395, arrowY, '#ff6b6b', '→ Light Direction (+)');
+                } else {
+                    drawArrow(objectPos, arrowY, 405, arrowY, '#ff6b6b', '← Light Direction (+)');
+                }
+            }
+        }
+        
+        function reset() {
+            step = 0;
+            objectSide = null;
+            objectPos = 0;
+            
+            clearCanvas();
+            drawMirror();
+            updateButtons();
+            updateStepIndicator();
+        }
+        
+        // Initial state
+        reset();
+    </script>
+</body>
+</html>

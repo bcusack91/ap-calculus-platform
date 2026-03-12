@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height Sign Convention</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 900px;
+        }
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+        .controls {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+        button:hover:not(:disabled) {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        button.active {
+            background: #2ecc71;
+        }
+        .info-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f0f4ff;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .info-box h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+        .step-indicator {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📏 Height Sign Convention</h1>
+        <p class="subtitle">Learn how height measurements work in optics!</p>
+        
+        <div class="step-indicator" id="stepIndicator">Step 1: Draw the optical axis</div>
+        
+        <canvas id="canvas" width="800" height="600"></canvas>
+        
+        <div class="controls">
+            <button id="btnDrawAxis" onclick="drawAxisStep()">Draw Optical Axis</button>
+            <button id="btnPlaceAbove" onclick="placeObject('above')" disabled>Place Object Above Axis</button>
+            <button id="btnPlaceBelow" onclick="placeObject('below')" disabled>Place Object Below Axis</button>
+            <button id="btnShowHeight" onclick="showHeightMeasurement()" disabled>Show Height Measurement</button>
+            <button id="btnReset" onclick="reset()">🔄 Reset</button>
+        </div>
+        
+        <div class="info-box">
+            <h3>Instructions</h3>
+            <p id="description">Click "Draw Optical Axis" to start.</p>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        let step = 0; // 0: initial, 1: axis drawn, 2: object placed, 3: height shown
+        let objectPosition = null; // 'above' or 'below'
+        let objectY = 0;
+        
+        function updateButtons() {
+            const btnDrawAxis = document.getElementById('btnDrawAxis');
+            const btnPlaceAbove = document.getElementById('btnPlaceAbove');
+            const btnPlaceBelow = document.getElementById('btnPlaceBelow');
+            const btnShowHeight = document.getElementById('btnShowHeight');
+            
+            btnDrawAxis.disabled = false;
+            btnPlaceAbove.disabled = true;
+            btnPlaceBelow.disabled = true;
+            btnShowHeight.disabled = true;
+            
+            btnDrawAxis.classList.remove('active');
+            btnPlaceAbove.classList.remove('active');
+            btnPlaceBelow.classList.remove('active');
+            btnShowHeight.classList.remove('active');
+            
+            if (step >= 1) {
+                btnDrawAxis.disabled = true;
+                btnDrawAxis.classList.add('active');
+                btnPlaceAbove.disabled = false;
+                btnPlaceBelow.disabled = false;
+            }
+            
+            if (step >= 2) {
+                btnPlaceAbove.disabled = true;
+                btnPlaceBelow.disabled = true;
+                if (objectPosition === 'above') btnPlaceAbove.classList.add('active');
+                if (objectPosition === 'below') btnPlaceBelow.classList.add('active');
+                btnShowHeight.disabled = false;
+            }
+            
+            if (step >= 3) {
+                btnShowHeight.disabled = true;
+                btnShowHeight.classList.add('active');
+            }
+        }
+        
+        function updateStepIndicator() {
+            const indicator = document.getElementById('stepIndicator');
+            const description = document.getElementById('description');
+            
+            if (step === 0) {
+                indicator.textContent = 'Step 1: Draw the optical axis';
+                description.innerHTML = 'Click "Draw Optical Axis" to start. The optical axis is the horizontal reference line.';
+            } else if (step === 1) {
+                indicator.textContent = 'Step 2: Place the object';
+                description.innerHTML = '<strong>Optical axis drawn!</strong><br>Now place an object either above or below the axis.';
+            } else if (step === 2) {
+                indicator.textContent = 'Step 3: Measure the height';
+                description.innerHTML = `<strong>Object placed ${objectPosition} the axis!</strong><br>Click "Show Height Measurement" to see how we measure height.`;
+            } else if (step === 3) {
+                const sign = objectPosition === 'above' ? 'POSITIVE (+)' : 'NEGATIVE (−)';
+                indicator.textContent = '✅ Complete! Click Reset to try again';
+                description.innerHTML = `<strong>Height revealed!</strong><br>Objects <strong>${objectPosition} the optical axis</strong> have <strong>${sign}</strong> height.<br><br><strong>Key Rule:</strong> Above axis = positive height, Below axis = negative height`;
+            }
+        }
+        
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        
+        function drawOpticalAxis() {
+            const centerY = canvas.height / 2;
+            
+            // Draw axis line
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 3;
+            ctx.setLineDash([]);
+            ctx.beginPath();
+            ctx.moveTo(50, centerY);
+            ctx.lineTo(750, centerY);
+            ctx.stroke();
+            
+            // Draw label
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 18px Arial';
+            ctx.textAlign = 'left';
+            ctx.fillText('Optical Axis', 600, centerY - 15);
+            
+            // Draw arrows on ends
+            drawSmallArrow(750, centerY, 0);
+            drawSmallArrow(50, centerY, Math.PI);
+        }
+        
+        function drawSmallArrow(x, y, angle) {
+            const size = 12;
+            ctx.fillStyle = '#333';
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineTo(x - size * Math.cos(angle - Math.PI / 6), y - size * Math.sin(angle - Math.PI / 6));
+            ctx.lineTo(x - size * Math.cos(angle + Math.PI / 6), y - size * Math.sin(angle + Math.PI / 6));
+            ctx.closePath();
+            ctx.fill();
+        }
+        
+        function drawObject() {
+            const centerX = 400;
+            const centerY = canvas.height / 2;
+            
+            if (objectPosition === 'above') {
+                // Object extends upward from axis
+                // Draw object (candle) - base at axis, extends up
+                ctx.fillStyle = '#ff6b6b';
+                ctx.fillRect(centerX - 15, centerY - 60, 30, 60);
+                
+                // Draw flame at top
+                ctx.fillStyle = '#ffd93d';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY - 65, 10, 0, Math.PI * 2);
+                ctx.fill();
+            } else {
+                // Object extends downward from axis
+                // Draw object (inverted candle) - base at axis, extends down
+                ctx.fillStyle = '#ff6b6b';
+                ctx.fillRect(centerX - 15, centerY, 30, 60);
+                
+                // Draw flame at bottom (inverted)
+                ctx.fillStyle = '#ffd93d';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY + 65, 10, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+        
+        function drawHeightLine() {
+            const centerX = 400;
+            const centerY = canvas.height / 2;
+            
+            if (objectPosition === 'above') {
+                // Draw vertical measurement line from axis to top of flame
+                ctx.strokeStyle = '#2ecc71';
+                ctx.lineWidth = 3;
+                ctx.setLineDash([5, 5]);
+                ctx.beginPath();
+                ctx.moveTo(centerX + 50, centerY);
+                ctx.lineTo(centerX + 50, centerY - 65);
+                ctx.stroke();
+                ctx.setLineDash([]);
+                
+                // Draw measurement arrows
+                drawMeasurementArrow(centerX + 50, centerY, centerX + 50, centerY - 65);
+                
+                // Draw height label
+                ctx.fillStyle = '#2ecc71';
+                ctx.font = 'bold 20px Arial';
+                ctx.textAlign = 'left';
+                ctx.fillText('h = +65 px', centerX + 70, centerY - 32);
+                
+                // Draw positive label
+                ctx.fillStyle = '#2ecc71';
+                ctx.fillText('POSITIVE (+)', centerX - 150, centerY - 80);
+            } else {
+                // Draw vertical measurement line from axis to bottom of flame
+                ctx.strokeStyle = '#e74c3c';
+                ctx.lineWidth = 3;
+                ctx.setLineDash([5, 5]);
+                ctx.beginPath();
+                ctx.moveTo(centerX + 50, centerY);
+                ctx.lineTo(centerX + 50, centerY + 65);
+                ctx.stroke();
+                ctx.setLineDash([]);
+                
+                // Draw measurement arrows
+                drawMeasurementArrowDown(centerX + 50, centerY, centerX + 50, centerY + 65);
+                
+                // Draw height label
+                ctx.fillStyle = '#e74c3c';
+                ctx.font = 'bold 20px Arial';
+                ctx.textAlign = 'left';
+                ctx.fillText('h = −65 px', centerX + 70, centerY + 32);
+                
+                // Draw negative label
+                ctx.fillStyle = '#e74c3c';
+                ctx.fillText('NEGATIVE (−)', centerX - 150, centerY + 90);
+            }
+        }
+        
+        function drawMeasurementArrow(x1, y1, x2, y2) {
+            const arrowSize = 10;
+            
+            // Draw arrow at top
+            ctx.fillStyle = '#2ecc71';
+            ctx.beginPath();
+            ctx.moveTo(x2, y2);
+            ctx.lineTo(x2 - 5, y2 + arrowSize);
+            ctx.lineTo(x2 + 5, y2 + arrowSize);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Draw arrow at bottom
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x1 - 5, y1 + arrowSize);
+            ctx.lineTo(x1 + 5, y1 + arrowSize);
+            ctx.closePath();
+            ctx.fill();
+        }
+        
+        function drawMeasurementArrowDown(x1, y1, x2, y2) {
+            const arrowSize = 10;
+            
+            // Draw arrow at bottom
+            ctx.fillStyle = '#e74c3c';
+            ctx.beginPath();
+            ctx.moveTo(x2, y2);
+            ctx.lineTo(x2 - 5, y2 - arrowSize);
+            ctx.lineTo(x2 + 5, y2 - arrowSize);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Draw arrow at top
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x1 - 5, y1 + arrowSize);
+            ctx.lineTo(x1 + 5, y1 + arrowSize);
+            ctx.closePath();
+            ctx.fill();
+        }
+        
+        function drawAxisStep() {
+            if (step !== 0) return;
+            step = 1;
+            render();
+            updateButtons();
+            updateStepIndicator();
+        }
+        
+        function placeObject(position) {
+            if (step !== 1) return;
+            
+            objectPosition = position;
+            const centerY = canvas.height / 2;
+            
+            if (position === 'above') {
+                objectY = centerY - 150;
+            } else {
+                objectY = centerY + 150;
+            }
+            
+            step = 2;
+            render();
+            updateButtons();
+            updateStepIndicator();
+        }
+        
+        function showHeightMeasurement() {
+            if (step !== 2) return;
+            step = 3;
+            render();
+            updateButtons();
+            updateStepIndicator();
+        }
+        
+        function render() {
+            clearCanvas();
+            
+            // Always draw axis if step >= 1
+            if (step >= 1) {
+                drawOpticalAxis();
+            }
+            
+            // Draw object if placed
+            if (step >= 2) {
+                drawObject();
+            }
+            
+            // Draw height measurement if step 3
+            if (step >= 3) {
+                drawHeightLine();
+            }
+        }
+        
+        function reset() {
+            step = 0;
+            objectPosition = null;
+            objectY = 0;
+            clearCanvas();
+            updateButtons();
+            updateStepIndicator();
+        }
+        
+        // Initial state
+        reset();
+    </script>
+</body>
+</html>

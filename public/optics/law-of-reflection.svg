@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" style="max-width: 100%; height: auto;">
+  <!-- Title -->
+  <text x="300" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#667eea">Law of Reflection</text>
+  
+  <!-- Mirror surface -->
+  <line x1="250" y1="100" x2="350" y2="100" stroke="#1e293b" stroke-width="8"/>
+  
+  <!-- Normal line (dashed) -->
+  <line x1="300" y1="50" x2="300" y2="300" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="310" y="170" font-size="14" fill="#64748b">Normal</text>
+  
+  <!-- Incident ray -->
+  <defs>
+    <marker id="arrowhead-incident" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <line x1="200" y1="200" x2="300" y2="100" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowhead-incident)"/>
+  <text x="230" y="160" font-size="14" fill="#3b82f6" font-weight="bold">Incident Ray</text>
+  
+  <!-- Reflected ray -->
+  <defs>
+    <marker id="arrowhead-reflected" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <line x1="300" y1="100" x2="400" y2="200" stroke="#ef4444" stroke-width="3" marker-end="url(#arrowhead-reflected)"/>
+  <text x="360" y="160" font-size="14" fill="#ef4444" font-weight="bold">Reflected Ray</text>
+  
+  <!-- Angle arcs -->
+  <path d="M 300 100 Q 280 120, 270 140" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <text x="260" y="135" font-size="16" fill="#3b82f6" font-weight="bold">θᵢ</text>
+  
+  <path d="M 300 100 Q 320 120, 330 140" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <text x="335" y="135" font-size="16" fill="#ef4444" font-weight="bold">θᵣ</text>
+  
+  <!-- Law text -->
+  <rect x="150" y="320" width="300" height="60" fill="#f0f4ff" stroke="#667eea" stroke-width="2" rx="8"/>
+  <text x="300" y="345" font-size="16" font-weight="bold" text-anchor="middle" fill="#667eea">θᵢ = θᵣ</text>
+  <text x="300" y="365" font-size="13" text-anchor="middle" fill="#555">Angle of Incidence = Angle of Reflection</text>
+</svg>

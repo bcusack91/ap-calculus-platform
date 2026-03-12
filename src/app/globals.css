@@ -1,0 +1,520 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode for manual toggle */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ===== Register accent colors as Tailwind utilities ===== */
+@theme {
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-secondary-hover: var(--accent-secondary-hover);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-subtle: var(--accent-subtle);
+  --color-accent-light: var(--accent-light);
+  --color-accent-muted: var(--accent-muted);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-ring: var(--accent-ring);
+}
+
+/* ===== Default scheme (Purple/Blue) — Light ===== */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --accent: #9333ea;
+  --accent-hover: #7e22ce;
+  --accent-secondary: #2563eb;
+  --accent-secondary-hover: #1d4ed8;
+  --accent-foreground: #ffffff;
+  --accent-subtle: #faf5ff;
+  --accent-light: #f3e8ff;
+  --accent-muted: #c084fc;
+  --accent-dark: #581c87;
+  --accent-ring: #a855f7;
+}
+
+/* ===== Default scheme (Purple/Blue) — Dark ===== */
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --accent: #a855f7;
+  --accent-hover: #9333ea;
+  --accent-secondary: #3b82f6;
+  --accent-secondary-hover: #2563eb;
+  --accent-foreground: #ffffff;
+  --accent-subtle: #1a1028;
+  --accent-light: #2d1f4e;
+  --accent-muted: #c084fc;
+  --accent-dark: #e9d5ff;
+  --accent-ring: #a855f7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* ===== Ocean scheme (Sky/Cyan) ===== */
+[data-scheme="ocean"] {
+  --accent: #0284c7;
+  --accent-hover: #0369a1;
+  --accent-secondary: #0891b2;
+  --accent-secondary-hover: #0e7490;
+  --accent-foreground: #ffffff;
+  --accent-subtle: #f0f9ff;
+  --accent-light: #e0f2fe;
+  --accent-muted: #38bdf8;
+  --accent-dark: #0c4a6e;
+  --accent-ring: #0ea5e9;
+}
+[data-scheme="ocean"].dark {
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --accent-secondary: #22d3ee;
+  --accent-secondary-hover: #06b6d4;
+  --accent-foreground: #ffffff;
+  --accent-subtle: #0c1929;
+  --accent-light: #0c2d4a;
+  --accent-muted: #7dd3fc;
+  --accent-dark: #e0f2fe;
+  --accent-ring: #0ea5e9;
+}
+
+/* ===== Forest scheme (Green/Emerald) ===== */
+[data-scheme="forest"] {
+  --accent: #16a34a;
+  --accent-hover: #15803d;
+  --accent-secondary: #059669;
+  --accent-secondary-hover: #047857;
+  --accent-foreground: #ffffff;
+  --accent-subtle: #f0fdf4;
+  --accent-light: #dcfce7;
+  --accent-muted: #4ade80;
+  --accent-dark: #14532d;
+  --accent-ring: #22c55e;
+}
+[data-scheme="forest"].dark {
+  --accent: #4ade80;
+  --accent-hover: #22c55e;
+  --accent-secondary: #34d399;
+  --accent-secondary-hover: #10b981;
+  --accent-foreground: #ffffff;
+  --accent-subtle: #071a0e;
+  --accent-light: #0a2d16;
+  --accent-muted: #86efac;
+  --accent-dark: #dcfce7;
+  --accent-ring: #22c55e;
+}
+
+/* ===== Sunset scheme (Orange/Amber) ===== */
+[data-scheme="sunset"] {
+  --accent: #ea580c;
+  --accent-hover: #c2410c;
+  --accent-secondary: #d97706;
+  --accent-secondary-hover: #b45309;
+  --accent-foreground: #ffffff;
+  --accent-subtle: #fff7ed;
+  --accent-light: #ffedd5;
+  --accent-muted: #fb923c;
+  --accent-dark: #7c2d12;
+  --accent-ring: #f97316;
+}
+[data-scheme="sunset"].dark {
+  --accent: #fb923c;
+  --accent-hover: #f97316;
+  --accent-secondary: #fbbf24;
+  --accent-secondary-hover: #f59e0b;
+  --accent-foreground: #ffffff;
+  --accent-subtle: #1a0f05;
+  --accent-light: #2d1a08;
+  --accent-muted: #fdba74;
+  --accent-dark: #ffedd5;
+  --accent-ring: #f97316;
+}
+
+/* ===== Rose scheme (Rose/Pink) ===== */
+[data-scheme="rose"] {
+  --accent: #e11d48;
+  --accent-hover: #be123c;
+  --accent-secondary: #db2777;
+  --accent-secondary-hover: #be185d;
+  --accent-foreground: #ffffff;
+  --accent-subtle: #fff1f2;
+  --accent-light: #ffe4e6;
+  --accent-muted: #fb7185;
+  --accent-dark: #881337;
+  --accent-ring: #f43f5e;
+}
+[data-scheme="rose"].dark {
+  --accent: #fb7185;
+  --accent-hover: #f43f5e;
+  --accent-secondary: #f472b6;
+  --accent-secondary-hover: #ec4899;
+  --accent-foreground: #ffffff;
+  --accent-subtle: #1a0a0e;
+  --accent-light: #2d1219;
+  --accent-muted: #fda4af;
+  --accent-dark: #ffe4e6;
+  --accent-ring: #f43f5e;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Flashcard 3D flip animation utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Multiplication animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Slide up animation for carry digit */
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -150%);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+/* Slide down animation for ones digit */
+@keyframes slideDown {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 50%);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.8s ease-out forwards;
+}
+
+/* Fade in animation for interactive lessons */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+
+/* Slide up animation for notifications */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+
+/* Animated gradient for progress bar */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Enhanced shadow utilities for interactive lessons */
+.shadow-3xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark\:shadow-3xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Celebration pop animation */
+@keyframes celebration-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) translateY(-5px);
+  }
+  70% {
+    transform: scale(0.95) translateY(0);
+  }
+  85% {
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-celebration-pop {
+  animation: celebration-pop 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Confetti particle animation */
+@keyframes confetti {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) rotate(720deg) scale(0);
+  }
+}
+
+.animate-confetti {
+  animation: confetti 2s ease-out forwards;
+}
+
+/* Improved focus states for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent-ring);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-ring);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--accent-dark);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-hover);
+  }
+}
+
+/* Dark mode scrollbar override for manual theme toggle */
+.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--accent-dark);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+/* Blockquote styling for interactive lessons */
+blockquote {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 8%, transparent) 0%, color-mix(in srgb, var(--accent-secondary) 8%, transparent) 100%);
+  border-left: 4px solid var(--accent-ring);
+  padding: 1.5rem;
+  margin: 0.75rem 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+blockquote h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--accent-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  blockquote {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 15%, transparent) 0%, color-mix(in srgb, var(--accent-secondary) 15%, transparent) 100%);
+    border-left: 4px solid var(--accent-hover);
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--accent) 20%, transparent);
+  }
+  
+  blockquote h2 {
+    color: var(--accent-muted);
+  }
+}
+
+.dark blockquote {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 15%, transparent) 0%, color-mix(in srgb, var(--accent-secondary) 15%, transparent) 100%);
+  border-left: 4px solid var(--accent-hover);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.dark blockquote h2 {
+  color: var(--accent-muted);
+}
+
+/**
+ * Gradient text accessibility: provides a solid fallback color for
+ * browsers/contexts that can't render gradient-clipped text, ensuring
+ * sufficient contrast against both light and dark backgrounds.
+ */
+.gradient-text-accessible {
+  color: var(--accent); /* scheme-aware accent — WCAG AA contrast on white bg */
+}
+
+.dark .gradient-text-accessible {
+  color: var(--accent-muted); /* scheme-aware muted accent — WCAG AA contrast on dark bg */
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .gradient-text-accessible {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .dark .gradient-text-accessible {
+    color: transparent;
+  }
+}
+
+/* Respect prefers-reduced-motion for all scale/hover animations */
+@media (prefers-reduced-motion: reduce) {
+  .hover\:scale-105 {
+    transform: none !important;
+  }
+
+  .hover\:scale-\[1\.01\] {
+    transform: none !important;
+  }
+
+  .animate-pulse,
+  .animate-confetti,
+  .animate-celebration-pop {
+    animation: none !important;
+  }
+}
+
+/* Print-friendly styles — hide chrome, ads, and non-essential UI */
+@media print {
+  nav,
+  footer,
+  aside,
+  .no-print,
+  [data-ad-slot],
+  ins.adsbygoogle,
+  .adsbygoogle,
+  iframe[src*="googlesyndication"],
+  iframe[src*="googleads"],
+  button,
+  .social-share {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #555;
+  }
+
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    color: #000 !important;
+  }
+
+  img, pre, table {
+    page-break-inside: avoid;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+}

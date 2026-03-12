@@ -1,0 +1,50 @@
+import { NextResponse } from 'next/server'
+import { prisma } from '@/lib/prisma'
+import { cached } from '@/lib/redis'
+
+/**
+ * GET /api/stats — Public endpoint for site-wide statistics
+ * Used for social proof on the homepage (cached 5 min in Redis + HTTP cache)
+ */
+export async function GET() {
+  try {
+    const stats = await cached('stats:global', 300, async () => {
+      const [
+        totalUsers,
+        totalTopicProgress,
+        totalFlashcardReviews,
+        totalMatches,
+        totalCourses,
+        totalTopics,
+      ] = await Promise.all([
+        prisma.user.count(),
+        prisma.topicProgress.count(),
+        prisma.flashcardProgress.count(),
+        prisma.competitiveMatch.count(),
+        prisma.course.count(),
+        prisma.topic.count(),
+      ])
+
+      return {
+        students: totalUsers,
+        lessonsStudied: totalTopicProgress,
+        flashcardsReviewed: totalFlashcardReviews,
+        matchesPlayed: totalMatches,
+        courses: totalCourses,
+        topics: totalTopics,
+      }
+    })
+
+    return NextResponse.json(stats, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+      },
+    })
+  } catch (error) {
+    console.error('[GET /api/stats]', error)
+    return NextResponse.json(
+      { students: 0, lessonsStudied: 0, flashcardsReviewed: 0, matchesPlayed: 0, courses: 24, topics: 700 },
+      { status: 200 }
+    )
+  }
+}
