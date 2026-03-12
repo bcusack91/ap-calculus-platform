@@ -1,0 +1,112 @@
+export const preAlgVariablesPart3Data = {
+  topicSlug: "intro-variables-prealgebra",
+  sections: [
+    {
+      id: 'prealgebra-intro-variables-p3-intro',
+      type: 'text' as const,
+      content: `
+# 🔢 Evaluating Expressions
+
+**Part 3 of 7 — Evaluating Expressions**
+
+Welcome to **Evaluating Expressions** — Part 3 of 7 in the Pre-Algebra Introduction to Variables series.
+
+This lesson covers key concepts and practice problems.
+      `
+    },
+    {
+      id: 'prealgebra-intro-variables-p3-worked',
+      type: 'text' as const,
+      content: `
+## Worked Example
+
+See the detailed steps in the practice sections below.
+      `
+    },
+    {
+      id: 'prealgebra-intro-variables-p3-mcq1',
+      type: 'multiple-choice' as const,
+      content: `
+**Quick Check** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: "Which best describes evaluating expressions?",
+            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
+            correctAnswer: 0,
+            explanation: "Evaluating Expressions is a core concept in Pre-Algebra."
+          }
+        ]
+      }
+    },
+    {
+      id: 'prealgebra-intro-variables-p3-input',
+      type: 'input-boxes' as const,
+      content: `
+**Practice** 🧮
+
+Answer the following about evaluating expressions.
+      `,
+      exercise: {
+        boxes: 1,
+        correctAnswers: ["correct"],
+        hint1: "Think about the definition.",
+        explanation: "Review the concepts of evaluating expressions."
+      }
+    },
+    {
+      id: 'prealgebra-intro-variables-p3-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+**Concept Check** 🔍
+      `,
+      exercise: {
+        dropdowns: [
+          {
+            label: "Evaluating Expressions is important because:",
+            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
+          },
+          {
+            label: "The best study strategy is:",
+            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
+          }
+        ],
+        correctAnswers: ["Both of these","Practice problems regularly"],
+        hint1: "Think about why we study this.",
+        hint2: "Active practice is key.",
+        explanation: "Evaluating Expressions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+      }
+    },
+    {
+      id: 'prealgebra-intro-variables-p3-practice',
+      type: 'text' as const,
+      content: `
+## Practice
+
+| # | Concept | Key Idea |
+|---|---------|----------|
+| 1 | Evaluating Expressions | Core evaluating expressions principles |
+| 2 | Application | Real-world problems |
+| 3 | Extension | Advanced connections |
+      `
+    },
+    {
+      id: 'prealgebra-intro-variables-p3-mcq2',
+      type: 'multiple-choice' as const,
+      content: `
+**Challenge Questions** 📋
+      `,
+      exercise: {
+        questions: [
+          {
+            question: "What is the most important skill in evaluating expressions?",
+            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
+            correctAnswer: 1,
+            explanation: "Understanding the underlying concepts is always most important."
+          }
+        ]
+      }
+    }
+  ]
+};
