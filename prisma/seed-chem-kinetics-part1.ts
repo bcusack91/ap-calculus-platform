@@ -1295,7 +1295,7 @@ $$t = 1.585 \\times t_{1/2} = 1.585 \\times 10.7 = 17.0 \\text{ hours}$$
       {
         topicId: ratesTopic.id,
         front: 'What is reaction rate and how is it expressed for the general reaction aA + bB → cC + dD?',
-        back: 'Change in concentration over time. Rate = -(1/a)Δ[A]/Δt = -(1/b)Δ[B]/Δt = +(1/c)Δ[C]/Δt = +(1/d)Δ[D]/Δt. Negative for reactants (decreasing), positive for products (increasing), divide by coefficient.'
+        back: 'Change in concentration over time.\n\n$$\\text{Rate} = -\\frac{1}{a}\\frac{\\Delta[\\text{A}]}{\\Delta t} = -\\frac{1}{b}\\frac{\\Delta[\\text{B}]}{\\Delta t} = +\\frac{1}{c}\\frac{\\Delta[\\text{C}]}{\\Delta t} = +\\frac{1}{d}\\frac{\\Delta[\\text{D}]}{\\Delta t}$$\n\nNegative for reactants (decreasing), positive for products (increasing), divide by coefficient.'
       },
       {
         topicId: ratesTopic.id,

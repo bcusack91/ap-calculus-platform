@@ -10,9 +10,93 @@ export function formatFlashcardContent(content: string): string {
   if (content.includes('$') || content.includes('\\[') || content.includes('\\(')) {
     return content
   }
-  
+
+  // Split content into sentences and process each
+  // This prevents equations from being broken across sentence boundaries
+  const parts = content.split(/(?<=\.)\s+/)
+  const processed = parts.map(part => {
+    // Detect chemistry/math equation patterns:
+    // - Contains = with math operators AND brackets/parens/fractions (e.g. Rate = -(1/a)Δ[A]/Δt = ...)
+    // - Contains = with Greek letters (Δ, etc.)
+    // - Contains multiple = signs (chained equations)
+    const equalsCount = (part.match(/=/g) || []).length
+    const hasMathChars = /[Δ∑∏∫√±×÷°²³₀₁₂₃₄₅₆₇₈₉]/.test(part)
+    const hasBrackets = /\[.*\]/.test(part)
+    const hasFractions = /\(1\/[a-z]\)/.test(part) || /\b\d+\/\d+\b/.test(part)
+    const hasExponents = /\^[\-+]?\d+|\^[a-z]/.test(part)
+
+    // If it looks like a standalone equation (multiple = or = with math notation), wrap as display equation
+    if (equalsCount >= 2 && (hasMathChars || hasBrackets || hasFractions)) {
+      // Convert the equation to proper LaTeX
+      return '\n\n$$' + convertToLatex(part.trim()) + '$$\n\n'
+    }
+
+    // Single equation with math notation
+    if (equalsCount >= 1 && (hasMathChars || hasBrackets || hasFractions || hasExponents)) {
+      // Check if there's surrounding text
+      const eqMatch = part.match(/^(.*?)(\b[A-Za-z_][A-Za-z0-9_]*\s*=\s*.+)$/)
+      if (eqMatch && eqMatch[1].trim()) {
+        // Text before equation + equation
+        return eqMatch[1].trim() + ' $' + convertToLatex(eqMatch[2].trim()) + '$'
+      }
+      return '$' + convertToLatex(part.trim()) + '$'
+    }
+
+    // Fallback: use the regex-based approach for simpler patterns
+    return formatSimplePatterns(part)
+  })
+
+  return processed.join(' ')
+}
+
+/**
+ * Convert plain-text equation notation to proper LaTeX
+ */
+function convertToLatex(eq: string): string {
+  let latex = eq
+
+  // Replace Δ with \Delta
+  latex = latex.replace(/Δ/g, '\\Delta ')
+
+  // Replace [X] concentration notation with \text{[X]} or just [X] in math mode
+  // In LaTeX, brackets need to be explicit
+  latex = latex.replace(/\[([A-Z][a-z]*(?:\d*[+\-]*)?)\]/g, '[\\text{$1}]')
+
+  // Replace (1/x) fraction patterns with \frac{1}{x}
+  latex = latex.replace(/\((\d+)\/([a-z])\)/g, '\\frac{$1}{$2}')
+
+  // Replace simple fractions like a/b (but not in the middle of words)
+  latex = latex.replace(/(?<![a-zA-Z])(\w+)\/(\w+)(?![a-zA-Z])/g, '\\frac{$1}{$2}')
+
+  // Replace ^ with proper superscript
+  latex = latex.replace(/\^(\{[^}]+\}|[\-+]?\d+|[a-zA-Z])/g, '^{$1}')
+  // Clean double braces
+  latex = latex.replace(/\^\{\{([^}]+)\}\}/g, '^{$1}')
+
+  // Replace subscript notation like _0, _i
+  latex = latex.replace(/_([a-zA-Z0-9])\b/g, '_{$1}')
+
+  // Replace ² ³ with ^2 ^3
+  latex = latex.replace(/²/g, '^{2}')
+  latex = latex.replace(/³/g, '^{3}')
+
+  // Replace × with \times
+  latex = latex.replace(/×/g, '\\times ')
+
+  // Ensure Rate, rate, and other common words render as text
+  latex = latex.replace(/\bRate\b/g, '\\text{Rate}')
+  latex = latex.replace(/\brate\b/g, '\\text{rate}')
+
+  return latex
+}
+
+/**
+ * Handle simpler patterns (variables, superscripts, subscripts) that don't need full equation treatment
+ */
+function formatSimplePatterns(content: string): string {
+  let formatted = content
+
   // Pattern 1: Detect equation-like expressions (contains =, +, -, *, /, ^, subscripts, etc.)
-  // Match patterns like: "1/f = 1/d_o + 1/d_i" or "E = mc²" or "v² = v₀² + 2aΔx"
   const equationPattern = /\b([a-zA-Z_][a-zA-Z0-9_]*\s*[=<>≤≥≈]\s*[^.,;!?]*(?:[+\-*/^²³°₀₁₂₃₄₅₆₇₈₉]|\\times|\\div)[^.,;!?]*)/g
   
   // Pattern 2: Fractions like "1/2" or "a/b" 
@@ -24,21 +108,17 @@ export function formatFlashcardContent(content: string): string {
   // Pattern 4: Superscripts like m^2, x^3, 10^-3
   const superscriptPattern = /\b([a-zA-Z0-9]+\^[\-+]?[a-zA-Z0-9]+)\b/g
   
-  let formatted = content
-  
-  // First, wrap entire equations (e.g., "1/f = 1/d_o + 1/d_i" becomes "$1/f = 1/d_o + 1/d_i$")
+  // First, wrap entire equations
   formatted = formatted.replace(equationPattern, (match) => {
-    // Don't double-wrap if already wrapped
     if (match.includes('$')) return match
     return `$${match}$`
   })
   
   // Then wrap fractions that aren't already in LaTeX
   formatted = formatted.replace(fractionPattern, (match) => {
-    // Check if this fraction is already inside a $ delimiter
     const beforeMatch = formatted.substring(0, formatted.indexOf(match))
     const openDollars = (beforeMatch.match(/\$/g) || []).length
-    if (openDollars % 2 === 1) return match // Already inside LaTeX
+    if (openDollars % 2 === 1) return match
     return `$${match}$`
   })
   
