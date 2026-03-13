@@ -22,6 +22,12 @@ import LessonProgressBar from '@/components/LessonProgressBar'
 const ExitQuiz = dynamic(() => import('@/components/ExitQuiz'), { ssr: false })
 import KeyboardShortcutHint from '@/components/KeyboardShortcutHint'
 import { useLessonKeyboard } from '@/hooks/useLessonKeyboard'
+import TextToSpeech from '@/components/TextToSpeech'
+import PrintButton from '@/components/PrintButton'
+import FontSizeAdjuster from '@/components/FontSizeAdjuster'
+import ReadingProgressBar from '@/components/ReadingProgressBar'
+import HintSystem from '@/components/HintSystem'
+import MarkForReview from '@/components/MarkForReview'
 
 // Helper component to render inline LaTeX within text strings
 // Parses $...$ and $$...$$ delimiters and renders via KaTeX
@@ -676,6 +682,9 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
 
   return (
     <>
+      {/* Reading Progress Bar */}
+      <ReadingProgressBar />
+
       {/* Sticky lesson progress bar */}
       <LessonProgressBar
         currentStep={currentSectionIndex}
@@ -753,6 +762,14 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
             {Math.round(progress)}% Complete
           </span>
         </div>
+      </div>
+
+      {/* Lesson Toolbar */}
+      <div className="flex items-center justify-end gap-2 flex-wrap">
+        <TextToSpeech text={currentSection.content || ''} />
+        <MarkForReview cardId={`${topicSlug}-part${lessonPart}-section${currentSectionIndex}`} />
+        <PrintButton />
+        <FontSizeAdjuster />
       </div>
 
       {/* Current Section Content */}

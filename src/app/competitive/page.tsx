@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
+import { PowerUpShop } from '@/components/PowerUps'
+import { ChallengeAFriend } from '@/components/ChallengeAFriend'
 
 interface CompetitiveProfile {
   rank: string
@@ -1069,6 +1071,20 @@ export default function CompetitivePage() {
               </div>
               <p className="text-gray-600 dark:text-gray-400">Avg Accuracy</p>
             </div>
+          </div>
+        )}
+
+        {/* Challenge a Friend */}
+        {profile && (
+          <div className="mt-8">
+            <ChallengeAFriend />
+          </div>
+        )}
+
+        {/* Power-Up Shop */}
+        {profile && (
+          <div className="mt-8">
+            <PowerUpShop currentXP={0} />
           </div>
         )}
       </div>

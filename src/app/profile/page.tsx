@@ -6,6 +6,11 @@ import { useRouter } from 'next/navigation';
 import AvatarBuilder from '@/components/AvatarBuilder';
 import ColorSchemeSelector from '@/components/ColorSchemeSelector';
 import { AvatarData } from '@/types/avatar';
+import { StudyHeatmap } from '@/components/StudyHeatmap';
+import { MilestonesList } from '@/components/MilestoneCelebrations';
+import { XPDisplay } from '@/components/XPSystem';
+import { LevelBadge } from '@/components/LevelSystem';
+import NightModeScheduler from '@/components/NightModeScheduler';
 
 export default function ProfilePage() {
   const { data: session, status } = useSession();
@@ -102,6 +107,11 @@ export default function ProfilePage() {
           <ColorSchemeSelector />
         </div>
 
+        {/* Night Mode Schedule */}
+        <div className="max-w-md mx-auto mb-8 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+          <NightModeScheduler />
+        </div>
+
         {/* Success Message */}
         {saveMessage && (
           <div className={`max-w-md mx-auto mb-6 p-4 rounded-lg text-center ${
@@ -115,6 +125,25 @@ export default function ProfilePage() {
 
         {/* Avatar Builder */}
         <AvatarBuilder initialAvatar={avatarData} onSave={handleSaveAvatar} />
+
+        {/* XP & Level */}
+        <div className="max-w-md mx-auto mt-8 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
+          <h2 className="font-semibold text-gray-900 dark:text-white mb-3">⚡ XP & Level</h2>
+          <div className="flex items-center gap-4">
+            <XPDisplay totalXP={0} todayXP={0} />
+            <LevelBadge totalXP={0} />
+          </div>
+        </div>
+
+        {/* Study Heatmap */}
+        <div className="max-w-4xl mx-auto mt-8">
+          <StudyHeatmap />
+        </div>
+
+        {/* Milestones */}
+        <div className="max-w-4xl mx-auto mt-8">
+          <MilestonesList />
+        </div>
 
         {/* Back Button */}
         <div className="text-center mt-8">

@@ -19,6 +19,14 @@ import WeakTopicsDashboard from '@/components/WeakTopicsDashboard'
 import ProgressComparison from '@/components/ProgressComparison'
 import DashboardTutorial from '@/components/DashboardTutorial'
 import RandomPracticeButton from '@/components/RandomPracticeButton'
+import { XPDisplay } from '@/components/XPSystem'
+import { LevelBadge } from '@/components/LevelSystem'
+import { DailyChallenge } from '@/components/DailyChallenge'
+import { SeasonalEvents } from '@/components/SeasonalEvents'
+import { BattlePass } from '@/components/BattlePass'
+import { SeasonRankings } from '@/components/SeasonRankings'
+import { ChallengeAFriend } from '@/components/ChallengeAFriend'
+import { StudyHeatmap } from '@/components/StudyHeatmap'
 
 const FlashcardStudySession = dynamic(
   () => import('@/components/FlashcardStudySession'),
@@ -350,6 +358,10 @@ export default function DashboardPage() {
               </h1>
               <p className="text-gray-600 dark:text-gray-400">Here&apos;s your learning progress</p>
             </div>
+            <div className="hidden sm:flex items-center gap-3 ml-auto mr-4">
+              <XPDisplay totalXP={0} todayXP={0} />
+              <LevelBadge totalXP={0} />
+            </div>
           </div>
           <div className="flex flex-wrap gap-3">
             <Link href="/join-class" className="px-4 py-2 text-sm font-medium rounded-lg border border-purple-300 dark:border-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors text-purple-700 dark:text-purple-300">
@@ -391,6 +403,9 @@ export default function DashboardPage() {
             )}
           </div>
         )}
+
+        {/* Daily Challenge */}
+        <DailyChallenge />
 
         {/* Continue Where You Left Off (#121) */}
         <ContinueWhereYouLeftOff />
@@ -469,7 +484,10 @@ export default function DashboardPage() {
             <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-xl font-bold text-gray-900 dark:text-white">🏆 Achievements</h2>
-                <span className="text-sm text-gray-500 dark:text-gray-400">{achievementStats.unlocked}/{achievementStats.total} unlocked</span>
+                <div className="flex items-center gap-3">
+                  <span className="text-sm text-gray-500 dark:text-gray-400">{achievementStats.unlocked}/{achievementStats.total} unlocked</span>
+                  <Link href="/achievements" className="text-sm font-semibold text-purple-600 hover:text-purple-700">View All →</Link>
+                </div>
               </div>
               {achievements.length === 0 ? (
                 <p className="text-sm text-gray-500 dark:text-gray-400 text-center py-4">Complete topics, review flashcards, and build streaks to earn achievements!</p>
@@ -749,6 +767,21 @@ export default function DashboardPage() {
                 </div>
               </div>
             )}
+
+            {/* Season Rankings */}
+            <SeasonRankings currentUserId={session?.user?.id} />
+
+            {/* Challenge a Friend */}
+            <ChallengeAFriend />
+
+            {/* Seasonal Events */}
+            <SeasonalEvents />
+
+            {/* Battle Pass */}
+            <BattlePass />
+
+            {/* Study Heatmap */}
+            <StudyHeatmap />
 
             {/* Pomodoro Timer (#130) */}
             <PomodoroTimer />

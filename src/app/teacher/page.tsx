@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
+import { LMSIntegration } from '@/components/LMSIntegration'
 
 interface ClassroomSummary {
   id: string
@@ -294,6 +295,48 @@ export default function TeacherDashboard() {
             </div>
           </div>
         )}
+        {/* Teacher Tools */}
+        <div className="mt-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">🛠️ Teacher Tools</h2>
+            <Link
+              href="/teacher/tools"
+              className="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+            >
+              Open All Tools →
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            {[
+              { icon: '📝', label: 'Quiz Builder', href: '/teacher/tools?tab=quiz-builder' },
+              { icon: '📋', label: 'Templates', href: '/teacher/tools?tab=templates' },
+              { icon: '✍️', label: 'FRQ Grader', href: '/teacher/tools?tab=frq-grader' },
+              { icon: '🃏', label: 'Flashcards', href: '/teacher/tools?tab=flashcards' },
+              { icon: '📊', label: 'Analytics', href: '/teacher/tools?tab=analytics' },
+              { icon: '👥', label: 'Groups', href: '/teacher/tools?tab=grouping' },
+              { icon: '📢', label: 'Announcements', href: '/teacher/tools?tab=announcements' },
+              { icon: '🗺️', label: 'Curriculum Map', href: '/teacher/tools?tab=curriculum' },
+              { icon: '👨‍👩‍👧', label: 'Parent View', href: '/teacher/tools?tab=parent-view' },
+              { icon: '🔗', label: 'LMS Integration', href: '#lms' },
+            ].map((tool) => (
+              <Link
+                key={tool.label}
+                href={tool.href}
+                className="bg-white dark:bg-gray-800 rounded-xl shadow p-4 text-center hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-700 border-2 border-transparent transition-all group"
+              >
+                <div className="text-3xl mb-2">{tool.icon}</div>
+                <div className="text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-blue-600 transition-colors">
+                  {tool.label}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* LMS Integration */}
+        <div id="lms" className="mt-8">
+          <LMSIntegration />
+        </div>
       </div>
 
       {/* Create Classroom Modal */}

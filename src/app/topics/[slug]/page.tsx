@@ -18,7 +18,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import TopicContentRenderer from '@/components/TopicContentRenderer'
 import type { ReactNode } from 'react'
-import { SocialShare } from '@/components/SocialShare'
+import { SocialShare } from '@/components/SocialShare'\nimport { TopicContentTools } from '@/components/TopicContentTools'
 
 // ISR: revalidate content every hour (content rarely changes)
 export const revalidate = 3600
@@ -509,6 +509,13 @@ export default async function TopicPage(props: TopicPageProps) {
                 )}
               </div>
             </div>
+
+            {/* Content Enrichment Tools */}
+            <TopicContentTools
+              topicTitle={topic.title}
+              topicSlug={topic.slug}
+              courseName={topic.category.course.name}
+            />
 
             {/* Next / Previous Topic Navigation */}
             {(prevTopic || nextTopic) && (
