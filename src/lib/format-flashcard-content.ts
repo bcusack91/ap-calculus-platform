@@ -55,7 +55,10 @@ export function formatFlashcardContent(content: string): string {
 function convertToLatex(eq: string): string {
   let latex = eq
 
-  // Replace Δ with \Delta
+  // Convert Δ[X]/Δt patterns to proper fractions before individual substitutions
+  latex = latex.replace(/Δ\[([A-Z][a-z]*(?:\d*[+\-]*)?)\]\/Δt/g, '\\frac{\\Delta[\\text{$1}]}{\\Delta t}')
+
+  // Replace remaining Δ with \Delta
   latex = latex.replace(/Δ/g, '\\Delta ')
 
   // Replace [X] concentration notation with \text{[X]} or just [X] in math mode
