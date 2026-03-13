@@ -13,9 +13,17 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function FlashcardsPage() {
+export default async function FlashcardsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ course?: string }>
+}) {
+  const { course } = await searchParams
+
   const categories = await prisma.category.findMany({
+    where: course ? { course: { slug: course } } : undefined,
     include: {
+      course: { select: { name: true, slug: true } },
       topics: {
         include: {
           _count: {
@@ -28,13 +36,24 @@ export default async function FlashcardsPage() {
     orderBy: { order: 'asc' }
   })
 
+  const courseName = course && categories.length > 0 ? categories[0].course.name : null
+
   return (
     <div className="container py-10">
       <div className="mx-auto max-w-4xl">
-        <h1 className="text-4xl font-bold tracking-tight mb-4">Flashcards</h1>
+        <h1 className="text-4xl font-bold tracking-tight mb-4">
+          {courseName ? `${courseName} Flashcards` : 'Flashcards'}
+        </h1>
         <p className="text-lg text-muted-foreground mb-4">
-          Review concepts with our Anki-style spaced repetition system!
+          {courseName
+            ? `Review ${courseName} concepts with our Anki-style spaced repetition system!`
+            : 'Review concepts with our Anki-style spaced repetition system!'}
         </p>
+        {courseName && (
+          <Link href="/flashcards" className="text-sm text-purple-600 hover:underline mb-4 inline-block">
+            ← View all flashcard categories
+          </Link>
+        )}
 
         {/* Quick Action Button */}
         <div className="mb-8">
