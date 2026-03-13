@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useMemo } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
@@ -29,17 +29,17 @@ const TOOLS = [
 type ToolKey = (typeof TOOLS)[number]['key']
 
 export default function TeacherToolsPage() {
-  const { data: session, status } = useSession()
+  const { status } = useSession()
   const router = useRouter()
   const searchParams = useSearchParams()
-  const [activeTool, setActiveTool] = useState<ToolKey>('quiz-builder')
 
-  useEffect(() => {
+  const initialTab = useMemo(() => {
     const tab = searchParams.get('tab')
-    if (tab && TOOLS.some((t) => t.key === tab)) {
-      setActiveTool(tab as ToolKey)
-    }
+    if (tab && TOOLS.some((t) => t.key === tab)) return tab as ToolKey
+    return 'quiz-builder' as ToolKey
   }, [searchParams])
+
+  const [activeTool, setActiveTool] = useState<ToolKey>(initialTab)
 
   if (status === 'unauthenticated') {
     router.push('/auth/signin?callbackUrl=/teacher/tools')

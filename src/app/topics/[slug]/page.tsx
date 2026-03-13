@@ -18,7 +18,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import TopicContentRenderer from '@/components/TopicContentRenderer'
 import type { ReactNode } from 'react'
-import { SocialShare } from '@/components/SocialShare'\nimport { TopicContentTools } from '@/components/TopicContentTools'
+import { SocialShare } from '@/components/SocialShare'
+import { TopicContentTools } from '@/components/TopicContentTools'
 
 // ISR: revalidate content every hour (content rarely changes)
 export const revalidate = 3600

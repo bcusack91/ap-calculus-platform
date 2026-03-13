@@ -8,7 +8,7 @@ import { AchievementGallery } from '@/components/AchievementGallery'
 import { MilestonesList } from '@/components/MilestoneCelebrations'
 
 export default function AchievementsPage() {
-  const { data: session, status } = useSession()
+  const { status } = useSession()
   const router = useRouter()
   const [unlockedIds, setUnlockedIds] = useState<string[]>([])
   const [activeTab, setActiveTab] = useState<'achievements' | 'milestones'>('achievements')
