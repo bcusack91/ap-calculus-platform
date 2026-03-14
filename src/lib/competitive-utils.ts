@@ -25,6 +25,10 @@ import { getOChemQuestions } from '@/data/competitive-questions/ochem-bank'
 import { getPreCalcQuestions } from '@/data/competitive-questions/precalc-bank'
 import { getGeometryQuestions } from '@/data/competitive-questions/geometry-bank'
 import { getApCalculusQuestions } from '@/data/competitive-questions/ap-calculus-bank'
+import { getApPhysics2Questions } from '@/data/competitive-questions/ap-physics2-bank'
+import { getApPhysicsCMechQuestions } from '@/data/competitive-questions/ap-physics-c-mech-bank'
+import { getApPhysicsCEMQuestions } from '@/data/competitive-questions/ap-physics-c-em-bank'
+import { getApCalculusBCQuestions } from '@/data/competitive-questions/ap-calculus-bc-bank'
 
 interface UnitCirclePosition {
   angle: number;
@@ -245,6 +249,86 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     }
   }
 
+  // AP Physics 2 sub-topic routing
+  if (topicSlug && topicSlug !== 'ap-physics2') {
+    const apPhysics2TopicQuestions = getApPhysics2Questions(totalQuestions, topicSlug)
+    if (apPhysics2TopicQuestions.length > 0 && apPhysics2TopicQuestions.every(q => q.topicSlug === topicSlug)) {
+      return (apPhysics2TopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+        const shuffled = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctAnswer,
+          answerIndex: shuffled.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice'
+        } as MatchQuestion
+      })
+    }
+  }
+
+  // AP Physics C: Mechanics sub-topic routing
+  if (topicSlug && topicSlug !== 'ap-physics-c-mech') {
+    const apPhysicsCMechTopicQuestions = getApPhysicsCMechQuestions(totalQuestions, topicSlug)
+    if (apPhysicsCMechTopicQuestions.length > 0 && apPhysicsCMechTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+      return (apPhysicsCMechTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+        const shuffled = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctAnswer,
+          answerIndex: shuffled.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice'
+        } as MatchQuestion
+      })
+    }
+  }
+
+  // AP Physics C: E&M sub-topic routing
+  if (topicSlug && topicSlug !== 'ap-physics-c-em') {
+    const apPhysicsCEMTopicQuestions = getApPhysicsCEMQuestions(totalQuestions, topicSlug)
+    if (apPhysicsCEMTopicQuestions.length > 0 && apPhysicsCEMTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+      return (apPhysicsCEMTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+        const shuffled = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctAnswer,
+          answerIndex: shuffled.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice'
+        } as MatchQuestion
+      })
+    }
+  }
+
+  // AP Calculus BC sub-topic routing
+  if (topicSlug && topicSlug !== 'ap-calculus-bc') {
+    const apCalcBCTopicQuestions = getApCalculusBCQuestions(totalQuestions, topicSlug)
+    if (apCalcBCTopicQuestions.length > 0 && apCalcBCTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+      return (apCalcBCTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+        const shuffled = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctAnswer,
+          answerIndex: shuffled.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice'
+        } as MatchQuestion
+      })
+    }
+  }
+
   // Multiple-choice question bank topics
   const mcqBanks: Record<string, (count?: number) => OptionQuestion[]> = {
     'derivatives': getDerivativeQuestions as unknown as (count?: number) => OptionQuestion[],
@@ -270,6 +354,10 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     'precalc': getPreCalcQuestions as unknown as (count?: number) => OptionQuestion[],
     'geometry': getGeometryQuestions as unknown as (count?: number) => OptionQuestion[],
     'ap-calculus-ab': getApCalculusQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-physics2': getApPhysics2Questions as unknown as (count?: number) => OptionQuestion[],
+    'ap-physics-c-mech': getApPhysicsCMechQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-physics-c-em': getApPhysicsCEMQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-calculus-bc': getApCalculusBCQuestions as unknown as (count?: number) => OptionQuestion[],
   }
 
   // For course-level topics (standard mode, no sub-topic selected), filter to completed topics only
@@ -279,6 +367,10 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     'ap-biology': getApBiologyQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
     'precalc': getPreCalcQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
     'ap-calculus-ab': getApCalculusQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
+    'ap-physics2': getApPhysics2Questions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
+    'ap-physics-c-mech': getApPhysicsCMechQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
+    'ap-physics-c-em': getApPhysicsCEMQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
+    'ap-calculus-bc': getApCalculusBCQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
   }
 
   if (topicSlug && topicSlug in courseTopicBanks && completedTopics && completedTopics.length > 0) {
