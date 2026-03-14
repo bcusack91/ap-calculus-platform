@@ -109,8 +109,10 @@ export default function ExitQuiz({
   }
 
   const score = useMemo(() => answers.filter(a => a.correct).length, [answers])
-  const passed = score >= 7
-  const quizMustRedoUnit = score < 5
+  const passThreshold = Math.ceil(totalQuestions * 0.7)
+  const redoThreshold = Math.ceil(totalQuestions * 0.5)
+  const passed = score >= passThreshold
+  const quizMustRedoUnit = score < redoThreshold
 
   const submitResults = useCallback(async () => {
     if (submitting) return
@@ -186,7 +188,7 @@ export default function ExitQuiz({
                 You need to redo the unit before retaking this quiz.
               </p>
               <p className="text-red-600 dark:text-red-400 text-sm mt-2">
-                Score at least 5/10 to be able to retry the quiz directly, or 7/10 to pass.
+                Score at least {redoThreshold}/{totalQuestions} to be able to retry the quiz directly, or {passThreshold}/{totalQuestions} to pass.
                 Go through the lesson sections again to reinforce your understanding.
               </p>
             </div>
@@ -196,7 +198,7 @@ export default function ExitQuiz({
                 You&apos;re close! You can retake the quiz immediately.
               </p>
               <p className="text-yellow-600 dark:text-yellow-400 text-sm mt-2">
-                You need 7/10 to pass. Review the explanations below and try again!
+                You need {passThreshold}/{totalQuestions} to pass. Review the explanations below and try again!
               </p>
             </div>
           )}
@@ -272,7 +274,7 @@ export default function ExitQuiz({
             </h2>
             <p className="text-sm text-gray-500 dark:text-gray-400">
               {previousAttempts > 0 && `Attempt #${previousAttempts + 1} • `}
-              Score 7/10 to unlock competitive mode
+              Score {passThreshold}/{totalQuestions} to unlock competitive mode
             </p>
           </div>
           <button

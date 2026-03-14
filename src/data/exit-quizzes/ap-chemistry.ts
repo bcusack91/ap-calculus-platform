@@ -516,6 +516,111 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'B',
   },
   {
+    question: 'Which statement best describes the Second Law of Thermodynamics?',
+    options: [
+      'Energy cannot be created or destroyed',
+      'The total entropy of the universe always increases for a spontaneous process',
+      'Entropy of a perfect crystal is zero at 0 K',
+      'Heat always flows from cold to hot objects',
+    ],
+    correctAnswer: 1,
+    explanation: 'The Second Law states that for any spontaneous process, the total entropy of the universe (system + surroundings) increases: ΔS_universe > 0.',
+    difficulty: 'easy',
+    domain: 'thermodynamics',
+    topicSlug: 'entropy-second-law',
+    formSet: 'both',
+  },
+  {
+    question: 'What happens to the entropy of a gas when it is compressed at constant temperature?',
+    options: [
+      'Entropy increases',
+      'Entropy stays the same',
+      'Entropy decreases',
+      'Depends on the type of gas',
+    ],
+    correctAnswer: 2,
+    explanation: 'Compression at constant temperature reduces the volume available to gas molecules, decreasing the number of microstates → ΔS < 0.',
+    difficulty: 'easy',
+    domain: 'thermodynamics',
+    topicSlug: 'entropy-second-law',
+    formSet: 'both',
+  },
+  {
+    question: 'Which of the following has the highest molar entropy at 25°C?',
+    options: ['H₂O(s)', 'H₂O(l)', 'H₂O(g)', 'All have equal entropy'],
+    correctAnswer: 2,
+    explanation: 'Gases have far more microstates (ways to arrange particles) than liquids or solids. S°: H₂O(g) >> H₂O(l) > H₂O(s).',
+    difficulty: 'easy',
+    domain: 'thermodynamics',
+    topicSlug: 'entropy-second-law',
+    formSet: 'both',
+  },
+  {
+    question: 'For the reaction 2 NO₂(g) → N₂O₄(g), what is the sign of ΔS?',
+    options: ['Positive', 'Negative', 'Zero', 'Cannot be determined'],
+    correctAnswer: 1,
+    explanation: 'Two moles of gas combine into one mole of gas. Fewer gas molecules means fewer microstates → ΔS < 0.',
+    difficulty: 'medium',
+    domain: 'thermodynamics',
+    topicSlug: 'entropy-second-law',
+    formSet: 'both',
+  },
+  {
+    question: 'A reaction is nonspontaneous at all temperatures. Which combination of ΔH and ΔS does it have?',
+    options: [
+      'ΔH > 0, ΔS > 0',
+      'ΔH < 0, ΔS < 0',
+      'ΔH > 0, ΔS < 0',
+      'ΔH < 0, ΔS > 0',
+    ],
+    correctAnswer: 2,
+    explanation: 'When ΔH > 0 (endothermic) and ΔS < 0 (less disorder), ΔG = ΔH − TΔS is always positive regardless of temperature → never spontaneous.',
+    difficulty: 'medium',
+    domain: 'thermodynamics',
+    topicSlug: 'entropy-second-law',
+    formSet: 'both',
+  },
+  {
+    question: 'At what temperature (K) does a reaction with ΔH = −40 kJ and ΔS = −100 J/K switch from spontaneous to nonspontaneous?',
+    options: ['40 K', '100 K', '400 K', '4000 K'],
+    correctAnswer: 2,
+    explanation: 'The crossover temperature is T = ΔH/ΔS = −40,000 J / (−100 J/K) = 400 K. Below 400 K: spontaneous; above 400 K: nonspontaneous.',
+    difficulty: 'medium',
+    domain: 'thermodynamics',
+    topicSlug: 'entropy-second-law',
+    formSet: 'A',
+  },
+  {
+    question: 'Which process always results in an increase in entropy?',
+    options: [
+      'Freezing water at 0°C',
+      'Compressing a gas isothermally',
+      'Mixing two different ideal gases',
+      'Crystallizing salt from a solution',
+    ],
+    correctAnswer: 2,
+    explanation: 'Mixing two different gases always increases entropy because the molecules now have more possible arrangements in the combined volume.',
+    difficulty: 'easy',
+    domain: 'thermodynamics',
+    topicSlug: 'entropy-second-law',
+    formSet: 'A',
+  },
+  {
+    question: 'According to the Second Law, can a process decrease the entropy of a system?',
+    options: [
+      'No, entropy must always increase',
+      'Yes, as long as the entropy of the surroundings increases by a greater amount',
+      'Yes, but only at absolute zero',
+      'No, unless work is done on the system',
+    ],
+    correctAnswer: 1,
+    explanation: 'A system\'s entropy can decrease (e.g., freezing water), but the surroundings must gain even more entropy so that ΔS_universe > 0.',
+    difficulty: 'medium',
+    domain: 'thermodynamics',
+    topicSlug: 'entropy-second-law',
+    formSet: 'B',
+  },
+  {
     question: 'Under what conditions can a reaction with ΔH > 0 and ΔS > 0 be spontaneous?',
     options: [
       'At all temperatures',
@@ -846,11 +951,18 @@ export const apChemQuestionPool: APChemQuestion[] = [
 /*  Generator function — used by exit quiz registry                   */
 /* ------------------------------------------------------------------ */
 
-export function generateExitQuiz(count = 10, topicSlug?: string): APChemQuestion[] {
+export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }[] {
   let pool = apChemQuestionPool
   if (topicSlug) {
     const filtered = pool.filter(q => q.topicSlug === topicSlug)
     pool = filtered.length > 0 ? filtered : pool
   }
-  return [...pool].sort(() => Math.random() - 0.5).slice(0, count)
+  return [...pool].sort(() => Math.random() - 0.5).slice(0, count).map((q, i) => ({
+    id: `${q.topicSlug}-q${i}`,
+    question: q.question,
+    options: q.options,
+    correctIndex: q.correctAnswer,
+    explanation: q.explanation,
+    category: q.domain,
+  }))
 }
