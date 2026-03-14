@@ -28,6 +28,7 @@ const DynamicInteractiveLessonRenderer = dynamic(
 interface ClientLessonRendererProps {
   mode: 'handcrafted' | 'dynamic'
   topicSlug: string
+  courseSlug?: string
   // For handcrafted
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   preloadedParts?: any[]
@@ -40,6 +41,7 @@ interface ClientLessonRendererProps {
 export default function ClientLessonRenderer({
   mode,
   topicSlug,
+  courseSlug,
   preloadedParts,
   completionDestination,
   practiceModeParts,
@@ -59,6 +61,7 @@ export default function ClientLessonRenderer({
       {mode === 'handcrafted' && preloadedParts && preloadedParts.length > 0 ? (
         <InteractiveLessonRenderer
           topicSlug={topicSlug}
+          courseSlug={courseSlug}
           preloadedParts={preloadedParts}
           completionDestination={completionDestination as 'competitive' | 'complete' | undefined}
           practiceModeParts={practiceModeParts}

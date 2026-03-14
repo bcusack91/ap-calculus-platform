@@ -73,7 +73,12 @@ export default async function InteractivePage(props: InteractivePageProps) {
       category: {
         select: {
           name: true,
-          slug: true
+          slug: true,
+          course: {
+            select: {
+              slug: true
+            }
+          }
         }
       }
     }
@@ -158,6 +163,7 @@ export default async function InteractivePage(props: InteractivePageProps) {
           <ClientLessonRenderer
             mode="handcrafted"
             topicSlug={topic.slug}
+            courseSlug={topic.category.course.slug}
             preloadedParts={lessonConfig.parts}
             completionDestination={lessonConfig.completionDestination}
             practiceModeParts={lessonConfig.practiceModeParts}
@@ -166,6 +172,7 @@ export default async function InteractivePage(props: InteractivePageProps) {
           <ClientLessonRenderer
             mode="dynamic"
             topicSlug={topic.slug}
+            courseSlug={topic.category.course.slug}
             textContent={topic.textContent!}
           />
         )}

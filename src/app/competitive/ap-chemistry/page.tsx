@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
-import { useRouter } from 'next/navigation'
+import { useState, useEffect, useCallback, useRef } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 
 /* ================================================================== */
@@ -63,6 +63,8 @@ const UNIT_EMOJIS = ['⚛️', '🔗', '💧', '🔥', '⏱️', '🌡️', '⚖
 
 export default function APChemCompetitivePage() {
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const recommendedTopic = searchParams.get('topic')
   const { data: session, status } = useSession()
   const [loading, setLoading] = useState(true)
   const [topicsData, setTopicsData] = useState<TopicsResponse | null>(null)
@@ -71,6 +73,7 @@ export default function APChemCompetitivePage() {
   const [inQueue, setInQueue] = useState(false)
   const [queueStatus, setQueueStatus] = useState<QueueStatus | null>(null)
   const [showAIOptions, setShowAIOptions] = useState(false)
+  const hasAutoSelected = useRef(false)
 
   // Fetch AP Chem topics + completion status
   useEffect(() => {
@@ -122,6 +125,19 @@ export default function APChemCompetitivePage() {
       return () => clearInterval(interval)
     }
   }, [inQueue, checkQueue])
+
+  // Auto-select recommended topic from URL param (e.g., ?topic=entropy-second-law)
+  useEffect(() => {
+    if (topicsData && recommendedTopic && !hasAutoSelected.current) {
+      hasAutoSelected.current = true
+      const found = topicsData.units
+        .flatMap(u => u.topics)
+        .find(t => t.slug === recommendedTopic && t.completed)
+      if (found) {
+        setSelectedTopic(found.slug)
+      }
+    }
+  }, [topicsData, recommendedTopic])
 
   const joinQueue = async () => {
     try {
@@ -244,6 +260,7 @@ export default function APChemCompetitivePage() {
                   {unit.topics.map(topic => {
                     const isSelected = selectedTopic === topic.slug
                     const isCompleted = topic.completed
+                    const isRecommended = topic.slug === recommendedTopic
                     return (
                       <button
                         key={topic.slug}
@@ -257,6 +274,11 @@ export default function APChemCompetitivePage() {
                               : 'border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800/50 opacity-50 cursor-not-allowed'
                         }`}
                       >
+                        {isRecommended && isCompleted && (
+                          <span className="absolute -top-2 -right-2 px-2 py-0.5 text-[10px] font-bold rounded-full bg-orange-500 text-white shadow">
+                            ⭐ Recommended
+                          </span>
+                        )}
                         <div className="flex items-center justify-between">
                           <h3 className={`font-semibold text-sm ${isCompleted ? 'text-gray-900 dark:text-white' : 'text-gray-400 dark:text-gray-500'}`}>
                             {topic.title}

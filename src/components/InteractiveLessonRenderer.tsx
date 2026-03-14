@@ -235,6 +235,7 @@ function renderWindowKatex(input: string, fallback: string, displayMode = false)
 
 interface InteractiveLessonRendererProps {
   topicSlug: string
+  courseSlug?: string
   preloadedParts: PreloadedLessonPart[]
   completionDestination?: 'competitive' | 'complete'
   practiceModeParts?: number[]
@@ -250,7 +251,7 @@ function calculatePartMastery(lessonPart: number, completedSectionsCount: number
   return Math.min(1, baseLevel + progressInPart * partWeight)
 }
 
-export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, completionDestination, practiceModeParts: practiceModePropParts }: InteractiveLessonRendererProps) {
+export default function InteractiveLessonRenderer({ topicSlug, courseSlug, preloadedParts, completionDestination, practiceModeParts: practiceModePropParts }: InteractiveLessonRendererProps) {
   const searchParams = useSearchParams()
   const router = useRouter()
   const { data: session } = useSession()
@@ -576,8 +577,11 @@ export default function InteractiveLessonRenderer({ topicSlug, preloadedParts, c
     }))
 
     if (passed) {
-      // Passed! Navigate to competitive mode
-      router.push('/competitive')
+      // Passed! Navigate to course-specific competitive mode with topic pre-selected
+      const competitiveUrl = courseSlug
+        ? `/competitive/${courseSlug}?topic=${encodeURIComponent(topicSlug)}`
+        : '/competitive'
+      router.push(competitiveUrl)
     } else if (mustRedoUnit) {
       // Score < 5/10: must redo the entire unit. Reset to part 1.
       updateLessonPart(1 as LessonPart)
