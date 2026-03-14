@@ -3298,18 +3298,31 @@ function InputBoxExercise({
       ) : (
         /* Original boxes format: simple grid of input squares */
         <div className="flex gap-4 justify-center flex-wrap">
-          {Array.from({ length: numBoxes }).map((_, index) => (
-            <input
-              key={index}
-              ref={(el) => { inputRefs.current[index] = el }}
-              type="text"
-              value={answers[index]}
-              onChange={(e) => handleInputChange(index, e.target.value)}
-              className="w-20 h-20 text-3xl text-center border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200"
-              disabled={isComplete || showAnswer}
-              placeholder="?"
-            />
-          ))}
+          {Array.from({ length: numBoxes }).map((_, index) => {
+            const boxCorrect = hasSubmitted ? isAnswerMatch(answers[index], correctAnswersList[index]) : null
+            return (
+              <div key={index} className="flex flex-col items-center gap-1">
+                <span className="text-sm font-medium text-gray-500 dark:text-gray-400">{index + 1})</span>
+                <input
+                  ref={(el) => { inputRefs.current[index] = el }}
+                  type="text"
+                  value={answers[index]}
+                  onChange={(e) => handleInputChange(index, e.target.value)}
+                  className={`w-20 h-20 text-3xl text-center border-2 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200 ${
+                    boxCorrect === true
+                      ? 'border-green-500 bg-green-50 dark:bg-green-900/30'
+                      : boxCorrect === false
+                        ? 'border-red-500 bg-red-50 dark:bg-red-900/30'
+                        : 'border-gray-300'
+                  }`}
+                  disabled={isComplete || showAnswer}
+                  placeholder="?"
+                />
+                {boxCorrect === true && <span className="text-lg">✅</span>}
+                {boxCorrect === false && <span className="text-lg">❌</span>}
+              </div>
+            )
+          })}
         </div>
       )}
 
@@ -3322,29 +3335,27 @@ function InputBoxExercise({
         </button>
       )}
 
-      {showHint && attempts === 1 && !isCorrect && (
-        <div className="bg-blue-100 dark:bg-blue-900/30 border-l-4 border-blue-500 p-6 rounded-r-lg">
-          <p className="text-lg font-semibold text-blue-900 dark:text-blue-200">
-            💡 Hint: <InlineLatex text={exercise.hint1 || 'Try again! Check your calculation step by step.'} />
-          </p>
-        </div>
-      )}
-
-      {showHint && attempts === 2 && !isCorrect && (
-        <div className="bg-yellow-100 dark:bg-yellow-900/30 border-l-4 border-yellow-500 p-6 rounded-r-lg">
-          <p className="text-lg font-semibold text-yellow-900 dark:text-yellow-200">
-            💡 Hint: <InlineLatex text={exercise.hint2 || 'One more try!'} />
-          </p>
-        </div>
-      )}
-
-      {showHint && attempts === 3 && !isCorrect && !showAnswer && (
-        <div className="bg-orange-100 dark:bg-orange-900/30 border-l-4 border-orange-500 p-6 rounded-r-lg">
-          <p className="text-lg font-semibold text-orange-900 dark:text-orange-200">
-            💡 Hint: <InlineLatex text={exercise.hint3 || 'Last hint: write the setup carefully, then compute step by step.'} />
-          </p>
-        </div>
-      )}
+      {showHint && !isCorrect && !showAnswer && (() => {
+        const hintMap: Record<number, string | undefined> = { 0: exercise.hint1, 1: exercise.hint2, 2: exercise.hint3 }
+        const wrongIndices = correctAnswersList
+          .map((correct: string, i: number) => isAnswerMatch(answers[i], correct) ? null : i)
+          .filter((i): i is number => i !== null)
+        return wrongIndices.length > 0 ? (
+          <div className="space-y-3">
+            {wrongIndices.map((i) => {
+              const hint = hintMap[i]
+              if (!hint) return null
+              return (
+                <div key={i} className="bg-blue-100 dark:bg-blue-900/30 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                  <p className="text-lg font-semibold text-blue-900 dark:text-blue-200">
+                    💡 Hint for ({i + 1}): <InlineLatex text={hint} />
+                  </p>
+                </div>
+              )
+            })}
+          </div>
+        ) : null
+      })()}
 
       {showAnswer && (
         <div className="bg-green-100 dark:bg-green-900/30 border-l-4 border-green-500 p-6 rounded-r-lg">
