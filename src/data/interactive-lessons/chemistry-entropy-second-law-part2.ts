@@ -146,7 +146,7 @@ When asked to "predict the sign of $\\Delta S$" — **always start by counting m
       content: `
 **Predict ΔS Sign** 🧮
 
-Type "positive" or "negative" for the sign of $\\Delta S$:
+Type "+" or "−" for the sign of $\\Delta S$:
 
 1) $\\text{H}_2\\text{O}(l) \\rightarrow \\text{H}_2\\text{O}(g)$
 
@@ -156,7 +156,7 @@ Type "positive" or "negative" for the sign of $\\Delta S$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['positive', 'negative', 'positive'],
+        correctAnswers: ['+', '-', '+'],
         hint1: 'Liquid → gas: a huge increase in molecular freedom.',
         hint2: '$\\Delta n_{\\text{gas}} = 2 - 4 = -2$. Fewer gas molecules.',
         hint3: '$\\Delta n_{\\text{gas}} = (2 + 1 + 4) - 0 = +7$. Many more gas molecules!',
