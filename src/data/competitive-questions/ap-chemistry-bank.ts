@@ -7,6 +7,7 @@ export interface ApChemistryQuestion {
   correctAnswer: number
   explanation: string
   difficulty: 'easy' | 'medium' | 'hard'
+  topicSlug?: string
 }
 
 const allQuestions: ApChemistryQuestion[] = [
@@ -18,6 +19,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'Carbon has 6 protons, so its atomic number is 6.',
     difficulty: 'easy',
+    topicSlug: 'electron-configuration',
   },
   {
     id: 2,
@@ -26,6 +28,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'Covalent bonds form when atoms share electron pairs.',
     difficulty: 'easy',
+    topicSlug: 'types-of-chemical-bonds',
   },
   {
     id: 3,
@@ -34,6 +37,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'Avogadro\'s number ($6.022 \\times 10^{23}$) is the number of particles in one mole of a substance.',
     difficulty: 'easy',
+    topicSlug: 'moles-molar-mass',
   },
   {
     id: 4,
@@ -42,6 +46,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'A neutral solution has equal concentrations of H⁺ and OH⁻, giving a pH of 7.',
     difficulty: 'easy',
+    topicSlug: 'acid-base-theories-ph',
   },
   {
     id: 5,
@@ -50,6 +55,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'Boyle\'s Law: $PV = k$ (at constant T and n).',
     difficulty: 'easy',
+    topicSlug: 'ideal-gas-law',
   },
   {
     id: 6,
@@ -58,6 +64,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'Neon has 10 electrons filling 1s², 2s², and 2p⁶ subshells completely.',
     difficulty: 'easy',
+    topicSlug: 'electron-configuration',
   },
   {
     id: 7,
@@ -66,6 +73,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'Two or more reactants combine to form a single product — this is a synthesis reaction.',
     difficulty: 'easy',
+    topicSlug: 'reaction-types',
   },
   {
     id: 8,
@@ -74,6 +82,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'Fluorine has the highest electronegativity (3.98 on the Pauling scale).',
     difficulty: 'easy',
+    topicSlug: 'periodic-trends',
   },
   // --- MEDIUM ---
   {
@@ -83,6 +92,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: '$M = mol/L = 0.5/0.250 = 2.0$ M.',
     difficulty: 'medium',
+    topicSlug: 'solutions-solubility',
   },
   {
     id: 10,
@@ -91,6 +101,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'Adding reactant increases the forward reaction rate, shifting equilibrium toward products.',
     difficulty: 'medium',
+    topicSlug: 'le-chatelier-equilibrium-shifts',
   },
   {
     id: 11,
@@ -99,6 +110,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'K = +1, O = -2(×4 = -8). So Mn = 8 - 1 = +7.',
     difficulty: 'medium',
+    topicSlug: 'oxidation-reduction-reactions',
   },
   {
     id: 12,
@@ -107,6 +119,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: '$\\Delta G = \\Delta H - T\\Delta S$. A negative $\\Delta G$ indicates a spontaneous process.',
     difficulty: 'medium',
+    topicSlug: 'gibbs-free-energy',
   },
   {
     id: 13,
@@ -115,6 +128,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'VSEPR theory: 4 bonding pairs with no lone pairs gives a tetrahedral geometry (109.5° bond angles).',
     difficulty: 'medium',
+    topicSlug: 'vsepr-molecular-geometry',
   },
   {
     id: 14,
@@ -123,6 +137,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'The boiling point elevation equation uses the molal boiling-point elevation constant $K_b$.',
     difficulty: 'medium',
+    topicSlug: 'solutions-solubility',
   },
   {
     id: 15,
@@ -131,6 +146,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'The anode is always where oxidation occurs. In galvanic cells, the anode is the negative terminal.',
     difficulty: 'medium',
+    topicSlug: 'galvanic-cells-potentials',
   },
   {
     id: 16,
@@ -139,6 +155,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'Carbon in methane has 4 bonding pairs, requiring four $sp^3$ hybrid orbitals.',
     difficulty: 'medium',
+    topicSlug: 'hybridization-sigma-pi-bonds',
   },
   // --- HARD ---
   {
@@ -148,6 +165,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'Overall order = sum of exponents = 2 + 1 = 3 (third order).',
     difficulty: 'hard',
+    topicSlug: 'reaction-rates-and-rate-laws',
   },
   {
     id: 18,
@@ -156,6 +174,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: '$PbCl_2 \\rightleftharpoons Pb^{2+} + 2Cl^-$, so $K_{sp} = [Pb^{2+}][Cl^-]^2$.',
     difficulty: 'hard',
+    topicSlug: 'solubility-ksp',
   },
   {
     id: 19,
@@ -164,6 +183,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: '$E°_{cell} = E°_{cathode} - E°_{anode} = 0.34 - (-0.76) = +1.10$ V.',
     difficulty: 'hard',
+    topicSlug: 'galvanic-cells-potentials',
   },
   {
     id: 20,
@@ -172,6 +192,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'The Henderson-Hasselbalch equation relates pH to pKₐ and the ratio of conjugate base to acid.',
     difficulty: 'hard',
+    topicSlug: 'buffer-solutions-henderson-hasselbalch',
   },
   {
     id: 21,
@@ -180,6 +201,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: '$K_p = K_c(RT)^{\\Delta n}$ where $\\Delta n$ is the change in moles of gas.',
     difficulty: 'hard',
+    topicSlug: 'equilibrium-constants-expressions',
   },
   {
     id: 22,
@@ -188,6 +210,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'The angular momentum quantum number $l$ determines orbital shape (s, p, d, f).',
     difficulty: 'hard',
+    topicSlug: 'electron-configuration',
   },
   {
     id: 23,
@@ -196,6 +219,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'At equivalence, only the conjugate acid of the weak base remains in solution, making the solution acidic (pH < 7).',
     difficulty: 'hard',
+    topicSlug: 'acid-base-titrations',
   },
   {
     id: 24,
@@ -204,6 +228,7 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'The second law of thermodynamics states that spontaneous processes increase the entropy of the universe ($\\Delta S_{univ} > 0$).',
     difficulty: 'hard',
+    topicSlug: 'entropy-second-law',
   },
   {
     id: 25,
@@ -212,10 +237,166 @@ const allQuestions: ApChemistryQuestion[] = [
     correctAnswer: 0,
     explanation: 'For first-order reactions, $t_{1/2} = \\ln 2 / k = 0.693/k$, which is independent of $[A]_0$.',
     difficulty: 'hard',
+    topicSlug: 'integrated-rate-laws',
+  },
+
+  // --- ENTROPY & SECOND LAW (topic-specific) ---
+  {
+    id: 26,
+    question: 'Which statement best describes the Second Law of Thermodynamics?',
+    options: [
+      'The total entropy of the universe always increases for a spontaneous process',
+      'Energy cannot be created or destroyed',
+      'Entropy of a perfect crystal is zero at 0 K',
+      'Heat always flows from cold to hot objects',
+    ],
+    correctAnswer: 0,
+    explanation: 'The Second Law states that for any spontaneous process, $\\Delta S_{universe} > 0$.',
+    difficulty: 'easy',
+    topicSlug: 'entropy-second-law',
+  },
+  {
+    id: 27,
+    question: 'For which process is $\\Delta S$ positive?',
+    options: [
+      'Ice melting at 0°C',
+      'Water freezing at 0°C',
+      'Gas being compressed',
+      'Crystallization of a solute',
+    ],
+    correctAnswer: 0,
+    explanation: 'Melting increases molecular disorder as the rigid crystal lattice breaks down → $\\Delta S > 0$.',
+    difficulty: 'easy',
+    topicSlug: 'entropy-second-law',
+  },
+  {
+    id: 28,
+    question: 'Which phase of matter has the highest molar entropy?',
+    options: ['Gas', 'Liquid', 'Solid', 'All phases have equal entropy'],
+    correctAnswer: 0,
+    explanation: 'Gas molecules have the most freedom of motion and the most microstates → highest entropy.',
+    difficulty: 'easy',
+    topicSlug: 'entropy-second-law',
+  },
+  {
+    id: 29,
+    question: 'For the reaction $2 \\text{NO}_2(g) \\to \\text{N}_2\\text{O}_4(g)$, the sign of $\\Delta S$ is:',
+    options: ['Negative', 'Positive', 'Zero', 'Cannot be determined'],
+    correctAnswer: 0,
+    explanation: '2 moles of gas → 1 mole of gas. Fewer gas molecules = fewer microstates → $\\Delta S < 0$.',
+    difficulty: 'medium',
+    topicSlug: 'entropy-second-law',
+  },
+  {
+    id: 30,
+    question: 'A reaction has $\\Delta H > 0$ and $\\Delta S > 0$. It is spontaneous:',
+    options: [
+      'At high temperatures only',
+      'At low temperatures only',
+      'At all temperatures',
+      'Never',
+    ],
+    correctAnswer: 0,
+    explanation: '$\\Delta G = \\Delta H - T\\Delta S$. With both positive, $\\Delta G < 0$ only when $T\\Delta S > \\Delta H$, i.e. at high T.',
+    difficulty: 'medium',
+    topicSlug: 'entropy-second-law',
+  },
+  {
+    id: 31,
+    question: 'A reaction with $\\Delta H > 0$ and $\\Delta S < 0$ is spontaneous:',
+    options: [
+      'At no temperature',
+      'At high temperatures',
+      'At low temperatures',
+      'At all temperatures',
+    ],
+    correctAnswer: 0,
+    explanation: '$\\Delta G = \\Delta H - T\\Delta S$ is always positive when $\\Delta H > 0$ and $-T\\Delta S > 0$ → never spontaneous.',
+    difficulty: 'medium',
+    topicSlug: 'entropy-second-law',
+  },
+  {
+    id: 32,
+    question: 'What is the crossover temperature for a reaction with $\\Delta H = -50$ kJ and $\\Delta S = -125$ J/K?',
+    options: ['400 K', '250 K', '625 K', '0.4 K'],
+    correctAnswer: 0,
+    explanation: '$T = \\Delta H / \\Delta S = -50{,}000 / -125 = 400$ K. Below 400 K: spontaneous; above: nonspontaneous.',
+    difficulty: 'medium',
+    topicSlug: 'entropy-second-law',
+  },
+  {
+    id: 33,
+    question: 'Can a process decrease the entropy of a system and still be spontaneous?',
+    options: [
+      'Yes, if the entropy of the surroundings increases by more',
+      'No, entropy of the system must always increase',
+      'Only at absolute zero',
+      'Only if work is done on the system',
+    ],
+    correctAnswer: 0,
+    explanation: 'The Second Law requires $\\Delta S_{universe} > 0$. The system can lose entropy if the surroundings gain even more.',
+    difficulty: 'medium',
+    topicSlug: 'entropy-second-law',
+  },
+  {
+    id: 34,
+    question: 'Which always results in an entropy increase?',
+    options: [
+      'Mixing two different ideal gases',
+      'Freezing a pure liquid',
+      'Compressing a gas at constant T',
+      'Forming a precipitate from solution',
+    ],
+    correctAnswer: 0,
+    explanation: 'Mixing two different gases into a larger combined volume always increases the number of possible microstates.',
+    difficulty: 'easy',
+    topicSlug: 'entropy-second-law',
+  },
+  {
+    id: 35,
+    question: 'What is $\\Delta S_{surr}$ for an exothermic reaction releasing 80 kJ at 400 K?',
+    options: ['$+200$ J/K', '$-200$ J/K', '$+320$ J/K', '$-320$ J/K'],
+    correctAnswer: 0,
+    explanation: '$\\Delta S_{surr} = -\\Delta H_{sys}/T = -(-80{,}000)/400 = +200$ J/K.',
+    difficulty: 'hard',
+    topicSlug: 'entropy-second-law',
+  },
+  {
+    id: 36,
+    question: 'Rank in order of increasing standard molar entropy: Ne(g), N₂(g), CO₂(g)',
+    options: [
+      'Ne < N₂ < CO₂',
+      'CO₂ < N₂ < Ne',
+      'N₂ < Ne < CO₂',
+      'Ne < CO₂ < N₂',
+    ],
+    correctAnswer: 0,
+    explanation: 'More atoms per molecule → more vibrational/rotational modes → higher S°. Ne (monatomic) < N₂ (diatomic) < CO₂ (triatomic).',
+    difficulty: 'medium',
+    topicSlug: 'entropy-second-law',
+  },
+  {
+    id: 37,
+    question: 'At the boiling point, the entropy change for vaporization ($\\Delta S_{vap}$) can be calculated as:',
+    options: [
+      '$\\Delta H_{vap} / T$',
+      '$\\Delta H_{vap} \\times T$',
+      '$T / \\Delta H_{vap}$',
+      '$\\Delta H_{vap} / T^2$',
+    ],
+    correctAnswer: 0,
+    explanation: 'At a reversible phase transition, $\\Delta S = \\Delta H / T$. The boiling point is the equilibrium temperature for vaporization.',
+    difficulty: 'medium',
+    topicSlug: 'entropy-second-law',
   },
 ]
 
-export function getApChemistryQuestions(count: number = 10): ApChemistryQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+export function getApChemistryQuestions(count: number = 10, topicSlug?: string): ApChemistryQuestion[] {
+  let pool = allQuestions
+  if (topicSlug) {
+    const filtered = pool.filter(q => q.topicSlug === topicSlug)
+    if (filtered.length > 0) pool = filtered
+  }
+  const shuffled = [...pool].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

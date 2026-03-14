@@ -144,7 +144,7 @@ export default function APChemCompetitivePage() {
       const res = await fetch('/api/competitive/queue', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topicSlug: 'ap-chemistry', gameMode: selectedMode }),
+        body: JSON.stringify({ topicSlug: selectedTopic || 'ap-chemistry', gameMode: selectedMode }),
       })
       const data: QueueStatus = await res.json()
       if (data.status === 'matched') {
@@ -173,7 +173,7 @@ export default function APChemCompetitivePage() {
       const res = await fetch('/api/competitive/practice-ai', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topicSlug: 'ap-chemistry', gameMode: selectedMode, aiDifficulty: difficulty }),
+        body: JSON.stringify({ topicSlug: selectedTopic || 'ap-chemistry', gameMode: selectedMode, aiDifficulty: difficulty }),
       })
       const data = await res.json()
       if (data.matchId) {

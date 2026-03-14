@@ -143,6 +143,27 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     })
   }
 
+  // AP Chemistry sub-topic routing: filter questions to specific topic
+  if (topicSlug && topicSlug !== 'ap-chemistry') {
+    const apChemTopicQuestions = getApChemistryQuestions(totalQuestions, topicSlug)
+    // Only use filtered results if the bank actually has questions for this topic
+    if (apChemTopicQuestions.length > 0 && apChemTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+      return (apChemTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+        const shuffled = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctAnswer,
+          answerIndex: shuffled.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice'
+        } as MatchQuestion
+      })
+    }
+  }
+
   // Multiple-choice question bank topics
   const mcqBanks: Record<string, (count?: number) => OptionQuestion[]> = {
     'derivatives': getDerivativeQuestions as unknown as (count?: number) => OptionQuestion[],
