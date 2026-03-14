@@ -216,15 +216,15 @@ Which substance has the HIGHER standard molar entropy? Type the chemical formula
             explanation: 'At the equilibrium phase transition temperature: $\\Delta S = \\Delta H / T$. This applies because the transition is reversible at the boiling point.'
           },
           {
-            question: 'Rank in order of increasing S°: Ne(g), N₂(g), CH₃CH₂OH(l)',
+            question: 'Rank in order of increasing S°: Ne(g), N₂(g), CO₂(g)',
             options: [
-              'Ne < N₂ < CH₃CH₂OH',
-              'CH₃CH₂OH < Ne < N₂',
-              'Ne < CH₃CH₂OH < N₂',
-              'CH₃CH₂OH < N₂ < Ne'
+              'Ne < N₂ < CO₂',
+              'CO₂ < N₂ < Ne',
+              'N₂ < Ne < CO₂',
+              'Ne < CO₂ < N₂'
             ],
             correctAnswer: 0,
-            explanation: 'Ne(g) is a single atom gas (lowest S° among gases). N₂(g) is a diatomic gas. CH₃CH₂OH(l) is a complex molecule but liquid — wait, actually gases have higher S° than liquids. Ne (126 J/mol·K) < N₂ (191.6) and ethanol(l) ≈ 161. So Ne < CH₃CH₂OH(l) < N₂(g)... The correct ranking considers that complex liquid can be between simple gases. Actually: Ne ≈ 146, so: CH₃CH₂OH(l) ≈ 161 < N₂ = 191.6. But Ne = 146 < 161. So Ne < CH₃CH₂OH < N₂ would be correct.'
+            explanation: 'For gases at the same conditions, more atoms in a molecule means more ways to vibrate and rotate — so higher entropy. Ne (monatomic, S° ≈ 146 J/mol·K) < N₂ (diatomic, S° ≈ 192 J/mol·K) < CO₂ (triatomic, S° ≈ 214 J/mol·K).'
           }
         ]
       }
