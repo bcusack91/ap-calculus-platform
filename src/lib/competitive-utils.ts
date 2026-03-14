@@ -24,6 +24,7 @@ import { getActScienceQuestions } from '@/data/competitive-questions/act-science
 import { getOChemQuestions } from '@/data/competitive-questions/ochem-bank'
 import { getPreCalcQuestions } from '@/data/competitive-questions/precalc-bank'
 import { getGeometryQuestions } from '@/data/competitive-questions/geometry-bank'
+import { getApCalculusQuestions } from '@/data/competitive-questions/ap-calculus-bank'
 
 interface UnitCirclePosition {
   angle: number;
@@ -164,6 +165,86 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     }
   }
 
+  // AP Physics 1 sub-topic routing
+  if (topicSlug && topicSlug !== 'ap-physics1') {
+    const apPhysicsTopicQuestions = getApPhysics1Questions(totalQuestions, topicSlug)
+    if (apPhysicsTopicQuestions.length > 0 && apPhysicsTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+      return (apPhysicsTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+        const shuffled = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctAnswer,
+          answerIndex: shuffled.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice'
+        } as MatchQuestion
+      })
+    }
+  }
+
+  // AP Biology sub-topic routing
+  if (topicSlug && topicSlug !== 'ap-biology') {
+    const apBioTopicQuestions = getApBiologyQuestions(totalQuestions, topicSlug)
+    if (apBioTopicQuestions.length > 0 && apBioTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+      return (apBioTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+        const shuffled = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctAnswer,
+          answerIndex: shuffled.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice'
+        } as MatchQuestion
+      })
+    }
+  }
+
+  // AP Precalculus sub-topic routing
+  if (topicSlug && topicSlug !== 'precalc') {
+    const precalcTopicQuestions = getPreCalcQuestions(totalQuestions, topicSlug)
+    if (precalcTopicQuestions.length > 0 && precalcTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+      return (precalcTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+        const shuffled = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctAnswer,
+          answerIndex: shuffled.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice'
+        } as MatchQuestion
+      })
+    }
+  }
+
+  // AP Calculus AB sub-topic routing
+  if (topicSlug && topicSlug !== 'ap-calculus-ab') {
+    const apCalcTopicQuestions = getApCalculusQuestions(totalQuestions, topicSlug)
+    if (apCalcTopicQuestions.length > 0 && apCalcTopicQuestions.every(q => q.topicSlug === topicSlug)) {
+      return (apCalcTopicQuestions as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+        const shuffled = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctAnswer,
+          answerIndex: shuffled.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice'
+        } as MatchQuestion
+      })
+    }
+  }
+
   // Multiple-choice question bank topics
   const mcqBanks: Record<string, (count?: number) => OptionQuestion[]> = {
     'derivatives': getDerivativeQuestions as unknown as (count?: number) => OptionQuestion[],
@@ -188,6 +269,40 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     'ochem': getOChemQuestions as unknown as (count?: number) => OptionQuestion[],
     'precalc': getPreCalcQuestions as unknown as (count?: number) => OptionQuestion[],
     'geometry': getGeometryQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-calculus-ab': getApCalculusQuestions as unknown as (count?: number) => OptionQuestion[],
+  }
+
+  // For course-level topics (standard mode, no sub-topic selected), filter to completed topics only
+  const courseTopicBanks: Record<string, (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>> = {
+    'ap-chemistry': getApChemistryQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
+    'ap-physics1': getApPhysics1Questions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
+    'ap-biology': getApBiologyQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
+    'precalc': getPreCalcQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
+    'ap-calculus-ab': getApCalculusQuestions as unknown as (count: number, topicSlug?: string) => Array<{ topicSlug: string } & OptionQuestion>,
+  }
+
+  if (topicSlug && topicSlug in courseTopicBanks && completedTopics && completedTopics.length > 0) {
+    // Standard mode: only include questions from topics both students have completed
+    const bankFn = courseTopicBanks[topicSlug]
+    const allCourseQuestions = bankFn(999) // get all questions
+    const filteredQuestions = allCourseQuestions.filter(q => completedTopics.includes(q.topicSlug))
+    if (filteredQuestions.length > 0) {
+      const shuffled = [...filteredQuestions].sort(() => Math.random() - 0.5)
+      const selected = shuffled.slice(0, Math.min(totalQuestions, shuffled.length))
+      return (selected as unknown as OptionQuestion[]).map((q: OptionQuestion, i: number) => {
+        const s = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: s.options,
+          correctAnswer: s.correctAnswer,
+          answerIndex: s.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice'
+        } as MatchQuestion
+      })
+    }
   }
 
   if (topicSlug && topicSlug in mcqBanks) {
