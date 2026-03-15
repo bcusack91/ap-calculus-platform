@@ -5,18 +5,18 @@ export const chemIdealGasLawPart5Data = {
       id: 'gl5-intro',
       type: 'text' as const,
       content: `
-# 🎈 Dalton\'s Law of Partial Pressures
+# 🎈 Dalton's Law of Partial Pressures
 
 **Part 5 of 7 — Gas Mixtures**
 
-Most gases we encounter are actually **mixtures** — air itself is about 78% N₂, 21% O₂, and 1% Ar plus trace gases. **Dalton\'s Law** tells us how to handle the pressure contributions from each gas in a mixture.
+Most gases we encounter are actually **mixtures** — air itself is about 78% N₂, 21% O₂, and 1% Ar plus trace gases. **Dalton's Law** tells us how to handle the pressure contributions from each gas in a mixture.
       `
     },
     {
       id: 'gl5-daltons-law',
       type: 'text' as const,
       content: `
-## Dalton\'s Law
+## Dalton's Law
 
 The **total pressure** of a gas mixture equals the **sum of the partial pressures** of each component gas:
 
@@ -173,24 +173,27 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
       id: 'gl5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Dalton\'s Law Concepts** 🔍
+**Dalton's Law Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             id: 'gl5-dd1',
+            label: 'In a gas mixture, the mole fractions ___',
             options: ['add up to 1', 'add up to the total pressure', 'are all equal'],
             correctIndex: 0,
             explanation: 'Mole fractions always sum to exactly 1 (or 100% of the mixture).'
           },
           {
             id: 'gl5-dd2',
+            label: 'When collecting gas over water, total pressure is ___ the dry gas pressure',
             options: ['higher than', 'lower than', 'equal to'],
             correctIndex: 0,
             explanation: 'When collecting gas over water, the total pressure includes water vapor, so the total is higher than the pressure of the dry gas alone.'
           },
           {
             id: 'gl5-dd3',
+            label: 'Partial pressure of a gas depends on the ___',
             options: ['moles of that gas', 'mass of that gas', 'volume of that gas'],
             correctIndex: 0,
             explanation: 'Partial pressure depends on the number of moles (not mass) of each gas: $P_i = n_iRT/V$.'
@@ -202,7 +205,7 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
       id: 'gl5-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Dalton\'s Law** ✅
+**Exit Quiz — Dalton's Law** ✅
       `,
       exercise: {
         questions: [
@@ -227,6 +230,94 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
             ],
             correctAnswer: 1,
             explanation: 'The gas you collect is mixed with water vapor, which contributes its own partial pressure. To find the pressure of the dry gas, you subtract the vapor pressure of water from the total measured pressure.'
+          },
+          {
+            question: 'A mixture contains 2.0 mol He, 3.0 mol Ne, and 5.0 mol Ar. The mole fraction of Ne is:',
+            options: [
+              '0.20',
+              '0.30',
+              '0.50',
+              '0.60'
+            ],
+            correctAnswer: 1,
+            explanation: '$\\chi_{Ne} = 3.0/(2.0+3.0+5.0) = 3.0/10.0 = 0.30$.'
+          },
+          {
+            question: 'According to Dalton's Law, the total pressure of a gas mixture equals:',
+            options: [
+              'The average of the partial pressures',
+              'The product of the partial pressures',
+              'The sum of all partial pressures',
+              'The partial pressure of the most abundant gas'
+            ],
+            correctAnswer: 2,
+            explanation: 'Dalton's Law: $P_{\\text{total}} = P_1 + P_2 + P_3 + \\ldots$ The total pressure is the sum of each gas's partial pressure.'
+          },
+          {
+            question: 'Gas is collected over water at 25°C (vapor pressure = 23.8 mmHg). If the total pressure is 755 mmHg, the pressure of the dry gas is:',
+            options: [
+              '731.2 mmHg',
+              '755 mmHg',
+              '778.8 mmHg',
+              '23.8 mmHg'
+            ],
+            correctAnswer: 0,
+            explanation: '$P_{\\text{dry}} = P_{\\text{total}} - P_{\\text{water}} = 755 - 23.8 = 731.2$ mmHg.'
+          },
+          {
+            question: 'In a container at 500 kPa total, gas X has a mole fraction of 0.60. The partial pressure of gas X is:',
+            options: [
+              '200 kPa',
+              '300 kPa',
+              '400 kPa',
+              '500 kPa'
+            ],
+            correctAnswer: 1,
+            explanation: '$P_X = \\chi_X \\times P_{\\text{total}} = 0.60 \\times 500 = 300$ kPa.'
+          },
+          {
+            question: 'The mole fractions in a gas mixture must always sum to:',
+            options: [
+              '0',
+              '0.5',
+              '1.0',
+              'It depends on the pressure'
+            ],
+            correctAnswer: 2,
+            explanation: 'By definition, mole fractions always sum to exactly 1.0 (representing 100% of the mixture).'
+          },
+          {
+            question: 'A diver's tank contains 80% N₂ and 20% O₂ at 200 atm total. The partial pressure of O₂ is:',
+            options: [
+              '20 atm',
+              '40 atm',
+              '100 atm',
+              '160 atm'
+            ],
+            correctAnswer: 1,
+            explanation: '$P_{O_2} = 0.20 \\times 200 = 40$ atm. Each gas contributes its mole fraction times the total pressure.'
+          },
+          {
+            question: 'If 3 gases in a container have partial pressures of 150, 250, and 300 mmHg, the total pressure is:',
+            options: [
+              '233 mmHg',
+              '300 mmHg',
+              '500 mmHg',
+              '700 mmHg'
+            ],
+            correctAnswer: 3,
+            explanation: '$P_{\\text{total}} = 150 + 250 + 300 = 700$ mmHg. Simply add all partial pressures.'
+          },
+          {
+            question: 'Adding more of gas A to a rigid container (constant V, T) that already contains gas B will:',
+            options: [
+              'Decrease the partial pressure of gas B',
+              'Not change the partial pressure of gas B',
+              'Increase the partial pressure of gas B',
+              'Decrease the total pressure'
+            ],
+            correctAnswer: 1,
+            explanation: 'Each gas behaves independently. Adding gas A increases $P_A$ and $P_{\\text{total}}$, but $P_B$ stays the same since $n_B$, $V$, and $T$ are unchanged.'
           }
         ]
       }

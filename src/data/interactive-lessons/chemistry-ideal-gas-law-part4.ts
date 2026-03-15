@@ -164,24 +164,28 @@ Use $R = 0.0821$ L·atm/(mol·K).
         dropdowns: [
           {
             id: 'gl4-dd1',
+            label: 'If pressure increases (constant T, same gas), density ___',
             options: ['increases', 'decreases', 'stays the same'],
             correctIndex: 0,
             explanation: '$d = PM/(RT)$. Increasing P at constant T and for the same gas means density increases.'
           },
           {
             id: 'gl4-dd2',
+            label: 'If temperature increases (constant P), density ___',
             options: ['increases', 'decreases', 'stays the same'],
             correctIndex: 1,
             explanation: '$d = PM/(RT)$. Increasing T at constant P means density decreases (gas expands).'
           },
           {
             id: 'gl4-dd3',
+            label: 'Helium (M = 4 g/mol) is ___ (M ≈ 29 g/mol)',
             options: ['lighter than air', 'heavier than air', 'the same as air'],
             correctIndex: 0,
             explanation: 'Air has an average molar mass of about 29 g/mol. He has M = 4 g/mol, so helium is much lighter than air, which is why helium balloons float.'
           },
           {
             id: 'gl4-dd4',
+            label: 'CO₂ (M = 44 g/mol) is ___ (M ≈ 29 g/mol)',
             options: ['lighter than air', 'heavier than air', 'the same as air'],
             correctIndex: 1,
             explanation: 'CO₂ has M = 44 g/mol, which is heavier than air (≈29 g/mol). This is why CO₂ sinks and can accumulate in low-lying areas.'
@@ -218,6 +222,94 @@ Use $R = 0.0821$ L·atm/(mol·K).
             ],
             correctAnswer: 0,
             explanation: 'At constant T and P: $d_A/d_B = M_A/M_B$. If $d_A = 2d_B$, then $M_A = 2M_B$. Gas A has twice the molar mass.'
+          },
+          {
+            question: 'What is the density of O₂ (M = 32.0 g/mol) at STP?',
+            options: [
+              '0.714 g/L',
+              '1.43 g/L',
+              '2.86 g/L',
+              '32.0 g/L'
+            ],
+            correctAnswer: 1,
+            explanation: '$d = PM/(RT) = (1.00)(32.0)/((0.0821)(273.15)) = 32.0/22.4 = 1.43$ g/L. Or simply: M/22.4 at STP.'
+          },
+          {
+            question: 'The density of an unknown gas at 1.00 atm and 300 K is 1.96 g/L. What is the molar mass?',
+            options: [
+              '24.0 g/mol',
+              '32.0 g/mol',
+              '44.0 g/mol',
+              '48.3 g/mol'
+            ],
+            correctAnswer: 3,
+            explanation: '$M = dRT/P = (1.96)(0.0821)(300)/1.00 = 48.3$ g/mol.'
+          },
+          {
+            question: 'Which gas has the greatest density at STP?',
+            options: [
+              'He (M = 4 g/mol)',
+              'N₂ (M = 28 g/mol)',
+              'O₂ (M = 32 g/mol)',
+              'CO₂ (M = 44 g/mol)'
+            ],
+            correctAnswer: 3,
+            explanation: 'At STP (same T and P), density is proportional to molar mass: $d = PM/(RT)$. CO₂ has the largest M, so it has the greatest density.'
+          },
+          {
+            question: 'A vapor has a mass of 0.800 g and occupies 400 mL at 100°C and 1.00 atm. The molar mass is closest to:',
+            options: [
+              '31 g/mol',
+              '49 g/mol',
+              '61 g/mol',
+              '122 g/mol'
+            ],
+            correctAnswer: 2,
+            explanation: '$T = 373$ K, $V = 0.400$ L. $M = mRT/(PV) = (0.800)(0.0821)(373)/((1.00)(0.400)) = 24.5/0.400 = 61.2$ g/mol.'
+          },
+          {
+            question: 'If the temperature of a gas is doubled at constant pressure, what happens to its density?',
+            options: [
+              'It doubles',
+              'It halves',
+              'It stays the same',
+              'It quadruples'
+            ],
+            correctAnswer: 1,
+            explanation: '$d = PM/(RT)$. At constant P, density is inversely proportional to T. Doubling T halves the density.'
+          },
+          {
+            question: 'A gas has a density of 2.50 g/L at 2.00 atm and 350 K. What is the molar mass?',
+            options: [
+              '18.0 g/mol',
+              '28.7 g/mol',
+              '35.9 g/mol',
+              '71.8 g/mol'
+            ],
+            correctAnswer: 2,
+            explanation: '$M = dRT/P = (2.50)(0.0821)(350)/2.00 = 71.8/2.00 = 35.9$ g/mol.'
+          },
+          {
+            question: 'Why does a helium balloon float in air?',
+            options: [
+              'Helium molecules move faster than air molecules',
+              'Helium has a lower molar mass and therefore lower density than air',
+              'Helium is lighter because it has fewer protons',
+              'Helium experiences less gravity than air molecules'
+            ],
+            correctAnswer: 1,
+            explanation: 'At the same T and P, $d \\propto M$. He (M = 4) has much lower density than air (M ≈ 29), so a helium-filled balloon experiences a net upward buoyant force.'
+          },
+          {
+            question: 'The molar mass of a gas can be determined from its density, temperature, and pressure using which rearranged form of the ideal gas law?',
+            options: [
+              '$M = PV/T$',
+              '$M = dRT/P$',
+              '$M = nRT/V$',
+              '$M = P/(dRT)$'
+            ],
+            correctAnswer: 1,
+            explanation: 'From $PV = nRT$ and $n = m/M$ and $d = m/V$, we get $M = dRT/P$. This connects molar mass directly to measurable quantities.'
           }
         ]
       }

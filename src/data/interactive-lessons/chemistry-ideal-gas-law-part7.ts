@@ -9,7 +9,7 @@ export const chemIdealGasLawPart7Data = {
 
 **Part 7 of 7 — Ideal vs. Real Gases & AP Exam Preparation**
 
-You\'ve mastered the ideal gas law and all its variations. Now we examine when the ideal gas model **breaks down**, introduce the **van der Waals equation** for real gases, and tackle AP-style free-response questions.
+You've mastered the ideal gas law and all its variations. Now we examine when the ideal gas model **breaks down**, introduce the **van der Waals equation** for real gases, and tackle AP-style free-response questions.
       `
     },
     {
@@ -154,24 +154,28 @@ Notice: H₂O has a large $a$ (strong H-bonds) but small $b$ (small molecule). H
         dropdowns: [
           {
             id: 'gl7-dd1',
+            label: 'At higher temperature, gas behavior becomes ___',
             options: ['more ideal', 'less ideal', 'unchanged'],
             correctIndex: 0,
             explanation: 'Higher temperature means molecules move faster, overcoming intermolecular attractions. Behavior approaches ideal.'
           },
           {
             id: 'gl7-dd2',
+            label: 'At higher pressure, gas behavior becomes ___',
             options: ['more ideal', 'less ideal', 'unchanged'],
             correctIndex: 1,
             explanation: 'Higher pressure forces molecules closer together, making molecular volume and intermolecular forces more significant. Behavior deviates from ideal.'
           },
           {
             id: 'gl7-dd3',
+            label: 'A gas with strong intermolecular forces has a ___',
             options: ['large a value', 'small a value', 'a = 0'],
             correctIndex: 0,
             explanation: 'Strong intermolecular forces (like hydrogen bonding in H₂O or NH₃) correspond to a large $a$ value in the van der Waals equation.'
           },
           {
             id: 'gl7-dd4',
+            label: 'A gas with larger molecules has a ___',
             options: ['large b value', 'small b value', 'b = 0'],
             correctIndex: 0,
             explanation: 'Larger molecules occupy more physical volume, corresponding to a larger $b$ value in the van der Waals equation.'
@@ -207,7 +211,95 @@ Notice: H₂O has a large $a$ (strong H-bonds) but small $b$ (small molecule). H
               '8.0 L'
             ],
             correctAnswer: 1,
-            explanation: 'At constant T and P, volumes of gases are in the same ratio as moles (Avogadro\'s Law). 2 mol H₂ → 2 mol H₂O. So 4.0 L H₂ → 4.0 L H₂O (same mole ratio, 2:2 = 1:1).'
+            explanation: 'At constant T and P, volumes of gases are in the same ratio as moles (Avogadro's Law). 2 mol H₂ → 2 mol H₂O. So 4.0 L H₂ → 4.0 L H₂O (same mole ratio, 2:2 = 1:1).'
+          },
+          {
+            question: 'Which of the following gases would deviate MOST from ideal behavior?',
+            options: [
+              'He at 500 K and 0.5 atm',
+              'H₂ at 400 K and 1 atm',
+              'NH₃ at 200 K and 50 atm',
+              'Ne at 300 K and 2 atm'
+            ],
+            correctAnswer: 2,
+            explanation: 'NH₃ has strong hydrogen bonding (large intermolecular forces), and at low T and high P, molecules are close together and slow-moving. This maximizes deviation from ideal behavior.'
+          },
+          {
+            question: 'In the van der Waals equation $(P + a(n/V)^2)(V - nb) = nRT$, the "a" term corrects for:',
+            options: [
+              'Molecular volume',
+              'Intermolecular attractive forces',
+              'Non-elastic collisions',
+              'Temperature-dependent behavior'
+            ],
+            correctAnswer: 1,
+            explanation: 'The "a" correction accounts for intermolecular attractions that reduce the observed pressure compared to ideal behavior.'
+          },
+          {
+            question: 'In the van der Waals equation, the "b" term corrects for:',
+            options: [
+              'Intermolecular forces',
+              'Non-elastic collisions',
+              'The physical volume of gas molecules',
+              'Temperature dependence'
+            ],
+            correctAnswer: 2,
+            explanation: 'The "b" term subtracts the volume occupied by the gas molecules themselves, correcting for the fact that real molecules have nonzero volume.'
+          },
+          {
+            question: 'A 5.00 L flask contains 0.200 mol of gas at 300 K. The gas is heated to 600 K in the sealed flask. The final pressure is:',
+            options: [
+              'Half the initial pressure',
+              'Equal to the initial pressure',
+              'Twice the initial pressure',
+              'Four times the initial pressure'
+            ],
+            correctAnswer: 2,
+            explanation: 'At constant V and n: $P \\propto T$. Doubling T from 300 K to 600 K doubles the pressure.'
+          },
+          {
+            question: 'Which condition makes gases behave most ideally?',
+            options: [
+              'Low temperature, high pressure',
+              'High temperature, low pressure',
+              'Low temperature, low pressure',
+              'High temperature, high pressure'
+            ],
+            correctAnswer: 1,
+            explanation: 'High T means fast molecules that overcome intermolecular forces; low P means molecules are far apart so volume and forces are negligible. Both conditions favor ideal behavior.'
+          },
+          {
+            question: 'At very high pressures, the measured volume of a real gas is ________ the ideal gas prediction.',
+            options: [
+              'Greater than',
+              'Less than',
+              'Equal to',
+              'Sometimes greater, sometimes less'
+            ],
+            correctAnswer: 0,
+            explanation: 'At very high pressures, the finite volume of the gas molecules themselves becomes significant. The "b" correction in the van der Waals equation means the actual volume exceeds the ideal prediction.'
+          },
+          {
+            question: 'The compressibility factor $Z = PV/(nRT)$ is exactly 1.0 for:',
+            options: [
+              'All real gases',
+              'An ideal gas only',
+              'Any gas at STP',
+              'Any gas at high pressure'
+            ],
+            correctAnswer: 1,
+            explanation: 'For an ideal gas, $PV = nRT$ exactly, so $Z = 1.0$. Real gases have $Z \\neq 1$ due to intermolecular forces and molecular volume.'
+          },
+          {
+            question: 'On the AP Chemistry exam, a student is given P in kPa, V in L, T in K, and is asked to find n. Which value of R should they use?',
+            options: [
+              '0.0821 L·atm/(mol·K)',
+              '8.314 L·kPa/(mol·K)',
+              '62.36 L·torr/(mol·K)',
+              'Convert kPa to atm first, then use 0.0821'
+            ],
+            correctAnswer: 1,
+            explanation: 'When P is in kPa and V is in L, use $R = 8.314$ L·kPa/(mol·K) directly — no unit conversion needed.'
           }
         ]
       }

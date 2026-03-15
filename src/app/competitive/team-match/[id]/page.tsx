@@ -121,7 +121,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
         setAnswerResult(null)
         setSubmitting(false)
         fetchMatchState()
-      }, 600)
+      }, 1200)
     } catch {
       setSubmitting(false)
     }

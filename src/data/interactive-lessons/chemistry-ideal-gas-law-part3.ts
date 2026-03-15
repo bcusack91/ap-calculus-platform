@@ -9,7 +9,7 @@ export const chemIdealGasLawPart3Data = {
 
 **Part 3 of 7 — PV = nRT**
 
-The three simple gas laws (Boyle\'s, Charles\'s, Avogadro\'s) each describe a two-variable relationship while holding others constant. The **ideal gas law** combines them all into one powerful equation:
+The three simple gas laws (Boyle's, Charles's, Avogadro's) each describe a two-variable relationship while holding others constant. The **ideal gas law** combines them all into one powerful equation:
 
 $$PV = nRT$$
 
@@ -38,9 +38,9 @@ The value of $R$ depends on your pressure unit:
 
 | $R$ value | When to use |
 |-----------|-------------|
-| $0.0821 \\text{ L·atm/(mol·K)}$ | When $P$ is in atm |
-| $8.314 \\text{ L·kPa/(mol·K)}$ | When $P$ is in kPa |
-| $8.314 \\text{ J/(mol·K)}$ | For energy calculations |
+| 0.0821 L·atm/(mol·K) | When $P$ is in atm |
+| 8.314 L·kPa/(mol·K) | When $P$ is in kPa |
+| 8.314 J/(mol·K) | For energy calculations |
 
 Most AP Chemistry problems use $R = 0.0821$ L·atm/(mol·K).
 
@@ -175,18 +175,21 @@ Use $R = 0.0821$ L·atm/(mol·K). Round to appropriate significant figures.
         dropdowns: [
           {
             id: 'gl3-dd1',
+            label: 'If you halve the volume (constant T, n), pressure will ___',
             options: ['increase', 'decrease', 'stay the same'],
             correctIndex: 0,
-            explanation: 'At constant T and n, decreasing V increases P (Boyle\'s Law / ideal gas law).'
+            explanation: 'At constant T and n, decreasing V increases P (Boyle's Law / ideal gas law).'
           },
           {
             id: 'gl3-dd2',
+            label: 'If you add more gas at constant P and T, volume will ___',
             options: ['increase', 'decrease', 'stay the same'],
             correctIndex: 1,
             explanation: 'Adding gas (increasing n) at constant P and T means V must increase, so density ($m/V$) depends on the specifics — but at constant V and T, adding gas increases P, not decreases it. At constant P and T, V increases, so $n/V$ stays the same.'
           },
           {
             id: 'gl3-dd3',
+            label: 'STP (standard temperature and pressure) is defined as ___',
             options: ['0°C and 1 atm', '25°C and 1 atm', '0 K and 1 atm'],
             correctIndex: 0,
             explanation: 'STP (standard temperature and pressure) is defined as 0°C (273.15 K) and 1 atm.'
@@ -223,6 +226,94 @@ Use $R = 0.0821$ L·atm/(mol·K). Round to appropriate significant figures.
             ],
             correctAnswer: 1,
             explanation: 'At low temperature and high pressure, gas molecules are close together and moving slowly. This means intermolecular forces become significant and particle volume is no longer negligible — both violations of KMT assumptions.'
+          },
+          {
+            question: 'What volume does 0.250 mol of gas occupy at 2.00 atm and 300 K? (R = 0.0821)',
+            options: [
+              '3.08 L',
+              '6.16 L',
+              '12.3 L',
+              '1.54 L'
+            ],
+            correctAnswer: 0,
+            explanation: '$V = nRT/P = (0.250)(0.0821)(300)/2.00 = 6.1575/2.00 = 3.08$ L.'
+          },
+          {
+            question: 'A 10.0 L container at 400 K has a pressure of 3.00 atm. How many moles of gas are present?',
+            options: [
+              '0.456 mol',
+              '0.913 mol',
+              '1.22 mol',
+              '2.44 mol'
+            ],
+            correctAnswer: 1,
+            explanation: '$n = PV/(RT) = (3.00)(10.0)/((0.0821)(400)) = 30.0/32.84 = 0.913$ mol.'
+          },
+          {
+            question: 'If you double both the temperature and the volume of an ideal gas (constant n), the pressure will:',
+            options: [
+              'Double',
+              'Halve',
+              'Stay the same',
+              'Quadruple'
+            ],
+            correctAnswer: 2,
+            explanation: '$P = nRT/V$. If both T and V double: $P = nR(2T)/(2V) = nRT/V$. The effects cancel, so P stays the same.'
+          },
+          {
+            question: 'Which value of R should you use if pressure is in atm and volume is in liters?',
+            options: [
+              '8.314 J/(mol·K)',
+              '0.0821 L·atm/(mol·K)',
+              '62.36 L·torr/(mol·K)',
+              '1.987 cal/(mol·K)'
+            ],
+            correctAnswer: 1,
+            explanation: 'When P is in atm and V is in L, use $R = 0.0821$ L·atm/(mol·K) so the units cancel properly.'
+          },
+          {
+            question: 'A student solves for temperature and gets T = -50 K. What went wrong?',
+            options: [
+              'They forgot to convert volume to liters',
+              'They used the wrong value of R',
+              'Negative Kelvin is impossible — there must be a calculation error',
+              'They forgot to include moles in the equation'
+            ],
+            correctAnswer: 2,
+            explanation: 'Kelvin temperature can never be negative. A negative K value indicates a mathematical error somewhere in the calculation (wrong units, sign error, etc.).'
+          },
+          {
+            question: 'What is the pressure exerted by 1.50 mol of gas in a 5.00 L container at 25°C?',
+            options: [
+              '7.34 atm',
+              '3.67 atm',
+              '14.7 atm',
+              '0.367 atm'
+            ],
+            correctAnswer: 0,
+            explanation: '$T = 25 + 273.15 = 298.15$ K. $P = nRT/V = (1.50)(0.0821)(298.15)/5.00 = 36.7/5.00 = 7.34$ atm.'
+          },
+          {
+            question: 'At STP, what volume does 0.500 mol of any ideal gas occupy?',
+            options: [
+              '5.60 L',
+              '11.2 L',
+              '22.4 L',
+              '44.8 L'
+            ],
+            correctAnswer: 1,
+            explanation: 'At STP, 1 mol = 22.4 L. So 0.500 mol = $0.500 \\times 22.4 = 11.2$ L.'
+          },
+          {
+            question: 'A gas at 1.00 atm and 273 K occupies 22.4 L. If heated to 546 K at constant pressure, the new volume is:',
+            options: [
+              '11.2 L',
+              '22.4 L',
+              '33.6 L',
+              '44.8 L'
+            ],
+            correctAnswer: 3,
+            explanation: '$V_2 = V_1 \\times T_2/T_1 = 22.4 \\times (546/273) = 22.4 \\times 2 = 44.8$ L. Doubling temperature doubles volume at constant P.'
           }
         ]
       }
