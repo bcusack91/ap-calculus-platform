@@ -132,10 +132,10 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
-        {gaId && <GoogleAnalytics measurementId={gaId} />}
-        {adsenseClientId && <AdSenseScript clientId={adsenseClientId} />}
         <WebVitals />
         <Providers>
+          {gaId && <GoogleAnalytics measurementId={gaId} />}
+          {adsenseClientId && <AdSenseScript clientId={adsenseClientId} />}
           <div className="flex min-h-screen flex-col">
             <a
               href="#main-content"

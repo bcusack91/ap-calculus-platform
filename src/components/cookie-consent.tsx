@@ -53,6 +53,7 @@ export function CookieConsent() {
       advertising: true,
       timestamp: new Date().toISOString()
     }));
+    window.dispatchEvent(new Event('consent-updated'));
     closeBanner();
   };
 
@@ -63,6 +64,7 @@ export function CookieConsent() {
       advertising: false,
       timestamp: new Date().toISOString()
     }));
+    window.dispatchEvent(new Event('consent-updated'));
     closeBanner();
   };
 

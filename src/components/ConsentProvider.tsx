@@ -46,13 +46,17 @@ export function ConsentProvider({ children }: { children: React.ReactNode }) {
     }
     window.addEventListener('storage', handleStorage)
 
-    // Single poll for same-tab consent changes (e.g. cookie banner acceptance)
+    // Listen for same-tab consent changes (dispatched by cookie banner)
+    window.addEventListener('consent-updated', refresh)
+
+    // Fallback poll for same-tab consent changes
     // Clears itself after 30 seconds to avoid wasting resources
     const interval = setInterval(refresh, 2000)
     const timeout = setTimeout(() => clearInterval(interval), 30000)
 
     return () => {
       window.removeEventListener('storage', handleStorage)
+      window.removeEventListener('consent-updated', refresh)
       clearInterval(interval)
       clearTimeout(timeout)
     }
