@@ -105,8 +105,8 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
             options: [
               'Ideal gas law only',
               'Combined gas law',
-              'Dalton's law',
-              'Avogadro's law'
+              `Dalton's law`,
+              `Avogadro's law`
             ],
             correctAnswer: 1,
             explanation: 'Same gas, same amount, but P and T both change → use the combined gas law: $P_1V_1/T_1 = P_2V_2/T_2$.'
@@ -179,23 +179,23 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
           {
             id: 'gl6-dd1',
             label: 'Know P, V, T — need to find n. Use ___',
-            options: ['PV = nRT', 'P₁V₁/T₁ = P₂V₂/T₂', 'M = mRT/(PV)', 'Dalton’s Law'],
+            options: ['PV = nRT', 'P₁V₁/T₁ = P₂V₂/T₂', 'M = mRT/(PV)', `Dalton's Law`],
             correctIndex: 0,
-            explanation: 'When you know P, V, T and need to find n (or vice versa) for a single set of conditions, use the ideal gas law directly.'
+            explanation: `When you know P, V, T and need to find n (or vice versa) for a single set of conditions, use the ideal gas law directly.`
           },
           {
             id: 'gl6-dd2',
             label: 'Same gas changes conditions (P, V, T change). Use ___',
-            options: ['PV = nRT', 'P₁V₁/T₁ = P₂V₂/T₂', 'M = mRT/(PV)', 'Dalton’s Law'],
+            options: ['PV = nRT', 'P₁V₁/T₁ = P₂V₂/T₂', 'M = mRT/(PV)', `Dalton's Law`],
             correctIndex: 1,
-            explanation: 'When the same gas sample changes conditions (different P, V, or T before and after), use the combined gas law.'
+            explanation: `When the same gas sample changes conditions (different P, V, or T before and after), use the combined gas law.`
           },
           {
             id: 'gl6-dd3',
             label: 'Multiple gases in one container — need pressures. Use ___',
-            options: ['PV = nRT', 'P₁V₁/T₁ = P₂V₂/T₂', 'M = mRT/(PV)', 'Dalton's Law'],
+            options: ['PV = nRT', 'P₁V₁/T₁ = P₂V₂/T₂', 'M = mRT/(PV)', `Dalton's Law`],
             correctIndex: 3,
-            explanation: 'When multiple gases are in the same container and you need individual or total pressures, use Dalton's Law of Partial Pressures.'
+            explanation: `When multiple gases are in the same container and you need individual or total pressures, use Dalton's Law of Partial Pressures.`
           }
         ]
       }
@@ -261,7 +261,7 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
               '1.00 atm'
             ],
             correctAnswer: 1,
-            explanation: 'Dalton's Law: $P_{O_2} = P_{\\text{total}} - P_{N_2} = 1.00 - 0.78 = 0.22$ atm.'
+            explanation: `Dalton's Law: $P_{O_2} = P_{\\text{total}} - P_{N_2} = 1.00 - 0.78 = 0.22$ atm.`
           },
           {
             question: 'How many liters of O₂ at STP are needed to completely react with 4.00 mol of CH₄? ($\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$)',
@@ -291,10 +291,10 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
               'PV = nRT',
               'Combined gas law: $P_1V_1/T_1 = P_2V_2/T_2$',
               '$M = dRT/P$',
-              'Dalton's Law'
+              `Dalton's Law`
             ],
             correctAnswer: 1,
-            explanation: 'When the same gas changes conditions (before/after), use the combined gas law. You don't need n if it cancels.'
+            explanation: `When the same gas changes conditions (before/after), use the combined gas law. You don't need n if it cancels.`
           },
           {
             question: 'At constant T and P, 2.0 L of N₂ reacts with 6.0 L of H₂. Using $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$, the volume of NH₃ produced is:',
@@ -308,7 +308,7 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
             explanation: 'At constant T and P, volume ratios = mole ratios. 1 vol N₂ : 3 vol H₂ : 2 vol NH₃. From 2.0 L N₂ → 4.0 L NH₃.'
           },
           {
-            question: 'Which of the following problems requires Dalton's Law?',
+            question: `Which of the following problems requires Dalton's Law?`,
             options: [
               'Finding the volume of a gas at a new temperature',
               'Finding the molar mass from density',
@@ -316,7 +316,7 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
               'Finding moles from P, V, and T'
             ],
             correctAnswer: 2,
-            explanation: 'Dalton's Law deals with partial pressures in gas mixtures. Finding individual gas pressures in a mixture requires $P_i = \\chi_i P_{\\text{total}}$.'
+            explanation: `Dalton's Law deals with partial pressures in gas mixtures. Finding individual gas pressures in a mixture requires $P_i = \\chi_i P_{\\text{total}}$.`
           }
         ]
       }

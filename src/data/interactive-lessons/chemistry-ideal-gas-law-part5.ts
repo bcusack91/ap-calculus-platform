@@ -243,7 +243,7 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
             explanation: '$\\chi_{Ne} = 3.0/(2.0+3.0+5.0) = 3.0/10.0 = 0.30$.'
           },
           {
-            question: 'According to Dalton's Law, the total pressure of a gas mixture equals:',
+            question: `According to Dalton's Law, the total pressure of a gas mixture equals:`,
             options: [
               'The average of the partial pressures',
               'The product of the partial pressures',
@@ -251,7 +251,7 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
               'The partial pressure of the most abundant gas'
             ],
             correctAnswer: 2,
-            explanation: 'Dalton's Law: $P_{\\text{total}} = P_1 + P_2 + P_3 + \\ldots$ The total pressure is the sum of each gas's partial pressure.'
+            explanation: `Dalton's Law: $P_{\\text{total}} = P_1 + P_2 + P_3 + \\ldots$ The total pressure is the sum of each gas's partial pressure.`
           },
           {
             question: 'Gas is collected over water at 25°C (vapor pressure = 23.8 mmHg). If the total pressure is 755 mmHg, the pressure of the dry gas is:',
@@ -287,7 +287,7 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
             explanation: 'By definition, mole fractions always sum to exactly 1.0 (representing 100% of the mixture).'
           },
           {
-            question: 'A diver's tank contains 80% N₂ and 20% O₂ at 200 atm total. The partial pressure of O₂ is:',
+            question: `A diver's tank contains 80% N₂ and 20% O₂ at 200 atm total. The partial pressure of O₂ is:`,
             options: [
               '20 atm',
               '40 atm',

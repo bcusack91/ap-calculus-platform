@@ -102,18 +102,18 @@ At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal g
               'Quadruple'
             ],
             correctAnswer: 0,
-            explanation: 'Boyle's Law: $P_1V_1 = P_2V_2$. Volume is halved, so pressure doubles. $P_2 = P_1 \\times (50/25) = 2P_1$.'
+            explanation: `Boyle's Law: $P_1V_1 = P_2V_2$. Volume is halved, so pressure doubles. $P_2 = P_1 \\times (50/25) = 2P_1$.`
           },
           {
             question: 'Which gas law explains why a hot air balloon rises?',
             options: [
-              'Boyle's Law',
-              'Charles's Law',
-              'Avogadro's Law',
-              'Dalton's Law'
+              `Boyle's Law`,
+              `Charles's Law`,
+              `Avogadro's Law`,
+              `Dalton's Law`
             ],
             correctAnswer: 1,
-            explanation: 'Charles's Law: heating the air inside the balloon increases its volume, making it less dense than the surrounding cooler air, so the balloon rises.'
+            explanation: `Charles's Law: heating the air inside the balloon increases its volume, making it less dense than the surrounding cooler air, so the balloon rises.`
           },
           {
             question: 'A container at constant T and P holds 2.0 mol of O₂ in 44.8 L. If you add another 1.0 mol of O₂, the volume becomes:',
@@ -124,7 +124,7 @@ At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal g
               '89.6 L'
             ],
             correctAnswer: 2,
-            explanation: 'Avogadro's Law: $V_2 = V_1 \\times n_2/n_1 = 44.8 \\times (3.0/2.0) = 67.2$ L.'
+            explanation: `Avogadro's Law: $V_2 = V_1 \\times n_2/n_1 = 44.8 \\times (3.0/2.0) = 67.2$ L.`
           }
         ]
       }
@@ -146,17 +146,17 @@ At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal g
           {
             label: 'Volume at 1.50 atm (L)',
             correctAnswer: '24.0',
-            explanation: 'Boyle's Law: $V_2 = P_1V_1/P_2 = (3.00)(12.0)/1.50 = 24.0$ L.'
+            explanation: `Boyle's Law: $V_2 = P_1V_1/P_2 = (3.00)(12.0)/1.50 = 24.0$ L.`
           },
           {
             label: 'Volume at 127°C (mL)',
             correctAnswer: '667',
-            explanation: 'Charles's Law: $T_1 = 300$ K, $T_2 = 400$ K. $V_2 = 500 \\times (400/300) = 666.7 \\approx 667$ mL.'
+            explanation: `Charles's Law: $T_1 = 300$ K, $T_2 = 400$ K. $V_2 = 500 \\times (400/300) = 666.7 \\approx 667$ mL.`
           },
           {
             label: 'Moles at 25.0 L (mol)',
             correctAnswer: '10.00',
-            explanation: 'Avogadro's Law: $n_2 = n_1 \\times V_2/V_1 = 4.00 \\times (25.0/10.0) = 10.00$ mol.'
+            explanation: `Avogadro's Law: $n_2 = n_1 \\times V_2/V_1 = 4.00 \\times (25.0/10.0) = 10.00$ mol.`
           }
         ]
       }
@@ -174,21 +174,21 @@ At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal g
             label: 'Pressure and Volume (constant T, n) are ___',
             options: ['directly proportional', 'inversely proportional', 'unrelated'],
             correctIndex: 1,
-            explanation: 'Boyle's Law: At constant T and n, P and V are inversely proportional ($PV = \\text{constant}$).'
+            explanation: `Boyle's Law: At constant T and n, P and V are inversely proportional ($PV = \\text{constant}$).`
           },
           {
             id: 'gl2-dd2',
             label: 'Volume and Temperature (constant P, n) are ___',
             options: ['directly proportional', 'inversely proportional', 'unrelated'],
             correctIndex: 0,
-            explanation: 'Charles's Law: At constant P and n, V and T are directly proportional ($V/T = \\text{constant}$).'
+            explanation: `Charles's Law: At constant P and n, V and T are directly proportional ($V/T = \\text{constant}$).`
           },
           {
             id: 'gl2-dd3',
             label: 'Volume and Amount (constant T, P) are ___',
             options: ['directly proportional', 'inversely proportional', 'unrelated'],
             correctIndex: 0,
-            explanation: 'Avogadro's Law: At constant T and P, V and n are directly proportional ($V/n = \\text{constant}$).'
+            explanation: `Avogadro's Law: At constant T and P, V and n are directly proportional ($V/n = \\text{constant}$).`
           }
         ]
       }
@@ -202,7 +202,7 @@ At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal g
       exercise: {
         questions: [
           {
-            question: 'A student uses Charles's Law with Celsius instead of Kelvin. Their result will be:',
+            question: `A student uses Charles's Law with Celsius instead of Kelvin. Their result will be:`,
             options: [
               'Correct, since the units cancel',
               'Slightly off due to rounding',
@@ -210,7 +210,7 @@ At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal g
               'Correct for temperatures above 100°C only'
             ],
             correctAnswer: 2,
-            explanation: 'Charles's Law requires Kelvin. Using Celsius gives the wrong ratio. For example, 0°C would imply zero volume, which is nonsensical. The direct proportionality only works with an absolute (Kelvin) scale.'
+            explanation: `Charles's Law requires Kelvin. Using Celsius gives the wrong ratio. For example, 0°C would imply zero volume, which is nonsensical. The direct proportionality only works with an absolute (Kelvin) scale.`
           },
           {
             question: 'At STP (0°C, 1 atm), how many liters does 2.00 mol of an ideal gas occupy?',
@@ -232,7 +232,7 @@ At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal g
               '20.0 L'
             ],
             correctAnswer: 0,
-            explanation: 'Boyle's Law: $P_1V_1 = P_2V_2$. $V_2 = (2.0)(10.0)/5.0 = 4.0$ L. Volume decreases as pressure increases.'
+            explanation: `Boyle's Law: $P_1V_1 = P_2V_2$. $V_2 = (2.0)(10.0)/5.0 = 4.0$ L. Volume decreases as pressure increases.`
           },
           {
             question: 'A balloon has a volume of 1.50 L at 300 K. What is the volume at 600 K (constant pressure)?',
@@ -243,18 +243,18 @@ At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal g
               '6.00 L'
             ],
             correctAnswer: 2,
-            explanation: 'Charles's Law: $V_1/T_1 = V_2/T_2$. $V_2 = 1.50 \\times (600/300) = 3.00$ L. Doubling the temperature doubles the volume.'
+            explanation: `Charles's Law: $V_1/T_1 = V_2/T_2$. $V_2 = 1.50 \\times (600/300) = 3.00$ L. Doubling the temperature doubles the volume.`
           },
           {
             question: 'Which gas law describes the relationship between volume and amount of gas at constant T and P?',
             options: [
-              'Boyle's Law',
-              'Charles's Law',
-              'Gay-Lussac's Law',
-              'Avogadro's Law'
+              `Boyle's Law`,
+              `Charles's Law`,
+              `Gay-Lussac's Law`,
+              `Avogadro's Law`
             ],
             correctAnswer: 3,
-            explanation: 'Avogadro's Law states that $V \\propto n$ at constant T and P. More moles of gas means more volume.'
+            explanation: `Avogadro's Law states that $V \\propto n$ at constant T and P. More moles of gas means more volume.`
           },
           {
             question: 'If you triple the volume of a gas at constant temperature, the pressure will:',
@@ -265,7 +265,7 @@ At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal g
               'Increase by a factor of 9'
             ],
             correctAnswer: 1,
-            explanation: 'Boyle's Law: P and V are inversely proportional. Tripling V means $P_2 = P_1/3$.'
+            explanation: `Boyle's Law: P and V are inversely proportional. Tripling V means $P_2 = P_1/3$.`
           },
           {
             question: 'A sealed syringe of gas is cooled from 400 K to 200 K at constant pressure. What happens to the volume?',
@@ -276,7 +276,7 @@ At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal g
               'It quadruples'
             ],
             correctAnswer: 1,
-            explanation: 'Charles's Law: $V \\propto T$. Halving the temperature halves the volume at constant pressure.'
+            explanation: `Charles's Law: $V \\propto T$. Halving the temperature halves the volume at constant pressure.`
           },
           {
             question: 'If 5.0 mol of gas occupies 11.2 L, what volume will 10.0 mol occupy under the same conditions?',
@@ -287,7 +287,7 @@ At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal g
               '44.8 L'
             ],
             correctAnswer: 2,
-            explanation: 'Avogadro's Law: $V_2 = V_1 \\times n_2/n_1 = 11.2 \\times (10.0/5.0) = 22.4$ L.'
+            explanation: `Avogadro's Law: $V_2 = V_1 \\times n_2/n_1 = 11.2 \\times (10.0/5.0) = 22.4$ L.`
           },
           {
             question: 'A gas occupies 8.0 L at 760 mmHg. What is the volume at 380 mmHg (constant T)?',
@@ -298,18 +298,18 @@ At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal g
               '32.0 L'
             ],
             correctAnswer: 2,
-            explanation: 'Boyle's Law: $V_2 = P_1V_1/P_2 = (760)(8.0)/380 = 16.0$ L. Halving the pressure doubles the volume.'
+            explanation: `Boyle's Law: $V_2 = P_1V_1/P_2 = (760)(8.0)/380 = 16.0$ L. Halving the pressure doubles the volume.`
           },
           {
             question: 'Which of the following correctly pairs a gas law with its mathematical relationship?',
             options: [
-              'Boyle's Law: $V/T = \\text{constant}$',
-              'Charles's Law: $PV = \\text{constant}$',
-              'Avogadro's Law: $V/n = \\text{constant}$',
-              'Gay-Lussac's Law: $V/n = \\text{constant}$'
+              `Boyle's Law: $V/T = \\text{constant}$`,
+              `Charles's Law: $PV = \\text{constant}$`,
+              `Avogadro's Law: $V/n = \\text{constant}$`,
+              `Gay-Lussac's Law: $V/n = \\text{constant}$`
             ],
             correctAnswer: 2,
-            explanation: 'Avogadro's Law: $V/n = \\text{constant}$ at constant T and P. Boyle's Law is PV = constant, and Charles's Law is V/T = constant.'
+            explanation: `Avogadro's Law: $V/n = \\text{constant}$ at constant T and P. Boyle's Law is PV = constant, and Charles's Law is V/T = constant.`
           }
         ]
       }

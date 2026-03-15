@@ -211,7 +211,7 @@ Notice: H₂O has a large $a$ (strong H-bonds) but small $b$ (small molecule). H
               '8.0 L'
             ],
             correctAnswer: 1,
-            explanation: 'At constant T and P, volumes of gases are in the same ratio as moles (Avogadro's Law). 2 mol H₂ → 2 mol H₂O. So 4.0 L H₂ → 4.0 L H₂O (same mole ratio, 2:2 = 1:1).'
+            explanation: `At constant T and P, volumes of gases are in the same ratio as moles (Avogadro's Law). 2 mol H₂ → 2 mol H₂O. So 4.0 L H₂ → 4.0 L H₂O (same mole ratio, 2:2 = 1:1).`
           },
           {
             question: 'Which of the following gases would deviate MOST from ideal behavior?',

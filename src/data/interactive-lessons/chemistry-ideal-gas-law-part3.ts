@@ -178,7 +178,7 @@ Use $R = 0.0821$ L·atm/(mol·K). Round to appropriate significant figures.
             label: 'If you halve the volume (constant T, n), pressure will ___',
             options: ['increase', 'decrease', 'stay the same'],
             correctIndex: 0,
-            explanation: 'At constant T and n, decreasing V increases P (Boyle's Law / ideal gas law).'
+            explanation: `At constant T and n, decreasing V increases P (Boyle's Law / ideal gas law).`
           },
           {
             id: 'gl3-dd2',
