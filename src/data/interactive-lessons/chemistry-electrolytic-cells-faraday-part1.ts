@@ -161,7 +161,7 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.23', '1.73', 'positive', '1.230', '1.730'],
+        correctAnswers: ['1.23', '1.73', 'positive'],
         hint1: 'Take the absolute value of E°.',
         hint2: '$V_{\\text{applied}} = |E°| + \\text{overpotential}$',
         hint3: 'Electrolysis is non-spontaneous.',

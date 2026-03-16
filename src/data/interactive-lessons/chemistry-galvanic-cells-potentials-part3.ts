@@ -125,7 +125,7 @@ Use: Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.44 V, Ni²⁺/Ni = −0.26 V, Cu²⁺
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.24', '0.60', '0.18', '1.240', '0.600', '0.6', '0.180'],
+        correctAnswers: ['1.24', '0.60', '0.18'],
         hint1: '$E°_{\\text{cell}} = 0.80 - (-0.44)$',
         hint2: '$E°_{\\text{cell}} = 0.34 - (-0.26)$',
         hint3: '$E°_{\\text{cell}} = -0.26 - (-0.44)$',

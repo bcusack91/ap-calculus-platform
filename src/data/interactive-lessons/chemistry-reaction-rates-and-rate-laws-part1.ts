@@ -205,7 +205,7 @@ Consider the reaction: $2\\text{NO}_2 \\rightarrow 2\\text{NO} + \\text{O}_2$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.0024', '0.0012', '0.0010', '0.00240', '0.00120', '0.00100', '0.001'],
+        correctAnswers: ['0.0024', '0.0012', '0.0010'],
         hint1: 'Rate of disappearance = −Δ[NO₂]/Δt = −(0.380 − 0.500)/(50 − 0).',
         hint2: 'Rate of reaction = (1/2) × rate of disappearance of NO₂.',
         hint3: 'Rate of reaction = rate of appearance of O₂ (coefficient is 1). Use the 0–100 s interval.',

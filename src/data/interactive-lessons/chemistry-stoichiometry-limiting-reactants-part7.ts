@@ -146,7 +146,7 @@ A student reacts 13.49 g of Al with 109.4 g of HCl. Percent yield = 90%.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Al', '66.7', '60.0', '66.70', '60.00'],
+        correctAnswers: ['Al', '66.7', '60.0'],
         hint1: 'Mol Al = 13.49/26.98 = 0.500. Mol HCl = 109.4/36.46 = 3.000. From Al: 0.500 × 2/2 = 0.500 mol AlCl₃. From HCl: 3.000 × 2/6 = 1.000 mol AlCl₃. Which produces less?',
         hint2: 'Theoretical = 0.500 × 133.34.',
         hint3: 'Actual = theoretical × 0.90.',

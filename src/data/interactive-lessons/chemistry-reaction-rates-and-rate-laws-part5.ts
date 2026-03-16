@@ -191,7 +191,7 @@ $$\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-2', '27.7', '100', '27.70'],
+        correctAnswers: ['-2', '27.7', '100'],
         hint1: 'Units of k = M^(1−n)s⁻¹. For n = 3: 1 − 3 = −2.',
         hint2: 't₁/₂ = 0.693/k = 0.693/0.0250.',
         hint3: 't₁/₂ = [A]₀/(2k) = 0.80/(2 × 0.0040).',

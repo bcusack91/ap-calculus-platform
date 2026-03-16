@@ -76,7 +76,7 @@ At equilibrium: $[\\text{PCl}_5] = 0.20$ M, $[\\text{PCl}_3] = 0.30$ M, $[\\text
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.45', 'reactant-favored', '+1', '0.450'],
+        correctAnswers: ['0.45', 'reactant-favored', '+1'],
         hint1: '$K_c = \\frac{[\\text{PCl}_3][\\text{Cl}_2]}{[\\text{PCl}_5]} = \\frac{(0.30)(0.30)}{0.20}$',
         hint2: '$K_c = 0.45 < 1$, so reactants are favored.',
         hint3: '$\\Delta n = (1 + 1) - 1 = +1$',
@@ -155,7 +155,7 @@ For $2\\,\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{SO}_3(g
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-1', '82.1', '3.4', '82.10', '3.40'],
+        correctAnswers: ['-1', '82.1', '3.4'],
         hint1: '$\\Delta n = 2 - (2 + 1) = -1$',
         hint2: '$RT = 0.08206 \\times 1000 = 82.06 \\approx 82.1$',
         hint3: '$K_p = K_c(RT)^{\\Delta n} = 280 \\times (82.1)^{-1} = 280/82.1$',

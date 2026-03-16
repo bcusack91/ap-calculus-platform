@@ -126,7 +126,7 @@ A buffer contains 0.40 mol $CH_3COOH$ and 0.60 mol $CH_3COO^-$ in 2.0 L. ($pK_a 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.60', '0.40', '5.62', '0.600', '0.6', '0.400', '0.4', '5.620'],
+        correctAnswers: ['0.60', '0.40', '5.62'],
         hint1: 'Max acid = moles of $A^-$ available.',
         hint2: 'Max base = moles of $HA$ available.',
         hint3: 'After adding 0.30 mol $NaOH$: $HA = 0.40 - 0.30 = 0.10$; $A^- = 0.60 + 0.30 = 0.90$.',
@@ -179,10 +179,10 @@ But now there\'s half the buffering capacity.
           },
           {
             label: 'To increase buffer capacity without changing pH, you should',
-            options: ['add more $HA$ only', 'add more $A^-$ only', 'add equal moles of both $HA$ and $A^-$', 'add water']
+            options: ['add more HA only', 'add more A⁻ only', 'add equal moles of both HA and A⁻', 'add water']
           }
         ],
-        correctAnswers: ['9', 'not change pH', 'outside effective range', 'add equal moles of both $HA$ and $A^-$'],
+        correctAnswers: ['9', 'not change pH', 'outside effective range', 'add equal moles of both HA and A⁻'],
         hint1: 'Effective range is $pK_a \\pm 1$; choose $pK_a \\approx$ target pH.',
         hint2: 'Dilution maintains the ratio.',
         hint3: 'Ratio = 100 means $\\log(100) = 2$, so pH = $pK_a + 2$ — outside $pK_a \\pm 1$.',

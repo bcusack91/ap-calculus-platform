@@ -62,7 +62,7 @@ At equilibrium: $[\\text{HI}] = 0.80$ M
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.10', '0.10', '0.016', '0.100', '0.1', '0.0160'],
+        correctAnswers: ['0.10', '0.10', '0.016'],
         hint1: '$[\\text{HI}]_{eq} = 1.00 - 2x = 0.80 \\implies 2x = 0.20 \\implies x = 0.10$',
         hint2: '$[\\text{H}_2] = x = 0.10$ M',
         hint3: '$K_c = \\frac{[\\text{H}_2][\\text{I}_2]}{[\\text{HI}]^2} = \\frac{(0.10)(0.10)}{(0.80)^2}$',
@@ -91,7 +91,7 @@ Using the approximation $0.50 - x \\approx 0.50$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.0e-5', 'yes', '1.0e-5', '0.00001'],
+        correctAnswers: ['1.0e-5', 'yes', '1.0e-5'],
         hint1: '$x = \\sqrt{(2.2 \\times 10^{-10})(0.50)} = \\sqrt{1.1 \\times 10^{-10}}$',
         hint2: '$\\frac{x}{0.50} \\times 100\\% \\ll 5\\%$',
         hint3: '$[\\text{CO}] = x$',
@@ -151,7 +151,7 @@ First check: $Q = \\frac{(0.20)^2}{(0.50)(0.50)} = \\frac{0.04}{0.25} = 0.16$. S
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.20 + 2x', '0.38', '0.96', '0.380', '0.960'],
+        correctAnswers: ['0.20 + 2x', '0.38', '0.96'],
         hint1: 'HI starts at 0.20 and gains $+2x$.',
         hint2: '$8(0.50 - x) = 0.20 + 2x \\implies 4.0 - 8x = 0.20 + 2x \\implies 3.80 = 10x$',
         hint3: '$[\\text{HI}] = 0.20 + 2(0.38) = 0.20 + 0.76$',

@@ -133,7 +133,7 @@ At equilibrium: $[\\text{NO}_2] = 0.40$ M
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.20', '0.60', '0.27', '0.200', '0.2', '0.600', '0.6', '0.270'],
+        correctAnswers: ['0.20', '0.60', '0.27'],
         hint1: '$[\\text{NO}_2]_{eq} = 2x = 0.40 \\implies x = 0.20$',
         hint2: '$[\\text{N}_2\\text{O}_4]_{eq} = 0.80 - x = 0.80 - 0.20 = 0.60$',
         hint3: '$K_c = \\frac{(0.40)^2}{0.60} = \\frac{0.16}{0.60}$',

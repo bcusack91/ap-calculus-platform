@@ -162,7 +162,7 @@ Use: Na = 22.99, Cl = 35.45, O = 16.00, H = 1.008, C = 12.01
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.800', '0.400', '4.0', '0.8000', '0.80', '0.4000', '0.40', '4.00'],
+        correctAnswers: ['0.800', '0.400', '4.0'],
         hint1: '$M = n/V$. Find moles: $n = 11.7/58.44$. Volume in liters: $0.2500$ L.',
         hint2: '$m = n/\\text{kg solvent}$. Find moles: $n = 36.0/180.16$. Solvent mass in kg: $0.5000$ kg.',
         hint3: 'Mass % = (mass solute / mass solution) × 100 = $(8.0/200.0) \\times 100$.',

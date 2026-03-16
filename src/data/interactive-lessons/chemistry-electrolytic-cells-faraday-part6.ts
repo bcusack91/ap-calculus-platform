@@ -102,7 +102,7 @@ This combines all steps into one equation.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['12000', '3.65', 'Ca', '3.650'],
+        correctAnswers: ['12000', '3.65', 'Ca'],
         hint1: '$q = 4.00 \\times (50.0 \\times 60)$',
         hint2: '$m = 12000 \\times 58.69/(2 \\times 96485)$',
         hint3: 'In molten salts, the cation is reduced at the cathode.',

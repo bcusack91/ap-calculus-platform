@@ -100,7 +100,7 @@ $$\\Delta S_{\\text{surr}} = -\\frac{\\Delta H_{\\text{sys}}}{T}$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['500', '22.0', '250', '22.00'],
+        correctAnswers: ['500', '22.0', '250'],
         hint1: '$\\Delta S_{\\text{surr}} = -\\Delta H/T = -(-150{,}000)/300$',
         hint2: '$\\Delta S = \\Delta H/T = 6010/273$',
         hint3: '$\\Delta S_{\\text{univ}} = \\Delta S_{\\text{sys}} + \\Delta S_{\\text{surr}}$',

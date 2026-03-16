@@ -152,7 +152,7 @@ Use the reduction potentials: Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.45 V, Cu²�
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.25', '0.79', 'no', '1.250', '0.790'],
+        correctAnswers: ['1.25', '0.79', 'no'],
         hint1: '$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}} = 0.80 - (-0.45)$',
         hint2: '$E^\\circ_{\\text{cell}} = 0.34 - (-0.45)$',
         hint3: 'Cu is the anode, Fe is the cathode. $E^\\circ = (-0.45) - (0.34) = ?$ Is it positive?',

@@ -134,7 +134,7 @@ For pH calculations, **only the first dissociation matters** (in most cases). Th
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['11.4', '1.62', '4.7e-11', '11.40', '1.620', '0.000000', '0.0000'],
+        correctAnswers: ['11.4', '1.62', '4.7e-11'],
         hint1: '$[H^+] = \\sqrt{K_a \\cdot C}$, then divide by $C$ and multiply by 100.',
         hint2: '$[H^+] = \\sqrt{(7.5 \\times 10^{-3})(0.10)}$. Check 5% rule — may need quadratic.',
         hint3: 'For diprotic acids, $[\\text{second anion}] \\approx K_{a2}$ regardless of initial concentration!',
@@ -155,14 +155,14 @@ For pH calculations, **only the first dissociation matters** (in most cases). Th
           },
           {
             label: 'For a diprotic acid, $[\\text{second anion}]$ approximately equals',
-            options: ['$K_{a1}$', '$K_{a2}$', '$K_{a1} \\times K_{a2}$', 'zero']
+            options: ['Kₐ₁', 'Kₐ₂', 'Kₐ₁ \× Kₐ₂', 'zero']
           },
           {
             label: 'The $K_a$ of $HSO_4^-$ is the same as',
-            options: ['$K_{a1}$ of $H_2SO_4$', '$K_{a2}$ of $H_2SO_4$', '$K_b$ of $SO_4^{2-}$', '$K_w$']
+            options: ['Kₐ₁ of H₂SO₄', 'Kₐ₂ of H₂SO₄', 'K_b of SO₄²⁻', 'K_w']
           }
         ],
-        correctAnswers: ['increases', '$K_{a2}$', '$K_{a2}$ of $H_2SO_4$'],
+        correctAnswers: ['increases', 'Kₐ₂', 'Kₐ₂ of H₂SO₄'],
         hint1: 'Le Chatelier: dilution favors more ions.',
         hint2: 'This is a remarkable simplification for diprotic acids.',
         hint3: '$HSO_4^-$ is the intermediate species in the dissociation of $H_2SO_4$.',

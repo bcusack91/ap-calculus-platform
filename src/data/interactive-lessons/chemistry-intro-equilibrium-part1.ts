@@ -203,7 +203,7 @@ At a certain temperature, the following data are collected at equilibrium:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['equal', '0.002', 'no', '0.0020'],
+        correctAnswers: ['equal', '0.002', 'no'],
         hint1: 'At equilibrium, the forward and reverse rates are always...',
         hint2: 'If the forward rate equals the reverse rate, what must the reverse rate be?',
         hint3: 'At equilibrium, all concentrations are constant.',

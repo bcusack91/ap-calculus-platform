@@ -104,7 +104,7 @@ Verify: $1/[A]$ values are 1.00, 2.00, 3.00, 4.00 (constant Δ of 1.00 per 20 mi
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '0.05', '0.17', '0.050', '0.170'],
+        correctAnswers: ['2', '0.05', '0.17'],
         hint1: 'Δ(1/[A]) = 1.00 per 20 min is constant → 1/[A] vs t is linear → second-order.',
         hint2: 'k = slope = 1.00/20 = 0.05 M⁻¹min⁻¹.',
         hint3: '1/[A] = 0.05(100) + 1.00 = 5.0 + 1.0 = 6.0. [A] = 1/6.0 = 0.167 ≈ 0.17.',
@@ -194,7 +194,7 @@ A first-order reaction has $k = 3.46 \\times 10^{-2}$ s⁻¹.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20.0', '66.6', '0.177', '20.00', '66.60', '0.1770'],
+        correctAnswers: ['20.0', '66.6', '0.177'],
         hint1: 't₁/₂ = 0.693/0.0346 = 20.0 s.',
         hint2: '90% reacted → 10% remains. t = −ln(0.10)/k = 2.303/0.0346 = 66.6 s.',
         hint3: '[A] = 0.500 × e^(−0.0346 × 30.0) = 0.500 × e^(−1.038) = 0.500 × 0.354 = 0.177.',

@@ -101,7 +101,7 @@ For the reaction $\\text{P} + \\text{Q} \\rightarrow \\text{R}$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1', '2', '7.5', '7.50'],
+        correctAnswers: ['1', '2', '7.5'],
         hint1: 'Compare Exp 1 & 2: Rate doubles when [P] doubles → order 1.',
         hint2: 'Compare Exp 1 & 3: Rate quadruples when [Q] doubles → 2^n = 4 → n = 2.',
         hint3: 'Rate = k[P][Q]². 0.0030 = k(0.20)(0.10)² = k(0.0020). k = 1.5... wait, recheck: k = 0.0030/0.0020 = 1.5? No: (0.20)(0.01) = 0.002; 0.003/0.002 = 1.5. Hmm, but check units. Actually k = 0.0030 / (0.20 × 0.0100) = 0.0030/0.0020 = 1.5. Let me recheck with Exp 3: 0.012 = k(0.20)(0.20)² = k(0.20)(0.04) = 0.008k → k = 1.5. So k = 1.5. Actually re-examining: 0.0030/(0.20 × 0.01) = 0.0030/0.002 = 1.5. Yes k = 1.5.',
@@ -205,7 +205,7 @@ For $\\text{A} + \\text{B} + \\text{C} \\rightarrow \\text{Products}$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3', '50', '0.18', '0.180'],
+        correctAnswers: ['3', '50', '0.18'],
         hint1: 'Order in A: 0.010/0.0050 = 2 = (0.20/0.10)^m → m = 1. Order in B: 0.020/0.0050 = 4 = (0.20/0.10)^n → n = 2. Order in C: 0.0050/0.0050 = 1 = (0.30/0.10)^p → p = 0. Overall = 1 + 2 + 0 = 3.',
         hint2: 'Rate = k[A][B]². Using Exp 1: 0.0050 = k(0.10)(0.10)² = k(0.001). k = 5.0. Hmm wait: k = 0.0050/0.001 = 5.0. Let me verify with Exp 3: 0.020 = 5.0(0.10)(0.20)² = 5.0(0.10)(0.04) = 5.0(0.004) = 0.020 ✓. So k = 5.0.',
         hint3: 'Rate = 5.0(0.30)(0.20)² = 5.0(0.30)(0.04) = 5.0(0.012) = 0.060.',

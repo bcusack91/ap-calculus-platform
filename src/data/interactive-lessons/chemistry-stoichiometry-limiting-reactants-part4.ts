@@ -155,7 +155,7 @@ This means 75% of the theoretical product was actually recovered. The remaining 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['85.0', '110.4', '50.0', '85.00', '110.40', '50.00'],
+        correctAnswers: ['85.0', '110.4', '50.0'],
         hint1: '$\\% \\text{ yield} = (68.0/80.0) \\times 100$.',
         hint2: 'Actual = theoretical × (% yield / 100) = 120.0 × 0.92.',
         hint3: 'Theoretical = actual / (% yield / 100) = 35.0 / 0.70.',

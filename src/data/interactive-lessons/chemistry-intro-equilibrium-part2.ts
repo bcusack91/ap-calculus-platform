@@ -136,7 +136,7 @@ At equilibrium: $[\\text{H}_2] = 0.10$ M, $[\\text{I}_2] = 0.20$ M, $[\\text{HI}
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8', '0', '8.0', '8.00'],
+        correctAnswers: ['8', '0', '8.0'],
         hint1: '$K_c = \\frac{[\\text{HI}]^2}{[\\text{H}_2][\\text{I}_2]} = \\frac{(0.40)^2}{(0.10)(0.20)}$',
         hint2: '$\\Delta n = 2 - (1 + 1) = 0$',
         hint3: 'When $\\Delta n = 0$, $K_p = K_c(RT)^0 = K_c$.',
@@ -182,7 +182,7 @@ Notice that $K_p < K_c$ when $\\Delta n < 0$ (fewer moles of gas on the product 
           },
           {
             label: 'When $\\Delta n > 0$, $K_p$ is',
-            options: ['greater than $K_c$', 'less than $K_c$', 'equal to $K_c$', 'undefined']
+            options: ['greater than K_c', 'less than K_c', 'equal to K_c', 'undefined']
           },
           {
             label: 'Stoichiometric coefficients appear in the $K$ expression as',

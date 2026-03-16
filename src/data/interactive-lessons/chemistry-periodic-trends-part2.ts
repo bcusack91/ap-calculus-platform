@@ -195,7 +195,7 @@ For each pair, type the chemical symbol of the atom with the **larger** atomic r
           {
             label: 'Atomic radius increases down a group because:',
             options: [
-              '$Z_{eff}$ increases dramatically',
+              'Zeff increases dramatically',
               'A new principal energy level is added each period',
               'Electrons are removed from inner shells',
               'The nucleus shrinks'

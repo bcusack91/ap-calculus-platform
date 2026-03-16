@@ -114,7 +114,7 @@ A student mixes 25.0 mL of 0.080 M $HNO_3$ with 15.0 mL of 0.080 M $KOH$.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.0e-4', '0.040', '1.30', '0.00080', '0.0400', '0.04', '1.300', '1.3'],
+        correctAnswers: ['8.0e-4', '0.040', '1.30'],
         hint1: 'Moles $H^+$ = $(0.025)(0.080)$; Moles $OH^-$ = $(0.015)(0.080)$; subtract.',
         hint2: 'Total volume = $25.0 + 15.0 = 40.0$ mL = 0.040 L.',
         hint3: '$[H^+] = \\frac{\\text{excess mol}}{\\text{total vol}}$, then $pH = -\\log[H^+]$.',
@@ -185,7 +185,7 @@ This is slightly below 7, as expected for an acidic solution.
         dropdowns: [
           {
             label: 'To find pH of a strong acid, you need to know the acid\'s',
-            options: ['$K_a$ value', 'initial concentration only', 'molecular weight', 'conjugate base strength']
+            options: ['Kₐ value', 'initial concentration only', 'molecular weight', 'conjugate base strength']
           },
           {
             label: 'When mixing strong acid and strong base, the solution is acidic if',

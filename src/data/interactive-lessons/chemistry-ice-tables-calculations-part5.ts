@@ -147,7 +147,7 @@ Using the quadratic formula:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.0096', '0.19', '0.38', '3.00960', '0.190', '0.380'],
+        correctAnswers: ['3.0096', '0.19', '0.38'],
         hint1: '$b^2 - 4ac = (0.36)^2 - 4(4)(-0.18) = 0.1296 + 2.88$',
         hint2: '$x = \\frac{-0.36 + \\sqrt{3.0096}}{8} = \\frac{-0.36 + 1.735}{8}$',
         hint3: '$[\\text{NO}_2] = 2x$',

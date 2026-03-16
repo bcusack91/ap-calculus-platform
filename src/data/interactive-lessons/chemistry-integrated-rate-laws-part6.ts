@@ -62,7 +62,7 @@ Use the appropriate integrated rate law to find concentration at any time, time 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1', '0.069', '0.0252', '0.0690', '0.02520'],
+        correctAnswers: ['1', '0.069', '0.0252'],
         hint1: 'Check: t₁/₂ from 0.800→0.400 = 10 min. From 0.400→0.200 = 10 min. Constant → first-order.',
         hint2: 'k = 0.693/t₁/₂ = 0.693/10 = 0.0693 ≈ 0.069 s⁻¹.',
         hint3: '[A] = 0.800 × e^(−0.0693 × 50) = 0.800 × e^(−3.465) = 0.800 × 0.0313 = 0.0250.',
@@ -136,7 +136,7 @@ A first-order reaction has a half-life of 25.0 minutes. The initial concentratio
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.0277', '0.15', '89.7', '0.02770', '0.150', '89.70'],
+        correctAnswers: ['0.0277', '0.15', '89.7'],
         hint1: 'k = 0.693/25.0 = 0.0277 min⁻¹.',
         hint2: '75 min = 3 half-lives. [A] = 1.20 × (1/2)³ = 1.20/8 = 0.15 M.',
         hint3: 'ln(0.10/1.20) = −0.0277t. ln(0.0833) = −2.485 = −0.0277t. t = 89.7 min.',
@@ -191,7 +191,7 @@ A certain reaction is second-order with $k = 0.10$ M⁻¹s⁻¹ and $[A]_0 = 2.0
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5.0', '35.0', '0.22', '5.00', '35.00', '0.220'],
+        correctAnswers: ['5.0', '35.0', '0.22'],
         hint1: 't₁/₂ = 1/(k[A]₀) = 1/(0.10 × 2.0) = 5.0 s.',
         hint2: '87.5% reacted → 12.5% remains → [A] = 0.25 M. 1/[A] = kt + 1/[A]₀. 1/0.25 = 0.10t + 1/2.0. 4.0 = 0.10t + 0.50. 0.10t = 3.5. t = 35.0 s.',
         hint3: '1/[A] = 0.10(35) + 0.50 = 3.5 + 0.5 = 4.0. Hmm that\'s [A] = 0.25. Wait: 1/[A] = 0.10(35) + 1/2.0 = 3.5 + 0.5 = 4.0. [A] = 1/4.0 = 0.25. But I said the answer is 0.22. Let me recheck at t = 35: 1/[A] = 0.10(35) + 0.50 = 4.0. [A] = 0.25.',

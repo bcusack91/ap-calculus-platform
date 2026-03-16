@@ -155,7 +155,7 @@ The AP exam often asks you to **explain** why certain elements have unexpectedly
             label: 'Beryllium (Group 2) has a nearly zero EA because:',
             options: [
               'Its nucleus is too small',
-              'Its $2s$ subshell is full, so the added electron would go to the higher-energy $2p$',
+              'Its 2s subshell is full, so the added electron would go to the higher-energy 2p',
               'It has too many neutrons',
               'It is a metal and metals always have zero EA'
             ],

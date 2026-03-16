@@ -139,7 +139,7 @@ A second-order reaction has $k = 0.50$ M⁻¹s⁻¹ and $[A]_0 = 0.80$ M.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.5', '0.24', '5.0', '2.50', '0.240', '5.00'],
+        correctAnswers: ['2.5', '0.24', '5.0'],
         hint1: 't₁/₂ = 1/(k[A]₀) = 1/(0.50 × 0.80) = 1/0.40 = 2.5 s.',
         hint2: '1/[A] = kt + 1/[A]₀ = 0.50(5.0) + 1/0.80 = 2.50 + 1.25 = 3.75. [A] = 1/3.75 = 0.267 ≈ 0.27. Hmm wait let me recalc: 1/0.80 = 1.25. 0.50(5.0) = 2.50. Total = 3.75. [A] = 1/3.75 = 0.2667. Rounding to 2 decimal places: 0.27. Actually let me re-examine. 1/[A] = 0.50(5.0) + 1.25 = 3.75. [A] = 0.267 → 0.27.',
         hint3: 't₁/₂ = 1/(k × 0.40) = 1/(0.50 × 0.40) = 1/0.20 = 5.0 s. This is double the first half-life!',

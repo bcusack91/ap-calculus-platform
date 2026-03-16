@@ -184,7 +184,7 @@ where $A = Z \\cdot p$ is the **frequency factor** (also called the pre-exponent
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20.0', '2.1e-9', '19.4', '20.00', '0.00000', '19.40'],
+        correctAnswers: ['20.0', '2.1e-9', '19.4'],
         hint1: 'Ea/(RT) = 50,000/(8.314 × 300) = 50,000/2494.2 = 20.05 ≈ 20.0.',
         hint2: 'e^(−20.0) = 2.06 × 10⁻⁹ ≈ 2.1 × 10⁻⁹.',
         hint3: 'Ea/(RT) = 50,000/(8.314 × 310) = 50,000/2577.3 = 19.40 ≈ 19.4.',

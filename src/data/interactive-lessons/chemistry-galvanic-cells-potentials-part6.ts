@@ -101,7 +101,7 @@ For the cell: Fe(s) | Fe²⁺(aq) || Cu²⁺(aq) | Cu(s)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.78', '2', '-150', '0.780'],
+        correctAnswers: ['0.78', '2', '-150'],
         hint1: '$E°_{\\text{cell}} = 0.34 - (-0.44)$',
         hint2: 'Both Fe → Fe²⁺ and Cu²⁺ → Cu involve 2 electrons.',
         hint3: '$\\Delta G° = -(2)(96485)(0.78)$. Convert to kJ.',

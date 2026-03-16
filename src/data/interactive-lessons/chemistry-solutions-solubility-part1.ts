@@ -276,7 +276,7 @@ For the AP exam, you need to know which ionic compounds are soluble in water:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['100.0', '30.0', '0.0', '100.00', '30.00', '0.00'],
+        correctAnswers: ['100.0', '30.0', '0.0'],
         hint1: 'Total mass = mass of solute + mass of solvent.',
         hint2: 'The solubility limit is 36.0 g per 100 g water. Is 30.0 g less than or greater than this limit?',
         hint3: 'Since 30.0 g < 36.0 g solubility limit, all of the NaCl dissolves.',

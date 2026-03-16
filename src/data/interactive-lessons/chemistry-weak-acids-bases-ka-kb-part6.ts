@@ -57,7 +57,7 @@ Perform the same analysis for 0.15 M $HNO_2$ ($K_a = 4.5 \\times 10^{-4}$):
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.2e-3', '2.09', '5.5', '0.00820', '2.090', '5.50'],
+        correctAnswers: ['8.2e-3', '2.09', '5.5'],
         hint1: '$[H^+] = \\sqrt{(4.5 \\times 10^{-4})(0.15)}$.',
         hint2: '$pH = -\\log[H^+]$.',
         hint3: 'Percent = $[H^+]/C \\times 100$. Note: this may be close to 5%!',
@@ -140,7 +140,7 @@ A 0.25 M solution of an unknown weak acid has a pH of 2.72.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.9e-3', '1.5e-5', '4.83', '0.00190', '0.00002', '4.830'],
+        correctAnswers: ['1.9e-3', '1.5e-5', '4.83'],
         hint1: '$[H^+] = 10^{-pH} = 10^{-2.72}$.',
         hint2: '$K_a = [H^+]^2/C$ (using the approximation).',
         hint3: '$pK_a = -\\log K_a$.',
@@ -157,7 +157,7 @@ A 0.25 M solution of an unknown weak acid has a pH of 2.72.
         dropdowns: [
           {
             label: 'To find pH of a salt of weak acid + strong base, you need',
-            options: ['$K_a$ of the weak acid (to find $K_b$ of conjugate base)', '$K_a$ of the salt', 'only the salt concentration', '$K_w$ only']
+            options: ['Kₐ of the weak acid (to find K_b of conjugate base)', 'Kₐ of the salt', 'only the salt concentration', 'K_w only']
           },
           {
             label: 'If the 5% approximation gives exactly 5.5% ionization, your answer is',
@@ -168,7 +168,7 @@ A 0.25 M solution of an unknown weak acid has a pH of 2.72.
             options: ['lower pH', 'higher pH', 'the same pH', 'pH = 7']
           }
         ],
-        correctAnswers: ['$K_a$ of the weak acid (to find $K_b$ of conjugate base)', 'close but slightly off — consider quadratic', 'higher pH'],
+        correctAnswers: ['Kₐ of the weak acid (to find K_b of conjugate base)', 'close but slightly off — consider quadratic', 'higher pH'],
         hint1: '$K_b = K_w/K_a$ for the conjugate base.',
         hint2: '5.5% is slightly above the 5% threshold.',
         hint3: 'Smaller $K_a$ → less $[H^+]$ → higher pH.',

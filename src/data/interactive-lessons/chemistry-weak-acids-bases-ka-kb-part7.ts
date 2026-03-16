@@ -96,7 +96,7 @@ This final part provides comprehensive AP-style review covering all weak acid/ba
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['11.40', '5.6e-10', '5.13', '11.400', '11.4', '0.000000', '5.130'],
+        correctAnswers: ['11.40', '5.6e-10', '5.13'],
         hint1: '$[OH^-] = \\sqrt{K_b \\cdot C}$; then $pH = 14 - pOH$.',
         hint2: '$K_a = K_w/K_b$.',
         hint3: '$NH_4^+$ is a weak acid; $[H^+] = \\sqrt{K_a \\cdot C}$.',
@@ -154,7 +154,7 @@ This final part provides comprehensive AP-style review covering all weak acid/ba
           },
           {
             label: 'The 5% approximation is invalid when $C/K_a$ is',
-            options: ['greater than 400', 'less than 400', 'equal to 1', 'equal to $K_w$']
+            options: ['greater than 400', 'less than 400', 'equal to 1', 'equal to K_w']
           },
           {
             label: 'For $Na_2SO_4$ in water, the pH is approximately',

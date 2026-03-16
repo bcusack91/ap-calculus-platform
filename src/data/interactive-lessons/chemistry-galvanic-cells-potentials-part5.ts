@@ -160,7 +160,7 @@ This enormous $K$ confirms the reaction is virtually complete at equilibrium.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-77.2', '1.00', 'greater', '-77.20', '1.000', '1.0'],
+        correctAnswers: ['-77.2', '1.00', 'greater'],
         hint1: '$\\Delta G° = -(1)(96485)(0.80) = -77{,}188$ J.',
         hint2: '$E° = -(-579{,}000)/((6)(96485))$',
         hint3: 'Positive E° → spontaneous → products favored → K > 1.',

@@ -129,7 +129,7 @@ An Arrhenius plot of ln k vs 1/T has two data points:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-8000', '66.5', '16.0', '66.50', '16.00'],
+        correctAnswers: ['-8000', '66.5', '16.0'],
         hint1: 'Slope = (−4.00 − (−8.00))/(2.50e-3 − 3.00e-3) = 4.00/(−5.00e-4) = −8,000 K.',
         hint2: 'Ea = −R × slope = −8.314 × (−8,000) = 66,512 J/mol = 66.5 kJ/mol.',
         hint3: 'ln A = ln k − slope × (1/T) = −8.00 − (−8,000)(3.00e-3) = −8.00 + 24.0 = 16.0.',

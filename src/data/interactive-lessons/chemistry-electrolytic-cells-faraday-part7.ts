@@ -110,7 +110,7 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['33.6', 'H2', 'I2', '33.60'],
+        correctAnswers: ['33.6', 'H2', 'I2'],
         hint1: '$m = (100)(3600)(26.98)/((3)(96485))$',
         hint2: 'Na⁺ is too reactive to deposit from water.',
         hint3: 'I⁻ is a simple halide.',

@@ -55,7 +55,7 @@ Same titration: 50.0 mL of 0.200 M $CH_3COOH$ with 0.200 M $NaOH$ ($pK_a = 4.74$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.22', '5.36', '12.96', '4.220', '5.360', '12.960'],
+        correctAnswers: ['4.22', '5.36', '12.96'],
         hint1: 'Mol $HA = 0.010 - 0.002 = 0.008$; mol $A^- = 0.002$. $pH = 4.74 + \\log(0.002/0.008)$.',
         hint2: 'Mol $HA = 0.010 - 0.008 = 0.002$; mol $A^- = 0.008$. $pH = 4.74 + \\log(0.008/0.002)$.',
         hint3: 'Excess $NaOH = 0.012 - 0.010 = 0.002$ mol in 110 mL. Find $[OH^-]$, then pH.',
@@ -136,7 +136,7 @@ A weak acid $HA$ ($pK_a = 6.50$) is titrated with $NaOH$.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6.50', 'greater', '9.0', '6.500', '6.5', '9.00'],
+        correctAnswers: ['6.50', 'greater', '9.0'],
         hint1: 'Half-equivalence: $pH = pK_a$.',
         hint2: 'Weak acid + strong base → basic at equivalence.',
         hint3: 'Indicator range = $pK_{In} \\pm 1$. If $pK_{In} \\approx 10$, lower bound = 9.',
@@ -153,22 +153,22 @@ A weak acid $HA$ ($pK_a = 6.50$) is titrated with $NaOH$.
         dropdowns: [
           {
             label: 'At the start of a weak acid titration, calculate pH using',
-            options: ['Henderson-Hasselbalch', 'ICE table with $K_a$', 'excess $OH^-$ method', '$pH = 7$']
+            options: ['Henderson-Hasselbalch', 'ICE table with Kₐ', 'excess OH⁻ method', 'pH = 7']
           },
           {
             label: 'In the buffer region, calculate pH using',
-            options: ['Henderson-Hasselbalch', 'ICE table with $K_a$', 'excess $OH^-$ method', '$pH = 7$']
+            options: ['Henderson-Hasselbalch', 'ICE table with Kₐ', 'excess OH⁻ method', 'pH = 7']
           },
           {
             label: 'At the equivalence point, calculate pH using',
-            options: ['Henderson-Hasselbalch', 'ICE table with $K_b$', 'excess $OH^-$ method', '$pH = pK_a$']
+            options: ['Henderson-Hasselbalch', 'ICE table with K_b', 'excess OH⁻ method', 'pH = pKₐ']
           },
           {
             label: 'After the equivalence point, calculate pH using',
-            options: ['Henderson-Hasselbalch', 'ICE table with $K_a$', 'excess $OH^-$ method', '$pH = 7$']
+            options: ['Henderson-Hasselbalch', 'ICE table with Kₐ', 'excess OH⁻ method', 'pH = 7']
           }
         ],
-        correctAnswers: ['ICE table with $K_a$', 'Henderson-Hasselbalch', 'ICE table with $K_b$', 'excess $OH^-$ method'],
+        correctAnswers: ['ICE table with Kₐ', 'Henderson-Hasselbalch', 'ICE table with K_b', 'excess OH⁻ method'],
         hint1: 'Only weak acid present initially — no conjugate base yet.',
         hint2: 'Both $HA$ and $A^-$ present — a buffer!',
         hint3: 'Only $A^-$ present — it hydrolyzes as a weak base.',

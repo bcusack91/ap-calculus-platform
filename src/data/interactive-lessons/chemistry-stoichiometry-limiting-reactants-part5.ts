@@ -162,7 +162,7 @@ Here: $M_A \\times V_A \\times 1 = M_B \\times V_B \\times \\frac{1}{2}$, or sim
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.100', '20.0', '0.228', '0.1000', '0.10', '20.00', '0.2280'],
+        correctAnswers: ['0.100', '20.0', '0.228'],
         hint1: '$n = 0.400 \\times 0.250$.',
         hint2: 'Moles HCl = $0.100 \\times 0.050 = 0.005$ mol. Need same moles NaOH. $V = n/M = 0.005/0.250$.',
         hint3: 'Moles KOH = $0.200 \\times 0.0285$. Since 1:1, moles HNO₃ = same. $M = n/V = n/0.0250$.',

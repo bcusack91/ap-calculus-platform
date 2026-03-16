@@ -146,7 +146,7 @@ A buffer has 0.20 mol $HF$ and 0.20 mol $NaF$ in 1.0 L. ($pK_a = 3.17$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.17', '0.15', '3.05', '3.170', '0.150', '3.050'],
+        correctAnswers: ['3.17', '0.15', '3.05'],
         hint1: '$pH = pK_a + \\log(0.20/0.20) = pK_a + 0$.',
         hint2: '$F^- + H^+ \\rightarrow HF$: 0.20 - 0.050 = 0.15 mol $F^-$.',
         hint3: '$pH = 3.17 + \\log(0.15/0.25)$.',
@@ -184,18 +184,18 @@ After destruction, treat as a simple strong acid or base problem!
         dropdowns: [
           {
             label: 'Adding $H^+$ to a buffer converts',
-            options: ['$HA$ to $A^-$', '$A^-$ to $HA$', '$H_2O$ to $OH^-$', 'nothing']
+            options: ['HA to A⁻', 'A⁻ to HA', 'H₂O to OH⁻', 'nothing']
           },
           {
             label: 'The pH of a buffer where $[A^-] > [HA]$ is',
-            options: ['less than $pK_a$', 'equal to $pK_a$', 'greater than $pK_a$', 'always 7']
+            options: ['less than pKₐ', 'equal to pKₐ', 'greater than pKₐ', 'always 7']
           },
           {
             label: 'A buffer is destroyed when',
             options: ['any acid is added', 'one component is completely consumed', 'pH changes at all', 'water is added']
           }
         ],
-        correctAnswers: ['$A^-$ to $HA$', 'greater than $pK_a$', 'one component is completely consumed'],
+        correctAnswers: ['A⁻ to HA', 'greater than pKₐ', 'one component is completely consumed'],
         hint1: '$A^- + H^+ \\rightarrow HA$.',
         hint2: '$\\log([A^-]/[HA]) > 0$ when $[A^-] > [HA]$.',
         hint3: 'The buffer needs both components to function.',

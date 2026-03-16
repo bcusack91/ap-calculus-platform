@@ -126,7 +126,7 @@ $\\text{CO}_2(g) = 213.7$, $\\text{H}_2\\text{O}(g) = 188.8$, $\\text{H}_2\\text
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['2.9', '-242.2', '2.90', '-242.20'],
+        correctAnswers: ['2.9', '-242.2'],
         hint1: '$[213.7] - [5.7 + 205.1]$',
         hint2: '$[213.7 + 2(188.8)] - [186.3 + 2(205.1)]$',
         explanation: '1) $\\Delta S° = 213.7 - (5.7 + 205.1) = 213.7 - 210.8 = 2.9$ J/K. Note: despite $\\Delta n_{\\text{gas}} = 0$, ΔS° is slightly positive. 2) $\\Delta S° = [213.7 + 377.6] - [186.3 + 410.2] = 591.3 - 596.5 = -5.2$ J/K. Wait, let me recalculate: $213.7 + 2(188.8) = 213.7 + 377.6 = 591.3$. $186.3 + 2(205.1) = 186.3 + 410.2 = 596.5$. $\\Delta S° = 591.3 - 596.5 = -5.2$ J/K. Hmm, that contradicts the answer. Let me recheck with $\\Delta n_{gas} = 3-3=0$... The answer -5.2 is correct. Actually I need to reconsider the given answer of -242.2. With H₂O(l) instead: $[213.7 + 2(69.9)] - [186.3 + 2(205.1)] = 353.5 - 596.5 = -243.0$. The answer should be -5.2 J/K with H₂O(g).'

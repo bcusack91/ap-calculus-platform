@@ -141,7 +141,7 @@ The reaction $2\\,\\text{SO}_3(g) \\rightleftharpoons 2\\,\\text{SO}_2(g) + \\te
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['reactant-favored', '7.9e4', 'increase', '79000.0000', '79000.00'],
+        correctAnswers: ['reactant-favored', '7.9e4', 'increase'],
         hint1: '$K_c = 1.6 \\times 10^{-10} \\ll 1$, so reactants (SO₃) dominate.',
         hint2: 'Reverse the reaction and divide by 2. $K\' = (1/K)^{1/2} = (1/(1.6 \\times 10^{-10}))^{1/2}$.',
         hint3: 'Endothermic reactions: increasing T shifts right, increasing K.',

@@ -129,7 +129,7 @@ $pK_b = 14 - 4.74 = 9.26$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.5e-11', '5.6e-10', '10.25', '0.000000', '0.0000', '10.250'],
+        correctAnswers: ['1.5e-11', '5.6e-10', '10.25'],
         hint1: '$K_b = K_w/K_a = 1.0 \\times 10^{-14}/(6.8 \\times 10^{-4})$.',
         hint2: '$K_a = K_w/K_b = 1.0 \\times 10^{-14}/(1.8 \\times 10^{-5})$.',
         hint3: '$pK_b = 14 - pK_a$.',

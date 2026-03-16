@@ -134,7 +134,7 @@ Current state: $[\\text{N}_2\\text{O}_4] = 0.50$ M, $[\\text{NO}_2] = 0.20$ M
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.08', 'right', 'higher', '0.080'],
+        correctAnswers: ['0.08', 'right', 'higher'],
         hint1: '$Q_c = \\frac{[\\text{NO}_2]^2}{[\\text{N}_2\\text{O}_4]} = \\frac{(0.20)^2}{0.50}$',
         hint2: '$Q = 0.08 < K = 0.36$, so the reaction shifts right.',
         hint3: 'Shifting right means producing more NO₂.',

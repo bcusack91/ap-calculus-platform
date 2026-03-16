@@ -173,7 +173,7 @@ For each species, determine whether it appears in the equilibrium expression.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.040', '3', '0.09', '0.0400', '0.04', '0.090'],
+        correctAnswers: ['0.040', '3', '0.09'],
         hint1: 'Since both solids are excluded, $K_p = P_{\\text{CO}_2}$.',
         hint2: 'C(s) is excluded. The remaining species are H₂O(g), CO(g), and H₂(g).',
         hint3: '$K_p = P_{\\text{NH}_3} \\times P_{\\text{HCl}} = 0.30 \\times 0.30$',

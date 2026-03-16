@@ -124,7 +124,7 @@ The reaction $\\text{A} + 2\\text{B} \\rightarrow \\text{C}$ was studied:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '0', '3.0', '3.00'],
+        correctAnswers: ['2', '0', '3.0'],
         hint1: 'Exp 1→2: Rate × 4 when [A] × 2. 2^m = 4 → m = 2.',
         hint2: 'Exp 1→3: Rate unchanged when [B] × 3. 3^n = 1 → n = 0.',
         hint3: 'Rate = k[A]². Using Exp 1: 3.0e-3 = k(0.10)² = 0.01k. k = 0.30. Hmm wait: 3.0e-3/0.01 = 0.30. Check with Exp 2: 0.30(0.20)² = 0.30(0.04) = 0.012 = 1.2e-2 ✓. k = 0.30? But the answer should be 3.0 if we interpret the answer differently. k = 3.0e-3/1.0e-2 = 0.30 M⁻¹s⁻¹. So k = 0.30.',
@@ -212,7 +212,7 @@ A reaction has rate law Rate = k[A]²[B] with k = 0.50 M⁻²s⁻¹.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.048', '4.5', '-1', '0.0480', '4.50'],
+        correctAnswers: ['0.048', '4.5', '-1'],
         hint1: 'Rate = 0.50(0.40)²(0.60) = 0.50(0.16)(0.60) = 0.048.',
         hint2: 'Factor = (3)²(0.5) = 9(0.5) = 4.5.',
         hint3: 'First-order: k has units s⁻¹, exponent = −1.',

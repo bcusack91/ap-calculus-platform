@@ -120,7 +120,7 @@ Titrating 25.0 mL of 0.200 M $HCl$ with 0.200 M $NaOH$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.70', '25.0', '12.76', '0.700', '0.7', '25.00', '12.760'],
+        correctAnswers: ['0.70', '25.0', '12.76'],
         hint1: '$pH = -\\log(0.200)$.',
         hint2: 'Equal concentrations, so equal volumes needed.',
         hint3: 'Excess $NaOH$: $0.006 - 0.005 = 0.001$ mol in 55.0 mL total.',
@@ -168,14 +168,14 @@ Higher concentrations → steeper jump at equivalence, but equivalence point is 
           },
           {
             label: 'After the equivalence point, the pH is determined by',
-            options: ['excess $H^+$', 'excess $OH^-$', 'the salt', 'the indicator']
+            options: ['excess H⁺', 'excess OH⁻', 'the salt', 'the indicator']
           },
           {
             label: 'For a strong acid-strong base titration, the equivalence point pH is always',
             options: ['acidic', 'basic', 'exactly 7', 'depends on volumes']
           }
         ],
-        correctAnswers: ['3 to 11', 'make the steep region steeper', 'excess $OH^-$', 'exactly 7'],
+        correctAnswers: ['3 to 11', 'make the steep region steeper', 'excess OH⁻', 'exactly 7'],
         hint1: 'The jump covers a wide pH range near equivalence.',
         hint2: 'Higher concentration = more dramatic pH change per mL.',
         hint3: 'Excess titrant (NaOH) determines post-equivalence pH.',

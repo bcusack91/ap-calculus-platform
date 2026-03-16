@@ -133,7 +133,7 @@ This is a critically important result: **the pH of a buffer with equal concentra
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.35', '8.95', '5.8', '3.350', '8.950', '5.80'],
+        correctAnswers: ['3.35', '8.95', '5.8'],
         hint1: '$pH = 3.17 + \\log(0.60/0.40)$.',
         hint2: 'For $NH_3/NH_4^+$ buffer: $pH = pK_a(NH_4^+) + \\log([NH_3]/[NH_4^+])$.',
         hint3: '$5.50 = 4.74 + \\log(x)$; solve for $x = 10^{0.76}$.',
@@ -177,11 +177,11 @@ Both methods give the same answer. Method 1 is usually preferred for consistency
           },
           {
             label: 'Increasing $[A^-]$ while holding $[HA]$ constant will',
-            options: ['decrease pH', 'increase pH', 'not change pH', 'change $K_a$']
+            options: ['decrease pH', 'increase pH', 'not change pH', 'change Kₐ']
           },
           {
             label: 'The Henderson-Hasselbalch equation assumes',
-            options: ['strong acid dissociation', 'equilibrium has been reached', 'complete neutralization', '$pH = 7$']
+            options: ['strong acid dissociation', 'equilibrium has been reached', 'complete neutralization', 'pH = 7']
           }
         ],
         correctAnswers: ['1', 'increase pH', 'equilibrium has been reached'],

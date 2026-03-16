@@ -164,7 +164,7 @@ The accepted value is $-55.8$ kJ/mol — our measurement is close!
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20.9', '0.26', '-2.85', '20.90', '0.260', '-2.850'],
+        correctAnswers: ['20.9', '0.26', '-2.85'],
         hint1: '$q = mc\\Delta T = (200.0)(4.184)(25.0)$. Convert J to kJ.',
         hint2: 'Heat lost by metal = heat gained by water. $m_{\\text{metal}} c_{\\text{metal}} \\Delta T_{\\text{metal}} = m_{\\text{water}} c_{\\text{water}} \\Delta T_{\\text{water}}$',
         hint3: '$q_{\\text{solution}} = mc\\Delta T = (200.0)(4.184)(3.4)$. Then $q_{\\text{rxn}} = -q_{\\text{solution}}$.',

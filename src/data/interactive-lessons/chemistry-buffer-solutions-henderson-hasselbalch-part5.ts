@@ -158,7 +158,7 @@ $$NH_3 + H^+ \\rightarrow NH_4^+$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.18', '0.15', '0.133', '0.180', '0.150', '0.1330'],
+        correctAnswers: ['0.18', '0.15', '0.133'],
         hint1: '$[A^-]/[HA] = 10^{(4.00 - 4.74)} = 10^{-0.74}$.',
         hint2: 'For $pH = pK_a$, you need equal moles of $HA$ and $A^-$. Add enough $NaOH$ to convert half the acid.',
         hint3: 'Ratio $= 10^{(9.55-9.25)} = 10^{0.30} = 2.00$. $[NH_3] = 2[NH_4^+]$. Total = $3[NH_4^+] = 0.40$ M.',
@@ -179,14 +179,14 @@ $$NH_3 + H^+ \\rightarrow NH_4^+$$
           },
           {
             label: 'Adding NaOH to excess weak acid creates a buffer because',
-            options: ['NaOH is a buffer', 'it partially converts HA to A⁻', 'it neutralizes all the acid', 'it changes $K_a$']
+            options: ['NaOH is a buffer', 'it partially converts HA to A⁻', 'it neutralizes all the acid', 'it changes Kₐ']
           },
           {
             label: 'To increase both the pH and capacity of an acetate buffer, you should add',
-            options: ['more $CH_3COOH$', 'more $NaCH_3COO$', 'water', '$HCl$']
+            options: ['more CH₃COOH', 'more NaCH₃COO', 'water', 'HCl']
           }
         ],
-        correctAnswers: ['1:1', 'it partially converts HA to A⁻', 'more $NaCH_3COO$'],
+        correctAnswers: ['1:1', 'it partially converts HA to A⁻', 'more NaCH₃COO'],
         hint1: 'At $pH = pK_a$, the ratio is 1:1.',
         hint2: 'Partial neutralization creates both buffer components.',
         hint3: 'More $A^-$ increases capacity AND increases the ratio (higher pH).',

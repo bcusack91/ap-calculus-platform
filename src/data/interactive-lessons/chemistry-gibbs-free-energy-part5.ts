@@ -153,7 +153,7 @@ For a reaction with $\\Delta G° = -10.0$ kJ/mol at $T = 298$ K:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-10.0', '0', 'positive', '-10.00'],
+        correctAnswers: ['-10.0', '0', 'positive'],
         hint1: '$\\Delta G = \\Delta G° + RT\\ln(1) = \\Delta G° + 0$.',
         hint2: 'At equilibrium, $\\Delta G = 0$ always.',
         hint3: 'If $Q > K$, the reaction has "overshot" equilibrium.',

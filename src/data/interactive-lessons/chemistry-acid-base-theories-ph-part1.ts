@@ -187,14 +187,14 @@ Note: sulfuric acid is **diprotic** — it has 2 acidic protons, so it requires 
           },
           {
             label: 'The net ionic equation for all strong acid–strong base neutralizations is',
-            options: ['$HCl + NaOH \\rightarrow NaCl + H_2O$', '$H^+ + OH^- \\rightarrow H_2O$', '$Na^+ + Cl^- \\rightarrow NaCl$', '$H_2O \\rightarrow H^+ + OH^-$']
+            options: ['HCl + NaOH \→ NaCl + H₂O', 'H⁺ + OH⁻ \→ H₂O', 'Na⁺ + Cl⁻ \→ NaCl', 'H₂O \→ H⁺ + OH⁻']
           },
           {
             label: '$K_w$ at 25°C equals',
-            options: ['$1.0 \\times 10^{-7}$', '$1.0 \\times 10^{-14}$', '$7.0$', '$14.0$']
+            options: ['1.0 \× 10⁻⁷', '1.0 \× 10⁻¹⁴', '7.0', '14.0']
           }
         ],
-        correctAnswers: ['acid', '2', '$H^+ + OH^- \\rightarrow H_2O$', '$1.0 \\times 10^{-14}$'],
+        correctAnswers: ['acid', '2', 'H⁺ + OH⁻ \→ H₂O', '1.0 \× 10⁻¹⁴'],
         hint1: '$HNO_3$ produces $H^+$ in water.',
         hint2: '$Ba(OH)_2 \\rightarrow Ba^{2+} + 2OH^-$.',
         hint3: 'Remove spectator ions from any strong acid–strong base reaction.',

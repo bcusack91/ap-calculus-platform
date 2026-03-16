@@ -217,7 +217,7 @@ $$E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.080', '9', '70', '0.0800', '0.08'],
+        correctAnswers: ['0.080', '9', '70'],
         hint1: '45°C is 20°C above 25°C, so two doublings: rate × 2 × 2.',
         hint2: 'Rate ∝ [A]². If [A] → 3[A], rate → 3² = 9 times.',
         hint3: 'ΔEa = 120 − 50 = 70 kJ/mol.',

@@ -151,14 +151,14 @@ The buffer works because the added strong acid or base is **completely consumed*
           },
           {
             label: 'The blood buffer system uses',
-            options: ['$HCl/NaCl$', '$H_2CO_3/HCO_3^-$', '$NaOH/NaCl$', '$H_2SO_4/NaHSO_4$']
+            options: ['HCl/NaCl', 'H₂CO₃/HCO₃⁻', 'NaOH/NaCl', 'H₂SO₄/NaHSO₄']
           },
           {
             label: 'A buffer works best when $[HA]$ and $[A^-]$ are',
             options: ['very different', 'approximately equal', 'both very small', 'both zero']
           }
         ],
-        correctAnswers: ['buffer', 'weak acid', '$H_2CO_3/HCO_3^-$', 'approximately equal'],
+        correctAnswers: ['buffer', 'weak acid', 'H₂CO₃/HCO₃⁻', 'approximately equal'],
         hint1: '$HF$ is a weak acid; $F^-$ (from $NaF$) is its conjugate base.',
         hint2: 'The weak acid neutralizes added base.',
         hint3: 'The carbonic acid/bicarbonate system is the primary blood buffer.',

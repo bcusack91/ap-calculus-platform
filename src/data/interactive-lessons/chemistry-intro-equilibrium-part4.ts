@@ -155,7 +155,7 @@ Given: $\\text{A}(g) \\rightleftharpoons 2\\,\\text{B}(g)$, $K_c = 25$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.04', '5', '100', '0.040'],
+        correctAnswers: ['0.04', '5', '100'],
         hint1: 'Reversing the reaction: $K_{\\text{rev}} = 1/K = 1/25 = 0.04$.',
         hint2: 'Multiplying by 1/2: $K\' = K^{1/2} = \\sqrt{25} = 5$.',
         hint3: 'A ⇌ 2B has $K_1 = 25$. B ⇌ C has $K_2 = 2.0$. For 2B ⇌ 2C, $K = K_2^2 = 4$. Overall: $K = K_1 \\times K_2^2 = 25 \\times 4 = 100$.',

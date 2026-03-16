@@ -94,7 +94,7 @@ This workshop provides practice with the Nernst equation, concentration cells, t
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.978', '0.0592', '76.0', '0.9780', '0.05920', '76.00'],
+        correctAnswers: ['0.978', '0.0592', '76.0'],
         hint1: '$E = 0.80 - (0.0592)\\log(0.001) = 0.80 - (0.0592)(-3)$',
         hint2: '$E = (0.0592/2)\\log(1.0/0.01) = (0.0296)(2)$',
         hint3: '$\\log K = (3)(1.50)/0.0592$',

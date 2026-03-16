@@ -100,7 +100,7 @@ $$[H^+] = 10^{-pH} \\qquad [OH^-] = 10^{-pOH}$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.43', '3.2e-12', '50', '1.430', '0.000000', '0.0000'],
+        correctAnswers: ['1.43', '3.2e-12', '50'],
         hint1: 'Mol $H^+$ = $(0.100)(0.15)$; mol $OH^-$ = $(0.075)(0.15)$; excess $H^+$ in 175 mL.',
         hint2: '$[H^+] = 10^{-11.50}$.',
         hint3: '$H_2SO_4$ is diprotic: mol $H^+$ = $2(0.050)(0.10)$; set equal to mol $OH^-$ = $(V)(0.20)$.',
@@ -150,7 +150,7 @@ $$[H^+] = 10^{-pH} \\qquad [OH^-] = 10^{-pOH}$$
         dropdowns: [
           {
             label: 'The 6 strong acids include all EXCEPT',
-            options: ['$HCl$', '$HF$', '$HBr$', '$HClO_4$']
+            options: ['HCl', 'HF', 'HBr', 'HClO₄']
           },
           {
             label: 'pH + pOH = 14 is true at',
@@ -165,7 +165,7 @@ $$[H^+] = 10^{-pH} \\qquad [OH^-] = 10^{-pOH}$$
             options: ['7', '14', '1.0e-14', '1.0e-7']
           }
         ],
-        correctAnswers: ['$HF$', '25°C only', 'one proton', '14'],
+        correctAnswers: ['HF', '25°C only', 'one proton', '14'],
         hint1: '$HF$ is a weak acid.',
         hint2: '$K_w$ varies with temperature; 14 is only at 25°C.',
         hint3: 'Conjugate pairs differ by exactly one $H^+$.',

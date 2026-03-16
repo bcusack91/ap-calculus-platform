@@ -140,7 +140,7 @@ At 25°C:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['15.5', '0.296', 'less', '15.50', '0.2960'],
+        correctAnswers: ['15.5', '0.296', 'less'],
         hint1: '$\\log K = (2)(0.46)/0.0592$',
         hint2: '$E° = (0.0592/4)(20)$',
         hint3: 'Negative $E°$ → negative $\\log K$ → $K < 1$.',

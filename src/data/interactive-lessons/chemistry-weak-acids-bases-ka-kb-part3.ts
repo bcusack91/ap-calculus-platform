@@ -166,7 +166,7 @@ This is why solutions of sodium acetate ($NaCH_3COO$) are **basic** — the acet
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['11.97', '1.3e-5', '9.07', '11.970', '0.00001', '9.070'],
+        correctAnswers: ['11.97', '1.3e-5', '9.07'],
         hint1: '$[OH^-] = \\sqrt{K_b \\cdot C}$; then $pOH = -\\log[OH^-]$; $pH = 14 - pOH$.',
         hint2: '$[OH^-] = \\sqrt{(1.7 \\times 10^{-9})(0.10)}$.',
         hint3: '$[OH^-] = \\sqrt{(5.6 \\times 10^{-10})(0.25)}$; then convert to pH.',
@@ -191,10 +191,10 @@ This is why solutions of sodium acetate ($NaCH_3COO$) are **basic** — the acet
           },
           {
             label: 'To find pH of a weak base, you first calculate',
-            options: ['$[H^+]$ directly', '$[OH^-]$ from ICE table', '$K_a$ of the base', 'nothing — same as strong base']
+            options: ['[H⁺] directly', '[OH⁻] from ICE table', 'Kₐ of the base', 'nothing — same as strong base']
           }
         ],
-        correctAnswers: ['acidic', 'negligibly weak', '$[OH^-]$ from ICE table'],
+        correctAnswers: ['acidic', 'negligibly weak', '[OH⁻] from ICE table'],
         hint1: '$NH_4^+$ is the conjugate acid of the weak base $NH_3$.',
         hint2: 'Strong acids dissociate completely; their conjugate bases don\'t react with water.',
         hint3: 'Weak bases produce $OH^-$, so start with $[OH^-]$.',

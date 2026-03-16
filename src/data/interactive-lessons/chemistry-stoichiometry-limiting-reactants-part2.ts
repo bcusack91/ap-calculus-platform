@@ -151,7 +151,7 @@ Molar masses: Fe₂O₃ = 159.7 g/mol, CO = 28.01 g/mol, Fe = 55.85 g/mol, CO₂
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['111.7', '42.0', '132.0', '111.70', '42.00', '132.00'],
+        correctAnswers: ['111.7', '42.0', '132.0'],
         hint1: '159.7 g Fe₂O₃ = 1.000 mol → 2.000 mol Fe → ? g Fe.',
         hint2: '79.85 g Fe₂O₃ = 0.500 mol → 1.500 mol CO → ? g CO.',
         hint3: '84.03 g CO = 3.000 mol → 3.000 mol CO₂ → ? g CO₂.',

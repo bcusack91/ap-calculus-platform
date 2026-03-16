@@ -105,7 +105,7 @@ Gibbs free energy ties together enthalpy, entropy, equilibrium, and electrochemi
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['720', '10^10', '0.1', '0.10'],
+        correctAnswers: ['720', '10^10', '0.1'],
         hint1: '$T = \\Delta H/\\Delta S = -180{,}000/(-250)$',
         hint2: '$K = e^{57100/(8.314 \\times 298)} = e^{23.0}$',
         hint3: 'At $\\Delta G = 0$: $Q = K = e^{-\\Delta G°/(RT)} = e^{-5000/2478}$',

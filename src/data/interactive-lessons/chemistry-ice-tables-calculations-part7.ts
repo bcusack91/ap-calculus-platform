@@ -112,7 +112,7 @@ A 1.00 L flask is charged with 0.400 mol CO and 0.400 mol Cl₂. No COCl₂ is i
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['x', 'yes', '0.400', '0.4000', '0.40'],
+        correctAnswers: ['x', 'yes', '0.400'],
         hint1: 'COCl₂ starts at 0 and gains $+x$.',
         hint2: 'The ratio $[\\text{init}]/K < 100$ means the approximation fails (but for large K, not small K).',
         hint3: 'CO and Cl₂ are in a 1:1 ratio, both at 0.400 mol. They are equally limiting → 0.400 mol COCl₂.',

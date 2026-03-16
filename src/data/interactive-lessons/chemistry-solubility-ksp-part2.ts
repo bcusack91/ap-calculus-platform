@@ -122,7 +122,7 @@ You **cannot** directly compare $K_{sp}$ values to rank solubility unless the co
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.0e-5', '0.01', '1.0e-5', '0.00001', '0.010'],
+        correctAnswers: ['1.0e-5', '0.01', '1.0e-5'],
         hint1: '$s = \\sqrt{1.1 \\times 10^{-10}} = 1.05 \\times 10^{-5}$',
         hint2: '$s = \\sqrt[3]{5.0 \\times 10^{-6}/4} = \\sqrt[3]{1.25 \\times 10^{-6}}$',
         hint3: 'For a 1:1 salt, $[\\text{Ba}^{2+}] = s$.',

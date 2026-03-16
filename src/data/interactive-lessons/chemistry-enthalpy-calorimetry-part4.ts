@@ -164,7 +164,7 @@ Note: This gives $\\Delta E$ (internal energy), not $\\Delta H$, because the bom
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-35.70', '7743', '10.34', '-35.700', '-35.7', '10.340'],
+        correctAnswers: ['-35.70', '7743', '10.34'],
         hint1: '$q_{\\text{rxn}} = -C_{\\text{cal}} \\Delta T = -(8.50)(4.20)$.',
         hint2: '$q_{\\text{rxn}} = -C_{\\text{cal}} \\Delta T$, then divide by moles. Moles = 0.500/342.3.',
         hint3: '$C_{\\text{cal}} = q/\\Delta T = (1.000 \\times 26.38)/2.55$.',

@@ -47,7 +47,7 @@ $\\text{Ag}_2\\text{CO}_3(s) \\rightleftharpoons 2\\,\\text{Ag}^+(aq) + \\text{C
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.6e-4', '1.3e-4', '8.8e-12', '0.00026', '0.00013', '0.000000', '0.0000'],
+        correctAnswers: ['2.6e-4', '1.3e-4', '8.8e-12'],
         hint1: '$[\\text{Ag}^+] = 2s = 2(1.3 \\times 10^{-4})$',
         hint2: '$[\\text{CO}_3^{2-}] = s = 1.3 \\times 10^{-4}$',
         hint3: '$K_{sp} = [\\text{Ag}^+]^2[\\text{CO}_3^{2-}] = (2.6 \\times 10^{-4})^2(1.3 \\times 10^{-4})$',
@@ -74,7 +74,7 @@ $K_{sp} = (s)(0.10 + 2s)^2 \\approx (s)(0.10)^2$
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['4.3e-7', '1.0e-3', '0.00000', '0.00100', '0.001'],
+        correctAnswers: ['4.3e-7', '1.0e-3'],
         hint1: '$s = K_{sp}/(0.10)^2 = 4.3 \\times 10^{-9}/0.010$',
         hint2: '$s = \\sqrt[3]{K_{sp}/4} = \\sqrt[3]{4.3 \\times 10^{-9}/4}$',
         explanation: '1) $s = 4.3 \\times 10^{-9}/0.010 = 4.3 \\times 10^{-7}$ M. 2) $s = \\sqrt[3]{1.075 \\times 10^{-9}} = 1.02 \\times 10^{-3} \\approx 1.0 \\times 10^{-3}$ M. The common ion reduced solubility by a factor of about 2,300.'

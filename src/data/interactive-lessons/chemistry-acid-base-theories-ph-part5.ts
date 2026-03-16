@@ -182,7 +182,7 @@ $$pH = -\\log(0.025) = 1.60$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.70', '13.00', '1.22', '2.700', '2.7', '13.000', '13.0', '1.220'],
+        correctAnswers: ['2.70', '13.00', '1.22'],
         hint1: '$HClO_4$ is a strong acid: $pH = -\\log(0.0020)$.',
         hint2: '$Ba(OH)_2$: $[OH^-] = 2(0.050) = 0.10$ M.',
         hint3: 'Find excess $H^+$: mol $H^+$ = $(0.040)(0.15)$, mol $OH^-$ = $(0.020)(0.15)$; divide excess by total volume.',

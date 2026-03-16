@@ -161,7 +161,7 @@ Compare: 0.10 M $HCl$ has $pH = 1.00$. Same concentration, but the weak acid has
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.88', '5.6e-6', '1.3', '1.880', '0.00001', '1.30'],
+        correctAnswers: ['1.88', '5.6e-6', '1.3'],
         hint1: '$[H^+] = \\sqrt{(6.8 \\times 10^{-4})(0.25)}$, then $pH = -\\log[H^+]$.',
         hint2: '$[H^+] = \\sqrt{(6.2 \\times 10^{-10})(0.050)}$.',
         hint3: 'Percent ionization = $([H^+]/C) \\times 100\\%$.',
@@ -178,7 +178,7 @@ Compare: 0.10 M $HCl$ has $pH = 1.00$. Same concentration, but the weak acid has
         dropdowns: [
           {
             label: 'At equilibrium in a weak acid solution, the major species is',
-            options: ['$H^+$', '$A^-$', 'undissociated $HA$', 'water only']
+            options: ['H⁺', 'A⁻', 'undissociated HA', 'water only']
           },
           {
             label: 'If the 5% approximation fails, you must',
@@ -186,10 +186,10 @@ Compare: 0.10 M $HCl$ has $pH = 1.00$. Same concentration, but the weak acid has
           },
           {
             label: 'Increasing the initial concentration of a weak acid will',
-            options: ['increase $K_a$', 'decrease $K_a$', 'decrease percent ionization', 'not affect equilibrium']
+            options: ['increase Kₐ', 'decrease Kₐ', 'decrease percent ionization', 'not affect equilibrium']
           }
         ],
-        correctAnswers: ['undissociated $HA$', 'use the quadratic formula', 'decrease percent ionization'],
+        correctAnswers: ['undissociated HA', 'use the quadratic formula', 'decrease percent ionization'],
         hint1: 'Weak acids are mostly undissociated.',
         hint2: 'The quadratic formula gives the exact solution.',
         hint3: '$K_a$ is constant; higher $C$ means relatively less dissociation.',

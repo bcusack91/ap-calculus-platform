@@ -137,7 +137,7 @@ $$1.0 \\times 10^{-6} = \\frac{x^2}{0.50}$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7.1e-4', '0.14', 'yes', '0.00071', '0.140'],
+        correctAnswers: ['7.1e-4', '0.14', 'yes'],
         hint1: '$x^2 = (1.0 \\times 10^{-6})(0.50) = 5.0 \\times 10^{-7}$. $x = \\sqrt{5.0 \\times 10^{-7}}$',
         hint2: '$\\frac{7.1 \\times 10^{-4}}{0.50} \\times 100\\%$',
         hint3: 'Less than 5% means the approximation is valid.',

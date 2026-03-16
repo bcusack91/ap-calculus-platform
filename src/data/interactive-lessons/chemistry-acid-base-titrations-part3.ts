@@ -163,7 +163,7 @@ Titrating 40.0 mL of 0.150 M $HCOOH$ ($pK_a = 3.75$) with 0.150 M $NaOH$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['40.0', '20.0', '3.75', '40.00', '20.00', '3.750'],
+        correctAnswers: ['40.0', '20.0', '3.75'],
         hint1: 'Equal concentrations → equal volumes for equivalence.',
         hint2: 'Half of the equivalence volume.',
         hint3: 'At half-equivalence: $pH = pK_a$.',
@@ -188,14 +188,14 @@ Titrating 40.0 mL of 0.150 M $HCOOH$ ($pK_a = 3.75$) with 0.150 M $NaOH$:
           },
           {
             label: 'At equivalence, the solution contains',
-            options: ['excess $HA$', 'excess $NaOH$', 'only the conjugate base $A^-$ and $Na^+$', 'pure water']
+            options: ['excess HA', 'excess NaOH', 'only the conjugate base A⁻ and Na⁺', 'pure water']
           },
           {
             label: 'A suitable indicator for this titration changes color near pH',
             options: ['4', '7', '9', '1']
           }
         ],
-        correctAnswers: ['weak acids partially ionize', 'buffer region', 'only the conjugate base $A^-$ and $Na^+$', '9'],
+        correctAnswers: ['weak acids partially ionize', 'buffer region', 'only the conjugate base A⁻ and Na⁺', '9'],
         hint1: 'Weak acids don\'t fully dissociate — less $H^+$ → higher pH.',
         hint2: 'Both $HA$ and $A^-$ are present — classic buffer.',
         hint3: 'At equivalence, all $HA \\rightarrow A^-$.',

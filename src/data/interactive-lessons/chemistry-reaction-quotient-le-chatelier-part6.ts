@@ -78,7 +78,7 @@ Current: $[\\text{N}_2\\text{O}_4] = 0.500$ M, $[\\text{NO}_2] = 0.100$ M
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.02', 'Q > K', 'left', '0.020'],
+        correctAnswers: ['0.02', 'Q > K', 'left'],
         hint1: '$Q = \\frac{[\\text{NO}_2]^2}{[\\text{N}_2\\text{O}_4]} = \\frac{(0.100)^2}{0.500}$',
         hint2: '$Q = 0.020$ vs $K = 0.00460$.',
         hint3: '$Q > K$ → too many products → shift left.',

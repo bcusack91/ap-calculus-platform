@@ -101,7 +101,7 @@ $$\\Delta G° \\xleftrightarrow{-nF} E° \\xleftrightarrow{0.0592/n} \\log K \\x
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-154.4', '13.5', '0, K', '-154.40', '13.50'],
+        correctAnswers: ['-154.4', '13.5', '0, K'],
         hint1: '$\\Delta G° = -(2)(96485)(0.80)$. Convert to kJ.',
         hint2: '$\\log K = (2)(0.40)/0.0592$',
         hint3: 'At equilibrium: E = 0 and Q = K.',

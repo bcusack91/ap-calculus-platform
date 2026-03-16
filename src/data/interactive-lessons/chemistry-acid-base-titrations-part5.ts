@@ -187,7 +187,7 @@ Alternatively, plot the **first derivative** ($\\Delta pH/\\Delta V$ vs. $V$). T
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7', '6.0', '8.0', '6.00', '8.00'],
+        correctAnswers: ['7', '6.0', '8.0'],
         hint1: '$pK_{In} = -\\log(K_{In})$.',
         hint2: 'Lower = $pK_{In} - 1$.',
         hint3: 'Upper = $pK_{In} + 1$.',

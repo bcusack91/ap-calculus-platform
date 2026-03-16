@@ -157,7 +157,7 @@ For the reaction: $NH_3 + H_2O \\rightleftharpoons NH_4^+ + OH^-$
           },
           {
             label: 'The conjugate acid of $NH_3$ is',
-            options: ['$NH_2^-$', '$NH_4^+$', '$OH^-$', '$H_3O^+$']
+            options: ['NH₂⁻', 'NH₄⁺', 'OH⁻', 'H₃O⁺']
           },
           {
             label: '$H_2O$ acts as a Brønsted-Lowry',
@@ -165,10 +165,10 @@ For the reaction: $NH_3 + H_2O \\rightleftharpoons NH_4^+ + OH^-$
           },
           {
             label: 'The conjugate base of $H_2O$ is',
-            options: ['$H_3O^+$', '$OH^-$', '$O^{2-}$', '$H_2$']
+            options: ['H₃O⁺', 'OH⁻', 'O²⁻', 'H₂']
           }
         ],
-        correctAnswers: ['base', '$NH_4^+$', 'acid', '$OH^-$'],
+        correctAnswers: ['base', 'NH₄⁺', 'acid', 'OH⁻'],
         hint1: '$NH_3$ accepts a proton from water.',
         hint2: 'When a base accepts $H^+$, it forms its conjugate acid.',
         hint3: '$H_2O$ donates a proton in this reaction, so it acts as an acid.',

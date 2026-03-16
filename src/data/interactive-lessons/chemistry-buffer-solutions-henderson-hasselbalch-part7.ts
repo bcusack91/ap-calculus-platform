@@ -97,7 +97,7 @@ This comprehensive review covers all buffer concepts: composition, mechanism, He
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.0', '5.01', '8.25', '2.00', '5.010', '8.250'],
+        correctAnswers: ['2.0', '5.01', '8.25'],
         hint1: '$\\log(r) = 4.05 - 3.75 = 0.30$; $r = 10^{0.30}$.',
         hint2: 'Moles: $HA = 0.075 - 0.020 = 0.055$; $A^- = 0.075 + 0.020 = 0.095$.',
         hint3: 'Lower limit = $pK_a - 1$.',
@@ -147,11 +147,11 @@ This comprehensive review covers all buffer concepts: composition, mechanism, He
         dropdowns: [
           {
             label: 'The Henderson-Hasselbalch equation is derived from',
-            options: ['the $K_w$ expression', 'the $K_a$ expression', 'the $K_b$ expression only', 'the ideal gas law']
+            options: ['the K_w expression', 'the Kₐ expression', 'the K_b expression only', 'the ideal gas law']
           },
           {
             label: 'A buffer with $[A^-] = 10[HA]$ has pH =',
-            options: ['$pK_a$', '$pK_a + 1$', '$pK_a - 1$', '$pK_a + 10$']
+            options: ['pKₐ', 'pKₐ + 1', 'pKₐ - 1', 'pKₐ + 10']
           },
           {
             label: 'The best buffer has a $pK_a$ that is',
@@ -162,7 +162,7 @@ This comprehensive review covers all buffer concepts: composition, mechanism, He
             options: ['pH', 'capacity', 'both pH and capacity', 'neither']
           }
         ],
-        correctAnswers: ['the $K_a$ expression', '$pK_a + 1$', 'exactly equal to the target pH', 'capacity'],
+        correctAnswers: ['the Kₐ expression', 'pKₐ + 1', 'exactly equal to the target pH', 'capacity'],
         hint1: 'Start from $K_a = [H^+][A^-]/[HA]$ and take $-\\log$.',
         hint2: '$\\log(10) = 1$.',
         hint3: 'At $pH = pK_a$, the ratio is 1:1 — maximum capacity.',

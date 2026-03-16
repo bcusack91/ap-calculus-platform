@@ -201,7 +201,7 @@ An uncatalyzed reaction has $E_a = 120$ kJ/mol and $k = 1.0 \\times 10^{-10}$ s�
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['16.1', '7', '693', '16.10'],
+        correctAnswers: ['16.1', '7', '693'],
         hint1: '(120,000 − 80,000)/(8.314 × 300) = 40,000/2494 = 16.04 ≈ 16.1.',
         hint2: 'e^16.1 ≈ 9.7 × 10⁶ ≈ 10⁷. Power of 10 = 7.',
         hint3: 't₁/₂ = 0.693/(1.0 × 10⁻³) = 693 s.',

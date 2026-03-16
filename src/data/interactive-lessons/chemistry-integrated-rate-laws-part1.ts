@@ -176,7 +176,7 @@ A zero-order reaction has $k = 5.0 \\times 10^{-3}$ M/s and $[A]_0 = 0.60$ M.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.40', '60', '120', '0.400', '0.4'],
+        correctAnswers: ['0.40', '60', '120'],
         hint1: '[A] = −kt + [A]₀ = −(5.0e-3)(40) + 0.60 = −0.20 + 0.60 = 0.40.',
         hint2: 't₁/₂ = [A]₀/(2k) = 0.60/(2 × 5.0e-3) = 0.60/0.010 = 60 s.',
         hint3: 't = [A]₀/k = 0.60/5.0e-3 = 120 s.',

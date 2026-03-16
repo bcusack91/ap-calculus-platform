@@ -140,7 +140,7 @@ At 25°C:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.1776', '0.0296', '0', '0.17760', '0.02960'],
+        correctAnswers: ['0.1776', '0.0296', '0'],
         hint1: '$E = (0.0592/1)\\log(1.0/0.0010) = 0.0592 \\times 3$',
         hint2: '$E = (0.0592/2)\\log(1.0/0.10) = 0.0296 \\times 1$',
         hint3: 'Equal concentrations → $Q = 1$ → $\\log(1) = 0$.',

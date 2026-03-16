@@ -139,7 +139,7 @@ Use: $K_f = 1.86$ °C/m, $K_b = 0.512$ °C/m, $R = 0.08206$ L·atm/(mol·K)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-0.37', '100.51', '2.45', '-0.370', '100.510', '2.450'],
+        correctAnswers: ['-0.37', '100.51', '2.45'],
         hint1: '$n = 9.00/180.16 = 0.04996$ mol. $m = 0.04996/0.250 = 0.200$ m. $\\Delta T_f = (1)(1.86)(0.200)$.',
         hint2: '$n = 14.6/58.44 = 0.2498$ mol. $m = 0.2498/0.500 = 0.500$ m. $\\Delta T_b = (2)(0.512)(0.500)$.',
         hint3: '$\\Pi = iMRT = (2)(0.0500)(0.08206)(298)$.',
@@ -185,7 +185,7 @@ This technique is used in the lab to identify unknown compounds — a classic AP
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['70.0', '1335', '3.0', '70.00', '3.00'],
+        correctAnswers: ['70.0', '1335', '3.0'],
         hint1: '$\\Delta T_f = 1.86$ °C. $m = \\Delta T_f/(iK_f) = 1.86/(1 \\times 1.86) = 1.00$ m. Then $n = m \\times \\text{kg solvent}$.',
         hint2: '$\\Delta T_f = 10.0$ °C. $m = 10.0/(1 \\times 1.86) = 5.376$ m. Moles = $m \\times 4.00$. Mass = moles $\\times 62.07$.',
         hint3: '$i = \\Pi/(MRT) = 14.6/((0.200)(0.08206)(298))$.',
@@ -210,14 +210,14 @@ This technique is used in the lab to identify unknown compounds — a classic AP
           },
           {
             label: 'The formula $\\Pi = iMRT$ uses molarity instead of molality because',
-            options: ['Molarity is more accurate', 'Osmotic pressure is measured at constant temperature', 'The derivation comes from the ideal gas law ($PV = nRT$)', 'There is no particular reason']
+            options: ['Molarity is more accurate', 'Osmotic pressure is measured at constant temperature', 'The derivation comes from the ideal gas law (PV = nRT)', 'There is no particular reason']
           },
           {
             label: 'For a dilute aqueous solution, molarity and molality are approximately equal because',
             options: ['They use the same units', 'The density of dilute solution ≈ 1.00 g/mL, so 1 L ≈ 1 kg', 'Moles cancel out', 'Temperature has no effect']
           }
         ],
-        correctAnswers: ['The freezing point change, mass of solute, and mass of solvent', 'An electrolyte that dissociates', 'The derivation comes from the ideal gas law ($PV = nRT$)', 'The density of dilute solution ≈ 1.00 g/mL, so 1 L ≈ 1 kg'],
+        correctAnswers: ['The freezing point change, mass of solute, and mass of solvent', 'An electrolyte that dissociates', 'The derivation comes from the ideal gas law (PV = nRT)', 'The density of dilute solution ≈ 1.00 g/mL, so 1 L ≈ 1 kg'],
         hint1: 'You need $\\Delta T_f$ to find molality, mass of solvent to find moles, and mass of solute to find molar mass.',
         hint2: 'A larger $\\Delta T_f$ means more particles ($i > 1$), which implies dissociation.',
         hint3: 'The osmotic pressure equation is derived from the ideal gas law, which uses volume.',

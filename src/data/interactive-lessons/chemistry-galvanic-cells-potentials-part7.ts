@@ -104,7 +104,7 @@ Use: Zn²⁺/Zn = −0.76 V, Cu²⁺/Cu = +0.34 V, Ag⁺/Ag = +0.80 V, Fe²⁺/F
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-579', '1.00', 'greater', '1.000', '1.0'],
+        correctAnswers: ['-579', '1.00', 'greater'],
         hint1: '$\\Delta G° = -(3)(96485)(2.00)$',
         hint2: '$E° = 386000/((4)(96485))$',
         hint3: 'Positive $E°$ → spontaneous → products favored.',

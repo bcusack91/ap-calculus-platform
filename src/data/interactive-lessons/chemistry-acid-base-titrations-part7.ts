@@ -101,7 +101,7 @@ Choose an indicator whose $pK_{In}$ is close to the equivalence point pH.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['30.0', '15.0', '5.00', '30.00', '15.00', '5.000', '5.0'],
+        correctAnswers: ['30.0', '15.0', '5.00'],
         hint1: 'Equal concentrations → equal volumes.',
         hint2: 'Half of the equivalence volume.',
         hint3: '$pH = pK_a$ at half-equivalence.',
@@ -155,7 +155,7 @@ Choose an indicator whose $pK_{In}$ is close to the equivalence point pH.
           },
           {
             label: 'At the equivalence point of weak acid + strong base, the species in solution is',
-            options: ['$HA$ only', '$A^-$ only (conjugate base)', 'equal $HA$ and $A^-$', 'pure water']
+            options: ['HA only', 'A⁻ only (conjugate base)', 'equal HA and A⁻', 'pure water']
           },
           {
             label: 'The buffer region of a titration curve is flattest near',
@@ -166,7 +166,7 @@ Choose an indicator whose $pK_{In}$ is close to the equivalence point pH.
             options: ['3', '5', '7', '8-10']
           }
         ],
-        correctAnswers: ['equivalence point', '$A^-$ only (conjugate base)', 'the half-equivalence point', '8-10'],
+        correctAnswers: ['equivalence point', 'A⁻ only (conjugate base)', 'the half-equivalence point', '8-10'],
         hint1: 'The sharp S-curve jump happens at equivalence.',
         hint2: 'All $HA$ has been converted to $A^-$ at this point.',
         hint3: 'Maximum buffer capacity = $[HA] = [A^-]$ = half-equivalence.',

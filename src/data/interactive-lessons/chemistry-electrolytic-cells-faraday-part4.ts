@@ -136,7 +136,7 @@ Use $F = 96{,}485$ C/mol, $M_{\\text{Ag}} = 107.87$ g/mol
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5000', '0.0518', '5.59', '0.05180', '5.590'],
+        correctAnswers: ['5000', '0.0518', '5.59'],
         hint1: '$q = It = (5.00)(1000)$',
         hint2: '$\\text{mol } e^- = 5000/96485$',
         hint3: '$m = (0.0518)(107.87)$',

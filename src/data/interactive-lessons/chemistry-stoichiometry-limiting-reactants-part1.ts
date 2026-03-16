@@ -161,7 +161,7 @@ Use the equation: $2\\text{C}_2\\text{H}_6 + 7\\text{O}_2 \\rightarrow 4\\text{C
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['17.5', '10.0', '3.0', '17.50', '10.00', '3.00'],
+        correctAnswers: ['17.5', '10.0', '3.0'],
         hint1: 'Ratio: $\\frac{7 \\text{ mol O}_2}{2 \\text{ mol C}_2\\text{H}_6}$. Multiply $5.0 \\times 7/2$.',
         hint2: 'Ratio: $\\frac{4 \\text{ mol CO}_2}{2 \\text{ mol C}_2\\text{H}_6}$. Multiply $5.0 \\times 4/2$.',
         hint3: 'Ratio: $\\frac{6 \\text{ mol H}_2\\text{O}}{7 \\text{ mol O}_2}$. Multiply $3.5 \\times 6/7$.',
