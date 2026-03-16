@@ -20,6 +20,10 @@ import LessonProgressBar from '@/components/LessonProgressBar'
 
 // Lazy-load ExitQuiz since it's only shown after lesson completion
 const ExitQuiz = dynamic(() => import('@/components/ExitQuiz'), { ssr: false })
+// Lazy-load TopicEntranceQuiz since it's only shown before lesson starts
+const TopicEntranceQuiz = dynamic(() => import('@/components/TopicEntranceQuiz'), { ssr: false })
+import { hasEntranceQuiz, loadEntranceQuiz } from '@/data/entrance-quizzes'
+import type { EntranceQuizQuestion } from '@/data/entrance-quizzes'
 import KeyboardShortcutHint from '@/components/KeyboardShortcutHint'
 import { useLessonKeyboard } from '@/hooks/useLessonKeyboard'
 import TextToSpeech from '@/components/TextToSpeech'
@@ -300,6 +304,13 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   }>({ totalAttempts: 0, hasPassed: false, lastScore: null, mustRedoUnit: false })
   const topicHasExitQuiz = hasExitQuiz(topicSlug)
 
+  // Entrance quiz state (topic-level, e.g. moles-molar-mass)
+  const topicHasEntranceQuiz = hasEntranceQuiz(topicSlug)
+  const [entranceQuizPhase, setEntranceQuizPhase] = useState<'choice' | 'quiz' | null>(null)
+  const [entranceQuizQuestions, setEntranceQuizQuestions] = useState<EntranceQuizQuestion[]>([])
+  const [entranceQuizParts, setEntranceQuizParts] = useState<{ partNumber: number; partTitle: string }[]>([])
+  const [entranceQuizLoading, setEntranceQuizLoading] = useState(false)
+
   // Lesson data from server-preloaded parts (no client-side dynamic imports needed)
   const lessonData = preloadedParts[lessonPart - 1]?.data ?? null
 
@@ -358,7 +369,18 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   // Load progress from database on mount
   useEffect(() => {
     const loadProgress = async () => {
-      if (!session?.user || progressLoaded) return
+      if (progressLoaded) return
+      // session is undefined while loading, null when unauthenticated
+      if (session === undefined) return
+
+      // Non-logged-in users: offer entrance quiz if available, otherwise proceed
+      if (!session?.user) {
+        if (topicHasEntranceQuiz && !urlPart) {
+          setEntranceQuizPhase('choice')
+        }
+        setProgressLoaded(true)
+        return
+      }
       
       try {
         queryCountRef.current++
@@ -388,6 +410,9 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           if (!urlPart) {
             setLessonPart(resolvedPart)
           }
+        } else if (topicHasEntranceQuiz && !urlPart) {
+          // No prior progress — offer entrance quiz choice
+          setEntranceQuizPhase('choice')
         }
         
         setProgressLoaded(true)
@@ -398,7 +423,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     }
     
     loadProgress()
-  }, [session, topicSlug, progressLoaded, urlPart, totalParts])
+  }, [session, topicSlug, progressLoaded, urlPart, totalParts, topicHasEntranceQuiz])
   
   // Save progress when user leaves page
   useEffect(() => {
@@ -595,6 +620,88 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     // and can click the button again to retake
   }
 
+  // Entrance quiz: load questions when user chooses to take it
+  const handleStartEntranceQuiz = useCallback(async () => {
+    setEntranceQuizLoading(true)
+    const data = await loadEntranceQuiz(topicSlug)
+    if (data) {
+      setEntranceQuizQuestions(data.questions)
+      setEntranceQuizParts(data.parts)
+      setEntranceQuizPhase('quiz')
+    } else {
+      // Fallback: no quiz found, proceed to lesson
+      setEntranceQuizPhase(null)
+    }
+    setEntranceQuizLoading(false)
+  }, [topicSlug])
+
+  // Entrance quiz completion: skip mastered parts, credit them
+  const handleEntranceQuizComplete = useCallback((masteredParts: Set<number>) => {
+    setEntranceQuizPhase(null)
+
+    if (masteredParts.size === 0) {
+      // No parts mastered — start from part 1 normally
+      return
+    }
+
+    // Unlock all mastered parts + the first unmastered part
+    const unlocked = new Set<LessonPart>([1 as LessonPart])
+    let firstUnmastered: LessonPart | null = null
+
+    for (let i = 1; i <= totalParts; i++) {
+      if (masteredParts.has(i)) {
+        unlocked.add(i as LessonPart)
+        // Also unlock the next part after each mastered part
+        if (i + 1 <= totalParts) unlocked.add((i + 1) as LessonPart)
+      } else if (!firstUnmastered) {
+        firstUnmastered = i as LessonPart
+        unlocked.add(i as LessonPart)
+      }
+    }
+
+    setUnlockedParts(unlocked)
+
+    if (masteredParts.size === totalParts) {
+      // All parts mastered! Jump to exit quiz if available
+      if (topicHasExitQuiz) {
+        const loadAndShowExitQuiz = async () => {
+          const questions = await generateExitQuiz(topicSlug, 10)
+          if (questions.length > 0) {
+            setExitQuizQuestions(questions)
+            setShowExitQuiz(true)
+          }
+        }
+        loadAndShowExitQuiz()
+      }
+      // Save full mastery
+      saveProgress(undefined, true)
+    } else {
+      // Jump to first unmastered part
+      const targetPart = firstUnmastered || (1 as LessonPart)
+      updateLessonPart(targetPart)
+      // Save partial progress for mastered parts
+      if (session?.user) {
+        const partWeight = 1.0 / Math.max(totalParts, 1)
+        // Calculate mastery based on the number of mastered parts
+        const masteryLevel = Math.min(0.999, masteredParts.size * partWeight)
+        fetch('/api/progress/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            topicId: cachedTopicId,
+            topicSlug: !cachedTopicId ? topicSlug : undefined,
+            lessonPart: targetPart,
+            completedSections: [],
+            masteryLevel,
+            timeSpent: 0,
+            isPartCompletion: true,
+          }),
+        }).catch(console.error)
+      }
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [totalParts, topicHasExitQuiz, topicSlug, session?.user, cachedTopicId, saveProgress])
+
   const isCurrentSectionComplete = completedSections.has(currentSectionIndex)
   
   // Check if current section requires completion before proceeding
@@ -623,6 +730,53 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
 
   // Lesson title for progress bar and bookmark
   const lessonTitle = preloadedParts[lessonPart - 1]?.title || topicSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+
+  // Entrance quiz: show choice or quiz before lesson starts
+  if (entranceQuizPhase === 'choice') {
+    const topicTitle = preloadedParts[0]?.title || topicSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+    return (
+      <div className="max-w-2xl mx-auto py-12 px-4">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center">
+          <div className="text-5xl mb-4">📚</div>
+          <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">{topicTitle}</h2>
+          <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+            This lesson has <strong>{totalParts} parts</strong>. How would you like to start?
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <button
+              onClick={() => setEntranceQuizPhase(null)}
+              className="px-6 py-3 rounded-xl border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            >
+              Start from the Beginning
+            </button>
+            <button
+              onClick={handleStartEntranceQuiz}
+              disabled={entranceQuizLoading}
+              className="px-6 py-3 rounded-xl bg-purple-600 text-white font-semibold hover:bg-purple-700 disabled:opacity-50 transition-colors shadow-lg"
+            >
+              {entranceQuizLoading ? 'Loading Quiz...' : 'Take Entrance Quiz'}
+            </button>
+          </div>
+          <p className="text-xs text-gray-400 dark:text-gray-500 mt-4">
+            Already know some of this material? Take the entrance quiz to skip parts you&apos;ve mastered.
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  if (entranceQuizPhase === 'quiz' && entranceQuizQuestions.length > 0) {
+    const topicTitle = preloadedParts[0]?.title || topicSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+    return (
+      <TopicEntranceQuiz
+        topicTitle={topicTitle}
+        questions={entranceQuizQuestions}
+        partTitles={entranceQuizParts}
+        onComplete={handleEntranceQuizComplete}
+        onCancel={() => setEntranceQuizPhase(null)}
+      />
+    )
+  }
 
   if (!lessonData) {
     return <div>No interactive lesson available for this part.</div>
