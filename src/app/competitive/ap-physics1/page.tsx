@@ -93,7 +93,7 @@ export default function APPhysics1CompetitivePage() {
         setQueueStatus(null)
       } else if (data.status === 'matched') {
         setInQueue(false)
-        router.push(`/competitive/match/${data.matchId}`)
+        router.push(`/competitive/match/${data.matchId}?from=ap-physics1`)
       } else {
         setQueueStatus(data)
       }
@@ -126,7 +126,7 @@ export default function APPhysics1CompetitivePage() {
       })
       const data: QueueStatus = await res.json()
       if (data.status === 'matched') {
-        router.push(`/competitive/match/${data.matchId}`)
+        router.push(`/competitive/match/${data.matchId}?from=ap-physics1`)
       } else {
         setInQueue(true)
         setQueueStatus(data)
@@ -154,7 +154,7 @@ export default function APPhysics1CompetitivePage() {
         body: JSON.stringify({ topicSlug: selectedTopic || 'ap-physics1', gameMode: selectedMode, aiDifficulty: difficulty }),
       })
       const data = await res.json()
-      if (data.matchId) router.push(`/competitive/match/${data.matchId}`)
+      if (data.matchId) router.push(`/competitive/match/${data.matchId}?from=ap-physics1`)
     } catch (err) {
       console.error('Error starting AI practice:', err)
     }

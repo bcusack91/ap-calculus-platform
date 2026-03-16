@@ -59,7 +59,10 @@ export async function POST(
       return NextResponse.json({ error: 'Not a team battle match' }, { status: 400 })
     }
 
-    const userId = session.user.id
+    // Support playerId override for AI bot submissions (only allowed in AI practice matches)
+    const userId = (body.playerId && (gameData as unknown as Record<string, unknown>).isPracticeMatch)
+      ? body.playerId
+      : session.user.id
     const isTeam1 = gameData.team1.players.includes(userId)
     const isTeam2 = gameData.team2.players.includes(userId)
 

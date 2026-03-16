@@ -110,7 +110,7 @@ export default function APChemCompetitivePage() {
         setQueueStatus(null)
       } else if (data.status === 'matched') {
         setInQueue(false)
-        router.push(`/competitive/match/${data.matchId}`)
+        router.push(`/competitive/match/${data.matchId}?from=ap-chemistry`)
       } else {
         setQueueStatus(data)
       }
@@ -148,7 +148,7 @@ export default function APChemCompetitivePage() {
       })
       const data: QueueStatus = await res.json()
       if (data.status === 'matched') {
-        router.push(`/competitive/match/${data.matchId}`)
+        router.push(`/competitive/match/${data.matchId}?from=ap-chemistry`)
       } else {
         setInQueue(true)
         setQueueStatus(data)
@@ -177,7 +177,7 @@ export default function APChemCompetitivePage() {
       })
       const data = await res.json()
       if (data.matchId) {
-        router.push(`/competitive/match/${data.matchId}`)
+        router.push(`/competitive/match/${data.matchId}?from=ap-chemistry`)
       }
     } catch (err) {
       console.error('Error starting AI practice:', err)

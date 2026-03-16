@@ -56,7 +56,7 @@ export default function APPhysics2CompetitivePage() {
       const res = await fetch('/api/competitive/queue')
       const data: QueueStatus = await res.json()
       if (data.status === 'not_in_queue') { setInQueue(false); setQueueStatus(null) }
-      else if (data.status === 'matched') { setInQueue(false); router.push(`/competitive/match/${data.matchId}`) }
+      else if (data.status === 'matched') { setInQueue(false); router.push(`/competitive/match/${data.matchId}?from=ap-physics2`) }
       else { setQueueStatus(data) }
     } catch (err) { console.error('Error checking queue:', err) }
   }, [router])
@@ -75,7 +75,7 @@ export default function APPhysics2CompetitivePage() {
     try {
       const res = await fetch('/api/competitive/queue', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ topicSlug: selectedTopic || 'ap-physics2', gameMode: selectedMode }) })
       const data: QueueStatus = await res.json()
-      if (data.status === 'matched') router.push(`/competitive/match/${data.matchId}`)
+      if (data.status === 'matched') router.push(`/competitive/match/${data.matchId}?from=ap-physics2`)
       else { setInQueue(true); setQueueStatus(data) }
     } catch (err) { console.error('Error joining queue:', err) }
   }
@@ -86,7 +86,7 @@ export default function APPhysics2CompetitivePage() {
     try {
       const res = await fetch('/api/competitive/practice-ai', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ topicSlug: selectedTopic || 'ap-physics2', gameMode: selectedMode, aiDifficulty: difficulty }) })
       const data = await res.json()
-      if (data.matchId) router.push(`/competitive/match/${data.matchId}`)
+      if (data.matchId) router.push(`/competitive/match/${data.matchId}?from=ap-physics2`)
     } catch (err) { console.error('Error starting AI practice:', err) }
   }
 

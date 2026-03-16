@@ -79,7 +79,8 @@ export async function POST(req: NextRequest) {
     if (opponent) {
       // Found a match — generate questions, create match, remove opponent from queue
       const completedTopicSlugs = user.topicProgress.map((tp) => tp.topic.slug)
-      const questions = generateMatchQuestions(10, topicSlug, completedTopicSlugs)
+      const questionCount = gameMode === 'ACCURACY_CHALLENGE' ? 20 : 10
+      const questions = generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs)
 
       const [competitiveMatch] = await prisma.$transaction([
         prisma.competitiveMatch.create({
@@ -242,7 +243,8 @@ export async function GET() {
 
     if (opponent) {
       const completedTopicSlugs = user.topicProgress.map((tp) => tp.topic.slug)
-      const questions = generateMatchQuestions(10, entry.topicSlug, completedTopicSlugs)
+      const questionCount = (entry.gameMode as string) === 'ACCURACY_CHALLENGE' ? 20 : 10
+      const questions = generateMatchQuestions(questionCount, entry.topicSlug, completedTopicSlugs)
 
       const [competitiveMatch] = await prisma.$transaction([
         prisma.competitiveMatch.create({

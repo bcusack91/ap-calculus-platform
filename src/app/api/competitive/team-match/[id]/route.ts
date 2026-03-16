@@ -95,6 +95,15 @@ export async function GET(
         player2MMRBefore: match.player2MMRBefore,
         player1MMRAfter: match.player1MMRAfter,
         player2MMRAfter: match.player2MMRAfter,
+        // Expose AI practice data so client can simulate bot answers
+        ...((gameData as unknown as Record<string, unknown>).isPracticeMatch ? {
+          isPracticeMatch: true,
+          aiDifficulty: (gameData as unknown as Record<string, unknown>).aiDifficulty || 'medium',
+          questionIndices: {
+            ...gameData.team1.questionIndices,
+            ...gameData.team2.questionIndices,
+          },
+        } : {}),
       },
       currentUserId: session.user.id,
     })

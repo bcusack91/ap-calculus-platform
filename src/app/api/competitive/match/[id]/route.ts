@@ -76,6 +76,7 @@ export async function GET(
         player1Score: match.player1Score,
         player2Score: match.player2Score,
         gameData: gameData, // Include full gameData for AI difficulty
+        gameMode: match.gameMode,
         status: match.status,
         winnerId: match.winnerId,
         startedAt: match.startedAt?.toISOString(),

@@ -149,7 +149,11 @@ export default function CompetitivePage() {
       const data = await res.json()
       
       if (data.matchId) {
-        router.push(`/competitive/match/${data.matchId}`)
+        if (data.isTeamMatch) {
+          router.push(`/competitive/team-match/${data.matchId}`)
+        } else {
+          router.push(`/competitive/match/${data.matchId}`)
+        }
       }
     } catch (error) {
       console.error('Error starting AI practice:', error)

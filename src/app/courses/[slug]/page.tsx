@@ -20,6 +20,9 @@ interface CoursePageProps {
   params: Promise<{
     slug: string
   }>
+  searchParams: Promise<{
+    exitQuiz?: string
+  }>
 }
 
 // Generate metadata with canonical URL
@@ -59,8 +62,10 @@ export async function generateMetadata(props: CoursePageProps): Promise<Metadata
   }
 }
 
-export default async function CoursePage({ params }: CoursePageProps) {
+export default async function CoursePage({ params, searchParams: searchParamsPromise }: CoursePageProps) {
   const { slug } = await params
+  const searchParams = await searchParamsPromise
+  const isExitQuizMode = searchParams?.exitQuiz === 'true'
   
   const course = await prisma.course.findUnique({
     where: { slug },
@@ -276,6 +281,21 @@ export default async function CoursePage({ params }: CoursePageProps) {
         {/* Ad placement after course overview */}
         <InArticleAd />
 
+        {/* Exit Quiz Mode Banner */}
+        {isExitQuizMode && (
+          <div className="rounded-2xl border-2 border-amber-300 dark:border-amber-700 bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 p-6 mb-8 shadow-sm">
+            <div className="flex items-center gap-3">
+              <span className="text-3xl">📝</span>
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white">Exit Quiz Mode</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Select a topic below to take an exit quiz. Score well and you can skip sections you already know!
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Categories Grid */}
         {allCategories.length > 0 ? (
           <div className="space-y-12">
@@ -324,7 +344,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
                         {category.topics.map((topic) => (
                           <Link
                             key={topic.id}
-                            href={`/topics/${topic.slug}`}
+                            href={isExitQuizMode ? `/topics/${topic.slug}/interactive?exitQuiz=true` : `/topics/${topic.slug}`}
                             className="group block p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-md transition-all"
                           >
                             <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors mb-2">
@@ -392,7 +412,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
                     {category.topics.map((topic) => (
                       <Link
                         key={topic.id}
-                        href={`/topics/${topic.slug}`}
+                        href={isExitQuizMode ? `/topics/${topic.slug}/interactive?exitQuiz=true` : `/topics/${topic.slug}`}
                         className="group block p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-md transition-all"
                       >
                         <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors mb-2">

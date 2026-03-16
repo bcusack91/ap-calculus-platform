@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, use, useCallback, useRef } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
 
@@ -50,6 +50,10 @@ interface TeamMatchState {
 export default function TeamMatchPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = use(params)
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const lobbyPath = searchParams.get('from')
+    ? `/competitive/${searchParams.get('from')}`
+    : '/competitive'
   const [matchState, setMatchState] = useState<TeamMatchState | null>(null)
   const [currentUserId, setCurrentUserId] = useState<string>('')
   const [loading, setLoading] = useState(true)
@@ -97,6 +101,76 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
       pollingRef.current = null
     }
   }, [matchState?.status])
+
+  // --- AI Bot Simulation for Practice Team Matches ---
+  const matchStateRef = useRef(matchState)
+  useEffect(() => {
+    matchStateRef.current = matchState
+  }, [matchState])
+
+  useEffect(() => {
+    const ms = matchStateRef.current
+    if (!ms || ms.status !== 'IN_PROGRESS') return
+    if (!(ms as unknown as Record<string, unknown>).isPracticeMatch) return
+
+    const questionIndices = (ms as unknown as Record<string, Record<string, number>>).questionIndices || {}
+    const aiDifficultyVal = ((ms as unknown as Record<string, unknown>).aiDifficulty || 'medium') as string
+
+    // Detect AI bots by name
+    const allPlayers = [...ms.team1.players, ...ms.team2.players]
+    const aiPlayers = allPlayers.filter(
+      p => p.name === 'AI Teammate' || p.name === 'AI Opponent 1' || p.name === 'AI Opponent 2' || p.name === 'AI Practice Bot'
+    )
+    if (aiPlayers.length === 0) return
+
+    const difficultySettings: Record<string, { min: number; max: number; accuracy: number }> = {
+      easy:   { min: 4000, max: 6000, accuracy: 0.70 },
+      medium: { min: 3000, max: 5000, accuracy: 0.83 },
+      hard:   { min: 1500, max: 3000, accuracy: 0.95 },
+    }
+    const settings = difficultySettings[aiDifficultyVal] || difficultySettings['medium']
+
+    const timeouts: ReturnType<typeof setTimeout>[] = []
+
+    for (const aiPlayer of aiPlayers) {
+      const aiQIndex = questionIndices[aiPlayer.id] ?? 0
+      const delay = settings.min + Math.random() * (settings.max - settings.min)
+
+      const timeoutId = setTimeout(async () => {
+        try {
+          const questions = ms.questions
+          const currentQ = questions[aiQIndex]
+          if (!currentQ) return
+
+          const willAnswerCorrectly = Math.random() < settings.accuracy
+          let answerIndex: number
+          if (willAnswerCorrectly && currentQ.answerIndex !== undefined) {
+            answerIndex = currentQ.answerIndex
+          } else {
+            const totalOptions = currentQ.options?.length || 4
+            do {
+              answerIndex = Math.floor(Math.random() * totalOptions)
+            } while (answerIndex === currentQ.answerIndex && totalOptions > 1)
+          }
+
+          await fetch(`/api/competitive/team-match/${resolvedParams.id}/answer`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              questionIndex: aiQIndex,
+              answerIndex,
+              playerId: aiPlayer.id,
+            }),
+          })
+        } catch (err) {
+          console.error('AI team bot error:', err)
+        }
+      }, delay)
+      timeouts.push(timeoutId)
+    }
+
+    return () => timeouts.forEach(t => clearTimeout(t))
+  }, [matchState?.team1?.score, matchState?.team2?.score, matchState?.status, resolvedParams.id])
 
   async function submitAnswer(answerIdx: number) {
     if (!matchState || submitting) return
@@ -149,7 +223,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
         <div className="bg-white dark:bg-gray-800 rounded-xl p-8 text-center">
           <p className="text-red-500 text-lg mb-4">{error || 'Match not found'}</p>
           <button
-            onClick={() => router.push('/competitive')}
+            onClick={() => router.push(lobbyPath)}
             className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
           >
             Back to Lobby
@@ -210,7 +284,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
 
           <div className="text-center">
             <button
-              onClick={() => router.push('/competitive')}
+              onClick={() => router.push(lobbyPath)}
               className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg text-lg hover:from-purple-700 hover:to-blue-700"
             >
               Back to Lobby

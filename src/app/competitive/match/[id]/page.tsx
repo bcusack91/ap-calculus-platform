@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, use, useCallback, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import AvatarDisplay from '@/components/AvatarDisplay';
 import { AvatarData } from '@/types/avatar';
@@ -70,6 +70,7 @@ interface MatchState {
   winnerId: string | null;
   startedAt: string;
   completedAt: string | null;
+  gameMode?: string;
   player1MMRBefore?: number;
   player2MMRBefore?: number;
   player1MMRAfter?: number;
@@ -100,6 +101,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const resolvedParams = use(params);
   const matchId = resolvedParams.id;
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const lobbyPath = searchParams.get('from')
+    ? `/competitive/${searchParams.get('from')}`
+    : '/competitive';
   
   const [matchState, setMatchState] = useState<MatchState | null>(null);
   const [loading, setLoading] = useState(true);
@@ -113,6 +118,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const [player2Emotion, setPlayer2Emotion] = useState<'neutral' | 'happy' | 'sad'>('neutral');
   const [showReview, setShowReview] = useState(false);
   const matchStateRef = useRef<MatchState | null>(null);
+  const [accuracyTimer, setAccuracyTimer] = useState<number | null>(null);
 
   // Pre-load KaTeX lazily on mount
   useEffect(() => { preloadKatex() }, []);
@@ -120,6 +126,20 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   useEffect(() => {
     matchStateRef.current = matchState;
   }, [matchState]);
+
+  // Accuracy mode 5-minute countdown timer
+  useEffect(() => {
+    if (!matchState || matchState.gameMode !== 'ACCURACY_CHALLENGE' || matchState.status !== 'IN_PROGRESS') return;
+    const ACCURACY_TIME_LIMIT = 5 * 60; // 5 minutes in seconds
+    const update = () => {
+      const elapsed = Math.floor((Date.now() - new Date(matchState.startedAt).getTime()) / 1000);
+      const remaining = Math.max(0, ACCURACY_TIME_LIMIT - elapsed);
+      setAccuracyTimer(remaining);
+    };
+    update();
+    const interval = setInterval(update, 1000);
+    return () => clearInterval(interval);
+  }, [matchState?.startedAt, matchState?.gameMode, matchState?.status]);
 
   // Render math in prompt (for both unit circle and multiple-choice)
   // Handles both $...$ delimited LaTeX and raw LaTeX with backslashes
@@ -445,7 +465,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         <div className="text-center">
           <p className="text-red-600 dark:text-red-400">Match not found</p>
           <button
-            onClick={() => router.push('/competitive')}
+            onClick={() => router.push(lobbyPath)}
             className="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700"
           >
             Back to Competitive
@@ -528,6 +548,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 <p className="text-4xl font-bold text-purple-600 dark:text-purple-400">
                   {matchState.player1Score}
                 </p>
+                {matchState.gameMode === 'ACCURACY_CHALLENGE' && (
+                  <p className="text-sm text-gray-500 mt-1">
+                    {matchState.player1Score}/{matchState.gameData?.player1Answers?.length || 0} correct &middot; {matchState.gameData?.player1Answers?.length ? Math.round((matchState.player1Score / matchState.gameData.player1Answers.length) * 100) : 0}% accuracy
+                  </p>
+                )}
               </div>
 
               <div className={`p-6 rounded-xl ${
@@ -543,6 +568,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 <p className="text-4xl font-bold text-purple-600 dark:text-purple-400">
                   {matchState.player2Score}
                 </p>
+                {matchState.gameMode === 'ACCURACY_CHALLENGE' && (
+                  <p className="text-sm text-gray-500 mt-1">
+                    {matchState.player2Score}/{matchState.gameData?.player2Answers?.length || 0} correct &middot; {matchState.gameData?.player2Answers?.length ? Math.round((matchState.player2Score / matchState.gameData.player2Answers.length) * 100) : 0}% accuracy
+                  </p>
+                )}
               </div>
             </div>
 
@@ -566,13 +596,13 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 </button>
               )}
               <button
-                onClick={() => router.push('/competitive')}
+                onClick={() => router.push(lobbyPath)}
                 className="px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 font-semibold"
               >
                 Back to Competitive
               </button>
               <button
-                onClick={() => router.push('/competitive')}
+                onClick={() => router.push(lobbyPath)}
                 className="px-8 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 font-semibold"
               >
                 Find New Match
@@ -749,7 +779,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
                   {matchState.player1Score}
                 </p>
-                <p className="text-xs text-gray-500">points</p>
+                <p className="text-xs text-gray-500">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? 'correct' : 'points'}</p>
               </div>
             </div>
             
@@ -759,16 +789,55 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               <div className="w-8 h-64 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden relative">
                 <div 
                   className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-purple-600 to-purple-400 transition-all duration-500 rounded-full"
-                  style={{ height: `${(matchState.player1Score / 10) * 100}%` }}
+                  style={{ height: `${matchState.gameMode === 'ACCURACY_CHALLENGE' ? ((matchState.gameData?.player1Answers?.length || 0) / 20) * 100 : (matchState.player1Score / 10) * 100}%` }}
                 />
               </div>
-              <p className="text-xs text-gray-500 mt-2">{matchState.player1Score}/10</p>
+              <p className="text-xs text-gray-500 mt-2">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? `${matchState.gameData?.player1Answers?.length || 0}/20` : `${matchState.player1Score}/10`}</p>
             </div>
           </div>
 
           {/* Center - Game Area */}
           <div className="space-y-6">
+        {/* Accuracy Mode Header */}
+        {matchState.gameMode === 'ACCURACY_CHALLENGE' && matchState.status === 'IN_PROGRESS' && (
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <span className="text-lg">🎯</span>
+              <div>
+                <p className="font-bold text-gray-900 dark:text-white text-sm">Accuracy Challenge</p>
+                <p className="text-xs text-gray-500">20 questions &middot; highest accuracy wins</p>
+              </div>
+            </div>
+            {accuracyTimer !== null && (
+              <div className={`text-2xl font-mono font-bold ${accuracyTimer <= 60 ? 'text-red-600 animate-pulse' : 'text-gray-900 dark:text-white'}`}>
+                {Math.floor(accuracyTimer / 60)}:{String(accuracyTimer % 60).padStart(2, '0')}
+              </div>
+            )}
+            <div className="text-right">
+              <p className="text-xs text-gray-500">Your accuracy</p>
+              <p className="font-bold text-purple-600">
+                {(() => {
+                  const answers = isPlayer1 ? matchState.gameData?.player1Answers : matchState.gameData?.player2Answers;
+                  const total = answers?.length || 0;
+                  const correct = answers?.filter(a => a.correct).length || 0;
+                  return total > 0 ? `${Math.round((correct / total) * 100)}%` : '--';
+                })()}
+              </p>
+            </div>
+          </div>
+        )}
         {/* Question prompt */}
+        {!currentQuestion && matchState.gameMode === 'ACCURACY_CHALLENGE' ? (
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-12 text-center">
+            <div className="text-5xl mb-4">✅</div>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">All 20 Questions Answered!</h2>
+            <p className="text-gray-500">Waiting for your opponent to finish...</p>
+            <div className="mt-4 animate-pulse text-purple-500">
+              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600" />
+            </div>
+          </div>
+        ) : currentQuestion && (
+        <>
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-6 text-center" key={`q-${playerQuestionIndex}-${currentQuestion.prompt || currentQuestion.question}`}>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4" key={currentQuestion.prompt || currentQuestion.question}>
             {renderPrompt(currentQuestion.prompt || currentQuestion.question || '')}
@@ -873,6 +942,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             </div>
           </div>
         )}
+      </>
+      )}
       </div>
 
           {/* Right Panel - Player 2 */}
@@ -896,7 +967,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
                   {matchState.player2Score}
                 </p>
-                <p className="text-xs text-gray-500">points</p>
+                <p className="text-xs text-gray-500">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? 'correct' : 'points'}</p>
               </div>
             </div>
             
@@ -906,10 +977,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               <div className="w-8 h-64 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden relative">
                 <div 
                   className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-600 to-blue-400 transition-all duration-500 rounded-full"
-                  style={{ height: `${(matchState.player2Score / 10) * 100}%` }}
+                  style={{ height: `${matchState.gameMode === 'ACCURACY_CHALLENGE' ? ((matchState.gameData?.player2Answers?.length || 0) / 20) * 100 : (matchState.player2Score / 10) * 100}%` }}
                 />
               </div>
-              <p className="text-xs text-gray-500 mt-2">{matchState.player2Score}/10</p>
+              <p className="text-xs text-gray-500 mt-2">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? `${matchState.gameData?.player2Answers?.length || 0}/20` : `${matchState.player2Score}/10`}</p>
             </div>
           </div>
         </div>

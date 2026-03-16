@@ -39,60 +39,127 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Competitive mode not unlocked' }, { status: 403 })
     }
 
-    // Get or create AI opponent user
-    let aiOpponent = await prisma.user.findUnique({
-      where: { email: 'ai-opponent@studyai.com' },
-      include: { competitiveProfile: true }
-    })
-
-    if (!aiOpponent) {
-      // Create AI opponent user
-      aiOpponent = await prisma.user.create({
-        data: {
-          email: 'ai-opponent@studyai.com',
-          name: 'AI Practice Bot',
-          role: 'FREE',
-          competitiveProfile: {
-            create: {
-              competitiveModeUnlocked: true,
-              unitCircleMMR: 1000,
-              overallMMR: 1000,
-            }
-          }
-        },
+    // Helper to get or create an AI bot user
+    async function getOrCreateAIBot(email: string, name: string) {
+      let bot = await prisma.user.findUnique({
+        where: { email },
         include: { competitiveProfile: true }
       })
+      if (!bot) {
+        bot = await prisma.user.create({
+          data: {
+            email,
+            name,
+            role: 'FREE',
+            competitiveProfile: {
+              create: {
+                competitiveModeUnlocked: true,
+                unitCircleMMR: 1000,
+                overallMMR: 1000,
+              }
+            }
+          },
+          include: { competitiveProfile: true }
+        })
+      }
+      return bot
     }
 
     // Calculate AI MMR based on difficulty
-    let aiMMR = user.competitiveProfile.unitCircleMMR || 1000
+    const playerMMR = user.competitiveProfile.unitCircleMMR || 1000
+    let aiMMR = playerMMR
     switch (aiDifficulty) {
       case 'easy':
-        aiMMR = Math.max(800, aiMMR - 200) // 200 MMR below player
+        aiMMR = Math.max(800, playerMMR - 200)
         break
       case 'medium':
-        aiMMR = aiMMR // Same MMR as player
+        aiMMR = playerMMR
         break
       case 'hard':
-        aiMMR = aiMMR + 200 // 200 MMR above player
+        aiMMR = playerMMR + 200
         break
     }
 
     // Generate questions for the match based on selected topic
-    // Pass completedTopics so question banks can filter to only completed sections
     const completedTopicSlugs = user.topicProgress.map(tp => tp.topic.slug)
-    const questions = generateMatchQuestions(10, topicSlug, completedTopicSlugs)
+
+    // ---- TEAM BATTLE: create 3 AI bots + team match ----
+    if (gameMode === 'TEAM_BATTLE') {
+      const [aiTeammate, aiOpp1, aiOpp2] = await Promise.all([
+        getOrCreateAIBot('ai-teammate@studyai.com', 'AI Teammate'),
+        getOrCreateAIBot('ai-opponent@studyai.com', 'AI Opponent 1'),
+        getOrCreateAIBot('ai-opponent-2@studyai.com', 'AI Opponent 2'),
+      ])
+
+      const questions = generateMatchQuestions(15, topicSlug, completedTopicSlugs)
+
+      const team1Players = [user.id, aiTeammate.id]
+      const team2Players = [aiOpp1.id, aiOpp2.id]
+
+      const competitiveMatch = await prisma.competitiveMatch.create({
+        data: {
+          player1Id: user.id,
+          player2Id: aiOpp1.id,
+          gameMode: 'TEAM_BATTLE',
+          topicSlug: topicSlug || 'the-unit-circle',
+          player1MMRBefore: playerMMR,
+          player2MMRBefore: aiMMR,
+          player1MMRAfter: playerMMR,
+          player2MMRAfter: aiMMR,
+          player1Score: 0,
+          player2Score: 0,
+          status: 'IN_PROGRESS',
+          startedAt: new Date(),
+          gameData: {
+            isTeamBattle: true,
+            questions,
+            team1: {
+              players: team1Players,
+              score: 0,
+              questionIndices: { [user.id]: 0, [aiTeammate.id]: 0 },
+              answers: { [user.id]: [], [aiTeammate.id]: [] },
+            },
+            team2: {
+              players: team2Players,
+              score: 0,
+              questionIndices: { [aiOpp1.id]: 0, [aiOpp2.id]: 0 },
+              answers: { [aiOpp1.id]: [], [aiOpp2.id]: [] },
+            },
+            playerMMRs: {
+              [user.id]: playerMMR,
+              [aiTeammate.id]: aiMMR,
+              [aiOpp1.id]: aiMMR,
+              [aiOpp2.id]: aiMMR,
+            },
+            player1QuestionIndex: 0,
+            player2QuestionIndex: 0,
+            aiDifficulty,
+            isPracticeMatch: true,
+          } as unknown as Prisma.InputJsonValue,
+        }
+      })
+
+      return NextResponse.json({
+        status: 'matched',
+        matchId: competitiveMatch.id,
+        isTeamMatch: true,
+      })
+    }
+
+    // ---- Standard 1v1 match ----
+    const aiOpponent = await getOrCreateAIBot('ai-opponent@studyai.com', 'AI Practice Bot')
+    const questionCount = gameMode === 'ACCURACY_CHALLENGE' ? 20 : 10
+    const questions = generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs)
     
-    // Create practice match in database
     const competitiveMatch = await prisma.competitiveMatch.create({
       data: {
         player1Id: user.id,
         player2Id: aiOpponent.id,
         gameMode: gameMode || 'SPEED_RACE',
         topicSlug: topicSlug || 'the-unit-circle',
-        player1MMRBefore: user.competitiveProfile.unitCircleMMR || 1000,
+        player1MMRBefore: playerMMR,
         player2MMRBefore: aiMMR,
-        player1MMRAfter: user.competitiveProfile.unitCircleMMR || 1000,
+        player1MMRAfter: playerMMR,
         player2MMRAfter: aiMMR,
         player1Score: 0,
         player2Score: 0,
@@ -102,8 +169,8 @@ export async function POST(req: NextRequest) {
           questions,
           player1QuestionIndex: 0,
           player2QuestionIndex: 0,
-          aiDifficulty, // Store AI difficulty for answer simulation
-          isPracticeMatch: true, // Flag to indicate this is practice
+          aiDifficulty,
+          isPracticeMatch: true,
         } as unknown as Prisma.InputJsonValue,
       }
     })
@@ -111,6 +178,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({
       status: 'matched',
       matchId: competitiveMatch.id,
+      isTeamMatch: false,
       opponent: {
         id: aiOpponent.id,
         name: 'AI Practice Bot',
