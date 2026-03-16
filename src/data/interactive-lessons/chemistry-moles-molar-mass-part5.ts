@@ -135,7 +135,7 @@ Use: H = 1.008, C = 12.01, N = 14.01, O = 16.00, P = 30.97
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.5', '141.94', '2', '2.50', '141.940'],
+        correctAnswers: ['2.5', '141.94', '2'],
         hint1: 'Assume 100 g: 43.6 g P and 56.4 g O. Convert to moles: P: $43.6/30.97$, O: $56.4/16.00$. Divide O moles by P moles.',
         hint2: '$M_{\\text{P}_2\\text{O}_5} = 2(30.97) + 5(16.00)$.',
         hint3: '$n = M_{\\text{mol}}/M_{\\text{emp}} = 283.88/141.94$.',

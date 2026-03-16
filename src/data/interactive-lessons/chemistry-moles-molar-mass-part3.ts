@@ -142,7 +142,7 @@ Use: H = 1.008, C = 12.01, O = 16.00, Na = 22.99, Cl = 35.45, Ca = 40.08
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.250', '23.38', '6.84', '0.2500', '0.25', '23.380', '6.840'],
+        correctAnswers: ['0.250', '23.38', '6.84'],
         hint1: '$n = m/M = 25.0/100.09$.',
         hint2: '$m = n \\times M = 0.400 \\times 58.44$.',
         hint3: 'First find moles: $5.00/44.01$. Then multiply by $6.022 \\times 10^{23}$.',

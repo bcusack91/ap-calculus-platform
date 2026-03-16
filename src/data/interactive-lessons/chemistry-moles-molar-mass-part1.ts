@@ -155,7 +155,7 @@ If you have 1 mol of H₂O, you have:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.52', '3.00', '2.409', '4.520', '3.000', '3.0', '2.4090'],
+        correctAnswers: ['4.52', '3.00', '2.409'],
         hint1: 'Multiply moles by Avogadro\'s number: $0.750 \\times 6.022 \\times 10^{23} = 4.517 \\times 10^{23}$.',
         hint2: 'Divide particles by Avogadro\'s number: $1.806 \\times 10^{24} \\div 6.022 \\times 10^{23}$.',
         hint3: 'Each O₂ molecule has 2 oxygen atoms, so multiply moles of O₂ by $N_A$ and then by 2.',

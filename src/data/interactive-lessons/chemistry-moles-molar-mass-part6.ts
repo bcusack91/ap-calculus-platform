@@ -127,7 +127,7 @@ Use: H = 1.008, C = 12.01, N = 14.01, O = 16.00, Na = 22.99, Cl = 35.45, Fe = 55
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['55.85', '2.57', '2.409', '55.850', '2.570', '2.4090'],
+        correctAnswers: ['55.85', '2.57', '2.409'],
         hint1: '12.01 g of C = 1.000 mol of C. You need 1.000 mol of Fe.',
         hint2: 'Moles of NaCl = $25.0/58.44$. Each formula unit has 1 Cl⁻, so multiply moles by $N_A$.',
         hint3: 'Moles of H₂O = $36.04/18.02 = 2.00$ mol. Each molecule has 2 H atoms.',

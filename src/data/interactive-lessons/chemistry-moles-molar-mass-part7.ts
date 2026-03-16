@@ -142,7 +142,7 @@ Use: Cu = 63.55, S = 32.07, O = 16.00, H = 1.008
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['249.70', '36.1', '1.001', '249.700', '249.7', '36.10', '1.0010'],
+        correctAnswers: ['249.70', '36.1', '1.001'],
         hint1: '$M = 63.55 + 32.07 + 4(16.00) + 5[2(1.008) + 16.00]$.',
         hint2: '$\\%\\text{H}_2\\text{O} = \\frac{5 \\times 18.02}{M_{\\text{total}}} \\times 100$.',
         hint3: 'Find moles of the hydrate first ($50.0/M$), then multiply by 5 since there are 5 H₂O per formula unit.',
