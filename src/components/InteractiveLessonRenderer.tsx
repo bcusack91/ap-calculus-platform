@@ -310,6 +310,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   const [entranceQuizQuestions, setEntranceQuizQuestions] = useState<EntranceQuizQuestion[]>([])
   const [entranceQuizParts, setEntranceQuizParts] = useState<{ partNumber: number; partTitle: string }[]>([])
   const [entranceQuizLoading, setEntranceQuizLoading] = useState(false)
+  const [entranceQuizMasteredParts, setEntranceQuizMasteredParts] = useState<Set<number>>(new Set())
 
   // Lesson data from server-preloaded parts (no client-side dynamic imports needed)
   const lessonData = preloadedParts[lessonPart - 1]?.data ?? null
@@ -520,13 +521,29 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         // Unit circle: Part 2 → Practice Mode
         setShowPracticeMode(true)
       } else if (lessonPart < totalParts) {
-        // Generic next part flow for multi-part lessons
-        const nextPart = (lessonPart + 1) as LessonPart
-        setUnlockedParts(prev => new Set([...prev, nextPart]))
-        updateLessonPart(nextPart)
-        setCurrentSectionIndex(0)
-        setCompletedSections(new Set())
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        // Find the next unmastered part (skip entrance-quiz-mastered parts)
+        let nextPart: LessonPart | null = null
+        for (let i = lessonPart + 1; i <= totalParts; i++) {
+          if (!entranceQuizMasteredParts.has(i)) {
+            nextPart = i as LessonPart
+            break
+          }
+        }
+
+        if (nextPart) {
+          setUnlockedParts(prev => new Set([...prev, nextPart!]))
+          updateLessonPart(nextPart)
+          setCurrentSectionIndex(0)
+          setCompletedSections(new Set())
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        } else if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
+          // No more unmastered parts — show exit quiz
+          const questions = await generateExitQuiz(topicSlug, 10)
+          setExitQuizQuestions(questions)
+          setShowExitQuiz(true)
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+          return
+        }
       } else if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
         // Show exit quiz regardless of completion destination
         const questions = await generateExitQuiz(topicSlug, 10)
@@ -638,6 +655,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   // Entrance quiz completion: skip mastered parts, credit them
   const handleEntranceQuizComplete = useCallback((masteredParts: Set<number>) => {
     setEntranceQuizPhase(null)
+    setEntranceQuizMasteredParts(masteredParts)
 
     if (masteredParts.size === 0) {
       // No parts mastered — start from part 1 normally
@@ -863,8 +881,8 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       />
 
       <div className="space-y-6">
-      {/* Part Navigation Menu - Show for multi-part lessons */}
-      {preloadedParts.length > 1 && (
+      {/* Part Navigation Menu - Show for multi-part lessons (hide if only 1 unmastered part remains) */}
+      {preloadedParts.length > 1 && (preloadedParts.length - entranceQuizMasteredParts.size) > 1 && (
         <div className="bg-gradient-to-r from-indigo-100/80 via-purple-100/80 to-pink-100/80 dark:from-indigo-900/40 dark:via-purple-900/40 dark:to-pink-900/40 backdrop-blur-sm rounded-2xl p-5 border-2 border-indigo-200/70 dark:border-indigo-700/50 shadow-lg">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-2">
@@ -873,6 +891,8 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
                 {preloadedParts.map((partConfig, index) => {
                   const partNumber = (index + 1) as LessonPart
                   const isUnlocked = unlockedParts.has(partNumber)
+                  // Hide parts mastered via entrance quiz
+                  if (entranceQuizMasteredParts.has(partNumber)) return null
 
                   return (
                     <button
@@ -981,15 +1001,21 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
             ? 'Next →'
             : topicSlug === 'the-unit-circle' && lessonPart === 2
             ? '🎯 Practice Independently →'
-            : lessonPart < totalParts
-            ? lessonPart === 1 && topicSlug === 'the-unit-circle'
-              ? 'On to Part 2 →'
-              : 'Continue to Next Part →'
-            : topicHasExitQuiz && !exitQuizStatus.hasPassed
-            ? '📝 Take Exit Quiz →'
-            : entersCompetitiveModeOnComplete
-            ? '🎮 Enter Competitive Mode →'
-            : '✅ Lesson Complete!'}
+            : (() => {
+                // Check if there are remaining unmastered parts after this one
+                let hasMoreUnmastered = false
+                for (let i = lessonPart + 1; i <= totalParts; i++) {
+                  if (!entranceQuizMasteredParts.has(i)) { hasMoreUnmastered = true; break }
+                }
+                if (hasMoreUnmastered) {
+                  return lessonPart === 1 && topicSlug === 'the-unit-circle'
+                    ? 'On to Part 2 →'
+                    : 'Continue to Next Part →'
+                }
+                if (topicHasExitQuiz && !exitQuizStatus.hasPassed) return '📝 Take Exit Quiz →'
+                if (entersCompetitiveModeOnComplete) return '🎮 Enter Competitive Mode →'
+                return '✅ Lesson Complete!'
+              })()}
         </button>
       </div>
       
