@@ -184,10 +184,10 @@ If you have 1 mol of H₂O, you have:
           },
           {
             label: 'If you have 0.5 mol of NaCl, you have ______ formula units',
-            options: ['$6.022 \\times 10^{23}$', '$3.011 \\times 10^{23}$', '$1.204 \\times 10^{24}$', '$3.011 \\times 10^{22}$']
+            options: ['6.022 × 10²³', '3.011 × 10²³', '1.204 × 10²⁴', '3.011 × 10²²']
           }
         ],
-        correctAnswers: ['amount of substance', 'Avogadro\'s number', 'the same number of', '$3.011 \\times 10^{23}$'],
+        correctAnswers: ['amount of substance', 'Avogadro\'s number', 'the same number of', '3.011 × 10²³'],
         hint1: 'The mole is the SI base unit for the amount of substance.',
         hint2: '$N_A = 6.022 \\times 10^{23}$ is named after Amedeo Avogadro.',
         hint3: 'A mole is a fixed number — 2 mol always means $2 \\times 6.022 \\times 10^{23}$ particles, regardless of the element.',

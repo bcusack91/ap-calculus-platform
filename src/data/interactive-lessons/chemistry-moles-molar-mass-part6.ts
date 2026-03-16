@@ -148,7 +148,7 @@ Use: H = 1.008, C = 12.01, N = 14.01, O = 16.00, Na = 22.99, Cl = 35.45, Fe = 55
           },
           {
             label: 'In 1 mol of H₂SO₄, the total number of atoms is',
-            options: ['3', '7', '$3 \\times 6.022 \\times 10^{23}$', '$7 \\times 6.022 \\times 10^{23}$']
+            options: ['3', '7', '3 × 6.022 × 10²³', '7 × 6.022 × 10²³']
           },
           {
             label: 'Equal masses of aluminum ($M = 26.98$) and iron ($M = 55.85$) contain',
@@ -156,10 +156,10 @@ Use: H = 1.008, C = 12.01, N = 14.01, O = 16.00, Na = 22.99, Cl = 35.45, Fe = 55
           },
           {
             label: 'The mass of one atom of carbon-12 in grams is $12.01 / N_A$, which is approximately',
-            options: ['$1.99 \\times 10^{-23}$ g', '$2.00 \\times 10^{-23}$ g', '$1.99 \\times 10^{-22}$ g', '$6.02 \\times 10^{-23}$ g']
+            options: ['1.99 × 10⁻²³ g', '2.00 × 10⁻²³ g', '1.99 × 10⁻²² g', '6.02 × 10⁻²³ g']
           }
         ],
-        correctAnswers: ['grams → moles → particles', '$7 \\times 6.022 \\times 10^{23}$', 'more moles of Al', '$1.99 \\times 10^{-23}$ g'],
+        correctAnswers: ['grams → moles → particles', '7 × 6.022 × 10²³', 'more moles of Al', '1.99 × 10⁻²³ g'],
         hint1: 'You always go through moles as the central hub.',
         hint2: 'H₂SO₄ has 2 H + 1 S + 4 O = 7 atoms per formula unit.',
         hint3: 'Smaller molar mass means more moles per gram.',

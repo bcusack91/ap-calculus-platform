@@ -159,11 +159,11 @@ Use: H = 1.008, C = 12.01, O = 16.00, Na = 22.99, Cl = 35.45, Ca = 40.08
         dropdowns: [
           {
             label: 'To go from grams to moles, the conversion factor is',
-            options: ['multiply by M', 'divide by M', 'multiply by $N_A$', 'divide by $N_A$']
+            options: ['multiply by M', 'divide by M', 'multiply by Nₐ', 'divide by Nₐ']
           },
           {
             label: 'To go from moles to particles, the conversion factor is',
-            options: ['multiply by M', 'divide by M', 'multiply by $N_A$', 'divide by $N_A$']
+            options: ['multiply by M', 'divide by M', 'multiply by Nₐ', 'divide by Nₐ']
           },
           {
             label: 'To go from particles to grams requires ______ conversion step(s)',
@@ -174,7 +174,7 @@ Use: H = 1.008, C = 12.01, O = 16.00, Na = 22.99, Cl = 35.45, Ca = 40.08
             options: ['stays the same', 'doubles', 'halves', 'quadruples']
           }
         ],
-        correctAnswers: ['divide by M', 'multiply by $N_A$', 'two', 'doubles'],
+        correctAnswers: ['divide by M', 'multiply by Nₐ', 'two', 'doubles'],
         hint1: '$n = m/M$ means you divide mass by molar mass.',
         hint2: 'Number of particles = $n \\times N_A$.',
         hint3: 'Particles → moles → grams: that is two steps.',
