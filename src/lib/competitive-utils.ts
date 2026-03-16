@@ -455,11 +455,16 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
   }
 
   for (let i = 0; i < totalQuestions; i++) {
-    // Pick a random position that hasn't been used yet
+    // Pick a random position, allowing reuse when totalQuestions > available positions
     let randomIndex: number;
-    do {
+    if (usedIndices.size >= UNIT_CIRCLE_POSITIONS.length) {
+      // All positions used, allow reuse
       randomIndex = Math.floor(Math.random() * UNIT_CIRCLE_POSITIONS.length);
-    } while (usedIndices.has(randomIndex));
+    } else {
+      do {
+        randomIndex = Math.floor(Math.random() * UNIT_CIRCLE_POSITIONS.length);
+      } while (usedIndices.has(randomIndex));
+    }
     
     usedIndices.add(randomIndex);
     const position = UNIT_CIRCLE_POSITIONS[randomIndex];

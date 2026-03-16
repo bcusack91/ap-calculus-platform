@@ -11,13 +11,14 @@ interface ExitQuizQuestion {
   correctIndex: number
   explanation: string
   category: string
+  topicSlug?: string
 }
 
 interface ExitQuizProps {
   topicSlug: string
   topicTitle: string
   questions: ExitQuizQuestion[]
-  onComplete: (score: number, total: number, passed: boolean, mustRedoUnit: boolean) => void
+  onComplete: (score: number, total: number, passed: boolean, mustRedoUnit: boolean, wrongTopicSlugs?: string[]) => void
   onCancel: () => void
   previousAttempts: number
   lastScore: number | null
@@ -113,6 +114,17 @@ export default function ExitQuiz({
   const redoThreshold = Math.ceil(totalQuestions * 0.5)
   const passed = score >= passThreshold
   const quizMustRedoUnit = score < redoThreshold
+
+  // Compute unique topic slugs where the student got wrong answers
+  const wrongTopicSlugs = useMemo(() => {
+    const wrongSlugs = new Set<string>()
+    answers.forEach((a, i) => {
+      if (!a.correct && questions[i]?.topicSlug) {
+        wrongSlugs.add(questions[i].topicSlug!)
+      }
+    })
+    return Array.from(wrongSlugs)
+  }, [answers, questions])
 
   const submitResults = useCallback(async () => {
     if (submitting) return
@@ -233,21 +245,21 @@ export default function ExitQuiz({
           <div className="mt-8 flex gap-4 justify-center">
             {passed ? (
               <button
-                onClick={() => onComplete(score, totalQuestions, true, false)}
+                onClick={() => onComplete(score, totalQuestions, true, false, wrongTopicSlugs)}
                 className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 shadow-lg"
               >
                 ⚔️ Go to Competitive Mode
               </button>
             ) : quizMustRedoUnit ? (
               <button
-                onClick={() => onComplete(score, totalQuestions, false, true)}
+                onClick={() => onComplete(score, totalQuestions, false, true, wrongTopicSlugs)}
                 className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg"
               >
                 📚 Redo the Unit
               </button>
             ) : (
               <button
-                onClick={() => onComplete(score, totalQuestions, false, false)}
+                onClick={() => onComplete(score, totalQuestions, false, false, wrongTopicSlugs)}
                 className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-yellow-500 to-amber-500 text-white hover:from-yellow-600 hover:to-amber-600 shadow-lg"
               >
                 🔄 Retake Quiz

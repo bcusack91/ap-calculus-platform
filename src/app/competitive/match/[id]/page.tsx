@@ -127,7 +127,58 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     matchStateRef.current = matchState;
   }, [matchState]);
 
-  // Accuracy mode 5-minute countdown timer
+  const fetchMatchState = useCallback(async () => {
+    try {
+      const response = await fetch(`/api/competitive/match/${matchId}`);
+      if (!response.ok) {
+        throw new Error('Failed to fetch match state');
+      }
+      const data = await response.json();
+      const previousState = matchStateRef.current;
+
+      const newIsPlayer1 = data.currentUserId === data.match.player1Id;
+      const newPlayerQuestionIndex = newIsPlayer1 ? data.match.player1QuestionIndex : data.match.player2QuestionIndex;
+      const oldPlayerQuestionIndex = previousState && (
+        data.currentUserId === previousState.player1Id
+          ? previousState.player1QuestionIndex
+          : previousState.player2QuestionIndex
+      );
+
+      if (previousState && newPlayerQuestionIndex !== oldPlayerQuestionIndex) {
+        setFeedback(null);
+        setFeedbackQuestionIndex(null);
+        setSelectedPosition(null);
+        setCorrectAnswerIndex(null);
+        setIsSubmitting(false);
+        setPlayer1Emotion('neutral');
+        setPlayer2Emotion('neutral');
+      }
+
+      setMatchState(data.match);
+      setCurrentUserId(data.currentUserId);
+      setLoading(false);
+
+      if (data.match.status === 'COMPLETED' && !previousState?.status) {
+        setTimeout(() => {
+          // Will show results screen instead
+        }, 1000);
+      }
+    } catch (error) {
+      console.error('Error fetching match state:', error);
+      setLoading(false);
+    }
+  }, [matchId]);
+
+  // Fetch initial match state
+  useEffect(() => {
+    fetchMatchState();
+    // Poll every 500ms for updates
+    const interval = setInterval(fetchMatchState, 500);
+    return () => clearInterval(interval);
+  }, [fetchMatchState]);
+
+  // Accuracy mode 5-minute countdown timer + auto-complete on expiry
+  const timerCompletedRef = useRef(false);
   useEffect(() => {
     if (!matchState || matchState.gameMode !== 'ACCURACY_CHALLENGE' || matchState.status !== 'IN_PROGRESS') return;
     const ACCURACY_TIME_LIMIT = 5 * 60; // 5 minutes in seconds
@@ -135,11 +186,19 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       const elapsed = Math.floor((Date.now() - new Date(matchState.startedAt).getTime()) / 1000);
       const remaining = Math.max(0, ACCURACY_TIME_LIMIT - elapsed);
       setAccuracyTimer(remaining);
+      // Force-complete match when timer expires
+      if (remaining === 0 && !timerCompletedRef.current) {
+        timerCompletedRef.current = true;
+        fetch(`/api/competitive/match/${matchId}/complete`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+        }).then(() => fetchMatchState()).catch(console.error);
+      }
     };
     update();
     const interval = setInterval(update, 1000);
     return () => clearInterval(interval);
-  }, [matchState?.startedAt, matchState?.gameMode, matchState?.status]);
+  }, [matchState?.startedAt, matchState?.gameMode, matchState?.status, matchId, fetchMatchState]);
 
   // Render math in prompt (for both unit circle and multiple-choice)
   // Handles both $...$ delimited LaTeX and raw LaTeX with backslashes
@@ -201,56 +260,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     return <span>{text}</span>;
   };
 
-  const fetchMatchState = useCallback(async () => {
-    try {
-      const response = await fetch(`/api/competitive/match/${matchId}`);
-      if (!response.ok) {
-        throw new Error('Failed to fetch match state');
-      }
-      const data = await response.json();
-      const previousState = matchStateRef.current;
-
-      const newIsPlayer1 = data.currentUserId === data.match.player1Id;
-      const newPlayerQuestionIndex = newIsPlayer1 ? data.match.player1QuestionIndex : data.match.player2QuestionIndex;
-      const oldPlayerQuestionIndex = previousState && (
-        data.currentUserId === previousState.player1Id
-          ? previousState.player1QuestionIndex
-          : previousState.player2QuestionIndex
-      );
-
-      if (previousState && newPlayerQuestionIndex !== oldPlayerQuestionIndex) {
-        setFeedback(null);
-        setFeedbackQuestionIndex(null);
-        setSelectedPosition(null);
-        setCorrectAnswerIndex(null);
-        setIsSubmitting(false);
-        setPlayer1Emotion('neutral');
-        setPlayer2Emotion('neutral');
-      }
-
-      setMatchState(data.match);
-      setCurrentUserId(data.currentUserId);
-      setLoading(false);
-
-      if (data.match.status === 'COMPLETED' && !previousState?.status) {
-        setTimeout(() => {
-          // Will show results screen instead
-        }, 1000);
-      }
-    } catch (error) {
-      console.error('Error fetching match state:', error);
-      setLoading(false);
-    }
-  }, [matchId]);
-
-  // Fetch initial match state
-  useEffect(() => {
-    fetchMatchState();
-    // Poll every 500ms for updates
-    const interval = setInterval(fetchMatchState, 500);
-    return () => clearInterval(interval);
-  }, [fetchMatchState]);
-
   // Auto-schedule AI answers when question changes
   useEffect(() => {
     const activeMatch = matchStateRef.current;
@@ -266,9 +275,13 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     const opponentQuestionIndex = isPlayer1 ? activeMatch.player2QuestionIndex : activeMatch.player1QuestionIndex;
     const opponentPlayerId = isPlayer1 ? activeMatch.player2Id : activeMatch.player1Id;
     
+    // Stop AI if it has answered all questions
+    if (opponentQuestionIndex >= activeMatch.questions.length) return;
+
     // Get AI difficulty and calculate delay
     const aiDifficulty = activeMatch.gameData?.aiDifficulty || 'medium';
     const currentQuestion = activeMatch.questions[opponentQuestionIndex];
+    if (!currentQuestion) return;
     const isMultipleChoice = currentQuestion?.type === 'multiple-choice';
     
     // Base timings for unit circle questions
@@ -789,10 +802,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               <div className="w-8 h-64 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden relative">
                 <div 
                   className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-purple-600 to-purple-400 transition-all duration-500 rounded-full"
-                  style={{ height: `${matchState.gameMode === 'ACCURACY_CHALLENGE' ? ((matchState.gameData?.player1Answers?.length || 0) / 20) * 100 : (matchState.player1Score / 10) * 100}%` }}
+                  style={{ height: `${matchState.gameMode === 'ACCURACY_CHALLENGE' ? ((matchState.gameData?.player1Answers?.length || 0) / matchState.questions.length) * 100 : (matchState.player1Score / 10) * 100}%` }}
                 />
               </div>
-              <p className="text-xs text-gray-500 mt-2">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? `${matchState.gameData?.player1Answers?.length || 0}/20` : `${matchState.player1Score}/10`}</p>
+              <p className="text-xs text-gray-500 mt-2">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? `${matchState.gameData?.player1Answers?.length || 0}/${matchState.questions.length}` : `${matchState.player1Score}/10`}</p>
             </div>
           </div>
 
@@ -805,7 +818,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               <span className="text-lg">🎯</span>
               <div>
                 <p className="font-bold text-gray-900 dark:text-white text-sm">Accuracy Challenge</p>
-                <p className="text-xs text-gray-500">20 questions &middot; highest accuracy wins</p>
+                <p className="text-xs text-gray-500">{matchState.questions.length} questions &middot; highest accuracy wins</p>
               </div>
             </div>
             {accuracyTimer !== null && (
@@ -830,7 +843,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         {!currentQuestion && matchState.gameMode === 'ACCURACY_CHALLENGE' ? (
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-12 text-center">
             <div className="text-5xl mb-4">✅</div>
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">All 20 Questions Answered!</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">All Questions Answered!</h2>
             <p className="text-gray-500">Waiting for your opponent to finish...</p>
             <div className="mt-4 animate-pulse text-purple-500">
               <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-purple-600" />
@@ -977,10 +990,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               <div className="w-8 h-64 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden relative">
                 <div 
                   className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-blue-600 to-blue-400 transition-all duration-500 rounded-full"
-                  style={{ height: `${matchState.gameMode === 'ACCURACY_CHALLENGE' ? ((matchState.gameData?.player2Answers?.length || 0) / 20) * 100 : (matchState.player2Score / 10) * 100}%` }}
+                  style={{ height: `${matchState.gameMode === 'ACCURACY_CHALLENGE' ? ((matchState.gameData?.player2Answers?.length || 0) / matchState.questions.length) * 100 : (matchState.player2Score / 10) * 100}%` }}
                 />
               </div>
-              <p className="text-xs text-gray-500 mt-2">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? `${matchState.gameData?.player2Answers?.length || 0}/20` : `${matchState.player2Score}/10`}</p>
+              <p className="text-xs text-gray-500 mt-2">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? `${matchState.gameData?.player2Answers?.length || 0}/${matchState.questions.length}` : `${matchState.player2Score}/10`}</p>
             </div>
           </div>
         </div>

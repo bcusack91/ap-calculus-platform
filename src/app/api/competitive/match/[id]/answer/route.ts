@@ -105,9 +105,9 @@ export async function POST(
       gameData.player2Answers.push(answerRecord);
     }
 
-    // ---- ACCURACY_CHALLENGE mode: 20 questions, scored by accuracy, 5-min timer ----
+    // ---- ACCURACY_CHALLENGE mode: scored by accuracy, 5-min timer ----
     const isAccuracyMode = match.gameMode === 'ACCURACY_CHALLENGE';
-    const ACCURACY_TOTAL_QUESTIONS = 20;
+    const ACCURACY_TOTAL_QUESTIONS = questions.length; // Use actual question count
     const ACCURACY_TIME_LIMIT_MS = 5 * 60 * 1000; // 5 minutes
 
     if (isAccuracyMode) {
@@ -118,7 +118,7 @@ export async function POST(
       }
       // (wrong answers don't change score - score = correct count)
 
-      // Advance question index (no wrap in accuracy mode - stop at 20)
+      // Advance question index (stop at total questions)
       if (isPlayer1) {
         player1QuestionIndex = player1QuestionIndex + 1;
       } else {

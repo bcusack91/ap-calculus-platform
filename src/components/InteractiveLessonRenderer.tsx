@@ -260,10 +260,6 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   const entersCompetitiveModeOnComplete = completionDestination === 'competitive'
   const practiceModeParts = practiceModePropParts ?? []
 
-  // Exit Quiz Entry Mode: student arrived via ?exitQuiz=true
-  const isExitQuizEntry = searchParams.get('exitQuiz') === 'true'
-  const [exitQuizEntryPending, setExitQuizEntryPending] = useState(isExitQuizEntry && hasExitQuiz(topicSlug))
-
   // Pre-load KaTeX lazily on mount
   useEffect(() => { preloadKatex() }, [])
   
@@ -469,21 +465,6 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     fetchStatus()
   }, [topicHasExitQuiz, topicSlug, session?.user])
 
-  // Exit Quiz Entry Mode: immediately show exit quiz when entering via ?exitQuiz=true
-  useEffect(() => {
-    if (!exitQuizEntryPending) return
-    const loadExitQuiz = async () => {
-      const questions = await generateExitQuiz(topicSlug, 10)
-      if (questions.length > 0) {
-        setExitQuizQuestions(questions)
-        setShowExitQuiz(true)
-      } else {
-        // No questions available, just render the lesson normally
-        setExitQuizEntryPending(false)
-      }
-    }
-    loadExitQuiz()
-  }, [exitQuizEntryPending, topicSlug])
 
   const sections = lessonData?.sections ?? []
   const currentSection = sections?.[currentSectionIndex]
@@ -597,38 +578,6 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       mustRedoUnit: !passed && mustRedoUnit,
     }))
 
-    // Exit Quiz Entry Mode: adaptive section rendering based on score
-    if (exitQuizEntryPending) {
-      setExitQuizEntryPending(false)
-      const percentage = total > 0 ? (score / total) * 100 : 0
-
-      if (percentage >= 90 && totalParts > 1) {
-        // 90%+: Student knows this well — jump to final part
-        const finalPart = totalParts as LessonPart
-        const unlocked = new Set<LessonPart>()
-        for (let i = 1; i <= totalParts; i++) unlocked.add(i as LessonPart)
-        setUnlockedParts(unlocked)
-        updateLessonPart(finalPart)
-      } else if (percentage >= 70 && totalParts > 2) {
-        // 70-89%: Good understanding — skip to ~75% through
-        const startPart = Math.max(1, Math.ceil(totalParts * 0.75)) as LessonPart
-        const unlocked = new Set<LessonPart>()
-        for (let i = 1; i <= startPart; i++) unlocked.add(i as LessonPart)
-        setUnlockedParts(unlocked)
-        updateLessonPart(startPart)
-      } else if (percentage >= 50 && totalParts > 2) {
-        // 50-69%: Partial understanding — start from middle
-        const startPart = Math.max(1, Math.ceil(totalParts * 0.5)) as LessonPart
-        const unlocked = new Set<LessonPart>()
-        for (let i = 1; i <= startPart; i++) unlocked.add(i as LessonPart)
-        setUnlockedParts(unlocked)
-        updateLessonPart(startPart)
-      }
-      // < 50%: Start from part 1 (default, no changes needed)
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-      return
-    }
-
     if (passed) {
       // Passed! Navigate to course-specific competitive mode with topic pre-selected
       const competitiveUrl = courseSlug
@@ -677,17 +626,6 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
 
   if (!lessonData) {
     return <div>No interactive lesson available for this part.</div>
-  }
-
-  // Exit Quiz Entry: show loading while questions are being generated
-  if (exitQuizEntryPending && !showExitQuiz) {
-    return (
-      <div className="flex flex-col items-center justify-center py-20 space-y-4">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600" />
-        <p className="text-lg font-semibold text-gray-700 dark:text-gray-300">Preparing your exit quiz...</p>
-        <p className="text-sm text-gray-500 dark:text-gray-400">Score well to skip sections you already know!</p>
-      </div>
-    )
   }
 
   // Show practice mode if requested

@@ -15,7 +15,8 @@ export interface ExitQuizQuestion {
   options: string[]
   correctIndex: number // 0-based index in options
   explanation: string
-  category: string // which lesson part it covers
+  category: string // which lesson part / domain it covers
+  topicSlug?: string // which specific topic this question covers (for course-level filtering)
 }
 
 interface QuestionTemplate {

@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 import { InArticleAd } from '@/components/ad-banner'
 import { breadcrumbJsonLd } from '@/lib/jsonld'
+import CourseEntranceQuiz from '@/components/CourseEntranceQuiz'
 
 // ISR: revalidate content every hour
 export const revalidate = 3600
@@ -281,23 +282,30 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
         {/* Ad placement after course overview */}
         <InArticleAd />
 
-        {/* Exit Quiz Mode Banner */}
+        {/* Exit Quiz Mode — show entrance quiz + filtered topics */}
         {isExitQuizMode && (
-          <div className="rounded-2xl border-2 border-amber-300 dark:border-amber-700 bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 p-6 mb-8 shadow-sm">
-            <div className="flex items-center gap-3">
-              <span className="text-3xl">📝</span>
-              <div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white">Exit Quiz Mode</h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Select a topic below to take an exit quiz. Score well and you can skip sections you already know!
-                </p>
-              </div>
-            </div>
-          </div>
+          <CourseEntranceQuiz
+            courseSlug={slug}
+            courseName={course.name}
+            categories={allCategories.map(cat => ({
+              id: cat.id,
+              name: cat.name,
+              slug: cat.slug,
+              description: cat.description,
+              icon: cat.icon,
+              topics: cat.topics.map(t => ({
+                id: t.id,
+                slug: t.slug,
+                title: t.title,
+                description: t.description,
+                subtopicCount: t._count.subtopics,
+              })),
+            }))}
+          />
         )}
 
-        {/* Categories Grid */}
-        {allCategories.length > 0 ? (
+        {/* Categories Grid — only shown in normal mode */}
+        {!isExitQuizMode && allCategories.length > 0 ? (
           <div className="space-y-12">
             {/* AB Foundation Section (only shown on BC page) */}
             {abCategories.length > 0 && (
@@ -344,7 +352,7 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                         {category.topics.map((topic) => (
                           <Link
                             key={topic.id}
-                            href={isExitQuizMode ? `/topics/${topic.slug}/interactive?exitQuiz=true` : `/topics/${topic.slug}`}
+                            href={`/topics/${topic.slug}`}
                             className="group block p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-md transition-all"
                           >
                             <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors mb-2">
@@ -412,7 +420,7 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                     {category.topics.map((topic) => (
                       <Link
                         key={topic.id}
-                        href={isExitQuizMode ? `/topics/${topic.slug}/interactive?exitQuiz=true` : `/topics/${topic.slug}`}
+                        href={`/topics/${topic.slug}`}
                         className="group block p-4 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-md transition-all"
                       >
                         <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors mb-2">

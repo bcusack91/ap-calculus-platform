@@ -964,5 +964,6 @@ export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; 
     correctIndex: q.correctAnswer,
     explanation: q.explanation,
     category: q.domain,
+    topicSlug: q.topicSlug,
   }))
 }
