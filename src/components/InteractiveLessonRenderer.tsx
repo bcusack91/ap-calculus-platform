@@ -653,7 +653,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   }, [topicSlug])
 
   // Entrance quiz completion: skip mastered parts, credit them
-  const handleEntranceQuizComplete = useCallback((masteredParts: Set<number>) => {
+  const handleEntranceQuizComplete = useCallback((masteredParts: Set<number>, destination?: 'dashboard' | 'course' | 'competitive') => {
     setEntranceQuizPhase(null)
     setEntranceQuizMasteredParts(masteredParts)
 
@@ -680,19 +680,18 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     setUnlockedParts(unlocked)
 
     if (masteredParts.size === totalParts) {
-      // All parts mastered! Jump to exit quiz if available
-      if (topicHasExitQuiz) {
-        const loadAndShowExitQuiz = async () => {
-          const questions = await generateExitQuiz(topicSlug, 10)
-          if (questions.length > 0) {
-            setExitQuizQuestions(questions)
-            setShowExitQuiz(true)
-          }
-        }
-        loadAndShowExitQuiz()
-      }
-      // Save full mastery
+      // All parts mastered! Save full mastery and navigate to chosen destination
       saveProgress(undefined, true)
+      if (destination === 'dashboard') {
+        router.push('/dashboard')
+      } else if (destination === 'course') {
+        router.push(`/courses/${courseSlug || 'ap-chemistry'}`)
+      } else if (destination === 'competitive') {
+        const competitiveUrl = courseSlug
+          ? `/competitive/${courseSlug}?topic=${encodeURIComponent(topicSlug)}`
+          : '/competitive'
+        router.push(competitiveUrl)
+      }
     } else {
       // Jump to first unmastered part
       const targetPart = firstUnmastered || (1 as LessonPart)
@@ -718,7 +717,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       }
     }
     window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [totalParts, topicHasExitQuiz, topicSlug, session?.user, cachedTopicId, saveProgress])
+  }, [totalParts, topicSlug, courseSlug, router, session?.user, cachedTopicId, saveProgress])
 
   const isCurrentSectionComplete = completedSections.has(currentSectionIndex)
   
@@ -788,6 +787,8 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     return (
       <TopicEntranceQuiz
         topicTitle={topicTitle}
+        topicSlug={topicSlug}
+        courseSlug={courseSlug}
         questions={entranceQuizQuestions}
         partTitles={entranceQuizParts}
         onComplete={handleEntranceQuizComplete}

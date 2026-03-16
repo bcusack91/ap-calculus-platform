@@ -140,7 +140,7 @@ Use: H = 1.008, C = 12.01, N = 14.01, O = 16.00, S = 32.07
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['82.2', '40.1', '2', '82.20', '40.10'],
+        correctAnswers: ['82.2', '40.1', '2'],
         hint1: '$\\%\\text{N} = \\frac{14.01}{17.03} \\times 100\\%$.',
         hint2: '$\\%\\text{S} = \\frac{32.07}{80.07} \\times 100\\%$.',
         hint3: 'Assume 100 g: 85.7 g C and 14.3 g H. Convert to moles and divide by the smallest value.',

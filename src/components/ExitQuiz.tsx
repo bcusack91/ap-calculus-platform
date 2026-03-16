@@ -98,6 +98,21 @@ export default function ExitQuiz({
     }])
   }
 
+  const handleGuessing = () => {
+    setAnswers(prev => [...prev, {
+      questionId: question.id,
+      selectedAnswer: -1,
+      correct: false
+    }])
+    if (currentQuestion < totalQuestions - 1) {
+      setCurrentQuestion(prev => prev + 1)
+      setSelectedAnswer(null)
+      setShowExplanation(false)
+    } else {
+      setQuizComplete(true)
+    }
+  }
+
   const handleNext = () => {
     if (currentQuestion < totalQuestions - 1) {
       setCurrentQuestion(prev => prev + 1)
@@ -389,15 +404,23 @@ export default function ExitQuiz({
         )}
 
         {/* Action buttons */}
-        <div className="flex justify-end">
+        <div className="flex justify-end gap-3">
           {!showExplanation ? (
-            <button
-              onClick={handleConfirm}
-              disabled={selectedAnswer === null}
-              className="px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 disabled:opacity-40 disabled:cursor-not-allowed shadow-lg"
-            >
-              Confirm Answer
-            </button>
+            <>
+              <button
+                onClick={handleGuessing}
+                className="px-6 py-3 rounded-xl font-semibold border-2 border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              >
+                I Would Be Guessing
+              </button>
+              <button
+                onClick={handleConfirm}
+                disabled={selectedAnswer === null}
+                className="px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 disabled:opacity-40 disabled:cursor-not-allowed shadow-lg"
+              >
+                Confirm Answer
+              </button>
+            </>
           ) : (
             <button
               onClick={handleNext}

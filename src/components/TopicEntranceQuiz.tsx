@@ -7,9 +7,11 @@ import type { EntranceQuizQuestion } from '@/data/entrance-quizzes'
 
 interface TopicEntranceQuizProps {
   topicTitle: string
+  topicSlug: string
+  courseSlug?: string
   questions: EntranceQuizQuestion[]
   partTitles: { partNumber: number; partTitle: string }[]
-  onComplete: (masteredParts: Set<number>) => void
+  onComplete: (masteredParts: Set<number>, destination?: 'dashboard' | 'course' | 'competitive') => void
   onCancel: () => void
 }
 
@@ -31,6 +33,8 @@ function renderLatex(text: string): string {
 
 export default function TopicEntranceQuiz({
   topicTitle,
+  topicSlug,
+  courseSlug,
   questions,
   partTitles,
   onComplete,
@@ -96,6 +100,22 @@ export default function TopicEntranceQuiz({
     setShowExplanation(true)
   }, [selectedAnswer, question])
 
+  const handleGuessing = useCallback(() => {
+    setAnswers(prev => [...prev, {
+      questionId: question.id,
+      selectedAnswer: -1,
+      correct: false,
+      partNumber: question.partNumber,
+    }])
+    if (currentQuestion < totalQuestions - 1) {
+      setCurrentQuestion(prev => prev + 1)
+      setSelectedAnswer(null)
+      setShowExplanation(false)
+    } else {
+      setPhase('results')
+    }
+  }, [question, currentQuestion, totalQuestions])
+
   const handleNext = useCallback(() => {
     if (currentQuestion < totalQuestions - 1) {
       setCurrentQuestion(prev => prev + 1)
@@ -106,8 +126,8 @@ export default function TopicEntranceQuiz({
     }
   }, [currentQuestion, totalQuestions])
 
-  const handleFinish = useCallback(() => {
-    onComplete(masteredParts)
+  const handleFinish = useCallback((destination?: 'dashboard' | 'course' | 'competitive') => {
+    onComplete(masteredParts, destination)
   }, [onComplete, masteredParts])
 
   // ── Intro Screen ──
@@ -253,22 +273,32 @@ export default function TopicEntranceQuiz({
           )}
 
           {/* Action buttons */}
-          {!showExplanation ? (
-            <button
-              onClick={handleConfirm}
-              disabled={selectedAnswer === null}
-              className="w-full py-3 rounded-xl font-semibold text-white bg-purple-600 hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-            >
-              Confirm Answer
-            </button>
-          ) : (
-            <button
-              onClick={handleNext}
-              className="w-full py-3 rounded-xl font-semibold text-white bg-purple-600 hover:bg-purple-700 transition-colors"
-            >
-              {currentQuestion < totalQuestions - 1 ? 'Next Question →' : 'See Results'}
-            </button>
-          )}
+          <div className="flex gap-3">
+            {!showExplanation ? (
+              <>
+                <button
+                  onClick={handleGuessing}
+                  className="flex-1 py-3 rounded-xl font-semibold border-2 border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                >
+                  I Would Be Guessing
+                </button>
+                <button
+                  onClick={handleConfirm}
+                  disabled={selectedAnswer === null}
+                  className="flex-1 py-3 rounded-xl font-semibold text-white bg-purple-600 hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  Confirm Answer
+                </button>
+              </>
+            ) : (
+              <button
+                onClick={handleNext}
+                className="w-full py-3 rounded-xl font-semibold text-white bg-purple-600 hover:bg-purple-700 transition-colors"
+              >
+                {currentQuestion < totalQuestions - 1 ? 'Next Question →' : 'See Results'}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     )
@@ -368,18 +398,44 @@ export default function TopicEntranceQuiz({
           )}
         </div>
 
-        {/* Action button */}
-        <button
-          onClick={handleFinish}
-          className="w-full py-3 rounded-xl font-semibold text-white bg-purple-600 hover:bg-purple-700 transition-colors shadow-lg"
-        >
-          {masteredParts.size === partTitles.length
-            ? 'Continue to Exit Quiz →'
-            : masteredParts.size > 0
-            ? `Start with Part ${partsToStudy[0]?.partNumber}: ${partsToStudy[0]?.partTitle} →`
-            : 'Start Lesson →'
-          }
-        </button>
+        {/* Action buttons */}
+        {masteredParts.size === partTitles.length ? (
+          <div className="space-y-3">
+            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4 mb-2">
+              <p className="text-green-700 dark:text-green-300 font-semibold text-center">
+                🏆 This topic is now marked as mastered!
+              </p>
+            </div>
+            <button
+              onClick={() => handleFinish('competitive')}
+              className="w-full py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 transition-colors shadow-lg"
+            >
+              ⚔️ Enter Competitive Mode
+            </button>
+            <button
+              onClick={() => handleFinish('course')}
+              className="w-full py-3 rounded-xl font-semibold text-white bg-purple-600 hover:bg-purple-700 transition-colors shadow-lg"
+            >
+              📚 Return to {courseSlug ? courseSlug.replace(/-/g, ' ').replace(/\bap\b/g, 'AP').replace(/\b\w/g, l => l.toUpperCase()) : 'Course'}
+            </button>
+            <button
+              onClick={() => handleFinish('dashboard')}
+              className="w-full py-3 rounded-xl font-semibold border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            >
+              🏠 Return to Dashboard
+            </button>
+          </div>
+        ) : (
+          <button
+            onClick={() => handleFinish()}
+            className="w-full py-3 rounded-xl font-semibold text-white bg-purple-600 hover:bg-purple-700 transition-colors shadow-lg"
+          >
+            {masteredParts.size > 0
+              ? `Start with Part ${partsToStudy[0]?.partNumber}: ${partsToStudy[0]?.partTitle} →`
+              : 'Start Lesson →'
+            }
+          </button>
+        )}
       </div>
     </div>
   )
