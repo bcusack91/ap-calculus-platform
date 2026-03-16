@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo, useCallback } from 'react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
 import type { EntranceQuizQuestion } from '@/data/entrance-quizzes'
+import APChemReferenceModal from './APChemReferenceModal'
 
 interface TopicEntranceQuizProps {
   topicTitle: string
@@ -46,6 +47,7 @@ export default function TopicEntranceQuiz({
   const [showExplanation, setShowExplanation] = useState(false)
   const [answers, setAnswers] = useState<{ questionId: string; selectedAnswer: number; correct: boolean; partNumber: number }[]>([])
   const [katexReady, setKatexReady] = useState(false)
+  const [showReference, setShowReference] = useState(false)
 
   useEffect(() => { preloadKatex().then(() => setKatexReady(true)) }, [])
 
@@ -206,6 +208,17 @@ export default function TopicEntranceQuiz({
               Part {question.partNumber}: {question.partTitle}
             </span>
           </div>
+
+          {/* Reference material buttons */}
+          <div className="flex gap-2 mb-4">
+            <button
+              onClick={() => setShowReference(true)}
+              className="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            >
+              📋 Reference Sheet
+            </button>
+          </div>
+          <APChemReferenceModal open={showReference} onClose={() => setShowReference(false)} />
 
           {/* Question */}
           <div

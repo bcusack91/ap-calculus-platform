@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
+import APChemReferenceModal from './APChemReferenceModal'
 
 interface ExitQuizQuestion {
   id: string
@@ -63,6 +64,7 @@ export default function ExitQuiz({
   const [startTime] = useState(Date.now())
   const [submitting, setSubmitting] = useState(false)
   const [katexReady, setKatexReady] = useState(false)
+  const [showReference, setShowReference] = useState(false)
   void topicSlug // will be used by the submit API
 
   // Eagerly load KaTeX on mount
@@ -334,6 +336,17 @@ export default function ExitQuiz({
             {question.category}
           </span>
         </div>
+
+        {/* Reference material buttons */}
+        <div className="flex gap-2 mb-4">
+          <button
+            onClick={() => setShowReference(true)}
+            className="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+          >
+            📋 Reference Sheet
+          </button>
+        </div>
+        <APChemReferenceModal open={showReference} onClose={() => setShowReference(false)} />
 
         {/* Question */}
         <div
