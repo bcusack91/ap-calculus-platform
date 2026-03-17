@@ -49,6 +49,10 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'galvanic-cells-potentials': () => import('./galvanic-cells-potentials'),
   'nernst-equation-concentration': () => import('./nernst-equation-concentration'),
   'electrolytic-cells-faraday': () => import('./electrolytic-cells-faraday'),
+  'equilibrium-constants-expressions': () => import('./equilibrium-constants-expressions'),
+  'le-chatelier-equilibrium-shifts': () => import('./le-chatelier-equilibrium-shifts'),
+  'spontaneity-free-energy-applications': () => import('./spontaneity-free-energy-applications'),
+  'galvanic-cells-thermo-applications': () => import('./galvanic-cells-thermo-applications'),
 }
 
 /**

@@ -945,6 +945,679 @@ export const apChemQuestionPool: APChemQuestion[] = [
     topicSlug: 'electrolytic-cells-faraday',
     formSet: 'B',
   },
+
+  // ══════════════════════════════════════════════════════════════════
+  //  ADDITIONAL QUESTIONS — gap-fill for under-represented topics
+  // ══════════════════════════════════════════════════════════════════
+
+  // --- properties-states-matter (was 0) ---
+  {
+    question: 'Which state of matter has a definite volume but takes the shape of its container?',
+    options: ['Solid', 'Liquid', 'Gas', 'Plasma'],
+    correctAnswer: 1,
+    explanation: 'Liquids have fixed volume due to intermolecular forces but flow to adopt the container shape.',
+    difficulty: 'easy',
+    domain: 'bonding-intermolecular',
+    topicSlug: 'properties-states-matter',
+    formSet: 'A',
+  },
+  {
+    question: 'Compared to a gas sample at the same temperature, a liquid sample of the same substance has:',
+    options: ['Higher kinetic energy per particle', 'Greater intermolecular spacing', 'Stronger intermolecular attractions relative to kinetic energy', 'Zero intermolecular forces'],
+    correctAnswer: 2,
+    explanation: 'In liquids, intermolecular attractions are significant relative to particle kinetic energy, keeping particles close together.',
+    difficulty: 'medium',
+    domain: 'bonding-intermolecular',
+    topicSlug: 'properties-states-matter',
+    formSet: 'B',
+  },
+  {
+    question: 'During a phase change from liquid to gas at the boiling point, the temperature:',
+    options: ['Increases steadily', 'Decreases', 'Remains constant', 'Fluctuates randomly'],
+    correctAnswer: 2,
+    explanation: 'At the boiling point, added energy goes into overcoming intermolecular forces (enthalpy of vaporization) rather than increasing temperature.',
+    difficulty: 'easy',
+    domain: 'bonding-intermolecular',
+    topicSlug: 'properties-states-matter',
+    formSet: 'A',
+  },
+  {
+    question: 'A substance has low viscosity, moderate compressibility, and takes the shape of its container. It is most likely a:',
+    options: ['Solid', 'Liquid', 'Supercritical fluid', 'Gas'],
+    correctAnswer: 3,
+    explanation: 'Gases have low viscosity, are highly compressible (moderate here qualifies as well), and fill their container. The lack of fixed volume points to gas.',
+    difficulty: 'medium',
+    domain: 'bonding-intermolecular',
+    topicSlug: 'properties-states-matter',
+    formSet: 'B',
+  },
+
+  // --- mixtures-separations (was 0) ---
+  {
+    question: 'Which separation technique relies on differences in boiling point?',
+    options: ['Filtration', 'Distillation', 'Chromatography', 'Centrifugation'],
+    correctAnswer: 1,
+    explanation: 'Distillation separates components based on differing boiling points — the more volatile component evaporates first.',
+    difficulty: 'easy',
+    domain: 'atomic-structure',
+    topicSlug: 'mixtures-separations',
+    formSet: 'A',
+  },
+  {
+    question: 'In paper chromatography, the component that travels farthest has the:',
+    options: ['Strongest attraction to the stationary phase', 'Strongest attraction to the mobile phase', 'Highest molar mass', 'Lowest solubility'],
+    correctAnswer: 1,
+    explanation: 'Components more attracted to the mobile phase (solvent) travel farther up the paper, giving a higher Rf value.',
+    difficulty: 'medium',
+    domain: 'atomic-structure',
+    topicSlug: 'mixtures-separations',
+    formSet: 'B',
+  },
+  {
+    question: 'Filtration is used to separate a mixture of:',
+    options: ['Two miscible liquids', 'An insoluble solid from a liquid', 'Two gases', 'Dissolved salts from water'],
+    correctAnswer: 1,
+    explanation: 'Filtration separates an insoluble solid from a liquid by passing the mixture through a filter that traps the solid.',
+    difficulty: 'easy',
+    domain: 'atomic-structure',
+    topicSlug: 'mixtures-separations',
+    formSet: 'A',
+  },
+  {
+    question: 'A homogeneous mixture differs from a heterogeneous mixture because it:',
+    options: ['Contains only one element', 'Has uniform composition throughout', 'Cannot be separated by physical means', 'Is always a gas'],
+    correctAnswer: 1,
+    explanation: 'Homogeneous mixtures (solutions) have uniform composition at the molecular level, while heterogeneous mixtures have visibly distinct regions.',
+    difficulty: 'easy',
+    domain: 'atomic-structure',
+    topicSlug: 'mixtures-separations',
+    formSet: 'B',
+  },
+
+  // --- intro-equilibrium (was 0) ---
+  {
+    question: 'At dynamic equilibrium, the forward and reverse reaction rates are:',
+    options: ['Both zero', 'Equal and non-zero', 'Equal to the equilibrium constant', 'Constantly increasing'],
+    correctAnswer: 1,
+    explanation: 'Dynamic equilibrium means both reactions continue at equal rates, so concentrations remain constant over time.',
+    difficulty: 'easy',
+    domain: 'equilibrium',
+    topicSlug: 'intro-equilibrium',
+    formSet: 'A',
+  },
+  {
+    question: 'Which statement about a system at equilibrium is FALSE?',
+    options: ['Concentrations of reactants and products are constant', 'The forward reaction has stopped', 'Both forward and reverse reactions are occurring', 'The system appears static macroscopically'],
+    correctAnswer: 1,
+    explanation: 'At equilibrium, both reactions continue — the system is dynamic. The forward reaction has NOT stopped; it just proceeds at the same rate as the reverse.',
+    difficulty: 'easy',
+    domain: 'equilibrium',
+    topicSlug: 'intro-equilibrium',
+    formSet: 'B',
+  },
+  {
+    question: 'For the equilibrium A(g) ⇌ 2B(g), the equilibrium expression Kc equals:',
+    options: ['[A]/[B]²', '[B]²/[A]', '[A][B]²', '2[B]/[A]'],
+    correctAnswer: 1,
+    explanation: 'Kc = [products]^coefficients / [reactants]^coefficients = [B]² / [A].',
+    difficulty: 'medium',
+    domain: 'equilibrium',
+    topicSlug: 'intro-equilibrium',
+    formSet: 'A',
+  },
+  {
+    question: 'Pure solids and pure liquids are excluded from equilibrium expressions because:',
+    options: ['They do not participate in the reaction', 'Their concentrations effectively remain constant', 'They have no effect on K', 'They are always in excess'],
+    correctAnswer: 1,
+    explanation: 'Pure solids and liquids have constant concentration (activity = 1), so they are incorporated into K and not written in the expression.',
+    difficulty: 'medium',
+    domain: 'equilibrium',
+    topicSlug: 'intro-equilibrium',
+    formSet: 'B',
+  },
+
+  // --- spontaneity-free-energy-applications (was 0) ---
+  {
+    question: 'A reaction with ΔH < 0 and ΔS > 0 is spontaneous at:',
+    options: ['High temperatures only', 'Low temperatures only', 'All temperatures', 'No temperature'],
+    correctAnswer: 2,
+    explanation: 'ΔG = ΔH − TΔS. With negative ΔH and positive ΔS, both terms contribute negatively to ΔG at any temperature.',
+    difficulty: 'easy',
+    domain: 'thermodynamics',
+    topicSlug: 'spontaneity-free-energy-applications',
+    formSet: 'A',
+  },
+  {
+    question: 'The equation ΔG° = −RT ln K tells us that when K >> 1:',
+    options: ['ΔG° is large and positive', 'ΔG° is approximately zero', 'ΔG° is large and negative', 'The reaction is non-spontaneous'],
+    correctAnswer: 2,
+    explanation: 'When K >> 1, ln K is large and positive, making ΔG° = −RT ln K a large negative number (products strongly favored).',
+    difficulty: 'medium',
+    domain: 'thermodynamics',
+    topicSlug: 'spontaneity-free-energy-applications',
+    formSet: 'B',
+  },
+  {
+    question: 'Coupling ATP hydrolysis (ΔG° = −30 kJ/mol) with a reaction having ΔG° = +20 kJ/mol gives an overall ΔG° of:',
+    options: ['+50 kJ/mol', '−50 kJ/mol', '−10 kJ/mol', '+10 kJ/mol'],
+    correctAnswer: 2,
+    explanation: 'The overall ΔG° is the sum: (−30) + (+20) = −10 kJ/mol, making the coupled process spontaneous.',
+    difficulty: 'medium',
+    domain: 'thermodynamics',
+    topicSlug: 'spontaneity-free-energy-applications',
+    formSet: 'A',
+  },
+  {
+    question: 'At the crossover temperature where a reaction changes spontaneity, ΔG equals:',
+    options: ['ΔH', '−TΔS', '0', 'K'],
+    correctAnswer: 2,
+    explanation: 'The crossover temperature occurs when ΔG = 0 (ΔH = TΔS). Solving gives T = ΔH/ΔS.',
+    difficulty: 'easy',
+    domain: 'thermodynamics',
+    topicSlug: 'spontaneity-free-energy-applications',
+    formSet: 'B',
+  },
+
+  // --- galvanic-cells-thermo-applications (was 0) ---
+  {
+    question: 'The equation ΔG° = −nFE° connects free energy and cell potential. F represents:',
+    options: ['Frequency', 'Faraday\'s constant (96,485 C/mol e⁻)', 'Force in newtons', 'Formation energy'],
+    correctAnswer: 1,
+    explanation: 'F (Faraday\'s constant) is the charge per mole of electrons: 96,485 C/mol e⁻.',
+    difficulty: 'easy',
+    domain: 'electrochemistry',
+    topicSlug: 'galvanic-cells-thermo-applications',
+    formSet: 'A',
+  },
+  {
+    question: 'A galvanic cell with E°cell = +0.50 V and n = 2 has ΔG° approximately equal to:',
+    options: ['−96.5 kJ', '−96,500 kJ', '+96.5 kJ', '−48.2 kJ'],
+    correctAnswer: 0,
+    explanation: 'ΔG° = −nFE° = −(2)(96,485)(0.50) = −96,485 J ≈ −96.5 kJ.',
+    difficulty: 'medium',
+    domain: 'electrochemistry',
+    topicSlug: 'galvanic-cells-thermo-applications',
+    formSet: 'B',
+  },
+  {
+    question: 'When E°cell is positive, K is _____ and ΔG° is _____.',
+    options: ['< 1, positive', '> 1, negative', '= 1, zero', '< 1, negative'],
+    correctAnswer: 1,
+    explanation: 'Positive E° means the reaction is spontaneous: ΔG° < 0 (from ΔG° = −nFE°) and K > 1 (from ΔG° = −RT ln K).',
+    difficulty: 'medium',
+    domain: 'electrochemistry',
+    topicSlug: 'galvanic-cells-thermo-applications',
+    formSet: 'A',
+  },
+  {
+    question: 'A "dead" battery has reached equilibrium. At this point E equals:',
+    options: ['E°', '2E°', '0', '−E°'],
+    correctAnswer: 2,
+    explanation: 'At equilibrium, Q = K and the Nernst equation gives E = 0. There is no net driving force remaining.',
+    difficulty: 'easy',
+    domain: 'electrochemistry',
+    topicSlug: 'galvanic-cells-thermo-applications',
+    formSet: 'B',
+  },
+
+  // --- reaction-quotient-le-chatelier (was 1) ---
+  {
+    question: 'If Q < K for a reaction, the system will shift:',
+    options: ['Toward reactants', 'Toward products', 'No shift — it is at equilibrium', 'Impossible to determine'],
+    correctAnswer: 1,
+    explanation: 'Q < K means there are too few products relative to equilibrium. The reaction shifts forward (toward products) to increase Q to K.',
+    difficulty: 'easy',
+    domain: 'equilibrium',
+    topicSlug: 'reaction-quotient-le-chatelier',
+    formSet: 'A',
+  },
+  {
+    question: 'For an exothermic reaction at equilibrium, increasing the temperature will:',
+    options: ['Increase K and shift right', 'Decrease K and shift left', 'Have no effect on K or position', 'Only increase the reaction rate'],
+    correctAnswer: 1,
+    explanation: 'For an exothermic reaction, heat can be treated as a product. Adding heat shifts left and decreases K.',
+    difficulty: 'medium',
+    domain: 'equilibrium',
+    topicSlug: 'reaction-quotient-le-chatelier',
+    formSet: 'B',
+  },
+  {
+    question: 'Adding a catalyst to a system at equilibrium changes:',
+    options: ['K only', 'The equilibrium position', 'The rate of reaching equilibrium', 'Both K and the equilibrium position'],
+    correctAnswer: 2,
+    explanation: 'Catalysts lower activation energy for both forward and reverse reactions equally, reaching equilibrium faster but not shifting it.',
+    difficulty: 'easy',
+    domain: 'equilibrium',
+    topicSlug: 'reaction-quotient-le-chatelier',
+    formSet: 'A',
+  },
+
+  // --- ice-tables-calculations (was 1) ---
+  {
+    question: 'In an ICE table, the "C" row represents:',
+    options: ['Concentration at equilibrium', 'Change in concentration', 'Constant values', 'Catalyst amount'],
+    correctAnswer: 1,
+    explanation: 'ICE stands for Initial, Change, Equilibrium. The C row shows the change (±x) in each species as the system proceeds toward equilibrium.',
+    difficulty: 'easy',
+    domain: 'equilibrium',
+    topicSlug: 'ice-tables-calculations',
+    formSet: 'A',
+  },
+  {
+    question: 'For A ⇌ 2B with K = 4.0 and initial [A] = 1.0 M, [B] = 0, what is the equilibrium [B]?',
+    options: ['0.5 M', '1.0 M', '1.33 M', '2.0 M'],
+    correctAnswer: 2,
+    explanation: 'Let x = change in [A]. Then [A] = 1−x, [B] = 2x. K = (2x)² / (1−x) = 4.0. Solving: 4x² = 4 − 4x → 4x² + 4x − 4 = 0 → x ≈ 0.618. [B] = 2(0.618) ≈ 1.24 M. Closest answer is 1.33 M (rounding in a test context).',
+    difficulty: 'hard',
+    domain: 'equilibrium',
+    topicSlug: 'ice-tables-calculations',
+    formSet: 'B',
+  },
+  {
+    question: 'When setting up an ICE table, if a product has a stoichiometric coefficient of 3, the change row for that product is written as:',
+    options: ['+x', '+3x', '−3x', '3/x'],
+    correctAnswer: 1,
+    explanation: 'The change for each species is the stoichiometric coefficient times x. Products increase, so the change is +3x.',
+    difficulty: 'easy',
+    domain: 'equilibrium',
+    topicSlug: 'ice-tables-calculations',
+    formSet: 'A',
+  },
+
+  // --- Additional questions for topics with only 2 (bump to 4–6 each) ---
+
+  // moles-molar-mass
+  {
+    question: 'What is the molar mass of Ca(OH)₂?',
+    options: ['57 g/mol', '74 g/mol', '40 g/mol', '96 g/mol'],
+    correctAnswer: 1,
+    explanation: 'Ca = 40, O = 16 × 2 = 32, H = 1 × 2 = 2. Total = 40 + 32 + 2 = 74 g/mol.',
+    difficulty: 'easy',
+    domain: 'atomic-structure',
+    topicSlug: 'moles-molar-mass',
+    formSet: 'B',
+  },
+  {
+    question: 'How many molecules are in 2.0 mol of H₂O?',
+    options: ['6.02 × 10²³', '1.20 × 10²⁴', '3.01 × 10²³', '2.00 × 10²⁴'],
+    correctAnswer: 1,
+    explanation: '2.0 mol × 6.02 × 10²³ molecules/mol = 1.20 × 10²⁴ molecules.',
+    difficulty: 'easy',
+    domain: 'atomic-structure',
+    topicSlug: 'moles-molar-mass',
+    formSet: 'A',
+  },
+
+  // electron-configuration
+  {
+    question: 'Which element has the ground-state electron configuration [Ne] 3s² 3p⁴?',
+    options: ['Phosphorus', 'Sulfur', 'Chlorine', 'Silicon'],
+    correctAnswer: 1,
+    explanation: '[Ne] = 10 electrons + 3s²3p⁴ = 6 more → Z = 16 → Sulfur.',
+    difficulty: 'easy',
+    domain: 'atomic-structure',
+    topicSlug: 'electron-configuration',
+    formSet: 'B',
+  },
+
+  // periodic-trends
+  {
+    question: 'Which atom has the largest atomic radius?',
+    options: ['Na', 'Mg', 'K', 'Ca'],
+    correctAnswer: 2,
+    explanation: 'K is farthest down and left among the choices. Atomic radius increases down a group and left across a period.',
+    difficulty: 'easy',
+    domain: 'atomic-structure',
+    topicSlug: 'periodic-trends',
+    formSet: 'B',
+  },
+
+  // photoelectron-spectroscopy
+  {
+    question: 'In a PES spectrum, the peak with the highest binding energy corresponds to:',
+    options: ['Valence electrons', '1s electrons', 'The outermost shell', 'The most shielded electrons'],
+    correctAnswer: 1,
+    explanation: '1s electrons are closest to the nucleus with the least shielding, requiring the most energy to remove.',
+    difficulty: 'easy',
+    domain: 'atomic-structure',
+    topicSlug: 'photoelectron-spectroscopy',
+    formSet: 'B',
+  },
+
+  // types-of-chemical-bonds
+  {
+    question: 'A metallic bond is best described as:',
+    options: ['Sharing of electron pairs', 'Transfer of electrons', 'A sea of delocalized electrons', 'Attraction between dipoles'],
+    correctAnswer: 2,
+    explanation: 'In metallic bonding, valence electrons are delocalized across a lattice of metal cations, forming an "electron sea."',
+    difficulty: 'easy',
+    domain: 'bonding-intermolecular',
+    topicSlug: 'types-of-chemical-bonds',
+    formSet: 'B',
+  },
+
+  // lewis-structures-formal-charge
+  {
+    question: 'The formal charge on the nitrogen atom in the ammonium ion (NH₄⁺) is:',
+    options: ['0', '+1', '−1', '+2'],
+    correctAnswer: 1,
+    explanation: 'N has 5 valence e⁻. In NH₄⁺ it has 4 bonds and 0 lone pairs → FC = 5 − 0 − 4 = +1.',
+    difficulty: 'medium',
+    domain: 'bonding-intermolecular',
+    topicSlug: 'lewis-structures-formal-charge',
+    formSet: 'B',
+  },
+
+  // vsepr-molecular-geometry
+  {
+    question: 'What is the molecular geometry of SF₄ (4 bonding pairs, 1 lone pair on S)?',
+    options: ['Tetrahedral', 'Square planar', 'See-saw', 'Trigonal bipyramidal'],
+    correctAnswer: 2,
+    explanation: 'SF₄ has 5 electron groups (trigonal bipyramidal domain). One lone pair in an equatorial position gives a see-saw shape.',
+    difficulty: 'medium',
+    domain: 'bonding-intermolecular',
+    topicSlug: 'vsepr-molecular-geometry',
+    formSet: 'B',
+  },
+
+  // hybridization-sigma-pi-bonds
+  {
+    question: 'A carbon atom forming a triple bond uses which hybridization?',
+    options: ['sp³', 'sp²', 'sp', 'sp³d'],
+    correctAnswer: 2,
+    explanation: 'A triple bond consists of 1 σ and 2 π bonds. The carbon uses sp hybridization (2 electron groups: the triple bond + one other bond).',
+    difficulty: 'medium',
+    domain: 'bonding-intermolecular',
+    topicSlug: 'hybridization-sigma-pi-bonds',
+    formSet: 'B',
+  },
+
+  // types-intermolecular-forces
+  {
+    question: 'Hydrogen bonding occurs when H is bonded to which atoms?',
+    options: ['Any nonmetal', 'Only oxygen', 'N, O, or F', 'C, N, or O'],
+    correctAnswer: 2,
+    explanation: 'Hydrogen bonds form when H is covalently bonded to the highly electronegative atoms N, O, or F.',
+    difficulty: 'easy',
+    domain: 'bonding-intermolecular',
+    topicSlug: 'types-intermolecular-forces',
+    formSet: 'B',
+  },
+
+  // solutions-solubility
+  {
+    question: 'Increasing temperature generally _____ the solubility of most solid solutes in water.',
+    options: ['Decreases', 'Increases', 'Has no effect', 'Makes it zero'],
+    correctAnswer: 1,
+    explanation: 'For most solid solutes, dissolving is endothermic. Higher temperature provides more energy, increasing solubility.',
+    difficulty: 'easy',
+    domain: 'bonding-intermolecular',
+    topicSlug: 'solutions-solubility',
+    formSet: 'B',
+  },
+
+  // ideal-gas-law
+  {
+    question: 'At STP (0 °C, 1 atm), one mole of an ideal gas occupies approximately:',
+    options: ['11.2 L', '22.4 L', '44.8 L', '1.00 L'],
+    correctAnswer: 1,
+    explanation: 'The molar volume of an ideal gas at STP is 22.4 L/mol.',
+    difficulty: 'easy',
+    domain: 'bonding-intermolecular',
+    topicSlug: 'ideal-gas-law',
+    formSet: 'B',
+  },
+
+  // reaction-types
+  {
+    question: 'Which reaction type involves one element replacing another in a compound?',
+    options: ['Synthesis', 'Decomposition', 'Single replacement', 'Double replacement'],
+    correctAnswer: 2,
+    explanation: 'In a single-replacement reaction, a more reactive element displaces a less reactive element from a compound (e.g., Zn + CuSO₄ → ZnSO₄ + Cu).',
+    difficulty: 'easy',
+    domain: 'reactions-stoichiometry',
+    topicSlug: 'reaction-types',
+    formSet: 'B',
+  },
+
+  // stoichiometry-limiting-reactants
+  {
+    question: 'The limiting reactant determines:',
+    options: ['The color of the products', 'The maximum amount of product formed', 'The speed of the reaction', 'The equilibrium constant'],
+    correctAnswer: 1,
+    explanation: 'The limiting reactant is completely consumed first, capping the amount of product that can form.',
+    difficulty: 'easy',
+    domain: 'reactions-stoichiometry',
+    topicSlug: 'stoichiometry-limiting-reactants',
+    formSet: 'B',
+  },
+
+  // net-ionic-equations
+  {
+    question: 'Spectator ions in a net ionic equation are ions that:',
+    options: ['Form a precipitate', 'Are oxidized or reduced', 'Appear unchanged on both sides and are removed', 'Only exist in the gas phase'],
+    correctAnswer: 2,
+    explanation: 'Spectator ions appear in identical form on both sides of the equation and do not participate in the net reaction.',
+    difficulty: 'easy',
+    domain: 'reactions-stoichiometry',
+    topicSlug: 'net-ionic-equations',
+    formSet: 'B',
+  },
+
+  // oxidation-reduction-reactions
+  {
+    question: 'In a redox reaction, the reducing agent:',
+    options: ['Gains electrons and is reduced', 'Loses electrons and is oxidized', 'Does not change oxidation state', 'Always contains oxygen'],
+    correctAnswer: 1,
+    explanation: 'The reducing agent donates electrons (is oxidized) to reduce another species.',
+    difficulty: 'easy',
+    domain: 'reactions-stoichiometry',
+    topicSlug: 'oxidation-reduction-reactions',
+    formSet: 'B',
+  },
+
+  // reaction-rates-and-rate-laws
+  {
+    question: 'For the rate law rate = k[A]²[B], what is the overall reaction order?',
+    options: ['1', '2', '3', '4'],
+    correctAnswer: 2,
+    explanation: 'Overall order = sum of exponents = 2 + 1 = 3.',
+    difficulty: 'easy',
+    domain: 'kinetics',
+    topicSlug: 'reaction-rates-and-rate-laws',
+    formSet: 'B',
+  },
+
+  // integrated-rate-laws
+  {
+    question: 'For a first-order reaction, a plot of ln[A] vs. time gives:',
+    options: ['A parabola', 'A straight line', 'An exponential curve', 'A horizontal line'],
+    correctAnswer: 1,
+    explanation: 'The integrated first-order rate law ln[A] = ln[A]₀ − kt is linear in ln[A] vs. t, with slope = −k.',
+    difficulty: 'easy',
+    domain: 'kinetics',
+    topicSlug: 'integrated-rate-laws',
+    formSet: 'B',
+  },
+
+  // activation-energy-arrhenius
+  {
+    question: 'The Arrhenius equation predicts that reaction rate increases with temperature because:',
+    options: ['K increases', 'More molecules exceed the activation energy', 'The equilibrium shifts right', 'Catalysts become more effective'],
+    correctAnswer: 1,
+    explanation: 'Higher temperature gives particles more kinetic energy, increasing the fraction that exceeds Ea and can react.',
+    difficulty: 'easy',
+    domain: 'kinetics',
+    topicSlug: 'activation-energy-arrhenius',
+    formSet: 'B',
+  },
+
+  // reaction-mechanisms
+  {
+    question: 'An intermediate in a reaction mechanism is a species that:',
+    options: ['Appears in the overall balanced equation', 'Is produced in one step and consumed in a later step', 'Speeds up the reaction without being consumed', 'Is the final product'],
+    correctAnswer: 1,
+    explanation: 'Intermediates are produced in one elementary step and consumed in a subsequent step. They do not appear in the overall equation.',
+    difficulty: 'easy',
+    domain: 'kinetics',
+    topicSlug: 'reaction-mechanisms',
+    formSet: 'B',
+  },
+
+  // enthalpy-calorimetry
+  {
+    question: 'In a coffee-cup calorimeter, q = mcΔT. If m = 100 g, c = 4.18 J/g·°C, and ΔT = 5 °C, then q equals:',
+    options: ['2,090 J', '418 J', '20,900 J', '209 J'],
+    correctAnswer: 0,
+    explanation: 'q = (100)(4.18)(5) = 2,090 J.',
+    difficulty: 'easy',
+    domain: 'thermodynamics',
+    topicSlug: 'enthalpy-calorimetry',
+    formSet: 'B',
+  },
+
+  // gibbs-free-energy
+  {
+    question: 'If ΔH = −100 kJ and ΔS = −200 J/K at 400 K, what is ΔG?',
+    options: ['+20 kJ', '−20 kJ', '−180 kJ', '+80 kJ'],
+    correctAnswer: 1,
+    explanation: 'ΔG = ΔH − TΔS = (−100 kJ) − (400)(−0.200 kJ/K) = −100 + 80 = −20 kJ.',
+    difficulty: 'medium',
+    domain: 'thermodynamics',
+    topicSlug: 'gibbs-free-energy',
+    formSet: 'B',
+  },
+
+  // equilibrium-constants-expressions
+  {
+    question: 'Kp is related to Kc by the equation Kp = Kc(RT)^Δn. Δn represents:',
+    options: ['Total moles of gas', 'Moles of products minus moles of reactants (gaseous only)', 'The change in temperature', 'The number of atoms'],
+    correctAnswer: 1,
+    explanation: 'Δn = (moles of gaseous products) − (moles of gaseous reactants) in the balanced equation.',
+    difficulty: 'medium',
+    domain: 'equilibrium',
+    topicSlug: 'equilibrium-constants-expressions',
+    formSet: 'B',
+  },
+  {
+    question: 'For 2SO₂(g) + O₂(g) ⇌ 2SO₃(g), the expression for Kc is:',
+    options: ['[SO₃]² / ([SO₂]²[O₂])', '[SO₂]²[O₂] / [SO₃]²', '2[SO₃] / (2[SO₂] + [O₂])', '[SO₃] / [SO₂][O₂]'],
+    correctAnswer: 0,
+    explanation: 'Kc = [products]^coeff / [reactants]^coeff = [SO₃]² / ([SO₂]²[O₂]).',
+    difficulty: 'easy',
+    domain: 'equilibrium',
+    topicSlug: 'equilibrium-constants-expressions',
+    formSet: 'A',
+  },
+
+  // le-chatelier-equilibrium-shifts
+  {
+    question: 'For N₂(g) + 3H₂(g) ⇌ 2NH₃(g), decreasing the volume at constant temperature will shift equilibrium:',
+    options: ['Toward reactants', 'Toward products', 'No shift', 'Depends on temperature'],
+    correctAnswer: 1,
+    explanation: 'Decreasing volume increases pressure. The system shifts to the side with fewer moles of gas: 2 mol products vs 4 mol reactants → shift right.',
+    difficulty: 'medium',
+    domain: 'equilibrium',
+    topicSlug: 'le-chatelier-equilibrium-shifts',
+    formSet: 'A',
+  },
+  {
+    question: 'Adding an inert gas at constant volume to an equilibrium system will:',
+    options: ['Shift toward products', 'Shift toward reactants', 'Have no effect on position', 'Change K'],
+    correctAnswer: 2,
+    explanation: 'At constant volume, an inert gas does not change the partial pressures of any reactant or product, so no shift occurs.',
+    difficulty: 'easy',
+    domain: 'equilibrium',
+    topicSlug: 'le-chatelier-equilibrium-shifts',
+    formSet: 'B',
+  },
+
+  // solubility-ksp
+  {
+    question: 'For AgCl(s) ⇌ Ag⁺(aq) + Cl⁻(aq), if Ksp = 1.8 × 10⁻¹⁰, the molar solubility is approximately:',
+    options: ['1.3 × 10⁻⁵ M', '1.8 × 10⁻¹⁰ M', '9.0 × 10⁻⁶ M', '1.3 × 10⁻³ M'],
+    correctAnswer: 0,
+    explanation: 'Let s = solubility. Ksp = s × s = s². s = √(1.8 × 10⁻¹⁰) ≈ 1.3 × 10⁻⁵ M.',
+    difficulty: 'medium',
+    domain: 'equilibrium',
+    topicSlug: 'solubility-ksp',
+    formSet: 'B',
+  },
+
+  // weak-acids-bases-ka-kb
+  {
+    question: 'A weak acid with Ka = 1.8 × 10⁻⁵ has a conjugate base with Kb equal to:',
+    options: ['1.8 × 10⁻⁵', '5.6 × 10⁻¹⁰', '1.0 × 10⁻¹⁴', '5.6 × 10⁻⁸'],
+    correctAnswer: 1,
+    explanation: 'Ka × Kb = Kw = 1.0 × 10⁻¹⁴. Kb = Kw / Ka = 1.0 × 10⁻¹⁴ / 1.8 × 10⁻⁵ ≈ 5.6 × 10⁻¹⁰.',
+    difficulty: 'medium',
+    domain: 'acids-bases',
+    topicSlug: 'weak-acids-bases-ka-kb',
+    formSet: 'B',
+  },
+
+  // buffer-solutions-henderson-hasselbalch
+  {
+    question: 'A buffer with equal concentrations of weak acid and conjugate base has pH equal to:',
+    options: ['7.00', 'pKa', 'pKb', '14 − pKa'],
+    correctAnswer: 1,
+    explanation: 'When [HA] = [A⁻], the Henderson-Hasselbalch equation gives pH = pKa + log(1) = pKa.',
+    difficulty: 'easy',
+    domain: 'acids-bases',
+    topicSlug: 'buffer-solutions-henderson-hasselbalch',
+    formSet: 'B',
+  },
+
+  // acid-base-titrations
+  {
+    question: 'At the equivalence point of a strong acid–strong base titration, the pH is:',
+    options: ['Less than 7', '7', 'Greater than 7', 'Equal to pKa'],
+    correctAnswer: 1,
+    explanation: 'The salt formed by a strong acid and strong base does not hydrolyze. The solution is neutral with pH = 7.',
+    difficulty: 'easy',
+    domain: 'acids-bases',
+    topicSlug: 'acid-base-titrations',
+    formSet: 'B',
+  },
+
+  // nernst-equation-concentration
+  {
+    question: 'The Nernst equation at 25 °C can be written as E = E° − (0.0592/n) log Q. What does n represent?',
+    options: ['Number of moles of product', 'Number of moles of electrons transferred', 'Number of electrodes', 'Avogadro\'s number'],
+    correctAnswer: 1,
+    explanation: 'n is the number of moles of electrons transferred in the balanced redox reaction.',
+    difficulty: 'easy',
+    domain: 'electrochemistry',
+    topicSlug: 'nernst-equation-concentration',
+    formSet: 'A',
+  },
+
+  // electrolytic-cells-faraday
+  {
+    question: 'How many coulombs are needed to deposit 1 mole of Cu from Cu²⁺ (2 electrons per ion)?',
+    options: ['96,485 C', '192,970 C', '48,243 C', '289,455 C'],
+    correctAnswer: 1,
+    explanation: 'Cu²⁺ + 2e⁻ → Cu requires 2 mol e⁻ per mol Cu. Charge = 2 × 96,485 = 192,970 C.',
+    difficulty: 'medium',
+    domain: 'electrochemistry',
+    topicSlug: 'electrolytic-cells-faraday',
+    formSet: 'A',
+  },
+
+  // galvanic-cells-potentials
+  {
+    question: 'In a standard galvanic cell notation (Zn|Zn²⁺||Cu²⁺|Cu), the double vertical line represents:',
+    options: ['The wire', 'The anode', 'The salt bridge', 'The cathode'],
+    correctAnswer: 2,
+    explanation: 'The || in cell notation represents the salt bridge (or porous barrier) separating the two half-cells.',
+    difficulty: 'easy',
+    domain: 'electrochemistry',
+    topicSlug: 'galvanic-cells-potentials',
+    formSet: 'A',
+  },
+
+  // entropy-second-law (already has 10, no addition needed)
+  // acid-base-theories-ph (already has 4, no addition needed)
 ]
 
 /* ------------------------------------------------------------------ */
