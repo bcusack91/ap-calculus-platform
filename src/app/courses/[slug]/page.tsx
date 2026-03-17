@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import { InArticleAd } from '@/components/ad-banner'
 import { breadcrumbJsonLd } from '@/lib/jsonld'
 import CourseEntranceQuiz from '@/components/CourseEntranceQuiz'
+import DiagnosticStudyPlanBanner from '@/components/DiagnosticStudyPlanBanner'
 
 // ISR: revalidate content every hour
 export const revalidate = 3600
@@ -196,6 +197,9 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
             </div>
           </div>
         </div>
+
+        {/* Personalized study plan from previous diagnostic — shown prominently at top */}
+        <DiagnosticStudyPlanBanner courseSlug={slug} />
 
         {/* Course Overview */}
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 mb-12 shadow-sm">

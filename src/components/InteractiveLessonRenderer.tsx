@@ -680,8 +680,28 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     setUnlockedParts(unlocked)
 
     if (masteredParts.size === totalParts) {
-      // All parts mastered! Save full mastery and navigate to chosen destination
-      saveProgress(undefined, true)
+      // All parts mastered! Save full mastery directly (bypasses calculatePartMastery
+      // which would return ~0 since lessonPart/completedSections haven't advanced yet)
+      if (session?.user) {
+        fetch('/api/progress/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            topicId: cachedTopicId,
+            topicSlug: !cachedTopicId ? topicSlug : undefined,
+            lessonPart: totalParts,
+            completedSections: [],
+            masteryLevel: 1.0,
+            timeSpent: 0,
+            isPartCompletion: true,
+          }),
+        })
+          .then(() => {
+            // Trigger competitive mode unlock check so the profile is created/updated
+            fetch('/api/competitive/unlock-check').catch(() => {})
+          })
+          .catch(console.error)
+      }
       if (destination === 'dashboard') {
         router.push('/dashboard')
       } else if (destination === 'course') {
