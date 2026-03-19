@@ -175,6 +175,72 @@ const quizLoaders: Record<string, QuizLoader> = {
   'galvanic-cells-thermo-applications': () => import('./ap-chemistry'),
 
   // ═══════════════════════════════════════════════════
+  // AP Physics 1 Exit Quizzes
+  // ═══════════════════════════════════════════════════
+  'ap-physics-1': () => import('./ap-physics-1'),
+  // Kinematics
+  'one-dimensional-motion': () => import('./ap-physics-1'),
+  'motion-graphs': () => import('./ap-physics-1'),
+  'two-dimensional-motion': () => import('./ap-physics-1'),
+  'projectile-motion': () => import('./ap-physics-1'),
+  // Dynamics
+  'newtons-first-second-laws': () => import('./ap-physics-1'),
+  'newtons-third-law': () => import('./ap-physics-1'),
+  'friction': () => import('./ap-physics-1'),
+  'inclined-planes': () => import('./ap-physics-1'),
+  // Energy
+  'work-and-kinetic-energy': () => import('./ap-physics-1'),
+  'gravitational-potential-energy': () => import('./ap-physics-1'),
+  'elastic-potential-energy': () => import('./ap-physics-1'),
+  'conservation-of-energy': () => import('./ap-physics-1'),
+  // Momentum
+  'momentum-and-impulse': () => import('./ap-physics-1'),
+  'conservation-of-momentum': () => import('./ap-physics-1'),
+  'collisions': () => import('./ap-physics-1'),
+  // Circular Motion & Gravitation
+  'uniform-circular-motion': () => import('./ap-physics-1'),
+  'centripetal-force': () => import('./ap-physics-1'),
+  'universal-gravitation': () => import('./ap-physics-1'),
+  // Torque & Rotation
+  'torque-and-equilibrium': () => import('./ap-physics-1'),
+  'rotational-kinematics': () => import('./ap-physics-1'),
+  'angular-momentum': () => import('./ap-physics-1'),
+  // Simple Harmonic Motion
+  'introduction-to-shm': () => import('./ap-physics-1'),
+  'energy-in-shm': () => import('./ap-physics-1'),
+
+  // ═══════════════════════════════════════════════════
+  // AP Physics 2 Exit Quizzes
+  // ═══════════════════════════════════════════════════
+  'ap-physics-2': () => import('./ap-physics-2'),
+  // Fluids
+  'fluid-pressure': () => import('./ap-physics-2'),
+  'buoyancy': () => import('./ap-physics-2'),
+  'fluid-dynamics': () => import('./ap-physics-2'),
+  // Thermodynamics
+  'temperature-and-heat': () => import('./ap-physics-2'),
+  'kinetic-theory': () => import('./ap-physics-2'),
+  'thermodynamic-laws': () => import('./ap-physics-2'),
+  // Electricity
+  'electric-charge-and-force': () => import('./ap-physics-2'),
+  'electric-fields': () => import('./ap-physics-2'),
+  'electric-potential': () => import('./ap-physics-2'),
+  'capacitance': () => import('./ap-physics-2'),
+  // Circuits
+  'dc-circuits': () => import('./ap-physics-2'),
+  'rc-circuits': () => import('./ap-physics-2'),
+  // Magnetism
+  'magnetic-fields': () => import('./ap-physics-2'),
+  'electromagnetic-induction': () => import('./ap-physics-2'),
+  // Optics
+  'geometric-optics': () => import('./ap-physics-2'),
+  'wave-optics': () => import('./ap-physics-2'),
+  // Modern Physics
+  'quantum-mechanics': () => import('./ap-physics-2'),
+  'nuclear-physics': () => import('./ap-physics-2'),
+  'atomic-structure': () => import('./ap-physics-2'),
+
+  // ═══════════════════════════════════════════════════
   // AP Calculus AB Exit Quizzes
   // ═══════════════════════════════════════════════════
   'ap-calculus-ab': () => import('./ap-calculus-ab'),

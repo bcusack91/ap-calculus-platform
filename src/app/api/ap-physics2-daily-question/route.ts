@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { getDailyQuestions } from '@/data/ap-physics1-daily-question'
+import { getDailyQuestions } from '@/data/ap-physics2-daily-question'
 
 export const revalidate = 3600
 
