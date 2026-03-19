@@ -1,0 +1,46 @@
+/**
+ * Entrance Quiz — Evidence for Evolution (AP Biology)
+ * 14 questions · 7 parts (2 per part)
+ */
+
+import type { EntranceQuizQuestion } from './moles-molar-mass'
+
+const questions: EntranceQuizQuestion[] = [
+  // Part 1
+  { id: 'ee-ent-1a', question: 'What do transitional fossils demonstrate?', options: ['That species never change over time', 'That all species appeared at the same time', 'That fossils are unreliable evidence for evolution', 'Intermediate forms between ancestral and descendant species'], correctIndex: 3, explanation: 'Transitional fossils show organisms with features intermediate between ancestral and descendant groups, providing direct evidence of evolutionary change.', partNumber: 1, partTitle: 'Fossil Record' },
+  { id: 'ee-ent-1b', question: 'According to the law of superposition, where are the oldest fossils found?', options: ['In the topmost (shallowest) rock layers', 'In the deepest (oldest) rock layers', 'Randomly distributed regardless of depth', 'Only in volcanic rock formations'], correctIndex: 1, explanation: 'The law of superposition states that in undisturbed sedimentary rock, older layers are at the bottom and younger layers are at the top — so the oldest fossils are in the deepest layers.', partNumber: 1, partTitle: 'Fossil Record' },
+  // Part 2
+  { id: 'ee-ent-2a', question: 'What are homologous structures?', options: ['Structures with similar function but different evolutionary origin', 'Structures that are identical in all species', 'Structures with similar anatomy derived from a common ancestor but serving different functions', 'Vestigial organs that have lost all function'], correctIndex: 2, explanation: 'Homologous structures share similar anatomy due to descent from a common ancestor but may serve different functions — like a bat wing and a whale flipper.', partNumber: 2, partTitle: 'Homologous Structures' },
+  { id: 'ee-ent-2b', question: 'What are analogous structures, and what process produces them?', options: ['Structures inherited from a common ancestor; produced by divergent evolution', 'Structures with similar function but different evolutionary origin; produced by convergent evolution', 'Identical structures found in all living organisms', 'Non-functional structures left over from ancestors'], correctIndex: 1, explanation: 'Analogous structures have similar functions but evolved independently in unrelated lineages through convergent evolution — like bird wings and insect wings.', partNumber: 2, partTitle: 'Homologous Structures' },
+  // Part 3
+  { id: 'ee-ent-3a', question: 'How do molecular sequences provide evidence for evolution?', options: ['More similar DNA or protein sequences indicate more closely related species', 'Species with identical DNA are always the same species', 'Molecular data contradicts all fossil evidence', 'DNA similarity has no correlation with evolutionary relatedness'], correctIndex: 0, explanation: 'Species that share more similar DNA or protein sequences are more closely related evolutionarily — molecular evidence consistently supports relationships established by other evidence.', partNumber: 3, partTitle: 'Molecular Evidence' },
+  { id: 'ee-ent-3b', question: 'What is a molecular clock?', options: ['A device used to measure the speed of DNA replication', 'A method that uses mutation rates to estimate when species diverged', 'A timer used in PCR experiments', 'A protein that regulates the cell cycle'], correctIndex: 1, explanation: 'A molecular clock uses the rate of molecular change (mutations) accumulated over time to estimate when two species last shared a common ancestor.', partNumber: 3, partTitle: 'Molecular Evidence' },
+  // Part 4
+  { id: 'ee-ent-4a', question: 'How does the distribution of island species support evolution?', options: ['Island species are unrelated to any mainland organisms', 'All island species are identical to their mainland counterparts', 'Islands only contain species that migrated from other islands', 'Island species are often closely related to nearby mainland species, showing descent with modification'], correctIndex: 3, explanation: 'Island species typically resemble nearby mainland species but show unique adaptations — evidence of descent with modification from mainland ancestors.', partNumber: 4, partTitle: 'Biogeography' },
+  { id: 'ee-ent-4b', question: 'How does continental drift explain biogeographic patterns?', options: ['It has no relevance to species distribution', 'It explains why similar fossils are found on continents that were once connected', 'It proves that species can teleport between continents', 'Continental drift only affects marine organisms'], correctIndex: 1, explanation: 'Continental drift explains why similar fossils (like Glossopteris) are found on continents now separated by oceans — these landmasses were once joined, and species dispersed before separation.', partNumber: 4, partTitle: 'Biogeography' },
+  // Part 5
+  { id: 'ee-ent-5a', question: 'How is antibiotic resistance in bacteria an example of observable evolution?', options: ['Bacteria choose to become resistant through learned behavior', 'Natural selection favors bacteria with resistance mutations, demonstrating evolution in action', 'Antibiotics cause bacteria to mutate intentionally', 'Antibiotic resistance is not related to evolution'], correctIndex: 1, explanation: 'Antibiotic resistance arises through random mutations; bacteria with resistance survive and reproduce in the presence of antibiotics — a clear example of natural selection driving evolution.', partNumber: 5, partTitle: 'Direct Observation' },
+  { id: 'ee-ent-5b', question: 'What did the peppered moth example demonstrate about natural selection?', options: ['Moths can change their color voluntarily', 'Dark moths were always more common than light moths', 'Industrial melanism showed that predation drives natural selection based on camouflage', 'Peppered moths are not affected by their environment'], correctIndex: 2, explanation: 'During the Industrial Revolution, pollution darkened tree bark, making dark (melanic) moths better camouflaged from predators — a classic demonstration of natural selection by differential predation.', partNumber: 5, partTitle: 'Direct Observation' },
+  // Part 6
+  { id: 'ee-ent-6a', question: 'Species A and B share 95% DNA similarity; species A and C share 80%. Which pair is more closely related?', options: ['A and B', 'A and C', 'B and C', 'All three are equally related'], correctIndex: 0, explanation: 'Greater DNA sequence similarity indicates more recent common ancestry. Species A and B (95% similar) are more closely related than A and C (80% similar).', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+  { id: 'ee-ent-6b', question: 'What do vestigial structures like the human appendix indicate about evolutionary history?', options: ['They prove that evolution has no direction', 'They are evidence of descent from ancestors in which the structure was functional', 'They show that all organs are equally important', 'Vestigial structures have no evolutionary significance'], correctIndex: 1, explanation: 'Vestigial structures are remnants of organs that were functional in ancestors but have lost their original function, providing evidence of descent with modification.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+  // Part 7
+  { id: 'ee-ent-7a', question: 'What is the relationship between convergent and divergent evolution?', options: ['They are the same process observed at different scales', 'Both produce only homologous structures', 'Neither is relevant to modern evolutionary theory', 'Convergent evolution produces analogous structures; divergent evolution produces homologous structures'], correctIndex: 3, explanation: 'Convergent evolution produces analogous structures in unrelated species facing similar environmental pressures, while divergent evolution produces homologous structures as related species adapt to different environments.', partNumber: 7, partTitle: 'AP Review' },
+  { id: 'ee-ent-7b', question: 'Why is evolution considered well-supported by scientists?', options: ['It is based on a single line of evidence from fossils', 'It is supported by multiple independent lines of evidence including fossil, molecular, anatomical, and biogeographic data', 'It has only been confirmed by laboratory experiments', 'Scientists accept it without any supporting evidence'], correctIndex: 1, explanation: 'Evolution is supported by converging evidence from paleontology (fossils), molecular biology (DNA/protein comparisons), comparative anatomy (homologous structures), and biogeography (species distributions).', partNumber: 7, partTitle: 'AP Review' },
+]
+
+export function generateEntranceQuiz(): EntranceQuizQuestion[] {
+  return [...questions].sort(() => Math.random() - 0.5)
+}
+
+export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
+  return [
+    { partNumber: 1, partTitle: 'Fossil Record' },
+    { partNumber: 2, partTitle: 'Homologous Structures' },
+    { partNumber: 3, partTitle: 'Molecular Evidence' },
+    { partNumber: 4, partTitle: 'Biogeography' },
+    { partNumber: 5, partTitle: 'Direct Observation' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
+  ]
+}

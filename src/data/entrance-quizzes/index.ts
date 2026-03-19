@@ -145,6 +145,33 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'logistic-models-calcbc': () => import('./logistic-models-calcbc'),
   'bc-exam-strategies-calcbc': () => import('./bc-exam-strategies-calcbc'),
   'review-connections-calcbc': () => import('./review-connections-calcbc'),
+
+  // AP Biology
+  'water-properties-biochemistry': () => import('./water-properties-biochemistry'),
+  'biological-macromolecules': () => import('./biological-macromolecules'),
+  'enzyme-structure-function': () => import('./enzyme-structure-function'),
+  'cell-structure-organelles': () => import('./cell-structure-organelles'),
+  'membrane-transport': () => import('./membrane-transport'),
+  'cell-compartmentalization': () => import('./cell-compartmentalization'),
+  'cellular-respiration': () => import('./cellular-respiration'),
+  'photosynthesis': () => import('./photosynthesis'),
+  'fitness-environment': () => import('./fitness-environment'),
+  'cell-communication-signaling': () => import('./cell-communication-signaling'),
+  'cell-cycle-mitosis': () => import('./cell-cycle-mitosis'),
+  'feedback-mechanisms': () => import('./feedback-mechanisms'),
+  'meiosis-genetic-diversity': () => import('./meiosis-genetic-diversity'),
+  'mendelian-genetics': () => import('./mendelian-genetics'),
+  'non-mendelian-genetics': () => import('./non-mendelian-genetics'),
+  'dna-replication': () => import('./dna-replication'),
+  'transcription-translation': () => import('./transcription-translation'),
+  'gene-regulation': () => import('./gene-regulation'),
+  'biotechnology': () => import('./biotechnology'),
+  'evidence-evolution': () => import('./evidence-evolution'),
+  'natural-selection-adaptation': () => import('./natural-selection-adaptation'),
+  'speciation-macroevolution': () => import('./speciation-macroevolution'),
+  'ecology-ecosystems': () => import('./ecology-ecosystems'),
+  'energy-flow-nutrient-cycling': () => import('./energy-flow-nutrient-cycling'),
+  'population-community-ecology': () => import('./population-community-ecology'),
 }
 
 /**
