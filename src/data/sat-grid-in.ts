@@ -47,6 +47,16 @@ export function generateGridInProblems(count = 10): GridInProblem[] {
     genSequenceNthTerm,
     genFactoring,
     genWorkRate,
+    genMedianCalculation,
+    genCompoundInterest,
+    genVolumeBox,
+    genPercentOfTotal,
+    genMidpointFormula,
+    genSimplifyRadical,
+    genArithmeticSeries,
+    genQuadraticVertex,
+    genRemainder,
+    genRightTriangleSide,
   ]
 
   // Shuffle and pick
@@ -380,6 +390,165 @@ function genWorkRate(): Omit<GridInProblem, 'id'> {
     explanation: `Combined rate = 1/${t1} + 1/${t2} = (${t2} + ${t1}) / ${t1 * t2} = ${t1 + t2}/${t1 * t2}. Time = ${t1 * t2}/${t1 + t2} ≈ ${answer} hours.`,
     category: 'Problem Solving',
     difficulty: 'hard',
+  }
+}
+
+function genMedianCalculation(): Omit<GridInProblem, 'id'> {
+  const values = Array.from({ length: 5 }, () => rand(1, 30)).sort((a, b) => a - b)
+  const median = values[2]
+  return {
+    question: `What is the median of the data set: ${values.join(', ')}?`,
+    correctAnswer: median,
+    acceptableAnswers: [median],
+    tolerance: 0,
+    explanation: `Sort the values: ${values.join(', ')}. The middle (3rd) value is ${median}.`,
+    category: 'Statistics',
+    difficulty: 'easy',
+  }
+}
+
+function genCompoundInterest(): Omit<GridInProblem, 'id'> {
+  const principal = rand(1, 5) * 1000
+  const rate = rand(2, 8)
+  const years = rand(2, 4)
+  const amount = Math.round(principal * Math.pow(1 + rate / 100, years) * 100) / 100
+  return {
+    question: `$${principal} is invested at ${rate}% annual interest compounded yearly. What is the value after ${years} years? (Round to nearest cent.)`,
+    correctAnswer: amount,
+    acceptableAnswers: [amount, Math.round(amount)],
+    tolerance: 0.01,
+    explanation: `A = ${principal}(1 + ${rate / 100})^${years} = ${principal} × ${Math.pow(1 + rate / 100, years).toFixed(4)} ≈ $${amount}.`,
+    category: 'Problem Solving',
+    difficulty: 'hard',
+  }
+}
+
+function genVolumeBox(): Omit<GridInProblem, 'id'> {
+  const l = rand(2, 10)
+  const w = rand(2, 10)
+  const h = rand(2, 10)
+  const volume = l * w * h
+  return {
+    question: `A rectangular box has dimensions ${l} × ${w} × ${h}. What is its volume?`,
+    correctAnswer: volume,
+    acceptableAnswers: [volume],
+    tolerance: 0,
+    explanation: `Volume = length × width × height = ${l} × ${w} × ${h} = ${volume}.`,
+    category: 'Geometry',
+    difficulty: 'easy',
+  }
+}
+
+function genPercentOfTotal(): Omit<GridInProblem, 'id'> {
+  const total = rand(4, 10) * 50
+  const percent = rand(1, 9) * 10
+  const answer = total * percent / 100
+  return {
+    question: `What is ${percent}% of ${total}?`,
+    correctAnswer: answer,
+    acceptableAnswers: [answer],
+    tolerance: 0,
+    explanation: `${percent}% of ${total} = (${percent}/100) × ${total} = ${answer}.`,
+    category: 'Algebra',
+    difficulty: 'easy',
+  }
+}
+
+function genMidpointFormula(): Omit<GridInProblem, 'id'> {
+  const x1 = rand(-8, 8) * 2
+  const x2 = rand(-8, 8) * 2
+  const midX = (x1 + x2) / 2
+  return {
+    question: `What is the x-coordinate of the midpoint between (${x1}, 0) and (${x2}, 0)?`,
+    correctAnswer: midX,
+    acceptableAnswers: [midX],
+    tolerance: 0,
+    explanation: `Midpoint x = (${x1} + ${x2}) / 2 = ${x1 + x2} / 2 = ${midX}.`,
+    category: 'Geometry',
+    difficulty: 'medium',
+  }
+}
+
+function genSimplifyRadical(): Omit<GridInProblem, 'id'> {
+  const base = rand(2, 6)
+  const radicand = base * base * rand(1, 4)
+  const outsideRoot = base
+  return {
+    question: `Simplify √${radicand}. What is the coefficient outside the radical? (If √${radicand} = a√b, what is a?)`,
+    correctAnswer: outsideRoot,
+    acceptableAnswers: [outsideRoot],
+    tolerance: 0,
+    explanation: `√${radicand} = √(${base}² × ${radicand / (base * base)}) = ${base}√${radicand / (base * base)}. The coefficient is ${base}.`,
+    category: 'Algebra',
+    difficulty: 'medium',
+  }
+}
+
+function genArithmeticSeries(): Omit<GridInProblem, 'id'> {
+  const a1 = rand(1, 10)
+  const d = rand(2, 5)
+  const n = rand(5, 15)
+  const an = a1 + (n - 1) * d
+  const sum = n * (a1 + an) / 2
+  return {
+    question: `Find the sum of the first ${n} terms of the arithmetic sequence with first term ${a1} and common difference ${d}.`,
+    correctAnswer: sum,
+    acceptableAnswers: [sum],
+    tolerance: 0,
+    explanation: `Last term a_${n} = ${a1} + ${n - 1}(${d}) = ${an}. Sum = ${n}(${a1} + ${an})/2 = ${sum}.`,
+    category: 'Algebra',
+    difficulty: 'hard',
+  }
+}
+
+function genQuadraticVertex(): Omit<GridInProblem, 'id'> {
+  const h = rand(-5, 5)
+  const a = rand(1, 3)
+  const b = -2 * a * h
+  const c = rand(-10, 10)
+  return {
+    question: `For the parabola y = ${a}x² ${b >= 0 ? '+' : '−'} ${Math.abs(b)}x + ${c}, what is the x-coordinate of the vertex?`,
+    correctAnswer: h,
+    acceptableAnswers: [h],
+    tolerance: 0,
+    explanation: `x-vertex = -b/(2a) = -(${b})/(2·${a}) = ${-b}/${2 * a} = ${h}.`,
+    category: 'Algebra',
+    difficulty: 'medium',
+  }
+}
+
+function genRemainder(): Omit<GridInProblem, 'id'> {
+  const divisor = rand(3, 12)
+  const quotient = rand(5, 20)
+  const remainder = rand(1, divisor - 1)
+  const dividend = divisor * quotient + remainder
+  return {
+    question: `What is the remainder when ${dividend} is divided by ${divisor}?`,
+    correctAnswer: remainder,
+    acceptableAnswers: [remainder],
+    tolerance: 0,
+    explanation: `${dividend} ÷ ${divisor} = ${quotient} remainder ${remainder}, since ${divisor} × ${quotient} = ${divisor * quotient} and ${dividend} − ${divisor * quotient} = ${remainder}.`,
+    category: 'Problem Solving',
+    difficulty: 'easy',
+  }
+}
+
+function genRightTriangleSide(): Omit<GridInProblem, 'id'> {
+  // Use Pythagorean triples
+  const triples = [[3,4,5],[5,12,13],[8,15,17],[7,24,25]]
+  const [a, b, c] = triples[rand(0, triples.length - 1)]
+  const scale = rand(1, 3)
+  const sa = a * scale
+  const sb = b * scale
+  const sc = c * scale
+  return {
+    question: `A right triangle has legs of length ${sa} and ${sb}. What is the length of the hypotenuse?`,
+    correctAnswer: sc,
+    acceptableAnswers: [sc],
+    tolerance: 0,
+    explanation: `By the Pythagorean theorem: c = √(${sa}² + ${sb}²) = √(${sa * sa} + ${sb * sb}) = √${sc * sc} = ${sc}.`,
+    category: 'Geometry',
+    difficulty: 'medium',
   }
 }
 

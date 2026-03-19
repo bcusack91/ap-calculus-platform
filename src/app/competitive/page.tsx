@@ -49,7 +49,7 @@ export default function CompetitivePage() {
   const [inQueue, setInQueue] = useState(false)
   const [queueStatus, setQueueStatus] = useState<QueueStatus | null>(null)
   const [selectedMode, setSelectedMode] = useState('SPEED_RACE')
-  const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'algebra2' | 'sat-punctuation-commas-semicolons' | 'sat-punctuation' | 'parametric-equations' | 'vectors' | 'polar-coordinates' | 'ap-biology' | 'ap-chemistry' | 'ap-psychology' | 'ap-statistics' | 'ap-physics1' | 'sat-math' | 'sat-reading' | 'act-math' | 'act-science' | 'ochem' | 'precalc' | 'geometry' | 'cumulative'>('the-unit-circle')
+  const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'algebra2' | 'sat-punctuation-commas-semicolons' | 'sat-punctuation' | 'parametric-equations' | 'vectors' | 'polar-coordinates' | 'ap-biology' | 'ap-chemistry' | 'ap-psychology' | 'ap-statistics' | 'ap-physics1' | 'ap-physics2' | 'ap-calculus-ab' | 'ap-calculus-bc' | 'ap-physics-c-mech' | 'ap-physics-c-em' | 'ap-precalculus' | 'sat-math' | 'sat-reading' | 'act-math' | 'act-science' | 'ochem' | 'precalc' | 'geometry' | 'cumulative'>('the-unit-circle')
   const [completedTopics, setCompletedTopics] = useState<string[]>([])
   const [competitiveCategories, setCompetitiveCategories] = useState<Record<string, boolean>>({})
   const [algebra2SubtopicDetails, setAlgebra2SubtopicDetails] = useState<{key: string; label: string}[]>([])
@@ -753,6 +753,144 @@ export default function CompetitivePage() {
                 Kinematics, Forces & Energy
               </p>
               {!competitiveCategories['ap-physics1'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('ap-physics2')}
+              disabled={!competitiveCategories['ap-physics2']}
+              className={`p-5 rounded-xl transition-all ${
+                selectedTopic === 'ap-physics2'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['ap-physics2']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-3xl mb-2">⚡</div>
+              <h3 className="text-lg font-bold mb-1">AP Physics 2</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Electricity, Magnetism & Optics
+              </p>
+              {!competitiveCategories['ap-physics2'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('ap-physics-c-mech')}
+              disabled={!competitiveCategories['ap-physics-c-mech']}
+              className={`p-5 rounded-xl transition-all ${
+                selectedTopic === 'ap-physics-c-mech'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['ap-physics-c-mech']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-3xl mb-2">🔧</div>
+              <h3 className="text-lg font-bold mb-1">AP Physics C: Mech</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Calculus-Based Mechanics
+              </p>
+              {!competitiveCategories['ap-physics-c-mech'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('ap-physics-c-em')}
+              disabled={!competitiveCategories['ap-physics-c-em']}
+              className={`p-5 rounded-xl transition-all ${
+                selectedTopic === 'ap-physics-c-em'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['ap-physics-c-em']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-3xl mb-2">🧲</div>
+              <h3 className="text-lg font-bold mb-1">AP Physics C: E&M</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Calculus-Based E&M
+              </p>
+              {!competitiveCategories['ap-physics-c-em'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('ap-calculus-ab')}
+              disabled={!competitiveCategories['ap-calculus-ab']}
+              className={`p-5 rounded-xl transition-all ${
+                selectedTopic === 'ap-calculus-ab'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['ap-calculus-ab']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-3xl mb-2">∫</div>
+              <h3 className="text-lg font-bold mb-1">AP Calculus AB</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Limits, Derivatives & Integrals
+              </p>
+              {!competitiveCategories['ap-calculus-ab'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('ap-calculus-bc')}
+              disabled={!competitiveCategories['ap-calculus-bc']}
+              className={`p-5 rounded-xl transition-all ${
+                selectedTopic === 'ap-calculus-bc'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['ap-calculus-bc']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-3xl mb-2">∑</div>
+              <h3 className="text-lg font-bold mb-1">AP Calculus BC</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Series, Parametric & Polar
+              </p>
+              {!competitiveCategories['ap-calculus-bc'] && (
+                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => setSelectedTopic('ap-precalculus')}
+              disabled={!competitiveCategories['ap-precalculus']}
+              className={`p-5 rounded-xl transition-all ${
+                selectedTopic === 'ap-precalculus'
+                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
+                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
+              } ${
+                !competitiveCategories['ap-precalculus']
+                  ? 'opacity-50 cursor-not-allowed'
+                  : 'cursor-pointer'
+              }`}
+            >
+              <div className="text-3xl mb-2">📊</div>
+              <h3 className="text-lg font-bold mb-1">AP Precalculus</h3>
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                Functions & Modeling
+              </p>
+              {!competitiveCategories['ap-precalculus'] && (
                 <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
               )}
             </button>

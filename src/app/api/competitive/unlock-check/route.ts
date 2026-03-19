@@ -150,6 +150,24 @@ export async function GET() {
       'geometry': grantAllCategories || grantedCategories.has('geometry') || completedTopicSlugs.some(s =>
         s.includes('geometry') || s.includes('triangles') || s.includes('circles-geometry') || s.includes('congruence')
       ),
+      'ap-physics2': grantAllCategories || grantedCategories.has('ap-physics2') || completedTopicSlugs.some(s =>
+        s.includes('ap-physics-2') || s.includes('physics2') || s.includes('electrostatics') || s.includes('magnetism')
+      ),
+      'ap-calculus-ab': grantAllCategories || grantedCategories.has('ap-calculus-ab') || completedTopicSlugs.some(s =>
+        s.includes('ap-calculus-ab') || s.includes('calculus-ab') || s.includes('derivative') || s.includes('integral')
+      ),
+      'ap-calculus-bc': grantAllCategories || grantedCategories.has('ap-calculus-bc') || completedTopicSlugs.some(s =>
+        s.includes('ap-calculus-bc') || s.includes('calculus-bc') || s.includes('series') || s.includes('taylor')
+      ),
+      'ap-physics-c-mech': grantAllCategories || grantedCategories.has('ap-physics-c-mech') || completedTopicSlugs.some(s =>
+        s.includes('ap-physics-c-mech') || s.includes('physics-c-mechanics') || s.includes('rotational-dynamics')
+      ),
+      'ap-physics-c-em': grantAllCategories || grantedCategories.has('ap-physics-c-em') || completedTopicSlugs.some(s =>
+        s.includes('ap-physics-c-em') || s.includes('physics-c-em') || s.includes('gauss-law') || s.includes('ampere')
+      ),
+      'ap-precalculus': grantAllCategories || grantedCategories.has('ap-precalculus') || completedTopicSlugs.some(s =>
+        s.includes('ap-precalculus') || s.includes('ap-precalc') || s.includes('polynomial-functions') || s.includes('rational-functions')
+      ),
     }
 
     // Compute which specific Algebra 2 subtopics are unlocked

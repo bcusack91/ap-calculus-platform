@@ -358,6 +358,7 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     'ap-physics-c-mech': getApPhysicsCMechQuestions as unknown as (count?: number) => OptionQuestion[],
     'ap-physics-c-em': getApPhysicsCEMQuestions as unknown as (count?: number) => OptionQuestion[],
     'ap-calculus-bc': getApCalculusBCQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-precalculus': getPreCalcQuestions as unknown as (count?: number) => OptionQuestion[],
   }
 
   // For course-level topics (standard mode, no sub-topic selected), filter to completed topics only
