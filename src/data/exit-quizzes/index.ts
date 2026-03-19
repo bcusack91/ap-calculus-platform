@@ -441,6 +441,34 @@ const quizLoaders: Record<string, QuizLoader> = {
   'unit-rates': () => import('./grade-8-math'),
   'proportional-relationships-grade8': () => import('./grade-8-math'),
   'slope-as-rate-of-change': () => import('./grade-8-math'),
+
+  // ═══════════════════════════════════════════════════
+  // AP Psychology Exit Quizzes
+  // ═══════════════════════════════════════════════════
+  'ap-psychology': () => import('./ap-psychology'),
+  'history-approaches-psychology': () => import('./ap-psychology'),
+  'biological-bases-brain': () => import('./ap-psychology'),
+  'genetics-behavior': () => import('./ap-psychology'),
+  'sensation-sensory-processing': () => import('./ap-psychology'),
+  'perception-attention': () => import('./ap-psychology'),
+  'classical-conditioning': () => import('./ap-psychology'),
+  'operant-conditioning': () => import('./ap-psychology'),
+  'observational-learning-cognition': () => import('./ap-psychology'),
+  'memory-encoding-storage': () => import('./ap-psychology'),
+  'retrieval-forgetting': () => import('./ap-psychology'),
+  'thinking-problem-solving': () => import('./ap-psychology'),
+  'language-intelligence': () => import('./ap-psychology'),
+  'prenatal-childhood-development': () => import('./ap-psychology'),
+  'adolescence-adulthood': () => import('./ap-psychology'),
+  'motivation-theories': () => import('./ap-psychology'),
+  'emotion-stress': () => import('./ap-psychology'),
+  'personality-theories': () => import('./ap-psychology'),
+  'psychological-disorders-overview': () => import('./ap-psychology'),
+  'mood-psychotic-disorders': () => import('./ap-psychology'),
+  'treatment-therapy': () => import('./ap-psychology'),
+  'social-influence-conformity': () => import('./ap-psychology'),
+  'attitudes-persuasion': () => import('./ap-psychology'),
+  'group-behavior-prejudice': () => import('./ap-psychology'),
 }
 
 /**

@@ -172,6 +172,31 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'ecology-ecosystems': () => import('./ecology-ecosystems'),
   'energy-flow-nutrient-cycling': () => import('./energy-flow-nutrient-cycling'),
   'population-community-ecology': () => import('./population-community-ecology'),
+
+  // AP Psychology
+  'history-approaches-psychology': () => import('./history-approaches-psychology'),
+  'biological-bases-brain': () => import('./biological-bases-brain'),
+  'genetics-behavior': () => import('./genetics-behavior'),
+  'sensation-sensory-processing': () => import('./sensation-sensory-processing'),
+  'perception-attention': () => import('./perception-attention'),
+  'classical-conditioning': () => import('./classical-conditioning'),
+  'operant-conditioning': () => import('./operant-conditioning'),
+  'observational-learning-cognition': () => import('./observational-learning-cognition'),
+  'memory-encoding-storage': () => import('./memory-encoding-storage'),
+  'retrieval-forgetting': () => import('./retrieval-forgetting'),
+  'thinking-problem-solving': () => import('./thinking-problem-solving'),
+  'language-intelligence': () => import('./language-intelligence'),
+  'prenatal-childhood-development': () => import('./prenatal-childhood-development'),
+  'adolescence-adulthood': () => import('./adolescence-adulthood'),
+  'motivation-theories': () => import('./motivation-theories'),
+  'emotion-stress': () => import('./emotion-stress'),
+  'personality-theories': () => import('./personality-theories'),
+  'psychological-disorders-overview': () => import('./psychological-disorders-overview'),
+  'mood-psychotic-disorders': () => import('./mood-psychotic-disorders'),
+  'treatment-therapy': () => import('./treatment-therapy'),
+  'social-influence-conformity': () => import('./social-influence-conformity'),
+  'attitudes-persuasion': () => import('./attitudes-persuasion'),
+  'group-behavior-prejudice': () => import('./group-behavior-prejudice'),
 }
 
 /**
