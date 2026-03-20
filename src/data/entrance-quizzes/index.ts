@@ -263,6 +263,70 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   // ACT — Strategy
   'act-math-strategy-act': () => import('./act-math-strategy-act'),
   'act-test-day-strategy-act': () => import('./act-test-day-strategy-act'),
+
+  // ═══════════════════════════════════════════════════
+  // SAT Entrance Quizzes
+  // ═══════════════════════════════════════════════════
+  // Math
+  'sat-linear-equations-sat': () => import('./sat-linear-equations-sat'),
+  'sat-quadratic-equations-sat': () => import('./sat-quadratic-equations-sat'),
+  'sat-functions-graphs-sat': () => import('./sat-functions-graphs-sat'),
+  'sat-exponents-radicals-sat': () => import('./sat-exponents-radicals-sat'),
+  'sat-polynomials-factoring-sat': () => import('./sat-polynomials-factoring-sat'),
+  'sat-ratios-proportions-sat': () => import('./sat-ratios-proportions-sat'),
+  'sat-geometry-angles-sat': () => import('./sat-geometry-angles-sat'),
+  'sat-data-statistics-sat': () => import('./sat-data-statistics-sat'),
+  'sat-exponential-functions-sat': () => import('./sat-exponential-functions-sat'),
+  'sat-circles-trig-sat': () => import('./sat-circles-trig-sat'),
+  'sat-complex-numbers-sat': () => import('./sat-complex-numbers-sat'),
+  'sat-passport-advanced-math-sat': () => import('./sat-passport-advanced-math-sat'),
+  'sat-word-problems-sat': () => import('./sat-word-problems-sat'),
+  'sat-problem-solving-data-sat': () => import('./sat-problem-solving-data-sat'),
+  // Reading & Writing
+  'sat-reading-evidence-sat': () => import('./sat-reading-evidence-sat'),
+  'sat-punctuation-sat': () => import('./sat-punctuation-sat'),
+  'sat-punctuation-commas-semicolons-sat': () => import('./sat-punctuation-commas-semicolons-sat'),
+  'sat-grammar-conventions-sat': () => import('./sat-grammar-conventions-sat'),
+  'sat-expression-ideas-sat': () => import('./sat-expression-ideas-sat'),
+  // Strategy
+  'sat-calculator-strategy-sat': () => import('./sat-calculator-strategy-sat'),
+  'sat-reading-writing-strategy-sat': () => import('./sat-reading-writing-strategy-sat'),
+  'sat-test-day-strategy-sat': () => import('./sat-test-day-strategy-sat'),
+
+  // ═══════════════════════════════════════════════════
+  // MCAT Entrance Quizzes
+  // ═══════════════════════════════════════════════════
+  // General Chemistry
+  'mcat-general-chemistry-mcat': () => import('./mcat-general-chemistry-mcat'),
+  'mcat-general-chemistry-atomic-structure-mcat': () => import('./mcat-general-chemistry-atomic-structure-mcat'),
+  'mcat-general-chemistry-stoichiometry-mcat': () => import('./mcat-general-chemistry-stoichiometry-mcat'),
+  'mcat-general-chemistry-acid-base-equilibrium-mcat': () => import('./mcat-general-chemistry-acid-base-equilibrium-mcat'),
+  'mcat-general-chemistry-kinetics-mcat': () => import('./mcat-general-chemistry-kinetics-mcat'),
+  'mcat-general-chemistry-thermodynamics-mcat': () => import('./mcat-general-chemistry-thermodynamics-mcat'),
+  // Organic Chemistry
+  'mcat-organic-chemistry-mcat': () => import('./mcat-organic-chemistry-mcat'),
+  // Physics
+  'mcat-physics-mechanics-mcat': () => import('./mcat-physics-mechanics-mcat'),
+  'mcat-physics-electricity-mcat': () => import('./mcat-physics-electricity-mcat'),
+  // Biochemistry
+  'mcat-biochemistry-foundations-mcat': () => import('./mcat-biochemistry-foundations-mcat'),
+  // CARS
+  'mcat-cars-strategy-mcat': () => import('./mcat-cars-strategy-mcat'),
+  'mcat-cars-passages-mcat': () => import('./mcat-cars-passages-mcat'),
+  'mcat-cars-reasoning-mcat': () => import('./mcat-cars-reasoning-mcat'),
+  // Biology
+  'mcat-cell-biology-mcat': () => import('./mcat-cell-biology-mcat'),
+  'mcat-molecular-biology-mcat': () => import('./mcat-molecular-biology-mcat'),
+  'mcat-organ-systems-mcat': () => import('./mcat-organ-systems-mcat'),
+  'mcat-genetics-evolution-mcat': () => import('./mcat-genetics-evolution-mcat'),
+  'mcat-anatomy-physiology-mcat': () => import('./mcat-anatomy-physiology-mcat'),
+  'mcat-microbiology-mcat': () => import('./mcat-microbiology-mcat'),
+  // Psychology & Sociology
+  'mcat-psychology-behavior-mcat': () => import('./mcat-psychology-behavior-mcat'),
+  'mcat-sociology-mcat': () => import('./mcat-sociology-mcat'),
+  // Strategy
+  'mcat-science-passage-strategy-mcat': () => import('./mcat-science-passage-strategy-mcat'),
+  'mcat-test-day-strategy-mcat': () => import('./mcat-test-day-strategy-mcat'),
 }
 
 /**
