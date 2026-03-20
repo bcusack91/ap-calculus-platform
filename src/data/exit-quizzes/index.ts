@@ -508,6 +508,56 @@ const quizLoaders: Record<string, QuizLoader> = {
   'coefficient-determination': () => import('./ap-statistics'),
   'transformations-linearity': () => import('./ap-statistics'),
   'inference-regression': () => import('./ap-statistics'),
+
+  // ═══════════════════════════════════════════════════
+  // ACT Exit Quizzes
+  // ═══════════════════════════════════════════════════
+  // Math
+  'act-pre-algebra-basics-act': () => import('./act'),
+  'act-algebra-equations-act': () => import('./act'),
+  'act-intermediate-algebra-act': () => import('./act'),
+  'act-coordinate-geometry-act': () => import('./act'),
+  'act-plane-geometry-act': () => import('./act'),
+  'act-trigonometry-act': () => import('./act'),
+  'act-statistics-probability-act': () => import('./act'),
+  // English
+  'act-english-grammar-act': () => import('./act'),
+  'act-english-rhetorical-act': () => import('./act'),
+  'act-english-punctuation-act': () => import('./act'),
+  'act-english-strategy-act': () => import('./act'),
+  // Reading
+  'act-reading-main-ideas-act': () => import('./act'),
+  'act-reading-passage-types-act': () => import('./act'),
+  'act-reading-strategy-act': () => import('./act'),
+  'act-reading-science-tips-act': () => import('./act'),
+  // Science
+  'act-science-data-act': () => import('./act'),
+  'act-science-experiments-act': () => import('./act'),
+  'act-science-reasoning-act': () => import('./act'),
+  // Strategy
+  'act-math-strategy-act': () => import('./act'),
+  'act-test-day-strategy-act': () => import('./act'),
+  // Legacy slug aliases
+  'act-english-grammar-usage': () => import('./act'),
+  'act-english-punctuation': () => import('./act'),
+  'act-english-sentence-structure': () => import('./act'),
+  'act-english-rhetorical-skills': () => import('./act'),
+  'act-english-strategy': () => import('./act'),
+  'act-math-pre-algebra': () => import('./act'),
+  'act-math-elementary-algebra': () => import('./act'),
+  'act-math-intermediate-algebra': () => import('./act'),
+  'act-math-coordinate-geometry': () => import('./act'),
+  'act-math-plane-geometry': () => import('./act'),
+  'act-reading-prose-fiction': () => import('./act'),
+  'act-reading-social-science': () => import('./act'),
+  'act-reading-humanities': () => import('./act'),
+  'act-reading-natural-science': () => import('./act'),
+  'act-reading-paired-passages': () => import('./act'),
+  'act-science-data-representation': () => import('./act'),
+  'act-science-research-summaries': () => import('./act'),
+  'act-science-conflicting-viewpoints': () => import('./act'),
+  'act-science-experimental-design': () => import('./act'),
+  'act-science-scientific-reasoning': () => import('./act'),
 }
 
 /**

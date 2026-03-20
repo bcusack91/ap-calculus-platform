@@ -1,0 +1,39 @@
+/**
+ * Entrance Quiz — ACT English: Strategy (ACT)
+ * 14 questions · 7 parts (2 per part)
+ */
+
+import type { EntranceQuizQuestion } from './moles-molar-mass'
+
+const questions: EntranceQuizQuestion[] = [
+  { id: 'aes-ent-1a', question: 'How many questions are on the ACT English section, and how much time do you have?', options: ['60 questions in 45 minutes', '75 questions in 45 minutes', '75 questions in 60 minutes', '45 questions in 35 minutes'], correctIndex: 1, explanation: 'The ACT English section has 75 questions to be completed in 45 minutes, giving you about 36 seconds per question.', partNumber: 1, partTitle: 'ACT English Overview' },
+  { id: 'aes-ent-1b', question: 'How is the ACT English section structured?', options: ['3 passages with 25 questions each', '5 passages with 15 questions each', '4 passages with about 19 questions each', '10 passages with 7-8 questions each'], correctIndex: 1, explanation: 'ACT English consists of 5 passages with 15 questions each. The passages resemble magazine-style articles.', partNumber: 1, partTitle: 'ACT English Overview' },
+  { id: 'aes-ent-2a', question: 'What is the primary difference between grammar questions and rhetoric questions on the ACT?', options: ['Grammar questions are harder than rhetoric questions', 'Grammar questions test rules; rhetoric questions test style and organization', 'Rhetoric questions test punctuation; grammar questions test word choice', 'There is no meaningful difference between them'], correctIndex: 1, explanation: 'Grammar questions test specific rules (subject-verb agreement, punctuation, tense). Rhetoric questions test style, organization, and the writer\'s purpose.', partNumber: 2, partTitle: 'Grammar vs. Rhetoric' },
+  { id: 'aes-ent-2b', question: 'Which type of ACT English question has one definitive "right" answer based on rules?', options: ['Rhetoric questions', 'Grammar questions', 'Both types always have equally clear answers', 'Neither type — all answers are subjective'], correctIndex: 1, explanation: 'Grammar questions have one "right" answer based on grammatical rules. Rhetoric questions require understanding context and the author\'s intent.', partNumber: 2, partTitle: 'Grammar vs. Rhetoric' },
+  { id: 'aes-ent-3a', question: 'When answering an ACT English question about an underlined portion, what should you read first?', options: ['Only the underlined portion', 'The entire sentence containing the underlined portion', 'Only the answer choices', 'The passage title'], correctIndex: 1, explanation: 'Always read the entire sentence — not just the underlined part — before answering. Context from the full sentence is essential for choosing correctly.', partNumber: 3, partTitle: 'Reading in Context' },
+  { id: 'aes-ent-3b', question: 'For rhetoric questions on the ACT, how much context might you need?', options: ['Only the underlined portion', 'Only the sentence with the underlined portion', 'The surrounding paragraph or even the full passage', 'Only the answer choices'], correctIndex: 2, explanation: 'Rhetoric questions often require reading the surrounding paragraph for context, since they test organization, transitions, and the writer\'s purpose.', partNumber: 3, partTitle: 'Reading in Context' },
+  { id: 'aes-ent-4a', question: 'Which strategy works best for eliminating wrong answers on ACT English?', options: ['Eliminate the shortest answer first', 'Eliminate answers that are wordy, redundant, or grammatically incorrect', 'Eliminate answers that use simple vocabulary', 'Always eliminate "NO CHANGE"'], correctIndex: 1, explanation: 'Eliminate answers that are wordy, redundant, or contain grammatical errors. The ACT values clear, concise, and correct writing.', partNumber: 4, partTitle: 'Answer Elimination' },
+  { id: 'aes-ent-4b', question: 'How often is "NO CHANGE" the correct answer on ACT English?', options: ['Almost never — less than 5% of the time', 'About 25% of the time', 'About 50% of the time', 'About 75% of the time'], correctIndex: 1, explanation: '"NO CHANGE" is correct about 25% of the time. Don\'t be afraid to choose it when the original is grammatically correct and stylistically sound.', partNumber: 4, partTitle: 'Answer Elimination' },
+  { id: 'aes-ent-5a', question: 'How much time should you spend per passage on ACT English?', options: ['About 5 minutes', 'About 8-9 minutes', 'About 12-15 minutes', 'About 3-4 minutes'], correctIndex: 1, explanation: 'With 45 minutes for 5 passages, you should spend about 8-9 minutes per passage, including reading and answering all 15 questions.', partNumber: 5, partTitle: 'Pacing & Timing' },
+  { id: 'aes-ent-5b', question: 'What should you do if you\'re stuck on a single ACT English question?', options: ['Keep working on it until you figure it out', 'Skip the entire passage and move on', 'Mark it and move on — come back if time allows', 'Guess the longest answer and move on'], correctIndex: 2, explanation: 'Don\'t spend too long on any single question. Mark it and move on to avoid running out of time on easier questions later in the section.', partNumber: 5, partTitle: 'Pacing & Timing' },
+  { id: 'aes-ent-6a', question: 'If three answer choices are very similar and one is clearly different, which approach is often effective?', options: ['Pick the most similar answer', 'Pick the different one — it is often correct', 'Always pick the longest answer', 'Skip the question entirely'], correctIndex: 1, explanation: 'When three answers are similar and one is different, the different one is often correct. The similar answers may all share the same error.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+  { id: 'aes-ent-6b', question: 'On ACT English, when multiple grammatically correct answers exist, which should you generally choose?', options: ['The longest and most detailed answer', 'The answer with the most complex vocabulary', 'The shortest answer that is grammatically correct', 'The answer most similar to spoken English'], correctIndex: 2, explanation: 'On ACT English, the shortest grammatically correct answer is often the best choice. The ACT values conciseness and penalizes wordiness.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+  { id: 'aes-ent-7a', question: 'What is one of the best ways to prepare for ACT English?', options: ['Memorize vocabulary lists', 'Practice reading passages quickly while maintaining comprehension', 'Only study grammar rules without practicing passages', 'Read passages as slowly as possible for maximum detail'], correctIndex: 1, explanation: 'Practice reading passages quickly while maintaining comprehension. Speed and accuracy together are essential for the 36-second-per-question pace.', partNumber: 7, partTitle: 'Review & Applications' },
+  { id: 'aes-ent-7b', question: 'What does the ACT English section ultimately reward?', options: ['Creative writing and poetic expression', 'Knowledge of standard written English conventions', 'Advanced literary analysis skills', 'Memorization of obscure grammar exceptions'], correctIndex: 1, explanation: 'ACT English rewards knowledge of standard written English conventions — proper grammar, punctuation, sentence structure, and clear organization.', partNumber: 7, partTitle: 'Review & Applications' },
+]
+
+export function generateEntranceQuiz(): EntranceQuizQuestion[] {
+  return [...questions].sort(() => Math.random() - 0.5)
+}
+
+export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
+  return [
+    { partNumber: 1, partTitle: 'ACT English Overview' },
+    { partNumber: 2, partTitle: 'Grammar vs. Rhetoric' },
+    { partNumber: 3, partTitle: 'Reading in Context' },
+    { partNumber: 4, partTitle: 'Answer Elimination' },
+    { partNumber: 5, partTitle: 'Pacing & Timing' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'Review & Applications' },
+  ]
+}

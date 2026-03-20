@@ -233,6 +233,36 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'coefficient-determination': () => import('./coefficient-determination'),
   'transformations-linearity': () => import('./transformations-linearity'),
   'inference-regression': () => import('./inference-regression'),
+
+  // ACT — Math
+  'act-pre-algebra-basics-act': () => import('./act-pre-algebra-basics-act'),
+  'act-algebra-equations-act': () => import('./act-algebra-equations-act'),
+  'act-intermediate-algebra-act': () => import('./act-intermediate-algebra-act'),
+  'act-coordinate-geometry-act': () => import('./act-coordinate-geometry-act'),
+  'act-plane-geometry-act': () => import('./act-plane-geometry-act'),
+  'act-trigonometry-act': () => import('./act-trigonometry-act'),
+  'act-statistics-probability-act': () => import('./act-statistics-probability-act'),
+
+  // ACT — English
+  'act-english-grammar-act': () => import('./act-english-grammar-act'),
+  'act-english-rhetorical-act': () => import('./act-english-rhetorical-act'),
+  'act-english-punctuation-act': () => import('./act-english-punctuation-act'),
+  'act-english-strategy-act': () => import('./act-english-strategy-act'),
+
+  // ACT — Reading
+  'act-reading-main-ideas-act': () => import('./act-reading-main-ideas-act'),
+  'act-reading-passage-types-act': () => import('./act-reading-passage-types-act'),
+  'act-reading-strategy-act': () => import('./act-reading-strategy-act'),
+  'act-reading-science-tips-act': () => import('./act-reading-science-tips-act'),
+
+  // ACT — Science
+  'act-science-data-act': () => import('./act-science-data-act'),
+  'act-science-experiments-act': () => import('./act-science-experiments-act'),
+  'act-science-reasoning-act': () => import('./act-science-reasoning-act'),
+
+  // ACT — Strategy
+  'act-math-strategy-act': () => import('./act-math-strategy-act'),
+  'act-test-day-strategy-act': () => import('./act-test-day-strategy-act'),
 }
 
 /**
