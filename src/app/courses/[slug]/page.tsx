@@ -12,10 +12,15 @@ export const revalidate = 3600
 
 // Pre-render all course pages at build time for faster TTFB and better crawlability
 export async function generateStaticParams() {
-  const courses = await prisma.course.findMany({
-    select: { slug: true },
-  })
-  return courses.map((course) => ({ slug: course.slug }))
+  try {
+    const courses = await prisma.course.findMany({
+      select: { slug: true },
+    })
+    return courses.map((course) => ({ slug: course.slug }))
+  } catch (error) {
+    console.warn('Skipping static course params generation because database is unavailable at build time.', error)
+    return []
+  }
 }
 
 interface CoursePageProps {

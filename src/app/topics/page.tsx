@@ -17,12 +17,15 @@ export default async function TopicsPage() {
   const courses = await prisma.course.findMany({
     include: {
       _count: {
-        select: { 
-          categories: true 
+        select: {
+          categories: true
         }
       }
     },
     orderBy: { order: 'asc' }
+  }).catch((error) => {
+    console.warn('Topics courses unavailable at build time; rendering with no courses.', error)
+    return []
   })
 
   return (

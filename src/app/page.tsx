@@ -19,6 +19,9 @@ export default async function Home() {
   const dbCourses = await prisma.course.findMany({
     select: { slug: true, name: true, icon: true, description: true },
     orderBy: { order: 'asc' },
+  }).catch((error) => {
+    console.warn('Homepage courses unavailable at build time; rendering without DB courses.', error)
+    return []
   });
 
   // Merge DB data with presentational metadata and group by section

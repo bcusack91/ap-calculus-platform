@@ -170,6 +170,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const courses = await prisma.course.findMany({
     select: { slug: true, updatedAt: true },
     orderBy: { order: 'asc' },
+  }).catch((error) => {
+    console.warn('Sitemap: courses unavailable, continuing with static pages only.', error)
+    return []
   })
 
   const coursePages: MetadataRoute.Sitemap = courses.map((course) => ({
@@ -183,6 +186,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const topics = await prisma.topic.findMany({
     select: { slug: true, updatedAt: true },
     orderBy: { order: 'asc' },
+  }).catch((error) => {
+    console.warn('Sitemap: topics unavailable, continuing with static pages only.', error)
+    return []
   })
 
   const topicPages: MetadataRoute.Sitemap = topics.map((topic) => ({
@@ -196,6 +202,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const categories = await prisma.category.findMany({
     select: { slug: true, updatedAt: true },
     orderBy: { order: 'asc' },
+  }).catch((error) => {
+    console.warn('Sitemap: categories unavailable, continuing with static pages only.', error)
+    return []
   })
 
   const categoryPages: MetadataRoute.Sitemap = categories.map((category) => ({

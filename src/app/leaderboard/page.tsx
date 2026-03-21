@@ -54,6 +54,9 @@ export default async function LeaderboardPage() {
         },
       },
     },
+  }).catch((error) => {
+    console.warn('Leaderboard data unavailable at build time; rendering empty leaderboard.', error)
+    return []
   })
 
   const entries = profiles.map((p, i) => ({

@@ -34,6 +34,9 @@ export default async function FlashcardsPage({
       }
     },
     orderBy: { order: 'asc' }
+  }).catch((error) => {
+    console.warn('Flashcard categories unavailable at build time; rendering empty list.', error)
+    return []
   })
 
   const courseName = course && categories.length > 0 ? categories[0].course.name : null
