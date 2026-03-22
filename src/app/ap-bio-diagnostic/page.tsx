@@ -424,7 +424,7 @@ export default function APBioDiagnosticPage() {
             </div>
 
             {/* Actions */}
-            <div className="flex gap-3">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <button
                 onClick={() => { setResults(null); setTestData(null); startTest() }}
                 className="flex-1 rounded-xl border-2 border-emerald-500 py-3 font-semibold text-emerald-600 transition hover:bg-emerald-50 dark:text-emerald-400 dark:hover:bg-emerald-900/20"
@@ -436,6 +436,18 @@ export default function APBioDiagnosticPage() {
                 className="flex-1 rounded-xl bg-gradient-to-r from-emerald-600 to-green-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg"
               >
                 Browse All AP Bio Modules
+              </Link>
+              <Link
+                href="/ap-bio-score-predictor"
+                className="flex-1 rounded-xl border border-emerald-300 py-3 text-center font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/20"
+              >
+                View Score Predictor
+              </Link>
+              <Link
+                href="/ap-bio-daily-question"
+                className="flex-1 rounded-xl border border-emerald-300 py-3 text-center font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/20"
+              >
+                Today&apos;s Question
               </Link>
             </div>
           </div>
@@ -580,6 +592,8 @@ export default function APBioDiagnosticPage() {
             >
               {lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}
             </button>
+            <Link href="/ap-bio-score-predictor" className="mt-3 block text-center text-sm font-medium text-emerald-700 transition hover:underline dark:text-emerald-300">Prefer a quick estimate? Open the AP Biology Score Predictor</Link>
+            <Link href="/ap-bio-daily-question" className="mt-1 block text-center text-sm font-medium text-emerald-700 transition hover:underline dark:text-emerald-300">Need a warm-up first? Try today&apos;s AP Biology question</Link>
           </div>
 
           {/* How it works */}

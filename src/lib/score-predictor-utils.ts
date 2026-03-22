@@ -31,7 +31,7 @@ export async function gatherSubjectData(
   courseSlugPattern: string,
   diagnosticCategory?: string,
 ) {
-  const [exitQuizAttempts, topicProgress, diagnosticTests] = await Promise.all([
+  const [exitQuizAttempts, topicProgress, courseTopics, diagnosticTests] = await Promise.all([
     prisma.exitQuizAttempt.findMany({
       where: { userId },
       orderBy: { completedAt: 'asc' },
@@ -41,17 +41,24 @@ export async function gatherSubjectData(
       where: { userId, topic: { category: { course: { slug: courseSlugPattern } } } },
       select: { status: true },
     }),
+    prisma.topic.findMany({
+      where: { category: { course: { slug: courseSlugPattern } } },
+      select: { slug: true },
+    }),
     diagnosticCategory
       ? prisma.diagnosticTest.findMany({
-          where: { userId, category: diagnosticCategory },
+          where: { userId, category: { startsWith: diagnosticCategory } },
           orderBy: { createdAt: 'asc' },
           select: { results: true, createdAt: true },
         })
       : Promise.resolve([]),
   ])
 
-  // Filter exit quizzes to this subject
-  const subjectQuizzes = exitQuizAttempts.filter(a => a.topicSlug.includes(slugPrefix))
+  // Filter exit quizzes by either prefix match or explicit topic slugs in this course.
+  const courseTopicSlugs = new Set(courseTopics.map(t => t.slug))
+  const subjectQuizzes = exitQuizAttempts.filter(a =>
+    a.topicSlug.includes(slugPrefix) || courseTopicSlugs.has(a.topicSlug),
+  )
   const quizzesAttempted = subjectQuizzes.length
   const quizPassRate = quizzesAttempted > 0
     ? Math.round((subjectQuizzes.filter(a => a.passed).length / quizzesAttempted) * 100)
@@ -107,4 +114,12 @@ export function mapToAPScore(avgPct: number, masteryRate: number): number {
 /** Map average quiz percentage (0–1) to an ACT section score (1–36). */
 export function mapToACTScore(avgPct: number): number {
   return Math.max(1, Math.min(36, Math.round(avgPct * 36)))
+}
+
+/** Map average quiz percentage (0-1) to a total MCAT score (472-528). */
+export function mapToMCATScore(avgPct: number, masteryRate: number): number {
+  // Blend 75% quiz performance + 25% mastery rate for MCAT prediction.
+  const blended = avgPct * 0.75 + masteryRate * 0.25
+  const raw = 472 + Math.round(blended * (528 - 472))
+  return Math.max(472, Math.min(528, raw))
 }

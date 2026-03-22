@@ -199,9 +199,11 @@ export default function GeometryDiagnosticPage() {
             </ol>
             {completedModules > 0 && <p className="mt-3 text-xs text-teal-500 dark:text-teal-400">You&apos;ve taken {completedModules} diagnostic test{completedModules > 1 ? 's' : ''} so far — keep going!</p>}
           </div>
-          <div className="flex gap-3">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <button onClick={() => { setResults(null); setTestData(null); startTest() }} className="flex-1 rounded-xl border-2 border-teal-500 py-3 font-semibold text-teal-600 transition hover:bg-teal-50 dark:text-teal-400 dark:hover:bg-teal-900/20">Take Next Diagnostic</button>
             <Link href="/courses/geometry" className="flex-1 rounded-xl bg-gradient-to-r from-teal-600 to-sky-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg">Browse Geometry Topics</Link>
+            <Link href="/geometry-score-predictor" className="flex-1 rounded-xl border border-teal-300 py-3 text-center font-semibold text-teal-700 transition hover:bg-teal-50 dark:border-teal-700 dark:text-teal-300 dark:hover:bg-teal-900/20">View Score Predictor</Link>
+            <Link href="/geometry-daily-question" className="flex-1 rounded-xl border border-teal-300 py-3 text-center font-semibold text-teal-700 transition hover:bg-teal-50 dark:border-teal-700 dark:text-teal-300 dark:hover:bg-teal-900/20">Today&apos;s Question</Link>
           </div>
         </div></div>
       </div>
@@ -253,6 +255,8 @@ export default function GeometryDiagnosticPage() {
             ))}
           </ul>
           <button onClick={startTest} className="w-full rounded-xl bg-gradient-to-r from-teal-600 to-sky-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl">{lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}</button>
+          <Link href="/geometry-score-predictor" className="mt-3 block text-center text-sm font-medium text-teal-700 transition hover:underline dark:text-teal-300">Prefer a quick estimate? Open the Geometry Score Predictor</Link>
+          <Link href="/geometry-daily-question" className="mt-1 block text-center text-sm font-medium text-teal-700 transition hover:underline dark:text-teal-300">Need a warm-up first? Try today&apos;s Geometry question</Link>
         </div>
 
         <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">

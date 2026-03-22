@@ -75,6 +75,18 @@ const features = [
     stats: 'New daily · All units',
   },
   {
+    title: 'Score Predictor',
+    description: 'Estimate your AP Physics 2 exam score from your quiz performance and mastery data.',
+    href: '/ap-physics2-score-predictor',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3v18h18M7 14l3-3 3 2 4-5" />
+      </svg>
+    ),
+    color: 'from-cyan-500 to-blue-500',
+    stats: 'Live estimate · AP 1-5',
+  },
+  {
     title: 'Exit Quizzes',
     description: 'Short assessments after each lesson to confirm understanding before moving on.',
     href: '/courses/ap-physics-2',

@@ -295,9 +295,11 @@ export default function CalcABDiagnosticPage() {
               </ol>
             </div>
 
-            <div className="flex gap-3">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <button onClick={() => { setResults(null); setTestData(null); startTest() }} className="flex-1 rounded-xl border-2 border-purple-500 py-3 font-semibold text-purple-600 transition hover:bg-purple-50 dark:text-purple-400 dark:hover:bg-purple-900/20">Take Next Diagnostic</button>
               <Link href="/courses/ap-calculus-ab" className="flex-1 rounded-xl bg-gradient-to-r from-purple-600 to-violet-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg">Browse All AB Modules</Link>
+              <Link href="/ap-calcab-score-predictor" className="flex-1 rounded-xl border border-purple-300 py-3 text-center font-semibold text-purple-700 transition hover:bg-purple-50 dark:border-purple-700 dark:text-purple-300 dark:hover:bg-purple-900/20">View Score Predictor</Link>
+              <Link href="/ap-calcab-daily-question" className="flex-1 rounded-xl border border-purple-300 py-3 text-center font-semibold text-purple-700 transition hover:bg-purple-50 dark:border-purple-700 dark:text-purple-300 dark:hover:bg-purple-900/20">Today&apos;s Question</Link>
             </div>
           </div>
         </div>
@@ -370,6 +372,8 @@ export default function CalcABDiagnosticPage() {
             <button onClick={startTest} className="w-full rounded-xl bg-gradient-to-r from-purple-600 to-violet-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl">
               {lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}
             </button>
+            <Link href="/ap-calcab-score-predictor" className="mt-3 block text-center text-sm font-medium text-purple-700 transition hover:underline dark:text-purple-300">Prefer a quick estimate? Open the AP Calculus AB Score Predictor</Link>
+            <Link href="/ap-calcab-daily-question" className="mt-1 block text-center text-sm font-medium text-purple-700 transition hover:underline dark:text-purple-300">Need a warm-up first? Try today&apos;s AP Calculus AB question</Link>
           </div>
 
           <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">

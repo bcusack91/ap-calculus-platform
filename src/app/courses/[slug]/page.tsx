@@ -264,8 +264,34 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
             'ap-precalculus': { href: '/ap-precalculus-diagnostic', icon: '📉', description: 'Take a diagnostic test covering all AP Precalculus units. Identify gaps and get a targeted study plan.', borderColor: 'border-violet-300 dark:border-violet-700', bgGradient: 'from-violet-50 to-indigo-50 dark:from-violet-900/20 dark:to-indigo-900/20', btnGradient: 'from-violet-600 to-indigo-600' },
             'grade-8-math': { href: '/grade8-math-diagnostic', icon: '🎓', description: 'Take a diagnostic test covering all Grade 8 Math topics. Get a personalized study plan for improvement.', borderColor: 'border-yellow-300 dark:border-yellow-700', bgGradient: 'from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20', btnGradient: 'from-yellow-600 to-amber-600' },
           }
+          const scorePredictorMap: Record<string, { href: string; label: string }> = {
+            'algebra-1': { href: '/algebra1-score-predictor', label: 'View Score Predictor' },
+            'algebra-2': { href: '/algebra2-score-predictor', label: 'View Score Predictor' },
+            'geometry': { href: '/geometry-score-predictor', label: 'View Score Predictor' },
+            'precalculus': { href: '/precalc-score-predictor', label: 'View Score Predictor' },
+            'ap-precalculus': { href: '/ap-precalculus-score-predictor', label: 'View Score Predictor' },
+            'ap-physics-c-mechanics': { href: '/ap-physics-c-mech-score-predictor', label: 'View Score Predictor' },
+            'ap-physics-c-em': { href: '/ap-physics-c-em-score-predictor', label: 'View Score Predictor' },
+            'grade-8-math': { href: '/grade8-math-score-predictor', label: 'View Score Predictor' },
+            'pre-algebra': { href: '/prealgebra-score-predictor', label: 'View Score Predictor' },
+            'organic-chemistry': { href: '/ochem-score-predictor', label: 'View Score Predictor' },
+          }
+          const dailyQuestionMap: Record<string, { href: string; label: string }> = {
+            'algebra-1': { href: '/algebra1-daily-question', label: 'Today\'s Question' },
+            'algebra-2': { href: '/algebra2-daily-question', label: 'Today\'s Question' },
+            'geometry': { href: '/geometry-daily-question', label: 'Today\'s Question' },
+            'precalculus': { href: '/precalc-daily-question', label: 'Today\'s Question' },
+            'ap-precalculus': { href: '/ap-precalculus-daily-question', label: 'Today\'s Question' },
+            'ap-physics-c-mechanics': { href: '/ap-physics-c-mech-daily-question', label: 'Today\'s Question' },
+            'ap-physics-c-em': { href: '/ap-physics-c-em-daily-question', label: 'Today\'s Question' },
+            'grade-8-math': { href: '/grade8-math-daily-question', label: 'Today\'s Question' },
+            'pre-algebra': { href: '/prealgebra-daily-question', label: 'Today\'s Question' },
+            'organic-chemistry': { href: '/ochem-daily-question', label: 'Today\'s Question' },
+          }
           const diag = diagnosticMap[slug]
           if (!diag) return null
+          const predictor = scorePredictorMap[slug]
+          const dailyQuestion = dailyQuestionMap[slug]
           return (
             <div className={`rounded-2xl border-2 ${diag.borderColor} bg-gradient-to-r ${diag.bgGradient} p-8 mb-12 shadow-sm`}>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -277,12 +303,30 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                     {diag.description}
                   </p>
                 </div>
-                <Link
-                  href={diag.href}
-                  className={`inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-gradient-to-r ${diag.btnGradient} px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl`}
-                >
-                  Take Diagnostic Test →
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-2">
+                  <Link
+                    href={diag.href}
+                    className={`inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-gradient-to-r ${diag.btnGradient} px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl`}
+                  >
+                    Take Diagnostic Test →
+                  </Link>
+                  {predictor && (
+                    <Link
+                      href={predictor.href}
+                      className="inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-white/70 bg-white/70 px-6 py-3 font-semibold text-gray-800 transition hover:bg-white dark:border-gray-600 dark:bg-gray-800/70 dark:text-gray-200 dark:hover:bg-gray-800"
+                    >
+                      {predictor.label}
+                    </Link>
+                  )}
+                  {dailyQuestion && (
+                    <Link
+                      href={dailyQuestion.href}
+                      className="inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-white/70 bg-white/70 px-6 py-3 font-semibold text-gray-800 transition hover:bg-white dark:border-gray-600 dark:bg-gray-800/70 dark:text-gray-200 dark:hover:bg-gray-800"
+                    >
+                      {dailyQuestion.label}
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
           )

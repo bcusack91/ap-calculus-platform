@@ -186,7 +186,7 @@ export default function MCATDailyQuestionPage() {
         {/* CTA */}
         <div className="mx-auto mt-10 max-w-md text-center">
           <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
-            Want more practice? Try a full diagnostic or section practice test.
+            Want more practice? Try a full diagnostic, predict your score, or take a section practice test.
           </p>
           <div className="flex justify-center gap-3">
             <Link
@@ -194,6 +194,12 @@ export default function MCATDailyQuestionPage() {
               className="rounded-lg bg-emerald-100 px-4 py-2 text-sm font-medium text-emerald-700 transition hover:bg-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-400"
             >
               Diagnostic Test
+            </Link>
+            <Link
+              href="/mcat-score-predictor"
+              className="rounded-lg bg-emerald-100 px-4 py-2 text-sm font-medium text-emerald-700 transition hover:bg-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-400"
+            >
+              Score Predictor
             </Link>
             <Link
               href="/mcat-practice"

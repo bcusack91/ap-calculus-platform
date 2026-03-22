@@ -206,8 +206,10 @@ export default function SATDiagnosticPage() {
               onClick={() => setPhase('testing')}
               className="w-full rounded-xl bg-gradient-to-r from-green-600 to-teal-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
             >
-              {lastResult ? 'Retake Diagnostic' : 'Start Diagnostic Test'}
+              {lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}
             </button>
+            <a href="/sat-score-predictor" className="mt-3 block text-center text-sm font-medium text-green-700 transition hover:underline dark:text-green-300">Prefer a quick estimate? Open the SAT Score Predictor</a>
+            <a href="/sat-daily-question" className="mt-1 block text-center text-sm font-medium text-green-700 transition hover:underline dark:text-green-300">Need a warm-up first? Try today&apos;s SAT question</a>
           </div>
 
           {/* History */}

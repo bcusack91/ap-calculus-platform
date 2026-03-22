@@ -76,6 +76,7 @@ export default function APStatsDailyQuestionPage() {
           <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">Want more practice? Try a full diagnostic or explore all topics.</p>
           <div className="flex justify-center gap-3">
             <Link href="/ap-stats-diagnostic" className="rounded-lg bg-amber-100 px-4 py-2 text-sm font-medium text-amber-700 transition hover:bg-amber-200 dark:bg-amber-900/30 dark:text-amber-400">Diagnostic Test</Link>
+            <Link href="/ap-stats-score-predictor" className="rounded-lg bg-amber-100 px-4 py-2 text-sm font-medium text-amber-700 transition hover:bg-amber-200 dark:bg-amber-900/30 dark:text-amber-400">Score Predictor</Link>
             <Link href="/ap-statistics" className="rounded-lg bg-amber-100 px-4 py-2 text-sm font-medium text-amber-700 transition hover:bg-amber-200 dark:bg-amber-900/30 dark:text-amber-400">All Stats Topics</Link>
           </div>
         </div>

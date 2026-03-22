@@ -199,9 +199,11 @@ export default function APPrecalculusDiagnosticPage() {
             </ol>
             {completedModules > 0 && <p className="mt-3 text-xs text-cyan-500 dark:text-cyan-400">You&apos;ve taken {completedModules} diagnostic test{completedModules > 1 ? 's' : ''} so far — keep going!</p>}
           </div>
-          <div className="flex gap-3">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <button onClick={() => { setResults(null); setTestData(null); startTest() }} className="flex-1 rounded-xl border-2 border-cyan-500 py-3 font-semibold text-cyan-600 transition hover:bg-cyan-50 dark:text-cyan-400 dark:hover:bg-cyan-900/20">Take Next Diagnostic</button>
             <Link href="/courses/ap-precalculus" className="flex-1 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg">Browse AP Precalculus Topics</Link>
+            <Link href="/ap-precalculus-score-predictor" className="flex-1 rounded-xl border border-cyan-300 py-3 text-center font-semibold text-cyan-700 transition hover:bg-cyan-50 dark:border-cyan-700 dark:text-cyan-300 dark:hover:bg-cyan-900/20">View Score Predictor</Link>
+            <Link href="/ap-precalculus-daily-question" className="flex-1 rounded-xl border border-cyan-300 py-3 text-center font-semibold text-cyan-700 transition hover:bg-cyan-50 dark:border-cyan-700 dark:text-cyan-300 dark:hover:bg-cyan-900/20">Today&apos;s Question</Link>
           </div>
         </div></div>
       </div>
@@ -253,6 +255,8 @@ export default function APPrecalculusDiagnosticPage() {
             ))}
           </ul>
           <button onClick={startTest} className="w-full rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl">{lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}</button>
+          <Link href="/ap-precalculus-score-predictor" className="mt-3 block text-center text-sm font-medium text-cyan-700 transition hover:underline dark:text-cyan-300">Prefer a quick estimate? Open the AP Precalculus Score Predictor</Link>
+          <Link href="/ap-precalculus-daily-question" className="mt-1 block text-center text-sm font-medium text-cyan-700 transition hover:underline dark:text-cyan-300">Need a warm-up first? Try today&apos;s AP Precalculus question</Link>
         </div>
 
         <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">

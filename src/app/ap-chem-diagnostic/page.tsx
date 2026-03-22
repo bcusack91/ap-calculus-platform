@@ -425,7 +425,7 @@ export default function APChemDiagnosticPage() {
             </div>
 
             {/* Actions */}
-            <div className="flex gap-3">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <button
                 onClick={() => { setResults(null); setTestData(null); startTest() }}
                 className="flex-1 rounded-xl border-2 border-orange-500 py-3 font-semibold text-orange-600 transition hover:bg-orange-50 dark:text-orange-400 dark:hover:bg-orange-900/20"
@@ -437,6 +437,18 @@ export default function APChemDiagnosticPage() {
                 className="flex-1 rounded-xl bg-gradient-to-r from-orange-600 to-red-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg"
               >
                 Browse All AP Chem Modules
+              </Link>
+              <Link
+                href="/ap-chem-score-predictor"
+                className="flex-1 rounded-xl border border-orange-300 py-3 text-center font-semibold text-orange-700 transition hover:bg-orange-50 dark:border-orange-700 dark:text-orange-300 dark:hover:bg-orange-900/20"
+              >
+                View Score Predictor
+              </Link>
+              <Link
+                href="/ap-chem-daily-question"
+                className="flex-1 rounded-xl border border-orange-300 py-3 text-center font-semibold text-orange-700 transition hover:bg-orange-50 dark:border-orange-700 dark:text-orange-300 dark:hover:bg-orange-900/20"
+              >
+                Today&apos;s Question
               </Link>
             </div>
           </div>
@@ -581,6 +593,8 @@ export default function APChemDiagnosticPage() {
             >
               {lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}
             </button>
+            <Link href="/ap-chem-score-predictor" className="mt-3 block text-center text-sm font-medium text-orange-700 transition hover:underline dark:text-orange-300">Prefer a quick estimate? Open the AP Chemistry Score Predictor</Link>
+            <Link href="/ap-chem-daily-question" className="mt-1 block text-center text-sm font-medium text-orange-700 transition hover:underline dark:text-orange-300">Need a warm-up first? Try today&apos;s AP Chemistry question</Link>
           </div>
 
           {/* How it works */}

@@ -73,9 +73,10 @@ export default function GeometryDailyQuestionPage() {
         ) : null}
 
         <div className="mx-auto mt-10 max-w-md text-center">
-          <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">Want more practice? Try the full diagnostic test.</p>
+          <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">Want more practice? Try the full diagnostic test or predict your course score.</p>
           <div className="flex justify-center gap-3">
             <Link href="/geometry-diagnostic" className="rounded-lg bg-violet-100 px-4 py-2 text-sm font-medium text-violet-700 transition hover:bg-violet-200 dark:bg-violet-900/30 dark:text-violet-400">Diagnostic Test</Link>
+            <Link href="/geometry-score-predictor" className="rounded-lg bg-violet-100 px-4 py-2 text-sm font-medium text-violet-700 transition hover:bg-violet-200 dark:bg-violet-900/30 dark:text-violet-400">Score Predictor</Link>
           </div>
         </div>
       </div>

@@ -199,9 +199,11 @@ export default function APPhysicsCMechDiagnosticPage() {
             </ol>
             {completedModules > 0 && <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">You&apos;ve taken {completedModules} diagnostic test{completedModules > 1 ? 's' : ''} so far — keep going!</p>}
           </div>
-          <div className="flex gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <button onClick={() => { setResults(null); setTestData(null); startTest() }} className="flex-1 rounded-xl border-2 border-slate-500 py-3 font-semibold text-slate-600 transition hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-900/20">Take Next Diagnostic</button>
             <Link href="/courses/ap-physics-c-mechanics" className="flex-1 rounded-xl bg-gradient-to-r from-slate-600 to-blue-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg">Browse AP Physics C: Mech Topics</Link>
+            <Link href="/ap-physics-c-mech-score-predictor" className="flex-1 rounded-xl border-2 border-slate-500 py-3 text-center font-semibold text-slate-600 transition hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-900/20">View Score Predictor</Link>
+            <Link href="/ap-physics-c-mech-daily-question" className="flex-1 rounded-xl border-2 border-slate-500 py-3 text-center font-semibold text-slate-600 transition hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-900/20">Today&apos;s Question</Link>
           </div>
         </div></div>
       </div>
@@ -253,6 +255,10 @@ export default function APPhysicsCMechDiagnosticPage() {
             ))}
           </ul>
           <button onClick={startTest} className="w-full rounded-xl bg-gradient-to-r from-slate-600 to-blue-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl">{lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}</button>
+          <div className="mt-3 flex flex-wrap justify-center gap-2">
+            <Link href="/ap-physics-c-mech-score-predictor" className="rounded-lg bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-200 dark:bg-slate-900/30 dark:text-slate-400">Score Predictor</Link>
+            <Link href="/ap-physics-c-mech-daily-question" className="rounded-lg bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-200 dark:bg-slate-900/30 dark:text-slate-400">Daily Question</Link>
+          </div>
         </div>
 
         <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">

@@ -212,9 +212,11 @@ export default function OChemDiagnosticPage() {
             {completedModules > 0 && <p className="mt-3 text-xs text-fuchsia-500 dark:text-fuchsia-400">You&apos;ve taken {completedModules} diagnostic test{completedModules > 1 ? 's' : ''} so far — keep going!</p>}
           </div>
 
-          <div className="flex gap-3">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <button onClick={() => { setResults(null); setTestData(null); startTest() }} className="flex-1 rounded-xl border-2 border-fuchsia-500 py-3 font-semibold text-fuchsia-600 transition hover:bg-fuchsia-50 dark:text-fuchsia-400 dark:hover:bg-fuchsia-900/20">Take Next Diagnostic</button>
             <Link href="/organic-chemistry" className="flex-1 rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg">Browse All OChem Modules</Link>
+            <Link href="/ochem-score-predictor" className="flex-1 rounded-xl border border-fuchsia-300 py-3 text-center font-semibold text-fuchsia-700 transition hover:bg-fuchsia-50 dark:border-fuchsia-700 dark:text-fuchsia-300 dark:hover:bg-fuchsia-900/20">View Score Predictor</Link>
+            <Link href="/ochem-daily-question" className="flex-1 rounded-xl border border-fuchsia-300 py-3 text-center font-semibold text-fuchsia-700 transition hover:bg-fuchsia-50 dark:border-fuchsia-700 dark:text-fuchsia-300 dark:hover:bg-fuchsia-900/20">Today&apos;s Question</Link>
           </div>
         </div></div>
       </div>
@@ -271,6 +273,8 @@ export default function OChemDiagnosticPage() {
             ))}
           </ul>
           <button onClick={startTest} className="w-full rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl">{lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}</button>
+          <Link href="/ochem-score-predictor" className="mt-3 block text-center text-sm font-medium text-fuchsia-700 transition hover:underline dark:text-fuchsia-300">Prefer a quick estimate? Open the Organic Chemistry Score Predictor</Link>
+          <Link href="/ochem-daily-question" className="mt-1 block text-center text-sm font-medium text-fuchsia-700 transition hover:underline dark:text-fuchsia-300">Need a warm-up first? Try today&apos;s Organic Chemistry question</Link>
         </div>
 
         <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">

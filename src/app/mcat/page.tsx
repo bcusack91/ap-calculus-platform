@@ -77,6 +77,18 @@ const features = [
     color: 'from-rose-500 to-pink-500',
     stats: '1 question · Daily',
   },
+  {
+    title: 'Score Predictor',
+    description: 'Project your MCAT score from ongoing quiz performance and mastery progress across sections.',
+    href: '/mcat-score-predictor',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3v18h18M7 14l3-3 3 2 4-5" />
+      </svg>
+    ),
+    color: 'from-teal-500 to-emerald-500',
+    stats: 'Live estimate · 472-528',
+  },
 ]
 
 const sections = [

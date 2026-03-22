@@ -212,9 +212,11 @@ export default function APPhysics1DiagnosticPage() {
             {completedModules > 0 && <p className="mt-3 text-xs text-blue-500 dark:text-blue-400">You&apos;ve taken {completedModules} diagnostic test{completedModules > 1 ? 's' : ''} so far — keep going!</p>}
           </div>
 
-          <div className="flex gap-3">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <button onClick={() => { setResults(null); setTestData(null); startTest() }} className="flex-1 rounded-xl border-2 border-blue-500 py-3 font-semibold text-blue-600 transition hover:bg-blue-50 dark:text-blue-400 dark:hover:bg-blue-900/20">Take Next Diagnostic</button>
             <Link href="/courses/ap-physics-1" className="flex-1 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg">Browse All AP Physics 1 Modules</Link>
+            <Link href="/ap-physics1-score-predictor" className="flex-1 rounded-xl border border-blue-300 py-3 text-center font-semibold text-blue-700 transition hover:bg-blue-50 dark:border-blue-700 dark:text-blue-300 dark:hover:bg-blue-900/20">View Score Predictor</Link>
+            <Link href="/ap-physics1-daily-question" className="flex-1 rounded-xl border border-blue-300 py-3 text-center font-semibold text-blue-700 transition hover:bg-blue-50 dark:border-blue-700 dark:text-blue-300 dark:hover:bg-blue-900/20">Today&apos;s Question</Link>
           </div>
         </div></div>
       </div>
@@ -271,6 +273,8 @@ export default function APPhysics1DiagnosticPage() {
             ))}
           </ul>
           <button onClick={startTest} className="w-full rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl">{lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}</button>
+          <Link href="/ap-physics1-score-predictor" className="mt-3 block text-center text-sm font-medium text-blue-700 transition hover:underline dark:text-blue-300">Prefer a quick estimate? Open the AP Physics 1 Score Predictor</Link>
+          <Link href="/ap-physics1-daily-question" className="mt-1 block text-center text-sm font-medium text-blue-700 transition hover:underline dark:text-blue-300">Need a warm-up first? Try today&apos;s AP Physics 1 question</Link>
         </div>
 
         <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">

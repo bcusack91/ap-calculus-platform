@@ -199,9 +199,11 @@ export default function Grade8MathDiagnosticPage() {
             </ol>
             {completedModules > 0 && <p className="mt-3 text-xs text-pink-500 dark:text-pink-400">You&apos;ve taken {completedModules} diagnostic test{completedModules > 1 ? 's' : ''} so far — keep going!</p>}
           </div>
-          <div className="flex gap-3">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <button onClick={() => { setResults(null); setTestData(null); startTest() }} className="flex-1 rounded-xl border-2 border-pink-500 py-3 font-semibold text-pink-600 transition hover:bg-pink-50 dark:text-pink-400 dark:hover:bg-pink-900/20">Take Next Diagnostic</button>
             <Link href="/courses/grade-8-math" className="flex-1 rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg">Browse Grade 8 Topics</Link>
+            <Link href="/grade8-math-score-predictor" className="flex-1 rounded-xl border border-pink-300 py-3 text-center font-semibold text-pink-700 transition hover:bg-pink-50 dark:border-pink-700 dark:text-pink-300 dark:hover:bg-pink-900/20">View Score Predictor</Link>
+            <Link href="/grade8-math-daily-question" className="flex-1 rounded-xl border border-pink-300 py-3 text-center font-semibold text-pink-700 transition hover:bg-pink-50 dark:border-pink-700 dark:text-pink-300 dark:hover:bg-pink-900/20">Today&apos;s Question</Link>
           </div>
         </div></div>
       </div>
@@ -253,6 +255,8 @@ export default function Grade8MathDiagnosticPage() {
             ))}
           </ul>
           <button onClick={startTest} className="w-full rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl">{lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}</button>
+          <Link href="/grade8-math-score-predictor" className="mt-3 block text-center text-sm font-medium text-pink-700 transition hover:underline dark:text-pink-300">Prefer a quick estimate? Open the Grade 8 Math Score Predictor</Link>
+          <Link href="/grade8-math-daily-question" className="mt-1 block text-center text-sm font-medium text-pink-700 transition hover:underline dark:text-pink-300">Need a warm-up first? Try today&apos;s Grade 8 Math question</Link>
         </div>
 
         <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">

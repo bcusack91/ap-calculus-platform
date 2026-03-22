@@ -76,6 +76,7 @@ export default function APPhysics2DailyQuestionPage() {
           <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">Want more practice? Try a full diagnostic or explore all topics.</p>
           <div className="flex justify-center gap-3">
             <Link href="/ap-physics2-diagnostic" className="rounded-lg bg-indigo-100 px-4 py-2 text-sm font-medium text-indigo-700 transition hover:bg-indigo-200 dark:bg-indigo-900/30 dark:text-indigo-400">Diagnostic Test</Link>
+            <Link href="/ap-physics2-score-predictor" className="rounded-lg bg-indigo-100 px-4 py-2 text-sm font-medium text-indigo-700 transition hover:bg-indigo-200 dark:bg-indigo-900/30 dark:text-indigo-400">Score Predictor</Link>
             <Link href="/ap-physics-2" className="rounded-lg bg-indigo-100 px-4 py-2 text-sm font-medium text-indigo-700 transition hover:bg-indigo-200 dark:bg-indigo-900/30 dark:text-indigo-400">All Physics Topics</Link>
           </div>
         </div>

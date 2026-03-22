@@ -73,9 +73,10 @@ export default function Algebra1DailyQuestionPage() {
         ) : null}
 
         <div className="mx-auto mt-10 max-w-md text-center">
-          <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">Want more practice? Try the full diagnostic test.</p>
+          <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">Want more practice? Try the full diagnostic test or predict your course score.</p>
           <div className="flex justify-center gap-3">
             <Link href="/algebra1-diagnostic" className="rounded-lg bg-sky-100 px-4 py-2 text-sm font-medium text-sky-700 transition hover:bg-sky-200 dark:bg-sky-900/30 dark:text-sky-400">Diagnostic Test</Link>
+            <Link href="/algebra1-score-predictor" className="rounded-lg bg-sky-100 px-4 py-2 text-sm font-medium text-sky-700 transition hover:bg-sky-200 dark:bg-sky-900/30 dark:text-sky-400">Score Predictor</Link>
           </div>
         </div>
       </div>

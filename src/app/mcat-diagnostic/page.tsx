@@ -360,18 +360,30 @@ export default function MCATDiagnosticPage() {
             </div>
 
             {/* Actions */}
-            <div className="flex gap-3">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <button
                 onClick={() => { setResults(null); setTestData(null); setPhase('testing'); startTest() }}
                 className="flex-1 rounded-xl border-2 border-emerald-500 py-3 font-semibold text-emerald-600 transition hover:bg-emerald-50 dark:text-emerald-400 dark:hover:bg-emerald-900/20"
               >
-                Retake Diagnostic
+                Take Next Diagnostic
               </button>
               <Link
                 href="/mcat-practice"
                 className="flex-1 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg"
               >
                 Practice Sections
+              </Link>
+              <Link
+                href="/mcat-score-predictor"
+                className="flex-1 rounded-xl border border-emerald-300 py-3 text-center font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/20"
+              >
+                View Score Predictor
+              </Link>
+              <Link
+                href="/mcat-daily-question"
+                className="flex-1 rounded-xl border border-emerald-300 py-3 text-center font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/20"
+              >
+                Today&apos;s Question
               </Link>
             </div>
           </div>
@@ -464,8 +476,10 @@ export default function MCATDiagnosticPage() {
               onClick={startTest}
               className="w-full rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
             >
-              {lastResult ? 'Retake Diagnostic' : 'Start Diagnostic Test'}
+              {lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}
             </button>
+            <Link href="/mcat-score-predictor" className="mt-3 block text-center text-sm font-medium text-emerald-700 transition hover:underline dark:text-emerald-300">Prefer a quick estimate? Open the MCAT Score Predictor</Link>
+            <Link href="/mcat-daily-question" className="mt-1 block text-center text-sm font-medium text-emerald-700 transition hover:underline dark:text-emerald-300">Need a warm-up first? Try today&apos;s MCAT question</Link>
           </div>
 
           {/* History */}

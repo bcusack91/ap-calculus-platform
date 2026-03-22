@@ -199,9 +199,11 @@ export default function APPhysicsCEMDiagnosticPage() {
             </ol>
             {completedModules > 0 && <p className="mt-3 text-xs text-amber-500 dark:text-amber-400">You&apos;ve taken {completedModules} diagnostic test{completedModules > 1 ? 's' : ''} so far — keep going!</p>}
           </div>
-          <div className="flex gap-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <button onClick={() => { setResults(null); setTestData(null); startTest() }} className="flex-1 rounded-xl border-2 border-amber-500 py-3 font-semibold text-amber-600 transition hover:bg-amber-50 dark:text-amber-400 dark:hover:bg-amber-900/20">Take Next Diagnostic</button>
             <Link href="/courses/ap-physics-c-em" className="flex-1 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg">Browse AP Physics C: E&M Topics</Link>
+            <Link href="/ap-physics-c-em-score-predictor" className="flex-1 rounded-xl border-2 border-amber-500 py-3 text-center font-semibold text-amber-600 transition hover:bg-amber-50 dark:text-amber-400 dark:hover:bg-amber-900/20">View Score Predictor</Link>
+            <Link href="/ap-physics-c-em-daily-question" className="flex-1 rounded-xl border-2 border-amber-500 py-3 text-center font-semibold text-amber-600 transition hover:bg-amber-50 dark:text-amber-400 dark:hover:bg-amber-900/20">Today&apos;s Question</Link>
           </div>
         </div></div>
       </div>
@@ -253,6 +255,10 @@ export default function APPhysicsCEMDiagnosticPage() {
             ))}
           </ul>
           <button onClick={startTest} className="w-full rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl">{lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}</button>
+          <div className="mt-3 flex flex-wrap justify-center gap-2">
+            <Link href="/ap-physics-c-em-score-predictor" className="rounded-lg bg-amber-100 px-4 py-2 text-sm font-medium text-amber-700 transition hover:bg-amber-200 dark:bg-amber-900/30 dark:text-amber-400">Score Predictor</Link>
+            <Link href="/ap-physics-c-em-daily-question" className="rounded-lg bg-amber-100 px-4 py-2 text-sm font-medium text-amber-700 transition hover:bg-amber-200 dark:bg-amber-900/30 dark:text-amber-400">Daily Question</Link>
+          </div>
         </div>
 
         <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
