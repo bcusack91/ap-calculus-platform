@@ -17,6 +17,12 @@ export default function SignInPage() {
     setError('')
     setIsLoading(true)
 
+    if (!email.trim() || !password) {
+      setError('Email and password are required')
+      setIsLoading(false)
+      return
+    }
+
     try {
       const result = await signIn('credentials', {
         email,
@@ -75,7 +81,7 @@ export default function SignInPage() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} noValidate className="space-y-6">
           <div className="space-y-4">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">

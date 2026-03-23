@@ -118,18 +118,20 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* Register service worker for offline support */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/sw.js').catch(function() {});
-                });
-              }
-            `,
-          }}
-        />
+        {/* Register service worker only in production to avoid stale-cache issues in local dev */}
+        {process.env.NODE_ENV === 'production' && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                if ('serviceWorker' in navigator) {
+                  window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/sw.js').catch(function() {});
+                  });
+                }
+              `,
+            }}
+          />
+        )}
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <WebVitals />

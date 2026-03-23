@@ -23,6 +23,32 @@ export default function SignUpPage() {
     setError('')
 
     if (step === 1) {
+      if (!name.trim()) {
+        setError('Full name is required')
+        return
+      }
+
+      if (!email.trim()) {
+        setError('Email is required')
+        return
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      if (!emailRegex.test(email)) {
+        setError('Please enter a valid email address')
+        return
+      }
+
+      if (!password) {
+        setError('Password is required')
+        return
+      }
+
+      if (!confirmPassword) {
+        setError('Please confirm your password')
+        return
+      }
+
       // Validation for step 1
       if (password !== confirmPassword) {
         setError('Passwords do not match')
@@ -108,7 +134,7 @@ export default function SignUpPage() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+        <form onSubmit={handleSubmit} noValidate className="mt-8 space-y-6">
           {step === 1 ? (
             // Step 1: Account Details
             <div className="space-y-4">
