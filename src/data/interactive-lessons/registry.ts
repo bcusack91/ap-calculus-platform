@@ -3222,8 +3222,8 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Cardiovascular System', loader: () => import('./mcat-mcat-organ-systems-mcat-part1').then(m => m.mcatOrganSysPart1Data) },
       { title: 'Respiratory System', loader: () => import('./mcat-mcat-organ-systems-mcat-part2').then(m => m.mcatOrganSysPart2Data) },
-      { title: 'Renal & Excretory System', loader: () => import('./mcat-mcat-organ-systems-mcat-part3').then(m => m.mcatOrganSysPart3Data) },
-      { title: 'Digestive System', loader: () => import('./mcat-mcat-organ-systems-mcat-part4').then(m => m.mcatOrganSysPart4Data) },
+      { title: 'Renal & Excretory System', loader: () => import('./mcat-mcat-organ-systems-mcat-part4').then(m => m.mcatOrganSysPart4Data) },
+      { title: 'Digestive System', loader: () => import('./mcat-mcat-organ-systems-mcat-part3').then(m => m.mcatOrganSysPart3Data) },
       { title: 'Endocrine System', loader: () => import('./mcat-mcat-organ-systems-mcat-part5').then(m => m.mcatOrganSysPart5Data) },
       { title: 'Nervous System', loader: () => import('./mcat-mcat-organ-systems-mcat-part6').then(m => m.mcatOrganSysPart6Data) },
       { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-organ-systems-mcat-part7').then(m => m.mcatOrganSysPart7Data) },
