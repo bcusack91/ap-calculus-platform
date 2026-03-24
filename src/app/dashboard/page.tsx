@@ -125,6 +125,31 @@ export default function DashboardPage() {
     form?: string
     recommendedTopics?: { slug: string; name: string; priority: string }[]
   } | null>(null)
+  const [mcatPlanStatus, setMcatPlanStatus] = useState<{
+    hasDiagnostic: boolean
+    canRetakeDiagnostic: boolean
+    requiredScorePercent: number
+    recommendedTopics: {
+      slug: string
+      name: string
+      priority: 'high' | 'medium' | 'low'
+      topicPath: string
+      entranceSatisfied: boolean
+      bestExitScorePercent: number | null
+      exitSatisfied: boolean
+      isSatisfied: boolean
+    }[]
+    pendingTopics: {
+      slug: string
+      name: string
+      priority: 'high' | 'medium' | 'low'
+      topicPath: string
+      entranceSatisfied: boolean
+      bestExitScorePercent: number | null
+      exitSatisfied: boolean
+      isSatisfied: boolean
+    }[]
+  } | null>(null)
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -210,6 +235,17 @@ export default function DashboardPage() {
         if (bcData.attempts?.length > 0) {
           const latest = bcData.attempts[0].results as Record<string, unknown>
           setCalcBCDiagnostic(latest)
+        }
+      }
+    } catch { /* silent */ }
+
+    // Fetch MCAT diagnostic remediation/recommendation plan
+    try {
+      const mcatRes = await fetch('/api/mcat-diagnostic/plan-status')
+      if (mcatRes.ok) {
+        const mcatData = await mcatRes.json()
+        if (mcatData?.hasDiagnostic) {
+          setMcatPlanStatus(mcatData)
         }
       }
     } catch { /* silent */ }
@@ -456,9 +492,40 @@ export default function DashboardPage() {
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             {/* Diagnostic Study Plans — shown prominently at top of dashboard */}
-            {(apChemDiagnostic?.recommendedTopics?.length || calcABDiagnostic?.recommendedTopics?.length || calcBCDiagnostic?.recommendedTopics?.length) ? (
+            {(apChemDiagnostic?.recommendedTopics?.length || calcABDiagnostic?.recommendedTopics?.length || calcBCDiagnostic?.recommendedTopics?.length || mcatPlanStatus?.recommendedTopics?.length) ? (
               <div className="space-y-4">
                 <h2 className="text-xl font-bold text-gray-900 dark:text-white">📋 Your Study Plans</h2>
+                {mcatPlanStatus?.recommendedTopics && mcatPlanStatus.recommendedTopics.length > 0 && (
+                  <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-emerald-300 dark:border-emerald-700 p-5 shadow-sm">
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="font-bold text-gray-900 dark:text-white">🩺 MCAT Remediation Plan</h3>
+                      <div className="flex items-center gap-3">
+                        <span className="text-xs text-gray-500 dark:text-gray-400">
+                          {mcatPlanStatus.pendingTopics.length === 0 ? 'All recommended modules complete' : `${mcatPlanStatus.pendingTopics.length} module${mcatPlanStatus.pendingTopics.length === 1 ? '' : 's'} left`}
+                        </span>
+                        <Link href="/mcat-diagnostic" className="text-xs text-emerald-600 hover:underline dark:text-emerald-400">View Plan →</Link>
+                      </div>
+                    </div>
+                    <p className="mb-3 text-xs text-gray-600 dark:text-gray-400">
+                      Retake unlock rule: score 100% on entrance quiz or at least {mcatPlanStatus.requiredScorePercent}% on exit quiz for each recommended module.
+                    </p>
+                    <div className="space-y-1.5">
+                      {mcatPlanStatus.recommendedTopics.map((topic, i) => (
+                        <Link key={topic.slug} href={topic.topicPath} className="flex items-center justify-between rounded-lg border border-emerald-200 dark:border-emerald-700 bg-emerald-50 dark:bg-emerald-900/20 px-3 py-2 hover:border-emerald-400 transition-colors group">
+                          <div className="flex items-center gap-2">
+                            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/50 text-[10px] font-bold text-emerald-700 dark:text-emerald-300">{i + 1}</span>
+                            <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-emerald-700 dark:group-hover:text-emerald-400">{topic.name}</span>
+                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Med'}</span>
+                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full ${topic.isSatisfied ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' : 'bg-gray-100 text-gray-600 dark:bg-gray-700 dark:text-gray-300'}`}>
+                              {topic.isSatisfied ? 'Complete' : 'Pending'}
+                            </span>
+                          </div>
+                          <span className="text-emerald-500 group-hover:translate-x-1 transition-transform text-sm">→</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
                 {apChemDiagnostic?.recommendedTopics && apChemDiagnostic.recommendedTopics.length > 0 && (
                   <div className="bg-white dark:bg-gray-800 rounded-xl border-2 border-orange-300 dark:border-orange-700 p-5 shadow-sm">
                     <div className="flex items-center justify-between mb-3">

@@ -2,6 +2,31 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 
+function parseMaybeJsonArray(value: unknown): unknown {
+  if (value == null) return null
+
+  if (Array.isArray(value) || typeof value === 'object') {
+    return value
+  }
+
+  if (typeof value === 'string') {
+    const trimmed = value.trim()
+    if (!trimmed) return null
+
+    if ((trimmed.startsWith('[') && trimmed.endsWith(']')) || (trimmed.startsWith('{') && trimmed.endsWith('}'))) {
+      try {
+        return JSON.parse(trimmed)
+      } catch {
+        return trimmed.split(',').map((item) => item.trim()).filter(Boolean)
+      }
+    }
+
+    return trimmed.split(',').map((item) => item.trim()).filter(Boolean)
+  }
+
+  return value
+}
+
 export async function POST(req: Request) {
   try {
     const session = await auth()
@@ -20,8 +45,12 @@ export async function POST(req: Request) {
         userId: session.user.id,
         category,
         results: typeof results === 'string' ? JSON.parse(results) : results,
-        weakAreas: weakAreas ? (typeof weakAreas === 'string' ? JSON.parse(weakAreas) : weakAreas) : null,
-        strengths: strengths ? (typeof strengths === 'string' ? strengths : JSON.stringify(strengths)) : null,
+        weakAreas: parseMaybeJsonArray(weakAreas),
+        strengths: (() => {
+          const parsedStrengths = parseMaybeJsonArray(strengths)
+          if (parsedStrengths == null) return null
+          return typeof parsedStrengths === 'string' ? parsedStrengths : JSON.stringify(parsedStrengths)
+        })(),
       },
     })
 

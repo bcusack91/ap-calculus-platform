@@ -97,7 +97,7 @@ const questionPool: MCATQuizQuestion[] = [
   },
   {
     question: 'A sound wave has a frequency of 440 Hz and a wavelength of 0.77 m. What is its speed?',
-    options: ['338.8 m/s', '571 m/s', '340 m/s', '572 Hz/m'],
+    options: ['338.8 m/s', '571 m/s', '272.8 m/s', '572 Hz/m'],
     correctAnswer: 0,
     explanation: 'v = fλ = 440 × 0.77 = 338.8 m/s, which is approximately the speed of sound in air at room temperature.',
     difficulty: 'easy',

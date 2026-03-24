@@ -29,6 +29,30 @@ export default function MCATDiagnosticPage() {
   const { status } = useSession()
   const router = useRouter()
 
+  type PlanTopicStatus = {
+    slug: string
+    name: string
+    priority: 'high' | 'medium' | 'low'
+    topicPath: string
+    entranceSatisfied: boolean
+    bestExitScorePercent: number | null
+    exitSatisfied: boolean
+    isSatisfied: boolean
+  }
+
+  type PlanStatus = {
+    hasDiagnostic: boolean
+    canRetakeDiagnostic: boolean
+    requiredScorePercent: number
+    recommendedTopics: PlanTopicStatus[]
+    pendingTopics: PlanTopicStatus[]
+    summary?: {
+      totalRecommended: number
+      completed: number
+      pending: number
+    }
+  }
+
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
   const [testData, setTestData] = useState<MCATDiagnosticTestData | null>(null)
   const [results, setResults] = useState<MCATDiagnosticResults | null>(null)
@@ -39,6 +63,7 @@ export default function MCATDiagnosticPage() {
   const [history, setHistory] = useState<
     { id: string; category: string; results: string; createdAt: string }[]
   >([])
+  const [planStatus, setPlanStatus] = useState<PlanStatus | null>(null)
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -52,6 +77,11 @@ export default function MCATDiagnosticPage() {
       fetch('/api/mcat-diagnostic/history')
         .then(r => (r.ok ? r.json() : { attempts: [] }))
         .then(data => setHistory(data.attempts ?? []))
+        .catch(() => {})
+
+      fetch('/api/mcat-diagnostic/plan-status')
+        .then(r => (r.ok ? r.json() : null))
+        .then(data => setPlanStatus(data))
         .catch(() => {})
     }
   }, [status])
@@ -115,6 +145,12 @@ export default function MCATDiagnosticPage() {
           strengths: diagnosticResults.strengths.join(', '),
         }),
       })
+
+      const statusRes = await fetch('/api/mcat-diagnostic/plan-status')
+      if (statusRes.ok) {
+        const statusData = await statusRes.json()
+        setPlanStatus(statusData)
+      }
     } catch {
       // Silent fail
     }
@@ -376,12 +412,21 @@ export default function MCATDiagnosticPage() {
 
             {/* Actions */}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              <button
-                onClick={() => { setResults(null); setTestData(null); setPhase('testing'); startTest() }}
-                className="flex-1 rounded-xl border-2 border-emerald-500 py-3 font-semibold text-emerald-600 transition hover:bg-emerald-50 dark:text-emerald-400 dark:hover:bg-emerald-900/20"
-              >
-                Take Next Diagnostic
-              </button>
+              {planStatus?.canRetakeDiagnostic ? (
+                <button
+                  onClick={() => { setResults(null); setTestData(null); setPhase('testing'); startTest() }}
+                  className="flex-1 rounded-xl border-2 border-emerald-500 py-3 font-semibold text-emerald-600 transition hover:bg-emerald-50 dark:text-emerald-400 dark:hover:bg-emerald-900/20"
+                >
+                  Take Next Diagnostic
+                </button>
+              ) : (
+                <button
+                  disabled
+                  className="flex-1 cursor-not-allowed rounded-xl border-2 border-gray-300 py-3 font-semibold text-gray-500 dark:border-gray-600 dark:text-gray-400"
+                >
+                  Complete Recommended Modules First
+                </button>
+              )}
               <Link
                 href="/mcat-practice"
                 className="flex-1 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg"
@@ -401,6 +446,29 @@ export default function MCATDiagnosticPage() {
                 Today&apos;s Question
               </Link>
             </div>
+
+            {!planStatus?.canRetakeDiagnostic && planStatus?.pendingTopics?.length ? (
+              <div className="mt-6 rounded-2xl border border-amber-300 bg-amber-50 p-5 dark:border-amber-700 dark:bg-amber-900/20">
+                <h4 className="mb-2 text-sm font-bold text-amber-900 dark:text-amber-200">
+                  Next diagnostic is locked until remediation is complete
+                </h4>
+                <p className="mb-3 text-xs text-amber-800 dark:text-amber-300">
+                  For each recommended topic, either score 100% on the entrance quiz or score at least {planStatus.requiredScorePercent}% on the exit quiz.
+                </p>
+                <div className="space-y-2">
+                  {planStatus.pendingTopics.slice(0, 6).map((topic) => (
+                    <Link
+                      key={topic.slug}
+                      href={topic.topicPath}
+                      className="flex items-center justify-between rounded-lg border border-amber-200 bg-white px-3 py-2 text-sm text-gray-800 hover:border-amber-400 dark:border-amber-800 dark:bg-gray-800 dark:text-gray-200"
+                    >
+                      <span>{topic.name}</span>
+                      <span className="text-amber-600 dark:text-amber-400">Study →</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
@@ -487,14 +555,46 @@ export default function MCATDiagnosticPage() {
               </li>
             </ul>
 
-            <button
-              onClick={startTest}
-              className="w-full rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
-            >
-              {lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}
-            </button>
+            {planStatus?.hasDiagnostic && !planStatus.canRetakeDiagnostic ? (
+              <button
+                disabled
+                className="w-full cursor-not-allowed rounded-xl bg-gray-300 px-6 py-3 font-semibold text-gray-700 dark:bg-gray-700 dark:text-gray-300"
+              >
+                Diagnostic Locked Until Remediation Complete
+              </button>
+            ) : (
+              <button
+                onClick={startTest}
+                className="w-full rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl"
+              >
+                {lastResult ? 'Take Next Diagnostic' : 'Start Diagnostic Test'}
+              </button>
+            )}
             <Link href="/mcat-score-predictor" className="mt-3 block text-center text-sm font-medium text-emerald-700 transition hover:underline dark:text-emerald-300">Prefer a quick estimate? Open the MCAT Score Predictor</Link>
             <Link href="/mcat-daily-question" className="mt-1 block text-center text-sm font-medium text-emerald-700 transition hover:underline dark:text-emerald-300">Need a warm-up first? Try today&apos;s MCAT question</Link>
+
+            {planStatus?.hasDiagnostic && !planStatus.canRetakeDiagnostic && planStatus.pendingTopics.length > 0 ? (
+              <div className="mt-5 rounded-xl border border-amber-300 bg-amber-50 p-4 dark:border-amber-700 dark:bg-amber-900/20">
+                <p className="text-sm font-semibold text-amber-900 dark:text-amber-200">
+                  Complete your recommended modules before the next diagnostic.
+                </p>
+                <p className="mt-1 text-xs text-amber-800 dark:text-amber-300">
+                  Requirement: 100% on entrance quiz, or at least {planStatus.requiredScorePercent}% on exit quiz.
+                </p>
+                <div className="mt-3 space-y-2">
+                  {planStatus.pendingTopics.slice(0, 5).map((topic) => (
+                    <Link
+                      key={topic.slug}
+                      href={topic.topicPath}
+                      className="flex items-center justify-between rounded-md border border-amber-200 bg-white px-3 py-2 text-sm text-gray-800 hover:border-amber-400 dark:border-amber-800 dark:bg-gray-800 dark:text-gray-200"
+                    >
+                      <span>{topic.name}</span>
+                      <span className="text-amber-600 dark:text-amber-400">Open →</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : null}
           </div>
 
           {/* History */}
