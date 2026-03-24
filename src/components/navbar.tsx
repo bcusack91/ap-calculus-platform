@@ -178,34 +178,71 @@ export function Navbar() {
                       if (!grouped[section]) grouped[section] = []
                       grouped[section].push(course)
                     }
-                    return sectionOrder
-                      .filter(s => grouped[s]?.length)
-                      .map(section => (
-                        <div key={section}>
-                          <button
-                            className="flex items-center justify-between w-full px-4 py-2.5 text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
-                            onClick={() => setExpandedSection(expandedSection === section ? null : section)}
-                            aria-expanded={expandedSection === section}
-                          >
-                            {section}
-                            <svg className={`h-3 w-3 transition-transform ${expandedSection === section ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                          </button>
-                          {expandedSection === section && grouped[section].map(course => (
-                            <Link
-                              key={course.slug}
-                              href={getCourseHref(course.slug)}
-                              role="menuitem"
-                              className="flex items-center gap-2 pl-6 pr-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
-                              onClick={() => { setCoursesOpen(false); setExpandedSection(null) }}
-                            >
-                              <span>{course.icon || '📚'}</span>
-                              {course.name}
-                            </Link>
+
+                    const testPrepOrder = ['sat-prep', 'act-prep', 'mcat-prep']
+                    const testPrepCourses = (grouped['Test Prep'] ?? [])
+                      .slice()
+                      .sort((a, b) => {
+                        const ai = testPrepOrder.indexOf(a.slug)
+                        const bi = testPrepOrder.indexOf(b.slug)
+                        const aRank = ai === -1 ? 999 : ai
+                        const bRank = bi === -1 ? 999 : bi
+                        if (aRank !== bRank) return aRank - bRank
+                        return a.name.localeCompare(b.name)
+                      })
+
+                    return (
+                      <>
+                        {testPrepCourses.length > 0 && (
+                          <div className="px-2 pb-2 mb-2 border-b border-gray-100 dark:border-gray-700">
+                            <div className="px-2 py-1 text-xs font-bold uppercase tracking-wide text-purple-600 dark:text-purple-300">
+                              Test Prep
+                            </div>
+                            {testPrepCourses.map(course => (
+                              <Link
+                                key={course.slug}
+                                href={getCourseHref(course.slug)}
+                                role="menuitem"
+                                className="flex items-center gap-2 px-2 py-2 text-sm rounded-md text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
+                                onClick={() => { setCoursesOpen(false); setExpandedSection(null) }}
+                              >
+                                <span>{course.icon || '📚'}</span>
+                                {course.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+
+                        {sectionOrder
+                          .filter(s => s !== 'Test Prep' && grouped[s]?.length)
+                          .map(section => (
+                            <div key={section}>
+                              <button
+                                className="flex items-center justify-between w-full px-4 py-2.5 text-xs font-bold uppercase tracking-wide text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
+                                onClick={() => setExpandedSection(expandedSection === section ? null : section)}
+                                aria-expanded={expandedSection === section}
+                              >
+                                {section}
+                                <svg className={`h-3 w-3 transition-transform ${expandedSection === section ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </button>
+                              {expandedSection === section && grouped[section].map(course => (
+                                <Link
+                                  key={course.slug}
+                                  href={getCourseHref(course.slug)}
+                                  role="menuitem"
+                                  className="flex items-center gap-2 pl-6 pr-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-300 transition-colors"
+                                  onClick={() => { setCoursesOpen(false); setExpandedSection(null) }}
+                                >
+                                  <span>{course.icon || '📚'}</span>
+                                  {course.name}
+                                </Link>
+                              ))}
+                            </div>
                           ))}
-                        </div>
-                      ))
+                      </>
+                    )
                   })()}
                   {courses.length === 0 && (
                     <div className="px-4 py-2 text-sm text-gray-500 dark:text-gray-400">Loading...</div>

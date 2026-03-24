@@ -25,6 +25,21 @@ const nextConfig: NextConfig = {
     ],
   },
   async headers() {
+    const isDev = process.env.NODE_ENV === 'development'
+    const scriptSrc = [
+      "script-src 'self' 'unsafe-inline'",
+      isDev ? "'unsafe-eval'" : '',
+      'https://pagead2.googlesyndication.com',
+      'https://www.googletagmanager.com',
+      'https://adservice.google.com',
+      'https://ep1.adtrafficquality.google',
+      'https://ep2.adtrafficquality.google',
+      'https://va.vercel-scripts.com',
+      'https://cdn.jsdelivr.net',
+    ]
+      .filter(Boolean)
+      .join(' ')
+
     return [
       {
         source: '/:path*',
@@ -57,7 +72,7 @@ const nextConfig: NextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://adservice.google.com https://ep1.adtrafficquality.google https://cdn.jsdelivr.net",
+              scriptSrc,
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net",
               "img-src 'self' data: blob: https: http:",
               "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net",

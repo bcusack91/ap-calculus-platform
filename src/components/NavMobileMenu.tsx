@@ -35,6 +35,18 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
     grouped[section].push(course)
   }
 
+  const testPrepOrder = ['sat-prep', 'act-prep', 'mcat-prep']
+  const testPrepCourses = (grouped['Test Prep'] ?? [])
+    .slice()
+    .sort((a, b) => {
+      const ai = testPrepOrder.indexOf(a.slug)
+      const bi = testPrepOrder.indexOf(b.slug)
+      const aRank = ai === -1 ? 999 : ai
+      const bRank = bi === -1 ? 999 : bi
+      if (aRank !== bRank) return aRank - bRank
+      return a.name.localeCompare(b.name)
+    })
+
   return (
     <div className="md:hidden border-t" role="menu" aria-label="Mobile navigation">
       <div className="space-y-1 px-4 pb-3 pt-2">
@@ -44,7 +56,25 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
         {/* Mobile Courses List — categorized */}
         <div className="px-3 py-2">
           <div className="text-base font-medium text-gray-500 dark:text-gray-400 mb-1">Courses</div>
-          {sectionOrder.filter(s => grouped[s]?.length).map(section => (
+          {testPrepCourses.length > 0 && (
+            <div className="mb-2 rounded-md border border-purple-100 dark:border-purple-800/50 p-2">
+              <div className="px-2 py-1 text-xs font-bold uppercase tracking-wide text-purple-600 dark:text-purple-300">
+                Test Prep
+              </div>
+              {testPrepCourses.map(course => (
+                <Link
+                  key={course.slug}
+                  href={getCourseHref(course.slug)}
+                  className="block pl-4 py-1.5 text-sm hover:bg-accent rounded-md"
+                  onClick={onClose}
+                >
+                  {course.icon || '📚'} {course.name}
+                </Link>
+              ))}
+            </div>
+          )}
+
+          {sectionOrder.filter(s => s !== 'Test Prep' && grouped[s]?.length).map(section => (
             <div key={section}>
               <button
                 className="flex items-center justify-between w-full pl-4 pr-2 py-2 text-sm font-semibold text-gray-600 dark:text-gray-400 hover:bg-accent rounded-md"

@@ -18,8 +18,7 @@ export default function SignUpPage() {
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleContinue = async () => {
     setError('')
 
     if (step === 1) {
@@ -134,7 +133,7 @@ export default function SignUpPage() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} noValidate className="mt-8 space-y-6">
+        <form noValidate className="mt-8 space-y-6">
           {step === 1 ? (
             // Step 1: Account Details
             <div className="space-y-4">
@@ -262,7 +261,8 @@ export default function SignUpPage() {
               </button>
             )}
             <button
-              type="submit"
+              type="button"
+              onClick={handleContinue}
               disabled={isLoading}
               className="flex-1 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
             >

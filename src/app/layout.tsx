@@ -77,6 +77,7 @@ export default function RootLayout({
 }>) {
   const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+  const isProd = process.env.NODE_ENV === 'production'
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -136,8 +137,8 @@ export default function RootLayout({
       <body className={`${inter.variable} font-sans antialiased`}>
         <WebVitals />
         <Providers>
-          {gaId && <GoogleAnalytics measurementId={gaId} />}
-          {adsenseClientId && <AdSenseScript clientId={adsenseClientId} />}
+          {isProd && gaId && <GoogleAnalytics measurementId={gaId} />}
+          {isProd && adsenseClientId && <AdSenseScript clientId={adsenseClientId} />}
           <div className="flex min-h-screen flex-col">
             <a
               href="#main-content"
@@ -151,8 +152,8 @@ export default function RootLayout({
           </div>
           <CookieConsent />
         </Providers>
-        <Analytics />
-        <SpeedInsights />
+        {isProd && <Analytics />}
+        {isProd && <SpeedInsights />}
       </body>
     </html>
   );
