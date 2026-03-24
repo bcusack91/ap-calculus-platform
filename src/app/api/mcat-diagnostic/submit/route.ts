@@ -2,8 +2,8 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 
-function parseMaybeJsonArray(value: unknown): unknown {
-  if (value == null) return null
+function parseMaybeJsonArray(value: unknown): string | number | boolean | object | undefined {
+  if (value == null) return undefined
 
   if (Array.isArray(value) || typeof value === 'object') {
     return value
@@ -11,7 +11,7 @@ function parseMaybeJsonArray(value: unknown): unknown {
 
   if (typeof value === 'string') {
     const trimmed = value.trim()
-    if (!trimmed) return null
+    if (!trimmed) return undefined
 
     if ((trimmed.startsWith('[') && trimmed.endsWith(']')) || (trimmed.startsWith('{') && trimmed.endsWith('}'))) {
       try {
