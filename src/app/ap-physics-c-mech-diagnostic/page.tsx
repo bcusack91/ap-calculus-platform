@@ -133,6 +133,21 @@ export default function APPhysicsCMechDiagnosticPage() {
           <div className="flex items-center justify-between">
             <button onClick={() => setCurrentIndex(prev => Math.max(0, prev - 1))} disabled={currentIndex === 0} className="rounded-xl border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-600 transition hover:bg-gray-50 disabled:opacity-40 dark:border-gray-600 dark:text-gray-400">← Previous</button>
             <span className="text-xs text-gray-500 dark:text-gray-400">{answeredCount}/{testData.questions.length} answered</span>
+            <button
+              onClick={() => {
+                const updated = [...answers]
+                updated[currentIndex] = null
+                setAnswers(updated)
+                if (currentIndex < testData.questions.length - 1) {
+                  setCurrentIndex(prev => prev + 1)
+                } else {
+                  handleFinish()
+                }
+              }}
+              className="rounded-xl border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-600 transition hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
+            >
+              I Would Be Guessing
+            </button>
             {currentIndex < testData.questions.length - 1 ? (
               <button onClick={() => setCurrentIndex(prev => prev + 1)} className="rounded-xl bg-slate-600 px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:bg-slate-700">Next →</button>
             ) : (

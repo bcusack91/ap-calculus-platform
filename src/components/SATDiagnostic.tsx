@@ -376,31 +376,51 @@ export default function DiagnosticTest({
             ← Back
           </button>
 
-          {currentIndex === testData.totalQuestions - 1 ? (
+          <div className="flex items-center gap-2">
             <button
-              onClick={handleSubmit}
-              className={`rounded-xl px-6 py-2 text-sm font-semibold text-white shadow transition hover:shadow-lg ${
-                isRW
-                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600'
-                  : 'bg-gradient-to-r from-green-600 to-teal-600'
-              }`}
+              onClick={() => {
+                setAnswers(prev => {
+                  const next = [...prev]
+                  next[currentIndex] = { ...next[currentIndex], selectedIndex: null }
+                  return next
+                })
+
+                if (currentIndex === testData.totalQuestions - 1) {
+                  handleSubmit()
+                } else {
+                  handleNext()
+                }
+              }}
+              className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700"
             >
-              Submit ({answeredCount}/{testData.totalQuestions} answered)
+              I Would Be Guessing
             </button>
-          ) : (
-            <button
-              onClick={handleNext}
-              className={`rounded-xl px-6 py-2 text-sm font-semibold text-white shadow transition hover:shadow-lg ${
-                isRW
-                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600'
-                  : 'bg-gradient-to-r from-green-600 to-teal-600'
-              }`}
-            >
-              {mathStartIndex > 0 && currentIndex === mathStartIndex - 1
-                ? 'Continue to Math Section →'
-                : 'Next →'}
-            </button>
-          )}
+            {currentIndex === testData.totalQuestions - 1 ? (
+              <button
+                onClick={handleSubmit}
+                className={`rounded-xl px-6 py-2 text-sm font-semibold text-white shadow transition hover:shadow-lg ${
+                  isRW
+                    ? 'bg-gradient-to-r from-blue-600 to-indigo-600'
+                    : 'bg-gradient-to-r from-green-600 to-teal-600'
+                }`}
+              >
+                Submit ({answeredCount}/{testData.totalQuestions} answered)
+              </button>
+            ) : (
+              <button
+                onClick={handleNext}
+                className={`rounded-xl px-6 py-2 text-sm font-semibold text-white shadow transition hover:shadow-lg ${
+                  isRW
+                    ? 'bg-gradient-to-r from-blue-600 to-indigo-600'
+                    : 'bg-gradient-to-r from-green-600 to-teal-600'
+                }`}
+              >
+                {mathStartIndex > 0 && currentIndex === mathStartIndex - 1
+                  ? 'Continue to Math Section →'
+                  : 'Next →'}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>
