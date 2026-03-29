@@ -13,6 +13,18 @@ type FunnelAlert = {
   message: string
 }
 
+type MCATItemAnalyticsRow = {
+  questionId: string
+  domain: string
+  sourceSlug: string
+  difficulty: string
+  family: string
+  promptType: string
+  passageId: string | null
+  isAnswered: boolean
+  isCorrect: boolean
+}
+
 // GET /api/admin/analytics — aggregate site analytics
 export async function GET() {
   const authResult = await requireAdmin()
@@ -72,6 +84,7 @@ export async function GET() {
     ctaTypeBreakdownRaw,
     ctaTypeTrendRaw,
     topDestinationsRaw,
+    mcatDiagnosticAttempts,
   ] = await Promise.all([
     prisma.user.count(),
     prisma.user.count({ where: { createdAt: { gte: today } } }),
@@ -182,6 +195,18 @@ export async function GET() {
       ORDER BY clicks DESC
       LIMIT 12
     `,
+    prisma.diagnosticTest.findMany({
+      where: {
+        category: 'mcat-full-diagnostic',
+        createdAt: { gte: monthAgo },
+      },
+      select: {
+        results: true,
+        createdAt: true,
+      },
+      orderBy: { createdAt: 'desc' },
+      take: 200,
+    }),
   ])
 
   const roles = Object.fromEntries(roleCounts.map((r) => [r.role, r._count.id]))
@@ -271,6 +296,84 @@ export async function GET() {
     windowEnd: today,
   })
 
+  const asRecord = (value: unknown): Record<string, unknown> | null =>
+    value && typeof value === 'object' && !Array.isArray(value) ? (value as Record<string, unknown>) : null
+
+  const itemRows: MCATItemAnalyticsRow[] = []
+  const estimatedScores: number[] = []
+  const percentages: number[] = []
+
+  for (const attempt of mcatDiagnosticAttempts) {
+    const results = asRecord(attempt.results)
+    if (!results) continue
+
+    const estimatedScore = typeof results.estimatedScore === 'number' ? results.estimatedScore : null
+    const percentage = typeof results.percentage === 'number' ? results.percentage : null
+    if (estimatedScore != null) estimatedScores.push(estimatedScore)
+    if (percentage != null) percentages.push(percentage)
+
+    const rows = Array.isArray(results.itemAnalytics) ? results.itemAnalytics : []
+    for (const row of rows) {
+      const item = asRecord(row)
+      if (!item) continue
+      itemRows.push({
+        questionId: typeof item.questionId === 'string' ? item.questionId : 'unknown',
+        domain: typeof item.domain === 'string' ? item.domain : 'unknown',
+        sourceSlug: typeof item.sourceSlug === 'string' ? item.sourceSlug : 'unknown',
+        difficulty: typeof item.difficulty === 'string' ? item.difficulty : 'unknown',
+        family: typeof item.family === 'string' ? item.family : 'unknown',
+        promptType: typeof item.promptType === 'string' ? item.promptType : 'unknown',
+        passageId: typeof item.passageId === 'string' ? item.passageId : null,
+        isAnswered: !!item.isAnswered,
+        isCorrect: !!item.isCorrect,
+      })
+    }
+  }
+
+  const summarizeRows = <TKey extends string>(
+    rows: MCATItemAnalyticsRow[],
+    getKey: (row: MCATItemAnalyticsRow) => TKey,
+    labelFor: (key: TKey) => Record<string, string | number>,
+  ) => {
+    const map = new Map<TKey, { asked: number; answered: number; correct: number }>()
+    for (const row of rows) {
+      const key = getKey(row)
+      const current = map.get(key) ?? { asked: 0, answered: 0, correct: 0 }
+      current.asked += 1
+      if (row.isAnswered) current.answered += 1
+      if (row.isCorrect) current.correct += 1
+      map.set(key, current)
+    }
+
+    return Array.from(map.entries())
+      .map(([key, stats]) => ({
+        ...labelFor(key),
+        asked: stats.asked,
+        answered: stats.answered,
+        correct: stats.correct,
+        accuracyPct: stats.asked > 0 ? Math.round((stats.correct / stats.asked) * 100) : 0,
+      }))
+      .sort((a, b) => Number(b.asked) - Number(a.asked))
+  }
+
+  const average = (values: number[]) =>
+    values.length > 0 ? Math.round((values.reduce((sum, value) => sum + value, 0) / values.length) * 10) / 10 : 0
+
+  const passageRows = itemRows.filter((row) => row.promptType === 'passage')
+  const mcatDiagnostics = {
+    attempts30d: mcatDiagnosticAttempts.length,
+    avgEstimatedScore: average(estimatedScores),
+    avgPercentage: average(percentages),
+    passageQuestionsServed: passageRows.length,
+    passageAccuracyPct: passageRows.length > 0 ? Math.round((passageRows.filter((row) => row.isCorrect).length / passageRows.length) * 100) : 0,
+    difficultyBreakdown: summarizeRows(itemRows, (row) => row.difficulty, (difficulty) => ({ difficulty })),
+    domainBreakdown: summarizeRows(itemRows, (row) => row.domain, (domain) => ({ domain })),
+    familyBreakdown: summarizeRows(itemRows, (row) => `${row.domain}::${row.family}`, (compoundKey) => {
+      const [domain, family] = compoundKey.split('::')
+      return { domain, family }
+    }).slice(0, 12),
+  }
+
   return NextResponse.json({
     users: {
       total: totalUsers,
@@ -312,5 +415,6 @@ export async function GET() {
       alerts,
       notificationSummary,
     },
+    mcatDiagnostics,
   })
 }

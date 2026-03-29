@@ -10,6 +10,9 @@ import {
   type MCATDiagnosticTestData,
   type MCATDiagnosticResults,
 } from '@/data/mcat-practice/diagnostic-generator'
+import { trackCustomEvent } from '@/lib/analytics'
+
+const MCAT_DIAGNOSTIC_SEEN_KEY = 'mcat-diagnostic-seen-v1'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -19,6 +22,75 @@ function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
   const secs = seconds % 60
   return `${mins}:${secs.toString().padStart(2, '0')}`
+}
+
+function DataVisual({
+  data,
+}: {
+  data: Pick<NonNullable<MCATDiagnosticTestData['questions'][number]['passage']>, 'dataTable' | 'figure'>
+}) {
+  const figure = data.figure
+  const table = data.dataTable
+  const maxY = figure ? Math.max(...figure.yValues, 1) : 1
+
+  if (!figure && !table) return null
+
+  return (
+    <div className="mt-4 grid gap-4 lg:grid-cols-2">
+      {table && (
+        <div className="rounded-xl border border-cyan-200 bg-white p-4 dark:border-cyan-800 dark:bg-gray-900/40">
+          <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700 dark:text-cyan-300">{table.title}</p>
+          <div className="mt-3 overflow-x-auto">
+            <table className="min-w-full border-separate border-spacing-0 text-sm">
+              <thead>
+                <tr>
+                  <th className="rounded-tl-lg border border-gray-200 bg-gray-50 px-3 py-2 text-left font-semibold text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200">
+                    Condition
+                  </th>
+                  <th className="border border-gray-200 bg-gray-50 px-3 py-2 text-left font-semibold text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200">
+                    {table.xLabel} ({table.xUnit})
+                  </th>
+                  <th className="rounded-tr-lg border border-gray-200 bg-gray-50 px-3 py-2 text-left font-semibold text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200">
+                    {table.yLabel} ({table.yUnit})
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {table.xValues.map((xValue, index) => (
+                  <tr key={`${xValue}-${table.yValues[index]}`}>
+                    <td className="border border-gray-200 px-3 py-2 text-gray-700 dark:border-gray-700 dark:text-gray-200">{index + 1}</td>
+                    <td className="border border-gray-200 px-3 py-2 text-gray-700 dark:border-gray-700 dark:text-gray-200">{xValue}</td>
+                    <td className="border border-gray-200 px-3 py-2 text-gray-700 dark:border-gray-700 dark:text-gray-200">{table.yValues[index]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      {figure && (
+        <div className="rounded-xl border border-cyan-200 bg-white p-4 dark:border-cyan-800 dark:bg-gray-900/40">
+          <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700 dark:text-cyan-300">{figure.title}</p>
+          <div className="mt-4 flex h-48 items-end gap-3 rounded-lg border border-dashed border-cyan-200 bg-cyan-50/50 p-4 dark:border-cyan-900 dark:bg-cyan-950/20">
+            {figure.yValues.map((value, index) => (
+              <div key={`${figure.xValues[index]}-${value}`} className="flex flex-1 flex-col items-center justify-end gap-2">
+                <span className="text-xs font-medium text-gray-600 dark:text-gray-300">{value}</span>
+                <div
+                  className="w-full rounded-t-md bg-gradient-to-t from-cyan-500 to-emerald-400"
+                  style={{ height: `${Math.max((value / maxY) * 120, 16)}px` }}
+                />
+                <span className="text-[11px] text-gray-500 dark:text-gray-400">{figure.xValues[index]} {figure.xUnit}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-3 text-xs text-gray-500 dark:text-gray-400">
+            {figure.seriesLabel} plotted against condition steps. Use the trend visually or from the table values.
+          </p>
+        </div>
+      )}
+    </div>
+  )
 }
 
 /* ------------------------------------------------------------------ */
@@ -104,7 +176,28 @@ export default function MCATDiagnosticPage() {
   }, [phase])
 
   const startTest = useCallback(async () => {
-    const data = await generateMCATDiagnosticTest()
+    let seenQuestionIds = new Set<string>()
+    if (typeof window !== 'undefined') {
+      try {
+        const raw = window.localStorage.getItem(MCAT_DIAGNOSTIC_SEEN_KEY)
+        if (raw) {
+          const parsed = JSON.parse(raw)
+          if (Array.isArray(parsed)) {
+            seenQuestionIds = new Set(parsed.filter((value): value is string => typeof value === 'string'))
+          }
+        }
+      } catch {
+        // Ignore malformed local cache and proceed.
+      }
+    }
+
+    const data = await generateMCATDiagnosticTest({ excludeQuestionIds: seenQuestionIds })
+
+    if (typeof window !== 'undefined') {
+      const updatedSeen = Array.from(new Set([...seenQuestionIds, ...data.questions.map((q) => q.id)]))
+      window.localStorage.setItem(MCAT_DIAGNOSTIC_SEEN_KEY, JSON.stringify(updatedSeen.slice(-4000)))
+    }
+
     setTestData(data)
     setCurrentIndex(0)
     setAnswers(new Array(data.questions.length).fill(null))
@@ -120,8 +213,35 @@ export default function MCATDiagnosticPage() {
     const answersRecord: Record<number, number> = {}
     answers.forEach((a, i) => { if (a !== null) answersRecord[i] = a })
     const diagnosticResults = scoreMCATDiagnostic(testData.questions, answersRecord)
+    const itemAnalytics = testData.questions.map((question, index) => {
+      const selectedAnswer = answers[index]
+      const isAnswered = selectedAnswer !== null
+      const isCorrect = isAnswered && selectedAnswer === question.correctAnswer
+      return {
+        questionId: question.id,
+        domain: question.domain,
+        sourceSlug: question.sourceSlug,
+        difficulty: question.difficulty ?? 'medium',
+        family: question.family ?? 'core-domain-bank',
+        promptType: question.promptType ?? 'standalone',
+        passageId: question.passage?.id ?? null,
+        isAnswered,
+        isCorrect,
+      }
+    })
     setResults(diagnosticResults)
     setPhase('results')
+
+    trackCustomEvent('mcat_diagnostic_complete', {
+      page_template: 'diagnostic_page',
+      course_slug: 'mcat',
+      topic_slug: 'mcat-full-diagnostic',
+      score_percent: diagnosticResults.percentage,
+      estimated_score: diagnosticResults.estimatedScore,
+      total_questions: diagnosticResults.totalQuestions,
+      passage_questions: itemAnalytics.filter((item) => item.promptType === 'passage').length,
+      hard_questions: itemAnalytics.filter((item) => item.difficulty === 'hard').length,
+    })
 
     // Save to API
     try {
@@ -140,6 +260,7 @@ export default function MCATDiagnosticPage() {
             bioBiochemScore: diagnosticResults.bioBiochemScore,
             psychSocScore: diagnosticResults.psychSocScore,
             domains: diagnosticResults.domains,
+            itemAnalytics,
           }),
           weakAreas: diagnosticResults.weakAreas.join(', '),
           strengths: diagnosticResults.strengths.join(', '),
@@ -173,6 +294,9 @@ export default function MCATDiagnosticPage() {
   // Testing phase
   if (phase === 'testing' && testData) {
     const q = testData.questions[currentIndex]
+    const currentPassageId = q.passage?.id ?? null
+    const previousPassageId = currentIndex > 0 ? testData.questions[currentIndex - 1]?.passage?.id ?? null : null
+    const showPassage = !!q.passage && currentPassageId !== previousPassageId
     const answeredCount = answers.filter(a => a !== null).length
 
     return (
@@ -210,11 +334,34 @@ export default function MCATDiagnosticPage() {
               <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">
                 {q.domain}
               </span>
+              <span className="ml-2 rounded-full bg-gray-100 px-3 py-1 text-xs font-semibold text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+                {q.difficulty ?? 'medium'}
+              </span>
+              <span className="ml-2 rounded-full bg-cyan-100 px-3 py-1 text-xs font-semibold text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300">
+                {q.promptType ?? 'standalone'}
+              </span>
             </div>
+
+            {showPassage && q.passage && (
+              <div className="mb-6 rounded-2xl border border-cyan-200 bg-cyan-50 p-6 shadow-sm dark:border-cyan-800 dark:bg-cyan-900/20">
+                <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700 dark:text-cyan-300">Passage Set</p>
+                <h3 className="mt-1 text-lg font-bold text-gray-900 dark:text-white">{q.passage.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
+                  {q.passage.body}
+                </p>
+                <DataVisual data={q.passage} />
+              </div>
+            )}
 
             {/* Question */}
             <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-              <p className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
+              {q.promptType === 'figure' && q.visual && (
+                <div className="mb-6 rounded-xl border border-emerald-200 bg-emerald-50 p-4 dark:border-emerald-800 dark:bg-emerald-900/20">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">Figure Analysis</p>
+                  <DataVisual data={q.visual} />
+                </div>
+              )}
+              <p className="mb-6 whitespace-pre-line text-sm leading-relaxed text-gray-800 dark:text-gray-200">
                 {q.question}
               </p>
               <div className="space-y-2">
@@ -533,13 +680,19 @@ export default function MCATDiagnosticPage() {
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                ~35 questions across 9 MCAT domains
+                45 questions across 9 MCAT domains
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                40 minute time limit
+                55 minute time limit
+              </li>
+              <li className="flex items-start gap-2">
+                <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                Includes data interpretation (figures, tables, trend analysis) and no-calculator-style arithmetic
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">

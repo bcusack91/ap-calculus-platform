@@ -19,6 +19,16 @@ interface AnalyticsData {
   activity: { totalSessions: number; sessionsToday: number; totalQuizAttempts: number; quizAttemptsToday: number }
   content: { totalTopics: number; totalFlashcards: number }
   signupTrend: { date: string; count: number }[]
+  mcatDiagnostics: {
+    attempts30d: number
+    avgEstimatedScore: number
+    avgPercentage: number
+    passageQuestionsServed: number
+    passageAccuracyPct: number
+    difficultyBreakdown: { difficulty: string; asked: number; answered: number; correct: number; accuracyPct: number }[]
+    domainBreakdown: { domain: string; asked: number; answered: number; correct: number; accuracyPct: number }[]
+    familyBreakdown: { domain: string; family: string; asked: number; answered: number; correct: number; accuracyPct: number }[]
+  }
   funnel: {
     windowDays: number
     activeLearners: number
@@ -575,6 +585,58 @@ export default function AdminPanel() {
                         ) : (
                           <p className="text-sm text-gray-500 dark:text-gray-400">No destination data yet.</p>
                         )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-4">MCAT Diagnostic Item Analytics (30 days)</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-5">
+                    <MetricCard label="Attempts" value={analytics.mcatDiagnostics.attempts30d} color="blue" />
+                    <MetricCard label="Avg MCAT" value={analytics.mcatDiagnostics.avgEstimatedScore} color="green" />
+                    <MetricCard label="Avg %" value={analytics.mcatDiagnostics.avgPercentage} color="purple" />
+                    <MetricCard label="Passage Qs" value={analytics.mcatDiagnostics.passageQuestionsServed} />
+                    <MetricCard label="Passage Acc %" value={analytics.mcatDiagnostics.passageAccuracyPct} color="green" />
+                  </div>
+
+                  <div className="grid gap-4 md:grid-cols-3">
+                    <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-4">
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white mb-2">By Difficulty</p>
+                      <div className="space-y-2 text-sm">
+                        {analytics.mcatDiagnostics.difficultyBreakdown.length > 0 ? analytics.mcatDiagnostics.difficultyBreakdown.map((row) => (
+                          <div key={row.difficulty} className="flex items-center justify-between gap-2">
+                            <span className="capitalize text-gray-700 dark:text-gray-200">{row.difficulty}</span>
+                            <span className="font-mono text-gray-900 dark:text-white">{row.accuracyPct}% ({row.correct}/{row.asked})</span>
+                          </div>
+                        )) : <p className="text-gray-500 dark:text-gray-400">No MCAT item data yet.</p>}
+                      </div>
+                    </div>
+
+                    <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-4">
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white mb-2">By Domain</p>
+                      <div className="space-y-2 text-sm">
+                        {analytics.mcatDiagnostics.domainBreakdown.length > 0 ? analytics.mcatDiagnostics.domainBreakdown.map((row) => (
+                          <div key={row.domain} className="flex items-center justify-between gap-2">
+                            <span className="text-gray-700 dark:text-gray-200">{row.domain}</span>
+                            <span className="font-mono text-gray-900 dark:text-white">{row.accuracyPct}% ({row.correct}/{row.asked})</span>
+                          </div>
+                        )) : <p className="text-gray-500 dark:text-gray-400">No MCAT item data yet.</p>}
+                      </div>
+                    </div>
+
+                    <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-4">
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Question Families</p>
+                      <div className="space-y-2 text-sm">
+                        {analytics.mcatDiagnostics.familyBreakdown.length > 0 ? analytics.mcatDiagnostics.familyBreakdown.map((row) => (
+                          <div key={`${row.domain}-${row.family}`} className="rounded border border-gray-200 dark:border-gray-600 px-3 py-2">
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="text-gray-700 dark:text-gray-200">{row.family}</span>
+                              <span className="font-mono text-gray-900 dark:text-white">{row.accuracyPct}%</span>
+                            </div>
+                            <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">{row.domain} • {row.correct}/{row.asked} correct</p>
+                          </div>
+                        )) : <p className="text-gray-500 dark:text-gray-400">No MCAT family data yet.</p>}
                       </div>
                     </div>
                   </div>
