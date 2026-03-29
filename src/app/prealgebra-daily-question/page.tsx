@@ -2,6 +2,11 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import {
+  trackDailyQuestionAnswered,
+  trackDailyQuestionCtaClick,
+  trackDailyQuestionLoaded,
+} from '@/lib/analytics'
 
 interface DailyQ {
   topicSlug: string
@@ -23,6 +28,12 @@ export default function PreAlgebraDailyQuestionPage() {
   }, [])
 
   const q = questions[0]
+
+  useEffect(() => {
+    if (!loading && q) {
+      trackDailyQuestionLoaded('pre-algebra', q.topicSlug)
+    }
+  }, [loading, q])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-lime-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
@@ -60,7 +71,17 @@ export default function PreAlgebraDailyQuestionPage() {
                   })}
                 </div>
                 {!revealed ? (
-                  <button onClick={() => setRevealed(true)} disabled={selected === null} className="w-full rounded-xl bg-gradient-to-r from-lime-600 to-green-600 py-2.5 font-semibold text-white shadow transition hover:shadow-lg disabled:opacity-40">Check Answer</button>
+                  <button
+                    onClick={() => {
+                      if (selected === null) return
+                      trackDailyQuestionAnswered('pre-algebra', q.topicSlug, selected === q.question.correctAnswer)
+                      setRevealed(true)
+                    }}
+                    disabled={selected === null}
+                    className="w-full rounded-xl bg-gradient-to-r from-lime-600 to-green-600 py-2.5 font-semibold text-white shadow transition hover:shadow-lg disabled:opacity-40"
+                  >
+                    Check Answer
+                  </button>
                 ) : (
                   <div className="rounded-xl bg-gray-50 p-4 text-sm dark:bg-gray-700/50">
                     <div className="mb-1 font-semibold text-gray-900 dark:text-white">{selected === q.question.correctAnswer ? 'Correct!' : 'Incorrect'}</div>
@@ -75,9 +96,9 @@ export default function PreAlgebraDailyQuestionPage() {
         <div className="mx-auto mt-10 max-w-md text-center">
           <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">Want more Pre-Algebra practice?</p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/prealgebra-diagnostic" className="rounded-lg bg-lime-100 px-4 py-2 text-sm font-medium text-lime-700 transition hover:bg-lime-200 dark:bg-lime-900/30 dark:text-lime-400">Diagnostic Test</Link>
-            <Link href="/prealgebra-score-predictor" className="rounded-lg bg-lime-100 px-4 py-2 text-sm font-medium text-lime-700 transition hover:bg-lime-200 dark:bg-lime-900/30 dark:text-lime-400">Score Predictor</Link>
-            <Link href="/courses/pre-algebra" className="rounded-lg bg-lime-100 px-4 py-2 text-sm font-medium text-lime-700 transition hover:bg-lime-200 dark:bg-lime-900/30 dark:text-lime-400">All Topics</Link>
+            <Link href="/prealgebra-diagnostic" onClick={() => trackDailyQuestionCtaClick('pre-algebra', q?.topicSlug ?? 'unknown', '/prealgebra-diagnostic', 'diagnostic')} className="rounded-lg bg-lime-100 px-4 py-2 text-sm font-medium text-lime-700 transition hover:bg-lime-200 dark:bg-lime-900/30 dark:text-lime-400">Diagnostic Test</Link>
+            <Link href="/prealgebra-score-predictor" onClick={() => trackDailyQuestionCtaClick('pre-algebra', q?.topicSlug ?? 'unknown', '/prealgebra-score-predictor', 'score_predictor')} className="rounded-lg bg-lime-100 px-4 py-2 text-sm font-medium text-lime-700 transition hover:bg-lime-200 dark:bg-lime-900/30 dark:text-lime-400">Score Predictor</Link>
+            <Link href="/courses/pre-algebra" onClick={() => trackDailyQuestionCtaClick('pre-algebra', q?.topicSlug ?? 'unknown', '/courses/pre-algebra', 'all_topics')} className="rounded-lg bg-lime-100 px-4 py-2 text-sm font-medium text-lime-700 transition hover:bg-lime-200 dark:bg-lime-900/30 dark:text-lime-400">All Topics</Link>
           </div>
         </div>
       </div>

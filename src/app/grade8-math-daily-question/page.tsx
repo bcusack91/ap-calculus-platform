@@ -2,6 +2,11 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import {
+  trackDailyQuestionAnswered,
+  trackDailyQuestionCtaClick,
+  trackDailyQuestionLoaded,
+} from '@/lib/analytics'
 
 interface DailyQ {
   topicSlug: string
@@ -23,6 +28,12 @@ export default function Grade8MathDailyQuestionPage() {
   }, [])
 
   const q = questions[0]
+
+  useEffect(() => {
+    if (!loading && q) {
+      trackDailyQuestionLoaded('grade-8-math', q.topicSlug)
+    }
+  }, [loading, q])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-rose-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
@@ -60,7 +71,17 @@ export default function Grade8MathDailyQuestionPage() {
                   })}
                 </div>
                 {!revealed ? (
-                  <button onClick={() => setRevealed(true)} disabled={selected === null} className="w-full rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 py-2.5 font-semibold text-white shadow transition hover:shadow-lg disabled:opacity-40">Check Answer</button>
+                  <button
+                    onClick={() => {
+                      if (selected === null) return
+                      trackDailyQuestionAnswered('grade-8-math', q.topicSlug, selected === q.question.correctAnswer)
+                      setRevealed(true)
+                    }}
+                    disabled={selected === null}
+                    className="w-full rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 py-2.5 font-semibold text-white shadow transition hover:shadow-lg disabled:opacity-40"
+                  >
+                    Check Answer
+                  </button>
                 ) : (
                   <div className="rounded-xl bg-gray-50 p-4 text-sm dark:bg-gray-700/50">
                     <div className="mb-1 font-semibold text-gray-900 dark:text-white">{selected === q.question.correctAnswer ? 'Correct!' : 'Incorrect'}</div>
@@ -75,9 +96,9 @@ export default function Grade8MathDailyQuestionPage() {
         <div className="mx-auto mt-10 max-w-md text-center">
           <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">Want more Grade 8 Math practice?</p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/grade8-math-diagnostic" className="rounded-lg bg-pink-100 px-4 py-2 text-sm font-medium text-pink-700 transition hover:bg-pink-200 dark:bg-pink-900/30 dark:text-pink-400">Diagnostic Test</Link>
-            <Link href="/grade8-math-score-predictor" className="rounded-lg bg-pink-100 px-4 py-2 text-sm font-medium text-pink-700 transition hover:bg-pink-200 dark:bg-pink-900/30 dark:text-pink-400">Score Predictor</Link>
-            <Link href="/courses/grade-8-math" className="rounded-lg bg-pink-100 px-4 py-2 text-sm font-medium text-pink-700 transition hover:bg-pink-200 dark:bg-pink-900/30 dark:text-pink-400">All Topics</Link>
+            <Link href="/grade8-math-diagnostic" onClick={() => trackDailyQuestionCtaClick('grade-8-math', q?.topicSlug ?? 'unknown', '/grade8-math-diagnostic', 'diagnostic')} className="rounded-lg bg-pink-100 px-4 py-2 text-sm font-medium text-pink-700 transition hover:bg-pink-200 dark:bg-pink-900/30 dark:text-pink-400">Diagnostic Test</Link>
+            <Link href="/grade8-math-score-predictor" onClick={() => trackDailyQuestionCtaClick('grade-8-math', q?.topicSlug ?? 'unknown', '/grade8-math-score-predictor', 'score_predictor')} className="rounded-lg bg-pink-100 px-4 py-2 text-sm font-medium text-pink-700 transition hover:bg-pink-200 dark:bg-pink-900/30 dark:text-pink-400">Score Predictor</Link>
+            <Link href="/courses/grade-8-math" onClick={() => trackDailyQuestionCtaClick('grade-8-math', q?.topicSlug ?? 'unknown', '/courses/grade-8-math', 'all_topics')} className="rounded-lg bg-pink-100 px-4 py-2 text-sm font-medium text-pink-700 transition hover:bg-pink-200 dark:bg-pink-900/30 dark:text-pink-400">All Topics</Link>
           </div>
         </div>
       </div>

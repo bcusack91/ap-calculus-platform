@@ -2,6 +2,11 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import {
+  trackDailyQuestionAnswered,
+  trackDailyQuestionCtaClick,
+  trackDailyQuestionLoaded,
+} from '@/lib/analytics'
 
 interface DailyQ {
   topicSlug: string
@@ -23,6 +28,12 @@ export default function OChemDailyQuestionPage() {
   }, [])
 
   const q = questions[0]
+
+  useEffect(() => {
+    if (!loading && q) {
+      trackDailyQuestionLoaded('organic-chemistry', q.topicSlug)
+    }
+  }, [loading, q])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
@@ -60,7 +71,17 @@ export default function OChemDailyQuestionPage() {
                   })}
                 </div>
                 {!revealed ? (
-                  <button onClick={() => setRevealed(true)} disabled={selected === null} className="w-full rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 py-2.5 font-semibold text-white shadow transition hover:shadow-lg disabled:opacity-40">Check Answer</button>
+                  <button
+                    onClick={() => {
+                      if (selected === null) return
+                      trackDailyQuestionAnswered('organic-chemistry', q.topicSlug, selected === q.question.correctAnswer)
+                      setRevealed(true)
+                    }}
+                    disabled={selected === null}
+                    className="w-full rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 py-2.5 font-semibold text-white shadow transition hover:shadow-lg disabled:opacity-40"
+                  >
+                    Check Answer
+                  </button>
                 ) : (
                   <div className="rounded-xl bg-gray-50 p-4 text-sm dark:bg-gray-700/50">
                     <div className="mb-1 font-semibold text-gray-900 dark:text-white">{selected === q.question.correctAnswer ? 'Correct!' : 'Incorrect'}</div>
@@ -75,9 +96,9 @@ export default function OChemDailyQuestionPage() {
         <div className="mx-auto mt-10 max-w-md text-center">
           <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">Want more Organic Chemistry practice?</p>
           <div className="flex flex-wrap justify-center gap-3">
-            <Link href="/ochem-diagnostic" className="rounded-lg bg-fuchsia-100 px-4 py-2 text-sm font-medium text-fuchsia-700 transition hover:bg-fuchsia-200 dark:bg-fuchsia-900/30 dark:text-fuchsia-400">Diagnostic Test</Link>
-            <Link href="/ochem-score-predictor" className="rounded-lg bg-fuchsia-100 px-4 py-2 text-sm font-medium text-fuchsia-700 transition hover:bg-fuchsia-200 dark:bg-fuchsia-900/30 dark:text-fuchsia-400">Score Predictor</Link>
-            <Link href="/organic-chemistry" className="rounded-lg bg-fuchsia-100 px-4 py-2 text-sm font-medium text-fuchsia-700 transition hover:bg-fuchsia-200 dark:bg-fuchsia-900/30 dark:text-fuchsia-400">All Topics</Link>
+            <Link href="/ochem-diagnostic" onClick={() => trackDailyQuestionCtaClick('organic-chemistry', q?.topicSlug ?? 'unknown', '/ochem-diagnostic', 'diagnostic')} className="rounded-lg bg-fuchsia-100 px-4 py-2 text-sm font-medium text-fuchsia-700 transition hover:bg-fuchsia-200 dark:bg-fuchsia-900/30 dark:text-fuchsia-400">Diagnostic Test</Link>
+            <Link href="/ochem-score-predictor" onClick={() => trackDailyQuestionCtaClick('organic-chemistry', q?.topicSlug ?? 'unknown', '/ochem-score-predictor', 'score_predictor')} className="rounded-lg bg-fuchsia-100 px-4 py-2 text-sm font-medium text-fuchsia-700 transition hover:bg-fuchsia-200 dark:bg-fuchsia-900/30 dark:text-fuchsia-400">Score Predictor</Link>
+            <Link href="/organic-chemistry" onClick={() => trackDailyQuestionCtaClick('organic-chemistry', q?.topicSlug ?? 'unknown', '/organic-chemistry', 'all_topics')} className="rounded-lg bg-fuchsia-100 px-4 py-2 text-sm font-medium text-fuchsia-700 transition hover:bg-fuchsia-200 dark:bg-fuchsia-900/30 dark:text-fuchsia-400">All Topics</Link>
           </div>
         </div>
       </div>

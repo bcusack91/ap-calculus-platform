@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { courseMeta, defaultCourseMeta, sectionOrder } from "@/data/course-metadata";
 import DynamicStats from "@/components/DynamicStats";
 import { InArticleAd } from "@/components/ad-banner";
+import TrackedLink from '@/components/TrackedLink'
 
 export const revalidate = 3600; // ISR: revalidate every hour
 
@@ -82,18 +83,22 @@ export default async function Home() {
               {totalCourses} courses · 700+ topics · Completely free
             </p>
             <div className="mt-8 flex items-center justify-center gap-4">
-              <Link
+              <TrackedLink
                 href="/topics"
+                eventName="homepage_cta_click"
+                eventParams={{ destination: '/topics', cta_name: 'get_started_free', cta_type: 'primary', page_template: 'homepage', location: 'hero' }}
                 className="rounded-lg px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-lg hover:shadow-xl transition-all"
               >
                 Get Started Free
-              </Link>
-              <Link
+              </TrackedLink>
+              <TrackedLink
                 href="/about"
+                eventName="homepage_cta_click"
+                eventParams={{ destination: '/about', cta_name: 'learn_more', cta_type: 'secondary', page_template: 'homepage', location: 'hero' }}
                 className="rounded-lg px-6 py-3 text-base font-semibold text-purple-700 dark:text-purple-300 bg-white/70 dark:bg-gray-800/70 border border-purple-200 dark:border-purple-800 hover:bg-white dark:hover:bg-gray-800 transition-all"
               >
                 Learn More
-              </Link>
+              </TrackedLink>
             </div>
             {/* Social Proof Stats */}
             <DynamicStats />
@@ -121,9 +126,18 @@ export default async function Home() {
                 </h3>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                   {courses.map((course) => (
-                    <Link
+                    <TrackedLink
                       key={course.slug}
                       href={`/courses/${course.slug}`}
+                      eventName="homepage_course_card_click"
+                      eventParams={{
+                        course_slug: course.slug,
+                        course_name: course.name,
+                        cta_type: 'course_card',
+                        page_template: 'homepage',
+                        section_name: sectionName,
+                        destination: `/courses/${course.slug}`,
+                      }}
                       className="group relative flex flex-col rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-8 shadow-sm transition-all hover:shadow-xl hover:scale-105 hover:border-transparent"
                     >
                       <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${course.gradient} opacity-0 transition-opacity group-hover:opacity-5`}></div>
@@ -143,7 +157,7 @@ export default async function Home() {
                           </span>
                         </div>
                       </div>
-                    </Link>
+                    </TrackedLink>
                   ))}
                 </div>
               </div>

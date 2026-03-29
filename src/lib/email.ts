@@ -214,3 +214,25 @@ export async function sendStreakReminder(email: string, name: string | null, cur
     `, email),
   })
 }
+
+/**
+ * Send an internal admin alert email for critical funnel regressions.
+ */
+export async function sendAdminAlertEmail(params: {
+  to: string[]
+  subject: string
+  text: string
+  html: string
+}) {
+  const { to, subject, text, html } = params
+  if (to.length === 0) return
+
+  const transporter = getTransporter()
+  await transporter.sendMail({
+    from: FROM_ADDRESS,
+    to: to.join(', '),
+    subject,
+    text,
+    html,
+  })
+}

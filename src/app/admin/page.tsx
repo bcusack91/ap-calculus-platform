@@ -19,6 +19,56 @@ interface AnalyticsData {
   activity: { totalSessions: number; sessionsToday: number; totalQuizAttempts: number; quizAttemptsToday: number }
   content: { totalTopics: number; totalFlashcards: number }
   signupTrend: { date: string; count: number }[]
+  funnel: {
+    windowDays: number
+    activeLearners: number
+    quizTakers: number
+    diagnosticTakers: number
+    exitQuizTakers: number
+    quizFromActivePct: number
+    diagnosticFromQuizPct: number
+    exitQuizFromActivePct: number
+    quizFromActivePrevPct: number
+    diagnosticFromQuizPrevPct: number
+    exitQuizFromActivePrevPct: number
+    newUsersWeek: number
+    templateBreakdown: { pageTemplate: string; clicks: number; destinations: number }[]
+    ctaTypeBreakdown: { ctaType: string; clicks: number }[]
+    ctaTypeTrend: { weekStart: string; ctaType: string; clicks: number }[]
+    topDestinations: { destination: string; ctaType: string; pageTemplate: string; clicks: number }[]
+    notificationSummary?: {
+      eligibleAlerts: number
+      notifiedAlerts: number
+      channelsUsed: string[]
+      skippedReason?: string
+      errors: string[]
+    }
+    alerts: {
+      key: string
+      severity: 'warning' | 'critical'
+      metric: string
+      currentValue: number
+      previousValue: number
+      deltaPct: number
+      message: string
+    }[]
+  }
+}
+
+interface AlertNotification {
+  id: number
+  alertKey: string
+  metric: string
+  severity: string
+  windowStart: string
+  windowEnd: string
+  message: string | null
+  channels: string[]
+  notifiedAt: string
+  acknowledgedAt: string | null
+  acknowledgedBy: string | null
+  snoozedUntil: string | null
+  snoozedBy: string | null
 }
 
 const ROLES = [
@@ -34,10 +84,46 @@ export default function AdminPanel() {
   const [tab, setTab] = useState<'analytics' | 'users'>('analytics')
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null)
   const [analyticsLoading, setAnalyticsLoading] = useState(true)
+  const [alertNotifications, setAlertNotifications] = useState<AlertNotification[]>([])
+  const [alertsLoading, setAlertsLoading] = useState(true)
+  const [alertActionKey, setAlertActionKey] = useState<string | null>(null)
   const [search, setSearch] = useState('')
   const [users, setUsers] = useState<UserResult[]>([])
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState<{ text: string; type: 'success' | 'error' } | null>(null)
+
+  const trendColors = ['bg-red-500', 'bg-blue-500', 'bg-emerald-500', 'bg-purple-500']
+
+  const loadAnalytics = async () => {
+    setAnalyticsLoading(true)
+    try {
+      const res = await fetch('/api/admin/analytics')
+      setAnalytics(res.ok ? await res.json() : null)
+    } catch (error) {
+      console.error(error)
+      setAnalytics(null)
+    } finally {
+      setAnalyticsLoading(false)
+    }
+  }
+
+  const loadAlertNotifications = async () => {
+    setAlertsLoading(true)
+    try {
+      const res = await fetch('/api/admin/alert-notifications?limit=30')
+      if (!res.ok) {
+        setAlertNotifications([])
+        return
+      }
+      const body = await res.json() as { notifications?: AlertNotification[] }
+      setAlertNotifications(body.notifications ?? [])
+    } catch (error) {
+      console.error(error)
+      setAlertNotifications([])
+    } finally {
+      setAlertsLoading(false)
+    }
+  }
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -46,12 +132,74 @@ export default function AdminPanel() {
   }, [status, router])
 
   useEffect(() => {
-    fetch('/api/admin/analytics')
-      .then((r) => r.ok ? r.json() : null)
-      .then(setAnalytics)
-      .catch(console.error)
-      .finally(() => setAnalyticsLoading(false))
+    void Promise.all([loadAnalytics(), loadAlertNotifications()])
   }, [])
+
+  const acknowledgeNotification = async (notificationId: number) => {
+    setAlertActionKey(`ack-${notificationId}`)
+    setMessage(null)
+    try {
+      const res = await fetch('/api/admin/alert-notifications', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'acknowledge', notificationId }),
+      })
+      if (!res.ok) {
+        setMessage({ text: 'Failed to acknowledge alert', type: 'error' })
+        return
+      }
+      await loadAlertNotifications()
+      setMessage({ text: 'Alert acknowledged', type: 'success' })
+    } catch {
+      setMessage({ text: 'Failed to acknowledge alert', type: 'error' })
+    } finally {
+      setAlertActionKey(null)
+    }
+  }
+
+  const snoozeAlert = async (alertKey: string, hours: number) => {
+    setAlertActionKey(`snooze-${alertKey}-${hours}`)
+    setMessage(null)
+    try {
+      const res = await fetch('/api/admin/alert-notifications', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'snooze', alertKey, hours }),
+      })
+      if (!res.ok) {
+        setMessage({ text: 'Failed to snooze alert', type: 'error' })
+        return
+      }
+      await Promise.all([loadAlertNotifications(), loadAnalytics()])
+      setMessage({ text: `Alert snoozed for ${hours} hours`, type: 'success' })
+    } catch {
+      setMessage({ text: 'Failed to snooze alert', type: 'error' })
+    } finally {
+      setAlertActionKey(null)
+    }
+  }
+
+  const clearSnooze = async (alertKey: string) => {
+    setAlertActionKey(`clear-${alertKey}`)
+    setMessage(null)
+    try {
+      const res = await fetch('/api/admin/alert-notifications', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'clear-snooze', alertKey }),
+      })
+      if (!res.ok) {
+        setMessage({ text: 'Failed to clear snooze', type: 'error' })
+        return
+      }
+      await Promise.all([loadAlertNotifications(), loadAnalytics()])
+      setMessage({ text: 'Alert snooze cleared', type: 'success' })
+    } catch {
+      setMessage({ text: 'Failed to clear snooze', type: 'error' })
+    } finally {
+      setAlertActionKey(null)
+    }
+  }
 
   const searchUsers = async () => {
     if (search.length < 2) return
@@ -159,6 +307,287 @@ export default function AdminPanel() {
                   <MetricCard label="Total Flashcards" value={analytics.content.totalFlashcards} />
                   <MetricCard label="Total Sessions" value={analytics.activity.totalSessions} />
                   <MetricCard label="Total Quizzes" value={analytics.activity.totalQuizAttempts} />
+                </div>
+
+                {/* Weekly funnel summary */}
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-4">
+                    Weekly Funnel Summary ({analytics.funnel.windowDays} days)
+                  </h3>
+
+                  {analytics.funnel.notificationSummary && (
+                    <div className="mb-4 rounded-lg border border-gray-200 bg-gray-50 px-4 py-3 text-sm dark:border-gray-600 dark:bg-gray-700/40">
+                      <p className="font-semibold text-gray-900 dark:text-white">Critical alert notifications</p>
+                      <p className="text-gray-600 dark:text-gray-300">
+                        Eligible: {analytics.funnel.notificationSummary.eligibleAlerts} | Notified: {analytics.funnel.notificationSummary.notifiedAlerts}
+                        {analytics.funnel.notificationSummary.channelsUsed.length > 0
+                          ? ` | Channels: ${analytics.funnel.notificationSummary.channelsUsed.join(', ')}`
+                          : ''}
+                      </p>
+                      {analytics.funnel.notificationSummary.skippedReason && (
+                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                          {analytics.funnel.notificationSummary.skippedReason}
+                        </p>
+                      )}
+                      {analytics.funnel.notificationSummary.errors.length > 0 && (
+                        <p className="text-xs text-red-600 dark:text-red-300 mt-1">
+                          Errors: {analytics.funnel.notificationSummary.errors.join(' | ')}
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  {analytics.funnel.alerts.length > 0 && (
+                    <div className="mb-4 space-y-2">
+                      {analytics.funnel.alerts.map((alert) => (
+                        <div
+                          key={alert.key}
+                          className={`rounded-lg border px-4 py-3 text-sm ${
+                            alert.severity === 'critical'
+                              ? 'border-red-300 bg-red-50 text-red-800 dark:border-red-800 dark:bg-red-900/30 dark:text-red-200'
+                              : 'border-amber-300 bg-amber-50 text-amber-800 dark:border-amber-800 dark:bg-amber-900/30 dark:text-amber-200'
+                          }`}
+                        >
+                          <p className="font-semibold">
+                            {alert.severity === 'critical' ? 'Critical' : 'Warning'}: {alert.metric}
+                          </p>
+                          <p>{alert.message}</p>
+                          <p className="mt-1 text-xs">
+                            Delta: {alert.deltaPct}% (prev {alert.previousValue}% {'->'} current {alert.currentValue}%)
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
+                    <MetricCard label="New Users" value={analytics.funnel.newUsersWeek} color="blue" />
+                    <MetricCard label="Active Learners" value={analytics.funnel.activeLearners} color="green" />
+                    <MetricCard label="Quiz Takers" value={analytics.funnel.quizTakers} color="purple" />
+                    <MetricCard label="Diagnostic Takers" value={analytics.funnel.diagnosticTakers} />
+                    <MetricCard label="Exit Quiz Takers" value={analytics.funnel.exitQuizTakers} color="green" />
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                    <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-3">
+                      <p className="text-gray-500 dark:text-gray-400">Quiz from Active</p>
+                      <p className="font-semibold text-gray-900 dark:text-white">{analytics.funnel.quizFromActivePct}%</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">Prev: {analytics.funnel.quizFromActivePrevPct}%</p>
+                    </div>
+                    <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-3">
+                      <p className="text-gray-500 dark:text-gray-400">Diagnostic from Quiz</p>
+                      <p className="font-semibold text-gray-900 dark:text-white">{analytics.funnel.diagnosticFromQuizPct}%</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">Prev: {analytics.funnel.diagnosticFromQuizPrevPct}%</p>
+                    </div>
+                    <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-3">
+                      <p className="text-gray-500 dark:text-gray-400">Exit Quiz from Active</p>
+                      <p className="font-semibold text-gray-900 dark:text-white">{analytics.funnel.exitQuizFromActivePct}%</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">Prev: {analytics.funnel.exitQuizFromActivePrevPct}%</p>
+                    </div>
+                  </div>
+
+                  <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-4">
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Clicks by Page Template</p>
+                      <div className="space-y-2">
+                        {analytics.funnel.templateBreakdown.length > 0 ? (
+                          analytics.funnel.templateBreakdown.map((row) => (
+                            <div key={row.pageTemplate} className="flex items-center justify-between text-sm">
+                              <span className="text-gray-600 dark:text-gray-300">{row.pageTemplate}</span>
+                              <span className="font-mono text-gray-900 dark:text-white">
+                                {row.clicks} clicks / {row.destinations} dests
+                              </span>
+                            </div>
+                          ))
+                        ) : (
+                          <p className="text-sm text-gray-500 dark:text-gray-400">No attributed CTA events yet.</p>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-4">
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Clicks by CTA Type</p>
+                      <div className="space-y-2">
+                        {analytics.funnel.ctaTypeBreakdown.length > 0 ? (
+                          analytics.funnel.ctaTypeBreakdown.map((row) => (
+                            <div key={row.ctaType} className="flex items-center justify-between text-sm">
+                              <span className="text-gray-600 dark:text-gray-300">{row.ctaType}</span>
+                              <span className="font-mono text-gray-900 dark:text-white">{row.clicks}</span>
+                            </div>
+                          ))
+                        ) : (
+                          <p className="text-sm text-gray-500 dark:text-gray-400">No attributed CTA events yet.</p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-4">
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white mb-2">CTA Click Trend (8 weeks)</p>
+                      {(() => {
+                        const weeks = Array.from(new Set(analytics.funnel.ctaTypeTrend.map((r) => r.weekStart))).sort()
+                        const topTypes = analytics.funnel.ctaTypeBreakdown.slice(0, 3).map((r) => r.ctaType)
+                        const weeklyTotals = weeks.map((week) =>
+                          analytics.funnel.ctaTypeTrend
+                            .filter((r) => r.weekStart === week)
+                            .reduce((sum, r) => sum + r.clicks, 0)
+                        )
+                        const maxWeekly = Math.max(...weeklyTotals, 1)
+
+                        if (weeks.length === 0) {
+                          return <p className="text-sm text-gray-500 dark:text-gray-400">No trend data yet.</p>
+                        }
+
+                        return (
+                          <>
+                            <div className="mb-3 flex flex-wrap gap-3 text-xs">
+                              {topTypes.map((type, idx) => (
+                                <span key={type} className="inline-flex items-center gap-1 text-gray-600 dark:text-gray-300">
+                                  <span className={`h-2 w-2 rounded-full ${trendColors[idx % trendColors.length]}`} />
+                                  {type}
+                                </span>
+                              ))}
+                            </div>
+                            <div className="space-y-2">
+                              {weeks.map((week, idx) => {
+                                const rows = analytics.funnel.ctaTypeTrend.filter((r) => r.weekStart === week)
+                                const total = rows.reduce((sum, r) => sum + r.clicks, 0)
+                                return (
+                                  <div key={week} className="text-xs">
+                                    <div className="mb-1 flex items-center justify-between text-gray-600 dark:text-gray-300">
+                                      <span>{week}</span>
+                                      <span className="font-mono">{total}</span>
+                                    </div>
+                                    <div className="h-2 w-full rounded bg-gray-200 dark:bg-gray-600 overflow-hidden">
+                                      <div className="h-full bg-gray-300 dark:bg-gray-500" style={{ width: `${(total / maxWeekly) * 100}%` }} />
+                                    </div>
+                                    <div className="mt-1 flex flex-wrap gap-2 text-[11px] text-gray-500 dark:text-gray-400">
+                                      {topTypes.map((type, tIdx) => {
+                                        const clicks = rows.find((r) => r.ctaType === type)?.clicks ?? 0
+                                        return (
+                                          <span key={`${week}-${type}`} className="inline-flex items-center gap-1">
+                                            <span className={`h-1.5 w-1.5 rounded-full ${trendColors[tIdx % trendColors.length]}`} />
+                                            {type}: {clicks}
+                                          </span>
+                                        )
+                                      })}
+                                    </div>
+                                  </div>
+                                )
+                              })}
+                            </div>
+                          </>
+                        )
+                      })()}
+                    </div>
+
+                    <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-4">
+                      <p className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Top CTA Destinations (7 days)</p>
+                      <div className="space-y-2">
+                        {analytics.funnel.topDestinations.length > 0 ? (
+                          analytics.funnel.topDestinations.map((row) => (
+                            <div key={`${row.destination}-${row.ctaType}-${row.pageTemplate}`} className="rounded border border-gray-200 dark:border-gray-600 p-2 text-xs">
+                              <p className="font-mono text-gray-900 dark:text-white break-all">{row.destination}</p>
+                              <div className="mt-1 flex items-center justify-between text-gray-600 dark:text-gray-300">
+                                <span>{row.pageTemplate} / {row.ctaType}</span>
+                                <span className="font-semibold">{row.clicks} clicks</span>
+                              </div>
+                            </div>
+                          ))
+                        ) : (
+                          <p className="text-sm text-gray-500 dark:text-gray-400">No destination data yet.</p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Alert Notification History</h3>
+                  {alertsLoading ? (
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Loading alert history...</p>
+                  ) : alertNotifications.length === 0 ? (
+                    <p className="text-sm text-gray-500 dark:text-gray-400">No alert notifications have been sent yet.</p>
+                  ) : (
+                    <div className="space-y-3">
+                      {alertNotifications.map((row) => {
+                        const isCritical = row.severity === 'critical'
+                        const ackPending = alertActionKey === `ack-${row.id}`
+                        const snooze24Pending = alertActionKey === `snooze-${row.alertKey}-24`
+                        const snooze72Pending = alertActionKey === `snooze-${row.alertKey}-72`
+                        const clearPending = alertActionKey === `clear-${row.alertKey}`
+                        return (
+                          <div
+                            key={row.id}
+                            className={`rounded-lg border p-3 ${
+                              isCritical
+                                ? 'border-red-200 bg-red-50/70 dark:border-red-900/60 dark:bg-red-900/20'
+                                : 'border-amber-200 bg-amber-50/70 dark:border-amber-900/60 dark:bg-amber-900/20'
+                            }`}
+                          >
+                            <div className="flex flex-wrap items-center justify-between gap-2">
+                              <p className="font-semibold text-gray-900 dark:text-white">{row.metric}</p>
+                              <p className="text-xs text-gray-500 dark:text-gray-400">
+                                {new Date(row.notifiedAt).toLocaleString()} | channels: {row.channels.join(', ') || 'n/a'}
+                              </p>
+                            </div>
+                            <p className="mt-1 text-sm text-gray-700 dark:text-gray-200">{row.message ?? 'No message provided'}</p>
+                            <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                              Window: {row.windowStart} to {row.windowEnd}
+                            </p>
+                            <div className="mt-2 flex flex-wrap items-center gap-2 text-xs">
+                              {row.acknowledgedAt ? (
+                                <span className="rounded bg-emerald-100 px-2 py-1 font-medium text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
+                                  Acknowledged {new Date(row.acknowledgedAt).toLocaleString()}
+                                  {row.acknowledgedBy ? ` by ${row.acknowledgedBy}` : ''}
+                                </span>
+                              ) : (
+                                <button
+                                  onClick={() => acknowledgeNotification(row.id)}
+                                  disabled={!!alertActionKey}
+                                  className="rounded bg-emerald-600 px-2.5 py-1 font-medium text-white disabled:opacity-50"
+                                >
+                                  {ackPending ? 'Acknowledging...' : 'Acknowledge'}
+                                </button>
+                              )}
+
+                              {row.snoozedUntil ? (
+                                <>
+                                  <span className="rounded bg-blue-100 px-2 py-1 font-medium text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">
+                                    Snoozed until {new Date(row.snoozedUntil).toLocaleString()}
+                                  </span>
+                                  <button
+                                    onClick={() => clearSnooze(row.alertKey)}
+                                    disabled={!!alertActionKey}
+                                    className="rounded border border-blue-300 px-2.5 py-1 font-medium text-blue-700 disabled:opacity-50 dark:border-blue-700 dark:text-blue-300"
+                                  >
+                                    {clearPending ? 'Clearing...' : 'Clear Snooze'}
+                                  </button>
+                                </>
+                              ) : (
+                                <>
+                                  <button
+                                    onClick={() => snoozeAlert(row.alertKey, 24)}
+                                    disabled={!!alertActionKey}
+                                    className="rounded border border-gray-300 px-2.5 py-1 font-medium text-gray-700 disabled:opacity-50 dark:border-gray-600 dark:text-gray-200"
+                                  >
+                                    {snooze24Pending ? 'Snoozing...' : 'Snooze 24h'}
+                                  </button>
+                                  <button
+                                    onClick={() => snoozeAlert(row.alertKey, 72)}
+                                    disabled={!!alertActionKey}
+                                    className="rounded border border-gray-300 px-2.5 py-1 font-medium text-gray-700 disabled:opacity-50 dark:border-gray-600 dark:text-gray-200"
+                                  >
+                                    {snooze72Pending ? 'Snoozing...' : 'Snooze 72h'}
+                                  </button>
+                                </>
+                              )}
+                            </div>
+                          </div>
+                        )
+                      })}
+                    </div>
+                  )}
                 </div>
 
                 {/* Signup trend */}

@@ -3,7 +3,7 @@
  * Sends events to Google Analytics when gtag is available and consent is given.
  */
 
-type GAEventParams = Record<string, string | number | boolean | undefined>
+export type GAEventParams = Record<string, string | number | boolean | undefined>
 
 declare global {
   interface Window {
@@ -11,10 +11,48 @@ declare global {
   }
 }
 
+function hasAnalyticsConsent(): boolean {
+  if (typeof window === 'undefined') return false
+  try {
+    const raw = window.localStorage.getItem('cookie-consent')
+    if (!raw) return false
+    const parsed = JSON.parse(raw) as { analytics?: boolean }
+    return !!parsed.analytics
+  } catch {
+    return false
+  }
+}
+
+function persistEvent(eventName: string, params?: GAEventParams) {
+  if (typeof window === 'undefined') return
+  if (!hasAnalyticsConsent()) return
+
+  const payload = JSON.stringify({ eventName, params })
+  if (navigator.sendBeacon) {
+    const blob = new Blob([payload], { type: 'application/json' })
+    navigator.sendBeacon('/api/analytics/events', blob)
+    return
+  }
+
+  fetch('/api/analytics/events', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: payload,
+    keepalive: true,
+  }).catch(() => {
+    // Fire-and-forget analytics should not affect user flows.
+  })
+}
+
 function sendEvent(eventName: string, params?: GAEventParams) {
+  persistEvent(eventName, params)
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, params)
   }
+}
+
+export function trackCustomEvent(eventName: string, params?: GAEventParams) {
+  sendEvent(eventName, params)
 }
 
 // ─── Auth Events ───────────────────────────────────────────────────────
@@ -70,6 +108,33 @@ export function trackStreakMilestone(streakDays: number) {
 
 export function trackSearch(query: string, resultCount: number) {
   sendEvent('search', { search_term: query, result_count: resultCount })
+}
+
+export function trackDailyQuestionLoaded(courseSlug: string, topicSlug: string) {
+  sendEvent('daily_question_loaded', {
+    page_template: 'daily_question_page',
+    course_slug: courseSlug,
+    topic_slug: topicSlug,
+  })
+}
+
+export function trackDailyQuestionAnswered(courseSlug: string, topicSlug: string, isCorrect: boolean) {
+  sendEvent('daily_question_answered', {
+    page_template: 'daily_question_page',
+    course_slug: courseSlug,
+    topic_slug: topicSlug,
+    is_correct: isCorrect,
+  })
+}
+
+export function trackDailyQuestionCtaClick(courseSlug: string, topicSlug: string, destination: string, ctaType: string = 'next_step') {
+  sendEvent('daily_question_cta_click', {
+    page_template: 'daily_question_page',
+    cta_type: ctaType,
+    course_slug: courseSlug,
+    topic_slug: topicSlug,
+    destination,
+  })
 }
 
 // ─── Conversion Events ─────────────────────────────────────────────────

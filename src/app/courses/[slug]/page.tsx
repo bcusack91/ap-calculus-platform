@@ -6,6 +6,7 @@ import { InArticleAd } from '@/components/ad-banner'
 import { breadcrumbJsonLd } from '@/lib/jsonld'
 import CourseEntranceQuiz from '@/components/CourseEntranceQuiz'
 import DiagnosticStudyPlanBanner from '@/components/DiagnosticStudyPlanBanner'
+import TrackedLink from '@/components/TrackedLink'
 import {
   courseDailyQuestionMap,
   courseDiagnosticMap,
@@ -265,27 +266,54 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-2">
-                  <Link
+                  <TrackedLink
                     href={diag.href}
+                    eventName="course_cta_click"
+                    eventParams={{
+                      course_slug: slug,
+                      course_name: course.name,
+                      page_template: 'course_page',
+                      cta_type: 'diagnostic',
+                      destination: diag.href,
+                      location: 'course_header_cta',
+                    }}
                     className={`inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-gradient-to-r ${diag.btnGradient} px-6 py-3 font-semibold text-white shadow-lg transition hover:shadow-xl`}
                   >
                     Take Diagnostic Test →
-                  </Link>
+                  </TrackedLink>
                   {predictor && (
-                    <Link
+                    <TrackedLink
                       href={predictor.href}
+                      eventName="course_cta_click"
+                      eventParams={{
+                        course_slug: slug,
+                        course_name: course.name,
+                        page_template: 'course_page',
+                        cta_type: 'score_predictor',
+                        destination: predictor.href,
+                        location: 'course_header_cta',
+                      }}
                       className="inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-white/70 bg-white/70 px-6 py-3 font-semibold text-gray-800 transition hover:bg-white dark:border-gray-600 dark:bg-gray-800/70 dark:text-gray-200 dark:hover:bg-gray-800"
                     >
                       {predictor.label}
-                    </Link>
+                    </TrackedLink>
                   )}
                   {dailyQuestion && (
-                    <Link
+                    <TrackedLink
                       href={dailyQuestion.href}
+                      eventName="course_cta_click"
+                      eventParams={{
+                        course_slug: slug,
+                        course_name: course.name,
+                        page_template: 'course_page',
+                        cta_type: 'daily_question',
+                        destination: dailyQuestion.href,
+                        location: 'course_header_cta',
+                      }}
                       className="inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-white/70 bg-white/70 px-6 py-3 font-semibold text-gray-800 transition hover:bg-white dark:border-gray-600 dark:bg-gray-800/70 dark:text-gray-200 dark:hover:bg-gray-800"
                     >
                       {dailyQuestion.label}
-                    </Link>
+                    </TrackedLink>
                   )}
                 </div>
               </div>
