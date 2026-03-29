@@ -39,6 +39,16 @@ interface AnalyticsData {
     notificationSummary?: {
       eligibleAlerts: number
       notifiedAlerts: number
+      escalatedAlerts: number
+      ticketsCreated: number
+      runbooksIncluded: number
+      opsMetrics: {
+        avgAckHours: number
+        avgRecoveryHours: number
+        openCriticalAlerts: number
+        unacknowledgedCriticalAlerts: number
+        recoveredLast30Days: number
+      }
       channelsUsed: string[]
       skippedReason?: string
       errors: string[]
@@ -69,6 +79,33 @@ interface AlertNotification {
   acknowledgedBy: string | null
   snoozedUntil: string | null
   snoozedBy: string | null
+  runbookUrl: string | null
+  ticketExternalId: string | null
+  ticketUrl: string | null
+  ticketStatus: string | null
+  ticketCreatedAt: string | null
+}
+
+interface MonthlyOpsDigest {
+  windowDays: number
+  totals: {
+    total: number
+    critical: number
+    warning: number
+  }
+  medians: {
+    ackHours: number
+    recoveryHours: number
+  }
+  topRecurring: {
+    alertKey: string
+    metric: string
+    count: number
+  }[]
+  channelMix: {
+    channel: string
+    count: number
+  }[]
 }
 
 const ROLES = [
@@ -86,6 +123,8 @@ export default function AdminPanel() {
   const [analyticsLoading, setAnalyticsLoading] = useState(true)
   const [alertNotifications, setAlertNotifications] = useState<AlertNotification[]>([])
   const [alertsLoading, setAlertsLoading] = useState(true)
+  const [monthlyDigest, setMonthlyDigest] = useState<MonthlyOpsDigest | null>(null)
+  const [monthlyDigestLoading, setMonthlyDigestLoading] = useState(true)
   const [alertActionKey, setAlertActionKey] = useState<string | null>(null)
   const [search, setSearch] = useState('')
   const [users, setUsers] = useState<UserResult[]>([])
@@ -125,6 +164,19 @@ export default function AdminPanel() {
     }
   }
 
+  const loadMonthlyDigest = async () => {
+    setMonthlyDigestLoading(true)
+    try {
+      const res = await fetch('/api/admin/alerts/monthly-digest')
+      setMonthlyDigest(res.ok ? await res.json() : null)
+    } catch (error) {
+      console.error(error)
+      setMonthlyDigest(null)
+    } finally {
+      setMonthlyDigestLoading(false)
+    }
+  }
+
   useEffect(() => {
     if (status === 'unauthenticated') {
       router.push('/auth/signin?callbackUrl=/admin')
@@ -132,7 +184,7 @@ export default function AdminPanel() {
   }, [status, router])
 
   useEffect(() => {
-    void Promise.all([loadAnalytics(), loadAlertNotifications()])
+    void Promise.all([loadAnalytics(), loadAlertNotifications(), loadMonthlyDigest()])
   }, [])
 
   const acknowledgeNotification = async (notificationId: number) => {
@@ -320,6 +372,9 @@ export default function AdminPanel() {
                       <p className="font-semibold text-gray-900 dark:text-white">Critical alert notifications</p>
                       <p className="text-gray-600 dark:text-gray-300">
                         Eligible: {analytics.funnel.notificationSummary.eligibleAlerts} | Notified: {analytics.funnel.notificationSummary.notifiedAlerts}
+                        {` | Escalated: ${analytics.funnel.notificationSummary.escalatedAlerts}`}
+                        {` | Tickets: ${analytics.funnel.notificationSummary.ticketsCreated}`}
+                        {` | Runbooks: ${analytics.funnel.notificationSummary.runbooksIncluded}`}
                         {analytics.funnel.notificationSummary.channelsUsed.length > 0
                           ? ` | Channels: ${analytics.funnel.notificationSummary.channelsUsed.join(', ')}`
                           : ''}
@@ -334,6 +389,29 @@ export default function AdminPanel() {
                           Errors: {analytics.funnel.notificationSummary.errors.join(' | ')}
                         </p>
                       )}
+
+                      <div className="mt-3 grid grid-cols-2 md:grid-cols-5 gap-2 text-xs">
+                        <div className="rounded bg-white px-2 py-1 dark:bg-gray-800/60">
+                          <p className="text-gray-500 dark:text-gray-400">Avg Ack</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">{analytics.funnel.notificationSummary.opsMetrics.avgAckHours}h</p>
+                        </div>
+                        <div className="rounded bg-white px-2 py-1 dark:bg-gray-800/60">
+                          <p className="text-gray-500 dark:text-gray-400">Avg Recovery</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">{analytics.funnel.notificationSummary.opsMetrics.avgRecoveryHours}h</p>
+                        </div>
+                        <div className="rounded bg-white px-2 py-1 dark:bg-gray-800/60">
+                          <p className="text-gray-500 dark:text-gray-400">Open Critical</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">{analytics.funnel.notificationSummary.opsMetrics.openCriticalAlerts}</p>
+                        </div>
+                        <div className="rounded bg-white px-2 py-1 dark:bg-gray-800/60">
+                          <p className="text-gray-500 dark:text-gray-400">Unacked Critical</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">{analytics.funnel.notificationSummary.opsMetrics.unacknowledgedCriticalAlerts}</p>
+                        </div>
+                        <div className="rounded bg-white px-2 py-1 dark:bg-gray-800/60">
+                          <p className="text-gray-500 dark:text-gray-400">Recovered 30d</p>
+                          <p className="font-semibold text-gray-900 dark:text-white">{analytics.funnel.notificationSummary.opsMetrics.recoveredLast30Days}</p>
+                        </div>
+                      </div>
                     </div>
                   )}
 
@@ -535,6 +613,47 @@ export default function AdminPanel() {
                             <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
                               Window: {row.windowStart} to {row.windowEnd}
                             </p>
+                            <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-gray-600 dark:text-gray-300">
+                              {row.runbookUrl ? (
+                                <a
+                                  href={row.runbookUrl}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="rounded border border-indigo-300 px-2 py-0.5 font-medium text-indigo-700 hover:bg-indigo-50 dark:border-indigo-700 dark:text-indigo-300 dark:hover:bg-indigo-900/30"
+                                >
+                                  Open Runbook
+                                </a>
+                              ) : (
+                                <span className="rounded bg-gray-100 px-2 py-0.5 text-gray-500 dark:bg-gray-700 dark:text-gray-300">
+                                  No runbook mapped
+                                </span>
+                              )}
+
+                              {row.ticketUrl ? (
+                                <a
+                                  href={row.ticketUrl}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="rounded border border-rose-300 px-2 py-0.5 font-medium text-rose-700 hover:bg-rose-50 dark:border-rose-700 dark:text-rose-300 dark:hover:bg-rose-900/30"
+                                >
+                                  Ticket {row.ticketExternalId ?? row.ticketStatus ?? 'Open'}
+                                </a>
+                              ) : row.ticketExternalId ? (
+                                <span className="rounded bg-rose-100 px-2 py-0.5 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300">
+                                  Ticket {row.ticketExternalId}
+                                </span>
+                              ) : (
+                                <span className="rounded bg-gray-100 px-2 py-0.5 text-gray-500 dark:bg-gray-700 dark:text-gray-300">
+                                  No ticket yet
+                                </span>
+                              )}
+
+                              {row.ticketCreatedAt && (
+                                <span className="text-gray-500 dark:text-gray-400">
+                                  Ticketed {new Date(row.ticketCreatedAt).toLocaleString()}
+                                </span>
+                              )}
+                            </div>
                             <div className="mt-2 flex flex-wrap items-center gap-2 text-xs">
                               {row.acknowledgedAt ? (
                                 <span className="rounded bg-emerald-100 px-2 py-1 font-medium text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
@@ -587,6 +706,49 @@ export default function AdminPanel() {
                         )
                       })}
                     </div>
+                  )}
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Monthly Ops Digest</h3>
+                  {monthlyDigestLoading ? (
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Loading monthly digest...</p>
+                  ) : monthlyDigest ? (
+                    <>
+                      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-4 text-sm">
+                        <MetricCard label="Alerts 30d" value={monthlyDigest.totals.total} />
+                        <MetricCard label="Critical 30d" value={monthlyDigest.totals.critical} color="purple" />
+                        <MetricCard label="Warning 30d" value={monthlyDigest.totals.warning} color="blue" />
+                        <MetricCard label="Median Ack (h)" value={monthlyDigest.medians.ackHours} color="green" />
+                        <MetricCard label="Median Recovery (h)" value={monthlyDigest.medians.recoveryHours} />
+                      </div>
+                      <div className="grid gap-4 md:grid-cols-2">
+                        <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-4">
+                          <p className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Top Recurring Alerts</p>
+                          <div className="space-y-2 text-sm">
+                            {monthlyDigest.topRecurring.length > 0 ? monthlyDigest.topRecurring.map((row) => (
+                              <div key={row.alertKey} className="flex items-center justify-between gap-2">
+                                <span className="text-gray-700 dark:text-gray-200">{row.metric}</span>
+                                <span className="font-mono text-gray-900 dark:text-white">{row.count}</span>
+                              </div>
+                            )) : <p className="text-gray-500 dark:text-gray-400">No alerts in the last 30 days.</p>}
+                          </div>
+                        </div>
+                        <div className="rounded-lg bg-gray-50 dark:bg-gray-700/50 p-4">
+                          <p className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Channel Mix</p>
+                          <div className="space-y-2 text-sm">
+                            {monthlyDigest.channelMix.length > 0 ? monthlyDigest.channelMix.map((row) => (
+                              <div key={row.channel} className="flex items-center justify-between gap-2">
+                                <span className="text-gray-700 dark:text-gray-200">{row.channel}</span>
+                                <span className="font-mono text-gray-900 dark:text-white">{row.count}</span>
+                              </div>
+                            )) : <p className="text-gray-500 dark:text-gray-400">No channel usage recorded.</p>}
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <p className="text-sm text-gray-500 dark:text-gray-400">Monthly digest unavailable.</p>
                   )}
                 </div>
 

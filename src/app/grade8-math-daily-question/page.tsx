@@ -3,10 +3,12 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import {
+  trackCustomEvent,
   trackDailyQuestionAnswered,
   trackDailyQuestionCtaClick,
   trackDailyQuestionLoaded,
 } from '@/lib/analytics'
+import { getOrAssignPostCompletionCtaVariant, type PostCompletionCtaVariant } from '@/lib/experiments'
 
 interface DailyQ {
   topicSlug: string
@@ -19,6 +21,8 @@ export default function Grade8MathDailyQuestionPage() {
   const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState<number | null>(null)
   const [revealed, setRevealed] = useState(false)
+  const [ctaVariant, setCtaVariant] = useState<PostCompletionCtaVariant>('control')
+  const [ctaImpressionTracked, setCtaImpressionTracked] = useState(false)
 
   useEffect(() => {
     fetch('/api/grade8-math-daily-question')
@@ -34,6 +38,21 @@ export default function Grade8MathDailyQuestionPage() {
       trackDailyQuestionLoaded('grade-8-math', q.topicSlug)
     }
   }, [loading, q])
+
+  useEffect(() => {
+    setCtaVariant(getOrAssignPostCompletionCtaVariant('grade-8-math'))
+  }, [])
+
+  useEffect(() => {
+    if (!revealed || !q || ctaImpressionTracked) return
+    trackCustomEvent('daily_post_completion_cta_impression', {
+      page_template: 'daily_question_page',
+      course_slug: 'grade-8-math',
+      topic_slug: q.topicSlug,
+      cta_variant: ctaVariant,
+    })
+    setCtaImpressionTracked(true)
+  }, [revealed, q, ctaImpressionTracked, ctaVariant])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-rose-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
@@ -86,6 +105,49 @@ export default function Grade8MathDailyQuestionPage() {
                   <div className="rounded-xl bg-gray-50 p-4 text-sm dark:bg-gray-700/50">
                     <div className="mb-1 font-semibold text-gray-900 dark:text-white">{selected === q.question.correctAnswer ? 'Correct!' : 'Incorrect'}</div>
                     <p className="text-gray-600 dark:text-gray-400">{q.question.explanation}</p>
+
+                    <div className="mt-4 rounded-lg border border-pink-200 bg-pink-50 p-3 dark:border-pink-800 dark:bg-pink-900/20">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-pink-700 dark:text-pink-300">Next Step</p>
+                      <p className="mt-1 text-sm text-gray-700 dark:text-gray-200">
+                        {ctaVariant === 'social-proof'
+                          ? 'Students who complete a quick diagnostic usually improve faster. Unlock your personalized practice path now.'
+                          : 'Keep the momentum: get a personalized study path in under 2 minutes.'}
+                      </p>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        <Link
+                          href="/auth/signin"
+                          onClick={() => {
+                            trackCustomEvent('daily_post_completion_cta_click', {
+                              page_template: 'daily_question_page',
+                              course_slug: 'grade-8-math',
+                              topic_slug: q.topicSlug,
+                              cta_variant: ctaVariant,
+                              destination: '/auth/signin',
+                              cta_type: 'signup',
+                            })
+                          }}
+                          className="rounded-md bg-pink-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-pink-700"
+                        >
+                          Create Free Account
+                        </Link>
+                        <Link
+                          href="/grade8-math-diagnostic"
+                          onClick={() => {
+                            trackCustomEvent('daily_post_completion_cta_click', {
+                              page_template: 'daily_question_page',
+                              course_slug: 'grade-8-math',
+                              topic_slug: q.topicSlug,
+                              cta_variant: ctaVariant,
+                              destination: '/grade8-math-diagnostic',
+                              cta_type: 'diagnostic',
+                            })
+                          }}
+                          className="rounded-md border border-pink-400 px-3 py-1.5 text-xs font-semibold text-pink-700 hover:bg-pink-100 dark:text-pink-300 dark:hover:bg-pink-900/30"
+                        >
+                          Start Diagnostic
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

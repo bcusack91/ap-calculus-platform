@@ -3,10 +3,12 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import {
+  trackCustomEvent,
   trackDailyQuestionAnswered,
   trackDailyQuestionCtaClick,
   trackDailyQuestionLoaded,
 } from '@/lib/analytics'
+import { getOrAssignPostCompletionCtaVariant, type PostCompletionCtaVariant } from '@/lib/experiments'
 
 interface DailyQ {
   topicSlug: string
@@ -19,6 +21,8 @@ export default function OChemDailyQuestionPage() {
   const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState<number | null>(null)
   const [revealed, setRevealed] = useState(false)
+  const [ctaVariant, setCtaVariant] = useState<PostCompletionCtaVariant>('control')
+  const [ctaImpressionTracked, setCtaImpressionTracked] = useState(false)
 
   useEffect(() => {
     fetch('/api/ochem-daily-question')
@@ -34,6 +38,21 @@ export default function OChemDailyQuestionPage() {
       trackDailyQuestionLoaded('organic-chemistry', q.topicSlug)
     }
   }, [loading, q])
+
+  useEffect(() => {
+    setCtaVariant(getOrAssignPostCompletionCtaVariant('organic-chemistry'))
+  }, [])
+
+  useEffect(() => {
+    if (!revealed || !q || ctaImpressionTracked) return
+    trackCustomEvent('daily_post_completion_cta_impression', {
+      page_template: 'daily_question_page',
+      course_slug: 'organic-chemistry',
+      topic_slug: q.topicSlug,
+      cta_variant: ctaVariant,
+    })
+    setCtaImpressionTracked(true)
+  }, [revealed, q, ctaImpressionTracked, ctaVariant])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
@@ -86,6 +105,49 @@ export default function OChemDailyQuestionPage() {
                   <div className="rounded-xl bg-gray-50 p-4 text-sm dark:bg-gray-700/50">
                     <div className="mb-1 font-semibold text-gray-900 dark:text-white">{selected === q.question.correctAnswer ? 'Correct!' : 'Incorrect'}</div>
                     <p className="text-gray-600 dark:text-gray-400">{q.question.explanation}</p>
+
+                    <div className="mt-4 rounded-lg border border-fuchsia-200 bg-fuchsia-50 p-3 dark:border-fuchsia-800 dark:bg-fuchsia-900/20">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-fuchsia-700 dark:text-fuchsia-300">Next Step</p>
+                      <p className="mt-1 text-sm text-gray-700 dark:text-gray-200">
+                        {ctaVariant === 'social-proof'
+                          ? 'Students who pair daily OChem questions with a diagnostic tend to improve retention and confidence.'
+                          : 'Turn this win into momentum with a personalized OChem diagnostic path.'}
+                      </p>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        <Link
+                          href="/auth/signin"
+                          onClick={() => {
+                            trackCustomEvent('daily_post_completion_cta_click', {
+                              page_template: 'daily_question_page',
+                              course_slug: 'organic-chemistry',
+                              topic_slug: q.topicSlug,
+                              cta_variant: ctaVariant,
+                              destination: '/auth/signin',
+                              cta_type: 'signup',
+                            })
+                          }}
+                          className="rounded-md bg-fuchsia-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-fuchsia-700"
+                        >
+                          Create Free Account
+                        </Link>
+                        <Link
+                          href="/ochem-diagnostic"
+                          onClick={() => {
+                            trackCustomEvent('daily_post_completion_cta_click', {
+                              page_template: 'daily_question_page',
+                              course_slug: 'organic-chemistry',
+                              topic_slug: q.topicSlug,
+                              cta_variant: ctaVariant,
+                              destination: '/ochem-diagnostic',
+                              cta_type: 'diagnostic',
+                            })
+                          }}
+                          className="rounded-md border border-fuchsia-400 px-3 py-1.5 text-xs font-semibold text-fuchsia-700 hover:bg-fuchsia-100 dark:text-fuchsia-300 dark:hover:bg-fuchsia-900/30"
+                        >
+                          Start Diagnostic
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

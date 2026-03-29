@@ -3,10 +3,12 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import {
+  trackCustomEvent,
   trackDailyQuestionAnswered,
   trackDailyQuestionCtaClick,
   trackDailyQuestionLoaded,
 } from '@/lib/analytics'
+import { getOrAssignPostCompletionCtaVariant, type PostCompletionCtaVariant } from '@/lib/experiments'
 
 interface DailyQ {
   topicSlug: string
@@ -19,6 +21,8 @@ export default function PreAlgebraDailyQuestionPage() {
   const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState<number | null>(null)
   const [revealed, setRevealed] = useState(false)
+  const [ctaVariant, setCtaVariant] = useState<PostCompletionCtaVariant>('control')
+  const [ctaImpressionTracked, setCtaImpressionTracked] = useState(false)
 
   useEffect(() => {
     fetch('/api/prealgebra-daily-question')
@@ -34,6 +38,21 @@ export default function PreAlgebraDailyQuestionPage() {
       trackDailyQuestionLoaded('pre-algebra', q.topicSlug)
     }
   }, [loading, q])
+
+  useEffect(() => {
+    setCtaVariant(getOrAssignPostCompletionCtaVariant('pre-algebra'))
+  }, [])
+
+  useEffect(() => {
+    if (!revealed || !q || ctaImpressionTracked) return
+    trackCustomEvent('daily_post_completion_cta_impression', {
+      page_template: 'daily_question_page',
+      course_slug: 'pre-algebra',
+      topic_slug: q.topicSlug,
+      cta_variant: ctaVariant,
+    })
+    setCtaImpressionTracked(true)
+  }, [revealed, q, ctaImpressionTracked, ctaVariant])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-lime-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
@@ -86,6 +105,49 @@ export default function PreAlgebraDailyQuestionPage() {
                   <div className="rounded-xl bg-gray-50 p-4 text-sm dark:bg-gray-700/50">
                     <div className="mb-1 font-semibold text-gray-900 dark:text-white">{selected === q.question.correctAnswer ? 'Correct!' : 'Incorrect'}</div>
                     <p className="text-gray-600 dark:text-gray-400">{q.question.explanation}</p>
+
+                    <div className="mt-4 rounded-lg border border-lime-200 bg-lime-50 p-3 dark:border-lime-800 dark:bg-lime-900/20">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-lime-700 dark:text-lime-300">Next Step</p>
+                      <p className="mt-1 text-sm text-gray-700 dark:text-gray-200">
+                        {ctaVariant === 'social-proof'
+                          ? 'Learners who take one diagnostic after today\'s question usually improve consistency quickly.'
+                          : 'Keep going with a short diagnostic to unlock a personalized practice path.'}
+                      </p>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        <Link
+                          href="/auth/signin"
+                          onClick={() => {
+                            trackCustomEvent('daily_post_completion_cta_click', {
+                              page_template: 'daily_question_page',
+                              course_slug: 'pre-algebra',
+                              topic_slug: q.topicSlug,
+                              cta_variant: ctaVariant,
+                              destination: '/auth/signin',
+                              cta_type: 'signup',
+                            })
+                          }}
+                          className="rounded-md bg-lime-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-lime-700"
+                        >
+                          Create Free Account
+                        </Link>
+                        <Link
+                          href="/prealgebra-diagnostic"
+                          onClick={() => {
+                            trackCustomEvent('daily_post_completion_cta_click', {
+                              page_template: 'daily_question_page',
+                              course_slug: 'pre-algebra',
+                              topic_slug: q.topicSlug,
+                              cta_variant: ctaVariant,
+                              destination: '/prealgebra-diagnostic',
+                              cta_type: 'diagnostic',
+                            })
+                          }}
+                          className="rounded-md border border-lime-400 px-3 py-1.5 text-xs font-semibold text-lime-700 hover:bg-lime-100 dark:text-lime-300 dark:hover:bg-lime-900/30"
+                        >
+                          Start Diagnostic
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

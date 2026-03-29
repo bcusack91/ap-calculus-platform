@@ -129,6 +129,7 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
 
   const allCategories = [...abCategories, ...course.categories]
   const totalTopics = allCategories.reduce((sum, cat) => sum + cat.topics.length, 0)
+  const featuredTopics = allCategories.flatMap((cat) => cat.topics).slice(0, 8)
 
   // Map course colors to Tailwind classes
   const colorMap: Record<string, { bg: string; gradient: string }> = {
@@ -323,6 +324,35 @@ export default async function CoursePage({ params, searchParams: searchParamsPro
 
         {/* Ad placement after course overview */}
         <InArticleAd />
+
+        {/* Related-topic discovery cards */}
+        {featuredTopics.length > 0 && (
+          <section className="mt-8 mb-12 rounded-2xl border border-gray-200 bg-white p-8 shadow-sm dark:border-gray-700 dark:bg-gray-900">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Explore Related Topics</h2>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-5">
+              Jump into high-impact topics and keep your study momentum moving.
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {featuredTopics.map((topic) => (
+                <TrackedLink
+                  key={topic.id}
+                  href={`/topics/${topic.slug}`}
+                  eventName="related_topic_click"
+                  eventParams={{
+                    page_template: 'course_page',
+                    course_slug: slug,
+                    destination: `/topics/${topic.slug}`,
+                    cta_type: 'related_topic_card',
+                    location: 'course_featured_topics',
+                  }}
+                  className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-semibold text-gray-800 transition hover:border-indigo-400 hover:bg-indigo-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:border-indigo-500 dark:hover:bg-indigo-900/20"
+                >
+                  {topic.title}
+                </TrackedLink>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Exit Quiz Mode — show entrance quiz + filtered topics */}
         {isExitQuizMode && (

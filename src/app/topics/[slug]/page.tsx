@@ -20,6 +20,8 @@ import TopicContentRenderer from '@/components/TopicContentRenderer'
 import type { ReactNode } from 'react'
 import { SocialShare } from '@/components/SocialShare'
 import { TopicContentTools } from '@/components/TopicContentTools'
+import TrackedLink from '@/components/TrackedLink'
+import { getTopicAdVariant } from '@/lib/experiments'
 
 // ISR: revalidate content every hour (content rarely changes)
 export const revalidate = 3600
@@ -203,6 +205,7 @@ export default async function TopicPage(props: TopicPageProps) {
   const relatedTopics = siblingTopics
     .filter((t) => t.slug !== topic.slug)
     .slice(0, 6)
+  const topicAdVariant = getTopicAdVariant(topic.slug)
 
   /* Temporarily hidden for free tier launch - all content is free
   // Check if user has access
@@ -334,6 +337,13 @@ export default async function TopicPage(props: TopicPageProps) {
                 description={topic.description}
               />
             </div>
+
+            {/* Ad experiment: high-density cohort gets one additional early ad slot */}
+            {topicAdVariant === 'high-density' && (
+              <div className="mb-8">
+                <InArticleAd />
+              </div>
+            )}
 
             {/* Subtopics Grid — shown when this topic has child topics */}
             {topic.subtopics.length > 0 && (
@@ -591,15 +601,23 @@ export default async function TopicPage(props: TopicPageProps) {
                 </h2>
                 <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                   {relatedTopics.map((rt) => (
-                    <Link
+                    <TrackedLink
                       key={rt.slug}
                       href={`/topics/${rt.slug}`}
+                      eventName="related_topic_click"
+                      eventParams={{
+                        page_template: 'topic_page',
+                        source_topic_slug: topic.slug,
+                        destination: `/topics/${rt.slug}`,
+                        cta_type: 'related_topic_card',
+                        location: 'topic_related_section',
+                      }}
                       className="block rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4 hover:border-purple-400 hover:shadow-md transition-all group"
                     >
                       <span className="font-medium text-gray-900 dark:text-gray-100 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors">
                         {rt.title}
                       </span>
-                    </Link>
+                    </TrackedLink>
                   ))}
                 </div>
               </section>

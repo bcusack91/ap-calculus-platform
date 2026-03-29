@@ -94,6 +94,26 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Depth Audit
+        run: npm run depth:check
+
+      - name: Start app for smoke checks
+        run: npm run start > /tmp/studymondo-smoke.log 2>&1 &
+
+      - name: Wait for app health
+        run: |
+          for i in {1..30}; do
+            if curl -sf http://localhost:3000/api/health >/dev/null; then
+              exit 0
+            fi
+            sleep 2
+          done
+          cat /tmp/studymondo-smoke.log
+          exit 1
+
+      - name: Smoke Checks
+        run: npm run smoke:routes
+
   e2e:
     name: E2E Tests
     runs-on: ubuntu-latest

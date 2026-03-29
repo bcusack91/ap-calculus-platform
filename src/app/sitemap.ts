@@ -4,6 +4,7 @@ import { getAllInteractiveSlugs } from '@/data/interactive-lessons/registry'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { topicHubs } from '@/data/topic-hubs'
 
 export const revalidate = 3600 // Revalidate every hour
 
@@ -296,6 +297,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 0.5,
     },
+    {
+      url: `${baseUrl}/hubs`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
   ]
 
   // Course pages
@@ -355,6 +362,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }))
 
+  const topicHubPages: MetadataRoute.Sitemap = topicHubs.map((hub) => ({
+    url: `${baseUrl}/hubs/${hub.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.78,
+  }))
+
   // Flashcard pages (one per topic)
   const flashcardPages: MetadataRoute.Sitemap = topics.map((topic) => ({
     url: `${baseUrl}/flashcards/${topic.slug}`,
@@ -399,5 +413,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ]
   }
 
-  return [...staticPages, ...coursePages, ...topicPages, ...interactivePages, ...categoryPages, ...flashcardPages, ...leaderboardPage, ...blogPages]
+  return [...staticPages, ...coursePages, ...topicPages, ...interactivePages, ...topicHubPages, ...categoryPages, ...flashcardPages, ...leaderboardPage, ...blogPages]
 }

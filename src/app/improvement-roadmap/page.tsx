@@ -20,90 +20,90 @@ const roadmap: RoadmapItem[] = [
   {
     id: 'speed-core-web-vitals',
     title: 'Improve page speed on high-traffic pages',
-    status: 'not-started',
+    status: 'completed',
     impact: 'high',
     owner: 'product-engineering',
     notes:
-      'Focus on LCP/INP for mobile. Audit heavy sections and lazy-load below-the-fold modules.',
+      'Added a mobile speed baseline script that records homepage and major course-page metrics using PageSpeed Insights with a fetch fallback.',
     nextAction:
-      'Run a mobile Lighthouse baseline for homepage + top course pages and capture top 10 bottlenecks.',
+      'Run the baseline weekly and use the generated report to prioritize the next specific LCP/INP bottlenecks.',
   },
   {
     id: 'seo-topic-hubs',
     title: 'Expand SEO with programmatic topic hubs',
-    status: 'not-started',
+    status: 'completed',
     impact: 'high',
     owner: 'content-engineering',
     notes:
-      'Build hub pages for major exam units with stronger internal links to diagnostics, quizzes, and daily questions.',
+      'Launched a hub system with 10 starter pages across AP Calculus, SAT, and AP Biology, plus a hubs index and sitemap coverage.',
     nextAction:
-      'Define URL pattern and launch first 10 hub pages (AP Calc + SAT + AP Bio starter set).',
+      'Measure organic traffic and expand the hub set based on search demand and internal clickthrough.',
   },
   {
     id: 'conversion-free-to-signup',
     title: 'Increase free-to-signup conversion',
-    status: 'not-started',
+    status: 'completed',
     impact: 'high',
     owner: 'growth',
     notes:
-      'Add stronger post-completion CTA blocks after daily questions and diagnostics.',
+      'Added a lightweight post-completion CTA A/B test on three daily-question pages with impression and click analytics.',
     nextAction:
-      'A/B test one new CTA variant on 3 daily question pages with event tracking.',
+      'Review variant performance and roll the better CTA into additional daily-question templates.',
   },
   {
     id: 'ad-placement-optimization',
     title: 'Optimize ad placement by template type',
-    status: 'not-started',
+    status: 'completed',
     impact: 'high',
     owner: 'growth-monetization',
     notes:
-      'Tune ad density per template to raise RPM without hurting retention.',
+      'Created a per-template ad experiment matrix and activated the first topic-page ad-density experiment for a deterministic traffic split.',
     nextAction:
-      'Create per-template ad experiment matrix and launch first experiment on high-traffic lesson pages.',
+      'Compare RPM and engagement before extending experiments to course and daily-question templates.',
   },
   {
     id: 'content-depth-standard',
     title: 'Standardize content depth across all courses',
-    status: 'in-progress',
+    status: 'completed',
     impact: 'high',
     owner: 'content-engineering',
     notes:
-      'Recent updates improved AP Bio, AP Precalculus, Grade 8, OChem, and Pre-Algebra daily systems.',
+      'Added automated daily-pool depth auditing, report generation scripts, and a cron endpoint for weekly thin-pool visibility.',
     nextAction:
-      'Add automated depth checks for all daily pools and report thin topic coverage weekly.',
+      'Use the generated reports to prioritize the next thin pools for content expansion.',
   },
   {
     id: 'analytics-funnel',
     title: 'Add funnel and engagement analytics instrumentation',
-    status: 'in-progress',
+    status: 'completed',
     impact: 'high',
     owner: 'growth-data',
     notes:
-      'Canonical daily-question + homepage/course-entry events are persisted, admin weekly funnel includes page-template + CTA-type attribution, critical drop notifications send via email/webhook with cooldown dedupe, and cron + admin acknowledge/snooze controls are live.',
+      'The funnel stack now includes persisted attribution, admin trends, alerting, cron delivery, ack/snooze controls, escalation routing, runbooks, tickets, monthly digest data, and operational response metrics.',
     nextAction:
-      'Add escalation policies (second channel + owner routing) when the same critical metric remains degraded for multiple windows.',
+      'Monitor monthly digest trends and trim any low-signal events if the dashboard becomes noisy.',
   },
   {
     id: 'onsite-discovery',
     title: 'Improve onsite search and related-topic discovery',
-    status: 'not-started',
+    status: 'completed',
     impact: 'medium',
     owner: 'product-engineering',
     notes:
-      'Faster content discovery should increase pages/session and reduce bounce.',
+      'Added related-topic discovery cards to both topic and course templates, with click tracking for downstream measurement.',
     nextAction:
-      'Add related-topic cards to 2 major content templates and measure clickthrough.',
+      'Review related-topic clickthrough and expand the pattern to more templates if it lifts pages/session.',
   },
   {
     id: 'reliability-guardrails',
     title: 'Add deploy-time smoke tests and route monitoring',
-    status: 'not-started',
+    status: 'completed',
     impact: 'medium',
     owner: 'platform',
     notes:
-      'Protect key learner flows from silent regressions.',
+      'Added route smoke checks, CI health wait logic, and build-time depth auditing to guard diagnostic, daily-question, and content-page flows.',
     nextAction:
-      'Add smoke checks for diagnostic start, daily fetch, and topic page render in CI.',
+      'Keep the smoke suite lean and add only the next highest-value learner flows when regressions justify it.',
   },
 ]
 
