@@ -68,6 +68,58 @@ In fasting, lipolysis and beta-oxidation increase while fatty acid synthesis dec
 - Carnitine shuttle: required for long-chain FA entry into mitochondria
 - CPT-I is rate-limiting, inhibited by malonyl-CoA (fed state)
 - Fats yield ~9 kcal/g vs ~4 kcal/g for carbs/protein`
+    },
+    {
+      id: 'bc5-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Lipids & Fatty Acid Metabolism
+
+<details>
+<summary><b>Example 1: Count beta-oxidation cycles for palmitate</b></summary>
+
+**Question:** How many beta-oxidation cycles and acetyl-CoA molecules are produced from palmitate (C16:0)?
+
+**Solution:**
+1. Number of acetyl-CoA units for an even-chain fatty acid = $n/2$.
+2. For C16: $16/2 = 8$ acetyl-CoA.
+3. Number of beta-oxidation cycles = acetyl-CoA count minus 1.
+4. Cycles = $8 - 1 = 7$.
+
+So palmitate gives **7 cycles** and **8 acetyl-CoA**.
+
+**MCAT tip:** Cycles generate NADH and FADH$_2$; acetyl-CoA then feeds TCA.
+</details>
+
+<details>
+<summary><b>Example 2: Explain CPT-I regulation by malonyl-CoA</b></summary>
+
+**Question:** In a fed state with high insulin, why is mitochondrial fatty acid oxidation suppressed?
+
+**Solution:**
+1. Insulin promotes fatty acid synthesis.
+2. Fatty acid synthesis increases malonyl-CoA.
+3. Malonyl-CoA inhibits CPT-I on the outer mitochondrial membrane.
+4. Long-chain acyl groups cannot enter mitochondria efficiently.
+5. Beta-oxidation decreases, avoiding futile cycling.
+
+**MCAT tip:** High malonyl-CoA means synthesis mode, not oxidation mode.
+</details>
+
+<details>
+<summary><b>Example 3: Estimate ATP from one beta-oxidation cycle</b></summary>
+
+**Question:** What is the approximate ATP equivalent from one beta-oxidation cycle before counting TCA from acetyl-CoA?
+
+**Solution:**
+1. Each cycle directly yields 1 NADH and 1 FADH$_2$.
+2. NADH is about 2.5 ATP.
+3. FADH$_2$ is about 1.5 ATP.
+4. Direct total per cycle is about **4 ATP equivalents**.
+
+This does not include ATP from oxidizing the produced acetyl-CoA in TCA.
+
+**MCAT tip:** Keep direct cycle yield separate from downstream TCA yield to avoid double counting.
+</details>`
     }
   ]
 };

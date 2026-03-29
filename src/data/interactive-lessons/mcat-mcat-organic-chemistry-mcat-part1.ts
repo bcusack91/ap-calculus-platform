@@ -85,6 +85,101 @@ On the MCAT, many questions hide stereochemistry inside a passage about receptor
 - Enantiomers: mirror images, same properties (except rotation). Diastereomers: different properties.
 - Amide = peptide bond — this connects to biochemistry
 - Always classify relationship first: constitutional vs stereoisomer vs conformer.`
+    },
+    {
+      id: 'oc1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Functional Groups & Stereochemistry
+
+<details>
+<summary><b>Example 1: Assign R/S configuration to a chiral center</b></summary>
+
+**Question:** Assign R or S to this chiral carbon:
+<pre>
+     4
+    H | 1-C-2
+      | 3
+</pre>
+Where: 1=Cl, 2=CH₃, 3=OH, 4=H
+
+**Solution:**
+1. Assign atomic numbers: Cl (17) > OH (8) > CH₃ (6) > H (1)
+   - Priority 1 = Cl
+   - Priority 2 = OH
+   - Priority 3 = CH₃
+   - Priority 4 = H
+
+2. Orient H (priority 4) away from viewer ✓ (already shown)
+
+3. Trace 1→2→3:
+   - 1 (Cl) → 2 (OH) → 3 (CH₃)
+   - This traces **counterclockwise** = **S-configuration**
+
+**MCAT Strategy:** Draw/mentally rotate to get H in back. Then trace 1→2→3 path. Clockwise=R, counterclockwise=S. Practice this 10× before test day.
+</details>
+
+<details>
+<summary><b>Example 2: Count stereoisomers using the 2^n rule</b></summary>
+
+**Question:** How many stereoisomers exist for 2,3,4-trihydroxybutanal?
+<pre>
+CHO
+|
+CHOH  ← chiral center 1
+|
+CHOH  ← chiral center 2
+|
+CH₂OH ← NOT chiral (two H atoms)
+</pre>
+
+**Solution:**
+1. Identify chiral centers: C2 and C3 have 4 different groups each → 2 chiral centers
+2. Maximum stereoisomers = $2^n = 2^2 = 4$
+3. These are: 2R,3R / 2R,3S / 2S,3R / 2S,3S
+
+**MCAT Strategy:** $2^n$ rule doesn't account for meso compounds (which reduce the number). For this molecule, check if any stereoisomer has an internal plane of symmetry. (It doesn't, so answer = 4.)
+</details>
+
+<details>
+<summary><b>Example 3: Distinguish stereoisomer relationships</b></summary>
+
+**Question:** Molecules A and B both have formula C₄H₈Cl₂. A has both Cl atoms on C1 (geminal), and B has Cl atoms on C1 and C2. What is their relationship?
+
+**Solution:**
+1. Connectivity differs: A = 1,1-dichlorobutane; B = 1,2-dichlorobutane
+2. Different connectivity means **constitutional isomers** (not stereoisomers)
+3. They are NOT related by stereochemistry alone
+
+**MCAT Strategy:** If the atoms are in different positions (different connectivity), don't even look at stereochemistry—they're constitutional isomers.
+
+**If they had same connectivity, different 3D arrangement?** Then determine stereoisomer relationship: enantiomers (mirror images) or diastereomers (not mirror images).
+</details>
+
+<details>
+<summary><b>Example 4: Identify a meso compound</b></summary>
+
+**Question:** Is this molecule chiral?
+<pre>
+       H
+      |
+ Br-C-H
+     |
+ CH₃-C-CH₃
+      |
+      Br
+</pre>
+
+(Assuming this is drawn with internal plane symmetry)
+
+**Solution:**
+1. It has 2 chiral centers (both carbons have 4 different groups)
+2. BUT if you draw it in 3D, the molecule has an **internal plane of symmetry**
+3. The left half is the mirror image of the right half
+4. Result: **Chiral centers exist, but molecule is achiral overall (meso compound)**
+5. The molecule does NOT rotate plane-polarized light
+
+**MCAT Strategy:** Meso compounds are rare on the MCAT, but they're a "gotcha." Always ask: "Does this have a plane of symmetry?" If yes, it's achiral despite chiral centers.
+</details>`
     }
   ]
 };

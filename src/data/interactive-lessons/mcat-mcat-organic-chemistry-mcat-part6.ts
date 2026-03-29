@@ -84,6 +84,68 @@ A proton with $n$ equivalent neighboring protons splits into $n + 1$ peaks.
 - n+1 rule: number of peaks = neighbors + 1
 - Mass spec: molecular ion peak (M$^+$) gives molecular weight
 - Use all clues together: IR functional groups + NMR environment + mass constraints.`
+    },
+    {
+      id: 'oc6-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Spectroscopy (NMR, IR, Mass Spec)
+
+  <details>
+  <summary><b>Example 1: Identify a carboxylic acid from IR</b></summary>
+
+  **Question:** A spectrum shows a strong peak near 1715 cm$^{-1}$ and a very broad band from 2500 to 3300 cm$^{-1}$. Which functional group is most likely present?
+
+  **Solution:**
+  1. A strong 1715 cm$^{-1}$ signal suggests C=O.
+  2. A very broad 2500 to 3300 cm$^{-1}$ signal is characteristic of acidic O-H.
+  3. Together, these strongly indicate a **carboxylic acid**.
+
+  **MCAT tip:** Carbonyl plus very broad low O-H region is the classic COOH fingerprint.
+  </details>
+
+  <details>
+  <summary><b>Example 2: Solve a simple proton NMR pattern</b></summary>
+
+  **Question:** A molecule gives two signals: quartet integrating to 2H at 3.6 ppm, and triplet integrating to 3H at 1.2 ppm. What fragment is present?
+
+  **Solution:**
+  1. Quartet (2H) means that proton set sees 3 neighboring equivalent H.
+  2. Triplet (3H) means that proton set sees 2 neighboring equivalent H.
+  3. Combined pattern is the classic **ethyl group** CH$_3$-CH$_2$.
+  4. The 3.6 ppm shift for CH$_2$ suggests it is next to oxygen.
+
+  Likely fragment: **CH$_3$CH$_2$O-**.
+
+  **MCAT tip:** Triplet/quartet with 3H/2H integration is a fast ethyl identifier.
+  </details>
+
+  <details>
+  <summary><b>Example 3: Use formula and NMR to identify tert-butanol</b></summary>
+
+  **Question:** Formula C$_4$H$_{10}$O. NMR shows a 9H singlet near 1.2 ppm and a broad 1H signal that disappears with D$_2$O. Identify the compound.
+
+  **Solution:**
+  1. 9H singlet indicates three equivalent methyl groups attached to one carbon.
+  2. D$_2$O-exchangeable 1H indicates an O-H proton.
+  3. Structure that matches is (CH$_3$)$_3$C-OH.
+
+  Compound: **tert-butanol (2-methyl-2-propanol)**.
+
+  **MCAT tip:** D$_2$O disappearance confirms exchangeable protons like O-H or N-H.
+  </details>
+
+  <details>
+  <summary><b>Example 4: Interpret a key mass-spec fragment</b></summary>
+
+  **Question:** A spectrum has M$^+$ at m/z 92 and a strong fragment at m/z 91. What structural motif is likely present?
+
+  **Solution:**
+  1. m/z 91 is the tropylium/benzyl cation signal.
+  2. This peak strongly suggests a **benzyl-containing structure**.
+  3. A common case is toluene-like or alkylbenzene compounds that form the stable C$_7$H$_7^+$ ion.
+
+  **MCAT tip:** m/z 91 is one of the highest-yield aromatic fragmentation clues.
+  </details>`
     }
   ]
 };

@@ -74,6 +74,56 @@ Must have: planar ring, conjugated $\\pi$ system, $4n + 2$ $\\pi$ electrons ($n 
 - Activators → ortho/para; Deactivators → meta (except halogens: deactivating but ortho/para)
 - Know lab separation techniques — the MCAT loves "which technique would you use to..." questions
 - Treat substitution patterns as resonance/inductive effects, not memorization alone.`
+    },
+    {
+      id: 'oc5-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Aromatic Chemistry & Lab Techniques
+
+<details>
+<summary><b>Example 1: Predict EAS products with a halogen substituent</b></summary>
+
+**Question:** Chlorobenzene is nitrated with HNO$_3$/H$_2$SO$_4$. Which major products form?
+
+**Solution:**
+1. Chlorine is deactivating by induction but ortho/para directing by resonance.
+2. Nitration therefore occurs mainly at ortho and para positions.
+3. Sterics favor para over ortho.
+
+Major products: **o-nitrochlorobenzene and p-nitrochlorobenzene** (para usually higher).
+
+**MCAT tip:** Halogens are the classic exception: deactivating yet ortho/para directing.
+</details>
+
+<details>
+<summary><b>Example 2: Choose a practical separation method</b></summary>
+
+**Question:** A mixture contains benzoic acid, anisole, and toluene. Best method to isolate benzoic acid?
+
+**Solution:**
+1. Benzoic acid is acidic and can be converted to water-soluble benzoate.
+2. Add NaHCO$_3$ or NaOH to extract benzoic acid into the aqueous layer.
+3. Separate layers, then acidify aqueous phase to precipitate benzoic acid.
+
+Best method: **acid-base extraction**.
+
+**MCAT tip:** If one component is acidic or basic, extraction is often superior to distillation/TLC for bulk separation.
+</details>
+
+<details>
+<summary><b>Example 3: Determine aromaticity correctly</b></summary>
+
+**Question:** Is cycloheptatriene aromatic?
+
+**Solution:**
+1. Aromaticity needs planarity, full conjugation, and $4n+2$ pi electrons.
+2. Neutral cycloheptatriene contains an sp$^3$ carbon, so conjugation is interrupted.
+3. Therefore it is **nonaromatic**.
+
+Related high-yield contrast: the tropylium cation (C$_7$H$_7^+$) is aromatic with 6 pi electrons.
+
+**MCAT tip:** Huckel count alone is not enough; check continuous p-orbital overlap.
+</details>`
     }
   ]
 };

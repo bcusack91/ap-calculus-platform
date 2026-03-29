@@ -80,6 +80,63 @@ Directionality is crucial: polymerases synthesize nucleic acid in the 5' to 3' d
 - DNA polymerase: $5' \\to 3'$ synthesis, needs primer, has proofreading
 - RNA polymerase: no primer needed, reads template $3' \\to 5'$
 - Chargaff: A=T, G=C in double-stranded DNA`
+    },
+    {
+      id: 'bc6-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Nucleic Acids & Molecular Biology
+
+<details>
+<summary><b>Example 1: Apply Chargaff's rules quickly</b></summary>
+
+**Question:** A double-stranded DNA sample has 18% guanine. What are the percentages of all four bases?
+
+**Solution:**
+1. In dsDNA, G = C and A = T.
+2. If G is 18%, then C is 18%.
+3. G + C is 36%, so A + T is 64%.
+4. Therefore A is 32% and T is 32%.
+
+Final composition: **A 32%, T 32%, G 18%, C 18%**.
+
+**MCAT tip:** Solve these in two moves: pair equalities first, then total to 100%.
+</details>
+
+<details>
+<summary><b>Example 2: Determine complement and strand direction</b></summary>
+
+**Question:** If the template DNA strand is 3'-TAC GGA TTT-5', what mRNA sequence is transcribed?
+
+**Solution:**
+1. RNA polymerase reads template 3' to 5'.
+2. mRNA is synthesized 5' to 3'.
+3. Apply base pairing with U instead of T in RNA:
+   - T to A
+   - A to U
+   - C to G
+   - G to C
+4. Result: **5'-AUG CCU AAA-3'**.
+
+**MCAT tip:** Always write orientation marks first to avoid reversing the final answer.
+</details>
+
+<details>
+<summary><b>Example 3: Compare melting temperatures from GC content</b></summary>
+
+**Question:** Which fragment has higher melting temperature, and why?
+
+Fragment A: 5'-GCGCGCAAAT-3'
+Fragment B: 5'-ATATATATGC-3'
+
+**Solution:**
+1. Fragment A has higher GC fraction.
+2. GC pairs have three H-bonds and stronger stacking interactions than AT-rich regions.
+3. More thermal energy is needed to separate the duplex.
+
+So **Fragment A has higher $T_m$**.
+
+**MCAT tip:** GC content is a fast proxy for duplex stability in PCR and denaturation questions.
+</details>`
     }
   ]
 };

@@ -69,6 +69,59 @@ Integrated MCAT passages often ask you to infer dominant pathways from hormone s
       content: `### Biochemistry Foundations — Complete! ✅
 
 Key themes: Fed state = insulin = anabolism. Fasting = glucagon = catabolism. Know how pathways are coordinated and regulated — the MCAT loves integrative metabolic questions.`
+    },
+    {
+      id: 'bc7-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Metabolic Integration
+
+<details>
+<summary><b>Example 1: Predict pathway dominance after an overnight fast</b></summary>
+
+**Question:** A healthy person has fasted for 14 hours. Which liver pathways are upregulated?
+
+**Solution:**
+1. Hormone state shifts to low insulin and higher glucagon.
+2. Glycogenolysis is active early in fasting.
+3. Gluconeogenesis rises as fasting continues.
+4. Lipolysis in adipose tissue increases fatty acid delivery to liver.
+5. Hepatic beta-oxidation rises to provide ATP for gluconeogenesis.
+
+**MCAT tip:** Pair fasting with glucagon, glucose output, and increased fatty acid use.
+</details>
+
+<details>
+<summary><b>Example 2: Connect malonyl-CoA to fat oxidation</b></summary>
+
+**Question:** Why is beta-oxidation low in the fed state even when fatty acids are available?
+
+**Solution:**
+1. Insulin promotes acetyl-CoA carboxylase activity.
+2. Malonyl-CoA concentration rises.
+3. Malonyl-CoA inhibits CPT-I.
+4. Long-chain fatty acids cannot enter mitochondria efficiently.
+5. Fat oxidation drops while synthesis/storage pathways dominate.
+
+**MCAT tip:** High malonyl-CoA is a direct signal that mitochondrial fatty acid entry is blocked.
+</details>
+
+<details>
+<summary><b>Example 3: Explain diabetic ketoacidosis mechanism</b></summary>
+
+**Question:** In untreated Type 1 diabetes, why do ketone bodies rise despite hyperglycemia?
+
+**Solution:**
+1. Absolute insulin deficiency makes cells unable to use glucose effectively.
+2. Counterregulatory hormones rise, especially glucagon.
+3. Adipose lipolysis releases large amounts of fatty acids.
+4. Liver increases beta-oxidation, generating excess acetyl-CoA.
+5. Oxaloacetate is diverted to gluconeogenesis, limiting TCA flux.
+6. Excess acetyl-CoA is shunted to ketogenesis.
+
+Result: elevated acetoacetate and beta-hydroxybutyrate, causing metabolic acidosis.
+
+**MCAT tip:** DKA is a hormone-signaling problem first, glucose concentration problem second.
+</details>`
     }
   ]
 };

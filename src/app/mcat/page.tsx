@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import MCATRecommendedModules from '@/components/MCATRecommendedModules'
+import MCATOrganSystemChart from '@/components/MCATOrganSystemChart'
 
 export const metadata: Metadata = {
   title: 'MCAT Prep | Free MCAT Practice & Review',
@@ -273,6 +274,8 @@ export default function MCATLandingPage() {
           </div>
         </div>
       </section>
+
+      <MCATOrganSystemChart />
 
       {/* MCAT Info */}
       <section className="container pb-16">

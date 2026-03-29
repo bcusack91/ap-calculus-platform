@@ -3306,6 +3306,22 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-test-day-strategy-mcat-part7').then(m => m.mcatTestDayPart7Data) },
     ],
   },
+  'mcat-biostatistics-mcat': {
+    parts: [
+      { title: 'Descriptive Statistics & Data Distributions', loader: () => import('./mcat-mcat-biostatistics-mcat-part1').then(m => m.mcatBiostatisticsPart1Data) },
+      { title: 'Hypothesis Testing & p-values', loader: () => import('./mcat-mcat-biostatistics-mcat-part2').then(m => m.mcatBiostatisticsPart2Data) },
+      { title: 'Confidence Intervals & Effect Size', loader: () => import('./mcat-mcat-biostatistics-mcat-part3').then(m => m.mcatBiostatisticsPart3Data) },
+      { title: 'Correlation, Causation & Study Design', loader: () => import('./mcat-mcat-biostatistics-mcat-part4').then(m => m.mcatBiostatisticsPart4Data) },
+    ],
+  },
+  'mcat-research-methods-mcat': {
+    parts: [
+      { title: 'Variables, Sampling & Study Types', loader: () => import('./mcat-mcat-research-methods-mcat-part1').then(m => m.mcatResearchMethodsPart1Data) },
+      { title: 'Validity & Threats to Validity', loader: () => import('./mcat-mcat-research-methods-mcat-part2').then(m => m.mcatResearchMethodsPart2Data) },
+      { title: 'Blinding & Experimental Controls', loader: () => import('./mcat-mcat-research-methods-mcat-part3').then(m => m.mcatResearchMethodsPart3Data) },
+      { title: 'Sample Size, Ethics & Meta-Analysis', loader: () => import('./mcat-mcat-research-methods-mcat-part4').then(m => m.mcatResearchMethodsPart4Data) },
+    ],
+  },
   // ── Grade 6: Negative Numbers ──────────────────────────────────────────
   'negative-numbers-grade6': {
     completionDestination: 'competitive',
