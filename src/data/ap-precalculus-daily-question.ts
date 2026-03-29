@@ -1,29 +1,23 @@
 /**
- * Grade 8 Math - Question of the Day
+ * AP Precalculus - Question of the Day
  *
- * Uses Grade 8 exit quiz topics for broader, rotating daily practice.
+ * Uses AP Precalculus-tagged exit quiz slugs so AP Precalculus can evolve
+ * independently from the general Precalculus daily stream.
  */
 
 import { generateExitQuiz } from '@/data/exit-quizzes'
 
 const TOPIC_SLUGS = [
-  'rational-irrational-numbers',
-  'approximating-irrationals',
-  'comparing-real-numbers',
-  'integer-exponents',
-  'solving-linear-equations',
-  'defining-functions',
-  'linear-functions-grade8',
-  'comparing-functions',
-  'pythagorean-theorem-grade8',
-  'volume-cylinders-cones-spheres',
-  'transformations-grade8',
-  'scatter-plots',
-  'two-way-tables',
-  'line-of-best-fit',
-  'unit-rates',
-  'proportional-relationships-grade8',
-  'slope-as-rate-of-change',
+  'ap-precalculus-functions',
+  'ap-precalculus-polynomials',
+  'ap-precalculus-rational-functions',
+  'ap-precalculus-exponentials-logs',
+  'ap-precalculus-trig-unit-circle',
+  'ap-precalculus-trig-identities',
+  'ap-precalculus-inverse-trig',
+  'ap-precalculus-law-of-sines-cosines',
+  'ap-precalculus-sequences-series',
+  'ap-precalculus-polar-vectors',
 ]
 
 function dayOfYear(): number {
@@ -33,7 +27,7 @@ function dayOfYear(): number {
   return Math.floor(diff / (1000 * 60 * 60 * 24))
 }
 
-export interface Grade8MathDailyQuestion {
+export interface APPrecalcDailyQuestion {
   topicSlug: string
   question: {
     question: string
@@ -45,7 +39,7 @@ export interface Grade8MathDailyQuestion {
   dayNumber: number
 }
 
-export async function getDailyQuestions(): Promise<Grade8MathDailyQuestion[]> {
+export async function getDailyQuestions(): Promise<APPrecalcDailyQuestion[]> {
   const day = dayOfYear()
   const slug = TOPIC_SLUGS[day % TOPIC_SLUGS.length]
   const pool = await generateExitQuiz(slug, 5)

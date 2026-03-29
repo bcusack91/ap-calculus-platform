@@ -121,6 +121,30 @@ const quizLoaders: Record<string, QuizLoader> = {
   'mcat-test-day-strategy-mcat': () => import('./mcat-psychology-sociology'), // alias
 
   // ═══════════════════════════════════════════════════
+  // AP Biology Exit Quizzes
+  // ═══════════════════════════════════════════════════
+  'ap-biology': () => import('./ap-biology'),
+  'ap-bio-chemistry-of-life': () => import('./ap-biology'),
+  'ap-bio-cell-structure-function': () => import('./ap-biology'),
+  'ap-bio-membrane-transport': () => import('./ap-biology'),
+  'ap-bio-cell-cycle-mitosis': () => import('./ap-biology'),
+  'ap-bio-cell-communication': () => import('./ap-biology'),
+  'ap-bio-cellular-energetics': () => import('./ap-biology'),
+  'ap-bio-photosynthesis': () => import('./ap-biology'),
+  'ap-bio-meiosis': () => import('./ap-biology'),
+  'ap-bio-mendelian-genetics': () => import('./ap-biology'),
+  'ap-bio-molecular-genetics': () => import('./ap-biology'),
+  'ap-bio-gene-regulation': () => import('./ap-biology'),
+  'ap-bio-natural-selection': () => import('./ap-biology'),
+  'ap-bio-evolution-evidence': () => import('./ap-biology'),
+  'ap-bio-ecology-energy-flow': () => import('./ap-biology'),
+  'ap-bio-population-ecology': () => import('./ap-biology'),
+  'ap-bio-ecology-interactions': () => import('./ap-biology'),
+  'ap-bio-immune-system': () => import('./ap-biology'),
+  'ap-bio-biotechnology': () => import('./ap-biology'),
+  'ap-bio-experimental-design': () => import('./ap-biology'),
+
+  // ═══════════════════════════════════════════════════
   // AP Chemistry Exit Quizzes
   // ═══════════════════════════════════════════════════
   'ap-chemistry': () => import('./ap-chemistry'),
@@ -388,6 +412,18 @@ const quizLoaders: Record<string, QuizLoader> = {
   // ═══════════════════════════════════════════════════
   // Pre-Calculus Exit Quizzes
   // ═══════════════════════════════════════════════════
+  'ap-precalculus': () => import('./pre-calculus'),
+  'ap-precalculus-functions': () => import('./pre-calculus'),
+  'ap-precalculus-polynomials': () => import('./pre-calculus'),
+  'ap-precalculus-rational-functions': () => import('./pre-calculus'),
+  'ap-precalculus-exponentials-logs': () => import('./pre-calculus'),
+  'ap-precalculus-trig-unit-circle': () => import('./pre-calculus'),
+  'ap-precalculus-trig-identities': () => import('./pre-calculus'),
+  'ap-precalculus-inverse-trig': () => import('./pre-calculus'),
+  'ap-precalculus-law-of-sines-cosines': () => import('./pre-calculus'),
+  'ap-precalculus-sequences-series': () => import('./pre-calculus'),
+  'ap-precalculus-polar-vectors': () => import('./pre-calculus'),
+
   'pre-calculus': () => import('./pre-calculus'),
   'precalculus': () => import('./pre-calculus'),
   'function-analysis': () => import('./pre-calculus'),
