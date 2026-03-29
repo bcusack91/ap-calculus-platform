@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import {
   trackCustomEvent,
@@ -21,8 +21,8 @@ export default function OChemDailyQuestionPage() {
   const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState<number | null>(null)
   const [revealed, setRevealed] = useState(false)
-  const [ctaVariant, setCtaVariant] = useState<PostCompletionCtaVariant>('control')
-  const [ctaImpressionTracked, setCtaImpressionTracked] = useState(false)
+  const ctaVariant: PostCompletionCtaVariant = getOrAssignPostCompletionCtaVariant('organic-chemistry')
+  const ctaImpressionTrackedRef = useRef(false)
 
   useEffect(() => {
     fetch('/api/ochem-daily-question')
@@ -40,19 +40,15 @@ export default function OChemDailyQuestionPage() {
   }, [loading, q])
 
   useEffect(() => {
-    setCtaVariant(getOrAssignPostCompletionCtaVariant('organic-chemistry'))
-  }, [])
-
-  useEffect(() => {
-    if (!revealed || !q || ctaImpressionTracked) return
+    if (!revealed || !q || ctaImpressionTrackedRef.current) return
     trackCustomEvent('daily_post_completion_cta_impression', {
       page_template: 'daily_question_page',
       course_slug: 'organic-chemistry',
       topic_slug: q.topicSlug,
       cta_variant: ctaVariant,
     })
-    setCtaImpressionTracked(true)
-  }, [revealed, q, ctaImpressionTracked, ctaVariant])
+    ctaImpressionTrackedRef.current = true
+  }, [revealed, q, ctaVariant])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">

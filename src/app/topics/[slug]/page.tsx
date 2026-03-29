@@ -26,19 +26,6 @@ import { getTopicAdVariant } from '@/lib/experiments'
 // ISR: revalidate content every hour (content rarely changes)
 export const revalidate = 3600
 
-// Pre-render all topic pages at build time for faster TTFB and better crawlability
-export async function generateStaticParams() {
-  try {
-    const topics = await prisma.topic.findMany({
-      select: { slug: true },
-    })
-    return topics.map((topic) => ({ slug: topic.slug }))
-  } catch (error) {
-    console.warn('Skipping static topic params generation because database is unavailable at build time.', error)
-    return []
-  }
-}
-
 interface TopicPageProps {
   params: Promise<{
     slug: string
