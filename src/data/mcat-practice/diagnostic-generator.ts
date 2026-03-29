@@ -331,12 +331,6 @@ function selectPassageQuestions(allQuestions: MCATDiagnosticQuestion[], question
   return selected
 }
 
-function buildFigurePrompt(context: FigureContext, yValues: number[]): string {
-  const xRow = `${context.xLabel} (${context.xUnit}): ${FIGURE_X_VALUES.join(', ')}`
-  const yRow = `${context.yLabel} (${context.yUnit}): ${yValues.join(', ')}`
-  return `Figure 1 (${context.context})\n${xRow}\n${yRow}`
-}
-
 function buildPassageVisual(context: FigureContext, yValues: number[]) {
   return {
     dataTable: {
