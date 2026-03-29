@@ -1063,10 +1063,13 @@ function dedupeQuestions(questions: MCATDiagnosticQuestion[]): MCATDiagnosticQue
 export async function generateMCATDiagnosticTest(
   options: MCATDiagnosticGenerationOptions = {},
 ): Promise<MCATDiagnosticTestData> {
+  const totalQuestionTarget = DIAGNOSTIC_DOMAINS.reduce((sum, domain) => sum + domain.questionCount, 0)
+  const maxFigureQuestions = Math.max(1, Math.round(totalQuestionTarget * 0.15))
   const excludeQuestionIds = options.excludeQuestionIds ?? new Set<string>()
   const supplementalBank = buildSupplementalDomainBank()
   const passageBank = buildPassageQuestionBank()
   const questions: MCATDiagnosticQuestion[] = []
+  const domainPools = new Map<string, MCATDiagnosticQuestion[]>()
 
   for (const domain of DIAGNOSTIC_DOMAINS) {
     const questionsPerSlug = Math.max(Math.ceil((domain.questionCount + 8) / domain.slugs.length), 16)
@@ -1108,10 +1111,16 @@ export async function generateMCATDiagnosticTest(
 
     const supplemental = supplementalBank[domain.id] ?? []
     const passageQuestions = passageBank[domain.id] ?? []
-    const merged = dedupeQuestions([...domainQuestions, ...supplemental, ...passageQuestions])
+    const merged = dedupeQuestions([...domainQuestions, ...supplemental, ...passageQuestions]).map((question) => ({
+      ...question,
+      difficulty: inferQuestionDifficulty(question),
+      family: inferQuestionFamily(question),
+      promptType: inferPromptType(question),
+    }))
 
     const unseen = merged.filter((q) => !excludeQuestionIds.has(q.id))
     const poolToSample = unseen.length >= domain.questionCount ? unseen : merged
+    domainPools.set(domain.id, poolToSample)
 
     const selectedPassageQuestions = selectPassageQuestions(poolToSample, Math.min(domain.minPassageQuestions ?? 0, domain.questionCount))
     const selectedPassageIds = new Set(selectedPassageQuestions.map((q) => q.id))
@@ -1129,10 +1138,46 @@ export async function generateMCATDiagnosticTest(
     questions.push(...domainQuestions)
   }
 
+  const selectedQuestions = [...questions]
+  const selectedByDomain = new Map<string, Set<string>>()
+  for (const question of selectedQuestions) {
+    if (!selectedByDomain.has(question.domain)) selectedByDomain.set(question.domain, new Set())
+    selectedByDomain.get(question.domain)?.add(question.id)
+  }
+
+  const figureIndexes = selectedQuestions
+    .map((question, index) => ({ question, index }))
+    .filter(({ question }) => (question.promptType ?? inferPromptType(question)) === 'figure')
+
+  let excessFigureCount = figureIndexes.length - maxFigureQuestions
+  if (excessFigureCount > 0) {
+    for (const { question, index } of shuffle(figureIndexes)) {
+      if (excessFigureCount <= 0) break
+
+      const domainPool = domainPools.get(question.domain) ?? []
+      const usedInDomain = selectedByDomain.get(question.domain) ?? new Set<string>()
+      const nonFigureCandidates = domainPool.filter(
+        (candidate) =>
+          (candidate.promptType ?? inferPromptType(candidate)) !== 'figure' &&
+          !usedInDomain.has(candidate.id),
+      )
+
+      if (nonFigureCandidates.length === 0) continue
+
+      const replacement = pickRandom(nonFigureCandidates, 1)[0]
+      if (!replacement) continue
+
+      usedInDomain.delete(question.id)
+      usedInDomain.add(replacement.id)
+      selectedQuestions[index] = replacement
+      excessFigureCount -= 1
+    }
+  }
+
   return {
-    questions: shuffle(questions),
+    questions: shuffle(selectedQuestions),
     domains: DIAGNOSTIC_DOMAINS,
-    totalQuestions: questions.length,
+    totalQuestions: selectedQuestions.length,
     timeLimitMinutes: 55,
   }
 }
