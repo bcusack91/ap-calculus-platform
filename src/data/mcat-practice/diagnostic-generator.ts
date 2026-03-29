@@ -425,6 +425,7 @@ function buildFigureSupplementQuestions(
         const percentIncrease = Math.round((changeFromFirst / yValues[0]) * 100)
         const ratio4to2 = Number((yValues[3] / yValues[1]).toFixed(2))
         const pattern = classifyMarginalPattern(yValues)
+        const reasoningVariant = (ctxIdx + slope + intercept) % 3
 
         const q1Choices = domainId === 'psych-soc'
           ? buildChoiceSet(
@@ -469,14 +470,32 @@ function buildFigureSupplementQuestions(
         })
 
         const q2Choices = domainId === 'psych-soc'
-          ? buildChoiceSet(
-              `The association remains similar after stratifying by a plausible confound and adjusting for baseline group differences.`,
-              [
-                `The largest subgroup in condition 4 also has the highest ${context.yLabel.toLowerCase()} without adjustment for baseline differences.`,
-                `A single additional site reports a similar direction of association, but with missing data on key demographics.`,
-                `Participants in condition 4 report greater motivation after viewing their own performance outcomes.`,
-              ],
-            )
+          ? reasoningVariant === 0
+            ? buildChoiceSet(
+                `The association remains similar after stratifying by a plausible confound and adjusting for baseline group differences.`,
+                [
+                  `The largest subgroup in condition 4 also has the highest ${context.yLabel.toLowerCase()} without adjustment for baseline differences.`,
+                  `A single additional site reports a similar direction of association, but with missing data on key demographics.`,
+                  `Participants in condition 4 report greater motivation after viewing their own performance outcomes.`,
+                ],
+              )
+            : reasoningVariant === 1
+            ? buildChoiceSet(
+                `Prospective measurements show changes in ${context.xLabel.toLowerCase()} precede later shifts in ${context.yLabel.toLowerCase()} after controlling baseline ${context.yLabel.toLowerCase()}.`,
+                [
+                  `A larger cross-sectional sample shows the same trend at one time point.`,
+                  `Condition 4 has the highest mean ${context.yLabel.toLowerCase()} in a post-hoc subgroup analysis.`,
+                  `Participants self-report that ${context.yLabel.toLowerCase()} feels related to ${context.xLabel.toLowerCase()}.`,
+                ],
+              )
+            : buildChoiceSet(
+                `The effect size remains stable after inverse-probability weighting that corrects for differential dropout by baseline characteristics.`,
+                [
+                  `Participants with complete follow-up show a larger association than the full recruited sample.`,
+                  `Only participants above the median ${context.xLabel.toLowerCase()} are retained for final analysis.`,
+                  `A single-site replication keeps similar means but does not report attrition patterns.`,
+                ],
+              )
           : buildChoiceSet(
               `${percentIncrease}%`,
               [
@@ -490,13 +509,21 @@ function buildFigureSupplementQuestions(
           id: `${domainId}-fig-${ctxIdx}-${slope}-${intercept}-b`,
           question:
             domainId === 'psych-soc'
-              ? `Which additional result would most strengthen the claim that the observed association is not primarily driven by confounding?`
+              ? reasoningVariant === 0
+                ? `Which additional result would most strengthen the claim that the observed association is not primarily driven by confounding?`
+                : reasoningVariant === 1
+                ? `Which additional result would most strengthen a directional interpretation from ${context.xLabel.toLowerCase()} to ${context.yLabel.toLowerCase()}?`
+                : `Which additional result would most reduce concern that selection bias is driving the observed association?`
               : `Relative to condition 1, what is the approximate percent increase in ${context.yLabel.toLowerCase()} at condition 4?`,
           options: q2Choices.options,
           correctAnswer: q2Choices.correctAnswer,
           explanation:
             domainId === 'psych-soc'
-              ? `The strongest support comes from persistence of the association after explicit control for plausible confounders and baseline differences, which improves causal interpretability without overclaiming.`
+              ? reasoningVariant === 0
+                ? `The strongest support comes from persistence of the association after explicit control for plausible confounders and baseline differences, which improves causal interpretability without overclaiming.`
+                : reasoningVariant === 1
+                ? `Directional inference is stronger when temporal precedence is demonstrated and baseline outcome differences are controlled, reducing reverse-causation ambiguity.`
+                : `Selection-bias concerns are best addressed when analysis corrects differential dropout and the effect remains stable after that correction.`
               : `Percent increase = (condition4 - condition1) / condition1 x 100 = (${yValues[3]} - ${yValues[0]}) / ${yValues[0]} x 100 ≈ ${percentIncrease}%.`,
           domain: domainId,
           sourceSlug,
@@ -565,6 +592,31 @@ function buildFigureSupplementQuestions(
           promptType: 'figure',
           visual,
         })
+
+        if (domainId === 'psych-soc') {
+          const q4Choices = buildChoiceSet(
+            `Run a longitudinal follow-up that measures baseline ${context.yLabel.toLowerCase()}, then prospectively measures later ${context.yLabel.toLowerCase()} after changes in ${context.xLabel.toLowerCase()}.`,
+            [
+              `Increase sample size at one cross-sectional time point and compare updated means only.`,
+              `Remove intermediate conditions so only condition 1 and 4 remain in the final plot.`,
+              `Retain only participants with the most extreme ${context.xLabel.toLowerCase()} values to increase contrast.`,
+            ],
+          )
+
+          questions.push({
+            id: `${domainId}-fig-${ctxIdx}-${slope}-${intercept}-d`,
+            question: `Which follow-up design most directly tests whether reverse causation could explain this association?`,
+            options: q4Choices.options,
+            correctAnswer: q4Choices.correctAnswer,
+            explanation: `Reverse-causation concerns are best tested with temporal ordering: establish baseline outcome levels, then evaluate whether exposure changes precede later outcome changes.`,
+            domain: domainId,
+            sourceSlug,
+            difficulty: 'hard',
+            family: 'figure-analysis',
+            promptType: 'figure',
+            visual,
+          })
+        }
       })
     })
   })
