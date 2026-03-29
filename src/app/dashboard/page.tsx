@@ -555,7 +555,7 @@ export default function DashboardPage() {
                       <h3 className="font-bold text-gray-900 dark:text-white">∫ AP Calculus AB</h3>
                       <div className="flex items-center gap-3">
                         <span className="text-xs text-gray-500 dark:text-gray-400">Score: {calcABDiagnostic.estimatedAPScore}/5 ({calcABDiagnostic.percentage}%)</span>
-                        <Link href="/calcab-diagnostic" className="text-xs text-purple-600 hover:underline dark:text-purple-400">Retake →</Link>
+                        <Link href="/ap-calcab-diagnostic" className="text-xs text-purple-600 hover:underline dark:text-purple-400">Retake →</Link>
                       </div>
                     </div>
                     <div className="space-y-1.5">
@@ -578,7 +578,7 @@ export default function DashboardPage() {
                       <h3 className="font-bold text-gray-900 dark:text-white">∬ AP Calculus BC</h3>
                       <div className="flex items-center gap-3">
                         <span className="text-xs text-gray-500 dark:text-gray-400">BC: {calcBCDiagnostic.estimatedAPScore}/5, AB: {calcBCDiagnostic.abSubscore}/5</span>
-                        <Link href="/calcbc-diagnostic" className="text-xs text-violet-600 hover:underline dark:text-violet-400">Retake →</Link>
+                        <Link href="/ap-calcbc-diagnostic" className="text-xs text-violet-600 hover:underline dark:text-violet-400">Retake →</Link>
                       </div>
                     </div>
                     <div className="space-y-1.5">

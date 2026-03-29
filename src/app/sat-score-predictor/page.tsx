@@ -64,7 +64,7 @@ export default function ScorePredictorPage() {
 
   useEffect(() => {
     if (status !== 'authenticated') return
-    fetch('/api/sat-practice/score-predictor')
+    fetch('/api/sat-score-predictor')
       .then(r => {
         if (!r.ok) throw new Error('Failed')
         return r.json()

@@ -29,7 +29,7 @@ const features = [
   {
     title: 'Diagnostic Test',
     description: 'Quick assessment across all Calc BC topics including BC-only material with AP score prediction.',
-    href: '/calcbc-diagnostic',
+    href: '/ap-calcbc-diagnostic',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
@@ -120,7 +120,7 @@ export default function APCalculusBCHub() {
             140+ interactive lessons covering all AB content plus series, parametric equations, polar coordinates, and advanced integration — everything you need to score a 5.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link href="/calcbc-diagnostic" className="rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-3.5 text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
+            <Link href="/ap-calcbc-diagnostic" className="rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-3.5 text-lg font-semibold text-white shadow-lg transition hover:shadow-xl">Start with Diagnostic</Link>
             <Link href="/courses/ap-calculus-bc" className="rounded-xl border-2 border-emerald-300 px-8 py-3.5 text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-600 dark:text-emerald-400 dark:hover:bg-emerald-900/20">Browse Lessons</Link>
           </div>
         </div>
@@ -188,7 +188,7 @@ export default function APCalculusBCHub() {
             </div>
           </div>
           <div className="mt-6 text-center">
-            <Link href="/calcbc-diagnostic" className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-3 font-semibold text-white shadow transition hover:shadow-lg">
+            <Link href="/ap-calcbc-diagnostic" className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-8 py-3 font-semibold text-white shadow transition hover:shadow-lg">
               Get Started Free
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
             </Link>
