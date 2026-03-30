@@ -96,6 +96,9 @@ type PassageBlockContext = {
   dataContext?: FigureContext
   domain: string
   sourceSlug: string
+  positiveHypothesis?: string
+  negativeHypothesis?: string
+  mechanismVariable?: string
 }
 
 export interface MCATDomainResult {
@@ -401,6 +404,13 @@ function classifyMarginalPattern(yValues: number[]): 'linear' | 'diminishing' | 
   return 'linear'
 }
 
+function inferFeedbackPattern(yValues: number[]): 'positive' | 'negative' | 'neutral' {
+  const pattern = classifyMarginalPattern(yValues)
+  if (pattern === 'accelerating') return 'positive'
+  if (pattern === 'diminishing') return 'negative'
+  return 'neutral'
+}
+
 function buildFigureSupplementQuestions(
   domainId: string,
   sourceSlug: string,
@@ -521,7 +531,7 @@ function buildFigureSupplementQuestions(
               : `Percent increase = (condition4 - condition1) / condition1 x 100 = (${yValues[3]} - ${yValues[0]}) / ${yValues[0]} x 100 ≈ ${percentIncrease}%.`,
           domain: domainId,
           sourceSlug,
-          difficulty: 'medium',
+          difficulty: 'easy',
           family: 'figure-analysis',
           promptType: 'figure',
           visual,
@@ -567,6 +577,21 @@ function buildFigureSupplementQuestions(
 
         const q3Choices = buildChoiceSet(hardClaim, hardDistractors)
 
+        const feedbackPattern = inferFeedbackPattern(yValues)
+        const feedbackPrompt = `Which feedback interpretation best matches how ${context.yLabel.toLowerCase()} changes as ${context.xLabel.toLowerCase()} increases?`
+        const feedbackChoices = buildChoiceSet(
+          feedbackPattern === 'positive'
+            ? `A positive-feedback-like pattern, because later condition-to-condition gains are larger than earlier gains.`
+            : feedbackPattern === 'negative'
+            ? `A negative-feedback-like pattern, because gains dampen across later conditions.`
+            : `No strong feedback signature is evident; changes are approximately linear across conditions.`,
+          [
+            `A positive-feedback-like pattern, because any increase across conditions proves runaway amplification.`,
+            `A negative-feedback-like pattern, because any increase must imply homeostatic suppression.`,
+            `No interpretation is possible from ordered-condition trends unless significance testing is shown.`,
+          ],
+        )
+
         questions.push({
           id: `${domainId}-fig-${ctxIdx}-${slope}-${intercept}-c`,
           question:
@@ -579,6 +604,25 @@ function buildFigureSupplementQuestions(
             domainId === 'psych-soc'
               ? `First-difference pattern supports the selected association trend, but the figure alone cannot rule out confounding, establish causal direction, or justify universal generalization.`
               : `Compare stepwise changes: (${yValues[1]}-${yValues[0]}), (${yValues[2]}-${yValues[1]}), (${yValues[3]}-${yValues[2]}). Their pattern supports the selected interpretation.`,
+          domain: domainId,
+          sourceSlug,
+          difficulty: 'hard',
+          family: 'figure-analysis',
+          promptType: 'figure',
+          visual,
+        })
+
+        questions.push({
+          id: `${domainId}-fig-${ctxIdx}-${slope}-${intercept}-fb`,
+          question: feedbackPrompt,
+          options: feedbackChoices.options,
+          correctAnswer: feedbackChoices.correctAnswer,
+          explanation:
+            feedbackPattern === 'positive'
+              ? `First differences increase across conditions, which is most consistent with a positive-feedback-like amplification pattern in this plotted range.`
+              : feedbackPattern === 'negative'
+              ? `First differences shrink across conditions, which is most consistent with a negative-feedback-like damping pattern in this plotted range.`
+              : `First differences are approximately constant, so the trend is linear and does not strongly favor positive or negative feedback.`,
           domain: domainId,
           sourceSlug,
           difficulty: 'hard',
@@ -796,16 +840,43 @@ function buildSciencePassageBlocks(contexts: PassageBlockContext[]): MCATDiagnos
         passage: basePassage,
       })
 
-      const q2 = buildChoiceSet(
-        trendClaim,
-        ['flat trend', 'negative trend', 'no interpretable trend'],
-      )
+      // q2 — Mechanism-integration question: link data trend to passage hypothesis
+      const dataPattern = classifyMarginalPattern(yValues)
+      const posHyp = context.positiveHypothesis ?? 'amplification dominates across conditions'
+      const negHyp = context.negativeHypothesis ?? 'a damping mechanism limits later gains'
+      const mechVar = context.mechanismVariable ?? 'the measured response'
+      const q2Stem = `Based on the data in Figure 1 and the competing hypotheses described in the passage, which conclusion about ${mechVar} is best supported?`
+      const q2Correct =
+        dataPattern === 'accelerating'
+          ? `The data support the hypothesis that ${posHyp}, because condition-to-condition gains increase across later conditions.`
+          : dataPattern === 'diminishing'
+          ? `The data support the hypothesis that ${negHyp}, because condition-to-condition gains decrease across later conditions.`
+          : `Neither hypothesis is strongly favored; the roughly constant condition-to-condition gains are consistent with a linear dose-response rather than a feedback mechanism.`
+      const q2Distractors =
+        dataPattern === 'accelerating'
+          ? [
+              `The data support the hypothesis that ${negHyp}, because ${mechVar} increases across all four conditions.`,
+              `The data are inconclusive because both hypotheses predict an increase and additional control experiments are required to distinguish them.`,
+              `Neither hypothesis applies because the data show a decrease in ${mechVar} between conditions 3 and 4.`,
+            ]
+          : dataPattern === 'diminishing'
+          ? [
+              `The data support the hypothesis that ${posHyp}, because ${mechVar} continues to increase at every condition.`,
+              `The data are inconclusive because the total change from condition 1 to 4 is too small to distinguish the hypotheses.`,
+              `Neither hypothesis applies because a damping mechanism would require ${mechVar} to decrease below baseline.`,
+            ]
+          : [
+              `The data definitively confirm that ${posHyp} because any monotonic increase proves amplification.`,
+              `The data definitively confirm that ${negHyp} because every condition shows a higher value than the previous one.`,
+              `The data are uninterpretable without significance testing and therefore no conclusion can be drawn about either hypothesis.`,
+            ]
+      const q2 = buildChoiceSet(q2Correct, q2Distractors)
       questions.push({
         id: `${passageId}-q2`,
-        question: 'Which mechanistic interpretation is best supported by the trend?',
+        question: q2Stem,
         options: q2.options,
         correctAnswer: q2.correctAnswer,
-        explanation: `First differences across conditions indicate ${trendClaim}, which is the strongest mechanism-level claim supported by these data alone.`,
+        explanation: `To distinguish the competing hypotheses, examine the first differences: (${yValues[1]}−${yValues[0]}), (${yValues[2]}−${yValues[1]}), (${yValues[3]}−${yValues[2]}). ${dataPattern === 'accelerating' ? 'These increase, supporting amplification.' : dataPattern === 'diminishing' ? 'These decrease, supporting a damping/negative-feedback mechanism.' : 'These are roughly constant, consistent with a linear response.'}`,
         domain: context.domain,
         sourceSlug: context.sourceSlug,
         difficulty: 'hard',
@@ -828,6 +899,40 @@ function buildSciencePassageBlocks(contexts: PassageBlockContext[]): MCATDiagnos
         options: q3.options,
         correctAnswer: q3.correctAnswer,
         explanation: 'The strongest causal upgrade is to reduce confounding and selection bias with matched controls and randomized assignment before repeating measurements.',
+        domain: context.domain,
+        sourceSlug: context.sourceSlug,
+        difficulty: 'hard',
+        family: 'passage-data-interpretation',
+        promptType: 'passage',
+        passage: basePassage,
+      })
+
+      const feedbackPattern = inferFeedbackPattern(yValues)
+      const expectedFeedback: 'positive' | 'negative' = (variant + index) % 2 === 0 ? 'negative' : 'positive'
+      const observedDescription =
+        feedbackPattern === 'positive'
+          ? 'later condition-to-condition gains are larger than early gains'
+          : feedbackPattern === 'negative'
+          ? 'later condition-to-condition gains are smaller than early gains'
+          : 'condition-to-condition gains are roughly constant'
+      const q4Correct =
+        feedbackPattern === 'neutral'
+          ? 'The trend is roughly linear, so the figure does not strongly distinguish positive from negative feedback in this range.'
+          : feedbackPattern === expectedFeedback
+          ? `The figure is consistent with the proposed ${expectedFeedback}-feedback model because ${observedDescription}.`
+          : `The figure challenges the proposed ${expectedFeedback}-feedback model and is more consistent with ${feedbackPattern} feedback because ${observedDescription}.`
+      const q4 = buildChoiceSet(q4Correct, [
+        `The figure proves a universal causal feedback law that must generalize to all populations and conditions.`,
+        `Any monotonic increase is definitive evidence for positive feedback regardless of changes in first differences.`,
+        `The data are uninterpretable unless the graph first decreases below baseline.`,
+      ])
+
+      questions.push({
+        id: `${passageId}-q4`,
+        question: `Passage claim: increasing ${context.dataContext?.xLabel ?? 'the input'} triggers a ${expectedFeedback} feedback process in ${context.dataContext?.yLabel ?? 'the measured response'}. Based on the figure trend, which evaluation is best supported?`,
+        options: q4.options,
+        correctAnswer: q4.correctAnswer,
+        explanation: `Feedback-model checks should compare first differences across ordered conditions. Here, ${observedDescription}, so the best-supported conclusion is the one that matches this pattern without overgeneralizing causality.`,
         domain: context.domain,
         sourceSlug: context.sourceSlug,
         difficulty: 'hard',
@@ -938,50 +1043,68 @@ function buildPassageQuestionBank(): Record<string, MCATDiagnosticQuestion[]> {
   return {
     physics: buildSciencePassageBlocks([
       {
-        title: 'Mechanical Loading Trial',
-        body: 'Researchers evaluate how a biological material responds to repeated loading. The passage states that the material behaves predictably over the tested range, allowing students to reason from proportional changes rather than rely on a calculator.',
-        dataContext: { context: 'mechanical loading outcomes', xLabel: 'Load step', yLabel: 'Displacement', xUnit: 'step', yUnit: 'mm' },
+        title: 'Viscoelastic Response in Connective Tissue',
+        body: 'Researchers investigated the mechanical behavior of porcine tendon specimens under cyclic loading at four increasing force magnitudes (conditions 1–4). Each specimen was subjected to 10 loading cycles at the given force, and the peak displacement at the 10th cycle was recorded. The investigators hypothesized two competing models: (1) a positive-feedback model in which collagen fiber recruitment at higher loads exposes additional fibers to strain, progressively increasing compliance; and (2) a negative-feedback model in which proteoglycan cross-links redistribute stress across the fiber network, limiting displacement gains at higher loads. Results are shown in Figure 1.',
+        dataContext: { context: 'viscoelastic loading outcomes', xLabel: 'Load step', yLabel: 'Displacement', xUnit: 'step', yUnit: 'mm' },
         domain: 'physics',
         sourceSlug: 'mcat-physics-mechanics',
+        positiveHypothesis: 'collagen fiber recruitment progressively increases compliance at higher loads',
+        negativeHypothesis: 'proteoglycan cross-links redistribute stress and limit displacement gains',
+        mechanismVariable: 'tendon displacement',
       },
       {
-        title: 'Circuit Response Series',
-        body: 'A laboratory setup compares current through a simple circuit as one variable is increased in regular increments. The passage emphasizes trend interpretation and estimation.',
-        dataContext: { context: 'circuit response outcomes', xLabel: 'Resistance rank', yLabel: 'Current', xUnit: 'rank', yUnit: 'mA' },
+        title: 'Nonlinear Resistance in a Thermistor Circuit',
+        body: 'A student measures current through a negative-temperature-coefficient (NTC) thermistor at four applied voltage levels. As voltage increases, Joule heating raises the thermistor temperature, which decreases its resistance and allows greater current. Two models are proposed: (1) a gain-amplification (positive-feedback) model in which heating reduces resistance, which increases current and produces further heating, leading to accelerating current gains; and (2) a self-limiting (negative-feedback) model in which radiative and convective heat loss grows with temperature, partially offsetting the heating contribution of each voltage step. Data are shown in Figure 1.',
+        dataContext: { context: 'thermistor circuit response', xLabel: 'Voltage step', yLabel: 'Current', xUnit: 'step', yUnit: 'mA' },
         domain: 'physics',
         sourceSlug: 'mcat-physics-electricity',
+        positiveHypothesis: 'Joule heating creates a runaway reduction in resistance that accelerates current gains',
+        negativeHypothesis: 'convective and radiative heat loss partially offsets heating at higher voltages, limiting current gains',
+        mechanismVariable: 'circuit current',
       },
     ]),
     'cell-mol-bio': buildSciencePassageBlocks([
       {
-        title: 'Signal Transduction Assay',
-        body: 'Investigators expose cultured cells to increasing levels of a ligand and monitor downstream signaling. The passage asks students to interpret which parts of the data most directly support a mechanistic claim.',
-        dataContext: { context: 'signal transduction response', xLabel: 'Ligand step', yLabel: 'Response index', xUnit: 'step', yUnit: 'arb units' },
+        title: 'EGFR Signaling and Receptor Internalization',
+        body: 'Investigators treated HeLa cells with increasing concentrations of epidermal growth factor (EGF) and measured downstream ERK phosphorylation (p-ERK) by western blot densitometry at 15 minutes post-stimulation. EGF binds the EGF receptor (EGFR), triggering receptor dimerization, autophosphorylation, and activation of the Ras-Raf-MEK-ERK cascade. However, ligand binding also promotes clathrin-mediated endocytosis of EGFR, removing active receptors from the membrane. Two competing hypotheses were evaluated: (1) at higher EGF concentrations, increased receptor occupancy amplifies cascade activation faster than internalization can clear receptors (positive feedback on signal output); (2) at higher EGF concentrations, accelerated endocytosis and lysosomal degradation progressively dampen each additional unit of stimulus (negative feedback). The four EGF conditions and their p-ERK responses are presented in Figure 1.',
+        dataContext: { context: 'EGFR signaling dose-response', xLabel: '[EGF]', yLabel: 'p-ERK level', xUnit: 'nM', yUnit: 'arb units' },
         domain: 'cell-mol-bio',
         sourceSlug: 'mcat-biology',
+        positiveHypothesis: 'increased EGFR occupancy amplifies ERK phosphorylation faster than receptor internalization can compensate',
+        negativeHypothesis: 'accelerated receptor endocytosis and degradation progressively dampen signal output at higher EGF doses',
+        mechanismVariable: 'downstream ERK phosphorylation',
       },
       {
-        title: 'Gene Expression Time Course',
-        body: 'A time-course experiment measures mRNA abundance after an environmental perturbation. The authors argue that the directional trend is sufficient for a first-pass biological inference.',
-        dataContext: { context: 'gene expression time course', xLabel: 'Time', yLabel: 'Transcript abundance', xUnit: 'h', yUnit: 'fold' },
+        title: 'Lac Operon Induction Kinetics',
+        body: 'Researchers measured β-galactosidase mRNA levels in E. coli at four time points after addition of the lactose analog IPTG. In the lac operon, allolactose (mimicked by IPTG) binds the lac repressor, relieving transcriptional repression and enabling RNA polymerase to transcribe lacZ. However, the resulting β-galactosidase also metabolizes intracellular lactose, and the cAMP-CRP activator complex loses activity as glucose is regenerated from galactose metabolism. Two models were proposed: (1) sustained amplification, in which early enzyme production accelerates inducer accumulation and further de-repression; (2) self-limiting induction, in which downstream metabolism reduces inducer levels and cAMP-CRP activity declines, causing transcription gains to taper over time. Data are shown in Figure 1.',
+        dataContext: { context: 'lac operon induction time course', xLabel: 'Time', yLabel: 'lacZ mRNA', xUnit: 'h', yUnit: 'fold' },
         domain: 'cell-mol-bio',
         sourceSlug: 'mcat-biology',
+        positiveHypothesis: 'early enzyme production accelerates inducer accumulation and further de-repression of the operon',
+        negativeHypothesis: 'downstream metabolism reduces inducer concentration and cAMP-CRP activity, causing transcription gains to taper',
+        mechanismVariable: 'lacZ transcript levels',
       },
     ]),
     'psych-soc': buildSciencePassageBlocks([
       {
-        title: 'Memory Spacing Intervention',
-        body: 'A behavioral scientist compares recall performance across increasingly spaced review schedules. The passage requires interpreting the data and deciding what conclusion is justified versus overreached.',
-        dataContext: { context: 'memory spacing outcomes', xLabel: 'Spacing level', yLabel: 'Recall score', xUnit: 'level', yUnit: 'points' },
+        title: 'Distributed Practice and Long-Term Retention',
+        body: 'A cognitive psychologist compared recall performance in 200 undergraduate participants randomly assigned to four spaced-review schedules of increasing inter-session interval (conditions 1–4). Participants studied the same 60-word list and were tested 7 days after the final review session. Previous research suggests two possibilities: (1) a spacing-benefit amplification model, in which longer intervals promote deeper encoding and increasingly greater retrieval-practice gains; (2) a diminishing-returns model, in which benefits plateau once optimal consolidation intervals are reached and further spacing adds retrieval difficulty without proportional memory benefit. Data are shown in Figure 1.',
+        dataContext: { context: 'distributed practice outcomes', xLabel: 'Spacing level', yLabel: 'Recall score', xUnit: 'level', yUnit: 'points' },
         domain: 'psych-soc',
         sourceSlug: 'mcat-psychology-sociology',
+        positiveHypothesis: 'longer spacing intervals promote deeper encoding and produce accelerating retrieval-practice gains',
+        negativeHypothesis: 'benefits plateau once optimal consolidation intervals are reached and further spacing yields diminishing returns',
+        mechanismVariable: 'recall performance',
       },
       {
-        title: 'Community Stress Index',
-        body: 'A sociological survey tracks how a stress-index measure relates to error rates in a repeated task. Students must reason about association, inference, and cautious interpretation.',
-        dataContext: { context: 'community stress outcomes', xLabel: 'Stress rank', yLabel: 'Task error rate', xUnit: 'rank', yUnit: '%' },
+        title: 'Perceived Stress and Cognitive Error Rates',
+        body: 'A longitudinal study tracked 350 adults across four perceived-stress-index quartiles and measured cognitive error rates on a sustained-attention task. The Yerkes-Dodson framework predicts an inverted-U relationship between arousal and performance, but within a monotonically increasing stress range, two sub-models are debated: (1) a stress-amplification (positive-feedback) model, in which each increment of perceived stress disrupts executive control and compounds attentional lapses; (2) an allostatic adaptation (negative-feedback) model, in which HPA-axis habituation and coping-strategy deployment partially buffer error-rate increases at higher stress quartiles. Data are shown in Figure 1.',
+        dataContext: { context: 'stress and cognitive error outcomes', xLabel: 'Stress quartile', yLabel: 'Error rate', xUnit: 'quartile', yUnit: '%' },
         domain: 'psych-soc',
         sourceSlug: 'mcat-psychology-sociology',
+        positiveHypothesis: 'each stress increment compounds attentional lapses through disrupted executive control',
+        negativeHypothesis: 'HPA-axis habituation and coping strategies partially buffer error-rate increases at higher stress levels',
+        mechanismVariable: 'cognitive error rates',
       },
     ]),
     cars: buildCarsPassageBlocks('cars', 'mcat-cars'),
@@ -1042,6 +1165,147 @@ function buildSupplementalDomainBank(): Record<string, MCATDiagnosticQuestion[]>
   }
 }
 
+function buildFeedbackLoopSubBank(): Record<string, MCATDiagnosticQuestion[]> {
+  const contexts: Array<FigureContext & { domain: string; sourceSlug: string; system: string }> = [
+    {
+      domain: 'biochem-cp',
+      sourceSlug: 'mcat-biochemistry',
+      system: 'enzyme product inhibition pathway',
+      context: 'product-feedback enzyme assay',
+      xLabel: 'Substrate dose',
+      yLabel: 'Product formation rate',
+      xUnit: 'arb',
+      yUnit: 'units/min',
+    },
+    {
+      domain: 'cell-mol-bio',
+      sourceSlug: 'mcat-biology',
+      system: 'receptor-mediated signaling cascade',
+      context: 'receptor pathway stimulation series',
+      xLabel: 'Ligand concentration',
+      yLabel: 'Signal output',
+      xUnit: 'nM',
+      yUnit: 'arb units',
+    },
+    {
+      domain: 'organ-systems',
+      sourceSlug: 'mcat-organ-systems',
+      system: 'endocrine axis regulation',
+      context: 'hormone challenge protocol',
+      xLabel: 'Hormone infusion step',
+      yLabel: 'Physiologic response',
+      xUnit: 'step',
+      yUnit: '% baseline',
+    },
+    {
+      domain: 'physics',
+      sourceSlug: 'mcat-physics-mechanics',
+      system: 'sensor-amplifier control circuit',
+      context: 'control-loop gain series',
+      xLabel: 'Input signal step',
+      yLabel: 'Output response',
+      xUnit: 'step',
+      yUnit: 'mV',
+    },
+    {
+      domain: 'psych-soc',
+      sourceSlug: 'mcat-psychology-sociology',
+      system: 'stress-performance adaptation model',
+      context: 'stress-exposure cohort',
+      xLabel: 'Stress condition',
+      yLabel: 'Error rate',
+      xUnit: 'condition',
+      yUnit: '%',
+    },
+    {
+      domain: 'genetics',
+      sourceSlug: 'mcat-genetics-evolution',
+      system: 'gene-regulatory network motif',
+      context: 'transcription factor titration panel',
+      xLabel: 'Activator level',
+      yLabel: 'Target transcript abundance',
+      xUnit: 'arb',
+      yUnit: 'fold',
+    },
+  ]
+
+  const byDomain: Record<string, MCATDiagnosticQuestion[]> = {}
+
+  contexts.forEach((context, ctxIdx) => {
+    const questions: MCATDiagnosticQuestion[] = []
+
+    FIGURE_SLOPES.forEach((slope) => {
+      ;[1, 3].forEach((intercept) => {
+        const yValues = buildSeriesValues(slope, intercept, ctxIdx + slope + intercept)
+        const visual = buildPassageVisual(context, yValues)
+        const observedFeedback = inferFeedbackPattern(yValues)
+        const claimedFeedback: 'positive' | 'negative' = (ctxIdx + slope + intercept) % 2 === 0 ? 'negative' : 'positive'
+
+        const observationSummary =
+          observedFeedback === 'positive'
+            ? 'later increments are larger than earlier increments'
+            : observedFeedback === 'negative'
+            ? 'later increments are smaller than earlier increments'
+            : 'increments are approximately constant across conditions'
+
+        const modelEvaluation =
+          observedFeedback === 'neutral'
+            ? `The trend is roughly linear, so this graph alone does not strongly distinguish positive vs negative feedback in ${context.system}.`
+            : observedFeedback === claimedFeedback
+            ? `The data are consistent with the proposed ${claimedFeedback} feedback mechanism because ${observationSummary}.`
+            : `The data challenge the proposed ${claimedFeedback} feedback model and better match ${observedFeedback} feedback because ${observationSummary}.`
+
+        const evalChoices = buildChoiceSet(modelEvaluation, [
+          'Any monotonic increase is sufficient to prove positive feedback and causal direction.',
+          'Feedback classification is impossible unless the curve crosses below baseline first.',
+          'The graph proves universal causality across all populations and conditions.',
+        ])
+
+        questions.push({
+          id: `${context.domain}-feedback-${ctxIdx}-${slope}-${intercept}-model`,
+          question: `Passage claim: In a ${context.system}, increasing ${context.xLabel.toLowerCase()} should produce a ${claimedFeedback} feedback response in ${context.yLabel.toLowerCase()}. Which evaluation is best supported by the graph?`,
+          options: evalChoices.options,
+          correctAnswer: evalChoices.correctAnswer,
+          explanation: `Evaluate feedback hypotheses by comparing first differences across ordered conditions. Here, ${observationSummary}; choose the option that matches that pattern without over-claiming causality.`,
+          domain: context.domain,
+          sourceSlug: context.sourceSlug,
+          difficulty: 'hard',
+          family: 'feedback-loop-reasoning',
+          promptType: 'figure',
+          visual,
+        })
+
+        const followupChoices = buildChoiceSet(
+          `Perturb the putative feedback mediator while holding ${context.xLabel.toLowerCase()} fixed, then test whether the ${context.yLabel.toLowerCase()} trend shape changes as predicted.`,
+          [
+            'Repeat the same four conditions once and conclude causality if the rank order is unchanged.',
+            'Drop intermediate conditions to compare only baseline vs highest condition for a cleaner graph.',
+            'Increase sample size without measuring any mediator and treat stronger p-values as proof of feedback sign.',
+          ],
+        )
+
+        questions.push({
+          id: `${context.domain}-feedback-${ctxIdx}-${slope}-${intercept}-design`,
+          question: `Which follow-up experiment would most directly test whether the observed pattern is driven by the proposed feedback loop rather than a simple direct effect?`,
+          options: followupChoices.options,
+          correctAnswer: followupChoices.correctAnswer,
+          explanation: `The strongest feedback test manipulates the mediator hypothesized to close the loop and checks whether trend shape changes in the predicted direction.`,
+          domain: context.domain,
+          sourceSlug: context.sourceSlug,
+          difficulty: 'hard',
+          family: 'feedback-loop-reasoning',
+          promptType: 'figure',
+          visual,
+        })
+      })
+    })
+
+    byDomain[context.domain] = (byDomain[context.domain] ?? []).concat(questions)
+  })
+
+  return byDomain
+}
+
 function dedupeQuestions(questions: MCATDiagnosticQuestion[]): MCATDiagnosticQuestion[] {
   const byId = new Map<string, MCATDiagnosticQuestion>()
   questions.forEach((q) => {
@@ -1058,9 +1322,11 @@ export async function generateMCATDiagnosticTest(
   options: MCATDiagnosticGenerationOptions = {},
 ): Promise<MCATDiagnosticTestData> {
   const totalQuestionTarget = DIAGNOSTIC_DOMAINS.reduce((sum, domain) => sum + domain.questionCount, 0)
+  const minFeedbackLoopQuestions = 2
   const maxFigureQuestions = Math.max(1, Math.round(totalQuestionTarget * 0.15))
   const excludeQuestionIds = options.excludeQuestionIds ?? new Set<string>()
   const supplementalBank = buildSupplementalDomainBank()
+  const feedbackLoopBank = buildFeedbackLoopSubBank()
   const passageBank = buildPassageQuestionBank()
   const questions: MCATDiagnosticQuestion[] = []
   const domainPools = new Map<string, MCATDiagnosticQuestion[]>()
@@ -1104,8 +1370,9 @@ export async function generateMCATDiagnosticTest(
     }
 
     const supplemental = supplementalBank[domain.id] ?? []
+    const feedbackLoopQuestions = feedbackLoopBank[domain.id] ?? []
     const passageQuestions = passageBank[domain.id] ?? []
-    const merged = dedupeQuestions([...domainQuestions, ...supplemental, ...passageQuestions]).map((question) => ({
+    const merged = dedupeQuestions([...domainQuestions, ...supplemental, ...feedbackLoopQuestions, ...passageQuestions]).map((question) => ({
       ...question,
       difficulty: inferQuestionDifficulty(question),
       family: inferQuestionFamily(question),
@@ -1147,6 +1414,7 @@ export async function generateMCATDiagnosticTest(
   if (excessFigureCount > 0) {
     for (const { question, index } of shuffle(figureIndexes)) {
       if (excessFigureCount <= 0) break
+      if ((question.family ?? inferQuestionFamily(question)) === 'feedback-loop-reasoning') continue
 
       const domainPool = domainPools.get(question.domain) ?? []
       const usedInDomain = selectedByDomain.get(question.domain) ?? new Set<string>()
@@ -1165,6 +1433,51 @@ export async function generateMCATDiagnosticTest(
       usedInDomain.add(replacement.id)
       selectedQuestions[index] = replacement
       excessFigureCount -= 1
+    }
+  }
+
+  const selectedFeedbackCount = selectedQuestions.filter(
+    (question) => (question.family ?? inferQuestionFamily(question)) === 'feedback-loop-reasoning',
+  ).length
+
+  if (selectedFeedbackCount < minFeedbackLoopQuestions) {
+    let needed = minFeedbackLoopQuestions - selectedFeedbackCount
+    const usedIds = new Set(selectedQuestions.map((q) => q.id))
+    const feedbackCandidates = shuffle(
+      Array.from(domainPools.values())
+        .flat()
+        .filter(
+          (candidate) =>
+            (candidate.family ?? inferQuestionFamily(candidate)) === 'feedback-loop-reasoning' &&
+            !usedIds.has(candidate.id),
+        ),
+    )
+
+    for (const candidate of feedbackCandidates) {
+      if (needed <= 0) break
+
+      let replaceIndex = selectedQuestions.findIndex(
+        (question) =>
+          question.domain === candidate.domain &&
+          (question.family ?? inferQuestionFamily(question)) !== 'feedback-loop-reasoning',
+      )
+
+      if (replaceIndex < 0) {
+        replaceIndex = selectedQuestions.findIndex(
+          (question) => (question.family ?? inferQuestionFamily(question)) !== 'feedback-loop-reasoning',
+        )
+      }
+
+      if (replaceIndex < 0) break
+
+      const replaced = selectedQuestions[replaceIndex]
+      selectedQuestions[replaceIndex] = candidate
+
+      usedIds.add(candidate.id)
+      selectedByDomain.get(replaced.domain)?.delete(replaced.id)
+      selectedByDomain.get(candidate.domain)?.add(candidate.id)
+
+      needed -= 1
     }
   }
 
@@ -1243,6 +1556,49 @@ export function scoreMCATDiagnostic(
         priority: d.level === 'weak' ? 'high' as const : 'medium' as const,
       }))
     })
+
+  const feedbackLoopQuestions = questions
+    .map((q, i) => ({ q, i }))
+    .filter(({ q }) => (q.family ?? inferQuestionFamily(q)) === 'feedback-loop-reasoning')
+
+  const missedFeedbackCount = feedbackLoopQuestions.filter(({ i }) => {
+    const answer = answers[i]
+    return answer === undefined || answer !== questions[i].correctAnswer
+  }).length
+
+  if (missedFeedbackCount > 0) {
+    const feedbackTopicSlug = 'mcat-science-passage-strategy-mcat'
+    const exists = recommendedTopics.some((topic) => topic.slug === feedbackTopicSlug)
+    if (!exists) {
+      recommendedTopics.unshift({
+        slug: feedbackTopicSlug,
+        name: 'Feedback Loop Graph Reasoning',
+        priority: missedFeedbackCount >= 2 ? 'high' : 'medium',
+      })
+    }
+  }
+
+  // Percent-increase / quantitative-skills remediation
+  const percentCalcQuestions = questions
+    .map((q, i) => ({ q, i }))
+    .filter(({ q }) => q.family === 'figure-analysis' && /percent increase/.test(q.question))
+
+  const missedPercentCalcCount = percentCalcQuestions.filter(({ i }) => {
+    const answer = answers[i]
+    return answer === undefined || answer !== questions[i].correctAnswer
+  }).length
+
+  if (missedPercentCalcCount > 0) {
+    const mathTopicSlug = 'mcat-quantitative-skills-mcat'
+    const mathExists = recommendedTopics.some((topic) => topic.slug === mathTopicSlug)
+    if (!mathExists) {
+      recommendedTopics.push({
+        slug: mathTopicSlug,
+        name: 'MCAT Quantitative Skills (Percent Change & Ratios)',
+        priority: missedPercentCalcCount >= 2 ? 'high' : 'medium',
+      })
+    }
+  }
 
   return {
     totalCorrect,

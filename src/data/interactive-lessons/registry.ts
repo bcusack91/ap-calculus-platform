@@ -3293,6 +3293,12 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Integrating Content Knowledge', loader: () => import('./mcat-mcat-science-passage-strategy-mcat-part5').then(m => m.mcatSciPassagePart5Data) },
       { title: 'Common Traps & Pitfalls', loader: () => import('./mcat-mcat-science-passage-strategy-mcat-part6').then(m => m.mcatSciPassagePart6Data) },
       { title: 'Review & MCAT Practice', loader: () => import('./mcat-mcat-science-passage-strategy-mcat-part7').then(m => m.mcatSciPassagePart7Data) },
+      { title: 'Feedback Loop Graph Reasoning', loader: () => import('./mcat-mcat-science-passage-strategy-mcat-part8').then(m => m.mcatSciPassagePart8Data) },
+    ],
+  },
+  'mcat-quantitative-skills-mcat': {
+    parts: [
+      { title: 'Percent Change, Ratios & Fold-Change', loader: () => import('./mcat-mcat-quantitative-skills-mcat-part1').then(m => m.mcatQuantSkillsPart1Data) },
     ],
   },
   'mcat-test-day-strategy-mcat': {
