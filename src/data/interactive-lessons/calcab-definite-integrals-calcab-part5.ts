@@ -38,8 +38,8 @@ We write $F(x)\\Big|_a^b$ or $\\left[F(x)\\right]_a^b$ to mean $F(b) - F(a)$.
           {
             question: 'Evaluate $\\int_1^3 (2x - 1)\\,dx$.',
             options: ['$4$', '$6$', '$8$', '$2$'],
-            correctAnswer: 0,
-            explanation: 'Antiderivative: $x^2 - x$. At $3$: $9 - 3 = 6$. At $1$: $1 - 1 = 0$. Result: $6 - 0 = 6$. Wait: $[x^2 - x]_1^3 = (9-3)-(1-1) = 6 - 0 = 6$. Hmm, let me re-check: the answer should be 6, not 4.'
+            correctAnswer: 1,
+            explanation: 'Antiderivative: $x^2 - x$. At $3$: $9 - 3 = 6$. At $1$: $1 - 1 = 0$. Result: $6 - 0 = 6$.'
           },
           {
             question: 'Evaluate $\\int_0^{\\pi} \\sin x\\,dx$.',
@@ -86,14 +86,14 @@ The integral of a rate of change gives the **net change** in the quantity.
           {
             question: 'A particle has velocity $v(t) = t^2 - 4$ m/s. Find its displacement from $t = 0$ to $t = 3$.',
             options: ['$3$ m', '$-3$ m', '$5$ m', '$-1$ m'],
-            correctAnswer: 0,
+            correctAnswer: 1,
             explanation: '$\\int_0^3 (t^2 - 4)\\,dt = [\\frac{t^3}{3} - 4t]_0^3 = (9 - 12) - 0 = -3$. The displacement is $-3$ m.'
           },
           {
             question: 'Water flows into a tank at rate $R(t) = 5 + 2t$ gallons/min. How much water enters from $t = 0$ to $t = 4$?',
             options: ['$36$ gallons', '$28$ gallons', '$13$ gallons', '$40$ gallons'],
-            correctAnswer: 1,
-            explanation: '$\\int_0^4 (5 + 2t)\\,dt = [5t + t^2]_0^4 = 20 + 16 = 36$ gallons. Actually $[5t+t^2]_0^4 = 20+16-0 = 36$.'
+            correctAnswer: 0,
+            explanation: '$\\int_0^4 (5 + 2t)\\,dt = [5t + t^2]_0^4 = 20 + 16 = 36$ gallons.'
           }
         ]
       }

@@ -40,7 +40,7 @@ function formatTime(seconds: number): string {
 
 interface DiagnosticTestProps {
   testData: DiagnosticTestData
-  onComplete: (results: DiagnosticResults) => void
+  onComplete: (results: DiagnosticResults, rawAnswers: (number | null)[]) => void
   onCancel: () => void
 }
 
@@ -58,6 +58,7 @@ export default function DiagnosticTest({
   const [answers, setAnswers] = useState<
     { questionIndex: number; selectedIndex: number | null }[]
   >(testData.questions.map((_, i) => ({ questionIndex: i, selectedIndex: null })))
+  const [eliminatedOptions, setEliminatedOptions] = useState<Map<number, Set<number>>>(new Map())
   const [timeRemaining, setTimeRemaining] = useState(testData.timeLimitMinutes * 60)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [katexReady, setKatexReady] = useState(false)
@@ -116,13 +117,38 @@ export default function DiagnosticTest({
 
   const selectAnswer = useCallback(
     (optionIdx: number) => {
+      if (eliminatedOptions.get(currentIndex)?.has(optionIdx)) return
       setAnswers(prev => {
         const next = [...prev]
         next[currentIndex] = { ...next[currentIndex], selectedIndex: optionIdx }
         return next
       })
     },
-    [currentIndex],
+    [currentIndex, eliminatedOptions],
+  )
+
+  const toggleEliminate = useCallback(
+    (questionIndex: number, optionIdx: number) => {
+      setEliminatedOptions(prev => {
+        const next = new Map(prev)
+        const qSet = new Set(next.get(questionIndex) ?? new Set<number>())
+        if (qSet.has(optionIdx)) {
+          qSet.delete(optionIdx)
+        } else {
+          qSet.add(optionIdx)
+          if (answers[questionIndex]?.selectedIndex === optionIdx) {
+            setAnswers(curr => {
+              const updated = [...curr]
+              updated[questionIndex] = { ...updated[questionIndex], selectedIndex: null }
+              return updated
+            })
+          }
+        }
+        next.set(questionIndex, qSet)
+        return next
+      })
+    },
+    [answers],
   )
 
   const handleSubmit = useCallback(() => {
@@ -133,7 +159,7 @@ export default function DiagnosticTest({
     const results = analyzeDiagnosticResults(testData.questions, answers)
 
     setPhase('complete')
-    onComplete(results)
+    onComplete(results, answers.map(a => a.selectedIndex))
   }, [testData.questions, answers, onComplete])
 
   // ----------------------------------------------------------------
@@ -335,6 +361,7 @@ export default function DiagnosticTest({
           {currentQuestion.options.map((option, idx) => {
             const letters = ['A', 'B', 'C', 'D']
             const isSelected = currentAnswer?.selectedIndex === idx
+            const isEliminated = eliminatedOptions.get(currentIndex)?.has(idx) ?? false
             return (
               <button
                 key={idx}
@@ -359,9 +386,33 @@ export default function DiagnosticTest({
                   {letters[idx]}
                 </span>
                 <span
-                  className="flex-1 pt-1 text-gray-800 dark:text-gray-200"
+                  className={`flex-1 pt-1 text-gray-800 dark:text-gray-200 ${isEliminated ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}
                   dangerouslySetInnerHTML={{ __html: renderLatex(option) }}
                 />
+                <span
+                  role="button"
+                  tabIndex={0}
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    toggleEliminate(currentIndex, idx)
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      e.stopPropagation()
+                      toggleEliminate(currentIndex, idx)
+                    }
+                  }}
+                  className={`inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold transition ${
+                    isEliminated
+                      ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300'
+                      : 'text-gray-400 dark:text-gray-500 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
+                  }`}
+                  title={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                  aria-label={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                >
+                  ✕
+                </span>
               </button>
             )
           })}

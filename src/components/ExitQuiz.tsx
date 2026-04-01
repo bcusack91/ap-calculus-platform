@@ -3,7 +3,8 @@
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
-import APChemReferenceModal from './APChemReferenceModal'
+import ReferenceSheetModal from './ReferenceSheetModal'
+import { hasReferenceSheet, getCourseSlugFromTopic } from '@/data/ap-reference-sheets'
 
 interface ExitQuizQuestion {
   id: string
@@ -18,6 +19,7 @@ interface ExitQuizQuestion {
 interface ExitQuizProps {
   topicSlug: string
   topicTitle: string
+  courseSlug?: string
   questions: ExitQuizQuestion[]
   onComplete: (score: number, total: number, passed: boolean, mustRedoUnit: boolean, wrongTopicSlugs?: string[]) => void
   onCancel: () => void
@@ -49,6 +51,7 @@ function renderLatex(text: string): string {
 export default function ExitQuiz({
   topicSlug,
   topicTitle,
+  courseSlug,
   questions,
   onComplete,
   onCancel,
@@ -65,6 +68,8 @@ export default function ExitQuiz({
   const [submitting, setSubmitting] = useState(false)
   const [katexReady, setKatexReady] = useState(false)
   const [showReference, setShowReference] = useState(false)
+  const [eliminatedOptions, setEliminatedOptions] = useState<Set<number>>(new Set())
+  const resolvedCourseSlug = courseSlug || getCourseSlugFromTopic(topicSlug)
   void topicSlug // will be used by the submit API
 
   // Eagerly load KaTeX on mount
@@ -86,7 +91,22 @@ export default function ExitQuiz({
 
   const handleSelectAnswer = (index: number) => {
     if (showExplanation) return // already answered
+    if (eliminatedOptions.has(index)) return // eliminated
     setSelectedAnswer(index)
+  }
+
+  const toggleEliminate = (idx: number) => {
+    if (showExplanation) return
+    setEliminatedOptions(prev => {
+      const next = new Set(prev)
+      if (next.has(idx)) {
+        next.delete(idx)
+      } else {
+        next.add(idx)
+        if (selectedAnswer === idx) setSelectedAnswer(null)
+      }
+      return next
+    })
   }
 
   const handleConfirm = () => {
@@ -110,6 +130,7 @@ export default function ExitQuiz({
       setCurrentQuestion(prev => prev + 1)
       setSelectedAnswer(null)
       setShowExplanation(false)
+      setEliminatedOptions(new Set())
     } else {
       setQuizComplete(true)
     }
@@ -120,6 +141,7 @@ export default function ExitQuiz({
       setCurrentQuestion(prev => prev + 1)
       setSelectedAnswer(null)
       setShowExplanation(false)
+      setEliminatedOptions(new Set())
     } else {
       // Quiz finished
       setQuizComplete(true)
@@ -214,11 +236,11 @@ export default function ExitQuiz({
           ) : quizMustRedoUnit ? (
             <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-6 mb-6">
               <p className="text-red-800 dark:text-red-300 font-semibold text-lg">
-                You need to redo the unit before retaking this quiz.
+                Review this section before retaking the quiz.
               </p>
               <p className="text-red-600 dark:text-red-400 text-sm mt-2">
                 Score at least {redoThreshold}/{totalQuestions} to be able to retry the quiz directly, or {passThreshold}/{totalQuestions} to pass.
-                Go through the lesson sections again to reinforce your understanding.
+                Go through the section material again to reinforce your understanding.
               </p>
             </div>
           ) : (
@@ -259,20 +281,30 @@ export default function ExitQuiz({
             </div>
           </div>
 
-          <div className="mt-8 flex gap-4 justify-center">
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             {passed ? (
-              <button
-                onClick={() => onComplete(score, totalQuestions, true, false, wrongTopicSlugs)}
-                className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 shadow-lg"
-              >
-                ⚔️ Go to Competitive Mode
-              </button>
+              <>
+                <button
+                  onClick={() => onComplete(score, totalQuestions, true, false, wrongTopicSlugs)}
+                  className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 shadow-lg"
+                >
+                  ⚔️ Go to Competitive Mode
+                </button>
+                {courseSlug && (
+                  <a
+                    href={`/courses/${courseSlug}`}
+                    className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 shadow-lg text-center"
+                  >
+                    📋 Back to Course
+                  </a>
+                )}
+              </>
             ) : quizMustRedoUnit ? (
               <button
                 onClick={() => onComplete(score, totalQuestions, false, true, wrongTopicSlugs)}
                 className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg"
               >
-                📚 Redo the Unit
+                📚 Review This Section
               </button>
             ) : (
               <button
@@ -338,15 +370,17 @@ export default function ExitQuiz({
         </div>
 
         {/* Reference material buttons */}
-        <div className="flex gap-2 mb-4">
-          <button
-            onClick={() => setShowReference(true)}
-            className="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-          >
-            📋 Reference Sheet
-          </button>
-        </div>
-        <APChemReferenceModal open={showReference} onClose={() => setShowReference(false)} />
+        {resolvedCourseSlug && hasReferenceSheet(resolvedCourseSlug) && (
+          <div className="flex gap-2 mb-4">
+            <button
+              onClick={() => setShowReference(true)}
+              className="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+            >
+              📋 Reference Sheet
+            </button>
+          </div>
+        )}
+        <ReferenceSheetModal open={showReference} onClose={() => setShowReference(false)} courseSlug={resolvedCourseSlug} topicSlug={topicSlug} />
 
         {/* Question */}
         <div
@@ -359,6 +393,7 @@ export default function ExitQuiz({
           {question.options.map((_, i) => {
             const isSelected = selectedAnswer === i
             const isCorrect = i === question.correctIndex
+            const isEliminated = eliminatedOptions.has(i)
             let style = 'border-gray-200 dark:border-gray-600 hover:border-purple-400 dark:hover:border-purple-500 cursor-pointer'
 
             if (showExplanation) {
@@ -374,27 +409,44 @@ export default function ExitQuiz({
             }
 
             return (
-              <button
-                key={i}
-                onClick={() => handleSelectAnswer(i)}
-                disabled={showExplanation}
-                className={`w-full text-left p-4 rounded-xl border-2 transition-all ${style}`}
-              >
-                <div className="flex items-center gap-3">
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 ${
-                    showExplanation && isCorrect ? 'bg-green-500 text-white' :
-                    showExplanation && isSelected && !isCorrect ? 'bg-red-500 text-white' :
-                    isSelected ? 'bg-purple-500 text-white' :
-                    'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'
-                  }`}>
-                    {String.fromCharCode(65 + i)}
+              <div key={i} className="relative group">
+                <button
+                  onClick={() => handleSelectAnswer(i)}
+                  disabled={showExplanation || isEliminated}
+                  className={`w-full text-left p-4 rounded-xl border-2 transition-all ${style} ${
+                    isEliminated && !showExplanation ? 'opacity-45 line-through decoration-2 decoration-gray-400 dark:decoration-gray-500 cursor-default' : ''
+                  }`}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 ${
+                      showExplanation && isCorrect ? 'bg-green-500 text-white' :
+                      showExplanation && isSelected && !isCorrect ? 'bg-red-500 text-white' :
+                      isSelected ? 'bg-purple-500 text-white' :
+                      'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300'
+                    }`}>
+                      {String.fromCharCode(65 + i)}
+                    </div>
+                    <span
+                      className="text-gray-900 dark:text-white"
+                      dangerouslySetInnerHTML={{ __html: renderedOptions[i] }}
+                    />
                   </div>
-                  <span
-                    className="text-gray-900 dark:text-white"
-                    dangerouslySetInnerHTML={{ __html: renderedOptions[i] }}
-                  />
-                </div>
-              </button>
+                </button>
+                {/* Eliminate / restore button */}
+                {!showExplanation && (
+                  <button
+                    onClick={(e) => { e.stopPropagation(); toggleEliminate(i) }}
+                    title={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                    className={`absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full flex items-center justify-center transition-all text-xs font-bold ${
+                      isEliminated
+                        ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-400 dark:hover:bg-gray-500'
+                        : 'bg-transparent text-gray-400 dark:text-gray-500 opacity-0 group-hover:opacity-100 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
+                    }`}
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
             )
           })}
         </div>

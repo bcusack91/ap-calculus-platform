@@ -81,8 +81,8 @@ This is much closer to the exact value of $\\frac{64}{3} \\approx 21.33$.
           {
             question: 'Use the trapezoidal rule to approximate $\\int_0^{10} f(x)\\,dx$.',
             options: ['$62$', '$72.5$', '$67$', '$82$'],
-            correctAnswer: 2,
-            explanation: '$T = \\frac{1}{2}[(2-0)(3+7) + (5-2)(7+11) + (8-5)(11+6) + (10-8)(6+4)]$ $= \\frac{1}{2}[20 + 54 + 51 + 20] = \\frac{1}{2}(145) = 72.5$. Wait, let me recalculate: $\\frac{2}{2}(3+7) + \\frac{3}{2}(7+11) + \\frac{3}{2}(11+6) + \\frac{2}{2}(6+4) = 10 + 27 + 25.5 + 10 = 72.5$. Hmm, the answer should be 72.5.'
+            correctAnswer: 1,
+            explanation: '$T = \\frac{2}{2}(3+7) + \\frac{3}{2}(7+11) + \\frac{3}{2}(11+6) + \\frac{2}{2}(6+4) = 10 + 27 + 25.5 + 10 = 72.5$.'
           }
         ]
       }

@@ -104,7 +104,7 @@ const questions: EntranceQuizQuestion[] = [
   // Part 6: Problem-Solving Workshop
   {
     id: 'td-ent-6a',
-    question: 'Table: $t$: 0, 3, 7, 10; $v(t)$: 0, 4, 6, 5. Estimate $\\int_0^{10} v(t)\\,dt$ using trapezoids:',
+    question: '<table style="border-collapse:collapse;margin:8px auto;text-align:center"><tr><th style="border:1px solid #888;padding:4px 12px"><i>t</i></th><td style="border:1px solid #888;padding:4px 12px">0</td><td style="border:1px solid #888;padding:4px 12px">3</td><td style="border:1px solid #888;padding:4px 12px">7</td><td style="border:1px solid #888;padding:4px 12px">10</td></tr><tr><th style="border:1px solid #888;padding:4px 12px"><i>v</i>(<i>t</i>)</th><td style="border:1px solid #888;padding:4px 12px">0</td><td style="border:1px solid #888;padding:4px 12px">4</td><td style="border:1px solid #888;padding:4px 12px">6</td><td style="border:1px solid #888;padding:4px 12px">5</td></tr></table>Estimate $\\int_0^{10} v(t)\\,dt$ using trapezoids:',
     options: ['$42.5$', '$45$', '$38$', '$50$'],
     correctIndex: 0,
     explanation: 'Trap = $\\frac{3}{2}(0+4) + \\frac{4}{2}(4+6) + \\frac{3}{2}(6+5) = 6 + 20 + 16.5 = 42.5$.',

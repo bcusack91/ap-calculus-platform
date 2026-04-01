@@ -19,8 +19,8 @@ This workshop combines Riemann sums, FTC, properties of integrals, and applicati
           {
             question: 'If $\\int_0^6 f(x)\\,dx = 15$ and $\\int_0^6 g(x)\\,dx = 7$, find $\\int_0^6 [3f(x) - 2g(x) + 4]\\,dx$.',
             options: ['$55$', '$31$', '$59$', '$45$'],
-            correctAnswer: 2,
-            explanation: '$3(15) - 2(7) + \\int_0^6 4\\,dx = 45 - 14 + 24 = 55$. Wait: $\\int_0^6 4\\,dx = 4(6) = 24$. So $45 - 14 + 24 = 55$.'
+            correctAnswer: 0,
+            explanation: '$3(15) - 2(7) + \\int_0^6 4\\,dx = 45 - 14 + 24 = 55$.'
           },
           {
             question: 'Find $\\frac{d}{dx}\\int_1^{x^3} \\frac{1}{1+t^2}\\,dt$.',

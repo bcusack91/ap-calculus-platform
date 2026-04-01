@@ -10,7 +10,7 @@ export const calcabExpModelsPart1Data = {
 
 ### The Differential Equation
 
-$$\frac{dy}{dt} = ky \implies y = y_0 e^{kt}$$
+$$\\frac{dy}{dt} = ky \\implies y = y_0 e^{kt}$$
 
 - $k > 0$: **exponential growth**
 - $k < 0$: **exponential decay**
@@ -23,7 +23,7 @@ $1500 = 500e^{2k}$
 
 $3 = e^{2k}$
 
-$k = \frac{\ln 3}{2} \approx 0.549$
+$k = \\frac{\\ln 3}{2} \\approx 0.549$
 
 Population at time $t$: $P(t) = 500e^{0.549t}$`
     },

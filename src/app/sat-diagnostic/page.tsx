@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import { generateDiagnosticTest } from '@/data/sat-practice/diagnostic-generator'
 import type { DiagnosticResults, DiagnosticTestData } from '@/data/sat-practice/diagnostic-generator'
 import DiagnosticTest, { DiagnosticResultsView } from '@/components/SATDiagnostic'
+import DiagnosticReview from '@/components/DiagnosticReview'
 import { InArticleAd } from '@/components/ad-banner'
 import 'katex/dist/katex.min.css'
 
@@ -16,6 +17,7 @@ export default function SATDiagnosticPage() {
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
   const [testData, setTestData] = useState<DiagnosticTestData | null>(null)
   const [results, setResults] = useState<DiagnosticResults | null>(null)
+  const [rawAnswers, setRawAnswers] = useState<(number | null)[]>([])
   const [history, setHistory] = useState<
     { id: string; category: string; results: string; createdAt: string }[]
   >([])
@@ -37,8 +39,9 @@ export default function SATDiagnosticPage() {
   }, [status])
 
   const handleComplete = useCallback(
-    async (diagnosticResults: DiagnosticResults) => {
+    async (diagnosticResults: DiagnosticResults, answers: (number | null)[]) => {
       setResults(diagnosticResults)
+      setRawAnswers(answers)
       setPhase('results')
 
       // Save to API
@@ -122,6 +125,16 @@ export default function SATDiagnosticPage() {
             }}
             onGoToStudy={() => router.push('/dashboard')}
           />
+          {/* Review Test */}
+          {testData && (
+            <div className="mt-8 max-w-3xl mx-auto">
+              <DiagnosticReview
+                questions={testData.questions}
+                answers={rawAnswers}
+                domainNames={Object.fromEntries(testData.domains.map(d => [d.id, d.name]))}
+              />
+            </div>
+          )}
           {/* Ad after diagnostic results — high engagement moment */}
           <div className="mt-8 max-w-2xl mx-auto">
             <InArticleAd />

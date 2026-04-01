@@ -321,7 +321,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randNonZero(1, 5); const b = randInt(-10, 10)
       const val = 3 * a + b
       const { options, correctIndex } = makeOptions(val, 5)
-      return { id: this.id, category: this.category, question: `If $x - y = ${a}$ and $2x + y = ${2 * a + b + a}$, what is $3x$?`, options, correctIndex, explanation: `Add the equations: $3x = ${val + b}$... wait. Let $x - y = ${a}$ and $2x + y = ${3 * a + b}$. Adding: $3x = ${4 * a + b}$... Hmm, let me recalculate. $3x = (x-y) + (2x+y) = ${a} + ${2 * a + b + a} = ${3 * a + b + a}$. Actually $3x = ${a + 2 * a + b + a}$. This simplifies to $3x = ${val}$.` }
+      return { id: this.id, category: this.category, question: `If $x - y = ${a}$ and $2x + y = ${2 * a + b}$, what is $3x$?`, options, correctIndex, explanation: `Add the equations: $(x-y) + (2x+y) = 3x = ${a} + ${2 * a + b} = ${val}$.` }
     }
   },
   {

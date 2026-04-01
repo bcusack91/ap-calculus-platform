@@ -95,6 +95,7 @@ export default function CourseEntranceQuiz({ courseSlug, courseName, categories 
       <ExitQuiz
         topicSlug={courseSlug}
         topicTitle={courseName}
+        courseSlug={courseSlug}
         questions={finalQuizQuestions}
         onComplete={handleFinalQuizComplete}
         onCancel={() => setShowFinalQuiz(false)}
@@ -121,6 +122,7 @@ export default function CourseEntranceQuiz({ courseSlug, courseName, categories 
       <ExitQuiz
         topicSlug={courseSlug}
         topicTitle={`${courseName} Entrance Quiz`}
+        courseSlug={courseSlug}
         questions={quizQuestions}
         onComplete={handleQuizComplete}
         onCancel={() => setPhase('results')}

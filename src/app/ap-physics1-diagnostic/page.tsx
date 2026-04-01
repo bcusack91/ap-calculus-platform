@@ -11,6 +11,7 @@ import {
   type APPhysics1DiagnosticTestData,
   type APPhysics1DiagnosticResults,
 } from '@/data/ap-physics-1-diagnostic'
+import DiagnosticReview from '@/components/DiagnosticReview'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -36,6 +37,7 @@ export default function APPhysics1DiagnosticPage() {
   const [results, setResults] = useState<APPhysics1DiagnosticResults | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<(number | null)[]>([])
+  const [eliminatedOptions, setEliminatedOptions] = useState<Set<number>[]>([])
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
@@ -71,7 +73,8 @@ export default function APPhysics1DiagnosticPage() {
       .filter((f): f is 'A' | 'B' => f === 'A' || f === 'B')
     const form = pickNextForm(previousForms)
     const data = generateAPPhysics1DiagnosticTest(form)
-    setTestData(data); setCurrentIndex(0); setAnswers(new Array(data.questions.length).fill(null)); setTimeRemaining(data.timeLimitMinutes * 60); setPhase('testing')
+    setTestData(data); setCurrentIndex(0); setAnswers(new Array(data.questions.length).fill(null))
+    setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>())); setTimeRemaining(data.timeLimitMinutes * 60); setPhase('testing')
   }, [history])
 
   const handleFinish = useCallback(async () => {
@@ -122,10 +125,57 @@ export default function APPhysics1DiagnosticPage() {
             <div className="space-y-2">
               {q.options.map((opt, i) => {
                 const isSelected = answers[currentIndex] === i
+                  const isEliminated = eliminatedOptions[currentIndex]?.has(i) ?? false
                 return (
-                  <button key={i} onClick={() => { const updated = [...answers]; updated[currentIndex] = i; setAnswers(updated) }}
+                  <button key={i} onClick={() => { if (isEliminated) return; const updated = [...answers]; updated[currentIndex] = i; setAnswers(updated) }}
                     className={`w-full rounded-xl border px-4 py-3 text-left text-sm transition ${isSelected ? 'border-blue-500 bg-blue-50 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-500' : 'border-gray-200 text-gray-700 hover:border-blue-300 hover:bg-blue-50/50 dark:border-gray-600 dark:text-gray-300 dark:hover:border-blue-500'}`}>
-                    <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>{opt}
+                    <div className="flex items-center justify-between gap-3">
+                      <span className={`flex-1 ${isEliminated ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}>
+                        <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>{opt}
+                      </span>
+                      <span
+                        role="button"
+                        tabIndex={0}
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          setEliminatedOptions(prev => {
+                            const next = prev.map(set => new Set(set))
+                            const qSet = new Set(next[currentIndex] ?? [])
+                            if (qSet.has(i)) {
+                              qSet.delete(i)
+                            } else {
+                              qSet.add(i)
+                              if (answers[currentIndex] === i) {
+                                const updated = [...answers]
+                                updated[currentIndex] = null
+                                setAnswers(updated)
+                              }
+                            }
+                            next[currentIndex] = qSet
+                            return next
+                          })
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault()
+                            e.stopPropagation()
+                            setEliminatedOptions(prev => {
+                              const next = prev.map(set => new Set(set))
+                              const qSet = new Set(next[currentIndex] ?? [])
+                              if (qSet.has(i)) qSet.delete(i)
+                              else qSet.add(i)
+                              next[currentIndex] = qSet
+                              return next
+                            })
+                          }
+                        }}
+                        className={`inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold transition ${isEliminated ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300' : 'text-gray-400 dark:text-gray-500 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'}`}
+                        title={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                        aria-label={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                      >
+                        ✕
+                      </span>
+                    </div>
                   </button>
                 )
               })}
@@ -135,8 +185,7 @@ export default function APPhysics1DiagnosticPage() {
             <button onClick={() => setCurrentIndex(prev => Math.max(0, prev - 1))} disabled={currentIndex === 0} className="rounded-xl border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-600 transition hover:bg-gray-50 disabled:opacity-40 dark:border-gray-600 dark:text-gray-400">← Previous</button>
             <span className="text-xs text-gray-500 dark:text-gray-400">{answeredCount}/{testData.questions.length} answered</span>
             <button
-              onClick={() => {
-                const updated = [...answers]
+              onClick={() => { const updated = [...answers]
                 updated[currentIndex] = null
                 setAnswers(updated)
                 if (currentIndex < testData.questions.length - 1) {
@@ -193,6 +242,15 @@ export default function APPhysics1DiagnosticPage() {
             <div className="rounded-2xl border border-green-200 bg-green-50 p-5 dark:border-green-800 dark:bg-green-900/20"><h4 className="mb-2 font-semibold text-green-800 dark:text-green-300">💪 Strengths</h4><ul className="space-y-1 text-sm text-green-700 dark:text-green-400">{results.strengths.length > 0 ? results.strengths.map(s => <li key={s}>• {s}</li>) : <li>Complete more questions to identify strengths</li>}</ul></div>
             <div className="rounded-2xl border border-red-200 bg-red-50 p-5 dark:border-red-800 dark:bg-red-900/20"><h4 className="mb-2 font-semibold text-red-800 dark:text-red-300">📚 Areas to Improve</h4><ul className="space-y-1 text-sm text-red-700 dark:text-red-400">{results.weakAreas.length > 0 ? results.weakAreas.map(w => <li key={w}>• {w}</li>) : <li>Great job — no major weak areas!</li>}</ul></div>
           </div>
+
+          {/* Review Test */}
+          {testData && (
+            <DiagnosticReview
+              questions={testData.questions}
+              answers={answers}
+              domainNames={Object.fromEntries(testData.domains.map(d => [d.id, d.name]))}
+            />
+          )}
 
           {results.recommendedTopics.length > 0 && (
             <div className="mb-8 rounded-2xl border-2 border-blue-300 bg-blue-50 p-6 dark:border-blue-700 dark:bg-blue-900/20">

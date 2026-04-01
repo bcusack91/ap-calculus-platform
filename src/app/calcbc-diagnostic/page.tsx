@@ -4,6 +4,8 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import 'katex/dist/katex.min.css'
 import {
   generateCalcBCDiagnosticTest,
   scoreCalcBCDiagnostic,
@@ -11,6 +13,23 @@ import {
   type CalcBCDiagnosticTestData,
   type CalcBCDiagnosticResults,
 } from '@/data/ap-calculus-bc-diagnostic'
+import DiagnosticReview from '@/components/DiagnosticReview'
+
+function renderLatex(text: string): string {
+  try {
+    let result = text.replace(/\$\$((?:[^$\\]|\\.)+)\$\$/g, (_match, latex) => {
+      try { return renderKatexSync(latex.trim(), { displayMode: true }) }
+      catch { return latex }
+    })
+    result = result.replace(/\$((?:[^$\\]|\\.)+)\$/g, (_match, latex) => {
+      try { return renderKatexSync(latex.trim(), { displayMode: false }) }
+      catch { return latex }
+    })
+    return result
+  } catch {
+    return text
+  }
+}
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -36,9 +55,13 @@ export default function CalcBCDiagnosticPage() {
   const [results, setResults] = useState<CalcBCDiagnosticResults | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<(number | null)[]>([])
+  const [eliminatedOptions, setEliminatedOptions] = useState<Set<number>[]>([])
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
+  const [katexReady, setKatexReady] = useState(false)
+
+  useEffect(() => { preloadKatex().then(() => setKatexReady(true)) }, [])
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -81,6 +104,7 @@ export default function CalcBCDiagnosticPage() {
     setTestData(data)
     setCurrentIndex(0)
     setAnswers(new Array(data.questions.length).fill(null))
+    setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))
     setTimeRemaining(data.timeLimitMinutes * 60)
     setPhase('testing')
   }, [history])
@@ -165,14 +189,61 @@ export default function CalcBCDiagnosticPage() {
             </div>
 
             <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-              <p className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{q.question}</p>
+              <div className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200" dangerouslySetInnerHTML={{ __html: katexReady ? renderLatex(q.question) : q.question }} />
               <div className="space-y-2">
                 {q.options.map((opt, i) => {
                   const isSelected = answers[currentIndex] === i
+                  const isEliminated = eliminatedOptions[currentIndex]?.has(i) ?? false
                   return (
-                    <button key={i} onClick={() => { const u = [...answers]; u[currentIndex] = i; setAnswers(u) }}
+                    <button key={i} onClick={() => { if (isEliminated) return; const u = [...answers]; u[currentIndex] = i; setAnswers(u) }}
                       className={`w-full rounded-xl border px-4 py-3 text-left text-sm transition ${isSelected ? 'border-violet-500 bg-violet-50 text-violet-800 dark:bg-violet-900/30 dark:text-violet-300 dark:border-violet-500' : 'border-gray-200 text-gray-700 hover:border-violet-300 hover:bg-violet-50/50 dark:border-gray-600 dark:text-gray-300 dark:hover:border-violet-500'}`}>
-                      <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>{opt}
+                      <div className="flex items-center justify-between gap-3">
+                      <span className={`flex-1 ${isEliminated ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}>
+                        <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span><span dangerouslySetInnerHTML={{ __html: katexReady ? renderLatex(opt) : opt }} />
+                      </span>
+                      <span
+                        role="button"
+                        tabIndex={0}
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          setEliminatedOptions(prev => {
+                            const next = prev.map(set => new Set(set))
+                            const qSet = new Set(next[currentIndex] ?? [])
+                            if (qSet.has(i)) {
+                              qSet.delete(i)
+                            } else {
+                              qSet.add(i)
+                              if (answers[currentIndex] === i) {
+                                const updated = [...answers]
+                                updated[currentIndex] = null
+                                setAnswers(updated)
+                              }
+                            }
+                            next[currentIndex] = qSet
+                            return next
+                          })
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault()
+                            e.stopPropagation()
+                            setEliminatedOptions(prev => {
+                              const next = prev.map(set => new Set(set))
+                              const qSet = new Set(next[currentIndex] ?? [])
+                              if (qSet.has(i)) qSet.delete(i)
+                              else qSet.add(i)
+                              next[currentIndex] = qSet
+                              return next
+                            })
+                          }
+                        }}
+                        className={`inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold transition ${isEliminated ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300' : 'text-gray-400 dark:text-gray-500 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'}`}
+                        title={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                        aria-label={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                      >
+                        ✕
+                      </span>
+                    </div>
                     </button>
                   )
                 })}
@@ -183,8 +254,7 @@ export default function CalcBCDiagnosticPage() {
               <button onClick={() => setCurrentIndex(p => Math.max(0, p - 1))} disabled={currentIndex === 0} className="rounded-xl border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-600 transition hover:bg-gray-50 disabled:opacity-40 dark:border-gray-600 dark:text-gray-400">← Previous</button>
               <span className="text-xs text-gray-500 dark:text-gray-400">{answeredCount}/{testData.questions.length} answered</span>
               <button
-                onClick={() => {
-                  const updated = [...answers]
+                onClick={() => { const updated = [...answers]
                   updated[currentIndex] = null
                   setAnswers(updated)
                   if (currentIndex < testData.questions.length - 1) {
@@ -284,6 +354,15 @@ export default function CalcBCDiagnosticPage() {
                 </ul>
               </div>
             </div>
+
+            {/* Review Test */}
+            {testData && (
+              <DiagnosticReview
+                questions={testData.questions}
+                answers={answers}
+                domainNames={Object.fromEntries(testData.domains.map(d => [d.id, d.name]))}
+              />
+            )}
 
             {/* Recommended Modules */}
             {results.recommendedTopics.length > 0 && (

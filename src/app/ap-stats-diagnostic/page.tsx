@@ -11,6 +11,7 @@ import {
   type APStatsDiagnosticTestData,
   type APStatsDiagnosticResults,
 } from '@/data/ap-statistics-diagnostic'
+import DiagnosticReview from '@/components/DiagnosticReview'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -36,6 +37,7 @@ export default function APStatsDiagnosticPage() {
   const [results, setResults] = useState<APStatsDiagnosticResults | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<(number | null)[]>([])
+  const [eliminatedOptions, setEliminatedOptions] = useState<Set<number>[]>([])
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
@@ -84,6 +86,7 @@ export default function APStatsDiagnosticPage() {
     setTestData(data)
     setCurrentIndex(0)
     setAnswers(new Array(data.questions.length).fill(null))
+    setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))
     setTimeRemaining(data.timeLimitMinutes * 60)
     setPhase('testing')
   }, [history])
@@ -177,10 +180,57 @@ export default function APStatsDiagnosticPage() {
               <div className="space-y-2">
                 {q.options.map((opt, i) => {
                   const isSelected = answers[currentIndex] === i
+                  const isEliminated = eliminatedOptions[currentIndex]?.has(i) ?? false
                   return (
-                    <button key={i} onClick={() => { const updated = [...answers]; updated[currentIndex] = i; setAnswers(updated) }}
+                    <button key={i} onClick={() => { if (isEliminated) return; const updated = [...answers]; updated[currentIndex] = i; setAnswers(updated) }}
                       className={`w-full rounded-xl border px-4 py-3 text-left text-sm transition ${isSelected ? 'border-indigo-500 bg-indigo-50 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300 dark:border-indigo-500' : 'border-gray-200 text-gray-700 hover:border-indigo-300 hover:bg-indigo-50/50 dark:border-gray-600 dark:text-gray-300 dark:hover:border-indigo-500'}`}>
-                      <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>{opt}
+                      <div className="flex items-center justify-between gap-3">
+                      <span className={`flex-1 ${isEliminated ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}>
+                        <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>{opt}
+                      </span>
+                      <span
+                        role="button"
+                        tabIndex={0}
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          setEliminatedOptions(prev => {
+                            const next = prev.map(set => new Set(set))
+                            const qSet = new Set(next[currentIndex] ?? [])
+                            if (qSet.has(i)) {
+                              qSet.delete(i)
+                            } else {
+                              qSet.add(i)
+                              if (answers[currentIndex] === i) {
+                                const updated = [...answers]
+                                updated[currentIndex] = null
+                                setAnswers(updated)
+                              }
+                            }
+                            next[currentIndex] = qSet
+                            return next
+                          })
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault()
+                            e.stopPropagation()
+                            setEliminatedOptions(prev => {
+                              const next = prev.map(set => new Set(set))
+                              const qSet = new Set(next[currentIndex] ?? [])
+                              if (qSet.has(i)) qSet.delete(i)
+                              else qSet.add(i)
+                              next[currentIndex] = qSet
+                              return next
+                            })
+                          }
+                        }}
+                        className={`inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold transition ${isEliminated ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300' : 'text-gray-400 dark:text-gray-500 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'}`}
+                        title={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                        aria-label={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                      >
+                        ✕
+                      </span>
+                    </div>
                     </button>
                   )
                 })}
@@ -191,8 +241,7 @@ export default function APStatsDiagnosticPage() {
               <button onClick={() => setCurrentIndex(prev => Math.max(0, prev - 1))} disabled={currentIndex === 0} className="rounded-xl border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-600 transition hover:bg-gray-50 disabled:opacity-40 dark:border-gray-600 dark:text-gray-400">← Previous</button>
               <span className="text-xs text-gray-500 dark:text-gray-400">{answeredCount}/{testData.questions.length} answered</span>
               <button
-                onClick={() => {
-                  const updated = [...answers]
+                onClick={() => { const updated = [...answers]
                   updated[currentIndex] = null
                   setAnswers(updated)
                   if (currentIndex < testData.questions.length - 1) {
@@ -279,6 +328,15 @@ export default function APStatsDiagnosticPage() {
                 </ul>
               </div>
             </div>
+
+            {/* Review Test */}
+            {testData && (
+              <DiagnosticReview
+                questions={testData.questions}
+                answers={answers}
+                domainNames={Object.fromEntries(testData.domains.map(d => [d.id, d.name]))}
+              />
+            )}
 
             {results.recommendedTopics.length > 0 && (
               <div className="mb-8 rounded-2xl border-2 border-indigo-300 bg-indigo-50 p-6 dark:border-indigo-700 dark:bg-indigo-900/20">

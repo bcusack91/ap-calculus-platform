@@ -192,16 +192,6 @@ const CALC_BC_DOMAINS: CalcBCDomain[] = [
     questionTarget: 3,
     source: 'bc',
   },
-  {
-    id: 'bc-exam-prep',
-    name: 'BC Exam Strategies',
-    topicSlugs: [
-      'bc-exam-strategies-calcbc',
-      'review-connections-calcbc',
-    ],
-    questionTarget: 2,
-    source: 'bc',
-  },
 ]
 
 export { CALC_BC_DOMAINS }

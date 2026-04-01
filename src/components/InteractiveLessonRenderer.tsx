@@ -99,7 +99,12 @@ function InlineLatex({ text, className }: { text: string; className?: string }) 
     <span className={className}>
       {parts.map((part, i) => {
         if (part.type === 'text') {
-          return <span key={i}>{part.content.replace(/\u0000DOLLAR\u0000/g, '$')}</span>
+          const restored = part.content.replace(/\u0000DOLLAR\u0000/g, '$')
+          // If text contains HTML tags, render as HTML
+          if (/<[a-z][\s\S]*>/i.test(restored)) {
+            return <span key={i} dangerouslySetInnerHTML={{ __html: restored }} />
+          }
+          return <span key={i}>{restored}</span>
         }
         try {
           return (
@@ -627,8 +632,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         : '/competitive'
       router.push(competitiveUrl)
     } else if (mustRedoUnit) {
-      // Score < 5/10: must redo the entire unit. Reset to part 1.
-      updateLessonPart(1 as LessonPart)
+      // Score < 5/10: review the current section, not the entire unit.
       setCurrentSectionIndex(0)
       setCompletedSections(new Set())
       window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -865,6 +869,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       <ExitQuiz
         topicSlug={topicSlug}
         topicTitle={lessonTitle}
+        courseSlug={courseSlug}
         questions={exitQuizQuestions}
         onComplete={handleExitQuizComplete}
         onCancel={() => setShowExitQuiz(false)}
@@ -2573,11 +2578,15 @@ function MultipleChoiceQuiz({
     Array(section.exercise?.questions?.length || 0).fill(false)
   )
   const [quizComplete, setQuizComplete] = useState<boolean>(false)
+  const [eliminatedOptions, setEliminatedOptions] = useState<Set<number>[]>(
+    Array.from({ length: section.exercise?.questions?.length || 0 }, () => new Set<number>())
+  )
 
   const questions = section.exercise?.questions || []
   const currentQuestion = questions[currentQuestionIndex]
 
   const handleAnswerSelect = (questionIndex: number, answerIndex: number) => {
+    if (eliminatedOptions[questionIndex]?.has(answerIndex)) return
     const newSelectedAnswers = [...selectedAnswers]
     newSelectedAnswers[questionIndex] = answerIndex
     setSelectedAnswers(newSelectedAnswers)
@@ -2585,6 +2594,26 @@ function MultipleChoiceQuiz({
     const newShowFeedback = [...showFeedback]
     newShowFeedback[questionIndex] = true
     setShowFeedback(newShowFeedback)
+  }
+
+  const toggleEliminate = (questionIndex: number, optionIndex: number) => {
+    if (showFeedback[questionIndex]) return
+    setEliminatedOptions(prev => {
+      const next = prev.map(set => new Set(set))
+      const qSet = new Set(next[questionIndex] ?? [])
+      if (qSet.has(optionIndex)) {
+        qSet.delete(optionIndex)
+      } else {
+        qSet.add(optionIndex)
+        if (selectedAnswers[questionIndex] === optionIndex) {
+          const updated = [...selectedAnswers]
+          updated[questionIndex] = null
+          setSelectedAnswers(updated)
+        }
+      }
+      next[questionIndex] = qSet
+      return next
+    })
   }
 
   const handleNext = () => {
@@ -2643,6 +2672,7 @@ function MultipleChoiceQuiz({
             const isSelected = selectedAnswers[currentQuestionIndex] === optionIndex
             const isCorrect = optionIndex === currentQuestion.correctAnswer
             const showingFeedback = showFeedback[currentQuestionIndex]
+            const isEliminated = eliminatedOptions[currentQuestionIndex]?.has(optionIndex) ?? false
 
             let buttonStyle = "w-full text-left p-4 rounded-lg border-2 transition-all "
             
@@ -2668,9 +2698,39 @@ function MultipleChoiceQuiz({
                 className={buttonStyle}
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-800"><InlineLatex text={option} /></span>
-                  {showingFeedback && isCorrect && <span className="text-green-600">✓</span>}
-                  {showingFeedback && isSelected && !isCorrect && <span className="text-red-600">✗</span>}
+                  <span className={`text-gray-800 ${isEliminated ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}>
+                    <InlineLatex text={option} />
+                  </span>
+                  <div className="flex items-center gap-2">
+                    {!showingFeedback && (
+                      <span
+                        role="button"
+                        tabIndex={0}
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          toggleEliminate(currentQuestionIndex, optionIndex)
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault()
+                            e.stopPropagation()
+                            toggleEliminate(currentQuestionIndex, optionIndex)
+                          }
+                        }}
+                        className={`inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold transition ${
+                          isEliminated
+                            ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300'
+                            : 'text-gray-400 dark:text-gray-500 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
+                        }`}
+                        title={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                        aria-label={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                      >
+                        ✕
+                      </span>
+                    )}
+                    {showingFeedback && isCorrect && <span className="text-green-600">✓</span>}
+                    {showingFeedback && isSelected && !isCorrect && <span className="text-red-600">✗</span>}
+                  </div>
                 </div>
               </button>
             )
@@ -2731,6 +2791,7 @@ function MiniBossBattle({
   const [showFeedback, setShowFeedback] = useState<boolean>(false)
   const [feedbackType, setFeedbackType] = useState<'correct' | 'incorrect'>('correct')
   const [usedQuestionIds, setUsedQuestionIds] = useState<string[]>([])
+  const [eliminatedOptions, setEliminatedOptions] = useState<Set<string>>(new Set())
   const [aiThinking, setAiThinking] = useState<boolean>(false)
   const [entranceAnimComplete, setEntranceAnimComplete] = useState<boolean>(false)
   const [aiTimerActive, setAiTimerActive] = useState<boolean>(false)
@@ -2811,6 +2872,7 @@ function MiniBossBattle({
         options: shuffledOptions
       })
       setUsedQuestionIds(prev => [...prev, question.id])
+      setEliminatedOptions(new Set())
       setAiTimerActive(false) // Reset AI timer for new question
     })
     
@@ -2837,7 +2899,24 @@ function MiniBossBattle({
 
   const handleAnswerSelect = (optionLabel: string) => {
     if (showFeedback) return
+    if (eliminatedOptions.has(optionLabel)) return
     setSelectedAnswer(optionLabel)
+  }
+
+  const toggleEliminate = (optionLabel: string) => {
+    if (showFeedback) return
+    setEliminatedOptions(prev => {
+      const next = new Set(prev)
+      if (next.has(optionLabel)) {
+        next.delete(optionLabel)
+      } else {
+        next.add(optionLabel)
+        if (selectedAnswer === optionLabel) {
+          setSelectedAnswer('')
+        }
+      }
+      return next
+    })
   }
 
   const handleSubmit = () => {
@@ -3074,7 +3153,7 @@ function MiniBossBattle({
                     {option.label}
                   </span>
                   <div 
-                    className="text-xl flex-1"
+                    className={`text-xl flex-1 ${eliminatedOptions.has(option.label) ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}
                     dangerouslySetInnerHTML={{
                       __html: renderKatexSync(option.value, {
                         throwOnError: false,
@@ -3082,6 +3161,32 @@ function MiniBossBattle({
                       })
                     }}
                   />
+                  {!showFeedback && (
+                    <span
+                      role="button"
+                      tabIndex={0}
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        toggleEliminate(option.label)
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault()
+                          e.stopPropagation()
+                          toggleEliminate(option.label)
+                        }
+                      }}
+                      className={`inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold transition ${
+                        eliminatedOptions.has(option.label)
+                          ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300'
+                          : 'text-gray-400 dark:text-gray-500 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
+                      }`}
+                      title={eliminatedOptions.has(option.label) ? 'Restore this answer' : 'Eliminate this answer'}
+                      aria-label={eliminatedOptions.has(option.label) ? 'Restore this answer' : 'Eliminate this answer'}
+                    >
+                      ✕
+                    </span>
+                  )}
                   {showFeedback && selectedAnswer === option.label && !option.isCorrect && option.explanation && (
                     <span className="text-xs text-red-600 dark:text-red-400 italic">
                       {option.explanation}

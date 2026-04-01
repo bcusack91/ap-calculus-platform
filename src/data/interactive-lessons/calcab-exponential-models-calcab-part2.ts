@@ -10,7 +10,7 @@ export const calcabExpModelsPart2Data = {
 
 ### The Model
 
-$$\frac{dT}{dt} = k(T - T_s)$$
+$$\\frac{dT}{dt} = k(T - T_s)$$
 
 where $T_s$ is the surrounding temperature.
 

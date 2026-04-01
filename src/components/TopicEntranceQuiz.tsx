@@ -4,7 +4,8 @@ import { useState, useEffect, useMemo, useCallback } from 'react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
 import type { EntranceQuizQuestion } from '@/data/entrance-quizzes'
-import APChemReferenceModal from './APChemReferenceModal'
+import ReferenceSheetModal from './ReferenceSheetModal'
+import { hasReferenceSheet } from '@/data/ap-reference-sheets'
 
 interface TopicEntranceQuizProps {
   topicTitle: string
@@ -48,6 +49,7 @@ export default function TopicEntranceQuiz({
   const [answers, setAnswers] = useState<{ questionId: string; selectedAnswer: number; correct: boolean; partNumber: number }[]>([])
   const [katexReady, setKatexReady] = useState(false)
   const [showReference, setShowReference] = useState(false)
+  const [eliminatedOptions, setEliminatedOptions] = useState<Set<number>>(new Set())
 
   useEffect(() => { preloadKatex().then(() => setKatexReady(true)) }, [])
 
@@ -113,6 +115,7 @@ export default function TopicEntranceQuiz({
       setCurrentQuestion(prev => prev + 1)
       setSelectedAnswer(null)
       setShowExplanation(false)
+      setEliminatedOptions(new Set())
     } else {
       setPhase('results')
     }
@@ -123,10 +126,26 @@ export default function TopicEntranceQuiz({
       setCurrentQuestion(prev => prev + 1)
       setSelectedAnswer(null)
       setShowExplanation(false)
+      setEliminatedOptions(new Set())
     } else {
       setPhase('results')
     }
   }, [currentQuestion, totalQuestions])
+
+  const toggleEliminate = useCallback((idx: number) => {
+    if (showExplanation) return
+    setEliminatedOptions(prev => {
+      const next = new Set(prev)
+      if (next.has(idx)) {
+        next.delete(idx)
+      } else {
+        next.add(idx)
+        // Deselect if currently selected
+        if (selectedAnswer === idx) setSelectedAnswer(null)
+      }
+      return next
+    })
+  }, [showExplanation, selectedAnswer])
 
   const handleFinish = useCallback((destination?: 'dashboard' | 'course' | 'competitive') => {
     onComplete(masteredParts, destination)
@@ -210,15 +229,17 @@ export default function TopicEntranceQuiz({
           </div>
 
           {/* Reference material buttons */}
-          <div className="flex gap-2 mb-4">
-            <button
-              onClick={() => setShowReference(true)}
-              className="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-            >
-              📋 Reference Sheet
-            </button>
-          </div>
-          <APChemReferenceModal open={showReference} onClose={() => setShowReference(false)} />
+          {courseSlug && hasReferenceSheet(courseSlug) && (
+            <div className="flex gap-2 mb-4">
+              <button
+                onClick={() => setShowReference(true)}
+                className="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              >
+                📋 Reference Sheet
+              </button>
+            </div>
+          )}
+          <ReferenceSheetModal open={showReference} onClose={() => setShowReference(false)} courseSlug={courseSlug} />
 
           {/* Question */}
           <div
@@ -229,6 +250,7 @@ export default function TopicEntranceQuiz({
           {/* Options */}
           <div className="space-y-3 mb-6">
             {renderedOptions.map((optionHtml, idx) => {
+              const isEliminated = eliminatedOptions.has(idx)
               let borderColor = 'border-gray-200 dark:border-gray-700'
               let bgColor = 'bg-white dark:bg-gray-800'
               let textColor = 'text-gray-900 dark:text-white'
@@ -249,17 +271,32 @@ export default function TopicEntranceQuiz({
               }
 
               return (
-                <button
-                  key={idx}
-                  onClick={() => !showExplanation && setSelectedAnswer(idx)}
-                  disabled={showExplanation}
-                  className={`w-full text-left p-4 rounded-xl border-2 transition-all ${borderColor} ${bgColor} ${textColor} ${
-                    !showExplanation ? 'hover:border-purple-400 cursor-pointer' : 'cursor-default'
-                  }`}
-                >
-                  <span className="font-semibold mr-2">{optionLetters[idx]}.</span>
-                  <span dangerouslySetInnerHTML={{ __html: optionHtml }} />
-                </button>
+                <div key={idx} className="relative group">
+                  <button
+                    onClick={() => !showExplanation && !isEliminated && setSelectedAnswer(idx)}
+                    disabled={showExplanation || isEliminated}
+                    className={`w-full text-left p-4 rounded-xl border-2 transition-all ${borderColor} ${bgColor} ${textColor} ${
+                      !showExplanation && !isEliminated ? 'hover:border-purple-400 cursor-pointer' : 'cursor-default'
+                    } ${isEliminated && !showExplanation ? 'opacity-45 line-through decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}
+                  >
+                    <span className="font-semibold mr-2">{optionLetters[idx]}.</span>
+                    <span dangerouslySetInnerHTML={{ __html: optionHtml }} />
+                  </button>
+                  {/* Eliminate / restore button */}
+                  {!showExplanation && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); toggleEliminate(idx) }}
+                      title={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                      className={`absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full flex items-center justify-center transition-all text-xs font-bold ${
+                        isEliminated
+                          ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300 hover:bg-gray-400 dark:hover:bg-gray-500'
+                          : 'bg-transparent text-gray-400 dark:text-gray-500 opacity-0 group-hover:opacity-100 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'
+                      }`}
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
               )
             })}
           </div>

@@ -11,14 +11,14 @@ export const calcabTablesDataPart6Data = {
     {
       id: 'td6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Table Workshop** 🎯\n\n| $t$ (min) | 0 | 3 | 7 | 10 |\n|---|---|---|---|---|\n| $v(t)$ (ft/min) | 5 | 8 | 2 | 6 |',
+      content: '**Table Workshop** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Using the trapezoidal rule, estimate the total distance traveled from $t = 0$ to $t = 10$.',
-            options: ['$49.5$ ft', '$55$ ft', '$42$ ft', '$60$ ft'],
+            question: '<table style="border-collapse:collapse;margin:8px auto;text-align:center"><tr><th style="border:1px solid #888;padding:4px 12px"><i>t</i> (min)</th><td style="border:1px solid #888;padding:4px 12px">0</td><td style="border:1px solid #888;padding:4px 12px">3</td><td style="border:1px solid #888;padding:4px 12px">7</td><td style="border:1px solid #888;padding:4px 12px">10</td></tr><tr><th style="border:1px solid #888;padding:4px 12px"><i>v</i>(<i>t</i>) (ft/min)</th><td style="border:1px solid #888;padding:4px 12px">5</td><td style="border:1px solid #888;padding:4px 12px">8</td><td style="border:1px solid #888;padding:4px 12px">2</td><td style="border:1px solid #888;padding:4px 12px">6</td></tr></table>Using the trapezoidal rule, estimate the total distance traveled from $t = 0$ to $t = 10$.',
+            options: ['$51.5$ ft', '$55$ ft', '$42$ ft', '$60$ ft'],
             correctAnswer: 0,
-            explanation: '$\\frac{3}{2}(5+8) + \\frac{4}{2}(8+2) + \\frac{3}{2}(2+6) = 19.5 + 20 + 12 = 51.5$. Hmm: $\\frac{3}{2}(13) + \\frac{4}{2}(10) + \\frac{3}{2}(8) = 19.5 + 20 + 12 = 51.5$. This should be displacement, not distance, since all values are positive this equals distance too.'
+            explanation: 'Trap $= \\frac{3}{2}(5+8) + \\frac{4}{2}(8+2) + \\frac{3}{2}(2+6) = 19.5 + 20 + 12 = 51.5$ ft.'
           }
         ]
       }

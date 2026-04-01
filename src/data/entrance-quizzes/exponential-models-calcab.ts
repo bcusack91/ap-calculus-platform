@@ -75,7 +75,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'em-ent-4b',
-    question: '\\$1000 at 5% compounded continuously for 10 years gives:',
+    question: '$1000 at 5% compounded continuously for 10 years gives:',
     options: ['$\\$1000e^{0.5}$', '$\\$1500$', '$\\$1000e^{50}$', '$\\$1000(1.05)^{10}$'],
     correctIndex: 0,
     explanation: '$A = 1000e^{(0.05)(10)} = 1000e^{0.5}$.',

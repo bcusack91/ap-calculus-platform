@@ -121,7 +121,7 @@ export default async function InteractivePage(props: InteractivePageProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-gray-900">
-      <div className="container py-10">
+      <div className="container pt-4 pb-10">
         {/* Load KaTeX from CDN */}
         <Script 
           src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" 
@@ -141,7 +141,7 @@ export default async function InteractivePage(props: InteractivePageProps) {
         </nav>
 
         {/* Header with special interactive badge */}
-        <div className="mb-8 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 text-white p-8 rounded-2xl shadow-2xl relative overflow-hidden">
+        <div className="mb-4 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 text-white p-6 rounded-2xl shadow-2xl relative overflow-hidden">
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-purple-400/20 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>

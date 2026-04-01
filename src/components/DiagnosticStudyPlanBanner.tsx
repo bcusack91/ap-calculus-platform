@@ -10,6 +10,12 @@ interface DiagnosticResult {
   recommendedTopics?: { slug: string; name: string; priority: string }[]
 }
 
+interface TopicProgressInfo {
+  status: string
+  masteryLevel: number
+  completedAt: string | null
+}
+
 /**
  * Maps course slugs to their diagnostic API history endpoint and styling.
  */
@@ -24,6 +30,7 @@ const diagnosticConfig: Record<string, { apiPath: string; icon: string; label: s
 export default function DiagnosticStudyPlanBanner({ courseSlug }: { courseSlug: string }) {
   const { data: session, status } = useSession()
   const [result, setResult] = useState<DiagnosticResult | null>(null)
+  const [topicProgress, setTopicProgress] = useState<Record<string, TopicProgressInfo>>({})
 
   const config = diagnosticConfig[courseSlug]
 
@@ -33,13 +40,63 @@ export default function DiagnosticStudyPlanBanner({ courseSlug }: { courseSlug: 
       .then(r => r.ok ? r.json() : null)
       .then(data => {
         if (data?.attempts?.length > 0) {
-          setResult(data.attempts[0].results as DiagnosticResult)
+          const latestResult = data.attempts[0].results as DiagnosticResult
+          setResult(latestResult)
+
+          // Fetch progress for recommended topics
+          const slugs = latestResult.recommendedTopics?.map(t => t.slug)
+          if (slugs?.length) {
+            fetch(`/api/progress/batch?slugs=${slugs.join(',')}`)
+              .then(r => r.ok ? r.json() : null)
+              .then(progressData => {
+                if (progressData?.progress) {
+                  setTopicProgress(progressData.progress)
+                }
+              })
+              .catch(() => {})
+          }
         }
       })
       .catch(() => {})
   }, [status, config])
 
   if (!config || !result?.recommendedTopics?.length) return null
+
+  // Filter out topics that are COMPLETED or MASTERED
+  const remainingTopics = result.recommendedTopics.filter(topic => {
+    const progress = topicProgress[topic.slug]
+    if (!progress) return true
+    return progress.status !== 'COMPLETED' && progress.status !== 'MASTERED'
+  })
+
+  const completedCount = result.recommendedTopics.length - remainingTopics.length
+
+  // All recommended topics completed — show congratulations
+  if (remainingTopics.length === 0 && completedCount > 0) {
+    return (
+      <div className={`rounded-2xl border-2 border-green-400 dark:border-green-600 bg-gradient-to-r from-green-50 via-emerald-50 to-green-50 dark:from-green-900/30 dark:via-emerald-900/20 dark:to-green-900/30 p-6 sm:p-8 mb-8 shadow-sm`}>
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
+              🎉 Study Plan Complete!
+            </h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+              You&apos;ve completed all {completedCount} recommended topic{completedCount !== 1 ? 's' : ''} from your diagnostic. Consider retaking the diagnostic to measure your improvement!
+            </p>
+          </div>
+          <Link
+            href={config.diagnosticHref}
+            className={`text-xs font-medium ${config.accentColor} hover:underline whitespace-nowrap flex-shrink-0`}
+          >
+            Retake Test →
+          </Link>
+        </div>
+      </div>
+    )
+  }
+
+  // No progress data loaded yet, or no topics were completed — hide banner if no topics
+  if (remainingTopics.length === 0) return null
 
   return (
     <div className={`rounded-2xl border-2 ${config.borderColor} bg-gradient-to-r ${config.bgGradient} p-6 sm:p-8 mb-8 shadow-sm`}>
@@ -49,7 +106,9 @@ export default function DiagnosticStudyPlanBanner({ courseSlug }: { courseSlug: 
             {config.icon} Continue Your Study Plan
           </h3>
           <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-            Based on your diagnostic (AP Score: {result.estimatedAPScore}/5, {result.percentage}%) — focus on these topics:
+            Based on your diagnostic (AP Score: {result.estimatedAPScore}/5, {result.percentage}%)
+            {completedCount > 0 && ` — ${completedCount} topic${completedCount !== 1 ? 's' : ''} completed`}
+            {completedCount > 0 ? ', focus on the remaining:' : ' — focus on these topics:'}
           </p>
         </div>
         <Link
@@ -60,7 +119,7 @@ export default function DiagnosticStudyPlanBanner({ courseSlug }: { courseSlug: 
         </Link>
       </div>
       <div className="space-y-2">
-        {result.recommendedTopics.map((topic, i) => (
+        {remainingTopics.map((topic, i) => (
           <Link
             key={topic.slug}
             href={`/topics/${topic.slug}`}

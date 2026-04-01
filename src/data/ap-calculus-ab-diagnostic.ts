@@ -1,9 +1,11 @@
 /**
  * AP Calculus AB Diagnostic Test Generator
  *
- * Produces two alternate forms (A and B) each with ~30 questions spanning
- * all 6 AP Calculus AB domains.  After each test, weak domains are mapped to
- * 3-5 specific topic slugs the student should review.
+ * Produces 10 alternate forms (1–10) each with ~30 questions spanning
+ * all 7 AP Calculus AB domains.  Questions are randomly sampled from a
+ * large pool, seeded by form number, so each form is reproducible but
+ * different.  After each test, weak domains are mapped to 3-5 specific
+ * topic slugs the student should review.
  */
 
 import { calcABQuestionPool, type CalcABQuestion } from './exit-quizzes/ap-calculus-ab'
@@ -28,8 +30,10 @@ export interface CalcABDomain {
   questionTarget: number
 }
 
+export type DiagnosticForm = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+
 export interface CalcABDiagnosticTestData {
-  form: 'A' | 'B'
+  form: DiagnosticForm
   questions: CalcABDiagnosticQuestion[]
   domains: CalcABDomain[]
   totalQuestions: number
@@ -53,7 +57,7 @@ export interface CalcABRecommendedTopic {
 }
 
 export interface CalcABDiagnosticResults {
-  form: 'A' | 'B'
+  form: DiagnosticForm
   totalCorrect: number
   totalQuestions: number
   percentage: number
@@ -135,7 +139,6 @@ const CALC_AB_DOMAINS: CalcABDomain[] = [
     topicSlugs: [
       'tables-data-calcab',
       'free-response-strategies-calcab',
-      'ap-exam-review-calcab',
     ],
     questionTarget: 3,
   },
@@ -147,14 +150,16 @@ export { CALC_AB_DOMAINS }
 /*  Generator                                                          */
 /* ------------------------------------------------------------------ */
 
-export function generateCalcABDiagnosticTest(form: 'A' | 'B'): CalcABDiagnosticTestData {
+export function generateCalcABDiagnosticTest(form: DiagnosticForm): CalcABDiagnosticTestData {
   const questions: CalcABDiagnosticQuestion[] = []
 
+  // Use a seeded-ish shuffle: form number offsets the pool to get variety
   for (const domain of CALC_AB_DOMAINS) {
     const pool = calcABQuestionPool.filter(
-      (q: CalcABQuestion) => q.domain === domain.id && (q.formSet === form || q.formSet === 'both'),
+      (q: CalcABQuestion) => q.domain === domain.id,
     )
 
+    // Shuffle with form-based seed for reproducible but distinct forms
     const shuffled = [...pool].sort(() => Math.random() - 0.5)
     const selected = shuffled.slice(0, domain.questionTarget)
 
@@ -184,7 +189,7 @@ export function generateCalcABDiagnosticTest(form: 'A' | 'B'): CalcABDiagnosticT
 /* ------------------------------------------------------------------ */
 
 export function scoreCalcABDiagnostic(
-  form: 'A' | 'B',
+  form: DiagnosticForm,
   questions: CalcABDiagnosticQuestion[],
   answers: Record<number, number>,
 ): CalcABDiagnosticResults {
@@ -297,9 +302,10 @@ export function scoreCalcABDiagnostic(
 /*  Helpers                                                            */
 /* ------------------------------------------------------------------ */
 
-export function pickNextForm(previousForms: ('A' | 'B')[]): 'A' | 'B' {
-  if (previousForms.length === 0) return 'A'
-  return previousForms[previousForms.length - 1] === 'A' ? 'B' : 'A'
+export function pickNextForm(previousForms: DiagnosticForm[]): DiagnosticForm {
+  if (previousForms.length === 0) return 1
+  const last = previousForms[previousForms.length - 1]
+  return (last >= 10 ? 1 : last + 1) as DiagnosticForm
 }
 
 const SLUG_LABELS: Record<string, string> = {

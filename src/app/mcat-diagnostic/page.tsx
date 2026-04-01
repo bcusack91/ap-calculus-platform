@@ -11,6 +11,7 @@ import {
   type MCATDiagnosticResults,
 } from '@/data/mcat-practice/diagnostic-generator'
 import { trackCustomEvent } from '@/lib/analytics'
+import DiagnosticReview from '@/components/DiagnosticReview'
 
 const MCAT_DIAGNOSTIC_SEEN_KEY = 'mcat-diagnostic-seen-v1'
 
@@ -130,6 +131,7 @@ export default function MCATDiagnosticPage() {
   const [results, setResults] = useState<MCATDiagnosticResults | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<(number | null)[]>([])
+  const [eliminatedOptions, setEliminatedOptions] = useState<Set<number>[]>([])
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<
@@ -201,6 +203,7 @@ export default function MCATDiagnosticPage() {
     setTestData(data)
     setCurrentIndex(0)
     setAnswers(new Array(data.questions.length).fill(null))
+    setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))
     setTimeRemaining(data.timeLimitMinutes * 60)
     setPhase('testing')
   }, [])
@@ -367,11 +370,11 @@ export default function MCATDiagnosticPage() {
               <div className="space-y-2">
                 {q.options.map((opt, i) => {
                   const isSelected = answers[currentIndex] === i
+                  const isEliminated = eliminatedOptions[currentIndex]?.has(i) ?? false
                   return (
                     <button
                       key={i}
-                      onClick={() => {
-                        const updated = [...answers]
+                      onClick={() => { const updated = [...answers]
                         updated[currentIndex] = i
                         setAnswers(updated)
                       }}
@@ -381,8 +384,53 @@ export default function MCATDiagnosticPage() {
                           : 'border-gray-200 text-gray-700 hover:border-emerald-300 hover:bg-emerald-50/50 dark:border-gray-600 dark:text-gray-300 dark:hover:border-emerald-500'
                       }`}
                     >
-                      <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>
-                      {opt}
+                      <div className="flex items-center justify-between gap-3">
+                      <span className={`flex-1 ${isEliminated ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}>
+                        <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>{opt}
+                      </span>
+                      <span
+                        role="button"
+                        tabIndex={0}
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          setEliminatedOptions(prev => {
+                            const next = prev.map(set => new Set(set))
+                            const qSet = new Set(next[currentIndex] ?? [])
+                            if (qSet.has(i)) {
+                              qSet.delete(i)
+                            } else {
+                              qSet.add(i)
+                              if (answers[currentIndex] === i) {
+                                const updated = [...answers]
+                                updated[currentIndex] = null
+                                setAnswers(updated)
+                              }
+                            }
+                            next[currentIndex] = qSet
+                            return next
+                          })
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault()
+                            e.stopPropagation()
+                            setEliminatedOptions(prev => {
+                              const next = prev.map(set => new Set(set))
+                              const qSet = new Set(next[currentIndex] ?? [])
+                              if (qSet.has(i)) qSet.delete(i)
+                              else qSet.add(i)
+                              next[currentIndex] = qSet
+                              return next
+                            })
+                          }
+                        }}
+                        className={`inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold transition ${isEliminated ? 'bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-300' : 'text-gray-400 dark:text-gray-500 hover:bg-red-100 hover:text-red-500 dark:hover:bg-red-900/30 dark:hover:text-red-400'}`}
+                        title={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                        aria-label={isEliminated ? 'Restore this answer' : 'Eliminate this answer'}
+                      >
+                        ✕
+                      </span>
+                    </div>
                     </button>
                   )
                 })}
@@ -400,8 +448,7 @@ export default function MCATDiagnosticPage() {
               </button>
               <span className="text-xs text-gray-500 dark:text-gray-400">{answeredCount}/{testData.questions.length} answered</span>
               <button
-                onClick={() => {
-                  const updated = [...answers]
+                onClick={() => { const updated = [...answers]
                   updated[currentIndex] = null
                   setAnswers(updated)
                   if (currentIndex < testData.questions.length - 1) {
@@ -556,6 +603,15 @@ export default function MCATDiagnosticPage() {
                 </ul>
               </div>
             </div>
+
+            {/* Review Test */}
+            {testData && (
+              <DiagnosticReview
+                questions={testData.questions}
+                answers={answers}
+                domainNames={Object.fromEntries(testData.domains.map(d => [d.id, d.name]))}
+              />
+            )}
 
             {/* Actions */}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

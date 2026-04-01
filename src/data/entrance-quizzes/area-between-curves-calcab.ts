@@ -23,7 +23,7 @@ const questions: EntranceQuizQuestion[] = [
   { id: 'abc-ent-4b', question: 'If two curves cross at $x = 2$, you need to:', options: ['Ignore the crossing', 'Split the integral at $x = 2$', 'Only integrate to $x = 2$', 'Use absolute values'], correctIndex: 1, explanation: 'When curves swap top/bottom, split the integral at the crossing point.', partNumber: 4, partTitle: 'Setting Up Integrals from Graphs' },
 
   // Part 5: Absolute Value Considerations
-  { id: 'abc-ent-5a', question: 'To handle regions where $f - g$ changes sign, use:', options: ['$\\int_a^b |f(x) - g(x)|\\,dx$', '$\\int_a^b [f(x) - g(x)]\\,dx$', '$|\\int_a^b f(x)\\,dx|$', '$\\int_a^b [f(x) + g(x)]\\,dx$'], correctIndex: 0, explanation: 'Absolute value ensures all area is positive.', partNumber: 5, partTitle: 'Absolute Value Considerations' },
+  { id: 'abc-ent-5a', question: 'To handle regions where $f - g$ changes sign, use:', options: ['$\\int_a^b \\left| f(x) - g(x) \\right|\\,dx$', '$\\int_a^b [f(x) - g(x)]\\,dx$', '$\\left| \\int_a^b f(x)\\,dx \\right|$', '$\\int_a^b [f(x) + g(x)]\\,dx$'], correctIndex: 0, explanation: 'Absolute value ensures all area is positive.', partNumber: 5, partTitle: 'Absolute Value Considerations' },
   { id: 'abc-ent-5b', question: 'The total shaded area is always:', options: ['Zero', 'Nonnegative', 'Equal to displacement', 'Negative'], correctIndex: 1, explanation: 'Geometric area is always nonnegative.', partNumber: 5, partTitle: 'Absolute Value Considerations' },
 
   // Part 6: Problem-Solving Workshop
