@@ -1,6 +1,9 @@
 import { prisma } from '../src/lib/prisma'
 
 async function main() {
+  const __seedCourse = await (prisma as any).course.findFirst({ where: { slug: 'ap-calculus-ab' } })
+  const __courseId = __seedCourse?.id
+
   console.log('Seeding database...')
 
   // Create categories
@@ -13,6 +16,8 @@ async function main() {
       description: 'Understanding limits, continuity, and the foundations of calculus',
       order: 1,
       icon: '∞'
+    ,
+      courseId: __courseId
     }
   })
 
@@ -25,6 +30,8 @@ async function main() {
       description: 'Differentiation rules, techniques, and applications',
       order: 2,
       icon: 'd/dx'
+    ,
+      courseId: __courseId
     }
   })
 

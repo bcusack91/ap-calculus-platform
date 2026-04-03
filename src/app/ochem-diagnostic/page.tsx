@@ -258,7 +258,7 @@ export default function OChemDiagnosticPage() {
               <p className="mb-4 text-sm text-fuchsia-600 dark:text-fuchsia-400">Based on your results, review these {results.recommendedTopics.length} module{results.recommendedTopics.length > 1 ? 's' : ''}.</p>
               <div className="space-y-2">
                 {results.recommendedTopics.map((topic, i) => (
-                  <Link key={topic.slug} href={`/topics/${topic.slug}`} className="flex items-center justify-between rounded-xl border border-fuchsia-200 bg-white px-4 py-3 transition hover:border-fuchsia-400 hover:shadow-sm dark:border-fuchsia-700 dark:bg-gray-800 dark:hover:border-fuchsia-500 group">
+                  <Link key={topic.slug} href={`/topics/${topic.slug}/interactive`} className="flex items-center justify-between rounded-xl border border-fuchsia-200 bg-white px-4 py-3 transition hover:border-fuchsia-400 hover:shadow-sm dark:border-fuchsia-700 dark:bg-gray-800 dark:hover:border-fuchsia-500 group">
                     <div className="flex items-center gap-3">
                       <span className="flex h-7 w-7 items-center justify-center rounded-full bg-fuchsia-100 text-xs font-bold text-fuchsia-700 dark:bg-fuchsia-900/50 dark:text-fuchsia-300">{i + 1}</span>
                       <div>
@@ -315,7 +315,7 @@ export default function OChemDiagnosticPage() {
             <p className="mb-3 text-sm text-fuchsia-600 dark:text-fuchsia-400">From your last diagnostic — review these modules, then retake the test:</p>
             <div className="space-y-2">
               {lastRecommendedTopics.map((topic, i) => (
-                <Link key={topic.slug} href={`/topics/${topic.slug}`} className="flex items-center justify-between rounded-xl border border-fuchsia-200 bg-white px-4 py-3 transition hover:border-fuchsia-400 hover:shadow-sm dark:border-fuchsia-700 dark:bg-gray-800 group">
+                <Link key={topic.slug} href={`/topics/${topic.slug}/interactive`} className="flex items-center justify-between rounded-xl border border-fuchsia-200 bg-white px-4 py-3 transition hover:border-fuchsia-400 hover:shadow-sm dark:border-fuchsia-700 dark:bg-gray-800 group">
                   <div className="flex items-center gap-3">
                     <span className="flex h-6 w-6 items-center justify-center rounded-full bg-fuchsia-100 text-xs font-bold text-fuchsia-700 dark:bg-fuchsia-900/50 dark:text-fuchsia-300">{i + 1}</span>
                     <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-fuchsia-700 dark:group-hover:text-fuchsia-400">{topic.name}</span>

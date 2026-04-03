@@ -10,6 +10,9 @@ enum Difficulty {
 }
 
 async function main() {
+  const __seedCourse = await (prisma as any).course.findFirst({ where: { slug: 'ap-calculus-bc' } })
+  const __courseId = __seedCourse?.id
+
   console.log('🔄 Creating Sequences & Series (BC) micro-lessons - Part 2...')
 
   // Get the Sequences & Series category
@@ -22,6 +25,8 @@ async function main() {
       description: 'Sequences, infinite series, and convergence tests for Calculus BC',
       order: 7,
       icon: '∞',
+    
+      courseId: __courseId
     },
   })
 

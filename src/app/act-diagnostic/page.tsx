@@ -10,7 +10,7 @@ import {
   pickNextForm,
   type ACTDiagnosticTestData,
   type ACTDiagnosticResults,
-} from '@/data/act-diagnostic'
+} from '@/data/act-practice/diagnostic-generator'
 import DiagnosticReview from '@/components/DiagnosticReview'
 
 function formatTime(seconds: number): string {
@@ -67,14 +67,17 @@ export default function ACTDiagnosticPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
 
-  const startTest = useCallback(() => {
+  const [loading, setLoading] = useState(false)
+
+  const startTest = useCallback(async () => {
+    setLoading(true)
     const previousForms = history
       .map(h => (h.results as Record<string, unknown> | null)?.form as 'A' | 'B' | undefined)
       .filter((f): f is 'A' | 'B' => f === 'A' || f === 'B')
     const form = pickNextForm(previousForms)
-    const data = generateACTDiagnosticTest(form)
+    const data = await generateACTDiagnosticTest({ form })
     setTestData(data); setCurrentIndex(0); setAnswers(new Array(data.questions.length).fill(null))
-    setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>())); setTimeRemaining(data.timeLimitMinutes * 60); setPhase('testing')
+    setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>())); setTimeRemaining(data.timeLimitMinutes * 60); setPhase('testing'); setLoading(false)
   }, [history])
 
   const handleFinish = useCallback(async () => {
@@ -87,10 +90,18 @@ export default function ACTDiagnosticPage() {
     try {
       await fetch('/api/act-diagnostic/submit', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ category: `act-diagnostic-${testData.form}`, results: { form: diagnosticResults.form, totalCorrect: diagnosticResults.totalCorrect, totalQuestions: diagnosticResults.totalQuestions, percentage: diagnosticResults.percentage, estimatedComposite: diagnosticResults.estimatedComposite, domains: diagnosticResults.domains, recommendedTopics: diagnosticResults.recommendedTopics }, weakAreas: diagnosticResults.weakAreas, strengths: diagnosticResults.strengths.join(', ') }),
+        body: JSON.stringify({ category: `act-diagnostic-${testData.form}`, results: { form: diagnosticResults.form, totalCorrect: diagnosticResults.totalCorrect, totalQuestions: diagnosticResults.totalQuestions, percentage: diagnosticResults.percentage, estimatedComposite: diagnosticResults.estimatedComposite, englishScore: diagnosticResults.englishScore, mathScore: diagnosticResults.mathScore, readingScore: diagnosticResults.readingScore, scienceScore: diagnosticResults.scienceScore, domains: diagnosticResults.domains, recommendedTopics: diagnosticResults.recommendedTopics }, weakAreas: diagnosticResults.weakAreas, strengths: diagnosticResults.strengths.join(', ') }),
       })
       const histRes = await fetch('/api/act-diagnostic/history')
       if (histRes.ok) { const histData = await histRes.json(); setHistory(histData.attempts ?? []) }
+
+      // Add flashcards for recommended (weak/moderate) topics
+      if (diagnosticResults.recommendedTopics.length > 0) {
+        fetch('/api/flashcards/add-from-missed', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topicSlugs: diagnosticResults.recommendedTopics.map((t: { slug: string }) => t.slug) }),
+        }).catch(() => {})
+      }
     } catch { /* silent */ }
   }, [testData, answers])
 
@@ -98,6 +109,20 @@ export default function ACTDiagnosticPage() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
         <div className="container py-12"><div className="mx-auto max-w-2xl space-y-6"><div className="h-10 w-64 animate-pulse rounded-lg bg-gray-200 dark:bg-gray-700" /><div className="h-64 animate-pulse rounded-xl bg-gray-200 dark:bg-gray-700" /></div></div>
+      </div>
+    )
+  }
+
+  /* LOADING PHASE */
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+        <div className="container py-12">
+          <div className="mx-auto max-w-2xl space-y-6 text-center">
+            <div className="h-8 w-48 mx-auto animate-pulse rounded-lg bg-gray-200 dark:bg-gray-700" />
+            <p className="text-gray-500">Generating diagnostic questions from question banks…</p>
+          </div>
+        </div>
       </div>
     )
   }
@@ -223,6 +248,22 @@ export default function ACTDiagnosticPage() {
             <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800"><p className="text-sm text-gray-500 dark:text-gray-400">Performance</p><p className="text-4xl">{scoreEmoji}</p><p className="text-xs text-gray-500 dark:text-gray-400">{results.estimatedComposite >= 30 ? 'Excellent' : results.estimatedComposite >= 24 ? 'Good' : 'Needs Review'}</p></div>
           </div>
 
+          {/* Per-Section Scores */}
+          <div className="mb-8 grid gap-3 sm:grid-cols-4">
+            {[
+              { label: 'English', score: results.englishScore },
+              { label: 'Math', score: results.mathScore },
+              { label: 'Reading', score: results.readingScore },
+              { label: 'Science', score: results.scienceScore },
+            ].map(s => (
+              <div key={s.label} className="rounded-xl border border-gray-200 bg-white p-4 text-center dark:border-gray-700 dark:bg-gray-800">
+                <p className="text-xs text-gray-500 dark:text-gray-400">{s.label}</p>
+                <p className="text-2xl font-bold text-gray-800 dark:text-gray-200">{s.score ?? '—'}</p>
+                <p className="text-xs text-gray-400">out of 36</p>
+              </div>
+            ))}
+          </div>
+
           <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-200">Section Breakdown</h3>
             <div className="space-y-3">
@@ -258,7 +299,7 @@ export default function ACTDiagnosticPage() {
               <p className="mb-4 text-sm text-red-600 dark:text-red-400">Based on your results, review these {results.recommendedTopics.length} module{results.recommendedTopics.length > 1 ? 's' : ''}.</p>
               <div className="space-y-2">
                 {results.recommendedTopics.map((topic, i) => (
-                  <Link key={topic.slug} href={`/topics/${topic.slug}`} className="flex items-center justify-between rounded-xl border border-red-200 bg-white px-4 py-3 transition hover:border-red-400 hover:shadow-sm dark:border-red-700 dark:bg-gray-800 dark:hover:border-red-500 group">
+                  <Link key={topic.slug} href={`/topics/${topic.slug}/interactive`} className="flex items-center justify-between rounded-xl border border-red-200 bg-white px-4 py-3 transition hover:border-red-400 hover:shadow-sm dark:border-red-700 dark:bg-gray-800 dark:hover:border-red-500 group">
                     <div className="flex items-center gap-3">
                       <span className="flex h-7 w-7 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-700 dark:bg-red-900/50 dark:text-red-300">{i + 1}</span>
                       <div>
@@ -276,10 +317,11 @@ export default function ACTDiagnosticPage() {
           <div className="mb-8 rounded-2xl border border-red-200 bg-red-50 p-5 dark:border-red-800 dark:bg-red-900/20">
             <h4 className="mb-2 font-semibold text-red-800 dark:text-red-300">🔄 How This Cycle Works</h4>
             <ol className="space-y-2 text-sm text-red-700 dark:text-red-400 list-decimal list-inside">
-              <li>Review the recommended modules above</li>
-              <li>Complete each module&apos;s lessons and practice problems</li>
+              <li>Click a recommended module above to start studying</li>
+              <li>Take the <strong>entrance quiz</strong> to pinpoint which lesson parts you need</li>
+              <li>Work through the <strong>interactive lessons</strong> at your own pace</li>
+              <li>Pass the <strong>exit quiz</strong> to confirm you&apos;ve mastered the topic</li>
               <li>Come back and take the next diagnostic (Form {results.form === 'A' ? 'B' : 'A'})</li>
-              <li>Get updated personalized recommendations</li>
               <li>Repeat until you&apos;re reaching your target composite score!</li>
             </ol>
             {completedModules > 0 && <p className="mt-3 text-xs text-red-500 dark:text-red-400">You&apos;ve taken {completedModules} diagnostic test{completedModules > 1 ? 's' : ''} so far — keep going!</p>}
@@ -315,7 +357,7 @@ export default function ACTDiagnosticPage() {
             <p className="mb-3 text-sm text-red-600 dark:text-red-400">From your last diagnostic — review these modules, then retake the test:</p>
             <div className="space-y-2">
               {lastRecommendedTopics.map((topic, i) => (
-                <Link key={topic.slug} href={`/topics/${topic.slug}`} className="flex items-center justify-between rounded-xl border border-red-200 bg-white px-4 py-3 transition hover:border-red-400 hover:shadow-sm dark:border-red-700 dark:bg-gray-800 group">
+                <Link key={topic.slug} href={`/topics/${topic.slug}/interactive`} className="flex items-center justify-between rounded-xl border border-red-200 bg-white px-4 py-3 transition hover:border-red-400 hover:shadow-sm dark:border-red-700 dark:bg-gray-800 group">
                   <div className="flex items-center gap-3">
                     <span className="flex h-6 w-6 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-700 dark:bg-red-900/50 dark:text-red-300">{i + 1}</span>
                     <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-red-700 dark:group-hover:text-red-400">{topic.name}</span>
@@ -341,7 +383,7 @@ export default function ACTDiagnosticPage() {
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
           <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">What to Expect</h3>
           <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-            {['~36 questions across English, Math, Reading & Science', '40 minute time limit', 'Estimated ACT composite score (1–36) with per-section breakdown', '3-5 personalized study recommendations', 'Alternating forms (A/B) with different questions each time'].map(item => (
+            {['~40 questions dynamically generated across English, Math, Reading & Science', '40 minute time limit', 'Estimated ACT composite score (1–36) with per-section scores', 'Personalized study recommendations with entrance quiz → lesson → exit quiz flow', 'Fresh questions each time from our question bank'].map(item => (
               <li key={item} className="flex items-start gap-2"><svg className="mt-0.5 h-4 w-4 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>{item}</li>
             ))}
           </ul>
@@ -354,11 +396,11 @@ export default function ACTDiagnosticPage() {
           <h3 className="mb-3 text-base font-semibold text-gray-800 dark:text-gray-200">🔄 How the Diagnostic Cycle Works</h3>
           <div className="space-y-3">
             {[
-              { step: '1', text: 'Take the diagnostic test — questions cover all 4 ACT sections' },
-              { step: '2', text: 'Get your results and 3-5 topic recommendations based on what you missed' },
-              { step: '3', text: 'Study those specific modules (lessons, practice problems, flashcards)' },
-              { step: '4', text: 'Retake the diagnostic — a different form with fresh questions' },
-              { step: '5', text: 'Repeat until you\'re reaching your target composite score!' },
+              { step: '1', text: 'Take the diagnostic test — questions drawn from all 4 ACT sections' },
+              { step: '2', text: 'Get your results and topic recommendations based on what you missed' },
+              { step: '3', text: 'Click a topic → take the entrance quiz to find your weak spots' },
+              { step: '4', text: 'Work through interactive lessons — text, visuals, and embedded practice' },
+              { step: '5', text: 'Pass the exit quiz to confirm mastery, then retake the diagnostic!' },
             ].map(item => (
               <div key={item.step} className="flex items-start gap-3">
                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-700 dark:bg-red-900/50 dark:text-red-300">{item.step}</span>

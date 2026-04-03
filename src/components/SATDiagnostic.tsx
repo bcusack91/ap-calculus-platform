@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import { renderRichText } from '@/lib/render-rich-text'
 import type {
   DiagnosticTestData,
   DiagnosticQuestion,
@@ -13,19 +14,7 @@ import type {
 /* ------------------------------------------------------------------ */
 
 function renderLatex(text: string): string {
-  return text.replace(
-    /\$\$(.*?)\$\$|\$(.*?)\$/g,
-    (_, block: string | undefined, inline: string | undefined) => {
-      const expr = block ?? inline ?? ''
-      try {
-        return renderKatexSync(expr, {
-          displayMode: !!block,
-        })
-      } catch {
-        return expr
-      }
-    },
-  )
+  return renderRichText(text)
 }
 
 function formatTime(seconds: number): string {
@@ -610,7 +599,7 @@ export function DiagnosticResultsView({
               {results.recommendedTopics.slice(0, 8).map(t => (
                 <a
                   key={t.slug}
-                  href={`/topics/${t.slug}`}
+                  href={`/topics/${t.slug}/interactive`}
                   className="flex items-center justify-between rounded-lg bg-gray-50 p-3 transition hover:bg-gray-100 dark:bg-gray-700/50 dark:hover:bg-gray-700"
                 >
                   <span className="text-sm font-medium text-gray-800 dark:text-gray-200">

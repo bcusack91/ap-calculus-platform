@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import { renderRichText } from '@/lib/render-rich-text'
 import 'katex/dist/katex.min.css'
 import ReferenceSheetModal from './ReferenceSheetModal'
 import { hasReferenceSheet, getCourseSlugFromTopic } from '@/data/ap-reference-sheets'
@@ -28,24 +29,9 @@ interface ExitQuizProps {
   mustRedoUnit: boolean // from last attempt
 }
 
-// Minimal LaTeX rendering using KaTeX (uses lazy-loaded module)
-// The regex (?:[^$\\]|\\.)+ handles escaped dollar signs (\$) inside math
+// Render text with markdown tables and KaTeX math
 function renderLatex(text: string): string {
-  try {
-    // Replace display math $$...$$ first
-    let result = text.replace(/\$\$((?:[^$\\]|\\.)+)\$\$/g, (_match, latex) => {
-      try { return renderKatexSync(latex.trim(), { displayMode: true }) }
-      catch { return latex }
-    })
-    // Then inline math $...$
-    result = result.replace(/\$((?:[^$\\]|\\.)+)\$/g, (_match, latex) => {
-      try { return renderKatexSync(latex.trim(), { displayMode: false }) }
-      catch { return latex }
-    })
-    return result
-  } catch {
-    return text
-  }
+  return renderRichText(text)
 }
 
 export default function ExitQuiz({

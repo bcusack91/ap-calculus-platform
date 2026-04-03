@@ -2,21 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import { renderRichText } from '@/lib/render-rich-text'
 
 function renderLatex(text: string): string {
-  try {
-    let result = text.replace(/\$\$((?:[^$\\]|\\.)+)\$\$/g, (_match, latex) => {
-      try { return renderKatexSync(latex.trim(), { displayMode: true }) }
-      catch { return latex }
-    })
-    result = result.replace(/\$((?:[^$\\]|\\.)+)\$/g, (_match, latex) => {
-      try { return renderKatexSync(latex.trim(), { displayMode: false }) }
-      catch { return latex }
-    })
-    return result
-  } catch {
-    return text
-  }
+  return renderRichText(text)
 }
 
 export interface ReviewQuestion {

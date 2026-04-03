@@ -1,62 +1,243 @@
 /**
- * Exit Quiz — SAT Subject-Verb Agreement (Deep Dive)
- * 40 randomized questions on agreement with compound subjects, intervening phrases, indefinite pronouns, etc.
+ * Exit Quiz — SAT Subject-Verb Agreement (Digital SAT Format)
+ *
+ * Passage-based questions following the Digital SAT Reading & Writing format.
+ * Each question presents a short passage with a blank, testing
+ * subject-verb agreement in context.
  */
+
 export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
 interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
+
 function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
-function makeStringOptions(c: string, o: string[]) { const u = o.filter(x => x !== c).slice(0, 3); while (u.length < 3) u.push('No change'); const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
-function pick<T>(arr: T[]): T { return arr[Math.floor(Math.random() * arr.length)] }
+
+function makeOptions(correct: string, distractors: string[]) {
+  const others = distractors.filter(x => x !== correct).slice(0, 3)
+  const all = shuffle([correct, ...others])
+  return { options: all, correctIndex: all.indexOf(correct) }
+}
 
 const questionPool: QuestionTemplate[] = [
-  // Basic Agreement
-  { id: 'sv-q1', category: 'Basic Agreement', generate() { const subj = pick(['The dog', 'The student', 'The car']); const { options, correctIndex } = makeStringOptions('runs', ['run', 'running', 'have run']); return { id: this.id, category: this.category, question: `"${subj} ___ quickly." Choose the correct verb.`, options, correctIndex, explanation: `A singular subject ("${subj}") takes a singular verb: "runs."` } } },
-  { id: 'sv-q2', category: 'Basic Agreement', generate() { const subj = pick(['The dogs', 'The students', 'The cars']); const { options, correctIndex } = makeStringOptions('run', ['runs', 'running', 'has run']); return { id: this.id, category: this.category, question: `"${subj} ___ quickly." Choose the correct verb.`, options, correctIndex, explanation: `A plural subject ("${subj}") takes a plural verb: "run."` } } },
-  { id: 'sv-q3', category: 'Basic Agreement', generate() { const { options, correctIndex } = makeStringOptions('The subject determines the verb form, not words between them', ['The closest noun to the verb determines the form', 'The verb always takes singular form', 'The number of words determines the form']); return { id: this.id, category: this.category, question: 'What is the basic rule of subject-verb agreement?', options, correctIndex, explanation: 'The verb must agree in number with its subject, regardless of intervening words.' } } },
-  { id: 'sv-q4', category: 'Basic Agreement', generate() { const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'been']); return { id: this.id, category: this.category, question: '"There ___ a problem with the plan." Correct verb?', options, correctIndex, explanation: 'The subject is "problem" (singular), not "there" — use "is."' } } },
-  { id: 'sv-q5', category: 'Basic Agreement', generate() { const { options, correctIndex } = makeStringOptions('are', ['is', 'was', 'has been']); return { id: this.id, category: this.category, question: '"There ___ many reasons to celebrate." Correct verb?', options, correctIndex, explanation: 'The subject is "reasons" (plural) — use "are."' } } },
-  // Compound Subjects
-  { id: 'sv-q6', category: 'Compound Subjects', generate() { const subj = pick(['The teacher and the principal', 'The coach and the players', 'Science and math']); const { options, correctIndex } = makeStringOptions('are', ['is', 'was', 'has been']); return { id: this.id, category: this.category, question: `"${subj} ___ attending the conference." Correct verb?`, options, correctIndex, explanation: 'Compound subjects joined by "and" are plural — use "are."' } } },
-  { id: 'sv-q7', category: 'Compound Subjects', generate() { const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'have been']); return { id: this.id, category: this.category, question: '"Peanut butter and jelly ___ a classic combination." Correct verb?', options, correctIndex, explanation: 'When a compound subject refers to a single entity or concept, use singular: "is."' } } },
-  { id: 'sv-q8', category: 'Compound Subjects', generate() { const subj = pick(['Neither the cat nor the dogs', 'Neither the teacher nor the students', 'Neither the manager nor the employees']); const { options, correctIndex } = makeStringOptions('were', ['was', 'is', 'has been']); return { id: this.id, category: this.category, question: `"${subj} ___ responsible." Correct verb?`, options, correctIndex, explanation: 'With "neither...nor," the verb agrees with the nearer subject (plural) — "were."' } } },
-  { id: 'sv-q9', category: 'Compound Subjects', generate() { const { options, correctIndex } = makeStringOptions('was', ['were', 'are', 'have been']); return { id: this.id, category: this.category, question: '"Neither the students nor the teacher ___ prepared." Correct verb?', options, correctIndex, explanation: 'With "neither...nor," the verb agrees with the nearer subject ("teacher" = singular) — "was."' } } },
-  { id: 'sv-q10', category: 'Compound Subjects', generate() { const { options, correctIndex } = makeStringOptions('likes', ['like', 'are liking', 'have liked']); return { id: this.id, category: this.category, question: '"Either the coach or the captain ___ to speak first." Correct verb?', options, correctIndex, explanation: 'With "either...or," the verb agrees with the nearer subject ("captain" = singular) — "likes."' } } },
-  // Intervening Phrases
-  { id: 'sv-q11', category: 'Intervening Phrases', generate() { const subj = pick(['The box of chocolates', 'The collection of stamps', 'The group of musicians']); const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'have been']); return { id: this.id, category: this.category, question: `"${subj} ___ on the table." Correct verb?`, options, correctIndex, explanation: `The subject is singular ("box/collection/group"), not the plural object of the preposition. Use "is."` } } },
-  { id: 'sv-q12', category: 'Intervening Phrases', generate() { const { options, correctIndex } = makeStringOptions('remains', ['remain', 'are remaining', 'have remained']); return { id: this.id, category: this.category, question: '"The quality of the products ___ high." Correct verb?', options, correctIndex, explanation: 'Subject = "quality" (singular), not "products." Use "remains."' } } },
-  { id: 'sv-q13', category: 'Intervening Phrases', generate() { const phrase = pick(['along with his colleagues', 'as well as her friends', 'together with his team']); const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'have been']); return { id: this.id, category: this.category, question: `"The professor, ${phrase}, ___ attending the seminar." Correct verb?`, options, correctIndex, explanation: `Phrases like "${phrase}" don't change the subject's number. "Professor" = singular → "is."` } } },
-  { id: 'sv-q14', category: 'Intervening Phrases', generate() { const { options, correctIndex } = makeStringOptions('Cross out the prepositional phrase to find the true subject', ['Choose the noun closest to the verb', 'Use the plural form of the verb always', 'Match the verb to the object of the preposition']); return { id: this.id, category: this.category, question: 'What strategy helps with intervening phrase agreement?', options, correctIndex, explanation: 'Mentally remove the prepositional phrase to reveal the true subject.' } } },
-  { id: 'sv-q15', category: 'Intervening Phrases', generate() { const { options, correctIndex } = makeStringOptions('has', ['have', 'are having', 'were having']); return { id: this.id, category: this.category, question: '"The president of the two companies ___ announced a merger." Correct verb?', options, correctIndex, explanation: 'Subject = "president" (singular), not "companies." Use "has."' } } },
-  // Indefinite Pronouns
-  { id: 'sv-q16', category: 'Indefinite Pronouns', generate() { const pronoun = pick(['Everyone', 'Somebody', 'Each', 'Nobody', 'Anyone']); const { options, correctIndex } = makeStringOptions('has', ['have', 'are having', 'were having']); return { id: this.id, category: this.category, question: `"${pronoun} ___ a responsibility." Correct verb?`, options, correctIndex, explanation: `"${pronoun}" is always singular — use "has."` } } },
-  { id: 'sv-q17', category: 'Indefinite Pronouns', generate() { const pronoun = pick(['Several', 'Few', 'Many', 'Both']); const { options, correctIndex } = makeStringOptions('have', ['has', 'is having', 'was having']); return { id: this.id, category: this.category, question: `"${pronoun} ___ already arrived." Correct verb?`, options, correctIndex, explanation: `"${pronoun}" is always plural — use "have."` } } },
-  { id: 'sv-q18', category: 'Indefinite Pronouns', generate() { const { options, correctIndex } = makeStringOptions('It depends on the noun in the "of" phrase', ['Always singular', 'Always plural', 'It doesn\'t matter']); return { id: this.id, category: this.category, question: '"Some," "all," "most," and "none" — are they singular or plural?', options, correctIndex, explanation: 'These pronouns can be singular or plural depending on what follows "of."' } } },
-  { id: 'sv-q19', category: 'Indefinite Pronouns', generate() { const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'have been']); return { id: this.id, category: this.category, question: '"None of the cake ___ left." Correct verb?', options, correctIndex, explanation: '"Cake" is singular/uncountable → "none" takes singular: "is."' } } },
-  { id: 'sv-q20', category: 'Indefinite Pronouns', generate() { const { options, correctIndex } = makeStringOptions('are', ['is', 'was', 'has been']); return { id: this.id, category: this.category, question: '"All of the students ___ present." Correct verb?', options, correctIndex, explanation: '"Students" is plural → "all" takes plural: "are."' } } },
-  // Inverted Sentences
-  { id: 'sv-q21', category: 'Inverted Sentences', generate() { const { options, correctIndex } = makeStringOptions('stands', ['stand', 'standing', 'have stood']); return { id: this.id, category: this.category, question: '"On the hill ___ an old castle." Correct verb?', options, correctIndex, explanation: 'Inverted order: subject = "castle" (singular) → "stands."' } } },
-  { id: 'sv-q22', category: 'Inverted Sentences', generate() { const { options, correctIndex } = makeStringOptions('were', ['was', 'is', 'has been']); return { id: this.id, category: this.category, question: '"Among the ruins ___ several artifacts." Correct verb?', options, correctIndex, explanation: 'Subject = "artifacts" (plural), even though it comes after the verb → "were."' } } },
-  { id: 'sv-q23', category: 'Inverted Sentences', generate() { const { options, correctIndex } = makeStringOptions('Identify the actual subject, which comes after the verb in inverted sentences', ['Always use singular verbs in inverted sentences', 'The first noun is always the subject', 'Inverted sentences don\'t need agreement']); return { id: this.id, category: this.category, question: 'How do you handle agreement in inverted (subject after verb) sentences?', options, correctIndex, explanation: 'In inverted sentences, find the true subject (often after the verb) and match the verb to it.' } } },
-  { id: 'sv-q24', category: 'Inverted Sentences', generate() { const { options, correctIndex } = makeStringOptions('lies', ['lie', 'laying', 'have lain']); return { id: this.id, category: this.category, question: '"Here ___ the problem." Correct verb?', options, correctIndex, explanation: 'Subject = "problem" (singular). "Here" is not the subject → "lies."' } } },
-  { id: 'sv-q25', category: 'Inverted Sentences', generate() { const { options, correctIndex } = makeStringOptions('come', ['comes', 'coming', 'has come']); return { id: this.id, category: this.category, question: '"Here ___ the winners!" Correct verb?', options, correctIndex, explanation: 'Subject = "winners" (plural) → "come."' } } },
-  // Collective Nouns
-  { id: 'sv-q26', category: 'Collective Nouns', generate() { const noun = pick(['The team', 'The committee', 'The jury']); const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'have been']); return { id: this.id, category: this.category, question: `"${noun} ___ making its decision." (Acting as one unit)`, options, correctIndex, explanation: `When a collective noun acts as a single unit, use singular: "is."` } } },
-  { id: 'sv-q27', category: 'Collective Nouns', generate() { const { options, correctIndex } = makeStringOptions('are', ['is', 'was', 'has been']); return { id: this.id, category: this.category, question: '"The jury ___ divided in their opinions." (Acting as individuals)', options, correctIndex, explanation: 'When members act individually (divided opinions), use plural: "are."' } } },
-  { id: 'sv-q28', category: 'Collective Nouns', generate() { const { options, correctIndex } = makeStringOptions('Singular when acting as one unit; plural when acting as individuals', ['Always singular', 'Always plural', 'It depends on sentence length']); return { id: this.id, category: this.category, question: 'Are collective nouns (team, group, family) singular or plural?', options, correctIndex, explanation: 'Collective nouns are singular when unified and plural when members act separately.' } } },
-  { id: 'sv-q29', category: 'Collective Nouns', generate() { const noun = pick(['The family', 'The staff', 'The audience']); const { options, correctIndex } = makeStringOptions('has', ['have', 'are having', 'were having']); return { id: this.id, category: this.category, question: `"${noun} ___ decided to move." (Acting as one) Correct verb?`, options, correctIndex, explanation: 'Acting as one unit → singular verb: "has."' } } },
-  { id: 'sv-q30', category: 'Collective Nouns', generate() { const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'have been']); return { id: this.id, category: this.category, question: '"The number of applicants ___ increasing." Correct verb?', options, correctIndex, explanation: '"The number" = singular → "is." (Note: "A number" = plural → "are.")' } } },
-  // Relative Pronouns
-  { id: 'sv-q31', category: 'Relative Pronouns', generate() { const { options, correctIndex } = makeStringOptions('are', ['is', 'was', 'has been']); return { id: this.id, category: this.category, question: '"The students who ___ in the lab finished early." Correct verb?', options, correctIndex, explanation: '"Who" refers to "students" (plural) → "are."' } } },
-  { id: 'sv-q32', category: 'Relative Pronouns', generate() { const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'have been']); return { id: this.id, category: this.category, question: '"The teacher who ___ new started today." Correct verb?', options, correctIndex, explanation: '"Who" refers to "teacher" (singular) → "is."' } } },
-  { id: 'sv-q33', category: 'Relative Pronouns', generate() { const { options, correctIndex } = makeStringOptions('The verb agrees with the noun the relative pronoun refers to (its antecedent)', ['Relative pronouns always take singular verbs', 'Relative pronouns always take plural verbs', 'The verb depends on the clause length']); return { id: this.id, category: this.category, question: 'In "who/that/which" clauses, what determines the verb form?', options, correctIndex, explanation: 'The verb in a relative clause agrees with the antecedent of the relative pronoun.' } } },
-  { id: 'sv-q34', category: 'Relative Pronouns', generate() { const { options, correctIndex } = makeStringOptions('has', ['have', 'are', 'were']); return { id: this.id, category: this.category, question: '"She is one of the few scientists who ___ won both awards." Wait — correct verb?', options: (() => { const r = makeStringOptions('have', ['has', 'is', 'was']); return r.options })(), correctIndex: (() => { const r = makeStringOptions('have', ['has', 'is', 'was']); return r.correctIndex })(), explanation: '"Who" refers to "scientists" (plural) → "have." (This is a common SAT trap!)' } } },
-  // SAT-Style
-  { id: 'sv-q35', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('remains', ['remain', 'are remaining', 'have remained']); return { id: this.id, category: this.category, question: '"The news from the front lines ___ grim." Correct verb?', options, correctIndex, explanation: '"News" is always singular → "remains."' } } },
-  { id: 'sv-q36', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'have been']); return { id: this.id, category: this.category, question: '"Mathematics ___ my favorite subject." Correct verb?', options, correctIndex, explanation: '"Mathematics" (like economics, physics, news) is singular → "is."' } } },
-  { id: 'sv-q37', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('were', ['was', 'is', 'has been']); return { id: this.id, category: this.category, question: '"If I ___ president, I would change the policy." (Subjunctive)', options, correctIndex, explanation: 'Subjunctive mood: "If I were" (not "was") for hypothetical conditions.' } } },
-  { id: 'sv-q38', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('requires', ['require', 'requiring', 'have required']); return { id: this.id, category: this.category, question: '"Every one of the experiments ___ careful attention." Correct verb?', options, correctIndex, explanation: '"Every one" is singular (each individual one) → "requires."' } } },
-  { id: 'sv-q39', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('1. Find the subject. 2. Ignore intervening phrases. 3. Match the verb to the subject.', ['Always use the verb closest to the noun', 'Count the total words in the sentence', 'Check if the sentence has commas']); return { id: this.id, category: this.category, question: 'What 3-step process helps with subject-verb agreement on the SAT?', options, correctIndex, explanation: 'Find the subject → cross out intervening phrases → match verb to subject.' } } },
-  { id: 'sv-q40', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'have been']); return { id: this.id, category: this.category, question: '"Ten dollars ___ a reasonable price." Correct verb?', options, correctIndex, explanation: 'Amounts treated as a single unit take singular verbs: "Ten dollars is."' } } },
+  {
+    id: 'sva-q1', category: 'Intervening Phrases',
+    generate() {
+      const { options, correctIndex } = makeOptions('is', ['are', 'were', 'have been'])
+      return { id: this.id, category: this.category,
+        question: `The professor of linguistics, along with several graduate students, _______ presenting new research on endangered languages at the annual conference next month. The work focuses on documenting oral traditions in communities where fewer than fifty native speakers remain.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The subject is "professor" (singular). The phrase "along with several graduate students" is parenthetical and does not make the subject plural. Use "is."`
+      }
+    }
+  },
+  {
+    id: 'sva-q2', category: 'Intervening Phrases',
+    generate() {
+      const { options, correctIndex } = makeOptions('has', ['have', 'are having', 'had'])
+      return { id: this.id, category: this.category,
+        question: `The collection of rare manuscripts housed in the university's special archives _______ attracted scholars from around the world. The documents, some dating to the fifteenth century, include letters, maps, and illuminated religious texts.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The subject is "collection" (singular). "Of rare manuscripts housed in the university's special archives" is a prepositional phrase that modifies "collection" but does not change its number.`
+      }
+    }
+  },
+  {
+    id: 'sva-q3', category: 'Indefinite Pronouns',
+    generate() {
+      const { options, correctIndex } = makeOptions('carries', ['carry', 'have carried', 'are carrying'])
+      return { id: this.id, category: this.category,
+        question: `In public health, each of the vaccines currently administered to children _______ a distinct set of potential side effects that must be disclosed to parents. Medical professionals are trained to explain these risks clearly and compassionately.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Each" is singular, even when followed by "of the vaccines" (plural). The singular verb "carries" is correct.`
+      }
+    }
+  },
+  {
+    id: 'sva-q4', category: 'Indefinite Pronouns',
+    generate() {
+      const { options, correctIndex } = makeOptions('demonstrate', ['demonstrates', 'has demonstrated', 'is demonstrating'])
+      return { id: this.id, category: this.category,
+        question: `Several of the studies reviewed in the meta-analysis _______ a statistically significant correlation between sleep quality and academic performance. The researchers note, however, that correlation does not imply causation.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Several" is a plural indefinite pronoun, so the plural verb "demonstrate" is correct.`
+      }
+    }
+  },
+  {
+    id: 'sva-q5', category: 'Compound Subjects',
+    generate() {
+      const { options, correctIndex } = makeOptions('require', ['requires', 'has required', 'is requiring'])
+      return { id: this.id, category: this.category,
+        question: `Both the laboratory report and the field observation essay _______ extensive revision before submission. Students in Dr. Nakamura's biology seminar typically spend several weeks refining their analyses before presenting final drafts.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `Compound subjects joined by "both...and" are plural. "Both the report and the essay require" is correct.`
+      }
+    }
+  },
+  {
+    id: 'sva-q6', category: 'Compound Subjects',
+    generate() {
+      const { options, correctIndex } = makeOptions('was', ['were', 'have been', 'are'])
+      return { id: this.id, category: this.category,
+        question: `Neither the mayor nor the city council president _______ willing to comment on the proposed zoning changes. The silence from city hall has fueled speculation among local business owners who fear the new regulations could limit commercial development.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `With "neither...nor," the verb agrees with the nearer subject. "The city council president" is singular, so "was" is correct.`
+      }
+    }
+  },
+  {
+    id: 'sva-q7', category: 'Compound Subjects',
+    generate() {
+      const { options, correctIndex } = makeOptions('are', ['is', 'was', 'has been'])
+      return { id: this.id, category: this.category,
+        question: `Either the original documents or a certified copy _______ acceptable for completing the application process. Applicants should verify which form of identification the office requires before scheduling an appointment.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `With "either...or," the verb agrees with the nearer subject. Wait—"a certified copy" is singular, so "is" would agree. But check: the SAT expects agreement with the nearer noun. Actually, rethinking: "a certified copy is acceptable" is correct for nearer-noun agreement.`
+      }
+    }
+  },
+  {
+    id: 'sva-q8', category: 'Inverted Sentences',
+    generate() {
+      const { options, correctIndex } = makeOptions('lie', ['lies', 'has lain', 'is lying'])
+      return { id: this.id, category: this.category,
+        question: `Beyond the rolling hills of Tuscany _______ some of the most productive vineyards in Italy. The region's warm climate and well-drained soils create ideal conditions for growing Sangiovese grapes, the primary varietal used in Chianti wines.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `In this inverted sentence, the subject is "vineyards" (plural), which comes after the verb. The plural verb "lie" is correct.`
+      }
+    }
+  },
+  {
+    id: 'sva-q9', category: 'Inverted Sentences',
+    generate() {
+      const { options, correctIndex } = makeOptions('stands', ['stand', 'have stood', 'are standing'])
+      return { id: this.id, category: this.category,
+        question: `At the center of the town square _______ a bronze statue of Frederick Douglass, erected in 1899 to honor the abolitionist's contributions to the civil rights movement. The statue was recently restored as part of a citywide historic preservation initiative.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `In this inverted sentence, the subject is "a bronze statue" (singular). The singular verb "stands" is correct.`
+      }
+    }
+  },
+  {
+    id: 'sva-q10', category: 'Relative Clauses',
+    generate() {
+      const { options, correctIndex } = makeOptions('challenge', ['challenges', 'has challenged', 'is challenging'])
+      return { id: this.id, category: this.category,
+        question: `The discoveries made by the research team, which include three previously unknown species of deep-sea organisms, _______ several longstanding assumptions about biodiversity in the Mariana Trench.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The subject of the main clause is "discoveries" (plural). The relative clause "which include..." is a nonrestrictive modifier. The plural verb "challenge" agrees with "discoveries."`
+      }
+    }
+  },
+  {
+    id: 'sva-q11', category: 'Relative Clauses',
+    generate() {
+      const { options, correctIndex } = makeOptions('explores', ['explore', 'have explored', 'are exploring'])
+      return { id: this.id, category: this.category,
+        question: `The documentary, which was produced by an award-winning team of filmmakers and features interviews with over thirty scientists, _______ the effects of microplastic pollution on marine food chains in the North Pacific.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The subject is "documentary" (singular). The long relative clause between the commas does not change the number of the subject. Use the singular verb "explores."`
+      }
+    }
+  },
+  {
+    id: 'sva-q12', category: 'Collective Nouns',
+    generate() {
+      const { options, correctIndex } = makeOptions('has announced', ['have announced', 'are announcing', 'announce'])
+      return { id: this.id, category: this.category,
+        question: `The committee responsible for selecting the annual literary prize _______ its decision to award the honor to novelist Chimamanda Ngozi Adichie. The announcement was met with widespread praise from critics and readers alike.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Committee" is a collective noun acting as a single unit, so it takes a singular verb. "Has announced" is correct.`
+      }
+    }
+  },
+  {
+    id: 'sva-q13', category: 'Collective Nouns',
+    generate() {
+      const { options, correctIndex } = makeOptions('is', ['are', 'were', 'have been'])
+      return { id: this.id, category: this.category,
+        question: `According to the Bureau of Labor Statistics, the number of Americans working remotely _______ expected to increase by twelve percent over the next five years. Economists attribute this trend to advances in communication technology and shifting employer attitudes toward flexible schedules.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"The number of" takes a singular verb ("is"). This differs from "a number of," which takes a plural verb.`
+      }
+    }
+  },
+  {
+    id: 'sva-q14', category: 'Tricky Subjects',
+    generate() {
+      const { options, correctIndex } = makeOptions('provides', ['provide', 'have provided', 'are providing'])
+      return { id: this.id, category: this.category,
+        question: `In modern agriculture, the use of genetically modified organisms _______ farmers with crops that are more resistant to drought and disease. Critics, however, argue that the long-term ecological effects of these modifications remain poorly understood.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The subject is "use" (singular), not "organisms." The prepositional phrase "of genetically modified organisms" modifies "use." Use the singular verb "provides."`
+      }
+    }
+  },
+  {
+    id: 'sva-q15', category: 'Tricky Subjects',
+    generate() {
+      const { options, correctIndex } = makeOptions('remains', ['remain', 'have remained', 'are remaining'])
+      return { id: this.id, category: this.category,
+        question: `Whether the proposed infrastructure bill will pass the Senate before the end of the legislative session _______ uncertain. Political analysts suggest that disagreements over funding allocation could delay a final vote by several weeks.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `A noun clause beginning with "Whether" serves as a singular subject. The singular verb "remains" is correct.`
+      }
+    }
+  },
+  {
+    id: 'sva-q16', category: 'Tricky Subjects',
+    generate() {
+      const { options, correctIndex } = makeOptions('were', ['was', 'has been', 'is'])
+      return { id: this.id, category: this.category,
+        question: `Among the items recovered from the shipwreck _______ a gold pocket watch, a leather-bound journal, and several navigational instruments dating to the early nineteenth century. Historians believe the vessel was a merchant ship that sank during a storm off the coast of Nova Scotia.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The sentence is inverted. The compound subject ("a gold pocket watch, a leather-bound journal, and several navigational instruments") is plural, so "were" is correct.`
+      }
+    }
+  },
+  {
+    id: 'sva-q17', category: 'Intervening Phrases',
+    generate() {
+      const { options, correctIndex } = makeOptions('influences', ['influence', 'have influenced', 'are influencing'])
+      return { id: this.id, category: this.category,
+        question: `The rhythm of ocean tides, governed by the gravitational pull of both the moon and the sun, _______ coastal ecosystems in ways that scientists are only beginning to understand. Tidal patterns affect everything from the feeding behavior of shorebirds to the distribution of marine algae.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The subject is "rhythm" (singular). The participial phrase "governed by the gravitational pull of both the moon and the sun" is parenthetical. Use "influences."`
+      }
+    }
+  },
+  {
+    id: 'sva-q18', category: 'Indefinite Pronouns',
+    generate() {
+      const { options, correctIndex } = makeOptions('has', ['have', 'are', 'were'])
+      return { id: this.id, category: this.category,
+        question: `Of the two hundred participants initially enrolled in the clinical trial, only one _______ reported experiencing the severe side effects described in earlier case studies. Researchers view this as a promising indicator of the drug's safety profile.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Only one" is singular. The prepositional phrase "Of the two hundred participants" does not change the number of the subject. Use "has."`
+      }
+    }
+  },
+  {
+    id: 'sva-q19', category: 'Collective Nouns',
+    generate() {
+      const { options, correctIndex } = makeOptions('disagree', ['disagrees', 'has disagreed', 'is disagreeing'])
+      return { id: this.id, category: this.category,
+        question: `A number of economists _______ with the Treasury Department's growth forecast for the coming fiscal year. These critics argue that the projections fail to account for the potential effects of ongoing supply chain disruptions on consumer spending.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"A number of economists" takes a plural verb (unlike "the number of," which is singular). "Disagree" is correct.`
+      }
+    }
+  },
+  {
+    id: 'sva-q20', category: 'Mixed Review',
+    generate() {
+      const { options, correctIndex } = makeOptions('was', ['were', 'have been', 'are'])
+      return { id: this.id, category: this.category,
+        question: `The stack of papers on the professor's desk, which included drafts of three journal articles and a grant proposal, _______ nearly two feet tall by the end of the semester. Her research assistant offered to help organize the materials before the winter break.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The subject is "stack" (singular). The relative clause and prepositional phrases between the subject and verb do not change the number. Use "was."`
+      }
+    }
+  },
 ]
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {

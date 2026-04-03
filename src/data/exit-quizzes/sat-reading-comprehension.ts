@@ -1,62 +1,369 @@
 /**
- * Exit Quiz — SAT Reading Comprehension
- * 40 randomized questions on main idea, inference, tone, vocabulary in context, evidence
+ * Exit Quiz — SAT Reading Comprehension (Digital SAT Format)
+ *
+ * Passage-based questions following the Digital SAT Reading & Writing format.
+ * Each question presents a short passage and asks students to identify
+ * the main idea, draw inferences, analyze purpose, or evaluate evidence.
+ *
+ * Domain: Information and Ideas
  */
+
 export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
 interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
+
 function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
-function makeStringOptions(c: string, o: string[]) { const u = o.filter(x => x !== c).slice(0, 3); while (u.length < 3) u.push('No change'); const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
-function pick<T>(arr: T[]): T { return arr[Math.floor(Math.random() * arr.length)] }
 
 const questionPool: QuestionTemplate[] = [
-  // Main Idea
-  { id: 'rc-q1', category: 'Main Idea', generate() { const topic = pick(['coral reef decline', 'urbanization effects', 'renewable energy adoption']); const { options, correctIndex } = makeStringOptions('To present the central argument and supporting evidence', ['To describe a single event in detail', 'To entertain readers with an anecdote', 'To list unrelated facts']); return { id: this.id, category: this.category, question: `A passage about ${topic} spans four paragraphs. What is the most likely purpose of the passage as a whole?`, options, correctIndex, explanation: 'SAT passages typically present a central argument supported by evidence across multiple paragraphs.' } } },
-  { id: 'rc-q2', category: 'Main Idea', generate() { const topic = pick(['the history of vaccination', 'space exploration funding', 'artificial intelligence ethics']); const { options, correctIndex } = makeStringOptions('It summarizes the key claim the author makes', ['It provides a counter-argument', 'It introduces a new topic unrelated to the passage', 'It offers a personal anecdote']); return { id: this.id, category: this.category, question: `Which best describes the function of the thesis statement in a passage about ${topic}?`, options, correctIndex, explanation: 'The thesis statement summarizes the author\'s key claim and guides the rest of the passage.' } } },
-  { id: 'rc-q3', category: 'Main Idea', generate() { const topic = pick(['migration patterns of birds', 'economic impacts of trade', 'effects of social media on teens']); const { options, correctIndex } = makeStringOptions('The main idea is the overarching point; the theme is the underlying message', ['They are the same thing', 'The theme is always stated explicitly', 'The main idea is always in the last paragraph']); return { id: this.id, category: this.category, question: `In a passage about ${topic}, how do main idea and theme differ?`, options, correctIndex, explanation: 'Main idea = central point; theme = deeper underlying message or lesson.' } } },
-  { id: 'rc-q4', category: 'Main Idea', generate() { const { options, correctIndex } = makeStringOptions('Look at the first and last sentences of each paragraph', ['Only read the title', 'Skip to the questions first', 'Read only the conclusion']); return { id: this.id, category: this.category, question: 'What is the best strategy for quickly identifying the main idea of a passage?', options, correctIndex, explanation: 'Topic sentences (often first/last in a paragraph) usually convey the main idea.' } } },
-  { id: 'rc-q5', category: 'Main Idea', generate() { const topic = pick(['climate change', 'genetic engineering', 'education reform']); const { options, correctIndex } = makeStringOptions('A broad statement supported throughout the passage', ['A specific detail mentioned once', 'An opinion stated in a quote', 'A statistic in the final paragraph']); return { id: this.id, category: this.category, question: `Which best describes the "central idea" of a passage about ${topic}?`, options, correctIndex, explanation: 'The central idea is broad and supported throughout, not a single detail or quote.' } } },
-  // Supporting Details
-  { id: 'rc-q6', category: 'Supporting Details', generate() { const detail = pick(['a statistic about population growth', 'a quote from a researcher', 'a historical date']); const { options, correctIndex } = makeStringOptions('To provide evidence that strengthens the author\'s argument', ['To distract the reader', 'To introduce a new unrelated topic', 'To contradict the main idea']); return { id: this.id, category: this.category, question: `What is the purpose of including ${detail} in a passage?`, options, correctIndex, explanation: 'Supporting details serve as evidence to bolster the author\'s central argument.' } } },
-  { id: 'rc-q7', category: 'Supporting Details', generate() { const { options, correctIndex } = makeStringOptions('It directly supports a claim made in the passage', ['It is interesting but irrelevant', 'It appears in a footnote', 'It contradicts the thesis']); return { id: this.id, category: this.category, question: 'How do you determine if a detail is a "supporting detail" on the SAT?', options, correctIndex, explanation: 'A supporting detail directly backs up a claim or argument within the passage.' } } },
-  { id: 'rc-q8', category: 'Supporting Details', generate() { const example = pick(['an anecdote about a scientist', 'data from an experiment', 'a comparison to another country']); const { options, correctIndex } = makeStringOptions('To illustrate or reinforce the paragraph\'s point', ['To introduce humor', 'To shift the argument entirely', 'To pad the word count']); return { id: this.id, category: this.category, question: `Why might an author include ${example}?`, options, correctIndex, explanation: 'Authors include specific examples to illustrate and reinforce their points.' } } },
-  { id: 'rc-q9', category: 'Supporting Details', generate() { const { options, correctIndex } = makeStringOptions('Find the claim, then locate the sentence that backs it up', ['Guess based on the title', 'Pick the longest answer choice', 'Choose the most dramatic statement']); return { id: this.id, category: this.category, question: 'What is the best approach for "which detail best supports" questions?', options, correctIndex, explanation: 'Identify the claim first, then find the specific sentence or data that supports it.' } } },
-  { id: 'rc-q10', category: 'Supporting Details', generate() { const { options, correctIndex } = makeStringOptions('Facts, statistics, examples, and expert quotes', ['Only direct quotes', 'Only numerical data', 'Only the author\'s personal opinions']); return { id: this.id, category: this.category, question: 'Which types of information typically serve as supporting details?', options, correctIndex, explanation: 'Supporting details can be facts, statistics, examples, or expert testimony.' } } },
-  // Inference
-  { id: 'rc-q11', category: 'Inference', generate() { const scenario = pick(['a character sighs and looks away during a conversation', 'a politician avoids answering a direct question', 'a student closes the textbook before the lecture ends']); const { options, correctIndex } = makeStringOptions('The person is disengaged or uncomfortable', ['The person is enthusiastic', 'The person is sleeping', 'The person agrees completely']); return { id: this.id, category: this.category, question: `If a passage describes ${scenario}, what can you most reasonably infer?`, options, correctIndex, explanation: 'Inferences must be supported by textual clues — actions suggesting discomfort or disengagement.' } } },
-  { id: 'rc-q12', category: 'Inference', generate() { const { options, correctIndex } = makeStringOptions('A conclusion drawn from evidence in the text, not directly stated', ['A fact explicitly stated in the passage', 'A guess with no textual support', 'The author\'s biography']); return { id: this.id, category: this.category, question: 'What is an "inference" in the context of SAT Reading?', options, correctIndex, explanation: 'An inference is a logical conclusion drawn from textual evidence, not stated outright.' } } },
-  { id: 'rc-q13', category: 'Inference', generate() { const { options, correctIndex } = makeStringOptions('Choose the answer most directly supported by passage details', ['Choose the most dramatic answer', 'Choose the answer that sounds most academic', 'Choose the longest answer']); return { id: this.id, category: this.category, question: 'What strategy helps with "it can be inferred" questions?', options, correctIndex, explanation: 'The correct inference is always grounded in specific passage evidence.' } } },
-  { id: 'rc-q14', category: 'Inference', generate() { const topic = pick(['declining bee populations', 'rising sea levels', 'increased screen time']); const { options, correctIndex } = makeStringOptions('The author believes the trend is cause for concern', ['The author is indifferent to the trend', 'The author celebrates the trend', 'The author has no opinion']); return { id: this.id, category: this.category, question: `A passage presents data showing ${topic} alongside words like "alarming" and "unprecedented." What can you infer about the author's perspective?`, options, correctIndex, explanation: 'Words like "alarming" and "unprecedented" signal concern — infer the author\'s worried perspective.' } } },
-  { id: 'rc-q15', category: 'Inference', generate() { const { options, correctIndex } = makeStringOptions('Eliminate answers that go beyond what the text supports', ['Pick the first answer that seems plausible', 'Always choose the most extreme option', 'Rely on outside knowledge']); return { id: this.id, category: this.category, question: 'How should you eliminate wrong answers on inference questions?', options, correctIndex, explanation: 'Wrong inference answers often overreach or introduce ideas not supported by the passage.' } } },
-  // Author's Purpose
-  { id: 'rc-q16', category: "Author's Purpose", generate() { const purpose = pick(['to persuade readers to recycle more', 'to inform readers about a new discovery', 'to analyze the effects of a policy']); const { options, correctIndex } = makeStringOptions('To persuade, inform, or analyze depending on tone and structure', ['To always entertain', 'To confuse the reader', 'To present only facts without any viewpoint']); return { id: this.id, category: this.category, question: `A passage\'s likely purpose is ${purpose}. How do you identify author\'s purpose on the SAT?`, options, correctIndex, explanation: 'Author\'s purpose is revealed through tone, word choice, and passage structure.' } } },
-  { id: 'rc-q17', category: "Author's Purpose", generate() { const { options, correctIndex } = makeStringOptions('To illustrate a point made in the preceding paragraph', ['To begin a new argument', 'To provide comic relief', 'To contradict the thesis']); return { id: this.id, category: this.category, question: 'If an author includes an anecdote immediately after a claim, what is the most likely purpose?', options, correctIndex, explanation: 'Anecdotes after claims typically serve as illustrative evidence.' } } },
-  { id: 'rc-q18', category: "Author's Purpose", generate() { const { options, correctIndex } = makeStringOptions('To acknowledge an opposing view before refuting it', ['To agree with the opposition', 'To change the subject', 'To admit the argument is weak']); return { id: this.id, category: this.category, question: 'Why might an author include a counterargument in a persuasive passage?', options, correctIndex, explanation: 'Including a counterargument and then refuting it strengthens the author\'s position.' } } },
-  { id: 'rc-q19', category: "Author's Purpose", generate() { const type = pick(['a scientific journal article', 'a personal essay', 'a news editorial']); const { options, correctIndex } = makeStringOptions('The genre and publication context help signal the purpose', ['The length of the passage determines purpose', 'Purpose is always stated in the first sentence', 'Only the title reveals purpose']); return { id: this.id, category: this.category, question: `How does knowing a passage is from ${type} help identify purpose?`, options, correctIndex, explanation: 'Genre and context (journal, editorial, memoir) provide strong clues about author purpose.' } } },
-  { id: 'rc-q20', category: "Author's Purpose", generate() { const { options, correctIndex } = makeStringOptions('Inform, persuade, entertain, or analyze', ['Only inform', 'Only persuade', 'Only entertain']); return { id: this.id, category: this.category, question: 'What are the four main categories of author\'s purpose?', options, correctIndex, explanation: 'The four main purposes are to inform, persuade, entertain, or analyze.' } } },
-  // Tone/Attitude
-  { id: 'rc-q21', category: 'Tone/Attitude', generate() { const words = pick(['"remarkable" and "groundbreaking"', '"troubling" and "disturbing"', '"measured" and "cautious"']); const tone = words.includes('remarkable') ? 'enthusiastic and admiring' : words.includes('troubling') ? 'concerned and critical' : 'neutral and reserved'; const { options, correctIndex } = makeStringOptions(tone, ['indifferent', 'humorous and lighthearted', 'angry and hostile']); return { id: this.id, category: this.category, question: `An author uses words like ${words}. What tone is conveyed?`, options, correctIndex, explanation: 'Tone is determined by the author\'s word choice (diction).' } } },
-  { id: 'rc-q22', category: 'Tone/Attitude', generate() { const { options, correctIndex } = makeStringOptions('Word choice (diction) and sentence structure', ['The number of paragraphs', 'Whether the passage has a title', 'The font of the passage']); return { id: this.id, category: this.category, question: 'What primarily determines the tone of a passage?', options, correctIndex, explanation: 'Diction (word choice) and syntax (sentence structure) are the key indicators of tone.' } } },
-  { id: 'rc-q23', category: 'Tone/Attitude', generate() { const { options, correctIndex } = makeStringOptions('Objective and analytical', ['Sarcastic and mocking', 'Emotional and biased', 'Casual and informal']); return { id: this.id, category: this.category, question: 'A scientific passage avoids emotional language and presents data neutrally. What is the tone?', options, correctIndex, explanation: 'Neutral, data-driven language indicates an objective and analytical tone.' } } },
-  { id: 'rc-q24', category: 'Tone/Attitude', generate() { const { options, correctIndex } = makeStringOptions('Nostalgic', ['Hostile', 'Indifferent', 'Satirical']); return { id: this.id, category: this.category, question: 'An author fondly recalls childhood summers and uses phrases like "those golden days." What is the tone?', options, correctIndex, explanation: 'Fond recollection of the past signals a nostalgic tone.' } } },
-  { id: 'rc-q25', category: 'Tone/Attitude', generate() { const { options, correctIndex } = makeStringOptions('Tone is how the author feels; mood is how the reader feels', ['They are identical', 'Mood is only in fiction', 'Tone is only in poetry']); return { id: this.id, category: this.category, question: 'What is the difference between tone and mood?', options, correctIndex, explanation: 'Tone = author\'s attitude toward the subject. Mood = emotional atmosphere felt by the reader.' } } },
-  // Text Structure
-  { id: 'rc-q26', category: 'Text Structure', generate() { const structure = pick(['cause and effect', 'compare and contrast', 'chronological order', 'problem and solution']); const { options, correctIndex } = makeStringOptions(structure, ['cause and effect', 'compare and contrast', 'chronological order', 'problem and solution'].filter(s => s !== structure)); return { id: this.id, category: this.category, question: `A passage first describes a challenge facing cities, then proposes a set of solutions. What text structure is this?`, options: (() => { const r = makeStringOptions('problem and solution', ['cause and effect', 'compare and contrast', 'chronological order']); return r.options })(), correctIndex: (() => { const r = makeStringOptions('problem and solution', ['cause and effect', 'compare and contrast', 'chronological order']); return r.correctIndex })(), explanation: 'A challenge followed by proposed solutions = problem and solution structure.' } } },
-  { id: 'rc-q27', category: 'Text Structure', generate() { const { options, correctIndex } = makeStringOptions('Cause and effect', ['Definition', 'Narrative arc', 'Problem and solution']); return { id: this.id, category: this.category, question: 'A passage explains that deforestation leads to soil erosion, which leads to flooding. What structure is this?', options, correctIndex, explanation: 'A chain of events where one leads to another = cause and effect.' } } },
-  { id: 'rc-q28', category: 'Text Structure', generate() { const { options, correctIndex } = makeStringOptions('Signal words like "however," "similarly," "as a result"', ['The passage length', 'The number of quotations', 'Whether it has a title']); return { id: this.id, category: this.category, question: 'What clues help identify text structure?', options, correctIndex, explanation: 'Transition and signal words reveal the organizational pattern of a passage.' } } },
-  { id: 'rc-q29', category: 'Text Structure', generate() { const { options, correctIndex } = makeStringOptions('Compare and contrast', ['Chronological order', 'Spatial order', 'Cause and effect']); return { id: this.id, category: this.category, question: 'A passage discusses similarities and differences between two economic systems. What structure is used?', options, correctIndex, explanation: 'Examining similarities and differences = compare and contrast.' } } },
-  { id: 'rc-q30', category: 'Text Structure', generate() { const { options, correctIndex } = makeStringOptions('To help readers follow the author\'s logic and argument', ['To make the passage longer', 'To confuse the reader', 'Structure is irrelevant to comprehension']); return { id: this.id, category: this.category, question: 'Why is understanding text structure important for SAT Reading?', options, correctIndex, explanation: 'Text structure helps you follow the argument and predict where information will appear.' } } },
-  // Vocabulary in Context
-  { id: 'rc-q31', category: 'Vocabulary in Context', generate() { const word = pick(['acute', 'foster', 'volatile']); const sentence = word === 'acute' ? 'The patient experienced acute pain in her lower back.' : word === 'foster' ? 'The program aims to foster creativity among students.' : 'The volatile market caused investors to panic.'; const correct = word === 'acute' ? 'sharp and intense' : word === 'foster' ? 'encourage and develop' : 'unpredictable and rapidly changing'; const wrongs = word === 'acute' ? ['mild and dull', 'chronic and lasting', 'angular'] : word === 'foster' ? ['adopt legally', 'suppress', 'ignore'] : ['calm and steady', 'explosive', 'chemical']; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `"${sentence}" As used here, "${word}" most nearly means:`, options, correctIndex, explanation: `Context clues in the sentence guide the meaning — "${word}" here means "${correct}."` } } },
-  { id: 'rc-q32', category: 'Vocabulary in Context', generate() { const { options, correctIndex } = makeStringOptions('Replace the word with each answer choice and see which fits', ['Pick the most common definition', 'Choose the hardest-sounding word', 'Always pick the first answer']); return { id: this.id, category: this.category, question: 'What is the best strategy for "as used in line X" vocabulary questions?', options, correctIndex, explanation: 'Substitute each answer choice into the sentence — the one that preserves meaning is correct.' } } },
-  { id: 'rc-q33', category: 'Vocabulary in Context', generate() { const word = pick(['address', 'champion', 'gravity']); const correct = word === 'address' ? 'to deal with or discuss' : word === 'champion' ? 'to advocate or support' : 'seriousness or importance'; const wrongs = word === 'address' ? ['a street location', 'to label an envelope', 'a speech'] : word === 'champion' ? ['a winning competitor', 'a brand name', 'to compete'] : ['the force of attraction', 'weight', 'a measurement']; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `"The committee must ${word === 'address' ? 'address the issue' : word === 'champion' ? 'champion the cause' : 'understand the gravity of the situation'}." What does "${word}" mean here?`, options, correctIndex, explanation: `"${word}" has multiple meanings — context determines the correct one.` } } },
-  { id: 'rc-q34', category: 'Vocabulary in Context', generate() { const { options, correctIndex } = makeStringOptions('The surrounding sentence and paragraph provide clues', ['Look it up in a dictionary during the test', 'The word always means its most common definition', 'Skip the question']); return { id: this.id, category: this.category, question: 'How do context clues help determine word meaning on the SAT?', options, correctIndex, explanation: 'Surrounding words and sentences provide context that narrows the meaning.' } } },
-  { id: 'rc-q35', category: 'Vocabulary in Context', generate() { const { options, correctIndex } = makeStringOptions('The most common meaning is often a trap — choose the meaning that fits the context', ['Always choose the primary dictionary definition', 'The simplest word is always correct', 'Context doesn\'t matter for vocabulary']); return { id: this.id, category: this.category, question: 'Why does the SAT test vocabulary "in context" rather than in isolation?', options, correctIndex, explanation: 'The SAT tests whether you can determine meaning from context, not just memorized definitions.' } } },
-  // Evidence-Based
-  { id: 'rc-q36', category: 'Evidence-Based', generate() { const { options, correctIndex } = makeStringOptions('Find the answer to the first question, then find the lines that support it', ['Answer both questions independently', 'Always pick the longest quote', 'Skip to the evidence question first']); return { id: this.id, category: this.category, question: 'How should you approach paired evidence questions (question + "which lines best support")?', options, correctIndex, explanation: 'Answer the content question first, then find the lines that directly support your answer.' } } },
-  { id: 'rc-q37', category: 'Evidence-Based', generate() { const { options, correctIndex } = makeStringOptions('The lines that most directly prove the answer to the previous question', ['The lines that mention the topic generally', 'The longest quoted section', 'The lines with the most complex vocabulary']); return { id: this.id, category: this.category, question: 'What makes a set of lines the "best evidence" for a claim?', options, correctIndex, explanation: 'Best evidence directly and specifically supports the claim in question.' } } },
-  { id: 'rc-q38', category: 'Evidence-Based', generate() { const { options, correctIndex } = makeStringOptions('If the evidence doesn\'t match your answer, reconsider both', ['Stick with your first instinct regardless', 'The evidence question doesn\'t affect the previous answer', 'Always change your answer']); return { id: this.id, category: this.category, question: 'What should you do if none of the evidence choices match your answer to the preceding question?', options, correctIndex, explanation: 'Evidence and answer must align — if they don\'t, reconsider both questions.' } } },
-  { id: 'rc-q39', category: 'Evidence-Based', generate() { const { options, correctIndex } = makeStringOptions('They test whether you can trace reasoning back to specific text', ['They are meant to trick you', 'They only appear on hard passages', 'They test memorization']); return { id: this.id, category: this.category, question: 'Why does the SAT include evidence-based question pairs?', options, correctIndex, explanation: 'Evidence pairs test your ability to connect conclusions to specific textual support.' } } },
-  { id: 'rc-q40', category: 'Evidence-Based', generate() { const { options, correctIndex } = makeStringOptions('Look for the option that contains a specific claim, data, or quote supporting the point', ['Choose the option closest to the beginning of the passage', 'Choose the option with the most words', 'Choose the option that repeats the question stem']); return { id: this.id, category: this.category, question: 'When selecting "best evidence," what should the correct lines contain?', options, correctIndex, explanation: 'Correct evidence lines contain specific claims, data, or quotes that directly support the point.' } } },
+  // ─── Central Ideas and Details ───
+  {
+    id: 'rc-q1', category: 'Central Ideas',
+    generate() {
+      const correct = 'Coral reefs support a disproportionately large number of marine species relative to the ocean area they occupy.'
+      const opts = shuffle([
+        correct,
+        'Coral reefs are the largest structures built by living organisms.',
+        'Coral reefs are found exclusively in tropical waters.',
+        'Coral reefs are declining primarily because of overfishing.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Although coral reefs cover less than one percent of the ocean floor, they support approximately twenty-five percent of all known marine species. This remarkable biodiversity arises because reefs provide complex three-dimensional habitats—crevices, overhangs, and branching structures—that offer shelter, food, and breeding sites for organisms ranging from microscopic algae to large predatory fish.\n\nWhich choice best states the main idea of the text?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The passage emphasizes the contrast between the small area reefs cover and the large proportion of species they support, making the first choice the best summary of the main idea.`
+      }
+    }
+  },
+  {
+    id: 'rc-q2', category: 'Central Ideas',
+    generate() {
+      const correct = 'The expansion of railroads in the 1800s transformed the American understanding of time.'
+      const opts = shuffle([
+        correct,
+        'Railroads were more efficient than other forms of transportation in the 1800s.',
+        'Local communities resisted the imposition of standardized time zones.',
+        'Time zones were first proposed by scientists rather than railroad companies.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Before the advent of railroads, each American town set its clocks according to the local position of the sun, a system that produced hundreds of slightly different "local times" across the country. The expansion of rail travel in the mid-nineteenth century made this patchwork unworkable: a traveler heading west from New York to Chicago might pass through more than twenty time changes along the way. In 1883, the major railroad companies adopted four standardized time zones, a system that the federal government later codified into law.\n\nWhich choice best states the main idea of the text?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The passage traces how railroads made the old local-time system impractical and led to standardized time zones, fundamentally transforming how Americans understood time.`
+      }
+    }
+  },
+  {
+    id: 'rc-q3', category: 'Central Ideas',
+    generate() {
+      const correct = 'Fireflies use bioluminescence for species-specific mating communication.'
+      const opts = shuffle([
+        correct,
+        'Fireflies are the only insects capable of producing light.',
+        'All firefly species use the same flash pattern to attract mates.',
+        'Bioluminescence in fireflies is primarily a defense mechanism against predators.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Each firefly species produces a unique flash pattern—a specific sequence of blinks varying in duration, interval, and color—that allows males and females of the same species to find each other in the dark. A male Photinus pyralis, for example, produces a distinctive J-shaped swoop of light, to which females of the same species respond with a single flash after a precise two-second delay. This specificity prevents costly mating errors in habitats where multiple firefly species may be active simultaneously.\n\nWhich choice best states the main idea of the text?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The passage explains how each firefly species has unique flash patterns that serve as species-specific mating signals, preventing cross-species mating errors.`
+      }
+    }
+  },
+  // ─── Inferences ───
+  {
+    id: 'rc-q4', category: 'Inferences',
+    generate() {
+      const correct = 'The immune system sometimes fails to distinguish between the body\'s own cells and foreign invaders.'
+      const opts = shuffle([
+        correct,
+        'Autoimmune diseases are caused exclusively by genetic mutations.',
+        'The immune system is generally unreliable at fighting infections.',
+        'Most autoimmune conditions can be cured with currently available treatments.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `In autoimmune disorders such as rheumatoid arthritis and lupus, the body's immune system attacks healthy tissue as though it were a pathogen. Researchers have identified several factors—including genetic predisposition, hormonal fluctuations, and environmental triggers—that may contribute to this misdirected immune response, but the precise mechanisms remain poorly understood.\n\nBased on the text, what can most reasonably be inferred about the immune system?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The passage describes the immune system attacking the body's own healthy tissue "as though it were a pathogen," implying that the system fails to distinguish self from non-self in autoimmune disorders.`
+      }
+    }
+  },
+  {
+    id: 'rc-q5', category: 'Inferences',
+    generate() {
+      const correct = 'The residents initially viewed the rewilding project with suspicion.'
+      const opts = shuffle([
+        correct,
+        'The residents had always supported wildlife conservation efforts.',
+        'The wolves were unsuccessful at reducing the elk population.',
+        'The rewilding project had no measurable effect on the local ecosystem.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `When gray wolves were reintroduced to Yellowstone National Park in 1995, ranchers in the surrounding area protested vigorously, citing concerns about livestock predation. Over the following two decades, however, the wolves' presence triggered a cascade of ecological changes—elk herds shifted their grazing patterns, streamside vegetation recovered, and erosion declined—that eventually won grudging acknowledgment from some former opponents of the program.\n\nBased on the text, what can most reasonably be inferred about the local residents' initial reaction to the wolf reintroduction?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The passage mentions vigorous protests from ranchers and describes former opponents eventually giving "grudging acknowledgment," implying the project was initially viewed with suspicion.`
+      }
+    }
+  },
+  {
+    id: 'rc-q6', category: 'Inferences',
+    generate() {
+      const correct = 'Traditional economic models may not fully account for how people actually make decisions.'
+      const opts = shuffle([
+        correct,
+        'People always make rational financial decisions when given complete information.',
+        'Behavioral economics has replaced traditional economics in all academic programs.',
+        'Kahneman\'s research proved that economic models are entirely useless.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Psychologist Daniel Kahneman's research demonstrated that people systematically deviate from the predictions of classical economic theory. In experiments, subjects consistently valued avoiding losses more heavily than acquiring equivalent gains—a phenomenon Kahneman called "loss aversion." This finding challenged the long-standing economic assumption that individuals weigh costs and benefits symmetrically when making decisions.\n\nBased on the text, what can most reasonably be inferred?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `Kahneman showed people deviate from classical theory by weighing losses more than gains. This implies traditional models, which assume symmetrical evaluation, do not fully capture actual decision-making.`
+      }
+    }
+  },
+  // ─── Purpose and Function ───
+  {
+    id: 'rc-q7', category: 'Purpose',
+    generate() {
+      const correct = 'To illustrate the practical challenges that the discovery created for established scientific methodology.'
+      const opts = shuffle([
+        correct,
+        'To argue that Röntgen\'s discoveries had little immediate scientific impact.',
+        'To describe X-rays as more valuable for medical diagnosis than for physics research.',
+        'To suggest that Röntgen did not fully understand his own findings.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `When Wilhelm Röntgen discovered X-rays in 1895, he could not explain the mechanism by which the mysterious radiation passed through solid objects. Existing models of electromagnetic radiation provided no framework for a form of energy that could penetrate flesh but not bone. Researchers across Europe scrambled to replicate Röntgen's experiments while simultaneously attempting to revise the theoretical foundations that his work had undermined.\n\nWhat is the main purpose of the text?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The passage focuses on how Röntgen's discovery could not be explained by existing models and forced researchers to scramble to replicate and revise—illustrating the practical challenges the discovery created for established methodology.`
+      }
+    }
+  },
+  {
+    id: 'rc-q8', category: 'Purpose',
+    generate() {
+      const correct = 'To highlight an unexpected benefit of an organism that is commonly viewed as a nuisance.'
+      const opts = shuffle([
+        correct,
+        'To argue that mosquitoes should not be targeted by pest control programs.',
+        'To explain the process by which mosquitoes transmit disease.',
+        'To compare the ecological roles of mosquitoes and bees.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Mosquitoes are typically regarded as disease-carrying pests, but ecologists point out that they play an underappreciated role in pollination. In the Arctic tundra, where bee populations are sparse, mosquitoes are among the primary pollinators of several flowering plant species. Without them, these plants might struggle to reproduce, potentially disrupting the food web that supports migratory bird populations.\n\nWhat is the main purpose of the text?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The passage contrasts the common view of mosquitoes as pests with their underappreciated role as pollinators, highlighting an unexpected benefit of an organism typically considered a nuisance.`
+      }
+    }
+  },
+  {
+    id: 'rc-q9', category: 'Purpose',
+    generate() {
+      const correct = 'To present a debate about how to interpret a specific set of archaeological findings.'
+      const opts = shuffle([
+        correct,
+        'To prove that the Rapa Nui civilization collapsed due to environmental degradation.',
+        'To describe the methods archaeologists use to date ancient stone structures.',
+        'To evaluate competing theories about how the moai statues were transported.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `The archaeological record on Easter Island (Rapa Nui) has long been interpreted as evidence of a civilization that depleted its natural resources and collapsed before European contact. However, a growing number of researchers argue that this "ecocide" narrative oversimplifies the evidence. They point to recent soil analyses and revised population estimates suggesting that the island's inhabitants may have adapted to environmental changes more successfully than previously believed, maintaining a stable population well into the eighteenth century.\n\nWhat is the main purpose of the text?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The passage presents two competing interpretations of the Rapa Nui archaeological record—the traditional ecocide narrative and the newer adaptation narrative—making its main purpose to present a debate about how to interpret the findings.`
+      }
+    }
+  },
+  // ─── Textual Evidence ───
+  {
+    id: 'rc-q10', category: 'Textual Evidence',
+    generate() {
+      const correct = '"Subjects who listened to a ten-minute recording of birdsong showed a measurable decrease in self-reported anxiety and cortisol levels."'
+      const opts = shuffle([
+        correct,
+        '"Exposure to natural sounds has been a topic of growing interest among psychologists."',
+        '"The researchers plan to conduct a follow-up study with a larger sample size."',
+        '"Some critics have questioned whether laboratory settings can replicate real-world exposure to nature."'
+      ])
+      return { id: this.id, category: this.category,
+        question: `A team of psychologists at the University of Surrey hypothesized that exposure to natural sounds reduces physiological markers of stress more effectively than exposure to silence or urban noise. To test this claim, they conducted a controlled experiment in which participants were randomly assigned to one of three auditory conditions.\n\nWhich quotation from the study, if added to the passage, would best support the researchers' hypothesis?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The hypothesis is that natural sounds reduce stress markers. A finding showing that birdsong (a natural sound) decreased anxiety and cortisol (a stress marker) directly supports this claim.`
+      }
+    }
+  },
+  {
+    id: 'rc-q11', category: 'Textual Evidence',
+    generate() {
+      const correct = '"More than sixty percent of surveyed teachers reported spending their own money on classroom supplies at least once per month."'
+      const opts = shuffle([
+        correct,
+        '"Teacher salaries vary significantly from state to state."',
+        '"Many teachers say they entered the profession because they wanted to make a difference."',
+        '"The federal government allocates education funding through a complex formula."'
+      ])
+      return { id: this.id, category: this.category,
+        question: `A recent editorial argued that public school teachers in the United States are systematically under-resourced, noting that inadequate district funding forces many educators to personally subsidize the cost of basic instructional materials.\n\nWhich finding, if true, would most directly support the editorial's claim?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The editorial claims teachers personally subsidize materials due to inadequate funding. A finding that over sixty percent of teachers spend their own money on supplies directly supports this claim.`
+      }
+    }
+  },
+  // ─── Command of Evidence ───
+  {
+    id: 'rc-q12', category: 'Command of Evidence',
+    generate() {
+      const correct = 'Bilingual children scored higher than monolingual children on tasks requiring them to switch between conflicting rules.'
+      const opts = shuffle([
+        correct,
+        'Bilingual children spoke their second language more fluently than their first.',
+        'Monolingual children performed better on vocabulary tests in their native language.',
+        'Both groups performed equally on all measures of cognitive ability.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Cognitive scientist Dr. Ellen Bialystok has argued that bilingualism confers a measurable advantage in executive function—the set of mental processes involved in planning, attention, and task-switching. Her research suggests that the constant need to manage two active language systems strengthens the brain's ability to filter relevant information and suppress distractions.\n\nWhich finding, if true, would most directly support Dr. Bialystok's claim?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `Bialystok claims bilingualism improves executive function, particularly task-switching. Higher scores on conflicting-rule tasks (a measure of task-switching ability) would directly support this claim.`
+      }
+    }
+  },
+  {
+    id: 'rc-q13', category: 'Command of Evidence',
+    generate() {
+      const correct = 'Cities that invested in separated bike lanes saw a statistically significant increase in cycling commuters and a decrease in cyclist injuries.'
+      const opts = shuffle([
+        correct,
+        'Most urban residents prefer driving to cycling regardless of available infrastructure.',
+        'Bike-sharing programs are more popular in European cities than in American ones.',
+        'Air quality in cities with dedicated bike lanes improved over a ten-year period.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Urban planners have long debated whether investing in cycling infrastructure actually increases the number of people who commute by bicycle. Proponents argue that separated bike lanes make cycling safer and more appealing, thereby reducing car dependency and improving public health outcomes.\n\nWhich finding, if true, would most directly support the proponents' argument?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The proponents claim that separated bike lanes increase cycling by making it safer. Finding that such lanes increased cycling and decreased injuries directly supports both elements of this argument.`
+      }
+    }
+  },
+  // ─── Text Structure ───
+  {
+    id: 'rc-q14', category: 'Text Structure',
+    generate() {
+      const correct = 'It introduces a phenomenon and then explains the mechanism behind it.'
+      const opts = shuffle([
+        correct,
+        'It presents two competing theories and evaluates them against evidence.',
+        'It describes an experiment and reports its unexpected results.',
+        'It traces the historical development of a scientific concept.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Certain species of bamboo flower only once in their lifetimes, sometimes after growing vegetatively for more than a century. When flowering finally occurs, all individuals of the same species bloom simultaneously—even those growing on different continents. Botanists attribute this synchronization to a genetically programmed internal clock that is set when each plant first sprouts from seed and counts cell divisions until a predetermined threshold triggers flowering.\n\nWhich choice best describes the overall structure of the text?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The text first introduces the phenomenon (synchronized bamboo flowering) and then explains the genetic mechanism behind it (an internal clock that counts cell divisions).`
+      }
+    }
+  },
+  {
+    id: 'rc-q15', category: 'Text Structure',
+    generate() {
+      const correct = 'It challenges a common assumption by presenting contradictory evidence.'
+      const opts = shuffle([
+        correct,
+        'It describes a process in chronological order.',
+        'It compares two methods and recommends one over the other.',
+        'It proposes a new theory and then acknowledges its limitations.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `It is widely believed that goldfish have a memory span of only a few seconds, but research by scientists at the University of Plymouth has demonstrated otherwise. In controlled experiments, goldfish trained to push a lever for food remembered the correct response up to five months later, a retention period comparable to that of many mammals. The findings suggest that the cognitive abilities of fish have been substantially underestimated.\n\nWhich choice best describes the overall structure of the text?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The text opens with a common assumption (goldfish have short memories), then presents research evidence that contradicts it, challenging the assumption.`
+      }
+    }
+  },
+  // ─── Cross-Text ───
+  {
+    id: 'rc-q16', category: 'Cross-Text Connections',
+    generate() {
+      const correct = 'They would likely disagree about whether artificial intelligence threatens the livelihoods of creative professionals.'
+      const opts = shuffle([
+        correct,
+        'They would agree that AI-generated art is indistinguishable from human-created art.',
+        'They would agree that AI should be banned from creative industries.',
+        'They would likely disagree about whether creativity requires consciousness.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Text 1: Art historian Marcus Liu contends that AI-generated images are fundamentally different from human art because they lack intentionality. A human artist makes conscious choices—about color, composition, and subject—that reflect personal experience and cultural context. AI, Liu argues, merely recombines patterns from its training data without understanding or purpose.\n\nText 2: Technology journalist Priya Sharma argues that the distinction between human and AI creativity is less clear than critics like Liu suggest. She points out that many human artists also draw heavily on existing works, and that AI tools are already enabling independent artists to produce professional-quality illustrations without expensive training—democratizing access to visual expression.\n\nBased on the texts, how would Liu and Sharma most likely respond to the growing use of AI image generators in commercial design?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `Liu sees AI art as fundamentally lacking intentionality (implying it shouldn't replace human artists), while Sharma sees AI as democratizing creative tools (implying it helps creative professionals). They would likely disagree about whether AI threatens creative livelihoods.`
+      }
+    }
+  },
+  {
+    id: 'rc-q17', category: 'Cross-Text Connections',
+    generate() {
+      const correct = 'Text 2 provides a specific example that supports Text 1\'s general claim about urban tree canopy benefits.'
+      const opts = shuffle([
+        correct,
+        'Text 2 contradicts Text 1\'s claims about the benefits of urban trees.',
+        'Text 1 and Text 2 address entirely different aspects of urban planning.',
+        'Text 2 argues that the benefits of urban trees are overstated by researchers like those cited in Text 1.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Text 1: A growing body of research suggests that urban tree canopy coverage can significantly reduce ambient temperatures in city neighborhoods. A 2021 study found that streets with mature tree canopies were, on average, 4 to 6 degrees Fahrenheit cooler than comparable streets without trees during summer heat events.\n\nText 2: In Phoenix, Arizona, a city-funded initiative to plant 100,000 shade trees in low-income neighborhoods has already produced measurable results. After five years, monitored sites recorded average surface temperature reductions of 5 degrees Fahrenheit during July and August, contributing to a 15 percent decrease in heat-related emergency room visits in those areas.\n\nWhich choice best describes the relationship between the two texts?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `Text 1 makes a general research-backed claim about tree canopy reducing temperatures. Text 2 provides a specific real-world example (Phoenix) that demonstrates this claim in action, with measurable temperature reductions.`
+      }
+    }
+  },
+  // ─── Additional Central Ideas ───
+  {
+    id: 'rc-q18', category: 'Central Ideas',
+    generate() {
+      const correct = 'Standardized testing may not capture the full range of student abilities.'
+      const opts = shuffle([
+        correct,
+        'Standardized tests are the most reliable predictor of college success.',
+        'Creative and practical skills are less important than analytical skills.',
+        'Howard Gardner\'s theory has been universally accepted by educators.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Psychologist Howard Gardner's theory of multiple intelligences proposes that human cognitive ability cannot be captured by a single metric. Gardner identifies at least eight distinct forms of intelligence—including linguistic, logical-mathematical, musical, and interpersonal—arguing that traditional IQ tests and standardized exams measure only a narrow slice of human potential. Critics counter that Gardner's categories lack empirical rigor, but his framework has nonetheless influenced educators who seek assessment methods that recognize diverse student strengths.\n\nWhich choice best states the main idea of the text?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The passage presents Gardner's argument that intelligence is multifaceted and that traditional tests capture only a narrow range, implying that standardized testing may miss the full range of student abilities.`
+      }
+    }
+  },
+  // ─── Additional Inferences ───
+  {
+    id: 'rc-q19', category: 'Inferences',
+    generate() {
+      const correct = 'Octopuses may be capable of more complex cognition than their invertebrate classification might suggest.'
+      const opts = shuffle([
+        correct,
+        'Octopuses are the most intelligent marine animals.',
+        'Invertebrates generally lack the ability to solve problems.',
+        'Octopus intelligence is primarily an adaptation for avoiding predators.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Marine biologists have documented octopuses unscrewing jars from the inside, navigating complex mazes, and recognizing individual human faces—behaviors that were once thought to require the kind of neural complexity found only in vertebrates. The octopus brain, which contains roughly 500 million neurons distributed across its arms and central brain, operates in a fundamentally different architecture from the centralized brains of mammals, yet it supports remarkably sophisticated behavior.\n\nBased on the text, what can most reasonably be inferred?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The passage describes cognitively complex behaviors in octopuses—an invertebrate—that were "once thought to require" vertebrate neural complexity. This implies octopuses may be capable of more complex cognition than their invertebrate status would suggest.`
+      }
+    }
+  },
+  // ─── Additional Evidence ───
+  {
+    id: 'rc-q20', category: 'Command of Evidence',
+    generate() {
+      const correct = 'Communities that adopted restorative justice programs saw a 30 percent reduction in repeat offenses compared to communities that relied solely on traditional sentencing.'
+      const opts = shuffle([
+        correct,
+        'Restorative justice programs are more cost-effective than incarceration.',
+        'Victims of crime generally prefer restorative justice to traditional court proceedings.',
+        'Restorative justice was first developed in New Zealand in the 1980s.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Proponents of restorative justice argue that bringing offenders face-to-face with the people harmed by their actions is more effective at preventing future criminal behavior than traditional punitive sentencing. By requiring offenders to understand and take responsibility for the impact of their actions, these programs aim to address the root causes of criminal behavior rather than simply imposing punishment.\n\nWhich finding, if true, would most directly support the proponents' claim?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The proponents claim restorative justice is more effective at preventing future criminal behavior than traditional sentencing. A finding showing lower repeat offenses in restorative justice communities directly supports this claim.`
+      }
+    }
+  },
 ]
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {

@@ -76,49 +76,49 @@ const AP_BIO_DOMAINS: APBioDomain[] = [
   {
     id: 'chemistry-of-life',
     name: 'Chemistry of Life',
-    topicSlugs: ['water-macromolecules', 'cell-chemistry-basics'],
+    topicSlugs: ['water-properties', 'carbohydrates'],
     questionTarget: 4,
   },
   {
     id: 'cell-structure',
     name: 'Cell Structure & Function',
-    topicSlugs: ['cell-structure-function', 'membrane-transport'],
+    topicSlugs: ['prokaryotic-eukaryotic-cells', 'cell-membrane-transport'],
     questionTarget: 4,
   },
   {
     id: 'cellular-energetics',
     name: 'Cellular Energetics',
-    topicSlugs: ['enzyme-catalysis', 'photosynthesis-cellular-respiration'],
+    topicSlugs: ['enzyme-kinetics', 'cellular-respiration'],
     questionTarget: 5,
   },
   {
     id: 'cell-communication',
     name: 'Cell Communication & Cell Cycle',
-    topicSlugs: ['cell-signaling', 'cell-cycle-mitosis-meiosis'],
+    topicSlugs: ['cell-signaling', 'cell-cycle-mitosis'],
     questionTarget: 4,
   },
   {
     id: 'heredity',
     name: 'Heredity',
-    topicSlugs: ['mendelian-genetics', 'non-mendelian-inheritance'],
+    topicSlugs: ['mendelian-genetics', 'non-mendelian-genetics'],
     questionTarget: 4,
   },
   {
     id: 'gene-expression',
     name: 'Gene Expression & Regulation',
-    topicSlugs: ['dna-replication-transcription', 'translation-gene-regulation'],
+    topicSlugs: ['dna-replication', 'gene-regulation'],
     questionTarget: 4,
   },
   {
     id: 'natural-selection',
     name: 'Natural Selection & Evolution',
-    topicSlugs: ['natural-selection', 'speciation-phylogeny'],
+    topicSlugs: ['natural-selection', 'speciation'],
     questionTarget: 4,
   },
   {
     id: 'ecology',
     name: 'Ecology',
-    topicSlugs: ['population-ecology', 'community-ecosystem-ecology'],
+    topicSlugs: ['population-ecology', 'community-ecology'],
     questionTarget: 4,
   },
 ]
@@ -137,7 +137,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'The cohesive nature of water molecules creates surface tension at the air-water interface, strong enough to support the weight of small insects.',
     domain: 'chemistry-of-life',
-    topicSlug: 'water-macromolecules',
+    topicSlug: 'water-properties',
     formSet: 'A',
   },
   {
@@ -146,7 +146,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'Tertiary structure results from interactions among R groups, including hydrophobic interactions, ionic bonds, hydrogen bonds, and disulfide bridges between amino acid side chains.',
     domain: 'chemistry-of-life',
-    topicSlug: 'water-macromolecules',
+    topicSlug: 'water-properties',
     formSet: 'A',
   },
   {
@@ -160,7 +160,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'Saturated fatty acids lack double bonds between carbons, allowing them to pack closely together, which is why they tend to be solid at room temperature (e.g., butter).',
     domain: 'chemistry-of-life',
-    topicSlug: 'water-macromolecules',
+    topicSlug: 'water-properties',
     formSet: 'B',
   },
   {
@@ -174,7 +174,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Dehydration synthesis (condensation) reactions form covalent bonds between monomers by removing water. Peptide bonds link amino acids together in this manner.',
     domain: 'chemistry-of-life',
-    topicSlug: 'water-macromolecules',
+    topicSlug: 'water-properties',
     formSet: 'B',
   },
   {
@@ -183,7 +183,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'Nitrogen is a key component of amino groups in amino acids and of nitrogenous bases in nucleic acids. Carbohydrates and most lipids contain only C, H, and O.',
     domain: 'chemistry-of-life',
-    topicSlug: 'cell-chemistry-basics',
+    topicSlug: 'carbohydrates',
     formSet: 'A',
   },
   {
@@ -192,7 +192,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Hydrogen bonds between complementary nitrogenous bases (A-T and G-C) hold the two strands of DNA together. These bonds are individually weak but collectively strong.',
     domain: 'chemistry-of-life',
-    topicSlug: 'cell-chemistry-basics',
+    topicSlug: 'carbohydrates',
     formSet: 'B',
   },
   {
@@ -206,7 +206,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Water\'s high specific heat means it can absorb or release large amounts of heat energy with relatively small changes in temperature, helping organisms maintain homeostasis.',
     domain: 'chemistry-of-life',
-    topicSlug: 'cell-chemistry-basics',
+    topicSlug: 'carbohydrates',
     formSet: 'both',
   },
   {
@@ -215,7 +215,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'Amino acids are defined by the presence of both an amino group (—NH₂) and a carboxyl group (—COOH) attached to a central carbon, along with a variable R group.',
     domain: 'chemistry-of-life',
-    topicSlug: 'cell-chemistry-basics',
+    topicSlug: 'carbohydrates',
     formSet: 'A',
   },
 
@@ -226,7 +226,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'Mitochondria (and chloroplasts) contain their own circular DNA and double membranes, supporting the endosymbiotic theory that they were once free-living prokaryotes.',
     domain: 'cell-structure',
-    topicSlug: 'cell-structure-function',
+    topicSlug: 'prokaryotic-eukaryotic-cells',
     formSet: 'A',
   },
   {
@@ -240,7 +240,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'In a hypertonic solution the solute concentration outside is higher, so water moves out of the cell by osmosis, causing the cell to shrink (crenation in animal cells, plasmolysis in plant cells).',
     domain: 'cell-structure',
-    topicSlug: 'membrane-transport',
+    topicSlug: 'cell-membrane-transport',
     formSet: 'A',
   },
   {
@@ -254,7 +254,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'The rough ER is studded with ribosomes that synthesize proteins. These proteins are typically destined for secretion, incorporation into membranes, or delivery to other organelles.',
     domain: 'cell-structure',
-    topicSlug: 'cell-structure-function',
+    topicSlug: 'prokaryotic-eukaryotic-cells',
     formSet: 'B',
   },
   {
@@ -268,7 +268,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Active transport uses energy (often from ATP hydrolysis) to move substances against their concentration gradient, from lower to higher concentration.',
     domain: 'cell-structure',
-    topicSlug: 'membrane-transport',
+    topicSlug: 'cell-membrane-transport',
     formSet: 'B',
   },
   {
@@ -282,7 +282,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'The fluid mosaic model describes the membrane as a dynamic structure where phospholipids and proteins can move laterally, giving it fluidity and a mosaic-like composition.',
     domain: 'cell-structure',
-    topicSlug: 'cell-structure-function',
+    topicSlug: 'prokaryotic-eukaryotic-cells',
     formSet: 'both',
   },
   {
@@ -296,7 +296,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'Microvilli dramatically increase the surface area of intestinal cells, enhancing their ability to absorb nutrients from the lumen of the small intestine.',
     domain: 'cell-structure',
-    topicSlug: 'cell-structure-function',
+    topicSlug: 'prokaryotic-eukaryotic-cells',
     formSet: 'A',
   },
   {
@@ -305,7 +305,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'Aquaporins are channel proteins that allow water to pass through the membrane down its concentration gradient without energy input — this is facilitated diffusion.',
     domain: 'cell-structure',
-    topicSlug: 'membrane-transport',
+    topicSlug: 'cell-membrane-transport',
     formSet: 'both',
   },
   {
@@ -314,7 +314,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'The Na⁺/K⁺-ATPase directly uses ATP to move ions against their concentration gradients, making it a primary active transport mechanism.',
     domain: 'cell-structure',
-    topicSlug: 'membrane-transport',
+    topicSlug: 'cell-membrane-transport',
     formSet: 'A',
   },
 
@@ -330,7 +330,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Enzymes are biological catalysts that lower activation energy by stabilizing the transition state, providing an alternative pathway without altering ΔG.',
     domain: 'cellular-energetics',
-    topicSlug: 'enzyme-catalysis',
+    topicSlug: 'enzyme-kinetics',
     formSet: 'A',
   },
   {
@@ -344,7 +344,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'Competitive inhibitors resemble the substrate and bind to the enzyme\'s active site, directly competing with the substrate for access.',
     domain: 'cellular-energetics',
-    topicSlug: 'enzyme-catalysis',
+    topicSlug: 'enzyme-kinetics',
     formSet: 'A',
   },
   {
@@ -353,7 +353,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 3,
     explanation: 'Oxidative phosphorylation, driven by the electron transport chain and chemiosmosis, produces approximately 26-28 of the ~30-32 total ATP per glucose molecule.',
     domain: 'cellular-energetics',
-    topicSlug: 'photosynthesis-cellular-respiration',
+    topicSlug: 'cellular-respiration',
     formSet: 'A',
   },
   {
@@ -362,7 +362,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'The light-dependent reactions occur in the thylakoid membranes where photosystems I and II, the electron transport chain, and ATP synthase are located.',
     domain: 'cellular-energetics',
-    topicSlug: 'photosynthesis-cellular-respiration',
+    topicSlug: 'cellular-respiration',
     formSet: 'A',
   },
   {
@@ -371,7 +371,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'The Calvin cycle produces G3P. Two molecules of G3P can then be used to synthesize one molecule of glucose or other organic compounds.',
     domain: 'cellular-energetics',
-    topicSlug: 'photosynthesis-cellular-respiration',
+    topicSlug: 'cellular-respiration',
     formSet: 'B',
   },
   {
@@ -385,7 +385,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'High temperatures disrupt hydrogen bonds, hydrophobic interactions, and other weak forces that maintain the enzyme\'s three-dimensional shape, leading to denaturation.',
     domain: 'cellular-energetics',
-    topicSlug: 'enzyme-catalysis',
+    topicSlug: 'enzyme-kinetics',
     formSet: 'B',
   },
   {
@@ -394,7 +394,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'Oxygen is the final electron acceptor in the ETC. It combines with electrons and H⁺ ions to form water. Without O₂, the chain stalls and ATP production via oxidative phosphorylation stops.',
     domain: 'cellular-energetics',
-    topicSlug: 'photosynthesis-cellular-respiration',
+    topicSlug: 'cellular-respiration',
     formSet: 'B',
   },
   {
@@ -403,7 +403,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Yeast undergoes alcoholic fermentation, converting pyruvate to ethanol and CO₂. This regenerates NAD⁺ so glycolysis can continue in the absence of oxygen.',
     domain: 'cellular-energetics',
-    topicSlug: 'photosynthesis-cellular-respiration',
+    topicSlug: 'cellular-respiration',
     formSet: 'both',
   },
   {
@@ -417,7 +417,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Chemiosmosis occurs when protons (H⁺) flow through ATP synthase from the intermembrane space to the matrix, driven by the electrochemical gradient, powering ATP synthesis.',
     domain: 'cellular-energetics',
-    topicSlug: 'photosynthesis-cellular-respiration',
+    topicSlug: 'cellular-respiration',
     formSet: 'both',
   },
   {
@@ -431,7 +431,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Non-competitive inhibitors bind at an allosteric site (not the active site), changing the enzyme\'s shape so that the active site is less effective, reducing Vmax.',
     domain: 'cellular-energetics',
-    topicSlug: 'enzyme-catalysis',
+    topicSlug: 'enzyme-kinetics',
     formSet: 'both',
   },
 
@@ -456,7 +456,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'The M checkpoint (spindle assembly checkpoint) monitors kinetochore attachment to spindle microtubules, preventing anaphase until all chromosomes are properly aligned.',
     domain: 'cell-communication',
-    topicSlug: 'cell-cycle-mitosis-meiosis',
+    topicSlug: 'cell-cycle-mitosis',
     formSet: 'A',
   },
   {
@@ -479,7 +479,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'During anaphase I of meiosis, homologous chromosome pairs (tetrads) are separated, reducing the chromosome number by half. Sister chromatids separate later in anaphase II.',
     domain: 'cell-communication',
-    topicSlug: 'cell-cycle-mitosis-meiosis',
+    topicSlug: 'cell-cycle-mitosis',
     formSet: 'B',
   },
   {
@@ -507,7 +507,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Crossing over (recombination) occurs during prophase I between non-sister chromatids of homologous chromosomes, increasing genetic diversity in the resulting gametes.',
     domain: 'cell-communication',
-    topicSlug: 'cell-cycle-mitosis-meiosis',
+    topicSlug: 'cell-cycle-mitosis',
     formSet: 'both',
   },
   {
@@ -530,7 +530,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 3,
     explanation: 'Meiosis consists of two rounds of division. One diploid cell produces two haploid cells after meiosis I, then each divides again in meiosis II, yielding four haploid daughter cells total.',
     domain: 'cell-communication',
-    topicSlug: 'cell-cycle-mitosis-meiosis',
+    topicSlug: 'cell-cycle-mitosis',
     formSet: 'A',
   },
 
@@ -569,7 +569,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'In codominance, both alleles contribute equally and are both visibly expressed in the heterozygote. An example is the AB blood type in humans, where both A and B antigens are present.',
     domain: 'heredity',
-    topicSlug: 'non-mendelian-inheritance',
+    topicSlug: 'non-mendelian-genetics',
     formSet: 'B',
   },
   {
@@ -578,7 +578,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'Sons inherit their single X from their mother. The carrier mother has a 50% chance of passing on X^h, so 50% of sons will be X^h Y (hemophilic).',
     domain: 'heredity',
-    topicSlug: 'non-mendelian-inheritance',
+    topicSlug: 'non-mendelian-genetics',
     formSet: 'A',
   },
   {
@@ -606,7 +606,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'Epistasis is a gene interaction where one gene\'s alleles mask or modify the phenotypic expression of alleles of a different gene, such as coat color in Labrador retrievers.',
     domain: 'heredity',
-    topicSlug: 'non-mendelian-inheritance',
+    topicSlug: 'non-mendelian-genetics',
     formSet: 'B',
   },
   {
@@ -620,7 +620,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Polygenic inheritance involves multiple genes (often on different chromosomes) contributing additively to a single trait, producing continuous variation such as human height or skin color.',
     domain: 'heredity',
-    topicSlug: 'non-mendelian-inheritance',
+    topicSlug: 'non-mendelian-genetics',
     formSet: 'both',
   },
   {
@@ -640,7 +640,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: "RNA polymerase reads the DNA template strand in the 3' to 5' direction while synthesizing the mRNA in the 5' to 3' direction.",
     domain: 'gene-expression',
-    topicSlug: 'dna-replication-transcription',
+    topicSlug: 'dna-replication',
     formSet: 'A',
   },
   {
@@ -654,7 +654,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'Before mRNA leaves the nucleus, introns (non-coding sequences) are removed by spliceosomes, and exons are joined together. A 5\' cap and 3\' poly-A tail are also added.',
     domain: 'gene-expression',
-    topicSlug: 'dna-replication-transcription',
+    topicSlug: 'dna-replication',
     formSet: 'A',
   },
   {
@@ -663,7 +663,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'AUG is the universal start codon and codes for methionine. It signals the ribosome to begin translation at that point on the mRNA.',
     domain: 'gene-expression',
-    topicSlug: 'translation-gene-regulation',
+    topicSlug: 'gene-regulation',
     formSet: 'A',
   },
   {
@@ -677,7 +677,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'The lac operon is inducible: in the presence of lactose the repressor is inactivated, and when glucose is low, CAP-cAMP activates transcription — demonstrating both negative and positive regulation.',
     domain: 'gene-expression',
-    topicSlug: 'translation-gene-regulation',
+    topicSlug: 'gene-regulation',
     formSet: 'B',
   },
   {
@@ -691,7 +691,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Semi-conservative replication means each daughter molecule consists of one parental (template) strand and one newly synthesized strand, as demonstrated by the Meselson-Stahl experiment.',
     domain: 'gene-expression',
-    topicSlug: 'dna-replication-transcription',
+    topicSlug: 'dna-replication',
     formSet: 'B',
   },
   {
@@ -700,7 +700,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'A silent mutation changes a nucleotide but does not alter the amino acid encoded, due to the degeneracy (redundancy) of the genetic code.',
     domain: 'gene-expression',
-    topicSlug: 'translation-gene-regulation',
+    topicSlug: 'gene-regulation',
     formSet: 'both',
   },
   {
@@ -714,7 +714,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Epigenetic modifications like DNA methylation and histone modification regulate gene expression without changing the underlying DNA sequence. Methylation of promoter regions typically silences genes.',
     domain: 'gene-expression',
-    topicSlug: 'translation-gene-regulation',
+    topicSlug: 'gene-regulation',
     formSet: 'A',
   },
   {
@@ -728,7 +728,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Because DNA polymerase can only synthesize in the 5\' to 3\' direction, the lagging strand is synthesized in short fragments (Okazaki fragments) that are later joined by DNA ligase.',
     domain: 'gene-expression',
-    topicSlug: 'dna-replication-transcription',
+    topicSlug: 'dna-replication',
     formSet: 'both',
   },
 
@@ -767,7 +767,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Allopatric speciation occurs when a physical barrier (geographic isolation) divides a population, preventing gene flow and allowing independent divergence.',
     domain: 'natural-selection',
-    topicSlug: 'speciation-phylogeny',
+    topicSlug: 'speciation',
     formSet: 'B',
   },
   {
@@ -781,7 +781,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'On a phylogenetic tree, more closely related species share a more recent branching point (node), meaning their lineages diverged more recently.',
     domain: 'natural-selection',
-    topicSlug: 'speciation-phylogeny',
+    topicSlug: 'speciation',
     formSet: 'A',
   },
   {
@@ -809,7 +809,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Analogous structures arise from convergent evolution — independent evolution of similar traits in unrelated lineages adapting to similar environments, not from shared ancestry.',
     domain: 'natural-selection',
-    topicSlug: 'speciation-phylogeny',
+    topicSlug: 'speciation',
     formSet: 'both',
   },
   {
@@ -837,7 +837,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'The biological species concept (Ernst Mayr) defines a species as a group of populations whose members can interbreed in nature and produce viable, fertile offspring, reproductively isolated from other groups.',
     domain: 'natural-selection',
-    topicSlug: 'speciation-phylogeny',
+    topicSlug: 'speciation',
     formSet: 'B',
   },
 
@@ -867,7 +867,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'A keystone species has an outsized effect on community structure and biodiversity relative to its numbers. Removing it causes dramatic changes (e.g., sea otters in kelp forests).',
     domain: 'ecology',
-    topicSlug: 'community-ecosystem-ecology',
+    topicSlug: 'community-ecology',
     formSet: 'A',
   },
   {
@@ -890,7 +890,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'Primary succession begins on bare substrates (e.g., newly formed volcanic rock) where no soil exists. Secondary succession occurs where soil and seed banks remain after a disturbance.',
     domain: 'ecology',
-    topicSlug: 'community-ecosystem-ecology',
+    topicSlug: 'community-ecology',
     formSet: 'B',
   },
   {
@@ -899,7 +899,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'On average, only about 10% of the energy at one trophic level is transferred to the next. The rest is lost as metabolic heat, used for life processes, or remains in uneaten biomass.',
     domain: 'ecology',
-    topicSlug: 'community-ecosystem-ecology',
+    topicSlug: 'community-ecology',
     formSet: 'B',
   },
   {
@@ -927,7 +927,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Nitrogen fixation is performed primarily by certain prokaryotes (e.g., Rhizobium in root nodules of legumes) that convert atmospheric N₂ into ammonia, making nitrogen available to plants.',
     domain: 'ecology',
-    topicSlug: 'community-ecosystem-ecology',
+    topicSlug: 'community-ecology',
     formSet: 'both',
   },
   {
@@ -941,7 +941,7 @@ const apBioQuestionPool: APBioPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'Gause\'s competitive exclusion principle states that two species occupying the exact same ecological niche cannot stably coexist — one will outcompete and exclude the other.',
     domain: 'ecology',
-    topicSlug: 'community-ecosystem-ecology',
+    topicSlug: 'community-ecology',
     formSet: 'A',
   },
   {
@@ -1147,22 +1147,22 @@ export function pickNextForm(previousForms: ('A' | 'B')[]): 'A' | 'B' {
 }
 
 const SLUG_LABELS: Record<string, string> = {
-  'water-macromolecules': 'Water & Macromolecules',
-  'cell-chemistry-basics': 'Cell Chemistry Basics',
-  'cell-structure-function': 'Cell Structure & Function',
-  'membrane-transport': 'Membrane Transport',
-  'enzyme-catalysis': 'Enzyme Catalysis',
-  'photosynthesis-cellular-respiration': 'Photosynthesis & Cellular Respiration',
+  'water-properties': 'Water & Macromolecules',
+  'carbohydrates': 'Cell Chemistry Basics',
+  'prokaryotic-eukaryotic-cells': 'Cell Structure & Function',
+  'cell-membrane-transport': 'Membrane Transport',
+  'enzyme-kinetics': 'Enzyme Catalysis',
+  'cellular-respiration': 'Photosynthesis & Cellular Respiration',
   'cell-signaling': 'Cell Signaling',
-  'cell-cycle-mitosis-meiosis': 'Cell Cycle, Mitosis & Meiosis',
+  'cell-cycle-mitosis': 'Cell Cycle, Mitosis & Meiosis',
   'mendelian-genetics': 'Mendelian Genetics',
-  'non-mendelian-inheritance': 'Non-Mendelian Inheritance',
-  'dna-replication-transcription': 'DNA Replication & Transcription',
-  'translation-gene-regulation': 'Translation & Gene Regulation',
+  'non-mendelian-genetics': 'Non-Mendelian Inheritance',
+  'dna-replication': 'DNA Replication & Transcription',
+  'gene-regulation': 'Translation & Gene Regulation',
   'natural-selection': 'Natural Selection',
-  'speciation-phylogeny': 'Speciation & Phylogeny',
+  'speciation': 'Speciation & Phylogeny',
   'population-ecology': 'Population Ecology',
-  'community-ecosystem-ecology': 'Community & Ecosystem Ecology',
+  'community-ecology': 'Community & Ecosystem Ecology',
 }
 
 function slugToReadableName(slug: string): string {

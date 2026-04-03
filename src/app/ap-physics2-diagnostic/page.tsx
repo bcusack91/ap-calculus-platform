@@ -91,6 +91,14 @@ export default function APPhysics2DiagnosticPage() {
       })
       const histRes = await fetch('/api/ap-physics2-diagnostic/history')
       if (histRes.ok) { const histData = await histRes.json(); setHistory(histData.attempts ?? []) }
+
+      // Add flashcards for recommended (weak) topics
+      if (diagnosticResults.recommendedTopics.length > 0) {
+        fetch('/api/flashcards/add-from-missed', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topicSlugs: diagnosticResults.recommendedTopics.map((t: { slug: string }) => t.slug) }),
+        }).catch(() => {})
+      }
     } catch { /* silent */ }
   }, [testData, answers])
 
@@ -258,7 +266,7 @@ export default function APPhysics2DiagnosticPage() {
               <p className="mb-4 text-sm text-violet-600 dark:text-violet-400">Based on your results, review these {results.recommendedTopics.length} module{results.recommendedTopics.length > 1 ? 's' : ''}.</p>
               <div className="space-y-2">
                 {results.recommendedTopics.map((topic, i) => (
-                  <Link key={topic.slug} href={`/topics/${topic.slug}`} className="flex items-center justify-between rounded-xl border border-violet-200 bg-white px-4 py-3 transition hover:border-violet-400 hover:shadow-sm dark:border-violet-700 dark:bg-gray-800 dark:hover:border-violet-500 group">
+                  <Link key={topic.slug} href={`/topics/${topic.slug}/interactive`} className="flex items-center justify-between rounded-xl border border-violet-200 bg-white px-4 py-3 transition hover:border-violet-400 hover:shadow-sm dark:border-violet-700 dark:bg-gray-800 dark:hover:border-violet-500 group">
                     <div className="flex items-center gap-3">
                       <span className="flex h-7 w-7 items-center justify-center rounded-full bg-violet-100 text-xs font-bold text-violet-700 dark:bg-violet-900/50 dark:text-violet-300">{i + 1}</span>
                       <div>
@@ -315,7 +323,7 @@ export default function APPhysics2DiagnosticPage() {
             <p className="mb-3 text-sm text-violet-600 dark:text-violet-400">From your last diagnostic — review these modules, then retake the test:</p>
             <div className="space-y-2">
               {lastRecommendedTopics.map((topic, i) => (
-                <Link key={topic.slug} href={`/topics/${topic.slug}`} className="flex items-center justify-between rounded-xl border border-violet-200 bg-white px-4 py-3 transition hover:border-violet-400 hover:shadow-sm dark:border-violet-700 dark:bg-gray-800 group">
+                <Link key={topic.slug} href={`/topics/${topic.slug}/interactive`} className="flex items-center justify-between rounded-xl border border-violet-200 bg-white px-4 py-3 transition hover:border-violet-400 hover:shadow-sm dark:border-violet-700 dark:bg-gray-800 group">
                   <div className="flex items-center gap-3">
                     <span className="flex h-6 w-6 items-center justify-center rounded-full bg-violet-100 text-xs font-bold text-violet-700 dark:bg-violet-900/50 dark:text-violet-300">{i + 1}</span>
                     <span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-violet-700 dark:group-hover:text-violet-400">{topic.name}</span>

@@ -10,6 +10,9 @@ enum Difficulty {
 }
 
 async function main() {
+  const __seedCourse = await (prisma as any).course.findFirst({ where: { slug: 'ap-calculus-ab' } })
+  const __courseId = __seedCourse?.id
+
   console.log('🔄 Creating Integration micro-lessons - Part 1...')
 
   // Create the Integration category
@@ -22,6 +25,8 @@ async function main() {
       description: 'Antiderivatives and the reverse process of differentiation',
       order: 4,
       icon: '∫',
+    
+      courseId: __courseId
     },
   })
 

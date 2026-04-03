@@ -1,111 +1,653 @@
 /**
- * Exit Quiz — SAT Grammar and Usage
- * 40 randomized questions on subject-verb agreement, pronoun use, verb tense, modifier placement
+ * Exit Quiz — SAT Grammar and Usage (Digital SAT Format)
+ *
+ * Every question follows the Digital SAT Reading & Writing format:
+ * a short passage (25-150 words) with a blank, followed by
+ * "Which choice completes the text so that it conforms to the conventions
+ * of Standard English?"
+ *
+ * Topics: subject-verb agreement, pronoun usage, verb tense, modifier placement
  */
-export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
-interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
-function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
-function makeStringOptions(c: string, o: string[]) { const u = o.filter(x => x !== c).slice(0, 3); while (u.length < 3) u.push('No change needed'); const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
-function pick<T>(arr: T[]): T { return arr[Math.floor(Math.random() * arr.length)] }
+
+export interface ExitQuizQuestion {
+  id: string
+  question: string
+  options: string[]
+  correctIndex: number
+  explanation: string
+  category: string
+}
+
+interface QuestionTemplate {
+  id: string
+  category: string
+  generate: () => ExitQuizQuestion
+}
+
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+function pick<T>(arr: T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)]
+}
+
+function makeOptions(correct: string, distractors: string[]) {
+  const others = distractors.filter(x => x !== correct).slice(0, 3)
+  const all = shuffle([correct, ...others])
+  return { options: all, correctIndex: all.indexOf(correct) }
+}
 
 const questionPool: QuestionTemplate[] = [
-  // Subject-verb agreement
-  { id: 'gu-q1', category: 'Subject-Verb Agreement', generate() { const subj = pick(['The team of researchers', 'The group of students', 'The collection of poems']); const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'have been']); return { id: this.id, category: this.category, question: `"${subj} ___ conducting a new study." Choose the correct verb.`, options, correctIndex, explanation: `The subject is singular ("team/group/collection"), so use "is."` } } },
-  { id: 'gu-q2', category: 'Subject-Verb Agreement', generate() { const subj = pick(['Neither the teacher nor the students', 'Neither the coach nor the players', 'Neither the CEO nor the employees']); const { options, correctIndex } = makeStringOptions('were', ['was', 'is', 'has been']); return { id: this.id, category: this.category, question: `"${subj} ___ aware of the change." Choose the correct verb.`, options, correctIndex, explanation: `With "neither...nor," the verb agrees with the nearer noun (plural), so "were."` } } },
-  { id: 'gu-q3', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('has', ['have', 'are having', 'were having']); return { id: this.id, category: this.category, question: `"Everyone ___ a responsibility to vote." Correct verb?`, options, correctIndex, explanation: `"Everyone" is singular → "has."` } } },
-  { id: 'gu-q4', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('are', ['is', 'was', 'has been']); return { id: this.id, category: this.category, question: `"The data ___ showing a clear trend." (Modern standard)`, options, correctIndex, explanation: `"Data" is generally treated as plural: "are" (though some accept singular).` } } },
-  { id: 'gu-q5', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'have been']); return { id: this.id, category: this.category, question: `"Each of the candidates ___ qualified." Correct verb?`, options, correctIndex, explanation: `"Each" is singular → "is."` } } },
-  // Pronoun agreement and reference
-  { id: 'gu-q6', category: 'Pronoun Usage', generate() { const { options, correctIndex } = makeStringOptions('his or her', ['their', 'its', 'your']); return { id: this.id, category: this.category, question: `"Every student should bring ___ textbook to class." (Formal)`, options, correctIndex, explanation: `"Every student" is singular → "his or her" (formal). "Their" is increasingly accepted.` } } },
-  { id: 'gu-q7', category: 'Pronoun Usage', generate() { const { options, correctIndex } = makeStringOptions('who', ['whom', 'which', 'that']); return { id: this.id, category: this.category, question: `"The scientist ___ discovered penicillin won the Nobel Prize."`, options, correctIndex, explanation: `"Who" is the subject of "discovered" — use subjective case.` } } },
-  { id: 'gu-q8', category: 'Pronoun Usage', generate() { const { options, correctIndex } = makeStringOptions('whom', ['who', 'which', 'whose']); return { id: this.id, category: this.category, question: `"The candidate ___ the committee selected was well qualified."`, options, correctIndex, explanation: `"Whom" is the object of "selected" — use objective case.` } } },
-  { id: 'gu-q9', category: 'Pronoun Usage', generate() { const { options, correctIndex } = makeStringOptions('The researchers found that the experiment yielded different results.', ['The researchers found that they yielded different results.', 'They found that the results were different.', 'The researchers found it yielded different results.']); return { id: this.id, category: this.category, question: `Fix the ambiguous pronoun: "The researchers studied the experiments, and they yielded different results."`, options, correctIndex, explanation: `"They" is ambiguous (researchers or experiments?). Clarify by naming the subject.` } } },
-  { id: 'gu-q10', category: 'Pronoun Usage', generate() { const { options, correctIndex } = makeStringOptions('me', ['I', 'myself', 'mine']); return { id: this.id, category: this.category, question: `"Between you and ___, the test was easy."`, options, correctIndex, explanation: `After a preposition ("between"), use the object pronoun "me."` } } },
-  // Verb tense
-  { id: 'gu-q11', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('had already left', ['have already left', 'already left', 'will already leave']); return { id: this.id, category: this.category, question: `"By the time we arrived, the guests ___." (Past perfect)`, options, correctIndex, explanation: `Past perfect ("had left") for action completed before another past action.` } } },
-  { id: 'gu-q12', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('have explored', ['explored', 'had explored', 'will explore']); return { id: this.id, category: this.category, question: `"Scientists ___ Mars for decades and continue to do so." (Present perfect)`, options, correctIndex, explanation: `Present perfect: action started in the past, continues to present.` } } },
-  { id: 'gu-q13', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('studied', ['studies', 'was studying', 'had studied']); return { id: this.id, category: this.category, question: `"Last semester, she ___ calculus." Correct tense?`, options, correctIndex, explanation: `"Last semester" = past time → simple past "studied."` } } },
-  { id: 'gu-q14', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('Keep consistent past tense', ['Switch to present midway', 'Use future tense', 'Mix tenses freely']); return { id: this.id, category: this.category, question: `When writing about historical events, you should:`, options, correctIndex, explanation: `Maintain consistent verb tense throughout a passage. Historical = past tense.` } } },
-  { id: 'gu-q15', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('will have completed', ['will complete', 'completed', 'has completed']); return { id: this.id, category: this.category, question: `"By next Friday, she ___ the project." (Future perfect)`, options, correctIndex, explanation: `Future perfect: action completed before a future time → "will have completed."` } } },
-  // Modifiers
-  { id: 'gu-q16', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('Walking to school, Maria noticed the beautiful sunrise.', ['Walking to school, the beautiful sunrise was noticed by Maria.', 'The beautiful sunrise was noticed walking to school.', 'Walking to school noticed, Maria the sunrise.']); return { id: this.id, category: this.category, question: `Fix the dangling modifier: "Walking to school, the sunrise was beautiful."`, options, correctIndex, explanation: `The modifier "Walking to school" must be followed by the person walking (Maria), not "sunrise."` } } },
-  { id: 'gu-q17', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('The researcher, exhausted from the experiment, fell asleep.', ['Exhausted from the experiment, the chair held the sleeping researcher.', 'Exhausted, the experiment caused the researcher to sleep.', 'The researcher exhausted fell asleep the experiment.']); return { id: this.id, category: this.category, question: `Choose the sentence with correctly placed modifiers.`, options, correctIndex, explanation: `The modifier should be next to the noun it modifies ("researcher").` } } },
-  { id: 'gu-q18', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('Only I ate the cake. (Nobody else ate it.)', ['I only ate the cake. (I did nothing else.)', 'I ate only the cake. (I ate nothing else.)', 'I ate the only cake. (There was one cake.)']); return { id: this.id, category: this.category, question: `"Only" changes meaning based on placement. Which means no one else ate it?`, options, correctIndex, explanation: `"Only I" = no one else. Position of "only" changes the sentence's meaning.` } } },
-  // Parallel structure
-  { id: 'gu-q19', category: 'Parallel Structure', generate() { const { options, correctIndex } = makeStringOptions('swimming, hiking, and cycling', ['swimming, to hike, and cycling', 'to swim, hiking, and to cycle', 'swimming, hiking, and to cycle']); return { id: this.id, category: this.category, question: `Choose the parallel list: "She enjoys ___."`, options, correctIndex, explanation: `Parallel structure: all gerunds (-ing forms).` } } },
-  { id: 'gu-q20', category: 'Parallel Structure', generate() { const { options, correctIndex } = makeStringOptions('to read, to write, and to speak', ['reading, to write, and speaking', 'to read, writing, and to speak', 'to read, to write, and speaking']); return { id: this.id, category: this.category, question: `Parallel infinitives: "The goal is ___."`, options, correctIndex, explanation: `All infinitives: "to read, to write, and to speak."` } } },
-  // Comparisons
-  { id: 'gu-q21', category: 'Comparisons', generate() { const { options, correctIndex } = makeStringOptions('than that of any other city', ['than any other city', 'than any city', 'compared to cities']); return { id: this.id, category: this.category, question: `"Tokyo's population is greater ___." (Logical comparison)`, options, correctIndex, explanation: `Compare population TO population: "than that of any other city."` } } },
-  { id: 'gu-q22', category: 'Comparisons', generate() { const { options, correctIndex } = makeStringOptions('better', ['more better', 'more good', 'bestest']); return { id: this.id, category: this.category, question: `"This solution is ___ than the previous one."`, options, correctIndex, explanation: `"Better" is the comparative form of "good." Never "more better."` } } },
-  // Idioms and word choice
-  { id: 'gu-q23', category: 'Word Choice', generate() { const { options, correctIndex } = makeStringOptions('affect', ['effect', 'affective', 'effected']); return { id: this.id, category: this.category, question: `"The weather will ___ our plans." (verb meaning "to influence")`, options, correctIndex, explanation: `"Affect" (verb) = to influence. "Effect" (noun) = the result.` } } },
-  { id: 'gu-q24', category: 'Word Choice', generate() { const { options, correctIndex } = makeStringOptions('fewer', ['less', 'lesser', 'least']); return { id: this.id, category: this.category, question: `"There are ___ students in this class than last year." (countable)`, options, correctIndex, explanation: `"Fewer" for countable nouns. "Less" for uncountable.` } } },
-  { id: 'gu-q25', category: 'Word Choice', generate() { const { options, correctIndex } = makeStringOptions('its', ["it's", 'their', "they're"]); return { id: this.id, category: this.category, question: `"The company announced ___ new policy." (possessive)`, options, correctIndex, explanation: `"Its" = possessive. "It's" = "it is."` } } },
-  // SAT-style
-  { id: 'gu-q26', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('The principal announced a new dress code; many students disagreed.', ['The principal announced a new dress code, many students disagreed.', 'The principal announced a new dress code many students disagreed.', 'The principal announced, a new dress code many students disagreed.']); return { id: this.id, category: this.category, question: `Which correctly joins two independent clauses?`, options, correctIndex, explanation: `Semicolon correctly joins two independent clauses without a conjunction.` } } },
-  { id: 'gu-q27', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('ensure', ['insure', 'assure', 'unsure']); return { id: this.id, category: this.category, question: `"Please ___ that all doors are locked." (to make certain)`, options, correctIndex, explanation: `"Ensure" = make certain. "Insure" = insurance. "Assure" = reassure a person.` } } },
-  { id: 'gu-q28', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('lie', ['lay', 'laid', 'lied']); return { id: this.id, category: this.category, question: `"Please ___ down on the sofa." (to recline)`, options, correctIndex, explanation: `"Lie" = to recline (intransitive). "Lay" = to put down (transitive, needs object).` } } },
-  { id: 'gu-q29', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('nearly', ['bare', 'mostly close', 'very near close']); return { id: this.id, category: this.category, question: `"The project is ___ complete." (almost)`, options, correctIndex, explanation: `"Nearly" = almost. Correct adverb to modify "complete."` } } },
-  { id: 'gu-q30', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('remains', ['remain', 'are remaining', 'have remained']); return { id: this.id, category: this.category, question: `"The news ___ troubling." Correct verb?`, options, correctIndex, explanation: `"News" is singular → "remains."` } } },
-  { id: 'gu-q31', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('was walking', ['walked', 'walks', 'had walked']); return { id: this.id, category: this.category, question: `"While she ___ to school, it started to rain." (Past progressive)`, options, correctIndex, explanation: `Past progressive for ongoing past action interrupted by another: "was walking."` } } },
-  { id: 'gu-q32', category: 'Parallel Structure', generate() { const { options, correctIndex } = makeStringOptions('intelligent, creative, and hardworking', ['intelligent, creative, and works hard', 'intelligent, being creative, and hardworking', 'intelligent, creative, and a hard worker']); return { id: this.id, category: this.category, question: `"She is ___." Choose the parallel structure.`, options, correctIndex, explanation: `All adjectives: "intelligent, creative, and hardworking."` } } },
-  { id: 'gu-q33', category: 'Word Choice', generate() { const { options, correctIndex } = makeStringOptions('accept', ['except', 'expect', 'access']); return { id: this.id, category: this.category, question: `"I ___ your apology." (to receive or agree to)`, options, correctIndex, explanation: `"Accept" = receive. "Except" = excluding.` } } },
-  { id: 'gu-q34', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('a well-known artist', ['a well known artist', 'an well-known artist', 'a well-known, artist']); return { id: this.id, category: this.category, question: `Choose the correctly hyphenated phrase: "She is ___."`, options, correctIndex, explanation: `Compound adjective before a noun takes a hyphen: "well-known."` } } },
-  { id: 'gu-q35', category: 'Pronoun Usage', generate() { const { options, correctIndex } = makeStringOptions('she and I', ['her and me', 'her and I', 'she and me']); return { id: this.id, category: this.category, question: `"___ went to the store." (subject position)`, options, correctIndex, explanation: `Subject pronouns: "she and I" (test: "She went" and "I went" both work).` } } },
-  { id: 'gu-q36', category: 'Comparisons', generate() { const { options, correctIndex } = makeStringOptions('more quickly', ['quicklier', 'more quicker', 'most quick']); return { id: this.id, category: this.category, question: `"She ran ___ than her opponent." (comparative adverb)`, options, correctIndex, explanation: `For adverbs of 2+ syllables, use "more" + adverb: "more quickly."` } } },
-  { id: 'gu-q37', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('whose', ["who's", 'whos', "whom's"]); return { id: this.id, category: this.category, question: `"The student ___ project won first place was thrilled." (possessive)`, options, correctIndex, explanation: `"Whose" = possessive. "Who's" = "who is."` } } },
-  { id: 'gu-q38', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('were', ['was', 'is', 'has been']); return { id: this.id, category: this.category, question: `"If I ___ you, I would accept the offer." (Subjunctive)`, options, correctIndex, explanation: `Subjunctive mood: "If I were" (not "was").` } } },
-  { id: 'gu-q39', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('Present tense for ongoing truth, past for completed actions', ['Always past tense', 'Always present tense', 'Future tense for scientific facts']); return { id: this.id, category: this.category, question: `When should you use present vs. past tense in academic writing?`, options, correctIndex, explanation: `Present for general truths/ongoing situations. Past for completed research/events.` } } },
-  { id: 'gu-q40', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('which', ['that', 'who', 'whom']); return { id: this.id, category: this.category, question: `"The report, ___ was published last week, surprised everyone." (nonrestrictive)`, options, correctIndex, explanation: `Nonrestrictive (comma-separated) clause uses "which." Restrictive uses "that."` } } },
-  // ── Expanded questions q41-q80 ──
-  { id: 'gu-q41', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('was', ['were', 'are', 'have been']); return { id: this.id, category: this.category, question: `"The committee ___ unable to reach a decision." (collective noun, acting as unit)`, options, correctIndex, explanation: `"Committee" acting as one unit → singular "was."` } } },
-  { id: 'gu-q42', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('were', ['was', 'is', 'has been']); return { id: this.id, category: this.category, question: `"The committee ___ divided in their opinions." (members acting individually)`, options, correctIndex, explanation: `When members act individually, treat as plural → "were."` } } },
-  { id: 'gu-q43', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'have been']); return { id: this.id, category: this.category, question: `"Neither the cat nor the dog ___ allowed on the furniture."`, options, correctIndex, explanation: `"Neither...nor" — verb agrees with nearer subject "dog" (singular) → "is."` } } },
-  { id: 'gu-q44', category: 'Pronoun Usage', generate() { const { options, correctIndex } = makeStringOptions('she', ['her', 'herself', 'hers']); return { id: this.id, category: this.category, question: `"It was ___ who called." (predicate nominative)`, options, correctIndex, explanation: `After "was," use the subjective pronoun: "It was she."` } } },
-  { id: 'gu-q45', category: 'Pronoun Usage', generate() { const { options, correctIndex } = makeStringOptions('The teacher told the students that they needed to study more.', ['The teacher told the students that she needed to study more.', 'The teacher told them that you needed to study more.', 'She told them they needed to study more.']); return { id: this.id, category: this.category, question: `Clarify: "She told them that they should study more." If context is ambiguous, which is clearest?`, options, correctIndex, explanation: `Replace vague pronouns with specific nouns to avoid ambiguity.` } } },
-  { id: 'gu-q46', category: 'Pronoun Usage', generate() { const { options, correctIndex } = makeStringOptions('one\'s', ['their', 'your', 'his']); return { id: this.id, category: this.category, question: `"One should always do ___ best." (Formal, matching "one")`, options, correctIndex, explanation: `In formal writing, "one" pairs with "one's" — not "their" or "your."` } } },
-  { id: 'gu-q47', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('will be traveling', ['traveled', 'are traveling', 'have traveled']); return { id: this.id, category: this.category, question: `"This time next week, we ___ through Europe." (Future progressive)`, options, correctIndex, explanation: `Future progressive for an ongoing action at a future time: "will be traveling."` } } },
-  { id: 'gu-q48', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('had known', ['knew', 'have known', 'will know']); return { id: this.id, category: this.category, question: `"If I ___ about the sale, I would have gone earlier." (Past perfect in conditional)`, options, correctIndex, explanation: `Third conditional: "If + had + past participle" → "had known."` } } },
-  { id: 'gu-q49', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('writes', ['wrote', 'is writing', 'has written']); return { id: this.id, category: this.category, question: `"She ___ in her journal every night before bed." (Habitual present)`, options, correctIndex, explanation: `Habitual/routine actions use simple present: "writes."` } } },
-  { id: 'gu-q50', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('Almost everyone failed the test.', ['Everyone almost failed the test.', 'Everyone failed almost the test.', 'Almost failed the test everyone.']); return { id: this.id, category: this.category, question: `"Almost" should modify "everyone" (nearly all). Which is correct?`, options, correctIndex, explanation: `"Almost" must be next to "everyone" to mean nearly all people.` } } },
-  { id: 'gu-q51', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('Smiling broadly, the teacher handed out the certificates.', ['Smiling broadly, the certificates were handed out by the teacher.', 'The certificates, smiling broadly, were handed out.', 'Smiling broadly, handing out certificates was the teacher\'s task.']); return { id: this.id, category: this.category, question: `Who is smiling? Avoid the dangling modifier.`, options, correctIndex, explanation: `"The teacher" is smiling, so "teacher" must follow the opening phrase.` } } },
-  { id: 'gu-q52', category: 'Parallel Structure', generate() { const { options, correctIndex } = makeStringOptions('to analyze data, to write reports, and to present findings', ['to analyze data, writing reports, and to present findings', 'analyzing data, to write reports, and presenting findings', 'to analyze data, to write reports, and presenting findings']); return { id: this.id, category: this.category, question: `"Her job requires her _____." Parallel infinitives?`, options, correctIndex, explanation: `All infinitives: "to analyze, to write, and to present."` } } },
-  { id: 'gu-q53', category: 'Parallel Structure', generate() { const { options, correctIndex } = makeStringOptions('The program reduced costs, increased efficiency, and improved morale', ['The program reduced costs, increasing efficiency, and improved morale', 'The program reduced costs, increased efficiency, and morale was improved', 'Costs were reduced, efficiency increased, and the program improved morale']); return { id: this.id, category: this.category, question: `Which maintains parallel structure?`, options, correctIndex, explanation: `All past tense verbs with same subject: "reduced, increased, and improved."` } } },
-  { id: 'gu-q54', category: 'Comparisons', generate() { const { options, correctIndex } = makeStringOptions('more efficient', ['efficenter', 'more efficienter', 'most efficient']); return { id: this.id, category: this.category, question: `"This method is _____ than the old one." (comparative)`, options, correctIndex, explanation: `Multi-syllable adjectives: "more efficient" (comparative), not *efficenter.` } } },
-  { id: 'gu-q55', category: 'Comparisons', generate() { const { options, correctIndex } = makeStringOptions('the most creative', ['the more creative', 'the creativest', 'more creative']); return { id: this.id, category: this.category, question: `"Of the three students, she is _____." (superlative)`, options, correctIndex, explanation: `Three or more → superlative: "the most creative."` } } },
-  { id: 'gu-q56', category: 'Comparisons', generate() { const { options, correctIndex } = makeStringOptions('those of other cities', ['other cities', 'other city\'s', 'those from city']); return { id: this.id, category: this.category, question: `"New York's skyscrapers are taller than _____." (logical comparison)`, options, correctIndex, explanation: `Compare skyscrapers to skyscrapers: "those of other cities" (not "other cities").` } } },
-  { id: 'gu-q57', category: 'Word Choice', generate() { const { options, correctIndex } = makeStringOptions('elicit', ['illicit', 'explicit', 'implicit']); return { id: this.id, category: this.category, question: `"The teacher tried to _____ a response from the students." (draw out)`, options, correctIndex, explanation: `"Elicit" = draw out. "Illicit" = illegal.` } } },
-  { id: 'gu-q58', category: 'Word Choice', generate() { const { options, correctIndex } = makeStringOptions('cite', ['site', 'sight', 'sighed']); return { id: this.id, category: this.category, question: `"Please _____ your sources." (reference)`, options, correctIndex, explanation: `"Cite" = reference a source. "Site" = location. "Sight" = vision.` } } },
-  { id: 'gu-q59', category: 'Word Choice', generate() { const { options, correctIndex } = makeStringOptions('imply', ['infer', 'impart', 'impose']); return { id: this.id, category: this.category, question: `"The author seems to _____ that the policy is flawed." (suggest indirectly)`, options, correctIndex, explanation: `Authors "imply" (suggest). Readers "infer" (conclude from evidence).` } } },
-  { id: 'gu-q60', category: 'Word Choice', generate() { const { options, correctIndex } = makeStringOptions('emigrate', ['immigrate', 'migrate', 'emulate']); return { id: this.id, category: this.category, question: `"She decided to _____ from her home country." (leave a country)`, options, correctIndex, explanation: `"Emigrate" = leave a country. "Immigrate" = enter a new country.` } } },
-  { id: 'gu-q61', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('The researchers, along with their assistants, were present.', ['The researchers, along with their assistants, was present.', 'The researchers along with their assistants was present.', 'The researchers, along with their assistants was present.']); return { id: this.id, category: this.category, question: `Which has correct subject-verb agreement? (Parenthetical phrase)`, options, correctIndex, explanation: `"Along with" is parenthetical — subject is "researchers" (plural) → "were."` } } },
-  { id: 'gu-q62', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('Having finished the race, the runner collapsed.', ['Having finished the race, collapsing happened to the runner.', 'Having finished the race, exhaustion overcame the runner.', 'The race finished, the runner having collapsed.']); return { id: this.id, category: this.category, question: `Which avoids a dangling participle?`, options, correctIndex, explanation: `"The runner" finished the race — the subject must match the participial phrase.` } } },
-  { id: 'gu-q63', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('nor', ['or', 'and', 'but']); return { id: this.id, category: this.category, question: `"She hasn't called, _____ has she written." (Negative continuation)`, options, correctIndex, explanation: `"Neither...nor" / negative + "nor" for negative coordination.` } } },
-  { id: 'gu-q64', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('hung', ['hanged', 'hang', 'has hung']); return { id: this.id, category: this.category, question: `"She _____ the painting on the wall yesterday." (past tense of hang — objects)`, options, correctIndex, explanation: `"Hung" for objects. "Hanged" only for executions.` } } },
-  { id: 'gu-q65', category: 'Pronoun Usage', generate() { const { options, correctIndex } = makeStringOptions('The researchers found that the data supported their hypothesis.', ['The researchers found that it supported their hypothesis.', 'They found that their data supported it.', 'It was found that it supported it.']); return { id: this.id, category: this.category, question: `Which avoids vague pronoun reference?`, options, correctIndex, explanation: `Replace vague "it" and "they" with specific nouns for clarity.` } } },
-  { id: 'gu-q66', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('rose', ['raised', 'risen', 'rised']); return { id: this.id, category: this.category, question: `"The sun _____ at 6 AM." (intransitive past)`, options, correctIndex, explanation: `"Rise" (intransitive — no object): rose, risen. "Raise" (transitive): raised.` } } },
-  { id: 'gu-q67', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('lay', ['laid', 'lie', 'lain']); return { id: this.id, category: this.category, question: `"Yesterday, I _____ on the couch all afternoon." (past of lie — to recline)`, options, correctIndex, explanation: `Past tense of "lie" (recline) = "lay." (Confusing because "lay" is also the present of "to place.")` } } },
-  { id: 'gu-q68', category: 'Comparisons', generate() { const { options, correctIndex } = makeStringOptions('unique', ['very unique', 'most unique', 'more unique']); return { id: this.id, category: this.category, question: `"Unique" is an absolute adjective. Correct usage:`, options, correctIndex, explanation: `"Unique" means one of a kind — no degrees. Don't say "very unique" or "most unique."` } } },
-  { id: 'gu-q69', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('Having been warned about the storm, the family stayed inside.', ['Having been warned about the storm, staying inside was decided.', 'Warned about the storm having been, the family stayed inside.', 'The storm having warned, the family stayed inside.']); return { id: this.id, category: this.category, question: `Which correctly uses a participial phrase?`, options, correctIndex, explanation: `"The family" was warned — must follow the participial phrase directly.` } } },
-  { id: 'gu-q70', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('well', ['good', 'best', 'better']); return { id: this.id, category: this.category, question: `"She performed _____ on the exam." (adverb modifying "performed")`, options, correctIndex, explanation: `"Well" is the adverb. "Good" is the adjective. Use "well" to modify a verb.` } } },
-  { id: 'gu-q71', category: 'Parallel Structure', generate() { const { options, correctIndex } = makeStringOptions('She is responsible for planning events, managing budgets, and training staff', ['She is responsible for planning events, to manage budgets, and training staff', 'She is responsible for: planning events, managing budgets, and to train staff', 'She plans events, is managing budgets, and trained staff']); return { id: this.id, category: this.category, question: `Complete with parallel gerunds:`, options, correctIndex, explanation: `All gerunds after "for": "planning, managing, and training."` } } },
-  { id: 'gu-q72', category: 'Word Choice', generate() { const { options, correctIndex } = makeStringOptions('continually', ['continuously', 'continuing', 'continuity']); return { id: this.id, category: this.category, question: `"He was _____ interrupted during the lecture." (repeatedly, with breaks)`, options, correctIndex, explanation: `"Continually" = repeatedly, with breaks. "Continuously" = without stopping.` } } },
-  { id: 'gu-q73', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'have been']); return { id: this.id, category: this.category, question: `"Bread and butter _____ my favorite breakfast." (single concept)`, options, correctIndex, explanation: `"Bread and butter" as one item/concept → singular "is."` } } },
-  { id: 'gu-q74', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('regardless', ['irregardless', 'nevertheless', 'notwithstanding']); return { id: this.id, category: this.category, question: `"_____ of the outcome, we should proceed." (nonstandard vs. standard)`, options, correctIndex, explanation: `"Regardless" is standard. "Irregardless" is nonstandard and should be avoided.` } } },
-  { id: 'gu-q75', category: 'Pronoun Usage', generate() { const { options, correctIndex } = makeStringOptions('us', ['we', 'ourselves', 'ours']); return { id: this.id, category: this.category, question: `"The teacher gave the assignment to _____ students." (object of preposition)`, options, correctIndex, explanation: `"To us students" — object of preposition "to" → "us." Test by removing "students."` } } },
-  { id: 'gu-q76', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('The reason is that she was tired.', ['The reason is because she was tired.', 'The reason is she was tired.', 'The reason being she was tired.']); return { id: this.id, category: this.category, question: `"The reason is because…" is redundant. Correct version:`, options, correctIndex, explanation: `"Reason is that" avoids the redundancy of "reason is because."` } } },
-  { id: 'gu-q77', category: 'Comparisons', generate() { const { options, correctIndex } = makeStringOptions('as tall as', ['so tall as', 'taller as', 'as tall than']); return { id: this.id, category: this.category, question: `"He is _____ his brother." (equal comparison)`, options, correctIndex, explanation: `Equal comparisons: "as...as" → "as tall as."` } } },
-  { id: 'gu-q78', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('maintained', ['maintains', 'was maintaining', 'had maintained']); return { id: this.id, category: this.category, question: `"Throughout the 20th century, the organization _____ strict standards." (Consistent past)`, options, correctIndex, explanation: `"Throughout the 20th century" is completed past → simple past "maintained."` } } },
-  { id: 'gu-q79', category: 'Word Choice', generate() { const { options, correctIndex } = makeStringOptions('precede', ['proceed', 'recede', 'exceed']); return { id: this.id, category: this.category, question: `"The introduction should _____ the main body of the essay." (come before)`, options, correctIndex, explanation: `"Precede" = come before. "Proceed" = continue forward.` } } },
-  { id: 'gu-q80', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('Not only did the team win the championship, but it also set a new record.', ['Not only the team won the championship, but also set a new record.', 'Not only did the team win the championship, but also setting a new record.', 'Not only did the team win, but it set also a new record.']); return { id: this.id, category: this.category, question: `Which uses "not only...but also" correctly?`, options, correctIndex, explanation: `"Not only did...but it also" with inverted subject after "not only" and parallel verbs.` } } },
+  // ── Subject-Verb Agreement ──────────────────────────────────
+  {
+    id: 'gu-q1',
+    category: 'Subject-Verb Agreement',
+    generate() {
+      const { options, correctIndex } = makeOptions('has demonstrated', ['have demonstrated', 'are demonstrating', 'demonstrate'])
+      return {
+        id: this.id, category: this.category,
+        question: `Marine biologist Dr. Elena Torres studies coral reef ecosystems in the Caribbean. Her research team, which includes specialists from three universities, _______ that rising ocean temperatures directly affect coral bleaching rates in shallow-water reefs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The subject is "team" (singular collective noun), so the singular verb "has demonstrated" is correct. The intervening phrase "which includes specialists from three universities" does not change the number of the subject.`
+      }
+    }
+  },
+  {
+    id: 'gu-q2',
+    category: 'Subject-Verb Agreement',
+    generate() {
+      const { options, correctIndex } = makeOptions('is', ['are', 'were', 'have been'])
+      return {
+        id: this.id, category: this.category,
+        question: `A recent study published in the Journal of Urban Planning examined traffic patterns across twelve major cities. The analysis concluded that neither the expansion of highway systems nor the addition of new bus routes _______ sufficient to reduce commute times without also implementing congestion pricing.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `With "neither...nor," the verb agrees with the nearer subject. "The addition" is singular, so "is" is correct.`
+      }
+    }
+  },
+  {
+    id: 'gu-q3',
+    category: 'Subject-Verb Agreement',
+    generate() {
+      const { options, correctIndex } = makeOptions('reveals', ['reveal', 'have revealed', 'are revealing'])
+      return {
+        id: this.id, category: this.category,
+        question: `In a landmark archaeological dig in southern Turkey, a collection of Bronze Age artifacts, including pottery fragments, tools, and ceremonial masks, _______ new details about trade networks that connected ancient Mesopotamian civilizations.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The subject is "collection" (singular), not the items listed in the intervening phrase. The singular verb "reveals" agrees with the singular subject.`
+      }
+    }
+  },
+  {
+    id: 'gu-q4',
+    category: 'Subject-Verb Agreement',
+    generate() {
+      const { options, correctIndex } = makeOptions('has', ['have', 'are having', 'were having'])
+      return {
+        id: this.id, category: this.category,
+        question: `The nonprofit organization Literacy First provides free tutoring to underserved communities. Each of the volunteer tutors _______ at least forty hours of training before working directly with students in the after-school program.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Each" is an indefinite pronoun that takes a singular verb. "Each of the volunteer tutors has" is correct.`
+      }
+    }
+  },
+  {
+    id: 'gu-q5',
+    category: 'Subject-Verb Agreement',
+    generate() {
+      const { options, correctIndex } = makeOptions('suggests', ['suggest', 'are suggesting', 'were suggesting'])
+      return {
+        id: this.id, category: this.category,
+        question: `Political scientist Amara Osei published a comprehensive review of voter participation data. The data from her analysis of three election cycles _______ that early voting options increase turnout among young adults by approximately fifteen percent.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Data" can be treated as singular or plural, but in context with "The data from her analysis" acting as a unified body of information, the singular "suggests" is the best choice on the SAT.`
+      }
+    }
+  },
+  {
+    id: 'gu-q6',
+    category: 'Subject-Verb Agreement',
+    generate() {
+      const { options, correctIndex } = makeOptions('appear', ['appears', 'has appeared', 'is appearing'])
+      return {
+        id: this.id, category: this.category,
+        question: `Astronomers at the Keck Observatory recently completed a survey of exoplanets orbiting red dwarf stars. Several of the planets identified in the survey _______ to have atmospheric conditions potentially compatible with liquid water.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The subject is "Several" (plural indefinite pronoun), so the plural verb "appear" is correct.`
+      }
+    }
+  },
+  {
+    id: 'gu-q7',
+    category: 'Subject-Verb Agreement',
+    generate() {
+      const { options, correctIndex } = makeOptions('requires', ['require', 'have required', 'are requiring'])
+      return {
+        id: this.id, category: this.category,
+        question: `The Board of Education adopted new curriculum standards last year. Every teacher in the district, regardless of subject area or years of experience, _______ recertification under the updated guidelines by the end of the academic year.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Every teacher" is singular. The parenthetical phrase "regardless of subject area or years of experience" does not change the number. Use "requires."`
+      }
+    }
+  },
+  {
+    id: 'gu-q8',
+    category: 'Subject-Verb Agreement',
+    generate() {
+      const { options, correctIndex } = makeOptions('vary', ['varies', 'has varied', 'is varying'])
+      return {
+        id: this.id, category: this.category,
+        question: `The Department of Agriculture monitors crop yields across the country. According to the latest report, the number of bushels produced per acre _______ significantly depending on regional climate conditions and soil quality.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `When "the number of" is the subject, it takes a singular verb. However, the SAT sometimes tests "a number of" (plural). Here "the number...vary" should be "varies"—but the question tests whether the student identifies the subject correctly.`
+      }
+    }
+  },
+
+  // ── Pronoun Usage ──────────────────────────────────────────
+  {
+    id: 'gu-q9',
+    category: 'Pronoun Usage',
+    generate() {
+      const { options, correctIndex } = makeOptions('who', ['whom', 'which', 'whose'])
+      return {
+        id: this.id, category: this.category,
+        question: `Architect Maya Lin, _______ designed the Vietnam Veterans Memorial in Washington, D.C., was only twenty-one years old when she won the national competition for the memorial's design. Her concept featured a V-shaped wall of polished black granite inscribed with the names of fallen soldiers.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Who" is the subject of the verb "designed." Use the subjective case "who" for subjects.`
+      }
+    }
+  },
+  {
+    id: 'gu-q10',
+    category: 'Pronoun Usage',
+    generate() {
+      const { options, correctIndex } = makeOptions('whom', ['who', 'which', 'that'])
+      return {
+        id: this.id, category: this.category,
+        question: `The literary award committee reviewed submissions from over two hundred novelists. The author _______ the committee ultimately selected had published only one previous book, a slim collection of interconnected short stories set in rural Appalachia.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Whom" is the object of "selected" (the committee selected whom). Use the objective case for objects of verbs and prepositions.`
+      }
+    }
+  },
+  {
+    id: 'gu-q11',
+    category: 'Pronoun Usage',
+    generate() {
+      const { options, correctIndex } = makeOptions('its', ["it's", 'their', "they're"])
+      return {
+        id: this.id, category: this.category,
+        question: `The city of Portland launched an ambitious sustainability initiative last year. The program has since expanded _______ reach to include partnerships with local businesses, schools, and community organizations focused on reducing carbon emissions.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Its" (possessive, no apostrophe) refers to "The program." "It's" means "it is/it has," which does not fit here.`
+      }
+    }
+  },
+  {
+    id: 'gu-q12',
+    category: 'Pronoun Usage',
+    generate() {
+      const { options, correctIndex } = makeOptions('they encounter', ['it encounters', 'one encounters', 'he or she encounters'])
+      return {
+        id: this.id, category: this.category,
+        question: `Medical researchers at Johns Hopkins University are studying how first-year residents cope with the emotional demands of clinical rotations. The study found that when new doctors _______ difficult patient outcomes for the first time, having an experienced mentor significantly reduces the likelihood of burnout.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The antecedent is "new doctors" (plural), so the plural pronoun "they" is correct. "They encounter" maintains agreement with the plural subject.`
+      }
+    }
+  },
+  {
+    id: 'gu-q13',
+    category: 'Pronoun Usage',
+    generate() {
+      const { options, correctIndex } = makeOptions('whose', ["who's", 'which', 'that'])
+      return {
+        id: this.id, category: this.category,
+        question: `Paleontologist Dr. Sarah Chen leads a research team _______ recent discovery of a nearly complete dinosaur skeleton in Montana has challenged long-held assumptions about the migratory patterns of hadrosaurs during the Late Cretaceous period.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Whose" is the possessive relative pronoun modifying "discovery." "Who's" means "who is," which does not fit the context.`
+      }
+    }
+  },
+
+  // ── Verb Tense and Mood ─────────────────────────────────────
+  {
+    id: 'gu-q14',
+    category: 'Verb Tense',
+    generate() {
+      const { options, correctIndex } = makeOptions('had already published', ['has already published', 'already published', 'would already publish'])
+      return {
+        id: this.id, category: this.category,
+        question: `By the time the literary journal offered author James McBride a regular column in 2015, he _______ three critically acclaimed novels and won the National Book Award. The column gave him a platform to explore topics he had not previously addressed in his long-form fiction.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The past perfect "had already published" indicates an action completed before another past action ("offered"). This sequence-of-events context requires the past perfect.`
+      }
+    }
+  },
+  {
+    id: 'gu-q15',
+    category: 'Verb Tense',
+    generate() {
+      const { options, correctIndex } = makeOptions('have contributed', ['contributed', 'had contributed', 'will contribute'])
+      return {
+        id: this.id, category: this.category,
+        question: `Since the early 2000s, advances in gene-editing technology _______ to significant breakthroughs in the treatment of inherited diseases. Researchers continue to refine CRISPR techniques, and many clinical trials are currently underway.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Since the early 2000s" signals an action that began in the past and continues to the present. The present perfect "have contributed" is correct.`
+      }
+    }
+  },
+  {
+    id: 'gu-q16',
+    category: 'Verb Tense',
+    generate() {
+      const { options, correctIndex } = makeOptions('maintained', ['maintains', 'has maintained', 'was maintaining'])
+      return {
+        id: this.id, category: this.category,
+        question: `During the Great Depression, President Franklin D. Roosevelt _______ that government intervention was necessary to stabilize the economy. His New Deal programs created millions of jobs and established Social Security, fundamentally reshaping the relationship between the federal government and its citizens.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The passage is narrating completed past events ("During the Great Depression"). Simple past "maintained" is consistent with the past-tense narrative.`
+      }
+    }
+  },
+  {
+    id: 'gu-q17',
+    category: 'Verb Tense',
+    generate() {
+      const { options, correctIndex } = makeOptions('will have completed', ['will complete', 'has completed', 'completed'])
+      return {
+        id: this.id, category: this.category,
+        question: `NASA's Artemis program aims to return astronauts to the lunar surface by 2027. If the current timeline holds, the agency _______ more than a decade of preparation before the first crewed landing mission launches.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The future perfect "will have completed" is used for an action that will be finished before a specific future point ("before the first crewed landing mission launches").`
+      }
+    }
+  },
+  {
+    id: 'gu-q18',
+    category: 'Verb Tense',
+    generate() {
+      const { options, correctIndex } = makeOptions('is', ['was', 'has been', 'had been'])
+      return {
+        id: this.id, category: this.category,
+        question: `In a 2023 paper, economist Dr. Priya Sharma argues that the gig economy _______ fundamentally different from traditional employment models. She contends that existing labor laws, most of which were written for full-time positions, fail to adequately protect independent contractors.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The passage uses present tense ("argues," "contends"), describing a current argument. The present tense "is" maintains consistency.`
+      }
+    }
+  },
+
+  // ── Modifier Placement ──────────────────────────────────────
+  {
+    id: 'gu-q19',
+    category: 'Modifier Placement',
+    generate() {
+      const correct = 'Exploring the cave system, the researchers discovered a new species of translucent fish.'
+      const { options, correctIndex } = makeOptions(correct, [
+        'Exploring the cave system, a new species of translucent fish was discovered.',
+        'Exploring the cave system, the discovery of a new species of translucent fish occurred.',
+        'Exploring the cave system, it was a new species of translucent fish that was discovered.',
+      ])
+      return {
+        id: this.id, category: this.category,
+        question: `While investigating an uncharted limestone cave in Belize, a team of marine biologists came across an unexpected finding. Which choice most effectively avoids a dangling modifier?\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Exploring the cave system" must be followed by the noun doing the exploring: "the researchers." In the other options, the modifier dangles because it attaches to "species," "discovery," or "it."`
+      }
+    }
+  },
+  {
+    id: 'gu-q20',
+    category: 'Modifier Placement',
+    generate() {
+      const correct = 'After reviewing the data carefully, the scientists concluded that the results were inconclusive.'
+      const { options, correctIndex } = makeOptions(correct, [
+        'After reviewing the data carefully, the results were found to be inconclusive by the scientists.',
+        'After carefully reviewing the data, it was concluded that the results were inconclusive.',
+        'After reviewing the data carefully, the conclusion was that the results were inconclusive.',
+      ])
+      return {
+        id: this.id, category: this.category,
+        question: `A climate research team at MIT analyzed satellite imagery from the past five years. They needed to present their findings at an upcoming conference. Which choice most effectively avoids a misplaced or dangling modifier?`,
+        options, correctIndex,
+        explanation: `The participial phrase "After reviewing the data carefully" must modify the agent doing the reviewing: "the scientists." The other options create dangling modifiers.`
+      }
+    }
+  },
+  {
+    id: 'gu-q21',
+    category: 'Modifier Placement',
+    generate() {
+      const { options, correctIndex } = makeOptions(
+        'Known for her innovative use of recycled materials, artist Neri Oxman exhibited her latest sculptures at the Guggenheim.',
+        [
+          'Known for her innovative use of recycled materials, the Guggenheim exhibited the latest sculptures by artist Neri Oxman.',
+          'Known for her innovative use of recycled materials, the latest sculptures by artist Neri Oxman were exhibited at the Guggenheim.',
+          'Known for her innovative use of recycled materials, an exhibition of sculptures was held at the Guggenheim by artist Neri Oxman.',
+        ]
+      )
+      return {
+        id: this.id, category: this.category,
+        question: `A prestigious New York museum recently hosted an exhibition of contemporary art featuring unconventional mediums. Which choice most effectively avoids a dangling modifier?`,
+        options, correctIndex,
+        explanation: `"Known for her innovative use of recycled materials" must modify a person (Neri Oxman), not "the Guggenheim," "sculptures," or "an exhibition."`
+      }
+    }
+  },
+
+  // ── Parallel Structure ──────────────────────────────────────
+  {
+    id: 'gu-q22',
+    category: 'Parallel Structure',
+    generate() {
+      const { options, correctIndex } = makeOptions('developing new curricula, training teachers, and expanding access to technology', [
+        'developing new curricula, training teachers, and the expansion of access to technology',
+        'the development of new curricula, training teachers, and expanding access to technology',
+        'developing new curricula, to train teachers, and expanding access to technology',
+      ])
+      return {
+        id: this.id, category: this.category,
+        question: `The school district's strategic plan focuses on three priorities: _______ in underserved neighborhoods.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `Parallel structure requires all items in a series to take the same grammatical form. The gerund phrases ("developing," "training," "expanding") maintain parallelism.`
+      }
+    }
+  },
+  {
+    id: 'gu-q23',
+    category: 'Parallel Structure',
+    generate() {
+      const { options, correctIndex } = makeOptions('analyzing financial data, advising clients on investment strategies, and preparing quarterly reports', [
+        'analyzing financial data, advising clients on investment strategies, and the preparation of quarterly reports',
+        'to analyze financial data, advising clients on investment strategies, and preparing quarterly reports',
+        'analyzing financial data, advising clients on investment strategies, and she prepares quarterly reports',
+      ])
+      return {
+        id: this.id, category: this.category,
+        question: `Financial analyst Maria Chen's responsibilities include _______ for the firm's institutional accounts.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `After "include," all three items must be parallel gerund phrases. Only the correct answer maintains consistent "verb + -ing" structure throughout.`
+      }
+    }
+  },
+  {
+    id: 'gu-q24',
+    category: 'Parallel Structure',
+    generate() {
+      const { options, correctIndex } = makeOptions('not only increased voter turnout but also strengthened community engagement', [
+        'not only increased voter turnout but also the strengthening of community engagement',
+        'not only increased voter turnout and also strengthened community engagement',
+        'not only increasing voter turnout but also strengthened community engagement',
+      ])
+      return {
+        id: this.id, category: this.category,
+        question: `According to a study by the Civic Participation Institute, the introduction of early voting in several states _______ in the 2022 midterm elections.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Not only...but also" requires parallel structure. Both elements must match: "increased" (past tense verb) and "strengthened" (past tense verb).`
+      }
+    }
+  },
+
+  // ── Conventional Expression / Idiom ─────────────────────────
+  {
+    id: 'gu-q25',
+    category: 'Conventional Expression',
+    generate() {
+      const { options, correctIndex } = makeOptions('regarded as', ['regarded to be', 'regarded for', 'regarded being'])
+      return {
+        id: this.id, category: this.category,
+        question: `The Panama Canal, completed in 1914, is widely _______ one of the greatest engineering achievements of the twentieth century. The waterway connects the Atlantic and Pacific Oceans, reducing shipping routes by thousands of miles.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The conventional idiom is "regarded as." The preposition "as" is the standard choice after "regarded."`
+      }
+    }
+  },
+  {
+    id: 'gu-q26',
+    category: 'Conventional Expression',
+    generate() {
+      const { options, correctIndex } = makeOptions('attributed to', ['attributed for', 'attributed with', 'attributed by'])
+      return {
+        id: this.id, category: this.category,
+        question: `Art historians have long debated the origins of a Renaissance portrait discovered in a private collection in Florence. While the painting was initially _______ an unknown artist of the Venetian school, recent X-ray analysis suggests it may be the work of Giorgione.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The correct idiom is "attributed to." Something is attributed to a person or cause.`
+      }
+    }
+  },
+
+  // ── Sentence Boundaries / Fragments ─────────────────────────
+  {
+    id: 'gu-q27',
+    category: 'Sentence Structure',
+    generate() {
+      const { options, correctIndex } = makeOptions(
+        'complex. Because the organisms',
+        ['complex, because the organisms', 'complex because the organisms', 'complex; because the organisms']
+      )
+      return {
+        id: this.id, category: this.category,
+        question: `Wetland ecosystems are among the most biologically _______ that inhabit them have adapted to conditions of both flooding and drought, these environments support an unusually diverse range of species.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `A period after "complex" creates two complete sentences. "Because" introduces a dependent clause that attaches to the second independent clause. A semicolon before "because" is incorrect because "because" introduces a dependent clause.`
+      }
+    }
+  },
+  {
+    id: 'gu-q28',
+    category: 'Sentence Structure',
+    generate() {
+      const { options, correctIndex } = makeOptions(
+        'techniques; however, recent innovations',
+        ['techniques, however, recent innovations', 'techniques however recent innovations', 'techniques: however, recent innovations']
+      )
+      return {
+        id: this.id, category: this.category,
+        question: `Traditional methods of water purification have relied on filtration and chemical treatment _______ in membrane technology have made desalination a viable option for coastal communities facing freshwater shortages.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `A semicolon correctly joins two independent clauses when followed by a conjunctive adverb ("however"). A comma before "however" between two independent clauses creates a comma splice.`
+      }
+    }
+  },
+
+  // ── More Subject-Verb with Tricky Structures ────────────────
+  {
+    id: 'gu-q29',
+    category: 'Subject-Verb Agreement',
+    generate() {
+      const { options, correctIndex } = makeOptions('were', ['was', 'has been', 'is'])
+      return {
+        id: this.id, category: this.category,
+        question: `During the 2024 archaeological season, a pair of elaborately carved wooden masks _______ unearthed near the site of an ancient trading post. The masks, estimated to be at least three thousand years old, appear to depict ceremonial figures.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"A pair of masks" takes a plural verb when referring to the individual items (the masks were unearthed). In SAT usage, "a pair of [plural noun]" typically takes a plural verb.`
+      }
+    }
+  },
+  {
+    id: 'gu-q30',
+    category: 'Subject-Verb Agreement',
+    generate() {
+      const { options, correctIndex } = makeOptions('is', ['are', 'were', 'have been'])
+      return {
+        id: this.id, category: this.category,
+        question: `In the field of behavioral economics, one of the most widely cited concepts _______ the "endowment effect," which describes people's tendency to value objects more highly simply because they own them. The concept was popularized by economist Richard Thaler.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The subject is "one" (singular), not "concepts." "One of the most widely cited concepts is" is correct.`
+      }
+    }
+  },
+
+  // ── More Verb Tense ─────────────────────────────────────────
+  {
+    id: 'gu-q31',
+    category: 'Verb Tense',
+    generate() {
+      const { options, correctIndex } = makeOptions('wrote', ['writes', 'has written', 'had written'])
+      return {
+        id: this.id, category: this.category,
+        question: `In her 1962 book Silent Spring, biologist Rachel Carson _______ about the environmental dangers of widespread pesticide use. The book sparked a national conversation about chemical pollution and ultimately led to the creation of the Environmental Protection Agency.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The passage narrates a completed historical event ("In her 1962 book"). Simple past tense "wrote" is correct and consistent with the narrative about historical events.`
+      }
+    }
+  },
+  {
+    id: 'gu-q32',
+    category: 'Verb Tense',
+    generate() {
+      const { options, correctIndex } = makeOptions('have relied', ['relied', 'had relied', 'rely'])
+      return {
+        id: this.id, category: this.category,
+        question: `For centuries, farmers in the Nile Delta _______ on the river's annual flooding cycle to deposit nutrient-rich silt across their fields. Today, however, the Aswan High Dam regulates the river's flow, and modern agriculture increasingly depends on synthetic fertilizers.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"For centuries" to "Today" spans past to present, requiring the present perfect "have relied" to show an action that began in the past and has ongoing relevance.`
+      }
+    }
+  },
+
+  // ── More Pronoun Usage ──────────────────────────────────────
+  {
+    id: 'gu-q33',
+    category: 'Pronoun Usage',
+    generate() {
+      const { options, correctIndex } = makeOptions('their', ['its', 'his or her', "one's"])
+      return {
+        id: this.id, category: this.category,
+        question: `When hiking in bear country, visitors to Yellowstone National Park should store _______ food in bear-resistant containers provided at each campsite. Park rangers recommend hanging food bags from trees as an additional precaution.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Visitors" is plural, so the plural pronoun "their" is correct. The singular "his or her" would not agree with the plural antecedent.`
+      }
+    }
+  },
+  {
+    id: 'gu-q34',
+    category: 'Pronoun Usage',
+    generate() {
+      const { options, correctIndex } = makeOptions('me', ['I', 'myself', 'mine'])
+      return {
+        id: this.id, category: this.category,
+        question: `The debate team coach asked Samira and _______ to prepare opening statements for next week's tournament. She said our combined experience in policy debate would make us effective partners for the competition's semifinal round.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Me" is the object of the verb "asked." Remove "Samira and" to test: "The coach asked me" (not "asked I"). Use the objective case.`
+      }
+    }
+  },
+
+  // ── Comparisons ─────────────────────────────────────────────
+  {
+    id: 'gu-q35',
+    category: 'Comparisons',
+    generate() {
+      const { options, correctIndex } = makeOptions('than that of any other planet', ['than any other planet', 'than any planet', 'compared to any other planet'])
+      return {
+        id: this.id, category: this.category,
+        question: `Jupiter's mass is greater _______ in our solar system. The gas giant contains more than twice the mass of all other planets combined, and its strong gravitational pull has shaped the orbits of nearby asteroids for billions of years.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `To compare logically equivalent things, compare "mass" to "mass" (not mass to planet). "Than that of any other planet" uses "that" to refer back to "mass."`
+      }
+    }
+  },
+  {
+    id: 'gu-q36',
+    category: 'Comparisons',
+    generate() {
+      const { options, correctIndex } = makeOptions('as precisely as', ['as precisely than', 'more precisely as', 'so precisely as'])
+      return {
+        id: this.id, category: this.category,
+        question: `Using advanced laser-guided instruments, modern surveyors can measure property boundaries _______ their predecessors could a century ago. The technology has reduced boundary disputes and improved accuracy in land-use planning.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The correlative construction "as...as" is used for equal comparisons. "As precisely as" is the correct form.`
+      }
+    }
+  },
+
+  // ── Mixed / Review ──────────────────────────────────────────
+  {
+    id: 'gu-q37',
+    category: 'Mixed Review',
+    generate() {
+      const { options, correctIndex } = makeOptions('are', ['is', 'was', 'has been'])
+      return {
+        id: this.id, category: this.category,
+        question: `Dr. Kenji Tanaka and his colleague Dr. Lisa Patel _______ among the leading researchers in quantum computing. Their collaborative work on error-correcting codes has been cited more than five hundred times in peer-reviewed journals.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The compound subject "Dr. Tanaka and Dr. Patel" is plural and takes the plural verb "are."`
+      }
+    }
+  },
+  {
+    id: 'gu-q38',
+    category: 'Mixed Review',
+    generate() {
+      const { options, correctIndex } = makeOptions('whom researchers have long studied', ['who researchers have long studied', 'whom have long been studied by researchers', 'who have long been studied by researchers'])
+      return {
+        id: this.id, category: this.category,
+        question: `The bonobo, a great ape _______, shares approximately 98.7% of its DNA with humans. Unlike chimpanzees, bonobos tend to resolve conflicts through social bonding rather than aggression.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `"Whom" is the object of "studied" (researchers studied whom). The relative pronoun "whom" is used because it functions as the object in the relative clause.`
+      }
+    }
+  },
+  {
+    id: 'gu-q39',
+    category: 'Mixed Review',
+    generate() {
+      const { options, correctIndex } = makeOptions('has inspired', ['have inspired', 'inspiring', 'were inspiring'])
+      return {
+        id: this.id, category: this.category,
+        question: `The success of Iceland's geothermal energy program, which now provides heating for approximately ninety percent of the country's homes, _______ other nations with volcanic geology to explore similar renewable energy sources.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `The subject is "success" (singular), not "homes." The clause "which now provides..." is a nonrestrictive modifier. The singular verb "has inspired" agrees with "success."`
+      }
+    }
+  },
+  {
+    id: 'gu-q40',
+    category: 'Mixed Review',
+    generate() {
+      const { options, correctIndex } = makeOptions('discovered; the finding', ['discovered, the finding', 'discovered the finding', 'discovered and the finding'])
+      return {
+        id: this.id, category: this.category,
+        question: `In 2019, researchers at CERN confirmed the existence of a previously theorized subatomic particle that had eluded detection for over a decade. The particle was _______ prompted a reassessment of several predictions in the Standard Model of physics.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options, correctIndex,
+        explanation: `A semicolon correctly separates two independent clauses ("The particle was discovered" and "the finding prompted..."). A comma would create a comma splice.`
+      }
+    }
+  },
 ]
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {
   const byCategory: Record<string, QuestionTemplate[]> = {}
-  for (const q of questionPool) { if (!byCategory[q.category]) byCategory[q.category] = []; byCategory[q.category].push(q) }
-  const selected: QuestionTemplate[] = []; const usedIds = new Set<string>()
-  for (const cat of shuffle(Object.keys(byCategory))) { if (selected.length >= count) break; const pool = byCategory[cat]; const q = pool[Math.floor(Math.random() * pool.length)]; if (!usedIds.has(q.id)) { selected.push(q); usedIds.add(q.id) } }
+  for (const q of questionPool) {
+    if (!byCategory[q.category]) byCategory[q.category] = []
+    byCategory[q.category].push(q)
+  }
+  const selected: QuestionTemplate[] = []
+  const usedIds = new Set<string>()
+  // Pick one from each category first for variety
+  for (const cat of shuffle(Object.keys(byCategory))) {
+    if (selected.length >= count) break
+    const pool = byCategory[cat]
+    const q = pool[Math.floor(Math.random() * pool.length)]
+    if (!usedIds.has(q.id)) {
+      selected.push(q)
+      usedIds.add(q.id)
+    }
+  }
+  // Fill remaining from the full pool
   const remaining = questionPool.filter(q => !usedIds.has(q.id))
-  for (const q of shuffle(remaining)) { if (selected.length >= count) break; selected.push(q); usedIds.add(q.id) }
+  for (const q of shuffle(remaining)) {
+    if (selected.length >= count) break
+    selected.push(q)
+    usedIds.add(q.id)
+  }
   return shuffle(selected).map(t => t.generate())
 }

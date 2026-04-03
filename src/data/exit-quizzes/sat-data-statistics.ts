@@ -106,7 +106,7 @@ const questionPool: QuestionTemplate[] = [
       const sum = scores.reduce((a,b) => a+b, 0)
       const needed = target * n - sum
       const { options, correctIndex } = makeOptions(needed, 8)
-      return { id: this.id, category: this.category, question: `Current scores: ${scores.join(', ')}. What score is needed on the next test for a ${target} average?`, options, correctIndex, explanation: `Need total = ${target} \\u00d7 ${n} = ${target*n}. Have ${sum}. Need ${needed}.` }
+      return { id: this.id, category: this.category, question: `Current scores: ${scores.join(', ')}. What score is needed on the next test for a ${target} average?`, options, correctIndex, explanation: `Need total = ${target} \× ${n} = ${target*n}. Have ${sum}. Need ${needed}.` }
     }
   },
   {
@@ -138,7 +138,7 @@ const questionPool: QuestionTemplate[] = [
       const n = randInt(20, 50); const mean = randInt(70, 90)
       const total = n * mean
       const { options, correctIndex } = makeOptions(total, 100)
-      return { id: this.id, category: this.category, question: `A class of ${n} students has a test mean of ${mean}. What is the total of all scores?`, options, correctIndex, explanation: `Total = n \\u00d7 mean = ${n} \\u00d7 ${mean} = ${total}.` }
+      return { id: this.id, category: this.category, question: `A class of ${n} students has a test mean of ${mean}. What is the total of all scores?`, options, correctIndex, explanation: `Total = n \× mean = ${n} \× ${mean} = ${total}.` }
     }
   },
   {
@@ -167,7 +167,7 @@ const questionPool: QuestionTemplate[] = [
       const sd = randInt(3, 8); const mean = randInt(60, 90)
       const lo = mean - 2 * sd; const hi = mean + 2 * sd
       const correct = `${lo} to ${hi}`
-      return { id: this.id, category: this.category, question: `Mean = ${mean}, SD = ${sd}. Using the 95% rule, what range contains most data?`, ...makeStringOptions(correct, [`${mean - sd} to ${mean + sd}`, `${mean} to ${hi}`, `${lo - sd} to ${hi + sd}`]), explanation: '~95% of data falls within 2 SDs: mean \\u00b1 2(SD) = ' + lo + ' to ' + hi + '.' }
+      return { id: this.id, category: this.category, question: `Mean = ${mean}, SD = ${sd}. Using the 95% rule, what range contains most data?`, ...makeStringOptions(correct, [`${mean - sd} to ${mean + sd}`, `${mean} to ${hi}`, `${lo - sd} to ${hi + sd}`]), explanation: '~95% of data falls within 2 SDs: mean \± 2(SD) = ' + lo + ' to ' + hi + '.' }
     }
   },
   {
@@ -215,7 +215,7 @@ const questionPool: QuestionTemplate[] = [
 
     generate() {
       const correct = '68% within 1 SD, 95% within 2 SDs, 99.7% within 3 SDs'
-      return { id: this.id, category: this.category, question: 'State the empirical rule (68-95-99.7 rule) for normal distributions.', ...makeStringOptions(correct, ['50-75-100 rule', '70-90-100 rule', '60-80-95 rule']), explanation: 'The empirical rule: ~68% within mean \\u00b1 1 SD, ~95% within \\u00b1 2 SD, ~99.7% within \\u00b1 3 SD.' }
+      return { id: this.id, category: this.category, question: 'State the empirical rule (68-95-99.7 rule) for normal distributions.', ...makeStringOptions(correct, ['50-75-100 rule', '70-90-100 rule', '60-80-95 rule']), explanation: 'The empirical rule: ~68% within mean \± 1 SD, ~95% within \± 2 SD, ~99.7% within \± 3 SD.' }
     }
   },
   {
@@ -258,7 +258,7 @@ const questionPool: QuestionTemplate[] = [
 
     generate() {
       const correct = 'Multiply individual probabilities (for independent events)'
-      return { id: this.id, category: this.category, question: 'How do you find P(A and B) for two independent events?', ...makeStringOptions(correct, ['Add the probabilities', 'Subtract P(B) from P(A)', 'Divide P(A) by P(B)']), explanation: 'For independent events: P(A and B) = P(A) \\u00d7 P(B).' }
+      return { id: this.id, category: this.category, question: 'How do you find P(A and B) for two independent events?', ...makeStringOptions(correct, ['Add the probabilities', 'Subtract P(B) from P(A)', 'Divide P(A) by P(B)']), explanation: 'For independent events: P(A and B) = P(A) \× P(B).' }
     }
   },
   {
@@ -293,8 +293,8 @@ const questionPool: QuestionTemplate[] = [
       const r = randInt(3, 8); const b = randInt(3, 8)
       const total = r + b
       const p1 = r; const p2 = r - 1; const den1 = total; const den2 = total - 1
-      const correct = `(${p1}/${den1}) \\u00d7 (${p2}/${den2})`
-      return { id: this.id, category: this.category, question: `${r} red, ${b} blue marbles. P(2 red without replacement)?`, ...makeStringOptions(correct, [`(${p1}/${den1}) \\u00d7 (${p1}/${den1})`, `${p1}/${den1} + ${p2}/${den2}`, `(${p1}/${den1})\\u00b2`]), explanation: 'Without replacement: P = (red/total) \\u00d7 ((red-1)/(total-1)).' }
+      const correct = `(${p1}/${den1}) \× (${p2}/${den2})`
+      return { id: this.id, category: this.category, question: `${r} red, ${b} blue marbles. P(2 red without replacement)?`, ...makeStringOptions(correct, [`(${p1}/${den1}) \× (${p1}/${den1})`, `${p1}/${den1} + ${p2}/${den2}`, `(${p1}/${den1})\²`]), explanation: 'Without replacement: P = (red/total) \× ((red-1)/(total-1)).' }
     }
   },
   {
@@ -302,8 +302,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Probability',
 
     generate() {
-      const correct = 'Expected value = sum of (outcome \\u00d7 probability) for all outcomes'
-      return { id: this.id, category: this.category, question: 'How do you calculate expected value?', ...makeStringOptions(correct, ['Take the mode of probabilities', 'Add all outcomes together', 'Multiply the largest outcome by its probability']), explanation: 'E(X) = \\u03a3[x \\u00d7 P(x)] — the weighted average of all possible outcomes.' }
+      const correct = 'Expected value = sum of (outcome \× probability) for all outcomes'
+      return { id: this.id, category: this.category, question: 'How do you calculate expected value?', ...makeStringOptions(correct, ['Take the mode of probabilities', 'Add all outcomes together', 'Multiply the largest outcome by its probability']), explanation: 'E(X) = \Σ[x \× P(x)] — the weighted average of all possible outcomes.' }
     }
   },
   {
@@ -342,8 +342,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Scatterplots',
 
     generate() {
-      const correct = 'r\\u00b2 tells the percentage of variation in y explained by x'
-      return { id: this.id, category: this.category, question: 'What does the coefficient of determination (r\\u00b2) represent?', ...makeStringOptions(correct, ['The slope of the regression line', 'The y-intercept', 'The number of data points']), explanation: 'r\\u00b2 indicates what fraction of the dependent variable variation is explained by the model.' }
+      const correct = 'r\² tells the percentage of variation in y explained by x'
+      return { id: this.id, category: this.category, question: 'What does the coefficient of determination (r\²) represent?', ...makeStringOptions(correct, ['The slope of the regression line', 'The y-intercept', 'The number of data points']), explanation: 'r\² indicates what fraction of the dependent variable variation is explained by the model.' }
     }
   },
   {
@@ -470,7 +470,7 @@ const questionPool: QuestionTemplate[] = [
       const total = randInt(100, 200); const cellCount = randInt(15, 45)
       const pct = Math.round(cellCount / total * 100)
       const { options, correctIndex } = makeOptions(pct, 8)
-      return { id: this.id, category: this.category, question: `In a two-way table with grand total ${total}, a cell has count ${cellCount}. What percentage is this?`, options, correctIndex, explanation: `${cellCount}/${total} \\u00d7 100 = ${pct}%.` }
+      return { id: this.id, category: this.category, question: `In a two-way table with grand total ${total}, a cell has count ${cellCount}. What percentage is this?`, options, correctIndex, explanation: `${cellCount}/${total} \× 100 = ${pct}%.` }
     }
   },
 ]

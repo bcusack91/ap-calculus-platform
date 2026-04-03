@@ -76,25 +76,25 @@ const AP_STATS_DOMAINS: APStatsDomain[] = [
   {
     id: 'exploring-data',
     name: 'Exploring Data',
-    topicSlugs: ['categorical-data-displays', 'quantitative-data-distributions', 'describing-distributions'],
+    topicSlugs: ['displaying-distributions-graphs', 'describing-distributions', 'describing-distributions'],
     questionTarget: 8,
   },
   {
     id: 'sampling-experimentation',
     name: 'Sampling & Experimentation',
-    topicSlugs: ['sampling-methods', 'experimental-design', 'bias-and-confounding'],
+    topicSlugs: ['sampling-methods', 'experimental-design', 'bias-sampling-surveys'],
     questionTarget: 8,
   },
   {
     id: 'anticipating-patterns',
     name: 'Anticipating Patterns (Probability)',
-    topicSlugs: ['probability-rules', 'random-variables', 'binomial-normal-distributions'],
+    topicSlugs: ['basic-probability-rules', 'discrete-random-variables', 'binomial-distribution'],
     questionTarget: 8,
   },
   {
     id: 'statistical-inference',
     name: 'Statistical Inference',
-    topicSlugs: ['confidence-intervals', 'hypothesis-testing', 'chi-square-tests'],
+    topicSlugs: ['ci-proportions', 'hypothesis-testing-framework', 'chi-square-tests'],
     questionTarget: 9,
   },
 ]
@@ -114,7 +114,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Favorite platform is a categorical variable. Bar charts display frequencies or relative frequencies of categories and allow easy comparison among them.',
     domain: 'exploring-data',
-    topicSlug: 'categorical-data-displays',
+    topicSlug: 'displaying-distributions-graphs',
     formSet: 'A',
   },
   {
@@ -128,7 +128,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Conditional distributions compare the distribution of one variable within each category of another. Comparing the conditional distribution of opinion for males vs. females reveals whether opinions differ by gender.',
     domain: 'exploring-data',
-    topicSlug: 'categorical-data-displays',
+    topicSlug: 'displaying-distributions-graphs',
     formSet: 'B',
   },
   {
@@ -142,7 +142,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'In a mosaic plot, the width of a segment within a row reflects the conditional proportion. A wider specialty segment in the West row means a higher proportion of western respondents chose specialty coffee.',
     domain: 'exploring-data',
-    topicSlug: 'categorical-data-displays',
+    topicSlug: 'displaying-distributions-graphs',
     formSet: 'A',
   },
   {
@@ -156,7 +156,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'A 100% segmented bar chart shows the conditional distribution of the response variable within each age group, making it ideal for comparing proportions across groups.',
     domain: 'exploring-data',
-    topicSlug: 'categorical-data-displays',
+    topicSlug: 'displaying-distributions-graphs',
     formSet: 'B',
   },
   // --- quantitative-data-distributions ---
@@ -166,7 +166,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'In a right-skewed distribution the mean is pulled toward the tail by high values. The median is resistant to extreme values and better represents the center of a skewed distribution.',
     domain: 'exploring-data',
-    topicSlug: 'quantitative-data-distributions',
+    topicSlug: 'describing-distributions',
     formSet: 'A',
   },
   {
@@ -175,7 +175,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'IQR = Q3 − Q1 = 15. Upper fence = Q3 + 1.5(15) = 62.5; lower fence = Q1 − 1.5(15) = 2.5. The value 78 exceeds 62.5, so it is an outlier. The values 10 and 60 fall within the fences.',
     domain: 'exploring-data',
-    topicSlug: 'quantitative-data-distributions',
+    topicSlug: 'describing-distributions',
     formSet: 'A',
   },
   {
@@ -189,7 +189,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Standard deviation measures spread. A larger standard deviation (12 vs. 4) means Class B\'s scores varied more widely around the same mean.',
     domain: 'exploring-data',
-    topicSlug: 'quantitative-data-distributions',
+    topicSlug: 'describing-distributions',
     formSet: 'B',
   },
   {
@@ -203,7 +203,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'A back-to-back stemplot preserves the original data while displaying both distributions on a common stem, allowing direct visual comparison of shape, center, and spread.',
     domain: 'exploring-data',
-    topicSlug: 'quantitative-data-distributions',
+    topicSlug: 'describing-distributions',
     formSet: 'B',
   },
   // --- describing-distributions ---
@@ -393,7 +393,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'Observational studies cannot establish causation because the groups may differ in many ways besides the variable of interest. Confounders like sleep, study habits, and socioeconomic status could explain the association.',
     domain: 'sampling-experimentation',
-    topicSlug: 'bias-and-confounding',
+    topicSlug: 'bias-sampling-surveys',
     formSet: 'A',
   },
   {
@@ -402,7 +402,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'In voluntary response samples, individuals with strong opinions (often negative) are most likely to respond, producing results that do not represent the general population.',
     domain: 'sampling-experimentation',
-    topicSlug: 'bias-and-confounding',
+    topicSlug: 'bias-sampling-surveys',
     formSet: 'A',
   },
   {
@@ -411,7 +411,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Response bias occurs when respondents give inaccurate answers. Social-desirability bias leads people to underreport behaviors they perceive as socially unacceptable.',
     domain: 'sampling-experimentation',
-    topicSlug: 'bias-and-confounding',
+    topicSlug: 'bias-sampling-surveys',
     formSet: 'B',
   },
   {
@@ -425,7 +425,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'This is a classic example of confounding. Hot weather increases both ice cream consumption and swimming activity, which leads to more drowning incidents. The lurking variable is temperature/season.',
     domain: 'sampling-experimentation',
-    topicSlug: 'bias-and-confounding',
+    topicSlug: 'bias-sampling-surveys',
     formSet: 'B',
   },
   {
@@ -434,7 +434,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Undercoverage occurs when part of the population has little or no chance of being sampled. Many adults (especially younger ones) use only cell phones and would be excluded from a landline-only survey.',
     domain: 'sampling-experimentation',
-    topicSlug: 'bias-and-confounding',
+    topicSlug: 'bias-sampling-surveys',
     formSet: 'both',
   },
 
@@ -446,7 +446,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'For independent events, P(A and B) = P(A) × P(B) = 0.3 × 0.5 = 0.15.',
     domain: 'anticipating-patterns',
-    topicSlug: 'probability-rules',
+    topicSlug: 'basic-probability-rules',
     formSet: 'A',
   },
   {
@@ -455,7 +455,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'P(Soccer or Basketball) = P(S) + P(B) − P(S and B) = 18/30 + 12/30 − 6/30 = 24/30 = 0.80.',
     domain: 'anticipating-patterns',
-    topicSlug: 'probability-rules',
+    topicSlug: 'basic-probability-rules',
     formSet: 'A',
   },
   {
@@ -464,7 +464,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'P(1st red) = 5/10 = 1/2. P(2nd red | 1st red) = 4/9. P(both red) = (5/10)(4/9) = 20/90 = 2/9.',
     domain: 'anticipating-patterns',
-    topicSlug: 'probability-rules',
+    topicSlug: 'basic-probability-rules',
     formSet: 'B',
   },
   {
@@ -473,7 +473,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Mutually exclusive events cannot occur simultaneously, so P(A or B) = P(A) + P(B) = 0.4 + 0.3 = 0.7.',
     domain: 'anticipating-patterns',
-    topicSlug: 'probability-rules',
+    topicSlug: 'basic-probability-rules',
     formSet: 'B',
   },
   {
@@ -487,7 +487,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Applying Bayes\' theorem: P(Disease | +) = (0.95 × 0.01) / (0.95 × 0.01 + 0.10 × 0.99) = 0.0095/0.1085 ≈ 0.088 or about 8.8%. The low base rate means most positives are false positives.',
     domain: 'anticipating-patterns',
-    topicSlug: 'probability-rules',
+    topicSlug: 'basic-probability-rules',
     formSet: 'both',
   },
   {
@@ -496,7 +496,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'By the general multiplication rule: P(A and B) = P(A) × P(B | A) = 0.6 × 0.5 = 0.30.',
     domain: 'anticipating-patterns',
-    topicSlug: 'probability-rules',
+    topicSlug: 'basic-probability-rules',
     formSet: 'both',
   },
   // --- random-variables ---
@@ -506,7 +506,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'E(X) = 0(0.1) + 1(0.3) + 2(0.4) + 3(0.2) = 0 + 0.3 + 0.8 + 0.6 = 1.7.',
     domain: 'anticipating-patterns',
-    topicSlug: 'random-variables',
+    topicSlug: 'discrete-random-variables',
     formSet: 'A',
   },
   {
@@ -520,7 +520,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'E(Y) = 2(10) + 5 = 25. SD(Y) = |2| × SD(X) = 2 × 3 = 6. Adding a constant shifts the mean but does not change variability; multiplying by a constant scales both.',
     domain: 'anticipating-patterns',
-    topicSlug: 'random-variables',
+    topicSlug: 'discrete-random-variables',
     formSet: 'A',
   },
   {
@@ -529,7 +529,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'For independent random variables, Var(X + Y) = Var(X) + Var(Y) = 16 + 9 = 25. SD(X + Y) = √25 = 5.',
     domain: 'anticipating-patterns',
-    topicSlug: 'random-variables',
+    topicSlug: 'discrete-random-variables',
     formSet: 'B',
   },
   {
@@ -538,7 +538,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'Expected winnings = 0.5(12) + 0.5(0) = 6. Net gain = 6 − 5 = $1.00 per play on average.',
     domain: 'anticipating-patterns',
-    topicSlug: 'random-variables',
+    topicSlug: 'discrete-random-variables',
     formSet: 'B',
   },
   // --- binomial-normal-distributions ---
@@ -548,7 +548,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'This is a binomial distribution with n = 10, p = 0.5. P(X = 7) = C(10,7)(0.5)^7(0.5)^3 = 120/1024 ≈ 0.117.',
     domain: 'anticipating-patterns',
-    topicSlug: 'binomial-normal-distributions',
+    topicSlug: 'binomial-distribution',
     formSet: 'A',
   },
   {
@@ -557,7 +557,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'The 97.5th percentile corresponds to a z-score of approximately 1.96 ≈ 2. Score = 500 + 2(100) = 700.',
     domain: 'anticipating-patterns',
-    topicSlug: 'binomial-normal-distributions',
+    topicSlug: 'binomial-distribution',
     formSet: 'A',
   },
   {
@@ -571,7 +571,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'For a binomial distribution: μ = np = 100(0.05) = 5 and σ = √(np(1−p)) = √(100 × 0.05 × 0.95) = √4.75 ≈ 2.18.',
     domain: 'anticipating-patterns',
-    topicSlug: 'binomial-normal-distributions',
+    topicSlug: 'binomial-distribution',
     formSet: 'B',
   },
   {
@@ -580,7 +580,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'From the standard normal table, P(Z < 1.5) ≈ 0.9332 and P(Z < −1.5) ≈ 0.0668. So P(−1.5 < Z < 1.5) ≈ 0.9332 − 0.0668 = 0.8664 ≈ 0.87.',
     domain: 'anticipating-patterns',
-    topicSlug: 'binomial-normal-distributions',
+    topicSlug: 'binomial-distribution',
     formSet: 'B',
   },
   {
@@ -594,7 +594,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'The binomial model requires: (1) fixed number of trials n, (2) each trial is independent, (3) each trial has exactly two outcomes, and (4) the probability of success p is constant.',
     domain: 'anticipating-patterns',
-    topicSlug: 'binomial-normal-distributions',
+    topicSlug: 'binomial-distribution',
     formSet: 'both',
   },
 
@@ -611,7 +611,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'The correct interpretation of a confidence interval refers to the procedure: in repeated sampling, 95% of such intervals would capture the true parameter. A specific interval either contains the parameter or it does not.',
     domain: 'statistical-inference',
-    topicSlug: 'confidence-intervals',
+    topicSlug: 'ci-proportions',
     formSet: 'A',
   },
   {
@@ -625,7 +625,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'A larger sample size decreases the standard error (SE = σ/√n), which reduces the margin of error and produces a narrower confidence interval at the same confidence level.',
     domain: 'statistical-inference',
-    topicSlug: 'confidence-intervals',
+    topicSlug: 'ci-proportions',
     formSet: 'A',
   },
   {
@@ -639,7 +639,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'SE = 16/√64 = 2. The margin of error = 1.96 × 2 = 3.92. The 95% CI is 100 ± 3.92 = (96.08, 103.92).',
     domain: 'statistical-inference',
-    topicSlug: 'confidence-intervals',
+    topicSlug: 'ci-proportions',
     formSet: 'B',
   },
   {
@@ -653,7 +653,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 'SE = √(0.55 × 0.45 / 400) = √(0.000619) ≈ 0.0249. Margin of error = 1.96 × 0.0249 ≈ 0.049. CI: 0.55 ± 0.049 ≈ (0.50, 0.60).',
     domain: 'statistical-inference',
-    topicSlug: 'confidence-intervals',
+    topicSlug: 'ci-proportions',
     formSet: 'B',
   },
   {
@@ -662,7 +662,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 3,
     explanation: 'n = (z*σ/E)² = (1.96 × 10 / 2)² = (9.8)² = 96.04. Round up to n = 97. (Closest option that meets the requirement is 100, since 97 is listed but 100 ensures the margin is met.)',
     domain: 'statistical-inference',
-    topicSlug: 'confidence-intervals',
+    topicSlug: 'ci-proportions',
     formSet: 'both',
   },
   {
@@ -676,7 +676,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'The standard error of a proportion, √(p̂(1 − p̂)/n), is maximized when p̂ = 0.5. Moving p̂ from 0.8 (where p̂(1−p̂) = 0.16) to 0.5 (where p̂(1−p̂) = 0.25) increases the SE and widens the interval.',
     domain: 'statistical-inference',
-    topicSlug: 'confidence-intervals',
+    topicSlug: 'ci-proportions',
     formSet: 'A',
   },
   // --- hypothesis-testing ---
@@ -691,7 +691,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'Since the p-value (0.03) is less than α (0.05), we reject H₀ and conclude there is statistically significant evidence that the population mean exceeds 50.',
     domain: 'statistical-inference',
-    topicSlug: 'hypothesis-testing',
+    topicSlug: 'hypothesis-testing-framework',
     formSet: 'A',
   },
   {
@@ -705,7 +705,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'A Type I error (false positive) is rejecting H₀ when it is actually true. The probability of a Type I error is equal to the significance level α.',
     domain: 'statistical-inference',
-    topicSlug: 'hypothesis-testing',
+    topicSlug: 'hypothesis-testing-framework',
     formSet: 'A',
   },
   {
@@ -714,7 +714,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 0,
     explanation: 't = (x̄ − μ₀) / (s/√n) = (980 − 1000) / (60/√36) = −20/10 = −2.0.',
     domain: 'statistical-inference',
-    topicSlug: 'hypothesis-testing',
+    topicSlug: 'hypothesis-testing-framework',
     formSet: 'B',
   },
   {
@@ -728,7 +728,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'Power = 1 − β, where β is the probability of a Type II error. Power is the probability of correctly detecting a real effect (rejecting a false null hypothesis).',
     domain: 'statistical-inference',
-    topicSlug: 'hypothesis-testing',
+    topicSlug: 'hypothesis-testing-framework',
     formSet: 'B',
   },
   {
@@ -742,7 +742,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 2,
     explanation: 'Increasing the sample size reduces the standard error, making it easier to detect a true difference from the null value, thus increasing the power of the test.',
     domain: 'statistical-inference',
-    topicSlug: 'hypothesis-testing',
+    topicSlug: 'hypothesis-testing-framework',
     formSet: 'both',
   },
   {
@@ -756,7 +756,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'When the null hypothesis assumes the two population proportions are equal, we pool the two samples to get a combined estimate of the common proportion, which is used to compute the standard error.',
     domain: 'statistical-inference',
-    topicSlug: 'hypothesis-testing',
+    topicSlug: 'hypothesis-testing-framework',
     formSet: 'A',
   },
   {
@@ -770,7 +770,7 @@ const apStatsQuestionPool: APStatsPoolQuestion[] = [
     correctAnswer: 1,
     explanation: 'A hypothesis test can never "prove" the null hypothesis. Failing to reject H₀ simply means the data do not provide convincing enough evidence against H₀ at the given α level.',
     domain: 'statistical-inference',
-    topicSlug: 'hypothesis-testing',
+    topicSlug: 'hypothesis-testing-framework',
     formSet: 'B',
   },
   // --- chi-square-tests ---
@@ -1032,17 +1032,17 @@ export function pickNextForm(previousForms: ('A' | 'B')[]): 'A' | 'B' {
 }
 
 const SLUG_LABELS: Record<string, string> = {
-  'categorical-data-displays': 'Categorical Data Displays',
-  'quantitative-data-distributions': 'Quantitative Data Distributions',
+  'displaying-distributions-graphs': 'Categorical Data Displays',
+  'describing-distributions': 'Quantitative Data Distributions',
   'describing-distributions': 'Describing Distributions',
   'sampling-methods': 'Sampling Methods',
   'experimental-design': 'Experimental Design',
-  'bias-and-confounding': 'Bias & Confounding',
-  'probability-rules': 'Probability Rules',
-  'random-variables': 'Random Variables',
-  'binomial-normal-distributions': 'Binomial & Normal Distributions',
-  'confidence-intervals': 'Confidence Intervals',
-  'hypothesis-testing': 'Hypothesis Testing',
+  'bias-sampling-surveys': 'Bias & Confounding',
+  'basic-probability-rules': 'Probability Rules',
+  'discrete-random-variables': 'Random Variables',
+  'binomial-distribution': 'Binomial & Normal Distributions',
+  'ci-proportions': 'Confidence Intervals',
+  'hypothesis-testing-framework': 'Hypothesis Testing',
   'chi-square-tests': 'Chi-Square Tests',
 }
 

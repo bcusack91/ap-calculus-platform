@@ -3,6 +3,9 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 async function main() {
+  const __seedCourse = await (prisma as any).course.findFirst({ where: { slug: 'ap-calculus-ab' } })
+  const __courseId = __seedCourse?.id
+
   console.log('🔄 Creating Derivatives micro-lessons (Part 1)...')
 
   // Find or create the Derivatives category
@@ -15,6 +18,8 @@ async function main() {
       description: 'Differentiation rules, techniques, and applications',
       order: 2,
       icon: 'd/dx'
+    ,
+      courseId: __courseId
     }
   })
 

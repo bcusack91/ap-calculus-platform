@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import { renderRichText } from '@/lib/render-rich-text'
 import type { SATFullTest, SATTestQuestion, SATTestSection } from '@/data/sat-practice/test-generator'
 
 /* ------------------------------------------------------------------ */
@@ -55,19 +56,7 @@ interface SATFullTestProps {
 /* ------------------------------------------------------------------ */
 
 function renderLatex(text: string): string {
-  return text.replace(
-    /\$\$(.*?)\$\$|\$(.*?)\$/g,
-    (_, block: string | undefined, inline: string | undefined) => {
-      const expr = block ?? inline ?? ''
-      try {
-        return renderKatexSync(expr, {
-          displayMode: !!block,
-        })
-      } catch {
-        return expr
-      }
-    },
-  )
+  return renderRichText(text)
 }
 
 function formatTime(seconds: number): string {

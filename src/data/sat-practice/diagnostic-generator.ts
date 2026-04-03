@@ -161,8 +161,90 @@ function shuffle<T>(arr: T[]): T[] {
 function slugToName(slug: string): string {
   return slug
     .replace(/^sat-/, '')
+    .replace(/-sat$/, '')
     .replace(/-/g, ' ')
     .replace(/\b\w/g, c => c.toUpperCase())
+}
+
+/**
+ * Maps diagnostic slugs to canonical slugs that have entrance quizzes
+ * and interactive lessons registered. This ensures recommended topics
+ * link to slugs with full learning flow support.
+ */
+const CANONICAL_SLUG_MAP: Record<string, string> = {
+  // Reading & Writing
+  'sat-reading-comprehension': 'sat-reading-evidence-sat',
+  'sat-central-ideas-details': 'sat-reading-evidence-sat',
+  'sat-command-evidence': 'sat-reading-evidence-sat',
+  'sat-finding-textual-evidence': 'sat-reading-evidence-sat',
+  'sat-grammar-usage': 'sat-grammar-conventions-sat',
+  'sat-grammar-conventions': 'sat-grammar-conventions-sat',
+  'sat-subject-verb-agreement': 'sat-grammar-conventions-sat',
+  'sat-effective-language-use': 'sat-expression-ideas-sat',
+  'sat-conciseness-redundancy': 'sat-expression-ideas-sat',
+  'sat-transitions-organization': 'sat-expression-ideas-sat',
+  'sat-punctuation': 'sat-punctuation-sat',
+  'sat-punctuation-commas-semicolons': 'sat-punctuation-commas-semicolons-sat',
+  'sat-sentence-structure': 'sat-grammar-conventions-sat',
+  // Math
+  'sat-linear-equations-inequalities': 'sat-linear-equations-sat',
+  'sat-systems-linear-equations': 'sat-linear-equations-sat',
+  'sat-linear-inequalities-graphs': 'sat-linear-equations-sat',
+  'sat-quadratic-equations': 'sat-quadratic-equations-sat',
+  'sat-polynomials-factoring': 'sat-polynomials-factoring-sat',
+  'sat-polynomial-rational-expressions': 'sat-polynomials-factoring-sat',
+  'sat-nonlinear-equations-functions': 'sat-functions-graphs-sat',
+  'sat-functions': 'sat-functions-graphs-sat',
+  'sat-exponential-functions': 'sat-exponential-functions-sat',
+  'sat-exponents-radicals': 'sat-exponents-radicals-sat',
+  'sat-statistics-data-interpretation': 'sat-data-statistics-sat',
+  'sat-data-statistics': 'sat-data-statistics-sat',
+  'sat-probability-two-way-tables': 'sat-data-statistics-sat',
+  'sat-scatterplots-line-fit': 'sat-data-statistics-sat',
+  'sat-ratios-proportions-percents': 'sat-ratios-proportions-sat',
+  'sat-geometry-basics': 'sat-geometry-angles-sat',
+  'sat-geometry-trigonometry': 'sat-geometry-angles-sat',
+  'sat-circles': 'sat-circles-trig-sat',
+  'sat-complex-numbers': 'sat-complex-numbers-sat',
+}
+
+function canonicalizeSlug(slug: string): string {
+  return CANONICAL_SLUG_MAP[slug] ?? slug
+}
+
+/**
+ * Rebuild recommendedTopics from stored domain results.
+ * Used to reconstruct full DiagnosticResults from history entries
+ * that may not have stored recommendedTopics.
+ */
+export function rebuildRecommendedTopics(
+  domains: DomainResult[],
+): DiagnosticResults['recommendedTopics'] {
+  const recommendedTopics: DiagnosticResults['recommendedTopics'] = []
+  const addedSlugs = new Set<string>()
+  for (const domain of domains.filter(d => d.level === 'weak')) {
+    const domainDef = DIAGNOSTIC_DOMAINS.find(d => d.id === domain.domainId)
+    if (!domainDef) continue
+    for (const slug of domainDef.slugs) {
+      const canonical = canonicalizeSlug(slug)
+      if (!addedSlugs.has(canonical)) {
+        addedSlugs.add(canonical)
+        recommendedTopics.push({ slug: canonical, name: slugToName(canonical), priority: 'high' })
+      }
+    }
+  }
+  for (const domain of domains.filter(d => d.level === 'moderate')) {
+    const domainDef = DIAGNOSTIC_DOMAINS.find(d => d.id === domain.domainId)
+    if (!domainDef) continue
+    for (const slug of domainDef.slugs) {
+      const canonical = canonicalizeSlug(slug)
+      if (!addedSlugs.has(canonical)) {
+        addedSlugs.add(canonical)
+        recommendedTopics.push({ slug: canonical, name: slugToName(canonical), priority: 'medium' })
+      }
+    }
+  }
+  return recommendedTopics
 }
 
 /* ------------------------------------------------------------------ */
@@ -300,16 +382,25 @@ export function analyzeDiagnosticResults(
 
   // Build recommended topics - weak domains first, then moderate
   const recommendedTopics: DiagnosticResults['recommendedTopics'] = []
+  const addedSlugs = new Set<string>()
   for (const domain of domains.filter(d => d.level === 'weak')) {
     const domainDef = DIAGNOSTIC_DOMAINS.find(d => d.id === domain.domainId)!
     for (const slug of domainDef.slugs) {
-      recommendedTopics.push({ slug, name: slugToName(slug), priority: 'high' })
+      const canonical = canonicalizeSlug(slug)
+      if (!addedSlugs.has(canonical)) {
+        addedSlugs.add(canonical)
+        recommendedTopics.push({ slug: canonical, name: slugToName(canonical), priority: 'high' })
+      }
     }
   }
   for (const domain of domains.filter(d => d.level === 'moderate')) {
     const domainDef = DIAGNOSTIC_DOMAINS.find(d => d.id === domain.domainId)!
     for (const slug of domainDef.slugs) {
-      recommendedTopics.push({ slug, name: slugToName(slug), priority: 'medium' })
+      const canonical = canonicalizeSlug(slug)
+      if (!addedSlugs.has(canonical)) {
+        addedSlugs.add(canonical)
+        recommendedTopics.push({ slug: canonical, name: slugToName(canonical), priority: 'medium' })
+      }
     }
   }
 

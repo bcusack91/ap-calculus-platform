@@ -58,7 +58,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(30, 80)
       const comp = 90 - a
       const { options, correctIndex } = makeOptions(comp, 10)
-      return { id: this.id, category: this.category, question: `Two complementary angles measure ${a}\\u00b0 and x\\u00b0. Find x.`, options, correctIndex, explanation: `Complementary angles sum to 90\\u00b0. x = 90 - ${a} = ${comp}\\u00b0.` }
+      return { id: this.id, category: this.category, question: `Two complementary angles measure ${a}\° and x\°. Find x.`, options, correctIndex, explanation: `Complementary angles sum to 90\°. x = 90 - ${a} = ${comp}\°.` }
     }
   },
   {
@@ -69,7 +69,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(50, 140)
       const supp = 180 - a
       const { options, correctIndex } = makeOptions(supp, 15)
-      return { id: this.id, category: this.category, question: `Find the supplement of a ${a}\\u00b0 angle.`, options, correctIndex, explanation: `Supplementary angles sum to 180\\u00b0. Supplement = 180 - ${a} = ${supp}\\u00b0.` }
+      return { id: this.id, category: this.category, question: `Find the supplement of a ${a}\° angle.`, options, correctIndex, explanation: `Supplementary angles sum to 180\°. Supplement = 180 - ${a} = ${supp}\°.` }
     }
   },
   {
@@ -80,7 +80,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(40, 70)
       const vert = a
       const { options, correctIndex } = makeOptions(vert, 10)
-      return { id: this.id, category: this.category, question: `Two lines intersect forming a ${a}\\u00b0 angle. What is the measure of the vertical angle?`, options, correctIndex, explanation: `Vertical angles are equal. The vertical angle = ${a}\\u00b0.` }
+      return { id: this.id, category: this.category, question: `Two lines intersect forming a ${a}\° angle. What is the measure of the vertical angle?`, options, correctIndex, explanation: `Vertical angles are equal. The vertical angle = ${a}\°.` }
     }
   },
   {
@@ -91,7 +91,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(30, 80); const b = randInt(30, 80)
       const c = 180 - a - b
       const { options, correctIndex } = makeOptions(c, 10)
-      return { id: this.id, category: this.category, question: `A triangle has angles ${a}\\u00b0 and ${b}\\u00b0. Find the third angle.`, options, correctIndex, explanation: `Triangle angle sum = 180\\u00b0. Third = 180 - ${a} - ${b} = ${c}\\u00b0.` }
+      return { id: this.id, category: this.category, question: `A triangle has angles ${a}\° and ${b}\°. Find the third angle.`, options, correctIndex, explanation: `Triangle angle sum = 180\°. Third = 180 - ${a} - ${b} = ${c}\°.` }
     }
   },
   {
@@ -102,7 +102,7 @@ const questionPool: QuestionTemplate[] = [
       const ext = randInt(90, 150)
       const int = 180 - ext
       const { options, correctIndex } = makeOptions(int, 10)
-      return { id: this.id, category: this.category, question: `An exterior angle of a triangle is ${ext}\\u00b0. What is its adjacent interior angle?`, options, correctIndex, explanation: `An exterior angle and its adjacent interior angle are supplementary: ${180} - ${ext} = ${int}\\u00b0.` }
+      return { id: this.id, category: this.category, question: `An exterior angle of a triangle is ${ext}\°. What is its adjacent interior angle?`, options, correctIndex, explanation: `An exterior angle and its adjacent interior angle are supplementary: ${180} - ${ext} = ${int}\°.` }
     }
   },
   {
@@ -113,7 +113,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(40, 70)
       const alt = a
       const { options, correctIndex } = makeOptions(alt, 8)
-      return { id: this.id, category: this.category, question: `Parallel lines cut by a transversal create an angle of ${a}\\u00b0. What is the alternate interior angle?`, options, correctIndex, explanation: `Alternate interior angles are equal when lines are parallel: ${alt}\\u00b0.` }
+      return { id: this.id, category: this.category, question: `Parallel lines cut by a transversal create an angle of ${a}\°. What is the alternate interior angle?`, options, correctIndex, explanation: `Alternate interior angles are equal when lines are parallel: ${alt}\°.` }
     }
   },
   {
@@ -124,7 +124,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(40, 80)
       const co = a
       const { options, correctIndex } = makeOptions(co, 8)
-      return { id: this.id, category: this.category, question: `A transversal crosses parallel lines creating a ${a}\\u00b0 angle. What is the corresponding angle on the other parallel line?`, options, correctIndex, explanation: `Corresponding angles are equal: ${co}\\u00b0.` }
+      return { id: this.id, category: this.category, question: `A transversal crosses parallel lines creating a ${a}\° angle. What is the corresponding angle on the other parallel line?`, options, correctIndex, explanation: `Corresponding angles are equal: ${co}\°.` }
     }
   },
   {
@@ -135,7 +135,7 @@ const questionPool: QuestionTemplate[] = [
       const n = randInt(5, 8)
       const sum = (n - 2) * 180
       const { options, correctIndex } = makeOptions(sum, 90)
-      return { id: this.id, category: this.category, question: `What is the sum of interior angles of a regular ${n}-sided polygon?`, options, correctIndex, explanation: `Sum = (n - 2) \\u00d7 180 = (${n} - 2) \\u00d7 180 = ${sum}\\u00b0.` }
+      return { id: this.id, category: this.category, question: `What is the sum of interior angles of a regular ${n}-sided polygon?`, options, correctIndex, explanation: `Sum = (n - 2) \× 180 = (${n} - 2) \× 180 = ${sum}\°.` }
     }
   },
   {
@@ -146,7 +146,7 @@ const questionPool: QuestionTemplate[] = [
       const l = randInt(5, 15); const w = randInt(3, 12)
       const area = l * w
       const { options, correctIndex } = makeOptions(area, 10)
-      return { id: this.id, category: this.category, question: `Find the area of a rectangle with length ${l} and width ${w}.`, options, correctIndex, explanation: `Area = l \\u00d7 w = ${l} \\u00d7 ${w} = ${area}.` }
+      return { id: this.id, category: this.category, question: `Find the area of a rectangle with length ${l} and width ${w}.`, options, correctIndex, explanation: `Area = l \× w = ${l} \× ${w} = ${area}.` }
     }
   },
   {
@@ -190,7 +190,7 @@ const questionPool: QuestionTemplate[] = [
       const r = randInt(2, 10)
       const area = Math.round(Math.PI * r * r)
       const { options, correctIndex } = makeOptions(area, 15)
-      return { id: this.id, category: this.category, question: `Find the area of a circle with radius ${r} (round to nearest integer).`, options, correctIndex, explanation: `Area = \\u03c0r\\u00b2 = \\u03c0(${r})\\u00b2 \\u2248 ${area}.` }
+      return { id: this.id, category: this.category, question: `Find the area of a circle with radius ${r} (round to nearest integer).`, options, correctIndex, explanation: `Area = \πr\² = \π(${r})\² \≈ ${area}.` }
     }
   },
   {
@@ -201,7 +201,7 @@ const questionPool: QuestionTemplate[] = [
       const r = randInt(2, 10)
       const circ = Math.round(2 * Math.PI * r)
       const { options, correctIndex } = makeOptions(circ, 10)
-      return { id: this.id, category: this.category, question: `Find the circumference of a circle with radius ${r} (round to nearest integer).`, options, correctIndex, explanation: `C = 2\\u03c0r = 2\\u03c0(${r}) \\u2248 ${circ}.` }
+      return { id: this.id, category: this.category, question: `Find the circumference of a circle with radius ${r} (round to nearest integer).`, options, correctIndex, explanation: `C = 2\πr = 2\π(${r}) \≈ ${circ}.` }
     }
   },
   {
@@ -212,7 +212,7 @@ const questionPool: QuestionTemplate[] = [
       const s = randInt(3, 10)
       const area = s * s
       const { options, correctIndex } = makeOptions(area, 8)
-      return { id: this.id, category: this.category, question: `Find the area of a square with side length ${s}.`, options, correctIndex, explanation: `Area = s\\u00b2 = ${s}\\u00b2 = ${area}.` }
+      return { id: this.id, category: this.category, question: `Find the area of a square with side length ${s}.`, options, correctIndex, explanation: `Area = s\² = ${s}\² = ${area}.` }
     }
   },
   {
@@ -234,7 +234,7 @@ const questionPool: QuestionTemplate[] = [
       const l = randInt(2, 8); const w = randInt(2, 8); const h = randInt(2, 8)
       const vol = l * w * h
       const { options, correctIndex } = makeOptions(vol, 30)
-      return { id: this.id, category: this.category, question: `Find the volume of a rectangular prism with dimensions ${l} \\u00d7 ${w} \\u00d7 ${h}.`, options, correctIndex, explanation: `V = lwh = ${l} \\u00d7 ${w} \\u00d7 ${h} = ${vol}.` }
+      return { id: this.id, category: this.category, question: `Find the volume of a rectangular prism with dimensions ${l} \× ${w} \× ${h}.`, options, correctIndex, explanation: `V = lwh = ${l} \× ${w} \× ${h} = ${vol}.` }
     }
   },
   {
@@ -245,7 +245,7 @@ const questionPool: QuestionTemplate[] = [
       const r = randInt(2, 6); const h = randInt(3, 10)
       const vol = Math.round(Math.PI * r * r * h)
       const { options, correctIndex } = makeOptions(vol, 40)
-      return { id: this.id, category: this.category, question: `Find the volume of a cylinder with radius ${r} and height ${h} (round to nearest integer).`, options, correctIndex, explanation: `V = \\u03c0r\\u00b2h = \\u03c0(${r})\\u00b2(${h}) \\u2248 ${vol}.` }
+      return { id: this.id, category: this.category, question: `Find the volume of a cylinder with radius ${r} and height ${h} (round to nearest integer).`, options, correctIndex, explanation: `V = \πr\²h = \π(${r})\²(${h}) \≈ ${vol}.` }
     }
   },
   {
@@ -256,7 +256,7 @@ const questionPool: QuestionTemplate[] = [
       const r = randInt(2, 6); const h = randInt(3, 10)
       const vol = Math.round(Math.PI * r * r * h / 3)
       const { options, correctIndex } = makeOptions(vol, 30)
-      return { id: this.id, category: this.category, question: `Find the volume of a cone with radius ${r} and height ${h} (round to nearest integer).`, options, correctIndex, explanation: `V = (1/3)\\u03c0r\\u00b2h = (1/3)\\u03c0(${r})\\u00b2(${h}) \\u2248 ${vol}.` }
+      return { id: this.id, category: this.category, question: `Find the volume of a cone with radius ${r} and height ${h} (round to nearest integer).`, options, correctIndex, explanation: `V = (1/3)\πr\²h = (1/3)\π(${r})\²(${h}) \≈ ${vol}.` }
     }
   },
   {
@@ -267,7 +267,7 @@ const questionPool: QuestionTemplate[] = [
       const r = randInt(2, 8)
       const vol = Math.round(4/3 * Math.PI * r * r * r)
       const { options, correctIndex } = makeOptions(vol, 50)
-      return { id: this.id, category: this.category, question: `Find the volume of a sphere with radius ${r} (round to nearest integer).`, options, correctIndex, explanation: `V = (4/3)\\u03c0r\\u00b3 = (4/3)\\u03c0(${r})\\u00b3 \\u2248 ${vol}.` }
+      return { id: this.id, category: this.category, question: `Find the volume of a sphere with radius ${r} (round to nearest integer).`, options, correctIndex, explanation: `V = (4/3)\πr\³ = (4/3)\π(${r})\³ \≈ ${vol}.` }
     }
   },
   {
@@ -278,7 +278,7 @@ const questionPool: QuestionTemplate[] = [
       const l = randInt(3, 8); const w = randInt(3, 8); const h = randInt(3, 8)
       const sa = 2 * (l*w + l*h + w*h)
       const { options, correctIndex } = makeOptions(sa, 20)
-      return { id: this.id, category: this.category, question: `Find the surface area of a rectangular prism ${l} \\u00d7 ${w} \\u00d7 ${h}.`, options, correctIndex, explanation: `SA = 2(lw + lh + wh) = 2(${l*w} + ${l*h} + ${w*h}) = ${sa}.` }
+      return { id: this.id, category: this.category, question: `Find the surface area of a rectangular prism ${l} \× ${w} \× ${h}.`, options, correctIndex, explanation: `SA = 2(lw + lh + wh) = 2(${l*w} + ${l*h} + ${w*h}) = ${sa}.` }
     }
   },
   {
@@ -289,7 +289,7 @@ const questionPool: QuestionTemplate[] = [
       const s = randInt(2, 8)
       const vol = s * s * s
       const { options, correctIndex } = makeOptions(vol, 30)
-      return { id: this.id, category: this.category, question: `Find the volume of a cube with edge length ${s}.`, options, correctIndex, explanation: `V = s\\u00b3 = ${s}\\u00b3 = ${vol}.` }
+      return { id: this.id, category: this.category, question: `Find the volume of a cube with edge length ${s}.`, options, correctIndex, explanation: `V = s\³ = ${s}\³ = ${vol}.` }
     }
   },
   {
@@ -300,7 +300,7 @@ const questionPool: QuestionTemplate[] = [
       const s = randInt(2, 8)
       const sa = 6 * s * s
       const { options, correctIndex } = makeOptions(sa, 20)
-      return { id: this.id, category: this.category, question: `Find the surface area of a cube with edge length ${s}.`, options, correctIndex, explanation: `SA = 6s\\u00b2 = 6(${s})\\u00b2 = ${sa}.` }
+      return { id: this.id, category: this.category, question: `Find the surface area of a cube with edge length ${s}.`, options, correctIndex, explanation: `SA = 6s\² = 6(${s})\² = ${sa}.` }
     }
   },
   {
@@ -311,7 +311,7 @@ const questionPool: QuestionTemplate[] = [
       const r = randInt(2, 6)
       const sa = Math.round(4 * Math.PI * r * r)
       const { options, correctIndex } = makeOptions(sa, 30)
-      return { id: this.id, category: this.category, question: `Find the surface area of a sphere with radius ${r} (round to nearest integer).`, options, correctIndex, explanation: `SA = 4\\u03c0r\\u00b2 = 4\\u03c0(${r})\\u00b2 \\u2248 ${sa}.` }
+      return { id: this.id, category: this.category, question: `Find the surface area of a sphere with radius ${r} (round to nearest integer).`, options, correctIndex, explanation: `SA = 4\πr\² = 4\π(${r})\² \≈ ${sa}.` }
     }
   },
   {
@@ -321,8 +321,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randInt(3, 12); const b = randInt(4, 12)
       const cSq = a*a + b*b; const c = Math.round(Math.sqrt(cSq) * 10) / 10
-      const correct = `c \\u2248 ${c}`
-      return { id: this.id, category: this.category, question: `A right triangle has legs ${a} and ${b}. Find the hypotenuse c.`, ...makeStringOptions(correct, [`c = ${a + b}`, `c = ${Math.abs(a - b)}`, `c = ${Math.round(c) + 2}`]), explanation: `c = \\u221a(${a}\\u00b2 + ${b}\\u00b2) = \\u221a(${cSq}) \\u2248 ${c}.` }
+      const correct = `c \≈ ${c}`
+      return { id: this.id, category: this.category, question: `A right triangle has legs ${a} and ${b}. Find the hypotenuse c.`, ...makeStringOptions(correct, [`c = ${a + b}`, `c = ${Math.abs(a - b)}`, `c = ${Math.round(c) + 2}`]), explanation: `c = \√(${a}\² + ${b}\²) = \√(${cSq}) \≈ ${c}.` }
     }
   },
   {
@@ -333,7 +333,7 @@ const questionPool: QuestionTemplate[] = [
       const triples = [[3,4,5],[5,12,13],[8,15,17],[7,24,25]]
       const [a,b,c] = triples[randInt(0, triples.length - 1)]
       const { options, correctIndex } = makeOptions(c, 3)
-      return { id: this.id, category: this.category, question: `A right triangle has legs ${a} and ${b}. Find the hypotenuse.`, options, correctIndex, explanation: `${a}\\u00b2 + ${b}\\u00b2 = ${a*a} + ${b*b} = ${c*c} = ${c}\\u00b2.` }
+      return { id: this.id, category: this.category, question: `A right triangle has legs ${a} and ${b}. Find the hypotenuse.`, options, correctIndex, explanation: `${a}\² + ${b}\² = ${a*a} + ${b*b} = ${c*c} = ${c}\².` }
     }
   },
   {
@@ -344,7 +344,7 @@ const questionPool: QuestionTemplate[] = [
       const triples = [[3,4,5],[5,12,13],[8,15,17]]
       const [a,b,c] = triples[randInt(0, triples.length - 1)]
       const { options, correctIndex } = makeOptions(a, 3)
-      return { id: this.id, category: this.category, question: `A right triangle has hypotenuse ${c} and one leg ${b}. Find the other leg.`, options, correctIndex, explanation: `a = \\u221a(${c}\\u00b2 - ${b}\\u00b2) = \\u221a(${c*c} - ${b*b}) = \\u221a${c*c - b*b} = ${a}.` }
+      return { id: this.id, category: this.category, question: `A right triangle has hypotenuse ${c} and one leg ${b}. Find the other leg.`, options, correctIndex, explanation: `a = \√(${c}\² - ${b}\²) = \√(${c*c} - ${b*b}) = \√${c*c - b*b} = ${a}.` }
     }
   },
   {
@@ -354,8 +354,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const d = randInt(5, 15)
       const diag = Math.round(d * Math.sqrt(2) * 10) / 10
-      const correct = `\\u2248 ${diag}`
-      return { id: this.id, category: this.category, question: `A square has side length ${d}. Find the diagonal length.`, ...makeStringOptions(correct, [`${d * 2}`, `${d}`, `${d + 1}`]), explanation: `Diagonal = s\\u221a2 = ${d}\\u221a2 \\u2248 ${diag}.` }
+      const correct = `\≈ ${diag}`
+      return { id: this.id, category: this.category, question: `A square has side length ${d}. Find the diagonal length.`, ...makeStringOptions(correct, [`${d * 2}`, `${d}`, `${d + 1}`]), explanation: `Diagonal = s\√2 = ${d}\√2 \≈ ${diag}.` }
     }
   },
   {
@@ -375,7 +375,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(3, 8); const b = randInt(3, 8); const c = randInt(10, 15)
       const isRight = a*a + b*b === c*c
       const correct = isRight ? 'Yes, it is a right triangle' : 'No, it is not a right triangle'
-      return { id: this.id, category: this.category, question: `Do sides ${a}, ${b}, ${c} form a right triangle? Check: ${a}\\u00b2 + ${b}\\u00b2 = ${a*a+b*b}, ${c}\\u00b2 = ${c*c}.`, ...makeStringOptions(correct, [isRight ? 'No' : 'Yes', 'Only if angles are given', 'Cannot determine']), explanation: `${a}\\u00b2 + ${b}\\u00b2 = ${a*a + b*b} ${isRight ? '=' : '\\u2260'} ${c*c} = ${c}\\u00b2. ${isRight ? 'Equal, so right triangle.' : 'Not equal, not a right triangle.'}` }
+      return { id: this.id, category: this.category, question: `Do sides ${a}, ${b}, ${c} form a right triangle? Check: ${a}\² + ${b}\² = ${a*a+b*b}, ${c}\² = ${c*c}.`, ...makeStringOptions(correct, [isRight ? 'No' : 'Yes', 'Only if angles are given', 'Cannot determine']), explanation: `${a}\² + ${b}\² = ${a*a + b*b} ${isRight ? '=' : '\≠'} ${c*c} = ${c}\². ${isRight ? 'Equal, so right triangle.' : 'Not equal, not a right triangle.'}` }
     }
   },
   {
@@ -385,8 +385,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const h = randInt(10, 30); const d = randInt(5, 15)
       const ladder = Math.round(Math.sqrt(h*h + d*d) * 10) / 10
-      const correct = `\\u2248 ${ladder} ft`
-      return { id: this.id, category: this.category, question: `A ladder reaches ${h} ft up a wall. Its base is ${d} ft from the wall. How long is the ladder?`, ...makeStringOptions(correct, [`${h + d} ft`, `${h} ft`, `${h - d} ft`]), explanation: `Ladder = \\u221a(${h}\\u00b2 + ${d}\\u00b2) = \\u221a(${h*h + d*d}) \\u2248 ${ladder} ft.` }
+      const correct = `\≈ ${ladder} ft`
+      return { id: this.id, category: this.category, question: `A ladder reaches ${h} ft up a wall. Its base is ${d} ft from the wall. How long is the ladder?`, ...makeStringOptions(correct, [`${h + d} ft`, `${h} ft`, `${h - d} ft`]), explanation: `Ladder = \√(${h}\² + ${d}\²) = \√(${h*h + d*d}) \≈ ${ladder} ft.` }
     }
   },
   {
@@ -408,8 +408,8 @@ const questionPool: QuestionTemplate[] = [
       const x2 = randInt(-5, 5); const y2 = randInt(-5, 5)
       const dx = x2 - x1; const dy = y2 - y1
       const dist = Math.round(Math.sqrt(dx*dx + dy*dy) * 10) / 10
-      const correct = `\\u2248 ${dist}`
-      return { id: this.id, category: this.category, question: `Find the distance between (${x1}, ${y1}) and (${x2}, ${y2}).`, ...makeStringOptions(correct, [`${Math.abs(dx) + Math.abs(dy)}`, `${dist + 2}`, `${Math.abs(dist - 3)}`]), explanation: `d = \\u221a((${dx})\\u00b2 + (${dy})\\u00b2) = \\u221a(${dx*dx + dy*dy}) \\u2248 ${dist}.` }
+      const correct = `\≈ ${dist}`
+      return { id: this.id, category: this.category, question: `Find the distance between (${x1}, ${y1}) and (${x2}, ${y2}).`, ...makeStringOptions(correct, [`${Math.abs(dx) + Math.abs(dy)}`, `${dist + 2}`, `${Math.abs(dist - 3)}`]), explanation: `d = \√((${dx})\² + (${dy})\²) = \√(${dx*dx + dy*dy}) \≈ ${dist}.` }
     }
   },
   {
@@ -486,8 +486,8 @@ const questionPool: QuestionTemplate[] = [
 
     generate() {
       const h = randInt(-4, 4); const k = randInt(-4, 4); const r = randInt(2, 6)
-      const correct = `(x - ${h})\\u00b2 + (y - ${k})\\u00b2 = ${r*r}`
-      return { id: this.id, category: this.category, question: `Write the equation of a circle centered at (${h}, ${k}) with radius ${r}.`, ...makeStringOptions(correct, [`(x + ${h})\\u00b2 + (y + ${k})\\u00b2 = ${r}`, `x\\u00b2 + y\\u00b2 = ${r*r}`, `(x - ${h})\\u00b2 + (y - ${k})\\u00b2 = ${r}`]), explanation: `Circle equation: (x - h)\\u00b2 + (y - k)\\u00b2 = r\\u00b2 = ${r*r}.` }
+      const correct = `(x - ${h})\² + (y - ${k})\² = ${r*r}`
+      return { id: this.id, category: this.category, question: `Write the equation of a circle centered at (${h}, ${k}) with radius ${r}.`, ...makeStringOptions(correct, [`(x + ${h})\² + (y + ${k})\² = ${r}`, `x\² + y\² = ${r*r}`, `(x - ${h})\² + (y - ${k})\² = ${r}`]), explanation: `Circle equation: (x - h)\² + (y - k)\² = r\² = ${r*r}.` }
     }
   },
 ]

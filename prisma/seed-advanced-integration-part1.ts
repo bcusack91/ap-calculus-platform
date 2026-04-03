@@ -10,6 +10,9 @@ enum Difficulty {
 }
 
 async function main() {
+  const __seedCourse = await (prisma as any).course.findFirst({ where: { slug: 'ap-calculus-ab' } })
+  const __courseId = __seedCourse?.id
+
   console.log('🔄 Creating Advanced Integration (BC) micro-lessons - Part 1...')
 
   // Create Advanced Integration category (BC content)
@@ -22,6 +25,8 @@ async function main() {
       description: 'Advanced integration techniques for Calculus BC',
       order: 5,
       icon: '∫∫',
+    
+      courseId: __courseId
     },
   })
 

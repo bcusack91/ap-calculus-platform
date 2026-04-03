@@ -1,61 +1,355 @@
 /**
- * Exit Quiz — SAT Vocabulary in Context
- * 40 randomized questions on academic vocabulary, connotation, tone words, context clues
+ * Exit Quiz — SAT Vocabulary in Context (Digital SAT Format)
+ *
+ * Passage-based questions following the Digital SAT Reading & Writing format.
+ * Each question presents a short passage with a blank and asks students
+ * to select the most logical and precise word or phrase.
+ *
+ * Domain: Craft and Structure — Words in Context
  */
+
 export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
 interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
+
 function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
-function makeStringOptions(c: string, o: string[]) { const u = o.filter(x => x !== c).slice(0, 3); while (u.length < 3) u.push('No change'); const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
-function pick<T>(arr: T[]): T { return arr[Math.floor(Math.random() * arr.length)] }
+
+function makeOptions(correct: string, distractors: string[]) {
+  const others = distractors.filter(x => x !== correct).slice(0, 3)
+  const all = shuffle([correct, ...others])
+  return { options: all, correctIndex: all.indexOf(correct) }
+}
 
 const questionPool: QuestionTemplate[] = [
-  // Academic Vocabulary
-  { id: 'vc-q1', category: 'Academic Vocabulary', generate() { const word = pick(['elucidate', 'substantiate', 'corroborate']); const correct = word === 'elucidate' ? 'clarify' : word === 'substantiate' ? 'support with evidence' : 'confirm'; const wrongs = word === 'elucidate' ? ['obscure', 'eliminate', 'decorate'] : word === 'substantiate' ? ['undermine', 'fabricate', 'speculate'] : ['deny', 'contradict', 'question']; const sentence = word === 'elucidate' ? 'The professor attempted to ___ the complex theory for her students.' : word === 'substantiate' ? 'The researcher needed data to ___ her hypothesis.' : 'A second study was conducted to ___ the original findings.'; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `"${sentence}" Which word best fills the blank?`, options, correctIndex, explanation: `"${word}" means "${correct}" — context clues about explanation or proof guide the choice.` } } },
-  { id: 'vc-q2', category: 'Academic Vocabulary', generate() { const word = pick(['pragmatic', 'empirical', 'ubiquitous']); const correct = word === 'pragmatic' ? 'practical' : word === 'empirical' ? 'based on observation' : 'found everywhere'; const wrongs = word === 'pragmatic' ? ['idealistic', 'theoretical', 'impractical'] : word === 'empirical' ? ['theoretical', 'speculative', 'hypothetical'] : ['rare', 'invisible', 'localized']; const sentence = word === 'pragmatic' ? 'Rather than idealistic proposals, the committee favored ___ solutions.' : word === 'empirical' ? 'The scientist insisted on ___ evidence rather than speculation.' : 'Smartphones have become ___ in modern society.'; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `"${sentence}" Choose the best word for the blank.`, options, correctIndex, explanation: `"${word}" means "${correct}" — the sentence context contrasts or defines the meaning.` } } },
-  { id: 'vc-q3', category: 'Academic Vocabulary', generate() { const word = pick(['mitigate', 'exacerbate', 'ameliorate']); const correct = word === 'mitigate' ? 'lessen the severity of' : word === 'exacerbate' ? 'make worse' : 'improve'; const wrongs = word === 'mitigate' ? ['worsen', 'eliminate', 'ignore'] : word === 'exacerbate' ? ['improve', 'resolve', 'ignore'] : ['worsen', 'complicate', 'destroy']; const sentence = word === 'mitigate' ? 'New policies were enacted to ___ the effects of pollution.' : word === 'exacerbate' ? 'The drought served to ___ the existing food shortage.' : 'Community programs helped ___ living conditions in the neighborhood.'; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `"${sentence}" Which meaning fits the blank?`, options, correctIndex, explanation: `"${word}" means "${correct}" — the sentence context about problems and solutions is key.` } } },
-  { id: 'vc-q4', category: 'Academic Vocabulary', generate() { const sentence = pick(['The ___ nature of the problem required a multifaceted approach.', 'The committee reached a ___ after hours of debate.', 'Her argument was ___ and well-supported by evidence.']); const correct = sentence.includes('multifaceted') ? 'complex' : sentence.includes('committee') ? 'consensus' : 'cogent'; const wrongs = sentence.includes('multifaceted') ? ['simple', 'trivial', 'obvious'] : sentence.includes('committee') ? ['disagreement', 'controversy', 'silence'] : ['weak', 'rambling', 'emotional']; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `"${sentence}" Choose the best word for the blank.`, options, correctIndex, explanation: `Context clues like "multifaceted," "debate," or "well-supported" guide the correct choice.` } } },
-  { id: 'vc-q5', category: 'Academic Vocabulary', generate() { const word = pick(['unprecedented', 'indispensable', 'paradoxical']); const correct = word === 'unprecedented' ? 'never done before' : word === 'indispensable' ? 'absolutely necessary' : 'seemingly contradictory'; const wrongs = word === 'unprecedented' ? ['common', 'expected', 'repeated'] : word === 'indispensable' ? ['optional', 'unnecessary', 'replaceable'] : ['logical', 'straightforward', 'obvious']; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `"The situation was ${word}." As used here, "${word}" most nearly means:`, options, correctIndex, explanation: `"${word}" means "${correct}."` } } },
-  // Connotation
-  { id: 'vc-q6', category: 'Connotation', generate() { const pair = pick([['thrifty', 'cheap'], ['assertive', 'pushy'], ['youthful', 'immature']]); const { options, correctIndex } = makeStringOptions(pair[0], [pair[1], 'neutral', 'negative']); return { id: this.id, category: this.category, question: `Which word has a more POSITIVE connotation: "${pair[0]}" or "${pair[1]}"?`, options, correctIndex, explanation: `"${pair[0]}" has a positive connotation, while "${pair[1]}" carries negative overtones.` } } },
-  { id: 'vc-q7', category: 'Connotation', generate() { const word = pick(['frugal', 'slender', 'curious']); const neg = word === 'frugal' ? 'stingy' : word === 'slender' ? 'scrawny' : 'nosy'; const { options, correctIndex } = makeStringOptions(neg, [word, 'neutral term', 'formal term']); return { id: this.id, category: this.category, question: `Which word is the NEGATIVE connotation counterpart of "${word}"?`, options, correctIndex, explanation: `"${neg}" carries a negative connotation compared to the more positive "${word}."` } } },
-  { id: 'vc-q8', category: 'Connotation', generate() { const { options, correctIndex } = makeStringOptions('The emotional association or feeling a word carries beyond its definition', ['The dictionary definition of a word', 'The number of syllables in a word', 'The origin of a word']); return { id: this.id, category: this.category, question: 'What is "connotation"?', options, correctIndex, explanation: 'Connotation = the emotional overtone of a word, beyond its literal (denotative) meaning.' } } },
-  { id: 'vc-q9', category: 'Connotation', generate() { const scenario = pick(['a news article describing a protest', 'a review of a restaurant', 'a college application essay']); const { options, correctIndex } = makeStringOptions('Word choice with the right connotation matches the intended tone', ['Connotation doesn\'t matter in formal writing', 'Only denotation matters on the SAT', 'Connotation only applies to adjectives']); return { id: this.id, category: this.category, question: `Why is connotation important when choosing words in ${scenario}?`, options, correctIndex, explanation: 'Choosing words with appropriate connotation ensures the tone matches the writer\'s intent.' } } },
-  { id: 'vc-q10', category: 'Connotation', generate() { const word = pick(['confident', 'aroma', 'vintage']); const neg = word === 'confident' ? 'arrogant' : word === 'aroma' ? 'stench' : 'outdated'; const neutral = word === 'confident' ? 'self-assured' : word === 'aroma' ? 'smell' : 'old'; const { options, correctIndex } = makeStringOptions(`Positive: ${word}, Neutral: ${neutral}, Negative: ${neg}`, [`Positive: ${neg}, Neutral: ${word}, Negative: ${neutral}`, `All are neutral`, `All are negative`]); return { id: this.id, category: this.category, question: `Rank the connotation: "${word}," "${neutral}," "${neg}."`, options, correctIndex, explanation: `"${word}" is positive, "${neutral}" is neutral, and "${neg}" is negative.` } } },
-  // Tone Words
-  { id: 'vc-q11', category: 'Tone Words', generate() { const tone = pick(['sardonic', 'reverent', 'didactic']); const meaning = tone === 'sardonic' ? 'mocking or cynical' : tone === 'reverent' ? 'showing deep respect' : 'intended to teach or instruct'; const wrongs = tone === 'sardonic' ? ['cheerful', 'respectful', 'neutral'] : tone === 'reverent' ? ['dismissive', 'sarcastic', 'indifferent'] : ['entertaining', 'mysterious', 'casual']; const { options, correctIndex } = makeStringOptions(meaning, wrongs); return { id: this.id, category: this.category, question: `If a passage's tone is described as "${tone}," this means the author is:`, options, correctIndex, explanation: `"${tone}" means "${meaning}" — knowing tone words is essential for SAT Reading.` } } },
-  { id: 'vc-q12', category: 'Tone Words', generate() { const { options, correctIndex } = makeStringOptions('objective', ['passionate', 'humorous', 'nostalgic']); return { id: this.id, category: this.category, question: 'A passage presents facts without emotional language. Which tone word best describes it?', options, correctIndex, explanation: 'Factual, unemotional writing = objective tone.' } } },
-  { id: 'vc-q13', category: 'Tone Words', generate() { const word = pick(['whimsical', 'solemn', 'acerbic']); const meaning = word === 'whimsical' ? 'playful and fanciful' : word === 'solemn' ? 'serious and dignified' : 'sharp and harsh in tone'; const wrongs = word === 'whimsical' ? ['serious', 'angry', 'formal'] : word === 'solemn' ? ['lighthearted', 'sarcastic', 'informal'] : ['gentle', 'warm', 'playful']; const { options, correctIndex } = makeStringOptions(meaning, wrongs); return { id: this.id, category: this.category, question: `"${word}" describes a tone that is:`, options, correctIndex, explanation: `"${word}" means "${meaning}."` } } },
-  { id: 'vc-q14', category: 'Tone Words', generate() { const { options, correctIndex } = makeStringOptions('They help precisely describe an author\'s attitude toward a subject', ['They are only used in poetry', 'They describe the passage length', 'They are not tested on the SAT']); return { id: this.id, category: this.category, question: 'Why are tone words important on the SAT?', options, correctIndex, explanation: 'Tone words precisely describe the author\'s attitude — a frequently tested skill.' } } },
-  { id: 'vc-q15', category: 'Tone Words', generate() { const { options, correctIndex } = makeStringOptions('ambivalent', ['hostile', 'indifferent', 'enthusiastic']); return { id: this.id, category: this.category, question: 'An author presents both pros and cons of a policy without clearly favoring either side. The tone is best described as:', options, correctIndex, explanation: '"Ambivalent" means having mixed feelings — presenting both sides without choosing one.' } } },
-  // Word Relationships
-  { id: 'vc-q16', category: 'Word Relationships', generate() { const pair = pick([['benevolent', 'malevolent'], ['ephemeral', 'permanent'], ['verbose', 'concise']]); const { options, correctIndex } = makeStringOptions('antonyms', ['synonyms', 'homophones', 'homonyms']); return { id: this.id, category: this.category, question: `"${pair[0]}" and "${pair[1]}" are:`, options, correctIndex, explanation: `"${pair[0]}" and "${pair[1]}" have opposite meanings — they are antonyms.` } } },
-  { id: 'vc-q17', category: 'Word Relationships', generate() { const pair = pick([['meticulous', 'careful'], ['candid', 'honest'], ['arduous', 'difficult']]); const { options, correctIndex } = makeStringOptions('synonyms', ['antonyms', 'homophones', 'unrelated']); return { id: this.id, category: this.category, question: `"${pair[0]}" and "${pair[1]}" are:`, options, correctIndex, explanation: `"${pair[0]}" and "${pair[1]}" share similar meanings — they are synonyms.` } } },
-  { id: 'vc-q18', category: 'Word Relationships', generate() { const { options, correctIndex } = makeStringOptions('Understanding word relationships helps you eliminate wrong answers and find synonyms in context', ['Word relationships are not tested', 'Only antonyms matter', 'Only root words matter']); return { id: this.id, category: this.category, question: 'How does understanding word relationships help on the SAT?', options, correctIndex, explanation: 'Knowing synonyms, antonyms, and word families helps narrow answer choices.' } } },
-  // Multiple Meanings
-  { id: 'vc-q19', category: 'Multiple Meanings', generate() { const word = pick(['bank', 'current', 'novel']); const contextA = word === 'bank' ? 'the bank of the river' : word === 'current' ? 'current events' : 'a novel approach'; const meaningA = word === 'bank' ? 'the land alongside a river' : word === 'current' ? 'happening now' : 'new and original'; const wrongs = word === 'bank' ? ['a financial institution', 'to rely on', 'a group of objects'] : word === 'current' ? ['a flow of water', 'electricity', 'popular'] : ['a book', 'fictional', 'lengthy']; const { options, correctIndex } = makeStringOptions(meaningA, wrongs); return { id: this.id, category: this.category, question: `In "${contextA}," the word "${word}" means:`, options, correctIndex, explanation: `"${word}" has multiple meanings — context determines that here it means "${meaningA}."` } } },
-  { id: 'vc-q20', category: 'Multiple Meanings', generate() { const word = pick(['grave', 'degree', 'exercise']); const context = word === 'grave' ? 'a grave mistake' : word === 'degree' ? 'to a certain degree' : 'exercise caution'; const correct = word === 'grave' ? 'serious' : word === 'degree' ? 'extent or level' : 'to use or apply'; const wrongs = word === 'grave' ? ['a burial site', 'carved', 'dark'] : word === 'degree' ? ['temperature unit', 'academic qualification', 'angle measurement'] : ['physical activity', 'a workout routine', 'a practice drill']; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `"${context}" — here, "${word}" means:`, options, correctIndex, explanation: `In this context, "${word}" means "${correct}."` } } },
-  { id: 'vc-q21', category: 'Multiple Meanings', generate() { const { options, correctIndex } = makeStringOptions('Substitute each answer choice into the sentence and check for coherence', ['Always pick the most common definition', 'Choose the definition you know best', 'Look for the answer with the simplest language']); return { id: this.id, category: this.category, question: 'How should you approach a multiple-meaning word question?', options, correctIndex, explanation: 'Substitution is the most reliable strategy — if it fits the sentence, it\'s the right meaning.' } } },
-  // Context Clues
-  { id: 'vc-q22', category: 'Context Clues', generate() { const type = pick(['definition clue', 'example clue', 'contrast clue', 'inference clue']); const example = type === 'definition clue' ? 'The word is directly defined in the sentence using "means" or "is"' : type === 'example clue' ? 'Examples are given that illustrate the word\'s meaning' : type === 'contrast clue' ? 'An opposite idea signals the word\'s meaning (e.g., "unlike," "however")' : 'You must infer meaning from the overall sentence or paragraph'; const wrongs = ['The word is in bold', 'The word appears in the title', 'The word is repeated multiple times']; const { options, correctIndex } = makeStringOptions(example, wrongs); return { id: this.id, category: this.category, question: `What is a "${type}"?`, options, correctIndex, explanation: `A ${type} helps you determine an unfamiliar word's meaning from surrounding text.` } } },
-  { id: 'vc-q23', category: 'Context Clues', generate() { const sentence = pick(['The once ___ town is now bustling with activity. (previously quiet)', 'Her ___ speech inspired the entire audience. (moving, powerful)', 'The ___ evidence left no room for doubt. (convincing, conclusive)']); const correct = sentence.includes('quiet') ? 'sleepy' : sentence.includes('moving') ? 'eloquent' : 'compelling'; const wrongs = sentence.includes('quiet') ? ['vibrant', 'enormous', 'ancient'] : sentence.includes('moving') ? ['boring', 'brief', 'confusing'] : ['weak', 'fabricated', 'irrelevant']; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `${sentence} Choose the word for the blank.`, options, correctIndex, explanation: `Context clues in parentheses guide you to the correct answer: "${correct}."` } } },
-  { id: 'vc-q24', category: 'Context Clues', generate() { const { options, correctIndex } = makeStringOptions('Look for nearby synonyms, antonyms, definitions, or examples', ['Skip the sentence entirely', 'Only look at the word itself', 'Guess based on word length']); return { id: this.id, category: this.category, question: 'What is the first step when using context clues to find a word\'s meaning?', options, correctIndex, explanation: 'Surrounding synonyms, antonyms, definitions, or examples reveal meaning.' } } },
-  { id: 'vc-q25', category: 'Context Clues', generate() { const { options, correctIndex } = makeStringOptions('however', ['and', 'also', 'similarly']); return { id: this.id, category: this.category, question: 'Which signal word indicates a contrast clue that can help define an unknown word?', options, correctIndex, explanation: '"However" signals contrast — the opposite meaning follows, helping define the unknown word.' } } },
-  { id: 'vc-q26', category: 'Context Clues', generate() { const sentence = 'Despite her ___ exterior, she was actually quite warm and friendly inside.'; const { options, correctIndex } = makeStringOptions('aloof', ['cheerful', 'friendly', 'outgoing']); return { id: this.id, category: this.category, question: `"${sentence}" The contrast clue "warm and friendly" suggests the blank means:`, options, correctIndex, explanation: '"Despite" signals contrast — the blank must mean the opposite of "warm and friendly."' } } },
-  // SAT-Style
-  { id: 'vc-q27', category: 'SAT-Style', generate() { const word = pick(['undermine', 'bolster', 'scrutinize']); const correct = word === 'undermine' ? 'weaken gradually' : word === 'bolster' ? 'strengthen or support' : 'examine closely'; const wrongs = word === 'undermine' ? ['strengthen', 'build', 'support'] : word === 'bolster' ? ['weaken', 'destroy', 'ignore'] : ['glance at', 'approve', 'dismiss']; const context = word === 'undermine' ? 'The scandal threatened to ___ public trust in the institution.' : word === 'bolster' ? 'New evidence helped ___ the prosecution\'s case.' : 'Investigators were brought in to ___ the financial records.'; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `"${context}" The blank is best filled by a word meaning:`, options, correctIndex, explanation: `"${word}" means "${correct}" — the sentence context about trust, evidence, or investigation guides you.` } } },
-  { id: 'vc-q28', category: 'SAT-Style', generate() { const word = pick(['cultivate', 'advocate', 'reconcile']); const correct = word === 'cultivate' ? 'develop through effort' : word === 'advocate' ? 'publicly support' : 'make compatible'; const wrongs = word === 'cultivate' ? ['destroy', 'harvest', 'ignore'] : word === 'advocate' ? ['oppose', 'avoid', 'delay'] : ['argue', 'separate', 'complicate']; const context = word === 'cultivate' ? 'Teachers strive to ___ curiosity in their students.' : word === 'advocate' ? 'Many community leaders ___ for increased funding.' : 'The researchers attempted to ___ conflicting data sets.'; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `"${context}" Which meaning best fits the blank?`, options, correctIndex, explanation: `"${word}" means "${correct}."` } } },
-  { id: 'vc-q29', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('Read the full sentence, predict a word, then match to the answer choices', ['Read only the blank and guess', 'Choose the hardest word', 'Eliminate based on word length']); return { id: this.id, category: this.category, question: 'What is the most effective strategy for SAT vocabulary-in-context questions?', options, correctIndex, explanation: 'Predict the answer before looking at choices — this prevents trap answers from misleading you.' } } },
-  { id: 'vc-q30', category: 'SAT-Style', generate() { const word = pick(['ambiguous', 'definitive', 'provisional']); const correct = word === 'ambiguous' ? 'open to more than one interpretation' : word === 'definitive' ? 'conclusive and authoritative' : 'temporary and subject to change'; const wrongs = word === 'ambiguous' ? ['clear', 'obvious', 'precise'] : word === 'definitive' ? ['preliminary', 'uncertain', 'debatable'] : ['permanent', 'certain', 'final']; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `"${word}" most nearly means:`, options, correctIndex, explanation: `"${word}" means "${correct}."` } } },
-  { id: 'vc-q31', category: 'SAT-Style', generate() { const word = pick(['unprecedented', 'conventional', 'contentious']); const correct = word === 'unprecedented' ? 'never before seen or done' : word === 'conventional' ? 'following traditional norms' : 'causing disagreement'; const wrongs = word === 'unprecedented' ? ['expected', 'ordinary', 'repeated'] : word === 'conventional' ? ['innovative', 'radical', 'unique'] : ['agreeable', 'peaceful', 'boring']; const context = word === 'unprecedented' ? 'The discovery was ___ in the field of genetics.' : word === 'conventional' ? 'She rejected ___ methods in favor of innovation.' : 'The policy remained ___ among voters.'; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `"${context}" The blank is best filled by a word meaning:`, options, correctIndex, explanation: `"${word}" means "${correct}."` } } },
-  { id: 'vc-q32', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('Words that sound scholarly but don\'t fit the context are often traps', ['Always choose the most impressive word', 'The longest answer is usually correct', 'Academic words are always the right choice']); return { id: this.id, category: this.category, question: 'What is a common trap in SAT vocabulary questions?', options, correctIndex, explanation: 'The SAT often includes impressive-sounding words as distractors — context fit matters most.' } } },
-  { id: 'vc-q33', category: 'SAT-Style', generate() { const word = pick(['inherent', 'peripheral', 'integral']); const correct = word === 'inherent' ? 'existing as a natural part' : word === 'peripheral' ? 'of secondary importance' : 'essential and fundamental'; const wrongs = word === 'inherent' ? ['acquired', 'external', 'optional'] : word === 'peripheral' ? ['central', 'crucial', 'primary'] : ['optional', 'minor', 'decorative']; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `"${word}" most nearly means:`, options, correctIndex, explanation: `"${word}" means "${correct}."` } } },
-  { id: 'vc-q34', category: 'SAT-Style', generate() { const word = pick(['nuanced', 'superficial', 'comprehensive']); const correct = word === 'nuanced' ? 'characterized by subtle distinctions' : word === 'superficial' ? 'lacking depth' : 'thorough and all-inclusive'; const wrongs = word === 'nuanced' ? ['simplistic', 'extreme', 'blunt'] : word === 'superficial' ? ['deep', 'thorough', 'insightful'] : ['partial', 'narrow', 'brief']; const { options, correctIndex } = makeStringOptions(correct, wrongs); return { id: this.id, category: this.category, question: `"${word}" most nearly means:`, options, correctIndex, explanation: `"${word}" means "${correct}."` } } },
-  { id: 'vc-q35', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('implicit', ['explicit', 'obvious', 'stated']); return { id: this.id, category: this.category, question: '"The author\'s criticism was not directly stated but ___." Which word fits?', options, correctIndex, explanation: '"Implicit" means implied but not directly stated — the opposite of "explicit."' } } },
-  { id: 'vc-q36', category: 'Multiple Meanings', generate() { const word = pick(['draft', 'patient', 'compound']); const contextA = word === 'draft' ? 'a draft of the essay' : word === 'patient' ? 'be patient with the process' : 'compound the problem'; const meaningA = word === 'draft' ? 'a preliminary version' : word === 'patient' ? 'able to wait calmly' : 'to make worse or more intense'; const wrongs = word === 'draft' ? ['a flow of air', 'a bank document', 'military conscription'] : word === 'patient' ? ['a person receiving care', 'slow', 'sick'] : ['a chemical substance', 'an enclosed area', 'to mix together']; const { options, correctIndex } = makeStringOptions(meaningA, wrongs); return { id: this.id, category: this.category, question: `In "${contextA}," the word "${word}" means:`, options, correctIndex, explanation: `"${word}" has multiple meanings — here it means "${meaningA}."` } } },
-  { id: 'vc-q37', category: 'Connotation', generate() { const { options, correctIndex } = makeStringOptions('Denotation is the literal meaning; connotation is the emotional association', ['They mean the same thing', 'Denotation is emotional; connotation is literal', 'Neither is tested on the SAT']); return { id: this.id, category: this.category, question: 'What is the difference between denotation and connotation?', options, correctIndex, explanation: 'Denotation = dictionary definition. Connotation = emotional overtones and associations.' } } },
-  { id: 'vc-q38', category: 'Tone Words', generate() { const { options, correctIndex } = makeStringOptions('contemplative', ['aggressive', 'humorous', 'dismissive']); return { id: this.id, category: this.category, question: 'An author reflects deeply on the meaning of life using thoughtful, measured language. The tone is:', options, correctIndex, explanation: '"Contemplative" means deeply thoughtful — matching reflective, measured language.' } } },
-  { id: 'vc-q39', category: 'Word Relationships', generate() { const { options, correctIndex } = makeStringOptions('Knowing Latin and Greek roots helps decode unfamiliar words', ['Root words are not helpful on the SAT', 'Only memorizing vocabulary lists works', 'Roots only apply to science terms']); return { id: this.id, category: this.category, question: 'How can knowledge of word roots help on the SAT?', options, correctIndex, explanation: 'Latin/Greek roots (e.g., "bene" = good, "mal" = bad) help decode unfamiliar words.' } } },
-  { id: 'vc-q40', category: 'Context Clues', generate() { const { options, correctIndex } = makeStringOptions('restatement clue', ['contrast clue', 'example clue', 'inference clue']); return { id: this.id, category: this.category, question: '"The child was lethargic — that is, extremely tired and lacking energy." What type of context clue is "that is"?', options, correctIndex, explanation: '"That is" introduces a restatement (definition) clue, directly defining "lethargic."' } } },
+  {
+    id: 'vocab-q1', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('eclectic', ['conventional', 'predictable', 'uniform'])
+      return { id: this.id, category: this.category,
+        question: `Jazz pianist Thelonious Monk was known for his _______ approach to composition, drawing on elements of stride piano, blues, and avant-garde experimentation. His willingness to combine seemingly incompatible musical traditions resulted in a body of work that defied easy categorization.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Eclectic" means deriving ideas from a diverse range of sources. The passage describes Monk combining multiple musical traditions, making "eclectic" the most precise choice.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q2', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('exacerbated', ['alleviated', 'resolved', 'initiated'])
+      return { id: this.id, category: this.category,
+        question: `The prolonged drought in the Horn of Africa _______ existing food shortages, pushing an already vulnerable population closer to famine. International aid organizations warned that without immediate intervention, millions of people would face acute malnutrition.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Exacerbated" means made worse. The passage indicates the drought worsened existing shortages, not that it started, fixed, or relieved them.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q3', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('tenuous', ['robust', 'definitive', 'straightforward'])
+      return { id: this.id, category: this.category,
+        question: `While some historians have drawn a connection between the decline of Roman trade networks and the collapse of the Western Roman Empire, the evidence supporting this link remains _______. Recent archaeological findings have complicated rather than clarified the picture.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Tenuous" means weak or slight. The passage states that evidence is uncertain and has been complicated by new findings, supporting a description of weakness rather than strength.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q4', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('ubiquitous', ['scarce', 'controversial', 'obsolete'])
+      return { id: this.id, category: this.category,
+        question: `Smartphones have become so _______ that researchers now study their effects on virtually every aspect of daily life, from sleep patterns and social interaction to academic performance and mental health.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Ubiquitous" means found everywhere. The passage describes smartphones as present in virtually every aspect of life, making "ubiquitous" the best fit.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q5', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('pragmatic', ['idealistic', 'reckless', 'theoretical'])
+      return { id: this.id, category: this.category,
+        question: `Rather than pursuing sweeping legislative reform, the governor adopted a more _______ strategy, focusing on incremental policy changes that could win bipartisan support. This approach frustrated some activists but proved effective in advancing several key initiatives.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Pragmatic" means dealing with things sensibly and realistically. The governor chose a practical, incremental approach over sweeping reform, making "pragmatic" the best fit.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q6', category: 'Tone & Connotation',
+    generate() {
+      const { options, correctIndex } = makeOptions('meticulous', ['careless', 'hasty', 'arbitrary'])
+      return { id: this.id, category: this.category,
+        question: `The restoration of Vermeer's "Girl with a Pearl Earring" required _______ attention to detail: conservators spent months analyzing paint layers under magnification before carefully removing centuries of accumulated varnish without disturbing the original pigments beneath.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Meticulous" means showing great attention to detail. The passage describes extremely careful, painstaking work, which aligns with "meticulous" rather than careless, hasty, or arbitrary approaches.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q7', category: 'Tone & Connotation',
+    generate() {
+      const { options, correctIndex } = makeOptions('unassuming', ['ostentatious', 'domineering', 'pretentious'])
+      return { id: this.id, category: this.category,
+        question: `Despite her considerable influence in the field of molecular biology, Dr. Jennifer Doudna has maintained an _______ public persona. Colleagues describe her as approachable and modest, qualities that have helped her build collaborative research networks spanning dozens of institutions.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Unassuming" means modest and not drawing attention to oneself. The passage describes Doudna as approachable and modest, making "unassuming" the best match.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q8', category: 'Tone & Connotation',
+    generate() {
+      const { options, correctIndex } = makeOptions('dismissive', ['enthusiastic', 'ambivalent', 'receptive'])
+      return { id: this.id, category: this.category,
+        question: `Early reviews of Emily Dickinson's poetry were largely _______; critics characterized her unconventional punctuation and compressed syntax as amateurish and her themes as morbid. It was not until the mid-twentieth century that scholars began to appreciate the radical formal innovation in her work.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Dismissive" means showing that something is unworthy of consideration. The passage shows critics rejecting Dickinson's work as amateurish and morbid, which is dismissive, not enthusiastic, ambivalent, or receptive.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q9', category: 'Academic Vocabulary',
+    generate() {
+      const { options, correctIndex } = makeOptions('corroborates', ['contradicts', 'undermines', 'replaces'])
+      return { id: this.id, category: this.category,
+        question: `A 2023 study published in Nature _______ earlier findings that exposure to green spaces is associated with lower levels of cortisol, a hormone linked to stress. The new research, conducted across fourteen countries, found consistent results regardless of participants' age, income, or urban density.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Corroborates" means confirms or supports. The new study found consistent results that match earlier findings, meaning it confirms rather than contradicts, undermines, or replaces them.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q10', category: 'Academic Vocabulary',
+    generate() {
+      const { options, correctIndex } = makeOptions('mitigate', ['amplify', 'disregard', 'guarantee'])
+      return { id: this.id, category: this.category,
+        question: `Engineers in the Netherlands have developed an innovative system of flood barriers designed to _______ the damage caused by rising sea levels. While the barriers cannot prevent flooding entirely, simulations suggest they could reduce property losses by as much as forty percent in low-lying coastal areas.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Mitigate" means to make less severe. The passage says the barriers reduce (but do not prevent) damage, which aligns with "mitigate."`
+      }
+    }
+  },
+  {
+    id: 'vocab-q11', category: 'Academic Vocabulary',
+    generate() {
+      const { options, correctIndex } = makeOptions('proliferation', ['reduction', 'regulation', 'stagnation'])
+      return { id: this.id, category: this.category,
+        question: `The _______ of social media platforms over the past decade has transformed how political campaigns communicate with voters. Candidates now invest heavily in targeted digital advertising, a strategy that was virtually nonexistent during the 2008 election cycle.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Proliferation" means rapid increase in numbers. The passage describes social media platforms spreading rapidly over the past decade, making "proliferation" the best fit.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q12', category: 'Academic Vocabulary',
+    generate() {
+      const { options, correctIndex } = makeOptions('unprecedented', ['inevitable', 'predictable', 'insignificant'])
+      return { id: this.id, category: this.category,
+        question: `The speed at which the COVID-19 vaccines were developed was _______; no previous vaccine had moved from initial research to emergency authorization in under a year. Scientists credited advances in mRNA technology and massive public funding for making the accelerated timeline possible.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Unprecedented" means never done or known before. The passage explicitly states that no previous vaccine had been developed this quickly, making "unprecedented" the most precise choice.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q13', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('ephemeral', ['permanent', 'recurring', 'tangible'])
+      return { id: this.id, category: this.category,
+        question: `The street art installations created by the anonymous collective "Luminous" are intentionally _______: constructed from biodegradable materials, they are designed to deteriorate within weeks of being placed in public spaces, reflecting the artists' belief that beauty need not be lasting to be meaningful.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Ephemeral" means lasting for a very short time. The passage describes art that is designed to deteriorate within weeks, making "ephemeral" the most precise word.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q14', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('supplanted', ['complemented', 'preceded', 'mimicked'])
+      return { id: this.id, category: this.category,
+        question: `In many newsrooms, traditional print journalism has been largely _______ by digital media. Reporters who once focused exclusively on writing long-form articles now produce podcasts, video segments, and social media content as well, fundamentally altering the nature of their work.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Supplanted" means superseded or replaced. The passage describes digital media taking over the role previously held by print journalism, making "supplanted" the best fit.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q15', category: 'Tone & Connotation',
+    generate() {
+      const { options, correctIndex } = makeOptions('contentious', ['unanimous', 'trivial', 'transparent'])
+      return { id: this.id, category: this.category,
+        question: `The decision to rename the university's oldest dormitory has proven _______. Alumni who value the building's historical associations have clashed with students who argue that the name honors a figure with a deeply troubling record on racial justice.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Contentious" means causing or likely to cause disagreement. The passage describes a clash between two groups with opposing views, making "contentious" the best fit.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q16', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('anomalous', ['typical', 'gradual', 'frequent'])
+      return { id: this.id, category: this.category,
+        question: `Astronomers at the Keck Observatory detected an _______ signal from a star in the constellation Cygnus that did not match any known pattern of stellar behavior. The irregularity prompted a months-long investigation that ultimately revealed a previously unobserved type of magnetic field fluctuation.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Anomalous" means deviating from what is standard, normal, or expected. The signal did not match known patterns--it was irregular--making "anomalous" the most precise choice.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q17', category: 'Academic Vocabulary',
+    generate() {
+      const { options, correctIndex } = makeOptions('substantiate', ['refute', 'fabricate', 'simplify'])
+      return { id: this.id, category: this.category,
+        question: `The prosecution presented forensic evidence, eyewitness testimony, and financial records to _______ its claim that the defendant had orchestrated a scheme to defraud investors. The defense argued, however, that much of this evidence was circumstantial.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Substantiate" means to provide evidence to support or prove the truth of something. The prosecution is presenting evidence to support its claim, making "substantiate" the best choice.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q18', category: 'Tone & Connotation',
+    generate() {
+      const { options, correctIndex } = makeOptions('austere', ['lavish', 'chaotic', 'welcoming'])
+      return { id: this.id, category: this.category,
+        question: `The architecture of the Bauhaus school was deliberately _______: flat roofs, unadorned facades, and an absence of decorative ornamentation reflected the movement's belief that form should follow function without unnecessary embellishment.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Austere" means severe or strict in manner, without comfort or luxury. The passage describes architecture that is unadorned and without embellishment, which is austere.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q19', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('galvanized', ['divided', 'confused', 'pacified'])
+      return { id: this.id, category: this.category,
+        question: `The publication of Rachel Carson's "Silent Spring" in 1962 _______ public opposition to the widespread use of synthetic pesticides. Within a decade of the book's release, the Environmental Protection Agency had been established and DDT had been banned for agricultural use in the United States.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Galvanized" means shocked or excited into taking action. The passage describes the book sparking a strong public response that led to concrete policy changes, making "galvanized" the best fit.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q20', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('ambiguous', ['explicit', 'irrelevant', 'comprehensive'])
+      return { id: this.id, category: this.category,
+        question: `Legal scholars have long debated the meaning of the Second Amendment's prefatory clause, which some interpret as limiting the right to bear arms to members of organized militias and others read as simply stating one justification for a broader individual right. The clause's _______ wording has fueled more than two centuries of constitutional controversy.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Ambiguous" means open to more than one interpretation. The passage describes ongoing debate about how to interpret the wording, indicating it is ambiguous.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q21', category: 'Academic Vocabulary',
+    generate() {
+      const { options, correctIndex } = makeOptions('elucidates', ['obscures', 'contradicts', 'oversimplifies'])
+      return { id: this.id, category: this.category,
+        question: `In her latest monograph, historian Dr. Elena Ruiz _______ the economic factors that drove mass migration from rural Mexico to the United States during the 1940s and 1950s. Drawing on previously untranslated archival sources, Ruiz provides a clearer picture of the financial pressures facing agricultural workers during this period.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Elucidates" means makes clear, explains. The passage says Ruiz provides "a clearer picture," meaning she clarifies the economic factors, which matches "elucidates."`
+      }
+    }
+  },
+  {
+    id: 'vocab-q22', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('disparate', ['identical', 'related', 'sequential'])
+      return { id: this.id, category: this.category,
+        question: `The curator organized the exhibit around a single theme—human trafficking over two millennia—but the artifacts themselves were remarkably _______: Roman slave collars, eighteenth-century plantation records, and contemporary news photographs occupied adjacent display cases, challenging visitors to draw connections across vastly different historical contexts.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Disparate" means essentially different in kind; not comparable. The artifacts come from vastly different time periods and contexts, making "disparate" the most precise word.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q23', category: 'Tone & Connotation',
+    generate() {
+      const { options, correctIndex } = makeOptions('skepticism', ['enthusiasm', 'indifference', 'certainty'])
+      return { id: this.id, category: this.category,
+        question: `When cold fusion was first announced in 1989, the scientific community responded with considerable _______. Physicists questioned whether the experiment's results could be replicated, and many suspected that measurement errors or contamination had produced misleading data.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Skepticism" means a doubting or questioning attitude. The passage describes scientists questioning results and suspecting errors, which indicates skepticism.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q24', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('circumvent', ['enforce', 'establish', 'endorse'])
+      return { id: this.id, category: this.category,
+        question: `To _______ import tariffs on steel, several manufacturers began routing shipments through intermediary countries where the materials were minimally processed before being re-exported. Trade officials described this practice as a violation of the spirit, if not the letter, of existing trade agreements.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Circumvent" means to find a way around an obstacle or restriction. The manufacturers are finding a workaround to avoid paying tariffs, making "circumvent" the best fit.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q25', category: 'Academic Vocabulary',
+    generate() {
+      const { options, correctIndex } = makeOptions('posits', ['disproves', 'disregards', 'conceals'])
+      return { id: this.id, category: this.category,
+        question: `Linguist Noam Chomsky _______ that humans are born with an innate capacity for language acquisition, a concept he terms "universal grammar." This theory suggests that certain structural rules are common to all human languages and are hardwired into the brain from birth.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Posits" means to put forward as a basis of argument; to assume or suggest. Chomsky is proposing a theory, which aligns with "posits."`
+      }
+    }
+  },
+  {
+    id: 'vocab-q26', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('entrenched', ['flexible', 'novel', 'superficial'])
+      return { id: this.id, category: this.category,
+        question: `Despite decades of reform efforts, racial and economic segregation in American public schools remains deeply _______. A 2022 report by the Government Accountability Office found that more than a third of students attend schools where 75 percent or more of their classmates are of the same race.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Entrenched" means firmly established and difficult to change. The passage describes segregation that has persisted despite decades of reform, indicating it is deeply entrenched.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q27', category: 'Tone & Connotation',
+    generate() {
+      const { options, correctIndex } = makeOptions('lauded', ['criticized', 'ignored', 'feared'])
+      return { id: this.id, category: this.category,
+        question: `Upon its publication, Toni Morrison's "Beloved" was _______ by critics as a masterpiece of American fiction. The novel, which explores the psychological aftermath of slavery, received the Pulitzer Prize for Fiction in 1988 and is now widely considered one of the most important works of the twentieth century.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Lauded" means praised highly. The passage describes critics calling the novel a masterpiece and it winning a Pulitzer Prize, indicating praise.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q28', category: 'Academic Vocabulary',
+    generate() {
+      const { options, correctIndex } = makeOptions('catalyzed', ['delayed', 'predicted', 'trivialized'])
+      return { id: this.id, category: this.category,
+        question: `The invention of the printing press in the fifteenth century _______ a transformation in European intellectual life. By making books affordable and widely available, the technology accelerated the spread of scientific knowledge, religious debate, and political philosophy across the continent.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Catalyzed" means to cause or accelerate a reaction or change. The printing press triggered a broad intellectual transformation, making "catalyzed" the most precise word.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q29', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('commensurate', ['disproportionate', 'unrelated', 'inferior'])
+      return { id: this.id, category: this.category,
+        question: `Union representatives argued that the salary increases offered by management were not _______ with the rising cost of living. Workers, they noted, had received only a two-percent raise over the previous three years while housing and food costs had increased by more than fifteen percent.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Commensurate" means corresponding in size or degree; in proportion. The passage describes raises that are not proportional to rising costs, making "commensurate" the most fitting word.`
+      }
+    }
+  },
+  {
+    id: 'vocab-q30', category: 'Precise Meaning',
+    generate() {
+      const { options, correctIndex } = makeOptions('nascent', ['established', 'declining', 'obsolete'])
+      return { id: this.id, category: this.category,
+        question: `In the early 2010s, the commercial space industry was still _______; only a handful of private companies had attempted orbital launches, and none had yet achieved the reliability needed to compete with government-funded space programs. A decade later, the sector had matured dramatically.\n\nWhich choice completes the text with the most logical and precise word or phrase?`,
+        options, correctIndex,
+        explanation: `"Nascent" means just beginning to develop. The passage describes an industry in its early stages that later matured, making "nascent" the best fit.`
+      }
+    }
+  },
 ]
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {

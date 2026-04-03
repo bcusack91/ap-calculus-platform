@@ -518,3 +518,32 @@ blockquote h2 {
     padding: 0 !important;
   }
 }
+
+/* Inline tables rendered from markdown pipe syntax in quiz questions */
+.inline-table {
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  font-size: 0.9em;
+  width: auto;
+}
+
+.inline-table th,
+.inline-table td {
+  border: 1px solid #d1d5db;
+  padding: 0.4rem 0.75rem;
+  text-align: center;
+}
+
+.inline-table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+.dark .inline-table th,
+.dark .inline-table td {
+  border-color: #4b5563;
+}
+
+.dark .inline-table th {
+  background-color: #374151;
+}

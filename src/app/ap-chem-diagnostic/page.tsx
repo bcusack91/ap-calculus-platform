@@ -142,6 +142,15 @@ export default function APChemDiagnosticPage() {
         const histData = await histRes.json()
         setHistory(histData.attempts ?? [])
       }
+
+      // Add flashcards for recommended (weak) topics
+      if (diagnosticResults.recommendedTopics.length > 0) {
+        fetch('/api/flashcards/add-from-missed', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topicSlugs: diagnosticResults.recommendedTopics.map((t: { slug: string }) => t.slug) }),
+        }).catch(() => {})
+      }
     } catch {
       // Silent fail
     }
@@ -449,7 +458,7 @@ export default function APChemDiagnosticPage() {
                   {results.recommendedTopics.map((topic, i) => (
                     <Link
                       key={topic.slug}
-                      href={`/topics/${topic.slug}`}
+                      href={`/topics/${topic.slug}/interactive`}
                       className="flex items-center justify-between rounded-xl border border-orange-200 bg-white px-4 py-3 transition hover:border-orange-400 hover:shadow-sm dark:border-orange-700 dark:bg-gray-800 dark:hover:border-orange-500 group"
                     >
                       <div className="flex items-center gap-3">
@@ -567,7 +576,7 @@ export default function APChemDiagnosticPage() {
                 {lastRecommendedTopics.map((topic, i) => (
                   <Link
                     key={topic.slug}
-                    href={`/topics/${topic.slug}`}
+                    href={`/topics/${topic.slug}/interactive`}
                     className="flex items-center justify-between rounded-xl border border-orange-200 bg-white px-4 py-3 transition hover:border-orange-400 hover:shadow-sm dark:border-orange-700 dark:bg-gray-800 group"
                   >
                     <div className="flex items-center gap-3">

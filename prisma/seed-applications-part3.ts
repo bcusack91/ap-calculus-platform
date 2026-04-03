@@ -10,6 +10,9 @@ enum Difficulty {
 }
 
 async function main() {
+  const __seedCourse = await (prisma as any).course.findFirst({ where: { slug: 'ap-calculus-ab' } })
+  const __courseId = __seedCourse?.id
+
   console.log('🔄 Creating Applications of Derivatives micro-lessons - Part 3...')
 
   // Get the Applications of Derivatives category
@@ -22,6 +25,8 @@ async function main() {
       description: 'Using derivatives to solve real-world problems',
       order: 3,
       icon: '🎯',
+    
+      courseId: __courseId
     },
   })
 

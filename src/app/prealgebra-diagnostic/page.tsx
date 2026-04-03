@@ -251,7 +251,7 @@ export default function PreAlgebraDiagnosticPage() {
               <p className="mb-4 text-sm text-lime-600 dark:text-lime-400">Based on your results, review these {results.recommendedTopics.length} topic{results.recommendedTopics.length > 1 ? 's' : ''}.</p>
               <div className="space-y-2">
                 {results.recommendedTopics.map((topic, i) => (
-                  <Link key={topic.slug} href={`/topics/${topic.slug}`} className="flex items-center justify-between rounded-xl border border-lime-200 bg-white px-4 py-3 transition hover:border-lime-400 hover:shadow-sm dark:border-lime-700 dark:bg-gray-800 dark:hover:border-lime-500 group">
+                  <Link key={topic.slug} href={`/topics/${topic.slug}/interactive`} className="flex items-center justify-between rounded-xl border border-lime-200 bg-white px-4 py-3 transition hover:border-lime-400 hover:shadow-sm dark:border-lime-700 dark:bg-gray-800 dark:hover:border-lime-500 group">
                     <div className="flex items-center gap-3">
                       <span className="flex h-7 w-7 items-center justify-center rounded-full bg-lime-100 text-xs font-bold text-lime-700 dark:bg-lime-900/50 dark:text-lime-300">{i + 1}</span>
                       <div><span className="text-sm font-semibold text-gray-800 dark:text-gray-200 group-hover:text-lime-700 dark:group-hover:text-lime-400">{topic.name}</span><span className={`ml-2 text-xs px-2 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High Priority' : 'Medium Priority'}</span></div>
@@ -302,7 +302,7 @@ export default function PreAlgebraDiagnosticPage() {
             <p className="mb-3 text-sm text-lime-600 dark:text-lime-400">From your last diagnostic — review these topics, then retake the test:</p>
             <div className="space-y-2">
               {lastRecommendedTopics.map((topic, i) => (
-                <Link key={topic.slug} href={`/topics/${topic.slug}`} className="flex items-center justify-between rounded-xl border border-lime-200 bg-white px-4 py-3 transition hover:border-lime-400 hover:shadow-sm dark:border-lime-700 dark:bg-gray-800 group">
+                <Link key={topic.slug} href={`/topics/${topic.slug}/interactive`} className="flex items-center justify-between rounded-xl border border-lime-200 bg-white px-4 py-3 transition hover:border-lime-400 hover:shadow-sm dark:border-lime-700 dark:bg-gray-800 group">
                   <div className="flex items-center gap-3"><span className="flex h-6 w-6 items-center justify-center rounded-full bg-lime-100 text-xs font-bold text-lime-700 dark:bg-lime-900/50 dark:text-lime-300">{i + 1}</span><span className="text-sm font-medium text-gray-800 dark:text-gray-200 group-hover:text-lime-700 dark:group-hover:text-lime-400">{topic.name}</span><span className={`text-xs px-2 py-0.5 rounded-full ${topic.priority === 'high' ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'}`}>{topic.priority === 'high' ? 'High' : 'Medium'}</span></div>
                   <span className="text-lime-500 group-hover:translate-x-1 transition-transform">→</span>
                 </Link>

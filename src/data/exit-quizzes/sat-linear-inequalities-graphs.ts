@@ -57,10 +57,10 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const m = randInt(1, 5)
       const b = randInt(-8, 8)
-      const ops = ['<', '>', '\\u2264', '\\u2265']
+      const ops = ['<', '>', '\≤', '\≥']
       const op = ops[randInt(0, 3)]
       const correct = `y ${op} ${m}x ${b >= 0 ? '+ ' + b : '- ' + Math.abs(b)}`
-      return { id: this.id, category: this.category, question: `A line has slope ${m} and y-intercept ${b}. Which inequality represents all points on or below the line?`, ...makeStringOptions(correct, [`y > ${m}x + ${b}`, `y = ${m}x + ${b}`, `x ${op} ${m}y + ${b}`]), explanation: `The line equation is y = ${m}x + ${b}. Points below use y < or y \\u2264.` }
+      return { id: this.id, category: this.category, question: `A line has slope ${m} and y-intercept ${b}. Which inequality represents all points on or below the line?`, ...makeStringOptions(correct, [`y > ${m}x + ${b}`, `y = ${m}x + ${b}`, `x ${op} ${m}y + ${b}`]), explanation: `The line equation is y = ${m}x + ${b}. Points below use y < or y \≤.` }
     }
   },
   {
@@ -71,7 +71,7 @@ const questionPool: QuestionTemplate[] = [
       const m = randInt(-4, -1)
       const b = randInt(1, 10)
       const correct = `y > ${m}x + ${b}`
-      return { id: this.id, category: this.category, question: `Which inequality represents the region above the line y = ${m}x + ${b}?`, ...makeStringOptions(correct, [`y < ${m}x + ${b}`, `y = ${m}x + ${b}`, `y \\u2264 ${m}x + ${b}`]), explanation: `The region above a line is represented by y > mx + b.` }
+      return { id: this.id, category: this.category, question: `Which inequality represents the region above the line y = ${m}x + ${b}?`, ...makeStringOptions(correct, [`y < ${m}x + ${b}`, `y = ${m}x + ${b}`, `y \≤ ${m}x + ${b}`]), explanation: `The region above a line is represented by y > mx + b.` }
     }
   },
   {
@@ -107,7 +107,7 @@ const questionPool: QuestionTemplate[] = [
       const m = randInt(1, 3)
       const b = randInt(1, 8)
       const correct = 'Solid (includes boundary points)'
-      return { id: this.id, category: this.category, question: `When graphing y \\u2265 ${m}x + ${b}, what type of boundary line is used?`, ...makeStringOptions(correct, ['Dashed line', 'No boundary', 'Double line']), explanation: 'Non-strict inequalities (\\u2264 or \\u2265) use solid lines because boundary points ARE included.' }
+      return { id: this.id, category: this.category, question: `When graphing y \≥ ${m}x + ${b}, what type of boundary line is used?`, ...makeStringOptions(correct, ['Dashed line', 'No boundary', 'Double line']), explanation: 'Non-strict inequalities (\≤ or \≥) use solid lines because boundary points ARE included.' }
     }
   },
   {
@@ -118,8 +118,8 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(1, 4)
       const b = randInt(1, 6)
       const total = randInt(20, 50)
-      const correct = `${a}x + ${b}y \\u2264 ${total}`
-      return { id: this.id, category: this.category, question: `A store sells item A for $${a} and item B for $${b}. A customer has $${total}. Which inequality models the possible purchase combinations?`, ...makeStringOptions(correct, [`${a}x + ${b}y \\u2265 ${total}`, `${a}x + ${b}y = ${total}`, `${a}x - ${b}y \\u2264 ${total}`]), explanation: `Total cost ${a}x + ${b}y must not exceed budget ${total}, so we use \\u2264.` }
+      const correct = `${a}x + ${b}y \≤ ${total}`
+      return { id: this.id, category: this.category, question: `A store sells item A for $${a} and item B for $${b}. A customer has $${total}. Which inequality models the possible purchase combinations?`, ...makeStringOptions(correct, [`${a}x + ${b}y \≥ ${total}`, `${a}x + ${b}y = ${total}`, `${a}x - ${b}y \≤ ${total}`]), explanation: `Total cost ${a}x + ${b}y must not exceed budget ${total}, so we use \≤.` }
     }
   },
   {
@@ -152,7 +152,7 @@ const questionPool: QuestionTemplate[] = [
       const m1 = randInt(1, 3); const b1 = randInt(0, 5)
       const m2 = randInt(-3, -1); const b2 = randInt(1, 8)
       const correct = 'The overlapping shaded region of both inequalities'
-      return { id: this.id, category: this.category, question: `What does the solution set of y \\u2264 ${m1}x + ${b1} AND y \\u2265 ${m2}x + ${b2} represent?`, ...makeStringOptions(correct, ['The union of both regions', 'Only the boundary lines', 'No solution exists']), explanation: 'A system of inequalities is solved by the intersection (overlap) of the individual solution regions.' }
+      return { id: this.id, category: this.category, question: `What does the solution set of y \≤ ${m1}x + ${b1} AND y \≥ ${m2}x + ${b2} represent?`, ...makeStringOptions(correct, ['The union of both regions', 'Only the boundary lines', 'No solution exists']), explanation: 'A system of inequalities is solved by the intersection (overlap) of the individual solution regions.' }
     }
   },
   {
@@ -161,8 +161,8 @@ const questionPool: QuestionTemplate[] = [
 
     generate() {
       const a = randInt(2, 5); const b = randInt(2, 5); const c = randInt(20, 40)
-      const correct = `${a}x + ${b}y \\u2264 ${c}, x \\u2265 0, y \\u2265 0`
-      return { id: this.id, category: this.category, question: `A factory uses ${a} units of resource A and ${b} units of resource B per product. With ${c} total resource units and non-negative production, which system applies?`, ...makeStringOptions(correct, [`${a}x + ${b}y \\u2265 ${c}`, `${a}x + ${b}y = ${c}`, `${a}x - ${b}y \\u2264 ${c}`]), explanation: 'Resource constraints use \\u2264 with non-negativity constraints x \\u2265 0, y \\u2265 0.' }
+      const correct = `${a}x + ${b}y \≤ ${c}, x \≥ 0, y \≥ 0`
+      return { id: this.id, category: this.category, question: `A factory uses ${a} units of resource A and ${b} units of resource B per product. With ${c} total resource units and non-negative production, which system applies?`, ...makeStringOptions(correct, [`${a}x + ${b}y \≥ ${c}`, `${a}x + ${b}y = ${c}`, `${a}x - ${b}y \≤ ${c}`]), explanation: 'Resource constraints use \≤ with non-negativity constraints x \≥ 0, y \≥ 0.' }
     }
   },
   {
@@ -183,7 +183,7 @@ const questionPool: QuestionTemplate[] = [
       const sum = x + y; const diff = x - y
       const satA = sum <= 10; const satB = diff >= 0
       const correct = (satA && satB) ? 'Yes, it satisfies both inequalities' : 'No, it fails at least one inequality'
-      return { id: this.id, category: this.category, question: `Is (${x}, ${y}) in the solution set of x + y \\u2264 10 AND x - y \\u2265 0? Check: ${x}+${y}=${sum} and ${x}-${y}=${diff}.`, ...makeStringOptions(correct, ['Yes, it satisfies the first one only', 'No, it fails both', 'Cannot be determined from the given info']), explanation: `x + y = ${sum} ${satA ? '\\u2264' : '>'} 10 and x - y = ${diff} ${satB ? '\\u2265' : '<'} 0. Must satisfy both.` }
+      return { id: this.id, category: this.category, question: `Is (${x}, ${y}) in the solution set of x + y \≤ 10 AND x - y \≥ 0? Check: ${x}+${y}=${sum} and ${x}-${y}=${diff}.`, ...makeStringOptions(correct, ['Yes, it satisfies the first one only', 'No, it fails both', 'Cannot be determined from the given info']), explanation: `x + y = ${sum} ${satA ? '\≤' : '>'} 10 and x - y = ${diff} ${satB ? '\≥' : '<'} 0. Must satisfy both.` }
     }
   },
   {
@@ -202,7 +202,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const c = randInt(5, 15)
       const correct = 'A triangular or polygonal region in the first quadrant'
-      return { id: this.id, category: this.category, question: `Describe the shape of the solution region for: x \\u2265 0, y \\u2265 0, x + y \\u2264 ${c}.`, ...makeStringOptions(correct, ['A line segment', 'The entire first quadrant', 'A single point']), explanation: `These three inequalities form a triangle with vertices at (0,0), (${c},0), and (0,${c}).` }
+      return { id: this.id, category: this.category, question: `Describe the shape of the solution region for: x \≥ 0, y \≥ 0, x + y \≤ ${c}.`, ...makeStringOptions(correct, ['A line segment', 'The entire first quadrant', 'A single point']), explanation: `These three inequalities form a triangle with vertices at (0,0), (${c},0), and (0,${c}).` }
     }
   },
   {
@@ -213,7 +213,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(2, 6); const b = randInt(2, 6)
       const budget = a * 3 + b * 2 + randInt(5, 15)
       const correct = `(3, 2)`
-      return { id: this.id, category: this.category, question: `Given ${a}x + ${b}y \\u2264 ${budget} and x \\u2265 1, y \\u2265 1, is (3, 2) a feasible point? Check: ${a}(3) + ${b}(2) = ${a*3 + b*2}.`, ...makeStringOptions(correct, [`(${Math.ceil(budget/a) + 1}, 1)`, '(0, 0)', `(${Math.ceil(budget/a)}, ${Math.ceil(budget/b)})`]), explanation: `${a}(3) + ${b}(2) = ${a*3+b*2} \\u2264 ${budget}, and 3 \\u2265 1, 2 \\u2265 1. All constraints satisfied.` }
+      return { id: this.id, category: this.category, question: `Given ${a}x + ${b}y \≤ ${budget} and x \≥ 1, y \≥ 1, is (3, 2) a feasible point? Check: ${a}(3) + ${b}(2) = ${a*3 + b*2}.`, ...makeStringOptions(correct, [`(${Math.ceil(budget/a) + 1}, 1)`, '(0, 0)', `(${Math.ceil(budget/a)}, ${Math.ceil(budget/b)})`]), explanation: `${a}(3) + ${b}(2) = ${a*3+b*2} \≤ ${budget}, and 3 \≥ 1, 2 \≥ 1. All constraints satisfied.` }
     }
   },
   {
@@ -243,7 +243,7 @@ const questionPool: QuestionTemplate[] = [
       const a = randInt(1, 4); const b = randInt(1, 4); const c = randInt(5, 20)
       const xInt = Math.round(c / a); const yInt = Math.round(c / b)
       const correct = `x-intercept: ${xInt}, y-intercept: ${yInt}`
-      return { id: this.id, category: this.category, question: `Find the intercepts of the boundary line ${a}x + ${b}y = ${c}.`, ...makeStringOptions(correct, [`x-int: ${yInt}, y-int: ${xInt}`, `x-int: ${c}, y-int: ${c}`, `x-int: ${a}, y-int: ${b}`]), explanation: `Set y=0: x = ${c}/${a} \\u2248 ${xInt}. Set x=0: y = ${c}/${b} \\u2248 ${yInt}.` }
+      return { id: this.id, category: this.category, question: `Find the intercepts of the boundary line ${a}x + ${b}y = ${c}.`, ...makeStringOptions(correct, [`x-int: ${yInt}, y-int: ${xInt}`, `x-int: ${c}, y-int: ${c}`, `x-int: ${a}, y-int: ${b}`]), explanation: `Set y=0: x = ${c}/${a} \≈ ${xInt}. Set x=0: y = ${c}/${b} \≈ ${yInt}.` }
     }
   },
   {
@@ -262,7 +262,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const m = randInt(1, 3); const b = randInt(1, 6)
       const correct = 'Solid boundary line with shading below/on the line'
-      return { id: this.id, category: this.category, question: `How would you graph y \\u2264 ${m}x + ${b}?`, ...makeStringOptions(correct, ['Dashed line with shading above', 'Solid line with shading above', 'Dashed line with shading below']), explanation: '\\u2264 means solid line (boundary included) and shade below (y values less than or equal).' }
+      return { id: this.id, category: this.category, question: `How would you graph y \≤ ${m}x + ${b}?`, ...makeStringOptions(correct, ['Dashed line with shading above', 'Solid line with shading above', 'Dashed line with shading below']), explanation: '\≤ means solid line (boundary included) and shade below (y values less than or equal).' }
     }
   },
   {
@@ -272,7 +272,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const k = randInt(1, 8)
       const correct = `A vertical line at x = ${k} with shading to the right`
-      return { id: this.id, category: this.category, question: `How is x \\u2265 ${k} graphed on the coordinate plane?`, ...makeStringOptions(correct, ['A horizontal line with shading above', `A vertical line at x = ${k} with shading left`, 'A diagonal line']), explanation: `x \\u2265 ${k} is a vertical solid line at x = ${k} with shading to the right (larger x values).` }
+      return { id: this.id, category: this.category, question: `How is x \≥ ${k} graphed on the coordinate plane?`, ...makeStringOptions(correct, ['A horizontal line with shading above', `A vertical line at x = ${k} with shading left`, 'A diagonal line']), explanation: `x \≥ ${k} is a vertical solid line at x = ${k} with shading to the right (larger x values).` }
     }
   },
   {
@@ -292,7 +292,7 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const m = randInt(-3, -1); const b = randInt(2, 8)
       const correct = 'The slope is negative, so the line goes down from left to right'
-      return { id: this.id, category: this.category, question: `When graphing y \\u2265 ${m}x + ${b}, describe the boundary line direction.`, ...makeStringOptions(correct, ['The line goes up from left to right', 'The line is horizontal', 'The line is vertical']), explanation: `A negative slope (m = ${m}) means the line descends from left to right.` }
+      return { id: this.id, category: this.category, question: `When graphing y \≥ ${m}x + ${b}, describe the boundary line direction.`, ...makeStringOptions(correct, ['The line goes up from left to right', 'The line is horizontal', 'The line is vertical']), explanation: `A negative slope (m = ${m}) means the line descends from left to right.` }
     }
   },
   {
@@ -321,8 +321,8 @@ const questionPool: QuestionTemplate[] = [
 
     generate() {
       const a = randInt(2, 7)
-      const correct = `-${a} \\u2264 x \\u2264 ${a}`
-      return { id: this.id, category: this.category, question: `Solve |x| \\u2264 ${a}.`, ...makeStringOptions(correct, [`x \\u2264 -${a} or x \\u2265 ${a}`, `x = ${a}`, `x > -${a}`]), explanation: `|x| \\u2264 ${a} means -${a} \\u2264 x \\u2264 ${a} (values close to zero).` }
+      const correct = `-${a} \≤ x \≤ ${a}`
+      return { id: this.id, category: this.category, question: `Solve |x| \≤ ${a}.`, ...makeStringOptions(correct, [`x \≤ -${a} or x \≥ ${a}`, `x = ${a}`, `x > -${a}`]), explanation: `|x| \≤ ${a} means -${a} \≤ x \≤ ${a} (values close to zero).` }
     }
   },
   {
@@ -333,7 +333,7 @@ const questionPool: QuestionTemplate[] = [
       const h = randInt(-5, 5); const k = randInt(2, 8)
       const lo = h - k; const hi = h + k
       const correct = `${lo} < x < ${hi}`
-      return { id: this.id, category: this.category, question: `Solve |x - ${h}| < ${k}.`, ...makeStringOptions(correct, [`x < ${lo} or x > ${hi}`, `x = ${h}`, `${lo} \\u2264 x \\u2264 ${hi}`]), explanation: `|x - ${h}| < ${k} means ${h} - ${k} < x < ${h} + ${k}, so ${lo} < x < ${hi}.` }
+      return { id: this.id, category: this.category, question: `Solve |x - ${h}| < ${k}.`, ...makeStringOptions(correct, [`x < ${lo} or x > ${hi}`, `x = ${h}`, `${lo} \≤ x \≤ ${hi}`]), explanation: `|x - ${h}| < ${k} means ${h} - ${k} < x < ${h} + ${k}, so ${lo} < x < ${hi}.` }
     }
   },
   {
@@ -344,7 +344,7 @@ const questionPool: QuestionTemplate[] = [
       const h = randInt(0, 5); const k = randInt(2, 6)
       const lo = h - k; const hi = h + k
       const correct = `x < ${lo} or x > ${hi}`
-      return { id: this.id, category: this.category, question: `Solve |x - ${h}| > ${k}.`, ...makeStringOptions(correct, [`${lo} < x < ${hi}`, `x = ${lo} or x = ${hi}`, `x \\u2265 ${lo}`]), explanation: `|x - ${h}| > ${k} means x < ${h} - ${k} or x > ${h} + ${k}, so x < ${lo} or x > ${hi}.` }
+      return { id: this.id, category: this.category, question: `Solve |x - ${h}| > ${k}.`, ...makeStringOptions(correct, [`${lo} < x < ${hi}`, `x = ${lo} or x = ${hi}`, `x \≥ ${lo}`]), explanation: `|x - ${h}| > ${k} means x < ${h} - ${k} or x > ${h} + ${k}, so x < ${lo} or x > ${hi}.` }
     }
   },
   {
@@ -354,8 +354,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const a = randInt(2, 5); const h = randInt(1, 6); const k = randInt(3, 10)
       const lo = h - Math.floor(k/a); const hi = h + Math.floor(k/a)
-      const correct = `${lo} \\u2264 x \\u2264 ${hi}`
-      return { id: this.id, category: this.category, question: `Solve ${a}|x - ${h}| \\u2264 ${k}. First divide: |x - ${h}| \\u2264 ${Math.floor(k/a)}.`, ...makeStringOptions(correct, [`x < ${lo} or x > ${hi}`, `x = ${h}`, `x \\u2265 ${lo}`]), explanation: `Divide by ${a}: |x - ${h}| \\u2264 ${Math.floor(k/a)}, so ${h} - ${Math.floor(k/a)} \\u2264 x \\u2264 ${h} + ${Math.floor(k/a)}.` }
+      const correct = `${lo} \≤ x \≤ ${hi}`
+      return { id: this.id, category: this.category, question: `Solve ${a}|x - ${h}| \≤ ${k}. First divide: |x - ${h}| \≤ ${Math.floor(k/a)}.`, ...makeStringOptions(correct, [`x < ${lo} or x > ${hi}`, `x = ${h}`, `x \≥ ${lo}`]), explanation: `Divide by ${a}: |x - ${h}| \≤ ${Math.floor(k/a)}, so ${h} - ${Math.floor(k/a)} \≤ x \≤ ${h} + ${Math.floor(k/a)}.` }
     }
   },
   {
@@ -364,7 +364,7 @@ const questionPool: QuestionTemplate[] = [
 
     generate() {
       const correct = 'No solution — absolute value is always non-negative'
-      return { id: this.id, category: this.category, question: 'What is the solution to |x + 3| < -2?', ...makeStringOptions(correct, ['x > -5 and x < -1', 'x = -3', 'All real numbers']), explanation: 'Absolute value is always \\u2265 0, so it can never be less than a negative number. No solution.' }
+      return { id: this.id, category: this.category, question: 'What is the solution to |x + 3| < -2?', ...makeStringOptions(correct, ['x > -5 and x < -1', 'x = -3', 'All real numbers']), explanation: 'Absolute value is always \≥ 0, so it can never be less than a negative number. No solution.' }
     }
   },
   {
@@ -372,8 +372,8 @@ const questionPool: QuestionTemplate[] = [
     category: 'Absolute Value Inequalities',
 
     generate() {
-      const correct = 'All real numbers — absolute value is always \\u2265 0'
-      return { id: this.id, category: this.category, question: 'What is the solution to |2x - 1| \\u2265 -5?', ...makeStringOptions(correct, ['No solution', 'x = 1/2 only', 'x > -5']), explanation: 'Since |2x - 1| \\u2265 0 > -5 for all x, every real number is a solution.' }
+      const correct = 'All real numbers — absolute value is always \≥ 0'
+      return { id: this.id, category: this.category, question: 'What is the solution to |2x - 1| \≥ -5?', ...makeStringOptions(correct, ['No solution', 'x = 1/2 only', 'x > -5']), explanation: 'Since |2x - 1| \≥ 0 > -5 for all x, every real number is a solution.' }
     }
   },
   {
@@ -393,8 +393,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const rate = randInt(10, 25); const max = randInt(200, 500)
       const hours = Math.floor(max / rate)
-      const correct = `h \\u2264 ${hours}`
-      return { id: this.id, category: this.category, question: `A worker earns $${rate}/hour and needs at most $${max}. Which inequality represents hours h?`, ...makeStringOptions(correct, [`h \\u2265 ${hours}`, `h = ${hours}`, `h > ${hours}`]), explanation: `${rate}h \\u2264 ${max}, so h \\u2264 ${max}/${rate} = ${hours}.` }
+      const correct = `h \≤ ${hours}`
+      return { id: this.id, category: this.category, question: `A worker earns $${rate}/hour and needs at most $${max}. Which inequality represents hours h?`, ...makeStringOptions(correct, [`h \≥ ${hours}`, `h = ${hours}`, `h > ${hours}`]), explanation: `${rate}h \≤ ${max}, so h \≤ ${max}/${rate} = ${hours}.` }
     }
   },
   {
@@ -404,8 +404,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const min = randInt(60, 80); const current = randInt(50, 75); const tests = randInt(2, 4)
       const needed = min * tests - current * (tests - 1)
-      const correct = `x \\u2265 ${needed}`
-      return { id: this.id, category: this.category, question: `Average of ${tests} tests must be \\u2265 ${min}. With ${tests-1} test(s) averaging ${current}, what score x is needed on the last test?`, ...makeStringOptions(correct, [`x \\u2264 ${needed}`, `x = ${needed}`, `x > ${min}`]), explanation: `Need sum \\u2265 ${min * tests}. Have ${current * (tests-1)}. Need x \\u2265 ${needed}.` }
+      const correct = `x \≥ ${needed}`
+      return { id: this.id, category: this.category, question: `Average of ${tests} tests must be \≥ ${min}. With ${tests-1} test(s) averaging ${current}, what score x is needed on the last test?`, ...makeStringOptions(correct, [`x \≤ ${needed}`, `x = ${needed}`, `x > ${min}`]), explanation: `Need sum \≥ ${min * tests}. Have ${current * (tests-1)}. Need x \≥ ${needed}.` }
     }
   },
   {
@@ -416,7 +416,7 @@ const questionPool: QuestionTemplate[] = [
       const base = randInt(30, 50); const perItem = randInt(2, 8); const budget = randInt(80, 150)
       const items = Math.floor((budget - base) / perItem)
       const correct = `At most ${items} items`
-      return { id: this.id, category: this.category, question: `A phone plan costs $${base}/month plus $${perItem}/item. Budget is $${budget}/month. How many items can be purchased?`, ...makeStringOptions(correct, [`Exactly ${items} items`, `At least ${items + 2} items`, `${items + 3} items`]), explanation: `${base} + ${perItem}n \\u2264 ${budget}, so ${perItem}n \\u2264 ${budget - base}, n \\u2264 ${items}.` }
+      return { id: this.id, category: this.category, question: `A phone plan costs $${base}/month plus $${perItem}/item. Budget is $${budget}/month. How many items can be purchased?`, ...makeStringOptions(correct, [`Exactly ${items} items`, `At least ${items + 2} items`, `${items + 3} items`]), explanation: `${base} + ${perItem}n \≤ ${budget}, so ${perItem}n \≤ ${budget - base}, n \≤ ${items}.` }
     }
   },
   {
@@ -427,8 +427,8 @@ const questionPool: QuestionTemplate[] = [
       const length = randInt(10, 20)
       const maxP = randInt(60, 100)
       const maxW = Math.floor((maxP - 2 * length) / 2)
-      const correct = `w \\u2264 ${maxW}`
-      return { id: this.id, category: this.category, question: `A rectangle has length ${length} and perimeter at most ${maxP}. What is the constraint on width w?`, ...makeStringOptions(correct, [`w \\u2265 ${maxW}`, `w = ${maxW}`, `w < ${length}`]), explanation: `P = 2(${length}) + 2w \\u2264 ${maxP}, so 2w \\u2264 ${maxP - 2*length}, w \\u2264 ${maxW}.` }
+      const correct = `w \≤ ${maxW}`
+      return { id: this.id, category: this.category, question: `A rectangle has length ${length} and perimeter at most ${maxP}. What is the constraint on width w?`, ...makeStringOptions(correct, [`w \≥ ${maxW}`, `w = ${maxW}`, `w < ${length}`]), explanation: `P = 2(${length}) + 2w \≤ ${maxP}, so 2w \≤ ${maxP - 2*length}, w \≤ ${maxW}.` }
     }
   },
   {
@@ -438,8 +438,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const speed1 = randInt(40, 60); const speed2 = randInt(50, 70)
       const minDist = randInt(200, 400)
-      const correct = `${speed1}t + ${speed2}t \\u2265 ${minDist}`
-      return { id: this.id, category: this.category, question: `Two cars travel in the same direction at ${speed1} mph and ${speed2} mph. After how many hours t will they be at least ${minDist} miles apart? Write the inequality.`, ...makeStringOptions(correct, [`${speed1}t - ${speed2}t \\u2265 ${minDist}`, `${speed1} + ${speed2} > ${minDist}`, `t \\u2265 ${minDist}`]), explanation: `Combined distance = (${speed1} + ${speed2})t. Need (${speed1 + speed2})t \\u2265 ${minDist}.` }
+      const correct = `${speed1}t + ${speed2}t \≥ ${minDist}`
+      return { id: this.id, category: this.category, question: `Two cars travel in the same direction at ${speed1} mph and ${speed2} mph. After how many hours t will they be at least ${minDist} miles apart? Write the inequality.`, ...makeStringOptions(correct, [`${speed1}t - ${speed2}t \≥ ${minDist}`, `${speed1} + ${speed2} > ${minDist}`, `t \≥ ${minDist}`]), explanation: `Combined distance = (${speed1} + ${speed2})t. Need (${speed1 + speed2})t \≥ ${minDist}.` }
     }
   },
   {
@@ -458,8 +458,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const n = randInt(3, 6); const perAdult = randInt(12, 20); const perChild = randInt(6, 10)
       const budget = randInt(50, 100)
-      const correct = `${perAdult}a + ${perChild}c \\u2264 ${budget} where a + c = ${n}`
-      return { id: this.id, category: this.category, question: `A group of ${n} people (adults $${perAdult}, children $${perChild}) has $${budget}. Write the system constraint.`, ...makeStringOptions(correct, [`${perAdult}a + ${perChild}c \\u2265 ${budget}`, `${perAdult}a - ${perChild}c \\u2264 ${budget}`, `a + c \\u2264 ${budget}`]), explanation: `Total people: a + c = ${n}. Budget constraint: ${perAdult}a + ${perChild}c \\u2264 ${budget}.` }
+      const correct = `${perAdult}a + ${perChild}c \≤ ${budget} where a + c = ${n}`
+      return { id: this.id, category: this.category, question: `A group of ${n} people (adults $${perAdult}, children $${perChild}) has $${budget}. Write the system constraint.`, ...makeStringOptions(correct, [`${perAdult}a + ${perChild}c \≥ ${budget}`, `${perAdult}a - ${perChild}c \≤ ${budget}`, `a + c \≤ ${budget}`]), explanation: `Total people: a + c = ${n}. Budget constraint: ${perAdult}a + ${perChild}c \≤ ${budget}.` }
     }
   },
   {
@@ -469,8 +469,8 @@ const questionPool: QuestionTemplate[] = [
     generate() {
       const minGrade = randInt(70, 85); const n = randInt(4, 6)
       const needed = minGrade * n
-      const correct = `The sum of all ${n} scores must be \\u2265 ${needed}`
-      return { id: this.id, category: this.category, question: `To earn at least a ${minGrade} average across ${n} assignments, what must the total points be?`, ...makeStringOptions(correct, [`Each score must be exactly ${minGrade}`, `At least one score \\u2265 ${minGrade}`, `Total must equal ${needed}`]), explanation: `Average = total/${n} \\u2265 ${minGrade}, so total \\u2265 ${minGrade} \\u00d7 ${n} = ${needed}.` }
+      const correct = `The sum of all ${n} scores must be \≥ ${needed}`
+      return { id: this.id, category: this.category, question: `To earn at least a ${minGrade} average across ${n} assignments, what must the total points be?`, ...makeStringOptions(correct, [`Each score must be exactly ${minGrade}`, `At least one score \≥ ${minGrade}`, `Total must equal ${needed}`]), explanation: `Average = total/${n} \≥ ${minGrade}, so total \≥ ${minGrade} \× ${n} = ${needed}.` }
     }
   },
 ]

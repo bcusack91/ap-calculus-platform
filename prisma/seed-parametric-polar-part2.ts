@@ -10,6 +10,9 @@ enum Difficulty {
 }
 
 async function main() {
+  const __seedCourse = await (prisma as any).course.findFirst({ where: { slug: 'ap-calculus-bc' } })
+  const __courseId = __seedCourse?.id
+
   console.log('🔄 Creating Parametric & Polar (BC) micro-lessons - Part 2...')
 
   // Get the Parametric & Polar category
@@ -22,6 +25,8 @@ async function main() {
       description: 'Parametric equations and polar coordinates for Calculus BC',
       order: 6,
       icon: '📐',
+    
+      courseId: __courseId
     },
   })
 

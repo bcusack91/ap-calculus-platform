@@ -1,62 +1,319 @@
 /**
- * Exit Quiz — SAT Effective Language Use
- * 40 randomized questions on conciseness, precision, style/tone, redundancy, word choice
+ * Exit Quiz — SAT Effective Language Use (Digital SAT Format)
+ *
+ * Passage-based questions following the Digital SAT Reading & Writing format.
+ * Tests Expression of Ideas: transitions, rhetorical synthesis, and conciseness.
+ *
+ * Domain: Expression of Ideas
  */
+
 export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
 interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
+
 function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
-function makeStringOptions(c: string, o: string[]) { const u = o.filter(x => x !== c).slice(0, 3); while (u.length < 3) u.push('No change'); const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
-function pick<T>(arr: T[]): T { return arr[Math.floor(Math.random() * arr.length)] }
 
 const questionPool: QuestionTemplate[] = [
-  // Conciseness
-  { id: 'el-q1', category: 'Conciseness', generate() { const wordy = pick(['at this point in time', 'in the event that', 'due to the fact that']); const concise = wordy === 'at this point in time' ? 'now' : wordy === 'in the event that' ? 'if' : 'because'; const { options, correctIndex } = makeStringOptions(concise, [wordy, 'subsequently', 'regardless']); return { id: this.id, category: this.category, question: `Which is the most concise replacement for "${wordy}"?`, options, correctIndex, explanation: `"${concise}" conveys the same meaning in fewer words — always prefer conciseness on the SAT.` } } },
-  { id: 'el-q2', category: 'Conciseness', generate() { const { options, correctIndex } = makeStringOptions('The study revealed three key findings.', ['The study that was conducted revealed a total of three key findings in all.', 'The study which was done revealed three key findings that were important.', 'Three key findings were revealed by the study that was conducted.']); return { id: this.id, category: this.category, question: 'Which is the most concise version?', options, correctIndex, explanation: 'Eliminate unnecessary words: "that was conducted," "in all," "which was done" add nothing.' } } },
-  { id: 'el-q3', category: 'Conciseness', generate() { const wordy = pick(['in order to', 'for the purpose of', 'with the intention of']); const { options, correctIndex } = makeStringOptions('to', [wordy, 'so as to', 'for to']); return { id: this.id, category: this.category, question: `What is the concise equivalent of "${wordy}"?`, options, correctIndex, explanation: `"To" replaces "${wordy}" without losing any meaning.` } } },
-  { id: 'el-q4', category: 'Conciseness', generate() { const { options, correctIndex } = makeStringOptions('Express ideas in as few words as possible while preserving meaning', ['Use as many words as possible to sound sophisticated', 'Always write in fragments for brevity', 'Avoid adjectives and adverbs entirely']); return { id: this.id, category: this.category, question: 'What does "conciseness" mean in SAT writing?', options, correctIndex, explanation: 'Conciseness = fewest words necessary to convey the complete meaning.' } } },
-  { id: 'el-q5', category: 'Conciseness', generate() { const { options, correctIndex } = makeStringOptions('She decided to leave.', ['She made the decision to leave.', 'She came to the decision that she would leave.', 'A decision was made by her to leave.']); return { id: this.id, category: this.category, question: 'Which is most concise?', options, correctIndex, explanation: '"Decided" is more concise than "made the decision" or passive constructions.' } } },
-  // Precision
-  { id: 'el-q6', category: 'Precision', generate() { const vague = pick(['thing', 'stuff', 'it']); const precise = vague === 'thing' ? 'factor' : vague === 'stuff' ? 'equipment' : 'the experiment'; const context = vague === 'thing' ? 'One important ___ in the study was sample size.' : vague === 'stuff' ? 'The lab was filled with scientific ___.' : '___ produced unexpected results.'; const { options, correctIndex } = makeStringOptions(precise, [vague, 'item', 'aspect']); return { id: this.id, category: this.category, question: `"${context}" Replace the blank with the most precise word.`, options, correctIndex, explanation: `"${precise}" is more specific and precise than the vague "${vague}."` } } },
-  { id: 'el-q7', category: 'Precision', generate() { const { options, correctIndex } = makeStringOptions('The medication reduced symptoms by 40%.', ['The medication really helped with symptoms.', 'The medication did a lot for symptoms.', 'The medication was good for symptoms.']); return { id: this.id, category: this.category, question: 'Which sentence is most precise?', options, correctIndex, explanation: 'Including specific data (40%) makes the claim precise and verifiable.' } } },
-  { id: 'el-q8', category: 'Precision', generate() { const { options, correctIndex } = makeStringOptions('Using the most specific, accurate word for the context', ['Using the longest word available', 'Using technical jargon always', 'Using synonyms interchangeably']); return { id: this.id, category: this.category, question: 'What does "precision" mean in word choice?', options, correctIndex, explanation: 'Precision means choosing the word that most accurately fits the specific context.' } } },
-  { id: 'el-q9', category: 'Precision', generate() { const word = pick(['walk', 'said', 'happy']); const precise = word === 'walk' ? 'strolled' : word === 'said' ? 'argued' : 'elated'; const wrongs = word === 'walk' ? ['moved', 'went', 'traveled'] : word === 'said' ? ['spoke', 'told', 'vocalized'] : ['good', 'fine', 'okay']; const { options, correctIndex } = makeStringOptions(precise, wrongs); return { id: this.id, category: this.category, question: `Which is the most precise replacement for "${word}" in a context suggesting strong emotion or specific action?`, options, correctIndex, explanation: `"${precise}" conveys a more specific meaning than the generic "${word}."` } } },
-  { id: 'el-q10', category: 'Precision', generate() { const { options, correctIndex } = makeStringOptions('It makes your writing clearer and more convincing', ['It makes your writing longer', 'It is only needed in formal essays', 'It replaces good grammar']); return { id: this.id, category: this.category, question: 'Why does precise language matter?', options, correctIndex, explanation: 'Precise language eliminates ambiguity and strengthens arguments.' } } },
-  // Style/Tone
-  { id: 'el-q11', category: 'Style/Tone', generate() { const formal = pick(['The findings suggest a significant correlation.', 'The evidence indicates a clear pattern.', 'The results demonstrate a notable trend.']); const informal = pick(['The findings are kinda interesting.', 'The evidence pretty much shows a pattern.', 'The results are cool to see.']); const { options, correctIndex } = makeStringOptions(formal, [informal, 'The findings are sorta showing something.', 'It looks like something happened.']); return { id: this.id, category: this.category, question: 'Which sentence maintains a formal academic tone appropriate for the SAT?', options, correctIndex, explanation: 'SAT writing values formal, precise academic language over casual expression.' } } },
-  { id: 'el-q12', category: 'Style/Tone', generate() { const { options, correctIndex } = makeStringOptions('Match the word choice and sentence structure to the passage\'s established tone', ['Always use the most formal option', 'Always use the simplest words', 'Ignore the passage\'s tone']); return { id: this.id, category: this.category, question: 'How do you determine the appropriate style/tone for an SAT passage?', options, correctIndex, explanation: 'The correct answer matches the existing tone of the passage — formal, neutral, persuasive, etc.' } } },
-  { id: 'el-q13', category: 'Style/Tone', generate() { const { options, correctIndex } = makeStringOptions('Researchers hypothesize that early intervention improves outcomes.', ['Scientists think that starting early probably helps.', 'Experts reckon that early intervention does the trick.', 'The smarties say doing stuff early works better.']); return { id: this.id, category: this.category, question: 'Which sentence best matches the tone of a scientific passage?', options, correctIndex, explanation: '"Hypothesize," "intervention," and "outcomes" match scientific discourse.' } } },
-  { id: 'el-q14', category: 'Style/Tone', generate() { const { options, correctIndex } = makeStringOptions('It should be replaced with a word matching the passage\'s formal tone', ['Slang makes writing more relatable', 'Slang is always acceptable', 'Slang adds personality that the SAT rewards']); return { id: this.id, category: this.category, question: 'If a passage uses formal language and one sentence contains slang, what should happen?', options, correctIndex, explanation: 'Consistency of tone is key — slang in a formal passage should be replaced with formal language.' } } },
-  // Redundancy
-  { id: 'el-q15', category: 'Redundancy', generate() { const redundant = pick(['free gift', 'past history', 'advance planning', 'end result', 'basic fundamentals']); const fix = redundant === 'free gift' ? 'gift' : redundant === 'past history' ? 'history' : redundant === 'advance planning' ? 'planning' : redundant === 'end result' ? 'result' : 'fundamentals'; const { options, correctIndex } = makeStringOptions(fix, [redundant, `very ${fix}`, `actual ${fix}`]); return { id: this.id, category: this.category, question: `"${redundant}" is redundant. What is the correct version?`, options, correctIndex, explanation: `"${redundant}" is redundant because "${fix}" already implies the removed word.` } } },
-  { id: 'el-q16', category: 'Redundancy', generate() { const { options, correctIndex } = makeStringOptions('Using two or more words that mean the same thing unnecessarily', ['Using long sentences', 'Using passive voice', 'Using semicolons']); return { id: this.id, category: this.category, question: 'What is redundancy in writing?', options, correctIndex, explanation: 'Redundancy = repeating the same idea with different words unnecessarily.' } } },
-  { id: 'el-q17', category: 'Redundancy', generate() { const redundant = pick(['She nodded her head in agreement.', 'They collaborated together on the project.', 'The room was completely filled to capacity.']); const fix = redundant.includes('nodded') ? 'She nodded in agreement.' : redundant.includes('collaborated') ? 'They collaborated on the project.' : 'The room was filled to capacity.'; const { options, correctIndex } = makeStringOptions(fix, [redundant, redundant.replace('.', ' entirely.'), redundant.replace('.', ' as well.')]); return { id: this.id, category: this.category, question: `Fix the redundancy: "${redundant}"`, options, correctIndex, explanation: '"Nodded" implies head movement, "collaborated" implies together, "capacity" implies full.' } } },
-  { id: 'el-q18', category: 'Redundancy', generate() { const { options, correctIndex } = makeStringOptions('Each and every → every (or each)', ['Each and every should stay', 'Replace with "all and every"', 'Delete both words']); return { id: this.id, category: this.category, question: '"Each and every student passed." How do you fix this redundancy?', options, correctIndex, explanation: '"Each" and "every" mean the same thing — use one or the other, not both.' } } },
-  // Word Choice
-  { id: 'el-q19', category: 'Word Choice', generate() { const pair = pick([['affect', 'effect'], ['principal', 'principle'], ['complement', 'compliment']]); const correct = pair[0]; const context = correct === 'affect' ? `How will the policy ___ students?` : correct === 'principal' ? `The school ___ addressed the assembly.` : `The wine will ___ the meal perfectly.`; const { options, correctIndex } = makeStringOptions(correct, [pair[1], `${correct}s`, `${pair[1]}ed`]); return { id: this.id, category: this.category, question: `"${context}" Choose the correct word.`, options, correctIndex, explanation: `"${correct}" is correct here — these commonly confused words have different meanings.` } } },
-  { id: 'el-q20', category: 'Word Choice', generate() { const { options, correctIndex } = makeStringOptions('Choose the word that best fits the specific context and meaning', ['Choose the longest word', 'Choose the most common word', 'Choose any synonym']); return { id: this.id, category: this.category, question: 'What is the key principle of effective word choice?', options, correctIndex, explanation: 'Effective word choice = the most accurate word for the specific context.' } } },
-  { id: 'el-q21', category: 'Word Choice', generate() { const context = pick(['academic essay', 'personal narrative', 'scientific report']); const appropriate = context === 'academic essay' ? 'analyze' : context === 'personal narrative' ? 'remember' : 'hypothesize'; const inappropriate = context === 'academic essay' ? 'check out' : context === 'personal narrative' ? 'recollect upon' : 'guess'; const { options, correctIndex } = makeStringOptions(appropriate, [inappropriate, 'do', 'thing']); return { id: this.id, category: this.category, question: `In ${context === 'academic essay' ? 'an' : 'a'} ${context}, which word fits best?`, options, correctIndex, explanation: `"${appropriate}" matches the register and formality of ${context === 'academic essay' ? 'an' : 'a'} ${context}.` } } },
-  { id: 'el-q22', category: 'Word Choice', generate() { const { options, correctIndex } = makeStringOptions('compelled', ['made', 'forced', 'got']); return { id: this.id, category: this.category, question: '"The evidence ___ the jury to reach a unanimous verdict." Choose the most precise word.', options, correctIndex, explanation: '"Compelled" is the most precise — it suggests strong persuasion by evidence.' } } },
-  // Syntax Variety
-  { id: 'el-q23', category: 'Syntax Variety', generate() { const { options, correctIndex } = makeStringOptions('Varying sentence length and structure keeps readers engaged', ['All sentences should be the same length', 'Only use complex sentences', 'Only use short sentences']); return { id: this.id, category: this.category, question: 'Why is syntax variety important in effective writing?', options, correctIndex, explanation: 'Varied syntax creates rhythm, emphasis, and maintains reader interest.' } } },
-  { id: 'el-q24', category: 'Syntax Variety', generate() { const { options, correctIndex } = makeStringOptions('Start with a participial phrase, prepositional phrase, or dependent clause', ['Always start with the subject', 'Always start with "The"', 'Always start with a conjunction']); return { id: this.id, category: this.category, question: 'How can you vary sentence openings?', options, correctIndex, explanation: 'Varying sentence openings (phrases, clauses, adverbs) improves flow and interest.' } } },
-  { id: 'el-q25', category: 'Syntax Variety', generate() { const monotonous = 'The scientist conducted the experiment. The scientist recorded the data. The scientist published the results.'; const varied = 'The scientist conducted the experiment, recorded the data, and published the results.'; const { options, correctIndex } = makeStringOptions(varied, [monotonous, 'The scientist did many things.', 'Experiments, data, and results were done by the scientist.']); return { id: this.id, category: this.category, question: `Which revision improves variety? Original: "${monotonous}"`, options, correctIndex, explanation: 'Combining into a series with parallel structure eliminates choppy repetition.' } } },
-  { id: 'el-q26', category: 'Syntax Variety', generate() { const { options, correctIndex } = makeStringOptions('Mix simple, compound, and complex sentences', ['Use only simple sentences', 'Use only compound sentences', 'Write everything as one long sentence']); return { id: this.id, category: this.category, question: 'What creates effective syntax variety?', options, correctIndex, explanation: 'Mixing sentence types (simple, compound, complex) creates effective prose.' } } },
-  // Rhetorical Effect
-  { id: 'el-q27', category: 'Rhetorical Effect', generate() { const device = pick(['rhetorical question', 'parallel structure', 'repetition for emphasis']); const example = device === 'rhetorical question' ? 'Can we afford to ignore this crisis?' : device === 'parallel structure' ? 'We came, we saw, we conquered.' : 'Justice too long delayed is justice denied.'; const effect = device === 'rhetorical question' ? 'Engage the reader and emphasize urgency' : device === 'parallel structure' ? 'Create rhythm and emphasize equal importance' : 'Reinforce a key idea through repetition'; const wrongs = ['Confuse the reader', 'Add unnecessary length', 'Weaken the argument']; const { options, correctIndex } = makeStringOptions(effect, wrongs); return { id: this.id, category: this.category, question: `"${example}" What is the rhetorical effect of this ${device}?`, options, correctIndex, explanation: `${device.charAt(0).toUpperCase() + device.slice(1)} is used to ${effect.toLowerCase()}.` } } },
-  { id: 'el-q28', category: 'Rhetorical Effect', generate() { const { options, correctIndex } = makeStringOptions('To persuade, emphasize, or create a specific effect on the reader', ['To make writing longer', 'To follow grammatical rules', 'To avoid clear communication']); return { id: this.id, category: this.category, question: 'What is the purpose of rhetorical devices in writing?', options, correctIndex, explanation: 'Rhetorical devices are strategic choices that persuade, emphasize, or create impact.' } } },
-  { id: 'el-q29', category: 'Rhetorical Effect', generate() { const { options, correctIndex } = makeStringOptions('Consider the author\'s purpose and intended audience', ['Count the number of rhetorical devices', 'Ignore the audience', 'Focus only on grammar']); return { id: this.id, category: this.category, question: 'How do you evaluate rhetorical effectiveness on the SAT?', options, correctIndex, explanation: 'Rhetorical choices must serve the author\'s purpose and connect with the audience.' } } },
-  // SAT-Style
-  { id: 'el-q30', category: 'SAT-Style', generate() { const wordy = pick(['The fact that she was able to succeed was due to hard work.', 'It is important to note that the results were significant.', 'What the author is trying to say is that reform is needed.']); const concise = wordy.includes('fact') ? 'She succeeded because of hard work.' : wordy.includes('important') ? 'The results were significant.' : 'The author argues that reform is needed.'; const { options, correctIndex } = makeStringOptions(concise, [wordy, wordy.replace('.', ', indeed.'), wordy.replace('.', ' really.')]); return { id: this.id, category: this.category, question: `Which is the most effective revision? "${wordy}"`, options, correctIndex, explanation: 'Eliminate wordy phrases ("the fact that," "it is important to note that") for conciseness.' } } },
-  { id: 'el-q31', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('Delete it — it repeats information already stated', ['Keep it for emphasis', 'Move it to the beginning', 'Add more detail to it']); return { id: this.id, category: this.category, question: '"She was happy and joyful." The underlined "and joyful" should be:', options, correctIndex, explanation: '"Happy" and "joyful" mean the same thing — delete the redundancy.' } } },
-  { id: 'el-q32', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('refuted', ['denied the truth of in a way that disagreed with', 'spoke against in strong terms of disagreement about', 'said no to by providing evidence against']); return { id: this.id, category: this.category, question: 'Which single word replaces the wordy phrase "denied the truth of by providing evidence against"?', options, correctIndex, explanation: '"Refuted" captures the full meaning in one precise word.' } } },
-  { id: 'el-q33', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('Shorter is better when it preserves the full meaning', ['Longer answers are always wrong', 'Always choose the first option', 'Word count doesn\'t matter']); return { id: this.id, category: this.category, question: 'On SAT conciseness questions, what principle should guide your choice?', options, correctIndex, explanation: 'The shortest option that preserves full meaning is typically correct.' } } },
-  { id: 'el-q34', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('illuminates', ['sheds light on and clarifies', 'makes clear and understandable', 'brings to the attention of readers']); return { id: this.id, category: this.category, question: 'Which is most concise and precise? "The study ___ the relationship between diet and health."', options, correctIndex, explanation: '"Illuminates" is a single precise word replacing a wordy phrase.' } } },
-  { id: 'el-q35', category: 'SAT-Style', generate() { const { options, correctIndex } = makeStringOptions('Identify what each answer adds or removes, then pick the option that communicates most efficiently', ['Pick the answer that sounds best out loud', 'Choose the most academic-sounding option', 'Go with your gut feeling']); return { id: this.id, category: this.category, question: 'What is the best approach for "effective language use" questions on the SAT?', options, correctIndex, explanation: 'Analyze what each answer contributes — choose the most efficient, precise option.' } } },
-  { id: 'el-q36', category: 'Redundancy', generate() { const { options, correctIndex } = makeStringOptions('unexpected surprise → surprise', ['keep "unexpected surprise"', 'change to "surprisingly unexpected"', 'change to "unexpected and surprising"']); return { id: this.id, category: this.category, question: 'Fix: "The unexpected surprise delighted everyone."', options, correctIndex, explanation: 'Surprises are inherently unexpected — "unexpected" is redundant.' } } },
-  { id: 'el-q37', category: 'Conciseness', generate() { const { options, correctIndex } = makeStringOptions('annually', ['on a yearly basis', 'each and every year', 'once per year on an annual basis']); return { id: this.id, category: this.category, question: 'Which is most concise? The conference occurs ___.', options, correctIndex, explanation: '"Annually" says in one word what the others say in many.' } } },
-  { id: 'el-q38', category: 'Precision', generate() { const { options, correctIndex } = makeStringOptions('scrutinized', ['looked at', 'checked', 'saw']); return { id: this.id, category: this.category, question: '"The auditor ___ the financial records for discrepancies." Most precise word?', options, correctIndex, explanation: '"Scrutinized" precisely conveys careful, detailed examination.' } } },
-  { id: 'el-q39', category: 'Word Choice', generate() { const { options, correctIndex } = makeStringOptions('the answer that is most specific to the context while maintaining the passage\'s tone', ['the fanciest word', 'the simplest word', 'the longest answer choice']); return { id: this.id, category: this.category, question: 'When the SAT asks you to choose the "best" word, you should pick:', options, correctIndex, explanation: 'Best = most specific to context + consistent with passage tone.' } } },
-  { id: 'el-q40', category: 'Rhetorical Effect', generate() { const { options, correctIndex } = makeStringOptions('A short, punchy sentence after several long ones creates emphasis', ['Short sentences are always wrong', 'Long sentences are always better', 'Sentence length has no effect on meaning']); return { id: this.id, category: this.category, question: 'How can sentence length create rhetorical effect?', options, correctIndex, explanation: 'A short sentence amid longer ones draws attention and creates dramatic emphasis.' } } },
+  // ─── Transitions ───
+  {
+    id: 'elu-q1', category: 'Transitions',
+    generate() {
+      const correct = 'Nevertheless,'
+      const opts = shuffle([correct, 'Therefore,', 'Similarly,', 'Specifically,'])
+      return { id: this.id, category: this.category,
+        question: `A 2019 study found that students who took handwritten notes performed significantly better on conceptual questions than those who typed their notes on laptops. _______ many universities have continued to encourage or even require the use of laptops in lecture halls, citing the benefits of digital organization and accessibility.\n\nWhich choice completes the text with the most logical transition?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The second sentence presents information that contrasts with the study's findings (universities continue to encourage laptops despite evidence favoring handwriting). "Nevertheless" signals this contrast.`
+      }
+    }
+  },
+  {
+    id: 'elu-q2', category: 'Transitions',
+    generate() {
+      const correct = 'For instance,'
+      const opts = shuffle([correct, 'In contrast,', 'As a result,', 'Meanwhile,'])
+      return { id: this.id, category: this.category,
+        question: `The human body has evolved several remarkable mechanisms for regulating internal temperature. _______ when core body temperature rises during exercise, blood vessels near the skin dilate to release heat, and sweat glands produce moisture that cools the skin through evaporation.\n\nWhich choice completes the text with the most logical transition?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The second sentence provides a specific example of the temperature-regulating mechanisms mentioned in the first. "For instance" signals that an example follows.`
+      }
+    }
+  },
+  {
+    id: 'elu-q3', category: 'Transitions',
+    generate() {
+      const correct = 'Consequently,'
+      const opts = shuffle([correct, 'However,', 'In other words,', 'Alternatively,'])
+      return { id: this.id, category: this.category,
+        question: `The volcanic eruption of Mount Tambora in 1815 ejected an estimated 160 cubic kilometers of ash into the atmosphere, blocking sunlight across the Northern Hemisphere. _______ the following year became known as the "Year Without a Summer," as temperatures plummeted and crops failed across Europe and North America.\n\nWhich choice completes the text with the most logical transition?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The second sentence describes a direct effect (crop failure, temperature drops) caused by the eruption described in the first. "Consequently" signals a cause-and-effect relationship.`
+      }
+    }
+  },
+  {
+    id: 'elu-q4', category: 'Transitions',
+    generate() {
+      const correct = 'In contrast,'
+      const opts = shuffle([correct, 'Furthermore,', 'Accordingly,', 'In addition,'])
+      return { id: this.id, category: this.category,
+        question: `Classical conditioning, as described by Ivan Pavlov, involves learning through the association of a neutral stimulus with an automatic response; a dog, for example, may learn to salivate at the sound of a bell that has been repeatedly paired with food. _______ operant conditioning, studied extensively by B. F. Skinner, involves learning through the consequences of voluntary behavior—an organism repeats actions that are rewarded and avoids those that are punished.\n\nWhich choice completes the text with the most logical transition?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The passage shifts from describing one type of conditioning to a fundamentally different type. "In contrast" signals this shift between differing concepts.`
+      }
+    }
+  },
+  {
+    id: 'elu-q5', category: 'Transitions',
+    generate() {
+      const correct = 'Moreover,'
+      const opts = shuffle([correct, 'Instead,', 'Nevertheless,', 'On the other hand,'])
+      return { id: this.id, category: this.category,
+        question: `Regular physical exercise has been shown to reduce the risk of cardiovascular disease by strengthening the heart and improving circulation. _______ a growing body of research indicates that exercise also has significant cognitive benefits, including improved memory, enhanced attention, and reduced risk of age-related neurodegenerative conditions.\n\nWhich choice completes the text with the most logical transition?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The second sentence adds additional information that extends the first sentence's point about the benefits of exercise. "Moreover" signals that additional, supportive information follows.`
+      }
+    }
+  },
+  // ─── Rhetorical Synthesis ───
+  {
+    id: 'elu-q6', category: 'Rhetorical Synthesis',
+    generate() {
+      const correct = 'While both approaches aim to reduce carbon emissions, cap-and-trade programs set a fixed limit on total emissions, whereas carbon taxes set a fixed price per unit of carbon emitted.'
+      const opts = shuffle([
+        correct,
+        'Cap-and-trade programs and carbon taxes are two policies that have been discussed by governments around the world.',
+        'Carbon taxes are better than cap-and-trade programs because they are simpler to implement.',
+        'Cap-and-trade programs have been used in Europe, and carbon taxes have been used in Canada.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `A student is writing a research paper comparing two approaches to reducing greenhouse gas emissions. The student wants to emphasize the key difference between cap-and-trade programs and carbon taxes.\n\nBullet points from the student's notes:\n• Cap-and-trade: government sets a maximum limit (cap) on total emissions; companies buy and sell emission permits\n• Carbon tax: government sets a price per ton of carbon emitted; no cap on total emissions\n• Both aim to incentivize businesses to reduce carbon output\n\nWhich choice most effectively uses relevant information from the notes to accomplish the student's goal?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The student wants to emphasize the key difference. The correct choice acknowledges the shared goal (reducing emissions) while clearly contrasting the mechanisms (fixed limit vs. fixed price).`
+      }
+    }
+  },
+  {
+    id: 'elu-q7', category: 'Rhetorical Synthesis',
+    generate() {
+      const correct = 'By analyzing tree ring patterns from ancient bristlecone pines, some of which are over 4,000 years old, dendrochronologists can reconstruct past climate conditions with year-by-year precision.'
+      const opts = shuffle([
+        correct,
+        'Bristlecone pines are interesting trees that can live for thousands of years in harsh mountain environments.',
+        'Dendrochronology is the study of tree rings, and it was developed in the early twentieth century by A. E. Douglass.',
+        'Scientists use many different methods to study historical climate data, including ice cores and tree rings.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `A student is writing an article about how scientists study past climates. The student wants to highlight the precision of dendrochronology as a tool for understanding historical climate.\n\nBullet points from the student's notes:\n• Dendrochronology: the science of dating and analyzing annual tree ring patterns\n• Bristlecone pines: among the oldest living organisms; some exceed 4,000 years of age\n• Each ring reflects growing conditions for a specific year (width, density indicate temperature, rainfall)\n• Allows year-by-year climate reconstruction for millennia\n\nWhich choice most effectively uses relevant information from the notes to accomplish the student's goal?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The student wants to highlight the precision of dendrochronology. The correct choice combines the ancient age of the trees with the year-by-year reconstruction capability, emphasizing precision.`
+      }
+    }
+  },
+  {
+    id: 'elu-q8', category: 'Rhetorical Synthesis',
+    generate() {
+      const correct = 'Although Frida Kahlo\'s work was initially overshadowed by that of her husband, muralist Diego Rivera, her deeply personal paintings—many of which explore themes of identity, pain, and Mexican folklore—have since established her as one of the most influential artists of the twentieth century.'
+      const opts = shuffle([
+        correct,
+        'Frida Kahlo was a Mexican artist who was married to Diego Rivera, and she painted many self-portraits during her lifetime.',
+        'Frida Kahlo is now considered one of the most influential artists of the twentieth century by art historians and critics.',
+        'Frida Kahlo\'s paintings often depicted her own experiences with physical suffering, and she was influenced by Mexican folk art traditions.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `A student is writing a biography of Frida Kahlo for an art history class. The student wants to emphasize how Kahlo's reputation has evolved over time.\n\nBullet points from the student's notes:\n• During her lifetime, often seen primarily as Diego Rivera's wife\n• Painted highly personal works exploring identity, physical suffering, and Mexican cultural traditions\n• Posthumous reassessment: now regarded as one of the most important artists of the 20th century\n• Major retrospective exhibitions held worldwide since the 1980s\n\nWhich choice most effectively uses relevant information from the notes to accomplish the student's goal?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The student wants to emphasize the evolution of Kahlo's reputation. The correct choice traces the shift from being overshadowed by Rivera to being recognized as one of the most influential artists, showing the reputation's evolution.`
+      }
+    }
+  },
+  {
+    id: 'elu-q9', category: 'Rhetorical Synthesis',
+    generate() {
+      const correct = 'The James Webb Space Telescope, which orbits the Sun nearly one million miles from Earth, can detect infrared light from galaxies that formed more than 13 billion years ago—observations that are impossible for ground-based telescopes, whose view is distorted by Earth\'s atmosphere.'
+      const opts = shuffle([
+        correct,
+        'The James Webb Space Telescope was launched in December 2021 and is the successor to the Hubble Space Telescope.',
+        'Ground-based telescopes are limited by atmospheric interference, while space telescopes are not.',
+        'The James Webb Space Telescope is very expensive, costing approximately ten billion dollars to develop and launch.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `A student is writing about the advantages of space-based telescopes over ground-based ones. The student wants to highlight the James Webb Space Telescope's unique capabilities.\n\nBullet points from the student's notes:\n• JWST orbits the Sun at Lagrange point 2, approximately 1 million miles from Earth\n• Specializes in infrared observations; can detect light from galaxies formed > 13 billion years ago\n• Ground-based telescopes: view distorted by Earth's atmosphere (atmospheric turbulence, absorption)\n• JWST can see objects too faint or too distant for ground-based instruments\n\nWhich choice most effectively uses relevant information from the notes to accomplish the student's goal?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The student wants to highlight JWST's unique capabilities. The correct choice integrates specific details about its location, infrared detection of ancient galaxies, and the contrast with ground-based limitations.`
+      }
+    }
+  },
+  // ─── Conciseness ───
+  {
+    id: 'elu-q10', category: 'Conciseness',
+    generate() {
+      const correct = 'The study found that sleep deprivation impairs decision-making.'
+      const opts = shuffle([
+        correct,
+        'The study found that not getting enough sleep and being deprived of adequate rest impairs the ability to make good decisions.',
+        'What the study found was that when people are deprived of sleep, their ability to make decisions is impaired by the lack of sleep.',
+        'According to what the study found, decision-making is impaired when a person has been deprived of the sleep they need.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Researchers at the University of Pennsylvania conducted a week-long experiment in which participants were limited to four hours of sleep per night. _______\n\nWhich choice completes the text most concisely without sacrificing clarity?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The correct choice conveys the finding clearly and concisely without redundancy. The other options repeat ideas ("not getting enough sleep and being deprived of rest") or use wordy constructions.`
+      }
+    }
+  },
+  {
+    id: 'elu-q11', category: 'Conciseness',
+    generate() {
+      const correct = 'The bridge, completed in 1937, remains an iconic symbol of San Francisco.'
+      const opts = shuffle([
+        correct,
+        'The bridge, which was completed and finished in 1937, remains an iconic and well-known symbol of the city of San Francisco.',
+        'Completed in 1937, the bridge is still today, in the present, an iconic symbol that represents San Francisco.',
+        'The bridge, which people finished building in the year 1937, continues to remain as an iconic symbol of the city.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `The Golden Gate Bridge was a marvel of civil engineering when it opened. _______\n\nWhich choice completes the text most concisely without sacrificing clarity?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The correct choice is concise and clear. The others contain redundancies: "completed and finished," "iconic and well-known," "still today, in the present," etc.`
+      }
+    }
+  },
+  {
+    id: 'elu-q12', category: 'Conciseness',
+    generate() {
+      const correct = 'Because the soil lacked nitrogen, the crops failed.'
+      const opts = shuffle([
+        correct,
+        'Due to the fact that there was a deficiency of nitrogen in the soil, the crops ended up failing.',
+        'The reason the crops failed was because the soil did not have enough nitrogen in it.',
+        'On account of the soil lacking a sufficient amount of nitrogen, the crops were unable to grow and therefore failed.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `A student is revising a paragraph about agricultural challenges in sub-Saharan Africa and wants to express a causal relationship as concisely as possible.\n\nWhich choice states the relationship most concisely?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `"Because the soil lacked nitrogen, the crops failed" is the most concise version. The others use wordy phrases like "due to the fact that" or "the reason...was because."`
+      }
+    }
+  },
+  // ─── Additional Transitions ───
+  {
+    id: 'elu-q13', category: 'Transitions',
+    generate() {
+      const correct = 'In fact,'
+      const opts = shuffle([correct, 'By contrast,', 'Regardless,', 'Alternatively,'])
+      return { id: this.id, category: this.category,
+        question: `Many people assume that deserts are lifeless wastelands, but the Sonoran Desert in the American Southwest supports a surprisingly diverse ecosystem. _______ more than 2,000 plant species and 550 vertebrate species have been documented within its boundaries, making it one of the most biologically rich deserts on Earth.\n\nWhich choice completes the text with the most logical transition?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The second sentence intensifies the first sentence's claim about surprising diversity. "In fact" signals that the speaker is adding emphatic, reinforcing detail.`
+      }
+    }
+  },
+  {
+    id: 'elu-q14', category: 'Transitions',
+    generate() {
+      const correct = 'On the other hand,'
+      const opts = shuffle([correct, 'In addition,', 'As a result,', 'In summary,'])
+      return { id: this.id, category: this.category,
+        question: `Some researchers argue that social media use strengthens weak social ties, enabling people to maintain connections with acquaintances they might otherwise lose touch with. _______ other scholars contend that these superficial online interactions come at the expense of deeper, more meaningful face-to-face relationships.\n\nWhich choice completes the text with the most logical transition?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The passage presents two opposing scholarly views. "On the other hand" signals a shift to a contrasting perspective.`
+      }
+    }
+  },
+  // ─── Additional Rhetorical Synthesis ───
+  {
+    id: 'elu-q15', category: 'Rhetorical Synthesis',
+    generate() {
+      const correct = 'Although vertical farms use significantly less water and land than traditional agriculture, the high energy costs of artificial lighting currently make them economically viable only for high-value crops such as leafy greens and herbs.'
+      const opts = shuffle([
+        correct,
+        'Vertical farming is a type of agriculture in which crops are grown indoors in stacked layers using artificial lighting.',
+        'Vertical farms use less water than traditional farms, and they can be built in urban areas where space is limited.',
+        'The future of vertical farming depends on whether energy costs can be reduced through advances in LED technology.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `A student is writing about the potential and limitations of vertical farming. The student wants to present a balanced assessment acknowledging both advantages and current constraints.\n\nBullet points from the student's notes:\n• Vertical farms use up to 95% less water than conventional farms\n• Require minimal land; can operate in urban environments\n• Limitation: artificial lighting consumes large amounts of electricity\n• Currently cost-effective primarily for high-value, fast-growing crops (lettuce, basil, herbs)\n\nWhich choice most effectively uses relevant information from the notes to accomplish the student's goal?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The student wants a balanced view. The correct choice acknowledges advantages (less water, less land) while presenting the key limitation (energy costs restrict viability to high-value crops).`
+      }
+    }
+  },
+  // ─── Additional Conciseness ───
+  {
+    id: 'elu-q16', category: 'Conciseness',
+    generate() {
+      const correct = 'The architect designed the building to maximize natural light.'
+      const opts = shuffle([
+        correct,
+        'The architect designed the building in a way that was intended to allow for the maximization of natural light.',
+        'What the architect wanted to do was design the building so that it would have as much natural light as possible.',
+        'The building was designed by the architect with the goal and purpose of maximizing the amount of natural light inside.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `A student is revising an essay about sustainable building design and wants to express a key design decision concisely.\n\nWhich choice states the idea most concisely without sacrificing clarity?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The correct choice directly states the design intent without wordy constructions like "in a way that was intended to allow for" or "with the goal and purpose of."`
+      }
+    }
+  },
+  {
+    id: 'elu-q17', category: 'Transitions',
+    generate() {
+      const correct = 'Admittedly,'
+      const opts = shuffle([correct, 'Undoubtedly,', 'Surprisingly,', 'Coincidentally,'])
+      return { id: this.id, category: this.category,
+        question: `Proponents of year-round schooling argue that eliminating the traditional summer break would reduce learning loss and improve academic outcomes for students from low-income families. _______ the evidence supporting this claim is mixed: some studies show modest gains in reading and mathematics, while others find no statistically significant difference in achievement between year-round and traditional calendar students.\n\nWhich choice completes the text with the most logical transition?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The second sentence concedes a weakness in the proponents' argument (mixed evidence). "Admittedly" signals a concession—acknowledging a point that qualifies or weakens the preceding claim.`
+      }
+    }
+  },
+  {
+    id: 'elu-q18', category: 'Transitions',
+    generate() {
+      const correct = 'To that end,'
+      const opts = shuffle([correct, 'Even so,', 'In retrospect,', 'By comparison,'])
+      return { id: this.id, category: this.category,
+        question: `The city of Copenhagen has set an ambitious goal of becoming carbon-neutral by 2025. _______ officials have invested heavily in cycling infrastructure, wind energy, and energy-efficient public buildings, making the city a global model for sustainable urban development.\n\nWhich choice completes the text with the most logical transition?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The second sentence describes actions taken to achieve the goal stated in the first sentence. "To that end" means "in order to achieve that goal," connecting the actions to the objective.`
+      }
+    }
+  },
+  {
+    id: 'elu-q19', category: 'Rhetorical Synthesis',
+    generate() {
+      const correct = 'While lab-grown meat could dramatically reduce the environmental footprint of animal agriculture, consumer acceptance remains uncertain: surveys indicate that many people are hesitant to eat meat produced in a laboratory rather than on a farm.'
+      const opts = shuffle([
+        correct,
+        'Lab-grown meat is meat that is produced by cultivating animal cells in a laboratory rather than by raising and slaughtering livestock.',
+        'Lab-grown meat could reduce greenhouse gas emissions because traditional livestock farming produces large amounts of methane.',
+        'Several companies, including Upside Foods and Eat Just, have received regulatory approval to sell lab-grown meat in the United States.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `A student is writing about the future of lab-grown (cultivated) meat. The student wants to highlight both the potential environmental benefits and a major obstacle to widespread adoption.\n\nBullet points from the student's notes:\n• Cultivated meat: produced from animal cells without raising/slaughtering animals\n• Could reduce greenhouse emissions from livestock by up to 92%\n• Uses far less land and water than conventional meat production\n• Obstacle: consumer reluctance—surveys show many people uncomfortable eating "lab-grown" products\n• Price has dropped but remains higher than conventional meat\n\nWhich choice most effectively uses relevant information from the notes to accomplish the student's goal?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The student wants to highlight both benefits and an obstacle. The correct choice mentions the environmental advantage while also noting consumer hesitancy as a barrier.`
+      }
+    }
+  },
+  {
+    id: 'elu-q20', category: 'Conciseness',
+    generate() {
+      const correct = 'The experiment confirmed that plants grow faster under blue light than under red light.'
+      const opts = shuffle([
+        correct,
+        'What the experiment confirmed was that the growth rate of plants is faster when they are exposed to blue light compared to when they are exposed to red light.',
+        'The experiment was able to confirm the finding that plants, when grown under blue light, exhibit a faster rate of growth than plants grown under red light.',
+        'Based on the results of the experiment, it was confirmed that plants which are grown under blue light grow at a faster rate than plants which are grown under red light.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `A student is revising a lab report and wants to state a key finding concisely.\n\nWhich choice expresses the finding most concisely without sacrificing clarity?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The correct choice states the finding in a direct, active sentence. The other options use unnecessarily wordy constructions.`
+      }
+    }
+  },
 ]
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {

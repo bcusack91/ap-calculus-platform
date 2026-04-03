@@ -1,111 +1,395 @@
 /**
- * Exit Quiz — SAT Grammar Conventions
- * 40 randomized questions on standard English conventions: verb tense, agreement, modifiers, parallelism, etc.
+ * Exit Quiz — SAT Grammar & Conventions (Digital SAT Format)
+ *
+ * Passage-based questions following the Digital SAT Reading & Writing format.
+ * Tests Standard English Conventions: punctuation, sentence boundaries,
+ * possessives, commas, colons, semicolons, dashes, and apostrophes.
+ *
+ * Domain: Standard English Conventions
  */
+
 export interface ExitQuizQuestion { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }
 interface QuestionTemplate { id: string; category: string; generate: () => ExitQuizQuestion }
-function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
-function makeStringOptions(c: string, o: string[]) { const u = o.filter(x => x !== c).slice(0, 3); while (u.length < 3) u.push('No change needed'); const all = shuffle([c, ...u]); return { options: all, correctIndex: all.indexOf(c) } }
 
-const subjects = ['The team', 'The students', 'Each of the participants', 'The committee', 'Neither the teacher nor the students', 'The group of scientists', 'Everyone in the class', 'The board of directors']
-const verbs_singular = ['is', 'was', 'has', 'does', 'plans']
-const verbs_plural = ['are', 'were', 'have', 'do', 'plan']
+function shuffle<T>(arr: T[]): T[] { const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }; return a }
 
 const questionPool: QuestionTemplate[] = [
-  // Verb Tense Consistency
-  { id: 'gc-q1', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('walked', ['walks', 'will walk', 'walking']); return { id: this.id, category: this.category, question: `"She arrived at the station and _____ to the platform." (Past tense context)`, options, correctIndex, explanation: `Past tense context requires "walked" to maintain consistency.` } } },
-  { id: 'gc-q2', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('has studied', ['studied', 'studies', 'will study']); return { id: this.id, category: this.category, question: `"Since 2019, the researcher _____ the effects of climate change." (Action continuing from past to present)`, options, correctIndex, explanation: `"Since 2019" → present perfect tense: "has studied."` } } },
-  { id: 'gc-q3', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('had finished', ['finished', 'has finished', 'finishes']); return { id: this.id, category: this.category, question: `"By the time the guests arrived, the chef _____ preparing the meal." (Past before past)`, options, correctIndex, explanation: `Past perfect "had finished" for an action completed before another past action.` } } },
-  { id: 'gc-q4', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('will have completed', ['completed', 'completes', 'has completed']); return { id: this.id, category: this.category, question: `"By next December, they _____ the construction project." (Future completed action)`, options, correctIndex, explanation: `Future perfect "will have completed" for an action finished by a future point.` } } },
-  { id: 'gc-q5', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('runs', ['ran', 'will run', 'has run']); return { id: this.id, category: this.category, question: `"Every morning, he _____ three miles before breakfast." (Habitual present action)`, options, correctIndex, explanation: `Habitual actions use simple present: "runs."` } } },
-  // Subject-Verb Agreement (extending)
-  { id: 'gc-q6', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'be']); return { id: this.id, category: this.category, question: `"Each of the volunteers _____ expected to arrive by 8 AM."`, options, correctIndex, explanation: `"Each" is singular → "is."` } } },
-  { id: 'gc-q7', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('are', ['is', 'was', 'has been']); return { id: this.id, category: this.category, question: `"The results of the experiment _____ encouraging."`, options, correctIndex, explanation: `"Results" (plural) → "are."` } } },
-  { id: 'gc-q8', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('has', ['have', 'had', 'having']); return { id: this.id, category: this.category, question: `"Neither the manager nor the assistant _____ responded to the email."`, options, correctIndex, explanation: `With "neither...nor," the verb agrees with the nearer subject: "assistant" (singular) → "has."` } } },
-  { id: 'gc-q9', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('was', ['were', 'are', 'have been']); return { id: this.id, category: this.category, question: `"The news about the layoffs _____ devastating."`, options, correctIndex, explanation: `"News" is singular → "was."` } } },
-  { id: 'gc-q10', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('were', ['was', 'is', 'has been']); return { id: this.id, category: this.category, question: `"The data from multiple studies _____ analyzed last month."`, options, correctIndex, explanation: `"Data" (used as plural in formal/academic writing) → "were analyzed."` } } },
-  // Modifier Placement
-  { id: 'gc-q11', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('Walking through the park, Maria noticed the cherry blossoms', ['Walking through the park, the cherry blossoms caught Maria\'s eye', 'Walking through the park, the cherry blossoms were noticed by Maria', 'Walking through the park, cherry blossoms were everywhere']); return { id: this.id, category: this.category, question: `Which sentence avoids a dangling modifier?`, options, correctIndex, explanation: `"Maria" must follow the opening modifier since she is the one walking.` } } },
-  { id: 'gc-q12', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('Having studied all night, the student passed the exam', ['Having studied all night, the exam was passed', 'Having studied all night, the exam seemed easy', 'Having studied all night, passing the exam was required']); return { id: this.id, category: this.category, question: `Which sentence correctly places the modifier?`, options, correctIndex, explanation: `The student (not the exam) studied all night — the subject must match the modifier.` } } },
-  { id: 'gc-q13', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('The report that was published recently sparked controversy', ['The report sparked controversy that was published recently', 'Published recently, controversy was sparked by the report', 'Recently published, the controversy sparked a report']); return { id: this.id, category: this.category, question: `Which avoids a misplaced modifier?`, options, correctIndex, explanation: `The modifier "published recently" must be near "report" — it was published, not the controversy.` } } },
-  { id: 'gc-q14', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('She only ate three slices → She ate only three slices', ['She ate three only slices', 'Only she ate three slices', 'She three only ate slices']); return { id: this.id, category: this.category, question: `"She only ate three slices." If the idea is she ate no more than three, the correction is:`, options, correctIndex, explanation: `"Only" should be placed directly before "three" to clarify it modifies the quantity.` } } },
-  // Parallelism
-  { id: 'gc-q15', category: 'Parallelism', generate() { const { options, correctIndex } = makeStringOptions('hiking, swimming, and cycling', ['hiking, swimming, and to cycle', 'hiking, to swim, and cycling', 'to hike, swimming, and cycling']); return { id: this.id, category: this.category, question: `"Her hobbies include _____."  Which maintains parallel structure?`, options, correctIndex, explanation: `All items should be in the same form: gerunds (hiking, swimming, cycling).` } } },
-  { id: 'gc-q16', category: 'Parallelism', generate() { const { options, correctIndex } = makeStringOptions('to read widely, to write clearly, and to think critically', ['to read widely, writing clearly, and critical thinking', 'reading widely, to write clearly, and critical thinking', 'to read widely, clear writing, and to think critically']); return { id: this.id, category: this.category, question: `"The professor encourages students _____ ." Parallel?`, options, correctIndex, explanation: `All three items must be infinitives: "to read," "to write," "to think."` } } },
-  { id: 'gc-q17', category: 'Parallelism', generate() { const { options, correctIndex } = makeStringOptions('not only improved test scores but also increased student engagement', ['not only improved test scores but also increasing student engagement', 'not only improving test scores but also increased student engagement', 'not only did test scores improve but engagement was also increased']); return { id: this.id, category: this.category, question: `"The program _____ ." (not only...but also parallel structure)`, options, correctIndex, explanation: `"Not only...but also" requires parallel forms: both use past tense "improved" and "increased."` } } },
-  // Comma Rules
-  { id: 'gc-q18', category: 'Comma Rules', generate() { const { options, correctIndex } = makeStringOptions('After the storm passed, the sun emerged', ['After the storm passed the sun emerged', 'After, the storm passed the sun emerged', 'After the storm, passed the sun emerged']); return { id: this.id, category: this.category, question: `Which correctly uses a comma after an introductory clause?`, options, correctIndex, explanation: `A comma follows an introductory dependent clause before the main clause.` } } },
-  { id: 'gc-q19', category: 'Comma Rules', generate() { const { options, correctIndex } = makeStringOptions('Dr. Patel, who has 20 years of experience, led the research', ['Dr. Patel who has 20 years of experience led the research', 'Dr. Patel, who has 20 years of experience led the research', 'Dr. Patel who, has 20 years of experience, led the research']); return { id: this.id, category: this.category, question: `Which correctly punctuates a nonessential clause?`, options, correctIndex, explanation: `Nonessential (non-restrictive) clauses are set off by commas on BOTH sides.` } } },
-  { id: 'gc-q20', category: 'Comma Rules', generate() { const { options, correctIndex } = makeStringOptions('She bought apples, oranges, bananas, and grapes', ['She bought apples oranges bananas and grapes', 'She bought, apples, oranges, bananas and grapes', 'She bought apples, oranges bananas, and grapes']); return { id: this.id, category: this.category, question: `Which correctly uses commas in a series?`, options, correctIndex, explanation: `Items in a series are separated by commas. The Oxford comma before "and" is standard on the SAT.` } } },
-  // Semicolon and Colon
-  { id: 'gc-q21', category: 'Semicolons & Colons', generate() { const { options, correctIndex } = makeStringOptions('The experiment failed; however, the team learned valuable lessons', ['The experiment failed, however, the team learned', 'The experiment failed however the team learned', 'The experiment failed; however the team learned']); return { id: this.id, category: this.category, question: `Which correctly uses a semicolon with a conjunctive adverb?`, options, correctIndex, explanation: `Semicolon before "however," comma after it when joining two independent clauses.` } } },
-  { id: 'gc-q22', category: 'Semicolons & Colons', generate() { const { options, correctIndex } = makeStringOptions('She had one goal: to finish the marathon', ['She had one goal, to finish the marathon', 'She had one goal; to finish the marathon', 'She had: one goal to finish the marathon']); return { id: this.id, category: this.category, question: `Which correctly uses a colon?`, options, correctIndex, explanation: `A colon introduces what follows a complete sentence — here, the specific goal.` } } },
-  // Apostrophes
-  { id: 'gc-q23', category: 'Apostrophes', generate() { const { options, correctIndex } = makeStringOptions("the students' grades", ["the student's grades", "the students grades", "the students's grades"]); return { id: this.id, category: this.category, question: `Multiple students own the grades. Correct possessive:`, options, correctIndex, explanation: `Plural possessive of regular nouns: add apostrophe after the "s" → students'.` } } },
-  { id: 'gc-q24', category: 'Apostrophes', generate() { const { options, correctIndex } = makeStringOptions("its", ["it's", "its'", "it is"]); return { id: this.id, category: this.category, question: `"The company raised _____ prices." Which is correct?`, options, correctIndex, explanation: `"Its" (no apostrophe) = possessive. "It's" = "it is."` } } },
-  // Who vs. Whom
-  { id: 'gc-q25', category: 'Pronoun Case', generate() { const { options, correctIndex } = makeStringOptions('whom', ['who', 'whose', 'whoever']); return { id: this.id, category: this.category, question: `"The candidate _____ the committee selected was well-qualified."`, options, correctIndex, explanation: `"The committee selected [him/her]" → object case → "whom."` } } },
-  { id: 'gc-q26', category: 'Pronoun Case', generate() { const { options, correctIndex } = makeStringOptions('who', ['whom', 'whose', 'whomever']); return { id: this.id, category: this.category, question: `"The scientist _____ discovered penicillin changed medicine forever."`, options, correctIndex, explanation: `"[He/She] discovered" → subject case → "who."` } } },
-  // Run-on sentences and fragments
-  { id: 'gc-q27', category: 'Sentence Structure', generate() { const { options, correctIndex } = makeStringOptions('Add a period, semicolon, or coordinating conjunction', ['Add more commas', 'Remove the subject', 'Make it longer']); return { id: this.id, category: this.category, question: `How do you fix a run-on sentence?`, options, correctIndex, explanation: `Run-ons need proper separation: period, semicolon, or comma + conjunction (FANBOYS).` } } },
-  { id: 'gc-q28', category: 'Sentence Structure', generate() { const { options, correctIndex } = makeStringOptions('"Because it rained." — missing main clause', ['"It rained." — complete sentence', '"Rain and thunder." — complete sentence', '"Although complete." — complete sentence']); return { id: this.id, category: this.category, question: `Which is a sentence fragment?`, options, correctIndex, explanation: `"Because it rained" is a dependent clause with no independent clause — a fragment.` } } },
-  // Commonly confused words
-  { id: 'gc-q29', category: 'Confused Words', generate() { const { options, correctIndex } = makeStringOptions('affect', ['effect', 'effected', 'affecting']); return { id: this.id, category: this.category, question: `"The new policy will _____ thousands of workers." (verb)`, options, correctIndex, explanation: `"Affect" is the verb (to influence). "Effect" is usually a noun.` } } },
-  { id: 'gc-q30', category: 'Confused Words', generate() { const { options, correctIndex } = makeStringOptions('than', ['then', 'that', 'them']); return { id: this.id, category: this.category, question: `"She is taller _____ her brother."`, options, correctIndex, explanation: `"Than" = comparison. "Then" = time sequence.` } } },
-  { id: 'gc-q31', category: 'Confused Words', generate() { const { options, correctIndex } = makeStringOptions('their', ["they're", "there", "there's"]); return { id: this.id, category: this.category, question: `"The students submitted _____ assignments on time."`, options, correctIndex, explanation: `"Their" = possessive. "They're" = they are. "There" = location.` } } },
-  // Active vs Passive Voice
-  { id: 'gc-q32', category: 'Voice', generate() { const { options, correctIndex } = makeStringOptions('The researchers conducted the experiment', ['The experiment was conducted by the researchers', 'The experiment was conducted', 'Conducted was the experiment by researchers']); return { id: this.id, category: this.category, question: `Which sentence uses active voice?`, options, correctIndex, explanation: `Active: subject (researchers) performs the action. Passive: subject receives the action.` } } },
-  { id: 'gc-q33', category: 'Voice', generate() { const { options, correctIndex } = makeStringOptions('Active voice — it is more direct and concise', ['Passive voice', 'Either is equally good', 'Neither is preferred']); return { id: this.id, category: this.category, question: `The SAT generally prefers:`, options, correctIndex, explanation: `The SAT favors active voice for its directness and clarity.` } } },
-  // Relative pronouns
-  { id: 'gc-q34', category: 'Pronoun Case', generate() { const { options, correctIndex } = makeStringOptions('that', ['which', 'who', 'whom']); return { id: this.id, category: this.category, question: `"The book _____ she recommended was excellent." (essential clause, no comma)`, options, correctIndex, explanation: `"That" introduces essential (restrictive) clauses without commas.` } } },
-  { id: 'gc-q35', category: 'Pronoun Case', generate() { const { options, correctIndex } = makeStringOptions('which', ['that', 'who', 'what']); return { id: this.id, category: this.category, question: `"The proposal, _____ was submitted last week, has been approved." (nonessential clause, commas)`, options, correctIndex, explanation: `"Which" introduces nonessential clauses set off by commas.` } } },
-  // Additional conventions
-  { id: 'gc-q36', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('were', ['was', 'is', 'have been']); return { id: this.id, category: this.category, question: `"If I _____ you, I would accept the offer." (subjunctive mood)`, options, correctIndex, explanation: `Subjunctive mood for hypotheticals: "If I were" (not "was").` } } },
-  { id: 'gc-q37', category: 'Comma Rules', generate() { const { options, correctIndex } = makeStringOptions('No comma — "that" introduces an essential clause', ['Add a comma before "that"', 'Add a comma after "that"', 'Replace "that" with a comma']); return { id: this.id, category: this.category, question: `"The book that changed her life was by Toni Morrison." Should a comma be added?`, options, correctIndex, explanation: `Essential "that" clauses don't take commas — the clause is necessary to identify the book.` } } },
-  { id: 'gc-q38', category: 'Parallelism', generate() { const { options, correctIndex } = makeStringOptions('The plan was simple, elegant, and effective', ['The plan was simple, elegant, and with effectiveness', 'The plan was simple, with elegance, and effective', 'The plan was simply, elegant, and effective']); return { id: this.id, category: this.category, question: `Which maintains parallel structure?`, options, correctIndex, explanation: `All adjectives: "simple, elegant, and effective" — consistent form.` } } },
-  { id: 'gc-q39', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('Exhausted from the hike, the campers set up their tents', ['Exhausted from the hike, the tents were set up by the campers', 'Exhausted from the hike, setting up tents was the priority', 'Exhausted from the hike, tents were the first thought']); return { id: this.id, category: this.category, question: `Which correctly avoids a dangling modifier?`, options, correctIndex, explanation: `"Campers" must immediately follow the modifying phrase since they are exhausted.` } } },
-  { id: 'gc-q40', category: 'Sentence Structure', generate() { const { options, correctIndex } = makeStringOptions('The rain stopped; the sun came out', ['The rain stopped, the sun came out', 'The rain stopped the sun came out', 'The rain stopped: the sun came out']); return { id: this.id, category: this.category, question: `Fix the comma splice: "The rain stopped, the sun came out."`, options, correctIndex, explanation: `A semicolon properly joins two related independent clauses without a conjunction.` } } },
-  // ── Expanded questions q41-q80 ──
-  { id: 'gc-q41', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('is studying', ['studied', 'studies', 'will study']); return { id: this.id, category: this.category, question: `"Right now, she _____ for the exam." (Present progressive)`, options, correctIndex, explanation: `Present progressive ("is studying") for an action happening right now.` } } },
-  { id: 'gc-q42', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('had been waiting', ['was waiting', 'waited', 'has waited']); return { id: this.id, category: this.category, question: `"They _____ for two hours before the bus finally arrived." (Past perfect progressive)`, options, correctIndex, explanation: `Past perfect progressive for a continuous action completed before another past event.` } } },
-  { id: 'gc-q43', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('drove', ['has driven', 'drives', 'had driven']); return { id: this.id, category: this.category, question: `"Yesterday, he _____ to the airport." (Completed past action)`, options, correctIndex, explanation: `"Yesterday" = simple past: "drove."` } } },
-  { id: 'gc-q44', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('requires', ['require', 'are requiring', 'have required']); return { id: this.id, category: this.category, question: `"The number of applicants _____ a larger venue."`, options, correctIndex, explanation: `"The number" is singular → "requires."` } } },
-  { id: 'gc-q45', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('are', ['is', 'was', 'has been']); return { id: this.id, category: this.category, question: `"A number of students _____ absent today."`, options, correctIndex, explanation: `"A number of" = plural meaning → "are."` } } },
-  { id: 'gc-q46', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('is', ['are', 'were', 'have been']); return { id: this.id, category: this.category, question: `"Mathematics _____ my favorite subject."`, options, correctIndex, explanation: `"Mathematics" is singular → "is."` } } },
-  { id: 'gc-q47', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('Covered in frost, the windows sparkled in the sunlight', ['Covered in frost, the sunlight sparkled on the windows', 'Covered in frost, sparkling happened to the windows', 'The sunlight, covered in frost, sparkled on the windows']); return { id: this.id, category: this.category, question: `Which avoids a dangling modifier?`, options, correctIndex, explanation: `"Windows" are covered in frost, so they must follow the modifier.` } } },
-  { id: 'gc-q48', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('A well-organized essay earns a higher grade', ['A well organized essay earns a higher grade', 'A well, organized essay earns a higher grade', 'A well-organized, essay earns a higher grade']); return { id: this.id, category: this.category, question: `Which uses hyphenation correctly?`, options, correctIndex, explanation: `"Well-organized" is a compound adjective before a noun — use a hyphen.` } } },
-  { id: 'gc-q49', category: 'Parallelism', generate() { const { options, correctIndex } = makeStringOptions('quickly, efficiently, and accurately', ['quickly, with efficiency, and in an accurate manner', 'quickly, efficiently, and being accurate', 'quick, efficiently, and accurately']); return { id: this.id, category: this.category, question: `"She completed the task _____." Parallel structure?`, options, correctIndex, explanation: `All adverbs: "quickly, efficiently, and accurately."` } } },
-  { id: 'gc-q50', category: 'Parallelism', generate() { const { options, correctIndex } = makeStringOptions('both challenging and rewarding', ['both challenging and a reward', 'both a challenge and rewarding', 'both it was challenging and rewarding']); return { id: this.id, category: this.category, question: `"The internship was _____."  Which is parallel?`, options, correctIndex, explanation: `"Both...and" needs matching forms: both adjectives → "challenging and rewarding."` } } },
-  { id: 'gc-q51', category: 'Comma Rules', generate() { const { options, correctIndex } = makeStringOptions('My brother, a talented musician, performed at the concert', ['My brother a talented musician performed at the concert', 'My brother, a talented musician performed at the concert', 'My brother a talented musician, performed at the concert']); return { id: this.id, category: this.category, question: `Which correctly punctuates an appositive?`, options, correctIndex, explanation: `An appositive is set off by commas on both sides: "My brother, a talented musician, performed."` } } },
-  { id: 'gc-q52', category: 'Comma Rules', generate() { const { options, correctIndex } = makeStringOptions('No comma — the clause is essential', ['Add a comma before "who"', 'Add a comma after "who"', 'Replace "who" with a comma']); return { id: this.id, category: this.category, question: `"Students who study regularly perform better." Comma needed before "who"?`, options, correctIndex, explanation: `"Who study regularly" is essential (identifies which students) — no commas.` } } },
-  { id: 'gc-q53', category: 'Comma Rules', generate() { const { options, correctIndex } = makeStringOptions('However, the results were surprising.', ['However the results were surprising.', 'However; the results were surprising.', 'However. the results were surprising.']); return { id: this.id, category: this.category, question: `Which correctly punctuates a sentence-initial transitional word?`, options, correctIndex, explanation: `A comma follows an introductory transition: "However, ..."` } } },
-  { id: 'gc-q54', category: 'Semicolons & Colons', generate() { const { options, correctIndex } = makeStringOptions('The recipe calls for three ingredients: flour, sugar, and butter', ['The recipe calls for three ingredients; flour, sugar, and butter', 'The recipe calls for, three ingredients: flour, sugar, and butter', 'The recipe: calls for three ingredients flour, sugar, and butter']); return { id: this.id, category: this.category, question: `Which correctly introduces a list?`, options, correctIndex, explanation: `A colon after a complete sentence introduces a list.` } } },
-  { id: 'gc-q55', category: 'Semicolons & Colons', generate() { const { options, correctIndex } = makeStringOptions('I enjoy hiking; my sister prefers swimming', ['I enjoy hiking, my sister prefers swimming', 'I enjoy hiking: my sister prefers swimming', 'I enjoy hiking my sister prefers swimming']); return { id: this.id, category: this.category, question: `Two related independent clauses, no conjunction:`, options, correctIndex, explanation: `A semicolon joins two related independent clauses without a conjunction.` } } },
-  { id: 'gc-q56', category: 'Apostrophes', generate() { const { options, correctIndex } = makeStringOptions("the children's toys", ["the childrens' toys", "the childrens toys", "the children toys'"]); return { id: this.id, category: this.category, question: `The toys belong to the children. Correct possessive:`, options, correctIndex, explanation: `Irregular plural (children) → add 's: "children's."` } } },
-  { id: 'gc-q57', category: 'Apostrophes', generate() { const { options, correctIndex } = makeStringOptions("James's book", ["James' book", "James book", "Jame's book"]); return { id: this.id, category: this.category, question: `The book belongs to James. On the SAT, which possessive is standard?`, options, correctIndex, explanation: `Modern standard: add 's even after names ending in s: "James's."` } } },
-  { id: 'gc-q58', category: 'Pronoun Case', generate() { const { options, correctIndex } = makeStringOptions('whoever', ['whomever', 'whichever', 'whatever']); return { id: this.id, category: this.category, question: `"_____ finishes first will receive a prize." (subject of "finishes")`, options, correctIndex, explanation: `"Whoever" is the subject of "finishes" — use subjective case.` } } },
-  { id: 'gc-q59', category: 'Pronoun Case', generate() { const { options, correctIndex } = makeStringOptions('whomever', ['whoever', 'whom', 'who']); return { id: this.id, category: this.category, question: `"Give the tickets to _____ you choose." (object of "choose")`, options, correctIndex, explanation: `"You choose [him/her]" → object case → "whomever."` } } },
-  { id: 'gc-q60', category: 'Sentence Structure', generate() { const { options, correctIndex } = makeStringOptions('Because the weather was bad, the game was canceled.', ['Because the weather was bad. The game was canceled.', 'The weather was bad, the game was canceled.', 'Because the weather was bad the game was canceled']); return { id: this.id, category: this.category, question: `Which correctly joins a dependent and independent clause?`, options, correctIndex, explanation: `Dependent clause + comma + independent clause is correct.` } } },
-  { id: 'gc-q61', category: 'Sentence Structure', generate() { const { options, correctIndex } = makeStringOptions('I went to the store, and I bought some groceries.', ['I went to the store and, I bought some groceries.', 'I went to the store, I bought some groceries.', 'I went to the store and I, bought some groceries.']); return { id: this.id, category: this.category, question: `Which correctly uses a comma with a coordinating conjunction?`, options, correctIndex, explanation: `Comma before the coordinating conjunction ("and") when joining two independent clauses.` } } },
-  { id: 'gc-q62', category: 'Confused Words', generate() { const { options, correctIndex } = makeStringOptions('complement', ['compliment', 'complementary', 'complimentary']); return { id: this.id, category: this.category, question: `"The wine was a perfect _____ to the meal." (something that completes)`, options, correctIndex, explanation: `"Complement" means something that completes. "Compliment" means praise.` } } },
-  { id: 'gc-q63', category: 'Confused Words', generate() { const { options, correctIndex } = makeStringOptions('principal', ['principle', 'principled', 'principals']); return { id: this.id, category: this.category, question: `"The school _____ announced new policies." (head of school)`, options, correctIndex, explanation: `"Principal" = head of school or main. "Principle" = a rule or belief.` } } },
-  { id: 'gc-q64', category: 'Confused Words', generate() { const { options, correctIndex } = makeStringOptions('who\'s', ['whose', 'whos', 'whom']); return { id: this.id, category: this.category, question: `"_____ coming to the party tonight?" (who is)`, options, correctIndex, explanation: `"Who's" = "who is." "Whose" = possessive.` } } },
-  { id: 'gc-q65', category: 'Voice', generate() { const { options, correctIndex } = makeStringOptions('The committee approved the budget', ['The budget was approved by the committee', 'The budget was approved', 'Approved by the committee was the budget']); return { id: this.id, category: this.category, question: `Convert to active voice: "The budget was approved by the committee."`, options, correctIndex, explanation: `Active: subject (committee) performs the action (approved) on the object (budget).` } } },
-  { id: 'gc-q66', category: 'Voice', generate() { const { options, correctIndex } = makeStringOptions('Passive — to emphasize the action or when the doer is unknown', ['Never use passive voice', 'Passive is always incorrect', 'Only in fiction']); return { id: this.id, category: this.category, question: `When is passive voice acceptable?`, options, correctIndex, explanation: `Passive voice is useful when the doer is unknown or when emphasizing the action itself.` } } },
-  { id: 'gc-q67', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('have been studying', ['studied', 'are studying', 'will study']); return { id: this.id, category: this.category, question: `"They _____ this phenomenon for years." (Present perfect progressive — ongoing)`, options, correctIndex, explanation: `Present perfect progressive for actions that started in the past and continue.` } } },
-  { id: 'gc-q68', category: 'Verb Tense', generate() { const { options, correctIndex } = makeStringOptions('would have succeeded', ['will succeed', 'succeeded', 'have succeeded']); return { id: this.id, category: this.category, question: `"If she had practiced more, she _____." (Past conditional — unreal)`, options, correctIndex, explanation: `Third conditional: "If + past perfect, would have + past participle."` } } },
-  { id: 'gc-q69', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('has', ['have', 'had', 'having']); return { id: this.id, category: this.category, question: `"There _____ been a change in plans."`, options, correctIndex, explanation: `"A change" is singular → "has been."` } } },
-  { id: 'gc-q70', category: 'Subject-Verb Agreement', generate() { const { options, correctIndex } = makeStringOptions('have', ['has', 'is having', 'was having']); return { id: this.id, category: this.category, question: `"There _____ been several changes this week."`, options, correctIndex, explanation: `"Several changes" is plural → "have been."` } } },
-  { id: 'gc-q71', category: 'Modifiers', generate() { const { options, correctIndex } = makeStringOptions('The barely visible star shone in the distance', ['The star barely visible shone in the distance', 'Barely visible, the distance had a star shining', 'The star shone in the barely visible distance']); return { id: this.id, category: this.category, question: `Which places "barely visible" closest to the noun it modifies (star)?`, options, correctIndex, explanation: `Place modifiers directly next to the word they describe.` } } },
-  { id: 'gc-q72', category: 'Parallelism', generate() { const { options, correctIndex } = makeStringOptions('The study was praised for its clarity, rigor, and originality', ['The study was praised for its clarity, being rigorous, and originality', 'The study was praised for its clarity, rigor, and being original', 'The study was praised for how clear it was, rigor, and originality']); return { id: this.id, category: this.category, question: `Which maintains parallel structure?`, options, correctIndex, explanation: `All nouns: "clarity, rigor, and originality."` } } },
-  { id: 'gc-q73', category: 'Comma Rules', generate() { const { options, correctIndex } = makeStringOptions('The tall, imposing building dominated the skyline', ['The tall imposing building dominated the skyline', 'The, tall imposing building dominated the skyline', 'The tall imposing, building dominated the skyline']); return { id: this.id, category: this.category, question: `Which correctly uses a comma between coordinate adjectives?`, options, correctIndex, explanation: `"Tall" and "imposing" are coordinate adjectives (interchangeable) → use a comma.` } } },
-  { id: 'gc-q74', category: 'Semicolons & Colons', generate() { const { options, correctIndex } = makeStringOptions('She visited three cities: Paris, France; Rome, Italy; and London, England', ['She visited three cities: Paris, France, Rome, Italy, and London, England', 'She visited three cities; Paris, France, Rome, Italy, and London, England', 'She visited three cities: Paris, France: Rome, Italy: and London, England']); return { id: this.id, category: this.category, question: `Which correctly uses semicolons in a complex list?`, options, correctIndex, explanation: `When list items contain commas, use semicolons to separate items.` } } },
-  { id: 'gc-q75', category: 'Pronoun Case', generate() { const { options, correctIndex } = makeStringOptions('her and me', ['she and I', 'she and me', 'her and I']); return { id: this.id, category: this.category, question: `"The award was given to _____." (object of preposition)`, options, correctIndex, explanation: `After a preposition: objective pronouns → "her and me."` } } },
-  { id: 'gc-q76', category: 'Confused Words', generate() { const { options, correctIndex } = makeStringOptions('farther', ['further', 'farthest', 'furthest']); return { id: this.id, category: this.category, question: `"The finish line is _____ than I thought." (physical distance)`, options, correctIndex, explanation: `"Farther" = physical distance. "Further" = to a greater extent or degree.` } } },
-  { id: 'gc-q77', category: 'Sentence Structure', generate() { const { options, correctIndex } = makeStringOptions('Although it rained, the event continued as planned.', ['Although it rained. The event continued as planned.', 'Although it rained, but the event continued.', 'Although it rained and the event continued as planned.']); return { id: this.id, category: this.category, question: `Which correctly uses a subordinating conjunction?`, options, correctIndex, explanation: `"Although" introduces a dependent clause; only a comma (not "but") joins it to the main clause.` } } },
-  { id: 'gc-q78', category: 'Apostrophes', generate() { const { options, correctIndex } = makeStringOptions("the Johnsons' house", ["the Johnson's house", "the Johnsons house", "the Johnsons's house"]); return { id: this.id, category: this.category, question: `The Johnson family owns the house. Correct possessive:`, options, correctIndex, explanation: `Pluralize the name first (Johnsons), then add apostrophe: "Johnsons'."` } } },
-  { id: 'gc-q79', category: 'Voice', generate() { const { options, correctIndex } = makeStringOptions('The dog bit the mail carrier', ['The mail carrier was bitten by the dog', 'Bitten was the mail carrier by the dog', 'By the dog, the mail carrier was bitten']); return { id: this.id, category: this.category, question: `Which is active voice?`, options, correctIndex, explanation: `Active: subject (dog) performs the action (bit) on the object (mail carrier).` } } },
-  { id: 'gc-q80', category: 'Sentence Structure', generate() { const { options, correctIndex } = makeStringOptions('a dash — to set off a dramatic interruption', ['a comma — only option for interruptions', 'a period — always', 'no punctuation around interruptions']); return { id: this.id, category: this.category, question: `For a sudden break in thought or dramatic aside, the SAT often tests:`, options, correctIndex, explanation: `Dashes (em dashes) set off dramatic or abrupt interruptions in a sentence.` } } },
+  // ─── Comma Usage ───
+  {
+    id: 'gc-q1', category: 'Commas',
+    generate() {
+      const correct = 'Dr. Elena Voss, a marine biologist at the Scripps Institution of Oceanography, has spent'
+      const opts = shuffle([
+        correct,
+        'Dr. Elena Voss a marine biologist at the Scripps Institution of Oceanography, has spent',
+        'Dr. Elena Voss, a marine biologist at the Scripps Institution of Oceanography has spent',
+        'Dr. Elena Voss a marine biologist at the Scripps Institution of Oceanography has spent'
+      ])
+      return { id: this.id, category: this.category,
+        question: `_______ more than two decades studying the migration patterns of Pacific leatherback sea turtles. Her research has revealed that these animals travel over 6,000 miles each year between nesting beaches in Indonesia and feeding grounds off the coast of California.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The appositive "a marine biologist at the Scripps Institution of Oceanography" is nonessential information and must be set off by commas on both sides.`
+      }
+    }
+  },
+  {
+    id: 'gc-q2', category: 'Commas',
+    generate() {
+      const correct = 'Because the experiment required precise temperature control, the researchers'
+      const opts = shuffle([
+        correct,
+        'Because the experiment required precise temperature control the researchers',
+        'Because, the experiment required precise temperature control, the researchers',
+        'Because the experiment required precise temperature control the researchers,'
+      ])
+      return { id: this.id, category: this.category,
+        question: `_______ conducted all trials in a climate-controlled chamber maintained at exactly 22 degrees Celsius. Even minor fluctuations could have compromised the integrity of the results.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `When a subordinate clause ("Because the experiment required precise temperature control") precedes the main clause, a comma must separate them.`
+      }
+    }
+  },
+  {
+    id: 'gc-q3', category: 'Commas',
+    generate() {
+      const correct = 'The festival features live music, artisanal food vendors, and interactive art installations.'
+      const opts = shuffle([
+        correct,
+        'The festival features live music, artisanal food vendors and interactive art installations.',
+        'The festival features live music artisanal food vendors, and interactive art installations.',
+        'The festival features, live music, artisanal food vendors, and interactive art installations.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Every summer, the coastal town of Seaside hosts a three-day cultural celebration that draws visitors from across the region. _______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `Items in a series of three or more should be separated by commas, including a comma before "and" (the Oxford comma) for clarity.`
+      }
+    }
+  },
+  // ─── Semicolons ───
+  {
+    id: 'gc-q4', category: 'Semicolons',
+    generate() {
+      const correct = 'dense; however,'
+      const opts = shuffle([correct, 'dense, however,', 'dense however,', 'dense: however,'])
+      return { id: this.id, category: this.category,
+        question: `The atmosphere of Venus is extremely _______ recent missions have detected unexpected chemical signatures in its upper cloud layers that some scientists believe could indicate biological activity.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `Two independent clauses joined by a conjunctive adverb ("however") require a semicolon before the adverb and a comma after it.`
+      }
+    }
+  },
+  {
+    id: 'gc-q5', category: 'Semicolons',
+    generate() {
+      const correct = 'region; its'
+      const opts = shuffle([correct, 'region, its', 'region its', 'region: its'])
+      return { id: this.id, category: this.category,
+        question: `The Basque Country spans the border between Spain and France, giving it a unique cultural identity that blends elements of both nations. The _______ cuisine, for example, incorporates French culinary techniques with Spanish ingredients, producing dishes that are celebrated in Michelin-starred restaurants worldwide.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `Two closely related independent clauses not joined by a coordinating conjunction require a semicolon between them.`
+      }
+    }
+  },
+  // ─── Colons ───
+  {
+    id: 'gc-q6', category: 'Colons',
+    generate() {
+      const correct = 'three qualities: intellectual curiosity, emotional resilience, and a willingness to collaborate.'
+      const opts = shuffle([
+        correct,
+        'three qualities, intellectual curiosity, emotional resilience, and a willingness to collaborate.',
+        'three qualities; intellectual curiosity, emotional resilience, and a willingness to collaborate.',
+        'three qualities—intellectual curiosity, emotional resilience, and a willingness to collaborate.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `In her commencement address, the university president told graduates that success in any field depends on _______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `A colon is used after an independent clause to introduce a list. "Success depends on three qualities" is a complete thought, so a colon properly introduces the list that follows.`
+      }
+    }
+  },
+  {
+    id: 'gc-q7', category: 'Colons',
+    generate() {
+      const correct = 'conclusion: the proposed tax'
+      const opts = shuffle([correct, 'conclusion, the proposed tax', 'conclusion; the proposed tax', 'conclusion the proposed tax'])
+      return { id: this.id, category: this.category,
+        question: `After reviewing months of economic data and consulting with independent analysts, the committee reached a _______ increase would disproportionately affect small businesses in rural areas.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `A colon can follow an independent clause to introduce a statement that explains or elaborates on the preceding clause. "The committee reached a conclusion" is complete, and the colon introduces what the conclusion is.`
+      }
+    }
+  },
+  // ─── Dashes ───
+  {
+    id: 'gc-q8', category: 'Dashes',
+    generate() {
+      const correct = 'instruments—including the piano, violin, and cello—before'
+      const opts = shuffle([
+        correct,
+        'instruments—including the piano, violin, and cello before',
+        'instruments, including the piano, violin, and cello—before',
+        'instruments—including the piano, violin, and cello, before'
+      ])
+      return { id: this.id, category: this.category,
+        question: `The young musician had already mastered several _______ she turned sixteen. Her teachers described her technical proficiency as extraordinary for someone her age.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `Dashes are used in pairs to set off a parenthetical element. The list "including the piano, violin, and cello" interrupts the sentence and must be enclosed by matching dashes on both sides.`
+      }
+    }
+  },
+  {
+    id: 'gc-q9', category: 'Dashes',
+    generate() {
+      const correct = 'single trait—the ability to adapt quickly to changing circumstances.'
+      const opts = shuffle([
+        correct,
+        'single trait; the ability to adapt quickly to changing circumstances.',
+        'single trait, the ability to adapt quickly to changing circumstances.',
+        'single trait the ability to adapt quickly to changing circumstances.'
+      ])
+      return { id: this.id, category: this.category,
+        question: `After interviewing more than one hundred successful entrepreneurs, the business journalist concluded that they all shared a _______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `A dash can be used after an independent clause to introduce a dramatic or emphatic elaboration. Here, the dash sets off the specific trait being identified.`
+      }
+    }
+  },
+  // ─── Apostrophes & Possessives ───
+  {
+    id: 'gc-q10', category: 'Possessives',
+    generate() {
+      const correct = "The orchestra's"
+      const opts = shuffle([correct, "The orchestras'", 'The orchestras', "The orchestra,s"])
+      return { id: this.id, category: this.category,
+        question: `_______ performance of Beethoven's Ninth Symphony received a standing ovation that lasted nearly five minutes. Music critics praised the ensemble for its emotional depth and technical precision, calling the concert one of the season's finest.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The sentence refers to one orchestra possessing the performance. The singular possessive "orchestra's" is correct.`
+      }
+    }
+  },
+  {
+    id: 'gc-q11', category: 'Possessives',
+    generate() {
+      const correct = "the researchers' findings"
+      const opts = shuffle([correct, "the researcher's findings", "the researchers findings", "the researchers's findings"])
+      return { id: this.id, category: this.category,
+        question: `Although the initial trial involved only a small sample, _______ were consistent with those of several larger studies. The team plans to expand the experiment to include participants from multiple age groups and geographic regions.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `Multiple researchers possess the findings. The plural possessive "researchers'" (apostrophe after the s) is correct.`
+      }
+    }
+  },
+  {
+    id: 'gc-q12', category: 'Possessives',
+    generate() {
+      const correct = "its"
+      const opts = shuffle([correct, "it's", "its'", "their"])
+      return { id: this.id, category: this.category,
+        question: `The company announced that _______ new sustainability initiative would reduce carbon emissions by thirty percent over the next five years. Environmental advocates praised the commitment but cautioned that meaningful progress would require rigorous independent monitoring.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `"Its" (no apostrophe) is the possessive form of "it." "It's" is a contraction of "it is." The sentence calls for the possessive, so "its" is correct.`
+      }
+    }
+  },
+  // ─── Sentence Boundaries ───
+  {
+    id: 'gc-q13', category: 'Sentence Boundaries',
+    generate() {
+      const correct = 'century. The'
+      const opts = shuffle([correct, 'century, the', 'century the', 'century, and, the'])
+      return { id: this.id, category: this.category,
+        question: `The Industrial Revolution transformed manufacturing processes across Europe during the late eighteenth and early nineteenth _______ shift from hand production to machine-based manufacturing fundamentally altered labor markets, urban development, and global trade patterns.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `Two independent clauses must be properly separated. A period and capital letter correctly mark the boundary between two complete sentences, avoiding a comma splice or run-on.`
+      }
+    }
+  },
+  {
+    id: 'gc-q14', category: 'Sentence Boundaries',
+    generate() {
+      const correct = 'results, and she'
+      const opts = shuffle([correct, 'results and she', 'results she', 'results, she'])
+      return { id: this.id, category: this.category,
+        question: `Dr. Patel analyzed the data from the clinical trial over several months. She was initially skeptical of the _______ ultimately published a paper confirming that the treatment had produced statistically significant improvements in patient outcomes.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `Two independent clauses joined by a coordinating conjunction ("and") require a comma before the conjunction when both clauses have their own subject and verb.`
+      }
+    }
+  },
+  // ─── Restrictive vs. Nonrestrictive Elements ───
+  {
+    id: 'gc-q15', category: 'Restrictive/Nonrestrictive',
+    generate() {
+      const correct = 'Students who complete all required coursework by May 15'
+      const opts = shuffle([
+        correct,
+        'Students, who complete all required coursework by May 15,',
+        'Students, who complete all required coursework by May 15',
+        'Students who complete all required coursework by May 15,'
+      ])
+      return { id: this.id, category: this.category,
+        question: `_______ will be eligible to participate in the summer research program. The registrar's office will verify enrollment status and academic standing before confirming final placements.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The clause "who complete all required coursework by May 15" is restrictive—it identifies which students are eligible. Restrictive clauses should not be set off by commas.`
+      }
+    }
+  },
+  {
+    id: 'gc-q16', category: 'Restrictive/Nonrestrictive',
+    generate() {
+      const correct = 'The Mona Lisa, which was painted by Leonardo da Vinci in the early sixteenth century, is'
+      const opts = shuffle([
+        correct,
+        'The Mona Lisa which was painted by Leonardo da Vinci in the early sixteenth century is',
+        'The Mona Lisa, which was painted by Leonardo da Vinci in the early sixteenth century is',
+        'The Mona Lisa which was painted by Leonardo da Vinci in the early sixteenth century, is'
+      ])
+      return { id: this.id, category: this.category,
+        question: `_______ arguably the most famous painting in the world. Housed in the Louvre Museum in Paris, it attracts millions of visitors each year.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The clause "which was painted by Leonardo da Vinci in the early sixteenth century" is nonrestrictive—it provides additional but nonessential information about the Mona Lisa. It must be set off by commas on both sides.`
+      }
+    }
+  },
+  // ─── Additional Commas ───
+  {
+    id: 'gc-q17', category: 'Commas',
+    generate() {
+      const correct = 'Although he had never visited Japan, the chef'
+      const opts = shuffle([
+        correct,
+        'Although he had never visited Japan the chef',
+        'Although, he had never visited Japan, the chef',
+        'Although he had never visited Japan; the chef'
+      ])
+      return { id: this.id, category: this.category,
+        question: `_______ specialized in preparing traditional Japanese cuisine. His mentor, a Tokyo-born chef de cuisine, had trained him extensively in the techniques of kaiseki cooking.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `An introductory subordinate clause ("Although he had never visited Japan") must be followed by a comma before the main clause.`
+      }
+    }
+  },
+  // ─── Additional Semicolons ───
+  {
+    id: 'gc-q18', category: 'Semicolons',
+    generate() {
+      const correct = 'experiment; the results'
+      const opts = shuffle([correct, 'experiment, the results', 'experiment the results', 'experiment: the results'])
+      return { id: this.id, category: this.category,
+        question: `The researchers initially planned to recruit 500 participants, but budget constraints forced them to reduce the sample size. This change significantly limited the statistical power of the _______ could not be generalized to the broader population with confidence.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `Two independent clauses not joined by a coordinating conjunction require a semicolon between them. A comma would create a comma splice.`
+      }
+    }
+  },
+  // ─── Additional Possessives ───
+  {
+    id: 'gc-q19', category: 'Possessives',
+    generate() {
+      const correct = "children's"
+      const opts = shuffle([correct, "childrens'", 'childrens', "children"])
+      return { id: this.id, category: this.category,
+        question: `The pediatric ward was recently renovated to create a more welcoming environment. Bright murals now cover the walls, and the _______ playroom has been expanded to include sensory stations, a small library, and interactive digital games.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `"Children" is an irregular plural (it does not end in -s). The possessive is formed by adding 's: "children's."`
+      }
+    }
+  },
+  // ─── Mixed Review ───
+  {
+    id: 'gc-q20', category: 'Mixed Review',
+    generate() {
+      const correct = 'world\'s oceans, which cover more than seventy percent of the planet\'s surface, remain'
+      const opts = shuffle([
+        correct,
+        'world\'s oceans which cover more than seventy percent of the planet\'s surface remain',
+        'world\'s oceans, which cover more than seventy percent of the planet\'s surface remain',
+        'world\'s oceans which cover more than seventy percent of the planet\'s surface, remain'
+      ])
+      return { id: this.id, category: this.category,
+        question: `Despite centuries of exploration, the _______ largely unmapped. Oceanographers estimate that more than eighty percent of the seafloor has never been surveyed using modern sonar technology.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The nonrestrictive clause "which cover more than seventy percent of the planet's surface" must be enclosed by commas on both sides, as it provides additional but nonessential information about the oceans.`
+      }
+    }
+  },
+  {
+    id: 'gc-q21', category: 'Commas',
+    generate() {
+      const correct = 'the senator, a former civil rights attorney, introduced'
+      const opts = shuffle([
+        correct,
+        'the senator a former civil rights attorney introduced',
+        'the senator, a former civil rights attorney introduced',
+        'the senator a former civil rights attorney, introduced'
+      ])
+      return { id: this.id, category: this.category,
+        question: `At the opening session of the new Congress, _______ a bill to expand voting access in underserved communities. The legislation would allocate federal funds for additional polling locations and extended early voting periods.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `"A former civil rights attorney" is an appositive providing nonessential information about the senator. It must be set off by commas on both sides.`
+      }
+    }
+  },
+  {
+    id: 'gc-q22', category: 'Sentence Boundaries',
+    generate() {
+      const correct = 'glucose, but it'
+      const opts = shuffle([correct, 'glucose but it', 'glucose it', 'glucose, it'])
+      return { id: this.id, category: this.category,
+        question: `The brain accounts for only about two percent of total body weight, yet it consumes roughly twenty percent of the body's energy supply. It relies almost exclusively on _______ can also use ketone bodies as an alternative fuel source during prolonged fasting.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `Two independent clauses joined by the coordinating conjunction "but" require a comma before the conjunction.`
+      }
+    }
+  },
+  {
+    id: 'gc-q23', category: 'Colons',
+    generate() {
+      const correct = 'mandate: every new building'
+      const opts = shuffle([correct, 'mandate, every new building', 'mandate; every new building', 'mandate every new building'])
+      return { id: this.id, category: this.category,
+        question: `In 2023, the California state legislature passed an ambitious environmental protection _______ constructed after January 1, 2025, must include rooftop solar panels and meet stringent energy efficiency standards.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `A colon follows an independent clause and introduces a specification or elaboration. "The legislature passed a mandate" is complete, and the colon introduces the content of the mandate.`
+      }
+    }
+  },
+  {
+    id: 'gc-q24', category: 'Dashes',
+    generate() {
+      const correct = 'idea—one that many investors initially dismissed as impractical—eventually'
+      const opts = shuffle([
+        correct,
+        'idea—one that many investors initially dismissed as impractical eventually',
+        'idea, one that many investors initially dismissed as impractical, eventually',
+        'idea—one that many investors initially dismissed as impractical, eventually'
+      ])
+      return { id: this.id, category: this.category,
+        question: `The startup founder's original _______ transformed into a company valued at over two billion dollars. Her persistence in the face of skepticism became a commonly cited example of entrepreneurial resilience.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `The parenthetical phrase "one that many investors initially dismissed as impractical" interrupts the sentence and should be enclosed by matching dashes. While commas could also work, the question asks which choice conforms to conventions, and the dashes correctly set off the emphatic aside.`
+      }
+    }
+  },
+  {
+    id: 'gc-q25', category: 'Mixed Review',
+    generate() {
+      const correct = "The author's latest novel, which has been translated into thirty-two languages, explores"
+      const opts = shuffle([
+        correct,
+        "The authors latest novel, which has been translated into thirty-two languages, explores",
+        "The author's latest novel which has been translated into thirty-two languages explores",
+        "The author's latest novel, which has been translated into thirty-two languages explores"
+      ])
+      return { id: this.id, category: this.category,
+        question: `_______ the tension between tradition and modernity in postcolonial Nigeria. Critics have praised the book for its nuanced portrayal of characters caught between competing cultural expectations.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?`,
+        options: opts, correctIndex: opts.indexOf(correct),
+        explanation: `"Author's" requires an apostrophe (singular possessive). The nonrestrictive clause "which has been translated into thirty-two languages" must be enclosed by commas on both sides.`
+      }
+    }
+  },
 ]
 
 export function generateExitQuiz(count: number = 10): ExitQuizQuestion[] {

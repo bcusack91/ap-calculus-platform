@@ -29,14 +29,24 @@ export interface MCATDiagnosticQuestion {
       yLabel: string
       xValues: number[]
       yValues: number[]
+      comparisonSeries?: Array<{
+        label: string
+        yValues: number[]
+      }>
       xUnit: string
       yUnit: string
     }
     figure?: {
       title: string
       seriesLabel: string
+      xLabel?: string
+      yLabel?: string
       xValues: number[]
       yValues: number[]
+      comparisonSeries?: Array<{
+        label: string
+        yValues: number[]
+      }>
       xUnit: string
       yUnit: string
     }
@@ -51,14 +61,24 @@ export interface MCATDiagnosticQuestion {
       yLabel: string
       xValues: number[]
       yValues: number[]
+      comparisonSeries?: Array<{
+        label: string
+        yValues: number[]
+      }>
       xUnit: string
       yUnit: string
     }
     figure?: {
       title: string
       seriesLabel: string
+      xLabel?: string
+      yLabel?: string
       xValues: number[]
       yValues: number[]
+      comparisonSeries?: Array<{
+        label: string
+        yValues: number[]
+      }>
       xUnit: string
       yUnit: string
     }
@@ -226,6 +246,18 @@ type FigureContext = {
   yUnit: string
 }
 
+type SeriesProfile = 'linear' | 'saturating' | 'accelerating' | 'threshold' | 'near-plateau'
+type FigureArchetype = 'generic' | 'michaelis-menten-like' | 'lineweaver-like' | 'dose-response-like' | 'physiology-loading-like' | 'time-course-like'
+
+type FigurePresentation = {
+  archetype: FigureArchetype
+  xValues: number[]
+  xLabel: string
+  xUnit: string
+  figureTitle: string
+  seriesLabel: string
+}
+
 type CarsContext = {
   authorType: string
   claim: string
@@ -334,62 +366,281 @@ function selectPassageQuestions(allQuestions: MCATDiagnosticQuestion[], question
   return selected
 }
 
-function buildPassageVisual(context: FigureContext, yValues: number[]) {
+function resolveFigurePresentation(context: FigureContext): FigurePresentation {
+  const signature = `${context.context} ${context.xLabel} ${context.yLabel}`.toLowerCase()
+
+  if (/(enzyme|substrate|michaelis|velocity|vmax|km)/.test(signature)) {
+    return {
+      archetype: 'michaelis-menten-like',
+      xValues: [0.2, 0.5, 1.0, 2.0],
+      xLabel: context.xLabel,
+      xUnit: context.xUnit,
+      figureTitle: `Figure 1 (Michaelis-Menten-like ${context.context})`,
+      seriesLabel: context.yLabel,
+    }
+  }
+
+  if (/(lineweaver|reciprocal|1\/\[s\]|1\/v)/.test(signature)) {
+    return {
+      archetype: 'lineweaver-like',
+      xValues: [0.25, 0.5, 1.0, 2.0],
+      xLabel: context.xLabel,
+      xUnit: context.xUnit,
+      figureTitle: `Figure 1 (Reciprocal-plot-like ${context.context})`,
+      seriesLabel: context.yLabel,
+    }
+  }
+
+  if (/(dose|quartile|cohort|response|ligand|hormone|stress|spacing|gradient|index)/.test(signature)) {
+    return {
+      archetype: 'dose-response-like',
+      xValues: [1, 2, 4, 8],
+      xLabel: context.xLabel,
+      xUnit: context.xUnit,
+      figureTitle: `Figure 1 (Dose-response-style ${context.context})`,
+      seriesLabel: context.yLabel,
+    }
+  }
+
+  if (/(cardiac|filtration|ventilation|perfusion|output|uptake|load)/.test(signature)) {
+    return {
+      archetype: 'physiology-loading-like',
+      xValues: [0, 1, 2, 3],
+      xLabel: context.xLabel,
+      xUnit: context.xUnit,
+      figureTitle: `Figure 1 (Physiology-loading ${context.context})`,
+      seriesLabel: context.yLabel,
+    }
+  }
+
+  if (/(time|induction|kinetics|course)/.test(signature)) {
+    return {
+      archetype: 'time-course-like',
+      xValues: [0, 1, 2, 4],
+      xLabel: context.xLabel,
+      xUnit: context.xUnit,
+      figureTitle: `Figure 1 (Time-course ${context.context})`,
+      seriesLabel: context.yLabel,
+    }
+  }
+
+  return {
+    archetype: 'generic',
+    xValues: [...FIGURE_X_VALUES],
+    xLabel: context.xLabel,
+    xUnit: context.xUnit,
+    figureTitle: `Figure 1 (${context.context})`,
+    seriesLabel: context.yLabel,
+  }
+}
+
+function buildPassageVisual(context: FigureContext, yValues: number[], _seed: number) {
+  const presentation = resolveFigurePresentation(context)
+  const comparisonSeries = buildComparisonSeries(context, presentation, yValues, _seed)
   return {
     dataTable: {
       title: 'Table 1',
-      xLabel: context.xLabel,
+      xLabel: presentation.xLabel,
       yLabel: context.yLabel,
-      xValues: [...FIGURE_X_VALUES],
+      xValues: [...presentation.xValues],
       yValues: [...yValues],
-      xUnit: context.xUnit,
+      comparisonSeries,
+      xUnit: presentation.xUnit,
       yUnit: context.yUnit,
     },
     figure: {
-      title: `Figure 1 (${context.context})`,
-      seriesLabel: context.yLabel,
-      xValues: [...FIGURE_X_VALUES],
+      title: presentation.figureTitle,
+      seriesLabel: presentation.seriesLabel,
+      xLabel: presentation.xLabel,
+      yLabel: context.yLabel,
+      xValues: [...presentation.xValues],
       yValues: [...yValues],
-      xUnit: context.xUnit,
+      comparisonSeries,
+      xUnit: presentation.xUnit,
       yUnit: context.yUnit,
     },
   }
 }
 
-function buildSeriesValues(slope: number, intercept: number, seed: number): number[] {
-  const base = intercept + slope
-  const patternType = seed % 3
+function deterministicNoise(seed: number, index: number): number {
+  const raw = Math.sin((seed + 1) * 12.9898 + (index + 1) * 78.233) * 43758.5453
+  return (raw - Math.floor(raw)) - 0.5
+}
 
-  if (patternType === 0) {
+function chooseSeriesProfile(context: FigureContext, seed: number): SeriesProfile {
+  const signature = `${context.context} ${context.xLabel} ${context.yLabel}`.toLowerCase()
+
+  if (/(enzyme|substrate|dose|receptor|binding|uptake|titration|michaelis)/.test(signature)) {
+    return seed % 4 === 0 ? 'threshold' : 'saturating'
+  }
+  if (/(signal|cascade|drift|growth|stress|error|induction|expression)/.test(signature)) {
+    return seed % 3 === 0 ? 'threshold' : 'accelerating'
+  }
+  if (/(feedback|filtration|cardiac|homeostasis|output)/.test(signature)) {
+    return seed % 2 === 0 ? 'near-plateau' : 'linear'
+  }
+
+  const profileOrder: SeriesProfile[] = ['linear', 'saturating', 'accelerating', 'threshold', 'near-plateau']
+  return profileOrder[seed % profileOrder.length]
+}
+
+function estimateBaseline(context: FigureContext, intercept: number, slope: number, seed: number): number {
+  const unit = context.yUnit.toLowerCase()
+  const jitter = deterministicNoise(seed, 0)
+
+  if (unit.includes('%')) return 15 + intercept * 6 + slope * 2 + jitter * 4
+  if (unit.includes('ph')) return 2.5 + intercept * 0.8 + slope * 0.2 + jitter * 0.2
+  if (unit.includes('mv')) return 40 + intercept * 25 + slope * 8 + jitter * 8
+  if (unit.includes('ma')) return 6 + intercept * 3 + slope * 2 + jitter * 2
+  if (unit.includes('l/min')) return 2 + intercept * 1.2 + slope * 0.7 + jitter * 0.5
+  if (unit.includes('mm')) return 2 + intercept * 1.5 + slope * 0.8 + jitter * 0.6
+  if (unit.includes('fold')) return 1 + intercept * 0.8 + slope * 0.5 + jitter * 0.4
+
+  return 4 + intercept * 2 + slope + jitter
+}
+
+function estimateStepScale(context: FigureContext): number {
+  const unit = context.yUnit.toLowerCase()
+  if (unit.includes('%')) return 7
+  if (unit.includes('ph')) return 0.45
+  if (unit.includes('mv')) return 20
+  if (unit.includes('ma')) return 3
+  if (unit.includes('l/min')) return 1
+  if (unit.includes('mm')) return 1.2
+  if (unit.includes('fold')) return 0.9
+  return 2.5
+}
+
+function roundByUnit(unit: string, value: number): number {
+  const lower = unit.toLowerCase()
+  if (lower.includes('ph') || lower.includes('fold')) return Number(value.toFixed(1))
+  return Math.round(value)
+}
+
+function clampByUnit(unit: string, value: number): number {
+  const lower = unit.toLowerCase()
+  if (lower.includes('%')) return Math.min(99, Math.max(1, value))
+  if (lower.includes('ph')) return Math.min(14, Math.max(0, value))
+  return Math.max(0, value)
+}
+
+function buildComparisonSeries(
+  context: FigureContext,
+  presentation: FigurePresentation,
+  yValues: number[],
+  seed: number,
+): Array<{ label: string; yValues: number[] }> {
+  const signature = `${context.context} ${context.xLabel} ${context.yLabel}`.toLowerCase()
+  const include = (seed + yValues.length) % 2 === 0 || presentation.archetype === 'lineweaver-like'
+  if (!include) return []
+
+  const makeSeries = (label: string, scaler: (value: number, index: number) => number) => {
+    const values = yValues.map((value, index) => {
+      const jitter = deterministicNoise(seed + 31, index) * 0.06 * Math.max(1, Math.abs(value))
+      const candidate = scaler(value, index) + jitter
+      return clampByUnit(context.yUnit, roundByUnit(context.yUnit, candidate))
+    })
+
+    for (let i = 1; i < values.length; i += 1) {
+      if (values[i] < values[i - 1]) values[i] = values[i - 1]
+    }
+
+    return { label, yValues: values }
+  }
+
+  if (presentation.archetype === 'lineweaver-like') {
+    const mode = seed % 3
+    if (mode === 0) {
+      return [makeSeries('Competitive inhibitor', (value, index) => value * (1.08 + index * 0.14))]
+    }
+    if (mode === 1) {
+      return [makeSeries('Noncompetitive inhibitor', (value) => value * 1.35)]
+    }
+    return [makeSeries('Uncompetitive inhibitor', (value, index) => value * (1.18 + index * 0.04))]
+  }
+
+  if (presentation.archetype === 'michaelis-menten-like') {
+    const mode = seed % 3
+    if (mode === 0) {
+      return [makeSeries('Competitive inhibitor', (value, index) => value * (0.62 + index * 0.12))]
+    }
+    if (mode === 1) {
+      return [makeSeries('Noncompetitive inhibitor', (value) => value * 0.72)]
+    }
+    return [makeSeries('Uncompetitive inhibitor', (value, index) => value * (0.76 - index * 0.05))]
+  }
+
+  if (presentation.archetype === 'dose-response-like' && /(stress|error|symptom|risk)/.test(signature)) {
+    return [makeSeries('High-resilience subgroup', (value, index) => value * (0.74 + index * 0.02))]
+  }
+
+  if (presentation.archetype === 'dose-response-like' && /(recall|memory|learning|performance)/.test(signature)) {
+    return [makeSeries('Sleep-deprived subgroup', (value, index) => value * (0.8 - index * 0.01))]
+  }
+
+  if (presentation.archetype === 'physiology-loading-like') {
+    const isOutputMetric = /(output|uptake|cardiac|filtration)/.test(signature)
     return [
-      base,
-      base + slope,
-      base + 2 * slope,
-      base + 3 * slope,
+      makeSeries(
+        isOutputMetric ? 'Trained group' : 'Post-intervention',
+        (value, index) => value * (1.04 + index * 0.02),
+      ),
     ]
   }
 
-  if (patternType === 1) {
-    const d1 = slope + 1
-    const d2 = slope
-    const d3 = Math.max(1, slope - 1)
-    return [
-      base,
-      base + d1,
-      base + d1 + d2,
-      base + d1 + d2 + d3,
-    ]
+  if (presentation.archetype === 'time-course-like') {
+    if (/(expression|mrna|transcript|induction)/.test(signature)) {
+      return [makeSeries('No-inducer control', (value, index) => value * (0.58 - index * 0.03))]
+    }
+    return [makeSeries('Control', (value, index) => value * (0.9 - index * 0.02))]
   }
 
-  const d1 = 1
-  const d2 = slope + 2
-  const d3 = slope + 2
-  return [
-    base,
-    base + d1,
-    base + d1 + d2,
-    base + d1 + d2 + d3,
-  ]
+  if (/(receptor|ligand|occupancy|binding)/.test(signature)) {
+    return [makeSeries('Low-affinity mutant', (value, index) => value * (0.7 + index * 0.03))]
+  }
+
+  return [makeSeries('Comparison cohort', (value, index) => value * (0.88 + index * 0.01))]
+}
+
+function profileMultipliers(profile: SeriesProfile): [number, number, number] {
+  switch (profile) {
+    case 'saturating':
+      return [1.25, 0.9, 0.65]
+    case 'accelerating':
+      return [0.75, 1.1, 1.45]
+    case 'threshold':
+      return [0.4, 1.35, 1.45]
+    case 'near-plateau':
+      return [1.2, 0.7, 0.45]
+    default:
+      return [1, 1, 1]
+  }
+}
+
+function buildSeriesValues(context: FigureContext, slope: number, intercept: number, seed: number): number[] {
+  const profile = chooseSeriesProfile(context, seed)
+  const [m1, m2, m3] = profileMultipliers(profile)
+  const stepScale = estimateStepScale(context)
+  const minStep = Math.max(stepScale * 0.2, 0.2)
+
+  const d1 = Math.max(minStep, (slope * m1 + deterministicNoise(seed, 1) * 0.35) * stepScale)
+  const d2 = Math.max(minStep, (slope * m2 + deterministicNoise(seed, 2) * 0.35) * stepScale)
+  const d3 = Math.max(minStep, (slope * m3 + deterministicNoise(seed, 3) * 0.35) * stepScale)
+
+  const baseline = estimateBaseline(context, intercept, slope, seed)
+  const raw = [baseline, baseline + d1, baseline + d1 + d2, baseline + d1 + d2 + d3]
+
+  const rounded = raw.map((value) => clampByUnit(context.yUnit, roundByUnit(context.yUnit, value)))
+
+  // Keep monotonicity so trend-interpretation prompts remain valid.
+  for (let i = 1; i < rounded.length; i += 1) {
+    if (rounded[i] <= rounded[i - 1]) {
+      const next = rounded[i - 1] + Math.max(0.1, roundByUnit(context.yUnit, minStep))
+      rounded[i] = clampByUnit(context.yUnit, roundByUnit(context.yUnit, next))
+    }
+  }
+
+  return rounded
 }
 
 function classifyMarginalPattern(yValues: number[]): 'linear' | 'diminishing' | 'accelerating' {
@@ -411,6 +662,11 @@ function inferFeedbackPattern(yValues: number[]): 'positive' | 'negative' | 'neu
   return 'neutral'
 }
 
+function getComparisonLabel(visual: { figure?: { comparisonSeries?: Array<{ label: string }> } }): string | null {
+  const label = visual.figure?.comparisonSeries?.[0]?.label
+  return label ?? null
+}
+
 function buildFigureSupplementQuestions(
   domainId: string,
   sourceSlug: string,
@@ -421,189 +677,134 @@ function buildFigureSupplementQuestions(
   contexts.forEach((context, ctxIdx) => {
     FIGURE_SLOPES.forEach((slope) => {
       FIGURE_INTERCEPTS.forEach((intercept) => {
-        const yValues = buildSeriesValues(slope, intercept, ctxIdx + slope + intercept)
-        const visual = buildPassageVisual(context, yValues)
-
-        const yDelta = yValues[3] - yValues[1]
-        const changeFromFirst = yValues[3] - yValues[0]
-        const percentIncrease = Math.round((changeFromFirst / yValues[0]) * 100)
-        const ratio4to2 = Number((yValues[3] / yValues[1]).toFixed(2))
+        const yValues = buildSeriesValues(context, slope, intercept, ctxIdx + slope + intercept)
+        const visual = buildPassageVisual(context, yValues, ctxIdx + slope + intercept)
+        const comparisonLabel = getComparisonLabel(visual)
+        const comparisonValues = visual.figure?.comparisonSeries?.[0]?.yValues ?? null
         const pattern = classifyMarginalPattern(yValues)
-        const reasoningVariant = (ctxIdx + slope + intercept) % 3
+        const xLow = context.xLabel.toLowerCase()
+        const yLow = context.yLabel.toLowerCase()
 
-        const q1Choices = domainId === 'psych-soc'
-          ? buildChoiceSet(
-              pattern === 'accelerating'
-                ? `Higher ${context.xLabel.toLowerCase()} is associated with increasingly larger gains in ${context.yLabel.toLowerCase()} across the measured range.`
-                : pattern === 'diminishing'
-                ? `Higher ${context.xLabel.toLowerCase()} is associated with gains in ${context.yLabel.toLowerCase()} that taper across later conditions.`
-                : `Higher ${context.xLabel.toLowerCase()} is associated with roughly constant incremental gains in ${context.yLabel.toLowerCase()} across the measured range.`,
-              [
-                `${context.xLabel} directly causes changes in ${context.yLabel.toLowerCase()} in all populations, with no plausible confounding variables.`,
-                `There is no measurable association between ${context.xLabel.toLowerCase()} and ${context.yLabel.toLowerCase()} in the observed sample.`,
-                `The relationship must reverse once additional unmeasured groups are included.`,
-              ],
-            )
-          : buildChoiceSet(
-              `${ratio4to2}x`,
-              [
-                `${Number((ratio4to2 + 0.25).toFixed(2))}x`,
-                `${Number(Math.max(0.5, ratio4to2 - 0.25).toFixed(2))}x`,
-                `${Number((ratio4to2 + 0.5).toFixed(2))}x`,
-              ],
-            )
+        // ── Q-a: Curve-shape identification (Skill 4 — data-based reasoning) ──
+        // Real MCAT asks: "The shape of the curve is most consistent with..."
+        const shapeCorrect =
+          pattern === 'diminishing'
+            ? `a saturation-type relationship in which additional increases in ${xLow} produce progressively smaller gains in ${yLow}.`
+            : pattern === 'accelerating'
+            ? `a cooperative or threshold-type relationship in which the response to ${xLow} increases more steeply at higher levels.`
+            : `a linear relationship in which each unit increase in ${xLow} produces approximately the same change in ${yLow}.`
+        const shapeDistractors =
+          pattern === 'diminishing'
+            ? [
+                `a cooperative or threshold-type relationship in which ${yLow} rises more steeply at higher ${xLow}.`,
+                `an inverse relationship in which ${yLow} decreases as ${xLow} increases.`,
+                `a biphasic relationship with stimulation at low ${xLow} and inhibition at high ${xLow}.`,
+              ]
+            : pattern === 'accelerating'
+            ? [
+                `a saturation-type relationship in which gains in ${yLow} diminish at higher ${xLow}.`,
+                `an inverse relationship in which ${yLow} decreases as ${xLow} increases.`,
+                `a linear relationship in which every condition produces the same incremental gain in ${yLow}.`,
+              ]
+            : [
+                `a saturation-type relationship in which ${yLow} plateaus at high ${xLow}.`,
+                `a cooperative or threshold-type relationship in which ${yLow} rises more steeply at higher ${xLow}.`,
+                `a biphasic relationship with stimulation at low ${xLow} and inhibition at high ${xLow}.`,
+              ]
+        const qaChoices = buildChoiceSet(shapeCorrect, shapeDistractors)
 
         questions.push({
           id: `${domainId}-fig-${ctxIdx}-${slope}-${intercept}-a`,
           question:
             domainId === 'psych-soc'
-              ? `Which statement is best supported by the observed association between ${context.xLabel.toLowerCase()} and ${context.yLabel.toLowerCase()}?`
-              : `Relative to condition 2, condition 4 shows approximately what multiple of ${context.yLabel.toLowerCase()}?`,
-          options: q1Choices.options,
-          correctAnswer: q1Choices.correctAnswer,
-          explanation:
-            domainId === 'psych-soc'
-              ? `The data support an association pattern across measured conditions, but they do not by themselves prove causation or universal generalization. The best answer matches the observed pattern (${pattern}).`
-              : `Compute a ratio instead of a simple difference: condition4 / condition2 = ${yValues[3]} / ${yValues[1]} = ${ratio4to2}x.`,
+              ? `The pattern of data in Figure 1 is most consistent with which of the following descriptions of the association between ${xLow} and ${yLow}?`
+              : `The shape of the curve in Figure 1 is most consistent with which of the following relationships between ${xLow} and ${yLow}?`,
+          options: qaChoices.options,
+          correctAnswer: qaChoices.correctAnswer,
+          explanation: `Examine successive increments in ${yLow}: (${yValues[1]}−${yValues[0]}), (${yValues[2]}−${yValues[1]}), (${yValues[3]}−${yValues[2]}). ${pattern === 'diminishing' ? 'These decrease, indicating saturation.' : pattern === 'accelerating' ? 'These increase, indicating a cooperative or threshold effect.' : 'These are roughly equal, indicating a linear relationship.'}`,
           domain: domainId,
           sourceSlug,
-          difficulty: 'easy',
+          difficulty: 'medium',
           family: 'figure-analysis',
           promptType: 'figure',
           visual,
         })
 
-        const q2Choices = domainId === 'psych-soc'
-          ? reasoningVariant === 0
-            ? buildChoiceSet(
-                `The association remains similar after stratifying by a plausible confound and adjusting for baseline group differences.`,
-                [
-                  `The largest subgroup in condition 4 also has the highest ${context.yLabel.toLowerCase()} without adjustment for baseline differences.`,
-                  `A single additional site reports a similar direction of association, but with missing data on key demographics.`,
-                  `Participants in condition 4 report greater motivation after viewing their own performance outcomes.`,
-                ],
-              )
-            : reasoningVariant === 1
-            ? buildChoiceSet(
-                `Prospective measurements show changes in ${context.xLabel.toLowerCase()} precede later shifts in ${context.yLabel.toLowerCase()} after controlling baseline ${context.yLabel.toLowerCase()}.`,
-                [
-                  `A larger cross-sectional sample shows the same trend at one time point.`,
-                  `Condition 4 has the highest mean ${context.yLabel.toLowerCase()} in a post-hoc subgroup analysis.`,
-                  `Participants self-report that ${context.yLabel.toLowerCase()} feels related to ${context.xLabel.toLowerCase()}.`,
-                ],
-              )
-            : buildChoiceSet(
-                `The effect size remains stable after inverse-probability weighting that corrects for differential dropout by baseline characteristics.`,
-                [
-                  `Participants with complete follow-up show a larger association than the full recruited sample.`,
-                  `Only participants above the median ${context.xLabel.toLowerCase()} are retained for final analysis.`,
-                  `A single-site replication keeps similar means but does not report attrition patterns.`,
-                ],
-              )
-          : buildChoiceSet(
-              `${percentIncrease}%`,
-              [
-                `${Math.max(0, percentIncrease - 10)}%`,
-                `${percentIncrease + 10}%`,
-                `${percentIncrease + 20}%`,
-              ],
-            )
+        // ── Q-b: Prediction question (Skill 2 — scientific reasoning) ──
+        // Real MCAT asks: "If a fifth condition were added..."
+        const nextX = visual.figure?.xValues?.[3] ?? 4
+        const lastDelta = yValues[3] - yValues[2]
+        const prevDelta = yValues[2] - yValues[1]
+        const predictedCorrect =
+          pattern === 'diminishing'
+            ? `${yLow} would increase, but by a smaller increment than the change from condition 3 to condition 4.`
+            : pattern === 'accelerating'
+            ? `${yLow} would increase by a larger increment than the change from condition 3 to condition 4.`
+            : `${yLow} would increase by approximately the same increment as the change from condition 3 to condition 4.`
+        const predictedDistractors =
+          pattern === 'diminishing'
+            ? [
+                `${yLow} would increase by the same increment as from condition 3 to 4, because the trend is linear.`,
+                `${yLow} would decrease below the condition 4 value, because the system is saturated.`,
+                `${yLow} would remain exactly at the condition 4 value, because no further change is possible.`,
+              ]
+            : pattern === 'accelerating'
+            ? [
+                `${yLow} would increase by a smaller increment than from condition 3 to 4, because saturation must occur.`,
+                `${yLow} would decrease, because high ${xLow} levels are toxic.`,
+                `${yLow} would remain exactly at the condition 4 value, because the axis maximum has been reached.`,
+              ]
+            : [
+                `${yLow} would increase by a much larger increment, because cooperative effects always amplify at higher concentrations.`,
+                `${yLow} would decrease, because linear systems must reverse direction after four data points.`,
+                `${yLow} would remain unchanged, because all responsive capacity is used by condition 4.`,
+              ]
+        const qbChoices = buildChoiceSet(predictedCorrect, predictedDistractors)
 
         questions.push({
           id: `${domainId}-fig-${ctxIdx}-${slope}-${intercept}-b`,
-          question:
-            domainId === 'psych-soc'
-              ? reasoningVariant === 0
-                ? `Which additional result would most strengthen the claim that the observed association is not primarily driven by confounding?`
-                : reasoningVariant === 1
-                ? `Which additional result would most strengthen a directional interpretation from ${context.xLabel.toLowerCase()} to ${context.yLabel.toLowerCase()}?`
-                : `Which additional result would most reduce concern that selection bias is driving the observed association?`
-              : `Relative to condition 1, what is the approximate percent increase in ${context.yLabel.toLowerCase()} at condition 4?`,
-          options: q2Choices.options,
-          correctAnswer: q2Choices.correctAnswer,
-          explanation:
-            domainId === 'psych-soc'
-              ? reasoningVariant === 0
-                ? `The strongest support comes from persistence of the association after explicit control for plausible confounders and baseline differences, which improves causal interpretability without overclaiming.`
-                : reasoningVariant === 1
-                ? `Directional inference is stronger when temporal precedence is demonstrated and baseline outcome differences are controlled, reducing reverse-causation ambiguity.`
-                : `Selection-bias concerns are best addressed when analysis corrects differential dropout and the effect remains stable after that correction.`
-              : `Percent increase = (condition4 - condition1) / condition1 x 100 = (${yValues[3]} - ${yValues[0]}) / ${yValues[0]} x 100 ≈ ${percentIncrease}%.`,
+          question: `If investigators measured a fifth condition at a ${xLow} level above condition 4, which outcome is most consistent with the trend shown in Figure 1?`,
+          options: qbChoices.options,
+          correctAnswer: qbChoices.correctAnswer,
+          explanation: `The increments between successive conditions (${Number((yValues[1] - yValues[0]).toFixed(1))}, ${Number(prevDelta.toFixed(1))}, ${Number(lastDelta.toFixed(1))}) ${pattern === 'diminishing' ? 'are decreasing, so the next increment should be even smaller.' : pattern === 'accelerating' ? 'are increasing, so the next increment should be larger still.' : 'are roughly constant, so the next increment should be similar.'} This extrapolation follows the observed pattern without assuming a change in mechanism.`,
           domain: domainId,
           sourceSlug,
-          difficulty: 'easy',
+          difficulty: 'medium',
           family: 'figure-analysis',
           promptType: 'figure',
           visual,
         })
 
-        const hardClaim =
+        // ── Q-c: Overclaim evaluation (Skill 3 — research design reasoning) ──
+        // Real MCAT asks: "A student concludes X. Is this conclusion justified?"
+        const overclaim =
           domainId === 'psych-soc'
-            ? pattern === 'diminishing'
-              ? `The observed association appears to show diminishing marginal increases in ${context.yLabel.toLowerCase()} at higher ${context.xLabel.toLowerCase()} levels, but the data alone do not establish causality.`
-              : pattern === 'accelerating'
-              ? `The observed association appears to strengthen at higher ${context.xLabel.toLowerCase()} levels, but causal direction and confounding remain unresolved from these data alone.`
-              : `The observed association is approximately linear across measured conditions, but causal claims and broad generalization are not justified by this dataset alone.`
-            : pattern === 'diminishing'
-            ? `The response shows diminishing marginal gains as ${context.xLabel.toLowerCase()} increases.`
-            : pattern === 'accelerating'
-            ? `The response accelerates at higher ${context.xLabel.toLowerCase()} conditions.`
-            : `The response is approximately linear across measured conditions.`
-
-        const hardDistractors =
+            ? `increasing ${xLow} causes higher ${yLow} in all populations`
+            : `increasing ${xLow} will always increase ${yLow} regardless of conditions`
+        const overclaimCorrect =
+          domainId === 'psych-soc'
+            ? `No; the data show an association in one sample but cannot establish causation or generalizability to other populations.`
+            : `No; the data demonstrate a trend within the tested range but do not rule out a plateau or reversal beyond condition 4, and the mechanism is not confirmed by a single experiment.`
+        const overclaimDistractors =
           domainId === 'psych-soc'
             ? [
-                `Because higher ${context.xLabel.toLowerCase()} levels align with higher ${context.yLabel.toLowerCase()}, the figure proves a causal effect in the sampled population.`,
-                `The observed trend can be generalized to all populations because four ordered conditions were measured.`,
-                `Without variability estimates (such as error bars or confidence intervals), no directional pattern can be interpreted from the figure at all.`,
-              ]
-            : pattern === 'diminishing'
-            ? [
-                `The response accelerates at higher ${context.xLabel.toLowerCase()} conditions.`,
-                `The response is approximately linear across measured conditions.`,
-                `The response is incompatible with any trend interpretation.`,
-              ]
-            : pattern === 'accelerating'
-            ? [
-                `The response shows diminishing marginal gains as ${context.xLabel.toLowerCase()} increases.`,
-                `The response is approximately linear across measured conditions.`,
-                `The response is incompatible with any trend interpretation.`,
+                `Yes; the monotonic increase across four conditions establishes a causal relationship.`,
+                `Yes; four data points are sufficient to prove causation if the trend is consistent.`,
+                `No; the conclusion is invalid because the data show a decrease between conditions 3 and 4.`,
               ]
             : [
-                `The response shows diminishing marginal gains as ${context.xLabel.toLowerCase()} increases.`,
-                `The response accelerates at higher ${context.xLabel.toLowerCase()} conditions.`,
-                `The response is incompatible with any trend interpretation.`,
+                `Yes; four ascending data points confirm a universal relationship between ${xLow} and ${yLow}.`,
+                `Yes; because the experiment included multiple conditions, the conclusion is generalizable.`,
+                `No; the data would need to show a decrease to prove any relationship exists.`,
               ]
-
-        const q3Choices = buildChoiceSet(hardClaim, hardDistractors)
-
-        const feedbackPattern = inferFeedbackPattern(yValues)
-        const feedbackPrompt = `Which feedback interpretation best matches how ${context.yLabel.toLowerCase()} changes as ${context.xLabel.toLowerCase()} increases?`
-        const feedbackChoices = buildChoiceSet(
-          feedbackPattern === 'positive'
-            ? `A positive-feedback-like pattern, because later condition-to-condition gains are larger than earlier gains.`
-            : feedbackPattern === 'negative'
-            ? `A negative-feedback-like pattern, because gains dampen across later conditions.`
-            : `No strong feedback signature is evident; changes are approximately linear across conditions.`,
-          [
-            `A positive-feedback-like pattern, because any increase across conditions proves runaway amplification.`,
-            `A negative-feedback-like pattern, because any increase must imply homeostatic suppression.`,
-            `No interpretation is possible from ordered-condition trends unless significance testing is shown.`,
-          ],
-        )
+        const qcChoices = buildChoiceSet(overclaimCorrect, overclaimDistractors)
 
         questions.push({
           id: `${domainId}-fig-${ctxIdx}-${slope}-${intercept}-c`,
-          question:
-            domainId === 'psych-soc'
-              ? `Which interpretation best fits the observed trend while respecting limits of observational behavioral data?`
-              : `Which interpretation is best supported by the pattern of first differences across the four conditions?`,
-          options: q3Choices.options,
-          correctAnswer: q3Choices.correctAnswer,
-          explanation:
-            domainId === 'psych-soc'
-              ? `First-difference pattern supports the selected association trend, but the figure alone cannot rule out confounding, establish causal direction, or justify universal generalization.`
-              : `Compare stepwise changes: (${yValues[1]}-${yValues[0]}), (${yValues[2]}-${yValues[1]}), (${yValues[3]}-${yValues[2]}). Their pattern supports the selected interpretation.`,
+          question: `A student concludes from Figure 1 that ${overclaim}. Is this conclusion justified by the data?`,
+          options: qcChoices.options,
+          correctAnswer: qcChoices.correctAnswer,
+          explanation: `The data show a trend within the measured range, but a single experiment with four conditions cannot establish universal causation. ${domainId === 'psych-soc' ? 'Observational data cannot rule out confounders or demonstrate causation without additional controls.' : 'The response could plateau, reverse, or depend on conditions not tested. Replication with controls would be needed for a causal claim.'}`,
           domain: domainId,
           sourceSlug,
           difficulty: 'hard',
@@ -611,18 +812,43 @@ function buildFigureSupplementQuestions(
           promptType: 'figure',
           visual,
         })
+
+        // ── Q-d: Experimental design (Skill 3) ──
+        // Real MCAT asks: "Which modification would best test whether..."
+        const designCorrect =
+          domainId === 'psych-soc'
+            ? `Randomly assign participants to ${xLow} conditions and measure ${yLow} prospectively, controlling for baseline differences.`
+            : pattern === 'diminishing'
+            ? `Repeat the experiment with additional conditions beyond condition 4 to determine whether ${yLow} reaches a true plateau or continues to increase.`
+            : pattern === 'accelerating'
+            ? `Add a specific inhibitor of the proposed mechanism and repeat the measurement to determine whether the accelerating trend is abolished.`
+            : `Vary a second independent variable while holding ${xLow} constant to determine whether the linear trend depends on other experimental conditions.`
+        const designDistractors =
+          domainId === 'psych-soc'
+            ? [
+                `Collect a larger cross-sectional sample at a single time point and compare means across groups.`,
+                `Remove condition 2 and condition 3 to increase the contrast between endpoints.`,
+                `Ask participants whether they believe ${xLow} affects ${yLow} and use their responses as the primary outcome.`,
+              ]
+            : [
+                `Remove condition 1 so the curve starts at a higher baseline value.`,
+                `Repeat the same four conditions and average the two data sets to reduce random error.`,
+                `Convert the y-axis to a logarithmic scale and re-interpret the trend without additional data.`,
+              ]
+        const qdChoices = buildChoiceSet(designCorrect, designDistractors)
 
         questions.push({
-          id: `${domainId}-fig-${ctxIdx}-${slope}-${intercept}-fb`,
-          question: feedbackPrompt,
-          options: feedbackChoices.options,
-          correctAnswer: feedbackChoices.correctAnswer,
+          id: `${domainId}-fig-${ctxIdx}-${slope}-${intercept}-d`,
+          question:
+            domainId === 'psych-soc'
+              ? `Which experimental modification would most directly test whether the association shown in Figure 1 reflects a causal relationship?`
+              : `Based on the trend in Figure 1, which follow-up experiment would most directly address the primary limitation of this data set?`,
+          options: qdChoices.options,
+          correctAnswer: qdChoices.correctAnswer,
           explanation:
-            feedbackPattern === 'positive'
-              ? `First differences increase across conditions, which is most consistent with a positive-feedback-like amplification pattern in this plotted range.`
-              : feedbackPattern === 'negative'
-              ? `First differences shrink across conditions, which is most consistent with a negative-feedback-like damping pattern in this plotted range.`
-              : `First differences are approximately constant, so the trend is linear and does not strongly favor positive or negative feedback.`,
+            domainId === 'psych-soc'
+              ? `Random assignment and prospective measurement establish temporal precedence and reduce confounding, which are necessary to infer causation from an observed association.`
+              : `${pattern === 'diminishing' ? 'The main limitation is that four points cannot confirm whether a true plateau is reached. Extending the concentration range addresses this.' : pattern === 'accelerating' ? 'Adding a specific inhibitor tests whether the accelerating response depends on the proposed mechanism, distinguishing it from alternative explanations.' : 'The linear trend could be context-dependent. Varying a second factor tests whether the observed relationship is robust.'} Merely replotting or dropping conditions does not generate new information.`,
           domain: domainId,
           sourceSlug,
           difficulty: 'hard',
@@ -631,22 +857,37 @@ function buildFigureSupplementQuestions(
           visual,
         })
 
-        if (domainId === 'psych-soc') {
-          const q4Choices = buildChoiceSet(
-            `Run a longitudinal follow-up that measures baseline ${context.yLabel.toLowerCase()}, then prospectively measures later ${context.yLabel.toLowerCase()} after changes in ${context.xLabel.toLowerCase()}.`,
-            [
-              `Increase sample size at one cross-sectional time point and compare updated means only.`,
-              `Remove intermediate conditions so only condition 1 and 4 remain in the final plot.`,
-              `Retain only participants with the most extreme ${context.xLabel.toLowerCase()} values to increase contrast.`,
-            ],
-          )
+        // ── Q-cmp: Comparison-trace mechanistic interpretation (Skill 2) ──
+        // Real MCAT asks about what the difference between traces implies about mechanism
+        if (comparisonLabel && comparisonValues) {
+          const primaryGain = yValues[3] - yValues[0]
+          const compGain = comparisonValues[3] - comparisonValues[0]
+          const startDiff = yValues[0] - comparisonValues[0]
+          const endDiff = yValues[3] - comparisonValues[3]
+          const diverges = Math.abs(endDiff) > Math.abs(startDiff) * 1.3
+
+          const cmpCorrect = diverges
+            ? `The difference between the two traces increases at higher ${xLow} levels, suggesting that ${comparisonLabel} reduces the magnitude of the response in a concentration-dependent manner.`
+            : `The two traces maintain a roughly constant offset across conditions, suggesting that ${comparisonLabel} shifts the baseline level of ${yLow} without altering the dose-response relationship.`
+          const cmpDistractors = diverges
+            ? [
+                `The two traces converge at higher ${xLow}, indicating that ${comparisonLabel} only affects baseline ${yLow}.`,
+                `${comparisonLabel} has no measurable effect because both traces increase across conditions.`,
+                `The traces cross between conditions 2 and 3, reversing which group has higher ${yLow}.`,
+              ]
+            : [
+                `The traces diverge at higher ${xLow}, indicating a concentration-dependent effect of ${comparisonLabel}.`,
+                `${comparisonLabel} eliminates the response entirely at condition 4.`,
+                `The traces are indistinguishable at all conditions, so ${comparisonLabel} has no effect.`,
+              ]
+          const qcmpChoices = buildChoiceSet(cmpCorrect, cmpDistractors)
 
           questions.push({
-            id: `${domainId}-fig-${ctxIdx}-${slope}-${intercept}-d`,
-            question: `Which follow-up design most directly tests whether reverse causation could explain this association?`,
-            options: q4Choices.options,
-            correctAnswer: q4Choices.correctAnswer,
-            explanation: `Reverse-causation concerns are best tested with temporal ordering: establish baseline outcome levels, then evaluate whether exposure changes precede later outcome changes.`,
+            id: `${domainId}-fig-${ctxIdx}-${slope}-${intercept}-cmp`,
+            question: `Based on the comparison between the primary trace and ${comparisonLabel} in Figure 1, which conclusion about the effect of ${comparisonLabel} on ${yLow} is best supported?`,
+            options: qcmpChoices.options,
+            correctAnswer: qcmpChoices.correctAnswer,
+            explanation: `At condition 1, the difference is ${Number(Math.abs(startDiff).toFixed(1))} ${context.yUnit}; at condition 4, the difference is ${Number(Math.abs(endDiff).toFixed(1))} ${context.yUnit}. ${diverges ? 'The growing gap indicates a dose-dependent interaction, not merely a baseline shift.' : 'The roughly constant offset across conditions indicates a baseline shift without altering the slope of the response.'}`,
             domain: domainId,
             sourceSlug,
             difficulty: 'hard',
@@ -798,10 +1039,18 @@ function buildSciencePassageBlocks(contexts: PassageBlockContext[]): MCATDiagnos
     for (let variant = 0; variant < 12; variant += 1) {
       const slope = FIGURE_SLOPES[variant % FIGURE_SLOPES.length]
       const intercept = FIGURE_INTERCEPTS[(variant + index) % FIGURE_INTERCEPTS.length]
-      const yValues = buildSeriesValues(slope, intercept, variant + index)
+      const yValues = buildSeriesValues(context.dataContext ?? {
+        context: context.title,
+        xLabel: 'Condition',
+        yLabel: 'Response',
+        xUnit: 'step',
+        yUnit: 'units',
+      }, slope, intercept, variant + index)
       const passageId = `${context.domain}-passage-${index}-${variant}`
       const body = context.body
-      const visual = context.dataContext ? buildPassageVisual(context.dataContext, yValues) : null
+      const visual = context.dataContext ? buildPassageVisual(context.dataContext, yValues, variant + index) : null
+      const comparisonLabel = visual?.figure?.comparisonSeries?.[0]?.label ?? null
+      const comparisonValues = visual?.figure?.comparisonSeries?.[0]?.yValues ?? null
       const basePassage = {
         id: passageId,
         title: context.title,
@@ -809,29 +1058,165 @@ function buildSciencePassageBlocks(contexts: PassageBlockContext[]): MCATDiagnos
         ...(visual ?? {}),
       }
 
-      const rateChange = yValues[3] - yValues[1]
-      const trendClaim =
-        classifyMarginalPattern(yValues) === 'diminishing'
-          ? 'diminishing marginal gains'
-          : classifyMarginalPattern(yValues) === 'accelerating'
-          ? 'accelerating response'
-          : 'approximately linear response'
-      const normalizedFold = Number((yValues[3] / yValues[0]).toFixed(2))
+      // ── Passage Q1: Mechanism-integration (Skill 2) ──
+      // Integrates passage hypothesis with figure data pattern — core MCAT archetype
+      const dataPattern = classifyMarginalPattern(yValues)
+      const posHyp = context.positiveHypothesis ?? 'amplification dominates across conditions'
+      const negHyp = context.negativeHypothesis ?? 'a damping mechanism limits later gains'
+      const mechVar = context.mechanismVariable ?? 'the measured response'
+      const xLbl = context.dataContext?.xLabel ?? 'the input'
+      const yLbl = context.dataContext?.yLabel ?? 'the measured response'
 
-      const q1 = buildChoiceSet(
-        `${normalizedFold}x`,
-        [
-          `${Number((normalizedFold + 0.25).toFixed(2))}x`,
-          `${Number(Math.max(0.5, normalizedFold - 0.25).toFixed(2))}x`,
-          `${Number((normalizedFold + 0.5).toFixed(2))}x`,
-        ],
-      )
+      const q1Correct =
+        dataPattern === 'accelerating'
+          ? `The data are more consistent with the hypothesis that ${posHyp}, because successive increments in ${yLbl.toLowerCase()} grow larger at higher ${xLbl.toLowerCase()} levels.`
+          : dataPattern === 'diminishing'
+          ? `The data are more consistent with the hypothesis that ${negHyp}, because successive increments in ${yLbl.toLowerCase()} grow smaller at higher ${xLbl.toLowerCase()} levels.`
+          : `Neither hypothesis is strongly favored; the roughly constant increments across conditions are consistent with a simple linear dose-response.`
+      const q1Distractors =
+        dataPattern === 'accelerating'
+          ? [
+              `The data support the hypothesis that ${negHyp}, because ${yLbl.toLowerCase()} increases across all four conditions.`,
+              `The hypotheses cannot be distinguished because both predict that ${yLbl.toLowerCase()} will increase.`,
+              `Neither hypothesis is relevant because the data show a decrease in ${yLbl.toLowerCase()} between conditions 3 and 4.`,
+            ]
+          : dataPattern === 'diminishing'
+          ? [
+              `The data support the hypothesis that ${posHyp}, because ${yLbl.toLowerCase()} is higher at condition 4 than at condition 1.`,
+              `The hypotheses cannot be distinguished without error bars on each data point.`,
+              `The data disprove both hypotheses because ${yLbl.toLowerCase()} never reaches zero.`,
+            ]
+          : [
+              `The data definitively confirm that ${posHyp} because any monotonic increase indicates amplification.`,
+              `The data definitively confirm that ${negHyp} because every condition is higher than the previous one.`,
+              `The data are uninterpretable unless the response decreases at some condition.`,
+            ]
+      const q1 = buildChoiceSet(q1Correct, q1Distractors)
+
       questions.push({
         id: `${passageId}-q1`,
-        question: 'After normalizing to condition 1, what is the fold-change at condition 4?',
+        question: `Based on the data in Figure 1 and the competing hypotheses described in the passage, which conclusion about ${mechVar} is best supported?`,
         options: q1.options,
         correctAnswer: q1.correctAnswer,
-        explanation: `Fold-change at condition 4 = condition4 / condition1 = ${yValues[3]} / ${yValues[0]} = ${normalizedFold}x.`,
+        explanation: `To distinguish the hypotheses, compare successive increments: (${yValues[1]}−${yValues[0]}), (${yValues[2]}−${yValues[1]}), (${yValues[3]}−${yValues[2]}). ${dataPattern === 'accelerating' ? 'These increase, which matches the amplification hypothesis.' : dataPattern === 'diminishing' ? 'These decrease, which matches the damping hypothesis.' : 'These are roughly constant, so neither feedback model is preferentially supported.'} A common error is to conclude that any increase supports amplification — the shape of the curve, not the overall direction, distinguishes the hypotheses.`,
+        domain: context.domain,
+        sourceSlug: context.sourceSlug,
+        difficulty: 'hard',
+        family: 'passage-data-interpretation',
+        promptType: 'passage',
+        passage: basePassage,
+      })
+
+      // ── Passage Q2: "What if" perturbation question (Skill 2) ──
+      // Real MCAT frequently asks: "If the investigators added [intervention], what would happen to the curve?"
+      const perturbationCorrect =
+        dataPattern === 'diminishing'
+          ? `The curve would reach its plateau at a lower ${yLbl.toLowerCase()} value, but the saturation-type shape would be preserved.`
+          : dataPattern === 'accelerating'
+          ? `The steepening portion of the curve would shift to higher ${xLbl.toLowerCase()} values, requiring greater input to achieve the same degree of response.`
+          : `The slope of the linear relationship would decrease, producing smaller gains in ${yLbl.toLowerCase()} per unit increase in ${xLbl.toLowerCase()}.`
+      const perturbationDistractors =
+        dataPattern === 'diminishing'
+          ? [
+              `The curve would become linear because saturation kinetics cannot occur with partial inhibition.`,
+              `The curve would shift upward at all conditions, increasing both baseline and maximal ${yLbl.toLowerCase()}.`,
+              `The curve would reverse direction, causing ${yLbl.toLowerCase()} to decrease as ${xLbl.toLowerCase()} increases.`,
+            ]
+          : dataPattern === 'accelerating'
+          ? [
+              `The curve would become flat because any inhibition eliminates the response entirely.`,
+              `The curve would shift upward, reaching higher ${yLbl.toLowerCase()} values at every condition.`,
+              `The curve's shape would invert, showing diminishing returns instead of acceleration.`,
+            ]
+          : [
+              `The linear relationship would become exponential because inhibition always introduces nonlinearity.`,
+              `The line would shift upward, increasing ${yLbl.toLowerCase()} at every ${xLbl.toLowerCase()} level.`,
+              `${yLbl} would drop to zero at all conditions because any inhibition abolishes the response.`,
+            ]
+      const q2 = buildChoiceSet(perturbationCorrect, perturbationDistractors)
+
+      questions.push({
+        id: `${passageId}-q2`,
+        question: `If the investigators repeated the experiment in Figure 1 with a partial inhibitor of the pathway responsible for ${yLbl.toLowerCase()}, which effect on the dose-response curve would be most likely?`,
+        options: q2.options,
+        correctAnswer: q2.correctAnswer,
+        explanation: `Partial inhibition reduces the maximal output of a pathway without eliminating it. ${dataPattern === 'diminishing' ? 'For a saturation-type curve, this lowers the plateau (Vmax equivalent) while preserving the overall saturating shape.' : dataPattern === 'accelerating' ? 'For a cooperative/threshold response, partial inhibition shifts the activation threshold rightward without changing the fundamental cooperativity.' : 'For a linear response, partial inhibition reduces the slope — less output per unit input — while maintaining linearity.'} The shape of the curve reflects the underlying mechanism, which partial inhibition modifies but does not abolish.`,
+        domain: context.domain,
+        sourceSlug: context.sourceSlug,
+        difficulty: 'hard',
+        family: 'passage-data-interpretation',
+        promptType: 'passage',
+        passage: basePassage,
+      })
+
+      // ── Passage Q3: Experimental limitation / confound identification (Skill 3) ──
+      // Real MCAT asks: "Which of the following is the greatest limitation of this experimental design?"
+      const limitationCorrect =
+        context.domain === 'psych-soc'
+          ? `The observational design cannot distinguish whether changes in ${xLbl.toLowerCase()} cause changes in ${yLbl.toLowerCase()} or whether a confounding variable drives both.`
+          : `The experiment measures only one time point and cannot determine whether the observed relationship persists, reverses, or changes at later time points or higher concentrations.`
+      const limitationDistractors =
+        context.domain === 'psych-soc'
+          ? [
+              `The study used four conditions instead of two, which makes the results uninterpretable.`,
+              `The investigators measured ${yLbl.toLowerCase()} directly, but should have used a proxy variable instead.`,
+              `The data cannot be analyzed because no mathematical model was fit to the curve.`,
+            ]
+          : [
+              `The experiment used four different ${xLbl.toLowerCase()} levels, which is insufficient because exactly five are needed for statistical validity.`,
+              `The investigators should have measured a different dependent variable to make the results interpretable.`,
+              `The experiment is invalid because both conditions show an increase in ${yLbl.toLowerCase()}.`,
+            ]
+      const q3 = buildChoiceSet(limitationCorrect, limitationDistractors)
+
+      questions.push({
+        id: `${passageId}-q3`,
+        question: `Which of the following is the most significant limitation of the experimental approach described in the passage?`,
+        options: q3.options,
+        correctAnswer: q3.correctAnswer,
+        explanation: `${context.domain === 'psych-soc' ? 'In observational studies, the primary limitation is the inability to establish causation. Without random assignment, confounding variables may explain the observed association.' : 'Measuring a single endpoint at one time point limits conclusions about the full dose-response relationship. The response could plateau, reverse, or change character beyond the tested range or at different time points.'} This type of limitation question is a staple of MCAT passage sets.`,
+        domain: context.domain,
+        sourceSlug: context.sourceSlug,
+        difficulty: 'hard',
+        family: 'passage-data-interpretation',
+        promptType: 'passage',
+        passage: basePassage,
+      })
+
+      // ── Passage Q4: Conclusion NOT supported (Skill 4 — "which is NOT") ──
+      // Classic MCAT negative-stem question
+      const notSupportedCorrect =
+        dataPattern === 'accelerating'
+          ? `${yLbl} exhibits saturation kinetics at the highest ${xLbl.toLowerCase()} level tested.`
+          : dataPattern === 'diminishing'
+          ? `${yLbl} increases at a faster rate between conditions 3 and 4 than between conditions 1 and 2.`
+          : `The rate of increase in ${yLbl.toLowerCase()} accelerates substantially across the four conditions.`
+      const notSupportedDistractors =
+        dataPattern === 'accelerating'
+          ? [
+              `${yLbl} is higher at condition 4 than at condition 1.`,
+              `The rate of change in ${yLbl.toLowerCase()} increases across successive conditions.`,
+              `There is a positive relationship between ${xLbl.toLowerCase()} and ${yLbl.toLowerCase()} within the tested range.`,
+            ]
+          : dataPattern === 'diminishing'
+          ? [
+              `${yLbl} is higher at condition 4 than at condition 1.`,
+              `The rate of increase in ${yLbl.toLowerCase()} slows at higher ${xLbl.toLowerCase()} levels.`,
+              `There is a positive relationship between ${xLbl.toLowerCase()} and ${yLbl.toLowerCase()} within the tested range.`,
+            ]
+          : [
+              `${yLbl} is higher at condition 4 than at condition 1.`,
+              `The increments in ${yLbl.toLowerCase()} are approximately equal across successive conditions.`,
+              `There is a positive relationship between ${xLbl.toLowerCase()} and ${yLbl.toLowerCase()} within the tested range.`,
+            ]
+      const q4 = buildChoiceSet(notSupportedCorrect, notSupportedDistractors)
+
+      questions.push({
+        id: `${passageId}-q4`,
+        question: `Which of the following conclusions is NOT supported by the data in Figure 1?`,
+        options: q4.options,
+        correctAnswer: q4.correctAnswer,
+        explanation: `The correct answer is the statement that contradicts the observed data pattern. ${dataPattern === 'accelerating' ? 'The data show accelerating gains, not saturation. Saturation would require diminishing increments at higher conditions.' : dataPattern === 'diminishing' ? 'The data show diminishing increments, which is the opposite of a faster rate at higher conditions.' : 'The roughly equal increments contradict the claim that the response accelerates.'} The other three statements are all consistent with the figure.`,
         domain: context.domain,
         sourceSlug: context.sourceSlug,
         difficulty: 'medium',
@@ -840,106 +1225,42 @@ function buildSciencePassageBlocks(contexts: PassageBlockContext[]): MCATDiagnos
         passage: basePassage,
       })
 
-      // q2 — Mechanism-integration question: link data trend to passage hypothesis
-      const dataPattern = classifyMarginalPattern(yValues)
-      const posHyp = context.positiveHypothesis ?? 'amplification dominates across conditions'
-      const negHyp = context.negativeHypothesis ?? 'a damping mechanism limits later gains'
-      const mechVar = context.mechanismVariable ?? 'the measured response'
-      const q2Stem = `Based on the data in Figure 1 and the competing hypotheses described in the passage, which conclusion about ${mechVar} is best supported?`
-      const q2Correct =
-        dataPattern === 'accelerating'
-          ? `The data support the hypothesis that ${posHyp}, because condition-to-condition gains increase across later conditions.`
-          : dataPattern === 'diminishing'
-          ? `The data support the hypothesis that ${negHyp}, because condition-to-condition gains decrease across later conditions.`
-          : `Neither hypothesis is strongly favored; the roughly constant condition-to-condition gains are consistent with a linear dose-response rather than a feedback mechanism.`
-      const q2Distractors =
-        dataPattern === 'accelerating'
+      // ── Passage Q5: Comparison-trace interpretation (Skill 2) — only when two series exist ──
+      if (comparisonLabel && comparisonValues) {
+        const startDiff = yValues[0] - comparisonValues[0]
+        const endDiff = yValues[3] - comparisonValues[3]
+        const diverges = Math.abs(endDiff) > Math.abs(startDiff) * 1.3
+
+        const q5Correct = diverges
+          ? `${comparisonLabel} attenuates the response in a ${xLbl.toLowerCase()}-dependent manner, as evidenced by the increasing gap between the two traces at higher conditions.`
+          : `${comparisonLabel} reduces ${yLbl.toLowerCase()} by a similar amount at all ${xLbl.toLowerCase()} levels, consistent with a mechanism that lowers the baseline without altering the dose-response slope.`
+        const q5Distractors = diverges
           ? [
-              `The data support the hypothesis that ${negHyp}, because ${mechVar} increases across all four conditions.`,
-              `The data are inconclusive because both hypotheses predict an increase and additional control experiments are required to distinguish them.`,
-              `Neither hypothesis applies because the data show a decrease in ${mechVar} between conditions 3 and 4.`,
-            ]
-          : dataPattern === 'diminishing'
-          ? [
-              `The data support the hypothesis that ${posHyp}, because ${mechVar} continues to increase at every condition.`,
-              `The data are inconclusive because the total change from condition 1 to 4 is too small to distinguish the hypotheses.`,
-              `Neither hypothesis applies because a damping mechanism would require ${mechVar} to decrease below baseline.`,
+              `${comparisonLabel} has no detectable effect on ${yLbl.toLowerCase()} because both traces increase across conditions.`,
+              `${comparisonLabel} shifts the curve to the right without changing the maximal response.`,
+              `${comparisonLabel} increases ${yLbl.toLowerCase()} at low ${xLbl.toLowerCase()} levels but decreases it at high ${xLbl.toLowerCase()} levels.`,
             ]
           : [
-              `The data definitively confirm that ${posHyp} because any monotonic increase proves amplification.`,
-              `The data definitively confirm that ${negHyp} because every condition shows a higher value than the previous one.`,
-              `The data are uninterpretable without significance testing and therefore no conclusion can be drawn about either hypothesis.`,
+              `${comparisonLabel} selectively reduces ${yLbl.toLowerCase()} only at the highest ${xLbl.toLowerCase()} level tested.`,
+              `${comparisonLabel} has no effect because the two traces have similar endpoints.`,
+              `${comparisonLabel} reverses the direction of the response, converting the increase into a decrease.`,
             ]
-      const q2 = buildChoiceSet(q2Correct, q2Distractors)
-      questions.push({
-        id: `${passageId}-q2`,
-        question: q2Stem,
-        options: q2.options,
-        correctAnswer: q2.correctAnswer,
-        explanation: `To distinguish the competing hypotheses, examine the first differences: (${yValues[1]}−${yValues[0]}), (${yValues[2]}−${yValues[1]}), (${yValues[3]}−${yValues[2]}). ${dataPattern === 'accelerating' ? 'These increase, supporting amplification.' : dataPattern === 'diminishing' ? 'These decrease, supporting a damping/negative-feedback mechanism.' : 'These are roughly constant, consistent with a linear response.'}`,
-        domain: context.domain,
-        sourceSlug: context.sourceSlug,
-        difficulty: 'hard',
-        family: 'passage-data-interpretation',
-        promptType: 'passage',
-        passage: basePassage,
-      })
+        const q5 = buildChoiceSet(q5Correct, q5Distractors)
 
-      const q3 = buildChoiceSet(
-        'Include a matched control and randomize condition assignment before repeating the measurement.',
-        [
-          'Extrapolate one additional condition and treat it as causal confirmation.',
-          'Average only the top two conditions to reduce noise and declare significance.',
-          'Discard condition 1 because baseline values can bias trend interpretation.',
-        ],
-      )
-      questions.push({
-        id: `${passageId}-q3`,
-        question: 'Which follow-up design change would most strengthen a causal inference from these data?',
-        options: q3.options,
-        correctAnswer: q3.correctAnswer,
-        explanation: 'The strongest causal upgrade is to reduce confounding and selection bias with matched controls and randomized assignment before repeating measurements.',
-        domain: context.domain,
-        sourceSlug: context.sourceSlug,
-        difficulty: 'hard',
-        family: 'passage-data-interpretation',
-        promptType: 'passage',
-        passage: basePassage,
-      })
-
-      const feedbackPattern = inferFeedbackPattern(yValues)
-      const expectedFeedback: 'positive' | 'negative' = (variant + index) % 2 === 0 ? 'negative' : 'positive'
-      const observedDescription =
-        feedbackPattern === 'positive'
-          ? 'later condition-to-condition gains are larger than early gains'
-          : feedbackPattern === 'negative'
-          ? 'later condition-to-condition gains are smaller than early gains'
-          : 'condition-to-condition gains are roughly constant'
-      const q4Correct =
-        feedbackPattern === 'neutral'
-          ? 'The trend is roughly linear, so the figure does not strongly distinguish positive from negative feedback in this range.'
-          : feedbackPattern === expectedFeedback
-          ? `The figure is consistent with the proposed ${expectedFeedback}-feedback model because ${observedDescription}.`
-          : `The figure challenges the proposed ${expectedFeedback}-feedback model and is more consistent with ${feedbackPattern} feedback because ${observedDescription}.`
-      const q4 = buildChoiceSet(q4Correct, [
-        `The figure proves a universal causal feedback law that must generalize to all populations and conditions.`,
-        `Any monotonic increase is definitive evidence for positive feedback regardless of changes in first differences.`,
-        `The data are uninterpretable unless the graph first decreases below baseline.`,
-      ])
-
-      questions.push({
-        id: `${passageId}-q4`,
-        question: `Passage claim: increasing ${context.dataContext?.xLabel ?? 'the input'} triggers a ${expectedFeedback} feedback process in ${context.dataContext?.yLabel ?? 'the measured response'}. Based on the figure trend, which evaluation is best supported?`,
-        options: q4.options,
-        correctAnswer: q4.correctAnswer,
-        explanation: `Feedback-model checks should compare first differences across ordered conditions. Here, ${observedDescription}, so the best-supported conclusion is the one that matches this pattern without overgeneralizing causality.`,
-        domain: context.domain,
-        sourceSlug: context.sourceSlug,
-        difficulty: 'hard',
-        family: 'passage-data-interpretation',
-        promptType: 'passage',
-        passage: basePassage,
-      })
+        questions.push({
+          id: `${passageId}-q5`,
+          question: `Based on both traces in Figure 1, which statement best describes the effect of ${comparisonLabel} on ${yLbl.toLowerCase()} across the range of ${xLbl.toLowerCase()} tested?`,
+          options: q5.options,
+          correctAnswer: q5.correctAnswer,
+          explanation: `Compare the gap between traces at each condition. At condition 1 the difference is ${Number(Math.abs(startDiff).toFixed(1))} ${context.dataContext?.yUnit ?? 'units'}; at condition 4 it is ${Number(Math.abs(endDiff).toFixed(1))} ${context.dataContext?.yUnit ?? 'units'}. ${diverges ? 'The widening gap indicates a dose-dependent interaction, not a simple baseline shift.' : 'The roughly constant gap indicates a uniform baseline effect independent of the dose.'} This mirrors how the MCAT tests inhibitor-kinetics reasoning using passage figure data.`,
+          domain: context.domain,
+          sourceSlug: context.sourceSlug,
+          difficulty: 'hard',
+          family: 'passage-data-interpretation',
+          promptType: 'passage',
+          passage: basePassage,
+        })
+      }
     }
   })
 
@@ -1114,52 +1435,52 @@ function buildPassageQuestionBank(): Record<string, MCATDiagnosticQuestion[]> {
 function buildSupplementalDomainBank(): Record<string, MCATDiagnosticQuestion[]> {
   return {
     'gen-chem': buildFigureSupplementQuestions('gen-chem', 'mcat-general-chemistry', [
-      { context: 'acid-base titration checkpoints', xLabel: 'Buffer step', yLabel: 'pH', xUnit: 'step', yUnit: 'pH units' },
-      { context: 'reaction concentration experiment', xLabel: '[Reactant]', yLabel: 'Initial rate', xUnit: 'mM', yUnit: 'units/min' },
-      { context: 'gas law manipulation at fixed moles', xLabel: 'Temperature', yLabel: 'Pressure', xUnit: 'arb', yUnit: 'kPa' },
-      { context: 'electrochem setup variation', xLabel: 'Ion gradient index', yLabel: 'Cell potential', xUnit: 'index', yUnit: 'mV' },
+      { context: 'acid-base titration checkpoints', xLabel: 'Added base volume', yLabel: 'pH', xUnit: 'mL', yUnit: 'pH units' },
+      { context: 'reaction concentration experiment', xLabel: '[Reactant]0', yLabel: 'Initial rate', xUnit: 'M', yUnit: 'units/min' },
+      { context: 'gas law manipulation at fixed moles', xLabel: 'Temperature', yLabel: 'Pressure', xUnit: 'K', yUnit: 'kPa' },
+      { context: 'electrochem setup variation', xLabel: 'log Q', yLabel: 'Cell potential', xUnit: 'unitless', yUnit: 'mV' },
     ]),
     'org-chem': buildFigureSupplementQuestions('org-chem', 'mcat-organic-chemistry', [
-      { context: 'SN1 solvent polarity series', xLabel: 'Polarity rank', yLabel: 'Substitution yield', xUnit: 'rank', yUnit: '%' },
-      { context: 'E2 base-strength sweep', xLabel: 'Base index', yLabel: 'Alkene fraction', xUnit: 'index', yUnit: '%' },
-      { context: 'chromatography solvent gradient', xLabel: 'Eluent step', yLabel: 'Retention factor', xUnit: 'step', yUnit: 'Rf units' },
-      { context: 'carbonyl reduction conditions', xLabel: 'Reagent equivalents', yLabel: 'Product conversion', xUnit: 'equiv', yUnit: '%' },
+      { context: 'SN1 solvent polarity series', xLabel: 'Dielectric constant', yLabel: 'Substitution yield', xUnit: 'unitless', yUnit: '%' },
+      { context: 'E2 base-strength sweep', xLabel: 'Base conjugate-acid pKa', yLabel: 'Alkene fraction', xUnit: 'pKa', yUnit: '%' },
+      { context: 'chromatography solvent gradient', xLabel: '% ethyl acetate in eluent', yLabel: 'Retention factor', xUnit: '%', yUnit: 'Rf units' },
+      { context: 'carbonyl reduction conditions', xLabel: '[NaBH4]', yLabel: 'Product conversion', xUnit: 'equiv', yUnit: '%' },
     ]),
     physics: buildFigureSupplementQuestions('physics', 'mcat-physics-mechanics', [
       { context: 'constant-force cart experiment', xLabel: 'Time', yLabel: 'Velocity', xUnit: 's', yUnit: 'm/s' },
-      { context: 'spring extension trial', xLabel: 'Load index', yLabel: 'Extension', xUnit: 'index', yUnit: 'mm' },
-      { context: 'circuit resistance sweep', xLabel: 'Resistance step', yLabel: 'Current', xUnit: 'step', yUnit: 'mA' },
-      { context: 'lens-object distance adjustments', xLabel: 'Distance setting', yLabel: 'Image height', xUnit: 'cm', yUnit: 'mm' },
+      { context: 'spring extension trial', xLabel: 'Applied force', yLabel: 'Extension', xUnit: 'N', yUnit: 'mm' },
+      { context: 'circuit resistance sweep', xLabel: 'Resistance', yLabel: 'Current', xUnit: 'ohm', yUnit: 'mA' },
+      { context: 'lens-object distance adjustments', xLabel: 'Object distance', yLabel: 'Image height', xUnit: 'cm', yUnit: 'mm' },
     ]),
     'biochem-cp': buildFigureSupplementQuestions('biochem-cp', 'mcat-biochemistry', [
-      { context: 'enzyme assay substrate series', xLabel: '[Substrate]', yLabel: 'Velocity', xUnit: 'mM', yUnit: 'umol/min' },
-      { context: 'inhibitor titration panel', xLabel: '[Inhibitor]', yLabel: 'Residual activity', xUnit: 'mM', yUnit: '%' },
-      { context: 'ATP demand workload steps', xLabel: 'Workload step', yLabel: 'ATP turnover', xUnit: 'step', yUnit: 'arb units' },
-      { context: 'mitochondrial proton gradient states', xLabel: 'Gradient index', yLabel: 'ATP output', xUnit: 'index', yUnit: 'units' },
+      { context: 'enzyme assay substrate series', xLabel: '[S]', yLabel: 'Velocity', xUnit: 'mM', yUnit: 'umol/min' },
+      { context: 'lineweaver reciprocal panel', xLabel: '1/[S]', yLabel: '1/Velocity', xUnit: '1/mM', yUnit: 'min/umol' },
+      { context: 'ATP demand workload steps', xLabel: 'Workload power', yLabel: 'ATP turnover', xUnit: 'W/kg', yUnit: 'arb units' },
+      { context: 'mitochondrial proton gradient states', xLabel: 'Delta p', yLabel: 'ATP output', xUnit: 'mV', yUnit: 'units' },
     ]),
     'cell-mol-bio': buildFigureSupplementQuestions('cell-mol-bio', 'mcat-biology', [
-      { context: 'cell-cycle checkpoint stimulation', xLabel: 'Cyclin level', yLabel: 'Mitotic entry rate', xUnit: 'arb', yUnit: '%' },
+      { context: 'cell-cycle checkpoint stimulation', xLabel: 'Cyclin concentration', yLabel: 'Mitotic entry rate', xUnit: 'arb units', yUnit: '%' },
       { context: 'receptor-ligand occupancy table', xLabel: '[Ligand]', yLabel: 'Bound receptor', xUnit: 'nM', yUnit: '%' },
-      { context: 'gene-expression induction trial', xLabel: 'Stimulus duration', yLabel: 'mRNA abundance', xUnit: 'h', yUnit: 'fold' },
-      { context: 'membrane transport channel counts', xLabel: 'Channel density', yLabel: 'Flux', xUnit: 'index', yUnit: 'arb units' },
+      { context: 'gene-expression induction trial', xLabel: 'Induction time', yLabel: 'mRNA abundance', xUnit: 'h', yUnit: 'fold' },
+      { context: 'membrane transport channel counts', xLabel: 'Channel density', yLabel: 'Flux', xUnit: 'channels/um2', yUnit: 'arb units' },
     ]),
     'organ-systems': buildFigureSupplementQuestions('organ-systems', 'mcat-organ-systems', [
-      { context: 'cardiac output demand protocol', xLabel: 'Exercise stage', yLabel: 'Cardiac output', xUnit: 'stage', yUnit: 'L/min' },
-      { context: 'renal filtration challenge', xLabel: 'Perfusion step', yLabel: 'Filtration rate', xUnit: 'step', yUnit: 'mL/min' },
-      { context: 'pulmonary ventilation loading', xLabel: 'Ventilation setting', yLabel: 'O2 uptake', xUnit: 'index', yUnit: 'mL/min' },
-      { context: 'endocrine dose-response test', xLabel: 'Hormone dose', yLabel: 'Physiologic response', xUnit: 'arb', yUnit: '%' },
+      { context: 'cardiac output demand protocol', xLabel: 'Workload', yLabel: 'Cardiac output', xUnit: 'METs', yUnit: 'L/min' },
+      { context: 'renal filtration challenge', xLabel: 'Renal perfusion pressure', yLabel: 'Filtration rate', xUnit: 'mmHg', yUnit: 'mL/min' },
+      { context: 'pulmonary ventilation loading', xLabel: 'Minute ventilation', yLabel: 'O2 uptake', xUnit: 'L/min', yUnit: 'mL/min' },
+      { context: 'endocrine dose-response test', xLabel: 'Hormone dose', yLabel: 'Physiologic response', xUnit: 'ng/mL', yUnit: '%' },
     ]),
     genetics: buildFigureSupplementQuestions('genetics', 'mcat-genetics-evolution', [
       { context: 'allele frequency drift simulation', xLabel: 'Generation', yLabel: 'Allele A frequency', xUnit: 'gen', yUnit: '%' },
-      { context: 'selection pressure gradient', xLabel: 'Selection index', yLabel: 'Trait prevalence', xUnit: 'index', yUnit: '%' },
-      { context: 'linkage mapping recombination panel', xLabel: 'Map interval', yLabel: 'Recombinants', xUnit: 'interval', yUnit: '%' },
-      { context: 'population bottleneck recovery', xLabel: 'Recovery step', yLabel: 'Heterozygosity', xUnit: 'step', yUnit: '%' },
+      { context: 'selection pressure gradient', xLabel: 'Selection coefficient', yLabel: 'Trait prevalence', xUnit: 's', yUnit: '%' },
+      { context: 'linkage mapping recombination panel', xLabel: 'Genetic distance', yLabel: 'Recombinants', xUnit: 'cM', yUnit: '%' },
+      { context: 'population bottleneck recovery', xLabel: 'Generations after bottleneck', yLabel: 'Heterozygosity', xUnit: 'gen', yUnit: '%' },
     ]),
     'psych-soc': buildFigureSupplementQuestions('psych-soc', 'mcat-psychology-sociology', [
-      { context: 'memory recall intervention', xLabel: 'Spacing condition', yLabel: 'Recall score', xUnit: 'condition', yUnit: 'points' },
-      { context: 'stress-load survey cohort', xLabel: 'Stress index', yLabel: 'Error rate', xUnit: 'index', yUnit: '%' },
-      { context: 'social network density study', xLabel: 'Network density', yLabel: 'Conformity likelihood', xUnit: 'rank', yUnit: '%' },
-      { context: 'community resource access tiers', xLabel: 'Access tier', yLabel: 'Health outcome index', xUnit: 'tier', yUnit: 'score' },
+      { context: 'memory recall intervention', xLabel: 'Spacing interval', yLabel: 'Recall score', xUnit: 'hours', yUnit: 'points' },
+      { context: 'stress-load survey cohort', xLabel: 'Perceived stress score', yLabel: 'Error rate', xUnit: 'scale', yUnit: '%' },
+      { context: 'social network density study', xLabel: 'Network density', yLabel: 'Conformity likelihood', xUnit: 'proportion', yUnit: '%' },
+      { context: 'community resource access tiers', xLabel: 'Resource access score', yLabel: 'Health outcome index', xUnit: 'score', yUnit: 'score' },
     ]),
     cars: buildCarsSupplementQuestions('cars', 'mcat-cars'),
   }
@@ -1236,8 +1557,9 @@ function buildFeedbackLoopSubBank(): Record<string, MCATDiagnosticQuestion[]> {
 
     FIGURE_SLOPES.forEach((slope) => {
       ;[1, 3].forEach((intercept) => {
-        const yValues = buildSeriesValues(slope, intercept, ctxIdx + slope + intercept)
-        const visual = buildPassageVisual(context, yValues)
+        const yValues = buildSeriesValues(context, slope, intercept, ctxIdx + slope + intercept)
+        const visual = buildPassageVisual(context, yValues, ctxIdx + slope + intercept)
+        const comparisonLabel = getComparisonLabel(visual)
         const observedFeedback = inferFeedbackPattern(yValues)
         const claimedFeedback: 'positive' | 'negative' = (ctxIdx + slope + intercept) % 2 === 0 ? 'negative' : 'positive'
 
@@ -1256,17 +1578,19 @@ function buildFeedbackLoopSubBank(): Record<string, MCATDiagnosticQuestion[]> {
             : `The data challenge the proposed ${claimedFeedback} feedback model and better match ${observedFeedback} feedback because ${observationSummary}.`
 
         const evalChoices = buildChoiceSet(modelEvaluation, [
-          'Any monotonic increase is sufficient to prove positive feedback and causal direction.',
-          'Feedback classification is impossible unless the curve crosses below baseline first.',
-          'The graph proves universal causality across all populations and conditions.',
+          `Any monotonic increase in ${context.yLabel.toLowerCase()} indicates positive feedback, regardless of how the increments change across conditions.`,
+          `The data cannot distinguish positive from negative feedback because both predict an increase in ${context.yLabel.toLowerCase()} at higher ${context.xLabel.toLowerCase()}.`,
+          `Feedback classification requires the curve to cross below baseline before any conclusion can be drawn.`,
         ])
 
         questions.push({
           id: `${context.domain}-feedback-${ctxIdx}-${slope}-${intercept}-model`,
-          question: `Passage claim: In a ${context.system}, increasing ${context.xLabel.toLowerCase()} should produce a ${claimedFeedback} feedback response in ${context.yLabel.toLowerCase()}. Which evaluation is best supported by the graph?`,
+          question: comparisonLabel
+            ? `In a ${context.system}, increasing ${context.xLabel.toLowerCase()} is hypothesized to produce a ${claimedFeedback} feedback response in ${context.yLabel.toLowerCase()}. Considering both traces (primary and ${comparisonLabel}) in Figure 1, which evaluation is best supported?`
+            : `In a ${context.system}, increasing ${context.xLabel.toLowerCase()} is hypothesized to produce a ${claimedFeedback} feedback response in ${context.yLabel.toLowerCase()}. Based on Figure 1, which evaluation is best supported?`,
           options: evalChoices.options,
           correctAnswer: evalChoices.correctAnswer,
-          explanation: `Evaluate feedback hypotheses by comparing first differences across ordered conditions. Here, ${observationSummary}; choose the option that matches that pattern without over-claiming causality.`,
+          explanation: `To evaluate a feedback hypothesis, compare the successive increments across conditions rather than the overall direction. Here, ${observationSummary}. ${observedFeedback === 'neutral' ? 'A linear trend does not preferentially support either feedback type.' : observedFeedback === claimedFeedback ? `This pattern matches the predicted ${claimedFeedback} feedback.` : `This pattern contradicts the predicted ${claimedFeedback} feedback and instead matches ${observedFeedback} feedback.`}`,
           domain: context.domain,
           sourceSlug: context.sourceSlug,
           difficulty: 'hard',
@@ -1276,20 +1600,20 @@ function buildFeedbackLoopSubBank(): Record<string, MCATDiagnosticQuestion[]> {
         })
 
         const followupChoices = buildChoiceSet(
-          `Perturb the putative feedback mediator while holding ${context.xLabel.toLowerCase()} fixed, then test whether the ${context.yLabel.toLowerCase()} trend shape changes as predicted.`,
+          `Perturb the putative feedback mediator while holding ${context.xLabel.toLowerCase()} fixed and measure whether the shape of the ${context.yLabel.toLowerCase()} curve changes as predicted by the model.`,
           [
-            'Repeat the same four conditions once and conclude causality if the rank order is unchanged.',
-            'Drop intermediate conditions to compare only baseline vs highest condition for a cleaner graph.',
-            'Increase sample size without measuring any mediator and treat stronger p-values as proof of feedback sign.',
+            `Repeat the same four conditions in triplicate; if the rank order is preserved, the feedback mechanism is confirmed.`,
+            `Eliminate intermediate conditions and compare only the lowest and highest ${context.xLabel.toLowerCase()} levels for statistical clarity.`,
+            `Increase sample size without measuring the mediator and use a lower p-value threshold as evidence of feedback.`,
           ],
         )
 
         questions.push({
           id: `${context.domain}-feedback-${ctxIdx}-${slope}-${intercept}-design`,
-          question: `Which follow-up experiment would most directly test whether the observed pattern is driven by the proposed feedback loop rather than a simple direct effect?`,
+          question: `Which follow-up experiment would most directly test whether the trend observed in Figure 1 is mediated by a feedback mechanism rather than a simple dose-dependent effect?`,
           options: followupChoices.options,
           correctAnswer: followupChoices.correctAnswer,
-          explanation: `The strongest feedback test manipulates the mediator hypothesized to close the loop and checks whether trend shape changes in the predicted direction.`,
+          explanation: `A feedback mechanism implies a mediator that closes the loop. The most direct test manipulates that mediator independently and checks whether the curve shape changes as the model predicts. Repeating the same measurement, reducing conditions, or simply increasing sample size cannot distinguish feedback from a direct effect.`,
           domain: context.domain,
           sourceSlug: context.sourceSlug,
           difficulty: 'hard',

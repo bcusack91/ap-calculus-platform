@@ -10,6 +10,9 @@ enum Difficulty {
 }
 
 async function main() {
+  const __seedCourse = await (prisma as any).course.findFirst({ where: { slug: 'ap-calculus-bc' } })
+  const __courseId = __seedCourse?.id
+
   console.log('🔄 Creating Power Series & Taylor Series (BC) micro-lessons - Part 1...')
 
   // Create or get the Power Series & Taylor Series category
@@ -22,6 +25,8 @@ async function main() {
       description: 'Power series, Taylor series, and Maclaurin series for Calculus BC',
       order: 8,
       icon: '∑',
+    
+      courseId: __courseId
     },
   })
 

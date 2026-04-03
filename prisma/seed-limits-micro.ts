@@ -3,6 +3,9 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 async function main() {
+  const __seedCourse = await (prisma as any).course.findFirst({ where: { slug: 'ap-calculus-ab' } })
+  const __courseId = __seedCourse?.id
+
   console.log('🔄 Creating highly granular Limits and Continuity lessons...')
 
   // Find or create the Limits and Continuity category
@@ -15,6 +18,8 @@ async function main() {
       description: 'Understanding limits, continuity, and the foundations of calculus',
       order: 1,
       icon: '∞'
+    ,
+      courseId: __courseId
     }
   })
 

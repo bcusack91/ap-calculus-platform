@@ -330,7 +330,7 @@ export default function MCATractricePage() {
                         </p>
                       </div>
                       <Link
-                        href={`/topics/${rec.slug}`}
+                        href={`/topics/${rec.slug}/interactive`}
                         className="rounded-lg bg-amber-600 px-3 py-2 text-xs font-semibold text-white transition hover:bg-amber-700"
                       >
                         Study Module

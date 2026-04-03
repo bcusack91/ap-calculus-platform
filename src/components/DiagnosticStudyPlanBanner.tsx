@@ -122,7 +122,7 @@ export default function DiagnosticStudyPlanBanner({ courseSlug }: { courseSlug: 
         {remainingTopics.map((topic, i) => (
           <Link
             key={topic.slug}
-            href={`/topics/${topic.slug}`}
+            href={`/topics/${topic.slug}/interactive`}
             className="flex items-center justify-between rounded-xl border border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-gray-800/80 px-4 py-3 hover:border-gray-400 dark:hover:border-gray-500 transition-colors group"
           >
             <div className="flex items-center gap-3">

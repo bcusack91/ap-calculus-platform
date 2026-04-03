@@ -661,6 +661,15 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     setEntranceQuizPhase(null)
     setEntranceQuizMasteredParts(masteredParts)
 
+    // Add flashcards for topics where student didn't master all parts
+    if (masteredParts.size < totalParts) {
+      fetch('/api/flashcards/add-from-missed', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ topicSlugs: [topicSlug] }),
+      }).catch(() => {})
+    }
+
     if (masteredParts.size === 0) {
       // No parts mastered — start from part 1 normally
       return

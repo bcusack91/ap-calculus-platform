@@ -10,6 +10,9 @@ enum Difficulty {
 }
 
 async function main() {
+  const __seedCourse = await (prisma as any).course.findFirst({ where: { slug: 'ap-calculus-ab' } })
+  const __courseId = __seedCourse?.id
+
   console.log('🔄 Creating Derivatives micro-lessons - Advanced Techniques (Part 4)...')
 
   // Get or create the Derivatives category
@@ -22,6 +25,8 @@ async function main() {
       description: 'Understanding rates of change and differentiation',
       order: 2,
       icon: '📈',
+    
+      courseId: __courseId
     },
   })
 
