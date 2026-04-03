@@ -69,8 +69,8 @@ export default function APPhysics1DiagnosticPage() {
 
   const startTest = useCallback(() => {
     const previousForms = history
-      .map(h => (h.results as Record<string, unknown> | null)?.form as 'A' | 'B' | undefined)
-      .filter((f): f is 'A' | 'B' => f === 'A' || f === 'B')
+      .map(h => (h.results as Record<string, unknown> | null)?.form as number | undefined)
+      .filter((f): f is number => typeof f === 'number')
     const form = pickNextForm(previousForms)
     const data = generateAPPhysics1DiagnosticTest(form)
     setTestData(data); setCurrentIndex(0); setAnswers(new Array(data.questions.length).fill(null))
@@ -286,7 +286,7 @@ export default function APPhysics1DiagnosticPage() {
             <ol className="space-y-2 text-sm text-blue-700 dark:text-blue-400 list-decimal list-inside">
               <li>Review the recommended modules above</li>
               <li>Complete each module&apos;s lessons, practice problems, and flashcards</li>
-              <li>Come back and take the next diagnostic (Form {results.form === 'A' ? 'B' : 'A'})</li>
+              <li>Come back and take the next diagnostic (Form {results.form >= 10 ? 1 : results.form + 1})</li>
               <li>Get updated personalized recommendations</li>
               <li>Repeat until you&apos;re scoring 4+ across all units!</li>
             </ol>
@@ -349,7 +349,7 @@ export default function APPhysics1DiagnosticPage() {
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
           <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">What to Expect</h3>
           <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-            {['~33 questions spanning all 7 AP Physics 1 units', '45 minute time limit', 'Estimated AP score (1–5) with per-unit breakdown', '3-5 personalized module recommendations', 'Alternating forms (A/B) with different questions each time'].map(item => (
+            {['~33 questions spanning all 7 AP Physics 1 units', '45 minute time limit', 'Estimated AP score (1–5) with per-unit breakdown', '3-5 personalized module recommendations', '10 unique forms with different questions each time'].map(item => (
               <li key={item} className="flex items-start gap-2"><svg className="mt-0.5 h-4 w-4 shrink-0 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>{item}</li>
             ))}
           </ul>
