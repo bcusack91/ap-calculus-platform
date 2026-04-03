@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { getMCATDailyQuestions } from '@/data/mcat-daily-question'
 
-export const revalidate = 3600 // revalidate once per hour (questions change daily)
+export const revalidate = 86400 // 24 hours — questions change daily
 
 export async function GET() {
   try {

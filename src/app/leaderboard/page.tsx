@@ -3,7 +3,7 @@ import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 import { InArticleAd } from '@/components/ad-banner'
 
-export const revalidate = 300 // 5 minutes ISR
+export const revalidate = 3600 // 1 hour ISR
 
 export const metadata: Metadata = {
   title: 'Competitive Leaderboard | Study Mondo',

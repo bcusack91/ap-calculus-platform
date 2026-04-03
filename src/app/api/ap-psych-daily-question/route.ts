@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { getDailyQuestions } from '@/data/ap-psych-daily-question'
 
-export const revalidate = 3600
+export const revalidate = 86400 // 24 hours — questions change daily
 
 export async function GET() {
   try {

@@ -7,7 +7,10 @@ const bodySchema = z.object({
   params: z.object({}).catchall(z.union([z.string(), z.number(), z.boolean()])).optional(),
 })
 
+let tableReady = false
+
 async function ensureEventsTable() {
+  if (tableReady) return
   await prisma.$executeRawUnsafe(`
     CREATE TABLE IF NOT EXISTS "AnalyticsEvent" (
       "id" BIGSERIAL PRIMARY KEY,
@@ -27,6 +30,7 @@ async function ensureEventsTable() {
     CREATE INDEX IF NOT EXISTS "AnalyticsEvent_pageTemplate_idx" ON "AnalyticsEvent" ("pageTemplate");
     CREATE INDEX IF NOT EXISTS "AnalyticsEvent_ctaType_idx" ON "AnalyticsEvent" ("ctaType");
   `)
+  tableReady = true
 }
 
 export async function POST(req: NextRequest) {
