@@ -316,7 +316,7 @@ export async function generateACTDiagnosticTest(
   const allQuestions: ACTDiagnosticQuestion[] = []
 
   for (const domain of DIAGNOSTIC_DOMAINS) {
-    let domainPool: ACTDiagnosticQuestion[] = []
+    const domainPool: ACTDiagnosticQuestion[] = []
     const shuffledSlugs = shuffle(domain.slugs)
 
     for (const slug of shuffledSlugs) {

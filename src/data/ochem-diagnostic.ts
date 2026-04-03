@@ -59,8 +59,8 @@ export interface OChemDiagnosticResults {
 }
 
 const OCHEM_DOMAINS: OChemDomain[] = [
-  { id: 'structure-bonding', name: 'Structure & Bonding', topicSlugs: ['atomic-structure-bonding-ochem', 'atomic-structure-bonding-ochem'], questionTarget: 5 },
-  { id: 'stereochemistry', name: 'Stereochemistry', topicSlugs: ['stereochemistry-chirality', 'stereochemistry-chirality'], questionTarget: 5 },
+  { id: 'structure-bonding', name: 'Structure & Bonding', topicSlugs: ['atomic-structure-bonding-ochem'], questionTarget: 5 },
+  { id: 'stereochemistry', name: 'Stereochemistry', topicSlugs: ['stereochemistry-chirality'], questionTarget: 5 },
   { id: 'reactions-mechanisms', name: 'Reactions & Mechanisms', topicSlugs: ['nucleophilic-substitution', 'elimination-reactions'], questionTarget: 6 },
   { id: 'functional-groups', name: 'Functional Groups & Nomenclature', topicSlugs: ['molecular-representations', 'alkenes-reactions'], questionTarget: 5 },
   { id: 'carbonyl-chemistry', name: 'Carbonyl Chemistry', topicSlugs: ['aldehydes-ketones-reactions', 'carboxylic-acids-derivatives'], questionTarget: 5 },
@@ -219,10 +219,8 @@ export function pickNextForm(previousForms: ('A' | 'B')[]): 'A' | 'B' {
 }
 
 const SLUG_LABELS: Record<string, string> = {
-  'atomic-structure-bonding-ochem': 'Molecular Orbital Theory',
-  'atomic-structure-bonding-ochem': 'Hybridization & Geometry',
-  'stereochemistry-chirality': 'Chirality & Enantiomers',
-  'stereochemistry-chirality': 'Diastereomers & Meso Compounds',
+  'atomic-structure-bonding-ochem': 'MO Theory, Hybridization & Geometry',
+  'stereochemistry-chirality': 'Chirality, Enantiomers & Meso Compounds',
   'nucleophilic-substitution': 'SN1 & SN2 Reactions',
   'elimination-reactions': 'E1 & E2 Elimination',
   'molecular-representations': 'IUPAC Nomenclature',

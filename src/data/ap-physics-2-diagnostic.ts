@@ -222,14 +222,12 @@ const SLUG_LABELS: Record<string, string> = {
   'laws-of-thermodynamics': 'Laws of Thermodynamics',
   'electric-charge-coulombs-law': 'Coulomb\'s Law & Electric Field',
   'electric-fields-potential': 'Electric Potential & Energy',
-  'series-parallel-circuits': 'DC Circuits',
-  'series-parallel-circuits': 'Capacitors',
+  'series-parallel-circuits': 'DC Circuits & Capacitors',
   'magnetic-fields-forces': 'Magnetic Fields & Forces',
   'electromagnetic-induction': 'Electromagnetic Induction',
   'reflection-refraction': 'Reflection & Refraction',
   'interference-diffraction': 'Interference & Diffraction',
-  'photons-atomic-nuclear': 'Photoelectric Effect & Quantum',
-  'photons-atomic-nuclear': 'Nuclear Physics',
+  'photons-atomic-nuclear': 'Photoelectric Effect, Quantum & Nuclear Physics',
 }
 
 function slugToReadableName(slug: string): string {

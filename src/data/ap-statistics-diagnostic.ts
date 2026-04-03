@@ -76,7 +76,7 @@ const AP_STATS_DOMAINS: APStatsDomain[] = [
   {
     id: 'exploring-data',
     name: 'Exploring Data',
-    topicSlugs: ['displaying-distributions-graphs', 'describing-distributions', 'describing-distributions'],
+    topicSlugs: ['displaying-distributions-graphs', 'describing-distributions'],
     questionTarget: 8,
   },
   {
@@ -1033,8 +1033,7 @@ export function pickNextForm(previousForms: ('A' | 'B')[]): 'A' | 'B' {
 
 const SLUG_LABELS: Record<string, string> = {
   'displaying-distributions-graphs': 'Categorical Data Displays',
-  'describing-distributions': 'Quantitative Data Distributions',
-  'describing-distributions': 'Describing Distributions',
+  'describing-distributions': 'Quantitative Data & Describing Distributions',
   'sampling-methods': 'Sampling Methods',
   'experimental-design': 'Experimental Design',
   'bias-sampling-surveys': 'Bias & Confounding',
