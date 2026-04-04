@@ -160,7 +160,7 @@ function areAllAnswersCorrect(studentAnswers: string[], correctAnswers: string[]
 
 interface Section {
   id: string
-  type: 'text' | 'input-boxes' | 'dropdown-select' | 'multiple-choice' | 'reference-angle-quiz' | 'factoring-practice' | 'mini-boss'
+  type: 'text' | 'input-boxes' | 'input-box' | 'dropdown-select' | 'multiple-choice' | 'quiz' | 'reference-angle-quiz' | 'factoring-practice' | 'mini-boss'
   content: string
   exercise?: LessonExercise
   problemType?: 'gcf' | 'gcf-identify' | 'difference-of-squares' | 'simple-trinomials' | 'complex-trinomials' | 'mixed'
@@ -605,8 +605,10 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     // Trigger celebration animation for exercise completions
     const isExercise = 
       currentSection.type === 'input-boxes' || 
+      currentSection.type === 'input-box' || 
       currentSection.type === 'dropdown-select' ||
       currentSection.type === 'multiple-choice' ||
+      currentSection.type === 'quiz' ||
       currentSection.type === 'reference-angle-quiz' ||
       currentSection.type === 'factoring-practice'
     if (isExercise) {
@@ -759,8 +761,10 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   const currentSectionRequiresCompletion = 
     !!currentSection && (
       currentSection.type === 'input-boxes' || 
+      currentSection.type === 'input-box' || 
       currentSection.type === 'dropdown-select' ||
       currentSection.type === 'multiple-choice' ||
+      currentSection.type === 'quiz' ||
       currentSection.type === 'reference-angle-quiz' ||
       currentSection.type === 'factoring-practice' ||
       (currentSection.type === 'text' && currentSection.content?.includes('[UNIT_CIRCLE_GAME]')) ||
@@ -1127,7 +1131,7 @@ function SectionRenderer({
     )
   }
 
-  if (section.type === 'input-boxes') {
+  if (section.type === 'input-boxes' || section.type === 'input-box') {
     return (
       <InputBoxExercise 
         section={section} 
@@ -1171,6 +1175,29 @@ function SectionRenderer({
     return (
       <MultipleChoiceQuiz 
         section={section} 
+        onComplete={onComplete}
+        isComplete={isComplete}
+      />
+    )
+  }
+
+  if (section.type === 'quiz') {
+    // Adapt section-level quiz data to the exercise.questions format
+    const adapted = {
+      ...section,
+      type: 'multiple-choice' as const,
+      exercise: {
+        questions: [{
+          question: (section as unknown as { question: string }).question || '',
+          options: (section as unknown as { options: string[] }).options || [],
+          correctAnswer: (section as unknown as { correctAnswer: number }).correctAnswer ?? 0,
+          explanation: (section as unknown as { explanation: string }).explanation || '',
+        }]
+      }
+    }
+    return (
+      <MultipleChoiceQuiz 
+        section={adapted as unknown as Section} 
         onComplete={onComplete}
         isComplete={isComplete}
       />
