@@ -111,7 +111,7 @@ $R_1 = 5 \\; \\Omega$ is in series with the parallel combination of $R_2 = 10 \\
       `,
       exercise: {
         boxes: 6,
-        correctAnswers: ['8', '13', '1.54', '7.7', '12.3', '1.23', '1.540', '7.70', '12.30', '1.230'],
+        correctAnswers: ['8', '13', '1.54', '7.7', '12.3', '1.23'],
         hint1: '$R_{23} = (10 \\times 40)/(10 + 40) = 400/50 = 8 \\; \\Omega$.',
         hint2: '$R_{\\text{total}} = 5 + 8 = 13 \\; \\Omega$. $I = 20/13 \\approx 1.54$ A.',
         hint3: '$V_1 = 1.54 \\times 5 \\approx 7.7$ V. $V_{23} = 20 - 7.7 \\approx 12.3$ V. $I_2 = 12.3/10 \\approx 1.23$ A.',

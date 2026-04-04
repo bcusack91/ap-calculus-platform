@@ -9,10 +9,13 @@ export const apStatsDistributionsPart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the AP Statistics Describing Distributions series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Concepts
+- Shape (symmetric/skewed), Center (mean/median), Spread (s, IQR, range)
+- Mean: sensitive to outliers; Median: resistant
+- Normal: 68-95-99.7 rule
+- $s = 0$ when all values are equal
+    
+    `
     },
     {
       id: 'apstats-describing-distributions-p7-worked',
@@ -20,39 +23,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Median of 10, 20, 30, 40, 50 = 30 (middle value)** ✅
+    
+    `
     },
     {
       id: 'apstats-describing-distributions-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in AP Statistics."
+                    "question": "Median of 4, 8, 12?",
+                    "options": [
+                              "8",
+                              "4",
+                              "12",
+                              "24"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Middle value."
           }
-        ]
+]
       }
     },
     {
       id: 'apstats-describing-distributions-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) Median of 4, 8, 12?
+
+2) Mean of 10, 20, 30?
+
+3) μ=50, σ=5. Lower bound of 68% range?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["8","20","45"],
+        hint1: "Middle value.",
+        hint2: "60/3.",
+        hint3: "50−5.",
+        explanation: "1) 8. 2) 20. 3) 45."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"IQR is calculated as","options":["Q3 − Q1","Max − Min","Mean − Median","σ²"]},{"label":"The median is the ____ percentile","options":["50th","25th","75th","100th"]}],
+        correctAnswers: ["Q3 − Q1","50th"],
+        hint1: "Interquartile range.",
+        hint2: "Half above, half below.",
+        explanation: "IQR = Q3−Q1. Median = 50th percentile."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Topic | Problem |
+|---|-------|---------|
+| 1 | Median | 4, 8, 12 |
+| 2 | Mean | 10, 20, 30 |
+| 3 | 68% range | μ=50, σ=5 |
+    
+    `
     },
     {
       id: 'apstats-describing-distributions-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Mean of 10, 20, 30?",
+                    "options": [
+                              "20",
+                              "10",
+                              "30",
+                              "60"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "60/3=20."
           }
-        ]
+]
       }
     }
   ]

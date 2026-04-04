@@ -9,10 +9,11 @@ export const preAlgOrderOpsPart3Data = {
 
 **Part 3 of 7 — Multiplication & Division**
 
-Welcome to **Multiplication & Division** — Part 3 of 7 in the Pre-Algebra Order of Operations series.
+After parentheses and exponents: **multiply and divide left to right**.
 
-This lesson covers key concepts and practice problems.
-      `
+$24 \div 6 \times 2 = 4 \times 2 = 8$ (left to right, NOT $24 \div 12$)
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p3-worked',
@@ -20,39 +21,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$12 \div 3 \times 4 = 4 \times 4 = 16$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes multiplication & division?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Multiplication & Division is a core concept in Pre-Algebra."
+                    "question": "$20 \\div 4 \\times 3 = ?$",
+                    "options": [
+                              "15",
+                              "5/3",
+                              "60/4",
+                              "20/12"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Left to right: 5 × 3 = 15."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-order-of-operations-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Multiply & Divide Left to Right** 🧮
 
-Answer the following about multiplication & division.
-      `,
+1) $20 \div 4 \times 3 = ?$
+
+2) $2 \times 6 \div 3 = ?$
+
+3) $18 \div 2 \div 3 = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of multiplication & division."
+        boxes: 3,
+        correctAnswers: ["15","4","3"],
+        hint1: "20÷4=5, then 5×3.",
+        hint2: "2×6=12, then 12÷3.",
+        hint3: "18÷2=9, then 9÷3.",
+        explanation: "1) 15. 2) 4. 3) 3."
       }
     },
     {
@@ -60,22 +74,13 @@ Answer the following about multiplication & division.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Multiplication & Division is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Multiplication & Division builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"When you see × and ÷ together, go","options":["Left to right","Right to left","× first","÷ first"]},{"label":"$8 ÷ 2 × 4 =$","options":["16","1","8","32"]}],
+        correctAnswers: ["Left to right","16"],
+        hint1: "Same priority.",
+        hint2: "4 × 4.",
+        explanation: "Left to right for ×/÷. 8÷2=4, 4×4=16."
       }
     },
     {
@@ -84,28 +89,34 @@ Answer the following about multiplication & division.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Multiplication & Division | Core multiplication & division principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Expression | Value |
+|---|-----------|-------|
+| 1 | 20 ÷ 4 × 3 | 15 |
+| 2 | 2 × 6 ÷ 3 | 4 |
+| 3 | 18 ÷ 2 ÷ 3 | 3 |
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in multiplication & division?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$18 \\div 2 \\div 3 = ?$",
+                    "options": [
+                              "3",
+                              "27",
+                              "9",
+                              "1"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Left to right: 9 ÷ 3 = 3."
           }
-        ]
+]
       }
     }
   ]

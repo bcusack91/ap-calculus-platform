@@ -157,7 +157,7 @@ A damped oscillator starts with amplitude $A_0 = 0.20$ m and loses 10% of its en
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.729', '0.171', '7', '0.7290', '0.1710'],
+        correctAnswers: ['0.729', '0.171', '7'],
         hint1: '$E_3 = (0.90)^3 E_0$',
         hint2: '$A_3 = A_0 \\sqrt{E_3/E_0} = 0.20\\sqrt{0.729}$',
         hint3: '$(0.90)^n < 0.50$. Try $n = 6$: $(0.90)^6 = 0.531$. Try $n = 7$: $(0.90)^7 = 0.478$',

@@ -107,10 +107,10 @@ $$\\text{H}^+(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_4^+(aq)$$
           {
             question: 'What is the net ionic equation for HBr(aq) + KOH(aq) → KBr(aq) + H₂O(l)?',
             options: [
-              '$\\\\text{HBr}(aq) + \\\\text{KOH}(aq) \\\\rightarrow \\\\text{KBr}(aq) + \\\\text{H}_2\\\\text{O}(l)$',
-              '$\\\\text{H}^+(aq) + \\\\text{OH}^-(aq) \\\\rightarrow \\\\text{H}_2\\\\text{O}(l)$',
-              '$\\\\text{H}^+(aq) + \\\\text{Br}^-(aq) + \\\\text{K}^+(aq) + \\\\text{OH}^-(aq) \\\\rightarrow \\\\text{H}_2\\\\text{O}(l)$',
-              '$\\\\text{K}^+(aq) + \\\\text{Br}^-(aq) \\\\rightarrow \\\\text{KBr}(aq)$'
+              '$\\text{HBr}(aq) + \\text{KOH}(aq) \\rightarrow \\text{KBr}(aq) + \\text{H}_2\\text{O}(l)$',
+              '$\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$',
+              '$\\text{H}^+(aq) + \\text{Br}^-(aq) + \\text{K}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$',
+              '$\\text{K}^+(aq) + \\text{Br}^-(aq) \\rightarrow \\text{KBr}(aq)$'
             ],
             correctAnswer: 1,
             explanation: 'HBr is a strong acid and KOH is a strong base. Both fully dissociate. K⁺ and Br⁻ are spectators. The net ionic equation is H⁺(aq) + OH⁻(aq) → H₂O(l) — the same for ALL strong acid–strong base reactions.'
@@ -129,10 +129,10 @@ $$\\text{H}^+(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_4^+(aq)$$
           {
             question: 'What is the net ionic equation for HNO₃(aq) + NH₃(aq) → NH₄NO₃(aq)?',
             options: [
-              '$\\\\text{H}^+(aq) + \\\\text{OH}^-(aq) \\\\rightarrow \\\\text{H}_2\\\\text{O}(l)$',
-              '$\\\\text{H}^+(aq) + \\\\text{NH}_3(aq) \\\\rightarrow \\\\text{NH}_4^+(aq)$',
-              '$\\\\text{HNO}_3(aq) + \\\\text{NH}_3(aq) \\\\rightarrow \\\\text{NH}_4\\\\text{NO}_3(aq)$',
-              '$\\\\text{NO}_3^-(aq) + \\\\text{NH}_4^+(aq) \\\\rightarrow \\\\text{NH}_4\\\\text{NO}_3(aq)$'
+              '$\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$',
+              '$\\text{H}^+(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_4^+(aq)$',
+              '$\\text{HNO}_3(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_4\\text{NO}_3(aq)$',
+              '$\\text{NO}_3^-(aq) + \\text{NH}_4^+(aq) \\rightarrow \\text{NH}_4\\text{NO}_3(aq)$'
             ],
             correctAnswer: 1,
             explanation: 'HNO₃ is a strong acid → splits into H⁺ + NO₃⁻. NH₃ is a weak base → stays molecular. NO₃⁻ is a spectator. Net ionic: H⁺(aq) + NH₃(aq) → NH₄⁺(aq).'
@@ -217,10 +217,10 @@ For each net ionic equation scenario, type **strong-strong**, **weak-strong**, o
           {
             question: 'What is the net ionic equation for the reaction of hydrofluoric acid with sodium hydroxide?',
             options: [
-              '$\\\\text{H}^+(aq) + \\\\text{OH}^-(aq) \\\\rightarrow \\\\text{H}_2\\\\text{O}(l)$',
-              '$\\\\text{HF}(aq) + \\\\text{OH}^-(aq) \\\\rightarrow \\\\text{F}^-(aq) + \\\\text{H}_2\\\\text{O}(l)$',
-              '$\\\\text{HF}(aq) + \\\\text{NaOH}(aq) \\\\rightarrow \\\\text{NaF}(aq) + \\\\text{H}_2\\\\text{O}(l)$',
-              '$\\\\text{H}^+(aq) + \\\\text{F}^-(aq) + \\\\text{Na}^+(aq) + \\\\text{OH}^-(aq) \\\\rightarrow \\\\text{NaF}(aq) + \\\\text{H}_2\\\\text{O}(l)$'
+              '$\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$',
+              '$\\text{HF}(aq) + \\text{OH}^-(aq) \\rightarrow \\text{F}^-(aq) + \\text{H}_2\\text{O}(l)$',
+              '$\\text{HF}(aq) + \\text{NaOH}(aq) \\rightarrow \\text{NaF}(aq) + \\text{H}_2\\text{O}(l)$',
+              '$\\text{H}^+(aq) + \\text{F}^-(aq) + \\text{Na}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{NaF}(aq) + \\text{H}_2\\text{O}(l)$'
             ],
             correctAnswer: 1,
             explanation: 'HF is a weak acid (not split into ions). NaOH is a strong base (split into Na⁺ + OH⁻). Na⁺ is the only spectator. Net ionic: HF(aq) + OH⁻(aq) → F⁻(aq) + H₂O(l).'

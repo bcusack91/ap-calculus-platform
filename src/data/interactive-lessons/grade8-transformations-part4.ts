@@ -9,10 +9,16 @@ export const g8TransformationsPart4Data = {
 
 **Part 4 of 7 — Dilations**
 
-Welcome to **Dilations** — Part 4 of 7 in the Grade 8 Math Transformations series.
+A **dilation** resizes a figure by a **scale factor** $k$.
 
-This lesson covers key concepts and practice problems.
-      `
+$(x, y) \to (kx, ky)$
+
+- $k > 1$: enlargement
+- $0 < k < 1$: reduction
+
+Dilations produce **similar** figures (same shape, different size).
+    
+    `
     },
     {
       id: 'grade8-transformations-p4-worked',
@@ -20,39 +26,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Dilate (4, 6) by scale factor 2.**
+
+$(2·4, 2·6) = (8, 12)$ ✅
+    
+    `
     },
     {
       id: 'grade8-transformations-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes dilations?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Dilations is a core concept in Grade 8 Math."
+                    "question": "Dilate (3,5) by k=2:",
+                    "options": [
+                              "(6,10)",
+                              "(5,7)",
+                              "(1.5,2.5)",
+                              "(6,5)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(2·3, 2·5) = (6,10)."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-transformations-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Dilations** 🧮
 
-Answer the following about dilations.
-      `,
+1) (3, 5) × k=2. New x = ?
+
+2) (8, 4) × k=0.5. New x = ?
+
+3) (6, 9) × k=1/3. New x = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of dilations."
+        boxes: 3,
+        correctAnswers: ["6","4","2"],
+        hint1: "3 × 2.",
+        hint2: "8 × 0.5.",
+        hint3: "6 × (1/3).",
+        explanation: "1) 6. 2) 4. 3) 2."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about dilations.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Dilations is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Dilations builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A dilation with k > 1 is an","options":["Enlargement","Reduction","Translation","Rotation"]},{"label":"Dilations produce figures that are","options":["Similar","Congruent","Different shapes","Perpendicular"]}],
+        correctAnswers: ["Enlargement","Similar"],
+        hint1: "Gets bigger.",
+        hint2: "Same shape, different size.",
+        explanation: "k>1 → enlargement. Dilation → similar."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about dilations.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Dilations | Core dilations principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Point | Scale Factor | Image |
+|---|-------|-------------|-------|
+| 1 | (3,5) | 2 | (6,10) |
+| 2 | (8,4) | 0.5 | (4,2) |
+| 3 | (6,9) | 1/3 | (2,3) |
+    
+    `
     },
     {
       id: 'grade8-transformations-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in dilations?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Scale factor 0.5 means:",
+                    "options": [
+                              "Figure shrinks to half",
+                              "Figure doubles",
+                              "No change",
+                              "Figure disappears"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "k < 1 → reduction."
           }
-        ]
+]
       }
     }
   ]

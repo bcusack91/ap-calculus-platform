@@ -9,10 +9,16 @@ export const preAlgVariablesPart2Data = {
 
 **Part 2 of 7 — Writing Expressions**
 
-Welcome to **Writing Expressions** — Part 2 of 7 in the Pre-Algebra Introduction to Variables series.
+Translate words to algebra:
 
-This lesson covers key concepts and practice problems.
-      `
+| Word | Operation |
+|------|-----------|
+| sum, plus, more than | + |
+| difference, minus, less than | − |
+| product, times, of | × |
+| quotient, divided by | ÷ |
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p2-worked',
@@ -20,39 +26,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**"The product of 4 and a number decreased by 7."**
+
+$4n - 7$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes writing expressions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Writing Expressions is a core concept in Pre-Algebra."
+                    "question": "\"Twice a number plus 3\":",
+                    "options": [
+                              "2n + 3",
+                              "2 + 3n",
+                              "n + 6",
+                              "2(n+3)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Twice = 2n, plus 3."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-intro-variables-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Evaluate Expressions** 🧮
 
-Answer the following about writing expressions.
-      `,
+Let $n = 5$.
+
+1) $2n + 3 = ?$
+
+2) $n \div 5 + 1 = ?$
+
+3) $4n - 14 = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of writing expressions."
+        boxes: 3,
+        correctAnswers: ["13","2","6"],
+        hint1: "2(5) + 3.",
+        hint2: "5/5 + 1.",
+        hint3: "4(5) − 14.",
+        explanation: "1) 10+3=13. 2) 1+1=2. 3) 20−14=6."
       }
     },
     {
@@ -60,22 +83,13 @@ Answer the following about writing expressions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Writing Expressions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Writing Expressions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"\"The sum of a number and 8\" is","options":["n + 8","n − 8","8n","n/8"]},{"label":"\"Less than\" means to","options":["Subtract","Add","Multiply","Divide"]}],
+        correctAnswers: ["n + 8","Subtract"],
+        hint1: "Sum = addition.",
+        hint2: "Less = take away.",
+        explanation: "Sum → addition. Less than → subtraction."
       }
     },
     {
@@ -84,28 +98,34 @@ Answer the following about writing expressions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Writing Expressions | Core writing expressions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Phrase | Expression |
+|---|--------|--------|
+| 1 | Twice a number plus 3 | 2n + 3 |
+| 2 | 10 less than x | x − 10 |
+| 3 | A number divided by 5 | n/5 |
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in writing expressions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "\"10 less than x\":",
+                    "options": [
+                              "x − 10",
+                              "10 − x",
+                              "x + 10",
+                              "10x"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "\"Less than\" subtracts from x."
           }
-        ]
+]
       }
     }
   ]

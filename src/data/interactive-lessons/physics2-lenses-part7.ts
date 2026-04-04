@@ -120,7 +120,7 @@ A 4.0 cm tall object is placed 24 cm from a converging lens with $f = 8.0$ cm.
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['12', '-0.5', '-2', 'real', '-0.50'],
+        correctAnswers: ['12', '-0.5', '-2', 'real'],
         hint1: '$\\frac{1}{d_i} = \\frac{1}{8} - \\frac{1}{24} = \\frac{3-1}{24} = \\frac{2}{24} = \\frac{1}{12}$.',
         hint2: '$m = -d_i/d_o = -12/24$.',
         hint3: '$h_i = m \\times h_o = (-0.5)(4.0)$. Since $d_i > 0$, the image is real.',

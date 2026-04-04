@@ -164,7 +164,7 @@ Piece 3 moves at $(-2, -2)$ m/s, with speed $|v_3| = \\sqrt{4 + 4} = 2\\sqrt{2} 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4', '0.25', '10', '0.250'],
+        correctAnswers: ['4', '0.25', '10'],
         hint1: '$0 = (3.0)(v_r) + (0.020)(600)$. $v_r = -12/3.0$.',
         hint2: '$0 = (80)(v_a) + (2)(10)$. $v_a = -20/80$.',
         hint3: '$0 = (4)(15) + (6)(v_B)$. $v_B = -60/6$. Take magnitude.',

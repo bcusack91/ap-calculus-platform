@@ -9,10 +9,12 @@ export const g8PythagoreanPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Grade 8 Math Pythagorean Theorem series.
-
-This lesson covers key concepts and practice problems.
-      `
+Real-world Pythagorean theorem:
+- Ladder against a wall
+- Television screen size (diagonal)
+- Walking shortest path
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p6-worked',
@@ -20,39 +22,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Ladder: 10 ft long, base 6 ft from wall. How high does it reach?**
+
+$h = \sqrt{10^2 - 6^2} = \sqrt{100-36} = \sqrt{64} = 8$ ft ✅
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Grade 8 Math."
+                    "question": "Ladder 13 ft, 5 ft from wall. Height?",
+                    "options": [
+                              "12 ft",
+                              "8 ft",
+                              "18 ft",
+                              "14 ft"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "√(169−25) = √144 = 12."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-pythagorean-theorem-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Word Problems** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) Ladder 13 ft, base 5 ft from wall. Height?
+
+2) TV screen 16 × 12. Diagonal?
+
+3) Walk 9 blocks east, 12 blocks north. Direct distance?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["12","20","15"],
+        hint1: "√(169−25).",
+        hint2: "√(256+144).",
+        hint3: "√(81+144).",
+        explanation: "1) √144=12. 2) √400=20. 3) √225=15."
       }
     },
     {
@@ -60,22 +77,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A TV screen size refers to its","options":["Diagonal","Width","Height","Area"]},{"label":"A ladder, wall, and ground form a","options":["Right triangle","Square","Circle","Cube"]}],
+        correctAnswers: ["Diagonal","Right triangle"],
+        hint1: "Measured corner to corner.",
+        hint2: "Wall is perpendicular to ground.",
+        explanation: "TV size = diagonal. Ladder/wall/ground = right triangle."
       }
     },
     {
@@ -84,28 +92,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Answer |
+|---|---------|--------|
+| 1 | Ladder 13 ft, 5 ft from wall | 12 ft |
+| 2 | TV: 16×12 screen | 20 in |
+| 3 | Walk: 9 blocks E, 12 blocks N | 15 blocks |
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "TV screen 16×12. Diagonal?",
+                    "options": [
+                              "20 in",
+                              "28 in",
+                              "14 in",
+                              "192 in"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "√(256+144) = √400 = 20."
           }
-        ]
+]
       }
     }
   ]

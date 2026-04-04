@@ -180,7 +180,7 @@ An electron ($m = 9.11 \\times 10^{-31}$ kg, $q = 1.6 \\times 10^{-19}$ C) is ac
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.3e7', '0.0075', '3.6e-9', '13000000.0000', '13000000.00', '0.00750', '0.00000'],
+        correctAnswers: ['1.3e7', '0.0075', '3.6e-9'],
         hint1: 'Energy conservation: $qV = \\frac{1}{2}mv^2$. Solve for $v = \\sqrt{2qV/m}$.',
         hint2: '$r = mv/(qB) = (9.11 \\times 10^{-31})(1.33 \\times 10^7)/((1.6 \\times 10^{-19})(0.010))$.',
         hint3: '$T = 2\\pi m/(qB) = 2\\pi(9.11 \\times 10^{-31})/((1.6 \\times 10^{-19})(0.010))$.',

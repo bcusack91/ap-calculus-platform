@@ -99,10 +99,10 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4', '0.8', '0.75', '0.80', '0.750'],
-        hint1: '$v = x\\sqrt{k/m} = 0.1\\sqrt{400/0.25} = 0.1\\sqrt{1600}$.',
-        hint2: '$v = \\sqrt{\\frac{k}{m}(A^2 - x^2)} = \\sqrt{\\frac{800}{2}(0.0025 - 0.0009)}$.',
-        hint3: '$v_{\\max} = A\\sqrt{k/m}$ and $a_{\\max} = kA/m$. Dividing: $a_{\\max}/v_{\\max} = \\sqrt{k/m}$.',
+        correctAnswers: ['4', '0.8', '0.75'],
+        hint1: 'Use energy conservation: $\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2$. Solve for $v$.',
+        hint2: 'Use $v = \\sqrt{\\frac{k}{m}(A^2 - x^2)}$. Plug in $A$, $x$, $k$, and $m$.',
+        hint3: 'You have two equations: $v_{\\max} = A\\sqrt{k/m}$ and $a_{\\max} = kA/m$. Divide them to eliminate $A$, then solve for $m$.',
         explanation: '1) $v = 0.1\\sqrt{1600} = 0.1(40) = 4$ m/s. 2) $v = \\sqrt{400(0.0016)} = \\sqrt{0.64} = 0.8$ m/s. 3) $a_{\\max}/v_{\\max} = \\sqrt{k/m}$. $120/6 = 20 = \\sqrt{300/m}$. $400 = 300/m$. $m = 0.75$ kg.'
       }
     },

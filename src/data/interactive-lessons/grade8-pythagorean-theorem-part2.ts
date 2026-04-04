@@ -9,10 +9,11 @@ export const g8PythagoreanPart2Data = {
 
 **Part 2 of 7 — Finding Missing Sides**
 
-Welcome to **Finding Missing Sides** — Part 2 of 7 in the Grade 8 Math Pythagorean Theorem series.
+To find a **leg**: $a = \sqrt{c^2 - b^2}$
 
-This lesson covers key concepts and practice problems.
-      `
+Always identify: which side is the hypotenuse?
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p2-worked',
@@ -20,39 +21,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Hypotenuse 10, one leg 6. Find the other leg.**
+
+$a = \sqrt{10^2 - 6^2} = \sqrt{100 - 36} = \sqrt{64} = 8$ ✅
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes finding missing sides?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Finding Missing Sides is a core concept in Grade 8 Math."
+                    "question": "c=13, a=5. b=?",
+                    "options": [
+                              "12",
+                              "8",
+                              "18",
+                              "14"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "169−25=144. √144=12."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-pythagorean-theorem-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Find the Missing Leg** 🧮
 
-Answer the following about finding missing sides.
-      `,
+1) c=13, a=5. b = ?
+
+2) c=15, a=9. b = ?
+
+3) c=17, a=8. b = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of finding missing sides."
+        boxes: 3,
+        correctAnswers: ["12","12","15"],
+        hint1: "169 − 25.",
+        hint2: "225 − 81.",
+        hint3: "289 − 64.",
+        explanation: "1) √144=12. 2) √144=12. 3) √225=15."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about finding missing sides.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Finding Missing Sides is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Finding Missing Sides builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To find a missing leg, use","options":["$a = \\sqrt{c^2 - b^2}$","$a = c + b$","$a = c \\times b$","$a = c - b$"]},{"label":"The hypotenuse is always the ____ value","options":["Largest","Smallest","Middle","Unknown"]}],
+        correctAnswers: ["$a = \\sqrt{c^2 - b^2}$","Largest"],
+        hint1: "Rearrange a²+b²=c².",
+        hint2: "Opposite the largest angle.",
+        explanation: "Leg = √(c²−b²). Hypotenuse is the largest side."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about finding missing sides.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Finding Missing Sides | Core finding missing sides principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Known | Find |
+|---|-------|------|
+| 1 | c=13, a=5 | b=12 |
+| 2 | c=15, a=9 | b=12 |
+| 3 | c=17, a=8 | b=15 |
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in finding missing sides?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "c=15, a=9. b=?",
+                    "options": [
+                              "12",
+                              "6",
+                              "24",
+                              "18"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "225−81=144. √144=12."
           }
-        ]
+]
       }
     }
   ]

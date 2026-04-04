@@ -61,7 +61,7 @@ Use $G = 6.67 \\times 10^{-11}$, $M_E = 6.0 \\times 10^{24}$ kg, $R_E = 6.4 \\ti
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.5', '5600', '5.7', '2.50', '5.70'],
+        correctAnswers: ['2.5', '5600', '5.7'],
         hint1: '$g = GM/(2R_E)^2 = GM/(4R_E^2) = g_0/4$.',
         hint2: '$v = \\sqrt{GM/r} = \\sqrt{GM/(2R_E)}$.',
         hint3: '$T = 2\\pi r/v$. Convert to hours.',
@@ -128,7 +128,7 @@ Use $G = 6.67 \\times 10^{-11}$.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.92', '17.9', '4.0', '1.920', '17.90', '4.00'],
+        correctAnswers: ['1.92', '17.9', '4.0'],
         hint1: '$M = gR^2/G$.',
         hint2: '$v_{esc} = \\sqrt{2gR}$.',
         hint3: '$T = 2\\pi\\sqrt{(2R)^3/(GM)}$.',

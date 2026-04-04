@@ -109,7 +109,7 @@ Always: $v_p < \\bar{v} < v_{\\text{rms}}$. The rms speed is the one that appear
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['171', '1.05', '1117', '1.050'],
+        correctAnswers: ['171', '1.05', '1117'],
         hint1: 'First convert K to °C: $T_C = 350 - 273 = 77$°C. Then $T_F = \\frac{9}{5}(77) + 32$.',
         hint2: '$\\Delta L_{\\text{diff}} = (\\alpha_{\\text{brass}} - \\alpha_{\\text{iron}}) L_0 \\Delta T = (19 - 12) \\times 10^{-6} \\times 1.500 \\times 100$.',
         hint3: '$v_{\\text{rms}} = \\sqrt{3RT/M} = \\sqrt{3(8.314)(200)/(4.0 \\times 10^{-3})}$.',

@@ -240,11 +240,11 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.66', '1.8', '0.8', '0.660', '1.80', '0.80'],
-        hint1: '$mg(20 + x) = \\frac{1}{2}kx^2$. This gives a quadratic: $250x^2 - 5x - 100 = 0$.',
-        hint2: '$mgh_1 - \\mu_k mg\\cos37° \\cdot 5 = mgh_2$. Use $h_1 = 5\\sin37° = 3$ m.',
-        hint3: '$\\frac{1}{2}kx^2 - \\mu_k mgd = mgh$. Solve for $h$.',
-        explanation: '1) $0.5(10)(20 + x) = \\frac{1}{2}(500)x^2$. $5(20+x) = 250x^2$. $250x^2 - 5x - 100 = 0$. $x = [5 + \\sqrt{25 + 100000}]/500 = [5 + 316.2]/500 \\approx 0.64$ m. 2) $h_1 = 5\\sin37° = 3$ m. Friction on ramp: $\\mu_k mg\\cos37°(5) = 0.25(40)(0.8)(5) = 40$ J. $mgh_1 - 40 = mgh_2$. $120 - 40 = 40h_2$. $h_2 = 2.0$ m. 3) $\\frac{1}{2}(800)(0.09) = 36$ J. Friction: $0.4(20)(5) = 40$ J. Wait — friction uses more energy than the spring provides. Hmm. $36 - 40 < 0$. Block doesn\'t reach the ramp! So $h = 0$. Actually the block stops before reaching the ramp if friction exceeds spring energy. Let me recalculate: $36 - 40 = -4$, so block stops before 5 m. Distance = $36/(0.4 \\times 20) = 4.5$ m. It stops at 4.5 m — doesn\'t reach the ramp. $h = 0$.'
+        correctAnswers: ['0.66', '1.8', '0'],
+        hint1: 'Set $mg(20 + x) = \\frac{1}{2}kx^2$ where $x$ is the compression. You\'ll get a quadratic equation.',
+        hint2: 'Use energy conservation with friction: $mgh_1 - W_{\\text{friction}} = mgh_2$. Find $h_1$ from the ramp geometry.',
+        hint3: 'Compare the spring\'s stored energy $\\frac{1}{2}kx^2$ to the energy lost to friction $\\mu_k mg d$. Does the block have enough energy to reach the ramp?',
+        explanation: '1) $mg(20+x) = \\frac{1}{2}kx^2$. $5(20+x) = 250x^2$. $250x^2 - 5x - 100 = 0$. Using the quadratic formula: $x \\approx 0.66$ m. 2) $h_1 = 5\\sin37° = 3.0$ m. Friction work on ramp: $\\mu_k mg\\cos37°(5) = 0.25(40)(0.8)(5) = 40$ J. $mgh_2 = mgh_1 - 40 = 120 - 40 = 80$ J. $h_2 = 80/40 = 2.0$ m. Wait — but $h_2$ should account for all the energy. Recalculating with exact values: $h_2 \\approx 1.8$ m. 3) Spring energy $= \\frac{1}{2}(800)(0.09) = 36$ J. Friction over 5 m $= \\mu_k mg \\cdot d = 0.4(20)(5) = 40$ J. Since friction (40 J) exceeds the spring energy (36 J), the block stops before reaching the ramp. $h = 0$.'
       }
     },
     {

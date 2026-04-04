@@ -114,7 +114,7 @@ A diverging lens has $f = -12$ cm. An object of height 9.0 cm is placed 36 cm fr
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-9', '0.25', '2.25', '0.250', '2.250'],
+        correctAnswers: ['-9', '0.25', '2.25'],
         hint1: '$\\frac{1}{d_i} = \\frac{1}{-12} - \\frac{1}{36}$. Find a common denominator of 36.',
         hint2: '$m = -d_i/d_o = -(-9)/36 = 9/36$.',
         hint3: '$h_i = m \\times h_o = 0.25 \\times 9.0$.',
@@ -137,7 +137,7 @@ An object is placed 20 cm from a lens. Calculate $d_i$ for each lens:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20', '-6.67', '0.33', '-6.670', '0.330'],
+        correctAnswers: ['20', '-6.67', '0.33'],
         hint1: 'Converging: $\\frac{1}{d_i} = \\frac{1}{10} - \\frac{1}{20} = \\frac{1}{20}$.',
         hint2: 'Diverging: $\\frac{1}{d_i} = \\frac{1}{-10} - \\frac{1}{20} = \\frac{-2-1}{20} = \\frac{-3}{20}$.',
         hint3: '$m = -d_i/d_o = -(-6.67)/20$.',

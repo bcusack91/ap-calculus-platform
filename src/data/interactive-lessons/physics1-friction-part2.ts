@@ -173,7 +173,7 @@ Use $g = 10$ m/s² for all problems.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.33', '50', '150', '1.330'],
+        correctAnswers: ['1.33', '50', '150'],
         hint1: '$a = (F - \\mu_k mg)/m = (50 - 0.20 \\times 150)/15$.',
         hint2: 'Constant velocity: $F = f_k = \\mu_k mg = 0.50 \\times 100$.',
         hint3: '$F_{\\max} = \\mu_s mg = 0.60 \\times 250$.',

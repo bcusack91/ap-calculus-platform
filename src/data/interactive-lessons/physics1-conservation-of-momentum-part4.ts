@@ -150,7 +150,7 @@ Ball A (2 kg) moves at 4 m/s in the $+x$ direction. Ball B (3 kg) moves at 3 m/s
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3', '3', '3.6', '3.60'],
+        correctAnswers: ['3', '3', '3.6'],
         hint1: '$(5)(6) = (10)v_{fx}$',
         hint2: 'Since there is no y-momentum, $v_{fy} = 0$. Speed = $v_{fx}$.',
         hint3: 'x: $(3)(4) = 4v_{fx}$, $v_{fx} = 3$. y: $(1)(8) = 4v_{fy}$, $v_{fy} = 2$. Speed = $\\sqrt{9 + 4}$.',

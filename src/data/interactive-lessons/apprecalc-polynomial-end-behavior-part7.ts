@@ -9,10 +9,13 @@ export const apPrecalcPolyEndPart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the AP Precalculus Polynomial End Behavior series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Concepts
+- Degree & LC → end behavior
+- Even mult → bounce; Odd mult → cross
+- Max turning points = degree − 1
+- y-intercept = f(0)
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p7-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$f(x) = 2x^3 - 6x$. Degree? LC? y-int?**
+
+Degree 3, LC = 2 (odd+pos → left↓ right↑), $f(0)=0$ ✅
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in AP Precalculus."
+                    "question": "Max turning points for degree 5?",
+                    "options": [
+                              "4",
+                              "5",
+                              "6",
+                              "3"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "5−1=4."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) Degree of $4x^5 + x$?
+
+2) Max turning points for degree 5?
+
+3) y-intercept of $3x^2 - 7$?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["5","4","-7"],
+        hint1: "Highest exponent.",
+        hint2: "5−1.",
+        hint3: "f(0).",
+        explanation: "1) 5. 2) 4. 3) −7."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"End behavior depends on","options":["Degree and leading coefficient","Number of terms","y-intercept","Zeros only"]},{"label":"Odd multiplicity means the graph ____ the x-axis","options":["Crosses","Bounces off","Does not touch","Is parallel to"]}],
+        correctAnswers: ["Degree and leading coefficient","Crosses"],
+        hint1: "Two key properties.",
+        hint2: "Passes through.",
+        explanation: "End behavior: degree + LC. Odd mult → crosses."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Concept | Answer |
+|---|---------|--------|
+| 1 | Degree of 4x⁵ | 5 |
+| 2 | Max turning points for degree 5 | 4 |
+| 3 | y-int of 3x²−7 | −7 |
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "y-intercept of 3x²−7?",
+                    "options": [
+                              "−7",
+                              "3",
+                              "7",
+                              "0"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "f(0)=0−7=−7."
           }
-        ]
+]
       }
     }
   ]

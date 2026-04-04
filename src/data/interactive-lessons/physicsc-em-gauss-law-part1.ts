@@ -5,14 +5,19 @@ export const physCEMGaussPart1Data = {
       id: 'physicsc-em-gauss-law-p1-intro',
       type: 'text' as const,
       content: `
-# 📐 Electric Flux
+# ⚡ Electric Flux
 
 **Part 1 of 7 — Electric Flux**
 
-Welcome to **Electric Flux** — Part 1 of 7 in the AP Physics C: E&M Gauss's Law series.
+$\Phi_E = \oint \vec{E} \cdot d\vec{A} = \int E\cos\theta\,dA$
 
-This lesson covers key concepts and practice problems.
-      `
+For a uniform field through a flat surface:
+$\Phi_E = EA\cos\theta$
+
+- $\theta$ is the angle between $\vec{E}$ and the outward normal $\hat{n}$
+- SI unit: N·m²/C (or V·m)
+    
+    `
     },
     {
       id: 'physicsc-em-gauss-law-p1-worked',
@@ -20,39 +25,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$E = 500$ N/C passes through a $0.2$ m² surface perpendicular to it. Find $\Phi$.**
+
+$\Phi = EA\cos 0° = 500(0.2)(1) = 100$ N·m²/C ✅
+    
+    `
     },
     {
       id: 'physicsc-em-gauss-law-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes electric flux?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Electric Flux is a core concept in AP Physics C: E&M."
+                    "question": "If a surface is parallel to the electric field, the flux through it is:",
+                    "options": [
+                              "Zero",
+                              "$EA$",
+                              "$EA/2$",
+                              "Infinite"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$\\\\theta = 90°$, so $\\\\cos 90° = 0$ and $\\\\Phi = 0$."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-em-gauss-law-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Electric Flux** 🧮
 
-Answer the following about electric flux.
-      `,
+1) $E = 500$ N/C, $A = 0.2$ m², $\theta = 0°$. Flux (N·m²/C)?
+
+2) $E = 500$ N/C, $A = 0.2$ m², $\theta = 90°$. Flux (N·m²/C)?
+
+3) $E = 500$ N/C, $A = 0.2$ m², $\theta = 60°$. Flux (N·m²/C)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of electric flux."
+        boxes: 3,
+        correctAnswers: ["100","0","50"],
+        hint1: "$\\Phi = EA\\cos 0° = EA$.",
+        hint2: "$\\cos 90° = 0$.",
+        hint3: "$\\cos 60° = 0.5$.",
+        explanation: "1) $500(0.2)(1) = 100$. 2) $500(0.2)(0) = 0$. 3) $500(0.2)(0.5) = 50$."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about electric flux.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Electric Flux is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Electric Flux builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The SI unit of electric flux is","options":["N·m²/C","N/C","C/m²","V/m²"]},{"label":"Electric flux depends on the angle between $\\\\vec{E}$ and","options":["The outward area normal $\\\\hat{n}$","The surface edge","The charge","The wire"]}],
+        correctAnswers: ["N·m²/C","The outward area normal $\\\\hat{n}$"],
+        hint1: "$\\Phi = EA$ has units (N/C)(m²).",
+        hint2: "$\\Phi = \\vec{E} \\cdot d\\vec{A}$, where $d\\vec{A} = \\hat{n}\\,dA$.",
+        explanation: "Flux units: N·m²/C. It depends on the angle between $\\vec{E}$ and the surface normal $\\hat{n}$."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about electric flux.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Electric Flux | Core electric flux principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Surface orientation | $\Phi$ |
+|---|-------------------|--------|
+| 1 | Perpendicular to $E$ | $EA$ |
+| 2 | Parallel to $E$ | $0$ |
+| 3 | At angle $\theta$ | $EA\cos\theta$ |
+    
+    `
     },
     {
       id: 'physicsc-em-gauss-law-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in electric flux?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Electric flux is a measure of:",
+                    "options": [
+                              "Field lines passing through a surface",
+                              "Electric field strength",
+                              "Charge density",
+                              "Current flow"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Flux counts the net number of field lines through a surface."
           }
-        ]
+]
       }
     }
   ]

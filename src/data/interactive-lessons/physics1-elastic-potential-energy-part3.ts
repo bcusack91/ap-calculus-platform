@@ -148,7 +148,7 @@ Spring constant $k = 400$ N/m for all problems.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '6', '4.5', '4.50'],
+        correctAnswers: ['2', '6', '4.5'],
         hint1: '$W = \\frac{1}{2}kx^2 = \\frac{1}{2}(400)(0.01)$.',
         hint2: '$W = \\frac{1}{2}k(x_f^2 - x_i^2) = \\frac{1}{2}(400)(0.04 - 0.01)$.',
         hint3: '$W_{\\text{spring}} = \\frac{1}{2}kx_i^2 - \\frac{1}{2}kx_f^2 = \\frac{1}{2}(400)(0.0225) - 0$.',

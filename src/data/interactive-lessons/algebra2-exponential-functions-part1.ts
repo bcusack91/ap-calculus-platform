@@ -9,10 +9,15 @@ export const alg2ExponentialPart1Data = {
 
 **Part 1 of 7 — Exponential Growth**
 
-Welcome to **Exponential Growth** — Part 1 of 7 in the Algebra 2 Exponential Functions series.
+$y = a \cdot b^x \quad (b > 1)$
 
-This lesson covers key concepts and practice problems.
-      `
+- $a$ = initial value
+- $b$ = growth factor
+- Growth rate $r$: $b = 1 + r$
+
+Exponential growth: each step multiplies by $b$.
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p1-worked',
@@ -20,39 +25,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Population: 500, grows 10% per year. After 3 years?**
+
+$y = 500(1.10)^3 = 500(1.331) = 665.5$ ✅
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes exponential growth?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Exponential Growth is a core concept in Algebra 2."
+                    "question": "Growth factor for 20% growth rate?",
+                    "options": [
+                              "1.2",
+                              "0.2",
+                              "20",
+                              "1.02"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "b = 1 + 0.20 = 1.2."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-exponential-functions-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Exponential Growth** 🧮
 
-Answer the following about exponential growth.
-      `,
+1) $100(1.2)^2 = ?$
+
+2) $1000(1.5)^1 = ?$
+
+3) $y = 2^x$. When $x = 3$, $y = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of exponential growth."
+        boxes: 3,
+        correctAnswers: ["144","1500","8"],
+        hint1: "100 × 1.44.",
+        hint2: "1000 × 1.5.",
+        hint3: "2³.",
+        explanation: "1) 144. 2) 1500. 3) 8."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about exponential growth.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Exponential Growth is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Exponential Growth builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Exponential growth has b","options":["Greater than 1","Less than 1","Equal to 1","Equal to 0"]},{"label":"The growth factor includes","options":["1 plus the rate","Just the rate","1 minus the rate","The rate squared"]}],
+        correctAnswers: ["Greater than 1","1 plus the rate"],
+        hint1: "b > 1 for growth.",
+        hint2: "b = 1 + r.",
+        explanation: "Growth: b > 1. Growth factor = 1 + rate."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about exponential growth.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Exponential Growth | Core exponential growth principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Initial | Rate | Years | Formula |
+|---|---------|------|-------|---------|
+| 1 | 100 | 20% | 2 | 100(1.2)² |
+| 2 | 200 | 5% | 3 | 200(1.05)³ |
+| 3 | 1000 | 50% | 1 | 1000(1.5)¹ |
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in exponential growth?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "In $y = a \\cdot b^x$, $a$ represents:",
+                    "options": [
+                              "Initial value",
+                              "Growth rate",
+                              "Time",
+                              "Final value"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "a = starting amount."
           }
-        ]
+]
       }
     }
   ]

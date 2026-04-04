@@ -148,7 +148,7 @@ This is a **triangle** — the PE formula comes from the area of a triangle!
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.6', '400', '0.1', '1.60', '0.10'],
+        correctAnswers: ['1.6', '400', '0.1'],
         hint1: '$PE_s = \\frac{1}{2}(500)(0.08)^2 = \\frac{1}{2}(500)(0.0064)$.',
         hint2: '$k = 2 \\cdot PE_s / x^2 = 2(18)/(0.3)^2 = 36/0.09$.',
         hint3: '$x = \\sqrt{2 \\cdot PE_s / k} = \\sqrt{2(4)/800} = \\sqrt{0.01}$.',

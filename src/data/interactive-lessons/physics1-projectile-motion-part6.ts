@@ -58,9 +58,9 @@ A stone is thrown horizontally at 15 m/s from the roof of a 45 m tall building. 
       exercise: {
         boxes: 3,
         correctAnswers: ['3', '45', '34'],
-        hint1: '$45 = \\frac{1}{2}(10)t^2 = 5t^2$',
-        hint2: '$t = 3$ s. $\\Delta x = 15(3) = 45$ m. $v_y = 10(3) = 30$ m/s.',
-        hint3: '$v = \\sqrt{15^2 + 30^2} = \\sqrt{225 + 900} = \\sqrt{1125}$',
+        hint1: 'Use $h = \\frac{1}{2}gt^2$ and solve for $t$.',
+        hint2: 'Horizontal distance: $\\Delta x = v_{0x} \\cdot t$. Also find $v_y$ using $v_y = gt$.',
+        hint3: 'Combine $v_x$ and $v_y$ using $v = \\sqrt{v_x^2 + v_y^2}$, then round to the nearest whole number.',
         explanation: '1) $t = 3$ s. 2) $\\Delta x = 45$ m. 3) $v = \\sqrt{225 + 900} = \\sqrt{1125} \\approx 33.5 \\approx 34$ m/s.'
       }
     },
@@ -84,10 +84,10 @@ A soccer ball is kicked from ground level at 40 m/s at 53° above horizontal. Us
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['51.2', '6.4', '153.6', '24', '51.20', '6.40', '153.60'],
-        hint1: '$v_{0y} = 40(0.8) = 32$ m/s. $h = v_{0y}^2/(2g) = 1024/20$',
-        hint2: '$t = 2v_{0y}/g = 64/10$',
-        hint3: '$v_{0x} = 40(0.6) = 24$ m/s. Range $= v_{0x} \\cdot t$. Speed at max height $= v_{0x}$.',
+        correctAnswers: ['51.2', '6.4', '153.6', '24'],
+        hint1: 'Find $v_{0y}$ using $\\sin 53°$, then use $h = v_{0y}^2/(2g)$.',
+        hint2: 'Total flight time: $t = 2v_{0y}/g$.',
+        hint3: 'Find $v_{0x}$ using $\\cos 53°$. Range $= v_{0x} \\cdot t$. At max height, $v_y = 0$, so speed equals $v_{0x}$.',
         explanation: '1) $h = 32^2/20 = 1024/20 = 51.2$ m. 2) $t = 2(32)/10 = 6.4$ s. 3) $R = 24(6.4) = 153.6$ m. 4) At max height, $v = v_{0x} = 24$ m/s.'
       }
     },

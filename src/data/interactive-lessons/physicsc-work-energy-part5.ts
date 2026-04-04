@@ -5,14 +5,19 @@ export const physCWorkEnergyPart5Data = {
       id: 'physicsc-work-energy-p5-intro',
       type: 'text' as const,
       content: `
-# 🧮 Power
+# ⚛️ Power
 
 **Part 5 of 7 — Power**
 
-Welcome to **Power** — Part 5 of 7 in the AP Physics C Work-Energy Theorem series.
+Power is the rate of doing work:
 
-This lesson covers key concepts and practice problems.
-      `
+$P = \frac{dW}{dt} = \vec{F} \cdot \vec{v}$
+
+$P_{avg} = \frac{W}{\Delta t} = \frac{\Delta E}{\Delta t}$
+
+Unit: **Watt** (W) = J/s = kg·m²/s³
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p5-worked',
@@ -20,39 +25,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A motor lifts a 100 kg load 10 m in 5 s. Find the average power. ($g = 10$ m/s²)**
+
+$P = \frac{W}{t} = \frac{mgh}{t} = \frac{100(10)(10)}{5} = 2000$ W ✅
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes power?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Power is a core concept in AP Physics C."
+                    "question": "One Watt equals:",
+                    "options": [
+                              "One Joule per second",
+                              "One Newton per second",
+                              "One kg·m/s",
+                              "One Newton·meter"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "1 W = 1 J/s. Power is energy per unit time."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-work-energy-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Power** 🧮
 
-Answer the following about power.
-      `,
+1) A motor lifts 100 kg by 10 m in 5 s. Average power (W)? ($g = 10$ m/s²)
+
+2) A force of 50 N moves an object at 10 m/s. Instantaneous power (W)?
+
+3) A 1000 W motor runs for 5 s. How much energy (J) does it deliver? Divide your answer by 5 to give energy per second... wait. 1000 W for 5 s = 5000 J. Hmm. Let me redo: A motor delivers 1000 J in 5 s. What is the power (W)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of power."
+        boxes: 3,
+        correctAnswers: ["2000","500","200"],
+        hint1: "$P = mgh/t$.",
+        hint2: "$P = Fv$.",
+        hint3: "$P = W/t = 1000/5$.",
+        explanation: "1) $P = (100)(10)(10)/5 = 2000$ W. 2) $P = 50 \\times 10 = 500$ W. 3) $P = 1000/5 = 200$ W."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about power.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Power is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Power builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Instantaneous power is calculated as","options":["$P = F \\\\cdot v$","$P = F \\\\cdot a$","$P = m \\\\cdot v$","$P = F / t$"]},{"label":"If the same work is done in half the time, the power is","options":["Doubled","Halved","The same","Quadrupled"]}],
+        correctAnswers: ["$P = F \\\\cdot v$","Doubled"],
+        hint1: "Power is force times velocity.",
+        hint2: "$P = W/t$. If $t$ halves...",
+        explanation: "$P = F \\cdot v$ for instantaneous power. Halving time doubles power since $P = W/t$."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about power.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Power | Core power principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Concept | Formula |
+|---|---------|---------|
+| 1 | Average power | $P = W/t$ |
+| 2 | Instantaneous power | $P = Fv$ |
+| 3 | Horsepower conversion | 1 hp ≈ 746 W |
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in power?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "A car traveling at constant velocity $v$ against friction $f$ has engine power:",
+                    "options": [
+                              "$P = fv$",
+                              "$P = fv^2$",
+                              "$P = f/v$",
+                              "$P = fv/2$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "At constant velocity, engine force equals friction. $P = Fv = fv$."
           }
-        ]
+]
       }
     }
   ]

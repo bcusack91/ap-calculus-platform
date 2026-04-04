@@ -9,10 +9,13 @@ export const g8LinearPart5Data = {
 
 **Part 5 of 7 — Systems Introduction**
 
-Welcome to **Systems Introduction** — Part 5 of 7 in the Grade 8 Math Linear Functions series.
+A **system of equations** is two equations with two variables.
 
-This lesson covers key concepts and practice problems.
-      `
+The **solution** is the point where both lines intersect.
+
+Solving: graphing, substitution, or elimination.
+    
+    `
     },
     {
       id: 'grade8-linear-functions-p5-worked',
@@ -20,39 +23,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$y = x + 1$ and $y = 2x - 1$.**
+
+Set equal: $x + 1 = 2x - 1 \Rightarrow 2 = x$. Then $y = 2 + 1 = 3$.
+
+Solution: $(2, 3)$ ✅
+    
+    `
     },
     {
       id: 'grade8-linear-functions-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes systems introduction?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Systems Introduction is a core concept in Grade 8 Math."
+                    "question": "Solution to $y=x$ and $y=2x−3$?",
+                    "options": [
+                              "(3,3)",
+                              "(1,1)",
+                              "(0,0)",
+                              "(−3,−3)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "x = 2x−3 → x = 3, y = 3."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-linear-functions-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Find X** 🧮
 
-Answer the following about systems introduction.
-      `,
+1) $y = x$ and $y = 2x - 3$. $x = ?$
+
+2) $y = 3x + 1$ and $y = x + 5$. $x = ?$
+
+3) $y = 2x$ and $y = x + 4$. $x = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of systems introduction."
+        boxes: 3,
+        correctAnswers: ["3","2","4"],
+        hint1: "x = 2x − 3.",
+        hint2: "3x+1 = x+5.",
+        hint3: "2x = x+4.",
+        explanation: "1) x=3. 2) 2x=4→x=2. 3) x=4."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about systems introduction.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Systems Introduction is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Systems Introduction builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The solution to a system is where lines","options":["Intersect","Are parallel","Touch the x-axis","Have the same slope"]},{"label":"If two lines have different slopes, they have","options":["Exactly one solution","No solution","Infinite solutions","Two solutions"]}],
+        correctAnswers: ["Intersect","Exactly one solution"],
+        hint1: "Lines cross at the solution.",
+        hint2: "Different slopes → one crossing.",
+        explanation: "Solution = intersection point. Different slopes → one solution."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about systems introduction.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Systems Introduction | Core systems introduction principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | System | Solution |
+|---|--------|---------|
+| 1 | y=x, y=2x−3 | (3,3) |
+| 2 | y=3x+1, y=x+5 | (2,7) |
+| 3 | y=2x, y=x+4 | (4,8) |
+    
+    `
     },
     {
       id: 'grade8-linear-functions-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in systems introduction?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "A system with no solution means the lines are:",
+                    "options": [
+                              "Parallel",
+                              "Perpendicular",
+                              "Identical",
+                              "Intersecting"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "No intersection = parallel lines."
           }
-        ]
+]
       }
     }
   ]

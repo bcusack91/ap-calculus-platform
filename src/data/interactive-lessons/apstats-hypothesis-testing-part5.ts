@@ -9,10 +9,14 @@ export const apStatsHypothesisPart5Data = {
 
 **Part 5 of 7 — One-Sample t-Test**
 
-Welcome to **One-Sample t-Test** — Part 5 of 7 in the AP Statistics Hypothesis Testing series.
+Conditions:
+1. **Random** sample
+2. **Independence** (n < 10% of population)
+3. **Normal/Large sample** (n ≥ 30 or approximately normal)
 
-This lesson covers key concepts and practice problems.
-      `
+$t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}}, \quad df = n - 1$
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p5-worked',
@@ -20,39 +24,58 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**n = 36, x̄ = 52, s = 6, μ₀ = 50. Test at α = 0.05.**
+
+$SE = 6/\sqrt{36} = 1$
+$t = (52-50)/1 = 2$
+$df = 35$. Since $|t| > 2$, p < 0.05 → **Reject** ✅
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes one-sample t-test?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "One-Sample t-Test is a core concept in AP Statistics."
+                    "question": "Degrees of freedom for n=36?",
+                    "options": [
+                              "35",
+                              "36",
+                              "34",
+                              "37"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "df = n−1 = 35."
           }
-        ]
+]
       }
     },
     {
       id: 'apstats-hypothesis-testing-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**t-Test** 🧮
 
-Answer the following about one-sample t-test.
-      `,
+n=36, x̄=52, s=6, μ₀=50:
+
+1) SE = s/√n?
+
+2) t = (x̄ − μ₀)/SE?
+
+3) df?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of one-sample t-test."
+        boxes: 3,
+        correctAnswers: ["1","2","35"],
+        hint1: "6/√36 = 6/6.",
+        hint2: "(52−50)/1.",
+        hint3: "n−1.",
+        explanation: "1) 1. 2) 2. 3) 35."
       }
     },
     {
@@ -60,22 +83,13 @@ Answer the following about one-sample t-test.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "One-Sample t-Test is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "One-Sample t-Test builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A t-test is used instead of a z-test when","options":["σ is unknown (use s instead)","n is large","The data is normal","α is small"]},{"label":"The three conditions for a t-test are","options":["Random, Independent, Normal/Large","Mean, Median, Mode","H₀, Hₐ, p-value","Type I, Type II, Power"]}],
+        correctAnswers: ["σ is unknown (use s instead)","Random, Independent, Normal/Large"],
+        hint1: "Population σ unknown.",
+        hint2: "R-I-N.",
+        explanation: "t-test: σ unknown. Conditions: Random, Independent, Normal/Large."
       }
     },
     {
@@ -84,28 +98,34 @@ Answer the following about one-sample t-test.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | One-Sample t-Test | Core one-sample t-test principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | n | x̄ | s | μ₀ | t |
+|---|---|---|---|---|---|
+| 1 | 36 | 52 | 6 | 50 | 2 |
+| 2 | 25 | 100 | 10 | 100 | 0 |
+| 3 | 16 | 84 | 8 | 80 | 2 |
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in one-sample t-test?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "The condition n ≥ 30 relates to:",
+                    "options": [
+                              "Central Limit Theorem",
+                              "The p-value",
+                              "Type I error",
+                              "The null"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "CLT ensures approximate normality."
           }
-        ]
+]
       }
     }
   ]

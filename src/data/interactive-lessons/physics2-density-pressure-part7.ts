@@ -130,7 +130,7 @@ $$\\text{Floating } (\\text{fraction} = \\rho_{\\text{obj}}/\\rho_{\\text{fluid}
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['350000', '0.0016', '300', '0.00160'],
+        correctAnswers: ['350000', '0.0016', '300'],
         hint1: '$P = 10^5 + (1000)(10)(25) = 10^5 + 250{,}000$.',
         hint2: 'Fraction submerged = 600/1000 = 0.6. Above water = $0.004 \\times 0.4$.',
         hint3: '$P_{\\text{gauge}} = \\rho g h = (1000)(10)(15) = 150{,}000$ Pa. $F = P \\times A$.',

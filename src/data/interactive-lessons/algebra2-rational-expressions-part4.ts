@@ -9,10 +9,13 @@ export const alg2RationalPart4Data = {
 
 **Part 4 of 7 — Complex Fractions**
 
-Welcome to **Complex Fractions** — Part 4 of 7 in the Algebra 2 Rational Expressions series.
+A **complex fraction** has fractions in the numerator, denominator, or both.
 
-This lesson covers key concepts and practice problems.
-      `
+$\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} \cdot \frac{d}{c} = \frac{ad}{bc}$
+
+Alternatively: multiply top and bottom by the LCD.
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p4-worked',
@@ -20,39 +23,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$\frac{\frac{1}{2}}{\frac{3}{4}} = \frac{1}{2} \times \frac{4}{3} = \frac{4}{6} = \frac{2}{3}$ ✅
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes complex fractions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Complex Fractions is a core concept in Algebra 2."
+                    "question": "$\\frac{\\frac{2}{3}}{\\frac{4}{9}} = ?$",
+                    "options": [
+                              "$\\frac{3}{2}$",
+                              "$\\frac{8}{27}$",
+                              "$\\frac{2}{3}$",
+                              "$6$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(2/3)(9/4) = 18/12 = 3/2."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-rational-expressions-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Simplify Complex Fractions** 🧮 (decimal answers)
 
-Answer the following about complex fractions.
-      `,
+1) $\frac{\frac{2}{3}}{\frac{4}{9}} = ?$
+
+2) $\frac{\frac{1}{x}}{\frac{2}{x}} = ?$
+
+3) $\frac{3}{\frac{6}{5}} = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of complex fractions."
+        boxes: 3,
+        correctAnswers: ["1.5","0.5","2.5"],
+        hint1: "(2/3) × (9/4).",
+        hint2: "(1/x) × (x/2).",
+        hint3: "3 × (5/6).",
+        explanation: "1) 18/12=1.5. 2) 1/2=0.5. 3) 15/6=2.5."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about complex fractions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Complex Fractions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Complex Fractions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A complex fraction has","options":["Fractions within fractions","Only whole numbers","No denominator","Imaginary numbers"]},{"label":"The key strategy for complex fractions is","options":["Multiply by the reciprocal","Cross multiply","Add numerators","Ignore the inner fractions"]}],
+        correctAnswers: ["Fractions within fractions","Multiply by the reciprocal"],
+        hint1: "Fractions in the numerator or denominator.",
+        hint2: "Flip and multiply.",
+        explanation: "Complex: fractions within fractions. Multiply by reciprocal."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about complex fractions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Complex Fractions | Core complex fractions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Complex Fraction | Simplified |
+|---|-----------------|----------|
+| 1 | $\frac{\frac{2}{3}}{\frac{4}{9}}$ | $\frac{3}{2}$ |
+| 2 | $\frac{\frac{1}{x}}{\frac{2}{x}}$ | $\frac{1}{2}$ |
+| 3 | $\frac{3}{\frac{6}{5}}$ | $\frac{5}{2}$ |
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in complex fractions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "To simplify a complex fraction:",
+                    "options": [
+                              "Multiply by the reciprocal of the denominator fraction",
+                              "Add top and bottom",
+                              "Subtract",
+                              "Square both parts"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Main fraction ÷ bottom = multiply by reciprocal."
           }
-        ]
+]
       }
     }
   ]

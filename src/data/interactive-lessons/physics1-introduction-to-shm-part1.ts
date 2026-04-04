@@ -131,7 +131,7 @@ The acceleration is **proportional to displacement** and always directed toward 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20', '7.5', '4', '7.50'],
+        correctAnswers: ['20', '7.5', '4'],
         hint1: '$|F| = kx = 200(0.1)$',
         hint2: '$|a| = kx/m = 50(0.3)/2$',
         hint3: '$\\omega = \\sqrt{80/5} = \\sqrt{16}$',

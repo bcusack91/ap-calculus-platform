@@ -9,10 +9,13 @@ export const geoCirclesPart4Data = {
 
 **Part 4 of 7 — Tangent Lines**
 
-Welcome to **Tangent Lines** — Part 4 of 7 in the Geometry Circles series.
+A tangent is **perpendicular** to the radius at the point of tangency.
 
-This lesson covers key concepts and practice problems.
-      `
+If tangent meets radius at point P: angle = 90°.
+
+**Two tangent segments** from an external point are **equal** in length.
+    
+    `
     },
     {
       id: 'geometry-circles-p4-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Radius = 5, tangent segment = 12. Distance from center to external point?**
+
+Forms a right triangle: $d = \sqrt{5^2 + 12^2} = \sqrt{25+144} = \sqrt{169} = 13$ ✅
+    
+    `
     },
     {
       id: 'geometry-circles-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes tangent lines?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Tangent Lines is a core concept in Geometry."
+                    "question": "A tangent is ____ to the radius at the point of tangency:",
+                    "options": [
+                              "Perpendicular",
+                              "Parallel",
+                              "Equal",
+                              "Bisecting"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Tangent ⊥ radius."
           }
-        ]
+]
       }
     },
     {
       id: 'geometry-circles-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Tangent Problems** 🧮
 
-Answer the following about tangent lines.
-      `,
+1) r=3, tangent=4. Distance from center?
+
+2) r=5, tangent=12. Distance from center?
+
+3) r=8, tangent=6. Distance from center?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of tangent lines."
+        boxes: 3,
+        correctAnswers: ["5","13","10"],
+        hint1: "√(9+16).",
+        hint2: "√(25+144).",
+        hint3: "√(64+36).",
+        explanation: "1) √25=5. 2) √169=13. 3) √100=10."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about tangent lines.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Tangent Lines is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Tangent Lines builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The angle between a tangent and radius is","options":["90°","180°","45°","60°"]},{"label":"Two tangents from the same external point are","options":["Equal in length","Perpendicular","Parallel","Different lengths"]}],
+        correctAnswers: ["90°","Equal in length"],
+        hint1: "Tangent ⊥ radius.",
+        hint2: "Tangent segments from same point.",
+        explanation: "Tangent ⊥ radius (90°). Equal tangent segments from external point."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about tangent lines.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Tangent Lines | Core tangent lines principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Radius | Tangent | Distance |
+|---|--------|---------|----------|
+| 1 | 3 | 4 | 5 |
+| 2 | 5 | 12 | 13 |
+| 3 | 8 | 6 | 10 |
+    
+    `
     },
     {
       id: 'geometry-circles-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in tangent lines?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "r=3, tangent=4. Distance to center from external point?",
+                    "options": [
+                              "5",
+                              "7",
+                              "12",
+                              "25"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "√(9+16)=√25=5."
           }
-        ]
+]
       }
     }
   ]

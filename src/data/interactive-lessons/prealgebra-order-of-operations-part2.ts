@@ -9,10 +9,12 @@ export const preAlgOrderOpsPart2Data = {
 
 **Part 2 of 7 — Parentheses & Exponents**
 
-Welcome to **Parentheses & Exponents** — Part 2 of 7 in the Pre-Algebra Order of Operations series.
+**Parentheses** first: work inside out.
+**Exponents** second: evaluate powers.
 
-This lesson covers key concepts and practice problems.
-      `
+$(3 + 2)^2 = 5^2 = 25$ (parentheses first, then exponent)
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p2-worked',
@@ -20,39 +22,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$(4 + 1)^2 - 3 = 5^2 - 3 = 25 - 3 = 22$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes parentheses & exponents?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Parentheses & Exponents is a core concept in Pre-Algebra."
+                    "question": "$(2 + 3)^2 = ?$",
+                    "options": [
+                              "25",
+                              "10",
+                              "13",
+                              "7"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(5)² = 25."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-order-of-operations-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Parentheses & Exponents** 🧮
 
-Answer the following about parentheses & exponents.
-      `,
+1) $(2 + 3)^2 = ?$
+
+2) $2(6 - 2) = ?$
+
+3) $4^2 + 1 = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of parentheses & exponents."
+        boxes: 3,
+        correctAnswers: ["25","8","17"],
+        hint1: "Inside first: 2+3=5.",
+        hint2: "Inside first: 6−2=4.",
+        hint3: "Exponent first: 4²=16.",
+        explanation: "1) 25. 2) 8. 3) 17."
       }
     },
     {
@@ -60,22 +75,13 @@ Answer the following about parentheses & exponents.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Parentheses & Exponents is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Parentheses & Exponents builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Parentheses are evaluated","options":["First (innermost out)","Last","After exponents","After multiplication"]},{"label":"$3^2$ means","options":["3 × 3","3 × 2","3 + 2","2 × 2 × 2"]}],
+        correctAnswers: ["First (innermost out)","3 × 3"],
+        hint1: "P comes first in PEMDAS.",
+        hint2: "Base × base.",
+        explanation: "Parentheses first. 3² = 3×3 = 9."
       }
     },
     {
@@ -84,28 +90,34 @@ Answer the following about parentheses & exponents.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Parentheses & Exponents | Core parentheses & exponents principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Expression | Value |
+|---|-----------|-------|
+| 1 | (2+3)² | 25 |
+| 2 | 2(6−2) | 8 |
+| 3 | 4² + 1 | 17 |
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in parentheses & exponents?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$2(6 - 2) = ?$",
+                    "options": [
+                              "8",
+                              "10",
+                              "16",
+                              "4"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "2(4) = 8."
           }
-        ]
+]
       }
     }
   ]

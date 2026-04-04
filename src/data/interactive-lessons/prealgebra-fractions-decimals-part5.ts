@@ -9,10 +9,13 @@ export const preAlgFractionsPart5Data = {
 
 **Part 5 of 7 — Real-World Applications**
 
-Welcome to **Real-World Applications** — Part 5 of 7 in the Pre-Algebra Fractions, Decimals & Percents series.
-
-This lesson covers key concepts and practice problems.
-      `
+Fractions, decimals, and percents appear everywhere:
+- **Shopping**: discounts, sales tax
+- **Cooking**: recipe measurements
+- **Grades**: test scores
+- **Sports**: batting averages
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p5-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Test: 18 out of 20. What percent?**
+
+$\frac{18}{20} = 0.9 = 90\%$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes real-world applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Real-World Applications is a core concept in Pre-Algebra."
+                    "question": "15 out of 20 as a percent?",
+                    "options": [
+                              "75%",
+                              "15%",
+                              "20%",
+                              "80%"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "15/20 = 0.75 = 75%."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-fractions-decimals-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Applications** 🧮
 
-Answer the following about real-world applications.
-      `,
+1) 15/20 as a percent?
+
+2) 30% of 50?
+
+3) 18/20 as a percent?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of real-world applications."
+        boxes: 3,
+        correctAnswers: ["75","15","90"],
+        hint1: "15 ÷ 20 × 100.",
+        hint2: "0.30 × 50.",
+        hint3: "18 ÷ 20 × 100.",
+        explanation: "1) 75. 2) 15. 3) 90."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about real-world applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Real-World Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Real-World Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To find a percent of a number","options":["Convert % to decimal and multiply","Just subtract the percent","Add the percent","Divide by the percent"]},{"label":"A batting average of .300 means","options":["30%","3%","300%","0.3%"]}],
+        correctAnswers: ["Convert % to decimal and multiply","30%"],
+        hint1: "Percent → decimal → multiply.",
+        hint2: "0.300 = 30%.",
+        explanation: "% of a number: convert and multiply. 0.300 = 30%."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about real-world applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Real-World Applications | Core real-world applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Answer |
+|---|---------|--------|
+| 1 | 15/20 as % | 75% |
+| 2 | 30% of 50 | 15 |
+| 3 | Recipe: half of 3/4 cup | 3/8 cup |
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in real-world applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "30% of 50?",
+                    "options": [
+                              "15",
+                              "30",
+                              "50",
+                              "1500"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "0.30 × 50 = 15."
           }
-        ]
+]
       }
     }
   ]

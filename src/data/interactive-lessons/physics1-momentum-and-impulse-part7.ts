@@ -128,7 +128,7 @@ Let\'s bring together all the key ideas from this topic and practice AP-style qu
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['15000', '3.2', '10', '3.20'],
+        correctAnswers: ['15000', '3.2', '10'],
         hint1: '$|\\Delta p| = 0.40 \\times |-45 - 30| = 0.40 \\times 75$. Then $F = |\\Delta p|/\\Delta t$',
         hint2: '$J = F\\Delta t = (200)(0.8)$. Then $v = J/m$',
         hint3: 'Ratio = $0.50/0.05$. Since $F \\propto 1/\\Delta t$ for fixed $\\Delta p$',

@@ -9,10 +9,13 @@ export const preAlgOrderOpsPart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the Pre-Algebra Order of Operations series.
-
-This lesson covers key concepts and practice problems.
-      `
+### PEMDAS Order
+1. **P**arentheses (innermost first)
+2. **E**xponents
+3. **M**ultiplication & **D**ivision (left to right)
+4. **A**ddition & **S**ubtraction (left to right)
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p7-worked',
@@ -20,39 +23,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$2(3 + 1)^2 - 5 \times 2 = 2(4)^2 - 10 = 2(16) - 10 = 32 - 10 = 22$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in Pre-Algebra."
+                    "question": "$3 + 4 \\times 2 = ?$",
+                    "options": [
+                              "11",
+                              "14",
+                              "24",
+                              "10"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "4×2=8. 3+8=11."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-order-of-operations-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) $3 + 4 \times 2 = ?$
+
+2) $(3 + 4) \times 2 = ?$
+
+3) $2^3 - 1 = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["11","14","7"],
+        hint1: "Multiply first.",
+        hint2: "Parentheses first.",
+        hint3: "Exponent first: 2³=8.",
+        explanation: "1) 11. 2) 14. 3) 7."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Parentheses change the answer because they","options":["Override the default order","Are decorative","Come last","Do nothing"]},{"label":"PEMDAS is used to","options":["Determine the order of operations","Solve equations only","Factor polynomials","Find variables"]}],
+        correctAnswers: ["Override the default order","Determine the order of operations"],
+        hint1: "Grouping overrides priority.",
+        hint2: "Order of operations.",
+        explanation: "Parentheses override order. PEMDAS determines operation order."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Expression | Value |
+|---|-----------|-------|
+| 1 | 3+4×2 | 11 |
+| 2 | (3+4)×2 | 14 |
+| 3 | 2³−1 | 7 |
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$(3 + 4) \\times 2 = ?$",
+                    "options": [
+                              "14",
+                              "11",
+                              "24",
+                              "10"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(7)×2 = 14."
           }
-        ]
+]
       }
     }
   ]

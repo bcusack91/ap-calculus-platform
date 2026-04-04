@@ -5,14 +5,20 @@ export const g6ExpressionsPart1Data = {
       id: 'grade6-expressions-equations-p1-intro',
       type: 'text' as const,
       content: `
-# 📐 Writing Expressions
+# ✏️ Writing Expressions
 
 **Part 1 of 7 — Writing Expressions**
 
-Welcome to **Writing Expressions** — Part 1 of 7 in the Grade 6 Math Expressions & Equations series.
+An **algebraic expression** uses variables, numbers, and operations.
 
-This lesson covers key concepts and practice problems.
-      `
+| Phrase | Expression |
+|--------|-----------|
+| 5 more than x | $x + 5$ |
+| 3 times a number | $3n$ |
+| a number divided by 4 | $\frac{n}{4}$ |
+| 7 less than y | $y - 7$ |
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p1-worked',
@@ -20,39 +26,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**"Twice a number increased by 3"**
+
+"Twice a number" → $2n$
+"increased by 3" → $+ 3$
+Expression: $2n + 3$ ✅
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes writing expressions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Writing Expressions is a core concept in Grade 6 Math."
+                    "question": "\"8 less than a number n\" is written as:",
+                    "options": [
+                              "$n - 8$",
+                              "$8 - n$",
+                              "$8n$",
+                              "$n + 8$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "\"Less than\" means subtract from the number: n − 8."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-expressions-equations-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Translate Phrases** 🧮
 
-Answer the following about writing expressions.
-      `,
+1) "The sum of a number and 2": $n + $ ?
+
+2) "7 times a number": coefficient of n?
+
+3) "3 less than a number": $n - $ ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of writing expressions."
+        boxes: 3,
+        correctAnswers: ["2","7","3"],
+        hint1: "\"Sum\" means add.",
+        hint2: "\"7 times\" means multiply by 7.",
+        hint3: "\"Less than\" means subtract.",
+        explanation: "1) n + 2. 2) Coefficient = 7. 3) n − 3."
       }
     },
     {
@@ -60,22 +83,13 @@ Answer the following about writing expressions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Writing Expressions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Writing Expressions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"\"The product of 6 and x\" means","options":["6x","6 + x","x − 6","x/6"]},{"label":"A coefficient is","options":["The number multiplied by a variable","The variable itself","A constant term","An exponent"]}],
+        correctAnswers: ["6x","The number multiplied by a variable"],
+        hint1: "\"Product\" means multiply.",
+        hint2: "It is the number in front.",
+        explanation: "Product = multiply: 6x. Coefficient = number × variable."
       }
     },
     {
@@ -84,28 +98,34 @@ Answer the following about writing expressions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Writing Expressions | Core writing expressions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Phrase | Expression |
+|---|-------|-----------|
+| 1 | 4 more than a number | $n + 4$ |
+| 2 | A number divided by 3 | $n/3$ |
+| 3 | 5 times a number minus 2 | $5n - 2$ |
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in writing expressions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "In the expression $3x + 7$, the coefficient of x is:",
+                    "options": [
+                              "3",
+                              "7",
+                              "x",
+                              "10"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "The coefficient is the number multiplied by the variable: 3."
           }
-        ]
+]
       }
     }
   ]

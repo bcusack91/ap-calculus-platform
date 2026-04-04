@@ -95,7 +95,7 @@ A pendulum bob ($m = 0.50$ kg) swings through its lowest point with a speed of 1
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.36', '0.073', '0.36', '0.360', '0.0730'],
+        correctAnswers: ['0.36', '0.073', '0.36'],
         hint1: '$KE = \\frac{1}{2}mv^2 = \\frac{1}{2}(0.50)(1.2)^2$',
         hint2: 'At max height: all KE converts to PE. $mgh = \\frac{1}{2}mv^2 \\Rightarrow h = v^2/(2g)$',
         hint3: 'At the lowest point, $PE = 0$, so $E = KE$',
@@ -184,7 +184,7 @@ A 1.0 kg mass on a spring ($k = 400$ N/m) has total energy $E = 8.0$ J.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.2', '0.13', '0.115', '0.20', '0.130', '0.1150'],
+        correctAnswers: ['0.2', '0.13', '0.115'],
         hint1: '$A = \\sqrt{2E/k} = \\sqrt{2(8.0)/400}$',
         hint2: '$KE = \\frac{1}{2}(1.0)(9.0) = 4.5$ J. $PE = 8.0 - 4.5 = 3.5$ J. $x = \\sqrt{2(3.5)/400}$',
         hint3: '$KE = 2PE$ and $KE + PE = E$, so $PE = E/3$. $\\frac{1}{2}kx^2 = E/3$. $x = \\sqrt{2E/(3k)}$',

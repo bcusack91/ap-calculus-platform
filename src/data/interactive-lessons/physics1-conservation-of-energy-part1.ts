@@ -136,7 +136,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20', '11.25', '22.4', '11.250', '22.40'],
+        correctAnswers: ['20', '11.25', '22.4'],
         hint1: '$v = \\sqrt{2gh} = \\sqrt{2(10)(20)}$.',
         hint2: '$\\frac{1}{2}mv^2 = mgh \\Rightarrow h = v^2/(2g)$.',
         hint3: '$mg(45) = \\frac{1}{2}mv^2 + mg(20) \\Rightarrow v = \\sqrt{2g(45-20)}$.',

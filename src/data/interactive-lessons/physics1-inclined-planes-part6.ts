@@ -109,7 +109,7 @@ $$a = 1.6 \\text{ m/s}^2$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['12.4', '0.71', '1.73', '12.40', '0.710', '1.730'],
+        correctAnswers: ['12.4', '0.71', '1.73'],
         hint1: '$a = 10(0.80 - 0.30 \\times 0.60) = 10(0.62) = 6.2$ m/s². $v = at = 6.2 \\times 2$.',
         hint2: 'Net force $= m_1 g\\sin 30° - m_2 g = 50 - 40 = 10$ N. $a = 10/14$.',
         hint3: '$\\mu_s \\geq \\tan\\theta$.',

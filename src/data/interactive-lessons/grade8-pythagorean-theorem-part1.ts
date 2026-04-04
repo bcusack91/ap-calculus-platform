@@ -9,10 +9,13 @@ export const g8PythagoreanPart1Data = {
 
 **Part 1 of 7 — Understanding the Theorem**
 
-Welcome to **Understanding the Theorem** — Part 1 of 7 in the Grade 8 Math Pythagorean Theorem series.
+In a right triangle with legs $a$ and $b$ and hypotenuse $c$:
 
-This lesson covers key concepts and practice problems.
-      `
+$a^2 + b^2 = c^2$
+
+The **hypotenuse** is always the longest side, opposite the right angle.
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p1-worked',
@@ -20,39 +23,55 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Legs: 3 and 4. Find hypotenuse.**
+
+$3^2 + 4^2 = 9 + 16 = 25$
+$c = \sqrt{25} = 5$ ✅
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes understanding the theorem?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Understanding the Theorem is a core concept in Grade 8 Math."
+                    "question": "In a right triangle, the hypotenuse is:",
+                    "options": [
+                              "The longest side",
+                              "The shortest side",
+                              "Any side",
+                              "A leg"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Hypotenuse = longest, opposite right angle."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-pythagorean-theorem-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Find the Hypotenuse** 🧮
 
-Answer the following about understanding the theorem.
-      `,
+1) Legs 3, 4. c = ?
+
+2) Legs 5, 12. c = ?
+
+3) Legs 6, 8. c = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of understanding the theorem."
+        boxes: 3,
+        correctAnswers: ["5","13","10"],
+        hint1: "9 + 16 = 25. √25.",
+        hint2: "25 + 144 = 169. √169.",
+        hint3: "36 + 64 = 100. √100.",
+        explanation: "1) 5. 2) 13. 3) 10."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about understanding the theorem.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Understanding the Theorem is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Understanding the Theorem builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The Pythagorean theorem applies to","options":["Right triangles only","All triangles","Rectangles","Circles"]},{"label":"$a^2 + b^2 = c^2$ — c is the","options":["Hypotenuse","Shorter leg","Longer leg","Any side"]}],
+        correctAnswers: ["Right triangles only","Hypotenuse"],
+        hint1: "Must have a 90° angle.",
+        hint2: "c = longest side.",
+        explanation: "Only right triangles. c = hypotenuse."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about understanding the theorem.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Understanding the Theorem | Core understanding the theorem principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Legs | Hypotenuse |
+|---|------|------------|
+| 1 | 3, 4 | 5 |
+| 2 | 5, 12 | 13 |
+| 3 | 6, 8 | 10 |
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in understanding the theorem?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Legs 5 and 12. Hypotenuse?",
+                    "options": [
+                              "13",
+                              "17",
+                              "7",
+                              "60"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "25 + 144 = 169. √169 = 13."
           }
-        ]
+]
       }
     }
   ]

@@ -168,10 +168,10 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
           {
             question: 'Predict and balance: $\\text{Zn} + \\text{HCl} \\rightarrow$ ? (Zn is above H in activity series)',
             options: [
-              '$\\\\text{Zn} + \\\\text{HCl} \\\\rightarrow \\\\text{ZnCl} + \\\\text{H}_2$',
-              '$\\\\text{Zn} + 2\\\\text{HCl} \\\\rightarrow \\\\text{ZnCl}_2 + \\\\text{H}_2$',
-              '$2\\\\text{Zn} + 2\\\\text{HCl} \\\\rightarrow 2\\\\text{ZnCl} + \\\\text{H}_2$',
-              '$\\\\text{Zn} + \\\\text{HCl} \\\\rightarrow \\\\text{ZnCl}_2 + \\\\text{H}$'
+              '$\\text{Zn} + \\text{HCl} \\rightarrow \\text{ZnCl} + \\text{H}_2$',
+              '$\\text{Zn} + 2\\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}_2$',
+              '$2\\text{Zn} + 2\\text{HCl} \\rightarrow 2\\text{ZnCl} + \\text{H}_2$',
+              '$\\text{Zn} + \\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}$'
             ],
             correctAnswer: 1,
             explanation: 'Single replacement: Zn (charge +2) replaces H. Products: ZnCl₂ + H₂. Balanced: $\\text{Zn} + 2\\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}_2$. Zn: 1=1 ✓, H: 2=2 ✓, Cl: 2=2 ✓.'
@@ -179,10 +179,10 @@ Identify each reaction type. Type: **synthesis**, **decomposition**, **single**,
           {
             question: 'Predict and balance: $\\text{Li}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow$ ?',
             options: [
-              '$\\\\text{Li}_2\\\\text{O} + \\\\text{H}_2\\\\text{O} \\\\rightarrow \\\\text{Li}_2\\\\text{O} + \\\\text{H}_2$',
-              '$\\\\text{Li}_2\\\\text{O} + \\\\text{H}_2\\\\text{O} \\\\rightarrow 2\\\\text{LiOH}$',
-              '$\\\\text{Li}_2\\\\text{O} + \\\\text{H}_2\\\\text{O} \\\\rightarrow \\\\text{LiOH}_2$',
-              '$\\\\text{Li}_2\\\\text{O} + 2\\\\text{H}_2\\\\text{O} \\\\rightarrow 2\\\\text{LiOH}$'
+              '$\\text{Li}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow \\text{Li}_2\\text{O} + \\text{H}_2$',
+              '$\\text{Li}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow 2\\text{LiOH}$',
+              '$\\text{Li}_2\\text{O} + \\text{H}_2\\text{O} \\rightarrow \\text{LiOH}_2$',
+              '$\\text{Li}_2\\text{O} + 2\\text{H}_2\\text{O} \\rightarrow 2\\text{LiOH}$'
             ],
             correctAnswer: 1,
             explanation: 'Synthesis: Metal oxide + water → metal hydroxide. Li₂O + H₂O → 2LiOH. Li: 2=2 ✓, O: 1+1=2 and 2(1)=2 ✓, H: 2=2 ✓.'

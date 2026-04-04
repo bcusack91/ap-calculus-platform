@@ -9,10 +9,13 @@ export const geoCoordProofsPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Geometry Coordinate Proofs series.
-
-This lesson covers key concepts and practice problems.
-      `
+Coordinate proof strategy:
+1. Place the figure on a coordinate plane
+2. Assign coordinates to vertices
+3. Use formulas (distance, slope, midpoint)
+4. Draw conclusions
+    
+    `
     },
     {
       id: 'geometry-coordinate-proofs-p6-worked',
@@ -20,39 +23,59 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Prove the diagonals of rectangle (0,0),(6,0),(6,4),(0,4) are equal.**
+
+$d_1 = \sqrt{6^2+4^2} = \sqrt{52}$
+$d_2 = \sqrt{(-6)^2+4^2} = \sqrt{52}$
+
+Equal! ✅
+    
+    `
     },
     {
       id: 'geometry-coordinate-proofs-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Geometry."
+                    "question": "Midpoint of (0,0) and (6,4)?",
+                    "options": [
+                              "(3,2)",
+                              "(6,4)",
+                              "(3,4)",
+                              "(0,2)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "((0+6)/2, (0+4)/2) = (3,2)."
           }
-        ]
+]
       }
     },
     {
       id: 'geometry-coordinate-proofs-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Coordinate Proofs** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+Midpoint of (0,0) and (6,4):
+
+1) Midpoint x = ?
+
+2) Midpoint y = ?
+
+3) Diagonal of 3×4 rectangle?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["3","2","5"],
+        hint1: "(0+6)/2.",
+        hint2: "(0+4)/2.",
+        hint3: "√(9+16).",
+        explanation: "1) 3. 2) 2. 3) 5."
       }
     },
     {
@@ -60,22 +83,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A good first step in coordinate proofs is to","options":["Place a vertex at the origin","Guess the answer","Skip the coordinates","Use only one axis"]},{"label":"The diagonals of a rectangle are","options":["Equal","Perpendicular","Different","Parallel"]}],
+        correctAnswers: ["Place a vertex at the origin","Equal"],
+        hint1: "Origin simplifies math.",
+        hint2: "Rectangle property.",
+        explanation: "Start at origin. Rectangle diagonals are equal."
       }
     },
     {
@@ -84,28 +98,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Task | Method |
+|---|------|--------|
+| 1 | Midpoint of (0,0)→(6,4) | Midpoint formula |
+| 2 | Is (1,1),(3,5),(5,1) isosceles? | Distance formula |
+| 3 | Diagonal of 3×4 rectangle | Pythagorean theorem |
+    
+    `
     },
     {
       id: 'geometry-coordinate-proofs-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Diagonal of 3×4 rectangle?",
+                    "options": [
+                              "5",
+                              "7",
+                              "12",
+                              "3.5"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "√(9+16) = √25 = 5."
           }
-        ]
+]
       }
     }
   ]

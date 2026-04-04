@@ -172,7 +172,7 @@ $$N = mg - F\\sin\\theta = 15(9.8) - 40\\sin 30° = 147 - 20 = 127 \\text{ N}$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['408', '5', '3.2', '3.20'],
+        correctAnswers: ['408', '5', '3.2'],
         hint1: '$N = m(g + a)$ where $a = -3$ m/s² (downward). $N = 60(9.8 - 3)$.',
         hint2: '$a = F/m = 50/10$.',
         hint3: '$F_x = 100\\cos 37° = 80$ N. $a = F_x/m = 80/25$.',

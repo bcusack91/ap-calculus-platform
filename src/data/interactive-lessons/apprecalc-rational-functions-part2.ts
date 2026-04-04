@@ -9,10 +9,13 @@ export const apPrecalcRationalPart2Data = {
 
 **Part 2 of 7 — Vertical Asymptotes**
 
-Welcome to **Vertical Asymptotes** — Part 2 of 7 in the AP Precalculus Rational Functions series.
+A **vertical asymptote** occurs at $x = a$ when:
+- The denominator equals zero at $x = a$
+- The factor does NOT cancel with the numerator
 
-This lesson covers key concepts and practice problems.
-      `
+The graph approaches $\pm\infty$ near a vertical asymptote.
+    
+    `
     },
     {
       id: 'apprecalc-rational-functions-p2-worked',
@@ -20,39 +23,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$f(x) = \frac{2}{x-4}$. Vertical asymptote?**
+
+$x - 4 = 0 \Rightarrow x = 4$
+
+Vertical asymptote at $x = 4$ ✅
+    
+    `
     },
     {
       id: 'apprecalc-rational-functions-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes vertical asymptotes?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Vertical Asymptotes is a core concept in AP Precalculus."
+                    "question": "VA of 1/(x−3)?",
+                    "options": [
+                              "x = 3",
+                              "x = −3",
+                              "x = 0",
+                              "No VA"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Denominator zero at x=3."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-rational-functions-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Vertical Asymptotes** 🧮
 
-Answer the following about vertical asymptotes.
-      `,
+1) $\frac{1}{x-3}$. VA at $x = $ ?
+
+2) $\frac{x}{x+1}$. VA at $x = $ ?
+
+3) $\frac{1}{(x-2)(x+5)}$. One VA at $x = $ ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of vertical asymptotes."
+        boxes: 3,
+        correctAnswers: ["3","-1","2"],
+        hint1: "x−3=0.",
+        hint2: "x+1=0.",
+        hint3: "x−2=0.",
+        explanation: "1) 3. 2) −1. 3) 2 (also −5)."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about vertical asymptotes.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Vertical Asymptotes is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Vertical Asymptotes builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A vertical asymptote is a ____ line the graph approaches","options":["Vertical","Horizontal","Diagonal","Curved"]},{"label":"VAs occur where the denominator is zero and the factor","options":["Does not cancel","Cancels","Is positive","Is negative"]}],
+        correctAnswers: ["Vertical","Does not cancel"],
+        hint1: "x = constant.",
+        hint2: "Non-canceling zero.",
+        explanation: "VA = vertical line. Only if factor does not cancel."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about vertical asymptotes.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Vertical Asymptotes | Core vertical asymptotes principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Function | VA |
+|---|---------|----|
+| 1 | $\frac{1}{x-3}$ | x = 3 |
+| 2 | $\frac{x}{x+1}$ | x = −1 |
+| 3 | $\frac{1}{(x-2)(x+5)}$ | x = 2, x = −5 |
+    
+    `
     },
     {
       id: 'apprecalc-rational-functions-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in vertical asymptotes?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Near a vertical asymptote, the graph:",
+                    "options": [
+                              "Approaches ±∞",
+                              "Crosses the axis",
+                              "Becomes zero",
+                              "Stays constant"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "The function value grows without bound."
           }
-        ]
+]
       }
     }
   ]

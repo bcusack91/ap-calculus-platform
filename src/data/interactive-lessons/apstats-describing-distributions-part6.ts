@@ -9,10 +9,13 @@ export const apStatsDistributionsPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the AP Statistics Describing Distributions series.
-
-This lesson covers key concepts and practice problems.
-      `
+Combine all concepts:
+- Describe shape, center, spread
+- Choose mean or median appropriately
+- Apply the 68-95-99.7 rule
+- Identify outliers
+    
+    `
     },
     {
       id: 'apstats-describing-distributions-p6-worked',
@@ -20,39 +23,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Test scores: μ = 75, σ = 8. What % score above 91?**
+
+$91 = 75 + 2(8) = \mu + 2\sigma$
+
+Above 2σ: $(100\% - 95\%)/2 = 2.5\%$ ✅
+    
+    `
     },
     {
       id: 'apstats-describing-distributions-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in AP Statistics."
+                    "question": "μ=75, σ=8. % below 59 (=μ−2σ)?",
+                    "options": [
+                              "2.5%",
+                              "5%",
+                              "16%",
+                              "50%"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Below −2σ: (100−95)/2 = 2.5%."
           }
-        ]
+]
       }
     },
     {
       id: 'apstats-describing-distributions-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Combined Practice** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) Mean of 1, 2, 3, 4, 5?
+
+2) Median of 1, 2, 3, 4, 5?
+
+3) μ=75, σ=8. % above 91? (Answer as number, e.g. 2.5)
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["3","3","2.5"],
+        hint1: "15/5.",
+        hint2: "Middle value.",
+        hint3: "91 = μ + 2σ. Above that is (100−95)/2.",
+        explanation: "1) 3. 2) 3. 3) 2.5%."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"For symmetric data, mean and median are","options":["Approximately equal","Very different","Always 0","Undefined"]},{"label":"The 68-95-99.7 rule applies to ____ distributions","options":["Normal (bell-shaped)","All","Skewed only","Uniform only"]}],
+        correctAnswers: ["Approximately equal","Normal (bell-shaped)"],
+        hint1: "Balanced.",
+        hint2: "Bell curve only.",
+        explanation: "Symmetric → mean ≈ median. Rule applies to normal distributions."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Answer |
+|---|---------|--------|
+| 1 | μ=75, σ=8. % below 59? | 2.5% |
+| 2 | Data: 1,2,3,4,5. Mean? | 3 |
+| 3 | Data: 1,2,3,4,5. Median? | 3 |
+    
+    `
     },
     {
       id: 'apstats-describing-distributions-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Mean of 1, 2, 3, 4, 5?",
+                    "options": [
+                              "3",
+                              "2.5",
+                              "5",
+                              "15"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "15/5 = 3."
           }
-        ]
+]
       }
     }
   ]

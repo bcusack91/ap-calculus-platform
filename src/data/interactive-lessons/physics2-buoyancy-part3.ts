@@ -58,7 +58,7 @@ A metal block weighs 45 N in air and 35 N when fully submerged in water.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['10', '0.001', '4500', '0.0010'],
+        correctAnswers: ['10', '0.001', '4500'],
         hint1: '$F_B = W_{\\text{air}} - W_{\\text{water}} = 45 - 35$.',
         hint2: '$F_B = \\rho_w V g$. So $V = F_B / (\\rho_w g) = 10/(1000 \\times 10)$.',
         hint3: '$m = W/g = 45/10 = 4.5$ kg. $\\rho = m/V = 4.5/0.001$.',

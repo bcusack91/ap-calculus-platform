@@ -134,7 +134,7 @@ A rectangular barge ($6.0 \\times 3.0 \\times 1.0$ m) has mass 12,000 kg. It flo
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['18', '12', '0.67', '0.670'],
+        correctAnswers: ['18', '12', '0.67'],
         hint1: '$V = 6.0 \\times 3.0 \\times 1.0$.',
         hint2: 'Floating: $F_B = W$. $\\rho_w V_{\\text{disp}} g = mg$. $V_{\\text{disp}} = m/\\rho_w = 12{,}000/1000$.',
         hint3: 'Draft = $V_{\\text{disp}} / (\\text{length} \\times \\text{width}) = 12/(6 \\times 3)$.',

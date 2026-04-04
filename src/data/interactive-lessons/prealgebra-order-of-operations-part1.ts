@@ -9,10 +9,11 @@ export const preAlgOrderOpsPart1Data = {
 
 **Part 1 of 7 — PEMDAS Basics**
 
-Welcome to **PEMDAS Basics** — Part 1 of 7 in the Pre-Algebra Order of Operations series.
+**P**arentheses → **E**xponents → **M**ultiplication/**D**ivision → **A**ddition/**S**ubtraction
 
-This lesson covers key concepts and practice problems.
-      `
+M/D and A/S are done **left to right** (equal priority within each pair).
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p1-worked',
@@ -20,39 +21,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$3 + 4 \times 2 = ?$
+
+Multiplication first: $4 \times 2 = 8$. Then $3 + 8 = 11$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes pemdas basics?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "PEMDAS Basics is a core concept in Pre-Algebra."
+                    "question": "$5 + 2 \\times 3 = ?$",
+                    "options": [
+                              "11",
+                              "21",
+                              "10",
+                              "9"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "2×3=6. 5+6=11."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-order-of-operations-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**PEMDAS Basics** 🧮
 
-Answer the following about pemdas basics.
-      `,
+1) $5 + 2 \times 3 = ?$
+
+2) $8 - 4 \div 2 = ?$
+
+3) $6 \times 3 + 1 = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of pemdas basics."
+        boxes: 3,
+        correctAnswers: ["11","6","19"],
+        hint1: "Multiply first.",
+        hint2: "Divide first.",
+        hint3: "Multiply first.",
+        explanation: "1) 5+6=11. 2) 8−2=6. 3) 18+1=19."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about pemdas basics.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "PEMDAS Basics is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "PEMDAS Basics builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"PEMDAS stands for","options":["Parentheses, Exponents, Multiplication, Division, Addition, Subtraction","Please Excuse My Dear Aunt Sally","Both of these","Neither"]},{"label":"Multiplication and division have","options":["Equal priority","Multiplication first","Division first","No priority"]}],
+        correctAnswers: ["Both of these","Equal priority"],
+        hint1: "Both are mnemonics for the same thing.",
+        hint2: "Left to right for tied operations.",
+        explanation: "PEMDAS = Please Excuse My Dear Aunt Sally. M and D have equal priority."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about pemdas basics.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | PEMDAS Basics | Core pemdas basics principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Expression | Value |
+|---|-----------|-------|
+| 1 | 5 + 2 × 3 | 11 |
+| 2 | 8 − 4 ÷ 2 | 6 |
+| 3 | 6 × 3 + 1 | 19 |
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in pemdas basics?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "In PEMDAS, what comes first?",
+                    "options": [
+                              "Parentheses",
+                              "Exponents",
+                              "Multiplication",
+                              "Addition"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "P is first: Parentheses."
           }
-        ]
+]
       }
     }
   ]

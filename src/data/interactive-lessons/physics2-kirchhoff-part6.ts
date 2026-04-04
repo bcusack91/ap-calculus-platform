@@ -175,7 +175,7 @@ A $20\\;\\text{V}$ battery charges a capacitor ($C = 100\\;\\mu\\text{F}$) throu
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['5', '0.4', '12.6', '2.5', '0.40', '12.60', '2.50'],
+        correctAnswers: ['5', '0.4', '12.6', '2.5'],
         hint1: '$\\tau = RC = (50{,}000)(100 \\times 10^{-6}) = 5$ s.',
         hint2: '$I_0 = \\varepsilon / R = 20 / 50{,}000 = 0.0004$ A $= 0.4$ mA.',
         hint3: '$V_C(\\tau) = \\varepsilon(1 - e^{-1}) = 20(1 - 0.368) = 20(0.632) = 12.6$ V.',

@@ -9,10 +9,11 @@ export const alg2PolynomialsPart5Data = {
 
 **Part 5 of 7 — Remainder Theorem**
 
-Welcome to **Remainder Theorem** — Part 5 of 7 in the Algebra 2 Polynomial Operations series.
+When dividing $p(x)$ by $(x - c)$, the remainder equals $p(c)$.
 
-This lesson covers key concepts and practice problems.
-      `
+If $p(c) = 0$, then $(x - c)$ is a **factor** of $p(x)$.
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p5-worked',
@@ -20,39 +21,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$p(x) = x^2 - 4x + 3$. Find $p(1)$.
+
+$p(1) = 1 - 4 + 3 = 0$ → $(x-1)$ is a factor! ✅
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes remainder theorem?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Remainder Theorem is a core concept in Algebra 2."
+                    "question": "$p(x)=x^2+x-6$. $p(2)=?$",
+                    "options": [
+                              "0",
+                              "−4",
+                              "8",
+                              "2"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "4+2−6=0. So (x−2) is a factor."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-polynomial-operations-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Remainder Theorem** 🧮
 
-Answer the following about remainder theorem.
-      `,
+1) $p(x) = x^2 - 4x + 3$. $p(1) = ?$
+
+2) $p(x) = x^2 + x - 6$. $p(2) = ?$
+
+3) $p(x) = x^2 + 1$. $p(1) = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of remainder theorem."
+        boxes: 3,
+        correctAnswers: ["0","0","2"],
+        hint1: "1 − 4 + 3.",
+        hint2: "4 + 2 − 6.",
+        hint3: "1 + 1.",
+        explanation: "1) 0. 2) 0. 3) 2."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about remainder theorem.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Remainder Theorem is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Remainder Theorem builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The remainder when dividing p(x) by (x−c) is","options":["p(c)","p(0)","c","x"]},{"label":"If the remainder is 0, (x−c) is a","options":["Factor","Root","Quotient","Constant"]}],
+        correctAnswers: ["p(c)","Factor"],
+        hint1: "Plug in c.",
+        hint2: "Divides evenly.",
+        explanation: "Remainder = p(c). If 0, (x−c) is a factor."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about remainder theorem.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Remainder Theorem | Core remainder theorem principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | p(x) | c | p(c) |
+|---|------|---|------|
+| 1 | $x^2-4x+3$ | 1 | 0 |
+| 2 | $x^2+x-6$ | 2 | 0 |
+| 3 | $x^2+1$ | 1 | 2 |
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in remainder theorem?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "If $p(c) = 0$, then $(x-c)$ is:",
+                    "options": [
+                              "A factor of p(x)",
+                              "The remainder",
+                              "Not related",
+                              "The quotient"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Zero remainder → factor."
           }
-        ]
+]
       }
     }
   ]

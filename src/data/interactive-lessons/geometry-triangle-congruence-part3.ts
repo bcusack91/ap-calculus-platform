@@ -9,10 +9,13 @@ export const geoTriCongruencePart3Data = {
 
 **Part 3 of 7 — SSS & SAS Congruence**
 
-Welcome to **SSS & SAS Congruence** — Part 3 of 7 in the Geometry Triangle Congruence series.
+**SSS** (Side-Side-Side): all three pairs of sides are equal → congruent.
 
-This lesson covers key concepts and practice problems.
-      `
+**SAS** (Side-Angle-Side): two pairs of sides and the **included angle** are equal → congruent.
+
+The angle must be **between** the two sides (included).
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p3-worked',
@@ -20,39 +23,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**△ABC: AB=5, BC=7, ∠B=40°. △DEF: DE=5, EF=7, ∠E=40°.**
+
+SAS: two sides and included angle match → **Congruent** ✅
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes sss & sas congruence?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "SSS & SAS Congruence is a core concept in Geometry."
+                    "question": "All three sides match. Which postulate?",
+                    "options": [
+                              "SSS",
+                              "SAS",
+                              "ASA",
+                              "AAS"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Three sides → SSS."
           }
-        ]
+]
       }
     },
     {
       id: 'geometry-triangle-congruence-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Triangle Facts** 🧮
 
-Answer the following about sss & sas congruence.
-      `,
+Triangle with sides 5, 7 and ∠ = 40° between them.
+
+1) Sum of all angles?
+
+2) The side opposite angle B if BC = 7?
+
+3) The included angle in the SAS proof?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of sss & sas congruence."
+        boxes: 3,
+        correctAnswers: ["180","7","40"],
+        hint1: "Angle sum theorem.",
+        hint2: "BC = 7.",
+        hint3: "The angle between the two given sides.",
+        explanation: "1) 180°. 2) 7. 3) 40°."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about sss & sas congruence.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "SSS & SAS Congruence is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "SSS & SAS Congruence builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"SSS requires matching of","options":["All 3 sides","2 sides and 1 angle","2 angles and 1 side","1 side and 1 angle"]},{"label":"SAS requires two sides and the ____ angle","options":["Included","Opposite","Excluded","Any"]}],
+        correctAnswers: ["All 3 sides","Included"],
+        hint1: "Side-Side-Side.",
+        hint2: "Between the two sides.",
+        explanation: "SSS: all 3 sides. SAS: included angle."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about sss & sas congruence.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | SSS & SAS Congruence | Core sss & sas congruence principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Given | Postulate |
+|---|-------|----------|
+| 1 | All 3 sides match | SSS |
+| 2 | 2 sides + included angle | SAS |
+| 3 | 2 sides + non-included angle | Not sufficient |
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in sss & sas congruence?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "In SAS, the angle must be:",
+                    "options": [
+                              "Included (between the two sides)",
+                              "Any angle",
+                              "The largest angle",
+                              "Opposite the longest side"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "The angle is between the two known sides."
           }
-        ]
+]
       }
     }
   ]

@@ -152,7 +152,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['17.5', '0.5', '37.5', '17.50', '0.50', '37.50'],
+        correctAnswers: ['17.5', '0.5', '37.5'],
         hint1: '$T = mg + mv^2/r$ at the bottom.',
         hint2: '$T = mv^2/r - mg$ at the top.',
         hint3: 'At top of loop: $v_{min} = \\sqrt{gr}$. Height of top of loop = $2r$. Energy: $mgh = \\frac{1}{2}mv_{top}^2 + mg(2r)$.',

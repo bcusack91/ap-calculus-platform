@@ -257,10 +257,6 @@ export function Navbar() {
             <Link href="/competitive" className="transition-colors hover:text-foreground/80 text-purple-600 dark:text-purple-400 font-semibold">
               🎮 Competitive
             </Link>
-            <Link href="/pricing" className="transition-colors hover:text-foreground/80 text-amber-600 dark:text-amber-400 font-semibold">
-              💎 Pricing
-            </Link>
-
             {/* More Dropdown */}
             <div ref={moreRef} className="relative" onKeyDown={moreKeyNav}>
               <button

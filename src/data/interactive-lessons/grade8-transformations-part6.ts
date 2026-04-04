@@ -9,10 +9,12 @@ export const g8TransformationsPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Grade 8 Math Transformations series.
-
-This lesson covers key concepts and practice problems.
-      `
+Apply transformations to real-world problems:
+- Identify the type of transformation
+- Write coordinate rules
+- Describe the transformation in words
+    
+    `
     },
     {
       id: 'grade8-transformations-p6-worked',
@@ -20,39 +22,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Triangle at (1,1), (3,1), (2,4). Reflect over y-axis.**
+
+$(1,1)→(-1,1)$, $(3,1)→(-3,1)$, $(2,4)→(-2,4)$ ✅
+    
+    `
     },
     {
       id: 'grade8-transformations-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Grade 8 Math."
+                    "question": "$(x,y)→(x+3,y−1)$ describes a:",
+                    "options": [
+                              "Translation",
+                              "Reflection",
+                              "Rotation",
+                              "Dilation"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Adding to coordinates = slide."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-transformations-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Identify & Apply** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+Reflect over y-axis: triangle at (1,1), (3,1), (2,4).
+
+1) (1,1) → new x = ?
+
+2) (3,1) → new x = ?
+
+3) (2,4) → new x = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["-1","-3","-2"],
+        hint1: "Negate x.",
+        hint2: "Negate x.",
+        hint3: "Negate x.",
+        explanation: "1) −1. 2) −3. 3) −2."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"(x,y)→(−y,x) is a","options":["90° CCW rotation","Reflection","Translation","Dilation"]},{"label":"Which transformation changes size?","options":["Dilation","Translation","Reflection","Rotation"]}],
+        correctAnswers: ["90° CCW rotation","Dilation"],
+        hint1: "Coordinates swap and one negates.",
+        hint2: "Scale factor changes size.",
+        explanation: "(−y,x) = 90° CCW. Dilation changes size."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Type |
+|---|---------|------|
+| 1 | (x,y)→(x+3,y−1) | Translation |
+| 2 | (x,y)→(−x,y) | Reflection y-axis |
+| 3 | (x,y)→(2x,2y) | Dilation k=2 |
+    
+    `
     },
     {
       id: 'grade8-transformations-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$(x,y)→(−x,y)$ describes a:",
+                    "options": [
+                              "Reflection over y-axis",
+                              "Reflection over x-axis",
+                              "Rotation 90°",
+                              "Translation"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "x flips → y-axis reflection."
           }
-        ]
+]
       }
     }
   ]

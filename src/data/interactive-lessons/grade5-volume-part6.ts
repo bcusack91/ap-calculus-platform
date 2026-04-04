@@ -9,10 +9,13 @@ export const g5VolumePart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Grade 5 Math Volume series.
-
-This lesson covers key concepts and practice problems.
-      `
+Apply volume to multi-step problems:
+1. Identify dimensions
+2. Choose the right formula
+3. Calculate
+4. Check units (cubic)
+    
+    `
     },
     {
       id: 'grade5-volume-p6-worked',
@@ -20,39 +23,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A garden bed is 6 m × 3 m × 0.5 m. Soil costs \$5/m³. Total cost?**
+
+$V = 6 \times 3 \times 0.5 = 9$ m³
+
+Cost: $9 \times 5 = 45$ → **\$45** ✅
+    
+    `
     },
     {
       id: 'grade5-volume-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Grade 5 Math."
+                    "question": "Double the height of a 5×4×3 box. New volume?",
+                    "options": [
+                              "120",
+                              "60",
+                              "240",
+                              "30"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "5 × 4 × 6 = 120."
           }
-        ]
+]
       }
     },
     {
       id: 'grade5-volume-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Problem Solving** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) How many 1-inch cubes fill a 4 × 3 × 2 inch box?
+
+2) A 5 × 4 × 3 box. You double the height. New volume?
+
+3) A 2 × 2 × 2 m hole. Gravel costs \$3/m³. Total cost?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["24","120","24"],
+        hint1: "V = 4 × 3 × 2.",
+        hint2: "New height = 6. V = 5 × 4 × 6.",
+        hint3: "V = 8. Cost = 8 × 3.",
+        explanation: "1) 24. 2) 120. 3) V=8, cost=8×3=$24."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Doubling one dimension of a prism","options":["Doubles the volume","Quadruples the volume","Does not change volume","Triples the volume"]},{"label":"To find cost of filling, first find","options":["Volume","Perimeter","Surface area","Weight"]}],
+        correctAnswers: ["Doubles the volume","Volume"],
+        hint1: "V = l × w × h. Double one = double V.",
+        hint2: "Cost depends on how much space to fill.",
+        explanation: "Doubling one dimension doubles V. Cost needs volume first."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Steps |
+|---|---------|-------|
+| 1 | Fill a 4×3×2 box with 1-inch cubes | V = lwh |
+| 2 | Double the height of a 5×4×3 box | Compare volumes |
+| 3 | Cost to fill 2×2×2 m with gravel at \$3/m³ | V then cost |
+    
+    `
     },
     {
       id: 'grade5-volume-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "A pool holds 200 m³. Half-filled = ?",
+                    "options": [
+                              "100 m³",
+                              "400 m³",
+                              "200 m³",
+                              "50 m³"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "200 ÷ 2 = 100 m³."
           }
-        ]
+]
       }
     }
   ]

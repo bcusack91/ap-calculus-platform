@@ -9,10 +9,13 @@ export const geoTriCongruencePart4Data = {
 
 **Part 4 of 7 — ASA & AAS Congruence**
 
-Welcome to **ASA & AAS Congruence** — Part 4 of 7 in the Geometry Triangle Congruence series.
+**ASA** (Angle-Side-Angle): two angles and the **included side** → congruent.
 
-This lesson covers key concepts and practice problems.
-      `
+**AAS** (Angle-Angle-Side): two angles and a **non-included side** → congruent.
+
+Note: **AAA** proves similarity, not congruence!
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p4-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**△PQR: ∠P=50°, PQ=6, ∠Q=70°. △XYZ: ∠X=50°, XY=6, ∠Y=70°.**
+
+ASA: two angles with included side → **Congruent** ✅
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes asa & aas congruence?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "ASA & AAS Congruence is a core concept in Geometry."
+                    "question": "Two angles and the included side. Postulate?",
+                    "options": [
+                              "ASA",
+                              "SSS",
+                              "SAS",
+                              "AAS"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Angle-Side-Angle."
           }
-        ]
+]
       }
     },
     {
       id: 'geometry-triangle-congruence-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Angles** 🧮
 
-Answer the following about asa & aas congruence.
-      `,
+1) ∠A=50°, ∠B=60°. ∠C=?
+
+2) If △ABC ≅ △DEF and ∠D=50°, ∠F=70°, then ∠E=?
+
+3) Sum of angles in any triangle?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of asa & aas congruence."
+        boxes: 3,
+        correctAnswers: ["70","60","180"],
+        hint1: "180−50−60.",
+        hint2: "180−50−70.",
+        hint3: "Angle sum theorem.",
+        explanation: "1) 70. 2) 60. 3) 180."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about asa & aas congruence.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "ASA & AAS Congruence is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "ASA & AAS Congruence builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"ASA stands for","options":["Angle-Side-Angle","Angle-Side-Any","All-Sides-Angles","Area-Side-Area"]},{"label":"AAA is NOT sufficient for congruence because","options":["Triangles can be similar but different sizes","All triangles are congruent","Angles do not matter","Sides are always equal"]}],
+        correctAnswers: ["Angle-Side-Angle","Triangles can be similar but different sizes"],
+        hint1: "A-S-A.",
+        hint2: "Same angles, different scale.",
+        explanation: "ASA: Angle-Side-Angle. AAA → similar, not necessarily congruent."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about asa & aas congruence.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | ASA & AAS Congruence | Core asa & aas congruence principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Given | Postulate |
+|---|-------|----------|
+| 1 | ∠A, AB, ∠B | ASA |
+| 2 | ∠A, ∠B, BC | AAS |
+| 3 | ∠A, ∠B, ∠C | Not sufficient (AAA) |
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in asa & aas congruence?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "AAA proves:",
+                    "options": [
+                              "Similarity, not congruence",
+                              "Congruence",
+                              "Nothing",
+                              "Both"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "AAA means same shape but possibly different size."
           }
-        ]
+]
       }
     }
   ]

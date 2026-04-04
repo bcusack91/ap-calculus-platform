@@ -129,6 +129,7 @@ function InlineLatex({ text, className }: { text: string; className?: string }) 
 // Smart numeric answer comparison for sig fig tolerance
 // Handles trailing zeros, scientific notation, and minor rounding differences
 function isAnswerMatch(studentAnswer: string, correctAnswer: string): boolean {
+  if (!studentAnswer || !correctAnswer) return false
   const sa = studentAnswer.trim().toLowerCase().replace(/\s+/g, '')
   const ca = correctAnswer.trim().toLowerCase().replace(/\s+/g, '')
 
@@ -942,7 +943,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
                           : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-400 cursor-not-allowed opacity-50'
                       }`}
                     >
-                      {!isUnlocked && '🔒 '}Part {partNumber}: {partConfig.title}
+                      {!isUnlocked && '🔒 '}Part {partNumber}: <InlineLatex text={partConfig.title} />
                     </button>
                   )
                 })}
@@ -3535,9 +3536,10 @@ function InputBoxExercise({
   // Format B: { inputs: [{ label, correctAnswer, explanation }] }
   const hasInputsFormat = exerciseInputs.length > 0
   const numBoxes = hasInputsFormat ? exerciseInputs.length : (exercise.boxes || 1)
-  const correctAnswersList: string[] = hasInputsFormat 
-    ? exerciseInputs.map((input: ExerciseInput) => input.correctAnswer) 
+  const rawCorrectAnswers: string[] = hasInputsFormat
+    ? exerciseInputs.map((input: ExerciseInput) => input.correctAnswer)
     : (exercise.correctAnswers || [])
+  const correctAnswersList: string[] = rawCorrectAnswers.slice(0, numBoxes)
   const inputExplanations: string[] | null = hasInputsFormat 
     ? exerciseInputs.map((input: ExerciseInput) => input.explanation || '') 
     : null
@@ -3621,15 +3623,16 @@ function InputBoxExercise({
         <div className="flex gap-4 justify-center flex-wrap">
           {Array.from({ length: numBoxes }).map((_, index) => {
             const boxCorrect = hasSubmitted ? isAnswerMatch(answers[index], correctAnswersList[index]) : null
+            const needsWideBox = correctAnswersList.some((ans: string) => ans.length > 2)
             return (
-              <div key={index} className="flex flex-col items-center gap-1">
-                <span className="text-sm font-medium text-gray-500 dark:text-gray-400">{index + 1})</span>
+              <div key={index} className="flex flex-col items-center gap-2">
+                <span className="text-base font-bold text-purple-600 dark:text-purple-400">Q{index + 1}</span>
                 <input
                   ref={(el) => { inputRefs.current[index] = el }}
                   type="text"
                   value={answers[index]}
                   onChange={(e) => handleInputChange(index, e.target.value)}
-                  className={`w-20 h-20 text-3xl text-center border-2 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200 ${
+                  className={`${needsWideBox ? 'w-36 h-14 text-lg' : 'w-20 h-20 text-3xl'} text-center border-2 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200 ${
                     boxCorrect === true
                       ? 'border-green-500 bg-green-50 dark:bg-green-900/30'
                       : boxCorrect === false
@@ -3658,8 +3661,8 @@ function InputBoxExercise({
 
       {showHint && !isCorrect && !showAnswer && (() => {
         const hintMap: Record<number, string | undefined> = { 0: exercise.hint1, 1: exercise.hint2, 2: exercise.hint3 }
-        const wrongIndices = correctAnswersList
-          .map((correct: string, i: number) => isAnswerMatch(answers[i], correct) ? null : i)
+        const wrongIndices = Array.from({ length: numBoxes })
+          .map((_, i) => isAnswerMatch(answers[i], correctAnswersList[i]) ? null : i)
           .filter((i): i is number => i !== null)
         return wrongIndices.length > 0 ? (
           <div className="space-y-3">

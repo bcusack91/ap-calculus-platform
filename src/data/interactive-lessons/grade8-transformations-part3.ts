@@ -9,10 +9,14 @@ export const g8TransformationsPart3Data = {
 
 **Part 3 of 7 — Rotations**
 
-Welcome to **Rotations** — Part 3 of 7 in the Grade 8 Math Transformations series.
+A **rotation** turns a figure around a center point.
 
-This lesson covers key concepts and practice problems.
-      `
+**Rotations about the origin (counterclockwise):**
+- 90°: $(x,y) \to (-y,x)$
+- 180°: $(x,y) \to (-x,-y)$
+- 270°: $(x,y) \to (y,-x)$
+    
+    `
     },
     {
       id: 'grade8-transformations-p3-worked',
@@ -20,39 +24,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Rotate (3, 2) 90° CCW about origin.**
+
+$(3, 2) \to (-2, 3)$ ✅
+    
+    `
     },
     {
       id: 'grade8-transformations-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes rotations?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Rotations is a core concept in Grade 8 Math."
+                    "question": "Rotate (4,1) 90° CCW:",
+                    "options": [
+                              "(−1,4)",
+                              "(1,−4)",
+                              "(−4,−1)",
+                              "(4,−1)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(x,y)→(−y,x): (−1,4)."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-transformations-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Rotations** 🧮
 
-Answer the following about rotations.
-      `,
+Point (4, 1):
+
+1) 90° CCW. New x = ?
+
+2) 180°. New x = ?
+
+3) 270° CCW. New x = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of rotations."
+        boxes: 3,
+        correctAnswers: ["-1","-4","1"],
+        hint1: "(x,y)→(−y,x). New x = −y = −1.",
+        hint2: "(x,y)→(−x,−y). New x = −4.",
+        hint3: "(x,y)→(y,−x). New x = y = 1.",
+        explanation: "1) −1. 2) −4. 3) 1."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about rotations.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Rotations is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Rotations builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"180° rotation changes (x,y) to","options":["(−x,−y)","(−y,x)","(y,−x)","(x,y)"]},{"label":"Rotations preserve","options":["Size and shape","Size only","Shape only","Nothing"]}],
+        correctAnswers: ["(−x,−y)","Size and shape"],
+        hint1: "Both coordinates negate.",
+        hint2: "Rigid motion.",
+        explanation: "180°: (−x,−y). Rotations are rigid motions."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about rotations.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Rotations | Core rotations principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Point | Rotation | Image |
+|---|-------|----------|-------|
+| 1 | (4,1) | 90° CCW | (−1,4) |
+| 2 | (4,1) | 180° | (−4,−1) |
+| 3 | (4,1) | 270° CCW | (1,−4) |
+    
+    `
     },
     {
       id: 'grade8-transformations-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in rotations?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Rotate (4,1) 180°:",
+                    "options": [
+                              "(−4,−1)",
+                              "(4,1)",
+                              "(−1,4)",
+                              "(1,−4)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(x,y)→(−x,−y): (−4,−1)."
           }
-        ]
+]
       }
     }
   ]

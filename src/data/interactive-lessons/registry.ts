@@ -584,6 +584,18 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Synthesis & AP Review', loader: () => import('./chemistry-intro-equilibrium-part7').then(m => m.chemIntroEquilibriumPart7Data) },
     ],
   },
+  'equilibrium-constants-expressions': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'What Is Equilibrium?', loader: () => import('./chemistry-equilibrium-constants-part1').then(m => m.chemEquilibriumConstantsPart1Data) },
+      { title: 'Writing K Expressions', loader: () => import('./chemistry-equilibrium-constants-part2').then(m => m.chemEquilibriumConstantsPart2Data) },
+      { title: 'Kc vs Kp', loader: () => import('./chemistry-equilibrium-constants-part3').then(m => m.chemEquilibriumConstantsPart3Data) },
+      { title: 'Magnitude of K', loader: () => import('./chemistry-equilibrium-constants-part4').then(m => m.chemEquilibriumConstantsPart4Data) },
+      { title: 'Manipulating K', loader: () => import('./chemistry-equilibrium-constants-part5').then(m => m.chemEquilibriumConstantsPart5Data) },
+      { title: 'Reaction Quotient Q', loader: () => import('./chemistry-equilibrium-constants-part6').then(m => m.chemEquilibriumConstantsPart6Data) },
+      { title: 'AP Review', loader: () => import('./chemistry-equilibrium-constants-part7').then(m => m.chemEquilibriumConstantsPart7Data) },
+    ],
+  },
   'reaction-quotient-le-chatelier': {
     completionDestination: 'competitive',
     parts: [

@@ -232,10 +232,10 @@ Classify each substance as **strong**, **weak**, or **non** (electrolyte).
           {
             question: 'Which balanced molecular equation correctly represents the reaction of lead(II) nitrate with potassium iodide?',
             options: [
-              '$\\\\text{PbNO}_3(aq) + \\\\text{KI}(aq) \\\\rightarrow \\\\text{PbI}(s) + \\\\text{KNO}_3(aq)$',
-              '$\\\\text{Pb(NO}_3)_2(aq) + 2\\\\text{KI}(aq) \\\\rightarrow \\\\text{PbI}_2(s) + 2\\\\text{KNO}_3(aq)$',
-              '$\\\\text{Pb(NO}_3)_2(aq) + \\\\text{KI}(aq) \\\\rightarrow \\\\text{PbI}_2(s) + \\\\text{KNO}_3(aq)$',
-              '$\\\\text{Pb(NO}_3)_2(aq) + 2\\\\text{KI}(aq) \\\\rightarrow \\\\text{PbI}_2(aq) + 2\\\\text{KNO}_3(aq)$'
+              '$\\text{PbNO}_3(aq) + \\text{KI}(aq) \\rightarrow \\text{PbI}(s) + \\text{KNO}_3(aq)$',
+              '$\\text{Pb(NO}_3)_2(aq) + 2\\text{KI}(aq) \\rightarrow \\text{PbI}_2(s) + 2\\text{KNO}_3(aq)$',
+              '$\\text{Pb(NO}_3)_2(aq) + \\text{KI}(aq) \\rightarrow \\text{PbI}_2(s) + \\text{KNO}_3(aq)$',
+              '$\\text{Pb(NO}_3)_2(aq) + 2\\text{KI}(aq) \\rightarrow \\text{PbI}_2(aq) + 2\\text{KNO}_3(aq)$'
             ],
             correctAnswer: 1,
             explanation: 'Pb²⁺ needs 2 I⁻ ions to form PbI₂, so we need 2 KI. This gives 2 KNO₃. PbI₂ is insoluble so it is labeled (s). The balanced equation is Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s) + 2KNO₃(aq).'

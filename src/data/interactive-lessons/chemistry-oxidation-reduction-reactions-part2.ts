@@ -141,10 +141,10 @@ If **elements appear as reactants or products** (in their free state, oxidation 
           {
             question: 'Which of these reactions is NOT a redox reaction?',
             options: [
-              '$\\\\text{2Mg}(s) + \\\\text{O}_2(g) \\\\rightarrow 2\\\\text{MgO}(s)$',
-              '$\\\\text{Zn}(s) + \\\\text{CuSO}_4(aq) \\\\rightarrow \\\\text{ZnSO}_4(aq) + \\\\text{Cu}(s)$',
-              '$\\\\text{NaCl}(aq) + \\\\text{AgNO}_3(aq) \\\\rightarrow \\\\text{AgCl}(s) + \\\\text{NaNO}_3(aq)$',
-              '$\\\\text{CH}_4(g) + 2\\\\text{O}_2(g) \\\\rightarrow \\\\text{CO}_2(g) + 2\\\\text{H}_2\\\\text{O}(g)$'
+              '$\\text{2Mg}(s) + \\text{O}_2(g) \\rightarrow 2\\text{MgO}(s)$',
+              '$\\text{Zn}(s) + \\text{CuSO}_4(aq) \\rightarrow \\text{ZnSO}_4(aq) + \\text{Cu}(s)$',
+              '$\\text{NaCl}(aq) + \\text{AgNO}_3(aq) \\rightarrow \\text{AgCl}(s) + \\text{NaNO}_3(aq)$',
+              '$\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(g)$'
             ],
             correctAnswer: 2,
             explanation: 'NaCl + AgNO₃ → AgCl + NaNO₃ is a double-replacement (precipitation) reaction. No oxidation states change: Na stays +1, Cl stays −1, Ag stays +1, N stays +5, O stays −2. It is NOT redox.'

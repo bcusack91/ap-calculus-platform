@@ -167,7 +167,7 @@ Block A (3 kg) sits on top of Block B (7 kg), which sits on a table. Use $g = 9.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['29.4', '98', '29.4', '29.40'],
+        correctAnswers: ['29.4', '98', '29.4'],
         hint1: 'A pushes down on B with a force equal to A\'s weight: $F = m_A g$.',
         hint2: 'The table must support both blocks: $N = (m_A + m_B)g$.',
         hint3: 'By Newton\'s Third Law, A pulls Earth with the same force that Earth pulls A: $m_A g$.',

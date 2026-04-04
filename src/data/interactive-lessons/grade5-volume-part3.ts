@@ -5,14 +5,19 @@ export const g5VolumePart3Data = {
       id: 'grade5-volume-p3-intro',
       type: 'text' as const,
       content: `
-# 🔢 Volume Formulas
+# 📦 Volume Formulas
 
 **Part 3 of 7 — Volume Formulas**
 
-Welcome to **Volume Formulas** — Part 3 of 7 in the Grade 5 Math Volume series.
+### Rectangular Prism
+$V = l \times w \times h$
 
-This lesson covers key concepts and practice problems.
-      `
+or equivalently: $V = B \times h$ where $B$ = area of the base
+
+### Cube
+$V = s^3$
+    
+    `
     },
     {
       id: 'grade5-volume-p3-worked',
@@ -20,39 +25,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Rectangular prism: $l = 8$ cm, $w = 5$ cm, $h = 3$ cm.**
+
+$V = 8 \times 5 \times 3 = 120$ cm³ ✅
+    
+    `
     },
     {
       id: 'grade5-volume-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes volume formulas?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Volume Formulas is a core concept in Grade 5 Math."
+                    "question": "Volume of a cube with side 3 cm:",
+                    "options": [
+                              "27 cm³",
+                              "9 cm³",
+                              "12 cm³",
+                              "6 cm³"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$3^3 = 27$ cm³."
           }
-        ]
+]
       }
     },
     {
       id: 'grade5-volume-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Volume Formulas** 🧮
 
-Answer the following about volume formulas.
-      `,
+1) Rectangular prism: 10 × 4 × 3 cm. Volume (cm³)?
+
+2) Cube, side 5 cm. Volume (cm³)?
+
+3) Rectangular prism: 7 × 6 × 2 m. Volume (m³)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of volume formulas."
+        boxes: 3,
+        correctAnswers: ["120","125","84"],
+        hint1: "10 × 4 × 3.",
+        hint2: "5 × 5 × 5.",
+        hint3: "7 × 6 × 2.",
+        explanation: "1) 120. 2) 125. 3) 84."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about volume formulas.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Volume Formulas is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Volume Formulas builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Volume of a rectangular prism formula","options":["V = l × w × h","V = 2(lw + lh + wh)","V = l + w + h","V = l × w"]},{"label":"Volume of a cube with side s","options":["s³","s²","6s²","4s"]}],
+        correctAnswers: ["V = l × w × h","s³"],
+        hint1: "Three dimensions multiplied.",
+        hint2: "All sides equal.",
+        explanation: "Rectangular prism: V = lwh. Cube: V = s³."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about volume formulas.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Volume Formulas | Core volume formulas principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Dimensions | Formula |
+|---|-----------|---------|
+| 1 | 10 × 4 × 3 cm | V = lwh |
+| 2 | Cube, s = 5 cm | V = s³ |
+| 3 | 7 × 6 × 2 m | V = lwh |
+    
+    `
     },
     {
       id: 'grade5-volume-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in volume formulas?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$V = B \\\\times h$. If B = 20 cm² and h = 6 cm, V = ?",
+                    "options": [
+                              "120 cm³",
+                              "26 cm³",
+                              "120 cm²",
+                              "26 cm³"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "20 × 6 = 120 cm³."
           }
-        ]
+]
       }
     }
   ]

@@ -12,10 +12,29 @@ import {
   type APChemDiagnosticResults,
 } from '@/data/ap-chemistry-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import ReferenceSheetModal from '@/components/ReferenceSheetModal'
+import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import 'katex/dist/katex.min.css'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
 /* ------------------------------------------------------------------ */
+
+function renderLatex(text: string): string {
+  try {
+    let result = text.replace(/\$\$((?:[^$\\]|\\.)+)\$\$/g, (_match, latex) => {
+      try { return renderKatexSync(latex.trim(), { displayMode: true }) }
+      catch { return latex }
+    })
+    result = result.replace(/\$((?:[^$\\]|\\.)+)\$/g, (_match, latex) => {
+      try { return renderKatexSync(latex.trim(), { displayMode: false }) }
+      catch { return latex }
+    })
+    return result
+  } catch {
+    return text
+  }
+}
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -53,6 +72,10 @@ export default function APChemDiagnosticPage() {
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
+  const [showReference, setShowReference] = useState(false)
+  const [katexReady, setKatexReady] = useState(false)
+
+  useEffect(() => { preloadKatex().then(() => setKatexReady(true)) }, [])
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -199,6 +222,12 @@ export default function APChemDiagnosticPage() {
                   ⏱ {formatTime(timeRemaining)}
                 </span>
                 <button
+                  onClick={() => setShowReference(true)}
+                  className="rounded-lg border border-orange-300 px-3 py-1 text-xs font-medium text-orange-700 transition hover:bg-orange-50 dark:border-orange-600 dark:text-orange-400 dark:hover:bg-orange-900/20"
+                >
+                  📋 Reference Sheet
+                </button>
+                <button
                   onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase('menu'); setTestData(null) }}
                   className="text-sm text-gray-500 hover:text-red-500 dark:text-gray-400"
                 >
@@ -216,9 +245,7 @@ export default function APChemDiagnosticPage() {
 
             {/* Question */}
             <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-              <p className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200">
-                {q.question}
-              </p>
+              <div className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200" dangerouslySetInnerHTML={{ __html: katexReady ? renderLatex(q.question) : q.question }} />
               <div className="space-y-2">
                 {q.options.map((opt, i) => {
                   const isSelected = answers[currentIndex] === i
@@ -238,7 +265,7 @@ export default function APChemDiagnosticPage() {
                     >
                       <div className="flex items-center justify-between gap-3">
                       <span className={`flex-1 ${isEliminated ? 'line-through opacity-50 decoration-2 decoration-gray-400 dark:decoration-gray-500' : ''}`}>
-                        <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span>{opt}
+                        <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span><span dangerouslySetInnerHTML={{ __html: katexReady ? renderLatex(opt) : opt }} />
                       </span>
                       <span
                         role="button"
@@ -329,6 +356,8 @@ export default function APChemDiagnosticPage() {
                 </button>
               )}
             </div>
+
+            <ReferenceSheetModal open={showReference} onClose={() => setShowReference(false)} courseSlug="ap-chemistry" />
           </div>
         </div>
       </div>

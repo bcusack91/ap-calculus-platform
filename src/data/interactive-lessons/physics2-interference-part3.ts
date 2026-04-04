@@ -136,7 +136,7 @@ Light of wavelength 600 nm passes through a single slit of width $a = 0.15$ mm. 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.23', '16', '16', '0.230'],
+        correctAnswers: ['0.23', '16', '16'],
         hint1: '$\\sin\\theta_1 = \\lambda / a = (600 \\times 10^{-9})/(0.15 \\times 10^{-3})$. Convert radians to degrees.',
         hint2: 'Width $= 2\\lambda L / a$.',
         hint3: '$y_2 = 2\\lambda L / a = $ central max width.',

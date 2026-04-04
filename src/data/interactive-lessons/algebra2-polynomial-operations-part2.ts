@@ -9,10 +9,15 @@ export const alg2PolynomialsPart2Data = {
 
 **Part 2 of 7 — Multiplying Polynomials**
 
-Welcome to **Multiplying Polynomials** — Part 2 of 7 in the Algebra 2 Polynomial Operations series.
+Use **FOIL** for binomials or **distribute** each term.
 
-This lesson covers key concepts and practice problems.
-      `
+$(a+b)(c+d) = ac + ad + bc + bd$
+
+**Special products:**
+- $(a+b)^2 = a^2 + 2ab + b^2$
+- $(a-b)(a+b) = a^2 - b^2$
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p2-worked',
@@ -20,39 +25,58 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$(2x + 3)(x - 4)$
+$= 2x^2 - 8x + 3x - 12$
+$= 2x^2 - 5x - 12$ ✅
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes multiplying polynomials?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Multiplying Polynomials is a core concept in Algebra 2."
+                    "question": "$(x+2)(x+5) = ?$",
+                    "options": [
+                              "$x^2+7x+10$",
+                              "$x^2+10x+7$",
+                              "$2x+7$",
+                              "$x^2+10$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "FOIL: x²+5x+2x+10 = x²+7x+10."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-polynomial-operations-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Multiply** 🧮
 
-Answer the following about multiplying polynomials.
-      `,
+$(x+2)(x+5) = x^2 + ?x + ?$
+
+1) Coefficient of x?
+
+2) Constant term?
+
+$(x+3)^2 = x^2 + 6x + ?$
+
+3) Constant term?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of multiplying polynomials."
+        boxes: 3,
+        correctAnswers: ["7","10","9"],
+        hint1: "5+2.",
+        hint2: "5×2.",
+        hint3: "3².",
+        explanation: "1) 7. 2) 10. 3) 9."
       }
     },
     {
@@ -60,22 +84,13 @@ Answer the following about multiplying polynomials.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Multiplying Polynomials is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Multiplying Polynomials builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"FOIL stands for","options":["First, Outer, Inner, Last","Factor, Order, Identify, List","Find, Observe, Insert, Learn","None of these"]},{"label":"$(a+b)(a-b) =$","options":["$a^2-b^2$","$a^2+b^2$","$2a$","$a^2-2ab+b^2$"]}],
+        correctAnswers: ["First, Outer, Inner, Last","$a^2-b^2$"],
+        hint1: "Method for multiplying binomials.",
+        hint2: "Difference of squares.",
+        explanation: "FOIL: First/Outer/Inner/Last. (a+b)(a−b)=a²−b²."
       }
     },
     {
@@ -84,28 +99,34 @@ Answer the following about multiplying polynomials.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Multiplying Polynomials | Core multiplying polynomials principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Product | Result |
+|---|---------|--------|
+| 1 | $(x+2)(x+5)$ | $x^2+7x+10$ |
+| 2 | $(x+3)^2$ | $x^2+6x+9$ |
+| 3 | $(x-4)(x+4)$ | $x^2-16$ |
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in multiplying polynomials?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$(x-4)(x+4) = ?$",
+                    "options": [
+                              "$x^2-16$",
+                              "$x^2-8$",
+                              "$x^2+16$",
+                              "$2x$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Difference of squares: a²−b² = x²−16."
           }
-        ]
+]
       }
     }
   ]

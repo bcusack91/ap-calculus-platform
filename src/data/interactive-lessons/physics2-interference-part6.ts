@@ -130,7 +130,7 @@ This is why:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.06', '1.3', '0.5', '0.060', '1.30', '0.50'],
+        correctAnswers: ['0.06', '1.3', '0.5'],
         hint1: '$\\theta = 1.22\\lambda/D$ in radians, then multiply by 206,265 to convert to arcseconds.',
         hint2: '$D = 1.22\\lambda/\\theta$. Convert 0.10 arcsec to radians first: divide by 206,265.',
         hint3: '$\\theta = 1.22(550 \\times 10^{-9})/(5.0 \\times 10^{-3})$ in radians, then multiply by 3438.',

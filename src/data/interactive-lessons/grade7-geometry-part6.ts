@@ -9,10 +9,12 @@ export const g7GeometryPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Grade 7 Math Geometry series.
-
-This lesson covers key concepts and practice problems.
-      `
+Apply geometry skills:
+- Choose the right formula
+- Draw pictures
+- Include correct units
+    
+    `
     },
     {
       id: 'grade7-geometry-p6-worked',
@@ -20,39 +22,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Paint a wall 12 ft × 8 ft with a 3 ft × 4 ft window. Paint needed?**
+
+Wall area: $12(8) = 96$ ft²
+Window: $3(4) = 12$ ft²
+Paint: $96 - 12 = 84$ ft² ✅
+    
+    `
     },
     {
       id: 'grade7-geometry-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Grade 7 Math."
+                    "question": "Fencing for circular garden, r=5 m? (π≈3.14)",
+                    "options": [
+                              "31.4 m",
+                              "78.5 m",
+                              "15.7 m",
+                              "25 m"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "C = 2π(5) = 31.4 m."
           }
-        ]
+]
       }
     },
     {
       id: 'grade7-geometry-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Word Problems** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) Fence circular garden, r=5. How many meters? (π≈3.14)
+
+2) Gift wrap a 4×3×2 box. SA?
+
+3) Paint a 12×8 wall minus a 3×4 window. Area to paint?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["31.4","52","84"],
+        hint1: "C = 2πr.",
+        hint2: "SA = 2(lw+lh+wh).",
+        hint3: "Wall − window.",
+        explanation: "1) 2(3.14)(5)=31.4. 2) 2(12+8+6)=52. 3) 96−12=84."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Fencing goes around → need","options":["Perimeter/Circumference","Area","Volume","Diameter"]},{"label":"Filling a pool → need","options":["Volume","Surface area","Perimeter","Length"]}],
+        correctAnswers: ["Perimeter/Circumference","Volume"],
+        hint1: "Around = distance around.",
+        hint2: "Filling = 3D space.",
+        explanation: "Fencing → circumference. Filling → volume."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Formula |
+|---|---------|--------|
+| 1 | Fencing for circular garden, r=5 | C = 2πr |
+| 2 | Wrapping a 4×3×2 box | SA |
+| 3 | Water in cylindrical tank | V = πr²h |
+    
+    `
     },
     {
       id: 'grade7-geometry-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "To wrap a box, you need to find its:",
+                    "options": [
+                              "Surface area",
+                              "Volume",
+                              "Perimeter",
+                              "Weight"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Wrapping covers the surface."
           }
-        ]
+]
       }
     }
   ]

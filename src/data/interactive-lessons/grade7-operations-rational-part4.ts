@@ -5,14 +5,18 @@ export const g7RationalOpsPart4Data = {
       id: 'grade7-operations-rational-p4-intro',
       type: 'text' as const,
       content: `
-# 📈 Dividing Rational Numbers
+# 🔢 Dividing Rational Numbers
 
 **Part 4 of 7 — Dividing Rational Numbers**
 
-Welcome to **Dividing Rational Numbers** — Part 4 of 7 in the Grade 7 Math Operations with Rational Numbers series.
+Same sign rules as multiplication:
+- Same signs → **positive**
+- Different signs → **negative**
 
-This lesson covers key concepts and practice problems.
-      `
+$(-12) \div 4 = -3$
+$(-15) \div (-3) = 5$
+    
+    `
     },
     {
       id: 'grade7-operations-rational-p4-worked',
@@ -20,39 +24,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$(-8.4) \div (-2.1) = 4$ (same signs → positive) ✅
+    
+    `
     },
     {
       id: 'grade7-operations-rational-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes dividing rational numbers?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Dividing Rational Numbers is a core concept in Grade 7 Math."
+                    "question": "$(-24) \\\\div 6 = ?$",
+                    "options": [
+                              "−4",
+                              "4",
+                              "−18",
+                              "18"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Different signs → negative: −4."
           }
-        ]
+]
       }
     },
     {
       id: 'grade7-operations-rational-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Divide Rationals** 🧮
 
-Answer the following about dividing rational numbers.
-      `,
+1) $(-24) \div 6 = ?$
+
+2) $(-36) \div (-9) = ?$
+
+3) $4.5 \div (-1.5) = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of dividing rational numbers."
+        boxes: 3,
+        correctAnswers: ["-4","4","-3"],
+        hint1: "Different signs.",
+        hint2: "Same signs.",
+        hint3: "Different signs. 4.5/1.5 = 3.",
+        explanation: "1) −4. 2) 4. 3) −3."
       }
     },
     {
@@ -60,22 +77,13 @@ Answer the following about dividing rational numbers.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Dividing Rational Numbers is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Dividing Rational Numbers builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Division by zero is","options":["Undefined","Zero","One","Infinity"]},{"label":"$(-1) \\\\div (-1) =$","options":["1","−1","0","−2"]}],
+        correctAnswers: ["Undefined","1"],
+        hint1: "You cannot divide by zero.",
+        hint2: "Same signs.",
+        explanation: "Division by 0 is undefined. (−1)÷(−1)=1."
       }
     },
     {
@@ -84,28 +92,34 @@ Answer the following about dividing rational numbers.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Dividing Rational Numbers | Core dividing rational numbers principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Sign |
+|---|---------|------|
+| 1 | $(-24) \div 6$ | Negative |
+| 2 | $(-36) \div (-9)$ | Positive |
+| 3 | $4.5 \div (-1.5)$ | Negative |
+    
+    `
     },
     {
       id: 'grade7-operations-rational-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in dividing rational numbers?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$(-36) \\\\div (-9) = ?$",
+                    "options": [
+                              "4",
+                              "−4",
+                              "45",
+                              "−27"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Same signs → positive: 4."
           }
-        ]
+]
       }
     }
   ]

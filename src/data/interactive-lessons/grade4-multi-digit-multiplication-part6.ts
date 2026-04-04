@@ -5,14 +5,16 @@ export const g4MultiDigitMultPart6Data = {
       id: 'grade4-multi-digit-multiplication-p6-intro',
       type: 'text' as const,
       content: `
-# 🛠️ Problem-Solving Workshop
+# ✖️ Problem-Solving Workshop
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Grade 4 Math Multi-Digit Multiplication series.
-
-This lesson covers key concepts and practice problems.
-      `
+Choose the best multiplication strategy for each problem:
+- **Mental math**: multiples of 10, 100
+- **Area model**: see partial products visually
+- **Standard algorithm**: efficient for larger numbers
+    
+    `
     },
     {
       id: 'grade4-multi-digit-multiplication-p6-worked',
@@ -20,39 +22,57 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$45 \times 22 = ?$**
+
+Strategy: Break apart 22 = 20 + 2.
+- $45 \times 20 = 900$
+- $45 \times 2 = 90$
+- $900 + 90 = 990$ ✅
+    
+    `
     },
     {
       id: 'grade4-multi-digit-multiplication-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Grade 4 Math."
+                    "question": "Best strategy for $50 \\\\times 60$?",
+                    "options": [
+                              "Mental math: 5×6=30, add two zeros",
+                              "Standard algorithm",
+                              "Guess and check",
+                              "Area model"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "50×60: multiply 5×6=30, add two zeros → 3,000."
           }
-        ]
+]
       }
     },
     {
       id: 'grade4-multi-digit-multiplication-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Problem Solving** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) $25 \times 23 = ?$
+
+2) $45 \times 30 = ?$
+
+3) 48 classrooms × 50 desks each. Total desks?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["575","1350","2400"],
+        hint1: "25×20 + 25×3.",
+        hint2: "45×3 = 135, then add a zero.",
+        hint3: "48 × 50.",
+        explanation: "1) 500+75=575. 2) 1,350. 3) 2,400."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"For multiplying by 10, 20, 30, etc., use","options":["Mental math","Long division","A calculator","Guess and check"]},{"label":"$99 \\\\times 4 = 100(4) - 1(4) =$","options":["396","400","404","300"]}],
+        correctAnswers: ["Mental math","396"],
+        hint1: "Multiples of 10 are easy mental math.",
+        hint2: "400 − 4 = ?",
+        explanation: "Mental math for ×10s. 100(4)−4 = 396."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Best Strategy |
+|---|---------|---------------|
+| 1 | $25 \times 40$ | Mental math (×10s) |
+| 2 | $37 \times 23$ | Standard algorithm |
+| 3 | $99 \times 5$ | Mental math: $100(5) - 1(5)$ |
+    
+    `
     },
     {
       id: 'grade4-multi-digit-multiplication-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "For $99 \\\\times 7$, a clever trick is:",
+                    "options": [
+                              "$100(7) - 1(7) = 693$",
+                              "$99 + 7 = 106$",
+                              "$90(7) + 9 = 639$",
+                              "Round to 100 and stop"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "99×7 = 100(7) − 1(7) = 700 − 7 = 693."
           }
-        ]
+]
       }
     }
   ]

@@ -5,14 +5,18 @@ export const g4GeoMeasurePart6Data = {
       id: 'grade4-geometry-measurement-p6-intro',
       type: 'text' as const,
       content: `
-# 🛠️ Problem-Solving Workshop
+# 📏 Problem-Solving Workshop
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Grade 4 Math Geometry & Measurement series.
+Apply geometry and measurement skills to real-world problems!
 
-This lesson covers key concepts and practice problems.
-      `
+1. Draw a picture
+2. Identify what to find (perimeter? area? angle?)
+3. Use the right formula
+4. Include units
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p6-worked',
@@ -20,39 +24,55 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Rectangular garden 12 m × 8 m. Find perimeter and area.**
+
+- $P = 2(12)+2(8) = 40$ m
+- $A = 12 \times 8 = 96$ m² ✅
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Grade 4 Math."
+                    "question": "Room 5 m × 4 m. Carpet needed?",
+                    "options": [
+                              "20 m²",
+                              "18 m",
+                              "9 m²",
+                              "40 m²"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Carpet = area = 5×4 = 20 m²."
           }
-        ]
+]
       }
     },
     {
       id: 'grade4-geometry-measurement-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Real-World Problems** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) Garden 10 m × 5 m. Area (m²)?
+
+2) Room 8 ft × 6 ft. Border tape needed (perimeter in ft)?
+
+3) Two squares (side 2 cm) side by side form a 4 × 2 cm rectangle. Perimeter (cm)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["50","28","12"],
+        hint1: "A = l × w.",
+        hint2: "P = 2l + 2w.",
+        hint3: "P = 2(4) + 2(2).",
+        explanation: "1) 10×5=50. 2) 2(8)+2(6)=28. 3) 2(4)+2(2)=12."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To find fencing needed, calculate the","options":["Perimeter","Area","Volume","Weight"]},{"label":"To find paint for a wall, calculate the","options":["Area","Perimeter","Length","Diagonal"]}],
+        correctAnswers: ["Perimeter","Area"],
+        hint1: "Fencing goes around the outside.",
+        hint2: "Paint covers a surface.",
+        explanation: "Fencing = perimeter. Paint = area."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Find |
+|---|---------|------|
+| 1 | Garden 10 × 5 m | Area |
+| 2 | Room 8 × 6 ft, border tape | Perimeter |
+| 3 | Two 2-cm squares side by side | Perimeter |
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Square park, perimeter 80 m. Area?",
+                    "options": [
+                              "400 m²",
+                              "20 m²",
+                              "80 m²",
+                              "160 m²"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Side = 80÷4 = 20 m. Area = 20² = 400 m²."
           }
-        ]
+]
       }
     }
   ]

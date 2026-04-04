@@ -12,6 +12,7 @@ import {
   type APBioDiagnosticResults,
 } from '@/data/ap-biology-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -53,6 +54,7 @@ export default function APBioDiagnosticPage() {
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
+  const [showReference, setShowReference] = useState(false)
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -198,6 +200,12 @@ export default function APBioDiagnosticPage() {
                   ⏱ {formatTime(timeRemaining)}
                 </span>
                 <button
+                  onClick={() => setShowReference(true)}
+                  className="rounded-lg border border-emerald-300 px-3 py-1 text-xs font-medium text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-600 dark:text-emerald-400 dark:hover:bg-emerald-900/20"
+                >
+                  📋 Reference Sheet
+                </button>
+                <button
                   onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase('menu'); setTestData(null) }}
                   className="text-sm text-gray-500 hover:text-red-500 dark:text-gray-400"
                 >
@@ -328,6 +336,8 @@ export default function APBioDiagnosticPage() {
                 </button>
               )}
             </div>
+
+            <ReferenceSheetModal open={showReference} onClose={() => setShowReference(false)} courseSlug="ap-biology" />
           </div>
         </div>
       </div>

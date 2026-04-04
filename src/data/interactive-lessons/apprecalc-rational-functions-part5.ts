@@ -9,10 +9,15 @@ export const apPrecalcRationalPart5Data = {
 
 **Part 5 of 7 — Graphing Rational Functions**
 
-Welcome to **Graphing Rational Functions** — Part 5 of 7 in the AP Precalculus Rational Functions series.
-
-This lesson covers key concepts and practice problems.
-      `
+Steps:
+1. Find **domain restrictions** (den = 0)
+2. Identify **holes** (cancel common factors)
+3. Find **VAs** (remaining den zeros)
+4. Find **HA** (compare degrees)
+5. Find **x-intercepts** (num = 0) and **y-intercept** ($f(0)$)
+6. Plot and connect
+    
+    `
     },
     {
       id: 'apprecalc-rational-functions-p5-worked',
@@ -20,39 +25,58 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$f(x) = \frac{x+2}{x-1}$**
+
+- No common factors → no holes
+- VA: $x = 1$
+- HA: $y = 1$ (equal degrees, 1/1)
+- x-int: $x = -2$
+- y-int: $f(0) = \frac{2}{-1} = -2$ ✅
+    
+    `
     },
     {
       id: 'apprecalc-rational-functions-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes graphing rational functions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Graphing Rational Functions is a core concept in AP Precalculus."
+                    "question": "x-intercept of x/(x−2)?",
+                    "options": [
+                              "x = 0",
+                              "x = 2",
+                              "x = −2",
+                              "No x-int"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Numerator = 0 → x = 0."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-rational-functions-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Graph $\frac{x}{x-2}$** 🧮
 
-Answer the following about graphing rational functions.
-      `,
+1) VA at $x = $ ?
+
+2) HA at $y = $ ?
+
+3) x-intercept at $x = $ ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of graphing rational functions."
+        boxes: 3,
+        correctAnswers: ["2","1","0"],
+        hint1: "x−2=0.",
+        hint2: "Equal degrees: 1/1.",
+        hint3: "Numerator = 0.",
+        explanation: "1) VA: x=2. 2) HA: y=1. 3) x-int: x=0."
       }
     },
     {
@@ -60,22 +84,13 @@ Answer the following about graphing rational functions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Graphing Rational Functions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Graphing Rational Functions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"x-intercepts are found by setting the ____ equal to zero","options":["Numerator","Denominator","Entire function","Leading coefficient"]},{"label":"The first step in graphing a rational function is to find","options":["Domain restrictions","The y-intercept","The end behavior","The turning points"]}],
+        correctAnswers: ["Numerator","Domain restrictions"],
+        hint1: "Top of the fraction.",
+        hint2: "Where is it undefined?",
+        explanation: "x-int: numerator=0. Start with domain restrictions."
       }
     },
     {
@@ -84,28 +99,33 @@ Answer the following about graphing rational functions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Graphing Rational Functions | Core graphing rational functions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Function | VA | HA | x-int |
+|---|---------|----|----|-------|
+| 1 | $\frac{x}{x-2}$ | 2 | 1 | 0 |
+| 2 | $\frac{3}{x+1}$ | −1 | 0 | none |
+    
+    `
     },
     {
       id: 'apprecalc-rational-functions-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in graphing rational functions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "y-intercept of (x+2)/(x−1)?",
+                    "options": [
+                              "−2",
+                              "2",
+                              "1",
+                              "−1"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "f(0) = 2/(−1) = −2."
           }
-        ]
+]
       }
     }
   ]

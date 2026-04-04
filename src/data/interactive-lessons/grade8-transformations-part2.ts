@@ -9,10 +9,13 @@ export const g8TransformationsPart2Data = {
 
 **Part 2 of 7 — Reflections**
 
-Welcome to **Reflections** — Part 2 of 7 in the Grade 8 Math Transformations series.
+A **reflection** flips a figure over a line.
 
-This lesson covers key concepts and practice problems.
-      `
+- Over **x-axis**: $(x, y) \to (x, -y)$
+- Over **y-axis**: $(x, y) \to (-x, y)$
+- Over $y = x$: $(x, y) \to (y, x)$
+    
+    `
     },
     {
       id: 'grade8-transformations-p2-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Reflect (3, 5) over the x-axis.**
+
+$(3, 5) \to (3, -5)$ ✅
+    
+    `
     },
     {
       id: 'grade8-transformations-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes reflections?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Reflections is a core concept in Grade 8 Math."
+                    "question": "Reflect (4,2) over x-axis:",
+                    "options": [
+                              "(4,−2)",
+                              "(−4,2)",
+                              "(−4,−2)",
+                              "(2,4)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Over x-axis: y becomes −y."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-transformations-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Reflections** 🧮
 
-Answer the following about reflections.
-      `,
+1) Reflect (4, 2) over x-axis. New y = ?
+
+2) Reflect (4, 2) over y-axis. New y = ?
+
+3) Reflect (4, 2) over y-axis. New x = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of reflections."
+        boxes: 3,
+        correctAnswers: ["-2","2","-4"],
+        hint1: "x-axis reflection: flip y sign.",
+        hint2: "y-axis reflection: y stays.",
+        hint3: "y-axis reflection: flip x sign.",
+        explanation: "1) −2. 2) 2 (y unchanged). 3) −4."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about reflections.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Reflections is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Reflections builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Reflection over x-axis changes","options":["The y-coordinate sign","The x-coordinate sign","Both signs","Neither sign"]},{"label":"A reflection is a","options":["Flip","Slide","Turn","Stretch"]}],
+        correctAnswers: ["The y-coordinate sign","Flip"],
+        hint1: "(x,y)→(x,−y).",
+        hint2: "Mirror image.",
+        explanation: "x-axis: y flips. Reflection = flip."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about reflections.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Reflections | Core reflections principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Point | Line | Image |
+|---|-------|------|-------|
+| 1 | (4,2) | x-axis | (4,−2) |
+| 2 | (4,2) | y-axis | (−4,2) |
+| 3 | (3,5) | y=x | (5,3) |
+    
+    `
     },
     {
       id: 'grade8-transformations-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in reflections?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Reflect (4,2) over y-axis:",
+                    "options": [
+                              "(−4,2)",
+                              "(4,−2)",
+                              "(−4,−2)",
+                              "(2,4)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Over y-axis: x becomes −x."
           }
-        ]
+]
       }
     }
   ]

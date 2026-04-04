@@ -9,10 +9,13 @@ export const apStatsHypothesisPart3Data = {
 
 **Part 3 of 7 — P-Values**
 
-Welcome to **P-Values** — Part 3 of 7 in the AP Statistics Hypothesis Testing series.
+The **p-value** is the probability of getting a result as extreme (or more) than the observed, assuming $H_0$ is true.
 
-This lesson covers key concepts and practice problems.
-      `
+- Small p-value → strong evidence against $H_0$
+- If $p < \alpha$ → **reject** $H_0$
+- Common $\alpha = 0.05$
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p3-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**p-value = 0.03, α = 0.05. Decision?**
+
+$0.03 < 0.05$ → **Reject $H_0$**. The result is statistically significant. ✅
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes p-values?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "P-Values is a core concept in AP Statistics."
+                    "question": "p = 0.03, α = 0.05. Decision?",
+                    "options": [
+                              "Reject H₀",
+                              "Fail to reject H₀",
+                              "Accept H₀",
+                              "Need more data"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "p < α → reject."
           }
-        ]
+]
       }
     },
     {
       id: 'apstats-hypothesis-testing-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**P-Values** 🧮
 
-Answer the following about p-values.
-      `,
+1) The most common significance level α?
+
+2) Which is more significant: p=0.03 or p=0.08?
+
+3) Which p-value leads to "fail to reject" at α=0.05?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of p-values."
+        boxes: 3,
+        correctAnswers: ["0.05","0.03","0.08"],
+        hint1: "Standard threshold.",
+        hint2: "Smaller p is stronger.",
+        hint3: "p > α → fail to reject.",
+        explanation: "1) 0.05. 2) 0.03 (smaller). 3) 0.08 > 0.05."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about p-values.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "P-Values is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "P-Values builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"If p < α, we","options":["Reject H₀","Accept H₀","Fail to reject H₀","Increase α"]},{"label":"A small p-value means the result is","options":["Statistically significant","Insignificant","Random","Normal"]}],
+        correctAnswers: ["Reject H₀","Statistically significant"],
+        hint1: "Evidence is strong enough.",
+        hint2: "Unlikely under H₀.",
+        explanation: "p < α → reject. Small p = statistically significant."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about p-values.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | P-Values | Core p-values principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | p-value | α | Decision |
+|---|---------|---|----------|
+| 1 | 0.03 | 0.05 | Reject H₀ |
+| 2 | 0.08 | 0.05 | Fail to reject H₀ |
+| 3 | 0.01 | 0.01 | Borderline |
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in p-values?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "A p-value of 0.001 provides:",
+                    "options": [
+                              "Very strong evidence against H₀",
+                              "Weak evidence",
+                              "No evidence",
+                              "Proof of H₀"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Very small p → very strong evidence."
           }
-        ]
+]
       }
     }
   ]

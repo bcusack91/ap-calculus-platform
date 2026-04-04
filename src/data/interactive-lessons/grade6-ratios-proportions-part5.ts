@@ -5,14 +5,18 @@ export const g6RatiosPart5Data = {
       id: 'grade6-ratios-proportions-p5-intro',
       type: 'text' as const,
       content: `
-# 🧮 Percent Problems
+# ⚖️ Percent Problems
 
 **Part 5 of 7 — Percent Problems**
 
-Welcome to **Percent Problems** — Part 5 of 7 in the Grade 6 Math Ratios & Proportions series.
+**Percent** means "per hundred." $25\% = \frac{25}{100} = 0.25$
 
-This lesson covers key concepts and practice problems.
-      `
+### Three Types
+1. Find the part: $20\%$ of $50 = 0.20 \times 50 = 10$
+2. Find the percent: $\frac{\text{part}}{\text{whole}} \times 100$
+3. Find the whole: $\frac{\text{part}}{\text{percent}} \times 100$
+    
+    `
     },
     {
       id: 'grade6-ratios-proportions-p5-worked',
@@ -20,39 +24,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**What is 30% of 80?**
+
+$0.30 \times 80 = 24$ ✅
+    
+    `
     },
     {
       id: 'grade6-ratios-proportions-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes percent problems?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Percent Problems is a core concept in Grade 6 Math."
+                    "question": "What is 15% of 200?",
+                    "options": [
+                              "30",
+                              "15",
+                              "300",
+                              "3"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "0.15 × 200 = 30."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-ratios-proportions-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Percent Problems** 🧮
 
-Answer the following about percent problems.
-      `,
+1) 25% of 60 = ?
+
+2) 12 is what percent of 48? (number only)
+
+3) 15 is 30% of what?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of percent problems."
+        boxes: 3,
+        correctAnswers: ["15","25","50"],
+        hint1: "0.25 × 60.",
+        hint2: "12 ÷ 48 × 100.",
+        hint3: "15 ÷ 0.30.",
+        explanation: "1) 15. 2) 25%. 3) 50."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about percent problems.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Percent Problems is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Percent Problems builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"50% is the same as","options":["One half","One quarter","One third","One fifth"]},{"label":"To find a percent of a number, multiply by","options":["The decimal form of the percent","The percent times the number twice","100","The whole number"]}],
+        correctAnswers: ["One half","The decimal form of the percent"],
+        hint1: "50/100 = ?",
+        hint2: "Convert % to decimal first.",
+        explanation: "50% = 1/2. Multiply by the decimal form."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about percent problems.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Percent Problems | Core percent problems principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Type |
+|---|---------|------|
+| 1 | 25% of 60 | Find part |
+| 2 | 12 is what % of 48? | Find percent |
+| 3 | 15 is 30% of what? | Find whole |
+    
+    `
     },
     {
       id: 'grade6-ratios-proportions-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in percent problems?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "12 out of 48 is what percent?",
+                    "options": [
+                              "25%",
+                              "12%",
+                              "48%",
+                              "4%"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "12/48 = 0.25 = 25%."
           }
-        ]
+]
       }
     }
   ]

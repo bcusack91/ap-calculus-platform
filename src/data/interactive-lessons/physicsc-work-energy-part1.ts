@@ -5,14 +5,20 @@ export const physCWorkEnergyPart1Data = {
       id: 'physicsc-work-energy-p1-intro',
       type: 'text' as const,
       content: `
-# 📐 Work as an Integral
+# ⚛️ Work as an Integral
 
 **Part 1 of 7 — Work as an Integral**
 
-Welcome to **Work as an Integral** — Part 1 of 7 in the AP Physics C Work-Energy Theorem series.
+Work done by a variable force along a path:
 
-This lesson covers key concepts and practice problems.
-      `
+$W = \int_{x_1}^{x_2} F(x)\,dx$
+
+For a constant force at angle $\theta$ to displacement:
+$W = Fd\cos\theta$
+
+Work is a scalar quantity measured in Joules (J).
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p1-worked',
@@ -20,39 +26,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Find the work done by $F(x) = 3x^2$ from $x = 0$ to $x = 2$ m.**
+
+$W = \int_0^2 3x^2\,dx = x^3\Big|_0^2 = 8$ J ✅
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes work as an integral?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Work as an Integral is a core concept in AP Physics C."
+                    "question": "The work done by a force perpendicular to displacement is:",
+                    "options": [
+                              "Zero",
+                              "Maximum",
+                              "Negative",
+                              "$Fd$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$W = Fd\\\\cos 90° = 0$. A perpendicular force does no work."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-work-energy-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Work as an Integral** 🧮
 
-Answer the following about work as an integral.
-      `,
+1) A constant force of 10 N pushes an object 5 m. Work done (J)?
+
+2) $W = \int_0^2 3x^2\,dx = ?$ J
+
+3) $W = \int_0^3 4x\,dx = ?$ J
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of work as an integral."
+        boxes: 3,
+        correctAnswers: ["50","8","18"],
+        hint1: "$W = F \\times d$ for constant force.",
+        hint2: "$\\int 3x^2 dx = x^3$. Evaluate from 0 to 2.",
+        hint3: "$\\int 4x\\,dx = 2x^2$. Evaluate from 0 to 3.",
+        explanation: "1) $10 \\times 5 = 50$ J. 2) $2^3 - 0 = 8$ J. 3) $2(9) - 0 = 18$ J."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about work as an integral.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Work as an Integral is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Work as an Integral builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Work done by a spring force $F = -kx$ stretching from 0 to $x_0$ is","options":["$-\\\\frac{1}{2}kx_0^2$","$\\\\frac{1}{2}kx_0^2$","$kx_0$","$kx_0^2$"]},{"label":"When force and displacement are in opposite directions, work is","options":["Negative","Positive","Zero","Undefined"]}],
+        correctAnswers: ["$-\\\\frac{1}{2}kx_0^2$","Negative"],
+        hint1: "$W = \\int_0^{x_0} (-kx)\\,dx$.",
+        hint2: "$\\cos 180° = -1$.",
+        explanation: "Spring work: $\\int_0^{x_0} (-kx)dx = -kx_0^2/2$. Opposite directions give $\\cos 180° = -1$, so work is negative."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about work as an integral.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Work as an Integral | Core work as an integral principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Force | Limits |
+|---|-------|--------|
+| 1 | $F = 10$ N constant | 0 to 5 m |
+| 2 | $F(x) = 4x$ | 0 to 3 m |
+| 3 | $F(x) = kx$ (spring) | 0 to $x_0$ |
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in work as an integral?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "What are the SI units of work?",
+                    "options": [
+                              "Joules (J)",
+                              "Newtons (N)",
+                              "Watts (W)",
+                              "Pascals (Pa)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Work = Force × distance = N·m = Joule."
           }
-        ]
+]
       }
     }
   ]

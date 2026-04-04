@@ -12,6 +12,7 @@ import {
   type APPhysicsCEMResults,
 } from '@/data/ap-physics-c-em-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -41,6 +42,7 @@ export default function APPhysicsCEMDiagnosticPage() {
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
+  const [showReference, setShowReference] = useState(false)
 
   useEffect(() => {
     if (status === 'unauthenticated') router.push('/auth/signin?callbackUrl=/ap-physics-c-em-diagnostic')
@@ -123,6 +125,7 @@ export default function APPhysicsCEMDiagnosticPage() {
             </div>
             <div className="flex items-center gap-4">
               <span className={`text-sm font-mono font-bold ${timeRemaining < 300 ? 'text-red-500' : 'text-gray-600 dark:text-gray-400'}`}>⏱ {formatTime(timeRemaining)}</span>
+              <button onClick={() => setShowReference(true)} className="rounded-lg border border-amber-300 px-3 py-1 text-xs font-medium text-amber-700 transition hover:bg-amber-50 dark:border-amber-600 dark:text-amber-400 dark:hover:bg-amber-900/20">📋 Reference Sheet</button>
               <button onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase('menu'); setTestData(null) }} className="text-sm text-gray-500 hover:text-red-500 dark:text-gray-400">Exit</button>
             </div>
           </div>
@@ -211,6 +214,7 @@ export default function APPhysicsCEMDiagnosticPage() {
               <button onClick={handleFinish} className="rounded-xl bg-gradient-to-r from-amber-600 to-yellow-600 px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:shadow-lg">Submit Diagnostic</button>
             )}
           </div>
+          <ReferenceSheetModal open={showReference} onClose={() => setShowReference(false)} courseSlug="ap-physics-c-em" />
         </div></div>
       </div>
     )

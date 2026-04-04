@@ -125,7 +125,7 @@ This is why the contact point has zero velocity — it's the condition for no sl
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['50', '3.14', '6', '3.140'],
+        correctAnswers: ['50', '3.14', '6'],
         hint1: '$\\omega = v/R = 20/0.4$',
         hint2: '$d = R\\theta = R(5 \\times 2\\pi) = 0.1 \\times 10\\pi$',
         hint3: '$v_{\\text{top}} = 2v_{\\text{cm}} = 2R\\omega$',

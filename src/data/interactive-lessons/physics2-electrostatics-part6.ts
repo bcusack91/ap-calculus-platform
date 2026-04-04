@@ -148,7 +148,7 @@ Enter:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.9', '0.9', '0', '0.90'],
+        correctAnswers: ['0.9', '0.9', '0'],
         hint1: '$F = k|q_1 q_3|/r^2 = (9 \\times 10^9)(4 \\times 10^{-6})(1 \\times 10^{-6})/(0.2)^2$.',
         hint2: 'By symmetry, both forces have equal magnitude.',
         hint3: 'Equal charges equidistant from q₃ → forces are equal and opposite → they cancel!',

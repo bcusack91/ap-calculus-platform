@@ -5,14 +5,17 @@ export const g4FractionsPart3Data = {
       id: 'grade4-fractions-p3-intro',
       type: 'text' as const,
       content: `
-# 🔢 Adding Like Denominators
+# 📐 Adding Fractions (Like Denominators)
 
 **Part 3 of 7 — Adding Like Denominators**
 
-Welcome to **Adding Like Denominators** — Part 3 of 7 in the Grade 4 Math Fractions series.
+When fractions share a denominator, add the numerators and keep the denominator:
 
-This lesson covers key concepts and practice problems.
-      `
+$\frac{a}{d} + \frac{b}{d} = \frac{a+b}{d}$
+
+Always simplify the result!
+    
+    `
     },
     {
       id: 'grade4-fractions-p3-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$\frac{3}{8} + \frac{4}{8} = \frac{7}{8}$ ✅
+
+$\frac{5}{6} + \frac{1}{6} = \frac{6}{6} = 1$ ✅
+    
+    `
     },
     {
       id: 'grade4-fractions-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes adding like denominators?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Adding Like Denominators is a core concept in Grade 4 Math."
+                    "question": "What is $\\\\frac{2}{7} + \\\\frac{3}{7}$?",
+                    "options": [
+                              "$\\\\frac{5}{7}$",
+                              "$\\\\frac{5}{14}$",
+                              "$\\\\frac{6}{7}$",
+                              "$\\\\frac{2}{3}$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Same denominator: $\\\\frac{2+3}{7} = \\\\frac{5}{7}$."
           }
-        ]
+]
       }
     },
     {
       id: 'grade4-fractions-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Adding Practice** 🧮
 
-Answer the following about adding like denominators.
-      `,
+1) $\frac{2}{8} + \frac{3}{8} = \frac{?}{8}$ — Numerator?
+
+2) $\frac{3}{10} + \frac{4}{10} = \frac{?}{10}$ — Numerator?
+
+3) $\frac{5}{6} + \frac{1}{6} = $ ? (simplify to a whole number)
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of adding like denominators."
+        boxes: 3,
+        correctAnswers: ["5","7","1"],
+        hint1: "Add the numerators: 2 + 3.",
+        hint2: "Add the numerators: 3 + 4.",
+        hint3: "(5+1)/6 = 6/6. What does that equal?",
+        explanation: "1) 2+3=5. 2) 3+4=7. 3) 6/6 = 1."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about adding like denominators.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Adding Like Denominators is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Adding Like Denominators builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"$\\\\frac{4}{9} + \\\\frac{2}{9}$ equals","options":["$\\\\frac{6}{9}$","$\\\\frac{6}{18}$","$\\\\frac{8}{9}$","$\\\\frac{4}{18}$"]},{"label":"$\\\\frac{6}{9}$ simplifies to","options":["$\\\\frac{2}{3}$","$\\\\frac{3}{4}$","$\\\\frac{1}{3}$","Cannot simplify"]}],
+        correctAnswers: ["$\\\\frac{6}{9}$","$\\\\frac{2}{3}$"],
+        hint1: "Add numerators, keep denominator.",
+        hint2: "GCF of 6 and 9 is 3. Divide both.",
+        explanation: "(4+2)/9 = 6/9. GCF = 3: 6/9 = 2/3."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about adding like denominators.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
+| # | Problem | Key Idea |
 |---|---------|----------|
-| 1 | Adding Like Denominators | Core adding like denominators principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| 1 | $\frac{1}{5} + \frac{2}{5}$ | Keep denominator |
+| 2 | $\frac{3}{10} + \frac{7}{10}$ | Simplify result |
+| 3 | $\frac{2}{9} + \frac{4}{9}$ | Check for simplification |
+    
+    `
     },
     {
       id: 'grade4-fractions-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in adding like denominators?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "When adding fractions with the same denominator, you should:",
+                    "options": [
+                              "Keep the denominator the same",
+                              "Add the denominators",
+                              "Multiply the denominators",
+                              "Find the LCM"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Like denominators: keep the denominator, add only the numerators."
           }
-        ]
+]
       }
     }
   ]

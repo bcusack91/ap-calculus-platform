@@ -305,7 +305,7 @@ Enter in order (to 3 significant figures where applicable):
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.333', '19.5', 'toward', '0.3330', '19.50'],
+        correctAnswers: ['0.333', '19.5', 'toward'],
         hint1: 'Rearrange to $\\sin\\theta_2 = (n_1/n_2)\\sin\\theta_1$.',
         hint2: 'Use $\\sin 30^\\circ = 0.5$ and multiply by $1/1.5$.',
         hint3: 'Take inverse sine, then compare n-values for direction.',

@@ -81,10 +81,10 @@ On the AP Chemistry exam, you may be asked to:
           {
             question: 'Equal volumes of 0.10 M silver nitrate and 0.10 M sodium chromate are mixed. The net ionic equation is:',
             options: [
-              '$\\\\text{Ag}^+(aq) + \\\\text{CrO}_4^{2-}(aq) \\\\rightarrow \\\\text{AgCrO}_4(s)$',
-              '$2\\\\text{Ag}^+(aq) + \\\\text{CrO}_4^{2-}(aq) \\\\rightarrow \\\\text{Ag}_2\\\\text{CrO}_4(s)$',
-              '$\\\\text{Na}^+(aq) + \\\\text{NO}_3^-(aq) \\\\rightarrow \\\\text{NaNO}_3(s)$',
-              '$\\\\text{Ag}^+(aq) + \\\\text{NO}_3^-(aq) \\\\rightarrow \\\\text{AgNO}_3(s)$'
+              '$\\text{Ag}^+(aq) + \\text{CrO}_4^{2-}(aq) \\rightarrow \\text{AgCrO}_4(s)$',
+              '$2\\text{Ag}^+(aq) + \\text{CrO}_4^{2-}(aq) \\rightarrow \\text{Ag}_2\\text{CrO}_4(s)$',
+              '$\\text{Na}^+(aq) + \\text{NO}_3^-(aq) \\rightarrow \\text{NaNO}_3(s)$',
+              '$\\text{Ag}^+(aq) + \\text{NO}_3^-(aq) \\rightarrow \\text{AgNO}_3(s)$'
             ],
             correctAnswer: 1,
             explanation: 'Ag₂CrO₄ is insoluble (a dark red precipitate). The formula requires 2 Ag⁺ per CrO₄²⁻ because Ag is +1 and CrO₄ is −2. Net ionic: 2Ag⁺(aq) + CrO₄²⁻(aq) → Ag₂CrO₄(s). Charge: 2(+1) + (−2) = 0 ✓.'
@@ -92,10 +92,10 @@ On the AP Chemistry exam, you may be asked to:
           {
             question: 'A solution of sulfuric acid is added to a solution of barium hydroxide. The net ionic equation is:',
             options: [
-              '$\\\\text{H}^+(aq) + \\\\text{OH}^-(aq) \\\\rightarrow \\\\text{H}_2\\\\text{O}(l)$',
-              '$\\\\text{Ba}^{2+}(aq) + \\\\text{SO}_4^{2-}(aq) \\\\rightarrow \\\\text{BaSO}_4(s)$',
-              '$\\\\text{Ba}^{2+}(aq) + \\\\text{SO}_4^{2-}(aq) + \\\\text{H}^+(aq) + \\\\text{OH}^-(aq) \\\\rightarrow \\\\text{BaSO}_4(s) + \\\\text{H}_2\\\\text{O}(l)$',
-              '$\\\\text{H}_2\\\\text{SO}_4(aq) + \\\\text{Ba(OH)}_2(aq) \\\\rightarrow \\\\text{BaSO}_4(s) + 2\\\\text{H}_2\\\\text{O}(l)$'
+              '$\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$',
+              '$\\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{BaSO}_4(s)$',
+              '$\\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq) + \\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{BaSO}_4(s) + \\text{H}_2\\text{O}(l)$',
+              '$\\text{H}_2\\text{SO}_4(aq) + \\text{Ba(OH)}_2(aq) \\rightarrow \\text{BaSO}_4(s) + 2\\text{H}_2\\text{O}(l)$'
             ],
             correctAnswer: 2,
             explanation: 'This reaction has TWO driving forces: BaSO₄(s) precipitate AND H₂O formation. There are NO spectator ions! Every ion participates. The net ionic equation includes all species.'
@@ -213,9 +213,9 @@ For each scenario, identify the precipitate formed (write formula) or type **NR*
           {
             question: 'Solutions of calcium chloride and sodium phosphate are mixed. The net ionic equation is:',
             options: [
-              '$\\\\text{Ca}^{2+}(aq) + \\\\text{PO}_4^{3-}(aq) \\\\rightarrow \\\\text{CaPO}_4(s)$',
-              '$3\\\\text{Ca}^{2+}(aq) + 2\\\\text{PO}_4^{3-}(aq) \\\\rightarrow \\\\text{Ca}_3(\\\\text{PO}_4)_2(s)$',
-              '$\\\\text{Na}^+(aq) + \\\\text{Cl}^-(aq) \\\\rightarrow \\\\text{NaCl}(s)$',
+              '$\\text{Ca}^{2+}(aq) + \\text{PO}_4^{3-}(aq) \\rightarrow \\text{CaPO}_4(s)$',
+              '$3\\text{Ca}^{2+}(aq) + 2\\text{PO}_4^{3-}(aq) \\rightarrow \\text{Ca}_3(\\text{PO}_4)_2(s)$',
+              '$\\text{Na}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{NaCl}(s)$',
               'No reaction occurs'
             ],
             correctAnswer: 1,

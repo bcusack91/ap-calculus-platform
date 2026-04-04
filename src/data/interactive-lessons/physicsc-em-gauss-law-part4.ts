@@ -5,14 +5,19 @@ export const physCEMGaussPart4Data = {
       id: 'physicsc-em-gauss-law-p4-intro',
       type: 'text' as const,
       content: `
-# 📈 Cylindrical Symmetry
+# ⚡ Cylindrical Symmetry
 
 **Part 4 of 7 — Cylindrical Symmetry**
 
-Welcome to **Cylindrical Symmetry** — Part 4 of 7 in the AP Physics C: E&M Gauss's Law series.
+For an infinite line charge with linear charge density $\lambda$ (C/m):
 
-This lesson covers key concepts and practice problems.
-      `
+$E = \frac{\lambda}{2\pi\epsilon_0 r} = \frac{2k\lambda}{r}$
+
+Use a cylindrical Gaussian surface coaxial with the charge distribution.
+
+The flux through the end caps is zero (field is radial).
+    
+    `
     },
     {
       id: 'physicsc-em-gauss-law-p4-worked',
@@ -20,39 +25,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**An infinite wire has $\lambda = 5 \times 10^{-9}$ C/m. Find $E$ at $r = 0.1$ m.**
+
+$E = 2k\lambda/r = 2(9 \times 10^9)(5 \times 10^{-9})/0.1 = 900$ N/C ✅
+    
+    `
     },
     {
       id: 'physicsc-em-gauss-law-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes cylindrical symmetry?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Cylindrical Symmetry is a core concept in AP Physics C: E&M."
+                    "question": "The electric field of an infinite line charge decreases as:",
+                    "options": [
+                              "$1/r$",
+                              "$1/r^2$",
+                              "$1/r^3$",
+                              "Constant"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$E = 2k\\\\lambda/r \\\\propto 1/r$, not $1/r^2$."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-em-gauss-law-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Cylindrical Symmetry** 🧮
 
-Answer the following about cylindrical symmetry.
-      `,
+1) Line charge: $\lambda = 5$ nC/m, $r = 0.1$ m. $E$ (N/C)?
+
+2) Same wire at $r = 0.2$ m. $E$ (N/C)?
+
+3) $E$ for a line charge depends on $1/r^n$. What is $n$?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of cylindrical symmetry."
+        boxes: 3,
+        correctAnswers: ["900","450","1"],
+        hint1: "$E = 2k\\lambda/r = 2(9 \\times 10^9)(5 \\times 10^{-9})/0.1$.",
+        hint2: "Same formula, double the distance.",
+        hint3: "$E \\propto 1/r$, so $n = ?$.",
+        explanation: "1) $E = 900$ N/C. 2) $E = 900/2 = 450$ N/C. 3) $n = 1$."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about cylindrical symmetry.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Cylindrical Symmetry is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Cylindrical Symmetry builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A cylindrical Gaussian surface is used for","options":["Charges with cylindrical symmetry","Point charges","Planar charges","Any charge distribution"]},{"label":"For an infinite line charge, the field is directed","options":["Radially outward (if $\\\\lambda > 0$)","Along the wire","Both radially and along the wire","In circles around the wire"]}],
+        correctAnswers: ["Charges with cylindrical symmetry","Radially outward (if $\\\\lambda > 0$)"],
+        hint1: "Match the Gaussian surface to the symmetry.",
+        hint2: "The field points away from a positive line charge.",
+        explanation: "Cylindrical surfaces match cylindrical symmetry. Field is radially outward for positive $\\lambda$."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about cylindrical symmetry.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Cylindrical Symmetry | Core cylindrical symmetry principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Configuration | Field |
+|---|--------------|-------|
+| 1 | Infinite line | $E = 2k\lambda/r$ |
+| 2 | Infinite cylinder (outside) | Same as line |
+| 3 | Infinite cylinder (inside) | Depends on charge distribution |
+    
+    `
     },
     {
       id: 'physicsc-em-gauss-law-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in cylindrical symmetry?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "For a cylindrical Gaussian surface around a line charge, flux through the end caps is:",
+                    "options": [
+                              "Zero",
+                              "$EA$",
+                              "$\\\\Phi/2$",
+                              "Maximum"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "The field is radial (perpendicular to the cylinder axis), so no flux passes through the end caps."
           }
-        ]
+]
       }
     }
   ]

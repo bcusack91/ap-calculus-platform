@@ -9,10 +9,13 @@ export const apPrecalcPolyEndPart1Data = {
 
 **Part 1 of 7 — Degree & Leading Coefficient**
 
-Welcome to **Degree & Leading Coefficient** — Part 1 of 7 in the AP Precalculus Polynomial End Behavior series.
+- **Degree**: highest power of $x$
+- **Leading coefficient**: coefficient of the highest-degree term
+- These two values determine end behavior
 
-This lesson covers key concepts and practice problems.
-      `
+Example: $f(x) = -3x^4 + 2x^2 - 1$ → degree 4, leading coefficient $-3$
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p1-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$g(x) = 5x^3 - x + 7$**
+
+Degree = 3, Leading coefficient = 5 ✅
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes degree & leading coefficient?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Degree & Leading Coefficient is a core concept in AP Precalculus."
+                    "question": "Degree of 7x⁴ − 3x + 2?",
+                    "options": [
+                              "4",
+                              "7",
+                              "3",
+                              "1"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Highest power is 4."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Identify Degree** 🧮
 
-Answer the following about degree & leading coefficient.
-      `,
+1) $2x^5 - x$. Degree?
+
+2) $-x^2 + 3x$. Degree?
+
+3) $4x^3 + x^2 - 1$. Leading coefficient?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of degree & leading coefficient."
+        boxes: 3,
+        correctAnswers: ["5","2","4"],
+        hint1: "Highest exponent.",
+        hint2: "Highest power is x².",
+        hint3: "Coefficient of the x³ term.",
+        explanation: "1) 5. 2) 2. 3) 4."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about degree & leading coefficient.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Degree & Leading Coefficient is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Degree & Leading Coefficient builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The degree is determined by the","options":["Highest power of x","Number of terms","Leading coefficient","Constant term"]},{"label":"The leading coefficient is the coefficient of","options":["The highest-degree term","The first term written","The constant","The x term"]}],
+        correctAnswers: ["Highest power of x","The highest-degree term"],
+        hint1: "Biggest exponent.",
+        hint2: "Attached to the highest power.",
+        explanation: "Degree = highest power. Leading coeff = coeff of that term."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about degree & leading coefficient.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Degree & Leading Coefficient | Core degree & leading coefficient principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Polynomial | Degree | Leading Coeff |
+|---|-----------|--------|---------------|
+| 1 | $2x^5 - x$ | 5 | 2 |
+| 2 | $-x^2 + 3x + 1$ | 2 | −1 |
+| 3 | $4x^3 + x^2$ | 3 | 4 |
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in degree & leading coefficient?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Leading coefficient of −2x³ + 5x?",
+                    "options": [
+                              "−2",
+                              "5",
+                              "3",
+                              "−3"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Coefficient of x³ term."
           }
-        ]
+]
       }
     }
   ]

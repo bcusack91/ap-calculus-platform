@@ -114,7 +114,7 @@ Use $G = 6.67 \\times 10^{-11}$ N·m²/kg².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.98', '8.17', '9.8', '1.980', '8.170', '9.80'],
+        correctAnswers: ['1.98', '8.17', '9.8'],
         hint1: '$F = Gm_1m_2/r^2$. Compute numerator and denominator separately.',
         hint2: '$F = G(70)(70)/4$.',
         hint3: '$g = GM/r^2$. This should give the familiar $9.8$ m/s²!',

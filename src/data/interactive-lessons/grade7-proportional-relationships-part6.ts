@@ -9,10 +9,12 @@ export const g7ProportionalPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Grade 7 Math Proportional Relationships series.
-
-This lesson covers key concepts and practice problems.
-      `
+Apply proportional reasoning:
+- Unit rates and comparison shopping
+- Scale models
+- Percent change problems
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p6-worked',
@@ -20,39 +22,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Store A: 5 for \\$12. Store B: 8 for \\$20. Which is cheaper?**
+
+A: \\$12/5 = \\$2.40. B: \\$20/8 = \\$2.50. **Store A** is cheaper. ✅
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Grade 7 Math."
+                    "question": "3 lb for $6 vs 5 lb for $9. Better deal?",
+                    "options": [
+                              "5 lb for $9",
+                              "3 lb for $6",
+                              "Same price",
+                              "Cannot tell"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$6/3=$2/lb vs $9/5=$1.80/lb. 5 lb is cheaper."
           }
-        ]
+]
       }
     },
     {
       id: 'grade7-proportional-relationships-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Problem Solving** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) 5 lb for \\$9. Price per pound? (decimal)
+
+2) Map: 2 in = 30 mi. 5 in = ? mi
+
+3) Population: 200 → 250. Percent increase?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["1.8","75","25"],
+        hint1: "9 ÷ 5.",
+        hint2: "Proportion: 2/30 = 5/x.",
+        hint3: "(250−200)/200 × 100.",
+        explanation: "1) 9÷5=1.8. 2) 5×15=75. 3) 50/200=25%."
       }
     },
     {
@@ -60,22 +77,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To compare prices, use","options":["Unit rate","Total cost only","Number of items only","Weight only"]},{"label":"Percent change formula","options":["(new−old)/old × 100","(old−new)/new × 100","new/old × 100","old − new"]}],
+        correctAnswers: ["Unit rate","(new−old)/old × 100"],
+        hint1: "Price per unit.",
+        hint2: "Change divided by original.",
+        explanation: "Unit rate for comparison. % change = (new−old)/old × 100."
       }
     },
     {
@@ -84,28 +92,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Method |
+|---|---------|--------|
+| 1 | 3 lb for \\$6 vs 5 lb for \\$9 | Unit rate |
+| 2 | Map: 2 in = 30 mi, distance is 5 in | Scale |
+| 3 | Population: 200→250. % change? | Formula |
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Map: 2 in = 30 mi. 5 in = ?",
+                    "options": [
+                              "75 mi",
+                              "150 mi",
+                              "30 mi",
+                              "60 mi"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "2:30 = 5:x → x = 75."
           }
-        ]
+]
       }
     }
   ]

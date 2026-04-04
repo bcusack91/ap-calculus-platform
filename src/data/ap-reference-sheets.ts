@@ -696,9 +696,11 @@ export function getReferenceSheet(courseSlug: string): APReferenceSheet | undefi
 
 /**
  * Returns true if a course has a reference sheet available.
+ * AP Chemistry uses a specialized modal (periodic table + equations)
+ * so it is handled as a special case here.
  */
 export function hasReferenceSheet(courseSlug: string): boolean {
-  return courseSlug in AP_REFERENCE_SHEETS
+  return courseSlug in AP_REFERENCE_SHEETS || courseSlug === 'ap-chemistry'
 }
 
 /**

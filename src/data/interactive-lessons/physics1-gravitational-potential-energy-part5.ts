@@ -160,7 +160,7 @@ A 4 kg ball is thrown upward at 15 m/s from ground level. Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['450', '450', '5.625', '5.6250'],
+        correctAnswers: ['450', '450', '5.625'],
         hint1: '$KE_i = \\frac{1}{2}mv^2 = \\frac{1}{2}(4)(15)^2$.',
         hint2: 'At the top, all KE has converted to PE. So $PE_{\\max} = KE_i$.',
         hint3: 'When KE = PE, each is half the total. $mgh = E_{\\text{total}}/2 \\Rightarrow h = E/(2mg) = 450/(2 \\times 4 \\times 10)$.',

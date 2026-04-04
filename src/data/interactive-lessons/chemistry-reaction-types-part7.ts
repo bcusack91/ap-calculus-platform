@@ -84,10 +84,10 @@ The spectator ions (Na⁺ and NO₃⁻) are removed because they don\'t particip
           {
             question: 'When solutions of sodium hydroxide and hydrochloric acid are mixed, the net ionic equation is:',
             options: [
-              '$\\\\text{Na}^+ + \\\\text{Cl}^- \\\\rightarrow \\\\text{NaCl}$',
-              '$\\\\text{H}^+ + \\\\text{OH}^- \\\\rightarrow \\\\text{H}_2\\\\text{O}$',
-              '$\\\\text{NaOH} + \\\\text{HCl} \\\\rightarrow \\\\text{NaCl} + \\\\text{H}_2\\\\text{O}$',
-              '$\\\\text{Na}^+ + \\\\text{Cl}^- + \\\\text{H}_2\\\\text{O} \\\\rightarrow \\\\text{NaCl} + \\\\text{H}_2\\\\text{O}$'
+              '$\\text{Na}^+ + \\text{Cl}^- \\rightarrow \\text{NaCl}$',
+              '$\\text{H}^+ + \\text{OH}^- \\rightarrow \\text{H}_2\\text{O}$',
+              '$\\text{NaOH} + \\text{HCl} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$',
+              '$\\text{Na}^+ + \\text{Cl}^- + \\text{H}_2\\text{O} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$'
             ],
             correctAnswer: 1,
             explanation: 'The molecular equation is NaOH + HCl → NaCl + H₂O. Na⁺ and Cl⁻ are spectator ions. The net ionic equation shows only what actually reacts: $\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$.'
@@ -162,10 +162,10 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
           {
             question: 'Which reaction represents the thermal decomposition of limestone?',
             options: [
-              '$\\\\text{CaCO}_3 \\\\rightarrow \\\\text{CaO} + \\\\text{CO}_2$',
-              '$\\\\text{CaO} + \\\\text{CO}_2 \\\\rightarrow \\\\text{CaCO}_3$',
-              '$\\\\text{Ca} + \\\\text{CO}_3 \\\\rightarrow \\\\text{CaCO}_3$',
-              '$\\\\text{CaCO}_3 + \\\\text{HCl} \\\\rightarrow \\\\text{CaCl}_2 + \\\\text{H}_2\\\\text{O} + \\\\text{CO}_2$'
+              '$\\text{CaCO}_3 \\rightarrow \\text{CaO} + \\text{CO}_2$',
+              '$\\text{CaO} + \\text{CO}_2 \\rightarrow \\text{CaCO}_3$',
+              '$\\text{Ca} + \\text{CO}_3 \\rightarrow \\text{CaCO}_3$',
+              '$\\text{CaCO}_3 + \\text{HCl} \\rightarrow \\text{CaCl}_2 + \\text{H}_2\\text{O} + \\text{CO}_2$'
             ],
             correctAnswer: 0,
             explanation: 'Limestone is CaCO₃. Thermal decomposition (heating) breaks it into CaO (quicklime) + CO₂. This is used industrially in cement production. Option B is the reverse (synthesis), and D is a double replacement with an acid.'
@@ -216,10 +216,10 @@ Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **do
           {
             question: 'A student combines solutions of iron(III) chloride and sodium hydroxide. A brown precipitate forms. The balanced equation is:',
             options: [
-              '$\\\\text{FeCl}_3 + \\\\text{NaOH} \\\\rightarrow \\\\text{Fe(OH)}_3 + \\\\text{NaCl}$',
-              '$\\\\text{FeCl}_3 + 3\\\\text{NaOH} \\\\rightarrow \\\\text{Fe(OH)}_3 + 3\\\\text{NaCl}$',
-              '$3\\\\text{FeCl}_3 + \\\\text{NaOH} \\\\rightarrow 3\\\\text{Fe(OH)}_3 + \\\\text{NaCl}$',
-              '$\\\\text{FeCl}_3 + 3\\\\text{NaOH} \\\\rightarrow \\\\text{FeO}_3 + 3\\\\text{NaCl} + 3\\\\text{H}_2$'
+              '$\\text{FeCl}_3 + \\text{NaOH} \\rightarrow \\text{Fe(OH)}_3 + \\text{NaCl}$',
+              '$\\text{FeCl}_3 + 3\\text{NaOH} \\rightarrow \\text{Fe(OH)}_3 + 3\\text{NaCl}$',
+              '$3\\text{FeCl}_3 + \\text{NaOH} \\rightarrow 3\\text{Fe(OH)}_3 + \\text{NaCl}$',
+              '$\\text{FeCl}_3 + 3\\text{NaOH} \\rightarrow \\text{FeO}_3 + 3\\text{NaCl} + 3\\text{H}_2$'
             ],
             correctAnswer: 1,
             explanation: 'Double replacement: Fe³⁺ pairs with OH⁻ → Fe(OH)₃ (brown precipitate). Na⁺ pairs with Cl⁻ → NaCl. Balanced: FeCl₃ + 3NaOH → Fe(OH)₃↓ + 3NaCl. Fe: 1=1 ✓, Cl: 3=3 ✓, Na: 3=3 ✓, O: 3=3 ✓, H: 3=3 ✓.'

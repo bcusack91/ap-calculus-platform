@@ -153,7 +153,7 @@ For copper: $n \\approx 8.5 \\times 10^{28}$ electrons/m³
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7200', '2500', '1.5e-4', '0.00015'],
+        correctAnswers: ['7200', '2500', '1.5e-4'],
         hint1: '$Q = I \\cdot t$. Convert 1 hour to seconds: $1 \\times 3600 = 3600$ s.',
         hint2: '$I = Q / t = 5.0 / (2.0 \\times 10^{-3})$.',
         hint3: '$v_d = I / (nAe) = 2.0 / (8.5 \\times 10^{28} \\times 1.0 \\times 10^{-6} \\times 1.6 \\times 10^{-19})$.',

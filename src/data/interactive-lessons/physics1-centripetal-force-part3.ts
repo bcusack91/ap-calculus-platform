@@ -149,7 +149,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['14.1', '1.66', '4.2', '14.10', '1.660', '4.20'],
+        correctAnswers: ['14.1', '1.66', '4.2'],
         hint1: '$v_{max} = \\sqrt{\\mu_s gr}$.',
         hint2: '$T_{period} = 2\\pi\\sqrt{L\\cos\\theta/g}$.',
         hint3: '$T = mg/\\cos\\theta$.',

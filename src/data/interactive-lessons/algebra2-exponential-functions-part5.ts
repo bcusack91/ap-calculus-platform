@@ -9,10 +9,12 @@ export const alg2ExponentialPart5Data = {
 
 **Part 5 of 7 — Log Properties**
 
-Welcome to **Log Properties** — Part 5 of 7 in the Algebra 2 Exponential Functions series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Properties
+1. **Product**: $\log_b(MN) = \log_b(M) + \log_b(N)$
+2. **Quotient**: $\log_b\left(\frac{M}{N}\right) = \log_b(M) - \log_b(N)$
+3. **Power**: $\log_b(M^p) = p \cdot \log_b(M)$
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p5-worked',
@@ -20,39 +22,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$\log_2(4 \cdot 8) = \log_2(4) + \log_2(8) = 2 + 3 = 5$ ✅
+
+Check: $4 \times 8 = 32 = 2^5$ ✅
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes log properties?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Log Properties is a core concept in Algebra 2."
+                    "question": "$\\log_2(4) + \\log_2(8) = ?$",
+                    "options": [
+                              "5",
+                              "6",
+                              "24",
+                              "32"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "2+3=5. Or log₂(32)=5."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-exponential-functions-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Log Properties** 🧮
 
-Answer the following about log properties.
-      `,
+1) $\log_2(4) + \log_2(8) = ?$
+
+2) $\log_{10}(100) - \log_{10}(10) = ?$
+
+3) $\log_{10}(10^3) = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of log properties."
+        boxes: 3,
+        correctAnswers: ["5","1","3"],
+        hint1: "2 + 3.",
+        hint2: "2 − 1.",
+        hint3: "Power rule: bring down 3.",
+        explanation: "1) 5. 2) 1. 3) 3."
       }
     },
     {
@@ -60,22 +77,13 @@ Answer the following about log properties.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Log Properties is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Log Properties builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"$\\log(MN) =$","options":["$\\log(M) + \\log(N)$","$\\log(M) \\times \\log(N)$","$\\log(M) - \\log(N)$","$\\log(M^N)$"]},{"label":"$\\log(M/N) =$","options":["$\\log(M) - \\log(N)$","$\\log(M) + \\log(N)$","$\\log(M) / \\log(N)$","$\\log(M \\cdot N)$"]}],
+        correctAnswers: ["$\\log(M) + \\log(N)$","$\\log(M) - \\log(N)$"],
+        hint1: "Product rule.",
+        hint2: "Quotient rule.",
+        explanation: "Product: add logs. Quotient: subtract logs."
       }
     },
     {
@@ -84,28 +92,34 @@ Answer the following about log properties.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Log Properties | Core log properties principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Property | Example |
+|---|---------|--------|
+| 1 | Product | $\log(2)+\log(5) = \log(10) = 1$ |
+| 2 | Quotient | $\log(100)-\log(10) = \log(10) = 1$ |
+| 3 | Power | $\log(10^3) = 3$ |
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in log properties?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$\\log_b(M^3)$ equals:",
+                    "options": [
+                              "$3\\log_b(M)$",
+                              "$\\log_b(3M)$",
+                              "$M^3$",
+                              "$3M$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Power rule: exponent becomes coefficient."
           }
-        ]
+]
       }
     }
   ]

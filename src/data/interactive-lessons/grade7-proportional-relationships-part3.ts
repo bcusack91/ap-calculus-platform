@@ -5,14 +5,15 @@ export const g7ProportionalPart3Data = {
       id: 'grade7-proportional-relationships-p3-intro',
       type: 'text' as const,
       content: `
-# 🔢 Graphing Proportions
+# 📊 Graphing Proportions
 
 **Part 3 of 7 — Graphing Proportions**
 
-Welcome to **Graphing Proportions** — Part 3 of 7 in the Grade 7 Math Proportional Relationships series.
+A proportional relationship graphs as a **straight line through the origin**.
 
-This lesson covers key concepts and practice problems.
-      `
+The **slope** of the line = **k** (constant of proportionality).
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p3-worked',
@@ -20,39 +21,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Graph y = 2x.**
+
+Plot (0,0), (1,2), (2,4), (3,6). Connect → straight line through origin. ✅
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes graphing proportions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Graphing Proportions is a core concept in Grade 7 Math."
+                    "question": "A proportional graph always passes through:",
+                    "options": [
+                              "(0, 0)",
+                              "(1, 0)",
+                              "(0, 1)",
+                              "(1, 1)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Proportional → through the origin."
           }
-        ]
+]
       }
     },
     {
       id: 'grade7-proportional-relationships-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Graph Values** 🧮
 
-Answer the following about graphing proportions.
-      `,
+1) $y = 3x$. When $x = 2$, $y = ?$
+
+2) $y = 0.5x$. When $x = 4$, $y = ?$
+
+3) $y = 4x$. When $x = 3$, $y = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of graphing proportions."
+        boxes: 3,
+        correctAnswers: ["6","2","12"],
+        hint1: "3 × 2.",
+        hint2: "0.5 × 4.",
+        hint3: "4 × 3.",
+        explanation: "1) 6. 2) 2. 3) 12."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about graphing proportions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Graphing Proportions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Graphing Proportions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The graph of y = kx is a","options":["Line through the origin","Curve","Horizontal line","Vertical line"]},{"label":"Slope of y = 3x is","options":["3","0","1/3","x"]}],
+        correctAnswers: ["Line through the origin","3"],
+        hint1: "y = kx → linear, through (0,0).",
+        hint2: "Coefficient of x.",
+        explanation: "y = kx → straight line through origin. Slope = k = 3."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about graphing proportions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Graphing Proportions | Core graphing proportions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Equation | Points |
+|---|---------|--------|
+| 1 | y = 3x | (0,0), (1,3), (2,6) |
+| 2 | y = 0.5x | (0,0), (2,1), (4,2) |
+| 3 | y = 4x | (0,0), (1,4), (2,8) |
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in graphing proportions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "If a line through origin has slope 5, the equation is:",
+                    "options": [
+                              "y = 5x",
+                              "y = x + 5",
+                              "y = 5",
+                              "x = 5y"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Through origin with slope k: y = kx."
           }
-        ]
+]
       }
     }
   ]

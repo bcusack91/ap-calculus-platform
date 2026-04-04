@@ -100,10 +100,10 @@ $$\\text{Force} \\rightarrow \\text{FBD} \\rightarrow F_{\\text{net}} = ma$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3', '0.4', '0.5', '0.40', '0.50'],
-        hint1: '$a = \\mu_k g$.',
-        hint2: '$\\mu_s = F_{\\text{start}}/N = 24/60$.',
-        hint3: 'Constant velocity means $F = f_k = \\mu_k mg$. So $\\mu_k = F/(mg) = 50/100$.',
+        correctAnswers: ['3', '0.4', '0.5'],
+        hint1: 'On a flat surface with only friction, $a = \\mu_k g$.',
+        hint2: '$\\mu_s = F_{\\text{start}} / N$. What is the normal force for a block on a flat surface?',
+        hint3: 'Constant velocity means net force is zero, so $F_{\\text{applied}} = f_k = \\mu_k N$. Solve for $\\mu_k$.',
         explanation: '1) $a = 0.30 \\times 10 = 3$ m/s². 2) $\\mu_s = 24/60 = 0.4$. 3) $\\mu_k = 50/100 = 0.5$.'
       }
     },

@@ -143,7 +143,7 @@ A closed-end manometer has mercury ($\\rho = 13{,}600$ kg/m³) with a height of 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['68000', '0.67', '500', '0.670'],
+        correctAnswers: ['68000', '0.67', '500'],
         hint1: '$P = \\rho g h = (13{,}600)(10)(0.50)$.',
         hint2: 'Convert Pa to atm: divide by 101,325.',
         hint3: '0.50 m = 500 mm.',

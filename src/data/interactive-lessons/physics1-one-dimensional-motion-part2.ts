@@ -125,10 +125,10 @@ A runner goes 100 m east in 10 s, then 60 m west in 6 s:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8', '32.0', '0', '32.00'],
-        hint1: '$v_{\\text{avg}} = \\Delta x / \\Delta t = 240 / 30$',
-        hint2: 'Average speed = total distance / total time = $(80 + 80) / (2 + 3)$',
-        hint3: 'The truck returns to its starting point, so displacement = 0.',
+        correctAnswers: ['8', '32.0', '0'],
+        hint1: 'Use $v_{\\text{avg}} = \\Delta x / \\Delta t$. What are $\\Delta x$ and $\\Delta t$?',
+        hint2: 'Average speed = total distance / total time. Find the total distance and total time for the whole trip.',
+        hint3: 'Think about the truck\'s final position vs its starting position. What is the displacement?',
         explanation: '1) $v_{\\text{avg}} = 240/30 = 8$ m/s. 2) Average speed = $(80 + 80)/(2 + 3) = 160/5 = 32.0$ km/h. 3) Since the truck returns to its starting point, displacement = 0, so $v_{\\text{avg}} = 0/5 = 0$ km/h.'
       }
     },

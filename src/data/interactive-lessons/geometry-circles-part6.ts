@@ -9,10 +9,12 @@ export const geoCirclesPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Geometry Circles series.
-
-This lesson covers key concepts and practice problems.
-      `
+Apply circle theorems:
+- Identify the given information
+- Choose the right theorem
+- Draw a diagram
+    
+    `
     },
     {
       id: 'geometry-circles-p6-worked',
@@ -20,39 +22,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Pizza slice: r=10, θ=45°. Area of slice? (π≈3.14)**
+
+$\frac{45}{360} \times 3.14(100) = \frac{1}{8}(314) = 39.25$ sq units ✅
+    
+    `
     },
     {
       id: 'geometry-circles-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Geometry."
+                    "question": "Arc length: r=14, θ=180° (π≈3.14)?",
+                    "options": [
+                              "43.96",
+                              "87.92",
+                              "21.98",
+                              "14"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(180/360)(2)(3.14)(14) = 43.96."
           }
-        ]
+]
       }
     },
     {
       id: 'geometry-circles-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Circle Applications** 🧮 (π≈3.14)
 
-Answer the following about problem-solving workshop.
-      `,
+1) Arc: r=14, θ=180°. Length?
+
+2) Sector: r=6, θ=90°. Area?
+
+3) r=6, tangent=8. Distance from center?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["43.96","28.26","10"],
+        hint1: "(1/2)(2)(3.14)(14).",
+        hint2: "(1/4)(3.14)(36).",
+        hint3: "√(36+64).",
+        explanation: "1) 43.96. 2) 28.26. 3) 10."
       }
     },
     {
@@ -60,22 +77,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A pizza slice is shaped like a","options":["Sector","Segment","Chord","Tangent"]},{"label":"The arc of a half-circle is","options":["A semicircle","A quarter circle","A full circle","A chord"]}],
+        correctAnswers: ["Sector","A semicircle"],
+        hint1: "Wedge from center.",
+        hint2: "180° arc.",
+        explanation: "Pizza slice = sector. Half-circle arc = semicircle."
       }
     },
     {
@@ -84,28 +92,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Type |
+|---|---------|------|
+| 1 | Wheel r=14, rotation angle 180° | Arc length |
+| 2 | Clock face, 90° sector, r=6 | Sector area |
+| 3 | Tangent=8, r=6 | Distance |
+    
+    `
     },
     {
       id: 'geometry-circles-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "r=6, tangent=8. Distance from center?",
+                    "options": [
+                              "10",
+                              "14",
+                              "48",
+                              "2"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "√(36+64)=√100=10."
           }
-        ]
+]
       }
     }
   ]

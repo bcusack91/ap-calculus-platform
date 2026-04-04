@@ -9,10 +9,11 @@ export const apPrecalcTrigModelPart5Data = {
 
 **Part 5 of 7 — Inverse Trig Functions**
 
-Welcome to **Inverse Trig Functions** — Part 5 of 7 in the AP Precalculus Trigonometric Modeling series.
-
-This lesson covers key concepts and practice problems.
-      `
+- $\sin^{-1}(x)$ or $\arcsin(x)$: returns angle whose sine is $x$; range $[-\frac{\pi}{2}, \frac{\pi}{2}]$
+- $\cos^{-1}(x)$ or $\arccos(x)$: range $[0, \pi]$
+- $\tan^{-1}(x)$ or $\arctan(x)$: range $(-\frac{\pi}{2}, \frac{\pi}{2})$
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p5-worked',
@@ -20,39 +21,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$\sin^{-1}(1) = $ ?**
+
+$\sin(\frac{\pi}{2}) = 1$ → $\sin^{-1}(1) = \frac{\pi}{2} = 90°$ ✅
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes inverse trig functions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Inverse Trig Functions is a core concept in AP Precalculus."
+                    "question": "sin⁻¹(0) = ?",
+                    "options": [
+                              "0°",
+                              "90°",
+                              "180°",
+                              "45°"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "sin(0) = 0."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-trig-modeling-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Inverse Trig** 🧮 (answer in degrees)
 
-Answer the following about inverse trig functions.
-      `,
+1) $\sin^{-1}(0) = $ ?
+
+2) $\cos^{-1}(1) = $ ?
+
+3) $\tan^{-1}(1) = $ ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of inverse trig functions."
+        boxes: 3,
+        correctAnswers: ["0","0","45"],
+        hint1: "What angle has sin = 0?",
+        hint2: "What angle has cos = 1?",
+        hint3: "What angle has tan = 1?",
+        explanation: "1) 0°. 2) 0°. 3) 45°."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about inverse trig functions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Inverse Trig Functions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Inverse Trig Functions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The range of arcsin is","options":["[−90°, 90°]","[0°, 180°]","[0°, 360°]","All reals"]},{"label":"The range of arccos is","options":["[0°, 180°]","[−90°, 90°]","[0°, 360°]","All reals"]}],
+        correctAnswers: ["[−90°, 90°]","[0°, 180°]"],
+        hint1: "Restricted range for unique outputs.",
+        hint2: "Quadrants I and II.",
+        explanation: "arcsin: [−90°,90°]. arccos: [0°,180°]."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about inverse trig functions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Inverse Trig Functions | Core inverse trig functions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Expression | Value |
+|---|-----------|-------|
+| 1 | $\sin^{-1}(0)$ | 0° |
+| 2 | $\cos^{-1}(1)$ | 0° |
+| 3 | $\tan^{-1}(1)$ | 45° |
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in inverse trig functions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "cos⁻¹(0) = ?",
+                    "options": [
+                              "90°",
+                              "0°",
+                              "180°",
+                              "45°"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "cos(90°) = 0."
           }
-        ]
+]
       }
     }
   ]

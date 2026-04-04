@@ -9,10 +9,14 @@ export const apPrecalcTrigModelPart4Data = {
 
 **Part 4 of 7 — Modeling with Sinusoids**
 
-Welcome to **Modeling with Sinusoids** — Part 4 of 7 in the AP Precalculus Trigonometric Modeling series.
+Many real-world phenomena are periodic:
+- Temperature over a year
+- Tides, daylight hours
+- Sound waves, pendulums
 
-This lesson covers key concepts and practice problems.
-      `
+To model: find **amplitude** (half of max−min), **midline** (average of max and min), and **period** (time for one cycle).
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p4-worked',
@@ -20,39 +24,59 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Temperature: max 90°F, min 30°F, period 12 months.**
+
+$A = \frac{90-30}{2} = 30$, $D = \frac{90+30}{2} = 60$
+$B = \frac{2\pi}{12} = \frac{\pi}{6}$
+
+$T(t) = 30\sin\left(\frac{\pi}{6}t\right) + 60$ ✅
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes modeling with sinusoids?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Modeling with Sinusoids is a core concept in AP Precalculus."
+                    "question": "Max 80, min 40. Amplitude?",
+                    "options": [
+                              "20",
+                              "60",
+                              "40",
+                              "120"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(80−40)/2 = 20."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-trig-modeling-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Find Amplitude** 🧮
 
-Answer the following about modeling with sinusoids.
-      `,
+Amplitude = (max − min) / 2
+
+1) Max=80, min=40. Amplitude?
+
+2) Max=100, min=20. Amplitude?
+
+3) Max=50, min=10. Amplitude?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of modeling with sinusoids."
+        boxes: 3,
+        correctAnswers: ["20","40","20"],
+        hint1: "(80−40)/2.",
+        hint2: "(100−20)/2.",
+        hint3: "(50−10)/2.",
+        explanation: "1) 20. 2) 40. 3) 20."
       }
     },
     {
@@ -60,22 +84,13 @@ Answer the following about modeling with sinusoids.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Modeling with Sinusoids is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Modeling with Sinusoids builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The midline is the ____ of max and min","options":["Average","Difference","Product","Sum"]},{"label":"A sinusoidal model requires the data to be","options":["Periodic","Linear","Exponential","Random"]}],
+        correctAnswers: ["Average","Periodic"],
+        hint1: "(max+min)/2.",
+        hint2: "Repeating pattern.",
+        explanation: "Midline = average. Data must be periodic for sinusoidal models."
       }
     },
     {
@@ -84,28 +99,34 @@ Answer the following about modeling with sinusoids.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Modeling with Sinusoids | Core modeling with sinusoids principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Max | Min | Amplitude | Midline |
+|---|-----|-----|-----------|--------|
+| 1 | 80 | 40 | 20 | 60 |
+| 2 | 100 | 20 | 40 | 60 |
+| 3 | 50 | 10 | 20 | 30 |
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in modeling with sinusoids?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Max 80, min 40. Midline?",
+                    "options": [
+                              "60",
+                              "20",
+                              "80",
+                              "40"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(80+40)/2 = 60."
           }
-        ]
+]
       }
     }
   ]

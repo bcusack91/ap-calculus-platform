@@ -108,10 +108,10 @@ These reactions are essentially **reverses** of each other. If a synthesis react
           {
             question: 'Which equation represents a synthesis reaction?',
             options: [
-              '$2\\\\text{KClO}_3 \\\\rightarrow 2\\\\text{KCl} + 3\\\\text{O}_2$',
-              '$2\\\\text{Mg} + \\\\text{O}_2 \\\\rightarrow 2\\\\text{MgO}$',
-              '$\\\\text{Zn} + \\\\text{CuSO}_4 \\\\rightarrow \\\\text{ZnSO}_4 + \\\\text{Cu}$',
-              '$\\\\text{CH}_4 + 2\\\\text{O}_2 \\\\rightarrow \\\\text{CO}_2 + 2\\\\text{H}_2\\\\text{O}$'
+              '$2\\text{KClO}_3 \\rightarrow 2\\text{KCl} + 3\\text{O}_2$',
+              '$2\\text{Mg} + \\text{O}_2 \\rightarrow 2\\text{MgO}$',
+              '$\\text{Zn} + \\text{CuSO}_4 \\rightarrow \\text{ZnSO}_4 + \\text{Cu}$',
+              '$\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$'
             ],
             correctAnswer: 1,
             explanation: '$2\\text{Mg} + \\text{O}_2 \\rightarrow 2\\text{MgO}$ is a synthesis reaction: two elements combine to form one compound. The first option is decomposition, the third is single replacement, and the fourth is combustion.'
@@ -218,10 +218,10 @@ For each reaction, type **synthesis** or **decomposition**.
           {
             question: 'Which of the following is a decomposition reaction?',
             options: [
-              '$\\\\text{Fe} + \\\\text{S} \\\\rightarrow \\\\text{FeS}$',
-              '$2\\\\text{H}_2\\\\text{O}_2 \\\\rightarrow 2\\\\text{H}_2\\\\text{O} + \\\\text{O}_2$',
-              '$\\\\text{AgNO}_3 + \\\\text{NaCl} \\\\rightarrow \\\\text{AgCl} + \\\\text{NaNO}_3$',
-              '$\\\\text{C}_3\\\\text{H}_8 + 5\\\\text{O}_2 \\\\rightarrow 3\\\\text{CO}_2 + 4\\\\text{H}_2\\\\text{O}$'
+              '$\\text{Fe} + \\text{S} \\rightarrow \\text{FeS}$',
+              '$2\\text{H}_2\\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O} + \\text{O}_2$',
+              '$\\text{AgNO}_3 + \\text{NaCl} \\rightarrow \\text{AgCl} + \\text{NaNO}_3$',
+              '$\\text{C}_3\\text{H}_8 + 5\\text{O}_2 \\rightarrow 3\\text{CO}_2 + 4\\text{H}_2\\text{O}$'
             ],
             correctAnswer: 1,
             explanation: '$2\\text{H}_2\\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O} + \\text{O}_2$. Hydrogen peroxide (one reactant) breaks down into water and oxygen (two products). This is decomposition.'

@@ -9,10 +9,13 @@ export const apStatsProbabilityPart4Data = {
 
 **Part 4 of 7 — Conditional Probability**
 
-Welcome to **Conditional Probability** — Part 4 of 7 in the AP Statistics Probability Rules series.
+$P(A|B) = \frac{P(A \cap B)}{P(B)}$
 
-This lesson covers key concepts and practice problems.
-      `
+Read: "probability of A **given** B has occurred."
+
+This restricts our sample space to only outcomes where B happened.
+    
+    `
     },
     {
       id: 'apstats-probability-rules-p4-worked',
@@ -20,39 +23,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**P(A∩B) = 0.12, P(B) = 0.4. P(A|B)?**
+
+$P(A|B) = \frac{0.12}{0.4} = 0.3$ ✅
+    
+    `
     },
     {
       id: 'apstats-probability-rules-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes conditional probability?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Conditional Probability is a core concept in AP Statistics."
+                    "question": "P(A∩B)=0.15, P(B)=0.5. P(A|B)?",
+                    "options": [
+                              "0.3",
+                              "0.65",
+                              "0.075",
+                              "0.5"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "0.15/0.5 = 0.3."
           }
-        ]
+]
       }
     },
     {
       id: 'apstats-probability-rules-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Conditional Probability** 🧮
 
-Answer the following about conditional probability.
-      `,
+$P(A|B) = P(A \cap B) / P(B)$
+
+1) P(A∩B)=0.12, P(B)=0.4. P(A|B)?
+
+2) P(A∩B)=0.15, P(B)=0.5. P(A|B)?
+
+3) P(A∩B)=0.06, P(B)=0.2. P(A|B)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of conditional probability."
+        boxes: 3,
+        correctAnswers: ["0.3","0.3","0.3"],
+        hint1: "0.12/0.4.",
+        hint2: "0.15/0.5.",
+        hint3: "0.06/0.2.",
+        explanation: "1) 0.3. 2) 0.3. 3) 0.3."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about conditional probability.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Conditional Probability is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Conditional Probability builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"P(A|B) reads as \"probability of A\"","options":["Given B","And B","Or B","Without B"]},{"label":"The denominator in P(A|B) is","options":["P(B)","P(A)","P(A∩B)","P(A∪B)"]}],
+        correctAnswers: ["Given B","P(B)"],
+        hint1: "Conditional.",
+        hint2: "The given event.",
+        explanation: "P(A|B) = \"A given B.\" Denominator = P(B)."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about conditional probability.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Conditional Probability | Core conditional probability principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | P(A∩B) | P(B) | P(A given B) |
+|---|--------|------|-------|
+| 1 | 0.12 | 0.4 | 0.3 |
+| 2 | 0.15 | 0.5 | 0.3 |
+| 3 | 0.06 | 0.2 | 0.3 |
+    
+    `
     },
     {
       id: 'apstats-probability-rules-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in conditional probability?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "P(A|B) restricts the sample space to:",
+                    "options": [
+                              "Events where B occurred",
+                              "All events",
+                              "Events where A occurred",
+                              "The empty set"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Given B → only look at outcomes in B."
           }
-        ]
+]
       }
     }
   ]

@@ -145,7 +145,7 @@ If water behaved like a "normal" liquid (contracting all the way to freezing), l
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1143', '0.54', '13.8', '0.540', '13.80'],
+        correctAnswers: ['1143', '0.54', '13.8'],
         hint1: '$\\Delta V_{\\text{overflow}} = (\\beta_{\\text{gas}} - \\beta_{\\text{steel}}) V_0 \\Delta T = (950 - 36) \\times 10^{-6} \\times 50.0 \\times 25$. Convert L to mL.',
         hint2: '$\\Delta V = \\beta V_0 \\Delta T = (27 \\times 10^{-6})(200.0)(100)$.',
         hint3: '$V_0 = (10.0)^3 = 1000$ cm³. $\\beta = 3(23 \\times 10^{-6}) = 69 \\times 10^{-6}$. $\\Delta V = (69 \\times 10^{-6})(1000)(200)$.',

@@ -144,10 +144,10 @@ Check: Al: 2 = 2 ✓, H: 6 = 6 ✓, Cl: 6 = 6 ✓
           {
             question: 'Which equation is correctly balanced?',
             options: [
-              '$\\\\text{H}_2 + \\\\text{O}_2 \\\\rightarrow \\\\text{H}_2\\\\text{O}$',
-              '$2\\\\text{H}_2 + \\\\text{O}_2 \\\\rightarrow 2\\\\text{H}_2\\\\text{O}$',
-              '$\\\\text{H}_2 + \\\\text{O}_2 \\\\rightarrow 2\\\\text{H}_2\\\\text{O}$',
-              '$2\\\\text{H}_2 + 2\\\\text{O}_2 \\\\rightarrow 2\\\\text{H}_2\\\\text{O}$'
+              '$\\text{H}_2 + \\text{O}_2 \\rightarrow \\text{H}_2\\text{O}$',
+              '$2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$',
+              '$\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$',
+              '$2\\text{H}_2 + 2\\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$'
             ],
             correctAnswer: 1,
             explanation: '$2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$: Left has 4 H and 2 O. Right has 4 H and 2 O. Balanced! ✓'
@@ -238,7 +238,7 @@ Balance each equation. Enter the coefficient of the indicated substance.
               '8'
             ],
             correctAnswer: 1,
-            explanation: '$2\text{Al} + \text{Fe}_2\text{O}_3 \rightarrow \text{Al}_2\text{O}_3 + 2\text{Fe}$. Coefficients: 2 + 1 + 1 + 2 = 6. Al: 2=2 ✓, Fe: 2=2 ✓, O: 3=3 ✓.'
+            explanation: '$2\\text{Al} + \\text{Fe}_2\\text{O}_3 \\rightarrow \\text{Al}_2\\text{O}_3 + 2\\text{Fe}$. Coefficients: 2 + 1 + 1 + 2 = 6. Al: 2=2 ✓, Fe: 2=2 ✓, O: 3=3 ✓.'
           }
         ]
       }

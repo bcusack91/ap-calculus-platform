@@ -9,10 +9,13 @@ export const preAlgFractionsPart1Data = {
 
 **Part 1 of 7 — Converting Fractions & Decimals**
 
-Welcome to **Converting Fractions & Decimals** — Part 1 of 7 in the Pre-Algebra Fractions, Decimals & Percents series.
+### Fraction → Decimal
+Divide numerator by denominator: $\frac{3}{4} = 3 \div 4 = 0.75$
 
-This lesson covers key concepts and practice problems.
-      `
+### Decimal → Fraction
+Use place value: $0.6 = \frac{6}{10} = \frac{3}{5}$
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p1-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$\frac{7}{8} = 7 \div 8 = 0.875$ ✅
+
+$0.35 = \frac{35}{100} = \frac{7}{20}$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes converting fractions & decimals?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Converting Fractions & Decimals is a core concept in Pre-Algebra."
+                    "question": "$\\frac{3}{4}$ as a decimal?",
+                    "options": [
+                              "0.75",
+                              "0.34",
+                              "0.43",
+                              "7.5"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "3 ÷ 4 = 0.75."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-fractions-decimals-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Convert to Decimals** 🧮
 
-Answer the following about converting fractions & decimals.
-      `,
+1) $\frac{1}{4} = ?$
+
+2) $\frac{3}{5} = ?$
+
+3) $\frac{7}{8} = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of converting fractions & decimals."
+        boxes: 3,
+        correctAnswers: ["0.25","0.6","0.875"],
+        hint1: "1 ÷ 4.",
+        hint2: "3 ÷ 5.",
+        hint3: "7 ÷ 8.",
+        explanation: "1) 0.25. 2) 0.6. 3) 0.875."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about converting fractions & decimals.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Converting Fractions & Decimals is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Converting Fractions & Decimals builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To convert a fraction to a decimal","options":["Divide numerator by denominator","Multiply top and bottom","Add them together","Flip the fraction"]},{"label":"0.5 as a fraction is","options":["1/2","5/10","1/5","5/100"]}],
+        correctAnswers: ["Divide numerator by denominator","1/2"],
+        hint1: "Numerator ÷ denominator.",
+        hint2: "5/10 simplified.",
+        explanation: "Fraction→decimal: divide. 0.5 = 1/2."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about converting fractions & decimals.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Converting Fractions & Decimals | Core converting fractions & decimals principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Conversion | Answer |
+|---|-----------|--------|
+| 1 | 1/4 → decimal | 0.25 |
+| 2 | 3/5 → decimal | 0.6 |
+| 3 | 0.75 → fraction | 3/4 |
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in converting fractions & decimals?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$0.6$ as a fraction in lowest terms?",
+                    "options": [
+                              "3/5",
+                              "6/10",
+                              "6/100",
+                              "1/6"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "6/10 = 3/5."
           }
-        ]
+]
       }
     }
   ]

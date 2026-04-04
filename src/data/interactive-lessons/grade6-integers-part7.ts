@@ -9,10 +9,15 @@ export const g6IntegersPart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the Grade 6 Math Integers series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Concepts
+- Integers: positive, negative, zero
+- Absolute value: distance from zero
+- Add same signs: add, keep sign
+- Add different signs: subtract, keep larger sign
+- Subtract: add the opposite
+- Multiply/divide: same signs = +, different = −
+    
+    `
     },
     {
       id: 'grade6-integers-p7-worked',
@@ -20,39 +25,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$(-3)(4) + (-2) = -12 + (-2) = -14$ ✅
+    
+    `
     },
     {
       id: 'grade6-integers-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in Grade 6 Math."
+                    "question": "$(-5) + 8 = ?$",
+                    "options": [
+                              "3",
+                              "−13",
+                              "13",
+                              "−3"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Different signs: 8−5=3, positive wins."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-integers-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) $(-5) + 8 = ?$
+
+2) $6 - (-4) = ?$
+
+3) $(-3)(-7) = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["3","10","21"],
+        hint1: "Different signs: subtract.",
+        hint2: "Subtracting negative = adding.",
+        hint3: "Same signs (both negative) = positive.",
+        explanation: "1) 8−5=3. 2) 6+4=10. 3) 3×7=21, positive."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"$|-9|$ equals","options":["9","−9","0","81"]},{"label":"Same sign multiplication gives","options":["Positive","Negative","Zero","Undefined"]}],
+        correctAnswers: ["9","Positive"],
+        hint1: "Absolute value = distance from 0.",
+        hint2: "Both + or both − → ?",
+        explanation: "|-9|=9. Same signs → positive product."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Expression | Value |
+|---|-----------|-------|
+| 1 | $(-5) + 8$ | 3 |
+| 2 | $6 - (-4)$ | 10 |
+| 3 | $(-3)(-7)$ | 21 |
+    
+    `
     },
     {
       id: 'grade6-integers-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$6 - (-4) = ?$",
+                    "options": [
+                              "10",
+                              "2",
+                              "-10",
+                              "-2"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "6 + 4 = 10."
           }
-        ]
+]
       }
     }
   ]

@@ -9,10 +9,16 @@ export const apPrecalcTrigModelPart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the AP Precalculus Trigonometric Modeling series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Formulas
+- $y = A\sin(B(x-h)) + D$
+- Amplitude = $|A|$
+- Period = $2\pi / |B|$
+- Phase shift = $h$
+- Midline = $D$
+- Amplitude = (max−min)/2
+- Midline = (max+min)/2
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p7-worked',
@@ -20,39 +26,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$y = 3\sin(2x) + 1$**
+
+A=3, B=2, D=1. Amplitude=3, Period=π, Midline: y=1 ✅
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in AP Precalculus."
+                    "question": "Amplitude of 4cos(x)?",
+                    "options": [
+                              "4",
+                              "1",
+                              "8",
+                              "0"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "|A| = 4."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-trig-modeling-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) Amplitude of $4\cos(x)$?
+
+2) $\sin^{-1}(1)$ in degrees?
+
+3) Midline of $\sin(x) + 1$?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["4","90","1"],
+        hint1: "|A|.",
+        hint2: "sin(90°)=1.",
+        hint3: "D=1.",
+        explanation: "1) 4. 2) 90. 3) 1."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The period formula is","options":["2π/|B|","2π·B","A/B","B/2π"]},{"label":"Increasing |A| makes the graph","options":["Taller (vertically stretched)","Wider","Shorter","Narrower"]}],
+        correctAnswers: ["2π/|B|","Taller (vertically stretched)"],
+        hint1: "Divide 2π by |B|.",
+        hint2: "Amplitude = height.",
+        explanation: "Period = 2π/|B|. Larger |A| → taller graph."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Topic | Problem |
+|---|-------|---------|
+| 1 | Amplitude | $y = 4\cos(x)$ |
+| 2 | Period of $\sin(3x)$ | 2π/3 |
+| 3 | arcsin(1) | 90° |
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Period of sin(3x)?",
+                    "options": [
+                              "2π/3",
+                              "3π",
+                              "6π",
+                              "π/3"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "2π/3."
           }
-        ]
+]
       }
     }
   ]

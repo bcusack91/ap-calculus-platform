@@ -5,14 +5,15 @@ export const physCWorkEnergyPart2Data = {
       id: 'physicsc-work-energy-p2-intro',
       type: 'text' as const,
       content: `
-# 📊 Kinetic Energy Theorem
+# ⚛️ Work-Kinetic Energy Theorem
 
 **Part 2 of 7 — Kinetic Energy Theorem**
 
-Welcome to **Kinetic Energy Theorem** — Part 2 of 7 in the AP Physics C Work-Energy Theorem series.
+$W_{\text{net}} = \Delta KE = \frac{1}{2}mv_f^2 - \frac{1}{2}mv_i^2$
 
-This lesson covers key concepts and practice problems.
-      `
+The net work done on an object equals its change in kinetic energy.
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p2-worked',
@@ -20,39 +21,55 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A 3 kg object accelerates from 2 m/s to 6 m/s. Find the net work done.**
+
+$W = \frac{1}{2}(3)(36) - \frac{1}{2}(3)(4) = 54 - 6 = 48$ J ✅
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes kinetic energy theorem?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Kinetic Energy Theorem is a core concept in AP Physics C."
+                    "question": "If the speed of an object doubles, its kinetic energy:",
+                    "options": [
+                              "Quadruples",
+                              "Doubles",
+                              "Halves",
+                              "Stays the same"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$KE = \\\\frac{1}{2}mv^2$. If $v \\\\to 2v$, $KE \\\\to 4 \\\\times \\\\frac{1}{2}mv^2$."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-work-energy-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Kinetic Energy Theorem** 🧮
 
-Answer the following about kinetic energy theorem.
-      `,
+1) A 3 kg object goes from 2 m/s to 6 m/s. Net work done (J)?
+
+2) $KE = \frac{1}{2}(4)(5^2) = ?$ J
+
+3) A 2 kg object has $KE = 25$ J. What is its speed (m/s)? (Hint: $v = \sqrt{2 \cdot KE/m}$)
+
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of kinetic energy theorem."
+        boxes: 3,
+        correctAnswers: ["48","50","25"],
+        hint1: "$W = \\frac{1}{2}m(v_f^2 - v_i^2) = \\frac{1}{2}(3)(36-4)$.",
+        hint2: "$\\frac{1}{2}(4)(25)$.",
+        hint3: "$v = \\sqrt{2(25)/2} = \\sqrt{25}$.",
+        explanation: "1) $\\frac{1}{2}(3)(32) = 48$ J. 2) $\\frac{1}{2}(4)(25) = 50$ J. 3) $v = \\sqrt{50/2} = \\sqrt{25} = 5$ m/s."
       }
     },
     {
@@ -60,22 +77,13 @@ Answer the following about kinetic energy theorem.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Kinetic Energy Theorem is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Kinetic Energy Theorem builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The work-energy theorem relates net work to change in","options":["Kinetic energy","Potential energy","Temperature","Momentum"]},{"label":"Kinetic energy is always","options":["Non-negative","Negative","Zero","Imaginary"]}],
+        correctAnswers: ["Kinetic energy","Non-negative"],
+        hint1: "The theorem has \"kinetic energy\" in its name.",
+        hint2: "$KE = \\frac{1}{2}mv^2$. Can $m$ or $v^2$ be negative?",
+        explanation: "Work-energy theorem: $W = \\Delta KE$. Since $m > 0$ and $v^2 \\geq 0$, KE is always non-negative."
       }
     },
     {
@@ -84,28 +92,34 @@ Answer the following about kinetic energy theorem.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Kinetic Energy Theorem | Core kinetic energy theorem principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Concept | Key Formula |
+|---|---------|-------------|
+| 1 | Kinetic energy | $KE = \frac{1}{2}mv^2$ |
+| 2 | Work-energy theorem | $W_{net} = \Delta KE$ |
+| 3 | Stopping distance | $W_{friction} = -\Delta KE$ |
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in kinetic energy theorem?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "An object slows from 10 m/s to 0. The net work done on it is:",
+                    "options": [
+                              "Negative",
+                              "Positive",
+                              "Zero",
+                              "Cannot determine"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$W = \\\\Delta KE = 0 - \\\\frac{1}{2}mv^2 < 0$. Negative work slows objects."
           }
-        ]
+]
       }
     }
   ]

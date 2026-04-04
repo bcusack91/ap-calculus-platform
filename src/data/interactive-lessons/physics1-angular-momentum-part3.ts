@@ -126,7 +126,7 @@ This is analogous to $P = Fv$ in linear motion.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['200', '0.48', '200', '0.480'],
+        correctAnswers: ['200', '0.48', '200'],
         hint1: '$KE = \\frac{1}{2}I\\omega^2 = \\frac{1}{2}(4)(100)$',
         hint2: '$I = \\frac{2}{5}MR^2 = \\frac{2}{5}(3)(0.01) = 0.012$ kg·m². $KE = \\frac{1}{2}(0.012)(400)$',
         hint3: '$W = \\tau\\theta = (8)(25)$',

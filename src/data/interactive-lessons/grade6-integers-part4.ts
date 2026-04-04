@@ -5,14 +5,18 @@ export const g6IntegersPart4Data = {
       id: 'grade6-integers-p4-intro',
       type: 'text' as const,
       content: `
-# 📈 Subtracting Integers
+# ➕➖ Subtracting Integers
 
 **Part 4 of 7 — Subtracting Integers**
 
-Welcome to **Subtracting Integers** — Part 4 of 7 in the Grade 6 Math Integers series.
+### Rule: Add the Opposite
+$a - b = a + (-b)$
 
-This lesson covers key concepts and practice problems.
-      `
+Examples:
+- $5 - 8 = 5 + (-8) = -3$
+- $(-3) - (-7) = (-3) + 7 = 4$
+    
+    `
     },
     {
       id: 'grade6-integers-p4-worked',
@@ -20,39 +24,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$(-4) - (-9) = (-4) + 9 = 5$ ✅
+    
+    `
     },
     {
       id: 'grade6-integers-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes subtracting integers?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Subtracting Integers is a core concept in Grade 6 Math."
+                    "question": "$3 - 10 = ?$",
+                    "options": [
+                              "$-7$",
+                              "$7$",
+                              "$13$",
+                              "$-13$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$3 + (-10) = -7$."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-integers-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Subtract Integers** 🧮
 
-Answer the following about subtracting integers.
-      `,
+1) $7 - 12 = ?$
+
+2) $(-5) - 3 = ?$
+
+3) $(-6) - (-4) = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of subtracting integers."
+        boxes: 3,
+        correctAnswers: ["-5","-8","-2"],
+        hint1: "Rewrite as 7 + (−12).",
+        hint2: "Rewrite as (−5) + (−3).",
+        hint3: "Rewrite as (−6) + 4.",
+        explanation: "1) 7+(−12)=−5. 2) (−5)+(−3)=−8. 3) (−6)+4=−2."
       }
     },
     {
@@ -60,22 +77,13 @@ Answer the following about subtracting integers.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Subtracting Integers is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Subtracting Integers builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Subtracting a negative is the same as","options":["Adding","Subtracting more","Multiplying","Dividing"]},{"label":"$0 - (-5) =$","options":["5","−5","0","−10"]}],
+        correctAnswers: ["Adding","5"],
+        hint1: "Two negatives become positive.",
+        hint2: "0 + 5 = ?",
+        explanation: "Subtracting negative = adding. 0−(−5)=5."
       }
     },
     {
@@ -84,28 +92,34 @@ Answer the following about subtracting integers.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Subtracting Integers | Core subtracting integers principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Rewrite |
+|---|---------|---------|
+| 1 | $7 - 12$ | $7 + (-12)$ |
+| 2 | $(-5) - 3$ | $(-5) + (-3)$ |
+| 3 | $(-6) - (-4)$ | $(-6) + 4$ |
+    
+    `
     },
     {
       id: 'grade6-integers-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in subtracting integers?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$(-8) - (-3) = ?$",
+                    "options": [
+                              "$-5$",
+                              "$-11$",
+                              "$5$",
+                              "$11$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$(-8) + 3 = -5$."
           }
-        ]
+]
       }
     }
   ]

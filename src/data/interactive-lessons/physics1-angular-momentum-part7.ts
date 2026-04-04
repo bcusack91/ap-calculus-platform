@@ -94,7 +94,7 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20', '18', '0.86', '0.860'],
+        correctAnswers: ['20', '18', '0.86'],
         hint1: '$\\tau = \\Delta L/\\Delta t \\Rightarrow \\Delta L = \\tau \\cdot t = 4(5)$',
         hint2: 'For a hoop rolling: $KE = mv^2$ (translational + rotational both equal $\\frac{1}{2}mv^2$)',
         hint3: '$L_i = mvR = 30(4)(2) = 240$. $I_f = \\frac{1}{2}(100)(4) + 30(4) = 200 + 120 = 320$. $\\omega_f = L/I_f$.',

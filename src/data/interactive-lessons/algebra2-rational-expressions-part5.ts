@@ -9,10 +9,11 @@ export const alg2RationalPart5Data = {
 
 **Part 5 of 7 — Rational Equations**
 
-Welcome to **Rational Equations** — Part 5 of 7 in the Algebra 2 Rational Expressions series.
+To solve: multiply both sides by the **LCD** to clear fractions.
 
-This lesson covers key concepts and practice problems.
-      `
+**Always check for extraneous solutions** (values making denominator = 0).
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p5-worked',
@@ -20,39 +21,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$\frac{x}{3} = 4$
+
+Multiply by 3: $x = 12$ ✅
+
+Check: $\frac{12}{3} = 4$ ✓
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes rational equations?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Rational Equations is a core concept in Algebra 2."
+                    "question": "$\\frac{x}{5} = 3$. $x = ?$",
+                    "options": [
+                              "15",
+                              "3/5",
+                              "8",
+                              "5/3"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "x = 3 × 5 = 15."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-rational-expressions-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Solve Rational Equations** 🧮
 
-Answer the following about rational equations.
-      `,
+1) $\frac{x}{5} = 3$. $x = ?$
+
+2) $\frac{2}{x} = 1$. $x = ?$
+
+3) $\frac{x+1}{2} = 4$. $x = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of rational equations."
+        boxes: 3,
+        correctAnswers: ["15","2","7"],
+        hint1: "Multiply both sides by 5.",
+        hint2: "Multiply both sides by x.",
+        hint3: "Multiply by 2: x+1=8.",
+        explanation: "1) 15. 2) 2. 3) 7."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about rational equations.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Rational Equations is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Rational Equations builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To solve a rational equation","options":["Multiply both sides by the LCD","Cross out fractions","Add all denominators","Set everything equal to 1"]},{"label":"After solving, always check for","options":["Extraneous solutions","Extra variables","Perfect answers","Round numbers"]}],
+        correctAnswers: ["Multiply both sides by the LCD","Extraneous solutions"],
+        hint1: "Clear fractions with LCD.",
+        hint2: "Values that make denominator 0.",
+        explanation: "Clear fractions with LCD. Check for extraneous solutions."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about rational equations.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
+| # | Equation | Solution |
 |---|---------|----------|
-| 1 | Rational Equations | Core rational equations principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| 1 | $\frac{x}{5} = 3$ | $x = 15$ |
+| 2 | $\frac{2}{x} = 1$ | $x = 2$ |
+| 3 | $\frac{x+1}{2} = 4$ | $x = 7$ |
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in rational equations?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Extraneous solutions are:",
+                    "options": [
+                              "Solutions that make the denominator zero",
+                              "Extra correct answers",
+                              "The best answers",
+                              "Never possible"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "They appear as solutions but create division by zero."
           }
-        ]
+]
       }
     }
   ]

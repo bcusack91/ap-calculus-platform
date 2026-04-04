@@ -144,7 +144,7 @@ A 0.60 kg ball is dropped from a height and hits the floor at 8.0 m/s (downward)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.4', '560', '95.2', '8.40', '95.20'],
+        correctAnswers: ['8.4', '560', '95.2'],
         hint1: '$J = m(v_f - v_i) = 0.60(+6.0 - (-8.0))$',
         hint2: '$F = J/\\Delta t = 8.4/0.015$',
         hint3: '$mg = (0.60)(9.8) = 5.88$ N. Ratio = $560/5.88$',

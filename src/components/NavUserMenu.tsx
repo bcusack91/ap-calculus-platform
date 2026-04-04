@@ -82,12 +82,6 @@ export function NavUserMenu({ session, avatarData, isPremium, isTeacher, isAdmin
 
           <div className="my-1 border-t border-gray-100 dark:border-gray-700" />
 
-          {!isPremium && (
-            <Link href="/pricing" className="flex items-center gap-2 px-4 py-2 text-sm text-amber-600 dark:text-amber-400 font-semibold hover:bg-amber-50 dark:hover:bg-amber-900/30 transition-colors" onClick={onClose}>
-              💎 Upgrade to Premium
-            </Link>
-          )}
-
           <button
             onClick={() => { onClose(); signOut() }}
             className="flex items-center gap-2 w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"

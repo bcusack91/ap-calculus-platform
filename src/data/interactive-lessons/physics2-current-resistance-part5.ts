@@ -146,7 +146,7 @@ Use an electricity rate of $0.12/kWh.
       `,
       exercise: {
         boxes: 5,
-        correctAnswers: ['72', '8.64', '3.75', '3.06', '134', '8.640', '3.750', '3.060'],
+        correctAnswers: ['72', '8.64', '3.75', '3.06', '134'],
         hint1: '$E = Pt = 0.1 \\text{ kW} \\times 24 \\times 30$.',
         hint2: 'Cost = $72 \\times 0.12$.',
         hint3: '$E = 5.0 \\text{ kW} \\times 0.75 \\text{ h}$.',

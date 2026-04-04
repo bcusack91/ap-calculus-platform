@@ -9,10 +9,12 @@ export const g7GeometryPart1Data = {
 
 **Part 1 of 7 — Angle Relationships**
 
-Welcome to **Angle Relationships** — Part 1 of 7 in the Grade 7 Math Geometry series.
-
-This lesson covers key concepts and practice problems.
-      `
+- **Complementary**: sum to 90°
+- **Supplementary**: sum to 180°
+- **Vertical angles**: equal
+- **Adjacent angles**: share a side
+    
+    `
     },
     {
       id: 'grade7-geometry-p1-worked',
@@ -20,39 +22,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+Two supplementary angles: one is 65°. Other = $180° - 65° = 115°$ ✅
+    
+    `
     },
     {
       id: 'grade7-geometry-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes angle relationships?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Angle Relationships is a core concept in Grade 7 Math."
+                    "question": "Complement of 35°?",
+                    "options": [
+                              "55°",
+                              "145°",
+                              "35°",
+                              "90°"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "90° − 35° = 55°."
           }
-        ]
+]
       }
     },
     {
       id: 'grade7-geometry-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Angle Relationships** 🧮
 
-Answer the following about angle relationships.
-      `,
+1) Complement of 40°?
+
+2) Complement of 20°?
+
+3) Supplement of 65°?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of angle relationships."
+        boxes: 3,
+        correctAnswers: ["50","70","115"],
+        hint1: "90° − 40°.",
+        hint2: "90° − 20°.",
+        hint3: "180° − 65°.",
+        explanation: "1) 50. 2) 70. 3) 115."
       }
     },
     {
@@ -60,22 +75,13 @@ Answer the following about angle relationships.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Angle Relationships is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Angle Relationships builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Complementary angles sum to","options":["90°","180°","360°","45°"]},{"label":"Supplementary angles sum to","options":["180°","90°","360°","270°"]}],
+        correctAnswers: ["90°","180°"],
+        hint1: "Complementary = right angle.",
+        hint2: "Supplementary = straight line.",
+        explanation: "Complementary: 90°. Supplementary: 180°."
       }
     },
     {
@@ -84,28 +90,34 @@ Answer the following about angle relationships.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Angle Relationships | Core angle relationships principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Concept | Example |
+|---|---------|--------|
+| 1 | Complementary | 40° + ? = 90° |
+| 2 | Supplementary | 110° + ? = 180° |
+| 3 | Vertical angles | Equal to each other |
+    
+    `
     },
     {
       id: 'grade7-geometry-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in angle relationships?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Vertical angles are always:",
+                    "options": [
+                              "Equal",
+                              "Supplementary",
+                              "Complementary",
+                              "Adjacent"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Vertical angles are congruent."
           }
-        ]
+]
       }
     }
   ]

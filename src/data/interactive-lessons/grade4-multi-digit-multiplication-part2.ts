@@ -5,14 +5,17 @@ export const g4MultiDigitMultPart2Data = {
       id: 'grade4-multi-digit-multiplication-p2-intro',
       type: 'text' as const,
       content: `
-# 📊 Area Model
+# ✖️ Area Model
 
 **Part 2 of 7 — Area Model**
 
-Welcome to **Area Model** — Part 2 of 7 in the Grade 4 Math Multi-Digit Multiplication series.
+Break numbers into expanded form, multiply each part, and add:
 
-This lesson covers key concepts and practice problems.
-      `
+$23 \times 17 = (20+3)(10+7)$
+$= 20(10) + 20(7) + 3(10) + 3(7)$
+$= 200 + 140 + 30 + 21 = 391$
+    
+    `
     },
     {
       id: 'grade4-multi-digit-multiplication-p2-worked',
@@ -20,39 +23,59 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$34 \times 12$** using the area model:
+
+| × | 10 | 2 |
+|---|-----|-----|
+| 30 | 300 | 60 |
+| 4 | 40 | 8 |
+
+$300 + 60 + 40 + 8 = 408$ ✅
+    
+    `
     },
     {
       id: 'grade4-multi-digit-multiplication-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes area model?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Area Model is a core concept in Grade 4 Math."
+                    "question": "In the area model for $26 \\\\times 13$, which is NOT a partial product?",
+                    "options": [
+                              "$26 \\\\times 13 = 338$",
+                              "$20 \\\\times 10 = 200$",
+                              "$6 \\\\times 3 = 18$",
+                              "$20 \\\\times 3 = 60$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "That is the final answer, not a partial product. Partial products: 200, 60, 60, 18."
           }
-        ]
+]
       }
     },
     {
       id: 'grade4-multi-digit-multiplication-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Area Model Practice** 🧮
 
-Answer the following about area model.
-      `,
+1) $23 \times 17 = ?$
+
+2) $34 \times 12 = ?$
+
+3) $25 \times 31 = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of area model."
+        boxes: 3,
+        correctAnswers: ["391","408","775"],
+        hint1: "20×17 + 3×17 = 340 + 51.",
+        hint2: "30×12 + 4×12 = 360 + 48.",
+        hint3: "25×30 + 25×1 = 750 + 25.",
+        explanation: "1) 340+51=391. 2) 360+48=408. 3) 750+25=775."
       }
     },
     {
@@ -60,22 +83,13 @@ Answer the following about area model.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Area Model is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Area Model builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"In the area model, you break numbers into","options":["Expanded form (tens and ones)","Prime factors","Even and odd parts","Halves"]},{"label":"After finding all partial products, you","options":["Add them together","Multiply them","Subtract them","Take the largest"]}],
+        correctAnswers: ["Expanded form (tens and ones)","Add them together"],
+        hint1: "Think place value.",
+        hint2: "Partial products combine by...",
+        explanation: "Break into tens/ones (expanded form). Add all partial products for the final answer."
       }
     },
     {
@@ -84,28 +98,34 @@ Answer the following about area model.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Area Model | Core area model principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Break Down |
+|---|---------|------------|
+| 1 | $15 \times 13$ | $(10+5)(10+3)$ |
+| 2 | $22 \times 14$ | $(20+2)(10+4)$ |
+| 3 | $31 \times 25$ | $(30+1)(20+5)$ |
+    
+    `
     },
     {
       id: 'grade4-multi-digit-multiplication-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in area model?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "The area model works because of the _____ property.",
+                    "options": [
+                              "Distributive",
+                              "Commutative",
+                              "Associative",
+                              "Identity"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "The area model uses the distributive property: a(b+c) = ab + ac."
           }
-        ]
+]
       }
     }
   ]

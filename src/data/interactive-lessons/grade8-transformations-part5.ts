@@ -9,10 +9,13 @@ export const g8TransformationsPart5Data = {
 
 **Part 5 of 7 — Sequences of Transformations**
 
-Welcome to **Sequences of Transformations** — Part 5 of 7 in the Grade 8 Math Transformations series.
+Multiple transformations can be combined:
+1. Apply the first transformation
+2. Apply the second to the **result**
 
-This lesson covers key concepts and practice problems.
-      `
+Order matters! Different orders can give different results.
+    
+    `
     },
     {
       id: 'grade8-transformations-p5-worked',
@@ -20,39 +23,58 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Translate (2,3) right 3 then reflect over x-axis.**
+
+Step 1: $(2+3, 3) = (5, 3)$
+Step 2: $(5, -3)$ ✅
+    
+    `
     },
     {
       id: 'grade8-transformations-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes sequences of transformations?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Sequences of Transformations is a core concept in Grade 8 Math."
+                    "question": "(1,2): translate right 4, reflect over x-axis:",
+                    "options": [
+                              "(5,−2)",
+                              "(5,2)",
+                              "(−1,−2)",
+                              "(1,−2)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(1+4,2)=(5,2) then (5,−2)."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-transformations-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Sequences** 🧮
 
-Answer the following about sequences of transformations.
-      `,
+(1, 2): Translate right 4, then reflect over x-axis.
+
+1) After translation, x = ?
+
+2) After reflection, y = ?
+
+(3, 1): Reflect over y-axis.
+3) New x = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of sequences of transformations."
+        boxes: 3,
+        correctAnswers: ["5","-2","-3"],
+        hint1: "1 + 4.",
+        hint2: "Reflect (5,2): y flips.",
+        hint3: "y-axis: x → −x.",
+        explanation: "1) 5. 2) −2. 3) −3."
       }
     },
     {
@@ -60,22 +82,13 @@ Answer the following about sequences of transformations.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Sequences of Transformations is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Sequences of Transformations builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A sequence of rigid motions produces","options":["A congruent figure","A similar figure","A different shape","Nothing"]},{"label":"The order of transformations","options":["Usually matters","Never matters","Is always the same","Can be skipped"]}],
+        correctAnswers: ["A congruent figure","Usually matters"],
+        hint1: "Translations, reflections, rotations are rigid.",
+        hint2: "Try switching order — different result.",
+        explanation: "Rigid motions → congruent. Order matters."
       }
     },
     {
@@ -84,28 +97,34 @@ Answer the following about sequences of transformations.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Sequences of Transformations | Core sequences of transformations principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Steps | Final Image |
+|---|-------|------------|
+| 1 | (1,2): right 4, reflect x-axis | (5,−2) |
+| 2 | (3,1): reflect y-axis, up 5 | (−3,6) |
+| 3 | (2,4): dilate k=2, left 1 | (3,8) |
+    
+    `
     },
     {
       id: 'grade8-transformations-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in sequences of transformations?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "In a sequence of transformations, order:",
+                    "options": [
+                              "Usually matters",
+                              "Never matters",
+                              "Always gives same result",
+                              "Is irrelevant"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Different order → often different result."
           }
-        ]
+]
       }
     }
   ]

@@ -5,14 +5,18 @@ export const physCEMCoulombPart7Data = {
       id: 'physicsc-em-coulombs-law-p7-intro',
       type: 'text' as const,
       content: `
-# 🏆 Review & Applications
+# ⚡ Review & Applications
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the AP Physics C: E&M Coulomb's Law series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Formulas
+- $F = kq_1q_2/r^2$ (Coulomb's Law)
+- $\vec{E} = k q/r^2 \hat{r}$ (Electric field)
+- $\vec{F} = q\vec{E}$ (Force on charge in field)
+- Superposition: $\vec{F}_{net} = \sum \vec{F}_i$
+- $e = 1.6 \times 10^{-19}$ C, $k = 9 \times 10^9$ N·m²/C²
+    
+    `
     },
     {
       id: 'physicsc-em-coulombs-law-p7-worked',
@@ -20,39 +24,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**An electron is in a uniform field $E = 100$ N/C. Find its acceleration.**
+
+$F = eE = (1.6 \times 10^{-19})(100) = 1.6 \times 10^{-17}$ N
+
+$a = F/m = 1.6 \times 10^{-17} / 9.1 \times 10^{-31} \approx 1.76 \times 10^{13}$ m/s² ✅
+    
+    `
     },
     {
       id: 'physicsc-em-coulombs-law-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in AP Physics C: E&M."
+                    "question": "The electric field inside a uniformly charged conducting sphere is:",
+                    "options": [
+                              "Zero",
+                              "$kQ/r^2$",
+                              "$kQ/R^2$",
+                              "Infinite"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Inside a conductor, charges reside on the surface and $E = 0$ inside."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-em-coulombs-law-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review & Applications** 🧮
 
-Answer the following about review & applications.
-      `,
+1) Doubling both charges in Coulomb's law increases the force by a factor of ___
+
+2) A charge of 2 C in a field of 5 N/C. Force (N)?
+
+3) $k \approx$ ___ $\times 10^9$ N·m²/C²
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["4","10","9"],
+        hint1: "$F \\propto q_1 q_2$.",
+        hint2: "$F = qE$.",
+        hint3: "$k \\approx 8.99 \\times 10^9$, round to nearest integer.",
+        explanation: "1) Factor = $2 \\times 2 = 4$. 2) $F = 2(5) = 10$ N. 3) $k \\approx 9 \\times 10^9$."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The gravitational and Coulomb forces both obey","options":["Inverse-square law","Inverse-cube law","Linear law","Hooke's law"]},{"label":"Electric field lines are tangent to","options":["The direction of the electric field","The direction of the magnetic field","The velocity of charges","The acceleration of charges"]}],
+        correctAnswers: ["Inverse-square law","The direction of the electric field"],
+        hint1: "Both $\\propto 1/r^2$.",
+        hint2: "Field lines show the direction of the field at each point.",
+        explanation: "Both gravity and Coulomb force follow $1/r^2$. Field lines are tangent to $\\vec{E}$ at each point."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Topic | Key Fact |
+|---|-------|----------|
+| 1 | Coulomb's law | Inverse-square law |
+| 2 | Electric field | $E = F/q$ |
+| 3 | Superposition | Vector sums |
+    
+    `
     },
     {
       id: 'physicsc-em-coulombs-law-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Coulomb's constant $k$ equals:",
+                    "options": [
+                              "$1/(4\\\\pi\\\\epsilon_0)$",
+                              "$4\\\\pi\\\\epsilon_0$",
+                              "$\\\\epsilon_0$",
+                              "$1/\\\\epsilon_0$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$k = 1/(4\\\\pi\\\\epsilon_0) \\\\approx 9 \\\\times 10^9$ N·m²/C²."
           }
-        ]
+]
       }
     }
   ]

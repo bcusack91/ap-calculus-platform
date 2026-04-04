@@ -9,10 +9,14 @@ export const preAlgVariablesPart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the Pre-Algebra Introduction to Variables series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Concepts
+- Variables represent unknowns
+- Translate words → expressions/equations
+- Evaluate by substituting
+- Like terms: same variable & power
+- Solve: use inverse operations
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p7-worked',
@@ -20,39 +24,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$4x - 3 = 21$
+$4x = 24$
+$x = 6$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in Pre-Algebra."
+                    "question": "$3x + 2$ when $x=4$?",
+                    "options": [
+                              "14",
+                              "34",
+                              "12",
+                              "9"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "3(4)+2 = 14."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-intro-variables-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) $3x + 2$ when $x = 4$?
+
+2) $6y + 2y = ?y$ (coefficient)
+
+3) $5x = 35$. $x = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["14","8","7"],
+        hint1: "3(4) + 2.",
+        hint2: "6 + 2.",
+        hint3: "35 ÷ 5.",
+        explanation: "1) 14. 2) 8. 3) 7."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"An expression does NOT have","options":["An equal sign","Variables","Numbers","Operations"]},{"label":"An equation HAS","options":["An equal sign","Only one term","No variables","No numbers"]}],
+        correctAnswers: ["An equal sign","An equal sign"],
+        hint1: "Expressions vs equations.",
+        hint2: "Equals sign is the key.",
+        explanation: "Expressions: no =. Equations: have =."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Type | Problem |
+|---|------|---------|
+| 1 | Evaluate | 3x+2, x=4 |
+| 2 | Combine | 6y+2y |
+| 3 | Solve | 5x=35 |
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$5x = 35$. $x = ?$",
+                    "options": [
+                              "7",
+                              "30",
+                              "175",
+                              "40"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "35 ÷ 5 = 7."
           }
-        ]
+]
       }
     }
   ]

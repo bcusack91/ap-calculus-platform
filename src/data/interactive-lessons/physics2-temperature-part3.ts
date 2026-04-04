@@ -141,7 +141,7 @@ Use $\\alpha_{\\text{steel}} = 12 \\times 10^{-6}$ /°C and $\\alpha_{\\text{Al}
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7.2', '6.9', '10.5', '7.20', '6.90', '10.50'],
+        correctAnswers: ['7.2', '6.9', '10.5'],
         hint1: '$\\Delta L = \\alpha L_0 \\Delta T = (12 \\times 10^{-6})(200)(30)$. Convert m to cm.',
         hint2: '$\\Delta L = (23 \\times 10^{-6})(3.0)(100)$. Convert m to mm.',
         hint3: '$\\Delta L = (12 \\times 10^{-6})(25.0)(35)$. Convert m to mm.',

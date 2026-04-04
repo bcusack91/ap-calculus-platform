@@ -120,7 +120,7 @@ A grinding wheel starts from rest and reaches $50$ rad/s in $10$ s.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['24', '8', '38.2', '38.20'],
+        correctAnswers: ['24', '8', '38.2'],
         hint1: '$\\theta = \\omega_0 t + \\frac{1}{2}\\alpha t^2 = 0 + \\frac{1}{2}(3)(16)$',
         hint2: '$\\omega = \\omega_0 + \\alpha t$: $0 = 40 + (-5)t$',
         hint3: '$\\theta = \\frac{1}{2}(\\omega_0 + \\omega)t = \\frac{1}{2}(10 + 50)(8) = 240$ rad. Revolutions $= 240/(2\\pi)$',

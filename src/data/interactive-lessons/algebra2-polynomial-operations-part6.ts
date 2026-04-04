@@ -9,10 +9,12 @@ export const alg2PolynomialsPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Algebra 2 Polynomial Operations series.
-
-This lesson covers key concepts and practice problems.
-      `
+Solve polynomial problems:
+- Model with polynomial expressions
+- Factor to find zeros
+- Use the remainder theorem to test factors
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p6-worked',
@@ -20,39 +22,58 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Rectangle: length $(x+5)$, width $(x+2)$. Area?**
+
+$A = (x+5)(x+2) = x^2 + 7x + 10$ ✅
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Algebra 2."
+                    "question": "Area of rectangle $(x+3)$ by $(x+4)$?",
+                    "options": [
+                              "$x^2+7x+12$",
+                              "$2x+7$",
+                              "$x^2+12$",
+                              "$4x+12$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "FOIL: x²+4x+3x+12."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-polynomial-operations-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Applications** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+$(x+3)(x+4) = x^2 + ?x + ?$
+
+1) Coefficient of x?
+
+2) Constant?
+
+$x^2 - 1 = (x+1)(x-?)$
+
+3) The number?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["7","12","1"],
+        hint1: "3+4.",
+        hint2: "3×4.",
+        hint3: "Difference of squares: 1²=1.",
+        explanation: "1) 7. 2) 12. 3) 1."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The zeros of a polynomial are where","options":["$p(x) = 0$","$p(x)$ is maximum","x = 0","The graph is steep"]},{"label":"Area of a rectangle is","options":["Length × Width","Length + Width","2(L+W)","L²"]}],
+        correctAnswers: ["$p(x) = 0$","Length × Width"],
+        hint1: "x-intercepts.",
+        hint2: "Area = LW.",
+        explanation: "Zeros: p(x)=0. Area = L×W."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Expression |
+|---|---------|--------|
+| 1 | Area: $(x+3)(x+4)$ | $x^2+7x+12$ |
+| 2 | Volume: $x(x+1)(x+2)$ | $x^3+3x^2+2x$ |
+| 3 | Factor $x^2-1$ | $(x+1)(x-1)$ |
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$x^2-1$ factors as:",
+                    "options": [
+                              "$(x+1)(x-1)$",
+                              "$(x-1)^2$",
+                              "$(x+1)^2$",
+                              "Cannot factor"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Difference of squares."
           }
-        ]
+]
       }
     }
   ]

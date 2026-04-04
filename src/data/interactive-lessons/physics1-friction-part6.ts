@@ -137,7 +137,7 @@ $$F = 66.4 \\text{ N}$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5', '0.3', '30', '0.30'],
+        correctAnswers: ['5', '0.3', '30'],
         hint1: '$f_k = 0.25 \\times 80 = 20$ N. $a = (60 - 20)/8$.',
         hint2: '$a = \\Delta v/\\Delta t = 12/4 = 3$ m/s². $\\mu_k = a/g = 3/10$.',
         hint3: '$\\mu_s = \\tan\\theta_c$, so $\\theta_c = \\tan^{-1}(\\mu_s)$.',

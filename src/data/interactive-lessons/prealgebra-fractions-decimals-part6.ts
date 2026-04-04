@@ -9,10 +9,11 @@ export const preAlgFractionsPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Pre-Algebra Fractions, Decimals & Percents series.
-
-This lesson covers key concepts and practice problems.
-      `
+Solve problems involving fractions, decimals, and percents:
+- Identify what form the answer should be in
+- Choose the most efficient conversion
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p6-worked',
@@ -20,39 +21,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Shirt: \\$40, 25% off. Sale price?**
+
+Discount: $0.25 \\times 40 = 10$. Sale price: $40 - 10 = \\$30$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Pre-Algebra."
+                    "question": "$60 shirt, 20% off. Sale price?",
+                    "options": [
+                              "$48",
+                              "$40",
+                              "$12",
+                              "$80"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "0.20 × 60 = 12. 60 − 12 = $48."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-fractions-decimals-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Word Problems** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) \\$60 shirt, 20% off. Sale price?
+
+2) 15% tip on \\$80?
+
+3) 42 out of 50. Percent?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["48","12","84"],
+        hint1: "60 − 0.20(60).",
+        hint2: "0.15 × 80.",
+        hint3: "42÷50 × 100.",
+        explanation: "1) 60−12=48. 2) 12. 3) 84."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A 25% discount means you pay","options":["75% of the price","25% of the price","The full price","125% of the price"]},{"label":"To find the sale price after a discount","options":["Subtract the discount from original price","Add the discount","Multiply by the discount","Divide by the discount"]}],
+        correctAnswers: ["75% of the price","Subtract the discount from original price"],
+        hint1: "100% − 25% = 75%.",
+        hint2: "Original − discount amount.",
+        explanation: "25% off → pay 75%. Sale = original − discount."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Answer |
+|---|---------|--------|
+| 1 | \\$60, 20% off | \\$48 |
+| 2 | Tip: 15% of \\$80 | \\$12 |
+| 3 | Score: 42/50 as % | 84% |
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "15% tip on $80?",
+                    "options": [
+                              "$12",
+                              "$15",
+                              "$80",
+                              "$95"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "0.15 × 80 = $12."
           }
-        ]
+]
       }
     }
   ]

@@ -9,10 +9,13 @@ export const geoTriCongruencePart5Data = {
 
 **Part 5 of 7 — CPCTC Proofs**
 
-Welcome to **CPCTC Proofs** — Part 5 of 7 in the Geometry Triangle Congruence series.
+**CPCTC**: Corresponding Parts of Congruent Triangles are Congruent.
 
-This lesson covers key concepts and practice problems.
-      `
+Steps:
+1. Prove triangles are congruent (SSS, SAS, ASA, AAS)
+2. Conclude that corresponding parts are equal (CPCTC)
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p5-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**If △ABC ≅ △DEF by SAS, then AB = DE, BC = EF, AC = DF, ∠A = ∠D, ∠B = ∠E, ∠C = ∠F.** ✅
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes cpctc proofs?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "CPCTC Proofs is a core concept in Geometry."
+                    "question": "CPCTC can be used AFTER:",
+                    "options": [
+                              "Proving triangles are congruent",
+                              "Finding the area",
+                              "Measuring angles",
+                              "Graphing"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Must prove congruence first."
           }
-        ]
+]
       }
     },
     {
       id: 'geometry-triangle-congruence-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**CPCTC** 🧮
 
-Answer the following about cpctc proofs.
-      `,
+△ABC ≅ △DEF where AB=5, BC=7, ∠C=60°.
+
+1) DE = ?
+
+2) EF = ?
+
+3) ∠F = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of cpctc proofs."
+        boxes: 3,
+        correctAnswers: ["5","7","60"],
+        hint1: "AB corresponds to DE.",
+        hint2: "BC corresponds to EF.",
+        hint3: "∠C corresponds to ∠F.",
+        explanation: "1) DE=AB=5. 2) EF=BC=7. 3) ∠F=∠C=60°."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about cpctc proofs.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "CPCTC Proofs is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "CPCTC Proofs builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"CPCTC stands for","options":["Corresponding Parts of Congruent Triangles are Congruent","Congruent Parts Create Two Congruences","Common Properties of Congruent Triangles","Congruent Parts need Two Conditions"]},{"label":"CPCTC is used as a ____ in a proof","options":["Reason (after establishing congruence)","First step","Hypothesis","Definition"]}],
+        correctAnswers: ["Corresponding Parts of Congruent Triangles are Congruent","Reason (after establishing congruence)"],
+        hint1: "Full name.",
+        hint2: "Comes after proving ≅.",
+        explanation: "CPCTC: Corresponding Parts of Congruent Triangles are Congruent. Used as reason after proving congruence."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about cpctc proofs.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | CPCTC Proofs | Core cpctc proofs principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | If △ABC ≅ △DEF | Then |
+|---|----------------|------|
+| 1 | AB corresponds to | DE |
+| 2 | ∠A corresponds to | ∠D |
+| 3 | BC corresponds to | EF |
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in cpctc proofs?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "If △ABC ≅ △DEF, then ∠B = :",
+                    "options": [
+                              "∠E",
+                              "∠D",
+                              "∠F",
+                              "Cannot tell"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "B is the second letter → corresponds to E."
           }
-        ]
+]
       }
     }
   ]

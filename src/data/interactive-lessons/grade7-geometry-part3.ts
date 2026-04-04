@@ -5,14 +5,16 @@ export const g7GeometryPart3Data = {
       id: 'grade7-geometry-p3-intro',
       type: 'text' as const,
       content: `
-# 🔢 Circumference & Area of Circles
+# 📐 Circumference & Area of Circles
 
 **Part 3 of 7 — Circumference & Area of Circles**
 
-Welcome to **Circumference & Area of Circles** — Part 3 of 7 in the Grade 7 Math Geometry series.
+- **Circumference**: $C = 2\pi r = \pi d$
+- **Area**: $A = \pi r^2$
 
-This lesson covers key concepts and practice problems.
-      `
+$\pi \approx 3.14$
+    
+    `
     },
     {
       id: 'grade7-geometry-p3-worked',
@@ -20,39 +22,55 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Circle with radius 5 cm.**
+
+$C = 2\pi(5) = 10\pi \approx 31.4$ cm
+$A = \pi(5)^2 = 25\pi \approx 78.5$ cm² ✅
+    
+    `
     },
     {
       id: 'grade7-geometry-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes circumference & area of circles?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Circumference & Area of Circles is a core concept in Grade 7 Math."
+                    "question": "Circumference of circle with d = 10 cm? (Use π ≈ 3.14)",
+                    "options": [
+                              "31.4 cm",
+                              "62.8 cm",
+                              "78.5 cm",
+                              "15.7 cm"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "C = πd = 3.14(10) = 31.4 cm."
           }
-        ]
+]
       }
     },
     {
       id: 'grade7-geometry-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Circles** 🧮 (Use π ≈ 3.14)
 
-Answer the following about circumference & area of circles.
-      `,
+1) r = 7. Circumference?
+
+2) d = 10. Circumference?
+
+3) r = 4. Area?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of circumference & area of circles."
+        boxes: 3,
+        correctAnswers: ["43.96","31.4","50.24"],
+        hint1: "C = 2πr = 2(3.14)(7).",
+        hint2: "C = πd = 3.14(10).",
+        hint3: "A = πr² = 3.14(16).",
+        explanation: "1) 2(3.14)(7)=43.96. 2) 3.14(10)=31.4. 3) 3.14(16)=50.24."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about circumference & area of circles.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Circumference & Area of Circles is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Circumference & Area of Circles builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Circumference formula","options":["C = 2πr","C = πr²","C = 2r","C = πr"]},{"label":"Area of a circle formula","options":["A = πr²","A = 2πr","A = πd","A = r²"]}],
+        correctAnswers: ["C = 2πr","A = πr²"],
+        hint1: "Distance around.",
+        hint2: "Space inside.",
+        explanation: "C = 2πr (circumference). A = πr² (area)."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about circumference & area of circles.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Circumference & Area of Circles | Core circumference & area of circles principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Given | Find |
+|---|-------|------|
+| 1 | r = 7 | C |
+| 2 | d = 10 | C |
+| 3 | r = 4 | A |
+    
+    `
     },
     {
       id: 'grade7-geometry-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in circumference & area of circles?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Area of circle with r = 3? (Use π ≈ 3.14)",
+                    "options": [
+                              "28.26",
+                              "18.84",
+                              "9.42",
+                              "6.28"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "A = π(3)² = 9π ≈ 28.26."
           }
-        ]
+]
       }
     }
   ]

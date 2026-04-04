@@ -83,7 +83,7 @@ A 0.015 kg bullet at 600 m/s embeds in a 3.0 kg block at rest.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.0', '99.5', '1.50', '3.00', '99.50', '1.500', '1.5'],
+        correctAnswers: ['3.0', '99.5', '1.50'],
         hint1: '$v_f = (0.015)(600)/(3.015) \\approx 9/3.015$',
         hint2: '$KE_i = \\frac{1}{2}(0.015)(360000) = 2700$ J. $KE_f = \\frac{1}{2}(3.015)(9)$. Fraction lost = $(KE_i - KE_f)/KE_i$.',
         hint3: 'Use $v^2 = 2\\mu g d$. $d = v^2/(2 \\times 0.30 \\times 10)$.',

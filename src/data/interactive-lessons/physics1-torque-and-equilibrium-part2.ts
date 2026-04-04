@@ -130,7 +130,7 @@ Choose whichever is easiest for the given problem!
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.25', '20', '180', '0.250'],
+        correctAnswers: ['0.25', '20', '180'],
         hint1: '$r_{\\perp} = r\\sin\\theta = 0.5 \\sin 30°$',
         hint2: '$\\tau = r_{\\perp} \\times F = 0.25 \\times 80$',
         hint3: 'The force is horizontal, the pole is vertical → they are perpendicular. $\\tau = rF\\sin 90° = (3)(60)$',

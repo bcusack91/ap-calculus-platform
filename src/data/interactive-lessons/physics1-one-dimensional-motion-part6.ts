@@ -78,7 +78,7 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '2.7', '16', '2.70'],
+        correctAnswers: ['2', '2.7', '16'],
         hint1: '$v^2 = v_0^2 + 2a\\Delta x$: $30^2 = 10^2 + 2a(200)$',
         hint2: 'Taking downward as positive: $50 = 5t + \\frac{1}{2}(10)t^2$. Use the quadratic formula.',
         hint3: 'Police: $x_p = \\frac{1}{2}(3)t^2$. Speeder: $x_s = 24t$. Set $x_p = x_s$.',
@@ -130,7 +130,7 @@ This lesson is all about **practice**. We'll work through a variety of 1D kinema
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['50', '60.5', '60.50'],
+        correctAnswers: ['50', '60.5'],
         hint1: '$\\Delta x_A = \\frac{1}{2}(2)(100) = 100$ m, $\\Delta x_B = \\frac{1}{2}(3)(100) = 150$ m.',
         hint2: 'Dropped ball: $y_1 = 80 - \\frac{1}{2}(10)t^2$. Thrown ball: $y_2 = 20t - \\frac{1}{2}(10)t^2$. Set $y_1 = y_2$.',
         explanation: '1) $x_B - x_A = 150 - 100 = 50$ m. 2) $80 - 5t^2 = 20t - 5t^2$, so $80 = 20t$, $t = 4$ s. Height: $y = 80 - 5(16) = 80 - 80 = 0$... Wait, let me recalculate: $y_2 = 20(4) - 5(16) = 80 - 80 = 0$. Actually at $t = 4$, $y_1 = 80 - 5(16) = 0$. They meet at $t = 4$ s at the ground. Let me re-solve: Setting equal: $80 - 5t^2 = 20t - 5t^2 \\Rightarrow 80 = 20t \\Rightarrow t = 4$ s. $y = 80 - 5(16) = 0$ m. Hmm — they meet at ground level. Using $g = 9.8$: $80 - 4.9t^2 = 20t - 4.9t^2 \\Rightarrow t = 4$, $y = 80 - 4.9(16) = 80 - 78.4 = 1.6$ m. With $g = 10$, they meet at ground. Let me adjust: with the problem as stated using $g = 10$, $y = 80 - 5(16) = 0$ m. The answer is 0 m — they meet at ground level.'

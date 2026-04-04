@@ -9,10 +9,14 @@ export const g6ExpressionsPart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the Grade 6 Math Expressions & Equations series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Concepts
+- Write expressions from verbal phrases
+- Evaluate by substituting
+- Use properties (distributive, commutative, etc.)
+- Solve one-step equations with inverse operations
+- Inequalities: <, >, ≤, ≥
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p7-worked',
@@ -20,39 +24,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$3(x + 4) = 21$. Distribute: $3x + 12 = 21$. Subtract 12: $3x = 9$. Divide: $x = 3$ ✅
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in Grade 6 Math."
+                    "question": "$2x + 5$ when $x = 4$:",
+                    "options": [
+                              "13",
+                              "9",
+                              "14",
+                              "11"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$2(4)+5 = 13$."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-expressions-equations-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) $2x + 5$ when $x = 4$?
+
+2) $x - 6 = 11$. $x = ?$
+
+3) $5(x + 2) = ?x + ?$. The constant term?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["13","17","10"],
+        hint1: "2(4) + 5.",
+        hint2: "Add 6.",
+        hint3: "5(2) = ?",
+        explanation: "1) 8+5=13. 2) 11+6=17. 3) 5(2)=10."
       }
     },
     {
@@ -60,22 +77,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Inverse of multiplication is","options":["Division","Addition","Subtraction","Exponentiation"]},{"label":"$7(x + 1) = 7x + ?$","options":["7","1","8","x"]}],
+        correctAnswers: ["Division","7"],
+        hint1: "Undo multiplication.",
+        hint2: "Distribute 7 to both terms.",
+        explanation: "Inverse of × is ÷. 7(1)=7."
       }
     },
     {
@@ -84,28 +92,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Topic | Problem |
+|---|-------|---------|
+| 1 | Evaluate | $2x + 5$ when $x = 4$ |
+| 2 | Solve | $x - 6 = 11$ |
+| 3 | Distribute | $5(x + 2)$ |
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Solve $x - 6 = 11$:",
+                    "options": [
+                              "17",
+                              "5",
+                              "-5",
+                              "66"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$x = 11 + 6 = 17$."
           }
-        ]
+]
       }
     }
   ]

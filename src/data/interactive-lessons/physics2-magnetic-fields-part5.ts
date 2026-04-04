@@ -126,7 +126,7 @@ Use $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.0e-4', '0.0050', '0.04', '0.00010', '0.00500', '0.005', '0.040'],
+        correctAnswers: ['1.0e-4', '0.0050', '0.04'],
         hint1: '$B = \\mu_0 I/(2\\pi r) = (4\\pi \\times 10^{-7})(15)/(2\\pi \\times 0.03)$.',
         hint2: '$n = 800/0.40 = 2000$ turns/m. $B = \\mu_0 n I = (4\\pi \\times 10^{-7})(2000)(2.0)$.',
         hint3: 'Rearrange: $r = \\mu_0 I/(2\\pi B) = (4\\pi \\times 10^{-7})(20)/(2\\pi \\times 10^{-4})$.',

@@ -112,7 +112,7 @@ $$a_c = 4\\pi^2 r f^2$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8', '22.2', '2', '22.20'],
+        correctAnswers: ['8', '22.2', '2'],
         hint1: '$a_c = v^2/r = 400/50$.',
         hint2: 'Convert 45 RPM to Hz: $f = 45/60 = 0.75$ Hz. Then $a_c = 4\\pi^2 rf^2$.',
         hint3: '$r = v^2/a_c$.',

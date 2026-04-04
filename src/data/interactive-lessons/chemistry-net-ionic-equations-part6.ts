@@ -81,10 +81,10 @@ Ask: Is this species...
           {
             question: 'What is the net ionic equation for: Na₂CO₃(aq) + 2HCl(aq) → 2NaCl(aq) + H₂O(l) + CO₂(g)?',
             options: [
-              '$\\\\text{Na}_2\\\\text{CO}_3(aq) + 2\\\\text{HCl}(aq) \\\\rightarrow 2\\\\text{NaCl}(aq) + \\\\text{H}_2\\\\text{O}(l) + \\\\text{CO}_2(g)$',
-              '$\\\\text{CO}_3^{2-}(aq) + 2\\\\text{H}^+(aq) \\\\rightarrow \\\\text{H}_2\\\\text{O}(l) + \\\\text{CO}_2(g)$',
-              '$\\\\text{Na}^+(aq) + \\\\text{Cl}^-(aq) \\\\rightarrow \\\\text{NaCl}(aq)$',
-              '$2\\\\text{H}^+(aq) + \\\\text{CO}_3^{2-}(aq) \\\\rightarrow \\\\text{H}_2\\\\text{CO}_3(aq)$'
+              '$\\text{Na}_2\\text{CO}_3(aq) + 2\\text{HCl}(aq) \\rightarrow 2\\text{NaCl}(aq) + \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)$',
+              '$\\text{CO}_3^{2-}(aq) + 2\\text{H}^+(aq) \\rightarrow \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)$',
+              '$\\text{Na}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{NaCl}(aq)$',
+              '$2\\text{H}^+(aq) + \\text{CO}_3^{2-}(aq) \\rightarrow \\text{H}_2\\text{CO}_3(aq)$'
             ],
             correctAnswer: 1,
             explanation: 'Na⁺ and Cl⁻ are spectators. The net ionic equation shows H⁺ reacting with CO₃²⁻ to form H₂O and CO₂ (H₂CO₃ is unstable and decomposes). Charge: 2(+1) + (−2) = 0 on both sides ✓.'
@@ -103,10 +103,10 @@ Ask: Is this species...
           {
             question: 'What is the net ionic equation for: AgNO₃(aq) + NaBr(aq) → AgBr(s) + NaNO₃(aq)?',
             options: [
-              '$\\\\text{Na}^+(aq) + \\\\text{NO}_3^-(aq) \\\\rightarrow \\\\text{NaNO}_3(aq)$',
-              '$\\\\text{Ag}^+(aq) + \\\\text{Br}^-(aq) \\\\rightarrow \\\\text{AgBr}(s)$',
-              '$\\\\text{AgNO}_3(aq) + \\\\text{NaBr}(aq) \\\\rightarrow \\\\text{AgBr}(s) + \\\\text{NaNO}_3(aq)$',
-              '$\\\\text{Ag}^+(aq) + \\\\text{NO}_3^-(aq) + \\\\text{Na}^+(aq) + \\\\text{Br}^-(aq) \\\\rightarrow \\\\text{AgBr}(s)$'
+              '$\\text{Na}^+(aq) + \\text{NO}_3^-(aq) \\rightarrow \\text{NaNO}_3(aq)$',
+              '$\\text{Ag}^+(aq) + \\text{Br}^-(aq) \\rightarrow \\text{AgBr}(s)$',
+              '$\\text{AgNO}_3(aq) + \\text{NaBr}(aq) \\rightarrow \\text{AgBr}(s) + \\text{NaNO}_3(aq)$',
+              '$\\text{Ag}^+(aq) + \\text{NO}_3^-(aq) + \\text{Na}^+(aq) + \\text{Br}^-(aq) \\rightarrow \\text{AgBr}(s)$'
             ],
             correctAnswer: 1,
             explanation: 'Na⁺ and NO₃⁻ are spectators. The net ionic equation is simply Ag⁺(aq) + Br⁻(aq) → AgBr(s). Charge: (+1) + (−1) = 0 on left; 0 on right ✓.'
@@ -191,10 +191,10 @@ Identify the precipitate or gas formed. Type the chemical formula (no phase labe
           {
             question: 'What is the net ionic equation for: 2HNO₃(aq) + Ca(OH)₂(aq) → Ca(NO₃)₂(aq) + 2H₂O(l)?',
             options: [
-              '$\\\\text{H}^+(aq) + \\\\text{OH}^-(aq) \\\\rightarrow \\\\text{H}_2\\\\text{O}(l)$',
-              '$\\\\text{HNO}_3(aq) + \\\\text{Ca(OH)}_2(aq) \\\\rightarrow \\\\text{Ca(NO}_3)_2(aq) + \\\\text{H}_2\\\\text{O}(l)$',
-              '$\\\\text{Ca}^{2+}(aq) + 2\\\\text{NO}_3^-(aq) \\\\rightarrow \\\\text{Ca(NO}_3)_2(aq)$',
-              '$2\\\\text{H}^+(aq) + \\\\text{Ca(OH)}_2(aq) \\\\rightarrow \\\\text{Ca}^{2+}(aq) + 2\\\\text{H}_2\\\\text{O}(l)$'
+              '$\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$',
+              '$\\text{HNO}_3(aq) + \\text{Ca(OH)}_2(aq) \\rightarrow \\text{Ca(NO}_3)_2(aq) + \\text{H}_2\\text{O}(l)$',
+              '$\\text{Ca}^{2+}(aq) + 2\\text{NO}_3^-(aq) \\rightarrow \\text{Ca(NO}_3)_2(aq)$',
+              '$2\\text{H}^+(aq) + \\text{Ca(OH)}_2(aq) \\rightarrow \\text{Ca}^{2+}(aq) + 2\\text{H}_2\\text{O}(l)$'
             ],
             correctAnswer: 0,
             explanation: 'HNO₃ is a strong acid, Ca(OH)₂ is a strong base (soluble in dilute solution). Both dissociate fully. Ca²⁺ and NO₃⁻ are spectators. Net ionic: H⁺(aq) + OH⁻(aq) → H₂O(l).'
@@ -202,10 +202,10 @@ Identify the precipitate or gas formed. Type the chemical formula (no phase labe
           {
             question: 'When Na₂S(aq) is mixed with H₂SO₄(aq), the net ionic equation is:',
             options: [
-              '$\\\\text{Na}^+(aq) + \\\\text{SO}_4^{2-}(aq) \\\\rightarrow \\\\text{Na}_2\\\\text{SO}_4(s)$',
-              '$\\\\text{S}^{2-}(aq) + 2\\\\text{H}^+(aq) \\\\rightarrow \\\\text{H}_2\\\\text{S}(g)$',
-              '$\\\\text{S}^{2-}(aq) + \\\\text{SO}_4^{2-}(aq) \\\\rightarrow \\\\text{S}_2\\\\text{O}_4^{4-}(aq)$',
-              '$2\\\\text{Na}^+(aq) + \\\\text{SO}_4^{2-}(aq) \\\\rightarrow \\\\text{Na}_2\\\\text{SO}_4(aq)$'
+              '$\\text{Na}^+(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{Na}_2\\text{SO}_4(s)$',
+              '$\\text{S}^{2-}(aq) + 2\\text{H}^+(aq) \\rightarrow \\text{H}_2\\text{S}(g)$',
+              '$\\text{S}^{2-}(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{S}_2\\text{O}_4^{4-}(aq)$',
+              '$2\\text{Na}^+(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{Na}_2\\text{SO}_4(aq)$'
             ],
             correctAnswer: 1,
             explanation: 'S²⁻ + 2H⁺ → H₂S(g). H₂S is a gas that escapes the solution (driving force). Na⁺ and SO₄²⁻ are spectators. Charge check: (−2) + 2(+1) = 0 on both sides ✓.'
@@ -235,10 +235,10 @@ Identify the precipitate or gas formed. Type the chemical formula (no phase labe
           {
             question: 'The net ionic equation for CH₃COOH(aq) + NaHCO₃(aq) → NaCH₃COO(aq) + H₂O(l) + CO₂(g) is:',
             options: [
-              '$\\\\text{H}^+(aq) + \\\\text{HCO}_3^-(aq) \\\\rightarrow \\\\text{H}_2\\\\text{O}(l) + \\\\text{CO}_2(g)$',
-              '$\\\\text{CH}_3\\\\text{COOH}(aq) + \\\\text{HCO}_3^-(aq) \\\\rightarrow \\\\text{CH}_3\\\\text{COO}^-(aq) + \\\\text{H}_2\\\\text{O}(l) + \\\\text{CO}_2(g)$',
-              '$\\\\text{CH}_3\\\\text{COOH}(aq) + \\\\text{NaHCO}_3(aq) \\\\rightarrow \\\\text{NaCH}_3\\\\text{COO}(aq) + \\\\text{H}_2\\\\text{O}(l) + \\\\text{CO}_2(g)$',
-              '$\\\\text{Na}^+(aq) + \\\\text{CH}_3\\\\text{COO}^-(aq) \\\\rightarrow \\\\text{NaCH}_3\\\\text{COO}(aq)$'
+              '$\\text{H}^+(aq) + \\text{HCO}_3^-(aq) \\rightarrow \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)$',
+              '$\\text{CH}_3\\text{COOH}(aq) + \\text{HCO}_3^-(aq) \\rightarrow \\text{CH}_3\\text{COO}^-(aq) + \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)$',
+              '$\\text{CH}_3\\text{COOH}(aq) + \\text{NaHCO}_3(aq) \\rightarrow \\text{NaCH}_3\\text{COO}(aq) + \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)$',
+              '$\\text{Na}^+(aq) + \\text{CH}_3\\text{COO}^-(aq) \\rightarrow \\text{NaCH}_3\\text{COO}(aq)$'
             ],
             correctAnswer: 1,
             explanation: 'CH₃COOH is a weak acid → stays molecular. NaHCO₃ splits: Na⁺ + HCO₃⁻. Na⁺ is the spectator. Products: CH₃COO⁻(aq) + H₂O(l) + CO₂(g). The weak acid is NOT split into H⁺.'

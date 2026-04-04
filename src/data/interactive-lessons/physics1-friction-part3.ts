@@ -174,7 +174,7 @@ $$\\Delta x = 144/5.88 = 24.5 \\text{ m}$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4', '12.5', '3.67', '12.50', '3.670'],
+        correctAnswers: ['4', '12.5', '3.67'],
         hint1: '$a = \\mu_k g = 0.40 \\times 10$.',
         hint2: '$v^2 = v_0^2 + 2a\\Delta x$. $0 = 100 + 2(-4)\\Delta x$.',
         hint3: '$a = (F - \\mu_k mg)/m = (80 - 0.30 \\times 120)/12$.',

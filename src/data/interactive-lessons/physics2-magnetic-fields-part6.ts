@@ -175,7 +175,7 @@ A rectangular coil has 50 turns, dimensions 8.0 cm × 5.0 cm, carries 2.0 A, and
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.40', '0.12', '0.06', '0.400', '0.4', '0.120', '0.060'],
+        correctAnswers: ['0.40', '0.12', '0.06'],
         hint1: '$\\mu = NIA = (50)(2.0)(0.08 \\times 0.05)$.',
         hint2: '$\\tau_{max} = \\mu B = (0.40)(0.30)$, occurring when $\\phi = 90°$.',
         hint3: '$\\tau = \\mu B \\sin 30° = (0.40)(0.30)(0.5)$.',

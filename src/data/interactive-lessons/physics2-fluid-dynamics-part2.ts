@@ -105,7 +105,7 @@ Water flows through a circular pipe of radius 3.0 cm at 2.0 m/s. The pipe narrow
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['28.3', '3.14', '18', '28.30', '3.140'],
+        correctAnswers: ['28.3', '3.14', '18'],
         hint1: '$A = \\pi r^2 = \\pi (3.0)^2$ (keep in cm²).',
         hint2: '$A = \\pi (1.0)^2$.',
         hint3: '$v_2 = (A_1/A_2) v_1 = (28.3/3.14)(2.0)$.',

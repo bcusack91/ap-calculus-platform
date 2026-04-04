@@ -9,10 +9,16 @@ export const apPrecalcTrigModelPart1Data = {
 
 **Part 1 of 7 — Sine & Cosine Graphs**
 
-Welcome to **Sine & Cosine Graphs** — Part 1 of 7 in the AP Precalculus Trigonometric Modeling series.
+$y = A\sin(Bx + C) + D$
 
-This lesson covers key concepts and practice problems.
-      `
+- **A**: amplitude (vertical stretch)
+- **B**: affects period ($T = \frac{2\pi}{|B|}$)
+- **C**: phase shift
+- **D**: vertical shift (midline)
+
+Sine starts at midline; cosine starts at maximum.
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p1-worked',
@@ -20,39 +26,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$y = \sin(x)$. Key features?**
+
+Amplitude = 1, Period = 2π, Midline: y = 0 ✅
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes sine & cosine graphs?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Sine & Cosine Graphs is a core concept in AP Precalculus."
+                    "question": "sin(0) = ?",
+                    "options": [
+                              "0",
+                              "1",
+                              "−1",
+                              "π"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Sine of 0 is 0."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-trig-modeling-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Amplitude** 🧮
 
-Answer the following about sine & cosine graphs.
-      `,
+1) Amplitude of $\sin(x)$?
+
+2) Amplitude of $\cos(x)$?
+
+3) Amplitude of $2\sin(x)$?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of sine & cosine graphs."
+        boxes: 3,
+        correctAnswers: ["1","1","2"],
+        hint1: "Coefficient of sin.",
+        hint2: "Coefficient of cos.",
+        hint3: "Coefficient of sin.",
+        explanation: "1) 1. 2) 1. 3) 2."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about sine & cosine graphs.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Sine & Cosine Graphs is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Sine & Cosine Graphs builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Sine starts at the","options":["Midline going up","Maximum","Minimum","Origin only"]},{"label":"Cosine starts at the","options":["Maximum","Midline","Minimum","Zero"]}],
+        correctAnswers: ["Midline going up","Maximum"],
+        hint1: "sin(0) = 0.",
+        hint2: "cos(0) = 1.",
+        explanation: "Sine: midline → up. Cosine: starts at max."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about sine & cosine graphs.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Sine & Cosine Graphs | Core sine & cosine graphs principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Function | Amplitude | Period |
+|---|---------|-----------|--------|
+| 1 | sin(x) | 1 | 2π |
+| 2 | cos(x) | 1 | 2π |
+| 3 | 2sin(x) | 2 | 2π |
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in sine & cosine graphs?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "cos(0) = ?",
+                    "options": [
+                              "1",
+                              "0",
+                              "−1",
+                              "π"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Cosine of 0 is 1."
           }
-        ]
+]
       }
     }
   ]

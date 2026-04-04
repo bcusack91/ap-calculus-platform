@@ -5,14 +5,19 @@ export const physCNewtonPart1Data = {
       id: 'physicsc-newtons-laws-p1-intro',
       type: 'text' as const,
       content: `
-# 📐 Newton's First Law
+# ⚛️ Newton's First Law
 
 **Part 1 of 7 — Newton's First Law**
 
-Welcome to **Newton's First Law** — Part 1 of 7 in the AP Physics C Newton's Laws series.
+An object remains at rest or in uniform motion unless acted upon by a net external force.
 
-This lesson covers key concepts and practice problems.
-      `
+### Key Ideas
+- **Inertia**: the tendency of objects to resist changes in motion
+- Mass is a measure of inertia
+- An object in equilibrium has $\sum \vec{F} = 0$
+- This law defines **inertial reference frames**
+    
+    `
     },
     {
       id: 'physicsc-newtons-laws-p1-worked',
@@ -20,39 +25,58 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A 5 kg block sits on a frictionless table with two horizontal forces: 20 N to the right and 20 N to the left. Describe its motion.**
+
+**Step 1:** $\sum F = 20 - 20 = 0$ N
+
+**Step 2:** Net force is zero, so the block is in equilibrium.
+
+**Answer:** The block remains at rest (or continues at constant velocity if already moving). ✅
+    
+    `
     },
     {
       id: 'physicsc-newtons-laws-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes newton's first law?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Newton's First Law is a core concept in AP Physics C."
+                    "question": "A hockey puck slides on frictionless ice. What happens after it is released?",
+                    "options": [
+                              "It continues at constant velocity",
+                              "It slows down gradually",
+                              "It speeds up",
+                              "It stops immediately"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "With no net force, the puck continues at constant velocity (Newton's First Law)."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-newtons-laws-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Newton's First Law Practice** 🧮
 
-Answer the following about newton's first law.
-      `,
+1) A book sits on a table with no net force. What is its acceleration (in m/s²)?
+
+2) A ball rolls at 10 m/s on a frictionless surface. What is its speed (m/s) after 5 seconds?
+
+3) Two forces act on an object: 15 N right and 10 N left. What is the net force magnitude (in N)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of newton's first law."
+        boxes: 3,
+        correctAnswers: ["0","10","5"],
+        hint1: "No net force means no acceleration.",
+        hint2: "With zero friction, what does Newton's first law say about the speed?",
+        hint3: "Net force = 15 - 10.",
+        explanation: "1) Zero net force → zero acceleration. 2) No friction → constant velocity = 10 m/s. 3) 15 - 10 = 5 N."
       }
     },
     {
@@ -60,22 +84,13 @@ Answer the following about newton's first law.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Newton's First Law is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Newton's First Law builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"An object at rest with zero net force will","options":["Remain at rest","Accelerate forward","Decelerate","Float upward"]},{"label":"Inertia depends on an object's","options":["Mass","Shape","Color","Temperature"]}],
+        correctAnswers: ["Remain at rest","Mass"],
+        hint1: "Think about what Newton's first law says.",
+        hint2: "Which property resists changes in motion?",
+        explanation: "An object at rest stays at rest when net force is zero. Inertia depends on mass."
       }
     },
     {
@@ -84,28 +99,34 @@ Answer the following about newton's first law.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Newton's First Law | Core newton's first law principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Hint |
+|---|---------|------|
+| 1 | If net force is zero, what is the acceleration? | Newton's first law |
+| 2 | What property measures resistance to acceleration? | Starts with "i" |
+| 3 | Can an object move at 10 m/s with zero net force? | Think about constant velocity |
+    
+    `
     },
     {
       id: 'physicsc-newtons-laws-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in newton's first law?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Newton's First Law is valid in which type of reference frame?",
+                    "options": [
+                              "Inertial",
+                              "Accelerating",
+                              "Rotating",
+                              "Any frame"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Newton's laws hold in inertial (non-accelerating) reference frames."
           }
-        ]
+]
       }
     }
   ]

@@ -24,7 +24,7 @@ export const satCalcStrategyPart7Data = {
 | Graph analysis (vertex, intercepts) | 15-25 seconds with Desmos |
 
 ### Common Calculator Mistakes
-- **Parentheses errors**: \`2/3x\` ≠ \`(2/3)x\` in Desmos
+- **Parentheses errors**: \$22/3x\` ≠ \`(2/3)x\` in Desmos
 - **Not zooming**: The intersection might be off-screen — zoom out!
 - **Over-reliance**: Don't use Desmos for 2 + 3
 - **Forgetting to verify**: Calculator gives numbers, but does the answer make sense in context?`

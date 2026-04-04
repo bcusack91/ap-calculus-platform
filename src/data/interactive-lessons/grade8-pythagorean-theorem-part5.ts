@@ -9,10 +9,13 @@ export const g8PythagoreanPart5Data = {
 
 **Part 5 of 7 — 3D Applications**
 
-Welcome to **3D Applications** — Part 5 of 7 in the Grade 8 Math Pythagorean Theorem series.
+The Pythagorean theorem extends to 3D:
 
-This lesson covers key concepts and practice problems.
-      `
+$d = \sqrt{l^2 + w^2 + h^2}$
+
+**Space diagonal of a box**: finds the longest line from corner to opposite corner.
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p5-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Box 3×4×12. Space diagonal?**
+
+$d = \sqrt{3^2+4^2+12^2} = \sqrt{9+16+144} = \sqrt{169} = 13$ ✅
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes 3d applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "3D Applications is a core concept in Grade 8 Math."
+                    "question": "3D diagonal of 1×2×2 box?",
+                    "options": [
+                              "3",
+                              "5",
+                              "√5",
+                              "1"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "√(1+4+4) = √9 = 3."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-pythagorean-theorem-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Space Diagonals** 🧮
 
-Answer the following about 3d applications.
-      `,
+1) Box 3×4×12. Diagonal?
+
+2) Box 1×2×2. Diagonal?
+
+3) Box 2×6×9. Diagonal?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of 3d applications."
+        boxes: 3,
+        correctAnswers: ["13","3","11"],
+        hint1: "√(9+16+144).",
+        hint2: "√(1+4+4).",
+        hint3: "√(4+36+81).",
+        explanation: "1) √169=13. 2) √9=3. 3) √121=11."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about 3d applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "3D Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "3D Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"3D distance uses ____ dimensions","options":["Three","Two","One","Four"]},{"label":"The formula for 3D diagonal is","options":["$\\sqrt{l^2+w^2+h^2}$","$l+w+h$","$lwh$","$2(l+w+h)$"]}],
+        correctAnswers: ["Three","$\\sqrt{l^2+w^2+h^2}$"],
+        hint1: "Length, width, height.",
+        hint2: "Square, add, square root.",
+        explanation: "3D uses three dimensions. d = √(l²+w²+h²)."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about 3d applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | 3D Applications | Core 3d applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Dimensions | Diagonal |
+|---|-----------|----------|
+| 1 | 3×4×12 | 13 |
+| 2 | 1×2×2 | 3 |
+| 3 | 2×6×9 | 11 |
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in 3d applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "The space diagonal of a box is ____ than any edge.",
+                    "options": [
+                              "Longer",
+                              "Shorter",
+                              "Equal",
+                              "Unrelated"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "The diagonal spans all three dimensions."
           }
-        ]
+]
       }
     }
   ]

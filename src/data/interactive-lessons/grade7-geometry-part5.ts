@@ -5,14 +5,15 @@ export const g7GeometryPart5Data = {
       id: 'grade7-geometry-p5-intro',
       type: 'text' as const,
       content: `
-# 🧮 Volume of Prisms & Cylinders
+# 📐 Volume of Prisms & Cylinders
 
 **Part 5 of 7 — Volume of Prisms & Cylinders**
 
-Welcome to **Volume of Prisms & Cylinders** — Part 5 of 7 in the Grade 7 Math Geometry series.
-
-This lesson covers key concepts and practice problems.
-      `
+- **Prism**: $V = Bh$ (B = base area)
+- **Rectangular prism**: $V = lwh$
+- **Cylinder**: $V = \pi r^2 h$
+    
+    `
     },
     {
       id: 'grade7-geometry-p5-worked',
@@ -20,39 +21,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Cylinder: r = 3 cm, h = 10 cm.**
+
+$V = \pi(3)^2(10) = 90\pi \approx 282.6$ cm³ ✅
+    
+    `
     },
     {
       id: 'grade7-geometry-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes volume of prisms & cylinders?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Volume of Prisms & Cylinders is a core concept in Grade 7 Math."
+                    "question": "Volume of 8×5×4 rectangular prism?",
+                    "options": [
+                              "160",
+                              "80",
+                              "17",
+                              "320"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "8 × 5 × 4 = 160."
           }
-        ]
+]
       }
     },
     {
       id: 'grade7-geometry-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Volume** 🧮 (Use π ≈ 3.14)
 
-Answer the following about volume of prisms & cylinders.
-      `,
+1) Rectangular prism 8×5×4. Volume?
+
+2) Cylinder r=2, h=7. Volume?
+
+3) Triangular prism: base area 12, height 5. Volume?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of volume of prisms & cylinders."
+        boxes: 3,
+        correctAnswers: ["160","87.92","60"],
+        hint1: "8 × 5 × 4.",
+        hint2: "π(2²)(7) = 3.14(4)(7).",
+        hint3: "V = Bh = 12(5).",
+        explanation: "1) 160. 2) 3.14(4)(7)=87.92. 3) 12(5)=60."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about volume of prisms & cylinders.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Volume of Prisms & Cylinders is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Volume of Prisms & Cylinders builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Volume of a prism = base area ×","options":["Height","Perimeter","Surface area","Width"]},{"label":"Volume is measured in","options":["Cubic units","Square units","Linear units","Liters only"]}],
+        correctAnswers: ["Height","Cubic units"],
+        hint1: "V = Bh.",
+        hint2: "3D measurement.",
+        explanation: "V = B × h. Volume → cubic units."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about volume of prisms & cylinders.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Volume of Prisms & Cylinders | Core volume of prisms & cylinders principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Shape | Dimensions |
+|---|-------|------------|
+| 1 | Rect. prism | 8×5×4 |
+| 2 | Cylinder | r=2, h=7 |
+| 3 | Triangular prism | B=12, h=5 |
+    
+    `
     },
     {
       id: 'grade7-geometry-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in volume of prisms & cylinders?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Cylinder volume formula?",
+                    "options": [
+                              "V = πr²h",
+                              "V = 2πrh",
+                              "V = πrh",
+                              "V = πd²h"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "V = πr²h."
           }
-        ]
+]
       }
     }
   ]

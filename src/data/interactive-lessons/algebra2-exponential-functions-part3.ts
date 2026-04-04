@@ -9,10 +9,13 @@ export const alg2ExponentialPart3Data = {
 
 **Part 3 of 7 — Compound Interest**
 
-Welcome to **Compound Interest** — Part 3 of 7 in the Algebra 2 Exponential Functions series.
+$A = P\\left(1 + \\frac{r}{n}\\right)^{nt}$
 
-This lesson covers key concepts and practice problems.
-      `
+- $P$ = principal, $r$ = annual rate, $n$ = compounding frequency, $t$ = years
+
+**Continuous compounding**: $A = Pe^{rt}$
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p3-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**\\$1000 at 6% compounded annually for 2 years.**
+
+$A = 1000(1.06)^2 = 1000(1.1236) = 1123.6$ → **\\$1,123.60** ✅
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes compound interest?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Compound Interest is a core concept in Algebra 2."
+                    "question": "$500 at 10% compounded annually for 1 year:",
+                    "options": [
+                              "$550",
+                              "$510",
+                              "$600",
+                              "$5000"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "500(1.10) = 550."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-exponential-functions-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Compound Interest** 🧮
 
-Answer the following about compound interest.
-      `,
+1) $500 at 10%, 1 year, annual. A = ?
+
+2) $1000 at 5%, 2 years, annual. A = ?
+
+3) $1000 at 6%, 1 year, annual. A = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of compound interest."
+        boxes: 3,
+        correctAnswers: ["550","1102.5","1060"],
+        hint1: "500(1.10)¹.",
+        hint2: "1000(1.05)².",
+        hint3: "1000(1.06)¹.",
+        explanation: "1) 550. 2) 1102.5. 3) 1060."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about compound interest.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Compound Interest is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Compound Interest builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Compound interest means interest is earned on","options":["Principal plus previously earned interest","Principal only","Interest only","Nothing"]},{"label":"More frequent compounding gives","options":["Slightly more money","Less money","The same amount","Much less money"]}],
+        correctAnswers: ["Principal plus previously earned interest","Slightly more money"],
+        hint1: "Interest on interest.",
+        hint2: "More compounding = more growth.",
+        explanation: "Compound: interest on interest. More compounding → more return."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about compound interest.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Compound Interest | Core compound interest principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | P | r | n | t | A |
+|---|---|---|---|---|---|
+| 1 | \\$1000 | 5% | 1 | 2 | \\$1102.50 |
+| 2 | \\$500 | 10% | 1 | 1 | \\$550 |
+| 3 | \\$2000 | 4% | 1 | 3 | \\$2249.73 |
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in compound interest?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "In $A = P(1+r/n)^{nt}$, $n$ represents:",
+                    "options": [
+                              "Number of times compounded per year",
+                              "Principal",
+                              "Years",
+                              "Rate"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "n = compounding frequency."
           }
-        ]
+]
       }
     }
   ]

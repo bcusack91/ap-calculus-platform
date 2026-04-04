@@ -110,7 +110,7 @@ A 3 kg block sits on a frictionless table. A string runs horizontally from the b
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.9', '11.8', '7.8', '3.90', '11.80', '7.80'],
+        correctAnswers: ['3.9', '11.8', '7.8'],
         hint1: 'System: $F_{\\text{net}} = m_2 g$, total mass $= m_1 + m_2 = 5$ kg.',
         hint2: 'For the hanging block: $m_2 g - T = m_2 a$, so $T = m_2(g - a)$.',
         hint3: '$d = \\frac{1}{2}at^2 = \\frac{1}{2}(3.92)(4)$.',

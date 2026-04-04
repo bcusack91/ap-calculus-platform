@@ -118,9 +118,9 @@ $$\\text{Fe}^{3+}(aq) + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(s)$$
           {
             question: 'What is the net ionic equation when BaCl₂(aq) is mixed with K₂SO₄(aq)?',
             options: [
-              '$\\\\text{Ba}^{2+}(aq) + \\\\text{SO}_4^{2-}(aq) \\\\rightarrow \\\\text{BaSO}_4(s)$',
-              '$\\\\text{Ba}^{2+}(aq) + 2\\\\text{Cl}^-(aq) + 2\\\\text{K}^+(aq) + \\\\text{SO}_4^{2-}(aq) \\\\rightarrow \\\\text{BaSO}_4(s) + 2\\\\text{KCl}(aq)$',
-              '$\\\\text{K}^+(aq) + \\\\text{Cl}^-(aq) \\\\rightarrow \\\\text{KCl}(s)$',
+              '$\\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{BaSO}_4(s)$',
+              '$\\text{Ba}^{2+}(aq) + 2\\text{Cl}^-(aq) + 2\\text{K}^+(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{BaSO}_4(s) + 2\\text{KCl}(aq)$',
+              '$\\text{K}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{KCl}(s)$',
               'No reaction occurs'
             ],
             correctAnswer: 0,
@@ -206,10 +206,10 @@ For each pair of solutions mixed, write the formula of the precipitate that form
           {
             question: 'Which net ionic equation correctly represents the reaction when solutions of iron(III) chloride and sodium hydroxide are mixed?',
             options: [
-              '$\\\\text{Fe}^{3+}(aq) + 3\\\\text{OH}^-(aq) \\\\rightarrow \\\\text{Fe(OH)}_3(s)$',
-              '$\\\\text{Fe}^{3+}(aq) + \\\\text{OH}^-(aq) \\\\rightarrow \\\\text{FeOH}(s)$',
-              '$\\\\text{Na}^+(aq) + \\\\text{Cl}^-(aq) \\\\rightarrow \\\\text{NaCl}(s)$',
-              '$3\\\\text{Na}^+(aq) + 3\\\\text{Cl}^-(aq) \\\\rightarrow 3\\\\text{NaCl}(s)$'
+              '$\\text{Fe}^{3+}(aq) + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(s)$',
+              '$\\text{Fe}^{3+}(aq) + \\text{OH}^-(aq) \\rightarrow \\text{FeOH}(s)$',
+              '$\\text{Na}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{NaCl}(s)$',
+              '$3\\text{Na}^+(aq) + 3\\text{Cl}^-(aq) \\rightarrow 3\\text{NaCl}(s)$'
             ],
             correctAnswer: 0,
             explanation: 'Fe³⁺ + 3OH⁻ → Fe(OH)₃(s). Fe(OH)₃ is insoluble (rust-brown precipitate). Na⁺ and Cl⁻ are spectators. Charge check: (+3) + 3(−1) = 0 on left; 0 on right ✓.'

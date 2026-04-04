@@ -9,10 +9,12 @@ export const g6IntegersPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Grade 6 Math Integers series.
-
-This lesson covers key concepts and practice problems.
-      `
+Apply integer operations to real scenarios:
+- Temperature changes
+- Money (deposits and withdrawals)
+- Elevation changes
+    
+    `
     },
     {
       id: 'grade6-integers-p6-worked',
@@ -20,39 +22,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Temperature: −8°F, rises 15°. New temperature?**
+
+$-8 + 15 = 7$°F ✅
+    
+    `
     },
     {
       id: 'grade6-integers-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Grade 6 Math."
+                    "question": "Bank balance $50, withdraw $75. Balance?",
+                    "options": [
+                              "−$25",
+                              "$125",
+                              "$25",
+                              "−$125"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$50 − $75 = −$25 (overdrawn)."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-integers-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Word Problems** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) \$50 − \$75 = ? (use negative for overdrawn)
+
+2) 3°F drops 10°. New temperature?
+
+3) Elevator on floor −2, goes up 5. New floor?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["-25","-7","3"],
+        hint1: "50 − 75.",
+        hint2: "3 − 10.",
+        hint3: "−2 + 5.",
+        explanation: "1) −25. 2) −7. 3) 3."
       }
     },
     {
@@ -60,22 +77,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A withdrawal from a bank account is","options":["Subtraction (negative)","Addition (positive)","Multiplication","Division"]},{"label":"Going from −3 to 4 requires moving","options":["7 units","1 unit","−7 units","−1 unit"]}],
+        correctAnswers: ["Subtraction (negative)","7 units"],
+        hint1: "Taking money out.",
+        hint2: "From −3 to 0 is 3, then 0 to 4 is 4.",
+        explanation: "Withdrawal → subtraction. −3 to 4 = 7 units."
       }
     },
     {
@@ -84,28 +92,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Expression |
+|---|---------|-----------|
+| 1 | Bank: \$50, withdraw \$75 | $50 - 75$ |
+| 2 | Temp: 3°, drops 10° | $3 - 10$ |
+| 3 | Elevator: floor −2, up 5 floors | $-2 + 5$ |
+    
+    `
     },
     {
       id: 'grade6-integers-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Temperature: 3°F, drops 10°. New temp?",
+                    "options": [
+                              "−7°F",
+                              "7°F",
+                              "13°F",
+                              "−13°F"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$3 − 10 = −7$°F."
           }
-        ]
+]
       }
     }
   ]

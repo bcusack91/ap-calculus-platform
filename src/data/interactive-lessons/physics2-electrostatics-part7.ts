@@ -126,7 +126,7 @@ Two identical spheres, each with charge $+6\\ \\mu\\text{C}$, are 0.20 m apart.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.1', '3', '4.05', '8.10', '4.050'],
+        correctAnswers: ['8.1', '3', '4.05'],
         hint1: '$F = (9 \\times 10^9)(6 \\times 10^{-6})^2/(0.2)^2 = (9 \\times 10^9)(36 \\times 10^{-12})/0.04$.',
         hint2: 'Touching neutral sphere: +6 shared equally → +3 μC each.',
         hint3: 'New force: $(9 \\times 10^9)(3 \\times 10^{-6})(6 \\times 10^{-6})/(0.2)^2$.',

@@ -126,7 +126,7 @@ The equilibrium point just shifts downward by $x_0$. The oscillation about this 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.31', '0.81', '0.44', '0.310', '0.810', '0.440'],
+        correctAnswers: ['0.31', '0.81', '0.44'],
         hint1: '$T = 2\\pi\\sqrt{m/k} = 2\\pi\\sqrt{0.5/200}$',
         hint2: '$T = 2\\pi\\sqrt{m/k} \\Rightarrow m = kT^2/(4\\pi^2)$',
         hint3: '$k_{\\text{eff}} = k_1 + k_2 = 400$ N/m. $T = 2\\pi\\sqrt{2/400}$',

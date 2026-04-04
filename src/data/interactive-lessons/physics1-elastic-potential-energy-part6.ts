@@ -117,7 +117,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '0.2', '4', '0.20'],
+        correctAnswers: ['2', '0.2', '4'],
         hint1: '$\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2$. $v = x\\sqrt{k/m}$.',
         hint2: '$\\frac{1}{2}mv^2 = \\frac{1}{2}kx^2$. $x = v\\sqrt{m/k}$.',
         hint3: '$\\frac{1}{2}kx^2 = \\mu_k mg d$. Solve for $d$.',

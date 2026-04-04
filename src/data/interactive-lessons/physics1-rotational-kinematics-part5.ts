@@ -127,7 +127,7 @@ This lets you find $I$ about any axis that is parallel to one through the center
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.70', '0.18', '50', '0.700', '0.7', '0.180'],
+        correctAnswers: ['0.70', '0.18', '50'],
         hint1: '$I = 2(0.1)^2 + 2(0.3)^2 + 2(0.5)^2$',
         hint2: '$I = \\frac{1}{2}MR^2 = \\frac{1}{2}(4)(0.09)$',
         hint3: '$I = \\frac{2}{5}MR^2 \\Rightarrow M = 5I/(2R^2)$',

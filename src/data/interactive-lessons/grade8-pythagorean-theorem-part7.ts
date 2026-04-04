@@ -9,10 +9,14 @@ export const g8PythagoreanPart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the Grade 8 Math Pythagorean Theorem series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Formulas
+- $a^2 + b^2 = c^2$
+- Leg: $a = \sqrt{c^2 - b^2}$
+- Distance: $d = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$
+- 3D diagonal: $d = \sqrt{l^2+w^2+h^2}$
+- Converse: classify triangle by comparing $a^2+b^2$ to $c^2$
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p7-worked',
@@ -20,39 +24,53 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Legs 8 and 15. Hypotenuse?**
+$c = \sqrt{64+225} = \sqrt{289} = 17$ ✅
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in Grade 8 Math."
+                    "question": "Legs 8 and 15. Hypotenuse?",
+                    "options": [
+                              "17",
+                              "23",
+                              "√23",
+                              "289"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "64+225=289. √289=17."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-pythagorean-theorem-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) Legs 8, 15. c = ?
+
+2) c=25, a=7. b = ?
+
+3) Distance: (0,0) to (6,8). d = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["17","24","10"],
+        hint1: "64+225.",
+        hint2: "625−49.",
+        hint3: "36+64.",
+        explanation: "1) √289=17. 2) √576=24. 3) √100=10."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The Pythagorean theorem is for","options":["Right triangles","All triangles","Circles","Squares"]},{"label":"$a^2+b^2 > c^2$ classifies as","options":["Acute","Obtuse","Right","Equilateral"]}],
+        correctAnswers: ["Right triangles","Acute"],
+        hint1: "Need a 90° angle.",
+        hint2: "Greater → all acute angles.",
+        explanation: "Right triangles only. a²+b² > c² → acute."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Type | Problem |
+|---|------|---------|
+| 1 | Hypotenuse | Legs 8, 15 |
+| 2 | Leg | c=25, a=7 |
+| 3 | Distance | (0,0) to (6,8) |
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "c=25, a=7. b=?",
+                    "options": [
+                              "24",
+                              "18",
+                              "32",
+                              "625"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "625−49=576. √576=24."
           }
-        ]
+]
       }
     }
   ]

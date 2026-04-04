@@ -5,14 +5,19 @@ export const physCEMGaussPart7Data = {
       id: 'physicsc-em-gauss-law-p7-intro',
       type: 'text' as const,
       content: `
-# 🏆 Review & Applications
+# ⚡ Review & Applications
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the AP Physics C: E&M Gauss's Law series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Results from Gauss's Law
+| Symmetry | Configuration | $E$ |
+|----------|--------------|-----|
+| Spherical | Point/$Q$ outside | $kQ/r^2$ |
+| Spherical | Inside conductor | $0$ |
+| Cylindrical | Line charge | $2k\lambda/r$ |
+| Planar | Infinite sheet | $\sigma/(2\epsilon_0)$ |
+    
+    `
     },
     {
       id: 'physicsc-em-gauss-law-p7-worked',
@@ -20,39 +25,58 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Compare $E$ at $r = 1$ m from: (a) point charge $Q = 10^{-6}$ C, (b) line charge $\lambda = 10^{-6}$ C/m.**
+
+(a) $E = kQ/r^2 = 9 \times 10^3$ N/C
+
+(b) $E = 2k\lambda/r = 18 \times 10^3$ N/C
+
+The line charge field is stronger at this distance because it falls off as $1/r$ instead of $1/r^2$. ✅
+    
+    `
     },
     {
       id: 'physicsc-em-gauss-law-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in AP Physics C: E&M."
+                    "question": "Which field drops off fastest with distance?",
+                    "options": [
+                              "Point charge ($1/r^2$)",
+                              "Line charge ($1/r$)",
+                              "Sheet charge (constant)",
+                              "They all drop equally"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Point: $1/r^2$, Line: $1/r$, Sheet: constant. Point charge drops fastest."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-em-gauss-law-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review & Applications** 🧮
 
-Answer the following about review & applications.
-      `,
+1) $E$ for a point charge drops as $1/r^n$. What is $n$?
+
+2) $E$ for a line charge drops as $1/r^n$. What is $n$?
+
+3) $E$ for an infinite sheet drops as $1/r^n$. What is $n$? (The field is constant.)
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["2","1","0"],
+        hint1: "$E = kQ/r^2$.",
+        hint2: "$E = 2k\\lambda/r$.",
+        hint3: "$E = \\sigma/(2\\epsilon_0)$ — no $r$ dependence.",
+        explanation: "1) $n = 2$ (inverse-square). 2) $n = 1$ (inverse). 3) $n = 0$ (constant, $r^0 = 1$)."
       }
     },
     {
@@ -60,22 +84,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Gauss's law in differential form is","options":["$\\\\nabla \\\\cdot \\\\vec{E} = \\\\rho/\\\\epsilon_0$","$\\\\nabla \\\\times \\\\vec{E} = 0$","$\\\\nabla \\\\cdot \\\\vec{B} = 0$","$F = qE$"]},{"label":"The total flux through a closed surface surrounding no charge is","options":["Zero","$\\\\epsilon_0$","$Q_{enc}$","Infinite"]}],
+        correctAnswers: ["$\\\\nabla \\\\cdot \\\\vec{E} = \\\\rho/\\\\epsilon_0$","Zero"],
+        hint1: "This is the first of Maxwell's equations.",
+        hint2: "$Q_{enc} = 0 \\implies \\Phi = 0$.",
+        explanation: "Gauss's law in differential form: $\\nabla \\cdot \\vec{E} = \\rho/\\epsilon_0$. No enclosed charge means zero net flux."
       }
     },
     {
@@ -84,28 +99,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Topic | Formula |
+|---|-------|---------|
+| 1 | Point charge | $E = kQ/r^2$ |
+| 2 | Line charge | $E = 2k\lambda/r$ |
+| 3 | Sheet charge | $E = \sigma/(2\epsilon_0)$ |
+    
+    `
     },
     {
       id: 'physicsc-em-gauss-law-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Gauss's law is one of Maxwell's equations. It replaces:",
+                    "options": [
+                              "Coulomb's law (in a more general form)",
+                              "Faraday's law",
+                              "Ampère's law",
+                              "Ohm's law"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Gauss's law is the integral form of $\\\\nabla \\\\cdot \\\\vec{E} = \\\\rho/\\\\epsilon_0$, which generalizes Coulomb's law."
           }
-        ]
+]
       }
     }
   ]

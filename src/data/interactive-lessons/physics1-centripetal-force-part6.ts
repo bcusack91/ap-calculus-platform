@@ -96,7 +96,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.9', '60', '14.1', '8.90', '14.10'],
+        correctAnswers: ['8.9', '60', '14.1'],
         hint1: 'Energy: $mgh = \\frac{1}{2}mv_{top}^2 + mg(2r)$. Solve for $v_{top}$.',
         hint2: 'At the top: $mg + N = mv_{top}^2/r$. Solve for $N$.',
         hint3: 'Energy: $\\frac{1}{2}kx^2 = \\frac{1}{2}mv_{top}^2 + mg(2r)$. Solve for $v_{top}$.',
@@ -163,7 +163,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['22500', '1.24', '16.4', '1.240', '16.40'],
+        correctAnswers: ['22500', '1.24', '16.4'],
         hint1: 'At bottom of dip: $N - mg = mv^2/r$.',
         hint2: '$T\\sin\\theta = mv^2/r$ and $T\\cos\\theta = mg$. Also $r = L\\sin\\theta$. Combine these.',
         hint3: '$v = \\sqrt{rg\\tan\\theta}$.',

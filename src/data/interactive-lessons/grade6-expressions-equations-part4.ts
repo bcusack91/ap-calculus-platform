@@ -5,14 +5,18 @@ export const g6ExpressionsPart4Data = {
       id: 'grade6-expressions-equations-p4-intro',
       type: 'text' as const,
       content: `
-# 📈 Solving One-Step Equations
+# ✏️ Solving One-Step Equations
 
 **Part 4 of 7 — Solving One-Step Equations**
 
-Welcome to **Solving One-Step Equations** — Part 4 of 7 in the Grade 6 Math Expressions & Equations series.
+Use **inverse operations** to isolate the variable:
+- Addition ↔ Subtraction
+- Multiplication ↔ Division
 
-This lesson covers key concepts and practice problems.
-      `
+$x + 5 = 12 \Rightarrow x = 12 - 5 = 7$
+$3x = 18 \Rightarrow x = 18 ÷ 3 = 6$
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p4-worked',
@@ -20,39 +24,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Solve $\frac{x}{4} = 9$.**
+
+Multiply both sides by 4: $x = 36$ ✅ Check: $36/4 = 9$ ✓
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes solving one-step equations?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Solving One-Step Equations is a core concept in Grade 6 Math."
+                    "question": "Solve $x + 9 = 14$:",
+                    "options": [
+                              "x = 5",
+                              "x = 23",
+                              "x = 9",
+                              "x = 14"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$x = 14 - 9 = 5$."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-expressions-equations-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Solve** 🧮
 
-Answer the following about solving one-step equations.
-      `,
+1) $x + 7 = 15$. $x = ?$
+
+2) $5x = 45$. $x = ?$
+
+3) $x - 3 = 10$. $x = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of solving one-step equations."
+        boxes: 3,
+        correctAnswers: ["8","9","13"],
+        hint1: "Subtract 7 from both sides.",
+        hint2: "Divide both sides by 5.",
+        hint3: "Add 3 to both sides.",
+        explanation: "1) 15−7=8. 2) 45÷5=9. 3) 10+3=13."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about solving one-step equations.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Solving One-Step Equations is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Solving One-Step Equations builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The inverse of addition is","options":["Subtraction","Multiplication","Division","Addition"]},{"label":"Solve $\\\\frac{x}{3} = 6$: $x =$","options":["18","2","9","3"]}],
+        correctAnswers: ["Subtraction","18"],
+        hint1: "Undo addition.",
+        hint2: "Multiply both sides by 3.",
+        explanation: "Inverse of + is −. x = 6 × 3 = 18."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about solving one-step equations.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Solving One-Step Equations | Core solving one-step equations principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Equation | Inverse |
+|---|---------|---------|
+| 1 | $x + 7 = 15$ | Subtract 7 |
+| 2 | $5x = 45$ | Divide by 5 |
+| 3 | $x - 3 = 10$ | Add 3 |
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in solving one-step equations?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Solve $7x = 49$:",
+                    "options": [
+                              "x = 7",
+                              "x = 42",
+                              "x = 56",
+                              "x = 343"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$x = 49 ÷ 7 = 7$."
           }
-        ]
+]
       }
     }
   ]

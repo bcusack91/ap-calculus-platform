@@ -89,7 +89,7 @@ Let's apply all the rotational kinematics tools to solve challenging problems sy
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8.0', '20', '-9.5', '8.00', '-9.50'],
+        correctAnswers: ['8.0', '20', '-9.5'],
         hint1: '$\\theta = \\frac{1}{2}(\\omega_0 + \\omega)t = \\frac{1}{2}(0 + 50)(2) = 50$ rad. Rev $= 50/(2\\pi)$',
         hint2: '$\\omega = v/R = 4/0.2$',
         hint3: '$\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$. $\\theta = 50 \\times 2\\pi = 100\\pi$ rad.',

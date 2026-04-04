@@ -9,10 +9,12 @@ export const g6RatiosPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Grade 6 Math Ratios & Proportions series.
-
-This lesson covers key concepts and practice problems.
-      `
+Apply ratios, proportions, and percents to real-world problems:
+- Best deals & unit pricing
+- Scale drawings
+- Sales tax & discounts
+    
+    `
     },
     {
       id: 'grade6-ratios-proportions-p6-worked',
@@ -20,39 +22,55 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A shirt is \$40 with 20% off. Sale price?**
+
+Discount: $0.20 \times 40 = 8$
+Sale price: $40 - 8 = 32$ → **\$32** ✅
+    
+    `
     },
     {
       id: 'grade6-ratios-proportions-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Grade 6 Math."
+                    "question": "$60 shirt, 25% off. Sale price?",
+                    "options": [
+                              "$45",
+                              "$15",
+                              "$42",
+                              "$35"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Discount: 0.25 × 60 = 15. Sale: 60 − 15 = 45."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-ratios-proportions-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Real-World Problems** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) \$60 shirt, 25% off. Sale price?
+
+2) Recipe: 2 cups for 4 people. How many cups for 10 people?
+
+3) Map: 1 in = 50 mi. How far is 3.5 inches?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["45","5","175"],
+        hint1: "Discount = 0.25 × 60. Then subtract from 60.",
+        hint2: "Proportion: 2/4 = x/10.",
+        hint3: "3.5 × 50.",
+        explanation: "1) 60−15=45. 2) 2×10÷4=5. 3) 175."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A 20% discount on $50 saves you","options":["$10","$20","$40","$5"]},{"label":"Unit rate helps you","options":["Compare prices","Add totals","Multiply quantities","Find averages"]}],
+        correctAnswers: ["$10","Compare prices"],
+        hint1: "0.20 × 50 = ?",
+        hint2: "Price per unit lets you compare.",
+        explanation: "0.20 × 50 = 10. Unit rate = comparison tool."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Concept |
+|---|---------|---------|
+| 1 | \$60 shirt, 25% off | Discount |
+| 2 | Recipe: 2 cups for 4 people → cups for 10? | Proportion |
+| 3 | Map: 1 in = 50 mi, 3.5 in = ? mi | Scale |
+    
+    `
     },
     {
       id: 'grade6-ratios-proportions-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Map scale: 1 in = 50 mi. 3.5 in = ?",
+                    "options": [
+                              "175 mi",
+                              "50 mi",
+                              "350 mi",
+                              "100 mi"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "3.5 × 50 = 175 miles."
           }
-        ]
+]
       }
     }
   ]

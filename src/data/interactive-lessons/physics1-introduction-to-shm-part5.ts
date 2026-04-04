@@ -126,7 +126,7 @@ $$a_{\\text{max}} = A\\omega^2 = 4\\pi^2 f^2 A = \\frac{4\\pi^2 A}{T^2}$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.2', '25.13', '2.0', '0.20', '25.130', '2.00'],
+        correctAnswers: ['0.2', '25.13', '2.0'],
         hint1: '$T = 1/f = 1/5.0$',
         hint2: '$\\omega = 2\\pi/T = 2\\pi/0.25$',
         hint3: '$v_{\\text{max}} = A\\omega = A\\sqrt{k/m} = 0.10\\sqrt{200/0.50}$',

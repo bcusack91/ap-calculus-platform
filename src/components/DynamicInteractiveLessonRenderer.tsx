@@ -8,6 +8,7 @@ import rehypeKatex from 'rehype-katex'
 import rehypeRaw from 'rehype-raw'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
+import { renderRichText } from '@/lib/render-rich-text'
 
 // ---------------------------------------------------------------------------
 // Types
@@ -281,9 +282,7 @@ function QuizBlock({
         </h3>
       </div>
 
-      <p className="text-gray-800 dark:text-gray-200 mb-4 whitespace-pre-line font-medium">
-        {quiz.question}
-      </p>
+      <p className="text-gray-800 dark:text-gray-200 mb-4 whitespace-pre-line font-medium" dangerouslySetInnerHTML={{ __html: renderRichText(quiz.question) }} />
 
       <div className="space-y-3 mb-5">
         {quiz.options.map((option, i) => (
@@ -307,7 +306,7 @@ function QuizBlock({
               className="w-4 h-4 text-purple-600"
               disabled={submitted}
             />
-            <span className="text-gray-800 dark:text-gray-200">{option}</span>
+            <span className="text-gray-800 dark:text-gray-200" dangerouslySetInnerHTML={{ __html: renderRichText(option) }} />
             {submitted && i === quiz.correctIndex && (
               <span className="ml-auto text-green-600 font-bold">&#10003;</span>
             )}
@@ -672,7 +671,7 @@ export default function DynamicInteractiveLessonRenderer({
                 {completedSections.has(index) &&
                   currentSectionIndex !== index &&
                   '\u2713 '}
-                {sec.title}
+                <span dangerouslySetInnerHTML={{ __html: renderRichText(sec.title) }} />
               </button>
             ))}
           </div>

@@ -5,14 +5,21 @@ export const g6IntegersPart5Data = {
       id: 'grade6-integers-p5-intro',
       type: 'text' as const,
       content: `
-# 🧮 Multiplying & Dividing Integers
+# ➕➖ Multiplying & Dividing Integers
 
 **Part 5 of 7 — Multiplying & Dividing Integers**
 
-Welcome to **Multiplying & Dividing Integers** — Part 5 of 7 in the Grade 6 Math Integers series.
+### Sign Rules
+| Signs | Result |
+|-------|--------|
+| (+)(+) | + |
+| (−)(−) | + |
+| (+)(−) | − |
+| (−)(+) | − |
 
-This lesson covers key concepts and practice problems.
-      `
+Same signs → positive. Different signs → negative.
+    
+    `
     },
     {
       id: 'grade6-integers-p5-worked',
@@ -20,39 +27,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$(-4) \times (-6) = +24$ (same signs) ✅
+
+$(-15) \div 3 = -5$ (different signs) ✅
+    
+    `
     },
     {
       id: 'grade6-integers-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes multiplying & dividing integers?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Multiplying & Dividing Integers is a core concept in Grade 6 Math."
+                    "question": "$(-5)(8) = ?$",
+                    "options": [
+                              "$-40$",
+                              "$40$",
+                              "$-13$",
+                              "$13$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Different signs → negative: −40."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-integers-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Multiply & Divide** 🧮
 
-Answer the following about multiplying & dividing integers.
-      `,
+1) $(-3)(7) = ?$
+
+2) $(-8)(-5) = ?$
+
+3) $(-24) \div (-6) = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of multiplying & dividing integers."
+        boxes: 3,
+        correctAnswers: ["-21","40","4"],
+        hint1: "Different signs → negative.",
+        hint2: "Same signs → positive.",
+        hint3: "Same signs → positive.",
+        explanation: "1) −21. 2) +40. 3) +4."
       }
     },
     {
@@ -60,22 +82,13 @@ Answer the following about multiplying & dividing integers.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Multiplying & Dividing Integers is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Multiplying & Dividing Integers builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Two negative numbers multiplied give a","options":["Positive result","Negative result","Zero","Cannot determine"]},{"label":"$(-1) \\\\times (-1) \\\\times (-1) =$","options":["−1","1","0","−3"]}],
+        correctAnswers: ["Positive result","−1"],
+        hint1: "Same signs → positive.",
+        hint2: "(−1)(−1)=1, then 1(−1)=−1.",
+        explanation: "Same signs → positive. Three negatives: + × − = −1."
       }
     },
     {
@@ -84,28 +97,34 @@ Answer the following about multiplying & dividing integers.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Multiplying & Dividing Integers | Core multiplying & dividing integers principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Sign Rule |
+|---|---------|-----------|
+| 1 | $(-3)(7)$ | Different signs |
+| 2 | $(-8)(-5)$ | Same signs |
+| 3 | $(-24) \div (-6)$ | Same signs |
+    
+    `
     },
     {
       id: 'grade6-integers-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in multiplying & dividing integers?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$(-36) \\\\div (-4) = ?$",
+                    "options": [
+                              "$9$",
+                              "$-9$",
+                              "$-32$",
+                              "$32$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Same signs → positive: 9."
           }
-        ]
+]
       }
     }
   ]

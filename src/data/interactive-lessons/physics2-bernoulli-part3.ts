@@ -104,7 +104,7 @@ A large water tank has a small hole 5.0 m below the water surface. The hole has 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['10', '2', '4.9', '4.90'],
+        correctAnswers: ['10', '2', '4.9'],
         hint1: '$v = \\sqrt{2gh} = \\sqrt{2(10)(5.0)}$.',
         hint2: '$Q = Av = (2.0 \\times 10^{-4})(10) = 2.0 \\times 10^{-3}$ m³/s.',
         hint3: 'Projectile: exits horizontally at $v = 10$ m/s, falls $h = 1.2$ m. $t = \\sqrt{2h/g} = \\sqrt{2(1.2)/10}$. $x = vt$.',

@@ -9,10 +9,13 @@ export const alg2RationalPart3Data = {
 
 **Part 3 of 7 — Adding & Subtracting**
 
-Welcome to **Adding & Subtracting** — Part 3 of 7 in the Algebra 2 Rational Expressions series.
+Need a **common denominator**.
 
-This lesson covers key concepts and practice problems.
-      `
+$\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}$
+
+**LCD** (Least Common Denominator): smallest expression that both denominators divide into.
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p3-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$\frac{2}{x} + \frac{3}{x} = \frac{5}{x}$ ✅ (same denominator)
+
+$\frac{1}{x} + \frac{1}{x+1} = \frac{(x+1) + x}{x(x+1)} = \frac{2x+1}{x(x+1)}$ ✅
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes adding & subtracting?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Adding & Subtracting is a core concept in Algebra 2."
+                    "question": "$\\frac{3}{x} + \\frac{2}{x} = ?$",
+                    "options": [
+                              "$\\frac{5}{x}$",
+                              "$\\frac{5}{2x}$",
+                              "$\\frac{6}{x^2}$",
+                              "$5$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Same denominator: 3/x + 2/x = 5/x."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-rational-expressions-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Add/Subtract** 🧮
 
-Answer the following about adding & subtracting.
-      `,
+1) $\frac{3}{x} + \frac{2}{x} = \frac{?}{x}$ (numerator)
+
+2) $\frac{1}{2} + \frac{1}{3} = \frac{?}{6}$ (numerator)
+
+3) $\frac{1}{x} + \frac{1}{2x} = \frac{?}{2x}$ (numerator)
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of adding & subtracting."
+        boxes: 3,
+        correctAnswers: ["5","5","3"],
+        hint1: "3 + 2.",
+        hint2: "3/6 + 2/6.",
+        hint3: "2/2x + 1/2x.",
+        explanation: "1) 5. 2) 3+2=5. 3) 2+1=3."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about adding & subtracting.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Adding & Subtracting is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Adding & Subtracting builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To add fractions with different denominators","options":["Find a common denominator first","Just add the denominators","Multiply them","Skip the denominators"]},{"label":"LCD stands for","options":["Least Common Denominator","Last Common Divisor","Largest Common Denominator","Linear Common Degree"]}],
+        correctAnswers: ["Find a common denominator first","Least Common Denominator"],
+        hint1: "Need matching bottoms.",
+        hint2: "Least = smallest.",
+        explanation: "Common denominator first. LCD = Least Common Denominator."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about adding & subtracting.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Adding & Subtracting | Core adding & subtracting principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | LCD |
+|---|---------|-----|
+| 1 | $\frac{3}{x}+\frac{2}{x}$ | $x$ |
+| 2 | $\frac{1}{2}+\frac{1}{3}$ | $6$ |
+| 3 | $\frac{1}{x}+\frac{1}{2x}$ | $2x$ |
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in adding & subtracting?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "LCD of $\\frac{1}{x}$ and $\\frac{1}{2x}$ is:",
+                    "options": [
+                              "$2x$",
+                              "$x$",
+                              "$2x^2$",
+                              "$x^2$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "2x is the smallest common denominator."
           }
-        ]
+]
       }
     }
   ]

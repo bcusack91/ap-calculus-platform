@@ -153,7 +153,7 @@ This is why peak forces in collisions can be enormous even though the average fo
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20', '400', '12.5', '12.50'],
+        correctAnswers: ['20', '400', '12.5'],
         hint1: '$J = F \\times \\Delta t = (400)(0.05)$',
         hint2: 'For a triangle: $J = \\frac{1}{2}(800)(0.04) = 16$ N·s. $F_{\\text{avg}} = J/\\Delta t = 16/0.04$',
         hint3: '$J = \\frac{1}{2}(100)(0.5) = 25$ N·s. $v_f = J/m = 25/2$',

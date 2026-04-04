@@ -122,7 +122,7 @@ $$v = \\omega\\sqrt{A^2 - x^2} \\qquad v_{\\text{max}} = A\\omega$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.1', '0.8', '0.25', '0.10', '0.80', '0.250'],
+        correctAnswers: ['0.1', '0.8', '0.25'],
         hint1: '$E = \\frac{1}{2}kx^2 \\Rightarrow x = \\sqrt{2E/k}$',
         hint2: '$\\omega = \\sqrt{k/m} = \\sqrt{80/0.20}$. $v = \\omega\\sqrt{A^2 - x^2}$',
         hint3: '$E \\propto A^2$. $E_{\\text{final}}/E_{\\text{initial}} = (0.15/0.30)^2$',

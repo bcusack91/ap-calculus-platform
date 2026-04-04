@@ -137,7 +137,7 @@ So $\\omega = a_{\\text{max}}/v_{\\text{max}}$ — a useful relationship for AP 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.6', '0.5', '1.0', '1.60', '0.50', '1.00'],
+        correctAnswers: ['1.6', '0.5', '1.0'],
         hint1: '$v_{\\text{max}} = A\\sqrt{k/m} = 0.08\\sqrt{100/0.25}$',
         hint2: '$A = v_{\\text{max}}/\\omega = 5.0/10$',
         hint3: '$E = \\frac{1}{2}mv_{\\text{max}}^2 = \\frac{1}{2}(0.50)(2.0)^2$',

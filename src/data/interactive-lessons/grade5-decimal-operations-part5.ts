@@ -9,10 +9,15 @@ export const g5DecimalsPart5Data = {
 
 **Part 5 of 7 — Dividing Decimals**
 
-Welcome to **Dividing Decimals** — Part 5 of 7 in the Grade 5 Math Decimal Operations series.
+### Dividing by a whole number
+Divide normally; bring up the decimal point.
 
-This lesson covers key concepts and practice problems.
-      `
+### Dividing by a decimal
+Multiply both divisor and dividend by 10 (or 100) to make the divisor a whole number.
+
+$3.6 \div 0.4 = 36 \div 4 = 9$
+    
+    `
     },
     {
       id: 'grade5-decimal-operations-p5-worked',
@@ -20,39 +25,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$4.8 \div 0.6 = ?$
+
+Multiply both by 10: $48 \div 6 = 8$ ✅
+
+$7.5 \div 3 = 2.5$ ✅
+    
+    `
     },
     {
       id: 'grade5-decimal-operations-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes dividing decimals?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Dividing Decimals is a core concept in Grade 5 Math."
+                    "question": "To divide by 0.5, you can multiply both numbers by:",
+                    "options": [
+                              "10",
+                              "0.5",
+                              "5",
+                              "100"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Multiply by 10 to make 0.5 into 5."
           }
-        ]
+]
       }
     },
     {
       id: 'grade5-decimal-operations-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Divide Decimals** 🧮
 
-Answer the following about dividing decimals.
-      `,
+1) $9.6 \div 4 = ?$
+
+2) $2.4 \div 0.8 = ?$
+
+3) $0.35 \div 0.07 = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of dividing decimals."
+        boxes: 3,
+        correctAnswers: ["2.4","3","5"],
+        hint1: "Divide 9.6 by 4 directly.",
+        hint2: "Multiply both by 10: 24 ÷ 8.",
+        hint3: "Multiply both by 100: 35 ÷ 7.",
+        explanation: "1) 9.6÷4=2.4. 2) 24÷8=3. 3) 35÷7=5."
       }
     },
     {
@@ -60,22 +82,13 @@ Answer the following about dividing decimals.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Dividing Decimals is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Dividing Decimals builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To make a decimal divisor a whole number, multiply by","options":["A power of 10","The numerator","A fraction","Zero"]},{"label":"$1.44 \\\\div 1.2 =$","options":["1.2","12","0.12","14.4"]}],
+        correctAnswers: ["A power of 10","1.2"],
+        hint1: "Powers of 10 = 10, 100, 1000…",
+        hint2: "14.4 ÷ 12 = ?",
+        explanation: "Multiply by 10/100/1000. 14.4 ÷ 12 = 1.2."
       }
     },
     {
@@ -84,28 +97,34 @@ Answer the following about dividing decimals.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
+| # | Problem | Strategy |
 |---|---------|----------|
-| 1 | Dividing Decimals | Core dividing decimals principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| 1 | $9.6 \div 4$ | Direct division |
+| 2 | $2.4 \div 0.8$ | Multiply both by 10 |
+| 3 | $0.35 \div 0.07$ | Multiply both by 100 |
+    
+    `
     },
     {
       id: 'grade5-decimal-operations-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in dividing decimals?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$6.3 \\\\div 0.9 = ?$",
+                    "options": [
+                              "7",
+                              "0.7",
+                              "70",
+                              "63"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "63 ÷ 9 = 7."
           }
-        ]
+]
       }
     }
   ]

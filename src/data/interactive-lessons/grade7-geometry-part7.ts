@@ -9,10 +9,14 @@ export const g7GeometryPart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the Grade 7 Math Geometry series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Formulas
+- Complement: $90° - x$, Supplement: $180° - x$
+- Triangle: $A = \frac{1}{2}bh$
+- Circle: $C = 2\pi r$, $A = \pi r^2$
+- SA prism: $2(lw+lh+wh)$
+- V prism: $lwh$, V cylinder: $\pi r^2 h$
+    
+    `
     },
     {
       id: 'grade7-geometry-p7-worked',
@@ -20,39 +24,53 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Cylinder: r = 4, h = 10. Volume?**
+$V = \pi(16)(10) = 160\pi \approx 502.4$ ✅
+    
+    `
     },
     {
       id: 'grade7-geometry-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in Grade 7 Math."
+                    "question": "Supplement of 72°?",
+                    "options": [
+                              "108°",
+                              "18°",
+                              "72°",
+                              "288°"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "180° − 72° = 108°."
           }
-        ]
+]
       }
     },
     {
       id: 'grade7-geometry-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) Supplement of 72°?
+
+2) Triangle: b=8, h=5. Area?
+
+3) Cube side 6. Volume?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["108","20","216"],
+        hint1: "180 − 72.",
+        hint2: "½(8)(5).",
+        hint3: "6³.",
+        explanation: "1) 108. 2) 20. 3) 216."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"V = πr²h is the formula for a","options":["Cylinder","Cube","Sphere","Cone"]},{"label":"SA of a cube with side s","options":["6s²","s³","4s²","s²"]}],
+        correctAnswers: ["Cylinder","6s²"],
+        hint1: "Circular base × height.",
+        hint2: "6 faces, each s².",
+        explanation: "πr²h = cylinder. SA cube = 6s²."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Type | Problem |
+|---|------|---------|
+| 1 | Angle | Supplement of 72° |
+| 2 | Area | Triangle: b=8, h=5 |
+| 3 | Volume | Cube side 6 |
+    
+    `
     },
     {
       id: 'grade7-geometry-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Volume of cube side 6?",
+                    "options": [
+                              "216",
+                              "36",
+                              "72",
+                              "108"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "6³ = 216."
           }
-        ]
+]
       }
     }
   ]

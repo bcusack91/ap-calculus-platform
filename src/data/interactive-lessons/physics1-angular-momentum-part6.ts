@@ -78,10 +78,10 @@ Time to work through challenging problems involving angular momentum, rotational
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.6', '8.6', '0.20', '3.60', '8.60', '0.200', '0.2'],
-        hint1: '$(1.2)(6) = (1.2 + 0.8)\\omega_f$',
-        hint2: '$KE_i = \\frac{1}{2}(1.2)(36) = 21.6$ J. $KE_f = \\frac{1}{2}(2.0)(\\omega_f^2)$. Loss $= KE_i - KE_f$.',
-        hint3: '$L_i = 0$. Person: $L = mvr = 60(1.5)(3) = 270$. Turntable: $L = I\\omega_t = \\frac{1}{2}(200)(9)\\omega_t = 900\\omega_t$. $0 = 270 - 900\\omega_t$.',
+        correctAnswers: ['3.6', '8.6', '0.20'],
+        hint1: 'Use conservation of angular momentum: $I_1 \\omega_1 = (I_1 + I_2)\\omega_f$.',
+        hint2: 'Find $KE_i$ and $KE_f$ using $\\frac{1}{2}I\\omega^2$, then subtract to find the loss.',
+        hint3: '$L_{\\text{total}} = 0$ initially. The person and turntable must have equal and opposite angular momenta. Find $I_{\\text{turntable}}$ for a uniform disk.',
         explanation: '1) $(1.2)(6) = 2.0 \\omega_f$. $\\omega_f = 7.2/2.0 = 3.6$ rad/s. 2) $KE_i = \\frac{1}{2}(1.2)(36) = 21.6$ J. $KE_f = \\frac{1}{2}(2.0)(12.96) = 12.96$ J. Loss $= 21.6 - 12.96 = 8.64 \\approx 8.6$ J. 3) $L_{\\text{total}} = 0$. $mvr - I\\omega_t = 0$. $270 = 900\\omega_t$. $\\omega_t = 0.30$ rad/s.'
       }
     },

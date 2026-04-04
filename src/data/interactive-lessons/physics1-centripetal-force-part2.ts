@@ -117,7 +117,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['21.9', '5', '0.82', '21.90', '0.820'],
+        correctAnswers: ['21.9', '5', '0.82'],
         hint1: '$\\mu_s mg = mv^2/r \\Rightarrow v = \\sqrt{\\mu_s g r}$.',
         hint2: '$T = mv^2/r \\Rightarrow v = \\sqrt{Tr/m}$.',
         hint3: '$\\mu_s mg = m(4\\pi^2 rf^2) \\Rightarrow f = \\sqrt{\\mu_s g/(4\\pi^2 r)}$.',

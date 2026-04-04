@@ -9,10 +9,16 @@ export const preAlgFractionsPart2Data = {
 
 **Part 2 of 7 — Converting to Percents**
 
-Welcome to **Converting to Percents** — Part 2 of 7 in the Pre-Algebra Fractions, Decimals & Percents series.
+### Decimal → Percent
+Multiply by 100: $0.45 = 45\%$
 
-This lesson covers key concepts and practice problems.
-      `
+### Fraction → Percent
+Convert to decimal first, then multiply by 100: $\frac{3}{4} = 0.75 = 75\%$
+
+### Percent → Decimal
+Divide by 100: $60\% = 0.60$
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p2-worked',
@@ -20,39 +26,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$\frac{2}{5} = 0.4 = 40\%$ ✅
+
+$85\% = 0.85$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes converting to percents?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Converting to Percents is a core concept in Pre-Algebra."
+                    "question": "$0.3$ as a percent?",
+                    "options": [
+                              "30%",
+                              "3%",
+                              "0.3%",
+                              "300%"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "0.3 × 100 = 30%."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-fractions-decimals-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Convert** 🧮
 
-Answer the following about converting to percents.
-      `,
+1) 0.3 = ? % (number only)
+
+2) 1/4 = ? % (number only)
+
+3) 75% = ? (decimal)
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of converting to percents."
+        boxes: 3,
+        correctAnswers: ["30","25","0.75"],
+        hint1: "0.3 × 100.",
+        hint2: "0.25 × 100.",
+        hint3: "75 ÷ 100.",
+        explanation: "1) 30. 2) 25. 3) 0.75."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about converting to percents.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Converting to Percents is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Converting to Percents builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To convert a decimal to a percent","options":["Multiply by 100","Divide by 100","Add 100","Subtract 100"]},{"label":"50% as a fraction is","options":["1/2","5/10","50/10","1/50"]}],
+        correctAnswers: ["Multiply by 100","1/2"],
+        hint1: "Move decimal point right 2.",
+        hint2: "50/100 simplified.",
+        explanation: "Decimal→%: ×100. 50% = 1/2."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about converting to percents.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Converting to Percents | Core converting to percents principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Convert | Answer |
+|---|---------|--------|
+| 1 | 0.3 → % | 30% |
+| 2 | 1/4 → % | 25% |
+| 3 | 75% → decimal | 0.75 |
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in converting to percents?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$\\frac{1}{4}$ as a percent?",
+                    "options": [
+                              "25%",
+                              "14%",
+                              "4%",
+                              "75%"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "1/4 = 0.25 = 25%."
           }
-        ]
+]
       }
     }
   ]

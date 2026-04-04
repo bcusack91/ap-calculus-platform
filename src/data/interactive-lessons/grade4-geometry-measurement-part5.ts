@@ -5,14 +5,21 @@ export const g4GeoMeasurePart5Data = {
       id: 'grade4-geometry-measurement-p5-intro',
       type: 'text' as const,
       content: `
-# 🧮 Symmetry
+# 📏 Symmetry
 
 **Part 5 of 7 — Symmetry**
 
-Welcome to **Symmetry** — Part 5 of 7 in the Grade 4 Math Geometry & Measurement series.
+A **line of symmetry** divides a shape into two matching halves.
 
-This lesson covers key concepts and practice problems.
-      `
+| Shape | Lines of Symmetry |
+|-------|-------------------|
+| Circle | Infinite |
+| Square | 4 |
+| Rectangle | 2 |
+| Equilateral △ | 3 |
+| Isosceles △ | 1 |
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p5-worked',
@@ -20,39 +27,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Lines of symmetry in a regular pentagon?**
+
+Regular pentagon → 5 equal sides, so **5 lines of symmetry** ✅
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes symmetry?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Symmetry is a core concept in Grade 4 Math."
+                    "question": "How many lines of symmetry in a regular hexagon?",
+                    "options": [
+                              "6",
+                              "3",
+                              "2",
+                              "12"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Regular n-gon has n lines. Hexagon: 6."
           }
-        ]
+]
       }
     },
     {
       id: 'grade4-geometry-measurement-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Symmetry** 🧮
 
-Answer the following about symmetry.
-      `,
+1) Lines of symmetry in a rectangle (non-square)?
+
+2) Lines of symmetry in a square?
+
+3) Lines of symmetry in an isosceles (non-equilateral) triangle?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of symmetry."
+        boxes: 3,
+        correctAnswers: ["2","4","1"],
+        hint1: "Fold horizontally and vertically.",
+        hint2: "Horizontal, vertical, and two diagonals.",
+        hint3: "Only one line — through the vertex angle.",
+        explanation: "1) 2. 2) 4. 3) 1."
       }
     },
     {
@@ -60,22 +82,13 @@ Answer the following about symmetry.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Symmetry is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Symmetry builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A circle has how many lines of symmetry?","options":["Infinitely many","1","4","0"]},{"label":"A scalene triangle has how many?","options":["0","1","3","2"]}],
+        correctAnswers: ["Infinitely many","0"],
+        hint1: "Any diameter works.",
+        hint2: "No equal sides → no symmetry.",
+        explanation: "Circle: infinite. Scalene triangle: 0."
       }
     },
     {
@@ -84,28 +97,34 @@ Answer the following about symmetry.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Symmetry | Core symmetry principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Shape | Lines of Symmetry |
+|---|-------|-------------------|
+| 1 | Rectangle | 2 |
+| 2 | Equilateral triangle | 3 |
+| 3 | Regular hexagon | 6 |
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in symmetry?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Which letter has exactly 1 line of symmetry?",
+                    "options": [
+                              "A",
+                              "H",
+                              "X",
+                              "O"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "A has one vertical line. H, X, O have 2+."
           }
-        ]
+]
       }
     }
   ]

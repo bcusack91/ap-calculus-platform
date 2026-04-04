@@ -137,7 +137,7 @@ A block starts from rest and slides 4 m down a 37° incline with $\\mu_k = 0.25$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4', '5.66', '1.4', '5.660', '1.40'],
+        correctAnswers: ['4', '5.66', '1.4'],
         hint1: '$a = g(\\sin 37° - \\mu_k\\cos 37°) = 10(0.60 - 0.20)$.',
         hint2: '$v^2 = 2(4)(4) = 32$. $v = \\sqrt{32}$.',
         hint3: '$t = v/a = 5.66/4$. Or $t = \\sqrt{2d/a} = \\sqrt{8/4} = \\sqrt{2}$.',

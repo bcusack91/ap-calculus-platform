@@ -5,14 +5,18 @@ export const g4FractionsPart7Data = {
       id: 'grade4-fractions-p7-intro',
       type: 'text' as const,
       content: `
-# 🏆 Review & Applications
+# 📐 Review & Applications
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the Grade 4 Math Fractions series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Concepts Review
+- **Equivalent fractions**: Multiply/divide both parts by same number
+- **Comparing**: Common denominator, then compare numerators
+- **Adding** (like denom.): Add numerators, keep denominator
+- **Mixed numbers**: Convert between mixed and improper
+- **Number lines**: Fractions as points between whole numbers
+    
+    `
     },
     {
       id: 'grade4-fractions-p7-worked',
@@ -20,39 +24,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Simplify $\frac{12}{18}$, then compare to $\frac{1}{2}$.**
+
+GCF(12,18) = 6: $\frac{12}{18} = \frac{2}{3}$
+
+$\frac{2}{3} = \frac{4}{6}$ and $\frac{1}{2} = \frac{3}{6}$ → $\frac{2}{3} > \frac{1}{2}$ ✅
+    
+    `
     },
     {
       id: 'grade4-fractions-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in Grade 4 Math."
+                    "question": "Simplified $\\\\frac{8}{12}$ is:",
+                    "options": [
+                              "$\\\\frac{2}{3}$",
+                              "$\\\\frac{4}{6}$",
+                              "$\\\\frac{3}{4}$",
+                              "Already simplified"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "GCF(8,12)=4. 8÷4=2, 12÷4=3."
           }
-        ]
+]
       }
     },
     {
       id: 'grade4-fractions-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) Simplify $\frac{9}{12}$. Numerator?
+
+2) $\frac{3}{5} + \frac{4}{5} = \frac{?}{5}$. Numerator?
+
+3) $\frac{3}{4} \times 4 = $ ? (whole number)
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["3","7","3"],
+        hint1: "GCF of 9 and 12?",
+        hint2: "Add the numerators.",
+        hint3: "(3×4)/4 = 12/4.",
+        explanation: "1) GCF=3: 3/4. 2) 3+4=7. 3) 12/4=3."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"$2\\\\frac{1}{4}$ improper is","options":["$\\\\frac{9}{4}$","$\\\\frac{8}{4}$","$\\\\frac{21}{4}$","$\\\\frac{3}{4}$"]},{"label":"To add unlike denominators, first find the","options":["Least Common Denominator","Greatest Common Factor","Sum","Product"]}],
+        correctAnswers: ["$\\\\frac{9}{4}$","Least Common Denominator"],
+        hint1: "2 × 4 + 1 = ?",
+        hint2: "Denominators must match.",
+        explanation: "2(4)+1=9. Need LCD to add fractions."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Topic | Problem |
+|---|-------|---------|
+| 1 | Simplify | $\frac{8}{12}$ |
+| 2 | Compare | $\frac{5}{6}$ vs $\frac{7}{8}$ |
+| 3 | Add | $\frac{3}{10} + \frac{7}{10}$ |
+    
+    `
     },
     {
       id: 'grade4-fractions-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "A student says $\\\\frac{3}{5} > \\\\frac{7}{10}$. Correct?",
+                    "options": [
+                              "No — $\\\\frac{3}{5} = \\\\frac{6}{10} < \\\\frac{7}{10}$",
+                              "Yes — 3 and 5 are closer",
+                              "Cannot compare",
+                              "Yes — fifths are bigger"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "3/5 = 6/10, and 6/10 < 7/10."
           }
-        ]
+]
       }
     }
   ]

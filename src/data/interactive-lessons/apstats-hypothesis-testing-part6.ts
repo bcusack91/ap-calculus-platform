@@ -9,10 +9,14 @@ export const apStatsHypothesisPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the AP Statistics Hypothesis Testing series.
-
-This lesson covers key concepts and practice problems.
-      `
+Full hypothesis test procedure:
+1. State hypotheses ($H_0$, $H_a$)
+2. Check conditions
+3. Calculate test statistic
+4. Find p-value
+5. Make decision and state conclusion in context
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p6-worked',
@@ -20,39 +24,60 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Claim: μ > 80. Sample: n=25, x̄=84, s=10.**
+
+1. $H_0: \mu=80$, $H_a: \mu>80$
+2. Random ✓, Independent ✓, n=25 (check normality)
+3. $t = (84-80)/(10/5) = 4/2 = 2$, df=24
+4. p ≈ 0.028
+5. p < 0.05 → Reject $H_0$. Evidence supports μ > 80. ✅
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in AP Statistics."
+                    "question": "SE when s=10, n=25?",
+                    "options": [
+                              "2",
+                              "10",
+                              "5",
+                              "0.4"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "10/√25 = 10/5 = 2."
           }
-        ]
+]
       }
     },
     {
       id: 'apstats-hypothesis-testing-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Full Test** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+n=25, x̄=84, s=10, μ₀=80:
+
+1) SE?
+
+2) t?
+
+3) df?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["2","2","24"],
+        hint1: "10/√25.",
+        hint2: "(84−80)/SE.",
+        hint3: "n−1.",
+        explanation: "1) 2. 2) 2. 3) 24."
       }
     },
     {
@@ -60,22 +85,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The first step in a hypothesis test is to","options":["State hypotheses","Calculate t","Find p-value","Check conditions"]},{"label":"We never say \"accept H₀\" — instead we say","options":["Fail to reject H₀","Accept H₀","Prove H₀","Confirm H₀"]}],
+        correctAnswers: ["State hypotheses","Fail to reject H₀"],
+        hint1: "H₀ and Hₐ first.",
+        hint2: "Language matters.",
+        explanation: "Start with hypotheses. Say \"fail to reject,\" not \"accept.\""
       }
     },
     {
@@ -84,28 +100,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Step | Key Action |
+|---|------|----------|
+| 1 | Hypotheses | Write H₀ and Hₐ |
+| 2 | Conditions | Random, Independent, Normal |
+| 3 | Calculate | t = (x̄−μ₀)/(s/√n) |
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "The conclusion should be stated in:",
+                    "options": [
+                              "Context of the problem",
+                              "Mathematical symbols only",
+                              "Greek letters",
+                              "Technical jargon"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Always relate back to the real-world context."
           }
-        ]
+]
       }
     }
   ]

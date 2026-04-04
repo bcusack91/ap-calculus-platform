@@ -63,7 +63,7 @@ Time to put it all together! In this workshop, we'll tackle a variety of circula
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6.3', '7700', '0.006', '6.30', '0.0060'],
+        correctAnswers: ['6.3', '7700', '0.006'],
         hint1: 'Convert 120 RPM to Hz ($f = 2$ Hz), then $v = 2\\pi rf$.',
         hint2: 'Convert 90 min to seconds. $v = 2\\pi r/T$.',
         hint3: '$a_c = v^2/r$.',
@@ -128,7 +128,7 @@ Time to put it all together! In this workshop, we'll tackle a variety of circula
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20.9', '15.5', '0.8', '20.90', '15.50', '0.80'],
+        correctAnswers: ['20.9', '15.5', '0.8'],
         hint1: 'In 1 min at 33.3 RPM, both points complete 33.3 revolutions. Distance = circumference × revolutions. Find the difference.',
         hint2: '$a_c = v^2/r \\Rightarrow v = \\sqrt{a_c \\cdot r}$.',
         hint3: '$a_t = r\\alpha$ where $\\alpha = \\Delta\\omega/\\Delta t$.',

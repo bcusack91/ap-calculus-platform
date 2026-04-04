@@ -125,7 +125,7 @@ $$h_{\\text{max}} = L(1 - \\cos\\theta_{\\text{max}}) \\approx \\frac{L\\theta_{
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.1', '2.0', '2.5', '0.10', '2.00', '2.50'],
+        correctAnswers: ['0.1', '2.0', '2.5'],
         hint1: '$E = \\frac{1}{2}kA^2 \\Rightarrow A = \\sqrt{2E/k} = \\sqrt{2(1.0)/200}$',
         hint2: '$\\frac{1}{2}mv_{\\text{max}}^2 = E \\Rightarrow v_{\\text{max}} = \\sqrt{2E/m}$',
         hint3: '$E = \\frac{1}{2}(80)(0.25)^2$',

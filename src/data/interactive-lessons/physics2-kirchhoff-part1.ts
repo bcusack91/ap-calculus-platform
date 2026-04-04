@@ -160,7 +160,7 @@ A circuit node has five branches connected to it. The currents are:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['13', '5', '3.5', '3.50'],
+        correctAnswers: ['13', '5', '3.5'],
         hint1: 'Add up all the outgoing currents: $3 + 6 + 4$.',
         hint2: '$I_{\\text{in}} = I_{\\text{out}}$: $8 + I_3 = 3 + 6 + 4 = 13$. Solve for $I_3$.',
         hint3: '$10 + 4 = I_a + I_b = 3I_b + I_b = 4I_b$. So $I_b = 14/4 = 3.5$ A.',

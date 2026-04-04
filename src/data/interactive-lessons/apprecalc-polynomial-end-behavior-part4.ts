@@ -9,10 +9,14 @@ export const apPrecalcPolyEndPart4Data = {
 
 **Part 4 of 7 — Turning Points**
 
-Welcome to **Turning Points** — Part 4 of 7 in the AP Precalculus Polynomial End Behavior series.
+A degree-$n$ polynomial has **at most** $n-1$ turning points.
 
-This lesson covers key concepts and practice problems.
-      `
+- **Local max**: graph goes from increasing to decreasing
+- **Local min**: graph goes from decreasing to increasing
+
+The number of turning points is always $\leq n - 1$.
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p4-worked',
@@ -20,39 +24,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Degree 4 polynomial. Max turning points?**
+
+$4 - 1 = 3$ turning points max ✅
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes turning points?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Turning Points is a core concept in AP Precalculus."
+                    "question": "Max turning points for degree 6?",
+                    "options": [
+                              "5",
+                              "6",
+                              "7",
+                              "4"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "6−1 = 5."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Max Turning Points** 🧮
 
-Answer the following about turning points.
-      `,
+1) Degree 3 → max turning points?
+
+2) Degree 5 → max turning points?
+
+3) Degree 2 → max turning points?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of turning points."
+        boxes: 3,
+        correctAnswers: ["2","4","1"],
+        hint1: "3−1.",
+        hint2: "5−1.",
+        hint3: "2−1.",
+        explanation: "1) 2. 2) 4. 3) 1."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about turning points.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Turning Points is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Turning Points builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A degree-n polynomial has at most ____ turning points","options":["n−1","n","n+1","2n"]},{"label":"A turning point is where the graph changes from","options":["Increasing to decreasing or vice versa","Positive to negative","Linear to curved","One equation to another"]}],
+        correctAnswers: ["n−1","Increasing to decreasing or vice versa"],
+        hint1: "One less than degree.",
+        hint2: "Direction change.",
+        explanation: "Max turning points = n−1. Turning = direction change."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about turning points.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Turning Points | Core turning points principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Degree | Max Turning Points |
+|---|--------|-------------------|
+| 1 | 3 | 2 |
+| 2 | 5 | 4 |
+| 3 | 2 | 1 |
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in turning points?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "A quadratic (degree 2) has at most ____ turning point(s):",
+                    "options": [
+                              "1",
+                              "2",
+                              "0",
+                              "3"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "2−1 = 1 (the vertex)."
           }
-        ]
+]
       }
     }
   ]

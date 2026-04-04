@@ -166,7 +166,7 @@ A circuit has a 36 V battery connected to $R_1 = 12 \\; \\Omega$ in series with 
       `,
       exercise: {
         boxes: 5,
-        correctAnswers: ['18', '2', '48', '0.5', '72', '0.50'],
+        correctAnswers: ['18', '2', '48', '0.5', '72'],
         hint1: '$R_{23} = 8 \\times 24/(8+24) = 192/32 = 6 \\; \\Omega$. $R_{\\text{total}} = 12 + 6 = 18 \\; \\Omega$.',
         hint2: '$I = 36/18 = 2$ A. $P_1 = I^2 R_1 = 4 \\times 12 = 48$ W.',
         hint3: '$V_{23} = I \\times R_{23} = 2 \\times 6 = 12$ V. $I_3 = 12/24 = 0.5$ A. $P_{\\text{total}} = IV = 2 \\times 36 = 72$ W.',

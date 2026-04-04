@@ -9,10 +9,13 @@ export const geoCirclesPart3Data = {
 
 **Part 3 of 7 — Arc Length & Sector Area**
 
-Welcome to **Arc Length & Sector Area** — Part 3 of 7 in the Geometry Circles series.
+$\text{Arc length} = \frac{\theta}{360} \times 2\pi r$
 
-This lesson covers key concepts and practice problems.
-      `
+$\text{Sector area} = \frac{\theta}{360} \times \pi r^2$
+
+where $\theta$ is the central angle in degrees.
+    
+    `
     },
     {
       id: 'geometry-circles-p3-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**r = 10, θ = 90°. Arc length?**
+
+$\frac{90}{360} \times 2\pi(10) = \frac{1}{4}(20\pi) = 5\pi \approx 15.7$ ✅
+    
+    `
     },
     {
       id: 'geometry-circles-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes arc length & sector area?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Arc Length & Sector Area is a core concept in Geometry."
+                    "question": "Arc length formula uses what fraction of the circumference?",
+                    "options": [
+                              "θ/360",
+                              "θ/180",
+                              "θ/2π",
+                              "r/θ"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Fraction = central angle / 360°."
           }
-        ]
+]
       }
     },
     {
       id: 'geometry-circles-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Arc & Sector** 🧮 (Use π ≈ 3.14)
 
-Answer the following about arc length & sector area.
-      `,
+1) r=6, θ=60°. Arc length?
+
+2) r=10, θ=90°. Sector area?
+
+3) r=4, θ=180°. Arc length?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of arc length & sector area."
+        boxes: 3,
+        correctAnswers: ["6.28","78.5","12.56"],
+        hint1: "(60/360)(2)(3.14)(6).",
+        hint2: "(90/360)(3.14)(100).",
+        hint3: "(180/360)(2)(3.14)(4).",
+        explanation: "1) (1/6)(37.68)=6.28. 2) 78.5. 3) (1/2)(25.12)=12.56."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about arc length & sector area.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Arc Length & Sector Area is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Arc Length & Sector Area builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Arc length is a portion of the","options":["Circumference","Area","Diameter","Radius"]},{"label":"Sector area is a portion of the","options":["Circle area","Circumference","Diameter","Perimeter"]}],
+        correctAnswers: ["Circumference","Circle area"],
+        hint1: "Arc = part of distance around.",
+        hint2: "Sector = pizza slice of area.",
+        explanation: "Arc length: part of circumference. Sector: part of area."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about arc length & sector area.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Arc Length & Sector Area | Core arc length & sector area principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | r | θ | Find |
+|---|---|---|------|
+| 1 | 6 | 60° | Arc length |
+| 2 | 10 | 90° | Sector area |
+| 3 | 4 | 180° | Arc length |
+    
+    `
     },
     {
       id: 'geometry-circles-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in arc length & sector area?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Sector area for r=10, θ=90° (use π≈3.14)?",
+                    "options": [
+                              "78.5",
+                              "314",
+                              "157",
+                              "31.4"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(90/360)π(100) = 25π ≈ 78.5."
           }
-        ]
+]
       }
     }
   ]

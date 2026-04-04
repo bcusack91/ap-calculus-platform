@@ -9,10 +9,13 @@ export const apStatsHypothesisPart2Data = {
 
 **Part 2 of 7 — Test Statistics**
 
-Welcome to **Test Statistics** — Part 2 of 7 in the AP Statistics Hypothesis Testing series.
+A **test statistic** measures how far the sample result is from the null value, in standard error units.
 
-This lesson covers key concepts and practice problems.
-      `
+$t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}$
+
+Larger $|t|$ → stronger evidence against $H_0$.
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p2-worked',
@@ -20,39 +23,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$\bar{x} = 82$, $\mu_0 = 75$, $s = 14$, $n = 49$.**
+
+$SE = \frac{14}{\sqrt{49}} = \frac{14}{7} = 2$
+
+$t = \frac{82 - 75}{2} = 3.5$ ✅
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes test statistics?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Test Statistics is a core concept in AP Statistics."
+                    "question": "SE = s/√n. If s=14, n=49, SE = ?",
+                    "options": [
+                              "2",
+                              "7",
+                              "14",
+                              "0.5"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "14/√49 = 14/7 = 2."
           }
-        ]
+]
       }
     },
     {
       id: 'apstats-hypothesis-testing-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Test Statistics** 🧮
 
-Answer the following about test statistics.
-      `,
+1) s=14, n=49. SE?
+
+2) x̄=82, μ₀=75, SE=2. t=?
+
+3) x̄=50, μ₀=50, SE=2. t=?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of test statistics."
+        boxes: 3,
+        correctAnswers: ["2","3.5","0"],
+        hint1: "14/√49 = 14/7.",
+        hint2: "(82−75)/2.",
+        hint3: "(50−50)/2.",
+        explanation: "1) 2. 2) 3.5. 3) 0."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about test statistics.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Test Statistics is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Test Statistics builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A large |t| value provides","options":["Strong evidence against H₀","Weak evidence","No evidence","Proof of H₀"]},{"label":"Standard error measures the variability of","options":["The sample mean","Individual data points","The population","The test statistic"]}],
+        correctAnswers: ["Strong evidence against H₀","The sample mean"],
+        hint1: "Far from null.",
+        hint2: "SE = s/√n.",
+        explanation: "Large |t| → strong evidence. SE = variability of x̄."
       }
     },
     {
@@ -84,28 +95,33 @@ Answer the following about test statistics.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Test Statistics | Core test statistics principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | $\bar{x}$ | $\mu_0$ | s | n | SE | t |
+|---|------|------|---|---|----|-|
+| 1 | 82 | 75 | 14 | 49 | 2 | 3.5 |
+| 2 | 50 | 50 | 10 | 25 | 2 | 0 |
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in test statistics?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "If x̄ = μ₀, the test statistic t = ?",
+                    "options": [
+                              "0",
+                              "1",
+                              "−1",
+                              "Undefined"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(μ₀ − μ₀)/SE = 0/SE = 0."
           }
-        ]
+]
       }
     }
   ]

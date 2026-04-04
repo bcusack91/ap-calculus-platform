@@ -124,7 +124,7 @@ A ball is launched from the ground at 20 m/s at 30° above horizontal. Use $g = 
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['1', '5', '17.3', '-10', '17.30'],
+        correctAnswers: ['1', '5', '17.3', '-10'],
         hint1: '$v_{0y} = 20(0.5) = 10$ m/s. $t_{up} = v_{0y}/g = 10/10$',
         hint2: '$h = v_{0y}^2/(2g) = 100/20$',
         hint3: 'At max height, $v = v_{0x} = 20\\cos 30° = 20(0.866)$. At landing, $v_y = -v_{0y}$.',

@@ -5,14 +5,23 @@ export const physCEMCapacitorsPart5Data = {
       id: 'physicsc-em-capacitors-p5-intro',
       type: 'text' as const,
       content: `
-# 🧮 Dielectrics
+# ⚡ Dielectrics
 
 **Part 5 of 7 — Dielectrics**
 
-Welcome to **Dielectrics** — Part 5 of 7 in the AP Physics C: E&M Capacitors & Dielectrics series.
+Inserting a dielectric (insulating material) between plates:
 
-This lesson covers key concepts and practice problems.
-      `
+$C = \kappa C_0 = \frac{\kappa \epsilon_0 A}{d}$
+
+where $\kappa$ (kappa) is the **dielectric constant** ($\kappa > 1$).
+
+Effects of a dielectric (battery disconnected):
+- $C$ increases by factor $\kappa$
+- $V$ decreases by factor $\kappa$
+- $E$ decreases by factor $\kappa$
+- $Q$ stays the same
+    
+    `
     },
     {
       id: 'physicsc-em-capacitors-p5-worked',
@@ -20,39 +29,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A 5 μF capacitor has a dielectric with $\kappa = 3$ inserted. New capacitance?**
+
+$C = \kappa C_0 = 3 \times 5 = 15$ μF ✅
+    
+    `
     },
     {
       id: 'physicsc-em-capacitors-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes dielectrics?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Dielectrics is a core concept in AP Physics C: E&M."
+                    "question": "A dielectric always:",
+                    "options": [
+                              "Increases the capacitance",
+                              "Decreases the capacitance",
+                              "Has no effect",
+                              "Makes $C = 0$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$\\\\kappa > 1$, so $C = \\\\kappa C_0 > C_0$. Capacitance always increases."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-em-capacitors-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Dielectrics** 🧮
 
-Answer the following about dielectrics.
-      `,
+1) $C_0 = 5$ μF, $\kappa = 3$. New $C$ (μF)?
+
+2) A dielectric triples the capacitance. What is $\kappa$?
+
+3) $C_0 = 10$ μF. A dielectric with $\kappa = 2$ is inserted. Capacitor is charged to $Q = 100$ μC (battery disconnected). $V = Q/C$ (V)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of dielectrics."
+        boxes: 3,
+        correctAnswers: ["15","3","5"],
+        hint1: "$C = \\kappa C_0$.",
+        hint2: "$\\kappa = C/C_0 = 3C_0/C_0$.",
+        hint3: "$C = 2(10) = 20$ μF. $V = 100/20$.",
+        explanation: "1) $C = 3(5) = 15$ μF. 2) $\\kappa = 3$. 3) $V = 100/20 = 5$ V."
       }
     },
     {
@@ -60,22 +84,13 @@ Answer the following about dielectrics.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Dielectrics is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Dielectrics builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Common dielectric materials include","options":["Glass, paper, plastic","Metal, copper, iron","Air only","Water only"]},{"label":"The dielectric constant $\\\\kappa$ is always","options":["Greater than or equal to 1","Less than 1","Negative","Zero"]}],
+        correctAnswers: ["Glass, paper, plastic","Greater than or equal to 1"],
+        hint1: "Dielectrics are insulators.",
+        hint2: "$\\kappa = 1$ for vacuum (minimum value).",
+        explanation: "Dielectrics are insulators like glass, paper, plastic. $\\kappa \\geq 1$ always (vacuum = 1)."
       }
     },
     {
@@ -84,28 +99,34 @@ Answer the following about dielectrics.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Dielectrics | Core dielectrics principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Scenario | Effect |
+|---|----------|--------|
+| 1 | Insert dielectric (battery disconnected) | $C \\uparrow$, $V \\downarrow$ |
+| 2 | Insert dielectric (battery connected) | $C \\uparrow$, $Q \\uparrow$ |
+| 3 | Remove dielectric (battery disconnected) | $C \\downarrow$, $V \\uparrow$ |
+    
+    `
     },
     {
       id: 'physicsc-em-capacitors-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in dielectrics?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "With a dielectric inserted (battery disconnected), the electric field:",
+                    "options": [
+                              "Decreases",
+                              "Increases",
+                              "Stays the same",
+                              "Becomes zero"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "The dielectric polarizes and opposes the applied field, reducing $E$ by factor $\\\\kappa$."
           }
-        ]
+]
       }
     }
   ]

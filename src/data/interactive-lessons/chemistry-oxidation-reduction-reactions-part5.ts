@@ -218,10 +218,10 @@ Will a reaction occur? Type **yes** or **no**.
           {
             question: 'Which reaction will occur spontaneously?',
             options: [
-              '$\\\\text{Au}(s) + \\\\text{HCl}(aq) \\\\rightarrow$',
-              '$\\\\text{Ag}(s) + \\\\text{Cu(NO}_3)_2(aq) \\\\rightarrow$',
-              '$\\\\text{Zn}(s) + \\\\text{Pb(NO}_3)_2(aq) \\\\rightarrow$',
-              '$\\\\text{Cu}(s) + \\\\text{NaCl}(aq) \\\\rightarrow$'
+              '$\\text{Au}(s) + \\text{HCl}(aq) \\rightarrow$',
+              '$\\text{Ag}(s) + \\text{Cu(NO}_3)_2(aq) \\rightarrow$',
+              '$\\text{Zn}(s) + \\text{Pb(NO}_3)_2(aq) \\rightarrow$',
+              '$\\text{Cu}(s) + \\text{NaCl}(aq) \\rightarrow$'
             ],
             correctAnswer: 2,
             explanation: 'Zn is above Pb in the activity series. Zn(s) + Pb(NO₃)₂(aq) → Zn(NO₃)₂(aq) + Pb(s). Au and Ag cannot displace Cu or react with dilute acids. Cu cannot displace Na.'

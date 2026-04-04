@@ -9,10 +9,13 @@ export const preAlgFractionsPart3Data = {
 
 **Part 3 of 7 — Comparing Values**
 
-Welcome to **Comparing Values** — Part 3 of 7 in the Pre-Algebra Fractions, Decimals & Percents series.
+To compare fractions, decimals, and percents: **convert to the same form**.
 
-This lesson covers key concepts and practice problems.
-      `
+Easiest: convert everything to decimals.
+
+$\frac{3}{8}$ vs $0.4$: $3÷8 = 0.375 < 0.4$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p3-worked',
@@ -20,39 +23,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Order from least to greatest: $\frac{1}{3}$, 0.3, 35%**
+
+$\frac{1}{3} \approx 0.333$, $0.3$, $35\% = 0.35$
+
+Order: $0.3 < 0.333 < 0.35$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes comparing values?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Comparing Values is a core concept in Pre-Algebra."
+                    "question": "Which is smallest: 0.5, 3/8, 45%?",
+                    "options": [
+                              "3/8",
+                              "0.5",
+                              "45%",
+                              "All equal"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "3/8=0.375, 45%=0.45, 0.5. Smallest is 0.375."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-fractions-decimals-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Convert to Decimals to Compare** 🧮
 
-Answer the following about comparing values.
-      `,
+1) $\frac{3}{8} = ?$
+
+2) $45\% = ?$
+
+3) $\frac{3}{4} = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of comparing values."
+        boxes: 3,
+        correctAnswers: ["0.375","0.45","0.75"],
+        hint1: "3 ÷ 8.",
+        hint2: "45 ÷ 100.",
+        hint3: "3 ÷ 4.",
+        explanation: "1) 0.375. 2) 0.45. 3) 0.75."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about comparing values.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Comparing Values is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Comparing Values builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The best way to compare fractions and decimals is to","options":["Convert to the same form","Leave them as is","Guess","Multiply them together"]},{"label":"Which is greater: 2/5 or 0.35?","options":["2/5","0.35","They are equal","Cannot compare"]}],
+        correctAnswers: ["Convert to the same form","2/5"],
+        hint1: "Common ground.",
+        hint2: "2/5 = 0.4 > 0.35.",
+        explanation: "Convert to same form. 2/5=0.4 > 0.35."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about comparing values.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Comparing Values | Core comparing values principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Values | Smallest |
+|---|--------|----------|
+| 1 | 0.5, 3/8, 45% | 3/8 |
+| 2 | 1/4, 0.3, 20% | 20% |
+| 3 | 0.7, 3/4, 72% | 0.7 |
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in comparing values?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "To compare fractions and decimals, convert to:",
+                    "options": [
+                              "The same form",
+                              "Different forms",
+                              "Whole numbers",
+                              "Percents only"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Same form allows direct comparison."
           }
-        ]
+]
       }
     }
   ]

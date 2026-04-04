@@ -131,7 +131,7 @@ A $30\\;\\text{V}$ battery is connected in series with a $200\\;\\Omega$ resisto
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['0.1', '0.15', '0.020', '19.0', '0.10', '0.150', '0.0200', '0.02', '19.00'],
+        correctAnswers: ['0.1', '0.15', '0.020', '19.0'],
         hint1: '$\\tau = RC = (200)(500 \\times 10^{-6}) = 0.1$ s.',
         hint2: '$I_0 = \\varepsilon / R = 30/200 = 0.15$ A.',
         hint3: '$I(0.2) = 0.15 \\cdot e^{-0.2/0.1} = 0.15 \\cdot e^{-2} = 0.15 \\times 0.1353 = 0.0203 \\approx 0.020$ A.',

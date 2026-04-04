@@ -169,7 +169,7 @@ Plot $a$ vs. $F/m$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.4', '0.36', 'normal force', '0.40', '0.360'],
+        correctAnswers: ['0.4', '0.36', 'normal force'],
         hint1: '$\\mu_s = f_{s,\\max}/N = 12/(3 \\times 10) = 12/30$.',
         hint2: '$\\mu_k = \\tan\\theta = \\tan 20°$.',
         hint3: 'Doubling mass doubles the normal force. Since friction doubled too, $f \\propto N$.',

@@ -5,14 +5,22 @@ export const physCRotationPart2Data = {
       id: 'physicsc-rotational-dynamics-p2-intro',
       type: 'text' as const,
       content: `
-# 📊 Moment of Inertia
+# ⚛️ Moment of Inertia
 
 **Part 2 of 7 — Moment of Inertia**
 
-Welcome to **Moment of Inertia** — Part 2 of 7 in the AP Physics C Rotational Dynamics series.
+$I = \sum m_i r_i^2 = \int r^2\,dm$
 
-This lesson covers key concepts and practice problems.
-      `
+Common moments of inertia:
+- Point mass: $I = mr^2$
+- Solid cylinder/disk: $I = \frac{1}{2}mr^2$
+- Solid sphere: $I = \frac{2}{5}mr^2$
+- Thin rod (center): $I = \frac{1}{12}mL^2$
+- Thin hoop: $I = mr^2$
+
+**Parallel axis theorem:** $I = I_{cm} + md^2$
+    
+    `
     },
     {
       id: 'physicsc-rotational-dynamics-p2-worked',
@@ -20,39 +28,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Find I for a 3 kg point mass at 2 m from the axis.**
+
+$I = mr^2 = 3(4) = 12$ kg·m² ✅
+    
+    `
     },
     {
       id: 'physicsc-rotational-dynamics-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes moment of inertia?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Moment of Inertia is a core concept in AP Physics C."
+                    "question": "The moment of inertia depends on:",
+                    "options": [
+                              "Mass and its distribution from the axis",
+                              "Mass only",
+                              "Shape only",
+                              "Angular velocity"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$I = \\\\sum mr^2$. It depends on both mass and how far it is from the axis."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-rotational-dynamics-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Moment of Inertia** 🧮
 
-Answer the following about moment of inertia.
-      `,
+1) A 3 kg point mass is 2 m from the axis. $I$ (kg·m²)?
+
+2) A solid disk has $m = 4$ kg, $r = 1$ m. $I$ (kg·m²)?
+
+3) A solid sphere has $m = 5$ kg, $r = 2$ m. $I$ (kg·m²)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of moment of inertia."
+        boxes: 3,
+        correctAnswers: ["12","2","8"],
+        hint1: "$I = mr^2 = 3(4)$.",
+        hint2: "$I = \\frac{1}{2}mr^2 = \\frac{1}{2}(4)(1)$.",
+        hint3: "$I = \\frac{2}{5}mr^2 = \\frac{2}{5}(5)(4)$.",
+        explanation: "1) $3(4) = 12$. 2) $\\frac{1}{2}(4)(1) = 2$. 3) $\\frac{2}{5}(5)(4) = 8$."
       }
     },
     {
@@ -60,22 +83,13 @@ Answer the following about moment of inertia.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Moment of Inertia is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Moment of Inertia builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A hoop has moment of inertia","options":["$mr^2$","$\\\\frac{1}{2}mr^2$","$\\\\frac{2}{5}mr^2$","$\\\\frac{1}{12}mL^2$"]},{"label":"Moving mass further from the axis","options":["Increases $I$","Decreases $I$","No effect on $I$","Decreases $\\\\omega$"]}],
+        correctAnswers: ["$mr^2$","Increases $I$"],
+        hint1: "A hoop has all mass at radius $r$.",
+        hint2: "$I \\propto r^2$.",
+        explanation: "A hoop: $I = mr^2$. Since $I \\propto r^2$, moving mass outward increases $I$."
       }
     },
     {
@@ -84,28 +98,34 @@ Answer the following about moment of inertia.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Moment of Inertia | Core moment of inertia principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Object | $I$ |
+|---|--------|-----|
+| 1 | Point mass | $mr^2$ |
+| 2 | Disk | $\frac{1}{2}mr^2$ |
+| 3 | Sphere | $\frac{2}{5}mr^2$ |
+    
+    `
     },
     {
       id: 'physicsc-rotational-dynamics-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in moment of inertia?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "The parallel axis theorem adds the term:",
+                    "options": [
+                              "$md^2$",
+                              "$\\\\frac{1}{2}md^2$",
+                              "$md$",
+                              "$m^2d$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$I = I_{cm} + md^2$, where $d$ is the distance from cm to new axis."
           }
-        ]
+]
       }
     }
   ]

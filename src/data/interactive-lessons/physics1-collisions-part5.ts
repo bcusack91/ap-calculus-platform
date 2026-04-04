@@ -160,7 +160,7 @@ A 5 kg ball at 6 m/s ($+x$) and a 3 kg ball at 4 m/s ($+y$) collide and stick to
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.75', '1.5', '4.04', '3.750', '1.50', '4.040'],
+        correctAnswers: ['3.75', '1.5', '4.04'],
         hint1: '$v_{fx} = (5 \\times 6 + 3 \\times 0)/(5+3) = 30/8$',
         hint2: '$v_{fy} = (5 \\times 0 + 3 \\times 4)/(5+3) = 12/8$',
         hint3: '$v_f = \\sqrt{3.75^2 + 1.5^2}$',

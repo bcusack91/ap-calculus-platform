@@ -9,10 +9,13 @@ export const preAlgVariablesPart4Data = {
 
 **Part 4 of 7 — Combining Like Terms**
 
-Welcome to **Combining Like Terms** — Part 4 of 7 in the Pre-Algebra Introduction to Variables series.
+**Like terms** have the same variable raised to the same power.
 
-This lesson covers key concepts and practice problems.
-      `
+$3x + 5x = 8x$ ✅ (like terms)
+$3x + 5y$ → cannot combine (different variables)
+$2x^2 + 3x$ → cannot combine (different powers)
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p4-worked',
@@ -20,39 +23,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$4x + 3 + 2x + 7 = (4x + 2x) + (3 + 7) = 6x + 10$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes combining like terms?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Combining Like Terms is a core concept in Pre-Algebra."
+                    "question": "$5x + 3x = ?$",
+                    "options": [
+                              "8x",
+                              "15x",
+                              "53x",
+                              "8x²"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Add coefficients: 5+3 = 8."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-intro-variables-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Combine Like Terms** 🧮
 
-Answer the following about combining like terms.
-      `,
+1) $5x + 3x = ?x$
+
+2) $2y + 3y = ?y$
+
+3) $7a - 2a = ?a$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of combining like terms."
+        boxes: 3,
+        correctAnswers: ["8","5","5"],
+        hint1: "5 + 3.",
+        hint2: "2 + 3.",
+        hint3: "7 − 2.",
+        explanation: "1) 8x. 2) 5y. 3) 5a."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about combining like terms.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Combining Like Terms is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Combining Like Terms builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Like terms have the same","options":["Variable and exponent","Coefficient","Value","Number"]},{"label":"$3x + 5$ has how many terms?","options":["2","1","3","8"]}],
+        correctAnswers: ["Variable and exponent","2"],
+        hint1: "Match variable and power.",
+        hint2: "3x is one term, 5 is another.",
+        explanation: "Like terms: same variable and power. 3x+5 has 2 terms."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about combining like terms.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Combining Like Terms | Core combining like terms principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Expression | Simplified |
+|---|-----------|------------|
+| 1 | 5x + 3x | 8x |
+| 2 | 2y + 4 + 3y + 1 | 5y + 5 |
+| 3 | 7a − 2a + 6 | 5a + 6 |
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in combining like terms?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Which are like terms?",
+                    "options": [
+                              "3x and 7x",
+                              "3x and 7y",
+                              "3x and 3x²",
+                              "3 and 3x"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Same variable, same power."
           }
-        ]
+]
       }
     }
   ]

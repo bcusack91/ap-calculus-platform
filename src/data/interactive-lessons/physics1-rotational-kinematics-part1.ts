@@ -159,7 +159,7 @@ $$\\alpha = \\frac{\\Delta\\omega}{\\Delta t}$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.57', '0.79', '6.3', '1.570', '0.790', '6.30'],
+        correctAnswers: ['1.57', '0.79', '6.3'],
         hint1: '$\\theta = 90 \\times \\pi/180 = \\pi/2$',
         hint2: '$\\omega = 2\\pi/T = 2\\pi/8$',
         hint3: '$\\omega_f = 600 \\times 2\\pi/60 = 20\\pi$ rad/s. $\\alpha = \\omega_f/t = 20\\pi/10$',

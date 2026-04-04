@@ -145,7 +145,7 @@ Light of wavelength 200 nm strikes a metal surface with work function $\\phi = 4
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['6.20', '2.00', '2.00', '8.7', '6.200', '6.2', '2.000', '2.0', '8.70'],
+        correctAnswers: ['6.20', '2.00', '2.00', '8.7'],
         hint1: '$E = 1240/200 = 6.20$ eV.',
         hint2: '$KE_{\\max} = E - \\phi = 6.20 - 4.20 = 2.00$ eV. $V_s = KE_{\\max}/e = 2.00$ V.',
         hint3: 'Convert $KE$ to joules: $2.00 \\times 1.60 \\times 10^{-19} = 3.20 \\times 10^{-19}$ J. $v = \\sqrt{2KE/m_e}$. Then $\\lambda = h/(m_e v)$.',

@@ -115,7 +115,7 @@ $T^2/r^3 = 4\\pi^2/(GM)$ depends on $M$ — the mass of the body being orbited. 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.0', '28.3', '3.55', '4.00', '28.30', '3.550'],
+        correctAnswers: ['4.0', '28.3', '3.55'],
         hint1: '$T^2 = r^3$ in AU/years. $T = (2.5)^{3/2}$.',
         hint2: '$T_2^2/T_1^2 = (2r/r)^3 = 8$. $T_2 = T_1\\sqrt{8}$.',
         hint3: '$T_2/T_1 = (r_2/r_1)^{3/2}$.',

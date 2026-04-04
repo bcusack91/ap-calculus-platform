@@ -9,10 +9,16 @@ export const apPrecalcTrigModelPart3Data = {
 
 **Part 3 of 7 — Phase Shift**
 
-Welcome to **Phase Shift** — Part 3 of 7 in the AP Precalculus Trigonometric Modeling series.
+$y = A\sin(B(x - h)) + D$
 
-This lesson covers key concepts and practice problems.
-      `
+**Phase shift** = $h = -\frac{C}{B}$ (horizontal shift)
+
+- Shift **right** when $h > 0$
+- Shift **left** when $h < 0$
+
+**Vertical shift** = $D$ (moves the midline)
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p3-worked',
@@ -20,39 +26,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$y = \sin(x - \frac{\pi}{4})$. Phase shift?**
+
+Shift right by $\frac{\pi}{4}$ ✅
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes phase shift?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Phase Shift is a core concept in AP Precalculus."
+                    "question": "Phase shift of sin(x − π)?",
+                    "options": [
+                              "Right by π",
+                              "Left by π",
+                              "Up by π",
+                              "Down by π"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "x − π → shift right π."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-trig-modeling-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Shifts** 🧮
 
-Answer the following about phase shift.
-      `,
+1) $\sin(x) + 3$. Midline at $y = $ ?
+
+2) $\sin(x - \pi)$. Midline at $y = $ ?
+
+3) $\cos(x) + 2$. Midline at $y = $ ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of phase shift."
+        boxes: 3,
+        correctAnswers: ["3","0","2"],
+        hint1: "D = 3.",
+        hint2: "No vertical shift.",
+        hint3: "D = 2.",
+        explanation: "1) 3. 2) 0. 3) 2."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about phase shift.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Phase Shift is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Phase Shift builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A phase shift moves the graph","options":["Horizontally","Vertically","Both","Neither"]},{"label":"sin(x − π/2) equals","options":["−cos(x)","cos(x)","sin(x)","tan(x)"]}],
+        correctAnswers: ["Horizontally","−cos(x)"],
+        hint1: "Left or right.",
+        hint2: "Sine shifted right by π/2.",
+        explanation: "Phase = horizontal shift. sin(x−π/2) = −cos(x)."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about phase shift.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
+| # | Function | Phase Shift |
 |---|---------|----------|
-| 1 | Phase Shift | Core phase shift principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| 1 | $\sin(x - \pi)$ | Right π |
+| 2 | $\cos(x + \frac{\pi}{2})$ | Left π/2 |
+| 3 | $\sin(x) + 3$ | No phase shift, up 3 |
+    
+    `
     },
     {
       id: 'apprecalc-trig-modeling-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in phase shift?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Vertical shift of sin(x) + 3?",
+                    "options": [
+                              "Up 3",
+                              "Down 3",
+                              "Right 3",
+                              "Left 3"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "+D shifts the midline up."
           }
-        ]
+]
       }
     }
   ]

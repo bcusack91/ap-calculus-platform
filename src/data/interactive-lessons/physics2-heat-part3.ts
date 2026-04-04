@@ -135,7 +135,7 @@ A 0.40 kg block of copper ($c = 390$ J/(kg·°C)) at 250°C is placed in 1.5 kg 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['156', '6279', '23.6', '23.60'],
+        correctAnswers: ['156', '6279', '23.6'],
         hint1: '$mc_{\\text{Cu}} = (0.40)(390)$.',
         hint2: '$mc_w = (1.5)(4{,}186)$.',
         hint3: 'Set $156(T_f - 250) + 6{,}279(T_f - 18) = 0$ and solve for $T_f$.',

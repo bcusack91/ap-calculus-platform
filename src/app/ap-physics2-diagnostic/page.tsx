@@ -12,6 +12,7 @@ import {
   type APPhysics2DiagnosticResults,
 } from '@/data/ap-physics-2-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -41,6 +42,7 @@ export default function APPhysics2DiagnosticPage() {
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
+  const [showReference, setShowReference] = useState(false)
 
   useEffect(() => {
     if (status === 'unauthenticated') router.push('/auth/signin?callbackUrl=/ap-physics2-diagnostic')
@@ -124,6 +126,7 @@ export default function APPhysics2DiagnosticPage() {
             </div>
             <div className="flex items-center gap-4">
               <span className={`text-sm font-mono font-bold ${timeRemaining < 300 ? 'text-red-500' : 'text-gray-600 dark:text-gray-400'}`}>⏱ {formatTime(timeRemaining)}</span>
+              <button onClick={() => setShowReference(true)} className="rounded-lg border border-violet-300 px-3 py-1 text-xs font-medium text-violet-700 transition hover:bg-violet-50 dark:border-violet-600 dark:text-violet-400 dark:hover:bg-violet-900/20">📋 Reference Sheet</button>
               <button onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase('menu'); setTestData(null) }} className="text-sm text-gray-500 hover:text-red-500 dark:text-gray-400">Exit</button>
             </div>
           </div>
@@ -212,6 +215,7 @@ export default function APPhysics2DiagnosticPage() {
               <button onClick={handleFinish} className="rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:shadow-lg">Submit Diagnostic</button>
             )}
           </div>
+          <ReferenceSheetModal open={showReference} onClose={() => setShowReference(false)} courseSlug="ap-physics-2" />
         </div></div>
       </div>
     )

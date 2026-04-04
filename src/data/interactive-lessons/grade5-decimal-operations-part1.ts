@@ -9,10 +9,14 @@ export const g5DecimalsPart1Data = {
 
 **Part 1 of 7 — Place Value to Thousandths**
 
-Welcome to **Place Value to Thousandths** — Part 1 of 7 in the Grade 5 Math Decimal Operations series.
+Every digit has a place value. After the decimal point:
+- **Tenths** (0.1) — first place
+- **Hundredths** (0.01) — second place
+- **Thousandths** (0.001) — third place
 
-This lesson covers key concepts and practice problems.
-      `
+Example: $3.456$ → 3 ones, 4 tenths, 5 hundredths, 6 thousandths
+    
+    `
     },
     {
       id: 'grade5-decimal-operations-p1-worked',
@@ -20,39 +24,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**What is the value of 7 in 0.372?**
+
+7 is in the hundredths place → $7 \times 0.01 = 0.07$ ✅
+    
+    `
     },
     {
       id: 'grade5-decimal-operations-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes place value to thousandths?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Place Value to Thousandths is a core concept in Grade 5 Math."
+                    "question": "In 5.238, which digit is in the hundredths place?",
+                    "options": [
+                              "3",
+                              "2",
+                              "8",
+                              "5"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Tenths=2, hundredths=3, thousandths=8."
           }
-        ]
+]
       }
     },
     {
       id: 'grade5-decimal-operations-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Place Value** 🧮
 
-Answer the following about place value to thousandths.
-      `,
+1) In 4.829, the value of the digit 2 is?
+
+2) In 0.561, the value of the digit 5 is?
+
+3) In 7.043, the value of the digit 3 is?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of place value to thousandths."
+        boxes: 3,
+        correctAnswers: ["0.02","0.5","0.003"],
+        hint1: "2 is in the hundredths place.",
+        hint2: "5 is in the tenths place.",
+        hint3: "3 is in the thousandths place.",
+        explanation: "1) 2 hundredths = 0.02. 2) 5 tenths = 0.5. 3) 3 thousandths = 0.003."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about place value to thousandths.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Place Value to Thousandths is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Place Value to Thousandths builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The third place after the decimal is called","options":["Thousandths","Hundredths","Tenths","Ten-thousandths"]},{"label":"0.009 is read as","options":["Nine thousandths","Nine hundredths","Nine tenths","Ninety thousandths"]}],
+        correctAnswers: ["Thousandths","Nine thousandths"],
+        hint1: "Count places: tenths, hundredths, …",
+        hint2: "The 9 is in the thousandths place.",
+        explanation: "Third decimal place = thousandths. 0.009 = nine thousandths."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about place value to thousandths.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Place Value to Thousandths | Core place value to thousandths principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Number | Find the value of… |
+|---|--------|--------------------|
+| 1 | 4.829 | the 2 |
+| 2 | 0.561 | the 5 |
+| 3 | 7.043 | the 3 |
+    
+    `
     },
     {
       id: 'grade5-decimal-operations-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in place value to thousandths?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "How many thousandths are in 0.045?",
+                    "options": [
+                              "45",
+                              "4",
+                              "5",
+                              "450"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "0.045 = 45 thousandths (45/1000)."
           }
-        ]
+]
       }
     }
   ]

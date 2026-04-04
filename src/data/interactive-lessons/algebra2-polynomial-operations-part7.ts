@@ -9,10 +9,14 @@ export const alg2PolynomialsPart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the Algebra 2 Polynomial Operations series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Concepts
+- Add/subtract: combine like terms
+- Multiply: FOIL or distribute
+- Factor: GCF, trinomial, difference of squares
+- Divide: long or synthetic division
+- Remainder theorem: $p(c)$ = remainder when $\div (x-c)$
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p7-worked',
@@ -20,39 +24,55 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$x^2 - 5x + 6 = (x-2)(x-3)$
+Zeros: $x = 2, 3$ ✅
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in Algebra 2."
+                    "question": "$(x+1)(x+6) = ?$",
+                    "options": [
+                              "$x^2+7x+6$",
+                              "$x^2+6x+1$",
+                              "$2x+7$",
+                              "$x^2+6$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "1+6=7, 1×6=6."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-polynomial-operations-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+$(x+1)(x+6) = x^2 + ?x + ?$
+
+1) Coefficient of x?
+
+2) Constant?
+
+3) $p(x)=x^2-1$. $p(3) = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["7","6","8"],
+        hint1: "1+6.",
+        hint2: "1×6.",
+        hint3: "9−1.",
+        explanation: "1) 7. 2) 6. 3) 8."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"FOIL is used to multiply","options":["Two binomials","Any polynomials","Monomials","Constants"]},{"label":"The Factor Theorem says if $p(c)=0$ then","options":["$(x-c)$ is a factor","c is the degree","$(x+c)$ is the quotient","p has no real zeros"]}],
+        correctAnswers: ["Two binomials","$(x-c)$ is a factor"],
+        hint1: "Two terms × two terms.",
+        hint2: "Zero remainder.",
+        explanation: "FOIL: binomial × binomial. p(c)=0 → (x−c) is factor."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Type | Problem |
+|---|------|---------|
+| 1 | FOIL | $(x+1)(x+6)$ |
+| 2 | Factor | $x^2-5x+6$ |
+| 3 | Evaluate | $p(x)=x^2-1$, $p(3)$ |
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$p(x)=x^2-1$. $p(3)=?$",
+                    "options": [
+                              "8",
+                              "10",
+                              "2",
+                              "0"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "9−1=8."
           }
-        ]
+]
       }
     }
   ]

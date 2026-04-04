@@ -9,10 +9,13 @@ export const apPrecalcPolyEndPart5Data = {
 
 **Part 5 of 7 — Sketching Polynomials**
 
-Welcome to **Sketching Polynomials** — Part 5 of 7 in the AP Precalculus Polynomial End Behavior series.
-
-This lesson covers key concepts and practice problems.
-      `
+Steps to sketch:
+1. Find the **degree** and **leading coefficient** → end behavior
+2. Find **zeros** and their multiplicities
+3. Find the **y-intercept** ($f(0)$)
+4. Plot key points and connect smoothly
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p5-worked',
@@ -20,39 +23,59 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$f(x) = x^2 - 4 = (x-2)(x+2)$**
+
+- Degree 2, LC = 1 → both ends up
+- Zeros: $x = 2, -2$ (mult 1 each → cross)
+- y-int: $f(0) = -4$
+- Parabola opening up ✅
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes sketching polynomials?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Sketching Polynomials is a core concept in AP Precalculus."
+                    "question": "y-intercept of f(x) = x² − 9?",
+                    "options": [
+                              "−9",
+                              "9",
+                              "0",
+                              "3"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "f(0) = 0 − 9 = −9."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**y-Intercepts** 🧮
 
-Answer the following about sketching polynomials.
-      `,
+Find $f(0)$:
+
+1) $f(x) = x^2 - 9$
+
+2) $f(x) = x^3 - x$
+
+3) $f(x) = 2x^2 + 1$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of sketching polynomials."
+        boxes: 3,
+        correctAnswers: ["-9","0","1"],
+        hint1: "0² − 9.",
+        hint2: "0³ − 0.",
+        hint3: "2(0)² + 1.",
+        explanation: "1) −9. 2) 0. 3) 1."
       }
     },
     {
@@ -60,22 +83,13 @@ Answer the following about sketching polynomials.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Sketching Polynomials is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Sketching Polynomials builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The y-intercept is found by setting","options":["x = 0","y = 0","f(x) = 0","x = 1"]},{"label":"Zeros are found by setting","options":["f(x) = 0","x = 0","f(x) = 1","x = y"]}],
+        correctAnswers: ["x = 0","f(x) = 0"],
+        hint1: "Evaluate at x=0.",
+        hint2: "Where the function equals zero.",
+        explanation: "y-intercept: x = 0. Zeros: f(x) = 0."
       }
     },
     {
@@ -84,28 +98,34 @@ Answer the following about sketching polynomials.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Sketching Polynomials | Core sketching polynomials principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Function | y-intercept |
+|---|---------|-------------|
+| 1 | $x^2 - 9$ | −9 |
+| 2 | $x^3 - x$ | 0 |
+| 3 | $2x^2 + 1$ | 1 |
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in sketching polynomials?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Zeros of x² − 4?",
+                    "options": [
+                              "x = 2 and x = −2",
+                              "x = 4",
+                              "x = 0",
+                              "No real zeros"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(x−2)(x+2) = 0."
           }
-        ]
+]
       }
     }
   ]

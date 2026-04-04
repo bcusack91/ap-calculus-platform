@@ -113,7 +113,7 @@ You've learned about current, resistance, resistivity, Ohm's Law, power, and rea
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['11.2', '2.0', '11.2', '1080', '11.20', '2.00'],
+        correctAnswers: ['11.2', '2.0', '11.2', '1080'],
         hint1: '$A = \\pi(d/2)^2 = \\pi(2.5 \\times 10^{-4})^2 = 1.96 \\times 10^{-7}$ m². $R = \\rho L/A$.',
         hint2: '$I = \\varepsilon/(R + r) = 12/(5.6 + 0.4)$.',
         hint3: '$V = \\varepsilon - Ir = 12 - (2.0)(0.40)$.',

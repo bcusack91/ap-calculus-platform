@@ -9,10 +9,13 @@ export const preAlgVariablesPart3Data = {
 
 **Part 3 of 7 — Evaluating Expressions**
 
-Welcome to **Evaluating Expressions** — Part 3 of 7 in the Pre-Algebra Introduction to Variables series.
+To **evaluate** an expression:
+1. Substitute the given value for the variable
+2. Follow order of operations (PEMDAS)
 
-This lesson covers key concepts and practice problems.
-      `
+$3x + 2$ when $x = 4$: $3(4) + 2 = 14$
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p3-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$2x^2 - 5$ when $x = 3$:
+
+$2(3)^2 - 5 = 2(9) - 5 = 18 - 5 = 13$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes evaluating expressions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Evaluating Expressions is a core concept in Pre-Algebra."
+                    "question": "$4x + 1$ when $x = 3$?",
+                    "options": [
+                              "13",
+                              "12",
+                              "43",
+                              "15"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "4(3) + 1 = 12 + 1 = 13."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-intro-variables-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Evaluate** 🧮
 
-Answer the following about evaluating expressions.
-      `,
+1) $4x + 1$ when $x = 3$?
+
+2) $x^2 + 2$ when $x = 5$?
+
+3) $3x - 7$ when $x = 4$?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of evaluating expressions."
+        boxes: 3,
+        correctAnswers: ["13","27","5"],
+        hint1: "4(3) + 1.",
+        hint2: "5² + 2.",
+        hint3: "3(4) − 7.",
+        explanation: "1) 13. 2) 27. 3) 5."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about evaluating expressions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Evaluating Expressions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Evaluating Expressions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To evaluate means to","options":["Find the value by substituting","Simplify without values","Guess the answer","Skip the variable"]},{"label":"When x=2, x² means","options":["2² = 4","2×2 = 4","2+2 = 4","All of these are equivalent"]}],
+        correctAnswers: ["Find the value by substituting","All of these are equivalent"],
+        hint1: "Substitute and calculate.",
+        hint2: "x²=x×x.",
+        explanation: "Evaluate: plug in and compute. x²=x×x."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about evaluating expressions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Evaluating Expressions | Core evaluating expressions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Expression | x | Value |
+|---|-----------|---|-------|
+| 1 | 4x + 1 | 3 | 13 |
+| 2 | x² + 2 | 5 | 27 |
+| 3 | 3x − 7 | 4 | 5 |
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in evaluating expressions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$x^2 + 2$ when $x = 5$?",
+                    "options": [
+                              "27",
+                              "12",
+                              "52",
+                              "7"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "25 + 2 = 27."
           }
-        ]
+]
       }
     }
   ]

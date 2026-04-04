@@ -140,7 +140,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['17.3', '1', '11', '17.30'],
+        correctAnswers: ['17.3', '1', '11'],
         hint1: '$v_{max} = \\sqrt{\\mu_s gr}$.',
         hint2: 'Use $N = mg(2h/R - 5)$.',
         hint3: '$T = mg + mv^2/r$.',

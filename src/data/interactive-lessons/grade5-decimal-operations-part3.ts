@@ -9,10 +9,13 @@ export const g5DecimalsPart3Data = {
 
 **Part 3 of 7 — Adding & Subtracting Decimals**
 
-Welcome to **Adding & Subtracting Decimals** — Part 3 of 7 in the Grade 5 Math Decimal Operations series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Steps
+1. **Line up** the decimal points vertically
+2. **Add zeros** to fill empty places
+3. **Add or subtract** as with whole numbers
+4. **Bring down** the decimal point
+    
+    `
     },
     {
       id: 'grade5-decimal-operations-p3-worked',
@@ -20,39 +23,58 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$3.45 + 2.7 = ?$
+
+Line up: $3.45 + 2.70 = 6.15$ ✅
+
+$5.3 - 2.86 = ?$
+
+Line up: $5.30 - 2.86 = 2.44$ ✅
+    
+    `
     },
     {
       id: 'grade5-decimal-operations-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes adding & subtracting decimals?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Adding & Subtracting Decimals is a core concept in Grade 5 Math."
+                    "question": "What is $4.56 + 3.2$?",
+                    "options": [
+                              "7.76",
+                              "7.58",
+                              "7.78",
+                              "4.88"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$4.56 + 3.20 = 7.76$."
           }
-        ]
+]
       }
     },
     {
       id: 'grade5-decimal-operations-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Add & Subtract** 🧮
 
-Answer the following about adding & subtracting decimals.
-      `,
+1) $4.5 + 3.28 = ?$
+
+2) $10 - 6.43 = ?$
+
+3) $0.75 + 0.8 + 0.125 = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of adding & subtracting decimals."
+        boxes: 3,
+        correctAnswers: ["7.78","3.57","1.675"],
+        hint1: "Rewrite as 4.50 + 3.28.",
+        hint2: "Rewrite as 10.00 − 6.43.",
+        hint3: "Rewrite as 0.750 + 0.800 + 0.125.",
+        explanation: "1) 4.50+3.28=7.78. 2) 10.00−6.43=3.57. 3) 0.750+0.800+0.125=1.675."
       }
     },
     {
@@ -60,22 +82,13 @@ Answer the following about adding & subtracting decimals.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Adding & Subtracting Decimals is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Adding & Subtracting Decimals builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"First step when adding decimals","options":["Line up decimal points","Add the digits left to right","Multiply by 10","Remove the decimal"]},{"label":"$6.2 - 3.85$ requires you to rewrite 6.2 as","options":["6.20","62.0","0.62","6.02"]}],
+        correctAnswers: ["Line up decimal points","6.20"],
+        hint1: "Alignment comes first.",
+        hint2: "Add a zero in the hundredths place.",
+        explanation: "Align decimals first. 6.2 → 6.20 for subtraction."
       }
     },
     {
@@ -84,28 +97,34 @@ Answer the following about adding & subtracting decimals.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
+| # | Problem | Key Step |
 |---|---------|----------|
-| 1 | Adding & Subtracting Decimals | Core adding & subtracting decimals principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| 1 | $4.5 + 3.28$ | Add trailing zero |
+| 2 | $10 - 6.43$ | 10.00 - 6.43 |
+| 3 | $0.75 + 0.8 + 0.125$ | Align all three |
+    
+    `
     },
     {
       id: 'grade5-decimal-operations-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in adding & subtracting decimals?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Why add trailing zeros?",
+                    "options": [
+                              "To keep place values aligned",
+                              "To make the number bigger",
+                              "Because zeros change value",
+                              "It is optional decoration"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Trailing zeros ensure every column lines up."
           }
-        ]
+]
       }
     }
   ]

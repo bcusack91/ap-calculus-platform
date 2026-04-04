@@ -9,10 +9,13 @@ export const g6RatiosPart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the Grade 6 Math Ratios & Proportions series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Formulas
+- **Ratio**: Simplify by GCF
+- **Unit rate**: Divide to get denominator 1
+- **Proportion**: Cross-multiply to solve
+- **Percent**: Part = % × Whole
+    
+    `
     },
     {
       id: 'grade6-ratios-proportions-p7-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$\frac{x}{8} = \frac{9}{12}$. Solve.**
+
+Cross: $12x = 72$ → $x = 6$ ✅
+    
+    `
     },
     {
       id: 'grade6-ratios-proportions-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in Grade 6 Math."
+                    "question": "14:21 simplified:",
+                    "options": [
+                              "2:3",
+                              "7:10",
+                              "14:21",
+                              "1:2"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "GCF=7: 14÷7=2, 21÷7=3."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-ratios-proportions-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) 14:21 simplified = ?:3. First number?
+
+2) \$24 for 6 items = \$? per item
+
+3) $\frac{x}{5} = \frac{8}{10}$. $x = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["2","4","4"],
+        hint1: "GCF of 14 and 21.",
+        hint2: "24 ÷ 6.",
+        hint3: "Cross-multiply: 10x = 40.",
+        explanation: "1) 14÷7=2. 2) 24÷6=4. 3) 40÷10=4."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Cross-multiplication is used to solve","options":["Proportions","Equations with one variable","Inequalities","Polynomials"]},{"label":"10% of 250 is","options":["25","250","2.5","2500"]}],
+        correctAnswers: ["Proportions","25"],
+        hint1: "Two equal ratios.",
+        hint2: "0.10 × 250.",
+        explanation: "Cross-multiply for proportions. 0.10 × 250 = 25."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Type | Problem |
+|---|------|---------|
+| 1 | Simplify | 14:21 |
+| 2 | Unit rate | $24 for 6 |
+| 3 | Proportion | x/5 = 8/10 |
+    
+    `
     },
     {
       id: 'grade6-ratios-proportions-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$24 for 6 items. Unit rate?",
+                    "options": [
+                              "$4 per item",
+                              "$6 per item",
+                              "$24 per item",
+                              "$18 per item"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "24 ÷ 6 = $4."
           }
-        ]
+]
       }
     }
   ]

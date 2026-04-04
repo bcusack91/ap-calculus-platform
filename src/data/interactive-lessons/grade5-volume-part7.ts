@@ -9,10 +9,13 @@ export const g5VolumePart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the Grade 5 Math Volume series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Formulas
+- **Rectangular prism**: $V = l \times w \times h$
+- **Cube**: $V = s^3$
+- **Composite**: Split and add volumes
+- **1 liter = 1,000 cm³**
+    
+    `
     },
     {
       id: 'grade5-volume-p7-worked',
@@ -20,39 +23,53 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Cube side 6 cm. Volume?**
+$V = 6^3 = 216$ cm³ ✅
+    
+    `
     },
     {
       id: 'grade5-volume-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in Grade 5 Math."
+                    "question": "Volume of 8 × 5 × 4 cm prism?",
+                    "options": [
+                              "160 cm³",
+                              "80 cm³",
+                              "17 cm³",
+                              "320 cm³"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "8 × 5 × 4 = 160 cm³."
           }
-        ]
+]
       }
     },
     {
       id: 'grade5-volume-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) Rectangular prism 8 × 5 × 4 cm. Volume (cm³)?
+
+2) Cube, side 7 cm. Volume (cm³)?
+
+3) 5,000 cm³ = ? liters
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["160","343","5"],
+        hint1: "8 × 5 × 4.",
+        hint2: "7³.",
+        hint3: "Divide by 1,000.",
+        explanation: "1) 160. 2) 343. 3) 5."
       }
     },
     {
@@ -60,22 +77,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Volume formula for a rectangular prism","options":["V = l × w × h","V = 2(l+w+h)","V = l × w","V = 6s²"]},{"label":"To convert cm³ to liters, divide by","options":["1,000","100","10","10,000"]}],
+        correctAnswers: ["V = l × w × h","1,000"],
+        hint1: "Three dimensions.",
+        hint2: "1 L = 1,000 cm³.",
+        explanation: "V = lwh. Divide cm³ by 1,000 for liters."
       }
     },
     {
@@ -84,28 +92,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Type | Problem |
+|---|------|---------|
+| 1 | Prism | 8 × 5 × 4 |
+| 2 | Cube | s = 7 |
+| 3 | Convert | 5,000 cm³ to liters |
+    
+    `
     },
     {
       id: 'grade5-volume-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "5,000 cm³ = ? liters",
+                    "options": [
+                              "5",
+                              "50",
+                              "0.5",
+                              "500"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "5,000 ÷ 1,000 = 5 liters."
           }
-        ]
+]
       }
     }
   ]

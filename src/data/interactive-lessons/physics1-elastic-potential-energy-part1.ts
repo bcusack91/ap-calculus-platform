@@ -158,7 +158,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['400', '24', '0.2', '0.20'],
+        correctAnswers: ['400', '24', '0.2'],
         hint1: '$k = mg/x = 2(10)/0.05$.',
         hint2: '$F = kx = 800 \\times 0.03$.',
         hint3: '$x = mg/k = 5(10)/250$.',

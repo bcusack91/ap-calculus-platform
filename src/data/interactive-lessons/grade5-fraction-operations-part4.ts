@@ -5,14 +5,16 @@ export const g5FractionOpsPart4Data = {
       id: 'grade5-fraction-operations-p4-intro',
       type: 'text' as const,
       content: `
-# 📈 Dividing Fractions
+# 🔢 Dividing Fractions
 
 **Part 4 of 7 — Dividing Fractions**
 
-Welcome to **Dividing Fractions** — Part 4 of 7 in the Grade 5 Math Fraction Operations series.
+**Keep, Change, Flip** (KCF):
+$\frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \times \frac{d}{c}$
 
-This lesson covers key concepts and practice problems.
-      `
+Keep the first fraction, change ÷ to ×, flip the second fraction.
+    
+    `
     },
     {
       id: 'grade5-fraction-operations-p4-worked',
@@ -20,39 +22,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$\frac{3}{4} \div \frac{2}{5} = \frac{3}{4} \times \frac{5}{2} = \frac{15}{8} = 1\frac{7}{8}$ ✅
+    
+    `
     },
     {
       id: 'grade5-fraction-operations-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes dividing fractions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Dividing Fractions is a core concept in Grade 5 Math."
+                    "question": "The reciprocal of $\\\\frac{3}{7}$ is:",
+                    "options": [
+                              "$\\\\frac{7}{3}$",
+                              "$\\\\frac{3}{7}$",
+                              "$\\\\frac{1}{3}$",
+                              "$-\\\\frac{3}{7}$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Flip numerator and denominator: 7/3."
           }
-        ]
+]
       }
     },
     {
       id: 'grade5-fraction-operations-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Divide Fractions** 🧮
 
-Answer the following about dividing fractions.
-      `,
+1) $\frac{1}{2} \div \frac{1}{4} = ?$
+
+2) $\frac{3}{5} \div \frac{2}{3}$: numerator of the result (before simplifying)?
+
+3) $4 \div \frac{1}{3} = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of dividing fractions."
+        boxes: 3,
+        correctAnswers: ["2","9","12"],
+        hint1: "Keep 1/2, flip 1/4 → 4/1, multiply.",
+        hint2: "3/5 × 3/2 = ?/?",
+        hint3: "4/1 × 3/1 = ?",
+        explanation: "1) 1/2 × 4/1 = 4/2 = 2. 2) 3×3=9 (over 10). 3) 4×3=12."
       }
     },
     {
@@ -60,22 +75,13 @@ Answer the following about dividing fractions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Dividing Fractions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Dividing Fractions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"When dividing fractions, you \"Keep, Change, Flip.\" \"Flip\" means","options":["Take the reciprocal of the second fraction","Flip the first fraction","Change the sign","Swap numerators"]},{"label":"$6 \\\\div \\\\frac{1}{2} =$","options":["12","3","$\\\\frac{1}{12}$","$\\\\frac{6}{2}$"]}],
+        correctAnswers: ["Take the reciprocal of the second fraction","12"],
+        hint1: "Reciprocal = flip.",
+        hint2: "6 × 2/1 = ?",
+        explanation: "Flip the divisor. 6 × 2 = 12."
       }
     },
     {
@@ -84,28 +90,34 @@ Answer the following about dividing fractions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Dividing Fractions | Core dividing fractions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Reciprocal |
+|---|---------|------------|
+| 1 | $\frac{1}{2} \div \frac{1}{4}$ | Flip 1/4 → 4/1 |
+| 2 | $\frac{3}{5} \div \frac{2}{3}$ | Flip 2/3 → 3/2 |
+| 3 | $4 \div \frac{1}{3}$ | Flip 1/3 → 3/1 |
+    
+    `
     },
     {
       id: 'grade5-fraction-operations-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in dividing fractions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$\\\\frac{1}{2} \\\\div \\\\frac{1}{4} = ?$",
+                    "options": [
+                              "2",
+                              "$\\\\frac{1}{8}$",
+                              "4",
+                              "$\\\\frac{1}{2}$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "1/2 × 4/1 = 4/2 = 2."
           }
-        ]
+]
       }
     }
   ]

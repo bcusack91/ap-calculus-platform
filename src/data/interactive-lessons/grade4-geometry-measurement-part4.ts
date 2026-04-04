@@ -5,14 +5,17 @@ export const g4GeoMeasurePart4Data = {
       id: 'grade4-geometry-measurement-p4-intro',
       type: 'text' as const,
       content: `
-# 📈 Area of Rectangles
+# 📏 Area of Rectangles
 
 **Part 4 of 7 — Area of Rectangles**
 
-Welcome to **Area of Rectangles** — Part 4 of 7 in the Grade 4 Math Geometry & Measurement series.
+**Area** = space inside, measured in **square units**.
 
-This lesson covers key concepts and practice problems.
-      `
+$A = l \times w$
+
+For squares: $A = s^2$
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p4-worked',
@@ -20,39 +23,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Rectangle: 8 m × 5 m.** $A = 8 \times 5 = 40$ m² ✅
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes area of rectangles?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Area of Rectangles is a core concept in Grade 4 Math."
+                    "question": "Area of rectangle 12 cm × 3 cm?",
+                    "options": [
+                              "36 cm²",
+                              "30 cm²",
+                              "15 cm²",
+                              "72 cm²"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "A = 12 × 3 = 36 cm²."
           }
-        ]
+]
       }
     },
     {
       id: 'grade4-geometry-measurement-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Area** 🧮
 
-Answer the following about area of rectangles.
-      `,
+1) Rectangle 6 × 4 cm. Area (cm²)?
+
+2) Rectangle 7 × 5 m. Area (m²)?
+
+3) Square, side 10 in. Area (in²)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of area of rectangles."
+        boxes: 3,
+        correctAnswers: ["24","35","100"],
+        hint1: "A = l × w = 6 × 4.",
+        hint2: "A = 7 × 5.",
+        hint3: "A = s² = 10².",
+        explanation: "1) 24. 2) 35. 3) 100."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about area of rectangles.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Area of Rectangles is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Area of Rectangles builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Area is measured in","options":["Square units","Linear units","Cubic units","No units"]},{"label":"Rectangle area 30 m², length 6 m. Width?","options":["5 m","24 m","180 m","36 m"]}],
+        correctAnswers: ["Square units","5 m"],
+        hint1: "Area describes a 2D region.",
+        hint2: "30 = 6 × w → w = ?",
+        explanation: "Area → square units. w = 30 ÷ 6 = 5 m."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about area of rectangles.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Area of Rectangles | Core area of rectangles principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Shape | Dimensions |
+|---|-------|------------|
+| 1 | Rectangle | 6 × 4 cm |
+| 2 | Rectangle | 7 × 5 m |
+| 3 | Square | Side = 10 in |
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in area of rectangles?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Square garden, area 49 m². Side length?",
+                    "options": [
+                              "7 m",
+                              "24.5 m",
+                              "14 m",
+                              "49 m"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "s = √49 = 7 m."
           }
-        ]
+]
       }
     }
   ]

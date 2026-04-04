@@ -119,10 +119,10 @@ Just because you can write a double-replacement equation doesn\'t mean a reactio
           {
             question: 'What is the net ionic equation for: Ba(NO₃)₂(aq) + Na₂SO₄(aq) → BaSO₄(s) + 2NaNO₃(aq)?',
             options: [
-              '$\\\\text{Ba}^{2+}(aq) + \\\\text{SO}_4^{2-}(aq) \\\\rightarrow \\\\text{BaSO}_4(s)$',
-              '$\\\\text{Ba}^{2+}(aq) + \\\\text{Na}_2\\\\text{SO}_4(aq) \\\\rightarrow \\\\text{BaSO}_4(s) + 2\\\\text{Na}^+(aq)$',
-              '$\\\\text{Ba(NO}_3)_2(aq) + \\\\text{SO}_4^{2-}(aq) \\\\rightarrow \\\\text{BaSO}_4(s) + 2\\\\text{NO}_3^-(aq)$',
-              '$2\\\\text{Na}^+(aq) + \\\\text{SO}_4^{2-}(aq) \\\\rightarrow \\\\text{Na}_2\\\\text{SO}_4(s)$'
+              '$\\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{BaSO}_4(s)$',
+              '$\\text{Ba}^{2+}(aq) + \\text{Na}_2\\text{SO}_4(aq) \\rightarrow \\text{BaSO}_4(s) + 2\\text{Na}^+(aq)$',
+              '$\\text{Ba(NO}_3)_2(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{BaSO}_4(s) + 2\\text{NO}_3^-(aq)$',
+              '$2\\text{Na}^+(aq) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{Na}_2\\text{SO}_4(s)$'
             ],
             correctAnswer: 0,
             explanation: 'Na⁺ and NO₃⁻ are spectators (they appear on both sides). Removing them leaves: Ba²⁺(aq) + SO₄²⁻(aq) → BaSO₄(s). This is the net ionic equation.'
@@ -222,10 +222,10 @@ For the net ionic equation $\\text{Ca}^{2+}(aq) + \\text{CO}_3^{2-}(aq) \\righta
           {
             question: 'What is the net ionic equation for: Pb(NO₃)₂(aq) + 2KI(aq) → PbI₂(s) + 2KNO₃(aq)?',
             options: [
-              '$\\\\text{Pb}^{2+}(aq) + 2\\\\text{I}^-(aq) \\\\rightarrow \\\\text{PbI}_2(s)$',
-              '$\\\\text{Pb}^{2+}(aq) + 2\\\\text{KI}(aq) \\\\rightarrow \\\\text{PbI}_2(s) + 2\\\\text{K}^+(aq)$',
-              '$\\\\text{K}^+(aq) + \\\\text{NO}_3^-(aq) \\\\rightarrow \\\\text{KNO}_3(aq)$',
-              '$\\\\text{Pb(NO}_3)_2(aq) + 2\\\\text{I}^-(aq) \\\\rightarrow \\\\text{PbI}_2(s) + 2\\\\text{NO}_3^-(aq)$'
+              '$\\text{Pb}^{2+}(aq) + 2\\text{I}^-(aq) \\rightarrow \\text{PbI}_2(s)$',
+              '$\\text{Pb}^{2+}(aq) + 2\\text{KI}(aq) \\rightarrow \\text{PbI}_2(s) + 2\\text{K}^+(aq)$',
+              '$\\text{K}^+(aq) + \\text{NO}_3^-(aq) \\rightarrow \\text{KNO}_3(aq)$',
+              '$\\text{Pb(NO}_3)_2(aq) + 2\\text{I}^-(aq) \\rightarrow \\text{PbI}_2(s) + 2\\text{NO}_3^-(aq)$'
             ],
             correctAnswer: 0,
             explanation: 'K⁺ and NO₃⁻ are spectators. Removing them: Pb²⁺(aq) + 2I⁻(aq) → PbI₂(s). Charge check: (+2) + 2(−1) = 0 on left; 0 on right ✓.'

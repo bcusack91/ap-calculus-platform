@@ -9,10 +9,13 @@ export const alg2ExponentialPart2Data = {
 
 **Part 2 of 7 — Exponential Decay**
 
-Welcome to **Exponential Decay** — Part 2 of 7 in the Algebra 2 Exponential Functions series.
+$y = a \cdot b^x \quad (0 < b < 1)$
 
-This lesson covers key concepts and practice problems.
-      `
+Decay factor: $b = 1 - r$ (where $r$ is the decay rate)
+
+**Half-life**: time for the quantity to halve.
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p2-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Car: $20,000, depreciates 15%/year. Value after 2 years?**
+
+$y = 20000(0.85)^2 = 20000(0.7225) = 14450$ → **$14,450** ✅
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes exponential decay?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Exponential Decay is a core concept in Algebra 2."
+                    "question": "Decay factor for 10% decay rate?",
+                    "options": [
+                              "0.9",
+                              "1.1",
+                              "0.1",
+                              "10"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "b = 1 − 0.10 = 0.9."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-exponential-functions-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Exponential Decay** 🧮
 
-Answer the following about exponential decay.
-      `,
+1) $1000(0.9)^2 = ?$
+
+2) $500(0.5)^1 = ?$
+
+3) $800(0.75)^2 = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of exponential decay."
+        boxes: 3,
+        correctAnswers: ["810","250","450"],
+        hint1: "1000 × 0.81.",
+        hint2: "500 × 0.5.",
+        hint3: "800 × 0.5625.",
+        explanation: "1) 810. 2) 250. 3) 450."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about exponential decay.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Exponential Decay is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Exponential Decay builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Exponential decay has b","options":["Between 0 and 1","Greater than 1","Equal to 1","Negative"]},{"label":"Decay factor = 1 minus the","options":["Rate","Initial value","Time","Exponent"]}],
+        correctAnswers: ["Between 0 and 1","Rate"],
+        hint1: "0 < b < 1.",
+        hint2: "b = 1 − r.",
+        explanation: "Decay: 0 < b < 1. Decay factor = 1 − rate."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about exponential decay.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Exponential Decay | Core exponential decay principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Initial | Rate | Years | Formula |
+|---|---------|------|-------|---------|
+| 1 | 1000 | 10% | 2 | 1000(0.9)² |
+| 2 | 500 | 50% | 1 | 500(0.5)¹ |
+| 3 | 800 | 25% | 2 | 800(0.75)² |
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in exponential decay?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "After one half-life, ½ remains. After two?",
+                    "options": [
+                              "1/4",
+                              "0",
+                              "1/3",
+                              "1/2"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "½ × ½ = ¼."
           }
-        ]
+]
       }
     }
   ]

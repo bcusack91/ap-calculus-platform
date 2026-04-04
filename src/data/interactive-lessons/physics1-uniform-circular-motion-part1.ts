@@ -108,7 +108,7 @@ In uniform circular motion, **speed is constant** but **velocity is not** (becau
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.1', '5400', '37.7', '3.10', '37.70'],
+        correctAnswers: ['3.1', '5400', '37.7'],
         hint1: '$v = 2\\pi r/T = 2\\pi(4)/8$.',
         hint2: '$T = 2\\pi r/v = 2\\pi(6.7 \\times 10^6)/7800$.',
         hint3: '$v = 2\\pi rf = 2\\pi(0.3)(20)$.',

@@ -160,7 +160,7 @@ export default function TopicEntranceQuiz({
                   <span className="w-5 h-5 rounded-full bg-purple-100 dark:bg-purple-800 text-purple-700 dark:text-purple-300 text-xs font-bold flex items-center justify-center">
                     {pt.partNumber}
                   </span>
-                  {pt.partTitle}
+                  <span dangerouslySetInnerHTML={{ __html: renderLatex(pt.partTitle) }} />
                 </li>
               ))}
             </ul>
@@ -213,7 +213,7 @@ export default function TopicEntranceQuiz({
           {/* Part badge */}
           <div className="mb-3">
             <span className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300">
-              Part {question.partNumber}: {question.partTitle}
+              Part {question.partNumber}: <span dangerouslySetInnerHTML={{ __html: renderLatex(question.partTitle) }} />
             </span>
           </div>
 
@@ -394,9 +394,7 @@ export default function TopicEntranceQuiz({
                     mastered
                       ? 'text-green-800 dark:text-green-200'
                       : 'text-amber-800 dark:text-amber-200'
-                  }`}>
-                    {pt.partTitle}
-                  </span>
+                  }`} dangerouslySetInnerHTML={{ __html: renderLatex(pt.partTitle) }} />
                 </div>
                 <div className="flex items-center gap-2">
                   <span className={`text-sm font-semibold ${
@@ -426,7 +424,7 @@ export default function TopicEntranceQuiz({
               </p>
               <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1 ml-4">
                 {partsToStudy.map(pt => (
-                  <li key={pt.partNumber}>📖 Part {pt.partNumber}: {pt.partTitle}</li>
+                  <li key={pt.partNumber}>📖 Part {pt.partNumber}: <span dangerouslySetInnerHTML={{ __html: renderLatex(pt.partTitle) }} /></li>
                 ))}
               </ul>
             </div>
@@ -470,7 +468,7 @@ export default function TopicEntranceQuiz({
             className="w-full py-3 rounded-xl font-semibold text-white bg-purple-600 hover:bg-purple-700 transition-colors shadow-lg"
           >
             {masteredParts.size > 0
-              ? `Start with Part ${partsToStudy[0]?.partNumber}: ${partsToStudy[0]?.partTitle} →`
+              ? <span>Start with Part {partsToStudy[0]?.partNumber}: <span dangerouslySetInnerHTML={{ __html: renderLatex(partsToStudy[0]?.partTitle || '') }} /> →</span>
               : 'Start Lesson →'
             }
           </button>

@@ -9,10 +9,12 @@ export const alg2RationalPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Algebra 2 Rational Expressions series.
-
-This lesson covers key concepts and practice problems.
-      `
+Apply rational expression skills:
+- Rate problems (work/time)
+- Mixture problems
+- Proportion problems
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p6-worked',
@@ -20,39 +22,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Worker A: 6 hours alone. Worker B: 3 hours alone. Together?**
+
+$\frac{1}{6} + \frac{1}{3} = \frac{1}{6} + \frac{2}{6} = \frac{3}{6} = \frac{1}{2}$
+
+Together: 2 hours ✅
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Algebra 2."
+                    "question": "Worker A: 4h, Worker B: 4h. Together?",
+                    "options": [
+                              "2 hours",
+                              "8 hours",
+                              "4 hours",
+                              "1 hour"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "1/4 + 1/4 = 1/2. Time = 2h."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-rational-expressions-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Applications** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) Rate: A does job in 4h, B in 4h. Together in ? hours.
+
+2) $\frac{x}{2} = 6$. $x = ?$
+
+3) $\frac{3}{x} = \frac{1}{2}$. $x = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["2","12","6"],
+        hint1: "1/4 + 1/4 = 1/2. Reciprocal?",
+        hint2: "2 × 6.",
+        hint3: "Cross multiply: 3(2)=x(1).",
+        explanation: "1) 2. 2) 12. 3) 6."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"In work problems, rates are expressed as","options":["1/(time to complete)","Time × jobs","Distance/speed","Jobs × workers"]},{"label":"Combined rate = sum of individual rates when working","options":["Together","Separately","In shifts","Neither"]}],
+        correctAnswers: ["1/(time to complete)","Together"],
+        hint1: "Rate = 1/time.",
+        hint2: "Rates add when collaborating.",
+        explanation: "Rate = 1/t. Combined rate: add when working together."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Answer |
+|---|---------|--------|
+| 1 | A: 4h, B: 4h. Together? | 2h |
+| 2 | $\frac{x}{2} = 6$. x = ? | 12 |
+| 3 | $\frac{3}{x} = \frac{1}{2}$. x = ? | 6 |
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$\\frac{3}{x} = \\frac{1}{2}$. $x = ?$",
+                    "options": [
+                              "6",
+                              "3/2",
+                              "2/3",
+                              "1"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Cross multiply: 6 = x."
           }
-        ]
+]
       }
     }
   ]

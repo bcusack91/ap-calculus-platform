@@ -129,7 +129,7 @@ A diffraction grating has 800 lines/mm. Monochromatic light of $\\lambda = 550$ 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.25', '26.1', '2', '1.250', '26.10'],
+        correctAnswers: ['1.25', '26.1', '2'],
         hint1: '$d = 1/(800\\text{ lines/mm}) = 1/800$ mm.',
         hint2: '$\\sin\\theta = m\\lambda / d = (1)(550 \\times 10^{-9})/(1.25 \\times 10^{-6})$.',
         hint3: '$m_{\\max} = \\lfloor d / \\lambda \\rfloor = \\lfloor 1250/550 \\rfloor$.',
@@ -149,7 +149,7 @@ A grating has 5000 total slits.
       `,
       exercise: {
         boxes: 2,
-        correctAnswers: ['10000', '0.06', '0.060'],
+        correctAnswers: ['10000', '0.06'],
         hint1: '$R = mN = (2)(5000)$.',
         hint2: '$\\Delta\\lambda = \\lambda / R = 589 / 10000$.',
         explanation: '$R = mN = 2 \\times 5000 = 10{,}000$. $\\Delta\\lambda = 589/10{,}000 = 0.0589 \\approx 0.06$ nm. This grating can resolve the sodium doublet (589.0 nm and 589.6 nm) in 2nd order.'

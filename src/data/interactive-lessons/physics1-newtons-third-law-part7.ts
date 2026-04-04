@@ -105,7 +105,7 @@ A modified Atwood machine: $m_1 = 8$ kg on a frictionless table, connected to $m
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '16', '1.22', '1.220'],
+        correctAnswers: ['2', '16', '1.22'],
         hint1: '$a = m_2 g/(m_1 + m_2) = 2(10)/10$.',
         hint2: '$T = m_1 a = 8 \\times 2$. Or: $T = m_2(g - a) = 2(10-2)$.',
         hint3: '$d = \\frac{1}{2}at^2 \\Rightarrow t = \\sqrt{2d/a} = \\sqrt{2(1.5)/2}$.',

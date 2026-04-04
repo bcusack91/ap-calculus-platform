@@ -106,7 +106,7 @@ Let's bring together everything from this unit: position, displacement, velocity
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['10', '29.4', '208', '29.40'],
+        correctAnswers: ['10', '29.4', '208'],
         hint1: 'First find $a$ from $v^2 = v_0^2 + 2a\\Delta x$, then use $v = v_0 + at$ to find $t$.',
         hint2: '$y = v_0t - \\frac{1}{2}gt^2 = 24.5(2) - \\frac{1}{2}(9.8)(4)$',
         hint3: 'Use $\\Delta x = \\frac{v_0 + v_f}{2} \\cdot t = \\frac{36 + 16}{2}(8)$',

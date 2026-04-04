@@ -106,7 +106,7 @@ A fire hose (diameter 6.0 cm) is connected to a hydrant at ground level with pre
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['9', '2.24', '20', '2.240'],
+        correctAnswers: ['9', '2.24', '20'],
         hint1: '$v_2/v_1 = A_1/A_2 = (d_1/d_2)^2 = (6/2)^2$.',
         hint2: '$P_1 + \\frac{1}{2}\\rho v_1^2 = P_2 + \\frac{1}{2}\\rho(9v_1)^2 + \\rho g h$. $400000 + \\frac{1}{2}(1000)v_1^2 = 100000 + \\frac{1}{2}(1000)(81v_1^2) + 100000$.',
         hint3: '$v_2 = 9 v_1$.',

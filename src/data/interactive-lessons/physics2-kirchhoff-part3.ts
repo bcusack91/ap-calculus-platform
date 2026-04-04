@@ -159,7 +159,7 @@ A single loop contains:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['12', '1.2', '6', '1.20'],
+        correctAnswers: ['12', '1.2', '6'],
         hint1: 'Net EMF = $\\varepsilon_1 - \\varepsilon_2 + \\varepsilon_3 = 16 - 10 + 6$.',
         hint2: '$I = \\text{Net EMF} / (R_1 + R_2 + R_3) = 12 / 10$.',
         hint3: '$V_{R_3} = IR_3 = (1.2)(5)$.',

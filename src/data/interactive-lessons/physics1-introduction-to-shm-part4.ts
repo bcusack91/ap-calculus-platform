@@ -129,7 +129,7 @@ A mass oscillates with amplitude $A = 0.20$ m and period $T = 4.0$ s.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.57', '0.31', '0.49', '1.570', '0.310', '0.490'],
+        correctAnswers: ['1.57', '0.31', '0.49'],
         hint1: '$\\omega = 2\\pi/T = 2\\pi/4.0$',
         hint2: '$v_{\\text{max}} = A\\omega = 0.20 \\times 1.57$',
         hint3: '$a_{\\text{max}} = A\\omega^2 = 0.20 \\times (1.57)^2$',

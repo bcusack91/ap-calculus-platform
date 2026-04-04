@@ -172,7 +172,7 @@ Use $g = 9.8$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '44.1', '29.4', '44.10', '29.40'],
+        correctAnswers: ['2', '44.1', '29.4'],
         hint1: '$0 = 19.6 - \\frac{1}{2}(9.8)t^2$, solve for $t$.',
         hint2: '$\\Delta y_{\\text{max}} = v_0^2/(2g) = 29.4^2/(2 \\times 9.8)$',
         hint3: '$v = gt = 9.8 \\times 3$',

@@ -128,7 +128,7 @@ A Styrofoam cooler wall ($k = 0.033$ W/(m·K)) is 3.0 cm thick and has a total s
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.91', '26.4', '570', '0.910', '26.40'],
+        correctAnswers: ['0.91', '26.4', '570'],
         hint1: '$R = L/k = 0.030 / 0.033$.',
         hint2: '$Q/t = A \\Delta T / R = (0.80)(30) / 0.91$.',
         hint3: 'Total heat = power × time. Convert 6 hours to seconds: $6 \\times 3{,}600 = 21{,}600$ s. Then convert J to kJ.',
@@ -151,7 +151,7 @@ A wall consists of 10 cm of brick ($k = 0.60$ W/(m·K)) and 5 cm of insulation (
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.17', '1.25', '254', '0.170', '1.250'],
+        correctAnswers: ['0.17', '1.25', '254'],
         hint1: '$R_{\\text{brick}} = L/k = 0.10/0.60$.',
         hint2: '$R_{\\text{insulation}} = L/k = 0.05/0.040$.',
         hint3: '$R_{\\text{total}} = R_{\\text{brick}} + R_{\\text{insulation}}$. Then $Q/t = A \\Delta T / R_{\\text{total}} = (12)(30)/R_{\\text{total}}$.',

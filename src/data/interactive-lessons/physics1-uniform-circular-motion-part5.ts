@@ -141,7 +141,7 @@ On the AP exam, most circular motion problems assume **uniform** circular motion
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.5', '4.9', '16.0', '4.50', '4.90', '16.00'],
+        correctAnswers: ['4.5', '4.9', '16.0'],
         hint1: '$a_c = v^2/r = 15^2/50$.',
         hint2: '$a_{total} = \\sqrt{a_c^2 + a_t^2}$.',
         hint3: 'Find $a_c = v^2/r$ first, then $a_{total} = \\sqrt{a_c^2 + g^2}$.',

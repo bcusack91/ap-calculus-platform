@@ -127,7 +127,7 @@ This final lesson brings together all circular motion concepts for AP exam prepa
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['24100', '80.1', '0.45', '80.10', '0.450'],
+        correctAnswers: ['24100', '80.1', '0.45'],
         hint1: 'Convert days to seconds: $T = 687 \\times 24 \\times 3600$. Then $v = 2\\pi r/T$.',
         hint2: 'Convert 78 RPM to Hz. Then $a_c = 4\\pi^2 rf^2$.',
         hint3: '$a_c = r\\omega^2 \\Rightarrow \\omega = \\sqrt{a_c/r}$.',

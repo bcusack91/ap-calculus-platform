@@ -147,7 +147,7 @@ The impulse from gravity: $J_y = mg\\Delta t = (2)(10)(3) = 60$ kg·m/s — exac
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['200', '0.06', '24', '0.060'],
+        correctAnswers: ['200', '0.06', '24'],
         hint1: '$J = mg\\Delta t = (5)(10)(4)$',
         hint2: '$f = \\mu_k m_{\\text{total}} g = (0.2)(6)(10) = 12$ N. $J = f \\times 0.005$',
         hint3: '$J = f \\times \\Delta t = (12)(2)$',

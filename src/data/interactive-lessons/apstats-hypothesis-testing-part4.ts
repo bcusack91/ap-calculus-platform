@@ -9,10 +9,16 @@ export const apStatsHypothesisPart4Data = {
 
 **Part 4 of 7 — Type I & Type II Errors**
 
-Welcome to **Type I & Type II Errors** — Part 4 of 7 in the AP Statistics Hypothesis Testing series.
+| | H₀ True | H₀ False |
+|---|---------|----------|
+| Reject H₀ | **Type I** (α) | Correct |
+| Fail to reject | Correct | **Type II** (β) |
 
-This lesson covers key concepts and practice problems.
-      `
+- **Type I**: false positive (reject true H₀)
+- **Type II**: false negative (fail to reject false H₀)
+- **Power** = 1 − β (probability of correctly rejecting false H₀)
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p4-worked',
@@ -20,39 +26,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A drug has no effect, but the test says it works → Type I error** ✅
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes type i & type ii errors?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Type I & Type II Errors is a core concept in AP Statistics."
+                    "question": "Rejecting a true H₀ is:",
+                    "options": [
+                              "Type I error",
+                              "Type II error",
+                              "Correct decision",
+                              "Power"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "False positive."
           }
-        ]
+]
       }
     },
     {
       id: 'apstats-hypothesis-testing-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Errors** 🧮
 
-Answer the following about type i & type ii errors.
-      `,
+1) Rejecting true H₀ → Type ___ error?
+
+2) Failing to reject false H₀ → Type ___ error?
+
+3) If α = 0.05, probability of Type I error?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of type i & type ii errors."
+        boxes: 3,
+        correctAnswers: ["1","2","0.05"],
+        hint1: "False positive.",
+        hint2: "False negative.",
+        hint3: "α directly.",
+        explanation: "1) Type 1. 2) Type 2. 3) 0.05."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about type i & type ii errors.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Type I & Type II Errors is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Type I & Type II Errors builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Power equals","options":["1 − β","α","β","1 − α"]},{"label":"Increasing sample size generally ____ power","options":["Increases","Decreases","Does not affect","Eliminates"]}],
+        correctAnswers: ["1 − β","Increases"],
+        hint1: "Complement of Type II.",
+        hint2: "Larger n → more precise.",
+        explanation: "Power = 1−β. Larger n → more power."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about type i & type ii errors.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
+| # | Scenario | Error Type |
 |---|---------|----------|
-| 1 | Type I & Type II Errors | Core type i & type ii errors principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| 1 | Convict innocent person | Type I |
+| 2 | Acquit guilty person | Type II |
+| 3 | True alarm detected | Correct decision |
+    
+    `
     },
     {
       id: 'apstats-hypothesis-testing-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in type i & type ii errors?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "The probability of a Type I error is:",
+                    "options": [
+                              "α",
+                              "β",
+                              "1−α",
+                              "1−β"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "α = significance level = P(Type I)."
           }
-        ]
+]
       }
     }
   ]

@@ -5,14 +5,16 @@ export const physCEMCoulombPart1Data = {
       id: 'physicsc-em-coulombs-law-p1-intro',
       type: 'text' as const,
       content: `
-# 📐 Electric Charge
+# ⚡ Electric Charge
 
 **Part 1 of 7 — Electric Charge**
 
-Welcome to **Electric Charge** — Part 1 of 7 in the AP Physics C: E&M Coulomb's Law series.
-
-This lesson covers key concepts and practice problems.
-      `
+- Charge is **quantized**: $q = ne$ where $e = 1.6 \times 10^{-19}$ C
+- Charge is **conserved** in all processes
+- Like charges repel, unlike charges attract
+- Conductors allow charge flow; insulators do not
+    
+    `
     },
     {
       id: 'physicsc-em-coulombs-law-p1-worked',
@@ -20,39 +22,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**How many excess electrons on an object with charge $-3.2 \times 10^{-19}$ C?**
+
+$n = \frac{q}{e} = \frac{3.2 \times 10^{-19}}{1.6 \times 10^{-19}} = 2$ electrons ✅
+    
+    `
     },
     {
       id: 'physicsc-em-coulombs-law-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes electric charge?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Electric Charge is a core concept in AP Physics C: E&M."
+                    "question": "The smallest unit of free charge is:",
+                    "options": [
+                              "$1.6 \\\\times 10^{-19}$ C",
+                              "$1$ C",
+                              "$1.6 \\\\times 10^{-9}$ C",
+                              "$9.1 \\\\times 10^{-31}$ C"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "The elementary charge $e = 1.6 \\\\times 10^{-19}$ C."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-em-coulombs-law-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Electric Charge** 🧮
 
-Answer the following about electric charge.
-      `,
+1) $q = -3.2 \times 10^{-19}$ C. How many excess electrons?
+
+2) An object has $q = -8.0 \times 10^{-19}$ C. How many excess electrons?
+
+3) Two spheres: $+5$ μC and $+1$ μC. After touching, each has ____ μC.
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of electric charge."
+        boxes: 3,
+        correctAnswers: ["2","5","3"],
+        hint1: "$n = q/e = 3.2 \\times 10^{-19} / 1.6 \\times 10^{-19}$.",
+        hint2: "$n = 8.0/1.6$.",
+        hint3: "Total charge = $5 + 1 = 6$. Divide by 2.",
+        explanation: "1) $n = 2$. 2) $n = 5$. 3) $6/2 = 3$ μC each."
       }
     },
     {
@@ -60,22 +77,13 @@ Answer the following about electric charge.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Electric Charge is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Electric Charge builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Protons have charge","options":["$+e$","$-e$","$0$","$+2e$"]},{"label":"Charge is conserved means","options":["Total charge in a closed system never changes","Charge can be created","Charge can be destroyed","Charge always increases"]}],
+        correctAnswers: ["$+e$","Total charge in a closed system never changes"],
+        hint1: "Protons are positive.",
+        hint2: "Conservation law definition.",
+        explanation: "Protons have charge $+e$. Charge conservation: total charge in a closed system is constant."
       }
     },
     {
@@ -84,28 +92,34 @@ Answer the following about electric charge.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
+| # | Concept | Key Fact |
 |---|---------|----------|
-| 1 | Electric Charge | Core electric charge principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| 1 | Elementary charge | $e = 1.6 \times 10^{-19}$ C |
+| 2 | Charge conservation | Total charge is constant |
+| 3 | Quantization | Charge comes in integer multiples of $e$ |
+    
+    `
     },
     {
       id: 'physicsc-em-coulombs-law-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in electric charge?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Two identical metal spheres have charges $+6$ μC and $-2$ μC. After touching, each has:",
+                    "options": [
+                              "$+2$ μC",
+                              "$+4$ μC",
+                              "$-2$ μC",
+                              "$0$ μC"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Total charge = $6 + (-2) = 4$ μC. Divide equally: $4/2 = 2$ μC each."
           }
-        ]
+]
       }
     }
   ]

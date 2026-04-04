@@ -146,7 +146,7 @@ Why does wire gauge matter? If a wire is too thin for the current it carries, $P
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6.95', '148', '900', '6.950'],
+        correctAnswers: ['6.95', '148', '900'],
         hint1: '$R = R_0(1 + \\alpha \\Delta T) = 5.0(1 + 0.0039 \\times 100)$.',
         hint2: '$15 = 10(1 + 0.0039 \\Delta T)$. Solve for $\\Delta T$, then add to 20°C.',
         hint3: '$R = 1000(1 + (-0.0005)(200)) = 1000(1 - 0.1)$.',

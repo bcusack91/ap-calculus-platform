@@ -9,10 +9,13 @@ export const g8LinearPart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the Grade 8 Math Linear Functions series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Concepts
+- Function: one output per input
+- Slope: $m = \frac{y_2-y_1}{x_2-x_1}$
+- Slope-intercept: $y = mx + b$
+- System solution: intersection point
+    
+    `
     },
     {
       id: 'grade8-linear-functions-p7-worked',
@@ -20,39 +23,55 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Line through (1,4) and (3,10). Equation?**
+
+$m = \frac{10-4}{3-1} = 3$. Then $4 = 3(1) + b \Rightarrow b = 1$.
+$y = 3x + 1$ ✅
+    
+    `
     },
     {
       id: 'grade8-linear-functions-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in Grade 8 Math."
+                    "question": "Slope of (2,3) and (5,9)?",
+                    "options": [
+                              "2",
+                              "3",
+                              "6",
+                              "1/2"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(9−3)/(5−2) = 6/3 = 2."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-linear-functions-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) Slope of (2,3) and (5,9)?
+
+2) $f(x) = 4x - 1$. $f(3) = ?$
+
+3) $y = x+1$ and $y = 3x-5$. $x = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["2","11","3"],
+        hint1: "(9−3)/(5−2).",
+        hint2: "4(3) − 1.",
+        hint3: "x+1 = 3x−5 → 6=2x.",
+        explanation: "1) 6/3=2. 2) 11. 3) x=3."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"y = mx + b is called","options":["Slope-intercept form","Standard form","Point-slope form","Vertex form"]},{"label":"Two parallel lines have","options":["Same slope","Same intercept","Different slopes","Same everything"]}],
+        correctAnswers: ["Slope-intercept form","Same slope"],
+        hint1: "Slope + intercept.",
+        hint2: "Parallel = same steepness.",
+        explanation: "y=mx+b is slope-intercept form. Parallel lines share slope."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Type | Problem |
+|---|------|---------|
+| 1 | Slope | (2,3) and (5,9) |
+| 2 | Evaluate | f(x)=4x−1, f(3) |
+| 3 | System | y=x+1, y=3x−5 |
+    
+    `
     },
     {
       id: 'grade8-linear-functions-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$f(x)=4x−1$. $f(3)=?$",
+                    "options": [
+                              "11",
+                              "12",
+                              "13",
+                              "7"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "4(3)−1 = 12−1 = 11."
           }
-        ]
+]
       }
     }
   ]

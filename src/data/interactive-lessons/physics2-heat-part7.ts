@@ -142,7 +142,7 @@ A 0.25 kg iron block ($c = 450$ J/(kg·°C)) at 350°C is dropped into 0.80 kg o
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['113', '3349', '25.9', '25.90'],
+        correctAnswers: ['113', '3349', '25.9'],
         hint1: '$mc_{\\text{Fe}} = (0.25)(450)$.',
         hint2: '$mc_w = (0.80)(4{,}186)$.',
         hint3: '$113(T_f - 350) + 3{,}349(T_f - 15) = 0$. Expand and solve for $T_f$.',

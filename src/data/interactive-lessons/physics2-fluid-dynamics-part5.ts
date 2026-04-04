@@ -51,7 +51,7 @@ A main water pipe (radius 5.0 cm, speed 2.0 m/s) splits into two branches. Branc
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['15.7', '3.33', '1.25', '15.70', '3.330', '1.250'],
+        correctAnswers: ['15.7', '3.33', '1.25'],
         hint1: '$Q = \\pi r^2 v = \\pi(0.05)^2(2.0)$. Convert to L/s by multiplying by 1000.',
         hint2: '$Q_A = 0.60 \\times Q$. $v_A = Q_A/(\\pi r_A^2)$.',
         hint3: '$Q_B = 0.40 \\times Q$. $v_B = Q_B/(\\pi r_B^2)$.',
@@ -72,7 +72,7 @@ A circular pipe (diameter 4.0 cm) delivers water at 5.0 m/s into a cylindrical t
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6.28e-3', '2.0e-3', '500', '0.006280', '0.00200', '0.002'],
+        correctAnswers: ['6.28e-3', '2.0e-3', '500'],
         hint1: '$Q = \\pi (0.02)^2 (5.0)$.',
         hint2: 'Water fills the tank: $Q = A_{\\text{tank}} \\times (dh/dt)$. $dh/dt = Q / A_{\\text{tank}}$.',
         hint3: '$t = h/(dh/dt) = 1.0 / (2.0 \\times 10^{-3})$.',

@@ -5,14 +5,21 @@ export const g4GeoMeasurePart1Data = {
       id: 'grade4-geometry-measurement-p1-intro',
       type: 'text' as const,
       content: `
-# 📐 Lines & Angles
+# 📏 Lines & Angles
 
 **Part 1 of 7 — Lines & Angles**
 
-Welcome to **Lines & Angles** — Part 1 of 7 in the Grade 4 Math Geometry & Measurement series.
+### Types of Angles
+- **Acute**: less than 90°
+- **Right**: exactly 90°
+- **Obtuse**: between 90° and 180°
+- **Straight**: exactly 180°
 
-This lesson covers key concepts and practice problems.
-      `
+### Angle Pairs
+- **Complementary**: sum to 90°
+- **Supplementary**: sum to 180°
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p1-worked',
@@ -20,39 +27,58 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Classify an angle of 135°.**
+
+$90° < 135° < 180°$ → **obtuse** ✅
+
+**Find the supplement of 65°.**
+
+$180° - 65° = 115°$ ✅
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes lines & angles?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Lines & Angles is a core concept in Grade 4 Math."
+                    "question": "An angle of exactly 90° is called:",
+                    "options": [
+                              "Right angle",
+                              "Acute angle",
+                              "Obtuse angle",
+                              "Straight angle"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "A right angle = exactly 90°."
           }
-        ]
+]
       }
     },
     {
       id: 'grade4-geometry-measurement-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Angle Measures** 🧮
 
-Answer the following about lines & angles.
-      `,
+1) A right angle measures _____ degrees.
+
+2) A straight angle measures _____ degrees.
+
+3) A full rotation measures _____ degrees.
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of lines & angles."
+        boxes: 3,
+        correctAnswers: ["90","180","360"],
+        hint1: "Think of a corner of a square.",
+        hint2: "A straight line = half turn.",
+        hint3: "A full circle.",
+        explanation: "1) 90°. 2) 180°. 3) 360°."
       }
     },
     {
@@ -60,22 +86,13 @@ Answer the following about lines & angles.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Lines & Angles is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Lines & Angles builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A 45° angle is classified as","options":["Acute","Right","Obtuse","Straight"]},{"label":"A 120° angle is classified as","options":["Obtuse","Acute","Right","Reflex"]}],
+        correctAnswers: ["Acute","Obtuse"],
+        hint1: "Is 45° less than 90°?",
+        hint2: "Is 120° between 90° and 180°?",
+        explanation: "45° < 90° → acute. 90° < 120° < 180° → obtuse."
       }
     },
     {
@@ -86,26 +103,32 @@ Answer the following about lines & angles.
 
 | # | Concept | Key Idea |
 |---|---------|----------|
-| 1 | Lines & Angles | Core lines & angles principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| 1 | Acute vs obtuse | Compare to 90° |
+| 2 | Complementary | Sum to 90° |
+| 3 | Supplementary | Sum to 180° |
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in lines & angles?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Two supplementary angles: one is 65°. The other?",
+                    "options": [
+                              "115°",
+                              "25°",
+                              "90°",
+                              "65°"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "180° − 65° = 115°."
           }
-        ]
+]
       }
     }
   ]

@@ -9,10 +9,13 @@ export const g7ProportionalPart2Data = {
 
 **Part 2 of 7 — Constant of Proportionality**
 
-Welcome to **Constant of Proportionality** — Part 2 of 7 in the Grade 7 Math Proportional Relationships series.
+The **constant of proportionality** $k = \frac{y}{x}$.
 
-This lesson covers key concepts and practice problems.
-      `
+Equation form: $y = kx$
+
+Example: If $k = 3$, then $y = 3x$.
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p2-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Bananas cost \$0.50 each. Write the equation.**
+
+$\text{Cost} = 0.50 \times n$ → $C = 0.50n$, so $k = 0.50$ ✅
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes constant of proportionality?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Constant of Proportionality is a core concept in Grade 7 Math."
+                    "question": "$y = 7x$. What is k?",
+                    "options": [
+                              "7",
+                              "x",
+                              "y",
+                              "1/7"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "In y = kx, k = 7."
           }
-        ]
+]
       }
     },
     {
       id: 'grade7-proportional-relationships-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Find k** 🧮
 
-Answer the following about constant of proportionality.
-      `,
+1) \$3 per pound. k = ?
+
+2) 60 miles per hour. k = ?
+
+3) Cost = \$0.50 per banana. k = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of constant of proportionality."
+        boxes: 3,
+        correctAnswers: ["3","60","0.5"],
+        hint1: "Price per pound.",
+        hint2: "Miles per hour.",
+        hint3: "Cost per banana.",
+        explanation: "1) k=3. 2) k=60. 3) k=0.5."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about constant of proportionality.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Constant of Proportionality is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Constant of Proportionality builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"In y = kx, k represents the","options":["Rate or unit rate","Y-intercept","X-intercept","Exponent"]},{"label":"If y = 2x, when x = 5, y =","options":["10","7","25","2.5"]}],
+        correctAnswers: ["Rate or unit rate","10"],
+        hint1: "k = rate of change.",
+        hint2: "y = 2(5).",
+        explanation: "k = unit rate. y = 2(5) = 10."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about constant of proportionality.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Constant of Proportionality | Core constant of proportionality principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Scenario | k |
+|---|---------|---|
+| 1 | \$3 per lb | 3 |
+| 2 | 60 mph | 60 |
+| 3 | 5 pages/min | 5 |
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in constant of proportionality?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "If 3 items cost $12, the constant of proportionality is:",
+                    "options": [
+                              "4",
+                              "3",
+                              "12",
+                              "36"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "k = 12/3 = 4 (dollars per item)."
           }
-        ]
+]
       }
     }
   ]

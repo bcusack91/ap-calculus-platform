@@ -9,10 +9,14 @@ export const apPrecalcPolyEndPart3Data = {
 
 **Part 3 of 7 — Zeros & Multiplicity**
 
-Welcome to **Zeros & Multiplicity** — Part 3 of 7 in the AP Precalculus Polynomial End Behavior series.
+- A **zero** (root) is where $f(x) = 0$
+- **Multiplicity**: how many times a factor repeats
+  - Odd multiplicity → graph **crosses** x-axis
+  - Even multiplicity → graph **bounces** off x-axis
 
-This lesson covers key concepts and practice problems.
-      `
+$f(x) = (x-2)^3(x+1)^2$ → zero at $x=2$ (mult. 3, cross), zero at $x=-1$ (mult. 2, bounce)
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p3-worked',
@@ -20,39 +24,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$f(x) = (x-1)^2(x+3)$. Zeros?**
+
+$x = 1$ (multiplicity 2, bounces), $x = -3$ (multiplicity 1, crosses) ✅
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes zeros & multiplicity?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Zeros & Multiplicity is a core concept in AP Precalculus."
+                    "question": "Even multiplicity means the graph:",
+                    "options": [
+                              "Bounces off the x-axis",
+                              "Crosses the x-axis",
+                              "Has no zero",
+                              "Goes to infinity"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Even mult → tangent to axis → bounce."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Find the Zeros** 🧮
 
-Answer the following about zeros & multiplicity.
-      `,
+1) $(x-4)^2 = 0$. $x = $ ?
+
+2) $(x+2)^3 = 0$. $x = $ ?
+
+3) $(x-1)(x+1)^2 = 0$. One zero is $x = $ ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of zeros & multiplicity."
+        boxes: 3,
+        correctAnswers: ["4","-2","1"],
+        hint1: "x−4 = 0.",
+        hint2: "x+2 = 0.",
+        hint3: "x−1 = 0.",
+        explanation: "1) x=4. 2) x=−2. 3) x=1 (or −1)."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about zeros & multiplicity.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Zeros & Multiplicity is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Zeros & Multiplicity builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Multiplicity 2 means the factor appears","options":["Twice","Once","Three times","Zero times"]},{"label":"At a zero with odd multiplicity, the graph","options":["Crosses the x-axis","Bounces","Has a hole","Is undefined"]}],
+        correctAnswers: ["Twice","Crosses the x-axis"],
+        hint1: "Squared.",
+        hint2: "Odd → passes through.",
+        explanation: "Mult 2 = factor squared. Odd mult → crosses."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about zeros & multiplicity.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Zeros & Multiplicity | Core zeros & multiplicity principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Function | Zeros | Behavior |
+|---|---------|-------|----------|
+| 1 | $(x-4)^2$ | 4 | Bounce |
+| 2 | $(x+2)^3$ | −2 | Cross |
+| 3 | $(x-1)(x+1)^2$ | 1, −1 | Cross, Bounce |
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in zeros & multiplicity?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Zero of (x+5)³ is at x =",
+                    "options": [
+                              "−5",
+                              "5",
+                              "3",
+                              "−3"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Set x+5=0 → x=−5."
           }
-        ]
+]
       }
     }
   ]

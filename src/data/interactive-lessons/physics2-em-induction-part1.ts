@@ -165,7 +165,7 @@ A rectangular loop has dimensions 20 cm × 30 cm and sits in a uniform magnetic 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.06', '0.03', '0.015', '0.060', '0.030', '0.0150'],
+        correctAnswers: ['0.06', '0.03', '0.015'],
         hint1: '$A = (0.20)(0.30)$ m².',
         hint2: 'Maximum flux occurs at $\\theta = 0°$: $\\Phi = BA = (0.5)(0.06)$.',
         hint3: '$\\Phi = BA\\cos 60° = (0.03)(0.5) = 0.015$ Wb.',

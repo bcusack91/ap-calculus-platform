@@ -121,10 +121,10 @@ $$\\text{CH}_4 + \\text{O}_2 \\rightarrow \\text{C} + 2\\text{H}_2\\text{O}$$
           {
             question: 'What are the products of the complete combustion of C₂H₆ (ethane)?',
             options: [
-              '$2\\\\text{CO}_2 + 2\\\\text{H}_2\\\\text{O}$',
-              '$2\\\\text{CO}_2 + 3\\\\text{H}_2\\\\text{O}$',
-              '$2\\\\text{CO} + 3\\\\text{H}_2\\\\text{O}$',
-              '$\\\\text{CO}_2 + 3\\\\text{H}_2\\\\text{O}$'
+              '$2\\text{CO}_2 + 2\\text{H}_2\\text{O}$',
+              '$2\\text{CO}_2 + 3\\text{H}_2\\text{O}$',
+              '$2\\text{CO} + 3\\text{H}_2\\text{O}$',
+              '$\\text{CO}_2 + 3\\text{H}_2\\text{O}$'
             ],
             correctAnswer: 1,
             explanation: '$2\\text{C}_2\\text{H}_6 + 7\\text{O}_2 \\rightarrow 4\\text{CO}_2 + 6\\text{H}_2\\text{O}$. Per molecule of C₂H₆: 2 carbon atoms → 2 CO₂ and 6 hydrogen atoms → 3 H₂O.'
@@ -222,10 +222,10 @@ Find the coefficient of O₂ needed for complete combustion. Enter just the numb
           {
             question: 'What is the balanced equation for the complete combustion of butane (C₄H₁₀)?',
             options: [
-              '$\\\\text{C}_4\\\\text{H}_{10} + 6\\\\text{O}_2 \\\\rightarrow 4\\\\text{CO}_2 + 5\\\\text{H}_2\\\\text{O}$',
-              '$\\\\text{C}_4\\\\text{H}_{10} + 5\\\\text{O}_2 \\\\rightarrow 4\\\\text{CO}_2 + 5\\\\text{H}_2\\\\text{O}$',
-              '$2\\\\text{C}_4\\\\text{H}_{10} + 13\\\\text{O}_2 \\\\rightarrow 8\\\\text{CO}_2 + 10\\\\text{H}_2\\\\text{O}$',
-              '$\\\\text{C}_4\\\\text{H}_{10} + 13\\\\text{O}_2 \\\\rightarrow 4\\\\text{CO}_2 + 5\\\\text{H}_2\\\\text{O}$'
+              '$\\text{C}_4\\text{H}_{10} + 6\\text{O}_2 \\rightarrow 4\\text{CO}_2 + 5\\text{H}_2\\text{O}$',
+              '$\\text{C}_4\\text{H}_{10} + 5\\text{O}_2 \\rightarrow 4\\text{CO}_2 + 5\\text{H}_2\\text{O}$',
+              '$2\\text{C}_4\\text{H}_{10} + 13\\text{O}_2 \\rightarrow 8\\text{CO}_2 + 10\\text{H}_2\\text{O}$',
+              '$\\text{C}_4\\text{H}_{10} + 13\\text{O}_2 \\rightarrow 4\\text{CO}_2 + 5\\text{H}_2\\text{O}$'
             ],
             correctAnswer: 2,
             explanation: 'C₄H₁₀: 4C → 4CO₂, 10H → 5H₂O. O atoms needed: 4(2) + 5(1) = 13. So 13/2 = 6.5 O₂. Multiply by 2 to clear the fraction: $2\\text{C}_4\\text{H}_{10} + 13\\text{O}_2 \\rightarrow 8\\text{CO}_2 + 10\\text{H}_2\\text{O}$.'

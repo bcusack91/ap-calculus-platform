@@ -5,14 +5,18 @@ export const g4MultiDigitMultPart3Data = {
       id: 'grade4-multi-digit-multiplication-p3-intro',
       type: 'text' as const,
       content: `
-# 🔢 Partial Products
+# ✖️ Partial Products
 
 **Part 3 of 7 — Partial Products**
 
-Welcome to **Partial Products** — Part 3 of 7 in the Grade 4 Math Multi-Digit Multiplication series.
+Multiply each digit separately, then add:
 
-This lesson covers key concepts and practice problems.
-      `
+$24 \times 7$:
+- $20 \times 7 = 140$
+- $4 \times 7 = 28$
+- $140 + 28 = 168$
+    
+    `
     },
     {
       id: 'grade4-multi-digit-multiplication-p3-worked',
@@ -20,39 +24,55 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$36 \times 24$:
+- $36 \times 20 = 720$
+- $36 \times 4 = 144$
+- $720 + 144 = 864$ ✅
+    
+    `
     },
     {
       id: 'grade4-multi-digit-multiplication-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes partial products?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Partial Products is a core concept in Grade 4 Math."
+                    "question": "What is the first partial product of $43 \\\\times 26$ (tens first)?",
+                    "options": [
+                              "$43 \\\\times 20 = 860$",
+                              "$43 \\\\times 6 = 258$",
+                              "$40 \\\\times 26 = 1040$",
+                              "$3 \\\\times 6 = 18$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Multiply by the tens digit first: 43 × 20 = 860."
           }
-        ]
+]
       }
     },
     {
       id: 'grade4-multi-digit-multiplication-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Partial Products** 🧮
 
-Answer the following about partial products.
-      `,
+1) $24 \times 7 = ?$
+
+2) $36 \times 26 = ?$
+
+3) $56 \times 38 = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of partial products."
+        boxes: 3,
+        correctAnswers: ["168","936","2128"],
+        hint1: "20×7 + 4×7.",
+        hint2: "36×20 + 36×6.",
+        hint3: "56×30 + 56×8.",
+        explanation: "1) 140+28=168. 2) 720+216=936. 3) 1680+448=2128."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about partial products.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Partial Products is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Partial Products builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Partial products means you multiply by each place value and then","options":["Add the results","Multiply the results","Subtract","Take the average"]},{"label":"$15 \\\\times 8 = 10(8) + 5(8) =$","options":["120","80","40","160"]}],
+        correctAnswers: ["Add the results","120"],
+        hint1: "After getting partial products...",
+        hint2: "80 + 40 = ?",
+        explanation: "Add partial products. 10(8)+5(8) = 80+40 = 120."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about partial products.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Partial Products | Core partial products principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Partial Products |
+|---|---------|-----------------|
+| 1 | $18 \times 5$ | $10(5) + 8(5)$ |
+| 2 | $27 \times 13$ | $27(10) + 27(3)$ |
+| 3 | $45 \times 32$ | $45(30) + 45(2)$ |
+    
+    `
     },
     {
       id: 'grade4-multi-digit-multiplication-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in partial products?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$52 \\\\times 14$: partial products are $52 \\\\times 10 = 520$ and $52 \\\\times 4 = 208$. Final answer?",
+                    "options": [
+                              "728",
+                              "520",
+                              "208",
+                              "312"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "520 + 208 = 728."
           }
-        ]
+]
       }
     }
   ]

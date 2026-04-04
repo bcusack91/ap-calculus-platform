@@ -9,10 +9,14 @@ export const g5DecimalsPart4Data = {
 
 **Part 4 of 7 — Multiplying Decimals**
 
-Welcome to **Multiplying Decimals** — Part 4 of 7 in the Grade 5 Math Decimal Operations series.
+### Steps
+1. Multiply as if both numbers are whole numbers
+2. Count total decimal places in both factors
+3. Place the decimal point in the product (same total)
 
-This lesson covers key concepts and practice problems.
-      `
+$0.3 \times 0.4 = 0.12$ → 1+1 = 2 decimal places
+    
+    `
     },
     {
       id: 'grade5-decimal-operations-p4-worked',
@@ -20,39 +24,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$2.5 \times 0.3 = ?$
+
+Multiply: $25 \times 3 = 75$
+
+Decimal places: 1 + 1 = 2 → $0.75$ ✅
+    
+    `
     },
     {
       id: 'grade5-decimal-operations-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes multiplying decimals?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Multiplying Decimals is a core concept in Grade 5 Math."
+                    "question": "How many decimal places in $0.25 \\\\times 0.4$?",
+                    "options": [
+                              "3",
+                              "2",
+                              "1",
+                              "4"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "0.25 has 2, 0.4 has 1 → 2+1 = 3 total."
           }
-        ]
+]
       }
     },
     {
       id: 'grade5-decimal-operations-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Multiply Decimals** 🧮
 
-Answer the following about multiplying decimals.
-      `,
+1) $1.2 \times 4 = ?$
+
+2) $0.6 \times 0.7 = ?$
+
+3) $3.14 \times 2 = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of multiplying decimals."
+        boxes: 3,
+        correctAnswers: ["4.8","0.42","6.28"],
+        hint1: "12 × 4 = 48, one decimal place.",
+        hint2: "6 × 7 = 42, two decimal places.",
+        hint3: "314 × 2 = 628, two decimal places.",
+        explanation: "1) 48 → 4.8. 2) 42 → 0.42. 3) 628 → 6.28."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about multiplying decimals.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Multiplying Decimals is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Multiplying Decimals builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"After multiplying, count decimal places in","options":["Both factors combined","Only the larger factor","Only the product","Neither factor"]},{"label":"$0.5 \\\\times 0.5 =$","options":["0.25","2.5","0.025","25"]}],
+        correctAnswers: ["Both factors combined","0.25"],
+        hint1: "Total places from BOTH numbers.",
+        hint2: "5×5=25, 2 decimal places.",
+        explanation: "Count places in both factors. 5×5=25, 1+1=2 places → 0.25."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about multiplying decimals.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Multiplying Decimals | Core multiplying decimals principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Decimal Places |
+|---|---------|----------------|
+| 1 | $1.2 \times 4$ | 1 |
+| 2 | $0.6 \times 0.7$ | 2 |
+| 3 | $3.14 \times 2$ | 2 |
+    
+    `
     },
     {
       id: 'grade5-decimal-operations-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in multiplying decimals?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$0.1 \\\\times 0.1 = ?$",
+                    "options": [
+                              "0.01",
+                              "0.1",
+                              "1",
+                              "0.001"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "1 × 1 = 1, total 2 places → 0.01."
           }
-        ]
+]
       }
     }
   ]

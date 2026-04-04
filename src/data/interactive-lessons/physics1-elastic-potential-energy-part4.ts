@@ -152,7 +152,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.2', '40', '2', '0.20'],
+        correctAnswers: ['0.2', '40', '2'],
         hint1: '$x_0 = mg/k = 2(10)/100$.',
         hint2: '$a_{\\max} = kA/m = 200(0.1)/0.5$.',
         hint3: 'At max speed, all PE converts to KE: $\\frac{1}{2}kA^2 = \\frac{1}{2}mv_{\\max}^2 \\Rightarrow v_{\\max} = A\\sqrt{k/m}$.',

@@ -9,10 +9,13 @@ export const g6ExpressionsPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Grade 6 Math Expressions & Equations series.
-
-This lesson covers key concepts and practice problems.
-      `
+Apply expressions and equations to real-world scenarios:
+1. Define the variable
+2. Write the equation
+3. Solve
+4. Check the answer
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p6-worked',
@@ -20,39 +23,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A phone plan costs \\$15/month plus \\$0.10/text. Last month: \\$21. How many texts?**
+
+\\$15 + 0.10t = 21
+\\$0.10t = 6
+$t = 60$ texts ✅
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Grade 6 Math."
+                    "question": "\"I have $x$ dollars and earn $12 more, now I have $30.\" Equation?",
+                    "options": [
+                              "$x + 12 = 30$",
+                              "$x - 12 = 30$",
+                              "$12x = 30$",
+                              "$x/12 = 30$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Start with x, add 12, equals 30."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-expressions-equations-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Word Problems** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) Age in 5 years is 17. Current age?
+
+2) 3 bags of apples = 24. Apples per bag?
+
+3) Temperature drops 8° to 15°. Starting temp?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["12","8","23"],
+        hint1: "x + 5 = 17.",
+        hint2: "3x = 24.",
+        hint3: "t − 8 = 15.",
+        explanation: "1) 17−5=12. 2) 24÷3=8. 3) 15+8=23."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"First step in solving a word problem is","options":["Define the variable","Guess the answer","Add all numbers","Draw a graph"]},{"label":"If 4 packs cost $20, one pack costs","options":["$5","$16","$24","$80"]}],
+        correctAnswers: ["Define the variable","$5"],
+        hint1: "What are you solving for?",
+        hint2: "20 ÷ 4 = ?",
+        explanation: "Define variable first. $20 ÷ 4 = $5."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
+| # | Problem | Equation |
 |---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| 1 | Age in 5 years is 17 | $x + 5 = 17$ |
+| 2 | 3 bags of $x$ apples = 24 | $3x = 24$ |
+| 3 | Temperature drops 8° to 15° | $t - 8 = 15$ |
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Solve $x + 5 = 17$:",
+                    "options": [
+                              "12",
+                              "22",
+                              "5",
+                              "85"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$x = 17 - 5 = 12$."
           }
-        ]
+]
       }
     }
   ]

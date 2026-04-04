@@ -162,7 +162,7 @@ Use $\\mu_0 = 4\\pi \\times 10^{-7}$ T·m/A.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.2', '4.0e-4', 'attract', '1.20', '0.00040'],
+        correctAnswers: ['1.2', '4.0e-4', 'attract'],
         hint1: '$F = BIL\\sin 90° = (0.30)(8.0)(0.50)$.',
         hint2: '$F/L = \\mu_0 I_1 I_2/(2\\pi d) = (4\\pi \\times 10^{-7})(10)(10)/(2\\pi \\times 0.05)$.',
         hint3: 'Same-direction parallel currents attract each other.',

@@ -149,7 +149,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['80', '50', '7.1', '7.10'],
+        correctAnswers: ['80', '50', '7.1'],
         hint1: '$W_{\\text{net}} = W_{\\text{push}} + W_{\\text{friction}} = 30(4) + (-10)(4)$.',
         hint2: '$W_{\\text{gravity}} = mgd\\sin\\theta = 2(10)(5)\\sin(30°) = 100 \\times 0.5$.',
         hint3: '$W_{\\text{net}} = \\Delta KE \\Rightarrow 50 = \\frac{1}{2}(2)v^2 \\Rightarrow v = \\sqrt{50}$.',

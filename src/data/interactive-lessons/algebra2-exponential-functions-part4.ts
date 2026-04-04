@@ -9,10 +9,16 @@ export const alg2ExponentialPart4Data = {
 
 **Part 4 of 7 — Logarithms Introduction**
 
-Welcome to **Logarithms Introduction** — Part 4 of 7 in the Algebra 2 Exponential Functions series.
+A **logarithm** is the inverse of an exponential.
 
-This lesson covers key concepts and practice problems.
-      `
+$\log_b(x) = y \iff b^y = x$
+
+$\\log_2(8) = 3$ because $2^3 = 8$
+
+**Common log**: $\log(x) = \log_{10}(x)$
+**Natural log**: $\ln(x) = \log_e(x)$
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p4-worked',
@@ -20,39 +26,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$\log_3(81) = ?$
+
+$3^? = 81$. Since $3^4 = 81$, $\log_3(81) = 4$ ✅
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes logarithms introduction?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Logarithms Introduction is a core concept in Algebra 2."
+                    "question": "$\\log_2(16) = ?$",
+                    "options": [
+                              "4",
+                              "8",
+                              "2",
+                              "16"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "2⁴ = 16, so log₂(16) = 4."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-exponential-functions-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Evaluate Logs** 🧮
 
-Answer the following about logarithms introduction.
-      `,
+1) $\log_2(16) = ?$
+
+2) $\log_5(25) = ?$
+
+3) $\log_{10}(1000) = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of logarithms introduction."
+        boxes: 3,
+        correctAnswers: ["4","2","3"],
+        hint1: "2 to what power = 16?",
+        hint2: "5 to what power = 25?",
+        hint3: "10 to what power = 1000?",
+        explanation: "1) 2⁴=16→4. 2) 5²=25→2. 3) 10³=1000→3."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about logarithms introduction.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Logarithms Introduction is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Logarithms Introduction builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A logarithm is the inverse of","options":["An exponential","Addition","Multiplication","A polynomial"]},{"label":"$\\log_b(1) =$","options":["0","1","b","Undefined"]}],
+        correctAnswers: ["An exponential","0"],
+        hint1: "Logs undo exponentials.",
+        hint2: "b⁰ = 1 for any b.",
+        explanation: "Logs are inverse of exponentials. log_b(1) = 0."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about logarithms introduction.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Logarithms Introduction | Core logarithms introduction principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Log | Value |
+|---|-----|-------|
+| 1 | $\log_2(16)$ | 4 |
+| 2 | $\log_5(25)$ | 2 |
+| 3 | $\log_{10}(1000)$ | 3 |
+    
+    `
     },
     {
       id: 'algebra2-exponential-functions-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in logarithms introduction?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$\\log_b(x) = y$ means:",
+                    "options": [
+                              "$b^y = x$",
+                              "$x^y = b$",
+                              "$y^b = x$",
+                              "$b^x = y$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Log definition: b^y = x."
           }
-        ]
+]
       }
     }
   ]

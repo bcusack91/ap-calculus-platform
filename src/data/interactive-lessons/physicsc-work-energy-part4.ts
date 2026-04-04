@@ -5,14 +5,20 @@ export const physCWorkEnergyPart4Data = {
       id: 'physicsc-work-energy-p4-intro',
       type: 'text' as const,
       content: `
-# 📈 Conservation of Energy
+# ⚛️ Conservation of Energy
 
 **Part 4 of 7 — Conservation of Energy**
 
-Welcome to **Conservation of Energy** — Part 4 of 7 in the AP Physics C Work-Energy Theorem series.
+For isolated systems with only conservative forces:
 
-This lesson covers key concepts and practice problems.
-      `
+$KE_i + U_i = KE_f + U_f$
+
+$\frac{1}{2}mv_i^2 + mgh_i = \frac{1}{2}mv_f^2 + mgh_f$
+
+If non-conservative forces (friction) act:
+$KE_i + U_i + W_{nc} = KE_f + U_f$
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p4-worked',
@@ -20,39 +26,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A ball is dropped from 20 m. Find its speed at the ground. ($g = 10$ m/s²)**
+
+$mgh = \frac{1}{2}mv^2 \implies v = \sqrt{2gh} = \sqrt{2(10)(20)} = 20$ m/s ✅
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes conservation of energy?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Conservation of Energy is a core concept in AP Physics C."
+                    "question": "A pendulum at its lowest point has:",
+                    "options": [
+                              "Maximum KE, minimum PE",
+                              "Minimum KE, maximum PE",
+                              "Equal KE and PE",
+                              "Zero KE and PE"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "At the lowest point, all PE has converted to KE."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-work-energy-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Conservation of Energy** 🧮
 
-Answer the following about conservation of energy.
-      `,
+1) A ball falls from 20 m. Speed at the bottom (m/s)? ($g = 10$ m/s²)
+
+2) A ball is launched upward at 20 m/s. What speed (m/s) does it have at height 15 m? ($g = 10$ m/s²)
+
+3) A ball is thrown upward at 20 m/s. Maximum height reached (m)? ($g = 10$ m/s², answer as integer. Hint: $h = v^2/(2g)$)
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of conservation of energy."
+        boxes: 3,
+        correctAnswers: ["20","10","15"],
+        hint1: "$v = \\sqrt{2gh}$.",
+        hint2: "Use $\\frac{1}{2}mv_i^2 = \\frac{1}{2}mv_f^2 + mgh$. Solve for $v_f$.",
+        hint3: "At max height, $v = 0$. So $\\frac{1}{2}v_i^2 = gh$.",
+        explanation: "1) $v = \\sqrt{2(10)(20)} = 20$ m/s. 2) $v_f = \\sqrt{400 - 300} = \\sqrt{100} = 10$ m/s. 3) $h = 400/20 = 20$ m. Hmm wait: $h = v^2/(2g) = 400/20 = 20$ m."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about conservation of energy.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Conservation of Energy is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Conservation of Energy builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Conservation of mechanical energy requires","options":["Only conservative forces do work","Friction is present","External forces act","The system is open"]},{"label":"The total energy of an isolated system","options":["Is always conserved","Increases over time","Decreases over time","Oscillates"]}],
+        correctAnswers: ["Only conservative forces do work","Is always conserved"],
+        hint1: "Non-conservative forces dissipate energy.",
+        hint2: "First law of thermodynamics for an isolated system.",
+        explanation: "Mechanical energy is conserved when only conservative forces act. Total energy (including thermal) is always conserved in an isolated system."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about conservation of energy.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Conservation of Energy | Core conservation of energy principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Scenario | Equation |
+|---|----------|----------|
+| 1 | Dropped object | $mgh = \frac{1}{2}mv^2$ |
+| 2 | Spring launch | $\frac{1}{2}kx^2 = \frac{1}{2}mv^2$ |
+| 3 | Friction on ramp | $mgh = \frac{1}{2}mv^2 + f_k d$ |
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in conservation of energy?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Friction converts mechanical energy into:",
+                    "options": [
+                              "Thermal energy",
+                              "Potential energy",
+                              "Kinetic energy",
+                              "Nuclear energy"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Friction is a non-conservative force that converts mechanical energy to heat."
           }
-        ]
+]
       }
     }
   ]

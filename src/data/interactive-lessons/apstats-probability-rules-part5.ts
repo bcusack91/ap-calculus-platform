@@ -9,10 +9,12 @@ export const apStatsProbabilityPart5Data = {
 
 **Part 5 of 7 — Independence**
 
-Welcome to **Independence** — Part 5 of 7 in the AP Statistics Probability Rules series.
+Events A and B are **independent** if:
+$P(A|B) = P(A) \quad \text{or equivalently} \quad P(A \cap B) = P(A) \cdot P(B)$
 
-This lesson covers key concepts and practice problems.
-      `
+If knowing B changes the probability of A, the events are **dependent**.
+    
+    `
     },
     {
       id: 'apstats-probability-rules-p5-worked',
@@ -20,39 +22,58 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**P(A) = 0.4, P(B) = 0.5, P(A∩B) = 0.2. Independent?**
+
+$P(A) \times P(B) = 0.4 \times 0.5 = 0.2 = P(A∩B)$
+
+**Yes, independent!** ✅
+    
+    `
     },
     {
       id: 'apstats-probability-rules-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes independence?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Independence is a core concept in AP Statistics."
+                    "question": "P(A)=0.3, P(B)=0.6, P(A∩B)=0.1. Independent?",
+                    "options": [
+                              "No, because 0.3×0.6≠0.1",
+                              "Yes",
+                              "Cannot tell",
+                              "Always independent"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "0.3×0.6=0.18≠0.1."
           }
-        ]
+]
       }
     },
     {
       id: 'apstats-probability-rules-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Test Independence** 🧮
 
-Answer the following about independence.
-      `,
+Compute P(A)×P(B):
+
+1) P(A)=0.4, P(B)=0.5?
+
+2) P(A)=0.3, P(B)=0.6?
+
+3) P(A)=0.5, P(B)=0.5?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of independence."
+        boxes: 3,
+        correctAnswers: ["0.2","0.18","0.25"],
+        hint1: "0.4×0.5.",
+        hint2: "0.3×0.6.",
+        hint3: "0.5×0.5.",
+        explanation: "1) 0.2. 2) 0.18. 3) 0.25. Compare with P(A∩B) to check."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about independence.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Independence is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Independence builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Independent means one event ____ the other","options":["Does not affect","Always causes","Prevents","Guarantees"]},{"label":"Mutually exclusive events are ____ independent","options":["Never","Always","Sometimes","Definitely"]}],
+        correctAnswers: ["Does not affect","Never"],
+        hint1: "No influence.",
+        hint2: "If ME and both have P>0, they are dependent.",
+        explanation: "Independent: no effect. ME events (P>0) cannot be independent."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about independence.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Independence | Core independence principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | P(A) | P(B) | P(A∩B) | Independent? |
+|---|------|------|--------|---------|
+| 1 | 0.4 | 0.5 | 0.2 | Yes |
+| 2 | 0.3 | 0.6 | 0.1 | No |
+| 3 | 0.5 | 0.5 | 0.25 | Yes |
+    
+    `
     },
     {
       id: 'apstats-probability-rules-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in independence?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "If independent, P(A|B) = ?",
+                    "options": [
+                              "P(A)",
+                              "P(B)",
+                              "P(A∩B)",
+                              "0"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Independence: knowing B does not change P(A)."
           }
-        ]
+]
       }
     }
   ]

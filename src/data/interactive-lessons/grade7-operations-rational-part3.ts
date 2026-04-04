@@ -9,10 +9,14 @@ export const g7RationalOpsPart3Data = {
 
 **Part 3 of 7 — Multiplying Rational Numbers**
 
-Welcome to **Multiplying Rational Numbers** — Part 3 of 7 in the Grade 7 Math Operations with Rational Numbers series.
+Sign rules:
+- Same signs → **positive**
+- Different signs → **negative**
 
-This lesson covers key concepts and practice problems.
-      `
+$(-0.3)(0.5) = -0.15$
+$(-\frac{2}{3})(-\frac{3}{4}) = \frac{1}{2}$
+    
+    `
     },
     {
       id: 'grade7-operations-rational-p3-worked',
@@ -20,39 +24,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$(-2.5)(4) = -10$ (different signs → negative) ✅
+    
+    `
     },
     {
       id: 'grade7-operations-rational-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes multiplying rational numbers?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Multiplying Rational Numbers is a core concept in Grade 7 Math."
+                    "question": "$(-4)(-7) = ?$",
+                    "options": [
+                              "28",
+                              "−28",
+                              "−11",
+                              "11"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Same signs → positive: 28."
           }
-        ]
+]
       }
     },
     {
       id: 'grade7-operations-rational-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Multiply Rationals** 🧮
 
-Answer the following about multiplying rational numbers.
-      `,
+1) $(-3)(5) = ?$
+
+2) $(-4)(-7) = ?$
+
+3) $(0.5)(-0.8) = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of multiplying rational numbers."
+        boxes: 3,
+        correctAnswers: ["-15","28","-0.4"],
+        hint1: "Different signs → negative.",
+        hint2: "Same signs → positive.",
+        hint3: "Different signs → negative. 5×8=40.",
+        explanation: "1) −15. 2) 28. 3) −0.4."
       }
     },
     {
@@ -60,22 +77,13 @@ Answer the following about multiplying rational numbers.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Multiplying Rational Numbers is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Multiplying Rational Numbers builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Two negatives multiplied give","options":["Positive","Negative","Zero","Undefined"]},{"label":"$(−1)(−1)(−1) =$","options":["−1","1","0","3"]}],
+        correctAnswers: ["Positive","−1"],
+        hint1: "Same sign rule.",
+        hint2: "Odd number of negatives.",
+        explanation: "(−)(−)=(+). Three negatives: (−1)(−1)=1, (1)(−1)=−1."
       }
     },
     {
@@ -84,28 +92,34 @@ Answer the following about multiplying rational numbers.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Multiplying Rational Numbers | Core multiplying rational numbers principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Sign |
+|---|---------|------|
+| 1 | $(-3)(5)$ | Negative |
+| 2 | $(-4)(-7)$ | Positive |
+| 3 | $(0.5)(-0.8)$ | Negative |
+    
+    `
     },
     {
       id: 'grade7-operations-rational-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in multiplying rational numbers?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$(-\\\\frac{1}{2})(\\\\frac{4}{5}) = ?$",
+                    "options": [
+                              "$-\\\\frac{2}{5}$",
+                              "$\\\\frac{2}{5}$",
+                              "$-\\\\frac{5}{2}$",
+                              "$\\\\frac{4}{10}$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Different signs: −(1×4)/(2×5) = −2/5."
           }
-        ]
+]
       }
     }
   ]

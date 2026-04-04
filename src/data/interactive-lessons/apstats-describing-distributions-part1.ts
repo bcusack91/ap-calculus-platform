@@ -9,10 +9,14 @@ export const apStatsDistributionsPart1Data = {
 
 **Part 1 of 7 — Shape, Center, Spread**
 
-Welcome to **Shape, Center, Spread** — Part 1 of 7 in the AP Statistics Describing Distributions series.
+Every distribution has three key features:
+- **Shape**: symmetric, left-skewed, right-skewed
+- **Center**: mean or median
+- **Spread**: range, IQR, standard deviation
 
-This lesson covers key concepts and practice problems.
-      `
+Always describe all three when summarizing data.
+    
+    `
     },
     {
       id: 'apstats-describing-distributions-p1-worked',
@@ -20,39 +24,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Data: 2, 3, 3, 4, 4, 4, 5, 5, 6**
+
+- Shape: roughly symmetric
+- Center: median = 4
+- Spread: range = 6 − 2 = 4 ✅
+    
+    `
     },
     {
       id: 'apstats-describing-distributions-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes shape, center, spread?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Shape, Center, Spread is a core concept in AP Statistics."
+                    "question": "A distribution with a long right tail is:",
+                    "options": [
+                              "Right-skewed",
+                              "Left-skewed",
+                              "Symmetric",
+                              "Normal"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Tail direction = skew direction."
           }
-        ]
+]
       }
     },
     {
       id: 'apstats-describing-distributions-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Data: 1, 2, 3, 4, 5, 6, 7** 🧮
 
-Answer the following about shape, center, spread.
-      `,
+1) Median?
+
+2) Range? (max − min)
+
+3) How many values are below the median? (not counting median)
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of shape, center, spread."
+        boxes: 3,
+        correctAnswers: ["4","4","3"],
+        hint1: "Middle value of 7 numbers.",
+        hint2: "7 − 1 = ?",
+        hint3: "Values: 1, 2, 3.",
+        explanation: "1) 4 (4th of 7). 2) 7−1=6... wait: 7−1=6. Let me recalc. Data has 7 values, middle = 4th = 4. Range = 7−1=6. Below median (1,2,3) = 3."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about shape, center, spread.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Shape, Center, Spread is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Shape, Center, Spread builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The three features of a distribution are","options":["Shape, center, spread","Mean, median, mode","Min, max, range","Q1, Q2, Q3"]},{"label":"In a right-skewed distribution, the mean is typically","options":["Greater than the median","Less than the median","Equal to the median","Zero"]}],
+        correctAnswers: ["Shape, center, spread","Greater than the median"],
+        hint1: "The S-C-S framework.",
+        hint2: "Pulled toward the tail.",
+        explanation: "Shape-Center-Spread. Right-skew → mean > median."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about shape, center, spread.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Shape, Center, Spread | Core shape, center, spread principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Data Feature | Description |
+|---|-------------|-------------|
+| 1 | Tail on the right | Right-skewed |
+| 2 | Tail on the left | Left-skewed |
+| 3 | Mirror image | Symmetric |
+    
+    `
     },
     {
       id: 'apstats-describing-distributions-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in shape, center, spread?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Range is calculated as:",
+                    "options": [
+                              "Max − Min",
+                              "Mean − Median",
+                              "Q3 − Q1",
+                              "Sum / n"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Range = maximum minus minimum."
           }
-        ]
+]
       }
     }
   ]

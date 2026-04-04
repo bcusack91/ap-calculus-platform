@@ -127,7 +127,7 @@ A 20 kg block sits on a 37° incline ($g = 10$ m/s², $\\sin 37° = 0.60$, $\\co
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['120', '160', '0.75', '0.750'],
+        correctAnswers: ['120', '160', '0.75'],
         hint1: '$W_{\\parallel} = mg\\sin 37° = 200 \\times 0.60$.',
         hint2: '$N = mg\\cos 37° = 200 \\times 0.80$.',
         hint3: '$W_{\\parallel}/N = \\sin 37°/\\cos 37° = \\tan 37°$.',

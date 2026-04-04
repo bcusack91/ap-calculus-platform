@@ -165,10 +165,10 @@ No. The moon\'s mass cancels in the derivation (Step 2 above). Orbital propertie
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5.7', '1.58', '2.52', '5.70', '1.580', '2.520'],
-        hint1: '$M = 4\\pi^2 r^3/(GT^2)$. Convert $T$ to seconds.',
-        hint2: '$v_{esc} \\propto \\sqrt{M/R}$.',
-        hint3: '$r_B/r_A = (T_B/T_A)^{2/3}$.',
+        correctAnswers: ['5.7', '1.58', '2.52'],
+        hint1: 'Use $M = 4\\pi^2 r^3/(GT^2)$. Don\'t forget to convert $T$ from days to seconds first.',
+        hint2: 'Escape velocity scales as $v_{esc} \\propto \\sqrt{M/R}$. Write the ratio $v_P/v_E$ in terms of $M_E$ and $R_E$.',
+        hint3: 'Kepler\'s Third Law gives you the ratio of orbital radii from the ratio of periods: $r_B/r_A = (T_B/T_A)^{2/3}$.',
         explanation: '1) $T = 15.95 \\times 86400 = 1.378 \\times 10^6$ s. $M = 4\\pi^2(1.22 \\times 10^9)^3/(6.67 \\times 10^{-11}(1.378 \\times 10^6)^2) = 39.48 \\times 1.816 \\times 10^{27}/(6.67 \\times 10^{-11} \\times 1.899 \\times 10^{12}) = 7.17 \\times 10^{28}/1.267 \\times 10^{2} = 5.66 \\times 10^{26}$. $X = 5.7$. 2) $v_{esc} \\propto \\sqrt{M/R}$. $v_P/v_E = \\sqrt{5M_E/(2R_E) \\times R_E/M_E} = \\sqrt{5/2} = \\sqrt{2.5} = 1.581 \\approx 1.58$. 3) $r_B/r_A = (24/6)^{2/3} = 4^{2/3} = (2^2)^{2/3} = 2^{4/3} = 2.52$.'
       }
     },

@@ -167,7 +167,7 @@ To find the reaction to any force:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['150', '9.8', '3000', '9.80'],
+        correctAnswers: ['150', '9.8', '3000'],
         hint1: 'Newton\'s Third Law: the forces are always equal in magnitude.',
         hint2: 'The gravitational force is mutual — the apple pulls Earth just as much as Earth pulls the apple.',
         hint3: 'Action-reaction: the road pushes the car with the same magnitude the car pushes the road.',

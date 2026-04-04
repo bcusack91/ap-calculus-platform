@@ -119,7 +119,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['40', '6.3', '3.2', '6.30', '3.20'],
+        correctAnswers: ['40', '6.3', '3.2'],
         hint1: '$d = v^2/(2\\mu_k g) = 400/(2 \\times 0.5 \\times 10)$.',
         hint2: '$mgh = \\frac{1}{2}mv^2 + \\mu_k mgd$. $v^2 = 2g(h - \\mu_k d)$.',
         hint3: 'All KE converts to PE on a frictionless ramp: $\\frac{1}{2}mv^2 = mgh$.',

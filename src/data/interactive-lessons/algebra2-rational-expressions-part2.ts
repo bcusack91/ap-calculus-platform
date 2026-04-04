@@ -9,10 +9,12 @@ export const alg2RationalPart2Data = {
 
 **Part 2 of 7 — Multiplying & Dividing**
 
-Welcome to **Multiplying & Dividing** — Part 2 of 7 in the Algebra 2 Rational Expressions series.
+**Multiply**: $\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}$ (factor and cancel first)
 
-This lesson covers key concepts and practice problems.
-      `
+**Divide**: multiply by the reciprocal
+$\frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c}$
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p2-worked',
@@ -20,39 +22,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$\frac{x}{x+2} \cdot \frac{x+2}{x^2} = \frac{x(x+2)}{x^2(x+2)} = \frac{1}{x}$ ✅
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes multiplying & dividing?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Multiplying & Dividing is a core concept in Algebra 2."
+                    "question": "$\\frac{3}{x} \\cdot \\frac{x}{6} = ?$",
+                    "options": [
+                              "$\\frac{1}{2}$",
+                              "$\\frac{3x}{6}$",
+                              "$\\frac{18}{x^2}$",
+                              "$3x$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "3x/(6x) = 1/2."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-rational-expressions-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Multiply & Divide** 🧮
 
-Answer the following about multiplying & dividing.
-      `,
+1) $\frac{3}{x} \cdot \frac{x}{6} = ?$ (decimal)
+
+2) $\frac{x}{3} \div \frac{x}{9} = ?$
+
+3) $\frac{x+1}{2} \cdot \frac{4}{x+1} = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of multiplying & dividing."
+        boxes: 3,
+        correctAnswers: ["0.5","3","2"],
+        hint1: "3x/6x. Cancel x.",
+        hint2: "Flip: (x/3)(9/x). Cancel x.",
+        hint3: "Cancel (x+1). 4/2.",
+        explanation: "1) 1/2=0.5. 2) 9/3=3. 3) 4/2=2."
       }
     },
     {
@@ -60,22 +75,13 @@ Answer the following about multiplying & dividing.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Multiplying & Dividing is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Multiplying & Dividing builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Dividing by a fraction is the same as","options":["Multiplying by its reciprocal","Dividing by its reciprocal","Adding it","Subtracting it"]},{"label":"The reciprocal of $\\frac{a}{b}$ is","options":["$\\frac{b}{a}$","$\\frac{a}{b}$","$-\\frac{a}{b}$","$ab$"]}],
+        correctAnswers: ["Multiplying by its reciprocal","$\\frac{b}{a}$"],
+        hint1: "Flip and multiply.",
+        hint2: "Flip numerator and denominator.",
+        explanation: "Divide → multiply by reciprocal. Reciprocal: flip."
       }
     },
     {
@@ -84,28 +90,34 @@ Answer the following about multiplying & dividing.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Multiplying & Dividing | Core multiplying & dividing principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Result |
+|---|---------|--------|
+| 1 | $\frac{3}{x} \cdot \frac{x}{6}$ | $\frac{1}{2}$ |
+| 2 | $\frac{x}{3} \div \frac{x}{9}$ | $3$ |
+| 3 | $\frac{x+1}{2} \cdot \frac{4}{x+1}$ | $2$ |
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in multiplying & dividing?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "To divide fractions:",
+                    "options": [
+                              "Multiply by the reciprocal",
+                              "Multiply straight across",
+                              "Add the denominators",
+                              "Subtract the numerators"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Flip the second fraction and multiply."
           }
-        ]
+]
       }
     }
   ]

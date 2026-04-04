@@ -133,7 +133,7 @@ Use: $c_w = 4{,}186$ J/(kg·°C), $L_f = 334{,}000$ J/kg.
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['66800', '83720', 'yes', '6.7', '6.70'],
+        correctAnswers: ['66800', '83720', 'yes', '6.7'],
         hint1: '$Q_{\\text{melt}} = m_{\\text{ice}} L_f = (0.200)(334{,}000)$.',
         hint2: '$Q_{\\text{available}} = m_w c_w \\Delta T = (0.400)(4186)(50)$. Compare with $Q_{\\text{melt}}$.',
         hint3: 'All ice melts. Set up: $m_{\\text{ice}} L_f + (m_{\\text{ice}} + m_w) c_w T_f = m_w c_w (50)$. The total mass of water is $0.200 + 0.400 = 0.600$ kg. Remaining energy = $83{,}720 - 66{,}800 = 16{,}920$ J. $T_f = 16{,}920 / ((0.600)(4186))$.',

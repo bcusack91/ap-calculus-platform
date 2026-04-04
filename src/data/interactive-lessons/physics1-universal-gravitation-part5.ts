@@ -110,7 +110,7 @@ Use $g = 10$ m/s², $R_E = 6.4 \\times 10^6$ m, $M_E = 6.0 \\times 10^{24}$ kg, 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7800', '11.2', '1020', '11.20'],
+        correctAnswers: ['7800', '11.2', '1020'],
         hint1: '$r = R_E + h = 6.6 \\times 10^6$ m. $v = \\sqrt{GM/r}$.',
         hint2: '$v_{esc} = \\sqrt{2gR_E}$. Convert to km/s.',
         hint3: '$v = \\sqrt{GM_E/r}$.',

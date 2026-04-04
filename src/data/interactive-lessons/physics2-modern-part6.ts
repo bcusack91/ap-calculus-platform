@@ -193,7 +193,7 @@ A radioactive isotope has a half-life of 8.0 days. You start with $6.4 \\times 1
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['8.0', '3', '0.875', '150', '8.00', '0.8750'],
+        correctAnswers: ['8.0', '3', '0.875', '150'],
         hint1: 'Number of half-lives $= t/t_{1/2} = 24/8 = 3$.',
         hint2: '$N = N_0 (1/2)^3 = 6.4 \\times 10^{20}/8 = 8.0 \\times 10^{19}$.',
         hint3: 'Fraction decayed $= 1 - (1/2)^3 = 1 - 1/8 = 7/8$. For activity after 32 days: $n = 32/8 = 4$ half-lives.',

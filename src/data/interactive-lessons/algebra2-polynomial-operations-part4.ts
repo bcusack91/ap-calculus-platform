@@ -9,10 +9,11 @@ export const alg2PolynomialsPart4Data = {
 
 **Part 4 of 7 — Polynomial Division**
 
-Welcome to **Polynomial Division** — Part 4 of 7 in the Algebra 2 Polynomial Operations series.
+**Long division** or **synthetic division** (for divisor $x - c$).
 
-This lesson covers key concepts and practice problems.
-      `
+$\frac{x^2 + 3x + 2}{x + 1} = x + 2$
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p4-worked',
@@ -20,39 +21,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$(x^2 + 5x + 6) \div (x + 2)$
+
+$= x + 3$ (since $(x+2)(x+3) = x^2+5x+6$) ✅
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes polynomial division?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Polynomial Division is a core concept in Algebra 2."
+                    "question": "$(x^2+3x+2) \\div (x+1) = ?$",
+                    "options": [
+                              "$x+2$",
+                              "$x+3$",
+                              "$x+1$",
+                              "$x^2+2$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(x+1)(x+2) = x²+3x+2."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-polynomial-operations-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Polynomial Division** 🧮
 
-Answer the following about polynomial division.
-      `,
+1) $(x^2+3x+2)÷(x+1) = x + ?$
+
+2) $(x^2+5x+6)÷(x+2) = x + ?$
+
+3) $(2x^2+6x)÷(2x) = x + ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of polynomial division."
+        boxes: 3,
+        correctAnswers: ["2","3","3"],
+        hint1: "Factor x²+3x+2.",
+        hint2: "Factor x²+5x+6.",
+        hint3: "Factor out 2x.",
+        explanation: "1) x+2. 2) x+3. 3) x+3."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about polynomial division.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Polynomial Division is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Polynomial Division builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"If $(x+a)$ divides $p(x)$ evenly, then","options":["$p(-a) = 0$","$p(a) = 0$","$a = 0$","The degree decreases by 2"]},{"label":"Polynomial long division is similar to","options":["Long division with numbers","Addition","Factoring","Graphing"]}],
+        correctAnswers: ["$p(-a) = 0$","Long division with numbers"],
+        hint1: "Factor theorem.",
+        hint2: "Same algorithm.",
+        explanation: "(x+a)|p(x) → p(−a)=0. Same process as numerical long division."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about polynomial division.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
+| # | Division | Quotient |
 |---|---------|----------|
-| 1 | Polynomial Division | Core polynomial division principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| 1 | $(x^2+3x+2)÷(x+1)$ | $x+2$ |
+| 2 | $(x^2+5x+6)÷(x+2)$ | $x+3$ |
+| 3 | $(2x^2+6x)÷(2x)$ | $x+3$ |
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in polynomial division?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Synthetic division can be used when dividing by:",
+                    "options": [
+                              "$x - c$ (linear)",
+                              "Any polynomial",
+                              "Quadratics only",
+                              "Constants only"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Synthetic division works with linear divisors."
           }
-        ]
+]
       }
     }
   ]

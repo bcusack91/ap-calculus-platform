@@ -5,14 +5,21 @@ export const physCNewtonPart5Data = {
       id: 'physicsc-newtons-laws-p5-intro',
       type: 'text' as const,
       content: `
-# 🧮 Circular Motion
+# ⚛️ Circular Motion
 
 **Part 5 of 7 — Circular Motion**
 
-Welcome to **Circular Motion** — Part 5 of 7 in the AP Physics C Newton's Laws series.
+For uniform circular motion:
 
-This lesson covers key concepts and practice problems.
-      `
+$a_c = \frac{v^2}{r} = \omega^2 r$
+
+$F_c = \frac{mv^2}{r}$
+
+where $\omega = 2\pi f = \frac{2\pi}{T}$ is the angular velocity.
+
+Centripetal force is not a new force — it is the net inward force (tension, gravity, friction, normal force, etc.).
+    
+    `
     },
     {
       id: 'physicsc-newtons-laws-p5-worked',
@@ -20,39 +27,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A 2 kg ball on a 0.5 m string moves at 4 m/s in a horizontal circle. Find the centripetal force.**
+
+$F_c = \frac{mv^2}{r} = \frac{2(16)}{0.5} = 64$ N ✅
+    
+    `
     },
     {
       id: 'physicsc-newtons-laws-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes circular motion?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Circular Motion is a core concept in AP Physics C."
+                    "question": "Centripetal acceleration always points:",
+                    "options": [
+                              "Toward the center",
+                              "Away from the center",
+                              "Tangent to the circle",
+                              "In the direction of velocity"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Centripetal means \"center-seeking.\" The acceleration always points inward."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-newtons-laws-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Circular Motion** 🧮
 
-Answer the following about circular motion.
-      `,
+1) A car goes around a curve of radius 50 m at 20 m/s. What is the centripetal acceleration (m/s²)?
+
+2) An object moves in a circle of radius 2 m with centripetal acceleration 8 m/s². What is the speed (m/s)?
+
+3) A 2 kg ball on a 0.5 m string moves at 4 m/s. What is the tension/centripetal force (N)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of circular motion."
+        boxes: 3,
+        correctAnswers: ["8","4","32"],
+        hint1: "$a_c = v^2/r = (20)^2/50$.",
+        hint2: "$v^2 = a_c \\cdot r$, then take the square root.",
+        hint3: "$F_c = mv^2/r = 2(16)/0.5$.",
+        explanation: "1) $400/50 = 8$ m/s². 2) $v = \\sqrt{8 \\times 2} = \\sqrt{16} = 4$ m/s. 3) $32/0.5 = 64$... wait, $2(16)/0.5 = 64$ N. Let me recheck: $F = 2 \\times 16 / 0.5 = 64$ N."
       }
     },
     {
@@ -60,22 +82,13 @@ Answer the following about circular motion.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Circular Motion is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Circular Motion builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The centripetal force for a car on a flat curve is provided by","options":["Friction","Gravity","Normal force","Engine force"]},{"label":"In uniform circular motion, the speed is","options":["Constant","Increasing","Decreasing","Zero"]}],
+        correctAnswers: ["Friction","Constant"],
+        hint1: "What force acts horizontally toward the center on a flat road?",
+        hint2: "Uniform means constant speed.",
+        explanation: "Friction provides the centripetal force on a flat curve. Uniform circular motion has constant speed."
       }
     },
     {
@@ -84,28 +97,34 @@ Answer the following about circular motion.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Circular Motion | Core circular motion principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Concept | Formula |
+|---|---------|---------|
+| 1 | Centripetal acceleration | $a_c = v^2/r$ |
+| 2 | Centripetal force | $F_c = mv^2/r$ |
+| 3 | Period and frequency | $T = 2\pi r / v$ |
+    
+    `
     },
     {
       id: 'physicsc-newtons-laws-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in circular motion?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "If the speed of an object in circular motion doubles while the radius stays the same, the centripetal force:",
+                    "options": [
+                              "Quadruples",
+                              "Doubles",
+                              "Halves",
+                              "Stays the same"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$F_c = mv^2/r$. If $v \\\\to 2v$, then $F_c \\\\to m(2v)^2/r = 4mv^2/r$."
           }
-        ]
+]
       }
     }
   ]

@@ -122,7 +122,7 @@ Use $G = 6.67 \\times 10^{-11}$ N·m²/kg², $M_E = 5.97 \\times 10^{24}$ kg, $R
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7700', '92', '6.6', '6.60'],
+        correctAnswers: ['7700', '92', '6.6'],
         hint1: '$r = 6.37 \\times 10^6 + 0.4 \\times 10^6 = 6.77 \\times 10^6$ m. $v = \\sqrt{GM/r}$.',
         hint2: '$T = 2\\pi r/v$. Convert to minutes.',
         hint3: 'From $T = 2\\pi\\sqrt{r^3/(GM)}$, solve for $r$. $T = 86400$ s.',

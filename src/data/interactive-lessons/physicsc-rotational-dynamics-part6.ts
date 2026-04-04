@@ -5,14 +5,18 @@ export const physCRotationPart6Data = {
       id: 'physicsc-rotational-dynamics-p6-intro',
       type: 'text' as const,
       content: `
-# 🛠️ Problem-Solving Workshop
+# ⚛️ Problem-Solving Workshop
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the AP Physics C Rotational Dynamics series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Rotation Problem Strategy
+1. Identify the axis of rotation
+2. Find the moment of inertia about that axis
+3. Calculate net torque
+4. Apply $\tau = I\alpha$ or conservation of $L$
+5. Connect rotational and translational quantities if rolling
+    
+    `
     },
     {
       id: 'physicsc-rotational-dynamics-p6-worked',
@@ -20,39 +24,58 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A 20 N force acts tangentially on a disk ($m = 4$ kg, $r = 0.5$ m). Find $\alpha$.**
+
+$I = \frac{1}{2}mr^2 = \frac{1}{2}(4)(0.25) = 0.5$ kg·m²
+
+$\tau = Fr = 20(0.5) = 10$ N·m
+
+$\alpha = \tau / I = 10 / 0.5 = 20$ rad/s² ✅
+    
+    `
     },
     {
       id: 'physicsc-rotational-dynamics-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in AP Physics C."
+                    "question": "When solving an Atwood machine with a massive pulley, you must:",
+                    "options": [
+                              "Include the pulley's moment of inertia",
+                              "Ignore the pulley",
+                              "Assume massless pulley",
+                              "Set tension equal on both sides"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "A massive pulley has rotational inertia that affects the system's acceleration."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-rotational-dynamics-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Problem-Solving Workshop** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) A 20 N tangential force on a disk ($I = 0.5$ kg·m², $r = 0.5$ m). $\alpha$ (rad/s²)?
+
+2) A torque of 10 N·m acts on a wheel ($I = 2$ kg·m²). $\alpha$ (rad/s²)?
+
+3) A wheel accelerates from rest at 4 rad/s² for 3 s. It then decelerates at 6 rad/s². Time to stop (s)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["20","10","2"],
+        hint1: "$\\tau = Fr = 10$ N·m. $\\alpha = \\tau/I = 10/0.5$.",
+        hint2: "$\\alpha = \\tau/I$.",
+        hint3: "Final $\\omega = 4(3) = 12$ rad/s. Then $t = \\omega/\\alpha = 12/6$.",
+        explanation: "1) $\\alpha = 10/0.5 = 20$ rad/s². 2) $\\alpha = 10/2 = 5$ rad/s². 3) $\\omega = 12$ rad/s, deceleration time = $12/6 = 2$ s."
       }
     },
     {
@@ -60,22 +83,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To find $\\\\alpha$ for a rotating object, you need","options":["$\\\\tau$ and $I$","$v$ and $r$","$m$ and $g$","$F$ and $t$"]},{"label":"Rotational kinetic energy is","options":["$\\\\frac{1}{2}I\\\\omega^2$","$\\\\frac{1}{2}mv^2$","$I\\\\alpha$","$\\\\tau\\\\omega$"]}],
+        correctAnswers: ["$\\\\tau$ and $I$","$\\\\frac{1}{2}I\\\\omega^2$"],
+        hint1: "$\\alpha = \\tau / I$.",
+        hint2: "Rotational KE formula.",
+        explanation: "$\\alpha = \\tau/I$ requires both. Rotational KE = $\\frac{1}{2}I\\omega^2$."
       }
     },
     {
@@ -84,28 +98,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem Type | Key Relationship |
+|---|-------------|------------------|
+| 1 | Disk with tangential force | $\tau = I\alpha$ |
+| 2 | Atwood machine with pulley | Include $I$ of pulley |
+| 3 | Rolling on an incline | Energy conservation |
+    
+    `
     },
     {
       id: 'physicsc-rotational-dynamics-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "For a yo-yo unwinding, the string exerts a torque that causes:",
+                    "options": [
+                              "Angular acceleration",
+                              "Linear deceleration only",
+                              "No rotation",
+                              "Constant angular velocity"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "The tension in the string creates a torque about the yo-yo's axis, causing angular acceleration."
           }
-        ]
+]
       }
     }
   ]

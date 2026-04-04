@@ -5,14 +5,20 @@ export const g6ExpressionsPart3Data = {
       id: 'grade6-expressions-equations-p3-intro',
       type: 'text' as const,
       content: `
-# 🔢 Properties of Operations
+# ✏️ Properties of Operations
 
 **Part 3 of 7 — Properties of Operations**
 
-Welcome to **Properties of Operations** — Part 3 of 7 in the Grade 6 Math Expressions & Equations series.
-
-This lesson covers key concepts and practice problems.
-      `
+| Property | Example |
+|----------|---------|
+| Commutative (add) | $a + b = b + a$ |
+| Commutative (mult) | $ab = ba$ |
+| Associative (add) | $(a+b)+c = a+(b+c)$ |
+| Distributive | $a(b+c) = ab + ac$ |
+| Identity (add) | $a + 0 = a$ |
+| Identity (mult) | $a \times 1 = a$ |
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p3-worked',
@@ -20,39 +26,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Use the distributive property: $4(x + 3)$**
+
+$4(x + 3) = 4x + 12$ ✅
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes properties of operations?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Properties of Operations is a core concept in Grade 6 Math."
+                    "question": "Which property: $3 + 7 = 7 + 3$?",
+                    "options": [
+                              "Commutative",
+                              "Associative",
+                              "Distributive",
+                              "Identity"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Order changed → commutative."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-expressions-equations-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Properties** 🧮
 
-Answer the following about properties of operations.
-      `,
+1) $3(x + 5)$: constant term after distributing?
+
+2) $4(x + 3)$: constant term after distributing?
+
+3) $2(2x + 1) = ?x + 2$: coefficient of x?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of properties of operations."
+        boxes: 3,
+        correctAnswers: ["15","12","4"],
+        hint1: "3 × 5 = ?",
+        hint2: "4 × 3 = ?",
+        hint3: "2 × 2x = ?x.",
+        explanation: "1) 3×5=15. 2) 4×3=12. 3) 2(2x)=4x, coefficient=4."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about properties of operations.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Properties of Operations is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Properties of Operations builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"$a(b + c) = ab + ac$ is the","options":["Distributive property","Commutative property","Associative property","Identity property"]},{"label":"Any number times 1 equals","options":["Itself","0","1","2"]}],
+        correctAnswers: ["Distributive property","Itself"],
+        hint1: "Distributing over addition.",
+        hint2: "1 is the multiplicative identity.",
+        explanation: "Distributive: a(b+c)=ab+ac. Identity: a×1=a."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about properties of operations.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Properties of Operations | Core properties of operations principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Expression | Apply |
+|---|-----------|-------|
+| 1 | $3(x + 5)$ | Distributive |
+| 2 | $7 + 0$ | Identity |
+| 3 | $2 \times (5 \times 3)$ | Associative |
+    
+    `
     },
     {
       id: 'grade6-expressions-equations-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in properties of operations?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$5(2x + 3) = ?$",
+                    "options": [
+                              "$10x + 15$",
+                              "$10x + 3$",
+                              "$7x + 8$",
+                              "$5x + 15$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Distribute: 5(2x) + 5(3) = 10x + 15."
           }
-        ]
+]
       }
     }
   ]

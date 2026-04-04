@@ -115,10 +115,10 @@ $$\\text{Acid} + \\text{Base} \\rightarrow \\text{Salt} + \\text{Water}$$
           {
             question: 'Which reaction will occur based on the activity series?',
             options: [
-              '$\\\\text{Cu} + \\\\text{FeSO}_4 \\\\rightarrow \\\\text{CuSO}_4 + \\\\text{Fe}$',
-              '$\\\\text{Au} + \\\\text{HCl} \\\\rightarrow \\\\text{AuCl}_3 + \\\\text{H}_2$',
-              '$\\\\text{Zn} + \\\\text{CuSO}_4 \\\\rightarrow \\\\text{ZnSO}_4 + \\\\text{Cu}$',
-              '$\\\\text{Ag} + \\\\text{NaCl} \\\\rightarrow \\\\text{AgCl} + \\\\text{Na}$'
+              '$\\text{Cu} + \\text{FeSO}_4 \\rightarrow \\text{CuSO}_4 + \\text{Fe}$',
+              '$\\text{Au} + \\text{HCl} \\rightarrow \\text{AuCl}_3 + \\text{H}_2$',
+              '$\\text{Zn} + \\text{CuSO}_4 \\rightarrow \\text{ZnSO}_4 + \\text{Cu}$',
+              '$\\text{Ag} + \\text{NaCl} \\rightarrow \\text{AgCl} + \\text{Na}$'
             ],
             correctAnswer: 2,
             explanation: 'Zinc is above copper in the activity series, so Zn can displace Cu from CuSO₄. Copper cannot displace iron, gold cannot displace hydrogen from acids, and silver cannot displace sodium.'

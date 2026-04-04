@@ -9,10 +9,15 @@ export const apPrecalcRationalPart4Data = {
 
 **Part 4 of 7 — Holes in Graphs**
 
-Welcome to **Holes in Graphs** — Part 4 of 7 in the AP Precalculus Rational Functions series.
+A **hole** occurs when a factor cancels from both numerator and denominator.
 
-This lesson covers key concepts and practice problems.
-      `
+$f(x) = \frac{(x-2)(x+1)}{(x-2)(x+3)}$
+
+The $(x-2)$ cancels → hole at $x = 2$.
+
+To find the y-value of the hole, substitute into the simplified function.
+    
+    `
     },
     {
       id: 'apprecalc-rational-functions-p4-worked',
@@ -20,39 +25,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$f(x) = \frac{(x-2)(x+1)}{(x-2)(x+3)}$. Hole?**
+
+Cancel $(x-2)$: simplified = $\frac{x+1}{x+3}$
+
+Hole at $x=2$: $y = \frac{2+1}{2+3} = \frac{3}{5} = 0.6$ ✅
+    
+    `
     },
     {
       id: 'apprecalc-rational-functions-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes holes in graphs?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Holes in Graphs is a core concept in AP Precalculus."
+                    "question": "Hole in (x−3)(x+1)/[(x−3)(x−1)]?",
+                    "options": [
+                              "x = 3",
+                              "x = 1",
+                              "x = −1",
+                              "No hole"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(x−3) cancels → hole at x=3."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-rational-functions-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Holes** 🧮
 
-Answer the following about holes in graphs.
-      `,
+1) $\frac{(x-3)(x+1)}{(x-3)(x-1)}$. Hole at $x = $ ?
+
+2) $\frac{x(x-5)}{x(x+2)}$. Hole at $x = $ ?
+
+3) $\frac{(x-2)(x+1)}{(x-2)(x+3)}$. y-value of hole?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of holes in graphs."
+        boxes: 3,
+        correctAnswers: ["3","0","0.6"],
+        hint1: "Common factor x−3.",
+        hint2: "Common factor x.",
+        hint3: "Plug x=2 into simplified form.",
+        explanation: "1) 3. 2) 0. 3) 3/5=0.6."
       }
     },
     {
@@ -60,22 +82,13 @@ Answer the following about holes in graphs.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Holes in Graphs is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Holes in Graphs builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A hole appears as","options":["An open circle on the graph","A vertical line","A horizontal line","A solid dot"]},{"label":"To find the y-coordinate of a hole, use","options":["The simplified function","The original function","The denominator only","x = 0"]}],
+        correctAnswers: ["An open circle on the graph","The simplified function"],
+        hint1: "Point is missing.",
+        hint2: "After canceling.",
+        explanation: "Hole = open circle. Find y using simplified function."
       }
     },
     {
@@ -84,28 +97,33 @@ Answer the following about holes in graphs.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Holes in Graphs | Core holes in graphs principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Function | Hole at |
+|---|---------|--------|
+| 1 | $\frac{(x-3)(x+1)}{(x-3)(x-1)}$ | x = 3 |
+| 2 | $\frac{x(x-5)}{x(x+2)}$ | x = 0 |
+    
+    `
     },
     {
       id: 'apprecalc-rational-functions-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in holes in graphs?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "A hole occurs when a factor:",
+                    "options": [
+                              "Cancels from both num and den",
+                              "Only appears in the denominator",
+                              "Only appears in the numerator",
+                              "Equals 1"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Common factor cancels → hole."
           }
-        ]
+]
       }
     }
   ]

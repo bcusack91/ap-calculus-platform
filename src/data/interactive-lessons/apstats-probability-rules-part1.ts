@@ -9,10 +9,13 @@ export const apStatsProbabilityPart1Data = {
 
 **Part 1 of 7 — Basic Probability**
 
-Welcome to **Basic Probability** — Part 1 of 7 in the AP Statistics Probability Rules series.
+$P(A) = \frac{\text{favorable outcomes}}{\text{total outcomes}}$
 
-This lesson covers key concepts and practice problems.
-      `
+- $0 \leq P(A) \leq 1$
+- $P(\text{certain}) = 1$, $P(\text{impossible}) = 0$
+- $P(A') = 1 - P(A)$ (complement)
+    
+    `
     },
     {
       id: 'apstats-probability-rules-p1-worked',
@@ -20,39 +23,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Roll a die. P(even)?**
+
+Favorable: {2, 4, 6} = 3
+Total: 6
+$P = 3/6 = 0.5$ ✅
+    
+    `
     },
     {
       id: 'apstats-probability-rules-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes basic probability?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Basic Probability is a core concept in AP Statistics."
+                    "question": "P(6 on a fair die)?",
+                    "options": [
+                              "1/6",
+                              "1/3",
+                              "1/2",
+                              "1"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "1 favorable out of 6."
           }
-        ]
+]
       }
     },
     {
       id: 'apstats-probability-rules-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Basic Probability** 🧮
 
-Answer the following about basic probability.
-      `,
+1) P(heads) on a fair coin?
+
+2) Total outcomes for a fair die?
+
+3) P(even) on a fair die?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of basic probability."
+        boxes: 3,
+        correctAnswers: ["0.5","6","0.5"],
+        hint1: "1/2.",
+        hint2: "How many sides?",
+        hint3: "3 even numbers out of 6.",
+        explanation: "1) 0.5. 2) 6. 3) 3/6=0.5."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about basic probability.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Basic Probability is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Basic Probability builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Probability ranges from","options":["0 to 1","−1 to 1","0 to 100","−∞ to ∞"]},{"label":"P(A') is called the","options":["Complement","Union","Intersection","Conditional"]}],
+        correctAnswers: ["0 to 1","Complement"],
+        hint1: "Always non-negative and ≤ 1.",
+        hint2: "Everything NOT in A.",
+        explanation: "P ranges 0–1. P(A') = complement."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about basic probability.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Basic Probability | Core basic probability principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Event | P |
+|---|-------|---|
+| 1 | P(heads on fair coin) | 0.5 |
+| 2 | P(6 on die) | 1/6 |
+| 3 | P(not 6) | 5/6 |
+    
+    `
     },
     {
       id: 'apstats-probability-rules-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in basic probability?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "P(A) + P(A') = ?",
+                    "options": [
+                              "1",
+                              "0",
+                              "0.5",
+                              "2"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Event and complement sum to 1."
           }
-        ]
+]
       }
     }
   ]

@@ -158,7 +158,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['24.2', '24.0', '33', '24.20', '24.00'],
+        correctAnswers: ['24.2', '24.0', '33'],
         hint1: '$\\theta = \\tan^{-1}(v^2/(rg))$.',
         hint2: '$v = \\sqrt{rg\\tan\\theta}$.',
         hint3: 'Plug in: $\\theta = 20°$, $r = 150$, $\\mu_s = 0.3$, $g = 10$.',

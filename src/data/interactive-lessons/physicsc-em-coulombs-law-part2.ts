@@ -5,14 +5,18 @@ export const physCEMCoulombPart2Data = {
       id: 'physicsc-em-coulombs-law-p2-intro',
       type: 'text' as const,
       content: `
-# 📊 Coulomb's Law
+# ⚡ Coulomb's Law
 
 **Part 2 of 7 — Coulomb's Law**
 
-Welcome to **Coulomb's Law** — Part 2 of 7 in the AP Physics C: E&M Coulomb's Law series.
+$F = k\frac{|q_1||q_2|}{r^2}$
 
-This lesson covers key concepts and practice problems.
-      `
+where $k = 8.99 \times 10^9$ N·m²/C² $= \frac{1}{4\pi\epsilon_0}$
+
+- Force is along the line connecting the charges
+- Attractive for opposite charges, repulsive for like charges
+    
+    `
     },
     {
       id: 'physicsc-em-coulombs-law-p2-worked',
@@ -20,39 +24,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Two $+2$ μC charges are 0.3 m apart. Find the force.**
+
+$F = k\frac{q_1 q_2}{r^2} = (9 \times 10^9)\frac{(2 \times 10^{-6})^2}{(0.3)^2}$
+
+$= (9 \times 10^9)\frac{4 \times 10^{-12}}{0.09} = 0.4$ N (repulsive) ✅
+    
+    `
     },
     {
       id: 'physicsc-em-coulombs-law-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes coulomb's law?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Coulomb's Law is a core concept in AP Physics C: E&M."
+                    "question": "If the distance between two charges doubles, the force:",
+                    "options": [
+                              "Decreases to 1/4",
+                              "Decreases to 1/2",
+                              "Doubles",
+                              "Quadruples"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$F \\\\propto 1/r^2$. If $r \\\\to 2r$, $F \\\\to F/4$."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-em-coulombs-law-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Coulomb's Law** 🧮
 
-Answer the following about coulomb's law.
-      `,
+1) If the distance between two charges is halved, the force increases by a factor of ___
+
+2) Two $+1$ μC charges are 0.1 m apart. $F = k(10^{-12})/(0.01) = 9 \times 10^9 \times 10^{-10}$ = ____ N. (Give the answer as a decimal.)
+
+3) The Coulomb constant $k$ is approximately ____ $\times 10^9$ N·m²/C².
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of coulomb's law."
+        boxes: 3,
+        correctAnswers: ["4","0.9","9"],
+        hint1: "$F \\propto 1/r^2$. If $r \\to r/2$, $F \\to F \\times 4$.",
+        hint2: "Calculate step by step.",
+        hint3: "$k = 8.99 \\times 10^9$, round to nearest integer.",
+        explanation: "1) Factor of 4. 2) $9 \\times 10^9 \\times 10^{-10} = 0.9$ N. 3) $k \\approx 9 \\times 10^9$."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about coulomb's law.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Coulomb's Law is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Coulomb's Law builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Two positive charges experience a force that is","options":["Repulsive","Attractive","Zero","Perpendicular"]},{"label":"Coulomb's law applies to","options":["Point charges","Extended objects only","Magnetic poles","Gravitational fields"]}],
+        correctAnswers: ["Repulsive","Point charges"],
+        hint1: "Like charges...",
+        hint2: "The law is derived for point charges.",
+        explanation: "Like charges repel. Coulomb's law is strictly for point charges (or can be applied to spherical charge distributions)."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about coulomb's law.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
+| # | Charges | Distance |
 |---|---------|----------|
-| 1 | Coulomb's Law | Core coulomb's law principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| 1 | $+1$ μC, $-1$ μC | 0.1 m |
+| 2 | $+3$ μC, $+3$ μC | 0.3 m |
+| 3 | $+2$ μC, $-4$ μC | 0.2 m |
+    
+    `
     },
     {
       id: 'physicsc-em-coulombs-law-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in coulomb's law?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Coulomb's law has the same mathematical form as:",
+                    "options": [
+                              "Newton's Law of Gravitation",
+                              "Newton's Second Law",
+                              "Ohm's Law",
+                              "Hooke's Law"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Both are inverse-square laws: $F \\\\propto 1/r^2$."
           }
-        ]
+]
       }
     }
   ]

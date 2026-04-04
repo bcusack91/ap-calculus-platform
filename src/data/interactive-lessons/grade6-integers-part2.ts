@@ -5,14 +5,17 @@ export const g6IntegersPart2Data = {
       id: 'grade6-integers-p2-intro',
       type: 'text' as const,
       content: `
-# 📊 Number Line & Absolute Value
+# ➕➖ Number Line & Absolute Value
 
 **Part 2 of 7 — Number Line & Absolute Value**
 
-Welcome to **Number Line & Absolute Value** — Part 2 of 7 in the Grade 6 Math Integers series.
+**Absolute value** = distance from zero (always positive or zero).
 
-This lesson covers key concepts and practice problems.
-      `
+$|5| = 5$, $|-5| = 5$, $|0| = 0$
+
+On the number line: numbers increase left to right.
+    
+    `
     },
     {
       id: 'grade6-integers-p2-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Compare: $|-8|$ and $|6|$.**
+
+$|-8| = 8$ and $|6| = 6$. So $|-8| > |6|$. ✅
+    
+    `
     },
     {
       id: 'grade6-integers-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes number line & absolute value?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Number Line & Absolute Value is a core concept in Grade 6 Math."
+                    "question": "$|-15| = ?$",
+                    "options": [
+                              "15",
+                              "−15",
+                              "0",
+                              "−1"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Distance from 0 → always positive: 15."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-integers-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Absolute Value** 🧮
 
-Answer the following about number line & absolute value.
-      `,
+1) $|-12| = ?$
+
+2) $|0| = ?$
+
+3) $|7| + |-3| = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of number line & absolute value."
+        boxes: 3,
+        correctAnswers: ["12","0","10"],
+        hint1: "Distance from 0.",
+        hint2: "Zero is 0 away from itself.",
+        hint3: "7 + 3.",
+        explanation: "1) 12. 2) 0. 3) 7+3=10."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about number line & absolute value.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Number Line & Absolute Value is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Number Line & Absolute Value builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Absolute value is always","options":["Non-negative","Negative","Zero","Positive"],"correctAnswer":0},{"label":"On a number line, which is farther from 0: -7 or 5?","options":["-7","5","Same distance","Cannot tell"]}],
+        correctAnswers: ["Non-negative","-7"],
+        hint1: "Distance cannot be negative.",
+        hint2: "|-7|=7 vs |5|=5.",
+        explanation: "Absolute value ≥ 0. |-7|=7 > |5|=5."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about number line & absolute value.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Number Line & Absolute Value | Core number line & absolute value principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Expression | Value |
+|---|-----------|-------|
+| 1 | $|-12|$ | 12 |
+| 2 | $|0|$ | 0 |
+| 3 | $|7| + |-3|$ | 10 |
+    
+    `
     },
     {
       id: 'grade6-integers-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in number line & absolute value?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Which is greater: $-4$ or $-9$?",
+                    "options": [
+                              "$-4$",
+                              "$-9$",
+                              "They are equal",
+                              "Cannot compare"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "−4 is closer to 0 → greater."
           }
-        ]
+]
       }
     }
   ]

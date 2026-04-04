@@ -142,7 +142,7 @@ For a rotating solid object (like a wheel):
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['18.8', '6.6', '124', '18.80', '6.60'],
+        correctAnswers: ['18.8', '6.6', '124'],
         hint1: '$\\omega = 2\\pi f = 2\\pi(3)$.',
         hint2: '$v = r\\omega$.',
         hint3: '$a_c = r\\omega^2$ or $v^2/r$.',

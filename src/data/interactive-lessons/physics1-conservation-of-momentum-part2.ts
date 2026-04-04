@@ -142,7 +142,7 @@ In a perfectly inelastic collision, kinetic energy is **always** lost (converted
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.8', '2.0', '5', '0.80', '2.00'],
+        correctAnswers: ['0.8', '2.0', '5'],
         hint1: '$(4)(5) + (6)(-2) = (10)v_f$. $20 - 12 = 10v_f$.',
         hint2: '$(0.010)(400) + (2.0)(0) = (2.010)v_f$.',
         hint3: '$(8)(3) + (2)(1) = (8)(2) + (2)(v_2)$. $26 = 16 + 2v_2$.',

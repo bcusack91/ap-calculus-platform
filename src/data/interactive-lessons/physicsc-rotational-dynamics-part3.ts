@@ -5,14 +5,19 @@ export const physCRotationPart3Data = {
       id: 'physicsc-rotational-dynamics-p3-intro',
       type: 'text' as const,
       content: `
-# 🔢 Torque
+# ⚛️ Torque
 
 **Part 3 of 7 — Torque**
 
-Welcome to **Torque** — Part 3 of 7 in the AP Physics C Rotational Dynamics series.
+$\tau = rF\sin\theta = r_{\perp}F$
 
-This lesson covers key concepts and practice problems.
-      `
+$\sum \tau = I\alpha$
+
+This is the rotational analog of $F = ma$.
+
+Torque is positive for counterclockwise rotation and negative for clockwise.
+    
+    `
     },
     {
       id: 'physicsc-rotational-dynamics-p3-worked',
@@ -20,39 +25,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A 10 N force is applied at the end of a 0.5 m wrench perpendicular to it. Find the torque.**
+
+$\tau = rF\sin 90° = 0.5(10)(1) = 5$ N·m ✅
+    
+    `
     },
     {
       id: 'physicsc-rotational-dynamics-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes torque?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Torque is a core concept in AP Physics C."
+                    "question": "Torque is maximized when the force is applied:",
+                    "options": [
+                              "Perpendicular to the lever arm",
+                              "Parallel to the lever arm",
+                              "At the pivot",
+                              "At 45°"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$\\\\tau = rF\\\\sin\\\\theta$. Maximum when $\\\\theta = 90°$, i.e., perpendicular."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-rotational-dynamics-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Torque** 🧮
 
-Answer the following about torque.
-      `,
+1) A 10 N force acts at the end of a 0.5 m wrench (perpendicular). Torque (N·m)?
+
+2) A torque of 12 N·m acts on an object with $I = 2$ kg·m². Angular acceleration (rad/s²)?
+
+3) Two forces create torques of +7 N·m and -3 N·m. Net torque (N·m)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of torque."
+        boxes: 3,
+        correctAnswers: ["5","6","4"],
+        hint1: "$\\tau = rF$ when perpendicular.",
+        hint2: "$\\alpha = \\tau / I$.",
+        hint3: "Add the torques (watch the signs).",
+        explanation: "1) $0.5 \\times 10 = 5$ N·m. 2) $\\alpha = 12/2 = 6$ rad/s². 3) $7 + (-3) = 4$ N·m."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about torque.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Torque is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Torque builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The SI unit of torque is","options":["N·m","J","W","kg·m²"]},{"label":"A force applied at the pivot creates","options":["Zero torque","Maximum torque","Infinite torque","Negative torque"]}],
+        correctAnswers: ["N·m","Zero torque"],
+        hint1: "Torque = force × distance.",
+        hint2: "If $r = 0$...",
+        explanation: "Torque is measured in N·m. At the pivot, $r = 0$, so $\\tau = 0$."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about torque.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Torque | Core torque principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Scenario | Formula |
+|---|----------|---------|
+| 1 | Perpendicular force | $\tau = rF$ |
+| 2 | Angled force | $\tau = rF\sin\theta$ |
+| 3 | Net torque & acceleration | $\tau_{net} = I\alpha$ |
+    
+    `
     },
     {
       id: 'physicsc-rotational-dynamics-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in torque?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "The rotational analog of $F = ma$ is:",
+                    "options": [
+                              "$\\\\tau = I\\\\alpha$",
+                              "$\\\\tau = mr^2$",
+                              "$L = I\\\\omega$",
+                              "$\\\\omega = \\\\alpha t$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Newton's second law for rotation: $\\\\tau = I\\\\alpha$."
           }
-        ]
+]
       }
     }
   ]

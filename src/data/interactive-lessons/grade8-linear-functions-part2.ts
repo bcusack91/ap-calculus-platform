@@ -9,10 +9,14 @@ export const g8LinearPart2Data = {
 
 **Part 2 of 7 — Slope from Tables & Graphs**
 
-Welcome to **Slope from Tables & Graphs** — Part 2 of 7 in the Grade 8 Math Linear Functions series.
+$\text{slope} = m = \frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}$
 
-This lesson covers key concepts and practice problems.
-      `
+- Positive slope: rises left to right
+- Negative slope: falls left to right
+- Zero slope: horizontal
+- Undefined slope: vertical
+    
+    `
     },
     {
       id: 'grade8-linear-functions-p2-worked',
@@ -20,39 +24,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Points (1, 3) and (4, 9).**
+
+$m = \frac{9 - 3}{4 - 1} = \frac{6}{3} = 2$ ✅
+    
+    `
     },
     {
       id: 'grade8-linear-functions-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes slope from tables & graphs?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Slope from Tables & Graphs is a core concept in Grade 8 Math."
+                    "question": "Slope of (0,1) and (2,5)?",
+                    "options": [
+                              "2",
+                              "3",
+                              "1/2",
+                              "4"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(5−1)/(2−0) = 4/2 = 2."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-linear-functions-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Find the Slope** 🧮
 
-Answer the following about slope from tables & graphs.
-      `,
+1) (0,1) and (2,5). m = ?
+
+2) (1,6) and (3,2). m = ?
+
+3) (0,0) and (4,12). m = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of slope from tables & graphs."
+        boxes: 3,
+        correctAnswers: ["2","-2","3"],
+        hint1: "(5−1)/(2−0).",
+        hint2: "(2−6)/(3−1).",
+        hint3: "(12−0)/(4−0).",
+        explanation: "1) 4/2=2. 2) −4/2=−2. 3) 12/4=3."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about slope from tables & graphs.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Slope from Tables & Graphs is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Slope from Tables & Graphs builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Positive slope means the line","options":["Rises left to right","Falls left to right","Is horizontal","Is vertical"]},{"label":"Undefined slope means the line is","options":["Vertical","Horizontal","Diagonal","Curved"]}],
+        correctAnswers: ["Rises left to right","Vertical"],
+        hint1: "Positive = uphill.",
+        hint2: "Divide by zero = undefined.",
+        explanation: "Positive slope → rises. Undefined → vertical."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about slope from tables & graphs.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Slope from Tables & Graphs | Core slope from tables & graphs principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Points | Slope |
+|---|--------|-------|
+| 1 | (0,1) and (2,5) | 2 |
+| 2 | (1,6) and (3,2) | −2 |
+| 3 | (0,0) and (4,12) | 3 |
+    
+    `
     },
     {
       id: 'grade8-linear-functions-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in slope from tables & graphs?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "A horizontal line has slope:",
+                    "options": [
+                              "0",
+                              "Undefined",
+                              "1",
+                              "−1"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Horizontal → no rise → slope = 0."
           }
-        ]
+]
       }
     }
   ]

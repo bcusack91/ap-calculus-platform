@@ -9,10 +9,14 @@ export const alg2RationalPart1Data = {
 
 **Part 1 of 7 — Simplifying Rational Expressions**
 
-Welcome to **Simplifying Rational Expressions** — Part 1 of 7 in the Algebra 2 Rational Expressions series.
+A rational expression is a fraction with polynomials:
+$\frac{p(x)}{q(x)}$, $q(x) \neq 0$
 
-This lesson covers key concepts and practice problems.
-      `
+Simplify by **factoring** and canceling common factors.
+
+$\frac{x^2-4}{x+2} = \frac{(x+2)(x-2)}{x+2} = x-2$
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p1-worked',
@@ -20,39 +24,58 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$\frac{x^2-9}{x+3} = \frac{(x+3)(x-3)}{x+3} = x-3$ ✅ (when $x \neq -3$)
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes simplifying rational expressions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Simplifying Rational Expressions is a core concept in Algebra 2."
+                    "question": "$\\frac{x^2-4}{x+2}$ simplifies to:",
+                    "options": [
+                              "$x-2$",
+                              "$x+2$",
+                              "$x^2-2$",
+                              "$x-4$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Factor: (x+2)(x−2)/(x+2) = x−2."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-rational-expressions-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Simplify** 🧮
 
-Answer the following about simplifying rational expressions.
-      `,
+$\frac{x^2-4}{x+2} = x + ?$
+
+1) The constant?
+
+$\frac{x^2-9}{x+3} = x + ?$
+
+2) The constant?
+
+$\frac{x^2-1}{x-1} = x + ?$
+
+3) The constant?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of simplifying rational expressions."
+        boxes: 3,
+        correctAnswers: ["-2","-3","1"],
+        hint1: "(x+2)(x−2)/(x+2).",
+        hint2: "(x+3)(x−3)/(x+3).",
+        hint3: "(x+1)(x−1)/(x−1).",
+        explanation: "1) x−2. 2) x−3. 3) x+1."
       }
     },
     {
@@ -60,22 +83,13 @@ Answer the following about simplifying rational expressions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Simplifying Rational Expressions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Simplifying Rational Expressions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To simplify a rational expression","options":["Factor and cancel common factors","Cross multiply","Add numerators","Flip the fraction"]},{"label":"A rational expression is undefined when the","options":["Denominator equals zero","Numerator equals zero","Expression is negative","Variable is large"]}],
+        correctAnswers: ["Factor and cancel common factors","Denominator equals zero"],
+        hint1: "Factor first.",
+        hint2: "Division by zero.",
+        explanation: "Factor then cancel. Undefined when denominator = 0."
       }
     },
     {
@@ -84,28 +98,34 @@ Answer the following about simplifying rational expressions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Simplifying Rational Expressions | Core simplifying rational expressions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Expression | Simplified |
+|---|-----------|------------|
+| 1 | $\frac{x^2-4}{x+2}$ | $x-2$ |
+| 2 | $\frac{2x}{4x^2}$ | $\frac{1}{2x}$ |
+| 3 | $\frac{x^2-1}{x-1}$ | $x+1$ |
+    
+    `
     },
     {
       id: 'algebra2-rational-expressions-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in simplifying rational expressions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "We cannot cancel terms that are:",
+                    "options": [
+                              "Added (only factors cancel)",
+                              "Multiplied",
+                              "In the numerator",
+                              "In parentheses"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Only factors (multiplication) can cancel."
           }
-        ]
+]
       }
     }
   ]

@@ -5,14 +5,17 @@ export const physCEMCapacitorsPart3Data = {
       id: 'physicsc-em-capacitors-p3-intro',
       type: 'text' as const,
       content: `
-# 🔢 Series & Parallel Combinations
+# ⚡ Capacitors in Series & Parallel
 
 **Part 3 of 7 — Series & Parallel Combinations**
 
-Welcome to **Series & Parallel Combinations** — Part 3 of 7 in the AP Physics C: E&M Capacitors & Dielectrics series.
+**Parallel:** $C_{eq} = C_1 + C_2 + \cdots$ (same voltage)
 
-This lesson covers key concepts and practice problems.
-      `
+**Series:** $\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots$ (same charge)
+
+Note: opposite of resistors! Parallel adds, series uses reciprocals.
+    
+    `
     },
     {
       id: 'physicsc-em-capacitors-p3-worked',
@@ -20,39 +23,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Two capacitors: 3 μF and 6 μF in series. Find $C_{eq}$.**
+
+$\frac{1}{C_{eq}} = \frac{1}{3} + \frac{1}{6} = \frac{2+1}{6} = \frac{1}{2}$
+
+$C_{eq} = 2$ μF ✅
+    
+    `
     },
     {
       id: 'physicsc-em-capacitors-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes series & parallel combinations?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Series & Parallel Combinations is a core concept in AP Physics C: E&M."
+                    "question": "Two identical capacitors in parallel have total capacitance:",
+                    "options": [
+                              "$2C$",
+                              "$C$",
+                              "$C/2$",
+                              "$4C$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Parallel: $C_{eq} = C + C = 2C$."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-em-capacitors-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Series & Parallel Capacitors** 🧮
 
-Answer the following about series & parallel combinations.
-      `,
+1) 3 μF and 6 μF in parallel. $C_{eq}$ (μF)?
+
+2) 3 μF and 6 μF in series. $C_{eq}$ (μF)?
+
+3) Two 3 μF caps in parallel: $C_{eq}$ (μF)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of series & parallel combinations."
+        boxes: 3,
+        correctAnswers: ["9","2","6"],
+        hint1: "Parallel: add them.",
+        hint2: "$1/C_{eq} = 1/3 + 1/6 = 3/6 = 1/2$.",
+        hint3: "$3 + 3$.",
+        explanation: "1) $3 + 6 = 9$ μF. 2) $C_{eq} = 2$ μF. 3) $3 + 3 = 6$ μF."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about series & parallel combinations.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Series & Parallel Combinations is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Series & Parallel Combinations builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Capacitors in parallel share the same","options":["Voltage","Charge","Current","Resistance"]},{"label":"Capacitors in series share the same","options":["Charge","Voltage","Capacitance","Energy"]}],
+        correctAnswers: ["Voltage","Charge"],
+        hint1: "Parallel components are connected across the same points.",
+        hint2: "Charge flows through series capacitors equally.",
+        explanation: "Parallel: same voltage. Series: same charge on each capacitor."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about series & parallel combinations.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Series & Parallel Combinations | Core series & parallel combinations principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Configuration | Formula |
+|---|--------------|---------|
+| 1 | Parallel | $C_{eq} = C_1 + C_2$ |
+| 2 | Series | $1/C_{eq} = 1/C_1 + 1/C_2$ |
+| 3 | Mixed | Simplify step by step |
+    
+    `
     },
     {
       id: 'physicsc-em-capacitors-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in series & parallel combinations?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Two identical capacitors in series have total capacitance:",
+                    "options": [
+                              "$C/2$",
+                              "$2C$",
+                              "$C$",
+                              "$4C$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Series: $1/C_{eq} = 1/C + 1/C = 2/C$, so $C_{eq} = C/2$."
           }
-        ]
+]
       }
     }
   ]

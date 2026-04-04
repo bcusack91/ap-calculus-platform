@@ -9,10 +9,17 @@ export const g8TransformationsPart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the Grade 8 Math Transformations series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Transformation Summary
+| Transformation | Rule | Type |
+|---------------|------|------|
+| Translation | $(x+a, y+b)$ | Rigid |
+| Reflection x-axis | $(x, -y)$ | Rigid |
+| Reflection y-axis | $(-x, y)$ | Rigid |
+| Rotation 90° CCW | $(-y, x)$ | Rigid |
+| Rotation 180° | $(-x, -y)$ | Rigid |
+| Dilation | $(kx, ky)$ | Not rigid |
+    
+    `
     },
     {
       id: 'grade8-transformations-p7-worked',
@@ -20,39 +27,55 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Rotate (5, 2) 90° CCW then dilate by 3.**
+
+Step 1: $(5,2) \to (-2,5)$
+Step 2: $(-6,15)$ ✅
+    
+    `
     },
     {
       id: 'grade8-transformations-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in Grade 8 Math."
+                    "question": "Translate (3,7) right 2, up 4:",
+                    "options": [
+                              "(5,11)",
+                              "(1,3)",
+                              "(5,3)",
+                              "(1,11)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(3+2, 7+4) = (5,11)."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-transformations-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) Translate (3,7) right 2. New x = ?
+
+2) Reflect (5,−3) over x-axis. New y = ?
+
+3) Rotate (4,1) 180°. New x = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["5","3","-4"],
+        hint1: "3 + 2.",
+        hint2: "−(−3) = 3.",
+        hint3: "−4.",
+        explanation: "1) 5. 2) 3. 3) −4."
       }
     },
     {
@@ -60,22 +83,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Rigid motions preserve","options":["Size and shape","Size only","Shape only","Color"]},{"label":"The only transformation that changes size is","options":["Dilation","Translation","Reflection","Rotation"]}],
+        correctAnswers: ["Size and shape","Dilation"],
+        hint1: "Congruent images.",
+        hint2: "Scale factor ≠ 1.",
+        explanation: "Rigid motions → congruent. Dilation changes size."
       }
     },
     {
@@ -84,28 +98,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Type | Problem |
+|---|------|---------|
+| 1 | Translation | (3,7) right 2 up 4 |
+| 2 | Reflection | (5,−3) over x-axis |
+| 3 | Rotation | (4,1) 180° |
+    
+    `
     },
     {
       id: 'grade8-transformations-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Rotate (4,1) 180°:",
+                    "options": [
+                              "(−4,−1)",
+                              "(−1,4)",
+                              "(4,−1)",
+                              "(1,−4)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(x,y)→(−x,−y) = (−4,−1)."
           }
-        ]
+]
       }
     }
   ]

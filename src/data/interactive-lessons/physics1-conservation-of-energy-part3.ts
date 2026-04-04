@@ -133,7 +133,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.8', '0.28', '2', '1.80', '0.280'],
+        correctAnswers: ['1.8', '0.28', '2'],
         hint1: '$\\frac{1}{2}kx^2 = mgh \\Rightarrow h = kx^2/(2mg)$.',
         hint2: '$mgh = \\frac{1}{2}kx^2 \\Rightarrow x = \\sqrt{2mgh/k}$.',
         hint3: '$\\frac{1}{2}kx^2 = mgd\\sin(30°) \\Rightarrow d = kx^2/(2mg\\sin 30°)$.',

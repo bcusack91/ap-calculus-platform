@@ -5,14 +5,18 @@ export const g6IntegersPart1Data = {
       id: 'grade6-integers-p1-intro',
       type: 'text' as const,
       content: `
-# 📐 Positive & Negative Numbers
+# ➕➖ Positive & Negative Numbers
 
 **Part 1 of 7 — Positive & Negative Numbers**
 
-Welcome to **Positive & Negative Numbers** — Part 1 of 7 in the Grade 6 Math Integers series.
+**Integers** = {..., −3, −2, −1, 0, 1, 2, 3, ...}
 
-This lesson covers key concepts and practice problems.
-      `
+Real-world examples:
+- Temperature: −5°F (below zero)
+- Money: −\\$10 (debt)
+- Elevation: −100 ft (below sea level)
+    
+    `
     },
     {
       id: 'grade6-integers-p1-worked',
@@ -20,39 +24,55 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A temperature drops from 8°F to −3°F. How many degrees did it drop?**
+
+From 8 to 0 = 8 degrees. From 0 to −3 = 3 degrees.
+Total drop: $8 + 3 = 11$ degrees ✅
+    
+    `
     },
     {
       id: 'grade6-integers-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes positive & negative numbers?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Positive & Negative Numbers is a core concept in Grade 6 Math."
+                    "question": "Which integer represents \"a loss of 7 points\"?",
+                    "options": [
+                              "−7",
+                              "7",
+                              "+7",
+                              "0"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "A loss is negative: −7."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-integers-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Write Integers** 🧮
 
-Answer the following about positive & negative numbers.
-      `,
+1) 10° below zero = ?
+
+2) Gain of 25 yards = ?
+
+3) 50 feet below sea level = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of positive & negative numbers."
+        boxes: 3,
+        correctAnswers: ["-10","25","-50"],
+        hint1: "Below zero → negative.",
+        hint2: "Gain → positive.",
+        hint3: "Below sea level → negative.",
+        explanation: "1) −10. 2) +25. 3) −50."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about positive & negative numbers.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Positive & Negative Numbers is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Positive & Negative Numbers builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Integers include","options":["Positive numbers, negative numbers, and zero","Only positive numbers","Only fractions","Only whole numbers"]},{"label":"A debt of $30 is represented as","options":["−30","+30","30","0"]}],
+        correctAnswers: ["Positive numbers, negative numbers, and zero","−30"],
+        hint1: "Integers go in both directions.",
+        hint2: "Debt is negative.",
+        explanation: "Integers: …−2,−1,0,1,2… Debt → −30."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about positive & negative numbers.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Positive & Negative Numbers | Core positive & negative numbers principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Item | Integer |
+|---|------|---------|
+| 1 | 15° below zero | −15 |
+| 2 | Gain of \$50 | +50 |
+| 3 | 200 ft below sea level | −200 |
+    
+    `
     },
     {
       id: 'grade6-integers-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in positive & negative numbers?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Which is colder: −5°F or −12°F?",
+                    "options": [
+                              "−12°F",
+                              "−5°F",
+                              "They are equal",
+                              "0°F"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "−12 is farther below zero → colder."
           }
-        ]
+]
       }
     }
   ]

@@ -9,10 +9,11 @@ export const geoCoordProofsPart1Data = {
 
 **Part 1 of 7 — Distance & Midpoint**
 
-Welcome to **Distance & Midpoint** — Part 1 of 7 in the Geometry Coordinate Proofs series.
+$d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$
 
-This lesson covers key concepts and practice problems.
-      `
+$M = \left(\frac{x_1+x_2}{2}, \frac{y_1+y_2}{2}\right)$
+    
+    `
     },
     {
       id: 'geometry-coordinate-proofs-p1-worked',
@@ -20,39 +21,55 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**(2, 3) and (8, 11).**
+
+$d = \sqrt{36+64} = \sqrt{100} = 10$
+$M = (5, 7)$ ✅
+    
+    `
     },
     {
       id: 'geometry-coordinate-proofs-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes distance & midpoint?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Distance & Midpoint is a core concept in Geometry."
+                    "question": "Distance from (0,0) to (3,4)?",
+                    "options": [
+                              "5",
+                              "7",
+                              "12",
+                              "25"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "√(9+16) = √25 = 5."
           }
-        ]
+]
       }
     },
     {
       id: 'geometry-coordinate-proofs-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Distance** 🧮
 
-Answer the following about distance & midpoint.
-      `,
+1) (0,0) to (3,4). Distance?
+
+2) (1,2) to (5,5). Distance?
+
+3) (−2,1) to (4,9). Distance?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of distance & midpoint."
+        boxes: 3,
+        correctAnswers: ["5","5","10"],
+        hint1: "√(9+16).",
+        hint2: "√(16+9).",
+        hint3: "√(36+64).",
+        explanation: "1) √25=5. 2) √25=5. 3) √100=10."
       }
     },
     {
@@ -60,22 +77,13 @@ Answer the following about distance & midpoint.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Distance & Midpoint is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Distance & Midpoint builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The midpoint formula averages the","options":["Coordinates","Distances","Slopes","Areas"]},{"label":"The distance formula comes from the","options":["Pythagorean theorem","Midpoint formula","Slope formula","Area formula"]}],
+        correctAnswers: ["Coordinates","Pythagorean theorem"],
+        hint1: "Average x and y separately.",
+        hint2: "a²+b²=c².",
+        explanation: "Midpoint: average coordinates. Distance: Pythagorean theorem."
       }
     },
     {
@@ -84,28 +92,34 @@ Answer the following about distance & midpoint.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Distance & Midpoint | Core distance & midpoint principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Points | Distance | Midpoint |
+|---|--------|----------|----------|
+| 1 | (0,0), (3,4) | 5 | (1.5, 2) |
+| 2 | (1,2), (5,5) | 5 | (3, 3.5) |
+| 3 | (−2,1), (4,9) | 10 | (1, 5) |
+    
+    `
     },
     {
       id: 'geometry-coordinate-proofs-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in distance & midpoint?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Midpoint of (2,6) and (8,10)?",
+                    "options": [
+                              "(5,8)",
+                              "(10,16)",
+                              "(6,4)",
+                              "(3,2)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "((2+8)/2, (6+10)/2) = (5,8)."
           }
-        ]
+]
       }
     }
   ]

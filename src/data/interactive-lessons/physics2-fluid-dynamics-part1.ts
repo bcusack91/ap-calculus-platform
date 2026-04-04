@@ -131,7 +131,7 @@ Water flows through a circular pipe of diameter 4.0 cm at a speed of 3.0 m/s.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.26e-3', '3.77e-3', '13.3', '0.001260', '0.003770', '13.30'],
+        correctAnswers: ['1.26e-3', '3.77e-3', '13.3'],
         hint1: '$A = \\pi r^2 = \\pi (0.02)^2$.',
         hint2: '$Q = Av = (1.26 \\times 10^{-3})(3.0)$.',
         hint3: '$t = V/Q = 0.050/Q$.',

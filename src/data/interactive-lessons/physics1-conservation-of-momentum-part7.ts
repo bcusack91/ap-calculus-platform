@@ -129,7 +129,7 @@ Let\'s synthesize everything about conservation of momentum: isolated systems, 1
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4', '2', '0.8', '0.80'],
+        correctAnswers: ['4', '2', '0.8'],
         hint1: '$(0.050)(400) = (5.0)(v_f)$',
         hint2: 'Use $v^2 = 2\\mu g d$. $d = v^2/(2\\mu g) = 16/(2 \\times 0.40 \\times 10)$',
         hint3: '$0 = (75)(v) + (5)(12)$. $v = -60/75$',

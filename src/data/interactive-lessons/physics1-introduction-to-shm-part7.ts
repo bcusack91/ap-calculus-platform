@@ -121,7 +121,7 @@ $$a = -\\omega^2 x$$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.75', '19', '2.0', '0.750', '2.00'],
+        correctAnswers: ['0.75', '19', '2.0'],
         hint1: '$\\omega = a_{\\text{max}}/v_{\\text{max}} = 4.0$. Then $A = v_{\\text{max}}/\\omega$',
         hint2: '$T = 2\\pi\\sqrt{2.5/9.8}$. Number of cycles $= 60/T$',
         hint3: '$a = -(k/m)x = -(50/2.0)(0.08)$',

@@ -9,10 +9,14 @@ export const g7ProportionalPart7Data = {
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the Grade 7 Math Proportional Relationships series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Concepts
+- Proportional: constant y/x = k, through origin
+- Equation: y = kx
+- Graph: straight line through (0,0)
+- Scale: multiply by scale factor
+- Percent: part = rate × whole
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p7-worked',
@@ -20,39 +24,53 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**y = 4x. Find y when x = 7.**
+$y = 4(7) = 28$ ✅
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in Grade 7 Math."
+                    "question": "(5, 15): k = ?",
+                    "options": [
+                              "3",
+                              "5",
+                              "15",
+                              "75"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "k = 15/5 = 3."
           }
-        ]
+]
       }
     },
     {
       id: 'grade7-proportional-relationships-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) (5, 15): k = ?
+
+2) y = 3x. When x = 8, y = ?
+
+3) 15% of 200 = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["3","24","30"],
+        hint1: "15 ÷ 5.",
+        hint2: "3 × 8.",
+        hint3: "0.15 × 200.",
+        explanation: "1) 3. 2) 24. 3) 30."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"y = kx represents a","options":["Proportional relationship","Quadratic","Exponential","Inverse variation"]},{"label":"A proportional graph is a straight line that passes through","options":["(0, 0)","(1, 1)","(0, k)","(k, 0)"]}],
+        correctAnswers: ["Proportional relationship","(0, 0)"],
+        hint1: "Direct variation.",
+        hint2: "Proportional → origin.",
+        explanation: "y = kx → proportional. Always through the origin."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Type | Problem |
+|---|------|---------|
+| 1 | k | (5, 15): k = ? |
+| 2 | Equation | y when x=8, k=3 |
+| 3 | Percent | 15% of 200 |
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "15% of 200 = ?",
+                    "options": [
+                              "30",
+                              "15",
+                              "300",
+                              "3"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "0.15 × 200 = 30."
           }
-        ]
+]
       }
     }
   ]

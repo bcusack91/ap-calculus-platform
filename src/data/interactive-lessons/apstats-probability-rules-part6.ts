@@ -9,10 +9,13 @@ export const apStatsProbabilityPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the AP Statistics Probability Rules series.
-
-This lesson covers key concepts and practice problems.
-      `
+Combine all probability rules:
+- Choose addition or multiplication rule
+- Check independence vs dependence
+- Apply conditional probability
+- Use complements
+    
+    `
     },
     {
       id: 'apstats-probability-rules-p6-worked',
@@ -20,39 +23,58 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**P(rain) = 0.3. P(no rain on 2 consecutive days)?**
+
+Independent days:
+$P(\text{no rain}) = 1 - 0.3 = 0.7$
+$P(\text{both dry}) = 0.7 \times 0.7 = 0.49$ ✅
+    
+    `
     },
     {
       id: 'apstats-probability-rules-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in AP Statistics."
+                    "question": "P(rain)=0.3. P(no rain)?",
+                    "options": [
+                              "0.7",
+                              "0.3",
+                              "1",
+                              "0"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "1−0.3=0.7."
           }
-        ]
+]
       }
     },
     {
       id: 'apstats-probability-rules-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Applications** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+P(rain each day) = 0.3, days independent:
+
+1) P(dry on one day)?
+
+2) P(dry on BOTH of 2 days)?
+
+3) P(rain on at least one of 2 days)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["0.7","0.49","0.51"],
+        hint1: "1−0.3.",
+        hint2: "0.7×0.7.",
+        hint3: "1−P(both dry).",
+        explanation: "1) 0.7. 2) 0.49. 3) 1−0.49=0.51."
       }
     },
     {
@@ -60,22 +82,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"\"At least one\" problems use the ____ rule","options":["Complement","Addition","Multiplication","Conditional"]},{"label":"P(A or B) uses the ____ rule","options":["Addition","Multiplication","Complement","Bayes"]}],
+        correctAnswers: ["Complement","Addition"],
+        hint1: "1 − P(none).",
+        hint2: "A ∪ B.",
+        explanation: "\"At least one\" → complement. \"Or\" → addition rule."
       }
     },
     {
@@ -84,28 +97,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Rule |
+|---|---------|------|
+| 1 | P(A or B) | Addition |
+| 2 | P(A and B) | Multiplication |
+| 3 | P(not A) | Complement |
+    
+    `
     },
     {
       id: 'apstats-probability-rules-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "P(at least one) is easiest found with:",
+                    "options": [
+                              "1 − P(none)",
+                              "P(A)+P(B)",
+                              "P(A)×P(B)",
+                              "P(A|B)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Complement: 1 − P(none)."
           }
-        ]
+]
       }
     }
   ]

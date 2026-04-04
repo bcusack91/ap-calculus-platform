@@ -9,10 +9,12 @@ export const geoCirclesPart5Data = {
 
 **Part 5 of 7 — Chords & Secants**
 
-Welcome to **Chords & Secants** — Part 5 of 7 in the Geometry Circles series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Theorems
+- **Intersecting chords**: $a \cdot b = c \cdot d$ (pieces of each chord)
+- **Equal chords** are equidistant from center
+- **Perpendicular from center** bisects a chord
+    
+    `
     },
     {
       id: 'geometry-circles-p5-worked',
@@ -20,39 +22,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Two chords cross: segments 3, 8 and 4, ?.**
+
+$3 \times 8 = 4 \times x \Rightarrow 24 = 4x \Rightarrow x = 6$ ✅
+    
+    `
     },
     {
       id: 'geometry-circles-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes chords & secants?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Chords & Secants is a core concept in Geometry."
+                    "question": "Intersecting chords: 2×9 = 3×?",
+                    "options": [
+                              "6",
+                              "18",
+                              "11",
+                              "5"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "18 = 3x → x = 6."
           }
-        ]
+]
       }
     },
     {
       id: 'geometry-circles-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Intersecting Chords** 🧮
 
-Answer the following about chords & secants.
-      `,
+$a \cdot b = c \cdot d$
+
+1) 3 × 8 = 4 × ?
+
+2) 2 × 9 = 3 × ?
+
+3) 5 × 4 = 10 × ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of chords & secants."
+        boxes: 3,
+        correctAnswers: ["6","6","2"],
+        hint1: "24 ÷ 4.",
+        hint2: "18 ÷ 3.",
+        hint3: "20 ÷ 10.",
+        explanation: "1) 6. 2) 6. 3) 2."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about chords & secants.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Chords & Secants is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Chords & Secants builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"For intersecting chords, the products of segments are","options":["Equal","Different","Added","Subtracted"]},{"label":"The longest chord of a circle is the","options":["Diameter","Radius","Tangent","Secant"]}],
+        correctAnswers: ["Equal","Diameter"],
+        hint1: "ab = cd.",
+        hint2: "Through the center.",
+        explanation: "Chord segments: ab=cd. Longest chord = diameter."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about chords & secants.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Chords & Secants | Core chords & secants principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Chord 1 | Chord 2 | Missing |
+|---|---------|---------|--------|
+| 1 | 3 × 8 | 4 × ? | 6 |
+| 2 | 2 × 9 | 3 × ? | 6 |
+| 3 | 5 × 4 | 10 × ? | 2 |
+    
+    `
     },
     {
       id: 'geometry-circles-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in chords & secants?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "A perpendicular from the center to a chord:",
+                    "options": [
+                              "Bisects the chord",
+                              "Doubles the chord",
+                              "Is parallel",
+                              "Creates a tangent"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Perpendicular from center bisects chord."
           }
-        ]
+]
       }
     }
   ]

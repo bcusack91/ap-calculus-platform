@@ -123,7 +123,7 @@ A 0.40 kg block on a spring ($k = 160$ N/m) oscillates with amplitude $A = 0.10$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.8', '2.0', '0.288', '0.80', '2.00', '0.2880'],
+        correctAnswers: ['0.8', '2.0', '0.288'],
         hint1: '$E = \\frac{1}{2}kA^2 = \\frac{1}{2}(160)(0.10)^2$',
         hint2: '$\\frac{1}{2}mv_{\\text{max}}^2 = E \\Rightarrow v_{\\text{max}} = \\sqrt{2E/m}$',
         hint3: '$PE = \\frac{1}{2}kx^2 = \\frac{1}{2}(160)(0.06)^2$',

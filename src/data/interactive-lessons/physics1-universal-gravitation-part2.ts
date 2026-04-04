@@ -120,7 +120,7 @@ Use $G = 6.67 \\times 10^{-11}$ N·m²/kg², $g_E = 10$ m/s², $R_E = 6.4 \\time
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2.5', '3.7', '3.2', '2.50', '3.70', '3.20'],
+        correctAnswers: ['2.5', '3.7', '3.2'],
         hint1: '$g \\propto 1/r^2$. At $2R_E$: $g = g_E/4$.',
         hint2: '$g = GM/R^2$.',
         hint3: '$g/g_E = (R_E/r)^2 \\Rightarrow r/R_E = \\sqrt{g_E/g}$.',

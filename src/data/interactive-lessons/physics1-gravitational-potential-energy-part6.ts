@@ -120,7 +120,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['200', '4', '8.0', '8.00'],
+        correctAnswers: ['200', '4', '8.0'],
         hint1: '$E_{\\text{lost}}/m = g(h_i - h_f) - \\frac{1}{2}v_f^2 = 10(50-10) - \\frac{1}{2}(400)$.',
         hint2: '$\\frac{1}{2}(0.5)(144) + 0.5(10)(10) = \\frac{1}{2}(0.5)v^2 + 0.5(10)(17.2)$.',
         hint3: '$mgh = \\frac{1}{2}mv^2 + mg(0.6h) \\Rightarrow g(0.4h) = \\frac{1}{2}v^2 \\Rightarrow v^2 = 2g(0.4h) = 0.8gh$.',

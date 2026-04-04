@@ -153,7 +153,7 @@ This is exact for constant forces and a useful approximation for variable forces
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['600', '8.1', '10000', '8.10'],
+        correctAnswers: ['600', '8.1', '10000'],
         hint1: '$F = \\Delta p / \\Delta t = m(v_f - v_i)/\\Delta t = (0.060)(50)/0.005$',
         hint2: 'Net upward force = $1200 - 735 = 465$ N. $\\Delta t = m|\\Delta v| / F_{\\text{net}} = 75(50)/465$',
         hint3: '$F = m|\\Delta v|/\\Delta t = (2000)(25)/5$',

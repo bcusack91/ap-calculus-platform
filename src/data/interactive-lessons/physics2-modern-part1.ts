@@ -180,7 +180,7 @@ A sodium surface has work function $\\phi = 2.28$ eV. Ultraviolet light of wavel
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['7.96', '4.97', '2.69', '2.69', '7.960', '4.970', '2.690'],
+        correctAnswers: ['7.96', '4.97', '2.69', '2.69'],
         hint1: '$E = hc/\\lambda = (6.63 \\times 10^{-34})(3.00 \\times 10^{8})/(250 \\times 10^{-9})$.',
         hint2: 'Convert to eV: divide J by $1.60 \\times 10^{-19}$. Then $KE_{\\max} = E - \\phi$.',
         hint3: '$eV_s = KE_{\\max}$, so $V_s = KE_{\\max}/e$. Since KE is already in eV, $V_s$ equals the same number in volts.',

@@ -5,14 +5,19 @@ export const g7RationalOpsPart1Data = {
       id: 'grade7-operations-rational-p1-intro',
       type: 'text' as const,
       content: `
-# 📐 Adding Rational Numbers
+# 🔢 Adding Rational Numbers
 
 **Part 1 of 7 — Adding Rational Numbers**
 
-Welcome to **Adding Rational Numbers** — Part 1 of 7 in the Grade 7 Math Operations with Rational Numbers series.
+Rational numbers include fractions, decimals, and integers.
 
-This lesson covers key concepts and practice problems.
-      `
+### Adding Same Signs
+Add absolute values, keep sign: $(-2.5) + (-1.3) = -3.8$
+
+### Adding Different Signs
+Subtract, keep sign of larger absolute value: $(-4) + 7 = 3$
+    
+    `
     },
     {
       id: 'grade7-operations-rational-p1-worked',
@@ -20,39 +25,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$-3.5 + 2.1 = ?$
+
+$3.5 - 2.1 = 1.4$. Negative is larger: $-1.4$ ✅
+    
+    `
     },
     {
       id: 'grade7-operations-rational-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes adding rational numbers?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Adding Rational Numbers is a core concept in Grade 7 Math."
+                    "question": "$-2.4 + 5.1 = ?$",
+                    "options": [
+                              "2.7",
+                              "−7.5",
+                              "7.5",
+                              "−2.7"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "5.1 − 2.4 = 2.7, positive wins."
           }
-        ]
+]
       }
     },
     {
       id: 'grade7-operations-rational-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Add Rationals** 🧮
 
-Answer the following about adding rational numbers.
-      `,
+1) $-2.4 + 5.1 = ?$
+
+2) $-3.7 + (-1.2) = ?$
+
+3) $\frac{1}{4} + (-\frac{3}{4}) = ?$ (decimal)
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of adding rational numbers."
+        boxes: 3,
+        correctAnswers: ["2.7","-4.9","-0.5"],
+        hint1: "5.1 − 2.4.",
+        hint2: "−(3.7 + 1.2).",
+        hint3: "1/4 − 3/4 = −2/4.",
+        explanation: "1) 2.7. 2) −4.9. 3) −0.5."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about adding rational numbers.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Adding Rational Numbers is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Adding Rational Numbers builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Adding two negative numbers gives","options":["A negative","A positive","Zero","Cannot tell"]},{"label":"$-5 + 5 =$","options":["0","10","−10","5"]}],
+        correctAnswers: ["A negative","0"],
+        hint1: "Same signs: keep sign.",
+        hint2: "Opposites cancel.",
+        explanation: "Neg + neg = neg. Opposites sum to 0."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about adding rational numbers.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Adding Rational Numbers | Core adding rational numbers principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Rule |
+|---|---------|------|
+| 1 | $-2.4 + 5.1$ | Different signs |
+| 2 | $-3.7 + (-1.2)$ | Same signs |
+| 3 | $\frac{1}{4} + (-\frac{3}{4})$ | Different signs |
+    
+    `
     },
     {
       id: 'grade7-operations-rational-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in adding rational numbers?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$-\\\\frac{3}{4} + \\\\frac{1}{4} = ?$",
+                    "options": [
+                              "$-\\\\frac{1}{2}$",
+                              "$\\\\frac{1}{2}$",
+                              "$-1$",
+                              "$1$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "−3/4 + 1/4 = −2/4 = −1/2."
           }
-        ]
+]
       }
     }
   ]

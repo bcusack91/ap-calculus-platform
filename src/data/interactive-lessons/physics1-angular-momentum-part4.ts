@@ -123,7 +123,7 @@ Note: KE is NOT conserved (this is an inelastic rotational "collision").
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5.97', '16', '2.7', '5.970', '2.70'],
+        correctAnswers: ['5.97', '16', '2.7'],
         hint1: '$I_{\\text{clay}} = mr^2 = 2(0.09) = 0.18$ kg·m². $(0.5)(8) = (0.5 + 0.18)\\omega_f$',
         hint2: '$(4)(6) = (1.5)\\omega_f$',
         hint3: '$KE_f/KE_i = I_i/I_f = 4/1.5$',

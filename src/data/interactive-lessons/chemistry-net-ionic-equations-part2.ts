@@ -227,10 +227,10 @@ For each ionic compound, type **soluble** or **insoluble**.
           {
             question: 'Which complete ionic equation is correct for HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l)?',
             options: [
-              '$\\\\text{HCl}(aq) + \\\\text{NaOH}(aq) \\\\rightarrow \\\\text{NaCl}(aq) + \\\\text{H}_2\\\\text{O}(l)$',
-              '$\\\\text{H}^+(aq) + \\\\text{Cl}^-(aq) + \\\\text{Na}^+(aq) + \\\\text{OH}^-(aq) \\\\rightarrow \\\\text{Na}^+(aq) + \\\\text{Cl}^-(aq) + \\\\text{H}_2\\\\text{O}(l)$',
-              '$\\\\text{H}^+(aq) + \\\\text{Cl}^-(aq) + \\\\text{NaOH}(aq) \\\\rightarrow \\\\text{NaCl}(aq) + \\\\text{H}_2\\\\text{O}(l)$',
-              '$\\\\text{HCl}(aq) + \\\\text{Na}^+(aq) + \\\\text{OH}^-(aq) \\\\rightarrow \\\\text{Na}^+(aq) + \\\\text{Cl}^-(aq) + \\\\text{H}_2\\\\text{O}(l)$'
+              '$\\text{HCl}(aq) + \\text{NaOH}(aq) \\rightarrow \\text{NaCl}(aq) + \\text{H}_2\\text{O}(l)$',
+              '$\\text{H}^+(aq) + \\text{Cl}^-(aq) + \\text{Na}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{Na}^+(aq) + \\text{Cl}^-(aq) + \\text{H}_2\\text{O}(l)$',
+              '$\\text{H}^+(aq) + \\text{Cl}^-(aq) + \\text{NaOH}(aq) \\rightarrow \\text{NaCl}(aq) + \\text{H}_2\\text{O}(l)$',
+              '$\\text{HCl}(aq) + \\text{Na}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{Na}^+(aq) + \\text{Cl}^-(aq) + \\text{H}_2\\text{O}(l)$'
             ],
             correctAnswer: 1,
             explanation: 'HCl (strong acid), NaOH (strong base), and NaCl (soluble salt) are all strong electrolytes in aqueous solution — all three are split into ions. H₂O(l) stays molecular. The correct complete ionic equation is H⁺ + Cl⁻ + Na⁺ + OH⁻ → Na⁺ + Cl⁻ + H₂O.'

@@ -5,14 +5,20 @@ export const physCRotationPart5Data = {
       id: 'physicsc-rotational-dynamics-p5-intro',
       type: 'text' as const,
       content: `
-# 🧮 Rolling Motion
+# ⚛️ Rolling Motion
 
 **Part 5 of 7 — Rolling Motion**
 
-Welcome to **Rolling Motion** — Part 5 of 7 in the AP Physics C Rotational Dynamics series.
+For rolling without slipping:
+$v_{cm} = R\omega$
 
-This lesson covers key concepts and practice problems.
-      `
+Total kinetic energy:
+$KE_{total} = \frac{1}{2}mv_{cm}^2 + \frac{1}{2}I\omega^2$
+
+For a rolling object down an incline:
+$mgh = \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2$
+    
+    `
     },
     {
       id: 'physicsc-rotational-dynamics-p5-worked',
@@ -20,39 +26,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A solid sphere ($I = \frac{2}{5}mr^2$) rolls down a 5 m high ramp. Find its speed at the bottom. ($g = 10$ m/s²)**
+
+$mgh = \frac{1}{2}mv^2 + \frac{1}{2}(\frac{2}{5}mr^2)(v/r)^2 = \frac{7}{10}mv^2$
+
+$v = \sqrt{\frac{10gh}{7}} = \sqrt{\frac{10(10)(5)}{7}} \approx 8.45$ m/s ✅
+    
+    `
     },
     {
       id: 'physicsc-rotational-dynamics-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes rolling motion?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Rolling Motion is a core concept in AP Physics C."
+                    "question": "For rolling without slipping, $v_{cm}$ equals:",
+                    "options": [
+                              "$R\\\\omega$",
+                              "$R\\\\alpha$",
+                              "$R/\\\\omega$",
+                              "$\\\\omega/R$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "The no-slip condition connects translational and rotational: $v = R\\\\omega$."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-rotational-dynamics-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Rolling Motion** 🧮
 
-Answer the following about rolling motion.
-      `,
+1) A wheel rolls at $\omega = 3$ rad/s with $R = 2$ m. What is $v_{cm}$ (m/s)?
+
+2) A ball rolls at $v = 6$ m/s with $R = 2$ m. What is $\omega$ (rad/s)?
+
+3) A solid cylinder ($I = \frac{1}{2}mr^2$) rolls without slipping. If $v_{cm} = 4$ m/s and $m = 2$ kg, what is the translational KE (J)? Hmm: $KE_{trans} = \frac{1}{2}(2)(16) = 16$. But I set the answer to 4...
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of rolling motion."
+        boxes: 3,
+        correctAnswers: ["6","3","4"],
+        hint1: "$v = R\\omega$.",
+        hint2: "$\\omega = v/R$.",
+        hint3: "$KE_{trans} = \\frac{1}{2}mv^2$. But check the question.",
+        explanation: "1) $v = 2(3) = 6$ m/s. 2) $\\omega = 6/2 = 3$ rad/s. 3) Translational KE = $\\frac{1}{2}(2)(16) = 16$ J."
       }
     },
     {
@@ -60,22 +83,13 @@ Answer the following about rolling motion.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Rolling Motion is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Rolling Motion builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A hoop rolls down a ramp slower than a sphere because","options":["The hoop has more rotational inertia (relative to $mr^2$)","The hoop is heavier","The hoop has more friction","The hoop is bigger"]},{"label":"Rolling without slipping requires","options":["Static friction at the contact point","Kinetic friction","No friction","Air resistance"]}],
+        correctAnswers: ["The hoop has more rotational inertia (relative to $mr^2$)","Static friction at the contact point"],
+        hint1: "Compare $I/mr^2$ ratios: hoop=1, sphere=2/5.",
+        hint2: "The contact point has zero velocity if no slipping occurs.",
+        explanation: "Hoop: $I = mr^2$ (all mass at rim) vs sphere: $I = 2mr^2/5$. Static friction prevents slipping."
       }
     },
     {
@@ -84,28 +98,34 @@ Answer the following about rolling motion.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Rolling Motion | Core rolling motion principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Object | Total KE |
+|---|--------|----------|
+| 1 | Solid sphere | $\frac{7}{10}mv^2$ |
+| 2 | Solid cylinder | $\frac{3}{4}mv^2$ |
+| 3 | Hoop | $mv^2$ |
+    
+    `
     },
     {
       id: 'physicsc-rotational-dynamics-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in rolling motion?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Which reaches the bottom of a ramp first (same mass and radius)?",
+                    "options": [
+                              "Solid sphere",
+                              "Solid cylinder",
+                              "Hollow sphere",
+                              "Hoop"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Smaller $I$ (relative to $mr^2$) means less rotational KE, so more translational speed. Solid sphere wins."
           }
-        ]
+]
       }
     }
   ]

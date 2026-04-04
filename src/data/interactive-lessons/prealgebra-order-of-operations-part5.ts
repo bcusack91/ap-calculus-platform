@@ -9,10 +9,11 @@ export const preAlgOrderOpsPart5Data = {
 
 **Part 5 of 7 — Nested Expressions**
 
-Welcome to **Nested Expressions** — Part 5 of 7 in the Pre-Algebra Order of Operations series.
+**Nested parentheses** (brackets inside brackets): work from innermost out.
 
-This lesson covers key concepts and practice problems.
-      `
+$2[3 + (4 - 1)] = 2[3 + 3] = 2[6] = 12$
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p5-worked',
@@ -20,39 +21,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$5 + 2[3(2+1)] = 5 + 2[3(3)] = 5 + 2[9] = 5 + 18 = 23$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes nested expressions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Nested Expressions is a core concept in Pre-Algebra."
+                    "question": "$3(2+1)^2 = ?$",
+                    "options": [
+                              "27",
+                              "81",
+                              "12",
+                              "21"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(3)²=9. 3(9)=27."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-order-of-operations-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Nested Expressions** 🧮
 
-Answer the following about nested expressions.
-      `,
+1) $3(2 + 1)^2 = ?$
+
+2) $2[5 - (3 - 1)] = ?$
+
+3) $(1 + 2)^2 + 4 = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of nested expressions."
+        boxes: 3,
+        correctAnswers: ["27","6","13"],
+        hint1: "Parentheses: 2+1=3. Then 3²=9. Then 3(9).",
+        hint2: "Inner first: 3−1=2. Then 5−2=3. Then 2(3).",
+        hint3: "3² + 4.",
+        explanation: "1) 27. 2) 6. 3) 13."
       }
     },
     {
@@ -60,22 +74,13 @@ Answer the following about nested expressions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Nested Expressions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Nested Expressions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"With nested parentheses, start from","options":["Innermost","Outermost","Left to right","Right to left"]},{"label":"Brackets [ ] and parentheses ( ) are","options":["Both grouping symbols","Different operations","Brackets first","Parentheses only"]}],
+        correctAnswers: ["Innermost","Both grouping symbols"],
+        hint1: "Inside out.",
+        hint2: "Both mean \"do this first.\"",
+        explanation: "Innermost first. Brackets and parentheses both group."
       }
     },
     {
@@ -84,28 +89,34 @@ Answer the following about nested expressions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Nested Expressions | Core nested expressions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Expression | Value |
+|---|-----------|-------|
+| 1 | 3(2+1)² | 27 |
+| 2 | 2[5−(3−1)] | 6 |
+| 3 | (1+2)²+4 | 13 |
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in nested expressions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$2[5 - (3-1)] = ?$",
+                    "options": [
+                              "6",
+                              "4",
+                              "8",
+                              "10"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Inner: 3−1=2. Outer: 5−2=3. 2(3)=6."
           }
-        ]
+]
       }
     }
   ]

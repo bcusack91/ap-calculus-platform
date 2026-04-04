@@ -5,14 +5,22 @@ export const g4GeoMeasurePart2Data = {
       id: 'grade4-geometry-measurement-p2-intro',
       type: 'text' as const,
       content: `
-# 📊 Classifying Shapes
+# 📏 Classifying Shapes
 
 **Part 2 of 7 — Classifying Shapes**
 
-Welcome to **Classifying Shapes** — Part 2 of 7 in the Grade 4 Math Geometry & Measurement series.
+### Triangles
+- **Equilateral**: 3 equal sides
+- **Isosceles**: 2 equal sides
+- **Scalene**: no equal sides
 
-This lesson covers key concepts and practice problems.
-      `
+### Quadrilaterals
+- **Square**: 4 equal sides, 4 right angles
+- **Rectangle**: opposite sides equal, 4 right angles
+- **Parallelogram**: opposite sides parallel & equal
+- **Trapezoid**: 1 pair of parallel sides
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p2-worked',
@@ -20,39 +28,55 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A shape has 4 equal sides but no right angles. What is it?**
+
+4 equal sides → could be square or rhombus.
+No right angles → **rhombus** ✅
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes classifying shapes?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Classifying Shapes is a core concept in Grade 4 Math."
+                    "question": "A triangle with all sides equal is:",
+                    "options": [
+                              "Equilateral",
+                              "Isosceles",
+                              "Scalene",
+                              "Right"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Equilateral = three equal sides."
           }
-        ]
+]
       }
     },
     {
       id: 'grade4-geometry-measurement-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Shape Properties** 🧮
 
-Answer the following about classifying shapes.
-      `,
+1) How many sides does a quadrilateral have?
+
+2) How many curved sides does a triangle have?
+
+3) How many faces does a cube have?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of classifying shapes."
+        boxes: 3,
+        correctAnswers: ["4","0","6"],
+        hint1: "\"Quad\" means four.",
+        hint2: "Triangles have only straight sides.",
+        hint3: "Think of a die.",
+        explanation: "1) 4. 2) 0. 3) 6."
       }
     },
     {
@@ -60,22 +84,13 @@ Answer the following about classifying shapes.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Classifying Shapes is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Classifying Shapes builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A shape with 5 sides is called a","options":["Pentagon","Hexagon","Quadrilateral","Octagon"]},{"label":"A shape with 8 sides is called an","options":["Octagon","Hexagon","Decagon","Pentagon"]}],
+        correctAnswers: ["Pentagon","Octagon"],
+        hint1: "\"Penta\" = 5.",
+        hint2: "\"Octa\" = 8.",
+        explanation: "Pentagon = 5. Octagon = 8."
       }
     },
     {
@@ -86,26 +101,32 @@ Answer the following about classifying shapes.
 
 | # | Concept | Key Idea |
 |---|---------|----------|
-| 1 | Classifying Shapes | Core classifying shapes principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| 1 | Count sides | Tri=3, Quad=4, Pent=5, Hex=6 |
+| 2 | Identify properties | Parallel sides, equal angles |
+| 3 | Shape hierarchy | A square is a special rectangle |
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in classifying shapes?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Which is always true?",
+                    "options": [
+                              "Every square is a rectangle",
+                              "Every rectangle is a square",
+                              "Every rhombus is a square",
+                              "Every trapezoid is a parallelogram"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "A square has all rectangle properties plus equal sides."
           }
-        ]
+]
       }
     }
   ]

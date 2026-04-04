@@ -9,10 +9,13 @@ export const geoTriCongruencePart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Geometry Triangle Congruence series.
-
-This lesson covers key concepts and practice problems.
-      `
+Apply congruence:
+- Identify given information
+- Choose the right postulate (SSS, SAS, ASA, AAS)
+- Write the proof
+- Use CPCTC as needed
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p6-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Given: AB=CD, BC=DA, AC is shared. Prove △ABC ≅ △CDA.**
+
+AB=CD, BC=DA, AC=AC (reflexive) → SSS → **Congruent** ✅
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Geometry."
+                    "question": "A shared side in two triangles uses the ____ property:",
+                    "options": [
+                              "Reflexive",
+                              "Symmetric",
+                              "Transitive",
+                              "Commutative"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "A segment is congruent to itself."
           }
-        ]
+]
       }
     },
     {
       id: 'geometry-triangle-congruence-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Apply Congruence** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) Sum of angles in any triangle?
+
+2) △ABC ≅ △DEF, AB=5. What is DE?
+
+3) How many postulates prove congruence? (SSS, SAS, ASA)
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["180","5","3"],
+        hint1: "Angle sum.",
+        hint2: "Corresponding parts.",
+        hint3: "Count: SSS, SAS, ASA (also AAS).",
+        explanation: "1) 180°. 2) 5 (CPCTC). 3) 3 basic (plus AAS = 4)."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The reflexive property states","options":["A segment equals itself","Two segments are equal","Segments can be added","Segments are parallel"]},{"label":"SSA is ____ for proving congruence","options":["Not sufficient","Sufficient","The best method","Required"]}],
+        correctAnswers: ["A segment equals itself","Not sufficient"],
+        hint1: "Self-equality.",
+        hint2: "Ambiguous case.",
+        explanation: "Reflexive: AB=AB. SSA is not sufficient."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Given | Postulate |
+|---|-------|----------|
+| 1 | 3 pairs of sides equal | SSS |
+| 2 | 2 sides + included angle | SAS |
+| 3 | Shared side + 2 angles | ASA |
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Which is NOT a valid congruence postulate?",
+                    "options": [
+                              "SSA",
+                              "SSS",
+                              "SAS",
+                              "ASA"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "SSA (or ASS) is ambiguous and not valid."
           }
-        ]
+]
       }
     }
   ]

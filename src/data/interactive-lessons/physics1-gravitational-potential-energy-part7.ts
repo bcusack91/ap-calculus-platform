@@ -98,7 +98,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['17.3', '17.8', '3', '17.30', '17.80'],
+        correctAnswers: ['17.3', '17.8', '3'],
         hint1: '$v = \\sqrt{2g(h_i - h_f)} = \\sqrt{2(10)(25-10)} = \\sqrt{300}$.',
         hint2: '$h_{\\text{above launch}} = v^2/(2g) = 256/20 = 12.8$ m. Total: $12.8 + 5$.',
         hint3: '$v = \\sqrt{2gh} = \\sqrt{2(10)(0.45)} = \\sqrt{9}$.',

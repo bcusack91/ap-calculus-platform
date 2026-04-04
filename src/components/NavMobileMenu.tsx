@@ -108,9 +108,6 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
         <Link href="/leaderboard" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={onClose}>
           🏆 Leaderboard
         </Link>
-        <Link href="/pricing" className="block px-3 py-2 text-base font-medium text-amber-600 dark:text-amber-400 hover:bg-accent rounded-md" onClick={onClose}>
-          💎 Pricing
-        </Link>
         <Link href="/about" className="block px-3 py-2 text-base font-medium hover:bg-accent rounded-md" onClick={onClose}>
           About
         </Link>

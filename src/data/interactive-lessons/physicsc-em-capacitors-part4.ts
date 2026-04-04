@@ -5,14 +5,17 @@ export const physCEMCapacitorsPart4Data = {
       id: 'physicsc-em-capacitors-p4-intro',
       type: 'text' as const,
       content: `
-# 📈 Energy Stored
+# ⚡ Energy Stored in Capacitors
 
 **Part 4 of 7 — Energy Stored**
 
-Welcome to **Energy Stored** — Part 4 of 7 in the AP Physics C: E&M Capacitors & Dielectrics series.
+$U = \frac{1}{2}CV^2 = \frac{Q^2}{2C} = \frac{1}{2}QV$
 
-This lesson covers key concepts and practice problems.
-      `
+The energy is stored in the **electric field** between the plates.
+
+Energy density: $u = \frac{1}{2}\epsilon_0 E^2$ (J/m³)
+    
+    `
     },
     {
       id: 'physicsc-em-capacitors-p4-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A 10 μF capacitor is charged to 100 V. Energy stored?**
+
+$U = \frac{1}{2}CV^2 = \frac{1}{2}(10 \times 10^{-6})(10000) = 0.05$ J ✅
+    
+    `
     },
     {
       id: 'physicsc-em-capacitors-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes energy stored?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Energy Stored is a core concept in AP Physics C: E&M."
+                    "question": "If the voltage across a capacitor doubles, the stored energy:",
+                    "options": [
+                              "Quadruples",
+                              "Doubles",
+                              "Halves",
+                              "Stays the same"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$U = \\\\frac{1}{2}CV^2$. If $V \\\\to 2V$, $U \\\\to 4U$."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-em-capacitors-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Energy Stored** 🧮
 
-Answer the following about energy stored.
-      `,
+1) $C = 10$ μF, $V = 100$ V. Energy (mJ)?
+
+2) $V$ is doubled while $C$ stays the same. Energy increases by a factor of ___
+
+3) $C = 4$ μF, $V = 10$ V. $U = \frac{1}{2}(4)(100) = ?$ μJ
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of energy stored."
+        boxes: 3,
+        correctAnswers: ["50","4","200"],
+        hint1: "$U = \\frac{1}{2}CV^2 = \\frac{1}{2}(10 \\times 10^{-6})(10^4) = 0.05$ J $= 50$ mJ.",
+        hint2: "$U \\propto V^2$.",
+        hint3: "$U = \\frac{1}{2}(4 \\times 10^{-6})(100) = 200 \\times 10^{-6}$ J $= 200$ μJ.",
+        explanation: "1) 50 mJ. 2) Factor of 4. 3) 200 μJ."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about energy stored.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Energy Stored is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Energy Stored builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Energy density of the electric field is","options":["$\\\\frac{1}{2}\\\\epsilon_0 E^2$","$\\\\epsilon_0 E$","$\\\\frac{1}{2}\\\\epsilon_0 E$","$\\\\epsilon_0 E^2$"]},{"label":"Three equivalent formulas for capacitor energy use","options":["$C$ and $V$; $Q$ and $C$; $Q$ and $V$","Only $C$ and $V$","Only $Q$ and $V$","Only $Q$ and $C$"]}],
+        correctAnswers: ["$\\\\frac{1}{2}\\\\epsilon_0 E^2$","$C$ and $V$; $Q$ and $C$; $Q$ and $V$"],
+        hint1: "Energy per unit volume in an E field.",
+        hint2: "$U = \\frac{1}{2}CV^2 = Q^2/(2C) = \\frac{1}{2}QV$.",
+        explanation: "Energy density: $u = \\frac{1}{2}\\epsilon_0 E^2$. Three forms: $\\frac{1}{2}CV^2$, $Q^2/(2C)$, $\\frac{1}{2}QV$."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about energy stored.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Energy Stored | Core energy stored principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Known | Formula |
+|---|-------|---------|
+| 1 | $C$, $V$ | $U = \frac{1}{2}CV^2$ |
+| 2 | $Q$, $C$ | $U = Q^2/(2C)$ |
+| 3 | $Q$, $V$ | $U = \frac{1}{2}QV$ |
+    
+    `
     },
     {
       id: 'physicsc-em-capacitors-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in energy stored?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "The energy in a capacitor is stored in:",
+                    "options": [
+                              "The electric field between the plates",
+                              "The plates themselves",
+                              "The wires",
+                              "The battery"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Energy is stored in the electric field: $u = \\\\frac{1}{2}\\\\epsilon_0 E^2$ per unit volume."
           }
-        ]
+]
       }
     }
   ]

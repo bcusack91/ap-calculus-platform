@@ -9,10 +9,13 @@ export const g5FractionOpsPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Grade 5 Math Fraction Operations series.
-
-This lesson covers key concepts and practice problems.
-      `
+Combine all fraction operations:
+1. Read carefully — which operation?
+2. Set up the expression
+3. Solve step by step
+4. Check: Does the answer make sense?
+    
+    `
     },
     {
       id: 'grade5-fraction-operations-p6-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Tom has $2\frac{1}{2}$ lbs of sugar. He uses $\frac{3}{4}$ lb per batch. How many batches?**
+
+$2\frac{1}{2} \div \frac{3}{4} = \frac{5}{2} \times \frac{4}{3} = \frac{20}{6} = 3\frac{1}{3}$ → **3 full batches** ✅
+    
+    `
     },
     {
       id: 'grade5-fraction-operations-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Grade 5 Math."
+                    "question": "$\\\\frac{1}{2} + \\\\frac{1}{3} + \\\\frac{1}{6} = ?$",
+                    "options": [
+                              "1",
+                              "$\\\\frac{3}{6}$",
+                              "$\\\\frac{1}{6}$",
+                              "$\\\\frac{5}{6}$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "LCD=6: 3/6 + 2/6 + 1/6 = 6/6 = 1."
           }
-        ]
+]
       }
     },
     {
       id: 'grade5-fraction-operations-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Mixed Practice** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) $\frac{1}{2} + \frac{1}{3} + \frac{1}{6} = ?$ (simplify)
+
+2) $3\frac{1}{4} - 1\frac{2}{3} = \frac{?}{12}$ — Numerator?
+
+3) $\frac{2}{3} \times \frac{3}{4} \div \frac{1}{2} = ?$ (simplify)
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["1","19","1"],
+        hint1: "Convert all to sixths.",
+        hint2: "LCD=12: 39/12 − 20/12.",
+        hint3: "2/3 × 3/4 = 1/2. Then 1/2 ÷ 1/2.",
+        explanation: "1) 3/6+2/6+1/6=6/6=1. 2) 39/12−20/12=19/12. 3) 1/2 × 2/1=1."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To add fractions with different denominators","options":["Find a common denominator first","Add both numerators and denominators","Just add the numerators","It cannot be done"]},{"label":"Division by a fraction is the same as","options":["Multiplication by its reciprocal","Subtraction","Addition","Squaring"]}],
+        correctAnswers: ["Find a common denominator first","Multiplication by its reciprocal"],
+        hint1: "Unlike denominators require conversion.",
+        hint2: "Keep, Change, Flip.",
+        explanation: "LCD for unlike denominators. Division = multiply by reciprocal."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Steps |
+|---|---------|-------|
+| 1 | $\frac{1}{2} + \frac{1}{3} + \frac{1}{6}$ | LCD = 6 |
+| 2 | $3\frac{1}{4} - 1\frac{2}{3}$ | LCD = 12, borrow |
+| 3 | $\frac{2}{3} \times \frac{3}{4} \div \frac{1}{2}$ | Left to right |
+    
+    `
     },
     {
       id: 'grade5-fraction-operations-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "After multiplying and dividing fractions: $\\\\frac{2}{3} \\\\times \\\\frac{3}{4} = \\\\frac{1}{2}$. Then $\\\\frac{1}{2} \\\\div \\\\frac{1}{2} = ?$",
+                    "options": [
+                              "1",
+                              "$\\\\frac{1}{4}$",
+                              "2",
+                              "$\\\\frac{1}{2}$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$\\\\frac{1}{2} \\\\div \\\\frac{1}{2} = \\\\frac{1}{2} \\\\times \\\\frac{2}{1} = 1$."
           }
-        ]
+]
       }
     }
   ]

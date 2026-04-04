@@ -5,14 +5,15 @@ export const g6RatiosPart4Data = {
       id: 'grade6-ratios-proportions-p4-intro',
       type: 'text' as const,
       content: `
-# 📈 Solving Proportions
+# ⚖️ Solving Proportions
 
 **Part 4 of 7 — Solving Proportions**
 
-Welcome to **Solving Proportions** — Part 4 of 7 in the Grade 6 Math Ratios & Proportions series.
+A **proportion** is two equal ratios: $\frac{a}{b} = \frac{c}{d}$
 
-This lesson covers key concepts and practice problems.
-      `
+To solve, **cross-multiply**: $ad = bc$, then solve for the unknown.
+    
+    `
     },
     {
       id: 'grade6-ratios-proportions-p4-worked',
@@ -20,39 +21,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$\frac{3}{5} = \frac{x}{20}$
+
+Cross-multiply: $3 \times 20 = 5 \times x$ → $60 = 5x$ → $x = 12$ ✅
+    
+    `
     },
     {
       id: 'grade6-ratios-proportions-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes solving proportions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Solving Proportions is a core concept in Grade 6 Math."
+                    "question": "Solve $\\\\frac{2}{3} = \\\\frac{x}{12}$:",
+                    "options": [
+                              "$x = 8$",
+                              "$x = 6$",
+                              "$x = 4$",
+                              "$x = 18$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Cross: 2×12 = 3x → 24 = 3x → x = 8."
           }
-        ]
+]
       }
     },
     {
       id: 'grade6-ratios-proportions-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Solve Proportions** 🧮
 
-Answer the following about solving proportions.
-      `,
+1) $\frac{2}{3} = \frac{x}{12}$. $x = ?$
+
+2) $\frac{x}{5} = \frac{6}{10}$. $x = ?$
+
+3) $\frac{4}{7} = \frac{12}{x}$. $x = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of solving proportions."
+        boxes: 3,
+        correctAnswers: ["8","3","21"],
+        hint1: "Cross-multiply: 2 × 12 = 3x.",
+        hint2: "Cross-multiply: 10x = 30.",
+        hint3: "Cross-multiply: 4x = 84.",
+        explanation: "1) 24÷3=8. 2) 30÷10=3. 3) 84÷4=21."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about solving proportions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Solving Proportions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Solving Proportions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To solve a proportion, you can","options":["Cross-multiply","Add the fractions","Subtract the fractions","Multiply numerators only"]},{"label":"$\\\\frac{5}{8} = \\\\frac{15}{x}$. $x =$","options":["24","3","40","8"]}],
+        correctAnswers: ["Cross-multiply","24"],
+        hint1: "Standard method for proportions.",
+        hint2: "5x = 8(15) = 120. x = ?",
+        explanation: "Cross-multiply to solve. 5x=120 → x=24."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about solving proportions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Solving Proportions | Core solving proportions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Proportion | Solution |
+|---|-----------|----------|
+| 1 | $\frac{2}{3} = \frac{x}{12}$ | $x = 8$ |
+| 2 | $\frac{x}{5} = \frac{6}{10}$ | $x = 3$ |
+| 3 | $\frac{4}{7} = \frac{12}{x}$ | $x = 21$ |
+    
+    `
     },
     {
       id: 'grade6-ratios-proportions-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in solving proportions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Cross-multiplication: $\\\\frac{a}{b} = \\\\frac{c}{d}$ gives:",
+                    "options": [
+                              "$ad = bc$",
+                              "$ab = cd$",
+                              "$a + d = b + c$",
+                              "$ac = bd$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$\\\\frac{a}{b} = \\\\frac{c}{d}$ → $ad = bc$."
           }
-        ]
+]
       }
     }
   ]

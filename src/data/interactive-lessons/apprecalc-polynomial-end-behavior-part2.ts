@@ -9,10 +9,16 @@ export const apPrecalcPolyEndPart2Data = {
 
 **Part 2 of 7 — End Behavior Rules**
 
-Welcome to **End Behavior Rules** — Part 2 of 7 in the AP Precalculus Polynomial End Behavior series.
+| Degree | Leading Coeff | Left | Right |
+|--------|--------------|------|-------|
+| Even | + | ↑ | ↑ |
+| Even | − | ↓ | ↓ |
+| Odd | + | ↓ | ↑ |
+| Odd | − | ↑ | ↓ |
 
-This lesson covers key concepts and practice problems.
-      `
+As $x \to \pm\infty$, only the leading term matters.
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p2-worked',
@@ -20,39 +26,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$f(x) = -2x^3 + x$. End behavior?**
+
+Odd degree, negative leading coeff → Left ↑, Right ↓ ✅
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p2-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes end behavior rules?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "End Behavior Rules is a core concept in AP Precalculus."
+                    "question": "Even degree, positive leading coeff. End behavior?",
+                    "options": [
+                              "Both ends up",
+                              "Both ends down",
+                              "Left down, right up",
+                              "Left up, right down"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Even + positive → ↑↑."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p2-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**End Behavior** 🧮
 
-Answer the following about end behavior rules.
-      `,
+1) $3x^4$: Degree?
+
+2) $-x^2 + 1$: Degree?
+
+3) $5x^3 - 2x$: Degree?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of end behavior rules."
+        boxes: 3,
+        correctAnswers: ["4","2","3"],
+        hint1: "Highest exponent.",
+        hint2: "Highest power.",
+        hint3: "Highest power.",
+        explanation: "1) 4 (even→both same). 2) 2 (even). 3) 3 (odd→opposite)."
       }
     },
     {
@@ -60,22 +81,13 @@ Answer the following about end behavior rules.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "End Behavior Rules is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "End Behavior Rules builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"For x⁴, both ends go","options":["Up","Down","Opposite directions","To zero"]},{"label":"For −x³, the right end goes","options":["Down","Up","To zero","Stays constant"]}],
+        correctAnswers: ["Up","Down"],
+        hint1: "Even + positive.",
+        hint2: "Odd + negative → right ↓.",
+        explanation: "x⁴: even+positive→both up. −x³: odd+neg→right down."
       }
     },
     {
@@ -84,28 +96,34 @@ Answer the following about end behavior rules.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | End Behavior Rules | Core end behavior rules principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Polynomial | Left | Right |
+|---|-----------|------|-------|
+| 1 | $x^2$ | ↑ | ↑ |
+| 2 | $-x^3$ | ↑ | ↓ |
+| 3 | $x^4$ | ↑ | ↑ |
+    
+    `
     },
     {
       id: 'apprecalc-polynomial-end-behavior-p2-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in end behavior rules?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Odd degree, negative leading coeff. As x→∞?",
+                    "options": [
+                              "f(x) → −∞",
+                              "f(x) → +∞",
+                              "f(x) → 0",
+                              "Cannot tell"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Odd negative → right side goes down."
           }
-        ]
+]
       }
     }
   ]

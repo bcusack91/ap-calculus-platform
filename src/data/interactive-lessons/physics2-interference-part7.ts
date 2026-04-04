@@ -135,7 +135,7 @@ A student performs a double-slit experiment with $\\lambda = 632.8$ nm (He-Ne la
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3.2', '0.16', '22.3', '3.20', '0.160', '22.30'],
+        correctAnswers: ['3.2', '0.16', '22.3'],
         hint1: '$\\Delta y = \\lambda L / d$.',
         hint2: 'Central max width $= 2\\lambda L / a \\Rightarrow a = 2\\lambda L / w$.',
         hint3: '$d = 1/300$ mm. $\\sin\\theta = m\\lambda / d = 2(632.8 \\times 10^{-9})/(1/300 \\times 10^{-3})$.',

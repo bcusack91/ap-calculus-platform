@@ -142,7 +142,7 @@ A proton ($m = 1.67 \\times 10^{-27}$ kg, $q = 1.6 \\times 10^{-19}$ C) moves at
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.21', '3.3e-7', '3.0e6', '0.210', '0.00000', '3000000.0000', '3000000.00'],
+        correctAnswers: ['0.21', '3.3e-7', '3.0e6'],
         hint1: '$r = mv/(qB) = (1.67 \\times 10^{-27})(4.0 \\times 10^6)/((1.6 \\times 10^{-19})(0.20))$.',
         hint2: '$T = 2\\pi m/(qB)$. Note: the period is independent of speed!',
         hint3: '$f = 1/T = qB/(2\\pi m)$.',

@@ -5,14 +5,17 @@ export const physCEMCoulombPart4Data = {
       id: 'physicsc-em-coulombs-law-p4-intro',
       type: 'text' as const,
       content: `
-# 📈 Electric Field
+# ⚡ Electric Field
 
 **Part 4 of 7 — Electric Field**
 
-Welcome to **Electric Field** — Part 4 of 7 in the AP Physics C: E&M Coulomb's Law series.
+$\vec{E} = \frac{\vec{F}}{q_0} = k\frac{q}{r^2}\hat{r}$
 
-This lesson covers key concepts and practice problems.
-      `
+- $E$ points away from positive charges, toward negative charges
+- SI unit: N/C = V/m
+- The electric field is a **vector field**: it has magnitude and direction at every point
+    
+    `
     },
     {
       id: 'physicsc-em-coulombs-law-p4-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Find $E$ at 0.5 m from a $+4$ μC charge.**
+
+$E = kq/r^2 = (9 \times 10^9)(4 \times 10^{-6}) / (0.25) = 144{,}000$ N/C ✅
+    
+    `
     },
     {
       id: 'physicsc-em-coulombs-law-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes electric field?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Electric Field is a core concept in AP Physics C: E&M."
+                    "question": "Electric field lines point:",
+                    "options": [
+                              "Away from positive charges",
+                              "Toward positive charges",
+                              "In circles around charges",
+                              "Randomly"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Field lines radiate outward from positive charges and inward toward negative charges."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-em-coulombs-law-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Electric Field** 🧮
 
-Answer the following about electric field.
-      `,
+1) If the distance from a charge triples, $E$ decreases by a factor of ___.
+
+2) A charge $q$ in a field $E = 10$ N/C feels $F = 50$ N. What is $q$ (in C)?
+
+3) A $+2$ C charge in a field $E = 10$ N/C. What is the force (N)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of electric field."
+        boxes: 3,
+        correctAnswers: ["9","5","20"],
+        hint1: "$E \\propto 1/r^2$, so factor = $3^2 = 9$.",
+        hint2: "$q = F/E$.",
+        hint3: "$F = qE$.",
+        explanation: "1) $3^2 = 9$. 2) $q = 50/10 = 5$ C. 3) $F = 2(10) = 20$ N."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about electric field.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Electric Field is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Electric Field builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The SI unit of electric field is","options":["N/C","C/m","J/C","A/m"]},{"label":"A negative charge placed in an electric field moves","options":["Opposite to the field direction","In the field direction","Perpendicular to the field","In a circle"]}],
+        correctAnswers: ["N/C","Opposite to the field direction"],
+        hint1: "$E = F/q$, so units are N/C.",
+        hint2: "$F = qE$. If $q < 0$...",
+        explanation: "Electric field units: N/C. Negative charges experience force opposite to $\\vec{E}$."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about electric field.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Electric Field | Core electric field principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Concept | Formula |
+|---|---------|---------|
+| 1 | Point charge field | $E = kq/r^2$ |
+| 2 | Force on a charge | $F = qE$ |
+| 3 | Superposition of fields | $\vec{E}_{net} = \sum \vec{E}_i$ |
+    
+    `
     },
     {
       id: 'physicsc-em-coulombs-law-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in electric field?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "If the distance from a point charge triples, the electric field:",
+                    "options": [
+                              "Decreases to 1/9",
+                              "Decreases to 1/3",
+                              "Triples",
+                              "Increases by 9"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$E \\\\propto 1/r^2$. If $r \\\\to 3r$, $E \\\\to E/9$."
           }
-        ]
+]
       }
     }
   ]

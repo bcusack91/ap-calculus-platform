@@ -9,10 +9,12 @@ export const geoCoordProofsPart3Data = {
 
 **Part 3 of 7 — Proving Parallel & Perpendicular**
 
-Welcome to **Proving Parallel & Perpendicular** — Part 3 of 7 in the Geometry Coordinate Proofs series.
+To prove lines are **parallel**: show slopes are equal.
+To prove lines are **perpendicular**: show slopes multiply to −1.
 
-This lesson covers key concepts and practice problems.
-      `
+Calculate slopes from given coordinates, then compare.
+    
+    `
     },
     {
       id: 'geometry-coordinate-proofs-p3-worked',
@@ -20,39 +22,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Are AB and CD parallel? A(1,2), B(3,6), C(0,1), D(2,5).**
+
+$m_{AB} = \frac{6-2}{3-1} = 2$, $m_{CD} = \frac{5-1}{2-0} = 2$
+
+Equal slopes → **parallel** ✅
+    
+    `
     },
     {
       id: 'geometry-coordinate-proofs-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes proving parallel & perpendicular?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Proving Parallel & Perpendicular is a core concept in Geometry."
+                    "question": "To prove two sides are parallel, show:",
+                    "options": [
+                              "Equal slopes",
+                              "Product of slopes = −1",
+                              "Equal lengths",
+                              "Equal areas"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Parallel = same slope."
           }
-        ]
+]
       }
     },
     {
       id: 'geometry-coordinate-proofs-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Prove Parallel/Perpendicular** 🧮
 
-Answer the following about proving parallel & perpendicular.
-      `,
+1) Slope of (0,0) to (1,3)?
+
+2) Slope of (2,1) to (3,4)?
+
+3) Slope of (0,0) to (1,2)?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of proving parallel & perpendicular."
+        boxes: 3,
+        correctAnswers: ["3","3","2"],
+        hint1: "3/1.",
+        hint2: "(4−1)/(3−2).",
+        hint3: "2/1.",
+        explanation: "1) 3. 2) 3 (parallel to line 1). 3) 2."
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about proving parallel & perpendicular.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Proving Parallel & Perpendicular is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Proving Parallel & Perpendicular builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Coordinate proofs use ____ to prove geometric properties","options":["Algebra and coordinates","Rulers and protractors","Guessing","Theorems only"]},{"label":"Perpendicular lines form ____ angles","options":["Right (90°)","Acute","Obtuse","Straight"]}],
+        correctAnswers: ["Algebra and coordinates","Right (90°)"],
+        hint1: "Analytic geometry.",
+        hint2: "⊥ = 90°.",
+        explanation: "Coordinate proofs use algebra. Perpendicular = 90°."
       }
     },
     {
@@ -84,28 +94,33 @@ Answer the following about proving parallel & perpendicular.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Proving Parallel & Perpendicular | Core proving parallel & perpendicular principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Lines | Slopes | Relation |
+|---|-------|--------|----------|
+| 1 | (0,0)→(1,3) and (2,1)→(3,4) | 3,3 | Parallel |
+| 2 | (0,0)→(1,2) and (0,0)→(2,−1) | 2,−0.5 | Perpendicular |
+    
+    `
     },
     {
       id: 'geometry-coordinate-proofs-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in proving parallel & perpendicular?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Lines (0,0)→(1,2) and (0,0)→(2,−1). Relationship?",
+                    "options": [
+                              "Perpendicular",
+                              "Parallel",
+                              "Neither",
+                              "Identical"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "2×(−0.5)=−1."
           }
-        ]
+]
       }
     }
   ]

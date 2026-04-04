@@ -5,14 +5,20 @@ export const physCWorkEnergyPart3Data = {
       id: 'physicsc-work-energy-p3-intro',
       type: 'text' as const,
       content: `
-# 🔢 Potential Energy Functions
+# ⚛️ Potential Energy Functions
 
 **Part 3 of 7 — Potential Energy Functions**
 
-Welcome to **Potential Energy Functions** — Part 3 of 7 in the AP Physics C Work-Energy Theorem series.
+Potential energy is related to conservative forces:
+$F(x) = -\frac{dU}{dx}$
 
-This lesson covers key concepts and practice problems.
-      `
+Common potential energies:
+- Gravitational: $U = mgh$
+- Elastic (spring): $U = \frac{1}{2}kx^2$
+
+A force is conservative if work depends only on endpoints, not path.
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p3-worked',
@@ -20,39 +26,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Given $U(x) = 5x^2$, find $F(x)$.**
+
+$F(x) = -\frac{dU}{dx} = -10x$ ✅
+
+This is a restoring force (like a spring with $k = 10$ N/m).
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes potential energy functions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Potential Energy Functions is a core concept in AP Physics C."
+                    "question": "If $U(x) = 4x^3$, what is $F(x)$?",
+                    "options": [
+                              "$-12x^2$",
+                              "$12x^2$",
+                              "$4x^2$",
+                              "$-4x^2$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "$F = -dU/dx = -12x^2$."
           }
-        ]
+]
       }
     },
     {
       id: 'physicsc-work-energy-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Potential Energy Functions** 🧮
 
-Answer the following about potential energy functions.
-      `,
+1) A 4 kg object is at height 5 m. Gravitational PE (J)? ($g = 10$ m/s²)
+
+2) A spring ($k = 200$ N/m) is compressed 1 m. Elastic PE (J)?
+
+3) If $U(x) = 5x^2$, what is $F(x)$ at $x = 1$? (Give the numerical value in N.)
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of potential energy functions."
+        boxes: 3,
+        correctAnswers: ["200","100","-10"],
+        hint1: "$U = mgh$.",
+        hint2: "$U = \\frac{1}{2}kx^2$.",
+        hint3: "$F = -dU/dx = -10x$. Evaluate at $x = 1$.",
+        explanation: "1) $4(10)(5) = 200$ J. 2) $\\frac{1}{2}(200)(1) = 100$ J. 3) $F(1) = -10(1) = -10$ N."
       }
     },
     {
@@ -60,22 +83,13 @@ Answer the following about potential energy functions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Potential Energy Functions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Potential Energy Functions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The relationship between force and potential energy is","options":["$F = -dU/dx$","$F = dU/dx$","$F = U/x$","$F = U \\\\cdot x$"]},{"label":"At a stable equilibrium point, $U(x)$ has a","options":["Local minimum","Local maximum","Inflection point","Discontinuity"]}],
+        correctAnswers: ["$F = -dU/dx$","Local minimum"],
+        hint1: "Note the negative sign.",
+        hint2: "A ball at the bottom of a valley is in stable equilibrium.",
+        explanation: "$F = -dU/dx$. Stable equilibrium occurs at a potential energy minimum."
       }
     },
     {
@@ -84,28 +98,34 @@ Answer the following about potential energy functions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Potential Energy Functions | Core potential energy functions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Potential Energy | Force |
+|---|-----------------|-------|
+| 1 | $U = mgh$ | $F = -mg$ |
+| 2 | $U = \frac{1}{2}kx^2$ | $F = -kx$ |
+| 3 | $U = ax^3$ | $F = -3ax^2$ |
+    
+    `
     },
     {
       id: 'physicsc-work-energy-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in potential energy functions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Which is a conservative force?",
+                    "options": [
+                              "Gravity",
+                              "Friction",
+                              "Air resistance",
+                              "All of these"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Gravity is conservative — work depends only on height change, not path."
           }
-        ]
+]
       }
     }
   ]

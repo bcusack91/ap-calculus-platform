@@ -9,10 +9,13 @@ export const apPrecalcRationalPart1Data = {
 
 **Part 1 of 7 — Domain Restrictions**
 
-Welcome to **Domain Restrictions** — Part 1 of 7 in the AP Precalculus Rational Functions series.
+A rational function is $f(x) = \frac{p(x)}{q(x)}$ where $q(x) \neq 0$.
 
-This lesson covers key concepts and practice problems.
-      `
+**Domain**: all real numbers except where the denominator = 0.
+
+Set $q(x) = 0$ and solve to find restrictions.
+    
+    `
     },
     {
       id: 'apprecalc-rational-functions-p1-worked',
@@ -20,39 +23,58 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**$f(x) = \frac{x+1}{x-3}$. Domain?**
+
+$x - 3 = 0 \Rightarrow x = 3$
+
+Domain: all reals except $x = 3$ ✅
+    
+    `
     },
     {
       id: 'apprecalc-rational-functions-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes domain restrictions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Domain Restrictions is a core concept in AP Precalculus."
+                    "question": "Domain restriction for 1/(x−5)?",
+                    "options": [
+                              "x ≠ 5",
+                              "x ≠ −5",
+                              "x ≠ 0",
+                              "No restriction"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "x−5=0 → x=5."
           }
-        ]
+]
       }
     },
     {
       id: 'apprecalc-rational-functions-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Domain Restrictions** 🧮
 
-Answer the following about domain restrictions.
-      `,
+Find where denominator = 0:
+
+1) $\frac{1}{x-5}$. Restricted at $x = $ ?
+
+2) $\frac{x}{x+2}$. Restricted at $x = $ ?
+
+3) $\frac{1}{x^2-4}$. One restriction at $x = $ ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of domain restrictions."
+        boxes: 3,
+        correctAnswers: ["5","-2","2"],
+        hint1: "x−5=0.",
+        hint2: "x+2=0.",
+        hint3: "x²−4=(x−2)(x+2)=0.",
+        explanation: "1) 5. 2) −2. 3) 2 (also −2)."
       }
     },
     {
@@ -60,22 +82,13 @@ Answer the following about domain restrictions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Domain Restrictions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Domain Restrictions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The domain of a rational function excludes values where","options":["The denominator equals zero","The numerator equals zero","The function equals zero","x is negative"]},{"label":"Division by zero is","options":["Undefined","Zero","Infinity","One"]}],
+        correctAnswers: ["The denominator equals zero","Undefined"],
+        hint1: "Cannot divide by zero.",
+        hint2: "Not a number.",
+        explanation: "Exclude denominator zeros. Division by zero is undefined."
       }
     },
     {
@@ -84,28 +97,34 @@ Answer the following about domain restrictions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
+| # | Function | Restriction |
 |---|---------|----------|
-| 1 | Domain Restrictions | Core domain restrictions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| 1 | $\frac{1}{x-5}$ | x ≠ 5 |
+| 2 | $\frac{x}{x+2}$ | x ≠ −2 |
+| 3 | $\frac{1}{x^2-4}$ | x ≠ ±2 |
+    
+    `
     },
     {
       id: 'apprecalc-rational-functions-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in domain restrictions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "How many restrictions for 1/(x²−4)?",
+                    "options": [
+                              "2",
+                              "1",
+                              "0",
+                              "4"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "x²−4=0 → x=±2."
           }
-        ]
+]
       }
     }
   ]

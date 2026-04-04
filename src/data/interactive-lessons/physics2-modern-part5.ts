@@ -183,7 +183,7 @@ The mass of $^{4}_{2}\\text{He}$ is 4.0026 u. Use $m_p = 1.0073$ u, $m_n = 1.008
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['4.0320', '0.0294', '27.4', '6.85', '4.03200', '4.032', '0.02940', '27.40', '6.850'],
+        correctAnswers: ['4.0320', '0.0294', '27.4', '6.85'],
         hint1: 'Total mass $= 2(1.0073) + 2(1.0087)$.',
         hint2: '$\\Delta m = 4.0320 - 4.0026$.',
         hint3: '$E_b = \\Delta m \\times 931.5$ MeV. Per nucleon: divide by $A = 4$.',

@@ -280,7 +280,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'For the reaction N₂ + 3H₂ → 2NH₃, how many grams of NH₃ are produced from 14 g of N₂? (M_N₂ = 28 g/mol, M_NH₃ = 17 g/mol)',
+    question: 'For the reaction N₂ + 3H₂ → 2NH₃, how many grams of NH₃ are produced from 14 g of N₂? ($M_{N_2}$ = 28 g/mol, $M_{NH_3}$ = 17 g/mol)',
     options: ['17 g', '34 g', '8.5 g', '28 g'],
     correctAnswer: 0,
     explanation: '14 g N₂ × (1 mol/28 g) = 0.5 mol N₂. Stoichiometry: 1 mol N₂ → 2 mol NH₃, so 0.5 → 1 mol NH₃. Mass = 1 mol × 17 g/mol = 17 g NH₃.',
@@ -914,7 +914,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'In a galvanic cell using Zn and Cu electrodes, which electrode is the anode?',
     options: [
       'Cu, because it has a higher reduction potential',
-      'Zn, because it has a lower (more negative) standard reduction potential',
+      'Zn, because it has a lower standard reduction potential',
       'Zn, because zinc is heavier',
       'Cu, because copper cations are reduced',
     ],
@@ -1775,8 +1775,8 @@ export const apChemQuestionPool: APChemQuestion[] = [
   // ── le-chatelier-equilibrium-shifts (batch 2 — had 4, adding 4 → 8)
   { question: 'Adding more product to an equilibrium shifts the reaction:', options: ['To the right', 'To the left', 'No shift', 'Up'], correctAnswer: 1, explanation: 'Le Chatelier: system shifts to consume the added product → left.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'le-chatelier-equilibrium-shifts', formSet: 'A' },
   { question: 'Increasing pressure by decreasing volume shifts equilibrium toward:', options: ['More moles of gas', 'Fewer moles of gas', 'No change', 'The liquid phase'], correctAnswer: 1, explanation: 'System reduces pressure by shifting to the side with fewer gas moles.', difficulty: 'medium', domain: 'equilibrium', topicSlug: 'le-chatelier-equilibrium-shifts', formSet: 'B' },
-  { question: 'Adding a catalyst to a system at equilibrium:', options: ['Shifts it right', 'Shifts it left', 'Does not shift it (reaches equilibrium faster)', 'Increases K'], correctAnswer: 2, explanation: 'Catalysts speed up both forward and reverse equally → no shift, same $K$.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'le-chatelier-equilibrium-shifts', formSet: 'A' },
-  { question: 'For an exothermic reaction, increasing temperature shifts equilibrium:', options: ['Right', 'Left (toward reactants)', 'No change', 'Cannot tell'], correctAnswer: 1, explanation: 'Heat is a "product" for exothermic → adding heat shifts left.', difficulty: 'medium', domain: 'equilibrium', topicSlug: 'le-chatelier-equilibrium-shifts', formSet: 'both' },
+  { question: 'Adding a catalyst to a system at equilibrium:', options: ['Shifts it right', 'Shifts it left', 'Does not shift equilibrium', 'Increases K'], correctAnswer: 2, explanation: 'Catalysts speed up both forward and reverse equally → no shift, same $K$.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'le-chatelier-equilibrium-shifts', formSet: 'A' },
+  { question: 'For an exothermic reaction, increasing temperature shifts equilibrium:', options: ['Right', 'Left', 'No change', 'Cannot tell'], correctAnswer: 1, explanation: 'Heat is a "product" for exothermic → adding heat shifts left.', difficulty: 'medium', domain: 'equilibrium', topicSlug: 'le-chatelier-equilibrium-shifts', formSet: 'both' },
 
   // ── ice-tables-calculations (batch 2 — had 4, adding 4 → 8) ────
   { question: 'In an ICE table, "I" stands for:', options: ['Ionic', 'Initial concentration', 'Integrated', 'Isomeric'], correctAnswer: 1, explanation: 'I = Initial, C = Change, E = Equilibrium.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'ice-tables-calculations', formSet: 'A' },
@@ -1793,7 +1793,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
 
   // ── reaction-quotient-le-chatelier (batch 2 — had 4, adding 4 → 8)
   { question: 'The reaction quotient $Q$ is calculated the same way as $K$ but using:', options: ['Equilibrium concentrations', 'Current (non-equilibrium) concentrations', 'Standard concentrations', 'Initial pressures only'], correctAnswer: 1, explanation: '$Q$ uses current concentrations; $K$ uses equilibrium concentrations.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'reaction-quotient-le-chatelier', formSet: 'A' },
-  { question: 'If $Q < K$:', options: ['Reaction shifts left', 'Reaction is at equilibrium', 'Reaction shifts right (toward products)', 'No reaction occurs'], correctAnswer: 2, explanation: '$Q < K$ → too few products → forward reaction favored.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'reaction-quotient-le-chatelier', formSet: 'B' },
+  { question: 'If $Q < K$:', options: ['Reaction shifts left', 'Reaction is at equilibrium', 'Reaction shifts right', 'No reaction occurs'], correctAnswer: 2, explanation: '$Q < K$ → too few products → forward reaction favored.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'reaction-quotient-le-chatelier', formSet: 'B' },
   { question: 'If $Q = K$:', options: ['The reaction is at equilibrium', 'The reaction shifts right', 'The reaction shifts left', 'The reaction stops permanently'], correctAnswer: 0, explanation: '$Q = K$ means the system has reached equilibrium.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'reaction-quotient-le-chatelier', formSet: 'A' },
   { question: 'After disturbing an equilibrium, the system adjusts until $Q$ ___ $K$ again.', options: ['Exceeds', 'Equals', 'Is less than', 'Is unrelated to'], correctAnswer: 1, explanation: 'The system always re-establishes $Q = K$.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'reaction-quotient-le-chatelier', formSet: 'both' },
 
@@ -1863,15 +1863,15 @@ export const apChemQuestionPool: APChemQuestion[] = [
   { question: 'For a reaction at equilibrium, the rate of the forward reaction ___ the rate of the reverse reaction.', options: ['Is greater than', 'Is less than', 'Equals', 'Is unrelated to'], correctAnswer: 2, explanation: 'At equilibrium: $r_{fwd} = r_{rev}$.', difficulty: 'easy', domain: 'equilibrium', topicSlug: 'intro-equilibrium', formSet: 'both' },
 
   // ── spontaneity-free-energy-applications (batch 2 — had 4, adding 4 → 8)
-  { question: 'A reaction with $\\Delta G° < 0$ is described as:', options: ['Endergonic', 'Exergonic (thermodynamically favorable)', 'At equilibrium', 'Impossible'], correctAnswer: 1, explanation: 'Negative $\\Delta G°$ → exergonic → spontaneous under standard conditions.', difficulty: 'easy', domain: 'thermodynamics', topicSlug: 'spontaneity-free-energy-applications', formSet: 'A' },
+  { question: 'A reaction with $\\Delta G° < 0$ is described as:', options: ['Endergonic', 'Exergonic', 'At equilibrium', 'Impossible'], correctAnswer: 1, explanation: 'Negative $\\Delta G°$ → exergonic → spontaneous under standard conditions.', difficulty: 'easy', domain: 'thermodynamics', topicSlug: 'spontaneity-free-energy-applications', formSet: 'A' },
   { question: 'Coupling an endergonic reaction with a strongly exergonic one can make the overall process:', options: ['Impossible', 'Spontaneous', 'Endothermic always', 'Reversed'], correctAnswer: 1, explanation: 'If $\\Delta G_{total} < 0$, the coupled process is spontaneous (e.g., ATP hydrolysis driving biosynthesis).', difficulty: 'medium', domain: 'thermodynamics', topicSlug: 'spontaneity-free-energy-applications', formSet: 'B' },
-  { question: '$\\Delta G = \\Delta G° + RT\\ln Q$. If $Q < K$:', options: ['$\\Delta G > 0$', '$\\Delta G < 0$ (forward is spontaneous)', '$\\Delta G = 0$', 'Cannot determine'], correctAnswer: 1, explanation: '$Q < K \\Rightarrow \\ln(Q/K) < 0 \\Rightarrow \\Delta G < 0$ → forward spontaneous.', difficulty: 'hard', domain: 'thermodynamics', topicSlug: 'spontaneity-free-energy-applications', formSet: 'A' },
+  { question: '$\\Delta G = \\Delta G° + RT\\ln Q$. If $Q < K$:', options: ['$\\Delta G > 0$', '$\\Delta G < 0$', '$\\Delta G = 0$', 'Cannot determine'], correctAnswer: 1, explanation: '$Q < K \\Rightarrow \\ln(Q/K) < 0 \\Rightarrow \\Delta G < 0$ → forward spontaneous.', difficulty: 'hard', domain: 'thermodynamics', topicSlug: 'spontaneity-free-energy-applications', formSet: 'A' },
   { question: 'The entropy of the universe always ___ for a spontaneous process.', options: ['Decreases', 'Stays the same', 'Increases', 'Reaches zero'], correctAnswer: 2, explanation: 'Second Law: $\\Delta S_{universe} = \\Delta S_{sys} + \\Delta S_{surr} > 0$ for spontaneous processes.', difficulty: 'easy', domain: 'thermodynamics', topicSlug: 'spontaneity-free-energy-applications', formSet: 'both' },
 
   // ── galvanic-cells-thermo-applications (batch 2 — had 4, adding 4 → 8)
-  { question: '$\\Delta G° = -nFE°$. A larger positive $E°$ means:', options: ['Less spontaneous', 'More spontaneous (more negative $\\Delta G°$)', 'At equilibrium', 'Non-spontaneous'], correctAnswer: 1, explanation: 'Larger $E°$ → more negative $\\Delta G°$ → more spontaneous.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'A' },
+  { question: '$\\Delta G° = -nFE°$. A larger positive $E°$ means:', options: ['Less spontaneous', 'More spontaneous', 'At equilibrium', 'Non-spontaneous'], correctAnswer: 1, explanation: 'Larger $E°$ → more negative $\\Delta G°$ → more spontaneous.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'A' },
   { question: 'The relationship $\\ln K = nFE°/(RT)$ shows that a positive $E°$ corresponds to:', options: ['$K < 1$', '$K = 1$', '$K > 1$', '$K = 0$'], correctAnswer: 2, explanation: 'Positive $E°$ → positive exponent → $K > 1$.', difficulty: 'medium', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'B' },
-  { question: 'A dead battery has $E =$', options: ['$E°$', 'A very large value', '0 (reached equilibrium)', '-1'], correctAnswer: 2, explanation: 'Dead battery: $Q = K$, $E = 0$.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'A' },
+  { question: 'A dead battery has $E =$', options: ['$E°$', 'A very large value', '0', '-1'], correctAnswer: 2, explanation: 'Dead battery: $Q = K$, $E = 0$.', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'A' },
   { question: 'Fuel cells convert chemical energy to electrical energy and are similar to ___ cells.', options: ['Electrolytic', 'Galvanic', 'Concentration only', 'Nuclear'], correctAnswer: 1, explanation: 'Fuel cells are galvanic cells with continuous fuel supply (e.g., H₂/O₂).', difficulty: 'easy', domain: 'electrochemistry', topicSlug: 'galvanic-cells-thermo-applications', formSet: 'both' },
 ]
 

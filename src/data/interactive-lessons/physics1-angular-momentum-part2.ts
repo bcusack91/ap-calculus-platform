@@ -121,10 +121,10 @@ Combined with $mg - T = ma$, you can solve for both $a$ and $T$.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['20', '12', '2.5', '2.50'],
-        hint1: '$I = \\frac{1}{2}MR^2 = \\frac{1}{2}(8)(0.0625) = 0.25$ kg·m². $\\alpha = \\tau/I$',
-        hint2: '$\\alpha = \\tau/I = 6/2 = 3$ rad/s². $\\omega = \\alpha t$',
-        hint3: '$\\alpha = \\Delta\\omega/\\Delta t = 40/8 = 5$ rad/s². $\\tau = I\\alpha$',
+        correctAnswers: ['20', '12', '2.5'],
+        hint1: 'First find $I$ for a solid cylinder: $I = \\frac{1}{2}MR^2$. Then use $\\alpha = \\tau/I$.',
+        hint2: 'Find $\\alpha = \\tau/I$ first, then use $\\omega = \\omega_0 + \\alpha t$ with $\\omega_0 = 0$.',
+        hint3: 'Find $\\alpha$ from $\\alpha = \\Delta\\omega / \\Delta t$, then use $\\tau = I\\alpha$.',
         explanation: '1) $I = 0.25$ kg·m². $\\alpha = 5/0.25 = 20$ rad/s². 2) $\\alpha = 3$ rad/s². $\\omega = 0 + 3(4) = 12$ rad/s. 3) $\\alpha = 40/8 = 5$ rad/s². $|\\tau| = (0.5)(5) = 2.5$ N·m.'
       }
     },

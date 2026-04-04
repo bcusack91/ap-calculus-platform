@@ -9,10 +9,13 @@ export const g5FractionOpsPart3Data = {
 
 **Part 3 of 7 — Multiplying Fractions**
 
-Welcome to **Multiplying Fractions** — Part 3 of 7 in the Grade 5 Math Fraction Operations series.
+$\frac{a}{b} \times \frac{c}{d} = \frac{a \times c}{b \times d}$
 
-This lesson covers key concepts and practice problems.
-      `
+- Multiply numerators
+- Multiply denominators
+- Simplify the result
+    
+    `
     },
     {
       id: 'grade5-fraction-operations-p3-worked',
@@ -20,39 +23,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$\frac{3}{4} \times \frac{2}{5} = \frac{6}{20} = \frac{3}{10}$ ✅
+    
+    `
     },
     {
       id: 'grade5-fraction-operations-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes multiplying fractions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Multiplying Fractions is a core concept in Grade 5 Math."
+                    "question": "$\\\\frac{2}{3} \\\\times \\\\frac{3}{4} = ?$",
+                    "options": [
+                              "$\\\\frac{1}{2}$",
+                              "$\\\\frac{6}{7}$",
+                              "$\\\\frac{5}{12}$",
+                              "$\\\\frac{6}{12}$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "6/12 = 1/2."
           }
-        ]
+]
       }
     },
     {
       id: 'grade5-fraction-operations-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Multiply Fractions** 🧮
 
-Answer the following about multiplying fractions.
-      `,
+1) $\frac{1}{2} \times \frac{3}{4} = \frac{?}{8}$ — Numerator?
+
+2) $\frac{2}{3} \times \frac{3}{5} = \frac{?}{5}$ — Simplified numerator?
+
+3) $\frac{4}{7} \times \frac{1}{2} = \frac{?}{14}$ — Numerator?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of multiplying fractions."
+        boxes: 3,
+        correctAnswers: ["3","2","4"],
+        hint1: "1 × 3 in the numerator.",
+        hint2: "2×3 = 6 over 3×5 = 15. Simplify 6/15.",
+        hint3: "4 × 1 in the numerator.",
+        explanation: "1) 1×3=3. 2) 6/15 = 2/5. 3) 4×1=4."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about multiplying fractions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Multiplying Fractions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Multiplying Fractions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To multiply fractions, multiply","options":["Numerator × numerator, denominator × denominator","Only numerators","Only denominators","Cross-multiply"]},{"label":"$\\\\frac{5}{6} \\\\times \\\\frac{3}{5}$ simplifies to","options":["$\\\\frac{1}{2}$","$\\\\frac{15}{30}$","$\\\\frac{3}{6}$","$\\\\frac{8}{11}$"]}],
+        correctAnswers: ["Numerator × numerator, denominator × denominator","$\\\\frac{1}{2}$"],
+        hint1: "Multiply across.",
+        hint2: "15/30 simplified is?",
+        explanation: "Multiply across: 5×3=15, 6×5=30. 15/30 = 1/2."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about multiplying fractions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Multiplying Fractions | Core multiplying fractions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Simplify? |
+|---|---------|-----------|
+| 1 | $\frac{1}{2} \times \frac{3}{4}$ | No |
+| 2 | $\frac{2}{3} \times \frac{3}{5}$ | Yes |
+| 3 | $\frac{4}{7} \times \frac{1}{2}$ | No |
+    
+    `
     },
     {
       id: 'grade5-fraction-operations-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in multiplying fractions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "When multiplying fractions, do you need a common denominator?",
+                    "options": [
+                              "No",
+                              "Yes",
+                              "Only for unlike fractions",
+                              "Sometimes"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Just multiply straight across: numerator × numerator, denominator × denominator."
           }
-        ]
+]
       }
     }
   ]

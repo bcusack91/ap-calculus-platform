@@ -5,14 +5,15 @@ export const g7ProportionalPart1Data = {
       id: 'grade7-proportional-relationships-p1-intro',
       type: 'text' as const,
       content: `
-# 📐 Identifying Proportions
+# 📊 Identifying Proportions
 
 **Part 1 of 7 — Identifying Proportions**
 
-Welcome to **Identifying Proportions** — Part 1 of 7 in the Grade 7 Math Proportional Relationships series.
+A proportional relationship has a **constant ratio** $\frac{y}{x} = k$.
 
-This lesson covers key concepts and practice problems.
-      `
+In a table, check if all $\frac{y}{x}$ values are equal.
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p1-worked',
@@ -20,39 +21,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+| x | 2 | 4 | 6 |
+|---|---|---|---|
+| y | 6 | 12 | 18 |
+
+$\frac{6}{2} = 3$, $\frac{12}{4} = 3$, $\frac{18}{6} = 3$ → **proportional** ($k = 3$) ✅
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes identifying proportions?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Identifying Proportions is a core concept in Grade 7 Math."
+                    "question": "Which table shows a proportional relationship?",
+                    "options": [
+                              "(1,4), (2,8), (3,12)",
+                              "(1,3), (2,5), (3,7)",
+                              "(1,1), (2,3), (3,6)",
+                              "(1,2), (2,6), (3,8)"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "All ratios = 4: proportional."
           }
-        ]
+]
       }
     },
     {
       id: 'grade7-proportional-relationships-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Find k** 🧮
 
-Answer the following about identifying proportions.
-      `,
+1) (2, 6): k = y/x = ?
+
+2) (4, 20): k = ?
+
+3) (3, 12): k = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of identifying proportions."
+        boxes: 3,
+        correctAnswers: ["3","5","4"],
+        hint1: "6 ÷ 2.",
+        hint2: "20 ÷ 4.",
+        hint3: "12 ÷ 3.",
+        explanation: "1) 3. 2) 5. 3) 4."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about identifying proportions.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Identifying Proportions is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Identifying Proportions builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A proportional relationship always passes through","options":["The origin (0,0)","(1,1)","(0,1)","No specific point"]},{"label":"If y/x varies, the relationship is","options":["Not proportional","Proportional","Linear","Exponential"]}],
+        correctAnswers: ["The origin (0,0)","Not proportional"],
+        hint1: "When x=0, y must be 0.",
+        hint2: "Constant ratio is required.",
+        explanation: "Proportional → through (0,0). Varying ratio → not proportional."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about identifying proportions.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Identifying Proportions | Core identifying proportions principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Data | Proportional? |
+|---|------|--------|
+| 1 | (1,3), (2,6), (3,9) | Yes, k=3 |
+| 2 | (1,2), (2,5), (3,8) | No |
+| 3 | (2,10), (4,20), (6,30) | Yes, k=5 |
+    
+    `
     },
     {
       id: 'grade7-proportional-relationships-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in identifying proportions?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "In $y = kx$, k is called the:",
+                    "options": [
+                              "Constant of proportionality",
+                              "Slope only",
+                              "Y-intercept",
+                              "Coefficient"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "k = constant of proportionality."
           }
-        ]
+]
       }
     }
   ]

@@ -126,7 +126,7 @@ Two charges: $q_1 = +3\\ \\mu\\text{C}$ and $q_2 = -6\\ \\mu\\text{C}$, initiall
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-0.54', '-1.62', '1.08', '-0.540', '-1.620', '1.080'],
+        correctAnswers: ['-0.54', '-1.62', '1.08'],
         hint1: '$U = kq_1 q_2/r = (9 \\times 10^9)(3 \\times 10^{-6})(-6 \\times 10^{-6})/0.30$.',
         hint2: 'At 0.10 m: $U = (9 \\times 10^9)(3 \\times 10^{-6})(-6 \\times 10^{-6})/0.10$.',
         hint3: '$W = -\\Delta U = -(U_f - U_i) = U_i - U_f = -0.54 - (-1.62) = 1.08$ J. Positive work → the electric force pulls them together.',

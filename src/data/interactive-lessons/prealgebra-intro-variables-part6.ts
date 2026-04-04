@@ -9,10 +9,12 @@ export const preAlgVariablesPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Pre-Algebra Introduction to Variables series.
-
-This lesson covers key concepts and practice problems.
-      `
+Translate word problems to equations:
+1. Identify the unknown → variable
+2. Translate relationships → equation
+3. Solve
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p6-worked',
@@ -20,39 +22,55 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**"A number plus 8 equals 20. What is the number?"**
+
+$n + 8 = 20$
+$n = 12$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Pre-Algebra."
+                    "question": "\"5 more than x is 17.\" x = ?",
+                    "options": [
+                              "12",
+                              "22",
+                              "85",
+                              "3"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "x + 5 = 17 → x = 12."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-intro-variables-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Word Problems** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) 5 more than x is 17. x = ?
+
+2) Triple a number is 24. n = ?
+
+3) x minus 9 equals 6. x = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["12","8","15"],
+        hint1: "x + 5 = 17.",
+        hint2: "3n = 24.",
+        hint3: "x − 9 = 6.",
+        explanation: "1) 12. 2) 8. 3) 15."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"\"Is\" or \"equals\" translates to","options":["=","+ ","×","≠"]},{"label":"\"Triple\" means multiply by","options":["3","2","4","1/3"]}],
+        correctAnswers: ["=","3"],
+        hint1: "Is/equals → equal sign.",
+        hint2: "Triple = three times.",
+        explanation: "\"Is\" → =. Triple → ×3."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Equation | Answer |
+|---|---------|----------|--------|
+| 1 | 5 more than x is 17 | x+5=17 | x=12 |
+| 2 | Triple a number is 24 | 3n=24 | n=8 |
+| 3 | x minus 9 = 6 | x−9=6 | x=15 |
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "\"Triple a number is 24.\" The number?",
+                    "options": [
+                              "8",
+                              "72",
+                              "21",
+                              "3"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "3n = 24 → n = 8."
           }
-        ]
+]
       }
     }
   ]

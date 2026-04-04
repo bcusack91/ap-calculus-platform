@@ -9,10 +9,12 @@ export const preAlgOrderOpsPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Welcome to **Problem-Solving Workshop** — Part 6 of 7 in the Pre-Algebra Order of Operations series.
-
-This lesson covers key concepts and practice problems.
-      `
+Apply order of operations to multi-step problems:
+- Write the expression carefully
+- Identify which operations to do first
+- Show each step
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p6-worked',
@@ -20,39 +22,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**"3 squared plus the product of 2 and 5."**
+
+$3^2 + 2 \times 5 = 9 + 10 = 19$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p6-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes problem-solving workshop?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Problem-Solving Workshop is a core concept in Pre-Algebra."
+                    "question": "\"Double the sum of 4 and 3\" = ?",
+                    "options": [
+                              "14",
+                              "11",
+                              "23",
+                              "10"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "2(4+3) = 2(7) = 14."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-order-of-operations-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Translate & Compute** 🧮
 
-Answer the following about problem-solving workshop.
-      `,
+1) Double the sum of 4 and 3?
+
+2) 5 squared minus 10?
+
+3) Sum of 8 and 6, divided by 2?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of problem-solving workshop."
+        boxes: 3,
+        correctAnswers: ["14","15","7"],
+        hint1: "2(4+3).",
+        hint2: "25 − 10.",
+        hint3: "(8+6)÷2 = 14÷2.",
+        explanation: "1) 14. 2) 15. 3) 7."
       }
     },
     {
@@ -60,22 +77,13 @@ Answer the following about problem-solving workshop.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Problem-Solving Workshop is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Problem-Solving Workshop builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"\"The sum of 4 and 3\" requires","options":["Parentheses to group the addition","No grouping","Multiplication first","Subtraction"]},{"label":"\"5 squared\" means","options":["5² = 25","5 × 2 = 10","√5","5 + 5"]}],
+        correctAnswers: ["Parentheses to group the addition","5² = 25"],
+        hint1: "Sum means add → group it.",
+        hint2: "Squared = power of 2.",
+        explanation: "Group the sum in parentheses. 5²=25."
       }
     },
     {
@@ -84,28 +92,34 @@ Answer the following about problem-solving workshop.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Problem-Solving Workshop | Core problem-solving workshop principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Expression | Value |
+|---|---------|-----------|-------|
+| 1 | Double the sum of 4 and 3 | 2(4+3) | 14 |
+| 2 | 5 squared minus 10 | 5²−10 | 15 |
+| 3 | Sum of 8 and 6 divided by 2 | (8+6)÷2 | 7 |
+    
+    `
     },
     {
       id: 'prealgebra-order-of-operations-p6-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in problem-solving workshop?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "\"Sum of 8 and 6 divided by 2\" = ?",
+                    "options": [
+                              "7",
+                              "11",
+                              "4",
+                              "17"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "(8+6)÷2 = 14÷2 = 7."
           }
-        ]
+]
       }
     }
   ]

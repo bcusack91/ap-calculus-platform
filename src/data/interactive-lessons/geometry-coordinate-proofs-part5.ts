@@ -9,10 +9,12 @@ export const geoCoordProofsPart5Data = {
 
 **Part 5 of 7 — Proving Triangle Properties**
 
-Welcome to **Proving Triangle Properties** — Part 5 of 7 in the Geometry Coordinate Proofs series.
-
-This lesson covers key concepts and practice problems.
-      `
+Use coordinates to prove:
+- **Isosceles**: two sides equal (distance formula)
+- **Right triangle**: perpendicular sides (slope product = −1)
+- **Equilateral**: all three sides equal
+    
+    `
     },
     {
       id: 'geometry-coordinate-proofs-p5-worked',
@@ -20,39 +22,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**A(0,0), B(4,0), C(2,3). Isosceles?**
+
+$AB = 4$, $AC = \sqrt{4+9} = \sqrt{13}$, $BC = \sqrt{4+9} = \sqrt{13}$
+
+AC = BC → **Isosceles** ✅
+    
+    `
     },
     {
       id: 'geometry-coordinate-proofs-p5-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes proving triangle properties?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Proving Triangle Properties is a core concept in Geometry."
+                    "question": "To prove a triangle is isosceles, show:",
+                    "options": [
+                              "Two sides are equal",
+                              "All sides equal",
+                              "No sides equal",
+                              "Right angle exists"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Isosceles = at least 2 equal sides."
           }
-        ]
+]
       }
     },
     {
       id: 'geometry-coordinate-proofs-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Triangle (0,0), (3,0), (0,4)** 🧮
 
-Answer the following about proving triangle properties.
-      `,
+1) Side from (0,0) to (0,4). Length?
+
+2) Side from (0,0) to (3,0). Length?
+
+3) Side from (3,0) to (0,4). Length?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of proving triangle properties."
+        boxes: 3,
+        correctAnswers: ["4","3","5"],
+        hint1: "|4−0|.",
+        hint2: "|3−0|.",
+        hint3: "√(9+16).",
+        explanation: "1) 4. 2) 3. 3) √25=5. This is a 3-4-5 right triangle!"
       }
     },
     {
@@ -60,22 +79,13 @@ Answer the following about proving triangle properties.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Proving Triangle Properties is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Proving Triangle Properties builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"An isosceles triangle has at least","options":["2 equal sides","3 equal sides","0 equal sides","1 right angle"]},{"label":"A 3-4-5 right triangle has a hypotenuse of","options":["5","4","3","12"]}],
+        correctAnswers: ["2 equal sides","5"],
+        hint1: "At least two sides match.",
+        hint2: "Longest side.",
+        explanation: "Isosceles: ≥2 equal sides. 3-4-5: hypotenuse=5."
       }
     },
     {
@@ -84,28 +94,34 @@ Answer the following about proving triangle properties.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Proving Triangle Properties | Core proving triangle properties principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Vertices | Type |
+|---|---------|------|
+| 1 | (0,0),(4,0),(2,3) | Isosceles |
+| 2 | (0,0),(3,0),(0,4) | Right |
+| 3 | (0,0),(6,0),(3,3) | Isosceles |
+    
+    `
     },
     {
       id: 'geometry-coordinate-proofs-p5-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in proving triangle properties?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "For right triangle, two sides must be:",
+                    "options": [
+                              "Perpendicular",
+                              "Parallel",
+                              "Equal",
+                              "Opposite"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Right angle between two sides → perpendicular."
           }
-        ]
+]
       }
     }
   ]

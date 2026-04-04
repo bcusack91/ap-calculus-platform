@@ -9,10 +9,17 @@ export const geoTriCongruencePart1Data = {
 
 **Part 1 of 7 — Classifying Triangles**
 
-Welcome to **Classifying Triangles** — Part 1 of 7 in the Geometry Triangle Congruence series.
+**By sides:**
+- **Scalene**: no equal sides
+- **Isosceles**: 2 equal sides
+- **Equilateral**: 3 equal sides
 
-This lesson covers key concepts and practice problems.
-      `
+**By angles:**
+- **Acute**: all angles < 90°
+- **Right**: one 90° angle
+- **Obtuse**: one angle > 90°
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p1-worked',
@@ -20,39 +27,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Sides: 5, 5, 8. Classify.**
+
+Two equal sides → **Isosceles** ✅
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes classifying triangles?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Classifying Triangles is a core concept in Geometry."
+                    "question": "Sides 6, 6, 6. Classification?",
+                    "options": [
+                              "Equilateral",
+                              "Isosceles",
+                              "Scalene",
+                              "Right"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "All three sides equal."
           }
-        ]
+]
       }
     },
     {
       id: 'geometry-triangle-congruence-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Equilateral Triangle Angles** 🧮
 
-Answer the following about classifying triangles.
-      `,
+1) Angle A = ?
+
+2) Angle B = ?
+
+3) Angle C = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of classifying triangles."
+        boxes: 3,
+        correctAnswers: ["60","60","60"],
+        hint1: "180° ÷ 3.",
+        hint2: "All angles equal.",
+        hint3: "All three are the same.",
+        explanation: "1) 60°. 2) 60°. 3) 60°. Total = 180°."
       }
     },
     {
@@ -60,22 +82,13 @@ Answer the following about classifying triangles.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Classifying Triangles is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Classifying Triangles builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A triangle with no equal sides is","options":["Scalene","Isosceles","Equilateral","Right"]},{"label":"The sum of angles in any triangle is","options":["180°","360°","90°","270°"]}],
+        correctAnswers: ["Scalene","180°"],
+        hint1: "No matching sides.",
+        hint2: "Triangle angle sum.",
+        explanation: "No equal sides = scalene. Angle sum = 180°."
       }
     },
     {
@@ -84,28 +97,34 @@ Answer the following about classifying triangles.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Classifying Triangles | Core classifying triangles principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Sides | Classification |
+|---|-------|---------------|
+| 1 | 3, 4, 5 | Scalene right |
+| 2 | 6, 6, 6 | Equilateral |
+| 3 | 7, 7, 10 | Isosceles |
+    
+    `
     },
     {
       id: 'geometry-triangle-congruence-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in classifying triangles?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "An equilateral triangle has all angles equal to:",
+                    "options": [
+                              "60°",
+                              "90°",
+                              "45°",
+                              "120°"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "180°/3 = 60° each."
           }
-        ]
+]
       }
     }
   ]

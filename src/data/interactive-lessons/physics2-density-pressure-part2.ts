@@ -148,7 +148,7 @@ A car (mass 1500 kg, weight 15,000 N) sits on a hydraulic lift piston with area 
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['60000', '0.005', '5', '0.0050'],
+        correctAnswers: ['60000', '0.005', '5'],
         hint1: '$P = F/A = 15{,}000 / 0.25$.',
         hint2: '$A_1 = F_1/P = 300/60{,}000$.',
         hint3: 'Work in = work out: $F_1 d_1 = F_2 d_2$. So $d_1 = F_2 d_2 / F_1 = 15{,}000 \\times 0.10 / 300$.',

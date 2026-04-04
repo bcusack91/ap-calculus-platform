@@ -83,7 +83,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1.79', '2.25', '16', '1.790', '2.250'],
+        correctAnswers: ['1.79', '2.25', '16'],
         hint1: '$\\frac{1}{2}kx^2 = mgd\\sin\\theta + \\mu_k mg\\cos\\theta \\cdot d$. Factor out $d$ and solve.',
         hint2: '$\\frac{1}{2}kx^2 = mgh \\Rightarrow h = kx^2/(2mg)$.',
         hint3: '$\\frac{1}{2}kx^2 = \\mu_k mg d \\Rightarrow d = kx^2/(2\\mu_k mg)$.',
@@ -175,7 +175,7 @@ Use $g = 10$ m/s².
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.82', '1.55', '0.39', '0.820', '1.550', '0.390'],
+        correctAnswers: ['0.82', '1.55', '0.39'],
         hint1: '$mgh = \\frac{1}{2}kx^2 + \\mu_k mg(2 + x)$. Rearrange as a quadratic in $x$.',
         hint2: '$\\frac{1}{2}kx^2 = mgd\\sin45° + \\mu_k mgd\\cos45°$. Solve for $d$.',
         hint3: '$\\frac{1}{2}mv^2 = \\frac{1}{2}kx^2 + \\mu_k mg \\cdot x$. Quadratic in $x$.',

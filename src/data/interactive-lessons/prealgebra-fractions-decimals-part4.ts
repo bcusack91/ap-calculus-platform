@@ -9,10 +9,13 @@ export const preAlgFractionsPart4Data = {
 
 **Part 4 of 7 — Operations with Mixed Forms**
 
-Welcome to **Operations with Mixed Forms** — Part 4 of 7 in the Pre-Algebra Fractions, Decimals & Percents series.
+When adding/subtracting fractions and decimals:
+1. Convert everything to the **same form**
+2. Then perform the operation
 
-This lesson covers key concepts and practice problems.
-      `
+$\frac{1}{2} + 0.3 = 0.5 + 0.3 = 0.8$
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p4-worked',
@@ -20,39 +23,52 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$\frac{3}{4} + 0.5 = 0.75 + 0.5 = 1.25$ ✅
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p4-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes operations with mixed forms?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Operations with Mixed Forms is a core concept in Pre-Algebra."
+                    "question": "$\\frac{1}{2} + 0.3 = ?$",
+                    "options": [
+                              "0.8",
+                              "1.3",
+                              "0.13",
+                              "0.53"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "0.5 + 0.3 = 0.8."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-fractions-decimals-p4-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Mixed Operations** 🧮
 
-Answer the following about operations with mixed forms.
-      `,
+1) $\frac{1}{2} + 0.3 = ?$
+
+2) $0.75 - \frac{1}{4} = ?$
+
+3) $\frac{1}{5} + 0.6 = ?$
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of operations with mixed forms."
+        boxes: 3,
+        correctAnswers: ["0.8","0.5","0.8"],
+        hint1: "0.5 + 0.3.",
+        hint2: "0.75 − 0.25.",
+        hint3: "0.2 + 0.6.",
+        explanation: "1) 0.8. 2) 0.5. 3) 0.8."
       }
     },
     {
@@ -60,22 +76,13 @@ Answer the following about operations with mixed forms.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Operations with Mixed Forms is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Operations with Mixed Forms builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"To add a fraction and a decimal","options":["Convert to the same form first","Just add numbers","Ignore the fraction","Use cross multiplication"]},{"label":"$\\frac{1}{4} + 0.25 =$","options":["0.5","0.5025","0.125","0.75"]}],
+        correctAnswers: ["Convert to the same form first","0.5"],
+        hint1: "Must be same type.",
+        hint2: "0.25 + 0.25.",
+        explanation: "Convert first, then operate. 0.25+0.25=0.5."
       }
     },
     {
@@ -84,28 +91,34 @@ Answer the following about operations with mixed forms.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Operations with Mixed Forms | Core operations with mixed forms principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Problem | Answer |
+|---|---------|--------|
+| 1 | $\frac{1}{2} + 0.3$ | 0.8 |
+| 2 | $0.75 - \frac{1}{4}$ | 0.5 |
+| 3 | $\frac{1}{5} + 0.6$ | 0.8 |
+    
+    `
     },
     {
       id: 'prealgebra-fractions-decimals-p4-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in operations with mixed forms?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$0.75 - \\frac{1}{4} = ?$",
+                    "options": [
+                              "0.5",
+                              "1.0",
+                              "0.25",
+                              "0.74"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "0.75 − 0.25 = 0.5."
           }
-        ]
+]
       }
     }
   ]

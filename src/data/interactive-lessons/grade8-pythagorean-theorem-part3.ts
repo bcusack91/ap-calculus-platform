@@ -9,10 +9,13 @@ export const g8PythagoreanPart3Data = {
 
 **Part 3 of 7 — Distance Between Points**
 
-Welcome to **Distance Between Points** — Part 3 of 7 in the Grade 8 Math Pythagorean Theorem series.
+The **distance formula** comes from the Pythagorean theorem:
 
-This lesson covers key concepts and practice problems.
-      `
+$d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$
+
+The horizontal and vertical differences form the legs of a right triangle.
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p3-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Distance between (1, 2) and (4, 6).**
+
+$d = \sqrt{(4-1)^2 + (6-2)^2} = \sqrt{9+16} = \sqrt{25} = 5$ ✅
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes distance between points?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Distance Between Points is a core concept in Grade 8 Math."
+                    "question": "Distance from (0,0) to (3,4)?",
+                    "options": [
+                              "5",
+                              "7",
+                              "12",
+                              "25"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "√(9+16) = √25 = 5."
           }
-        ]
+]
       }
     },
     {
       id: 'grade8-pythagorean-theorem-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Find the Distance** 🧮
 
-Answer the following about distance between points.
-      `,
+1) (0,0) to (3,4). d = ?
+
+2) (1,2) to (4,6). d = ?
+
+3) (0,0) to (5,12). d = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of distance between points."
+        boxes: 3,
+        correctAnswers: ["5","5","13"],
+        hint1: "√(9+16).",
+        hint2: "√(9+16).",
+        hint3: "√(25+144).",
+        explanation: "1) √25=5. 2) √25=5. 3) √169=13."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about distance between points.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Distance Between Points is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Distance Between Points builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"The distance formula uses a","options":["Square root","Cube root","Fourth root","No root"]},{"label":"The differences (x₂−x₁) and (y₂−y₁) represent","options":["Legs of a right triangle","The hypotenuse","The slope","The area"]}],
+        correctAnswers: ["Square root","Legs of a right triangle"],
+        hint1: "Final step: take the square root.",
+        hint2: "Horizontal and vertical legs.",
+        explanation: "Distance uses square root. Differences = triangle legs."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about distance between points.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Distance Between Points | Core distance between points principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Points | Distance |
+|---|--------|----------|
+| 1 | (0,0) and (3,4) | 5 |
+| 2 | (1,2) and (4,6) | 5 |
+| 3 | (0,0) and (5,12) | 13 |
+    
+    `
     },
     {
       id: 'grade8-pythagorean-theorem-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in distance between points?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "The distance formula is derived from:",
+                    "options": [
+                              "The Pythagorean theorem",
+                              "Area formula",
+                              "Slope formula",
+                              "Midpoint formula"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Distance formula = Pythagorean theorem on coordinate plane."
           }
-        ]
+]
       }
     }
   ]

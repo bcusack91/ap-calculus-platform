@@ -164,7 +164,7 @@ A 100 W light bulb converts 100 joules of electrical energy per second — mostl
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['30', '12', '1200', '1.25', '1.250'],
+        correctAnswers: ['30', '12', '1200', '1.25'],
         hint1: '$V = IR = (0.30)(100)$.',
         hint2: '$R = V/I = 120/10$.',
         hint3: '$P = IV = (10)(120)$ or $P = I^2 R = (10)^2(12)$.',

@@ -9,10 +9,12 @@ export const alg2PolynomialsPart3Data = {
 
 **Part 3 of 7 — Factoring Review**
 
-Welcome to **Factoring Review** — Part 3 of 7 in the Algebra 2 Polynomial Operations series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Methods
+1. **GCF**: Factor out the greatest common factor
+2. **Trinomial**: $x^2 + bx + c = (x+m)(x+n)$ where $m+n=b$, $mn=c$
+3. **Difference of squares**: $a^2-b^2=(a+b)(a-b)$
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p3-worked',
@@ -20,39 +22,60 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+$x^2 + 7x + 12 = ?$
+
+Find $m, n$: $m + n = 7$, $mn = 12$ → $m = 3, n = 4$
+
+$(x+3)(x+4)$ ✅
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p3-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes factoring review?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Factoring Review is a core concept in Algebra 2."
+                    "question": "$x^2+5x+6 = ?$",
+                    "options": [
+                              "$(x+2)(x+3)$",
+                              "$(x+1)(x+6)$",
+                              "$(x+5)(x+1)$",
+                              "$(x-2)(x-3)$"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "2+3=5, 2×3=6."
           }
-        ]
+]
       }
     },
     {
       id: 'algebra2-polynomial-operations-p3-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Factor** 🧮
 
-Answer the following about factoring review.
-      `,
+$x^2 + 5x + 6 = (x+?)(x+?)$
+
+1) Smaller number?
+
+2) Larger number?
+
+$x^2 - 9 = (x+?)(x-?)$
+
+3) The number?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of factoring review."
+        boxes: 3,
+        correctAnswers: ["2","3","3"],
+        hint1: "Two numbers that add to 5 and multiply to 6.",
+        hint2: "The other of those two numbers.",
+        hint3: "√9.",
+        explanation: "1) 2. 2) 3. 3) 3."
       }
     },
     {
@@ -60,22 +83,13 @@ Answer the following about factoring review.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Factoring Review is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Factoring Review builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"$a^2 - b^2$ factors as","options":["$(a+b)(a-b)$","$(a-b)^2$","$(a+b)^2$","Cannot be factored"]},{"label":"For $x^2+bx+c$, find two numbers that","options":["Add to b and multiply to c","Add to c and multiply to b","Both equal b","Both equal c"]}],
+        correctAnswers: ["$(a+b)(a-b)$","Add to b and multiply to c"],
+        hint1: "Difference of squares.",
+        hint2: "m+n=b, mn=c.",
+        explanation: "a²−b²=(a+b)(a−b). Trinomial: m+n=b, mn=c."
       }
     },
     {
@@ -84,28 +98,34 @@ Answer the following about factoring review.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Factoring Review | Core factoring review principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Expression | Factored |
+|---|-----------|----------|
+| 1 | $x^2+5x+6$ | $(x+2)(x+3)$ |
+| 2 | $x^2-9$ | $(x+3)(x-3)$ |
+| 3 | $2x^2+4x$ | $2x(x+2)$ |
+    
+    `
     },
     {
       id: 'algebra2-polynomial-operations-p3-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in factoring review?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "$x^2-9 = ?$",
+                    "options": [
+                              "$(x+3)(x-3)$",
+                              "$(x-9)(x+1)$",
+                              "$(x-3)^2$",
+                              "Cannot be factored"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Difference of squares: x²−3²."
           }
-        ]
+]
       }
     }
   ]

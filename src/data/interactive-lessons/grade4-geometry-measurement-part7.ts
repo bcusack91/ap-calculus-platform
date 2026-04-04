@@ -5,14 +5,17 @@ export const g4GeoMeasurePart7Data = {
       id: 'grade4-geometry-measurement-p7-intro',
       type: 'text' as const,
       content: `
-# 🏆 Review & Applications
+# 📏 Review & Applications
 
 **Part 7 of 7 — Review & Applications**
 
-Welcome to **Review & Applications** — Part 7 of 7 in the Grade 4 Math Geometry & Measurement series.
-
-This lesson covers key concepts and practice problems.
-      `
+### Key Concepts
+- Acute (<90°), Right (=90°), Obtuse (>90°), Straight (=180°)
+- Shapes classified by sides and angles
+- $P = 2l + 2w$, $A = l \times w$
+- Lines of symmetry
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p7-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Rectangle 9 × 6 m.**
+
+$P = 2(9)+2(6) = 30$ m, $A = 9 \times 6 = 54$ m² ✅
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p7-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes review & applications?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Review & Applications is a core concept in Grade 4 Math."
+                    "question": "Equilateral triangle, side 7 cm. Perimeter?",
+                    "options": [
+                              "21 cm",
+                              "14 cm",
+                              "49 cm",
+                              "28 cm"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "P = 3×7 = 21 cm."
           }
-        ]
+]
       }
     },
     {
       id: 'grade4-geometry-measurement-p7-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Review** 🧮
 
-Answer the following about review & applications.
-      `,
+1) Square, side 6 cm. Area (cm²)?
+
+2) Rectangle 12 × 5 m. Area (m²)?
+
+3) An octagon has how many sides?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of review & applications."
+        boxes: 3,
+        correctAnswers: ["36","60","8"],
+        hint1: "A = s² = 6².",
+        hint2: "A = 12 × 5.",
+        hint3: "\"Oct\" = eight.",
+        explanation: "1) 36. 2) 60. 3) 8."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about review & applications.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Review & Applications is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Review & Applications builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"Area of rectangle formula","options":["A = l × w","A = 2l + 2w","A = s²","A = ½bh"]},{"label":"Supplementary angles sum to","options":["180°","90°","360°","270°"]}],
+        correctAnswers: ["A = l × w","180°"],
+        hint1: "Area = product of sides.",
+        hint2: "What do supplementary angles add to?",
+        explanation: "A = l × w. Supplementary = 180°."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about review & applications.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Review & Applications | Core review & applications principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Topic | Problem |
+|---|-------|---------|
+| 1 | Area | Square, side 6 cm |
+| 2 | Area | Rectangle 12 × 5 m |
+| 3 | Shapes | Sides of an octagon? |
+    
+    `
     },
     {
       id: 'grade4-geometry-measurement-p7-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in review & applications?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "Rectangle area 48 cm², length 8 cm. Perimeter?",
+                    "options": [
+                              "28 cm",
+                              "14 cm",
+                              "22 cm",
+                              "56 cm"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "w = 48÷8 = 6. P = 2(8)+2(6) = 28 cm."
           }
-        ]
+]
       }
     }
   ]

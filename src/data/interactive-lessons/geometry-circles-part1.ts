@@ -9,10 +9,13 @@ export const geoCirclesPart1Data = {
 
 **Part 1 of 7 — Parts of a Circle**
 
-Welcome to **Parts of a Circle** — Part 1 of 7 in the Geometry Circles series.
-
-This lesson covers key concepts and practice problems.
-      `
+- **Radius** ($r$): center to edge
+- **Diameter** ($d = 2r$): edge to edge through center
+- **Chord**: segment with both endpoints on the circle
+- **Secant**: line that intersects a circle at two points
+- **Tangent**: line that touches the circle at one point
+    
+    `
     },
     {
       id: 'geometry-circles-p1-worked',
@@ -20,39 +23,54 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**Circle with radius 7. What is the diameter?**
+
+$d = 2r = 2(7) = 14$ ✅
+    
+    `
     },
     {
       id: 'geometry-circles-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes parts of a circle?",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "Parts of a Circle is a core concept in Geometry."
+                    "question": "The diameter is:",
+                    "options": [
+                              "Twice the radius",
+                              "Half the radius",
+                              "Equal to the radius",
+                              "The circumference"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "d = 2r."
           }
-        ]
+]
       }
     },
     {
       id: 'geometry-circles-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Circle Parts** 🧮
 
-Answer the following about parts of a circle.
-      `,
+1) r = 5. Diameter?
+
+2) d = 18. Radius?
+
+3) r = 3.5. Diameter?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of parts of a circle."
+        boxes: 3,
+        correctAnswers: ["10","9","7"],
+        hint1: "d = 2r.",
+        hint2: "r = d/2.",
+        hint3: "d = 2(3.5).",
+        explanation: "1) 10. 2) 9. 3) 7."
       }
     },
     {
@@ -60,22 +78,13 @@ Answer the following about parts of a circle.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "Parts of a Circle is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "Parts of a Circle builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A chord that passes through the center is called","options":["A diameter","A radius","A tangent","A secant"]},{"label":"All radii of a circle are","options":["Equal in length","Different lengths","Chords","Tangent lines"]}],
+        correctAnswers: ["A diameter","Equal in length"],
+        hint1: "Longest chord.",
+        hint2: "Same distance from center.",
+        explanation: "Diameter is a chord through center. All radii are equal."
       }
     },
     {
@@ -84,28 +93,34 @@ Answer the following about parts of a circle.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | Parts of a Circle | Core parts of a circle principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Given | Find |
+|---|-------|------|
+| 1 | r = 5 | d |
+| 2 | d = 18 | r |
+| 3 | r = 3.5 | d |
+    
+    `
     },
     {
       id: 'geometry-circles-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in parts of a circle?",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "A tangent line touches a circle at:",
+                    "options": [
+                              "Exactly one point",
+                              "Two points",
+                              "Zero points",
+                              "Infinite points"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Tangent = one point of tangency."
           }
-        ]
+]
       }
     }
   ]

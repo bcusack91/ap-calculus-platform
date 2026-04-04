@@ -9,10 +9,13 @@ export const preAlgVariablesPart1Data = {
 
 **Part 1 of 7 — What is a Variable?**
 
-Welcome to **What is a Variable?** — Part 1 of 7 in the Pre-Algebra Introduction to Variables series.
+A **variable** is a letter that represents an unknown number.
 
-This lesson covers key concepts and practice problems.
-      `
+- $x + 5 = 12$ (x is unknown)
+- Variables can represent any value
+- Common letters: $x, y, n, a$
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p1-worked',
@@ -20,39 +23,56 @@ This lesson covers key concepts and practice problems.
       content: `
 ## Worked Example
 
-See the detailed steps in the practice sections below.
-      `
+**If a box of crayons has $n$ crayons, and you buy 3 boxes, total = $3n$.**
+
+When $n = 24$: $3(24) = 72$ crayons ✅
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p1-mcq1',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** 🎯
-      `,
+**Concept Check** 🎯
+    `,
       exercise: {
         questions: [
           {
-            question: "Which best describes what is a variable??",
-            options: ["A fundamental concept","An advanced topic","Not part of this course","An optional topic"],
-            correctAnswer: 0,
-            explanation: "What is a Variable? is a core concept in Pre-Algebra."
+                    "question": "\"5 more than x\" as an expression?",
+                    "options": [
+                              "x + 5",
+                              "5x",
+                              "x − 5",
+                              "5 − x"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "\"More than\" means addition."
           }
-        ]
+]
       }
     },
     {
       id: 'prealgebra-intro-variables-p1-input',
       type: 'input-boxes' as const,
       content: `
-**Practice** 🧮
+**Evaluate** 🧮
 
-Answer the following about what is a variable?.
-      `,
+Let $x = 3$.
+
+1) $x + 5 = ?$
+
+2) $5x = ?$
+
+3) $x$ itself = ?
+    
+    `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ["correct"],
-        hint1: "Think about the definition.",
-        explanation: "Review the concepts of what is a variable?."
+        boxes: 3,
+        correctAnswers: ["8","15","3"],
+        hint1: "3 + 5.",
+        hint2: "5 × 3.",
+        hint3: "x = 3.",
+        explanation: "1) 8. 2) 15. 3) 3."
       }
     },
     {
@@ -60,22 +80,13 @@ Answer the following about what is a variable?.
       type: 'dropdown-select' as const,
       content: `
 **Concept Check** 🔍
-      `,
+    `,
       exercise: {
-        dropdowns: [
-          {
-            label: "What is a Variable? is important because:",
-            options: ["It builds on prior concepts","It is tested frequently","Both of these","Neither"]
-          },
-          {
-            label: "The best study strategy is:",
-            options: ["Memorize formulas only","Practice problems regularly","Skip to review","Guess on tests"]
-          }
-        ],
-        correctAnswers: ["Both of these","Practice problems regularly"],
-        hint1: "Think about why we study this.",
-        hint2: "Active practice is key.",
-        explanation: "What is a Variable? builds on prior concepts and is frequently tested. Regular practice is the best study strategy."
+        dropdowns: [{"label":"A variable is a letter that represents","options":["An unknown number","A specific number always","An operation","Nothing"]},{"label":"In 3x, the 3 is called the","options":["Coefficient","Variable","Constant","Exponent"]}],
+        correctAnswers: ["An unknown number","Coefficient"],
+        hint1: "Letters for unknowns.",
+        hint2: "Number multiplied by the variable.",
+        explanation: "Variable = unknown. Coefficient = number in front."
       }
     },
     {
@@ -84,28 +95,34 @@ Answer the following about what is a variable?.
       content: `
 ## Practice
 
-| # | Concept | Key Idea |
-|---|---------|----------|
-| 1 | What is a Variable? | Core what is a variable? principles |
-| 2 | Application | Real-world problems |
-| 3 | Extension | Advanced connections |
-      `
+| # | Phrase | Expression |
+|---|--------|------------|
+| 1 | 5 more than x | x + 5 |
+| 2 | 3 times n | 3n |
+| 3 | y decreased by 7 | y − 7 |
+    
+    `
     },
     {
       id: 'prealgebra-intro-variables-p1-mcq2',
       type: 'multiple-choice' as const,
       content: `
-**Challenge Questions** 📋
-      `,
+**Challenge Question** 📋
+    `,
       exercise: {
         questions: [
           {
-            question: "What is the most important skill in what is a variable??",
-            options: ["Memorization","Understanding concepts","Speed","Calculator use"],
-            correctAnswer: 1,
-            explanation: "Understanding the underlying concepts is always most important."
+                    "question": "A variable is:",
+                    "options": [
+                              "A letter representing an unknown number",
+                              "Always equal to x",
+                              "A fixed number",
+                              "An operation"
+                    ],
+                    "correctAnswer": 0,
+                    "explanation": "Variables represent unknowns."
           }
-        ]
+]
       }
     }
   ]
