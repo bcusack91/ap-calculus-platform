@@ -147,30 +147,35 @@ The key is whether the overall arrangement (bonds + lone pairs) produces a net d
         dropdowns: [
           {
             id: 'vg-6-5-dd1',
+            label: '$\\text{BF}_3$ (trigonal planar)',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
             explanation: 'BF₃ has a symmetric trigonal planar geometry with 3 identical F atoms. Bond dipoles cancel → nonpolar.'
           },
           {
             id: 'vg-6-5-dd2',
+            label: '$\\text{SO}_2$ (bent)',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 0,
             explanation: 'SO₂ has a bent geometry (steric number 3, 1 lone pair). The two S=O dipoles don\'t cancel → polar.'
           },
           {
             id: 'vg-6-5-dd3',
+            label: '$\\text{XeF}_4$ (square planar)',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
             explanation: 'XeF₄ has a square planar geometry with lone pairs in trans positions. The four Xe–F dipoles cancel → nonpolar.'
           },
           {
             id: 'vg-6-5-dd4',
+            label: '$\\text{SF}_4$ (seesaw)',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 0,
             explanation: 'SF₄ has a seesaw geometry (steric number 5, 1 lone pair). The asymmetric shape means dipoles don\'t fully cancel → polar.'
           },
           {
             id: 'vg-6-5-dd5',
+            label: '$\\text{CO}_2$ (linear)',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
             explanation: 'CO₂ is linear with 2 identical C=O double bonds pointing in opposite directions. Dipoles cancel → nonpolar.'

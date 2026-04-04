@@ -3821,7 +3821,7 @@ function DropdownExercise({
           
           return (
             <div key={index} className="flex items-center gap-4">
-              <span className="text-xl font-semibold"><InlineLatex text={(dropdown.label || dropdown.id || '') + ':'} /></span>
+              {dropdown.label && <span className="text-xl font-semibold"><InlineLatex text={dropdown.label + ':'} /></span>}
               <select
                 value={answers[index]}
                 onChange={(e) => {
@@ -3895,7 +3895,7 @@ function DropdownExercise({
           <ul className="space-y-2 text-lg text-green-800 dark:text-green-300">
             {dropdowns.map((dropdown: ExerciseDropdown, index: number) => (
               <li key={index}>
-                <InlineLatex text={dropdown.label || dropdown.id || ''} />: <strong><InlineLatex text={correctAnswersList[index]} /></strong>
+                {dropdown.label && <><InlineLatex text={dropdown.label} />: </>}<strong><InlineLatex text={correctAnswersList[index]} /></strong>
                 {dropdown.explanation && (
                   <p className="text-sm text-green-700 dark:text-green-400 mt-1 ml-4">
                     <InlineLatex text={dropdown.explanation} />
