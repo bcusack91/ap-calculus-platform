@@ -194,7 +194,8 @@ interface ExerciseDropdown {
 }
 
 interface ExerciseQuestion {
-  question: string
+  question?: string
+  text?: string
   options: string[]
   correctAnswer: number
   explanation: string
@@ -2934,7 +2935,7 @@ function MultipleChoiceQuiz({
       {/* Current Question */}
       <div className="bg-white border border-gray-200 rounded-lg p-6">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">
-          <InlineLatex text={currentQuestion.question} />
+          <InlineLatex text={currentQuestion.question || currentQuestion.text || ''} />
         </h3>
 
         <div className="space-y-3">
