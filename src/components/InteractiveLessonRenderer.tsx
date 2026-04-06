@@ -3272,7 +3272,7 @@ function MiniBossBattle({
               <div className="text-6xl mb-8">⭐ ⭐ ⭐</div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button
-                  onClick={onComplete}
+                  onClick={() => onComplete()}
                   className="px-12 py-4 bg-white hover:bg-gray-100 text-purple-700 font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-2xl"
                 >
                   Continue
@@ -3296,7 +3296,7 @@ function MiniBossBattle({
               <p className="text-2xl text-yellow-200 mb-8">Next Part Unlocked!</p>
               <div className="text-6xl mb-8">⭐ ⭐ ⭐</div>
               <button
-                onClick={onComplete}
+                onClick={() => onComplete()}
                 className="px-12 py-4 bg-white hover:bg-gray-100 text-purple-700 font-bold text-2xl rounded-lg transform hover:scale-105 transition-all shadow-2xl"
               >
                 Continue
