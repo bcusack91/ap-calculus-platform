@@ -187,7 +187,8 @@ interface ExerciseInput {
 
 interface ExerciseDropdown {
   id?: string
-  label: string
+  label?: string
+  text?: string
   options: string[]
   correctIndex: number
   explanation?: string
@@ -4067,9 +4068,10 @@ function DropdownExercise({
           const isCorrect = answers[index] === correctAnswersList[index]
           const showFeedback = validated && answers[index]
           
+          const dropdownLabel = dropdown.label || dropdown.text
           return (
             <div key={index} className="flex items-center gap-4">
-              {dropdown.label && <span className="text-xl font-semibold"><InlineLatex text={dropdown.label + ':'} /></span>}
+              {dropdownLabel && <span className="text-xl font-semibold"><InlineLatex text={dropdownLabel + ':'} /></span>}
               <select
                 value={answers[index]}
                 onChange={(e) => {
