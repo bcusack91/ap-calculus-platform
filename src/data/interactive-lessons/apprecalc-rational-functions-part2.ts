@@ -23,9 +23,9 @@ The graph approaches $\pm\infty$ near a vertical asymptote.
       content: `
 ## Worked Example
 
-**$f(x) = \frac{2}{x-4}$. Vertical asymptote?**
+**$f(x) = \\frac{2}{x-4}$. Vertical asymptote?**
 
-$x - 4 = 0 \Rightarrow x = 4$
+$x - 4 = 0 \\Rightarrow x = 4$
 
 Vertical asymptote at $x = 4$ ✅
     
@@ -59,11 +59,11 @@ Vertical asymptote at $x = 4$ ✅
       content: `
 **Vertical Asymptotes** 🧮
 
-1) $\frac{1}{x-3}$. VA at $x = $ ?
+1) $\\frac{1}{x-3}$. VA at $x = $ ?
 
-2) $\frac{x}{x+1}$. VA at $x = $ ?
+2) $\\frac{x}{x+1}$. VA at $x = $ ?
 
-3) $\frac{1}{(x-2)(x+5)}$. One VA at $x = $ ?
+3) $\\frac{1}{(x-2)(x+5)}$. One VA at $x = $ ?
     
     `,
       exercise: {
@@ -97,9 +97,9 @@ Vertical asymptote at $x = 4$ ✅
 
 | # | Function | VA |
 |---|---------|----|
-| 1 | $\frac{1}{x-3}$ | x = 3 |
-| 2 | $\frac{x}{x+1}$ | x = −1 |
-| 3 | $\frac{1}{(x-2)(x+5)}$ | x = 2, x = −5 |
+| 1 | $\\frac{1}{x-3}$ | x = 3 |
+| 2 | $\\frac{x}{x+1}$ | x = −1 |
+| 3 | $\\frac{1}{(x-2)(x+5)}$ | x = 2, x = −5 |
     
     `
     },

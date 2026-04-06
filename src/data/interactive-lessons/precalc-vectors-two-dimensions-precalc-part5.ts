@@ -67,10 +67,10 @@ export const precalcVectors2DPart5Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Magnitude | $\|\langle a,b\rangle\|=\sqrt{a^2+b^2}$ | length computation |
-      | Dot product | $\langle a,b\rangle\cdot\langle c,d\rangle=ac+bd$ | angle and projection |
-      | Angle relation | $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\theta$ | finding angle between vectors |
-      | Unit vector | $\hat{\mathbf u}=\frac{\mathbf u}{\|\mathbf u\|}$ | direction-only normalization |
+      | Magnitude | $\|\langle a,b\\rangle\|=\sqrt{a^2+b^2}$ | length computation |
+      | Dot product | $\langle a,b\\rangle\cdot\langle c,d\\rangle=ac+bd$ | angle and projection |
+      | Angle relation | $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\\theta$ | finding angle between vectors |
+      | Unit vector | $\hat{\mathbf u}=\\frac{\mathbf u}{\|\mathbf u\|}$ | direction-only normalization |
       
       ### Common pitfalls
       - A zero dot product indicates orthogonality, not parallelism.
@@ -121,11 +121,11 @@ export const precalcVectors2DPart5Data = {
           },
           {
             label: 'unit vector',
-            options: ['vector with magnitude 1', 'single vector equivalent to a combined effect', 'vector written as ordered components like $\langle a,b\rangle$', 'vectors with dot product zero']
+            options: ['vector with magnitude 1', 'single vector equivalent to a combined effect', 'vector written as ordered components like $\langle a,b\\rangle$', 'vectors with dot product zero']
           },
           {
             label: 'resultant',
-            options: ['length of a vector', 'vector written as ordered components like $\langle a,b\rangle$', 'single vector equivalent to a combined effect', 'vectors with dot product zero']
+            options: ['length of a vector', 'vector written as ordered components like $\langle a,b\\rangle$', 'single vector equivalent to a combined effect', 'vectors with dot product zero']
           }
         ],
         correctAnswers: ['component of one vector along another', 'vector with magnitude 1', 'single vector equivalent to a combined effect'],
@@ -178,7 +178,7 @@ export const precalcVectors2DPart5Data = {
             explanation: 'orthogonal matches that description and keeps the model-to-interpretation chain consistent.'
           },
           {
-            question: 'A student is solving a mixed vectors in two dimensions prompt. Which term best anchors the next reasoning step if the key idea is: vector written as ordered components like $\langle a,b\rangle$?',
+            question: 'A student is solving a mixed vectors in two dimensions prompt. Which term best anchors the next reasoning step if the key idea is: vector written as ordered components like $\langle a,b\\rangle$?',
             options: [
               'magnitude',
               'orthogonal',

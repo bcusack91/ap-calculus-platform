@@ -10,17 +10,17 @@ export const calcbcPartialFracPart1Data = {
 
 ### When to Use
 
-For integrals of the form $\int \frac{P(x)}{Q(x)}\,dx$ where $Q$ factors into linear or quadratic terms.
+For integrals of the form $\int \\frac{P(x)}{Q(x)}\,dx$ where $Q$ factors into linear or quadratic terms.
 
 ### Distinct Linear Factors
 
-$$\frac{1}{(x-a)(x-b)} = \frac{A}{x-a} + \frac{B}{x-b}$$
+$$\\frac{1}{(x-a)(x-b)} = \\frac{A}{x-a} + \\frac{B}{x-b}$$
 
 ### Worked Example
 
-$\int \frac{1}{x^2 - 1}\,dx = \int \frac{1}{(x-1)(x+1)}\,dx$
+$\int \\frac{1}{x^2 - 1}\,dx = \int \\frac{1}{(x-1)(x+1)}\,dx$
 
-$\frac{1}{(x-1)(x+1)} = \frac{A}{x-1} + \frac{B}{x+1}$
+$\\frac{1}{(x-1)(x+1)} = \\frac{A}{x-1} + \\frac{B}{x+1}$
 
 $1 = A(x+1) + B(x-1)$
 
@@ -28,7 +28,7 @@ $x = 1$: $1 = 2A$, $A = 1/2$
 
 $x = -1$: $1 = -2B$, $B = -1/2$
 
-$$\int \left(\frac{1/2}{x-1} - \frac{1/2}{x+1}\right)\,dx = \frac{1}{2}\ln|x-1| - \frac{1}{2}\ln|x+1| + C$$`
+$$\int \left(\\frac{1/2}{x-1} - \\frac{1/2}{x+1}\\right)\,dx = \\frac{1}{2}\ln|x-1| - \\frac{1}{2}\ln|x+1| + C$$`
     },
     {
       id: 'pf1-quiz1',

@@ -24,7 +24,7 @@ Apply order of operations to multi-step problems:
 
 **"3 squared plus the product of 2 and 5."**
 
-$3^2 + 2 \times 5 = 9 + 10 = 19$ ✅
+$3^2 + 2 \\times 5 = 9 + 10 = 19$ ✅
     
     `
     },

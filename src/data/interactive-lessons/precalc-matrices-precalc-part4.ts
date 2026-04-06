@@ -69,8 +69,8 @@ export const precalcMatricesPart4Data = {
       | Tool | Formula | Best use |
       |---|---|---|
       | Identity action | $AI=IA=A$ | structure check |
-      | 2x2 determinant | $\det\begin{bmatrix}a&b\\c&d\end{bmatrix}=ad-bc$ | invertibility test |
-      | 2x2 inverse | $A^{-1}=\frac{1}{ad-bc}\begin{bmatrix}d&-b\\-c&a\end{bmatrix}$ | solving small systems |
+      | 2x2 determinant | $\det\\begin{bmatrix}a&b\\c&d\end{bmatrix}=ad-bc$ | invertibility test |
+      | 2x2 inverse | $A^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\-c&a\end{bmatrix}$ | solving small systems |
       | Product entry | $(AB)_{ij}=\sum_k a_{ik}b_{kj}$ | matrix multiplication |
       
       ### Common pitfalls

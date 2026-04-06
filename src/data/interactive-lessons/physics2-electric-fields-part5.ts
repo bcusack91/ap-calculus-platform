@@ -153,7 +153,7 @@ $$v = \\sqrt{\\frac{2(9 \\times 10^9)(5)(1.6 \\times 10^{-19})^2}{(1.67 \\times 
 
 $$v = \\sqrt{\\frac{2(9 \\times 10^9)(5)(2.56 \\times 10^{-38})}{1.67 \\times 10^{-37}}}$$
 
-$$v = \sqrt{\frac{2.304 \times 10^{-27}}{1.67 \times 10^{-37}}} = \sqrt{1.38 \times 10^{10}} \approx 1.2 \times 10^{5}\ \text{m/s}$$
+$$v = \sqrt{\\frac{2.304 \\times 10^{-27}}{1.67 \\times 10^{-37}}} = \sqrt{1.38 \\times 10^{10}} \approx 1.2 \\times 10^{5}\ \\text{m/s}$$
 
 This is about 120 km/s — fast, but well below the speed of light, so classical mechanics works fine here. Note: at even smaller distances ($\sim 10^{-15}$ m), classical calculations can yield speeds exceeding $c$, signaling that relativistic mechanics is needed ($KE = (\gamma - 1)m_p c^2$).
 

@@ -12,13 +12,13 @@ export const calcbcLogisticPart3Data = {
 
 The growth rate changes from increasing to decreasing at $P = L/2$.
 
-To verify: $\frac{d^2P}{dt^2} = 0$ when $P = L/2$.
+To verify: $\\frac{d^2P}{dt^2} = 0$ when $P = L/2$.
 
-$\frac{dP}{dt} = kP - \frac{kP^2}{L}$
+$\\frac{dP}{dt} = kP - \\frac{kP^2}{L}$
 
-$\frac{d^2P}{dt^2} = k\frac{dP}{dt} - \frac{2kP}{L}\frac{dP}{dt} = \frac{dP}{dt}\left(k - \frac{2kP}{L}\right)$
+$\\frac{d^2P}{dt^2} = k\\frac{dP}{dt} - \\frac{2kP}{L}\\frac{dP}{dt} = \\frac{dP}{dt}\left(k - \\frac{2kP}{L}\\right)$
 
-Set to zero (with $dP/dt \neq 0$): $k - 2kP/L = 0 \implies P = L/2$ ✓`
+Set to zero (with $dP/dt \\neq 0$): $k - 2kP/L = 0 \implies P = L/2$ ✓`
     },
     {
       id: 'log3-quiz1',

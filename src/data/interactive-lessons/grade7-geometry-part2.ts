@@ -11,8 +11,8 @@ export const g7GeometryPart2Data = {
 
 Break complex shapes into simple ones:
 - Rectangles: $A = lw$
-- Triangles: $A = \frac{1}{2}bh$
-- Trapezoids: $A = \frac{1}{2}(b_1 + b_2)h$
+- Triangles: $A = \\frac{1}{2}bh$
+- Trapezoids: $A = \\frac{1}{2}(b_1 + b_2)h$
     
     `
     },

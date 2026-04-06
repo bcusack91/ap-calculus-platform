@@ -14,7 +14,7 @@ Conditions:
 2. **Independence** (n < 10% of population)
 3. **Normal/Large sample** (n ≥ 30 or approximately normal)
 
-$t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}}, \quad df = n - 1$
+$t = \\frac{\\bar{x} - \mu_0}{s/\sqrt{n}}, \quad df = n - 1$
     
     `
     },

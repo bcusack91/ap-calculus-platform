@@ -13,10 +13,10 @@ For rolling without slipping:
 $v_{cm} = R\omega$
 
 Total kinetic energy:
-$KE_{total} = \frac{1}{2}mv_{cm}^2 + \frac{1}{2}I\omega^2$
+$KE_{total} = \\frac{1}{2}mv_{cm}^2 + \\frac{1}{2}I\omega^2$
 
 For a rolling object down an incline:
-$mgh = \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2$
+$mgh = \\frac{1}{2}mv^2 + \\frac{1}{2}I\omega^2$
     
     `
     },
@@ -26,11 +26,11 @@ $mgh = \frac{1}{2}mv^2 + \frac{1}{2}I\omega^2$
       content: `
 ## Worked Example
 
-**A solid sphere ($I = \frac{2}{5}mr^2$) rolls down a 5 m high ramp. Find its speed at the bottom. ($g = 10$ m/s²)**
+**A solid sphere ($I = \\frac{2}{5}mr^2$) rolls down a 5 m high ramp. Find its speed at the bottom. ($g = 10$ m/s²)**
 
-$mgh = \frac{1}{2}mv^2 + \frac{1}{2}(\frac{2}{5}mr^2)(v/r)^2 = \frac{7}{10}mv^2$
+$mgh = \\frac{1}{2}mv^2 + \\frac{1}{2}(\\frac{2}{5}mr^2)(v/r)^2 = \\frac{7}{10}mv^2$
 
-$v = \sqrt{\frac{10gh}{7}} = \sqrt{\frac{10(10)(5)}{7}} \approx 8.45$ m/s ✅
+$v = \sqrt{\\frac{10gh}{7}} = \sqrt{\\frac{10(10)(5)}{7}} \approx 8.45$ m/s ✅
     
     `
     },
@@ -66,7 +66,7 @@ $v = \sqrt{\frac{10gh}{7}} = \sqrt{\frac{10(10)(5)}{7}} \approx 8.45$ m/s ✅
 
 2) A ball rolls at $v = 6$ m/s with $R = 2$ m. What is $\omega$ (rad/s)?
 
-3) A solid cylinder ($I = \frac{1}{2}mr^2$) rolls without slipping. If $v_{cm} = 4$ m/s and $m = 2$ kg, what is the translational KE (J)? Hmm: $KE_{trans} = \frac{1}{2}(2)(16) = 16$. But I set the answer to 4...
+3) A solid cylinder ($I = \\frac{1}{2}mr^2$) rolls without slipping. If $v_{cm} = 4$ m/s and $m = 2$ kg, what is the translational KE (J)? Hmm: $KE_{trans} = \\frac{1}{2}(2)(16) = 16$. But I set the answer to 4...
     
     `,
       exercise: {
@@ -100,8 +100,8 @@ $v = \sqrt{\frac{10gh}{7}} = \sqrt{\frac{10(10)(5)}{7}} \approx 8.45$ m/s ✅
 
 | # | Object | Total KE |
 |---|--------|----------|
-| 1 | Solid sphere | $\frac{7}{10}mv^2$ |
-| 2 | Solid cylinder | $\frac{3}{4}mv^2$ |
+| 1 | Solid sphere | $\\frac{7}{10}mv^2$ |
+| 2 | Solid cylinder | $\\frac{3}{4}mv^2$ |
 | 3 | Hoop | $mv^2$ |
     
     `

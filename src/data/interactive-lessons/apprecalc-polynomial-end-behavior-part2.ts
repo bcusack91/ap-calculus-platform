@@ -16,7 +16,7 @@ export const apPrecalcPolyEndPart2Data = {
 | Odd | + | ↓ | ↑ |
 | Odd | − | ↑ | ↓ |
 
-As $x \to \pm\infty$, only the leading term matters.
+As $x \\to \pm\infty$, only the leading term matters.
     
     `
     },

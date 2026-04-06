@@ -10,9 +10,9 @@ export const calcbcPartialFracPart3Data = {
 
 ### The Key Antiderivatives
 
-$$\int \frac{A}{x-a}\,dx = A\ln|x-a| + C$$
+$$\int \\frac{A}{x-a}\,dx = A\ln|x-a| + C$$
 
-$$\int \frac{A}{(x-a)^n}\,dx = \frac{A}{(1-n)(x-a)^{n-1}} + C \quad (n \neq 1)$$`
+$$\int \\frac{A}{(x-a)^n}\,dx = \\frac{A}{(1-n)(x-a)^{n-1}} + C \quad (n \\neq 1)$$`
     },
     {
       id: 'pf3-quiz1',

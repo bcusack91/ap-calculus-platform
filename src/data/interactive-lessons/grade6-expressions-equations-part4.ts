@@ -13,8 +13,8 @@ Use **inverse operations** to isolate the variable:
 - Addition ↔ Subtraction
 - Multiplication ↔ Division
 
-$x + 5 = 12 \Rightarrow x = 12 - 5 = 7$
-$3x = 18 \Rightarrow x = 18 ÷ 3 = 6$
+$x + 5 = 12 \\Rightarrow x = 12 - 5 = 7$
+$3x = 18 \\Rightarrow x = 18 ÷ 3 = 6$
     
     `
     },
@@ -24,7 +24,7 @@ $3x = 18 \Rightarrow x = 18 ÷ 3 = 6$
       content: `
 ## Worked Example
 
-**Solve $\frac{x}{4} = 9$.**
+**Solve $\\frac{x}{4} = 9$.**
 
 Multiply both sides by 4: $x = 36$ ✅ Check: $36/4 = 9$ ✓
     

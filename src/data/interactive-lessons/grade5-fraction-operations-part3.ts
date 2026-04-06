@@ -9,7 +9,7 @@ export const g5FractionOpsPart3Data = {
 
 **Part 3 of 7 — Multiplying Fractions**
 
-$\frac{a}{b} \times \frac{c}{d} = \frac{a \times c}{b \times d}$
+$\\frac{a}{b} \\times \\frac{c}{d} = \\frac{a \\times c}{b \\times d}$
 
 - Multiply numerators
 - Multiply denominators
@@ -23,7 +23,7 @@ $\frac{a}{b} \times \frac{c}{d} = \frac{a \times c}{b \times d}$
       content: `
 ## Worked Example
 
-$\frac{3}{4} \times \frac{2}{5} = \frac{6}{20} = \frac{3}{10}$ ✅
+$\\frac{3}{4} \\times \\frac{2}{5} = \\frac{6}{20} = \\frac{3}{10}$ ✅
     
     `
     },
@@ -55,11 +55,11 @@ $\frac{3}{4} \times \frac{2}{5} = \frac{6}{20} = \frac{3}{10}$ ✅
       content: `
 **Multiply Fractions** 🧮
 
-1) $\frac{1}{2} \times \frac{3}{4} = \frac{?}{8}$ — Numerator?
+1) $\\frac{1}{2} \\times \\frac{3}{4} = \\frac{?}{8}$ — Numerator?
 
-2) $\frac{2}{3} \times \frac{3}{5} = \frac{?}{5}$ — Simplified numerator?
+2) $\\frac{2}{3} \\times \\frac{3}{5} = \\frac{?}{5}$ — Simplified numerator?
 
-3) $\frac{4}{7} \times \frac{1}{2} = \frac{?}{14}$ — Numerator?
+3) $\\frac{4}{7} \\times \\frac{1}{2} = \\frac{?}{14}$ — Numerator?
     
     `,
       exercise: {
@@ -93,9 +93,9 @@ $\frac{3}{4} \times \frac{2}{5} = \frac{6}{20} = \frac{3}{10}$ ✅
 
 | # | Problem | Simplify? |
 |---|---------|-----------|
-| 1 | $\frac{1}{2} \times \frac{3}{4}$ | No |
-| 2 | $\frac{2}{3} \times \frac{3}{5}$ | Yes |
-| 3 | $\frac{4}{7} \times \frac{1}{2}$ | No |
+| 1 | $\\frac{1}{2} \\times \\frac{3}{4}$ | No |
+| 2 | $\\frac{2}{3} \\times \\frac{3}{5}$ | Yes |
+| 3 | $\\frac{4}{7} \\times \\frac{1}{2}$ | No |
     
     `
     },

@@ -11,7 +11,7 @@ export const apStatsDistributionsPart4Data = {
 
 **Standard deviation** ($s$) measures how far values typically are from the mean.
 
-$s = \sqrt{\frac{\sum(x_i - \bar{x})^2}{n-1}}$
+$s = \sqrt{\\frac{\sum(x_i - \\bar{x})^2}{n-1}}$
 
 - Small $s$ → data clustered near mean
 - Large $s$ → data spread out

@@ -10,11 +10,11 @@ export const physCWorkEnergyPart3Data = {
 **Part 3 of 7 — Potential Energy Functions**
 
 Potential energy is related to conservative forces:
-$F(x) = -\frac{dU}{dx}$
+$F(x) = -\\frac{dU}{dx}$
 
 Common potential energies:
 - Gravitational: $U = mgh$
-- Elastic (spring): $U = \frac{1}{2}kx^2$
+- Elastic (spring): $U = \\frac{1}{2}kx^2$
 
 A force is conservative if work depends only on endpoints, not path.
     
@@ -28,7 +28,7 @@ A force is conservative if work depends only on endpoints, not path.
 
 **Given $U(x) = 5x^2$, find $F(x)$.**
 
-$F(x) = -\frac{dU}{dx} = -10x$ ✅
+$F(x) = -\\frac{dU}{dx} = -10x$ ✅
 
 This is a restoring force (like a spring with $k = 10$ N/m).
     
@@ -101,7 +101,7 @@ This is a restoring force (like a spring with $k = 10$ N/m).
 | # | Potential Energy | Force |
 |---|-----------------|-------|
 | 1 | $U = mgh$ | $F = -mg$ |
-| 2 | $U = \frac{1}{2}kx^2$ | $F = -kx$ |
+| 2 | $U = \\frac{1}{2}kx^2$ | $F = -kx$ |
 | 3 | $U = ax^3$ | $F = -3ax^2$ |
     
     `

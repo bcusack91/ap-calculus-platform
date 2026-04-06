@@ -11,7 +11,7 @@ export const physCEMGaussPart5Data = {
 
 For an infinite plane of surface charge density $\sigma$ (C/m²):
 
-$E = \frac{\sigma}{2\epsilon_0}$
+$E = \\frac{\sigma}{2\epsilon_0}$
 
 - The field is **uniform** (independent of distance!)
 - Points away from a positive sheet on both sides
@@ -25,9 +25,9 @@ $E = \frac{\sigma}{2\epsilon_0}$
       content: `
 ## Worked Example
 
-**An infinite sheet has $\sigma = 4 \times 10^{-9}$ C/m². Find $E$.**
+**An infinite sheet has $\sigma = 4 \\times 10^{-9}$ C/m². Find $E$.**
 
-$E = \sigma/(2\epsilon_0) = 4 \times 10^{-9}/(2 \times 8.85 \times 10^{-12}) \approx 226$ N/C ✅
+$E = \sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12}) \approx 226$ N/C ✅
     
     `
     },
@@ -59,7 +59,7 @@ $E = \sigma/(2\epsilon_0) = 4 \times 10^{-9}/(2 \times 8.85 \times 10^{-12}) \ap
       content: `
 **Planar Symmetry** 🧮
 
-1) $\sigma = 4 \times 10^{-9}$ C/m². $E$ (N/C)? (round to nearest integer, $\epsilon_0 \approx 8.85 \times 10^{-12}$)
+1) $\sigma = 4 \\times 10^{-9}$ C/m². $E$ (N/C)? (round to nearest integer, $\epsilon_0 \approx 8.85 \\times 10^{-12}$)
 
 2) A conducting surface has $E = \sigma/\epsilon_0$. This is ___ times the field of a single sheet. (Give as integer.)
 

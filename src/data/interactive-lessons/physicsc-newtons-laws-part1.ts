@@ -14,7 +14,7 @@ An object remains at rest or in uniform motion unless acted upon by a net extern
 ### Key Ideas
 - **Inertia**: the tendency of objects to resist changes in motion
 - Mass is a measure of inertia
-- An object in equilibrium has $\sum \vec{F} = 0$
+- An object in equilibrium has $\sum \\vec{F} = 0$
 - This law defines **inertial reference frames**
     
     `

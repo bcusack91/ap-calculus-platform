@@ -63,7 +63,7 @@ $3.5 - 2.1 = 1.4$. Negative is larger: $-1.4$ ✅
 
 2) $-3.7 + (-1.2) = ?$
 
-3) $\frac{1}{4} + (-\frac{3}{4}) = ?$ (decimal)
+3) $\\frac{1}{4} + (-\\frac{3}{4}) = ?$ (decimal)
     
     `,
       exercise: {
@@ -99,7 +99,7 @@ $3.5 - 2.1 = 1.4$. Negative is larger: $-1.4$ ✅
 |---|---------|------|
 | 1 | $-2.4 + 5.1$ | Different signs |
 | 2 | $-3.7 + (-1.2)$ | Same signs |
-| 3 | $\frac{1}{4} + (-\frac{3}{4})$ | Different signs |
+| 3 | $\\frac{1}{4} + (-\\frac{3}{4})$ | Different signs |
     
     `
     },

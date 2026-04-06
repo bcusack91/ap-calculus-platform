@@ -23,7 +23,7 @@ export async function POST(request: Request) {
         { status: 400 }
       )
     }
-    const { topicSlug, topicId, lessonPart, completedSections, masteryLevel, timeSpent, isPartCompletion } = parsed.data
+    const { topicSlug, topicId, lessonPart, completedSections, masteryLevel, timeSpent, isPartCompletion, variant, failedExitParts } = parsed.data
     
     if (!topicSlug && !topicId) {
       return NextResponse.json(
@@ -61,7 +61,7 @@ export async function POST(request: Request) {
     
     if (masteryLevel >= 0.9) {
       status = 'MASTERED'
-    } else if (masteryLevel >= 0.8 || lessonPart === 4) {
+    } else if (masteryLevel >= 0.8) {
       status = 'COMPLETED'
     } else if ((lessonPart !== undefined && lessonPart > 1) || (completedSections && completedSections.length > 0)) {
       status = 'IN_PROGRESS'
@@ -83,6 +83,8 @@ export async function POST(request: Request) {
         lastAccessed: new Date(),
         timeSpent: timeSpent || 0,
         completedAt: status === 'COMPLETED' || status === 'MASTERED' ? new Date() : null,
+        ...(variant !== undefined && { variant }),
+        ...(failedExitParts !== undefined && { failedExitParts }),
       },
       create: {
         userId: session.user.id,
@@ -91,6 +93,8 @@ export async function POST(request: Request) {
         status,
         timeSpent: timeSpent || 0,
         completedAt: status === 'COMPLETED' || status === 'MASTERED' ? new Date() : null,
+        ...(variant !== undefined && { variant }),
+        ...(failedExitParts !== undefined && { failedExitParts }),
       }
     })
 

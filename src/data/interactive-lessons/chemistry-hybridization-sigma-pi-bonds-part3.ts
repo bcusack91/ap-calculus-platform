@@ -158,7 +158,7 @@ Structure: H–C≡N
       exercise: {
         inputs: [
           {
-            label: 'Total sigma (σ) bonds in ethane (C₂H₆): H₃C–CH₃ (6 C–H bonds + 1 C–C bond)',
+            label: 'Total sigma (σ) bonds in ethane (C₂H₆): H₃C–CH₃',
             correctAnswer: '7',
             explanation: 'Ethane has 6 C–H single bonds (6σ) + 1 C–C single bond (1σ) = 7 sigma bonds total.'
           },
@@ -194,24 +194,28 @@ Structure: H–C≡N
         dropdowns: [
           {
             id: 'hy-3-7-dd1',
+            label: 'A double bond between two atoms consists of:',
             options: ['1σ + 0π', '1σ + 1π', '1σ + 2π', '2σ + 1π'],
             correctIndex: 1,
             explanation: 'A double bond consists of 1 sigma bond (head-on overlap) + 1 pi bond (lateral overlap).'
           },
           {
             id: 'hy-3-7-dd2',
+            label: 'A triple bond between two atoms consists of:',
             options: ['1σ + 0π', '1σ + 1π', '1σ + 2π', '2σ + 2π'],
             correctIndex: 2,
             explanation: 'A triple bond consists of 1 sigma bond + 2 pi bonds.'
           },
           {
             id: 'hy-3-7-dd3',
+            label: 'The effect of a pi bond on rotation around the bond axis:',
             options: ['Allows free rotation', 'Prevents free rotation', 'Has no effect on rotation', 'Increases rotation speed'],
             correctIndex: 1,
             explanation: 'Pi bonds prevent free rotation because rotating would break the side-by-side orbital overlap.'
           },
           {
             id: 'hy-3-7-dd4',
+            label: 'Comparing sigma bonds and pi bonds, which is generally weaker?',
             options: ['Sigma bond is weaker', 'Pi bond is weaker', 'They are equal in strength', 'Depends on the molecule'],
             correctIndex: 1,
             explanation: 'Pi bonds have less efficient lateral overlap compared to the head-on overlap of sigma bonds, making pi bonds weaker.'

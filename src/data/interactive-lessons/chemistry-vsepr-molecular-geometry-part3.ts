@@ -194,24 +194,28 @@ $$180° \\to 120° \\to 109.5° \\to 90°$$
         dropdowns: [
           {
             id: 'vg-3-7-dd1',
+            label: 'The _______ geometry has two distinct types of positions: axial and equatorial',
             options: ['Tetrahedral', 'Trigonal bipyramidal', 'Octahedral'],
             correctIndex: 1,
             explanation: 'The trigonal bipyramidal geometry has two distinct types of positions: axial and equatorial.'
           },
           {
             id: 'vg-3-7-dd2',
+            label: 'In an _______ geometry, all 6 positions are equivalent',
             options: ['Tetrahedral', 'Trigonal bipyramidal', 'Octahedral'],
             correctIndex: 2,
             explanation: 'In an octahedral geometry, all 6 positions are equivalent — each has the same environment.'
           },
           {
             id: 'vg-3-7-dd3',
+            label: 'Trigonal bipyramidal geometry (steric number 5) corresponds to _______',
             options: ['sp²', 'sp³', 'sp³d', 'sp³d²'],
             correctIndex: 2,
             explanation: 'Trigonal bipyramidal geometry (steric number 5) corresponds to sp³d hybridization.'
           },
           {
             id: 'vg-3-7-dd4',
+            label: 'Octahedral geometry (steric number 6) corresponds to _______ hybridization',
             options: ['sp²', 'sp³', 'sp³d', 'sp³d²'],
             correctIndex: 3,
             explanation: 'Octahedral geometry (steric number 6) corresponds to sp³d² hybridization.'
@@ -241,7 +245,7 @@ $$180° \\to 120° \\to 109.5° \\to 90°$$
             question: 'How many total bond angles of 90° exist between adjacent atoms in an octahedral molecule like SF₆?',
             options: ['4', '6', '8', '12'],
             correctAnswer: 3,
-            explanation: 'Each of the 6 positions has 4 neighbors at 90°, giving 6 \\times 4 = 24, but each angle is shared between 2 atoms, so 24/2 = 12 unique 90° angles.'
+            explanation: 'Each of the 6 positions has 4 neighbors at 90°, giving 6 × 4 = 24, but each angle is shared between 2 atoms, so 24/2 = 12 unique 90° angles.'
           }
         ]
       }

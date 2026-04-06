@@ -12,11 +12,11 @@ export const calcbcImproperPart3Data = {
 
 If $f$ has a vertical asymptote at $x = c$ inside $[a, b]$:
 
-$$\int_a^b f(x)\,dx = \lim_{t \to c^-}\int_a^t f(x)\,dx + \lim_{t \to c^+}\int_t^b f(x)\,dx$$
+$$\int_a^b f(x)\,dx = \lim_{t \\to c^-}\int_a^t f(x)\,dx + \lim_{t \\to c^+}\int_t^b f(x)\,dx$$
 
 ### Example
 
-$\int_0^1 \frac{1}{\sqrt{x}}\,dx = \lim_{t \to 0^+}\int_t^1 x^{-1/2}\,dx = \lim_{t \to 0^+}[2\sqrt{x}]_t^1 = 2 - 0 = 2$`
+$\int_0^1 \\frac{1}{\sqrt{x}}\,dx = \lim_{t \\to 0^+}\int_t^1 x^{-1/2}\,dx = \lim_{t \\to 0^+}[2\sqrt{x}]_t^1 = 2 - 0 = 2$`
     },
     {
       id: 'imp3-quiz1',

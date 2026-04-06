@@ -5,7 +5,7 @@ export const chemTypesIntermolecularForcesPart2Data = {
       id: 'if-dd-intro',
       type: 'text',
       title: 'Dipole-Dipole Forces',
-      content: `Dipole-dipole forces occur between **polar molecules** — molecules that have a **permanent dipole moment**.\n\nA molecule is polar when:\n- It contains polar bonds (bonds between atoms with different electronegativities)\n- The molecular geometry does NOT cancel out the bond dipoles\n\nIn a dipole-dipole interaction, the **partially positive** end (\\(\\delta^+\\)) of one molecule attracts the **partially negative** end (\\(\\delta^-\\)) of another molecule.\n\nKey points:\n- Dipole-dipole forces are **stronger** than LDF for molecules of similar size\n- They only occur between **polar** molecules\n- Polar molecules ALSO experience LDF in addition to dipole-dipole forces`
+      content: `Dipole-dipole forces occur between **polar molecules** — molecules that have a **permanent dipole moment**.\n\nA molecule is polar when:\n- It contains polar bonds (bonds between atoms with different electronegativities)\n- The molecular geometry does NOT cancel out the bond dipoles\n\nIn a dipole-dipole interaction, the **partially positive** end ($\\delta^+$) of one molecule attracts the **partially negative** end ($\\delta^-$) of another molecule.\n\nKey points:\n- Dipole-dipole forces are **stronger** than LDF for molecules of similar size\n- They only occur between **polar** molecules\n- Polar molecules ALSO experience LDF in addition to dipole-dipole forces`
     },
     {
       id: 'if-dd-polar-review',
@@ -43,7 +43,7 @@ export const chemTypesIntermolecularForcesPart2Data = {
       id: 'if-dd-mechanism',
       type: 'text',
       title: 'How Dipole-Dipole Forces Work',
-      content: `Unlike LDF (which involve temporary dipoles), dipole-dipole forces involve **permanent** charge separations.\n\n**Alignment:** Polar molecules tend to orient themselves so that the \\(\\delta^+\\) end of one molecule is near the \\(\\delta^-\\) end of a neighbor. This alignment maximizes attraction.\n\nExample with HCl:\n$$\\underset{\\delta^+}{\\text{H}}\\text{—}\\underset{\\delta^-}{\\text{Cl}} \\cdots \\underset{\\delta^+}{\\text{H}}\\text{—}\\underset{\\delta^-}{\\text{Cl}}$$\n\nThe positive H end of one HCl molecule is attracted to the negative Cl end of the next.\n\n**Important:** Polar molecules experience BOTH dipole-dipole forces AND London Dispersion Forces. The total intermolecular attraction is the sum of all IMF types present.`
+      content: `Unlike LDF (which involve temporary dipoles), dipole-dipole forces involve **permanent** charge separations.\n\n**Alignment:** Polar molecules tend to orient themselves so that the $\\delta^+$ end of one molecule is near the $\\delta^-$ end of a neighbor. This alignment maximizes attraction.\n\nExample with HCl:\n$$\\underset{\\delta^+}{\\text{H}}\\text{—}\\underset{\\delta^-}{\\text{Cl}} \\cdots \\underset{\\delta^+}{\\text{H}}\\text{—}\\underset{\\delta^-}{\\text{Cl}}$$\n\nThe positive H end of one HCl molecule is attracted to the negative Cl end of the next.\n\n**Important:** Polar molecules experience BOTH dipole-dipole forces AND London Dispersion Forces. The total intermolecular attraction is the sum of all IMF types present.`
     },
     {
       id: 'if-dd-vs-ldf',
@@ -54,18 +54,21 @@ export const chemTypesIntermolecularForcesPart2Data = {
         dropdowns: [
           {
             id: 'dd-type',
+            label: 'Dipole-dipole forces arise from',
             options: ['temporary dipoles', 'permanent dipoles', 'ionic bonds'],
             correctIndex: 1,
             explanation: 'Dipole-dipole forces arise from permanent dipoles in polar molecules, unlike LDF which arise from temporary dipoles.'
           },
           {
             id: 'dd-which-molecules',
+            label: 'Dipole-dipole forces occur between',
             options: ['all molecules', 'only polar molecules', 'only nonpolar molecules'],
             correctIndex: 1,
             explanation: 'Dipole-dipole forces only occur between polar molecules. LDF occur in all molecules.'
           },
           {
             id: 'dd-strength',
+            label: 'For similar-sized molecules, dipole-dipole forces are _____ LDF',
             options: ['weaker than', 'stronger than', 'equal to'],
             correctIndex: 1,
             explanation: 'For molecules of similar size, dipole-dipole forces are generally stronger than LDF because permanent dipoles provide a more consistent attractive interaction.'
@@ -77,7 +80,7 @@ export const chemTypesIntermolecularForcesPart2Data = {
       id: 'if-dd-examples',
       type: 'text',
       title: 'Examples of Dipole-Dipole Molecules',
-      content: `Common molecules that experience dipole-dipole forces:\n\n| Molecule | Why It\'s Polar | Geometry |\n|----------|---------------|----------|\n| HCl | H–Cl bond has large \\(\\Delta\\)EN | Linear |\n| HF | H–F bond is highly polar | Linear |\n| CH₃Cl | C–Cl bond is polar; asymmetric shape | Tetrahedral (but not symmetric) |\n| SO₂ | Two S=O bonds in bent geometry | Bent |\n| CHCl₃ | Three C–Cl bonds + one C–H; asymmetric | Tetrahedral (not symmetric) |\n\nMolecules that are NOT polar (only LDF):\n\n| Molecule | Why Nonpolar |\n|----------|--------------|\n| CO₂ | Linear — bond dipoles cancel |\n| CH₄ | Symmetric tetrahedral — bond dipoles cancel |\n| BF₃ | Symmetric trigonal planar — bond dipoles cancel |\n| N₂, O₂ | Identical atoms — no polar bonds at all |`
+      content: `Common molecules that experience dipole-dipole forces:\n\n| Molecule | Why It\'s Polar | Geometry |\n|----------|---------------|----------|\n| HCl | H–Cl bond has large $\\Delta$EN | Linear |\n| HF | H–F bond is highly polar | Linear |\n| CH₃Cl | C–Cl bond is polar; asymmetric shape | Tetrahedral (but not symmetric) |\n| SO₂ | Two S=O bonds in bent geometry | Bent |\n| CHCl₃ | Three C–Cl bonds + one C–H; asymmetric | Tetrahedral (not symmetric) |\n\nMolecules that are NOT polar (only LDF):\n\n| Molecule | Why Nonpolar |\n|----------|--------------|\n| CO₂ | Linear — bond dipoles cancel |\n| CH₄ | Symmetric tetrahedral — bond dipoles cancel |\n| BF₃ | Symmetric trigonal planar — bond dipoles cancel |\n| N₂, O₂ | Identical atoms — no polar bonds at all |`
     },
     {
       id: 'if-dd-identify',
@@ -145,8 +148,8 @@ export const chemTypesIntermolecularForcesPart2Data = {
             explanation: 'Dipole-dipole forces require permanent dipoles, which only exist in polar molecules.'
           },
           {
-            label: 'The δ+ end of one polar molecule is attracted to the _____ end of another (δ+/δ-)',
-            correctAnswer: 'δ-',
+            label: 'The δ+ end of one polar molecule is attracted to the δ_____ end of another (+/-)',
+            correctAnswer: '-',
             explanation: 'Opposite partial charges attract. The δ+ end of one molecule is attracted to the δ- end of a neighboring polar molecule.'
           }
         ]

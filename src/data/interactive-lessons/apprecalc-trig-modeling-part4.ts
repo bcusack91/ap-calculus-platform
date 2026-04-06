@@ -26,10 +26,10 @@ To model: find **amplitude** (half of max−min), **midline** (average of max an
 
 **Temperature: max 90°F, min 30°F, period 12 months.**
 
-$A = \frac{90-30}{2} = 30$, $D = \frac{90+30}{2} = 60$
-$B = \frac{2\pi}{12} = \frac{\pi}{6}$
+$A = \\frac{90-30}{2} = 30$, $D = \\frac{90+30}{2} = 60$
+$B = \\frac{2\pi}{12} = \\frac{\pi}{6}$
 
-$T(t) = 30\sin\left(\frac{\pi}{6}t\right) + 60$ ✅
+$T(t) = 30\sin\left(\\frac{\pi}{6}t\\right) + 60$ ✅
     
     `
     },

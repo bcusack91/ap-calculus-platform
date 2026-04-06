@@ -14,9 +14,9 @@ export const physCNewtonPart4Data = {
 
 Where $N$ is the normal force and $\mu$ is the coefficient of friction.
 
-For an object on an incline at angle $\theta$:
-- $N = mg\cos\theta$
-- Friction along the incline: $f = \mu mg\cos\theta$
+For an object on an incline at angle $\\theta$:
+- $N = mg\cos\\theta$
+- Friction along the incline: $f = \mu mg\cos\\theta$
     
     `
     },
@@ -28,9 +28,9 @@ For an object on an incline at angle $\theta$:
 
 **A 10 kg block on a horizontal surface has $\mu_k = 0.3$. Find the kinetic friction force.**
 
-$N = mg = 10 \times 10 = 100$ N
+$N = mg = 10 \\times 10 = 100$ N
 
-$f_k = \mu_k N = 0.3 \times 100 = 30$ N ✅
+$f_k = \mu_k N = 0.3 \\times 100 = 30$ N ✅
     
     `
     },
@@ -101,7 +101,7 @@ $f_k = \mu_k N = 0.3 \times 100 = 30$ N ✅
 | # | Scenario | Key Formula |
 |---|----------|-------------|
 | 1 | Flat surface | $f = \mu mg$ |
-| 2 | Inclined plane | $f = \mu mg\cos\theta$ |
+| 2 | Inclined plane | $f = \mu mg\cos\\theta$ |
 | 3 | Threshold of sliding | $f_s = \mu_s N$ |
     
     `

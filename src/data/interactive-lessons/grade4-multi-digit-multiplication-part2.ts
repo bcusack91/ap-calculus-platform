@@ -11,7 +11,7 @@ export const g4MultiDigitMultPart2Data = {
 
 Break numbers into expanded form, multiply each part, and add:
 
-$23 \times 17 = (20+3)(10+7)$
+$23 \\times 17 = (20+3)(10+7)$
 $= 20(10) + 20(7) + 3(10) + 3(7)$
 $= 200 + 140 + 30 + 21 = 391$
     
@@ -23,7 +23,7 @@ $= 200 + 140 + 30 + 21 = 391$
       content: `
 ## Worked Example
 
-**$34 \times 12$** using the area model:
+**$34 \\times 12$** using the area model:
 
 | × | 10 | 2 |
 |---|-----|-----|
@@ -62,11 +62,11 @@ $300 + 60 + 40 + 8 = 408$ ✅
       content: `
 **Area Model Practice** 🧮
 
-1) $23 \times 17 = ?$
+1) $23 \\times 17 = ?$
 
-2) $34 \times 12 = ?$
+2) $34 \\times 12 = ?$
 
-3) $25 \times 31 = ?$
+3) $25 \\times 31 = ?$
     
     `,
       exercise: {
@@ -100,9 +100,9 @@ $300 + 60 + 40 + 8 = 408$ ✅
 
 | # | Problem | Break Down |
 |---|---------|------------|
-| 1 | $15 \times 13$ | $(10+5)(10+3)$ |
-| 2 | $22 \times 14$ | $(20+2)(10+4)$ |
-| 3 | $31 \times 25$ | $(30+1)(20+5)$ |
+| 1 | $15 \\times 13$ | $(10+5)(10+3)$ |
+| 2 | $22 \\times 14$ | $(20+2)(10+4)$ |
+| 3 | $31 \\times 25$ | $(30+1)(20+5)$ |
     
     `
     },

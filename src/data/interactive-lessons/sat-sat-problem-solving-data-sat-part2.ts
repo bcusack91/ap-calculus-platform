@@ -9,10 +9,10 @@ export const satProbSolvDataPart2Data = {
 **Part 2 of 7 — Mastering Percent Problems**
 
 ### Percent Formula
-$$\text{Percent} = \frac{\text{Part}}{\text{Whole}} \times 100$$
+$$\\text{Percent} = \\frac{\\text{Part}}{\\text{Whole}} \\times 100$$
 
 ### Percent Increase/Decrease
-$$\text{% Change} = \frac{\text{New} - \text{Original}}{\text{Original}} \times 100$$
+$$\\text{% Change} = \\frac{\\text{New} - \\text{Original}}{\\text{Original}} \\times 100$$
 
 **Shortcut multipliers:**
 - 20% increase → multiply by **1.20**
@@ -25,7 +25,7 @@ $$100 \\xrightarrow{+10\\%} 110 \\xrightarrow{-10\\%} 99$$
 
 ### SAT Classic: "What percent of X is Y?"
 Translate directly: "What percent of 80 is 24?"
-$$\frac{24}{80} \times 100 = 30\%$$
+$$\\frac{24}{80} \\times 100 = 30\%$$
 
 ### Percent vs. Percentage Points
 "Increased from 40% to 52%" = increase of **12 percentage points** but a **30% increase** (12/40 × 100).`

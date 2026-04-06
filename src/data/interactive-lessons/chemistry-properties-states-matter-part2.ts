@@ -220,24 +220,28 @@ Both are pure carbon, but:
         dropdowns: [
           {
             id: 'sm2-dd1',
+            label: 'Ice (H₂O) is composed of discrete water molecules held together by hydrogen',
             options: ['Ionic', 'Molecular', 'Metallic', 'Network covalent'],
             correctIndex: 1,
             explanation: 'Ice (H₂O) is composed of discrete water molecules held together by hydrogen bonds — a molecular solid with a low melting point of 0°C.'
           },
           {
             id: 'sm2-dd2',
+            label: 'NaCl is composed of Na⁺ and Cl⁻ ions in a crystal lattice — an _______ solid',
             options: ['Ionic', 'Molecular', 'Metallic', 'Network covalent'],
             correctIndex: 0,
             explanation: 'NaCl is composed of Na⁺ and Cl⁻ ions in a crystal lattice — an ionic solid with a high melting point of 801°C.'
           },
           {
             id: 'sm2-dd3',
+            label: 'Diamond is pure carbon with each atom covalently bonded to four others in a',
             options: ['Ionic', 'Molecular', 'Metallic', 'Network covalent'],
             correctIndex: 3,
             explanation: 'Diamond is pure carbon with each atom covalently bonded to four others in a continuous 3D network — a network covalent solid.'
           },
           {
             id: 'sm2-dd4',
+            label: 'Copper (Cu) consists of metal cations in a sea of delocalized electrons — a',
             options: ['Ionic', 'Molecular', 'Metallic', 'Network covalent'],
             correctIndex: 2,
             explanation: 'Copper (Cu) consists of metal cations in a sea of delocalized electrons — a metallic solid that conducts electricity and is malleable.'

@@ -21,9 +21,9 @@ M/D and A/S are done **left to right** (equal priority within each pair).
       content: `
 ## Worked Example
 
-$3 + 4 \times 2 = ?$
+$3 + 4 \\times 2 = ?$
 
-Multiplication first: $4 \times 2 = 8$. Then $3 + 8 = 11$ ✅
+Multiplication first: $4 \\times 2 = 8$. Then $3 + 8 = 11$ ✅
     
     `
     },
@@ -55,11 +55,11 @@ Multiplication first: $4 \times 2 = 8$. Then $3 + 8 = 11$ ✅
       content: `
 **PEMDAS Basics** 🧮
 
-1) $5 + 2 \times 3 = ?$
+1) $5 + 2 \\times 3 = ?$
 
 2) $8 - 4 \div 2 = ?$
 
-3) $6 \times 3 + 1 = ?$
+3) $6 \\times 3 + 1 = ?$
     
     `,
       exercise: {

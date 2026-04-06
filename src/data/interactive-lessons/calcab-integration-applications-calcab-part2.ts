@@ -21,9 +21,9 @@ If the base is between $y = f(x)$ and $y = g(x)$, the side length is $s = f(x) -
 | Shape | Area Formula |
 |-------|-------------|
 | Square | $s^2$ |
-| Semicircle | $\frac{\pi}{8}s^2$ |
-| Equilateral triangle | $\frac{\sqrt{3}}{4}s^2$ |
-| Isosceles right triangle | $\frac{1}{2}s^2$ |`
+| Semicircle | $\\frac{\pi}{8}s^2$ |
+| Equilateral triangle | $\\frac{\sqrt{3}}{4}s^2$ |
+| Isosceles right triangle | $\\frac{1}{2}s^2$ |`
     },
     {
       id: 'ia2-quiz1',

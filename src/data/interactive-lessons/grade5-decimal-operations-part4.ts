@@ -14,7 +14,7 @@ export const g5DecimalsPart4Data = {
 2. Count total decimal places in both factors
 3. Place the decimal point in the product (same total)
 
-$0.3 \times 0.4 = 0.12$ → 1+1 = 2 decimal places
+$0.3 \\times 0.4 = 0.12$ → 1+1 = 2 decimal places
     
     `
     },
@@ -24,9 +24,9 @@ $0.3 \times 0.4 = 0.12$ → 1+1 = 2 decimal places
       content: `
 ## Worked Example
 
-$2.5 \times 0.3 = ?$
+$2.5 \\times 0.3 = ?$
 
-Multiply: $25 \times 3 = 75$
+Multiply: $25 \\times 3 = 75$
 
 Decimal places: 1 + 1 = 2 → $0.75$ ✅
     
@@ -60,11 +60,11 @@ Decimal places: 1 + 1 = 2 → $0.75$ ✅
       content: `
 **Multiply Decimals** 🧮
 
-1) $1.2 \times 4 = ?$
+1) $1.2 \\times 4 = ?$
 
-2) $0.6 \times 0.7 = ?$
+2) $0.6 \\times 0.7 = ?$
 
-3) $3.14 \times 2 = ?$
+3) $3.14 \\times 2 = ?$
     
     `,
       exercise: {
@@ -98,9 +98,9 @@ Decimal places: 1 + 1 = 2 → $0.75$ ✅
 
 | # | Problem | Decimal Places |
 |---|---------|----------------|
-| 1 | $1.2 \times 4$ | 1 |
-| 2 | $0.6 \times 0.7$ | 2 |
-| 3 | $3.14 \times 2$ | 2 |
+| 1 | $1.2 \\times 4$ | 1 |
+| 2 | $0.6 \\times 0.7$ | 2 |
+| 3 | $3.14 \\times 2$ | 2 |
     
     `
     },

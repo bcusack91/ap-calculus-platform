@@ -68,8 +68,8 @@ export const precalcPolynomialPart1Data = {
       | Tool | Formula | Best use |
       |---|---|---|
       | Factored form | $p(x)=a\prod (x-r_i)^{m_i}$ | zero/multiplicity encoding |
-      | Remainder theorem | $\text{rem}(p\div (x-c))=p(c)$ | fast root testing |
-      | Quadratic roots | $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ | embedded factor analysis |
+      | Remainder theorem | $\\text{rem}(p\div (x-c))=p(c)$ | fast root testing |
+      | Quadratic roots | $x=\\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ | embedded factor analysis |
       | Degree sum | $\deg(pq)=\deg p+\deg q$ | model-building checks |
       
       ### Common pitfalls

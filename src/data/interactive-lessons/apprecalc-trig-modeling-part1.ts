@@ -12,7 +12,7 @@ export const apPrecalcTrigModelPart1Data = {
 $y = A\sin(Bx + C) + D$
 
 - **A**: amplitude (vertical stretch)
-- **B**: affects period ($T = \frac{2\pi}{|B|}$)
+- **B**: affects period ($T = \\frac{2\pi}{|B|}$)
 - **C**: phase shift
 - **D**: vertical shift (midline)
 

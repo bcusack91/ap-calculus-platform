@@ -14,7 +14,7 @@ Compare degrees of numerator ($n$) and denominator ($d$):
 | Condition | HA |
 |-----------|----|
 | $n < d$ | $y = 0$ |
-| $n = d$ | $y = \frac{\text{leading coefficients}}{\text{ratio}}$ |
+| $n = d$ | $y = \\frac{\\text{leading coefficients}}{\\text{ratio}}$ |
 | $n > d$ | No HA (oblique asymptote) |
     
     `
@@ -25,9 +25,9 @@ Compare degrees of numerator ($n$) and denominator ($d$):
       content: `
 ## Worked Example
 
-**$f(x) = \frac{3x^2}{x^2 + 1}$. HA?**
+**$f(x) = \\frac{3x^2}{x^2 + 1}$. HA?**
 
-Degrees equal (both 2). HA: $y = \frac{3}{1} = 3$ ✅
+Degrees equal (both 2). HA: $y = \\frac{3}{1} = 3$ ✅
     
     `
     },
@@ -59,11 +59,11 @@ Degrees equal (both 2). HA: $y = \frac{3}{1} = 3$ ✅
       content: `
 **Horizontal Asymptotes** 🧮
 
-1) $\frac{1}{x+1}$. HA: $y = $ ?
+1) $\\frac{1}{x+1}$. HA: $y = $ ?
 
-2) $\frac{2x}{x-3}$. HA: $y = $ ?
+2) $\\frac{2x}{x-3}$. HA: $y = $ ?
 
-3) $\frac{4x^2}{2x^2+1}$. HA: $y = $ ?
+3) $\\frac{4x^2}{2x^2+1}$. HA: $y = $ ?
     
     `,
       exercise: {
@@ -97,9 +97,9 @@ Degrees equal (both 2). HA: $y = \frac{3}{1} = 3$ ✅
 
 | # | Function | HA |
 |---|---------|----|
-| 1 | $\frac{1}{x+1}$ | y = 0 |
-| 2 | $\frac{2x}{x-3}$ | y = 2 |
-| 3 | $\frac{4x^2}{2x^2+1}$ | y = 2 |
+| 1 | $\\frac{1}{x+1}$ | y = 0 |
+| 2 | $\\frac{2x}{x-3}$ | y = 2 |
+| 3 | $\\frac{4x^2}{2x^2+1}$ | y = 2 |
     
     `
     },

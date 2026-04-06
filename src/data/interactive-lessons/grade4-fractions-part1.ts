@@ -14,9 +14,9 @@ Two fractions are **equivalent** if they represent the same value.
 Create equivalent fractions by **multiplying or dividing** both the numerator and denominator by the same non-zero number.
 
 ### Examples
-- $\frac{1}{2} = \frac{2}{4} = \frac{3}{6} = \frac{4}{8}$
-- $\frac{2}{3} = \frac{4}{6} = \frac{6}{9}$
-- $\frac{6}{8} = \frac{3}{4}$ (divided both by 2)
+- $\\frac{1}{2} = \\frac{2}{4} = \\frac{3}{6} = \\frac{4}{8}$
+- $\\frac{2}{3} = \\frac{4}{6} = \\frac{6}{9}$
+- $\\frac{6}{8} = \\frac{3}{4}$ (divided both by 2)
     
     `
     },
@@ -26,13 +26,13 @@ Create equivalent fractions by **multiplying or dividing** both the numerator an
       content: `
 ## Worked Example
 
-**Find the missing numerator:** $\frac{3}{5} = \frac{?}{15}$
+**Find the missing numerator:** $\\frac{3}{5} = \\frac{?}{15}$
 
-**Step 1:** Denominators: $5 \to 15$, multiplied by $3$.
+**Step 1:** Denominators: $5 \\to 15$, multiplied by $3$.
 
-**Step 2:** Multiply numerator by same: $3 \times 3 = 9$.
+**Step 2:** Multiply numerator by same: $3 \\times 3 = 9$.
 
-**Answer:** $\frac{3}{5} = \frac{9}{15}$ ✅
+**Answer:** $\\frac{3}{5} = \\frac{9}{15}$ ✅
     
     `
     },
@@ -64,11 +64,11 @@ Create equivalent fractions by **multiplying or dividing** both the numerator an
       content: `
 **Equivalent Fractions Practice** 🧮
 
-1) $\frac{1}{2} = \frac{?}{8}$ — What goes in the numerator?
+1) $\\frac{1}{2} = \\frac{?}{8}$ — What goes in the numerator?
 
-2) $\frac{2}{3} = \frac{?}{9}$ — What goes in the numerator?
+2) $\\frac{2}{3} = \\frac{?}{9}$ — What goes in the numerator?
 
-3) Simplify $\frac{9}{12}$. What is the numerator of the simplified fraction?
+3) Simplify $\\frac{9}{12}$. What is the numerator of the simplified fraction?
     
     `,
       exercise: {
@@ -102,9 +102,9 @@ Create equivalent fractions by **multiplying or dividing** both the numerator an
 
 | # | Problem | Strategy |
 |---|---------|----------|
-| 1 | Find equivalent fractions for $\frac{2}{5}$ | Multiply top and bottom by 2, 3, or 4 |
-| 2 | Simplify $\frac{12}{16}$ | Divide by GCF |
-| 3 | Is $\frac{3}{4} = \frac{9}{12}$? | Cross-multiply to check |
+| 1 | Find equivalent fractions for $\\frac{2}{5}$ | Multiply top and bottom by 2, 3, or 4 |
+| 2 | Simplify $\\frac{12}{16}$ | Divide by GCF |
+| 3 | Is $\\frac{3}{4} = \\frac{9}{12}$? | Cross-multiply to check |
     
     `
     },

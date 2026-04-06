@@ -69,9 +69,9 @@ export const precalcLawSinesCosinesPart6Data = {
       | Tool | Formula | Best use |
       |---|---|---|
       | Law of Cosines | $c^2=a^2+b^2-2ab\cos C$ | SAS/SSS contexts |
-      | Area formula | $K=\frac12 ab\sin C$ | two sides + included angle |
+      | Area formula | $K=\\frac12 ab\sin C$ | two sides + included angle |
       | Angle sum | $A+B+C=180^\circ$ | triangle closure check |
-      | Law of Sines | $\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}$ | AAS/ASA/SSA contexts |
+      | Law of Sines | $\\frac{a}{\sin A}=\\frac{b}{\sin B}=\\frac{c}{\sin C}$ | AAS/ASA/SSA contexts |
       
       ### Common pitfalls
       - Carry angle mode consistency (degrees vs radians) on calculators.

@@ -11,7 +11,7 @@ export const apPrecalcTrigModelPart3Data = {
 
 $y = A\sin(B(x - h)) + D$
 
-**Phase shift** = $h = -\frac{C}{B}$ (horizontal shift)
+**Phase shift** = $h = -\\frac{C}{B}$ (horizontal shift)
 
 - Shift **right** when $h > 0$
 - Shift **left** when $h < 0$
@@ -26,9 +26,9 @@ $y = A\sin(B(x - h)) + D$
       content: `
 ## Worked Example
 
-**$y = \sin(x - \frac{\pi}{4})$. Phase shift?**
+**$y = \sin(x - \\frac{\pi}{4})$. Phase shift?**
 
-Shift right by $\frac{\pi}{4}$ ✅
+Shift right by $\\frac{\pi}{4}$ ✅
     
     `
     },
@@ -99,7 +99,7 @@ Shift right by $\frac{\pi}{4}$ ✅
 | # | Function | Phase Shift |
 |---|---------|----------|
 | 1 | $\sin(x - \pi)$ | Right π |
-| 2 | $\cos(x + \frac{\pi}{2})$ | Left π/2 |
+| 2 | $\cos(x + \\frac{\pi}{2})$ | Left π/2 |
 | 3 | $\sin(x) + 3$ | No phase shift, up 3 |
     
     `

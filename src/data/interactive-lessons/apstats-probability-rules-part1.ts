@@ -9,10 +9,10 @@ export const apStatsProbabilityPart1Data = {
 
 **Part 1 of 7 — Basic Probability**
 
-$P(A) = \frac{\text{favorable outcomes}}{\text{total outcomes}}$
+$P(A) = \\frac{\\text{favorable outcomes}}{\\text{total outcomes}}$
 
 - $0 \leq P(A) \leq 1$
-- $P(\text{certain}) = 1$, $P(\text{impossible}) = 0$
+- $P(\\text{certain}) = 1$, $P(\\text{impossible}) = 0$
 - $P(A') = 1 - P(A)$ (complement)
     
     `

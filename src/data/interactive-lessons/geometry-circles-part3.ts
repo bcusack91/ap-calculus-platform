@@ -9,11 +9,11 @@ export const geoCirclesPart3Data = {
 
 **Part 3 of 7 — Arc Length & Sector Area**
 
-$\text{Arc length} = \frac{\theta}{360} \times 2\pi r$
+$\\text{Arc length} = \\frac{\\theta}{360} \\times 2\pi r$
 
-$\text{Sector area} = \frac{\theta}{360} \times \pi r^2$
+$\\text{Sector area} = \\frac{\\theta}{360} \\times \pi r^2$
 
-where $\theta$ is the central angle in degrees.
+where $\\theta$ is the central angle in degrees.
     
     `
     },
@@ -25,7 +25,7 @@ where $\theta$ is the central angle in degrees.
 
 **r = 10, θ = 90°. Arc length?**
 
-$\frac{90}{360} \times 2\pi(10) = \frac{1}{4}(20\pi) = 5\pi \approx 15.7$ ✅
+$\\frac{90}{360} \\times 2\pi(10) = \\frac{1}{4}(20\pi) = 5\pi \approx 15.7$ ✅
     
     `
     },

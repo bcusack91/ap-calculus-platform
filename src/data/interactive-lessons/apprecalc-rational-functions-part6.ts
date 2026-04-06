@@ -22,7 +22,7 @@ Combine all concepts for rational functions:
       content: `
 ## Worked Example
 
-**$f(x) = \frac{2x}{x^2-1} = \frac{2x}{(x-1)(x+1)}$**
+**$f(x) = \\frac{2x}{x^2-1} = \\frac{2x}{(x-1)(x+1)}$**
 
 - VAs: $x = 1, x = -1$
 - HA: $y = 0$ (degree 1 < degree 2)
@@ -56,7 +56,7 @@ Combine all concepts for rational functions:
       id: 'apprecalc-rational-functions-p6-input',
       type: 'input-boxes' as const,
       content: `
-**Analyze $\frac{x-3}{x+2}$** 🧮
+**Analyze $\\frac{x-3}{x+2}$** 🧮
 
 1) VA at $x = $ ?
 
@@ -96,8 +96,8 @@ Combine all concepts for rational functions:
 
 | # | Function | Analysis |
 |---|---------|----------|
-| 1 | $\frac{x-3}{x+2}$ | VA: −2, HA: 1 |
-| 2 | $\frac{4}{x^2}$ | VA: 0, HA: 0 |
+| 1 | $\\frac{x-3}{x+2}$ | VA: −2, HA: 1 |
+| 2 | $\\frac{4}{x^2}$ | VA: 0, HA: 0 |
     
     `
     },

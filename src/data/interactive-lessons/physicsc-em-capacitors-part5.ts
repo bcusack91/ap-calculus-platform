@@ -11,7 +11,7 @@ export const physCEMCapacitorsPart5Data = {
 
 Inserting a dielectric (insulating material) between plates:
 
-$C = \kappa C_0 = \frac{\kappa \epsilon_0 A}{d}$
+$C = \kappa C_0 = \\frac{\kappa \epsilon_0 A}{d}$
 
 where $\kappa$ (kappa) is the **dielectric constant** ($\kappa > 1$).
 
@@ -31,7 +31,7 @@ Effects of a dielectric (battery disconnected):
 
 **A 5 μF capacitor has a dielectric with $\kappa = 3$ inserted. New capacitance?**
 
-$C = \kappa C_0 = 3 \times 5 = 15$ μF ✅
+$C = \kappa C_0 = 3 \\times 5 = 15$ μF ✅
     
     `
     },

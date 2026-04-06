@@ -137,18 +137,21 @@ A **heating curve** plots **temperature vs. heat added** as a substance is heate
         dropdowns: [
           {
             id: 'sm4-dd1',
+            label: 'During a phase change (melting or boiling)',
             options: ['increases', 'decreases', 'remains constant'],
             correctIndex: 2,
             explanation: 'During a phase change (melting or boiling), all added energy goes into overcoming IMFs, not into increasing kinetic energy. Temperature remains constant.'
           },
           {
             id: 'sm4-dd2',
+            label: 'The _______ is longer because $\\Delta H_{\\text{vap}} > \\Delta',
             options: ['melting plateau', 'boiling plateau', 'solid heating region'],
             correctIndex: 1,
             explanation: 'The boiling plateau is longer because $\\Delta H_{\\text{vap}} > \\Delta H_{\\text{fus}}$. More energy is required to completely separate particles (vaporization) than to merely disrupt the solid lattice (melting).'
           },
           {
             id: 'sm4-dd3',
+            label: 'During a phase change, the added heat energy goes entirely into overcoming (or',
             options: ['kinetic energy of particles', 'intermolecular forces', 'intramolecular bonds'],
             correctIndex: 1,
             explanation: 'During a phase change, the added heat energy goes entirely into overcoming (or forming) intermolecular forces, not into raising kinetic energy (which would increase temperature).'

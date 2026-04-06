@@ -183,24 +183,28 @@ GC produces a graph of **detector signal vs. time**:
         dropdowns: [
           {
             id: 'mx3-dd1',
+            label: 'Analyzing a mixture of volatile organic compounds requires GC',
             options: ['paper chromatography', 'column chromatography', 'gas chromatography'],
             correctIndex: 2,
             explanation: 'Analyzing a mixture of volatile organic compounds requires GC. The sample is vaporized and carried through the column by a carrier gas.'
           },
           {
             id: 'mx3-dd2',
+            label: 'Identifying the dyes in a food coloring mixture is a classic _______ application',
             options: ['paper chromatography', 'column chromatography', 'gas chromatography'],
             correctIndex: 0,
             explanation: 'Identifying the dyes in a food coloring mixture is a classic paper chromatography application. Each dye will travel a different distance and show as a separate colored spot.'
           },
           {
             id: 'mx3-dd3',
+            label: 'When you need to purify a large quantity of a product from a reaction mixture',
             options: ['paper chromatography', 'column chromatography', 'gas chromatography'],
             correctIndex: 1,
             explanation: 'When you need to purify a large quantity of a product from a reaction mixture, column chromatography allows collection of individual fractions.'
           },
           {
             id: 'mx3-dd4',
+            label: 'In GC, each compound has a characteristic _______ under given conditions',
             options: ['retention time', 'peak area', 'peak height'],
             correctIndex: 0,
             explanation: 'In GC, each compound has a characteristic retention time under given conditions. Comparing retention times to known standards identifies the compound.'

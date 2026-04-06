@@ -18,7 +18,7 @@ $$A = A_0(1 + r)^t$$
 $$A = A_0(1 - r)^t$$
 
 ### Compound Interest
-$$A = P\left(1 + \frac{r}{n}\right)^{nt}$$
+$$A = P\left(1 + \\frac{r}{n}\\right)^{nt}$$
 - $P$ = principal, $r$ = annual rate, $n$ = compounds per year, $t$ = years
 
 ### Population Growth
@@ -32,7 +32,7 @@ $$V = 25000(0.85)^4 \approx \$13,050$$
 ### Half-Life
 "A substance has a half-life of 6 hours. Starting with 200g, how much remains after 18 hours?"
 - 18 hours = 3 half-lives
-- $200 \times (0.5)^3 = 200 \times 0.125 = 25$ grams
+- $200 \\times (0.5)^3 = 200 \\times 0.125 = 25$ grams
 
 ### SAT Tip: Identifying Growth/Decay
 - Multiplier > 1 → growth (e.g., 1.05 = 5% growth)

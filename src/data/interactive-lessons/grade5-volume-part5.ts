@@ -26,7 +26,7 @@ Volume is used everywhere:
 
 **A fish tank is 40 cm × 20 cm × 30 cm. How many liters?**
 
-$V = 40 \times 20 \times 30 = 24{,}000$ cm³
+$V = 40 \\times 20 \\times 30 = 24{,}000$ cm³
 
 $24{,}000 \div 1{,}000 = 24$ liters ✅
     

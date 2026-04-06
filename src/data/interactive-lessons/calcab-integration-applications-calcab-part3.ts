@@ -14,7 +14,7 @@ $$V = \pi\int_a^b [f(x)]^2\,dx$$
 
 ### Washer Method
 
-$$V = \pi\int_a^b \left([R(x)]^2 - [r(x)]^2\right)\,dx$$
+$$V = \pi\int_a^b \left([R(x)]^2 - [r(x)]^2\\right)\,dx$$
 
 $R$ = outer radius, $r$ = inner radius.
 

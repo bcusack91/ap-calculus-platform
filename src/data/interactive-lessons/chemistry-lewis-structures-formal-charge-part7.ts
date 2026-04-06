@@ -100,18 +100,21 @@ export const chemLewisStructuresFormalChargePart7Data = {
         dropdowns: [
           {
             id: 'ls-7-7-dd1',
+            label: 'Carbon (Period 2) — can it exceed the octet?',
             options: ['Can exceed the octet', 'Cannot exceed the octet'],
             correctIndex: 1,
             explanation: 'Carbon is in Period 2 and does not have accessible d orbitals. It can NEVER have more than 8 electrons around it.'
           },
           {
             id: 'ls-7-7-dd2',
+            label: 'What is the bond order of each O—O bond in O₃?',
             options: ['Bond order = 1', 'Bond order = 1.5', 'Bond order = 2'],
             correctIndex: 1,
             explanation: 'In O₃, the two O—O bonds are equivalent in the resonance hybrid. Each is a blend of single and double bond character, giving bond order = (1 + 2)/2 = 1.5.'
           },
           {
             id: 'ls-7-7-dd3',
+            label: 'BF₃ acts as a Lewis _______ because boron has fewer than 8 electrons',
             options: ['Lewis acid (electron acceptor)', 'Lewis base (electron donor)'],
             correctIndex: 0,
             explanation: 'BF₃ has an incomplete octet (only 6 electrons on B). It readily accepts an electron pair from a Lewis base, making it a Lewis acid.'

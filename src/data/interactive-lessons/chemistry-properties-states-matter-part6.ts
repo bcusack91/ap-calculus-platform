@@ -167,18 +167,21 @@ When comparing two substances:
         dropdowns: [
           {
             id: 'sm6-vp-dd1',
+            label: 'Ethanol has weaker H-bonding than water (one OH group vs',
             options: ['Water (H₂O)', 'Ethanol (C₂H₅OH)'],
             correctIndex: 1,
             explanation: 'Ethanol has weaker H-bonding than water (one OH group vs. two, and ethanol\'s nonpolar tail contributes more LDF character). Weaker IMFs → molecules escape more easily → higher vapor pressure.'
           },
           {
             id: 'sm6-vp-dd2',
+            label: 'Diethyl ether cannot form hydrogen bonds as a pure substance (no O–H or N–H)',
             options: ['Diethyl ether (C₂H₅OC₂H₅)', 'Ethanol (C₂H₅OH)'],
             correctIndex: 0,
             explanation: 'Diethyl ether cannot form hydrogen bonds as a pure substance (no O–H or N–H). Ethanol has H-bonding (O–H). Weaker IMFs in ether → higher vapor pressure.'
           },
           {
             id: 'sm6-vp-dd3',
+            label: 'Both are nonpolar (LDF only)',
             options: ['Pentane (C₅H₁₂)', 'Decane (C₁₀H₂₂)'],
             correctIndex: 0,
             explanation: 'Both are nonpolar (LDF only). Pentane has lower molar mass → weaker LDF → molecules escape more easily → higher vapor pressure.'

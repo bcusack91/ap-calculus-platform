@@ -67,10 +67,10 @@ export const precalcContinuityPart4Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Rational hole repair | $\frac{x^2-c^2}{x-c}=x+c\;(x\neq c)$ | removable discontinuity cleanup |
-      | Continuity test | $\lim_{x\to a} f(x) = f(a)$ | pointwise verification |
-      | Average rate | $\frac{f(b)-f(a)}{b-a}$ | bridge to local behavior |
-      | One-sided match | $\lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)$ | two-sided existence |
+      | Rational hole repair | $\\frac{x^2-c^2}{x-c}=x+c\;(x\\neq c)$ | removable discontinuity cleanup |
+      | Continuity test | $\lim_{x\\to a} f(x) = f(a)$ | pointwise verification |
+      | Average rate | $\\frac{f(b)-f(a)}{b-a}$ | bridge to local behavior |
+      | One-sided match | $\lim_{x\\to a^-}f(x)=\lim_{x\\to a^+}f(x)$ | two-sided existence |
       
       ### Common pitfalls
       - A defined value at $x=a$ does not guarantee continuity.

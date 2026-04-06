@@ -11,7 +11,7 @@ export const apPrecalcRationalPart4Data = {
 
 A **hole** occurs when a factor cancels from both numerator and denominator.
 
-$f(x) = \frac{(x-2)(x+1)}{(x-2)(x+3)}$
+$f(x) = \\frac{(x-2)(x+1)}{(x-2)(x+3)}$
 
 The $(x-2)$ cancels → hole at $x = 2$.
 
@@ -25,11 +25,11 @@ To find the y-value of the hole, substitute into the simplified function.
       content: `
 ## Worked Example
 
-**$f(x) = \frac{(x-2)(x+1)}{(x-2)(x+3)}$. Hole?**
+**$f(x) = \\frac{(x-2)(x+1)}{(x-2)(x+3)}$. Hole?**
 
-Cancel $(x-2)$: simplified = $\frac{x+1}{x+3}$
+Cancel $(x-2)$: simplified = $\\frac{x+1}{x+3}$
 
-Hole at $x=2$: $y = \frac{2+1}{2+3} = \frac{3}{5} = 0.6$ ✅
+Hole at $x=2$: $y = \\frac{2+1}{2+3} = \\frac{3}{5} = 0.6$ ✅
     
     `
     },
@@ -61,11 +61,11 @@ Hole at $x=2$: $y = \frac{2+1}{2+3} = \frac{3}{5} = 0.6$ ✅
       content: `
 **Holes** 🧮
 
-1) $\frac{(x-3)(x+1)}{(x-3)(x-1)}$. Hole at $x = $ ?
+1) $\\frac{(x-3)(x+1)}{(x-3)(x-1)}$. Hole at $x = $ ?
 
-2) $\frac{x(x-5)}{x(x+2)}$. Hole at $x = $ ?
+2) $\\frac{x(x-5)}{x(x+2)}$. Hole at $x = $ ?
 
-3) $\frac{(x-2)(x+1)}{(x-2)(x+3)}$. y-value of hole?
+3) $\\frac{(x-2)(x+1)}{(x-2)(x+3)}$. y-value of hole?
     
     `,
       exercise: {
@@ -99,8 +99,8 @@ Hole at $x=2$: $y = \frac{2+1}{2+3} = \frac{3}{5} = 0.6$ ✅
 
 | # | Function | Hole at |
 |---|---------|--------|
-| 1 | $\frac{(x-3)(x+1)}{(x-3)(x-1)}$ | x = 3 |
-| 2 | $\frac{x(x-5)}{x(x+2)}$ | x = 0 |
+| 1 | $\\frac{(x-3)(x+1)}{(x-3)(x-1)}$ | x = 3 |
+| 2 | $\\frac{x(x-5)}{x(x+2)}$ | x = 0 |
     
     `
     },

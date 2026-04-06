@@ -10,9 +10,9 @@ export const g5VolumePart3Data = {
 **Part 3 of 7 — Volume Formulas**
 
 ### Rectangular Prism
-$V = l \times w \times h$
+$V = l \\times w \\times h$
 
-or equivalently: $V = B \times h$ where $B$ = area of the base
+or equivalently: $V = B \\times h$ where $B$ = area of the base
 
 ### Cube
 $V = s^3$
@@ -27,7 +27,7 @@ $V = s^3$
 
 **Rectangular prism: $l = 8$ cm, $w = 5$ cm, $h = 3$ cm.**
 
-$V = 8 \times 5 \times 3 = 120$ cm³ ✅
+$V = 8 \\times 5 \\times 3 = 120$ cm³ ✅
     
     `
     },

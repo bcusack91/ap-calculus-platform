@@ -15,7 +15,7 @@ Goal: get the variable **alone** on one side.
 - Addition ↔ Subtraction
 - Multiplication ↔ Division
 
-$x + 5 = 12 \Rightarrow x = 12 - 5 = 7$
+$x + 5 = 12 \\Rightarrow x = 12 - 5 = 7$
     
     `
     },

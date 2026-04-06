@@ -76,10 +76,10 @@ export const precalcTrigIdentitiesPart2Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Tangent | $\tan\theta=\frac{\sin\theta}{\cos\theta}$ | quotient rewrite |
+      | Tangent | $\\tan\\theta=\\frac{\sin\\theta}{\cos\\theta}$ | quotient rewrite |
       | Cosine sum | $\cos(A+B)=\cos A\cos B-\sin A\sin B$ | angle combination |
-      | Sine double-angle | $\sin(2\theta)=2\sin\theta\cos\theta$ | power reduction and simplification |
-      | Pythagorean | $\sin^2\theta+\cos^2\theta=1$ | fundamental conversion |
+      | Sine double-angle | $\sin(2\\theta)=2\sin\\theta\cos\\theta$ | power reduction and simplification |
+      | Pythagorean | $\sin^2\\theta+\cos^2\\theta=1$ | fundamental conversion |
       
       ### Common pitfalls
       - Keep track of domain restrictions when dividing by trig expressions.

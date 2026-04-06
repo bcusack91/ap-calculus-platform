@@ -9,9 +9,9 @@ export const physCEMCoulombPart2Data = {
 
 **Part 2 of 7 — Coulomb's Law**
 
-$F = k\frac{|q_1||q_2|}{r^2}$
+$F = k\\frac{|q_1||q_2|}{r^2}$
 
-where $k = 8.99 \times 10^9$ N·m²/C² $= \frac{1}{4\pi\epsilon_0}$
+where $k = 8.99 \\times 10^9$ N·m²/C² $= \\frac{1}{4\pi\epsilon_0}$
 
 - Force is along the line connecting the charges
 - Attractive for opposite charges, repulsive for like charges
@@ -26,9 +26,9 @@ where $k = 8.99 \times 10^9$ N·m²/C² $= \frac{1}{4\pi\epsilon_0}$
 
 **Two $+2$ μC charges are 0.3 m apart. Find the force.**
 
-$F = k\frac{q_1 q_2}{r^2} = (9 \times 10^9)\frac{(2 \times 10^{-6})^2}{(0.3)^2}$
+$F = k\\frac{q_1 q_2}{r^2} = (9 \\times 10^9)\\frac{(2 \\times 10^{-6})^2}{(0.3)^2}$
 
-$= (9 \times 10^9)\frac{4 \times 10^{-12}}{0.09} = 0.4$ N (repulsive) ✅
+$= (9 \\times 10^9)\\frac{4 \\times 10^{-12}}{0.09} = 0.4$ N (repulsive) ✅
     
     `
     },
@@ -62,9 +62,9 @@ $= (9 \times 10^9)\frac{4 \times 10^{-12}}{0.09} = 0.4$ N (repulsive) ✅
 
 1) If the distance between two charges is halved, the force increases by a factor of ___
 
-2) Two $+1$ μC charges are 0.1 m apart. $F = k(10^{-12})/(0.01) = 9 \times 10^9 \times 10^{-10}$ = ____ N. (Give the answer as a decimal.)
+2) Two $+1$ μC charges are 0.1 m apart. $F = k(10^{-12})/(0.01) = 9 \\times 10^9 \\times 10^{-10}$ = ____ N. (Give the answer as a decimal.)
 
-3) The Coulomb constant $k$ is approximately ____ $\times 10^9$ N·m²/C².
+3) The Coulomb constant $k$ is approximately ____ $\\times 10^9$ N·m²/C².
     
     `,
       exercise: {

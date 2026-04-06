@@ -9,7 +9,7 @@ export const apStatsDistributionsPart3Data = {
 
 **Part 3 of 7 — Mean vs Median**
 
-- **Mean** ($\bar{x}$): sum of all values ÷ number of values. Sensitive to outliers.
+- **Mean** ($\\bar{x}$): sum of all values ÷ number of values. Sensitive to outliers.
 - **Median**: middle value when data is ordered. Resistant to outliers.
 
 Use **median** for skewed data; **mean** for symmetric data.

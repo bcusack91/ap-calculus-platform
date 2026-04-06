@@ -70,7 +70,7 @@ This pressure difference can be measured with a U-tube manometer connected betwe
               '120 kPa'
             ],
             correctAnswer: 3,
-            explanation: '$v_2 = (20/5)(2) = 8$ m/s. $\Delta P = \frac{1}{2}(1000)(8^2 - 2^2) = \frac{1}{2}(1000)(60) = 30{,}000$ Pa. $P_2 = 150{,}000 - 30{,}000 = 120{,}000$ Pa = 120 kPa.'
+            explanation: '$v_2 = (20/5)(2) = 8$ m/s. $\Delta P = \\frac{1}{2}(1000)(8^2 - 2^2) = \\frac{1}{2}(1000)(60) = 30{,}000$ Pa. $P_2 = 150{,}000 - 30{,}000 = 120{,}000$ Pa = 120 kPa.'
           }
         ]
       }

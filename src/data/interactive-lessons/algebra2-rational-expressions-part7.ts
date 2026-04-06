@@ -25,7 +25,7 @@ export const alg2RationalPart7Data = {
       content: `
 ## Worked Example
 
-$\frac{x^2-1}{x+1} = \frac{(x+1)(x-1)}{x+1} = x - 1$ ✅
+$\\frac{x^2-1}{x+1} = \\frac{(x+1)(x-1)}{x+1} = x - 1$ ✅
     
     `
     },
@@ -57,13 +57,13 @@ $\frac{x^2-1}{x+1} = \frac{(x+1)(x-1)}{x+1} = x - 1$ ✅
       content: `
 **Review** 🧮
 
-$\frac{x^2-4}{x-2} = x + ?$
+$\\frac{x^2-4}{x-2} = x + ?$
 
 1) The constant?
 
-2) $\frac{x}{4} = 5$. $x = ?$
+2) $\\frac{x}{4} = 5$. $x = ?$
 
-3) $\frac{1}{3} + \frac{1}{6} = ?$ (decimal)
+3) $\\frac{1}{3} + \\frac{1}{6} = ?$ (decimal)
     
     `,
       exercise: {
@@ -97,9 +97,9 @@ $\frac{x^2-4}{x-2} = x + ?$
 
 | # | Type | Problem |
 |---|------|---------|
-| 1 | Simplify | $\frac{x^2-4}{x-2}$ |
-| 2 | Solve | $\frac{x}{4} = 5$ |
-| 3 | Add | $\frac{1}{3}+\frac{1}{6}$ |
+| 1 | Simplify | $\\frac{x^2-4}{x-2}$ |
+| 2 | Solve | $\\frac{x}{4} = 5$ |
+| 3 | Add | $\\frac{1}{3}+\\frac{1}{6}$ |
     
     `
     },

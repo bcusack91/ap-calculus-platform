@@ -10,17 +10,17 @@ export const calcbcParametricPart4Data = {
 
 ### Area Formula
 
-$$A = \int_a^b y(t)\,\frac{dx}{dt}\,dt$$
+$$A = \int_a^b y(t)\,\\frac{dx}{dt}\,dt$$
 
 or equivalently $A = \int_a^b g(t) \cdot f'(t)\,dt$
 
 ### Speed of a Parametric Curve
 
-$$\text{Speed} = \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2}$$
+$$\\text{Speed} = \sqrt{\left(\\frac{dx}{dt}\\right)^2 + \left(\\frac{dy}{dt}\\right)^2}$$
 
 ### Distance Traveled
 
-$$\text{Distance} = \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2}\,dt$$`
+$$\\text{Distance} = \int_a^b \sqrt{\left(\\frac{dx}{dt}\\right)^2 + \left(\\frac{dy}{dt}\\right)^2}\,dt$$`
     },
     {
       id: 'param4-quiz1',

@@ -5,7 +5,7 @@ export const chemTypesIntermolecularForcesPart3Data = {
       id: 'if-hb-intro',
       type: 'text',
       title: 'Hydrogen Bonding',
-      content: `Hydrogen bonding is a **special, extra-strong** type of dipole-dipole force. It occurs when hydrogen is covalently bonded to one of three highly electronegative atoms:\n\n$$\\text{N, O, or F}$$\n\nThe H atom in an N–H, O–H, or F–H bond carries a very large \\(\\delta^+\\) charge because N, O, and F are so electronegative. This strongly positive H is then attracted to a **lone pair** on an N, O, or F atom of a neighboring molecule.\n\n**Critical AP Concept:** Despite its name, a hydrogen "bond" is NOT a chemical bond — it is an intermolecular force (an attraction between molecules). It is much weaker than a covalent or ionic bond but much stronger than typical dipole-dipole forces or LDF.\n\nMnemonic: Hydrogen bonding requires **"FON"** — Fluorine, Oxygen, or Nitrogen bonded to H.`
+      content: `Hydrogen bonding is a **special, extra-strong** type of dipole-dipole force. It occurs when hydrogen is covalently bonded to one of three highly electronegative atoms:\n\n$$\\text{N, O, or F}$$\n\nThe H atom in an N–H, O–H, or F–H bond carries a very large $\\delta^+$ charge because N, O, and F are so electronegative. This strongly positive H is then attracted to a **lone pair** on an N, O, or F atom of a neighboring molecule.\n\n**Critical AP Concept:** Despite its name, a hydrogen "bond" is NOT a chemical bond — it is an intermolecular force (an attraction between molecules). It is much weaker than a covalent or ionic bond but much stronger than typical dipole-dipole forces or LDF.\n\nMnemonic: Hydrogen bonding requires **"FON"** — Fluorine, Oxygen, or Nitrogen bonded to H.`
     },
     {
       id: 'if-hb-not-a-bond',
@@ -32,7 +32,7 @@ export const chemTypesIntermolecularForcesPart3Data = {
       id: 'if-hb-requirements',
       type: 'text',
       title: 'Requirements for Hydrogen Bonding',
-      content: `For a molecule to participate in hydrogen bonding, it needs BOTH of the following:\n\n**1. A hydrogen donor:** An H atom covalently bonded to N, O, or F\n- This H carries a large \\(\\delta^+\\) charge\n- Examples: O–H in water, N–H in ammonia, F–H in HF\n\n**2. A hydrogen acceptor:** A lone pair on an N, O, or F atom on a nearby molecule\n- This lone pair attracts the \\(\\delta^+\\) hydrogen\n- The acceptor atom must have available lone pairs\n\n**Common hydrogen bonding molecules:**\n- \\(\\text{H}_2\\text{O}\\) — both a donor (O–H) and acceptor (lone pairs on O)\n- \\(\\text{NH}_3\\) — both a donor (N–H) and acceptor (lone pair on N)\n- \\(\\text{HF}\\) — both a donor (F–H) and acceptor (lone pairs on F)\n- \\(\\text{CH}_3\\text{OH}\\) (methanol) — donor (O–H) and acceptor (lone pairs on O)\n- \\(\\text{CH}_3\\text{COOH}\\) (acetic acid) — donor (O–H) and acceptor (lone pairs on O)`
+      content: `For a molecule to participate in hydrogen bonding, it needs BOTH of the following:\n\n**1. A hydrogen donor:** An H atom covalently bonded to N, O, or F\n- This H carries a large $\\delta^+$ charge\n- Examples: O–H in water, N–H in ammonia, F–H in HF\n\n**2. A hydrogen acceptor:** A lone pair on an N, O, or F atom on a nearby molecule\n- This lone pair attracts the $\\delta^+$ hydrogen\n- The acceptor atom must have available lone pairs\n\n**Common hydrogen bonding molecules:**\n- $\\text{H}_2\\text{O}$ — both a donor (O–H) and acceptor (lone pairs on O)\n- $\\text{NH}_3$ — both a donor (N–H) and acceptor (lone pair on N)\n- $\\text{HF}$ — both a donor (F–H) and acceptor (lone pairs on F)\n- $\\text{CH}_3\\text{OH}$ (methanol) — donor (O–H) and acceptor (lone pairs on O)\n- $\\text{CH}_3\\text{COOH}$ (acetic acid) — donor (O–H) and acceptor (lone pairs on O)`
     },
     {
       id: 'if-hb-identify',
@@ -75,24 +75,28 @@ export const chemTypesIntermolecularForcesPart3Data = {
         dropdowns: [
           {
             id: 'hb-water',
+            label: '$\\text{H}_2\\text{O}$ (water)',
             options: ['Yes — can hydrogen bond', 'No — cannot hydrogen bond'],
             correctIndex: 0,
             explanation: 'H₂O has O–H bonds (donor) and lone pairs on O (acceptor). It forms strong hydrogen bonds, explaining its unusually high boiling point.'
           },
           {
             id: 'hb-ch4',
+            label: '$\\text{CH}_4$ (methane)',
             options: ['Yes — can hydrogen bond', 'No — cannot hydrogen bond'],
             correctIndex: 1,
             explanation: 'CH₄ has C–H bonds. Carbon is not N, O, or F, so CH₄ cannot form hydrogen bonds. It only has LDF.'
           },
           {
             id: 'hb-nh3',
+            label: '$\\text{NH}_3$ (ammonia)',
             options: ['Yes — can hydrogen bond', 'No — cannot hydrogen bond'],
             correctIndex: 0,
             explanation: 'NH₃ has N–H bonds (donor) and a lone pair on N (acceptor). It can form hydrogen bonds.'
           },
           {
             id: 'hb-hf',
+            label: 'HF (hydrogen fluoride)',
             options: ['Yes — can hydrogen bond', 'No — cannot hydrogen bond'],
             correctIndex: 0,
             explanation: 'HF has an F–H bond (donor) and lone pairs on F (acceptor). It forms hydrogen bonds.'
@@ -104,7 +108,7 @@ export const chemTypesIntermolecularForcesPart3Data = {
       id: 'if-hb-water-anomalies',
       type: 'text',
       title: 'Hydrogen Bonding in Water',
-      content: `Water is the most famous example of hydrogen bonding, and it explains many of water\'s unusual properties:\n\n**1. Unusually high boiling point**\nWater (\\(\\text{H}_2\\text{O}\\), MW = 18) boils at 100°C. Compare this to \\(\\text{H}_2\\text{S}\\) (MW = 34), which boils at -60°C. Despite being lighter, water has a MUCH higher boiling point because of hydrogen bonding.\n\n**2. Ice is less dense than liquid water**\nHydrogen bonds in ice form a rigid, open crystal structure with hexagonal symmetry. This creates more empty space than in liquid water, making ice less dense — which is why ice floats.\n\n**3. High surface tension**\nStrong hydrogen bonds at the surface create a "skin" that resists breaking, allowing insects to walk on water.\n\n**4. High specific heat capacity**\nEnergy is needed to break hydrogen bonds before the temperature can rise, so water resists temperature changes.\n\nEach water molecule can form up to **4 hydrogen bonds** (2 as donor through its 2 O–H bonds, 2 as acceptor through its 2 lone pairs).`
+      content: `Water is the most famous example of hydrogen bonding, and it explains many of water\'s unusual properties:\n\n**1. Unusually high boiling point**\nWater ($\\text{H}_2\\text{O}$, MW = 18) boils at 100°C. Compare this to $\\text{H}_2\\text{S}$ (MW = 34), which boils at -60°C. Despite being lighter, water has a MUCH higher boiling point because of hydrogen bonding.\n\n**2. Ice is less dense than liquid water**\nHydrogen bonds in ice form a rigid, open crystal structure with hexagonal symmetry. This creates more empty space than in liquid water, making ice less dense — which is why ice floats.\n\n**3. High surface tension**\nStrong hydrogen bonds at the surface create a "skin" that resists breaking, allowing insects to walk on water.\n\n**4. High specific heat capacity**\nEnergy is needed to break hydrogen bonds before the temperature can rise, so water resists temperature changes.\n\nEach water molecule can form up to **4 hydrogen bonds** (2 as donor through its 2 O–H bonds, 2 as acceptor through its 2 lone pairs).`
     },
     {
       id: 'if-hb-water-q',

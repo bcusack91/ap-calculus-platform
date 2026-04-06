@@ -11,7 +11,7 @@ export const g8TransformationsPart4Data = {
 
 A **dilation** resizes a figure by a **scale factor** $k$.
 
-$(x, y) \to (kx, ky)$
+$(x, y) \\to (kx, ky)$
 
 - $k > 1$: enlargement
 - $0 < k < 1$: reduction

@@ -76,9 +76,9 @@ export const precalcTrigIdentitiesPart3Data = {
       | Tool | Formula | Best use |
       |---|---|---|
       | Cosine sum | $\cos(A+B)=\cos A\cos B-\sin A\sin B$ | angle combination |
-      | Sine double-angle | $\sin(2\theta)=2\sin\theta\cos\theta$ | power reduction and simplification |
-      | Pythagorean | $\sin^2\theta+\cos^2\theta=1$ | fundamental conversion |
-      | Tangent | $\tan\theta=\frac{\sin\theta}{\cos\theta}$ | quotient rewrite |
+      | Sine double-angle | $\sin(2\\theta)=2\sin\\theta\cos\\theta$ | power reduction and simplification |
+      | Pythagorean | $\sin^2\\theta+\cos^2\\theta=1$ | fundamental conversion |
+      | Tangent | $\\tan\\theta=\\frac{\sin\\theta}{\cos\\theta}$ | quotient rewrite |
       
       ### Common pitfalls
       - Choose one target form early to prevent circular verification.

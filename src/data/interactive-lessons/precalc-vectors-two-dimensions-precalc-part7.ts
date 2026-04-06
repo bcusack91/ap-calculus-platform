@@ -14,7 +14,7 @@ export const precalcVectors2DPart7Data = {
       ### Core definitions
       - **resultant**: single vector equivalent to a combined effect
       - **orthogonal**: vectors with dot product zero
-      - **component form**: vector written as ordered components like $\langle a,b\rangle$
+      - **component form**: vector written as ordered components like $\langle a,b\\rangle$
       
       
       ### Worked Example
@@ -36,7 +36,7 @@ export const precalcVectors2DPart7Data = {
             question: 'Choose the most accurate definition of resultant.',
             options: [
               'single vector equivalent to a combined effect',
-              'vector written as ordered components like $\langle a,b\rangle$',
+              'vector written as ordered components like $\langle a,b\\rangle$',
               'vectors with dot product zero',
               'length of a vector'
             ],
@@ -67,10 +67,10 @@ export const precalcVectors2DPart7Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Angle relation | $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\theta$ | finding angle between vectors |
-      | Unit vector | $\hat{\mathbf u}=\frac{\mathbf u}{\|\mathbf u\|}$ | direction-only normalization |
-      | Magnitude | $\|\langle a,b\rangle\|=\sqrt{a^2+b^2}$ | length computation |
-      | Dot product | $\langle a,b\rangle\cdot\langle c,d\rangle=ac+bd$ | angle and projection |
+      | Angle relation | $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\\theta$ | finding angle between vectors |
+      | Unit vector | $\hat{\mathbf u}=\\frac{\mathbf u}{\|\mathbf u\|}$ | direction-only normalization |
+      | Magnitude | $\|\langle a,b\\rangle\|=\sqrt{a^2+b^2}$ | length computation |
+      | Dot product | $\langle a,b\\rangle\cdot\langle c,d\\rangle=ac+bd$ | angle and projection |
       
       ### Common pitfalls
       - Magnitude is always nonnegative.
@@ -117,18 +117,18 @@ export const precalcVectors2DPart7Data = {
         dropdowns: [
           {
             label: 'resultant',
-            options: ['vector written as ordered components like $\langle a,b\rangle$', 'single vector equivalent to a combined effect', 'vectors with dot product zero', 'length of a vector']
+            options: ['vector written as ordered components like $\langle a,b\\rangle$', 'single vector equivalent to a combined effect', 'vectors with dot product zero', 'length of a vector']
           },
           {
             label: 'orthogonal',
-            options: ['vectors with dot product zero', 'angle measured from positive $x$-axis', 'vector written as ordered components like $\langle a,b\rangle$', 'length of a vector']
+            options: ['vectors with dot product zero', 'angle measured from positive $x$-axis', 'vector written as ordered components like $\langle a,b\\rangle$', 'length of a vector']
           },
           {
             label: 'component form',
-            options: ['vector written as ordered components like $\langle a,b\rangle$', 'scalar from component-wise multiplication and sum', 'length of a vector', 'angle measured from positive $x$-axis']
+            options: ['vector written as ordered components like $\langle a,b\\rangle$', 'scalar from component-wise multiplication and sum', 'length of a vector', 'angle measured from positive $x$-axis']
           }
         ],
-        correctAnswers: ['single vector equivalent to a combined effect', 'vectors with dot product zero', 'vector written as ordered components like $\langle a,b\rangle$'],
+        correctAnswers: ['single vector equivalent to a combined effect', 'vectors with dot product zero', 'vector written as ordered components like $\langle a,b\\rangle$'],
         hint1: 'Match each term to the full definition, not just a keyword.',
         hint2: 'Use elimination by checking whether each definition captures the right dependency.',
         hint3: 'Read the label and option together as one complete mathematical sentence.',

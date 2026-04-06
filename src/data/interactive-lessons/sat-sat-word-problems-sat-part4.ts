@@ -9,7 +9,7 @@ export const satWordProblemsPart4Data = {
 **Part 4 of 7 — Combining Values Strategically**
 
 ### Mixture Framework
-$$\text{amount₁ × concentration₁} + \text{amount₂ × concentration₂} = \text{total amount × final concentration}$$
+$$\\text{amount₁ × concentration₁} + \\text{amount₂ × concentration₂} = \\text{total amount × final concentration}$$
 
 **Example:** How many liters of 30% acid should be mixed with 10 L of 60% acid to get a 50% solution?
 - Let $x$ = liters of 30% acid
@@ -30,7 +30,7 @@ $$\text{amount₁ × concentration₁} + \text{amount₂ × concentration₂} = 
 - $4a = 400 → a = 100$ adults, $c = 100$ children
 
 ### Weighted Average
-$$\text{Weighted avg} = \frac{\sum (\text{value × weight})}{\sum \text{weights}}$$`
+$$\\text{Weighted avg} = \\frac{\sum (\\text{value × weight})}{\sum \\text{weights}}$$`
     },
     {
       id: 'wp4-q1',

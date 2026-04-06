@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-const MESSAGES = [
+const PERFECT_MESSAGES = [
   'Nailed it!',
   'Excellent work!',
   'You got it!',
@@ -13,27 +13,68 @@ const MESSAGES = [
   'Keep it up!',
 ]
 
-const EMOJIS = ['🎯', '🌟', '✨', '💪', '🎉', '🧠', '🏆', '⭐']
+const GOOD_MESSAGES = [
+  'Almost there!',
+  'Good effort!',
+  'Nice try!',
+  'Getting closer!',
+  'Keep it up!',
+  'Solid work!',
+]
+
+const NEEDS_WORK_MESSAGES = [
+  'Keep practicing!',
+  'You\'re learning!',
+  'Don\'t give up!',
+  'Review and retry!',
+  'You\'ll get it!',
+  'Every attempt counts!',
+]
+
+const PERFECT_EMOJIS = ['🎯', '🌟', '✨', '💪', '🎉', '🧠', '🏆', '⭐']
+const GOOD_EMOJIS = ['💪', '📚', '🌱', '👍', '🔄', '📈']
+const NEEDS_WORK_EMOJIS = ['📖', '💡', '🔍', '🌱', '📝', '🤔']
 
 interface CorrectAnswerCelebrationProps {
   show: boolean
   onDone?: () => void
+  score?: number
+  total?: number
 }
 
-export default function CorrectAnswerCelebration({ show, onDone }: CorrectAnswerCelebrationProps) {
+export default function CorrectAnswerCelebration({ show, onDone, score, total }: CorrectAnswerCelebrationProps) {
   const [visible, setVisible] = useState(false)
   const [message, setMessage] = useState('')
   const [emoji, setEmoji] = useState('')
   const [particles, setParticles] = useState<{ id: number; x: number; y: number; emoji: string; delay: number }[]>([])
+  const [styleType, setStyleType] = useState<'perfect' | 'good' | 'needs-work'>('perfect')
 
   useEffect(() => {
     if (show) {
       let hideTimer: ReturnType<typeof setTimeout> | undefined
       const showTimer = setTimeout(() => {
-        setMessage(MESSAGES[Math.floor(Math.random() * MESSAGES.length)])
-        setEmoji(EMOJIS[Math.floor(Math.random() * EMOJIS.length)])
+        // Determine score category
+        let category: 'perfect' | 'good' | 'needs-work' = 'perfect'
+        if (score !== undefined && total !== undefined && total > 0) {
+          const ratio = score / total
+          if (ratio >= 1) {
+            category = 'perfect'
+          } else if (ratio > 0.5) {
+            category = 'good'
+          } else {
+            category = 'needs-work'
+          }
+        }
+        setStyleType(category)
 
-        const newParticles = Array.from({ length: 12 }, (_, i) => ({
+        const messages = category === 'perfect' ? PERFECT_MESSAGES : category === 'good' ? GOOD_MESSAGES : NEEDS_WORK_MESSAGES
+        const emojis = category === 'perfect' ? PERFECT_EMOJIS : category === 'good' ? GOOD_EMOJIS : NEEDS_WORK_EMOJIS
+        
+        setMessage(messages[Math.floor(Math.random() * messages.length)])
+        setEmoji(emojis[Math.floor(Math.random() * emojis.length)])
+
+        const particleCount = category === 'perfect' ? 12 : category === 'good' ? 6 : 0
+        const newParticles = Array.from({ length: particleCount }, (_, i) => ({
           id: i,
           x: Math.random() * 100,
           y: Math.random() * 100,
@@ -54,7 +95,7 @@ export default function CorrectAnswerCelebration({ show, onDone }: CorrectAnswer
         if (hideTimer) clearTimeout(hideTimer)
       }
     }
-  }, [show, onDone])
+  }, [show, onDone, score, total])
 
   if (!visible) return null
 
@@ -82,7 +123,13 @@ export default function CorrectAnswerCelebration({ show, onDone }: CorrectAnswer
 
       {/* Central message */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="animate-celebration-pop bg-gradient-to-r from-green-500 to-emerald-500 text-white px-10 py-5 rounded-2xl shadow-2xl">
+        <div className={`animate-celebration-pop text-white px-10 py-5 rounded-2xl shadow-2xl ${
+          styleType === 'perfect' 
+            ? 'bg-gradient-to-r from-green-500 to-emerald-500' 
+            : styleType === 'good'
+            ? 'bg-gradient-to-r from-blue-500 to-cyan-500'
+            : 'bg-gradient-to-r from-amber-500 to-orange-500'
+        }`}>
           <div className="flex items-center gap-3">
             <span className="text-3xl">{emoji}</span>
             <span className="text-2xl font-bold">{message}</span>

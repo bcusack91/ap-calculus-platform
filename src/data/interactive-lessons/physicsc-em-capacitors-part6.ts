@@ -14,7 +14,7 @@ export const physCEMCapacitorsPart6Data = {
 2. Determine if a battery is connected or disconnected
 3. Apply $Q = CV$ and energy formulas
 4. For dielectrics, multiply $C$ by $\kappa$
-5. Use energy density $u = \frac{1}{2}\epsilon_0 E^2$ for field energy problems
+5. Use energy density $u = \\frac{1}{2}\epsilon_0 E^2$ for field energy problems
     
     `
     },
@@ -30,7 +30,7 @@ Series: $1/C_s = 1/2 + 1/3 = 5/6$, $C_s = 1.2$ μF
 
 Parallel: $C_{eq} = 1.2 + 5 = 6.2$ μF
 
-$Q = C_{eq}V = 6.2 \times 12 = 74.4$ μC ✅
+$Q = C_{eq}V = 6.2 \\times 12 = 74.4$ μC ✅
     
     `
     },

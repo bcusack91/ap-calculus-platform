@@ -5,7 +5,7 @@ export const chemLewisStructuresFormalChargePart4Data = {
       id: 'ls-4-1',
       type: 'text',
       title: 'What Is Formal Charge?',
-      content: `**Formal charge (FC)** is a bookkeeping tool that helps us determine which Lewis structure is the most reasonable when multiple structures are possible.\n\nFormal charge tells us the hypothetical charge on each atom if all bonding electrons were shared **perfectly equally** between bonded atoms.\n\n$$FC = V - N - \\frac{B}{2}$$\n\nWhere:\n- **V** = number of valence electrons (from the periodic table)\n- **N** = number of nonbonding (lone pair) electrons on the atom\n- **B** = number of bonding electrons around the atom\n\nAlternatively, since \\frac{B}{2} equals the number of bonds:\n\n$$FC = V - N - \\text{(number of bonds)}$$\n\n**Important:** The sum of all formal charges in a molecule must equal the overall charge of the molecule or ion.`
+      content: `**Formal charge (FC)** is a bookkeeping tool that helps us determine which Lewis structure is the most reasonable when multiple structures are possible.\n\nFormal charge tells us the hypothetical charge on each atom if all bonding electrons were shared **perfectly equally** between bonded atoms.\n\n$$FC = V - N - \\frac{B}{2}$$\n\nWhere:\n- **V** = number of valence electrons (from the periodic table)\n- **N** = number of nonbonding (lone pair) electrons on the atom\n- **B** = number of bonding electrons around the atom\n\nAlternatively, since $\\frac{B}{2}$ equals the number of bonds:\n\n$$FC = V - N - \\text{(number of bonds)}$$\n\n**Important:** The sum of all formal charges in a molecule must equal the overall charge of the molecule or ion.`
     },
     {
       id: 'ls-4-2',
@@ -90,21 +90,24 @@ export const chemLewisStructuresFormalChargePart4Data = {
         dropdowns: [
           {
             id: 'ls-4-7-dd1',
+            label: 'An oxygen atom has 3 bonds and 1 lone pair. What is its formal charge?',
             options: ['−1', '0', '+1', '+2'],
             correctIndex: 2,
-            explanation: 'An oxygen with 3 bonds and 1 lone pair: FC = 6 − 2 − 6/2 = 6 − 2 − 3 = +1.'
+            explanation: 'FC = V − N − B/2 = 6 − 2 − 6/2 = 6 − 2 − 3 = +1. Oxygen normally has 2 bonds, so 3 bonds gives it a positive formal charge.'
           },
           {
             id: 'ls-4-7-dd2',
+            label: 'An oxygen atom has 1 bond and 3 lone pairs. What is its formal charge?',
             options: ['−2', '−1', '0', '+1'],
             correctIndex: 1,
-            explanation: 'An oxygen with 1 bond and 3 lone pairs: FC = 6 − 6 − 2/2 = 6 − 6 − 1 = −1.'
+            explanation: 'FC = V − N − B/2 = 6 − 6 − 2/2 = 6 − 6 − 1 = −1. Fewer bonds than normal gives oxygen a negative formal charge.'
           },
           {
             id: 'ls-4-7-dd3',
-            options: ['−1', '0', '+1', '+2'],
+            label: 'A carbon atom has 4 bonds. How many lone pairs does it have if its formal charge is 0?',
+            options: ['1', '0', '2', '3'],
             correctIndex: 1,
-            explanation: 'A carbon with 4 bonds and 0 lone pairs: FC = 4 − 0 − 8/2 = 4 − 0 − 4 = 0.'
+            explanation: 'FC = V − N − B/2 → 0 = 4 − N − 8/2 → 0 = 4 − N − 4 → N = 0. Carbon with 4 bonds and 0 lone pairs has a formal charge of 0.'
           }
         ]
       }

@@ -63,6 +63,8 @@ export async function GET(request: Request) {
         timeSpent: progress.timeSpent,
         lastAccessed: progress.lastAccessed,
         completedAt: progress.completedAt,
+        variant: progress.variant ?? 1,
+        failedExitParts: progress.failedExitParts ?? null,
       }
     })
   } catch (error) {

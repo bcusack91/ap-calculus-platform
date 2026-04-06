@@ -14,7 +14,7 @@ export const g4GeoMeasurePart3Data = {
 - **Rectangle**: $P = 2l + 2w$
 - **Square**: $P = 4s$
 - **Triangle**: $P = a + b + c$
-- **Regular polygon**: $P = n \times s$
+- **Regular polygon**: $P = n \\times s$
     
     `
     },

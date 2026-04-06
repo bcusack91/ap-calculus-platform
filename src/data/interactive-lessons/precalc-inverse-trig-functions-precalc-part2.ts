@@ -70,8 +70,8 @@ export const precalcInverseTrigPart2Data = {
       | Tool | Formula | Best use |
       |---|---|---|
       | Principal output | $\arccos x \in [0,\pi]$ | range control |
-      | Tangent inverse | $\tan(\arctan x)=x$ | all real inputs |
-      | Reciprocal relation | $\arctan x + \arctan\!\left(\frac1x\right)=\frac\pi2\;(x>0)$ | angle decomposition |
+      | Tangent inverse | $\\tan(\arctan x)=x$ | all real inputs |
+      | Reciprocal relation | $\arctan x + \arctan\!\left(\\frac1x\\right)=\\frac\pi2\;(x>0)$ | angle decomposition |
       | Inverse identity | $\sin(\arcsin x)=x$ | valid for $x\in[-1,1]$ |
       
       ### Common pitfalls

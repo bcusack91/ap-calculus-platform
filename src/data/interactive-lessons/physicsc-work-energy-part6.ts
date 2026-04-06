@@ -28,7 +28,7 @@ export const physCWorkEnergyPart6Data = {
 
 Height: $h = 5\sin 30° = 2.5$ m
 
-$mgh = \frac{1}{2}mv^2 \implies v = \sqrt{2(10)(2.5)} = \sqrt{50} \approx 7.07$ m/s ✅
+$mgh = \\frac{1}{2}mv^2 \implies v = \sqrt{2(10)(2.5)} = \sqrt{50} \approx 7.07$ m/s ✅
     
     `
     },

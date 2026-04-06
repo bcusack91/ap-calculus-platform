@@ -10,11 +10,11 @@ export const alg2RationalPart1Data = {
 **Part 1 of 7 — Simplifying Rational Expressions**
 
 A rational expression is a fraction with polynomials:
-$\frac{p(x)}{q(x)}$, $q(x) \neq 0$
+$\\frac{p(x)}{q(x)}$, $q(x) \\neq 0$
 
 Simplify by **factoring** and canceling common factors.
 
-$\frac{x^2-4}{x+2} = \frac{(x+2)(x-2)}{x+2} = x-2$
+$\\frac{x^2-4}{x+2} = \\frac{(x+2)(x-2)}{x+2} = x-2$
     
     `
     },
@@ -24,7 +24,7 @@ $\frac{x^2-4}{x+2} = \frac{(x+2)(x-2)}{x+2} = x-2$
       content: `
 ## Worked Example
 
-$\frac{x^2-9}{x+3} = \frac{(x+3)(x-3)}{x+3} = x-3$ ✅ (when $x \neq -3$)
+$\\frac{x^2-9}{x+3} = \\frac{(x+3)(x-3)}{x+3} = x-3$ ✅ (when $x \\neq -3$)
     
     `
     },
@@ -56,15 +56,15 @@ $\frac{x^2-9}{x+3} = \frac{(x+3)(x-3)}{x+3} = x-3$ ✅ (when $x \neq -3$)
       content: `
 **Simplify** 🧮
 
-$\frac{x^2-4}{x+2} = x + ?$
+$\\frac{x^2-4}{x+2} = x + ?$
 
 1) The constant?
 
-$\frac{x^2-9}{x+3} = x + ?$
+$\\frac{x^2-9}{x+3} = x + ?$
 
 2) The constant?
 
-$\frac{x^2-1}{x-1} = x + ?$
+$\\frac{x^2-1}{x-1} = x + ?$
 
 3) The constant?
     
@@ -100,9 +100,9 @@ $\frac{x^2-1}{x-1} = x + ?$
 
 | # | Expression | Simplified |
 |---|-----------|------------|
-| 1 | $\frac{x^2-4}{x+2}$ | $x-2$ |
-| 2 | $\frac{2x}{4x^2}$ | $\frac{1}{2x}$ |
-| 3 | $\frac{x^2-1}{x-1}$ | $x+1$ |
+| 1 | $\\frac{x^2-4}{x+2}$ | $x-2$ |
+| 2 | $\\frac{2x}{4x^2}$ | $\\frac{1}{2x}$ |
+| 3 | $\\frac{x^2-1}{x-1}$ | $x+1$ |
     
     `
     },

@@ -9,10 +9,10 @@ export const alg2RationalPart2Data = {
 
 **Part 2 of 7 — Multiplying & Dividing**
 
-**Multiply**: $\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}$ (factor and cancel first)
+**Multiply**: $\\frac{a}{b} \cdot \\frac{c}{d} = \\frac{ac}{bd}$ (factor and cancel first)
 
 **Divide**: multiply by the reciprocal
-$\frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c}$
+$\\frac{a}{b} \div \\frac{c}{d} = \\frac{a}{b} \cdot \\frac{d}{c}$
     
     `
     },
@@ -22,7 +22,7 @@ $\frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c}$
       content: `
 ## Worked Example
 
-$\frac{x}{x+2} \cdot \frac{x+2}{x^2} = \frac{x(x+2)}{x^2(x+2)} = \frac{1}{x}$ ✅
+$\\frac{x}{x+2} \cdot \\frac{x+2}{x^2} = \\frac{x(x+2)}{x^2(x+2)} = \\frac{1}{x}$ ✅
     
     `
     },
@@ -54,11 +54,11 @@ $\frac{x}{x+2} \cdot \frac{x+2}{x^2} = \frac{x(x+2)}{x^2(x+2)} = \frac{1}{x}$ �
       content: `
 **Multiply & Divide** 🧮
 
-1) $\frac{3}{x} \cdot \frac{x}{6} = ?$ (decimal)
+1) $\\frac{3}{x} \cdot \\frac{x}{6} = ?$ (decimal)
 
-2) $\frac{x}{3} \div \frac{x}{9} = ?$
+2) $\\frac{x}{3} \div \\frac{x}{9} = ?$
 
-3) $\frac{x+1}{2} \cdot \frac{4}{x+1} = ?$
+3) $\\frac{x+1}{2} \cdot \\frac{4}{x+1} = ?$
     
     `,
       exercise: {
@@ -92,9 +92,9 @@ $\frac{x}{x+2} \cdot \frac{x+2}{x^2} = \frac{x(x+2)}{x^2(x+2)} = \frac{1}{x}$ �
 
 | # | Problem | Result |
 |---|---------|--------|
-| 1 | $\frac{3}{x} \cdot \frac{x}{6}$ | $\frac{1}{2}$ |
-| 2 | $\frac{x}{3} \div \frac{x}{9}$ | $3$ |
-| 3 | $\frac{x+1}{2} \cdot \frac{4}{x+1}$ | $2$ |
+| 1 | $\\frac{3}{x} \cdot \\frac{x}{6}$ | $\\frac{1}{2}$ |
+| 2 | $\\frac{x}{3} \div \\frac{x}{9}$ | $3$ |
+| 3 | $\\frac{x+1}{2} \cdot \\frac{4}{x+1}$ | $2$ |
     
     `
     },

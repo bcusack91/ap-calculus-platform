@@ -11,7 +11,7 @@ export const physCEMGaussPart4Data = {
 
 For an infinite line charge with linear charge density $\lambda$ (C/m):
 
-$E = \frac{\lambda}{2\pi\epsilon_0 r} = \frac{2k\lambda}{r}$
+$E = \\frac{\lambda}{2\pi\epsilon_0 r} = \\frac{2k\lambda}{r}$
 
 Use a cylindrical Gaussian surface coaxial with the charge distribution.
 
@@ -25,9 +25,9 @@ The flux through the end caps is zero (field is radial).
       content: `
 ## Worked Example
 
-**An infinite wire has $\lambda = 5 \times 10^{-9}$ C/m. Find $E$ at $r = 0.1$ m.**
+**An infinite wire has $\lambda = 5 \\times 10^{-9}$ C/m. Find $E$ at $r = 0.1$ m.**
 
-$E = 2k\lambda/r = 2(9 \times 10^9)(5 \times 10^{-9})/0.1 = 900$ N/C ✅
+$E = 2k\lambda/r = 2(9 \\times 10^9)(5 \\times 10^{-9})/0.1 = 900$ N/C ✅
     
     `
     },

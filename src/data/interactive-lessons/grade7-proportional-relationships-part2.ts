@@ -9,7 +9,7 @@ export const g7ProportionalPart2Data = {
 
 **Part 2 of 7 — Constant of Proportionality**
 
-The **constant of proportionality** $k = \frac{y}{x}$.
+The **constant of proportionality** $k = \\frac{y}{x}$.
 
 Equation form: $y = kx$
 
@@ -25,7 +25,7 @@ Example: If $k = 3$, then $y = 3x$.
 
 **Bananas cost \$0.50 each. Write the equation.**
 
-$\text{Cost} = 0.50 \times n$ → $C = 0.50n$, so $k = 0.50$ ✅
+$\\text{Cost} = 0.50 \\times n$ → $C = 0.50n$, so $k = 0.50$ ✅
     
     `
     },

@@ -10,17 +10,17 @@ export const calcbcParametricPart2Data = {
 
 ### Second Derivative for Parametric Curves
 
-$$\frac{d^2y}{dx^2} = \frac{\frac{d}{dt}\left(\frac{dy}{dx}\right)}{\frac{dx}{dt}}$$
+$$\\frac{d^2y}{dx^2} = \\frac{\\frac{d}{dt}\left(\\frac{dy}{dx}\\right)}{\\frac{dx}{dt}}$$
 
-Take the derivative **with respect to** $t$ of $\frac{dy}{dx}$, then divide by $\frac{dx}{dt}$.
+Take the derivative **with respect to** $t$ of $\\frac{dy}{dx}$, then divide by $\\frac{dx}{dt}$.
 
 ### Example
 
-$x = t^2$, $y = t^3$. We found $\frac{dy}{dx} = \frac{3t}{2}$.
+$x = t^2$, $y = t^3$. We found $\\frac{dy}{dx} = \\frac{3t}{2}$.
 
-$\frac{d}{dt}\left(\frac{3t}{2}\right) = \frac{3}{2}$
+$\\frac{d}{dt}\left(\\frac{3t}{2}\\right) = \\frac{3}{2}$
 
-$$\frac{d^2y}{dx^2} = \frac{3/2}{2t} = \frac{3}{4t}$$`
+$$\\frac{d^2y}{dx^2} = \\frac{3/2}{2t} = \\frac{3}{4t}$$`
     },
     {
       id: 'param2-quiz1',

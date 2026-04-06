@@ -210,18 +210,21 @@ All three have the same electron domain geometry (tetrahedral), but the molecula
         dropdowns: [
           {
             id: 'vg-1-8-dd1',
+            label: 'A double bond counts as one electron domain. Two double bonds',
             options: ['1', '2', '3', '4'],
             correctIndex: 1,
             explanation: 'A double bond counts as one electron domain. Two double bonds = 2 electron domains.'
           },
           {
             id: 'vg-1-8-dd2',
+            label: 'A steric number of 4 corresponds to a _______ electron domain geometry',
             options: ['Linear', 'Trigonal planar', 'Tetrahedral', 'Trigonal bipyramidal'],
             correctIndex: 2,
             explanation: 'A steric number of 4 corresponds to a tetrahedral electron domain geometry.'
           },
           {
             id: 'vg-1-8-dd3',
+            label: 'An electron domain can be a bond (single, double, or triple) or a lone pair',
             options: ['Bond only', 'Lone pair only', 'Both bonds and lone pairs', 'Neither'],
             correctIndex: 2,
             explanation: 'An electron domain can be a bond (single, double, or triple) or a lone pair. Both count.'

@@ -13,7 +13,7 @@ To compare fractions, decimals, and percents: **convert to the same form**.
 
 Easiest: convert everything to decimals.
 
-$\frac{3}{8}$ vs $0.4$: $3÷8 = 0.375 < 0.4$ ✅
+$\\frac{3}{8}$ vs $0.4$: $3÷8 = 0.375 < 0.4$ ✅
     
     `
     },
@@ -23,9 +23,9 @@ $\frac{3}{8}$ vs $0.4$: $3÷8 = 0.375 < 0.4$ ✅
       content: `
 ## Worked Example
 
-**Order from least to greatest: $\frac{1}{3}$, 0.3, 35%**
+**Order from least to greatest: $\\frac{1}{3}$, 0.3, 35%**
 
-$\frac{1}{3} \approx 0.333$, $0.3$, $35\% = 0.35$
+$\\frac{1}{3} \approx 0.333$, $0.3$, $35\% = 0.35$
 
 Order: $0.3 < 0.333 < 0.35$ ✅
     
@@ -59,11 +59,11 @@ Order: $0.3 < 0.333 < 0.35$ ✅
       content: `
 **Convert to Decimals to Compare** 🧮
 
-1) $\frac{3}{8} = ?$
+1) $\\frac{3}{8} = ?$
 
 2) $45\% = ?$
 
-3) $\frac{3}{4} = ?$
+3) $\\frac{3}{4} = ?$
     
     `,
       exercise: {

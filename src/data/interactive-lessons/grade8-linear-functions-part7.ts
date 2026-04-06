@@ -11,7 +11,7 @@ export const g8LinearPart7Data = {
 
 ### Key Concepts
 - Function: one output per input
-- Slope: $m = \frac{y_2-y_1}{x_2-x_1}$
+- Slope: $m = \\frac{y_2-y_1}{x_2-x_1}$
 - Slope-intercept: $y = mx + b$
 - System solution: intersection point
     
@@ -25,7 +25,7 @@ export const g8LinearPart7Data = {
 
 **Line through (1,4) and (3,10). Equation?**
 
-$m = \frac{10-4}{3-1} = 3$. Then $4 = 3(1) + b \Rightarrow b = 1$.
+$m = \\frac{10-4}{3-1} = 3$. Then $4 = 3(1) + b \\Rightarrow b = 1$.
 $y = 3x + 1$ ✅
     
     `

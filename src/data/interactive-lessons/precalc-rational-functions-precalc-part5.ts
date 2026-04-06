@@ -67,10 +67,10 @@ export const precalcRationalPart5Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | General form | $f(x)=\frac{p(x)}{q(x)}$ | ratio modeling |
-      | Vertical asymptote test | $q(c)=0\text{ and factor not cancelled}$ | non-removable singularity |
-      | Horizontal rule | $\deg p < \deg q \Rightarrow y=0$ | end behavior shortcut |
-      | Hole simplification | $\frac{(x-a)g(x)}{(x-a)h(x)}=\frac{g(x)}{h(x)}\;(x\neq a)$ | removable cleanup |
+      | General form | $f(x)=\\frac{p(x)}{q(x)}$ | ratio modeling |
+      | Vertical asymptote test | $q(c)=0\\text{ and factor not cancelled}$ | non-removable singularity |
+      | Horizontal rule | $\deg p < \deg q \\Rightarrow y=0$ | end behavior shortcut |
+      | Hole simplification | $\\frac{(x-a)g(x)}{(x-a)h(x)}=\\frac{g(x)}{h(x)}\;(x\\neq a)$ | removable cleanup |
       
       ### Common pitfalls
       - Asymptotes are approach lines, not always graph intersections to forbid.

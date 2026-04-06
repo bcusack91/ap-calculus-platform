@@ -10,15 +10,15 @@ export const calcbcPartialFracPart5Data = {
 
 ### The Logistic Equation
 
-$$\frac{dP}{dt} = kP(L - P)$$
+$$\\frac{dP}{dt} = kP(L - P)$$
 
 Separation of variables:
 
-$$\frac{dP}{P(L-P)} = k\,dt$$
+$$\\frac{dP}{P(L-P)} = k\,dt$$
 
 Use partial fractions on the left side!
 
-$$\frac{1}{P(L-P)} = \frac{1}{L}\left(\frac{1}{P} + \frac{1}{L-P}\right)$$`
+$$\\frac{1}{P(L-P)} = \\frac{1}{L}\left(\\frac{1}{P} + \\frac{1}{L-P}\\right)$$`
     },
     {
       id: 'pf5-quiz1',

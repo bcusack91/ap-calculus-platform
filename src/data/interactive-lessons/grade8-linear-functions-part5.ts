@@ -25,7 +25,7 @@ Solving: graphing, substitution, or elimination.
 
 **$y = x + 1$ and $y = 2x - 1$.**
 
-Set equal: $x + 1 = 2x - 1 \Rightarrow 2 = x$. Then $y = 2 + 1 = 3$.
+Set equal: $x + 1 = 2x - 1 \\Rightarrow 2 = x$. Then $y = 2 + 1 = 3$.
 
 Solution: $(2, 3)$ ✅
     

@@ -11,8 +11,8 @@ export const geoCoordProofsPart7Data = {
 
 ### Key Formulas
 - Distance: $\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$
-- Midpoint: $\left(\frac{x_1+x_2}{2}, \frac{y_1+y_2}{2}\right)$
-- Slope: $\frac{y_2-y_1}{x_2-x_1}$
+- Midpoint: $\left(\\frac{x_1+x_2}{2}, \\frac{y_1+y_2}{2}\\right)$
+- Slope: $\\frac{y_2-y_1}{x_2-x_1}$
 - Parallel: $m_1 = m_2$; Perpendicular: $m_1 \cdot m_2 = -1$
     
     `

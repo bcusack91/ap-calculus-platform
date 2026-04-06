@@ -11,9 +11,9 @@ export const g4MultiDigitMultPart3Data = {
 
 Multiply each digit separately, then add:
 
-$24 \times 7$:
-- $20 \times 7 = 140$
-- $4 \times 7 = 28$
+$24 \\times 7$:
+- $20 \\times 7 = 140$
+- $4 \\times 7 = 28$
 - $140 + 28 = 168$
     
     `
@@ -24,9 +24,9 @@ $24 \times 7$:
       content: `
 ## Worked Example
 
-$36 \times 24$:
-- $36 \times 20 = 720$
-- $36 \times 4 = 144$
+$36 \\times 24$:
+- $36 \\times 20 = 720$
+- $36 \\times 4 = 144$
 - $720 + 144 = 864$ ✅
     
     `
@@ -59,11 +59,11 @@ $36 \times 24$:
       content: `
 **Partial Products** 🧮
 
-1) $24 \times 7 = ?$
+1) $24 \\times 7 = ?$
 
-2) $36 \times 26 = ?$
+2) $36 \\times 26 = ?$
 
-3) $56 \times 38 = ?$
+3) $56 \\times 38 = ?$
     
     `,
       exercise: {
@@ -97,9 +97,9 @@ $36 \times 24$:
 
 | # | Problem | Partial Products |
 |---|---------|-----------------|
-| 1 | $18 \times 5$ | $10(5) + 8(5)$ |
-| 2 | $27 \times 13$ | $27(10) + 27(3)$ |
-| 3 | $45 \times 32$ | $45(30) + 45(2)$ |
+| 1 | $18 \\times 5$ | $10(5) + 8(5)$ |
+| 2 | $27 \\times 13$ | $27(10) + 27(3)$ |
+| 3 | $45 \\times 32$ | $45(30) + 45(2)$ |
     
     `
     },

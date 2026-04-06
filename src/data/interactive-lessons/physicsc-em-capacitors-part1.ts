@@ -9,7 +9,7 @@ export const physCEMCapacitorsPart1Data = {
 
 **Part 1 of 7 — Capacitance**
 
-$C = \frac{Q}{V}$
+$C = \\frac{Q}{V}$
 
 - Capacitance is the ratio of stored charge to voltage
 - SI unit: **Farad** (F) = C/V
@@ -24,9 +24,9 @@ $C = \frac{Q}{V}$
       content: `
 ## Worked Example
 
-**A capacitor stores $6 \times 10^{-6}$ C at 3 V. Find $C$.**
+**A capacitor stores $6 \\times 10^{-6}$ C at 3 V. Find $C$.**
 
-$C = Q/V = 6 \times 10^{-6} / 3 = 2 \times 10^{-6}$ F $= 2$ μF ✅
+$C = Q/V = 6 \\times 10^{-6} / 3 = 2 \\times 10^{-6}$ F $= 2$ μF ✅
     
     `
     },

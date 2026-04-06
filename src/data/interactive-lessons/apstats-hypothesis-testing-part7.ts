@@ -11,10 +11,10 @@ export const apStatsHypothesisPart7Data = {
 
 ### Key Concepts
 - $H_0$: null (status quo); $H_a$: alternative
-- $t = (\bar{x} - \mu_0)/(s/\sqrt{n})$, $df = n-1$
+- $t = (\\bar{x} - \mu_0)/(s/\sqrt{n})$, $df = n-1$
 - p < α → reject; p ≥ α → fail to reject
 - Type I: reject true $H_0$; Type II: fail to reject false $H_0$
-- Power = $1 - \beta$
+- Power = $1 - \\beta$
     
     `
     },

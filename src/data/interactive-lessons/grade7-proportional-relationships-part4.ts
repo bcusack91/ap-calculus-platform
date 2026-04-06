@@ -11,7 +11,7 @@ export const g7ProportionalPart4Data = {
 
 A **scale drawing** uses a ratio to represent real sizes.
 
-Scale: $1\text{ in} = 8\text{ ft}$ means every inch represents 8 feet.
+Scale: $1\\text{ in} = 8\\text{ ft}$ means every inch represents 8 feet.
 
 Actual = drawing measurement × scale factor
     
@@ -25,7 +25,7 @@ Actual = drawing measurement × scale factor
 
 **Scale: 1 in = 5 ft. A room is 3 in wide on the drawing. Actual width?**
 
-$3 \times 5 = 15$ ft ✅
+$3 \\times 5 = 15$ ft ✅
     
     `
     },

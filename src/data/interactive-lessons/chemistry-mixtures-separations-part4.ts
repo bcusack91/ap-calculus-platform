@@ -175,24 +175,28 @@ Always measure at the wavelength of **maximum absorbance** ($\\lambda_{\\text{ma
         dropdowns: [
           {
             id: 'mx4-dd1',
+            label: 'According to Beer\'s Law ($A = \\varepsilon bc$), increasing concentration',
             options: ['increases', 'decreases', 'stays the same'],
             correctIndex: 0,
             explanation: 'According to Beer\'s Law ($A = \\varepsilon bc$), increasing concentration increases absorbance proportionally.'
           },
           {
             id: 'mx4-dd2',
+            label: 'Transmittance $T = 10^{-A}$. As absorbance increases, transmittance',
             options: ['increases', 'decreases', 'stays the same'],
             correctIndex: 1,
             explanation: 'Transmittance $T = 10^{-A}$. As absorbance increases, transmittance decreases. More light is absorbed, less is transmitted.'
           },
           {
             id: 'mx4-dd3',
+            label: 'A plot of $A$ vs. $c$ (Beer\'s Law plot) gives',
             options: ['a straight line through the origin', 'a curved line', 'a horizontal line'],
             correctIndex: 0,
             explanation: 'A plot of $A$ vs. $c$ (Beer\'s Law plot) gives a straight line through the origin with slope $= \\varepsilon b$, provided Beer\'s Law is obeyed.'
           },
           {
             id: 'mx4-dd4',
+            label: '$\\lambda_{\\text{max}}$ is the _______',
             options: ['wavelength of maximum absorbance', 'wavelength of minimum absorbance', 'any convenient wavelength'],
             correctIndex: 0,
             explanation: '$\\lambda_{\\text{max}}$ is the wavelength of maximum absorbance. It provides the best sensitivity and linearity for quantitative analysis.'

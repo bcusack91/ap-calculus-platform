@@ -9,10 +9,10 @@ export const apStatsProbabilityPart3Data = {
 
 **Part 3 of 7 — Multiplication Rule**
 
-$P(A \cap B) = P(A) \times P(B|A)$
+$P(A \cap B) = P(A) \\times P(B|A)$
 
 For **independent** events:
-$P(A \cap B) = P(A) \times P(B)$
+$P(A \cap B) = P(A) \\times P(B)$
     
     `
     },
@@ -24,7 +24,7 @@ $P(A \cap B) = P(A) \times P(B)$
 
 **Two coin flips. P(HH)?**
 
-Independent: $P(H) \times P(H) = 0.5 \times 0.5 = 0.25$ ✅
+Independent: $P(H) \\times P(H) = 0.5 \\times 0.5 = 0.25$ ✅
     
     `
     },

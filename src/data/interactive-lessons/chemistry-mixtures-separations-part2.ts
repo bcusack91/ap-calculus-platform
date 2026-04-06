@@ -151,24 +151,28 @@ Used when boiling points are **close together** (< 25°C difference):
         dropdowns: [
           {
             id: 'mx2-dd1',
+            label: 'A precipitate (insoluble solid) is best separated from the liquid by _______',
             options: ['filtration', 'evaporation', 'simple distillation', 'fractional distillation'],
             correctIndex: 0,
             explanation: 'A precipitate (insoluble solid) is best separated from the liquid by filtration.'
           },
           {
             id: 'mx2-dd2',
+            label: 'To recover a dissolved solid when you don\'t need the solvent',
             options: ['filtration', 'evaporation', 'simple distillation', 'fractional distillation'],
             correctIndex: 1,
             explanation: 'To recover a dissolved solid when you don\'t need the solvent, simply evaporate the liquid away.'
           },
           {
             id: 'mx2-dd3',
+            label: 'Ethanol (bp 78°C) and water (bp 100°C) have boiling points only 22°C apart —',
             options: ['filtration', 'evaporation', 'simple distillation', 'fractional distillation'],
             correctIndex: 3,
             explanation: 'Ethanol (bp 78°C) and water (bp 100°C) have boiling points only 22°C apart — use fractional distillation for better separation.'
           },
           {
             id: 'mx2-dd4',
+            label: 'To get pure water from saltwater, use _______',
             options: ['filtration', 'evaporation', 'simple distillation', 'fractional distillation'],
             correctIndex: 2,
             explanation: 'To get pure water from saltwater, use simple distillation. Water evaporates at 100°C while NaCl stays behind (bp ~1413°C). The large bp difference makes simple distillation sufficient.'

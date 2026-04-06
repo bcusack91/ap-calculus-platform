@@ -10,13 +10,13 @@ export const calcbcSeriesPart2Data = {
 
 ### Telescoping Series
 
-$$\sum_{n=1}^{\infty}\left(\frac{1}{n} - \frac{1}{n+1}\right) = 1$$
+$$\sum_{n=1}^{\infty}\left(\\frac{1}{n} - \\frac{1}{n+1}\\right) = 1$$
 
-Partial sum: $S_n = 1 - \frac{1}{n+1} \to 1$.
+Partial sum: $S_n = 1 - \\frac{1}{n+1} \\to 1$.
 
 ### $n$th Term Divergence Test
 
-$$\text{If } \lim_{n \to \infty} a_n \neq 0 \text{, then } \sum a_n \text{ diverges}$$
+$$\\text{If } \lim_{n \\to \infty} a_n \\neq 0 \\text{, then } \sum a_n \\text{ diverges}$$
 
 **CAUTION**: If $\lim a_n = 0$, the test is INCONCLUSIVE.`
     },

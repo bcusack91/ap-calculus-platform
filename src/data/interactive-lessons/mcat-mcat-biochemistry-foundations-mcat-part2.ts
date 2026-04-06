@@ -89,10 +89,10 @@ Catalytic efficiency is often summarized by $k_{cat}/K_m$, useful for comparing 
 **Question:** An enzyme has $K_m = 5$ mM and $V_{max} = 120$ $\u00b5$mol/min. What is the reaction velocity when $[S] = 15$ mM?
 
 **Solution:**
-$$v = \frac{V_{max}[S]}{K_m + [S]} = \frac{120 \times 15}{5 + 15} = \frac{1800}{20} = 90 \text{ }\u00b5\text{mol/min}$$
+$$v = \\frac{V_{max}[S]}{K_m + [S]} = \\frac{120 \\times 15}{5 + 15} = \\frac{1800}{20} = 90 \\text{ }\u00b5\\text{mol/min}$$
 
 **Interpretation**:
-- When $[S] = 3 \times K_m$, the enzyme is at 75% $V_{max}$ (not yet saturated)
+- When $[S] = 3 \\times K_m$, the enzyme is at 75% $V_{max}$ (not yet saturated)
 - As [S] increases further toward infinite concentration, v → $V_{max}$ asymptotically
 
 **MCAT Strategy**: You don't memorize $v = 0.75 V_{max}$ when $[S] = 3K_m$. Instead, use the equation. At low [S] << $K_m$, velocity is nearly first-order in [S]. At high [S]  >> $K_m$, velocity is nearly zero-order.
@@ -141,10 +141,10 @@ Classify each inhibitor type.
 1. **Catalytic efficiency** = $k_{cat}/K_m$ (velocity per unit substrate at low [S])
 
 2. **Enzyme A**: 
-   $$\frac{k_{cat}}{K_m} = \frac{500}{0.5} = 1000 \text{ s}^{-1}\text{/mM}$$
+   $$\\frac{k_{cat}}{K_m} = \\frac{500}{0.5} = 1000 \\text{ s}^{-1}\\text{/mM}$$
 
 3. **Enzyme B**:
-   $$\frac{k_{cat}}{K_m} = \frac{2000}{5} = 400 \text{ s}^{-1}\text{/mM}$$
+   $$\\frac{k_{cat}}{K_m} = \\frac{2000}{5} = 400 \\text{ s}^{-1}\\text{/mM}$$
 
 4. **Result**: Enzyme A is more efficient (2.5× higher $k_{cat}/K_m$)
 
@@ -177,7 +177,7 @@ Identify the inhibitor types.
 
 **Solution:**
 
-1. **Lineweaver-Burk equation**: $\frac{1}{v} = \frac{K_m}{V_{max}} \cdot \frac{1}{[S]} + \frac{1}{V_{max}}$
+1. **Lineweaver-Burk equation**: $\\frac{1}{v} = \\frac{K_m}{V_{max}} \cdot \\frac{1}{[S]} + \\frac{1}{V_{max}}$
    - Slope = $K_m/V_{max}$
    - y-intercept = $1/V_{max}$
    - x-intercept = $-1/K_m$

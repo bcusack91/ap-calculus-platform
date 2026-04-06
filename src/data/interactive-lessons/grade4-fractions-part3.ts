@@ -11,7 +11,7 @@ export const g4FractionsPart3Data = {
 
 When fractions share a denominator, add the numerators and keep the denominator:
 
-$\frac{a}{d} + \frac{b}{d} = \frac{a+b}{d}$
+$\\frac{a}{d} + \\frac{b}{d} = \\frac{a+b}{d}$
 
 Always simplify the result!
     
@@ -23,9 +23,9 @@ Always simplify the result!
       content: `
 ## Worked Example
 
-$\frac{3}{8} + \frac{4}{8} = \frac{7}{8}$ ✅
+$\\frac{3}{8} + \\frac{4}{8} = \\frac{7}{8}$ ✅
 
-$\frac{5}{6} + \frac{1}{6} = \frac{6}{6} = 1$ ✅
+$\\frac{5}{6} + \\frac{1}{6} = \\frac{6}{6} = 1$ ✅
     
     `
     },
@@ -57,11 +57,11 @@ $\frac{5}{6} + \frac{1}{6} = \frac{6}{6} = 1$ ✅
       content: `
 **Adding Practice** 🧮
 
-1) $\frac{2}{8} + \frac{3}{8} = \frac{?}{8}$ — Numerator?
+1) $\\frac{2}{8} + \\frac{3}{8} = \\frac{?}{8}$ — Numerator?
 
-2) $\frac{3}{10} + \frac{4}{10} = \frac{?}{10}$ — Numerator?
+2) $\\frac{3}{10} + \\frac{4}{10} = \\frac{?}{10}$ — Numerator?
 
-3) $\frac{5}{6} + \frac{1}{6} = $ ? (simplify to a whole number)
+3) $\\frac{5}{6} + \\frac{1}{6} = $ ? (simplify to a whole number)
     
     `,
       exercise: {
@@ -95,9 +95,9 @@ $\frac{5}{6} + \frac{1}{6} = \frac{6}{6} = 1$ ✅
 
 | # | Problem | Key Idea |
 |---|---------|----------|
-| 1 | $\frac{1}{5} + \frac{2}{5}$ | Keep denominator |
-| 2 | $\frac{3}{10} + \frac{7}{10}$ | Simplify result |
-| 3 | $\frac{2}{9} + \frac{4}{9}$ | Check for simplification |
+| 1 | $\\frac{1}{5} + \\frac{2}{5}$ | Keep denominator |
+| 2 | $\\frac{3}{10} + \\frac{7}{10}$ | Simplify result |
+| 3 | $\\frac{2}{9} + \\frac{4}{9}$ | Check for simplification |
     
     `
     },

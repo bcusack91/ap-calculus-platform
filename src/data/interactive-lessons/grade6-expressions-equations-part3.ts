@@ -16,7 +16,7 @@ export const g6ExpressionsPart3Data = {
 | Associative (add) | $(a+b)+c = a+(b+c)$ |
 | Distributive | $a(b+c) = ab + ac$ |
 | Identity (add) | $a + 0 = a$ |
-| Identity (mult) | $a \times 1 = a$ |
+| Identity (mult) | $a \\times 1 = a$ |
     
     `
     },
@@ -100,7 +100,7 @@ $4(x + 3) = 4x + 12$ ✅
 |---|-----------|-------|
 | 1 | $3(x + 5)$ | Distributive |
 | 2 | $7 + 0$ | Identity |
-| 3 | $2 \times (5 \times 3)$ | Associative |
+| 3 | $2 \\times (5 \\times 3)$ | Associative |
     
     `
     },

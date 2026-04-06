@@ -22,9 +22,9 @@ This lesson is built to match the interactive gold-standard format: concise theo
 When appropriate, use:
 
 $$
-\text{Rate of Change} = \frac{\Delta y}{\Delta x},
+\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
 \quad
-\text{Average Value} = \frac{1}{b-a}\int_a^b f(x)\,dx
+\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
 $$
 
 and interpret what the final value means in context.
@@ -75,7 +75,7 @@ Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
    $f(0)=3$, $f(2)=-1$, $f(4)=3$.
 2. **Average rate of change** from 0 to 4:
    $$
-   \frac{f(4)-f(0)}{4-0} = \frac{3-3}{4} = 0
+   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
    $$
 3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
 

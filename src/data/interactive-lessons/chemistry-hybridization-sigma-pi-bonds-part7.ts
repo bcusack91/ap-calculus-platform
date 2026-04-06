@@ -123,7 +123,7 @@ A common AP question: *"Explain why CO₂ is nonpolar but SO₂ is polar."*
       exercise: {
         inputs: [
           {
-            label: 'Total sigma bonds in CH₃COCH₃ (acetone: H₃C–C(=O)–CH₃ with 6 C–H, 2 C–C, and 1 C=O)',
+            label: 'Total sigma bonds in CH₃COCH₃ (acetone: H₃C–C(=O)–CH₃)',
             correctAnswer: '9',
             explanation: '6 C–H bonds (6σ) + 2 C–C bonds (2σ) + 1 C=O double bond (1σ + 1π) = 9 sigma bonds total.'
           },
@@ -154,24 +154,28 @@ A common AP question: *"Explain why CO₂ is nonpolar but SO₂ is polar."*
         dropdowns: [
           {
             id: 'hy-7-6-dd1',
+            label: 'Is CO₂ polar or nonpolar?',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
             explanation: 'CO₂ is sp → linear → symmetric → bond dipoles cancel → nonpolar.'
           },
           {
             id: 'hy-7-6-dd2',
+            label: 'Is SO₂ polar or nonpolar?',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 0,
             explanation: 'SO₂ is sp² with 1 lone pair → bent → asymmetric → bond dipoles do not cancel → polar.'
           },
           {
             id: 'hy-7-6-dd3',
+            label: 'Is CCl₄ polar or nonpolar?',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
             explanation: 'CCl₄ is sp³ → tetrahedral → symmetric → all C–Cl dipoles cancel → nonpolar.'
           },
           {
             id: 'hy-7-6-dd4',
+            label: 'Is CHCl₃ polar or nonpolar?',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 0,
             explanation: 'CHCl₃ is sp³ → tetrahedral but not symmetric (3 Cl + 1 H) → dipoles don\'t cancel → polar.'

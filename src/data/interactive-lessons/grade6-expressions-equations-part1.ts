@@ -15,7 +15,7 @@ An **algebraic expression** uses variables, numbers, and operations.
 |--------|-----------|
 | 5 more than x | $x + 5$ |
 | 3 times a number | $3n$ |
-| a number divided by 4 | $\frac{n}{4}$ |
+| a number divided by 4 | $\\frac{n}{4}$ |
 | 7 less than y | $y - 7$ |
     
     `

@@ -12,7 +12,7 @@ export const calcbcPartialFracPart4Data = {
 
 You must do **polynomial long division** first!
 
-$\frac{x^2 + 1}{x - 1} = x + 1 + \frac{2}{x-1}$
+$\\frac{x^2 + 1}{x - 1} = x + 1 + \\frac{2}{x-1}$
 
 Then integrate term by term.`
     },

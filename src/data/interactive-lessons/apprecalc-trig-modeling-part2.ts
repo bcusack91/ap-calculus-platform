@@ -10,9 +10,9 @@ export const apPrecalcTrigModelPart2Data = {
 **Part 2 of 7 — Amplitude & Period**
 
 - **Amplitude** = $|A|$ (distance from midline to max/min)
-- **Period** = $\frac{2\pi}{|B|}$ (one full cycle length)
+- **Period** = $\\frac{2\pi}{|B|}$ (one full cycle length)
 
-For $y = 3\sin(2x)$: amplitude = 3, period = $\frac{2\pi}{2} = \pi$
+For $y = 3\sin(2x)$: amplitude = 3, period = $\\frac{2\pi}{2} = \pi$
     
     `
     },
@@ -24,7 +24,7 @@ For $y = 3\sin(2x)$: amplitude = 3, period = $\frac{2\pi}{2} = \pi$
 
 **$y = 4\cos(3x)$. Amplitude? Period?**
 
-Amplitude = 4, Period = $\frac{2\pi}{3} \approx 2.09$ ✅
+Amplitude = 4, Period = $\\frac{2\pi}{3} \approx 2.09$ ✅
     
     `
     },

@@ -15,7 +15,7 @@ To compare fractions with different denominators:
 Find the LCD, convert, compare numerators.
 
 ### Method 2: Cross-Multiplication
-$\frac{a}{b}$ vs $\frac{c}{d}$: compare $a \times d$ and $b \times c$.
+$\\frac{a}{b}$ vs $\\frac{c}{d}$: compare $a \\times d$ and $b \\times c$.
     
     `
     },
@@ -25,11 +25,11 @@ $\frac{a}{b}$ vs $\frac{c}{d}$: compare $a \times d$ and $b \times c$.
       content: `
 ## Worked Example
 
-**Compare $\frac{3}{5}$ and $\frac{2}{3}$.**
+**Compare $\\frac{3}{5}$ and $\\frac{2}{3}$.**
 
-Cross-multiply: $3 \times 3 = 9$ and $5 \times 2 = 10$.
+Cross-multiply: $3 \\times 3 = 9$ and $5 \\times 2 = 10$.
 
-Since $9 < 10$: $\frac{3}{5} < \frac{2}{3}$ ✅
+Since $9 < 10$: $\\frac{3}{5} < \\frac{2}{3}$ ✅
     
     `
     },
@@ -63,11 +63,11 @@ Since $9 < 10$: $\frac{3}{5} < \frac{2}{3}$ ✅
 
 Write >, <, or = :
 
-1) $\frac{3}{4}$ _____ $\frac{2}{3}$
+1) $\\frac{3}{4}$ _____ $\\frac{2}{3}$
 
-2) $\frac{1}{3}$ _____ $\frac{2}{5}$
+2) $\\frac{1}{3}$ _____ $\\frac{2}{5}$
 
-3) $\frac{4}{6}$ _____ $\frac{2}{3}$
+3) $\\frac{4}{6}$ _____ $\\frac{2}{3}$
     
     `,
       exercise: {
@@ -101,9 +101,9 @@ Write >, <, or = :
 
 | # | Problem | Hint |
 |---|---------|------|
-| 1 | Compare $\frac{1}{3}$ and $\frac{1}{4}$ | Larger denominator = smaller pieces |
-| 2 | Order: $\frac{1}{2}, \frac{3}{8}, \frac{5}{8}$ | Convert to eighths |
-| 3 | Find a fraction between $\frac{1}{4}$ and $\frac{1}{2}$ | Common denominator |
+| 1 | Compare $\\frac{1}{3}$ and $\\frac{1}{4}$ | Larger denominator = smaller pieces |
+| 2 | Order: $\\frac{1}{2}, \\frac{3}{8}, \\frac{5}{8}$ | Convert to eighths |
+| 3 | Find a fraction between $\\frac{1}{4}$ and $\\frac{1}{2}$ | Common denominator |
     
     `
     },

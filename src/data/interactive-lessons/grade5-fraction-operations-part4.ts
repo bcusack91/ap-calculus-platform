@@ -10,7 +10,7 @@ export const g5FractionOpsPart4Data = {
 **Part 4 of 7 — Dividing Fractions**
 
 **Keep, Change, Flip** (KCF):
-$\frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \times \frac{d}{c}$
+$\\frac{a}{b} \div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c}$
 
 Keep the first fraction, change ÷ to ×, flip the second fraction.
     
@@ -22,7 +22,7 @@ Keep the first fraction, change ÷ to ×, flip the second fraction.
       content: `
 ## Worked Example
 
-$\frac{3}{4} \div \frac{2}{5} = \frac{3}{4} \times \frac{5}{2} = \frac{15}{8} = 1\frac{7}{8}$ ✅
+$\\frac{3}{4} \div \\frac{2}{5} = \\frac{3}{4} \\times \\frac{5}{2} = \\frac{15}{8} = 1\\frac{7}{8}$ ✅
     
     `
     },
@@ -54,11 +54,11 @@ $\frac{3}{4} \div \frac{2}{5} = \frac{3}{4} \times \frac{5}{2} = \frac{15}{8} = 
       content: `
 **Divide Fractions** 🧮
 
-1) $\frac{1}{2} \div \frac{1}{4} = ?$
+1) $\\frac{1}{2} \div \\frac{1}{4} = ?$
 
-2) $\frac{3}{5} \div \frac{2}{3}$: numerator of the result (before simplifying)?
+2) $\\frac{3}{5} \div \\frac{2}{3}$: numerator of the result (before simplifying)?
 
-3) $4 \div \frac{1}{3} = ?$
+3) $4 \div \\frac{1}{3} = ?$
     
     `,
       exercise: {
@@ -92,9 +92,9 @@ $\frac{3}{4} \div \frac{2}{5} = \frac{3}{4} \times \frac{5}{2} = \frac{15}{8} = 
 
 | # | Problem | Reciprocal |
 |---|---------|------------|
-| 1 | $\frac{1}{2} \div \frac{1}{4}$ | Flip 1/4 → 4/1 |
-| 2 | $\frac{3}{5} \div \frac{2}{3}$ | Flip 2/3 → 3/2 |
-| 3 | $4 \div \frac{1}{3}$ | Flip 1/3 → 3/1 |
+| 1 | $\\frac{1}{2} \div \\frac{1}{4}$ | Flip 1/4 → 4/1 |
+| 2 | $\\frac{3}{5} \div \\frac{2}{3}$ | Flip 2/3 → 3/2 |
+| 3 | $4 \div \\frac{1}{3}$ | Flip 1/3 → 3/1 |
     
     `
     },

@@ -175,24 +175,28 @@ If the 2 lone pairs were adjacent (cis), they would be only 90° apart — very 
         dropdowns: [
           {
             id: 'vg-4-6-dd1',
+            label: 'Molecular geometry of H₂O',
             options: ['Bent', 'Trigonal pyramidal', 'Tetrahedral', 'Linear'],
             correctIndex: 0,
             explanation: 'H₂O has 2 bonds + 2 lone pairs on oxygen (steric number 4). Molecular geometry: bent.'
           },
           {
             id: 'vg-4-6-dd2',
+            label: 'Molecular geometry of SF₄',
             options: ['Trigonal bipyramidal', 'Seesaw', 'T-shaped', 'Linear'],
             correctIndex: 1,
             explanation: 'SF₄ has 4 bonds + 1 lone pair on sulfur (steric number 5). The lone pair goes equatorial → seesaw shape.'
           },
           {
             id: 'vg-4-6-dd3',
+            label: 'Molecular geometry of XeF₄',
             options: ['Octahedral', 'Square pyramidal', 'Square planar', 'Tetrahedral'],
             correctIndex: 2,
             explanation: 'XeF₄ has 4 bonds + 2 lone pairs on xenon (steric number 6). The 2 lone pairs go trans → square planar.'
           },
           {
             id: 'vg-4-6-dd4',
+            label: 'Molecular geometry of ClF₃',
             options: ['Trigonal bipyramidal', 'Seesaw', 'T-shaped', 'Linear'],
             correctIndex: 2,
             explanation: 'ClF₃ has 3 bonds + 2 lone pairs on chlorine (steric number 5). Both lone pairs equatorial → T-shaped.'
@@ -208,17 +212,17 @@ If the 2 lone pairs were adjacent (cis), they would be only 90° apart — very 
       exercise: {
         inputs: [
           {
-            label: 'Number of lone pairs on S in SF₄ (S has 6 valence e⁻, uses 4 for bonds)',
+            label: 'Number of lone pairs on S in SF₄',
             correctAnswer: '1',
             explanation: 'Sulfur has 6 valence electrons. 4 are used in bonds to F, leaving 2 electrons = 1 lone pair.'
           },
           {
-            label: 'Number of lone pairs on Xe in XeF₂ (Xe has 8 valence e⁻, uses 2 for bonds)',
+            label: 'Number of lone pairs on Xe in XeF₂',
             correctAnswer: '3',
             explanation: 'Xenon has 8 valence electrons. 2 are used in bonds to F, leaving 6 electrons = 3 lone pairs.'
           },
           {
-            label: 'Number of lone pairs on Xe in XeF₄ (Xe has 8 valence e⁻, uses 4 for bonds)',
+            label: 'Number of lone pairs on Xe in XeF₄',
             correctAnswer: '2',
             explanation: 'Xenon has 8 valence electrons. 4 are used in bonds to F, leaving 4 electrons = 2 lone pairs.'
           }

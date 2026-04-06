@@ -15,7 +15,7 @@ export const calcbcSequencesPart5Data = {
 
 ### Divergence Test Preview
 
-If $\lim_{n \to \infty} a_n \neq 0$, then $\sum a_n$ **diverges**.
+If $\lim_{n \\to \infty} a_n \\neq 0$, then $\sum a_n$ **diverges**.
 
 But $\lim a_n = 0$ does NOT guarantee convergence! ($\sum 1/n$ diverges.)`
     },

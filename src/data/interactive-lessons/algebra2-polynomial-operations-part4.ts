@@ -11,7 +11,7 @@ export const alg2PolynomialsPart4Data = {
 
 **Long division** or **synthetic division** (for divisor $x - c$).
 
-$\frac{x^2 + 3x + 2}{x + 1} = x + 2$
+$\\frac{x^2 + 3x + 2}{x + 1} = x + 2$
     
     `
     },

@@ -16,7 +16,7 @@ If $f$ is differentiable and the table shows:
 |-----|---|---|
 | $f(x)$ | 3 | 12 |
 
-Then by MVT, there exists $c \in (1, 4)$ where $f'(c) = \frac{12 - 3}{4 - 1} = 3$.
+Then by MVT, there exists $c \in (1, 4)$ where $f'(c) = \\frac{12 - 3}{4 - 1} = 3$.
 
 > **AP Tip:** You MUST cite "by the Mean Value Theorem" and verify the hypotheses (continuous + differentiable).`
     },

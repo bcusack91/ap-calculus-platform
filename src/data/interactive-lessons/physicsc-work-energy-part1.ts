@@ -13,8 +13,8 @@ Work done by a variable force along a path:
 
 $W = \int_{x_1}^{x_2} F(x)\,dx$
 
-For a constant force at angle $\theta$ to displacement:
-$W = Fd\cos\theta$
+For a constant force at angle $\\theta$ to displacement:
+$W = Fd\cos\\theta$
 
 Work is a scalar quantity measured in Joules (J).
     

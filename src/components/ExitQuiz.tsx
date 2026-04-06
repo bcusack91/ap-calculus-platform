@@ -6,6 +6,7 @@ import { renderRichText } from '@/lib/render-rich-text'
 import 'katex/dist/katex.min.css'
 import ReferenceSheetModal from './ReferenceSheetModal'
 import { hasReferenceSheet, getCourseSlugFromTopic } from '@/data/ap-reference-sheets'
+import ScratchPad from '@/components/ScratchPad'
 
 interface ExitQuizQuestion {
   id: string
@@ -15,6 +16,7 @@ interface ExitQuizQuestion {
   explanation: string
   category: string
   topicSlug?: string
+  partNumber?: number
 }
 
 interface ExitQuizProps {
@@ -22,11 +24,12 @@ interface ExitQuizProps {
   topicTitle: string
   courseSlug?: string
   questions: ExitQuizQuestion[]
-  onComplete: (score: number, total: number, passed: boolean, mustRedoUnit: boolean, wrongTopicSlugs?: string[]) => void
+  onComplete: (score: number, total: number, passed: boolean, mustRedoUnit: boolean, wrongTopicSlugs?: string[], wrongPartNumbers?: number[]) => void
   onCancel: () => void
   previousAttempts: number
   lastScore: number | null
   mustRedoUnit: boolean // from last attempt
+  variant?: number // current content variant (1-3)
 }
 
 // Render text with markdown tables and KaTeX math
@@ -43,7 +46,8 @@ export default function ExitQuiz({
   onCancel,
   previousAttempts,
   lastScore,
-  mustRedoUnit
+  mustRedoUnit,
+  variant
 }: ExitQuizProps) {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
@@ -151,6 +155,17 @@ export default function ExitQuiz({
     return Array.from(wrongSlugs)
   }, [answers, questions])
 
+  // Compute unique part numbers where the student got wrong answers (for variant retry targeting)
+  const wrongPartNumbers = useMemo(() => {
+    const wrongParts = new Set<number>()
+    answers.forEach((a, i) => {
+      if (!a.correct && questions[i]?.partNumber) {
+        wrongParts.add(questions[i].partNumber!)
+      }
+    })
+    return Array.from(wrongParts).sort((a, b) => a - b)
+  }, [answers, questions])
+
   const submitResults = useCallback(async () => {
     if (submitting) return
     setSubmitting(true)
@@ -166,7 +181,8 @@ export default function ExitQuiz({
           passed,
           mustRedoUnit: quizMustRedoUnit,
           answers,
-          timeSpent
+          timeSpent,
+          variant: variant ?? 1
         })
       })
     } catch (err) {
@@ -216,7 +232,7 @@ export default function ExitQuiz({
                 ⚔️ Competitive mode for this section is now unlocked!
               </p>
               <p className="text-green-600 dark:text-green-400 text-sm mt-2">
-                You can now challenge other students in SAT Linear Equations.
+                You can now challenge other students in {topicTitle}.
               </p>
             </div>
           ) : quizMustRedoUnit ? (
@@ -271,7 +287,7 @@ export default function ExitQuiz({
             {passed ? (
               <>
                 <button
-                  onClick={() => onComplete(score, totalQuestions, true, false, wrongTopicSlugs)}
+                  onClick={() => onComplete(score, totalQuestions, true, false, wrongTopicSlugs, wrongPartNumbers)}
                   className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 shadow-lg"
                 >
                   ⚔️ Go to Competitive Mode
@@ -287,14 +303,14 @@ export default function ExitQuiz({
               </>
             ) : quizMustRedoUnit ? (
               <button
-                onClick={() => onComplete(score, totalQuestions, false, true, wrongTopicSlugs)}
+                onClick={() => onComplete(score, totalQuestions, false, true, wrongTopicSlugs, wrongPartNumbers)}
                 className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 shadow-lg"
               >
                 📚 Review This Section
               </button>
             ) : (
               <button
-                onClick={() => onComplete(score, totalQuestions, false, false, wrongTopicSlugs)}
+                onClick={() => onComplete(score, totalQuestions, false, false, wrongTopicSlugs, wrongPartNumbers)}
                 className="px-8 py-3 rounded-xl font-semibold bg-gradient-to-r from-yellow-500 to-amber-500 text-white hover:from-yellow-600 hover:to-amber-600 shadow-lg"
               >
                 🔄 Retake Quiz
@@ -355,17 +371,18 @@ export default function ExitQuiz({
           </span>
         </div>
 
-        {/* Reference material buttons */}
-        {resolvedCourseSlug && hasReferenceSheet(resolvedCourseSlug) && (
-          <div className="flex gap-2 mb-4">
+        {/* Reference material & tools */}
+        <div className="flex gap-2 mb-4">
+          {resolvedCourseSlug && hasReferenceSheet(resolvedCourseSlug) && (
             <button
               onClick={() => setShowReference(true)}
               className="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
             >
               📋 Reference Sheet
             </button>
-          </div>
-        )}
+          )}
+          <ScratchPad storageKey={`exit-quiz-${topicSlug}`} />
+        </div>
         <ReferenceSheetModal open={showReference} onClose={() => setShowReference(false)} courseSlug={resolvedCourseSlug} topicSlug={topicSlug} />
 
         {/* Question */}

@@ -13,9 +13,9 @@ $I = \sum m_i r_i^2 = \int r^2\,dm$
 
 Common moments of inertia:
 - Point mass: $I = mr^2$
-- Solid cylinder/disk: $I = \frac{1}{2}mr^2$
-- Solid sphere: $I = \frac{2}{5}mr^2$
-- Thin rod (center): $I = \frac{1}{12}mL^2$
+- Solid cylinder/disk: $I = \\frac{1}{2}mr^2$
+- Solid sphere: $I = \\frac{2}{5}mr^2$
+- Thin rod (center): $I = \\frac{1}{12}mL^2$
 - Thin hoop: $I = mr^2$
 
 **Parallel axis theorem:** $I = I_{cm} + md^2$
@@ -101,8 +101,8 @@ $I = mr^2 = 3(4) = 12$ kg·m² ✅
 | # | Object | $I$ |
 |---|--------|-----|
 | 1 | Point mass | $mr^2$ |
-| 2 | Disk | $\frac{1}{2}mr^2$ |
-| 3 | Sphere | $\frac{2}{5}mr^2$ |
+| 2 | Disk | $\\frac{1}{2}mr^2$ |
+| 3 | Sphere | $\\frac{2}{5}mr^2$ |
     
     `
     },

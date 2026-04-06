@@ -190,18 +190,21 @@ Hybridization is the atom\'s way of optimizing orbital geometry for bonding. The
         dropdowns: [
           {
             id: 'hy-1-7-dd1',
+            label: 'An atom with 4 electron domains has _______ hybridization',
             options: ['sp', 'sp²', 'sp³', 'sp³d'],
             correctIndex: 2,
             explanation: 'An atom with 4 electron domains has sp³ hybridization. This applies to CH₄, NH₃, H₂O, etc.'
           },
           {
             id: 'hy-1-7-dd2',
+            label: 'The ideal sp³ tetrahedral bond angle is',
             options: ['90°', '109.5°', '120°', '180°'],
             correctIndex: 1,
             explanation: 'The ideal sp³ tetrahedral bond angle is 109.5°.'
           },
           {
             id: 'hy-1-7-dd3',
+            label: 'Mixing 1 s + 3 p orbitals gives exactly _______ sp³ hybrid orbitals',
             options: ['1', '2', '3', '4'],
             correctIndex: 3,
             explanation: 'Mixing 1 s + 3 p orbitals gives exactly 4 sp³ hybrid orbitals — the number of hybrids always equals the number of atomic orbitals combined.'

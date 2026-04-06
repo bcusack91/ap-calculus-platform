@@ -10,14 +10,14 @@ export const physCRotationPart1Data = {
 **Part 1 of 7 — Angular Kinematics**
 
 Rotational analogs of linear kinematics:
-- $\theta \leftrightarrow x$, $\omega \leftrightarrow v$, $\alpha \leftrightarrow a$
+- $\\theta \leftrightarrow x$, $\omega \leftrightarrow v$, $\alpha \leftrightarrow a$
 
-$\omega = \frac{d\theta}{dt}, \quad \alpha = \frac{d\omega}{dt}$
+$\omega = \\frac{d\\theta}{dt}, \quad \alpha = \\frac{d\omega}{dt}$
 
 For constant $\alpha$:
 - $\omega = \omega_0 + \alpha t$
-- $\theta = \omega_0 t + \frac{1}{2}\alpha t^2$
-- $\omega^2 = \omega_0^2 + 2\alpha\theta$
+- $\\theta = \omega_0 t + \\frac{1}{2}\alpha t^2$
+- $\omega^2 = \omega_0^2 + 2\alpha\\theta$
     
     `
     },
@@ -100,8 +100,8 @@ $\omega = \omega_0 + \alpha t = 0 + 4(3) = 12$ rad/s ✅
 | # | Quantity | Formula |
 |---|---------|---------|
 | 1 | Angular velocity | $\omega = \omega_0 + \alpha t$ |
-| 2 | Angular displacement | $\theta = \omega_0 t + \frac{1}{2}\alpha t^2$ |
-| 3 | Without time | $\omega^2 = \omega_0^2 + 2\alpha\theta$ |
+| 2 | Angular displacement | $\\theta = \omega_0 t + \\frac{1}{2}\alpha t^2$ |
+| 3 | Without time | $\omega^2 = \omega_0^2 + 2\alpha\\theta$ |
     
     `
     },

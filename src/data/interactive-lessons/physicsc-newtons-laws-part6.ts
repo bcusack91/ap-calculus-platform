@@ -26,7 +26,7 @@ export const physCNewtonPart6Data = {
 
 **A 5 kg block is pushed with 40 N along a surface with $\mu_k = 0.2$. Find the acceleration. ($g = 10$ m/s²)**
 
-$N = mg = 50$ N, $f_k = 0.2 \times 50 = 10$ N
+$N = mg = 50$ N, $f_k = 0.2 \\times 50 = 10$ N
 
 $\sum F = 40 - 10 = 30$ N
 

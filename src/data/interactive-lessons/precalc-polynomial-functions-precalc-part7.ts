@@ -67,10 +67,10 @@ export const precalcPolynomialPart7Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Quadratic roots | $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ | embedded factor analysis |
+      | Quadratic roots | $x=\\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ | embedded factor analysis |
       | Degree sum | $\deg(pq)=\deg p+\deg q$ | model-building checks |
       | Factored form | $p(x)=a\prod (x-r_i)^{m_i}$ | zero/multiplicity encoding |
-      | Remainder theorem | $\text{rem}(p\div (x-c))=p(c)$ | fast root testing |
+      | Remainder theorem | $\\text{rem}(p\div (x-c))=p(c)$ | fast root testing |
       
       ### Common pitfalls
       - Multiplicity affects local graph shape at zeros.

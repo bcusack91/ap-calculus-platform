@@ -15,7 +15,7 @@ To add fractions with different denominators:
 3. Add numerators, keep the LCD
 4. Simplify if needed
 
-$\frac{1}{3} + \frac{1}{4} = \frac{4}{12} + \frac{3}{12} = \frac{7}{12}$
+$\\frac{1}{3} + \\frac{1}{4} = \\frac{4}{12} + \\frac{3}{12} = \\frac{7}{12}$
     
     `
     },
@@ -25,11 +25,11 @@ $\frac{1}{3} + \frac{1}{4} = \frac{4}{12} + \frac{3}{12} = \frac{7}{12}$
       content: `
 ## Worked Example
 
-$\frac{2}{5} + \frac{1}{3} = ?$
+$\\frac{2}{5} + \\frac{1}{3} = ?$
 
 LCD of 5 and 3 = 15.
-$\frac{2}{5} = \frac{6}{15}$, $\frac{1}{3} = \frac{5}{15}$
-$\frac{6}{15} + \frac{5}{15} = \frac{11}{15}$ ✅
+$\\frac{2}{5} = \\frac{6}{15}$, $\\frac{1}{3} = \\frac{5}{15}$
+$\\frac{6}{15} + \\frac{5}{15} = \\frac{11}{15}$ ✅
     
     `
     },
@@ -61,11 +61,11 @@ $\frac{6}{15} + \frac{5}{15} = \frac{11}{15}$ ✅
       content: `
 **Add Fractions** 🧮
 
-1) $\frac{1}{2} + \frac{1}{3} = \frac{?}{6}$ — Numerator?
+1) $\\frac{1}{2} + \\frac{1}{3} = \\frac{?}{6}$ — Numerator?
 
-2) $\frac{3}{4} + \frac{1}{6} = \frac{?}{12}$ — Numerator?
+2) $\\frac{3}{4} + \\frac{1}{6} = \\frac{?}{12}$ — Numerator?
 
-3) $\frac{2}{3} + \frac{3}{5} = \frac{?}{15}$ — Numerator?
+3) $\\frac{2}{3} + \\frac{3}{5} = \\frac{?}{15}$ — Numerator?
     
     `,
       exercise: {
@@ -99,9 +99,9 @@ $\frac{6}{15} + \frac{5}{15} = \frac{11}{15}$ ✅
 
 | # | Problem | LCD |
 |---|---------|-----|
-| 1 | $\frac{1}{2} + \frac{1}{3}$ | 6 |
-| 2 | $\frac{3}{4} + \frac{1}{6}$ | 12 |
-| 3 | $\frac{2}{3} + \frac{3}{5}$ | 15 |
+| 1 | $\\frac{1}{2} + \\frac{1}{3}$ | 6 |
+| 2 | $\\frac{3}{4} + \\frac{1}{6}$ | 12 |
+| 3 | $\\frac{2}{3} + \\frac{3}{5}$ | 15 |
     
     `
     },

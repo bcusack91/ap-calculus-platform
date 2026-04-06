@@ -165,6 +165,8 @@ export default async function InteractivePage(props: InteractivePageProps) {
             topicSlug={topic.slug}
             courseSlug={topic.category.course.slug}
             preloadedParts={lessonConfig.parts}
+            variantParts={lessonConfig.variantParts}
+            totalVariants={lessonConfig.totalVariants}
             completionDestination={lessonConfig.completionDestination}
             practiceModeParts={lessonConfig.practiceModeParts}
           />

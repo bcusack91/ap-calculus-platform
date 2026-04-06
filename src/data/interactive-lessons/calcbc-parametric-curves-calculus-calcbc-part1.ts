@@ -16,15 +16,15 @@ $$x = f(t), \quad y = g(t)$$
 
 ### First Derivative
 
-$$\frac{dy}{dx} = \frac{dy/dt}{dx/dt} = \frac{g'(t)}{f'(t)}$$
+$$\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt} = \\frac{g'(t)}{f'(t)}$$
 
 ### Worked Example
 
 $x = t^2$, $y = t^3$
 
-$\frac{dx}{dt} = 2t$, $\frac{dy}{dt} = 3t^2$
+$\\frac{dx}{dt} = 2t$, $\\frac{dy}{dt} = 3t^2$
 
-$$\frac{dy}{dx} = \frac{3t^2}{2t} = \frac{3t}{2}$$
+$$\\frac{dy}{dx} = \\frac{3t^2}{2t} = \\frac{3t}{2}$$
 
 At $t = 2$: slope $= 3$.`
     },

@@ -25,7 +25,7 @@ Multiply or divide both parts by the same number.
 
 **Find an equivalent ratio to 3:5 with first term 12.**
 
-$3 \times 4 = 12$, so $5 \times 4 = 20$.
+$3 \\times 4 = 12$, so $5 \\times 4 = 20$.
 
 $3:5 = 12:20$ ✅
     

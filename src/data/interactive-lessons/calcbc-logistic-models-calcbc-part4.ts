@@ -10,7 +10,7 @@ export const calcbcLogisticPart4Data = {
 
 ### From the DE
 
-$\frac{dP}{dt} = 0.1P(1 - P/2000)$, $P(0) = 200$
+$\\frac{dP}{dt} = 0.1P(1 - P/2000)$, $P(0) = 200$
 
 - Carrying capacity: $L = 2000$
 - Growth constant: $k = 0.1$

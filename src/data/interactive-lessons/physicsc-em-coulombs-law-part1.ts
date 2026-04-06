@@ -9,7 +9,7 @@ export const physCEMCoulombPart1Data = {
 
 **Part 1 of 7 — Electric Charge**
 
-- Charge is **quantized**: $q = ne$ where $e = 1.6 \times 10^{-19}$ C
+- Charge is **quantized**: $q = ne$ where $e = 1.6 \\times 10^{-19}$ C
 - Charge is **conserved** in all processes
 - Like charges repel, unlike charges attract
 - Conductors allow charge flow; insulators do not
@@ -22,9 +22,9 @@ export const physCEMCoulombPart1Data = {
       content: `
 ## Worked Example
 
-**How many excess electrons on an object with charge $-3.2 \times 10^{-19}$ C?**
+**How many excess electrons on an object with charge $-3.2 \\times 10^{-19}$ C?**
 
-$n = \frac{q}{e} = \frac{3.2 \times 10^{-19}}{1.6 \times 10^{-19}} = 2$ electrons ✅
+$n = \\frac{q}{e} = \\frac{3.2 \\times 10^{-19}}{1.6 \\times 10^{-19}} = 2$ electrons ✅
     
     `
     },
@@ -56,9 +56,9 @@ $n = \frac{q}{e} = \frac{3.2 \times 10^{-19}}{1.6 \times 10^{-19}} = 2$ electron
       content: `
 **Electric Charge** 🧮
 
-1) $q = -3.2 \times 10^{-19}$ C. How many excess electrons?
+1) $q = -3.2 \\times 10^{-19}$ C. How many excess electrons?
 
-2) An object has $q = -8.0 \times 10^{-19}$ C. How many excess electrons?
+2) An object has $q = -8.0 \\times 10^{-19}$ C. How many excess electrons?
 
 3) Two spheres: $+5$ μC and $+1$ μC. After touching, each has ____ μC.
     
@@ -94,7 +94,7 @@ $n = \frac{q}{e} = \frac{3.2 \times 10^{-19}}{1.6 \times 10^{-19}} = 2$ electron
 
 | # | Concept | Key Fact |
 |---|---------|----------|
-| 1 | Elementary charge | $e = 1.6 \times 10^{-19}$ C |
+| 1 | Elementary charge | $e = 1.6 \\times 10^{-19}$ C |
 | 2 | Charge conservation | Total charge is constant |
 | 3 | Quantization | Charge comes in integer multiples of $e$ |
     

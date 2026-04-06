@@ -179,24 +179,28 @@ Hybridization applies to atoms that form covalent bonds. Terminal atoms (like H 
         dropdowns: [
           {
             id: 'hy-4-7-dd1',
+            label: 'sp³ hybridization gives an ideal bond angle of',
             options: ['109.5°', '120°', '180°', '90°'],
             correctIndex: 0,
             explanation: 'sp³ hybridization gives an ideal bond angle of 109.5° (tetrahedral geometry).'
           },
           {
             id: 'hy-4-7-dd2',
+            label: 'An atom with 3 bonds and 1 lone pair has steric number 4 → _______ hybridization',
             options: ['sp', 'sp²', 'sp³', 'sp³d'],
             correctIndex: 2,
             explanation: 'An atom with 3 bonds and 1 lone pair has steric number 4 → sp³ hybridization. The lone pair counts!'
           },
           {
             id: 'hy-4-7-dd3',
+            label: 'Steric number 3 with 0 lone pairs → sp² → _______ electron and molecular',
             options: ['Linear', 'Trigonal planar', 'Tetrahedral', 'Bent'],
             correctIndex: 1,
             explanation: 'Steric number 3 with 0 lone pairs → sp² → trigonal planar electron and molecular geometry.'
           },
           {
             id: 'hy-4-7-dd4',
+            label: 'Adding a lone pair changes the steric number from 3 to 4',
             options: ['Stays sp²', 'Changes to sp³', 'Changes to sp', 'Becomes unhybridized'],
             correctIndex: 1,
             explanation: 'Adding a lone pair changes the steric number from 3 to 4, changing the hybridization from sp² to sp³.'

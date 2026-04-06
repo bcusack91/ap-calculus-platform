@@ -11,7 +11,7 @@ export const alg2RationalPart3Data = {
 
 Need a **common denominator**.
 
-$\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}$
+$\\frac{a}{b} + \\frac{c}{d} = \\frac{ad + bc}{bd}$
 
 **LCD** (Least Common Denominator): smallest expression that both denominators divide into.
     
@@ -23,9 +23,9 @@ $\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}$
       content: `
 ## Worked Example
 
-$\frac{2}{x} + \frac{3}{x} = \frac{5}{x}$ ✅ (same denominator)
+$\\frac{2}{x} + \\frac{3}{x} = \\frac{5}{x}$ ✅ (same denominator)
 
-$\frac{1}{x} + \frac{1}{x+1} = \frac{(x+1) + x}{x(x+1)} = \frac{2x+1}{x(x+1)}$ ✅
+$\\frac{1}{x} + \\frac{1}{x+1} = \\frac{(x+1) + x}{x(x+1)} = \\frac{2x+1}{x(x+1)}$ ✅
     
     `
     },
@@ -57,11 +57,11 @@ $\frac{1}{x} + \frac{1}{x+1} = \frac{(x+1) + x}{x(x+1)} = \frac{2x+1}{x(x+1)}$ �
       content: `
 **Add/Subtract** 🧮
 
-1) $\frac{3}{x} + \frac{2}{x} = \frac{?}{x}$ (numerator)
+1) $\\frac{3}{x} + \\frac{2}{x} = \\frac{?}{x}$ (numerator)
 
-2) $\frac{1}{2} + \frac{1}{3} = \frac{?}{6}$ (numerator)
+2) $\\frac{1}{2} + \\frac{1}{3} = \\frac{?}{6}$ (numerator)
 
-3) $\frac{1}{x} + \frac{1}{2x} = \frac{?}{2x}$ (numerator)
+3) $\\frac{1}{x} + \\frac{1}{2x} = \\frac{?}{2x}$ (numerator)
     
     `,
       exercise: {
@@ -95,9 +95,9 @@ $\frac{1}{x} + \frac{1}{x+1} = \frac{(x+1) + x}{x(x+1)} = \frac{2x+1}{x(x+1)}$ �
 
 | # | Problem | LCD |
 |---|---------|-----|
-| 1 | $\frac{3}{x}+\frac{2}{x}$ | $x$ |
-| 2 | $\frac{1}{2}+\frac{1}{3}$ | $6$ |
-| 3 | $\frac{1}{x}+\frac{1}{2x}$ | $2x$ |
+| 1 | $\\frac{3}{x}+\\frac{2}{x}$ | $x$ |
+| 2 | $\\frac{1}{2}+\\frac{1}{3}$ | $6$ |
+| 3 | $\\frac{1}{x}+\\frac{1}{2x}$ | $2x$ |
     
     `
     },

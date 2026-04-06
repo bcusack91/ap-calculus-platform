@@ -13,7 +13,7 @@ For isolated systems with only conservative forces:
 
 $KE_i + U_i = KE_f + U_f$
 
-$\frac{1}{2}mv_i^2 + mgh_i = \frac{1}{2}mv_f^2 + mgh_f$
+$\\frac{1}{2}mv_i^2 + mgh_i = \\frac{1}{2}mv_f^2 + mgh_f$
 
 If non-conservative forces (friction) act:
 $KE_i + U_i + W_{nc} = KE_f + U_f$
@@ -28,7 +28,7 @@ $KE_i + U_i + W_{nc} = KE_f + U_f$
 
 **A ball is dropped from 20 m. Find its speed at the ground. ($g = 10$ m/s²)**
 
-$mgh = \frac{1}{2}mv^2 \implies v = \sqrt{2gh} = \sqrt{2(10)(20)} = 20$ m/s ✅
+$mgh = \\frac{1}{2}mv^2 \implies v = \sqrt{2gh} = \sqrt{2(10)(20)} = 20$ m/s ✅
     
     `
     },
@@ -98,9 +98,9 @@ $mgh = \frac{1}{2}mv^2 \implies v = \sqrt{2gh} = \sqrt{2(10)(20)} = 20$ m/s ✅
 
 | # | Scenario | Equation |
 |---|----------|----------|
-| 1 | Dropped object | $mgh = \frac{1}{2}mv^2$ |
-| 2 | Spring launch | $\frac{1}{2}kx^2 = \frac{1}{2}mv^2$ |
-| 3 | Friction on ramp | $mgh = \frac{1}{2}mv^2 + f_k d$ |
+| 1 | Dropped object | $mgh = \\frac{1}{2}mv^2$ |
+| 2 | Spring launch | $\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2$ |
+| 3 | Friction on ramp | $mgh = \\frac{1}{2}mv^2 + f_k d$ |
     
     `
     },

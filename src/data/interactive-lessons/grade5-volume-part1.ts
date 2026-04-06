@@ -23,7 +23,7 @@ Think of volume as the number of unit cubes that fit inside a shape.
 
 **A box is filled with unit cubes in 3 layers, each layer has 4 rows of 5 cubes.**
 
-$V = 5 \times 4 \times 3 = 60$ unit cubes ✅
+$V = 5 \\times 4 \\times 3 = 60$ unit cubes ✅
     
     `
     },

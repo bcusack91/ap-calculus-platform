@@ -9,7 +9,7 @@ export const g4FractionsPart5Data = {
 
 **Part 5 of 7 — Fractions on Number Lines**
 
-To place $\frac{a}{b}$ on a number line:
+To place $\\frac{a}{b}$ on a number line:
 1. Divide the space between whole numbers into $b$ equal parts
 2. Count $a$ parts from the left
     
@@ -21,9 +21,9 @@ To place $\frac{a}{b}$ on a number line:
       content: `
 ## Worked Example
 
-**Place $\frac{3}{4}$ on a 0–1 number line.**
+**Place $\\frac{3}{4}$ on a 0–1 number line.**
 
-Divide 0–1 into 4 equal parts. The 3rd mark is $\frac{3}{4}$. ✅
+Divide 0–1 into 4 equal parts. The 3rd mark is $\\frac{3}{4}$. ✅
     
     `
     },
@@ -55,11 +55,11 @@ Divide 0–1 into 4 equal parts. The 3rd mark is $\frac{3}{4}$. ✅
       content: `
 **Number Lines** 🧮
 
-1) A 0–1 line divided into 4 parts. The 3rd mark = $\frac{?}{4}$. Numerator?
+1) A 0–1 line divided into 4 parts. The 3rd mark = $\\frac{?}{4}$. Numerator?
 
-2) Halfway between $\frac{1}{2}$ and $1$: express as $\frac{?}{8}$. Numerator?
+2) Halfway between $\\frac{1}{2}$ and $1$: express as $\\frac{?}{8}$. Numerator?
 
-3) How many eighths from 0 is $\frac{5}{8}$?
+3) How many eighths from 0 is $\\frac{5}{8}$?
     
     `,
       exercise: {
@@ -93,8 +93,8 @@ Divide 0–1 into 4 equal parts. The 3rd mark is $\frac{3}{4}$. ✅
 
 | # | Concept | Key Idea |
 |---|---------|----------|
-| 1 | Place $\frac{1}{3}$ on 0–1 | Divide into 3 parts |
-| 2 | Place $1\frac{1}{2}$ on 0–2 | Past the 1 mark |
+| 1 | Place $\\frac{1}{3}$ on 0–1 | Divide into 3 parts |
+| 2 | Place $1\\frac{1}{2}$ on 0–2 | Past the 1 mark |
 | 3 | Identify fractions at marks | Count equal divisions |
     
     `

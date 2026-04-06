@@ -26,8 +26,8 @@ Combine all probability rules:
 **P(rain) = 0.3. P(no rain on 2 consecutive days)?**
 
 Independent days:
-$P(\text{no rain}) = 1 - 0.3 = 0.7$
-$P(\text{both dry}) = 0.7 \times 0.7 = 0.49$ ✅
+$P(\\text{no rain}) = 1 - 0.3 = 0.7$
+$P(\\text{both dry}) = 0.7 \\times 0.7 = 0.49$ ✅
     
     `
     },

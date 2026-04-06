@@ -138,9 +138,9 @@ A solid sphere has radius $r = 0.05$ m and mass $m = 1.5$ kg. (Volume of sphere:
         boxes: 3,
         correctAnswers: ['0.00052', '2885', 'sink'],
         hint1: '$V = \\frac{4}{3}\\pi (0.05)^3 = \\frac{4}{3}\\pi (1.25 \\times 10^{-4})$.',
-        hint2: '$V \approx 5.24 \times 10^{-4}\ \text{m}^3 \approx 0.00052\ \text{m}^3$. Then $\rho = 1.5 / 0.00052$.',
-        hint3: '$\rho \approx 2885$ kg/m³. Since $2885 > 1000$, it sinks.',
-        explanation: '$V = (4/3)\pi(0.05)^3 \approx 5.24 \times 10^{-4}$ m³. Rounded: $0.00052$ m³. $\rho = 1.5/0.00052 \approx 2885$ kg/m³. Since this is greater than water (1000), it sinks. Accept values in range 2860-2890.'
+        hint2: '$V \approx 5.24 \\times 10^{-4}\ \\text{m}^3 \approx 0.00052\ \\text{m}^3$. Then $\\rho = 1.5 / 0.00052$.',
+        hint3: '$\\rho \approx 2885$ kg/m³. Since $2885 > 1000$, it sinks.',
+        explanation: '$V = (4/3)\pi(0.05)^3 \approx 5.24 \\times 10^{-4}$ m³. Rounded: $0.00052$ m³. $\\rho = 1.5/0.00052 \approx 2885$ kg/m³. Since this is greater than water (1000), it sinks. Accept values in range 2860-2890.'
       }
     },
     {

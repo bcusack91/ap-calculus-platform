@@ -9,10 +9,10 @@ export const satProbSolvDataPart6Data = {
 **Part 6 of 7 — SAT Probability Essentials**
 
 ### Basic Probability
-$$P(\text{event}) = \frac{\text{favorable outcomes}}{\text{total outcomes}}$$
+$$P(\\text{event}) = \\frac{\\text{favorable outcomes}}{\\text{total outcomes}}$$
 
 ### Complement Rule
-$$P(\text{not A}) = 1 - P(A)$$
+$$P(\\text{not A}) = 1 - P(A)$$
 
 Often easier: "What's the probability of getting AT LEAST one?" = 1 − P(none).
 
@@ -27,13 +27,13 @@ Often easier: "What's the probability of getting AT LEAST one?" = 1 − P(none).
 
 ### Expected Value
 If the SAT asks what value you'd "expect":
-$$\text{Expected} = \text{Total} \times P(\text{event})$$
+$$\\text{Expected} = \\text{Total} \\times P(\\text{event})$$
 
 Example: 200 people surveyed, 35% prefer A → Expected = 200 × 0.35 = 70
 
 ### Relative Frequency
 Just another word for proportion:
-$$\text{Relative frequency of A} = \frac{\text{count of A}}{\text{total count}}$$`
+$$\\text{Relative frequency of A} = \\frac{\\text{count of A}}{\\text{total count}}$$`
     },
     {
       id: 'psd6-q1',

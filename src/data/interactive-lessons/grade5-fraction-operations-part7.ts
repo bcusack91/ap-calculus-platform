@@ -23,9 +23,9 @@ export const g5FractionOpsPart7Data = {
       content: `
 ## Worked Example
 
-$\frac{5}{6} - \frac{1}{4} = ?$
+$\\frac{5}{6} - \\frac{1}{4} = ?$
 
-LCD = 12: $\frac{10}{12} - \frac{3}{12} = \frac{7}{12}$ ✅
+LCD = 12: $\\frac{10}{12} - \\frac{3}{12} = \\frac{7}{12}$ ✅
     
     `
     },
@@ -57,11 +57,11 @@ LCD = 12: $\frac{10}{12} - \frac{3}{12} = \frac{7}{12}$ ✅
       content: `
 **Review** 🧮
 
-1) $\frac{3}{8} + \frac{1}{4} = \frac{?}{8}$ — Numerator?
+1) $\\frac{3}{8} + \\frac{1}{4} = \\frac{?}{8}$ — Numerator?
 
-2) $\frac{5}{6} \times \frac{2}{5}$: simplify. Numerator?
+2) $\\frac{5}{6} \\times \\frac{2}{5}$: simplify. Numerator?
 
-3) $\frac{2}{3} \div \frac{4}{9}$: simplify. Numerator?
+3) $\\frac{2}{3} \div \\frac{4}{9}$: simplify. Numerator?
     
     `,
       exercise: {
@@ -95,9 +95,9 @@ LCD = 12: $\frac{10}{12} - \frac{3}{12} = \frac{7}{12}$ ✅
 
 | # | Operation | Problem |
 |---|-----------|---------|
-| 1 | Add | $\frac{3}{8} + \frac{1}{4}$ |
-| 2 | Multiply | $\frac{5}{6} \times \frac{2}{5}$ |
-| 3 | Divide | $\frac{2}{3} \div \frac{4}{9}$ |
+| 1 | Add | $\\frac{3}{8} + \\frac{1}{4}$ |
+| 2 | Multiply | $\\frac{5}{6} \\times \\frac{2}{5}$ |
+| 3 | Divide | $\\frac{2}{3} \div \\frac{4}{9}$ |
     
     `
     },

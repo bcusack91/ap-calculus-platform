@@ -25,13 +25,13 @@ Steps:
       content: `
 ## Worked Example
 
-**$f(x) = \frac{x+2}{x-1}$**
+**$f(x) = \\frac{x+2}{x-1}$**
 
 - No common factors → no holes
 - VA: $x = 1$
 - HA: $y = 1$ (equal degrees, 1/1)
 - x-int: $x = -2$
-- y-int: $f(0) = \frac{2}{-1} = -2$ ✅
+- y-int: $f(0) = \\frac{2}{-1} = -2$ ✅
     
     `
     },
@@ -61,7 +61,7 @@ Steps:
       id: 'apprecalc-rational-functions-p5-input',
       type: 'input-boxes' as const,
       content: `
-**Graph $\frac{x}{x-2}$** 🧮
+**Graph $\\frac{x}{x-2}$** 🧮
 
 1) VA at $x = $ ?
 
@@ -101,8 +101,8 @@ Steps:
 
 | # | Function | VA | HA | x-int |
 |---|---------|----|----|-------|
-| 1 | $\frac{x}{x-2}$ | 2 | 1 | 0 |
-| 2 | $\frac{3}{x+1}$ | −1 | 0 | none |
+| 1 | $\\frac{x}{x-2}$ | 2 | 1 | 0 |
+| 2 | $\\frac{3}{x+1}$ | −1 | 0 | none |
     
     `
     },

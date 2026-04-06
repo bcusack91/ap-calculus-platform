@@ -3,10 +3,10 @@
 import { useState, useEffect } from 'react'
 
 const SIZES = [
-  { label: 'S', value: 14 },
-  { label: 'M', value: 16 },
-  { label: 'L', value: 18 },
-  { label: 'XL', value: 20 },
+  { label: 'S', value: 14, zoom: '0.875' },
+  { label: 'M', value: 16, zoom: '1' },
+  { label: 'L', value: 18, zoom: '1.125' },
+  { label: 'XL', value: 20, zoom: '1.25' },
 ]
 
 export default function FontSizeAdjuster() {
@@ -21,13 +21,17 @@ export default function FontSizeAdjuster() {
   })
 
   useEffect(() => {
+    const sizeConfig = SIZES.find(s => s.value === size) || SIZES[1]
     document.documentElement.style.setProperty('--content-font-size', `${size}px`)
+    document.documentElement.style.setProperty('--content-zoom', sizeConfig.zoom)
   }, [size])
 
   const changeSize = (newSize: number) => {
     setSize(newSize)
     localStorage.setItem('preferred-font-size', String(newSize))
+    const sizeConfig = SIZES.find(s => s.value === newSize) || SIZES[1]
     document.documentElement.style.setProperty('--content-font-size', `${newSize}px`)
+    document.documentElement.style.setProperty('--content-zoom', sizeConfig.zoom)
   }
 
   return (

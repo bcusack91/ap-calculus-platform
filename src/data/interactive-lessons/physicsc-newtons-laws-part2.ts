@@ -9,10 +9,10 @@ export const physCNewtonPart2Data = {
 
 **Part 2 of 7 — Newton's Second Law with Calculus**
 
-$\vec{F}_{\text{net}} = m\vec{a} = m\frac{d\vec{v}}{dt} = \frac{d\vec{p}}{dt}$
+$\\vec{F}_{\\text{net}} = m\\vec{a} = m\\frac{d\\vec{v}}{dt} = \\frac{d\\vec{p}}{dt}$
 
 When force varies with time or position, use calculus:
-- $v(t) = v_0 + \int_0^t \frac{F(t')}{m}\,dt'$
+- $v(t) = v_0 + \int_0^t \\frac{F(t')}{m}\,dt'$
 - $x(t) = x_0 + \int_0^t v(t')\,dt'$
     
     `
@@ -25,9 +25,9 @@ When force varies with time or position, use calculus:
 
 **A 2 kg object has $F(t) = 6t$ N. Find velocity at $t = 3$ s if $v(0) = 0$.**
 
-$a(t) = \frac{F}{m} = \frac{6t}{2} = 3t$
+$a(t) = \\frac{F}{m} = \\frac{6t}{2} = 3t$
 
-$v(3) = \int_0^3 3t\,dt = \frac{3t^2}{2}\Big|_0^3 = \frac{27}{2} = 13.5$ m/s ✅
+$v(3) = \int_0^3 3t\,dt = \\frac{3t^2}{2}\Big|_0^3 = \\frac{27}{2} = 13.5$ m/s ✅
     
     `
     },

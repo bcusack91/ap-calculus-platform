@@ -10,15 +10,15 @@ export const calcabInverseFunctionsPart2Data = {
 
 ### Essential Formulas
 
-$$\frac{d}{dx}[\arcsin x] = \frac{1}{\sqrt{1-x^2}}$$
+$$\\frac{d}{dx}[\arcsin x] = \\frac{1}{\sqrt{1-x^2}}$$
 
-$$\frac{d}{dx}[\arccos x] = -\frac{1}{\sqrt{1-x^2}}$$
+$$\\frac{d}{dx}[\arccos x] = -\\frac{1}{\sqrt{1-x^2}}$$
 
-$$\frac{d}{dx}[\arctan x] = \frac{1}{1+x^2}$$
+$$\\frac{d}{dx}[\arctan x] = \\frac{1}{1+x^2}$$
 
 ### With Chain Rule
 
-$$\frac{d}{dx}[\arctan(g(x))] = \frac{g'(x)}{1+(g(x))^2}$$`
+$$\\frac{d}{dx}[\arctan(g(x))] = \\frac{g'(x)}{1+(g(x))^2}$$`
     },
     {
       id: 'inv2-quiz1',

@@ -9,7 +9,7 @@ export const g6RatiosPart4Data = {
 
 **Part 4 of 7 — Solving Proportions**
 
-A **proportion** is two equal ratios: $\frac{a}{b} = \frac{c}{d}$
+A **proportion** is two equal ratios: $\\frac{a}{b} = \\frac{c}{d}$
 
 To solve, **cross-multiply**: $ad = bc$, then solve for the unknown.
     
@@ -21,9 +21,9 @@ To solve, **cross-multiply**: $ad = bc$, then solve for the unknown.
       content: `
 ## Worked Example
 
-$\frac{3}{5} = \frac{x}{20}$
+$\\frac{3}{5} = \\frac{x}{20}$
 
-Cross-multiply: $3 \times 20 = 5 \times x$ → $60 = 5x$ → $x = 12$ ✅
+Cross-multiply: $3 \\times 20 = 5 \\times x$ → $60 = 5x$ → $x = 12$ ✅
     
     `
     },
@@ -55,11 +55,11 @@ Cross-multiply: $3 \times 20 = 5 \times x$ → $60 = 5x$ → $x = 12$ ✅
       content: `
 **Solve Proportions** 🧮
 
-1) $\frac{2}{3} = \frac{x}{12}$. $x = ?$
+1) $\\frac{2}{3} = \\frac{x}{12}$. $x = ?$
 
-2) $\frac{x}{5} = \frac{6}{10}$. $x = ?$
+2) $\\frac{x}{5} = \\frac{6}{10}$. $x = ?$
 
-3) $\frac{4}{7} = \frac{12}{x}$. $x = ?$
+3) $\\frac{4}{7} = \\frac{12}{x}$. $x = ?$
     
     `,
       exercise: {
@@ -93,9 +93,9 @@ Cross-multiply: $3 \times 20 = 5 \times x$ → $60 = 5x$ → $x = 12$ ✅
 
 | # | Proportion | Solution |
 |---|-----------|----------|
-| 1 | $\frac{2}{3} = \frac{x}{12}$ | $x = 8$ |
-| 2 | $\frac{x}{5} = \frac{6}{10}$ | $x = 3$ |
-| 3 | $\frac{4}{7} = \frac{12}{x}$ | $x = 21$ |
+| 1 | $\\frac{2}{3} = \\frac{x}{12}$ | $x = 8$ |
+| 2 | $\\frac{x}{5} = \\frac{6}{10}$ | $x = 3$ |
+| 3 | $\\frac{4}{7} = \\frac{12}{x}$ | $x = 21$ |
     
     `
     },

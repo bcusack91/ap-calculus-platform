@@ -80,18 +80,21 @@ export const chemLewisStructuresFormalChargePart6Data = {
         dropdowns: [
           {
             id: 'ls-6-7-dd1',
+            label: 'XeF₄ — what type of octet exception does xenon exhibit?',
             options: ['Incomplete octet', 'Expanded octet', 'Odd-electron species'],
             correctIndex: 1,
             explanation: 'XeF₄ has an expanded octet. Xenon is in Period 5 and has 12 electrons around it (4 bonds + 2 lone pairs).'
           },
           {
             id: 'ls-6-7-dd2',
+            label: 'AlCl₃ — what type of octet exception does aluminum exhibit?',
             options: ['Incomplete octet', 'Expanded octet', 'Odd-electron species'],
             correctIndex: 0,
             explanation: 'AlCl₃ has an incomplete octet. Aluminum, like boron, forms only 3 bonds and has 6 electrons around it.'
           },
           {
             id: 'ls-6-7-dd3',
+            label: 'ClO₂ has a total of 19 valence electrons. What type of exception is this?',
             options: ['Incomplete octet', 'Expanded octet', 'Odd-electron species'],
             correctIndex: 2,
             explanation: 'ClO₂ has 19 total valence electrons (7 + 12 = 19), which is odd. It is a free radical with an unpaired electron on chlorine.'

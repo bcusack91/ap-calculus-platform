@@ -127,8 +127,15 @@ $$= -965.1 + 74.8 = -890.3 \\text{ kJ}$$
 **Formation Enthalpy Calculations** 🧮
 
 Use these $\\Delta H°_f$ values (kJ/mol):
-- $\\text{CO}_2(g) = -393.5$, $\\text{H}_2\\text{O}(l) = -285.8$, $\\text{C}_2\\text{H}_6(g) = -84.7$
-- $\\text{NH}_3(g) = -45.9$, $\\text{NO}(g) = +90.3$, $\\text{O}_2, \\text{N}_2, \\text{H}_2 = 0$
+
+| Substance | $\\Delta H°_f$ (kJ/mol) |
+|---|---|
+| $\\text{CO}_2(g)$ | $-393.5$ |
+| $\\text{H}_2\\text{O}(l)$ | $-285.8$ |
+| $\\text{C}_2\\text{H}_6(g)$ | $-84.7$ |
+| $\\text{NH}_3(g)$ | $-45.9$ |
+| $\\text{NO}(g)$ | $+90.3$ |
+| $\\text{O}_2, \\text{N}_2, \\text{H}_2$ | $0$ |
 
 1) Calculate $\\Delta H°_{\\text{rxn}}$ for: $\\text{C}_2\\text{H}_6(g) + \\frac{7}{2}\\text{O}_2(g) \\rightarrow 2\\text{CO}_2(g) + 3\\text{H}_2\\text{O}(l)$ (in kJ, to 3 significant figures)
 

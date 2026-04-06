@@ -10,7 +10,7 @@ export const calcbcImproperPart2Data = {
 
 ### $p$-Integral Test
 
-$$\int_1^{\infty} \frac{1}{x^p}\,dx \begin{cases} \text{converges} & \text{if } p > 1 \\ \text{diverges} & \text{if } p \leq 1 \end{cases}$$
+$$\int_1^{\infty} \\frac{1}{x^p}\,dx \\begin{cases} \\text{converges} & \\text{if } p > 1 \\ \\text{diverges} & \\text{if } p \leq 1 \end{cases}$$
 
 ### Key Examples
 

@@ -24,7 +24,7 @@ Calculate slopes from given coordinates, then compare.
 
 **Are AB and CD parallel? A(1,2), B(3,6), C(0,1), D(2,5).**
 
-$m_{AB} = \frac{6-2}{3-1} = 2$, $m_{CD} = \frac{5-1}{2-0} = 2$
+$m_{AB} = \\frac{6-2}{3-1} = 2$, $m_{CD} = \\frac{5-1}{2-0} = 2$
 
 Equal slopes → **parallel** ✅
     

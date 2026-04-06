@@ -9,7 +9,7 @@ export const satWordProblemsPart3Data = {
 **Part 3 of 7 — Motion & Work Problems**
 
 ### The Core Formula
-$$\text{Distance} = \text{Rate} \times \text{Time} \quad (d = rt)$$
+$$\\text{Distance} = \\text{Rate} \\times \\text{Time} \quad (d = rt)$$
 
 Rearranged: $r = d/t$ and $t = d/r$
 

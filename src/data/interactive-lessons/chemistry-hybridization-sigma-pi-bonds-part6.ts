@@ -131,7 +131,7 @@ $$\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}$$
             explanation: 'The right carbon has 1 C–H bond + 1 C–C bond + 1 C=O double bond = 3 electron domains → sp².'
           },
           {
-            label: 'Total sigma bonds in CH₃CHO? (3 C–H on left + 1 C–C + 1 C–H on right + 1 C=O)',
+            label: 'Total sigma bonds in CH₃CHO (acetaldehyde)?',
             correctAnswer: '6',
             explanation: '3 C–H (3σ) + 1 C–C (1σ) + 1 C–H (1σ) + 1 C=O (1σ + 1π). Total sigma = 3 + 1 + 1 + 1 = 6.'
           },
@@ -152,24 +152,28 @@ $$\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}$$
         dropdowns: [
           {
             id: 'hy-6-6-dd1',
+            label: 'Hybridization of the sulfur atom in SO₂',
             options: ['sp', 'sp²', 'sp³', 'sp³d'],
             correctIndex: 1,
             explanation: 'SO₂: sulfur has 2 bonded atoms + 1 lone pair = 3 electron domains → sp².'
           },
           {
             id: 'hy-6-6-dd2',
+            label: 'Hybridization of the carbon atom in CS₂',
             options: ['sp', 'sp²', 'sp³', 'sp³d'],
             correctIndex: 0,
             explanation: 'CS₂: carbon has 2 double bonds = 2 electron domains → sp hybridization. Similar structure to CO₂.'
           },
           {
             id: 'hy-6-6-dd3',
+            label: 'Hybridization of the nitrogen atom in NF₃',
             options: ['sp', 'sp²', 'sp³', 'sp³d'],
             correctIndex: 2,
             explanation: 'NF₃: nitrogen has 3 bonds + 1 lone pair = 4 electron domains → sp³.'
           },
           {
             id: 'hy-6-6-dd4',
+            label: 'Total sigma and pi bond counts in HCN',
             options: ['3σ, 0π', '3σ, 1π', '2σ, 2π', '4σ, 0π'],
             correctIndex: 2,
             explanation: 'HCN: 1 C–H single bond (1σ) + 1 C≡N triple bond (1σ + 2π) = 2σ + 2π total.'

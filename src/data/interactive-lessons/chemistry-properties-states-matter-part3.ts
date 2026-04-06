@@ -132,18 +132,21 @@ This is why warming honey makes it flow more easily — increased thermal energy
         dropdowns: [
           {
             id: 'sm3-visc-dd1',
+            label: 'Higher temperature gives molecules more kinetic energy to overcome IMFs, so',
             options: ['increases', 'decreases', 'stays the same'],
             correctIndex: 1,
             explanation: 'Higher temperature gives molecules more kinetic energy to overcome IMFs, so viscosity decreases.'
           },
           {
             id: 'sm3-visc-dd2',
+            label: 'Stronger intermolecular forces make it harder for molecules to slide past one...',
             options: ['stronger IMFs', 'weaker IMFs', 'no IMFs'],
             correctIndex: 0,
             explanation: 'Stronger intermolecular forces make it harder for molecules to slide past one another, increasing viscosity.'
           },
           {
             id: 'sm3-visc-dd3',
+            label: 'Large, complex molecules can become tangled and entangled',
             options: ['small and compact', 'large and complex', 'ionic'],
             correctIndex: 1,
             explanation: 'Large, complex molecules can become tangled and entangled, increasing resistance to flow and thus viscosity.'

@@ -10,13 +10,13 @@ export const calcbcLogisticPart2Data = {
 
 ### General Solution
 
-$$P(t) = \frac{L}{1 + Ae^{-kt}}$$
+$$P(t) = \\frac{L}{1 + Ae^{-kt}}$$
 
-where $A = \frac{L - P_0}{P_0}$.
+where $A = \\frac{L - P_0}{P_0}$.
 
 ### Behavior
 
-- As $t \to \infty$: $P \to L$
+- As $t \\to \infty$: $P \\to L$
 - $P(t)$ is always between $P_0$ and $L$ (assuming $0 < P_0 < L$)
 - S-shaped (sigmoid) curve`
     },

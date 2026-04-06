@@ -69,8 +69,8 @@ export const precalcPolynomialPart4Data = {
       |---|---|---|
       | Degree sum | $\deg(pq)=\deg p+\deg q$ | model-building checks |
       | Factored form | $p(x)=a\prod (x-r_i)^{m_i}$ | zero/multiplicity encoding |
-      | Remainder theorem | $\text{rem}(p\div (x-c))=p(c)$ | fast root testing |
-      | Quadratic roots | $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ | embedded factor analysis |
+      | Remainder theorem | $\\text{rem}(p\div (x-c))=p(c)$ | fast root testing |
+      | Quadratic roots | $x=\\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ | embedded factor analysis |
       
       ### Common pitfalls
       - Multiplicity affects local graph shape at zeros.

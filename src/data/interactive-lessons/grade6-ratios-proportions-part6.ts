@@ -24,7 +24,7 @@ Apply ratios, proportions, and percents to real-world problems:
 
 **A shirt is \$40 with 20% off. Sale price?**
 
-Discount: $0.20 \times 40 = 8$
+Discount: $0.20 \\times 40 = 8$
 Sale price: $40 - 8 = 32$ → **\$32** ✅
     
     `

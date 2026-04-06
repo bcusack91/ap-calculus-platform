@@ -176,7 +176,7 @@ Use the reduction potentials: Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.45 V, Cu²�
             options: ['non-spontaneous', 'at equilibrium', 'spontaneous', 'impossible']
           },
           {
-            label: 'In the mnemonic AN OX RED CAT, the anode is where',
+            label: 'In the mnemonic AN OX RED CAT, what process occurs at the anode?',
             options: ['reduction occurs', 'oxidation occurs', 'nothing happens', 'ions migrate']
           },
           {

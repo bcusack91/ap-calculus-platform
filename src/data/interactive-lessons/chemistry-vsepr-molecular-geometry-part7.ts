@@ -100,30 +100,35 @@ Let\'s do a comprehensive review with AP-style problems.`
         dropdowns: [
           {
             id: 'vg-7-4-dd1',
+            label: 'BCl₃ has a trigonal planar geometry with 3 identical Cl atoms. Symmetric',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
             explanation: 'BCl₃ has a trigonal planar geometry with 3 identical Cl atoms. Symmetric → nonpolar.'
           },
           {
             id: 'vg-7-4-dd2',
+            label: 'SCl₂ has a bent geometry (2 bonds + 2 lone pairs). Asymmetric',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 0,
             explanation: 'SCl₂ has a bent geometry (2 bonds + 2 lone pairs). Asymmetric → polar.'
           },
           {
             id: 'vg-7-4-dd3',
+            label: 'PCl₅ has a trigonal bipyramidal geometry with 5 identical Cl atoms and 0 lone...',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
             explanation: 'PCl₅ has a trigonal bipyramidal geometry with 5 identical Cl atoms and 0 lone pairs. Symmetric → nonpolar.'
           },
           {
             id: 'vg-7-4-dd4',
+            label: 'AsF₃ has a trigonal pyramidal geometry (3 bonds + 1 lone pair). Asymmetric',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 0,
             explanation: 'AsF₃ has a trigonal pyramidal geometry (3 bonds + 1 lone pair). Asymmetric → polar.'
           },
           {
             id: 'vg-7-4-dd5',
+            label: 'XeF₂ has a linear molecular geometry (2 bonds + 3 lone pairs',
             options: ['Polar', 'Nonpolar'],
             correctIndex: 1,
             explanation: 'XeF₂ has a linear molecular geometry (2 bonds + 3 lone pairs, axial bonds). The two Xe–F dipoles cancel → nonpolar.'

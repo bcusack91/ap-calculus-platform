@@ -16,7 +16,7 @@ For $0 \leq a_n \leq b_n$:
 
 ### Limit Comparison Test
 
-If $\lim_{n \to \infty} \frac{a_n}{b_n} = c$ where $0 < c < \infty$:
+If $\lim_{n \\to \infty} \\frac{a_n}{b_n} = c$ where $0 < c < \infty$:
 
 $\sum a_n$ and $\sum b_n$ either both converge or both diverge.`
     },

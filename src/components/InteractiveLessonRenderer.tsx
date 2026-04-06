@@ -32,21 +32,27 @@ import FontSizeAdjuster from '@/components/FontSizeAdjuster'
 import ReadingProgressBar from '@/components/ReadingProgressBar'
 import HintSystem from '@/components/HintSystem'
 import MarkForReview from '@/components/MarkForReview'
+import ScratchPad from '@/components/ScratchPad'
+import { hasReferenceSheet } from '@/data/ap-reference-sheets'
+const ReferenceSheetModal = dynamic(() => import('@/components/ReferenceSheetModal'), { ssr: false })
 
 // Helper component to render inline LaTeX within text strings
 // Parses $...$ and $$...$$ delimiters and renders via KaTeX
 function InlineLatex({ text, className }: { text: string; className?: string }) {
-  if (!text || !text.includes('$')) {
+  if (!text || (!text.includes('$') && !text.includes('\\('))) {
     return <span className={className}>{text}</span>
   }
 
+  // Normalize \(...\) delimiters to $...$ before processing
+  let normalizedText = text.replace(/\\\(([^)]*?)\\\)/g, '$$$1$$')
+
   // Protect escaped dollar signs (\$) from being treated as LaTeX delimiters
   const ESCAPED_DOLLAR = '\u0000DOLLAR\u0000'
-  const processed = text.replace(/\\\$/g, ESCAPED_DOLLAR)
+  const processed = normalizedText.replace(/\\\$/g, ESCAPED_DOLLAR)
 
   // If no unescaped $ remains, just restore and return plain text
   if (!processed.includes('$')) {
-    return <span className={className}>{text.replace(/\\\$/g, '$')}</span>
+    return <span className={className}>{normalizedText.replace(/\\\$/g, '$')}</span>
   }
 
   // Split on LaTeX delimiters: $$...$$ (display) and $...$ (inline)
@@ -248,6 +254,9 @@ interface InteractiveLessonRendererProps {
   topicSlug: string
   courseSlug?: string
   preloadedParts: PreloadedLessonPart[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  variantParts?: Record<number, any[]>
+  totalVariants?: number
   completionDestination?: 'competitive' | 'complete'
   practiceModeParts?: number[]
 }
@@ -262,7 +271,7 @@ function calculatePartMastery(lessonPart: number, completedSectionsCount: number
   return Math.min(1, baseLevel + progressInPart * partWeight)
 }
 
-export default function InteractiveLessonRenderer({ topicSlug, courseSlug, preloadedParts, completionDestination, practiceModeParts: practiceModePropParts }: InteractiveLessonRendererProps) {
+export default function InteractiveLessonRenderer({ topicSlug, courseSlug, preloadedParts, variantParts, totalVariants: totalVariantsProp, completionDestination, practiceModeParts: practiceModePropParts }: InteractiveLessonRendererProps) {
   const searchParams = useSearchParams()
   const router = useRouter()
   const { data: session } = useSession()
@@ -290,6 +299,8 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   // Celebration animation state
   const [showCelebration, setShowCelebration] = useState(false)
   const [celebrationKey, setCelebrationKey] = useState(0)
+  const [celebrationScore, setCelebrationScore] = useState<number | undefined>(undefined)
+  const [celebrationTotal, setCelebrationTotal] = useState<number | undefined>(undefined)
   
   // Flashcard notification state
   const [showFlashcardNotification, setShowFlashcardNotification] = useState(false)
@@ -301,6 +312,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
 
   // Exit quiz state
   const [showExitQuiz, setShowExitQuiz] = useState(false)
+  const [showReference, setShowReference] = useState(false)
   const [exitQuizQuestions, setExitQuizQuestions] = useState<ExitQuizQuestion[]>([])
   const [exitQuizStatus, setExitQuizStatus] = useState<{
     totalAttempts: number
@@ -318,8 +330,19 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   const [entranceQuizLoading, setEntranceQuizLoading] = useState(false)
   const [entranceQuizMasteredParts, setEntranceQuizMasteredParts] = useState<Set<number>>(new Set())
 
+  // Variant tracking: which content variation the student is on (1-3)
+  const [variant, setVariant] = useState(1)
+  const totalVariants = totalVariantsProp ?? 1
+  // Parts the student must redo after exit quiz failure (null = all parts)
+  const [failedExitParts, setFailedExitParts] = useState<number[] | null>(null)
+
+  // Select the correct preloaded parts based on current variant
+  const activePreloadedParts = variant <= 1 || !variantParts?.[variant]
+    ? preloadedParts
+    : (variantParts[variant] as PreloadedLessonPart[])
+
   // Lesson data from server-preloaded parts (no client-side dynamic imports needed)
-  const lessonData = preloadedParts[lessonPart - 1]?.data ?? null
+  const lessonData = activePreloadedParts[lessonPart - 1]?.data ?? null
 
   // Update URL when lesson part changes
   const updateLessonPart = (newPart: LessonPart) => {
@@ -355,6 +378,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           masteryLevel,
           timeSpent: 0, // Could track actual time if needed
           isPartCompletion, // Flag to indicate this is a part completion, not just progress save
+          variant,
         }),
       })
       
@@ -400,17 +424,69 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         }
         
         if (data.exists && data.progress) {
+          // Restore variant and failedExitParts from DB
+          const restoredVariant = data.progress.variant && data.progress.variant > 1 ? data.progress.variant : 1
+          const restoredFailedParts = data.progress.failedExitParts && Array.isArray(data.progress.failedExitParts)
+            ? (data.progress.failedExitParts as number[])
+            : null
+
+          if (restoredVariant > 1) {
+            setVariant(restoredVariant)
+          }
+          if (restoredFailedParts) {
+            setFailedExitParts(restoredFailedParts)
+          }
+
+          // Variant retry: skip entrance quiz, only unlock failed parts
+          if (restoredVariant > 1 && restoredFailedParts && restoredFailedParts.length > 0) {
+            const unlocked = new Set<LessonPart>(restoredFailedParts.map(p => p as LessonPart))
+            setUnlockedParts(unlocked)
+            if (!urlPart) {
+              setLessonPart(restoredFailedParts[0] as LessonPart)
+            }
+            setProgressLoaded(true)
+            return
+          }
+
           // Determine lesson part from mastery level
           const mastery = Number(data.progress.masteryLevel ?? 0)
           const boundedMastery = Math.min(Math.max(mastery, 0), 0.999999)
           const partWeight = 1.0 / Math.max(totalParts, 1)
-          const resolvedPart = Math.min(totalParts, Math.max(1, Math.floor(boundedMastery / partWeight) + 1)) as LessonPart
+          let resolvedPart = Math.min(totalParts, Math.max(1, Math.floor(boundedMastery / partWeight) + 1)) as LessonPart
           const unlocked: Set<LessonPart> = new Set([1]) // Part 1 always unlocked
 
           for (let i = 1; i <= resolvedPart; i++) {
             unlocked.add(i as LessonPart)
           }
           
+          // Restore entrance quiz mastered parts from localStorage
+          try {
+            const saved = localStorage.getItem(`entranceQuiz_${topicSlug}`)
+            if (saved) {
+              const savedParts: number[] = JSON.parse(saved)
+              if (Array.isArray(savedParts) && savedParts.length > 0) {
+                const restored = new Set<number>(savedParts.filter(n => typeof n === 'number' && n >= 1 && n <= totalParts))
+                setEntranceQuizMasteredParts(restored)
+                // Unlock parts based on mastered parts
+                for (const p of restored) {
+                  unlocked.add(p as LessonPart)
+                  if (p + 1 <= totalParts) unlocked.add((p + 1) as LessonPart)
+                }
+                // Navigate to first unmastered part instead of mastery-derived part
+                if (!urlPart) {
+                  let firstUnmastered: LessonPart | null = null
+                  for (let i = 1; i <= totalParts; i++) {
+                    if (!restored.has(i)) { firstUnmastered = i as LessonPart; break }
+                  }
+                  if (firstUnmastered) {
+                    unlocked.add(firstUnmastered)
+                    resolvedPart = firstUnmastered
+                  }
+                }
+              }
+            }
+          } catch {}
+
           setUnlockedParts(unlocked)
           
           // Only update if not overridden by URL parameter
@@ -418,7 +494,35 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
             setLessonPart(resolvedPart)
           }
         } else if (topicHasEntranceQuiz && !urlPart) {
-          // No prior progress — offer entrance quiz choice
+          // Restore entrance quiz mastered parts even without DB progress
+          try {
+            const saved = localStorage.getItem(`entranceQuiz_${topicSlug}`)
+            if (saved) {
+              const savedParts: number[] = JSON.parse(saved)
+              if (Array.isArray(savedParts) && savedParts.length > 0) {
+                const restored = new Set<number>(savedParts.filter(n => typeof n === 'number' && n >= 1 && n <= totalParts))
+                setEntranceQuizMasteredParts(restored)
+                const unlocked = new Set<LessonPart>([1 as LessonPart])
+                let firstUnmastered: LessonPart | null = null
+                for (let i = 1; i <= totalParts; i++) {
+                  if (restored.has(i)) {
+                    unlocked.add(i as LessonPart)
+                    if (i + 1 <= totalParts) unlocked.add((i + 1) as LessonPart)
+                  } else if (!firstUnmastered) {
+                    firstUnmastered = i as LessonPart
+                    unlocked.add(i as LessonPart)
+                  }
+                }
+                setUnlockedParts(unlocked)
+                if (firstUnmastered && !urlPart) {
+                  setLessonPart(firstUnmastered)
+                }
+                setProgressLoaded(true)
+                return
+              }
+            }
+          } catch {}
+          // No saved entrance quiz — offer entrance quiz choice
           setEntranceQuizPhase('choice')
         }
         
@@ -527,12 +631,22 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         // Unit circle: Part 2 → Practice Mode
         setShowPracticeMode(true)
       } else if (lessonPart < totalParts) {
-        // Find the next unmastered part (skip entrance-quiz-mastered parts)
+        // Find the next part to work on
         let nextPart: LessonPart | null = null
-        for (let i = lessonPart + 1; i <= totalParts; i++) {
-          if (!entranceQuizMasteredParts.has(i)) {
-            nextPart = i as LessonPart
-            break
+
+        if (failedExitParts && failedExitParts.length > 0) {
+          // Variant retry: only navigate through failed parts
+          const currentIdx = failedExitParts.indexOf(lessonPart)
+          if (currentIdx >= 0 && currentIdx < failedExitParts.length - 1) {
+            nextPart = failedExitParts[currentIdx + 1] as LessonPart
+          }
+        } else {
+          // Normal flow: find the next unmastered part (skip entrance-quiz-mastered parts)
+          for (let i = lessonPart + 1; i <= totalParts; i++) {
+            if (!entranceQuizMasteredParts.has(i)) {
+              nextPart = i as LessonPart
+              break
+            }
           }
         }
 
@@ -598,7 +712,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     }
   }
 
-  const handleSectionComplete = () => {
+  const handleSectionComplete = (score?: number, total?: number) => {
     if (!currentSection) return
     setCompletedSections(prev => new Set([...prev, currentSectionIndex]))
     
@@ -612,13 +726,15 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       currentSection.type === 'reference-angle-quiz' ||
       currentSection.type === 'factoring-practice'
     if (isExercise) {
+      setCelebrationScore(score)
+      setCelebrationTotal(total)
       setCelebrationKey(prev => prev + 1)
       setShowCelebration(true)
     }
   }
 
   // Exit quiz completion handler
-  const handleExitQuizComplete = (score: number, total: number, passed: boolean, mustRedoUnit: boolean) => {
+  const handleExitQuizComplete = (score: number, total: number, passed: boolean, mustRedoUnit: boolean, _wrongTopicSlugs?: string[], wrongPartNumbers?: number[]) => {
     setShowExitQuiz(false)
     setExitQuizStatus(prev => ({
       ...prev,
@@ -634,6 +750,43 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         ? `/competitive/${courseSlug}?topic=${encodeURIComponent(topicSlug)}`
         : '/competitive'
       router.push(competitiveUrl)
+    } else if (totalVariants > 1 && variant < totalVariants) {
+      // Failed exit quiz and more variants available → advance to next variant
+      const nextVariant = variant + 1
+      // Determine which parts to redo: use part-tagged wrong answers if available, else all parts
+      const partsToRedo = wrongPartNumbers && wrongPartNumbers.length > 0
+        ? wrongPartNumbers
+        : Array.from({ length: totalParts }, (_, i) => i + 1)
+
+      setVariant(nextVariant)
+      setFailedExitParts(partsToRedo)
+      setLessonPart(partsToRedo[0] as LessonPart)
+      setCurrentSectionIndex(0)
+      setCompletedSections(new Set())
+
+      // Unlock only the failed parts for this retry
+      const newUnlocked = new Set<LessonPart>(partsToRedo.map(p => p as LessonPart))
+      setUnlockedParts(newUnlocked)
+
+      // Save variant + failedExitParts to DB
+      if (session?.user) {
+        fetch('/api/progress/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            topicId: cachedTopicId,
+            topicSlug: !cachedTopicId ? topicSlug : undefined,
+            lessonPart: partsToRedo[0],
+            completedSections: [],
+            masteryLevel: 0,
+            timeSpent: 0,
+            variant: nextVariant,
+            failedExitParts: partsToRedo,
+          }),
+        }).catch(err => console.error('Failed to save variant progress:', err))
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     } else if (mustRedoUnit) {
       // Score < 5/10: review the current section, not the entire unit.
       setCurrentSectionIndex(0)
@@ -663,6 +816,16 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   const handleEntranceQuizComplete = useCallback((masteredParts: Set<number>, destination?: 'dashboard' | 'course' | 'competitive') => {
     setEntranceQuizPhase(null)
     setEntranceQuizMasteredParts(masteredParts)
+
+    // Persist mastered parts to localStorage so students can leave and return
+    if (masteredParts.size > 0) {
+      try {
+        localStorage.setItem(
+          `entranceQuiz_${topicSlug}`,
+          JSON.stringify(Array.from(masteredParts))
+        )
+      } catch {}
+    }
 
     // Add flashcards for topics where student didn't master all parts
     if (masteredParts.size < totalParts) {
@@ -755,7 +918,17 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [totalParts, topicSlug, courseSlug, router, session?.user, cachedTopicId, saveProgress])
 
+  const [retryCounts, setRetryCounts] = useState<Record<number, number>>({})
   const isCurrentSectionComplete = completedSections.has(currentSectionIndex)
+
+  const handleRetrySection = useCallback(() => {
+    setCompletedSections(prev => {
+      const next = new Set(prev)
+      next.delete(currentSectionIndex)
+      return next
+    })
+    setRetryCounts(prev => ({ ...prev, [currentSectionIndex]: (prev[currentSectionIndex] || 0) + 1 }))
+  }, [currentSectionIndex])
   
   // Check if current section requires completion before proceeding
   const currentSectionRequiresCompletion = 
@@ -890,6 +1063,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         previousAttempts={exitQuizStatus.totalAttempts}
         lastScore={exitQuizStatus.lastScore}
         mustRedoUnit={exitQuizStatus.mustRedoUnit}
+        variant={variant}
       />
     )
   }
@@ -918,21 +1092,37 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         key={celebrationKey}
         show={showCelebration}
         onDone={() => setShowCelebration(false)}
+        score={celebrationScore}
+        total={celebrationTotal}
       />
 
       <div className="space-y-6">
       {/* Part Navigation Menu - Show for multi-part lessons (hide if only 1 unmastered part remains) */}
       {preloadedParts.length > 1 && (preloadedParts.length - entranceQuizMasteredParts.size) > 1 && (
         <div className="bg-gradient-to-r from-indigo-100/80 via-purple-100/80 to-pink-100/80 dark:from-indigo-900/40 dark:via-purple-900/40 dark:to-pink-900/40 backdrop-blur-sm rounded-2xl p-5 border-2 border-indigo-200/70 dark:border-indigo-700/50 shadow-lg">
+          {/* Variant indicator */}
+          {variant > 1 && totalVariants > 1 && (
+            <div className="mb-3 flex items-center gap-2 text-xs font-semibold text-purple-700 dark:text-purple-400">
+              <span className="bg-purple-200 dark:bg-purple-800 px-2 py-0.5 rounded-full">
+                Attempt {variant} of {totalVariants}
+              </span>
+              {failedExitParts && failedExitParts.length < totalParts && (
+                <span className="text-gray-500 dark:text-gray-400">• Reviewing {failedExitParts.length} section{failedExitParts.length === 1 ? '' : 's'}</span>
+              )}
+            </div>
+          )}
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-2">
               <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Jump to:</span>
               <div className="flex gap-2 flex-wrap">
-                {preloadedParts.map((partConfig, index) => {
+                {activePreloadedParts.map((partConfig, index) => {
                   const partNumber = (index + 1) as LessonPart
+                  if (!partConfig) return null
                   const isUnlocked = unlockedParts.has(partNumber)
-                  // Hide parts mastered via entrance quiz
-                  if (entranceQuizMasteredParts.has(partNumber)) return null
+                  // Hide parts mastered via entrance quiz (only in non-retry mode)
+                  if (!failedExitParts && entranceQuizMasteredParts.has(partNumber)) return null
+                  // In retry mode, only show failed parts
+                  if (failedExitParts && !failedExitParts.includes(partNumber)) return null
 
                   return (
                     <button
@@ -988,20 +1178,41 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       <div className="flex items-center justify-end gap-2 flex-wrap">
         <TextToSpeech text={currentSection.content || ''} />
         <MarkForReview cardId={`${topicSlug}-part${lessonPart}-section${currentSectionIndex}`} />
+        <ScratchPad storageKey={`${topicSlug}-part${lessonPart}`} />
+        {courseSlug && hasReferenceSheet(courseSlug) && (
+          <button
+            onClick={() => setShowReference(true)}
+            className="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+          >
+            📋 Reference Sheet
+          </button>
+        )}
         <PrintButton />
         <FontSizeAdjuster />
       </div>
 
+      {courseSlug && <ReferenceSheetModal open={showReference} onClose={() => setShowReference(false)} courseSlug={courseSlug} />}
+
       {/* Current Section Content */}
-      <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-10 border-2 border-purple-100/50 dark:border-purple-500/20 min-h-[500px] transition-all duration-300 hover:shadow-3xl hover:border-purple-200/70 dark:hover:border-purple-400/30">
+      <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-2xl shadow-2xl p-10 border-2 border-purple-100/50 dark:border-purple-500/20 min-h-[500px] transition-all duration-300 hover:shadow-3xl hover:border-purple-200/70 dark:hover:border-purple-400/30" style={{ zoom: 'var(--content-zoom, 1)' }}>
         <SectionRenderer 
-          key={currentSection.id}
+          key={`${currentSection.id}-retry${retryCounts[currentSectionIndex] || 0}`}
           section={currentSection as unknown as Section} 
           onComplete={handleSectionComplete}
           isComplete={isCurrentSectionComplete}
           isLastSection={currentSectionIndex === sections.length - 1}
           onStartPractice={practiceModeParts.includes(lessonPart) ? () => setShowPracticeMode(true) : undefined}
         />
+        {isCurrentSectionComplete && currentSectionRequiresCompletion && (
+          <div className="mt-6 text-center">
+            <button
+              onClick={handleRetrySection}
+              className="px-6 py-3 rounded-xl font-semibold text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-900/30 border-2 border-purple-200 dark:border-purple-700 hover:bg-purple-100 dark:hover:bg-purple-900/50 hover:border-purple-300 dark:hover:border-purple-600 transition-all duration-200"
+            >
+              🔄 Try Again
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Navigation Buttons */}
@@ -1097,7 +1308,7 @@ function SectionRenderer({
   isComplete
 }: { 
   section: Section
-  onComplete: () => void
+  onComplete: (score?: number, total?: number) => void
   isComplete: boolean
   isLastSection?: boolean
   onStartPractice?: () => void
@@ -1218,7 +1429,7 @@ function SectionRenderer({
 }
 
 // Reference Angle Quiz Component
-function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Section, onComplete: () => void, isComplete: boolean }) {
+function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Section, onComplete: (score?: number, total?: number) => void, isComplete: boolean }) {
   const [currentAngle, setCurrentAngle] = useState<number>(() => Math.floor(Math.random() * 361))
   const [userAnswer, setUserAnswer] = useState<string>('')
   const [correctStreak, setCorrectStreak] = useState<number>(0)
@@ -2433,7 +2644,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
 // Fade-in Text Component with LaTeX support
 function FadeInText({ content, onComplete }: { content: string; onComplete?: () => void }) {
-  const hasLatex = content.includes('$')
+  const hasLatex = content.includes('$') || content.includes('\\(') || content.includes('\\[')
   const hasSineTable = content.includes('[SINE_TABLE]')
   const hasCosineTable = content.includes('[COSINE_TABLE]')
   const hasUnitCircle = content.includes('[UNIT_CIRCLE]')
@@ -2604,7 +2815,7 @@ function MultipleChoiceQuiz({
   onComplete
 }: { 
   section: Section
-  onComplete: () => void
+  onComplete: (score?: number, total?: number) => void
   isComplete: boolean
 }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0)
@@ -2659,7 +2870,10 @@ function MultipleChoiceQuiz({
     } else {
       // All questions answered, complete the quiz
       setQuizComplete(true)
-      onComplete()
+      const finalScore = selectedAnswers.filter(
+        (answer, index) => answer === questions[index]?.correctAnswer
+      ).length
+      onComplete(finalScore, questions.length)
     }
   }
 
@@ -2676,15 +2890,34 @@ function MultipleChoiceQuiz({
   }
 
   if (quizComplete) {
+    const ratio = questions.length > 0 ? score / questions.length : 0
+    const isPerfect = score === questions.length
+    const isGood = ratio > 0.5
+    
     return (
-      <div className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-300 rounded-lg p-8 text-center">
-        <div className="text-6xl mb-4">🎉</div>
+      <div className={`border-2 rounded-lg p-8 text-center ${
+        isPerfect 
+          ? 'bg-gradient-to-br from-green-50 to-emerald-50 border-green-300' 
+          : isGood
+          ? 'bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-300'
+          : 'bg-gradient-to-br from-amber-50 to-orange-50 border-amber-300'
+      }`}>
+        <div className="text-6xl mb-4">{isPerfect ? '🎉' : isGood ? '👍' : '📚'}</div>
         <h3 className="text-2xl font-bold text-gray-800 mb-2">Quiz Complete!</h3>
         <p className="text-lg text-gray-700 mb-4">
           You scored {score} out of {questions.length}
         </p>
-        {score === questions.length && (
+        {isPerfect && (
           <p className="text-green-600 font-semibold">Perfect score! Excellent work!</p>
+        )}
+        {!isPerfect && isGood && (
+          <p className="text-blue-600 font-semibold">Good effort! Review the ones you missed and keep practicing.</p>
+        )}
+        {!isPerfect && !isGood && score > 0 && (
+          <p className="text-amber-600 font-semibold">Keep studying! Review the explanations above and try again to strengthen your understanding.</p>
+        )}
+        {score === 0 && (
+          <p className="text-amber-600 font-semibold">No worries — this is a learning opportunity! Take another look at the material above and try the &quot;Try Again&quot; button below.</p>
         )}
       </div>
     )
@@ -2816,7 +3049,7 @@ function MiniBossBattle({
   onComplete
 }: { 
   section: Section
-  onComplete: () => void
+  onComplete: (score?: number, total?: number) => void
   isComplete: boolean
 }) {
   const [gameState, setGameState] = useState<'entrance' | 'battle' | 'victory' | 'defeat'>('entrance')
@@ -3270,7 +3503,7 @@ function FactoringPractice({
   isComplete 
 }: { 
   section: Section
-  onComplete: () => void
+  onComplete: (score?: number, total?: number) => void
   isComplete: boolean
 }) {
   const [currentProblem, setCurrentProblem] = useState<FactoringProblem | null>(null)
@@ -3552,7 +3785,7 @@ function InputBoxExercise({
   isComplete 
 }: { 
   section: Section
-  onComplete: () => void
+  onComplete: (score?: number, total?: number) => void
   isComplete: boolean
 }) {
   const exercise: LessonExercise = section.exercise ?? {}
@@ -3584,7 +3817,7 @@ function InputBoxExercise({
     
     if (isCorrect && !isComplete) {
       setTimeout(() => {
-        onComplete()
+        onComplete(numBoxes, numBoxes)
       }, 1000)
     } else if (!isCorrect) {
       const newAttempts = attempts + 1
@@ -3593,9 +3826,14 @@ function InputBoxExercise({
       
       if (newAttempts >= 4) {
         setShowAnswer(true)
-        // Mark as complete after showing answer
+        // Mark as complete after showing answer — count how many were correct
+        const correctCount = answers.filter((answer, index) => {
+          const correct = correctAnswersList[index]
+          if (!correct) return false
+          return answer.trim().toLowerCase() === correct.trim().toLowerCase()
+        }).length
         setTimeout(() => {
-          onComplete()
+          onComplete(correctCount, numBoxes)
         }, 500)
       }
     }
@@ -3615,9 +3853,12 @@ function InputBoxExercise({
 
   const isCorrect = areAllAnswersCorrect(answers, correctAnswersList)
 
+  // Add Q-labels to numbered questions so they match the answer boxes (Q1, Q2, etc.)
+  const labeledContent = (section.content || '').replace(/^(\d+)\)/gm, (_, num) => `**Q${num}.**`)
+
   return (
     <div className="space-y-6">
-      <FadeInText content={section.content} />
+      <FadeInText content={labeledContent} />
       
       {/* Inputs format: labeled input fields with descriptions */}
       {hasInputsFormat ? (
@@ -3757,7 +3998,7 @@ function DropdownExercise({
   isComplete 
 }: { 
   section: Section
-  onComplete: () => void
+  onComplete: (score?: number, total?: number) => void
   isComplete: boolean
 }) {
   const exercise: LessonExercise = section.exercise ?? {}
@@ -3789,7 +4030,7 @@ function DropdownExercise({
     
     if (isCorrect && !isComplete) {
       setTimeout(() => {
-        onComplete()
+        onComplete(dropdowns.length, dropdowns.length)
       }, 1000)
     } else if (!isCorrect) {
       const newAttempts = attempts + 1
@@ -3798,9 +4039,12 @@ function DropdownExercise({
       
       if (newAttempts >= 4) {
         setShowAnswer(true)
-        // Mark as complete after showing answer
+        // Mark as complete after showing answer — count correct answers
+        const correctCount = correctAnswersList.filter((correctAnswer: string, index: number) => 
+          answers[index] === correctAnswer
+        ).length
         setTimeout(() => {
-          onComplete()
+          onComplete(correctCount, dropdowns.length)
         }, 500)
       }
     }

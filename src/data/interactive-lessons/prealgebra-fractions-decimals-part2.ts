@@ -13,7 +13,7 @@ export const preAlgFractionsPart2Data = {
 Multiply by 100: $0.45 = 45\%$
 
 ### Fraction → Percent
-Convert to decimal first, then multiply by 100: $\frac{3}{4} = 0.75 = 75\%$
+Convert to decimal first, then multiply by 100: $\\frac{3}{4} = 0.75 = 75\%$
 
 ### Percent → Decimal
 Divide by 100: $60\% = 0.60$
@@ -26,7 +26,7 @@ Divide by 100: $60\% = 0.60$
       content: `
 ## Worked Example
 
-$\frac{2}{5} = 0.4 = 40\%$ ✅
+$\\frac{2}{5} = 0.4 = 40\%$ ✅
 
 $85\% = 0.85$ ✅
     

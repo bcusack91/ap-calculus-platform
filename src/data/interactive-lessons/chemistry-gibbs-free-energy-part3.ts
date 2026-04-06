@@ -124,7 +124,13 @@ Both methods give the same answer at 25°C.
 **ΔG° Calculations** 🧮
 
 Use these $\\Delta G°_f$ values (kJ/mol):
-$\\text{CO}_2(g) = -394.4$, $\\text{H}_2\\text{O}(l) = -237.1$, $\\text{C}_2\\text{H}_6(g) = -32.0$, $\\text{O}_2(g) = 0$
+
+| Substance | $\\Delta G°_f$ (kJ/mol) |
+|---|---|
+| $\\text{CO}_2(g)$ | $-394.4$ |
+| $\\text{H}_2\\text{O}(l)$ | $-237.1$ |
+| $\\text{C}_2\\text{H}_6(g)$ | $-32.0$ |
+| $\\text{O}_2(g)$ | $0$ |
 
 1) Calculate $\\Delta G°$ for: $\\text{C}_2\\text{H}_6(g) + \\frac{7}{2}\\text{O}_2(g) \\rightarrow 2\\text{CO}_2(g) + 3\\text{H}_2\\text{O}(l)$ (in kJ, to 1 decimal)
 

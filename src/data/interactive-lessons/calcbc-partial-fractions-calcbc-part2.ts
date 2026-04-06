@@ -10,11 +10,11 @@ export const calcbcPartialFracPart2Data = {
 
 ### Repeated Factors
 
-$$\frac{f(x)}{(x-a)^n} = \frac{A_1}{x-a} + \frac{A_2}{(x-a)^2} + \cdots + \frac{A_n}{(x-a)^n}$$
+$$\\frac{f(x)}{(x-a)^n} = \\frac{A_1}{x-a} + \\frac{A_2}{(x-a)^2} + \cdots + \\frac{A_n}{(x-a)^n}$$
 
 ### Example
 
-$\frac{3x+5}{(x+1)^2} = \frac{A}{x+1} + \frac{B}{(x+1)^2}$
+$\\frac{3x+5}{(x+1)^2} = \\frac{A}{x+1} + \\frac{B}{(x+1)^2}$
 
 $3x + 5 = A(x+1) + B$
 
@@ -22,7 +22,7 @@ $x = -1$: $2 = B$
 
 Coefficient of $x$: $3 = A$
 
-$$\int \left(\frac{3}{x+1} + \frac{2}{(x+1)^2}\right)\,dx = 3\ln|x+1| - \frac{2}{x+1} + C$$`
+$$\int \left(\\frac{3}{x+1} + \\frac{2}{(x+1)^2}\\right)\,dx = 3\ln|x+1| - \\frac{2}{x+1} + C$$`
     },
     {
       id: 'pf2-quiz1',

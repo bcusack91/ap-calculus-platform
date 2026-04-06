@@ -11,9 +11,9 @@ export const g8TransformationsPart2Data = {
 
 A **reflection** flips a figure over a line.
 
-- Over **x-axis**: $(x, y) \to (x, -y)$
-- Over **y-axis**: $(x, y) \to (-x, y)$
-- Over $y = x$: $(x, y) \to (y, x)$
+- Over **x-axis**: $(x, y) \\to (x, -y)$
+- Over **y-axis**: $(x, y) \\to (-x, y)$
+- Over $y = x$: $(x, y) \\to (y, x)$
     
     `
     },
@@ -25,7 +25,7 @@ A **reflection** flips a figure over a line.
 
 **Reflect (3, 5) over the x-axis.**
 
-$(3, 5) \to (3, -5)$ ✅
+$(3, 5) \\to (3, -5)$ ✅
     
     `
     },

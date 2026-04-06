@@ -10,7 +10,7 @@ export const physCNewtonPart7Data = {
 **Part 7 of 7 — Review & Applications**
 
 ### Key Formulas
-- $\sum F = ma = m\frac{dv}{dt}$
+- $\sum F = ma = m\\frac{dv}{dt}$
 - $f_s \leq \mu_s N$, $f_k = \mu_k N$
 - $F_c = mv^2/r$
 - Action-reaction: $F_{AB} = -F_{BA}$
@@ -25,7 +25,7 @@ export const physCNewtonPart7Data = {
 
 **An Atwood machine has masses 3 kg and 5 kg. Find the acceleration. ($g = 10$ m/s²)**
 
-$a = \frac{(m_2 - m_1)g}{m_1 + m_2} = \frac{(5-3)(10)}{3+5} = \frac{20}{8} = 2.5$ m/s² ✅
+$a = \\frac{(m_2 - m_1)g}{m_1 + m_2} = \\frac{(5-3)(10)}{3+5} = \\frac{20}{8} = 2.5$ m/s² ✅
     
     `
     },

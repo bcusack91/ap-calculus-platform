@@ -11,7 +11,7 @@ export const g7GeometryPart7Data = {
 
 ### Key Formulas
 - Complement: $90° - x$, Supplement: $180° - x$
-- Triangle: $A = \frac{1}{2}bh$
+- Triangle: $A = \\frac{1}{2}bh$
 - Circle: $C = 2\pi r$, $A = \pi r^2$
 - SA prism: $2(lw+lh+wh)$
 - V prism: $lwh$, V cylinder: $\pi r^2 h$

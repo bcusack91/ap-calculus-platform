@@ -32,6 +32,9 @@ interface ClientLessonRendererProps {
   // For handcrafted
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   preloadedParts?: any[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  variantParts?: Record<number, any[]>
+  totalVariants?: number
   completionDestination?: string
   practiceModeParts?: number[]
   // For dynamic
@@ -43,6 +46,8 @@ export default function ClientLessonRenderer({
   topicSlug,
   courseSlug,
   preloadedParts,
+  variantParts,
+  totalVariants,
   completionDestination,
   practiceModeParts,
   textContent,
@@ -63,6 +68,8 @@ export default function ClientLessonRenderer({
           topicSlug={topicSlug}
           courseSlug={courseSlug}
           preloadedParts={preloadedParts}
+          variantParts={variantParts}
+          totalVariants={totalVariants}
           completionDestination={completionDestination as 'competitive' | 'complete' | undefined}
           practiceModeParts={practiceModeParts}
         />

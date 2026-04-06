@@ -14,7 +14,7 @@ export const g7ProportionalPart5Data = {
 - **Tip**: Bill × tip rate
 - **Discount**: Price × discount rate
 - **Markup**: Cost × markup rate
-- **Percent change**: $\frac{\text{new} - \text{old}}{\text{old}} \times 100$
+- **Percent change**: $\\frac{\\text{new} - \\text{old}}{\\text{old}} \\times 100$
     
     `
     },
@@ -26,7 +26,7 @@ export const g7ProportionalPart5Data = {
 
 **Meal: \$45. Tip: 20%. Total?**
 
-Tip: $0.20 \times 45 = 9$. Total: $45 + 9 = 54$ → **\$54** ✅
+Tip: $0.20 \\times 45 = 9$. Total: $45 + 9 = 54$ → **\$54** ✅
     
     `
     },

@@ -27,6 +27,8 @@ export const progressSaveSchema = z.object({
   masteryLevel: z.number().min(0).max(1).optional().default(0),
   timeSpent: z.number().min(0).optional().default(0),
   isPartCompletion: z.boolean().optional(),
+  variant: z.number().int().min(1).max(3).optional(),
+  failedExitParts: z.array(z.number().int().min(1)).optional(),
 })
 
 export type ProgressSave = z.infer<typeof progressSaveSchema>

@@ -29,7 +29,7 @@ export const g8TransformationsPart7Data = {
 
 **Rotate (5, 2) 90° CCW then dilate by 3.**
 
-Step 1: $(5,2) \to (-2,5)$
+Step 1: $(5,2) \\to (-2,5)$
 Step 2: $(-6,15)$ ✅
     
     `

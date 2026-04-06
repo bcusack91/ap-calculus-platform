@@ -24,7 +24,7 @@ Look for key words that signal multiplication:
 
 **A school has 24 classrooms with 28 desks each. Total desks?**
 
-$24 \times 28 = 24(20) + 24(8) = 480 + 192 = 672$ ✅
+$24 \\times 28 = 24(20) + 24(8) = 480 + 192 = 672$ ✅
     
     `
     },
@@ -94,9 +94,9 @@ $24 \times 28 = 24(20) + 24(8) = 480 + 192 = 672$ ✅
 
 | # | Problem | Expression |
 |---|---------|------------|
-| 1 | 12 crayons per box, 8 boxes | $12 \times 8$ |
-| 2 | 6 rows of 30 chairs | $6 \times 30$ |
-| 3 | 15 rows, 16 seeds each | $15 \times 16$ |
+| 1 | 12 crayons per box, 8 boxes | $12 \\times 8$ |
+| 2 | 6 rows of 30 chairs | $6 \\times 30$ |
+| 3 | 15 rows, 16 seeds each | $15 \\times 16$ |
     
     `
     },

@@ -10,7 +10,7 @@ export const physCWorkEnergyPart7Data = {
 **Part 7 of 7 — Review & Applications**
 
 ### Summary
-- $W = \int F\,dx$, $W = Fd\cos\theta$
+- $W = \int F\,dx$, $W = Fd\cos\\theta$
 - Work-KE Theorem: $W_{net} = \Delta KE$
 - $F = -dU/dx$ for conservative forces
 - Conservation: $E_i = E_f$ (no friction)
@@ -26,7 +26,7 @@ export const physCWorkEnergyPart7Data = {
 
 **A 2 kg ball on a spring ($k = 50$ N/m) is released from $x = 2$ m. Find speed at $x = 0$.**
 
-$\frac{1}{2}kx^2 = \frac{1}{2}mv^2$
+$\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2$
 
 $v = x\sqrt{k/m} = 2\sqrt{50/2} = 2(5) = 10$ m/s ✅
     
@@ -62,7 +62,7 @@ $v = x\sqrt{k/m} = 2\sqrt{50/2} = 2(5) = 10$ m/s ✅
 
 1) A 2 kg ball on a spring ($k = 50$ N/m) is released from $x = 2$ m. Speed at $x = 0$ (m/s)?
 
-2) $KE = \frac{1}{2}(2)(3^2) = ?$ J
+2) $KE = \\frac{1}{2}(2)(3^2) = ?$ J
 
 3) A 1000 W engine runs for 0.5 s. Energy delivered (J)?
     

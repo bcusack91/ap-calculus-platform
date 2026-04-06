@@ -67,10 +67,10 @@ export const precalcVectors2DPart4Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Unit vector | $\hat{\mathbf u}=\frac{\mathbf u}{\|\mathbf u\|}$ | direction-only normalization |
-      | Magnitude | $\|\langle a,b\rangle\|=\sqrt{a^2+b^2}$ | length computation |
-      | Dot product | $\langle a,b\rangle\cdot\langle c,d\rangle=ac+bd$ | angle and projection |
-      | Angle relation | $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\theta$ | finding angle between vectors |
+      | Unit vector | $\hat{\mathbf u}=\\frac{\mathbf u}{\|\mathbf u\|}$ | direction-only normalization |
+      | Magnitude | $\|\langle a,b\\rangle\|=\sqrt{a^2+b^2}$ | length computation |
+      | Dot product | $\langle a,b\\rangle\cdot\langle c,d\\rangle=ac+bd$ | angle and projection |
+      | Angle relation | $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\\theta$ | finding angle between vectors |
       
       ### Common pitfalls
       - Magnitude is always nonnegative.
@@ -125,7 +125,7 @@ export const precalcVectors2DPart4Data = {
           },
           {
             label: 'unit vector',
-            options: ['single vector equivalent to a combined effect', 'vectors with dot product zero', 'vector written as ordered components like $\langle a,b\rangle$', 'vector with magnitude 1']
+            options: ['single vector equivalent to a combined effect', 'vectors with dot product zero', 'vector written as ordered components like $\langle a,b\\rangle$', 'vector with magnitude 1']
           }
         ],
         correctAnswers: ['scalar from component-wise multiplication and sum', 'component of one vector along another', 'vector with magnitude 1'],

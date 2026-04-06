@@ -9,9 +9,9 @@ export const g7ProportionalPart1Data = {
 
 **Part 1 of 7 — Identifying Proportions**
 
-A proportional relationship has a **constant ratio** $\frac{y}{x} = k$.
+A proportional relationship has a **constant ratio** $\\frac{y}{x} = k$.
 
-In a table, check if all $\frac{y}{x}$ values are equal.
+In a table, check if all $\\frac{y}{x}$ values are equal.
     
     `
     },
@@ -25,7 +25,7 @@ In a table, check if all $\frac{y}{x}$ values are equal.
 |---|---|---|---|
 | y | 6 | 12 | 18 |
 
-$\frac{6}{2} = 3$, $\frac{12}{4} = 3$, $\frac{18}{6} = 3$ → **proportional** ($k = 3$) ✅
+$\\frac{6}{2} = 3$, $\\frac{12}{4} = 3$, $\\frac{18}{6} = 3$ → **proportional** ($k = 3$) ✅
     
     `
     },

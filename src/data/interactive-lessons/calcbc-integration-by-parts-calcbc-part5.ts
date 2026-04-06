@@ -12,7 +12,7 @@ export const calcbcIntByPartsPart5Data = {
 
 $\int \arctan x\,dx$: $u = \arctan x$, $dv = dx$
 
-$= x\arctan x - \int \frac{x}{1+x^2}\,dx = x\arctan x - \frac{1}{2}\ln(1+x^2) + C$
+$= x\arctan x - \int \\frac{x}{1+x^2}\,dx = x\arctan x - \\frac{1}{2}\ln(1+x^2) + C$
 
 ### $\int \ln x$ derivatives
 

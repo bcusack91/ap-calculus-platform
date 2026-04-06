@@ -25,7 +25,7 @@ Fractions, decimals, and percents appear everywhere:
 
 **Test: 18 out of 20. What percent?**
 
-$\frac{18}{20} = 0.9 = 90\%$ ✅
+$\\frac{18}{20} = 0.9 = 90\%$ ✅
     
     `
     },

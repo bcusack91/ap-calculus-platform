@@ -67,10 +67,10 @@ export const precalcRationalPart4Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Hole simplification | $\frac{(x-a)g(x)}{(x-a)h(x)}=\frac{g(x)}{h(x)}\;(x\neq a)$ | removable cleanup |
-      | General form | $f(x)=\frac{p(x)}{q(x)}$ | ratio modeling |
-      | Vertical asymptote test | $q(c)=0\text{ and factor not cancelled}$ | non-removable singularity |
-      | Horizontal rule | $\deg p < \deg q \Rightarrow y=0$ | end behavior shortcut |
+      | Hole simplification | $\\frac{(x-a)g(x)}{(x-a)h(x)}=\\frac{g(x)}{h(x)}\;(x\\neq a)$ | removable cleanup |
+      | General form | $f(x)=\\frac{p(x)}{q(x)}$ | ratio modeling |
+      | Vertical asymptote test | $q(c)=0\\text{ and factor not cancelled}$ | non-removable singularity |
+      | Horizontal rule | $\deg p < \deg q \\Rightarrow y=0$ | end behavior shortcut |
       
       ### Common pitfalls
       - Cancellation removes factors, not domain restrictions.

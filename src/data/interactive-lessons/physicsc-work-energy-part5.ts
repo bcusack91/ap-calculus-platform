@@ -11,9 +11,9 @@ export const physCWorkEnergyPart5Data = {
 
 Power is the rate of doing work:
 
-$P = \frac{dW}{dt} = \vec{F} \cdot \vec{v}$
+$P = \\frac{dW}{dt} = \\vec{F} \cdot \\vec{v}$
 
-$P_{avg} = \frac{W}{\Delta t} = \frac{\Delta E}{\Delta t}$
+$P_{avg} = \\frac{W}{\Delta t} = \\frac{\Delta E}{\Delta t}$
 
 Unit: **Watt** (W) = J/s = kg·m²/s³
     
@@ -27,7 +27,7 @@ Unit: **Watt** (W) = J/s = kg·m²/s³
 
 **A motor lifts a 100 kg load 10 m in 5 s. Find the average power. ($g = 10$ m/s²)**
 
-$P = \frac{W}{t} = \frac{mgh}{t} = \frac{100(10)(10)}{5} = 2000$ W ✅
+$P = \\frac{W}{t} = \\frac{mgh}{t} = \\frac{100(10)(10)}{5} = 2000$ W ✅
     
     `
     },

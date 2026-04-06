@@ -69,8 +69,8 @@ export const precalcConicsPart5Data = {
       |---|---|---|
       | Parabola (vertical) | $(x-h)^2 = 4p(y-k)$ | focus/directrix geometry |
       | Circle | $(x-h)^2 + (y-k)^2 = r^2$ | center-radius modeling |
-      | Ellipse | $\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1$ | sum-of-distances relation |
-      | Hyperbola | $\frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} = 1$ | difference-of-distances relation |
+      | Ellipse | $\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1$ | sum-of-distances relation |
+      | Hyperbola | $\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1$ | difference-of-distances relation |
       
       ### Common pitfalls
       - For ellipses and hyperbolas, identify the positive term before choosing major axis direction.

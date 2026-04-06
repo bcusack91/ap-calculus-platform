@@ -11,7 +11,7 @@ export const apStatsHypothesisPart2Data = {
 
 A **test statistic** measures how far the sample result is from the null value, in standard error units.
 
-$t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}$
+$t = \\frac{\\bar{x} - \mu_0}{s / \sqrt{n}}$
 
 Larger $|t|$ → stronger evidence against $H_0$.
     
@@ -23,11 +23,11 @@ Larger $|t|$ → stronger evidence against $H_0$.
       content: `
 ## Worked Example
 
-**$\bar{x} = 82$, $\mu_0 = 75$, $s = 14$, $n = 49$.**
+**$\\bar{x} = 82$, $\mu_0 = 75$, $s = 14$, $n = 49$.**
 
-$SE = \frac{14}{\sqrt{49}} = \frac{14}{7} = 2$
+$SE = \\frac{14}{\sqrt{49}} = \\frac{14}{7} = 2$
 
-$t = \frac{82 - 75}{2} = 3.5$ ✅
+$t = \\frac{82 - 75}{2} = 3.5$ ✅
     
     `
     },
@@ -95,7 +95,7 @@ $t = \frac{82 - 75}{2} = 3.5$ ✅
       content: `
 ## Practice
 
-| # | $\bar{x}$ | $\mu_0$ | s | n | SE | t |
+| # | $\\bar{x}$ | $\mu_0$ | s | n | SE | t |
 |---|------|------|---|---|----|-|
 | 1 | 82 | 75 | 14 | 49 | 2 | 3.5 |
 | 2 | 50 | 50 | 10 | 25 | 2 | 0 |

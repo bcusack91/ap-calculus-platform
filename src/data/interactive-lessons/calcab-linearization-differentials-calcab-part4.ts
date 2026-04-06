@@ -10,9 +10,9 @@ export const calcabLinearizationPart4Data = {
 
 ### Relative and Percentage Error
 
-$$\text{Relative error} = \frac{dy}{y} = \frac{f'(x)\,dx}{f(x)}$$
+$$\\text{Relative error} = \\frac{dy}{y} = \\frac{f'(x)\,dx}{f(x)}$$
 
-$$\text{Percentage error} = \frac{dy}{y} \times 100\%$$`
+$$\\text{Percentage error} = \\frac{dy}{y} \\times 100\%$$`
     },
     {
       id: 'lin4-quiz1',

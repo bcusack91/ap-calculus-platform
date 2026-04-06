@@ -152,24 +152,28 @@ AP free-response questions often ask how errors affect results:
         dropdowns: [
           {
             id: 'mx7-dd1',
+            label: 'Fingerprints on the cuvette absorb/scatter additional light',
             options: ['too high', 'too low', 'unaffected'],
             correctIndex: 0,
             explanation: 'Fingerprints on the cuvette absorb/scatter additional light, increasing the measured absorbance. Using this inflated absorbance with a calibration curve yields a concentration that is too high.'
           },
           {
             id: 'mx7-dd2',
+            label: 'If some precipitate is lost during filtration, the measured mass is less than',
             options: ['too high', 'too low', 'unaffected'],
             correctIndex: 1,
             explanation: 'If some precipitate is lost during filtration, the measured mass is less than the true mass, so the calculated percentage of that ion will be too low.'
           },
           {
             id: 'mx7-dd3',
+            label: 'Overshooting the endpoint means you recorded a titrant volume that is too lar...',
             options: ['too high', 'too low', 'unaffected'],
             correctIndex: 0,
             explanation: 'Overshooting the endpoint means you recorded a titrant volume that is too large. Since concentration calculation is proportional to titrant volume, the reported concentration of the analyte is too high.'
           },
           {
             id: 'mx7-dd4',
+            label: 'Beer\'s Law ($A = \\varepsilon bc$) directly measures _______',
             options: ['mass percent', 'volume of gas', 'concentration'],
             correctIndex: 2,
             explanation: 'Beer\'s Law ($A = \\varepsilon bc$) directly measures concentration. It is a spectroscopic technique best suited for determining concentrations of colored species in solution.'

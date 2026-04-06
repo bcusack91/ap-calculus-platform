@@ -25,9 +25,9 @@ Apply volume to multi-step problems:
 
 **A garden bed is 6 m × 3 m × 0.5 m. Soil costs \$5/m³. Total cost?**
 
-$V = 6 \times 3 \times 0.5 = 9$ m³
+$V = 6 \\times 3 \\times 0.5 = 9$ m³
 
-Cost: $9 \times 5 = 45$ → **\$45** ✅
+Cost: $9 \\times 5 = 45$ → **\$45** ✅
     
     `
     },

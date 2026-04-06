@@ -8,6 +8,7 @@ import type {
   DiagnosticQuestion,
   DiagnosticResults,
 } from '@/data/sat-practice/diagnostic-generator'
+import ScratchPad from '@/components/ScratchPad'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -315,6 +316,11 @@ export default function DiagnosticTest({
           }`}
           style={{ width: `${((sectionIndex + 1) / sectionTotal) * 100}%` }}
         />
+      </div>
+
+      {/* Tools */}
+      <div className="flex items-center justify-end gap-2 mb-4">
+        <ScratchPad storageKey={`diagnostic-${isRW ? 'rw' : 'math'}`} />
       </div>
 
       {/* Question */}

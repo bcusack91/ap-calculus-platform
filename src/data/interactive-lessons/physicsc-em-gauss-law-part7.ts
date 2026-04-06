@@ -27,9 +27,9 @@ export const physCEMGaussPart7Data = {
 
 **Compare $E$ at $r = 1$ m from: (a) point charge $Q = 10^{-6}$ C, (b) line charge $\lambda = 10^{-6}$ C/m.**
 
-(a) $E = kQ/r^2 = 9 \times 10^3$ N/C
+(a) $E = kQ/r^2 = 9 \\times 10^3$ N/C
 
-(b) $E = 2k\lambda/r = 18 \times 10^3$ N/C
+(b) $E = 2k\lambda/r = 18 \\times 10^3$ N/C
 
 The line charge field is stronger at this distance because it falls off as $1/r$ instead of $1/r^2$. ✅
     

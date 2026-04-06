@@ -11,7 +11,7 @@ export const g8TransformationsPart1Data = {
 
 A **translation** slides every point the same distance and direction.
 
-Rule: $(x, y) \to (x + a, y + b)$
+Rule: $(x, y) \\to (x + a, y + b)$
 
 Translations preserve **size** and **shape** (rigid motion). The image is congruent to the pre-image.
     

@@ -118,18 +118,21 @@ At a given temperature, **all gases have the same average kinetic energy**, rega
         dropdowns: [
           {
             id: 'sm1-dd1',
+            label: 'In solids, particles are locked in fixed positions. What type of motion can they perform?',
             options: ['vibrate in place', 'slide past each other', 'move rapidly in straight lines'],
             correctIndex: 0,
             explanation: 'In solids, particles are locked in fixed positions and can only vibrate about those positions.'
           },
           {
             id: 'sm1-dd2',
+            label: 'Which phase of matter is highly compressible?',
             options: ['solids', 'liquids', 'gases'],
             correctIndex: 2,
             explanation: 'Gases are highly compressible because their particles are far apart with lots of empty space between them.'
           },
           {
             id: 'sm1-dd3',
+            label: 'Which best describes the shape and volume properties of a liquid?',
             options: ['definite shape and definite volume', 'definite volume but indefinite shape', 'neither definite shape nor definite volume'],
             correctIndex: 1,
             explanation: 'Liquids have a definite volume (particles are close together) but take the shape of their container (particles can slide past each other).'

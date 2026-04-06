@@ -27,7 +27,7 @@ Apply geometry and measurement skills to real-world problems!
 **Rectangular garden 12 m × 8 m. Find perimeter and area.**
 
 - $P = 2(12)+2(8) = 40$ m
-- $A = 12 \times 8 = 96$ m² ✅
+- $A = 12 \\times 8 = 96$ m² ✅
     
     `
     },

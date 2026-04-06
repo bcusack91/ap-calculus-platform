@@ -24,7 +24,7 @@ Apply circle theorems:
 
 **Pizza slice: r=10, θ=45°. Area of slice? (π≈3.14)**
 
-$\frac{45}{360} \times 3.14(100) = \frac{1}{8}(314) = 39.25$ sq units ✅
+$\\frac{45}{360} \\times 3.14(100) = \\frac{1}{8}(314) = 39.25$ sq units ✅
     
     `
     },

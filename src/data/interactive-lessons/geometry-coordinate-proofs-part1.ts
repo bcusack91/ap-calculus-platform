@@ -11,7 +11,7 @@ export const geoCoordProofsPart1Data = {
 
 $d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$
 
-$M = \left(\frac{x_1+x_2}{2}, \frac{y_1+y_2}{2}\right)$
+$M = \left(\\frac{x_1+x_2}{2}, \\frac{y_1+y_2}{2}\\right)$
     
     `
     },

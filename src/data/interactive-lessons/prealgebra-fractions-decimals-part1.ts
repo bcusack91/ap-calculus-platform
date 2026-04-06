@@ -10,10 +10,10 @@ export const preAlgFractionsPart1Data = {
 **Part 1 of 7 — Converting Fractions & Decimals**
 
 ### Fraction → Decimal
-Divide numerator by denominator: $\frac{3}{4} = 3 \div 4 = 0.75$
+Divide numerator by denominator: $\\frac{3}{4} = 3 \div 4 = 0.75$
 
 ### Decimal → Fraction
-Use place value: $0.6 = \frac{6}{10} = \frac{3}{5}$
+Use place value: $0.6 = \\frac{6}{10} = \\frac{3}{5}$
     
     `
     },
@@ -23,9 +23,9 @@ Use place value: $0.6 = \frac{6}{10} = \frac{3}{5}$
       content: `
 ## Worked Example
 
-$\frac{7}{8} = 7 \div 8 = 0.875$ ✅
+$\\frac{7}{8} = 7 \div 8 = 0.875$ ✅
 
-$0.35 = \frac{35}{100} = \frac{7}{20}$ ✅
+$0.35 = \\frac{35}{100} = \\frac{7}{20}$ ✅
     
     `
     },
@@ -57,11 +57,11 @@ $0.35 = \frac{35}{100} = \frac{7}{20}$ ✅
       content: `
 **Convert to Decimals** 🧮
 
-1) $\frac{1}{4} = ?$
+1) $\\frac{1}{4} = ?$
 
-2) $\frac{3}{5} = ?$
+2) $\\frac{3}{5} = ?$
 
-3) $\frac{7}{8} = ?$
+3) $\\frac{7}{8} = ?$
     
     `,
       exercise: {

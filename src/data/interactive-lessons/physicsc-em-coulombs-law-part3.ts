@@ -11,7 +11,7 @@ export const physCEMCoulombPart3Data = {
 
 The net force on a charge is the **vector sum** of all individual Coulomb forces:
 
-$\vec{F}_{net} = \sum_i \vec{F}_i = \sum_i k\frac{q q_i}{r_i^2}\hat{r}_i$
+$\\vec{F}_{net} = \sum_i \\vec{F}_i = \sum_i k\\frac{q q_i}{r_i^2}\hat{r}_i$
 
 Each force is calculated independently, then added as vectors.
     

@@ -13,7 +13,7 @@ export const physCRotationPart6Data = {
 1. Identify the axis of rotation
 2. Find the moment of inertia about that axis
 3. Calculate net torque
-4. Apply $\tau = I\alpha$ or conservation of $L$
+4. Apply $\\tau = I\alpha$ or conservation of $L$
 5. Connect rotational and translational quantities if rolling
     
     `
@@ -26,11 +26,11 @@ export const physCRotationPart6Data = {
 
 **A 20 N force acts tangentially on a disk ($m = 4$ kg, $r = 0.5$ m). Find $\alpha$.**
 
-$I = \frac{1}{2}mr^2 = \frac{1}{2}(4)(0.25) = 0.5$ kg·m²
+$I = \\frac{1}{2}mr^2 = \\frac{1}{2}(4)(0.25) = 0.5$ kg·m²
 
-$\tau = Fr = 20(0.5) = 10$ N·m
+$\\tau = Fr = 20(0.5) = 10$ N·m
 
-$\alpha = \tau / I = 10 / 0.5 = 20$ rad/s² ✅
+$\alpha = \\tau / I = 10 / 0.5 = 20$ rad/s² ✅
     
     `
     },
@@ -100,7 +100,7 @@ $\alpha = \tau / I = 10 / 0.5 = 20$ rad/s² ✅
 
 | # | Problem Type | Key Relationship |
 |---|-------------|------------------|
-| 1 | Disk with tangential force | $\tau = I\alpha$ |
+| 1 | Disk with tangential force | $\\tau = I\alpha$ |
 | 2 | Atwood machine with pulley | Include $I$ of pulley |
 | 3 | Rolling on an incline | Energy conservation |
     

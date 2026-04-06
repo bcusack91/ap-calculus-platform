@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { getInteractiveTopicConfig } from '@/data/interactive-lessons/registry'
 
 export async function GET() {
   try {
@@ -35,17 +36,23 @@ export async function GET() {
       return NextResponse.json({ topic: null })
     }
 
-    const lastPart = (recentProgress as Record<string, unknown>).lastPartCompleted as number ?? 1
-    const totalParts = 7 // standard lesson part count
+    // Get actual totalParts from the lesson registry
+    const config = getInteractiveTopicConfig(recentProgress.topic.slug)
+    const totalParts = config?.parts?.length ?? 7
+
+    // Derive lastPart from mastery since we don't store it in the database
+    const mastery = recentProgress.masteryLevel ?? 0
+    const partWeight = 1.0 / Math.max(totalParts, 1)
+    const lastPart = Math.min(totalParts, Math.max(1, Math.floor(mastery / partWeight) + 1))
 
     return NextResponse.json({
       topic: {
         topicSlug: recentProgress.topic.slug,
         topicTitle: recentProgress.topic.title,
         courseName: recentProgress.topic.category?.course?.name ?? 'Course',
-        lastPart: Math.min(lastPart + 1, totalParts),
+        lastPart: Math.min(lastPart, totalParts),
         totalParts,
-        masteryLevel: recentProgress.masteryLevel ?? 0,
+        masteryLevel: mastery,
         lastAccessed: recentProgress.lastAccessed?.toISOString() ?? new Date().toISOString(),
       },
     })

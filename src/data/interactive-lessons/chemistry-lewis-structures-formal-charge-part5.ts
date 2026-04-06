@@ -80,18 +80,21 @@ export const chemLewisStructuresFormalChargePart5Data = {
         dropdowns: [
           {
             id: 'ls-5-7-dd1',
+            label: 'CO₃²⁻ (carbonate) has 3 equivalent resonance structures',
             options: ['Has resonance', 'No resonance'],
             correctIndex: 0,
             explanation: 'CO₃²⁻ (carbonate) has 3 equivalent resonance structures, with the double bond rotating among the three C—O positions.'
           },
           {
             id: 'ls-5-7-dd2',
+            label: 'CH₄ (methane) has _______',
             options: ['Has resonance', 'No resonance'],
             correctIndex: 1,
             explanation: 'CH₄ (methane) has no resonance. All four C—H bonds are single bonds and there are no lone pairs or multiple bonds to rearrange.'
           },
           {
             id: 'ls-5-7-dd3',
+            label: 'NO₂⁻ (nitrite) has 2 resonance structures',
             options: ['Has resonance', 'No resonance'],
             correctIndex: 0,
             explanation: 'NO₂⁻ (nitrite) has 2 resonance structures. The double bond can be on either side of the nitrogen: O=N—O⁻ ↔ ⁻O—N=O.'

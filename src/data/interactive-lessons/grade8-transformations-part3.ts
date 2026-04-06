@@ -12,9 +12,9 @@ export const g8TransformationsPart3Data = {
 A **rotation** turns a figure around a center point.
 
 **Rotations about the origin (counterclockwise):**
-- 90°: $(x,y) \to (-y,x)$
-- 180°: $(x,y) \to (-x,-y)$
-- 270°: $(x,y) \to (y,-x)$
+- 90°: $(x,y) \\to (-y,x)$
+- 180°: $(x,y) \\to (-x,-y)$
+- 270°: $(x,y) \\to (y,-x)$
     
     `
     },
@@ -26,7 +26,7 @@ A **rotation** turns a figure around a center point.
 
 **Rotate (3, 2) 90° CCW about origin.**
 
-$(3, 2) \to (-2, 3)$ ✅
+$(3, 2) \\to (-2, 3)$ ✅
     
     `
     },

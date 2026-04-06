@@ -71,7 +71,7 @@ Each pH unit represents a **10-fold change** in $[H^+]$.
 
 Buffers resist changes in pH by accepting or donating $H^+$ ions.
 
-- **Carbonic acid buffer** in blood: $H_2CO_3 \rightleftharpoons H^+ + HCO_3^-$
+- **Carbonic acid buffer** in blood: $H_2CO_3 \\rightleftharpoons H^+ + HCO_3^-$
 - Maintains blood pH at **7.35-7.45**
 - Even small deviations can be fatal
 - Enzymes function within narrow pH ranges

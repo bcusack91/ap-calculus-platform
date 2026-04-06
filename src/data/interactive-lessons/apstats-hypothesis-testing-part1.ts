@@ -14,7 +14,7 @@ export const apStatsHypothesisPart1Data = {
 
 We test whether data provides enough evidence to **reject** $H_0$.
 
-- Two-tailed: $H_a: \mu \neq \mu_0$
+- Two-tailed: $H_a: \mu \\neq \mu_0$
 - Left-tailed: $H_a: \mu < \mu_0$
 - Right-tailed: $H_a: \mu > \mu_0$
     

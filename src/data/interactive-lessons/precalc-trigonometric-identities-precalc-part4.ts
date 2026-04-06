@@ -74,9 +74,9 @@ export const precalcTrigIdentitiesPart4Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Sine double-angle | $\sin(2\theta)=2\sin\theta\cos\theta$ | power reduction and simplification |
-      | Pythagorean | $\sin^2\theta+\cos^2\theta=1$ | fundamental conversion |
-      | Tangent | $\tan\theta=\frac{\sin\theta}{\cos\theta}$ | quotient rewrite |
+      | Sine double-angle | $\sin(2\\theta)=2\sin\\theta\cos\\theta$ | power reduction and simplification |
+      | Pythagorean | $\sin^2\\theta+\cos^2\\theta=1$ | fundamental conversion |
+      | Tangent | $\\tan\\theta=\\frac{\sin\\theta}{\cos\\theta}$ | quotient rewrite |
       | Cosine sum | $\cos(A+B)=\cos A\cos B-\sin A\sin B$ | angle combination |
       
       ### Common pitfalls

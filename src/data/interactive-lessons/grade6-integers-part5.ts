@@ -27,7 +27,7 @@ Same signs → positive. Different signs → negative.
       content: `
 ## Worked Example
 
-$(-4) \times (-6) = +24$ (same signs) ✅
+$(-4) \\times (-6) = +24$ (same signs) ✅
 
 $(-15) \div 3 = -5$ (different signs) ✅
     

@@ -24,7 +24,7 @@ Apply all trig modeling concepts:
 
 **Ferris wheel: radius 20 ft, center 25 ft high, period 60 sec.**
 
-$h(t) = -20\cos\left(\frac{2\pi}{60}t\right) + 25 = -20\cos\left(\frac{\pi}{30}t\right) + 25$ ✅
+$h(t) = -20\cos\left(\\frac{2\pi}{60}t\\right) + 25 = -20\cos\left(\\frac{\pi}{30}t\\right) + 25$ ✅
 
 (Negative cosine starts at the bottom)
     

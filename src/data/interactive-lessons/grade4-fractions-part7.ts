@@ -24,11 +24,11 @@ export const g4FractionsPart7Data = {
       content: `
 ## Worked Example
 
-**Simplify $\frac{12}{18}$, then compare to $\frac{1}{2}$.**
+**Simplify $\\frac{12}{18}$, then compare to $\\frac{1}{2}$.**
 
-GCF(12,18) = 6: $\frac{12}{18} = \frac{2}{3}$
+GCF(12,18) = 6: $\\frac{12}{18} = \\frac{2}{3}$
 
-$\frac{2}{3} = \frac{4}{6}$ and $\frac{1}{2} = \frac{3}{6}$ → $\frac{2}{3} > \frac{1}{2}$ ✅
+$\\frac{2}{3} = \\frac{4}{6}$ and $\\frac{1}{2} = \\frac{3}{6}$ → $\\frac{2}{3} > \\frac{1}{2}$ ✅
     
     `
     },
@@ -60,11 +60,11 @@ $\frac{2}{3} = \frac{4}{6}$ and $\frac{1}{2} = \frac{3}{6}$ → $\frac{2}{3} > \
       content: `
 **Review** 🧮
 
-1) Simplify $\frac{9}{12}$. Numerator?
+1) Simplify $\\frac{9}{12}$. Numerator?
 
-2) $\frac{3}{5} + \frac{4}{5} = \frac{?}{5}$. Numerator?
+2) $\\frac{3}{5} + \\frac{4}{5} = \\frac{?}{5}$. Numerator?
 
-3) $\frac{3}{4} \times 4 = $ ? (whole number)
+3) $\\frac{3}{4} \\times 4 = $ ? (whole number)
     
     `,
       exercise: {
@@ -98,9 +98,9 @@ $\frac{2}{3} = \frac{4}{6}$ and $\frac{1}{2} = \frac{3}{6}$ → $\frac{2}{3} > \
 
 | # | Topic | Problem |
 |---|-------|---------|
-| 1 | Simplify | $\frac{8}{12}$ |
-| 2 | Compare | $\frac{5}{6}$ vs $\frac{7}{8}$ |
-| 3 | Add | $\frac{3}{10} + \frac{7}{10}$ |
+| 1 | Simplify | $\\frac{8}{12}$ |
+| 2 | Compare | $\\frac{5}{6}$ vs $\\frac{7}{8}$ |
+| 3 | Add | $\\frac{3}{10} + \\frac{7}{10}$ |
     
     `
     },

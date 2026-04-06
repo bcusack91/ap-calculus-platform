@@ -24,9 +24,9 @@ export const g5DecimalsPart7Data = {
       content: `
 ## Worked Example
 
-$2.45 \times 0.3 = ?$
+$2.45 \\times 0.3 = ?$
 
-$245 \times 3 = 735$, decimal places: $2 + 1 = 3$ → $0.735$ ✅
+$245 \\times 3 = 735$, decimal places: $2 + 1 = 3$ → $0.735$ ✅
     
     `
     },
@@ -60,7 +60,7 @@ $245 \times 3 = 735$, decimal places: $2 + 1 = 3$ → $0.735$ ✅
 
 1) $5.6 + 3.45 = ?$
 
-2) $0.4 \times 0.8 = ?$
+2) $0.4 \\times 0.8 = ?$
 
 3) $7.2 \div 0.9 = ?$
     
@@ -97,7 +97,7 @@ $245 \times 3 = 735$, decimal places: $2 + 1 = 3$ → $0.735$ ✅
 | # | Type | Problem |
 |---|------|---------|
 | 1 | Add | $5.6 + 3.45$ |
-| 2 | Multiply | $0.4 \times 0.8$ |
+| 2 | Multiply | $0.4 \\times 0.8$ |
 | 3 | Divide | $7.2 \div 0.9$ |
     
     `

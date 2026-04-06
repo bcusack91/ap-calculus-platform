@@ -25,9 +25,9 @@ Apply fraction skills to real-world problems!
       content: `
 ## Worked Example
 
-**A recipe calls for $\frac{3}{4}$ cup of milk. You halve the recipe. How much milk?**
+**A recipe calls for $\\frac{3}{4}$ cup of milk. You halve the recipe. How much milk?**
 
-$\frac{3}{4} \times \frac{1}{2} = \frac{3}{8}$ cup ✅
+$\\frac{3}{4} \\times \\frac{1}{2} = \\frac{3}{8}$ cup ✅
     
     `
     },
@@ -59,11 +59,11 @@ $\frac{3}{4} \times \frac{1}{2} = \frac{3}{8}$ cup ✅
       content: `
 **Word Problems** 🧮
 
-1) A pizza has 12 slices. You eat $\frac{1}{6}$. How many slices left?
+1) A pizza has 12 slices. You eat $\\frac{1}{6}$. How many slices left?
 
-2) Sarah has $\frac{9}{12}$ yd ribbon. Uses $\frac{3}{12}$ yd. How many twelfths remain?
+2) Sarah has $\\frac{9}{12}$ yd ribbon. Uses $\\frac{3}{12}$ yd. How many twelfths remain?
 
-3) $\frac{2}{3}$ of 12 students passed. How many passed?
+3) $\\frac{2}{3}$ of 12 students passed. How many passed?
     
     `,
       exercise: {
@@ -99,7 +99,7 @@ $\frac{3}{4} \times \frac{1}{2} = \frac{3}{8}$ cup ✅
 |---|---------|----------|
 | 1 | Share 3 pizzas among 4 people | Division |
 | 2 | Ate 2/8 of pie, friend ate 3/8. How much left? | Subtraction |
-| 3 | $\frac{5}{6}$ m rope − $\frac{1}{6}$ m cut | Subtraction |
+| 3 | $\\frac{5}{6}$ m rope − $\\frac{1}{6}$ m cut | Subtraction |
     
     `
     },

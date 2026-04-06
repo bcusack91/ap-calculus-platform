@@ -14,7 +14,7 @@ To subtract mixed numbers:
 2. If needed, **borrow** from the whole number
 3. Subtract fractions, then subtract whole numbers
 
-$3\frac{1}{4} - 1\frac{3}{4}$: borrow 1 from 3 → $2\frac{5}{4} - 1\frac{3}{4} = 1\frac{2}{4} = 1\frac{1}{2}$
+$3\\frac{1}{4} - 1\\frac{3}{4}$: borrow 1 from 3 → $2\\frac{5}{4} - 1\\frac{3}{4} = 1\\frac{2}{4} = 1\\frac{1}{2}$
     
     `
     },
@@ -24,11 +24,11 @@ $3\frac{1}{4} - 1\frac{3}{4}$: borrow 1 from 3 → $2\frac{5}{4} - 1\frac{3}{4} 
       content: `
 ## Worked Example
 
-$5\frac{1}{3} - 2\frac{2}{3} = ?$
+$5\\frac{1}{3} - 2\\frac{2}{3} = ?$
 
-$\frac{1}{3} < \frac{2}{3}$, so borrow: $5\frac{1}{3} = 4\frac{4}{3}$
+$\\frac{1}{3} < \\frac{2}{3}$, so borrow: $5\\frac{1}{3} = 4\\frac{4}{3}$
 
-$4\frac{4}{3} - 2\frac{2}{3} = 2\frac{2}{3}$ ✅
+$4\\frac{4}{3} - 2\\frac{2}{3} = 2\\frac{2}{3}$ ✅
     
     `
     },
@@ -60,11 +60,11 @@ $4\frac{4}{3} - 2\frac{2}{3} = 2\frac{2}{3}$ ✅
       content: `
 **Subtract Mixed Numbers** 🧮
 
-1) $4\frac{3}{5} - 2\frac{1}{5}$: whole number part of the answer?
+1) $4\\frac{3}{5} - 2\\frac{1}{5}$: whole number part of the answer?
 
-2) $6\frac{1}{4} - 3\frac{3}{4}$: whole number part of the answer?
+2) $6\\frac{1}{4} - 3\\frac{3}{4}$: whole number part of the answer?
 
-3) $8 - 2\frac{2}{3}$: whole number part of the answer?
+3) $8 - 2\\frac{2}{3}$: whole number part of the answer?
     
     `,
       exercise: {
@@ -98,9 +98,9 @@ $4\frac{4}{3} - 2\frac{2}{3} = 2\frac{2}{3}$ ✅
 
 | # | Problem | Borrowing? |
 |---|---------|------------|
-| 1 | $4\frac{3}{5} - 2\frac{1}{5}$ | No |
-| 2 | $6\frac{1}{4} - 3\frac{3}{4}$ | Yes |
-| 3 | $8 - 2\frac{2}{3}$ | Yes |
+| 1 | $4\\frac{3}{5} - 2\\frac{1}{5}$ | No |
+| 2 | $6\\frac{1}{4} - 3\\frac{3}{4}$ | Yes |
+| 3 | $8 - 2\\frac{2}{3}$ | Yes |
     
     `
     },

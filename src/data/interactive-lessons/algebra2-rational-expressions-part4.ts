@@ -11,7 +11,7 @@ export const alg2RationalPart4Data = {
 
 A **complex fraction** has fractions in the numerator, denominator, or both.
 
-$\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a}{b} \cdot \frac{d}{c} = \frac{ad}{bc}$
+$\\frac{\\frac{a}{b}}{\\frac{c}{d}} = \\frac{a}{b} \cdot \\frac{d}{c} = \\frac{ad}{bc}$
 
 Alternatively: multiply top and bottom by the LCD.
     
@@ -23,7 +23,7 @@ Alternatively: multiply top and bottom by the LCD.
       content: `
 ## Worked Example
 
-$\frac{\frac{1}{2}}{\frac{3}{4}} = \frac{1}{2} \times \frac{4}{3} = \frac{4}{6} = \frac{2}{3}$ ✅
+$\\frac{\\frac{1}{2}}{\\frac{3}{4}} = \\frac{1}{2} \\times \\frac{4}{3} = \\frac{4}{6} = \\frac{2}{3}$ ✅
     
     `
     },
@@ -55,11 +55,11 @@ $\frac{\frac{1}{2}}{\frac{3}{4}} = \frac{1}{2} \times \frac{4}{3} = \frac{4}{6} 
       content: `
 **Simplify Complex Fractions** 🧮 (decimal answers)
 
-1) $\frac{\frac{2}{3}}{\frac{4}{9}} = ?$
+1) $\\frac{\\frac{2}{3}}{\\frac{4}{9}} = ?$
 
-2) $\frac{\frac{1}{x}}{\frac{2}{x}} = ?$
+2) $\\frac{\\frac{1}{x}}{\\frac{2}{x}} = ?$
 
-3) $\frac{3}{\frac{6}{5}} = ?$
+3) $\\frac{3}{\\frac{6}{5}} = ?$
     
     `,
       exercise: {
@@ -93,9 +93,9 @@ $\frac{\frac{1}{2}}{\frac{3}{4}} = \frac{1}{2} \times \frac{4}{3} = \frac{4}{6} 
 
 | # | Complex Fraction | Simplified |
 |---|-----------------|----------|
-| 1 | $\frac{\frac{2}{3}}{\frac{4}{9}}$ | $\frac{3}{2}$ |
-| 2 | $\frac{\frac{1}{x}}{\frac{2}{x}}$ | $\frac{1}{2}$ |
-| 3 | $\frac{3}{\frac{6}{5}}$ | $\frac{5}{2}$ |
+| 1 | $\\frac{\\frac{2}{3}}{\\frac{4}{9}}$ | $\\frac{3}{2}$ |
+| 2 | $\\frac{\\frac{1}{x}}{\\frac{2}{x}}$ | $\\frac{1}{2}$ |
+| 3 | $\\frac{3}{\\frac{6}{5}}$ | $\\frac{5}{2}$ |
     
     `
     },

@@ -9,7 +9,7 @@ export const physCEMCapacitorsPart2Data = {
 
 **Part 2 of 7 — Parallel-Plate Capacitors**
 
-$C = \frac{\epsilon_0 A}{d}$
+$C = \\frac{\epsilon_0 A}{d}$
 
 where $A$ = plate area, $d$ = plate separation.
 
@@ -27,7 +27,7 @@ where $A$ = plate area, $d$ = plate separation.
 
 **Plates: $A = 0.01$ m², $d = 0.001$ m. Find $C$.**
 
-$C = \epsilon_0 A/d = 8.85 \times 10^{-12} \times 0.01 / 0.001 = 88.5$ pF ✅
+$C = \epsilon_0 A/d = 8.85 \\times 10^{-12} \\times 0.01 / 0.001 = 88.5$ pF ✅
     
     `
     },

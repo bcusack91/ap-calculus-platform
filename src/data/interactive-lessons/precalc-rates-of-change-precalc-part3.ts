@@ -67,10 +67,10 @@ export const precalcRatesOfChangePart3Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Percent change | $\frac{\text{new}-\text{old}}{\text{old}}\cdot 100\%$ | relative growth/decline |
+      | Percent change | $\\frac{\\text{new}-\\text{old}}{\\text{old}}\cdot 100\%$ | relative growth/decline |
       | Linear model | $y=mx+b$ | constant-rate baseline |
-      | Average rate | $\frac{f(b)-f(a)}{b-a}$ | secant computation |
-      | Slope | $m=\frac{y_2-y_1}{x_2-x_1}$ | point-pair rate |
+      | Average rate | $\\frac{f(b)-f(a)}{b-a}$ | secant computation |
+      | Slope | $m=\\frac{y_2-y_1}{x_2-x_1}$ | point-pair rate |
       
       ### Common pitfalls
       - Do not compare rates across intervals without checking interval lengths.

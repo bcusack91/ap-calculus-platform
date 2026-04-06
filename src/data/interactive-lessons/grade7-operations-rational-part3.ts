@@ -14,7 +14,7 @@ Sign rules:
 - Different signs → **negative**
 
 $(-0.3)(0.5) = -0.15$
-$(-\frac{2}{3})(-\frac{3}{4}) = \frac{1}{2}$
+$(-\\frac{2}{3})(-\\frac{3}{4}) = \\frac{1}{2}$
     
     `
     },

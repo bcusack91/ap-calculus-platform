@@ -182,24 +182,28 @@ $$E_{\\pi} \\approx E_{\\text{double}} - E_{\\text{single}} = 614 - 348 = 266 \\
         dropdowns: [
           {
             id: 'hy-5-7-dd1',
+            label: 'Carbon in C₂H₄ has 3 electron domains (2 C–H + 1 C=C) → _______ hybridization',
             options: ['sp', 'sp²', 'sp³', 'sp³d'],
             correctIndex: 1,
             explanation: 'Carbon in C₂H₄ has 3 electron domains (2 C–H + 1 C=C) → sp² hybridization.'
           },
           {
             id: 'hy-5-7-dd2',
+            label: 'Carbon in C₂H₂ has 2 electron domains (1 C–H + 1 C≡C) → _______ hybridization',
             options: ['sp', 'sp²', 'sp³', 'sp³d'],
             correctIndex: 0,
             explanation: 'Carbon in C₂H₂ has 2 electron domains (1 C–H + 1 C≡C) → sp hybridization.'
           },
           {
             id: 'hy-5-7-dd3',
+            label: 'Triple bonds are the shortest',
             options: ['C–C in ethane', 'C=C in ethene', 'C≡C in acetylene', 'All are equal'],
             correctIndex: 2,
             explanation: 'Triple bonds are the shortest. Higher bond order = more electron density pulling nuclei together = shorter bond.'
           },
           {
             id: 'hy-5-7-dd4',
+            label: 'The _______ (~839 kJ/mol) is the strongest because it has the most bonding',
             options: ['C–C single bond', 'C=C double bond', 'C≡C triple bond', 'All are equal'],
             correctIndex: 2,
             explanation: 'The C≡C triple bond (~839 kJ/mol) is the strongest because it has the most bonding electron density (1σ + 2π).'

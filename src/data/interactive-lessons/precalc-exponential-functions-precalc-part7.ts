@@ -68,8 +68,8 @@ export const precalcExponentialPart7Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Doubling time | $T_d=\frac{\ln 2}{k}$ | continuous growth timing |
-      | Half-life | $T_{1/2}=\frac{\ln 2}{|k|}$ | continuous decay timing |
+      | Doubling time | $T_d=\\frac{\ln 2}{k}$ | continuous growth timing |
+      | Half-life | $T_{1/2}=\\frac{\ln 2}{|k|}$ | continuous decay timing |
       | Exponential form | $f(x)=ab^x$ | model construction |
       | Continuous model | $f(t)=Ae^{kt}$ | growth/decay by constant relative rate |
       

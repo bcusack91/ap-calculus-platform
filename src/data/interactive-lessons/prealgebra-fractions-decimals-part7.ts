@@ -25,7 +25,7 @@ export const preAlgFractionsPart7Data = {
       content: `
 ## Worked Example
 
-$\frac{5}{8} = 0.625 = 62.5\%$ ✅
+$\\frac{5}{8} = 0.625 = 62.5\%$ ✅
     
     `
     },
@@ -57,7 +57,7 @@ $\frac{5}{8} = 0.625 = 62.5\%$ ✅
       content: `
 **Review** 🧮
 
-1) $\frac{2}{5}$ as a decimal?
+1) $\\frac{2}{5}$ as a decimal?
 
 2) 0.85 as a percent? (number only)
 

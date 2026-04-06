@@ -69,10 +69,10 @@ export const precalcInverseTrigPart4Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Reciprocal relation | $\arctan x + \arctan\!\left(\frac1x\right)=\frac\pi2\;(x>0)$ | angle decomposition |
+      | Reciprocal relation | $\arctan x + \arctan\!\left(\\frac1x\\right)=\\frac\pi2\;(x>0)$ | angle decomposition |
       | Inverse identity | $\sin(\arcsin x)=x$ | valid for $x\in[-1,1]$ |
       | Principal output | $\arccos x \in [0,\pi]$ | range control |
-      | Tangent inverse | $\tan(\arctan x)=x$ | all real inputs |
+      | Tangent inverse | $\\tan(\arctan x)=x$ | all real inputs |
       
       ### Common pitfalls
       - Inverse trig outputs are angles, not raw ratio values.

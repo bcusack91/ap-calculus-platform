@@ -29,7 +29,7 @@ This final part ties together everything from all four fluid mechanics topics: d
 
 ### Decision Tree: Which Equation(s) to Use
 
-1. **Fluid at rest?** → Hydrostatic pressure ($P = P_0 + \rho g h$), buoyancy ($F_B = \rho_f V_d g$)
+1. **Fluid at rest?** → Hydrostatic pressure ($P = P_0 + \\rho g h$), buoyancy ($F_B = \\rho_f V_d g$)
 2. **Fluid moving, area changes?** → Continuity ($A_1 v_1 = A_2 v_2$) first, then Bernoulli
 3. **Fluid moving, same area?** → Bernoulli only (speed is the same by continuity)
 4. **Open surface or hole in tank?** → Torricelli ($v = \\sqrt{2gh}$)

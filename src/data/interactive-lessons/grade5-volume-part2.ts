@@ -13,7 +13,7 @@ To count unit cubes:
 1. Count cubes in one **layer** (length × width)
 2. Multiply by the number of **layers** (height)
 
-A 6 × 3 layer with 4 layers: $6 \times 3 \times 4 = 72$
+A 6 × 3 layer with 4 layers: $6 \\times 3 \\times 4 = 72$
     
     `
     },
@@ -25,8 +25,8 @@ A 6 × 3 layer with 4 layers: $6 \times 3 \times 4 = 72$
 
 **A rectangular prism has a base of 5 × 3 and is 4 cubes tall.**
 
-Base layer: $5 \times 3 = 15$ cubes
-Total: $15 \times 4 = 60$ cubes ✅
+Base layer: $5 \\times 3 = 15$ cubes
+Total: $15 \\times 4 = 60$ cubes ✅
     
     `
     },

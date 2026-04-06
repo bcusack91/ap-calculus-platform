@@ -24,8 +24,8 @@ To find volume of irregular (composite) shapes:
 
 **An L-shaped solid: a 4×3×2 block joined to a 2×3×2 block.**
 
-$V_1 = 4 \times 3 \times 2 = 24$
-$V_2 = 2 \times 3 \times 2 = 12$
+$V_1 = 4 \\times 3 \\times 2 = 24$
+$V_2 = 2 \\times 3 \\times 2 = 12$
 $V = 24 + 12 = 36$ cubic units ✅
     
     `

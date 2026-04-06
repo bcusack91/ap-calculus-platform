@@ -17,6 +17,7 @@ export interface ExitQuizQuestion {
   explanation: string
   category: string // which lesson part / domain it covers
   topicSlug?: string // which specific topic this question covers (for course-level filtering)
+  partNumber?: number // which lesson part (1-N) this question tests (for variant retry targeting)
 }
 
 interface QuestionTemplate {

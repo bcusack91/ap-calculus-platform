@@ -70,7 +70,7 @@ export const precalcLogarithmicPart1Data = {
       | Definition | $\log_b x = y \iff b^y=x$ | inverse conversion |
       | Product | $\log_b(xy)=\log_b x+\log_b y$ | expression expansion |
       | Power | $\log_b(x^k)=k\log_b x$ | exponent extraction |
-      | Change of base | $\log_b x=\frac{\log_k x}{\log_k b}$ | calculator evaluation |
+      | Change of base | $\log_b x=\\frac{\log_k x}{\log_k b}$ | calculator evaluation |
       
       ### Common pitfalls
       - Applying log rules across sums, like $\log(x+y)$, is invalid.

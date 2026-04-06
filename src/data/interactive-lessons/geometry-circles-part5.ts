@@ -24,7 +24,7 @@ export const geoCirclesPart5Data = {
 
 **Two chords cross: segments 3, 8 and 4, ?.**
 
-$3 \times 8 = 4 \times x \Rightarrow 24 = 4x \Rightarrow x = 6$ ✅
+$3 \\times 8 = 4 \\times x \\Rightarrow 24 = 4x \\Rightarrow x = 6$ ✅
     
     `
     },

@@ -11,7 +11,7 @@ export const physCNewtonPart3Data = {
 
 For every action force, there is an equal and opposite reaction force.
 
-$\vec{F}_{A \text{ on } B} = -\vec{F}_{B \text{ on } A}$
+$\\vec{F}_{A \\text{ on } B} = -\\vec{F}_{B \\text{ on } A}$
 
 - Action-reaction pairs act on **different** objects
 - They are equal in magnitude, opposite in direction

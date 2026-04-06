@@ -12,7 +12,7 @@ export const g4GeoMeasurePart7Data = {
 ### Key Concepts
 - Acute (<90°), Right (=90°), Obtuse (>90°), Straight (=180°)
 - Shapes classified by sides and angles
-- $P = 2l + 2w$, $A = l \times w$
+- $P = 2l + 2w$, $A = l \\times w$
 - Lines of symmetry
     
     `
@@ -25,7 +25,7 @@ export const g4GeoMeasurePart7Data = {
 
 **Rectangle 9 × 6 m.**
 
-$P = 2(9)+2(6) = 30$ m, $A = 9 \times 6 = 54$ m² ✅
+$P = 2(9)+2(6) = 30$ m, $A = 9 \\times 6 = 54$ m² ✅
     
     `
     },

@@ -9,7 +9,7 @@ export const apPrecalcRationalPart1Data = {
 
 **Part 1 of 7 — Domain Restrictions**
 
-A rational function is $f(x) = \frac{p(x)}{q(x)}$ where $q(x) \neq 0$.
+A rational function is $f(x) = \\frac{p(x)}{q(x)}$ where $q(x) \\neq 0$.
 
 **Domain**: all real numbers except where the denominator = 0.
 
@@ -23,9 +23,9 @@ Set $q(x) = 0$ and solve to find restrictions.
       content: `
 ## Worked Example
 
-**$f(x) = \frac{x+1}{x-3}$. Domain?**
+**$f(x) = \\frac{x+1}{x-3}$. Domain?**
 
-$x - 3 = 0 \Rightarrow x = 3$
+$x - 3 = 0 \\Rightarrow x = 3$
 
 Domain: all reals except $x = 3$ ✅
     
@@ -61,11 +61,11 @@ Domain: all reals except $x = 3$ ✅
 
 Find where denominator = 0:
 
-1) $\frac{1}{x-5}$. Restricted at $x = $ ?
+1) $\\frac{1}{x-5}$. Restricted at $x = $ ?
 
-2) $\frac{x}{x+2}$. Restricted at $x = $ ?
+2) $\\frac{x}{x+2}$. Restricted at $x = $ ?
 
-3) $\frac{1}{x^2-4}$. One restriction at $x = $ ?
+3) $\\frac{1}{x^2-4}$. One restriction at $x = $ ?
     
     `,
       exercise: {
@@ -99,9 +99,9 @@ Find where denominator = 0:
 
 | # | Function | Restriction |
 |---|---------|----------|
-| 1 | $\frac{1}{x-5}$ | x ≠ 5 |
-| 2 | $\frac{x}{x+2}$ | x ≠ −2 |
-| 3 | $\frac{1}{x^2-4}$ | x ≠ ±2 |
+| 1 | $\\frac{1}{x-5}$ | x ≠ 5 |
+| 2 | $\\frac{x}{x+2}$ | x ≠ −2 |
+| 3 | $\\frac{1}{x^2-4}$ | x ≠ ±2 |
     
     `
     },

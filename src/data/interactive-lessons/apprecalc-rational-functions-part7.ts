@@ -24,7 +24,7 @@ export const apPrecalcRationalPart7Data = {
       content: `
 ## Worked Example
 
-**$\frac{3x+6}{x+2} = \frac{3(x+2)}{x+2}$**
+**$\\frac{3x+6}{x+2} = \\frac{3(x+2)}{x+2}$**
 
 Common factor → hole at $x=-2$, simplified: $y = 3$
 (Horizontal line with a hole) ✅
@@ -59,11 +59,11 @@ Common factor → hole at $x=-2$, simplified: $y = 3$
       content: `
 **Review** 🧮
 
-1) VA of $\frac{5}{x-4}$ at $x = $ ?
+1) VA of $\\frac{5}{x-4}$ at $x = $ ?
 
-2) HA of $\frac{2x}{3x+1}$ at $y = $ ? (round to hundredths)
+2) HA of $\\frac{2x}{3x+1}$ at $y = $ ? (round to hundredths)
 
-3) Hole of $\frac{x(x-1)}{x(x+3)}$ at $x = $ ?
+3) Hole of $\\frac{x(x-1)}{x(x+3)}$ at $x = $ ?
     
     `,
       exercise: {
@@ -97,9 +97,9 @@ Common factor → hole at $x=-2$, simplified: $y = 3$
 
 | # | Topic | Problem |
 |---|-------|---------|
-| 1 | VA | $\frac{5}{x-4}$ |
-| 2 | HA | $\frac{2x}{3x+1}$ |
-| 3 | Hole | $\frac{x(x-1)}{x(x+3)}$ |
+| 1 | VA | $\\frac{5}{x-4}$ |
+| 2 | HA | $\\frac{2x}{3x+1}$ |
+| 3 | Hole | $\\frac{x(x-1)}{x(x+3)}$ |
     
     `
     },

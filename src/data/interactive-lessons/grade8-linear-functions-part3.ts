@@ -25,7 +25,7 @@ Given slope and a point, plug in to find $b$.
 
 **Slope 3, passes through (2, 10).**
 
-$10 = 3(2) + b \Rightarrow 10 = 6 + b \Rightarrow b = 4$
+$10 = 3(2) + b \\Rightarrow 10 = 6 + b \\Rightarrow b = 4$
 
 $y = 3x + 4$ ✅
     

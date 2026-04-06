@@ -13,8 +13,8 @@ export const physCEMCapacitorsPart7Data = {
 - $C = Q/V$, $C = \epsilon_0 A/d$, $C = \kappa C_0$
 - Series: $1/C_{eq} = \sum 1/C_i$
 - Parallel: $C_{eq} = \sum C_i$
-- Energy: $U = \frac{1}{2}CV^2 = Q^2/(2C)$
-- Energy density: $u = \frac{1}{2}\epsilon_0 E^2$
+- Energy: $U = \\frac{1}{2}CV^2 = Q^2/(2C)$
+- Energy density: $u = \\frac{1}{2}\epsilon_0 E^2$
     
     `
     },
@@ -28,7 +28,7 @@ export const physCEMCapacitorsPart7Data = {
 
 $C = \kappa C_0 = 5(20) = 100$ μF
 
-$U = \frac{1}{2}CV^2 = \frac{1}{2}(100 \times 10^{-6})(2500) = 0.125$ J ✅
+$U = \\frac{1}{2}CV^2 = \\frac{1}{2}(100 \\times 10^{-6})(2500) = 0.125$ J ✅
     
     `
     },
@@ -100,7 +100,7 @@ $U = \frac{1}{2}CV^2 = \frac{1}{2}(100 \times 10^{-6})(2500) = 0.125$ J ✅
 |---|-------|---------|
 | 1 | Capacitance | $C = Q/V$ |
 | 2 | Parallel plate | $C = \epsilon_0 A/d$ |
-| 3 | Energy storage | $U = \frac{1}{2}CV^2$ |
+| 3 | Energy storage | $U = \\frac{1}{2}CV^2$ |
     
     `
     },

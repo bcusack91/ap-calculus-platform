@@ -12,11 +12,11 @@ export const calcbcSeriesPart3Data = {
 
 If $f$ is positive, continuous, decreasing for $x \geq 1$, and $a_n = f(n)$:
 
-$$\sum_{n=1}^{\infty} a_n \text{ and } \int_1^{\infty} f(x)\,dx \text{ either both converge or both diverge}$$
+$$\sum_{n=1}^{\infty} a_n \\text{ and } \int_1^{\infty} f(x)\,dx \\text{ either both converge or both diverge}$$
 
 ### $p$-Series
 
-$$\sum_{n=1}^{\infty} \frac{1}{n^p} \begin{cases} \text{converges} & p > 1 \\ \text{diverges} & p \leq 1 \end{cases}$$`
+$$\sum_{n=1}^{\infty} \\frac{1}{n^p} \\begin{cases} \\text{converges} & p > 1 \\ \\text{diverges} & p \leq 1 \end{cases}$$`
     },
     {
       id: 'ser3-quiz1',

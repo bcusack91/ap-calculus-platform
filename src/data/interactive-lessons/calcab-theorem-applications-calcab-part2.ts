@@ -12,7 +12,7 @@ export const calcabTheoremsPart2Data = {
 
 If $f$ is **continuous** on $[a, b]$ and **differentiable** on $(a, b)$, then there exists $c \in (a, b)$ such that:
 
-$$f'(c) = \frac{f(b) - f(a)}{b - a}$$
+$$f'(c) = \\frac{f(b) - f(a)}{b - a}$$
 
 ### Geometric Meaning
 
@@ -22,7 +22,7 @@ There's a point where the tangent line is parallel to the secant line.
 
 $f(x) = x^2$ on $[1, 3]$.
 
-Average rate: $\frac{9-1}{3-1} = 4$.
+Average rate: $\\frac{9-1}{3-1} = 4$.
 
 $f'(c) = 2c = 4 \implies c = 2$.
 

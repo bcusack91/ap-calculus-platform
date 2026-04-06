@@ -11,7 +11,7 @@ export const g4GeoMeasurePart4Data = {
 
 **Area** = space inside, measured in **square units**.
 
-$A = l \times w$
+$A = l \\times w$
 
 For squares: $A = s^2$
     
@@ -23,7 +23,7 @@ For squares: $A = s^2$
       content: `
 ## Worked Example
 
-**Rectangle: 8 m × 5 m.** $A = 8 \times 5 = 40$ m² ✅
+**Rectangle: 8 m × 5 m.** $A = 8 \\times 5 = 40$ m² ✅
     
     `
     },

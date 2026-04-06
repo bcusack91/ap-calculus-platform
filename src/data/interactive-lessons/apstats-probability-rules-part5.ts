@@ -10,7 +10,7 @@ export const apStatsProbabilityPart5Data = {
 **Part 5 of 7 — Independence**
 
 Events A and B are **independent** if:
-$P(A|B) = P(A) \quad \text{or equivalently} \quad P(A \cap B) = P(A) \cdot P(B)$
+$P(A|B) = P(A) \quad \\text{or equivalently} \quad P(A \cap B) = P(A) \cdot P(B)$
 
 If knowing B changes the probability of A, the events are **dependent**.
     
@@ -24,7 +24,7 @@ If knowing B changes the probability of A, the events are **dependent**.
 
 **P(A) = 0.4, P(B) = 0.5, P(A∩B) = 0.2. Independent?**
 
-$P(A) \times P(B) = 0.4 \times 0.5 = 0.2 = P(A∩B)$
+$P(A) \\times P(B) = 0.4 \\times 0.5 = 0.2 = P(A∩B)$
 
 **Yes, independent!** ✅
     

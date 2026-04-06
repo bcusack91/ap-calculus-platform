@@ -26,7 +26,7 @@ Example: $3.456$ → 3 ones, 4 tenths, 5 hundredths, 6 thousandths
 
 **What is the value of 7 in 0.372?**
 
-7 is in the hundredths place → $7 \times 0.01 = 0.07$ ✅
+7 is in the hundredths place → $7 \\times 0.01 = 0.07$ ✅
     
     `
     },

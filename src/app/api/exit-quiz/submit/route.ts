@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json()
-    const { topicSlug, score, totalQuestions, passed, mustRedoUnit, answers, timeSpent } = body
+    const { topicSlug, score, totalQuestions, passed, mustRedoUnit, answers, timeSpent, variant } = body
 
     if (!topicSlug || score === undefined || !totalQuestions) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
@@ -30,6 +30,7 @@ export async function POST(request: Request) {
         totalQuestions,
         passed: !!passed,
         mustRedoUnit: !!mustRedoUnit,
+        variant: typeof variant === 'number' ? variant : 1,
         answers: answers || [],
         timeSpent: timeSpent || 0,
       }

@@ -12,7 +12,7 @@ export const physCEMCoulombPart6Data = {
 ### Strategy for Electrostatics
 1. Draw a diagram with all charges and distances
 2. For forces: apply Coulomb's law to each pair
-3. For fields: find $\vec{E}$ from each charge, then superpose
+3. For fields: find $\\vec{E}$ from each charge, then superpose
 4. Use symmetry to simplify
 5. Set up coordinate system and resolve vectors
     
@@ -28,9 +28,9 @@ export const physCEMCoulombPart6Data = {
 
 Both fields point from $+$ to $-$ (same direction at midpoint).
 
-$E_{each} = k(3 \times 10^{-6})/(0.2)^2 = 675{,}000$ N/C
+$E_{each} = k(3 \\times 10^{-6})/(0.2)^2 = 675{,}000$ N/C
 
-$E_{total} = 2 \times 675{,}000 = 1{,}350{,}000$ N/C (toward $-$ charge) ✅
+$E_{total} = 2 \\times 675{,}000 = 1{,}350{,}000$ N/C (toward $-$ charge) ✅
     
     `
     },
@@ -64,7 +64,7 @@ $E_{total} = 2 \times 675{,}000 = 1{,}350{,}000$ N/C (toward $-$ charge) ✅
 
 1) Two identical charges $+q$ are equidistant from a point P, on opposite sides. Net field at P? (units of $kq/r^2$)
 
-2) $F = kq_1q_2/r^2$. If $k = 9 \times 10^9$, $q_1 = q_2 = 2 \times 10^{-6}$ C, $r = 1$ m. $F$ (N)? (Give as integer in mN, i.e., $\times 10^{-3}$)
+2) $F = kq_1q_2/r^2$. If $k = 9 \\times 10^9$, $q_1 = q_2 = 2 \\times 10^{-6}$ C, $r = 1$ m. $F$ (N)? (Give as integer in mN, i.e., $\\times 10^{-3}$)
 
 3) If the distance between charges is halved, force increases by a factor of ___
     

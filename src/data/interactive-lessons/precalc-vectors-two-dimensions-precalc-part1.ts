@@ -12,7 +12,7 @@ export const precalcVectors2DPart1Data = {
       This part focuses on encoding displacement in coordinate form. Keep notation precise and connect each symbolic step to geometric or functional meaning.
       
       ### Core definitions
-      - **component form**: vector written as ordered components like $\langle a,b\rangle$
+      - **component form**: vector written as ordered components like $\langle a,b\\rangle$
       - **magnitude**: length of a vector
       - **direction angle**: angle measured from positive $x$-axis
       
@@ -36,12 +36,12 @@ export const precalcVectors2DPart1Data = {
             question: 'Choose the most accurate definition of component form.',
             options: [
               'length of a vector',
-              'vector written as ordered components like $\langle a,b\rangle$',
+              'vector written as ordered components like $\langle a,b\\rangle$',
               'scalar from component-wise multiplication and sum',
               'angle measured from positive $x$-axis'
             ],
             correctAnswer: 1,
-            explanation: 'component form is defined as: vector written as ordered components like $\langle a,b\rangle$.'
+            explanation: 'component form is defined as: vector written as ordered components like $\langle a,b\\rangle$.'
           },
           {
             question: 'In encoding displacement in coordinate form, which expression is the best starting model?',
@@ -67,10 +67,10 @@ export const precalcVectors2DPart1Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Magnitude | $\|\langle a,b\rangle\|=\sqrt{a^2+b^2}$ | length computation |
-      | Dot product | $\langle a,b\rangle\cdot\langle c,d\rangle=ac+bd$ | angle and projection |
-      | Angle relation | $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\theta$ | finding angle between vectors |
-      | Unit vector | $\hat{\mathbf u}=\frac{\mathbf u}{\|\mathbf u\|}$ | direction-only normalization |
+      | Magnitude | $\|\langle a,b\\rangle\|=\sqrt{a^2+b^2}$ | length computation |
+      | Dot product | $\langle a,b\\rangle\cdot\langle c,d\\rangle=ac+bd$ | angle and projection |
+      | Angle relation | $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\\theta$ | finding angle between vectors |
+      | Unit vector | $\hat{\mathbf u}=\\frac{\mathbf u}{\|\mathbf u\|}$ | direction-only normalization |
       
       ### Common pitfalls
       - Magnitude is always nonnegative.
@@ -117,7 +117,7 @@ export const precalcVectors2DPart1Data = {
         dropdowns: [
           {
             label: 'component form',
-            options: ['angle measured from positive $x$-axis', 'length of a vector', 'scalar from component-wise multiplication and sum', 'vector written as ordered components like $\langle a,b\rangle$']
+            options: ['angle measured from positive $x$-axis', 'length of a vector', 'scalar from component-wise multiplication and sum', 'vector written as ordered components like $\langle a,b\\rangle$']
           },
           {
             label: 'magnitude',
@@ -128,7 +128,7 @@ export const precalcVectors2DPart1Data = {
             options: ['scalar from component-wise multiplication and sum', 'component of one vector along another', 'vector with magnitude 1', 'angle measured from positive $x$-axis']
           }
         ],
-        correctAnswers: ['vector written as ordered components like $\langle a,b\rangle$', 'length of a vector', 'angle measured from positive $x$-axis'],
+        correctAnswers: ['vector written as ordered components like $\langle a,b\\rangle$', 'length of a vector', 'angle measured from positive $x$-axis'],
         hint1: 'Match each term to the full definition, not just a keyword.',
         hint2: 'Use elimination by checking whether each definition captures the right dependency.',
         hint3: 'Read the label and option together as one complete mathematical sentence.',

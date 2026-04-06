@@ -12,7 +12,7 @@ export const geoCirclesPart2Data = {
 - **Central angle**: vertex at center; equals the intercepted arc
 - **Inscribed angle**: vertex on the circle; equals **half** the intercepted arc
 
-$\text{Inscribed angle} = \frac{1}{2} \times \text{intercepted arc}$
+$\\text{Inscribed angle} = \\frac{1}{2} \\times \\text{intercepted arc}$
     
     `
     },
@@ -24,7 +24,7 @@ $\text{Inscribed angle} = \frac{1}{2} \times \text{intercepted arc}$
 
 **Arc = 80°. Inscribed angle?**
 
-$\frac{80}{2} = 40°$ ✅
+$\\frac{80}{2} = 40°$ ✅
     
     `
     },

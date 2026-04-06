@@ -12,9 +12,9 @@ export const calcabInverseFunctionsPart1Data = {
 
 If $f$ and $g$ are inverses ($g = f^{-1}$), then:
 
-$$(f^{-1})'(a) = \frac{1}{f'(f^{-1}(a))}$$
+$$(f^{-1})'(a) = \\frac{1}{f'(f^{-1}(a))}$$
 
-Or equivalently: if $f(b) = a$, then $(f^{-1})'(a) = \frac{1}{f'(b)}$.
+Or equivalently: if $f(b) = a$, then $(f^{-1})'(a) = \\frac{1}{f'(b)}$.
 
 ### Why It Works
 
@@ -22,7 +22,7 @@ If $f(g(x)) = x$, differentiate both sides:
 
 $f'(g(x)) \cdot g'(x) = 1$
 
-$g'(x) = \frac{1}{f'(g(x))}$
+$g'(x) = \\frac{1}{f'(g(x))}$
 
 ### Worked Example
 
@@ -30,7 +30,7 @@ $f(x) = x^3 + x$. Find $(f^{-1})'(2)$.
 
 We need $f(b) = 2$: $b^3 + b = 2 \implies b = 1$.
 
-$(f^{-1})'(2) = \frac{1}{f'(1)} = \frac{1}{3(1)^2 + 1} = \frac{1}{4}$`
+$(f^{-1})'(2) = \\frac{1}{f'(1)} = \\frac{1}{3(1)^2 + 1} = \\frac{1}{4}$`
     },
     {
       id: 'inv1-quiz1',

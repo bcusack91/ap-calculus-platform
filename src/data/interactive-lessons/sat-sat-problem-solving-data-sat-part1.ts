@@ -16,7 +16,7 @@ A ratio compares two quantities: If a recipe uses 3 cups flour to 2 cups sugar, 
 ### Setting Up Proportions
 **Cross-multiply** to solve:
 
-$$\frac{3}{5} = \frac{x}{20} \implies 3 \times 20 = 5x \implies x = 12$$
+$$\\frac{3}{5} = \\frac{x}{20} \implies 3 \\times 20 = 5x \implies x = 12$$
 
 ### Unit Rates
 A unit rate has a denominator of 1:
@@ -30,7 +30,7 @@ If the ratio of boys to girls is 3:5, there are **8 total parts** (not 5).
 
 ### Dimensional Analysis
 Convert units by multiplying fractions:
-$$60 \frac{\text{miles}}{\text{hour}} \times \frac{1 \text{ hour}}{60 \text{ min}} = 1 \frac{\text{mile}}{\text{min}}$$`
+$$60 \\frac{\\text{miles}}{\\text{hour}} \\times \\frac{1 \\text{ hour}}{60 \\text{ min}} = 1 \\frac{\\text{mile}}{\\text{min}}$$`
     },
     {
       id: 'psd1-q1',

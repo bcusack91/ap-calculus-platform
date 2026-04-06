@@ -10,7 +10,7 @@ export const g5VolumePart7Data = {
 **Part 7 of 7 — Review & Applications**
 
 ### Key Formulas
-- **Rectangular prism**: $V = l \times w \times h$
+- **Rectangular prism**: $V = l \\times w \\times h$
 - **Cube**: $V = s^3$
 - **Composite**: Split and add volumes
 - **1 liter = 1,000 cm³**

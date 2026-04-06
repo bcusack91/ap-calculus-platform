@@ -10,7 +10,7 @@ export const calcbcSeriesPart5Data = {
 
 ### Ratio Test
 
-$$L = \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_n}\right|$$
+$$L = \lim_{n \\to \infty} \left|\\frac{a_{n+1}}{a_n}\\right|$$
 
 - $L < 1$: converges absolutely
 - $L > 1$ (or $\infty$): diverges
@@ -18,7 +18,7 @@ $$L = \lim_{n \to \infty} \left|\frac{a_{n+1}}{a_n}\right|$$
 
 ### Root Test
 
-$$L = \lim_{n \to \infty} \sqrt[n]{|a_n|}$$
+$$L = \lim_{n \\to \infty} \sqrt[n]{|a_n|}$$
 
 Same conclusions as ratio test.
 

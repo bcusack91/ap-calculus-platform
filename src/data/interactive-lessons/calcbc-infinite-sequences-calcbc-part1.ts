@@ -16,7 +16,7 @@ An ordered list of numbers: $a_1, a_2, a_3, \ldots$ or $\{a_n\}_{n=1}^{\infty}$
 
 A sequence $\{a_n\}$ **converges** to $L$ if:
 
-$$\lim_{n \to \infty} a_n = L$$
+$$\lim_{n \\to \infty} a_n = L$$
 
 If no such $L$ exists, the sequence **diverges**.
 

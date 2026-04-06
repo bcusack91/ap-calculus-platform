@@ -10,13 +10,13 @@ export const calcbcParametricPart3Data = {
 
 ### Parametric Arc Length Formula
 
-$$L = \int_a^b \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2}\,dt$$
+$$L = \int_a^b \sqrt{\left(\\frac{dx}{dt}\\right)^2 + \left(\\frac{dy}{dt}\\right)^2}\,dt$$
 
 ### Example: Circle
 
 $x = 3\cos t$, $y = 3\sin t$, $0 \leq t \leq 2\pi$
 
-$\frac{dx}{dt} = -3\sin t$, $\frac{dy}{dt} = 3\cos t$
+$\\frac{dx}{dt} = -3\sin t$, $\\frac{dy}{dt} = 3\cos t$
 
 $L = \int_0^{2\pi}\sqrt{9\sin^2 t + 9\cos^2 t}\,dt = \int_0^{2\pi} 3\,dt = 6\pi$`
     },

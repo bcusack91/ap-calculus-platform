@@ -23,9 +23,9 @@ The standard method lines up numbers vertically:
       content: `
 ## Worked Example
 
-$47 \times 23$:
-- $47 \times 3 = 141$
-- $47 \times 20 = 940$
+$47 \\times 23$:
+- $47 \\times 3 = 141$
+- $47 \\times 20 = 940$
 - $141 + 940 = 1{,}081$ ✅
     
     `
@@ -58,11 +58,11 @@ $47 \times 23$:
       content: `
 **Standard Algorithm** 🧮
 
-1) $34 \times 18 = ?$
+1) $34 \\times 18 = ?$
 
-2) $62 \times 38 = ?$
+2) $62 \\times 38 = ?$
 
-3) $86 \times 54 = ?$
+3) $86 \\times 54 = ?$
     
     `,
       exercise: {
@@ -96,9 +96,9 @@ $47 \times 23$:
 
 | # | Problem | Steps |
 |---|---------|-------|
-| 1 | $34 \times 18$ | 34×8 + 34×10 |
-| 2 | $62 \times 38$ | 62×8 + 62×30 |
-| 3 | $86 \times 54$ | 86×4 + 86×50 |
+| 1 | $34 \\times 18$ | 34×8 + 34×10 |
+| 2 | $62 \\times 38$ | 62×8 + 62×30 |
+| 3 | $86 \\times 54$ | 86×4 + 86×50 |
     
     `
     },

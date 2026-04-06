@@ -32,7 +32,7 @@ export const chemTypesIntermolecularForcesPart1Data = {
       id: 'if-ldf-mechanism',
       type: 'text',
       title: 'How LDF Arise',
-      content: `Here\'s the step-by-step mechanism for London Dispersion Forces:\n\n**Step 1:** Electrons in an atom or molecule are constantly moving. At any instant, there may be more electrons on one side than the other.\n\n**Step 2:** This uneven distribution creates a **temporary dipole** (instantaneous dipole) with a partial negative side (\\(\\delta^-\\)) and a partial positive side (\\(\\delta^+\\)).\n\n**Step 3:** The electric field of this temporary dipole **distorts** the electron cloud of a neighboring molecule, creating an **induced dipole**.\n\n**Step 4:** The two dipoles attract each other — the \\(\\delta^+\\) end of one molecule attracts the \\(\\delta^-\\) end of the neighbor.\n\n**Step 5:** These attractions are extremely short-lived, constantly forming and breaking, but their cumulative effect creates a net attractive force.`
+      content: `Here\'s the step-by-step mechanism for London Dispersion Forces:\n\n**Step 1:** Electrons in an atom or molecule are constantly moving. At any instant, there may be more electrons on one side than the other.\n\n**Step 2:** This uneven distribution creates a **temporary dipole** (instantaneous dipole) with a partial negative side ($\\delta^-$) and a partial positive side ($\\delta^+$).\n\n**Step 3:** The electric field of this temporary dipole **distorts** the electron cloud of a neighboring molecule, creating an **induced dipole**.\n\n**Step 4:** The two dipoles attract each other — the $\\delta^+$ end of one molecule attracts the $\\delta^-$ end of the neighbor.\n\n**Step 5:** These attractions are extremely short-lived, constantly forming and breaking, but their cumulative effect creates a net attractive force.`
     },
     {
       id: 'if-ldf-mechanism-check',
@@ -43,12 +43,14 @@ export const chemTypesIntermolecularForcesPart1Data = {
         dropdowns: [
           {
             id: 'ldf-step1',
+            label: 'LDF begin with a _____ dipole caused by electron motion',
             options: ['permanent', 'temporary', 'ionic'],
             correctIndex: 1,
             explanation: 'LDF begin with a temporary (instantaneous) dipole caused by random electron motion.'
           },
           {
             id: 'ldf-step2',
+            label: 'This temporary dipole _____ a dipole in a neighboring molecule',
             options: ['repels', 'destroys', 'induces'],
             correctIndex: 2,
             explanation: 'The temporary dipole induces a dipole in a neighboring molecule by distorting its electron cloud.'
@@ -60,7 +62,7 @@ export const chemTypesIntermolecularForcesPart1Data = {
       id: 'if-ldf-molar-mass',
       type: 'text',
       title: 'Factors That Affect LDF Strength',
-      content: `The strength of London Dispersion Forces depends on two main factors:\n\n**1. Molar Mass (Number of Electrons)**\nMore electrons \\(\\rightarrow\\) larger electron cloud \\(\\rightarrow\\) more easily polarized \\(\\rightarrow\\) **stronger LDF**\n\nExample: \\(\\text{I}_2\\) (molar mass 254 g/mol) has much stronger LDF than \\(\\text{F}_2\\) (molar mass 38 g/mol). That\'s why \\(\\text{I}_2\\) is a solid at room temperature while \\(\\text{F}_2\\) is a gas.\n\n**2. Surface Area (Molecular Shape)**\nGreater surface area \\(\\rightarrow\\) more points of contact between molecules \\(\\rightarrow\\) **stronger LDF**\n\nExample: n-pentane (straight chain) has a higher boiling point than neopentane (spherical/compact) even though they have the same molecular formula \\(\\text{C}_5\\text{H}_{12}\\). The elongated shape of n-pentane provides more surface area for LDF.`
+      content: `The strength of London Dispersion Forces depends on two main factors:\n\n**1. Molar Mass (Number of Electrons)**\nMore electrons $\\rightarrow$ larger electron cloud $\\rightarrow$ more easily polarized $\\rightarrow$ **stronger LDF**\n\nExample: $\\text{I}_2$ (molar mass 254 g/mol) has much stronger LDF than $\\text{F}_2$ (molar mass 38 g/mol). That\'s why $\\text{I}_2$ is a solid at room temperature while $\\text{F}_2$ is a gas.\n\n**2. Surface Area (Molecular Shape)**\nGreater surface area $\\rightarrow$ more points of contact between molecules $\\rightarrow$ **stronger LDF**\n\nExample: n-pentane (straight chain) has a higher boiling point than neopentane (spherical/compact) even though they have the same molecular formula $\\text{C}_5\\text{H}_{12}$. The elongated shape of n-pentane provides more surface area for LDF.`
     },
     {
       id: 'if-ldf-molar-mass-q',

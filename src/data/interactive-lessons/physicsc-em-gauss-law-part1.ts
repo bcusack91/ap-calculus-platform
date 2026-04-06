@@ -9,12 +9,12 @@ export const physCEMGaussPart1Data = {
 
 **Part 1 of 7 — Electric Flux**
 
-$\Phi_E = \oint \vec{E} \cdot d\vec{A} = \int E\cos\theta\,dA$
+$\Phi_E = \oint \\vec{E} \cdot d\\vec{A} = \int E\cos\\theta\,dA$
 
 For a uniform field through a flat surface:
-$\Phi_E = EA\cos\theta$
+$\Phi_E = EA\cos\\theta$
 
-- $\theta$ is the angle between $\vec{E}$ and the outward normal $\hat{n}$
+- $\\theta$ is the angle between $\\vec{E}$ and the outward normal $\hat{n}$
 - SI unit: N·m²/C (or V·m)
     
     `
@@ -59,11 +59,11 @@ $\Phi = EA\cos 0° = 500(0.2)(1) = 100$ N·m²/C ✅
       content: `
 **Electric Flux** 🧮
 
-1) $E = 500$ N/C, $A = 0.2$ m², $\theta = 0°$. Flux (N·m²/C)?
+1) $E = 500$ N/C, $A = 0.2$ m², $\\theta = 0°$. Flux (N·m²/C)?
 
-2) $E = 500$ N/C, $A = 0.2$ m², $\theta = 90°$. Flux (N·m²/C)?
+2) $E = 500$ N/C, $A = 0.2$ m², $\\theta = 90°$. Flux (N·m²/C)?
 
-3) $E = 500$ N/C, $A = 0.2$ m², $\theta = 60°$. Flux (N·m²/C)?
+3) $E = 500$ N/C, $A = 0.2$ m², $\\theta = 60°$. Flux (N·m²/C)?
     
     `,
       exercise: {
@@ -99,7 +99,7 @@ $\Phi = EA\cos 0° = 500(0.2)(1) = 100$ N·m²/C ✅
 |---|-------------------|--------|
 | 1 | Perpendicular to $E$ | $EA$ |
 | 2 | Parallel to $E$ | $0$ |
-| 3 | At angle $\theta$ | $EA\cos\theta$ |
+| 3 | At angle $\\theta$ | $EA\cos\\theta$ |
     
     `
     },

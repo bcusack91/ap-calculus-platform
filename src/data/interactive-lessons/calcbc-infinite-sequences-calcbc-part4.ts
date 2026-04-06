@@ -8,7 +8,7 @@ export const calcbcSequencesPart4Data = {
 
 **Part 4 of 7 — Growth Rate Hierarchy**
 
-### Dominance Hierarchy ($n \to \infty$)
+### Dominance Hierarchy ($n \\to \infty$)
 
 $$\ln n \ll n^p \ll a^n \ll n! \ll n^n$$
 
@@ -18,7 +18,7 @@ This means: log grows **slowest**, then polynomial, exponential, factorial, $n^n
 
 ### Example
 
-$\lim_{n \to \infty} \frac{n^{100}}{2^n} = 0$ because exponential beats any polynomial.`
+$\lim_{n \\to \infty} \\frac{n^{100}}{2^n} = 0$ because exponential beats any polynomial.`
     },
     {
       id: 'seq4-quiz1',

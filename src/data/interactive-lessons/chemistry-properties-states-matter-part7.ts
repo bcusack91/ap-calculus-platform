@@ -203,24 +203,28 @@ Water\'s extraordinarily high boiling point (relative to its molar mass) is due 
         dropdowns: [
           {
             id: 'sm7-dd1',
+            label: 'Water\'s unusually high boiling point, surface tension, and specific heat are',
             options: ['London Dispersion Forces', 'dipole-dipole forces', 'hydrogen bonding', 'ionic bonding'],
             correctIndex: 2,
             explanation: 'Water\'s unusually high boiling point, surface tension, and specific heat are all attributed to its extensive hydrogen bonding network.'
           },
           {
             id: 'sm7-dd2',
+            label: 'As temperature increases, molecules have more kinetic energy to overcome IMFs',
             options: ['increases', 'decreases', 'stays the same'],
             correctIndex: 1,
             explanation: 'As temperature increases, molecules have more kinetic energy to overcome IMFs and escape to the gas phase, so viscosity decreases (liquid flows more easily).'
           },
           {
             id: 'sm7-dd3',
+            label: '_______ solids (like diamond and SiO₂) typically have the highest melting',
             options: ['ionic', 'molecular', 'metallic', 'network covalent'],
             correctIndex: 3,
             explanation: 'Network covalent solids (like diamond and SiO₂) typically have the highest melting points because melting requires breaking strong, continuous covalent bonds throughout the solid.'
           },
           {
             id: 'sm7-dd4',
+            label: 'At higher altitudes, atmospheric pressure is lower',
             options: ['the same as', 'higher than', 'lower than'],
             correctIndex: 2,
             explanation: 'At higher altitudes, atmospheric pressure is lower. A liquid boils when its vapor pressure equals external pressure, so less vapor pressure is needed → the liquid boils at a lower temperature.'

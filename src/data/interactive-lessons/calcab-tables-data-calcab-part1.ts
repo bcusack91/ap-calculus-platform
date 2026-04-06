@@ -12,7 +12,7 @@ export const calcabTablesDataPart1Data = {
 
 When you have a table of values but no formula, estimate the derivative using:
 
-$$f'(a) \approx \frac{f(b) - f(c)}{b - c}$$
+$$f'(a) \approx \\frac{f(b) - f(c)}{b - c}$$
 
 Choose points closest to $a$.
 
@@ -22,7 +22,7 @@ Choose points closest to $a$.
 |-----|---|---|---|---|
 | $f(x)$ | 2 | 7 | 10 | 20 |
 
-$f'(3) \approx \frac{f(5) - f(1)}{5 - 1} = \frac{10 - 2}{4} = 2$
+$f'(3) \approx \\frac{f(5) - f(1)}{5 - 1} = \\frac{10 - 2}{4} = 2$
 
 (Using symmetric difference gives better estimate than one-sided.)`
     },

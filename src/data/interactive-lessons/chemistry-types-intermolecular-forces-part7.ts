@@ -5,7 +5,7 @@ export const chemTypesIntermolecularForcesPart7Data = {
       id: 'if-ap-overview',
       type: 'text',
       title: 'AP Chemistry IMF Review',
-      content: `Let\'s bring everything together for the AP exam. IMF questions are among the most commonly tested topics. Here\'s your complete toolkit:\n\n**The IMF Hierarchy (similar-sized molecules):**\n$$\\text{Ion-Dipole} > \\text{H-bonding} > \\text{Dipole-Dipole} > \\text{LDF}$$\n\n**Quick Identification Guide:**\n1. **Ion + polar molecule?** \\(\\rightarrow\\) Ion-dipole\n2. **H bonded to N, O, or F?** \\(\\rightarrow\\) Hydrogen bonding\n3. **Polar molecule?** \\(\\rightarrow\\) Dipole-dipole (+ LDF)\n4. **Nonpolar molecule?** \\(\\rightarrow\\) LDF only\n\n**Property Trends (stronger IMFs \\(\\rightarrow\\)):**\n- Boiling point: \\(\\uparrow\\)\n- Melting point: \\(\\uparrow\\)\n- Surface tension: \\(\\uparrow\\)\n- Viscosity: \\(\\uparrow\\)\n- Vapor pressure: \\(\\downarrow\\) (inverse!)\n\n**Remember:** ALL molecules have LDF. Polar molecules have DD + LDF. H-bonding molecules have H-bond + DD + LDF.`
+      content: `Let\'s bring everything together for the AP exam. IMF questions are among the most commonly tested topics. Here\'s your complete toolkit:\n\n**The IMF Hierarchy (similar-sized molecules):**\n$$\\text{Ion-Dipole} > \\text{H-bonding} > \\text{Dipole-Dipole} > \\text{LDF}$$\n\n**Quick Identification Guide:**\n1. **Ion + polar molecule?** $\\rightarrow$ Ion-dipole\n2. **H bonded to N, O, or F?** $\\rightarrow$ Hydrogen bonding\n3. **Polar molecule?** $\\rightarrow$ Dipole-dipole (+ LDF)\n4. **Nonpolar molecule?** $\\rightarrow$ LDF only\n\n**Property Trends (stronger IMFs $\\rightarrow$):**\n- Boiling point: $\\uparrow$\n- Melting point: $\\uparrow$\n- Surface tension: $\\uparrow$\n- Viscosity: $\\uparrow$\n- Vapor pressure: $\\downarrow$ (inverse!)\n\n**Remember:** ALL molecules have LDF. Polar molecules have DD + LDF. H-bonding molecules have H-bond + DD + LDF.`
     },
     {
       id: 'if-ap-common-mistakes',
@@ -96,30 +96,35 @@ export const chemTypesIntermolecularForcesPart7Data = {
         dropdowns: [
           {
             id: 'ap-ch4',
+            label: '$\\text{CH}_4$',
             options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 0,
             explanation: 'CH₄ is nonpolar (symmetric tetrahedral). It only experiences London Dispersion Forces.'
           },
           {
             id: 'ap-nh3',
+            label: '$\\text{NH}_3$',
             options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 2,
             explanation: 'NH₃ has N–H bonds (H bonded to N), so it exhibits hydrogen bonding.'
           },
           {
             id: 'ap-so2',
+            label: '$\\text{SO}_2$',
             options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 1,
             explanation: 'SO₂ is polar (bent geometry), so it has dipole-dipole forces. It has no H bonded to N, O, or F, so no hydrogen bonding.'
           },
           {
             id: 'ap-kcl-in-water',
+            label: 'KCl dissolved in water',
             options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 3,
             explanation: 'KCl dissociates into K⁺ and Cl⁻ ions in water. The interaction between ions and polar water molecules is ion-dipole.'
           },
           {
             id: 'ap-ch3f',
+            label: '$\\text{CH}_3\\text{F}$',
             options: ['LDF only', 'Dipole-dipole', 'Hydrogen bonding', 'Ion-dipole'],
             correctIndex: 1,
             explanation: 'CH₃F is polar (the C–F bond creates a net dipole) but it does NOT have hydrogen bonding because there is no H bonded directly to F (the H atoms are bonded to C). Its strongest IMF is dipole-dipole.'

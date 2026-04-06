@@ -11,7 +11,7 @@ export const physCEMCapacitorsPart3Data = {
 
 **Parallel:** $C_{eq} = C_1 + C_2 + \cdots$ (same voltage)
 
-**Series:** $\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots$ (same charge)
+**Series:** $\\frac{1}{C_{eq}} = \\frac{1}{C_1} + \\frac{1}{C_2} + \cdots$ (same charge)
 
 Note: opposite of resistors! Parallel adds, series uses reciprocals.
     
@@ -25,7 +25,7 @@ Note: opposite of resistors! Parallel adds, series uses reciprocals.
 
 **Two capacitors: 3 μF and 6 μF in series. Find $C_{eq}$.**
 
-$\frac{1}{C_{eq}} = \frac{1}{3} + \frac{1}{6} = \frac{2+1}{6} = \frac{1}{2}$
+$\\frac{1}{C_{eq}} = \\frac{1}{3} + \\frac{1}{6} = \\frac{2+1}{6} = \\frac{1}{2}$
 
 $C_{eq} = 2$ μF ✅
     

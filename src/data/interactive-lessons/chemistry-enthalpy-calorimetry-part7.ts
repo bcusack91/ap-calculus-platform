@@ -118,7 +118,13 @@ This final part integrates everything: energy flow, calorimetry, Hess\'s Law, an
 
 1) 150.0 mL of 2.00 M HCl reacts with excess NaOH in a coffee-cup calorimeter. The temperature rises by 13.4°C. Assume the solution\'s mass is 150.0 g and $c = 4.184$ J/(g·°C). What is $\\Delta H$ per mole of HCl? (in kJ/mol, to 3 significant figures, include sign)
 
-2) Using $\\Delta H°_f$ (kJ/mol): CO₂(g) = −393.5, H₂O(l) = −285.8, C₃H₈(g) = −103.8. Calculate $\\Delta H°_{\\text{rxn}}$ for $\\text{C}_3\\text{H}_8(g) + 5\\text{O}_2(g) \\rightarrow 3\\text{CO}_2(g) + 4\\text{H}_2\\text{O}(l)$. (in kJ)
+2) Using the $\\Delta H°_f$ values below, calculate $\\Delta H°_{\\text{rxn}}$ for $\\text{C}_3\\text{H}_8(g) + 5\\text{O}_2(g) \\rightarrow 3\\text{CO}_2(g) + 4\\text{H}_2\\text{O}(l)$. (in kJ)
+
+| Substance | $\\Delta H°_f$ (kJ/mol) |
+|---|---|
+| $\\text{CO}_2(g)$ | $-393.5$ |
+| $\\text{H}_2\\text{O}(l)$ | $-285.8$ |
+| $\\text{C}_3\\text{H}_8(g)$ | $-103.8$ |
       `,
       exercise: {
         boxes: 2,

@@ -14,7 +14,7 @@ $$L_n = \sum_{i=0}^{n-1} f(x_i)\,\Delta x \qquad R_n = \sum_{i=1}^{n} f(x_i)\,\D
 
 ### Trapezoidal Rule
 
-$$T_n = \frac{\Delta x}{2}[f(x_0) + 2f(x_1) + 2f(x_2) + \cdots + 2f(x_{n-1}) + f(x_n)]$$
+$$T_n = \\frac{\Delta x}{2}[f(x_0) + 2f(x_1) + 2f(x_2) + \cdots + 2f(x_{n-1}) + f(x_n)]$$
 
 ### Over/Underestimates
 

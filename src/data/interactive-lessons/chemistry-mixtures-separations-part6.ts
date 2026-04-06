@@ -159,24 +159,28 @@ $$c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{total}}}{
         dropdowns: [
           {
             id: 'mx6-dd1',
+            label: 'Separating plant pigments (chlorophyll a, chlorophyll b, carotenoids) is a',
             options: ['filtration', 'chromatography', 'distillation', 'spectroscopy'],
             correctIndex: 1,
             explanation: 'Separating plant pigments (chlorophyll a, chlorophyll b, carotenoids) is a classic chromatography application.'
           },
           {
             id: 'mx6-dd2',
+            label: 'Obtaining pure water from seawater requires _______',
             options: ['filtration', 'chromatography', 'distillation', 'spectroscopy'],
             correctIndex: 2,
             explanation: 'Obtaining pure water from seawater requires distillation. The water evaporates and condenses, leaving salts behind.'
           },
           {
             id: 'mx6-dd3',
+            label: 'Determining the concentration of food dye in a drink uses Beer\'s Law and a sp...',
             options: ['filtration', 'chromatography', 'distillation', 'spectroscopy'],
             correctIndex: 3,
             explanation: 'Determining the concentration of food dye in a drink uses Beer\'s Law and a spectrophotometer.'
           },
           {
             id: 'mx6-dd4',
+            label: 'Collecting a precipitate after a double replacement reaction uses _______',
             options: ['filtration', 'chromatography', 'distillation', 'spectroscopy'],
             correctIndex: 0,
             explanation: 'Collecting a precipitate after a double replacement reaction uses filtration.'

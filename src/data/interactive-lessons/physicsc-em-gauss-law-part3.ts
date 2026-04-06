@@ -11,10 +11,10 @@ export const physCEMGaussPart3Data = {
 
 For a spherically symmetric charge distribution:
 
-**Outside** ($r > R$): $E = \frac{kQ}{r^2}$ (as if all charge at center)
+**Outside** ($r > R$): $E = \\frac{kQ}{r^2}$ (as if all charge at center)
 
 **Inside a uniformly charged sphere** ($r < R$):
-$E = \frac{kQr}{R^3} = \frac{\rho r}{3\epsilon_0}$
+$E = \\frac{kQr}{R^3} = \\frac{\\rho r}{3\epsilon_0}$
 
 **Inside a conducting sphere**: $E = 0$
     
@@ -28,7 +28,7 @@ $E = \frac{kQr}{R^3} = \frac{\rho r}{3\epsilon_0}$
 
 **A conducting sphere of radius 0.1 m has charge $Q = 10^{-8}$ C. Find $E$ at $r = 0.2$ m.**
 
-$E = kQ/r^2 = (9 \times 10^9)(10^{-8})/(0.04) = 2250$ N/C ✅
+$E = kQ/r^2 = (9 \\times 10^9)(10^{-8})/(0.04) = 2250$ N/C ✅
 
 Inside the conductor: $E = 0$.
     
@@ -66,7 +66,7 @@ Inside the conductor: $E = 0$.
 
 2) Outside a sphere: $E = kQ/r^2$. If $r$ doubles, $E$ decreases by a factor of ___
 
-3) A sphere ($Q = 10^{-8}$ C) at distance $r = 0.2$ m. $E$ (N/C)? ($k = 9 \times 10^9$)
+3) A sphere ($Q = 10^{-8}$ C) at distance $r = 0.2$ m. $E$ (N/C)? ($k = 9 \\times 10^9$)
     
     `,
       exercise: {

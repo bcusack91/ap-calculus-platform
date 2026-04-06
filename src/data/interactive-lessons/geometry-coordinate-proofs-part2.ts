@@ -9,7 +9,7 @@ export const geoCoordProofsPart2Data = {
 
 **Part 2 of 7 — Slope in Proofs**
 
-$m = \frac{y_2-y_1}{x_2-x_1}$
+$m = \\frac{y_2-y_1}{x_2-x_1}$
 
 - **Parallel lines**: same slope ($m_1 = m_2$)
 - **Perpendicular lines**: negative reciprocal slopes ($m_1 \cdot m_2 = -1$)
@@ -24,7 +24,7 @@ $m = \frac{y_2-y_1}{x_2-x_1}$
 
 **Lines with slopes 2 and −1/2. Perpendicular?**
 
-$2 \times (-\frac{1}{2}) = -1$ → **Yes!** ✅
+$2 \\times (-\\frac{1}{2}) = -1$ → **Yes!** ✅
     
     `
     },

@@ -24,7 +24,7 @@ Apply rational expression skills:
 
 **Worker A: 6 hours alone. Worker B: 3 hours alone. Together?**
 
-$\frac{1}{6} + \frac{1}{3} = \frac{1}{6} + \frac{2}{6} = \frac{3}{6} = \frac{1}{2}$
+$\\frac{1}{6} + \\frac{1}{3} = \\frac{1}{6} + \\frac{2}{6} = \\frac{3}{6} = \\frac{1}{2}$
 
 Together: 2 hours ✅
     
@@ -60,9 +60,9 @@ Together: 2 hours ✅
 
 1) Rate: A does job in 4h, B in 4h. Together in ? hours.
 
-2) $\frac{x}{2} = 6$. $x = ?$
+2) $\\frac{x}{2} = 6$. $x = ?$
 
-3) $\frac{3}{x} = \frac{1}{2}$. $x = ?$
+3) $\\frac{3}{x} = \\frac{1}{2}$. $x = ?$
     
     `,
       exercise: {
@@ -97,8 +97,8 @@ Together: 2 hours ✅
 | # | Problem | Answer |
 |---|---------|--------|
 | 1 | A: 4h, B: 4h. Together? | 2h |
-| 2 | $\frac{x}{2} = 6$. x = ? | 12 |
-| 3 | $\frac{3}{x} = \frac{1}{2}$. x = ? | 6 |
+| 2 | $\\frac{x}{2} = 6$. x = ? | 12 |
+| 3 | $\\frac{3}{x} = \\frac{1}{2}$. x = ? | 6 |
     
     `
     },

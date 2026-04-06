@@ -10,7 +10,7 @@ export const calcbcIntByPartsPart2Data = {
 
 ### The Tabular (Column) Method
 
-For $\int (\text{polynomial}) \cdot (\text{easy to integrate})\,dx$:
+For $\int (\\text{polynomial}) \cdot (\\text{easy to integrate})\,dx$:
 
 | Sign | Differentiate | Integrate |
 |------|--------------|-----------|

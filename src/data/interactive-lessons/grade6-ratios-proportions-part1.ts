@@ -14,7 +14,7 @@ A **ratio** compares two quantities.
 Three ways to write a ratio:
 - $3$ to $5$
 - $3 : 5$
-- $\frac{3}{5}$
+- $\\frac{3}{5}$
 
 Order matters! "3 cats to 5 dogs" ≠ "5 cats to 3 dogs"
     

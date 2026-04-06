@@ -11,11 +11,11 @@ export const physCNewtonPart5Data = {
 
 For uniform circular motion:
 
-$a_c = \frac{v^2}{r} = \omega^2 r$
+$a_c = \\frac{v^2}{r} = \omega^2 r$
 
-$F_c = \frac{mv^2}{r}$
+$F_c = \\frac{mv^2}{r}$
 
-where $\omega = 2\pi f = \frac{2\pi}{T}$ is the angular velocity.
+where $\omega = 2\pi f = \\frac{2\pi}{T}$ is the angular velocity.
 
 Centripetal force is not a new force — it is the net inward force (tension, gravity, friction, normal force, etc.).
     
@@ -29,7 +29,7 @@ Centripetal force is not a new force — it is the net inward force (tension, gr
 
 **A 2 kg ball on a 0.5 m string moves at 4 m/s in a horizontal circle. Find the centripetal force.**
 
-$F_c = \frac{mv^2}{r} = \frac{2(16)}{0.5} = 64$ N ✅
+$F_c = \\frac{mv^2}{r} = \\frac{2(16)}{0.5} = 64$ N ✅
     
     `
     },

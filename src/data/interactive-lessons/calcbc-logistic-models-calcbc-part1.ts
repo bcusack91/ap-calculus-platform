@@ -10,7 +10,7 @@ export const calcbcLogisticPart1Data = {
 
 ### The Model
 
-$$\frac{dP}{dt} = kP\left(1 - \frac{P}{L}\right)$$
+$$\\frac{dP}{dt} = kP\left(1 - \\frac{P}{L}\\right)$$
 
 where:
 - $P$ = population (or quantity)

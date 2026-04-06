@@ -9,7 +9,7 @@ export const physCWorkEnergyPart2Data = {
 
 **Part 2 of 7 — Kinetic Energy Theorem**
 
-$W_{\text{net}} = \Delta KE = \frac{1}{2}mv_f^2 - \frac{1}{2}mv_i^2$
+$W_{\\text{net}} = \Delta KE = \\frac{1}{2}mv_f^2 - \\frac{1}{2}mv_i^2$
 
 The net work done on an object equals its change in kinetic energy.
     
@@ -23,7 +23,7 @@ The net work done on an object equals its change in kinetic energy.
 
 **A 3 kg object accelerates from 2 m/s to 6 m/s. Find the net work done.**
 
-$W = \frac{1}{2}(3)(36) - \frac{1}{2}(3)(4) = 54 - 6 = 48$ J ✅
+$W = \\frac{1}{2}(3)(36) - \\frac{1}{2}(3)(4) = 54 - 6 = 48$ J ✅
     
     `
     },
@@ -57,7 +57,7 @@ $W = \frac{1}{2}(3)(36) - \frac{1}{2}(3)(4) = 54 - 6 = 48$ J ✅
 
 1) A 3 kg object goes from 2 m/s to 6 m/s. Net work done (J)?
 
-2) $KE = \frac{1}{2}(4)(5^2) = ?$ J
+2) $KE = \\frac{1}{2}(4)(5^2) = ?$ J
 
 3) A 2 kg object has $KE = 25$ J. What is its speed (m/s)? (Hint: $v = \sqrt{2 \cdot KE/m}$)
 
@@ -94,7 +94,7 @@ $W = \frac{1}{2}(3)(36) - \frac{1}{2}(3)(4) = 54 - 6 = 48$ J ✅
 
 | # | Concept | Key Formula |
 |---|---------|-------------|
-| 1 | Kinetic energy | $KE = \frac{1}{2}mv^2$ |
+| 1 | Kinetic energy | $KE = \\frac{1}{2}mv^2$ |
 | 2 | Work-energy theorem | $W_{net} = \Delta KE$ |
 | 3 | Stopping distance | $W_{friction} = -\Delta KE$ |
     

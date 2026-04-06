@@ -23,7 +23,7 @@ export const g6RatiosPart7Data = {
       content: `
 ## Worked Example
 
-**$\frac{x}{8} = \frac{9}{12}$. Solve.**
+**$\\frac{x}{8} = \\frac{9}{12}$. Solve.**
 
 Cross: $12x = 72$ → $x = 6$ ✅
     
@@ -61,7 +61,7 @@ Cross: $12x = 72$ → $x = 6$ ✅
 
 2) \$24 for 6 items = \$? per item
 
-3) $\frac{x}{5} = \frac{8}{10}$. $x = ?$
+3) $\\frac{x}{5} = \\frac{8}{10}$. $x = ?$
     
     `,
       exercise: {

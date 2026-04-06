@@ -12,17 +12,17 @@ export const calcbcSeriesPart1Data = {
 
 $$S_n = \sum_{k=1}^n a_k = a_1 + a_2 + \cdots + a_n$$
 
-$\sum_{n=1}^{\infty} a_n = L$ means $\lim_{n \to \infty} S_n = L$.
+$\sum_{n=1}^{\infty} a_n = L$ means $\lim_{n \\to \infty} S_n = L$.
 
 ### Geometric Series
 
-$$\sum_{n=0}^{\infty} ar^n = \frac{a}{1-r} \quad \text{if } |r| < 1$$
+$$\sum_{n=0}^{\infty} ar^n = \\frac{a}{1-r} \quad \\text{if } |r| < 1$$
 
 Diverges if $|r| \geq 1$.
 
 ### Example
 
-$\sum_{n=0}^{\infty} \frac{3}{4^n} = \frac{3}{1 - 1/4} = 4$`
+$\sum_{n=0}^{\infty} \\frac{3}{4^n} = \\frac{3}{1 - 1/4} = 4$`
     },
     {
       id: 'ser1-quiz1',

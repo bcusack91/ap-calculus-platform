@@ -189,24 +189,28 @@ Sometimes the analyte reacts slowly or doesn\'t have a clear endpoint. In a **ba
         dropdowns: [
           {
             id: 'mx5-dd1',
+            label: 'Finding the amount of Cl⁻ by precipitating AgCl and weighing it is a classic',
             options: ['gravimetric analysis', 'titration', 'spectroscopy'],
             correctIndex: 0,
             explanation: 'Finding the amount of Cl⁻ by precipitating AgCl and weighing it is a classic gravimetric analysis.'
           },
           {
             id: 'mx5-dd2',
+            label: 'Determining the concentration of an acid by adding a base of known',
             options: ['gravimetric analysis', 'titration', 'spectroscopy'],
             correctIndex: 1,
             explanation: 'Determining the concentration of an acid by adding a base of known concentration from a buret is titration (volumetric analysis).'
           },
           {
             id: 'mx5-dd3',
+            label: 'Measuring the absorbance of a colored solution to determine concentration using',
             options: ['gravimetric analysis', 'titration', 'spectroscopy'],
             correctIndex: 2,
             explanation: 'Measuring the absorbance of a colored solution to determine concentration using Beer\'s Law is spectroscopy.'
           },
           {
             id: 'mx5-dd4',
+            label: '_______ is when the indicator actually changes color',
             options: ['the end point', 'the equivalence point', 'the half-equivalence point'],
             correctIndex: 0,
             explanation: 'The end point is when the indicator actually changes color. Ideally it coincides with the equivalence point, but they are not the same thing.'

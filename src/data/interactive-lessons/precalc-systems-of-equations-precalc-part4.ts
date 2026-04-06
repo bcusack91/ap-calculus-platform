@@ -67,10 +67,10 @@ export const precalcSystemsPart4Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Cramer's y | $y=\frac{a_1c_2-a_2c_1}{\Delta}$ | explicit solution form |
-      | Linear system | $\begin{cases}a_1x+b_1y=c_1\\a_2x+b_2y=c_2\end{cases}$ | two-variable framework |
+      | Cramer's y | $y=\\frac{a_1c_2-a_2c_1}{\Delta}$ | explicit solution form |
+      | Linear system | $\\begin{cases}a_1x+b_1y=c_1\\a_2x+b_2y=c_2\end{cases}$ | two-variable framework |
       | Determinant | $\Delta=a_1b_2-a_2b_1$ | uniqueness criterion |
-      | Cramer's x | $x=\frac{c_1b_2-c_2b_1}{\Delta}$ | explicit solution form |
+      | Cramer's x | $x=\\frac{c_1b_2-c_2b_1}{\Delta}$ | explicit solution form |
       
       ### Common pitfalls
       - Parallel lines in graph form indicate no solution.

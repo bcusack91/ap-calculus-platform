@@ -21,11 +21,11 @@ To solve: multiply both sides by the **LCD** to clear fractions.
       content: `
 ## Worked Example
 
-$\frac{x}{3} = 4$
+$\\frac{x}{3} = 4$
 
 Multiply by 3: $x = 12$ ✅
 
-Check: $\frac{12}{3} = 4$ ✓
+Check: $\\frac{12}{3} = 4$ ✓
     
     `
     },
@@ -57,11 +57,11 @@ Check: $\frac{12}{3} = 4$ ✓
       content: `
 **Solve Rational Equations** 🧮
 
-1) $\frac{x}{5} = 3$. $x = ?$
+1) $\\frac{x}{5} = 3$. $x = ?$
 
-2) $\frac{2}{x} = 1$. $x = ?$
+2) $\\frac{2}{x} = 1$. $x = ?$
 
-3) $\frac{x+1}{2} = 4$. $x = ?$
+3) $\\frac{x+1}{2} = 4$. $x = ?$
     
     `,
       exercise: {
@@ -95,9 +95,9 @@ Check: $\frac{12}{3} = 4$ ✓
 
 | # | Equation | Solution |
 |---|---------|----------|
-| 1 | $\frac{x}{5} = 3$ | $x = 15$ |
-| 2 | $\frac{2}{x} = 1$ | $x = 2$ |
-| 3 | $\frac{x+1}{2} = 4$ | $x = 7$ |
+| 1 | $\\frac{x}{5} = 3$ | $x = 15$ |
+| 2 | $\\frac{2}{x} = 1$ | $x = 2$ |
+| 3 | $\\frac{x+1}{2} = 4$ | $x = 7$ |
     
     `
     },

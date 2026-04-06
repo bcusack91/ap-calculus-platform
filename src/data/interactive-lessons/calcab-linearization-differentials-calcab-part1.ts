@@ -27,11 +27,11 @@ Approximate $\sqrt{4.1}$ using linearization.
 
 Let $f(x) = \sqrt{x}$, $a = 4$.
 
-$f(4) = 2$, $f'(x) = \frac{1}{2\sqrt{x}}$, $f'(4) = \frac{1}{4}$
+$f(4) = 2$, $f'(x) = \\frac{1}{2\sqrt{x}}$, $f'(4) = \\frac{1}{4}$
 
-$L(x) = 2 + \frac{1}{4}(x - 4)$
+$L(x) = 2 + \\frac{1}{4}(x - 4)$
 
-$L(4.1) = 2 + \frac{1}{4}(0.1) = 2.025$
+$L(4.1) = 2 + \\frac{1}{4}(0.1) = 2.025$
 
 Actual: $\sqrt{4.1} \approx 2.02485...$  Very close!`
     },

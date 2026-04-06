@@ -9,9 +9,9 @@ export const apPrecalcTrigModelPart5Data = {
 
 **Part 5 of 7 — Inverse Trig Functions**
 
-- $\sin^{-1}(x)$ or $\arcsin(x)$: returns angle whose sine is $x$; range $[-\frac{\pi}{2}, \frac{\pi}{2}]$
+- $\sin^{-1}(x)$ or $\arcsin(x)$: returns angle whose sine is $x$; range $[-\\frac{\pi}{2}, \\frac{\pi}{2}]$
 - $\cos^{-1}(x)$ or $\arccos(x)$: range $[0, \pi]$
-- $\tan^{-1}(x)$ or $\arctan(x)$: range $(-\frac{\pi}{2}, \frac{\pi}{2})$
+- $\\tan^{-1}(x)$ or $\arctan(x)$: range $(-\\frac{\pi}{2}, \\frac{\pi}{2})$
     
     `
     },
@@ -23,7 +23,7 @@ export const apPrecalcTrigModelPart5Data = {
 
 **$\sin^{-1}(1) = $ ?**
 
-$\sin(\frac{\pi}{2}) = 1$ → $\sin^{-1}(1) = \frac{\pi}{2} = 90°$ ✅
+$\sin(\\frac{\pi}{2}) = 1$ → $\sin^{-1}(1) = \\frac{\pi}{2} = 90°$ ✅
     
     `
     },
@@ -59,7 +59,7 @@ $\sin(\frac{\pi}{2}) = 1$ → $\sin^{-1}(1) = \frac{\pi}{2} = 90°$ ✅
 
 2) $\cos^{-1}(1) = $ ?
 
-3) $\tan^{-1}(1) = $ ?
+3) $\\tan^{-1}(1) = $ ?
     
     `,
       exercise: {
@@ -95,7 +95,7 @@ $\sin(\frac{\pi}{2}) = 1$ → $\sin^{-1}(1) = \frac{\pi}{2} = 90°$ ✅
 |---|-----------|-------|
 | 1 | $\sin^{-1}(0)$ | 0° |
 | 2 | $\cos^{-1}(1)$ | 0° |
-| 3 | $\tan^{-1}(1)$ | 45° |
+| 3 | $\\tan^{-1}(1)$ | 45° |
     
     `
     },

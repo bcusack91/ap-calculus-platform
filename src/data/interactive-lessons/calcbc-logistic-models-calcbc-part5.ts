@@ -14,7 +14,7 @@ export const calcbcLogisticPart5Data = {
 |---------|-------------|----------|
 | DE | $dP/dt = kP$ | $dP/dt = kP(1-P/L)$ |
 | Solution | $P = P_0 e^{kt}$ | $P = L/(1+Ae^{-kt})$ |
-| $t \to \infty$ | $P \to \infty$ | $P \to L$ |
+| $t \\to \infty$ | $P \\to \infty$ | $P \\to L$ |
 | Shape | J-curve | S-curve |
 | Realistic? | Short term | Long term |`
     },

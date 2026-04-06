@@ -185,24 +185,28 @@ Remember that a **double bond counts as 1 electron domain** and a **triple bond 
         dropdowns: [
           {
             id: 'hy-2-7-dd1',
+            label: 'Hybridization of the carbon atom in HCN',
             options: ['sp', 'sp²', 'sp³', 'sp³d'],
             correctIndex: 0,
             explanation: 'HCN: carbon has 1 single bond (to H) + 1 triple bond (to N) = 2 electron domains → sp hybridization.'
           },
           {
             id: 'hy-2-7-dd2',
+            label: 'Hybridization of the nitrogen atom in NO₃⁻',
             options: ['sp', 'sp²', 'sp³', 'sp³d'],
             correctIndex: 1,
             explanation: 'NO₃⁻: nitrogen has 3 electron domains (resonance structures show 3 equivalent positions) → sp² hybridization.'
           },
           {
             id: 'hy-2-7-dd3',
+            label: 'Hybridization of the carbon atom in CF₄',
             options: ['sp', 'sp²', 'sp³', 'sp³d'],
             correctIndex: 2,
             explanation: 'CF₄: carbon has 4 single bonds and 0 lone pairs = 4 electron domains → sp³ hybridization.'
           },
           {
             id: 'hy-2-7-dd4',
+            label: 'Hybridization of the sulfur atom in SO₃',
             options: ['sp', 'sp²', 'sp³', 'sp³d'],
             correctIndex: 1,
             explanation: 'SO₃: sulfur has 3 double bonds (in resonance) = 3 electron domains → sp² hybridization. The molecule is trigonal planar.'

@@ -142,18 +142,21 @@ This is why dry ice sublimes at atmospheric pressure instead of melting!
         dropdowns: [
           {
             id: 'sm5-dd1',
+            label: 'At pressures below the triple point',
             options: ['melts (solid → liquid)', 'sublimes (solid → gas)', 'freezes (liquid → solid)'],
             correctIndex: 1,
             explanation: 'At pressures below the triple point, the liquid phase does not exist on the phase diagram. Heating a solid at such low pressure causes sublimation — direct conversion from solid to gas.'
           },
           {
             id: 'sm5-dd2',
+            label: 'The liquid phase only exists at pressures at or _______ the triple point',
             options: ['below', 'at', 'above'],
             correctIndex: 2,
             explanation: 'The liquid phase only exists at pressures at or above the triple point pressure. Above the triple point, you can observe solid → liquid → gas transitions.'
           },
           {
             id: 'sm5-dd3',
+            label: 'Above _______, the liquid-gas boundary line ends',
             options: ['the triple point', 'the critical point', 'the normal boiling point'],
             correctIndex: 1,
             explanation: 'Above the critical point, the liquid-gas boundary line ends. There is no phase transition — the substance exists as a supercritical fluid with properties of both liquid and gas.'

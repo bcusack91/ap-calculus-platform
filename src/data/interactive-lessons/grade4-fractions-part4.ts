@@ -9,13 +9,13 @@ export const g4FractionsPart4Data = {
 
 **Part 4 of 7 — Mixed Numbers**
 
-A **mixed number** = whole number + fraction: $2\frac{3}{4}$
+A **mixed number** = whole number + fraction: $2\\frac{3}{4}$
 
 ### Mixed → Improper
-$2\frac{3}{4} = \frac{2 \times 4 + 3}{4} = \frac{11}{4}$
+$2\\frac{3}{4} = \\frac{2 \\times 4 + 3}{4} = \\frac{11}{4}$
 
 ### Improper → Mixed
-$\frac{11}{4} = 2\frac{3}{4}$ (11 ÷ 4 = 2 R 3)
+$\\frac{11}{4} = 2\\frac{3}{4}$ (11 ÷ 4 = 2 R 3)
     
     `
     },
@@ -25,9 +25,9 @@ $\frac{11}{4} = 2\frac{3}{4}$ (11 ÷ 4 = 2 R 3)
       content: `
 ## Worked Example
 
-**Convert $3\frac{2}{5}$ to improper:** $3 \times 5 + 2 = 17 \Rightarrow \frac{17}{5}$ ✅
+**Convert $3\\frac{2}{5}$ to improper:** $3 \\times 5 + 2 = 17 \\Rightarrow \\frac{17}{5}$ ✅
 
-**Convert $\frac{13}{4}$ to mixed:** $13 ÷ 4 = 3$ R $1 \Rightarrow 3\frac{1}{4}$ ✅
+**Convert $\\frac{13}{4}$ to mixed:** $13 ÷ 4 = 3$ R $1 \\Rightarrow 3\\frac{1}{4}$ ✅
     
     `
     },
@@ -59,11 +59,11 @@ $\frac{11}{4} = 2\frac{3}{4}$ (11 ÷ 4 = 2 R 3)
       content: `
 **Mixed Numbers Practice** 🧮
 
-1) Convert $2\frac{1}{2}$ to improper. What is the numerator?
+1) Convert $2\\frac{1}{2}$ to improper. What is the numerator?
 
-2) Convert $\frac{7}{2}$ to a mixed number. What is the whole number part?
+2) Convert $\\frac{7}{2}$ to a mixed number. What is the whole number part?
 
-3) $1\frac{3}{4} + 2\frac{1}{4} = $ ? (whole number)
+3) $1\\frac{3}{4} + 2\\frac{1}{4} = $ ? (whole number)
     
     `,
       exercise: {
@@ -97,9 +97,9 @@ $\frac{11}{4} = 2\frac{3}{4}$ (11 ÷ 4 = 2 R 3)
 
 | # | Problem | Type |
 |---|---------|------|
-| 1 | Convert $2\frac{1}{3}$ to improper | Mixed → Improper |
-| 2 | Convert $\frac{15}{4}$ to mixed | Improper → Mixed |
-| 3 | Add $1\frac{1}{4} + 2\frac{2}{4}$ | Mixed addition |
+| 1 | Convert $2\\frac{1}{3}$ to improper | Mixed → Improper |
+| 2 | Convert $\\frac{15}{4}$ to mixed | Improper → Mixed |
+| 3 | Add $1\\frac{1}{4} + 2\\frac{2}{4}$ | Mixed addition |
     
     `
     },

@@ -10,7 +10,7 @@ export const g5FractionOpsPart5Data = {
 **Part 5 of 7 — Word Problems**
 
 ### Clue Words
-- **"of"** often means multiply: $\frac{1}{3}$ **of** 12 → $\frac{1}{3} \times 12$
+- **"of"** often means multiply: $\\frac{1}{3}$ **of** 12 → $\\frac{1}{3} \\times 12$
 - **"How many groups?"** means divide
 - **"shared equally"** means divide
     
@@ -22,9 +22,9 @@ export const g5FractionOpsPart5Data = {
       content: `
 ## Worked Example
 
-**A recipe uses $\frac{3}{4}$ cup flour. You triple it. How much flour?**
+**A recipe uses $\\frac{3}{4}$ cup flour. You triple it. How much flour?**
 
-$3 \times \frac{3}{4} = \frac{9}{4} = 2\frac{1}{4}$ cups ✅
+$3 \\times \\frac{3}{4} = \\frac{9}{4} = 2\\frac{1}{4}$ cups ✅
     
     `
     },
@@ -56,11 +56,11 @@ $3 \times \frac{3}{4} = \frac{9}{4} = 2\frac{1}{4}$ cups ✅
       content: `
 **Word Problems** 🧮
 
-1) $\frac{1}{3}$ of 24 students went to the fair. How many?
+1) $\\frac{1}{3}$ of 24 students went to the fair. How many?
 
-2) $\frac{2}{5}$ of a 10-meter rope. How many meters?
+2) $\\frac{2}{5}$ of a 10-meter rope. How many meters?
 
-3) A jar has $\frac{3}{4}$ liter. You buy 8 jars. How many liters total?
+3) A jar has $\\frac{3}{4}$ liter. You buy 8 jars. How many liters total?
     
     `,
       exercise: {
@@ -95,8 +95,8 @@ $3 \times \frac{3}{4} = \frac{9}{4} = 2\frac{1}{4}$ cups ✅
 | # | Problem | Operation |
 |---|---------|-----------|
 | 1 | 1/3 of 24 students | Multiply |
-| 2 | $\frac{3}{4}$ pizza, share among 6 | Divide |
-| 3 | Double $\frac{2}{5}$ of a recipe | Multiply |
+| 2 | $\\frac{3}{4}$ pizza, share among 6 | Divide |
+| 3 | Double $\\frac{2}{5}$ of a recipe | Multiply |
     
     `
     },

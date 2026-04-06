@@ -35,7 +35,7 @@ export const precalcVectors2DPart6Data = {
           {
             question: 'Choose the most accurate definition of unit vector.',
             options: [
-              'vector written as ordered components like $\langle a,b\rangle$',
+              'vector written as ordered components like $\langle a,b\\rangle$',
               'single vector equivalent to a combined effect',
               'vectors with dot product zero',
               'vector with magnitude 1'
@@ -67,10 +67,10 @@ export const precalcVectors2DPart6Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Dot product | $\langle a,b\rangle\cdot\langle c,d\rangle=ac+bd$ | angle and projection |
-      | Angle relation | $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\theta$ | finding angle between vectors |
-      | Unit vector | $\hat{\mathbf u}=\frac{\mathbf u}{\|\mathbf u\|}$ | direction-only normalization |
-      | Magnitude | $\|\langle a,b\rangle\|=\sqrt{a^2+b^2}$ | length computation |
+      | Dot product | $\langle a,b\\rangle\cdot\langle c,d\\rangle=ac+bd$ | angle and projection |
+      | Angle relation | $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\\theta$ | finding angle between vectors |
+      | Unit vector | $\hat{\mathbf u}=\\frac{\mathbf u}{\|\mathbf u\|}$ | direction-only normalization |
+      | Magnitude | $\|\langle a,b\\rangle\|=\sqrt{a^2+b^2}$ | length computation |
       
       ### Common pitfalls
       - Keep component order consistent as $(x,y)$.
@@ -117,15 +117,15 @@ export const precalcVectors2DPart6Data = {
         dropdowns: [
           {
             label: 'unit vector',
-            options: ['vector written as ordered components like $\langle a,b\rangle$', 'vectors with dot product zero', 'single vector equivalent to a combined effect', 'vector with magnitude 1']
+            options: ['vector written as ordered components like $\langle a,b\\rangle$', 'vectors with dot product zero', 'single vector equivalent to a combined effect', 'vector with magnitude 1']
           },
           {
             label: 'resultant',
-            options: ['length of a vector', 'single vector equivalent to a combined effect', 'vectors with dot product zero', 'vector written as ordered components like $\langle a,b\rangle$']
+            options: ['length of a vector', 'single vector equivalent to a combined effect', 'vectors with dot product zero', 'vector written as ordered components like $\langle a,b\\rangle$']
           },
           {
             label: 'orthogonal',
-            options: ['length of a vector', 'vector written as ordered components like $\langle a,b\rangle$', 'vectors with dot product zero', 'angle measured from positive $x$-axis']
+            options: ['length of a vector', 'vector written as ordered components like $\langle a,b\\rangle$', 'vectors with dot product zero', 'angle measured from positive $x$-axis']
           }
         ],
         correctAnswers: ['vector with magnitude 1', 'single vector equivalent to a combined effect', 'vectors with dot product zero'],
@@ -167,7 +167,7 @@ export const precalcVectors2DPart6Data = {
       exercise: {
         questions: [
           {
-            question: 'A student is modeling resultant forces. Which term best anchors the next reasoning step if the key idea is: vector written as ordered components like $\langle a,b\rangle$?',
+            question: 'A student is modeling resultant forces. Which term best anchors the next reasoning step if the key idea is: vector written as ordered components like $\langle a,b\\rangle$?',
             options: [
               'unit vector',
               'resultant',

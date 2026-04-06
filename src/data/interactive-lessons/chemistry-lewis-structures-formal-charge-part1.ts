@@ -49,7 +49,7 @@ export const chemLewisStructuresFormalChargePart1Data = {
       id: 'ls-1-5',
       type: 'text',
       title: 'Counting Total Valence Electrons in a Molecule',
-      content: `Before drawing a Lewis structure, you must count the **total number of valence electrons** in the molecule or ion.\n\n**Steps:**\n1. Count the valence electrons for each atom\n2. Add them all together\n3. For **anions** (negative charge): add electrons equal to the charge\n4. For **cations** (positive charge): subtract electrons equal to the charge\n\n**Example 1: H₂O**\n- H: 1 valence e⁻ \\times 2 atoms = 2\n- O: 6 valence e⁻ \\times 1 atom = 6\n- Total = 2 + 6 = **8 valence electrons**\n\n**Example 2: CO₃²⁻ (carbonate ion)**\n- C: 4 valence e⁻ \\times 1 = 4\n- O: 6 valence e⁻ \\times 3 = 18\n- Add 2 for the 2− charge = +2\n- Total = 4 + 18 + 2 = **24 valence electrons**`
+      content: `Before drawing a Lewis structure, you must count the **total number of valence electrons** in the molecule or ion.\n\n**Steps:**\n1. Count the valence electrons for each atom\n2. Add them all together\n3. For **anions** (negative charge): add electrons equal to the charge\n4. For **cations** (positive charge): subtract electrons equal to the charge\n\n**Example 1: H₂O**\n- H: 1 valence e⁻ × 2 atoms = 2\n- O: 6 valence e⁻ × 1 atom = 6\n- Total = 2 + 6 = **8 valence electrons**\n\n**Example 2: CO₃²⁻ (carbonate ion)**\n- C: 4 valence e⁻ × 1 = 4\n- O: 6 valence e⁻ × 3 = 18\n- Add 2 for the 2− charge = +2\n- Total = 4 + 18 + 2 = **24 valence electrons**`
     },
     {
       id: 'ls-1-6',
@@ -85,18 +85,21 @@ export const chemLewisStructuresFormalChargePart1Data = {
         dropdowns: [
           {
             id: 'ls-1-7-dd1',
+            label: 'Carbon is in Group 14, so it has _______ valence electrons',
             options: ['2', '4', '6', '8'],
             correctIndex: 1,
             explanation: 'Carbon is in Group 14, so it has 4 valence electrons.'
           },
           {
             id: 'ls-1-7-dd2',
+            label: 'Sulfur is in Group 16, so it has _______ valence electrons',
             options: ['5', '6', '7', '8'],
             correctIndex: 1,
             explanation: 'Sulfur is in Group 16, so it has 6 valence electrons.'
           },
           {
             id: 'ls-1-7-dd3',
+            label: 'Hydrogen is in Group _______, so it has 1 valence electron',
             options: ['1', '2', '3', '4'],
             correctIndex: 0,
             explanation: 'Hydrogen is in Group 1, so it has 1 valence electron.'

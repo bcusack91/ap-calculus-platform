@@ -118,7 +118,16 @@ $\\Delta S < 0$ ✓ — consistent with our prediction!
 **ΔS° Calculations** 🧮
 
 Use these $S°$ values [J/(mol·K)]:
-$\\text{CO}_2(g) = 213.7$, $\\text{H}_2\\text{O}(g) = 188.8$, $\\text{H}_2\\text{O}(l) = 69.9$, $\\text{CH}_4(g) = 186.3$, $\\text{O}_2(g) = 205.1$, $\\text{C}(s) = 5.7$, $\\text{H}_2(g) = 130.7$
+
+| Substance | $S°$ [J/(mol·K)] |
+|---|---|
+| $\\text{CO}_2(g)$ | $213.7$ |
+| $\\text{H}_2\\text{O}(g)$ | $188.8$ |
+| $\\text{H}_2\\text{O}(l)$ | $69.9$ |
+| $\\text{CH}_4(g)$ | $186.3$ |
+| $\\text{O}_2(g)$ | $205.1$ |
+| $\\text{C}(s)$ | $5.7$ |
+| $\\text{H}_2(g)$ | $130.7$ |
 
 1) Calculate $\\Delta S°$ for: $\\text{C}(s) + \\text{O}_2(g) \\rightarrow \\text{CO}_2(g)$ [J/K, to 3 significant figures]
 

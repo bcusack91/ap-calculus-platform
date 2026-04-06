@@ -7,6 +7,7 @@ import 'katex/dist/katex.min.css'
 import type { EntranceQuizQuestion } from '@/data/entrance-quizzes'
 import ReferenceSheetModal from './ReferenceSheetModal'
 import { hasReferenceSheet } from '@/data/ap-reference-sheets'
+import ScratchPad from '@/components/ScratchPad'
 
 interface TopicEntranceQuizProps {
   topicTitle: string
@@ -217,17 +218,18 @@ export default function TopicEntranceQuiz({
             </span>
           </div>
 
-          {/* Reference material buttons */}
-          {courseSlug && hasReferenceSheet(courseSlug) && (
-            <div className="flex gap-2 mb-4">
+          {/* Reference material & tools */}
+          <div className="flex gap-2 mb-4">
+            {courseSlug && hasReferenceSheet(courseSlug) && (
               <button
                 onClick={() => setShowReference(true)}
                 className="text-xs font-medium px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
               >
                 📋 Reference Sheet
               </button>
-            </div>
-          )}
+            )}
+            <ScratchPad storageKey={`entrance-quiz-${topicSlug}`} />
+          </div>
           <ReferenceSheetModal open={showReference} onClose={() => setShowReference(false)} courseSlug={courseSlug} />
 
           {/* Question */}

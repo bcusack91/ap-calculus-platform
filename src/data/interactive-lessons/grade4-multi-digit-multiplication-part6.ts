@@ -22,11 +22,11 @@ Choose the best multiplication strategy for each problem:
       content: `
 ## Worked Example
 
-**$45 \times 22 = ?$**
+**$45 \\times 22 = ?$**
 
 Strategy: Break apart 22 = 20 + 2.
-- $45 \times 20 = 900$
-- $45 \times 2 = 90$
+- $45 \\times 20 = 900$
+- $45 \\times 2 = 90$
 - $900 + 90 = 990$ ✅
     
     `
@@ -59,9 +59,9 @@ Strategy: Break apart 22 = 20 + 2.
       content: `
 **Problem Solving** 🧮
 
-1) $25 \times 23 = ?$
+1) $25 \\times 23 = ?$
 
-2) $45 \times 30 = ?$
+2) $45 \\times 30 = ?$
 
 3) 48 classrooms × 50 desks each. Total desks?
     
@@ -97,9 +97,9 @@ Strategy: Break apart 22 = 20 + 2.
 
 | # | Problem | Best Strategy |
 |---|---------|---------------|
-| 1 | $25 \times 40$ | Mental math (×10s) |
-| 2 | $37 \times 23$ | Standard algorithm |
-| 3 | $99 \times 5$ | Mental math: $100(5) - 1(5)$ |
+| 1 | $25 \\times 40$ | Mental math (×10s) |
+| 2 | $37 \\times 23$ | Standard algorithm |
+| 3 | $99 \\times 5$ | Mental math: $100(5) - 1(5)$ |
     
     `
     },

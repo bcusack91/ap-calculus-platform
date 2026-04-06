@@ -10,14 +10,14 @@ export const calcbcImproperPart1Data = {
 
 ### Type 1: Infinite Bounds
 
-$$\int_a^{\infty} f(x)\,dx = \lim_{b \to \infty} \int_a^b f(x)\,dx$$
+$$\int_a^{\infty} f(x)\,dx = \lim_{b \\to \infty} \int_a^b f(x)\,dx$$
 
 - If the limit exists → the integral **converges**
 - If the limit is $\pm\infty$ or DNE → the integral **diverges**
 
 ### Classic Example
 
-$$\int_1^{\infty} \frac{1}{x^2}\,dx = \lim_{b \to \infty} \left[-\frac{1}{x}\right]_1^b = \lim_{b \to \infty}\left(-\frac{1}{b} + 1\right) = 1$$
+$$\int_1^{\infty} \\frac{1}{x^2}\,dx = \lim_{b \\to \infty} \left[-\\frac{1}{x}\\right]_1^b = \lim_{b \\to \infty}\left(-\\frac{1}{b} + 1\\right) = 1$$
 
 Converges! The infinite area under $1/x^2$ is exactly $1$.`
     },

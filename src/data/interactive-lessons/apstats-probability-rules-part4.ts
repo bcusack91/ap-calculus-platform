@@ -9,7 +9,7 @@ export const apStatsProbabilityPart4Data = {
 
 **Part 4 of 7 — Conditional Probability**
 
-$P(A|B) = \frac{P(A \cap B)}{P(B)}$
+$P(A|B) = \\frac{P(A \cap B)}{P(B)}$
 
 Read: "probability of A **given** B has occurred."
 
@@ -25,7 +25,7 @@ This restricts our sample space to only outcomes where B happened.
 
 **P(A∩B) = 0.12, P(B) = 0.4. P(A|B)?**
 
-$P(A|B) = \frac{0.12}{0.4} = 0.3$ ✅
+$P(A|B) = \\frac{0.12}{0.4} = 0.3$ ✅
     
     `
     },

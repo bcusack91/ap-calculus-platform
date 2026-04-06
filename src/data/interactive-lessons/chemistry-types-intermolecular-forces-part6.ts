@@ -5,13 +5,13 @@ export const chemTypesIntermolecularForcesPart6Data = {
       id: 'if-prop-intro',
       type: 'text',
       title: 'IMFs and Physical Properties',
-      content: `Intermolecular forces directly determine a substance\'s **physical properties**. Stronger IMFs mean molecules are held together more tightly, which affects how the substance behaves.\n\nThe key physical properties influenced by IMF strength:\n\n| Property | Stronger IMFs \\(\\rightarrow\\) | Why |\n|----------|--------------------------|-----|\n| Boiling point | Higher | More energy needed to separate molecules into gas phase |\n| Melting point | Higher | More energy needed to disrupt the solid structure |\n| Surface tension | Higher | Stronger cohesive forces at the surface |\n| Viscosity | Higher | Molecules resist flowing past each other |\n| Vapor pressure | **Lower** | Fewer molecules have enough energy to escape to gas phase |\n\nNotice that vapor pressure is the **opposite** — stronger IMFs mean LOWER vapor pressure.`
+      content: `Intermolecular forces directly determine a substance\'s **physical properties**. Stronger IMFs mean molecules are held together more tightly, which affects how the substance behaves.\n\nThe key physical properties influenced by IMF strength:\n\n| Property | Stronger IMFs $\\rightarrow$ | Why |\n|----------|--------------------------|-----|\n| Boiling point | Higher | More energy needed to separate molecules into gas phase |\n| Melting point | Higher | More energy needed to disrupt the solid structure |\n| Surface tension | Higher | Stronger cohesive forces at the surface |\n| Viscosity | Higher | Molecules resist flowing past each other |\n| Vapor pressure | **Lower** | Fewer molecules have enough energy to escape to gas phase |\n\nNotice that vapor pressure is the **opposite** — stronger IMFs mean LOWER vapor pressure.`
     },
     {
       id: 'if-prop-bp',
       type: 'text',
       title: 'Boiling Point',
-      content: `**Boiling point** is the temperature at which a liquid\'s vapor pressure equals atmospheric pressure. At this point, molecules throughout the liquid have enough kinetic energy to overcome intermolecular forces and enter the gas phase.\n\n**Stronger IMFs \\(\\rightarrow\\) Higher boiling point**\n\nBoiling requires breaking IMFs (not covalent bonds). The stronger the IMFs, the more energy (higher temperature) is needed.\n\n**Examples showing IMF effect on boiling point:**\n\n| Substance | IMFs Present | BP (°C) |\n|-----------|-------------|--------|\n| He | LDF only (very weak) | -269 |\n| N₂ | LDF only | -196 |\n| HCl | Dipole-dipole + LDF | -85 |\n| H₂O | H-bonding + DD + LDF | 100 |\n| NaCl (in water) | Ion-dipole | (ionic compound, MP = 801) |\n\nThe trend clearly shows: as IMF strength increases, boiling point increases.`
+      content: `**Boiling point** is the temperature at which a liquid\'s vapor pressure equals atmospheric pressure. At this point, molecules throughout the liquid have enough kinetic energy to overcome intermolecular forces and enter the gas phase.\n\n**Stronger IMFs $\\rightarrow$ Higher boiling point**\n\nBoiling requires breaking IMFs (not covalent bonds). The stronger the IMFs, the more energy (higher temperature) is needed.\n\n**Examples showing IMF effect on boiling point:**\n\n| Substance | IMFs Present | BP (°C) |\n|-----------|-------------|--------|\n| He | LDF only (very weak) | -269 |\n| N₂ | LDF only | -196 |\n| HCl | Dipole-dipole + LDF | -85 |\n| H₂O | H-bonding + DD + LDF | 100 |\n| NaCl (in water) | Ion-dipole | (ionic compound, MP = 801) |\n\nThe trend clearly shows: as IMF strength increases, boiling point increases.`
     },
     {
       id: 'if-prop-bp-q',
@@ -49,7 +49,7 @@ export const chemTypesIntermolecularForcesPart6Data = {
       id: 'if-prop-vapor-pressure',
       type: 'text',
       title: 'Vapor Pressure',
-      content: `**Vapor pressure** is the pressure exerted by the vapor above a liquid at a given temperature. It measures how easily molecules escape from the liquid phase into the gas phase.\n\n**Stronger IMFs \\(\\rightarrow\\) LOWER vapor pressure**\n\nThis is the **inverse** relationship! When IMFs are strong, molecules are held tightly in the liquid phase and fewer can escape to become vapor.\n\n**Key concept:** Vapor pressure and boiling point are inversely related:\n- High vapor pressure \\(\\rightarrow\\) low boiling point (volatile substance)\n- Low vapor pressure \\(\\rightarrow\\) high boiling point (less volatile)\n\n**Examples:**\n- Diethyl ether (weak IMFs): high vapor pressure, evaporates quickly, low BP\n- Water (hydrogen bonding): moderate vapor pressure, BP = 100°C\n- Glycerol (extensive H-bonding): very low vapor pressure, very high BP\n\nA substance with high vapor pressure is described as **volatile**.`
+      content: `**Vapor pressure** is the pressure exerted by the vapor above a liquid at a given temperature. It measures how easily molecules escape from the liquid phase into the gas phase.\n\n**Stronger IMFs $\\rightarrow$ LOWER vapor pressure**\n\nThis is the **inverse** relationship! When IMFs are strong, molecules are held tightly in the liquid phase and fewer can escape to become vapor.\n\n**Key concept:** Vapor pressure and boiling point are inversely related:\n- High vapor pressure $\\rightarrow$ low boiling point (volatile substance)\n- Low vapor pressure $\\rightarrow$ high boiling point (less volatile)\n\n**Examples:**\n- Diethyl ether (weak IMFs): high vapor pressure, evaporates quickly, low BP\n- Water (hydrogen bonding): moderate vapor pressure, BP = 100°C\n- Glycerol (extensive H-bonding): very low vapor pressure, very high BP\n\nA substance with high vapor pressure is described as **volatile**.`
     },
     {
       id: 'if-prop-vp-q',
@@ -76,7 +76,7 @@ export const chemTypesIntermolecularForcesPart6Data = {
       id: 'if-prop-surface-tension',
       type: 'text',
       title: 'Surface Tension and Viscosity',
-      content: `**Surface Tension** is the energy required to increase the surface area of a liquid. It arises because molecules at the surface only experience IMF attractions from the side and below (not above), creating a net inward force.\n\n**Stronger IMFs \\(\\rightarrow\\) Higher surface tension**\n\nWater has exceptionally high surface tension due to its extensive hydrogen bonding network. This allows small insects to walk on water and enables water to form droplets.\n\n---\n\n**Viscosity** is a liquid\'s resistance to flow. More viscous liquids flow slowly (like honey), while less viscous liquids flow freely (like gasoline).\n\n**Stronger IMFs \\(\\rightarrow\\) Higher viscosity**\n\nGlycerol (\\(\\text{C}_3\\text{H}_8\\text{O}_3\\)) is very viscous because it has three O–H groups, allowing extensive hydrogen bonding. Each glycerol molecule can form multiple hydrogen bonds with its neighbors, creating a tangled network that resists flow.\n\n**Temperature effect:** Increasing temperature decreases viscosity because molecules have more kinetic energy to overcome IMFs.`
+      content: `**Surface Tension** is the energy required to increase the surface area of a liquid. It arises because molecules at the surface only experience IMF attractions from the side and below (not above), creating a net inward force.\n\n**Stronger IMFs $\\rightarrow$ Higher surface tension**\n\nWater has exceptionally high surface tension due to its extensive hydrogen bonding network. This allows small insects to walk on water and enables water to form droplets.\n\n---\n\n**Viscosity** is a liquid\'s resistance to flow. More viscous liquids flow slowly (like honey), while less viscous liquids flow freely (like gasoline).\n\n**Stronger IMFs $\\rightarrow$ Higher viscosity**\n\nGlycerol ($\\text{C}_3\\text{H}_8\\text{O}_3$) is very viscous because it has three O–H groups, allowing extensive hydrogen bonding. Each glycerol molecule can form multiple hydrogen bonds with its neighbors, creating a tangled network that resists flow.\n\n**Temperature effect:** Increasing temperature decreases viscosity because molecules have more kinetic energy to overcome IMFs.`
     },
     {
       id: 'if-prop-dropdown-review',
@@ -87,24 +87,28 @@ export const chemTypesIntermolecularForcesPart6Data = {
         dropdowns: [
           {
             id: 'prop-bp',
+            label: 'Boiling point',
             options: ['Increases', 'Decreases', 'No change'],
             correctIndex: 0,
             explanation: 'Stronger IMFs mean more energy is needed to separate molecules into the gas phase, so boiling point increases.'
           },
           {
             id: 'prop-vp',
+            label: 'Vapor pressure',
             options: ['Increases', 'Decreases', 'No change'],
             correctIndex: 1,
             explanation: 'Stronger IMFs hold molecules more tightly in the liquid, so fewer escape to the gas phase. Vapor pressure DECREASES.'
           },
           {
             id: 'prop-st',
+            label: 'Surface tension',
             options: ['Increases', 'Decreases', 'No change'],
             correctIndex: 0,
             explanation: 'Stronger IMFs create a stronger inward pull on surface molecules, increasing surface tension.'
           },
           {
             id: 'prop-visc',
+            label: 'Viscosity',
             options: ['Increases', 'Decreases', 'No change'],
             correctIndex: 0,
             explanation: 'Stronger IMFs make molecules resist flowing past each other, increasing viscosity.'

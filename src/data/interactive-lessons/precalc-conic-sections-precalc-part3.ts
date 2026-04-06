@@ -67,8 +67,8 @@ export const precalcConicsPart3Data = {
       
       | Tool | Formula | Best use |
       |---|---|---|
-      | Ellipse | $\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1$ | sum-of-distances relation |
-      | Hyperbola | $\frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} = 1$ | difference-of-distances relation |
+      | Ellipse | $\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1$ | sum-of-distances relation |
+      | Hyperbola | $\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1$ | difference-of-distances relation |
       | Parabola (vertical) | $(x-h)^2 = 4p(y-k)$ | focus/directrix geometry |
       | Circle | $(x-h)^2 + (y-k)^2 = r^2$ | center-radius modeling |
       

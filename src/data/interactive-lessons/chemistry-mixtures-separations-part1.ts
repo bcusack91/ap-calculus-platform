@@ -151,30 +151,35 @@ A **heterogeneous mixture** has a **non-uniform composition** — you can see or
         dropdowns: [
           {
             id: 'mx1-dd1',
+            label: 'Air (a uniform mixture of N₂, O₂, Ar, etc.) is classified as a',
             options: ['solution', 'colloid', 'suspension'],
             correctIndex: 0,
             explanation: 'Air is a homogeneous mixture of gases (N₂, O₂, Ar, etc.) — a true solution.'
           },
           {
             id: 'mx1-dd2',
+            label: 'Milk (containing dispersed fat and protein particles) is classified as a',
             options: ['solution', 'colloid', 'suspension'],
             correctIndex: 1,
             explanation: 'Milk is a colloid — fat and protein particles (1–1000 nm) are dispersed in water. Milk shows the Tyndall effect.'
           },
           {
             id: 'mx1-dd3',
+            label: 'Flour mixed into water is classified as a',
             options: ['solution', 'colloid', 'suspension'],
             correctIndex: 2,
             explanation: 'Flour in water is a suspension — the flour particles are large and will settle to the bottom over time.'
           },
           {
             id: 'mx1-dd4',
+            label: 'Brass (an alloy of copper and zinc) is classified as a',
             options: ['solution', 'colloid', 'suspension'],
             correctIndex: 0,
             explanation: 'Brass is a solid solution (alloy) of copper and zinc. The metals are uniformly mixed at the atomic level.'
           },
           {
             id: 'mx1-dd5',
+            label: 'Fog (tiny water droplets dispersed in air) is classified as a',
             options: ['solution', 'colloid', 'suspension'],
             correctIndex: 1,
             explanation: 'Fog is a colloid — tiny water droplets (1–1000 nm) are dispersed in air. Fog scatters headlight beams (Tyndall effect).'

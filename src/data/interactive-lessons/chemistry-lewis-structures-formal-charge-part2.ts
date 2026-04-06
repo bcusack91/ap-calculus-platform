@@ -90,21 +90,24 @@ export const chemLewisStructuresFormalChargePart2Data = {
         dropdowns: [
           {
             id: 'ls-2-7-dd1',
+            label: 'In NH₃, which atom is the central atom?',
             options: ['H', 'N'],
             correctIndex: 1,
-            explanation: 'In NH₃, nitrogen is the central atom. Hydrogen is always a terminal atom.'
+            explanation: 'Nitrogen is the central atom. Hydrogen is always a terminal atom because it can only form one bond.'
           },
           {
             id: 'ls-2-7-dd2',
+            label: 'In CO₂, which atom is the central atom?',
             options: ['O', 'C'],
             correctIndex: 1,
-            explanation: 'In CO₂, carbon is the central atom because it is less electronegative than oxygen.'
+            explanation: 'Carbon is the central atom because it is less electronegative than oxygen. The least electronegative atom (excluding H) is usually the central atom.'
           },
           {
             id: 'ls-2-7-dd3',
+            label: 'In BF₃, which atom is the central atom?',
             options: ['F', 'B'],
             correctIndex: 1,
-            explanation: 'In BF₃, boron is the central atom. Fluorine is always a terminal atom.'
+            explanation: 'Boron is the central atom. Fluorine is always a terminal atom due to its high electronegativity.'
           }
         ]
       }

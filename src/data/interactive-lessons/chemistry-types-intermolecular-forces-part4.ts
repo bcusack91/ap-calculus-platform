@@ -5,13 +5,13 @@ export const chemTypesIntermolecularForcesPart4Data = {
       id: 'if-id-intro',
       type: 'text',
       title: 'Ion-Dipole Forces',
-      content: `Ion-dipole forces occur between an **ion** (a charged particle) and a **polar molecule** (a dipole).\n\nThese forces are extremely important in chemistry because they explain how **ionic compounds dissolve** in polar solvents like water.\n\n**How they work:**\n- A **cation** (positive ion) attracts the \\(\\delta^-\\) end of a polar molecule\n- An **anion** (negative ion) attracts the \\(\\delta^+\\) end of a polar molecule\n\nIon-dipole forces are generally the **strongest** type of intermolecular force (stronger than hydrogen bonding, dipole-dipole, and LDF) because ions carry full charges rather than partial charges.\n\n$$\\text{Strength: Ion-Dipole} > \\text{H-bonding} > \\text{Dipole-Dipole} > \\text{LDF}$$\n\n(This ranking is for forces between molecules of similar size)`
+      content: `Ion-dipole forces occur between an **ion** (a charged particle) and a **polar molecule** (a dipole).\n\nThese forces are extremely important in chemistry because they explain how **ionic compounds dissolve** in polar solvents like water.\n\n**How they work:**\n- A **cation** (positive ion) attracts the $\\delta^-$ end of a polar molecule\n- An **anion** (negative ion) attracts the $\\delta^+$ end of a polar molecule\n\nIon-dipole forces are generally the **strongest** type of intermolecular force (stronger than hydrogen bonding, dipole-dipole, and LDF) because ions carry full charges rather than partial charges.\n\n$$\\text{Strength: Ion-Dipole} > \\text{H-bonding} > \\text{Dipole-Dipole} > \\text{LDF}$$\n\n(This ranking is for forces between molecules of similar size)`
     },
     {
       id: 'if-id-dissolving',
       type: 'text',
       title: 'Ion-Dipole Forces in Dissolving',
-      content: `When NaCl dissolves in water, here\'s what happens at the molecular level:\n\n**Step 1:** Water molecules orient around the ions on the crystal surface.\n- The \\(\\delta^-\\) oxygen end of water points toward \\(\\text{Na}^+\\) cations\n- The \\(\\delta^+\\) hydrogen end of water points toward \\(\\text{Cl}^-\\) anions\n\n**Step 2:** Ion-dipole attractions between water and the ions on the surface become strong enough to overcome the ionic bonds holding the crystal together.\n\n**Step 3:** Individual ions are pulled away from the crystal and become **hydrated** (surrounded by a shell of water molecules). This shell is called a **hydration shell** or **solvation shell**.\n\n$$\\text{NaCl}(s) \\xrightarrow{\\text{H}_2\\text{O}} \\text{Na}^+(aq) + \\text{Cl}^-(aq)$$\n\nThe (aq) symbol means the ion is surrounded by water molecules — held by ion-dipole forces.`
+      content: `When NaCl dissolves in water, here\'s what happens at the molecular level:\n\n**Step 1:** Water molecules orient around the ions on the crystal surface.\n- The $\\delta^-$ oxygen end of water points toward $\\text{Na}^+$ cations\n- The $\\delta^+$ hydrogen end of water points toward $\\text{Cl}^-$ anions\n\n**Step 2:** Ion-dipole attractions between water and the ions on the surface become strong enough to overcome the ionic bonds holding the crystal together.\n\n**Step 3:** Individual ions are pulled away from the crystal and become **hydrated** (surrounded by a shell of water molecules). This shell is called a **hydration shell** or **solvation shell**.\n\n$$\\text{NaCl}(s) \\xrightarrow{\\text{H}_2\\text{O}} \\text{Na}^+(aq) + \\text{Cl}^-(aq)$$\n\nThe (aq) symbol means the ion is surrounded by water molecules — held by ion-dipole forces.`
     },
     {
       id: 'if-id-dissolving-q',
@@ -54,12 +54,14 @@ export const chemTypesIntermolecularForcesPart4Data = {
         dropdowns: [
           {
             id: 'id-cation',
+            label: 'A cation ($+$) attracts which end of water?',
             options: ['The δ+ hydrogen end', 'The δ- oxygen end', 'Neither end'],
             correctIndex: 1,
             explanation: 'Cations (positive ions like Na⁺, K⁺, Ca²⁺) attract the δ- oxygen end of water because opposite charges attract.'
           },
           {
             id: 'id-anion',
+            label: 'An anion ($-$) attracts which end of water?',
             options: ['The δ+ hydrogen end', 'The δ- oxygen end', 'Neither end'],
             correctIndex: 0,
             explanation: 'Anions (negative ions like Cl⁻, Br⁻, NO₃⁻) attract the δ+ hydrogen end of water because opposite charges attract.'
@@ -71,7 +73,7 @@ export const chemTypesIntermolecularForcesPart4Data = {
       id: 'if-id-strength-factors',
       type: 'text',
       title: 'Factors Affecting Ion-Dipole Strength',
-      content: `The strength of ion-dipole forces depends on two main factors:\n\n**1. Charge of the ion**\nHigher charge \\(\\rightarrow\\) stronger ion-dipole force\n- \\(\\text{Mg}^{2+}\\) creates stronger ion-dipole forces than \\(\\text{Na}^+\\)\n- \\(\\text{Al}^{3+}\\) creates even stronger ion-dipole forces\n\n**2. Size of the ion**\nSmaller ion \\(\\rightarrow\\) higher charge density \\(\\rightarrow\\) stronger ion-dipole force\n- \\(\\text{Li}^+\\) (small) creates stronger ion-dipole forces than \\(\\text{K}^+\\) (larger)\n- Both have +1 charge, but Li⁺ concentrates that charge in a smaller volume\n\n**Charge density** = charge / volume\n\nThe combination of high charge and small size gives the highest charge density and the strongest ion-dipole interactions.\n\nThis is why salts of small, highly charged ions (like \\(\\text{MgCl}_2\\)) tend to have very exothermic heats of hydration.`
+      content: `The strength of ion-dipole forces depends on two main factors:\n\n**1. Charge of the ion**\nHigher charge $\\rightarrow$ stronger ion-dipole force\n- $\\text{Mg}^{2+}$ creates stronger ion-dipole forces than $\\text{Na}^+$\n- $\\text{Al}^{3+}$ creates even stronger ion-dipole forces\n\n**2. Size of the ion**\nSmaller ion $\\rightarrow$ higher charge density $\\rightarrow$ stronger ion-dipole force\n- $\\text{Li}^+$ (small) creates stronger ion-dipole forces than $\\text{K}^+$ (larger)\n- Both have +1 charge, but Li⁺ concentrates that charge in a smaller volume\n\n**Charge density** = charge / volume\n\nThe combination of high charge and small size gives the highest charge density and the strongest ion-dipole interactions.\n\nThis is why salts of small, highly charged ions (like $\\text{MgCl}_2$) tend to have very exothermic heats of hydration.`
     },
     {
       id: 'if-id-strength-q',

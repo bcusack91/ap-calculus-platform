@@ -182,24 +182,28 @@ This connection between VSEPR geometry and orbital hybridization is fundamental 
         dropdowns: [
           {
             id: 'vg-2-7-dd1',
+            label: 'CS₂ has 2 double bonds around carbon (steric number 2), giving a _______',
             options: ['Linear', 'Trigonal planar', 'Tetrahedral', 'Trigonal bipyramidal'],
             correctIndex: 0,
             explanation: 'CS₂ has 2 double bonds around carbon (steric number 2), giving a linear geometry.'
           },
           {
             id: 'vg-2-7-dd2',
+            label: 'CH₄ has 4 single bonds and no lone pairs on carbon (steric number 4), giving a',
             options: ['Linear', 'Trigonal planar', 'Tetrahedral', 'Octahedral'],
             correctIndex: 2,
             explanation: 'CH₄ has 4 single bonds and no lone pairs on carbon (steric number 4), giving a tetrahedral geometry.'
           },
           {
             id: 'vg-2-7-dd3',
+            label: 'SO₃ has 3 electron domains (steric number 3) → trigonal planar geometry',
             options: ['90°', '109.5°', '120°', '180°'],
             correctIndex: 2,
             explanation: 'SO₃ has 3 electron domains (steric number 3) → trigonal planar geometry → 120° bond angles.'
           },
           {
             id: 'vg-2-7-dd4',
+            label: 'A linear molecule with steric number 2 has _______ hybridization',
             options: ['sp', 'sp²', 'sp³', 'sp³d'],
             correctIndex: 0,
             explanation: 'A linear molecule with steric number 2 has sp hybridization.'

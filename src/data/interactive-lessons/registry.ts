@@ -19,6 +19,8 @@ interface LazyPartConfig {
 
 export interface InteractiveTopicConfig {
   parts: LazyPartConfig[]
+  /** Variant content: keys are variant numbers (2, 3). Variant 1 = default parts. */
+  variants?: Record<number, LazyPartConfig[]>
   completionDestination?: 'competitive' | 'complete'
   practiceModeParts?: number[]
 }
@@ -559,6 +561,26 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Problem-Solving Workshop', loader: () => import('./chemistry-entropy-second-law-part6').then(m => m.chemEntropySecondLawPart6Data) },
       { title: 'Synthesis & AP Review', loader: () => import('./chemistry-entropy-second-law-part7').then(m => m.chemEntropySecondLawPart7Data) },
     ],
+    variants: {
+      2: [
+        { title: 'Introduction to Entropy', loader: () => import('./chemistry-entropy-second-law-v2-part1').then(m => m.chemEntropySecondLawV2Part1Data) },
+        { title: 'Microstates & Disorder', loader: () => import('./chemistry-entropy-second-law-v2-part2').then(m => m.chemEntropySecondLawV2Part2Data) },
+        { title: 'Second Law of Thermodynamics', loader: () => import('./chemistry-entropy-second-law-v2-part3').then(m => m.chemEntropySecondLawV2Part3Data) },
+        { title: 'Standard Entropy Changes', loader: () => import('./chemistry-entropy-second-law-v2-part4').then(m => m.chemEntropySecondLawV2Part4Data) },
+        { title: 'Predicting Entropy Changes', loader: () => import('./chemistry-entropy-second-law-v2-part5').then(m => m.chemEntropySecondLawV2Part5Data) },
+        { title: 'Problem-Solving Workshop', loader: () => import('./chemistry-entropy-second-law-v2-part6').then(m => m.chemEntropySecondLawV2Part6Data) },
+        { title: 'Synthesis & AP Review', loader: () => import('./chemistry-entropy-second-law-v2-part7').then(m => m.chemEntropySecondLawV2Part7Data) },
+      ],
+      3: [
+        { title: 'Introduction to Entropy', loader: () => import('./chemistry-entropy-second-law-v3-part1').then(m => m.chemEntropySecondLawV3Part1Data) },
+        { title: 'Microstates & Disorder', loader: () => import('./chemistry-entropy-second-law-v3-part2').then(m => m.chemEntropySecondLawV3Part2Data) },
+        { title: 'Second Law of Thermodynamics', loader: () => import('./chemistry-entropy-second-law-v3-part3').then(m => m.chemEntropySecondLawV3Part3Data) },
+        { title: 'Standard Entropy Changes', loader: () => import('./chemistry-entropy-second-law-v3-part4').then(m => m.chemEntropySecondLawV3Part4Data) },
+        { title: 'Predicting Entropy Changes', loader: () => import('./chemistry-entropy-second-law-v3-part5').then(m => m.chemEntropySecondLawV3Part5Data) },
+        { title: 'Problem-Solving Workshop', loader: () => import('./chemistry-entropy-second-law-v3-part6').then(m => m.chemEntropySecondLawV3Part6Data) },
+        { title: 'Synthesis & AP Review', loader: () => import('./chemistry-entropy-second-law-v3-part7').then(m => m.chemEntropySecondLawV3Part7Data) },
+      ],
+    },
   },
   'gibbs-free-energy': {
     completionDestination: 'competitive',
@@ -3881,6 +3903,22 @@ export function getInteractiveTopicConfig(topicSlug: string): InteractiveTopicCo
   return interactiveLessonRegistry[resolved] ?? null
 }
 
+/** Get the parts array for a specific variant (falls back to v1 if variant not found) */
+export function getVariantParts(topicSlug: string, variant: number = 1): InteractiveTopicConfig['parts'] | null {
+  const config = getInteractiveTopicConfig(topicSlug)
+  if (!config) return null
+  if (variant <= 1) return config.parts
+  return config.variants?.[variant] ?? config.parts
+}
+
+/** Get the total number of available variants for a topic */
+export function getTopicVariantCount(topicSlug: string): number {
+  const config = getInteractiveTopicConfig(topicSlug)
+  if (!config) return 1
+  const variantKeys = config.variants ? Object.keys(config.variants).map(Number) : []
+  return 1 + variantKeys.length // variant 1 (default) + explicit variants
+}
+
 export function hasInteractiveLesson(topicSlug: string): boolean {
   const resolved = resolveSlug(topicSlug)
   return resolved in interactiveLessonRegistry
@@ -3890,11 +3928,10 @@ export function getAllInteractiveSlugs(): string[] {
   return Object.keys(interactiveLessonRegistry)
 }
 
-export async function getInteractiveLessonData(topicSlug: string, part: number): Promise<LessonData | null> {
-  const resolved = resolveSlug(topicSlug)
-  const config = interactiveLessonRegistry[resolved]
-  if (!config) return null
-  const partConfig = config.parts[part - 1]
+export async function getInteractiveLessonData(topicSlug: string, part: number, variant: number = 1): Promise<LessonData | null> {
+  const parts = getVariantParts(topicSlug, variant)
+  if (!parts) return null
+  const partConfig = parts[part - 1]
   if (!partConfig) return null
   return partConfig.loader()
 }

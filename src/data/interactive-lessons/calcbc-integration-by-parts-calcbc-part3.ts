@@ -23,7 +23,7 @@ $I = e^x \sin x - e^x \cos x - I$
 
 $2I = e^x(\sin x - \cos x)$
 
-$$I = \frac{e^x(\sin x - \cos x)}{2} + C$$`
+$$I = \\frac{e^x(\sin x - \cos x)}{2} + C$$`
     },
     {
       id: 'ibp3-quiz1',

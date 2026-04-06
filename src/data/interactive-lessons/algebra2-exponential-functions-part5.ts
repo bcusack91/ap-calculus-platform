@@ -11,7 +11,7 @@ export const alg2ExponentialPart5Data = {
 
 ### Key Properties
 1. **Product**: $\log_b(MN) = \log_b(M) + \log_b(N)$
-2. **Quotient**: $\log_b\left(\frac{M}{N}\right) = \log_b(M) - \log_b(N)$
+2. **Quotient**: $\log_b\left(\\frac{M}{N}\\right) = \log_b(M) - \log_b(N)$
 3. **Power**: $\log_b(M^p) = p \cdot \log_b(M)$
     
     `
@@ -24,7 +24,7 @@ export const alg2ExponentialPart5Data = {
 
 $\log_2(4 \cdot 8) = \log_2(4) + \log_2(8) = 2 + 3 = 5$ ✅
 
-Check: $4 \times 8 = 32 = 2^5$ ✅
+Check: $4 \\times 8 = 32 = 2^5$ ✅
     
     `
     },

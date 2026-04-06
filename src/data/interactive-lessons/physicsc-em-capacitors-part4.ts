@@ -9,11 +9,11 @@ export const physCEMCapacitorsPart4Data = {
 
 **Part 4 of 7 — Energy Stored**
 
-$U = \frac{1}{2}CV^2 = \frac{Q^2}{2C} = \frac{1}{2}QV$
+$U = \\frac{1}{2}CV^2 = \\frac{Q^2}{2C} = \\frac{1}{2}QV$
 
 The energy is stored in the **electric field** between the plates.
 
-Energy density: $u = \frac{1}{2}\epsilon_0 E^2$ (J/m³)
+Energy density: $u = \\frac{1}{2}\epsilon_0 E^2$ (J/m³)
     
     `
     },
@@ -25,7 +25,7 @@ Energy density: $u = \frac{1}{2}\epsilon_0 E^2$ (J/m³)
 
 **A 10 μF capacitor is charged to 100 V. Energy stored?**
 
-$U = \frac{1}{2}CV^2 = \frac{1}{2}(10 \times 10^{-6})(10000) = 0.05$ J ✅
+$U = \\frac{1}{2}CV^2 = \\frac{1}{2}(10 \\times 10^{-6})(10000) = 0.05$ J ✅
     
     `
     },
@@ -61,7 +61,7 @@ $U = \frac{1}{2}CV^2 = \frac{1}{2}(10 \times 10^{-6})(10000) = 0.05$ J ✅
 
 2) $V$ is doubled while $C$ stays the same. Energy increases by a factor of ___
 
-3) $C = 4$ μF, $V = 10$ V. $U = \frac{1}{2}(4)(100) = ?$ μJ
+3) $C = 4$ μF, $V = 10$ V. $U = \\frac{1}{2}(4)(100) = ?$ μJ
     
     `,
       exercise: {
@@ -95,9 +95,9 @@ $U = \frac{1}{2}CV^2 = \frac{1}{2}(10 \times 10^{-6})(10000) = 0.05$ J ✅
 
 | # | Known | Formula |
 |---|-------|---------|
-| 1 | $C$, $V$ | $U = \frac{1}{2}CV^2$ |
+| 1 | $C$, $V$ | $U = \\frac{1}{2}CV^2$ |
 | 2 | $Q$, $C$ | $U = Q^2/(2C)$ |
-| 3 | $Q$, $V$ | $U = \frac{1}{2}QV$ |
+| 3 | $Q$, $V$ | $U = \\frac{1}{2}QV$ |
     
     `
     },
