@@ -44,7 +44,7 @@ function InlineLatex({ text, className }: { text: string; className?: string }) 
   }
 
   // Normalize \(...\) delimiters to $...$ before processing
-  let normalizedText = text.replace(/\\\(([^)]*?)\\\)/g, '$$$1$$')
+  const normalizedText = text.replace(/\\\(([^)]*?)\\\)/g, '$$$1$$')
 
   // Protect escaped dollar signs (\$) from being treated as LaTeX delimiters
   const ESCAPED_DOLLAR = '\u0000DOLLAR\u0000'
@@ -395,7 +395,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     } catch (error) {
       console.error('Failed to save progress:', error)
     }
-  }, [session?.user, cachedTopicId, topicSlug, lessonPart, completedSections, totalParts, lessonData])
+  }, [session?.user, cachedTopicId, topicSlug, lessonPart, completedSections, totalParts, lessonData, variant])
 
   // Load progress from database on mount
   useEffect(() => {

@@ -13,7 +13,6 @@ export default function ScratchPad({ storageKey }: ScratchPadProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [isMinimized, setIsMinimized] = useState(false)
   const [mode, setMode] = useState<Mode>('type')
-  const [content, setContent] = useState('')
   const textareaRef = useRef<HTMLTextAreaElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [isDrawing, setIsDrawing] = useState(false)
@@ -25,14 +24,14 @@ export default function ScratchPad({ storageKey }: ScratchPadProps) {
   const localKey = storageKey ? `scratchpad_${storageKey}` : null
   const canvasKey = storageKey ? `scratchpad_canvas_${storageKey}` : null
 
-  // Load saved content
-  useEffect(() => {
-    if (!localKey) return
+  const [content, setContent] = useState(() => {
+    if (!localKey) return ''
     try {
-      const saved = localStorage.getItem(localKey)
-      if (saved) setContent(saved)
-    } catch {}
-  }, [localKey])
+      return localStorage.getItem(localKey) ?? ''
+    } catch {
+      return ''
+    }
+  })
 
   // Load saved canvas
   useEffect(() => {
