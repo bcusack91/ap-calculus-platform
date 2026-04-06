@@ -2926,6 +2926,9 @@ function MultipleChoiceQuiz({
 
   return (
     <div className="space-y-6">
+      {/* Section content (problem context) */}
+      {section.content && <FadeInText content={section.content} onComplete={() => {}} />}
+
       {/* Progress indicator */}
       <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
         <span>Question {currentQuestionIndex + 1} of {questions.length}</span>
