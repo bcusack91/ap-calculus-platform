@@ -16,7 +16,7 @@ This final part ties together all the concepts: Arrhenius, Brønsted-Lowry, and 
       id: 'ab7-summary',
       type: 'text' as const,
       content: `
-## Complete Summary
+## 📋 Complete Summary
 
 ### Three Acid-Base Theories
 
@@ -26,6 +26,9 @@ This final part ties together all the concepts: Arrhenius, Brønsted-Lowry, and 
 | Brønsted-Lowry | Proton donor | Proton acceptor | Any solvent |
 | Lewis | e⁻ pair acceptor | e⁻ pair donor | Broadest |
 
+
+---
+
 ### Key Equations
 
 $$pH = -\\log[H^+] \\qquad pOH = -\\log[OH^-]$$
@@ -33,6 +36,9 @@ $$pH = -\\log[H^+] \\qquad pOH = -\\log[OH^-]$$
 $$pH + pOH = 14 \\qquad K_w = [H^+][OH^-] = 1.0 \\times 10^{-14}$$
 
 $$[H^+] = 10^{-pH} \\qquad [OH^-] = 10^{-pOH}$$
+
+
+---
 
 ### Strong Acid/Base Rules
 

@@ -16,7 +16,7 @@ Not every possible redox reaction actually occurs. The **activity series** ranks
       id: 'or5-activity-series',
       type: 'text' as const,
       content: `
-## The Activity Series of Metals
+## 📌 The Activity Series of Metals
 
 ### Ranked from Most Active to Least Active
 
@@ -43,7 +43,7 @@ Not every possible redox reaction actually occurs. The **activity series** ranks
       id: 'or5-rules',
       type: 'text' as const,
       content: `
-## Using the Activity Series
+## 📌 Using the Activity Series
 
 ### The Golden Rule
 
@@ -53,6 +53,9 @@ $$\\text{More active metal} + \\text{Less active metal ion} \\rightarrow \\text{
 
 $$\\text{Less active metal} + \\text{More active metal ion} \\rightarrow \\text{No reaction (NR)}$$
 
+
+---
+
 ### Examples
 
 **Zn(s) + CuSO₄(aq) → ?**
@@ -61,6 +64,9 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
 
 **Cu(s) + ZnSO₄(aq) → ?**
 - Cu is BELOW Zn in the series → **no reaction (NR)**
+
+
+---
 
 ### Metals and Acids
 
@@ -75,15 +81,21 @@ Metals **below hydrogen** (Cu, Ag, Pt, Au) do **NOT** react with dilute HCl or H
       id: 'or5-practical',
       type: 'text' as const,
       content: `
-## Practical Applications
+## 🔧 Practical Applications
 
 ### Why Gold Doesn\'t Corrode
 
 Gold (Au) is at the **bottom** of the activity series. It cannot be oxidized by water, air, or common acids. This is why gold jewelry stays shiny for thousands of years.
 
+
+---
+
 ### Galvanized Steel
 
 Steel (mostly Fe) is coated with zinc (Zn). Since Zn is more active than Fe, the zinc corrodes preferentially, **protecting** the iron underneath. This is called **sacrificial protection**.
+
+
+---
 
 ### Copper Pennies in Silver Nitrate
 
@@ -91,6 +103,9 @@ When a copper penny is placed in AgNO₃ solution:
 $$\\text{Cu}(s) + 2\\text{Ag}^+(aq) \\rightarrow \\text{Cu}^{2+}(aq) + 2\\text{Ag}(s)$$
 
 Cu is above Ag → reaction occurs. Silver crystals grow on the penny while the solution turns blue (Cu²⁺).
+
+
+---
 
 ### Dissolving Gold
 

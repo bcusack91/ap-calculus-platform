@@ -16,13 +16,16 @@ You now know what a mole is and what molar mass means. The next step is the most
       id: 'mm3-grams-to-moles',
       type: 'text' as const,
       content: `
-## Grams → Moles
+## ⚖️ Grams → Moles
 
 To convert from grams to moles, divide by the molar mass:
 
 $$n = \\frac{m}{M}$$
 
 where $n$ = moles, $m$ = mass in grams, $M$ = molar mass in g/mol.
+
+
+---
 
 ### Example 1
 
@@ -32,6 +35,9 @@ where $n$ = moles, $m$ = mass in grams, $M$ = molar mass in g/mol.
 
 $$\\text{mol H}_2\\text{O} = 36.04 \\; \\cancel{\\text{g H}_2\\text{O}} \\times \\frac{1 \\text{ mol H}_2\\text{O}}{18.02 \\; \\cancel{\\text{g H}_2\\text{O}}} = 2.000 \\text{ mol H}_2\\text{O}$$
 
+
+---
+
 ### Example 2
 
 > **Problem:** How many moles are in 100.0 g of NaCl? ($M = 58.44$ g/mol)
@@ -40,11 +46,14 @@ $$\\text{mol H}_2\\text{O} = 36.04 \\; \\cancel{\\text{g H}_2\\text{O}} \\times 
 
 $$\\text{mol NaCl} = 100.0 \\; \\cancel{\\text{g NaCl}} \\times \\frac{1 \\text{ mol NaCl}}{58.44 \\; \\cancel{\\text{g NaCl}}} = 1.711 \\text{ mol NaCl}$$
 
-## Moles → Grams
+## ⚖️ Moles → Grams
 
 To convert from moles to grams, multiply by the molar mass:
 
 $$m = n \\times M$$
+
+
+---
 
 ### Example 3
 
@@ -59,13 +68,16 @@ $$\\text{g C}_6\\text{H}_{12}\\text{O}_6 = 0.250 \\; \\cancel{\\text{mol C}_6\\t
       id: 'mm3-multi-step',
       type: 'text' as const,
       content: `
-## Multi-Step Conversions: Grams ↔ Moles ↔ Particles
+## 📋 Multi-Step Conversions: Grams ↔ Moles ↔ Particles
 
 Often you need to go from **grams to particles** (or vice versa). This requires two steps:
 
 $$\\text{grams} \\xrightarrow{\\div M} \\text{moles} \\xrightarrow{\\times N_A} \\text{particles}$$
 
 $$\\text{particles} \\xrightarrow{\\div N_A} \\text{moles} \\xrightarrow{\\times M} \\text{grams}$$
+
+
+---
 
 ### Example: Grams → Particles
 
@@ -80,6 +92,9 @@ $$\\text{mol H}_2\\text{O} = 9.01 \\; \\cancel{\\text{g H}_2\\text{O}} \\times \
 **Step 2:** Convert moles to molecules:
 
 $$\\text{molecules of H}_2\\text{O} = 0.500 \\; \\cancel{\\text{mol H}_2\\text{O}} \\times \\frac{6.022 \\times 10^{23} \\text{ molecules H}_2\\text{O}}{1 \\; \\cancel{\\text{mol H}_2\\text{O}}} = 3.011 \\times 10^{23} \\text{ molecules H}_2\\text{O}$$
+
+
+---
 
 ### Example: Particles → Grams
 

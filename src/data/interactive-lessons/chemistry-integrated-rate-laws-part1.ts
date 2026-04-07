@@ -18,7 +18,7 @@ We begin with the simplest case: **zero-order** reactions.
       id: 'ir1-derivation',
       type: 'text' as const,
       content: `
-## Derivation of the Zero-Order Integrated Rate Law
+## 📏 Derivation of the Zero-Order Integrated Rate Law
 
 For a zero-order reaction: $\\text{Rate} = k$
 
@@ -32,6 +32,9 @@ $$[A] - [A]_0 = -kt$$
 
 $$\\boxed{[A] = -kt + [A]_0}$$
 
+
+---
+
 ### This is the equation of a straight line!
 
 $$y = mx + b$$
@@ -42,6 +45,9 @@ $$y = mx + b$$
 | $m$ (slope) | $-k$ |
 | $x$ | $t$ |
 | $b$ (y-intercept) | $[A]_0$ |
+
+
+---
 
 ### Plot: $[A]$ vs $t$ → straight line for zero-order
 
@@ -98,7 +104,7 @@ $$y = mx + b$$
       id: 'ir1-half-life',
       type: 'text' as const,
       content: `
-## Zero-Order Half-Life
+## 📌 Zero-Order Half-Life
 
 The **half-life** ($t_{1/2}$) is the time for the concentration to drop to half its initial value.
 
@@ -110,12 +116,18 @@ $$kt_{1/2} = [A]_0 - \\frac{[A]_0}{2} = \\frac{[A]_0}{2}$$
 
 $$\\boxed{t_{1/2} = \\frac{[A]_0}{2k}}$$
 
+
+---
+
 ### Key Feature
 
 The zero-order half-life **depends on** $[A]_0$:
 - Higher initial concentration → longer half-life
 - Each successive half-life is **shorter** than the previous one
 - The reaction reaches [A] = 0 in a finite time: $t_{\\text{complete}} = [A]_0/k$
+
+
+---
 
 ### Successive Half-Lives
 
@@ -187,7 +199,7 @@ A zero-order reaction has $k = 5.0 \\times 10^{-3}$ M/s and $[A]_0 = 0.60$ M.
       id: 'ir1-identifying-order',
       type: 'text' as const,
       content: `
-## How to Identify Zero-Order from Data
+## 🔧 How to Identify Zero-Order from Data
 
 ### Method: Test Different Plots
 
@@ -200,6 +212,9 @@ Given concentration-time data, make three plots:
 | $1/[A]$ vs $t$ | Second-order |
 
 For zero-order, the $[A]$ vs $t$ plot will be linear with slope $= -k$.
+
+
+---
 
 ### Data Test
 

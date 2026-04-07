@@ -16,7 +16,7 @@ Strong acids and bases dissociate **completely** in water. This makes pH calcula
       id: 'ab5-strong-acids',
       type: 'text' as const,
       content: `
-## pH of Strong Acids
+## 🧪 pH of Strong Acids
 
 For a strong acid $HA$ at concentration $C$:
 
@@ -25,6 +25,9 @@ $$HA \\rightarrow H^+ + A^-$$
 Since dissociation is **100% complete**: $[H^+] = C$
 
 $$pH = -\\log C$$
+
+
+---
 
 ### Example 1
 
@@ -35,6 +38,9 @@ $$pH = -\\log C$$
 $$[H^+] = 0.025 \\text{ M}$$
 $$pH = -\\log(0.025) = 1.60$$
 
+
+---
+
 ### Example 2
 
 > **Problem:** What is the pH of 0.0040 M $HNO_3$?
@@ -43,6 +49,9 @@ $$pH = -\\log(0.025) = 1.60$$
 
 $$[H^+] = 0.0040 \\text{ M}$$
 $$pH = -\\log(0.0040) = 2.40$$
+
+
+---
 
 ### Diprotic Strong Acid ($H_2SO_4$)
 
@@ -59,7 +68,7 @@ $$[H^+] \\approx 2C \\text{ (for dilute solutions)}$$
       id: 'ab5-strong-bases',
       type: 'text' as const,
       content: `
-## pH of Strong Bases
+## 📌 pH of Strong Bases
 
 For a strong base like $NaOH$ at concentration $C$:
 
@@ -69,6 +78,9 @@ $[OH^-] = C$, then:
 
 $$pOH = -\\log C$$
 $$pH = 14 - pOH$$
+
+
+---
 
 ### Example 1
 
@@ -80,6 +92,9 @@ $$[OH^-] = 0.010 \\text{ M}$$
 $$pOH = -\\log(0.010) = 2.00$$
 $$pH = 14 - 2.00 = 12.00$$
 
+
+---
+
 ### Group 2 Hydroxides
 
 For $Ba(OH)_2$ or $Ca(OH)_2$:
@@ -87,6 +102,9 @@ For $Ba(OH)_2$ or $Ca(OH)_2$:
 $$Ba(OH)_2 \\rightarrow Ba^{2+} + 2OH^-$$
 
 $$[OH^-] = 2C$$
+
+
+---
 
 ### Example 2
 
@@ -147,7 +165,7 @@ $$pH = 14 - 2.00 = 12.00$$
       id: 'ab5-dilution',
       type: 'text' as const,
       content: `
-## Mixing and Dilution
+## 📌 Mixing and Dilution
 
 ### Diluting a Strong Acid
 
@@ -158,6 +176,9 @@ Use $M_1V_1 = M_2V_2$:
 $$M_2 = \\frac{M_1V_1}{V_2} = \\frac{(0.10)(25.0)}{100.0} = 0.025 \\text{ M}$$
 
 $$pH = -\\log(0.025) = 1.60$$
+
+
+---
 
 ### Mixing Strong Acid and Strong Base
 

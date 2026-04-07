@@ -16,7 +16,7 @@ Gibbs free energy ties together enthalpy, entropy, equilibrium, and electrochemi
       id: 'gf7-master-summary',
       type: 'text' as const,
       content: `
-## The Web of Thermodynamic Equations
+## 🌡️ The Web of Thermodynamic Equations
 
 ### Core Equations
 
@@ -28,6 +28,9 @@ Gibbs free energy ties together enthalpy, entropy, equilibrium, and electrochemi
 | $\\Delta G = \\Delta G° + RT\\ln Q$ | Non-standard conditions |
 | $\\Delta G° = -nFE°$ | Connect to electrochemistry (Topic 4) |
 
+
+---
+
 ### The Four Sign Cases
 
 | $\\Delta H$ | $\\Delta S$ | Spontaneous? | Crossover T |
@@ -36,6 +39,9 @@ Gibbs free energy ties together enthalpy, entropy, equilibrium, and electrochemi
 | + | − | Never | None |
 | − | − | Low T | $T = \\Delta H/\\Delta S$ |
 | + | + | High T | $T = \\Delta H/\\Delta S$ |
+
+
+---
 
 ### Critical Relationships
 

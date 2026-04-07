@@ -11,7 +11,7 @@ Writing out 1s² 2s² 2p⁶ 3s² 3p⁶ every time gets tedious. Chemists use **n
     {
       id: 'ec4-noble-gases',
       type: 'text' as const,
-      content: `## The Noble Gases
+      content: `## 📌 The Noble Gases
 
 | Noble Gas | Symbol | Atomic Number | Full Configuration |
 |-----------|--------|---------------|--------------------|
@@ -30,7 +30,7 @@ To use shorthand notation:
     {
       id: 'ec4-examples',
       type: 'text' as const,
-      content: `## Examples
+      content: `## 🧪 Examples
 
 **Sodium (Na, Z = 11)**  
 Full: 1s² 2s² 2p⁶ 3s¹  
@@ -135,7 +135,7 @@ Match each element with its correct shorthand electron configuration.`,
     {
       id: 'ec4-summary',
       type: 'text' as const,
-      content: `## Key Takeaways
+      content: `## 📌 Key Takeaways
 
 1. **Noble gas shorthand** replaces the inner electron core with the preceding noble gas symbol in brackets.
 2. Always choose the noble gas that comes **immediately before** your element in the periodic table.

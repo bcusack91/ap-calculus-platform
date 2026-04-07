@@ -16,7 +16,7 @@ This workshop brings together all the redox skills: assigning oxidation states, 
       id: 'or6-strategy',
       type: 'text' as const,
       content: `
-## Problem-Solving Strategy
+## 🛠️ Problem-Solving Strategy
 
 ### Decision Flowchart
 
@@ -28,6 +28,9 @@ This workshop brings together all the redox skills: assigning oxidation states, 
 4. **Balance each half-reaction** (atoms, then charge with e⁻)
 5. **Equalize and add** — cancel electrons
 6. **Verify** — atoms AND charge must balance
+
+
+---
 
 ### Common Patterns to Recognize
 

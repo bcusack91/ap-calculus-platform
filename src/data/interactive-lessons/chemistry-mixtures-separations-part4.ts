@@ -16,12 +16,15 @@ Spectroscopy uses light to analyze the composition of mixtures. When light passe
       id: 'mx4-light-absorption',
       type: 'text' as const,
       content: `
-## How Solutions Absorb Light
+## 🔧 How Solutions Absorb Light
 
 When white light passes through a colored solution:
 - The solution **absorbs** certain wavelengths
 - The remaining wavelengths pass through (**transmitted light**)
 - The color you see is the **complementary color** of what was absorbed
+
+
+---
 
 ### Color Wheel
 
@@ -34,6 +37,9 @@ When white light passes through a colored solution:
 | Orange | 590–620 | Blue |
 | Red | 620–750 | Green/cyan |
 
+
+---
+
 ### Key Concept: Absorbance
 
 **Absorbance** ($A$) measures how much light a solution absorbs at a particular wavelength:
@@ -44,6 +50,9 @@ where:
 - $I_0$ = intensity of incident light
 - $I$ = intensity of transmitted light
 - $T = I/I_0$ = transmittance (fraction of light passing through)
+
+
+---
 
 ### Relationship: $A$ and $T$
 
@@ -56,7 +65,7 @@ where:
       id: 'mx4-beers-law',
       type: 'text' as const,
       content: `
-## Beer\'s Law (Beer-Lambert Law)
+## 📏 Beer\'s Law (Beer-Lambert Law)
 
 $$A = \\varepsilon bc$$
 
@@ -67,12 +76,18 @@ $$A = \\varepsilon bc$$
 | $b$ | Path length (width of cuvette) | cm |
 | $c$ | Concentration of absorbing species | mol/L (M) |
 
+
+---
+
 ### Key Takeaways
 
 - Absorbance is **directly proportional** to concentration
 - If you double the concentration, absorbance doubles
 - $\\varepsilon$ is a constant for a given substance at a given wavelength
 - Standard cuvettes have $b = 1.00$ cm, so often $A = \\varepsilon c$
+
+
+---
 
 ### Practical Use: Calibration Curves
 
@@ -81,6 +96,9 @@ $$A = \\varepsilon bc$$
 3. Plot $A$ vs. $c$ → should give a **straight line** through the origin
 4. Slope = $\\varepsilon b$
 5. Measure absorbance of **unknown** → read concentration from the line
+
+
+---
 
 ### Choosing $\\lambda_{\\text{max}}$
 

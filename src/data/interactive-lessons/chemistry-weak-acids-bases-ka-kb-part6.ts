@@ -16,25 +16,40 @@ This workshop brings together ICE tables, $K_a$/$K_b$ relationships, percent ion
       id: 'wk6-problem1',
       type: 'text' as const,
       content: `
-## Problem 1: Complete Weak Acid Analysis
+## 🧪 Problem 1: Complete Weak Acid Analysis
 
 A 0.20 M solution of benzoic acid ($C_6H_5COOH$, $K_a = 6.3 \\times 10^{-5}$) is prepared.
+
+
+---
 
 ### Step 1: Check the approximation
 
 $C/K_a = 0.20/(6.3 \\times 10^{-5}) = 3175 > 400$ ✓
 
+
+---
+
 ### Step 2: Calculate $[H^+]$
 
 $$[H^+] = \\sqrt{K_a \\cdot C} = \\sqrt{(6.3 \\times 10^{-5})(0.20)} = \\sqrt{1.26 \\times 10^{-5}} = 3.55 \\times 10^{-3} \\text{ M}$$
+
+
+---
 
 ### Step 3: pH
 
 $pH = -\\log(3.55 \\times 10^{-3}) = 2.45$
 
+
+---
+
 ### Step 4: Percent ionization
 
 $\\% = (3.55 \\times 10^{-3}/0.20) \\times 100 = 1.8\\%$ ✓ (under 5%)
+
+
+---
 
 ### Step 5: $K_b$ of conjugate base
 
@@ -68,9 +83,12 @@ Perform the same analysis for 0.15 M $HNO_2$ ($K_a = 4.5 \\times 10^{-4}$):
       id: 'wk6-problem2',
       type: 'text' as const,
       content: `
-## Problem 2: Salt Solution pH
+## 🧪 Problem 2: Salt Solution pH
 
 What is the pH of 0.30 M sodium fluoride ($NaF$)?
+
+
+---
 
 ### Analysis
 
@@ -78,11 +96,17 @@ $NaF$ dissociates completely: $Na^+$ (spectator) + $F^-$ (conjugate base of $HF$
 
 $F^-$ is a weak base: $F^- + H_2O \\rightleftharpoons HF + OH^-$
 
+
+---
+
 ### Find $K_b$
 
 $K_a(HF) = 6.8 \\times 10^{-4}$
 
 $$K_b(F^-) = \\frac{K_w}{K_a} = \\frac{1.0 \\times 10^{-14}}{6.8 \\times 10^{-4}} = 1.47 \\times 10^{-11}$$
+
+
+---
 
 ### ICE Table
 

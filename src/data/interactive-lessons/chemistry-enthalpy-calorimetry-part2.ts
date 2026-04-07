@@ -16,7 +16,7 @@ Enthalpy is the most commonly used thermodynamic quantity in chemistry. It tells
       id: 'eh2-enthalpy-defined',
       type: 'text' as const,
       content: `
-## What Is Enthalpy?
+## 📖 What Is Enthalpy?
 
 Enthalpy ($H$) is defined as:
 
@@ -28,6 +28,9 @@ We can never measure absolute enthalpy — only the **change** in enthalpy:
 
 $$\\Delta H = H_{\\text{products}} - H_{\\text{reactants}}$$
 
+
+---
+
 ### At Constant Pressure
 
 At constant pressure (open beaker, atmospheric conditions):
@@ -35,6 +38,9 @@ At constant pressure (open beaker, atmospheric conditions):
 $$\\Delta H = q_p$$
 
 The enthalpy change equals the heat transferred at constant pressure. This is why chemists love enthalpy — it directly corresponds to the heat you can measure!
+
+
+---
 
 ### Key Signs
 
@@ -48,9 +54,12 @@ The enthalpy change equals the heat transferred at constant pressure. This is wh
       id: 'eh2-state-function',
       type: 'text' as const,
       content: `
-## Enthalpy Is a State Function
+## 🌡️ Enthalpy Is a State Function
 
 A **state function** depends only on the current state of the system, not on how it got there.
+
+
+---
 
 ### What This Means
 
@@ -58,9 +67,15 @@ A **state function** depends only on the current state of the system, not on how
 - It does **not** depend on the pathway or mechanism
 - The same reaction will have the same $\\Delta H$ regardless of how many steps it takes
 
+
+---
+
 ### Analogy
 
 Think of altitude: if you climb a mountain, your change in altitude depends only on your starting and ending positions — not whether you took the steep trail or the winding road. Enthalpy works the same way.
+
+
+---
 
 ### Consequences
 
@@ -73,7 +88,7 @@ Think of altitude: if you climb a mountain, your change in altitude depends only
       id: 'eh2-standard-conditions',
       type: 'text' as const,
       content: `
-## Standard Enthalpy
+## 🌡️ Standard Enthalpy
 
 Standard conditions in thermochemistry use the symbol $°$:
 
@@ -83,9 +98,15 @@ Standard conditions in thermochemistry use the symbol $°$:
 | Concentration | $1$ M (for solutions) |
 | Temperature | Usually $25°\\text{C}$ ($298$ K), but must be specified |
 
+
+---
+
 ### Standard Enthalpy of Reaction ($\\Delta H°_{\\text{rxn}}$)
 
 The enthalpy change when reactants in their **standard states** are converted to products in their **standard states**.
+
+
+---
 
 ### Standard State
 
@@ -98,6 +119,9 @@ The standard state of a substance is its most stable form at $1$ atm and the spe
 | Iron | $\\text{Fe}(s)$ |
 | Bromine | $\\text{Br}_2(l)$ |
 | Mercury | $\\text{Hg}(l)$ |
+
+
+---
 
 ### Important Relationships
 

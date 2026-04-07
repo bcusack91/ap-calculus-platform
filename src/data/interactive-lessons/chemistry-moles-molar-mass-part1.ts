@@ -18,7 +18,7 @@ The answer is the **mole** — one of the most important concepts in all of chem
       id: 'mm1-what-is-mole',
       type: 'text' as const,
       content: `
-## What Is a Mole?
+## 📖 What Is a Mole?
 
 A **mole** (abbreviated **mol**) is a counting unit, just like a "dozen" means 12 items. But instead of 12, a mole is a **very** large number:
 
@@ -26,12 +26,18 @@ $$1 \\text{ mol} = 6.022 \\times 10^{23} \\text{ particles}$$
 
 This number is called **Avogadro's number** ($N_A$), named after Italian scientist Amedeo Avogadro.
 
+
+---
+
 ### Putting It in Perspective
 
 - A dozen eggs = 12 eggs
 - A gross of pencils = 144 pencils
 - A ream of paper = 500 sheets
 - **A mole of atoms = $6.022 \\times 10^{23}$ atoms**
+
+
+---
 
 ### Why Such a Specific Number?
 
@@ -49,9 +55,12 @@ Avogadro's number is defined so that **one mole of carbon-12 atoms has a mass of
       id: 'mm1-counting-by-weighing',
       type: 'text' as const,
       content: `
-## Counting by Weighing
+## 📌 Counting by Weighing
 
 It would be impossible to count individual atoms one by one. Instead, chemists **count by weighing**.
+
+
+---
 
 ### The Analogy
 
@@ -62,6 +71,9 @@ Imagine you work at a hardware store and need to sell 500 nails. You could count
 3. Simply weigh out 1.0 kg of nails!
 
 **Chemistry works the same way.** We know the mass of one mole of any element or compound, so we weigh out the right mass to get the number of particles we need.
+
+
+---
 
 ### The Core Conversion
 
@@ -74,7 +86,7 @@ $$\\text{number of particles} = \\text{moles} \\times 6.022 \\times 10^{23}$$
       id: 'mm1-conversion-examples',
       type: 'text' as const,
       content: `
-## Mole ↔ Particle Conversions
+## ⚖️ Mole ↔ Particle Conversions
 
 ### Example 1: Moles → Particles
 
@@ -84,6 +96,9 @@ $$\\text{number of particles} = \\text{moles} \\times 6.022 \\times 10^{23}$$
 
 $$\\text{atoms of Fe} = 2.50 \\; \\cancel{\\text{mol Fe}} \\times \\frac{6.022 \\times 10^{23} \\text{ atoms Fe}}{1 \\; \\cancel{\\text{mol Fe}}} = 1.506 \\times 10^{24} \\text{ atoms Fe}$$
 
+
+---
+
 ### Example 2: Particles → Moles
 
 > **Problem:** How many moles is $3.011 \\times 10^{23}$ molecules of CO₂?
@@ -91,6 +106,9 @@ $$\\text{atoms of Fe} = 2.50 \\; \\cancel{\\text{mol Fe}} \\times \\frac{6.022 \
 **Solution:**
 
 $$\\text{mol CO}_2 = 3.011 \\times 10^{23} \\; \\cancel{\\text{molecules CO}_2} \\times \\frac{1 \\text{ mol CO}_2}{6.022 \\times 10^{23} \\; \\cancel{\\text{molecules CO}_2}} = 0.500 \\text{ mol CO}_2$$
+
+
+---
 
 ### Watch Out for Polyatomic Molecules!
 

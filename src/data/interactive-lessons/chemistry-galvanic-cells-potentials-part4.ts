@@ -16,11 +16,14 @@ Cell notation (also called line notation) is a compact way to describe a galvani
       id: 'gc4-rules',
       type: 'text' as const,
       content: `
-## Cell Notation Rules
+## 📝 Cell Notation Rules
 
 ### The Format
 
 $$\\text{Anode} \\mid \\text{Anode ion} \\| \\text{Cathode ion} \\mid \\text{Cathode}$$
+
+
+---
 
 ### Conventions
 
@@ -31,6 +34,9 @@ $$\\text{Anode} \\mid \\text{Anode ion} \\| \\text{Cathode ion} \\mid \\text{Cat
 | Anode on the **left** | Oxidation half-cell |
 | Cathode on the **right** | Reduction half-cell |
 | Concentrations in parentheses | e.g., $(1.0$ M$)$ |
+
+
+---
 
 ### Example: Daniell Cell
 
@@ -50,30 +56,42 @@ $$\\text{Zn}(s) \\mid \\text{Zn}^{2+}(aq) \\| \\text{Cu}^{2+}(aq) \\mid \\text{C
       id: 'gc4-special-cases',
       type: 'text' as const,
       content: `
-## Special Cases
+## ⭐ Special Cases in Cell Notation
 
-### Inert Electrodes
+### 🔩 Inert Electrodes
 
-When a half-reaction involves only aqueous species (no solid metal), we use an **inert electrode** — typically Pt (platinum) or C (graphite):
+When a half-reaction involves only aqueous species (no solid metal), we use an **inert electrode** — typically **Pt** (platinum) or **C** (graphite):
 
-$$\\text{Pt} \\mid \\text{Fe}^{2+}(aq), \\text{Fe}^{3+}(aq) \\| \\text{Ag}^+(aq) \\mid \\text{Ag}(s)$$
+> **Example:**
+>
+> $$\\text{Pt} \\mid \\text{Fe}^{2+}(aq), \\text{Fe}^{3+}(aq) \\| \\text{Ag}^+(aq) \\mid \\text{Ag}(s)$$
+>
+> The comma separates species in the **same phase**.
 
-The comma separates species in the **same phase**.
+---
 
-### Gas Electrodes
+### 💨 Gas Electrodes
 
-For reactions involving gases:
+For reactions involving gases, the gas contacts the Pt electrode and is separated by a phase boundary:
 
-$$\\text{Pt} \\mid \\text{H}_2(g) \\mid \\text{H}^+(aq) \\| \\text{Ag}^+(aq) \\mid \\text{Ag}(s)$$
+> **Example:**
+>
+> $$\\text{Pt} \\mid \\text{H}_2(g) \\mid \\text{H}^+(aq) \\| \\text{Ag}^+(aq) \\mid \\text{Ag}(s)$$
+>
+> The $\\text{H}_2$ gas bubbles over the Pt surface.
 
-The gas contacts the Pt electrode and is separated by a phase boundary.
+---
 
-### Key Points for AP
+### 🎯 Key Points for AP
 
-- Anode is ALWAYS on the left
-- Cathode is ALWAYS on the right
-- Species are listed in the order they appear in the half-reaction
-- The double line ($\\|$) represents the salt bridge
+| Rule | Detail |
+|------|--------|
+| Anode position | **Always** on the left |
+| Cathode position | **Always** on the right |
+| Species order | Listed as they appear in the half-reaction |
+| $\\mid$ (single line) | Phase boundary |
+| $\\|$ (double line) | Salt bridge |
+| Comma | Separates species in the **same** phase |
       `
     },
     {

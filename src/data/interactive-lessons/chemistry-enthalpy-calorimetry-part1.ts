@@ -16,7 +16,7 @@ Every chemical reaction involves energy changes. Thermochemistry is the branch o
       id: 'eh1-system-surroundings',
       type: 'text' as const,
       content: `
-## System and Surroundings
+## 📌 System and Surroundings
 
 In thermochemistry, we divide the universe into two parts:
 
@@ -26,6 +26,9 @@ In thermochemistry, we divide the universe into two parts:
 | **Surroundings** | Everything else | The beaker, the water, the air, the lab |
 | **Universe** | System + Surroundings | Everything |
 
+
+---
+
 ### Energy Transfer
 
 Energy flows between the system and surroundings. The **First Law of Thermodynamics** states:
@@ -33,6 +36,9 @@ Energy flows between the system and surroundings. The **First Law of Thermodynam
 $$\\Delta E_{\\text{universe}} = \\Delta E_{\\text{system}} + \\Delta E_{\\text{surroundings}} = 0$$
 
 Energy is **conserved** — it is neither created nor destroyed, only transferred.
+
+
+---
 
 ### Sign Conventions
 
@@ -46,7 +52,7 @@ Energy is **conserved** — it is neither created nor destroyed, only transferre
       id: 'eh1-endo-exo',
       type: 'text' as const,
       content: `
-## Endothermic vs. Exothermic Processes
+## 📌 Endothermic vs. Exothermic Processes
 
 ### Exothermic ($q < 0$)
 
@@ -60,6 +66,9 @@ The system **releases** heat to the surroundings.
 **Examples:** combustion, neutralization, condensation, freezing
 
 $$\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(l) \\quad \\Delta H = -890 \\text{ kJ}$$
+
+
+---
 
 ### Endothermic ($q > 0$)
 
@@ -79,9 +88,12 @@ $$\\text{6CO}_2(g) + 6\\text{H}_2\\text{O}(l) \\rightarrow \\text{C}_6\\text{H}_
       id: 'eh1-energy-diagrams',
       type: 'text' as const,
       content: `
-## Energy Diagrams
+## 📌 Energy Diagrams
 
 Energy diagrams visually show the energy change during a reaction.
+
+
+---
 
 ### Exothermic Diagram
 
@@ -90,12 +102,18 @@ Energy diagrams visually show the energy change during a reaction.
 - $\\Delta H$ arrow points **downward** (negative)
 - The difference = energy released to surroundings
 
+
+---
+
 ### Endothermic Diagram
 
 - Reactants are at a **lower** energy level
 - Products are at a **higher** energy level
 - $\\Delta H$ arrow points **upward** (positive)
 - The difference = energy absorbed from surroundings
+
+
+---
 
 ### Key Relationship
 

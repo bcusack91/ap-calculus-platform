@@ -16,7 +16,7 @@ This final section covers AP-style problems that combine multiple concepts: writ
       id: 'ece7-summary',
       type: 'text' as const,
       content: `
-## Key Concepts Review
+## 🔄 Key Concepts Review
 
 ### The Big Picture
 
@@ -32,6 +32,9 @@ This final section covers AP-style problems that combine multiple concepts: writ
 | $Q < K$ | Shift right (forward) |
 | $Q > K$ | Shift left (reverse) |
 | $Q = K$ | At equilibrium |
+
+
+---
 
 ### Common AP Mistakes to Avoid ⚠️
 

@@ -13,7 +13,7 @@ Now that you've studied all three bond types individually, it's time to bring th
     {
       id: 'cb5-comparison-table',
       type: 'text' as const,
-      content: `## The Big Comparison Table
+      content: `## ⚖️ The Big Comparison Table
 
 | Property | Ionic | Covalent (Molecular) | Metallic |
 |----------|-------|---------------------|----------|
@@ -27,6 +27,9 @@ Now that you've studied all three bond types individually, it's time to bring th
 | **Electrical conductivity (liquid/dissolved)** | Yes | No (unless ionizes) | Yes |
 | **Solubility in water** | Often soluble | Polar dissolves in polar | Insoluble |
 | **Examples** | NaCl, MgO, CaF₂ | H₂O, CO₂, CH₄ | Fe, Cu, Al |
+
+
+---
 
 ### Key Distinctions to Remember
 
@@ -80,9 +83,12 @@ Now that you've studied all three bond types individually, it's time to bring th
     {
       id: 'cb5-predicting',
       type: 'text' as const,
-      content: `## Predicting Bond Type from Elements
+      content: `## 📂 Predicting Bond Type from Elements
 
 You can predict the most likely bond type based on the **types of elements** involved:
+
+
+---
 
 ### Decision Tree
 
@@ -98,6 +104,9 @@ You can predict the most likely bond type based on the **types of elements** inv
    - Delocalized valence electrons
    - Examples: Fe, Cu, brass (Cu + Zn alloy)
 
+
+---
+
 ### Exceptions and Special Cases
 
 | Case | Bond Type | Example |
@@ -105,6 +114,9 @@ You can predict the most likely bond type based on the **types of elements** inv
 | **Polyatomic ions** | Covalent bonds *within* the ion; ionic bonds *between* ions | $\\text{NH}_4^+$, $\\text{SO}_4^{2-}$ |
 | **Metal + metal (different)** | Metallic (alloy) | Bronze (Cu + Sn) |
 | **Metalloid compounds** | Can be ionic or covalent | Depends on partner |
+
+
+---
 
 ### The Polyatomic Ion Exception
 
@@ -158,13 +170,19 @@ For each pair of elements, predict the primary bond type.`,
     {
       id: 'cb5-network-covalent',
       type: 'text' as const,
-      content: `## Special Case: Covalent Network Solids
+      content: `## ⭐ Special Case: Covalent Network Solids
 
 Not all covalent compounds are soft with low melting points. **Covalent network solids** are an important exception:
+
+
+---
 
 ### What Are They?
 
 In a covalent network solid, atoms are connected by **continuous covalent bonds** throughout the entire structure — there are no individual molecules.
+
+
+---
 
 ### Examples
 
@@ -173,6 +191,9 @@ In a covalent network solid, atoms are connected by **continuous covalent bonds*
 | **Diamond** (C) | Each C bonded to 4 others in a 3D tetrahedral network | 3550 °C |
 | **Silicon dioxide** ($\\text{SiO}_2$) | Each Si bonded to 4 O atoms; each O bridges 2 Si atoms | 1710 °C |
 | **Silicon carbide** (SiC) | Similar to diamond structure | 2730 °C |
+
+
+---
 
 ### Properties of Network Covalent Solids
 

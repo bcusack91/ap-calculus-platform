@@ -16,7 +16,7 @@ Unlike enthalpy where we only measure **changes** ($\\Delta H$), entropy has **a
       id: 'en4v2-third-law',
       type: 'text' as const,
       content: `
-## The Third Law of Thermodynamics
+## 📏 The Third Law of Thermodynamics
 
 > A perfect crystal at absolute zero (0 K) has an entropy of exactly zero.
 
@@ -24,9 +24,15 @@ $$S_{\\text{perfect crystal at 0 K}} = 0 \\text{ J/(mol·K)}$$
 
 This gives us a **starting point** for measuring entropy — unlike enthalpy, where we can only measure differences.
 
+
+---
+
 ### Why Perfect Crystal?
 
 At 0 K, a perfect crystal has exactly **one microstate**: every atom is in its fixed position with zero thermal motion. Since $S = k \\ln 1 = 0$.
+
+
+---
 
 ### Building Up from Zero
 
@@ -45,7 +51,7 @@ We measure entropy by carefully adding heat from 0 K and tracking $\\Delta S = q
       id: 'en4v2-trends',
       type: 'text' as const,
       content: `
-## Trends in Standard Entropy
+## 📈 Trends in Standard Entropy
 
 ### What Makes $S°$ Larger?
 
@@ -55,6 +61,9 @@ We measure entropy by carefully adding heat from 0 K and tracking $\\Delta S = q
 | **Molar mass** | Light molecules | Heavy molecules | More energy levels accessible |
 | **Complexity** | Simple (e.g., Ar) | Complex (e.g., C₃H₈) | More vibrational modes |
 | **Allotrope** | Diamond | Graphite | Graphite layers slide more freely |
+
+
+---
 
 ### Example $S°$ Values (J/(mol·K) at 298 K)
 
@@ -71,11 +80,14 @@ We measure entropy by carefully adding heat from 0 K and tracking $\\Delta S = q
       id: 'en4v2-calculations',
       type: 'text' as const,
       content: `
-## Calculating $\\Delta S°_{\\text{rxn}}$
+## 🔢 Calculating $\\Delta S°_{\\text{rxn}}$
 
 For any reaction:
 
 $$\\Delta S°_{\\text{rxn}} = \\sum n \\cdot S°_{\\text{products}} - \\sum n \\cdot S°_{\\text{reactants}}$$
+
+
+---
 
 ### Example
 

@@ -16,15 +16,21 @@ This part covers two important topics: how concentration affects the degree of d
       id: 'wk5-percent-ionization',
       type: 'text' as const,
       content: `
-## Percent Ionization
+## ⚛️ Percent Ionization
 
 $$\\text{Percent ionization} = \\frac{[H^+]_{eq}}{[HA]_0} \\times 100\\%$$
+
+
+---
 
 ### Key Trend
 
 For a given weak acid, **diluting** the solution **increases** percent ionization.
 
 Why? Le Chatelier\'s principle: dilution shifts the equilibrium $HA \\rightleftharpoons H^+ + A^-$ to the **right** (toward more ions, since there are more moles of product than reactant).
+
+
+---
 
 ### Mathematical Proof
 
@@ -33,6 +39,9 @@ $$[H^+] = \\sqrt{K_a \\cdot C}$$
 $$\\text{\\% ionization} = \\frac{\\sqrt{K_a \\cdot C}}{C} \\times 100 = \\frac{\\sqrt{K_a}}{\\sqrt{C}} \\times 100$$
 
 As $C$ decreases, $\\frac{1}{\\sqrt{C}}$ increases, so percent ionization increases!
+
+
+---
 
 ### Example: 0.10 M vs 0.010 M Acetic Acid
 
@@ -47,15 +56,21 @@ As $C$ decreases, $\\frac{1}{\\sqrt{C}}$ increases, so percent ionization increa
       id: 'wk5-polyprotic',
       type: 'text' as const,
       content: `
-## Polyprotic Acids
+## 🧪 Polyprotic Acids
 
 Polyprotic acids can donate **more than one proton**. Each dissociation has its own $K_a$.
+
+
+---
 
 ### Diprotic Acid Example: $H_2SO_3$
 
 $$H_2SO_3 \\rightleftharpoons H^+ + HSO_3^- \\qquad K_{a1} = 1.5 \\times 10^{-2}$$
 
 $$HSO_3^- \\rightleftharpoons H^+ + SO_3^{2-} \\qquad K_{a2} = 6.3 \\times 10^{-8}$$
+
+
+---
 
 ### Triprotic Acid Example: $H_3PO_4$
 
@@ -65,11 +80,17 @@ $$H_2PO_4^- \\rightleftharpoons H^+ + HPO_4^{2-} \\qquad K_{a2} = 6.2 \\times 10
 
 $$HPO_4^{2-} \\rightleftharpoons H^+ + PO_4^{3-} \\qquad K_{a3} = 4.8 \\times 10^{-13}$$
 
+
+---
+
 ### Critical Rule
 
 $$K_{a1} \\gg K_{a2} \\gg K_{a3}$$
 
 Each successive dissociation is **much weaker** because it\'s harder to remove $H^+$ from an increasingly negative ion.
+
+
+---
 
 ### Practical Consequence
 

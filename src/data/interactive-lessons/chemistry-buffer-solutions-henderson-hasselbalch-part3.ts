@@ -16,7 +16,7 @@ The Henderson-Hasselbalch equation is the most important formula for buffer calc
       id: 'bf3-derivation',
       type: 'text' as const,
       content: `
-## Derivation
+## 📌 Derivation
 
 Starting from the $K_a$ expression:
 
@@ -34,6 +34,9 @@ $$pH = pK_a + \\log\\frac{[A^-]}{[HA]}$$
 
 $$\\boxed{pH = pK_a + \\log\\frac{[A^-]}{[HA]}}$$
 
+
+---
+
 ### Key Features
 
 - When $[A^-] = [HA]$: $pH = pK_a + \\log(1) = pK_a$
@@ -46,7 +49,7 @@ $$\\boxed{pH = pK_a + \\log\\frac{[A^-]}{[HA]}}$$
       id: 'bf3-using-equation',
       type: 'text' as const,
       content: `
-## Using the Henderson-Hasselbalch Equation
+## 📌 Using the Henderson-Hasselbalch Equation
 
 ### Example 1: Find pH
 
@@ -55,6 +58,9 @@ $$\\boxed{pH = pK_a + \\log\\frac{[A^-]}{[HA]}}$$
 **Solution:**
 
 $$pH = 4.74 + \\log\\frac{0.50}{0.30} = 4.74 + \\log(1.67) = 4.74 + 0.22 = 4.96$$
+
+
+---
 
 ### Example 2: Find Ratio
 
@@ -69,6 +75,9 @@ $$\\log\\frac{[A^-]}{[HA]} = 0.26$$
 $$\\frac{[A^-]}{[HA]} = 10^{0.26} = 1.82$$
 
 So you need about 1.8 times more conjugate base than acid.
+
+
+---
 
 ### Example 3: Equal Concentrations
 
@@ -148,7 +157,7 @@ This is a critically important result: **the pH of a buffer with equal concentra
       id: 'bf3-for-bases',
       type: 'text' as const,
       content: `
-## Henderson-Hasselbalch for Basic Buffers
+## 🛡️ Henderson-Hasselbalch for Basic Buffers
 
 For a buffer made from a weak base ($NH_3$) and its conjugate acid ($NH_4^+$):
 

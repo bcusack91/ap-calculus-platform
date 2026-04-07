@@ -16,11 +16,14 @@ Before we calculate $\\Delta S$ numerically, we need to develop the ability to *
       id: 'en2-phase-changes',
       type: 'text' as const,
       content: `
-## Entropy and Phase
+## 🌡️ Entropy and Phase
 
 Entropy increases dramatically as matter moves from solid to liquid to gas:
 
 $$S_{\\text{solid}} < S_{\\text{liquid}} \\ll S_{\\text{gas}}$$
+
+
+---
 
 ### Why?
 
@@ -31,6 +34,9 @@ $$S_{\\text{solid}} < S_{\\text{liquid}} \\ll S_{\\text{gas}}$$
 | Gas | Far apart, random motion | Highest |
 
 The jump from liquid → gas is much larger than solid → liquid because gas molecules have vastly more accessible positions and velocities.
+
+
+---
 
 ### Phase Change Entropy
 
@@ -47,7 +53,7 @@ The jump from liquid → gas is much larger than solid → liquid because gas mo
       id: 'en2-predicting-rules',
       type: 'text' as const,
       content: `
-## Rules for Predicting $\\Delta S$ of Reactions
+## 📏 Rules for Predicting $\\Delta S$ of Reactions
 
 ### Rule 1: Count Moles of Gas
 
@@ -59,19 +65,31 @@ $$\\Delta n_{\\text{gas}} = \\text{mol gas (products)} - \\text{mol gas (reactan
 - If $\\Delta n_{\\text{gas}} < 0$: $\\Delta S < 0$ (entropy decreases)
 - If $\\Delta n_{\\text{gas}} = 0$: need other information
 
+
+---
+
 ### Rule 2: Dissolving Usually Increases Entropy
 
 When a solid dissolves in a solvent, entropy typically increases (solid → ions or molecules in solution).
 
 **Exception:** Some ions become so heavily hydrated that they actually decrease the entropy of water molecules around them.
 
+
+---
+
 ### Rule 3: More Molecules = More Entropy
 
 A reaction that produces more total molecules than it consumes generally has $\\Delta S > 0$.
 
+
+---
+
 ### Rule 4: Temperature Increases Entropy
 
 Higher temperature means more kinetic energy and more accessible microstates.
+
+
+---
 
 ### Rule 5: Molecular Complexity
 
@@ -82,7 +100,7 @@ More complex molecules (more atoms, more bonds, more ways to vibrate) have highe
       id: 'en2-examples',
       type: 'text' as const,
       content: `
-## Practice Examples
+## 🧪 Practice Examples
 
 | Reaction | $\\Delta n_{\\text{gas}}$ | Prediction |
 |----------|----------------------|------------|
@@ -90,6 +108,9 @@ More complex molecules (more atoms, more bonds, more ways to vibrate) have highe
 | $\\text{CaCO}_3(s) \\rightarrow \\text{CaO}(s) + \\text{CO}_2(g)$ | $1 - 0 = +1$ | $\\Delta S > 0$ |
 | $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g)$ | $2 - 4 = -2$ | $\\Delta S < 0$ |
 | $2\\text{KClO}_3(s) \\rightarrow 2\\text{KCl}(s) + 3\\text{O}_2(g)$ | $3 - 0 = +3$ | $\\Delta S > 0$ |
+
+
+---
 
 ### Key Insight for AP
 

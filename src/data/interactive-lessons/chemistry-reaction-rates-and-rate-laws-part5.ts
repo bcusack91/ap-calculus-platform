@@ -16,7 +16,7 @@ The rate constant $k$ has different units depending on the **overall order** of 
       id: 'rr5-deriving-units',
       type: 'text' as const,
       content: `
-## Deriving Units of k
+## 📌 Deriving Units of k
 
 Start from the general rate law:
 
@@ -30,6 +30,9 @@ $$k = \\frac{\\text{Rate}}{[A]^m[B]^n}$$
 
 $$\\text{Units of } k = \\frac{\\text{M/s}}{\\text{M}^{m+n}} = \\text{M}^{1-(m+n)} \\cdot \\text{s}^{-1}$$
 
+
+---
+
 ### Summary Table
 
 | Overall Order | Units of $k$ | Example |
@@ -38,6 +41,9 @@ $$\\text{Units of } k = \\frac{\\text{M/s}}{\\text{M}^{m+n}} = \\text{M}^{1-(m+n
 | 1 | s⁻¹ | $k = \\frac{\\text{M/s}}{\\text{M}^1} = \\text{s}^{-1}$ |
 | 2 | M⁻¹·s⁻¹ | $k = \\frac{\\text{M/s}}{\\text{M}^2} = \\text{M}^{-1}\\text{s}^{-1}$ |
 | 3 | M⁻²·s⁻¹ | $k = \\frac{\\text{M/s}}{\\text{M}^3} = \\text{M}^{-2}\\text{s}^{-1}$ |
+
+
+---
 
 ### The Pattern
 
@@ -94,7 +100,7 @@ where $n$ = overall order. As order increases by 1, the power of M decreases by 
       id: 'rr5-zero-order-detail',
       type: 'text' as const,
       content: `
-## Zero-Order Reactions
+## ⚗️ Zero-Order Reactions
 
 $$\\text{Rate} = k$$
 
@@ -102,12 +108,18 @@ $$\\text{Rate} = k$$
 - Units of $k$: **M/s**
 - Half-life: $t_{1/2} = \\frac{[A]_0}{2k}$ (depends on initial concentration)
 
+
+---
+
 ### When Do Zero-Order Reactions Occur?
 
 Zero-order kinetics often occur when:
 - A **catalyst or enzyme is saturated** — every active site is occupied
 - A reaction occurs on a **surface** that is fully covered
 - **Photochemical** reactions where rate depends on light intensity, not concentration
+
+
+---
 
 ### Example
 
@@ -118,7 +130,7 @@ Decomposition of NH₃ on a hot tungsten surface: Rate = k. The tungsten surface
       id: 'rr5-first-second-order',
       type: 'text' as const,
       content: `
-## First-Order and Second-Order Reactions
+## ⚗️ First-Order and Second-Order Reactions
 
 ### First-Order ($n = 1$)
 
@@ -128,6 +140,9 @@ $$\\text{Rate} = k[A]$$
 - Half-life: $t_{1/2} = \\frac{0.693}{k}$ (independent of concentration!)
 - Examples: Radioactive decay, many decomposition reactions
 
+
+---
+
 ### Second-Order ($n = 2$)
 
 $$\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]$$
@@ -135,6 +150,9 @@ $$\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]$$
 - Units of $k$: **M⁻¹s⁻¹** (for both cases)
 - Half-life: $t_{1/2} = \\frac{1}{k[A]_0}$ (depends on concentration)
 - Example: $2\\text{NO}_2 \\rightarrow 2\\text{NO} + \\text{O}_2$
+
+
+---
 
 ### Comparing Half-Lives
 

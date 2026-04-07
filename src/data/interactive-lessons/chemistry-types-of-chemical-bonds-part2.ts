@@ -13,13 +13,19 @@ While ionic bonds involve the **transfer** of electrons, **covalent bonds** form
     {
       id: 'cb2-sharing',
       type: 'text' as const,
-      content: `## Covalent Bond Formation: Electron Sharing
+      content: `## 🔋 Covalent Bond Formation: Electron Sharing
 
 A **covalent bond** forms when two nonmetal atoms share one or more pairs of valence electrons so that each atom achieves a more stable electron configuration.
+
+
+---
 
 ### Why Share?
 
 Nonmetals have **high ionization energies** — it's too costly to remove electrons completely. Instead, atoms achieve stability by sharing electrons so that each atom has access to a full valence shell (usually an octet, or a duet for hydrogen).
+
+
+---
 
 ### Example: $\\text{H}_2$
 
@@ -28,6 +34,9 @@ Each hydrogen atom has 1 electron and needs 2 (a duet). By sharing their electro
 $$\\text{H}\\cdot + \\cdot\\text{H} \\rightarrow \\text{H—H}$$
 
 The shared pair of electrons is attracted to **both** nuclei simultaneously. This mutual attraction is what holds the molecule together.
+
+
+---
 
 ### The Bonding Pair
 
@@ -69,7 +78,7 @@ The shared pair of electrons is attracted to **both** nuclei simultaneously. Thi
     {
       id: 'cb2-bond-types',
       type: 'text' as const,
-      content: `## Single, Double, and Triple Bonds
+      content: `## 🔗 Single, Double, and Triple Bonds
 
 Atoms can share more than one pair of electrons:
 
@@ -78,6 +87,9 @@ Atoms can share more than one pair of electrons:
 | **Single bond** | 1 | 2 | $\\text{H—H}$, $\\text{C—H}$ |
 | **Double bond** | 2 | 4 | $\\text{O=O}$, $\\text{C=O}$ |
 | **Triple bond** | 3 | 6 | $\\text{N≡N}$, $\\text{C≡O}$ |
+
+
+---
 
 ### Examples
 
@@ -88,6 +100,9 @@ $$\\text{O=O}$$
 **Nitrogen ($\\text{N}_2$):** Each nitrogen has 5 valence electrons and needs 3 more. They share 3 pairs → **triple bond**.
 
 $$\\text{N≡N}$$
+
+
+---
 
 ### Key Pattern
 
@@ -137,7 +152,7 @@ The number of bonds an atom typically forms = **8 minus the number of valence el
     {
       id: 'cb2-energy-length',
       type: 'text' as const,
-      content: `## Bond Energy and Bond Length
+      content: `## 🔗 Bond Energy and Bond Length
 
 ### Bond Energy (Bond Dissociation Energy)
 
@@ -147,9 +162,15 @@ $$\\text{A—B}(g) \\rightarrow \\text{A}(g) + \\text{B}(g) \\quad \\Delta H = \
 
 Breaking bonds always requires energy (endothermic). Forming bonds always releases energy (exothermic).
 
+
+---
+
 ### Bond Length
 
 **Bond length** is the distance between the nuclei of two bonded atoms, measured at the point of minimum potential energy.
+
+
+---
 
 ### Trends: Single vs. Double vs. Triple
 
@@ -159,11 +180,17 @@ Breaking bonds always requires energy (endothermic). Forming bonds always releas
 | **Bond length** | Longest | Medium | Shortest |
 | **Bond strength** | Weakest | Medium | Strongest |
 
+
+---
+
 ### Why?
 
 More shared electron pairs means:
 - **More electron density** between the nuclei → **stronger** attraction → higher bond energy
 - Nuclei pulled **closer** together → shorter bond length
+
+
+---
 
 ### Typical C–C Bond Data
 

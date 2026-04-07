@@ -16,7 +16,7 @@ This final part integrates everything: energy flow, calorimetry, Hess\'s Law, an
       id: 'eh7-summary',
       type: 'text' as const,
       content: `
-## Complete Concept Map
+## 📌 Complete Concept Map
 
 ### Energy and Heat
 
@@ -27,6 +27,9 @@ This final part integrates everything: energy flow, calorimetry, Hess\'s Law, an
 | Bomb calorimeter | $q_v = \\Delta E$ | Constant volume |
 | Calorimeter heat | $q_{\\text{cal}} = C_{\\text{cal}}\\Delta T$ | Total heat capacity |
 
+
+---
+
 ### Enthalpy
 
 | Concept | Key Relationship | Notes |
@@ -35,6 +38,9 @@ This final part integrates everything: energy flow, calorimetry, Hess\'s Law, an
 | Endothermic | $\\Delta H > 0$ | System absorbs heat |
 | Reverse reaction | $\\Delta H_{\\text{rev}} = -\\Delta H_{\\text{fwd}}$ | Sign change |
 | Scaled reaction | $\\Delta H_{\\text{new}} = n \\cdot \\Delta H$ | Linear scaling |
+
+
+---
 
 ### Hess's Law & Formation
 
@@ -48,7 +54,7 @@ This final part integrates everything: energy flow, calorimetry, Hess\'s Law, an
       id: 'eh7-ap-strategies',
       type: 'text' as const,
       content: `
-## AP Exam Strategies
+## 🎯 AP Exam Strategies
 
 ### Common AP Question Types
 
@@ -56,6 +62,9 @@ This final part integrates everything: energy flow, calorimetry, Hess\'s Law, an
 2. **Hess\'s Law** — manipulate 2-3 reactions to find ΔH for a target reaction
 3. **Formation enthalpy** — use the master equation with a table of $\\Delta H°_f$ values
 4. **Conceptual** — identify exo/endothermic, explain sign conventions, predict temperature changes
+
+
+---
 
 ### Common Mistakes to Avoid
 

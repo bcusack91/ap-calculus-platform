@@ -16,7 +16,7 @@ Let\'s put everything together with multi-step problems that mirror the AP Chemi
       id: 'ab6-problem1',
       type: 'text' as const,
       content: `
-## Problem 1: Identifying Acid-Base Behavior
+## 🧪 Problem 1: Identifying Acid-Base Behavior
 
 Consider these reactions:
 
@@ -69,7 +69,7 @@ For each reaction, the acid-base theory required is:
       id: 'ab6-problem2',
       type: 'text' as const,
       content: `
-## Problem 2: Multi-Step pH Calculation
+## 🔢 Problem 2: Multi-Step pH Calculation
 
 A chemist prepares the following solutions:
 
@@ -77,13 +77,22 @@ A chemist prepares the following solutions:
 - **Solution B:** 0.035 M $NaOH$
 - **Solution C:** 50.0 mL of Solution A mixed with 30.0 mL of Solution B
 
+
+---
+
 ### Solution A pH
 
 $[H^+] = 0.035$ M → $pH = -\\log(0.035) = 1.46$
 
+
+---
+
 ### Solution B pH
 
 $[OH^-] = 0.035$ M → $pOH = -\\log(0.035) = 1.46$ → $pH = 14 - 1.46 = 12.54$
+
+
+---
 
 ### Solution C pH
 
@@ -125,7 +134,7 @@ A student mixes 25.0 mL of 0.080 M $HNO_3$ with 15.0 mL of 0.080 M $KOH$.
       id: 'ab6-problem3',
       type: 'text' as const,
       content: `
-## Problem 3: Conceptual Reasoning
+## 📌 Problem 3: Conceptual Reasoning
 
 ### The pH of Very Dilute Strong Acids
 

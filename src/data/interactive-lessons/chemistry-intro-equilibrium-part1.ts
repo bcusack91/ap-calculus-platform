@@ -16,7 +16,7 @@ Chemical reactions don\'t always go to completion. Many reactions are **reversib
       id: 'ie1-reversible-reactions',
       type: 'text' as const,
       content: `
-## Reversible Reactions
+## ⚗️ Reversible Reactions
 
 Consider the reaction:
 
@@ -26,6 +26,9 @@ $$\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$$
 - The **reverse reaction**: NO₂ molecules recombine to form N₂O₄
 
 Initially, only the forward reaction occurs. As products build up, the reverse reaction begins and accelerates. Eventually, both reactions proceed at the **same rate**.
+
+
+---
 
 ### What "Dynamic" Means
 
@@ -41,7 +44,7 @@ This is why we call it **dynamic** equilibrium.
       id: 'ie1-rate-graph',
       type: 'text' as const,
       content: `
-## Rates Over Time
+## ⏱️ Rates Over Time
 
 ### Before Equilibrium
 
@@ -51,12 +54,18 @@ This is why we call it **dynamic** equilibrium.
 | Early | Decreasing | Increasing | Products still forming |
 | Approaching eq. | Converging | Converging | Slowing net change |
 
+
+---
+
 ### At Equilibrium
 
 $$\\text{Rate}_{\\text{forward}} = \\text{Rate}_{\\text{reverse}}$$
 
 - Concentrations of reactants and products remain **constant** (not necessarily equal!)
 - The ratio $[\\text{products}]/[\\text{reactants}]$ stays fixed at a given temperature
+
+
+---
 
 ### Key Misconception
 
@@ -116,21 +125,36 @@ It means the rates are balanced so there is no **net** change.
       id: 'ie1-characteristics',
       type: 'text' as const,
       content: `
-## Conditions for Equilibrium
+## ⚖️ Conditions for Equilibrium
 
 For a system to reach equilibrium, several conditions must be met:
+
+
+---
 
 ### 1. Closed System
 The system must be **closed** — no matter can enter or leave. (Energy transfer is allowed.)
 
+
+---
+
 ### 2. Reversible Reaction
 The reaction must be able to proceed in both directions.
+
+
+---
 
 ### 3. Constant Temperature
 Temperature must remain constant. (Changing temperature shifts the equilibrium position.)
 
+
+---
+
 ### 4. Sufficient Time
 The system needs time to reach equilibrium. Some reactions reach it in milliseconds; others take days.
+
+
+---
 
 ### Recognizing Equilibrium
 

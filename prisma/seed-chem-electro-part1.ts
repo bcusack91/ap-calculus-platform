@@ -114,7 +114,7 @@ Zn(s) | Zn²⁺(aq, 1 M) || Cu²⁺(aq, 1 M) | Cu(s)
 
 **Measured relative to standard hydrogen electrode (SHE):**
 
-$$\\ce{2H^+(aq) + 2e^- -> H2(g)} \\quad E° = 0.00 \\text{ V}$$
+$$\\text{2H}^+(aq) + 2e^- \\rightarrow \\text{H}_2(g) \\quad E° = 0.00 \\text{ V}$$
 
 **All potentials compared to this reference**
 
@@ -160,7 +160,7 @@ $$E°_{\\text{cell}} = E°_{\\text{red}} - E°_{\\text{ox}}$$
 
 **From cell potential:**
 
-| E°_cell | ΔG° | Spontaneous? |
+| $E°_{\\text{cell}}$ | $\\Delta G°$ | Spontaneous? |
 |---------|-----|--------------|
 | **Positive** | Negative | Yes (galvanic) |
 | **Zero** | Zero | At equilibrium |
@@ -179,7 +179,7 @@ $$\\Delta G° = -nFE°_{\\text{cell}}$$
 
 **Overall reaction:**
 
-$$\\ce{Zn(s) + Cu^{2+}(aq) -> Zn^{2+}(aq) + Cu(s)}$$
+$$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$$
 
 **Half-reactions:**
 

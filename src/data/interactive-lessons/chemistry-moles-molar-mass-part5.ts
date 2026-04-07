@@ -16,12 +16,15 @@ In Part 4, we learned how to find the **empirical formula** — the simplest who
       id: 'mm5-definitions',
       type: 'text' as const,
       content: `
-## Empirical vs. Molecular Formulas
+## ⚖️ Empirical vs. Molecular Formulas
 
 | Formula Type | Definition | Example (for glucose) |
 |-------------|-----------|----------------------|
 | **Empirical** | Simplest whole-number ratio of atoms | CH₂O |
 | **Molecular** | Actual number of atoms per molecule | C₆H₁₂O₆ |
+
+
+---
 
 ### Key Relationship
 
@@ -32,6 +35,9 @@ where:
 $$n = \\frac{M_{\\text{molecular}}}{M_{\\text{empirical}}}$$
 
 $n$ must be a **positive integer** (1, 2, 3, ...).
+
+
+---
 
 ### Examples of Empirical ↔ Molecular
 
@@ -47,7 +53,7 @@ $n$ must be a **positive integer** (1, 2, 3, ...).
       id: 'mm5-step-by-step',
       type: 'text' as const,
       content: `
-## Step-by-Step Method
+## 📋 Step-by-Step Method
 
 ### Finding the Empirical Formula from Experimental Data
 
@@ -56,11 +62,17 @@ $n$ must be a **positive integer** (1, 2, 3, ...).
 3. Divide all by the smallest mole value
 4. If needed, multiply to get whole numbers
 
+
+---
+
 ### Finding the Molecular Formula
 
 5. Calculate the molar mass of the empirical formula ($M_{\\text{emp}}$)
 6. Divide the given molecular molar mass by $M_{\\text{emp}}$: $n = M_{\\text{mol}} / M_{\\text{emp}}$
 7. Multiply all subscripts in the empirical formula by $n$
+
+
+---
 
 ### Worked Example
 

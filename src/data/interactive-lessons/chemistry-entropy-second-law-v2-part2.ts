@@ -16,7 +16,7 @@ In Part 1 you learned that entropy measures the number of microstates. Now we'll
       id: 'en2v2-counting',
       type: 'text' as const,
       content: `
-## Counting Microstates for Molecules
+## ⚖️ Counting Microstates for Molecules
 
 ### Positional Microstates
 
@@ -35,6 +35,9 @@ Consider 2 gas molecules (A and B) in a container divided into 2 equal halves:
 
 The "spread out" state is **twice as likely** as either concentrated state.
 
+
+---
+
 ### For N molecules in 2 halves
 
 $$W_{\\text{total}} = 2^N$$
@@ -50,9 +53,12 @@ For $N = 100$: $P = \\frac{1}{2^{100}} \\approx 10^{-30}$ — essentially imposs
       id: 'en2v2-energy-microstates',
       type: 'text' as const,
       content: `
-## Energy Microstates
+## 📌 Energy Microstates
 
 Molecules don't just have positions — they also have **energy**. The ways to distribute energy quanta among molecules are additional microstates.
+
+
+---
 
 ### Example: 3 Quanta Among 3 Molecules
 
@@ -63,6 +69,9 @@ Molecules don't just have positions — they also have **energy**. The ways to d
 | (1, 1, 1) | 1 | Evenly distributed |
 
 **Total: 10 microstates.** The partially shared distribution (2,1,0) is the most probable.
+
+
+---
 
 ### Temperature Connection
 

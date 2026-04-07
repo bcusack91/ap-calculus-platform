@@ -11,7 +11,7 @@ Electron configurations tell us **which** subshells are occupied. Orbital diagra
     {
       id: 'ec6-orbital-diagrams',
       type: 'text' as const,
-      content: `## Orbital Diagrams (Box-Arrow Notation)
+      content: `## 📝 Orbital Diagrams (Box-Arrow Notation)
 
 An orbital diagram represents each orbital as a **box** (or line) and each electron as an **arrow**:
 - ↑ represents spin-up (\\(m_s = +\\frac{1}{2}\\))
@@ -53,24 +53,36 @@ How many unpaired electrons does nitrogen (N, Z = 7) have?`,
     {
       id: 'ec6-quantum-numbers',
       type: 'text' as const,
-      content: `## The Four Quantum Numbers
+      content: `## 📌 The Four Quantum Numbers
 
 Every electron in an atom is described by a unique set of four quantum numbers — like a full mailing address.
+
+
+---
 
 ### 1. Principal Quantum Number (n)
 - **Allowed values:** 1, 2, 3, 4, ...
 - Describes the **main energy level** (shell)
 - Higher n = higher energy, larger orbital
 
+
+---
+
 ### 2. Angular Momentum (Azimuthal) Quantum Number (l)
 - **Allowed values:** 0 to (n − 1)
 - Describes the **subshell shape**
 - l = 0 → s, l = 1 → p, l = 2 → d, l = 3 → f
 
+
+---
+
 ### 3. Magnetic Quantum Number (\\(m_l\\))
 - **Allowed values:** −l to +l (including 0)
 - Describes the **orientation** of the orbital in space
 - For p orbitals (l = 1): \\(m_l\\) = −1, 0, +1 → three orientations
+
+
+---
 
 ### 4. Spin Quantum Number (\\(m_s\\))
 - **Allowed values:** \\(+\\frac{1}{2}\\) or \\(-\\frac{1}{2}\\)
@@ -80,7 +92,7 @@ Every electron in an atom is described by a unique set of four quantum numbers �
     {
       id: 'ec6-quantum-table',
       type: 'text' as const,
-      content: `## Allowed Values Summary
+      content: `## 📋 Allowed Values Summary
 
 | Subshell | n (example) | l | \\(m_l\\) values | # orbitals | Max e⁻ |
 |----------|-------------|---|----------------|------------|--------|
@@ -144,7 +156,7 @@ Use the relationships between quantum numbers to answer.`,
     {
       id: 'ec6-summary',
       type: 'text' as const,
-      content: `## Key Takeaways
+      content: `## 📌 Key Takeaways
 
 1. **Orbital diagrams** show each orbital as a box with arrows for electrons; Hund's rule requires filling singly before pairing.
 2. **Four quantum numbers** (n, l, \\(m_l\\), \\(m_s\\)) uniquely identify every electron.

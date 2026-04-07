@@ -16,7 +16,7 @@ Oxidation-reduction (redox) reactions involve the **transfer of electrons** betw
       id: 'or1-rules',
       type: 'text' as const,
       content: `
-## Rules for Assigning Oxidation States
+## 📏 Rules for Assigning Oxidation States
 
 Apply these rules **in order of priority** (Rule 1 overrides Rule 2, etc.):
 
@@ -33,6 +33,9 @@ Apply these rules **in order of priority** (Rule 1 overrides Rule 2, etc.):
 | 6 | Sum of oxidation states = **charge of species** | Neutral compound: sum = 0 |
 | | | Ion: sum = ion charge |
 
+
+---
+
 ### Rule 6 Is Your Calculation Tool
 
 For any compound or polyatomic ion:
@@ -44,7 +47,7 @@ $$\\sum \\text{(oxidation states)} = \\text{overall charge}$$
       id: 'or1-examples',
       type: 'text' as const,
       content: `
-## Worked Examples
+## 🧪 Worked Examples
 
 ### Example 1: H₂SO₄
 
@@ -53,12 +56,18 @@ $$\\sum \\text{(oxidation states)} = \\text{overall charge}$$
 - $+2 + S - 8 = 0$
 - $S = +6$
 
+
+---
+
 ### Example 2: MnO₄⁻ (permanganate ion)
 
 - O = −2 (Rule 4)
 - $\\text{Mn} + 4(-2) = -1$ (charge of ion)
 - $\\text{Mn} - 8 = -1$
 - $\\text{Mn} = +7$
+
+
+---
 
 ### Example 3: Cr₂O₇²⁻ (dichromate ion)
 
@@ -67,6 +76,9 @@ $$\\sum \\text{(oxidation states)} = \\text{overall charge}$$
 - $2\\text{Cr} - 14 = -2$
 - $2\\text{Cr} = +12$
 - $\\text{Cr} = +6$
+
+
+---
 
 ### Example 4: Na₂O₂ (sodium peroxide)
 

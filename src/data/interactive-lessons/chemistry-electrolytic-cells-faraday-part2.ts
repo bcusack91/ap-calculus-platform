@@ -16,7 +16,7 @@ Understanding the similarities and differences between galvanic and electrolytic
       id: 'ef2-comparison-table',
       type: 'text' as const,
       content: `
-## Complete Comparison
+## ⚖️ Complete Comparison
 
 | Feature | Galvanic Cell | Electrolytic Cell |
 |---------|:------------:|:-----------------:|
@@ -30,12 +30,18 @@ Understanding the similarities and differences between galvanic and electrolytic
 | **Salt bridge** | Usually present | Often not needed |
 | **Example** | Battery, fuel cell | Electroplating, electrolysis |
 
+
+---
+
 ### What STAYS THE SAME
 
 - **Oxidation at the anode** (AN OX)
 - **Reduction at the cathode** (RED CAT)
 - **Electrons flow from anode to cathode**
 - **Cations migrate toward cathode, anions toward anode**
+
+
+---
 
 ### What CHANGES
 
@@ -48,9 +54,12 @@ Understanding the similarities and differences between galvanic and electrolytic
       id: 'ef2-charging-battery',
       type: 'text' as const,
       content: `
-## Recharging: Galvanic → Electrolytic
+## 🔋 Recharging: Galvanic → Electrolytic
 
 When you recharge a battery, you convert it from a galvanic cell to an electrolytic cell:
+
+
+---
 
 ### Discharging (Galvanic Mode)
 
@@ -59,6 +68,9 @@ $$\\text{Pb}(s) + \\text{PbO}_2(s) + 2\\text{H}_2\\text{SO}_4(aq) \\rightarrow 2
 - Spontaneous: $E > 0$
 - Produces electrical energy
 
+
+---
+
 ### Charging (Electrolytic Mode)
 
 $$2\\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Pb}(s) + \\text{PbO}_2(s) + 2\\text{H}_2\\text{SO}_4(aq)$$
@@ -66,6 +78,9 @@ $$2\\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Pb}(s) + \\t
 - Non-spontaneous: $E < 0$
 - Consumes electrical energy (from the charger)
 - The reaction is driven in reverse
+
+
+---
 
 ### Key Point
 

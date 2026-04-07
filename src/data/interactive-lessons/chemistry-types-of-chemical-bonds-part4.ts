@@ -13,9 +13,12 @@ Not all covalent bonds are created equal. When two atoms share electrons, the sh
     {
       id: 'cb4-electronegativity',
       type: 'text' as const,
-      content: `## Electronegativity
+      content: `## 🔋 Electronegativity
 
 **Electronegativity** ($\\chi$) is a measure of an atom's ability to attract shared electrons toward itself in a covalent bond.
+
+
+---
 
 ### The Pauling Scale
 
@@ -31,6 +34,9 @@ Linus Pauling developed the most widely used electronegativity scale:
 | H | 2.1 |
 | Na | 0.9 |
 | Cs | 0.7 (lowest) |
+
+
+---
 
 ### Periodic Trends
 
@@ -75,7 +81,7 @@ Linus Pauling developed the most widely used electronegativity scale:
     {
       id: 'cb4-en-difference',
       type: 'text' as const,
-      content: `## Electronegativity Difference and Bond Type
+      content: `## 📂 Electronegativity Difference and Bond Type
 
 The **electronegativity difference** ($\\Delta\\chi$) between two bonded atoms determines the bond type:
 
@@ -90,6 +96,9 @@ $$\\Delta\\chi = |\\chi_A - \\chi_B|$$
 
 > ⚠️ **AP Note:** These boundaries are approximate guidelines, not rigid cutoffs. The transition from polar covalent to ionic is a **continuum**, not a sharp divide. On the AP exam, focus on the concept of a spectrum rather than memorizing exact numbers.
 
+
+---
+
 ### Examples
 
 | Bond | $\\Delta\\chi$ | Type |
@@ -102,9 +111,12 @@ $$\\Delta\\chi = |\\chi_A - \\chi_B|$$
     {
       id: 'cb4-polar-bonds',
       type: 'text' as const,
-      content: `## Polar Covalent Bonds in Detail
+      content: `## 🔗 Polar Covalent Bonds in Detail
 
 In a **polar covalent bond**, electrons are shared **unequally**. The more electronegative atom pulls the shared electrons closer to itself.
+
+
+---
 
 ### Partial Charges
 
@@ -113,11 +125,17 @@ This unequal sharing creates **partial charges** (denoted $\\delta$):
 - The more electronegative atom gains a partial negative charge: $\\delta^-$
 - The less electronegative atom gains a partial positive charge: $\\delta^+$
 
+
+---
+
 ### Example: HCl
 
 $$\\overset{\\delta^+}{\\text{H}} — \\overset{\\delta^-}{\\text{Cl}}$$
 
 Chlorine ($\\chi = 3.0$) is more electronegative than hydrogen ($\\chi = 2.1$), so the shared electrons spend more time near Cl, giving it a $\\delta^-$ charge.
+
+
+---
 
 ### Dipole Moment
 
@@ -167,11 +185,14 @@ Use electronegativity differences to classify each bond.`,
     {
       id: 'cb4-continuum',
       type: 'text' as const,
-      content: `## The Bonding Continuum
+      content: `## 🔗 The Bonding Continuum
 
 Bond types are not distinct categories — they form a **continuum**:
 
 $$\\text{Nonpolar Covalent} \\longleftrightarrow \\text{Polar Covalent} \\longleftrightarrow \\text{Ionic}$$
+
+
+---
 
 ### Percent Ionic Character
 
@@ -180,9 +201,15 @@ Every bond (except between identical atoms) has some degree of ionic character. 
 - The electron distribution becomes more asymmetric
 - Eventually, the bond is essentially ionic (electrons effectively transferred)
 
+
+---
+
 ### Important AP Concept
 
 Even bonds classified as "ionic" have some covalent character, and vice versa. The AP exam often tests whether students understand that **bonding is a spectrum**, not a set of discrete categories.
+
+
+---
 
 ### Quick Rule of Thumb
 

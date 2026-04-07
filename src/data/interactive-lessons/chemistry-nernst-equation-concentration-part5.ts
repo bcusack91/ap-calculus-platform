@@ -16,9 +16,12 @@ Batteries are galvanic cells engineered for practical use. Understanding the che
       id: 'ne5-primary',
       type: 'text' as const,
       content: `
-## Primary Batteries (Non-Rechargeable)
+## 📌 Primary Batteries (Non-Rechargeable)
 
 Primary batteries involve **irreversible** reactions — once the reactants are consumed, the battery is dead.
+
+
+---
 
 ### Alkaline Battery (Zinc-Manganese Dioxide)
 
@@ -32,6 +35,9 @@ Primary batteries involve **irreversible** reactions — once the reactants are 
 - Uses alkaline (KOH) electrolyte
 - Cannot be recharged (structural changes are irreversible)
 
+
+---
+
 ### Zinc-Air Battery
 
 - Uses oxygen from air as the cathode reactant
@@ -43,9 +49,12 @@ Primary batteries involve **irreversible** reactions — once the reactants are 
       id: 'ne5-secondary',
       type: 'text' as const,
       content: `
-## Secondary Batteries (Rechargeable)
+## 📌 Secondary Batteries (Rechargeable)
 
 Secondary batteries involve **reversible** reactions — applying external voltage reverses the cell chemistry.
+
+
+---
 
 ### Lead-Acid Battery (Car Battery)
 
@@ -55,6 +64,9 @@ Secondary batteries involve **reversible** reactions — applying external volta
 
 **$E \\approx 2.0$ V per cell** (6 cells in series → 12 V car battery)
 
+
+---
+
 ### Lithium-Ion Battery (Li-ion)
 
 - Used in phones, laptops, electric vehicles
@@ -62,6 +74,9 @@ Secondary batteries involve **reversible** reactions — applying external volta
 - Li⁺ ions shuttle between graphite anode and metal oxide cathode
 - Lightweight, high energy density
 - **Intercalation**: Li⁺ inserts into layered structures without destroying them
+
+
+---
 
 ### Nickel-Metal Hydride (NiMH)
 
@@ -74,9 +89,12 @@ Secondary batteries involve **reversible** reactions — applying external volta
       id: 'ne5-fuel-cells',
       type: 'text' as const,
       content: `
-## Fuel Cells
+## 📌 Fuel Cells
 
 A fuel cell is a galvanic cell where the reactants are **continuously supplied** from outside. Unlike batteries, fuel cells don\'t run down — they operate as long as fuel and oxidant are fed in.
+
+
+---
 
 ### Hydrogen Fuel Cell
 
@@ -87,6 +105,9 @@ A fuel cell is a galvanic cell where the reactants are **continuously supplied**
 **Overall:** $2\\text{H}_2(g) + \\text{O}_2(g) \\rightarrow 2\\text{H}_2\\text{O}(l)$
 
 **$E \\approx 1.23$ V**
+
+
+---
 
 ### Why Fuel Cells Are Important
 

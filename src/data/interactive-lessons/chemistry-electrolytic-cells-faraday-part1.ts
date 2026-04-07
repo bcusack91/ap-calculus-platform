@@ -16,17 +16,23 @@ In a galvanic cell, a spontaneous reaction produces electricity. In an **electro
       id: 'ef1-how-it-works',
       type: 'text' as const,
       content: `
-## How Electrolysis Works
+## 🔧 How Electrolysis Works
 
 ### The Key Idea
 
 An external voltage source (battery or power supply) pushes electrons in the **opposite** direction from what they would naturally go, driving a non-spontaneous reaction forward.
+
+
+---
 
 ### Requirements
 
 1. An **external power source** providing voltage > $|E°_{\\text{cell}}|$
 2. An **electrolyte** (molten salt or aqueous solution) to carry current via ions
 3. Two **electrodes** (often inert — Pt or graphite)
+
+
+---
 
 ### Electrode Conventions in Electrolytic Cells
 
@@ -45,7 +51,7 @@ An external voltage source (battery or power supply) pushes electrons in the **o
       id: 'ef1-energy',
       type: 'text' as const,
       content: `
-## Energy Considerations
+## 📌 Energy Considerations
 
 ### For Electrolysis
 
@@ -54,11 +60,17 @@ $$E_{\\text{cell}} < 0 \\quad \\text{(negative cell potential)}$$
 
 The external power source must supply at least $|E_{\\text{cell}}|$ volts to drive the reaction.
 
+
+---
+
 ### In Practice: Overpotential
 
 The actual voltage required is usually **higher** than the theoretical minimum due to **overpotential** — extra voltage needed to overcome kinetic barriers at the electrode surfaces.
 
 $$V_{\\text{applied}} = |E_{\\text{cell}}| + \\text{overpotential}$$
+
+
+---
 
 ### Example: Electrolysis of Water
 

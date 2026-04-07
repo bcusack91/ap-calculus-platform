@@ -16,7 +16,7 @@ At 25°C (298 K), the Nernst equation simplifies to a convenient form using base
       id: 'ne2-simplification',
       type: 'text' as const,
       content: `
-## The Simplified Form
+## 📌 The Simplified Form
 
 Starting from: $E = E° - \\frac{RT}{nF}\\ln Q$
 
@@ -30,11 +30,17 @@ $$E = E° - \\frac{(0.02569)(2.303)}{n}\\log Q$$
 
 $$\\boxed{E = E° - \\frac{0.0592}{n}\\log Q} \\quad \\text{(at 25°C)}$$
 
+
+---
+
 ### Why This Form Is Useful
 
 - $\\log$ (base 10) is easier to compute mentally than $\\ln$
 - The constant $0.0592$ is easy to remember
 - Most AP problems are at 25°C
+
+
+---
 
 ### Example
 
@@ -49,7 +55,7 @@ $$E = 1.10 - \\frac{0.0592}{2}\\log(100) = 1.10 - (0.0296)(2) = 1.10 - 0.059 = 1
       id: 'ne2-applications',
       type: 'text' as const,
       content: `
-## Applications of the Simplified Nernst
+## 🔋 Applications of the Simplified Nernst
 
 ### Effect of 10-Fold Concentration Change
 
@@ -58,6 +64,9 @@ For each 10-fold change in $Q$:
 $$\\Delta E = \\frac{0.0592}{n} \\cdot 1 = \\frac{0.0592}{n} \\text{ V per decade}$$
 
 For a 2-electron process: each 10× change in $Q$ shifts $E$ by $0.0296$ V
+
+
+---
 
 ### Common Q Expressions
 

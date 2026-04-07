@@ -16,7 +16,7 @@ The Arrhenius equation in its exponential form is difficult to work with graphic
       id: 'ae4-linearization',
       type: 'text' as const,
       content: `
-## Deriving the Linear Form
+## 📌 Deriving the Linear Form
 
 Starting from: $k = Ae^{-E_a/(RT)}$
 
@@ -26,6 +26,9 @@ $$\\ln k = \\ln A + \\ln(e^{-E_a/(RT)})$$
 
 $$\\boxed{\\ln k = -\\frac{E_a}{R} \\cdot \\frac{1}{T} + \\ln A}$$
 
+
+---
+
 ### This is $y = mx + b$!
 
 | Variable | Corresponds To |
@@ -34,6 +37,9 @@ $$\\boxed{\\ln k = -\\frac{E_a}{R} \\cdot \\frac{1}{T} + \\ln A}$$
 | $x$ | $1/T$ |
 | $m$ (slope) | $-E_a/R$ |
 | $b$ (y-intercept) | $\\ln A$ |
+
+
+---
 
 ### Key Result
 
@@ -90,7 +96,7 @@ A plot of $\\ln k$ vs $1/T$ gives a **straight line** with:
       id: 'ae4-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example: Determining Ea from Data
+## 🧪 Worked Example: Determining Ea from Data
 
 The rate constant for a reaction was measured at several temperatures:
 
@@ -101,10 +107,16 @@ The rate constant for a reaction was measured at several temperatures:
 | 400 | 1.5 × 10⁻³ | 2.50 × 10⁻³ | −6.50 |
 | 450 | 2.0 × 10⁻² | 2.22 × 10⁻³ | −3.91 |
 
+
+---
+
 ### Finding the Slope
 
 Using the first and last points:
 $$\\text{slope} = \\frac{-3.91 - (-16.12)}{2.22 \\times 10^{-3} - 3.33 \\times 10^{-3}} = \\frac{12.21}{-1.11 \\times 10^{-3}} = -11{,}000 \\; \\text{K}$$
+
+
+---
 
 ### Finding Ea
 
@@ -140,7 +152,7 @@ An Arrhenius plot of ln k vs 1/T has two data points:
       id: 'ae4-practical-tips',
       type: 'text' as const,
       content: `
-## Practical Tips for AP
+## 📌 Practical Tips for AP
 
 ### Converting Temperature
 
@@ -148,10 +160,16 @@ Always convert °C to K before using the Arrhenius equation:
 
 $$T(K) = T(°C) + 273.15$$
 
+
+---
+
 ### Units of Ea
 
 - In the Arrhenius equation, use $E_a$ in **J/mol** (not kJ/mol) when $R = 8.314$ J/(mol·K)
 - Convert kJ to J by multiplying by 1000
+
+
+---
 
 ### Common Mistakes
 

@@ -16,11 +16,14 @@ Before we can write equilibrium expressions or calculate $K$ values, we need a s
       id: 'ece1-dynamic-eq',
       type: 'text' as const,
       content: `
-## Dynamic Equilibrium Revisited
+## ⚖️ Dynamic Equilibrium Revisited
 
 At **dynamic equilibrium**:
 
 $$\\text{Rate}_{\\text{forward}} = \\text{Rate}_{\\text{reverse}}$$
+
+
+---
 
 ### Key Features
 
@@ -30,6 +33,9 @@ $$\\text{Rate}_{\\text{forward}} = \\text{Rate}_{\\text{reverse}}$$
 | **No net change** | Concentrations of all species remain constant over time |
 | **Closed system** | No matter enters or leaves the system |
 | **Temperature-dependent** | The equilibrium position depends on temperature |
+
+
+---
 
 ### Common Misconception
 
@@ -90,7 +96,7 @@ At equilibrium, $[\\text{NH}_3]$ might be much larger or much smaller than $[\\t
       id: 'ece1-eq-constant-intro',
       type: 'text' as const,
       content: `
-## The Equilibrium Constant
+## ⚖️ The Equilibrium Constant
 
 The **equilibrium constant** $K$ quantifies the ratio of product concentrations to reactant concentrations at equilibrium.
 
@@ -102,6 +108,9 @@ The equilibrium constant expression is:
 
 $$K_c = \\frac{[\\text{C}]^c[\\text{D}]^d}{[\\text{A}]^a[\\text{B}]^b}$$
 
+
+---
+
 ### What $K$ Tells Us
 
 | Value of $K$ | Meaning |
@@ -109,6 +118,9 @@ $$K_c = \\frac{[\\text{C}]^c[\\text{D}]^d}{[\\text{A}]^a[\\text{B}]^b}$$
 | $K \\gg 1$ | Products are strongly favored at equilibrium |
 | $K \\approx 1$ | Comparable amounts of reactants and products |
 | $K \\ll 1$ | Reactants are strongly favored at equilibrium |
+
+
+---
 
 ### Critical Facts About $K$
 

@@ -16,11 +16,14 @@ The Second Law is one of the most profound principles in all of science. It tell
       id: 'en3-second-law',
       type: 'text' as const,
       content: `
-## The Second Law
+## 📏 The Second Law
 
 **The entropy of the universe increases for every spontaneous process.**
 
 $$\\Delta S_{\\text{universe}} = \\Delta S_{\\text{system}} + \\Delta S_{\\text{surroundings}} > 0$$
+
+
+---
 
 ### Three Cases
 
@@ -29,6 +32,9 @@ $$\\Delta S_{\\text{universe}} = \\Delta S_{\\text{system}} + \\Delta S_{\\text{
 | $\\Delta S_{\\text{universe}} > 0$ | Spontaneous (irreversible) |
 | $\\Delta S_{\\text{universe}} = 0$ | At equilibrium (reversible) |
 | $\\Delta S_{\\text{universe}} < 0$ | Nonspontaneous (reverse is spontaneous) |
+
+
+---
 
 ### What Does "Spontaneous" Mean?
 
@@ -45,7 +51,7 @@ It DOES mean:
       id: 'en3-entropy-surroundings',
       type: 'text' as const,
       content: `
-## Entropy of the Surroundings
+## 🌡️ Entropy of the Surroundings
 
 The entropy change of the surroundings depends on the heat flow and temperature:
 
@@ -53,9 +59,15 @@ $$\\Delta S_{\\text{surroundings}} = -\\frac{q_{\\text{system}}}{T} = -\\frac{\\
 
 (at constant pressure and temperature)
 
+
+---
+
 ### Why the Negative Sign?
 
 Heat released by the system ($-q$) is absorbed by the surroundings ($+q$), and vice versa.
+
+
+---
 
 ### Why Divide by Temperature?
 
@@ -63,6 +75,9 @@ The same amount of heat has a **greater impact** on entropy at **lower temperatu
 
 - Adding 100 J of heat to a cold system (200 K) creates a larger entropy change than adding 100 J to a hot system (1000 K)
 - This is like adding $10 to someone with $100 vs. someone with $10,000
+
+
+---
 
 ### Combining System and Surroundings
 
@@ -75,7 +90,7 @@ This equation connects entropy, enthalpy, and spontaneity — leading directly t
       id: 'en3-spontaneity-examples',
       type: 'text' as const,
       content: `
-## How Spontaneous Processes Work
+## 🔧 How Spontaneous Processes Work
 
 ### Exothermic Reactions at Room Temperature
 
@@ -85,6 +100,9 @@ For combustion of methane: $\\Delta H_{\\text{sys}} < 0$
 - Even if $\\Delta S_{\\text{sys}} < 0$, $\\Delta S_{\\text{univ}}$ can still be positive
 - The large heat release drives spontaneity
 
+
+---
+
 ### Endothermic Spontaneous Processes
 
 Ice melting above 0°C: $\\Delta H_{\\text{sys}} > 0$
@@ -92,6 +110,9 @@ Ice melting above 0°C: $\\Delta H_{\\text{sys}} > 0$
 - $\\Delta S_{\\text{surr}} = -\\Delta H/T < 0$ (negative)
 - But $\\Delta S_{\\text{sys}} > 0$ (solid → liquid, large increase)
 - If $\\Delta S_{\\text{sys}}$ outweighs $|\\Delta S_{\\text{surr}}|$, the process is spontaneous
+
+
+---
 
 ### Temperature Dependence
 

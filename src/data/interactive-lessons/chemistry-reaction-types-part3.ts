@@ -16,13 +16,19 @@ Combustion is one of the most important reaction types in chemistry and everyday
       id: 'rt3-complete-combustion',
       type: 'text' as const,
       content: `
-## Complete Combustion of Hydrocarbons
+## 📌 Complete Combustion of Hydrocarbons
 
 When a hydrocarbon (a compound containing only C and H) burns in **excess oxygen**, the products are always **carbon dioxide** and **water**.
+
+
+---
 
 ### General Form
 
 $$\\text{C}_x\\text{H}_y + \\left(x + \\frac{y}{4}\\right)\\text{O}_2 \\rightarrow x\\text{CO}_2 + \\frac{y}{2}\\text{H}_2\\text{O}$$
+
+
+---
 
 ### Common Examples
 
@@ -33,6 +39,9 @@ $$\\text{C}_x\\text{H}_y + \\left(x + \\frac{y}{4}\\right)\\text{O}_2 \\rightarr
 | Octane (C₈H₁₈) | $2\\text{C}_8\\text{H}_{18} + 25\\text{O}_2 \\rightarrow 16\\text{CO}_2 + 18\\text{H}_2\\text{O}$ |
 | Ethylene (C₂H₄) | $\\text{C}_2\\text{H}_4 + 3\\text{O}_2 \\rightarrow 2\\text{CO}_2 + 2\\text{H}_2\\text{O}$ |
 
+
+---
+
 ### Key Recognition
 
 If you see a hydrocarbon + O₂ → it\'s combustion. The products are **always CO₂ + H₂O** for complete combustion.
@@ -42,9 +51,12 @@ If you see a hydrocarbon + O₂ → it\'s combustion. The products are **always 
       id: 'rt3-oxygenated-combustion',
       type: 'text' as const,
       content: `
-## Combustion of Oxygenated Compounds
+## 📌 Combustion of Oxygenated Compounds
 
 Compounds containing C, H, **and O** (like alcohols and sugars) also undergo combustion. The products are still CO₂ and H₂O.
+
+
+---
 
 ### Examples
 
@@ -53,6 +65,9 @@ Compounds containing C, H, **and O** (like alcohols and sugars) also undergo com
 | Methanol (CH₃OH) | $2\\text{CH}_3\\text{OH} + 3\\text{O}_2 \\rightarrow 2\\text{CO}_2 + 4\\text{H}_2\\text{O}$ |
 | Ethanol (C₂H₅OH) | $\\text{C}_2\\text{H}_5\\text{OH} + 3\\text{O}_2 \\rightarrow 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$ |
 | Glucose (C₆H₁₂O₆) | $\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 \\rightarrow 6\\text{CO}_2 + 6\\text{H}_2\\text{O}$ |
+
+
+---
 
 ### Cellular Respiration
 
@@ -65,7 +80,7 @@ $$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 \\rightarrow 6\\text{CO}_2
       id: 'rt3-incomplete-combustion',
       type: 'text' as const,
       content: `
-## Complete vs. Incomplete Combustion
+## 📌 Complete vs. Incomplete Combustion
 
 ### Complete Combustion
 - Occurs with **excess oxygen**
@@ -73,12 +88,18 @@ $$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 \\rightarrow 6\\text{CO}_2
 - Blue flame
 - Maximum energy released
 
+
+---
+
 ### Incomplete Combustion
 - Occurs with **limited oxygen**
 - Products may include: **CO** (carbon monoxide), **C** (soot), or both, along with H₂O
 - Yellow/orange flame
 - Less energy released
 - **Carbon monoxide is toxic** — this is why proper ventilation matters
+
+
+---
 
 ### Comparison
 
@@ -89,6 +110,9 @@ $$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 \\rightarrow 6\\text{CO}_2
 | Flame color | Blue | Yellow/orange |
 | Energy output | Maximum | Less |
 | Safety | Safer | Dangerous (CO) |
+
+
+---
 
 ### Incomplete Combustion Example
 

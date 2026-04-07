@@ -16,9 +16,12 @@ You\'ve learned about mixture types, separation techniques, chromatography, spec
       id: 'mx7-lab-connections',
       type: 'text' as const,
       content: `
-## Lab Technique Connections
+## 🔗 Lab Technique Connections
 
 The AP Chemistry exam frequently tests your ability to **design an experimental procedure**. Here\'s how the techniques connect:
+
+
+---
 
 ### Identification Workflow
 
@@ -26,6 +29,9 @@ The AP Chemistry exam frequently tests your ability to **design an experimental 
 2. **If mixture, what type?** → Tyndall effect test (colloid vs solution)
 3. **What components are present?** → Chromatography, spectroscopy
 4. **How much of each component?** → Beer\'s Law, titration, gravimetric analysis
+
+
+---
 
 ### Common AP Lab Scenarios
 
@@ -43,9 +49,12 @@ The AP Chemistry exam frequently tests your ability to **design an experimental 
       id: 'mx7-error-analysis',
       type: 'text' as const,
       content: `
-## Error Analysis in Separation Techniques
+## 🧪 Error Analysis in Separation Techniques
 
 AP free-response questions often ask how errors affect results:
+
+
+---
 
 ### Common Errors and Effects
 
@@ -57,6 +66,9 @@ AP free-response questions often ask how errors affect results:
 | Cuvette has fingerprints (spectroscopy) | Absorbance too high → calculated concentration too high |
 | Air bubbles in buret during titration | Volume reading too low → calculated concentration too low |
 | Forget to subtract water vapor pressure | Gas pressure too high → calculated moles too high |
+
+
+---
 
 ### Significant Figures in Analysis
 

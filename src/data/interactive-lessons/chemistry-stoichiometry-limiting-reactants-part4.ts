@@ -16,18 +16,27 @@ In the real world, reactions rarely produce as much product as calculations pred
       id: 'sl4-definitions',
       type: 'text' as const,
       content: `
-## Three Types of Yield
+## 📂 Three Types of Yield
 
 ### Theoretical Yield
 The **maximum** amount of product that could form based on stoichiometric calculations (assuming the limiting reactant is completely converted).
 
+
+---
+
 ### Actual Yield
 The amount of product **actually obtained** in the lab (measured experimentally).
+
+
+---
 
 ### Percent Yield
 The ratio of actual to theoretical yield, expressed as a percentage:
 
 $$\\% \\text{ yield} = \\frac{\\text{actual yield}}{\\text{theoretical yield}} \\times 100$$
+
+
+---
 
 ### Key Facts
 
@@ -42,7 +51,7 @@ $$\\% \\text{ yield} = \\frac{\\text{actual yield}}{\\text{theoretical yield}} \
       id: 'sl4-why-less',
       type: 'text' as const,
       content: `
-## Why Is Actual Yield Less Than Theoretical?
+## 🤔 Why Is Actual Yield Less Than Theoretical?
 
 ### Common Reasons for Reduced Yield
 
@@ -52,6 +61,9 @@ $$\\% \\text{ yield} = \\frac{\\text{actual yield}}{\\text{theoretical yield}} \
 4. **Impure reactants** — some of the starting material isn\'t what you think
 5. **Equilibrium** — reversible reactions don\'t go to completion
 6. **Evaporation** — volatile products may escape
+
+
+---
 
 ### In Practice
 
@@ -65,9 +77,12 @@ $$\\% \\text{ yield} = \\frac{\\text{actual yield}}{\\text{theoretical yield}} \
       id: 'sl4-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 **Problem:** In the reaction $2\\text{Al} + 3\\text{Cl}_2 \\rightarrow 2\\text{AlCl}_3$, a student starts with 54.0 g of Al ($M = 26.98$) and excess Cl₂. The student obtains 200.0 g of AlCl₃ ($M = 133.34$). What is the percent yield?
+
+
+---
 
 ### Step 1: Find Theoretical Yield
 
@@ -77,9 +92,15 @@ Moles AlCl₃ (theoretical): $2.001 \\times \\frac{2}{2} = 2.001$ mol
 
 Grams AlCl₃ (theoretical): $2.001 \\times 133.34 = 266.8$ g
 
+
+---
+
 ### Step 2: Calculate Percent Yield
 
 $$\\% \\text{ yield} = \\frac{200.0}{266.8} \\times 100 = 75.0\\%$$
+
+
+---
 
 ### Answer: 75.0%
 

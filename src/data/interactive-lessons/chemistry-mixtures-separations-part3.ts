@@ -16,7 +16,7 @@ Chromatography is a powerful family of separation techniques that work on a sing
       id: 'mx3-principles',
       type: 'text' as const,
       content: `
-## How Chromatography Works
+## 🔧 How Chromatography Works
 
 Every chromatographic method has two phases:
 
@@ -24,6 +24,9 @@ Every chromatographic method has two phases:
 |-------|-------------|----------|
 | **Stationary phase** | Fixed material that doesn\'t move | Paper fibers, silica gel, column packing |
 | **Mobile phase** | Fluid that moves through/over the stationary phase | Solvent (liquid) or carrier gas |
+
+
+---
 
 ### The Separation Principle
 
@@ -37,7 +40,7 @@ Components of a mixture interact differently with the two phases:
       id: 'mx3-paper-chromatography',
       type: 'text' as const,
       content: `
-## Paper Chromatography
+## 📌 Paper Chromatography
 
 The simplest form of chromatography:
 
@@ -45,6 +48,9 @@ The simplest form of chromatography:
 2. Dip the bottom edge into a **solvent** (but below the dot!)
 3. The solvent rises by **capillary action**
 4. Different components travel different distances
+
+
+---
 
 ### Rf Values
 
@@ -55,6 +61,9 @@ $$R_f = \\frac{\\text{distance traveled by substance}}{\\text{distance traveled 
 - $R_f$ is always between 0 and 1
 - Each substance has a characteristic $R_f$ in a given solvent
 - $R_f$ can be used to **identify** unknown substances by comparison
+
+
+---
 
 ### Example
 
@@ -69,7 +78,7 @@ $$R_f = \\frac{4.2}{7.0} = 0.60$$
       id: 'mx3-column-gc',
       type: 'text' as const,
       content: `
-## Column Chromatography
+## 📌 Column Chromatography
 
 - Stationary phase: silica gel or alumina packed in a glass column
 - Mobile phase: liquid solvent poured through the top
@@ -78,12 +87,15 @@ $$R_f = \\frac{4.2}{7.0} = 0.60$$
 
 **Use**: Purifying larger quantities of material in organic chemistry labs.
 
-## Gas Chromatography (GC)
+## 💨 Gas Chromatography (GC)
 
 - Stationary phase: liquid coating on the inside of a long, thin tube (capillary column)
 - Mobile phase: inert carrier gas (He or N₂)
 - Sample is **vaporized** and carried through the column
 - Components separate based on boiling point and polarity
+
+
+---
 
 ### The Chromatogram
 
@@ -91,6 +103,9 @@ GC produces a graph of **detector signal vs. time**:
 - Each **peak** represents a different component
 - **Retention time** (time to reach detector) identifies the substance
 - **Peak area** is proportional to the **amount** of that component
+
+
+---
 
 ### Applications
 

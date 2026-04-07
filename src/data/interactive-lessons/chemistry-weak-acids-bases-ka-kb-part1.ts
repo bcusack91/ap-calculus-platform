@@ -16,7 +16,7 @@ Unlike strong acids that dissociate completely, **weak acids** only partially io
       id: 'wk1-weak-acid-equilibrium',
       type: 'text' as const,
       content: `
-## Weak Acid Dissociation
+## 🧪 Weak Acid Dissociation
 
 A generic weak acid $HA$ in water:
 
@@ -26,12 +26,18 @@ The equilibrium expression is:
 
 $$K_a = \\frac{[H^+][A^-]}{[HA]}$$
 
+
+---
+
 ### Key Features
 
 - $K_a$ is **small** (typically $10^{-2}$ to $10^{-12}$) because weak acids are mostly undissociated
 - **Larger $K_a$** = stronger weak acid (more dissociation)
 - **Smaller $K_a$** = weaker acid (less dissociation)
 - Water is omitted from the expression (pure liquid)
+
+
+---
 
 ### Common Weak Acids and Their $K_a$ Values
 
@@ -49,11 +55,14 @@ Relative strength: $HF > CH_3COOH > H_2CO_3 > HCN$
       id: 'wk1-pka',
       type: 'text' as const,
       content: `
-## The $pK_a$ Scale
+## 📌 The $pK_a$ Scale
 
 Just as $pH = -\\log[H^+]$, we define:
 
 $$pK_a = -\\log K_a$$
+
+
+---
 
 ### Interpreting $pK_a$
 
@@ -67,6 +76,9 @@ This is the **inverse** relationship — don\'t mix it up!
 | $10^{-2}$ | 2 | Relatively strong weak acid |
 | $10^{-5}$ | 5 | Moderate weak acid |
 | $10^{-10}$ | 10 | Very weak acid |
+
+
+---
 
 ### Converting Between $K_a$ and $pK_a$
 
@@ -121,7 +133,7 @@ $$K_a = 10^{-pK_a} \\qquad pK_a = -\\log K_a$$
       id: 'wk1-strong-vs-weak',
       type: 'text' as const,
       content: `
-## Strong vs. Weak Acids: Key Differences
+## 🧪 Strong vs. Weak Acids: Key Differences
 
 | Property | Strong Acid | Weak Acid |
 |----------|-----------|-----------|
@@ -131,6 +143,9 @@ $$K_a = 10^{-pK_a} \\qquad pK_a = -\\log K_a$$
 | Need $K_a$? | No | Yes |
 | pH calculation | Direct: $pH = -\\log C$ | Requires ICE table |
 | Conducts electricity | Better (more ions) | Less well (fewer ions) |
+
+
+---
 
 ### Important
 

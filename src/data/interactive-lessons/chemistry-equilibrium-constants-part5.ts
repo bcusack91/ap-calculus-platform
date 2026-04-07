@@ -16,7 +16,7 @@ On the AP exam, you'll need to predict how $K$ changes when you reverse a reacti
       id: 'ece5-rules',
       type: 'text' as const,
       content: `
-## Three Key Manipulation Rules
+## 📏 Three Key Manipulation Rules
 
 ### Rule 1: Reversing a Reaction
 
@@ -104,9 +104,12 @@ $$K_{\\text{overall}} = K_1 \\times K_2$$
       id: 'ece5-combined-rules',
       type: 'text' as const,
       content: `
-## Combining Multiple Rules
+## 📏 Combining Multiple Rules
 
 AP problems often require you to apply **more than one rule** at a time.
+
+
+---
 
 ### Example
 
@@ -121,6 +124,9 @@ $\\text{C}(g) \\rightleftharpoons \\text{A}(g) + \\text{B}(g)$, $K^{\\prime} = \
 **Step 2:** Multiply all coefficients by 3:
 
 $3\\,\\text{C}(g) \\rightleftharpoons 3\\,\\text{A}(g) + 3\\,\\text{B}(g)$, $K^{\\prime\\prime} = (0.125)^3 = 1.95 \\times 10^{-3}$
+
+
+---
 
 ### Summary Table
 

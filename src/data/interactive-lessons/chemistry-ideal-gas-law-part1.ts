@@ -18,7 +18,7 @@ In this lesson, we explore the four key measurable properties of gases and the *
       id: 'gl1-four-variables',
       type: 'text' as const,
       content: `
-## The Four Gas Variables
+## 💨 The Four Gas Variables
 
 Every gas sample is described by four measurable quantities:
 
@@ -29,12 +29,18 @@ Every gas sample is described by four measurable quantities:
 | **Temperature** | $T$ | Kelvin (K) | °C (must convert!) |
 | **Amount** | $n$ | moles (mol) | — |
 
+
+---
+
 ### Pressure
 
 Pressure is **force per unit area**: $P = F/A$. Gas molecules exert pressure by colliding with container walls.
 
 Key conversions:
 - $1 \\text{ atm} = 760 \\text{ mmHg} = 760 \\text{ torr} = 101.325 \\text{ kPa}$
+
+
+---
 
 ### Temperature
 
@@ -44,9 +50,15 @@ $$T(K) = T(°C) + 273.15$$
 
 At $0 \\text{ K}$ (absolute zero), molecular motion theoretically stops.
 
+
+---
+
 ### Volume
 
 Volume is typically measured in **liters (L)** in chemistry. $1 \\text{ L} = 1000 \\text{ mL} = 0.001 \\text{ m}^3$.
+
+
+---
 
 ### Amount
 
@@ -57,7 +69,7 @@ The amount of gas is measured in **moles** ($n$), which connects to the number o
       id: 'gl1-kmt',
       type: 'text' as const,
       content: `
-## Kinetic Molecular Theory (KMT)
+## ⏱️ Kinetic Molecular Theory (KMT)
 
 The kinetic molecular theory describes an **ideal gas** with the following assumptions:
 
@@ -70,6 +82,9 @@ The kinetic molecular theory describes an **ideal gas** with the following assum
 $$KE_{\\text{avg}} = \\frac{3}{2}k_BT$$
 
 where $k_B = 1.38 \\times 10^{-23}$ J/K is the Boltzmann constant.
+
+
+---
 
 ### Root Mean Square Speed
 

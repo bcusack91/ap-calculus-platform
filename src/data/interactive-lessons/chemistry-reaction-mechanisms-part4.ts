@@ -16,7 +16,7 @@ One of the most important skills on the AP Chemistry exam is deriving the predic
       id: 'rm4-method-summary',
       type: 'text' as const,
       content: `
-## Strategy for Deriving Rate Laws
+## 🎯 Strategy for Deriving Rate Laws
 
 ### Step-by-Step Method
 
@@ -29,6 +29,9 @@ One of the most important skills on the AP Chemistry exam is deriving the predic
    - Substitute back into the rate law
 5. **Simplify** — combine constants into $k_{\\text{obs}}$
 
+
+---
+
 ### Result
 
 The final rate law should contain only **reactants** (and possibly catalysts) — never intermediates.
@@ -38,7 +41,7 @@ The final rate law should contain only **reactants** (and possibly catalysts) �
       id: 'rm4-example-1',
       type: 'text' as const,
       content: `
-## Example 1: First Step Slow
+## 🧪 Example 1: First Step Slow
 
 **Overall:** $\\text{NO}_2 + \\text{CO} \\rightarrow \\text{NO} + \\text{CO}_2$
 
@@ -63,7 +66,7 @@ $$\\boxed{\\text{Rate} = k[\\text{NO}_2]^2}$$
       id: 'rm4-example-2',
       type: 'text' as const,
       content: `
-## Example 2: Second Step Slow (Pre-Equilibrium Required)
+## 🧪 Example 2: Second Step Slow (Pre-Equilibrium Required)
 
 **Overall:** $2\\text{NO} + \\text{Br}_2 \\rightarrow 2\\text{NOBr}$
 

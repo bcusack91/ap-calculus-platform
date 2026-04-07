@@ -16,15 +16,21 @@ The pH scale provides a convenient way to express the acidity or basicity of a s
       id: 'ab4-ph-definition',
       type: 'text' as const,
       content: `
-## pH, pOH, and Their Relationship
+## 🔗 pH, pOH, and Their Relationship
 
 ### pH Definition
 
 $$pH = -\\log[H^+]$$
 
+
+---
+
 ### pOH Definition
 
 $$pOH = -\\log[OH^-]$$
+
+
+---
 
 ### The Key Relationship
 
@@ -42,6 +48,9 @@ $$-\\log[H^+] + (-\\log[OH^-]) = -\\log(1.0 \\times 10^{-14})$$
 
 $$pH + pOH = 14$$
 
+
+---
+
 ### Interpreting pH
 
 | pH Range | Solution Type | $[H^+]$ vs $[OH^-]$ |
@@ -55,7 +64,7 @@ $$pH + pOH = 14$$
       id: 'ab4-calculations',
       type: 'text' as const,
       content: `
-## pH Calculations
+## 🔢 pH Calculations
 
 ### From $[H^+]$ to pH
 
@@ -63,11 +72,17 @@ $$pH + pOH = 14$$
 
 $$pH = -\\log(3.2 \\times 10^{-4}) = -(-3.49) = 3.49$$
 
+
+---
+
 ### From pH to $[H^+]$
 
 **Example:** $pH = 5.60$
 
 $$[H^+] = 10^{-pH} = 10^{-5.60} = 2.5 \\times 10^{-6} \\text{ M}$$
+
+
+---
 
 ### From $[OH^-]$ to pH
 
@@ -76,6 +91,9 @@ $$[H^+] = 10^{-pH} = 10^{-5.60} = 2.5 \\times 10^{-6} \\text{ M}$$
 Step 1: $pOH = -\\log(4.0 \\times 10^{-3}) = 2.40$
 
 Step 2: $pH = 14 - pOH = 14 - 2.40 = 11.60$
+
+
+---
 
 ### The "p" Notation
 
@@ -134,11 +152,14 @@ So $pK_a = -\\log K_a$, $pK_b = -\\log K_b$, $pK_w = -\\log K_w = 14$
       id: 'ab4-sig-figs',
       type: 'text' as const,
       content: `
-## Significant Figures in pH
+## 📌 Significant Figures in pH
 
 An important AP Chemistry rule:
 
 > The number of **decimal places** in the pH equals the number of **significant figures** in $[H^+]$.
+
+
+---
 
 ### Examples
 

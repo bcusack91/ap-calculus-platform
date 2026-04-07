@@ -16,19 +16,31 @@ This final part brings together collision theory, energy diagrams, the Arrhenius
       id: 'ae7-key-equations',
       type: 'text' as const,
       content: `
-## Key Equations Summary
+## 📋 Key Equations Summary
 
 ### Arrhenius Equation
 $$k = Ae^{-E_a/(RT)}$$
 
+
+---
+
 ### Linearized Form
 $$\\ln k = -\\frac{E_a}{R} \\cdot \\frac{1}{T} + \\ln A$$
+
+
+---
 
 ### Two-Point Form
 $$\\ln\\frac{k_2}{k_1} = \\frac{E_a}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right)$$
 
+
+---
+
 ### Energy Diagram Relationships
 $$\\Delta H = E_a(\\text{forward}) - E_a(\\text{reverse})$$
+
+
+---
 
 ### Constants
 - $R = 8.314$ J/(mol·K)

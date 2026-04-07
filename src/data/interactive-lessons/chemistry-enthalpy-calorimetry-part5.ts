@@ -16,15 +16,21 @@ Some reactions are impossible to carry out directly in a calorimeter. How do we 
       id: 'eh5-hess-law',
       type: 'text' as const,
       content: `
-## Hess's Law
+## 📏 Hess's Law
 
 **Hess\'s Law:** If a reaction can be expressed as the sum of two or more other reactions, the enthalpy change of the overall reaction is the **sum** of the enthalpy changes of the individual reactions.
 
 $$\\Delta H_{\\text{overall}} = \\Delta H_1 + \\Delta H_2 + \\Delta H_3 + \\cdots$$
 
+
+---
+
 ### Why It Works
 
 Because enthalpy is a **state function**, the total enthalpy change depends only on the initial and final states, not on the path. Whether a reaction occurs in one step or ten steps, $\\Delta H$ is the same.
+
+
+---
 
 ### Rules for Manipulating Equations
 
@@ -39,7 +45,7 @@ Because enthalpy is a **state function**, the total enthalpy change depends only
       id: 'eh5-strategy',
       type: 'text' as const,
       content: `
-## Problem-Solving Strategy
+## 🛠️ Problem-Solving Strategy
 
 ### Step-by-Step Approach
 
@@ -50,6 +56,9 @@ Because enthalpy is a **state function**, the total enthalpy change depends only
    - Multiply reactions to match the coefficients in the target
 4. **Add the manipulated reactions** — substances on opposite sides cancel
 5. **Add the adjusted $\\Delta H$ values** to get $\\Delta H_{\\text{overall}}$
+
+
+---
 
 ### Worked Example
 

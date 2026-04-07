@@ -13,9 +13,12 @@ We've covered ionic bonds (electron transfer) and covalent bonds (electron shari
     {
       id: 'cb3-sea-model',
       type: 'text' as const,
-      content: `## The Electron Sea Model
+      content: `## 🔋 The Electron Sea Model
 
 In a metallic solid, atoms are packed closely together in a regular arrangement. Unlike ionic or covalent compounds, the valence electrons in a metal are not transferred or shared between specific atoms. Instead, they are **delocalized** — free to move throughout the entire metal structure.
+
+
+---
 
 ### The Model
 
@@ -23,9 +26,15 @@ In a metallic solid, atoms are packed closely together in a regular arrangement.
 - Valence electrons are **delocalized**, forming an "electron sea" that flows around and between the cations
 - Every cation is attracted to the surrounding sea of electrons, and every electron is attracted to many cations simultaneously
 
+
+---
+
 ### What Holds It Together?
 
 The metallic bond is the **electrostatic attraction** between the positively charged metal cations and the delocalized valence electrons. This is a **non-directional** interaction — unlike covalent bonds, which are localized between specific atom pairs.
+
+
+---
 
 ### Metallic Bond Strength
 
@@ -36,6 +45,9 @@ Metallic bond strength depends on:
 | **Number of valence electrons** | More delocalized electrons → stronger metallic bond |
 | **Cation size** | Smaller cations → electrons closer to nuclei → stronger bond |
 | **Charge on cation** | Higher charge → stronger attraction to electron sea |
+
+
+---
 
 ### Example Comparison
 
@@ -82,7 +94,7 @@ Metals with more valence electrons and smaller ionic radii tend to have **strong
     {
       id: 'cb3-conductivity',
       type: 'text' as const,
-      content: `## Electrical and Thermal Conductivity
+      content: `## 📌 Electrical and Thermal Conductivity
 
 ### Electrical Conductivity
 
@@ -97,6 +109,9 @@ Metals are excellent electrical conductors because their delocalized electrons c
 - Ionic liquids/solutions DO conduct (ions mobile)
 - Metals conduct in **both** solid and liquid states
 
+
+---
+
 ### Thermal Conductivity
 
 Metals also conduct heat well because:
@@ -108,12 +123,15 @@ This is why a metal spoon in hot soup gets hot quickly, while a wooden spoon sta
     {
       id: 'cb3-malleability',
       type: 'text' as const,
-      content: `## Malleability and Ductility
+      content: `## 📌 Malleability and Ductility
 
 ### Definitions
 
 - **Malleable**: Can be hammered or pressed into thin sheets (e.g., aluminum foil)
 - **Ductile**: Can be drawn into thin wires (e.g., copper wire)
+
+
+---
 
 ### Why Are Metals Malleable?
 
@@ -122,12 +140,18 @@ When a metal is struck:
 2. The delocalized electron sea **adjusts** and continues to hold the cations together
 3. The metallic bond is maintained — no fracturing
 
+
+---
+
 ### Contrast with Ionic Compounds
 
 When an ionic crystal is struck:
 1. Layers shift → like charges (cation next to cation) line up
 2. **Electrostatic repulsion** causes the crystal to shatter
 3. Ionic compounds are **brittle**, not malleable
+
+
+---
 
 ### Metallic Luster
 
@@ -169,9 +193,12 @@ Metals are shiny because the delocalized electrons can absorb and re-emit photon
     {
       id: 'cb3-alloys',
       type: 'text' as const,
-      content: `## Alloys
+      content: `## 📌 Alloys
 
 An **alloy** is a mixture of a metal with one or more other elements (usually metals). Alloys modify the properties of pure metals.
+
+
+---
 
 ### Types of Alloys
 
@@ -180,11 +207,17 @@ An **alloy** is a mixture of a metal with one or more other elements (usually me
 | **Substitutional** | Atoms of similar size replace metal atoms in the lattice | Brass (Cu + Zn) |
 | **Interstitial** | Smaller atoms fit into gaps between metal atoms | Steel (Fe + C) |
 
+
+---
+
 ### Why Use Alloys?
 
 - **Harder and stronger** than pure metals (different-sized atoms disrupt layer sliding)
 - **Customizable properties** — adjust composition to tune hardness, corrosion resistance, etc.
 - Still maintain metallic properties (conductivity, luster)
+
+
+---
 
 ### Why Are Alloys Harder?
 

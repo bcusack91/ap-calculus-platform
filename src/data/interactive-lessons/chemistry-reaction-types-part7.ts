@@ -16,7 +16,7 @@ This final part brings together everything from the entire topic. You\'ll face A
       id: 'rt7-summary',
       type: 'text' as const,
       content: `
-## Complete Reaction Type Summary
+## 📋 Complete Reaction Type Summary
 
 | Type | General Form | Key Signal |
 |------|-------------|------------|
@@ -26,7 +26,7 @@ This final part brings together everything from the entire topic. You\'ll face A
 | Double Replacement | $AB + CD \\rightarrow AD + CB$ | Two ionic compounds swap ions |
 | Combustion | $\\text{Fuel} + \\text{O}_2 \\rightarrow \\text{CO}_2 + \\text{H}_2\\text{O}$ | Organic + O₂ |
 
-## AP Exam Tips
+## 📌 AP Exam Tips
 
 1. **Read carefully** — the AP exam often describes reactions in words rather than symbols
 2. **Know the activity series** — required for predicting single replacement
@@ -40,9 +40,12 @@ This final part brings together everything from the entire topic. You\'ll face A
       id: 'rt7-net-ionic-review',
       type: 'text' as const,
       content: `
-## Net Ionic Equations — Quick Review
+## 🔄 Net Ionic Equations — Quick Review
 
 For double replacement reactions in solution, the AP exam often asks for net ionic equations.
+
+
+---
 
 ### Steps
 
@@ -50,6 +53,9 @@ For double replacement reactions in solution, the AP exam often asks for net ion
 2. Write the complete ionic equation (split soluble ionic compounds into ions)
 3. Cancel spectator ions (ions that appear unchanged on both sides)
 4. What remains is the net ionic equation
+
+
+---
 
 ### Example
 

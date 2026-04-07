@@ -11,7 +11,7 @@ This final part ties together everything from Parts 1–6 with AP-style question
     {
       id: 'ec7-trends-review',
       type: 'text' as const,
-      content: `## Electron Configuration and Periodic Trends
+      content: `## 📈 Electron Configuration and Periodic Trends
 
 Electron configurations explain **why** periodic trends exist:
 
@@ -99,11 +99,14 @@ The ion Ti²⁺ is used in some catalytic processes. What is the ground-state el
     {
       id: 'ec7-common-mistakes',
       type: 'text' as const,
-      content: `## Common AP Mistakes to Avoid
+      content: `## 📌 Common AP Mistakes to Avoid
 
 ### Mistake 1: Ion Configurations
 ❌ Removing electrons from the last-filled subshell (3d)  
 ✅ Remove from the **highest n** first (4s before 3d for transition metals)
+
+
+---
 
 ### Mistake 2: Forgetting Exceptions
 ❌ Cr: [Ar] 4s² 3d⁴  
@@ -112,9 +115,15 @@ The ion Ti²⁺ is used in some catalytic processes. What is the ground-state el
 ❌ Cu: [Ar] 4s² 3d⁹  
 ✅ Cu: [Ar] 3d¹⁰ 4s¹ (fully filled d subshell)
 
+
+---
+
 ### Mistake 3: Wrong Noble Gas Core
 ❌ Using [Kr] for elements with Z < 36  
 ✅ Always use the noble gas that comes **immediately before** the element
+
+
+---
 
 ### Mistake 4: Violating Hund's Rule
 ❌ Pairing electrons in a 2p orbital before all three 2p orbitals have one electron  
@@ -173,7 +182,7 @@ These questions connect electron configuration to other chemistry concepts.`,
     {
       id: 'ec7-final-summary',
       type: 'text' as const,
-      content: `## Final Summary: Electron Configuration Mastery
+      content: `## 📋 Final Summary: Electron Configuration Mastery
 
 Congratulations on completing all 7 parts! Here is everything you need to know:
 

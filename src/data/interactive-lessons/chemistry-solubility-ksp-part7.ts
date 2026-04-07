@@ -16,7 +16,7 @@ This final part reviews all solubility concepts: $K_{sp}$ expressions, molar sol
       id: 'sk7-summary',
       type: 'text' as const,
       content: `
-## Complete Solubility Summary
+## 📋 Complete Solubility Summary
 
 ### K_sp Expression
 
@@ -26,6 +26,9 @@ $$K_{sp} = [\\text{M}^{n+}]^a[\\text{X}^{m-}]^b$$
 
 (Solid excluded — pure solid activity = 1)
 
+
+---
+
 ### Molar Solubility ($s$)
 
 | Type | $K_{sp}$ in terms of $s$ | Solve for $s$ |
@@ -34,15 +37,24 @@ $$K_{sp} = [\\text{M}^{n+}]^a[\\text{X}^{m-}]^b$$
 | MX₂ or M₂X | $4s^3$ | $s = \\sqrt[3]{K_{sp}/4}$ |
 | M₂X₃ | $108s^5$ | $s = \\sqrt[5]{K_{sp}/108}$ |
 
+
+---
+
 ### Common Ion Effect
 
 Dissolving in a solution with a shared ion **decreases** solubility (Le Chatelier\'s).
+
+
+---
 
 ### Precipitation
 
 $Q_{sp} > K_{sp}$ → precipitate forms
 $Q_{sp} < K_{sp}$ → no precipitate (unsaturated)
 $Q_{sp} = K_{sp}$ → saturated (equilibrium)
+
+
+---
 
 ### Selective Precipitation
 

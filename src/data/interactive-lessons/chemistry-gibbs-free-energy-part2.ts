@@ -16,7 +16,7 @@ The equation $\\Delta G = \\Delta H - T\\Delta S$ has four possible sign combina
       id: 'gf2-four-cases',
       type: 'text' as const,
       content: `
-## The Four Cases
+## 📌 The Four Cases
 
 ### Case 1: ΔH < 0, ΔS > 0 — Always Spontaneous ✅
 
@@ -26,6 +26,9 @@ $$\\Delta G = (\\text{negative}) - T(\\text{positive}) = \\text{always negative}
 - Spontaneous at **all temperatures**
 - Example: combustion of hydrocarbons
 
+
+---
+
 ### Case 2: ΔH > 0, ΔS < 0 — Never Spontaneous ❌
 
 $$\\Delta G = (\\text{positive}) - T(\\text{negative}) = \\text{always positive}$$
@@ -33,6 +36,9 @@ $$\\Delta G = (\\text{positive}) - T(\\text{negative}) = \\text{always positive}
 - Both terms oppose spontaneity
 - **Never** spontaneous (the reverse reaction is always spontaneous)
 - Example: the reverse of combustion
+
+
+---
 
 ### Case 3: ΔH < 0, ΔS < 0 — Spontaneous at Low T 🥶
 
@@ -42,6 +48,9 @@ $$\\Delta G = (\\text{negative}) - T(\\text{negative})$$
 - At low T: $|\\Delta H| > |T\\Delta S|$ → $\\Delta G < 0$
 - At high T: $|T\\Delta S| > |\\Delta H|$ → $\\Delta G > 0$
 - Example: freezing of water
+
+
+---
 
 ### Case 4: ΔH > 0, ΔS > 0 — Spontaneous at High T 🔥
 
@@ -57,7 +66,7 @@ $$\\Delta G = (\\text{positive}) - T(\\text{positive})$$
       id: 'gf2-summary-table',
       type: 'text' as const,
       content: `
-## Summary Table
+## 📋 Summary Table
 
 | $\\Delta H$ | $\\Delta S$ | $\\Delta G$ | Spontaneous? |
 |-----------|-----------|-----------|-------------|
@@ -65,6 +74,9 @@ $$\\Delta G = (\\text{positive}) - T(\\text{positive})$$
 | + | − | Always + | Never ❌ |
 | − | − | − at low T, + at high T | Low T only 🥶 |
 | + | + | + at low T, − at high T | High T only 🔥 |
+
+
+---
 
 ### The Crossover Temperature
 
@@ -79,7 +91,7 @@ $$T_{\\text{crossover}} = \\frac{\\Delta H}{\\Delta S}$$
       id: 'gf2-real-examples',
       type: 'text' as const,
       content: `
-## Real-World Examples
+## 🧪 Real-World Examples
 
 ### Case 1 (Always Spontaneous): Combustion
 
@@ -88,6 +100,9 @@ $$\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\
 - $\\Delta H < 0$ (releases heat)
 - $\\Delta S > 0$ ($\\Delta n_{\\text{gas}} = 3 - 3 = 0$, but products are more complex — actually $\\Delta S$ can be slightly negative for this specific reaction at standard conditions)
 
+
+---
+
 ### Case 3 (Low T): Freezing Water
 
 $$\\text{H}_2\\text{O}(l) \\rightarrow \\text{H}_2\\text{O}(s)$$
@@ -95,6 +110,9 @@ $$\\text{H}_2\\text{O}(l) \\rightarrow \\text{H}_2\\text{O}(s)$$
 - $\\Delta H < 0$ (releases heat — exothermic)
 - $\\Delta S < 0$ (liquid → solid, more ordered)
 - Spontaneous only below 273 K
+
+
+---
 
 ### Case 4 (High T): Melting Ice
 

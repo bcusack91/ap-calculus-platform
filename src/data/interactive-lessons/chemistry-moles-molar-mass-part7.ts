@@ -16,13 +16,16 @@ This final part ties together everything from Parts 1–6. You will practice AP-
       id: 'mm7-concept-map',
       type: 'text' as const,
       content: `
-## Concept Connections
+## 🔗 Concept Connections
 
 All of the mole concepts are interconnected:
 
 $$\\text{Percent Composition} \\rightarrow \\text{Empirical Formula} \\xrightarrow{+\\,M} \\text{Molecular Formula}$$
 
 $$\\text{Mass (g)} \\xleftrightarrow{M} \\text{Moles} \\xleftrightarrow{N_A} \\text{Particles}$$
+
+
+---
 
 ### The Big Ideas
 
@@ -31,6 +34,9 @@ $$\\text{Mass (g)} \\xleftrightarrow{M} \\text{Moles} \\xleftrightarrow{N_A} \\t
 3. **Percent composition** reveals the elemental makeup of compounds
 4. **Empirical formulas** come from mole ratios of elements
 5. **Molecular formulas** require knowing the molar mass
+
+
+---
 
 ### Common Exam Topics
 
@@ -45,25 +51,37 @@ $$\\text{Mass (g)} \\xleftrightarrow{M} \\text{Moles} \\xleftrightarrow{N_A} \\t
       id: 'mm7-common-mistakes',
       type: 'text' as const,
       content: `
-## Common Mistakes to Avoid ⚠️
+## 📌 Common Mistakes to Avoid ⚠️
 
 ### 1. Confusing Atomic Mass and Molar Mass Units
 - Atomic mass → **amu** (for single atoms)
 - Molar mass → **g/mol** (for one mole)
 - The numbers are the same; only the units differ!
 
+
+---
+
 ### 2. Forgetting Subscripts in Molar Mass Calculations
 - $M_{\\text{Ca(OH)}_2} \\neq 40.08 + 16.00 + 1.008$
 - $M_{\\text{Ca(OH)}_2} = 40.08 + 2(16.00) + 2(1.008) = 74.10$ g/mol ✓
+
+
+---
 
 ### 3. Atoms vs. Molecules
 - 1 mol H₂O = $6.022 \\times 10^{23}$ **molecules** (not atoms!)
 - Total atoms in 1 mol H₂O = $3 \times 6.022 \times 10^{23} = 1.807 \times 10^{24}$ atoms
 
+
+---
+
 ### 4. Rounding Mole Ratios Too Soon
 - A ratio of 1.33 is NOT 1 — it is $4/3$, so multiply all by 3
 - A ratio of 1.50 is NOT 2 — it is $3/2$, so multiply all by 2
 - A ratio of 1.25 is $5/4$, so multiply all by 4
+
+
+---
 
 ### 5. Forgetting to Use the Mole Ratio (Not Mass Ratio)
 - In stoichiometry, always convert to **moles** first, never work directly with grams

@@ -16,7 +16,7 @@ In this workshop, you\'ll practice the critical thinking skills needed for AP Ch
       id: 'mx6-choosing-methods',
       type: 'text' as const,
       content: `
-## Decision Framework: Choosing Separation Methods
+## 🧪 Decision Framework: Choosing Separation Methods
 
 | Situation | Best Method |
 |-----------|------------|
@@ -28,6 +28,9 @@ In this workshop, you\'ll practice the critical thinking skills needed for AP Ch
 | Determine mass of a specific ion | **Gravimetric analysis** |
 | Determine concentration using known reagent | **Titration** |
 | Separate using magnetism | **Magnetic separation** (e.g., iron filings from sand) |
+
+
+---
 
 ### Multi-Step Separations
 
@@ -44,7 +47,7 @@ Complex mixtures often require **multiple techniques in sequence**:
       id: 'mx6-beers-law-workshop',
       type: 'text' as const,
       content: `
-## Beer\'s Law Problem-Solving
+## 🛠️ Beer\'s Law Problem-Solving
 
 ### Standard Curve Approach
 
@@ -60,11 +63,17 @@ Given calibration data:
 
 The slope is: $\\varepsilon b = 0.750/0.0100 = 75.0$ L/(mol·cm) (assuming $b = 1.00$ cm, $\\varepsilon = 75.0$).
 
+
+---
+
 ### Finding Unknown Concentration
 
 If an unknown has $A = 0.525$:
 
 $$c = \\frac{A}{\\varepsilon b} = \\frac{0.525}{75.0} = 0.0070 \\text{ M}$$
+
+
+---
 
 ### Dilution Warning
 

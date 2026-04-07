@@ -8,7 +8,7 @@ export const chemPhotoelectronSpectroscopyPart2Data = {
 
 Now that you understand how PES works, let's learn how to **read and interpret** the spectra it produces. A PES spectrum is a graph that displays all the information about the binding energies and number of electrons in an atom.
 
-## Axes of a PES Spectrum
+## 📌 Axes of a PES Spectrum
 
 - **X-axis: Binding Energy** — Measured in megajoules per mole (MJ/mol) or electron volts (eV). The x-axis runs from **high binding energy on the left** to **low binding energy on the right**.
 - **Y-axis: Relative Number of Electrons** — The height of each peak indicates the **number of electrons** in that subshell.
@@ -18,18 +18,27 @@ Now that you understand how PES works, let's learn how to **read and interpret**
     {
       id: 'ps2-peaks',
       type: 'text' as const,
-      content: `## Understanding Peaks
+      content: `## 📌 Understanding Peaks
 
 Each **peak** in a PES spectrum corresponds to a **subshell** (1s, 2s, 2p, 3s, etc.).
+
+
+---
 
 ### Peak Position (Left-Right)
 - Peaks on the **far left** = highest binding energy = electrons **closest to the nucleus** (core electrons)
 - Peaks on the **far right** = lowest binding energy = electrons **farthest from the nucleus** (valence electrons)
 
+
+---
+
 ### Peak Height (Relative)
 - The **height** of a peak is proportional to the **number of electrons** in that subshell
 - A peak that is **3 times taller** than another contains **3 times as many electrons**
 - For example, a 2p subshell (6 electrons) produces a peak 3 times taller than a 2s subshell (2 electrons)
+
+
+---
 
 ### Example: Lithium (Li, Z = 3)
 Electron configuration: 1s² 2s¹
@@ -63,7 +72,7 @@ On a PES spectrum, the x-axis displays binding energy. How is it oriented?`,
     {
       id: 'ps2-nitrogen',
       type: 'text' as const,
-      content: `## Reading a Spectrum: Nitrogen (Z = 7)
+      content: `## 📌 Reading a Spectrum: Nitrogen (Z = 7)
 
 Nitrogen has the electron configuration: **1s² 2s² 2p³**
 
@@ -155,7 +164,7 @@ Consider a PES spectrum with peaks at relative heights of 2, 2, 6, 2, and 3 (fro
     {
       id: 'ps2-summary',
       type: 'text' as const,
-      content: `## Part 2 Summary
+      content: `## 📋 Part 2 Summary
 
 Key points for reading PES spectra:
 

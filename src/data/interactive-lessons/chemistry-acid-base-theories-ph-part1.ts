@@ -16,7 +16,7 @@ The study of acids and bases is central to chemistry — from biochemistry to in
       id: 'ab1-arrhenius-definition',
       type: 'text' as const,
       content: `
-## The Arrhenius Definition
+## 📖 The Arrhenius Definition
 
 In 1884, Svante Arrhenius proposed a simple classification:
 
@@ -25,11 +25,17 @@ In 1884, Svante Arrhenius proposed a simple classification:
 | **Arrhenius Acid** | Produces $H^+$ ions in aqueous solution | $HCl(aq) \\rightarrow H^+(aq) + Cl^-(aq)$ |
 | **Arrhenius Base** | Produces $OH^-$ ions in aqueous solution | $NaOH(aq) \\rightarrow Na^+(aq) + OH^-(aq)$ |
 
+
+---
+
 ### Key Features
 
 - Acids increase $[H^+]$ in water
 - Bases increase $[OH^-]$ in water
 - Neutralization produces water: $H^+(aq) + OH^-(aq) \\rightarrow H_2O(l)$
+
+
+---
 
 ### Limitations
 
@@ -43,7 +49,7 @@ The Arrhenius model only works in **aqueous solutions** and cannot explain:
       id: 'ab1-common-acids',
       type: 'text' as const,
       content: `
-## Common Arrhenius Acids
+## 🧪 Common Arrhenius Acids
 
 ### Strong Acids (Complete Dissociation)
 
@@ -55,6 +61,9 @@ The Arrhenius model only works in **aqueous solutions** and cannot explain:
 | $HBr$ | Hydrobromic acid | $HBr \\rightarrow H^+ + Br^-$ |
 | $HI$ | Hydroiodic acid | $HI \\rightarrow H^+ + I^-$ |
 | $HClO_4$ | Perchloric acid | $HClO_4 \\rightarrow H^+ + ClO_4^-$ |
+
+
+---
 
 ### Common Strong Bases
 
@@ -72,7 +81,7 @@ The Arrhenius model only works in **aqueous solutions** and cannot explain:
       id: 'ab1-hydronium',
       type: 'text' as const,
       content: `
-## The Hydronium Ion
+## ⚛️ The Hydronium Ion
 
 In reality, free $H^+$ ions (bare protons) don\'t exist in water. Instead, they bond to water molecules:
 
@@ -84,6 +93,9 @@ The **hydronium ion** $H_3O^+$ is a more accurate representation. In AP Chemistr
 - Both notations are acceptable on the AP exam
 - $H_3O^+$ is technically more correct
 - $H^+$ is a convenient shorthand
+
+
+---
 
 ### Autoionization of Water
 
@@ -146,11 +158,14 @@ In pure water: $[H^+] = [OH^-] = 1.0 \\times 10^{-7}$ M
       id: 'ab1-neutralization',
       type: 'text' as const,
       content: `
-## Arrhenius Neutralization
+## 📌 Arrhenius Neutralization
 
 When an Arrhenius acid reacts with an Arrhenius base, they undergo **neutralization**:
 
 $$\\text{Acid} + \\text{Base} \\rightarrow \\text{Salt} + \\text{Water}$$
+
+
+---
 
 ### Examples
 
@@ -161,6 +176,9 @@ $$HCl(aq) + NaOH(aq) \\rightarrow NaCl(aq) + H_2O(l)$$
 $$H^+(aq) + OH^-(aq) \\rightarrow H_2O(l)$$
 
 This net ionic equation is the **same for all strong acid–strong base neutralizations**!
+
+
+---
 
 ### Double Replacement Pattern
 

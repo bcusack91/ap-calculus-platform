@@ -16,9 +16,12 @@ Since mixtures are physically combined (not chemically bonded), they can be sepa
       id: 'mx2-filtration',
       type: 'text' as const,
       content: `
-## Filtration
+## 📌 Filtration
 
 **Principle**: Separates based on **particle size** — solid particles are too large to pass through a filter while the liquid (filtrate) passes through.
+
+
+---
 
 ### How It Works
 
@@ -26,11 +29,17 @@ Since mixtures are physically combined (not chemically bonded), they can be sepa
 2. Solid particles are trapped on the filter paper (**residue**)
 3. Liquid passes through (**filtrate**)
 
+
+---
+
 ### When to Use
 
 - Separating an **insoluble solid** from a liquid (e.g., sand from water)
 - After a **precipitation reaction** to isolate the precipitate
 - Cannot separate dissolved substances (solutes pass through the filter)
+
+
+---
 
 ### Gravity vs. Vacuum Filtration
 
@@ -44,9 +53,12 @@ Since mixtures are physically combined (not chemically bonded), they can be sepa
       id: 'mx2-evaporation',
       type: 'text' as const,
       content: `
-## Evaporation
+## 📌 Evaporation
 
 **Principle**: Separates based on **boiling point** differences — the liquid evaporates, leaving the dissolved solid behind.
+
+
+---
 
 ### How It Works
 
@@ -54,10 +66,16 @@ Since mixtures are physically combined (not chemically bonded), they can be sepa
 2. The solvent (liquid) evaporates
 3. The solute (solid) remains in the dish
 
+
+---
+
 ### When to Use
 
 - Recovering a **dissolved solid** from a solution (e.g., salt from saltwater)
 - The liquid is not needed (it\'s lost to the atmosphere)
+
+
+---
 
 ### Limitations
 
@@ -70,9 +88,12 @@ Since mixtures are physically combined (not chemically bonded), they can be sepa
       id: 'mx2-distillation',
       type: 'text' as const,
       content: `
-## Distillation
+## 📌 Distillation
 
 **Principle**: Separates based on **differences in boiling points** — the component with the lower boiling point evaporates first and is condensed separately.
+
+
+---
 
 ### Simple Distillation
 
@@ -82,6 +103,9 @@ Used when boiling points differ by **at least 25°C**:
 3. Vapor condenses back to liquid and is collected (**distillate**)
 4. Less volatile component stays in the flask
 
+
+---
+
 ### Fractional Distillation
 
 Used when boiling points are **close together** (< 25°C difference):
@@ -89,6 +113,9 @@ Used when boiling points are **close together** (< 25°C difference):
 - Vapor condenses and re-evaporates multiple times
 - Each cycle enriches the vapor in the more volatile component
 - Example: separating ethanol (bp 78°C) from water (bp 100°C)
+
+
+---
 
 ### Applications
 

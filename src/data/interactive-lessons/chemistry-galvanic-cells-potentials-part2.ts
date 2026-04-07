@@ -16,13 +16,16 @@ A galvanic (voltaic) cell converts the energy of a spontaneous redox reaction in
       id: 'gc2-cell-anatomy',
       type: 'text' as const,
       content: `
-## Anatomy of a Galvanic Cell
+## 🏗️ Anatomy of a Galvanic Cell
 
 ### The Two Half-Cells
 
 A galvanic cell consists of two **half-cells**, each containing:
 - An **electrode** (solid conductor, often a metal)
 - An **electrolyte solution** (containing the relevant ions)
+
+
+---
 
 ### Key Components
 
@@ -33,7 +36,11 @@ A galvanic cell consists of two **half-cells**, each containing:
 | **Salt bridge** | Allows ion flow to maintain electrical neutrality |
 | **External wire** | Carries electrons from anode to cathode |
 
+---
+
 ### The Zn-Cu Cell (Daniell Cell)
+
+![Diagram of a Zinc-Copper Galvanic Cell showing the anode, cathode, salt bridge, electron flow, and ion flow](/diagrams/galvanic-cell.svg)
 
 **Anode (oxidation):** $\\text{Zn}(s) \\rightarrow \\text{Zn}^{2+}(aq) + 2e^-$
 
@@ -46,35 +53,49 @@ A galvanic cell consists of two **half-cells**, each containing:
       id: 'gc2-flow-directions',
       type: 'text' as const,
       content: `
-## Flow Directions
+## 🔀 Flow Directions
 
-### Electron Flow (through the wire)
+---
+
+### ⚡ Electron Flow (through the wire)
 
 $$\\text{Anode} \\xrightarrow{e^-} \\text{Cathode}$$
 
 Electrons flow from **anode to cathode** through the external circuit.
 
-### Ion Flow (through the salt bridge)
+---
 
-- **Anions** ($\\text{NO}_3^-$, $\\text{Cl}^-$, etc.) migrate toward the **anode**
-- **Cations** ($\\text{K}^+$, $\\text{Na}^+$, etc.) migrate toward the **cathode**
+### 🧂 Ion Flow (through the salt bridge)
 
-### Why Is the Salt Bridge Necessary?
+| Ion Type | Direction | Examples |
+|----------|-----------|----------|
+| **Anions** (−) | Migrate toward the **anode** | $\\text{NO}_3^-$, $\\text{Cl}^-$ |
+| **Cations** (+) | Migrate toward the **cathode** | $\\text{K}^+$, $\\text{Na}^+$ |
 
-Without a salt bridge:
-1. The anode solution would become too positive (excess $\\text{Zn}^{2+}$ produced)
-2. The cathode solution would become too negative ($\\text{Cu}^{2+}$ consumed)
-3. Charge imbalance would stop the reaction immediately
+---
 
-The salt bridge maintains **electrical neutrality** by allowing ion migration.
+### 🤔 Why Is the Salt Bridge Necessary?
 
-### Anode Sign Convention
+> Without a salt bridge, the cell would **stop working almost immediately.**
 
-In a **galvanic** cell:
-- Anode = **negative** terminal (−)
-- Cathode = **positive** terminal (+)
+Here's why:
 
-(This is opposite to electrolytic cells!)
+1. The anode solution would become too **positive** (excess $\\text{Zn}^{2+}$ produced)
+2. The cathode solution would become too **negative** ($\\text{Cu}^{2+}$ consumed)
+3. This charge imbalance would **halt the reaction**
+
+The salt bridge maintains **electrical neutrality** by allowing ion migration between the two half-cells.
+
+---
+
+### ± Anode Sign Convention
+
+> In a **galvanic** cell:
+>
+> - Anode = **negative** terminal **(−)**
+> - Cathode = **positive** terminal **(+)**
+>
+> ⚠️ This is **opposite** to electrolytic cells!
       `
     },
     {

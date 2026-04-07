@@ -16,13 +16,16 @@ The reaction quotient $Q$ has the same form as $K$ but uses **current** concentr
       id: 'ece6-q-definition',
       type: 'text' as const,
       content: `
-## What Is $Q$?
+## 📖 What Is $Q$?
 
 For: $a\\text{A} + b\\text{B} \\rightleftharpoons c\\text{C} + d\\text{D}$
 
 $$Q_c = \\frac{[\\text{C}]^c[\\text{D}]^d}{[\\text{A}]^a[\\text{B}]^b}$$
 
 This looks exactly like $K_c$ — but the concentrations plugged in are the **current** (non-equilibrium) values, not the equilibrium concentrations.
+
+
+---
 
 ### Comparing $Q$ to $K$
 
@@ -31,6 +34,9 @@ This looks exactly like $K_c$ — but the concentrations plugged in are the **cu
 | $Q < K$ | Too many reactants, not enough products | Shifts **right** (toward products) |
 | $Q = K$ | System is at equilibrium | **No shift** |
 | $Q > K$ | Too many products, not enough reactants | Shifts **left** (toward reactants) |
+
+
+---
 
 ### Intuition
 
@@ -88,7 +94,7 @@ Think of it this way:
       id: 'ece6-example-calc',
       type: 'text' as const,
       content: `
-## Worked Example: Using $Q$
+## 🧪 Worked Example: Using $Q$
 
 ### Problem
 
@@ -109,6 +115,9 @@ $Q = 3.33 < K = 5.10$
 **Step 3: Predict the shift**
 
 Since $Q < K$, the reaction shifts **right** (forward) to produce more CO₂ and H₂.
+
+
+---
 
 ### AP Test Strategy 💡
 

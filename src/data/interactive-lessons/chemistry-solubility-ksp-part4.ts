@@ -16,11 +16,14 @@ When two solutions containing ions are mixed, will a precipitate form? The answe
       id: 'sk4-qsp',
       type: 'text' as const,
       content: `
-## The Ion Product, Q_sp
+## ⚛️ The Ion Product, Q_sp
 
 $Q_{sp}$ is calculated exactly like $K_{sp}$, but using the **actual** (non-equilibrium) ion concentrations in solution:
 
 $$Q_{sp} = [\\text{M}^{n+}]^a_{\\text{actual}}[\\text{X}^{m-}]^b_{\\text{actual}}$$
+
+
+---
 
 ### Comparing Q_sp to K_sp
 
@@ -29,6 +32,9 @@ $$Q_{sp} = [\\text{M}^{n+}]^a_{\\text{actual}}[\\text{X}^{m-}]^b_{\\text{actual}
 | $Q_{sp} < K_{sp}$ | Solution is unsaturated | No precipitate; more solid can dissolve |
 | $Q_{sp} = K_{sp}$ | Solution is exactly saturated | At equilibrium; no change |
 | $Q_{sp} > K_{sp}$ | Solution is supersaturated | **Precipitate forms** until $Q_{sp} = K_{sp}$ |
+
+
+---
 
 ### Key Steps
 
@@ -41,11 +47,14 @@ $$Q_{sp} = [\\text{M}^{n+}]^a_{\\text{actual}}[\\text{X}^{m-}]^b_{\\text{actual}
       id: 'sk4-dilution',
       type: 'text' as const,
       content: `
-## Don't Forget Dilution!
+## 📌 Don't Forget Dilution!
 
 When mixing two solutions, the total volume increases and concentrations decrease:
 
 $$[\\text{ion}]_{\\text{after mixing}} = \\frac{[\\text{ion}]_{\\text{initial}} \\times V_{\\text{initial}}}{V_{\\text{total}}}$$
+
+
+---
 
 ### Worked Example
 

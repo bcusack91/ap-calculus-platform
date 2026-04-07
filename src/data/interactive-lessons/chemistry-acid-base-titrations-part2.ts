@@ -16,9 +16,12 @@ The titration curve plots pH vs. volume of titrant added. For a strong acid–st
       id: 'at2-regions',
       type: 'text' as const,
       content: `
-## Regions of the Curve
+## 📌 Regions of the Curve
 
 Consider titrating 50.0 mL of 0.100 M $HCl$ with 0.100 M $NaOH$:
+
+
+---
 
 ### Region 1: Before Equivalence (0 to ~45 mL)
 
@@ -30,17 +33,26 @@ Consider titrating 50.0 mL of 0.100 M $HCl$ with 0.100 M $NaOH$:
   - $[H^+] = 0.0040/0.060 = 0.0667$ M
   - $pH = 1.18$
 
+
+---
+
 ### Region 2: Near Equivalence (~45 to ~55 mL)
 
 - Very little excess acid or base
 - pH changes **dramatically** with each drop
 - The steep vertical portion of the curve
 
+
+---
+
 ### Region 3: At Equivalence (50.0 mL)
 
 - $pH = 7.00$ exactly
 - All $H^+$ and $OH^-$ have reacted
 - Only $NaCl$ + $H_2O$ remain
+
+
+---
 
 ### Region 4: After Equivalence (>50 mL)
 
@@ -53,7 +65,7 @@ Consider titrating 50.0 mL of 0.100 M $HCl$ with 0.100 M $NaOH$:
       id: 'at2-ph-calculations',
       type: 'text' as const,
       content: `
-## pH Calculations at Key Points
+## 🔢 pH Calculations at Key Points
 
 ### Titrating 50.0 mL of 0.100 M $HCl$ with 0.100 M $NaOH$
 
@@ -131,7 +143,7 @@ Titrating 25.0 mL of 0.200 M $HCl$ with 0.200 M $NaOH$:
       id: 'at2-curve-features',
       type: 'text' as const,
       content: `
-## Key Features of the Strong–Strong Curve
+## 📌 Key Features of the Strong–Strong Curve
 
 ### Shape Analysis
 
@@ -141,9 +153,15 @@ Titrating 25.0 mL of 0.200 M $HCl$ with 0.200 M $NaOH$:
 4. **Equivalence at pH 7** (always for strong-strong)
 5. **Gradual leveling** after equivalence
 
+
+---
+
 ### Why pH 7 at Equivalence?
 
 The products are water and a salt of a strong acid/strong base (e.g., $NaCl$, $KNO_3$). These salts are **neutral** — their ions do not react with water (no hydrolysis).
+
+
+---
 
 ### Effect of Concentration
 

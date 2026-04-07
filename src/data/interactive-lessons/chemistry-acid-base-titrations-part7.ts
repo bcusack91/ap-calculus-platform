@@ -16,7 +16,7 @@ This comprehensive review integrates all titration concepts: setup, calculations
       id: 'at7-summary',
       type: 'text' as const,
       content: `
-## Complete Titration Summary
+## 📋 Complete Titration Summary
 
 ### Method at Each Point
 
@@ -28,6 +28,9 @@ This comprehensive review integrates all titration concepts: setup, calculations
 | Equivalence | Only $A^-$ | ICE with $K_b = K_w/K_a$ |
 | After equivalence | $A^-$ + excess $OH^-$ | $[OH^-]$ from excess |
 
+
+---
+
 ### Equivalence Point pH Summary
 
 | Titration | Equivalence pH | Why |
@@ -35,6 +38,9 @@ This comprehensive review integrates all titration concepts: setup, calculations
 | Strong + Strong | = 7 | Neutral salt, no hydrolysis |
 | Weak acid + Strong base | > 7 | $A^-$ hydrolyzes (basic) |
 | Strong acid + Weak base | < 7 | $BH^+$ hydrolyzes (acidic) |
+
+
+---
 
 ### Indicator Selection Rule
 

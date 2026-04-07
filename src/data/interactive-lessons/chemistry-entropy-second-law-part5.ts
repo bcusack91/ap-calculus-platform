@@ -16,11 +16,14 @@ Just as we calculated $\\Delta H°_{\\text{rxn}}$ from formation enthalpies, we 
       id: 'en5-formula',
       type: 'text' as const,
       content: `
-## The Entropy Master Equation
+## 🌡️ The Entropy Master Equation
 
 $$\\Delta S°_{\\text{rxn}} = \\sum n \\cdot S°(\\text{products}) - \\sum m \\cdot S°(\\text{reactants})$$
 
 where $n$ and $m$ are stoichiometric coefficients.
+
+
+---
 
 ### Key Differences from the Enthalpy Version
 
@@ -31,6 +34,9 @@ where $n$ and $m$ are stoichiometric coefficients.
 | Elements | $\\Delta H°_f = 0$ | $S° \\neq 0$ (always positive!) |
 | Units | kJ | J/K |
 
+
+---
+
 ### Critical Warning ⚠️
 
 $S°$ for elements is **NOT zero**! This is the #1 mistake students make. Absolute entropies are always positive at temperatures above 0 K.
@@ -40,7 +46,7 @@ $S°$ for elements is **NOT zero**! This is the #1 mistake students make. Absolu
       id: 'en5-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 Calculate $\\Delta S°$ for: $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g)$
 
@@ -59,6 +65,9 @@ $$\\Delta S° = [2(192.5)] - [1(191.6) + 3(130.7)]$$
 $$\\Delta S° = 385.0 - [191.6 + 392.1]$$
 
 $$\\Delta S° = 385.0 - 583.7 = -198.7 \\text{ J/K}$$
+
+
+---
 
 ### Check: Does the Sign Make Sense?
 

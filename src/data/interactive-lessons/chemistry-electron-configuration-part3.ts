@@ -11,17 +11,23 @@ Now that you know the subshells and filling order, it is time to write full elec
     {
       id: 'ec3-three-rules',
       type: 'text' as const,
-      content: `## The Three Rules
+      content: `## 📏 The Three Rules
 
 ### 1. Aufbau Principle
 Electrons fill the **lowest energy** subshell available first.
 
 Filling order: 1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → ...
 
+
+---
+
 ### 2. Pauli Exclusion Principle
 Each orbital can hold a maximum of **2 electrons**, and those 2 electrons must have **opposite spins** (↑↓).
 
 No two electrons in the same atom can have the same set of four quantum numbers.
+
+
+---
 
 ### 3. Hund's Rule
 When filling orbitals of **equal energy** (degenerate orbitals, such as the three 2p orbitals), electrons fill each orbital **singly first** with parallel spins before any orbital gets a second electron.
@@ -31,7 +37,7 @@ Think of it like a bus: passengers sit in empty seats before doubling up.`
     {
       id: 'ec3-examples',
       type: 'text' as const,
-      content: `## Step-by-Step Examples
+      content: `## 🧪 Step-by-Step Examples
 
 **Hydrogen (H, Z = 1):** 1 electron  
 Configuration: **1s¹**
@@ -134,7 +140,7 @@ Which of the following electron configurations is INCORRECT?`,
     {
       id: 'ec3-summary',
       type: 'text' as const,
-      content: `## Key Takeaways
+      content: `## 📌 Key Takeaways
 
 1. **Aufbau principle:** Fill lowest energy subshells first.
 2. **Pauli exclusion:** Max 2 electrons per orbital (opposite spins).

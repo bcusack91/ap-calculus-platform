@@ -16,13 +16,16 @@ Most matter around you is a **mixture** — a combination of two or more substan
       id: 'mx1-pure-vs-mixture',
       type: 'text' as const,
       content: `
-## Pure Substances vs. Mixtures
+## 🧪 Pure Substances vs. Mixtures
 
 | Category | Definition | Examples |
 |----------|-----------|----------|
 | **Element** | One type of atom | Gold (Au), Oxygen (O₂) |
 | **Compound** | Two+ elements chemically bonded in fixed ratio | H₂O, NaCl, CO₂ |
 | **Mixture** | Two+ substances physically combined, variable composition | Air, saltwater, trail mix |
+
+
+---
 
 ### Key Differences
 
@@ -35,9 +38,12 @@ Most matter around you is a **mixture** — a combination of two or more substan
       id: 'mx1-homogeneous',
       type: 'text' as const,
       content: `
-## Homogeneous Mixtures (Solutions)
+## 🧪 Homogeneous Mixtures (Solutions)
 
 A **homogeneous mixture** has a **uniform composition** throughout — you cannot distinguish the components visually.
+
+
+---
 
 ### Solutions
 
@@ -55,6 +61,9 @@ Solutions can be:
 - **Gas in gas**: air (N₂ + O₂ + Ar + ...)
 - **Solid in solid**: alloys (brass = Cu + Zn)
 
+
+---
+
 ### Properties of Solutions
 - Transparent (may be colored)
 - Do not scatter light (no Tyndall effect)
@@ -67,9 +76,12 @@ Solutions can be:
       id: 'mx1-heterogeneous',
       type: 'text' as const,
       content: `
-## Heterogeneous Mixtures
+## 🧪 Heterogeneous Mixtures
 
 A **heterogeneous mixture** has a **non-uniform composition** — you can see or detect different regions.
+
+
+---
 
 ### Suspensions
 
@@ -78,6 +90,9 @@ A **heterogeneous mixture** has a **non-uniform composition** — you can see or
 - Can be separated by **filtration**
 - Example: muddy water, flour in water, blood cells in plasma
 
+
+---
+
 ### Colloids
 
 - Particles between 1–1000 nm
@@ -85,6 +100,9 @@ A **heterogeneous mixture** has a **non-uniform composition** — you can see or
 - Scatter light (**Tyndall effect** — beam of light becomes visible)
 - Cannot pass through semipermeable membranes
 - Examples: milk, fog, gelatin, smoke, mayonnaise
+
+
+---
 
 ### Comparing the Three Types
 

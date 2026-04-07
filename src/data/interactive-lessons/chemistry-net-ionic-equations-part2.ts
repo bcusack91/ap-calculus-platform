@@ -16,7 +16,7 @@ Now that you can write balanced molecular equations, it\'s time to show what\'s 
       id: 'ni2-rules',
       type: 'text' as const,
       content: `
-## Rules for Writing Complete Ionic Equations
+## ✍️ Rules for Writing Complete Ionic Equations
 
 ### What Gets Split into Ions?
 
@@ -30,13 +30,22 @@ Only **aqueous strong electrolytes** are written as separated ions:
 | | Weak electrolytes — $(aq)$ |
 | | Non-electrolytes |
 
+
+---
+
 ### The Six Strong Acids (memorize these!)
 
 $$\\text{HCl, HBr, HI, HNO}_3\\text{, H}_2\\text{SO}_4\\text{, HClO}_4$$
 
+
+---
+
 ### Strong Bases
 
 $$\\text{LiOH, NaOH, KOH, Ca(OH)}_2\\text{, Sr(OH)}_2\\text{, Ba(OH)}_2$$
+
+
+---
 
 ### Important
 
@@ -47,9 +56,12 @@ Weak acids (HF, CH₃COOH, H₂CO₃, H₃PO₄) and weak bases (NH₃) are **NO
       id: 'ni2-solubility-rules',
       type: 'text' as const,
       content: `
-## Solubility Rules
+## 📏 Solubility Rules
 
 To determine if an ionic compound is $(aq)$ or $(s)$, use the solubility rules:
+
+
+---
 
 ### Generally Soluble (aqueous)
 
@@ -61,6 +73,9 @@ To determine if an ionic compound is $(aq)$ or $(s)$, use the solubility rules:
 | Cl⁻, Br⁻, I⁻ | Except with Ag⁺, Pb²⁺, Hg₂²⁺ |
 | SO₄²⁻ | Except with Ba²⁺, Pb²⁺, Ca²⁺, Sr²⁺ |
 
+
+---
+
 ### Generally Insoluble (solid precipitate)
 
 | Ion | Exception |
@@ -69,6 +84,9 @@ To determine if an ionic compound is $(aq)$ or $(s)$, use the solubility rules:
 | S²⁻ | Except with Group 1 metals, NH₄⁺ |
 | CO₃²⁻ | Except with Group 1 metals, NH₄⁺ |
 | PO₄³⁻ | Except with Group 1 metals, NH₄⁺ |
+
+
+---
 
 ### Using Solubility Rules
 
@@ -81,11 +99,14 @@ If an ionic compound is **insoluble** → label $(s)$ → keep as formula
       id: 'ni2-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 Write the complete ionic equation for:
 
 $$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{NaNO}_3(aq)$$
+
+
+---
 
 ### Step 1: Identify what splits
 
@@ -96,9 +117,15 @@ $$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{Na
 | AgCl(s) | Insoluble solid | Keep as AgCl(s) |
 | NaNO₃(aq) | Soluble salt | Split → Na⁺ + NO₃⁻ |
 
+
+---
+
 ### Step 2: Write the complete ionic equation
 
 $$\\text{Ag}^+(aq) + \\text{NO}_3^-(aq) + \\text{Na}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s) + \\text{Na}^+(aq) + \\text{NO}_3^-(aq)$$
+
+
+---
 
 ### Step 3: Verify
 

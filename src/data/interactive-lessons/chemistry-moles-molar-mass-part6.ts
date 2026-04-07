@@ -16,11 +16,14 @@ You now have all the core tools: moles, molar mass, percent composition, and for
       id: 'mm6-conversion-map',
       type: 'text' as const,
       content: `
-## The Mole Conversion Map
+## ⚖️ The Mole Conversion Map
 
 Here is the complete conversion roadmap you should have memorized:
 
 $$\\text{Particles} \\xleftrightarrow{\\times \\text{ or } \\div \\; N_A} \\text{Moles} \\xleftrightarrow{\\times \\text{ or } \\div \\; M} \\text{Grams}$$
+
+
+---
 
 ### Key Formulas Summary
 
@@ -32,6 +35,9 @@ $$\\text{Particles} \\xleftrightarrow{\\times \\text{ or } \\div \\; N_A} \\text
 | Particles → Moles | $n = N / N_A$ |
 | Grams → Particles | $N = (m/M) \\times N_A$ |
 | Particles → Grams | $m = (N/N_A) \\times M$ |
+
+
+---
 
 ### Strategy for Multi-Step Problems
 
@@ -46,9 +52,12 @@ $$\\text{Particles} \\xleftrightarrow{\\times \\text{ or } \\div \\; N_A} \\text
       id: 'mm6-lab-scenario',
       type: 'text' as const,
       content: `
-## Lab Scenario: Analyzing an Unknown
+## 📌 Lab Scenario: Analyzing an Unknown
 
 A student in the lab weighs out 11.0 g of an unknown white solid. Analysis shows it is pure calcium carbonate (CaCO₃, $M = 100.09$ g/mol).
+
+
+---
 
 ### Questions to Answer
 

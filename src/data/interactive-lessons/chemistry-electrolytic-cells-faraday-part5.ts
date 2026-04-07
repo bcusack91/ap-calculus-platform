@@ -16,15 +16,21 @@ Electrolysis has enormous industrial importance. From electroplating jewelry to 
       id: 'ef5-electroplating',
       type: 'text' as const,
       content: `
-## Electroplating
+## 🔋 Electroplating
 
 Electroplating is the process of coating an object with a thin layer of metal using electrolysis.
+
+
+---
 
 ### Setup
 
 - **Cathode**: the object to be plated (e.g., a spoon)
 - **Anode**: a piece of the plating metal (e.g., silver)
 - **Electrolyte**: a solution of the plating metal ions (e.g., AgNO₃)
+
+
+---
 
 ### How It Works
 
@@ -34,12 +40,18 @@ Electroplating is the process of coating an object with a thin layer of metal us
 
 The object at the cathode gets coated with a layer of silver!
 
+
+---
+
 ### Controlling Thickness
 
 The thickness of the coating depends on:
 - **Current** ($I$): higher current → faster deposition
 - **Time** ($t$): longer time → thicker coating
 - **Faraday\'s law**: $m = ItM/(nF)$
+
+
+---
 
 ### Common Plating Metals
 
@@ -56,7 +68,7 @@ The thickness of the coating depends on:
       id: 'ef5-industrial',
       type: 'text' as const,
       content: `
-## Major Industrial Processes
+## 📌 Major Industrial Processes
 
 ### 1. Hall-Héroult Process (Aluminum Production)
 
@@ -67,6 +79,9 @@ $$2\\text{Al}_2\\text{O}_3(l) \\rightarrow 4\\text{Al}(l) + 3\\text{O}_2(g)$$
 - Carbon anodes are consumed: $\\text{C} + \\text{O}^{2-} \\rightarrow \\text{CO}_2 + e^-$
 - Produces ~65 million tonnes of Al per year worldwide
 
+
+---
+
 ### 2. Chlor-Alkali Process
 
 $$2\\text{NaCl}(aq) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Cl}_2(g) + \\text{H}_2(g) + 2\\text{NaOH}(aq)$$
@@ -74,6 +89,9 @@ $$2\\text{NaCl}(aq) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Cl}_2(g) + \\
 - Produces three valuable products: chlorine, hydrogen, and sodium hydroxide
 - Membrane cell separates products
 - Uses aqueous NaCl (brine)
+
+
+---
 
 ### 3. Electrorefining of Copper
 

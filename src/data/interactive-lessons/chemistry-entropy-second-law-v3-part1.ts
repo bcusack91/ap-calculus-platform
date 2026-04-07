@@ -16,11 +16,17 @@ Why does perfume spread across a room? Why does metal feel cold? Why can't you u
       id: 'en1v3-discovery',
       type: 'text' as const,
       content: `
-## Guided Discovery: The Coin Experiment
+## 📌 Guided Discovery: The Coin Experiment
 
 Imagine flipping coins. Each coin can be H (heads) or T (tails).
 
+
+---
+
 ### 1 Coin: 2 outcomes → H or T
+
+
+---
 
 ### 2 Coins: $2^2 = 4$ outcomes
 
@@ -33,9 +39,15 @@ Imagine flipping coins. Each coin can be H (heads) or T (tails).
 
 The "mixed" state appears **twice** — it's the most probable.
 
+
+---
+
 ### The Pattern
 
 Molecules behave like trillions of coins. The "mixed" (spread out, disordered) state has so many more arrangements that it is essentially the **only** state you'll ever observe.
+
+
+---
 
 ### Boltzmann's Equation
 
@@ -71,7 +83,7 @@ This equation connects the microscopic (molecular arrangements) to the macroscop
       id: 'en1v3-key-facts',
       type: 'text' as const,
       content: `
-## Essential Facts for AP
+## 📌 Essential Facts for AP
 
 | Fact | Detail |
 |------|--------|

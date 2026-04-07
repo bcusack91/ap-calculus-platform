@@ -16,7 +16,7 @@ At equilibrium, $E = 0$ and $Q = K$. This gives us a direct relationship between
       id: 'ne4-derivation',
       type: 'text' as const,
       content: `
-## Deriving the E°-K Relationship
+## 🔗 Deriving the E°-K Relationship
 
 Starting from the Nernst equation at equilibrium ($E = 0$, $Q = K$):
 
@@ -32,6 +32,9 @@ $$\\log K = \\frac{nE°}{0.0592}$$
 
 $$K = 10^{nE°/0.0592}$$
 
+
+---
+
 ### What This Tells Us
 
 | $E°$ | $\\log K$ | $K$ | Meaning |
@@ -39,6 +42,9 @@ $$K = 10^{nE°/0.0592}$$
 | $> 0$ | Positive | $> 1$ | Products favored |
 | $= 0$ | Zero | $= 1$ | Neither favored |
 | $< 0$ | Negative | $< 1$ | Reactants favored |
+
+
+---
 
 ### How Sensitive Is K to E°?
 
@@ -54,7 +60,7 @@ Even small $E°$ values correspond to **enormous** equilibrium constants!
       id: 'ne4-worked-example',
       type: 'text' as const,
       content: `
-## Worked Examples
+## 🧪 Worked Examples
 
 ### Example 1: Find K from E°
 
@@ -68,6 +74,9 @@ $$K = 10^{37.2} = 1.6 \\times 10^{37}$$
 
 This enormous $K$ means the reaction goes essentially to completion.
 
+
+---
+
 ### Example 2: Find E° from K
 
 > **Problem:** A reaction has $K = 1.0 \\times 10^{10}$ and $n = 2$.
@@ -75,6 +84,9 @@ This enormous $K$ means the reaction goes essentially to completion.
 **Solution:**
 
 $$E° = \\frac{0.0592}{2}\\log(10^{10}) = 0.0296 \\times 10 = 0.296 \\text{ V}$$
+
+
+---
 
 ### Example 3: The Complete Thermodynamic Triangle
 

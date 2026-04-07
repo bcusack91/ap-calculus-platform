@@ -13,7 +13,7 @@ Ionization energy measures how difficult it is to remove an electron from an ato
     {
       id: 'pt3-definition',
       type: 'text' as const,
-      content: `## What Is Ionization Energy?
+      content: `## 📖 What Is Ionization Energy?
 
 **Ionization energy (IE)** is the minimum energy required to remove the most loosely bound electron from a gaseous atom or ion.
 
@@ -22,6 +22,9 @@ $$X(g) \\rightarrow X^+(g) + e^- \\qquad \\Delta E = IE_1$$
 - $IE_1$ = **first ionization energy** (removing the first electron)
 - $IE_2$ = **second ionization energy** (removing a second electron from $X^+$)
 - And so on for $IE_3$, $IE_4$, etc.
+
+
+---
 
 ### Important Details
 
@@ -32,9 +35,12 @@ $$X(g) \\rightarrow X^+(g) + e^- \\qquad \\Delta E = IE_1$$
     {
       id: 'pt3-across-period',
       type: 'text' as const,
-      content: `## Trend Across a Period (Left → Right)
+      content: `## 📈 Trend Across a Period (Left → Right)
 
 **First ionization energy generally increases across a period.**
+
+
+---
 
 ### Why?
 
@@ -43,11 +49,17 @@ Moving left to right across a period:
 2. Valence electrons are held more tightly
 3. It takes **more energy** to remove an electron
 
+
+---
+
 ### First Ionization Energies in Period 2 (kJ/mol)
 
 | Li | Be | B | C | N | O | F | Ne |
 |----|-----|---|----|---|----|---|----|
 | 520 | 900 | 801 | 1086 | 1402 | 1314 | 1681 | 2081 |
+
+
+---
 
 ### Notice the Exceptions!
 
@@ -62,9 +74,12 @@ These exceptions are frequently tested on the AP exam!`
     {
       id: 'pt3-down-group',
       type: 'text' as const,
-      content: `## Trend Down a Group (Top → Bottom)
+      content: `## 📈 Trend Down a Group (Top → Bottom)
 
 **First ionization energy decreases down a group.**
+
+
+---
 
 ### Why?
 
@@ -72,6 +87,9 @@ Moving down a group:
 1. Valence electrons are in higher energy levels, **farther** from the nucleus
 2. More shielding from additional core electron shells
 3. The outermost electron is easier to remove → **lower $IE_1$**
+
+
+---
 
 ### Example: Group 1 (Alkali Metals) $IE_1$ (kJ/mol)
 
@@ -126,15 +144,21 @@ This explains why cesium is more reactive than lithium — its valence electron 
     {
       id: 'pt3-successive-ie',
       type: 'text' as const,
-      content: `## Successive Ionization Energies
+      content: `## ⚛️ Successive Ionization Energies
 
 Each successive ionization energy is **larger** than the previous one because:
 - You're removing an electron from a **more positive** ion
 - The remaining electrons are held more tightly
 
+
+---
+
 ### The Big Jump
 
 The most important pattern: there is a **huge jump** in ionization energy when you start removing **core electrons**.
+
+
+---
 
 ### Example: Magnesium ($1s^2\\,2s^2\\,2p^6\\,3s^2$)
 
@@ -143,6 +167,9 @@ The most important pattern: there is a **huge jump** in ionization energy when y
 | 738 | 1,451 | 7,733 | 10,543 |
 
 The jump from $IE_2$ to $IE_3$ is **enormous** — more than 5× larger! This is because $IE_1$ and $IE_2$ remove the two $3s$ valence electrons, but $IE_3$ must remove a **core** electron from the tightly held $2p$ subshell.
+
+
+---
 
 ### AP Insight
 

@@ -16,7 +16,7 @@ This workshop combines Q vs K comparisons with Le Chatelier\'s principle predict
       id: 'ql6-strategy',
       type: 'text' as const,
       content: `
-## Problem-Solving Strategy
+## 🛠️ Problem-Solving Strategy
 
 ### For Q vs K Problems
 
@@ -26,6 +26,9 @@ This workshop combines Q vs K comparisons with Le Chatelier\'s principle predict
    - $Q < K$ → shift right
    - $Q > K$ → shift left
    - $Q = K$ → at equilibrium
+
+
+---
 
 ### For Le Chatelier Problems
 
@@ -43,7 +46,7 @@ This workshop combines Q vs K comparisons with Le Chatelier\'s principle predict
       id: 'ql6-problem1',
       type: 'text' as const,
       content: `
-## Worked Example 1
+## 🧪 Worked Example 1
 
 $\\text{CO}(g) + \\text{H}_2\\text{O}(g) \\rightleftharpoons \\text{CO}_2(g) + \\text{H}_2(g)$, $K_c = 5.10$ at 700 K
 

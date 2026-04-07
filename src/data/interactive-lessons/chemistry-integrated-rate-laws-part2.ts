@@ -16,7 +16,7 @@ First-order reactions are the most common type in chemistry. Radioactive decay, 
       id: 'ir2-derivation',
       type: 'text' as const,
       content: `
-## Derivation
+## 📌 Derivation
 
 For a first-order reaction: $\\text{Rate} = k[A]$
 
@@ -34,6 +34,9 @@ Or equivalently:
 
 $$\\boxed{[A] = [A]_0 e^{-kt}}$$
 
+
+---
+
 ### Linear Form: $\\ln[A]$ vs $t$
 
 | Variable | Corresponds To |
@@ -42,6 +45,9 @@ $$\\boxed{[A] = [A]_0 e^{-kt}}$$
 | $m$ (slope) | $-k$ |
 | $x$ | $t$ |
 | $b$ (y-intercept) | $\\ln[A]_0$ |
+
+
+---
 
 ### Key Feature
 
@@ -96,7 +102,7 @@ A plot of $\\ln[A]$ vs $t$ is **linear** for a first-order reaction. The slope e
       id: 'ir2-half-life',
       type: 'text' as const,
       content: `
-## First-Order Half-Life
+## 📌 First-Order Half-Life
 
 Set $[A] = [A]_0/2$:
 
@@ -108,6 +114,9 @@ $$-0.693 = -kt_{1/2}$$
 
 $$\\boxed{t_{1/2} = \\frac{0.693}{k}}$$
 
+
+---
+
 ### The Most Important Feature
 
 The half-life of a first-order reaction is **independent of initial concentration**.
@@ -118,6 +127,9 @@ This means:
 - After 2 half-lives: 25% remains
 - After 3 half-lives: 12.5% remains
 - After $n$ half-lives: $(1/2)^n$ remains
+
+
+---
 
 ### Connection to Radioactive Decay
 
@@ -187,13 +199,16 @@ A first-order reaction has $k = 0.0100$ s⁻¹ and $[A]_0 = 2.00$ M.
       id: 'ir2-ratio-form',
       type: 'text' as const,
       content: `
-## Useful Ratio Form
+## 📌 Useful Ratio Form
 
 Often you need to find how much reactant remains at time $t$ without knowing $[A]_0$ explicitly:
 
 $$\\ln\\frac{[A]_t}{[A]_0} = -kt$$
 
 $$\\frac{[A]_t}{[A]_0} = e^{-kt}$$
+
+
+---
 
 ### Quick Calculations with Half-Lives
 

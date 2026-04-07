@@ -16,13 +16,16 @@ When a slightly soluble salt dissolves in a solution that already contains one o
       id: 'sk3-explanation',
       type: 'text' as const,
       content: `
-## Why Does the Common Ion Reduce Solubility?
+## 🤔 Why Does the Common Ion Reduce Solubility?
 
 Consider dissolving $\\text{AgCl}$ in a solution that already contains $\\text{NaCl}$ (providing $\\text{Cl}^-$ ions):
 
 $$\\text{AgCl}(s) \\rightleftharpoons \\text{Ag}^+(aq) + \\text{Cl}^-(aq)$$
 
 The $\\text{Cl}^-$ from NaCl shifts the equilibrium **left** (Le Chatelier\'s), reducing the amount of $\\text{AgCl}$ that dissolves.
+
+
+---
 
 ### Mathematically
 
@@ -38,13 +41,19 @@ This gives a much smaller $s$ than in pure water!
       id: 'sk3-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 Find the molar solubility of $\\text{AgCl}$ ($K_{sp} = 1.8 \\times 10^{-10}$) in 0.10 M NaCl.
+
+
+---
 
 ### In Pure Water (for comparison)
 
 $s = \\sqrt{1.8 \\times 10^{-10}} = 1.3 \\times 10^{-5}$ M
+
+
+---
 
 ### In 0.10 M NaCl
 
@@ -55,6 +64,9 @@ $$K_{sp} = [\\text{Ag}^+][\\text{Cl}^-] = (s)(0.10 + s)$$
 Since $s \\ll 0.10$: $(s)(0.10) \\approx 1.8 \\times 10^{-10}$
 
 $$s = \\frac{1.8 \\times 10^{-10}}{0.10} = 1.8 \\times 10^{-9} \\text{ M}$$
+
+
+---
 
 ### Comparison
 

@@ -16,9 +16,12 @@ The simplest ICE table problem: you\'re given enough information about the equil
       id: 'ic2-direct-method',
       type: 'text' as const,
       content: `
-## Method: All Equilibrium Concentrations Given
+## ⚖️ Method: All Equilibrium Concentrations Given
 
 If you know ALL equilibrium concentrations, just plug them into the K expression.
+
+
+---
 
 ### Example 1
 
@@ -33,9 +36,12 @@ $$K_c = \\frac{[\\text{NH}_3]^2}{[\\text{N}_2][\\text{H}_2]^3} = \\frac{(0.20)^2
       id: 'ic2-using-ice',
       type: 'text' as const,
       content: `
-## Method: Initial + One Equilibrium Value Given
+## ⚖️ Method: Initial + One Equilibrium Value Given
 
 When you know initial concentrations and ONE equilibrium concentration, use the ICE table to find x, then calculate all equilibrium concentrations.
+
+
+---
 
 ### Example 2
 

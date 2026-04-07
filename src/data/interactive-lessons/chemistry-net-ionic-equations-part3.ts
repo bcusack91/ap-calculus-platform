@@ -16,9 +16,12 @@ The complete ionic equation shows every ion in solution, but many of those ions 
       id: 'ni3-spectator-ions',
       type: 'text' as const,
       content: `
-## Spectator Ions
+## ⚛️ Spectator Ions
 
 **Spectator ions** are ions that appear in the same form on both sides of the complete ionic equation. They don\'t participate in the actual reaction.
+
+
+---
 
 ### Example
 
@@ -30,11 +33,17 @@ $$\\text{Ag}^+(aq) + \\underset{\\text{spectator}}{\\text{NO}_3^-(aq)} + \\under
 - **NO₃⁻** appears on both sides → spectator
 - **Ag⁺** reacts with Cl⁻ to form AgCl(s) → NOT spectators
 
+
+---
+
 ### Removing Spectators
 
 Cancel ions that appear identically on both sides:
 
 $$\\text{Ag}^+(aq) + \\cancel{\\text{NO}_3^-(aq)} + \\cancel{\\text{Na}^+(aq)} + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s) + \\cancel{\\text{Na}^+(aq)} + \\cancel{\\text{NO}_3^-(aq)}$$
+
+
+---
 
 ### Net Ionic Equation
 
@@ -47,7 +56,7 @@ This is the simplest representation showing only what **changes**.
       id: 'ni3-steps',
       type: 'text' as const,
       content: `
-## Steps to Write a Net Ionic Equation
+## 📋 Steps to Write a Net Ionic Equation
 
 ### The Complete Process
 
@@ -58,6 +67,9 @@ This is the simplest representation showing only what **changes**.
 | 3 | Identify and cancel **spectator ions** (same on both sides) |
 | 4 | Write the remaining species → **net ionic equation** |
 | 5 | Verify: atoms balanced and charge balanced |
+
+
+---
 
 ### Driving Forces
 
@@ -76,7 +88,7 @@ If none of these forms, there is **no reaction** (NR) and all ions are spectator
       id: 'ni3-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example: No Reaction
+## 🧪 Worked Example: No Reaction
 
 **Mix NaCl(aq) and KNO₃(aq)**
 
@@ -91,6 +103,9 @@ $$\\text{Na}^+(aq) + \\text{Cl}^-(aq) + \\text{K}^+(aq) + \\text{NO}_3^-(aq) \\r
 **Step 4:** Every ion is a spectator! All ions appear identically on both sides.
 
 **Conclusion:** No net ionic equation — **no reaction (NR)**.
+
+
+---
 
 ### Key Lesson
 

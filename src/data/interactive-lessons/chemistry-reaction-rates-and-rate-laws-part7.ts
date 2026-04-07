@@ -16,13 +16,16 @@ This final part brings together all the concepts from Parts 1–6 with AP exam-l
       id: 'rr7-key-concepts-review',
       type: 'text' as const,
       content: `
-## Key Concepts Summary
+## 📋 Key Concepts Summary
 
 ### Rate Expression
 
 For $aA + bB \\rightarrow cC + dD$:
 
 $$\\text{Rate} = -\\frac{1}{a}\\frac{\\Delta[A]}{\\Delta t} = +\\frac{1}{c}\\frac{\\Delta[C]}{\\Delta t}$$
+
+
+---
 
 ### Rate Law
 
@@ -32,9 +35,15 @@ $$\\text{Rate} = k[A]^m[B]^n$$
 - $k$ depends on temperature only
 - Overall order = $m + n$
 
+
+---
+
 ### Units of k
 
 $$\\text{Units} = \\text{M}^{1-(m+n)}\\text{s}^{-1}$$
+
+
+---
 
 ### Key Relationships
 

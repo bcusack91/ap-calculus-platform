@@ -16,7 +16,7 @@ This final review integrates the Nernst equation, concentration cells, the E°-K
       id: 'ne7-master-summary',
       type: 'text' as const,
       content: `
-## Master Equation Summary
+## 📋 Master Equation Summary
 
 ### The Core Equations
 
@@ -27,9 +27,15 @@ This final review integrates the Nernst equation, concentration cells, the E°-K
 | $E° = \\frac{0.0592}{n}\\log K$ | Relate standard potential to equilibrium constant |
 | $\\Delta G° = -nFE°$ | Relate free energy to cell potential |
 
+
+---
+
 ### The Thermodynamic Triangle (at 25°C)
 
 $$\\Delta G° \\xleftrightarrow{-nF} E° \\xleftrightarrow{0.0592/n} \\log K \\xleftrightarrow{-RT\\ln} \\Delta G°$$
+
+
+---
 
 ### Battery Classification
 

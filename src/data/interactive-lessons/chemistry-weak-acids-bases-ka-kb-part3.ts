@@ -16,7 +16,7 @@ Weak bases partially react with water to produce $OH^-$ ions. The extent of this
       id: 'wk3-weak-base-equilibrium',
       type: 'text' as const,
       content: `
-## Weak Base Equilibrium
+## ⚖️ Weak Base Equilibrium
 
 A generic weak base $B$ in water:
 
@@ -26,12 +26,18 @@ The equilibrium expression is:
 
 $$K_b = \\frac{[BH^+][OH^-]}{[B]}$$
 
+
+---
+
 ### Key Points
 
 - Water is omitted (pure liquid)
 - $K_b$ is small → partial reaction only
 - **Larger $K_b$** = stronger weak base
 - The base **accepts** a proton from water (Brønsted-Lowry)
+
+
+---
 
 ### Common Weak Bases
 
@@ -49,7 +55,7 @@ Relative strength: $CH_3NH_2 > NH_3 > C_5H_5N > C_6H_5NH_2$
       id: 'wk3-ice-table',
       type: 'text' as const,
       content: `
-## ICE Table for Weak Bases
+## 📌 ICE Table for Weak Bases
 
 For $NH_3$ at concentration $C$:
 
@@ -66,6 +72,9 @@ $$K_b = \\frac{x^2}{C - x} \\approx \\frac{x^2}{C}$$
 $$x = [OH^-] = \\sqrt{K_b \\cdot C}$$
 
 Then: $pOH = -\\log[OH^-]$ and $pH = 14 - pOH$
+
+
+---
 
 ### Worked Example
 
@@ -128,7 +137,7 @@ $$pH = 14 - 2.79 = 11.21$$
       id: 'wk3-conjugate-base',
       type: 'text' as const,
       content: `
-## Conjugate Bases of Weak Acids
+## 🧪 Conjugate Bases of Weak Acids
 
 The conjugate base of a weak acid also acts as a weak base in water:
 
@@ -136,11 +145,17 @@ $$A^-(aq) + H_2O(l) \\rightleftharpoons HA(aq) + OH^-(aq)$$
 
 $$K_b = \\frac{[HA][OH^-]}{[A^-]}$$
 
+
+---
+
 ### Example: Acetate Ion
 
 $$CH_3COO^-(aq) + H_2O(l) \\rightleftharpoons CH_3COOH(aq) + OH^-(aq)$$
 
 This is why solutions of sodium acetate ($NaCH_3COO$) are **basic** — the acetate ion is a weak base!
+
+
+---
 
 ### Salts and pH
 

@@ -16,7 +16,7 @@ This workshop combines all electrolysis concepts: cell comparisons, product pred
       id: 'ef6-strategy',
       type: 'text' as const,
       content: `
-## Problem-Solving Checklist
+## 🛠️ Problem-Solving Checklist
 
 ### For Faraday\'s Law Problems
 
@@ -27,6 +27,9 @@ This workshop combines all electrolysis concepts: cell comparisons, product pred
 5. ✅ Find mol substance: $\\text{mol} = \\text{mol } e^-/n$
 6. ✅ Convert to mass or volume if needed
 
+
+---
+
 ### For Product Prediction
 
 | System | Cathode Product | Anode Product |
@@ -36,6 +39,9 @@ This workshop combines all electrolysis concepts: cell comparisons, product pred
 | Aqueous, less active metal | Metal deposits | Depends on anion |
 | Aqueous, halide anion | — | Halogen (Cl₂, Br₂, I₂) |
 | Aqueous, oxyanion/F⁻ | — | O₂ |
+
+
+---
 
 ### The One-Step Mass Formula
 

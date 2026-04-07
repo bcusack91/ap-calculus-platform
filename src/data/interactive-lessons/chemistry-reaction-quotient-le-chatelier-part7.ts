@@ -16,11 +16,14 @@ This final part reviews Q vs K comparisons, Le Chatelier predictions for all typ
       id: 'ql7-summary',
       type: 'text' as const,
       content: `
-## Complete Concept Summary
+## 📋 Complete Concept Summary
 
 ### Reaction Quotient Q
 - Same expression as K, using current (not equilibrium) concentrations
 - $Q < K$ → shift right | $Q > K$ → shift left | $Q = K$ → at equilibrium
+
+
+---
 
 ### Le Chatelier\'s Principle
 
@@ -36,6 +39,9 @@ This final part reviews Q vs K comparisons, Le Chatelier predictions for all typ
 | ↓ Temperature | Endothermic: ←; Exothermic: → | **Yes** |
 | Catalyst | No shift | No |
 | Inert gas (const V) | No shift | No |
+
+
+---
 
 ### Key Reminders
 - Only **temperature** changes K

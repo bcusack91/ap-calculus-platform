@@ -16,7 +16,7 @@ This workshop combines all three integrated rate laws in problems that require y
       id: 'ir6-strategy-review',
       type: 'text' as const,
       content: `
-## Problem-Solving Flowchart
+## 🛠️ Problem-Solving Flowchart
 
 ### Step 1: Identify the Order
 
@@ -29,12 +29,18 @@ Method B — **Successive half-lives**:
 
 Method C — **Initial rates**: Compare experiments (covered in earlier parts).
 
+
+---
+
 ### Step 2: Find k
 
 Use the slope of the appropriate linear plot:
 - Zero: slope of [A] vs t = $-k$
 - First: slope of ln[A] vs t = $-k$
 - Second: slope of 1/[A] vs t = $+k$
+
+
+---
 
 ### Step 3: Solve the Problem
 

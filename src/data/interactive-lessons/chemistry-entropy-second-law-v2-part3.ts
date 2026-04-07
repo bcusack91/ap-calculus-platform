@@ -16,7 +16,7 @@ Drop a ball — it falls. Mix hot and cold water — they equalize. A broken egg
       id: 'en3v2-statement',
       type: 'text' as const,
       content: `
-## The Second Law — Three Formulations
+## 📏 The Second Law — Three Formulations
 
 | Formulation | Statement |
 |-------------|-----------|
@@ -25,6 +25,9 @@ Drop a ball — it falls. Mix hot and cold water — they equalize. A broken egg
 | **Kelvin–Planck** | No heat engine can convert heat entirely into work |
 
 All three say the same thing in different ways: **nature has a preferred direction**.
+
+
+---
 
 ### The Universe as a Whole
 
@@ -41,7 +44,7 @@ $$\\Delta S_{\\text{univ}} = \\Delta S_{\\text{sys}} + \\Delta S_{\\text{surr}}$
       id: 'en3v2-surroundings',
       type: 'text' as const,
       content: `
-## Entropy of the Surroundings
+## 🌡️ Entropy of the Surroundings
 
 The surroundings gain or lose entropy through heat transfer:
 
@@ -51,6 +54,9 @@ $$\\Delta S_{\\text{surr}} = -\\frac{\\Delta H_{\\text{sys}}}{T}$$
 |--------------|----------------------|---------------------|------------------------|
 | Exothermic | Negative (−) | Releases heat | **Positive** (+) |
 | Endothermic | Positive (+) | Absorbs heat | **Negative** (−) |
+
+
+---
 
 ### Why Does Temperature Matter?
 

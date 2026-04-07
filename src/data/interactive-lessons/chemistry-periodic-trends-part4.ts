@@ -13,17 +13,23 @@ While ionization energy measures how hard it is to **remove** an electron, elect
     {
       id: 'pt4-definition',
       type: 'text' as const,
-      content: `## What Is Electron Affinity?
+      content: `## 📖 What Is Electron Affinity?
 
 **Electron affinity (EA)** is the energy change that occurs when a gaseous atom gains an electron:
 
 $$X(g) + e^- \\rightarrow X^-(g) \\qquad \\Delta E = EA$$
+
+
+---
 
 ### Sign Convention
 
 - A **negative** EA means energy is **released** — the atom **wants** the electron (exothermic).
 - A **more negative** EA means a **greater** tendency to gain an electron.
 - A **positive** EA means energy must be **added** — the atom resists gaining an electron.
+
+
+---
 
 ### Example Values (kJ/mol)
 
@@ -41,7 +47,7 @@ Notice that **chlorine** has the most negative EA of any element — even more t
     {
       id: 'pt4-trends',
       type: 'text' as const,
-      content: `## General Trends
+      content: `## 📈 General Trends
 
 ### Across a Period (Left → Right)
 
@@ -52,6 +58,9 @@ Electron affinity **generally becomes more negative** (more favorable) across a 
 - The atom has a stronger pull on an incoming electron
 - Nonmetals (right side) have the most negative EA values
 
+
+---
+
 ### Down a Group (Top → Bottom)
 
 Electron affinity generally **becomes less negative** (less favorable) down a group.
@@ -61,6 +70,9 @@ Electron affinity generally **becomes less negative** (less favorable) down a gr
 - The incoming electron feels less attraction
 - Exception: fluorine vs. chlorine (see below)
 
+
+---
+
 ### The Fluorine Anomaly
 
 Fluorine's EA (−328 kJ/mol) is **less negative** than chlorine's (−349 kJ/mol). This is because fluorine is so small that adding an electron to its compact $2p$ orbitals creates significant **electron-electron repulsion**. Chlorine's larger $3p$ orbitals accommodate the extra electron more easily.`
@@ -68,18 +80,30 @@ Fluorine's EA (−328 kJ/mol) is **less negative** than chlorine's (−349 kJ/mo
     {
       id: 'pt4-exceptions',
       type: 'text' as const,
-      content: `## Important Exceptions
+      content: `## ⚠️ Important Exceptions
 
 Several elements have **near-zero or positive** electron affinities:
+
+
+---
 
 ### 1. Noble Gases (Group 18)
 Full valence shells — no room for an additional electron without going to a higher energy level. EA is positive (unfavorable).
 
+
+---
+
 ### 2. Nitrogen ($2p^3$)
 Has a half-filled $2p$ subshell. Adding an electron would break this stable half-filled configuration. EA ≈ 0.
 
+
+---
+
 ### 3. Group 2 Elements (Be, Mg, Ca)
 Full $s$ subshell ($ns^2$). An added electron would go into a higher-energy $p$ orbital. EA is near zero or slightly positive.
+
+
+---
 
 ### AP Exam Tip
 

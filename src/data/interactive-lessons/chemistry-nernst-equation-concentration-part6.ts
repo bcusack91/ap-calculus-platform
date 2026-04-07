@@ -16,7 +16,7 @@ This workshop provides practice with the Nernst equation, concentration cells, t
       id: 'ne6-strategy',
       type: 'text' as const,
       content: `
-## Problem-Solving Toolkit
+## 🛠️ Problem-Solving Toolkit
 
 ### Which Equation to Use?
 
@@ -27,6 +27,9 @@ This workshop provides practice with the Nernst equation, concentration cells, t
 | $K$ | $E°$ | $E° = (0.0592/n)\\log K$ |
 | Same electrodes, different conc. | $E$ | $E = (0.0592/n)\\log([\\text{conc}]/[\\text{dilute}])$ |
 | $E°$ | $\\Delta G°$ | $\\Delta G° = -nFE°$ |
+
+
+---
 
 ### Common Pitfalls
 

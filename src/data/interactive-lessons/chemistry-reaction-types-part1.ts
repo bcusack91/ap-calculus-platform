@@ -16,13 +16,19 @@ Chemistry is fundamentally about rearranging atoms. The simplest patterns involv
       id: 'rt1-synthesis',
       type: 'text' as const,
       content: `
-## Synthesis (Combination) Reactions
+## 🎯 Synthesis (Combination) Reactions
 
 A synthesis reaction occurs when two or more reactants combine to form a **single product**.
+
+
+---
 
 ### General Form
 
 $$A + B \\rightarrow AB$$
+
+
+---
 
 ### Classic Examples
 
@@ -33,9 +39,15 @@ $$A + B \\rightarrow AB$$
 | Nonmetal oxide + Water | Acid | $\\text{SO}_3 + \\text{H}_2\\text{O} \\rightarrow \\text{H}_2\\text{SO}_4$ |
 | Two elements | Compound | $2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$ |
 
+
+---
+
 ### Key Pattern
 
 Look for **multiple reactants** forming **one product**. The number of reactants is always greater than the number of products (which is 1).
+
+
+---
 
 ### Real-World Example
 
@@ -47,13 +59,19 @@ $$4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3$$
       id: 'rt1-decomposition',
       type: 'text' as const,
       content: `
-## Decomposition Reactions
+## ⚗️ Decomposition Reactions
 
 A decomposition reaction occurs when a **single reactant** breaks down into two or more simpler products.
+
+
+---
 
 ### General Form
 
 $$AB \\rightarrow A + B$$
+
+
+---
 
 ### Classic Examples
 
@@ -64,9 +82,15 @@ $$AB \\rightarrow A + B$$
 | Metal chlorate | Metal chloride + O₂ | $2\\text{KClO}_3 \\rightarrow 2\\text{KCl} + 3\\text{O}_2$ |
 | Water (electrolysis) | H₂ + O₂ | $2\\text{H}_2\\text{O} \\rightarrow 2\\text{H}_2 + \\text{O}_2$ |
 
+
+---
+
 ### Key Pattern
 
 Look for **one reactant** producing **multiple products**. Decomposition often requires energy input (heat, electricity, or light).
+
+
+---
 
 ### Common Triggers
 
@@ -79,7 +103,7 @@ Look for **one reactant** producing **multiple products**. Decomposition often r
       id: 'rt1-comparison',
       type: 'text' as const,
       content: `
-## Synthesis vs. Decomposition — A Comparison
+## 🎯 Synthesis vs. Decomposition — A Comparison
 
 | Feature | Synthesis | Decomposition |
 |---------|-----------|---------------|
@@ -88,6 +112,9 @@ Look for **one reactant** producing **multiple products**. Decomposition often r
 | Products | One | Two or more |
 | Energy | Often releases energy | Often requires energy |
 | General form | $A + B \\rightarrow AB$ | $AB \\rightarrow A + B$ |
+
+
+---
 
 ### Memory Trick
 

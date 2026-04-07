@@ -16,7 +16,7 @@ Let's put everything together with multi-step problems that combine qualitative 
       id: 'en6v2-strategy',
       type: 'text' as const,
       content: `
-## Problem-Solving Strategy
+## 🛠️ Problem-Solving Strategy
 
 ### Step-by-Step Approach
 
@@ -25,6 +25,9 @@ Let's put everything together with multi-step problems that combine qualitative 
 3. **Calculate** using the appropriate formula
 4. **Check** — does the sign match your prediction?
 
+
+---
+
 ### Key Formulas
 
 | Formula | When to Use |
@@ -32,6 +35,9 @@ Let's put everything together with multi-step problems that combine qualitative 
 | $\\Delta S°_{\\text{rxn}} = \\sum nS°_{\\text{prod}} - \\sum nS°_{\\text{react}}$ | Standard entropy change from tables |
 | $\\Delta S_{\\text{surr}} = -\\Delta H_{\\text{sys}} / T$ | Surroundings entropy from enthalpy |
 | $\\Delta S_{\\text{univ}} = \\Delta S_{\\text{sys}} + \\Delta S_{\\text{surr}}$ | Spontaneity check |
+
+
+---
 
 ### Unit Watch! ⚠️
 

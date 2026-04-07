@@ -16,15 +16,21 @@ In the lab, you need to prepare buffers at specific pH values with specific capa
       id: 'bf5-choosing-acid',
       type: 'text' as const,
       content: `
-## Step 1: Choose the Right Weak Acid
+## 🧪 Step 1: Choose the Right Weak Acid
 
 **Rule:** Choose a weak acid whose $pK_a$ is as close as possible to the desired pH.
+
+
+---
 
 ### Why?
 
 - The buffer is most effective at $pH = pK_a$ (equal concentrations of $HA$ and $A^-$)
 - The buffer works in the range $pK_a \\pm 1$
 - Closer $pK_a$ to target pH → closer to 1:1 ratio → better capacity
+
+
+---
 
 ### Common Buffer Acids and Their $pK_a$ Values
 
@@ -42,7 +48,7 @@ In the lab, you need to prepare buffers at specific pH values with specific capa
       id: 'bf5-calculating-amounts',
       type: 'text' as const,
       content: `
-## Step 2: Calculate the Required Ratio
+## 🔢 Step 2: Calculate the Required Ratio
 
 From the Henderson-Hasselbalch equation:
 
@@ -51,6 +57,9 @@ $$pH = pK_a + \\log\\frac{[A^-]}{[HA]}$$
 $$\\log\\frac{[A^-]}{[HA]} = pH - pK_a$$
 
 $$\\frac{[A^-]}{[HA]} = 10^{(pH - pK_a)}$$
+
+
+---
 
 ### Worked Example
 
@@ -115,7 +124,7 @@ $$[A^-] = 1.82(0.071) = 0.129 \\text{ M}$$
       id: 'bf5-alternative-methods',
       type: 'text' as const,
       content: `
-## Alternative Preparation Methods
+## 📌 Alternative Preparation Methods
 
 ### Method 2: Partial Neutralization
 
@@ -130,6 +139,9 @@ $$CH_3COOH + OH^- \\rightarrow CH_3COO^- + H_2O$$
 - $CH_3COOH$ remaining: $0.20 - 0.10 = 0.10$ mol
 - $CH_3COO^-$ formed: $0.10$ mol
 - Ratio = 1:1 → $pH = pK_a = 4.74$ ✓
+
+
+---
 
 ### Method 3: Partial Neutralization of Base
 

@@ -2765,6 +2765,12 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
                 {children}
               </blockquote>
             ),
+            blockquote: ({ children }) => (
+              <blockquote className="border-l-4 border-purple-500 pl-6 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg text-lg font-semibold">
+                {children}
+              </blockquote>
+            ),
+            hr: () => <hr className="my-8 border-t-2 border-purple-100 dark:border-purple-800/50" />,
             table: ({ children }) => <table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700 my-6">{children}</table>,
             thead: ({ children }) => <thead className="bg-purple-100 dark:bg-purple-900/40">{children}</thead>,
             tbody: ({ children }) => <tbody>{children}</tbody>,
@@ -2797,6 +2803,12 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
           strong: ({ children }) => <strong className="font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
           ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,
           li: ({ children }) => <li className="text-lg">{children}</li>,
+          blockquote: ({ children }) => (
+            <blockquote className="border-l-4 border-purple-500 pl-6 py-3 bg-purple-50 dark:bg-purple-900/20 rounded-r-lg text-lg font-semibold">
+              {children}
+            </blockquote>
+          ),
+          hr: () => <hr className="my-8 border-t-2 border-purple-100 dark:border-purple-800/50" />,
           table: ({ children }) => <table className="min-w-full border-collapse border-2 border-purple-300 dark:border-purple-700 my-6">{children}</table>,
           thead: ({ children }) => <thead className="bg-purple-100 dark:bg-purple-900/40">{children}</thead>,
           tbody: ({ children }) => <tbody>{children}</tbody>,

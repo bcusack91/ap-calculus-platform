@@ -13,9 +13,12 @@ Electronegativity is the property that determines how electrons are distributed 
     {
       id: 'pt5-definition',
       type: 'text' as const,
-      content: `## What Is Electronegativity?
+      content: `## 📖 What Is Electronegativity?
 
 **Electronegativity** is a measure of an atom's ability to attract electrons **toward itself** in a chemical bond.
+
+
+---
 
 ### The Pauling Scale
 
@@ -29,6 +32,9 @@ Linus Pauling developed the most widely used electronegativity scale:
 | Cl | 3.0 | K | 0.8 |
 | Br | 2.8 | Cs | 0.7 |
 
+
+---
+
 ### Key Facts
 
 - **Fluorine** has the highest electronegativity of any element (4.0)
@@ -39,7 +45,7 @@ Linus Pauling developed the most widely used electronegativity scale:
     {
       id: 'pt5-trends',
       type: 'text' as const,
-      content: `## Periodic Trends in Electronegativity
+      content: `## 📈 Periodic Trends in Electronegativity
 
 ### Across a Period (Left → Right)
 
@@ -49,6 +55,9 @@ Electronegativity **increases** across a period.
 - $Z_{eff}$ increases → atoms pull harder on bonding electrons
 - Nonmetals (right side) are the most electronegative
 
+
+---
+
 ### Down a Group (Top → Bottom)
 
 Electronegativity **decreases** down a group.
@@ -56,6 +65,9 @@ Electronegativity **decreases** down a group.
 **Why?**
 - Bonding electrons are farther from the nucleus
 - Additional shielding reduces the attraction for bonding electrons
+
+
+---
 
 ### Summary
 
@@ -73,7 +85,7 @@ This trend mirrors ionization energy and is the **opposite** of atomic radius.`
     {
       id: 'pt5-bond-polarity',
       type: 'text' as const,
-      content: `## Electronegativity and Bond Polarity
+      content: `## 🔋 Electronegativity and Bond Polarity
 
 The **difference** in electronegativity ($\\Delta EN$) between two bonded atoms determines the type of bond:
 
@@ -83,6 +95,9 @@ The **difference** in electronegativity ($\\Delta EN$) between two bonded atoms 
 | $0.1 - 0.4$ | Slightly polar covalent | $\\text{C-H}$ ($\\Delta EN = 0.4$) |
 | $0.5 - 1.7$ | Polar covalent | $\\text{H-Cl}$ ($\\Delta EN = 0.9$) |
 | $> 1.7$ | Ionic | $\\text{NaCl}$ ($\\Delta EN = 2.1$) |
+
+
+---
 
 ### Dipole Direction
 

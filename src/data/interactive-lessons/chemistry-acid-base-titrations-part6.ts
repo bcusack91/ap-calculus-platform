@@ -16,9 +16,12 @@ This workshop takes you through complete titration calculations — the kind tha
       id: 'at6-problem1',
       type: 'text' as const,
       content: `
-## Problem 1: Complete Titration Curve Calculations
+## 🔢 Problem 1: Complete Titration Curve Calculations
 
 50.0 mL of 0.200 M $CH_3COOH$ ($K_a = 1.8 \\times 10^{-5}$, $pK_a = 4.74$) is titrated with 0.200 M $NaOH$.
+
+
+---
 
 ### (a) Initial pH
 
@@ -26,9 +29,15 @@ $$K_a = \\frac{x^2}{0.200} = 1.8 \\times 10^{-5}$$
 $$x = \\sqrt{3.6 \\times 10^{-6}} = 1.90 \\times 10^{-3}$$
 $$pH = -\\log(1.90 \\times 10^{-3}) = 2.72$$
 
+
+---
+
 ### (b) After 25.0 mL $NaOH$ (half-equivalence)
 
 $$pH = pK_a = 4.74$$
+
+
+---
 
 ### (c) Equivalence Point (50.0 mL $NaOH$)
 
@@ -66,7 +75,7 @@ Same titration: 50.0 mL of 0.200 M $CH_3COOH$ with 0.200 M $NaOH$ ($pK_a = 4.74$
       id: 'at6-problem2',
       type: 'text' as const,
       content: `
-## Problem 2: Unknown Acid Identification
+## 🧪 Problem 2: Unknown Acid Identification
 
 A monoprotic weak acid $HA$ (25.0 mL, 0.100 M) is titrated with 0.100 M $NaOH$. The following data is collected:
 
@@ -76,6 +85,9 @@ A monoprotic weak acid $HA$ (25.0 mL, 0.100 M) is titrated with 0.100 M $NaOH$. 
 | 12.5 | 3.75 |
 | 25.0 | 8.26 |
 | 37.5 | 12.52 |
+
+
+---
 
 ### Analysis:
 

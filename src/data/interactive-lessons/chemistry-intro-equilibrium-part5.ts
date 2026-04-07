@@ -16,7 +16,7 @@ The numerical value of the equilibrium constant tells you how far a reaction pro
       id: 'ie5-large-k',
       type: 'text' as const,
       content: `
-## Large K: Products Favored
+## 📌 Large K: Products Favored
 
 When $K \\gg 1$ (say, $K > 10^3$):
 
@@ -24,11 +24,17 @@ $$K = \\frac{[\\text{products}]}{[\\text{reactants}]} \\gg 1$$
 
 This means the **numerator** (products) is much larger than the **denominator** (reactants).
 
+
+---
+
 ### Interpretation
 - The reaction lies **far to the right**
 - At equilibrium, mostly **products** are present
 - The forward reaction is strongly favored
 - The reaction goes "nearly to completion"
+
+
+---
 
 ### Examples
 
@@ -42,7 +48,7 @@ This means the **numerator** (products) is much larger than the **denominator** 
       id: 'ie5-small-k',
       type: 'text' as const,
       content: `
-## Small K: Reactants Favored
+## 📌 Small K: Reactants Favored
 
 When $K \\ll 1$ (say, $K < 10^{-3}$):
 
@@ -50,11 +56,17 @@ $$K = \\frac{[\\text{products}]}{[\\text{reactants}]} \\ll 1$$
 
 The **denominator** (reactants) is much larger than the **numerator** (products).
 
+
+---
+
 ### Interpretation
 - The reaction lies **far to the left**
 - At equilibrium, mostly **reactants** remain
 - The forward reaction barely proceeds
 - Very little product forms
+
+
+---
 
 ### Examples
 
@@ -63,7 +75,7 @@ The **denominator** (reactants) is much larger than the **numerator** (products)
 | $\\text{N}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{NO}(g)$ | $4.7 \\times 10^{-31}$ (at 25°C) | Virtually no NO at equilibrium |
 | $2\\,\\text{HF}(g) \\rightleftharpoons \\text{H}_2(g) + \\text{F}_2(g)$ | $\\sim 10^{-13}$ | HF very stable |
 
-## Intermediate K
+## 📌 Intermediate K
 
 When $K \\approx 1$ (roughly $10^{-3} < K < 10^3$):
 - Significant amounts of **both** reactants and products present
@@ -119,12 +131,18 @@ When $K \\approx 1$ (roughly $10^{-3} < K < 10^3$):
       id: 'ie5-temperature',
       type: 'text' as const,
       content: `
-## K Depends on Temperature
+## 🌡️ K Depends on Temperature
 
 The equilibrium constant is a **function of temperature only**.
 
+
+---
+
 ### What Changes K?
 - **Temperature** — the ONLY factor that changes K
+
+
+---
 
 ### What Does NOT Change K?
 - Changing concentrations
@@ -133,6 +151,9 @@ The equilibrium constant is a **function of temperature only**.
 - Adding an inert gas
 
 These factors may shift the equilibrium **position** (where Q moves relative to K), but K itself remains constant at a given temperature.
+
+
+---
 
 ### Temperature and K Direction
 

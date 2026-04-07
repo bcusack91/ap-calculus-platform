@@ -16,11 +16,14 @@ Catalysts are substances that speed up reactions without being consumed. They ar
       id: 'ae6-how-catalysts-work',
       type: 'text' as const,
       content: `
-## How Catalysts Work
+## 🔧 How Catalysts Work
 
 A catalyst provides an **alternative reaction pathway** with a **lower activation energy**:
 
 $$E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})$$
+
+
+---
 
 ### On an Energy Diagram
 
@@ -29,6 +32,9 @@ The catalyzed pathway shows a **lower peak** (transition state) while the reacta
 - **$\\Delta H$ is unchanged** — the catalyst does not affect thermodynamics
 - **$E_a$ is reduced** — more molecules have sufficient energy to react
 - **$k$ increases** — from the Arrhenius equation: lower $E_a$ → larger $e^{-E_a/(RT)}$ → larger $k$
+
+
+---
 
 ### What Catalysts Do NOT Do
 
@@ -44,7 +50,7 @@ The catalyzed pathway shows a **lower peak** (transition state) while the reacta
       id: 'ae6-types-of-catalysts',
       type: 'text' as const,
       content: `
-## Types of Catalysts
+## 📂 Types of Catalysts
 
 ### 1. Homogeneous Catalysts
 
@@ -57,6 +63,9 @@ The catalyzed pathway shows a **lower peak** (transition state) while the reacta
 | Advantage | Better mixing, uniform activity |
 | Disadvantage | Hard to separate from products |
 
+
+---
+
 ### 2. Heterogeneous Catalysts
 
 **Different phase** from reactants (typically a solid catalyst with gas or liquid reactants).
@@ -68,6 +77,9 @@ The catalyzed pathway shows a **lower peak** (transition state) while the reacta
 | Mechanism | Adsorption → reaction → desorption |
 | Advantage | Easy to separate, reusable |
 | Disadvantage | Can be poisoned (blocked) |
+
+
+---
 
 ### 3. Biological Catalysts (Enzymes)
 
@@ -129,21 +141,36 @@ The catalyzed pathway shows a **lower peak** (transition state) while the reacta
       id: 'ae6-heterogeneous-mechanism',
       type: 'text' as const,
       content: `
-## Heterogeneous Catalysis: The Four Steps
+## 📋 Heterogeneous Catalysis: The Four Steps
 
 When a gaseous reactant reacts on a solid catalyst surface:
+
+
+---
 
 ### Step 1: Adsorption
 Reactant molecules bind to the catalyst surface at **active sites**. Bonds in the reactant may be weakened.
 
+
+---
+
 ### Step 2: Migration / Diffusion
 Adsorbed molecules move along the surface to find each other.
+
+
+---
 
 ### Step 3: Reaction
 The weakened bonds allow the reaction to proceed with lower $E_a$. New bonds form.
 
+
+---
+
 ### Step 4: Desorption
 Product molecules detach from the surface, freeing active sites for new reactant molecules.
+
+
+---
 
 ### Catalyst Poisoning
 

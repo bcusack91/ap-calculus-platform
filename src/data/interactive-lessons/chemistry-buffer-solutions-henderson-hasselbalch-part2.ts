@@ -16,7 +16,7 @@ Now we\'ll calculate exactly how much the pH changes when acid or base is added 
       id: 'bf2-method',
       type: 'text' as const,
       content: `
-## The Two-Step Method
+## 📋 The Two-Step Method
 
 ### Step 1: Stoichiometry (Neutralization)
 
@@ -27,6 +27,9 @@ The added strong acid or base reacts **completely** with one buffer component:
 **Adding $OH^-$:** $HA + OH^- \\rightarrow A^- + H_2O$ (acid component consumed)
 
 Calculate new moles of $HA$ and $A^-$ after reaction.
+
+
+---
 
 ### Step 2: Equilibrium (Henderson-Hasselbalch)
 
@@ -43,15 +46,21 @@ $$pH = pK_a + \\log\\frac{\\text{mol } A^-}{\\text{mol } HA}$$
       id: 'bf2-worked-example-acid',
       type: 'text' as const,
       content: `
-## Worked Example: Adding Strong Acid
+## 🧪 Worked Example: Adding Strong Acid
 
 A buffer contains 0.15 mol $CH_3COOH$ and 0.15 mol $CH_3COO^-$ in 1.0 L. What is the pH after adding 0.020 mol $HCl$?
 
 $K_a = 1.8 \\times 10^{-5}$, $pK_a = 4.74$
 
+
+---
+
 ### Before Addition
 
 $pH = 4.74 + \\log(0.15/0.15) = 4.74 + 0 = 4.74$
+
+
+---
 
 ### Step 1: Stoichiometry
 
@@ -62,6 +71,9 @@ $CH_3COO^- + H^+ \\rightarrow CH_3COOH$
 | Before | 0.15 mol | 0.020 mol | 0.15 mol |
 | Change | -0.020 | -0.020 | +0.020 |
 | After | 0.13 mol | 0 | 0.17 mol |
+
+
+---
 
 ### Step 2: Henderson-Hasselbalch
 
@@ -109,9 +121,12 @@ Without the buffer, adding 0.020 mol $HCl$ to 1.0 L water would give pH = $-\\lo
       id: 'bf2-worked-example-base',
       type: 'text' as const,
       content: `
-## Worked Example: Adding Strong Base
+## 🧪 Worked Example: Adding Strong Base
 
 Same buffer: 0.15 mol $CH_3COOH$ and 0.15 mol $CH_3COO^-$ in 1.0 L. What is the pH after adding 0.030 mol $NaOH$?
+
+
+---
 
 ### Step 1: Stoichiometry
 
@@ -122,6 +137,9 @@ $CH_3COOH + OH^- \\rightarrow CH_3COO^- + H_2O$
 | Before | 0.15 mol | 0.030 mol | 0.15 mol |
 | Change | -0.030 | -0.030 | +0.030 |
 | After | 0.12 mol | 0 | 0.18 mol |
+
+
+---
 
 ### Step 2: Henderson-Hasselbalch
 
@@ -157,12 +175,15 @@ A buffer has 0.20 mol $HF$ and 0.20 mol $NaF$ in 1.0 L. ($pK_a = 3.17$)
       id: 'bf2-buffer-destroyed',
       type: 'text' as const,
       content: `
-## When Is a Buffer Destroyed?
+## 🛡️ When Is a Buffer Destroyed?
 
 A buffer is **destroyed** when all of one component is consumed:
 
 - Adding enough $H^+$ to consume all the $A^-$ → no more base component
 - Adding enough $OH^-$ to consume all the $HA$ → no more acid component
+
+
+---
 
 ### Example
 

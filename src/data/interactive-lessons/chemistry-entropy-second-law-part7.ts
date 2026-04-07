@@ -16,7 +16,7 @@ This review integrates all entropy concepts: microstates, predicting signs, the 
       id: 'en7-summary',
       type: 'text' as const,
       content: `
-## Complete Concept Map
+## 📌 Complete Concept Map
 
 ### Entropy Fundamentals
 
@@ -27,6 +27,9 @@ This review integrates all entropy concepts: microstates, predicting signs, the 
 | Phase order | $S_{\\text{solid}} < S_{\\text{liquid}} \\ll S_{\\text{gas}}$ |
 | Third Law | $S = 0$ for perfect crystal at 0 K |
 
+
+---
+
 ### Predicting and Calculating ΔS
 
 | Method | Approach |
@@ -36,6 +39,9 @@ This review integrates all entropy concepts: microstates, predicting signs, the 
 | Phase transition | $\\Delta S = \\Delta H_{\\text{trans}}/T_{\\text{trans}}$ |
 | Surroundings | $\\Delta S_{\\text{surr}} = -\\Delta H_{\\text{sys}}/T$ |
 
+
+---
+
 ### Spontaneity
 
 | $\\Delta H$ | $\\Delta S$ | Spontaneity |
@@ -44,6 +50,9 @@ This review integrates all entropy concepts: microstates, predicting signs, the 
 | + | − | Never spontaneous |
 | − | − | Spontaneous at low T |
 | + | + | Spontaneous at high T |
+
+
+---
 
 ### Critical Unit Reminder
 

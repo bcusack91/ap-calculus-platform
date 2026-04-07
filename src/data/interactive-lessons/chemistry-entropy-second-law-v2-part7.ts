@@ -16,7 +16,7 @@ This section reviews all entropy concepts and presents AP-style questions that c
       id: 'en7v2-summary',
       type: 'text' as const,
       content: `
-## Concept Map
+## 📌 Concept Map
 
 ### The Big Picture
 
@@ -28,6 +28,9 @@ This section reviews all entropy concepts and presents AP-style questions that c
 | Surroundings entropy | $\\Delta S_{\\text{surr}} = -\\Delta H/T$ | Connecting enthalpy to spontaneity |
 | Second Law | $\\Delta S_{\\text{univ}} > 0$ | Determining spontaneity |
 | Crossover temperature | $T = \\Delta H/\\Delta S$ | When spontaneity changes |
+
+
+---
 
 ### Predicting $\\Delta S$ Sign — Quick Rules
 

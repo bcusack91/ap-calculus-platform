@@ -16,15 +16,18 @@ This final review covers everything about galvanic cells: redox fundamentals, ce
       id: 'gc7-master-summary',
       type: 'text' as const,
       content: `
-## Master Summary
+## 📋 Master Summary
 
 ### Essential Equations
 
 | Equation | Purpose |
 |----------|---------|
-| $E°_{\\text{cell}} = E°_{\\text{cathode}} - E°_{\\text{anode}}$ | Calculate cell voltage |
-| $\\Delta G° = -nFE°$ | Connect free energy to voltage |
-| $E° = \\frac{0.0592}{n}\\log K$ | Connect voltage to equilibrium (at 25°C) |
+| $E^{\\circ}_{\\text{cell}} = E^{\\circ}_{\\text{cathode}} - E^{\\circ}_{\\text{anode}}$ | Calculate cell voltage |
+| $\\Delta G^{\\circ} = -nFE^{\\circ}$ | Connect free energy to voltage |
+| $E^{\\circ} = \\frac{0.0592}{n}\\log K$ | Connect voltage to equilibrium (at 25°C) |
+
+
+---
 
 ### Cell Components
 
@@ -35,12 +38,15 @@ This final review covers everything about galvanic cells: redox fundamentals, ce
 | Salt bridge | Maintains neutrality | Ions flow, not electrons |
 | Wire | Carries electrons | Anode → Cathode |
 
+
+---
+
 ### Spontaneity Criteria
 
 | Quantity | Spontaneous | Equilibrium | Nonspontaneous |
 |----------|------------|-------------|----------------|
-| $E°_{\\text{cell}}$ | $> 0$ | $= 0$ | $< 0$ |
-| $\\Delta G°$ | $< 0$ | $= 0$ | $> 0$ |
+| $E^{\\circ}_{\\text{cell}}$ | $> 0$ | $= 0$ | $< 0$ |
+| $\\Delta G^{\\circ}$ | $< 0$ | $= 0$ | $> 0$ |
 | $K$ | $> 1$ | $= 1$ | $< 1$ |
       `
     },
@@ -55,18 +61,18 @@ This final review covers everything about galvanic cells: redox fundamentals, ce
       exercise: {
         questions: [
           {
-            question: 'Can Cu²⁺ spontaneously oxidize Fe? Calculate E°_cell to verify.',
+            question: 'Can Cu²⁺ spontaneously oxidize Fe? Calculate $E^\\circ_{\\text{cell}}$ to verify.',
             options: [
-              'No — E° = −0.10 V',
-              'Yes — E° = +0.78 V',
-              'No — E° = −0.78 V',
-              'Yes — E° = +0.10 V'
+              'No — $E^\\circ = -0.10$ V',
+              'Yes — $E^\\circ = +0.78$ V',
+              'No — $E^\\circ = -0.78$ V',
+              'Yes — $E^\\circ = +0.10$ V'
             ],
             correctAnswer: 1,
-            explanation: 'Cu²⁺ is reduced (cathode, +0.34 V), Fe is oxidized (anode, −0.44 V). $E° = 0.34 - (-0.44) = +0.78$ V. Positive → spontaneous. Yes, Cu²⁺ can oxidize Fe.'
+            explanation: 'Cu²⁺ is reduced (cathode, +0.34 V), Fe is oxidized (anode, −0.44 V). $E^\\circ = 0.34 - (-0.44) = +0.78$ V. Positive → spontaneous. Yes, Cu²⁺ can oxidize Fe.'
           },
           {
-            question: 'For the Zn-Cu cell (E° = 1.10 V, n = 2), ΔG° is approximately:',
+            question: 'For the Zn-Cu cell ($E^\\circ = 1.10$ V, $n = 2$), $\\Delta G^\\circ$ is approximately:',
             options: [
               '−212 kJ',
               '+212 kJ',
@@ -74,7 +80,7 @@ This final review covers everything about galvanic cells: redox fundamentals, ce
               '+106 kJ'
             ],
             correctAnswer: 0,
-            explanation: '$\\Delta G° = -nFE° = -(2)(96{,}485)(1.10) = -212{,}267$ J $\\approx -212$ kJ.'
+            explanation: '$\\Delta G^\\circ = -nFE^\\circ = -(2)(96{,}485)(1.10) = -212{,}267$ J $\\approx -212$ kJ.'
           },
           {
             question: 'In the cell notation Pt | H₂(g) | H⁺(aq) || Cu²⁺(aq) | Cu(s), the Pt electrode is:',
@@ -96,19 +102,19 @@ This final review covers everything about galvanic cells: redox fundamentals, ce
       content: `
 **Integration Problems** 🧮
 
-**1)** A cell has $E° = +2.00$ V and $n = 3$. What is $\\Delta G°$ in kJ? (to nearest whole number)
+**1)** A cell has $E^\\circ = +2.00$ V and $n = 3$. What is $\\Delta G^\\circ$ in kJ? (to nearest whole number)
 
-**2)** A cell has $\\Delta G° = -386$ kJ and $n = 4$. What is $E°$ in V? (to 3 significant figures)
+**2)** A cell has $\\Delta G^\\circ = -386$ kJ and $n = 4$. What is $E^\\circ$ in V? (to 3 significant figures)
 
-**3)** If $E° = +0.50$ V and $n = 2$ at 298 K, is $K$ greater or less than 1? (type "greater" or "less")
+**3)** If $E^\\circ = +0.50$ V and $n = 2$ at 298 K, is $K$ greater or less than 1? (type "greater" or "less")
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['-579', '1.00', 'greater'],
-        hint1: '$\\Delta G° = -(3)(96485)(2.00)$',
-        hint2: '$E° = 386000/((4)(96485))$',
-        hint3: 'Positive $E°$ → spontaneous → products favored.',
-        explanation: '1) $\\Delta G° = -(3)(96485)(2.00) = -578{,}910$ J $\\approx -579$ kJ. 2) $E° = 386{,}000/385{,}940 \\approx 1.00$ V. 3) $E° > 0$ → $K > 1$.'
+        hint1: '$\\Delta G^\\circ = -(3)(96485)(2.00)$',
+        hint2: '$E^\\circ = 386000/((4)(96485))$',
+        hint3: 'Positive $E^\\circ$ → spontaneous → products favored.',
+        explanation: '1) $\\Delta G^\\circ = -(3)(96485)(2.00) = -578{,}910$ J $\\approx -579$ kJ. 2) $E^\\circ = 386{,}000/385{,}940 \\approx 1.00$ V. 3) $E^\\circ > 0$ → $K > 1$.'
       }
     },
     {
@@ -121,7 +127,7 @@ This final review covers everything about galvanic cells: redox fundamentals, ce
         dropdowns: [
           {
             label: 'The strongest reducing agent in a table has the',
-            options: ['most positive E°', 'most negative E°', 'E° = 0', 'highest atomic number']
+            options: ['most positive E\u00b0', 'most negative E\u00b0', 'E\u00b0 = 0', 'highest atomic number']
           },
           {
             label: 'Electrons flow from',
@@ -136,11 +142,11 @@ This final review covers everything about galvanic cells: redox fundamentals, ce
             options: ['one electron', 'one proton', 'one mole of electrons', 'one mole of protons']
           }
         ],
-        correctAnswers: ['most negative E°', 'anode to cathode', 'right', 'one mole of electrons'],
-        hint1: 'Most negative E° = greatest tendency to lose electrons.',
+        correctAnswers: ['most negative E\u00b0', 'anode to cathode', 'right', 'one mole of electrons'],
+        hint1: 'Most negative $E^\\circ$ = greatest tendency to lose electrons.',
         hint2: 'Electrons are produced at the anode and consumed at the cathode.',
         hint3: 'Convention: anode | anode ion || cathode ion | cathode.',
-        explanation: 'Most negative E° → strongest reducing agent. Electrons: anode → cathode. Cathode on the right in cell notation. F = charge of one mole of electrons.'
+        explanation: 'Most negative $E^\\circ$ → strongest reducing agent. Electrons: anode → cathode. Cathode on the right in cell notation. $F$ = charge of one mole of electrons.'
       }
     },
     {
@@ -160,15 +166,15 @@ This final review covers everything about galvanic cells: redox fundamentals, ce
               'Current flows from Zn to Ag regardless of wiring, producing +1.56 V'
             ],
             correctAnswer: 3,
-            explanation: 'Electrons naturally flow from the more reactive metal (Zn, lower E°) to the less reactive (Ag, higher E°). The thermodynamic driving force determines the direction of current, not how the wire is connected. The cell produces +1.56 V.'
+            explanation: 'Electrons naturally flow from the more reactive metal (Zn, lower $E^\\circ$) to the less reactive (Ag, higher $E^\\circ$). The thermodynamic driving force determines the direction of current, not how the wire is connected. The cell produces +1.56 V.'
           },
           {
             question: 'Which statement about galvanic cells is FALSE?',
             options: [
               'The anode is the negative terminal',
               'The salt bridge allows electron flow between half-cells',
-              'E° is an intensive property',
-              'ΔG° = −nFE°'
+              '$E^\\circ$ is an intensive property',
+              '$\\Delta G^\\circ = -nFE^\\circ$'
             ],
             correctAnswer: 1,
             explanation: 'The salt bridge allows **ion** flow (not electron flow) between half-cells. Electrons flow through the external wire. All other statements are true.'

@@ -16,7 +16,7 @@ Acid-base reactions are one of the most important categories for net ionic equat
       id: 'ni5-strong-strong',
       type: 'text' as const,
       content: `
-## Strong Acid + Strong Base
+## 🧪 Strong Acid + Strong Base
 
 ### The Universal Net Ionic Equation
 
@@ -30,6 +30,9 @@ $$\\text{H}^+(aq) + \\text{Cl}^-(aq) + \\text{Na}^+(aq) + \\text{OH}^-(aq) \\rig
 
 **Net ionic** (cancel Na⁺ and Cl⁻):
 $$\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$$
+
+
+---
 
 ### Key Point
 
@@ -47,9 +50,12 @@ $$\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$$
       id: 'ni5-weak-acid',
       type: 'text' as const,
       content: `
-## Weak Acid + Strong Base
+## 🧪 Weak Acid + Strong Base
 
 When a **weak acid** reacts with a strong base, the weak acid is NOT split into ions — it stays molecular.
+
+
+---
 
 ### Example: Acetic acid + Sodium hydroxide
 
@@ -62,6 +68,9 @@ $$\\text{CH}_3\\text{COOH}(aq) + \\text{Na}^+(aq) + \\text{OH}^-(aq) \\rightarro
 **Net ionic** (cancel Na⁺):
 $$\\text{CH}_3\\text{COOH}(aq) + \\text{OH}^-(aq) \\rightarrow \\text{CH}_3\\text{COO}^-(aq) + \\text{H}_2\\text{O}(l)$$
 
+
+---
+
 ### Why Is This Different?
 
 The weak acid doesn\'t fully dissociate, so it cannot be written as H⁺ + anion. It must appear as the **complete molecule**. The net ionic equation is unique to each weak acid.
@@ -71,9 +80,12 @@ The weak acid doesn\'t fully dissociate, so it cannot be written as H⁺ + anion
       id: 'ni5-weak-base',
       type: 'text' as const,
       content: `
-## Strong Acid + Weak Base
+## 🧪 Strong Acid + Weak Base
 
 When a strong acid reacts with a **weak base**, the weak base stays molecular.
+
+
+---
 
 ### Example: HCl + Ammonia
 
@@ -85,6 +97,9 @@ $$\\text{H}^+(aq) + \\text{Cl}^-(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_
 
 **Net ionic** (cancel Cl⁻):
 $$\\text{H}^+(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_4^+(aq)$$
+
+
+---
 
 ### Summary Table
 

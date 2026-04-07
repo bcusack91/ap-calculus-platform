@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 interface SocialShareProps {
   url: string
@@ -10,6 +10,11 @@ interface SocialShareProps {
 
 export function SocialShare({ url, title, description }: SocialShareProps) {
   const [copied, setCopied] = useState(false)
+  const [canShare, setCanShare] = useState(false)
+
+  useEffect(() => {
+    setCanShare(typeof navigator !== 'undefined' && 'share' in navigator)
+  }, [])
 
   const encodedUrl = encodeURIComponent(url)
   const encodedTitle = encodeURIComponent(title)
@@ -108,7 +113,7 @@ export function SocialShare({ url, title, description }: SocialShareProps) {
           </svg>
         )}
       </button>
-      {typeof navigator !== 'undefined' && 'share' in navigator && (
+      {canShare && (
         <button
           onClick={handleNativeShare}
           title="Share via..."

@@ -16,7 +16,7 @@ The numerical value of $K$ carries enormous meaning. In this part, we'll learn t
       id: 'ece4-interpretation',
       type: 'text' as const,
       content: `
-## Interpreting the Magnitude of $K$
+## 📌 Interpreting the Magnitude of $K$
 
 The equilibrium constant tells us the **extent** to which a reaction proceeds:
 
@@ -28,6 +28,9 @@ The equilibrium constant tells us the **extent** to which a reaction proceeds:
 | $10^{-3} < K < 1$ | Reactants slightly favored | More reactants than products |
 | $K < 10^{-3}$ | Reaction **barely proceeds** | Reactants dominate |
 
+
+---
+
 ### Real-World Examples
 
 | Reaction | $K$ | Interpretation |
@@ -35,6 +38,9 @@ The equilibrium constant tells us the **extent** to which a reaction proceeds:
 | $2\\,\\text{H}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{H}_2\\text{O}(g)$ at 500 K | $\\sim 10^{80}$ | Essentially irreversible — goes to completion |
 | $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$ at 25°C | $4.6 \\times 10^{-3}$ | Reactants (N₂O₄) are favored |
 | $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$ at 425°C | $54$ | Products (HI) are favored |
+
+
+---
 
 ### AP Key Point 💡
 
@@ -89,9 +95,12 @@ The equilibrium constant tells us the **extent** to which a reaction proceeds:
       id: 'ece4-calculating-k',
       type: 'text' as const,
       content: `
-## Calculating $K$ from Equilibrium Concentrations
+## 🔢 Calculating $K$ from Equilibrium Concentrations
 
 If we know the equilibrium concentrations, we can calculate $K$ by direct substitution.
+
+
+---
 
 ### Example
 
@@ -102,6 +111,9 @@ At equilibrium: $[\\text{N}_2] = 0.50\\;\\text{M}$, $[\\text{H}_2] = 0.30\\;\\te
 $$K_c = \\frac{[\\text{NH}_3]^2}{[\\text{N}_2][\\text{H}_2]^3} = \\frac{(0.20)^2}{(0.50)(0.30)^3}$$
 
 $$K_c = \\frac{0.040}{(0.50)(0.027)} = \\frac{0.040}{0.0135} = 2.96$$
+
+
+---
 
 ### Steps
 

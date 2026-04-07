@@ -17,15 +17,21 @@ In Part 1, we focus on **ionic bonds**: how they form, what holds them together,
     {
       id: 'cb1-electron-transfer',
       type: 'text' as const,
-      content: `## Ionic Bond Formation: Electron Transfer
+      content: `## 🔋 Ionic Bond Formation: Electron Transfer
 
 An **ionic bond** forms when one or more electrons are **transferred** from a metal atom to a nonmetal atom.
+
+
+---
 
 ### The Process
 
 1. A **metal** atom loses one or more valence electrons → forms a **cation** ($+$ charge)
 2. A **nonmetal** atom gains those electrons → forms an **anion** ($-$ charge)
 3. The oppositely charged ions attract each other via **electrostatic (Coulombic) forces**
+
+
+---
 
 ### Example: Sodium Chloride (NaCl)
 
@@ -34,6 +40,9 @@ $$\\text{Cl} + e^- \\rightarrow \\text{Cl}^-$$
 
 - Sodium ($Z = 11$): $[\\text{Ne}]\\,3s^1$ → loses 1 electron → $\\text{Na}^+$ with noble gas configuration $[\\text{Ne}]$
 - Chlorine ($Z = 17$): $[\\text{Ne}]\\,3s^2\\,3p^5$ → gains 1 electron → $\\text{Cl}^-$ with noble gas configuration $[\\text{Ar}]$
+
+
+---
 
 ### Why Does This Happen?
 
@@ -84,9 +93,12 @@ Metals have **low ionization energies** (easy to remove electrons) and nonmetals
     {
       id: 'cb1-lattice-energy',
       type: 'text' as const,
-      content: `## Lattice Energy
+      content: `## 📌 Lattice Energy
 
 Once ions form, they don't exist as isolated pairs. They arrange into a **crystal lattice** — a repeating 3D structure of alternating cations and anions.
+
+
+---
 
 ### What Is Lattice Energy?
 
@@ -95,6 +107,9 @@ Once ions form, they don't exist as isolated pairs. They arrange into a **crysta
 $$\\text{M}^{n+}(g) + \\text{X}^{m-}(g) \\rightarrow \\text{MX}(s) \\quad \\Delta H_{lattice} < 0$$
 
 A **larger (more negative)** lattice energy means a **more stable** ionic compound.
+
+
+---
 
 ### Coulomb\'s Law for Ions
 
@@ -106,12 +121,18 @@ where:
 - $q_+$ and $q_-$ are the charges on the cation and anion
 - $r_+$ and $r_-$ are the ionic radii
 
+
+---
+
 ### Trends in Lattice Energy
 
 | Factor | Effect on Lattice Energy |
 |--------|------------------------|
 | Higher ion charges | **Increases** lattice energy (stronger attraction) |
 | Smaller ionic radii | **Increases** lattice energy (ions closer together) |
+
+
+---
 
 ### Examples
 
@@ -155,7 +176,7 @@ where:
     {
       id: 'cb1-properties',
       type: 'text' as const,
-      content: `## Properties of Ionic Compounds
+      content: `## 🔬 Properties of Ionic Compounds
 
 The strong electrostatic forces in ionic crystal lattices give ionic compounds distinctive physical properties:
 
@@ -166,6 +187,9 @@ The strong electrostatic forces in ionic crystal lattices give ionic compounds d
 | **Conduct electricity when molten or dissolved** | Ions are mobile in liquid state or in aqueous solution |
 | **Do NOT conduct as solids** | Ions are locked in fixed positions in the crystal lattice |
 | **Soluble in polar solvents** | Water molecules can stabilize separated ions through ion-dipole interactions |
+
+
+---
 
 ### Why Brittle?
 

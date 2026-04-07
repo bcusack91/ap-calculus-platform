@@ -16,7 +16,7 @@ By comparing Q to K, you can predict exactly which direction a reaction will shi
       id: 'ql2-three-cases',
       type: 'text' as const,
       content: `
-## The Three Cases
+## 📌 The Three Cases
 
 ### Case 1: $Q < K$ — Shift Right (→)
 
@@ -26,6 +26,9 @@ $$Q < K \\implies \\frac{\\text{products}}{\\text{reactants}} < \\text{equilibri
 - The system shifts **right** (forward) to make more products
 - Q increases until $Q = K$
 
+
+---
+
 ### Case 2: $Q > K$ — Shift Left (←)
 
 $$Q > K \\implies \\frac{\\text{products}}{\\text{reactants}} > \\text{equilibrium ratio}$$
@@ -34,12 +37,18 @@ $$Q > K \\implies \\frac{\\text{products}}{\\text{reactants}} > \\text{equilibri
 - The system shifts **left** (reverse) to make more reactants
 - Q decreases until $Q = K$
 
+
+---
+
 ### Case 3: $Q = K$ — At Equilibrium
 
 $$Q = K \\implies \\text{system is at equilibrium}$$
 
 - No net change occurs
 - Forward and reverse rates are equal
+
+
+---
 
 ### Memory Aid
 
@@ -52,9 +61,12 @@ Think of Q as "chasing" K:
       id: 'ql2-visual',
       type: 'text' as const,
       content: `
-## Visual Summary
+## 📋 Visual Summary
 
 $$\\underbrace{Q = 0}_{\\text{pure reactants}} \\quad \\xleftarrow{\\text{shift right}} \\quad Q < K \\quad \\longrightarrow \\quad \\underbrace{Q = K}_{\\text{EQUILIBRIUM}} \\quad \\longleftarrow \\quad Q > K \\quad \\xrightarrow{\\text{shift left}} \\quad \\underbrace{Q = \\infty}_{\\text{pure products}}$$
+
+
+---
 
 ### Worked Example
 

@@ -16,11 +16,14 @@ Imagine dropping a single drop of red food coloring into a glass of water. It do
       id: 'en1v2-analogy',
       type: 'text' as const,
       content: `
-## The Bedroom Analogy
+## 📌 The Bedroom Analogy
 
 Think of your bedroom. There's exactly **one** way for everything to be perfectly organized: shoes paired, books alphabetized, clothes folded. But there are **billions** of ways for it to be messy.
 
 This is the core idea of entropy: **there are far more disordered arrangements than ordered ones**.
+
+
+---
 
 ### From Bedrooms to Molecules
 
@@ -29,6 +32,9 @@ This is the core idea of entropy: **there are far more disordered arrangements t
 | Bedroom | 1 perfectly clean arrangement | Billions of messy ones |
 | 4 gas molecules in a box | 1 arrangement where all are in the left half | 15 arrangements where they're spread out |
 | $10^{23}$ molecules | $1$ "concentrated" state | $\\sim 10^{10^{22}}$ "spread" states |
+
+
+---
 
 ### The Punch Line
 
@@ -39,11 +45,14 @@ Nature doesn't have a preference for disorder — it just plays the odds. When t
       id: 'en1v2-boltzmann',
       type: 'text' as const,
       content: `
-## Boltzmann's Big Idea
+## 📌 Boltzmann's Big Idea
 
 Ludwig Boltzmann connected probability to thermodynamics with one equation:
 
 $$S = k_B \\ln W$$
+
+
+---
 
 ### Breaking It Down
 
@@ -52,9 +61,15 @@ $$S = k_B \\ln W$$
 - $W$ = number of microstates (possible arrangements)
 - $\\ln$ = natural logarithm
 
+
+---
+
 ### Why Logarithm?
 
 When you combine two independent systems, their microstates **multiply**: $W_{\\text{total}} = W_A \\times W_B$. But we want entropy to be **additive**: $S_{\\text{total}} = S_A + S_B$. The logarithm converts multiplication into addition!
+
+
+---
 
 ### Boltzmann's Tombstone
 
@@ -65,7 +80,7 @@ This equation was so important that it's literally **engraved on Boltzmann's tom
       id: 'en1v2-properties',
       type: 'text' as const,
       content: `
-## Key Properties of Entropy
+## 🔬 Key Properties of Entropy
 
 | Property | What It Means | Why It Matters |
 |----------|---------------|----------------|
@@ -73,6 +88,9 @@ This equation was so important that it's literally **engraved on Boltzmann's tom
 | **Extensive** | Doubles when amount doubles | 2 mol has twice the entropy of 1 mol |
 | **Always positive** ($T > 0$) | No substance has zero entropy above 0 K | Even crystals have thermal vibrations |
 | **Units: J/K** | Not kJ! | Common AP exam trap — watch your units |
+
+
+---
 
 ### Entropy vs Energy: What's Different?
 

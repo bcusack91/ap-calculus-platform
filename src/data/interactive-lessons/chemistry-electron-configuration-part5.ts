@@ -11,11 +11,14 @@ The Aufbau principle works for most elements, but a handful of important excepti
     {
       id: 'ec5-exceptions',
       type: 'text' as const,
-      content: `## The Two Critical Exceptions
+      content: `## ⚠️ The Two Critical Exceptions
 
 ### Chromium (Cr, Z = 24)
 **Expected:** [Ar] 4s² 3d⁴  
 **Actual:** [Ar] 3d⁵ 4s¹
+
+
+---
 
 ### Copper (Cu, Z = 29)
 **Expected:** [Ar] 4s² 3d⁹  
@@ -52,7 +55,7 @@ What is the correct electron configuration for chromium (Cr, Z = 24)?`,
     {
       id: 'ec5-ions',
       type: 'text' as const,
-      content: `## Electron Configurations of Ions
+      content: `## 🔋 Electron Configurations of Ions
 
 ### Cations (Positive Ions)
 When forming cations, electrons are removed from the subshell with the **highest principal quantum number (n)** first.
@@ -68,6 +71,9 @@ When forming cations, electrons are removed from the subshell with the **highest
 - Start from Fe²⁺: [Ar] 3d⁶
 - Remove 1 more electron from 3d
 - Fe³⁺: **[Ar] 3d⁵**
+
+
+---
 
 ### Anions (Negative Ions)
 When forming anions, electrons are **added** to the next available subshell.
@@ -150,7 +156,7 @@ These require careful attention to exception rules and ion formation rules.`,
     {
       id: 'ec5-summary',
       type: 'text' as const,
-      content: `## Key Takeaways
+      content: `## 📌 Key Takeaways
 
 1. **Chromium** and **copper** are the two critical exceptions: they "steal" an electron from 4s to achieve a half-filled (d⁵) or fully filled (d¹⁰) d subshell.
 2. When forming **cations**, remove electrons from the subshell with the **highest n** first — for transition metals, this means **4s before 3d**.

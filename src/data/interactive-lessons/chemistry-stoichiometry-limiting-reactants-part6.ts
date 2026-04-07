@@ -16,7 +16,7 @@ This workshop brings together everything: mass-to-mass conversions, limiting rea
       id: 'sl6-strategy',
       type: 'text' as const,
       content: `
-## The Complete Problem-Solving Strategy
+## 🛠️ The Complete Problem-Solving Strategy
 
 ### For Multi-Step Stoichiometry Problems
 
@@ -27,6 +27,9 @@ This workshop brings together everything: mass-to-mass conversions, limiting rea
 5. **Find excess** remaining (if asked)
 6. **Apply percent yield** (if given or asked)
 
+
+---
+
 ### Master Formula Chain
 
 $$\\text{grams A} \\xrightarrow{\\div M_A} \\text{mol A} \\xrightarrow{\\text{ratio}} \\text{mol product} \\xrightarrow{\\times M_P} \\text{theoretical yield (g)} \\xrightarrow{\\times \\%/100} \\text{actual yield (g)}$$
@@ -36,7 +39,7 @@ $$\\text{grams A} \\xrightarrow{\\div M_A} \\text{mol A} \\xrightarrow{\\text{ra
       id: 'sl6-worked-example',
       type: 'text' as const,
       content: `
-## Comprehensive Worked Example
+## 🧪 Comprehensive Worked Example
 
 **Problem:** In the reaction below, 50.0 g of Fe₂O₃ ($M = 159.7$) reacts with 30.0 g of Al ($M = 26.98$). The percent yield is 78%. Find:
 a) the limiting reactant
@@ -46,10 +49,16 @@ d) the mass of excess reactant remaining
 
 $$\\text{Fe}_2\\text{O}_3 + 2\\text{Al} \\rightarrow \\text{Al}_2\\text{O}_3 + 2\\text{Fe}$$
 
+
+---
+
 ### Step 1: Convert to Moles
 
 - Moles Fe₂O₃: $50.0 \\; \\cancel{\\text{g Fe}_2\\text{O}_3} \\times \\frac{1 \\text{ mol Fe}_2\\text{O}_3}{159.7 \\; \\cancel{\\text{g Fe}_2\\text{O}_3}} = 0.3131$ mol Fe₂O₃
 - Moles Al: $30.0 \\; \\cancel{\\text{g Al}} \\times \\frac{1 \\text{ mol Al}}{26.98 \\; \\cancel{\\text{g Al}}} = 1.112$ mol Al
+
+
+---
 
 ### Step 2: Find Limiting Reactant
 
@@ -57,13 +66,22 @@ $$\\text{Fe}_2\\text{O}_3 + 2\\text{Al} \\rightarrow \\text{Al}_2\\text{O}_3 + 2
 - From Al: $1.112 \\; \\cancel{\\text{mol Al}} \\times \\frac{2 \\text{ mol Fe}}{2 \\; \\cancel{\\text{mol Al}}} = 1.112$ mol Fe
 - Fe₂O₃ produces less → **Fe₂O₃ is limiting**
 
+
+---
+
 ### Step 3: Theoretical Yield
 
 $$m_{\\text{Fe}} = 0.6262 \\; \\cancel{\\text{mol Fe}} \\times \\frac{55.85 \\text{ g Fe}}{1 \\; \\cancel{\\text{mol Fe}}} = 35.0 \\text{ g Fe}$$
 
+
+---
+
 ### Step 4: Actual Yield
 
 $$\\text{actual} = 35.0 \\times 0.78 = 27.3 \\text{ g Fe}$$
+
+
+---
 
 ### Step 5: Excess Al Remaining
 

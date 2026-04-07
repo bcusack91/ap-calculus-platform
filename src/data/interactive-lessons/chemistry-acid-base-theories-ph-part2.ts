@@ -16,16 +16,22 @@ The Brønsted-Lowry model expands our understanding of acids and bases beyond aq
       id: 'ab2-definition',
       type: 'text' as const,
       content: `
-## The Brønsted-Lowry Definition
+## 📖 The Brønsted-Lowry Definition
 
 | Type | Definition |
 |------|-----------|
 | **Brønsted-Lowry Acid** | A proton ($H^+$) **donor** |
 | **Brønsted-Lowry Base** | A proton ($H^+$) **acceptor** |
 
+
+---
+
 ### Key Advantage
 
 This definition works in **any solvent** — not just water!
+
+
+---
 
 ### Example: $HCl$ in Water
 
@@ -33,6 +39,9 @@ $$HCl(aq) + H_2O(l) \\rightarrow H_3O^+(aq) + Cl^-(aq)$$
 
 - $HCl$ **donates** a proton → **acid**
 - $H_2O$ **accepts** a proton → **base**
+
+
+---
 
 ### Example: $NH_3$ in Water
 
@@ -48,11 +57,14 @@ Notice: water can act as either an acid or a base! This is called being **amphot
       id: 'ab2-conjugate-pairs',
       type: 'text' as const,
       content: `
-## Conjugate Acid-Base Pairs
+## 🧪 Conjugate Acid-Base Pairs
 
 When an acid donates a proton, the product is its **conjugate base**. When a base accepts a proton, the product is its **conjugate acid**.
 
 $$\\underbrace{HA}_{\\text{acid}} + \\underbrace{B}_{\\text{base}} \\rightleftharpoons \\underbrace{A^-}_{\\text{conjugate base}} + \\underbrace{BH^+}_{\\text{conjugate acid}}$$
+
+
+---
 
 ### Examples
 
@@ -64,9 +76,15 @@ $$\\underbrace{HA}_{\\text{acid}} + \\underbrace{B}_{\\text{base}} \\rightleftha
 | $H_2SO_4$ | $HSO_4^-$ | Differs by one $H^+$ |
 | $HSO_4^-$ | $SO_4^{2-}$ | Differs by one $H^+$ |
 
+
+---
+
 ### Critical Rule
 
 A conjugate pair always differs by exactly **one proton** ($H^+$).
+
+
+---
 
 ### Strength Relationship
 
@@ -124,7 +142,7 @@ A conjugate pair always differs by exactly **one proton** ($H^+$).
       id: 'ab2-identifying-pairs',
       type: 'text' as const,
       content: `
-## Identifying Conjugate Pairs in Reactions
+## ⚗️ Identifying Conjugate Pairs in Reactions
 
 For any Brønsted-Lowry reaction, there are always **two conjugate pairs**:
 
@@ -133,6 +151,9 @@ $$\\underbrace{HF}_{\\text{acid}_1} + \\underbrace{H_2O}_{\\text{base}_2} \\righ
 **Pair 1:** $HF / F^-$
 
 **Pair 2:** $H_2O / H_3O^+$
+
+
+---
 
 ### Steps to Identify
 

@@ -16,7 +16,7 @@ ICE tables are the systematic method for solving equilibrium problems. ICE stand
       id: 'ic1-structure',
       type: 'text' as const,
       content: `
-## The ICE Table Structure
+## 🏗️ The ICE Table Structure
 
 For the reaction: $aA + bB \\rightleftharpoons cC + dD$
 
@@ -25,6 +25,9 @@ For the reaction: $aA + bB \\rightleftharpoons cC + dD$
 | **I** (Initial) | $[A]_0$ | $[B]_0$ | $[C]_0$ | $[D]_0$ |
 | **C** (Change) | $-ax$ | $-bx$ | $+cx$ | $+dx$ |
 | **E** (Equilibrium) | $[A]_0 - ax$ | $[B]_0 - bx$ | $[C]_0 + cx$ | $[D]_0 + dx$ |
+
+
+---
 
 ### Key Rules
 
@@ -35,6 +38,9 @@ For the reaction: $aA + bB \\rightleftharpoons cC + dD$
    - Coefficients become multipliers of $x$
 3. **E row**: I + C for each column
 4. Substitute the E row into the $K$ expression and solve for $x$
+
+
+---
 
 ### Important
 
@@ -47,7 +53,7 @@ For the reaction: $aA + bB \\rightleftharpoons cC + dD$
       id: 'ic1-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$, $K_c = 50.0$
 
@@ -60,6 +66,9 @@ Since we start with no products and $K > 0$, the reaction shifts **right**.
 | **I** | 1.00 | 1.00 | 0 |
 | **C** | $-x$ | $-x$ | $+2x$ |
 | **E** | $1.00 - x$ | $1.00 - x$ | $2x$ |
+
+
+---
 
 ### Substitute into K expression:
 

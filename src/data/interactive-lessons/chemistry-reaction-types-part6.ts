@@ -16,7 +16,7 @@ It\'s time to put together everything you\'ve learned about reaction types. In t
       id: 'rt6-workflow',
       type: 'text' as const,
       content: `
-## The Complete Workflow
+## 📌 The Complete Workflow
 
 ### Step 1: Identify the Reaction Type
 
@@ -28,6 +28,9 @@ It\'s time to put together everything you\'ve learned about reaction types. In t
 | Two compounds → two new compounds | Double replacement |
 | Fuel + O₂ → CO₂ + H₂O | Combustion |
 
+
+---
+
 ### Step 2: Predict Products
 
 Apply the rules for that reaction type:
@@ -37,9 +40,15 @@ Apply the rules for that reaction type:
 - Double replacement: swap cations, check for driving force
 - Combustion: products are CO₂ + H₂O
 
+
+---
+
 ### Step 3: Write Correct Formulas
 
 Use ion charges for ionic compounds. Don\'t forget subscripts!
+
+
+---
 
 ### Step 4: Balance the Equation
 
@@ -50,7 +59,7 @@ Use coefficients. Check every atom. Simplify to smallest whole numbers.
       id: 'rt6-worked-examples',
       type: 'text' as const,
       content: `
-## Worked Examples
+## 🧪 Worked Examples
 
 ### Example 1
 
@@ -60,6 +69,9 @@ Use coefficients. Check every atom. Simplify to smallest whole numbers.
 2. **Product:** Mg²⁺ + N³⁻ → Mg₃N₂ (cross charges: 3 Mg, 2 N)
 3. **Balance:** $3\\text{Mg} + \\text{N}_2 \\rightarrow \\text{Mg}_3\\text{N}_2$ ✓
 
+
+---
+
 ### Example 2
 
 **Given:** $\\text{Fe} + \\text{AgNO}_3 \\rightarrow$ ?
@@ -68,6 +80,9 @@ Use coefficients. Check every atom. Simplify to smallest whole numbers.
 2. **Activity series:** Fe is above Ag → reaction proceeds
 3. **Product:** Fe replaces Ag. Fe has charge +2 → Fe(NO₃)₂ + Ag
 4. **Balance:** $\\text{Fe} + 2\\text{AgNO}_3 \\rightarrow \\text{Fe(NO}_3)_2 + 2\\text{Ag}$ ✓
+
+
+---
 
 ### Example 3
 

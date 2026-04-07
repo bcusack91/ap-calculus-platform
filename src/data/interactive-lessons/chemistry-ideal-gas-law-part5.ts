@@ -16,13 +16,16 @@ Most gases we encounter are actually **mixtures** — air itself is about 78% N�
       id: 'gl5-daltons-law',
       type: 'text' as const,
       content: `
-## Dalton's Law
+## 📏 Dalton's Law
 
 The **total pressure** of a gas mixture equals the **sum of the partial pressures** of each component gas:
 
 $$P_{\\text{total}} = P_1 + P_2 + P_3 + \\cdots$$
 
 Each partial pressure is the pressure that gas would exert if it **alone** occupied the entire container.
+
+
+---
 
 ### Using the Ideal Gas Law
 
@@ -33,6 +36,9 @@ $$P_i = \\frac{n_iRT}{V}$$
 And the total:
 
 $$P_{\\text{total}} = \\frac{n_{\\text{total}}RT}{V}$$
+
+
+---
 
 ### Example
 
@@ -51,7 +57,7 @@ $$P_{\\text{total}} = 0.493 + 0.739 = 1.232 \\text{ atm}$$
       id: 'gl5-mole-fraction',
       type: 'text' as const,
       content: `
-## Mole Fraction
+## ⚖️ Mole Fraction
 
 The **mole fraction** ($\\chi$) of a component is the fraction of total moles that it contributes:
 
@@ -60,6 +66,9 @@ $$\\chi_i = \\frac{n_i}{n_{\\text{total}}}$$
 The partial pressure is related to mole fraction by:
 
 $$P_i = \\chi_i \\times P_{\\text{total}}$$
+
+
+---
 
 ### Example
 
@@ -80,13 +89,16 @@ $$\\chi_{Ne} = \\frac{3.0}{5.0} = 0.60, \\quad P_{Ne} = 0.60 \\times 5.0 = 3.0 \
       id: 'gl5-water-collection',
       type: 'text' as const,
       content: `
-## Gas Collection Over Water
+## 💨 Gas Collection Over Water
 
 When a gas is collected by displacement of water, the collected gas is **mixed with water vapor**. You must subtract the vapor pressure of water:
 
 $$P_{\\text{gas}} = P_{\\text{total}} - P_{\\text{H}_2\\text{O}}$$
 
 The vapor pressure of water depends on temperature (values are given in data tables).
+
+
+---
 
 ### Example
 

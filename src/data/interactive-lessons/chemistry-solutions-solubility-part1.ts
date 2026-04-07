@@ -16,7 +16,7 @@ Almost every chemical reaction you encounter in the lab takes place in **solutio
       id: 'ss1-basic-definitions',
       type: 'text' as const,
       content: `
-## Solute and Solvent
+## 📌 Solute and Solvent
 
 A **solution** is a homogeneous mixture of two or more substances.
 
@@ -26,11 +26,17 @@ A **solution** is a homogeneous mixture of two or more substances.
 | **Solvent** | The substance doing the dissolving (greater amount) | H₂O (water) |
 | **Solution** | The resulting homogeneous mixture | Saltwater |
 
+
+---
+
 ### Key Points
 
 - The solvent is usually present in the **greater quantity**
 - Water is called the **universal solvent** because of its polarity and ability to dissolve many ionic and polar substances
 - Solutions can exist in all phases: gas (air), liquid (saltwater), solid (alloys like brass)
+
+
+---
 
 ### Aqueous Solutions
 
@@ -43,9 +49,12 @@ $$\\text{NaCl(s)} \\xrightarrow{\\text{H}_2\\text{O}} \\text{Na}^+(\\text{aq}) +
       id: 'ss1-saturation',
       type: 'text' as const,
       content: `
-## Saturation States
+## 🧊 Saturation States
 
 The amount of solute that dissolves depends on the **solubility** of that solute in a given solvent at a specific temperature.
+
+
+---
 
 ### Three Saturation States
 
@@ -55,12 +64,18 @@ The amount of solute that dissolves depends on the **solubility** of that solute
 | **Saturated** | Contains the maximum amount of dissolved solute | Excess solute remains undissolved |
 | **Supersaturated** | Contains more solute than normal saturation allows | Very unstable — crystallization occurs upon disturbance |
 
+
+---
+
 ### Making a Supersaturated Solution
 
 1. Heat the solvent to increase solubility
 2. Dissolve more solute than would normally dissolve at room temperature
 3. Slowly cool the solution without disturbing it
 4. The result: a supersaturated solution that can **crystallize dramatically** when a seed crystal is added
+
+
+---
 
 ### Solubility vs. Temperature
 
@@ -117,11 +132,14 @@ The amount of solute that dissolves depends on the **solubility** of that solute
       id: 'ss1-like-dissolves-like',
       type: 'text' as const,
       content: `
-## "Like Dissolves Like"
+## 💧 "Like Dissolves Like"
 
 This is the most important rule for predicting solubility:
 
 > **Polar solutes dissolve in polar solvents. Nonpolar solutes dissolve in nonpolar solvents.**
+
+
+---
 
 ### Why?
 
@@ -135,6 +153,9 @@ Dissolving occurs when solute-solvent interactions are strong enough to overcome
 | Nonpolar | Nonpolar (hexane) | ✅ Yes | Oil in hexane |
 | Nonpolar | Polar (H₂O) | ❌ No | Oil in water |
 | Ionic | Nonpolar | ❌ No | NaCl in hexane |
+
+
+---
 
 ### The Dissolving Process for Ionic Compounds
 
@@ -189,9 +210,12 @@ Use the "like dissolves like" principle to predict whether each solute dissolves
       id: 'ss1-solubility-rules',
       type: 'text' as const,
       content: `
-## AP Chemistry Solubility Rules (Aqueous Ionic Compounds)
+## 📏 AP Chemistry Solubility Rules (Aqueous Ionic Compounds)
 
 For the AP exam, you need to know which ionic compounds are soluble in water:
+
+
+---
 
 ### Generally Soluble
 
@@ -203,6 +227,9 @@ For the AP exam, you need to know which ionic compounds are soluble in water:
 | Cl⁻, Br⁻, I⁻ | Usually soluble | Except with Ag⁺, Pb²⁺, Hg₂²⁺ |
 | SO₄²⁻ | Usually soluble | Except with Ba²⁺, Pb²⁺, Ca²⁺, Sr²⁺ |
 
+
+---
+
 ### Generally Insoluble
 
 | Ion | Soluble? | Exceptions |
@@ -210,6 +237,9 @@ For the AP exam, you need to know which ionic compounds are soluble in water:
 | OH⁻ | Usually insoluble | Except with Na⁺, K⁺, Ba²⁺, Ca²⁺ (slightly) |
 | S²⁻ | Usually insoluble | Except with Na⁺, K⁺, NH₄⁺, Group 2 |
 | CO₃²⁻, PO₄³⁻ | Usually insoluble | Except with Na⁺, K⁺, NH₄⁺ |
+
+
+---
 
 ### Memory Tip
 

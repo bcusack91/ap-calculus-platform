@@ -16,7 +16,7 @@ Stoichiometry is the math of chemistry — it lets you calculate **how much** of
       id: 'sl1-coefficients',
       type: 'text' as const,
       content: `
-## Coefficients Tell the Story
+## 📌 Coefficients Tell the Story
 
 In the balanced equation:
 
@@ -25,6 +25,9 @@ $$2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$$
 The coefficients tell us that:
 - **2 molecules** of H₂ react with **1 molecule** of O₂ to produce **2 molecules** of H₂O
 - **2 moles** of H₂ react with **1 mole** of O₂ to produce **2 moles** of H₂O
+
+
+---
 
 ### Key Insight
 
@@ -38,9 +41,12 @@ This ratio is the **conversion factor** for all stoichiometric calculations.
       id: 'sl1-writing-ratios',
       type: 'text' as const,
       content: `
-## Writing Mole Ratios
+## ✍️ Writing Mole Ratios
 
 From any balanced equation, you can write a mole ratio between **any two** substances.
+
+
+---
 
 ### Example: $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$
 
@@ -51,6 +57,9 @@ All possible mole ratios:
 | N₂ to H₂ | $\\frac{1 \\text{ mol N}_2}{3 \\text{ mol H}_2}$ or $\\frac{3 \\text{ mol H}_2}{1 \\text{ mol N}_2}$ |
 | N₂ to NH₃ | $\\frac{1 \\text{ mol N}_2}{2 \\text{ mol NH}_3}$ or $\\frac{2 \\text{ mol NH}_3}{1 \\text{ mol N}_2}$ |
 | H₂ to NH₃ | $\\frac{3 \\text{ mol H}_2}{2 \\text{ mol NH}_3}$ or $\\frac{2 \\text{ mol NH}_3}{3 \\text{ mol H}_2}$ |
+
+
+---
 
 ### How to Choose
 
@@ -65,11 +74,14 @@ $$\\text{mol NH}_3 = \\text{mol N}_2 \\times \\frac{2 \\text{ mol NH}_3}{1 \\tex
       id: 'sl1-mole-to-mole',
       type: 'text' as const,
       content: `
-## Mole-to-Mole Conversions
+## ⚖️ Mole-to-Mole Conversions
 
 ### The Simplest Stoichiometry Problem
 
 Given moles of one substance, find moles of another using the mole ratio.
+
+
+---
 
 ### Worked Example
 
@@ -79,11 +91,17 @@ How many moles of NH₃ are produced from 5.0 mol N₂?
 
 $$\\text{mol NH}_3 = 5.0 \\text{ mol N}_2 \\times \\frac{2 \\text{ mol NH}_3}{1 \\text{ mol N}_2} = 10.0 \\text{ mol NH}_3$$
 
+
+---
+
 ### Another Example
 
 How many moles of H₂ are needed to react with 4.0 mol N₂?
 
 $$\\text{mol H}_2 = 4.0 \\text{ mol N}_2 \\times \\frac{3 \\text{ mol H}_2}{1 \\text{ mol N}_2} = 12.0 \\text{ mol H}_2$$
+
+
+---
 
 ### General Formula
 

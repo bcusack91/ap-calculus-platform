@@ -16,7 +16,7 @@ When an ionic compound dissolves in water, it establishes an equilibrium between
       id: 'sk1-dissolution',
       type: 'text' as const,
       content: `
-## Dissolution as an Equilibrium
+## ⚖️ Dissolution as an Equilibrium
 
 When you add a slightly soluble salt to water:
 
@@ -26,6 +26,9 @@ $$\\text{AgCl}(s) \\rightleftharpoons \\text{Ag}^+(aq) + \\text{Cl}^-(aq)$$
 - **Reverse**: Ions collide and re-form solid (precipitation)
 - **Equilibrium**: Rate of dissolution = Rate of precipitation
 
+
+---
+
 ### The K_sp Expression
 
 Since the solid has a constant concentration (pure solid activity = 1), it is **excluded** from the equilibrium expression:
@@ -33,6 +36,9 @@ Since the solid has a constant concentration (pure solid activity = 1), it is **
 $$K_{sp} = [\\text{Ag}^+][\\text{Cl}^-]$$
 
 **Not** $\\frac{[\\text{Ag}^+][\\text{Cl}^-]}{[\\text{AgCl}]}$ — the solid is omitted!
+
+
+---
 
 ### General Form
 
@@ -45,7 +51,7 @@ $$K_{sp} = [\\text{M}^{b+}]^a[\\text{X}^{a-}]^b$$
       id: 'sk1-examples',
       type: 'text' as const,
       content: `
-## Common K_sp Expressions
+## 📌 Common K_sp Expressions
 
 | Compound | Dissolution | $K_{sp}$ Expression |
 |----------|-------------|---------------------|
@@ -53,6 +59,9 @@ $$K_{sp} = [\\text{M}^{b+}]^a[\\text{X}^{a-}]^b$$
 | $\\text{PbCl}_2$ | $\\text{PbCl}_2 \\rightleftharpoons \\text{Pb}^{2+} + 2\\,\\text{Cl}^-$ | $[\\text{Pb}^{2+}][\\text{Cl}^-]^2$ |
 | $\\text{Ca}_3(\\text{PO}_4)_2$ | $\\text{Ca}_3(\\text{PO}_4)_2 \\rightleftharpoons 3\\,\\text{Ca}^{2+} + 2\\,\\text{PO}_4^{3-}$ | $[\\text{Ca}^{2+}]^3[\\text{PO}_4^{3-}]^2$ |
 | $\\text{Fe(OH)}_3$ | $\\text{Fe(OH)}_3 \\rightleftharpoons \\text{Fe}^{3+} + 3\\,\\text{OH}^-$ | $[\\text{Fe}^{3+}][\\text{OH}^-]^3$ |
+
+
+---
 
 ### Key Points
 

@@ -16,7 +16,7 @@ $\\Delta G°$ tells us about equilibrium, but real reactions rarely start at sta
       id: 'gf5-equation',
       type: 'text' as const,
       content: `
-## The Non-Standard Free Energy Equation
+## ⚡ The Non-Standard Free Energy Equation
 
 $$\\Delta G = \\Delta G° + RT\\ln Q$$
 
@@ -27,6 +27,9 @@ $$\\Delta G = \\Delta G° + RT\\ln Q$$
 | $R$ | 8.314 J/(mol·K) |
 | $T$ | Temperature in K |
 | $Q$ | Reaction quotient (current concentrations) |
+
+
+---
 
 ### Recall: Q vs K
 
@@ -40,13 +43,16 @@ $$Q = \\frac{[\\text{products}]^n}{[\\text{reactants}]^m}$$ (same form as K, but
       id: 'gf5-interpretation',
       type: 'text' as const,
       content: `
-## Interpreting ΔG, Q, and K
+## 📌 Interpreting ΔG, Q, and K
 
 | Condition | $Q$ vs $K$ | $\\Delta G$ | Direction |
 |-----------|-----------|-----------|-----------|
 | $Q < K$ | Below equilibrium | $\\Delta G < 0$ | Forward reaction spontaneous |
 | $Q = K$ | At equilibrium | $\\Delta G = 0$ | No net change |
 | $Q > K$ | Above equilibrium | $\\Delta G > 0$ | Reverse reaction spontaneous |
+
+
+---
 
 ### Key Insight
 
@@ -56,6 +62,9 @@ $$0 = \\Delta G° + RT\\ln K$$
 $$\\Delta G° = -RT\\ln K$$
 
 This is how we derived the $\\Delta G°$–$K$ relationship!
+
+
+---
 
 ### The Big Picture
 
@@ -68,7 +77,7 @@ This is how we derived the $\\Delta G°$–$K$ relationship!
       id: 'gf5-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 For the reaction $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightleftharpoons 2\\text{NH}_3(g)$
 

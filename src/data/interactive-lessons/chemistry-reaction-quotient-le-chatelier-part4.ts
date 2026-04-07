@@ -16,7 +16,7 @@ Pressure/volume changes affect gaseous equilibria by changing concentrations. Te
       id: 'ql4-pressure-volume',
       type: 'text' as const,
       content: `
-## Pressure and Volume Changes
+## 💨 Pressure and Volume Changes
 
 ### The Rule
 
@@ -27,9 +27,15 @@ For gaseous equilibria, when volume decreases (pressure increases):
 When volume increases (pressure decreases):
 - The system shifts toward the side with **more moles of gas**
 
+
+---
+
 ### Why?
 
 Decreasing volume concentrates all species equally. The side with more moles of gas is affected more. Shifting toward fewer moles relieves the pressure stress.
+
+
+---
 
 ### Example
 
@@ -43,6 +49,9 @@ $$\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$$
 | Decrease volume | Right → | Fewer moles on right (2 vs 4) |
 | Increase volume | Left ← | More moles on left (4 vs 2) |
 
+
+---
+
 ### Special Case: Equal Moles
 
 $$\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g) \\quad (\\Delta n = 0)$$
@@ -54,9 +63,12 @@ Both sides have 2 moles of gas. **No shift** occurs with pressure/volume changes
       id: 'ql4-temperature',
       type: 'text' as const,
       content: `
-## Temperature Changes
+## 🌡️ Temperature Changes
 
 Temperature is **unique** — it\'s the only stress that changes the value of $K$.
+
+
+---
 
 ### The "Heat as a Species" Trick
 
@@ -68,12 +80,18 @@ $$A \\rightleftharpoons B + \\text{heat}$$
 **Endothermic** ($\\Delta H > 0$): Heat is a reactant
 $$\\text{heat} + A \\rightleftharpoons B$$
 
+
+---
+
 ### Effect of Temperature Changes
 
 | Reaction Type | Increase T | Decrease T |
 |---------------|-----------|------------|
 | Exothermic | Shift left ←, K decreases | Shift right →, K increases |
 | Endothermic | Shift right →, K increases | Shift left ←, K decreases |
+
+
+---
 
 ### Example
 
@@ -83,6 +101,9 @@ $$\\text{N}_2 + 3\\,\\text{H}_2 \\rightleftharpoons 2\\,\\text{NH}_3 + \\text{he
 
 - Increase T → adds heat → shifts **left** → K **decreases**
 - Decrease T → removes heat → shifts **right** → K **increases**
+
+
+---
 
 ### Key Point
 

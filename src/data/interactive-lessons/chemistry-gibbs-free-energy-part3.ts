@@ -16,19 +16,28 @@ Just as we used $\\Delta H°_f$ to calculate $\\Delta H°_{\\text{rxn}}$, we can
       id: 'gf3-definition',
       type: 'text' as const,
       content: `
-## Standard Free Energy of Formation ($\\Delta G°_f$)
+## ⚡ Standard Free Energy of Formation ($\\Delta G°_f$)
 
 The free energy change when **one mole** of a compound is formed from its **elements** in their **standard states** at standard conditions.
+
+
+---
 
 ### The Master Equation
 
 $$\\Delta G°_{\\text{rxn}} = \\sum n \\cdot \\Delta G°_f(\\text{products}) - \\sum m \\cdot \\Delta G°_f(\\text{reactants})$$
+
+
+---
 
 ### Key Rule
 
 $$\\Delta G°_f = 0 \\text{ for all elements in their standard states}$$
 
 (Same convention as $\\Delta H°_f$)
+
+
+---
 
 ### Sample Values
 
@@ -48,7 +57,7 @@ $$\\Delta G°_f = 0 \\text{ for all elements in their standard states}$$
       id: 'gf3-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 Calculate $\\Delta G°$ for: $\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(l)$
 
@@ -64,6 +73,9 @@ $$= [-394.4 - 474.2] - [-50.7]$$
 $$= -868.6 + 50.7 = -817.9 \\text{ kJ}$$
 
 The large negative $\\Delta G°$ confirms that combustion of methane is very spontaneous.
+
+
+---
 
 ### Two Methods to Calculate ΔG°
 
@@ -150,13 +162,16 @@ Both methods give the same answer at 25°C.
       id: 'gf3-comparison',
       type: 'text' as const,
       content: `
-## Comparing the Three Formation Quantities
+## ⚖️ Comparing the Three Formation Quantities
 
 | Quantity | Symbol | Elements | Units | What It Tells You |
 |----------|--------|----------|-------|-------------------|
 | Formation enthalpy | $\\Delta H°_f$ | = 0 | kJ/mol | Heat flow |
 | Standard entropy | $S°$ | ≠ 0 (positive!) | J/(mol·K) | Disorder |
 | Formation free energy | $\\Delta G°_f$ | = 0 | kJ/mol | Spontaneity |
+
+
+---
 
 ### Common AP Mistake
 

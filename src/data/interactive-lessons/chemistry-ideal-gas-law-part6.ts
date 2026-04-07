@@ -16,7 +16,7 @@ Now it's time to put all the gas laws together. In this workshop, you'll practic
       id: 'gl6-strategy',
       type: 'text' as const,
       content: `
-## Problem-Solving Strategy
+## 🛠️ Problem-Solving Strategy
 
 1. **Identify what you know and what you need to find.**
 2. **Choose the right law:**
@@ -27,6 +27,9 @@ Now it's time to put all the gas laws together. In this workshop, you'll practic
    - Gas density → $d = PM/(RT)$
 3. **Convert all units** — Kelvin for $T$, liters for $V$, atm for $P$ (if using $R = 0.0821$).
 4. **Solve and check** — does the answer make physical sense?
+
+
+---
 
 ### The Combined Gas Law
 
@@ -41,11 +44,14 @@ This reduces to Boyle's or Charles's law when one variable is held constant.
       id: 'gl6-stp-problems',
       type: 'text' as const,
       content: `
-## STP Problems
+## 📌 STP Problems
 
 At STP (0°C = 273.15 K, 1.00 atm):
 - 1 mol of ideal gas = 22.4 L
 - This gives a quick shortcut for many calculations
+
+
+---
 
 ### Example 1: Volume at STP
 
@@ -55,6 +61,9 @@ At STP (0°C = 273.15 K, 1.00 atm):
 
 $$V = 0.750 \\times 22.4 = 16.8 \\text{ L}$$
 
+
+---
+
 ### Example 2: Moles from Volume at STP
 
 > **Problem:** A sample of gas occupies 5.60 L at STP. How many moles?
@@ -62,6 +71,9 @@ $$V = 0.750 \\times 22.4 = 16.8 \\text{ L}$$
 **Solution:**
 
 $$n = \frac{5.60}{22.4} = 0.250 \text{ mol}$$
+
+
+---
 
 ### Example 3: Combined Gas Law
 
@@ -76,11 +88,14 @@ $$V_2 = \\frac{P_1V_1T_2}{T_1P_2} = \\frac{(2.00)(10.0)(600)}{(300)(1.00)} = 40.
       id: 'gl6-stoichiometry',
       type: 'text' as const,
       content: `
-## Gas Stoichiometry
+## 💨 Gas Stoichiometry
 
 When gases appear in chemical reactions, you can use the ideal gas law with stoichiometry:
 
 $$\\text{grams} \\rightarrow \\text{moles} \\rightarrow \\text{mole ratio} \\rightarrow \\text{moles of gas} \\rightarrow PV = nRT$$
+
+
+---
 
 ### Example
 

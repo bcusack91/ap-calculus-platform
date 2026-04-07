@@ -16,9 +16,12 @@ Time to practice the complete process — from identifying the reaction type, th
       id: 'ni6-gas-forming',
       type: 'text' as const,
       content: `
-## Gas-Forming Reactions
+## ⚗️ Gas-Forming Reactions
 
 Some double-replacement reactions produce an **unstable compound** that decomposes into a gas and water. These are important driving forces.
+
+
+---
 
 ### Common Gas-Forming Patterns
 
@@ -28,6 +31,9 @@ Some double-replacement reactions produce an **unstable compound** that decompos
 | H₂SO₃ | H₂O + SO₂ | Sulfur dioxide |
 | NH₄OH | H₂O + NH₃ | Ammonia |
 | H₂S | stays as H₂S(g) | Hydrogen sulfide |
+
+
+---
 
 ### Example: Acid + Carbonate
 
@@ -43,7 +49,7 @@ The fizzing you see when acid hits baking soda is CO₂ gas escaping!
       id: 'ni6-systematic-approach',
       type: 'text' as const,
       content: `
-## Systematic Problem-Solving Approach
+## 🛠️ Systematic Problem-Solving Approach
 
 ### The 5-Step Method
 
@@ -55,12 +61,18 @@ The fizzing you see when acid hits baking soda is CO₂ gas escaping!
 | 4 | **Cancel** spectator ions | Same ion on both sides |
 | 5 | **Verify** net ionic equation | Atoms and charges balanced |
 
+
+---
+
 ### Decision Tree for Splitting
 
 Ask: Is this species...
 - A solid, liquid, or gas? → **Keep molecular**
 - A weak electrolyte? → **Keep molecular**
 - An aqueous strong electrolyte? → **Split into ions**
+
+
+---
 
 ### Common Mistakes to Avoid
 

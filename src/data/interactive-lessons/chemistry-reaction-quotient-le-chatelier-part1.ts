@@ -16,7 +16,7 @@ The reaction quotient $Q$ has the exact same mathematical form as the equilibriu
       id: 'ql1-definition',
       type: 'text' as const,
       content: `
-## Defining Q
+## 📌 Defining Q
 
 For the general reaction:
 
@@ -26,6 +26,9 @@ $$Q_c = \\frac{[C]^c[D]^d}{[A]^a[B]^b} \\quad \\text{(using current concentratio
 
 $$Q_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b} \\quad \\text{(using current pressures)}$$
 
+
+---
+
 ### Key Distinction
 
 | | $K$ | $Q$ |
@@ -33,6 +36,9 @@ $$Q_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b} \\quad \\text{(using current pres
 | Uses | Equilibrium concentrations only | Any concentrations at any time |
 | Value | Fixed at a given temperature | Changes as concentrations change |
 | Meaning | Where equilibrium lies | Where the system is right now |
+
+
+---
 
 ### Q at Special Times
 
@@ -45,7 +51,7 @@ $$Q_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b} \\quad \\text{(using current pres
       id: 'ql1-calculating-q',
       type: 'text' as const,
       content: `
-## Calculating Q
+## 🔢 Calculating Q
 
 ### Example
 
@@ -58,6 +64,9 @@ $$Q_c = \\frac{[\\text{NH}_3]^2}{[\\text{N}_2][\\text{H}_2]^3} = \\frac{(3.0)^2}
 Since $Q_c = 1.125 > K_c = 0.50$:
 - The system has **too many products** relative to equilibrium
 - The reaction will shift to the **left** (toward reactants) to reach equilibrium
+
+
+---
 
 ### The Rules for Solids and Liquids
 

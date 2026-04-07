@@ -16,7 +16,7 @@ This is the most common ICE table scenario: you know K and the initial concentra
       id: 'ic3-method',
       type: 'text' as const,
       content: `
-## General Method
+## 📌 General Method
 
 1. Write the balanced equation and $K$ expression
 2. Set up the ICE table with initial concentrations
@@ -26,6 +26,9 @@ This is the most common ICE table scenario: you know K and the initial concentra
 6. Solve for $x$
 7. Calculate all equilibrium concentrations
 8. **Check**: plug values back into K to verify
+
+
+---
 
 ### Perfect-Square Shortcut
 
@@ -38,7 +41,7 @@ This works when: $K = \\frac{(\\text{something})^2}{(\\text{something else})^2}$
       id: 'ic3-example1',
       type: 'text' as const,
       content: `
-## Worked Example: Perfect-Square Case
+## 🧪 Worked Example: Perfect-Square Case
 
 $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$, $K_c = 64.0$
 
@@ -71,7 +74,7 @@ $$x = 0.40$$
       id: 'ic3-example2',
       type: 'text' as const,
       content: `
-## Worked Example: Quadratic Required
+## 🧪 Worked Example: Quadratic Required
 
 $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$, $K_c = 0.36$
 

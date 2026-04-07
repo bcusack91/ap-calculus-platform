@@ -16,9 +16,12 @@ Buffer solutions are among the most important concepts in AP Chemistry and bioch
       id: 'bf1-definition',
       type: 'text' as const,
       content: `
-## Buffer Definition
+## 📖 Buffer Definition
 
 A **buffer** is a solution that resists changes in pH when small amounts of strong acid or strong base are added.
+
+
+---
 
 ### Composition
 
@@ -29,12 +32,18 @@ A buffer contains two key components:
 | **Acidic buffer** | Weak acid ($HA$) | Conjugate base ($A^-$) | $CH_3COOH / CH_3COO^-$ |
 | **Basic buffer** | Weak base ($B$) | Conjugate acid ($BH^+$) | $NH_3 / NH_4^+$ |
 
+
+---
+
 ### Why Two Components?
 
 - The **weak acid** neutralizes added **base**: $HA + OH^- \\rightarrow A^- + H_2O$
 - The **conjugate base** neutralizes added **acid**: $A^- + H^+ \\rightarrow HA$
 
 Neither component is consumed quickly because both are present in significant amounts — the pH changes only slightly!
+
+
+---
 
 ### What Does NOT Make a Buffer?
 
@@ -48,9 +57,12 @@ Neither component is consumed quickly because both are present in significant am
       id: 'bf1-how-it-works',
       type: 'text' as const,
       content: `
-## How Buffers Maintain pH
+## 🔧 How Buffers Maintain pH
 
 Consider the acetic acid/acetate buffer ($CH_3COOH / CH_3COO^-$):
+
+
+---
 
 ### When Strong Acid ($H^+$) Is Added:
 
@@ -58,11 +70,17 @@ $$CH_3COO^-(aq) + H^+(aq) \\rightarrow CH_3COOH(aq)$$
 
 The conjugate base **consumes** the added $H^+$, converting it to weak acid. The pH barely changes because the ratio $[A^-]/[HA]$ changes only slightly.
 
+
+---
+
 ### When Strong Base ($OH^-$) Is Added:
 
 $$CH_3COOH(aq) + OH^-(aq) \\rightarrow CH_3COO^-(aq) + H_2O(l)$$
 
 The weak acid **consumes** the added $OH^-$, converting it to conjugate base. Again, the ratio changes only slightly.
+
+
+---
 
 ### Key Insight
 
@@ -117,7 +135,7 @@ The buffer works because the added strong acid or base is **completely consumed*
       id: 'bf1-examples',
       type: 'text' as const,
       content: `
-## Common Buffer Systems
+## 🛡️ Common Buffer Systems
 
 | Buffer System | Weak Acid | Conjugate Base | Approximate pH Range |
 |--------------|-----------|---------------|---------------------|
@@ -125,6 +143,9 @@ The buffer works because the added strong acid or base is **completely consumed*
 | Carbonic acid/Bicarbonate | $H_2CO_3$ | $HCO_3^-$ | 5.4 – 7.4 |
 | Dihydrogen phosphate/Hydrogen phosphate | $H_2PO_4^-$ | $HPO_4^{2-}$ | 6.2 – 8.2 |
 | Ammonia/Ammonium | $NH_4^+$ | $NH_3$ | 8.2 – 10.2 |
+
+
+---
 
 ### Biological Buffers
 

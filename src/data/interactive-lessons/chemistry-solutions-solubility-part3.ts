@@ -16,7 +16,7 @@ In the laboratory, concentrated stock solutions are routinely diluted to lower c
       id: 'ss3-dilution-equation',
       type: 'text' as const,
       content: `
-## The Dilution Equation
+## 📌 The Dilution Equation
 
 When you dilute a solution, you add more solvent. The **amount of solute stays the same** — only the volume changes.
 
@@ -30,11 +30,17 @@ where:
 - $M_2$ = final molarity (diluted)
 - $V_2$ = final volume
 
+
+---
+
 ### Why It Works
 
 $$\\text{moles} = M \\times V$$
 
 Since moles don\'t change: $M_1V_1 = M_2V_2$
+
+
+---
 
 ### Important Notes
 
@@ -48,7 +54,7 @@ Since moles don\'t change: $M_1V_1 = M_2V_2$
       id: 'ss3-dilution-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 **Problem:** How would you prepare 500.0 mL of 0.100 M HCl from a 12.0 M HCl stock solution?
 
@@ -64,6 +70,9 @@ $$V_1 = \\frac{M_2V_2}{M_1} = \\frac{(0.100)(500.0)}{12.0} = 4.17 \\text{ mL}$$
 2. **Add the acid to water** (never water to acid — exothermic!)
 3. Add water to bring the total volume to 500.0 mL in a volumetric flask
 4. Mix thoroughly
+
+
+---
 
 ### Safety Note ⚠️
 
@@ -118,13 +127,16 @@ Always add **acid to water** ("Do as you oughta — add acid to water"). Adding 
       id: 'ss3-serial-dilution',
       type: 'text' as const,
       content: `
-## Serial Dilutions
+## 📌 Serial Dilutions
 
 A **serial dilution** is a series of sequential dilutions, each using the output of the previous step as input. This technique is used to:
 
 - Create very low concentrations from stock solutions
 - Prepare a set of standards for calibration curves
 - Reduce concentration by orders of magnitude
+
+
+---
 
 ### How It Works
 
@@ -136,6 +148,9 @@ If each step dilutes by a factor of 10 (e.g., 1 mL into 9 mL):
 | 1 | 1/10 | $0.10$ M |
 | 2 | 1/10 | $0.010$ M |
 | 3 | 1/10 | $0.0010$ M |
+
+
+---
 
 ### General Formula
 
@@ -173,7 +188,7 @@ $$C_3 = 1.0 \\times (0.1)^3 = 0.001 \\text{ M} = 1 \\times 10^{-3} \\text{ M}$$
       id: 'ss3-preparing-solutions',
       type: 'text' as const,
       content: `
-## Preparing Solutions in the Lab
+## 🧪 Preparing Solutions in the Lab
 
 ### From a Solid Solute
 
@@ -184,6 +199,9 @@ To prepare 250.0 mL of 0.200 M Na₂CO₃ ($M = 105.99$ g/mol):
 3. **Transfer** to a 250 mL volumetric flask
 4. **Add water** to dissolve, then fill to the 250 mL mark
 5. **Mix** by inverting several times
+
+
+---
 
 ### From a Stock Solution (Dilution)
 

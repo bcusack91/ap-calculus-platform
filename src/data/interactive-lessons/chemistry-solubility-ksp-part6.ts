@@ -16,7 +16,7 @@ This workshop combines all solubility skills: writing $K_{sp}$ expressions, calc
       id: 'sk6-strategy',
       type: 'text' as const,
       content: `
-## Problem-Type Identification
+## 📂 Problem-Type Identification
 
 | Problem Type | Key Clue | Approach |
 |-------------|----------|----------|

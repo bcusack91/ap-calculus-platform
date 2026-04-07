@@ -16,12 +16,15 @@ The Lewis definition is the **broadest** acid-base theory. It doesn\'t require p
       id: 'ab3-lewis-definition',
       type: 'text' as const,
       content: `
-## The Lewis Definition
+## 📖 The Lewis Definition
 
 | Type | Definition | Key Feature |
 |------|-----------|------------|
 | **Lewis Acid** | Electron pair **acceptor** | Has an empty orbital or can make room for electrons |
 | **Lewis Base** | Electron pair **donor** | Has a lone pair of electrons to share |
+
+
+---
 
 ### Comparison of All Three Theories
 
@@ -30,6 +33,9 @@ The Lewis definition is the **broadest** acid-base theory. It doesn\'t require p
 | **Arrhenius** | Produces $H^+$ in water | Produces $OH^-$ in water |
 | **Brønsted-Lowry** | Proton donor | Proton acceptor |
 | **Lewis** | Electron pair acceptor | Electron pair donor |
+
+
+---
 
 ### Key Insight
 
@@ -42,7 +48,7 @@ $$\\text{Arrhenius} \\subset \\text{Brønsted-Lowry} \\subset \\text{Lewis}$$
       id: 'ab3-lewis-examples',
       type: 'text' as const,
       content: `
-## Common Lewis Acids
+## 🧪 Common Lewis Acids
 
 ### 1. Metal Cations
 
@@ -53,12 +59,18 @@ $$Cu^{2+} + 4NH_3 \\rightarrow [Cu(NH_3)_4]^{2+}$$
 - $Cu^{2+}$: Lewis acid (accepts electron pairs)
 - $NH_3$: Lewis base (donates lone pair)
 
+
+---
+
 ### 2. Molecules with Incomplete Octets
 
 $$BF_3 + NH_3 \\rightarrow F_3B\\text{-}NH_3$$
 
 - $BF_3$: Lewis acid (boron has only 6 electrons, empty p orbital)
 - $NH_3$: Lewis base (nitrogen has a lone pair)
+
+
+---
 
 ### 3. Protons ($H^+$)
 
@@ -68,7 +80,7 @@ $$H^+ + OH^- \\rightarrow H_2O$$
 
 This shows how the Lewis definition encompasses the Brønsted-Lowry definition.
 
-## Common Lewis Bases
+## ✏️ Common Lewis Bases
 
 Any species with a **lone pair** can be a Lewis base:
 - $NH_3$, $H_2O$, $OH^-$, $F^-$, $CN^-$
@@ -123,13 +135,16 @@ Any species with a **lone pair** can be a Lewis base:
       id: 'ab3-coordinate-bonds',
       type: 'text' as const,
       content: `
-## Coordinate Covalent Bonds
+## 🔗 Coordinate Covalent Bonds
 
 When a Lewis base donates an electron pair to a Lewis acid, the resulting bond is called a **coordinate covalent bond** (or **dative bond**).
 
 $$F_3B + :NH_3 \\rightarrow F_3B\\text{←}NH_3$$
 
 The arrow ← shows that **both** electrons in the bond came from the nitrogen of $NH_3$.
+
+
+---
 
 ### In Coordination Chemistry
 

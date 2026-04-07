@@ -16,9 +16,12 @@ When a weak acid is titrated with a strong base, the curve is dramatically diffe
       id: 'at3-regions',
       type: 'text' as const,
       content: `
-## Four Regions of the Weak Acid–Strong Base Curve
+## 🧪 Four Regions of the Weak Acid–Strong Base Curve
 
 Consider titrating 50.0 mL of 0.100 M $CH_3COOH$ ($K_a = 1.8 \\times 10^{-5}$) with 0.100 M $NaOH$:
+
+
+---
 
 ### Region 1: Initial Point (0 mL added)
 
@@ -32,11 +35,17 @@ $$pH = -\\log(1.34 \\times 10^{-3}) = 2.87$$
 
 Higher starting pH than strong acid (1.00 vs 2.87)!
 
+
+---
+
 ### Region 2: Buffer Region (0 to 50 mL)
 
 Both $CH_3COOH$ and $CH_3COO^-$ present — this IS a buffer!
 
 Use Henderson-Hasselbalch: $pH = pK_a + \\log([A^-]/[HA])$
+
+
+---
 
 ### Region 3: Equivalence Point (50.0 mL)
 
@@ -45,6 +54,9 @@ All $HA$ converted to $A^-$. The conjugate base hydrolyzes:
 $$CH_3COO^-(aq) + H_2O(l) \\rightleftharpoons CH_3COOH(aq) + OH^-(aq)$$
 
 $$pH > 7$$ (basic, NOT neutral!)
+
+
+---
 
 ### Region 4: After Equivalence (>50 mL)
 
@@ -55,7 +67,7 @@ Excess $NaOH$ dominates. Calculate $[OH^-]$ from excess.
       id: 'at3-half-equivalence',
       type: 'text' as const,
       content: `
-## The Half-Equivalence Point
+## 📌 The Half-Equivalence Point
 
 At exactly half the volume needed for equivalence (25.0 mL in our example):
 
@@ -68,6 +80,9 @@ $$\\boxed{\\text{At the half-equivalence point: } pH = pK_a}$$
 This is how you can **determine $K_a$ experimentally** — read the pH at the half-equivalence point!
 
 For acetic acid: $pH = pK_a = 4.74$ at the half-equivalence point.
+
+
+---
 
 ### Why This Matters on the AP Exam
 
@@ -124,13 +139,16 @@ For acetic acid: $pH = pK_a = 4.74$ at the half-equivalence point.
       id: 'at3-equivalence-ph',
       type: 'text' as const,
       content: `
-## Calculating pH at the Equivalence Point
+## 🔢 Calculating pH at the Equivalence Point
 
 At the equivalence point, only the conjugate base $A^-$ is present. It hydrolyzes:
 
 $$A^-(aq) + H_2O(l) \\rightleftharpoons HA(aq) + OH^-(aq)$$
 
 $$K_b = \\frac{K_w}{K_a} = \\frac{1.0 \\times 10^{-14}}{1.8 \\times 10^{-5}} = 5.6 \\times 10^{-10}$$
+
+
+---
 
 ### ICE Table
 

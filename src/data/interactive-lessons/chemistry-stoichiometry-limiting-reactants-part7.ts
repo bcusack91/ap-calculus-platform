@@ -16,7 +16,7 @@ This final part challenges you with AP-level stoichiometry problems that combine
       id: 'sl7-summary',
       type: 'text' as const,
       content: `
-## Complete Stoichiometry Toolkit
+## ⚖️ Complete Stoichiometry Toolkit
 
 | Concept | Key Formula |
 |---------|-------------|
@@ -29,7 +29,7 @@ This final part challenges you with AP-level stoichiometry problems that combine
 | Percent yield | $\\% = (\\text{actual} / \\text{theoretical}) \\times 100$ |
 | Excess remaining | Initial − consumed |
 
-## AP Exam Tips
+## 📌 AP Exam Tips
 
 1. **Show your work** — AP graders want to see the setup, not just the answer
 2. **Use dimensional analysis** — set up conversion factors so units cancel
@@ -43,7 +43,7 @@ This final part challenges you with AP-level stoichiometry problems that combine
       id: 'sl7-ap-scenario-1',
       type: 'text' as const,
       content: `
-## AP-Style Problem Walkthrough
+## 📌 AP-Style Problem Walkthrough
 
 **Problem:** A student reacts 25.0 mL of 0.400 M Pb(NO₃)₂ with 35.0 mL of 0.300 M KI. Find the mass of PbI₂ precipitate formed.
 
@@ -51,10 +51,16 @@ $$\\text{Pb(NO}_3)_2(\\text{aq}) + 2\\text{KI}(\\text{aq}) \\rightarrow \\text{P
 
 $M_{\\text{PbI}_2} = 461.0$ g/mol
 
+
+---
+
 ### Step 1: Find Moles
 
 - mol Pb(NO₃)₂ = $0.400 \\times 0.0250 = 0.0100$ mol
 - mol KI = $0.300 \\times 0.0350 = 0.0105$ mol
+
+
+---
 
 ### Step 2: Limiting Reactant
 
@@ -62,9 +68,15 @@ $M_{\\text{PbI}_2} = 461.0$ g/mol
 - From KI: $0.0105 \\; \\cancel{\\text{mol KI}} \\times \\frac{1 \\text{ mol PbI}_2}{2 \\; \\cancel{\\text{mol KI}}} = 0.00525$ mol PbI₂
 - KI produces less → **KI is limiting**
 
+
+---
+
 ### Step 3: Mass of PbI₂
 
 $$m = 0.00525 \\; \\cancel{\\text{mol PbI}_2} \\times \\frac{461.0 \\text{ g PbI}_2}{1 \\; \\cancel{\\text{mol PbI}_2}} = 2.42 \\text{ g PbI}_2$$
+
+
+---
 
 ### Key Insight
 

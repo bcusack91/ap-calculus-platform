@@ -8,7 +8,7 @@ export const chemPhotoelectronSpectroscopyPart5Data = {
 
 PES spectra don't just tell us about individual atoms — they reveal **periodic trends** that help explain the behavior of elements across the periodic table. The key concept connecting PES to periodic trends is **effective nuclear charge ($Z_{eff}$)**.
 
-## Effective Nuclear Charge
+## 📊 Effective Nuclear Charge
 
 $$Z_{eff} = Z - S$$
 
@@ -22,7 +22,7 @@ As $Z_{eff}$ increases, valence electrons are held **more tightly**, resulting i
     {
       id: 'ps5-across-period',
       type: 'text' as const,
-      content: `## Binding Energy Across a Period
+      content: `## 📌 Binding Energy Across a Period
 
 As you move **left to right across a period**, the binding energies of ALL electrons increase. This happens because:
 
@@ -30,6 +30,9 @@ As you move **left to right across a period**, the binding energies of ALL elect
 2. Electrons are added to the **same principal energy level** (same shell)
 3. Electrons in the same shell provide **poor shielding** for each other
 4. Therefore, $Z_{eff}$ **increases** across the period
+
+
+---
 
 ### Example: Period 2 First Ionization Energies and 1s Binding Energies
 
@@ -73,18 +76,27 @@ As you move from left to right across Period 3 (Na to Ar), what happens to the b
     {
       id: 'ps5-comparing',
       type: 'text' as const,
-      content: `## Comparing PES Spectra of Adjacent Elements
+      content: `## ⚖️ Comparing PES Spectra of Adjacent Elements
 
 When comparing PES spectra of adjacent elements in the same period, you should notice:
+
+
+---
 
 ### Sodium (Na, Z = 11): 1s² 2s² 2p⁶ 3s¹
 - Five peaks with heights: 2, 2, 6, 1 (but 2s and 2p show as separate peaks)
 - Rightmost peak (3s¹): height 1, lowest BE
 
+
+---
+
 ### Magnesium (Mg, Z = 12): 1s² 2s² 2p⁶ 3s²
 - Same number of peaks as Na (four peaks)
 - Rightmost peak (3s²): height 2, slightly higher BE than Na's 3s peak
 - ALL peaks shift slightly **left** (higher BE) compared to Na
+
+
+---
 
 ### Key Comparisons:
 1. **Mg's 1s peak** has higher BE than Na's 1s peak (more protons pulling on same electrons)
@@ -166,7 +178,7 @@ Use your knowledge of periodic trends and effective nuclear charge to answer the
     {
       id: 'ps5-summary',
       type: 'text' as const,
-      content: `## Part 5 Summary
+      content: `## 📋 Part 5 Summary
 
 PES and periodic trends:
 

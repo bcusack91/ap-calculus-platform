@@ -16,11 +16,14 @@ One of the trickiest parts of electrolysis is predicting **what forms at each el
       id: 'ef3-molten-salts',
       type: 'text' as const,
       content: `
-## Electrolysis of Molten Salts
+## 🔋 Electrolysis of Molten Salts
 
 ### Why Molten?
 
 Ionic compounds must be in a **molten** (liquid) state or **dissolved** in water to conduct electricity. In the solid state, ions are locked in place and cannot migrate.
+
+
+---
 
 ### Simple Case: Molten NaCl
 
@@ -30,11 +33,17 @@ $$\\text{Na}^+(l) + e^- \\rightarrow \\text{Na}(l)$$
 **At the anode (oxidation):**
 $$2\\text{Cl}^-(l) \\rightarrow \\text{Cl}_2(g) + 2e^-$$
 
+
+---
+
 ### Molten Salt Rule
 
 In a molten salt, there are **only two ions** present. The prediction is straightforward:
 - **Cation** is reduced at the cathode → metal forms
 - **Anion** is oxidized at the anode → nonmetal forms
+
+
+---
 
 ### Examples
 
@@ -50,11 +59,14 @@ In a molten salt, there are **only two ions** present. The prediction is straigh
       id: 'ef3-aqueous',
       type: 'text' as const,
       content: `
-## Electrolysis of Aqueous Solutions
+## 🧪 Electrolysis of Aqueous Solutions
 
 ### The Complication: Water Competes!
 
 In aqueous solutions, **water** can be oxidized or reduced instead of the dissolved ions. You must compare the reduction potentials to predict which reaction occurs.
+
+
+---
 
 ### At the Cathode (Which Gets Reduced?)
 
@@ -65,6 +77,9 @@ $$2\\text{H}_2\\text{O}(l) + 2e^- \\rightarrow \\text{H}_2(g) + 2\\text{OH}^-(aq
 - If the metal has $E° > -0.83$ V (e.g., Cu²⁺, Ag⁺): **metal is deposited**
 - If the metal has $E° < -0.83$ V (e.g., Na⁺, K⁺, Al³⁺): **H₂ gas forms**
 
+
+---
+
 ### At the Anode (Which Gets Oxidized?)
 
 Compare the anion vs. water:
@@ -73,6 +88,9 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow \\text{O}_2(g) + 4\\text{H}^+(aq) + 4e^-
 
 - Simple anions (Cl⁻, Br⁻, I⁻): **anion is oxidized** (due to overpotential effects)
 - Oxyanions (SO₄²⁻, NO₃⁻) or F⁻: **water is oxidized → O₂ forms**
+
+
+---
 
 ### Summary Rules for Aqueous Electrolysis
 

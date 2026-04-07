@@ -16,11 +16,14 @@ Not every change to a system causes an equilibrium shift. Two important cases: *
       id: 'ql5-catalysts',
       type: 'text' as const,
       content: `
-## Catalysts and Equilibrium
+## ⚖️ Catalysts and Equilibrium
 
 ### What Catalysts Do
 
 A catalyst speeds up a reaction by providing an **alternative pathway** with a lower activation energy ($E_a$).
+
+
+---
 
 ### Key Facts About Catalysts at Equilibrium
 
@@ -32,15 +35,24 @@ A catalyst speeds up a reaction by providing an **alternative pathway** with a l
 | Value of K | **No change** |
 | Time to reach equilibrium | **Decreased** |
 
+
+---
+
 ### Why No Shift?
 
 A catalyst speeds up both the forward and reverse reactions by the same factor. Since both rates increase equally, the ratio of rates (and hence the equilibrium position) doesn\'t change.
+
+
+---
 
 ### What Catalysts ARE Useful For
 
 - Reaching equilibrium **faster**
 - Making a slow reaction practical (e.g., the Haber process uses an iron catalyst)
 - Allowing equilibrium to be reached at **lower temperatures** (which may favor products for exothermic reactions)
+
+
+---
 
 ### Example
 
@@ -53,9 +65,12 @@ Without a catalyst, this reaction is impractically slow at lower temperatures. T
       id: 'ql5-inert-gas',
       type: 'text' as const,
       content: `
-## Adding an Inert Gas
+## 💨 Adding an Inert Gas
 
 An inert (noble) gas does not react with any species in the equilibrium. Its effect depends on the conditions:
+
+
+---
 
 ### At Constant Volume
 
@@ -66,6 +81,9 @@ Adding inert gas at constant volume:
 - Q is unchanged → **No shift**
 - K is unchanged
 
+
+---
+
 ### At Constant Pressure
 
 Adding inert gas at constant pressure:
@@ -74,12 +92,18 @@ Adding inert gas at constant pressure:
 - All partial pressures of reacting species **decrease**
 - This is equivalent to a volume increase → shifts toward **more moles of gas**
 
+
+---
+
 ### Summary
 
 | Condition | Effect of Adding Inert Gas |
 |-----------|---------------------------|
 | Constant volume | No shift (partial pressures unchanged) |
 | Constant pressure | Shifts toward more moles of gas (volume increases) |
+
+
+---
 
 ### AP Exam Note
 
@@ -134,7 +158,7 @@ On the AP exam, "adding an inert gas" typically means at **constant volume** unl
       id: 'ql5-all-stresses-summary',
       type: 'text' as const,
       content: `
-## Complete Summary of All Stresses
+## 📋 Complete Summary of All Stresses
 
 | Stress | Shift Direction | K Changes? |
 |--------|----------------|------------|

@@ -7,7 +7,7 @@ export const chemGalvanicCellsPotentialsPart5Data = {
       content: `
 # 🔗 Connecting Free Energy and Cell Potential
 
-**Part 5 of 7 — ΔG° = −nFE°**
+**Part 5 of 7 — $\\Delta G^\\circ = -nFE^\\circ$**
 
 One of the most important equations in AP Chemistry links Gibbs free energy directly to cell potential. This bridges thermodynamics and electrochemistry into a unified framework.
       `
@@ -16,102 +16,125 @@ One of the most important equations in AP Chemistry links Gibbs free energy dire
       id: 'gc5-equation',
       type: 'text' as const,
       content: `
-## The Key Equation
+## 🔑 The Key Equation
 
-$$\\Delta G° = -nFE°$$
+> **The bridge between thermodynamics and electrochemistry:**
+>
+> $$\\Delta G^\\circ = -nFE^\\circ$$
 
-| Symbol | Meaning | Value/Units |
-|--------|---------|-------------|
-| $\\Delta G°$ | Standard free energy change | J (or kJ) |
+| Symbol | Meaning | Units |
+|--------|---------|-------|
+| $\\Delta G^\\circ$ | Standard free energy change | J (or kJ) |
 | $n$ | Moles of electrons transferred | dimensionless |
-| $F$ | Faraday\'s constant | $96{,}485$ C/mol $e^-$ |
-| $E°$ | Standard cell potential | V (volts = J/C) |
+| $F$ | Faraday's constant | $96{,}485$ C/mol $e^-$ |
+| $E^\\circ$ | Standard cell potential | V (volts = J/C) |
 
-### Why the Negative Sign?
+---
 
-- Spontaneous reactions have $\\Delta G° < 0$
-- Spontaneous galvanic cells have $E° > 0$
-- The negative sign ensures: positive $E°$ → negative $\\Delta G°$ ✓
+### 🤔 Why the Negative Sign?
 
-### Unit Check
+| Condition | $\\Delta G^\\circ$ | $E^\\circ$ |
+|-----------|-----------------|----------|
+| Spontaneous | $< 0$ | $> 0$ |
+| At equilibrium | $= 0$ | $= 0$ |
+| Non-spontaneous | $> 0$ | $< 0$ |
 
-$$\\Delta G° = -(\\text{mol})(\\text{C/mol})(\\text{J/C}) = \\text{J}$$
+The negative sign ensures these are always **opposite** in sign — positive $E^\\circ$ gives negative $\\Delta G^\\circ$. ✓
 
-The units work out to joules (convert to kJ by dividing by 1000).
+---
+
+### 📏 Unit Check
+
+$$\\Delta G^\\circ = -(\\text{mol})(\\text{C/mol})(\\text{J/C}) = \\text{J}$$
+
+> 💡 The units work out to **joules**. Divide by 1000 to convert to kJ.
       `
     },
     {
       id: 'gc5-three-way',
       type: 'text' as const,
       content: `
-## The Thermodynamic Triangle
+## 🔗 The Thermodynamic Triangle
 
-Three key relationships connect $\\Delta G°$, $E°$, and $K$:
+Three key relationships connect $\\Delta G^\\circ$, $E^\\circ$, and $K$:
 
-$$\\Delta G° = -nFE° = -RT\\ln K$$
-
-From these, we can derive:
-
-$$E° = \\frac{RT}{nF}\\ln K$$
+> **Master Equations:**
+>
+> $$\\Delta G^\\circ = -nFE^\\circ = -RT\\ln K$$
+>
+> $$E^\\circ = \\frac{RT}{nF}\\ln K$$
 
 At 25°C (298 K):
 
-$$E° = \\frac{0.0257}{n}\\ln K = \\frac{0.0592}{n}\\log K$$
+$$E^\\circ = \\frac{0.0257}{n}\\ln K = \\frac{0.0592}{n}\\log K$$
 
-### The Web of Connections
+---
+
+### 🗺️ The Web of Connections
 
 | Know | Want | Use |
 |------|------|-----|
-| $E°$ | $\\Delta G°$ | $\\Delta G° = -nFE°$ |
-| $E°$ | $K$ | $K = e^{nFE°/(RT)}$ |
-| $K$ | $\\Delta G°$ | $\\Delta G° = -RT\\ln K$ |
-| $\\Delta G°$ | $E°$ | $E° = -\\Delta G°/(nF)$ |
-| $K$ | $E°$ | $E° = (RT/nF)\\ln K$ |
-| $\\Delta G°$ | $K$ | $K = e^{-\\Delta G°/(RT)}$ |
+| $E^\\circ$ | $\\Delta G^\\circ$ | $\\Delta G^\\circ = -nFE^\\circ$ |
+| $E^\\circ$ | $K$ | $K = e^{nFE^\\circ/(RT)}$ |
+| $K$ | $\\Delta G^\\circ$ | $\\Delta G^\\circ = -RT\\ln K$ |
+| $\\Delta G^\\circ$ | $E^\\circ$ | $E^\\circ = -\\Delta G^\\circ/(nF)$ |
+| $K$ | $E^\\circ$ | $E^\\circ = (RT/nF)\\ln K$ |
+| $\\Delta G^\\circ$ | $K$ | $K = e^{-\\Delta G^\\circ/(RT)}$ |
 
-### All Three Consistent
+---
 
-| Spontaneous? | $\\Delta G°$ | $E°$ | $K$ |
-|-------------|-----------|-----|-----|
-| Yes | $< 0$ | $> 0$ | $> 1$ |
-| At equilibrium | $= 0$ | $= 0$ | $= 1$ |
-| No | $> 0$ | $< 0$ | $< 1$ |
+### ✅ All Three Must Be Consistent
+
+| Spontaneous? | $\\Delta G^\\circ$ | $E^\\circ$ | $K$ |
+|:------------:|:-----------------:|:----------:|:---:|
+| **Yes** | $< 0$ | $> 0$ | $> 1$ |
+| **At equilibrium** | $= 0$ | $= 0$ | $= 1$ |
+| **No** | $> 0$ | $< 0$ | $< 1$ |
+
+> 💡 If you know **any one** of these three values, you can determine the other two!
       `
     },
     {
       id: 'gc5-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
-For the Daniell cell: $\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$
+> **Daniell Cell:**
+>
+> $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$$
+>
+> $E^\\circ = +1.10$ V, &nbsp; $n = 2$ mol $e^-$
 
-$E° = +1.10$ V, $n = 2$ mol $e^-$
+---
 
-### Calculate ΔG°
+### 📐 Calculate $\\Delta G^\\circ$
 
-$$\\Delta G° = -nFE° = -(2)(96{,}485)(1.10)$$
-$$= -212{,}267 \\text{ J} = -212.3 \\text{ kJ}$$
+$$\\Delta G^\\circ = -nFE^\\circ = -(2)(96{,}485)(1.10)$$
 
-### Calculate K at 298 K
+$$= -212{,}267 \\text{ J} = \\boxed{-212.3 \\text{ kJ}}$$
 
-$$\\ln K = \\frac{nFE°}{RT} = \\frac{(2)(96{,}485)(1.10)}{(8.314)(298)} = \\frac{212{,}267}{2478} = 85.66$$
+---
 
-$$K = e^{85.66} = 1.6 \\times 10^{37}$$
+### 📐 Calculate $K$ at 298 K
 
-This enormous $K$ confirms the reaction is virtually complete at equilibrium.
+$$\\ln K = \\frac{nFE^\\circ}{RT} = \\frac{(2)(96{,}485)(1.10)}{(8.314)(298)} = \\frac{212{,}267}{2478} = 85.66$$
+
+$$K = e^{85.66} = \\boxed{1.6 \\times 10^{37}}$$
+
+> 🔥 This enormous $K$ confirms the reaction is **virtually complete** at equilibrium — products are overwhelmingly favored.
       `
     },
     {
       id: 'gc5-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**ΔG° and E° Quiz** 🎯
+**$\\Delta G^\\circ$ and $E^\\circ$ Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'If E°_cell = +0.50 V and n = 2, ΔG° is:',
+            question: 'If $E^\\circ_{\\text{cell}} = +0.50$ V and $n = 2$, $\\Delta G^\\circ$ is:',
             options: [
               '+96.5 kJ',
               '−96.5 kJ',
@@ -119,10 +142,10 @@ This enormous $K$ confirms the reaction is virtually complete at equilibrium.
               '−48.2 kJ'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta G° = -nFE° = -(2)(96{,}485)(0.50) = -96{,}485$ J $= -96.5$ kJ.'
+            explanation: '$\\Delta G^\\circ = -nFE^\\circ = -(2)(96{,}485)(0.50) = -96{,}485$ J $= -96.5$ kJ.'
           },
           {
-            question: 'If ΔG° for a 2-electron cell reaction is −200 kJ, E° is approximately:',
+            question: 'If $\\Delta G^\\circ$ for a 2-electron cell reaction is $-200$ kJ, $E^\\circ$ is approximately:',
             options: [
               '+1.04 V',
               '−1.04 V',
@@ -130,7 +153,7 @@ This enormous $K$ confirms the reaction is virtually complete at equilibrium.
               '−2.07 V'
             ],
             correctAnswer: 0,
-            explanation: '$E° = -\\Delta G°/(nF) = -(-200{,}000)/((2)(96{,}485)) = 200{,}000/192{,}970 = +1.04$ V.'
+            explanation: '$E^\\circ = -\\Delta G^\\circ/(nF) = -(-200{,}000)/((2)(96{,}485)) = 200{,}000/192{,}970 = +1.04$ V.'
           },
           {
             question: 'The Faraday constant F represents:',
@@ -152,19 +175,19 @@ This enormous $K$ confirms the reaction is virtually complete at equilibrium.
       content: `
 **Thermodynamic Triangle Calculations** 🧮
 
-**1)** $E° = +0.80$ V, $n = 1$. Calculate $\\Delta G°$ in kJ. (to 1 decimal)
+**1)** $E^\\circ = +0.80$ V, $n = 1$. Calculate $\\Delta G^\\circ$ in kJ. (to 1 decimal)
 
-**2)** $\\Delta G° = -579$ kJ, $n = 6$. Calculate $E°$ in V. (to 3 significant figures)
+**2)** $\\Delta G^\\circ = -579$ kJ, $n = 6$. Calculate $E^\\circ$ in V. (to 3 significant figures)
 
-**3)** If $E° > 0$ for a cell, is $K$ greater than or less than 1? (type "greater" or "less")
+**3)** If $E^\\circ > 0$ for a cell, is $K$ greater than or less than 1? (type "greater" or "less")
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['-77.2', '1.00', 'greater'],
-        hint1: '$\\Delta G° = -(1)(96485)(0.80) = -77{,}188$ J.',
-        hint2: '$E° = -(-579{,}000)/((6)(96485))$',
-        hint3: 'Positive E° → spontaneous → products favored → K > 1.',
-        explanation: '1) $\\Delta G° = -(1)(96485)(0.80) = -77{,}188$ J $= -77.2$ kJ. 2) $E° = 579{,}000/(6 \\times 96485) = 579{,}000/578{,}910 = 1.00$ V. 3) $E° > 0$ → $\\Delta G° < 0$ → $K > 1$.'
+        hint1: '$\\Delta G^\\circ = -(1)(96485)(0.80) = -77{,}188$ J.',
+        hint2: '$E^\\circ = -(-579{,}000)/((6)(96485))$',
+        hint3: 'Positive $E^\\circ$ → spontaneous → products favored → $K > 1$.',
+        explanation: '1) $\\Delta G^\\circ = -(1)(96485)(0.80) = -77{,}188$ J $= -77.2$ kJ. 2) $E^\\circ = 579{,}000/(6 \\times 96485) = 579{,}000/578{,}910 = 1.00$ V. 3) $E^\\circ > 0$ → $\\Delta G^\\circ < 0$ → $K > 1$.'
       }
     },
     {
@@ -176,11 +199,11 @@ This enormous $K$ confirms the reaction is virtually complete at equilibrium.
       exercise: {
         dropdowns: [
           {
-            label: 'For a spontaneous cell, ΔG° is',
+            label: 'For a spontaneous cell, $\\Delta G^\\circ$ is',
             options: ['positive', 'negative', 'zero', 'undefined']
           },
           {
-            label: 'For a spontaneous cell, E° is',
+            label: 'For a spontaneous cell, $E^\\circ$ is',
             options: ['positive', 'negative', 'zero', 'undefined']
           },
           {
@@ -188,46 +211,46 @@ This enormous $K$ confirms the reaction is virtually complete at equilibrium.
             options: ['less than 1', 'equal to 1', 'greater than 1', 'zero']
           },
           {
-            label: 'The n in ΔG° = −nFE° represents',
+            label: 'The $n$ in $\\Delta G^\\circ = -nFE^\\circ$ represents',
             options: ['moles of reactant', 'moles of electrons transferred', 'moles of product', 'Avogadro\'s number']
           }
         ],
         correctAnswers: ['negative', 'positive', 'greater than 1', 'moles of electrons transferred'],
-        hint1: 'Spontaneous = thermodynamically favorable = ΔG < 0.',
+        hint1: 'Spontaneous = thermodynamically favorable = $\\Delta G < 0$.',
         hint2: 'Galvanic cells produce positive voltage.',
-        hint3: 'Products favored → K > 1.',
-        explanation: 'For a spontaneous cell: ΔG° < 0, E° > 0, K > 1. All three are consistent. n = moles of electrons transferred in the balanced redox equation.'
+        hint3: 'Products favored → $K > 1$.',
+        explanation: 'For a spontaneous cell: $\\Delta G^\\circ < 0$, $E^\\circ > 0$, $K > 1$. All three are consistent. $n$ = moles of electrons transferred in the balanced redox equation.'
       }
     },
     {
       id: 'gc5-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — ΔG° and E°** ✅
+**Exit Quiz — $\\Delta G^\\circ$ and $E^\\circ$** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A cell has E° = 0.00 V. What can you conclude?',
+            question: 'A cell has $E^\\circ = 0.00$ V. What can you conclude?',
             options: [
-              'ΔG° = 0 and K = 1 — the system is at equilibrium under standard conditions',
+              '$\\Delta G^\\circ = 0$ and $K = 1$ — the system is at equilibrium under standard conditions',
               'The cell is broken',
-              'ΔG° < 0 and K > 1',
-              'ΔG° > 0 and K < 1'
+              '$\\Delta G^\\circ < 0$ and $K > 1$',
+              '$\\Delta G^\\circ > 0$ and $K < 1$'
             ],
             correctAnswer: 0,
-            explanation: '$E° = 0 \\Rightarrow \\Delta G° = -nF(0) = 0 \\Rightarrow K = 1$. The reaction is at equilibrium under standard conditions — neither direction is favored.'
+            explanation: '$E^\\circ = 0 \\Rightarrow \\Delta G^\\circ = -nF(0) = 0 \\Rightarrow K = 1$. The reaction is at equilibrium under standard conditions — neither direction is favored.'
           },
           {
-            question: 'Why does multiplying a half-reaction by 2 NOT change E° but DOES change ΔG°?',
+            question: 'Why does multiplying a half-reaction by 2 NOT change $E^\\circ$ but DOES change $\\Delta G^\\circ$?',
             options: [
-              'E° is intensive; ΔG° is extensive',
-              'E° depends on concentration; ΔG° does not',
+              '$E^\\circ$ is intensive; $\\Delta G^\\circ$ is extensive',
+              '$E^\\circ$ depends on concentration; $\\Delta G^\\circ$ does not',
               'Both change equally',
               'Neither changes'
             ],
             correctAnswer: 0,
-            explanation: '$E°$ is an intensive property — it does not depend on the amount of substance. But $\\Delta G° = -nFE°$, and doubling the reaction doubles $n$, which doubles $\\Delta G°$. $\\Delta G°$ is extensive.'
+            explanation: '$E^\\circ$ is an intensive property — it does not depend on the amount of substance. But $\\Delta G^\\circ = -nFE^\\circ$, and doubling the reaction doubles $n$, which doubles $\\Delta G^\\circ$. $\\Delta G^\\circ$ is extensive.'
           }
         ]
       }

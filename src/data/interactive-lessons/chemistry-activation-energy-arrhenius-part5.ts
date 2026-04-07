@@ -16,7 +16,7 @@ Often you don\'t have enough data to make a full Arrhenius plot. Instead, you kn
       id: 'ae5-derivation',
       type: 'text' as const,
       content: `
-## Deriving the Two-Point Form
+## 📌 Deriving the Two-Point Form
 
 Write the Arrhenius equation at two temperatures:
 
@@ -29,6 +29,9 @@ Subtract equation 1 from equation 2:
 $$\\ln k_2 - \\ln k_1 = -\\frac{E_a}{R}\\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)$$
 
 $$\\boxed{\\ln\\frac{k_2}{k_1} = \\frac{E_a}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right)}$$
+
+
+---
 
 ### Using This Equation
 
@@ -44,7 +47,7 @@ $$\\ln k_2 = \\ln k_1 + \\frac{E_a}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\ri
       id: 'ae5-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 A reaction has $k_1 = 0.0120$ s⁻¹ at $T_1 = 400$ K and $k_2 = 0.150$ s⁻¹ at $T_2 = 500$ K.
 

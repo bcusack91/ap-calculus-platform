@@ -16,17 +16,23 @@ When K is not small enough for the 5% approximation, or when the 5% test fails, 
       id: 'ic5-quadratic-review',
       type: 'text' as const,
       content: `
-## The Quadratic Formula
+## 📌 The Quadratic Formula
 
 For $ax^2 + bx + c = 0$:
 
 $$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$
+
+
+---
 
 ### In Equilibrium Problems
 
 - You\'ll always get two solutions
 - Only the **positive** root that gives physically meaningful (non-negative) concentrations is valid
 - Reject any root that gives a negative concentration
+
+
+---
 
 ### When You Need the Quadratic
 
@@ -40,7 +46,7 @@ The approximation fails when:
       id: 'ic5-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 $\\text{A}(g) \\rightleftharpoons \\text{B}(g) + \\text{C}(g)$, $K_c = 0.50$
 

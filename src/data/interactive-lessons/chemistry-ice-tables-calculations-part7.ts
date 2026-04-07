@@ -16,7 +16,7 @@ This final part reviews all ICE table techniques: setup, solving for K, solving 
       id: 'ic7-summary',
       type: 'text' as const,
       content: `
-## Complete ICE Table Summary
+## 📋 Complete ICE Table Summary
 
 ### The ICE Table
 
@@ -26,6 +26,9 @@ This final part reviews all ICE table techniques: setup, solving for K, solving 
 | **C** | $-($coeff$)(x)$ | $+($coeff$)(x)$ |
 | **E** | I + C | I + C |
 
+
+---
+
 ### Problem Types
 
 | Given | Find | Method |
@@ -33,6 +36,9 @@ This final part reviews all ICE table techniques: setup, solving for K, solving 
 | All equilibrium conc. | K | Plug directly into K expression |
 | Initial + one eq. conc. | K | Find x from ICE, then all eq. conc., then K |
 | K + initial conc. | Eq. conc. | Full ICE → solve for x |
+
+
+---
 
 ### Solving Strategies
 
@@ -42,6 +48,9 @@ This final part reviews all ICE table techniques: setup, solving for K, solving 
 | $[\\text{init}]/K > 100$ | Small-x approximation |
 | $[\\text{init}]/K < 100$ | Full quadratic |
 | Approx gives > 5% | Switch to quadratic |
+
+
+---
 
 ### Verification
 

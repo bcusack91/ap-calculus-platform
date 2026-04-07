@@ -16,13 +16,19 @@ Not all reactions proceed at the same speed. Some are explosively fast, while ot
       id: 'rr2-concentration',
       type: 'text' as const,
       content: `
-## Factor 1: Concentration of Reactants
+## 📊 Factor 1: Concentration of Reactants
 
 **Higher concentration → faster rate** (usually)
+
+
+---
 
 ### Why?
 
 More particles per unit volume means more frequent collisions. More collisions per second means more chances for a successful (reactive) collision.
+
+
+---
 
 ### Mathematical Connection
 
@@ -31,6 +37,9 @@ The rate law (which we will derive in later parts) often takes the form:
 $$\\text{Rate} = k[A]^m[B]^n$$
 
 Increasing $[A]$ or $[B]$ directly increases the rate (when $m, n > 0$).
+
+
+---
 
 ### Example
 
@@ -41,9 +50,12 @@ Burning steel wool in pure O₂ (100%) is dramatically faster than in air (21% O
       id: 'rr2-temperature',
       type: 'text' as const,
       content: `
-## Factor 2: Temperature
+## 📊 Factor 2: Temperature
 
 **Higher temperature → faster rate**
+
+
+---
 
 ### Why?
 
@@ -51,9 +63,15 @@ At higher temperatures:
 1. Molecules move **faster** → more frequent collisions
 2. A greater **fraction** of molecules have enough energy to overcome the activation energy barrier
 
+
+---
+
 ### Rule of Thumb
 
 For many reactions, a **10°C increase** roughly **doubles** the rate. This is an approximation — the actual factor depends on the activation energy.
+
+
+---
 
 ### Quantitative: The Arrhenius Equation
 
@@ -73,13 +91,19 @@ We will explore this equation in depth in a later topic.
       id: 'rr2-surface-area',
       type: 'text' as const,
       content: `
-## Factor 3: Surface Area
+## 📊 Factor 3: Surface Area
 
 **Greater surface area → faster rate** (for heterogeneous reactions)
+
+
+---
 
 ### Why?
 
 In heterogeneous reactions (where reactants are in different phases), the reaction occurs at the **interface** between phases. More exposed surface = more contact area = faster reaction.
+
+
+---
 
 ### Examples
 
@@ -88,6 +112,9 @@ In heterogeneous reactions (where reactants are in different phases), the reacti
 | Iron block | Low | Rusts slowly over years |
 | Iron filings | Medium | Rusts in days |
 | Iron nanoparticles | Very high | Can ignite spontaneously |
+
+
+---
 
 ### Dust Explosions
 
@@ -98,15 +125,21 @@ Finely powdered combustible materials (flour, coal dust, grain dust) have enormo
       id: 'rr2-catalysts',
       type: 'text' as const,
       content: `
-## Factor 4: Catalysts
+## 📊 Factor 4: Catalysts
 
 **Catalysts speed up reactions without being consumed**
+
+
+---
 
 ### How?
 
 A catalyst provides an **alternative reaction pathway** with a **lower activation energy** ($E_a$).
 
 $$E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})$$
+
+
+---
 
 ### Key Properties of Catalysts
 
@@ -115,6 +148,9 @@ $$E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})$$
 - **Do NOT change** $\\Delta H$ or $\\Delta G$ — thermodynamics is unaffected
 - **Do NOT shift equilibrium** — both forward and reverse rates increase equally
 - **Speed up both directions** equally
+
+
+---
 
 ### Types
 

@@ -16,7 +16,7 @@ When K is very small ($K < 10^{-3}$) relative to initial concentrations, the cha
       id: 'ic4-when-to-use',
       type: 'text' as const,
       content: `
-## When Can You Use the Approximation?
+## 📌 When Can You Use the Approximation?
 
 ### The Rule of Thumb
 
@@ -24,9 +24,15 @@ If $\\frac{[\\text{initial}]}{K} > 100$ (or equivalently, $K < 0.01 \\times [\\t
 
 $$[\\text{initial}] - x \\approx [\\text{initial}]$$
 
+
+---
+
 ### Why This Works
 
 When K is very small, the reaction barely shifts — very little product forms. So $x$ is tiny compared to the initial concentration, and subtracting it doesn\'t meaningfully change the value.
+
+
+---
 
 ### The 5% Test
 
@@ -39,7 +45,7 @@ If the change is less than 5% of the initial concentration, the approximation is
       id: 'ic4-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 $\\text{N}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{NO}(g)$, $K_c = 4.0 \\times 10^{-4}$
 

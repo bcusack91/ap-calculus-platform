@@ -16,9 +16,12 @@ Standard enthalpies of formation ($\\Delta H°_f$) provide a systematic way to c
       id: 'eh6-definition',
       type: 'text' as const,
       content: `
-## Standard Enthalpy of Formation ($\\Delta H°_f$)
+## 🌡️ Standard Enthalpy of Formation ($\\Delta H°_f$)
 
 The enthalpy change when **one mole** of a compound is formed from its **elements** in their **standard states**.
+
+
+---
 
 ### Examples
 
@@ -27,6 +30,9 @@ $$\\text{C}(s, \\text{graphite}) + \\text{O}_2(g) \\rightarrow \\text{CO}_2(g) \
 $$\\text{H}_2(g) + \\frac{1}{2}\\text{O}_2(g) \\rightarrow \\text{H}_2\\text{O}(l) \\quad \\Delta H°_f = -285.8 \\text{ kJ/mol}$$
 
 $$\\frac{1}{2}\\text{N}_2(g) + \\frac{3}{2}\\text{H}_2(g) \\rightarrow \\text{NH}_3(g) \\quad \\Delta H°_f = -45.9 \\text{ kJ/mol}$$
+
+
+---
 
 ### Critical Rule
 
@@ -47,11 +53,14 @@ This makes sense: an element doesn\'t change to form itself!
       id: 'eh6-master-equation',
       type: 'text' as const,
       content: `
-## The Master Equation
+## 📌 The Master Equation
 
 $$\\Delta H°_{\\text{rxn}} = \\sum n \\cdot \\Delta H°_f(\\text{products}) - \\sum m \\cdot \\Delta H°_f(\\text{reactants})$$
 
 where $n$ and $m$ are the stoichiometric coefficients.
+
+
+---
 
 ### How to Use It
 
@@ -59,6 +68,9 @@ where $n$ and $m$ are the stoichiometric coefficients.
 2. Remember: $\\Delta H°_f = 0$ for elements in their standard states
 3. Multiply each $\\Delta H°_f$ by its coefficient
 4. Subtract the sum of reactants from the sum of products
+
+
+---
 
 ### Worked Example
 

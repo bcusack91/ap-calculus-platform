@@ -16,7 +16,7 @@ One of the most important skills in chemistry is being able to look at reactants
       id: 'rt5-strategy',
       type: 'text' as const,
       content: `
-## Product Prediction Strategy
+## 🎯 Product Prediction Strategy
 
 ### Step 1: Classify the Reactants
 
@@ -28,6 +28,9 @@ One of the most important skills in chemistry is being able to look at reactants
 | Two ionic compounds in solution | Double replacement |
 | Organic compound + O₂ | Combustion |
 
+
+---
+
 ### Step 2: Apply the Pattern
 
 | Reaction Type | Product Pattern |
@@ -38,6 +41,9 @@ One of the most important skills in chemistry is being able to look at reactants
 | Double replacement | Two new compounds (swap ions) |
 | Combustion | CO₂ + H₂O |
 
+
+---
+
 ### Step 3: Balance the Equation
 
 After predicting the products, balance the equation using the coefficient method.
@@ -47,7 +53,7 @@ After predicting the products, balance the equation using the coefficient method
       id: 'rt5-synthesis-predictions',
       type: 'text' as const,
       content: `
-## Predicting Synthesis Products
+## 🎯 Predicting Synthesis Products
 
 ### Metal + Nonmetal → Ionic Compound
 
@@ -60,6 +66,9 @@ Use charges to determine the formula:
 | Al + Br₂ | Al³⁺, Br⁻ | AlBr₃ |
 | Ca + N₂ | Ca²⁺, N³⁻ | Ca₃N₂ |
 
+
+---
+
 ### Nonmetal Oxide + Water → Acid
 
 | Oxide | + H₂O | Acid |
@@ -67,6 +76,9 @@ Use charges to determine the formula:
 | CO₂ | H₂O | H₂CO₃ |
 | SO₃ | H₂O | H₂SO₄ |
 | N₂O₅ | H₂O | 2HNO₃ |
+
+
+---
 
 ### Metal Oxide + Water → Base (Metal Hydroxide)
 
@@ -81,7 +93,7 @@ Use charges to determine the formula:
       id: 'rt5-decomposition-predictions',
       type: 'text' as const,
       content: `
-## Predicting Decomposition Products
+## 🔮 Predicting Decomposition Products
 
 ### Common Decomposition Patterns
 
@@ -92,6 +104,9 @@ Use charges to determine the formula:
 | Metal chlorate | Metal chloride + O₂ | $2\\text{KClO}_3 \\rightarrow 2\\text{KCl} + 3\\text{O}_2$ |
 | Metal oxide | Metal + O₂ | $2\\text{HgO} \\rightarrow 2\\text{Hg} + \\text{O}_2$ |
 | Acid | Nonmetal oxide + H₂O | $\\text{H}_2\\text{CO}_3 \\rightarrow \\text{CO}_2 + \\text{H}_2\\text{O}$ |
+
+
+---
 
 ### Key Memory Tool
 
@@ -105,7 +120,7 @@ Think of decomposition as "un-synthesizing" — the reverse of combining:
       id: 'rt5-replacement-predictions',
       type: 'text' as const,
       content: `
-## Predicting Replacement Products
+## 🔮 Predicting Replacement Products
 
 ### Single Replacement
 
@@ -115,6 +130,9 @@ Think of decomposition as "un-synthesizing" — the reverse of combining:
 $$\\text{Zn} + \\text{CuSO}_4 \\rightarrow \\text{ZnSO}_4 + \\text{Cu}$$
 
 Zn replaces Cu because Zn is higher in the activity series.
+
+
+---
 
 ### Double Replacement
 

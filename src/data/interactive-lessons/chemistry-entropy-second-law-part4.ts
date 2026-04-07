@@ -16,11 +16,14 @@ The Third Law of Thermodynamics provides a reference point for entropy. Unlike e
       id: 'en4-third-law',
       type: 'text' as const,
       content: `
-## The Third Law of Thermodynamics
+## 📏 The Third Law of Thermodynamics
 
 **The entropy of a perfect crystal at absolute zero (0 K) is exactly zero.**
 
 $$S = 0 \\quad \\text{at } T = 0 \\text{ K (perfect crystal)}$$
+
+
+---
 
 ### Why Zero?
 
@@ -28,6 +31,9 @@ At absolute zero:
 - All molecular motion ceases (except zero-point energy)
 - A perfect crystal has only **one microstate** ($W = 1$)
 - $S = k \\ln 1 = 0$
+
+
+---
 
 ### Consequences
 
@@ -40,9 +46,12 @@ At absolute zero:
       id: 'en4-standard-molar',
       type: 'text' as const,
       content: `
-## Standard Molar Entropy ($S°$)
+## 🌡️ Standard Molar Entropy ($S°$)
 
 The entropy of **one mole** of a substance at **standard conditions** (1 atm, usually 25°C).
+
+
+---
 
 ### Key Values to Know
 
@@ -58,12 +67,18 @@ The entropy of **one mole** of a substance at **standard conditions** (1 atm, us
 | $\\text{CO}_2(g)$ | 213.7 |
 | $\\text{NH}_3(g)$ | 192.5 |
 
+
+---
+
 ### Patterns in Standard Entropy
 
 1. **Gases > liquids > solids** — always!
 2. **More complex molecules** have higher $S°$
 3. **Heavier atoms** tend to have higher $S°$ (more accessible energy levels)
 4. **Allotropes differ**: diamond (2.4) < graphite (5.7) — more ordered crystal
+
+
+---
 
 ### Important: $S° > 0$ for ALL substances at 298 K
 
@@ -74,9 +89,12 @@ Unlike $\\Delta H°_f$, which is zero for elements, $S°$ is **never zero** at r
       id: 'en4-entropy-temperature',
       type: 'text' as const,
       content: `
-## How Entropy Varies with Temperature
+## 🔧 How Entropy Varies with Temperature
 
 As temperature increases from 0 K, entropy increases through several stages:
+
+
+---
 
 ### Heating a Substance
 
@@ -86,9 +104,15 @@ As temperature increases from 0 K, entropy increases through several stages:
 4. **At boiling point**: large jump in $S$ (phase change — vaporization)
 5. **Gas phase**: $S$ continues to increase
 
+
+---
+
 ### Key Feature
 
 The jump at the **boiling point** is much larger than at the melting point, because the liquid → gas transition involves a much greater increase in molecular freedom.
+
+
+---
 
 ### Phase Transition Entropy
 

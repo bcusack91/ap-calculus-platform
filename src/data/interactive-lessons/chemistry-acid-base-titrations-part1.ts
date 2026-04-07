@@ -16,7 +16,7 @@ Acid-base titrations are quantitative experiments where a solution of known conc
       id: 'at1-setup',
       type: 'text' as const,
       content: `
-## Titration Setup
+## 🧪 Titration Setup
 
 ### Key Components
 
@@ -28,6 +28,9 @@ Acid-base titrations are quantitative experiments where a solution of known conc
 | **Indicator** | Changes color near equivalence point |
 | **Equivalence point** | Stoichiometrically exact amount of titrant added |
 | **End point** | Where indicator changes color (ideally ≈ equivalence point) |
+
+
+---
 
 ### The Key Equation
 
@@ -46,7 +49,7 @@ This allows you to calculate the unknown concentration!
       id: 'at1-strong-strong',
       type: 'text' as const,
       content: `
-## Strong Acid – Strong Base Titration
+## 🧪 Strong Acid – Strong Base Titration
 
 ### The Reaction
 
@@ -56,17 +59,26 @@ The net ionic equation:
 
 $$H^+(aq) + OH^-(aq) \\rightarrow H_2O(l)$$
 
+
+---
+
 ### Before Equivalence Point
 
 Excess $H^+$ remains → acidic
 
 $$[H^+] = \\frac{\\text{mol } H^+ - \\text{mol } OH^-}{\\text{total volume}}$$
 
+
+---
+
 ### At Equivalence Point
 
 All acid and base have reacted. Only $NaCl$ and $H_2O$ remain.
 
 $$pH = 7.00$$ (neutral — neither ion hydrolyzes)
+
+
+---
 
 ### After Equivalence Point
 
@@ -123,9 +135,12 @@ $$[OH^-] = \\frac{\\text{mol } OH^- - \\text{mol } H^+}{\\text{total volume}}$$
       id: 'at1-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example: Finding Unknown Concentration
+## 🧪 Worked Example: Finding Unknown Concentration
 
 A 25.0 mL sample of $HCl$ of unknown concentration requires 18.5 mL of 0.150 M $NaOH$ to reach the equivalence point. What is $[HCl]$?
+
+
+---
 
 ### Solution
 

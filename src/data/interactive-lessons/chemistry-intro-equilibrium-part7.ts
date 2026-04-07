@@ -16,22 +16,31 @@ This final part reviews all key concepts: dynamic equilibrium, $K_c$/$K_p$ expre
       id: 'ie7-concept-map',
       type: 'text' as const,
       content: `
-## Concept Summary
+## 📋 Concept Summary
 
 ### Dynamic Equilibrium
 - Forward rate = reverse rate
 - Concentrations are **constant** but not necessarily equal
 - System must be **closed**
 
+
+---
+
 ### Equilibrium Expressions
 - $K_c = \\frac{[\\text{products}]^{\\text{coefficients}}}{[\\text{reactants}]^{\\text{coefficients}}}$
 - $K_p = \\frac{(P_{\\text{products}})^{\\text{coeff}}}{(P_{\\text{reactants}})^{\\text{coeff}}}$
 - $K_p = K_c(RT)^{\\Delta n}$
 
+
+---
+
 ### Heterogeneous Equilibrium
 - Exclude pure solids (s) and pure liquids (l)
 - Include gases (g) and aqueous species (aq)
 - Solids must still be present for equilibrium to exist
+
+
+---
 
 ### Manipulating K
 | Operation | Effect |
@@ -39,6 +48,9 @@ This final part reviews all key concepts: dynamic equilibrium, $K_c$/$K_p$ expre
 | Reverse | $K\' = 1/K$ |
 | Multiply by $n$ | $K\' = K^n$ |
 | Add reactions | $K_{\\text{total}} = K_1 \\times K_2$ |
+
+
+---
 
 ### Magnitude of K
 - $K \\gg 1$: product-favored

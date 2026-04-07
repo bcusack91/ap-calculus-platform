@@ -8,19 +8,19 @@ export const chemPhotoelectronSpectroscopyPart4Data = {
 
 PES spectra make the distinction between **core electrons** and **valence electrons** visually obvious. Understanding this distinction is critical for predicting chemical behavior and interpreting spectra.
 
-## Definitions
+## 📖 Definitions
 
 - **Core electrons**: Inner-shell electrons that are NOT involved in chemical bonding. They have **high binding energies** and appear on the **left side** of PES spectra.
 - **Valence electrons**: Outermost electrons that participate in chemical bonding. They have **low binding energies** and appear on the **right side** of PES spectra.
 
-## Visual Signature
+## 📌 Visual Signature
 
 On a PES spectrum, you will typically see a **large gap** in binding energy between the core electrons and the valence electrons. This gap makes it easy to visually separate the two groups.`
     },
     {
       id: 'ps4-example',
       type: 'text' as const,
-      content: `## Example: Silicon (Si, Z = 14)
+      content: `## 🧪 Example: Silicon (Si, Z = 14)
 
 Electron configuration: 1s² 2s² 2p⁶ 3s² 3p²
 
@@ -65,7 +65,7 @@ In a PES spectrum, where do valence electrons appear?`,
     {
       id: 'ps4-period',
       type: 'text' as const,
-      content: `## Core and Valence Across a Period
+      content: `## 📌 Core and Valence Across a Period
 
 As you move across a period (e.g., Na → Ar), the number of **core electrons stays the same** while the number of **valence electrons increases**.
 
@@ -158,7 +158,7 @@ Consider the PES spectrum of oxygen (O, Z = 8) with configuration 1s² 2s² 2p�
     {
       id: 'ps4-summary',
       type: 'text' as const,
-      content: `## Part 4 Summary
+      content: `## 📋 Part 4 Summary
 
 Core vs valence electrons in PES:
 

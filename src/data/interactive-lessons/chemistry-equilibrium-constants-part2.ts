@@ -16,13 +16,16 @@ Now that we understand what $K$ represents, let's master the rules for writing e
       id: 'ece2-rules',
       type: 'text' as const,
       content: `
-## Rules for Writing $K_c$ Expressions
+## ✍️ Rules for Writing $K_c$ Expressions
 
 For the reaction:
 
 $$a\\text{A}(aq) + b\\text{B}(g) \\rightleftharpoons c\\text{C}(aq) + d\\text{D}(g)$$
 
 $$K_c = \\frac{[\\text{C}]^c[\\text{D}]^d}{[\\text{A}]^a[\\text{B}]^b}$$
+
+
+---
 
 ### What Goes In and What Stays Out
 
@@ -33,6 +36,9 @@ $$K_c = \\frac{[\\text{C}]^c[\\text{D}]^d}{[\\text{A}]^a[\\text{B}]^b}$$
 | Pure solids $(s)$ | ❌ No | Activity = 1 (constant density) |
 | Pure liquids $(l)$ | ❌ No | Activity = 1 (constant density) |
 
+
+---
+
 ### Example 1
 
 $$\\text{CaCO}_3(s) \\rightleftharpoons \\text{CaO}(s) + \\text{CO}_2(g)$$
@@ -40,6 +46,9 @@ $$\\text{CaCO}_3(s) \\rightleftharpoons \\text{CaO}(s) + \\text{CO}_2(g)$$
 $$K_c = [\\text{CO}_2]$$
 
 Both $\\text{CaCO}_3$ and $\\text{CaO}$ are **pure solids** — they are omitted from the expression.
+
+
+---
 
 ### Example 2
 
@@ -98,7 +107,7 @@ Water as a pure liquid is omitted.
       id: 'ece2-heterogeneous',
       type: 'text' as const,
       content: `
-## Homogeneous vs. Heterogeneous Equilibria
+## 📌 Homogeneous vs. Heterogeneous Equilibria
 
 ### Homogeneous Equilibrium
 
@@ -107,6 +116,9 @@ All species are in the **same phase**:
 $$\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$$
 
 $$K_c = \\frac{[\\text{NO}_2]^2}{[\\text{N}_2\\text{O}_4]}$$
+
+
+---
 
 ### Heterogeneous Equilibrium
 
@@ -117,6 +129,9 @@ $$\\text{C}(s) + \\text{CO}_2(g) \\rightleftharpoons 2\\,\\text{CO}(g)$$
 $$K_c = \\frac{[\\text{CO}]^2}{[\\text{CO}_2]}$$
 
 The solid carbon is omitted.
+
+
+---
 
 ### AP Tip 💡
 

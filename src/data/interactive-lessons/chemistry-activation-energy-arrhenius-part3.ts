@@ -16,7 +16,7 @@ The Arrhenius equation is one of the most important equations in chemical kineti
       id: 'ae3-equation',
       type: 'text' as const,
       content: `
-## The Arrhenius Equation
+## 📌 The Arrhenius Equation
 
 $$\\boxed{k = Ae^{-E_a/(RT)}}$$
 
@@ -27,6 +27,9 @@ $$\\boxed{k = Ae^{-E_a/(RT)}}$$
 | $E_a$ | Activation energy | J/mol (or kJ/mol) |
 | $R$ | Gas constant | 8.314 J/(mol·K) |
 | $T$ | Temperature | Kelvin (always!) |
+
+
+---
 
 ### What Each Part Means
 
@@ -88,7 +91,7 @@ $$\\boxed{k = Ae^{-E_a/(RT)}}$$
       id: 'ae3-temperature-effects',
       type: 'text' as const,
       content: `
-## Temperature Sensitivity and Ea
+## 🌡️ Temperature Sensitivity and Ea
 
 ### How Much Does k Change with Temperature?
 
@@ -96,6 +99,9 @@ The sensitivity of $k$ to temperature depends on $E_a$:
 
 - **Large $E_a$**: $k$ is very sensitive to temperature changes (reaction speeds up dramatically)
 - **Small $E_a$**: $k$ is less sensitive to temperature changes
+
+
+---
 
 ### Example Calculation
 
@@ -142,9 +148,12 @@ Only a 30% increase — much less sensitive.
       id: 'ae3-a-factor',
       type: 'text' as const,
       content: `
-## The Frequency Factor A
+## 📊 The Frequency Factor A
 
 The frequency factor $A$ represents the maximum possible rate constant — the value $k$ would have if every collision were effective ($E_a = 0$).
+
+
+---
 
 ### Typical Values
 
@@ -153,6 +162,9 @@ The frequency factor $A$ represents the maximum possible rate constant — the v
 | Gas-phase, simple molecules | $10^{10}$–$10^{14}$ s⁻¹ | High collision frequency |
 | Solution-phase | $10^{8}$–$10^{12}$ s⁻¹ | Solvent cage effects |
 | Reactions needing precise orientation | Lower $A$ | Small steric factor $p$ |
+
+
+---
 
 ### Key Point for AP
 

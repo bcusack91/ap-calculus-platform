@@ -16,13 +16,16 @@ Gibbs Free Energy ($G$) is the single most important thermodynamic quantity for 
       id: 'gf1-definition',
       type: 'text' as const,
       content: `
-## Defining Gibbs Free Energy
+## ⚡ Defining Gibbs Free Energy
 
 $$G = H - TS$$
 
 The **change** in Gibbs free energy at constant temperature:
 
 $$\\Delta G = \\Delta H - T\\Delta S$$
+
+
+---
 
 ### Where Does This Come From?
 
@@ -45,7 +48,7 @@ $$\\Delta G < 0 \\quad \\text{(spontaneous)}$$
       id: 'gf1-criterion',
       type: 'text' as const,
       content: `
-## The Spontaneity Criterion
+## ⚡ The Spontaneity Criterion
 
 | $\\Delta G$ | Meaning |
 |-----------|---------|
@@ -53,11 +56,17 @@ $$\\Delta G < 0 \\quad \\text{(spontaneous)}$$
 | $\\Delta G = 0$ | At equilibrium |
 | $\\Delta G > 0$ | Nonspontaneous (reverse reaction is spontaneous) |
 
+
+---
+
 ### Why Gibbs Free Energy Is So Useful
 
 - It accounts for **both** enthalpy and entropy
 - It is a property of the **system only** — no need to calculate $\\Delta S_{\\text{surroundings}}$
 - It connects directly to **equilibrium** and **electrochemistry**
+
+
+---
 
 ### What "Free" Means
 
@@ -72,12 +81,15 @@ If $\\Delta G = -100$ kJ, the reaction can do at most 100 kJ of useful work.
       id: 'gf1-temperature',
       type: 'text' as const,
       content: `
-## Temperature and Spontaneity
+## ⚡ Temperature and Spontaneity
 
 From $\\Delta G = \\Delta H - T\\Delta S$, we see that temperature affects spontaneity through the $T\\Delta S$ term:
 
 - At **low temperatures**: $\\Delta H$ dominates ($T\\Delta S$ is small)
 - At **high temperatures**: $T\\Delta S$ dominates ($T\\Delta S$ is large)
+
+
+---
 
 ### The Crossover Temperature
 
@@ -86,6 +98,9 @@ When $\\Delta G = 0$ (equilibrium):
 $$T = \\frac{\\Delta H}{\\Delta S}$$
 
 This is the temperature at which the reaction switches between spontaneous and nonspontaneous.
+
+
+---
 
 ### Example
 

@@ -16,7 +16,7 @@ This final review integrates everything about electrolytic cells: the comparison
       id: 'ef7-master-summary',
       type: 'text' as const,
       content: `
-## Master Summary
+## 📋 Master Summary
 
 ### Galvanic vs. Electrolytic
 
@@ -28,17 +28,26 @@ This final review integrates everything about electrolytic cells: the comparison
 | Anode | − | + |
 | Cathode | + | − |
 
+
+---
+
 ### Predicting Aqueous Electrolysis Products
 
 **Cathode:** Metal deposits if $E°_{\\text{metal}} > -0.83$ V; otherwise H₂
 
 **Anode:** Halide → halogen; oxyanion/F⁻ → O₂
 
+
+---
+
 ### Faraday\'s Law
 
 $$m = \\frac{ItM}{nF}$$
 
 $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \\frac{\\text{mol } e^-}{n}$$
+
+
+---
 
 ### Industrial Applications
 

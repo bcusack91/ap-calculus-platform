@@ -16,7 +16,7 @@ On the AP exam, you may be given data or graphs and asked to determine the react
       id: 'ir4-strategy',
       type: 'text' as const,
       content: `
-## The Three-Plot Strategy
+## 🎯 The Three-Plot Strategy
 
 Given concentration-vs-time data, create:
 
@@ -26,11 +26,17 @@ Given concentration-vs-time data, create:
 | $\\ln[A]$ vs $t$ | First-order | $-k$ | $\\ln[A]_0$ |
 | $1/[A]$ vs $t$ | Second-order | $+k$ | $1/[A]_0$ |
 
+
+---
+
 ### How to Check Linearity
 
 1. **Visual inspection**: Does it look like a straight line?
 2. **Constant slope**: Calculate $\\Delta y / \\Delta x$ between successive points — is it constant?
 3. **$R^2$ value**: In a calculator, the best fit gives $R^2$ closest to 1.
+
+
+---
 
 ### AP Exam Shortcut
 
@@ -45,7 +51,7 @@ If you are given just the raw data, calculate the transformed values and check w
       id: 'ir4-data-analysis-1',
       type: 'text' as const,
       content: `
-## Worked Example: Identifying Order
+## 🧪 Worked Example: Identifying Order
 
 | $t$ (s) | $[A]$ (M) | $\\ln[A]$ | $1/[A]$ (M⁻¹) |
 |---------|----------|---------|--------------|

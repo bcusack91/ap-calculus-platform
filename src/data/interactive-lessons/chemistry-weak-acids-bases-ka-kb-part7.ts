@@ -16,7 +16,7 @@ This final part provides comprehensive AP-style review covering all weak acid/ba
       id: 'wk7-summary',
       type: 'text' as const,
       content: `
-## Complete Summary
+## 📋 Complete Summary
 
 ### Key Equations
 
@@ -28,6 +28,9 @@ This final part provides comprehensive AP-style review covering all weak acid/ba
 | p-notation link | $pK_a + pK_b = 14$ |
 | Percent ionization | $\\% = ([H^+]/C) \\times 100$ |
 | 5% rule threshold | $C/K_a > 400$ |
+
+
+---
 
 ### Decision Flowchart
 

@@ -16,22 +16,31 @@ This final part presents AP exam-level problems that integrate all mechanism con
       id: 'rm7-key-concepts',
       type: 'text' as const,
       content: `
-## Key Concepts Summary
+## 📋 Key Concepts Summary
 
 ### Mechanism Fundamentals
 - A mechanism is a series of **elementary steps** that sum to the overall reaction
 - **Molecularity** (1, 2, or 3) = number of reactant particles in an elementary step
 - For elementary steps only: rate law exponents = stoichiometric coefficients
 
+
+---
+
 ### Species Classification
 - **Intermediate**: produced in one step, consumed in another (not in overall equation)
 - **Catalyst**: consumed early, regenerated later (present at start and end)
 - **n steps** → **n transition states** and **n − 1 intermediates**
 
+
+---
+
 ### Rate Law Derivation
 - Rate law comes from the **rate-determining step** (slowest = highest $E_a$)
 - If RDS rate law contains intermediates → use **pre-equilibrium** to eliminate
 - Final rate law must contain only **reactants** (and catalysts)
+
+
+---
 
 ### Validation
 - Steps must **sum** to the overall equation

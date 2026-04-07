@@ -16,7 +16,7 @@ Standard cell potentials ($E°$) apply only when all concentrations are 1 M and 
       id: 'ne1-derivation',
       type: 'text' as const,
       content: `
-## Deriving the Nernst Equation
+## 🔋 Deriving the Nernst Equation
 
 We know:
 $$\\Delta G = \\Delta G° + RT\\ln Q$$
@@ -29,6 +29,9 @@ $$-nFE = -nFE° + RT\\ln Q$$
 Dividing by $-nF$:
 
 $$\\boxed{E = E° - \\frac{RT}{nF}\\ln Q}$$
+
+
+---
 
 ### Variables
 
@@ -47,9 +50,12 @@ $$\\boxed{E = E° - \\frac{RT}{nF}\\ln Q}$$
       id: 'ne1-interpretation',
       type: 'text' as const,
       content: `
-## Interpreting the Nernst Equation
+## 🔋 Interpreting the Nernst Equation
 
 $$E = E° - \\frac{RT}{nF}\\ln Q$$
+
+
+---
 
 ### How Q Affects E
 
@@ -59,6 +65,9 @@ $$E = E° - \\frac{RT}{nF}\\ln Q$$
 | Standard conditions | $Q = 1$ | Zero | $E = E°$ |
 | Mostly products | $Q > 1$ | Positive | $E < E°$ (lower voltage) |
 | At equilibrium | $Q = K$ | — | $E = 0$ |
+
+
+---
 
 ### Key Insight
 
@@ -74,7 +83,7 @@ A "dead" battery is simply a cell that has reached equilibrium!
       id: 'ne1-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 For the Daniell cell: $\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$
 

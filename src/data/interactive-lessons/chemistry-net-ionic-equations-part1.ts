@@ -16,13 +16,19 @@ When ionic compounds dissolve in water, they dissociate into ions. To properly d
       id: 'ni1-molecular-equations',
       type: 'text' as const,
       content: `
-## Full Molecular Equations
+## ⚖️ Full Molecular Equations
 
 A **molecular equation** (also called a formula equation) shows all reactants and products as complete, neutral formulas — just like the balanced equations you\'ve written before.
+
+
+---
 
 ### Example
 
 $$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{NaNO}_3(aq)$$
+
+
+---
 
 ### Key Features
 
@@ -32,6 +38,9 @@ $$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{Na
 | Phase labels | $(s)$, $(l)$, $(g)$, $(aq)$ are included |
 | Balanced | Atoms and charge are balanced |
 | Simplest form | Easiest to read, but hides ionic details |
+
+
+---
 
 ### Phase Labels Review
 
@@ -47,9 +56,12 @@ $$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{Na
       id: 'ni1-electrolytes',
       type: 'text' as const,
       content: `
-## Electrolytes and Dissociation
+## 🔋 Electrolytes and Dissociation
 
 To move beyond molecular equations, you must know which substances **dissociate** (break apart) into ions when dissolved.
+
+
+---
 
 ### Strong Electrolytes — Fully Dissociate
 
@@ -61,6 +73,9 @@ To move beyond molecular equations, you must know which substances **dissociate*
 
 $$\\text{NaCl}(aq) \\rightarrow \\text{Na}^+(aq) + \\text{Cl}^-(aq)$$
 
+
+---
+
 ### Weak Electrolytes — Partially Dissociate
 
 | Category | Examples |
@@ -70,12 +85,18 @@ $$\\text{NaCl}(aq) \\rightarrow \\text{Na}^+(aq) + \\text{Cl}^-(aq)$$
 
 These remain mostly as intact molecules in solution and are written in **molecular form**.
 
+
+---
+
 ### Non-Electrolytes — Do Not Dissociate
 
 | Category | Examples |
 |----------|----------|
 | Molecular compounds | Sugar (C₆H₁₂O₆), ethanol |
 | Water | H₂O |
+
+
+---
 
 ### Critical Rule
 
@@ -86,7 +107,7 @@ Only **strong electrolytes in aqueous solution** are written as separated ions. 
       id: 'ni1-writing-molecular',
       type: 'text' as const,
       content: `
-## Writing Balanced Molecular Equations
+## ✍️ Writing Balanced Molecular Equations
 
 ### Steps
 
@@ -94,6 +115,9 @@ Only **strong electrolytes in aqueous solution** are written as separated ions. 
 2. **Write correct formulas** for each compound (use charges to determine subscripts)
 3. **Balance** the equation
 4. **Add phase labels** — $(aq)$ for dissolved species, $(s)$ for precipitates, etc.
+
+
+---
 
 ### Example: Silver Nitrate + Sodium Chloride
 
@@ -105,6 +129,9 @@ Only **strong electrolytes in aqueous solution** are written as separated ions. 
 $$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{NaNO}_3(aq)$$
 
 **Step 4:** AgCl is insoluble (precipitate → solid), everything else is aqueous.
+
+
+---
 
 ### Common Pitfall
 

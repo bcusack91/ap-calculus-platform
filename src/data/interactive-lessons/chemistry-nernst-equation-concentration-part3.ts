@@ -16,7 +16,7 @@ A concentration cell is a special galvanic cell where both electrodes are the **
       id: 'ne3-how-they-work',
       type: 'text' as const,
       content: `
-## How Concentration Cells Work
+## 🔧 How Concentration Cells Work
 
 ### Setup
 
@@ -25,17 +25,26 @@ Both half-cells contain the same electrode and same ion, but at different concen
 - Dilute side: $[\\text{M}^{n+}]_{\\text{dilute}}$
 - Concentrated side: $[\\text{M}^{n+}]_{\\text{conc}}$
 
+
+---
+
 ### E° = 0!
 
 Since both half-reactions are identical, $E° = 0$:
 
 $$E°_{\\text{cell}} = E°_{\\text{cathode}} - E°_{\\text{anode}} = E° - E° = 0$$
 
+
+---
+
 ### The Nernst Equation Gives the Voltage
 
 $$E = 0 - \\frac{0.0592}{n}\\log Q = -\\frac{0.0592}{n}\\log\\frac{[\\text{dilute}]}{[\\text{conc}]}$$
 
 $$E = \\frac{0.0592}{n}\\log\\frac{[\\text{conc}]}{[\\text{dilute}]}$$
+
+
+---
 
 ### Which Side Is Which?
 
@@ -48,7 +57,7 @@ $$E = \\frac{0.0592}{n}\\log\\frac{[\\text{conc}]}{[\\text{dilute}]}$$
       id: 'ne3-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 A Cu concentration cell at 25°C:
 
@@ -57,14 +66,23 @@ A Cu concentration cell at 25°C:
 
 $n = 2$ (Cu²⁺ + 2e⁻ → Cu)
 
+
+---
+
 ### Step 1: Identify Anode and Cathode
 
 - Dilute side (0.010 M) = **anode** (oxidation)
 - Concentrated side (1.0 M) = **cathode** (reduction)
 
+
+---
+
 ### Step 2: Calculate Q
 
 $$Q = \\frac{[\\text{Cu}^{2+}]_{\\text{anode}}}{[\\text{Cu}^{2+}]_{\\text{cathode}}} = \\frac{0.010}{1.0} = 0.010$$
+
+
+---
 
 ### Step 3: Apply Nernst
 
@@ -72,6 +90,9 @@ $$E = 0 - \\frac{0.0592}{2}\\log(0.010)$$
 $$= -0.0296 \\times (-2) = +0.0592 \\text{ V}$$
 
 The cell produces 59.2 mV. Small but measurable!
+
+
+---
 
 ### What Happens Over Time?
 

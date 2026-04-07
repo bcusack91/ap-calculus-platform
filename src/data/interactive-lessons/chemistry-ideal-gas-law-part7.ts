@@ -16,7 +16,7 @@ You've mastered the ideal gas law and all its variations. Now we examine when th
       id: 'gl7-ideal-vs-real',
       type: 'text' as const,
       content: `
-## Ideal vs. Real Gases
+## 📌 Ideal vs. Real Gases
 
 The ideal gas law works well under many conditions, but **real gases** deviate from ideal behavior when:
 
@@ -25,11 +25,17 @@ The ideal gas law works well under many conditions, but **real gases** deviate f
 | **Molecular volume** | Negligible | Molecules have finite size |
 | **Intermolecular forces** | None | Attractive forces exist (London, dipole-dipole, H-bonds) |
 
+
+---
+
 ### When Do Gases Deviate Most?
 
 - **High pressure** → molecules are close together → volume of molecules matters, attractions are significant
 - **Low temperature** → molecules move slowly → attractions have more effect
 - **Near the boiling point** → gas is close to condensing → strong intermolecular forces
+
+
+---
 
 ### When Is Ideal Behavior Best?
 
@@ -42,7 +48,7 @@ The ideal gas law works well under many conditions, but **real gases** deviate f
       id: 'gl7-van-der-waals',
       type: 'text' as const,
       content: `
-## The van der Waals Equation
+## 📌 The van der Waals Equation
 
 To correct for real gas behavior:
 
@@ -55,6 +61,9 @@ $$\\left(P + \\frac{an^2}{V^2}\\right)(V - nb) = nRT$$
 
 - $a$ = attraction parameter (larger for polar molecules with strong IMFs)
 - $b$ = size parameter (larger for bigger molecules)
+
+
+---
 
 ### Example Values
 

@@ -16,7 +16,7 @@ This final lesson brings together everything: molecular equations, complete ioni
       id: 'ni7-ap-tips',
       type: 'text' as const,
       content: `
-## AP Exam Tips for Net Ionic Equations
+## ⚛️ AP Exam Tips for Net Ionic Equations
 
 ### What the AP Exam Expects
 
@@ -26,6 +26,9 @@ On the AP Chemistry exam, you may be asked to:
 - Predict whether a reaction occurs
 - Identify driving forces
 
+
+---
+
 ### Common AP Formats
 
 | Prompt Style | What They Want |
@@ -34,6 +37,9 @@ On the AP Chemistry exam, you may be asked to:
 | "Equal volumes of 0.1 M solutions are mixed..." | Identify reaction, write net ionic |
 | "Identify the spectator ions..." | Find ions unchanged on both sides |
 | "Does a reaction occur? If so, write..." | Check driving forces first |
+
+
+---
 
 ### Scoring Tips
 
@@ -48,7 +54,7 @@ On the AP Chemistry exam, you may be asked to:
       id: 'ni7-review-text',
       type: 'text' as const,
       content: `
-## Complete Review: Types of Net Ionic Equations
+## 🔄 Complete Review: Types of Net Ionic Equations
 
 ### Summary of All Patterns
 
@@ -61,6 +67,9 @@ On the AP Chemistry exam, you may be asked to:
 | Acid + Carbonate | Gas + Water | 2H⁺ + CO₃²⁻ → H₂O + CO₂ |
 | Acid + Bicarbonate | Gas + Water | H⁺ + HCO₃⁻ → H₂O + CO₂ |
 | Acid + Sulfide | Gas | 2H⁺ + S²⁻ → H₂S(g) |
+
+
+---
 
 ### Quick Solubility Reminders
 

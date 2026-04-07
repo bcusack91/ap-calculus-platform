@@ -16,14 +16,20 @@ A balanced equation has equal numbers of each type of atom on both sides. This i
       id: 'rt4-rules',
       type: 'text' as const,
       content: `
-## Rules for Balancing Equations
+## ⚖️ Rules for Balancing Equations
 
 ### What You CAN Do
 - Change **coefficients** (the big numbers in front of formulas)
 
+
+---
+
 ### What You CANNOT Do
 - Change **subscripts** (that changes the compound itself!)
 - Add or remove substances
+
+
+---
 
 ### Step-by-Step Method
 
@@ -34,6 +40,9 @@ A balanced equation has equal numbers of each type of atom on both sides. This i
 5. **Balance** hydrogen and oxygen last (they often appear in multiple compounds)
 6. **Check** that all atoms are balanced
 7. **Simplify** coefficients to smallest whole numbers
+
+
+---
 
 ### Example: Balancing $\\text{Al} + \\text{O}_2 \\rightarrow \\text{Al}_2\\text{O}_3$
 
@@ -49,9 +58,12 @@ A balanced equation has equal numbers of each type of atom on both sides. This i
       id: 'rt4-polyatomic-shortcut',
       type: 'text' as const,
       content: `
-## The Polyatomic Ion Shortcut
+## ⚛️ The Polyatomic Ion Shortcut
 
 When a polyatomic ion appears **unchanged** on both sides of an equation, treat it as a **single unit** rather than balancing individual atoms.
+
+
+---
 
 ### Example
 
@@ -66,6 +78,9 @@ Instead of counting individual H, O, and P atoms, notice:
 
 $$3\\text{Ca(OH)}_2 + 2\\text{H}_3\\text{PO}_4 \\rightarrow \\text{Ca}_3(\\text{PO}_4)_2 + 6\\text{H}_2\\text{O}$$
 
+
+---
+
 ### Common Polyatomic Ions to Watch For
 
 | Ion | Formula | Ion | Formula |
@@ -79,7 +94,7 @@ $$3\\text{Ca(OH)}_2 + 2\\text{H}_3\\text{PO}_4 \\rightarrow \\text{Ca}_3(\\text{
       id: 'rt4-practice-walkthrough',
       type: 'text' as const,
       content: `
-## Worked Examples
+## 🧪 Worked Examples
 
 ### Example 1: $\\text{Fe} + \\text{O}_2 \\rightarrow \\text{Fe}_2\\text{O}_3$
 
@@ -89,6 +104,9 @@ $$3\\text{Ca(OH)}_2 + 2\\text{H}_3\\text{PO}_4 \\rightarrow \\text{Ca}_3(\\text{
 $$4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3$$
 
 Check: Fe: 4 = 4 ✓, O: 6 = 6 ✓
+
+
+---
 
 ### Example 2: $\\text{Al} + \\text{HCl} \\rightarrow \\text{AlCl}_3 + \\text{H}_2$
 

@@ -16,7 +16,7 @@ One of the most powerful relationships in all of chemistry connects Gibbs free e
       id: 'gf4-relationship',
       type: 'text' as const,
       content: `
-## The Key Equation
+## 🔑 The Key Equation
 
 $$\\Delta G° = -RT\\ln K$$
 
@@ -27,6 +27,9 @@ $$\\Delta G° = -RT\\ln K$$
 | $T$ | Temperature | K |
 | $K$ | Equilibrium constant | dimensionless |
 
+
+---
+
 ### What This Equation Tells Us
 
 | If $\\Delta G°$ | Then $K$ | Meaning |
@@ -34,6 +37,9 @@ $$\\Delta G° = -RT\\ln K$$
 | $\\Delta G° < 0$ | $K > 1$ | Products favored at equilibrium |
 | $\\Delta G° = 0$ | $K = 1$ | Neither favored |
 | $\\Delta G° > 0$ | $K < 1$ | Reactants favored at equilibrium |
+
+
+---
 
 ### Important Nuance
 
@@ -44,9 +50,12 @@ $\\Delta G° < 0$ does **NOT** mean the reaction goes to completion. It means $K
       id: 'gf4-solving-for-K',
       type: 'text' as const,
       content: `
-## Solving for K from ΔG°
+## 📌 Solving for K from ΔG°
 
 Rearranging: $K = e^{-\\Delta G°/(RT)}$
+
+
+---
 
 ### Worked Example
 
@@ -56,6 +65,9 @@ $$K = e^{-\\Delta G°/(RT)} = e^{-(-5400)/(8.314 \\times 298)}$$
 
 $$K = e^{5400/2477.6} = e^{2.180} = 8.85$$
 
+
+---
+
 ### Solving for ΔG° from K
 
 If $K = 1.0 \\times 10^{10}$ at 298 K:
@@ -63,6 +75,9 @@ If $K = 1.0 \\times 10^{10}$ at 298 K:
 $$\\Delta G° = -RT\\ln K = -(8.314)(298)\\ln(1.0 \\times 10^{10})$$
 
 $$\\Delta G° = -(2477.6)(23.03) = -57{,}050 \\text{ J} = -57.1 \\text{ kJ}$$
+
+
+---
 
 ### Converting Between ln and log
 

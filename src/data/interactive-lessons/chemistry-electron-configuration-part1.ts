@@ -11,7 +11,7 @@ Before we dive into electron configurations, let's make sure the fundamentals of
     {
       id: 'ec1-particles',
       type: 'text' as const,
-      content: `## The Three Subatomic Particles
+      content: `## 📌 The Three Subatomic Particles
 
 | Particle | Symbol | Charge | Location | Relative Mass |
 |----------|--------|--------|----------|---------------|
@@ -29,7 +29,7 @@ The identity of an element is determined entirely by its number of protons. Chan
     {
       id: 'ec1-notation',
       type: 'text' as const,
-      content: `## Isotope Notation
+      content: `## 📝 Isotope Notation
 
 Atoms of the same element can have different numbers of neutrons. These variants are called **isotopes**.
 
@@ -84,7 +84,7 @@ Chlorine-37 (\\(^{37}_{17}\\text{Cl}\\)) has a mass number of 37 and an atomic n
     {
       id: 'ec1-ions-intro',
       type: 'text' as const,
-      content: `## Ions: Gaining and Losing Electrons
+      content: `## 🔋 Ions: Gaining and Losing Electrons
 
 When an atom gains or loses **electrons**, it becomes an **ion**:
 

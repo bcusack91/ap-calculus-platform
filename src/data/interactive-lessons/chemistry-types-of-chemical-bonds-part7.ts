@@ -13,7 +13,7 @@ This final part brings everything together with AP-exam-style questions and addr
     {
       id: 'cb7-misconceptions',
       type: 'text' as const,
-      content: `## Common Misconceptions About Bonding
+      content: `## 🔗 Common Misconceptions About Bonding
 
 ### ❌ Misconception 1: "Ionic bonds are stronger than covalent bonds"
 
@@ -23,17 +23,29 @@ This final part brings everything together with AP-exam-style questions and addr
 
 It's the **intermolecular forces** (not the covalent bonds) that determine melting point in molecular substances.
 
+
+---
+
 ### ❌ Misconception 2: "Electrons are completely transferred in ionic bonds"
 
 **Reality:** Even ionic bonds have some **covalent character**. The electron cloud of the anion is distorted toward the cation (called **polarization**). Bonding is a continuum, not two separate boxes.
+
+
+---
 
 ### ❌ Misconception 3: "Ionic compounds exist as discrete molecules"
 
 **Reality:** Ionic compounds form **extended crystal lattices**, not individual molecules. The formula $\\text{NaCl}$ represents the simplest ratio of ions, not a molecule. We call it a **formula unit**.
 
+
+---
+
 ### ❌ Misconception 4: "All covalent compounds have low melting points"
 
 **Reality:** Molecular covalent compounds generally have low MPs, but **covalent network solids** (diamond, SiO₂) have extremely high melting points because you must break covalent bonds throughout the structure.
+
+
+---
 
 ### ❌ Misconception 5: "Metals conduct because they have ionic bonds"
 
@@ -84,9 +96,12 @@ It's the **intermolecular forces** (not the covalent bonds) that determine melti
     {
       id: 'cb7-ap-frq-style',
       type: 'text' as const,
-      content: `## AP-Style Free Response Strategies
+      content: `## 🎯 AP-Style Free Response Strategies
 
 On the AP Chemistry exam, bonding questions often appear in the free-response section. Here are key strategies:
+
+
+---
 
 ### What They Test
 
@@ -94,6 +109,9 @@ On the AP Chemistry exam, bonding questions often appear in the free-response se
 2. **Explaining properties** (MP, conductivity, hardness) in terms of bonding
 3. **Comparing substances** using Coulomb\'s law or bond polarity
 4. **Lattice energy ranking** using ion charge and size
+
+
+---
 
 ### How to Earn Full Points
 
@@ -104,6 +122,9 @@ Always connect your answer to the **underlying model**:
 | "Ionic bonds are strong" | "The lattice energy is high due to the strong Coulombic attraction between the $+2$ and $-2$ ions" |
 | "It conducts electricity" | "The delocalized electrons in the metallic bond are free to move in response to a potential difference" |
 | "It has a low melting point" | "The weak London dispersion forces between nonpolar molecules require little energy to overcome" |
+
+
+---
 
 ### The Coulomb\'s Law Argument
 

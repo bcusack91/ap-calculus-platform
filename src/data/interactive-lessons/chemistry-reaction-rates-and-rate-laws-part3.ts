@@ -16,7 +16,7 @@ A **rate law** is a mathematical equation that relates the rate of a reaction to
       id: 'rr3-rate-law-form',
       type: 'text' as const,
       content: `
-## The General Rate Law
+## 📏 The General Rate Law
 
 For a reaction $aA + bB \\rightarrow \\text{products}$:
 
@@ -30,12 +30,18 @@ $$\\text{Rate} = k[A]^m[B]^n$$
 | $n$ | Order with respect to B |
 | $m + n$ | Overall order of the reaction |
 
+
+---
+
 ### Critical Points
 
 - **$m$ and $n$ are NOT necessarily the stoichiometric coefficients** $a$ and $b$
 - Orders must be determined from **experimental data**
 - Orders can be 0, 1, 2, or even fractional
 - The rate constant $k$ depends on **temperature** but NOT on concentration
+
+
+---
 
 ### What Does Order Mean?
 
@@ -95,11 +101,14 @@ $$\\text{Rate} = k[A]^m[B]^n$$
       id: 'rr3-determining-order',
       type: 'text' as const,
       content: `
-## Determining Order from Experimental Data
+## 🔍 Determining Order from Experimental Data
 
 ### The Method of Initial Rates
 
 The most common technique: measure the initial rate of reaction for several experiments where you vary one concentration at a time.
+
+
+---
 
 ### Example Data
 
@@ -109,6 +118,9 @@ The most common technique: measure the initial rate of reaction for several expe
 | 2 | 0.20 | 0.10 | 0.060 |
 | 3 | 0.10 | 0.20 | 0.030 |
 
+
+---
+
 ### Step 1: Find order in A
 
 Compare Exp 1 and 2 ([B] is constant):
@@ -116,10 +128,16 @@ $$\\frac{\\text{Rate}_2}{\\text{Rate}_1} = \\frac{k[A]_2^m[B]^n}{k[A]_1^m[B]^n} 
 
 $$\\frac{0.060}{0.015} = \\left(\\frac{0.20}{0.10}\\right)^m \\Rightarrow 4 = 2^m \\Rightarrow m = 2$$
 
+
+---
+
 ### Step 2: Find order in B
 
 Compare Exp 1 and 3 ([A] is constant):
 $$\\frac{0.030}{0.015} = \\left(\\frac{0.20}{0.10}\\right)^n \\Rightarrow 2 = 2^n \\Rightarrow n = 1$$
+
+
+---
 
 ### Step 3: Write the rate law and find k
 
@@ -165,7 +183,7 @@ Given:
       id: 'rr3-common-mistakes',
       type: 'text' as const,
       content: `
-## Common Mistakes to Avoid
+## 📌 Common Mistakes to Avoid
 
 ### ❌ Mistake 1: Using stoichiometric coefficients as orders
 
@@ -175,9 +193,15 @@ $$\\text{Rate} = k[\\text{NO}]^2[\\text{O}_2]$$
 
 The orders *happen* to match the coefficients here, but this is **coincidence** — it only occurs when the reaction happens in a single elementary step.
 
+
+---
+
 ### ❌ Mistake 2: Forgetting to hold one variable constant
 
 When comparing experiments to find the order in A, you must choose experiments where **[B] is the same**. If both change, you cannot isolate the effect of one.
+
+
+---
 
 ### ❌ Mistake 3: Confusing rate with rate constant
 

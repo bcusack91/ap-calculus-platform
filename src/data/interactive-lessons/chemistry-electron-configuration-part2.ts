@@ -11,7 +11,7 @@ Electrons don't just float randomly around the nucleus — they occupy specific 
     {
       id: 'ec2-principal-levels',
       type: 'text' as const,
-      content: `## Principal Energy Levels
+      content: `## 📌 Principal Energy Levels
 
 The **principal quantum number (n)** describes the main energy level of an electron:
 
@@ -31,7 +31,7 @@ As *n* increases, the energy level is farther from the nucleus on average and th
     {
       id: 'ec2-subshells',
       type: 'text' as const,
-      content: `## Subshells: s, p, d, f
+      content: `## 📌 Subshells: s, p, d, f
 
 Each principal energy level is divided into **subshells**, labeled s, p, d, and f.
 
@@ -72,7 +72,7 @@ How many electrons can the 3d subshell hold at maximum?`,
     {
       id: 'ec2-aufbau-order',
       type: 'text' as const,
-      content: `## The Aufbau Filling Order
+      content: `## 📌 The Aufbau Filling Order
 
 Electrons fill subshells in order of **increasing energy**, not simply by principal quantum number. The filling order is:
 
@@ -147,7 +147,7 @@ Use the formula \\(2n^2\\) to determine the maximum number of electrons in a pri
     {
       id: 'ec2-summary',
       type: 'text' as const,
-      content: `## Key Takeaways
+      content: `## 📌 Key Takeaways
 
 1. **Principal quantum number (n)** determines the main energy level; max electrons = \\(2n^2\\).
 2. **Subshells** (s, p, d, f) hold 2, 6, 10, and 14 electrons respectively.

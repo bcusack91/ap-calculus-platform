@@ -16,7 +16,7 @@ This comprehensive review covers all buffer concepts: composition, mechanism, He
       id: 'bf7-summary',
       type: 'text' as const,
       content: `
-## Complete Summary
+## 📋 Complete Summary
 
 ### Buffer Essentials
 
@@ -29,6 +29,9 @@ This comprehensive review covers all buffer concepts: composition, mechanism, He
 | **Effective range** | $pK_a \\pm 1$ |
 | **Capacity** | Depends on concentration of buffer components |
 | **Destroyed when** | All of one component is consumed |
+
+
+---
 
 ### Problem-Solving Strategy
 

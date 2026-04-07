@@ -8,7 +8,7 @@ export const chemPhotoelectronSpectroscopyPart7Data = {
 
 This final part brings together everything about Photoelectron Spectroscopy. We will review the key concepts, connect PES to ionization energy, address common mistakes, and practice AP exam-style questions.
 
-## Key Concepts Review
+## 🔄 Key Concepts Review
 
 1. **PES measures binding energies** of electrons using $BE = E_{photon} - KE$
 2. **Each peak** = one subshell; **peak height** = number of electrons
@@ -20,7 +20,7 @@ This final part brings together everything about Photoelectron Spectroscopy. We 
     {
       id: 'ps7-ionization',
       type: 'text' as const,
-      content: `## Connecting PES to Ionization Energy
+      content: `## 🔗 Connecting PES to Ionization Energy
 
 The **first ionization energy (IE₁)** of an element is directly related to the PES spectrum:
 
@@ -28,9 +28,15 @@ $$IE_1 = \\text{binding energy of the outermost (valence) electron}$$
 
 The **rightmost peak** on a PES spectrum (lowest binding energy) corresponds to the outermost subshell. The binding energy of this peak equals the first ionization energy.
 
+
+---
+
 ### Example:
 - Sodium (Na): The rightmost peak is the 3s¹ peak with BE ≈ 0.50 MJ/mol → IE₁ ≈ 0.50 MJ/mol ≈ 496 kJ/mol
 - Chlorine (Cl): The rightmost peak is the 3p⁵ peak with BE ≈ 1.25 MJ/mol → IE₁ ≈ 1.25 MJ/mol ≈ 1251 kJ/mol
+
+
+---
 
 ### Successive Ionization Energies
 PES data can also help explain **successive ionization energies**. The large jump in IE values that occurs when you begin removing core electrons is clearly visible as the **gap** between valence and core peaks on PES spectra.`
@@ -60,23 +66,35 @@ The PES spectrum of an element shows the rightmost peak at a binding energy of 1
     {
       id: 'ps7-mistakes',
       type: 'text' as const,
-      content: `## Common Mistakes on the AP Exam
+      content: `## 📌 Common Mistakes on the AP Exam
 
 ### Mistake 1: Confusing the X-Axis Direction
 ❌ Assuming binding energy increases left to right (like most graphs)
 ✅ Remember: binding energy is **high on the left, low on the right**
 
+
+---
+
 ### Mistake 2: Forgetting the 3d Subshell
 ❌ Writing peaks as 2, 2, 6, 2, 6, 2, 6 for elements with Z > 20
 ✅ Include the 3d peak (up to height 10) between 3p and 4s for transition metals
+
+
+---
 
 ### Mistake 3: Confusing Peak Height with Binding Energy
 ❌ Thinking taller peaks mean higher binding energy
 ✅ Peak **height** = number of electrons; peak **position** (left/right) = binding energy
 
+
+---
+
 ### Mistake 4: Not Matching Total Electrons to Atomic Number
 ❌ Identifying an element without verifying the total electron count
 ✅ Always **sum all peak heights** and confirm it matches the expected atomic number
+
+
+---
 
 ### Mistake 5: Ignoring Subshell Exceptions
 ❌ Expecting perfectly smooth IE trends across a period
@@ -224,14 +242,20 @@ An element has a PES spectrum with 7 peaks. The peak heights from left to right 
     {
       id: 'ps7-summary',
       type: 'text' as const,
-      content: `## Complete PES Summary
+      content: `## 📋 Complete PES Summary
 
 Congratulations on completing the Photoelectron Spectroscopy unit! Here is everything you need to know for the AP exam:
+
+
+---
 
 ### Essential Equations
 - $E_{photon} = BE + KE$ → $BE = E_{photon} - KE$
 - $Z_{eff} = Z - S$
 - $IE_1$ = binding energy of the rightmost PES peak
+
+
+---
 
 ### Reading Spectra
 - X-axis: BE (high left, low right)
@@ -239,10 +263,16 @@ Congratulations on completing the Photoelectron Spectroscopy unit! Here is every
 - Each peak = one subshell
 - Total peak heights = atomic number
 
+
+---
+
 ### Periodic Trends
 - Across a period: all BEs increase (higher $Z_{eff}$)
 - Exceptions at B/Be and O/N due to subshell effects
 - Core vs valence gap visible on spectra
+
+
+---
 
 ### Common AP Tasks
 1. Identify elements from PES data

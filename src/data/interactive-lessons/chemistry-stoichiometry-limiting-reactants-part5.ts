@@ -18,7 +18,7 @@ $$M \\times V = n \\quad \\text{(moles = molarity × volume in liters)}$$
       id: 'sl5-molarity-review',
       type: 'text' as const,
       content: `
-## Molarity Review
+## 🔄 Molarity Review
 
 **Molarity** ($M$) is the concentration of a solution in moles per liter:
 
@@ -29,11 +29,17 @@ where:
 - $n$ = moles of solute
 - $V$ = volume of solution **in liters**
 
+
+---
+
 ### Unit Conversion Reminder
 
 - 1 L = 1000 mL
 - Always convert mL to L before using the formula!
 - Example: 250 mL = 0.250 L
+
+
+---
 
 ### Example
 
@@ -48,15 +54,21 @@ $$n = M \\times V = 0.200 \\times 0.500 = 0.100 \\text{ mol NaOH}$$
       id: 'sl5-solution-stoich',
       type: 'text' as const,
       content: `
-## Solution Stoichiometry Roadmap
+## 🧪 Solution Stoichiometry Roadmap
 
 $$M_A \\times V_A \\xrightarrow{= n_A} \\text{moles A} \\xrightarrow{\\text{mole ratio}} \\text{moles B} \\xrightarrow{\\div M_B \\text{ or } \\times M_B} V_B \\text{ or grams B}$$
+
+
+---
 
 ### The Steps
 
 1. Find moles of the known substance: $n = M \\times V$
 2. Use the mole ratio to find moles of the unknown
 3. Convert to the desired unit (volume, grams, or molarity)
+
+
+---
 
 ### Worked Example
 
@@ -77,9 +89,12 @@ $$\\text{AgNO}_3 + \\text{NaCl} \\rightarrow \\text{AgCl} + \\text{NaNO}_3$$
       id: 'sl5-titration',
       type: 'text' as const,
       content: `
-## Titration — A Key Application
+## 🧪 Titration — A Key Application
 
 A **titration** is a lab technique where you add a solution of known concentration (the **titrant**) to a solution of unknown concentration until the reaction is complete (the **equivalence point**).
+
+
+---
 
 ### At the Equivalence Point
 
@@ -88,6 +103,9 @@ $$n_{\\text{acid}} \\times \\text{(acid-to-base ratio)} = n_{\\text{base}}$$
 For a 1:1 acid-base reaction:
 
 $$M_A \\times V_A = M_B \\times V_B$$
+
+
+---
 
 ### Worked Example
 
@@ -98,6 +116,9 @@ $$\\text{HCl} + \\text{NaOH} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O} \\
 $$M_{\\text{HCl}} \\times 0.0250 = 0.150 \\times 0.0320$$
 
 $$M_{\\text{HCl}} = \\frac{0.150 \\times 0.0320}{0.0250} = 0.192 \\text{ M}$$
+
+
+---
 
 ### For Non-1:1 Ratios
 

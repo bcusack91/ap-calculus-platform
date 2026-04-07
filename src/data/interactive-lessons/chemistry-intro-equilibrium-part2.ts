@@ -16,7 +16,7 @@ The equilibrium constant quantifies the ratio of product concentrations to react
       id: 'ie2-kc-expression',
       type: 'text' as const,
       content: `
-## The Equilibrium Constant $K_c$
+## ⚖️ The Equilibrium Constant $K_c$
 
 For the general reaction:
 
@@ -26,12 +26,18 @@ The equilibrium constant expression is:
 
 $$K_c = \\frac{[C]^c[D]^d}{[A]^a[B]^b}$$
 
+
+---
+
 ### Rules for Writing $K_c$
 
 1. **Products** go in the numerator, **reactants** in the denominator
 2. Each concentration is raised to the power of its **stoichiometric coefficient**
 3. $K_c$ uses **molar concentrations** (mol/L)
 4. $K_c$ is dimensionless by convention on the AP exam
+
+
+---
 
 ### Example
 
@@ -44,11 +50,14 @@ $$K_c = \\frac{[\\text{NH}_3]^2}{[\\text{N}_2][\\text{H}_2]^3}$$
       id: 'ie2-kp-expression',
       type: 'text' as const,
       content: `
-## The Equilibrium Constant $K_p$
+## ⚖️ The Equilibrium Constant $K_p$
 
 For gaseous reactions, we can use partial pressures instead of concentrations:
 
 $$K_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}$$
+
+
+---
 
 ### Relationship Between $K_c$ and $K_p$
 
@@ -59,6 +68,9 @@ Where:
 - $T$ = temperature in Kelvin
 - $\\Delta n = \\text{(moles of gaseous products)} - \\text{(moles of gaseous reactants)}$
 
+
+---
+
 ### Example
 
 > **Problem:** For $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$:
@@ -68,6 +80,9 @@ Where:
 $$\\Delta n = 2 - (1 + 3) = -2$$
 
 $$K_p = K_c(RT)^{-2}$$
+
+
+---
 
 ### Special Case: $\\Delta n = 0$
 
@@ -149,7 +164,7 @@ At equilibrium: $[\\text{H}_2] = 0.10$ M, $[\\text{I}_2] = 0.20$ M, $[\\text{HI}
       id: 'ie2-kp-conversion',
       type: 'text' as const,
       content: `
-## Worked Example: Converting $K_c$ to $K_p$
+## 🧪 Worked Example: Converting $K_c$ to $K_p$
 
 **Problem:** For $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$, $K_c = 0.500$ at $T = 400$ K. Find $K_p$.
 

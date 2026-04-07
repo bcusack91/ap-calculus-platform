@@ -16,7 +16,7 @@ Precipitation reactions are among the most common types you\'ll encounter in AP 
       id: 'ni4-predicting',
       type: 'text' as const,
       content: `
-## Predicting Precipitation Reactions
+## ⚗️ Predicting Precipitation Reactions
 
 ### Strategy: The Ion-Swap Method
 
@@ -26,6 +26,9 @@ When two ionic compounds in solution are mixed:
 2. **Swap partners** — combine each cation with each new anion
 3. **Check solubility** of each possible product
 4. If any product is **insoluble** → precipitation occurs!
+
+
+---
 
 ### Example: Mix AgNO₃(aq) and NaCl(aq)
 
@@ -44,7 +47,7 @@ $$\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s)$$
       id: 'ni4-common-precipitates',
       type: 'text' as const,
       content: `
-## Common Precipitates on the AP Exam
+## 📌 Common Precipitates on the AP Exam
 
 | Precipitate | Formula | Color |
 |-------------|---------|-------|
@@ -60,6 +63,9 @@ $$\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s)$$
 | Copper(II) hydroxide | Cu(OH)₂ | Blue |
 | Iron(II) sulfide | FeS | Black |
 
+
+---
+
 ### Net Ionic Patterns
 
 All precipitation reactions follow the same net ionic pattern:
@@ -73,22 +79,37 @@ The spectator ions are always the "other" pair that forms a soluble compound.
       id: 'ni4-multi-step',
       type: 'text' as const,
       content: `
-## Multi-Step Example
+## 🧪 Multi-Step Example
 
 **Mix: $\\text{FeCl}_3(aq) + 3\\text{NaOH}(aq) \\rightarrow$ ?**
 
+
+---
+
 ### Step 1: Identify ions
 Fe³⁺, Cl⁻, Na⁺, OH⁻
+
+
+---
 
 ### Step 2: Swap partners
 - Fe³⁺ + OH⁻ → Fe(OH)₃ — Solubility? OH⁻ insoluble with most metals → **insoluble**
 - Na⁺ + Cl⁻ → NaCl — Solubility? Na⁺ always soluble → **soluble**
 
+
+---
+
 ### Step 3: Molecular equation
 $$\\text{FeCl}_3(aq) + 3\\text{NaOH}(aq) \\rightarrow \\text{Fe(OH)}_3(s) + 3\\text{NaCl}(aq)$$
 
+
+---
+
 ### Step 4: Complete ionic equation
 $$\\text{Fe}^{3+}(aq) + 3\\text{Cl}^-(aq) + 3\\text{Na}^+(aq) + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(s) + 3\\text{Na}^+(aq) + 3\\text{Cl}^-(aq)$$
+
+
+---
 
 ### Step 5: Net ionic equation (cancel Na⁺ and Cl⁻)
 $$\\text{Fe}^{3+}(aq) + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(s)$$

@@ -16,13 +16,16 @@ Now that we know what a mole is, we need a way to connect **moles** to **grams**
       id: 'mm2-definition',
       type: 'text' as const,
       content: `
-## What Is Molar Mass?
+## 📖 What Is Molar Mass?
 
 The **molar mass** ($M$) of a substance is the mass in grams of one mole of that substance.
 
 $$M = \\frac{\\text{mass (g)}}{\\text{moles (mol)}}$$
 
 Units: **g/mol**
+
+
+---
 
 ### For Elements
 
@@ -36,6 +39,9 @@ The molar mass of an element equals its **atomic mass from the periodic table**,
 | Sodium (Na) | 22.99 | 22.99 |
 | Iron (Fe) | 55.85 | 55.85 |
 
+
+---
+
 ### Key Insight
 
 The number on the periodic table does double duty: it tells you the **mass of one atom in amu** and the **mass of one mole of atoms in grams**.
@@ -45,9 +51,12 @@ The number on the periodic table does double duty: it tells you the **mass of on
       id: 'mm2-compounds',
       type: 'text' as const,
       content: `
-## Molar Mass of Compounds
+## 📌 Molar Mass of Compounds
 
 For a compound, add up the molar masses of all atoms in the formula.
+
+
+---
 
 ### Example 1: Water (H₂O)
 
@@ -57,6 +66,9 @@ For a compound, add up the molar masses of all atoms in the formula.
 
 $$M_{\\text{H}_2\\text{O}} = 2(1.008) + 1(16.00) = 2.016 + 16.00 = 18.02 \\text{ g/mol}$$
 
+
+---
+
 ### Example 2: Sodium Chloride (NaCl)
 
 > **Problem:** What is the molar mass of sodium chloride (NaCl)?
@@ -64,6 +76,9 @@ $$M_{\\text{H}_2\\text{O}} = 2(1.008) + 1(16.00) = 2.016 + 16.00 = 18.02 \\text{
 **Solution:**
 
 $$M_{\\text{NaCl}} = 22.99 + 35.45 = 58.44 \\text{ g/mol}$$
+
+
+---
 
 ### Example 3: Calcium Carbonate (CaCO₃)
 
@@ -73,6 +88,9 @@ $$M_{\\text{NaCl}} = 22.99 + 35.45 = 58.44 \\text{ g/mol}$$
 
 $$M_{\\text{CaCO}_3} = 40.08 + 12.01 + 3(16.00) = 40.08 + 12.01 + 48.00 = 100.09 \\text{ g/mol}$$
 
+
+---
+
 ### Example 4: Glucose (C₆H₁₂O₆)
 
 > **Problem:** What is the molar mass of glucose (C₆H₁₂O₆)?
@@ -80,6 +98,9 @@ $$M_{\\text{CaCO}_3} = 40.08 + 12.01 + 3(16.00) = 40.08 + 12.01 + 48.00 = 100.09
 **Solution:**
 
 $$M_{\\text{C}_6\\text{H}_{12}\\text{O}_6} = 6(12.01) + 12(1.008) + 6(16.00) = 72.06 + 12.10 + 96.00 = 180.16 \\text{ g/mol}$$
+
+
+---
 
 ### Tip: Watch for Parentheses!
 

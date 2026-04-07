@@ -16,17 +16,26 @@ Osmotic pressure is the fourth colligative property — and arguably the most im
       id: 'ss5-osmosis',
       type: 'text' as const,
       content: `
-## Osmosis
+## 📌 Osmosis
 
 **Osmosis** is the net movement of solvent (usually water) through a **semipermeable membrane** from a region of **lower** solute concentration to **higher** solute concentration.
+
+
+---
 
 ### Semipermeable Membrane
 
 A membrane that allows solvent molecules to pass through but blocks solute particles (ions or large molecules).
 
+
+---
+
 ### Driving Force
 
 The solvent naturally moves to dilute the more concentrated side — this is an entropy-driven process.
+
+
+---
 
 ### Direction Rules
 
@@ -35,6 +44,9 @@ The solvent naturally moves to dilute the more concentrated side — this is an 
 | **Hypertonic** | Higher solute concentration | Water flows **out** of the cell |
 | **Hypotonic** | Lower solute concentration | Water flows **into** the cell |
 | **Isotonic** | Equal solute concentration | No net water flow |
+
+
+---
 
 ### Biological Importance
 
@@ -47,7 +59,7 @@ The solvent naturally moves to dilute the more concentrated side — this is an 
       id: 'ss5-osmotic-pressure',
       type: 'text' as const,
       content: `
-## Osmotic Pressure ($\\Pi$)
+## 💨 Osmotic Pressure ($\\Pi$)
 
 **Osmotic pressure** is the minimum pressure that must be applied to the solution side to **prevent** osmosis.
 
@@ -60,11 +72,17 @@ where:
 - $R$ = gas constant = $0.08206$ L·atm/(mol·K)
 - $T$ = temperature in Kelvin
 
+
+---
+
 ### This looks like the ideal gas law!
 
 $$\\Pi V = nRT \\quad \\Rightarrow \\quad \\Pi = \\frac{n}{V}RT = MRT$$
 
 With the van\'t Hoff factor for electrolytes: $\\Pi = iMRT$
+
+
+---
 
 ### Worked Example
 
@@ -81,7 +99,7 @@ That is a surprisingly large pressure — about 72 psi — from a relatively dil
       id: 'ss5-electrolyte-comparison',
       type: 'text' as const,
       content: `
-## Electrolytes vs. Nonelectrolytes
+## 🔋 Electrolytes vs. Nonelectrolytes
 
 ### Strong Electrolytes
 - **Completely** dissociate into ions in solution
@@ -89,17 +107,26 @@ That is a surprisingly large pressure — about 72 psi — from a relatively dil
 - Conduct electricity strongly
 - $i$ equals the total number of ions produced
 
+
+---
+
 ### Weak Electrolytes
 - **Partially** dissociate in solution
 - Examples: CH₃COOH (acetic acid), NH₃, HF
 - Conduct electricity weakly
 - $i$ is between 1 and the theoretical maximum (closer to 1 for weak electrolytes)
 
+
+---
+
 ### Nonelectrolytes
 - Do **not** dissociate — dissolve as whole molecules
 - Examples: glucose (C₆H₁₂O₆), sucrose, ethanol, urea
 - Do not conduct electricity
 - $i = 1$ always
+
+
+---
 
 ### Impact on Colligative Properties
 
@@ -183,15 +210,21 @@ For 0.10 m solutions in water ($K_f = 1.86$ °C/m):
       id: 'ss5-reverse-osmosis',
       type: 'text' as const,
       content: `
-## Reverse Osmosis
+## 📌 Reverse Osmosis
 
 If you apply pressure **greater** than the osmotic pressure to the concentrated side, you can force solvent to flow **backward** — from high concentration to low concentration.
+
+
+---
 
 ### Applications
 
 - **Water desalination** — removing salt from seawater (seawater $\\Pi \\approx 27$ atm, so applied pressure must exceed this)
 - **Water purification** — removing contaminants
 - **Maple syrup production** — concentrating sap
+
+
+---
 
 ### Reverse Osmosis vs. Osmosis
 

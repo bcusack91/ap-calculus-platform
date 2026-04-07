@@ -16,13 +16,19 @@ There are many ways to express how much solute is dissolved in a solution. Each 
       id: 'ss2-molarity',
       type: 'text' as const,
       content: `
-## Molarity ($M$)
+## 📌 Molarity ($M$)
 
 **Molarity** is the most commonly used concentration unit in chemistry.
 
 $$M = \\frac{\\text{moles of solute}}{\\text{liters of solution}}$$
 
+
+---
+
 ### Units: mol/L (or simply $M$)
+
+
+---
 
 ### Example
 
@@ -31,6 +37,9 @@ Dissolve 4.00 g of NaOH ($M_{\\text{NaOH}} = 40.00$ g/mol) in enough water to ma
 $$n = 4.00 \\; \\cancel{\\text{g NaOH}} \\times \\frac{1 \\text{ mol NaOH}}{40.00 \\; \\cancel{\\text{g NaOH}}} = 0.100 \\text{ mol NaOH}$$
 
 $$M = \\frac{0.100 \\text{ mol}}{0.5000 \\text{ L}} = 0.200 \\text{ M}$$
+
+
+---
 
 ### Key Points
 
@@ -43,11 +52,17 @@ $$M = \\frac{0.100 \\text{ mol}}{0.5000 \\text{ L}} = 0.200 \\text{ M}$$
       id: 'ss2-molality',
       type: 'text' as const,
       content: `
-## Molality ($m$)
+## 📌 Molality ($m$)
 
 $$m = \\frac{\\text{moles of solute}}{\\text{kilograms of solvent}}$$
 
+
+---
+
 ### Units: mol/kg (or simply $m$)
+
+
+---
 
 ### Example
 
@@ -56,6 +71,9 @@ Dissolve 18.0 g of glucose ($M_{\\text{glucose}} = 180.16$ g/mol) in 250.0 g of 
 $$n = 18.0 \\; \\cancel{\\text{g glucose}} \\times \\frac{1 \\text{ mol glucose}}{180.16 \\; \\cancel{\\text{g glucose}}} = 0.0999 \\text{ mol glucose}$$
 
 $$m = \\frac{0.0999 \\text{ mol}}{0.2500 \\text{ kg}} = 0.400 \\; m$$
+
+
+---
 
 ### Why Molality?
 
@@ -68,13 +86,16 @@ $$m = \\frac{0.0999 \\text{ mol}}{0.2500 \\text{ kg}} = 0.400 \\; m$$
       id: 'ss2-other-units',
       type: 'text' as const,
       content: `
-## Other Concentration Units
+## 📌 Other Concentration Units
 
 ### Mass Percent (Weight Percent)
 
 $$\\text{mass \\%} = \\frac{\\text{mass of solute}}{\\text{mass of solution}} \\times 100\\%$$
 
 Example: 5.0 g NaCl in 95.0 g H₂O → mass% = $\\frac{5.0}{5.0 + 95.0} \\times 100 = 5.0\\%$
+
+
+---
 
 ### Mole Fraction ($\\chi$)
 
@@ -84,12 +105,18 @@ $$\\chi_A = \\frac{n_A}{n_A + n_B + \\cdots}$$
 - The sum of all mole fractions in a solution equals **1**
 - Used in Raoult\'s law and gas law calculations
 
+
+---
+
 ### Parts Per Million (ppm)
 
 $$\\text{ppm} = \\frac{\\text{mass of solute}}{\\text{mass of solution}} \\times 10^6$$
 
 - Used for very dilute solutions (trace contaminants, water quality)
 - 1 ppm = 1 mg solute per 1 kg solution (for dilute aqueous solutions, 1 ppm ≈ 1 mg/L)
+
+
+---
 
 ### Summary Table
 
@@ -173,7 +200,7 @@ $$\\text{ppm} = \\frac{\\text{mass of solute}}{\\text{mass of solution}} \\times
       id: 'ss2-mole-fraction',
       type: 'text' as const,
       content: `
-## Mole Fraction Worked Example
+## 🧪 Mole Fraction Worked Example
 
 **Problem:** A solution contains 46.0 g of ethanol (C₂H₅OH, $M = 46.07$ g/mol) and 72.0 g of water ($M = 18.02$ g/mol). Calculate the mole fraction of ethanol.
 

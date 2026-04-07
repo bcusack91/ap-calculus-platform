@@ -16,7 +16,7 @@ This workshop brings together everything from Parts 1–5: writing equilibrium e
       id: 'ie6-strategy',
       type: 'text' as const,
       content: `
-## Problem-Solving Strategy
+## 🛠️ Problem-Solving Strategy
 
 ### Steps for Equilibrium Expression Problems
 
@@ -25,6 +25,9 @@ This workshop brings together everything from Parts 1–5: writing equilibrium e
 3. **Write** the $K$ expression: products over reactants with coefficient exponents
 4. **Plug in** equilibrium values
 5. **Check** — does the magnitude of K make sense?
+
+
+---
 
 ### Key Formulas
 
@@ -41,7 +44,7 @@ This workshop brings together everything from Parts 1–5: writing equilibrium e
       id: 'ie6-problem1',
       type: 'text' as const,
       content: `
-## Worked Example 1: Calculating $K_c$
+## 🔢 Worked Example 1: Calculating $K_c$
 
 **Problem:** At 450°C, the equilibrium concentrations for the reaction
 
@@ -87,7 +90,7 @@ At equilibrium: $[\\text{PCl}_5] = 0.20$ M, $[\\text{PCl}_3] = 0.30$ M, $[\\text
       id: 'ie6-problem2',
       type: 'text' as const,
       content: `
-## Worked Example 2: Combining K Values
+## 🧪 Worked Example 2: Combining K Values
 
 **Problem:** Given:
 

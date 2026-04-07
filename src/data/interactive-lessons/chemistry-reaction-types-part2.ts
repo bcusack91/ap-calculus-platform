@@ -16,15 +16,21 @@ In replacement reactions, atoms or ions **switch places**. Understanding these r
       id: 'rt2-single-replacement',
       type: 'text' as const,
       content: `
-## Single Replacement (Single Displacement)
+## 📌 Single Replacement (Single Displacement)
 
 A more reactive element displaces a less reactive element from a compound.
+
+
+---
 
 ### General Form
 
 $$A + BC \\rightarrow AC + B$$
 
 Element A replaces element B in compound BC, but **only if A is more reactive than B**.
+
+
+---
 
 ### Examples
 
@@ -33,6 +39,9 @@ Element A replaces element B in compound BC, but **only if A is more reactive th
 | Metal replaces metal | $\\text{Zn} + \\text{CuSO}_4 \\rightarrow \\text{ZnSO}_4 + \\text{Cu}$ |
 | Metal replaces hydrogen | $\\text{Mg} + 2\\text{HCl} \\rightarrow \\text{MgCl}_2 + \\text{H}_2$ |
 | Halogen replaces halogen | $\\text{Cl}_2 + 2\\text{NaBr} \\rightarrow 2\\text{NaCl} + \\text{Br}_2$ |
+
+
+---
 
 ### No Reaction Example
 
@@ -45,9 +54,12 @@ Copper is **less reactive** than zinc, so it cannot displace zinc from solution.
       id: 'rt2-activity-series',
       type: 'text' as const,
       content: `
-## The Activity Series
+## 📌 The Activity Series
 
 The activity series ranks metals (and hydrogen) by their ability to lose electrons and form cations. A higher metal can replace a lower one.
+
+
+---
 
 ### Metal Activity Series (Most → Least Reactive)
 
@@ -55,12 +67,18 @@ The activity series ranks metals (and hydrogen) by their ability to lose electro
 |:---:|:---:|:---:|:---:|
 | Li, K, Ba, Ca, Na | Mg, Al, Zn, Fe | Ni, Sn, Pb, **H₂** | Cu, Hg, Ag, Pt, Au |
 
+
+---
+
 ### Key Rules
 
 1. **A metal above H₂** can react with acids to produce H₂ gas
 2. **A metal below H₂** (Cu, Ag, Au) cannot dissolve in common acids
 3. **A metal can replace any metal below it** in solution
 4. **A halogen can replace any halogen below it**: F₂ > Cl₂ > Br₂ > I₂
+
+
+---
 
 ### Memory Aid
 
@@ -71,15 +89,21 @@ The activity series ranks metals (and hydrogen) by their ability to lose electro
       id: 'rt2-double-replacement',
       type: 'text' as const,
       content: `
-## Double Replacement (Double Displacement / Metathesis)
+## 📌 Double Replacement (Double Displacement / Metathesis)
 
 Two ionic compounds in solution **exchange ions** to form two new compounds.
+
+
+---
 
 ### General Form
 
 $$AB + CD \\rightarrow AD + CB$$
 
 The cations and anions switch partners.
+
+
+---
 
 ### Driving Forces
 
@@ -89,6 +113,9 @@ A double replacement reaction occurs when one of the products is:
 2. **Water** (a molecular compound)
 3. **A gas** (escapes the solution, denoted ↑)
 
+
+---
+
 ### Examples
 
 | Driving Force | Reaction |
@@ -96,6 +123,9 @@ A double replacement reaction occurs when one of the products is:
 | Precipitate | $\\text{AgNO}_3 + \\text{NaCl} \\rightarrow \\text{AgCl}\\downarrow + \\text{NaNO}_3$ |
 | Water | $\\text{HCl} + \\text{NaOH} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$ |
 | Gas | $\\text{Na}_2\\text{CO}_3 + 2\\text{HCl} \\rightarrow 2\\text{NaCl} + \\text{H}_2\\text{O} + \\text{CO}_2\\uparrow$ |
+
+
+---
 
 ### Neutralization
 

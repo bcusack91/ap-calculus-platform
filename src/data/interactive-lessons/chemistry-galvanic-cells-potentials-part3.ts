@@ -16,7 +16,7 @@ Every half-reaction has a **standard reduction potential** ($E°$) that measures
       id: 'gc3-table',
       type: 'text' as const,
       content: `
-## Standard Reduction Potential Table
+## ⚡ Standard Reduction Potential Table
 
 All half-reactions are written as **reductions** (gaining electrons):
 
@@ -33,6 +33,9 @@ All half-reactions are written as **reductions** (gaining electrons):
 | $\\text{Al}^{3+} + 3e^- \\rightarrow \\text{Al}$ | $-1.66$ |
 | $\\text{Li}^+ + e^- \\rightarrow \\text{Li}$ | $-3.04$ |
 
+
+---
+
 ### Reading the Table
 
 - **More positive** $E°$: stronger tendency to be reduced (stronger oxidizing agent)
@@ -44,25 +47,35 @@ All half-reactions are written as **reductions** (gaining electrons):
       id: 'gc3-cell-potential',
       type: 'text' as const,
       content: `
-## Calculating Standard Cell Potential
+## 🔢 Calculating Standard Cell Potential
 
-$$E°_{\\text{cell}} = E°_{\\text{cathode}} - E°_{\\text{anode}}$$
+> **The Master Equation:**
+>
+> $$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}}$$
 
-### Important Rules
+---
 
-1. $E°$ values are **NOT multiplied** by stoichiometric coefficients (they are intensive properties)
-2. The species with the **higher** (more positive) $E°$ is reduced (cathode)
-3. The species with the **lower** (more negative) $E°$ is oxidized (anode)
-4. A spontaneous galvanic cell always has $E°_{\\text{cell}} > 0$
+### ⚠️ Important Rules
 
-### Worked Example: Zn-Cu Cell
+| # | Rule |
+|---|------|
+| 1 | $E°$ values are **NOT multiplied** by stoichiometric coefficients — they are **intensive** properties |
+| 2 | The species with the **higher** (more positive) $E°$ is reduced (**cathode**) |
+| 3 | The species with the **lower** (more negative) $E°$ is oxidized (**anode**) |
+| 4 | A spontaneous galvanic cell always has $E^\\circ_{\\text{cell}} > 0$ |
 
-- Cathode: $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$ ($E° = +0.34$ V)
-- Anode: $\\text{Zn}^{2+} + 2e^- \\rightarrow \\text{Zn}$ ($E° = -0.76$ V)
+---
 
-$$E°_{\\text{cell}} = E°_{\\text{cathode}} - E°_{\\text{anode}} = (+0.34) - (-0.76) = +1.10 \\text{ V}$$
+### 🧪 Worked Example: Zn-Cu Cell
 
-The positive $E°_{\\text{cell}}$ confirms the reaction is spontaneous.
+> **Given half-reactions:**
+>
+> - Cathode: $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$ &nbsp;&nbsp; ($E° = +0.34$ V)
+> - Anode: $\\text{Zn}^{2+} + 2e^- \\rightarrow \\text{Zn}$ &nbsp;&nbsp; ($E° = -0.76$ V)
+
+$$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}} = (+0.34) - (-0.76) = +1.10 \\text{ V}$$
+
+> ✅ The positive $E^\\circ_{\\text{cell}}$ confirms the reaction is **spontaneous**.
       `
     },
     {
@@ -85,26 +98,26 @@ The positive $E°_{\\text{cell}}$ confirms the reaction is spontaneous.
             explanation: 'The strongest reducing agent has the most negative $E°$ (greatest tendency to be oxidized). Li at $E° = -3.04$ V is the strongest reducing agent on this list.'
           },
           {
-            question: 'When calculating E°_cell, you should:',
+            question: 'When calculating $E^\\circ_{\\text{cell}}$, you should:',
             options: [
-              'Multiply E° by the number of electrons transferred',
-              'Add E°_cathode and E°_anode',
-              'Subtract E°_anode from E°_cathode',
-              'Reverse the sign of both E° values'
+              'Multiply $E°$ by the number of electrons transferred',
+              'Add $E^\\circ_{\\text{cathode}}$ and $E^\\circ_{\\text{anode}}$',
+              'Subtract $E^\\circ_{\\text{anode}}$ from $E^\\circ_{\\text{cathode}}$',
+              'Reverse the sign of both $E°$ values'
             ],
             correctAnswer: 2,
-            explanation: '$E°_{\\text{cell}} = E°_{\\text{cathode}} - E°_{\\text{anode}}$. Do NOT multiply by coefficients — $E°$ is an intensive property.'
+            explanation: '$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}}$. Do NOT multiply by coefficients — $E°$ is an intensive property.'
           },
           {
             question: 'A spontaneous galvanic cell must have:',
             options: [
-              'E°_cell < 0',
-              'E°_cell = 0',
-              'E°_cell > 0',
-              'E°_cell can be any value'
+              '$E^\\circ_{\\text{cell}} < 0$',
+              '$E^\\circ_{\\text{cell}} = 0$',
+              '$E^\\circ_{\\text{cell}} > 0$',
+              '$E^\\circ_{\\text{cell}}$ can be any value'
             ],
             correctAnswer: 2,
-            explanation: 'A positive $E°_{\\text{cell}}$ corresponds to a negative $\\Delta G°$ (spontaneous). $\\Delta G° = -nFE°$.'
+            explanation: 'A positive $E^\\circ_{\\text{cell}}$ corresponds to a negative $\\Delta G°$ (spontaneous). $\\Delta G° = -nFE°$.'
           }
         ]
       }
@@ -115,20 +128,27 @@ The positive $E°_{\\text{cell}}$ confirms the reaction is spontaneous.
       content: `
 **Cell Potential Calculations** 🧮
 
-> **Given:** Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.44 V, Ni²⁺/Ni = −0.26 V, Cu²⁺/Cu = +0.34 V
+> **Standard Reduction Potentials:**
+>
+> | Half-Reaction | $E^\\circ$ (V) |
+> |--------------|--------------|
+> | $\\text{Ag}^+(aq) + e^- \\rightarrow \\text{Ag}(s)$ | $+0.80$ |
+> | $\\text{Cu}^{2+}(aq) + 2e^- \\rightarrow \\text{Cu}(s)$ | $+0.34$ |
+> | $\\text{Ni}^{2+}(aq) + 2e^- \\rightarrow \\text{Ni}(s)$ | $-0.26$ |
+> | $\\text{Fe}^{2+}(aq) + 2e^- \\rightarrow \\text{Fe}(s)$ | $-0.44$ |
 
-**1)** $E°_{\\text{cell}}$ for a cell with Ag cathode and Fe anode: (in V, to 3 significant figures)
+**1)** $E^\\circ_{\\text{cell}}$ for a cell with Ag cathode and Fe anode: (in V, to 3 significant figures)
 
-**2)** $E°_{\\text{cell}}$ for a cell with Cu cathode and Ni anode: (in V, to 3 significant figures)
+**2)** $E^\\circ_{\\text{cell}}$ for a cell with Cu cathode and Ni anode: (in V, to 3 significant figures)
 
-**3)** $E°_{\\text{cell}}$ for a cell with Ni cathode and Fe anode: (in V, to 3 significant figures)
+**3)** $E^\\circ_{\\text{cell}}$ for a cell with Ni cathode and Fe anode: (in V, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['1.24', '0.60', '0.18'],
-        hint1: '$E°_{\\text{cell}} = 0.80 - (-0.44)$',
-        hint2: '$E°_{\\text{cell}} = 0.34 - (-0.26)$',
-        hint3: '$E°_{\\text{cell}} = -0.26 - (-0.44)$',
+        hint1: '$E^\\circ_{\\text{cell}} = 0.80 - (-0.44)$',
+        hint2: '$E^\\circ_{\\text{cell}} = 0.34 - (-0.26)$',
+        hint3: '$E^\\circ_{\\text{cell}} = -0.26 - (-0.44)$',
         explanation: '1) $0.80 - (-0.44) = 0.80 + 0.44 = 1.24$ V. 2) $0.34 - (-0.26) = 0.34 + 0.26 = 0.60$ V. 3) $-0.26 - (-0.44) = -0.26 + 0.44 = 0.18$ V.'
       }
     },
@@ -173,26 +193,26 @@ The positive $E°_{\\text{cell}}$ confirms the reaction is spontaneous.
       exercise: {
         questions: [
           {
-            question: 'Can Ag⁺ (E° = +0.80 V) spontaneously oxidize Cu (E° = +0.34 V)?',
+            question: 'Can $\\text{Ag}^+$ ($E^\\circ = +0.80$ V) spontaneously oxidize Cu ($E^\\circ = +0.34$ V)?',
             options: [
-              'No — Ag has a higher E°',
-              'Yes — E°_cell = 0.80 − 0.34 = +0.46 V (spontaneous)',
-              'No — both E° values are positive',
-              'Yes — E°_cell = 0.34 − 0.80 = −0.46 V (spontaneous)'
+              'No — Ag has a higher $E^\\circ$',
+              'Yes — $E^\\circ_{\\text{cell}} = 0.80 - 0.34 = +0.46$ V (spontaneous)',
+              'No — both $E^\\circ$ values are positive',
+              'Yes — $E^\\circ_{\\text{cell}} = 0.34 - 0.80 = -0.46$ V (spontaneous)'
             ],
             correctAnswer: 1,
-            explanation: 'Ag⁺ is reduced (cathode, E° = +0.80 V) and Cu is oxidized (anode, E° = +0.34 V). $E°_{\\text{cell}} = 0.80 - 0.34 = +0.46$ V. Positive, so YES, it is spontaneous.'
+            explanation: 'Ag⁺ is reduced (cathode, $E^\\circ = +0.80$ V) and Cu is oxidized (anode, $E^\\circ = +0.34$ V). $E^\\circ_{\\text{cell}} = 0.80 - 0.34 = +0.46$ V. Positive, so YES, it is spontaneous.'
           },
           {
-            question: 'Which pair produces the largest E°_cell? Use: Au³⁺/Au = +1.50 V, Li⁺/Li = −3.04 V, Cu²⁺/Cu = +0.34 V',
+            question: 'Which pair produces the largest $E^\\circ_{\\text{cell}}$? Use: $\\text{Au}^{3+}/\\text{Au} = +1.50$ V, $\\text{Li}^+/\\text{Li} = -3.04$ V, $\\text{Cu}^{2+}/\\text{Cu} = +0.34$ V',
             options: [
-              'Au cathode, Cu anode: E° = 1.16 V',
-              'Au cathode, Li anode: E° = 4.54 V',
-              'Cu cathode, Li anode: E° = 3.38 V',
-              'Au cathode, Li anode: E° = 1.54 V'
+              'Au cathode, Cu anode: $E^\\circ_{\\text{cell}} = 1.16$ V',
+              'Au cathode, Li anode: $E^\\circ_{\\text{cell}} = 4.54$ V',
+              'Cu cathode, Li anode: $E^\\circ_{\\text{cell}} = 3.38$ V',
+              'Au cathode, Li anode: $E^\\circ_{\\text{cell}} = 1.54$ V'
             ],
             correctAnswer: 1,
-            explanation: '$E°_{\\text{cell}} = E°_{\\text{cathode}} - E°_{\\text{anode}} = 1.50 - (-3.04) = 4.54$ V. This is the largest possible cell voltage from these three — pairing the strongest oxidizing agent (Au³⁺) with the strongest reducing agent (Li).'
+            explanation: '$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}} = 1.50 - (-3.04) = 4.54$ V. This is the largest possible cell voltage from these three — pairing the strongest oxidizing agent (Au³⁺) with the strongest reducing agent (Li).'
           }
         ]
       }

@@ -16,7 +16,7 @@ The **method of initial rates** is the gold standard for determining a rate law 
       id: 'rr4-method-steps',
       type: 'text' as const,
       content: `
-## Step-by-Step Method
+## 📋 Step-by-Step Method
 
 ### Given Data Table Format
 
@@ -25,6 +25,9 @@ The **method of initial rates** is the gold standard for determining a rate law 
 | 1 | value | value | value |
 | 2 | changed | same | value |
 | 3 | same | changed | value |
+
+
+---
 
 ### The Algorithm
 
@@ -42,6 +45,9 @@ $$m = \\frac{\\ln(\\text{Rate}_2/\\text{Rate}_1)}{\\ln([A]_2/[A]_1)}$$
 
 **Step 6:** Substitute back into any experiment to solve for $k$
 
+
+---
+
 ### Using Logarithms for Non-Integer Orders
 
 If $\\frac{\\text{Rate}_2}{\\text{Rate}_1} = 2.83$ and $\\frac{[A]_2}{[A]_1} = 2$:
@@ -55,7 +61,7 @@ So the order is $\\frac{3}{2}$ (fractional order).
       id: 'rr4-worked-example-1',
       type: 'text' as const,
       content: `
-## Worked Example 1
+## 🧪 Worked Example 1
 
 For the reaction $\\text{A} + \\text{B} \\rightarrow \\text{C}$:
 
@@ -112,7 +118,7 @@ For the reaction $\\text{P} + \\text{Q} \\rightarrow \\text{R}$:
       id: 'rr4-worked-example-2',
       type: 'text' as const,
       content: `
-## Worked Example 2: Three Reactants
+## 🧪 Worked Example 2: Three Reactants
 
 For $2\\text{NO}(g) + \\text{Cl}_2(g) \\rightarrow 2\\text{NOCl}(g)$:
 

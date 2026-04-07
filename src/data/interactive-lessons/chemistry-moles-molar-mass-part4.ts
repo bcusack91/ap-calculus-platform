@@ -16,11 +16,14 @@ When chemists analyze a substance, one of the first questions they ask is: "What
       id: 'mm4-definition',
       type: 'text' as const,
       content: `
-## Mass Percent Formula
+## 📌 Mass Percent Formula
 
 The **mass percent** of an element in a compound is:
 
 $$\\% \\text{ by mass} = \\frac{\\text{mass of element in 1 mol of compound}}{\\text{molar mass of compound}} \\times 100\\%$$
+
+
+---
 
 ### Example 1
 
@@ -36,6 +39,9 @@ $$\\%\\text{H} = \\frac{2.016 \\text{ g H}}{18.02 \\text{ g H}_2\\text{O}} \\tim
 $$\\%\\text{O} = \\frac{16.00 \\text{ g O}}{18.02 \\text{ g H}_2\\text{O}} \\times 100\\% = 88.79\\%$$
 
 **Check:** $11.19 + 88.79 = 99.98\\% \\approx 100\\%$ ✓ (small rounding difference is fine)
+
+
+---
 
 ### Example 2
 
@@ -54,9 +60,12 @@ $$\\%\\text{O} = \\frac{6(16.00) \\text{ g O}}{180.16 \\text{ g C}_6\\text{H}_{1
       id: 'mm4-empirical-from-percent',
       type: 'text' as const,
       content: `
-## Finding Empirical Formula from Percent Composition
+## 🔍 Finding Empirical Formula from Percent Composition
 
 If you know the percent composition, you can determine the **empirical formula** (simplest whole-number ratio of atoms).
+
+
+---
 
 ### Method
 
@@ -64,6 +73,9 @@ If you know the percent composition, you can determine the **empirical formula**
 2. **Convert grams to moles** for each element: $n = m/M$
 3. **Divide all by the smallest** mole value to get the ratio
 4. **Round** to the nearest whole number (or multiply if you get values like 1.5, 2.5, etc.)
+
+
+---
 
 ### Example
 

@@ -8,7 +8,7 @@ export const chemPhotoelectronSpectroscopyPart3Data = {
 
 One of the most powerful aspects of PES is that it provides **direct experimental evidence** for the electron configuration model. Each peak in a PES spectrum corresponds exactly to a subshell in the electron configuration.
 
-## The Connection
+## 🔗 The Connection
 
 | Electron Configuration | PES Peaks (left to right) |
 |------------------------|--------------------------|
@@ -22,7 +22,7 @@ The peaks appear in order from **highest binding energy** (innermost subshell) t
     {
       id: 'ps3-mapping',
       type: 'text' as const,
-      content: `## Mapping Peaks to Subshells
+      content: `## 📌 Mapping Peaks to Subshells
 
 To identify an element from its PES spectrum:
 
@@ -35,6 +35,9 @@ To identify an element from its PES spectrum:
 **Step 4:** Write the electron configuration.
 
 **Step 5:** Sum the electrons to find the atomic number and identify the element.
+
+
+---
 
 ### Example: Four peaks with heights 2, 2, 6, 2
 
@@ -73,14 +76,20 @@ What element does this represent?`,
     {
       id: 'ps3-binding-energy',
       type: 'text' as const,
-      content: `## Relative Binding Energies
+      content: `## 📌 Relative Binding Energies
 
 The binding energies of subshells follow predictable patterns:
+
+
+---
 
 ### Within the Same Atom:
 - **1s** has the **highest** binding energy (closest to nucleus)
 - Each successive subshell has a **lower** binding energy
 - Within the same principal energy level, the order is: s > p > d > f
+
+
+---
 
 ### Typical Binding Energy Ranges:
 | Subshell | Approximate BE Range |
@@ -91,6 +100,9 @@ The binding energies of subshells follow predictable patterns:
 | 3s | Moderate |
 | 3p | Lower |
 | Valence | Lowest (typically < 2 MJ/mol) |
+
+
+---
 
 ### Spacing Between Peaks
 - There is typically a **large gap** between peaks from different principal energy levels (e.g., 1s vs 2s)
@@ -170,7 +182,7 @@ An atom has the PES peaks: 2, 2, 6, 2, 6, 2, 1 (from highest to lowest binding e
     {
       id: 'ps3-summary',
       type: 'text' as const,
-      content: `## Part 3 Summary
+      content: `## 📋 Part 3 Summary
 
 Connecting PES to electron configuration:
 

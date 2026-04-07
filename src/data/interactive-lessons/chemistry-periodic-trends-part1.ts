@@ -15,7 +15,7 @@ In this seven-part series, you'll master the major periodic trends tested on the
     {
       id: 'pt1-organization',
       type: 'text' as const,
-      content: `## Organization of the Periodic Table
+      content: `## 📊 Organization of the Periodic Table
 
 The modern periodic table arranges elements by increasing **atomic number (Z)**.
 
@@ -25,6 +25,9 @@ The modern periodic table arranges elements by increasing **atomic number (Z)**.
 | **Group** | A vertical column (1–18). Elements in the same group have the same number of valence electrons and similar chemical properties. |
 | **Main-group elements** | Groups 1–2 and 13–18 (s- and p-block) |
 | **Transition metals** | Groups 3–12 (d-block) |
+
+
+---
 
 ### Key Regions
 
@@ -67,9 +70,12 @@ The modern periodic table arranges elements by increasing **atomic number (Z)**.
     {
       id: 'pt1-zeff-intro',
       type: 'text' as const,
-      content: `## Effective Nuclear Charge ($Z_{eff}$)
+      content: `## 📊 Effective Nuclear Charge ($Z_{eff}$)
 
 The single most important concept for understanding periodic trends is **effective nuclear charge**.
+
+
+---
 
 ### The Basic Idea
 
@@ -83,6 +89,9 @@ where:
 - $Z$ = actual nuclear charge (atomic number)
 - $S$ = shielding constant (approximately equal to the number of core electrons)
 
+
+---
+
 ### Example: Sodium (Na, $Z = 11$)
 
 Sodium has the electron configuration $1s^2\\,2s^2\\,2p^6\\,3s^1$.
@@ -95,9 +104,12 @@ The single valence electron in sodium feels an effective pull of only about $+1$
     {
       id: 'pt1-shielding',
       type: 'text' as const,
-      content: `## The Shielding Effect
+      content: `## 📊 The Shielding Effect
 
 **Shielding** (or screening) is the reduction of nuclear attraction experienced by valence electrons due to the repulsion from inner-shell electrons.
+
+
+---
 
 ### Key Points
 

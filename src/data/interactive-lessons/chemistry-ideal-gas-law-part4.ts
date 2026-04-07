@@ -16,7 +16,7 @@ The ideal gas law can be rearranged to find the **molar mass** of an unknown gas
       id: 'gl4-molar-mass',
       type: 'text' as const,
       content: `
-## Molar Mass from Gas Data
+## 💨 Molar Mass from Gas Data
 
 Starting with $PV = nRT$ and substituting $n = m/M$ (where $m$ = mass, $M$ = molar mass):
 
@@ -25,6 +25,9 @@ $$PV = \\frac{m}{M}RT$$
 Solving for molar mass:
 
 $$M = \\frac{mRT}{PV}$$
+
+
+---
 
 ### Example
 
@@ -37,6 +40,9 @@ $$T = 100 + 273.15 = 373.15 \\text{ K}, \\quad V = 0.225 \\text{ L}$$
 $$M = \\frac{(0.325)(0.0821)(373.15)}{(0.960)(0.225)} = \\frac{9.957}{0.216} = 46.1 \\text{ g/mol}$$
 
 This matches ethanol (C₂H₅OH), which has $M = 46.07$ g/mol.
+
+
+---
 
 ### Lab Application: Dumas Method
 
@@ -51,7 +57,7 @@ In the Dumas method for finding molar mass:
       id: 'gl4-density',
       type: 'text' as const,
       content: `
-## Gas Density
+## 💨 Gas Density
 
 Density is mass per volume: $d = m/V$. From $PV = (m/M)RT$:
 
@@ -59,11 +65,17 @@ $$\\frac{m}{V} = \\frac{PM}{RT}$$
 
 $$\\boxed{d = \\frac{PM}{RT}}$$
 
+
+---
+
 ### Key Observations
 
 - Gas density **increases** with pressure (more molecules per volume)
 - Gas density **decreases** with temperature (gas expands)
 - Gas density **increases** with molar mass (heavier molecules)
+
+
+---
 
 ### Example
 
@@ -72,6 +84,9 @@ $$\\boxed{d = \\frac{PM}{RT}}$$
 **Solution:**
 
 $$d = \\frac{PM}{RT} = \\frac{(1.00)(32.00)}{(0.0821)(273.15)} = \\frac{32.00}{22.43} = 1.43 \\text{ g/L}$$
+
+
+---
 
 ### Comparing Gases
 

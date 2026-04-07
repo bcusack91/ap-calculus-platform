@@ -13,7 +13,7 @@ Atomic radius is one of the most intuitive periodic trends. You can often predic
     {
       id: 'pt2-definition',
       type: 'text' as const,
-      content: `## What Is Atomic Radius?
+      content: `## 📖 What Is Atomic Radius?
 
 An atom doesn't have a sharp boundary — the electron cloud fades gradually. So chemists define atomic radius in practical terms:
 
@@ -21,6 +21,9 @@ An atom doesn't have a sharp boundary — the electron cloud fades gradually. So
 - **Van der Waals radius:** Half the distance between nuclei of adjacent atoms in a solid that are not chemically bonded.
 
 For periodic trend discussions, we usually refer to the **covalent (bonding) atomic radius**.
+
+
+---
 
 ### Approximate Atomic Radii (in pm)
 
@@ -37,9 +40,12 @@ For periodic trend discussions, we usually refer to the **covalent (bonding) ato
     {
       id: 'pt2-across-period',
       type: 'text' as const,
-      content: `## Trend Across a Period (Left → Right)
+      content: `## 📈 Trend Across a Period (Left → Right)
 
 **Atomic radius decreases across a period.**
+
+
+---
 
 ### Why?
 
@@ -49,6 +55,9 @@ As you move from left to right across a period:
 3. Electrons in the same shell shield each other **poorly**
 4. $Z_{eff}$ **increases** → the nucleus pulls valence electrons **closer**
 5. The atom **shrinks**
+
+
+---
 
 ### Example: Period 2
 
@@ -60,9 +69,12 @@ The radius drops by more than half from lithium to fluorine — a dramatic shrin
     {
       id: 'pt2-down-group',
       type: 'text' as const,
-      content: `## Trend Down a Group (Top → Bottom)
+      content: `## 📈 Trend Down a Group (Top → Bottom)
 
 **Atomic radius increases down a group.**
+
+
+---
 
 ### Why?
 
@@ -72,6 +84,9 @@ As you move down a group:
 3. Although $Z$ increases, so does shielding (new core electrons added)
 4. $Z_{eff}$ stays roughly constant but the **distance** from nucleus increases
 5. The atom **expands**
+
+
+---
 
 ### Example: Group 1 (Alkali Metals)
 
@@ -83,7 +98,7 @@ Each step down adds an entire new electron shell, making the atom significantly 
     {
       id: 'pt2-summary-diagram',
       type: 'text' as const,
-      content: `## Visual Summary
+      content: `## 📋 Visual Summary
 
 $$\\boxed{\\text{Atomic Radius Trends}}$$
 
@@ -91,6 +106,9 @@ $$\\boxed{\\text{Atomic Radius Trends}}$$
 |-----------|-------|--------|
 | → Across period | **Decreases** | $Z_{eff}$ increases; same shell, poor shielding |
 | ↓ Down group | **Increases** | New shell added; greater distance from nucleus |
+
+
+---
 
 ### Quick Rule of Thumb
 

@@ -13,7 +13,7 @@ On the AP Chemistry exam, periodic trend questions rarely test just one property
     {
       id: 'pt7-master-summary',
       type: 'text' as const,
-      content: `## Master Summary of All Trends
+      content: `## 📋 Master Summary of All Trends
 
 | Property | Across Period (→) | Down Group (↓) | Driven By |
 |----------|-------------------|-----------------|-----------|
@@ -22,6 +22,9 @@ On the AP Chemistry exam, periodic trend questions rarely test just one property
 | Electron affinity | More negative | Less negative | $Z_{eff}$ and distance |
 | Electronegativity | **Increases** | **Decreases** | $Z_{eff}$ and distance |
 | Ionic radius (cation) | Decreases across metals | Increases down group | Charge and shell count |
+
+
+---
 
 ### The Big Pattern
 
@@ -37,22 +40,34 @@ All four major trends are ultimately explained by the same two factors:
     {
       id: 'pt7-exceptions-review',
       type: 'text' as const,
-      content: `## Key Exceptions to Remember
+      content: `## ⚠️ Key Exceptions to Remember
 
 The AP exam frequently tests these exceptions:
+
+
+---
 
 ### 1. IE: B < Be and O < N
 - **B < Be:** B removes a $2p$ electron (higher energy) vs. Be's $2s$ electron
 - **O < N:** O has a paired $2p$ electron; N's half-filled $2p^3$ has extra stability
 
+
+---
+
 ### 2. EA: F less negative than Cl
 - Fluorine is so small that electron-electron repulsion in its tiny $2p$ orbitals offsets the energy gain
 - $EA_\\text{F} = -328$ kJ/mol vs. $EA_\\text{Cl} = -349$ kJ/mol
+
+
+---
 
 ### 3. EA ≈ 0 for N, Be, Ne
 - **N:** Half-filled $2p^3$ — stable configuration resists an extra electron
 - **Be:** Full $2s^2$ subshell — added electron would go to higher-energy $2p$
 - **Ne:** Full octet — added electron enters $3s$ (much higher energy)
+
+
+---
 
 ### AP Writing Tip
 
@@ -106,17 +121,26 @@ When asked to "explain" a trend, always state:
     {
       id: 'pt7-config-explanation',
       type: 'text' as const,
-      content: `## Explaining Trends Using Electron Configuration
+      content: `## 📈 Explaining Trends Using Electron Configuration
 
 On the AP exam, you often must **explain** a trend, not just state it. Here is a model framework:
+
+
+---
 
 ### Template for Across-a-Period Explanations
 
 > "As you move from [element A] to [element B] across Period [N], the atomic number increases from [Z₁] to [Z₂]. Electrons are added to the same principal energy level ($n = $ [N]), and same-shell electrons do not effectively shield each other. Therefore, the effective nuclear charge ($Z_{eff}$) increases, which causes [property] to [increase/decrease]."
 
+
+---
+
 ### Template for Down-a-Group Explanations
 
 > "As you move from [element A] to [element B] down Group [G], each element has an additional principal energy level occupied by electrons. The valence electrons are farther from the nucleus and are shielded by more core electrons. Although the nuclear charge increases, the effect of increased distance and shielding dominates, causing [property] to [increase/decrease]."
+
+
+---
 
 ### Template for Exceptions
 

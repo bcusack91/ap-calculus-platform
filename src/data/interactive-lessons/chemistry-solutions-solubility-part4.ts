@@ -16,9 +16,12 @@ Colligative properties depend only on the **number of solute particles** in solu
       id: 'ss4-colligative-overview',
       type: 'text' as const,
       content: `
-## What Are Colligative Properties?
+## 🔬 What Are Colligative Properties?
 
 The word "colligative" comes from Latin *colligare* meaning "to bind together." These properties depend on the **collective number** of dissolved particles, regardless of what those particles are.
+
+
+---
 
 ### The Four Colligative Properties
 
@@ -29,12 +32,18 @@ The word "colligative" comes from Latin *colligare* meaning "to bind together." 
 | **Vapor pressure lowering** | Vapor pressure decreases |
 | **Osmotic pressure** | Creates pressure across a membrane |
 
+
+---
+
 ### Why Do They Occur?
 
 When solute particles are added to a solvent:
 - They **disrupt** the orderly arrangement needed for freezing → lower freezing point
 - They **lower** the vapor pressure → solvent must be heated to a higher temperature to boil
 - More particles = greater effect
+
+
+---
 
 ### Key Distinction
 
@@ -46,7 +55,7 @@ When solute particles are added to a solvent:
       id: 'ss4-boiling-point',
       type: 'text' as const,
       content: `
-## Boiling Point Elevation
+## 📌 Boiling Point Elevation
 
 $$\\Delta T_b = iK_bm$$
 
@@ -56,15 +65,24 @@ where:
 - $K_b$ = **ebullioscopic constant** of the solvent (°C/m)
 - $m$ = **molality** of the solution (mol solute / kg solvent)
 
+
+---
+
 ### The New Boiling Point
 
 $$T_{b,\\text{solution}} = T_{b,\\text{pure}} + \\Delta T_b$$
 
 The boiling point **increases** (we add $\\Delta T_b$).
 
+
+---
+
 ### For Water
 
 $K_b = 0.512$ °C/m and $T_{b,\\text{pure}} = 100.0$ °C
+
+
+---
 
 ### Worked Example
 
@@ -79,7 +97,7 @@ $$T_b = 100.0 + 0.512 = 100.5 \\text{ °C}$$
       id: 'ss4-freezing-point',
       type: 'text' as const,
       content: `
-## Freezing Point Depression
+## 📌 Freezing Point Depression
 
 $$\\Delta T_f = iK_fm$$
 
@@ -89,15 +107,24 @@ where:
 - $K_f$ = **cryoscopic constant** of the solvent (°C/m)
 - $m$ = molality
 
+
+---
+
 ### The New Freezing Point
 
 $$T_{f,\\text{solution}} = T_{f,\\text{pure}} - \\Delta T_f$$
 
 The freezing point **decreases** (we subtract $\\Delta T_f$).
 
+
+---
+
 ### For Water
 
 $K_f = 1.86$ °C/m and $T_{f,\\text{pure}} = 0.0$ °C
+
+
+---
 
 ### Worked Example
 
@@ -106,6 +133,9 @@ What is the freezing point of a solution of 0.500 mol of NaCl ($i = 2$) in 1.00 
 $$\\Delta T_f = (2)(1.86)(0.500) = 1.86 \\text{ °C}$$
 
 $$T_f = 0.0 - 1.86 = -1.86 \\text{ °C}$$
+
+
+---
 
 ### Why Does NaCl Have $i = 2$?
 
@@ -118,7 +148,7 @@ $$\\text{NaCl} \\rightarrow \\text{Na}^+ + \\text{Cl}^-$$
       id: 'ss4-vant-hoff',
       type: 'text' as const,
       content: `
-## The van\'t Hoff Factor ($i$)
+## 📊 The van\'t Hoff Factor ($i$)
 
 The van\'t Hoff factor tells you how many particles one formula unit produces in solution.
 
@@ -129,6 +159,9 @@ The van\'t Hoff factor tells you how many particles one formula unit produces in
 | CaCl₂ | Ca²⁺ + 2Cl⁻ | 3 |
 | Al₂(SO₄)₃ | 2Al³⁺ + 3SO₄²⁻ | 5 |
 | K₃PO₄ | 3K⁺ + PO₄³⁻ | 4 |
+
+
+---
 
 ### Ideal vs. Actual $i$
 

@@ -16,7 +16,7 @@ AP Chemistry frequently asks you to identify and calculate pH at specific points
       id: 'at4-critical-points',
       type: 'text' as const,
       content: `
-## Critical Points Summary
+## 📋 Critical Points Summary
 
 For titrating a weak acid $HA$ with strong base $NaOH$:
 
@@ -27,6 +27,9 @@ For titrating a weak acid $HA$ with strong base $NaOH$:
 | **Half-equivalence** | $V_{eq}/2$ | $[HA] = [A^-]$ | $pH = pK_a$ |
 | **Equivalence** | $V_{eq}$ | Only $A^-$ | ICE with $K_b = K_w/K_a$ |
 | **After equivalence** | $V > V_{eq}$ | $A^-$ + excess $OH^-$ | $[OH^-]$ from excess |
+
+
+---
 
 ### The Rule for Equivalence Point pH
 
@@ -42,11 +45,14 @@ For titrating a weak acid $HA$ with strong base $NaOH$:
       id: 'at4-weak-base-strong-acid',
       type: 'text' as const,
       content: `
-## Weak Base–Strong Acid Titration
+## 🧪 Weak Base–Strong Acid Titration
 
 When $NH_3$ is titrated with $HCl$:
 
 $$NH_3(aq) + HCl(aq) \\rightarrow NH_4Cl(aq)$$
+
+
+---
 
 ### The Curve Is Inverted!
 
@@ -55,6 +61,9 @@ $$NH_3(aq) + HCl(aq) \\rightarrow NH_4Cl(aq)$$
 - **Half-equivalence**: $pH = pK_a(NH_4^+) = 14 - pK_b = 14 - 4.74 = 9.25$
 - **Equivalence point**: Only $NH_4^+$ (a weak acid) → $pH < 7$
 - **After equivalence**: Excess $HCl$ → strongly acidic
+
+
+---
 
 ### Key Difference
 
@@ -109,9 +118,12 @@ The curve goes from **high pH to low pH** — a mirror image of the weak acid cu
       id: 'at4-polyprotic',
       type: 'text' as const,
       content: `
-## Polyprotic Acid Titrations
+## 🧪 Polyprotic Acid Titrations
 
 Polyprotic acids (like $H_2SO_3$, $H_3PO_4$) show **multiple equivalence points**:
+
+
+---
 
 ### Diprotic Acid ($H_2A$) with $NaOH$
 
@@ -121,12 +133,18 @@ Polyprotic acids (like $H_2SO_3$, $H_3PO_4$) show **multiple equivalence points*
 
 The curve shows **two S-shaped jumps**!
 
+
+---
+
 ### Key Features
 
 - Volume to second equivalence = 2× volume to first equivalence
 - First half-equivalence: $pH = pK_{a1}$
 - Midpoint between equivalences: $pH = pK_{a2}$
 - Each steep region corresponds to one deprotonation
+
+
+---
 
 ### Example: $H_3PO_4$
 

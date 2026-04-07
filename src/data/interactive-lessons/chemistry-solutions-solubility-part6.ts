@@ -16,7 +16,7 @@ This part brings together everything from Parts 2–5: concentration conversions
       id: 'ss6-strategy',
       type: 'text' as const,
       content: `
-## Problem-Solving Strategy
+## 🛠️ Problem-Solving Strategy
 
 ### Step-by-Step Approach
 
@@ -26,6 +26,9 @@ This part brings together everything from Parts 2–5: concentration conversions
 4. **Determine** the van\'t Hoff factor $i$ (does the solute dissociate?)
 5. **Plug in** and solve
 6. **Check** — does the answer make physical sense?
+
+
+---
 
 ### Key Formulas Reference
 
@@ -37,6 +40,9 @@ This part brings together everything from Parts 2–5: concentration conversions
 | $\\Delta T_b = iK_bm$ | Boiling point elevation |
 | $\\Delta T_f = iK_fm$ | Freezing point depression |
 | $\\Pi = iMRT$ | Osmotic pressure |
+
+
+---
 
 ### Constants for Water
 
@@ -50,7 +56,7 @@ This part brings together everything from Parts 2–5: concentration conversions
       id: 'ss6-worked-example-1',
       type: 'text' as const,
       content: `
-## Worked Example 1: Concentration Conversion
+## 🧪 Worked Example 1: Concentration Conversion
 
 **Problem:** A solution is prepared by dissolving 34.2 g of sucrose (C₁₂H₂₂O₁₁, $M = 342.30$ g/mol) in 200.0 g of water. The density of the resulting solution is 1.024 g/mL. Calculate:
 
@@ -150,7 +156,7 @@ $$\\chi_{\\text{sucrose}} = \\frac{0.0999}{0.0999 + 11.10} = 0.00893$$
       id: 'ss6-worked-example-2',
       type: 'text' as const,
       content: `
-## Worked Example 2: Finding Molar Mass from Colligative Data
+## 🧪 Worked Example 2: Finding Molar Mass from Colligative Data
 
 **Problem:** A solution of 5.00 g of an unknown nonelectrolyte in 100.0 g of water freezes at $-0.930$ °C. Find the molar mass of the unknown.
 
@@ -165,6 +171,9 @@ $$n = m \\times \\text{kg solvent} = 0.500 \\times 0.1000 = 0.0500 \\text{ mol}$
 
 **Step 4:** Find molar mass
 $$M = \\frac{\\text{mass}}{\\text{moles}} = \\frac{5.00}{0.0500} = 100.0 \\text{ g/mol}$$
+
+
+---
 
 ### Common AP Application
 

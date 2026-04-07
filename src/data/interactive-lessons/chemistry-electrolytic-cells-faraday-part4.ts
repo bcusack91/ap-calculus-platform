@@ -16,7 +16,7 @@ Faraday\'s laws connect the **amount of substance** produced or consumed during 
       id: 'ef4-faradays-laws',
       type: 'text' as const,
       content: `
-## Faraday\'s Laws
+## 📏 Faraday\'s Laws
 
 ### The Key Equation
 
@@ -30,12 +30,18 @@ $$\\text{mol of substance} = \\frac{It}{nF}$$
 | $F$ | Faraday\'s constant | $96{,}485$ C/mol $e^-$ |
 | $It$ | Total charge | Coulombs (C) |
 
+
+---
+
 ### Step-by-Step Problem Solving
 
 1. **Calculate total charge:** $q = It$ (coulombs)
 2. **Find moles of electrons:** $\\text{mol } e^- = q/F = It/F$
 3. **Use stoichiometry:** relate moles of electrons to moles of substance using $n$
 4. **Convert to mass** if needed: $m = \\text{mol} \\times M$
+
+
+---
 
 ### Important: What Is n?
 
@@ -53,9 +59,12 @@ $n$ = number of electrons in the **balanced half-reaction**
       id: 'ef4-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 How many grams of Cu are deposited by passing a current of $2.00$ A through $\\text{CuSO}_4$ solution for $1.00$ hour?
+
+
+---
 
 ### Half-reaction: $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$ ($n = 2$)
 
@@ -70,6 +79,9 @@ $$\\text{mol Cu} = \\frac{\\text{mol } e^-}{n} = \\frac{0.07462}{2} = 0.03731 \\
 
 **Step 4: Mass of Cu**
 $$m = (0.03731)(63.55) = 2.37 \\text{ g}$$
+
+
+---
 
 ### Alternative One-Step Formula
 

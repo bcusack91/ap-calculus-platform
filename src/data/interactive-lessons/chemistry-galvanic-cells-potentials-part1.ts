@@ -16,7 +16,7 @@ Electrochemistry converts chemical energy into electrical energy (and vice versa
       id: 'gc1-redox-basics',
       type: 'text' as const,
       content: `
-## Redox Review
+## 🔄 Redox Review
 
 ### Oxidation and Reduction
 
@@ -27,6 +27,9 @@ Electrochemistry converts chemical energy into electrical energy (and vice versa
 
 Together: **OIL RIG**
 
+
+---
+
 ### Oxidation Numbers
 
 Oxidation numbers (states) help track electron transfer:
@@ -35,6 +38,9 @@ Oxidation numbers (states) help track electron transfer:
 - O is usually −2 (except peroxides: −1)
 - H is usually +1 (except metal hydrides: −1)
 - Sum of oxidation numbers = charge of species
+
+
+---
 
 ### Identifying Redox
 
@@ -46,29 +52,41 @@ Oxidation numbers (states) help track electron transfer:
       id: 'gc1-half-reactions',
       type: 'text' as const,
       content: `
-## Writing Half-Reactions
+## ✍️ Writing Half-Reactions
 
-Every redox reaction can be split into two **half-reactions**:
+Every redox reaction can be split into two **half-reactions** — one for oxidation and one for reduction.
 
-### Example: $\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$
+---
 
-**Oxidation half-reaction:**
+### Worked Example
+
+> **Overall Reaction:**
+>
+> $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$$
+
+**Oxidation half-reaction (anode):**
+
 $$\\text{Zn}(s) \\rightarrow \\text{Zn}^{2+}(aq) + 2e^-$$
 
-Zinc loses 2 electrons (oxidation number: $0 \\rightarrow +2$)
+Zinc loses 2 electrons — oxidation number changes from $0$ to $+2$.
 
-**Reduction half-reaction:**
+**Reduction half-reaction (cathode):**
+
 $$\\text{Cu}^{2+}(aq) + 2e^- \\rightarrow \\text{Cu}(s)$$
 
-Copper gains 2 electrons (oxidation number: $+2 \\rightarrow 0$)
+Copper gains 2 electrons — oxidation number changes from $+2$ to $0$.
+
+---
 
 ### Key Points
 
-- Electrons must **balance** — the number lost in oxidation = number gained in reduction
-- The electrode where **oxidation** occurs = **anode**
-- The electrode where **reduction** occurs = **cathode**
+- Electrons must **balance** — the number lost in oxidation equals the number gained in reduction
+- The electrode where **oxidation** occurs is the **anode**
+- The electrode where **reduction** occurs is the **cathode**
 
-**Memory trick: AN OX, RED CAT** (Anode = Oxidation, Reduction = Cathode)
+> **Memory trick: AN OX, RED CAT**
+>
+> **AN**ode = **OX**idation &nbsp;|&nbsp; **RED**uction = **CAT**hode
       `
     },
     {

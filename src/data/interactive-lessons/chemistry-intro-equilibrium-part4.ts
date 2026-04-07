@@ -16,13 +16,16 @@ When you modify a chemical equation, the equilibrium constant changes in a predi
       id: 'ie4-reverse',
       type: 'text' as const,
       content: `
-## Rule 1: Reversing a Reaction
+## 📏 Rule 1: Reversing a Reaction
 
 If you reverse a reaction, the new $K$ is the **reciprocal** of the original:
 
 $$\\text{Forward: } A \\rightleftharpoons B \\quad K_{\\text{fwd}}$$
 
 $$\\text{Reverse: } B \\rightleftharpoons A \\quad K_{\\text{rev}} = \\frac{1}{K_{\\text{fwd}}}$$
+
+
+---
 
 ### Example
 
@@ -37,13 +40,16 @@ The products and reactants switch — the fraction flips.
       id: 'ie4-multiply',
       type: 'text' as const,
       content: `
-## Rule 2: Multiplying a Reaction by a Factor
+## 📏 Rule 2: Multiplying a Reaction by a Factor
 
 If you multiply all coefficients by a factor $n$, the new $K$ is raised to the $n$th power:
 
 $$\\text{Original: } A \\rightleftharpoons B \\quad K$$
 
 $$\\text{Multiplied by } n: \\quad nA \\rightleftharpoons nB \\quad K' = K^n$$
+
+
+---
 
 ### Example
 
@@ -62,7 +68,7 @@ $$2\\,\\text{H}_2(g) + 2\\,\\text{I}_2(g) \\rightleftharpoons 4\\,\\text{HI}(g) 
       id: 'ie4-adding',
       type: 'text' as const,
       content: `
-## Rule 3: Adding Reactions (Hess\'s Law for K)
+## 📏 Rule 3: Adding Reactions (Hess\'s Law for K)
 
 If you add two reactions together, the overall $K$ is the **product** of the individual $K$ values:
 
@@ -70,9 +76,15 @@ $$\\text{Reaction 1: } A \\rightleftharpoons B \\quad K_1$$
 $$\\text{Reaction 2: } B \\rightleftharpoons C \\quad K_2$$
 $$\\text{Overall: } A \\rightleftharpoons C \\quad K_{\\text{overall}} = K_1 \\times K_2$$
 
+
+---
+
 ### Why Multiply?
 
 When you add reactions, the equilibrium expressions multiply (it\'s algebra — you\'re multiplying fractions). Intermediates cancel out.
+
+
+---
 
 ### Example
 
@@ -83,6 +95,9 @@ $$\\text{Reaction 2: } 2\\,\\text{NO}(g) + \\text{O}_2(g) \\rightleftharpoons 2\
 $$\\text{Overall: } \\text{N}_2(g) + 2\\,\\text{O}_2(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$$
 
 $$K_{\\text{overall}} = K_1 \\times K_2 = (4.7 \\times 10^{-31})(1.8 \\times 10^{6}) = 8.5 \\times 10^{-25}$$
+
+
+---
 
 ### Summary Table
 

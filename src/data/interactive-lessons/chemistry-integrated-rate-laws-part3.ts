@@ -16,7 +16,7 @@ Second-order reactions complete our trio of integrated rate laws. The mathematic
       id: 'ir3-derivation',
       type: 'text' as const,
       content: `
-## Derivation (for Rate = k[A]²)
+## ⏱️ Derivation (for Rate = k[A]²)
 
 $$-\\frac{d[A]}{dt} = k[A]^2$$
 
@@ -32,6 +32,9 @@ $$-\\frac{1}{[A]} + \\frac{1}{[A]_0} = -kt$$
 
 $$\\boxed{\\frac{1}{[A]} = kt + \\frac{1}{[A]_0}}$$
 
+
+---
+
 ### Linear Form: $1/[A]$ vs $t$
 
 | Variable | Corresponds To |
@@ -40,6 +43,9 @@ $$\\boxed{\\frac{1}{[A]} = kt + \\frac{1}{[A]_0}}$$
 | $m$ (slope) | $+k$ |
 | $x$ | $t$ |
 | $b$ (y-intercept) | $1/[A]_0$ |
+
+
+---
 
 ### Key Feature
 
@@ -94,7 +100,7 @@ A plot of $1/[A]$ vs $t$ is **linear** for a second-order reaction. The slope eq
       id: 'ir3-half-life',
       type: 'text' as const,
       content: `
-## Second-Order Half-Life
+## 📌 Second-Order Half-Life
 
 Set $[A] = [A]_0/2$:
 
@@ -106,11 +112,17 @@ $$\\frac{1}{[A]_0} = kt_{1/2}$$
 
 $$\\boxed{t_{1/2} = \\frac{1}{k[A]_0}}$$
 
+
+---
+
 ### Key Feature
 
 The half-life of a second-order reaction is **inversely proportional** to $[A]_0$:
 - Higher $[A]_0$ → shorter half-life
 - Each successive half-life is **longer** (doubles each time!)
+
+
+---
 
 ### Successive Half-Lives
 
@@ -150,7 +162,7 @@ A second-order reaction has $k = 0.50$ M⁻¹s⁻¹ and $[A]_0 = 0.80$ M.
       id: 'ir3-comparison-table',
       type: 'text' as const,
       content: `
-## Comparing All Three Orders
+## ⚖️ Comparing All Three Orders
 
 | Feature | Zero-Order | First-Order | Second-Order |
 |---------|-----------|-------------|-------------|

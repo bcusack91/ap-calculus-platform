@@ -16,7 +16,7 @@ For gas-phase equilibria, we can express $K$ in terms of molar concentrations ($
       id: 'ece3-kp-definition',
       type: 'text' as const,
       content: `
-## $K_p$ — The Pressure-Based Constant
+## 💨 $K_p$ — The Pressure-Based Constant
 
 For gas-phase reactions, we can use partial pressures instead of molar concentrations.
 
@@ -25,6 +25,9 @@ For: $a\\text{A}(g) + b\\text{B}(g) \\rightleftharpoons c\\text{C}(g) + d\\text{
 $$K_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}$$
 
 where $P_X$ is the partial pressure of species X in **atm** (for AP Chemistry).
+
+
+---
 
 ### Example
 
@@ -39,7 +42,7 @@ The same rules apply: products over reactants, coefficients as exponents.
       id: 'ece3-conversion',
       type: 'text' as const,
       content: `
-## Converting Between $K_c$ and $K_p$
+## 🔄 Converting Between $K_c$ and $K_p$
 
 The relationship between $K_p$ and $K_c$ is:
 
@@ -50,11 +53,17 @@ where:
 - $T$ = temperature in **Kelvin**
 - $\\Delta n$ = (moles of gaseous products) − (moles of gaseous reactants)
 
+
+---
+
 ### Finding $\\Delta n$
 
 For $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$:
 
 $$\\Delta n = 2 - (1 + 3) = 2 - 4 = -2$$
+
+
+---
 
 ### When $\\Delta n = 0$
 
@@ -63,6 +72,9 @@ If the total moles of gas are the same on both sides:
 $$K_p = K_c(RT)^0 = K_c$$
 
 **They are equal!**
+
+
+---
 
 ### Example Calculation
 

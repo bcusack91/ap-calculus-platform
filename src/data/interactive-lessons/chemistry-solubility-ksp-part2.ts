@@ -16,7 +16,7 @@ export const chemSolubilityKspPart2Data = {
       id: 'sk2-method',
       type: 'text' as const,
       content: `
-## The ICE-Table Approach
+## 📌 The ICE-Table Approach
 
 ### For a 1:1 salt: $\\text{MX}(s) \\rightleftharpoons \\text{M}^+(aq) + \\text{X}^-(aq)$
 
@@ -25,12 +25,18 @@ If molar solubility = $s$, then:
 - $K_{sp} = s \\cdot s = s^2$
 - $s = \\sqrt{K_{sp}}$
 
+
+---
+
 ### For a 1:2 salt: $\\text{MX}_2(s) \\rightleftharpoons \\text{M}^{2+}(aq) + 2\\,\\text{X}^-(aq)$
 
 If molar solubility = $s$, then:
 - $[\\text{M}^{2+}] = s$ and $[\\text{X}^-] = 2s$
 - $K_{sp} = (s)(2s)^2 = 4s^3$
 - $s = \\sqrt[3]{\\frac{K_{sp}}{4}}$
+
+
+---
 
 ### For a 2:3 salt: $\\text{M}_2\\text{X}_3(s) \\rightleftharpoons 2\\,\\text{M}^{3+}(aq) + 3\\,\\text{X}^{2-}(aq)$
 
@@ -43,13 +49,16 @@ If molar solubility = $s$, then:
       id: 'sk2-example',
       type: 'text' as const,
       content: `
-## Worked Examples
+## 🧪 Worked Examples
 
 ### Example 1: AgCl ($K_{sp} = 1.8 \\times 10^{-10}$)
 
 $\\text{AgCl}(s) \\rightleftharpoons \\text{Ag}^+(aq) + \\text{Cl}^-(aq)$
 
 $K_{sp} = s^2 \\implies s = \\sqrt{1.8 \\times 10^{-10}} = 1.3 \\times 10^{-5}$ M
+
+
+---
 
 ### Example 2: PbCl₂ ($K_{sp} = 1.7 \\times 10^{-5}$)
 
@@ -58,6 +67,9 @@ $\\text{PbCl}_2(s) \\rightleftharpoons \\text{Pb}^{2+}(aq) + 2\\,\\text{Cl}^-(aq
 $K_{sp} = (s)(2s)^2 = 4s^3$
 
 $s = \\sqrt[3]{\\frac{1.7 \\times 10^{-5}}{4}} = \\sqrt[3]{4.25 \\times 10^{-6}} = 1.6 \\times 10^{-2}$ M
+
+
+---
 
 ### Important Note
 

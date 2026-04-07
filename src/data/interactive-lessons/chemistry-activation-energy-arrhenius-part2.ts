@@ -16,9 +16,12 @@ Energy diagrams (also called reaction coordinate diagrams or potential energy di
       id: 'ae2-energy-diagram',
       type: 'text' as const,
       content: `
-## Anatomy of an Energy Diagram
+## 🏗️ Anatomy of an Energy Diagram
 
 An energy diagram plots **potential energy** (y-axis) vs. **reaction progress** (x-axis):
+
+
+---
 
 ### Key Features
 
@@ -30,6 +33,9 @@ An energy diagram plots **potential energy** (y-axis) vs. **reaction progress** 
 | **$E_a$ (forward)** | Energy from reactants to transition state |
 | **$E_a$ (reverse)** | Energy from products to transition state |
 | **$\\Delta H$** | Energy difference between products and reactants |
+
+
+---
 
 ### Mathematical Relationship
 
@@ -44,7 +50,7 @@ $$\\Delta H = E_a(\\text{forward}) - E_a(\\text{reverse})$$
       id: 'ae2-exo-endo',
       type: 'text' as const,
       content: `
-## Exothermic vs. Endothermic Diagrams
+## 📌 Exothermic vs. Endothermic Diagrams
 
 ### Exothermic ($\\Delta H < 0$): Products LOWER than Reactants
 
@@ -55,6 +61,9 @@ $$\\Delta H = E_a(\\text{forward}) - E_a(\\text{reverse})$$
 
 $$\\text{Reactants} \\xrightarrow{E_a} \\text{Transition State} \\rightarrow \\text{Products (lower energy)}$$
 
+
+---
+
 ### Endothermic ($\\Delta H > 0$): Products HIGHER than Reactants
 
 - Products are less stable (higher energy)
@@ -63,6 +72,9 @@ $$\\text{Reactants} \\xrightarrow{E_a} \\text{Transition State} \\rightarrow \\t
 - Example: Dissolving NH₄NO₃
 
 $$\\text{Reactants} \\xrightarrow{E_a} \\text{Transition State} \\rightarrow \\text{Products (higher energy)}$$
+
+
+---
 
 ### Important
 
@@ -117,7 +129,7 @@ $E_a$ is **always positive** — it is always an energy *barrier* that must be o
       id: 'ae2-transition-state',
       type: 'text' as const,
       content: `
-## The Transition State
+## 🧊 The Transition State
 
 The **transition state** (or **activated complex**) is the configuration of atoms at the energy maximum. It is:
 
@@ -126,11 +138,17 @@ The **transition state** (or **activated complex**) is the configuration of atom
 - Characterized by **partial bonds** — old bonds are partially broken, new bonds are partially formed
 - Denoted with a double dagger: $\\ddagger$ (e.g., $[ABC]^\\ddagger$)
 
+
+---
+
 ### Example: SN2 Reaction
 
 $$\\text{HO}^- + \\text{CH}_3\\text{Br} \\rightarrow [\\text{HO---CH}_3\\text{---Br}]^\\ddagger \\rightarrow \\text{CH}_3\\text{OH} + \\text{Br}^-$$
 
 In the transition state, both O−C and C−Br bonds are partial.
+
+
+---
 
 ### Transition State vs. Intermediate
 

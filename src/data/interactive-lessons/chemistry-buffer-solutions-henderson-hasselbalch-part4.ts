@@ -16,9 +16,12 @@ A buffer doesn\'t have unlimited ability to resist pH changes. Its **buffer capa
       id: 'bf4-capacity',
       type: 'text' as const,
       content: `
-## Buffer Capacity
+## 🛡️ Buffer Capacity
 
 **Buffer capacity** = the amount of strong acid or base that can be added before the pH changes significantly (usually > 1 unit).
+
+
+---
 
 ### Factors That Affect Capacity
 
@@ -31,6 +34,9 @@ A buffer doesn\'t have unlimited ability to resist pH changes. Its **buffer capa
    - If $[A^-] \\gg [HA]$: good capacity for added acid, poor for added base
    - If $[HA] \\gg [A^-]$: good capacity for added base, poor for added acid
 
+
+---
+
 ### Maximum Capacity
 
 A buffer can neutralize added acid equal to the moles of $A^-$ present, and added base equal to the moles of $HA$ present. Beyond that, the buffer is destroyed.
@@ -40,7 +46,7 @@ A buffer can neutralize added acid equal to the moles of $A^-$ present, and adde
       id: 'bf4-effective-range',
       type: 'text' as const,
       content: `
-## Effective Buffer Range
+## 📊 Effective Buffer Range
 
 A buffer is effective when the $[A^-]/[HA]$ ratio stays between **0.1 and 10**:
 
@@ -48,9 +54,15 @@ $$\\frac{[A^-]}{[HA]} = 0.1 \\rightarrow pH = pK_a + \\log(0.1) = pK_a - 1$$
 
 $$\\frac{[A^-]}{[HA]} = 10 \\rightarrow pH = pK_a + \\log(10) = pK_a + 1$$
 
+
+---
+
 ### The Rule
 
 $$\\boxed{\\text{Effective buffer range: } pK_a \\pm 1}$$
+
+
+---
 
 ### Examples
 
@@ -60,6 +72,9 @@ $$\\boxed{\\text{Effective buffer range: } pK_a \\pm 1}$$
 | $CH_3COOH/CH_3COO^-$ | 4.74 | pH 3.74 – 5.74 |
 | $H_2CO_3/HCO_3^-$ | 6.35 | pH 5.35 – 7.35 |
 | $NH_4^+/NH_3$ | 9.25 | pH 8.25 – 10.25 |
+
+
+---
 
 ### Why $pK_a \\pm 1$?
 
@@ -137,12 +152,15 @@ A buffer contains 0.40 mol $CH_3COOH$ and 0.60 mol $CH_3COO^-$ in 2.0 L. ($pK_a 
       id: 'bf4-dilution',
       type: 'text' as const,
       content: `
-## Effect of Dilution on Buffers
+## 📊 Effect of Dilution on Buffers
 
 Adding water (dilution) to a buffer:
 
 - **Does NOT change pH** (both $[HA]$ and $[A^-]$ decrease by the same factor, so the ratio stays the same)
 - **DOES decrease capacity** (fewer moles of each component per liter)
+
+
+---
 
 ### Example
 

@@ -16,22 +16,31 @@ This workshop presents varied ICE table problems: finding K, finding equilibrium
       id: 'ic6-decision-tree',
       type: 'text' as const,
       content: `
-## Decision Tree for ICE Table Problems
+## 📌 Decision Tree for ICE Table Problems
 
 ### Step 1: What are you solving for?
 - **K unknown**: Use given equilibrium data to find K
 - **Equilibrium concentrations unknown**: Use K and initial data to find concentrations
+
+
+---
 
 ### Step 2: Can you use the approximation?
 - Check: $\\frac{[\\text{initial}]}{K} > 100$?
   - **Yes** → Approximate: $[\\text{initial}] - x \\approx [\\text{initial}]$
   - **No** → Full quadratic required
 
+
+---
+
 ### Step 3: Solve and verify
 - Solve for $x$
 - Calculate all equilibrium concentrations
 - Verify: plug back into K expression
 - If approximation used: check 5% test
+
+
+---
 
 ### Common Patterns
 

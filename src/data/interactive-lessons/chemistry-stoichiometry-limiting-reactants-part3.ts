@@ -16,7 +16,7 @@ In real chemistry, reactants are rarely present in perfect stoichiometric propor
       id: 'sl3-analogy',
       type: 'text' as const,
       content: `
-## The Sandwich Analogy
+## 📌 The Sandwich Analogy
 
 To make 1 sandwich, you need: **2 slices of bread + 1 slice of cheese**
 
@@ -29,6 +29,9 @@ If you have **10 slices of bread** and **7 slices of cheese**:
 - You can only make **5 sandwiches**
 - Leftover cheese: $7 - 5 = 2$ slices → cheese is in **excess**
 
+
+---
+
 ### The Principle
 
 The limiting reactant determines the maximum amount of product. The excess reactant is left over.
@@ -38,13 +41,16 @@ The limiting reactant determines the maximum amount of product. The excess react
       id: 'sl3-method',
       type: 'text' as const,
       content: `
-## Finding the Limiting Reactant
+## ⚖️ Finding the Limiting Reactant
 
 ### Method: Compare Moles of Product Each Reactant Can Produce
 
 1. Convert each reactant\'s given amount to **moles**
 2. Use the mole ratio to calculate how much **product** each reactant could produce
 3. The reactant that produces the **lesser amount** of product is the **limiting reactant**
+
+
+---
 
 ### Worked Example
 
@@ -65,9 +71,12 @@ Maximum H₂O produced = **3.0 mol** (from the limiting reactant)
       id: 'sl3-excess',
       type: 'text' as const,
       content: `
-## Finding the Excess Amount
+## 🔍 Finding the Excess Amount
 
 After identifying the limiting reactant, you can find how much excess reactant remains.
+
+
+---
 
 ### Continuing the Example
 
@@ -82,6 +91,9 @@ $$\\text{mol O}_2 \\text{ consumed} = 3.0 \\text{ mol H}_2 \\times \\frac{1 \\te
 **Step 2:** How much O₂ remains?
 
 $$\\text{excess O}_2 = 2.0 - 1.5 = 0.5 \\text{ mol O}_2$$
+
+
+---
 
 ### Summary Table
 

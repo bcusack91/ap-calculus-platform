@@ -16,9 +16,12 @@ A proposed mechanism is a hypothesis — it must be tested against experimental 
       id: 'rm5-two-criteria',
       type: 'text' as const,
       content: `
-## The Two Essential Criteria
+## 📌 The Two Essential Criteria
 
 A valid mechanism must satisfy **both** of these conditions:
+
+
+---
 
 ### Criterion 1: Steps Sum to the Overall Reaction
 
@@ -26,11 +29,17 @@ When all elementary steps are added and intermediates/catalysts are cancelled, t
 
 $$\\text{Step 1} + \\text{Step 2} + \\cdots = \\text{Overall Reaction}$$
 
+
+---
+
 ### Criterion 2: Rate Law Matches Experiment
 
 The rate law derived from the mechanism (using the RDS and pre-equilibrium as needed) must agree with the experimentally observed rate law.
 
 $$\\text{Rate law}_{\\text{mechanism}} = \\text{Rate law}_{\\text{experimental}}$$
+
+
+---
 
 ### Important Caveat
 
@@ -41,7 +50,7 @@ Even if both criteria are met, the mechanism is not proven — it is only **cons
       id: 'rm5-validation-example',
       type: 'text' as const,
       content: `
-## Worked Example: Validating a Mechanism
+## 🧪 Worked Example: Validating a Mechanism
 
 **Overall reaction:** $2\\text{NO} + \\text{O}_2 \\rightarrow 2\\text{NO}_2$
 
@@ -147,7 +156,7 @@ Mechanism B is **preferred** because it avoids the improbable termolecular step.
       id: 'rm5-common-mistakes',
       type: 'text' as const,
       content: `
-## Common AP Mistakes to Avoid
+## 📌 Common AP Mistakes to Avoid
 
 ### Mistake 1: Confusing Order and Molecularity
 
@@ -155,13 +164,22 @@ Mechanism B is **preferred** because it avoids the improbable termolecular step.
 - **Molecularity** is theoretical (must be 1, 2, or 3)
 - They are equal ONLY for elementary steps
 
+
+---
+
 ### Mistake 2: Writing Rate Law from Overall Equation
 
 The rate law for an overall reaction must be determined **experimentally**. Only for elementary steps can you write the rate law from stoichiometry.
 
+
+---
+
 ### Mistake 3: Leaving Intermediates in the Rate Law
 
 The final rate law should contain only reactants (and catalysts). If your rate law has an intermediate, you need to eliminate it.
+
+
+---
 
 ### Mistake 4: Forgetting to Check BOTH Criteria
 

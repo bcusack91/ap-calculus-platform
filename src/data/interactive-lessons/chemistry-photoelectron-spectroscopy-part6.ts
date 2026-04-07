@@ -19,7 +19,7 @@ These problems mirror the style and difficulty of AP Chemistry exam questions.`
     {
       id: 'ps6-problem1',
       type: 'text' as const,
-      content: `## Strategy: Identifying Unknown Elements
+      content: `## 🎯 Strategy: Identifying Unknown Elements
 
 When given PES data and asked to identify an element, follow this systematic approach:
 
@@ -186,7 +186,7 @@ Write the expected PES peak heights (from highest to lowest binding energy) for 
     {
       id: 'ps6-summary',
       type: 'text' as const,
-      content: `## Part 6 Summary
+      content: `## 📋 Part 6 Summary
 
 Problem-solving strategies for PES:
 

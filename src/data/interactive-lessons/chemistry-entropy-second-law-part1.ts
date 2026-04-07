@@ -16,9 +16,12 @@ Why do ice cubes melt at room temperature but never spontaneously re-freeze? Why
       id: 'en1-disorder',
       type: 'text' as const,
       content: `
-## Entropy and "Disorder"
+## 🌡️ Entropy and "Disorder"
 
 Entropy ($S$) is often described as a measure of **disorder** or **randomness**. While this is a helpful starting point, the more precise definition involves **microstates**.
+
+
+---
 
 ### Everyday Examples of Increasing Entropy
 
@@ -29,6 +32,9 @@ Entropy ($S$) is often described as a measure of **disorder** or **randomness**.
 | Dissolving salt | Crystalline solid | Ions in solution |
 | Shuffling cards | Ordered deck | Random arrangement |
 
+
+---
+
 ### Key Insight
 
 Systems naturally tend toward states of **higher entropy**. This is not because nature "prefers disorder" — it is because there are vastly more disordered arrangements than ordered ones.
@@ -38,11 +44,14 @@ Systems naturally tend toward states of **higher entropy**. This is not because 
       id: 'en1-microstates',
       type: 'text' as const,
       content: `
-## Microstates and the Boltzmann Equation
+## 📌 Microstates and the Boltzmann Equation
 
 ### What Is a Microstate?
 
 A **microstate** ($W$) is a specific arrangement of particles and energy in a system. The more microstates available, the higher the entropy.
+
+
+---
 
 ### Boltzmann's Equation
 
@@ -55,15 +64,24 @@ $$S = k_B \\ln W$$
 | $W$ | Number of microstates | dimensionless |
 | $\\ln$ | Natural logarithm | — |
 
+
+---
+
 ### Example: Two Coins
 
 - 2 coins have $2^2 = 4$ microstates: HH, HT, TH, TT
 - The "disordered" state (one H, one T) has 2 microstates → most probable
 - The "ordered" states (both H or both T) have 1 microstate each
 
+
+---
+
 ### Scaling Up
 
 For $10^{23}$ particles (a mole), the number of microstates is astronomically large. The probability of all gas molecules spontaneously gathering in one corner is essentially **zero** — not because it violates any law, but because the number of "spread out" microstates vastly outnumbers "concentrated" ones.
+
+
+---
 
 ### Entropy Is Extensive
 
@@ -74,13 +92,16 @@ Entropy depends on the amount of substance — double the amount, double the ent
       id: 'en1-entropy-units',
       type: 'text' as const,
       content: `
-## Units and Properties of Entropy
+## 🔬 Units and Properties of Entropy
 
 ### Units
 
 Entropy is measured in **J/K** (joules per kelvin) or **J/(mol·K)** for molar entropy.
 
 Note: Unlike enthalpy (kJ), entropy uses **joules** — a common source of unit errors on the AP exam!
+
+
+---
 
 ### Key Properties
 
@@ -90,6 +111,9 @@ Note: Unlike enthalpy (kJ), entropy uses **joules** — a common source of unit 
 | Extensive | Proportional to amount of substance |
 | Always positive | $S > 0$ for any real substance (at $T > 0$ K) |
 | Increases with T | Higher temperature = more microstates |
+
+
+---
 
 ### Entropy Is NOT Conserved
 

@@ -16,7 +16,7 @@ Many redox reactions occur in **basic** (alkaline) solution — for example, in 
       id: 'or4-method',
       type: 'text' as const,
       content: `
-## The Basic Solution Method
+## 🧪 The Basic Solution Method
 
 ### Strategy: Balance in Acid First, Then Convert
 
@@ -27,9 +27,15 @@ Many redox reactions occur in **basic** (alkaline) solution — for example, in 
 | 9 | Combine H⁺ + OH⁻ → H₂O on the appropriate side |
 | 10 | Cancel any H₂O that appears on both sides |
 
+
+---
+
 ### Why This Works
 
 In basic solution, free H⁺ ions don\'t exist — they would react with the abundant OH⁻. By adding OH⁻ to neutralize every H⁺, we convert to a form appropriate for basic conditions.
+
+
+---
 
 ### The Key Conversion
 
@@ -42,11 +48,14 @@ If there are 6 H⁺ in your acidic-balanced equation, add 6 OH⁻ to **both side
       id: 'or4-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 Balance in **basic** solution:
 
 $$\\text{MnO}_4^- + \\text{Br}^- \\rightarrow \\text{MnO}_2 + \\text{BrO}_3^-$$
+
+
+---
 
 ### Steps 1–7: Balance in acidic solution first
 
@@ -68,6 +77,9 @@ $$8\\text{H}^+ + 2\\text{MnO}_4^- + 3\\text{H}_2\\text{O} + \\text{Br}^- \\right
 
 **Simplify H⁺ and H₂O:**
 $$2\\text{H}^+ + 2\\text{MnO}_4^- + \\text{Br}^- \\rightarrow 2\\text{MnO}_2 + \\text{H}_2\\text{O} + \\text{BrO}_3^-$$
+
+
+---
 
 ### Steps 8–10: Convert to basic
 

@@ -16,7 +16,7 @@ When the reactants and products are in different phases (solid, liquid, gas, aqu
       id: 'ie3-why-exclude',
       type: 'text' as const,
       content: `
-## Why Exclude Solids and Liquids?
+## 🤔 Why Exclude Solids and Liquids?
 
 The equilibrium constant is defined in terms of **activities**, not concentrations:
 
@@ -26,9 +26,15 @@ The equilibrium constant is defined in terms of **activities**, not concentratio
 
 Since pure solids and liquids have an activity of 1, they don\'t affect the value of $K$ and are left out.
 
+
+---
+
 ### Physical Reasoning
 
 The "concentration" of a pure solid or liquid is its density divided by its molar mass — this is a **constant** that doesn\'t change as the reaction proceeds. Since it doesn\'t vary, it\'s absorbed into the equilibrium constant.
+
+
+---
 
 ### Example 1: Decomposition of Calcium Carbonate
 
@@ -37,6 +43,9 @@ $$\\text{CaCO}_3(s) \\rightleftharpoons \\text{CaO}(s) + \\text{CO}_2(g)$$
 $$K_p = P_{\\text{CO}_2}$$
 
 Both CaCO₃ and CaO are solids — they are excluded. Only the gaseous CO₂ appears.
+
+
+---
 
 ### Example 2: Water Equilibrium
 
@@ -95,7 +104,7 @@ Liquid water is excluded from the expression.
       id: 'ie3-important-note',
       type: 'text' as const,
       content: `
-## Important Clarifications
+## 📌 Important Clarifications
 
 ### Solids Must Still Be Present!
 
@@ -105,12 +114,18 @@ For $\\text{CaCO}_3(s) \\rightleftharpoons \\text{CaO}(s) + \\text{CO}_2(g)$:
 - If all the CaCO₃ decomposes (none left), the system is NOT at equilibrium
 - Some solid CaCO₃ must remain for the reverse reaction to be possible
 
+
+---
+
 ### Amount of Solid Doesn\'t Matter
 
 As long as some solid is present:
 - Adding more solid does NOT shift the equilibrium
 - Removing some solid (as long as some remains) does NOT shift the equilibrium
 - The equilibrium partial pressure of CO₂ is the same whether you have 1 g or 1 kg of CaCO₃
+
+
+---
 
 ### Aqueous Species ARE Included
 

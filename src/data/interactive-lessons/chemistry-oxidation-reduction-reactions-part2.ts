@@ -16,7 +16,7 @@ Now that you can assign oxidation states, it\'s time to use them to **identify**
       id: 'or2-oil-rig',
       type: 'text' as const,
       content: `
-## OIL RIG — The Key Mnemonic
+## 📌 OIL RIG — The Key Mnemonic
 
 $$\\text{OIL RIG}$$
 
@@ -25,11 +25,17 @@ $$\\text{OIL RIG}$$
 | **O**xidation | **I**s | **L**oss (of electrons) | Increases (more positive) |
 | **R**eduction | **I**s | **G**ain (of electrons) | Decreases (more negative) |
 
+
+---
+
 ### How to Spot a Redox Reaction
 
 1. Assign oxidation states to **every atom** in reactants and products
 2. If any oxidation state **changes**, it\'s a redox reaction
 3. If NO oxidation states change, it\'s NOT redox (e.g., double replacement)
+
+
+---
 
 ### Example
 
@@ -45,7 +51,7 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
       id: 'or2-agents',
       type: 'text' as const,
       content: `
-## Oxidizing and Reducing Agents
+## ⚡ Oxidizing and Reducing Agents
 
 ### Definitions
 
@@ -54,11 +60,17 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
 | **Oxidizing agent** | Causes oxidation in another species | Gets **reduced** itself |
 | **Reducing agent** | Causes reduction in another species | Gets **oxidized** itself |
 
+
+---
+
 ### The Tricky Part
 
 The names seem backwards! Remember:
 - The **oxidizing agent** is the one that **takes** electrons (gets reduced)
 - The **reducing agent** is the one that **gives** electrons (gets oxidized)
+
+
+---
 
 ### Example (continued)
 
@@ -66,6 +78,9 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
 
 - **Zn** is the **reducing agent** — it gives up electrons (gets oxidized: 0 → +2)
 - **Cu²⁺** is the **oxidizing agent** — it takes electrons (gets reduced: +2 → 0)
+
+
+---
 
 ### Common Oxidizing Agents
 
@@ -76,6 +91,9 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
 | HNO₃ (concentrated) | NO₃⁻ is a strong oxidizer |
 | O₂ | Oxygen readily gains electrons |
 | Halogens (F₂, Cl₂) | Very electronegative |
+
+
+---
 
 ### Common Reducing Agents
 
@@ -90,7 +108,7 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
       id: 'or2-non-redox',
       type: 'text' as const,
       content: `
-## Redox vs. Non-Redox Reactions
+## ⚗️ Redox vs. Non-Redox Reactions
 
 ### Not All Reactions Are Redox!
 
@@ -102,6 +120,9 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
 | Double replacement | ❌ No | Ions just swap partners — no electron transfer |
 | Acid-base (neutralization) | ❌ No | Proton transfer, not electron transfer |
 | Precipitation | ❌ No | Ions combine to form solid — no e⁻ transfer |
+
+
+---
 
 ### Quick Test
 

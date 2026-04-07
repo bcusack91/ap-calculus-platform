@@ -16,13 +16,16 @@ Half-life is one of the most-tested topics on the AP Chemistry exam. This part p
       id: 'ir5-summary',
       type: 'text' as const,
       content: `
-## Half-Life Formulas Summary
+## 📋 Half-Life Formulas Summary
 
 | Order | Half-Life Formula | Dependence on $[A]_0$ |
 |-------|------------------|---------------------|
 | Zero | $t_{1/2} = \\frac{[A]_0}{2k}$ | Proportional — higher [A]₀ → longer t₁/₂ |
 | First | $t_{1/2} = \\frac{0.693}{k}$ | **Independent** — t₁/₂ is always the same |
 | Second | $t_{1/2} = \\frac{1}{k[A]_0}$ | Inversely proportional — higher [A]₀ → shorter t₁/₂ |
+
+
+---
 
 ### Pattern of Successive Half-Lives
 
@@ -104,7 +107,7 @@ A second-order reaction has $k = 0.40$ M⁻¹s⁻¹ and $[A]_0 = 0.50$ M.
       id: 'ir5-radioactive-decay',
       type: 'text' as const,
       content: `
-## Radioactive Decay: Always First-Order
+## 📌 Radioactive Decay: Always First-Order
 
 All radioactive decay processes follow first-order kinetics:
 
@@ -116,12 +119,18 @@ $$t_{1/2} = \\frac{0.693}{\\lambda}$$
 
 where $\\lambda$ = decay constant (same role as $k$), $N$ = number of atoms remaining.
 
+
+---
+
 ### Carbon-14 Dating
 
 - $^{14}$C has $t_{1/2} = 5{,}730$ years
 - Living organisms maintain constant $^{14}$C/$^{12}$C ratio through intake
 - When an organism dies, $^{14}$C decays without replacement
 - Measuring the remaining $^{14}$C fraction tells us when it died
+
+
+---
 
 ### Example
 

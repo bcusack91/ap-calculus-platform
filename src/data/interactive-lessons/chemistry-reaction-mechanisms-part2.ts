@@ -16,12 +16,15 @@ In reaction mechanisms, some species are produced in one step and consumed in an
       id: 'rm2-intermediates',
       type: 'text' as const,
       content: `
-## Reaction Intermediates
+## ⚗️ Reaction Intermediates
 
 A **reaction intermediate** is a species that is:
 - **Produced** in one elementary step
 - **Consumed** in a subsequent step
 - **Not present** in the overall balanced equation
+
+
+---
 
 ### How to Identify Intermediates
 
@@ -29,12 +32,18 @@ A **reaction intermediate** is a species that is:
 2. Add them up to get the overall reaction
 3. Any species that **cancels out** (appears on both sides) is an intermediate
 
+
+---
+
 ### Example
 
 Step 1: $\\text{NO}_2 + \\text{F}_2 \\rightarrow \\text{NO}_2\\text{F} + \\textbf{F}$ (slow)
 Step 2: $\\text{NO}_2 + \\textbf{F} \\rightarrow \\text{NO}_2\\text{F}$ (fast)
 
 **F** (fluorine atom) is the intermediate — produced in Step 1, consumed in Step 2, not in the overall equation.
+
+
+---
 
 ### On an Energy Diagram
 
@@ -45,7 +54,7 @@ Intermediates sit in an energy **valley** (local minimum) between two transition
       id: 'rm2-catalysts',
       type: 'text' as const,
       content: `
-## Catalysts in Mechanisms
+## ⚙️ Catalysts in Mechanisms
 
 A **catalyst** is a species that is:
 - **Consumed** in an early step
@@ -53,10 +62,16 @@ A **catalyst** is a species that is:
 - Present at the **beginning and end** but not in the overall equation
 - **Not used up** overall
 
+
+---
+
 ### How to Identify Catalysts
 
 1. Look for species present in the **reactants** of an early step that **reappear** in the **products** of a later step
 2. The catalyst cancels when steps are added
+
+
+---
 
 ### Example: Ozone Decomposition (Cl-catalyzed)
 
@@ -67,6 +82,9 @@ Overall: $\\text{O}_3 + \\text{O} \\rightarrow 2\\text{O}_2$
 
 - **Cl** = catalyst (consumed in Step 1, regenerated in Step 2)
 - **ClO** = intermediate (produced in Step 1, consumed in Step 2)
+
+
+---
 
 ### Intermediate vs. Catalyst Summary
 
@@ -168,9 +186,12 @@ Consider:
       id: 'rm2-energy-diagram-intermediates',
       type: 'text' as const,
       content: `
-## Intermediates on Energy Diagrams
+## 📌 Intermediates on Energy Diagrams
 
 For a multi-step mechanism, the energy diagram shows multiple peaks and valleys:
+
+
+---
 
 ### Two-Step Mechanism
 
@@ -180,9 +201,15 @@ $$\\text{Reactants} \\xrightarrow{E_{a1}} \\text{TS}_1 \\rightarrow \\text{Inter
 - **Valley** = intermediate (local energy minimum)
 - The **tallest peak** corresponds to the rate-determining step
 
+
+---
+
 ### Three-Step Mechanism
 
 Has 3 peaks and 2 valleys (2 intermediates).
+
+
+---
 
 ### General Rule
 

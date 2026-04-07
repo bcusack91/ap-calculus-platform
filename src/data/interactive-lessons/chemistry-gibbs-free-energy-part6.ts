@@ -16,7 +16,7 @@ This workshop brings together all the Gibbs free energy tools: calculating ΔG f
       id: 'gf6-strategy-review',
       type: 'text' as const,
       content: `
-## Problem-Solving Flowchart
+## 🛠️ Problem-Solving Flowchart
 
 ### What Are You Given? → What Method to Use?
 
@@ -26,6 +26,9 @@ This workshop brings together all the Gibbs free energy tools: calculating ΔG f
 | $\\Delta G°_f$ values | $\\Delta G° = \\sum \\Delta G°_f(\\text{prod}) - \\sum \\Delta G°_f(\\text{react})$ |
 | $K$ (equilibrium constant) | $\\Delta G° = -RT\\ln K$ |
 | $\\Delta G°$ and $Q$ | $\\Delta G = \\Delta G° + RT\\ln Q$ |
+
+
+---
 
 ### Common Unit Traps
 

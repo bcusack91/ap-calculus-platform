@@ -16,7 +16,7 @@ Balancing redox equations is more complex than balancing regular equations becau
       id: 'or3-method',
       type: 'text' as const,
       content: `
-## The Half-Reaction Method (Acidic Solution)
+## ⚗️ The Half-Reaction Method (Acidic Solution)
 
 ### The 7 Steps
 
@@ -30,6 +30,9 @@ Balancing redox equations is more complex than balancing regular equations becau
 | 6 | **Equalize electrons** — multiply half-reactions so e⁻ cancel |
 | 7 | **Add** half-reactions together and simplify |
 
+
+---
+
 ### Key Principle
 
 Electrons lost in oxidation must **equal** electrons gained in reduction. This is why we equalize in Step 6.
@@ -39,11 +42,14 @@ Electrons lost in oxidation must **equal** electrons gained in reduction. This i
       id: 'or3-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 Balance in acidic solution:
 
 $$\\text{MnO}_4^- + \\text{Fe}^{2+} \\rightarrow \\text{Mn}^{2+} + \\text{Fe}^{3+}$$
+
+
+---
 
 ### Step 1: Write half-reactions
 
@@ -51,14 +57,26 @@ $$\\text{MnO}_4^- + \\text{Fe}^{2+} \\rightarrow \\text{Mn}^{2+} + \\text{Fe}^{3
 
 **Oxidation:** $\\text{Fe}^{2+} \\rightarrow \\text{Fe}^{3+}$
 
+
+---
+
 ### Step 2: Balance atoms (non-O, non-H)
 Already balanced (1 Mn each side, 1 Fe each side).
+
+
+---
 
 ### Step 3: Balance O with H₂O
 $\\text{MnO}_4^- \\rightarrow \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}$
 
+
+---
+
 ### Step 4: Balance H with H⁺
 $8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}$
+
+
+---
 
 ### Step 5: Balance charge with e⁻
 
@@ -68,11 +86,20 @@ $$5e^- + 8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow \\text{Mn}^{2+} + 4\\text{H
 **Oxidation:** Left charge: +2. Right charge: +3. Need 1e⁻ on right.
 $$\\text{Fe}^{2+} \\rightarrow \\text{Fe}^{3+} + e^-$$
 
+
+---
+
 ### Step 6: Equalize electrons (multiply oxidation by 5)
 $$5\\text{Fe}^{2+} \\rightarrow 5\\text{Fe}^{3+} + 5e^-$$
 
+
+---
+
 ### Step 7: Add and cancel e⁻
 $$5\\text{Fe}^{2+} + 8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow 5\\text{Fe}^{3+} + \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}$$
+
+
+---
 
 ### Verify
 - **Atoms:** 5 Fe ✓, 1 Mn ✓, 4 O ✓, 8 H ✓

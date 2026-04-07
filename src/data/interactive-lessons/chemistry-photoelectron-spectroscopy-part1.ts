@@ -10,7 +10,7 @@ Photoelectron Spectroscopy (PES) is a powerful analytical technique that allows 
 
 Every electron in an atom is held in place by the attractive force of the nucleus. The **binding energy (BE)** is the amount of energy required to completely remove that electron from the atom. PES gives us experimental data about these binding energies, confirming and extending what we know about electron configurations.
 
-## Why PES Matters
+## 🤔 Why PES Matters
 
 - It provides **direct experimental evidence** for the shell and subshell model of the atom
 - It reveals that electrons in different subshells have **different binding energies**
@@ -20,7 +20,7 @@ Every electron in an atom is held in place by the attractive force of the nucleu
     {
       id: 'ps1-photoelectric',
       type: 'text' as const,
-      content: `## The Photoelectric Effect Connection
+      content: `## 🔗 The Photoelectric Effect Connection
 
 PES is based on the **photoelectric effect**, discovered by Einstein in 1905. When a photon of sufficient energy strikes an atom, it can eject an electron. The fundamental equation is:
 
@@ -34,6 +34,9 @@ Where:
 By rearranging: $BE = E_{photon} - KE$
 
 Since we know the photon energy and can measure the kinetic energy of the ejected electron, we can calculate the binding energy.
+
+
+---
 
 ### How It Works in Practice
 
@@ -68,7 +71,7 @@ In PES, what does the binding energy of an electron represent?`,
     {
       id: 'ps1-photon-source',
       type: 'text' as const,
-      content: `## The Photon Source
+      content: `## 📌 The Photon Source
 
 For PES to work, the incoming photon must have **enough energy** to eject electrons from every subshell. This is why high-energy photon sources are used:
 
@@ -76,6 +79,9 @@ For PES to work, the incoming photon must have **enough energy** to eject electr
 - **X-rays** (X-ray photoelectron spectroscopy, XPS): Used to study core electrons with higher binding energies
 
 The photon energy must satisfy: $E_{photon} > BE$ for any electron we wish to eject.
+
+
+---
 
 ### Key Point
 If the photon energy is **less than** the binding energy of a particular electron, that electron **cannot be ejected**. This is a direct consequence of the quantized nature of light — the energy comes in discrete packets (photons), and a single photon must provide all the energy needed.`
@@ -144,7 +150,7 @@ Consider two electrons: Electron A has a binding energy of 200 eV and Electron B
     {
       id: 'ps1-summary',
       type: 'text' as const,
-      content: `## Part 1 Summary
+      content: `## 📋 Part 1 Summary
 
 Key takeaways from this introduction to PES:
 

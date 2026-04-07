@@ -16,7 +16,7 @@ The ICE table (Initial, Change, Equilibrium) is the essential tool for calculati
       id: 'wk2-ice-table',
       type: 'text' as const,
       content: `
-## Setting Up an ICE Table
+## 📌 Setting Up an ICE Table
 
 For a weak acid $HA$ with initial concentration $C$ and acid dissociation constant $K_a$:
 
@@ -39,7 +39,7 @@ This is a quadratic equation in $x$. But we can often avoid the quadratic formul
       id: 'wk2-approximation',
       type: 'text' as const,
       content: `
-## The 5% Approximation
+## 📌 The 5% Approximation
 
 If $x \\ll C$ (specifically, if $x < 5\\%$ of $C$), we can approximate:
 
@@ -55,6 +55,9 @@ $$[H^+] = x = \\sqrt{K_a \\cdot C}$$
 
 $$pH = -\\log(\\sqrt{K_a \\cdot C})$$
 
+
+---
+
 ### When Does the Approximation Work?
 
 The approximation is valid when:
@@ -62,6 +65,9 @@ The approximation is valid when:
 $$\\frac{C}{K_a} > 400 \\quad \\text{(conservative rule)}$$
 
 Or equivalently, when $\\frac{x}{C} \\times 100\\% < 5\\%$.
+
+
+---
 
 ### If the Approximation Fails
 
@@ -78,13 +84,19 @@ $$x = \\frac{-K_a + \\sqrt{K_a^2 + 4K_a C}}{2}$$
       id: 'wk2-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 Find the pH of 0.10 M acetic acid ($CH_3COOH$, $K_a = 1.8 \\times 10^{-5}$).
+
+
+---
 
 ### Step 1: Check if approximation works
 
 $$\\frac{C}{K_a} = \\frac{0.10}{1.8 \\times 10^{-5}} = 5556 > 400 \\quad \\checkmark$$
+
+
+---
 
 ### Step 2: Use the simplified equation
 
@@ -92,9 +104,15 @@ $$x = \\sqrt{K_a \\cdot C} = \\sqrt{(1.8 \\times 10^{-5})(0.10)}$$
 
 $$x = \\sqrt{1.8 \\times 10^{-6}} = 1.34 \\times 10^{-3} \\text{ M}$$
 
+
+---
+
 ### Step 3: Verify the 5% check
 
 $$\\frac{x}{C} \\times 100\\% = \\frac{1.34 \\times 10^{-3}}{0.10} \\times 100\\% = 1.3\\% < 5\\% \\quad \\checkmark$$
+
+
+---
 
 ### Step 4: Calculate pH
 

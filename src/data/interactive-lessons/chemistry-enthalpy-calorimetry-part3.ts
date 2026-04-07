@@ -16,7 +16,7 @@ How do we actually measure enthalpy changes? We use **calorimetry** — the scie
       id: 'eh3-heat-equation',
       type: 'text' as const,
       content: `
-## The Heat Equation
+## 📌 The Heat Equation
 
 $$q = mc\\Delta T$$
 
@@ -26,6 +26,9 @@ $$q = mc\\Delta T$$
 | $m$ | Mass of substance | g |
 | $c$ | Specific heat capacity | J/(g·°C) |
 | $\\Delta T$ | Change in temperature ($T_f - T_i$) | °C or K |
+
+
+---
 
 ### Specific Heat Capacity
 
@@ -47,9 +50,12 @@ Water has an unusually **high** specific heat, meaning it can absorb a lot of he
       id: 'eh3-coffee-cup',
       type: 'text' as const,
       content: `
-## The Coffee-Cup Calorimeter
+## 📌 The Coffee-Cup Calorimeter
 
 A simple calorimeter made from a **Styrofoam cup** with a lid and thermometer.
+
+
+---
 
 ### How It Works
 
@@ -58,17 +64,26 @@ A simple calorimeter made from a **Styrofoam cup** with a lid and thermometer.
 3. Record the maximum (or minimum) temperature reached
 4. Calculate $q$ for the solution using $q = mc\\Delta T$
 
+
+---
+
 ### Key Assumptions
 
 - The calorimeter is perfectly **insulated** (no heat escapes)
 - The solution has the same density and specific heat as **pure water** ($c = 4.184$ J/(g·°C), $d = 1.00$ g/mL)
 - All heat from the reaction goes into the solution
 
+
+---
+
 ### Important Sign Convention
 
 $$q_{\\text{rxn}} = -q_{\\text{solution}}$$
 
 If the solution **warms up** ($q_{\\text{solution}} > 0$), the reaction is **exothermic** ($q_{\\text{rxn}} < 0$).
+
+
+---
 
 ### Constant Pressure
 
@@ -81,7 +96,7 @@ $$q_p = \\Delta H$$
       id: 'eh3-example-walkthrough',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 **Problem:** When 50.0 mL of 1.00 M HCl is mixed with 50.0 mL of 1.00 M NaOH in a coffee-cup calorimeter, the temperature rises from 22.0°C to 28.9°C. Calculate $\\Delta H$ per mole of water formed.
 

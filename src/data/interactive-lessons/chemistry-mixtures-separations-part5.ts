@@ -16,9 +16,12 @@ Two classical methods for determining the composition of mixtures are **gravimet
       id: 'mx5-gravimetric',
       type: 'text' as const,
       content: `
-## Gravimetric Analysis
+## 📌 Gravimetric Analysis
 
 **Principle**: Determine the amount of a substance by converting it to a **known precipitate**, filtering, drying, and **weighing** it.
+
+
+---
 
 ### Steps
 
@@ -29,6 +32,9 @@ Two classical methods for determining the composition of mixtures are **gravimet
 5. **Dry** (and sometimes ignite) the precipitate
 6. **Weigh** the precipitate
 7. Calculate the composition using stoichiometry
+
+
+---
 
 ### Example
 
@@ -54,9 +60,12 @@ $$\\% \\text{Cl}^- = \\frac{0.211}{0.500} \\times 100\\% = 42.2\\%$$
       id: 'mx5-volumetric',
       type: 'text' as const,
       content: `
-## Volumetric Analysis (Titration)
+## 🧪 Volumetric Analysis (Titration)
 
 **Principle**: Determine the concentration of an unknown solution by reacting it with a **standard solution** (known concentration) until the reaction is complete — the **equivalence point**.
+
+
+---
 
 ### Key Terms
 
@@ -68,11 +77,17 @@ $$\\% \\text{Cl}^- = \\frac{0.211}{0.500} \\times 100\\% = 42.2\\%$$
 | **Indicator** | Substance that changes color near the equivalence point |
 | **End point** | When the indicator changes color (ideally = equivalence point) |
 
+
+---
+
 ### The Titration Equation
 
 $$M_1V_1 \\times \\text{(mole ratio)} = M_2V_2$$
 
 For a 1:1 reaction: $M_1V_1 = M_2V_2$
+
+
+---
 
 ### Example: Acid-Base Titration
 
@@ -89,7 +104,7 @@ $$M_{HCl} = \\frac{M_{NaOH} \\times V_{NaOH}}{V_{HCl}} = \\frac{(0.100)(32.5)}{2
       id: 'mx5-back-titration',
       type: 'text' as const,
       content: `
-## Back Titration
+## 🧪 Back Titration
 
 Sometimes the analyte reacts slowly or doesn\'t have a clear endpoint. In a **back titration**:
 
@@ -97,6 +112,9 @@ Sometimes the analyte reacts slowly or doesn\'t have a clear endpoint. In a **ba
 2. Allow the reaction to go to completion
 3. **Titrate the leftover (unreacted) reagent** with another standard solution
 4. The difference tells you how much reagent reacted with the analyte
+
+
+---
 
 ### When to Use
 

@@ -16,7 +16,7 @@ This workshop focuses on the types of entropy problems you will encounter on the
       id: 'en6-strategy-review',
       type: 'text' as const,
       content: `
-## Problem-Solving Strategies
+## 🛠️ Problem-Solving Strategies
 
 ### Strategy 1: Predict the Sign of ΔS
 
@@ -25,17 +25,26 @@ This workshop focuses on the types of entropy problems you will encounter on the
 3. If $\\Delta n_{\\text{gas}} < 0$: $\\Delta S < 0$
 4. If $\\Delta n_{\\text{gas}} = 0$: consider phase changes, complexity, and total moles
 
+
+---
+
 ### Strategy 2: Calculate ΔS°
 
 $$\\Delta S° = \\sum n \\cdot S°(\\text{products}) - \\sum m \\cdot S°(\\text{reactants})$$
 
 Remember: $S°$ for elements is NOT zero!
 
+
+---
+
 ### Strategy 3: Unit Conversion
 
 - $\\Delta H$ is typically in **kJ**
 - $\\Delta S$ is typically in **J/K**
 - For $\\Delta G = \\Delta H - T\\Delta S$: convert $\\Delta S$ to kJ/K by dividing by 1000
+
+
+---
 
 ### Strategy 4: Entropy of Surroundings
 

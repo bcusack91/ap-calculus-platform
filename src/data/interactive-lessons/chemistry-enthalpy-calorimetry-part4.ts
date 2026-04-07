@@ -16,7 +16,7 @@ While coffee-cup calorimeters work at constant pressure, some reactions — espe
       id: 'eh4-bomb-structure',
       type: 'text' as const,
       content: `
-## Bomb Calorimeter Structure
+## 🏗️ Bomb Calorimeter Structure
 
 A bomb calorimeter consists of:
 
@@ -27,6 +27,9 @@ A bomb calorimeter consists of:
 5. **Stirrer** — ensures uniform temperature in the water bath
 6. **Insulated jacket** — minimizes heat loss to the environment
 
+
+---
+
 ### Key Feature: Constant Volume
 
 The bomb is **sealed and rigid** — the volume cannot change. This means:
@@ -34,6 +37,9 @@ The bomb is **sealed and rigid** — the volume cannot change. This means:
 - No $PV$ work is done ($w = 0$ since $\\Delta V = 0$)
 - At constant volume: $q_v = \\Delta E$ (internal energy change)
 - This is different from coffee-cup calorimetry where $q_p = \\Delta H$
+
+
+---
 
 ### Relationship Between $\\Delta H$ and $\\Delta E$
 
@@ -52,7 +58,7 @@ where $\\Delta n_{\\text{gas}}$ = moles of gaseous products − moles of gaseous
       id: 'eh4-heat-capacity',
       type: 'text' as const,
       content: `
-## Heat Capacity of the Calorimeter
+## 📌 Heat Capacity of the Calorimeter
 
 For a bomb calorimeter, we use the **heat capacity of the entire calorimeter** ($C_{\\text{cal}}$):
 
@@ -64,6 +70,9 @@ $$q_{\\text{cal}} = C_{\\text{cal}} \\Delta T$$
 | $C_{\\text{cal}}$ | Heat capacity of calorimeter | kJ/°C |
 | $\\Delta T$ | Temperature change | °C |
 
+
+---
+
 ### Important Distinction
 
 | Quantity | Symbol | Units | Usage |
@@ -72,6 +81,9 @@ $$q_{\\text{cal}} = C_{\\text{cal}} \\Delta T$$
 | Heat capacity | $C$ | J/°C or kJ/°C | For the whole calorimeter |
 
 The heat capacity $C_{\\text{cal}}$ is determined by **calibration** — burning a substance with a known heat of combustion.
+
+
+---
 
 ### Finding $q_{\\text{rxn}}$
 
@@ -84,7 +96,7 @@ The negative sign reflects that heat released by the reaction is absorbed by the
       id: 'eh4-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 **Problem:** A 1.50 g sample of benzoic acid ($\\text{C}_7\\text{H}_6\\text{O}_2$, molar mass = 122.12 g/mol) is burned in a bomb calorimeter with $C_{\\text{cal}} = 10.34$ kJ/°C. The temperature rises from 22.45°C to 25.71°C. Calculate the molar heat of combustion.
 

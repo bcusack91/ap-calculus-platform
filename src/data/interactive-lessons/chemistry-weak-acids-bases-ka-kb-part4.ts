@@ -16,7 +16,7 @@ One of the most powerful relationships in acid-base chemistry connects the stren
       id: 'wk4-derivation',
       type: 'text' as const,
       content: `
-## Deriving the Relationship
+## 🔗 Deriving the Relationship
 
 Consider acetic acid and its conjugate base, acetate:
 
@@ -43,7 +43,7 @@ This is true for **any** conjugate acid-base pair!
       id: 'wk4-pka-pkb',
       type: 'text' as const,
       content: `
-## The $pK_a + pK_b = 14$ Relationship
+## 🔗 The $pK_a + pK_b = 14$ Relationship
 
 Taking $-\\log$ of both sides of $K_a \\times K_b = K_w$:
 
@@ -51,11 +51,17 @@ $$-\\log K_a + (-\\log K_b) = -\\log K_w$$
 
 $$\\boxed{pK_a + pK_b = pK_w = 14 \\text{ at 25°C}}$$
 
+
+---
+
 ### Applications
 
 If you know $K_a$ for an acid, you can find $K_b$ for its conjugate base:
 
 $$K_b = \\frac{K_w}{K_a} = \\frac{1.0 \\times 10^{-14}}{K_a}$$
+
+
+---
 
 ### Example
 
@@ -66,6 +72,9 @@ $$K_b = \\frac{K_w}{K_a} = \\frac{1.0 \\times 10^{-14}}{K_a}$$
 $$K_b = \\frac{1.0 \\times 10^{-14}}{1.8 \\times 10^{-5}} = 5.6 \\times 10^{-10}$$
 
 $pK_b = 14 - 4.74 = 9.26$
+
+
+---
 
 ### Key Insight
 
@@ -142,7 +151,7 @@ $pK_b = 14 - 4.74 = 9.26$
       id: 'wk4-predicting-ph',
       type: 'text' as const,
       content: `
-## Using $K_a/K_b$ to Predict Salt Solutions
+## 🧪 Using $K_a/K_b$ to Predict Salt Solutions
 
 For salts of weak acid + strong base (e.g., $NaCH_3COO$):
 
@@ -150,6 +159,9 @@ For salts of weak acid + strong base (e.g., $NaCH_3COO$):
 2. Find its $K_b$ using $K_b = K_w/K_a$
 3. Use ICE table with $K_b$ to find $[OH^-]$
 4. Convert to pH
+
+
+---
 
 ### Example: pH of 0.20 M NaCN
 

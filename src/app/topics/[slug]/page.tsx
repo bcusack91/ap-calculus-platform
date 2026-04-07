@@ -13,6 +13,7 @@ function TopicBottomAd() {
 import ReactMarkdown from 'react-markdown'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
+import remarkGfm from 'remark-gfm'
 import 'katex/dist/katex.min.css'
 import Link from 'next/link'
 import type { Metadata } from 'next'
@@ -423,7 +424,7 @@ export default async function TopicPage(props: TopicPageProps) {
                   <TopicContentRenderer content={topic.textContent} />
                 ) : (
                   <ReactMarkdown
-                    remarkPlugins={[remarkMath]}
+                    remarkPlugins={[remarkMath, remarkGfm]}
                     rehypePlugins={[rehypeKatex]}
                     components={MarkdownComponents}
                   >
@@ -483,7 +484,7 @@ export default async function TopicPage(props: TopicPageProps) {
                           <span>❓</span> Question:
                         </h4>
                         <div className="prose max-w-none">
-                          <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]} components={MarkdownComponents}>
+                          <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm]} rehypePlugins={[rehypeKatex]} components={MarkdownComponents}>
                             {problem.question}
                           </ReactMarkdown>
                         </div>
@@ -495,7 +496,7 @@ export default async function TopicPage(props: TopicPageProps) {
                           💡 Show Solution
                         </summary>
                         <div className="mt-4 prose max-w-none bg-purple-50 dark:bg-purple-900/20 p-4 rounded border-l-4 border-purple-500">
-                          <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]} components={MarkdownComponents}>
+                          <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm]} rehypePlugins={[rehypeKatex]} components={MarkdownComponents}>
                             {problem.solution}
                           </ReactMarkdown>
                         </div>

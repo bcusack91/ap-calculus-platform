@@ -13,13 +13,16 @@ When atoms become ions, their size changes dramatically. Cations shrink and anio
     {
       id: 'pt6-cations',
       type: 'text' as const,
-      content: `## Cations Are Smaller Than Their Parent Atoms
+      content: `## 📌 Cations Are Smaller Than Their Parent Atoms
 
 When an atom **loses** electrons to form a cation:
 
 1. The outermost shell may be **completely emptied**, exposing a smaller inner shell
 2. Even if the shell isn't emptied, fewer electrons means less electron-electron repulsion
 3. The same nuclear charge pulls the remaining electrons **closer**
+
+
+---
 
 ### Example: Na → Na⁺
 
@@ -32,6 +35,9 @@ When an atom **loses** electrons to form a cation:
 
 Sodium loses its single $3s$ electron, eliminating the entire $n = 3$ shell. The radius drops by nearly **half**.
 
+
+---
+
 ### General Pattern
 
 The more electrons removed, the smaller the cation:
@@ -41,13 +47,16 @@ $$\\text{Fe} (126\\text{ pm}) > \\text{Fe}^{2+} (76\\text{ pm}) > \\text{Fe}^{3+
     {
       id: 'pt6-anions',
       type: 'text' as const,
-      content: `## Anions Are Larger Than Their Parent Atoms
+      content: `## 📌 Anions Are Larger Than Their Parent Atoms
 
 When an atom **gains** electrons to form an anion:
 
 1. More electrons means increased **electron-electron repulsion**
 2. The electron cloud **expands** as electrons push each other apart
 3. The same nuclear charge now must hold **more** electrons
+
+
+---
 
 ### Example: Cl → Cl⁻
 
@@ -59,6 +68,9 @@ When an atom **gains** electrons to form an anion:
 | Radius | 99 pm | 181 pm |
 
 Chlorine gains one electron, nearly **doubling** its radius due to increased electron repulsion with the same nuclear charge.
+
+
+---
 
 ### Summary Table
 
@@ -111,9 +123,12 @@ Chlorine gains one electron, nearly **doubling** its radius due to increased ele
     {
       id: 'pt6-isoelectronic',
       type: 'text' as const,
-      content: `## Isoelectronic Series
+      content: `## 📌 Isoelectronic Series
 
 An **isoelectronic series** is a set of atoms and ions that all have the **same number of electrons**.
+
+
+---
 
 ### Example: The 10-Electron Series
 
@@ -128,6 +143,9 @@ All of the following species have 10 electrons (same as neon):
 | Na⁺ | 11 | 10 | 95 |
 | Mg²⁺ | 12 | 10 | 65 |
 | Al³⁺ | 13 | 10 | 50 |
+
+
+---
 
 ### The Rule
 

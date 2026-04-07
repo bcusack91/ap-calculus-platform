@@ -16,13 +16,19 @@ Most chemical reactions do not occur in a single step. Instead, they proceed thr
       id: 'rm1-elementary-steps',
       type: 'text' as const,
       content: `
-## What Is an Elementary Step?
+## 📖 What Is an Elementary Step?
 
 An **elementary step** (or elementary reaction) is a single molecular event — one collision or one molecular rearrangement. It describes exactly what happens at the molecular level.
+
+
+---
 
 ### Key Property
 
 For an elementary step, the **rate law can be written directly from the stoichiometry** of that step. This is NOT true for overall reactions.
+
+
+---
 
 ### Example
 
@@ -39,7 +45,7 @@ Each step is an elementary reaction with its own rate law determined by its mole
       id: 'rm1-molecularity',
       type: 'text' as const,
       content: `
-## Molecularity
+## ⚖️ Molecularity
 
 **Molecularity** is the number of reactant particles (molecules, atoms, or ions) involved in an elementary step.
 
@@ -49,6 +55,9 @@ Each step is an elementary reaction with its own rate law determined by its mole
 | 2 | Bimolecular | $\\text{A} + \\text{B} \\rightarrow \\text{products}$ | $\\text{rate} = k[\\text{A}][\\text{B}]$ |
 | 2 | Bimolecular | $2\\text{A} \\rightarrow \\text{products}$ | $\\text{rate} = k[\\text{A}]^2$ |
 | 3 | Termolecular | $\\text{A} + \\text{B} + \\text{C} \\rightarrow \\text{products}$ | $\\text{rate} = k[\\text{A}][\\text{B}][\\text{C}]$ |
+
+
+---
 
 ### Important
 
@@ -106,17 +115,26 @@ Each step is an elementary reaction with its own rate law determined by its mole
       id: 'rm1-mechanism-rules',
       type: 'text' as const,
       content: `
-## Rules for Valid Mechanisms
+## 📏 Rules for Valid Mechanisms
 
 A proposed mechanism must satisfy two essential criteria:
+
+
+---
 
 ### Rule 1: Steps Must Sum to the Overall Reaction
 
 When all elementary steps are added together, intermediates cancel, and the result must equal the overall balanced equation.
 
+
+---
+
 ### Rule 2: Rate Law Must Be Consistent
 
 The rate law predicted by the mechanism must match the experimentally observed rate law.
+
+
+---
 
 ### Example Verification
 

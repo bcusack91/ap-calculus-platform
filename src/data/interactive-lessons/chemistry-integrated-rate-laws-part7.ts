@@ -16,7 +16,7 @@ This final part challenges you with comprehensive, exam-level problems that comb
       id: 'ir7-master-summary',
       type: 'text' as const,
       content: `
-## Complete Integrated Rate Laws Summary
+## 📋 Complete Integrated Rate Laws Summary
 
 | | Zero-Order | First-Order | Second-Order |
 |---|-----------|-------------|-------------|

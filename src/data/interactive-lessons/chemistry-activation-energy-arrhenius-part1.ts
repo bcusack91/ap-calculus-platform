@@ -16,9 +16,12 @@ For a chemical reaction to occur, reactant molecules must **collide**. But not j
       id: 'ae1-collision-requirements',
       type: 'text' as const,
       content: `
-## Requirements for an Effective Collision
+## 📊 Requirements for an Effective Collision
 
 For a collision to result in a reaction, two conditions must be met simultaneously:
+
+
+---
 
 ### Condition 1: Sufficient Energy
 
@@ -28,14 +31,23 @@ $$KE_{\\text{collision}} \\geq E_a$$
 
 If the collision energy is below $E_a$, the molecules simply bounce off each other without reacting.
 
+
+---
+
 ### Condition 2: Proper Orientation
 
 Even with enough energy, the molecules must collide with the correct **geometric orientation**. The reactive parts of the molecules must be facing each other.
+
+
+---
 
 ### Example: NO + NO₃ → 2NO₂
 
 - ✅ O of NO hits O of NO₃ → bonds can rearrange → reaction!
 - ❌ N of NO hits N of NO₃ → wrong atoms in contact → no reaction
+
+
+---
 
 ### The Steric Factor
 
@@ -90,7 +102,7 @@ The fraction of collisions with correct orientation is called the **steric facto
       id: 'ae1-maxwell-boltzmann',
       type: 'text' as const,
       content: `
-## Maxwell-Boltzmann Distribution
+## 📌 Maxwell-Boltzmann Distribution
 
 At any temperature, molecules have a **distribution of kinetic energies**. The Maxwell-Boltzmann distribution shows:
 
@@ -98,12 +110,18 @@ At any temperature, molecules have a **distribution of kinetic energies**. The M
 - A few have very low or very high energy
 - The **area under the curve** beyond $E_a$ represents the fraction of molecules that can react
 
+
+---
+
 ### Effect of Temperature
 
 When temperature increases:
 1. The **peak** shifts to **higher energy** and becomes **lower and broader**
 2. The **fraction of molecules** with $KE \\geq E_a$ increases **dramatically**
 3. This is why higher temperature → faster rate
+
+
+---
 
 ### The Boltzmann Factor
 
@@ -150,7 +168,7 @@ This exponential dependence explains why even small temperature changes can prod
       id: 'ae1-rate-equation',
       type: 'text' as const,
       content: `
-## Collision Theory Rate Equation
+## ⏱️ Collision Theory Rate Equation
 
 Putting it all together, collision theory predicts:
 
@@ -160,6 +178,9 @@ where:
 - $Z$ = collision frequency (depends on concentration and temperature)
 - $p$ = steric factor (orientation)
 - $e^{-E_a/(RT)}$ = fraction with sufficient energy
+
+
+---
 
 ### Connection to the Arrhenius Equation
 

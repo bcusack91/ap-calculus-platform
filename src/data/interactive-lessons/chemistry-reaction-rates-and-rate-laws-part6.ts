@@ -16,7 +16,7 @@ This workshop focuses on building fluency with rate law determination from exper
       id: 'rr6-strategy',
       type: 'text' as const,
       content: `
-## Problem-Solving Strategy Review
+## 🔄 Problem-Solving Strategy Review
 
 ### Checklist
 
@@ -27,6 +27,9 @@ This workshop focuses on building fluency with rate law determination from exper
 5. ✅ Plug in any experiment to solve for $k$
 6. ✅ Verify $k$ using a second experiment
 7. ✅ Check that units of $k$ are consistent with the overall order
+
+
+---
 
 ### Tip for the AP Exam
 

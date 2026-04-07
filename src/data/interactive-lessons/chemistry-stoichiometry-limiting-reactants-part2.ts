@@ -16,9 +16,12 @@ In the lab, you weigh substances in **grams**, not moles. Mass-to-mass stoichiom
       id: 'sl2-roadmap',
       type: 'text' as const,
       content: `
-## The Stoichiometry Roadmap
+## ⚖️ The Stoichiometry Roadmap
 
 $$\\text{grams A} \\xrightarrow{\\div M_A} \\text{moles A} \\xrightarrow{\\text{mole ratio}} \\text{moles B} \\xrightarrow{\\times M_B} \\text{grams B}$$
+
+
+---
 
 ### The Three Steps
 
@@ -28,9 +31,15 @@ $$\\text{grams A} \\xrightarrow{\\div M_A} \\text{moles A} \\xrightarrow{\\text{
 | 2 | Moles A → Moles B | Multiply by mole ratio |
 | 3 | Moles B → Grams B | Multiply by molar mass of B |
 
+
+---
+
 ### Combined Formula
 
 $$\\text{grams B} = \\text{grams A} \\times \\frac{1}{M_A} \\times \\frac{\\text{coeff B}}{\\text{coeff A}} \\times M_B$$
+
+
+---
 
 ### Key Point
 
@@ -41,7 +50,7 @@ You **cannot** skip steps! You must go through moles — there is no direct gram
       id: 'sl2-worked-example-1',
       type: 'text' as const,
       content: `
-## Worked Example 1
+## 🧪 Worked Example 1
 
 **Problem:** How many grams of water are produced from burning 32.0 g of methane?
 
@@ -49,14 +58,26 @@ $$\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$
 
 **Molar masses:** CH₄ = 16.04 g/mol, H₂O = 18.02 g/mol
 
+
+---
+
 ### Step 1: Grams CH₄ → Moles CH₄
 $$n_{\text{CH}_4} = 32.0 \; \cancel{\text{g CH}_4} \times \frac{1 \text{ mol CH}_4}{16.04 \; \cancel{\text{g CH}_4}} = 1.995 \text{ mol CH}_4$$
+
+
+---
 
 ### Step 2: Moles CH₄ → Moles H₂O
 $$n_{\text{H}_2\text{O}} = 1.995 \; \cancel{\text{mol CH}_4} \times \frac{2 \text{ mol H}_2\text{O}}{1 \; \cancel{\text{mol CH}_4}} = 3.990 \text{ mol H}_2\text{O}$$
 
+
+---
+
 ### Step 3: Moles H₂O → Grams H₂O
 $$m_{\text{H}_2\text{O}} = 3.990 \; \cancel{\text{mol H}_2\text{O}} \times \frac{18.02 \text{ g H}_2\text{O}}{1 \; \cancel{\text{mol H}_2\text{O}}} = 71.9 \text{ g H}_2\text{O}$$
+
+
+---
 
 ### Answer: 71.9 g of H₂O
       `
@@ -65,7 +86,7 @@ $$m_{\text{H}_2\text{O}} = 3.990 \; \cancel{\text{mol H}_2\text{O}} \times \frac
       id: 'sl2-worked-example-2',
       type: 'text' as const,
       content: `
-## Worked Example 2
+## 🧪 Worked Example 2
 
 **Problem:** How many grams of aluminum are needed to produce 51.0 g of aluminum oxide?
 
@@ -73,16 +94,31 @@ $$4\\text{Al} + 3\\text{O}_2 \\rightarrow 2\\text{Al}_2\\text{O}_3$$
 
 **Molar masses:** Al = 26.98 g/mol, Al₂O₃ = 101.96 g/mol
 
+
+---
+
 ### Step 1: Grams Al₂O₃ → Moles Al₂O₃
 $$n_{\text{Al}_2\text{O}_3} = 51.0 \; \cancel{\text{g Al}_2\text{O}_3} \times \frac{1 \text{ mol Al}_2\text{O}_3}{101.96 \; \cancel{\text{g Al}_2\text{O}_3}} = 0.5002 \text{ mol Al}_2\text{O}_3$$
+
+
+---
 
 ### Step 2: Moles Al₂O₃ → Moles Al
 $$n_{\text{Al}} = 0.5002 \; \cancel{\text{mol Al}_2\text{O}_3} \times \frac{4 \text{ mol Al}}{2 \; \cancel{\text{mol Al}_2\text{O}_3}} = 1.000 \text{ mol Al}$$
 
+
+---
+
 ### Step 3: Moles Al → Grams Al
 $$m_{\text{Al}} = 1.000 \; \cancel{\text{mol Al}} \times \frac{26.98 \text{ g Al}}{1 \; \cancel{\text{mol Al}}} = 27.0 \text{ g Al}$$
 
+
+---
+
 ### Answer: 27.0 g of Al
+
+
+---
 
 ### One-Line Setup
 

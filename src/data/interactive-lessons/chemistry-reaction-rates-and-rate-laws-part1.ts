@@ -18,7 +18,7 @@ In this part, we define **reaction rate** precisely and learn how to measure it.
       id: 'rr1-defining-rate',
       type: 'text' as const,
       content: `
-## Defining Reaction Rate
+## ⚗️ Defining Reaction Rate
 
 For a general reaction:
 
@@ -28,6 +28,9 @@ The **rate of reaction** is defined as the change in concentration of a reactant
 
 $$\\text{Rate} = -\\frac{1}{a}\\frac{\\Delta[A]}{\\Delta t} = -\\frac{1}{b}\\frac{\\Delta[B]}{\\Delta t} = +\\frac{1}{c}\\frac{\\Delta[C]}{\\Delta t} = +\\frac{1}{d}\\frac{\\Delta[D]}{\\Delta t}$$
 
+
+---
+
 ### Key Points
 
 | Symbol | Meaning |
@@ -36,6 +39,9 @@ $$\\text{Rate} = -\\frac{1}{a}\\frac{\\Delta[A]}{\\Delta t} = -\\frac{1}{b}\\fra
 | $\\Delta t$ | Change in time |
 | Negative sign for reactants | Reactants are consumed, so $\\Delta[A] < 0$; the negative sign makes rate positive |
 | Stoichiometric coefficients | Divide by coefficient to get a single, unique rate |
+
+
+---
 
 ### Example
 
@@ -96,7 +102,7 @@ If $\\text{O}_2$ appears at $0.024$ M/s, then $\\text{NO}_2$ appears at $4 \\tim
       id: 'rr1-average-vs-instantaneous',
       type: 'text' as const,
       content: `
-## Average Rate vs. Instantaneous Rate
+## ⏱️ Average Rate vs. Instantaneous Rate
 
 ### Average Rate
 
@@ -104,11 +110,17 @@ The **average rate** is calculated over a finite time interval:
 
 $$\\text{Average rate} = -\\frac{\\Delta[A]}{\\Delta t} = -\\frac{[A]_{t_2} - [A]_{t_1}}{t_2 - t_1}$$
 
+
+---
+
 ### Instantaneous Rate
 
 The **instantaneous rate** is the rate at a specific moment — the slope of the tangent line to the concentration-vs-time curve:
 
 $$\\text{Instantaneous rate} = -\\frac{d[A]}{dt}$$
+
+
+---
 
 ### Key Differences
 
@@ -118,6 +130,9 @@ $$\\text{Instantaneous rate} = -\\frac{d[A]}{dt}$$
 | Graphically | Slope of secant line | Slope of tangent line |
 | Accuracy | Approximation | Exact at that instant |
 | As $\\Delta t \\rightarrow 0$ | Approaches instantaneous rate | — |
+
+
+---
 
 ### Initial Rate
 
@@ -163,7 +178,7 @@ The **initial rate** is the instantaneous rate at $t = 0$, before significant pr
       id: 'rr1-measurement-methods',
       type: 'text' as const,
       content: `
-## Experimental Methods for Measuring Rates
+## ⏱️ Experimental Methods for Measuring Rates
 
 ### Monitoring Concentration Over Time
 
@@ -175,6 +190,9 @@ The **initial rate** is the instantaneous rate at $t = 0$, before significant pr
 | **Mass loss** | Mass of system | Reactions releasing gas |
 | **Titration** (aliquot method) | Concentration at specific times | Slow reactions |
 | **pH measurement** | [H⁺] or [OH⁻] | Acid/base reactions |
+
+
+---
 
 ### Beer\'s Law Connection
 

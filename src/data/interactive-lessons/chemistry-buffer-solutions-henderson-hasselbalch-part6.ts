@@ -16,7 +16,7 @@ This workshop features multi-step problems combining buffer identification, pH c
       id: 'bf6-problem1',
       type: 'text' as const,
       content: `
-## Problem 1: Buffer After Multiple Additions
+## 🛡️ Problem 1: Buffer After Multiple Additions
 
 A 1.0 L buffer contains 0.30 mol $HCOOH$ (formic acid, $pK_a = 3.75$) and 0.30 mol $HCOONa$ (sodium formate).
 
@@ -68,7 +68,7 @@ First, 0.08 mol $NaOH$ is added. Then, 0.05 mol $HCl$ is added.
       id: 'bf6-problem2',
       type: 'text' as const,
       content: `
-## Problem 2: Buffer or Not?
+## 🛡️ Problem 2: Buffer or Not?
 
 Determine whether each mixture forms a buffer:
 

@@ -16,7 +16,7 @@ Redox reactions are the foundation of **electrochemistry** — the study of how 
       id: 'or7-electrochemistry-connection',
       type: 'text' as const,
       content: `
-## Redox ↔ Electrochemistry Connection
+## 🔗 Redox ↔ Electrochemistry Connection
 
 ### Galvanic (Voltaic) Cells
 
@@ -29,11 +29,17 @@ A galvanic cell converts **chemical energy → electrical energy** using a spont
 | **Salt bridge** | Allows ion flow to maintain charge balance |
 | **Wire** | Carries electrons from anode to cathode |
 
+
+---
+
 ### Memory Aid
 
 **AN OX** and a **RED CAT**:
 - **An**ode = **Ox**idation
 - **Red**uction = **Cat**hode
+
+
+---
 
 ### Cell Notation
 
@@ -48,11 +54,14 @@ This represents: Zn is oxidized at the anode, Cu²⁺ is reduced at the cathode.
       id: 'or7-cell-potential',
       type: 'text' as const,
       content: `
-## Standard Cell Potential
+## 🔋 Standard Cell Potential
 
 ### Calculating $E^\\circ_{\\text{cell}}$
 
 $$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}}$$
+
+
+---
 
 ### Key Standard Reduction Potentials
 
@@ -69,10 +78,16 @@ $$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}
 | $\\text{Al}^{3+} + 3e^- \\rightarrow \\text{Al}$ | −1.66 |
 | $\\text{Li}^+ + e^- \\rightarrow \\text{Li}$ | −3.04 |
 
+
+---
+
 ### Spontaneity
 
 - $E^\\circ_{\\text{cell}} > 0$ → **spontaneous** (galvanic cell)
 - $E^\\circ_{\\text{cell}} < 0$ → **non-spontaneous** (requires electrolysis)
+
+
+---
 
 ### Relationship to Free Energy
 

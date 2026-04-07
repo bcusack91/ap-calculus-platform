@@ -20,7 +20,7 @@ This single equation lets you calculate **any one variable** if you know the oth
       id: 'gl3-equation',
       type: 'text' as const,
       content: `
-## The Equation and R
+## 📌 The Equation and R
 
 $$PV = nRT$$
 
@@ -31,6 +31,9 @@ $$PV = nRT$$
 | $n$ | Amount | mol |
 | $R$ | Gas constant | depends on units |
 | $T$ | Temperature | K (always!) |
+
+
+---
 
 ### The Gas Constant R
 
@@ -44,6 +47,9 @@ The value of $R$ depends on your pressure unit:
 
 Most AP Chemistry problems use $R = 0.0821$ L·atm/(mol·K).
 
+
+---
+
 ### Rearranged Forms
 
 - Solve for $V$: $V = \\frac{nRT}{P}$
@@ -56,7 +62,7 @@ Most AP Chemistry problems use $R = 0.0821$ L·atm/(mol·K).
       id: 'gl3-examples',
       type: 'text' as const,
       content: `
-## Worked Examples
+## 🧪 Worked Examples
 
 ### Example 1: Find Volume
 
@@ -68,6 +74,9 @@ $$T = 25 + 273.15 = 298.15 \\text{ K}$$
 
 $$V = \\frac{nRT}{P} = \\frac{(0.500)(0.0821)(298.15)}{1.20} = 10.2 \\text{ L}$$
 
+
+---
+
 ### Example 2: Find Pressure
 
 > **Problem:** 2.00 mol of gas is in a 15.0 L container at 300 K. What is the pressure?
@@ -76,6 +85,9 @@ $$V = \\frac{nRT}{P} = \\frac{(0.500)(0.0821)(298.15)}{1.20} = 10.2 \\text{ L}$$
 
 $$P = \\frac{nRT}{V} = \\frac{(2.00)(0.0821)(300)}{15.0} = 3.28 \\text{ atm}$$
 
+
+---
+
 ### Example 3: Find Moles
 
 > **Problem:** A gas at 2.50 atm and 350 K occupies 5.00 L. How many moles?
@@ -83,6 +95,9 @@ $$P = \\frac{nRT}{V} = \\frac{(2.00)(0.0821)(300)}{15.0} = 3.28 \\text{ atm}$$
 **Solution:**
 
 $$n = \\frac{PV}{RT} = \\frac{(2.50)(5.00)}{(0.0821)(350)} = 0.435 \\text{ mol}$$
+
+
+---
 
 ### Unit Conversion Reminder
 

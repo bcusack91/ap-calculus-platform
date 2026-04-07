@@ -18,13 +18,16 @@ These "simple" gas laws are the building blocks of $PV = nRT$.
       id: 'gl2-boyles',
       type: 'text' as const,
       content: `
-## Boyle's Law (Pressure–Volume)
+## 📏 Boyle's Law (Pressure–Volume)
 
 **At constant temperature and amount of gas:**
 
 $$P_1V_1 = P_2V_2$$
 
 Pressure and volume are **inversely proportional**. When you compress a gas (decrease volume), the pressure increases — and vice versa.
+
+
+---
 
 ### Example
 
@@ -33,6 +36,9 @@ Pressure and volume are **inversely proportional**. When you compress a gas (dec
 **Solution:**
 
 $$V_2 = \\frac{P_1V_1}{P_2} = \\frac{(1.00)(4.00)}{2.00} = 2.00 \\text{ L}$$
+
+
+---
 
 ### Conceptual Picture
 
@@ -43,13 +49,16 @@ When volume decreases, molecules hit the walls more often → more collisions pe
       id: 'gl2-charles',
       type: 'text' as const,
       content: `
-## Charles's Law (Volume–Temperature)
+## 📏 Charles's Law (Volume–Temperature)
 
 **At constant pressure and amount of gas:**
 
 $$\\frac{V_1}{T_1} = \\frac{V_2}{T_2}$$
 
 Volume and temperature are **directly proportional** (temperature in Kelvin!). Heat a gas and it expands; cool it and it contracts.
+
+
+---
 
 ### Example
 
@@ -61,6 +70,9 @@ $$T_1 = 20 + 273.15 = 293.15 \\text{ K}, \\quad T_2 = 80 + 273.15 = 353.15 \\tex
 
 $$V_2 = V_1 \\times \\frac{T_2}{T_1} = 2.50 \\times \\frac{353.15}{293.15} = 3.01 \\text{ L}$$
 
+
+---
+
 ### Why Kelvin?
 
 If you use Celsius, 0°C would imply zero volume — which is nonsensical. Kelvin starts at absolute zero, where molecular motion stops.
@@ -70,13 +82,16 @@ If you use Celsius, 0°C would imply zero volume — which is nonsensical. Kelvi
       id: 'gl2-avogadros',
       type: 'text' as const,
       content: `
-## Avogadro's Law (Volume–Amount)
+## 📏 Avogadro's Law (Volume–Amount)
 
 **At constant temperature and pressure:**
 
 $$\\frac{V_1}{n_1} = \\frac{V_2}{n_2}$$
 
 Volume and amount of gas (in moles) are **directly proportional**. More molecules → more volume (at the same $T$ and $P$).
+
+
+---
 
 ### Example
 
@@ -85,6 +100,9 @@ Volume and amount of gas (in moles) are **directly proportional**. More molecule
 **Solution:**
 
 $$V_2 = V_1 \\times \\frac{n_2}{n_1} = 6.00 \\times \\frac{5.00}{3.00} = 10.0 \\text{ L}$$
+
+
+---
 
 ### At STP
 

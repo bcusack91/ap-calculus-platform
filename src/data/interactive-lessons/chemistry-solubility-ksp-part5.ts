@@ -16,12 +16,15 @@ When a solution contains multiple ions that can form insoluble salts with the sa
       id: 'sk5-principle',
       type: 'text' as const,
       content: `
-## The Principle
+## 📏 The Principle
 
 Consider a solution containing both $\\text{Ag}^+$ and $\\text{Pb}^{2+}$. Adding $\\text{Cl}^-$ can precipitate both:
 
 - $\\text{AgCl}$: $K_{sp} = 1.8 \\times 10^{-10}$
 - $\\text{PbCl}_2$: $K_{sp} = 1.7 \\times 10^{-5}$
+
+
+---
 
 ### Which precipitates first?
 
@@ -32,6 +35,9 @@ For $\\text{AgCl}$: $[\\text{Cl}^-] = \\frac{K_{sp}}{[\\text{Ag}^+]}$
 For $\\text{PbCl}_2$: $[\\text{Cl}^-] = \\sqrt{\\frac{K_{sp}}{[\\text{Pb}^{2+}]}}$
 
 Since $K_{sp}(\\text{AgCl})$ is much smaller, AgCl precipitates at a much lower $[\\text{Cl}^-]$ — it precipitates **first**.
+
+
+---
 
 ### Strategy
 
@@ -45,9 +51,12 @@ Since $K_{sp}(\\text{AgCl})$ is much smaller, AgCl precipitates at a much lower 
       id: 'sk5-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 A solution contains $[\\text{Ag}^+] = 0.010$ M and $[\\text{Pb}^{2+}] = 0.010$ M. NaCl is added slowly.
+
+
+---
 
 ### Step 1: Find $[\\text{Cl}^-]$ to begin precipitating each
 
@@ -55,10 +64,16 @@ A solution contains $[\\text{Ag}^+] = 0.010$ M and $[\\text{Pb}^{2+}] = 0.010$ M
 
 **PbCl₂**: $[\\text{Cl}^-] = \\sqrt{\\frac{K_{sp}}{[\\text{Pb}^{2+}]}} = \\sqrt{\\frac{1.7 \\times 10^{-5}}{0.010}} = \\sqrt{1.7 \\times 10^{-3}} = 0.041$ M
 
+
+---
+
 ### Step 2: Order of precipitation
 
 AgCl precipitates first (at $[\\text{Cl}^-] = 1.8 \\times 10^{-8}$ M).
 PbCl₂ doesn\'t start precipitating until $[\\text{Cl}^-] = 0.041$ M.
+
+
+---
 
 ### Step 3: Can we separate them completely?
 

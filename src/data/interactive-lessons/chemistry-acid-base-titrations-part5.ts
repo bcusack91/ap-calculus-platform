@@ -16,7 +16,7 @@ An indicator is a weak acid (or base) that changes color in a specific pH range.
       id: 'at5-how-indicators-work',
       type: 'text' as const,
       content: `
-## How Indicators Work
+## 🔧 How Indicators Work
 
 An indicator ($HIn$) is itself a weak acid with different colored forms:
 
@@ -24,11 +24,17 @@ $$HIn(aq) \\rightleftharpoons H^+(aq) + In^-(aq)$$
 
 $$\\text{Color A} \\quad\\quad\\quad\\quad\\quad \\text{Color B}$$
 
+
+---
+
 ### Color Change Rules
 
 - **Acidic solution** ($[H^+]$ high): Equilibrium shifts left → $HIn$ form dominates → **Color A**
 - **Basic solution** ($[H^+]$ low): Equilibrium shifts right → $In^-$ form dominates → **Color B**
 - **Transition range**: Both forms present → intermediate color
+
+
+---
 
 ### The Transition Range
 
@@ -47,7 +53,7 @@ The indicator changes color over approximately **2 pH units** centered on its $p
       id: 'at5-common-indicators',
       type: 'text' as const,
       content: `
-## Common Indicators
+## 📌 Common Indicators
 
 | Indicator | $pK_{In}$ | pH Range | Acid Color | Base Color |
 |-----------|----------|----------|------------|------------|
@@ -57,6 +63,9 @@ The indicator changes color over approximately **2 pH units** centered on its $p
 | Bromothymol blue | 7.1 | 6.0 – 7.6 | Yellow | Blue |
 | Phenolphthalein | 9.1 | 8.2 – 10.0 | Colorless | Pink |
 | Alizarin yellow | 11.0 | 10.1 – 12.0 | Yellow | Red |
+
+
+---
 
 ### Choosing the Right Indicator
 
@@ -149,7 +158,7 @@ The indicator changes color over approximately **2 pH units** centered on its $p
       id: 'at5-ph-meter',
       type: 'text' as const,
       content: `
-## pH Meters vs. Indicators
+## 📌 pH Meters vs. Indicators
 
 ### Advantages of pH Meters
 
@@ -159,12 +168,18 @@ The indicator changes color over approximately **2 pH units** centered on its $p
 - Can generate a complete titration curve
 - No color interpretation needed
 
+
+---
+
 ### When Indicators Are Still Used
 
 - Quick, inexpensive field tests
 - Visual demonstration in teaching
 - When a pH meter is not available
 - For routine quality control with known endpoints
+
+
+---
 
 ### Finding Equivalence with a pH Meter
 

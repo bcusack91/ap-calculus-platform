@@ -16,7 +16,7 @@ On the AP exam, many entropy questions ask you to **predict the sign** of $\\Del
       id: 'en5v2-rules',
       type: 'text' as const,
       content: `
-## The Five Rules for Predicting $\\Delta S$ Sign
+## 📏 The Five Rules for Predicting $\\Delta S$ Sign
 
 ### Rule 1: Phase Changes
 
@@ -24,11 +24,17 @@ $$S_{\\text{solid}} < S_{\\text{liquid}} \\ll S_{\\text{gas}}$$
 
 Melting, boiling, sublimation → **positive** $\\Delta S$
 
+
+---
+
 ### Rule 2: Number of Gas Molecules
 
 More moles of gas in products → **positive** $\\Delta S$
 
 Fewer moles of gas in products → **negative** $\\Delta S$
+
+
+---
 
 ### Rule 3: Dissolving
 
@@ -36,9 +42,15 @@ Dissolving a solid in water usually → **positive** $\\Delta S$ (ions/molecules
 
 *Exception:* Some ions strongly organize water molecules around them (hydration), slightly reducing the effect.
 
+
+---
+
 ### Rule 4: Temperature Increase
 
 Heating anything → **positive** $\\Delta S$ (more energy microstates)
+
+
+---
 
 ### Rule 5: Mixing
 
@@ -49,7 +61,7 @@ Mixing different substances → **positive** $\\Delta S$ (more positional micros
       id: 'en5v2-examples',
       type: 'text' as const,
       content: `
-## Worked Examples
+## 🧪 Worked Examples
 
 | Reaction | Key Change | $\\Delta S$ Sign |
 |----------|-----------|----------------|
@@ -58,6 +70,9 @@ Mixing different substances → **positive** $\\Delta S$ (more positional micros
 | $\\text{NaCl(s)} \\to \\text{Na}^+\\text{(aq)} + \\text{Cl}^-\\text{(aq)}$ | Solid dissolves | **+** |
 | $\\text{N}_2\\text{(g)} + \\text{3 H}_2\\text{(g)} \\to \\text{2 NH}_3\\text{(g)}$ | 4 mol gas → 2 mol gas | **−** |
 | $\\text{CaCO}_3\\text{(s)} \\to \\text{CaO(s)} + \\text{CO}_2\\text{(g)}$ | Solid → solid + gas | **+** |
+
+
+---
 
 ### The Dominant Factor
 

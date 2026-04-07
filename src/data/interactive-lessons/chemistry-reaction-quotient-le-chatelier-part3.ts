@@ -16,7 +16,7 @@ Le Chatelier\'s Principle states: *When a system at equilibrium is subjected to 
       id: 'ql3-adding-reactant',
       type: 'text' as const,
       content: `
-## Adding or Removing Species
+## 📌 Adding or Removing Species
 
 ### Adding Reactant → Shift Right
 
@@ -28,6 +28,9 @@ If we add more N₂:
 - System shifts **right** to consume the added N₂
 - At the new equilibrium: $[\\text{NH}_3]$ is higher, $[\\text{H}_2]$ is lower
 
+
+---
+
 ### Adding Product → Shift Left
 
 If we add more NH₃:
@@ -35,6 +38,9 @@ If we add more NH₃:
 - Q increases (numerator gets bigger) → $Q > K$
 - System shifts **left** to consume the added NH₃
 - At the new equilibrium: $[\\text{N}_2]$ and $[\\text{H}_2]$ are higher
+
+
+---
 
 ### Removing a Species → Opposite Shift
 
@@ -45,6 +51,9 @@ If we add more NH₃:
 | Add product | Q increases | Left ← |
 | Remove product | Q decreases | Right → |
 
+
+---
+
 ### Key Insight
 
 The system shifts to **partially** counteract the change. It never fully restores the original concentrations — it finds a **new** equilibrium position.
@@ -54,7 +63,7 @@ The system shifts to **partially** counteract the change. It never fully restore
       id: 'ql3-worked-example',
       type: 'text' as const,
       content: `
-## Worked Example
+## 🧪 Worked Example
 
 $\\text{CO}(g) + 2\\,\\text{H}_2(g) \\rightleftharpoons \\text{CH}_3\\text{OH}(g)$, $K_c = 14.5$
 

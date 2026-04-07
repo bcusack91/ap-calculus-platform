@@ -16,7 +16,7 @@ This workshop focuses on the types of mechanism problems you\'ll see on the AP C
       id: 'rm6-problem-1',
       type: 'text' as const,
       content: `
-## Problem 1: Complete Mechanism Analysis
+## ⚙️ Problem 1: Complete Mechanism Analysis
 
 The reaction $2\\text{O}_3 \\rightarrow 3\\text{O}_2$ has the experimental rate law:
 
@@ -102,7 +102,7 @@ where E = enzyme, S = substrate, ES = enzyme-substrate complex, P = product.
       id: 'rm6-problem-3',
       type: 'text' as const,
       content: `
-## Problem 3: Comparing Mechanisms
+## ⚖️ Problem 3: Comparing Mechanisms
 
 **Overall:** $2\\text{H}_2\\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O} + \\text{O}_2$
 

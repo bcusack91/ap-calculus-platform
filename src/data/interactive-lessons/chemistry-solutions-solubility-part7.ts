@@ -16,11 +16,14 @@ This final part ties together everything from the unit: solution terminology, co
       id: 'ss7-big-picture',
       type: 'text' as const,
       content: `
-## The Big Picture
+## 📌 The Big Picture
 
 ### How It All Connects
 
 $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \\text{How much? (Concentration)} \\rightarrow \\text{What effect? (Colligative Properties)}$$
+
+
+---
 
 ### Unit Summary
 
@@ -33,6 +36,9 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
 | **BPE / FPD** | $\\Delta T_b = iK_bm$, $\\Delta T_f = iK_fm$ |
 | **Osmotic Pressure** | $\\Pi = iMRT$; used for molar mass of large molecules |
 | **van\'t Hoff Factor** | $i$ = number of particles per formula unit |
+
+
+---
 
 ### AP Exam Tips
 
@@ -193,7 +199,7 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
       id: 'ss7-frq-practice',
       type: 'text' as const,
       content: `
-## AP Free-Response Practice Problem
+## ✏️ AP Free-Response Practice Problem
 
 **A student performs a freezing point depression experiment.**
 
