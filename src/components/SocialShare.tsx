@@ -1,6 +1,10 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useSyncExternalStore } from 'react'
+
+const noop = () => () => {}
+const getCanShareSnapshot = () => typeof navigator !== 'undefined' && 'share' in navigator
+const getCanShareServerSnapshot = () => false
 
 interface SocialShareProps {
   url: string
@@ -10,11 +14,7 @@ interface SocialShareProps {
 
 export function SocialShare({ url, title, description }: SocialShareProps) {
   const [copied, setCopied] = useState(false)
-  const [canShare, setCanShare] = useState(false)
-
-  useEffect(() => {
-    setCanShare(typeof navigator !== 'undefined' && 'share' in navigator)
-  }, [])
+  const canShare = useSyncExternalStore(noop, getCanShareSnapshot, getCanShareServerSnapshot)
 
   const encodedUrl = encodeURIComponent(url)
   const encodedTitle = encodeURIComponent(title)
