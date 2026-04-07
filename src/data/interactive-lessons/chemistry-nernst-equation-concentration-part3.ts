@@ -18,87 +18,105 @@ A concentration cell is a special galvanic cell where both electrodes are the **
       content: `
 ## 🔧 How Concentration Cells Work
 
-### Setup
+### The Setup — Same Metal, Different Concentrations
 
-Both half-cells contain the same electrode and same ion, but at different concentrations:
+Both half-cells contain the **same electrode** and the **same ion** — the only difference is concentration:
 
-- Dilute side: $[\\text{M}^{n+}]_{\\text{dilute}}$
-- Concentrated side: $[\\text{M}^{n+}]_{\\text{conc}}$
-
+| | Dilute Side | Concentrated Side |
+|--|-------------|-------------------|
+| **Concentration** | $[\\text{M}^{n+}]_{\\text{dilute}}$ (low) | $[\\text{M}^{n+}]_{\\text{conc}}$ (high) |
+| **Role** | Anode (oxidation) | Cathode (reduction) |
+| **What happens** | Metal dissolves → ions enter solution | Ions plate out → metal deposits |
+| **Concentration changes** | Increases ⬆️ | Decreases ⬇️ |
 
 ---
 
-### E° = 0!
+### ⚡ E° = 0 — But the Cell Still Works!
 
-Since both half-reactions are identical, $E° = 0$:
+Since both half-reactions are identical:
 
 $$E°_{\\text{cell}} = E°_{\\text{cathode}} - E°_{\\text{anode}} = E° - E° = 0$$
 
+> 🔑 So where does the voltage come from? **Entirely from the concentration difference!**
 
 ---
 
-### The Nernst Equation Gives the Voltage
+### 📐 The Nernst Equation for Concentration Cells
+
+Starting from the Nernst equation with $E° = 0$:
 
 $$E = 0 - \\frac{0.0592}{n}\\log Q = -\\frac{0.0592}{n}\\log\\frac{[\\text{dilute}]}{[\\text{conc}]}$$
 
-$$E = \\frac{0.0592}{n}\\log\\frac{[\\text{conc}]}{[\\text{dilute}]}$$
+Flipping the fraction removes the negative sign:
 
+$$\\boxed{E = \\frac{0.0592}{n}\\log\\frac{[\\text{conc}]}{[\\text{dilute}]}}$$
+
+> 💡 The bigger the concentration ratio, the higher the voltage. A 10× ratio gives $0.0592/n$ V per factor of 10.
 
 ---
 
-### Which Side Is Which?
+### 🧭 Why Does Dilute = Anode?
 
-- **Anode** (oxidation): the **dilute** side — metal dissolves to increase $[\\text{M}^{n+}]$
-- **Cathode** (reduction): the **concentrated** side — $\\text{M}^{n+}$ deposits to decrease concentration
-- The cell drives toward **equal** concentrations (equilibrium)
+The system wants to reach **equilibrium** (equal concentrations). It does this by:
+
+1. **Dissolving** metal on the dilute side → increases $[\\text{M}^{n+}]$ there (oxidation = anode)
+2. **Plating out** ions on the concentrated side → decreases $[\\text{M}^{n+}]$ there (reduction = cathode)
+3. **Equilibrium** is reached when both sides are equal → $Q = 1$ → $E = 0$
       `
     },
     {
       id: 'ne3-worked-example',
       type: 'text' as const,
       content: `
-## 🧪 Worked Example
+## 🧪 Worked Example — Copper Concentration Cell
 
-A Cu concentration cell at 25°C:
+### The Problem
 
-- Left compartment: $[\\text{Cu}^{2+}] = 0.010$ M
-- Right compartment: $[\\text{Cu}^{2+}] = 1.0$ M
+A Cu/Cu²⁺ concentration cell at 25°C:
 
-$n = 2$ (Cu²⁺ + 2e⁻ → Cu)
+| Compartment | $[\\text{Cu}^{2+}]$ | Role |
+|-------------|---------------------|------|
+| Left | $0.010$ M (dilute) | Anode |
+| Right | $1.0$ M (concentrated) | Cathode |
 
-
----
-
-### Step 1: Identify Anode and Cathode
-
-- Dilute side (0.010 M) = **anode** (oxidation)
-- Concentrated side (1.0 M) = **cathode** (reduction)
-
+**Given:** $n = 2$ (from $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$), $E° = 0$
 
 ---
 
-### Step 2: Calculate Q
+### Step 1 — Identify Anode and Cathode
+
+> Dilute side = **anode** (metal dissolves to increase concentration)
+> Concentrated side = **cathode** (ions plate out to decrease concentration)
+
+---
+
+### Step 2 — Calculate the Reaction Quotient
 
 $$Q = \\frac{[\\text{Cu}^{2+}]_{\\text{anode}}}{[\\text{Cu}^{2+}]_{\\text{cathode}}} = \\frac{0.010}{1.0} = 0.010$$
 
-
 ---
 
-### Step 3: Apply Nernst
+### Step 3 — Apply the Nernst Equation
 
 $$E = 0 - \\frac{0.0592}{2}\\log(0.010)$$
-$$= -0.0296 \\times (-2) = +0.0592 \\text{ V}$$
 
-The cell produces 59.2 mV. Small but measurable!
+$$E = -0.0296 \\times (-2.00)$$
 
+$$\\boxed{E = +0.0592 \\text{ V} = 59.2 \\text{ mV}}$$
+
+> 📏 Small but measurable! This is exactly the principle behind **pH meters** and **ion-selective electrodes**.
 
 ---
 
-### What Happens Over Time?
+### ⏱️ What Happens Over Time?
 
-- Dilute side: $[\\text{Cu}^{2+}]$ increases (Cu dissolves)
-- Concentrated side: $[\\text{Cu}^{2+}]$ decreases (Cu²⁺ plates out)
-- Eventually: both sides equal → $E = 0$ (equilibrium)
+| Time | Dilute Side | Concentrated Side | $E$ |
+|------|-------------|-------------------|-----|
+| Start | 0.010 M | 1.0 M | 59.2 mV |
+| Running | Increases ⬆️ | Decreases ⬇️ | Decreasing |
+| Equilibrium | ~0.505 M | ~0.505 M | **0 mV** |
+
+> The cell **spontaneously equalizes** the concentrations — just like entropy demands!
       `
     },
     {

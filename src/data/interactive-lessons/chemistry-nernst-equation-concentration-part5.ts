@@ -16,73 +16,93 @@ Batteries are galvanic cells engineered for practical use. Understanding the che
       id: 'ne5-primary',
       type: 'text' as const,
       content: `
-## 📌 Primary Batteries (Non-Rechargeable)
+## � Primary Batteries (Non-Rechargeable)
 
-Primary batteries involve **irreversible** reactions — once the reactants are consumed, the battery is dead.
-
-
----
-
-### Alkaline Battery (Zinc-Manganese Dioxide)
-
-**Anode:** $\\text{Zn}(s) + 2\\text{OH}^-(aq) \\rightarrow \\text{ZnO}(s) + \\text{H}_2\\text{O}(l) + 2e^-$
-
-**Cathode:** $2\\text{MnO}_2(s) + \\text{H}_2\\text{O}(l) + 2e^- \\rightarrow \\text{Mn}_2\\text{O}_3(s) + 2\\text{OH}^-(aq)$
-
-**$E \\approx 1.5$ V per cell**
-
-- Most common household battery (AA, AAA, C, D)
-- Uses alkaline (KOH) electrolyte
-- Cannot be recharged (structural changes are irreversible)
-
+> **One-way trip!** Primary batteries involve **irreversible** reactions — once the reactants are consumed, the battery is dead. You use it, then recycle it.
 
 ---
 
-### Zinc-Air Battery
+### ⚡ Alkaline Battery — The Household Workhorse
 
-- Uses oxygen from air as the cathode reactant
-- Very high energy density (used in hearing aids)
-- $E \\approx 1.4$ V
+| | Detail |
+|--|--------|
+| **Anode** | $\\text{Zn}(s) + 2\\text{OH}^-(aq) \\rightarrow \\text{ZnO}(s) + \\text{H}_2\\text{O}(l) + 2e^-$ |
+| **Cathode** | $2\\text{MnO}_2(s) + \\text{H}_2\\text{O}(l) + 2e^- \\rightarrow \\text{Mn}_2\\text{O}_3(s) + 2\\text{OH}^-(aq)$ |
+| **Voltage** | $E \\approx 1.5$ V per cell |
+| **Electrolyte** | KOH (alkaline) |
+| **Sizes** | AA, AAA, C, D, 9V |
+
+> 💡 **Why can't you recharge it?** The solid products ($\\text{ZnO}$, $\\text{Mn}_2\\text{O}_3$) undergo structural changes that can't be cleanly reversed.
+
+---
+
+### 🌬️ Zinc-Air Battery — Breathing Electricity
+
+| Feature | Detail |
+|---------|--------|
+| **Secret weapon** | Uses $\\text{O}_2$ from the air as the cathode reactant |
+| **Voltage** | $E \\approx 1.4$ V |
+| **Energy density** | Extremely high (less weight = no stored oxidant) |
+| **Common use** | Hearing aids, medical devices |
+
+> 🔑 **AP Tip:** Zinc-air is a favorite exam topic because it blurs the line between a battery and a fuel cell — the oxidant ($\\text{O}_2$) comes from outside!
       `
     },
     {
       id: 'ne5-secondary',
       type: 'text' as const,
       content: `
-## 📌 Secondary Batteries (Rechargeable)
+## � Secondary Batteries (Rechargeable)
 
-Secondary batteries involve **reversible** reactions — applying external voltage reverses the cell chemistry.
-
-
----
-
-### Lead-Acid Battery (Car Battery)
-
-**Anode:** $\\text{Pb}(s) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{PbSO}_4(s) + 2e^-$
-
-**Cathode:** $\\text{PbO}_2(s) + 4\\text{H}^+(aq) + \\text{SO}_4^{2-}(aq) + 2e^- \\rightarrow \\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l)$
-
-**$E \\approx 2.0$ V per cell** (6 cells in series → 12 V car battery)
-
+> **Round trip!** Secondary batteries involve **reversible** reactions — applying external voltage reverses the cell chemistry, restoring the original reactants.
 
 ---
 
-### Lithium-Ion Battery (Li-ion)
+### 🚗 Lead-Acid Battery — Under Every Hood
 
-- Used in phones, laptops, electric vehicles
-- $E \\approx 3.7$ V per cell
-- Li⁺ ions shuttle between graphite anode and metal oxide cathode
-- Lightweight, high energy density
-- **Intercalation**: Li⁺ inserts into layered structures without destroying them
+| | Detail |
+|--|--------|
+| **Anode** | $\\text{Pb}(s) + \\text{SO}_4^{2-}(aq) \\rightarrow \\text{PbSO}_4(s) + 2e^-$ |
+| **Cathode** | $\\text{PbO}_2(s) + 4\\text{H}^+(aq) + \\text{SO}_4^{2-}(aq) + 2e^- \\rightarrow \\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l)$ |
+| **Voltage** | $E \\approx 2.0$ V per cell |
+| **Car battery** | 6 cells in series → **12 V** |
 
+> 💡 **Exam alert:** Both electrodes produce $\\text{PbSO}_4$ — so as the battery discharges, $[\\text{H}_2\\text{SO}_4]$ decreases. That's why mechanics test battery health with a hydrometer!
 
 ---
 
-### Nickel-Metal Hydride (NiMH)
+### 📱 Lithium-Ion Battery — The Modern Standard
 
-- Used in hybrid cars, rechargeable AA batteries
-- $E \\approx 1.2$ V per cell
-- More environmentally friendly than older Ni-Cd batteries
+| Feature | Detail |
+|---------|--------|
+| **Voltage** | $E \\approx 3.7$ V per cell (highest of common rechargeables!) |
+| **Uses** | Phones, laptops, electric vehicles, power tools |
+| **Mechanism** | Li⁺ shuttles between graphite anode and metal oxide cathode |
+| **Energy density** | Very high — lightweight yet powerful |
+
+> 🔑 **Key term — Intercalation:** Li⁺ ions slip *between* layers of the electrode material without breaking the crystal structure. This is what makes Li-ion reversible and long-lasting.
+
+---
+
+### 🔋 Nickel-Metal Hydride (NiMH)
+
+| Feature | Detail |
+|---------|--------|
+| **Voltage** | $E \\approx 1.2$ V per cell |
+| **Uses** | Hybrid cars (Toyota Prius), rechargeable AA/AAA |
+| **Advantage** | More eco-friendly than older Ni-Cd batteries |
+
+---
+
+### ⚖️ Quick Comparison
+
+| Battery | Type | $E$ per cell | Rechargeable? | Key Use |
+|---------|------|:------------:|:-------------:|---------|
+| Alkaline | Primary | 1.5 V | ❌ | Household |
+| Zinc-Air | Primary | 1.4 V | ❌ | Hearing aids |
+| Lead-Acid | Secondary | 2.0 V | ✅ | Cars |
+| Li-ion | Secondary | 3.7 V | ✅ | Electronics |
+| NiMH | Secondary | 1.2 V | ✅ | Hybrids |
       `
     },
     {

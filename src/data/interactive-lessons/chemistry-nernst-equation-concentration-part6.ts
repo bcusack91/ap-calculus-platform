@@ -114,7 +114,7 @@ This workshop provides practice with the Nernst equation, concentration cells, t
         dropdowns: [
           {
             label: 'To find cell voltage at non-standard conditions, use',
-            options: ['E° = (0.0592/n) log K', 'E = E° − (0.0592/n) log Q', 'ΔG° = −nFE°', 'E°_cell = E°_cathode − E°_anode']
+            options: ['E° = (0.0592/n) log K', 'E = E° − (0.0592/n) log Q', 'ΔG° = −nFE°', 'E°(cell) = E°(cathode) − E°(anode)']
           },
           {
             label: 'For a concentration cell with a 1000× ratio and n = 1, E equals',

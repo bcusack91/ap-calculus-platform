@@ -7,9 +7,17 @@ export const chemNernstEquationConcentrationPart1Data = {
       content: `
 # 📉 Non-Standard Conditions — The Nernst Equation
 
-**Part 1 of 7 — E = E° − (RT/nF) ln Q**
+**Part 1 of 7 — Beyond Standard Potentials**
 
-Standard cell potentials ($E°$) apply only when all concentrations are 1 M and all pressures are 1 atm. Real cells rarely operate at standard conditions. The Nernst equation tells us the cell potential at **any** set of conditions.
+---
+
+Standard cell potentials ($E°$) apply only at **standard conditions**: all concentrations at 1 M and all gas pressures at 1 atm. But real batteries and cells almost never operate under those ideal conditions.
+
+> 🔑 The **Nernst equation** lets us calculate the actual cell potential at **any** set of concentrations or pressures.
+
+$$\\boxed{E = E° - \\frac{RT}{nF}\\ln Q}$$
+
+This single equation connects **thermodynamics**, **equilibrium**, and **electrochemistry** into one powerful relationship.
       `
     },
     {
@@ -18,42 +26,64 @@ Standard cell potentials ($E°$) apply only when all concentrations are 1 M and 
       content: `
 ## 🔋 Deriving the Nernst Equation
 
-We know:
+### Starting Point — Free Energy and Equilibrium
+
+We know from thermodynamics:
+
 $$\\Delta G = \\Delta G° + RT\\ln Q$$
 
-And: $\\Delta G = -nFE$ and $\\Delta G° = -nFE°$
+And from electrochemistry:
 
-Substituting:
-$$-nFE = -nFE° + RT\\ln Q$$
-
-Dividing by $-nF$:
-
-$$\\boxed{E = E° - \\frac{RT}{nF}\\ln Q}$$
-
+$$\\Delta G = -nFE \\qquad \\text{and} \\qquad \\Delta G° = -nFE°$$
 
 ---
 
-### Variables
+### The Derivation
 
-| Symbol | Meaning | Value |
-|--------|---------|-------|
+Substituting both into the free energy equation:
+
+$$-nFE = -nFE° + RT\\ln Q$$
+
+Dividing every term by $-nF$:
+
+$$\\boxed{E = E° - \\frac{RT}{nF}\\ln Q}$$
+
+> 💡 This is the **general form** of the Nernst equation — valid at any temperature.
+
+---
+
+### 📊 Key Variables
+
+| Symbol | Meaning | Value / Units |
+|--------|---------|---------------|
 | $E$ | Cell potential at current conditions | V |
 | $E°$ | Standard cell potential | V |
 | $R$ | Gas constant | $8.314$ J/(mol·K) |
 | $T$ | Temperature | K |
-| $n$ | Moles of electrons transferred | — |
-| $F$ | Faraday\'s constant | $96{,}485$ C/mol |
-| $Q$ | Reaction quotient | — |
+| $n$ | Moles of $e^-$ transferred | dimensionless |
+| $F$ | Faraday\\'s constant | $96{,}485$ C/mol $e^-$ |
+| $Q$ | Reaction quotient | dimensionless |
+
+---
+
+### 🧮 At 25°C (298 K) — The Simplified Form
+
+At room temperature, the constants combine to give:
+
+$$E = E° - \\frac{0.0257}{n}\\ln Q \\qquad \\text{or} \\qquad E = E° - \\frac{0.0592}{n}\\log Q$$
+
+> The second form uses $\\log$ (base 10) instead of $\\ln$ — both are commonly seen on exams.
       `
     },
     {
       id: 'ne1-interpretation',
       type: 'text' as const,
       content: `
-## 🔋 Interpreting the Nernst Equation
+## 🧭 Interpreting the Nernst Equation
 
 $$E = E° - \\frac{RT}{nF}\\ln Q$$
 
+The correction term $\\frac{RT}{nF}\\ln Q$ shifts $E$ up or down from $E°$ depending on the value of $Q$.
 
 ---
 
@@ -61,49 +91,65 @@ $$E = E° - \\frac{RT}{nF}\\ln Q$$
 
 | Condition | $Q$ | $\\ln Q$ | Effect on $E$ |
 |-----------|-----|---------|--------------|
-| Mostly reactants | $Q < 1$ | Negative | $E > E°$ (higher voltage) |
-| Standard conditions | $Q = 1$ | Zero | $E = E°$ |
-| Mostly products | $Q > 1$ | Positive | $E < E°$ (lower voltage) |
-| At equilibrium | $Q = K$ | — | $E = 0$ |
-
+| Mostly **reactants** | $Q < 1$ | Negative | $E > E°$ — **higher** voltage ⬆️ |
+| **Standard** conditions | $Q = 1$ | Zero | $E = E°$ — no correction |
+| Mostly **products** | $Q > 1$ | Positive | $E < E°$ — **lower** voltage ⬇️ |
+| At **equilibrium** | $Q = K$ | — | $E = 0$ — cell is dead 💀 |
 
 ---
 
-### Key Insight
+### 🔑 Key Insight — Why Batteries Die
 
 As a galvanic cell operates:
-1. Reactants are consumed → $Q$ increases
-2. $E$ decreases as $Q$ → $K$
-3. When $Q = K$: $E = 0$ — the battery is "dead"
 
-A "dead" battery is simply a cell that has reached equilibrium!
+1. **Reactants are consumed** → $Q$ increases
+2. **$E$ decreases** as $Q$ approaches $K$
+3. **When $Q = K$:** $E = 0$ — the battery is "dead"
+
+> A "dead" battery is simply a cell that has **reached equilibrium** — there is no longer any thermodynamic driving force for the reaction.
       `
     },
     {
       id: 'ne1-worked-example',
       type: 'text' as const,
       content: `
-## 🧪 Worked Example
+## 🧪 Worked Example — Daniell Cell
 
-For the Daniell cell: $\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$
+For the Daniell cell:
 
-$E° = +1.10$ V, $n = 2$
+$$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$$
 
-Find $E$ when $[\\text{Zn}^{2+}] = 0.10$ M, $[\\text{Cu}^{2+}] = 2.0$ M at 298 K.
+**Given:** $E° = +1.10$ V, $n = 2$, $T = 298$ K
 
-**Step 1: Write Q** (solids are excluded)
+**Find** $E$ when $[\\text{Zn}^{2+}] = 0.10$ M and $[\\text{Cu}^{2+}] = 2.0$ M.
+
+---
+
+### Step 1 — Write the Reaction Quotient
+
+> Remember: solids are excluded from $Q$!
 
 $$Q = \\frac{[\\text{Zn}^{2+}]}{[\\text{Cu}^{2+}]} = \\frac{0.10}{2.0} = 0.050$$
 
-**Step 2: Apply Nernst Equation**
+---
+
+### Step 2 — Apply the Nernst Equation
+
+$$E = E° - \\frac{RT}{nF}\\ln Q$$
 
 $$E = 1.10 - \\frac{(8.314)(298)}{(2)(96{,}485)}\\ln(0.050)$$
 
 $$E = 1.10 - \\frac{2478}{192{,}970}(-3.00)$$
 
-$$E = 1.10 - (0.01284)(-3.00) = 1.10 + 0.039 = 1.14 \\text{ V}$$
+$$E = 1.10 - (0.01284)(-3.00) = 1.10 + 0.039$$
 
-$E > E°$ because $Q < 1$ — there are excess reactants (Cu²⁺), driving a higher voltage.
+$$\\boxed{E = 1.14 \\text{ V}}$$
+
+---
+
+### Step 3 — Check the Result
+
+> ✅ $E > E°$ because $Q < 1$ — there are **excess reactants** ($\\text{Cu}^{2+}$ is high), which drives a **higher voltage** than standard conditions.
       `
     },
     {

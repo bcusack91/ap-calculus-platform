@@ -7,9 +7,24 @@ export const chemNernstEquationConcentrationPart4Data = {
       content: `
 # 🔗 Relationship Between E° and K
 
-**Part 4 of 7 — E° = (0.0592/n) log K**
+**Part 4 of 7**
 
-At equilibrium, $E = 0$ and $Q = K$. This gives us a direct relationship between the standard cell potential and the equilibrium constant — one of the most tested connections on the AP exam.
+At equilibrium, the cell potential drops to zero ($E = 0$) and the reaction quotient equals the equilibrium constant ($Q = K$). Substituting into the Nernst equation gives one of the most powerful connections in electrochemistry:
+
+$$\\boxed{E° = \\frac{0.0592}{n}\\log K \\quad \\text{(at 25°C)}}$$
+
+> 🔑 **Know any one of $\\Delta G°$, $E°$, or $K$ — and you can calculate the other two.** This is the "Thermodynamic Triangle" and it's one of the most frequently tested relationships on the AP exam.
+
+---
+
+### 🗺️ What You'll Learn in This Section
+
+| Concept | Key Idea |
+|---------|----------|
+| **Derivation** | Start from Nernst → set $E = 0$, $Q = K$ |
+| **Sign of E° → Size of K** | Even small positive $E°$ gives enormous $K$ |
+| **Worked Examples** | Calculate $K$ from $E°$ and vice versa |
+| **Thermo Triangle** | $\\Delta G° \\leftrightarrow E° \\leftrightarrow K$ |
       `
     },
     {
