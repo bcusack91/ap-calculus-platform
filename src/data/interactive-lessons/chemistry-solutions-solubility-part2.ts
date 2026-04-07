@@ -28,7 +28,7 @@ $$M = \\frac{\\text{moles of solute}}{\\text{liters of solution}}$$
 
 Dissolve 4.00 g of NaOH ($M_{\\text{NaOH}} = 40.00$ g/mol) in enough water to make 500.0 mL of solution.
 
-$$n = \\frac{4.00}{40.00} = 0.100 \\text{ mol}$$
+$$n = 4.00 \\; \\cancel{\\text{g NaOH}} \\times \\frac{1 \\text{ mol NaOH}}{40.00 \\; \\cancel{\\text{g NaOH}}} = 0.100 \\text{ mol NaOH}$$
 
 $$M = \\frac{0.100 \\text{ mol}}{0.5000 \\text{ L}} = 0.200 \\text{ M}$$
 
@@ -53,7 +53,7 @@ $$m = \\frac{\\text{moles of solute}}{\\text{kilograms of solvent}}$$
 
 Dissolve 18.0 g of glucose ($M_{\\text{glucose}} = 180.16$ g/mol) in 250.0 g of water.
 
-$$n = \\frac{18.0}{180.16} = 0.0999 \\text{ mol}$$
+$$n = 18.0 \\; \\cancel{\\text{g glucose}} \\times \\frac{1 \\text{ mol glucose}}{180.16 \\; \\cancel{\\text{g glucose}}} = 0.0999 \\text{ mol glucose}$$
 
 $$m = \\frac{0.0999 \\text{ mol}}{0.2500 \\text{ kg}} = 0.400 \\; m$$
 
@@ -152,13 +152,13 @@ $$\\text{ppm} = \\frac{\\text{mass of solute}}{\\text{mass of solution}} \\times
       content: `
 **Concentration Calculations** 🧮
 
-Use: Na = 22.99, Cl = 35.45, O = 16.00, H = 1.008, C = 12.01
+> **Given:** Na = 22.99, Cl = 35.45, O = 16.00, H = 1.008, C = 12.01
 
-1) What is the molarity of a solution prepared by dissolving 11.7 g of NaCl ($M = 58.44$ g/mol) in water to make 250.0 mL of solution? (to 3 significant figures, in mol/L)
+**1)** What is the molarity of a solution prepared by dissolving 11.7 g of NaCl ($M = 58.44$ g/mol) in water to make 250.0 mL of solution? (to 3 significant figures, in mol/L)
 
-2) What is the molality of a solution made by dissolving 36.0 g of glucose ($M = 180.16$ g/mol) in 500.0 g of water? (to 3 significant figures, in mol/kg)
+**2)** What is the molality of a solution made by dissolving 36.0 g of glucose ($M = 180.16$ g/mol) in 500.0 g of water? (to 3 significant figures, in mol/kg)
 
-3) What is the mass percent of a solution containing 8.0 g of NaOH in 200.0 g of solution? (to 3 significant figures)
+**3)** What is the mass percent of a solution containing 8.0 g of NaOH in 200.0 g of solution? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

@@ -193,11 +193,11 @@ At a certain temperature, the following data are collected at equilibrium:
 | I₂ | 0.20 |
 | HI | 0.40 |
 
-1) What is the rate of the forward reaction compared to the reverse reaction at equilibrium? (Enter "equal")
+**1)** What is the rate of the forward reaction compared to the reverse reaction at equilibrium? (Enter "equal")
 
-2) If the forward reaction rate is $2.0 \\times 10^{-3}$ M/s, what is the reverse reaction rate in M/s? (Enter as a decimal, e.g. 0.002)
+**2)** If the forward reaction rate is $2.0 \\times 10^{-3}$ M/s, what is the reverse reaction rate in M/s? (Enter as a decimal, e.g. 0.002)
 
-3) Is the concentration of HI changing at equilibrium? (Enter "no")
+**3)** Is the concentration of HI changing at equilibrium? (Enter "no")
 
 *Round all answers to 3 significant figures.*
       `,

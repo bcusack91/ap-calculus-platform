@@ -160,11 +160,11 @@ Gold requires **aqua regia** (a mixture of HNO₃ and HCl) — ordinary acids ca
 
 Will a reaction occur? Type **yes** or **no**.
 
-1) Ag(s) + CuSO₄(aq) → ?
+**1)** Ag(s) + CuSO₄(aq) → ?
 
-2) Mg(s) + FeCl₂(aq) → ?
+**2)** Mg(s) + FeCl₂(aq) → ?
 
-3) Fe(s) + HCl(aq) → ?
+**3)** Fe(s) + HCl(aq) → ?
       `,
       exercise: {
         boxes: 3,

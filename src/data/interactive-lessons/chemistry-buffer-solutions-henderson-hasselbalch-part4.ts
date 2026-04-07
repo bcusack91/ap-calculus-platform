@@ -118,11 +118,11 @@ Outside this range, one component is less than 10% of the other. There\'s not en
 
 A buffer contains 0.40 mol $CH_3COOH$ and 0.60 mol $CH_3COO^-$ in 2.0 L. ($pK_a = 4.74$)
 
-1) What is the maximum moles of $HCl$ this buffer can absorb? (2 decimal places)
+**1)** What is the maximum moles of $HCl$ this buffer can absorb? (2 decimal places)
 
-2) What is the maximum moles of $NaOH$ this buffer can absorb? (2 decimal places)
+**2)** What is the maximum moles of $NaOH$ this buffer can absorb? (2 decimal places)
 
-3) What is the pH after adding 0.30 mol $NaOH$? (2 decimal places)
+**3)** What is the pH after adding 0.30 mol $NaOH$? (2 decimal places)
       `,
       exercise: {
         boxes: 3,

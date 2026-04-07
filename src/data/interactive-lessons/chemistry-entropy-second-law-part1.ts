@@ -146,11 +146,11 @@ Unlike energy, entropy can be **created** (in irreversible processes). The total
       content: `
 **Microstate Counting** 🧮
 
-1) How many microstates does a system of 3 coins have? ($W = 2^n$)
+**1)** How many microstates does a system of 3 coins have? ($W = 2^n$)
 
-2) For 4 coins, what fraction of microstates have ALL heads? (express as a simplified fraction like 1/16)
+**2)** For 4 coins, what fraction of microstates have ALL heads? (express as a simplified fraction like 1/16)
 
-3) If system A has $W = 100$ microstates and system B has $W = 200$ microstates, which has higher entropy? (type A or B)
+**3)** If system A has $W = 100$ microstates and system B has $W = 200$ microstates, which has higher entropy? (type A or B)
       `,
       exercise: {
         boxes: 3,

@@ -49,19 +49,25 @@ At STP (0°C = 273.15 K, 1.00 atm):
 
 ### Example 1: Volume at STP
 
-What volume does 0.750 mol of CO₂ occupy at STP?
+> **Problem:** What volume does 0.750 mol of CO₂ occupy at STP?
+
+**Solution:**
 
 $$V = 0.750 \\times 22.4 = 16.8 \\text{ L}$$
 
 ### Example 2: Moles from Volume at STP
 
-A sample of gas occupies 5.60 L at STP. How many moles?
+> **Problem:** A sample of gas occupies 5.60 L at STP. How many moles?
 
-$$n = \\frac{5.60}{22.4} = 0.250 \\text{ mol}$$
+**Solution:**
+
+$$n = \frac{5.60}{22.4} = 0.250 \text{ mol}$$
 
 ### Example 3: Combined Gas Law
 
-A gas at 2.00 atm, 10.0 L, and 300 K is changed to 1.00 atm and 600 K. New volume?
+> **Problem:** A gas at 2.00 atm, 10.0 L, and 300 K is changed to 1.00 atm and 600 K. New volume?
+
+**Solution:**
 
 $$V_2 = \\frac{P_1V_1T_2}{T_1P_2} = \\frac{(2.00)(10.0)(600)}{(300)(1.00)} = 40.0 \\text{ L}$$
       `
@@ -78,7 +84,9 @@ $$\\text{grams} \\rightarrow \\text{moles} \\rightarrow \\text{mole ratio} \\rig
 
 ### Example
 
-How many liters of O₂ at 25°C and 1.00 atm are produced from the decomposition of 49.0 g of KClO₃?
+> **Problem:** How many liters of O₂ at 25°C and 1.00 atm are produced from the decomposition of 49.0 g of KClO₃?
+
+**Solution:**
 
 $$2\\text{KClO}_3 \\rightarrow 2\\text{KCl} + 3\\text{O}_2$$
 
@@ -142,11 +150,11 @@ $$V = \\frac{nRT}{P} = \\frac{(0.600)(0.0821)(298.15)}{1.00} = 14.7 \\text{ L}$$
       content: `
 **Calculation Workshop** 🧮
 
-1) A 5.00 L gas sample at 2.00 atm and 400 K is cooled to 200 K and compressed to 1.00 L. What is the new pressure? (in atm)
+**1)** A 5.00 L gas sample at 2.00 atm and 400 K is cooled to 200 K and compressed to 1.00 L. What is the new pressure? (in atm)
 
-2) At STP, how many grams of CO₂ ($M = 44.01$ g/mol) occupy 11.2 L? (in g, to 3 significant figures)
+**2)** At STP, how many grams of CO₂ ($M = 44.01$ g/mol) occupy 11.2 L? (in g, to 3 significant figures)
 
-3) A mixture of 0.30 mol He and 0.70 mol Ar has a total pressure of 5.00 atm. What is the partial pressure of Ar? (in atm)
+**3)** A mixture of 0.30 mol He and 0.70 mol Ar has a total pressure of 5.00 atm. What is the partial pressure of Ar? (in atm)
       `,
       exercise: {
         inputs: [

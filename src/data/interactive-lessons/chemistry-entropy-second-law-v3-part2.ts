@@ -31,11 +31,11 @@ This is why $S$ always increases with temperature — there are no exceptions.
     { id: 'en2v3-practice', type: 'input-boxes' as const, content: `
 **Microstate Problems** 🧮
 
-1) 8 molecules can each be in the left or right half of a container. Total microstates = $2^8$ = ?
+**1)** 8 molecules can each be in the left or right half of a container. Total microstates = $2^8$ = ?
 
-2) Of those, exactly 1 has all molecules on the left. What is the probability of this? Express as 1/[your answer].
+**2)** Of those, exactly 1 has all molecules on the left. What is the probability of this? Express as 1/[your answer].
 
-3) The number of microstates with exactly 4 on each side is $\\binom{8}{4} = 70$. What percentage of total microstates is this? Round to nearest whole number.
+**3)** The number of microstates with exactly 4 on each side is $\\binom{8}{4} = 70$. What percentage of total microstates is this? Round to nearest whole number.
     `, exercise: { boxes: 3, correctAnswers: ['256', '256', '27'],
         hint1: '$2^8 = 256$',
         hint2: 'Probability = 1/total microstates for the specific configuration.',

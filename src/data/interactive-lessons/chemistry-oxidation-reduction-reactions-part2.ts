@@ -171,11 +171,11 @@ If **elements appear as reactants or products** (in their free state, oxidation 
 
 For the reaction: $\\text{2Al}(s) + 3\\text{Cl}_2(g) \\rightarrow 2\\text{AlCl}_3(s)$
 
-1) What element is oxidized? (type the element symbol)
+**1)** What element is oxidized? (type the element symbol)
 
-2) What element is reduced? (type the element symbol)
+**2)** What element is reduced? (type the element symbol)
 
-3) How many electrons are transferred per Al atom?
+**3)** How many electrons are transferred per Al atom?
       `,
       exercise: {
         boxes: 3,

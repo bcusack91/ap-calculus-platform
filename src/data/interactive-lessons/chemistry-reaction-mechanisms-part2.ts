@@ -204,11 +204,11 @@ Step 2: C + B → E + F (fast)
 Step 3: E → G + H (fast)
 Step 4: H + D → P + A (fast)
 
-1) How many intermediates? (count species that cancel)
+**1)** How many intermediates? (count species that cancel)
 
-2) Is A a catalyst, intermediate, or reactant? (enter: catalyst, intermediate, or reactant)
+**2)** Is A a catalyst, intermediate, or reactant? (enter: catalyst, intermediate, or reactant)
 
-3) How many transition states on the energy diagram? (enter a number)
+**3)** How many transition states on the energy diagram? (enter a number)
       `,
       exercise: {
         boxes: 3,

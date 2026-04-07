@@ -142,11 +142,11 @@ $$[HCl] = \\frac{2.775 \\times 10^{-3}}{0.0250} = 0.111 \\text{ M}$$
       content: `
 **Titration Calculations** 🧮
 
-1) 30.0 mL of 0.200 M $NaOH$ is titrated with 0.100 M $HCl$. What volume (mL) of $HCl$ is needed to reach the equivalence point?
+**1)** 30.0 mL of 0.200 M $NaOH$ is titrated with 0.100 M $HCl$. What volume (mL) of $HCl$ is needed to reach the equivalence point?
 
-2) After adding 20.0 mL of 0.100 M $NaOH$ to 40.0 mL of 0.100 M $HCl$, what is the pH? (2 decimal places)
+**2)** After adding 20.0 mL of 0.100 M $NaOH$ to 40.0 mL of 0.100 M $HCl$, what is the pH? (2 decimal places)
 
-3) After the equivalence point, 5.0 mL of excess 0.100 M $NaOH$ has been added to a total volume of 80.0 mL. What is the pH? (2 decimal places)
+**3)** After the equivalence point, 5.0 mL of excess 0.100 M $NaOH$ has been added to a total volume of 80.0 mL. What is the pH? (2 decimal places)
       `,
       exercise: {
         boxes: 3,

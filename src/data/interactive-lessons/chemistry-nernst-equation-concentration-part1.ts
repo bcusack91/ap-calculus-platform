@@ -149,11 +149,11 @@ $E > E°$ because $Q < 1$ — there are excess reactants (Cu²⁺), driving a hi
 
 For a cell with $E° = +0.80$ V and $n = 2$ at 298 K:
 
-1) If $Q = 1$, what is $E$? (in V)
+**1)** If $Q = 1$, what is $E$? (in V)
 
-2) If $Q = 100$, is $E$ greater than or less than $E°$? (type "greater" or "less")
+**2)** If $Q = 100$, is $E$ greater than or less than $E°$? (type "greater" or "less")
 
-3) If $Q = K$, what is $E$? (in V)
+**3)** If $Q = K$, what is $E$? (in V)
 
 *Round all answers to 3 significant figures.*
       `,

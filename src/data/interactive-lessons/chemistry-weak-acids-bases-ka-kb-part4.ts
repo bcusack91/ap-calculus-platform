@@ -59,7 +59,9 @@ $$K_b = \\frac{K_w}{K_a} = \\frac{1.0 \\times 10^{-14}}{K_a}$$
 
 ### Example
 
-$CH_3COOH$ has $K_a = 1.8 \\times 10^{-5}$. What is $K_b$ for $CH_3COO^-$?
+> **Problem:** $CH_3COOH$ has $K_a = 1.8 \\times 10^{-5}$. What is $K_b$ for $CH_3COO^-$?
+
+**Solution:**
 
 $$K_b = \\frac{1.0 \\times 10^{-14}}{1.8 \\times 10^{-5}} = 5.6 \\times 10^{-10}$$
 
@@ -121,11 +123,11 @@ $pK_b = 14 - 4.74 = 9.26$
       content: `
 **$K_a$/$K_b$ Conversion Drill** 🧮
 
-1) $HF$ has $K_a = 6.8 \\times 10^{-4}$. Find $K_b$ for $F^-$. (Enter in scientific notation, e.g. 1.5e-11)
+**1)** $HF$ has $K_a = 6.8 \\times 10^{-4}$. Find $K_b$ for $F^-$. (Enter in scientific notation, e.g. 1.5e-11)
 
-2) $NH_3$ has $K_b = 1.8 \\times 10^{-5}$. Find $K_a$ for $NH_4^+$. (Enter in scientific notation, e.g. 5.6e-10)
+**2)** $NH_3$ has $K_b = 1.8 \\times 10^{-5}$. Find $K_a$ for $NH_4^+$. (Enter in scientific notation, e.g. 5.6e-10)
 
-3) A weak acid has $pK_a = 3.75$. Find $pK_b$ for its conjugate base. (3 significant figures)
+**3)** A weak acid has $pK_a = 3.75$. Find $pK_b$ for its conjugate base. (3 significant figures)
       `,
       exercise: {
         boxes: 3,

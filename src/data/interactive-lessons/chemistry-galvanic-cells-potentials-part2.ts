@@ -166,11 +166,11 @@ In a **galvanic** cell:
 For a galvanic cell with the overall reaction:
 $\\text{Mg}(s) + \\text{Fe}^{2+}(aq) \\rightarrow \\text{Mg}^{2+}(aq) + \\text{Fe}(s)$
 
-1) Which metal is the anode? (type the element symbol)
+**1)** Which metal is the anode? (type the element symbol)
 
-2) Which metal is the cathode? (type the element symbol)
+**2)** Which metal is the cathode? (type the element symbol)
 
-3) How many electrons are transferred in the balanced reaction?
+**3)** How many electrons are transferred in the balanced reaction?
       `,
       exercise: {
         boxes: 3,

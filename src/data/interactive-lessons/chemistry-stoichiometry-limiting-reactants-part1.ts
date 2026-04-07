@@ -153,11 +153,11 @@ $$\\text{mol of B} = \\text{mol of A} \\times \\frac{\\text{coefficient of B}}{\
 
 Use the equation: $2\\text{C}_2\\text{H}_6 + 7\\text{O}_2 \\rightarrow 4\\text{CO}_2 + 6\\text{H}_2\\text{O}$
 
-1) How many moles of O₂ are needed to react with 5.0 mol C₂H₆? (to 3 significant figures)
+**1)** How many moles of O₂ are needed to react with 5.0 mol C₂H₆? (to 3 significant figures)
 
-2) How many moles of CO₂ are produced from 5.0 mol C₂H₆? (to 3 significant figures)
+**2)** How many moles of CO₂ are produced from 5.0 mol C₂H₆? (to 3 significant figures)
 
-3) How many moles of H₂O are produced from 3.5 mol O₂? (to 3 significant figures)
+**3)** How many moles of H₂O are produced from 3.5 mol O₂? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

@@ -28,7 +28,9 @@ Pressure and volume are **inversely proportional**. When you compress a gas (dec
 
 ### Example
 
-A gas occupies 4.00 L at 1.00 atm. What is the volume if the pressure increases to 2.00 atm?
+> **Problem:** A gas occupies 4.00 L at 1.00 atm. What is the volume if the pressure increases to 2.00 atm?
+
+**Solution:**
 
 $$V_2 = \\frac{P_1V_1}{P_2} = \\frac{(1.00)(4.00)}{2.00} = 2.00 \\text{ L}$$
 
@@ -51,7 +53,9 @@ Volume and temperature are **directly proportional** (temperature in Kelvin!). H
 
 ### Example
 
-A balloon has a volume of 2.50 L at 20°C. What volume will it have at 80°C? (Pressure constant)
+> **Problem:** A balloon has a volume of 2.50 L at 20°C. What volume will it have at 80°C? (Pressure constant)
+
+**Solution:**
 
 $$T_1 = 20 + 273.15 = 293.15 \\text{ K}, \\quad T_2 = 80 + 273.15 = 353.15 \\text{ K}$$
 
@@ -76,7 +80,9 @@ Volume and amount of gas (in moles) are **directly proportional**. More molecule
 
 ### Example
 
-3.00 mol of gas occupies 6.00 L. What volume will 5.00 mol occupy under the same conditions?
+> **Problem:** 3.00 mol of gas occupies 6.00 L. What volume will 5.00 mol occupy under the same conditions?
+
+**Solution:**
 
 $$V_2 = V_1 \\times \\frac{n_2}{n_1} = 6.00 \\times \\frac{5.00}{3.00} = 10.0 \\text{ L}$$
 
@@ -135,11 +141,11 @@ At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal g
       content: `
 **Gas Law Calculations** 🧮
 
-1) A gas at 3.00 atm occupies 12.0 L. What is the volume at 1.50 atm? (constant T and n, in L)
+**1)** A gas at 3.00 atm occupies 12.0 L. What is the volume at 1.50 atm? (constant T and n, in L)
 
-2) A gas occupies 500 mL at 27°C. What volume will it occupy at 127°C at constant pressure? (in mL, round to nearest whole number)
+**2)** A gas occupies 500 mL at 27°C. What volume will it occupy at 127°C at constant pressure? (in mL, round to nearest whole number)
 
-3) 4.00 mol of gas occupies 10.0 L at a given T and P. How many moles would occupy 25.0 L? (in mol, to 3 significant figures)
+**3)** 4.00 mol of gas occupies 10.0 L at a given T and P. How many moles would occupy 25.0 L? (in mol, to 3 significant figures)
       `,
       exercise: {
         inputs: [

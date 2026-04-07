@@ -58,7 +58,9 @@ Even small $E°$ values correspond to **enormous** equilibrium constants!
 
 ### Example 1: Find K from E°
 
-For the Daniell cell: $E° = 1.10$ V, $n = 2$
+> **Problem:** For the Daniell cell: $E° = 1.10$ V, $n = 2$
+
+**Solution:**
 
 $$\\log K = \\frac{nE°}{0.0592} = \\frac{(2)(1.10)}{0.0592} = 37.2$$
 
@@ -68,7 +70,9 @@ This enormous $K$ means the reaction goes essentially to completion.
 
 ### Example 2: Find E° from K
 
-A reaction has $K = 1.0 \\times 10^{10}$ and $n = 2$.
+> **Problem:** A reaction has $K = 1.0 \\times 10^{10}$ and $n = 2$.
+
+**Solution:**
 
 $$E° = \\frac{0.0592}{2}\\log(10^{10}) = 0.0296 \\times 10 = 0.296 \\text{ V}$$
 
@@ -132,11 +136,11 @@ All three quantities are interconnected:
 
 At 25°C:
 
-1) $E° = 0.46$ V, $n = 2$. Calculate $\\log K$. (to 3 significant figures)
+**1)** $E° = 0.46$ V, $n = 2$. Calculate $\\log K$. (to 3 significant figures)
 
-2) $K = 10^{20}$, $n = 4$. Calculate $E°$. (in V, to 3 significant figures)
+**2)** $K = 10^{20}$, $n = 4$. Calculate $E°$. (in V, to 3 significant figures)
 
-3) $E° = -0.10$ V, $n = 1$. Is $K$ greater or less than 1? (type "greater" or "less")
+**3)** $E° = -0.10$ V, $n = 1$. Is $K$ greater or less than 1? (type "greater" or "less")
       `,
       exercise: {
         boxes: 3,

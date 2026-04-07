@@ -171,11 +171,11 @@ $3\\,\\text{C}(g) \\rightleftharpoons 3\\,\\text{A}(g) + 3\\,\\text{B}(g)$, $K^{
 
 Given: $\\text{2 NO}(g) + \\text{O}_2(g) \\rightleftharpoons \\text{2 NO}_2(g)$, $K = 4.0 \\times 10^{6}$
 
-1) What is $K$ for the reverse reaction? (Use scientific notation like 2.5e-7)
+**1)** What is $K$ for the reverse reaction? (Use scientific notation like 2.5e-7)
 
-2) What is $K$ for $\\text{NO}(g) + \\frac{1}{2}\\text{O}_2(g) \\rightleftharpoons \\text{NO}_2(g)$? (Round to the nearest integer)
+**2)** What is $K$ for $\\text{NO}(g) + \\frac{1}{2}\\text{O}_2(g) \\rightleftharpoons \\text{NO}_2(g)$? (Round to the nearest integer)
 
-3) If $K_1 = 4.0 \\times 10^6$ and $K_2 = 2.0 \\times 10^3$, and you add the two reactions, what is $K_{\\text{overall}}$? (Use scientific notation like 8.0e9)
+**3)** If $K_1 = 4.0 \\times 10^6$ and $K_2 = 2.0 \\times 10^3$, and you add the two reactions, what is $K_{\\text{overall}}$? (Use scientific notation like 8.0e9)
       `,
       exercise: {
         boxes: 3,

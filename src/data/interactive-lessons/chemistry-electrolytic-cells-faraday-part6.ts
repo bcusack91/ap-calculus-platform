@@ -94,11 +94,11 @@ This combines all steps into one equation.
       content: `
 **Calculation Workshop** 🧮
 
-1) $I = 4.00$ A, $t = 50.0$ min. Total charge in coulombs?
+**1)** $I = 4.00$ A, $t = 50.0$ min. Total charge in coulombs?
 
-2) Using the charge from (1), how many grams of Ni deposit from Ni²⁺? ($n = 2$, $M_{\\text{Ni}} = 58.69$ g/mol) (to 3 significant figures)
+**2)** Using the charge from (1), how many grams of Ni deposit from Ni²⁺? ($n = 2$, $M_{\\text{Ni}} = 58.69$ g/mol) (to 3 significant figures)
 
-3) In the electrolysis of molten CaCl₂, what forms at the cathode? (type "Ca" or "Cl2")
+**3)** In the electrolysis of molten CaCl₂, what forms at the cathode? (type "Ca" or "Cl2")
       `,
       exercise: {
         boxes: 3,

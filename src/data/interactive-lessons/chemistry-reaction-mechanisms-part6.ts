@@ -83,11 +83,11 @@ An enzyme-catalyzed reaction has the mechanism:
 
 where E = enzyme, S = substrate, ES = enzyme-substrate complex, P = product.
 
-1) What is the intermediate? (enter formula)
+**1)** What is the intermediate? (enter formula)
 
-2) What is the catalyst? (enter formula)
+**2)** What is the catalyst? (enter formula)
 
-3) The derived rate law is Rate = $k_{obs}$[?][?]. Enter the two species. (separated by comma, alphabetically)
+**3)** The derived rate law is Rate = $k_{obs}$[?][?]. Enter the two species. (separated by comma, alphabetically)
       `,
       exercise: {
         boxes: 3,
@@ -163,11 +163,11 @@ A two-step mechanism has:
 
 If reactants start at energy = 0 kJ:
 
-1) What is the energy of the first transition state? (in kJ)
+**1)** What is the energy of the first transition state? (in kJ)
 
-2) What is the energy of the intermediate? (in kJ)
+**2)** What is the energy of the intermediate? (in kJ)
 
-3) What is the energy of the products? (in kJ)
+**3)** What is the energy of the products? (in kJ)
       `,
       exercise: {
         boxes: 3,

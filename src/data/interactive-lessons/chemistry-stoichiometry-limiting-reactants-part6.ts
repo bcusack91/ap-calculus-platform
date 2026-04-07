@@ -48,18 +48,18 @@ $$\\text{Fe}_2\\text{O}_3 + 2\\text{Al} \\rightarrow \\text{Al}_2\\text{O}_3 + 2
 
 ### Step 1: Convert to Moles
 
-- Moles Fe₂O₃: $50.0 / 159.7 = 0.3131$ mol
-- Moles Al: $30.0 / 26.98 = 1.112$ mol
+- Moles Fe₂O₃: $50.0 \\; \\cancel{\\text{g Fe}_2\\text{O}_3} \\times \\frac{1 \\text{ mol Fe}_2\\text{O}_3}{159.7 \\; \\cancel{\\text{g Fe}_2\\text{O}_3}} = 0.3131$ mol Fe₂O₃
+- Moles Al: $30.0 \\; \\cancel{\\text{g Al}} \\times \\frac{1 \\text{ mol Al}}{26.98 \\; \\cancel{\\text{g Al}}} = 1.112$ mol Al
 
 ### Step 2: Find Limiting Reactant
 
-- From Fe₂O₃: $0.3131 \\times \\frac{2}{1} = 0.6262$ mol Fe
-- From Al: $1.112 \\times \\frac{2}{2} = 1.112$ mol Fe
+- From Fe₂O₃: $0.3131 \\; \\cancel{\\text{mol Fe}_2\\text{O}_3} \\times \\frac{2 \\text{ mol Fe}}{1 \\; \\cancel{\\text{mol Fe}_2\\text{O}_3}} = 0.6262$ mol Fe
+- From Al: $1.112 \\; \\cancel{\\text{mol Al}} \\times \\frac{2 \\text{ mol Fe}}{2 \\; \\cancel{\\text{mol Al}}} = 1.112$ mol Fe
 - Fe₂O₃ produces less → **Fe₂O₃ is limiting**
 
 ### Step 3: Theoretical Yield
 
-$$m_{\\text{Fe}} = 0.6262 \\times 55.85 = 35.0 \\text{ g Fe}$$
+$$m_{\\text{Fe}} = 0.6262 \\; \\cancel{\\text{mol Fe}} \\times \\frac{55.85 \\text{ g Fe}}{1 \\; \\cancel{\\text{mol Fe}}} = 35.0 \\text{ g Fe}$$
 
 ### Step 4: Actual Yield
 
@@ -67,9 +67,9 @@ $$\\text{actual} = 35.0 \\times 0.78 = 27.3 \\text{ g Fe}$$
 
 ### Step 5: Excess Al Remaining
 
-Al consumed: $0.3131 \\times \\frac{2}{1} = 0.6262$ mol
+Al consumed: $0.3131 \\; \\cancel{\\text{mol Fe}_2\\text{O}_3} \\times \\frac{2 \\text{ mol Al}}{1 \\; \\cancel{\\text{mol Fe}_2\\text{O}_3}} = 0.6262$ mol Al
 
-Al remaining: $1.112 - 0.6262 = 0.486$ mol $= 0.486 \\times 26.98 = 13.1$ g
+Al remaining: $(1.112 - 0.6262) \\; \\cancel{\\text{mol Al}} \\times \\frac{26.98 \\text{ g Al}}{1 \\; \\cancel{\\text{mol Al}}} = 13.1$ g Al
       `
     },
     {
@@ -128,11 +128,11 @@ $M_{\\text{N}_2} = 28.02$ g/mol, $M_{\\text{H}_2} = 2.016$ g/mol, $M_{\\text{NH}
 
 A reaction starts with 28.02 g of N₂ and 8.064 g of H₂. Percent yield = 85%.
 
-1) Which is limiting? Type **N2** or **H2**. (Hint: calculate mol product from each)
+**1)** Which is limiting? Type **N2** or **H2**. (Hint: calculate mol product from each)
 
-2) What is the theoretical yield of NH₃ in grams? (to 3 significant figures)
+**2)** What is the theoretical yield of NH₃ in grams? (to 3 significant figures)
 
-3) What is the actual yield of NH₃ in grams? (to 3 significant figures)
+**3)** What is the actual yield of NH₃ in grams? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

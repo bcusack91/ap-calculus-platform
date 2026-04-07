@@ -153,11 +153,11 @@ An energy diagram shows:
 - Transition state at 250 kJ
 - Products at 60 kJ
 
-1) What is $E_a$ (forward)? (in kJ)
+**1)** What is $E_a$ (forward)? (in kJ)
 
-2) What is $\\Delta H$? (in kJ, include sign)
+**2)** What is $\\Delta H$? (in kJ, include sign)
 
-3) What is $E_a$ (reverse)? (in kJ)
+**3)** What is $E_a$ (reverse)? (in kJ)
       `,
       exercise: {
         boxes: 3,

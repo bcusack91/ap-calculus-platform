@@ -122,11 +122,11 @@ On the AP Chemistry exam, you may be asked to:
 
 For each scenario, identify the precipitate formed (write formula) or type **NR** if no reaction occurs.
 
-1) Solutions of iron(III) nitrate and sodium hydroxide are mixed.
+**1)** Solutions of iron(III) nitrate and sodium hydroxide are mixed.
 
-2) Solutions of ammonium chloride and potassium nitrate are mixed.
+**2)** Solutions of ammonium chloride and potassium nitrate are mixed.
 
-3) Solutions of lead(II) nitrate and sodium sulfate are mixed.
+**3)** Solutions of lead(II) nitrate and sodium sulfate are mixed.
       `,
       exercise: {
         boxes: 3,

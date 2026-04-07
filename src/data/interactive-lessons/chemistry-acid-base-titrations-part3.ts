@@ -155,11 +155,11 @@ $$pH = 14 - 5.28 = 8.72$$
 
 Titrating 40.0 mL of 0.150 M $HCOOH$ ($pK_a = 3.75$) with 0.150 M $NaOH$:
 
-1) What volume of $NaOH$ is needed to reach the equivalence point? (1 decimal place, mL)
+**1)** What volume of $NaOH$ is needed to reach the equivalence point? (1 decimal place, mL)
 
-2) What volume of $NaOH$ gives the half-equivalence point? (1 decimal place, mL)
+**2)** What volume of $NaOH$ gives the half-equivalence point? (1 decimal place, mL)
 
-3) What is the pH at the half-equivalence point? (2 decimal places)
+**3)** What is the pH at the half-equivalence point? (2 decimal places)
       `,
       exercise: {
         boxes: 3,

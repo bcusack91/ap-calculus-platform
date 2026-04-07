@@ -137,11 +137,11 @@ This workshop brings together all the redox skills: assigning oxidation states, 
 
 Determine the oxidation state change for the underlined element in each half-reaction.
 
-1) $\\text{Cr}_2\\text{O}_7^{2-} \\rightarrow \\text{Cr}^{3+}$: Each Cr changes from ____ to +3 (give initial oxidation state with sign)
+**1)** $\\text{Cr}_2\\text{O}_7^{2-} \\rightarrow \\text{Cr}^{3+}$: Each Cr changes from ____ to +3 (give initial oxidation state with sign)
 
-2) $\\text{I}^- \\rightarrow \\text{I}_2$: Each I changes from −1 to ____ (give final oxidation state with sign)
+**2)** $\\text{I}^- \\rightarrow \\text{I}_2$: Each I changes from −1 to ____ (give final oxidation state with sign)
 
-3) $\\text{SO}_3^{2-} \\rightarrow \\text{SO}_4^{2-}$: S changes from ____ to +6 (give initial oxidation state with sign)
+**3)** $\\text{SO}_3^{2-} \\rightarrow \\text{SO}_4^{2-}$: S changes from ____ to +6 (give initial oxidation state with sign)
       `,
       exercise: {
         boxes: 3,

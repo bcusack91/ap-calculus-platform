@@ -43,7 +43,7 @@ This workshop brings together all galvanic cell concepts: half-reactions, cell n
       content: `
 **Mixed Galvanic Cell Problems** 🎯
 
-Use: $\\text{Ag}^+/\\text{Ag} = +0.80$ V, $\\text{Zn}^{2+}/\\text{Zn} = -0.76$ V, $\\text{Fe}^{2+}/\\text{Fe} = -0.44$ V, $\\text{Cu}^{2+}/\\text{Cu} = +0.34$ V
+> **Given:** $\\text{Ag}^+/\\text{Ag} = +0.80$ V, $\\text{Zn}^{2+}/\\text{Zn} = -0.76$ V, $\\text{Fe}^{2+}/\\text{Fe} = -0.44$ V, $\\text{Cu}^{2+}/\\text{Cu} = +0.34$ V
       `,
       exercise: {
         questions: [
@@ -89,15 +89,15 @@ Use: $\\text{Ag}^+/\\text{Ag} = +0.80$ V, $\\text{Zn}^{2+}/\\text{Zn} = -0.76$ V
       content: `
 **Calculation Workshop** 🧮
 
-Use: $\\text{Cu}^{2+}/\\text{Cu} = +0.34$ V, $\\text{Fe}^{2+}/\\text{Fe} = -0.44$ V
+> **Given:** $\\text{Cu}^{2+}/\\text{Cu} = +0.34$ V, $\\text{Fe}^{2+}/\\text{Fe} = -0.44$ V
 
 For the cell: Fe(s) | Fe²⁺(aq) || Cu²⁺(aq) | Cu(s)
 
-1) $E°_{\\text{cell}} = ?$ (in V, to 3 significant figures)
+**1)** $E°_{\\text{cell}} = ?$ (in V, to 3 significant figures)
 
-2) $n = ?$ (electrons transferred)
+**2)** $n = ?$ (electrons transferred)
 
-3) $\\Delta G° = ?$ (in kJ, to nearest whole number)
+**3)** $\\Delta G° = ?$ (in kJ, to nearest whole number)
       `,
       exercise: {
         boxes: 3,
@@ -116,7 +116,7 @@ For the cell: Fe(s) | Fe²⁺(aq) || Cu²⁺(aq) | Cu(s)
 
 For the cell: Al(s) | Al³⁺(aq) || Ag⁺(aq) | Ag(s)
 
-Use: Al³⁺/Al = −1.66 V, Ag⁺/Ag = +0.80 V
+> **Given:** Al³⁺/Al = −1.66 V, Ag⁺/Ag = +0.80 V
       `,
       exercise: {
         dropdowns: [

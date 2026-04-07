@@ -266,11 +266,11 @@ For the AP exam, you need to know which ionic compounds are soluble in water:
       content: `
 **Exit Drill — Solution Terminology** 🧮
 
-1) In a solution of 5.0 g of sugar dissolved in 95.0 g of water, the solvent is water. What is the total mass of the solution in grams?
+**1)** In a solution of 5.0 g of sugar dissolved in 95.0 g of water, the solvent is water. What is the total mass of the solution in grams?
 
-2) At 25°C, the solubility of NaCl is 36.0 g per 100 g of water. If 30.0 g of NaCl is added to 100 g of water at 25°C, how many grams of NaCl dissolve?
+**2)** At 25°C, the solubility of NaCl is 36.0 g per 100 g of water. If 30.0 g of NaCl is added to 100 g of water at 25°C, how many grams of NaCl dissolve?
 
-3) Using the same conditions as problem 2, how many grams of NaCl remain undissolved at the bottom?
+**3)** Using the same conditions as problem 2, how many grams of NaCl remain undissolved at the bottom?
 
 *Round all answers to 3 significant figures.*
       `,

@@ -125,11 +125,11 @@ The spectator ions (Na⁺ and NO₃⁻) are removed because they don\'t particip
 
 Classify each reaction. Type: **synthesis**, **decomposition**, **single**, **double**, or **combustion**.
 
-1) $2\\text{Na} + \\text{Cl}_2 \\rightarrow 2\\text{NaCl}$
+**1)** $2\\text{Na} + \\text{Cl}_2 \\rightarrow 2\\text{NaCl}$
 
-2) $\\text{Pb(NO}_3)_2(\\text{aq}) + 2\\text{KI}(\\text{aq}) \\rightarrow \\text{PbI}_2(\\text{s}) + 2\\text{KNO}_3(\\text{aq})$
+**2)** $\\text{Pb(NO}_3)_2(\\text{aq}) + 2\\text{KI}(\\text{aq}) \\rightarrow \\text{PbI}_2(\\text{s}) + 2\\text{KNO}_3(\\text{aq})$
 
-3) $2\\text{C}_8\\text{H}_{18} + 25\\text{O}_2 \\rightarrow 16\\text{CO}_2 + 18\\text{H}_2\\text{O}$
+**3)** $2\\text{C}_8\\text{H}_{18} + 25\\text{O}_2 \\rightarrow 16\\text{CO}_2 + 18\\text{H}_2\\text{O}$
       `,
       exercise: {
         boxes: 3,

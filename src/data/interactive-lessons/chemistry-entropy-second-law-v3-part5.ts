@@ -53,11 +53,11 @@ Predict $\\Delta S$ sign for each:
 
 For each reaction, determine the net change in moles of GAS.
 
-1) $\\text{CaCO}_3\\text{(s)} \\to \\text{CaO(s)} + \\text{CO}_2\\text{(g)}$: Net change in gas moles = ?
+**1)** $\\text{CaCO}_3\\text{(s)} \\to \\text{CaO(s)} + \\text{CO}_2\\text{(g)}$: Net change in gas moles = ?
 
-2) $\\text{N}_2\\text{(g)} + \\text{3 H}_2\\text{(g)} \\to \\text{2 NH}_3\\text{(g)}$: Net change in gas moles = ?
+**2)** $\\text{N}_2\\text{(g)} + \\text{3 H}_2\\text{(g)} \\to \\text{2 NH}_3\\text{(g)}$: Net change in gas moles = ?
 
-3) $\\text{4 NH}_3\\text{(g)} + \\text{5 O}_2\\text{(g)} \\to \\text{4 NO(g)} + \\text{6 H}_2\\text{O(g)}$: Net change in gas moles = ?
+**3)** $\\text{4 NH}_3\\text{(g)} + \\text{5 O}_2\\text{(g)} \\to \\text{4 NO(g)} + \\text{6 H}_2\\text{O(g)}$: Net change in gas moles = ?
     `, exercise: { boxes: 3, correctAnswers: ['+1', '-2', '+1'],
         hint1: '0 mol gas → 1 mol gas.',
         hint2: '4 mol gas → 2 mol gas.',

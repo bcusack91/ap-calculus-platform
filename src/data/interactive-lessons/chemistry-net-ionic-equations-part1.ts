@@ -174,11 +174,11 @@ Always check solubility to assign correct phase labels. A reaction may not occur
 
 Classify each substance as **strong**, **weak**, or **non** (electrolyte).
 
-1) KBr dissolved in water
+**1)** KBr dissolved in water
 
-2) CH₃COOH (acetic acid) in water
+**2)** CH₃COOH (acetic acid) in water
 
-3) C₂H₅OH (ethanol) in water
+**3)** C₂H₅OH (ethanol) in water
       `,
       exercise: {
         boxes: 3,

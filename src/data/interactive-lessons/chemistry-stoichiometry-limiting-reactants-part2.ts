@@ -50,13 +50,13 @@ $$\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$
 **Molar masses:** CH₄ = 16.04 g/mol, H₂O = 18.02 g/mol
 
 ### Step 1: Grams CH₄ → Moles CH₄
-$$n_{\\text{CH}_4} = \\frac{32.0}{16.04} = 1.995 \\text{ mol}$$
+$$n_{\text{CH}_4} = 32.0 \; \cancel{\text{g CH}_4} \times \frac{1 \text{ mol CH}_4}{16.04 \; \cancel{\text{g CH}_4}} = 1.995 \text{ mol CH}_4$$
 
 ### Step 2: Moles CH₄ → Moles H₂O
-$$n_{\\text{H}_2\\text{O}} = 1.995 \\times \\frac{2 \\text{ mol H}_2\\text{O}}{1 \\text{ mol CH}_4} = 3.990 \\text{ mol}$$
+$$n_{\text{H}_2\text{O}} = 1.995 \; \cancel{\text{mol CH}_4} \times \frac{2 \text{ mol H}_2\text{O}}{1 \; \cancel{\text{mol CH}_4}} = 3.990 \text{ mol H}_2\text{O}$$
 
 ### Step 3: Moles H₂O → Grams H₂O
-$$m_{\\text{H}_2\\text{O}} = 3.990 \\times 18.02 = 71.9 \\text{ g}$$
+$$m_{\text{H}_2\text{O}} = 3.990 \; \cancel{\text{mol H}_2\text{O}} \times \frac{18.02 \text{ g H}_2\text{O}}{1 \; \cancel{\text{mol H}_2\text{O}}} = 71.9 \text{ g H}_2\text{O}$$
 
 ### Answer: 71.9 g of H₂O
       `
@@ -74,19 +74,19 @@ $$4\\text{Al} + 3\\text{O}_2 \\rightarrow 2\\text{Al}_2\\text{O}_3$$
 **Molar masses:** Al = 26.98 g/mol, Al₂O₃ = 101.96 g/mol
 
 ### Step 1: Grams Al₂O₃ → Moles Al₂O₃
-$$n_{\\text{Al}_2\\text{O}_3} = \\frac{51.0}{101.96} = 0.5002 \\text{ mol}$$
+$$n_{\text{Al}_2\text{O}_3} = 51.0 \; \cancel{\text{g Al}_2\text{O}_3} \times \frac{1 \text{ mol Al}_2\text{O}_3}{101.96 \; \cancel{\text{g Al}_2\text{O}_3}} = 0.5002 \text{ mol Al}_2\text{O}_3$$
 
 ### Step 2: Moles Al₂O₃ → Moles Al
-$$n_{\\text{Al}} = 0.5002 \\times \\frac{4 \\text{ mol Al}}{2 \\text{ mol Al}_2\\text{O}_3} = 1.000 \\text{ mol}$$
+$$n_{\text{Al}} = 0.5002 \; \cancel{\text{mol Al}_2\text{O}_3} \times \frac{4 \text{ mol Al}}{2 \; \cancel{\text{mol Al}_2\text{O}_3}} = 1.000 \text{ mol Al}$$
 
 ### Step 3: Moles Al → Grams Al
-$$m_{\\text{Al}} = 1.000 \\times 26.98 = 27.0 \\text{ g}$$
+$$m_{\text{Al}} = 1.000 \; \cancel{\text{mol Al}} \times \frac{26.98 \text{ g Al}}{1 \; \cancel{\text{mol Al}}} = 27.0 \text{ g Al}$$
 
 ### Answer: 27.0 g of Al
 
 ### One-Line Setup
 
-$$51.0 \\text{ g Al}_2\\text{O}_3 \\times \\frac{1 \\text{ mol}}{101.96 \\text{ g}} \\times \\frac{4 \\text{ mol Al}}{2 \\text{ mol Al}_2\\text{O}_3} \\times \\frac{26.98 \\text{ g}}{1 \\text{ mol}} = 27.0 \\text{ g Al}$$
+$$51.0 \\; \\cancel{\\text{g Al}_2\\text{O}_3} \\times \\frac{1 \\; \\cancel{\\text{mol Al}_2\\text{O}_3}}{101.96 \\; \\cancel{\\text{g Al}_2\\text{O}_3}} \\times \\frac{4 \\; \\cancel{\\text{mol Al}}}{2 \\; \\cancel{\\text{mol Al}_2\\text{O}_3}} \\times \\frac{26.98 \\text{ g Al}}{1 \\; \\cancel{\\text{mol Al}}} = 27.0 \\text{ g Al}$$
       `
     },
     {
@@ -143,11 +143,11 @@ Use the equation: $\\text{Fe}_2\\text{O}_3 + 3\\text{CO} \\rightarrow 2\\text{Fe
 
 Molar masses: Fe₂O₃ = 159.7 g/mol, CO = 28.01 g/mol, Fe = 55.85 g/mol, CO₂ = 44.01 g/mol
 
-1) How many grams of Fe are produced from 159.7 g of Fe₂O₃? (to 3 significant figures)
+**1)** How many grams of Fe are produced from 159.7 g of Fe₂O₃? (to 3 significant figures)
 
-2) How many grams of CO are needed to react with 79.85 g of Fe₂O₃? (to 3 significant figures)
+**2)** How many grams of CO are needed to react with 79.85 g of Fe₂O₃? (to 3 significant figures)
 
-3) How many grams of CO₂ are produced from 84.03 g of CO? (to 3 significant figures)
+**3)** How many grams of CO₂ are produced from 84.03 g of CO? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

@@ -138,11 +138,11 @@ $$\\sum \\text{(oxidation states)} = \\text{overall charge}$$
 
 Find the oxidation state of the underlined element. Give your answer as a number with sign (e.g., +5 or -2).
 
-1) Sulfur in SO₄²⁻
+**1)** Sulfur in SO₄²⁻
 
-2) Phosphorus in H₃PO₄
+**2)** Phosphorus in H₃PO₄
 
-3) Manganese in MnO₂
+**3)** Manganese in MnO₂
       `,
       exercise: {
         boxes: 3,

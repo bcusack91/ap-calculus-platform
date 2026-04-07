@@ -52,11 +52,11 @@ This equation connects the microscopic (molecular arrangements) to the macroscop
       content: `
 **Discovery Questions** 🧮
 
-1) For 4 coins, total microstates $W = 2^4$ = ?
+**1)** For 4 coins, total microstates $W = 2^4$ = ?
 
-2) How many of those microstates have exactly 2 heads and 2 tails? (Hint: list them — HHTT, HTHT, HTTH, THHT, THTH, TTHH)
+**2)** How many of those microstates have exactly 2 heads and 2 tails? (Hint: list them — HHTT, HTHT, HTTH, THHT, THTH, TTHH)
 
-3) What fraction of all microstates is the "all heads" state? Write as a fraction.
+**3)** What fraction of all microstates is the "all heads" state? Write as a fraction.
       `,
       exercise: {
         boxes: 3,

@@ -189,13 +189,13 @@ For AP calculations, use the **theoretical** (ideal) $i$ unless told otherwise.
       content: `
 **Colligative Property Calculations** 🧮
 
-Use: $K_b = 0.512$ °C/m, $K_f = 1.86$ °C/m for water.
+> **Given:** $K_b = 0.512$ °C/m, $K_f = 1.86$ °C/m for water.
 
-1) Calculate the boiling point (in °C) of a solution containing 0.300 mol of KBr ($i = 2$) in 500.0 g of water. (to 3 significant figures)
+**1)** Calculate the boiling point (in °C) of a solution containing 0.300 mol of KBr ($i = 2$) in 500.0 g of water. (to 3 significant figures)
 
-2) Calculate the freezing point (in °C) of a solution of 58.44 g of NaCl ($M = 58.44$ g/mol, $i = 2$) in 2.00 kg of water. (to 3 significant figures)
+**2)** Calculate the freezing point (in °C) of a solution of 58.44 g of NaCl ($M = 58.44$ g/mol, $i = 2$) in 2.00 kg of water. (to 3 significant figures)
 
-3) An antifreeze solution is 2.50 m ethylene glycol ($i = 1$). What is its freezing point in °C? (to 3 significant figures)
+**3)** An antifreeze solution is 2.50 m ethylene glycol ($i = 1$). What is its freezing point in °C? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

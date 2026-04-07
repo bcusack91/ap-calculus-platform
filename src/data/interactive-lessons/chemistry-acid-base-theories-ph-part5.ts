@@ -28,14 +28,18 @@ $$pH = -\\log C$$
 
 ### Example 1
 
-What is the pH of 0.025 M $HCl$?
+> **Problem:** What is the pH of 0.025 M $HCl$?
+
+**Solution:**
 
 $$[H^+] = 0.025 \\text{ M}$$
 $$pH = -\\log(0.025) = 1.60$$
 
 ### Example 2
 
-What is the pH of 0.0040 M $HNO_3$?
+> **Problem:** What is the pH of 0.0040 M $HNO_3$?
+
+**Solution:**
 
 $$[H^+] = 0.0040 \\text{ M}$$
 $$pH = -\\log(0.0040) = 2.40$$
@@ -68,7 +72,9 @@ $$pH = 14 - pOH$$
 
 ### Example 1
 
-What is the pH of 0.010 M $NaOH$?
+> **Problem:** What is the pH of 0.010 M $NaOH$?
+
+**Solution:**
 
 $$[OH^-] = 0.010 \\text{ M}$$
 $$pOH = -\\log(0.010) = 2.00$$
@@ -84,7 +90,9 @@ $$[OH^-] = 2C$$
 
 ### Example 2
 
-What is the pH of 0.0050 M $Ba(OH)_2$?
+> **Problem:** What is the pH of 0.0050 M $Ba(OH)_2$?
+
+**Solution:**
 
 $$[OH^-] = 2(0.0050) = 0.010 \\text{ M}$$
 $$pOH = -\\log(0.010) = 2.00$$
@@ -174,11 +182,11 @@ $$pH = -\\log(0.025) = 1.60$$
       content: `
 **Strong Acid/Base Calculation Drill** 🧮
 
-1) What is the pH of 0.0020 M $HClO_4$? (2 decimal places)
+**1)** What is the pH of 0.0020 M $HClO_4$? (2 decimal places)
 
-2) What is the pH of 0.050 M $Ba(OH)_2$? (2 decimal places)
+**2)** What is the pH of 0.050 M $Ba(OH)_2$? (2 decimal places)
 
-3) 40.0 mL of 0.15 M $HNO_3$ is mixed with 20.0 mL of 0.15 M $NaOH$. What is the pH? (2 decimal places)
+**3)** 40.0 mL of 0.15 M $HNO_3$ is mixed with 20.0 mL of 0.15 M $NaOH$. What is the pH? (2 decimal places)
       `,
       exercise: {
         boxes: 3,

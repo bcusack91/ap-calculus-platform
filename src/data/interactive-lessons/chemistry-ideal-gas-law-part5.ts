@@ -36,7 +36,9 @@ $$P_{\\text{total}} = \\frac{n_{\\text{total}}RT}{V}$$
 
 ### Example
 
-A 10.0 L container at 300 K holds 0.200 mol N₂ and 0.300 mol O₂.
+> **Problem:** A 10.0 L container at 300 K holds 0.200 mol N₂ and 0.300 mol O₂.
+
+**Solution:**
 
 $$P_{N_2} = \\frac{(0.200)(0.0821)(300)}{10.0} = 0.493 \\text{ atm}$$
 
@@ -61,7 +63,9 @@ $$P_i = \\chi_i \\times P_{\\text{total}}$$
 
 ### Example
 
-A mixture has 2.0 mol He and 3.0 mol Ne at a total pressure of 5.0 atm.
+> **Problem:** A mixture has 2.0 mol He and 3.0 mol Ne at a total pressure of 5.0 atm.
+
+**Solution:**
 
 $$\\chi_{He} = \\frac{2.0}{2.0 + 3.0} = 0.40$$
 
@@ -143,11 +147,11 @@ This corrected pressure is then used in $PV = nRT$ to find the moles of dry gas 
       content: `
 **Partial Pressure Calculations** 🧮
 
-1) A flask contains 0.50 mol Ar and 1.50 mol Ne. The total pressure is 4.00 atm. What is the partial pressure of Ar? (in atm)
+**1)** A flask contains 0.50 mol Ar and 1.50 mol Ne. The total pressure is 4.00 atm. What is the partial pressure of Ar? (in atm)
 
-2) Hydrogen gas is collected over water at 22°C ($P_{H_2O}$ = 19.8 mmHg). The total pressure is 745 mmHg. What is the pressure of the dry hydrogen? (in mmHg, to 3 significant figures)
+**2)** Hydrogen gas is collected over water at 22°C ($P_{H_2O}$ = 19.8 mmHg). The total pressure is 745 mmHg. What is the pressure of the dry hydrogen? (in mmHg, to 3 significant figures)
 
-3) A mixture has $\\chi_{CO_2} = 0.30$ and the total pressure is 2.50 atm. What is $P_{CO_2}$? (in atm)
+**3)** A mixture has $\\chi_{CO_2} = 0.30$ and the total pressure is 2.50 atm. What is $P_{CO_2}$? (in atm)
       `,
       exercise: {
         inputs: [

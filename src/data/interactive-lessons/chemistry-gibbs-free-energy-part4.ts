@@ -123,11 +123,11 @@ So: $\\Delta G° = -2.303 RT \\log K$
 
 Use $R = 8.314$ J/(mol·K), $T = 298$ K
 
-1) If $\\Delta G° = -17.1$ kJ/mol, what is $K$? (round to nearest whole number)
+**1)** If $\\Delta G° = -17.1$ kJ/mol, what is $K$? (round to nearest whole number)
 
-2) If $K = 1.0 \\times 10^{5}$ at 298 K, what is $\\Delta G°$? (in kJ/mol, to 1 decimal)
+**2)** If $K = 1.0 \\times 10^{5}$ at 298 K, what is $\\Delta G°$? (in kJ/mol, to 1 decimal)
 
-3) If $\\Delta G° = +10.0$ kJ/mol, is $K$ greater than or less than 1? (type "greater" or "less")
+**3)** If $\\Delta G° = +10.0$ kJ/mol, is $K$ greater than or less than 1? (type "greater" or "less")
       `,
       exercise: {
         boxes: 3,

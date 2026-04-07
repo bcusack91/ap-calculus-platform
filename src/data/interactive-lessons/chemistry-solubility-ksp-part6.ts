@@ -37,11 +37,11 @@ The molar solubility of $\\text{Ag}_2\\text{CO}_3$ is $1.3 \\times 10^{-4}$ M.
 
 $\\text{Ag}_2\\text{CO}_3(s) \\rightleftharpoons 2\\,\\text{Ag}^+(aq) + \\text{CO}_3^{2-}(aq)$
 
-1) What is $[\\text{Ag}^+]$? (Enter in scientific notation, e.g. 2.6e-4)
+**1)** What is $[\\text{Ag}^+]$? (Enter in scientific notation, e.g. 2.6e-4)
 
-2) What is $[\\text{CO}_3^{2-}]$? (Enter in scientific notation, e.g. 1.3e-4)
+**2)** What is $[\\text{CO}_3^{2-}]$? (Enter in scientific notation, e.g. 1.3e-4)
 
-3) What is $K_{sp}$? (Enter in scientific notation, e.g. 8.8e-12)
+**3)** What is $K_{sp}$? (Enter in scientific notation, e.g. 8.8e-12)
 
 *Round all answers to 3 significant figures.*
       `,
@@ -66,9 +66,9 @@ $\\text{SrF}_2(s) \\rightleftharpoons \\text{Sr}^{2+}(aq) + 2\\,\\text{F}^-(aq)$
 
 $K_{sp} = (s)(0.10 + 2s)^2 \\approx (s)(0.10)^2$
 
-1) What is the molar solubility in 0.10 M NaF? (Enter in scientific notation, e.g. 4.3e-7)
+**1)** What is the molar solubility in 0.10 M NaF? (Enter in scientific notation, e.g. 4.3e-7)
 
-2) What is the molar solubility in pure water? ($K_{sp} = 4s^3$) (Enter in scientific notation, e.g. 1.0e-3)
+**2)** What is the molar solubility in pure water? ($K_{sp} = 4s^3$) (Enter in scientific notation, e.g. 1.0e-3)
 
 *Round all answers to 3 significant figures.*
       `,

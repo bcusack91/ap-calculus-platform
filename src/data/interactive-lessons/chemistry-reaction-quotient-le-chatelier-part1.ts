@@ -118,11 +118,11 @@ For the reaction: $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\tex
 
 Current concentrations: $[\\text{H}_2] = 0.10$ M, $[\\text{I}_2] = 0.10$ M, $[\\text{HI}] = 0.50$ M
 
-1) Calculate $Q_c$. (Enter as a whole number)
+**1)** Calculate $Q_c$. (Enter as a whole number)
 
-2) Is $Q > K$, $Q < K$, or $Q = K$? (Enter "Q > K", "Q < K", or "Q = K")
+**2)** Is $Q > K$, $Q < K$, or $Q = K$? (Enter "Q > K", "Q < K", or "Q = K")
 
-3) If you start with only reactants and no products, what is the initial value of Q? (Enter as a number)
+**3)** If you start with only reactants and no products, what is the initial value of Q? (Enter as a number)
       `,
       exercise: {
         boxes: 3,

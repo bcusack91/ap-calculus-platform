@@ -131,11 +131,11 @@ This is the key to understanding why some reactions happen and others don't!
       content: `
 **Microstate Counting Practice** 🧮
 
-1) A system of 5 coins has how many total microstates? ($W = 2^n$)
+**1)** A system of 5 coins has how many total microstates? ($W = 2^n$)
 
-2) What is the probability that all 5 coins show heads? (express as a fraction like 1/32)
+**2)** What is the probability that all 5 coins show heads? (express as a fraction like 1/32)
 
-3) If $W$ doubles, does entropy double? (type yes or no)
+**3)** If $W$ doubles, does entropy double? (type yes or no)
       `,
       exercise: {
         boxes: 3,

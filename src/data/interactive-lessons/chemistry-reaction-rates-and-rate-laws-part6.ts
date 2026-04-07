@@ -49,11 +49,11 @@ For $\\text{A} + \\text{B} \\rightarrow \\text{Products}$:
 | 2 | 0.100 | 0.050 | 5.00 × 10⁻⁴ |
 | 3 | 0.050 | 0.100 | 2.50 × 10⁻⁴ |
 
-1) Order in A? (integer)
+**1)** Order in A? (integer)
 
-2) Order in B? (integer)
+**2)** Order in B? (integer)
 
-3) Value of k? (number only, no units)
+**3)** Value of k? (number only, no units)
       `,
       exercise: {
         boxes: 3,
@@ -78,11 +78,11 @@ For $\\text{X} + \\text{Y} \\rightarrow \\text{Z}$:
 | 2 | 0.30 | 0.10 | 0.036 |
 | 3 | 0.30 | 0.30 | 0.036 |
 
-1) Order in X? (integer)
+**1)** Order in X? (integer)
 
-2) Order in Y? (integer)
+**2)** Order in Y? (integer)
 
-3) What is the overall order?
+**3)** What is the overall order?
       `,
       exercise: {
         boxes: 3,
@@ -153,11 +153,11 @@ For the reaction $2\\text{A} + \\text{B} \\rightarrow \\text{C} + 3\\text{D}$:
 
 Given Rate = k[M]²[N] and the following data point: when [M] = 0.25 M and [N] = 0.40 M, the rate is 0.050 M/s.
 
-1) Calculate k (number only, to 3 significant figures)
+**1)** Calculate k (number only, to 3 significant figures)
 
-2) What is the rate when [M] = 0.50 M and [N] = 0.20 M? (in M/s, to 3 significant figures)
+**2)** What is the rate when [M] = 0.50 M and [N] = 0.20 M? (in M/s, to 3 significant figures)
 
-3) By what factor does the rate change if [M] is halved and [N] is doubled? (give the number)
+**3)** By what factor does the rate change if [M] is halved and [N] is doubled? (give the number)
       `,
       exercise: {
         boxes: 3,

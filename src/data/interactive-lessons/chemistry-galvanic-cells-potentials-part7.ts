@@ -50,7 +50,7 @@ This final review covers everything about galvanic cells: redox fundamentals, ce
       content: `
 **Comprehensive AP Review** 🎯
 
-Use: Zn²⁺/Zn = −0.76 V, Cu²⁺/Cu = +0.34 V, Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.44 V
+> **Given:** Zn²⁺/Zn = −0.76 V, Cu²⁺/Cu = +0.34 V, Ag⁺/Ag = +0.80 V, Fe²⁺/Fe = −0.44 V
       `,
       exercise: {
         questions: [
@@ -96,11 +96,11 @@ Use: Zn²⁺/Zn = −0.76 V, Cu²⁺/Cu = +0.34 V, Ag⁺/Ag = +0.80 V, Fe²⁺/F
       content: `
 **Integration Problems** 🧮
 
-1) A cell has $E° = +2.00$ V and $n = 3$. What is $\\Delta G°$ in kJ? (to nearest whole number)
+**1)** A cell has $E° = +2.00$ V and $n = 3$. What is $\\Delta G°$ in kJ? (to nearest whole number)
 
-2) A cell has $\\Delta G° = -386$ kJ and $n = 4$. What is $E°$ in V? (to 3 significant figures)
+**2)** A cell has $\\Delta G° = -386$ kJ and $n = 4$. What is $E°$ in V? (to 3 significant figures)
 
-3) If $E° = +0.50$ V and $n = 2$ at 298 K, is $K$ greater or less than 1? (type "greater" or "less")
+**3)** If $E° = +0.50$ V and $n = 2$ at 298 K, is $K$ greater or less than 1? (type "greater" or "less")
       `,
       exercise: {
         boxes: 3,

@@ -160,11 +160,11 @@ $$\\Delta H_{\\text{reverse}} = -\\Delta H_{\\text{forward}}$$
 
 Given: $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g) \\quad \\Delta H = -92 \\text{ kJ}$
 
-1) What is $\\Delta H$ for $\\frac{1}{2}\\text{N}_2(g) + \\frac{3}{2}\\text{H}_2(g) \\rightarrow \\text{NH}_3(g)$? (in kJ)
+**1)** What is $\\Delta H$ for $\\frac{1}{2}\\text{N}_2(g) + \\frac{3}{2}\\text{H}_2(g) \\rightarrow \\text{NH}_3(g)$? (in kJ)
 
-2) What is $\\Delta H$ for $2\\text{NH}_3(g) \\rightarrow \\text{N}_2(g) + 3\\text{H}_2(g)$? (in kJ)
+**2)** What is $\\Delta H$ for $2\\text{NH}_3(g) \\rightarrow \\text{N}_2(g) + 3\\text{H}_2(g)$? (in kJ)
 
-3) What is $\\Delta H$ for $2\\text{N}_2(g) + 6\\text{H}_2(g) \\rightarrow 4\\text{NH}_3(g)$? (in kJ)
+**3)** What is $\\Delta H$ for $2\\text{N}_2(g) + 6\\text{H}_2(g) \\rightarrow 4\\text{NH}_3(g)$? (in kJ)
       `,
       exercise: {
         boxes: 3,

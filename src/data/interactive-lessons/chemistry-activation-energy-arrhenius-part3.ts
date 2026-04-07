@@ -99,7 +99,9 @@ The sensitivity of $k$ to temperature depends on $E_a$:
 
 ### Example Calculation
 
-For $E_a = 100$ kJ/mol, comparing $k$ at 300 K and 310 K:
+> **Problem:** For $E_a = 100$ kJ/mol, comparing $k$ at 300 K and 310 K:
+
+**Solution:**
 
 $$\\frac{k_{310}}{k_{300}} = \\frac{e^{-E_a/(R \\cdot 310)}}{e^{-E_a/(R \\cdot 300)}} = e^{(E_a/R)(1/300 - 1/310)}$$
 
@@ -121,11 +123,11 @@ Only a 30% increase — much less sensitive.
       content: `
 **Arrhenius Calculations** 🧮
 
-1) Calculate $E_a/(RT)$ for $E_a = 75.0$ kJ/mol at $T = 500$ K. ($R = 8.314$ J/(mol·K); to 3 significant figures)
+**1)** Calculate $E_a/(RT)$ for $E_a = 75.0$ kJ/mol at $T = 500$ K. ($R = 8.314$ J/(mol·K); to 3 significant figures)
 
-2) A reaction has $A = 1.0 \\times 10^{13}$ s⁻¹ and $E_a = 100$ kJ/mol. Calculate $k$ at 300 K. (in s⁻¹, to 1 significant figure in scientific notation: e.g., 3e-5)
+**2)** A reaction has $A = 1.0 \\times 10^{13}$ s⁻¹ and $E_a = 100$ kJ/mol. Calculate $k$ at 300 K. (in s⁻¹, to 1 significant figure in scientific notation: e.g., 3e-5)
 
-3) If $k = 0.010$ s⁻¹ at 300 K and $k = 0.040$ s⁻¹ at 310 K, by what factor does k increase? (to 3 significant figures)
+**3)** If $k = 0.010$ s⁻¹ at 300 K and $k = 0.040$ s⁻¹ at 310 K, by what factor does k increase? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

@@ -38,7 +38,9 @@ $$\\boxed{E = E° - \\frac{0.0592}{n}\\log Q} \\quad \\text{(at 25°C)}$$
 
 ### Example
 
-For a 2-electron cell with $E° = 1.10$ V and $Q = 100$:
+> **Problem:** For a 2-electron cell with $E° = 1.10$ V and $Q = 100$:
+
+**Solution:**
 
 $$E = 1.10 - \\frac{0.0592}{2}\\log(100) = 1.10 - (0.0296)(2) = 1.10 - 0.059 = 1.04 \\text{ V}$$
       `
@@ -120,11 +122,11 @@ Remember: solids and pure liquids are excluded from Q!
 
 All at 25°C. Use $E = E° - (0.0592/n)\\log Q$.
 
-1) $E° = 0.46$ V, $n = 2$, $Q = 0.01$. Calculate $E$. (to 3 significant figures)
+**1)** $E° = 0.46$ V, $n = 2$, $Q = 0.01$. Calculate $E$. (to 3 significant figures)
 
-2) $E° = 1.10$ V, $n = 2$, $Q = 10^4$. Calculate $E$. (to 3 significant figures)
+**2)** $E° = 1.10$ V, $n = 2$, $Q = 10^4$. Calculate $E$. (to 3 significant figures)
 
-3) $E° = 0.80$ V, $n = 1$, $Q = 10^{-3}$. Calculate $E$. (to 3 significant figures)
+**3)** $E° = 0.80$ V, $n = 1$, $Q = 10^{-3}$. Calculate $E$. (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

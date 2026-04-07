@@ -100,11 +100,11 @@ $\\Delta H$ → kJ, $\\Delta S$ → J/K. Convert before combining!
       content: `
 **Integration Problems** 🧮
 
-1) At what temperature does a reaction with $\\Delta H = -90$ kJ and $\\Delta S = -300$ J/K become nonspontaneous? (in K)
+**1)** At what temperature does a reaction with $\\Delta H = -90$ kJ and $\\Delta S = -300$ J/K become nonspontaneous? (in K)
 
-2) Calculate $\\Delta S_{\\text{universe}}$ for an exothermic reaction with $\\Delta H = -200$ kJ, $\\Delta S_{\\text{sys}} = -50$ J/K, at $T = 298$ K. (in J/K, round to nearest whole number)
+**2)** Calculate $\\Delta S_{\\text{universe}}$ for an exothermic reaction with $\\Delta H = -200$ kJ, $\\Delta S_{\\text{sys}} = -50$ J/K, at $T = 298$ K. (in J/K, round to nearest whole number)
 
-3) Is the process in (2) spontaneous? (type "yes" or "no")
+**3)** Is the process in (2) spontaneous? (type "yes" or "no")
       `,
       exercise: {
         boxes: 3,

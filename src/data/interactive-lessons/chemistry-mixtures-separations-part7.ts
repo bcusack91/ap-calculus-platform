@@ -116,11 +116,11 @@ AP free-response questions often ask how errors affect results:
       content: `
 **AP-Style Calculation Problems** 🧮
 
-1) A 2.000 g sample of a mixture of NaCl and sand is dissolved in water, filtered, and the filtrate is evaporated. The recovered NaCl has a mass of 0.850 g. What is the mass percent of NaCl in the original mixture? (to 3 significant figures)
+**1)** A 2.000 g sample of a mixture of NaCl and sand is dissolved in water, filtered, and the filtrate is evaporated. The recovered NaCl has a mass of 0.850 g. What is the mass percent of NaCl in the original mixture? (to 3 significant figures)
 
-2) 25.00 mL of a Ba(OH)₂ solution is titrated with 0.1000 M HCl. It takes 35.60 mL of HCl to reach the equivalence point. The reaction is Ba(OH)₂ + 2HCl → BaCl₂ + 2H₂O. What is the molarity of Ba(OH)₂? (to 3 significant figures)
+**2)** 25.00 mL of a Ba(OH)₂ solution is titrated with 0.1000 M HCl. It takes 35.60 mL of HCl to reach the equivalence point. The reaction is Ba(OH)₂ + 2HCl → BaCl₂ + 2H₂O. What is the molarity of Ba(OH)₂? (to 3 significant figures)
 
-3) A calibration curve for Fe³⁺ (using thiocyanate complex) has slope 4500 L/(mol·cm) at $b = 1.00$ cm. An unknown solution has $A = 0.900$. What is $[\\text{Fe}^{3+}]$? (in M, in scientific notation as X.Xe-4, write just the coefficient to 3 significant figures, e.g., "2.0")
+**3)** A calibration curve for Fe³⁺ (using thiocyanate complex) has slope 4500 L/(mol·cm) at $b = 1.00$ cm. An unknown solution has $A = 0.900$. What is $[\\text{Fe}^{3+}]$? (in M, in scientific notation as X.Xe-4, write just the coefficient to 3 significant figures, e.g., "2.0")
       `,
       exercise: {
         inputs: [

@@ -142,11 +142,11 @@ $$5\\text{Fe}^{2+} + 8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow 5\\text{Fe}^{3+
 
 For the half-reaction in acidic solution: $\\text{Cr}_2\\text{O}_7^{2-} \\rightarrow \\text{Cr}^{3+}$
 
-1) How many H₂O molecules are needed (and on which side)? Type the coefficient only.
+**1)** How many H₂O molecules are needed (and on which side)? Type the coefficient only.
 
-2) How many H⁺ ions are needed? Type the coefficient only.
+**2)** How many H⁺ ions are needed? Type the coefficient only.
 
-3) How many electrons are needed? Type the coefficient only.
+**3)** How many electrons are needed? Type the coefficient only.
       `,
       exercise: {
         boxes: 3,

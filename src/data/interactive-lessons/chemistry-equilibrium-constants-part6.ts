@@ -157,11 +157,11 @@ For $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$, $K_
 
 Current concentrations: $[\\text{H}_2] = 0.10\\;\\text{M}$, $[\\text{I}_2] = 0.20\\;\\text{M}$, $[\\text{HI}] = 0.40\\;\\text{M}$
 
-1) Calculate $Q_c$ (enter a number with one decimal place)
+**1)** Calculate $Q_c$ (enter a number with one decimal place)
 
-2) Is $Q$ less than, equal to, or greater than $K$? (Enter "less", "equal", or "greater")
+**2)** Is $Q$ less than, equal to, or greater than $K$? (Enter "less", "equal", or "greater")
 
-3) Will the reaction shift left, right, or not shift? (Enter "left", "right", or "none")
+**3)** Will the reaction shift left, right, or not shift? (Enter "left", "right", or "none")
       `,
       exercise: {
         boxes: 3,

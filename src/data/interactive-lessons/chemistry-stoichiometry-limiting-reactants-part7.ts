@@ -58,13 +58,13 @@ $M_{\\text{PbI}_2} = 461.0$ g/mol
 
 ### Step 2: Limiting Reactant
 
-- From Pb(NO₃)₂: $0.0100 \\times 1/1 = 0.0100$ mol PbI₂
-- From KI: $0.0105 \\times 1/2 = 0.00525$ mol PbI₂
+- From Pb(NO₃)₂: $0.0100 \\; \\cancel{\\text{mol Pb(NO}_3)_2} \\times \\frac{1 \\text{ mol PbI}_2}{1 \\; \\cancel{\\text{mol Pb(NO}_3)_2}} = 0.0100$ mol PbI₂
+- From KI: $0.0105 \\; \\cancel{\\text{mol KI}} \\times \\frac{1 \\text{ mol PbI}_2}{2 \\; \\cancel{\\text{mol KI}}} = 0.00525$ mol PbI₂
 - KI produces less → **KI is limiting**
 
 ### Step 3: Mass of PbI₂
 
-$$m = 0.00525 \\times 461.0 = 2.42 \\text{ g PbI}_2$$
+$$m = 0.00525 \\; \\cancel{\\text{mol PbI}_2} \\times \\frac{461.0 \\text{ g PbI}_2}{1 \\; \\cancel{\\text{mol PbI}_2}} = 2.42 \\text{ g PbI}_2$$
 
 ### Key Insight
 
@@ -138,11 +138,11 @@ $M_{\\text{Al}} = 26.98$, $M_{\\text{HCl}} = 36.46$, $M_{\\text{AlCl}_3} = 133.3
 
 A student reacts 13.49 g of Al with 109.4 g of HCl. Percent yield = 90%.
 
-1) The limiting reactant is which? Type **Al** or **HCl**.
+**1)** The limiting reactant is which? Type **Al** or **HCl**.
 
-2) What is the theoretical yield of AlCl₃ in grams? (to 3 significant figures)
+**2)** What is the theoretical yield of AlCl₃ in grams? (to 3 significant figures)
 
-3) What is the actual yield of AlCl₃ in grams? (to 3 significant figures)
+**3)** What is the actual yield of AlCl₃ in grams? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

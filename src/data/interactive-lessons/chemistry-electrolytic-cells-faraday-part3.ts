@@ -166,11 +166,11 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow \\text{O}_2(g) + 4\\text{H}^+(aq) + 4e^-
 
 What gas or metal is produced at the cathode during electrolysis of:
 
-1) Molten MgCl₂ (cathode product)?
+**1)** Molten MgCl₂ (cathode product)?
 
-2) Aqueous AgNO₃ (cathode product — is Ag⁺ or H₂O reduced)?
+**2)** Aqueous AgNO₃ (cathode product — is Ag⁺ or H₂O reduced)?
 
-3) Aqueous KI (anode product — is I⁻ or H₂O oxidized)?
+**3)** Aqueous KI (anode product — is I⁻ or H₂O oxidized)?
       `,
       exercise: {
         boxes: 3,

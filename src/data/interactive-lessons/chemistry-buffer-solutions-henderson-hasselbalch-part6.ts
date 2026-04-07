@@ -49,11 +49,11 @@ A 1.0 L buffer has 0.25 mol $CH_3COOH$ and 0.25 mol $CH_3COO^-$ ($pK_a = 4.74$).
 
 First, 0.08 mol $NaOH$ is added. Then, 0.05 mol $HCl$ is added.
 
-1) After adding $NaOH$, how many moles of $CH_3COO^-$ are present? (2 decimal places)
+**1)** After adding $NaOH$, how many moles of $CH_3COO^-$ are present? (2 decimal places)
 
-2) After adding $NaOH$, what is the pH? (2 decimal places)
+**2)** After adding $NaOH$, what is the pH? (2 decimal places)
 
-3) After then adding $HCl$, what is the final pH? (2 decimal places)
+**3)** After then adding $HCl$, what is the final pH? (2 decimal places)
       `,
       exercise: {
         boxes: 3,
@@ -132,11 +132,11 @@ $HCl$ is a strong acid. ❌ **Not a buffer** (no weak acid/base pair)
 
 Design a 500 mL phosphate buffer at pH 7.40 ($pK_a = 7.21$, total phosphate = 0.20 M).
 
-1) What is the required $[HPO_4^{2-}]/[H_2PO_4^-]$ ratio? (2 decimal places)
+**1)** What is the required $[HPO_4^{2-}]/[H_2PO_4^-]$ ratio? (2 decimal places)
 
-2) What concentration of $H_2PO_4^-$ is needed? (Enter in M, 3 decimal places)
+**2)** What concentration of $H_2PO_4^-$ is needed? (Enter in M, 3 decimal places)
 
-3) How many moles of $Na_2HPO_4$ are needed for 500 mL? (3 decimal places)
+**3)** How many moles of $Na_2HPO_4$ are needed for 500 mL? (3 decimal places)
       `,
       exercise: {
         boxes: 3,

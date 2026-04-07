@@ -61,7 +61,9 @@ Where:
 
 ### Example
 
-For $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$:
+> **Problem:** For $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$:
+
+**Solution:**
 
 $$\\Delta n = 2 - (1 + 3) = -2$$
 
@@ -126,11 +128,11 @@ For the reaction: $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\tex
 
 At equilibrium: $[\\text{H}_2] = 0.10$ M, $[\\text{I}_2] = 0.20$ M, $[\\text{HI}] = 0.40$ M
 
-1) Calculate $K_c$. (Enter as a whole number)
+**1)** Calculate $K_c$. (Enter as a whole number)
 
-2) What is $\\Delta n$ for this reaction?
+**2)** What is $\\Delta n$ for this reaction?
 
-3) If $K_c = 8.0$ at this temperature, what is $K_p$? (Enter as a number)
+**3)** If $K_c = 8.0$ at this temperature, what is $K_p$? (Enter as a number)
 
 *Round all answers to 3 significant figures.*
       `,

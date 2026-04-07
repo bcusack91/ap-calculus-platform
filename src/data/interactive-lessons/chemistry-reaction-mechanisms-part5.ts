@@ -181,11 +181,11 @@ A mechanism that gives the correct rate law but doesn\'t sum to the overall equa
 - Step 1: $\\text{A} + \\text{B} \\rightarrow \\text{D}$ (slow)
 - Step 2: $\\text{D} + \\text{B} \\rightarrow \\text{C}$ (fast)
 
-1) Do the steps sum to A + 2B → C? (yes or no)
+**1)** Do the steps sum to A + 2B → C? (yes or no)
 
-2) What is the predicted rate law from the RDS? (enter in form: k[X][Y] — use brackets)
+**2)** What is the predicted rate law from the RDS? (enter in form: k[X][Y] — use brackets)
 
-3) Does the predicted rate law match the experimental rate law? (yes or no)
+**3)** Does the predicted rate law match the experimental rate law? (yes or no)
       `,
       exercise: {
         boxes: 3,

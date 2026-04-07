@@ -68,11 +68,11 @@ For the reaction: $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\tex
 
 At equilibrium: $[\\text{PCl}_5] = 0.20$ M, $[\\text{PCl}_3] = 0.30$ M, $[\\text{Cl}_2] = 0.30$ M
 
-1) Calculate $K_c$ (Enter to 3 significant figures)
+**1)** Calculate $K_c$ (Enter to 3 significant figures)
 
-2) Is the reaction product-favored or reactant-favored? (Enter "product-favored" or "reactant-favored")
+**2)** Is the reaction product-favored or reactant-favored? (Enter "product-favored" or "reactant-favored")
 
-3) What is $\\Delta n$ for this reaction? (Enter as an integer with sign, e.g. +1)
+**3)** What is $\\Delta n$ for this reaction? (Enter as an integer with sign, e.g. +1)
       `,
       exercise: {
         boxes: 3,
@@ -147,11 +147,11 @@ Step 3: Multiply by 2: $K = (K_{\\text{rev}})^2 = (7.7 \\times 10^{-7})^2 = 5.9 
 
 For $2\\,\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{SO}_3(g)$ at $T = 1000$ K, $K_c = 280$.
 
-1) What is $\\Delta n$? (Enter as an integer with sign)
+**1)** What is $\\Delta n$? (Enter as an integer with sign)
 
-2) Calculate $RT$ using $R = 0.08206$ L·atm/(mol·K). (Round to 3 significant figures)
+**2)** Calculate $RT$ using $R = 0.08206$ L·atm/(mol·K). (Round to 3 significant figures)
 
-3) Calculate $K_p$. (Round to 3 significant figures)
+**3)** Calculate $K_p$. (Round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

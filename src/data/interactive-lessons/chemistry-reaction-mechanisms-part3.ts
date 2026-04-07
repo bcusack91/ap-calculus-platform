@@ -147,11 +147,11 @@ Mechanism:
 - Step 1: $2\\text{NO} \\rightleftharpoons \\text{N}_2\\text{O}_2$ (fast, reversible; $K_{eq}$)
 - Step 2: $\\text{N}_2\\text{O}_2 + \\text{O}_2 \\rightarrow 2\\text{NO}_2$ (slow)
 
-1) Write the rate law from the slow step. What is the intermediate? (enter the formula)
+**1)** Write the rate law from the slow step. What is the intermediate? (enter the formula)
 
-2) Express $[\\text{N}_2\\text{O}_2]$ in terms of $[\\text{NO}]$ using $K_{eq}$. What power of $[\\text{NO}]$ appears? (enter a number)
+**2)** Express $[\\text{N}_2\\text{O}_2]$ in terms of $[\\text{NO}]$ using $K_{eq}$. What power of $[\\text{NO}]$ appears? (enter a number)
 
-3) The final rate law is rate = k[NO]ⁿ[O₂]ᵐ. What are n and m? (enter as: n,m)
+**3)** The final rate law is rate = k[NO]ⁿ[O₂]ᵐ. What are n and m? (enter as: n,m)
       `,
       exercise: {
         boxes: 3,

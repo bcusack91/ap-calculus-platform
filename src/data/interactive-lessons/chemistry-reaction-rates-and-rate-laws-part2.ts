@@ -207,11 +207,11 @@ $$E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})$$
       content: `
 **Application Problems** 🧮
 
-1) A reaction has a rate of 0.020 M/s at 25°C. Using the rough rule that rate doubles with each 10°C increase, estimate the rate at 45°C. (in M/s)
+**1)** A reaction has a rate of 0.020 M/s at 25°C. Using the rough rule that rate doubles with each 10°C increase, estimate the rate at 45°C. (in M/s)
 
-2) If the concentration of a reactant is tripled, and the reaction is second-order in that reactant, by what factor does the rate increase? (whole number)
+**2)** If the concentration of a reactant is tripled, and the reaction is second-order in that reactant, by what factor does the rate increase? (whole number)
 
-3) A catalyzed reaction has $E_a = 50$ kJ/mol. The uncatalyzed reaction has $E_a = 120$ kJ/mol. By how many kJ/mol does the catalyst lower the activation energy?
+**3)** A catalyzed reaction has $E_a = 50$ kJ/mol. The uncatalyzed reaction has $E_a = 120$ kJ/mol. By how many kJ/mol does the catalyst lower the activation energy?
 
 *Round all answers to 3 significant figures.*
       `,

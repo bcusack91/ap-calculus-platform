@@ -50,13 +50,17 @@ $$\\boxed{pH = pK_a + \\log\\frac{[A^-]}{[HA]}}$$
 
 ### Example 1: Find pH
 
-A buffer contains 0.30 M $CH_3COOH$ and 0.50 M $CH_3COO^-$. ($pK_a = 4.74$)
+> **Problem:** A buffer contains 0.30 M $CH_3COOH$ and 0.50 M $CH_3COO^-$. ($pK_a = 4.74$)
+
+**Solution:**
 
 $$pH = 4.74 + \\log\\frac{0.50}{0.30} = 4.74 + \\log(1.67) = 4.74 + 0.22 = 4.96$$
 
 ### Example 2: Find Ratio
 
-What ratio of $[A^-]/[HA]$ gives pH = 5.00 for a buffer with $pK_a = 4.74$?
+> **Problem:** What ratio of $[A^-]/[HA]$ gives pH = 5.00 for a buffer with $pK_a = 4.74$?
+
+**Solution:**
 
 $$5.00 = 4.74 + \\log\\frac{[A^-]}{[HA]}$$
 
@@ -125,11 +129,11 @@ This is a critically important result: **the pH of a buffer with equal concentra
       content: `
 **Henderson-Hasselbalch Drill** 🧮
 
-1) Buffer: 0.40 M $HF$ and 0.60 M $NaF$ ($pK_a = 3.17$). Find the pH. (2 decimal places)
+**1)** Buffer: 0.40 M $HF$ and 0.60 M $NaF$ ($pK_a = 3.17$). Find the pH. (2 decimal places)
 
-2) What pH does a buffer with $pK_a = 9.25$ and $[NH_3]/[NH_4^+] = 0.50$ have? (2 decimal places)
+**2)** What pH does a buffer with $pK_a = 9.25$ and $[NH_3]/[NH_4^+] = 0.50$ have? (2 decimal places)
 
-3) For a buffer with $pK_a = 4.74$ at pH = 5.50, what is $[A^-]/[HA]$? (1 decimal place)
+**3)** For a buffer with $pK_a = 4.74$ at pH = 5.50, what is $[A^-]/[HA]$? (1 decimal place)
       `,
       exercise: {
         boxes: 3,

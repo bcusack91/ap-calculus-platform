@@ -89,11 +89,11 @@ This comprehensive review covers all buffer concepts: composition, mechanism, He
       content: `
 **AP Calculation Practice** 🧮
 
-1) A formate buffer ($pK_a = 3.75$) has pH = 4.05. What is the $[HCOO^-]/[HCOOH]$ ratio? (1 decimal place)
+**1)** A formate buffer ($pK_a = 3.75$) has pH = 4.05. What is the $[HCOO^-]/[HCOOH]$ ratio? (1 decimal place)
 
-2) 0.020 mol $NaOH$ is added to 500 mL of a buffer with 0.15 M $CH_3COOH$ and 0.15 M $CH_3COO^-$ ($pK_a = 4.74$). What is the new pH? (2 decimal places)
+**2)** 0.020 mol $NaOH$ is added to 500 mL of a buffer with 0.15 M $CH_3COOH$ and 0.15 M $CH_3COO^-$ ($pK_a = 4.74$). What is the new pH? (2 decimal places)
 
-3) What is the effective buffer range for ammonium/ammonia ($pK_a = 9.25$)? Enter the lower limit of the range. (2 decimal places)
+**3)** What is the effective buffer range for ammonium/ammonia ($pK_a = 9.25$)? Enter the lower limit of the range. (2 decimal places)
       `,
       exercise: {
         boxes: 3,

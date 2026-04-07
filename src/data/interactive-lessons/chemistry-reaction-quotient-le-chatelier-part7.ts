@@ -130,11 +130,11 @@ $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$, $K_c 
 
 Current concentrations: $[\\text{PCl}_5] = 0.50$, $[\\text{PCl}_3] = 0.10$, $[\\text{Cl}_2] = 0.10$ M
 
-1) Calculate Q. (Enter as a decimal)
+**1)** Calculate Q. (Enter as a decimal)
 
-2) Which direction does the reaction shift? (Enter "right" or "left")
+**2)** Which direction does the reaction shift? (Enter "right" or "left")
 
-3) If the temperature is raised to 300°C, does K increase or decrease? (Enter "increase" or "decrease")
+**3)** If the temperature is raised to 300°C, does K increase or decrease? (Enter "increase" or "decrease")
 
 *Round all answers to 3 significant figures.*
       `,

@@ -89,7 +89,9 @@ This is the temperature at which the reaction switches between spontaneous and n
 
 ### Example
 
-For ice melting: $\\Delta H = +6.01$ kJ/mol, $\\Delta S = +22.0$ J/(mol·K)
+> **Problem:** For ice melting: $\\Delta H = +6.01$ kJ/mol, $\\Delta S = +22.0$ J/(mol·K)
+
+**Solution:**
 
 $$T = \\frac{6010}{22.0} = 273 \\text{ K} = 0°\\text{C}$$
 
@@ -146,11 +148,11 @@ Above 273 K: melting is spontaneous ($\\Delta G < 0$). Below 273 K: freezing is 
       content: `
 **Gibbs Free Energy Calculations** 🧮
 
-1) $\\Delta H = -100$ kJ, $\\Delta S = +50$ J/K, $T = 298$ K. Calculate $\\Delta G$ in kJ. (to 3 significant figures)
+**1)** $\\Delta H = -100$ kJ, $\\Delta S = +50$ J/K, $T = 298$ K. Calculate $\\Delta G$ in kJ. (to 3 significant figures)
 
-2) $\\Delta H = +200$ kJ, $\\Delta S = +500$ J/K, $T = 500$ K. Calculate $\\Delta G$ in kJ.
+**2)** $\\Delta H = +200$ kJ, $\\Delta S = +500$ J/K, $T = 500$ K. Calculate $\\Delta G$ in kJ.
 
-3) A reaction has $\\Delta H = +30$ kJ and $\\Delta S = +100$ J/K. At what temperature (in K) is $\\Delta G = 0$?
+**3)** A reaction has $\\Delta H = +30$ kJ and $\\Delta S = +100$ J/K. At what temperature (in K) is $\\Delta G = 0$?
       `,
       exercise: {
         boxes: 3,

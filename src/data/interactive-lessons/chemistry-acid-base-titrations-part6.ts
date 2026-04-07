@@ -47,11 +47,11 @@ $$pOH = 5.13, \\quad pH = 8.87$$
 
 Same titration: 50.0 mL of 0.200 M $CH_3COOH$ with 0.200 M $NaOH$ ($pK_a = 4.74$)
 
-1) After adding 10.0 mL $NaOH$, what is the pH? (Use H-H. 2 decimal places)
+**1)** After adding 10.0 mL $NaOH$, what is the pH? (Use H-H. 2 decimal places)
 
-2) After adding 40.0 mL $NaOH$, what is the pH? (2 decimal places)
+**2)** After adding 40.0 mL $NaOH$, what is the pH? (2 decimal places)
 
-3) After adding 60.0 mL $NaOH$ (past equivalence), what is the pH? (2 decimal places)
+**3)** After adding 60.0 mL $NaOH$ (past equivalence), what is the pH? (2 decimal places)
       `,
       exercise: {
         boxes: 3,
@@ -128,11 +128,11 @@ The acid is likely **formic acid** ($HCOOH$, $K_a = 1.8 \\times 10^{-4}$).
 
 A weak acid $HA$ ($pK_a = 6.50$) is titrated with $NaOH$.
 
-1) At the half-equivalence point, pH = ? (2 decimal places)
+**1)** At the half-equivalence point, pH = ? (2 decimal places)
 
-2) The equivalence point will be at pH approximately (choose: <7, =7, or >7). Enter: less, equal, or greater.
+**2)** The equivalence point will be at pH approximately (choose: <7, =7, or >7). Enter: less, equal, or greater.
 
-3) Which indicator should be used? Enter the color-change pH range lower bound for an indicator with $pK_{In}$ matching the equivalence pH of ~10. (1 decimal place)
+**3)** Which indicator should be used? Enter the color-change pH range lower bound for an indicator with $pK_{In}$ matching the equivalence pH of ~10. (1 decimal place)
       `,
       exercise: {
         boxes: 3,

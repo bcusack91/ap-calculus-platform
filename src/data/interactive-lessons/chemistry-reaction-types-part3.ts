@@ -162,11 +162,11 @@ $$\\text{CH}_4 + \\text{O}_2 \\rightarrow \\text{C} + 2\\text{H}_2\\text{O}$$
 
 Find the coefficient of O₂ needed for complete combustion. Enter just the number.
 
-1) $\\text{C}_2\\text{H}_2 + \\text{__O}_2 \\rightarrow 2\\text{CO}_2 + \\text{H}_2\\text{O}$ → coefficient of O₂ = ?
+**1)** $\\text{C}_2\\text{H}_2 + \\text{__O}_2 \\rightarrow 2\\text{CO}_2 + \\text{H}_2\\text{O}$ → coefficient of O₂ = ?
 
-2) $2\\text{C}_4\\text{H}_{10} + \\text{__O}_2 \\rightarrow 8\\text{CO}_2 + 10\\text{H}_2\\text{O}$ → coefficient of O₂ = ?
+**2)** $2\\text{C}_4\\text{H}_{10} + \\text{__O}_2 \\rightarrow 8\\text{CO}_2 + 10\\text{H}_2\\text{O}$ → coefficient of O₂ = ?
 
-3) $\\text{C}_2\\text{H}_5\\text{OH} + \\text{__O}_2 \\rightarrow 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$ → coefficient of O₂ = ?
+**3)** $\\text{C}_2\\text{H}_5\\text{OH} + \\text{__O}_2 \\rightarrow 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$ → coefficient of O₂ = ?
 
 *Round all answers to 3 significant figures.*
       `,

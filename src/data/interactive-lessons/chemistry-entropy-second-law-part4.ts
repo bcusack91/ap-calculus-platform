@@ -149,11 +149,11 @@ This formula applies at the **equilibrium** transition temperature, where the pr
 
 Which substance has the HIGHER standard molar entropy? Type the chemical formula.
 
-1) $\\text{H}_2\\text{O}(l)$ or $\\text{H}_2\\text{O}(g)$?
+**1)** $\\text{H}_2\\text{O}(l)$ or $\\text{H}_2\\text{O}(g)$?
 
-2) $\\text{C}(s, \\text{diamond})$ or $\\text{C}(s, \\text{graphite})$?
+**2)** $\\text{C}(s, \\text{diamond})$ or $\\text{C}(s, \\text{graphite})$?
 
-3) $\\text{O}_2(g)$ or $\\text{O}_3(g)$?
+**3)** $\\text{O}_2(g)$ or $\\text{O}_3(g)$?
       `,
       exercise: {
         boxes: 3,

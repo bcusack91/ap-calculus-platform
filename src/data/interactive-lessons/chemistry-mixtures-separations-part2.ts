@@ -186,11 +186,11 @@ Used when boiling points are **close together** (< 25°C difference):
       content: `
 **Separation Basics** 🧮
 
-1) What is the solid material left on filter paper called? (one word)
+**1)** What is the solid material left on filter paper called? (one word)
 
-2) What is the liquid that passes through a filter called? (one word)
+**2)** What is the liquid that passes through a filter called? (one word)
 
-3) In distillation, the collected vapor that has been condensed back to liquid is called the ______. (one word)
+**3)** In distillation, the collected vapor that has been condensed back to liquid is called the ______. (one word)
       `,
       exercise: {
         inputs: [

@@ -128,11 +128,11 @@ $$m = \\frac{It \\cdot M}{nF} = \\frac{(2.00)(3600)(63.55)}{(2)(96{,}485)} = 2.3
 
 Use $F = 96{,}485$ C/mol, $M_{\\text{Ag}} = 107.87$ g/mol
 
-1) A current of $5.00$ A flows for $1000$ s. Total charge = ? (in C)
+**1)** A current of $5.00$ A flows for $1000$ s. Total charge = ? (in C)
 
-2) Using the charge from (1), how many moles of electrons? (to 3 significant figures)
+**2)** Using the charge from (1), how many moles of electrons? (to 3 significant figures)
 
-3) How many grams of Ag are deposited? ($\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$, $n = 1$) (to 3 significant figures)
+**3)** How many grams of Ag are deposited? ($\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$, $n = 1$) (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

@@ -101,11 +101,11 @@ Add reagent slowly → ion with smallest $K_{sp}$ precipitates first → filter 
 
 $\\text{Mg(OH)}_2(s) \\rightleftharpoons \\text{Mg}^{2+}(aq) + 2\\,\\text{OH}^-(aq)$, $K_{sp} = 5.6 \\times 10^{-12}$
 
-1) Calculate the molar solubility of $\\text{Mg(OH)}_2$ in pure water. ($K_{sp} = 4s^3$) (Enter in scientific notation, e.g. 1.1e-4)
+**1)** Calculate the molar solubility of $\\text{Mg(OH)}_2$ in pure water. ($K_{sp} = 4s^3$) (Enter in scientific notation, e.g. 1.1e-4)
 
-2) Calculate the molar solubility in a solution buffered at pH = 12.0 ($[\\text{OH}^-] = 0.010$ M). (Enter in scientific notation, e.g. 5.6e-8)
+**2)** Calculate the molar solubility in a solution buffered at pH = 12.0 ($[\\text{OH}^-] = 0.010$ M). (Enter in scientific notation, e.g. 5.6e-8)
 
-3) At pH = 12.0, what fraction of the pure-water solubility remains? (Enter as a percentage, e.g. 0.005)
+**3)** At pH = 12.0, what fraction of the pure-water solubility remains? (Enter as a percentage, e.g. 0.005)
       `,
       exercise: {
         boxes: 3,

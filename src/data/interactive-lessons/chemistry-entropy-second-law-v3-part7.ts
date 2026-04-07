@@ -42,11 +42,11 @@ For each process, identify whether it is always, never, or conditionally spontan
 
 A reaction has $\\Delta H = +44.0$ kJ/mol and $\\Delta S = +118.8$ J/(mol·K).
 
-1) Convert $\\Delta H$ to J/mol:
+**1)** Convert $\\Delta H$ to J/mol:
 
-2) Calculate $T_{\\text{crossover}} = \\Delta H / \\Delta S$ (in K, round to nearest whole number):
+**2)** Calculate $T_{\\text{crossover}} = \\Delta H / \\Delta S$ (in K, round to nearest whole number):
 
-3) Is this reaction spontaneous at 400 K?
+**3)** Is this reaction spontaneous at 400 K?
     `, exercise: { boxes: 3, correctAnswers: ['44000', '370', 'Yes'],
         hint1: '44.0 kJ × 1000 = 44000 J.',
         hint2: '44000 / 118.8 ≈ 370 K.',

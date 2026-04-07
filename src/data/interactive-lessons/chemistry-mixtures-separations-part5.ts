@@ -32,7 +32,9 @@ Two classical methods for determining the composition of mixtures are **gravimet
 
 ### Example
 
-Determine the mass percent of Cl⁻ in a 0.500 g sample. Adding excess AgNO₃ produces 0.854 g of AgCl.
+> **Problem:** Determine the mass percent of Cl⁻ in a 0.500 g sample. Adding excess AgNO₃ produces 0.854 g of AgCl.
+
+**Solution:**
 
 $$\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s)$$
 
@@ -153,11 +155,11 @@ Sometimes the analyte reacts slowly or doesn\'t have a clear endpoint. In a **ba
       content: `
 **Analytical Calculations** 🧮
 
-1) In a gravimetric analysis, 1.000 g of a sample produces 0.466 g of BaSO₄ ($M = 233.43$ g/mol). How many moles of SO₄²⁻ were in the sample? (to 3 significant figures)
+**1)** In a gravimetric analysis, 1.000 g of a sample produces 0.466 g of BaSO₄ ($M = 233.43$ g/mol). How many moles of SO₄²⁻ were in the sample? (to 3 significant figures)
 
-2) 20.0 mL of unknown H₂SO₄ is titrated with 0.150 M NaOH. It takes 40.0 mL to reach equivalence. The reaction is H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O. What is the molarity of H₂SO₄? (to 3 significant figures)
+**2)** 20.0 mL of unknown H₂SO₄ is titrated with 0.150 M NaOH. It takes 40.0 mL to reach equivalence. The reaction is H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O. What is the molarity of H₂SO₄? (to 3 significant figures)
 
-3) What is the mass percent of SO₄²⁻ ($M = 96.06$ g/mol) in the sample from problem 1? (to 3 significant figures, as a percentage)
+**3)** What is the mass percent of SO₄²⁻ ($M = 96.06$ g/mol) in the sample from problem 1? (to 3 significant figures, as a percentage)
       `,
       exercise: {
         inputs: [

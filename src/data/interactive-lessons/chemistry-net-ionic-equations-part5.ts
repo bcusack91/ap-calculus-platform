@@ -159,11 +159,11 @@ $$\\text{H}^+(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_4^+(aq)$$
 
 For each net ionic equation scenario, type **strong-strong**, **weak-strong**, or **strong-weak**.
 
-1) HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l)
+**1)** HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l)
 
-2) HF(aq) + KOH(aq) → KF(aq) + H₂O(l)
+**2)** HF(aq) + KOH(aq) → KF(aq) + H₂O(l)
 
-3) HClO₄(aq) + NH₃(aq) → NH₄ClO₄(aq)
+**3)** HClO₄(aq) + NH₃(aq) → NH₄ClO₄(aq)
       `,
       exercise: {
         boxes: 3,

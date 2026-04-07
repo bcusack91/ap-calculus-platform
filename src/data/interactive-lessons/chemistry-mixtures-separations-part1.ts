@@ -193,11 +193,11 @@ A **heterogeneous mixture** has a **non-uniform composition** — you can see or
       content: `
 **Quick Knowledge Check** 🧮
 
-1) What is the minimum particle size (in nm) for a suspension?
+**1)** What is the minimum particle size (in nm) for a suspension?
 
-2) What is the maximum particle size (in nm) for a solution?
+**2)** What is the maximum particle size (in nm) for a solution?
 
-3) In a solution of sugar dissolved in water, the solvent is ______ (enter the substance name).
+**3)** In a solution of sugar dissolved in water, the solvent is ______ (enter the substance name).
       `,
       exercise: {
         inputs: [

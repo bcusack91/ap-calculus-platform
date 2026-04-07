@@ -58,7 +58,9 @@ $$R_f = \\frac{\\text{distance traveled by substance}}{\\text{distance traveled 
 
 ### Example
 
-A spot travels 4.2 cm while the solvent front travels 7.0 cm:
+> **Problem:** A spot travels 4.2 cm while the solvent front travels 7.0 cm:
+
+**Solution:**
 
 $$R_f = \\frac{4.2}{7.0} = 0.60$$
       `
@@ -147,11 +149,11 @@ GC produces a graph of **detector signal vs. time**:
       content: `
 **Rf Value Calculations** 🧮
 
-1) A substance spot traveled 3.5 cm and the solvent front traveled 10.0 cm. What is the Rf value? (to 3 significant figures)
+**1)** A substance spot traveled 3.5 cm and the solvent front traveled 10.0 cm. What is the Rf value? (to 3 significant figures)
 
-2) In the same experiment, a second substance has Rf = 0.80. How far (in cm) did it travel? (to 3 significant figures)
+**2)** In the same experiment, a second substance has Rf = 0.80. How far (in cm) did it travel? (to 3 significant figures)
 
-3) An unknown spot has the same Rf as a known amino acid standard (Rf = 0.45). The solvent front traveled 8.0 cm. How far did the unknown travel? (in cm, to 3 significant figures)
+**3)** An unknown spot has the same Rf as a known amino acid standard (Rf = 0.45). The solvent front traveled 8.0 cm. How far did the unknown travel? (in cm, to 3 significant figures)
       `,
       exercise: {
         inputs: [

@@ -132,11 +132,11 @@ Given this data:
 | 10 | 0.250 | −1.386 | 4.00 |
 | 15 | 0.200 | −1.609 | 5.00 |
 
-1) What is the order? (enter 0, 1, or 2)
+**1)** What is the order? (enter 0, 1, or 2)
 
-2) What is k? (number only, to 3 significant figures)
+**2)** What is k? (number only, to 3 significant figures)
 
-3) What is [C] at t = 25 min? (in M, to 3 significant figures)
+**3)** What is [C] at t = 25 min? (in M, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

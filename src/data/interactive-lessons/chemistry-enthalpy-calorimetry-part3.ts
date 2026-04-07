@@ -156,11 +156,11 @@ The accepted value is $-55.8$ kJ/mol — our measurement is close!
       content: `
 **Calorimetry Calculations** 🧮
 
-1) How much heat is needed to raise the temperature of 200.0 g of water from 20.0°C to 45.0°C? (answer in kJ, to 3 significant figures; $c_{\\text{water}} = 4.184$ J/(g·°C))
+**1)** How much heat is needed to raise the temperature of 200.0 g of water from 20.0°C to 45.0°C? (answer in kJ, to 3 significant figures; $c_{\\text{water}} = 4.184$ J/(g·°C))
 
-2) A 50.0 g piece of metal at 95.0°C is placed in 150.0 g of water at 20.0°C. The final temperature is 23.0°C. What is the specific heat of the metal? (in J/(g·°C), to 3 significant figures)
+**2)** A 50.0 g piece of metal at 95.0°C is placed in 150.0 g of water at 20.0°C. The final temperature is 23.0°C. What is the specific heat of the metal? (in J/(g·°C), to 3 significant figures)
 
-3) When 100.0 mL of 0.500 M HCl and 100.0 mL of 0.500 M NaOH are mixed, the temperature rises by 3.4°C. What is $q_{\\text{rxn}}$ in kJ? (to 3 significant figures, include sign)
+**3)** When 100.0 mL of 0.500 M HCl and 100.0 mL of 0.500 M NaOH are mixed, the temperature rises by 3.4°C. What is $q_{\\text{rxn}}$ in kJ? (to 3 significant figures, include sign)
       `,
       exercise: {
         boxes: 3,

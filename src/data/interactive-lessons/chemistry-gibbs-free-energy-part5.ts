@@ -143,11 +143,11 @@ Since $\\Delta G < 0$ and $Q < K$, the forward reaction is spontaneous — more 
 
 For a reaction with $\\Delta G° = -10.0$ kJ/mol at $T = 298$ K:
 
-1) What is $\\Delta G$ when $Q = 1$? (in kJ/mol)
+**1)** What is $\\Delta G$ when $Q = 1$? (in kJ/mol)
 
-2) What is $\\Delta G$ when $Q = K$ (at equilibrium)? (in kJ/mol)
+**2)** What is $\\Delta G$ when $Q = K$ (at equilibrium)? (in kJ/mol)
 
-3) If $Q > K$, is $\\Delta G$ positive or negative? (type "positive" or "negative")
+**3)** If $Q > K$, is $\\Delta G$ positive or negative? (type "positive" or "negative")
 
 *Round all answers to 3 significant figures.*
       `,

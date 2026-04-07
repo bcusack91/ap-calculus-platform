@@ -49,11 +49,11 @@ $K_b(C_6H_5COO^-) = K_w/K_a = 1.0 \\times 10^{-14}/(6.3 \\times 10^{-5}) = 1.6 \
 
 Perform the same analysis for 0.15 M $HNO_2$ ($K_a = 4.5 \\times 10^{-4}$):
 
-1) What is $[H^+]$? (Enter in scientific notation, e.g. 8.2e-3)
+**1)** What is $[H^+]$? (Enter in scientific notation, e.g. 8.2e-3)
 
-2) What is the pH? (2 decimal places)
+**2)** What is the pH? (2 decimal places)
 
-3) What is the percent ionization? (1 decimal place, enter number only)
+**3)** What is the percent ionization? (1 decimal place, enter number only)
       `,
       exercise: {
         boxes: 3,
@@ -132,11 +132,11 @@ $$pOH = 5.68 \\qquad pH = 14 - 5.68 = 8.32$$
 
 A 0.25 M solution of an unknown weak acid has a pH of 2.72.
 
-1) What is $[H^+]$? (Enter in scientific notation, e.g. 1.9e-3)
+**1)** What is $[H^+]$? (Enter in scientific notation, e.g. 1.9e-3)
 
-2) What is the $K_a$ of the acid? (Enter in scientific notation, e.g. 1.5e-5)
+**2)** What is the $K_a$ of the acid? (Enter in scientific notation, e.g. 1.5e-5)
 
-3) What is the $pK_a$? (2 decimal places)
+**3)** What is the $pK_a$? (2 decimal places)
       `,
       exercise: {
         boxes: 3,

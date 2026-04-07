@@ -152,11 +152,11 @@ This enormous $K$ confirms the reaction is virtually complete at equilibrium.
       content: `
 **Thermodynamic Triangle Calculations** 🧮
 
-1) $E° = +0.80$ V, $n = 1$. Calculate $\\Delta G°$ in kJ. (to 1 decimal)
+**1)** $E° = +0.80$ V, $n = 1$. Calculate $\\Delta G°$ in kJ. (to 1 decimal)
 
-2) $\\Delta G° = -579$ kJ, $n = 6$. Calculate $E°$ in V. (to 3 significant figures)
+**2)** $\\Delta G° = -579$ kJ, $n = 6$. Calculate $E°$ in V. (to 3 significant figures)
 
-3) If $E° > 0$ for a cell, is $K$ greater than or less than 1? (type "greater" or "less")
+**3)** If $E° > 0$ for a cell, is $K$ greater than or less than 1? (type "greater" or "less")
       `,
       exercise: {
         boxes: 3,

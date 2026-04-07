@@ -156,11 +156,11 @@ If a reaction is exothermic in the forward direction, it is endothermic in rever
 
 Type "exothermic" or "endothermic" for each process:
 
-1) Water freezing into ice
+**1)** Water freezing into ice
 
-2) Dissolving ammonium nitrate in water (the solution feels cold)
+**2)** Dissolving ammonium nitrate in water (the solution feels cold)
 
-3) Burning natural gas on a stove
+**3)** Burning natural gas on a stove
       `,
       exercise: {
         boxes: 3,

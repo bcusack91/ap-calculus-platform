@@ -41,11 +41,11 @@ Half-life is one of the most-tested topics on the AP Chemistry exam. This part p
 
 A zero-order reaction has $k = 0.0020$ M/s.
 
-1) If [A]₀ = 0.100 M, what is the half-life? (in seconds)
+**1)** If [A]₀ = 0.100 M, what is the half-life? (in seconds)
 
-2) If [A]₀ = 0.200 M, what is the half-life? (in seconds)
+**2)** If [A]₀ = 0.200 M, what is the half-life? (in seconds)
 
-3) For [A]₀ = 0.100 M, how long until 75% has reacted (only 25% remains)? Note: this is NOT simply 2 half-lives for zero-order! Use the integrated rate law. (in seconds, to 3 significant figures)
+**3)** For [A]₀ = 0.100 M, how long until 75% has reacted (only 25% remains)? Note: this is NOT simply 2 half-lives for zero-order! Use the integrated rate law. (in seconds, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
@@ -62,11 +62,11 @@ A zero-order reaction has $k = 0.0020$ M/s.
       content: `
 **First-Order Half-Life Problems** 🧮
 
-1) A first-order reaction has $k = 0.0462$ s⁻¹. What is the half-life? (in seconds, to 3 significant figures)
+**1)** A first-order reaction has $k = 0.0462$ s⁻¹. What is the half-life? (in seconds, to 3 significant figures)
 
-2) If 93.75% of a first-order reactant has decomposed, how many half-lives have passed? (integer)
+**2)** If 93.75% of a first-order reactant has decomposed, how many half-lives have passed? (integer)
 
-3) Iodine-131 has a half-life of 8.02 days. What fraction remains after 24.06 days? Express as a fraction with denominator 8 (e.g., enter 3/8).
+**3)** Iodine-131 has a half-life of 8.02 days. What fraction remains after 24.06 days? Express as a fraction with denominator 8 (e.g., enter 3/8).
       `,
       exercise: {
         boxes: 3,
@@ -85,11 +85,11 @@ A zero-order reaction has $k = 0.0020$ M/s.
 
 A second-order reaction has $k = 0.40$ M⁻¹s⁻¹ and $[A]_0 = 0.50$ M.
 
-1) What is the first half-life? (in seconds, to 3 significant figures)
+**1)** What is the first half-life? (in seconds, to 3 significant figures)
 
-2) What is the second half-life? (in seconds, to 3 significant figures)
+**2)** What is the second half-life? (in seconds, to 3 significant figures)
 
-3) What is [A] after 15 s? (in M, to 3 significant figures)
+**3)** What is [A] after 15 s? (in M, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
@@ -125,7 +125,9 @@ where $\\lambda$ = decay constant (same role as $k$), $N$ = number of atoms rema
 
 ### Example
 
-A fossil has 25% of original $^{14}$C. How old is it?
+> **Problem:** A fossil has 25% of original $^{14}$C. How old is it?
+
+**Solution:**
 
 $$\\frac{N}{N_0} = 0.25 = \\left(\\frac{1}{2}\\right)^n \\Rightarrow n = 2 \\text{ half-lives}$$
 

@@ -53,16 +53,20 @@ A student in the lab weighs out 11.0 g of an unknown white solid. Analysis shows
 ### Questions to Answer
 
 **a) How many moles?**
-$$n = \\frac{11.0}{100.09} = 0.1099 \\text{ mol}$$
+
+$$\\text{mol CaCO}_3 = 11.0 \\; \\cancel{\\text{g CaCO}_3} \\times \\frac{1 \\text{ mol CaCO}_3}{100.09 \\; \\cancel{\\text{g CaCO}_3}} = 0.1099 \\text{ mol CaCO}_3$$
 
 **b) How many formula units?**
-$$N = 0.1099 \\times 6.022 \\times 10^{23} = 6.62 \\times 10^{22}$$
+
+$$\\text{formula units} = 0.1099 \\; \\cancel{\\text{mol CaCO}_3} \\times \\frac{6.022 \\times 10^{23} \\text{ formula units CaCO}_3}{1 \\; \\cancel{\\text{mol CaCO}_3}} = 6.62 \\times 10^{22} \\text{ formula units CaCO}_3$$
 
 **c) How many total atoms?** (CaCO₃ has 5 atoms per formula unit: 1 Ca + 1 C + 3 O)
-$$\\text{atoms} = 5 \\times 6.62 \\times 10^{22} = 3.31 \\times 10^{23}$$
+
+$$\\text{atoms} = 6.62 \\times 10^{22} \\; \\cancel{\\text{formula units CaCO}_3} \\times \\frac{5 \\text{ atoms}}{1 \\; \\cancel{\\text{formula unit CaCO}_3}} = 3.31 \\times 10^{23} \\text{ atoms}$$
 
 **d) How many grams of calcium are in the sample?**
-$$m_{\\text{Ca}} = 0.1099 \\text{ mol} \\times 40.08 \\text{ g/mol} = 4.41 \\text{ g}$$
+
+$$\\text{g Ca} = 0.1099 \\; \\cancel{\\text{mol CaCO}_3} \\times \\frac{1 \\; \\cancel{\\text{mol Ca}}}{1 \\; \\cancel{\\text{mol CaCO}_3}} \\times \\frac{40.08 \\text{ g Ca}}{1 \\; \\cancel{\\text{mol Ca}}} = 4.41 \\text{ g Ca}$$
 
 Or using percent composition: $\\%\\text{Ca} = 40.08/100.09 \\times 100 = 40.04\\%$; $m_{\\text{Ca}} = 0.4004 \\times 11.0 = 4.40$ g.
       `
@@ -117,13 +121,13 @@ Or using percent composition: $\\%\\text{Ca} = 40.08/100.09 \\times 100 = 40.04\
       content: `
 **Multi-Step Calculation Drill** 🧮
 
-Use: H = 1.008, C = 12.01, N = 14.01, O = 16.00, Na = 22.99, Cl = 35.45, Fe = 55.85
+> **Given:** H = 1.008, C = 12.01, N = 14.01, O = 16.00, Na = 22.99, Cl = 35.45, Fe = 55.85
 
-1) How many grams of iron (Fe) contain the same number of atoms as 12.01 g of carbon (C)? (to 3 significant figures)
+**1)** How many grams of iron (Fe) contain the same number of atoms as 12.01 g of carbon (C)? (to 3 significant figures)
 
-2) A chemist has 25.0 g of NaCl ($M = 58.44$). How many chloride ions ($\\text{Cl}^-$) are present? Express as $a \\times 10^{23}$ — enter $a$ (to 3 significant figures).
+**2)** A chemist has 25.0 g of NaCl ($M = 58.44$). How many chloride ions ($\\text{Cl}^-$) are present? Express as $a \\times 10^{23}$ — enter $a$ (to 3 significant figures).
 
-3) How many hydrogen atoms are in 36.04 g of water ($M_{\\text{H}_2\\text{O}} = 18.02$)? Express as $a \\times 10^{24}$ — enter $a$ (to 3 significant figures).
+**3)** How many hydrogen atoms are in 36.04 g of water ($M_{\\text{H}_2\\text{O}} = 18.02$)? Express as $a \\times 10^{24}$ — enter $a$ (to 3 significant figures).
       `,
       exercise: {
         boxes: 3,

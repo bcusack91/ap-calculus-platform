@@ -148,11 +148,11 @@ $$\\text{Fe}^{3+}(aq) + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(s)$$
 
 For each pair of solutions mixed, write the formula of the precipitate that forms. If no reaction occurs, type **NR**.
 
-1) $\\text{CaCl}_2(aq) + \\text{Na}_2\\text{CO}_3(aq) \\rightarrow$
+**1)** $\\text{CaCl}_2(aq) + \\text{Na}_2\\text{CO}_3(aq) \\rightarrow$
 
-2) $\\text{KNO}_3(aq) + \\text{NaBr}(aq) \\rightarrow$
+**2)** $\\text{KNO}_3(aq) + \\text{NaBr}(aq) \\rightarrow$
 
-3) $\\text{Cu(NO}_3)_2(aq) + 2\\text{NaOH}(aq) \\rightarrow$
+**3)** $\\text{Cu(NO}_3)_2(aq) + 2\\text{NaOH}(aq) \\rightarrow$
       `,
       exercise: {
         boxes: 3,

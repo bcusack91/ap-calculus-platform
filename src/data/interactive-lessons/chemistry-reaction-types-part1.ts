@@ -160,11 +160,11 @@ These reactions are essentially **reverses** of each other. If a synthesis react
 
 For each reaction, type **synthesis** or **decomposition**.
 
-1) $2\\text{Al} + 3\\text{Br}_2 \\rightarrow 2\\text{AlBr}_3$
+**1)** $2\\text{Al} + 3\\text{Br}_2 \\rightarrow 2\\text{AlBr}_3$
 
-2) $2\\text{HgO} \\xrightarrow{\\Delta} 2\\text{Hg} + \\text{O}_2$
+**2)** $2\\text{HgO} \\xrightarrow{\\Delta} 2\\text{Hg} + \\text{O}_2$
 
-3) $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$
+**3)** $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$
       `,
       exercise: {
         boxes: 3,

@@ -135,11 +135,11 @@ For: $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$
 
 Initial concentrations: $[\\text{N}_2\\text{O}_4] = 0.50$ M, $[\\text{NO}_2] = 0$ M
 
-1) If the change in $[\\text{N}_2\\text{O}_4]$ is $-x$, what is the change in $[\\text{NO}_2]$? (Enter with sign, e.g., "+2x")
+**1)** If the change in $[\\text{N}_2\\text{O}_4]$ is $-x$, what is the change in $[\\text{NO}_2]$? (Enter with sign, e.g., "+2x")
 
-2) What is the equilibrium expression for $[\\text{N}_2\\text{O}_4]$ in terms of x? (Enter, e.g., "0.50 - x")
+**2)** What is the equilibrium expression for $[\\text{N}_2\\text{O}_4]$ in terms of x? (Enter, e.g., "0.50 - x")
 
-3) What is the equilibrium expression for $[\\text{NO}_2]$ in terms of x? (Enter, e.g., "2x")
+**3)** What is the equilibrium expression for $[\\text{NO}_2]$ in terms of x? (Enter, e.g., "2x")
       `,
       exercise: {
         boxes: 3,

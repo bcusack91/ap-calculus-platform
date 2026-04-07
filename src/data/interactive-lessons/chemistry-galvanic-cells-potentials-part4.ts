@@ -128,11 +128,11 @@ The gas contacts the Pt electrode and is separated by a phase boundary.
 
 For the cell: $\\text{Al}(s) \\mid \\text{Al}^{3+}(aq) \\| \\text{Ni}^{2+}(aq) \\mid \\text{Ni}(s)$
 
-1) Which metal is the anode? (element symbol)
+**1)** Which metal is the anode? (element symbol)
 
-2) Which metal is the cathode? (element symbol)
+**2)** Which metal is the cathode? (element symbol)
 
-3) How many electrons are transferred in the balanced reaction? (Al³⁺ needs 3e⁻, Ni²⁺ needs 2e⁻)
+**3)** How many electrons are transferred in the balanced reaction? (Al³⁺ needs 3e⁻, Ni²⁺ needs 2e⁻)
       `,
       exercise: {
         boxes: 3,

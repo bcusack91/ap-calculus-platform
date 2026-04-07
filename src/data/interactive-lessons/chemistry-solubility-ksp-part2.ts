@@ -114,11 +114,11 @@ You **cannot** directly compare $K_{sp}$ values to rank solubility unless the co
       content: `
 **Practice: Molar Solubility Calculations** 🧮
 
-1) $\\text{BaSO}_4$, $K_{sp} = 1.1 \\times 10^{-10}$. (1:1 salt) What is the molar solubility? (Enter in scientific notation, e.g. 1.0e-5)
+**1)** $\\text{BaSO}_4$, $K_{sp} = 1.1 \\times 10^{-10}$. (1:1 salt) What is the molar solubility? (Enter in scientific notation, e.g. 1.0e-5)
 
-2) $\\text{Ca(OH)}_2$, $K_{sp} = 5.0 \\times 10^{-6}$. ($K_{sp} = 4s^3$) What is the molar solubility? (Round to 3 significant figures, e.g. 0.01)
+**2)** $\\text{Ca(OH)}_2$, $K_{sp} = 5.0 \\times 10^{-6}$. ($K_{sp} = 4s^3$) What is the molar solubility? (Round to 3 significant figures, e.g. 0.01)
 
-3) For the BaSO₄ solution above, what is $[\\text{Ba}^{2+}]$? (Enter in same format as answer 1)
+**3)** For the BaSO₄ solution above, what is $[\\text{Ba}^{2+}]$? (Enter in same format as answer 1)
       `,
       exercise: {
         boxes: 3,

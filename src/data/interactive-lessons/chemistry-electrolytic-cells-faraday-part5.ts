@@ -136,11 +136,11 @@ $$2\\text{NaCl}(aq) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Cl}_2(g) + \\
 A piece of jewelry is silver-plated using $I = 2.0$ A for $20$ minutes.
 $\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$, $n = 1$, $M_{\\text{Ag}} = 107.87$ g/mol
 
-1) Total charge in coulombs?
+**1)** Total charge in coulombs?
 
-2) Moles of Ag deposited? (to 3 significant figures)
+**2)** Moles of Ag deposited? (to 3 significant figures)
 
-3) Mass of Ag deposited in grams? (to 3 significant figures)
+**3)** Mass of Ag deposited in grams? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

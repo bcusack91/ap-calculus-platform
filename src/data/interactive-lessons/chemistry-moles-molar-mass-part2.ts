@@ -51,23 +51,41 @@ For a compound, add up the molar masses of all atoms in the formula.
 
 ### Example 1: Water (H₂O)
 
+> **Problem:** What is the molar mass of water (H₂O)?
+
+**Solution:**
+
 $$M_{\\text{H}_2\\text{O}} = 2(1.008) + 1(16.00) = 2.016 + 16.00 = 18.02 \\text{ g/mol}$$
 
 ### Example 2: Sodium Chloride (NaCl)
+
+> **Problem:** What is the molar mass of sodium chloride (NaCl)?
+
+**Solution:**
 
 $$M_{\\text{NaCl}} = 22.99 + 35.45 = 58.44 \\text{ g/mol}$$
 
 ### Example 3: Calcium Carbonate (CaCO₃)
 
+> **Problem:** What is the molar mass of calcium carbonate (CaCO₃)?
+
+**Solution:**
+
 $$M_{\\text{CaCO}_3} = 40.08 + 12.01 + 3(16.00) = 40.08 + 12.01 + 48.00 = 100.09 \\text{ g/mol}$$
 
 ### Example 4: Glucose (C₆H₁₂O₆)
+
+> **Problem:** What is the molar mass of glucose (C₆H₁₂O₆)?
+
+**Solution:**
 
 $$M_{\\text{C}_6\\text{H}_{12}\\text{O}_6} = 6(12.01) + 12(1.008) + 6(16.00) = 72.06 + 12.10 + 96.00 = 180.16 \\text{ g/mol}$$
 
 ### Tip: Watch for Parentheses!
 
-For $\\text{Ca(OH)}_2$:
+> **Problem:** What is the molar mass of calcium hydroxide, Ca(OH)₂?
+
+**Solution:**
 
 $$M = 40.08 + 2(16.00 + 1.008) = 40.08 + 2(17.008) = 40.08 + 34.02 = 74.10 \\text{ g/mol}$$
       `
@@ -105,10 +123,10 @@ $$M = 40.08 + 2(16.00 + 1.008) = 40.08 + 2(17.008) = 40.08 + 34.02 = 74.10 \\tex
           {
             question: 'Which compound has the greatest molar mass?',
             options: [
-              'H₂O (18.02 g/mol)',
-              'CO₂ (44.01 g/mol)',
-              'NaCl (58.44 g/mol)',
-              'C₆H₁₂O₆ (180.16 g/mol)'
+              'H₂O',
+              'CO₂',
+              'NaCl',
+              'C₆H₁₂O₆'
             ],
             correctAnswer: 3,
             explanation: 'Glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$) has the greatest molar mass at 180.16 g/mol because it contains the most atoms and includes heavy carbon and oxygen atoms.'
@@ -122,13 +140,21 @@ $$M = 40.08 + 2(16.00 + 1.008) = 40.08 + 2(17.008) = 40.08 + 34.02 = 74.10 \\tex
       content: `
 **Molar Mass Calculation Drill** 🧮
 
-Use these atomic masses: H = 1.008, C = 12.01, N = 14.01, O = 16.00, Na = 22.99, S = 32.07, Cl = 35.45, K = 39.10, Ca = 40.08, Fe = 55.85
+> **Given Atomic Masses (g/mol):**
+>
+> | H | C | N | O | Na |
+> |---|---|---|---|---|
+> | 1.008 | 12.01 | 14.01 | 16.00 | 22.99 |
+>
+> | S | Cl | K | Ca | Fe |
+> |---|---|---|---|---|
+> | 32.07 | 35.45 | 39.10 | 40.08 | 55.85 |
 
-1) Calculate the molar mass of ammonia (NH₃) in g/mol. (to 3 significant figures)
+**1)** Calculate the molar mass of ammonia (NH₃) in g/mol. (to 3 significant figures)
 
-2) Calculate the molar mass of potassium permanganate (KMnO₄) in g/mol. (Mn = 54.94; to 3 significant figures)
+**2)** Calculate the molar mass of potassium permanganate (KMnO₄) in g/mol. (Mn = 54.94; to 3 significant figures)
 
-3) Calculate the molar mass of iron(III) oxide (Fe₂O₃) in g/mol. (to 3 significant figures)
+**3)** Calculate the molar mass of iron(III) oxide (Fe₂O₃) in g/mol. (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

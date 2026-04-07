@@ -139,11 +139,11 @@ The equation is: $4x^2 + 0.36x - 0.18 = 0$
 
 Using the quadratic formula:
 
-1) What is the discriminant $b^2 - 4ac$? (Enter to 3 significant figures)
+**1)** What is the discriminant $b^2 - 4ac$? (Enter to 3 significant figures)
 
-2) What is $x$? (Round to 3 significant figures)
+**2)** What is $x$? (Round to 3 significant figures)
 
-3) What is $[\\text{NO}_2]$ at equilibrium? (Round to 3 significant figures)
+**3)** What is $[\\text{NO}_2]$ at equilibrium? (Round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

@@ -107,11 +107,11 @@ Adding heat to cold surroundings makes more of a difference than adding the same
       content: `
 **Second Law Calculations** 🧮
 
-1) A reaction has $\\Delta H = -80$ kJ at $T = 400$ K. Calculate $\\Delta S_{\\text{surr}}$ in J/K.
+**1)** A reaction has $\\Delta H = -80$ kJ at $T = 400$ K. Calculate $\\Delta S_{\\text{surr}}$ in J/K.
 
-2) If $\\Delta S_{\\text{sys}} = -100$ J/K and $\\Delta S_{\\text{surr}} = +200$ J/K, what is $\\Delta S_{\\text{univ}}$ in J/K?
+**2)** If $\\Delta S_{\\text{sys}} = -100$ J/K and $\\Delta S_{\\text{surr}} = +200$ J/K, what is $\\Delta S_{\\text{univ}}$ in J/K?
 
-3) Is the process in question 2 spontaneous? (type yes or no)
+**3)** Is the process in question 2 spontaneous? (type yes or no)
       `,
       exercise: {
         boxes: 3,

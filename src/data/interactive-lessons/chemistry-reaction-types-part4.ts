@@ -163,11 +163,11 @@ Check: Al: 2 = 2 ✓, H: 6 = 6 ✓, Cl: 6 = 6 ✓
 
 Balance each equation. Enter the coefficient of the indicated substance.
 
-1) $\\text{__N}_2 + \\text{__H}_2 \\rightarrow \\text{__NH}_3$ → coefficient of H₂ = ?
+**1)** $\\text{__N}_2 + \\text{__H}_2 \\rightarrow \\text{__NH}_3$ → coefficient of H₂ = ?
 
-2) $\\text{__Al} + \\text{__HCl} \\rightarrow \\text{__AlCl}_3 + \\text{__H}_2$ → coefficient of HCl = ?
+**2)** $\\text{__Al} + \\text{__HCl} \\rightarrow \\text{__AlCl}_3 + \\text{__H}_2$ → coefficient of HCl = ?
 
-3) $\\text{__Fe}_2\\text{O}_3 + \\text{__CO} \\rightarrow \\text{__Fe} + \\text{__CO}_2$ → coefficient of CO = ?
+**3)** $\\text{__Fe}_2\\text{O}_3 + \\text{__CO} \\rightarrow \\text{__Fe} + \\text{__CO}_2$ → coefficient of CO = ?
       `,
       exercise: {
         boxes: 3,

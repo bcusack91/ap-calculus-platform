@@ -93,11 +93,11 @@ A reaction energy diagram shows:
 
 The rate constant for the decomposition of N₂O₅ is $k = 3.46 \\times 10^{-5}$ s⁻¹ at 298 K and $k = 4.87 \\times 10^{-3}$ s⁻¹ at 338 K.
 
-1) Calculate $E_a$ in kJ/mol. (to 3 significant figures)
+**1)** Calculate $E_a$ in kJ/mol. (to 3 significant figures)
 
-2) Calculate the frequency factor $A$. (order of magnitude: enter the exponent, e.g., for 10¹³ enter 13)
+**2)** Calculate the frequency factor $A$. (order of magnitude: enter the exponent, e.g., for 10¹³ enter 13)
 
-3) What would $k$ be at 310 K? (in s⁻¹, to 1 significant figure in scientific notation, e.g., 2e-4)
+**3)** What would $k$ be at 310 K? (in s⁻¹, to 1 significant figure in scientific notation, e.g., 2e-4)
       `,
       exercise: {
         boxes: 3,
@@ -197,11 +197,11 @@ A catalyzed reaction has the following data:
 | 300 | 0.050 |
 | 350 | 0.85 |
 
-1) Calculate Ea for the catalyzed reaction. (in kJ/mol, to 3 significant figures)
+**1)** Calculate Ea for the catalyzed reaction. (in kJ/mol, to 3 significant figures)
 
-2) The uncatalyzed reaction has Ea = 100 kJ/mol. By how many kJ/mol does the catalyst lower Ea? (to 3 significant figures)
+**2)** The uncatalyzed reaction has Ea = 100 kJ/mol. By how many kJ/mol does the catalyst lower Ea? (to 3 significant figures)
 
-3) At 300 K, what is the ratio k(cat)/k(uncat)? (to 1 significant figure, scientific notation: e.g., 3e5)
+**3)** At 300 K, what is the ratio k(cat)/k(uncat)? (to 1 significant figure, scientific notation: e.g., 3e5)
       `,
       exercise: {
         boxes: 3,

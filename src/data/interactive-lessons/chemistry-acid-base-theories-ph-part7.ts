@@ -92,11 +92,11 @@ $$[H^+] = 10^{-pH} \\qquad [OH^-] = 10^{-pOH}$$
       content: `
 **AP Calculation Practice** 🧮
 
-1) What is the pH of a solution made by mixing 100.0 mL of 0.15 M $HCl$ with 75.0 mL of 0.15 M $NaOH$? (2 decimal places)
+**1)** What is the pH of a solution made by mixing 100.0 mL of 0.15 M $HCl$ with 75.0 mL of 0.15 M $NaOH$? (2 decimal places)
 
-2) A solution has a pH of 11.50. What is $[H^+]$? (Enter in scientific notation, e.g. 3.2e-12)
+**2)** A solution has a pH of 11.50. What is $[H^+]$? (Enter in scientific notation, e.g. 3.2e-12)
 
-3) What volume (mL) of 0.20 M $NaOH$ is needed to exactly neutralize 50.0 mL of 0.10 M $H_2SO_4$? (Enter as whole number)
+**3)** What volume (mL) of 0.20 M $NaOH$ is needed to exactly neutralize 50.0 mL of 0.10 M $H_2SO_4$? (Enter as whole number)
       `,
       exercise: {
         boxes: 3,

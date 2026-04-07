@@ -112,11 +112,11 @@ Notice: pH jumps from ~4 to ~10 in just 0.2 mL! That\'s the dramatic equivalence
 
 Titrating 25.0 mL of 0.200 M $HCl$ with 0.200 M $NaOH$:
 
-1) What is the pH at the start (before adding any $NaOH$)? (2 decimal places)
+**1)** What is the pH at the start (before adding any $NaOH$)? (2 decimal places)
 
-2) What volume of $NaOH$ is needed to reach the equivalence point? (1 decimal place, in mL)
+**2)** What volume of $NaOH$ is needed to reach the equivalence point? (1 decimal place, in mL)
 
-3) What is the pH after adding 30.0 mL of $NaOH$? (2 decimal places)
+**3)** What is the pH after adding 30.0 mL of $NaOH$? (2 decimal places)
       `,
       exercise: {
         boxes: 3,

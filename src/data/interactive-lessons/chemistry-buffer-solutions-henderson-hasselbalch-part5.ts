@@ -150,11 +150,11 @@ $$NH_3 + H^+ \\rightarrow NH_4^+$$
       content: `
 **Buffer Preparation Calculations** 🧮
 
-1) What ratio $[A^-]/[HA]$ is needed for a buffer at pH 4.00 using acetic acid ($pK_a = 4.74$)? (2 decimal places)
+**1)** What ratio $[A^-]/[HA]$ is needed for a buffer at pH 4.00 using acetic acid ($pK_a = 4.74$)? (2 decimal places)
 
-2) You have 0.30 mol $CH_3COOH$. How many moles of $NaOH$ should you add to make a buffer at pH = 4.74? (2 decimal places)
+**2)** You have 0.30 mol $CH_3COOH$. How many moles of $NaOH$ should you add to make a buffer at pH = 4.74? (2 decimal places)
 
-3) To prepare 500 mL of pH 9.55 buffer from $NH_4Cl$ and $NH_3$ ($pK_a = 9.25$), with total concentration 0.40 M, how many moles of $NH_3$ are needed? (3 decimal places)
+**3)** To prepare 500 mL of pH 9.55 buffer from $NH_4Cl$ and $NH_3$ ($pK_a = 9.25$), with total concentration 0.40 M, how many moles of $NH_3$ are needed? (3 decimal places)
       `,
       exercise: {
         boxes: 3,

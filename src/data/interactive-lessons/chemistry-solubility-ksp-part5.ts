@@ -115,11 +115,11 @@ $K_{sp}(\\text{BaSO}_4) = 1.1 \\times 10^{-10}$
 
 Both salts are 1:1 type: $K_{sp} = [\\text{M}^{2+}][\\text{SO}_4^{2-}]$
 
-1) $[\\text{SO}_4^{2-}]$ needed to start precipitating BaSO₄? (Enter in scientific notation, e.g. 5.5e-9)
+**1)** $[\\text{SO}_4^{2-}]$ needed to start precipitating BaSO₄? (Enter in scientific notation, e.g. 5.5e-9)
 
-2) $[\\text{SO}_4^{2-}]$ needed to start precipitating CaSO₄? (Enter in scientific notation, e.g. 2.5e-3)
+**2)** $[\\text{SO}_4^{2-}]$ needed to start precipitating CaSO₄? (Enter in scientific notation, e.g. 2.5e-3)
 
-3) Which precipitates first? (Enter "BaSO4" or "CaSO4")
+**3)** Which precipitates first? (Enter "BaSO4" or "CaSO4")
 
 *Round all answers to 3 significant figures.*
       `,

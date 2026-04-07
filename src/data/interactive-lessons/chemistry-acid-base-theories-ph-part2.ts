@@ -183,11 +183,11 @@ For the reaction: $NH_3 + H_2O \\rightleftharpoons NH_4^+ + OH^-$
 
 Identify the conjugate partners:
 
-1) What is the conjugate base of $H_2CO_3$? (Enter the chemical formula, e.g. HCO3-)
+**1)** What is the conjugate base of $H_2CO_3$? (Enter the chemical formula, e.g. HCO3-)
 
-2) What is the conjugate acid of $PO_4^{3-}$? (Enter the chemical formula, e.g. HPO42-)
+**2)** What is the conjugate acid of $PO_4^{3-}$? (Enter the chemical formula, e.g. HPO42-)
 
-3) What is the conjugate base of $H_2O$? (Enter the chemical formula, e.g. OH-)
+**3)** What is the conjugate base of $H_2O$? (Enter the chemical formula, e.g. OH-)
       `,
       exercise: {
         boxes: 3,

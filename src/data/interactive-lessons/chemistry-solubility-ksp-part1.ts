@@ -114,11 +114,11 @@ $$K_{sp} = [\\text{M}^{b+}]^a[\\text{X}^{a-}]^b$$
 
 Write the $K_{sp}$ expression for each compound. Count the total number of ion concentration terms (including exponents) that appear.
 
-1) $\\text{BaSO}_4(s) \\rightleftharpoons \\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq)$. How many ion terms appear in $K_{sp}$? (Enter a number)
+**1)** $\\text{BaSO}_4(s) \\rightleftharpoons \\text{Ba}^{2+}(aq) + \\text{SO}_4^{2-}(aq)$. How many ion terms appear in $K_{sp}$? (Enter a number)
 
-2) $\\text{Pb(IO}_3)_2(s) \\rightleftharpoons \\text{Pb}^{2+}(aq) + 2\\,\\text{IO}_3^-(aq)$. The exponent on $[\\text{IO}_3^-]$ is? (Enter a number)
+**2)** $\\text{Pb(IO}_3)_2(s) \\rightleftharpoons \\text{Pb}^{2+}(aq) + 2\\,\\text{IO}_3^-(aq)$. The exponent on $[\\text{IO}_3^-]$ is? (Enter a number)
 
-3) $\\text{Bi}_2\\text{S}_3(s) \\rightleftharpoons 2\\,\\text{Bi}^{3+}(aq) + 3\\,\\text{S}^{2-}(aq)$. The exponent on $[\\text{Bi}^{3+}]$ is? (Enter a number)
+**3)** $\\text{Bi}_2\\text{S}_3(s) \\rightleftharpoons 2\\,\\text{Bi}^{3+}(aq) + 3\\,\\text{S}^{2-}(aq)$. The exponent on $[\\text{Bi}^{3+}]$ is? (Enter a number)
       `,
       exercise: {
         boxes: 3,

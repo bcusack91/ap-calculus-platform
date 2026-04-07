@@ -179,11 +179,11 @@ But 0.10 M $CH_3COOH$: $pH = 2.87$ (we\'ll calculate this in Part 2)
       content: `
 **$K_a$ and $pK_a$ Conversions** 🧮
 
-1) Convert $K_a = 1.8 \\times 10^{-5}$ to $pK_a$ (3 significant figures)
+**1)** Convert $K_a = 1.8 \\times 10^{-5}$ to $pK_a$ (3 significant figures)
 
-2) Convert $pK_a = 9.21$ to $K_a$ (Enter in scientific notation, e.g. 6.2e-10)
+**2)** Convert $pK_a = 9.21$ to $K_a$ (Enter in scientific notation, e.g. 6.2e-10)
 
-3) Rank by acid strength (enter strongest): Acid A ($pK_a = 2.1$), Acid B ($pK_a = 6.5$), Acid C ($pK_a = 4.3$). Enter A, B, or C.
+**3)** Rank by acid strength (enter strongest): Acid A ($pK_a = 2.1$), Acid B ($pK_a = 6.5$), Acid C ($pK_a = 4.3$). Enter A, B, or C.
       `,
       exercise: {
         boxes: 3,

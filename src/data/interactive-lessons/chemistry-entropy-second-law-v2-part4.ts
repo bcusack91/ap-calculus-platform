@@ -79,7 +79,9 @@ $$\\Delta S°_{\\text{rxn}} = \\sum n \\cdot S°_{\\text{products}} - \\sum n \\
 
 ### Example
 
-For $\\text{2 H}_2\\text{(g)} + \\text{O}_2\\text{(g)} \\to \\text{2 H}_2\\text{O(g)}$
+> **Problem:** For $\\text{2 H}_2\\text{(g)} + \\text{O}_2\\text{(g)} \\to \\text{2 H}_2\\text{O(g)}$
+
+**Solution:**
 
 $$\\Delta S° = 2(188.7) - [2(130.6) + 205.0]$$
 $$= 377.4 - 466.2 = -88.8 \\text{ J/(mol·K)}$$
@@ -97,11 +99,11 @@ For the reaction: $\\text{CaCO}_3\\text{(s)} \\to \\text{CaO(s)} + \\text{CO}_2\
 
 Given: $S°$(CaCO₃) = 92.9, $S°$(CaO) = 39.7, $S°$(CO₂) = 213.7 J/(mol·K)
 
-1) Calculate $\\Delta S°$ for this reaction in J/(mol·K). Round to 1 decimal place.
+**1)** Calculate $\\Delta S°$ for this reaction in J/(mol·K). Round to 1 decimal place.
 
-2) Is $\\Delta S°$ positive or negative? (type positive or negative)
+**2)** Is $\\Delta S°$ positive or negative? (type positive or negative)
 
-3) Does this make physical sense? A solid breaks into a solid + gas — more or fewer microstates? (type more or fewer)
+**3)** Does this make physical sense? A solid breaks into a solid + gas — more or fewer microstates? (type more or fewer)
       `,
       exercise: {
         boxes: 3,

@@ -78,23 +78,41 @@ $$\\text{number of particles} = \\text{moles} \\times 6.022 \\times 10^{23}$$
 
 ### Example 1: Moles → Particles
 
-How many atoms are in 2.50 mol of iron (Fe)?
+> **Problem:** How many atoms are in 2.50 mol of iron (Fe)?
 
-$$\\text{atoms} = 2.50 \\text{ mol} \\times 6.022 \\times 10^{23} \\text{ atoms/mol} = 1.506 \\times 10^{24} \\text{ atoms}$$
+**Solution:**
+
+$$\\text{atoms of Fe} = 2.50 \\; \\cancel{\\text{mol Fe}} \\times \\frac{6.022 \\times 10^{23} \\text{ atoms Fe}}{1 \\; \\cancel{\\text{mol Fe}}} = 1.506 \\times 10^{24} \\text{ atoms Fe}$$
 
 ### Example 2: Particles → Moles
 
-How many moles is $3.011 \\times 10^{23}$ molecules of CO₂?
+> **Problem:** How many moles is $3.011 \\times 10^{23}$ molecules of CO₂?
 
-$$\\text{moles} = \\frac{3.011 \\times 10^{23}}{6.022 \\times 10^{23}} = 0.500 \\text{ mol}$$
+**Solution:**
+
+$$\\text{mol CO}_2 = 3.011 \\times 10^{23} \\; \\cancel{\\text{molecules CO}_2} \\times \\frac{1 \\text{ mol CO}_2}{6.022 \\times 10^{23} \\; \\cancel{\\text{molecules CO}_2}} = 0.500 \\text{ mol CO}_2$$
 
 ### Watch Out for Polyatomic Molecules!
 
-If you have 1 mol of H₂O, you have:
-- $6.022 \\times 10^{23}$ **molecules** of H₂O
-- $2 \\times 6.022 \\times 10^{23} = 1.204 \\times 10^{24}$ **atoms** of H
-- $6.022 \\times 10^{23}$ **atoms** of O
-- Total: $3 \\times 6.022 \\times 10^{23} = 1.807 \\times 10^{24}$ **atoms** overall
+> **Problem:** If you have 1 mol of H₂O, how many molecules and atoms do you have?
+
+**Solution:**
+
+**Molecules of H₂O:**
+
+$$1 \\; \\cancel{\\text{mol H}_2\\text{O}} \\times \\frac{6.022 \\times 10^{23} \\text{ molecules H}_2\\text{O}}{1 \\; \\cancel{\\text{mol H}_2\\text{O}}} = 6.022 \\times 10^{23} \\text{ molecules of H}_2\\text{O}$$
+
+**Atoms of H:**
+
+$$6.022 \\times 10^{23} \\; \\cancel{\\text{molecules H}_2\\text{O}} \\times \\frac{2 \\text{ atoms H}}{1 \\; \\cancel{\\text{molecule H}_2\\text{O}}} = 1.204 \\times 10^{24} \\text{ atoms of H}$$
+
+**Atoms of O:**
+
+$$6.022 \\times 10^{23} \\; \\cancel{\\text{molecules H}_2\\text{O}} \\times \\frac{1 \\text{ atom O}}{1 \\; \\cancel{\\text{molecule H}_2\\text{O}}} = 6.022 \\times 10^{23} \\text{ atoms of O}$$
+
+**Total:**
+
+$$1.204 \\times 10^{24} + 6.022 \\times 10^{23} = 1.807 \\times 10^{24} \\text{ atoms overall}$$
       `
     },
     {
@@ -147,11 +165,11 @@ If you have 1 mol of H₂O, you have:
       content: `
 **Mole-Particle Conversion Drill** 🧮
 
-1) How many atoms are in 0.750 mol of aluminum (Al)? Express your answer in scientific notation as $a \\times 10^{23}$ — enter only the value of $a$ (to 3 significant figures).
+**1)** How many atoms are in 0.750 mol of aluminum (Al)? Express your answer in scientific notation as $a \\times 10^{23}$ — enter only the value of $a$ (to 3 significant figures).
 
-2) A sample contains $1.806 \\times 10^{24}$ molecules of CO₂. How many moles is this? (to 3 significant figures)
+**2)** A sample contains $1.806 \\times 10^{24}$ molecules of CO₂. How many moles is this? (to 3 significant figures)
 
-3) How many individual oxygen atoms are in 2.00 mol of O₂? Express as $a \\times 10^{24}$ — enter only $a$ (to 3 significant figures).
+**3)** How many individual oxygen atoms are in 2.00 mol of O₂? Express as $a \\times 10^{24}$ — enter only $a$ (to 3 significant figures).
       `,
       exercise: {
         boxes: 3,

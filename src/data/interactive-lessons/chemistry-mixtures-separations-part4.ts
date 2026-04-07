@@ -139,11 +139,11 @@ Always measure at the wavelength of **maximum absorbance** ($\\lambda_{\\text{ma
       content: `
 **Beer\'s Law Calculations** 🧮
 
-1) A solution has transmittance $T = 0.25$. What is the absorbance? (to 3 significant figures)
+**1)** A solution has transmittance $T = 0.25$. What is the absorbance? (to 3 significant figures)
 
-2) A solution with concentration 0.0200 M has absorbance 0.440 in a 1.00 cm cuvette. What is $\\varepsilon$? (in L/(mol·cm), to the nearest whole number)
+**2)** A solution with concentration 0.0200 M has absorbance 0.440 in a 1.00 cm cuvette. What is $\\varepsilon$? (in L/(mol·cm), to the nearest whole number)
 
-3) Using the same $\\varepsilon$ and path length from problem 2, what concentration gives an absorbance of 0.880? (in M, to 3 significant figures)
+**3)** Using the same $\\varepsilon$ and path length from problem 2, what concentration gives an absorbance of 0.880? (in M, to 3 significant figures)
       `,
       exercise: {
         inputs: [

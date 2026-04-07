@@ -114,11 +114,11 @@ The reaction $\\text{A} + 2\\text{B} \\rightarrow \\text{C}$ was studied:
 | 2 | 0.20 | 0.10 | 1.2 × 10⁻² |
 | 3 | 0.10 | 0.30 | 3.0 × 10⁻³ |
 
-1) What is the order with respect to A? (integer)
+**1)** What is the order with respect to A? (integer)
 
-2) What is the order with respect to B? (integer)
+**2)** What is the order with respect to B? (integer)
 
-3) What is the value of k? (number only)
+**3)** What is the value of k? (number only)
 
 *Round all answers to 3 significant figures.*
       `,
@@ -204,11 +204,11 @@ The reaction $\\text{A} + 2\\text{B} \\rightarrow \\text{C}$ was studied:
 
 A reaction has rate law Rate = k[A]²[B] with k = 0.50 M⁻²s⁻¹.
 
-1) Calculate the rate when [A] = 0.40 M and [B] = 0.60 M. (in M/s, 3 significant figures)
+**1)** Calculate the rate when [A] = 0.40 M and [B] = 0.60 M. (in M/s, 3 significant figures)
 
-2) If [A] is tripled while [B] is halved, by what factor does the rate change? (to 3 significant figures)
+**2)** If [A] is tripled while [B] is halved, by what factor does the rate change? (to 3 significant figures)
 
-3) What are the units of the rate constant for a reaction that is first-order overall? (enter just the exponent of s: e.g., for s⁻¹ enter −1)
+**3)** What are the units of the rate constant for a reaction that is first-order overall? (enter just the exponent of s: e.g., for s⁻¹ enter −1)
       `,
       exercise: {
         boxes: 3,

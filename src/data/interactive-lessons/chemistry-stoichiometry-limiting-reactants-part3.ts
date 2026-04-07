@@ -146,11 +146,11 @@ Given: $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$
 
 You start with **2.0 mol N₂** and **5.0 mol H₂**.
 
-1) How many moles of NH₃ could N₂ produce? (to 3 significant figures)
+**1)** How many moles of NH₃ could N₂ produce? (to 3 significant figures)
 
-2) How many moles of NH₃ could H₂ produce? (to 3 significant figures)
+**2)** How many moles of NH₃ could H₂ produce? (to 3 significant figures)
 
-3) Which is limiting? Type **N2** or **H2**.
+**3)** Which is limiting? Type **N2** or **H2**.
       `,
       exercise: {
         boxes: 3,

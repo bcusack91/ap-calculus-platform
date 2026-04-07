@@ -126,11 +126,11 @@ For pH calculations, **only the first dissociation matters** (in most cases). Th
       content: `
 **Percent Ionization & Polyprotic Calculations** 🧮
 
-1) What is the percent ionization of 0.050 M $HF$ ($K_a = 6.8 \\times 10^{-4}$)? (1 decimal place)
+**1)** What is the percent ionization of 0.050 M $HF$ ($K_a = 6.8 \\times 10^{-4}$)? (1 decimal place)
 
-2) Find the pH of 0.10 M $H_3PO_4$ ($K_{a1} = 7.5 \\times 10^{-3}$). Use only the first dissociation. (2 decimal places)
+**2)** Find the pH of 0.10 M $H_3PO_4$ ($K_{a1} = 7.5 \\times 10^{-3}$). Use only the first dissociation. (2 decimal places)
 
-3) For $H_2CO_3$ ($K_{a1} = 4.3 \\times 10^{-7}$, $K_{a2} = 4.7 \\times 10^{-11}$), what is $[CO_3^{2-}]$ in a 0.10 M solution? (Enter in scientific notation, e.g. 4.7e-11)
+**3)** For $H_2CO_3$ ($K_{a1} = 4.3 \\times 10^{-7}$, $K_{a2} = 4.7 \\times 10^{-11}$), what is $[CO_3^{2-}]$ in a 0.10 M solution? (Enter in scientific notation, e.g. 4.7e-11)
       `,
       exercise: {
         boxes: 3,

@@ -142,11 +142,11 @@ Use coefficients. Check every atom. Simplify to smallest whole numbers.
 
 Identify each reaction type. Type: **synthesis**, **decomposition**, **single**, **double**, or **combustion**.
 
-1) $4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3$
+**1)** $4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3$
 
-2) $\\text{AgNO}_3 + \\text{NaCl} \\rightarrow \\text{AgCl} + \\text{NaNO}_3$
+**2)** $\\text{AgNO}_3 + \\text{NaCl} \\rightarrow \\text{AgCl} + \\text{NaNO}_3$
 
-3) $\\text{C}_2\\text{H}_6 + \\frac{7}{2}\\text{O}_2 \\rightarrow 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$
+**3)** $\\text{C}_2\\text{H}_6 + \\frac{7}{2}\\text{O}_2 \\rightarrow 2\\text{CO}_2 + 3\\text{H}_2\\text{O}$
       `,
       exercise: {
         boxes: 3,

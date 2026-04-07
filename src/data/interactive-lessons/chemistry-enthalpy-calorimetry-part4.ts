@@ -98,7 +98,8 @@ $$q_{\\text{cal}} = C_{\\text{cal}} \\Delta T = (10.34)(3.26) = 33.71 \\text{ kJ
 $$q_{\\text{rxn}} = -q_{\\text{cal}} = -33.71 \\text{ kJ}$$
 
 **Step 4: Calculate moles of benzoic acid**
-$$n = \\frac{1.50}{122.12} = 0.01228 \\text{ mol}$$
+
+$$n = 1.50 \\; \\cancel{\\text{g C}_7\\text{H}_6\\text{O}_2} \\times \\frac{1 \\text{ mol C}_7\\text{H}_6\\text{O}_2}{122.12 \\; \\cancel{\\text{g C}_7\\text{H}_6\\text{O}_2}} = 0.01228 \\text{ mol C}_7\\text{H}_6\\text{O}_2$$
 
 **Step 5: Calculate molar heat of combustion**
 $$\\Delta E = \\frac{-33.71}{0.01228} = -2745 \\text{ kJ/mol}$$
@@ -156,11 +157,11 @@ Note: This gives $\\Delta E$ (internal energy), not $\\Delta H$, because the bom
       content: `
 **Bomb Calorimetry Calculations** 🧮
 
-1) A bomb calorimeter has $C_{\\text{cal}} = 8.50$ kJ/°C. If the temperature rises by 4.20°C, what is $q_{\\text{rxn}}$? (in kJ, include sign)
+**1)** A bomb calorimeter has $C_{\\text{cal}} = 8.50$ kJ/°C. If the temperature rises by 4.20°C, what is $q_{\\text{rxn}}$? (in kJ, include sign)
 
-2) When 0.500 g of sugar ($\\text{C}_{12}\\text{H}_{22}\\text{O}_{11}$, molar mass = 342.3 g/mol) is burned in a bomb calorimeter ($C_{\\text{cal}} = 9.20$ kJ/°C), the temperature rises by 1.23°C. What is the energy released per mole? (in kJ/mol, round to nearest whole number, report as positive)
+**2)** When 0.500 g of sugar ($\\text{C}_{12}\\text{H}_{22}\\text{O}_{11}$, molar mass = 342.3 g/mol) is burned in a bomb calorimeter ($C_{\\text{cal}} = 9.20$ kJ/°C), the temperature rises by 1.23°C. What is the energy released per mole? (in kJ/mol, round to nearest whole number, report as positive)
 
-3) A calibration experiment burns 1.000 g of benzoic acid (heat of combustion = 26.38 kJ/g) and the temperature rises by 2.55°C. What is $C_{\\text{cal}}$? (in kJ/°C, to 3 significant figures)
+**3)** A calibration experiment burns 1.000 g of benzoic acid (heat of combustion = 26.38 kJ/g) and the temperature rises by 2.55°C. What is $C_{\\text{cal}}$? (in kJ/°C, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

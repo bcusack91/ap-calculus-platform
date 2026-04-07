@@ -93,11 +93,11 @@ Choose an indicator whose $pK_{In}$ is close to the equivalence point pH.
 
 30.0 mL of 0.150 M weak acid $HA$ ($pK_a = 5.00$) is titrated with 0.150 M $NaOH$.
 
-1) Volume of $NaOH$ at equivalence (mL, 1 decimal place):
+**1)** Volume of $NaOH$ at equivalence (mL, 1 decimal place):
 
-2) Volume of $NaOH$ at half-equivalence (mL, 1 decimal place):
+**2)** Volume of $NaOH$ at half-equivalence (mL, 1 decimal place):
 
-3) pH at the half-equivalence point (2 decimal places):
+**3)** pH at the half-equivalence point (2 decimal places):
       `,
       exercise: {
         boxes: 3,

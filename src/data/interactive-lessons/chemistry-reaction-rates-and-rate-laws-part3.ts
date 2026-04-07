@@ -144,11 +144,11 @@ Given:
 | 2 | 0.30 | 0.10 | 0.018 |
 | 3 | 0.10 | 0.30 | 0.0060 |
 
-1) What is the order with respect to X? (integer)
+**1)** What is the order with respect to X? (integer)
 
-2) What is the order with respect to Y? (integer)
+**2)** What is the order with respect to Y? (integer)
 
-3) What is the value of k? (in appropriate units, give the number only — e.g., if k = 2.0, enter 2.0)
+**3)** What is the value of k? (in appropriate units, give the number only — e.g., if k = 2.0, enter 2.0)
 
 *Round all answers to 3 significant figures.*
       `,

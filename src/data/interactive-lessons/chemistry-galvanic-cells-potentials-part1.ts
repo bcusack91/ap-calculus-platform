@@ -123,11 +123,11 @@ Copper gains 2 electrons (oxidation number: $+2 \\rightarrow 0$)
 
 Determine the oxidation state of the underlined element:
 
-1) The oxidation state of Mn in $\\text{MnO}_4^-$ is:
+**1)** The oxidation state of Mn in $\\text{MnO}_4^-$ is:
 
-2) The oxidation state of Cr in $\\text{Cr}_2\\text{O}_7^{2-}$ is:
+**2)** The oxidation state of Cr in $\\text{Cr}_2\\text{O}_7^{2-}$ is:
 
-3) The oxidation state of N in $\\text{NO}_3^-$ is:
+**3)** The oxidation state of N in $\\text{NO}_3^-$ is:
       `,
       exercise: {
         boxes: 3,

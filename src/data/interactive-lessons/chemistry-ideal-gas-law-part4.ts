@@ -28,7 +28,9 @@ $$M = \\frac{mRT}{PV}$$
 
 ### Example
 
-A 0.325 g sample of gas occupies 225 mL at 100°C and 0.960 atm. Find the molar mass.
+> **Problem:** A 0.325 g sample of gas occupies 225 mL at 100°C and 0.960 atm. Find the molar mass.
+
+**Solution:**
 
 $$T = 100 + 273.15 = 373.15 \\text{ K}, \\quad V = 0.225 \\text{ L}$$
 
@@ -65,7 +67,9 @@ $$\\boxed{d = \\frac{PM}{RT}}$$
 
 ### Example
 
-What is the density of O₂ ($M = 32.00$ g/mol) at STP?
+> **Problem:** What is the density of O₂ ($M = 32.00$ g/mol) at STP?
+
+**Solution:**
 
 $$d = \\frac{PM}{RT} = \\frac{(1.00)(32.00)}{(0.0821)(273.15)} = \\frac{32.00}{22.43} = 1.43 \\text{ g/L}$$
 
@@ -128,11 +132,11 @@ $$\\frac{d_1}{d_2} = \\frac{M_1}{M_2}$$
 
 Use $R = 0.0821$ L·atm/(mol·K).
 
-1) A 1.56 g sample of gas occupies 1.00 L at 27°C and 1.00 atm. What is the molar mass? (in g/mol, to 3 significant figures)
+**1)** A 1.56 g sample of gas occupies 1.00 L at 27°C and 1.00 atm. What is the molar mass? (in g/mol, to 3 significant figures)
 
-2) What is the density of N₂ ($M = 28.02$ g/mol) at 25°C and 1.00 atm? (in g/L, to 3 significant figures)
+**2)** What is the density of N₂ ($M = 28.02$ g/mol) at 25°C and 1.00 atm? (in g/L, to 3 significant figures)
 
-3) A gas has a density of 3.17 g/L at STP. What is its molar mass? (in g/mol, to 3 significant figures)
+**3)** A gas has a density of 3.17 g/L at STP. What is its molar mass? (in g/mol, to 3 significant figures)
       `,
       exercise: {
         inputs: [

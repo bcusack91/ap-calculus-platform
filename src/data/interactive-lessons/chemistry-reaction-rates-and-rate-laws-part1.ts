@@ -39,7 +39,9 @@ $$\\text{Rate} = -\\frac{1}{a}\\frac{\\Delta[A]}{\\Delta t} = -\\frac{1}{b}\\fra
 
 ### Example
 
-For $2\\text{N}_2\\text{O}_5 \\rightarrow 4\\text{NO}_2 + \\text{O}_2$:
+> **Problem:** For $2\\text{N}_2\\text{O}_5 \\rightarrow 4\\text{NO}_2 + \\text{O}_2$:
+
+**Solution:**
 
 $$\\text{Rate} = -\\frac{1}{2}\\frac{\\Delta[\\text{N}_2\\text{O}_5]}{\\Delta t} = +\\frac{1}{4}\\frac{\\Delta[\\text{NO}_2]}{\\Delta t} = +\\frac{\\Delta[\\text{O}_2]}{\\Delta t}$$
 
@@ -197,11 +199,11 @@ Consider the reaction: $2\\text{NO}_2 \\rightarrow 2\\text{NO} + \\text{O}_2$
 | 50 | 0.380 |
 | 100 | 0.300 |
 
-1) What is the average rate of disappearance of NO₂ over the first 50 s? (in M/s, 3 significant figures)
+**1)** What is the average rate of disappearance of NO₂ over the first 50 s? (in M/s, 3 significant figures)
 
-2) What is the average rate of the reaction over the first 50 s? (divide by stoichiometric coefficient, 3 significant figures)
+**2)** What is the average rate of the reaction over the first 50 s? (divide by stoichiometric coefficient, 3 significant figures)
 
-3) What is the average rate of appearance of O₂ over the interval 0–100 s? (in M/s, 3 significant figures)
+**3)** What is the average rate of appearance of O₂ over the interval 0–100 s? (in M/s, 3 significant figures)
       `,
       exercise: {
         boxes: 3,

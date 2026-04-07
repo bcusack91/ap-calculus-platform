@@ -184,11 +184,11 @@ $$Fe^{3+} + 6CN^- \\rightarrow [Fe(CN)_6]^{3-}$$
 
 For each species, identify which acid-base theory can explain its behavior as an acid or base:
 
-1) $NaOH$ acting as a base — which is the simplest theory that explains this? (Enter: Arrhenius, Bronsted-Lowry, or Lewis)
+**1)** $NaOH$ acting as a base — which is the simplest theory that explains this? (Enter: Arrhenius, Bronsted-Lowry, or Lewis)
 
-2) $NH_3$ acting as a base (no $OH^-$ in its formula) — simplest theory? (Enter: Arrhenius, Bronsted-Lowry, or Lewis)
+**2)** $NH_3$ acting as a base (no $OH^-$ in its formula) — simplest theory? (Enter: Arrhenius, Bronsted-Lowry, or Lewis)
 
-3) $BF_3$ acting as an acid (no $H^+$ to donate) — simplest theory? (Enter: Arrhenius, Bronsted-Lowry, or Lewis)
+**3)** $BF_3$ acting as an acid (no $H^+$ to donate) — simplest theory? (Enter: Arrhenius, Bronsted-Lowry, or Lewis)
       `,
       exercise: {
         boxes: 3,

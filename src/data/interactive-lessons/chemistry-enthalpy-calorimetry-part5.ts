@@ -130,11 +130,11 @@ Given:
 
 Find $\\Delta H$ for: $2\\text{S}(s) + 3\\text{O}_2(g) \\rightarrow 2\\text{SO}_3(g)$
 
-1) What must you multiply reaction (1) by? (enter the number)
+**1)** What must you multiply reaction (1) by? (enter the number)
 
-2) What must you multiply reaction (2) by? (enter the number)
+**2)** What must you multiply reaction (2) by? (enter the number)
 
-3) What is $\\Delta H$ for the target reaction? (in kJ, to 3 significant figures)
+**3)** What is $\\Delta H$ for the target reaction? (in kJ, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

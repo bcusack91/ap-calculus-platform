@@ -157,11 +157,11 @@ $$\\text{H}_2\\text{O}(s) \\rightarrow \\text{H}_2\\text{O}(l)$$
 
 For each combination, type "always", "never", "low T", or "high T" for when the reaction is spontaneous:
 
-1) $\\Delta H < 0$, $\\Delta S > 0$
+**1)** $\\Delta H < 0$, $\\Delta S > 0$
 
-2) $\\Delta H > 0$, $\\Delta S > 0$
+**2)** $\\Delta H > 0$, $\\Delta S > 0$
 
-3) $\\Delta H > 0$, $\\Delta S < 0$
+**3)** $\\Delta H > 0$, $\\Delta S < 0$
       `,
       exercise: {
         boxes: 3,

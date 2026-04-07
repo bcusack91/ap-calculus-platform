@@ -176,11 +176,11 @@ where $A = Z \\cdot p$ is the **frequency factor** (also called the pre-exponent
       content: `
 **Collision Theory Calculations** 🧮
 
-1) At 300 K, the Boltzmann factor for a reaction with $E_a = 50$ kJ/mol is $e^{-E_a/(RT)}$. Calculate $E_a/(RT)$. ($R = 8.314$ J/(mol·K); round to 3 significant figures)
+**1)** At 300 K, the Boltzmann factor for a reaction with $E_a = 50$ kJ/mol is $e^{-E_a/(RT)}$. Calculate $E_a/(RT)$. ($R = 8.314$ J/(mol·K); round to 3 significant figures)
 
-2) Calculate $e^{-20.0}$ to 2 significant figures. (Use scientific notation: e.g., 2.1e-9)
+**2)** Calculate $e^{-20.0}$ to 2 significant figures. (Use scientific notation: e.g., 2.1e-9)
 
-3) If temperature increases from 300 K to 310 K ($E_a = 50$ kJ/mol), calculate $E_a/(RT)$ at 310 K. (to 3 significant figures)
+**3)** If temperature increases from 300 K to 310 K ($E_a = 50$ kJ/mol), calculate $E_a/(RT)$ at 310 K. (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

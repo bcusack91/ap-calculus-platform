@@ -91,11 +91,11 @@ $$\\Delta G° \\xleftrightarrow{-nF} E° \\xleftrightarrow{0.0592/n} \\log K \\x
       content: `
 **Integration Problems** 🧮
 
-1) E° = 0.80 V, n = 2, T = 298 K. What is $\\Delta G°$ in kJ? (to 1 decimal)
+**1)** E° = 0.80 V, n = 2, T = 298 K. What is $\\Delta G°$ in kJ? (to 1 decimal)
 
-2) E° = 0.40 V, n = 2. What is $\\log K$? (to 1 decimal)
+**2)** E° = 0.40 V, n = 2. What is $\\log K$? (to 1 decimal)
 
-3) A dead battery has E = ___ V and Q = ___ (type "0" and "K" separated by a comma)
+**3)** A dead battery has E = ___ V and Q = ___ (type "0" and "K" separated by a comma)
 
 *Round all answers to 3 significant figures.*
       `,

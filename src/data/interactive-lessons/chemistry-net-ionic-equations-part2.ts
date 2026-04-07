@@ -158,11 +158,11 @@ $$\\text{Ag}^+(aq) + \\text{NO}_3^-(aq) + \\text{Na}^+(aq) + \\text{Cl}^-(aq) \\
 
 For each ionic compound, type **soluble** or **insoluble**.
 
-1) PbCl₂
+**1)** PbCl₂
 
-2) Na₂CO₃
+**2)** Na₂CO₃
 
-3) Fe(OH)₃
+**3)** Fe(OH)₃
       `,
       exercise: {
         boxes: 3,

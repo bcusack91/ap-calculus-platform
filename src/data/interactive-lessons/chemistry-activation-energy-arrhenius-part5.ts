@@ -67,11 +67,11 @@ $$E_a = \\frac{21.0}{0.000500} = 42{,}000 \\; \\text{J/mol} = 42.0 \\; \\text{kJ
 
 A reaction has $k = 2.0 \\times 10^{-3}$ s⁻¹ at 300 K and $k = 6.0 \\times 10^{-2}$ s⁻¹ at 400 K.
 
-1) Calculate $\\ln(k_2/k_1)$. (to 3 significant figures)
+**1)** Calculate $\\ln(k_2/k_1)$. (to 3 significant figures)
 
-2) Calculate $1/T_1 - 1/T_2$. (in K⁻¹, give as decimal: e.g., 0.000833)
+**2)** Calculate $1/T_1 - 1/T_2$. (in K⁻¹, give as decimal: e.g., 0.000833)
 
-3) Calculate $E_a$ in kJ/mol. (to 3 significant figures)
+**3)** Calculate $E_a$ in kJ/mol. (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
@@ -90,11 +90,11 @@ A reaction has $k = 2.0 \\times 10^{-3}$ s⁻¹ at 300 K and $k = 6.0 \\times 10
 
 A reaction has $E_a = 50.0$ kJ/mol and $k = 0.010$ s⁻¹ at 350 K.
 
-1) Calculate $k$ at 400 K. First find $\\ln(k_2/k_1)$. (to 3 significant figures)
+**1)** Calculate $k$ at 400 K. First find $\\ln(k_2/k_1)$. (to 3 significant figures)
 
-2) Now find $k_2$. (in s⁻¹, to 3 significant figures)
+**2)** Now find $k_2$. (in s⁻¹, to 3 significant figures)
 
-3) By what factor did k increase from 350 K to 400 K? (to 3 significant figures)
+**3)** By what factor did k increase from 350 K to 400 K? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

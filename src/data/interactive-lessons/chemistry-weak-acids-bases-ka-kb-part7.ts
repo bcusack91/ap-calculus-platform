@@ -88,11 +88,11 @@ This final part provides comprehensive AP-style review covering all weak acid/ba
       content: `
 **AP Calculation Practice** 🧮
 
-1) Calculate the pH of 0.35 M $NH_3$ ($K_b = 1.8 \\times 10^{-5}$). (2 decimal places)
+**1)** Calculate the pH of 0.35 M $NH_3$ ($K_b = 1.8 \\times 10^{-5}$). (2 decimal places)
 
-2) What is $K_a$ for $NH_4^+$? (Enter in scientific notation, e.g. 5.6e-10)
+**2)** What is $K_a$ for $NH_4^+$? (Enter in scientific notation, e.g. 5.6e-10)
 
-3) A solution of 0.10 M $NH_4Cl$ has what pH? (2 decimal places)
+**3)** A solution of 0.10 M $NH_4Cl$ has what pH? (2 decimal places)
       `,
       exercise: {
         boxes: 3,

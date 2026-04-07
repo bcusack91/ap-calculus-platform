@@ -165,11 +165,11 @@ For each species, determine whether it appears in the equilibrium expression.
       content: `
 **Heterogeneous Equilibrium Calculations** 🧮
 
-1) For $\\text{CaCO}_3(s) \\rightleftharpoons \\text{CaO}(s) + \\text{CO}_2(g)$, if $K_p = 0.040$ atm at a certain temperature, what is $P_{\\text{CO}_2}$ at equilibrium? (in atm)
+**1)** For $\\text{CaCO}_3(s) \\rightleftharpoons \\text{CaO}(s) + \\text{CO}_2(g)$, if $K_p = 0.040$ atm at a certain temperature, what is $P_{\\text{CO}_2}$ at equilibrium? (in atm)
 
-2) How many species appear in the $K_c$ expression for $\\text{C}(s) + \\text{H}_2\\text{O}(g) \\rightleftharpoons \\text{CO}(g) + \\text{H}_2(g)$? (Enter a number)
+**2)** How many species appear in the $K_c$ expression for $\\text{C}(s) + \\text{H}_2\\text{O}(g) \\rightleftharpoons \\text{CO}(g) + \\text{H}_2(g)$? (Enter a number)
 
-3) For $\\text{NH}_4\\text{Cl}(s) \\rightleftharpoons \\text{NH}_3(g) + \\text{HCl}(g)$, if $P_{\\text{NH}_3} = P_{\\text{HCl}} = 0.30$ atm at equilibrium, what is $K_p$? (Enter to 3 significant figures)
+**3)** For $\\text{NH}_4\\text{Cl}(s) \\rightleftharpoons \\text{NH}_3(g) + \\text{HCl}(g)$, if $P_{\\text{NH}_3} = P_{\\text{HCl}} = 0.30$ atm at equilibrium, what is $K_p$? (Enter to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

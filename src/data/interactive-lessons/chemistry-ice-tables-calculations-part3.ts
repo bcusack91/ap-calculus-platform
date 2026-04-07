@@ -151,11 +151,11 @@ Initial: $[\\text{A}] = 1.00$ M, $[\\text{B}] = [\\text{C}] = 0$
 
 $$0.25 = \\frac{x \\cdot x}{1.00 - x} = \\frac{x^2}{1.00 - x}$$
 
-1) Rearrange to standard quadratic form: $x^2 + 0.25x - 0.25 = 0$. Using the quadratic formula, $x = ?$ (Round to 3 significant figures)
+**1)** Rearrange to standard quadratic form: $x^2 + 0.25x - 0.25 = 0$. Using the quadratic formula, $x = ?$ (Round to 3 significant figures)
 
-2) What is $[\\text{A}]$ at equilibrium? (Round to 3 significant figures)
+**2)** What is $[\\text{A}]$ at equilibrium? (Round to 3 significant figures)
 
-3) What is $[\\text{B}]$ at equilibrium? (Round to 3 significant figures)
+**3)** What is $[\\text{B}]$ at equilibrium? (Round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

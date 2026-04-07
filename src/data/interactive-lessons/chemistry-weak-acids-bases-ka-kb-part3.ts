@@ -158,11 +158,11 @@ This is why solutions of sodium acetate ($NaCH_3COO$) are **basic** — the acet
       content: `
 **Weak Base Calculations** 🧮
 
-1) Find the pH of 0.20 M methylamine ($CH_3NH_2$, $K_b = 4.4 \\times 10^{-4}$). (2 decimal places)
+**1)** Find the pH of 0.20 M methylamine ($CH_3NH_2$, $K_b = 4.4 \\times 10^{-4}$). (2 decimal places)
 
-2) Find $[OH^-]$ for 0.10 M pyridine ($C_5H_5N$, $K_b = 1.7 \\times 10^{-9}$). (Enter in scientific notation, e.g. 1.3e-5)
+**2)** Find $[OH^-]$ for 0.10 M pyridine ($C_5H_5N$, $K_b = 1.7 \\times 10^{-9}$). (Enter in scientific notation, e.g. 1.3e-5)
 
-3) A solution of 0.25 M $NaCH_3COO$ is basic. If $K_b$ for $CH_3COO^-$ is $5.6 \\times 10^{-10}$, find the pH. (2 decimal places)
+**3)** A solution of 0.25 M $NaCH_3COO$ is basic. If $K_b$ for $CH_3COO^-$ is $5.6 \\times 10^{-10}$, find the pH. (2 decimal places)
       `,
       exercise: {
         boxes: 3,

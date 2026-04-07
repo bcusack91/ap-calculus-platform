@@ -123,11 +123,11 @@ $$c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{total}}}{
       content: `
 **Workshop Calculations** 🧮
 
-1) Using the calibration data from above ($\\varepsilon b = 75.0$), an unknown solution gives $A = 0.375$. What is the concentration? (in M, to 3 significant figures)
+**1)** Using the calibration data from above ($\\varepsilon b = 75.0$), an unknown solution gives $A = 0.375$. What is the concentration? (in M, to 3 significant figures)
 
-2) The unknown from problem 1 was prepared by diluting 5.00 mL of original solution to 25.0 mL. What was the original concentration? (in M, to 3 significant figures)
+**2)** The unknown from problem 1 was prepared by diluting 5.00 mL of original solution to 25.0 mL. What was the original concentration? (in M, to 3 significant figures)
 
-3) A student needs to separate 3.00 g of NaCl dissolved in 100 mL of water. After evaporation, theoretically all the NaCl should remain. If the student recovers 2.85 g, what is the percent recovery? (to 3 significant figures)
+**3)** A student needs to separate 3.00 g of NaCl dissolved in 100 mL of water. After evaporation, theoretically all the NaCl should remain. If the student recovers 2.85 g, what is the percent recovery? (to 3 significant figures)
       `,
       exercise: {
         inputs: [

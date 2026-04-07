@@ -159,11 +159,11 @@ $$K_p = (4.61 \\times 10^{-3})(24.45) = 0.113$$
 
 Find $\\Delta n$ for each reaction (enter an integer, use a negative sign if needed):
 
-1) $\\text{2 SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons \\text{2 SO}_3(g)$
+**1)** $\\text{2 SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons \\text{2 SO}_3(g)$
 
-2) $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$
+**2)** $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$
 
-3) $\\text{CO}(g) + 2\\,\\text{H}_2(g) \\rightleftharpoons \\text{CH}_3\\text{OH}(g)$
+**3)** $\\text{CO}(g) + 2\\,\\text{H}_2(g) \\rightleftharpoons \\text{CH}_3\\text{OH}(g)$
       `,
       exercise: {
         boxes: 3,

@@ -121,11 +121,11 @@ An Arrhenius plot of ln k vs 1/T has two data points:
 - Point 1: $1/T = 3.00 \\times 10^{-3}$ K⁻¹, $\\ln k = -8.00$
 - Point 2: $1/T = 2.50 \\times 10^{-3}$ K⁻¹, $\\ln k = -4.00$
 
-1) What is the slope of the line? (in K, include sign)
+**1)** What is the slope of the line? (in K, include sign)
 
-2) What is $E_a$ in kJ/mol? (to 3 significant figures)
+**2)** What is $E_a$ in kJ/mol? (to 3 significant figures)
 
-3) What is $\\ln A$ (the y-intercept)? Use: $\\ln A = \\ln k + (E_a/R)(1/T)$, evaluated at point 1. (to 3 significant figures)
+**3)** What is $\\ln A$ (the y-intercept)? Use: $\\ln A = \\ln k + (E_a/R)(1/T)$, evaluated at point 1. (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

@@ -136,11 +136,11 @@ where $\\lambda$ is the decay constant (equivalent to $k$).
 
 A first-order reaction has $k = 0.0100$ s⁻¹ and $[A]_0 = 2.00$ M.
 
-1) What is the half-life? (in seconds, 3 significant figures)
+**1)** What is the half-life? (in seconds, 3 significant figures)
 
-2) What is [A] after 100 s? (in M, 3 significant figures)
+**2)** What is [A] after 100 s? (in M, 3 significant figures)
 
-3) How long until only 10% of A remains? (in seconds, 3 significant figures)
+**3)** How long until only 10% of A remains? (in seconds, 3 significant figures)
       `,
       exercise: {
         boxes: 3,

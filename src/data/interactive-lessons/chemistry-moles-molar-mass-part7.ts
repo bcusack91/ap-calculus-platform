@@ -58,7 +58,7 @@ $$\\text{Mass (g)} \\xleftrightarrow{M} \\text{Moles} \\xleftrightarrow{N_A} \\t
 
 ### 3. Atoms vs. Molecules
 - 1 mol H₂O = $6.022 \\times 10^{23}$ **molecules** (not atoms!)
-- Total atoms in 1 mol H₂O = $3 \\times 6.022 \\times 10^{23} = 1.807 \\times 10^{24}$ atoms
+- Total atoms in 1 mol H₂O = $3 \times 6.022 \times 10^{23} = 1.807 \times 10^{24}$ atoms
 
 ### 4. Rounding Mole Ratios Too Soon
 - A ratio of 1.33 is NOT 1 — it is $4/3$, so multiply all by 3
@@ -132,13 +132,13 @@ $$\\text{Mass (g)} \\xleftrightarrow{M} \\text{Moles} \\xleftrightarrow{N_A} \\t
 
 A student analyzes a pure sample of hydrated copper(II) sulfate, CuSO₄·5H₂O.
 
-Use: Cu = 63.55, S = 32.07, O = 16.00, H = 1.008
+> **Given:** Cu = 63.55, S = 32.07, O = 16.00, H = 1.008
 
-1) Calculate the molar mass of CuSO₄·5H₂O in g/mol. (to 3 significant figures)
+**1)** Calculate the molar mass of CuSO₄·5H₂O in g/mol. (to 3 significant figures)
 
-2) What is the percent by mass of water in CuSO₄·5H₂O? (to 3 significant figures)
+**2)** What is the percent by mass of water in CuSO₄·5H₂O? (to 3 significant figures)
 
-3) If the student has 50.0 g of CuSO₄·5H₂O, how many moles of water molecules are present? (to 3 significant figures)
+**3)** If the student has 50.0 g of CuSO₄·5H₂O, how many moles of water molecules are present? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

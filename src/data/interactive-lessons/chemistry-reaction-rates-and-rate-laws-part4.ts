@@ -91,11 +91,11 @@ For the reaction $\\text{P} + \\text{Q} \\rightarrow \\text{R}$:
 | 2 | 0.40 | 0.10 | 0.0060 |
 | 3 | 0.20 | 0.20 | 0.012 |
 
-1) What is the order with respect to P? (integer)
+**1)** What is the order with respect to P? (integer)
 
-2) What is the order with respect to Q? (integer)
+**2)** What is the order with respect to Q? (integer)
 
-3) What is the value of the rate constant k? (give the number; e.g., enter 7.5 for 7.5)
+**3)** What is the value of the rate constant k? (give the number; e.g., enter 7.5 for 7.5)
 
 *Round all answers to 3 significant figures.*
       `,
@@ -195,11 +195,11 @@ For $\\text{A} + \\text{B} + \\text{C} \\rightarrow \\text{Products}$:
 | 3 | 0.10 | 0.20 | 0.10 | 0.020 |
 | 4 | 0.10 | 0.10 | 0.30 | 0.0050 |
 
-1) What is the overall order of the reaction? (integer)
+**1)** What is the overall order of the reaction? (integer)
 
-2) What is the rate constant k? (number only)
+**2)** What is the rate constant k? (number only)
 
-3) Predict the rate (in M/s) when [A] = 0.30, [B] = 0.20, [C] = 0.50.
+**3)** Predict the rate (in M/s) when [A] = 0.30, [B] = 0.20, [C] = 0.50.
 
 *Round all answers to 3 significant figures.*
       `,

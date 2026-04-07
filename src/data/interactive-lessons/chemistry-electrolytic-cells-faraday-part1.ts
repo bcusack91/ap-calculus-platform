@@ -151,11 +151,11 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
       content: `
 **Electrolysis Energy** 🧮
 
-1) The electrolysis of water has $E° = -1.23$ V. What minimum voltage must be applied? (in V, positive value)
+**1)** The electrolysis of water has $E° = -1.23$ V. What minimum voltage must be applied? (in V, positive value)
 
-2) If the overpotential is 0.5 V, what is the actual applied voltage needed? (in V)
+**2)** If the overpotential is 0.5 V, what is the actual applied voltage needed? (in V)
 
-3) Is the ΔG for electrolysis positive or negative? (type "positive" or "negative")
+**3)** Is the ΔG for electrolysis positive or negative? (type "positive" or "negative")
 
 *Round all answers to 3 significant figures.*
       `,

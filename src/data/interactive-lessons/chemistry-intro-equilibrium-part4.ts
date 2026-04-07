@@ -145,11 +145,11 @@ $$K_{\\text{overall}} = K_1 \\times K_2 = (4.7 \\times 10^{-31})(1.8 \\times 10^
 
 Given: $\\text{A}(g) \\rightleftharpoons 2\\,\\text{B}(g)$, $K_c = 25$
 
-1) What is $K_c$ for $2\\,\\text{B}(g) \\rightleftharpoons \\text{A}(g)$? (Enter as a decimal)
+**1)** What is $K_c$ for $2\\,\\text{B}(g) \\rightleftharpoons \\text{A}(g)$? (Enter as a decimal)
 
-2) What is $K_c$ for $\\frac{1}{2}\\text{A}(g) \\rightleftharpoons \\text{B}(g)$? (Enter as a whole number)
+**2)** What is $K_c$ for $\\frac{1}{2}\\text{A}(g) \\rightleftharpoons \\text{B}(g)$? (Enter as a whole number)
 
-3) Given also: $\\text{B}(g) \\rightleftharpoons \\text{C}(g)$, $K_c = 2.0$. What is $K_c$ for $\\text{A}(g) \\rightleftharpoons 2\\,\\text{C}(g)$? (Enter as a whole number)
+**3)** Given also: $\\text{B}(g) \\rightleftharpoons \\text{C}(g)$, $K_c = 2.0$. What is $K_c$ for $\\text{A}(g) \\rightleftharpoons 2\\,\\text{C}(g)$? (Enter as a whole number)
 
 *Round all answers to 3 significant figures.*
       `,

@@ -124,11 +124,11 @@ $[\\text{SO}_4^{2-}]$ from Na₂SO₄ = 0.050 M
 
 $K_{sp} = (s)(0.050 + s) \\approx (s)(0.050)$
 
-1) What is the molar solubility $s$? (Enter in scientific notation, e.g. 2.2e-9)
+**1)** What is the molar solubility $s$? (Enter in scientific notation, e.g. 2.2e-9)
 
-2) What is the molar solubility in pure water? (Enter in scientific notation, e.g. 1.0e-5)
+**2)** What is the molar solubility in pure water? (Enter in scientific notation, e.g. 1.0e-5)
 
-3) By what factor did the common ion reduce solubility? (Enter as a whole number, approximately)
+**3)** By what factor did the common ion reduce solubility? (Enter as a whole number, approximately)
 
 *Round all answers to 3 significant figures.*
       `,

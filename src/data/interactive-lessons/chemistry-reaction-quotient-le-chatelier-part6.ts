@@ -68,11 +68,11 @@ $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$, $K_c = 4.60
 
 Current: $[\\text{N}_2\\text{O}_4] = 0.500$ M, $[\\text{NO}_2] = 0.100$ M
 
-1) Calculate Q. (Enter as a decimal to 2 places)
+**1)** Calculate Q. (Enter as a decimal to 2 places)
 
-2) Is $Q > K$, $Q < K$, or $Q = K$? (Enter exactly, e.g. "Q > K")
+**2)** Is $Q > K$, $Q < K$, or $Q = K$? (Enter exactly, e.g. "Q > K")
 
-3) Which direction does the reaction shift? (Enter "right" or "left")
+**3)** Which direction does the reaction shift? (Enter "right" or "left")
 
 *Round all answers to 3 significant figures.*
       `,
@@ -128,11 +128,11 @@ $2\\,\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{SO}_3(g)$, 
 
 For: $\\text{A}(g) + 2\\,\\text{B}(g) \\rightleftharpoons 3\\,\\text{C}(g)$, $\\Delta H = +150$ kJ, $K = 0.25$ at 500 K
 
-1) If the volume is halved, which direction does the reaction shift? (Enter "right" or "left")
+**1)** If the volume is halved, which direction does the reaction shift? (Enter "right" or "left")
 
-2) If temperature is increased to 600 K, does K increase or decrease? (Enter "increase" or "decrease")
+**2)** If temperature is increased to 600 K, does K increase or decrease? (Enter "increase" or "decrease")
 
-3) How many moles of gas are on each side? Enter as "left:N, right:M" (e.g., "left:3, right:2")
+**3)** How many moles of gas are on each side? Enter as "left:N, right:M" (e.g., "left:3, right:2")
       `,
       exercise: {
         boxes: 3,

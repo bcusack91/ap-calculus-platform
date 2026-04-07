@@ -100,11 +100,11 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
       content: `
 **Integration Problems** 🧮
 
-1) How many grams of Al can be produced from Al³⁺ ($n = 3$, $M = 26.98$ g/mol) using $I = 100$ A for $1.00$ hour?
+**1)** How many grams of Al can be produced from Al³⁺ ($n = 3$, $M = 26.98$ g/mol) using $I = 100$ A for $1.00$ hour?
 
-2) In the electrolysis of aqueous NaI, what gas forms at the cathode? (type "H2" or "O2" or "Na")
+**2)** In the electrolysis of aqueous NaI, what gas forms at the cathode? (type "H2" or "O2" or "Na")
 
-3) In the electrolysis of aqueous NaI, what forms at the anode? (type "I2" or "O2" or "Na")
+**3)** In the electrolysis of aqueous NaI, what forms at the anode? (type "I2" or "O2" or "Na")
 
 *Round all answers to 3 significant figures.*
       `,

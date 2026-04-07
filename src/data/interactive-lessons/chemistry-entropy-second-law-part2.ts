@@ -148,11 +148,11 @@ When asked to "predict the sign of $\\Delta S$" — **always start by counting m
 
 Type "+" or "−" for the sign of $\\Delta S$:
 
-1) $\\text{H}_2\\text{O}(l) \\rightarrow \\text{H}_2\\text{O}(g)$
+**1)** $\\text{H}_2\\text{O}(l) \\rightarrow \\text{H}_2\\text{O}(g)$
 
-2) $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g)$
+**2)** $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g)$
 
-3) $\\text{2NH}_4\\text{NO}_3(s) \\rightarrow 2\\text{N}_2(g) + \\text{O}_2(g) + 4\\text{H}_2\\text{O}(g)$
+**3)** $\\text{2NH}_4\\text{NO}_3(s) \\rightarrow 2\\text{N}_2(g) + \\text{O}_2(g) + 4\\text{H}_2\\text{O}(g)$
       `,
       exercise: {
         boxes: 3,

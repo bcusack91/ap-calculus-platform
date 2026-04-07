@@ -160,11 +160,11 @@ The **anode and cathode swap** when switching between galvanic and electrolytic 
 
 Answer with "galvanic" or "electrolytic":
 
-1) ΔG < 0 and E > 0 describes a _____ cell.
+**1)** ΔG < 0 and E > 0 describes a _____ cell.
 
-2) Requires an external power source: _____ cell.
+**2)** Requires an external power source: _____ cell.
 
-3) The anode is positive in a _____ cell.
+**3)** The anode is positive in a _____ cell.
       `,
       exercise: {
         boxes: 3,

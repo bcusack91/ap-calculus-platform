@@ -87,11 +87,11 @@ This workshop brings together all the Gibbs free energy tools: calculating ΔG f
       content: `
 **Multi-Step Calculation Workshop** 🧮
 
-1) A reaction has $\\Delta H° = +50$ kJ and $\\Delta S° = +150$ J/K. What is $\\Delta G°$ at 400 K? (in kJ)
+**1)** A reaction has $\\Delta H° = +50$ kJ and $\\Delta S° = +150$ J/K. What is $\\Delta G°$ at 400 K? (in kJ)
 
-2) For the reaction in (1), what is $K$ at 400 K? (round to nearest whole number; use $e^{3.01} \\approx 20$)
+**2)** For the reaction in (1), what is $K$ at 400 K? (round to nearest whole number; use $e^{3.01} \\approx 20$)
 
-3) A reaction has $\\Delta G° = -20$ kJ/mol. What is $K$ at 298 K? (round to nearest thousand; use $e^{8.07} \\approx 3200$)
+**3)** A reaction has $\\Delta G° = -20$ kJ/mol. What is $K$ at 298 K? (round to nearest thousand; use $e^{8.07} \\approx 3200$)
       `,
       exercise: {
         boxes: 3,

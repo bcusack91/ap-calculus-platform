@@ -172,11 +172,11 @@ Consider the mechanism:
 - Step 1: $\\text{H}_2\\text{O}_2 + \\text{I}^- \\rightarrow \\text{H}_2\\text{O} + \\text{IO}^-$ (slow)
 - Step 2: $\\text{H}_2\\text{O}_2 + \\text{IO}^- \\rightarrow \\text{H}_2\\text{O} + \\text{O}_2 + \\text{I}^-$ (fast)
 
-1) What is the molecularity of Step 1? (enter a number)
+**1)** What is the molecularity of Step 1? (enter a number)
 
-2) What is the molecularity of Step 2? (enter a number)
+**2)** What is the molecularity of Step 2? (enter a number)
 
-3) How many intermediates are there? (enter a number)
+**3)** How many intermediates are there? (enter a number)
       `,
       exercise: {
         boxes: 3,

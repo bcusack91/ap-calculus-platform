@@ -117,7 +117,7 @@ $\\Delta S < 0$ ✓ — consistent with our prediction!
       content: `
 **ΔS° Calculations** 🧮
 
-Use these $S°$ values [J/(mol·K)]:
+> **Given:** 
 
 | Substance | $S°$ [J/(mol·K)] |
 |---|---|
@@ -129,9 +129,9 @@ Use these $S°$ values [J/(mol·K)]:
 | $\\text{C}(s)$ | $5.7$ |
 | $\\text{H}_2(g)$ | $130.7$ |
 
-1) Calculate $\\Delta S°$ for: $\\text{C}(s) + \\text{O}_2(g) \\rightarrow \\text{CO}_2(g)$ [J/K, to 3 significant figures]
+**1)** Calculate $\\Delta S°$ for: $\\text{C}(s) + \\text{O}_2(g) \\rightarrow \\text{CO}_2(g)$ [J/K, to 3 significant figures]
 
-2) Calculate $\\Delta S°$ for: $\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(g)$ [J/K, to 3 significant figures]
+**2)** Calculate $\\Delta S°$ for: $\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(g)$ [J/K, to 3 significant figures]
       `,
       exercise: {
         boxes: 2,

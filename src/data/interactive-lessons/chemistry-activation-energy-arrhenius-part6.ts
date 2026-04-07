@@ -193,11 +193,11 @@ If a substance binds strongly to active sites and cannot be removed, the catalys
 
 An uncatalyzed reaction has $E_a = 120$ kJ/mol and $k = 1.0 \\times 10^{-10}$ s⁻¹ at 300 K.
 
-1) A catalyst lowers $E_a$ to 80 kJ/mol. What is the ratio $k_{\\text{cat}}/k_{\\text{uncat}}$ at 300 K? Use $\\ln(k_{\\text{cat}}/k_{\\text{uncat}}) = (E_{a,\\text{uncat}} - E_{a,\\text{cat}})/(RT)$. Calculate this exponent first. (to 3 significant figures)
+**1)** A catalyst lowers $E_a$ to 80 kJ/mol. What is the ratio $k_{\\text{cat}}/k_{\\text{uncat}}$ at 300 K? Use $\\ln(k_{\\text{cat}}/k_{\\text{uncat}}) = (E_{a,\\text{uncat}} - E_{a,\\text{cat}})/(RT)$. Calculate this exponent first. (to 3 significant figures)
 
-2) The catalyzed $k$ is approximately how many times larger? Express as a power of 10. (integer)
+**2)** The catalyzed $k$ is approximately how many times larger? Express as a power of 10. (integer)
 
-3) If the catalyzed half-life is $t_{1/2} = 0.693/k_{\\text{cat}}$, and $k_{\\text{cat}} \\approx 1.0 \\times 10^{-3}$ s⁻¹, what is the half-life? (in seconds, whole number)
+**3)** If the catalyzed half-life is $t_{1/2} = 0.693/k_{\\text{cat}}$, and $k_{\\text{cat}} \\approx 1.0 \\times 10^{-3}$ s⁻¹, what is the half-life? (in seconds, whole number)
       `,
       exercise: {
         boxes: 3,

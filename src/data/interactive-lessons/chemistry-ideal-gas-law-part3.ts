@@ -60,7 +60,9 @@ Most AP Chemistry problems use $R = 0.0821$ L·atm/(mol·K).
 
 ### Example 1: Find Volume
 
-What volume does 0.500 mol of gas occupy at 1.20 atm and 25°C?
+> **Problem:** What volume does 0.500 mol of gas occupy at 1.20 atm and 25°C?
+
+**Solution:**
 
 $$T = 25 + 273.15 = 298.15 \\text{ K}$$
 
@@ -68,13 +70,17 @@ $$V = \\frac{nRT}{P} = \\frac{(0.500)(0.0821)(298.15)}{1.20} = 10.2 \\text{ L}$$
 
 ### Example 2: Find Pressure
 
-2.00 mol of gas is in a 15.0 L container at 300 K. What is the pressure?
+> **Problem:** 2.00 mol of gas is in a 15.0 L container at 300 K. What is the pressure?
+
+**Solution:**
 
 $$P = \\frac{nRT}{V} = \\frac{(2.00)(0.0821)(300)}{15.0} = 3.28 \\text{ atm}$$
 
 ### Example 3: Find Moles
 
-A gas at 2.50 atm and 350 K occupies 5.00 L. How many moles?
+> **Problem:** A gas at 2.50 atm and 350 K occupies 5.00 L. How many moles?
+
+**Solution:**
 
 $$n = \\frac{PV}{RT} = \\frac{(2.50)(5.00)}{(0.0821)(350)} = 0.435 \\text{ mol}$$
 
@@ -139,11 +145,11 @@ Always check:
 
 Use $R = 0.0821$ L·atm/(mol·K). Round to appropriate significant figures.
 
-1) What volume (in L) does 1.00 mol of ideal gas occupy at STP (0°C, 1.00 atm)? (to 3 significant figures)
+**1)** What volume (in L) does 1.00 mol of ideal gas occupy at STP (0°C, 1.00 atm)? (to 3 significant figures)
 
-2) What pressure (in atm) is exerted by 3.50 mol of gas in a 20.0 L container at 400 K? (to 3 significant figures)
+**2)** What pressure (in atm) is exerted by 3.50 mol of gas in a 20.0 L container at 400 K? (to 3 significant figures)
 
-3) How many moles of gas are in a 10.0 L container at 2.00 atm and 27°C? (to 3 significant figures)
+**3)** How many moles of gas are in a 10.0 L container at 2.00 atm and 27°C? (to 3 significant figures)
       `,
       exercise: {
         inputs: [

@@ -138,11 +138,11 @@ pH increased from 4.74 to 4.92 — only **0.18 units** despite adding a strong b
 
 A buffer has 0.20 mol $HF$ and 0.20 mol $NaF$ in 1.0 L. ($pK_a = 3.17$)
 
-1) What is the initial pH of this buffer? (2 decimal places)
+**1)** What is the initial pH of this buffer? (2 decimal places)
 
-2) After adding 0.050 mol $HCl$, how many moles of $F^-$ remain? (2 decimal places)
+**2)** After adding 0.050 mol $HCl$, how many moles of $F^-$ remain? (2 decimal places)
 
-3) What is the pH after adding 0.050 mol $HCl$? (2 decimal places)
+**3)** What is the pH after adding 0.050 mol $HCl$? (2 decimal places)
       `,
       exercise: {
         boxes: 3,

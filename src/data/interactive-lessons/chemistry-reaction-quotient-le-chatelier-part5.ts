@@ -194,11 +194,11 @@ On the AP exam, "adding an inert gas" typically means at **constant volume** unl
       content: `
 **Quick Checks** 🧮
 
-1) Does a catalyst change the value of K? (Enter "no")
+**1)** Does a catalyst change the value of K? (Enter "no")
 
-2) Does adding an inert gas at constant volume shift the equilibrium? (Enter "no")
+**2)** Does adding an inert gas at constant volume shift the equilibrium? (Enter "no")
 
-3) If a catalyst is removed from a system at equilibrium, does the position shift? (Enter "no")
+**3)** If a catalyst is removed from a system at equilibrium, does the position shift? (Enter "no")
       `,
       exercise: {
         boxes: 3,

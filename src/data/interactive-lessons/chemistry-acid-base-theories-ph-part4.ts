@@ -157,11 +157,11 @@ The digits **before** the decimal in pH only indicate the order of magnitude —
       content: `
 **pH Calculation Drill** 🧮
 
-1) What is the pH of a solution with $[H^+] = 5.0 \\times 10^{-9}$ M? (2 decimal places)
+**1)** What is the pH of a solution with $[H^+] = 5.0 \\times 10^{-9}$ M? (2 decimal places)
 
-2) What is the $[H^+]$ in a solution with $pH = 4.30$? (Enter in scientific notation, e.g. 5.0e-5)
+**2)** What is the $[H^+]$ in a solution with $pH = 4.30$? (Enter in scientific notation, e.g. 5.0e-5)
 
-3) What is the pH of a solution with $[OH^-] = 2.0 \\times 10^{-4}$ M? (2 decimal places)
+**3)** What is the pH of a solution with $[OH^-] = 2.0 \\times 10^{-4}$ M? (2 decimal places)
       `,
       exercise: {
         boxes: 3,

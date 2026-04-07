@@ -192,11 +192,11 @@ $$\\text{Pb(NO}_3)_2 + 2\\text{KI} \\rightarrow \\text{PbI}_2\\downarrow + 2\\te
 
 Write the chemical formula of the main product. Use standard notation (no spaces, no charges).
 
-1) Synthesis: $\\text{K} + \\text{Cl}_2 \\rightarrow$ ? (K has charge +1, Cl has charge −1)
+**1)** Synthesis: $\\text{K} + \\text{Cl}_2 \\rightarrow$ ? (K has charge +1, Cl has charge −1)
 
-2) Decomposition: $\\text{MgCO}_3 \\xrightarrow{\\Delta}$ ? + CO₂ — what is the other product?
+**2)** Decomposition: $\\text{MgCO}_3 \\xrightarrow{\\Delta}$ ? + CO₂ — what is the other product?
 
-3) Combustion: $\\text{CH}_4 + 2\\text{O}_2 \\rightarrow$ ? + 2H₂O — what is the other product?
+**3)** Combustion: $\\text{CH}_4 + 2\\text{O}_2 \\rightarrow$ ? + 2H₂O — what is the other product?
       `,
       exercise: {
         boxes: 3,

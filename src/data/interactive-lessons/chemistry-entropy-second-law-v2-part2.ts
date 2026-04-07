@@ -116,11 +116,11 @@ This is why entropy **always increases with temperature**.
       content: `
 **Microstate Calculations** 🧮
 
-1) For 6 molecules in 2 halves of a container, the total microstates $W = 2^6$ = ?
+**1)** For 6 molecules in 2 halves of a container, the total microstates $W = 2^6$ = ?
 
-2) How many of those microstates have all 6 molecules on the left side?
+**2)** How many of those microstates have all 6 molecules on the left side?
 
-3) What percentage of microstates have the molecules evenly split (3 left, 3 right)? The number of such microstates is $\\binom{6}{3} = 20$. Round to the nearest whole percent.
+**3)** What percentage of microstates have the molecules evenly split (3 left, 3 right)? The number of such microstates is $\\binom{6}{3} = 20$. Round to the nearest whole percent.
       `,
       exercise: {
         boxes: 3,

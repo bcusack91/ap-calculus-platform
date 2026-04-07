@@ -157,11 +157,11 @@ $$K_c = \\frac{[\\text{C}]^c[\\text{D}]^d}{[\\text{A}]^a[\\text{B}]^b}$$
 
 Answer the following about equilibrium constants:
 
-1) If $K = 4.2 \\times 10^8$, are products or reactants favored? (Enter "products" or "reactants")
+**1)** If $K = 4.2 \\times 10^8$, are products or reactants favored? (Enter "products" or "reactants")
 
-2) If $K = 6.3 \\times 10^{-11}$, are products or reactants favored? (Enter "products" or "reactants")
+**2)** If $K = 6.3 \\times 10^{-11}$, are products or reactants favored? (Enter "products" or "reactants")
 
-3) Does adding a catalyst change the value of $K$? (Enter "yes" or "no")
+**3)** Does adding a catalyst change the value of $K$? (Enter "yes" or "no")
       `,
       exercise: {
         boxes: 3,

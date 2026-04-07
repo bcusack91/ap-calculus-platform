@@ -136,13 +136,13 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
       content: `
 **Comprehensive Calculations** 🧮
 
-Use: $K_f = 1.86$ °C/m, $K_b = 0.512$ °C/m, $R = 0.08206$ L·atm/(mol·K)
+> **Given:** $K_f = 1.86$ °C/m, $K_b = 0.512$ °C/m, $R = 0.08206$ L·atm/(mol·K)
 
-1) An aqueous solution of MgCl₂ ($i = 3$, $M = 95.21$ g/mol) is made by dissolving 9.52 g in 200.0 g of water. What is the freezing point of the solution? (in °C, to 3 significant figures)
+**1)** An aqueous solution of MgCl₂ ($i = 3$, $M = 95.21$ g/mol) is made by dissolving 9.52 g in 200.0 g of water. What is the freezing point of the solution? (in °C, to 3 significant figures)
 
-2) How many mL of 12.0 M HCl must be diluted to prepare 500.0 mL of 0.600 M HCl? (to 3 significant figures)
+**2)** How many mL of 12.0 M HCl must be diluted to prepare 500.0 mL of 0.600 M HCl? (to 3 significant figures)
 
-3) A 0.0250 M solution of an unknown electrolyte at 25°C has an osmotic pressure of 1.83 atm. What is the van\'t Hoff factor? (to 3 significant figures)
+**3)** A 0.0250 M solution of an unknown electrolyte at 25°C has an osmotic pressure of 1.83 atm. What is the van\'t Hoff factor? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

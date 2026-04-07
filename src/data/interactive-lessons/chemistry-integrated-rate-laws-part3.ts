@@ -131,11 +131,11 @@ Each successive half-life is **twice** the previous one. This is a telltale sign
 
 A second-order reaction has $k = 0.50$ M⁻¹s⁻¹ and $[A]_0 = 0.80$ M.
 
-1) What is the half-life? (in seconds, to 3 significant figures)
+**1)** What is the half-life? (in seconds, to 3 significant figures)
 
-2) What is [A] after 5.0 s? (in M, to 3 significant figures)
+**2)** What is [A] after 5.0 s? (in M, to 3 significant figures)
 
-3) What is the second half-life (starting from [A] = 0.40 M)? (in seconds, to 3 significant figures)
+**3)** What is the second half-life (starting from [A] = 0.40 M)? (in seconds, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

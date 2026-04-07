@@ -167,11 +167,11 @@ $$\\text{Acid} + \\text{Base} \\rightarrow \\text{Salt} + \\text{Water}$$
 
 For each scenario, indicate if a reaction occurs. Type the **chemical formula of the solid metal produced**, or type **NR** if no reaction occurs.
 
-1) $\\text{Fe} + \\text{CuSO}_4 \\rightarrow$ ? (Iron is above copper in the activity series)
+**1)** $\\text{Fe} + \\text{CuSO}_4 \\rightarrow$ ? (Iron is above copper in the activity series)
 
-2) $\\text{Cu} + \\text{AgNO}_3 \\rightarrow$ ? (Copper is above silver in the activity series)
+**2)** $\\text{Cu} + \\text{AgNO}_3 \\rightarrow$ ? (Copper is above silver in the activity series)
 
-3) $\\text{Ag} + \\text{HCl} \\rightarrow$ ? (Silver is below hydrogen in the activity series)
+**3)** $\\text{Ag} + \\text{HCl} \\rightarrow$ ? (Silver is below hydrogen in the activity series)
       `,
       exercise: {
         boxes: 3,

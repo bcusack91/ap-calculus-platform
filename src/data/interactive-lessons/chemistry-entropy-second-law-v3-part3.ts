@@ -33,11 +33,11 @@ $$\\Delta S_{\\text{surr}} = \\frac{-\\Delta H_{\\text{sys}}}{T}$$
 
 For a reaction with $\\Delta H = -120$ kJ and $\\Delta S_{\\text{sys}} = -250$ J/K at $T = 300$ K:
 
-1) Calculate $\\Delta S_{\\text{surr}}$ in J/K.
+**1)** Calculate $\\Delta S_{\\text{surr}}$ in J/K.
 
-2) Calculate $\\Delta S_{\\text{univ}}$ in J/K.
+**2)** Calculate $\\Delta S_{\\text{univ}}$ in J/K.
 
-3) Is this spontaneous? (type yes or no)
+**3)** Is this spontaneous? (type yes or no)
     `, exercise: { boxes: 3, correctAnswers: ['400', '150', 'yes'],
         hint1: '$\\Delta S_{\\text{surr}} = -(-120{,}000)/300$',
         hint2: '$\\Delta S_{\\text{univ}} = -250 + 400$',

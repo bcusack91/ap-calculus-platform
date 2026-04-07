@@ -173,11 +173,11 @@ The buffer works because the added strong acid or base is **completely consumed*
 
 For each buffer, identify the missing component:
 
-1) Buffer: $HNO_2$ / ___. What is the conjugate base? (Enter formula, e.g. NO2-)
+**1)** Buffer: $HNO_2$ / ___. What is the conjugate base? (Enter formula, e.g. NO2-)
 
-2) Buffer: ___ / $NH_3$. What is the conjugate acid? (Enter formula, e.g. NH4+)
+**2)** Buffer: ___ / $NH_3$. What is the conjugate acid? (Enter formula, e.g. NH4+)
 
-3) To make a phosphate buffer at pH ≈ 7.2, you mix $NaH_2PO_4$ with what? (Enter formula, e.g. Na2HPO4)
+**3)** To make a phosphate buffer at pH ≈ 7.2, you mix $NaH_2PO_4$ with what? (Enter formula, e.g. Na2HPO4)
       `,
       exercise: {
         boxes: 3,

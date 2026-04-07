@@ -106,11 +106,11 @@ $pH = -\\log(8.75 \\times 10^{-3}) = 2.06$
 
 A student mixes 25.0 mL of 0.080 M $HNO_3$ with 15.0 mL of 0.080 M $KOH$.
 
-1) How many moles of excess $H^+$ remain? (Enter in scientific notation, e.g. 8.0e-4)
+**1)** How many moles of excess $H^+$ remain? (Enter in scientific notation, e.g. 8.0e-4)
 
-2) What is the total volume in liters? (3 decimal places)
+**2)** What is the total volume in liters? (3 decimal places)
 
-3) What is the pH of the resulting solution? (2 decimal places)
+**3)** What is the pH of the resulting solution? (2 decimal places)
       `,
       exercise: {
         boxes: 3,

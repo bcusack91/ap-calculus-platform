@@ -64,13 +64,17 @@ $n$ must be a **positive integer** (1, 2, 3, ...).
 
 ### Worked Example
 
-A compound is 40.0% C, 6.7% H, and 53.3% O by mass. Its molar mass is 180.2 g/mol. Find the molecular formula.
+> **Problem:** A compound is 40.0% C, 6.7% H, and 53.3% O by mass. Its molar mass is 180.2 g/mol. Find the molecular formula.
+
+**Solution:**
 
 **Step 1–4** (from Part 4): Empirical formula = CH₂O
 
 **Step 5:** $M_{\\text{emp}} = 12.01 + 2(1.008) + 16.00 = 30.03$ g/mol
 
-**Step 6:** $n = 180.2 / 30.03 = 6.00$
+**Step 6:**
+
+$$n = \\frac{M_{\\text{mol}}}{M_{\\text{emp}}} = \\frac{180.2 \\text{ g/mol}}{30.03 \\text{ g/mol}} = 6.00$$
 
 **Step 7:** Molecular formula = $\\text{C}_{1 \\times 6}\\text{H}_{2 \\times 6}\\text{O}_{1 \\times 6} = \\text{C}_6\\text{H}_{12}\\text{O}_6$ (glucose!)
       `
@@ -125,13 +129,13 @@ A compound is 40.0% C, 6.7% H, and 53.3% O by mass. Its molar mass is 180.2 g/mo
       content: `
 **Empirical & Molecular Formula Drill** 🧮
 
-Use: H = 1.008, C = 12.01, N = 14.01, O = 16.00, P = 30.97
+> **Given:** H = 1.008, C = 12.01, N = 14.01, O = 16.00, P = 30.97
 
-1) A compound is 43.6% P and 56.4% O by mass. What is the mole ratio of P to O? Give as the number of O per 1 P (to 3 significant figures).
+**1)** A compound is 43.6% P and 56.4% O by mass. What is the mole ratio of P to O? Give as the number of O per 1 P (to 3 significant figures).
 
-2) The empirical formula from question 1 is P₂O₅. Calculate $M_{\\text{emp}}$ in g/mol. (to 3 significant figures)
+**2)** The empirical formula from question 1 is P₂O₅. Calculate $M_{\\text{emp}}$ in g/mol. (to 3 significant figures)
 
-3) If the molar mass of the compound is 283.88 g/mol, what is $n$ (the multiplier to get the molecular formula)? (whole number)
+**3)** If the molar mass of the compound is 283.88 g/mol, what is $n$ (the multiplier to get the molecular formula)? (whole number)
       `,
       exercise: {
         boxes: 3,

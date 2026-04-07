@@ -138,11 +138,11 @@ $$3\\text{Cu}(s) + 8\\text{H}^+ + 2\\text{NO}_3^- \\rightarrow 3\\text{Cu}^{2+} 
 
 Convert to basic solution:
 
-1) How many OH⁻ must be added to both sides?
+**1)** How many OH⁻ must be added to both sides?
 
-2) How many H₂O molecules appear on the LEFT side after combining H⁺ + OH⁻?
+**2)** How many H₂O molecules appear on the LEFT side after combining H⁺ + OH⁻?
 
-3) After canceling H₂O, how many H₂O remain on the product side? (Hint: 8 H₂O form on the left, 4 H₂O already on right)
+**3)** After canceling H₂O, how many H₂O remain on the product side? (Hint: 8 H₂O form on the left, 4 H₂O already on right)
       `,
       exercise: {
         boxes: 3,

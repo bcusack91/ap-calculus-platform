@@ -131,11 +131,11 @@ This final part reviews all key concepts: dynamic equilibrium, $K_c$/$K_p$ expre
 
 The reaction $2\\,\\text{SO}_3(g) \\rightleftharpoons 2\\,\\text{SO}_2(g) + \\text{O}_2(g)$ has $K_c = 1.6 \\times 10^{-10}$ at 900 K.
 
-1) Is this reaction product-favored or reactant-favored at 900 K? (Enter "reactant-favored")
+**1)** Is this reaction product-favored or reactant-favored at 900 K? (Enter "reactant-favored")
 
-2) What is $K_c$ for $\\text{SO}_2(g) + \\frac{1}{2}\\text{O}_2(g) \\rightleftharpoons \\text{SO}_3(g)$? (Enter in scientific notation, e.g. 7.9e4)
+**2)** What is $K_c$ for $\\text{SO}_2(g) + \\frac{1}{2}\\text{O}_2(g) \\rightleftharpoons \\text{SO}_3(g)$? (Enter in scientific notation, e.g. 7.9e4)
 
-3) The decomposition of SO₃ is endothermic. If temperature increases, does $K_c$ for the decomposition increase or decrease? (Enter "increase")
+**3)** The decomposition of SO₃ is endothermic. If temperature increases, does $K_c$ for the decomposition increase or decrease? (Enter "increase")
 
 *Round all answers to 3 significant figures.*
       `,

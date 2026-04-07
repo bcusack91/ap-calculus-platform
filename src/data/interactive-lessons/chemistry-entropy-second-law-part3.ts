@@ -151,11 +151,11 @@ Above 0°C: melting is spontaneous. Below 0°C: freezing is spontaneous.
       content: `
 **Second Law Calculations** 🧮
 
-1) A reaction has $\\Delta H = -100$ kJ and $\\Delta S_{\\text{sys}} = -50$ J/K at $T = 400$ K. What is $\\Delta S_{\\text{surr}}$? (in J/K)
+**1)** A reaction has $\\Delta H = -100$ kJ and $\\Delta S_{\\text{sys}} = -50$ J/K at $T = 400$ K. What is $\\Delta S_{\\text{surr}}$? (in J/K)
 
-2) Using your answer from (1), what is $\\Delta S_{\\text{universe}}$? (in J/K)
+**2)** Using your answer from (1), what is $\\Delta S_{\\text{universe}}$? (in J/K)
 
-3) Is the reaction spontaneous? (type "yes" or "no")
+**3)** Is the reaction spontaneous? (type "yes" or "no")
       `,
       exercise: {
         boxes: 3,

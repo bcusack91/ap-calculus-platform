@@ -113,11 +113,11 @@ $Q_{sp} < K_{sp}$ → **No precipitate forms.**
 
 $K_{sp}(\\text{AgCl}) = 1.8 \\times 10^{-10}$
 
-1) What is $[\\text{Ag}^+]$ after mixing? (Enter in scientific notation, e.g. 2.5e-4)
+**1)** What is $[\\text{Ag}^+]$ after mixing? (Enter in scientific notation, e.g. 2.5e-4)
 
-2) What is $[\\text{Cl}^-]$ after mixing? (Enter in scientific notation, e.g. 1.5e-3)
+**2)** What is $[\\text{Cl}^-]$ after mixing? (Enter in scientific notation, e.g. 1.5e-3)
 
-3) What is $Q_{sp}$? (Enter in scientific notation, e.g. 3.8e-7)
+**3)** What is $Q_{sp}$? (Enter in scientific notation, e.g. 3.8e-7)
 
 *Round all answers to 3 significant figures.*
       `,

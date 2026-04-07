@@ -102,11 +102,11 @@ $\\text{CO}(g) + \\text{Cl}_2(g) \\rightleftharpoons \\text{COCl}_2(g)$, $K_c = 
 
 A 1.00 L flask is charged with 0.400 mol CO and 0.400 mol Cl₂. No COCl₂ is initially present.
 
-1) Write the K expression and set up the ICE table. What is $[\\text{COCl}_2]$ at equilibrium in terms of x? (Enter, e.g., "x")
+**1)** Write the K expression and set up the ICE table. What is $[\\text{COCl}_2]$ at equilibrium in terms of x? (Enter, e.g., "x")
 
-2) The K expression becomes $255 = \\frac{x}{(0.400-x)^2}$. Using the approximation ($0.400/255$ is small... actually $0.400/255 = 0.00157 < 100$). Should you use the quadratic? (Enter "yes" or "no")
+**2)** The K expression becomes $255 = \\frac{x}{(0.400-x)^2}$. Using the approximation ($0.400/255$ is small... actually $0.400/255 = 0.00157 < 100$). Should you use the quadratic? (Enter "yes" or "no")
 
-3) Actually, $[\\text{init}]/K = 0.400/255 = 0.00157$, which is much LESS than 100. This means K is LARGE relative to the initial concentration, meaning the reaction goes nearly to completion. The limiting approach here is to assume the reaction goes to completion, then back-calculate. If the reaction goes to completion, what is the limiting reagent amount of COCl₂ formed? (Enter in mol)
+**3)** Actually, $[\\text{init}]/K = 0.400/255 = 0.00157$, which is much LESS than 100. This means K is LARGE relative to the initial concentration, meaning the reaction goes nearly to completion. The limiting approach here is to assume the reaction goes to completion, then back-calculate. If the reaction goes to completion, what is the limiting reagent amount of COCl₂ formed? (Enter in mol)
 
 *Round all answers to 3 significant figures.*
       `,

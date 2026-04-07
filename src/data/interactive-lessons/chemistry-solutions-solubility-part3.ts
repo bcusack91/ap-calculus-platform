@@ -154,11 +154,11 @@ $$C_3 = 1.0 \\times (0.1)^3 = 0.001 \\text{ M} = 1 \\times 10^{-3} \\text{ M}$$
       content: `
 **Dilution Calculations** 🧮
 
-1) What volume (in mL) of 16.0 M HNO₃ is needed to prepare 1.00 L of 0.400 M HNO₃?
+**1)** What volume (in mL) of 16.0 M HNO₃ is needed to prepare 1.00 L of 0.400 M HNO₃?
 
-2) If 25.0 mL of 0.800 M CuSO₄ is diluted to 100.0 mL, what is the final molarity? (to 3 significant figures)
+**2)** If 25.0 mL of 0.800 M CuSO₄ is diluted to 100.0 mL, what is the final molarity? (to 3 significant figures)
 
-3) A 1.00 M stock solution undergoes three serial 1:10 dilutions. What is the final concentration? (answer in M, use scientific notation as a × 10⁻³ — enter just the coefficient $a$)
+**3)** A 1.00 M stock solution undergoes three serial 1:10 dilutions. What is the final concentration? (answer in M, use scientific notation as a × 10⁻³ — enter just the coefficient $a$)
       `,
       exercise: {
         boxes: 3,

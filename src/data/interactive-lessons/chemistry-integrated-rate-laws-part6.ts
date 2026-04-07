@@ -54,11 +54,11 @@ Use the appropriate integrated rate law to find concentration at any time, time 
 | 20 | 0.200 |
 | 30 | 0.100 |
 
-1) What is the order of the reaction? (enter 0, 1, or 2)
+**1)** What is the order of the reaction? (enter 0, 1, or 2)
 
-2) What is k? (to 3 significant figures)
+**2)** What is k? (to 3 significant figures)
 
-3) What is [A] at t = 50 min? (in M, to 3 significant figures)
+**3)** What is [A] at t = 50 min? (in M, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
@@ -128,11 +128,11 @@ Use the appropriate integrated rate law to find concentration at any time, time 
 
 A first-order reaction has a half-life of 25.0 minutes. The initial concentration is 1.20 M.
 
-1) What is k? (in min⁻¹, to 3 significant figures)
+**1)** What is k? (in min⁻¹, to 3 significant figures)
 
-2) What is [A] after 75.0 minutes? (in M, to 3 significant figures)
+**2)** What is [A] after 75.0 minutes? (in M, to 3 significant figures)
 
-3) How long until [A] = 0.10 M? (in minutes, to 3 significant figures)
+**3)** How long until [A] = 0.10 M? (in minutes, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
@@ -183,11 +183,11 @@ A first-order reaction has a half-life of 25.0 minutes. The initial concentratio
 
 A certain reaction is second-order with $k = 0.10$ M⁻¹s⁻¹ and $[A]_0 = 2.0$ M.
 
-1) What is the first half-life? (in seconds, to 3 significant figures)
+**1)** What is the first half-life? (in seconds, to 3 significant figures)
 
-2) How long total until 87.5% of A has reacted? (in seconds, to 3 significant figures)
+**2)** How long total until 87.5% of A has reacted? (in seconds, to 3 significant figures)
 
-3) What is [A] at t = 35 s? (in M, to 3 significant figures)
+**3)** What is [A] at t = 35 s? (in M, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

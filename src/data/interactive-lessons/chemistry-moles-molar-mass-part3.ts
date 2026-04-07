@@ -26,15 +26,19 @@ where $n$ = moles, $m$ = mass in grams, $M$ = molar mass in g/mol.
 
 ### Example 1
 
-How many moles are in 36.04 g of water (H₂O)?
+> **Problem:** How many moles are in 36.04 g of water (H₂O)?
 
-$$n = \\frac{36.04 \\text{ g}}{18.02 \\text{ g/mol}} = 2.000 \\text{ mol}$$
+**Solution:**
+
+$$\\text{mol H}_2\\text{O} = 36.04 \\; \\cancel{\\text{g H}_2\\text{O}} \\times \\frac{1 \\text{ mol H}_2\\text{O}}{18.02 \\; \\cancel{\\text{g H}_2\\text{O}}} = 2.000 \\text{ mol H}_2\\text{O}$$
 
 ### Example 2
 
-How many moles are in 100.0 g of NaCl? ($M = 58.44$ g/mol)
+> **Problem:** How many moles are in 100.0 g of NaCl? ($M = 58.44$ g/mol)
 
-$$n = \\frac{100.0}{58.44} = 1.711 \\text{ mol}$$
+**Solution:**
+
+$$\\text{mol NaCl} = 100.0 \\; \\cancel{\\text{g NaCl}} \\times \\frac{1 \\text{ mol NaCl}}{58.44 \\; \\cancel{\\text{g NaCl}}} = 1.711 \\text{ mol NaCl}$$
 
 ## Moles → Grams
 
@@ -44,9 +48,11 @@ $$m = n \\times M$$
 
 ### Example 3
 
-What is the mass of 0.250 mol of glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$, $M = 180.16$ g/mol)?
+> **Problem:** What is the mass of 0.250 mol of glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$, $M = 180.16$ g/mol)?
 
-$$m = 0.250 \\times 180.16 = 45.04 \\text{ g}$$
+**Solution:**
+
+$$\\text{g C}_6\\text{H}_{12}\\text{O}_6 = 0.250 \\; \\cancel{\\text{mol C}_6\\text{H}_{12}\\text{O}_6} \\times \\frac{180.16 \\text{ g C}_6\\text{H}_{12}\\text{O}_6}{1 \\; \\cancel{\\text{mol C}_6\\text{H}_{12}\\text{O}_6}} = 45.04 \\text{ g C}_6\\text{H}_{12}\\text{O}_6$$
       `
     },
     {
@@ -63,23 +69,31 @@ $$\\text{particles} \\xrightarrow{\\div N_A} \\text{moles} \\xrightarrow{\\times
 
 ### Example: Grams → Particles
 
-How many molecules are in 9.01 g of H₂O?
+> **Problem:** How many molecules are in 9.01 g of H₂O?
 
-**Step 1:** Convert to moles:
-$$n = \\frac{9.01}{18.02} = 0.500 \\text{ mol}$$
+**Solution:**
 
-**Step 2:** Convert to molecules:
-$$\\text{molecules} = 0.500 \\times 6.022 \\times 10^{23} = 3.011 \\times 10^{23}$$
+**Step 1:** Convert grams to moles:
+
+$$\\text{mol H}_2\\text{O} = 9.01 \\; \\cancel{\\text{g H}_2\\text{O}} \\times \\frac{1 \\text{ mol H}_2\\text{O}}{18.02 \\; \\cancel{\\text{g H}_2\\text{O}}} = 0.500 \\text{ mol H}_2\\text{O}$$
+
+**Step 2:** Convert moles to molecules:
+
+$$\\text{molecules of H}_2\\text{O} = 0.500 \\; \\cancel{\\text{mol H}_2\\text{O}} \\times \\frac{6.022 \\times 10^{23} \\text{ molecules H}_2\\text{O}}{1 \\; \\cancel{\\text{mol H}_2\\text{O}}} = 3.011 \\times 10^{23} \\text{ molecules H}_2\\text{O}$$
 
 ### Example: Particles → Grams
 
-What is the mass of $1.505 \\times 10^{24}$ atoms of iron (Fe, $M = 55.85$ g/mol)?
+> **Problem:** What is the mass of $1.505 \\times 10^{24}$ atoms of iron (Fe, $M = 55.85$ g/mol)?
 
-**Step 1:** Convert to moles:
-$$n = \\frac{1.505 \\times 10^{24}}{6.022 \\times 10^{23}} = 2.499 \\approx 2.50 \\text{ mol}$$
+**Solution:**
 
-**Step 2:** Convert to grams:
-$$m = 2.50 \\times 55.85 = 139.6 \\text{ g}$$
+**Step 1:** Convert atoms to moles:
+
+$$n = 1.505 \\times 10^{24} \\; \\cancel{\\text{atoms Fe}} \\times \\frac{1 \\text{ mol Fe}}{6.022 \\times 10^{23} \\; \\cancel{\\text{atoms Fe}}} = 2.50 \\text{ mol Fe}$$
+
+**Step 2:** Convert moles to grams:
+
+$$m = 2.50 \\; \\cancel{\\text{mol Fe}} \\times \\frac{55.85 \\text{ g Fe}}{1 \\; \\cancel{\\text{mol Fe}}} = 139.6 \\text{ g Fe}$$
       `
     },
     {
@@ -132,13 +146,17 @@ $$m = 2.50 \\times 55.85 = 139.6 \\text{ g}$$
       content: `
 **Mole-Mass Conversion Drill** 🧮
 
-Use: H = 1.008, C = 12.01, O = 16.00, Na = 22.99, Cl = 35.45, Ca = 40.08
+> **Given Atomic Masses (g/mol):**
+>
+> | H | C | O | Na | Cl | Ca |
+> |---|---|---|---|---|---|
+> | 1.008 | 12.01 | 16.00 | 22.99 | 35.45 | 40.08 |
 
-1) How many moles are in 25.0 g of CaCO₃ ($M = 100.09$ g/mol)? (to 3 significant figures)
+**1)** How many moles are in 25.0 g of CaCO₃ ($M = 100.09$ g/mol)? (to 3 significant figures)
 
-2) What is the mass (in grams) of 0.400 mol of NaCl ($M = 58.44$ g/mol)? (to 3 significant figures)
+**2)** What is the mass (in grams) of 0.400 mol of NaCl ($M = 58.44$ g/mol)? (to 3 significant figures)
 
-3) How many molecules are in 5.00 g of CO₂ ($M = 44.01$ g/mol)? Express as $a \\times 10^{22}$ — enter $a$ (to 3 significant figures).
+**3)** How many molecules are in 5.00 g of CO₂ ($M = 44.01$ g/mol)? Express as $a \\times 10^{22}$ — enter $a$ (to 3 significant figures).
       `,
       exercise: {
         boxes: 3,

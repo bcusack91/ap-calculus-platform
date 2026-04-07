@@ -104,11 +104,11 @@ Mechanism:
 - Step 2: $\\text{N}_2\\text{O}_2 + \\text{H}_2 \\rightarrow \\text{N}_2\\text{O} + \\text{H}_2\\text{O}$ (slow)
 - Step 3: $\\text{N}_2\\text{O} + \\text{H}_2 \\rightarrow \\text{N}_2 + \\text{H}_2\\text{O}$ (fast)
 
-1) How many intermediates? (number)
+**1)** How many intermediates? (number)
 
-2) The rate law from the slow step contains an intermediate. After elimination, the rate law is Rate = k_obs[NO]ⁿ[H₂]ᵐ. What is n? (number)
+**2)** The rate law from the slow step contains an intermediate. After elimination, the rate law is Rate = k_obs[NO]ⁿ[H₂]ᵐ. What is n? (number)
 
-3) What is m? (number)
+**3)** What is m? (number)
       `,
       exercise: {
         boxes: 3,
@@ -215,11 +215,11 @@ A student proposes:
 - Step 2: $\\text{F} + \\text{B} \\rightarrow \\text{G}$ (fast)
 - Step 3: $\\text{G} + \\text{C} \\rightarrow \\text{D} + \\text{E}$ (fast)
 
-1) Does the mechanism sum to the overall reaction? (yes or no)
+**1)** Does the mechanism sum to the overall reaction? (yes or no)
 
-2) The rate law from Step 1 is rate = k[A][B]. Does this match the experimental rate law rate = k[A][B]²? (yes or no)
+**2)** The rate law from Step 1 is rate = k[A][B]. Does this match the experimental rate law rate = k[A][B]²? (yes or no)
 
-3) Is this proposed mechanism valid? (yes or no)
+**3)** Is this proposed mechanism valid? (yes or no)
       `,
       exercise: {
         boxes: 3,

@@ -134,11 +134,11 @@ where $R = 8.314$ J/(mol·K) and $M$ is the molar mass in kg/mol.
 
 Convert the following gas measurements:
 
-1) Convert 2.50 atm to mmHg.
+**1)** Convert 2.50 atm to mmHg.
 
-2) Convert 350 K to °C (to 3 significant figures).
+**2)** Convert 350 K to °C (to 3 significant figures).
 
-3) Convert 0.500 L to mL.
+**3)** Convert 0.500 L to mL.
       `,
       exercise: {
         inputs: [

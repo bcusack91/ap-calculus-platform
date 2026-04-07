@@ -151,11 +151,11 @@ $$K_c = \\frac{0.040}{(0.50)(0.027)} = \\frac{0.040}{0.0135} = 2.96$$
 
 For $\\text{A}(g) \\rightleftharpoons 2\\,\\text{B}(g)$, the equilibrium concentrations are $[\\text{A}] = 0.40\\;\\text{M}$ and $[\\text{B}] = 0.80\\;\\text{M}$.
 
-1) What is $K_c$? (Enter a number with one decimal place)
+**1)** What is $K_c$? (Enter a number with one decimal place)
 
-2) Are products or reactants favored? (Enter "products" or "reactants")
+**2)** Are products or reactants favored? (Enter "products" or "reactants")
 
-3) If the equation is reversed to $2\\,\\text{B}(g) \\rightleftharpoons \\text{A}(g)$, what is the new $K_c$? (Enter a number with two decimal places)
+**3)** If the equation is reversed to $2\\,\\text{B}(g) \\rightleftharpoons \\text{A}(g)$, what is the new $K_c$? (Enter a number with two decimal places)
       `,
       exercise: {
         boxes: 3,

@@ -162,13 +162,13 @@ For the reaction: $\\text{CaCl}_2(aq) + \\text{Na}_2\\text{CO}_3(aq) \\rightarro
 
 List the spectator ions (type the ion formula without charge, in alphabetical order separated by a comma — e.g., "Cl, Na"):
 
-1) The two spectator ions are:
+**1)** The two spectator ions are:
 
 For the net ionic equation $\\text{Ca}^{2+}(aq) + \\text{CO}_3^{2-}(aq) \\rightarrow \\text{CaCO}_3(s)$:
 
-2) The sum of charges on the reactant side is:
+**2)** The sum of charges on the reactant side is:
 
-3) The sum of charges on the product side is:
+**3)** The sum of charges on the product side is:
       `,
       exercise: {
         boxes: 3,

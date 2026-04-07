@@ -127,11 +127,11 @@ Since $Q = 7.2 < K = 14.5$: the system shifts **right**.
 
 For: $\\text{H}_2(g) + \\text{Cl}_2(g) \\rightleftharpoons 2\\,\\text{HCl}(g)$ at equilibrium
 
-1) If $\\text{Cl}_2$ is added, the reaction shifts which direction? (Enter "right" or "left")
+**1)** If $\\text{Cl}_2$ is added, the reaction shifts which direction? (Enter "right" or "left")
 
-2) If HCl is removed, the reaction shifts which direction? (Enter "right" or "left")
+**2)** If HCl is removed, the reaction shifts which direction? (Enter "right" or "left")
 
-3) If $\\text{H}_2$ is removed and $\\text{Cl}_2$ is simultaneously added, the reaction shifts which direction? (Enter "right" or "left")
+**3)** If $\\text{H}_2$ is removed and $\\text{Cl}_2$ is simultaneously added, the reaction shifts which direction? (Enter "right" or "left")
       `,
       exercise: {
         boxes: 3,

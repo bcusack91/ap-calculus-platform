@@ -101,9 +101,9 @@ $\\text{CO}(g) + \\text{H}_2\\text{O}(g) \\rightleftharpoons \\text{CO}_2(g) + \
 
 At equilibrium: $[\\text{CO}] = 0.10$, $[\\text{H}_2\\text{O}] = 0.10$, $[\\text{CO}_2] = 0.30$, $[\\text{H}_2] = 0.30$ M
 
-1) Calculate $K_c$. (Enter as a whole number)
+**1)** Calculate $K_c$. (Enter as a whole number)
 
-2) Is this reaction product-favored or reactant-favored? (Enter "product-favored" or "reactant-favored")
+**2)** Is this reaction product-favored or reactant-favored? (Enter "product-favored" or "reactant-favored")
       `,
       exercise: {
         boxes: 2,
@@ -125,11 +125,11 @@ Initial: $[\\text{N}_2\\text{O}_4] = 0.80$ M, $[\\text{NO}_2] = 0$ M
 
 At equilibrium: $[\\text{NO}_2] = 0.40$ M
 
-1) What is $x$? (Enter as a decimal)
+**1)** What is $x$? (Enter as a decimal)
 
-2) What is $[\\text{N}_2\\text{O}_4]$ at equilibrium? (Enter as a decimal)
+**2)** What is $[\\text{N}_2\\text{O}_4]$ at equilibrium? (Enter as a decimal)
 
-3) Calculate $K_c$. (Enter to 3 significant figures)
+**3)** Calculate $K_c$. (Enter to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

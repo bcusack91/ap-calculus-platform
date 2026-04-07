@@ -54,11 +54,11 @@ Initial: $[\\text{HI}] = 1.00$ M, $[\\text{H}_2] = [\\text{I}_2] = 0$
 
 At equilibrium: $[\\text{HI}] = 0.80$ M
 
-1) What is $x$? (Remember: the coefficient of HI is 2)
+**1)** What is $x$? (Remember: the coefficient of HI is 2)
 
-2) What is $[\\text{H}_2]$ at equilibrium?
+**2)** What is $[\\text{H}_2]$ at equilibrium?
 
-3) What is $K_c$? (Enter to 3 significant figures)
+**3)** What is $K_c$? (Enter to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
@@ -81,11 +81,11 @@ Initial: $[\\text{COCl}_2] = 0.50$ M, $[\\text{CO}] = [\\text{Cl}_2] = 0$
 
 Using the approximation $0.50 - x \\approx 0.50$:
 
-1) Solve: $x = \\sqrt{K_c \\times 0.50}$. What is $x$? (Enter in scientific notation, e.g. 1.0e-5)
+**1)** Solve: $x = \\sqrt{K_c \\times 0.50}$. What is $x$? (Enter in scientific notation, e.g. 1.0e-5)
 
-2) Does the 5% test pass? (Enter "yes" or "no")
+**2)** Does the 5% test pass? (Enter "yes" or "no")
 
-3) What is $[\\text{CO}]$ at equilibrium? (Enter in scientific notation, same as x)
+**3)** What is $[\\text{CO}]$ at equilibrium? (Enter in scientific notation, same as x)
 
 *Round all answers to 3 significant figures.*
       `,
@@ -143,11 +143,11 @@ Initial: $[\\text{H}_2] = 0.50$, $[\\text{I}_2] = 0.50$, $[\\text{HI}] = 0.20$ M
 
 First check: $Q = \\frac{(0.20)^2}{(0.50)(0.50)} = \\frac{0.04}{0.25} = 0.16$. Since $Q < K$, shift right.
 
-1) Using the ICE table with shift right, what is $[\\text{HI}]$ at equilibrium expressed in terms of $x$? (Enter, e.g., "0.20 + 2x")
+**1)** Using the ICE table with shift right, what is $[\\text{HI}]$ at equilibrium expressed in terms of $x$? (Enter, e.g., "0.20 + 2x")
 
-2) This is a perfect-square case. Taking the square root: $8 = \\frac{0.20 + 2x}{0.50 - x}$. Solve for x. (Round to 3 significant figures)
+**2)** This is a perfect-square case. Taking the square root: $8 = \\frac{0.20 + 2x}{0.50 - x}$. Solve for x. (Round to 3 significant figures)
 
-3) What is $[\\text{HI}]$ at equilibrium? (Round to 3 significant figures)
+**3)** What is $[\\text{HI}]$ at equilibrium? (Round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

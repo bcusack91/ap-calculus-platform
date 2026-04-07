@@ -133,11 +133,11 @@ Ask: Is this species...
 
 Identify the precipitate or gas formed. Type the chemical formula (no phase labels).
 
-1) What precipitate forms when Pb(NO₃)₂(aq) is mixed with KI(aq)?
+**1)** What precipitate forms when Pb(NO₃)₂(aq) is mixed with KI(aq)?
 
-2) What gas is produced when HCl(aq) reacts with NaHCO₃(aq)?
+**2)** What gas is produced when HCl(aq) reacts with NaHCO₃(aq)?
 
-3) What precipitate forms when CuSO₄(aq) is mixed with NaOH(aq)?
+**3)** What precipitate forms when CuSO₄(aq) is mixed with NaOH(aq)?
       `,
       exercise: {
         boxes: 3,

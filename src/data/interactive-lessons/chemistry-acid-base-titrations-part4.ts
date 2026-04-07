@@ -142,11 +142,11 @@ Three equivalence points (three protons):
 
 50.0 mL of 0.100 M $NH_3$ ($K_b = 1.8 \\times 10^{-5}$, $pK_b = 4.74$) is titrated with 0.100 M $HCl$:
 
-1) What volume of $HCl$ is needed for the equivalence point? (1 decimal place, mL)
+**1)** What volume of $HCl$ is needed for the equivalence point? (1 decimal place, mL)
 
-2) What is the pH at the half-equivalence point? (2 decimal places)
+**2)** What is the pH at the half-equivalence point? (2 decimal places)
 
-3) At the equivalence point, the $pH$ is less than 7. What is the $pK_a$ of $NH_4^+$? (2 decimal places)
+**3)** At the equivalence point, the $pH$ is less than 7. What is the $pK_a$ of $NH_4^+$? (2 decimal places)
       `,
       exercise: {
         boxes: 3,

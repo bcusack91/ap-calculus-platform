@@ -126,7 +126,7 @@ $$= -965.1 + 74.8 = -890.3 \\text{ kJ}$$
       content: `
 **Formation Enthalpy Calculations** 🧮
 
-Use these $\\Delta H°_f$ values (kJ/mol):
+> **Given:** 
 
 | Substance | $\\Delta H°_f$ (kJ/mol) |
 |---|---|
@@ -137,9 +137,9 @@ Use these $\\Delta H°_f$ values (kJ/mol):
 | $\\text{NO}(g)$ | $+90.3$ |
 | $\\text{O}_2, \\text{N}_2, \\text{H}_2$ | $0$ |
 
-1) Calculate $\\Delta H°_{\\text{rxn}}$ for: $\\text{C}_2\\text{H}_6(g) + \\frac{7}{2}\\text{O}_2(g) \\rightarrow 2\\text{CO}_2(g) + 3\\text{H}_2\\text{O}(l)$ (in kJ, to 3 significant figures)
+**1)** Calculate $\\Delta H°_{\\text{rxn}}$ for: $\\text{C}_2\\text{H}_6(g) + \\frac{7}{2}\\text{O}_2(g) \\rightarrow 2\\text{CO}_2(g) + 3\\text{H}_2\\text{O}(l)$ (in kJ, to 3 significant figures)
 
-2) Calculate $\\Delta H°_{\\text{rxn}}$ for: $4\\text{NH}_3(g) + 5\\text{O}_2(g) \\rightarrow 4\\text{NO}(g) + 6\\text{H}_2\\text{O}(l)$ (in kJ, to 3 significant figures)
+**2)** Calculate $\\Delta H°_{\\text{rxn}}$ for: $4\\text{NH}_3(g) + 5\\text{O}_2(g) \\rightarrow 4\\text{NO}(g) + 6\\text{H}_2\\text{O}(l)$ (in kJ, to 3 significant figures)
       `,
       exercise: {
         boxes: 2,

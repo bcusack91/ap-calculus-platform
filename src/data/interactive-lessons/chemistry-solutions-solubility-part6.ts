@@ -56,7 +56,7 @@ This part brings together everything from Parts 2–5: concentration conversions
 
 **(a) Molality**
 
-$$n = \\frac{34.2}{342.30} = 0.0999 \\text{ mol}$$
+$$n = 34.2 \\; \\cancel{\\text{g C}_{12}\\text{H}_{22}\\text{O}_{11}} \\times \\frac{1 \\text{ mol C}_{12}\\text{H}_{22}\\text{O}_{11}}{342.30 \\; \\cancel{\\text{g C}_{12}\\text{H}_{22}\\text{O}_{11}}} = 0.0999 \\text{ mol C}_{12}\\text{H}_{22}\\text{O}_{11}$$
 
 $$m = \\frac{0.0999}{0.2000} = 0.500 \\; m$$
 
@@ -129,13 +129,13 @@ $$\\chi_{\\text{sucrose}} = \\frac{0.0999}{0.0999 + 11.10} = 0.00893$$
       content: `
 **Mixed Calculations — Set 1** 🧮
 
-Use: $K_f = 1.86$ °C/m, $K_b = 0.512$ °C/m, $R = 0.08206$ L·atm/(mol·K)
+> **Given:** $K_f = 1.86$ °C/m, $K_b = 0.512$ °C/m, $R = 0.08206$ L·atm/(mol·K)
 
-1) A solution of 9.00 g of glucose ($M = 180.16$ g/mol, $i = 1$) in 250.0 g of water has what freezing point? (in °C, to 3 significant figures)
+**1)** A solution of 9.00 g of glucose ($M = 180.16$ g/mol, $i = 1$) in 250.0 g of water has what freezing point? (in °C, to 3 significant figures)
 
-2) What is the boiling point (°C) of a solution made by dissolving 14.6 g of NaCl ($M = 58.44$ g/mol, $i = 2$) in 500.0 g of water? (to 3 significant figures)
+**2)** What is the boiling point (°C) of a solution made by dissolving 14.6 g of NaCl ($M = 58.44$ g/mol, $i = 2$) in 500.0 g of water? (to 3 significant figures)
 
-3) What is the osmotic pressure (atm) of a 0.0500 M KBr ($i = 2$) solution at 25°C? (to 3 significant figures)
+**3)** What is the osmotic pressure (atm) of a 0.0500 M KBr ($i = 2$) solution at 25°C? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
@@ -177,11 +177,11 @@ This technique is used in the lab to identify unknown compounds — a classic AP
       content: `
 **Mixed Calculations — Set 2** 🧮
 
-1) An unknown nonelectrolyte ($i = 1$) dissolves: 3.50 g in 50.0 g of water, and the solution freezes at $-1.86$ °C. What is the molar mass (g/mol) of the unknown? (to 3 significant figures)
+**1)** An unknown nonelectrolyte ($i = 1$) dissolves: 3.50 g in 50.0 g of water, and the solution freezes at $-1.86$ °C. What is the molar mass (g/mol) of the unknown? (to 3 significant figures)
 
-2) What mass (in grams) of ethylene glycol ($M = 62.07$ g/mol, $i = 1$) must be added to 4.00 kg of water to lower the freezing point to $-10.0$ °C? (to nearest whole number)
+**2)** What mass (in grams) of ethylene glycol ($M = 62.07$ g/mol, $i = 1$) must be added to 4.00 kg of water to lower the freezing point to $-10.0$ °C? (to nearest whole number)
 
-3) A 0.200 M solution of an electrolyte at 25°C has an osmotic pressure of 14.6 atm. What is the van\'t Hoff factor $i$? (to 3 significant figures)
+**3)** A 0.200 M solution of an electrolyte at 25°C has an osmotic pressure of 14.6 atm. What is the van\'t Hoff factor $i$? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

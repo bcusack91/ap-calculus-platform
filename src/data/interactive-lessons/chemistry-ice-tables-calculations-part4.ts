@@ -129,11 +129,11 @@ Using the approximation $0.50 - x \\approx 0.50$:
 
 $$1.0 \\times 10^{-6} = \\frac{x^2}{0.50}$$
 
-1) Solve for $x$. (Enter in scientific notation, e.g. 7.1e-4)
+**1)** Solve for $x$. (Enter in scientific notation, e.g. 7.1e-4)
 
-2) What percent of the initial [A] is $x$? (Enter as a percentage to 3 significant figures, e.g. 0.14)
+**2)** What percent of the initial [A] is $x$? (Enter as a percentage to 3 significant figures, e.g. 0.14)
 
-3) Is the approximation valid? (Enter "yes" or "no")
+**3)** Is the approximation valid? (Enter "yes" or "no")
       `,
       exercise: {
         boxes: 3,

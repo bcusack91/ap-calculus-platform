@@ -37,7 +37,9 @@ where:
 
 ### Example
 
-How many moles of NaOH are in 500 mL of 0.200 M NaOH?
+> **Problem:** How many moles of NaOH are in 500 mL of 0.200 M NaOH?
+
+**Solution:**
 
 $$n = M \\times V = 0.200 \\times 0.500 = 0.100 \\text{ mol NaOH}$$
       `
@@ -154,11 +156,11 @@ Here: $M_A \\times V_A \\times 1 = M_B \\times V_B \\times \\frac{1}{2}$, or sim
       content: `
 **Solution Stoichiometry Calculations** 🧮
 
-1) How many moles of KOH are in 250 mL of 0.400 M KOH? (to 3 significant figures)
+**1)** How many moles of KOH are in 250 mL of 0.400 M KOH? (to 3 significant figures)
 
-2) In the reaction $\\text{HCl} + \\text{NaOH} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$, how many mL of 0.250 M NaOH are needed to neutralize 50.0 mL of 0.100 M HCl? (to 3 significant figures)
+**2)** In the reaction $\\text{HCl} + \\text{NaOH} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$, how many mL of 0.250 M NaOH are needed to neutralize 50.0 mL of 0.100 M HCl? (to 3 significant figures)
 
-3) A titration requires 28.5 mL of 0.200 M KOH to neutralize 25.0 mL of HNO₃ (1:1 ratio). What is the molarity of HNO₃? (to 3 significant figures)
+**3)** A titration requires 28.5 mL of 0.200 M KOH to neutralize 25.0 mL of HNO₃ (1:1 ratio). What is the molarity of HNO₃? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

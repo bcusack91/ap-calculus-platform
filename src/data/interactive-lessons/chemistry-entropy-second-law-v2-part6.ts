@@ -50,11 +50,11 @@ Given: $\\Delta H° = -802$ kJ/mol, $T = 298$ K
 
 $S°$ values (J/(mol·K)): CH₄ = 186.3, O₂ = 205.0, CO₂ = 213.7, H₂O(g) = 188.7
 
-1) Calculate $\\Delta S°_{\\text{sys}}$ in J/(mol·K). Round to 1 decimal.
+**1)** Calculate $\\Delta S°_{\\text{sys}}$ in J/(mol·K). Round to 1 decimal.
 
-2) Calculate $\\Delta S_{\\text{surr}}$ in J/K. Round to 1 decimal.
+**2)** Calculate $\\Delta S_{\\text{surr}}$ in J/K. Round to 1 decimal.
 
-3) Is the reaction spontaneous at 298 K? (type yes or no)
+**3)** Is the reaction spontaneous at 298 K? (type yes or no)
       `,
       exercise: {
         boxes: 3,
@@ -106,11 +106,11 @@ $S°$ values (J/(mol·K)): CH₄ = 186.3, O₂ = 205.0, CO₂ = 213.7, H₂O(g) 
 
 A reaction has $\\Delta H = +150$ kJ and $\\Delta S_{\\text{sys}} = +400$ J/K.
 
-1) At $T = 300$ K, calculate $\\Delta S_{\\text{surr}}$ in J/K.
+**1)** At $T = 300$ K, calculate $\\Delta S_{\\text{surr}}$ in J/K.
 
-2) At $T = 300$ K, calculate $\\Delta S_{\\text{univ}}$ in J/K.
+**2)** At $T = 300$ K, calculate $\\Delta S_{\\text{univ}}$ in J/K.
 
-3) At what temperature (in K) does this reaction switch from nonspontaneous to spontaneous? ($T = \\Delta H / \\Delta S$)
+**3)** At what temperature (in K) does this reaction switch from nonspontaneous to spontaneous? ($T = \\Delta H / \\Delta S$)
       `,
       exercise: {
         boxes: 3,

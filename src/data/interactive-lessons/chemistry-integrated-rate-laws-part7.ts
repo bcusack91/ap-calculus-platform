@@ -96,11 +96,11 @@ The decomposition of a compound was studied. Data:
 
 Verify: $1/[A]$ values are 1.00, 2.00, 3.00, 4.00 (constant Δ of 1.00 per 20 min).
 
-1) What is the order? (enter 0, 1, or 2)
+**1)** What is the order? (enter 0, 1, or 2)
 
-2) What is k? (in M⁻¹min⁻¹, to 3 significant figures)
+**2)** What is k? (in M⁻¹min⁻¹, to 3 significant figures)
 
-3) What is [A] at t = 100 min? (in M, to 3 significant figures)
+**3)** What is [A] at t = 100 min? (in M, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
@@ -186,11 +186,11 @@ A wooden artifact is found to have 12.5% of the $^{14}$C content of living wood.
 
 A first-order reaction has $k = 3.46 \\times 10^{-2}$ s⁻¹.
 
-1) What is the half-life? (in seconds, to 3 significant figures)
+**1)** What is the half-life? (in seconds, to 3 significant figures)
 
-2) How long until 90% has reacted? (in seconds, to 3 significant figures)
+**2)** How long until 90% has reacted? (in seconds, to 3 significant figures)
 
-3) If [A]₀ = 0.500 M, what is [A] after 30.0 s? (in M, to 3 significant figures)
+**3)** If [A]₀ = 0.500 M, what is [A] after 30.0 s? (in M, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,

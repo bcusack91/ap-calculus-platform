@@ -92,11 +92,11 @@ $$\\Delta S_{\\text{surr}} = -\\frac{\\Delta H_{\\text{sys}}}{T}$$
       content: `
 **Entropy Calculation Workshop** 🧮
 
-1) A reaction has $\\Delta H = -150$ kJ and occurs at $T = 300$ K. What is $\\Delta S_{\\text{surroundings}}$? (in J/K)
+**1)** A reaction has $\\Delta H = -150$ kJ and occurs at $T = 300$ K. What is $\\Delta S_{\\text{surroundings}}$? (in J/K)
 
-2) The melting of ice at 0°C (273 K) has $\\Delta H_{\\text{fus}} = 6.01$ kJ/mol. What is $\\Delta S_{\\text{fus}}$? (in J/(mol·K), to 3 significant figures)
+**2)** The melting of ice at 0°C (273 K) has $\\Delta H_{\\text{fus}} = 6.01$ kJ/mol. What is $\\Delta S_{\\text{fus}}$? (in J/(mol·K), to 3 significant figures)
 
-3) A reaction has $\\Delta S_{\\text{sys}} = -100$ J/K and $\\Delta S_{\\text{surr}} = +350$ J/K. What is $\\Delta S_{\\text{universe}}$? (in J/K)
+**3)** A reaction has $\\Delta S_{\\text{sys}} = -100$ J/K and $\\Delta S_{\\text{surr}} = +350$ J/K. What is $\\Delta S_{\\text{universe}}$? (in J/K)
       `,
       exercise: {
         boxes: 3,

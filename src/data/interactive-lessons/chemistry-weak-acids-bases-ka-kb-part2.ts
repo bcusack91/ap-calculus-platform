@@ -153,11 +153,11 @@ Compare: 0.10 M $HCl$ has $pH = 1.00$. Same concentration, but the weak acid has
       content: `
 **Weak Acid pH Calculations** 🧮
 
-1) Find the pH of 0.25 M $HF$ ($K_a = 6.8 \\times 10^{-4}$). (2 decimal places)
+**1)** Find the pH of 0.25 M $HF$ ($K_a = 6.8 \\times 10^{-4}$). (2 decimal places)
 
-2) Find $[H^+]$ for 0.050 M $HCN$ ($K_a = 6.2 \\times 10^{-10}$). (Enter in scientific notation, e.g. 5.6e-6)
+**2)** Find $[H^+]$ for 0.050 M $HCN$ ($K_a = 6.2 \\times 10^{-10}$). (Enter in scientific notation, e.g. 5.6e-6)
 
-3) What is the percent ionization of 0.10 M acetic acid ($[H^+] = 1.34 \\times 10^{-3}$ M)? (1 decimal place, enter number only)
+**3)** What is the percent ionization of 0.10 M acetic acid ($[H^+] = 1.34 \\times 10^{-3}$ M)? (1 decimal place, enter number only)
       `,
       exercise: {
         boxes: 3,

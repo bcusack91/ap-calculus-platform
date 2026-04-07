@@ -22,28 +22,32 @@ The **mass percent** of an element in a compound is:
 
 $$\\% \\text{ by mass} = \\frac{\\text{mass of element in 1 mol of compound}}{\\text{molar mass of compound}} \\times 100\\%$$
 
-### Example 1: Water (H₂O)
+### Example 1
 
-$M_{\\text{H}_2\\text{O}} = 18.02$ g/mol
+> **Problem:** Find the percent composition of water (H₂O, $M = 18.02$ g/mol).
 
-- Mass of H in 1 mol: $2(1.008) = 2.016$ g
-- Mass of O in 1 mol: $1(16.00) = 16.00$ g
+**Solution:**
 
-$$\\%\\text{H} = \\frac{2.016}{18.02} \\times 100\\% = 11.19\\%$$
+- Mass of H in 1 mol H₂O: $2(1.008) = 2.016$ g
+- Mass of O in 1 mol H₂O: $1(16.00) = 16.00$ g
 
-$$\\%\\text{O} = \\frac{16.00}{18.02} \\times 100\\% = 88.79\\%$$
+$$\\%\\text{H} = \\frac{2.016 \\text{ g H}}{18.02 \\text{ g H}_2\\text{O}} \\times 100\\% = 11.19\\%$$
+
+$$\\%\\text{O} = \\frac{16.00 \\text{ g O}}{18.02 \\text{ g H}_2\\text{O}} \\times 100\\% = 88.79\\%$$
 
 **Check:** $11.19 + 88.79 = 99.98\\% \\approx 100\\%$ ✓ (small rounding difference is fine)
 
-### Example 2: Glucose (C₆H₁₂O₆)
+### Example 2
 
-$M = 180.16$ g/mol
+> **Problem:** Find the percent composition of glucose (C₆H₁₂O₆, $M = 180.16$ g/mol).
 
-$$\\%\\text{C} = \\frac{6(12.01)}{180.16} \\times 100\\% = \\frac{72.06}{180.16} \\times 100\\% = 40.00\\%$$
+**Solution:**
 
-$$\\%\\text{H} = \\frac{12(1.008)}{180.16} \\times 100\\% = \\frac{12.10}{180.16} \\times 100\\% = 6.71\\%$$
+$$\\%\\text{C} = \\frac{6(12.01) \\text{ g C}}{180.16 \\text{ g C}_6\\text{H}_{12}\\text{O}_6} \\times 100\\% = \\frac{72.06}{180.16} \\times 100\\% = 40.00\\%$$
 
-$$\\%\\text{O} = \\frac{6(16.00)}{180.16} \\times 100\\% = \\frac{96.00}{180.16} \\times 100\\% = 53.28\\%$$
+$$\\%\\text{H} = \\frac{12(1.008) \\text{ g H}}{180.16 \\text{ g C}_6\\text{H}_{12}\\text{O}_6} \\times 100\\% = \\frac{12.10}{180.16} \\times 100\\% = 6.71\\%$$
+
+$$\\%\\text{O} = \\frac{6(16.00) \\text{ g O}}{180.16 \\text{ g C}_6\\text{H}_{12}\\text{O}_6} \\times 100\\% = \\frac{96.00}{180.16} \\times 100\\% = 53.28\\%$$
       `
     },
     {
@@ -63,7 +67,9 @@ If you know the percent composition, you can determine the **empirical formula**
 
 ### Example
 
-A compound is 40.0% C, 6.7% H, and 53.3% O by mass. Find the empirical formula.
+> **Problem:** A compound is 40.0% C, 6.7% H, and 53.3% O by mass. Find the empirical formula.
+
+**Solution:**
 
 **Step 1:** Assume 100 g → 40.0 g C, 6.7 g H, 53.3 g O
 
@@ -130,13 +136,13 @@ A compound is 40.0% C, 6.7% H, and 53.3% O by mass. Find the empirical formula.
       content: `
 **Percent Composition Calculation Drill** 🧮
 
-Use: H = 1.008, C = 12.01, N = 14.01, O = 16.00, S = 32.07
+> **Given:** H = 1.008, C = 12.01, N = 14.01, O = 16.00, S = 32.07
 
-1) What is the percent by mass of nitrogen in ammonia (NH₃, $M = 17.03$ g/mol)? (to 3 significant figures)
+**1)** What is the percent by mass of nitrogen in ammonia (NH₃, $M = 17.03$ g/mol)? (to 3 significant figures)
 
-2) What is the percent by mass of sulfur in SO₃ ($M = 80.07$ g/mol)? (to 3 significant figures)
+**2)** What is the percent by mass of sulfur in SO₃ ($M = 80.07$ g/mol)? (to 3 significant figures)
 
-3) A compound is 85.7% C and 14.3% H by mass. What is the ratio of C to H in the empirical formula? (Enter as a single number: if the ratio is C₁H₂, enter 2)
+**3)** A compound is 85.7% C and 14.3% H by mass. What is the ratio of C to H in the empirical formula? (Enter as a single number: if the ratio is C₁H₂, enter 2)
       `,
       exercise: {
         boxes: 3,

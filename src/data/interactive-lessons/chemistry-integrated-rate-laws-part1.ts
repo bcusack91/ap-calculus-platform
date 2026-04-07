@@ -168,11 +168,11 @@ Each successive half-life is exactly **half** the duration of the previous one.
 
 A zero-order reaction has $k = 5.0 \\times 10^{-3}$ M/s and $[A]_0 = 0.60$ M.
 
-1) What is [A] after 40 s? (in M, 3 significant figures)
+**1)** What is [A] after 40 s? (in M, 3 significant figures)
 
-2) What is the half-life? (in seconds, whole number)
+**2)** What is the half-life? (in seconds, whole number)
 
-3) How long until the reaction is complete ([A] = 0)? (in seconds, whole number)
+**3)** How long until the reaction is complete ([A] = 0)? (in seconds, whole number)
       `,
       exercise: {
         boxes: 3,

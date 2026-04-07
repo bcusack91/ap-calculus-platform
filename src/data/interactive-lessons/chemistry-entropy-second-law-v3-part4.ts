@@ -36,11 +36,11 @@ $\\text{N}_2\\text{(g)} + \\text{3 H}_2\\text{(g)} \\to \\text{2 NH}_3\\text{(g)
 
 Using the table: $S°$(N₂) = 191.5, $S°$(H₂) = 130.6, $S°$(NH₃) = 192.3
 
-1) Calculate $\\sum nS°_{\\text{products}}$ in J/(mol·K).
+**1)** Calculate $\\sum nS°_{\\text{products}}$ in J/(mol·K).
 
-2) Calculate $\\sum nS°_{\\text{reactants}}$ in J/(mol·K).
+**2)** Calculate $\\sum nS°_{\\text{reactants}}$ in J/(mol·K).
 
-3) Calculate $\\Delta S°_{\\text{rxn}}$ in J/(mol·K).
+**3)** Calculate $\\Delta S°_{\\text{rxn}}$ in J/(mol·K).
     `, exercise: { boxes: 3, correctAnswers: ['384.6', '583.3', '-198.7'],
         hint1: '$2 \\times 192.3$',
         hint2: '$191.5 + 3 \\times 130.6$',
@@ -53,11 +53,11 @@ $\\text{C(graphite)} + \\text{O}_2\\text{(g)} \\to \\text{CO}_2\\text{(g)}$
 
 Using: $S°$(C) = 5.7, $S°$(O₂) = 205.0, $S°$(CO₂) = 213.7
 
-1) Calculate $\\Delta S°_{\\text{rxn}}$ in J/(mol·K). Round to 1 decimal.
+**1)** Calculate $\\Delta S°_{\\text{rxn}}$ in J/(mol·K). Round to 1 decimal.
 
-2) Is this positive or negative? (type positive or negative)
+**2)** Is this positive or negative? (type positive or negative)
 
-3) Does this make sense? Same number of gas moles, but CO₂ is more complex than O₂. (type yes or no)
+**3)** Does this make sense? Same number of gas moles, but CO₂ is more complex than O₂. (type yes or no)
     `, exercise: { boxes: 3, correctAnswers: ['3.0', 'positive', 'yes'],
         hint1: '$213.7 - (5.7 + 205.0)$',
         hint2: 'Check the sign.',

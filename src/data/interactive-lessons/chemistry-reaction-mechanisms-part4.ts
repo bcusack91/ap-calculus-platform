@@ -134,11 +134,11 @@ where $k_{\\text{obs}} = k_2 K_{eq}$.
 - Step 1: $\\text{A} + \\text{B} \\rightleftharpoons \\text{C}$ (fast, $K_{eq}$)
 - Step 2: $\\text{C} + \\text{A} \\rightarrow \\text{D}$ (slow)
 
-1) The rate law from the slow step is Rate = k₂[?][?]. Which species are in the rate law? (enter two formulas separated by a comma, alphabetically)
+**1)** The rate law from the slow step is Rate = k₂[?][?]. Which species are in the rate law? (enter two formulas separated by a comma, alphabetically)
 
-2) The intermediate is eliminated by writing [C] = Keq × [?] × [?]. Fill in the species. (enter two formulas separated by a comma, alphabetically)
+**2)** The intermediate is eliminated by writing [C] = Keq × [?] × [?]. Fill in the species. (enter two formulas separated by a comma, alphabetically)
 
-3) The final rate law is Rate = k_obs[A]ⁿ[B]ᵐ. What are n and m? (enter as: n,m)
+**3)** The final rate law is Rate = k_obs[A]ⁿ[B]ᵐ. What are n and m? (enter as: n,m)
       `,
       exercise: {
         boxes: 3,

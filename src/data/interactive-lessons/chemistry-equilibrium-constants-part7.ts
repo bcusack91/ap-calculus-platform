@@ -139,11 +139,11 @@ For $\\text{2 SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons \\text{2 SO}_3(g)$
 
 At equilibrium at 700 K: $[\\text{SO}_2] = 0.10\\;\\text{M}$, $[\\text{O}_2] = 0.20\\;\\text{M}$, $[\\text{SO}_3] = 0.60\\;\\text{M}$
 
-1) Calculate $K_c$ (enter an integer)
+**1)** Calculate $K_c$ (enter an integer)
 
-2) What is $\\Delta n$ for this reaction? (enter an integer)
+**2)** What is $\\Delta n$ for this reaction? (enter an integer)
 
-3) Is $K_p$ larger or smaller than $K_c$ for this reaction? (Enter "larger" or "smaller")
+**3)** Is $K_p$ larger or smaller than $K_c$ for this reaction? (Enter "larger" or "smaller")
       `,
       exercise: {
         boxes: 3,

@@ -97,11 +97,11 @@ Gibbs free energy ties together enthalpy, entropy, equilibrium, and electrochemi
       content: `
 **Integration Problems** 🧮
 
-1) $\\Delta H° = -180$ kJ, $\\Delta S° = -250$ J/K. What is the crossover temperature? (in K)
+**1)** $\\Delta H° = -180$ kJ, $\\Delta S° = -250$ J/K. What is the crossover temperature? (in K)
 
-2) At 298 K, $\\Delta G° = -57.1$ kJ/mol. What is $K$? (use $e^{23.0} \\approx 10^{10}$; express as a power of 10)
+**2)** At 298 K, $\\Delta G° = -57.1$ kJ/mol. What is $K$? (use $e^{23.0} \\approx 10^{10}$; express as a power of 10)
 
-3) A reaction has $\\Delta G° = +5.0$ kJ/mol. At what value of $Q$ does $\\Delta G = 0$ at 298 K? (i.e., what is $K$? Round to nearest tenth; use $e^{-2.02} \\approx 0.1$)
+**3)** A reaction has $\\Delta G° = +5.0$ kJ/mol. At what value of $Q$ does $\\Delta G = 0$ at 298 K? (i.e., what is $K$? Round to nearest tenth; use $e^{-2.02} \\approx 0.1$)
       `,
       exercise: {
         boxes: 3,

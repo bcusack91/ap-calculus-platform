@@ -141,11 +141,11 @@ Pressure, volume, and concentration changes shift the equilibrium **position** b
 
 For: $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$, $\\Delta H = +87$ kJ (endothermic)
 
-1) If the volume is decreased, the reaction shifts which direction? (Enter "right" or "left")
+**1)** If the volume is decreased, the reaction shifts which direction? (Enter "right" or "left")
 
-2) If the temperature is increased, the reaction shifts which direction? (Enter "right" or "left")
+**2)** If the temperature is increased, the reaction shifts which direction? (Enter "right" or "left")
 
-3) Does increasing temperature increase or decrease K for this reaction? (Enter "increase" or "decrease")
+**3)** Does increasing temperature increase or decrease K for this reaction? (Enter "increase" or "decrease")
       `,
       exercise: {
         boxes: 3,
