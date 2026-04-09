@@ -51,34 +51,44 @@ An external voltage source (battery or power supply) pushes electrons in the **o
       id: 'ef1-energy',
       type: 'text' as const,
       content: `
-## 📌 Energy Considerations
+## ⚡ Energy Considerations
 
-### For Electrolysis
+### The Thermodynamic Reality
 
-$$\\Delta G > 0 \\quad \\text{(non-spontaneous)}$$
-$$E_{\\text{cell}} < 0 \\quad \\text{(negative cell potential)}$$
+For any electrolysis reaction, the numbers tell the story:
 
-The external power source must supply at least $|E_{\\text{cell}}|$ volts to drive the reaction.
+| Quantity | Value | Meaning |
+|----------|:-----:|---------|
+| $\\Delta G$ | $> 0$ | Non-spontaneous — needs energy input |
+| $E_{\\text{cell}}$ | $< 0$ | Negative cell potential |
+| External voltage required | $\\geq \\lvert E_{\\text{cell}} \\rvert$ | Must overcome the thermodynamic barrier |
 
-
----
-
-### In Practice: Overpotential
-
-The actual voltage required is usually **higher** than the theoretical minimum due to **overpotential** — extra voltage needed to overcome kinetic barriers at the electrode surfaces.
-
-$$V_{\\text{applied}} = |E_{\\text{cell}}| + \\text{overpotential}$$
-
+> 🔑 **Bottom line:** You have to *pay* with electrical energy to make an electrolysis reaction go.
 
 ---
 
-### Example: Electrolysis of Water
+### ⚠️ Overpotential — The Hidden Cost
+
+In practice, the actual voltage needed is **higher** than the thermodynamic minimum. This extra voltage is called **overpotential** — it overcomes kinetic barriers at the electrode surfaces.
+
+$$\\boxed{V_{\\text{applied}} = |E_{\\text{cell}}| + \\eta_{\\text{overpotential}}}$$
+
+> 💡 Overpotential depends on the electrode material, current density, and which gases are being produced. It's why real electrolysis always costs more energy than theory predicts.
+
+---
+
+### 🧪 Example: Electrolysis of Water
 
 $$2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)$$
 
-- $E° = -1.23$ V (non-spontaneous)
-- Minimum applied voltage: 1.23 V
-- Typical actual voltage: ~1.8 - 2.0 V (due to overpotential)
+| Parameter | Value |
+|-----------|:-----:|
+| $E°$ | $-1.23$ V (non-spontaneous) |
+| Minimum applied voltage | $1.23$ V |
+| Typical actual voltage | $\\sim 1.8 - 2.0$ V |
+| Overpotential | $\\sim 0.6 - 0.8$ V |
+
+> 📏 This reaction is how we produce hydrogen gas for fuel cells — electrolysis and fuel cells are **reverse processes** of each other!
       `
     },
     {

@@ -56,35 +56,44 @@ Understanding the similarities and differences between galvanic and electrolytic
       content: `
 ## 🔋 Recharging: Galvanic → Electrolytic
 
-When you recharge a battery, you convert it from a galvanic cell to an electrolytic cell:
-
+> Every rechargeable battery lives a **double life** — it's a galvanic cell when discharging and an electrolytic cell when charging. The chemistry literally runs in reverse!
 
 ---
 
-### Discharging (Galvanic Mode)
+### ⬇️ Discharging (Galvanic Mode)
 
 $$\\text{Pb}(s) + \\text{PbO}_2(s) + 2\\text{H}_2\\text{SO}_4(aq) \\rightarrow 2\\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l)$$
 
-- Spontaneous: $E > 0$
-- Produces electrical energy
-
+| Property | Value |
+|----------|-------|
+| **Spontaneous?** | ✅ Yes |
+| **$E$** | Positive ($> 0$) |
+| **Energy** | Chemical → Electrical (powers your car) |
 
 ---
 
-### Charging (Electrolytic Mode)
+### ⬆️ Charging (Electrolytic Mode)
 
 $$2\\text{PbSO}_4(s) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Pb}(s) + \\text{PbO}_2(s) + 2\\text{H}_2\\text{SO}_4(aq)$$
 
-- Non-spontaneous: $E < 0$
-- Consumes electrical energy (from the charger)
-- The reaction is driven in reverse
-
+| Property | Value |
+|----------|-------|
+| **Spontaneous?** | ❌ No |
+| **$E$** | Negative ($< 0$) |
+| **Energy** | Electrical → Chemical (from the charger) |
 
 ---
 
-### Key Point
+### 🔀 What Swaps During Charging?
 
-The **anode and cathode swap** when switching between galvanic and electrolytic modes! The electrode that was the anode during discharge becomes the cathode during charging.
+| | Discharging | Charging |
+|--|:-----------:|:--------:|
+| **Anode** | Electrode A | Electrode B |
+| **Cathode** | Electrode B | Electrode A |
+| **Electron flow** | A → B | B → A |
+| **Reaction direction** | Forward | Reverse |
+
+> ⚠️ **AP Trap:** The electrodes that were anode/cathode during discharge **swap roles** during charging. The chemistry reverses, and so do the labels!
       `
     },
     {

@@ -65,39 +65,57 @@ In a molten salt, there are **only two ions** present. The prediction is straigh
 
 In aqueous solutions, **water** can be oxidized or reduced instead of the dissolved ions. You must compare the reduction potentials to predict which reaction occurs.
 
+---
+
+### 📋 Key Reduction Potentials to Know
+
+| Half-Reaction | $E°$ (V) |
+|--------------|:--------:|
+| $\\text{Au}^{3+} + 3e^- \\rightarrow \\text{Au}$ | $+1.50$ |
+| $\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$ | $+0.80$ |
+| $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$ | $+0.34$ |
+| $2\\text{H}_2\\text{O} + 2e^- \\rightarrow \\text{H}_2 + 2\\text{OH}^-$ | $-0.83$ |
+| $\\text{Ni}^{2+} + 2e^- \\rightarrow \\text{Ni}$ | $-0.26$ |
+| $\\text{Zn}^{2+} + 2e^- \\rightarrow \\text{Zn}$ | $-0.76$ |
+| $\\text{Al}^{3+} + 3e^- \\rightarrow \\text{Al}$ | $-1.66$ |
+| $\\text{Na}^+ + e^- \\rightarrow \\text{Na}$ | $-2.71$ |
+| $\\text{K}^+ + e^- \\rightarrow \\text{K}$ | $-2.93$ |
+
+> 🔑 **The decision rule:** Whichever half-reaction has the **more positive (less negative)** $E°$ is easier to reduce and wins the competition at the cathode.
 
 ---
 
-### At the Cathode (Which Gets Reduced?)
+### ⬇️ At the Cathode — Which Gets Reduced?
 
-Compare the metal ion vs. water:
+Water's reduction potential is $E° = -0.83$ V. Compare the metal ion to this benchmark:
 
-$$2\\text{H}_2\\text{O}(l) + 2e^- \\rightarrow \\text{H}_2(g) + 2\\text{OH}^-(aq) \\quad E° = -0.83 \\text{ V}$$
-
-- If the metal has $E° > -0.83$ V (e.g., Cu²⁺, Ag⁺): **metal is deposited**
-- If the metal has $E° < -0.83$ V (e.g., Na⁺, K⁺, Al³⁺): **H₂ gas forms**
-
-
----
-
-### At the Anode (Which Gets Oxidized?)
-
-Compare the anion vs. water:
-
-$$2\\text{H}_2\\text{O}(l) \\rightarrow \\text{O}_2(g) + 4\\text{H}^+(aq) + 4e^- \\quad E° = +1.23 \\text{ V}$$
-
-- Simple anions (Cl⁻, Br⁻, I⁻): **anion is oxidized** (due to overpotential effects)
-- Oxyanions (SO₄²⁻, NO₃⁻) or F⁻: **water is oxidized → O₂ forms**
-
+| Metal Ion $E°$ | What Happens | Examples |
+|:--------------:|:------------:|----------|
+| $> -0.83$ V | **Metal deposits** | Cu²⁺, Ag⁺, Au³⁺, Ni²⁺ |
+| $< -0.83$ V | **H₂ gas forms** | Na⁺, K⁺, Al³⁺ |
 
 ---
 
-### Summary Rules for Aqueous Electrolysis
+### ⬆️ At the Anode — Which Gets Oxidized?
 
-| Cathode | Anode |
-|---------|-------|
-| Less active metals (Cu, Ag, Au) deposit | Simple halides (Cl⁻, Br⁻, I⁻) oxidize |
-| Active metals (Na, K, Al) → H₂ forms | Oxyanions → O₂ forms |
+Water's oxidation potential is $E° = +1.23$ V.
+
+| Anion Type | What Happens | Examples |
+|:----------:|:------------:|----------|
+| Simple halides | **Anion is oxidized** | Cl⁻ → Cl₂, Br⁻ → Br₂, I⁻ → I₂ |
+| Oxyanions or F⁻ | **Water is oxidized → O₂** | SO₄²⁻, NO₃⁻, F⁻ |
+
+> ⚠️ **Why do halides win even though their $E°$ is less favorable?** Overpotential! The kinetic barrier for O₂ production is high, so in practice, halides get oxidized first.
+
+---
+
+### 🗺️ Quick Decision Flowchart
+
+| Step | Question | If YES | If NO |
+|:----:|----------|--------|-------|
+| **1** | Is it a molten salt? | Cation → metal, Anion → nonmetal | Go to step 2 |
+| **2** | Cathode: Is metal $E°$ above $-0.83$ V? | Metal deposits | H₂ forms |
+| **3** | Anode: Is anion a simple halide? | Halide is oxidized | O₂ forms |
       `
     },
     {
@@ -105,6 +123,26 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow \\text{O}_2(g) + 4\\text{H}^+(aq) + 4e^-
       type: 'multiple-choice' as const,
       content: `
 **Electrolysis Product Quiz** 🎯
+
+> 📋 **Reference:** Water cathode $E° = -0.83$ V | Water anode $E° = +1.23$ V
+>
+> **Reduction potentials:**
+>
+> | Ion | $E°$ (V) | Ion | $E°$ (V) |
+> |-----|:--------:|-----|:--------:|
+> | Au³⁺ | +1.50 | Zn²⁺ | −0.76 |
+> | Ag⁺ | +0.80 | Al³⁺ | −1.66 |
+> | Cu²⁺ | +0.34 | Na⁺ | −2.71 |
+> | Ni²⁺ | −0.26 | K⁺ | −2.93 |
+>
+> **Oxidation potentials (anode):**
+>
+> | Half-reaction | $E°$ (V) |
+> |--------------|:--------:|
+> | 2Cl⁻ → Cl₂ + 2e⁻ | +1.36 |
+> | 2Br⁻ → Br₂ + 2e⁻ | +1.07 |
+> | 2I⁻ → I₂ + 2e⁻ | +0.54 |
+> | 2H₂O → O₂ + 4H⁺ + 4e⁻ | +1.23 |
       `,
       exercise: {
         questions: [
@@ -149,6 +187,19 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow \\text{O}_2(g) + 4\\text{H}^+(aq) + 4e^-
       type: 'dropdown-select' as const,
       content: `
 **Predicting Electrolysis Products** 🔽
+
+> 📋 **Reduction potentials:**
+>
+> | Ion | $E°$ (V) | Ion | $E°$ (V) |
+> |-----|:--------:|-----|:--------:|
+> | Au³⁺ | +1.50 | Zn²⁺ | −0.76 |
+> | Ag⁺ | +0.80 | Al³⁺ | −1.66 |
+> | Cu²⁺ | +0.34 | Na⁺ | −2.71 |
+> | Ni²⁺ | −0.26 | K⁺ | −2.93 |
+>
+> **Anode:** 2Cl⁻ → Cl₂ (+1.36 V) | 2Br⁻ → Br₂ (+1.07 V) | 2I⁻ → I₂ (+0.54 V) | H₂O → O₂ (+1.23 V)
+>
+> **Rules:** Metal $E°$ above −0.83 V → metal deposits. Below → H₂. Simple halides → oxidized. Oxyanions → O₂.
       `,
       exercise: {
         dropdowns: [
@@ -181,6 +232,10 @@ $$2\\text{H}_2\\text{O}(l) \\rightarrow \\text{O}_2(g) + 4\\text{H}^+(aq) + 4e^-
       type: 'input-boxes' as const,
       content: `
 **Product Identification** 🧮
+
+> 📋 **Reference:** Ag⁺ $E°$ = +0.80 V | Cu²⁺ = +0.34 V | Ni²⁺ = −0.26 V | Zn²⁺ = −0.76 V | Water cathode = −0.83 V | Na⁺ = −2.71 V | K⁺ = −2.93 V | Mg²⁺ = −2.37 V
+>
+> **Anode:** Halides (Cl⁻, Br⁻, I⁻) → oxidized. Oxyanions (NO₃⁻, SO₄²⁻) → O₂ forms.
 
 What gas or metal is produced at the cathode during electrolysis of:
 
