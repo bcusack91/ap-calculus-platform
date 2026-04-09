@@ -37,7 +37,7 @@ export async function GET() {
 
 const getCachedAnalytics = unstable_cache(
   async () => {
-  const now = new Date()
+    const now = new Date()
   const today = new Date(now)
   today.setHours(0, 0, 0, 0)
   const weekAgo = new Date(today)
@@ -366,7 +366,7 @@ const getCachedAnalytics = unstable_cache(
     }).slice(0, 12),
   }
 
-  return NextResponse.json({
+  return ({
     users: {
       total: totalUsers,
       newToday: newUsersToday,
@@ -408,7 +408,7 @@ const getCachedAnalytics = unstable_cache(
       notificationSummary,
     },
     mcatDiagnostics,
-  }
+  })
   },
   ['admin-analytics'],
   { revalidate: 600, tags: ['admin-analytics'] }

@@ -96,7 +96,7 @@ export async function GET() {
       stats: { totalTopics, masteredTopics, masteryRate, quizzesAttempted, quizPassRate, recentAvg },
       trend,
     }
-      },
+  },
       [`act-score-predictor-${userId}`],
       { revalidate: 300 }
     )

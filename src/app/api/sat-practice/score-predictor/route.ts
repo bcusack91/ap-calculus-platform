@@ -165,7 +165,7 @@ export async function GET() {
       50 * (1 + (zScore >= 0 ? 1 : -1) * Math.sqrt(1 - Math.exp(-2 * zScore * zScore / Math.PI))),
     )
 
-    return NextResponse.json({
+    return ({
       prediction: {
         rwScore: predictedRW,
         mathScore: predictedMath,
@@ -196,8 +196,8 @@ export async function GET() {
           quizCount: mathQuizzes.length,
         },
       },
-    }
-      },
+    })
+  },
       [`sat-score-predictor-${userId}`],
       { revalidate: 300 }
     )

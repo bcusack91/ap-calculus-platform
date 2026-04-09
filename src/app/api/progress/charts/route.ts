@@ -118,7 +118,7 @@ export async function GET() {
       avgMastery: data.total > 0 ? Math.round((data.avgMastery / data.total) * 100) : 0,
     })).sort((a, b) => b.total - a.total)
 
-    return NextResponse.json({
+    return ({
       masteryTimeline,
       studyTimeline,
       heatmap,
@@ -132,8 +132,8 @@ export async function GET() {
         totalReviews: flashcardProgress.length,
         totalTimeMinutes: topicProgress.reduce((s, p) => s + p.timeSpent, 0),
       },
-    }
-      },
+    })
+  },
       [`progress-charts-${userId}`],
       { revalidate: 120 }
     )

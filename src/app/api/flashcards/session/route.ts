@@ -27,26 +27,25 @@ export async function GET(req: NextRequest) {
       prisma.flashcard.findMany({
         where: {
           ...topicFilter,
-          flashcardProgress: {
+          progress: {
             some: { userId, nextReview: { lte: now } },
           },
         },
         include: {
           topic: { select: { slug: true, title: true } },
-          flashcardProgress: {
+          progress: {
             where: { userId },
             select: { flashcardId: true, nextReview: true, repetitions: true, easeFactor: true, interval: true },
             take: 1,
           },
         },
         take: limit,
-        orderBy: { flashcardProgress: { _count: 'asc' } },
       }),
       // Cards with no progress record for this user (never seen)
       prisma.flashcard.findMany({
         where: {
           ...topicFilter,
-          flashcardProgress: {
+          progress: {
             none: { userId },
           },
         },
@@ -60,8 +59,8 @@ export async function GET(req: NextRequest) {
     // Build progress map from due cards' included progress
     const progressMap = new Map(
       dueCards
-        .filter((fc) => fc.flashcardProgress[0])
-        .map((fc) => [fc.flashcardProgress[0].flashcardId, fc.flashcardProgress[0]])
+        .filter((fc) => fc.progress[0])
+        .map((fc) => [fc.progress[0].flashcardId, fc.progress[0]])
     )
 
     const sessionCards = [...dueCards, ...newCards].slice(0, limit)
