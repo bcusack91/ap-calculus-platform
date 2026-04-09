@@ -2,6 +2,14 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { checkAndAwardAchievements } from '@/lib/achievements'
+import { unstable_cache } from 'next/cache'
+
+// Achievement definitions rarely change — cache for 1 hour
+const getCachedAchievements = unstable_cache(
+  () => prisma.achievement.findMany({ orderBy: { category: 'asc' } }),
+  ['all-achievements'],
+  { revalidate: 3600 }
+)
 
 export async function GET() {
   try {
@@ -11,7 +19,7 @@ export async function GET() {
     }
 
     const [allAchievements, userAchievements] = await Promise.all([
-      prisma.achievement.findMany({ orderBy: { category: 'asc' } }),
+      getCachedAchievements(),
       prisma.userAchievement.findMany({
         where: { userId: session.user.id },
         select: { achievementId: true, unlockedAt: true },

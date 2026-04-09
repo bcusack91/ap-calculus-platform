@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { unstable_cache } from 'next/cache'
 
 /**
  * GET /api/progress/charts — Returns chart data for student progress visualization
@@ -14,7 +15,9 @@ export async function GET() {
     }
     const userId = session.user.id
 
-    const [topicProgress, flashcardProgress, streakData, recentActivity] = await Promise.all([
+    const getChartsData = unstable_cache(
+      async () => {
+        const [topicProgress, flashcardProgress, streakData, recentActivity] = await Promise.all([
       prisma.topicProgress.findMany({
         where: { userId },
         select: {
@@ -129,7 +132,13 @@ export async function GET() {
         totalReviews: flashcardProgress.length,
         totalTimeMinutes: topicProgress.reduce((s, p) => s + p.timeSpent, 0),
       },
-    })
+    }
+      },
+      [`progress-charts-${userId}`],
+      { revalidate: 120 }
+    )
+
+    return NextResponse.json(await getChartsData())
   } catch (error) {
     console.error('[GET /api/progress/charts]', error)
     return NextResponse.json({ error: 'Failed to load progress charts' }, { status: 500 })

@@ -23,13 +23,12 @@ async function ensureEventsTable() {
       "topicSlug" TEXT,
       "metadata" JSONB,
       "createdAt" TIMESTAMPTZ NOT NULL DEFAULT NOW()
-    );
-
-    CREATE INDEX IF NOT EXISTS "AnalyticsEvent_createdAt_idx" ON "AnalyticsEvent" ("createdAt");
-    CREATE INDEX IF NOT EXISTS "AnalyticsEvent_eventName_idx" ON "AnalyticsEvent" ("eventName");
-    CREATE INDEX IF NOT EXISTS "AnalyticsEvent_pageTemplate_idx" ON "AnalyticsEvent" ("pageTemplate");
-    CREATE INDEX IF NOT EXISTS "AnalyticsEvent_ctaType_idx" ON "AnalyticsEvent" ("ctaType");
+    )
   `)
+  await prisma.$executeRawUnsafe(`CREATE INDEX IF NOT EXISTS "AnalyticsEvent_createdAt_idx" ON "AnalyticsEvent" ("createdAt")`)
+  await prisma.$executeRawUnsafe(`CREATE INDEX IF NOT EXISTS "AnalyticsEvent_eventName_idx" ON "AnalyticsEvent" ("eventName")`)
+  await prisma.$executeRawUnsafe(`CREATE INDEX IF NOT EXISTS "AnalyticsEvent_pageTemplate_idx" ON "AnalyticsEvent" ("pageTemplate")`)
+  await prisma.$executeRawUnsafe(`CREATE INDEX IF NOT EXISTS "AnalyticsEvent_ctaType_idx" ON "AnalyticsEvent" ("ctaType")`)
   tableReady = true
 }
 

@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { requireAdmin } from '@/lib/auth-guard'
 import { notifyCriticalFunnelAlerts } from '@/lib/admin-alert-notifications'
+import { unstable_cache } from 'next/cache'
 
 type FunnelAlert = {
   key: string
@@ -30,21 +31,12 @@ export async function GET() {
   const authResult = await requireAdmin()
   if ('error' in authResult) return authResult.error
 
-  await prisma.$executeRawUnsafe(`
-    CREATE TABLE IF NOT EXISTS "AnalyticsEvent" (
-      "id" BIGSERIAL PRIMARY KEY,
-      "eventName" TEXT NOT NULL,
-      "pageTemplate" TEXT,
-      "ctaType" TEXT,
-      "location" TEXT,
-      "destination" TEXT,
-      "courseSlug" TEXT,
-      "topicSlug" TEXT,
-      "metadata" JSONB,
-      "createdAt" TIMESTAMPTZ NOT NULL DEFAULT NOW()
-    );
-  `)
+  const data = await getCachedAnalytics()
+  return NextResponse.json(data)
+}
 
+const getCachedAnalytics = unstable_cache(
+  async () => {
   const now = new Date()
   const today = new Date(now)
   today.setHours(0, 0, 0, 0)
@@ -416,5 +408,8 @@ export async function GET() {
       notificationSummary,
     },
     mcatDiagnostics,
-  })
-}
+  }
+  },
+  ['admin-analytics'],
+  { revalidate: 600, tags: ['admin-analytics'] }
+)

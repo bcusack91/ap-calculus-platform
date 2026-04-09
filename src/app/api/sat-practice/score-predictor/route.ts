@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { unstable_cache } from 'next/cache'
 
 /**
  * Score Predictor API
@@ -17,6 +18,8 @@ export async function GET() {
 
     const userId = session.user.id
 
+    const getData = unstable_cache(
+      async () => {
     // Fetch all relevant data in parallel
     const [exitQuizAttempts, diagnosticTests, practiceTests, topicProgress] =
       await Promise.all([
@@ -193,7 +196,13 @@ export async function GET() {
           quizCount: mathQuizzes.length,
         },
       },
-    })
+    }
+      },
+      [`sat-score-predictor-${userId}`],
+      { revalidate: 300 }
+    )
+
+    return NextResponse.json(await getData())
   } catch (error) {
     console.error('Score predictor error:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })

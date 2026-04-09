@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { mapToACTScore } from '@/lib/score-predictor-utils'
+import { unstable_cache } from 'next/cache'
 
 export async function GET() {
   try {
@@ -10,6 +11,8 @@ export async function GET() {
 
     const userId = session.user.id
 
+    const getData = unstable_cache(
+      async () => {
     const [exitQuizAttempts, topicProgress, diagnosticTests] = await Promise.all([
       prisma.exitQuizAttempt.findMany({
         where: { userId },
@@ -88,11 +91,17 @@ export async function GET() {
     const confidence: 'high' | 'medium' | 'low' =
       quizzesAttempted >= 10 ? 'high' : quizzesAttempted >= 3 ? 'medium' : 'low'
 
-    return NextResponse.json({
+    return {
       prediction: { primaryScore: composite, maxScore: 36, confidence, sections },
       stats: { totalTopics, masteredTopics, masteryRate, quizzesAttempted, quizPassRate, recentAvg },
       trend,
-    })
+    }
+      },
+      [`act-score-predictor-${userId}`],
+      { revalidate: 300 }
+    )
+
+    return NextResponse.json(await getData())
   } catch (error) {
     console.error('ACT score predictor error:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })

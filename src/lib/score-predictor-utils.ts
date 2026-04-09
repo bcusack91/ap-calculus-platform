@@ -4,6 +4,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
+import { unstable_cache } from 'next/cache'
 
 interface BasicStats {
   totalTopics: number
@@ -31,28 +32,37 @@ export async function gatherSubjectData(
   courseSlugPattern: string,
   diagnosticCategory?: string,
 ) {
-  const [exitQuizAttempts, topicProgress, courseTopics, diagnosticTests] = await Promise.all([
-    prisma.exitQuizAttempt.findMany({
-      where: { userId },
-      orderBy: { completedAt: 'asc' },
-      select: { topicSlug: true, score: true, totalQuestions: true, passed: true, completedAt: true },
-    }),
-    prisma.topicProgress.findMany({
-      where: { userId, topic: { category: { course: { slug: courseSlugPattern } } } },
-      select: { status: true },
-    }),
-    prisma.topic.findMany({
-      where: { category: { course: { slug: courseSlugPattern } } },
-      select: { slug: true },
-    }),
-    diagnosticCategory
-      ? prisma.diagnosticTest.findMany({
-          where: { userId, category: { startsWith: diagnosticCategory } },
-          orderBy: { createdAt: 'asc' },
-          select: { results: true, createdAt: true },
-        })
-      : Promise.resolve([]),
-  ])
+  const fetchData = unstable_cache(
+    async () => {
+      const [exitQuizAttempts, topicProgress, courseTopics, diagnosticTests] = await Promise.all([
+        prisma.exitQuizAttempt.findMany({
+          where: { userId },
+          orderBy: { completedAt: 'asc' },
+          select: { topicSlug: true, score: true, totalQuestions: true, passed: true, completedAt: true },
+        }),
+        prisma.topicProgress.findMany({
+          where: { userId, topic: { category: { course: { slug: courseSlugPattern } } } },
+          select: { status: true },
+        }),
+        prisma.topic.findMany({
+          where: { category: { course: { slug: courseSlugPattern } } },
+          select: { slug: true },
+        }),
+        diagnosticCategory
+          ? prisma.diagnosticTest.findMany({
+              where: { userId, category: { startsWith: diagnosticCategory } },
+              orderBy: { createdAt: 'asc' },
+              select: { results: true, createdAt: true },
+            })
+          : Promise.resolve([]),
+      ])
+      return { exitQuizAttempts, topicProgress, courseTopics, diagnosticTests }
+    },
+    [`score-predictor-${userId}-${courseSlugPattern}`],
+    { revalidate: 300 }
+  )
+
+  const { exitQuizAttempts, topicProgress, courseTopics, diagnosticTests } = await fetchData()
 
   // Filter exit quizzes by either prefix match or explicit topic slugs in this course.
   const courseTopicSlugs = new Set(courseTopics.map(t => t.slug))

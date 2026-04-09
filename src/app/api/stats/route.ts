@@ -1,6 +1,39 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { cached } from '@/lib/redis'
+import { unstable_cache } from 'next/cache'
+
+// Server-side cache fallback when Redis is unavailable
+const getCachedStats = unstable_cache(
+  async () => {
+    const [
+      totalUsers,
+      totalTopicProgress,
+      totalFlashcardReviews,
+      totalMatches,
+      totalCourses,
+      totalTopics,
+    ] = await Promise.all([
+      prisma.user.count(),
+      prisma.topicProgress.count(),
+      prisma.flashcardProgress.count(),
+      prisma.competitiveMatch.count(),
+      prisma.course.count(),
+      prisma.topic.count(),
+    ])
+
+    return {
+      students: totalUsers,
+      lessonsStudied: totalTopicProgress,
+      flashcardsReviewed: totalFlashcardReviews,
+      matchesPlayed: totalMatches,
+      courses: totalCourses,
+      topics: totalTopics,
+    }
+  },
+  ['stats-global'],
+  { revalidate: 300 }
+)
 
 /**
  * GET /api/stats — Public endpoint for site-wide statistics
@@ -8,32 +41,7 @@ import { cached } from '@/lib/redis'
  */
 export async function GET() {
   try {
-    const stats = await cached('stats:global', 300, async () => {
-      const [
-        totalUsers,
-        totalTopicProgress,
-        totalFlashcardReviews,
-        totalMatches,
-        totalCourses,
-        totalTopics,
-      ] = await Promise.all([
-        prisma.user.count(),
-        prisma.topicProgress.count(),
-        prisma.flashcardProgress.count(),
-        prisma.competitiveMatch.count(),
-        prisma.course.count(),
-        prisma.topic.count(),
-      ])
-
-      return {
-        students: totalUsers,
-        lessonsStudied: totalTopicProgress,
-        flashcardsReviewed: totalFlashcardReviews,
-        matchesPlayed: totalMatches,
-        courses: totalCourses,
-        topics: totalTopics,
-      }
-    })
+    const stats = await cached('stats:global', 300, getCachedStats)
 
     return NextResponse.json(stats, {
       headers: {

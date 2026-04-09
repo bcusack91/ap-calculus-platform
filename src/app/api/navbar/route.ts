@@ -30,11 +30,18 @@ export async function GET() {
 
     let avatarData = null
     if (session?.user?.id) {
-      const user = await prisma.user.findUnique({
-        where: { id: session.user.id },
-        select: { avatarData: true },
-      })
-      avatarData = user?.avatarData ?? null
+      const getCachedAvatar = unstable_cache(
+        async (userId: string) => {
+          const user = await prisma.user.findUnique({
+            where: { id: userId },
+            select: { avatarData: true },
+          })
+          return user?.avatarData ?? null
+        },
+        [`navbar-avatar-${session.user.id}`],
+        { revalidate: 300 }
+      )
+      avatarData = await getCachedAvatar(session.user.id)
     }
 
     const res = NextResponse.json({ courses, avatarData })

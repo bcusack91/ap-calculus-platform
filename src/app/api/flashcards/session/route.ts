@@ -16,47 +16,53 @@ export async function GET(req: NextRequest) {
     const topicSlug = req.nextUrl.searchParams.get('topicSlug')
     const limit = Math.min(Number(req.nextUrl.searchParams.get('limit')) || 20, 50)
 
-    // Find flashcards that are due or have never been reviewed
     const now = new Date()
+    const userId = session.user.id
 
-    // Get user's existing progress
-    const existingProgress = await prisma.flashcardProgress.findMany({
-      where: { userId: session.user.id },
-      select: { flashcardId: true, nextReview: true, repetitions: true, easeFactor: true, interval: true },
-    })
+    const topicFilter = topicSlug ? { topic: { slug: topicSlug } } : {}
 
-    const progressMap = new Map(existingProgress.map((p) => [p.flashcardId, p]))
+    // Query due cards and new cards directly from DB instead of fetching all and filtering in JS
+    const [dueCards, newCards] = await Promise.all([
+      // Cards with existing progress that are due for review
+      prisma.flashcard.findMany({
+        where: {
+          ...topicFilter,
+          flashcardProgress: {
+            some: { userId, nextReview: { lte: now } },
+          },
+        },
+        include: {
+          topic: { select: { slug: true, title: true } },
+          flashcardProgress: {
+            where: { userId },
+            select: { flashcardId: true, nextReview: true, repetitions: true, easeFactor: true, interval: true },
+            take: 1,
+          },
+        },
+        take: limit,
+        orderBy: { flashcardProgress: { _count: 'asc' } },
+      }),
+      // Cards with no progress record for this user (never seen)
+      prisma.flashcard.findMany({
+        where: {
+          ...topicFilter,
+          flashcardProgress: {
+            none: { userId },
+          },
+        },
+        include: {
+          topic: { select: { slug: true, title: true } },
+        },
+        take: limit,
+      }),
+    ])
 
-    // Get flashcards (optionally filtered by topic)
-    const flashcards = await prisma.flashcard.findMany({
-      where: topicSlug
-        ? { topic: { slug: topicSlug } }
-        : undefined,
-      include: {
-        topic: { select: { slug: true, title: true } },
-      },
-      take: 200, // Fetch pool
-    })
-
-    // Separate into due cards and new cards
-    const dueCards: typeof flashcards = []
-    const newCards: typeof flashcards = []
-
-    for (const fc of flashcards) {
-      const progress = progressMap.get(fc.id)
-      if (!progress) {
-        newCards.push(fc)
-      } else if (progress.nextReview <= now) {
-        dueCards.push(fc)
-      }
-    }
-
-    // Prioritize: due cards first (sorted by overdue-ness), then new cards
-    dueCards.sort((a, b) => {
-      const pa = progressMap.get(a.id)!
-      const pb = progressMap.get(b.id)!
-      return pa.nextReview.getTime() - pb.nextReview.getTime()
-    })
+    // Build progress map from due cards' included progress
+    const progressMap = new Map(
+      dueCards
+        .filter((fc) => fc.flashcardProgress[0])
+        .map((fc) => [fc.flashcardProgress[0].flashcardId, fc.flashcardProgress[0]])
+    )
 
     const sessionCards = [...dueCards, ...newCards].slice(0, limit)
 
@@ -72,7 +78,7 @@ export async function GET(req: NextRequest) {
       stats: {
         dueCount: dueCards.length,
         newCount: newCards.length,
-        totalInDeck: flashcards.length,
+        totalInDeck: dueCards.length + newCards.length,
         sessionSize: sessionCards.length,
       },
     })
