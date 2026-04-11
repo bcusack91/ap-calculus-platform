@@ -3,7 +3,8 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 async function main() {
-  const __seedCourse = await (prisma as any).course.findFirst({ where: { slug: 'ap-calculus-ab' } })
+  const __seedCourse = await // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (prisma as any).course.findFirst({ where: { slug: 'ap-calculus-ab' } })
   const __courseId = __seedCourse?.id
 
   console.log('🔄 Creating highly granular Limits and Continuity lessons...')

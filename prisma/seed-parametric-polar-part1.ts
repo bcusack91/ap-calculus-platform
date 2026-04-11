@@ -10,7 +10,8 @@ enum Difficulty {
 }
 
 async function main() {
-  const __seedCourse = await (prisma as any).course.findFirst({ where: { slug: 'ap-calculus-bc' } })
+  const __seedCourse = await // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (prisma as any).course.findFirst({ where: { slug: 'ap-calculus-bc' } })
   const __courseId = __seedCourse?.id
 
   console.log('🔄 Creating Parametric & Polar (BC) micro-lessons - Part 1...')

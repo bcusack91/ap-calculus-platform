@@ -190,7 +190,6 @@ function wrapKeyEquationsInBlockquotes(content) {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     const trimmed = line.trim();
-    const _nextLine = i + 1 < lines.length ? lines[i + 1]?.trim() : '';
     const prevLine = i > 0 ? lines[i - 1]?.trim() : '';
     
     // Don't wrap if already in a blockquote

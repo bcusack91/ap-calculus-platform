@@ -198,6 +198,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     update();
     const interval = setInterval(update, 1000);
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [matchState?.startedAt, matchState?.gameMode, matchState?.status, matchId, fetchMatchState]);
 
   // Render math in prompt (for both unit circle and multiple-choice)
@@ -381,7 +382,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     setIsSubmitting(true);
 
     try {
-      const startTime = Date.now();
+      const _startTime = Date.now();
       
       const response = await fetch(`/api/competitive/match/${matchId}/answer`, {
         method: 'POST',
@@ -392,7 +393,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         }),
       });
 
-      const endTime = Date.now();
+      const _endTime = Date.now();
 
       const data = await response.json();
       

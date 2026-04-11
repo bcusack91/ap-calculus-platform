@@ -58,7 +58,8 @@ for (const [file, courseSlug] of Object.entries(FILE_COURSE_MAP)) {
     continue
   }
   const insertPos = mainMatch.index + mainMatch[0].length
-  const courseLookup = `\n  const __seedCourse = await (prisma as any).course.findFirst({ where: { slug: '${courseSlug}' } })\n  const __courseId = __seedCourse?.id\n`
+  const courseLookup = `\n  const __seedCourse = await // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (prisma as any).course.findFirst({ where: { slug: '${courseSlug}' } })\n  const __courseId = __seedCourse?.id\n`
   content = content.slice(0, insertPos) + courseLookup + content.slice(insertPos)
 
   // 2) Find all category.upsert create blocks and add courseId

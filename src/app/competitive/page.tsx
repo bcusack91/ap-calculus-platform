@@ -1226,7 +1226,7 @@ export default function CompetitivePage() {
         {/* Power-Up Shop */}
         {profile && (
           <div className="mt-8">
-            <PowerUpShop currentXP={0} onPurchase={(id, cost) => { /* TODO: deduct XP via API */ }} />
+            <PowerUpShop currentXP={0} onPurchase={(_id, _cost) => { /* TODO: deduct XP via API */ }} />
           </div>
         )}
       </div>

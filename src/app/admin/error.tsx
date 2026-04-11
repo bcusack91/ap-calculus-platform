@@ -2,9 +2,8 @@
 
 import Link from 'next/link'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function Error({
-  error,
+  error: _error,
   reset,
 }: {
   error: Error & { digest?: string }
