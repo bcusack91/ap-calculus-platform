@@ -544,7 +544,7 @@ export default function AdminPanel() {
                               ))}
                             </div>
                             <div className="space-y-2">
-                              {weeks.map((week, idx) => {
+                              {weeks.map((week) => {
                                 const rows = analytics.funnel.ctaTypeTrend.filter((r) => r.weekStart === week)
                                 const total = rows.reduce((sum, r) => sum + r.clicks, 0)
                                 return (

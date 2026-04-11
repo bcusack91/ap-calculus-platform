@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function Error({
   error,
   reset,

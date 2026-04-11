@@ -44,7 +44,7 @@ async function runPagespeed(url: string): Promise<BaselineResult> {
 async function runFetchFallback(url: string): Promise<BaselineResult> {
   const start = Date.now()
   const response = await fetch(url)
-  const html = await response.text()
+  await response.text()
   const ttfbMs = Date.now() - start
 
   return {

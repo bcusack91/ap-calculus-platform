@@ -638,9 +638,9 @@ function buildGenericMathContent(title: string, partNum: number, topicSlug: stri
 
 // ------- FILE GENERATION -------
 
-function toCamelCase(str: string): string {
-  return str.replace(/[-_]([a-z0-9])/g, (_, c) => c.toUpperCase());
-}
+// function toCamelCase(str: string): string {
+//   return str.replace(/[-_]([a-z0-9])/g, (_, c) => c.toUpperCase());
+// }
 
 function generateFileContent(topicDef: TopicDef, partIndex: number): string {
   const part = topicDef.parts[partIndex];

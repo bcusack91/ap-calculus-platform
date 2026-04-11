@@ -105,6 +105,7 @@ const cachedSearch = unstable_cache(
       })),
     ]
       .sort((a, b) => b._score - a._score)
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       .map(({ _score, ...rest }) => rest)
 
     return { results, query: q, total: results.length }

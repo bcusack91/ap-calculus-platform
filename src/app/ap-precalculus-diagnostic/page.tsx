@@ -11,7 +11,6 @@ import {
   TOTAL_FORMS,
   type APPrecalculusTestData,
   type APPrecalculusResults,
-  type DiagnosticFormNumber,
 } from '@/data/ap-precalculus-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
 

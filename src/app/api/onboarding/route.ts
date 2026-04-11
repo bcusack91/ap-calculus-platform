@@ -10,7 +10,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const { courseSlug, goalType } = await req.json()
+    const { courseSlug } = await req.json()
     // goalType: 'just-browsing', 'catch-up', 'get-ahead', 'exam-prep'
 
     if (!courseSlug) {

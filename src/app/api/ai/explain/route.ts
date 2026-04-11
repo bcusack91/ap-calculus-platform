@@ -8,7 +8,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const { concept, style, topicSlug } = await request.json()
+    const { concept, style } = await request.json()
 
     if (!concept || typeof concept !== 'string') {
       return NextResponse.json({ error: 'Concept is required' }, { status: 400 })
