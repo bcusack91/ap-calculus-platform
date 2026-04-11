@@ -3516,6 +3516,102 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Review & Applications', loader: () => import('./apstats-hypothesis-testing-part7').then(m => m.apStatsHypothesisPart7Data) },
     ]
   },
+  'collecting-data-apstats': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Types of Studies', loader: () => import('./apstats-collecting-data-part1').then(m => m.apStatsCollectingDataPart1Data) },
+      { title: 'Sampling Methods', loader: () => import('./apstats-collecting-data-part2').then(m => m.apStatsCollectingDataPart2Data) },
+      { title: 'Bias in Sampling', loader: () => import('./apstats-collecting-data-part3').then(m => m.apStatsCollectingDataPart3Data) },
+      { title: 'Experimental Design', loader: () => import('./apstats-collecting-data-part4').then(m => m.apStatsCollectingDataPart4Data) },
+      { title: 'Random Variables', loader: () => import('./apstats-collecting-data-part5').then(m => m.apStatsCollectingDataPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./apstats-collecting-data-part6').then(m => m.apStatsCollectingDataPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./apstats-collecting-data-part7').then(m => m.apStatsCollectingDataPart7Data) },
+    ]
+  },
+  'normal-distribution-apstats': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Normal Curve', loader: () => import('./apstats-normal-distribution-part1').then(m => m.apStatsNormalDistPart1Data) },
+      { title: 'Z-Scores', loader: () => import('./apstats-normal-distribution-part2').then(m => m.apStatsNormalDistPart2Data) },
+      { title: 'Normal Calculations', loader: () => import('./apstats-normal-distribution-part3').then(m => m.apStatsNormalDistPart3Data) },
+      { title: 'Assessing Normality', loader: () => import('./apstats-normal-distribution-part4').then(m => m.apStatsNormalDistPart4Data) },
+      { title: 'Combining Normal RVs', loader: () => import('./apstats-normal-distribution-part5').then(m => m.apStatsNormalDistPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./apstats-normal-distribution-part6').then(m => m.apStatsNormalDistPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./apstats-normal-distribution-part7').then(m => m.apStatsNormalDistPart7Data) },
+    ]
+  },
+  'sampling-distributions-apstats': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Central Limit Theorem', loader: () => import('./apstats-sampling-distributions-part1').then(m => m.apStatsSamplingDistPart1Data) },
+      { title: 'Distribution of Sample Means', loader: () => import('./apstats-sampling-distributions-part2').then(m => m.apStatsSamplingDistPart2Data) },
+      { title: 'Distribution of Sample Proportions', loader: () => import('./apstats-sampling-distributions-part3').then(m => m.apStatsSamplingDistPart3Data) },
+      { title: 'Standard Error', loader: () => import('./apstats-sampling-distributions-part4').then(m => m.apStatsSamplingDistPart4Data) },
+      { title: 'Conditions for Inference', loader: () => import('./apstats-sampling-distributions-part5').then(m => m.apStatsSamplingDistPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./apstats-sampling-distributions-part6').then(m => m.apStatsSamplingDistPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./apstats-sampling-distributions-part7').then(m => m.apStatsSamplingDistPart7Data) },
+    ]
+  },
+  'confidence-intervals-apstats': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Introduction to Confidence Intervals', loader: () => import('./apstats-confidence-intervals-part1').then(m => m.apStatsConfIntPart1Data) },
+      { title: 'One-Sample Z-Interval for Proportions', loader: () => import('./apstats-confidence-intervals-part2').then(m => m.apStatsConfIntPart2Data) },
+      { title: 'One-Sample T-Interval for Means', loader: () => import('./apstats-confidence-intervals-part3').then(m => m.apStatsConfIntPart3Data) },
+      { title: 'Choosing Sample Size', loader: () => import('./apstats-confidence-intervals-part4').then(m => m.apStatsConfIntPart4Data) },
+      { title: 'Interpreting Confidence Intervals', loader: () => import('./apstats-confidence-intervals-part5').then(m => m.apStatsConfIntPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./apstats-confidence-intervals-part6').then(m => m.apStatsConfIntPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./apstats-confidence-intervals-part7').then(m => m.apStatsConfIntPart7Data) },
+    ]
+  },
+  'chi-square-tests-apstats': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Chi-Square Goodness-of-Fit', loader: () => import('./apstats-chi-square-tests-part1').then(m => m.apStatsChiSquarePart1Data) },
+      { title: 'Chi-Square Test for Independence', loader: () => import('./apstats-chi-square-tests-part2').then(m => m.apStatsChiSquarePart2Data) },
+      { title: 'Chi-Square Test for Homogeneity', loader: () => import('./apstats-chi-square-tests-part3').then(m => m.apStatsChiSquarePart3Data) },
+      { title: 'Conditions and Degrees of Freedom', loader: () => import('./apstats-chi-square-tests-part4').then(m => m.apStatsChiSquarePart4Data) },
+      { title: 'Interpreting Results', loader: () => import('./apstats-chi-square-tests-part5').then(m => m.apStatsChiSquarePart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./apstats-chi-square-tests-part6').then(m => m.apStatsChiSquarePart6Data) },
+      { title: 'Review & Applications', loader: () => import('./apstats-chi-square-tests-part7').then(m => m.apStatsChiSquarePart7Data) },
+    ]
+  },
+  'linear-regression-apstats': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Scatterplots and Correlation', loader: () => import('./apstats-linear-regression-part1').then(m => m.apStatsLinRegPart1Data) },
+      { title: 'Least-Squares Regression Line', loader: () => import('./apstats-linear-regression-part2').then(m => m.apStatsLinRegPart2Data) },
+      { title: 'Residuals and Residual Plots', loader: () => import('./apstats-linear-regression-part3').then(m => m.apStatsLinRegPart3Data) },
+      { title: 'Coefficient of Determination', loader: () => import('./apstats-linear-regression-part4').then(m => m.apStatsLinRegPart4Data) },
+      { title: 'Influential Points and Outliers', loader: () => import('./apstats-linear-regression-part5').then(m => m.apStatsLinRegPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./apstats-linear-regression-part6').then(m => m.apStatsLinRegPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./apstats-linear-regression-part7').then(m => m.apStatsLinRegPart7Data) },
+    ]
+  },
+  'inference-regression-apstats': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Regression Model Assumptions', loader: () => import('./apstats-inference-regression-part1').then(m => m.apStatsInfRegPart1Data) },
+      { title: 'T-Test for Slope', loader: () => import('./apstats-inference-regression-part2').then(m => m.apStatsInfRegPart2Data) },
+      { title: 'Confidence Interval for Slope', loader: () => import('./apstats-inference-regression-part3').then(m => m.apStatsInfRegPart3Data) },
+      { title: 'Computer Output Interpretation', loader: () => import('./apstats-inference-regression-part4').then(m => m.apStatsInfRegPart4Data) },
+      { title: 'Prediction Intervals', loader: () => import('./apstats-inference-regression-part5').then(m => m.apStatsInfRegPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./apstats-inference-regression-part6').then(m => m.apStatsInfRegPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./apstats-inference-regression-part7').then(m => m.apStatsInfRegPart7Data) },
+    ]
+  },
+  'comparing-populations-apstats': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Two-Sample Z-Test for Proportions', loader: () => import('./apstats-comparing-populations-part1').then(m => m.apStatsComparingPart1Data) },
+      { title: 'Two-Sample T-Test for Means', loader: () => import('./apstats-comparing-populations-part2').then(m => m.apStatsComparingPart2Data) },
+      { title: 'Paired T-Test', loader: () => import('./apstats-comparing-populations-part3').then(m => m.apStatsComparingPart3Data) },
+      { title: 'Confidence Intervals for Differences', loader: () => import('./apstats-comparing-populations-part4').then(m => m.apStatsComparingPart4Data) },
+      { title: 'Power and Sample Size', loader: () => import('./apstats-comparing-populations-part5').then(m => m.apStatsComparingPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./apstats-comparing-populations-part6').then(m => m.apStatsComparingPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./apstats-comparing-populations-part7').then(m => m.apStatsComparingPart7Data) },
+    ]
+  },
   'newtons-laws-physics-c': {
     completionDestination: 'competitive',
     parts: [
@@ -3586,6 +3682,102 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Dielectrics', loader: () => import('./physicsc-em-capacitors-part5').then(m => m.physCEMCapacitorsPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-em-capacitors-part6').then(m => m.physCEMCapacitorsPart6Data) },
       { title: 'Review & Applications', loader: () => import('./physicsc-em-capacitors-part7').then(m => m.physCEMCapacitorsPart7Data) },
+    ]
+  },
+  'momentum-impulse-physics-c': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Linear Momentum', loader: () => import('./physicsc-momentum-impulse-part1').then(m => m.physCMomentumPart1Data) },
+      { title: 'Impulse', loader: () => import('./physicsc-momentum-impulse-part2').then(m => m.physCMomentumPart2Data) },
+      { title: 'Collisions in 1D', loader: () => import('./physicsc-momentum-impulse-part3').then(m => m.physCMomentumPart3Data) },
+      { title: 'Collisions in 2D', loader: () => import('./physicsc-momentum-impulse-part4').then(m => m.physCMomentumPart4Data) },
+      { title: 'Center of Mass', loader: () => import('./physicsc-momentum-impulse-part5').then(m => m.physCMomentumPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-momentum-impulse-part6').then(m => m.physCMomentumPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./physicsc-momentum-impulse-part7').then(m => m.physCMomentumPart7Data) },
+    ]
+  },
+  'oscillations-physics-c': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Simple Harmonic Motion', loader: () => import('./physicsc-oscillations-part1').then(m => m.physCOscillationsPart1Data) },
+      { title: 'Kinematics of SHM', loader: () => import('./physicsc-oscillations-part2').then(m => m.physCOscillationsPart2Data) },
+      { title: 'Pendulums', loader: () => import('./physicsc-oscillations-part3').then(m => m.physCOscillationsPart3Data) },
+      { title: 'Damped Oscillations', loader: () => import('./physicsc-oscillations-part4').then(m => m.physCOscillationsPart4Data) },
+      { title: 'Driven Oscillations & Resonance', loader: () => import('./physicsc-oscillations-part5').then(m => m.physCOscillationsPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-oscillations-part6').then(m => m.physCOscillationsPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./physicsc-oscillations-part7').then(m => m.physCOscillationsPart7Data) },
+    ]
+  },
+  'gravitation-physics-c': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Universal Gravitation', loader: () => import('./physicsc-gravitation-part1').then(m => m.physCGravitationPart1Data) },
+      { title: 'Gravitational PE & Orbits', loader: () => import('./physicsc-gravitation-part2').then(m => m.physCGravitationPart2Data) },
+      { title: "Kepler's Laws", loader: () => import('./physicsc-gravitation-part3').then(m => m.physCGravitationPart3Data) },
+      { title: 'Gravitational Potential', loader: () => import('./physicsc-gravitation-part4').then(m => m.physCGravitationPart4Data) },
+      { title: 'Satellite Energy', loader: () => import('./physicsc-gravitation-part5').then(m => m.physCGravitationPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-gravitation-part6').then(m => m.physCGravitationPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./physicsc-gravitation-part7').then(m => m.physCGravitationPart7Data) },
+    ]
+  },
+  'electric-potential-physics-c-em': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Electric Potential Energy', loader: () => import('./physicsc-electric-potential-em-part1').then(m => m.physCEMPotentialPart1Data) },
+      { title: 'Electric Potential (Voltage)', loader: () => import('./physicsc-electric-potential-em-part2').then(m => m.physCEMPotentialPart2Data) },
+      { title: 'Potential and Field Relationship', loader: () => import('./physicsc-electric-potential-em-part3').then(m => m.physCEMPotentialPart3Data) },
+      { title: 'Potential of Charge Distributions', loader: () => import('./physicsc-electric-potential-em-part4').then(m => m.physCEMPotentialPart4Data) },
+      { title: 'Conductors and Potential', loader: () => import('./physicsc-electric-potential-em-part5').then(m => m.physCEMPotentialPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-electric-potential-em-part6').then(m => m.physCEMPotentialPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./physicsc-electric-potential-em-part7').then(m => m.physCEMPotentialPart7Data) },
+    ]
+  },
+  'dc-circuits-physics-c-em': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Current and Resistance', loader: () => import('./physicsc-dc-circuits-em-part1').then(m => m.physCEMCircuitsPart1Data) },
+      { title: 'Series and Parallel Circuits', loader: () => import('./physicsc-dc-circuits-em-part2').then(m => m.physCEMCircuitsPart2Data) },
+      { title: "Kirchhoff's Rules", loader: () => import('./physicsc-dc-circuits-em-part3').then(m => m.physCEMCircuitsPart3Data) },
+      { title: 'RC Circuits', loader: () => import('./physicsc-dc-circuits-em-part4').then(m => m.physCEMCircuitsPart4Data) },
+      { title: 'EMF and Internal Resistance', loader: () => import('./physicsc-dc-circuits-em-part5').then(m => m.physCEMCircuitsPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-dc-circuits-em-part6').then(m => m.physCEMCircuitsPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./physicsc-dc-circuits-em-part7').then(m => m.physCEMCircuitsPart7Data) },
+    ]
+  },
+  'magnetic-fields-physics-c-em': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Magnetic Force on Charges', loader: () => import('./physicsc-magnetic-fields-em-part1').then(m => m.physCEMMagFieldsPart1Data) },
+      { title: 'Force on Current-Carrying Wires', loader: () => import('./physicsc-magnetic-fields-em-part2').then(m => m.physCEMMagFieldsPart2Data) },
+      { title: 'Biot-Savart Law', loader: () => import('./physicsc-magnetic-fields-em-part3').then(m => m.physCEMMagFieldsPart3Data) },
+      { title: "Ampere's Law", loader: () => import('./physicsc-magnetic-fields-em-part4').then(m => m.physCEMMagFieldsPart4Data) },
+      { title: 'Magnetic Flux', loader: () => import('./physicsc-magnetic-fields-em-part5').then(m => m.physCEMMagFieldsPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-magnetic-fields-em-part6').then(m => m.physCEMMagFieldsPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./physicsc-magnetic-fields-em-part7').then(m => m.physCEMMagFieldsPart7Data) },
+    ]
+  },
+  'em-induction-physics-c-em': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: "Faraday's Law", loader: () => import('./physicsc-em-induction-em-part1').then(m => m.physCEMInductionPart1Data) },
+      { title: 'Motional EMF', loader: () => import('./physicsc-em-induction-em-part2').then(m => m.physCEMInductionPart2Data) },
+      { title: 'Inductance', loader: () => import('./physicsc-em-induction-em-part3').then(m => m.physCEMInductionPart3Data) },
+      { title: 'RL Circuits', loader: () => import('./physicsc-em-induction-em-part4').then(m => m.physCEMInductionPart4Data) },
+      { title: 'LC Circuits & EM Oscillations', loader: () => import('./physicsc-em-induction-em-part5').then(m => m.physCEMInductionPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-em-induction-em-part6').then(m => m.physCEMInductionPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./physicsc-em-induction-em-part7').then(m => m.physCEMInductionPart7Data) },
+    ]
+  },
+  'maxwell-equations-physics-c-em': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: "Maxwell's Equations Overview", loader: () => import('./physicsc-maxwell-equations-em-part1').then(m => m.physCEMMaxwellPart1Data) },
+      { title: 'Displacement Current', loader: () => import('./physicsc-maxwell-equations-em-part2').then(m => m.physCEMMaxwellPart2Data) },
+      { title: 'Electromagnetic Waves', loader: () => import('./physicsc-maxwell-equations-em-part3').then(m => m.physCEMMaxwellPart3Data) },
+      { title: 'EM Spectrum', loader: () => import('./physicsc-maxwell-equations-em-part4').then(m => m.physCEMMaxwellPart4Data) },
+      { title: 'Energy & Momentum of EM Waves', loader: () => import('./physicsc-maxwell-equations-em-part5').then(m => m.physCEMMaxwellPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-maxwell-equations-em-part6').then(m => m.physCEMMaxwellPart6Data) },
+      { title: 'Review & Applications', loader: () => import('./physicsc-maxwell-equations-em-part7').then(m => m.physCEMMaxwellPart7Data) },
     ]
   },
   'multi-digit-multiplication-grade4': {
