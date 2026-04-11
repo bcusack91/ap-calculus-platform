@@ -4,13 +4,30 @@ export const chemIntroEquilibriumPart4Data = {
     {
       id: 'ie4-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Manipulating Equilibrium Constants
+      content: `# ⚖️ Manipulating Equilibrium Constants
 
 **Part 4 of 7 — Reversing, Multiplying, and Adding Reactions**
 
-When you modify a chemical equation, the equilibrium constant changes in a predictable way. These rules are essential for combining known $K$ values to find unknown ones.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📏 Rule 1: Reversing a Reaction |
+| Example |
+| 📏 Rule 2: Multiplying a Reaction by a Factor |
+| Example |
+| 📏 Rule 3: Adding Reactions (Hess\'s Law for K) |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ie4-reverse',
@@ -22,7 +39,9 @@ If you reverse a reaction, the new $K$ is the **reciprocal** of the original:
 
 $$\\text{Forward: } A \\rightleftharpoons B \\quad K_{\\text{fwd}}$$
 
-$$\\text{Reverse: } B \\rightleftharpoons A \\quad K_{\\text{rev}} = \\frac{1}{K_{\\text{fwd}}}$$
+$$\\boxed{\\text{Reverse: } B \\rightleftharpoons A \\quad K_{\\text{rev}} = \\frac{1}{K_{\\text{fwd}}}}$$
+
+> 🔑 **Key Concept:** Reversing a reaction takes the **reciprocal** of $K$ — the equilibrium expression flips upside-down.
 
 
 ---
@@ -46,7 +65,7 @@ If you multiply all coefficients by a factor $n$, the new $K$ is raised to the $
 
 $$\\text{Original: } A \\rightleftharpoons B \\quad K$$
 
-$$\\text{Multiplied by } n: \\quad nA \\rightleftharpoons nB \\quad K' = K^n$$
+$$\\boxed{\\text{Multiplied by } n: \\quad nA \\rightleftharpoons nB \\quad K' = K^n}$$
 
 
 ---
@@ -74,7 +93,9 @@ If you add two reactions together, the overall $K$ is the **product** of the ind
 
 $$\\text{Reaction 1: } A \\rightleftharpoons B \\quad K_1$$
 $$\\text{Reaction 2: } B \\rightleftharpoons C \\quad K_2$$
-$$\\text{Overall: } A \\rightleftharpoons C \\quad K_{\\text{overall}} = K_1 \\times K_2$$
+$$\\boxed{\\text{Overall: } A \\rightleftharpoons C \\quad K_{\\text{overall}} = K_1 \\times K_2}$$
+
+> 💡 **Tip:** Remember: add reactions → **multiply** $K$ values. This is analogous to Hess's Law for enthalpy, but with multiplication instead of addition!
 
 
 ---

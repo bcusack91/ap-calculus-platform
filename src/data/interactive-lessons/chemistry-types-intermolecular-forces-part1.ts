@@ -5,7 +5,20 @@ export const chemTypesIntermolecularForcesPart1Data = {
       id: 'if-ldf-intro',
       type: 'text',
       title: 'London Dispersion Forces (LDF)',
-      content: `London Dispersion Forces are the **weakest** type of intermolecular force, but they are present in **ALL** molecules and atoms — polar and nonpolar alike.\n\nThey arise from **temporary (instantaneous) dipoles** caused by the random motion of electrons. At any given moment, electrons may be unevenly distributed around a nucleus, creating a brief dipole that can **induce** a dipole in a neighboring molecule.\n\nKey terminology:\n- **Instantaneous dipole**: A temporary, fleeting charge separation in any atom or molecule\n- **Induced dipole**: A dipole created in a neighboring particle by the electric field of the instantaneous dipole\n- LDF are also called **van der Waals forces** or **dispersion forces**`
+      content: `London Dispersion Forces are the **weakest** type of intermolecular force, but they are present in **ALL** molecules and atoms — polar and nonpolar alike.\n\nThey arise from **temporary (instantaneous) dipoles** caused by the random motion of electrons. At any given moment, electrons may be unevenly distributed around a nucleus, creating a brief dipole that can **induce** a dipole in a neighboring molecule.\n\nKey terminology:\n- **Instantaneous dipole**: A temporary, fleeting charge separation in any atom or molecule\n- **Induced dipole**: A dipole created in a neighboring particle by the electric field of the instantaneous dipole\n- LDF are also called **van der Waals forces** or **dispersion forces**\n\n---\n\n> 🔑 **Key Concept:** LDF are present in **ALL** molecules and atoms — polar and nonpolar alike. They are the only IMF in nonpolar substances.
+
+**Part 1 of 7 — London Dispersion Forces**
+
+---
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'if-ldf-universality',
@@ -62,7 +75,7 @@ export const chemTypesIntermolecularForcesPart1Data = {
       id: 'if-ldf-molar-mass',
       type: 'text',
       title: 'Factors That Affect LDF Strength',
-      content: `The strength of London Dispersion Forces depends on two main factors:\n\n**1. Molar Mass (Number of Electrons)**\nMore electrons $\\rightarrow$ larger electron cloud $\\rightarrow$ more easily polarized $\\rightarrow$ **stronger LDF**\n\nExample: $\\text{I}_2$ (molar mass 254 g/mol) has much stronger LDF than $\\text{F}_2$ (molar mass 38 g/mol). That\'s why $\\text{I}_2$ is a solid at room temperature while $\\text{F}_2$ is a gas.\n\n**2. Surface Area (Molecular Shape)**\nGreater surface area $\\rightarrow$ more points of contact between molecules $\\rightarrow$ **stronger LDF**\n\nExample: n-pentane (straight chain) has a higher boiling point than neopentane (spherical/compact) even though they have the same molecular formula $\\text{C}_5\\text{H}_{12}$. The elongated shape of n-pentane provides more surface area for LDF.`
+      content: `The strength of London Dispersion Forces depends on two main factors:\n\n**1. Molar Mass (Number of Electrons)**\nMore electrons $\\rightarrow$ larger electron cloud $\\rightarrow$ more easily polarized $\\rightarrow$ **stronger LDF**\n\nExample: $\\text{I}_2$ (molar mass 254 g/mol) has much stronger LDF than $\\text{F}_2$ (molar mass 38 g/mol). That\'s why $\\text{I}_2$ is a solid at room temperature while $\\text{F}_2$ is a gas.\n\n> 💡 **Tip:** Larger molar mass = more electrons = more polarizable = stronger LDF. This explains boiling point trends in nonpolar series like the noble gases and halogens.\n\n---\n\n**2. Surface Area (Molecular Shape)**\nGreater surface area $\\rightarrow$ more points of contact between molecules $\\rightarrow$ **stronger LDF**\n\nExample: n-pentane (straight chain) has a higher boiling point than neopentane (spherical/compact) even though they have the same molecular formula $\\text{C}_5\\text{H}_{12}$. The elongated shape of n-pentane provides more surface area for LDF.`
     },
     {
       id: 'if-ldf-molar-mass-q',

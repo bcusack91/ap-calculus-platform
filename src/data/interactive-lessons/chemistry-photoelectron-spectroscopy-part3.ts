@@ -6,18 +6,28 @@ export const chemPhotoelectronSpectroscopyPart3Data = {
       type: 'text' as const,
       content: `# Connecting PES to Electron Configuration
 
-One of the most powerful aspects of PES is that it provides **direct experimental evidence** for the electron configuration model. Each peak in a PES spectrum corresponds exactly to a subshell in the electron configuration.
+**Part 3 of 7 — Binding Energy & Subshells**
 
-## 🔗 The Connection
+---
 
-| Electron Configuration | PES Peaks (left to right) |
-|------------------------|--------------------------|
-| 1s² | One peak, height 2 |
-| 1s² 2s² | Two peaks, heights 2, 2 |
-| 1s² 2s² 2p⁴ | Three peaks, heights 2, 2, 4 |
-| 1s² 2s² 2p⁶ 3s¹ | Four peaks, heights 2, 2, 6, 1 |
+### Topics in This Part
 
-The peaks appear in order from **highest binding energy** (innermost subshell) to **lowest binding energy** (outermost subshell), matching the order of subshells from the nucleus outward.`
+| Section |
+|---------|
+| 🔗 The Connection |
+| Example: Four peaks with heights 2, 2, 6, 2 |
+| Within the Same Atom: |
+| Typical Binding Energy Ranges: |
+| Spacing Between Peaks |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ps3-mapping',
@@ -47,16 +57,18 @@ To identify an element from its PES spectrum:
 - Peak 4 (height 2) → 3s²
 
 Electron configuration: 1s² 2s² 2p⁶ 3s²
-Total electrons: 2 + 2 + 6 + 2 = 12 → **Magnesium (Mg)**`
+Total electrons: 2 + 2 + 6 + 2 = 12 → **Magnesium (Mg)**
+
+> 🔑 **Key Concept:** Each PES peak maps directly to one subshell in the electron configuration. Reading peaks left-to-right gives you the configuration from innermost to outermost subshell.`
     },
     {
       id: 'ps3-quiz1',
       type: 'multiple-choice' as const,
-      content: `### Identify the Element
+      content: `### ✏️ Identify the Element
 
-A PES spectrum shows five peaks with relative heights (from highest to lowest binding energy): 2, 2, 6, 2, 5.
-
-What element does this represent?`,
+> **Problem:** A PES spectrum shows five peaks with relative heights (from highest to lowest binding energy): 2, 2, 6, 2, 5.
+>
+> What element does this represent?`,
       exercise: {
         questions: [
           {
@@ -106,14 +118,16 @@ The binding energies of subshells follow predictable patterns:
 
 ### Spacing Between Peaks
 - There is typically a **large gap** between peaks from different principal energy levels (e.g., 1s vs 2s)
-- There is a **smaller gap** between subshells within the same principal level (e.g., 2s vs 2p)`
+- There is a **smaller gap** between subshells within the same principal level (e.g., 2s vs 2p)
+
+> 🔑 **Key Concept:** Within the same atom, binding energy follows the order: 1s > 2s > 2p > 3s > 3p > 4s > 3d. Large gaps between peaks indicate different principal energy levels.`
     },
     {
       id: 'ps3-quiz2',
       type: 'multiple-choice' as const,
-      content: `### Electron Configuration from PES
+      content: `### ✏️ Electron Configuration from PES
 
-A PES spectrum for a neutral atom shows peaks with heights 2, 2, 6, 2, 6, 2. What is the electron configuration?`,
+> **Problem:** A PES spectrum for a neutral atom shows peaks with heights 2, 2, 6, 2, 6, 2. What is the electron configuration?`,
       exercise: {
         questions: [
           {
@@ -133,14 +147,15 @@ A PES spectrum for a neutral atom shows peaks with heights 2, 2, 6, 2, 6, 2. Wha
     {
       id: 'ps3-input1',
       type: 'input-boxes' as const,
-      content: `### Practice: Element Identification
+      content: `### ✏️ Practice: Element Identification
 
-A PES spectrum shows the following peaks (from highest to lowest BE):
-- Peak 1: relative height 2
-- Peak 2: relative height 2
-- Peak 3: relative height 6
-- Peak 4: relative height 2
-- Peak 5: relative height 4`,
+> **Problem:** A PES spectrum shows the following peaks (from highest to lowest BE):
+>
+> - Peak 1: relative height 2
+> - Peak 2: relative height 2
+> - Peak 3: relative height 6
+> - Peak 4: relative height 2
+> - Peak 5: relative height 4`,
       exercise: {
         inputs: [
           {
@@ -159,7 +174,7 @@ A PES spectrum shows the following peaks (from highest to lowest BE):
     {
       id: 'ps3-dropdown1',
       type: 'dropdown-select' as const,
-      content: `### Subshell Assignment
+      content: `### ✏️ Subshell Assignment
 
 An atom has the PES peaks: 2, 2, 6, 2, 6, 2, 1 (from highest to lowest binding energy).`,
       exercise: {
@@ -182,18 +197,41 @@ An atom has the PES peaks: 2, 2, 6, 2, 6, 2, 1 (from highest to lowest binding e
     {
       id: 'ps3-summary',
       type: 'text' as const,
-      content: `## 📋 Part 3 Summary
+      content: `## 📋 Part 3 Summary: PES ↔ Electron Configuration
 
-Connecting PES to electron configuration:
+---
 
-1. **Each peak** in a PES spectrum corresponds to **one subshell** in the electron configuration
-2. **Peak height** = number of electrons in that subshell
-3. **Peaks are ordered** from highest BE (innermost subshell) to lowest BE (outermost subshell)
-4. **To identify an element**: assign subshells to peaks, sum electrons, find atomic number
-5. **Binding energy order** within an atom: 1s > 2s > 2p > 3s > 3p > 4s > 3d > ...
-6. For **transition metals**, the 3d peak may appear with higher BE than 4s on PES spectra
+### 🧪 How to Identify an Element from PES
 
-Next, we will explore the distinction between core and valence electrons in PES spectra.`
+| Step | Action | Example |
+|------|--------|---------|
+| 1 | Assign subshells to each peak (left → right) | 1s, 2s, 2p, 3s, 3p |
+| 2 | Read the peak height for each | 2, 2, 6, 2, 5 |
+| 3 | Sum all electrons | 2+2+6+2+5 = 17 |
+| 4 | Match to atomic number | Z = 17 → **Chlorine** |
+
+---
+
+### 📌 Binding Energy Order
+
+$$1s > 2s > 2p > 3s > 3p > 4s > 3d > 4p > \\dots$$
+
+> ⚠️ For transition metals, the 3d peak may appear with **higher BE** than 4s on PES spectra.
+
+---
+
+### ✅ Your Checklist Before Moving On
+
+- ☐ I can convert PES peaks into an electron configuration
+- ☐ I can identify elements from PES data by summing electrons
+- ☐ I know the binding energy order for subshells
+- ☐ I understand the 3d/4s ordering special case for transition metals
+
+---
+
+### 🔮 What's Next
+
+In **Part 4**, we will explore the distinction between **core and valence electrons** in PES spectra.`
     }
   ]
 }

@@ -4,13 +4,29 @@ export const chemReactionMechanismsPart4Data = {
     {
       id: 'rm4-intro',
       type: 'text' as const,
-      content: `
-# 🧮 Deriving Rate Laws from Mechanisms
+      content: `# 🧮 Deriving Rate Laws from Mechanisms
 
 **Part 4 of 7 — From Steps to Predictions**
 
-One of the most important skills on the AP Chemistry exam is deriving the predicted rate law from a proposed mechanism and comparing it with the experimentally observed rate law.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🎯 Strategy for Deriving Rate Laws |
+| Step-by-Step Method |
+| 🧪 Example 1: First Step Slow |
+| 🧪 Example 2: Second Step Slow (Pre-Equilibrium Required) |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rm4-method-summary',
@@ -18,23 +34,19 @@ One of the most important skills on the AP Chemistry exam is deriving the predic
       content: `
 ## 🎯 Strategy for Deriving Rate Laws
 
-### Step-by-Step Method
-
-1. **Identify the RDS** (slow step)
-2. **Write the rate law** for the RDS using its stoichiometry (it\'s an elementary step!)
-3. **Check for intermediates** in the rate law
-4. If intermediates present → **eliminate them**:
-   - Use pre-equilibrium from a prior fast reversible step
-   - Solve the equilibrium expression for [intermediate]
-   - Substitute back into the rate law
-5. **Simplify** — combine constants into $k_{\\text{obs}}$
-
-
 ---
 
-### Result
+### 📌 Step-by-Step Method
 
-The final rate law should contain only **reactants** (and possibly catalysts) — never intermediates.
+| Step | Action | Detail |
+|------|--------|--------|
+| 1 | **Identify the RDS** | Find the slow step |
+| 2 | **Write the rate law** for the RDS | It's an elementary step → exponents = coefficients |
+| 3 | **Check for intermediates** | Are any species in the rate law not in the overall equation? |
+| 4 | **Eliminate intermediates** | Use pre-equilibrium: solve $K_{eq}$ expression for [intermediate] |
+| 5 | **Substitute & simplify** | Replace [intermediate] and combine constants into $k_{\\text{obs}}$ |
+
+> 🔑 **Key Rule:** The final rate law must contain only **reactants** (and possibly catalysts) — never intermediates.
       `
     },
     {
@@ -43,13 +55,13 @@ The final rate law should contain only **reactants** (and possibly catalysts) �
       content: `
 ## 🧪 Example 1: First Step Slow
 
-**Overall:** $\\text{NO}_2 + \\text{CO} \\rightarrow \\text{NO} + \\text{CO}_2$
+> **Problem:** Derive the rate law for $\\text{NO}_2 + \\text{CO} \\rightarrow \\text{NO} + \\text{CO}_2$ given the mechanism below.
 
 **Mechanism:**
 - Step 1: $\\text{NO}_2 + \\text{NO}_2 \\rightarrow \\text{NO}_3 + \\text{NO}$ (slow)
 - Step 2: $\\text{NO}_3 + \\text{CO} \\rightarrow \\text{NO}_2 + \\text{CO}_2$ (fast)
 
-**Derivation:**
+> **Solution:**
 
 Step 1 is the RDS (slow, bimolecular):
 
@@ -59,7 +71,7 @@ No intermediates in this rate law → **done!**
 
 $$\\boxed{\\text{Rate} = k[\\text{NO}_2]^2}$$
 
-**Note:** CO doesn\'t appear in the rate law even though it\'s a reactant in the overall equation! It reacts only in the fast step (after the RDS).
+> 💡 **Tip:** CO doesn\'t appear in the rate law even though it\'s a reactant in the overall equation! It reacts only in the fast step (after the RDS).
       `
     },
     {
@@ -68,13 +80,13 @@ $$\\boxed{\\text{Rate} = k[\\text{NO}_2]^2}$$
       content: `
 ## 🧪 Example 2: Second Step Slow (Pre-Equilibrium Required)
 
-**Overall:** $2\\text{NO} + \\text{Br}_2 \\rightarrow 2\\text{NOBr}$
+> **Problem:** Derive the rate law for $2\\text{NO} + \\text{Br}_2 \\rightarrow 2\\text{NOBr}$ using pre-equilibrium.
 
 **Mechanism:**
 - Step 1: $\\text{NO} + \\text{Br}_2 \\rightleftharpoons \\text{NOBr}_2$ (fast, reversible)
 - Step 2: $\\text{NOBr}_2 + \\text{NO} \\rightarrow 2\\text{NOBr}$ (slow)
 
-**Derivation:**
+> **Solution:**
 
 Step 2 is the RDS:
 $$\\text{Rate} = k_2[\\text{NOBr}_2][\\text{NO}]$$

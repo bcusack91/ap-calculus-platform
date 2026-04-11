@@ -4,13 +4,29 @@ export const chemActivationEnergyArrheniusPart1Data = {
     {
       id: 'ae1-intro',
       type: 'text' as const,
-      content: `
-# 💥 Collision Theory
+      content: `# 💥 Collision Theory
 
 **Part 1 of 7 — Why Do Molecules Need to Collide?**
 
-For a chemical reaction to occur, reactant molecules must **collide**. But not just any collision will do — it must be an **effective collision**. Collision theory explains what makes a collision productive and connects molecular behavior to macroscopic reaction rates.
-      `
+---
+
+### Two Requirements for an Effective Collision
+
+| Requirement | What It Means | If Missing |
+|-------------|--------------|------------|
+| **Sufficient energy** | KE ≥ $E_a$ | Molecules bounce off — no reaction |
+| **Proper orientation** | Reactive sites align | Collision is wasted |
+
+Most collisions fail — only a tiny fraction have both enough energy AND the right orientation.
+
+> 🔑 **Why this matters:** Collision theory explains why reactions have activation energies and why temperature dramatically affects reaction rates.
+
+---
+
+### What You'll Master in Part 1
+- Explaining why molecules must collide with sufficient energy and proper orientation
+- Interpreting Maxwell-Boltzmann distribution curves
+- Predicting how temperature changes shift the fraction of effective collisions`
     },
     {
       id: 'ae1-collision-requirements',
@@ -27,7 +43,7 @@ For a collision to result in a reaction, two conditions must be met simultaneous
 
 The colliding molecules must have kinetic energy **at least equal** to the **activation energy** ($E_a$):
 
-$$KE_{\\text{collision}} \\geq E_a$$
+$$\\boxed{KE_{\\text{collision}} \\geq E_a}$$
 
 If the collision energy is below $E_a$, the molecules simply bounce off each other without reacting.
 
@@ -127,9 +143,9 @@ When temperature increases:
 
 The fraction of molecules with energy $\\geq E_a$ is approximately:
 
-$$f = e^{-E_a/(RT)}$$
+$$\\boxed{f = e^{-E_a/(RT)}}$$
 
-This exponential dependence explains why even small temperature changes can produce large rate changes.
+> 💡 This exponential dependence explains why even small temperature changes can produce large rate changes.
       `
     },
     {
@@ -172,7 +188,7 @@ This exponential dependence explains why even small temperature changes can prod
 
 Putting it all together, collision theory predicts:
 
-$$\\text{Rate} = Z \\cdot p \\cdot e^{-E_a/(RT)}$$
+$$\\boxed{\\text{Rate} = Z \\cdot p \\cdot e^{-E_a/(RT)}}$$
 
 where:
 - $Z$ = collision frequency (depends on concentration and temperature)
@@ -186,9 +202,11 @@ where:
 
 This leads directly to the Arrhenius equation:
 
-$$k = A \\cdot e^{-E_a/(RT)}$$
+$$\\boxed{k = A \\cdot e^{-E_a/(RT)}}$$
 
 where $A = Z \\cdot p$ is the **frequency factor** (also called the pre-exponential factor). We will derive this in detail in Part 3.
+
+> 🔑 **Key Connection:** Collision theory → Arrhenius equation. The frequency factor $A$ captures collision frequency and orientation; the exponential captures the energy requirement.
       `
     },
     {

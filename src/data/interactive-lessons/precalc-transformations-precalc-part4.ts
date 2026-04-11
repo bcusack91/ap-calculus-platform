@@ -2,186 +2,193 @@ export const precalcTransformationsPart4Data = {
   topicSlug: 'transformations-precalc',
   sections: [
     {
-      id: 'precalc-transformations-precalc-p4-s1-intro',
+      id: 'p4-intro',
       type: 'text' as const,
       content: `
-      ## Function Transformations: Stretches and compressions
-      
-      **Part 4 of 7**
-      
-      This part focuses on comparing scaling effects on steepness. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **reflection**: multiplies input or output by $-1$
-      - **vertical stretch**: multiplies output by factor with magnitude $>1$
-      - **compression**: scales graph toward an axis
-      
-      
-      ### Worked Example
-      Part 4 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🔗 Combining Multiple Transformations
+
+**Part 4 of 7**
+
+### The General Form
+
+$$y = a \\cdot f(b(x - h)) + k$$
+
+### Order of Operations
+
+**Apply in this order:**
+1. Horizontal shift (inside): $x - h$
+2. Horizontal stretch/reflect (inside): multiply by $b$
+3. Vertical stretch/reflect (outside): multiply by $a$
+4. Vertical shift (outside): add $k$
+
+> 💡 **Inside** transformations affect $x$ (horizontal, reversed).
+> **Outside** transformations affect $y$ (vertical, as expected).
+
+### Example: $y = -2(x+3)^2 + 5$
+
+1. Shift left 3 ($h = -3$)
+2. Vertical stretch by 2, reflect over $x$-axis ($a = -2$)
+3. Shift up 5 ($k = 5$)
+
+Vertex: $(-3, 5)$, opens downward, narrower than $x^2$.
       `
     },
     {
-      id: 'precalc-transformations-precalc-p4-s2-mcq-core',
+      id: 'p4-transform',
+      type: 'text' as const,
+      content: `
+## 📝 Transforming Key Points
+
+### Example: Transform $y = x^3$ into $y = -\\frac{1}{2}(x-1)^3+4$
+
+$a = -1/2$, $h = 1$, $k = 4$.
+
+| Parent $(x, y)$ | After shift: $(x+1, y)$ | After scale: $(x+1, -y/2+4)$ |
+|:----------------|:------------------------|:-----------------------------|
+| $(-2, -8)$ | $(-1, -8)$ | $(-1, 8)$ |
+| $(-1, -1)$ | $(0, -1)$ | $(0, 4.5)$ |
+| $(0, 0)$ | $(1, 0)$ | $(1, 4)$ |
+| $(1, 1)$ | $(2, 1)$ | $(2, 3.5)$ |
+| $(2, 8)$ | $(3, 8)$ | $(3, 0)$ |
+
+### General Point Transformation
+
+$(x, y) \\to \\left(\\frac{x}{b}+h, \\; ay+k\\right)$
+      `
+    },
+    {
+      id: 'p4-write',
+      type: 'text' as const,
+      content: `
+## ✏️ Writing Equations from Transformations
+
+### Word → Equation
+
+"The graph of $y=\\sqrt{x}$ is reflected over the $x$-axis, stretched vertically by 3, shifted right 2, and shifted down 1."
+
+$$y = -3\\sqrt{x-2}-1$$
+
+### Graph → Equation
+
+1. Identify the parent function
+2. Find the new vertex/key point → determines $h, k$
+3. Check orientation (reflected?) → determines sign of $a$
+4. Use another point to find $|a|$
+
+**Example**: Parabola, vertex $(2, -1)$, opens down, passes through $(3, -3)$.
+
+$y = a(x-2)^2-1$. $-3 = a(1)^2-1 \\implies a = -2$.
+
+$$y = -2(x-2)^2-1$$
+      `
+    },
+    {
+      id: 'p4-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Combined Transformations Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of reflection.',
-            options: [
-              'scales graph toward an axis',
-              'multiplies output by factor with magnitude $>1$',
-              'multiple transformations applied to one parent',
-              'multiplies input or output by $-1$'
-            ],
-            correctAnswer: 3,
-            explanation: 'reflection is defined as: multiplies input or output by $-1$.'
+            question: '$y = 3|x+1|-2$ involves which transformations of $y=|x|$?',
+            options: ['Left 1, stretch 3, down 2', 'Right 1, stretch 3, up 2', 'Left 1, compress 1/3, down 2', 'Right 1, compress 1/3, up 2'],
+            correctAnswer: 0,
+            explanation: '$h=-1$ (left 1), $a=3$ (stretch 3), $k=-2$ (down 2).'
           },
           {
-            question: 'In comparing scaling effects on steepness, which expression is the best starting model?',
-            options: [
-              '$f(x)+k$',
-              '$g(x)=a\\,f(b(x-h))+k$',
-              '$f(x-h)$',
-              '$-f(x),\\;f(-x)$'
-            ],
-            correctAnswer: 3,
-            explanation: 'Use $-f(x),\\;f(-x)$ first, then substitute known quantities from the prompt.'
+            question: 'Apply $(x,y)\\to(x,y)$ formula for $y=-f(x-4)+1$ to point $(2,3)$:',
+            options: ['$(6, -2)$', '$(6, 4)$', '$(-2, -2)$', '$(6, -4)$'],
+            correctAnswer: 0,
+            explanation: '$x \\to x+4 = 6$. $y \\to -y+1 = -3+1 = -2$. Point: $(6,-2)$.'
+          },
+          {
+            question: 'Which transformation is applied FIRST (innermost)?',
+            options: ['Vertical shift', 'Vertical stretch', 'Horizontal shift', 'Horizontal stretch'],
+            correctAnswer: 2,
+            explanation: 'Horizontal shift (inside the function) is applied first.'
           }
         ]
       }
     },
     {
-      id: 'precalc-transformations-precalc-p4-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Reflections | $-f(x),\;f(-x)$ | over $x$-axis and $y$-axis |
-      | General transform | $g(x)=a\,f(b(x-h))+k$ | all major parameter moves |
-      | Horizontal shift | $f(x-h)$ | right by $h$ when $h>0$ |
-      | Vertical shift | $f(x)+k$ | up by $k$ when $k>0$ |
-      
-      ### Common pitfalls
-      - Inside changes reverse intuitive direction for horizontal moves.
-      - A negative outside coefficient reflects across the $x$-axis.
-      - Apply transformations in the order implied by expression structure.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-transformations-precalc-p4-s4-input',
+      id: 'p4-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Transformation Parameters**
-      
-      1) In $g(x)=f(x-3)+2$, how many units right is the graph shifted?
-      2) In $y=-2f(x)$, what is the vertical stretch factor magnitude?
-      3) If $f(x)=x^2$, compute $f(-4)$.
+**Combined Transform Practice** 🧮
+
+For $y = -2(x-3)^2+7$:
+
+**1)** Vertex $h$ = ?
+
+**2)** Vertex $k$ = ?
+
+**3)** The point $(4, y)$ on this graph: $y$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3', '2', '16'],
-        hint1: 'Inside subtraction shifts right.',
-        hint2: 'Read absolute value of outside multiplier.',
-        hint3: 'Square the input after substitution.',
-        explanation: 'Shift is 3 right, stretch magnitude is 2, and $f(-4)=16$.'
+        correctAnswers: ['3', '7', '5'],
+        hint1: '$h = 3$ from $(x-3)$.',
+        hint2: '$k = 7$ from $+7$.',
+        hint3: '$y = -2(4-3)^2+7 = -2+7 = 5$.',
+        explanation: '1) $3$. 2) $7$. 3) $-2(1)+7 = 5$.'
       }
     },
     {
-      id: 'precalc-transformations-precalc-p4-s5-dropdown',
+      id: 'p4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Order of Transformations** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'reflection',
-            options: ['scales graph toward an axis', 'multiple transformations applied to one parent', 'multiplies output by factor with magnitude $>1$', 'multiplies input or output by $-1$']
+            label: 'In $y = af(b(x-h))+k$, the $h$ controls:',
+            options: ['Vertical shift', 'Horizontal shift', 'Vertical stretch', 'Horizontal stretch'],
+            correctAnswer: 1
           },
           {
-            label: 'vertical stretch',
-            options: ['point unchanged by selected transformation', 'scales graph toward an axis', 'multiplies output by factor with magnitude $>1$', 'multiple transformations applied to one parent']
+            label: 'The $a$ controls:',
+            options: ['Vertical stretch/reflect', 'Horizontal stretch/reflect', 'Shift', 'Period'],
+            correctAnswer: 0
           },
           {
-            label: 'compression',
-            options: ['base graph before transformations', 'point unchanged by selected transformation', 'scales graph toward an axis', 'multiple transformations applied to one parent']
+            label: 'Transformations inside the function are:',
+            options: ['Applied as expected', 'Applied in reverse', 'Applied last'],
+            correctAnswer: 1
+          },
+          {
+            label: '$y = -3\\sqrt{x+2}-5$: the graph opens:',
+            options: ['Upward', 'Downward (reflected)', 'Left', 'Right'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['multiplies input or output by $-1$', 'multiplies output by factor with magnitude $>1$', 'scales graph toward an axis'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: reflection, vertical stretch, and compression align with their exact definitions used in this part.'
+        correctAnswers: ['Horizontal shift', 'Vertical stretch/reflect', 'Applied in reverse', 'Downward (reflected)'],
+        hint1: '$h$ appears in $(x-h)$: horizontal.',
+        hint2: '$a$ multiplies the whole function: vertical.',
+        hint3: 'Inside = horizontal = reversed.',
+        explanation: '$h$: horizontal shift. $a$: vertical stretch/reflect. Inside: reversed. $a=-3$: reflected.'
       }
     },
     {
-      id: 'precalc-transformations-precalc-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to reflection, vertical stretch, and compression so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-transformations-precalc-p4-s7-mcq-applied',
+      id: 'p4-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is comparing scaling effects on steepness. Which term best anchors the next reasoning step if the key idea is: multiple transformations applied to one parent?',
-            options: [
-              'reflection',
-              'composite transform',
-              'compression',
-              'vertical stretch'
-            ],
-            correctAnswer: 1,
-            explanation: 'composite transform matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Write the equation: $y=\\sqrt{x}$ shifted right 5, reflected over $x$-axis, shifted up 3.',
+            options: ['$y = -\\sqrt{x-5}+3$', '$y = \\sqrt{-x+5}+3$', '$y = -\\sqrt{x+5}-3$', '$y = 3-\\sqrt{x+5}$'],
+            correctAnswer: 0,
+            explanation: 'Right 5: $\\sqrt{x-5}$. Reflect: $-\\sqrt{x-5}$. Up 3: $-\\sqrt{x-5}+3$.'
           },
           {
-            question: 'A student is solving a mixed function transformations prompt. Which term best anchors the next reasoning step if the key idea is: point unchanged by selected transformation?',
-            options: [
-              'invariant point',
-              'composite transform',
-              'compression',
-              'parent function'
-            ],
+            question: 'For $y = 4f(x)+1$, the $y$-intercept of $f$ at $(0,2)$ moves to:',
+            options: ['$(0, 9)$', '$(0, 3)$', '$(0, 8)$', '$(4, 3)$'],
             correctAnswer: 0,
-            explanation: 'invariant point matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$4(2)+1 = 9$. Point: $(0, 9)$.'
           }
         ]
       }

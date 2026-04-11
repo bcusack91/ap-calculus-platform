@@ -4,13 +4,30 @@ export const chemSolutionsSolubilityPart4Data = {
     {
       id: 'ss4-intro',
       type: 'text' as const,
-      content: `
-# 🌡️ Colligative Properties
+      content: `# 🌡️ Colligative Properties
 
 **Part 4 of 7 — Boiling Point Elevation and Freezing Point Depression**
 
-Colligative properties depend only on the **number of solute particles** in solution — not their identity. Adding any solute to a solvent raises its boiling point and lowers its freezing point. This is why we salt icy roads and why antifreeze protects car engines.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🔬 What Are Colligative Properties? |
+| The Four Colligative Properties |
+| Why Do They Occur? |
+| Key Distinction |
+| 📌 Boiling Point Elevation |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ss4-colligative-overview',
@@ -19,6 +36,8 @@ Colligative properties depend only on the **number of solute particles** in solu
 ## 🔬 What Are Colligative Properties?
 
 The word "colligative" comes from Latin *colligare* meaning "to bind together." These properties depend on the **collective number** of dissolved particles, regardless of what those particles are.
+
+> 🔑 **Key Concept:** Colligative properties depend only on the **number** of dissolved particles — not their chemical identity. More particles → greater effect.
 
 
 ---
@@ -57,7 +76,7 @@ When solute particles are added to a solvent:
       content: `
 ## 📌 Boiling Point Elevation
 
-$$\\Delta T_b = iK_bm$$
+$$\\boxed{\\Delta T_b = iK_bm}$$
 
 where:
 - $\\Delta T_b$ = change in boiling point (°C)
@@ -86,7 +105,9 @@ $K_b = 0.512$ °C/m and $T_{b,\\text{pure}} = 100.0$ °C
 
 ### Worked Example
 
-What is the boiling point of a solution of 1.00 mol of glucose (nonelectrolyte, $i = 1$) in 1.00 kg of water?
+> **Problem:** What is the boiling point of a solution of 1.00 mol of glucose (nonelectrolyte, $i = 1$) in 1.00 kg of water?
+
+> **Solution:**
 
 $$\\Delta T_b = (1)(0.512)(1.00) = 0.512 \\text{ °C}$$
 
@@ -99,7 +120,7 @@ $$T_b = 100.0 + 0.512 = 100.5 \\text{ °C}$$
       content: `
 ## 📌 Freezing Point Depression
 
-$$\\Delta T_f = iK_fm$$
+$$\\boxed{\\Delta T_f = iK_fm}$$
 
 where:
 - $\\Delta T_f$ = change in freezing point (°C)
@@ -128,7 +149,9 @@ $K_f = 1.86$ °C/m and $T_{f,\\text{pure}} = 0.0$ °C
 
 ### Worked Example
 
-What is the freezing point of a solution of 0.500 mol of NaCl ($i = 2$) in 1.00 kg of water?
+> **Problem:** What is the freezing point of a solution of 0.500 mol of NaCl ($i = 2$) in 1.00 kg of water?
+
+> **Solution:**
 
 $$\\Delta T_f = (2)(1.86)(0.500) = 1.86 \\text{ °C}$$
 
@@ -170,6 +193,8 @@ In real solutions, ion pairing can reduce the effective $i$:
 - CaCl₂: theoretical $i = 3$, actual $i \\approx 2.7$
 
 For AP calculations, use the **theoretical** (ideal) $i$ unless told otherwise.
+
+> ⚠️ **Warning:** For electrolytes, always multiply by the van\'t Hoff factor $i$. Forgetting $i$ is the most common mistake on colligative property problems — NaCl gives $i = 2$, CaCl₂ gives $i = 3$, etc.
       `
     },
     {

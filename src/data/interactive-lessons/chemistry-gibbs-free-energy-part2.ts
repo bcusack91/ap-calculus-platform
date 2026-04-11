@@ -4,13 +4,30 @@ export const chemGibbsFreeEnergyPart2Data = {
     {
       id: 'gf2-intro',
       type: 'text' as const,
-      content: `
-# 🔀 Four ΔH/ΔS Combinations
+      content: `# 🔀 Four ΔH/ΔS Combinations
 
 **Part 2 of 7 — Always, Never, or Temperature-Dependent**
 
-The equation $\\Delta G = \\Delta H - T\\Delta S$ has four possible sign combinations for $\\Delta H$ and $\\Delta S$. Understanding these four cases is essential for AP Chemistry and lets you quickly assess spontaneity.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 The Four Cases |
+| Case 1: ΔH < 0, ΔS > 0 — Always Spontaneous ✅ |
+| Case 2: ΔH > 0, ΔS < 0 — Never Spontaneous ❌ |
+| Case 3: ΔH < 0, ΔS < 0 — Spontaneous at Low T 🥶 |
+| Case 4: ΔH > 0, ΔS > 0 — Spontaneous at High T 🔥 |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gf2-four-cases',
@@ -75,6 +92,7 @@ $$\\Delta G = (\\text{positive}) - T(\\text{positive})$$
 | − | − | − at low T, + at high T | Low T only 🥶 |
 | + | + | + at low T, − at high T | High T only 🔥 |
 
+> 🔑 **Key Concept:** This table appears on nearly every AP Chemistry exam. Memorize all four cases and be ready to identify which case applies from ΔH/ΔS signs.
 
 ---
 
@@ -82,9 +100,9 @@ $$\\Delta G = (\\text{positive}) - T(\\text{positive})$$
 
 For Cases 3 and 4, the temperature where $\\Delta G = 0$:
 
-$$T_{\\text{crossover}} = \\frac{\\Delta H}{\\Delta S}$$
+$$\boxed{T_{\text{crossover}} = \frac{\Delta H}{\Delta S}}$$
 
-(Both $\\Delta H$ and $\\Delta S$ must have the **same sign** for this temperature to be positive and physically meaningful.)
+> 💡 **Tip:** This equation only gives a physically meaningful (positive) temperature when $\Delta H$ and $\Delta S$ have the **same sign** (Cases 3 and 4).
       `
     },
     {

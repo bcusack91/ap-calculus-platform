@@ -4,13 +4,30 @@ export const chemWeakAcidsBasesKaKbPart4Data = {
     {
       id: 'wk4-intro',
       type: 'text' as const,
-      content: `
-# 🔗 The $K_a \\times K_b = K_w$ Relationship
+      content: `# 🔗 The $K_a \\times K_b = K_w$ Relationship
 
 **Part 4 of 7 — Connecting Conjugate Pairs**
 
-One of the most powerful relationships in acid-base chemistry connects the strength of a conjugate acid-base pair through the ion product of water.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🔗 Deriving the Relationship |
+| 🔗 The $pK_a + pK_b = 14$ Relationship |
+| Applications |
+| Example |
+| Key Insight |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'wk4-derivation',
@@ -36,7 +53,7 @@ $$K_a \\times K_b = [H^+][OH^-] = K_w$$
 
 $$\\boxed{K_a \\times K_b = K_w = 1.0 \\times 10^{-14} \\text{ at 25°C}}$$
 
-This is true for **any** conjugate acid-base pair!
+> 🔑 **Key Concept:** This is true for **any** conjugate acid-base pair — one of the most important relationships in acid-base chemistry!
       `
     },
     {
@@ -58,7 +75,7 @@ $$\\boxed{pK_a + pK_b = pK_w = 14 \\text{ at 25°C}}$$
 
 If you know $K_a$ for an acid, you can find $K_b$ for its conjugate base:
 
-$$K_b = \\frac{K_w}{K_a} = \\frac{1.0 \\times 10^{-14}}{K_a}$$
+$$\\boxed{K_b = \\frac{K_w}{K_a} = \\frac{1.0 \\times 10^{-14}}{K_a}}$$
 
 
 ---
@@ -77,6 +94,8 @@ $pK_b = 14 - 4.74 = 9.26$
 ---
 
 ### Key Insight
+
+> 💡 **Tip:** The strength relationship is always inverse:
 
 - **Strong acid** ($K_a$ very large) → **very weak conjugate base** ($K_b$ very small)
 - **Weak acid** ($K_a$ small) → **relatively stronger conjugate base** ($K_b$ less small)

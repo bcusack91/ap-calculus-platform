@@ -2,193 +2,220 @@ export const precalcInverseTrigPart6Data = {
   topicSlug: 'inverse-trig-functions-precalc',
   sections: [
     {
-      id: 'precalc-inverse-trig-functions-precalc-p6-s1-intro',
+      id: 'p6-intro',
       type: 'text' as const,
       content: `
-      ## Inverse Trigonometric Functions: Modeling with angle recovery
-      
-      **Part 6 of 7**
-      
-      This part focuses on estimating heading from coordinate data. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **composition**: applying one function to the output of another
-      - **reference triangle**: triangle built from known trig ratios
-      - **angle normalization**: placing angles inside principal intervals
-      
-      
-      ### Worked Example
-      Part 6 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🌍 Applications of Inverse Trig
+
+**Part 6 of 7**
+
+Inverse trig functions appear everywhere in real-world problems — navigation, physics, engineering, and more.
+
+### Angle of Elevation & Depression
+
+$$\\boxed{\\text{Angle of Elevation/Depression} = \\arctan\\!\\left(\\frac{\\text{vertical distance}}{\\text{horizontal distance}}\\right)}$$
+
+### Example 1: Angle of Elevation
+
+A 6-foot person looks up at the top of a 50-foot building from 80 feet away. What is the angle of elevation?
+
+Vertical distance = $50 - 6 = 44$ ft, horizontal distance = $80$ ft.
+
+$$\\theta = \\arctan\\!\\left(\\frac{44}{80}\\right) = \\arctan(0.55) \\approx 28.8°$$
+
+### Example 2: Angle of Depression
+
+A drone at 200 feet altitude spots a target 500 feet away horizontally. The angle of depression is:
+
+$$\\theta = \\arctan\\!\\left(\\frac{200}{500}\\right) = \\arctan(0.4) \\approx 21.8°$$
       `
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p6-s2-mcq-core',
+      id: 'p6-bearings',
+      type: 'text' as const,
+      content: `
+## 🧭 Navigation & Bearings
+
+### Example 3: Finding Direction
+
+A ship sails 15 km east and 8 km north. What bearing has it traveled?
+
+$$\\theta = \\arctan\\!\\left(\\frac{15}{8}\\right) \\approx 61.9°$$
+
+Bearing: approximately $\\text{N } 62° \\text{ E}$ (or $062°$ in compass notation).
+
+### Example 4: Surveying
+
+A surveyor stands at point A and measures:
+- Distance to point B: 120 meters
+- Height difference: 35 meters
+
+Angle: $\\theta = \\arcsin\\!\\left(\\frac{35}{120}\\right) \\approx 17.0°$
+
+### Example 5: Physics — Launch Angle
+
+A projectile needs to reach a target at the same height, 200 m away, with initial speed 50 m/s.
+
+The range formula gives: $R = \\frac{v^2 \\sin(2\\theta)}{g}$
+
+$$200 = \\frac{2500 \\sin(2\\theta)}{9.8} \\implies \\sin(2\\theta) = 0.784$$
+
+$$2\\theta = \\arcsin(0.784) \\approx 51.6° \\implies \\theta \\approx 25.8°$$
+      `
+    },
+    {
+      id: 'p6-inverse-problems',
+      type: 'text' as const,
+      content: `
+## 🔧 Solving Inverse Trig Equations
+
+### Example 6: Solve $2\\arcsin(x) = \\frac{\\pi}{3}$
+
+$$\\arcsin(x) = \\frac{\\pi}{6}$$
+$$x = \\sin\\!\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}$$
+
+### Example 7: Solve $\\arctan(2x - 1) = \\frac{\\pi}{4}$
+
+$$2x - 1 = \\tan\\!\\left(\\frac{\\pi}{4}\\right) = 1$$
+$$2x = 2 \\implies x = 1$$
+
+### Key Strategy for Solving
+
+$$\\boxed{\\text{Isolate the inverse trig function, then apply the corresponding trig function to both sides}}$$
+
+If $\\arcsin(\\text{expr}) = \\theta$, then $\\text{expr} = \\sin\\theta$.
+
+If $\\arccos(\\text{expr}) = \\theta$, then $\\text{expr} = \\cos\\theta$.
+
+If $\\arctan(\\text{expr}) = \\theta$, then $\\text{expr} = \\tan\\theta$.
+      `
+    },
+    {
+      id: 'p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Applications Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of composition.',
+            question: 'A 15-foot flagpole casts a 20-foot shadow. The angle of elevation of the sun is:',
             options: [
-              'applying one function to the output of another',
-              'triangle built from known trig ratios',
-              'standard output interval used by an inverse trig function',
-              'placing angles inside principal intervals'
+              '$\\arcsin(\\frac{15}{20})$',
+              '$\\arctan(\\frac{15}{20})$',
+              '$\\arccos(\\frac{15}{20})$',
+              '$\\arctan(\\frac{20}{15})$'
             ],
-            correctAnswer: 0,
-            explanation: 'composition is defined as: applying one function to the output of another.'
+            correctAnswer: 1,
+            explanation: 'Opposite = flagpole height = 15, adjacent = shadow = 20. Angle = $\\arctan(\\frac{15}{20}) \\approx 36.9°$.'
           },
           {
-            question: 'In estimating heading from coordinate data, which expression is the best starting model?',
+            question: 'Solve: $\\arccos(x) = \\frac{\\pi}{3}$',
             options: [
-              '$\\arctan x + \\arctan\\!\\left(\\frac1x\\right)=\\frac\\pi2\\;(x>0)$',
-              '$\\sin(\\arcsin x)=x$',
-              '$\\tan(\\arctan x)=x$',
-              '$\\arccos x \\in [0,\\pi]$'
+              '$x = \\frac{\\sqrt{3}}{2}$',
+              '$x = \\frac{1}{2}$',
+              '$x = \\frac{\\pi}{3}$',
+              '$x = \\frac{\\sqrt{2}}{2}$'
             ],
-            correctAnswer: 3,
-            explanation: 'Use $\\arccos x \\in [0,\\pi]$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 1,
+            explanation: '$x = \\cos(\\frac{\\pi}{3}) = \\frac{1}{2}$.'
+          },
+          {
+            question: 'From a 100-meter cliff, an object on the ground is seen at a 30° angle of depression. The horizontal distance is approximately:',
+            options: [
+              '$100\\sqrt{3} \\approx 173$ m',
+              '$\\frac{100}{\\sqrt{3}} \\approx 58$ m',
+              '$50$ m',
+              '$200$ m'
+            ],
+            correctAnswer: 0,
+            explanation: '$\\tan(30°) = \\frac{100}{d}$, so $d = \\frac{100}{\\tan 30°} = \\frac{100}{\\frac{1}{\\sqrt{3}}} = 100\\sqrt{3} \\approx 173$ m.'
           }
         ]
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p6-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Principal output | $\arccos x \in [0,\pi]$ | range control |
-      | Tangent inverse | $\\tan(\arctan x)=x$ | all real inputs |
-      | Reciprocal relation | $\arctan x + \arctan\!\left(\\frac1x\\right)=\\frac\pi2\;(x>0)$ | angle decomposition |
-      | Inverse identity | $\sin(\arcsin x)=x$ | valid for $x\in[-1,1]$ |
-      
-      ### Common pitfalls
-      - Use principal intervals before comparing equivalent angle expressions.
-      - Inverse trig outputs are angles, not raw ratio values.
-      - A composition can fail if the inner output leaves the inverse domain.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-inverse-trig-functions-precalc-p6-s4-input',
+      id: 'p6-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Inverse Trig Values**
-      
-      Use degree values for angle outputs when prompted.
-      
-      1) Compute $rcsin\left(
-      rac{1}{2}
-      ight)$ in degrees.
-      2) Compute $rccos\left(
-      rac{\sqrt{2}}{2}
-      ight)$ in degrees.
-      3) Compute $\\an(rctan(
-      rac{3}{4}))$.
+**Solve Equations** 🧮
+
+**1)** Solve $\\arcsin(x) = \\frac{\\pi}{6}$. What is $x$? Write as a decimal. (e.g., If $\\arccos(x) = \\frac{\\pi}{3}$, then $x = \\cos(\\frac{\\pi}{3}) = 0.5$)
+
+**2)** Solve $\\arctan(x) = \\frac{\\pi}{4}$. What is $x$? (e.g., If $\\arctan(x) = 0$, then $x = \\tan(0) = 0$)
+
+**3)** A tree casts a 40-foot shadow when the sun's elevation is 50°. Tree height = $40\\tan(50°) \\approx$ ? feet. Round to nearest integer. (e.g., $40\\tan(45°) = 40$ since $\\tan 45° = 1$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['30', '45', '0.75'],
-        hint1: 'Use principal range for arcsin.',
-        hint2: 'Use principal range for arccos.',
-        hint3: 'A function and its inverse undo each other on valid inputs.',
-        explanation: 'Principal angles are 30° and 45°, and composition returns 0.75.'
+        correctAnswers: ['0.5', '1', '48'],
+        hint1: '$x = \\sin(\\frac{\\pi}{6}) = \\frac{1}{2} = 0.5$.',
+        hint2: '$x = \\tan(\\frac{\\pi}{4}) = 1$.',
+        hint3: '$40 \\times \\tan(50°) = 40 \\times 1.19 \\approx 47.7 \\approx 48$.',
+        explanation: '1) $\\sin(\\frac{\\pi}{6}) = 0.5$. 2) $\\tan(\\frac{\\pi}{4}) = 1$. 3) $40\\tan(50°) \\approx 47.7 \\approx 48$ ft.'
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p6-s5-dropdown',
+      id: 'p6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Application Matching** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'composition',
-            options: ['placing angles inside principal intervals', 'triangle built from known trig ratios', 'standard output interval used by an inverse trig function', 'applying one function to the output of another']
+            label: 'To find an angle of elevation, you typically use',
+            options: ['$\\arcsin$', '$\\arccos$', '$\\arctan$']
           },
           {
-            label: 'reference triangle',
-            options: ['placing angles inside principal intervals', 'standard output interval used by an inverse trig function', 'input interval chosen to make trig one-to-one', 'triangle built from known trig ratios']
+            label: 'If $\\arcsin(2x) = \\frac{\\pi}{6}$, then $x$ equals',
+            options: ['$\\frac{1}{2}$', '$\\frac{1}{4}$', '$1$', '$\\frac{\\sqrt{3}}{4}$']
           },
           {
-            label: 'angle normalization',
-            options: ['inverse of sine on $[-\\rac\\pi2,\\rac\\pi2]$', 'placing angles inside principal intervals', 'standard output interval used by an inverse trig function', 'input interval chosen to make trig one-to-one']
+            label: 'A vertical pole and its shadow form a right triangle. The angle of elevation uses which sides?',
+            options: ['Hypotenuse and opposite', 'Opposite and adjacent', 'Adjacent and hypotenuse']
+          },
+          {
+            label: 'Solve $\\arccos(3x) = \\frac{\\pi}{2}$: the value of $x$ is',
+            options: ['$0$', '$\\frac{1}{3}$', '$\\frac{\\pi}{6}$', '$3$']
           }
         ],
-        correctAnswers: ['applying one function to the output of another', 'triangle built from known trig ratios', 'placing angles inside principal intervals'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: composition, reference triangle, and angle normalization align with their exact definitions used in this part.'
+        correctAnswers: ['$\\arctan$', '$\\frac{1}{4}$', 'Opposite and adjacent', '$0$'],
+        hint1: 'Elevation angle involves opposite (height) and adjacent (distance) → $\\arctan$.',
+        hint2: '$2x = \\sin(\\frac{\\pi}{6}) = \\frac{1}{2}$, so $x = \\frac{1}{4}$.',
+        hint3: 'Pole = opposite, shadow = adjacent.',
+        explanation: 'Elevation → $\\arctan$. $2x = \\frac{1}{2}$, $x = \\frac{1}{4}$. Pole/shadow = opp/adj. $3x = \\cos(\\frac{\\pi}{2}) = 0$, $x = 0$.'
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p6-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to composition, reference triangle, and angle normalization so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-inverse-trig-functions-precalc-p6-s7-mcq-applied',
+      id: 'p6-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is estimating heading from coordinate data. Which term best anchors the next reasoning step if the key idea is: standard output interval used by an inverse trig function?',
+            question: 'A cable makes a 55° angle with the ground and attaches to a tower 80 feet up. The cable length is:',
             options: [
-              'reference triangle',
-              'composition',
-              'angle normalization',
-              'principal value'
+              '$\\frac{80}{\\sin 55°} \\approx 97.6$ ft',
+              '$\\frac{80}{\\cos 55°} \\approx 139.5$ ft',
+              '$\\frac{80}{\\tan 55°} \\approx 56.0$ ft',
+              '$80\\sin 55° \\approx 65.5$ ft'
             ],
-            correctAnswer: 3,
-            explanation: 'principal value matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 0,
+            explanation: '$\\sin 55° = \\frac{80}{\\text{cable}}$. Cable $= \\frac{80}{\\sin 55°} \\approx \\frac{80}{0.819} \\approx 97.6$ ft.'
           },
           {
-            question: 'A student is solving a mixed inverse trigonometric functions prompt. Which term best anchors the next reasoning step if the key idea is: input interval chosen to make trig one-to-one?',
+            question: 'Solve: $3\\arctan(x) = \\pi$',
             options: [
-              'principal value',
-              'arcsin',
-              'angle normalization',
-              'restricted domain'
+              '$x = \\sqrt{3}$',
+              '$x = 1$',
+              '$x = \\frac{\\pi}{3}$',
+              '$x = 0$'
             ],
-            correctAnswer: 3,
-            explanation: 'restricted domain matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 0,
+            explanation: '$\\arctan(x) = \\frac{\\pi}{3}$. $x = \\tan(\\frac{\\pi}{3}) = \\sqrt{3}$.'
           }
         ]
       }

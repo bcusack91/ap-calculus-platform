@@ -4,13 +4,30 @@ export const chemNetIonicEquationsPart3Data = {
     {
       id: 'ni3-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Net Ionic Equations
+      content: `# 🧪 Net Ionic Equations
 
 **Part 3 of 7 — Removing Spectator Ions**
 
-The complete ionic equation shows every ion in solution, but many of those ions don\'t actually **do** anything — they\'re just along for the ride. By removing these **spectator ions**, we reveal the **net ionic equation**: the essence of what\'s really happening in the reaction.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚛️ Spectator Ions |
+| Example |
+| Removing Spectators |
+| Net Ionic Equation |
+| 📋 Steps to Write a Net Ionic Equation |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ni3-spectator-ions',
@@ -18,7 +35,7 @@ The complete ionic equation shows every ion in solution, but many of those ions 
       content: `
 ## ⚛️ Spectator Ions
 
-**Spectator ions** are ions that appear in the same form on both sides of the complete ionic equation. They don\'t participate in the actual reaction.
+> 🔑 **Key Concept:** **Spectator ions** are ions that appear in the same form on both sides of the complete ionic equation. They don\'t participate in the actual reaction.
 
 
 ---
@@ -47,7 +64,7 @@ $$\\text{Ag}^+(aq) + \\cancel{\\text{NO}_3^-(aq)} + \\cancel{\\text{Na}^+(aq)} +
 
 ### Net Ionic Equation
 
-$$\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s)$$
+$$\boxed{\text{Ag}^+(aq) + \text{Cl}^-(aq) \rightarrow \text{AgCl}(s)}$$
 
 This is the simplest representation showing only what **changes**.
       `
@@ -81,7 +98,7 @@ A reaction occurs (and a net ionic equation exists) when at least one of these f
 | **Water** (from acid-base) | H₂O(l) |
 | **Gas** | CO₂(g), H₂S(g) |
 
-If none of these forms, there is **no reaction** (NR) and all ions are spectators.
+> 🔑 **Key Concept:** If none of these forms, there is **no reaction** (NR) and all ions are spectators.
       `
     },
     {
@@ -90,7 +107,9 @@ If none of these forms, there is **no reaction** (NR) and all ions are spectator
       content: `
 ## 🧪 Worked Example: No Reaction
 
-**Mix NaCl(aq) and KNO₃(aq)**
+> **Problem:** Mix NaCl(aq) and KNO₃(aq). Write the net ionic equation.
+
+> **Solution:**
 
 **Step 1 — Predict products:** Swapping ions gives NaNO₃ and KCl.
 
@@ -107,9 +126,7 @@ $$\\text{Na}^+(aq) + \\text{Cl}^-(aq) + \\text{K}^+(aq) + \\text{NO}_3^-(aq) \\r
 
 ---
 
-### Key Lesson
-
-Just because you can write a double-replacement equation doesn\'t mean a reaction occurs. You must have a **driving force** (precipitate, water, or gas).
+> ⚠️ **Warning:** Just because you can write a double-replacement equation doesn\'t mean a reaction occurs. You must have a **driving force** (precipitate, water, or gas).
       `
     },
     {

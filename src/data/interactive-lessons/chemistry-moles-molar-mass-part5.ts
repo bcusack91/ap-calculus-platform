@@ -4,13 +4,30 @@ export const chemMolesMolarMassPart5Data = {
     {
       id: 'mm5-intro',
       type: 'text' as const,
-      content: `
-# 🔬 Empirical and Molecular Formulas
+      content: `# 🔬 Empirical and Molecular Formulas
 
 **Part 5 of 7 — From Ratios to Real Formulas**
 
-In Part 4, we learned how to find the **empirical formula** — the simplest whole-number ratio of atoms. But many compounds share the same empirical formula. To find the **molecular formula** (the actual number of atoms in each molecule), we need one more piece of information: the **molar mass**.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚖️ Empirical vs. Molecular Formulas |
+| Key Relationship |
+| Examples of Empirical ↔ Molecular |
+| 📋 Step-by-Step Method |
+| Finding the Empirical Formula from Experimental Data |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'mm5-definitions',
@@ -28,13 +45,15 @@ In Part 4, we learned how to find the **empirical formula** — the simplest who
 
 ### Key Relationship
 
-$$\\text{Molecular formula} = n \\times (\\text{Empirical formula})$$
+$$\\boxed{\\text{Molecular formula} = n \\times (\\text{Empirical formula})}$$
 
 where:
 
-$$n = \\frac{M_{\\text{molecular}}}{M_{\\text{empirical}}}$$
+$$\\boxed{n = \\frac{M_{\\text{molecular}}}{M_{\\text{empirical}}}}$$
 
 $n$ must be a **positive integer** (1, 2, 3, ...).
+
+> 🔑 **Key Concept:** The molecular formula is always a whole-number multiple of the empirical formula. If $n = 1$, they are the same!
 
 
 ---

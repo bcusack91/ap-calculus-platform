@@ -8,7 +8,20 @@ export const chemTypesOfChemicalBondsPart7Data = {
 
 **Part 7 of 7 — AP-Style Questions and Common Misconceptions**
 
-This final part brings everything together with AP-exam-style questions and addresses the most common misconceptions students have about chemical bonding. Mastering these will help you earn maximum points on the AP Chemistry exam.`
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'cb7-misconceptions',
@@ -36,7 +49,7 @@ It's the **intermolecular forces** (not the covalent bonds) that determine melti
 ### ❌ Misconception 3: "Ionic compounds exist as discrete molecules"
 
 **Reality:** Ionic compounds form **extended crystal lattices**, not individual molecules. The formula $\\text{NaCl}$ represents the simplest ratio of ions, not a molecule. We call it a **formula unit**.
-
+> ⚠️ **Warning:** Never refer to ionic compounds as “molecules.” NaCl is a formula unit representing the simplest ion ratio in the crystal lattice.
 
 ---
 
@@ -130,9 +143,11 @@ Always connect your answer to the **underlying model**:
 
 When comparing ionic compounds, always invoke Coulomb\'s law:
 
-$$F \\propto \\frac{q_1 \\times q_2}{r^2}$$
+$$\boxed{F \propto \frac{q_1 \times q_2}{r^2}}$$
 
-Specify **which charges** and **which radii** you're comparing. The AP exam rewards specific, quantitative reasoning.`
+Specify **which charges** and **which radii** you're comparing. The AP exam rewards specific, quantitative reasoning.
+
+> 🔑 **Key Concept:** On the AP exam, always connect properties to the underlying bonding model — invoke Coulomb's law for ionic comparisons and the electron sea model for metallic properties.`,
     },
     {
       id: 'cb7-ap-mc-1',
@@ -258,11 +273,11 @@ Identify the primary bond type and predict a key property.`,
       type: 'input-box' as const,
       content: `### Final Challenge — Apply What You've Learned
 
-1. What type of bond forms between two fluorine atoms in $\\text{F}_2$? (Enter "nonpolar covalent", "polar covalent", or "ionic")
+**1.** What type of bond forms between two fluorine atoms in $\text{F}_2$? (Enter "nonpolar covalent", "polar covalent", or "ionic")
 
-2. In the compound $\\text{LiF}$, which element gains the electron? (Enter "Li" or "F")
+**2.** In the compound $\text{LiF}$, which element gains the electron? (Enter "Li" or "F")
 
-3. How many valence electrons does nitrogen ($Z = 7$) have?`,
+**3.** How many valence electrons does nitrogen ($Z = 7$) have?`,
       exercise: {
         inputs: [
           {

@@ -2,193 +2,206 @@ export const precalcTrigIdentitiesPart6Data = {
   topicSlug: 'trigonometric-identities-precalc',
   sections: [
     {
-      id: 'precalc-trigonometric-identities-precalc-p6-s1-intro',
+      id: 'p6-intro',
       type: 'text' as const,
       content: `
-      ## Trigonometric Identities: Verification strategy and expression design
-      
-      **Part 6 of 7**
-      
-      This part focuses on building clean verification pathways. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **sum identity**: formula for trig of $A\pm B$
-      - **double-angle identity**: expressions for trig of $2\\heta$
-      - **verification strategy**: rewrite one side with targeted identities
-      
-      
-      ### Worked Example
-      Simplify $
-      rac{1-\cos^2\\heta}{\sin\\heta}$ for $\sin\\heta
-      eq0$.
-      
-      Use $1-\cos^2\\heta=\sin^2\\heta$:
-      
-      $$
-      rac{1-\cos^2\\heta}{\sin\\heta}=
-      rac{\sin^2\\heta}{\sin\\heta}=\sin\\heta$$
-      
-      Identity substitution first, then cancellation, keeps the algebra clean.
+# ✅ Trigonometric Identities — Verifying Identities
+
+**Part 6 of 7**
+
+**Verifying** (or **proving**) a trigonometric identity means showing that the left side equals the right side for all values in the domain. You never cross-multiply or move terms across the equals sign — you work **one side only** until it matches the other.
+
+### The Golden Rules
+
+| Rule | Why |
+|:-----|:----|
+| **Work one side only** | An identity is not an equation to "solve" — you must transform, not rearrange |
+| **Start with the more complex side** | More terms = more opportunities to simplify |
+| **Convert everything to sin and cos** | Common denominators and cancellations become visible |
+| **Factor when possible** | $\\sin^2\\theta - \\cos^2\\theta$ factors as $(\\sin\\theta - \\cos\\theta)(\\sin\\theta + \\cos\\theta)$ |
+| **Multiply by the conjugate** | Especially useful with $1 \\pm \\sin\\theta$ or $1 \\pm \\cos\\theta$ |
+| **Combine fractions** | Get a single fraction, then simplify the numerator |
       `
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p6-s2-mcq-core',
+      id: 'p6-examples',
+      type: 'text' as const,
+      content: `
+## 📝 Worked Verifications
+
+### Verify: $\\frac{\\sin\\theta}{1 + \\cos\\theta} = \\frac{1 - \\cos\\theta}{\\sin\\theta}$
+
+**Strategy**: Work the left side. Multiply by the conjugate $\\frac{1 - \\cos\\theta}{1 - \\cos\\theta}$:
+
+$$\\frac{\\sin\\theta}{1 + \\cos\\theta} \\cdot \\frac{1 - \\cos\\theta}{1 - \\cos\\theta} = \\frac{\\sin\\theta(1 - \\cos\\theta)}{1 - \\cos^2\\theta} = \\frac{\\sin\\theta(1 - \\cos\\theta)}{\\sin^2\\theta} = \\frac{1 - \\cos\\theta}{\\sin\\theta} \\;\\checkmark$$
+
+### Verify: $\\tan\\theta + \\cot\\theta = \\sec\\theta\\csc\\theta$
+
+**Strategy**: Convert the left side to sin/cos:
+
+$$\\frac{\\sin\\theta}{\\cos\\theta} + \\frac{\\cos\\theta}{\\sin\\theta} = \\frac{\\sin^2\\theta + \\cos^2\\theta}{\\sin\\theta\\cos\\theta} = \\frac{1}{\\sin\\theta\\cos\\theta} = \\sec\\theta\\csc\\theta \\;\\checkmark$$
+
+### Verify: $\\frac{1 + \\sin\\theta}{\\cos\\theta} = \\frac{\\cos\\theta}{1 - \\sin\\theta}$
+
+**Strategy**: Cross-reference by working the right side — multiply by conjugate $\\frac{1 + \\sin\\theta}{1 + \\sin\\theta}$:
+
+$$\\frac{\\cos\\theta}{1 - \\sin\\theta} \\cdot \\frac{1 + \\sin\\theta}{1 + \\sin\\theta} = \\frac{\\cos\\theta(1 + \\sin\\theta)}{1 - \\sin^2\\theta} = \\frac{\\cos\\theta(1 + \\sin\\theta)}{\\cos^2\\theta} = \\frac{1 + \\sin\\theta}{\\cos\\theta} \\;\\checkmark$$
+      `
+    },
+    {
+      id: 'p6-toolkit',
+      type: 'text' as const,
+      content: `
+## 🛠️ Verification Toolkit — Decision Flowchart
+
+### Which Strategy Do I Use?
+
+| I see … | Try … |
+|:--------|:------|
+| Fractions on one side | Combine into a single fraction |
+| $1 \\pm \\sin\\theta$ or $1 \\pm \\cos\\theta$ in a denominator | Multiply by the conjugate |
+| $\\sec, \\csc, \\tan, \\cot$ | Convert to $\\sin$ and $\\cos$ |
+| Squares like $\\sin^2\\theta$ or $\\cos^2\\theta$ | Apply Pythagorean identity |
+| $\\sin^2\\theta - \\cos^2\\theta$ or similar | Factor as a difference of squares |
+| $\\sin 2\\theta$ or $\\cos 2\\theta$ | Expand using double-angle formulas |
+| Nothing obvious | Try both sides and see which simplifies to a recognizable form |
+
+### Common Mistakes to Avoid
+
+| Mistake | Why It's Wrong |
+|:--------|:--------------|
+| Moving terms across the $=$ sign | You're proving equality, not solving |
+| Working both sides toward a "common middle" | Only acceptable if you work each side independently |
+| Dividing both sides by a trig expression | Not allowed — it's not an equation |
+| Stopping before the sides match exactly | The transformed side must be identical to the target |
+      `
+    },
+    {
+      id: 'p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of sum identity.',
+            question: 'To verify $\\frac{\\cos\\theta}{1 - \\sin\\theta} = \\sec\\theta + \\tan\\theta$, the best first step on the right side is:',
             options: [
-              'rewrite one side with targeted identities',
-              'formula for trig of $A\\pm B$',
-              '$\\sin^2\\heta+\\cos^2\\heta=1$',
-              'expressions for trig of $2\\heta$'
+              'Factor $\\sec\\theta + \\tan\\theta$',
+              'Convert to $\\frac{1}{\\cos\\theta} + \\frac{\\sin\\theta}{\\cos\\theta}$',
+              'Multiply both sides by $\\cos\\theta$',
+              'Use the double-angle formula'
             ],
             correctAnswer: 1,
-            explanation: 'sum identity is defined as: formula for trig of $A\\pm B$.'
+            explanation: 'Converting to sin/cos gives $\\frac{1 + \\sin\\theta}{\\cos\\theta}$, then multiply by the conjugate to match the left side.'
           },
           {
-            question: 'In building clean verification pathways, which expression is the best starting model?',
+            question: 'When verifying, which action is NOT allowed?',
             options: [
-              '$\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}$',
-              '$\\sin^2\\theta+\\cos^2\\theta=1$',
-              '$\\cos(A+B)=\\cos A\\cos B-\\sin A\\sin B$',
-              '$\\sin(2\\theta)=2\\sin\\theta\\cos\\theta$'
+              'Converting $\\tan\\theta$ to $\\sin\\theta/\\cos\\theta$',
+              'Factoring $\\sin^2\\theta - 1$',
+              'Subtracting the right side from both sides',
+              'Multiplying the numerator and denominator by a conjugate'
             ],
-            correctAnswer: 0,
-            explanation: 'Use $\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 2,
+            explanation: 'You cannot treat an identity as an equation. Subtracting one side from both sides is solving, not verifying.'
+          },
+          {
+            question: 'To verify $\\frac{\\sin\\theta}{1+\\cos\\theta} = \\csc\\theta - \\cot\\theta$, the best strategy for the right side is:',
+            options: [
+              'Use double-angle formulas',
+              'Convert to sin/cos and combine into a single fraction',
+              'Factor the numerator',
+              'Apply $\\sin^2 + \\cos^2 = 1$'
+            ],
+            correctAnswer: 1,
+            explanation: '$\\csc\\theta - \\cot\\theta = \\frac{1}{\\sin\\theta} - \\frac{\\cos\\theta}{\\sin\\theta} = \\frac{1 - \\cos\\theta}{\\sin\\theta}$. Then multiply by the conjugate to match.'
           }
         ]
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p6-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Tangent | $\\tan\\theta=\\frac{\sin\\theta}{\cos\\theta}$ | quotient rewrite |
-      | Cosine sum | $\cos(A+B)=\cos A\cos B-\sin A\sin B$ | angle combination |
-      | Sine double-angle | $\sin(2\\theta)=2\sin\\theta\cos\\theta$ | power reduction and simplification |
-      | Pythagorean | $\sin^2\\theta+\cos^2\\theta=1$ | fundamental conversion |
-      
-      ### Common pitfalls
-      - Choose one target form early to prevent circular verification.
-      - Do not treat identities as equations to solve unless the task requests solving.
-      - Keep track of domain restrictions when dividing by trig expressions.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-trigonometric-identities-precalc-p6-s4-input',
+      id: 'p6-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Identity Values**
-      
-      1) Compute $\sin^2 30^\circ + \cos^2 30^\circ$.
-      2) Compute $\\an 45^\circ$.
-      3) Compute $\sec 60^\circ$.
+**Verification Computation** 🧮
+
+**1)** In verifying $\\tan\\theta + \\cot\\theta = \\sec\\theta\\csc\\theta$, the combined left side has numerator $\\sin^2\\theta + \\cos^2\\theta$. This simplifies to what integer? (e.g., the numerator $a^2 - a^2$ simplifies to $0$)
+
+**2)** To verify $\\frac{\\sin\\theta}{1+\\cos\\theta} = \\frac{1-\\cos\\theta}{\\sin\\theta}$, you multiply the left fraction by $\\frac{1-\\cos\\theta}{1-\\cos\\theta}$. The new denominator $1 - \\cos^2\\theta$ equals $\\sin^{\\,n}\\theta$. What is $n$? (e.g., $1 - a^2$ might become $b^3$, so $n = 3$)
+
+**3)** In the identity $\\sec\\theta - \\cos\\theta = \\sin\\theta\\tan\\theta$, converting the left side gives $\\frac{1 - \\cos^2\\theta}{\\cos\\theta}$. The numerator $1-\\cos^2\\theta$ becomes $\\sin^{\\,k}\\theta$. What is $k$? (e.g., $1 - b^2$ might yield $c^4$, so $k = 4$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1', '1', '2'],
-        hint1: 'Use the Pythagorean identity.',
-        hint2: 'Recall special-angle values.',
-        hint3: 'Use reciprocal: $\\sec\\heta=1/\\cos\\heta$.',
-        explanation: 'Pythagorean identity gives 1, tangent at 45° is 1, and secant at 60° is 2.'
+        correctAnswers: ['1', '2', '2'],
+        hint1: 'By the Pythagorean identity, $\\sin^2\\theta + \\cos^2\\theta = ?$',
+        hint2: '$1 - \\cos^2\\theta = \\sin^2\\theta$, so the exponent on $\\sin$ is …',
+        hint3: 'Same Pythagorean identity: $1 - \\cos^2\\theta = \\sin^2\\theta$.',
+        explanation: '1) $\\sin^2\\theta + \\cos^2\\theta = 1$. 2) $1 - \\cos^2\\theta = \\sin^2\\theta$, so $n = 2$. 3) Same identity gives $\\sin^2\\theta$, so $k = 2$.'
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p6-s5-dropdown',
+      id: 'p6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Strategy Matching** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'sum identity',
-            options: ['formula for trig of $A\\pm B$', '$\\sin^2\\heta+\\cos^2\\heta=1$', 'rewrite one side with targeted identities', 'expressions for trig of $2\\heta$']
+            label: 'You see $1 + \\cos\\theta$ in a denominator. Best strategy:',
+            options: ['Factor', 'Convert to sin/cos', 'Multiply by conjugate $1 - \\cos\\theta$', 'Use double-angle formula']
           },
           {
-            label: 'double-angle identity',
-            options: ['rewrite one side with targeted identities', '$\\an\\heta=\\rac{\\sin\\heta}{\\cos\\heta}$', '$\\sin^2\\heta+\\cos^2\\heta=1$', 'expressions for trig of $2\\heta$']
+            label: 'You see $\\sec\\theta + \\tan\\theta$. Best first step:',
+            options: ['Factor', 'Convert to $\\frac{1+\\sin\\theta}{\\cos\\theta}$', 'Apply Pythagorean identity', 'Multiply by conjugate']
           },
           {
-            label: 'verification strategy',
-            options: ['$\\an\\heta=\\rac{\\sin\\heta}{\\cos\\heta}$', '$\\sin^2\\heta+\\cos^2\\heta=1$', 'rewrite one side with targeted identities', '$\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs']
+            label: 'You see $\\frac{\\sin\\theta}{\\cos\\theta} + \\frac{\\cos\\theta}{\\sin\\theta}$. Best step:',
+            options: ['Combine into one fraction', 'Convert to tangent', 'Use double-angle', 'Factor']
+          },
+          {
+            label: 'The most common mistake when verifying is:',
+            options: ['Using Pythagorean identity', 'Moving terms across the equals sign', 'Converting to sin and cos', 'Multiplying by a conjugate']
           }
         ],
-        correctAnswers: ['formula for trig of $A\\pm B$', 'expressions for trig of $2\\heta$', 'rewrite one side with targeted identities'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: sum identity, double-angle identity, and verification strategy align with their exact definitions used in this part.'
+        correctAnswers: ['Multiply by conjugate $1 - \\cos\\theta$', 'Convert to $\\frac{1+\\sin\\theta}{\\cos\\theta}$', 'Combine into one fraction', 'Moving terms across the equals sign'],
+        hint1: 'Conjugate strategy eliminates the sum/difference in the denominator.',
+        hint2: 'Writing $\\sec$ and $\\tan$ as fractions with $\\cos\\theta$ denominator lets you combine.',
+        hint3: 'Two fractions → common denominator → combine.',
+        explanation: 'Conjugate for $1 + \\cos$. Convert sec/tan to sin/cos. Combine separate fractions. Moving terms across $=$ is the classic mistake.'
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p6-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to sum identity, double-angle identity, and verification strategy so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-trigonometric-identities-precalc-p6-s7-mcq-applied',
+      id: 'p6-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is building clean verification pathways. Which term best anchors the next reasoning step if the key idea is: $\\sin^2\\heta+\\cos^2\\heta=1$?',
+            question: 'Which correctly verifies $\\sec^2\\theta - 1 = \\tan^2\\theta$?',
             options: [
-              'double-angle identity',
-              'sum identity',
-              'verification strategy',
-              'Pythagorean identity'
-            ],
-            correctAnswer: 3,
-            explanation: 'Pythagorean identity matches that description and keeps the model-to-interpretation chain consistent.'
-          },
-          {
-            question: 'A student is solving a mixed trigonometric identities prompt. Which term best anchors the next reasoning step if the key idea is: $\\an\\heta=\\rac{\\sin\\heta}{\\cos\\heta}$?',
-            options: [
-              'reciprocal identity',
-              'quotient identity',
-              'verification strategy',
-              'Pythagorean identity'
+              'Subtract $\\tan^2\\theta$ from both sides',
+              'Recognize this as a rearrangement of $1 + \\tan^2\\theta = \\sec^2\\theta$',
+              'Divide both sides by $\\sec\\theta$',
+              'Use the sum formula'
             ],
             correctAnswer: 1,
-            explanation: 'quotient identity matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'The Pythagorean identity $1 + \\tan^2\\theta = \\sec^2\\theta$ rearranges to $\\sec^2\\theta - 1 = \\tan^2\\theta$. No need for algebraic manipulation across the equals sign.'
+          },
+          {
+            question: 'To verify $\\frac{1 - \\cos^2\\theta}{\\sin\\theta} = \\sin\\theta$, the key step is:',
+            options: [
+              'Use the sum formula on the numerator',
+              'Replace $1 - \\cos^2\\theta$ with $\\sin^2\\theta$ and cancel',
+              'Multiply both sides by $\\sin\\theta$',
+              'Convert to tangent form'
+            ],
+            correctAnswer: 1,
+            explanation: '$\\frac{1-\\cos^2\\theta}{\\sin\\theta} = \\frac{\\sin^2\\theta}{\\sin\\theta} = \\sin\\theta$. Pythagorean substitution then cancellation.'
           }
         ]
       }

@@ -4,8 +4,25 @@ export const chemLewisStructuresFormalChargePart6Data = {
     {
       id: 'ls-6-1',
       type: 'text',
-      title: 'Exceptions to the Octet Rule',
-      content: `While the octet rule works for most molecules, there are three important categories of exceptions:\n\n**1. Incomplete Octets** — fewer than 8 electrons around the central atom\n- Elements: Be (4 e⁻), B (6 e⁻), Al (6 e⁻)\n- Example: BF₃ — boron has only 6 electrons\n\n**2. Expanded Octets** — more than 8 electrons around the central atom\n- Only elements in **Period 3 and beyond** (they have empty d orbitals)\n- Examples: PCl₅ (10 e⁻), SF₆ (12 e⁻), XeF₂ (10 e⁻)\n- Elements from Period 2 (C, N, O, F) can **NEVER** exceed 8\n\n**3. Odd-Electron Species** — molecules with an odd number of total electrons\n- At least one atom cannot have an octet\n- Examples: NO (11 e⁻), NO₂ (17 e⁻)\n- These are called **free radicals**\n\nRecognizing which exception applies is a critical AP Chemistry skill.`
+      title: '⚠️ Exceptions to the Octet Rule',
+      content: `While the octet rule works for most molecules, there are three important categories of exceptions:\n\n**1. Incomplete Octets** — fewer than 8 electrons around the central atom\n- Elements: Be (4 e⁻), B (6 e⁻), Al (6 e⁻)\n- Example: BF₃ — boron has only 6 electrons\n\n**2. Expanded Octets** — more than 8 electrons around the central atom\n- Only elements in **Period 3 and beyond** (they have empty d orbitals)\n- Examples: PCl₅ (10 e⁻), SF₆ (12 e⁻), XeF₂ (10 e⁻)\n- Elements from Period 2 (C, N, O, F) can **NEVER** exceed 8\n\n**3. Odd-Electron Species** — molecules with an odd number of total electrons\n- At least one atom cannot have an octet\n- Examples: NO (11 e⁻), NO₂ (17 e⁻)\n- These are called **free radicals**\n\nRecognizing which exception applies is a critical AP Chemistry skill.\n\n> 🔑 **Key Concept:** The three octet rule exceptions are: incomplete octets (Be, B, Al), expanded octets (Period 3+ elements), and odd-electron species (free radicals).
+
+**Part 6 of 7 — Problem-Solving Workshop**
+
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'ls-6-2',
@@ -32,8 +49,8 @@ export const chemLewisStructuresFormalChargePart6Data = {
     {
       id: 'ls-6-4',
       type: 'text',
-      title: 'Expanded Octets: PCl₅ and SF₆',
-      content: `Elements in **Period 3 and beyond** can accommodate more than 8 electrons because they have access to empty **d orbitals**.\n\n**PCl₅ (Phosphorus Pentachloride):**\n- Total valence e⁻: 5 + 5 × 7 = 40\n- P forms 5 single bonds to Cl (uses 10 e⁻)\n- Each Cl gets 3 lone pairs (30 e⁻)\n- P has **10 electrons** around it — expanded octet!\n- Geometry: trigonal bipyramidal\n\n**SF₆ (Sulfur Hexafluoride):**\n- Total valence e⁻: 6 + 6 × 7 = 48\n- S forms 6 single bonds to F (uses 12 e⁻)\n- Each F gets 3 lone pairs (36 e⁻)\n- S has **12 electrons** around it — expanded octet!\n- Geometry: octahedral\n\n**Critical rule for the AP exam:**\nOnly atoms from Period 3+ (P, S, Cl, Br, I, Xe, etc.) can have expanded octets. Period 2 atoms (C, N, O, F) **NEVER** exceed 8 electrons.`
+      title: '📈 Expanded Octets: PCl₅ and SF₆',
+      content: `Elements in **Period 3 and beyond** can accommodate more than 8 electrons because they have access to empty **d orbitals**.\n\n**PCl₅ (Phosphorus Pentachloride):**\n- Total valence e⁻: 5 + 5 × 7 = 40\n- P forms 5 single bonds to Cl (uses 10 e⁻)\n- Each Cl gets 3 lone pairs (30 e⁻)\n- P has **10 electrons** around it — expanded octet!\n- Geometry: trigonal bipyramidal\n\n**SF₆ (Sulfur Hexafluoride):**\n- Total valence e⁻: 6 + 6 × 7 = 48\n- S forms 6 single bonds to F (uses 12 e⁻)\n- Each F gets 3 lone pairs (36 e⁻)\n- S has **12 electrons** around it — expanded octet!\n- Geometry: octahedral\n\n**Critical rule for the AP exam:**\nOnly atoms from Period 3+ (P, S, Cl, Br, I, Xe, etc.) can have expanded octets. Period 2 atoms (C, N, O, F) **NEVER** exceed 8 electrons.\n\n> ⚠️ **Warning:** Only atoms from Period 3 and beyond can have expanded octets. Period 2 elements (C, N, O, F) can NEVER exceed 8 electrons — this is a common AP exam trap!`
     },
     {
       id: 'ls-6-5',
@@ -43,22 +60,22 @@ export const chemLewisStructuresFormalChargePart6Data = {
       exercise: {
         inputs: [
           {
-            label: 'Total valence electrons in PCl₅',
+            label: '**1.** Total valence electrons in PCl₅',
             correctAnswer: '40',
             explanation: 'P has 5 and each Cl has 7. Total = 5 + 5(7) = 5 + 35 = 40.'
           },
           {
-            label: 'How many electrons surround phosphorus in PCl₅?',
+            label: '**2.** How many electrons surround phosphorus in PCl₅?',
             correctAnswer: '10',
             explanation: 'Phosphorus forms 5 bonds × 2 electrons = 10 electrons around P. This exceeds the octet.'
           },
           {
-            label: 'Total valence electrons in SF₆',
+            label: '**3.** Total valence electrons in SF₆',
             correctAnswer: '48',
             explanation: 'S has 6 and each F has 7. Total = 6 + 6(7) = 6 + 42 = 48.'
           },
           {
-            label: 'How many electrons surround sulfur in SF₆?',
+            label: '**4.** How many electrons surround sulfur in SF₆?',
             correctAnswer: '12',
             explanation: 'Sulfur forms 6 bonds × 2 electrons = 12 electrons around S. This is an expanded octet with 12 electrons.'
           }
@@ -68,7 +85,7 @@ export const chemLewisStructuresFormalChargePart6Data = {
     {
       id: 'ls-6-6',
       type: 'text',
-      title: 'Odd-Electron Species (Free Radicals)',
+      title: '🧪 Odd-Electron Species (Free Radicals)',
       content: `When a molecule has an **odd number** of total valence electrons, it\'s impossible for every atom to have an octet. At least one atom will have an unpaired electron.\n\n**Example: NO (Nitric Oxide)**\n- Total valence e⁻: 5 + 6 = 11 (odd!)\n- Best Lewis structure: :N̈=Ö· (with an unpaired electron on N)\n- Nitrogen has 7 electrons around it — one short of an octet\n\n**Example: NO₂ (Nitrogen Dioxide)**\n- Total valence e⁻: 5 + 2 × 6 = 17 (odd!)\n- The unpaired electron sits on nitrogen\n- This is why NO₂ is a reactive, brown gas\n\n**Properties of free radicals:**\n- Extremely reactive (they want to pair that lone electron)\n- Often colored (absorb visible light)\n- Paramagnetic (attracted to magnetic fields due to unpaired electrons)\n- Many are important in atmospheric chemistry and biology\n\nOn the AP exam, if you count an odd number of total electrons, immediately recognize it as a radical species.`
     },
     {

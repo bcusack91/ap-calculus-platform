@@ -8,7 +8,26 @@ export const chemTypesOfChemicalBondsPart3Data = {
 
 **Part 3 of 7 — The Sea of Electrons**
 
-We've covered ionic bonds (electron transfer) and covalent bonds (electron sharing). Now we turn to the third major bond type: **metallic bonds**. This model explains the unique properties of metals — conductivity, malleability, luster, and more.`
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| The Model |
+| What Holds It Together? |
+| Metallic Bond Strength |
+| Example Comparison |
+| Electrical Conductivity |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'cb3-sea-model',
@@ -32,6 +51,8 @@ In a metallic solid, atoms are packed closely together in a regular arrangement.
 ### What Holds It Together?
 
 The metallic bond is the **electrostatic attraction** between the positively charged metal cations and the delocalized valence electrons. This is a **non-directional** interaction — unlike covalent bonds, which are localized between specific atom pairs.
+
+> 💡 **Tip:** Think of the "electron sea" as a glue of negative charge holding all the positive metal cations together — it’s non-directional, so it works equally in all directions.
 
 
 ---
@@ -58,7 +79,9 @@ Metallic bond strength depends on:
 | Al | 3 | 660 °C | Strong |
 | Fe | variable (d-electrons) | 1538 °C | Very strong |
 
-Metals with more valence electrons and smaller ionic radii tend to have **stronger** metallic bonds and **higher** melting points.`
+Metals with more valence electrons and smaller ionic radii tend to have **stronger** metallic bonds and **higher** melting points.
+
+> 🔑 **Key Concept:** Metallic bond strength increases with more valence electrons, smaller cation size, and higher cation charge.`
     },
     {
       id: 'cb3-model-quiz',

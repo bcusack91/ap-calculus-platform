@@ -4,13 +4,30 @@ export const chemIntegratedRateLawsPart2Data = {
     {
       id: 'ir2-intro',
       type: 'text' as const,
-      content: `
-# 📉 First-Order Integrated Rate Law
+      content: `# 📉 First-Order Integrated Rate Law
 
 **Part 2 of 7 — Exponential Decay**
 
-First-order reactions are the most common type in chemistry. Radioactive decay, many decomposition reactions, and most biochemical processes follow first-order kinetics. The math involves logarithms, and the behavior is **exponential decay**.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Derivation |
+| Linear Form: $\\ln[A]$ vs $t$ |
+| 📌 First-Order Half-Life |
+| Connection to Radioactive Decay |
+| 📌 Useful Ratio Form |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ir2-derivation',
@@ -49,9 +66,7 @@ $$\\boxed{[A] = [A]_0 e^{-kt}}$$
 
 ---
 
-### Key Feature
-
-A plot of $\\ln[A]$ vs $t$ is **linear** for a first-order reaction. The slope equals $-k$.
+> 🔑 **Key Concept:** A plot of $\\ln[A]$ vs $t$ is **linear** for a first-order reaction. The slope equals $-k$.
       `
     },
     {
@@ -117,9 +132,7 @@ $$\\boxed{t_{1/2} = \\frac{0.693}{k}}$$
 
 ---
 
-### The Most Important Feature
-
-The half-life of a first-order reaction is **independent of initial concentration**.
+> 🔑 **Key Concept:** The half-life of a first-order reaction is **independent of initial concentration**.
 
 This means:
 - Every half-life has the **same duration**
@@ -201,7 +214,7 @@ A first-order reaction has $k = 0.0100$ s⁻¹ and $[A]_0 = 2.00$ M.
       content: `
 ## 📌 Useful Ratio Form
 
-Often you need to find how much reactant remains at time $t$ without knowing $[A]_0$ explicitly:
+> 💡 **Tip:** The ratio form lets you calculate the fraction remaining without knowing $[A]_0$ explicitly — very useful on the AP exam!
 
 $$\\ln\\frac{[A]_t}{[A]_0} = -kt$$
 

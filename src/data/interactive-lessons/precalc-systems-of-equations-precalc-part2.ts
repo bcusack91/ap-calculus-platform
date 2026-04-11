@@ -2,186 +2,197 @@ export const precalcSystemsPart2Data = {
   topicSlug: 'systems-of-equations-precalc',
   sections: [
     {
-      id: 'precalc-systems-of-equations-precalc-p2-s1-intro',
+      id: 'p2-intro',
       type: 'text' as const,
       content: `
-      ## Systems of Equations: Substitution method
-      
-      **Part 2 of 7**
-      
-      This part focuses on isolating variables efficiently. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **consistent system**: system with at least one solution
-      - **inconsistent system**: system with no common solution
-      - **dependent system**: equations represent same relation and infinitely many solutions
-      
-      
-      ### Worked Example
-      Part 2 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📊 Systems of Three Variables
+
+**Part 2 of 7**
+
+### 3×3 Systems
+
+$$\\begin{cases} x + y + z = 6 \\\\ 2x - y + z = 3 \\\\ x + 2y - z = 5 \\end{cases}$$
+
+A solution is an **ordered triple** $(x, y, z)$ — a point in 3D space.
+
+### Method: Systematic Elimination
+
+1. **Choose a variable** to eliminate first (pick the easiest)
+2. **Combine pairs** of equations to get TWO equations in TWO variables
+3. **Solve the 2×2 system**
+4. **Back-substitute** to find the third variable
+
+### Geometrically
+
+- Each equation represents a **plane** in 3D
+- The solution is where all three planes intersect
+- Possibilities: one point, a line, a plane, or no intersection
       `
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p2-s2-mcq-core',
+      id: 'p2-example',
+      type: 'text' as const,
+      content: `
+## 📝 Worked Example
+
+$$\\begin{cases} x + y + z = 6 \\quad (1) \\\\ 2x - y + z = 3 \\quad (2) \\\\ x + 2y - z = 5 \\quad (3) \\end{cases}$$
+
+**Eliminate $z$**: add (1) and (3):
+$$(x+y+z)+(x+2y-z) = 6+5 \\implies 2x+3y = 11 \\quad (A)$$
+
+Add (2) and (3):
+$$(2x-y+z)+(x+2y-z) = 3+5 \\implies 3x+y = 8 \\quad (B)$$
+
+**Solve (A) and (B)**:
+From (B): $y = 8-3x$. Sub into (A):
+$$2x+3(8-3x)=11 \\implies 2x+24-9x=11 \\implies -7x=-13 \\implies x = \\frac{13}{7}$$
+
+Hmm, ugly numbers. Let's try a cleaner system for practice.
+
+### Cleaner Example
+
+$$\\begin{cases} x+y+z=6 \\\\ x-y+z=2 \\\\ 2x+y-z=1 \\end{cases}$$
+
+Add eq1+eq2: $2x+2z=8 \\implies x+z=4$.
+Add eq2+eq3: $3x=3 \\implies x=1$. Then $z=3$, $y=2$.
+
+**Solution**: $(1, 2, 3)$ ✓
+      `
+    },
+    {
+      id: 'p2-special',
+      type: 'text' as const,
+      content: `
+## ⚠️ Special Cases in 3D
+
+### No Solution (Inconsistent)
+
+$$\\begin{cases} x+y+z=1 \\\\ x+y+z=3 \\\\ 2x+y-z=0 \\end{cases}$$
+
+Eq1 and eq2 say $x+y+z$ equals both 1 and 3 — contradiction!
+
+### Infinitely Many (Dependent)
+
+$$\\begin{cases} x+y+z=4 \\\\ 2x+2y+2z=8 \\\\ x-y+z=0 \\end{cases}$$
+
+Eq2 = 2×Eq1, so we really have only 2 independent equations in 3 unknowns → infinite solutions (a line).
+
+### Application: Curve Fitting
+
+Find the quadratic $y = ax^2+bx+c$ through $(1,6), (2,11), (3,18)$:
+
+$$\\begin{cases} a+b+c=6 \\\\ 4a+2b+c=11 \\\\ 9a+3b+c=18 \\end{cases}$$
+
+Solving: $a=1, b=2, c=3 \\implies y=x^2+2x+3$.
+      `
+    },
+    {
+      id: 'p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**3×3 Systems Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of consistent system.',
-            options: [
-              'replace one variable expression into another equation',
-              'system with at least one solution',
-              'equations represent same relation and infinitely many solutions',
-              'system with no common solution'
-            ],
-            correctAnswer: 1,
-            explanation: 'consistent system is defined as: system with at least one solution.'
+            question: 'Solve: $\\begin{cases} x+y=5 \\\\ y+z=7 \\\\ x+z=6 \\end{cases}$. What is $x+y+z$?',
+            options: ['$9$', '$18$', '$12$', '$6$'],
+            correctAnswer: 0,
+            explanation: 'Add all three: $2(x+y+z)=18 \\implies x+y+z=9$.'
           },
           {
-            question: 'In isolating variables efficiently, which expression is the best starting model?',
-            options: [
-              '$x=\\frac{c_1b_2-c_2b_1}{\\Delta}$',
-              '$\\Delta=a_1b_2-a_2b_1$',
-              '$y=\\frac{a_1c_2-a_2c_1}{\\Delta}$',
-              '$\\begin{cases}a_1x+b_1y=c_1\\\\a_2x+b_2y=c_2\\end{cases}$'
-            ],
-            correctAnswer: 1,
-            explanation: 'Use $\\Delta=a_1b_2-a_2b_1$ first, then substitute known quantities from the prompt.'
+            question: 'From the above, $x$ = ?',
+            options: ['$2$', '$3$', '$4$', '$5$'],
+            correctAnswer: 0,
+            explanation: '$x+y+z=9$ and $y+z=7 \\implies x=2$.'
+          },
+          {
+            question: 'A 3×3 system with 2 identical equations has:',
+            options: ['One solution', 'No solution', 'Infinitely many', 'Need more info'],
+            correctAnswer: 3,
+            explanation: 'Depends on the third equation — could be a unique point, a line, or inconsistent.'
           }
         ]
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p2-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Determinant | $\Delta=a_1b_2-a_2b_1$ | uniqueness criterion |
-      | Cramer's x | $x=\\frac{c_1b_2-c_2b_1}{\Delta}$ | explicit solution form |
-      | Cramer's y | $y=\\frac{a_1c_2-a_2c_1}{\Delta}$ | explicit solution form |
-      | Linear system | $\\begin{cases}a_1x+b_1y=c_1\\a_2x+b_2y=c_2\end{cases}$ | two-variable framework |
-      
-      ### Common pitfalls
-      - Arithmetic sign slips in elimination often flip outcomes.
-      - State whether the system has one, none, or infinitely many solutions.
-      - Parallel lines in graph form indicate no solution.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-systems-of-equations-precalc-p2-s4-input',
+      id: 'p2-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Solving Systems**
-      
-      1) Solve for $x$: $x+y=10$, $x-y=2$.
-      2) Solve for $y$: $2x+3y=12$, $x-y=1$.
-      3) Compute determinant of $\\begin{bmatrix}2&1\\5&3\end{bmatrix}$.
+**Solve** 🧮
+
+$\\begin{cases} x+y+z=10 \\\\ x-y+z=4 \\\\ x+y-z=2 \\end{cases}$
+
+**1)** $x$ = ?
+
+**2)** $y$ = ?
+
+**3)** $z$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6', '2', '1'],
-        hint1: 'Add the two equations to eliminate $y$.',
-        hint2: 'Use substitution from $x=y+1$.',
-        hint3: 'Use $ad-bc$ for the determinant.',
-        explanation: 'The system gives $x=6$ and $y=2$, with determinant 1 confirming uniqueness.'
+        correctAnswers: ['3', '3', '4'],
+        hint1: 'Add eq1+eq2: $2x+2z=14 \\implies x+z=7$.',
+        hint2: 'Add eq1+eq3: $2x+2y=12 \\implies x+y=6$.',
+        hint3: 'From eq2+eq3: $2x=6 \\implies x=3$. Then $y=3, z=4$.',
+        explanation: '$x=3, y=3, z=4$. Verify: $3+3+4=10$ ✓, $3-3+4=4$ ✓, $3+3-4=2$ ✓.'
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p2-s5-dropdown',
+      id: 'p2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**3D Systems Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'consistent system',
-            options: ['equations represent same relation and infinitely many solutions', 'system with no common solution', 'replace one variable expression into another equation', 'system with at least one solution']
+            label: 'Three planes can intersect at:',
+            options: ['Only a point', 'A point, line, or plane', 'Only a line', 'Exactly two points'],
+            correctAnswer: 1
           },
           {
-            label: 'inconsistent system',
-            options: ['system with no common solution', 'replace one variable expression into another equation', 'combine equations to remove a variable', 'equations represent same relation and infinitely many solutions']
+            label: 'To solve a 3×3 system, first reduce to:',
+            options: ['A 1×1 system', 'A 2×2 system', 'A 4×4 system', 'A graph'],
+            correctAnswer: 1
           },
           {
-            label: 'dependent system',
-            options: ['combine equations to remove a variable', 'matrix containing variable coefficients', 'equations represent same relation and infinitely many solutions', 'replace one variable expression into another equation']
+            label: 'Finding a quadratic through 3 points requires:',
+            options: ['2 equations', '3 equations', '4 equations', '1 equation'],
+            correctAnswer: 1
+          },
+          {
+            label: 'If elimination produces $0 = 5$:',
+            options: ['Unique solution', 'Infinite solutions', 'No solution', 'Error in work'],
+            correctAnswer: 2
           }
         ],
-        correctAnswers: ['system with at least one solution', 'system with no common solution', 'equations represent same relation and infinitely many solutions'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: consistent system, inconsistent system, and dependent system align with their exact definitions used in this part.'
+        correctAnswers: ['A point, line, or plane', 'A 2×2 system', '3 equations', 'No solution'],
+        hint1: 'Think about geometric possibilities.',
+        hint2: 'Eliminate one variable to reduce dimension.',
+        hint3: '$y = ax^2+bx+c$ has 3 unknowns.',
+        explanation: 'Planes: point/line/plane. Reduce 3×3 → 2×2. Quadratic: 3 unknowns, 3 equations. $0=5$: inconsistent.'
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p2-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to consistent system, inconsistent system, and dependent system so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-systems-of-equations-precalc-p2-s7-mcq-applied',
+      id: 'p2-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is isolating variables efficiently. Which term best anchors the next reasoning step if the key idea is: replace one variable expression into another equation?',
-            options: [
-              'inconsistent system',
-              'dependent system',
-              'substitution',
-              'consistent system'
-            ],
-            correctAnswer: 2,
-            explanation: 'substitution matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Find the quadratic through $(0,1), (1,4), (2,11)$: what is $a$ in $y=ax^2+bx+c$?',
+            options: ['$1$', '$2$', '$3$', '$4$'],
+            correctAnswer: 1,
+            explanation: '$c=1$. $a+b+1=4 \\implies a+b=3$. $4a+2b+1=11 \\implies 4a+2b=10 \\implies 2a+b=5$. Subtract: $a=2$.'
           },
           {
-            question: 'A student is solving a mixed systems of equations prompt. Which term best anchors the next reasoning step if the key idea is: combine equations to remove a variable?',
-            options: [
-              'substitution',
-              'dependent system',
-              'coefficient matrix',
-              'elimination'
-            ],
-            correctAnswer: 3,
-            explanation: 'elimination matches that description and keeps the model-to-interpretation chain consistent.'
+            question: '$\\begin{cases} 2x+y+z=7 \\\\ x+2y+z=8 \\\\ x+y+2z=9 \\end{cases}$: by symmetry, what is $x$?',
+            options: ['$1$', '$2$', '$3$', '$4$'],
+            correctAnswer: 0,
+            explanation: 'Add all: $4(x+y+z)=24 \\implies x+y+z=6$. Eq1: $x+(x+y+z-x)+z=7$... Actually: $(x+y+z)+x=7 \\implies x=1$.'
           }
         ]
       }

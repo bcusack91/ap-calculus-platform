@@ -8,7 +8,26 @@ export const chemPeriodicTrendsPart4Data = {
 
 **Part 4 of 7 — How Much Do Atoms Want More Electrons?**
 
-While ionization energy measures how hard it is to **remove** an electron, electron affinity measures the energy change when an atom **gains** an electron. Together, these properties explain why some elements form cations and others form anions.`
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| Sign Convention |
+| Example Values (kJ/mol) |
+| Across a Period (Left → Right) |
+| Down a Group (Top → Bottom) |
+| The Fluorine Anomaly |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'pt4-definition',
@@ -17,7 +36,7 @@ While ionization energy measures how hard it is to **remove** an electron, elect
 
 **Electron affinity (EA)** is the energy change that occurs when a gaseous atom gains an electron:
 
-$$X(g) + e^- \\rightarrow X^-(g) \\qquad \\Delta E = EA$$
+$$\\boxed{X(g) + e^- \\rightarrow X^-(g) \\qquad \\Delta E = EA}$$
 
 
 ---
@@ -75,7 +94,9 @@ Electron affinity generally **becomes less negative** (less favorable) down a gr
 
 ### The Fluorine Anomaly
 
-Fluorine's EA (−328 kJ/mol) is **less negative** than chlorine's (−349 kJ/mol). This is because fluorine is so small that adding an electron to its compact $2p$ orbitals creates significant **electron-electron repulsion**. Chlorine's larger $3p$ orbitals accommodate the extra electron more easily.`
+> ⚠️ **Warning:** Fluorine's EA (−328 kJ/mol) is **less negative** than chlorine's (−349 kJ/mol). This is a common AP exam question!
+
+Fluorine is so small that adding an electron to its compact $2p$ orbitals creates significant **electron-electron repulsion**. Chlorine's larger $3p$ orbitals accommodate the extra electron more easily.`
     },
     {
       id: 'pt4-exceptions',
@@ -107,7 +128,7 @@ Full $s$ subshell ($ns^2$). An added electron would go into a higher-energy $p$ 
 
 ### AP Exam Tip
 
-The AP exam often asks you to **explain** why certain elements have unexpectedly low (or positive) electron affinities. Always connect your answer to **electron configuration stability** (filled or half-filled subshells).`
+> 💡 **Tip:** The AP exam often asks you to **explain** why certain elements have unexpectedly low (or positive) electron affinities. Always connect your answer to **electron configuration stability** (filled or half-filled subshells).`
     },
     {
       id: 'pt4-concept-quiz',
@@ -194,9 +215,9 @@ The AP exam often asks you to **explain** why certain elements have unexpectedly
       type: 'input-box' as const,
       content: `### Practice
 
-1. Of the following — Na, S, Cl, Ar — which element has the most negative electron affinity? (Type the symbol.)
+**1.** Of the following — Na, S, Cl, Ar — which element has the most negative electron affinity? (Type the symbol.)
 
-2. An element in Period 2 has a near-zero electron affinity and a half-filled $p$ subshell. What is this element? (Type the symbol.)`,
+**2.** An element in Period 2 has a near-zero electron affinity and a half-filled $p$ subshell. What is this element? (Type the symbol.)`,
       exercise: {
         inputs: [
           {

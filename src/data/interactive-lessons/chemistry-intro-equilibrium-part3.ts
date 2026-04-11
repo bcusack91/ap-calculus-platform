@@ -4,13 +4,30 @@ export const chemIntroEquilibriumPart3Data = {
     {
       id: 'ie3-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Heterogeneous Equilibrium
+      content: `# ⚖️ Heterogeneous Equilibrium
 
 **Part 3 of 7 — Solids and Liquids in Equilibrium Expressions**
 
-When the reactants and products are in different phases (solid, liquid, gas, aqueous), the equilibrium is called **heterogeneous**. The key rule: pure solids and pure liquids are **excluded** from the equilibrium expression.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🤔 Why Exclude Solids and Liquids? |
+| Physical Reasoning |
+| Example 1: Decomposition of Calcium Carbonate |
+| Example 2: Water Equilibrium |
+| 📌 Important Clarifications |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ie3-why-exclude',
@@ -23,6 +40,8 @@ The equilibrium constant is defined in terms of **activities**, not concentratio
 - For gases: activity ≈ partial pressure (in atm)
 - For dissolved species: activity ≈ molar concentration (in M)
 - For pure solids and pure liquids: activity = **1** (by definition)
+
+> 🔑 **Key Concept:** Pure solids and liquids have an activity of 1, so they don\'t affect the value of $K$ and are left out of the expression.
 
 Since pure solids and liquids have an activity of 1, they don\'t affect the value of $K$ and are left out.
 
@@ -51,7 +70,7 @@ Both CaCO₃ and CaO are solids — they are excluded. Only the gaseous CO₂ ap
 
 $$\\text{H}_2\\text{O}(l) \\rightleftharpoons \\text{H}^+(aq) + \\text{OH}^-(aq)$$
 
-$$K_w = [\\text{H}^+][\\text{OH}^-] = 1.0 \\times 10^{-14} \\text{ at 25°C}$$
+$$\boxed{K_w = [\text{H}^+][\text{OH}^-] = 1.0 \times 10^{-14} \text{ at 25°C}}$$
 
 Liquid water is excluded from the expression.
       `
@@ -108,7 +127,7 @@ Liquid water is excluded from the expression.
 
 ### Solids Must Still Be Present!
 
-Even though solids and liquids don\'t appear in the $K$ expression, they must still be **present** for the equilibrium to exist.
+> 🔑 **Key Concept:** Even though solids and liquids don\'t appear in the $K$ expression, they must still be **present** for the equilibrium to exist.
 
 For $\\text{CaCO}_3(s) \\rightleftharpoons \\text{CaO}(s) + \\text{CO}_2(g)$:
 - If all the CaCO₃ decomposes (none left), the system is NOT at equilibrium
@@ -129,11 +148,14 @@ As long as some solid is present:
 
 ### Aqueous Species ARE Included
 
-Don\'t confuse dissolved species with liquids:
+> ⚠️ **Warning:** Don\'t confuse dissolved species with liquids! $\text{H}_2\text{O}(l)$ is excluded, but $\text{Na}^+(aq)$ is included.
+
 - $\\text{H}_2\\text{O}(l)$ → pure liquid → **excluded**
 - $\\text{Na}^+(aq)$ → dissolved species → **included**
 - $\\text{NaCl}(s)$ → solid → **excluded**
 - $\\text{NaCl}(aq)$ → dissolved → **included**
+
+> 💡 **Tip:** Remember: **G**ases and **A**queous species — they **go ahead** into the $K$ expression. **S**olids and **L**iquids — they **stay out**!
       `
     },
     {

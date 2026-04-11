@@ -2,186 +2,228 @@ export const precalcLogarithmicPart1Data = {
   topicSlug: 'logarithmic-functions-precalc',
   sections: [
     {
-      id: 'precalc-logarithmic-functions-precalc-p1-s1-intro',
+      id: 'p1-intro',
       type: 'text' as const,
       content: `
-      ## Logarithmic Functions: Log definition and inverse relation
-      
-      **Part 1 of 7**
-      
-      This part focuses on decoding exponential growth from output targets. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **logarithm**: exponent needed to produce a value from a base
-      - **inverse relation**: log and exponential functions undo each other
-      - **product rule**: $\log_b(xy)=\log_b x+\log_b y$
-      
-      
-      ### Worked Example
-      Part 1 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📖 Logarithmic Functions — Definition & Inverse Relation
+
+**Part 1 of 7**
+
+A logarithm answers: **"What exponent do I need?"**
+
+$$\\boxed{\\log_b x = y \\iff b^y = x}$$
+
+> "$\\log$ base $b$ of $x$ equals $y$" means "$b$ raised to $y$ gives $x$."
+
+### The Three Standard Bases
+
+| Notation | Name | Base | Calculator Key |
+|:---------|:-----|:-----|:---------------|
+| $\\log x$ | Common log | $10$ | **LOG** |
+| $\\ln x$ | Natural log | $e \\approx 2.718$ | **LN** |
+| $\\log_b x$ | General log | $b$ | Use change of base |
+
+### Quick Conversion Examples
+
+| Exponential Form | Logarithmic Form |
+|:-----------------|:-----------------|
+| $2^5 = 32$ | $\\log_2 32 = 5$ |
+| $10^3 = 1000$ | $\\log 1000 = 3$ |
+| $e^1 = e$ | $\\ln e = 1$ |
+| $5^0 = 1$ | $\\log_5 1 = 0$ |
+| $3^{-2} = \\frac{1}{9}$ | $\\log_3 \\frac{1}{9} = -2$ |
       `
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p1-s2-mcq-core',
+      id: 'p1-inverse',
+      type: 'text' as const,
+      content: `
+## 🔄 Logs and Exponentials Are Inverses
+
+If $f(x) = b^x$, then $f^{-1}(x) = \\log_b x$.
+
+**Inverse Properties — they undo each other:**
+
+$$\\boxed{\\log_b(b^x) = x \\quad \\text{and} \\quad b^{\\log_b x} = x}$$
+
+| Expression | Simplifies To | Why |
+|:-----------|:-------------|:----|
+| $\\log_2(2^7)$ | $7$ | Log undoes the exponential |
+| $10^{\\log 50}$ | $50$ | Exponential undoes the log |
+| $\\ln(e^{-3})$ | $-3$ | $\\ln$ undoes $e^x$ |
+| $e^{\\ln 12}$ | $12$ | $e^x$ undoes $\\ln$ |
+
+### Graphical Connection
+
+The graph of $y = \\log_b x$ is the **reflection** of $y = b^x$ over the line $y = x$.
+
+| Feature | $y = b^x$ (with $b > 1$) | $y = \\log_b x$ |
+|:--------|:-------------------------|:----------------|
+| Domain | $(-\\infty, \\infty)$ | $(0, \\infty)$ |
+| Range | $(0, \\infty)$ | $(-\\infty, \\infty)$ |
+| Asymptote | $y = 0$ (horizontal) | $x = 0$ (vertical) |
+| Passes through | $(0, 1)$ | $(1, 0)$ |
+| Another point | $(1, b)$ | $(b, 1)$ |
+      `
+    },
+    {
+      id: 'p1-worked-example',
+      type: 'text' as const,
+      content: `
+## 📝 Worked Example: Converting & Evaluating
+
+> **Evaluate $\\log_4 64$ without a calculator.**
+
+**Step 1:** Rewrite as an equation: $\\log_4 64 = x$ means $4^x = 64$
+
+**Step 2:** Express both sides as powers of $4$:
+- $4^1 = 4$
+- $4^2 = 16$  
+- $4^3 = 64$ ✔
+
+$$\\boxed{\\log_4 64 = 3}$$
+
+### Pattern for Evaluating Logs Mentally
+
+| Step | Action |
+|:-----|:-------|
+| 1 | Set $\\log_b x = ?$ → rewrite as $b^? = x$ |
+| 2 | Find common base or multiply repeatedly |
+| 3 | Match exponents |
+
+### Key Values to Memorize
+
+| $\\log_b 1 = 0$ | Because $b^0 = 1$ for any base |
+| $\\log_b b = 1$ | Because $b^1 = b$ |
+| $\\log_b b^n = n$ | Inverse property |
+      `
+    },
+    {
+      id: 'p1-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of logarithm.',
+            question: 'What is $\\log_3 81$?',
             options: [
-              '$\\log_b(xy)=\\log_b x+\\log_b y$',
-              'exponent needed to produce a value from a base',
-              'log and exponential functions undo each other',
-              '$\\log_b(x/y)=\\log_b x-\\log_b y$'
+              '$3$',
+              '$4$',
+              '$27$',
+              '$9$'
             ],
             correctAnswer: 1,
-            explanation: 'logarithm is defined as: exponent needed to produce a value from a base.'
+            explanation: '$3^4 = 81$, so $\\log_3 81 = 4$.'
           },
           {
-            question: 'In decoding exponential growth from output targets, which expression is the best starting model?',
+            question: 'Which is the inverse function of $f(x) = 5^x$?',
             options: [
-              '$\\log_b(xy)=\\log_b x+\\log_b y$',
-              '$\\log_b x=\\frac{\\log_k x}{\\log_k b}$',
-              '$\\log_b(x^k)=k\\log_b x$',
-              '$\\log_b x = y \\iff b^y=x$'
+              '$f^{-1}(x) = x^5$',
+              '$f^{-1}(x) = \\frac{1}{5^x}$',
+              '$f^{-1}(x) = \\log_5 x$',
+              '$f^{-1}(x) = 5\\log x$'
             ],
-            correctAnswer: 3,
-            explanation: 'Use $\\log_b x = y \\iff b^y=x$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 2,
+            explanation: 'The inverse of $b^x$ is $\\log_b x$. So the inverse of $5^x$ is $\\log_5 x$.'
+          },
+          {
+            question: 'Simplify $e^{\\ln 7}$.',
+            options: [
+              '$\\ln 7$',
+              '$7e$',
+              '$7$',
+              '$e^7$'
+            ],
+            correctAnswer: 2,
+            explanation: '$e^x$ and $\\ln x$ are inverses, so $e^{\\ln 7} = 7$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p1-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Definition | $\log_b x = y \iff b^y=x$ | inverse conversion |
-      | Product | $\log_b(xy)=\log_b x+\log_b y$ | expression expansion |
-      | Power | $\log_b(x^k)=k\log_b x$ | exponent extraction |
-      | Change of base | $\log_b x=\\frac{\log_k x}{\log_k b}$ | calculator evaluation |
-      
-      ### Common pitfalls
-      - Applying log rules across sums, like $\log(x+y)$, is invalid.
-      - Always test candidate solutions against positive-input domain restrictions.
-      - Keep base notation explicit when combining terms.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-logarithmic-functions-precalc-p1-s4-input',
+      id: 'p1-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Logarithm Computation**
-      
-      1) Evaluate $\log_2 32$.
-      2) Solve $\log_{10}(x)=2$.
-      3) Evaluate $\ln(e^4)$.
+**Evaluate These Logs** 🧮
+
+**1)** $\\log_5 125 = $ ? (e.g., $\\log_2 64$: since $2^6 = 64$, the answer is $6$)
+
+**2)** $\\log_{10} 0.001 = $ ? (e.g., $\\log_{10} 0.01$: since $10^{-2} = 0.01$, the answer is $-2$)
+
+**3)** $\\ln(e^5) = $ ? (e.g., $\\ln(e^{-2})$: by inverse property, the answer is $-2$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5', '100', '4'],
-        hint1: 'Ask: $2^{?}=32$.',
-        hint2: 'Rewrite in exponential form.',
-        hint3: '$\\ln$ and $e^x$ are inverse operations.',
-        explanation: 'Outputs are 5, 100, and 4 by inverse log-exponential conversion.'
+        correctAnswers: ['3', '-3', '5'],
+        hint1: '$5^? = 125$. Try $5^3$.',
+        hint2: '$10^? = 0.001 = 10^{-3}$.',
+        hint3: 'Inverse property: $\\ln(e^x) = x$.',
+        explanation: '1) $5^3 = 125$, so $\\log_5 125 = 3$. 2) $10^{-3} = 0.001$, so $\\log 0.001 = -3$. 3) By inverse property, $\\ln(e^5) = 5$.'
       }
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p1-s5-dropdown',
+      id: 'p1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Log Fundamentals** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'logarithm',
-            options: ['exponent needed to produce a value from a base', '$\\log_b(xy)=\\log_b x+\\log_b y$', '$\\log_b(x/y)=\\log_b x-\\log_b y$', 'log and exponential functions undo each other']
+            label: '$\\log_b 1$ equals',
+            options: ['$0$', '$1$', '$b$', 'undefined']
           },
           {
-            label: 'inverse relation',
-            options: ['$\\log_b(x^k)=k\\log_b x$', 'log and exponential functions undo each other', '$\\log_b(x/y)=\\log_b x-\\log_b y$', '$\\log_b(xy)=\\log_b x+\\log_b y$']
+            label: 'The domain of $y = \\log_b x$ is',
+            options: ['$(-\\infty, \\infty)$', '$(0, \\infty)$', '$[0, \\infty)$', '$(1, \\infty)$']
           },
           {
-            label: 'product rule',
-            options: ['$\\log_b(xy)=\\log_b x+\\log_b y$', '$\\log_b(x/y)=\\log_b x-\\log_b y$', 'rewrite logs using convenient computational bases', '$\\log_b(x^k)=k\\log_b x$']
+            label: 'The vertical asymptote of $y = \\log_3 x$ is',
+            options: ['$y = 0$', '$x = 1$', '$x = 0$', '$x = 3$']
+          },
+          {
+            label: '$\\log_b b$ equals',
+            options: ['$0$', '$b$', '$1$', '$\\frac{1}{b}$']
           }
         ],
-        correctAnswers: ['exponent needed to produce a value from a base', 'log and exponential functions undo each other', '$\\log_b(xy)=\\log_b x+\\log_b y$'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: logarithm, inverse relation, and product rule align with their exact definitions used in this part.'
+        correctAnswers: ['$0$', '$(0, \\infty)$', '$x = 0$', '$1$'],
+        hint1: '$b^0 = 1$ for any valid base.',
+        hint2: 'You can only take the log of positive numbers.',
+        hint3: 'The log graph approaches but never touches the $y$-axis.',
+        explanation: '$\\log_b 1 = 0$ (since $b^0 = 1$). Domain is $(0, \\infty)$ (argument must be positive). VA at $x = 0$. $\\log_b b = 1$ (since $b^1 = b$).'
       }
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p1-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to logarithm, inverse relation, and product rule so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-logarithmic-functions-precalc-p1-s7-mcq-applied',
+      id: 'p1-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is decoding exponential growth from output targets. Which term best anchors the next reasoning step if the key idea is: $\\log_b(x/y)=\\log_b x-\\log_b y$?',
+            question: 'Rewrite $2^{-4} = \\frac{1}{16}$ in logarithmic form.',
             options: [
-              'quotient rule',
-              'inverse relation',
-              'logarithm',
-              'product rule'
+              '$\\log_2 \\frac{1}{16} = -4$',
+              '$\\log_{-4} 2 = \\frac{1}{16}$',
+              '$\\log_2 (-4) = \\frac{1}{16}$',
+              '$\\log_{16} 2 = -4$'
             ],
             correctAnswer: 0,
-            explanation: 'quotient rule matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$b^y = x$ becomes $\\log_b x = y$. Here $b = 2$, $y = -4$, $x = \\frac{1}{16}$. So $\\log_2 \\frac{1}{16} = -4$.'
           },
           {
-            question: 'A student is solving a mixed logarithmic functions prompt. Which term best anchors the next reasoning step if the key idea is: $\\log_b(x^k)=k\\log_b x$?',
+            question: 'If $\\log_b 8 = 3$, what is $b$?',
             options: [
-              'change of base',
-              'product rule',
-              'quotient rule',
-              'power rule'
+              '$3$',
+              '$\\frac{8}{3}$',
+              '$2$',
+              '$24$'
             ],
-            correctAnswer: 3,
-            explanation: 'power rule matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 2,
+            explanation: '$\\log_b 8 = 3$ means $b^3 = 8$, so $b = \\sqrt[3]{8} = 2$.'
           }
         ]
       }

@@ -4,13 +4,30 @@ export const chemEquilibriumConstantsPart5Data = {
     {
       id: 'ece5-intro',
       type: 'text' as const,
-      content: `
-# 🔧 Manipulating Equilibrium Constants
+      content: `# 🔧 Manipulating Equilibrium Constants
 
 **Part 5 of 7 — Manipulating $K$**
 
-On the AP exam, you'll need to predict how $K$ changes when you reverse a reaction, multiply coefficients, or add reactions together. These are essential algebraic rules for working with equilibrium expressions.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📏 Three Key Manipulation Rules |
+| Rule 1: Reversing a Reaction |
+| Rule 2: Multiplying Coefficients by $n$ |
+| Rule 3: Adding Reactions (Hess's Law for $K$) |
+| 📏 Combining Multiple Rules |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ece5-rules',
@@ -22,7 +39,7 @@ On the AP exam, you'll need to predict how $K$ changes when you reverse a reacti
 
 If you **reverse** a reaction, the new $K$ is the **reciprocal**:
 
-$$K_{\\text{reverse}} = \\frac{1}{K_{\\text{forward}}}$$
+$$\\boxed{K_{\\text{reverse}} = \\frac{1}{K_{\\text{forward}}}}$$
 
 **Example:** If $\\text{A} \\rightleftharpoons \\text{B}$, $K = 100$
 
@@ -34,7 +51,7 @@ Then $\\text{B} \\rightleftharpoons \\text{A}$, $K^{\\prime} = \\frac{1}{100} = 
 
 If you **multiply** all coefficients by a factor $n$, the new $K$ is raised to that power:
 
-$$K_{\\text{new}} = K^n$$
+$$\\boxed{K_{\\text{new}} = K^n}$$
 
 **Example:** If $\\text{A} \\rightleftharpoons 2\\,\\text{B}$, $K = 4.0$
 
@@ -48,7 +65,7 @@ And $\\frac{1}{2}\\text{A} \\rightleftharpoons \\text{B}$, $K^{\\prime} = 4.0^{1
 
 If you **add** two reactions, the $K$ values are **multiplied**:
 
-$$K_{\\text{overall}} = K_1 \\times K_2$$
+$$\\boxed{K_{\\text{overall}} = K_1 \\times K_2}$$
 
 **Example:**
 - Reaction 1: $\\text{A} \\rightleftharpoons \\text{B}$, $K_1 = 10$  
@@ -111,11 +128,9 @@ AP problems often require you to apply **more than one rule** at a time.
 
 ---
 
-### Example
+> **Problem:** Given $\\text{A}(g) + \\text{B}(g) \\rightleftharpoons \\text{C}(g)$, $K = 8.0$. Find $K$ for: $3\\,\\text{C}(g) \\rightleftharpoons 3\\,\\text{A}(g) + 3\\,\\text{B}(g)$.
 
-Given: $\\text{A}(g) + \\text{B}(g) \\rightleftharpoons \\text{C}(g)$, $K = 8.0$
-
-Find $K$ for: $3\\,\\text{C}(g) \\rightleftharpoons 3\\,\\text{A}(g) + 3\\,\\text{B}(g)$
+> **Solution:**
 
 **Step 1:** Reverse the original reaction:
 

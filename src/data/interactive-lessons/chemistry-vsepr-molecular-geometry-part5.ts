@@ -9,42 +9,36 @@ export const chemVseprMolecularGeometryPart5Data = {
 
 **Part 5 of 7 — From Lewis Structure to 3D Shape**
 
-Follow this systematic process to predict the geometry of any molecule:
+---
 
-### Step 1: Draw the Lewis Structure
-- Count total valence electrons
-- Place bonds and lone pairs
-- Check octets (and expanded octets for Period 3+)
+### Topics in This Part
 
-### Step 2: Identify the Central Atom
-- Usually the least electronegative atom
-- Usually the atom that can form the most bonds
-- Hydrogen and fluorine are NEVER central atoms
+| Section |
+|---------|
+| Step 1: Draw the Lewis Structure |
+| Step 2: Identify the Central Atom |
+| Step 3: Count Electron Domains on the Central Atom |
+| Step 4: Determine Electron Domain Geometry |
+| Step 5: Determine Molecular Geometry |
 
-### Step 3: Count Electron Domains on the Central Atom
-- Count each bond (single, double, or triple) as ONE domain
-- Count each lone pair as ONE domain
-- Sum = **steric number**
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
-### Step 4: Determine Electron Domain Geometry
-| Steric # | Electron Domain Geometry |
-|----------|--------------------------|
-| 2 | Linear |
-| 3 | Trigonal planar |
-| 4 | Tetrahedral |
-| 5 | Trigonal bipyramidal |
-| 6 | Octahedral |
+---
 
-### Step 5: Determine Molecular Geometry
-- Remove lone pairs from the picture
-- The remaining atom positions define the molecular geometry
-- Name the shape based on atom positions only`
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'vg-5-2',
       type: 'text',
       title: 'Worked Example: SO₂',
       content: `## Worked Example: SO₂ (Sulfur Dioxide)
+
+> **Problem:** Predict the molecular geometry of SO₂.
+
+> **Solution:**
 
 ### Step 1: Lewis Structure
 - Total valence electrons: S(6) + 2 × O(6) = 18
@@ -68,13 +62,17 @@ Follow this systematic process to predict the geometry of any molecule:
 
 ### Summary
 
-$$\\text{SO}_2: \\quad \\text{3 e⁻ domains} \\to \\text{trigonal planar (ED)} \\to \\text{bent (molecular)}$$`
+$$\\boxed{\\text{SO}_2: \\quad \\text{3 e⁻ domains} \\to \\text{trigonal planar (ED)} \\to \\text{bent (molecular)}}$$`
     },
     {
       id: 'vg-5-3',
       type: 'text',
       title: 'Worked Example: XeF₄',
       content: `## Worked Example: XeF₄ (Xenon Tetrafluoride)
+
+> **Problem:** Predict the molecular geometry of XeF₄.
+
+> **Solution:**
 
 ### Step 1: Lewis Structure
 - Total valence electrons: Xe(8) + 4 × F(7) = 36
@@ -100,7 +98,7 @@ $$\\text{SO}_2: \\quad \\text{3 e⁻ domains} \\to \\text{trigonal planar (ED)} 
 
 ### Summary
 
-$$\\text{XeF}_4: \\quad \\text{6 e⁻ domains} \\to \\text{octahedral (ED)} \\to \\text{square planar (molecular)}$$`
+$$\\boxed{\\text{XeF}_4: \\quad \\text{6 e⁻ domains} \\to \\text{octahedral (ED)} \\to \\text{square planar (molecular)}}$$`
     },
     {
       id: 'vg-5-4',
@@ -182,7 +180,9 @@ $$\\text{XeF}_4: \\quad \\text{6 e⁻ domains} \\to \\text{octahedral (ED)} \\to
 | 6 | 1 | 5 | Octahedral | Square pyramidal | BrF₅ |
 | 6 | 2 | 4 | Octahedral | Square planar | XeF₄ |
 
-This chart is essential for the AP exam — memorize it!`
+This chart is essential for the AP exam — memorize it!
+
+> 🔑 **Key Concept:** This master chart covers every possible VSEPR molecular geometry. The molecular geometry depends on **both** the steric number and the number of lone pairs.`
     },
     {
       id: 'vg-5-7',

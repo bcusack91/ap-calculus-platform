@@ -2,188 +2,191 @@ export const precalcContinuityPart5Data = {
   topicSlug: 'continuity-precalc',
   sections: [
     {
-      id: 'precalc-continuity-precalc-p5-s1-intro',
+      id: 'p5-intro',
       type: 'text' as const,
       content: `
-      ## Continuity: Intermediate Value Theorem reasoning
-      
-      **Part 5 of 7**
-      
-      This part focuses on guaranteeing a target value is reached. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **infinite discontinuity**: function grows without bound near a point
-      - **one-sided limit**: limit from only the left or only the right
-      - **IVT**: continuous functions on closed intervals take all intermediate values
-      
-      
-      ### Worked Example
-      Part 5 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📊 IVT Applications
+
+**Part 5 of 7**
+
+### Intermediate Value Theorem — Full Statement
+
+If $f$ is continuous on $[a,b]$ and $N$ is any number strictly between $f(a)$ and $f(b)$, then there exists at least one $c \\in (a,b)$ such that $f(c) = N$.
+
+### What You Can Prove with IVT
+
+1. **Existence of roots**: $f(a)$ and $f(b)$ have opposite signs → there's a zero in $(a,b)$
+2. **Existence of specific values**: $f$ must hit every value between $f(a)$ and $f(b)$
+3. **Bisection method**: Narrow down the location of a root
+
+### What IVT Does NOT Tell You
+
+- **How many** solutions exist (just "at least one")
+- **Where exactly** $c$ is (just somewhere in $(a,b)$)
+- Anything about **discontinuous** functions
       `
     },
     {
-      id: 'precalc-continuity-precalc-p5-s2-mcq-core',
+      id: 'p5-roots',
+      type: 'text' as const,
+      content: `
+## Proving Roots Exist
+
+### Example 1: $x^3 + x - 1 = 0$ has a root in $(0, 1)$
+
+Let $f(x) = x^3 + x - 1$.
+- $f(0) = 0 + 0 - 1 = -1 < 0$
+- $f(1) = 1 + 1 - 1 = 1 > 0$
+- $f$ is a polynomial → continuous
+
+By IVT, since $f(0) < 0 < f(1)$, there exists $c \\in (0,1)$ with $f(c) = 0$. ✓
+
+### Example 2: $\\cos x = x$ has a solution
+
+Let $g(x) = \\cos x - x$.
+- $g(0) = 1 - 0 = 1 > 0$
+- $g(\\pi/2) = 0 - \\pi/2 \\approx -1.57 < 0$
+- $g$ is continuous
+
+By IVT, $g(c) = 0$ for some $c \\in (0, \\pi/2)$, meaning $\\cos c = c$.
+
+### Template for IVT Proofs
+
+1. Define $f(x)$ (often rearrange to $f(x) = 0$ form)
+2. State that $f$ is continuous on $[a,b]$ (and why)
+3. Compute $f(a)$ and $f(b)$ → show they have opposite signs (or bracket target)
+4. Conclude by IVT
+      `
+    },
+    {
+      id: 'p5-bisection',
+      type: 'text' as const,
+      content: `
+## The Bisection Method
+
+### Finding Roots Numerically
+
+IVT says a root exists. **Bisection** narrows it down:
+
+### Example: $f(x) = x^2 - 2$ (finding $\\sqrt{2}$)
+
+| Step | Interval | Midpoint $m$ | $f(m)$ | New Interval |
+|:-----|:---------|:------------|:-------|:-------------|
+| 1 | $[1, 2]$ | $1.5$ | $0.25 > 0$ | $[1, 1.5]$ |
+| 2 | $[1, 1.5]$ | $1.25$ | $-0.4375 < 0$ | $[1.25, 1.5]$ |
+| 3 | $[1.25, 1.5]$ | $1.375$ | $-0.109 < 0$ | $[1.375, 1.5]$ |
+| 4 | $[1.375, 1.5]$ | $1.4375$ | $0.066 > 0$ | $[1.375, 1.4375]$ |
+
+After just 4 steps: $\\sqrt{2} \\in (1.375, 1.4375)$. Actual: $1.4142...$
+
+Each step **halves** the interval. After $n$ steps, error $< \\frac{b-a}{2^n}$.
+      `
+    },
+    {
+      id: 'p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**IVT Applications Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of infinite discontinuity.',
-            options: [
-              'rule changes across intervals of the domain',
-              'limit from only the left or only the right',
-              'function grows without bound near a point',
-              'continuous functions on closed intervals take all intermediate values'
-            ],
-            correctAnswer: 2,
-            explanation: 'infinite discontinuity is defined as: function grows without bound near a point.'
+            question: '$f(x) = x^5 - 3x + 1$. $f(0) = 1, f(1) = -1$. IVT guarantees:',
+            options: ['No roots', 'A root in $(0, 1)$', 'Exactly one root', 'Root at $x = 0.5$'],
+            correctAnswer: 1,
+            explanation: 'Sign change ($1 > 0, -1 < 0$) + continuous → at least one root in $(0,1)$.'
           },
           {
-            question: 'In guaranteeing a target value is reached, which expression is the best starting model?',
-            options: [
-              '$\\frac{f(b)-f(a)}{b-a}$',
-              '$\\lim_{x\\to a} f(x) = f(a)$',
-              '$\\lim_{x\\to a^-}f(x)=\\lim_{x\\to a^+}f(x)$',
-              '$\\frac{x^2-c^2}{x-c}=x+c\\;(x\\neq c)$'
-            ],
+            question: 'IVT requires:',
+            options: ['Differentiability', 'Continuity on $[a,b]$', 'Monotonicity', '$f(a) = f(b)$'],
             correctAnswer: 1,
-            explanation: 'Use $\\lim_{x\\to a} f(x) = f(a)$ first, then substitute known quantities from the prompt.'
+            explanation: 'IVT needs continuity on a closed interval. Nothing else.'
+          },
+          {
+            question: 'Bisection halves the interval each step. After 10 steps on $[0,1]$:',
+            options: ['Error < 0.01', 'Error < 0.001', 'Error < 0.0001', 'Error < 0.00001'],
+            correctAnswer: 1,
+            explanation: 'Error $< 1/2^{10} = 1/1024 \\approx 0.00098 < 0.001$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-continuity-precalc-p5-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Continuity test | $\lim_{x\\to a} f(x) = f(a)$ | pointwise verification |
-      | Average rate | $\\frac{f(b)-f(a)}{b-a}$ | bridge to local behavior |
-      | One-sided match | $\lim_{x\\to a^-}f(x)=\lim_{x\\to a^+}f(x)$ | two-sided existence |
-      | Rational hole repair | $\\frac{x^2-c^2}{x-c}=x+c\;(x\\neq c)$ | removable discontinuity cleanup |
-      
-      ### Common pitfalls
-      - Do not classify a vertical asymptote as removable.
-      - For piecewise functions, evaluate left limit, right limit, and value separately.
-      - A defined value at $x=a$ does not guarantee continuity.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-continuity-precalc-p5-s4-input',
+      id: 'p5-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Continuity and Limits**
-      
-      1) Compute $\lim_{x	o 3} (2x^2-x)$. 
-      2) Compute $
-      rac{f(5)-f(2)}{5-2}$ for $f(x)=x^2$.
-      3) Compute $\lim_{x	o 4}
-      rac{x^2-16}{x-4}$.
+**IVT Practice:**
+
+**1)** $f(x) = x^2 - 5$. $f(2) = ?$:
+
+**2)** $f(3) = ?$ for the same function:
+
+**3)** Since $f(2)$ and $f(3)$ have opposite signs, a root of $x^2-5=0$ is between 2 and 3. This root is $\\sqrt{?}$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['15', '7', '8'],
-        hint1: 'Polynomials are continuous, so substitute directly.',
-        hint2: 'Use average rate of change with two function values.',
-        hint3: 'Factor numerator as $(x-4)(x+4)$ before canceling.',
-        explanation: 'Direct substitution gives 15, average rate gives 7, and simplification gives 8.'
+        correctAnswers: ['-1', '4', '5'],
+        hint1: '$4 - 5 = -1$.',
+        hint2: '$9 - 5 = 4$.',
+        hint3: '$x^2 = 5 \\Rightarrow x = \\sqrt{5}$.',
+        explanation: '(1) $f(2) = -1$. (2) $f(3) = 4$. (3) Root is $\\sqrt{5} \\approx 2.236$.'
       }
     },
     {
-      id: 'precalc-continuity-precalc-p5-s5-dropdown',
+      id: 'p5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**IVT Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'infinite discontinuity',
-            options: ['function grows without bound near a point', 'rule changes across intervals of the domain', 'continuous functions on closed intervals take all intermediate values', 'limit from only the left or only the right']
+            label: 'IVT says "at least one $c$" — it doesn\'t say:',
+            options: ['$c$ exists', 'How many $c$ values', '$f$ is continuous', '$N$ is between $f(a)$ and $f(b)$'],
+            correctAnswer: 1
           },
           {
-            label: 'one-sided limit',
-            options: ['limit from only the left or only the right', 'continuous functions on closed intervals take all intermediate values', 'rule changes across intervals of the domain', 'value approached by a function as input approaches a target']
+            label: 'First step in an IVT proof:',
+            options: ['Find the root', 'Verify continuity on $[a,b]$', 'Take the derivative', 'Graph the function'],
+            correctAnswer: 1
           },
           {
-            label: 'IVT',
-            options: ['continuous functions on closed intervals take all intermediate values', 'value approached by a function as input approaches a target', 'limit exists and equals the function value', 'rule changes across intervals of the domain']
+            label: 'Bisection method is based on:',
+            options: ['Newton\'s method', 'IVT (sign change)', 'Taylor series', 'L\'Hôpital\'s Rule'],
+            correctAnswer: 1
+          },
+          {
+            label: 'IVT applied to temperature: body at 98.6°F, room at 70°F. At some time:',
+            options: ['Temp = 150°F', 'Temp = 85°F', 'Temp stays at 98.6°F', 'Temp = 50°F'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['function grows without bound near a point', 'limit from only the left or only the right', 'continuous functions on closed intervals take all intermediate values'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: infinite discontinuity, one-sided limit, and IVT align with their exact definitions used in this part.'
+        correctAnswers: ['How many $c$ values', 'Verify continuity on $[a,b]$', 'IVT (sign change)', 'Temp = 85°F'],
+        hint1: 'IVT doesn\'t guarantee uniqueness.',
+        hint2: 'Always check the hypothesis first.',
+        hint3: 'Bisection relies on sign change → IVT.',
+        explanation: 'IVT: existence not uniqueness. First: check continuity. Bisection = IVT. 85°F is between 70 and 98.6.'
       }
     },
     {
-      id: 'precalc-continuity-precalc-p5-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to infinite discontinuity, one-sided limit, and IVT so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-continuity-precalc-p5-s7-mcq-applied',
+      id: 'p5-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is guaranteeing a target value is reached. Which term best anchors the next reasoning step if the key idea is: rule changes across intervals of the domain?',
-            options: [
-              'IVT',
-              'infinite discontinuity',
-              'one-sided limit',
-              'piecewise function'
-            ],
-            correctAnswer: 3,
-            explanation: 'piecewise function matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Prove $e^x = 3-x$ has a solution. Which function and interval?',
+            options: ['$f(x)=e^x-3+x$ on $[0,1]$', '$f(x)=e^x$ on $[0,3]$', '$f(x)=3-x$ on $[0,1]$', '$f(x)=e^x+x-3$ on $[-1,0]$'],
+            correctAnswer: 0,
+            explanation: '$f(x)=e^x+x-3$. $f(0)=1+0-3=-2<0$. $f(1)=e+1-3\\approx 0.72>0$. Sign change on $[0,1]$.'
           },
           {
-            question: 'A student is solving a mixed continuity prompt. Which term best anchors the next reasoning step if the key idea is: value approached by a function as input approaches a target?',
-            options: [
-              'piecewise function',
-              'continuity at a point',
-              'IVT',
-              'limit'
-            ],
-            correctAnswer: 3,
-            explanation: 'limit matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'A discontinuous function on $[0,1]$: can we apply IVT?',
+            options: ['Yes, always', 'No — IVT requires continuity', 'Only if it\'s monotonic', 'Only at endpoints'],
+            correctAnswer: 1,
+            explanation: 'IVT cannot be applied without continuity — it\'s a required hypothesis.'
           }
         ]
       }

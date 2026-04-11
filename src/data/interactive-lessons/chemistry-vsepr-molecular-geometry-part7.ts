@@ -9,23 +9,20 @@ export const chemVseprMolecularGeometryPart7Data = {
 
 **Part 7 of 7 — Comprehensive Review**
 
-You\'ve now learned the complete VSEPR framework:
+---
 
-1. **Draw a Lewis structure** → identify bonds and lone pairs
-2. **Count electron domains** → determine the steric number
-3. **Identify electron domain geometry** → the 3D arrangement of all electron groups
-4. **Identify molecular geometry** → the shape based on atom positions only
-5. **Predict polarity** → vector sum of bond dipoles based on geometry
+### Bringing It All Together
 
-### AP Exam Tips
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
 
-- VSEPR questions appear in **multiple-choice and free-response**
-- You must be able to go from a **chemical formula** to a **3D shape** quickly
-- Know the connection between geometry, polarity, and **intermolecular forces**
-- Understand how geometry affects **physical properties** (boiling point, solubility)
-- Be able to explain **why** a molecule has its shape (electron pair repulsion)
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
 
-Let\'s do a comprehensive review with AP-style problems.`
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'vg-7-2',
@@ -150,17 +147,25 @@ AP Chemistry FRQs often ask you to:
 
 ### Template Answer
 
+> 💡 **Tip:** Use this template structure for VSEPR free-response answers — it hits every point the AP graders look for.
+
 > "The Lewis structure of [molecule] shows that the central atom has [X] bonding domains and [Y] lone pairs, giving a steric number of [X+Y]. The electron domain geometry is [ED geometry], and since there are [Y] lone pairs, the **molecular geometry is [molecular geometry]**. The bond angle is approximately [angle]°.
 
 > Because the [molecular geometry] shape is [symmetric/asymmetric], the individual bond dipoles [do/do not] cancel. Therefore, the molecule is [polar/nonpolar]."
 
 ### Common Mistakes to Avoid
 
+> ⚠️ **Warning:** These are the most frequent errors on the AP exam — review each one carefully.
+
+---
+
 1. **Confusing electron domain and molecular geometry** — always specify which one you mean
 2. **Forgetting lone pairs** — they affect both geometry and polarity
 3. **Saying a molecule is nonpolar just because it has polar bonds** — symmetry matters
 4. **Counting double bonds as 2 electron domains** — a double bond is ONE domain
-5. **Forgetting to adjust for ions** — add/subtract electrons for charges`
+5. **Forgetting to adjust for ions** — add/subtract electrons for charges
+
+> 🔑 **Key Concept:** The most common AP mistake is confusing electron domain geometry with molecular geometry — always specify which one you mean and remember that lone pairs make them different.`
     },
     {
       id: 'vg-7-6',

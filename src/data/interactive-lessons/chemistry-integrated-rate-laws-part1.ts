@@ -4,15 +4,30 @@ export const chemIntegratedRateLawsPart1Data = {
     {
       id: 'ir1-intro',
       type: 'text' as const,
-      content: `
-# 📈 Zero-Order Integrated Rate Law
+      content: `# 📈 Zero-Order Integrated Rate Law
 
 **Part 1 of 7 — When Rate Doesn\'t Depend on Concentration**
 
-Integrated rate laws connect **concentration** to **time** directly. While the differential rate law tells us how rate depends on concentration, the integrated form lets us calculate concentrations at any future time, determine half-lives, and identify reaction order from graphical data.
+---
 
-We begin with the simplest case: **zero-order** reactions.
-      `
+### Topics in This Part
+
+| Section |
+|---------|
+| 📏 Derivation of the Zero-Order Integrated Rate Law |
+| This is the equation of a straight line! |
+| Plot: $[A]$ vs $t$ → straight line for zero-order |
+| 📌 Zero-Order Half-Life |
+| Successive Half-Lives |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ir1-derivation',
@@ -50,6 +65,8 @@ $$y = mx + b$$
 ---
 
 ### Plot: $[A]$ vs $t$ → straight line for zero-order
+
+> 🔑 **Key Concept:** If $[A]$ vs $t$ is a straight line, the reaction is **zero-order**. The slope gives $-k$.
 
 - Slope = $-k$
 - y-intercept = $[A]_0$
@@ -119,12 +136,10 @@ $$\\boxed{t_{1/2} = \\frac{[A]_0}{2k}}$$
 
 ---
 
-### Key Feature
-
-The zero-order half-life **depends on** $[A]_0$:
-- Higher initial concentration → longer half-life
-- Each successive half-life is **shorter** than the previous one
-- The reaction reaches [A] = 0 in a finite time: $t_{\\text{complete}} = [A]_0/k$
+> 🔑 **Key Concept:** The zero-order half-life **depends on** $[A]_0$:
+> - Higher initial concentration → longer half-life
+> - Each successive half-life is **shorter** than the previous one
+> - The reaction reaches [A] = 0 in a finite time: $t_{\\text{complete}} = [A]_0/k$
 
 
 ---
@@ -138,6 +153,8 @@ The zero-order half-life **depends on** $[A]_0$:
 | 3rd | $[A]_0/4$ | $[A]_0/8$ | $[A]_0/(8k)$ |
 
 Each successive half-life is exactly **half** the duration of the previous one.
+
+> ⚠️ **Warning:** Zero-order is the only order where the reaction reaches $[A] = 0$ in finite time. Don't assume all reactions behave this way!
       `
     },
     {

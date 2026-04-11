@@ -9,26 +9,20 @@ export const chemVseprMolecularGeometryPart6Data = {
 
 **Part 6 of 7 — From Bond Dipoles to Molecular Dipoles**
 
-Understanding molecular geometry is essential because it determines whether a molecule is **polar** or **nonpolar** — a property that affects solubility, boiling point, intermolecular forces, and biological behavior.
+---
 
-### Review: Bond Polarity
+### Practice Makes Perfect
 
-A **bond dipole** exists whenever two atoms with different electronegativities share electrons unequally. The more electronegative atom pulls electron density toward itself.
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
 
-$$\\text{Bond dipole: } \\delta^+ \\text{—} \\delta^-$$
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
 
-- Larger electronegativity difference → stronger bond dipole
-- Equal electronegativity (e.g., C–C, O–O) → nonpolar bond
+---
 
-### From Bond Dipoles to Molecular Dipoles
-
-The **molecular dipole moment** is the **vector sum** of all individual bond dipoles. This means:
-
-- Both the **magnitude** and **direction** of each bond dipole matter
-- If bond dipoles cancel out (by symmetry), the molecule is **nonpolar**
-- If they don\'t cancel, the molecule is **polar**
-
-$$\\vec{\\mu}_{\\text{molecule}} = \\sum \\vec{\\mu}_{\\text{bonds}}$$`
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'vg-6-2',
@@ -60,10 +54,14 @@ Even if individual bonds are polar, the molecule can be nonpolar if the geometry
 
 ### The Two Requirements for a Nonpolar Molecule
 
+> 💡 **Tip:** A molecule is nonpolar only when **both** conditions are met: (1) the geometry is **symmetric**, and (2) all surrounding atoms are **identical**. If either fails, the molecule is polar.
+
 1. The geometry must be **symmetric**
 2. All surrounding atoms must be **identical**
 
-If either condition fails, the molecule is polar.`
+If either condition fails, the molecule is polar.
+
+---`
     },
     {
       id: 'vg-6-3',
@@ -114,6 +112,8 @@ If either condition fails, the molecule is polar.`
       title: 'Lone Pairs and Polarity',
       content: `## Lone Pairs Guarantee Asymmetry
 
+> 🔑 **Key Concept:** Any molecule with lone pairs on the central atom and polar bonds will be polar — the lone pairs create an asymmetric electron density distribution with no opposing dipole.
+
 Any molecule with **lone pairs on the central atom** and **polar bonds** will be polar, because the lone pairs create an asymmetric distribution of electron density.
 
 ### Why?
@@ -130,6 +130,8 @@ Lone pairs contribute to the electron density around the central atom but don\'t
 | ClF₃ | 2 | T-shaped | **Yes** — asymmetric shape |
 
 ### Exception: Symmetric Lone Pair Arrangements
+
+> 💡 **Tip:** Some molecules with lone pairs are still nonpolar — if the lone pairs are arranged symmetrically (e.g., XeF₂ with 3 equatorial lone pairs, XeF₄ with trans lone pairs), the overall dipole cancels.
 
 Some molecules have lone pairs but are still **nonpolar** because the lone pairs are arranged symmetrically:
 
@@ -203,7 +205,7 @@ Molecular polarity directly affects physical properties:
 
 ### Intermolecular Forces Hierarchy
 
-$$\\text{Ion–ion} > \\text{Hydrogen bonding} > \\text{Dipole–dipole} > \\text{London dispersion}$$
+$$\\boxed{\\text{Ion–ion} > \\text{Hydrogen bonding} > \\text{Dipole–dipole} > \\text{London dispersion}}$$
 
 Polar molecules with N–H, O–H, or F–H bonds can form **hydrogen bonds** — the strongest type of intermolecular force (excluding ionic).
 
@@ -215,7 +217,9 @@ Polar molecules with N–H, O–H, or F–H bonds can form **hydrogen bonds** �
 | Solubility in water | Slightly soluble | N/A (is water) |
 | Dominant IMF | London dispersion | H-bonding |
 
-The dramatic difference in boiling points is largely due to water\'s strong hydrogen bonding, which is possible because of its polar bent geometry.`
+The dramatic difference in boiling points is largely due to water\'s strong hydrogen bonding, which is possible because of its polar bent geometry.
+
+---`
     },
     {
       id: 'vg-6-7',

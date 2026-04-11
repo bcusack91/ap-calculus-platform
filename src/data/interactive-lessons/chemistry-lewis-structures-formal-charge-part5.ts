@@ -4,8 +4,21 @@ export const chemLewisStructuresFormalChargePart5Data = {
     {
       id: 'ls-5-1',
       type: 'text',
-      title: 'What Are Resonance Structures?',
-      content: `Sometimes, a single Lewis structure is **not sufficient** to describe the actual electron distribution in a molecule. When electrons can be delocalized (spread out) across multiple positions, we draw **resonance structures**.\n\n**Resonance structures** are two or more valid Lewis structures for the same molecule that differ only in the **placement of electrons** (not atoms).\n\n**Key points:**\n- The atoms stay in the same positions\n- Only electrons (bonds and lone pairs) move\n- We connect resonance structures with a double-headed arrow (↔)\n- The actual molecule is a **resonance hybrid** — an average of all resonance structures\n- No single resonance structure is "correct" on its own\n\n**The resonance hybrid** has characteristics intermediate between all contributing structures. For example, bonds that are single in one structure and double in another are actually intermediate (bond order between 1 and 2).`
+      title: '💡 What Are Resonance Structures?',
+      content: `Sometimes, a single Lewis structure is **not sufficient** to describe the actual electron distribution in a molecule. When electrons can be delocalized (spread out) across multiple positions, we draw **resonance structures**.\n\n**Resonance structures** are two or more valid Lewis structures for the same molecule that differ only in the **placement of electrons** (not atoms).\n\n**Key points:**\n- The atoms stay in the same positions\n- Only electrons (bonds and lone pairs) move\n- We connect resonance structures with a double-headed arrow (↔)\n- The actual molecule is a **resonance hybrid** — an average of all resonance structures\n- No single resonance structure is "correct" on its own\n\n> 💡 **Tip:** Resonance structures differ only in electron placement — the atoms never move. The real molecule is a blend (hybrid) of all structures.\n\n**The resonance hybrid** has characteristics intermediate between all contributing structures. For example, bonds that are single in one structure and double in another are actually intermediate (bond order between 1 and 2).
+
+**Part 5 of 7 — Expanded & Incomplete Octets**
+
+---
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ls-5-2',
@@ -48,17 +61,17 @@ export const chemLewisStructuresFormalChargePart5Data = {
       exercise: {
         inputs: [
           {
-            label: 'How many equivalent resonance structures does NO₃⁻ have?',
+            label: '**1.** How many equivalent resonance structures does NO₃⁻ have?',
             correctAnswer: '3',
             explanation: 'NO₃⁻ has 3 equivalent resonance structures. The double bond can be placed between N and any of the three oxygen atoms.'
           },
           {
-            label: 'What is the bond order of each N—O bond in the resonance hybrid? (enter as a fraction like 4/3)',
+            label: '**2.** What is the bond order of each N—O bond in the resonance hybrid? (enter as a fraction like 4/3)',
             correctAnswer: '4/3',
             explanation: 'There are 4 total bonds (1 double + 2 single = 4 bond pairs) distributed over 3 equivalent positions. Bond order = 4/3 ≈ 1.33.'
           },
           {
-            label: 'What is the formal charge on nitrogen in each resonance structure?',
+            label: '**3.** What is the formal charge on nitrogen in each resonance structure?',
             correctAnswer: '+1',
             explanation: 'FC on N = 5 − 0 − 8/2 = +1. Nitrogen has 4 bonds and 0 lone pairs in each resonance structure.'
           }
@@ -68,7 +81,7 @@ export const chemLewisStructuresFormalChargePart5Data = {
     {
       id: 'ls-5-6',
       type: 'text',
-      title: 'When Does Resonance Occur?',
+      title: '🔍 When Does Resonance Occur?',
       content: `Resonance occurs when:\n\n1. **A lone pair is adjacent to a multiple bond** — the lone pair can be delocalized\n2. **Multiple equivalent positions exist** for a double or triple bond\n3. **There is a p orbital that can overlap** with adjacent p orbitals\n\n**Common molecules/ions with resonance:**\n- Ozone (O₃): 2 resonance structures\n- Nitrate (NO₃⁻): 3 resonance structures\n- Carbonate (CO₃²⁻): 3 resonance structures\n- Benzene (C₆H₆): 2 major resonance structures\n- Acetate (CH₃COO⁻): 2 resonance structures\n\n**Resonance does NOT occur when:**\n- All bonds are single bonds with no adjacent lone pairs\n- The structure has no possible way to rearrange electrons\n- Moving electrons would violate the octet rule`
     },
     {

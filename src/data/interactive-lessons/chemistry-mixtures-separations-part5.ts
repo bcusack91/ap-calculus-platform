@@ -4,13 +4,30 @@ export const chemMixturesSeparationsPart5Data = {
     {
       id: 'mx5-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Gravimetric & Volumetric Analysis
+      content: `# ⚖️ Gravimetric & Volumetric Analysis
 
 **Part 5 of 7 — Quantitative Analytical Techniques**
 
-Two classical methods for determining the composition of mixtures are **gravimetric analysis** (based on mass measurements) and **volumetric analysis** (based on volume measurements of solutions). Both appear frequently on the AP Chemistry exam.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Gravimetric Analysis |
+| Steps |
+| Example |
+| 🧪 Volumetric Analysis (Titration) |
+| Key Terms |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'mx5-gravimetric',
@@ -40,7 +57,7 @@ Two classical methods for determining the composition of mixtures are **gravimet
 
 > **Problem:** Determine the mass percent of Cl⁻ in a 0.500 g sample. Adding excess AgNO₃ produces 0.854 g of AgCl.
 
-**Solution:**
+> **Solution:**
 
 $$\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s)$$
 
@@ -53,7 +70,7 @@ Step 3: Mass of Cl⁻ ($M = 35.45$ g/mol):
 $$m_{Cl^-} = 5.96 \\times 10^{-3} \\times 35.45 = 0.211 \\text{ g}$$
 
 Step 4: Mass percent:
-$$\\% \\text{Cl}^- = \\frac{0.211}{0.500} \\times 100\\% = 42.2\\%$$
+$$\\boxed{\\% \\text{Cl}^- = \\frac{0.211}{0.500} \\times 100\\% = 42.2\\%}$$
       `
     },
     {
@@ -77,12 +94,14 @@ $$\\% \\text{Cl}^- = \\frac{0.211}{0.500} \\times 100\\% = 42.2\\%$$
 | **Indicator** | Substance that changes color near the equivalence point |
 | **End point** | When the indicator changes color (ideally = equivalence point) |
 
+> 🔑 **Key Concept:** The **equivalence point** is a theoretical stoichiometric point; the **end point** is what you actually observe (indicator color change). They are close but not identical.
+
 
 ---
 
 ### The Titration Equation
 
-$$M_1V_1 \\times \\text{(mole ratio)} = M_2V_2$$
+$$\\boxed{M_1V_1 \\times \\text{(mole ratio)} = M_2V_2}$$
 
 For a 1:1 reaction: $M_1V_1 = M_2V_2$
 
@@ -91,7 +110,9 @@ For a 1:1 reaction: $M_1V_1 = M_2V_2$
 
 ### Example: Acid-Base Titration
 
-25.0 mL of unknown HCl is titrated with 0.100 M NaOH. It takes 32.5 mL of NaOH to reach the equivalence point.
+> **Problem:** 25.0 mL of unknown HCl is titrated with 0.100 M NaOH. It takes 32.5 mL of NaOH to reach the equivalence point. Find the molarity of HCl.
+
+> **Solution:**
 
 $$\\text{HCl} + \\text{NaOH} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$$
 

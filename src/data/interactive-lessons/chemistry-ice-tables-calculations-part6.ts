@@ -4,13 +4,24 @@ export const chemIceTablesCalculationsPart6Data = {
     {
       id: 'ic6-intro',
       type: 'text' as const,
-      content: `
-# 🧮 Problem-Solving Workshop: ICE Tables
+      content: `# 🧮 Problem-Solving Workshop: ICE Tables
 
 **Part 6 of 7 — Multiple ICE Table Scenarios**
 
-This workshop presents varied ICE table problems: finding K, finding equilibrium concentrations, using the approximation, and the quadratic. Practice the decision-making process for each type.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'ic6-decision-tree',
@@ -18,26 +29,25 @@ This workshop presents varied ICE table problems: finding K, finding equilibrium
       content: `
 ## 📌 Decision Tree for ICE Table Problems
 
-### Step 1: What are you solving for?
-- **K unknown**: Use given equilibrium data to find K
-- **Equilibrium concentrations unknown**: Use K and initial data to find concentrations
+> 🔑 **Step 1 — What are you solving for?**
+> - **K unknown**: Use given equilibrium data to find K
+> - **Equilibrium concentrations unknown**: Use K and initial data to find concentrations
 
 
 ---
 
-### Step 2: Can you use the approximation?
-- Check: $\\frac{[\\text{initial}]}{K} > 100$?
-  - **Yes** → Approximate: $[\\text{initial}] - x \\approx [\\text{initial}]$
-  - **No** → Full quadratic required
+> 💡 **Step 2 — Can you use the approximation?** Check: $\\frac{[\\text{initial}]}{K} > 100$?
+> - **Yes** → Approximate: $[\\text{initial}] - x \\approx [\\text{initial}]$
+> - **No** → Full quadratic required
 
 
 ---
 
-### Step 3: Solve and verify
-- Solve for $x$
-- Calculate all equilibrium concentrations
-- Verify: plug back into K expression
-- If approximation used: check 5% test
+> ⚠️ **Step 3 — Solve and verify:**
+> - Solve for $x$
+> - Calculate all equilibrium concentrations
+> - Verify: plug back into K expression
+> - If approximation used: check 5% test
 
 
 ---
@@ -49,6 +59,12 @@ This workshop presents varied ICE table problems: finding K, finding equilibrium
 | Perfect square | $\\frac{(2x)^2}{(a-x)^2}$ → take square root |
 | Small K with approx | $K = \\frac{x^2}{a}$ → $x = \\sqrt{Ka}$ |
 | Full quadratic | $ax^2 + bx + c = 0$ → quadratic formula |
+
+### Key Formulas
+
+$$\\boxed{x = \\sqrt{K \\cdot [\\text{initial}]}} \\quad \\text{(small-K approximation)}$$
+
+$$\\boxed{x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}} \\quad \\text{(quadratic formula)}$$
       `
     },
     {
@@ -57,11 +73,7 @@ This workshop presents varied ICE table problems: finding K, finding equilibrium
       content: `
 **Problem 1: Finding K** 🧮
 
-$2\\,\\text{HI}(g) \\rightleftharpoons \\text{H}_2(g) + \\text{I}_2(g)$
-
-Initial: $[\\text{HI}] = 1.00$ M, $[\\text{H}_2] = [\\text{I}_2] = 0$
-
-At equilibrium: $[\\text{HI}] = 0.80$ M
+> **Problem:** For $2\\,\\text{HI}(g) \\rightleftharpoons \\text{H}_2(g) + \\text{I}_2(g)$, initial $[\\text{HI}] = 1.00$ M, $[\\text{H}_2] = [\\text{I}_2] = 0$. At equilibrium, $[\\text{HI}] = 0.80$ M. Find $K_c$.
 
 **1)** What is $x$? (Remember: the coefficient of HI is 2)
 
@@ -84,9 +96,7 @@ At equilibrium: $[\\text{HI}] = 0.80$ M
       content: `
 **Problem 2: Using the Approximation** 🧮
 
-$\\text{COCl}_2(g) \\rightleftharpoons \\text{CO}(g) + \\text{Cl}_2(g)$, $K_c = 2.2 \\times 10^{-10}$
-
-Initial: $[\\text{COCl}_2] = 0.50$ M, $[\\text{CO}] = [\\text{Cl}_2] = 0$
+> **Problem:** For $\\text{COCl}_2(g) \\rightleftharpoons \\text{CO}(g) + \\text{Cl}_2(g)$ with $K_c = 2.2 \\times 10^{-10}$, initial $[\\text{COCl}_2] = 0.50$ M, $[\\text{CO}] = [\\text{Cl}_2] = 0$. Find the equilibrium concentrations.
 
 Using the approximation $0.50 - x \\approx 0.50$:
 
@@ -146,11 +156,9 @@ Using the approximation $0.50 - x \\approx 0.50$:
       content: `
 **Problem 4: Non-Zero Initial Products** 🧮
 
-$\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$, $K_c = 64$
+> **Problem:** For $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$ with $K_c = 64$, initial $[\\text{H}_2] = 0.50$, $[\\text{I}_2] = 0.50$, $[\\text{HI}] = 0.20$ M. Find the equilibrium concentrations.
 
-Initial: $[\\text{H}_2] = 0.50$, $[\\text{I}_2] = 0.50$, $[\\text{HI}] = 0.20$ M
-
-First check: $Q = \\frac{(0.20)^2}{(0.50)(0.50)} = \\frac{0.04}{0.25} = 0.16$. Since $Q < K$, shift right.
+> **Solution:** First check: $Q = \\frac{(0.20)^2}{(0.50)(0.50)} = \\frac{0.04}{0.25} = 0.16$. Since $Q < K$, shift right.
 
 **1)** Using the ICE table with shift right, what is $[\\text{HI}]$ at equilibrium expressed in terms of $x$? (Enter, e.g., "0.20 + 2x")
 

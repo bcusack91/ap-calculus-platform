@@ -4,13 +4,30 @@ export const chemNernstEquationConcentrationPart3Data = {
     {
       id: 'ne3-intro',
       type: 'text' as const,
-      content: `
-# 🔄 Concentration Cells
+      content: `# 🔄 Concentration Cells
 
 **Part 3 of 7 — Same Electrodes, Different Concentrations**
 
-A concentration cell is a special galvanic cell where both electrodes are the **same metal** and the **same half-reaction** occurs in both compartments — but at different concentrations. The voltage comes entirely from the concentration difference.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🔧 How Concentration Cells Work |
+| The Setup — Same Metal, Different Concentrations |
+| ⚡ E° = 0 — But the Cell Still Works! |
+| 📐 The Nernst Equation for Concentration Cells |
+| 🧭 Why Does Dilute = Anode? |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ne3-how-they-work',
@@ -70,18 +87,9 @@ The system wants to reach **equilibrium** (equal concentrations). It does this b
       content: `
 ## 🧪 Worked Example — Copper Concentration Cell
 
-### The Problem
+> **Problem:** A Cu/Cu²⁺ concentration cell at 25°C has $[\text{Cu}^{2+}]_{\text{left}} = 0.010$ M (dilute, anode) and $[\text{Cu}^{2+}]_{\text{right}} = 1.0$ M (concentrated, cathode). Given $n = 2$ (from $\text{Cu}^{2+} + 2e^- \rightarrow \text{Cu}$) and $E° = 0$, calculate the cell potential.
 
-A Cu/Cu²⁺ concentration cell at 25°C:
-
-| Compartment | $[\\text{Cu}^{2+}]$ | Role |
-|-------------|---------------------|------|
-| Left | $0.010$ M (dilute) | Anode |
-| Right | $1.0$ M (concentrated) | Cathode |
-
-**Given:** $n = 2$ (from $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$), $E° = 0$
-
----
+> **Solution:**
 
 ### Step 1 — Identify Anode and Cathode
 

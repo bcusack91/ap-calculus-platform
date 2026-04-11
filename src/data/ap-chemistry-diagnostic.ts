@@ -1,12 +1,14 @@
 /**
  * AP Chemistry Diagnostic Test Generator
  *
- * Produces two alternate forms (A and B) each with ~30 questions spanning
- * all 9 AP Chemistry domains.  After each test, weak domains are mapped to
- * 3-5 specific topic slugs the student should review.
+ * Produces 10 alternate forms (1–10) each with ~33 questions spanning
+ * all 9 AP Chemistry domains.  Each form uses a seeded PRNG to
+ * deterministically select a different subset of questions from the pool.
+ * After each test, weak domains are mapped to 3-5 specific topic slugs
+ * the student should review.
  */
 
-import { apChemQuestionPool, type APChemQuestion } from './exit-quizzes/ap-chemistry'
+import { apChemQuestionPool } from './exit-quizzes/ap-chemistry'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */
@@ -29,8 +31,10 @@ export interface APChemDomain {
   questionTarget: number
 }
 
+export const TOTAL_FORMS = 10
+
 export interface APChemDiagnosticTestData {
-  form: 'A' | 'B'
+  form: number
   questions: APChemDiagnosticQuestion[]
   domains: APChemDomain[]
   totalQuestions: number
@@ -54,7 +58,7 @@ export interface APChemRecommendedTopic {
 }
 
 export interface APChemDiagnosticResults {
-  form: 'A' | 'B'
+  form: number
   totalCorrect: number
   totalQuestions: number
   percentage: number
@@ -130,22 +134,44 @@ const AP_CHEM_DOMAINS: APChemDomain[] = [
 export { AP_CHEM_DOMAINS }
 
 /* ------------------------------------------------------------------ */
+/*  Seeded PRNG (mulberry32) for deterministic per-form selection      */
+/* ------------------------------------------------------------------ */
+
+function mulberry32(seed: number) {
+  return function () {
+    // eslint-disable-next-line no-param-reassign
+    seed |= 0; seed = (seed + 0x6d2b79f5) | 0
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+function seededShuffle<T>(arr: T[], rng: () => number): T[] {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+/* ------------------------------------------------------------------ */
 /*  Generator                                                          */
 /* ------------------------------------------------------------------ */
 
 /**
- * Build a diagnostic test for either form A or form B.
- * Questions are drawn from the question pool tagged with that form (or 'both').
+ * Build a diagnostic test for a given form number (1–10).
+ * Uses a seeded PRNG so each form deterministically selects a different
+ * subset of questions from the pool for each domain.
  */
-export function generateAPChemDiagnosticTest(form: 'A' | 'B'): APChemDiagnosticTestData {
+export function generateAPChemDiagnosticTest(form: number): APChemDiagnosticTestData {
+  const rng = mulberry32(form * 7919) // distinct seed per form
   const questions: APChemDiagnosticQuestion[] = []
 
   for (const domain of AP_CHEM_DOMAINS) {
-    const pool = apChemQuestionPool.filter(
-      q => q.domain === domain.id && (q.formSet === form || q.formSet === 'both'),
-    )
-
-    const shuffled = [...pool].sort(() => Math.random() - 0.5)
+    const pool = apChemQuestionPool.filter(q => q.domain === domain.id)
+    const shuffled = seededShuffle(pool, rng)
     const selected = shuffled.slice(0, domain.questionTarget)
 
     for (const q of selected) {
@@ -160,8 +186,8 @@ export function generateAPChemDiagnosticTest(form: 'A' | 'B'): APChemDiagnosticT
     }
   }
 
-  // Shuffle the final question order
-  const shuffledQuestions = questions.sort(() => Math.random() - 0.5)
+  // Final shuffle so domains aren't grouped together
+  const shuffledQuestions = seededShuffle(questions, rng)
 
   return {
     form,
@@ -177,7 +203,7 @@ export function generateAPChemDiagnosticTest(form: 'A' | 'B'): APChemDiagnosticT
 /* ------------------------------------------------------------------ */
 
 export function scoreAPChemDiagnostic(
-  form: 'A' | 'B',
+  form: number,
   questions: APChemDiagnosticQuestion[],
   answers: Record<number, number>,
 ): APChemDiagnosticResults {
@@ -306,13 +332,12 @@ export function scoreAPChemDiagnostic(
 
 /**
  * Pick the next form the student should take.
- * - If they've never taken a test → A
- * - If their last form was A → B
- * - If their last form was B → A
+ * Cycles sequentially through forms 1–10.
  */
-export function pickNextForm(previousForms: ('A' | 'B')[]): 'A' | 'B' {
-  if (previousForms.length === 0) return 'A'
-  return previousForms[previousForms.length - 1] === 'A' ? 'B' : 'A'
+export function pickNextForm(previousForms: number[]): number {
+  if (previousForms.length === 0) return 1
+  const last = previousForms[previousForms.length - 1]
+  return last >= TOTAL_FORMS ? 1 : last + 1
 }
 
 const SLUG_LABELS: Record<string, string> = {

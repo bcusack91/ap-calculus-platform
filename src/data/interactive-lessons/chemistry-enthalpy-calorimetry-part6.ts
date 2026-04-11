@@ -4,13 +4,24 @@ export const chemEnthalpyCalorimetryPart6Data = {
     {
       id: 'eh6-intro',
       type: 'text' as const,
-      content: `
-# 🏗️ Standard Enthalpies of Formation
+      content: `# 🏗️ Standard Enthalpies of Formation
 
 **Part 6 of 7 — The Master Equation**
 
-Standard enthalpies of formation ($\\Delta H°_f$) provide a systematic way to calculate $\\Delta H°_{\\text{rxn}}$ for **any** reaction — without needing Hess\'s Law manipulations. This is the most powerful and commonly used method on the AP exam.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'eh6-definition',
@@ -36,7 +47,7 @@ $$\\frac{1}{2}\\text{N}_2(g) + \\frac{3}{2}\\text{H}_2(g) \\rightarrow \\text{NH
 
 ### Critical Rule
 
-**$\\Delta H°_f$ of any element in its standard state = 0**
+> 🔑 **AP Must-Know:** $\\Delta H°_f$ of any element in its standard state = 0. This is the #1 rule for formation enthalpy calculations.
 
 | Element | Standard State | $\\Delta H°_f$ |
 |---------|---------------|---------------|
@@ -55,7 +66,7 @@ This makes sense: an element doesn\'t change to form itself!
       content: `
 ## 📌 The Master Equation
 
-$$\\Delta H°_{\\text{rxn}} = \\sum n \\cdot \\Delta H°_f(\\text{products}) - \\sum m \\cdot \\Delta H°_f(\\text{reactants})$$
+$$\\boxed{\\Delta H°_{\\text{rxn}} = \\sum n \\cdot \\Delta H°_f(\\text{products}) - \\sum m \\cdot \\Delta H°_f(\\text{reactants})}$$
 
 where $n$ and $m$ are the stoichiometric coefficients.
 

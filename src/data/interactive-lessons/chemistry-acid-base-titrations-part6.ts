@@ -4,13 +4,29 @@ export const chemAcidBaseTitrationsPart6Data = {
     {
       id: 'at6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Problem-Solving Workshop
+      content: `# 🛠️ Problem-Solving Workshop
 
 **Part 6 of 7 — Acid-Base Titrations**
 
-This workshop takes you through complete titration calculations — the kind that appear as multi-part free-response questions on the AP Chemistry exam. Practice the full workflow: stoichiometry, equilibrium, buffer calculations, and curve analysis.
-      `
+---
+
+### Workshop Problem Types
+
+| Problem Type | What You'll Practice |
+|-------------|---------------------|
+| Complete titration curve | Calculate pH at 4+ points, sketch curve |
+| Unknown acid ID | Use equivalence volume + pH to find $K_a$ and molar mass |
+| Indicator selection | Match indicator to titration type |
+| Multi-step free-response | Combine all skills in AP format |
+
+> 🔑 **Why this matters:** These multi-part problems mirror the exact format of AP Chemistry FRQ #3 (the lab/quantitative question).
+
+---
+
+### What You'll Master in Part 6
+- Working through complete titration curve calculations step-by-step
+- Identifying unknown acids from titration data
+- Integrating indicator selection with curve analysis`
     },
     {
       id: 'at6-problem1',
@@ -18,12 +34,14 @@ This workshop takes you through complete titration calculations — the kind tha
       content: `
 ## 🔢 Problem 1: Complete Titration Curve Calculations
 
-50.0 mL of 0.200 M $CH_3COOH$ ($K_a = 1.8 \\times 10^{-5}$, $pK_a = 4.74$) is titrated with 0.200 M $NaOH$.
+> **Problem:** 50.0 mL of 0.200 M $CH_3COOH$ ($K_a = 1.8 \\times 10^{-5}$, $pK_a = 4.74$) is titrated with 0.200 M $NaOH$. Find the pH at the initial, half-equivalence, and equivalence points.
 
 
 ---
 
-### (a) Initial pH
+> **Solution:**
+>
+> **(a) Initial pH:**
 
 $$K_a = \\frac{x^2}{0.200} = 1.8 \\times 10^{-5}$$
 $$x = \\sqrt{3.6 \\times 10^{-6}} = 1.90 \\times 10^{-3}$$
@@ -32,14 +50,14 @@ $$pH = -\\log(1.90 \\times 10^{-3}) = 2.72$$
 
 ---
 
-### (b) After 25.0 mL $NaOH$ (half-equivalence)
+> **(b) After 25.0 mL $NaOH$ (half-equivalence):**
 
 $$pH = pK_a = 4.74$$
 
 
 ---
 
-### (c) Equivalence Point (50.0 mL $NaOH$)
+> **(c) Equivalence Point (50.0 mL $NaOH$):**
 
 All $HA \\rightarrow A^-$. $[A^-] = 0.0100/0.100 = 0.100$ M
 
@@ -97,6 +115,8 @@ A monoprotic weak acid $HA$ (25.0 mL, 0.100 M) is titrated with 0.100 M $NaOH$. 
 - **Equivalence pH = 8.26** (> 7, confirms weak acid)
 
 The acid is likely **formic acid** ($HCOOH$, $K_a = 1.8 \\times 10^{-4}$).
+
+> 🔑 **AP Strategy:** To identify an unknown acid from a titration curve: (1) find the half-equivalence volume, (2) read the pH there to get $pK_a$, (3) match $K_a = 10^{-pK_a}$ to a known acid.
       `
     },
     {

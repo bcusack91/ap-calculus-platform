@@ -2,193 +2,222 @@ export const precalcTrigIdentitiesPart7Data = {
   topicSlug: 'trigonometric-identities-precalc',
   sections: [
     {
-      id: 'precalc-trigonometric-identities-precalc-p7-s1-intro',
+      id: 'p7-intro',
       type: 'text' as const,
       content: `
-      ## Trigonometric Identities: Mixed identity synthesis
-      
-      **Part 7 of 7**
-      
-      This part focuses on combining identities in applied triangle prompts. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **double-angle identity**: expressions for trig of $2\\heta$
-      - **verification strategy**: rewrite one side with targeted identities
-      - **Pythagorean identity**: $\sin^2\\heta+\cos^2\\heta=1$
-      
-      
-      ### Worked Example
-      Simplify $
-      rac{1-\cos^2\\heta}{\sin\\heta}$ for $\sin\\heta
-      eq0$.
-      
-      Use $1-\cos^2\\heta=\sin^2\\heta$:
-      
-      $$
-      rac{1-\cos^2\\heta}{\sin\\heta}=
-      rac{\sin^2\\heta}{\sin\\heta}=\sin\\heta$$
-      
-      Identity substitution first, then cancellation, keeps the algebra clean.
+# 🧩 Trigonometric Identities — Full Synthesis
+
+**Part 7 of 7**
+
+This final part combines **every identity type** from Parts 1–6 into mixed problems. The challenge: recognizing which identity to apply and when.
+
+### Complete Identity Reference
+
+| Category | Key Formulas |
+|:---------|:------------|
+| **Pythagorean** | $\\sin^2\\theta + \\cos^2\\theta = 1$, $1 + \\tan^2\\theta = \\sec^2\\theta$, $1 + \\cot^2\\theta = \\csc^2\\theta$ |
+| **Reciprocal** | $\\csc\\theta = \\frac{1}{\\sin\\theta}$, $\\sec\\theta = \\frac{1}{\\cos\\theta}$, $\\cot\\theta = \\frac{1}{\\tan\\theta}$ |
+| **Quotient** | $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$, $\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$ |
+| **Even-Odd** | $\\cos(-\\theta) = \\cos\\theta$, $\\sin(-\\theta) = -\\sin\\theta$, $\\tan(-\\theta) = -\\tan\\theta$ |
+| **Cofunction** | $\\sin\\theta = \\cos(90°-\\theta)$, $\\tan\\theta = \\cot(90°-\\theta)$, etc. |
+| **Sum/Difference** | $\\sin(A \\pm B)$, $\\cos(A \\pm B)$, $\\tan(A \\pm B)$ |
+| **Double-Angle** | $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$, $\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta$ |
+| **Half-Angle** | $\\sin\\frac{\\theta}{2} = \\pm\\sqrt{\\frac{1-\\cos\\theta}{2}}$, $\\cos\\frac{\\theta}{2} = \\pm\\sqrt{\\frac{1+\\cos\\theta}{2}}$ |
+| **Power-Reduction** | $\\sin^2\\theta = \\frac{1-\\cos 2\\theta}{2}$, $\\cos^2\\theta = \\frac{1+\\cos 2\\theta}{2}$ |
       `
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p7-s2-mcq-core',
+      id: 'p7-decision',
+      type: 'text' as const,
+      content: `
+## 🗺️ Identity Selection Flowchart
+
+### What Do I See? → What Do I Use?
+
+| Pattern in Expression | Identity to Apply |
+|:---------------------|:-----------------|
+| $\\sin^2$ or $\\cos^2$ alone | Pythagorean → replace with $1 - \\text{other}^2$ |
+| $\\sec, \\csc, \\tan, \\cot$ mixed | Reciprocal/Quotient → convert to sin/cos |
+| Negative angle $(-\\theta)$ | Even-odd |
+| $90° - \\theta$ or $\\frac{\\pi}{2} - \\theta$ | Cofunction |
+| Non-standard angle ($15°, 75°, 105°$…) | Sum/Difference formulas |
+| $\\sin\\theta\\cos\\theta$ product | Double-angle: $= \\frac{1}{2}\\sin 2\\theta$ |
+| $\\cos^2\\theta - \\sin^2\\theta$ | Recognize $= \\cos 2\\theta$ |
+| $1 \\pm \\cos\\theta$ in denominator | Conjugate multiply, or half-angle |
+| Verifying LHS = RHS | Work the complex side only; never cross the $=$ |
+
+### Multi-Step Strategy
+
+1. **Scan** — Identify the identity types present
+2. **Convert** — Rewrite everything in sin/cos if mixed functions appear
+3. **Combine** — Get a single fraction if multiple terms
+4. **Substitute** — Apply Pythagorean, double-angle, etc.
+5. **Simplify** — Cancel and reduce
+      `
+    },
+    {
+      id: 'p7-examples',
+      type: 'text' as const,
+      content: `
+## 📝 Mixed Worked Examples
+
+### Example 1: Simplify $\\frac{\\sin 2\\theta}{1 + \\cos 2\\theta}$
+
+Use double-angle expansions:
+- Numerator: $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$
+- Denominator: $1 + \\cos 2\\theta = 1 + (2\\cos^2\\theta - 1) = 2\\cos^2\\theta$
+
+$$\\frac{2\\sin\\theta\\cos\\theta}{2\\cos^2\\theta} = \\frac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta$$
+
+### Example 2: Find $\\sin 75°\\cos 15° + \\cos 75°\\sin 15°$
+
+Recognize the sum pattern: $\\sin A\\cos B + \\cos A\\sin B = \\sin(A + B)$
+
+$$= \\sin(75° + 15°) = \\sin 90° = 1$$
+
+### Example 3: Simplify $\\frac{\\sec(-\\theta)}{\\csc(90° - \\theta)}$
+
+Apply even-odd: $\\sec(-\\theta) = \\sec\\theta$ (even).
+
+Apply cofunction: $\\csc(90° - \\theta) = \\sec\\theta$.
+
+$$\\frac{\\sec\\theta}{\\sec\\theta} = 1$$
+
+### Example 4: Verify $\\frac{\\sin 2\\theta}{\\sin\\theta} - \\frac{\\cos 2\\theta}{\\cos\\theta} = \\sec\\theta$
+
+Work the left side:
+
+$$\\frac{2\\sin\\theta\\cos\\theta}{\\sin\\theta} - \\frac{1 - 2\\sin^2\\theta}{\\cos\\theta} = 2\\cos\\theta - \\frac{1 - 2\\sin^2\\theta}{\\cos\\theta}$$
+
+$$= \\frac{2\\cos^2\\theta - 1 + 2\\sin^2\\theta}{\\cos\\theta} = \\frac{2(\\cos^2\\theta + \\sin^2\\theta) - 1}{\\cos\\theta} = \\frac{2 - 1}{\\cos\\theta} = \\frac{1}{\\cos\\theta} = \\sec\\theta \\;\\checkmark$$
+      `
+    },
+    {
+      id: 'p7-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Mixed Identity Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of double-angle identity.',
+            question: '$\\cos 20°\\cos 40° - \\sin 20°\\sin 40°$ equals:',
             options: [
-              'rewrite one side with targeted identities',
-              '$\\an\\heta=\\rac{\\sin\\heta}{\\cos\\heta}$',
-              '$\\sin^2\\heta+\\cos^2\\heta=1$',
-              'expressions for trig of $2\\heta$'
+              '$\\cos 60°$',
+              '$\\cos 20°$',
+              '$\\sin 60°$',
+              '$\\sin 20°$'
             ],
-            correctAnswer: 3,
-            explanation: 'double-angle identity is defined as: expressions for trig of $2\\heta$.'
+            correctAnswer: 0,
+            explanation: 'This matches $\\cos(A+B) = \\cos A\\cos B - \\sin A\\sin B$ with $A=20°, B=40°$. So $\\cos(20°+40°) = \\cos 60° = \\frac{1}{2}$.'
           },
           {
-            question: 'In combining identities in applied triangle prompts, which expression is the best starting model?',
+            question: 'Simplify: $\\frac{1 - \\cos 2\\theta}{\\sin 2\\theta}$',
             options: [
-              '$\\sin^2\\theta+\\cos^2\\theta=1$',
-              '$\\cos(A+B)=\\cos A\\cos B-\\sin A\\sin B$',
-              '$\\sin(2\\theta)=2\\sin\\theta\\cos\\theta$',
-              '$\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}$'
+              '$\\cot\\theta$',
+              '$\\tan\\theta$',
+              '$\\sin\\theta$',
+              '$\\cos\\theta$'
             ],
             correctAnswer: 1,
-            explanation: 'Use $\\cos(A+B)=\\cos A\\cos B-\\sin A\\sin B$ first, then substitute known quantities from the prompt.'
+            explanation: '$\\frac{1 - (1 - 2\\sin^2\\theta)}{2\\sin\\theta\\cos\\theta} = \\frac{2\\sin^2\\theta}{2\\sin\\theta\\cos\\theta} = \\frac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta$.'
+          },
+          {
+            question: 'If $\\sin\\alpha = \\frac{3}{5}$ (QI) and $\\cos\\beta = \\frac{5}{13}$ (QI), then $\\cos(\\alpha - \\beta)$ equals:',
+            options: [
+              '$\\frac{56}{65}$',
+              '$\\frac{63}{65}$',
+              '$\\frac{33}{65}$',
+              '$\\frac{16}{65}$'
+            ],
+            correctAnswer: 0,
+            explanation: '$\\cos\\alpha = 4/5$, $\\sin\\beta = 12/13$ (QI). $\\cos(\\alpha-\\beta) = \\cos\\alpha\\cos\\beta + \\sin\\alpha\\sin\\beta = \\frac{4}{5}\\cdot\\frac{5}{13} + \\frac{3}{5}\\cdot\\frac{12}{13} = \\frac{20}{65} + \\frac{36}{65} = \\frac{56}{65}$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p7-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Cosine sum | $\cos(A+B)=\cos A\cos B-\sin A\sin B$ | angle combination |
-      | Sine double-angle | $\sin(2\\theta)=2\sin\\theta\cos\\theta$ | power reduction and simplification |
-      | Pythagorean | $\sin^2\\theta+\cos^2\\theta=1$ | fundamental conversion |
-      | Tangent | $\\tan\\theta=\\frac{\sin\\theta}{\cos\\theta}$ | quotient rewrite |
-      
-      ### Common pitfalls
-      - Do not treat identities as equations to solve unless the task requests solving.
-      - Keep track of domain restrictions when dividing by trig expressions.
-      - Choose one target form early to prevent circular verification.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-trigonometric-identities-precalc-p7-s4-input',
+      id: 'p7-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Identity Values**
-      
-      1) Compute $\sin^2 30^\circ + \cos^2 30^\circ$.
-      2) Compute $\\an 45^\circ$.
-      3) Compute $\sec 60^\circ$.
+**Cross-Topic Computation** 🧮
+
+**1)** $\\cos^2 15° + \\sin^2 15°$ = ? Write as an integer. (e.g., $\\cos^2 73° + \\sin^2 73° = 1$ by Pythagorean identity)
+
+**2)** Simplify $\\frac{\\sin 2\\theta}{2\\sin\\theta}$ to a single trig function. Write the function name. (e.g., $\\frac{\\cos 2\\theta + 1}{2\\cos\\theta}$ simplifies by expanding $\\cos 2\\theta$)
+
+**3)** $\\sin(-30°)\\sec(-30°)$ = ? Write as a fraction. (e.g., $\\cos(-60°)\\csc(-60°) = \\cos 60° \\cdot (-\\csc 60°) = \\frac{1}{2} \\cdot (-\\frac{2\\sqrt{3}}{3})$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1', '1', '2'],
-        hint1: 'Use the Pythagorean identity.',
-        hint2: 'Recall special-angle values.',
-        hint3: 'Use reciprocal: $\\sec\\heta=1/\\cos\\heta$.',
-        explanation: 'Pythagorean identity gives 1, tangent at 45° is 1, and secant at 60° is 2.'
+        correctAnswers: ['1', 'cos', '-sqrt(3)/3'],
+        hint1: 'This is the Pythagorean identity $\\sin^2\\theta + \\cos^2\\theta = 1$ — works for any angle.',
+        hint2: '$\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$, so $\\frac{2\\sin\\theta\\cos\\theta}{2\\sin\\theta} = ?$',
+        hint3: '$\\sin(-30°) = -\\sin 30° = -1/2$ (odd). $\\sec(-30°) = \\sec 30° = \\frac{2}{\\sqrt{3}}$ (even). Multiply them.',
+        explanation: '1) $\\cos^2\\theta + \\sin^2\\theta = 1$ always. 2) $\\frac{2\\sin\\theta\\cos\\theta}{2\\sin\\theta} = \\cos\\theta$. 3) $(-1/2)(2/\\sqrt{3}) = -1/\\sqrt{3} = -\\sqrt{3}/3$.'
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p7-s5-dropdown',
+      id: 'p7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Identity Classification** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'double-angle identity',
-            options: ['expressions for trig of $2\\heta$', '$\\an\\heta=\\rac{\\sin\\heta}{\\cos\\heta}$', '$\\sin^2\\heta+\\cos^2\\heta=1$', 'rewrite one side with targeted identities']
+            label: 'To simplify $\\sin\\theta\\cos\\theta$, rewrite using',
+            options: ['Pythagorean identity', 'Double-angle: $\\frac{1}{2}\\sin 2\\theta$', 'Sum formula', 'Even-odd identity']
           },
           {
-            label: 'verification strategy',
-            options: ['$\\sin^2\\heta+\\cos^2\\heta=1$', '$\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs', '$\\an\\heta=\\rac{\\sin\\heta}{\\cos\\heta}$', 'rewrite one side with targeted identities']
+            label: 'To find the exact value of $\\tan 15°$, use',
+            options: ['Pythagorean identity', 'Double-angle formula', 'Sum/Difference formula', 'Cofunction identity']
           },
           {
-            label: 'Pythagorean identity',
-            options: ['sign behavior under $\\heta\\mapsto -\\heta$', '$\\an\\heta=\\rac{\\sin\\heta}{\\cos\\heta}$', '$\\sin^2\\heta+\\cos^2\\heta=1$', '$\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs']
+            label: '$\\cos(-\\theta)\\csc(-\\theta)$ simplifies using',
+            options: ['Sum formulas', 'Even-odd identities', 'Double-angle formulas', 'Power-reduction']
+          },
+          {
+            label: '$\\sin 50°$ can be rewritten as $\\cos\\_\\_°$ using',
+            options: ['Even-odd identity', 'Pythagorean identity', 'Cofunction identity', 'Double-angle identity']
           }
         ],
-        correctAnswers: ['expressions for trig of $2\\heta$', 'rewrite one side with targeted identities', '$\\sin^2\\heta+\\cos^2\\heta=1$'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: double-angle identity, verification strategy, and Pythagorean identity align with their exact definitions used in this part.'
+        correctAnswers: ['Double-angle: $\\frac{1}{2}\\sin 2\\theta$', 'Sum/Difference formula', 'Even-odd identities', 'Cofunction identity'],
+        hint1: '$\\sin\\theta\\cos\\theta = \\frac{1}{2}(2\\sin\\theta\\cos\\theta) = \\frac{1}{2}\\sin 2\\theta$.',
+        hint2: '$15° = 45° - 30°$, so use the difference formula for tangent.',
+        hint3: 'Cosine is even, cosecant is odd — determine the signs first.',
+        explanation: '$\\sin\\theta\\cos\\theta \\to$ double-angle. $\\tan 15° \\to$ difference formula. Negative angles $\\to$ even-odd. $\\sin 50° = \\cos 40° \\to$ cofunction.'
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p7-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to double-angle identity, verification strategy, and Pythagorean identity so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-trigonometric-identities-precalc-p7-s7-mcq-applied',
+      id: 'p7-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Final Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is combining identities in applied triangle prompts. Which term best anchors the next reasoning step if the key idea is: $\\an\\heta=\\rac{\\sin\\heta}{\\cos\\heta}$?',
+            question: 'Simplify: $\\frac{\\cos 2\\theta + 1}{2}$',
             options: [
-              'double-angle identity',
-              'quotient identity',
-              'Pythagorean identity',
-              'verification strategy'
+              '$\\sin^2\\theta$',
+              '$\\cos^2\\theta$',
+              '$\\tan^2\\theta$',
+              '$1 + \\sin\\theta$'
             ],
             correctAnswer: 1,
-            explanation: 'quotient identity matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'This is the power-reduction formula: $\\cos^2\\theta = \\frac{1 + \\cos 2\\theta}{2}$.'
           },
           {
-            question: 'A student is solving a mixed trigonometric identities prompt. Which term best anchors the next reasoning step if the key idea is: $\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs?',
+            question: 'Which sequence of identities simplifies $\\frac{\\sec(-\\theta)\\sin 2\\theta}{2}$?',
             options: [
-              'quotient identity',
-              'Pythagorean identity',
-              'reciprocal identity',
-              'even-odd identity'
+              'Even-odd → double-angle → cancel',
+              'Sum formula → Pythagorean → reciprocal',
+              'Cofunction → half-angle → quotient',
+              'Double-angle → cofunction → even-odd'
             ],
-            correctAnswer: 2,
-            explanation: 'reciprocal identity matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 0,
+            explanation: '$\\sec(-\\theta) = \\sec\\theta$ (even-odd). $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$ (double-angle). So $\\frac{\\sec\\theta \\cdot 2\\sin\\theta\\cos\\theta}{2} = \\frac{1}{\\cos\\theta} \\cdot \\sin\\theta\\cos\\theta = \\sin\\theta$.'
           }
         ]
       }

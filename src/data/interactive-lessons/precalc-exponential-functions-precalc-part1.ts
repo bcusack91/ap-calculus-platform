@@ -2,189 +2,222 @@ export const precalcExponentialPart1Data = {
   topicSlug: 'exponential-functions-precalc',
   sections: [
     {
-      id: 'precalc-exponential-functions-precalc-p1-s1-intro',
+      id: 'p1-intro',
       type: 'text' as const,
       content: `
-      ## Exponential Functions: Core form and growth-decay interpretation
-      
-      **Part 1 of 7**
-      
-      This part focuses on tracking population growth. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **exponential function**: function of the form $f(x)=ab^x$ with $b>0, b
-      eq1$
-      - **growth factor**: multiplier per unit increase in input
-      - **decay factor**: multiplier between 0 and 1 per input step
-      
-      
-      ### Worked Example
-      Part 1 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📈 Exponential Functions — Core Form & Growth vs Decay
+
+**Part 1 of 7**
+
+An **exponential function** has the form:
+
+$$\\boxed{f(x) = a \\cdot b^x, \\quad a \\neq 0,\\; b > 0,\\; b \\neq 1}$$
+
+| Parameter | Name | What It Controls |
+|:----------|:-----|:-----------------|
+| $a$ | Initial value | $y$-intercept: $f(0) = a$ |
+| $b$ | Base (growth/decay factor) | Multiplicative rate per unit of $x$ |
+| $b > 1$ | Growth | Output increases as $x$ increases |
+| $0 < b < 1$ | Decay | Output decreases as $x$ increases |
+
+> **Key insight:** Every time $x$ increases by $1$, the output is **multiplied** by $b$ — not added to. This is what separates exponential from linear.
       `
     },
     {
-      id: 'precalc-exponential-functions-precalc-p1-s2-mcq-core',
+      id: 'p1-growth-decay',
+      type: 'text' as const,
+      content: `
+## 🔍 Growth vs Decay — Side by Side
+
+### Growth: $f(x) = 3 \\cdot 2^x$
+
+| $x$ | $f(x)$ | Ratio $\\frac{f(x)}{f(x-1)}$ |
+|:----|:-------|:-----|
+| $0$ | $3$ | — |
+| $1$ | $6$ | $2$ |
+| $2$ | $12$ | $2$ |
+| $3$ | $24$ | $2$ |
+
+Consecutive outputs always have the **same ratio** ($b = 2$). This constant ratio is the hallmark of exponential behavior.
+
+### Decay: $g(x) = 80 \\cdot (0.5)^x$
+
+| $x$ | $g(x)$ | Ratio |
+|:----|:-------|:------|
+| $0$ | $80$ | — |
+| $1$ | $40$ | $0.5$ |
+| $2$ | $20$ | $0.5$ |
+| $3$ | $10$ | $0.5$ |
+
+Each step **halves** the output. The base $b = 0.5$ is between $0$ and $1$, so the function decays.
+
+### 📐 Graph Features (Both Cases)
+
+| Feature | Value |
+|:--------|:------|
+| Domain | All real numbers $(-\\infty, \\infty)$ |
+| Range | $(0, \\infty)$ when $a > 0$ |
+| $y$-intercept | $(0, a)$ |
+| Horizontal asymptote | $y = 0$ (the $x$-axis) |
+| Passes through | $(1, ab)$ always |
+      `
+    },
+    {
+      id: 'p1-percent-rate',
+      type: 'text' as const,
+      content: `
+## 💹 Percent Growth & Decay Rate
+
+In applications, the base $b$ is often written as:
+
+$$\\boxed{b = 1 + r \\quad \\text{(growth)} \\qquad b = 1 - r \\quad \\text{(decay)}}$$
+
+where $r$ is the **percent rate** (as a decimal).
+
+### Worked Example
+
+> **A town of $5{,}000$ people grows $6\\%$ per year. Write the model and find the population after $10$ years.**
+
+$P(t) = 5000(1 + 0.06)^t = 5000(1.06)^t$
+
+$P(10) = 5000(1.06)^{10} = 5000(1.7908...) \\approx 8{,}954$
+
+### Quick Reference
+
+| Scenario | $r$ | $b = 1 \\pm r$ | Growth or Decay? |
+|:---------|:----|:-------------|:-----------------|
+| $15\\%$ annual appreciation | $0.15$ | $1.15$ | Growth |
+| $8\\%$ annual depreciation | $0.08$ | $0.92$ | Decay |
+| $3.5\\%$ monthly increase | $0.035$ | $1.035$ | Growth |
+| $20\\%$ hourly radioactive loss | $0.20$ | $0.80$ | Decay |
+      `
+    },
+    {
+      id: 'p1-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of exponential function.',
+            question: 'Which function represents exponential **decay**?',
             options: [
-              'function of the form $f(x)=ab^x$ with $b>0, b\\neq1$',
-              'value when input is zero',
-              'multiplier per unit increase in input',
-              'multiplier between 0 and 1 per input step'
+              '$f(x) = 4 \\cdot 3^x$',
+              '$f(x) = 4 \\cdot 0.3^x$',
+              '$f(x) = 4x + 3$',
+              '$f(x) = 4 \\cdot (-3)^x$'
             ],
-            correctAnswer: 0,
-            explanation: 'exponential function is defined as: function of the form $f(x)=ab^x$ with $b>0, b\\neq1$.'
+            correctAnswer: 1,
+            explanation: 'Decay requires $0 < b < 1$. Only $b = 0.3$ satisfies this. $b = 3$ is growth, $4x + 3$ is linear, and $b = -3$ violates $b > 0$.'
           },
           {
-            question: 'In tracking population growth, which expression is the best starting model?',
+            question: 'A car loses $18\\%$ of its value each year. If it starts at $\\$25{,}000$, which model is correct?',
             options: [
-              '$f(x)=ab^x$',
-              '$T_d=\\frac{\\ln 2}{k}$',
-              '$f(t)=Ae^{kt}$',
-              '$T_{1/2}=\\frac{\\ln 2}{|k|}$'
+              '$V(t) = 25000(0.18)^t$',
+              '$V(t) = 25000(1.18)^t$',
+              '$V(t) = 25000(0.82)^t$',
+              '$V(t) = 25000 - 0.18t$'
             ],
-            correctAnswer: 0,
-            explanation: 'Use $f(x)=ab^x$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 2,
+            explanation: 'Losing $18\\%$ means retaining $82\\%$, so $b = 1 - 0.18 = 0.82$. The model is $V(t) = 25000(0.82)^t$.'
+          },
+          {
+            question: 'For $f(x) = 7 \\cdot 5^x$, what is $f(0)$?',
+            options: [
+              '$0$',
+              '$5$',
+              '$7$',
+              '$35$'
+            ],
+            correctAnswer: 2,
+            explanation: '$f(0) = 7 \\cdot 5^0 = 7 \\cdot 1 = 7$. The initial value $a$ is always the $y$-intercept.'
           }
         ]
       }
     },
     {
-      id: 'precalc-exponential-functions-precalc-p1-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Exponential form | $f(x)=ab^x$ | model construction |
-      | Continuous model | $f(t)=Ae^{kt}$ | growth/decay by constant relative rate |
-      | Doubling time | $T_d=\\frac{\ln 2}{k}$ | continuous growth timing |
-      | Half-life | $T_{1/2}=\\frac{\ln 2}{|k|}$ | continuous decay timing |
-      
-      ### Common pitfalls
-      - Do not confuse the base $b$ with the initial value $a$.
-      - A linear graph of raw data is not exponential evidence; inspect ratios.
-      - When solving exponents, isolate the exponential expression before applying logs.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-exponential-functions-precalc-p1-s4-input',
+      id: 'p1-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Exponential Evaluation**
-      
-      1) Solve $2^x=32$ for $x$.
-      2) Evaluate $f(3)$ for $f(x)=5\left(
-      rac{1}{2}
-      ight)^x$.
-      3) If $P(t)=100(1.1)^t$, compute $P(2)$.
+**Calculation Drill** 🧮
+
+**1)** A bacteria culture starts with $200$ cells and triples every hour. How many cells after $4$ hours? (e.g., doubling: $50 \\cdot 2^3 = 400$)
+
+**2)** An investment of $\\$1{,}000$ earns $5\\%$ annually. What is it worth after $1$ year? (e.g., $\\$800$ at $10\\%$: $800(1.10) = 880$)
+
+**3)** Evaluate $6 \\cdot \\left(\\frac{1}{3}\\right)^2$. (e.g., $4 \\cdot \\left(\\frac{1}{2}\\right)^3 = 4 \\cdot \\frac{1}{8} = 0.5$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5', '0.625', '121'],
-        hint1: 'Rewrite 32 as a power of 2.',
-        hint2: 'Compute $(1/2)^3$ first, then scale by 5.',
-        hint3: 'Square the growth factor 1.1 and multiply by 100.',
-        explanation: 'The answers are 5, 0.625, and 121 after direct exponential substitution.'
+        correctAnswers: ['16200', '1050', '0.667'],
+        hint1: 'Triples each hour: $200 \\cdot 3^4$. Compute $3^4 = 81$ first.',
+        hint2: '$1000 \\cdot 1.05 = ?$',
+        hint3: '$\\left(\\frac{1}{3}\\right)^2 = \\frac{1}{9}$. Then multiply by $6$. Round to three decimal places.',
+        explanation: '1) $200 \\cdot 3^4 = 200 \\cdot 81 = 16{,}200$. 2) $1000(1.05) = 1050$. 3) $6 \\cdot \\frac{1}{9} = \\frac{6}{9} = \\frac{2}{3} \\approx 0.667$.'
       }
     },
     {
-      id: 'precalc-exponential-functions-precalc-p1-s5-dropdown',
+      id: 'p1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Classify Each Scenario** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'exponential function',
-            options: ['multiplier between 0 and 1 per input step', 'multiplier per unit increase in input', 'value when input is zero', 'function of the form $f(x)=ab^x$ with $b>0, b\\neq1$']
+            label: 'A population doubles every $5$ years. This is exponential',
+            options: ['growth', 'decay', 'neither — it is linear', 'neither — it is quadratic']
           },
           {
-            label: 'growth factor',
-            options: ['multiplier per unit increase in input', 'multiplier between 0 and 1 per input step', 'input interval required to multiply output by 2', 'value when input is zero']
+            label: 'The $y$-intercept of $f(x) = a \\cdot b^x$ is',
+            options: ['$b$', '$a$', '$ab$', '$0$']
           },
           {
-            label: 'decay factor',
-            options: ['input interval required to multiply output by $\\rac12$', 'multiplier between 0 and 1 per input step', 'value when input is zero', 'input interval required to multiply output by 2']
+            label: 'If $b = 0.95$, the function loses what percent per unit?',
+            options: ['$95\\%$', '$5\\%$', '$0.95\\%$', '$0.05\\%$']
+          },
+          {
+            label: 'The horizontal asymptote of $f(x) = 3 \\cdot 2^x$ is',
+            options: ['$y = 3$', '$y = 2$', '$y = 0$', 'There is no asymptote']
           }
         ],
-        correctAnswers: ['function of the form $f(x)=ab^x$ with $b>0, b\\neq1$', 'multiplier per unit increase in input', 'multiplier between 0 and 1 per input step'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: exponential function, growth factor, and decay factor align with their exact definitions used in this part.'
+        correctAnswers: ['growth', '$a$', '$5\\%$', '$y = 0$'],
+        hint1: 'Doubling means multiplying by $2 > 1$.',
+        hint2: '$f(0) = a \\cdot b^0 = a \\cdot 1$.',
+        hint3: '$b = 1 - r = 0.95$, so $r = 0.05 = 5\\%$.',
+        explanation: 'Doubling is growth. $y$-intercept is $a$. $b = 0.95$ means $5\\%$ loss. Every basic exponential has HA $y = 0$.'
       }
     },
     {
-      id: 'precalc-exponential-functions-precalc-p1-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to exponential function, growth factor, and decay factor so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-exponential-functions-precalc-p1-s7-mcq-applied',
+      id: 'p1-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is tracking population growth. Which term best anchors the next reasoning step if the key idea is: value when input is zero?',
+            question: 'A substance decays from $500\\text{ g}$ to $125\\text{ g}$ in $2$ hours at a constant hourly rate. What is the hourly decay factor $b$?',
             options: [
-              'growth factor',
-              'initial value',
-              'exponential function',
-              'decay factor'
+              '$0.25$',
+              '$0.5$',
+              '$0.75$',
+              '$4$'
             ],
             correctAnswer: 1,
-            explanation: 'initial value matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$500 \\cdot b^2 = 125 \\implies b^2 = 0.25 \\implies b = 0.5$. The substance halves each hour.'
           },
           {
-            question: 'A student is solving a mixed exponential functions prompt. Which term best anchors the next reasoning step if the key idea is: input interval required to multiply output by 2?',
+            question: 'Which statement is TRUE about $f(x) = -2 \\cdot 3^x$?',
             options: [
-              'initial value',
-              'decay factor',
-              'doubling time',
-              'half-life'
+              'It has range $(0, \\infty)$',
+              'It has HA $y = -2$',
+              'It has range $(-\\infty, 0)$ and HA $y = 0$',
+              'It is exponential decay because the output is negative'
             ],
             correctAnswer: 2,
-            explanation: 'doubling time matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Since $a = -2 < 0$, all outputs are negative (reflected across $x$-axis). Range is $(-\\infty, 0)$. The HA is still $y = 0$. The base $b = 3 > 1$ means the magnitude grows, so this is NOT decay.'
           }
         ]
       }

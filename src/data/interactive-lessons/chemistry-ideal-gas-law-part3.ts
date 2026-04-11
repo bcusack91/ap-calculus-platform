@@ -4,17 +4,30 @@ export const chemIdealGasLawPart3Data = {
     {
       id: 'gl3-intro',
       type: 'text' as const,
-      content: `
-# ⚗️ The Ideal Gas Law
+      content: `# ⚗️ The Ideal Gas Law
 
 **Part 3 of 7 — PV = nRT**
 
-The three simple gas laws (Boyle's, Charles's, Avogadro's) each describe a two-variable relationship while holding others constant. The **ideal gas law** combines them all into one powerful equation:
+---
 
-$$PV = nRT$$
+### Topics in This Part
 
-This single equation lets you calculate **any one variable** if you know the other three.
-      `
+| Section |
+|---------|
+| 📌 The Equation and R |
+| The Gas Constant R |
+| Rearranged Forms |
+| 🧪 Worked Examples |
+| Example 1: Find Volume |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gl3-equation',
@@ -22,7 +35,7 @@ This single equation lets you calculate **any one variable** if you know the oth
       content: `
 ## 📌 The Equation and R
 
-$$PV = nRT$$
+$$\\boxed{PV = nRT}$$
 
 | Variable | Meaning | Units |
 |----------|---------|-------|
@@ -45,7 +58,7 @@ The value of $R$ depends on your pressure unit:
 | 8.314 L·kPa/(mol·K) | When $P$ is in kPa |
 | 8.314 J/(mol·K) | For energy calculations |
 
-Most AP Chemistry problems use $R = 0.0821$ L·atm/(mol·K).
+> 🔑 **Key Concept:** Most AP Chemistry problems use $R = 0.0821$ L·atm/(mol·K). Match your R value to the pressure unit!
 
 
 ---
@@ -68,7 +81,7 @@ Most AP Chemistry problems use $R = 0.0821$ L·atm/(mol·K).
 
 > **Problem:** What volume does 0.500 mol of gas occupy at 1.20 atm and 25°C?
 
-**Solution:**
+> **Solution:**
 
 $$T = 25 + 273.15 = 298.15 \\text{ K}$$
 
@@ -81,7 +94,7 @@ $$V = \\frac{nRT}{P} = \\frac{(0.500)(0.0821)(298.15)}{1.20} = 10.2 \\text{ L}$$
 
 > **Problem:** 2.00 mol of gas is in a 15.0 L container at 300 K. What is the pressure?
 
-**Solution:**
+> **Solution:**
 
 $$P = \\frac{nRT}{V} = \\frac{(2.00)(0.0821)(300)}{15.0} = 3.28 \\text{ atm}$$
 
@@ -92,7 +105,7 @@ $$P = \\frac{nRT}{V} = \\frac{(2.00)(0.0821)(300)}{15.0} = 3.28 \\text{ atm}$$
 
 > **Problem:** A gas at 2.50 atm and 350 K occupies 5.00 L. How many moles?
 
-**Solution:**
+> **Solution:**
 
 $$n = \\frac{PV}{RT} = \\frac{(2.50)(5.00)}{(0.0821)(350)} = 0.435 \\text{ mol}$$
 
@@ -101,7 +114,7 @@ $$n = \\frac{PV}{RT} = \\frac{(2.50)(5.00)}{(0.0821)(350)} = 0.435 \\text{ mol}$
 
 ### Unit Conversion Reminder
 
-Always check:
+> ⚠️ **Warning:** Always check your units before plugging in:
 - $P$ in atm (if using $R = 0.0821$)
 - $V$ in liters
 - $T$ in Kelvin

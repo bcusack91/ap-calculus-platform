@@ -5,7 +5,20 @@ export const chemTypesIntermolecularForcesPart3Data = {
       id: 'if-hb-intro',
       type: 'text',
       title: 'Hydrogen Bonding',
-      content: `Hydrogen bonding is a **special, extra-strong** type of dipole-dipole force. It occurs when hydrogen is covalently bonded to one of three highly electronegative atoms:\n\n$$\\text{N, O, or F}$$\n\nThe H atom in an N–H, O–H, or F–H bond carries a very large $\\delta^+$ charge because N, O, and F are so electronegative. This strongly positive H is then attracted to a **lone pair** on an N, O, or F atom of a neighboring molecule.\n\n**Critical AP Concept:** Despite its name, a hydrogen "bond" is NOT a chemical bond — it is an intermolecular force (an attraction between molecules). It is much weaker than a covalent or ionic bond but much stronger than typical dipole-dipole forces or LDF.\n\nMnemonic: Hydrogen bonding requires **"FON"** — Fluorine, Oxygen, or Nitrogen bonded to H.`
+      content: `Hydrogen bonding is a **special, extra-strong** type of dipole-dipole force. It occurs when hydrogen is covalently bonded to one of three highly electronegative atoms:\n\n$$\\boxed{\\text{N, O, or F}}$$\n\nThe H atom in an N–H, O–H, or F–H bond carries a very large $\\delta^+$ charge because N, O, and F are so electronegative. This strongly positive H is then attracted to a **lone pair** on an N, O, or F atom of a neighboring molecule.\n\n> ⚠️ **Warning:** Despite its name, a hydrogen "bond" is NOT a chemical bond — it is an intermolecular force (an attraction between molecules). It is much weaker than a covalent or ionic bond but much stronger than typical dipole-dipole forces or LDF.\n\nMnemonic: Hydrogen bonding requires **"FON"** — Fluorine, Oxygen, or Nitrogen bonded to H.\n\n---\n\n> 🔑 **Key Concept:** Hydrogen bonding requires H bonded **directly** to F, O, or N. The presence of these atoms elsewhere in the molecule is NOT sufficient.
+
+**Part 3 of 7 — Hydrogen Bonding**
+
+---
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'if-hb-not-a-bond',
@@ -32,7 +45,7 @@ export const chemTypesIntermolecularForcesPart3Data = {
       id: 'if-hb-requirements',
       type: 'text',
       title: 'Requirements for Hydrogen Bonding',
-      content: `For a molecule to participate in hydrogen bonding, it needs BOTH of the following:\n\n**1. A hydrogen donor:** An H atom covalently bonded to N, O, or F\n- This H carries a large $\\delta^+$ charge\n- Examples: O–H in water, N–H in ammonia, F–H in HF\n\n**2. A hydrogen acceptor:** A lone pair on an N, O, or F atom on a nearby molecule\n- This lone pair attracts the $\\delta^+$ hydrogen\n- The acceptor atom must have available lone pairs\n\n**Common hydrogen bonding molecules:**\n- $\\text{H}_2\\text{O}$ — both a donor (O–H) and acceptor (lone pairs on O)\n- $\\text{NH}_3$ — both a donor (N–H) and acceptor (lone pair on N)\n- $\\text{HF}$ — both a donor (F–H) and acceptor (lone pairs on F)\n- $\\text{CH}_3\\text{OH}$ (methanol) — donor (O–H) and acceptor (lone pairs on O)\n- $\\text{CH}_3\\text{COOH}$ (acetic acid) — donor (O–H) and acceptor (lone pairs on O)`
+      content: `For a molecule to participate in hydrogen bonding, it needs BOTH of the following:\n\n**1. A hydrogen donor:** An H atom covalently bonded to N, O, or F\n- This H carries a large $\\delta^+$ charge\n- Examples: O–H in water, N–H in ammonia, F–H in HF\n\n**2. A hydrogen acceptor:** A lone pair on an N, O, or F atom on a nearby molecule\n- This lone pair attracts the $\\delta^+$ hydrogen\n- The acceptor atom must have available lone pairs\n\n---\n\n**Common hydrogen bonding molecules:**\n- $\\text{H}_2\\text{O}$ — both a donor (O–H) and acceptor (lone pairs on O)\n- $\\text{NH}_3$ — both a donor (N–H) and acceptor (lone pair on N)\n- $\\text{HF}$ — both a donor (F–H) and acceptor (lone pairs on F)\n- $\\text{CH}_3\\text{OH}$ (methanol) — donor (O–H) and acceptor (lone pairs on O)\n- $\\text{CH}_3\\text{COOH}$ (acetic acid) — donor (O–H) and acceptor (lone pairs on O)`
     },
     {
       id: 'if-hb-identify',

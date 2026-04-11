@@ -4,14 +4,27 @@ export const chemLewisStructuresFormalChargePart4Data = {
     {
       id: 'ls-4-1',
       type: 'text',
-      title: 'What Is Formal Charge?',
-      content: `**Formal charge (FC)** is a bookkeeping tool that helps us determine which Lewis structure is the most reasonable when multiple structures are possible.\n\nFormal charge tells us the hypothetical charge on each atom if all bonding electrons were shared **perfectly equally** between bonded atoms.\n\n$$FC = V - N - \\frac{B}{2}$$\n\nWhere:\n- **V** = number of valence electrons (from the periodic table)\n- **N** = number of nonbonding (lone pair) electrons on the atom\n- **B** = number of bonding electrons around the atom\n\nAlternatively, since $\\frac{B}{2}$ equals the number of bonds:\n\n$$FC = V - N - \\text{(number of bonds)}$$\n\n**Important:** The sum of all formal charges in a molecule must equal the overall charge of the molecule or ion.`
+      title: '⚡ What Is Formal Charge?',
+      content: `**Formal charge (FC)** is a bookkeeping tool that helps us determine which Lewis structure is the most reasonable when multiple structures are possible.\n\nFormal charge tells us the hypothetical charge on each atom if all bonding electrons were shared **perfectly equally** between bonded atoms.\n\n$$\\boxed{FC = V - N - \\frac{B}{2}}$$\n\nWhere:\n- **V** = number of valence electrons (from the periodic table)\n- **N** = number of nonbonding (lone pair) electrons on the atom\n- **B** = number of bonding electrons around the atom\n\nAlternatively, since $\\frac{B}{2}$ equals the number of bonds:\n\n$$\\boxed{FC = V - N - \\text{(number of bonds)}}$$\n\n**Important:** The sum of all formal charges in a molecule must equal the overall charge of the molecule or ion.
+
+**Part 4 of 7 — Resonance Structures**
+
+---
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ls-4-2',
       type: 'text',
-      title: 'Calculating Formal Charge: H₂O Example',
-      content: `Let\'s calculate the formal charge on each atom in H₂O.\n\nThe Lewis structure: H—Ö—H (oxygen has 2 lone pairs)\n\n**Oxygen:**\n- V = 6 (Group 16)\n- N = 4 (2 lone pairs = 4 electrons)\n- B = 4 (2 bonds × 2 electrons each)\n- FC = 6 − 4 − 4/2 = 6 − 4 − 2 = **0**\n\n**Each Hydrogen:**\n- V = 1 (Group 1)\n- N = 0 (no lone pairs)\n- B = 2 (1 bond = 2 electrons)\n- FC = 1 − 0 − 2/2 = 1 − 0 − 1 = **0**\n\n**Check:** Sum of formal charges = 0 + 0 + 0 = 0 ✓ (neutral molecule)\n\nAll formal charges are zero — this is the ideal situation and confirms this is a good Lewis structure.`
+      title: '✏️ Calculating Formal Charge: H₂O Example',
+      content: `> **Problem:** Calculate the formal charge on each atom in H₂O.\n\n**Solution:**\n\nLet\'s calculate the formal charge on each atom in H₂O.\n\nThe Lewis structure: H—Ö—H (oxygen has 2 lone pairs)\n\n**Oxygen:**\n- V = 6 (Group 16)\n- N = 4 (2 lone pairs = 4 electrons)\n- B = 4 (2 bonds × 2 electrons each)\n- FC = 6 − 4 − 4/2 = 6 − 4 − 2 = **0**\n\n**Each Hydrogen:**\n- V = 1 (Group 1)\n- N = 0 (no lone pairs)\n- B = 2 (1 bond = 2 electrons)\n- FC = 1 − 0 − 2/2 = 1 − 0 − 1 = **0**\n\n**Check:** Sum of formal charges = 0 + 0 + 0 = 0 ✓ (neutral molecule)\n\nAll formal charges are zero — this is the ideal situation and confirms this is a good Lewis structure.`
     },
     {
       id: 'ls-4-3',
@@ -37,17 +50,17 @@ export const chemLewisStructuresFormalChargePart4Data = {
       exercise: {
         inputs: [
           {
-            label: 'FC on carbon in CO₂ (C has 4 valence e⁻, 0 lone pairs, 8 bonding e⁻ from 2 double bonds)',
+            label: '**1.** FC on carbon in CO₂ (C has 4 valence e⁻, 0 lone pairs, 8 bonding e⁻ from 2 double bonds)',
             correctAnswer: '0',
             explanation: 'FC = 4 − 0 − 8/2 = 4 − 0 − 4 = 0.'
           },
           {
-            label: 'FC on each oxygen in CO₂ (O has 6 valence e⁻, 4 lone pair e⁻, 4 bonding e⁻ from 1 double bond)',
+            label: '**2.** FC on each oxygen in CO₂ (O has 6 valence e⁻, 4 lone pair e⁻, 4 bonding e⁻ from 1 double bond)',
             correctAnswer: '0',
             explanation: 'FC = 6 − 4 − 4/2 = 6 − 4 − 2 = 0.'
           },
           {
-            label: 'FC on nitrogen in the ammonium ion NH₄⁺ (N has 5 valence e⁻, 0 lone pairs, 8 bonding e⁻)',
+            label: '**3.** FC on nitrogen in the ammonium ion NH₄⁺ (N has 5 valence e⁻, 0 lone pairs, 8 bonding e⁻)',
             correctAnswer: '+1',
             explanation: 'FC = 5 − 0 − 8/2 = 5 − 0 − 4 = +1. This positive formal charge matches the overall +1 charge of the ion.'
           }
@@ -57,8 +70,8 @@ export const chemLewisStructuresFormalChargePart4Data = {
     {
       id: 'ls-4-5',
       type: 'text',
-      title: 'Rules for Choosing the Best Lewis Structure',
-      content: `When multiple valid Lewis structures exist, use formal charges to pick the best one:\n\n**Rule 1:** The structure with formal charges **closest to zero** on all atoms is preferred.\n\n**Rule 2:** If formal charges cannot all be zero, **negative formal charges** should be on the **more electronegative atoms**.\n\n**Rule 3:** Structures where **adjacent atoms** have formal charges of the **same sign** are unfavorable (like charges repel).\n\n**Rule 4:** The sum of all formal charges must equal the molecule\'s overall charge.\n\n**Example: CO₂ — comparing two structures**\n\nStructure A: O=C=O → FC: all zeros ✓ Best!\nStructure B: O≡C—Ö → FC: O(≡) = +1, C = 0, O(—) = −1\n\nStructure A is preferred because all formal charges are zero.`
+      title: '🔑 Rules for Choosing the Best Lewis Structure',
+      content: `When multiple valid Lewis structures exist, use formal charges to pick the best one:\n\n**Rule 1:** The structure with formal charges **closest to zero** on all atoms is preferred.\n\n**Rule 2:** If formal charges cannot all be zero, **negative formal charges** should be on the **more electronegative atoms**.\n\n**Rule 3:** Structures where **adjacent atoms** have formal charges of the **same sign** are unfavorable (like charges repel).\n\n**Rule 4:** The sum of all formal charges must equal the molecule\'s overall charge.\n\n**Example: CO₂ — comparing two structures**\n\nStructure A: O=C=O → FC: all zeros ✓ Best!\nStructure B: O≡C—Ö → FC: O(≡) = +1, C = 0, O(—) = −1\n\nStructure A is preferred because all formal charges are zero.\n\n> 🔑 **Key Concept:** Minimize formal charges first (Rule 1), then place any remaining negative charges on the most electronegative atoms (Rule 2).`
     },
     {
       id: 'ls-4-6',

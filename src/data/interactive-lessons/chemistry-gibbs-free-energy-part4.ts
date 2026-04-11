@@ -4,13 +4,30 @@ export const chemGibbsFreeEnergyPart4Data = {
     {
       id: 'gf4-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ ΔG and Equilibrium
+      content: `# ⚖️ ΔG and Equilibrium
 
 **Part 4 of 7 — ΔG° = −RT ln K**
 
-One of the most powerful relationships in all of chemistry connects Gibbs free energy to the equilibrium constant. This equation bridges thermodynamics and equilibrium — two pillars of AP Chemistry.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🔑 The Key Equation |
+| What This Equation Tells Us |
+| Important Nuance |
+| 📌 Solving for K from ΔG° |
+| Worked Example |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gf4-relationship',
@@ -18,7 +35,7 @@ One of the most powerful relationships in all of chemistry connects Gibbs free e
       content: `
 ## 🔑 The Key Equation
 
-$$\\Delta G° = -RT\\ln K$$
+$$\boxed{\Delta G° = -RT\ln K}$$
 
 | Symbol | Meaning | Value/Units |
 |--------|---------|-------------|
@@ -37,13 +54,12 @@ $$\\Delta G° = -RT\\ln K$$
 | $\\Delta G° < 0$ | $K > 1$ | Products favored at equilibrium |
 | $\\Delta G° = 0$ | $K = 1$ | Neither favored |
 | $\\Delta G° > 0$ | $K < 1$ | Reactants favored at equilibrium |
-
-
+> 🔑 **Key Concept:** The sign of $\Delta G°$ tells you the position of equilibrium — whether products ($K > 1$) or reactants ($K < 1$) are favored.
 ---
 
 ### Important Nuance
 
-$\\Delta G° < 0$ does **NOT** mean the reaction goes to completion. It means $K > 1$, so products are **favored**, but reactants are still present at equilibrium.
+> ⚠️ **Warning:** $\Delta G° < 0$ does **NOT** mean the reaction goes to completion. It means $K > 1$, so products are **favored**, but reactants are still present at equilibrium.
       `
     },
     {
@@ -52,14 +68,16 @@ $\\Delta G° < 0$ does **NOT** mean the reaction goes to completion. It means $K
       content: `
 ## 📌 Solving for K from ΔG°
 
-Rearranging: $K = e^{-\\Delta G°/(RT)}$
+$$\boxed{K = e^{-\Delta G°/(RT)}}$$
 
 
 ---
 
 ### Worked Example
 
-Find $K$ at 25°C for a reaction with $\\Delta G° = -5.40$ kJ/mol.
+> **Problem:** Find $K$ at 25°C for a reaction with $\Delta G° = -5.40$ kJ/mol.
+
+> **Solution:**
 
 $$K = e^{-\\Delta G°/(RT)} = e^{-(-5400)/(8.314 \\times 298)}$$
 
@@ -84,6 +102,8 @@ $$\\Delta G° = -(2477.6)(23.03) = -57{,}050 \\text{ J} = -57.1 \\text{ kJ}$$
 $$\\ln K = 2.303 \\log K$$
 
 So: $\\Delta G° = -2.303 RT \\log K$
+
+> ⚠️ **Warning:** When using $\\Delta G° = -RT\\ln K$, $R$ must be $8.314$ J/(mol·K) and $\\Delta G°$ must be in **J/mol** (not kJ). Convert kJ to J before plugging in!
       `
     },
     {

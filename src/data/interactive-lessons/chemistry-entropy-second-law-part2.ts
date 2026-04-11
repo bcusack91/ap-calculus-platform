@@ -4,13 +4,30 @@ export const chemEntropySecondLawPart2Data = {
     {
       id: 'en2-intro',
       type: 'text' as const,
-      content: `
-# 📈 Predicting Entropy Changes
+      content: `# 📈 Predicting Entropy Changes
 
 **Part 2 of 7 — More Gas = More Entropy**
 
-Before we calculate $\\Delta S$ numerically, we need to develop the ability to **predict** whether entropy increases or decreases in a process. This qualitative skill is tested heavily on the AP exam and relies on simple rules about phases, moles of gas, and molecular complexity.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🌡️ Entropy and Phase |
+| Why? |
+| Phase Change Entropy |
+| 📏 Rules for Predicting $\\Delta S$ of Reactions |
+| Rule 1: Count Moles of Gas |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'en2-phase-changes',
@@ -20,7 +37,7 @@ Before we calculate $\\Delta S$ numerically, we need to develop the ability to *
 
 Entropy increases dramatically as matter moves from solid to liquid to gas:
 
-$$S_{\\text{solid}} < S_{\\text{liquid}} \\ll S_{\\text{gas}}$$
+$$\\boxed{S_{\\text{solid}} < S_{\\text{liquid}} \\ll S_{\\text{gas}}}$$
 
 
 ---
@@ -59,7 +76,7 @@ The jump from liquid → gas is much larger than solid → liquid because gas mo
 
 The **most reliable** predictor of $\\Delta S$:
 
-$$\\Delta n_{\\text{gas}} = \\text{mol gas (products)} - \\text{mol gas (reactants)}$$
+$$\\boxed{\\Delta n_{\\text{gas}} = \\text{mol gas (products)} - \\text{mol gas (reactants)}}$$
 
 - If $\\Delta n_{\\text{gas}} > 0$: $\\Delta S > 0$ (entropy increases)
 - If $\\Delta n_{\\text{gas}} < 0$: $\\Delta S < 0$ (entropy decreases)
@@ -112,9 +129,7 @@ More complex molecules (more atoms, more bonds, more ways to vibrate) have highe
 
 ---
 
-### Key Insight for AP
-
-When asked to "predict the sign of $\\Delta S$" — **always start by counting moles of gas**. If $\\Delta n_{\\text{gas}} = 0$, then consider total moles and phases.
+> 🔑 **Key Concept:** When asked to "predict the sign of $\\Delta S$" — **always start by counting moles of gas**. If $\\Delta n_{\\text{gas}} = 0$, then consider total moles and phases.
       `
     },
     {

@@ -9,12 +9,26 @@ export const chemHybridizationSigmaPiBondsPart3Data = {
 
 **Part 3 of 7 — Two Kinds of Covalent Bonds**
 
-Not all covalent bonds are the same. There are two fundamentally different types based on how the orbitals overlap:
+---
 
-- **Sigma (σ) bonds** — formed by head-on overlap
-- **Pi (π) bonds** — formed by lateral (side-by-side) overlap
+### Topics in This Part
 
-Understanding the difference between sigma and pi bonds is essential for explaining molecular structure, rotation, rigidity, and reactivity.`
+| Section |
+|---------|
+| Types of Sigma Bond Overlap |
+| Key Properties of Sigma Bonds |
+| Key Properties of Pi Bonds |
+| Why Pi Bonds Prevent Rotation |
+| The Simple Rules |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'hy-3-2',
@@ -39,7 +53,9 @@ A **sigma bond** forms when two orbitals overlap **end-to-end** (head-on), with 
 1. **Every single bond is a sigma bond**
 2. Sigma bonds allow **free rotation** around the bond axis (the cylindrical symmetry of electron density means rotation doesn\'t break the overlap)
 3. Sigma bonds are **stronger** than pi bonds (greater orbital overlap)
-4. Every bonding pair shares **exactly one** sigma bond — it\'s always the first bond formed between two atoms`
+4. Every bonding pair shares **exactly one** sigma bond — it\'s always the first bond formed between two atoms
+
+> 🔑 **Key Concept:** The first bond between any two atoms is always a sigma bond. Additional bonds (in double/triple bonds) are pi bonds.`
     },
     {
       id: 'hy-3-3',
@@ -63,7 +79,9 @@ Imagine two p orbitals overlapping side-by-side. If you rotate one atom 90°, th
 
 - **Ethane** (C–C single bond, no π): free rotation
 - **Ethene** (C=C double bond, 1 π): **no** free rotation → rigid and planar
-- **Acetylene** (C≡C triple bond, 2 π): **no** free rotation → rigid and linear`
+- **Acetylene** (C≡C triple bond, 2 π): **no** free rotation → rigid and linear
+
+> 🔑 **Key Concept:** Pi bonds lock molecular geometry — double bonds create rigid, planar structures and triple bonds create linear structures.`
     },
     {
       id: 'hy-3-4',
@@ -117,9 +135,9 @@ Imagine two p orbitals overlapping side-by-side. If you rotate one atom 90°, th
 
 ### The Simple Rules
 
-$$\\text{Single bond} = 1\\sigma + 0\\pi$$
-$$\\text{Double bond} = 1\\sigma + 1\\pi$$
-$$\\text{Triple bond} = 1\\sigma + 2\\pi$$
+$$\\boxed{\\text{Single bond} = 1\\sigma + 0\\pi}$$
+$$\\boxed{\\text{Double bond} = 1\\sigma + 1\\pi}$$
+$$\\boxed{\\text{Triple bond} = 1\\sigma + 2\\pi}$$
 
 ### Counting Strategy
 
@@ -129,26 +147,30 @@ $$\\text{Triple bond} = 1\\sigma + 2\\pi$$
    - For double bonds: the second line = 1 pi bond
    - For triple bonds: the second and third lines = 2 pi bonds
 
-### Worked Example: Ethene (C₂H₄)
+> **Problem:** Count all σ and π bonds in ethene (C₂H₄), structure H₂C=CH₂.
 
-Structure: H₂C=CH₂
-- 4 C–H single bonds → 4σ
-- 1 C=C double bond → 1σ + 1π
-- **Total: 5σ + 1π**
+> **Solution:**
+> - 4 C–H single bonds → 4σ
+> - 1 C=C double bond → 1σ + 1π
+> - **Total: 5σ + 1π**
 
-### Worked Example: Acetylene (C₂H₂)
+---
 
-Structure: HC≡CH
-- 2 C–H single bonds → 2σ
-- 1 C≡C triple bond → 1σ + 2π
-- **Total: 3σ + 2π**
+> **Problem:** Count all σ and π bonds in acetylene (C₂H₂), structure HC≡CH.
 
-### Worked Example: HCN (Hydrogen Cyanide)
+> **Solution:**
+> - 2 C–H single bonds → 2σ
+> - 1 C≡C triple bond → 1σ + 2π
+> - **Total: 3σ + 2π**
 
-Structure: H–C≡N
-- 1 H–C single bond → 1σ
-- 1 C≡N triple bond → 1σ + 2π
-- **Total: 2σ + 2π**`
+---
+
+> **Problem:** Count all σ and π bonds in HCN (hydrogen cyanide), structure H–C≡N.
+
+> **Solution:**
+> - 1 H–C single bond → 1σ
+> - 1 C≡N triple bond → 1σ + 2π
+> - **Total: 2σ + 2π**`
     },
     {
       id: 'hy-3-6',

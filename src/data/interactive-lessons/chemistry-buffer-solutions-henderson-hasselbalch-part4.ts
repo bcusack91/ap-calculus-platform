@@ -4,13 +4,30 @@ export const chemBufferSolutionsHendersonHasselbalchPart4Data = {
     {
       id: 'bf4-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Buffer Capacity and Effective Range
+      content: `# 🎯 Buffer Capacity and Effective Range
 
 **Part 4 of 7 — How Much Can a Buffer Handle?**
 
-A buffer doesn\'t have unlimited ability to resist pH changes. Its **buffer capacity** tells us how much strong acid or base it can neutralize before the pH changes significantly. Its **effective range** tells us the pH range where it works well.
-      `
+---
+
+### Buffer Capacity and Range
+
+| Factor | Effect on Buffer Capacity |
+|--------|--------------------------|
+| Higher concentrations of HA and A⁻ | Greater capacity (more moles to neutralize) |
+| Equal concentrations of HA and A⁻ | Maximum capacity (pH = p$K_a$) |
+| Very unequal ratio (>10:1 or <1:10) | Buffer breaks — outside effective range |
+
+**Effective range: p$K_a$ ± 1**
+
+> 🔑 **Why this matters:** The AP exam tests whether you know the limits of a buffer — not just how to calculate pH, but when the buffer fails.
+
+---
+
+### What You'll Master in Part 4
+- Defining buffer capacity and the factors that affect it
+- Understanding why the effective range is p$K_a$ ± 1
+- Predicting when a buffer has been overwhelmed`
     },
     {
       id: 'bf4-capacity',
@@ -40,6 +57,8 @@ A buffer doesn\'t have unlimited ability to resist pH changes. Its **buffer capa
 ### Maximum Capacity
 
 A buffer can neutralize added acid equal to the moles of $A^-$ present, and added base equal to the moles of $HA$ present. Beyond that, the buffer is destroyed.
+
+> 🔑 **Key Rule:** Max acid neutralized = mol $A^-$. Max base neutralized = mol $HA$.
       `
     },
     {
@@ -79,6 +98,8 @@ $$\\boxed{\\text{Effective buffer range: } pK_a \\pm 1}$$
 ### Why $pK_a \\pm 1$?
 
 Outside this range, one component is less than 10% of the other. There\'s not enough of it to provide meaningful buffering.
+
+> ⚠️ **AP Trap:** If a problem gives you a buffer with $[A^-]/[HA] > 10$ or $< 0.1$, the buffer is outside its effective range and won’t resist pH changes well.
       `
     },
     {
@@ -158,6 +179,8 @@ Adding water (dilution) to a buffer:
 
 - **Does NOT change pH** (both $[HA]$ and $[A^-]$ decrease by the same factor, so the ratio stays the same)
 - **DOES decrease capacity** (fewer moles of each component per liter)
+
+> 🔑 **Key Distinction:** Dilution preserves pH but weakens the buffer. This is a common AP free-response question.
 
 
 ---

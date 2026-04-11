@@ -4,13 +4,30 @@ export const chemReactionRatesAndRateLawsPart3Data = {
     {
       id: 'rr3-intro',
       type: 'text' as const,
-      content: `
-# 📐 Rate Laws
+      content: `# 📐 Rate Laws
 
 **Part 3 of 7 — The Mathematical Heart of Kinetics**
 
-A **rate law** is a mathematical equation that relates the rate of a reaction to the concentrations of reactants. Rate laws must be determined **experimentally** — you cannot simply read them off the balanced equation.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📏 The General Rate Law |
+| Critical Points |
+| What Does Order Mean? |
+| 🔍 Determining Order from Experimental Data |
+| The Method of Initial Rates |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rr3-rate-law-form',
@@ -20,7 +37,7 @@ A **rate law** is a mathematical equation that relates the rate of a reaction to
 
 For a reaction $aA + bB \\rightarrow \\text{products}$:
 
-$$\\text{Rate} = k[A]^m[B]^n$$
+$$\\boxed{\\text{Rate} = k[A]^m[B]^n}$$
 
 | Symbol | Meaning |
 |--------|---------|
@@ -37,6 +54,9 @@ $$\\text{Rate} = k[A]^m[B]^n$$
 
 - **$m$ and $n$ are NOT necessarily the stoichiometric coefficients** $a$ and $b$
 - Orders must be determined from **experimental data**
+
+> ⚠️ **Warning:** You **cannot** read rate law exponents off the balanced equation! Orders must be determined from experimental data. They only equal coefficients for elementary (single-step) reactions.
+
 - Orders can be 0, 1, 2, or even fractional
 - The rate constant $k$ depends on **temperature** but NOT on concentration
 
@@ -107,6 +127,8 @@ $$\\text{Rate} = k[A]^m[B]^n$$
 
 The most common technique: measure the initial rate of reaction for several experiments where you vary one concentration at a time.
 
+> 🔑 **Key Concept:** In the **method of initial rates**, you vary **one concentration at a time** while keeping others constant, then take ratios to determine each order.
+
 
 ---
 
@@ -141,11 +163,11 @@ $$\\frac{0.030}{0.015} = \\left(\\frac{0.20}{0.10}\\right)^n \\Rightarrow 2 = 2^
 
 ### Step 3: Write the rate law and find k
 
-$$\\text{Rate} = k[A]^2[B]$$
+$$\\boxed{\\text{Rate} = k[A]^2[B]}$$
 
 Using Exp 1: $0.015 = k(0.10)^2(0.10) = k(0.001)$
 
-$$k = \\frac{0.015}{0.001} = 15 \\; \\text{M}^{-2}\\text{s}^{-1}$$
+$$\\boxed{k = \\frac{0.015}{0.001} = 15 \\; \\text{M}^{-2}\\text{s}^{-1}}$$
       `
     },
     {

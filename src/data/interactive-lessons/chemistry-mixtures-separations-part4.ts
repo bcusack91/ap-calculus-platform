@@ -4,13 +4,30 @@ export const chemMixturesSeparationsPart4Data = {
     {
       id: 'mx4-intro',
       type: 'text' as const,
-      content: `
-# 🌈 Spectroscopy Introduction
+      content: `# 🌈 Spectroscopy Introduction
 
 **Part 4 of 7 — Beer\'s Law and Absorbance**
 
-Spectroscopy uses light to analyze the composition of mixtures. When light passes through a solution, some wavelengths are **absorbed** by the solute. The amount of absorption depends on the **concentration** of the solute, which gives us a powerful analytical tool: **Beer\'s Law**.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🔧 How Solutions Absorb Light |
+| Color Wheel |
+| Key Concept: Absorbance |
+| Relationship: $A$ and $T$ |
+| 📏 Beer\'s Law (Beer-Lambert Law) |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'mx4-light-absorption',
@@ -44,7 +61,7 @@ When white light passes through a colored solution:
 
 **Absorbance** ($A$) measures how much light a solution absorbs at a particular wavelength:
 
-$$A = -\\log\\left(\\frac{I}{I_0}\\right) = -\\log(T)$$
+$$\\boxed{A = -\\log\\left(\\frac{I}{I_0}\\right) = -\\log(T)}$$
 
 where:
 - $I_0$ = intensity of incident light
@@ -67,7 +84,7 @@ where:
       content: `
 ## 📏 Beer\'s Law (Beer-Lambert Law)
 
-$$A = \\varepsilon bc$$
+$$\\boxed{A = \\varepsilon bc}$$
 
 | Symbol | Meaning | Units |
 |--------|---------|-------|
@@ -85,6 +102,8 @@ $$A = \\varepsilon bc$$
 - If you double the concentration, absorbance doubles
 - $\\varepsilon$ is a constant for a given substance at a given wavelength
 - Standard cuvettes have $b = 1.00$ cm, so often $A = \\varepsilon c$
+
+> 🔑 **Key Concept:** Beer\'s Law is **linear** — doubling concentration doubles absorbance. This makes calibration curves powerful analytical tools.
 
 
 ---
@@ -105,6 +124,8 @@ $$A = \\varepsilon bc$$
 Always measure at the wavelength of **maximum absorbance** ($\\lambda_{\\text{max}}$) because:
 - Greatest sensitivity (largest change in $A$ per change in $c$)
 - Beer\'s Law is most linear at $\\lambda_{\\text{max}}$
+
+> ⚠️ **Warning:** Measuring at the wrong wavelength reduces sensitivity and can cause non-linear Beer\'s Law behavior, leading to inaccurate concentrations.
       `
     },
     {

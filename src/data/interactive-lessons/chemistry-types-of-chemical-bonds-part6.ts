@@ -8,7 +8,20 @@ export const chemTypesOfChemicalBondsPart6Data = {
 
 **Part 6 of 7 — Mixed Practice with Chemical Bonds**
 
-This part is a hands-on workshop. You'll apply everything from Parts 1–5 to identify, compare, and analyze chemical bonds. Work through each section carefully — these are the types of questions you'll see on the AP exam.`
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'cb6-identify-bonds',
@@ -136,13 +149,13 @@ A substance is described. Identify its bond type.`,
       type: 'input-box' as const,
       content: `### Round 4: Bond Polarity Calculations
 
-Calculate the electronegativity difference and classify each bond.
+> **Problem:** Calculate the electronegativity difference and classify each bond.
 
-1. $\\Delta\\chi$ for C—Cl (C: 2.5, Cl: 3.0). Enter the value.
+**1.** $\Delta\chi$ for C—Cl (C: 2.5, Cl: 3.0). Enter the value.
 
-2. Classify the C—Cl bond as "nonpolar covalent", "polar covalent", or "ionic".
+**2.** Classify the C—Cl bond as "nonpolar covalent", "polar covalent", or "ionic".
 
-3. $\\Delta\\chi$ for Na—F (Na: 0.9, F: 4.0). Enter the value.
+**3.** $\Delta\chi$ for Na—F (Na: 0.9, F: 4.0). Enter the value.
 
 *Round all answers to 3 significant figures.*
       `,

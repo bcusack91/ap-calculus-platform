@@ -4,21 +4,30 @@ export const chemNernstEquationConcentrationPart1Data = {
     {
       id: 'ne1-intro',
       type: 'text' as const,
-      content: `
-# 📉 Non-Standard Conditions — The Nernst Equation
+      content: `# 📉 Non-Standard Conditions — The Nernst Equation
 
 **Part 1 of 7 — Beyond Standard Potentials**
 
 ---
 
-Standard cell potentials ($E°$) apply only at **standard conditions**: all concentrations at 1 M and all gas pressures at 1 atm. But real batteries and cells almost never operate under those ideal conditions.
+### Topics in This Part
 
-> 🔑 The **Nernst equation** lets us calculate the actual cell potential at **any** set of concentrations or pressures.
+| Section |
+|---------|
+| 🔋 Deriving the Nernst Equation |
+| Starting Point — Free Energy and Equilibrium |
+| The Derivation |
+| 📊 Key Variables |
+| 🧮 At 25°C (298 K) — The Simplified Form |
 
-$$\\boxed{E = E° - \\frac{RT}{nF}\\ln Q}$$
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
-This single equation connects **thermodynamics**, **equilibrium**, and **electrochemistry** into one powerful relationship.
-      `
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ne1-derivation',
@@ -61,7 +70,7 @@ $$\\boxed{E = E° - \\frac{RT}{nF}\\ln Q}$$
 | $R$ | Gas constant | $8.314$ J/(mol·K) |
 | $T$ | Temperature | K |
 | $n$ | Moles of $e^-$ transferred | dimensionless |
-| $F$ | Faraday\\'s constant | $96{,}485$ C/mol $e^-$ |
+| $F$ | Faraday\'s constant | $96{,}485$ C/mol $e^-$ |
 | $Q$ | Reaction quotient | dimensionless |
 
 ---
@@ -106,7 +115,7 @@ As a galvanic cell operates:
 2. **$E$ decreases** as $Q$ approaches $K$
 3. **When $Q = K$:** $E = 0$ — the battery is "dead"
 
-> A "dead" battery is simply a cell that has **reached equilibrium** — there is no longer any thermodynamic driving force for the reaction.
+> 💡 **Tip:** A "dead" battery is simply a cell that has **reached equilibrium** — there is no longer any thermodynamic driving force for the reaction.
       `
     },
     {
@@ -115,15 +124,9 @@ As a galvanic cell operates:
       content: `
 ## 🧪 Worked Example — Daniell Cell
 
-For the Daniell cell:
+> **Problem:** For the Daniell cell: $\text{Zn}(s) + \text{Cu}^{2+}(aq) \rightarrow \text{Zn}^{2+}(aq) + \text{Cu}(s)$, with $E° = +1.10$ V, $n = 2$, $T = 298$ K. Find $E$ when $[\text{Zn}^{2+}] = 0.10$ M and $[\text{Cu}^{2+}] = 2.0$ M.
 
-$$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$$
-
-**Given:** $E° = +1.10$ V, $n = 2$, $T = 298$ K
-
-**Find** $E$ when $[\\text{Zn}^{2+}] = 0.10$ M and $[\\text{Cu}^{2+}] = 2.0$ M.
-
----
+> **Solution:**
 
 ### Step 1 — Write the Reaction Quotient
 

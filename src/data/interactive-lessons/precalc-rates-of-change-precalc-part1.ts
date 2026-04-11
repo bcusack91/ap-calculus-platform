@@ -2,186 +2,207 @@ export const precalcRatesOfChangePart1Data = {
   topicSlug: 'rates-of-change-precalc',
   sections: [
     {
-      id: 'precalc-rates-of-change-precalc-p1-s1-intro',
+      id: 'p1-intro',
       type: 'text' as const,
       content: `
-      ## Rates of Change: Average rate as slope of secant
-      
-      **Part 1 of 7**
-      
-      This part focuses on interpreting distance-time data. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **average rate of change**: change in output divided by change in input
-      - **secant slope**: slope through two points on a graph
-      - **unit rate**: rate normalized to one input unit
-      
-      
-      ### Worked Example
-      Part 1 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📈 Average Rate of Change
+
+**Part 1 of 7**
+
+### What Is a Rate of Change?
+
+A **rate of change** measures how fast one quantity changes relative to another.
+
+$$\\text{Average Rate of Change} = \\frac{\\Delta y}{\\Delta x} = \\frac{f(b) - f(a)}{b - a}$$
+
+This is the **slope of the secant line** through $(a, f(a))$ and $(b, f(b))$.
+
+### Familiar Examples
+
+| Context | Rate of Change |
+|:--------|:--------------|
+| Distance/Time | Speed (mph) |
+| Cost/Items | Price per item |
+| Population/Year | Growth rate |
+| Temperature/Hour | Cooling/heating rate |
+
+### Connection to Slope
+
+For a **linear function** $f(x) = mx + b$:
+- The rate of change is **constant** = $m$
+- Every secant line has the same slope
+
+For **nonlinear functions**, the rate of change **varies** depending on the interval.
       `
     },
     {
-      id: 'precalc-rates-of-change-precalc-p1-s2-mcq-core',
+      id: 'p1-examples',
+      type: 'text' as const,
+      content: `
+## Worked Examples
+
+### Example 1: Polynomial
+
+$f(x) = x^2$. Average rate of change on $[1, 4]$:
+
+$$\\frac{f(4) - f(1)}{4 - 1} = \\frac{16 - 1}{3} = \\frac{15}{3} = 5$$
+
+The secant line through $(1,1)$ and $(4,16)$ has slope 5.
+
+### Example 2: Square Root
+
+$g(x) = \\sqrt{x}$. Average rate of change on $[4, 9]$:
+
+$$\\frac{\\sqrt{9} - \\sqrt{4}}{9 - 4} = \\frac{3 - 2}{5} = \\frac{1}{5} = 0.2$$
+
+### Example 3: Word Problem
+
+A ball's height is $h(t) = -16t^2 + 64t$ feet at time $t$ seconds.
+
+Average velocity from $t = 1$ to $t = 3$:
+$$\\frac{h(3) - h(1)}{3-1} = \\frac{(-16(9)+192) - (-16+64)}{2} = \\frac{48 - 48}{2} = 0 \\text{ ft/s}$$
+
+The ball returns to the same height — zero average velocity!
+      `
+    },
+    {
+      id: 'p1-secant',
+      type: 'text' as const,
+      content: `
+## Secant Lines
+
+### Drawing a Secant Line
+
+The secant line through $(a, f(a))$ and $(b, f(b))$ has equation:
+
+$$y - f(a) = \\frac{f(b)-f(a)}{b-a}(x - a)$$
+
+### Decreasing Intervals
+
+If $f(b) < f(a)$ when $b > a$, the AROC is **negative** — the secant slopes downward.
+
+### Example: Finding a Secant Equation
+
+$f(x) = x^3$, points $(1,1)$ and $(2,8)$:
+
+- Slope: $\\frac{8-1}{2-1} = 7$
+- Equation: $y - 1 = 7(x - 1) \\Rightarrow y = 7x - 6$
+
+### Multiple Intervals Show Changing Rates
+
+For $f(x) = x^2$:
+- On $[0,1]$: AROC = $1$
+- On $[1,2]$: AROC = $3$
+- On $[2,3]$: AROC = $5$
+
+The rate itself is increasing — the function curves upward faster and faster.
+      `
+    },
+    {
+      id: 'p1-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Average Rate of Change Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of average rate of change.',
-            options: [
-              'change in output divided by change in input',
-              'slope through two points on a graph',
-              'rate normalized to one input unit',
-              'interval where function values rise as input increases'
-            ],
-            correctAnswer: 0,
-            explanation: 'average rate of change is defined as: change in output divided by change in input.'
+            question: 'AROC of $f(x)=x^2$ on $[2,5]$:',
+            options: ['$5$', '$7$', '$3$', '$21$'],
+            correctAnswer: 1,
+            explanation: '$\\frac{25- 4}{5-2} = \\frac{21}{3} = 7$.'
           },
           {
-            question: 'In interpreting distance-time data, which expression is the best starting model?',
-            options: [
-              '$\\frac{\\text{new}-\\text{old}}{\\text{old}}\\cdot 100\\%$',
-              '$\\frac{f(b)-f(a)}{b-a}$',
-              '$m=\\frac{y_2-y_1}{x_2-x_1}$',
-              '$y=mx+b$'
-            ],
+            question: 'The average rate of change is the slope of:',
+            options: ['Tangent line', 'Secant line', 'Normal line', 'Horizontal line'],
             correctAnswer: 1,
-            explanation: 'Use $\\frac{f(b)-f(a)}{b-a}$ first, then substitute known quantities from the prompt.'
+            explanation: 'AROC = slope of secant line connecting two points on the curve.'
+          },
+          {
+            question: 'For a linear function, the AROC on any interval is:',
+            options: ['Zero', 'Varies', 'Constant (= slope)', 'Undefined'],
+            correctAnswer: 2,
+            explanation: 'Linear functions have constant rate of change equal to the slope $m$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p1-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Average rate | $\\frac{f(b)-f(a)}{b-a}$ | secant computation |
-      | Slope | $m=\\frac{y_2-y_1}{x_2-x_1}$ | point-pair rate |
-      | Percent change | $\\frac{\\text{new}-\\text{old}}{\\text{old}}\cdot 100\%$ | relative growth/decline |
-      | Linear model | $y=mx+b$ | constant-rate baseline |
-      
-      ### Common pitfalls
-      - A positive average rate on an interval does not force monotonic increase everywhere inside.
-      - Rate units must combine output units per input unit.
-      - Do not compare rates across intervals without checking interval lengths.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-rates-of-change-precalc-p1-s4-input',
+      id: 'p1-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Rate Calculations**
-      
-      1) Compute average rate for $f(x)=x^2$ on $[2,5]$.
-      2) Find slope through $(1,3)$ and $(4,15)$.
-      3) Compute percent change from 50 to 65.
+**Compute the AROC:**
+
+**1)** $f(x) = 3x + 2$ on $[1, 5]$:
+
+**2)** $f(x) = x^2 - 1$ on $[0, 3]$:
+
+**3)** $f(x) = \\frac{1}{x}$ on $[1, 4]$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7', '4', '30'],
-        hint1: 'Use $\\rac{f(5)-f(2)}{5-2}$.',
-        hint2: 'Use slope formula with ordered pairs.',
-        hint3: 'Relative change is $\\rac{15}{50}\\cdot100\\%$.',
-        explanation: 'Average rate is 7, secant slope is 4, and percent increase is 30%.'
+        correctAnswers: ['3', '8/3', '-1/4'],
+        hint1: 'Linear: AROC = slope = 3.',
+        hint2: '$f(3) = 8, f(0) = -1$. $\\frac{8-(-1)}{3} = 3$.',
+        hint3: '$f(4) = 1/4, f(1) = 1$. $\\frac{1/4-1}{3} = \\frac{-3/4}{3}$.',
+        explanation: '(1) AROC = 3. (2) $\\frac{8-(-1)}{3} = 3$. (3) $\\frac{0.25-1}{3} = -0.25 = -1/4$.'
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p1-s5-dropdown',
+      id: 'p1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Rates Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'average rate of change',
-            options: ['rate normalized to one input unit', 'change in output divided by change in input', 'interval where function values rise as input increases', 'slope through two points on a graph']
+            label: 'Negative AROC means the function is:',
+            options: ['Increasing', 'Decreasing on that interval', 'Constant', 'Undefined'],
+            correctAnswer: 1
           },
           {
-            label: 'secant slope',
-            options: ['slope through two points on a graph', 'interval where function values fall as input increases', 'interval where function values rise as input increases', 'rate normalized to one input unit']
+            label: 'AROC of $f(x)=x^3$ on $[-1,1]$:',
+            options: ['$0$', '$1$', '$2$', '$-1$'],
+            correctAnswer: 1
           },
           {
-            label: 'unit rate',
-            options: ['interval where function values fall as input increases', 'small-interval trend around one input', 'interval where function values rise as input increases', 'rate normalized to one input unit']
+            label: 'Units of AROC when distance is in miles, time in hours:',
+            options: ['Miles', 'Hours', 'Miles per hour', 'Miles × hours'],
+            correctAnswer: 2
+          },
+          {
+            label: 'Average velocity is AROC of:',
+            options: ['Velocity vs time', 'Position vs time', 'Acceleration vs time', 'Speed vs distance'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['change in output divided by change in input', 'slope through two points on a graph', 'rate normalized to one input unit'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: average rate of change, secant slope, and unit rate align with their exact definitions used in this part.'
+        correctAnswers: ['Decreasing on that interval', '$1$', 'Miles per hour', 'Position vs time'],
+        hint1: 'Negative slope = going down.',
+        hint2: '$\\frac{1-(-1)}{1-(-1)} = 2/2$.',
+        hint3: 'Rate = output units / input units.',
+        explanation: 'Negative AROC: decreasing. $x^3$: $(1-(-1))/(1-(-1))=1$. Distance/time=speed. AROC of position=velocity.'
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p1-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to average rate of change, secant slope, and unit rate so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-rates-of-change-precalc-p1-s7-mcq-applied',
+      id: 'p1-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is interpreting distance-time data. Which term best anchors the next reasoning step if the key idea is: interval where function values rise as input increases?',
-            options: [
-              'average rate of change',
-              'unit rate',
-              'increasing interval',
-              'secant slope'
-            ],
-            correctAnswer: 2,
-            explanation: 'increasing interval matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'AROC of $f(x)=2^x$ on $[0,3]$:',
+            options: ['$7/3$', '$8/3$', '$3$', '$8$'],
+            correctAnswer: 0,
+            explanation: '$f(3)=8, f(0)=1$. $\\frac{8-1}{3-0} = 7/3$.'
           },
           {
-            question: 'A student is solving a mixed rates of change prompt. Which term best anchors the next reasoning step if the key idea is: interval where function values fall as input increases?',
-            options: [
-              'increasing interval',
-              'unit rate',
-              'local behavior',
-              'decreasing interval'
-            ],
-            correctAnswer: 3,
-            explanation: 'decreasing interval matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'If AROC = 0, it means:',
+            options: ['$f$ is constant everywhere', '$f(a) = f(b)$ (same start/end)', 'Function is always zero', 'No secant line exists'],
+            correctAnswer: 1,
+            explanation: 'AROC = 0 means $f(b) = f(a)$ — same height at endpoints. Function may vary between.'
           }
         ]
       }

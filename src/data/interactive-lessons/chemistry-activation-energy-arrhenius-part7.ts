@@ -4,13 +4,29 @@ export const chemActivationEnergyArrheniusPart7Data = {
     {
       id: 'ae7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — Comprehensive Arrhenius and Catalyst Problems**
 
-This final part brings together collision theory, energy diagrams, the Arrhenius equation, and catalysts in AP exam-level problems.
-      `
+---
+
+### Equations You Must Know
+
+| Equation | When to Use |
+|----------|-------------|
+| $k = Ae^{-E_a/RT}$ | Conceptual — how $k$ depends on T and $E_a$ |
+| $\ln k = -\frac{E_a}{R}\cdot\frac{1}{T} + \ln A$ | Graphical — slope of $\ln k$ vs $1/T$ |
+| $\ln\frac{k_2}{k_1} = \frac{E_a}{R}(\frac{1}{T_1} - \frac{1}{T_2})$ | Two data points — find $E_a$, $k$, or $T$ |
+| $E_a(\text{forward}) = E_a(\text{reverse}) + \Delta H$ | Energy diagram relationships |
+
+> 🔑 **Why this matters:** AP Chemistry free-response questions often combine energy diagrams, Arrhenius calculations, and catalyst effects in a single multi-part problem.
+
+---
+
+### What You'll Master in Part 7
+- Solving comprehensive problems that combine collision theory, energy diagrams, and Arrhenius
+- Interpreting how catalysts affect energy diagrams and rate constants
+- Working through AP-style free-response questions under timed conditions`
     },
     {
       id: 'ae7-key-equations',
@@ -18,33 +34,33 @@ This final part brings together collision theory, energy diagrams, the Arrhenius
       content: `
 ## 📋 Key Equations Summary
 
-### Arrhenius Equation
-$$k = Ae^{-E_a/(RT)}$$
+---
 
+### 🧪 Arrhenius Equations
+
+| Form | Equation | Use Case |
+|------|----------|----------|
+| Standard | $k = Ae^{-E_a/(RT)}$ | Relates rate constant to temperature |
+| Linearized | $\\ln k = -\\frac{E_a}{R} \\cdot \\frac{1}{T} + \\ln A$ | Plot $\\ln k$ vs. $1/T$ for straight line |
+| Two-Point | $\\ln\\frac{k_2}{k_1} = \\frac{E_a}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right)$ | Find $E_a$ from two $(k, T)$ data points |
 
 ---
 
-### Linearized Form
-$$\\ln k = -\\frac{E_a}{R} \\cdot \\frac{1}{T} + \\ln A$$
+### 📈 Energy Diagram Relationship
 
-
----
-
-### Two-Point Form
-$$\\ln\\frac{k_2}{k_1} = \\frac{E_a}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right)$$
-
-
----
-
-### Energy Diagram Relationships
 $$\\Delta H = E_a(\\text{forward}) - E_a(\\text{reverse})$$
 
-
 ---
 
-### Constants
-- $R = 8.314$ J/(mol·K)
-- Remember: $E_a$ in J/mol when using $R$ in J/(mol·K)
+### 📌 Constants & Units
+
+| Constant | Value | Watch Out |
+|----------|-------|-----------|
+| $R$ | 8.314 J/(mol·K) | Use J, not kJ |
+| $E_a$ | J/mol | Convert from kJ/mol if needed (× 1000) |
+| $T$ | Kelvin | Convert from °C: $T = °C + 273.15$ |
+
+> ⚠️ **AP Trap:** Mismatched units between $E_a$ (often given in kJ/mol) and $R$ (in J) is the #1 calculation error.
       `
     },
     {

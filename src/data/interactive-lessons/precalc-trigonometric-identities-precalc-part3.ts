@@ -2,194 +2,222 @@ export const precalcTrigIdentitiesPart3Data = {
   topicSlug: 'trigonometric-identities-precalc',
   sections: [
     {
-      id: 'precalc-trigonometric-identities-precalc-p3-s1-intro',
+      id: 'p3-intro',
       type: 'text' as const,
       content: `
-      ## Trigonometric Identities: Even-odd and cofunction identities
-      
-      **Part 3 of 7**
-      
-      This part focuses on using symmetry for angle sign checks. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **reciprocal identity**: $\sec\\heta=
-      rac1{\cos\\heta}$ and analogs
-      - **even-odd identity**: sign behavior under $\\heta\mapsto -\\heta$
-      - **cofunction identity**: relation between complementary angles
-      
-      
-      ### Worked Example
-      Simplify $
-      rac{1-\cos^2\\heta}{\sin\\heta}$ for $\sin\\heta
-      eq0$.
-      
-      Use $1-\cos^2\\heta=\sin^2\\heta$:
-      
-      $$
-      rac{1-\cos^2\\heta}{\sin\\heta}=
-      rac{\sin^2\\heta}{\sin\\heta}=\sin\\heta$$
-      
-      Identity substitution first, then cancellation, keeps the algebra clean.
+# 🪞 Trigonometric Identities — Even-Odd & Cofunction Identities
+
+**Part 3 of 7**
+
+**Even-odd** identities describe what happens when you negate an angle. **Cofunction** identities link a function to its complement. Both are shortcuts for rewriting expressions without a calculator.
+
+### Even-Odd Identities
+
+| Function | $f(-\\theta)$ | Type |
+|:---------|:-------------|:-----|
+| $\\cos(-\\theta)$ | $\\cos\\theta$ | **Even** |
+| $\\sec(-\\theta)$ | $\\sec\\theta$ | **Even** |
+| $\\sin(-\\theta)$ | $-\\sin\\theta$ | **Odd** |
+| $\\csc(-\\theta)$ | $-\\csc\\theta$ | **Odd** |
+| $\\tan(-\\theta)$ | $-\\tan\\theta$ | **Odd** |
+| $\\cot(-\\theta)$ | $-\\cot\\theta$ | **Odd** |
+
+> **Memory aid**: Only **cosine** and **secant** are even — the "co-s" pair. Everything else is odd.
+
+### Cofunction Identities (Complementary Angles)
+
+$$\\boxed{\\sin\\theta = \\cos\\!\\left(\\frac{\\pi}{2} - \\theta\\right) \\qquad \\cos\\theta = \\sin\\!\\left(\\frac{\\pi}{2} - \\theta\\right)}$$
+
+$$\\tan\\theta = \\cot\\!\\left(\\frac{\\pi}{2} - \\theta\\right) \\qquad \\sec\\theta = \\csc\\!\\left(\\frac{\\pi}{2} - \\theta\\right)$$
+
+> The **co** in cosine, cosecant, cotangent stands for **complement**!
       `
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p3-s2-mcq-core',
+      id: 'p3-examples',
+      type: 'text' as const,
+      content: `
+## 📝 Worked Examples
+
+### Example 1: Simplify $\\sin(-\\theta)\\cos(-\\theta)$
+
+$$\\sin(-\\theta)\\cos(-\\theta) = (-\\sin\\theta)(\\cos\\theta) = -\\sin\\theta\\cos\\theta$$
+
+Sine is odd (picks up a negative), cosine is even (stays the same).
+
+### Example 2: Evaluate $\\cos(-60°)$ without a calculator
+
+$\\cos$ is even, so $\\cos(-60°) = \\cos 60° = \\frac{1}{2}$.
+
+### Example 3: Rewrite $\\sin 70°$ as a cosine
+
+$$\\sin 70° = \\cos(90° - 70°) = \\cos 20°$$
+
+### Example 4: Show that $\\tan(-\\theta) + \\cot(90° - \\theta)$ simplifies to $0$
+
+$$\\tan(-\\theta) + \\cot(90° - \\theta) = -\\tan\\theta + \\tan\\theta = 0$$
+
+The cofunction identity gives $\\cot(90° - \\theta) = \\tan\\theta$, and the even-odd identity gives $\\tan(-\\theta) = -\\tan\\theta$.
+      `
+    },
+    {
+      id: 'p3-unit-circle',
+      type: 'text' as const,
+      content: `
+## 🔍 Why These Work — Unit Circle Reasoning
+
+### Even-Odd: Reflection Across the $x$-axis
+
+Negating $\\theta$ reflects the point $(\\cos\\theta,\\,\\sin\\theta)$ to $(\\cos\\theta,\\,-\\sin\\theta)$.
+
+| Coordinate | After Reflection | Conclusion |
+|:-----------|:----------------|:-----------|
+| $x$-coordinate ($\\cos$) | Unchanged | $\\cos(-\\theta) = \\cos\\theta$ — **even** |
+| $y$-coordinate ($\\sin$) | Flipped sign | $\\sin(-\\theta) = -\\sin\\theta$ — **odd** |
+
+### Cofunction: $90°$ Rotation
+
+The point at angle $\\theta$ has coordinates $(\\cos\\theta, \\sin\\theta)$.
+
+The point at angle $\\frac{\\pi}{2} - \\theta$ has coordinates $(\\sin\\theta, \\cos\\theta)$ — the $x$ and $y$ swap!
+
+This swap is exactly why $\\sin\\theta = \\cos(90° - \\theta)$.
+
+### Quick Decision Table
+
+| I want to … | Use … |
+|:------------|:------|
+| Remove a negative angle | Even-odd identities |
+| Replace $\\sin$ with $\\cos$ (or vice versa) | Cofunction identities |
+| Both at once | Chain them: even-odd first, cofunction second |
+      `
+    },
+    {
+      id: 'p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of reciprocal identity.',
+            question: '$\\sin(-\\theta)\\csc(-\\theta)$ equals:',
             options: [
-              'formula for trig of $A\\pm B$',
-              'sign behavior under $\\heta\\mapsto -\\heta$',
-              '$\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs',
-              'relation between complementary angles'
-            ],
-            correctAnswer: 2,
-            explanation: 'reciprocal identity is defined as: $\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs.'
-          },
-          {
-            question: 'In using symmetry for angle sign checks, which expression is the best starting model?',
-            options: [
-              '$\\cos(A+B)=\\cos A\\cos B-\\sin A\\sin B$',
-              '$\\sin^2\\theta+\\cos^2\\theta=1$',
-              '$\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}$',
-              '$\\sin(2\\theta)=2\\sin\\theta\\cos\\theta$'
+              '$1$',
+              '$-1$',
+              '$0$',
+              '$\\sin^2\\theta$'
             ],
             correctAnswer: 0,
-            explanation: 'Use $\\cos(A+B)=\\cos A\\cos B-\\sin A\\sin B$ first, then substitute known quantities from the prompt.'
+            explanation: '$\\sin(-\\theta) = -\\sin\\theta$ and $\\csc(-\\theta) = -\\csc\\theta$. So $(-\\sin\\theta)(-\\csc\\theta) = \\sin\\theta \\cdot \\csc\\theta = 1$.'
+          },
+          {
+            question: 'Which equals $\\cos 35°$?',
+            options: [
+              '$\\sin 35°$',
+              '$\\sin 55°$',
+              '$-\\cos 35°$',
+              '$\\cos 55°$'
+            ],
+            correctAnswer: 1,
+            explanation: 'Cofunction: $\\cos 35° = \\sin(90° - 35°) = \\sin 55°$.'
+          },
+          {
+            question: '$\\tan(-\\theta)\\cot(-\\theta)$ equals:',
+            options: [
+              '$-1$',
+              '$0$',
+              '$1$',
+              '$\\tan^2\\theta$'
+            ],
+            correctAnswer: 2,
+            explanation: '$\\tan(-\\theta) = -\\tan\\theta$, $\\cot(-\\theta) = -\\cot\\theta$. Product: $(-\\tan\\theta)(-\\cot\\theta) = \\tan\\theta\\cot\\theta = 1$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p3-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Cosine sum | $\cos(A+B)=\cos A\cos B-\sin A\sin B$ | angle combination |
-      | Sine double-angle | $\sin(2\\theta)=2\sin\\theta\cos\\theta$ | power reduction and simplification |
-      | Pythagorean | $\sin^2\\theta+\cos^2\\theta=1$ | fundamental conversion |
-      | Tangent | $\\tan\\theta=\\frac{\sin\\theta}{\cos\\theta}$ | quotient rewrite |
-      
-      ### Common pitfalls
-      - Choose one target form early to prevent circular verification.
-      - Do not treat identities as equations to solve unless the task requests solving.
-      - Keep track of domain restrictions when dividing by trig expressions.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-trigonometric-identities-precalc-p3-s4-input',
+      id: 'p3-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Identity Values**
-      
-      1) Compute $\sin^2 30^\circ + \cos^2 30^\circ$.
-      2) Compute $\\an 45^\circ$.
-      3) Compute $\sec 60^\circ$.
+**Even-Odd & Cofunction Practice** 🧮
+
+**1)** $\\cos(-120°) = \\cos\\,\\_\\_°$. Write the positive angle in degrees. (e.g., $\\cos(-45°) = \\cos 45°$ since cosine is even)
+
+**2)** $\\sin 25° = \\cos\\,\\_\\_°$. Write the complementary angle in degrees. (e.g., $\\sin 40° = \\cos 50°$ since $40 + 50 = 90$)
+
+**3)** Evaluate $\\tan(-45°)$. Write as an integer. (e.g., $\\sin(-30°) = -\\sin 30° = -1/2$ since sine is odd)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1', '1', '2'],
-        hint1: 'Use the Pythagorean identity.',
-        hint2: 'Recall special-angle values.',
-        hint3: 'Use reciprocal: $\\sec\\heta=1/\\cos\\heta$.',
-        explanation: 'Pythagorean identity gives 1, tangent at 45° is 1, and secant at 60° is 2.'
+        correctAnswers: ['120', '65', '-1'],
+        hint1: 'Cosine is an even function: $\\cos(-\\theta) = \\cos\\theta$.',
+        hint2: 'Cofunction: $\\sin\\theta = \\cos(90° - \\theta)$. What is $90 - 25$?',
+        hint3: 'Tangent is odd: $\\tan(-45°) = -\\tan 45°$. And $\\tan 45° = 1$.',
+        explanation: '1) $\\cos(-120°) = \\cos 120°$ (even). 2) $\\sin 25° = \\cos(90° - 25°) = \\cos 65°$. 3) $\\tan(-45°) = -\\tan 45° = -1$ (odd).'
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p3-s5-dropdown',
+      id: 'p3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Classification & Matching** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'reciprocal identity',
-            options: ['formula for trig of $A\\pm B$', 'relation between complementary angles', 'sign behavior under $\\heta\\mapsto -\\heta$', '$\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs']
+            label: '$\\sec(-\\theta)$ equals',
+            options: ['$\\sec\\theta$', '$-\\sec\\theta$', '$\\csc\\theta$', '$-\\csc\\theta$']
           },
           {
-            label: 'even-odd identity',
-            options: ['sign behavior under $\\heta\\mapsto -\\heta$', 'relation between complementary angles', 'formula for trig of $A\\pm B$', 'expressions for trig of $2\\heta$']
+            label: '$\\csc(-\\theta)$ equals',
+            options: ['$\\csc\\theta$', '$-\\csc\\theta$', '$\\sec\\theta$', '$-\\sec\\theta$']
           },
           {
-            label: 'cofunction identity',
-            options: ['relation between complementary angles', 'formula for trig of $A\\pm B$', 'expressions for trig of $2\\heta$', 'rewrite one side with targeted identities']
+            label: '$\\tan 50°$ equals',
+            options: ['$\\cot 50°$', '$\\cot 40°$', '$\\tan 40°$', '$-\\tan 50°$']
+          },
+          {
+            label: 'Cosine and secant are classified as',
+            options: ['Odd functions', 'Even functions', 'Neither even nor odd', 'Cofunctions']
           }
         ],
-        correctAnswers: ['$\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs', 'sign behavior under $\\heta\\mapsto -\\heta$', 'relation between complementary angles'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: reciprocal identity, even-odd identity, and cofunction identity align with their exact definitions used in this part.'
+        correctAnswers: ['$\\sec\\theta$', '$-\\csc\\theta$', '$\\cot 40°$', 'Even functions'],
+        hint1: 'Secant inherits the even/odd property of cosine.',
+        hint2: 'Cosecant inherits the even/odd property of sine.',
+        hint3: '$\\tan\\theta = \\cot(90° - \\theta)$. What is $90 - 50$?',
+        explanation: '$\\sec(-\\theta) = \\sec\\theta$ (even). $\\csc(-\\theta) = -\\csc\\theta$ (odd). $\\tan 50° = \\cot(90°-50°) = \\cot 40°$ (cofunction). Cosine and secant are even.'
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p3-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to reciprocal identity, even-odd identity, and cofunction identity so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-trigonometric-identities-precalc-p3-s7-mcq-applied',
+      id: 'p3-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is using symmetry for angle sign checks. Which term best anchors the next reasoning step if the key idea is: formula for trig of $A\\pm B$?',
+            question: 'Simplify $\\sin(-\\theta)\\sec(-\\theta)$.',
             options: [
-              'reciprocal identity',
-              'sum identity',
-              'even-odd identity',
-              'cofunction identity'
+              '$\\tan\\theta$',
+              '$-\\tan\\theta$',
+              '$\\cot\\theta$',
+              '$-\\cot\\theta$'
             ],
             correctAnswer: 1,
-            explanation: 'sum identity matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$\\sin(-\\theta) = -\\sin\\theta$ (odd). $\\sec(-\\theta) = \\sec\\theta$ (even). Product: $-\\sin\\theta \\cdot \\sec\\theta = -\\sin\\theta/\\cos\\theta = -\\tan\\theta$.'
           },
           {
-            question: 'A student is solving a mixed trigonometric identities prompt. Which term best anchors the next reasoning step if the key idea is: expressions for trig of $2\\heta$?',
+            question: 'If $\\cos\\alpha = 0.6$ and $\\alpha + \\beta = 90°$, what is $\\sin\\beta$?',
             options: [
-              'cofunction identity',
-              'double-angle identity',
-              'sum identity',
-              'verification strategy'
+              '$0.8$',
+              '$0.6$',
+              '$0.4$',
+              'Cannot determine'
             ],
             correctAnswer: 1,
-            explanation: 'double-angle identity matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Cofunction: $\\sin\\beta = \\sin(90° - \\alpha) = \\cos\\alpha = 0.6$.'
           }
         ]
       }

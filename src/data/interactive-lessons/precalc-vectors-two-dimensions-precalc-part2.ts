@@ -2,191 +2,192 @@ export const precalcVectors2DPart2Data = {
   topicSlug: 'vectors-two-dimensions-precalc',
   sections: [
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p2-s1-intro',
+      id: 'p2-intro',
       type: 'text' as const,
       content: `
-      ## Vectors in Two Dimensions: Addition, subtraction, and scalar multiples
-      
-      **Part 2 of 7**
-      
-      This part focuses on combining movement instructions. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **magnitude**: length of a vector
-      - **direction angle**: angle measured from positive $x$-axis
-      - **dot product**: scalar from component-wise multiplication and sum
-      
-      
-      ### Worked Example
-      Part 2 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🎯 The Dot Product
+
+**Part 2 of 7**
+
+### Definition
+
+For $\\vec{u} = \\langle u_1, u_2 \\rangle$ and $\\vec{v} = \\langle v_1, v_2 \\rangle$:
+
+$$\\vec{u} \\cdot \\vec{v} = u_1 v_1 + u_2 v_2$$
+
+The dot product is a **scalar** (number), not a vector!
+
+### Geometric Form
+
+$$\\vec{u} \\cdot \\vec{v} = |\\vec{u}| \\, |\\vec{v}| \\cos\\theta$$
+
+where $\\theta$ is the angle between the vectors.
+
+### Finding the Angle
+
+$$\\cos\\theta = \\frac{\\vec{u} \\cdot \\vec{v}}{|\\vec{u}| \\, |\\vec{v}|}$$
+
+### Key Result: Perpendicularity
+
+$$\\vec{u} \\perp \\vec{v} \\iff \\vec{u} \\cdot \\vec{v} = 0$$
+
+(since $\\cos 90° = 0$)
       `
     },
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p2-s2-mcq-core',
+      id: 'p2-examples',
+      type: 'text' as const,
+      content: `
+## 📝 Examples
+
+### Example 1: Compute the Dot Product
+
+$\\vec{u} = \\langle 3, -2 \\rangle, \\; \\vec{v} = \\langle 4, 5 \\rangle$
+
+$\\vec{u} \\cdot \\vec{v} = 3(4) + (-2)(5) = 12 - 10 = 2$
+
+### Example 2: Find the Angle
+
+$\\vec{u} = \\langle 1, 0 \\rangle, \\; \\vec{v} = \\langle 1, 1 \\rangle$
+
+$\\cos\\theta = \\frac{1(1)+0(1)}{1 \\cdot \\sqrt{2}} = \\frac{1}{\\sqrt{2}}$
+
+$\\theta = 45°$
+
+### Example 3: Check Perpendicularity
+
+$\\vec{u} = \\langle 4, 3 \\rangle, \\; \\vec{v} = \\langle 3, -4 \\rangle$
+
+$\\vec{u} \\cdot \\vec{v} = 12 + (-12) = 0$ ✓ Perpendicular!
+
+> 💡 **Pattern**: $\\langle a, b \\rangle \\perp \\langle -b, a \\rangle$ always (rotate 90°).
+      `
+    },
+    {
+      id: 'p2-properties',
+      type: 'text' as const,
+      content: `
+## 📊 Properties of the Dot Product
+
+| Property | Formula |
+|:---------|:--------|
+| Commutative | $\\vec{u} \\cdot \\vec{v} = \\vec{v} \\cdot \\vec{u}$ |
+| Distributive | $\\vec{u} \\cdot (\\vec{v}+\\vec{w}) = \\vec{u}\\cdot\\vec{v} + \\vec{u}\\cdot\\vec{w}$ |
+| Scalar assoc. | $(c\\vec{u})\\cdot\\vec{v} = c(\\vec{u}\\cdot\\vec{v})$ |
+| Self dot product | $\\vec{v} \\cdot \\vec{v} = |\\vec{v}|^2$ |
+
+### Sign of the Dot Product
+
+- $\\vec{u}\\cdot\\vec{v} > 0$: angle is **acute** ($0° < \\theta < 90°$)
+- $\\vec{u}\\cdot\\vec{v} = 0$: vectors are **perpendicular** ($\\theta = 90°$)
+- $\\vec{u}\\cdot\\vec{v} < 0$: angle is **obtuse** ($90° < \\theta < 180°$)
+      `
+    },
+    {
+      id: 'p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Dot Product Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of magnitude.',
-            options: [
-              'angle measured from positive $x$-axis',
-              'component of one vector along another',
-              'length of a vector',
-              'scalar from component-wise multiplication and sum'
-            ],
-            correctAnswer: 2,
-            explanation: 'magnitude is defined as: length of a vector.'
+            question: '$\\langle 2, 3 \\rangle \\cdot \\langle -1, 4 \\rangle =$',
+            options: ['$14$', '$10$', '$-14$', '$5$'],
+            correctAnswer: 1,
+            explanation: '$2(-1) + 3(4) = -2 + 12 = 10$.'
           },
           {
-            question: 'In combining movement instructions, which expression is the best starting model?',
-            options: [
-              '$\\hat{\\mathbf u}=\\frac{\\mathbf u}{\\|\\mathbf u\\|}$',
-              '$\\mathbf u\\cdot\\mathbf v=\\|\\mathbf u\\|\\|\\mathbf v\\|\\cos\\theta$',
-              '$\\|\\langle a,b\\rangle\\|=\\sqrt{a^2+b^2}$',
-              '$\\langle a,b\\rangle\\cdot\\langle c,d\\rangle=ac+bd$'
-            ],
+            question: 'The angle between $\\langle 1, 0 \\rangle$ and $\\langle 0, 1 \\rangle$ is:',
+            options: ['$0°$', '$45°$', '$90°$', '$180°$'],
+            correctAnswer: 2,
+            explanation: '$\\vec{u}\\cdot\\vec{v} = 0$, so $\\theta = 90°$.'
+          },
+          {
+            question: 'If $\\vec{u}\\cdot\\vec{v} < 0$, the vectors are:',
+            options: ['Parallel', 'Perpendicular', 'At an acute angle', 'At an obtuse angle'],
             correctAnswer: 3,
-            explanation: 'Use $\\langle a,b\\rangle\\cdot\\langle c,d\\rangle=ac+bd$ first, then substitute known quantities from the prompt.'
+            explanation: 'Negative dot product means $\\cos\\theta < 0$, so $\\theta > 90°$: obtuse angle.'
           }
         ]
       }
     },
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p2-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Dot product | $\langle a,b\\rangle\cdot\langle c,d\\rangle=ac+bd$ | angle and projection |
-      | Angle relation | $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\\theta$ | finding angle between vectors |
-      | Unit vector | $\hat{\mathbf u}=\\frac{\mathbf u}{\|\mathbf u\|}$ | direction-only normalization |
-      | Magnitude | $\|\langle a,b\\rangle\|=\sqrt{a^2+b^2}$ | length computation |
-      
-      ### Common pitfalls
-      - A zero dot product indicates orthogonality, not parallelism.
-      - Keep component order consistent as $(x,y)$.
-      - Magnitude is always nonnegative.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-vectors-two-dimensions-precalc-p2-s4-input',
+      id: 'p2-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Vector Calculations**
-      
-      1) Compute magnitude of $\langle 3,4
-      angle$.
-      2) Compute $\langle 1,2
-      angle\cdot\langle 3,4
-      angle$.
-      3) Compute the $y$-component of $\langle 2,5
-      angle+\langle -1,3
-      angle$.
+**Dot Product Calculations** 🧮
+
+**1)** $\\langle 5, -1 \\rangle \\cdot \\langle 2, 3 \\rangle$ = ?
+
+**2)** $|\\vec{v}|^2$ where $\\vec{v} = \\langle 3, 4 \\rangle$: $\\vec{v}\\cdot\\vec{v}$ = ?
+
+**3)** Angle between $\\langle 1, \\sqrt{3} \\rangle$ and $\\langle 1, 0 \\rangle$: $\\theta$ = ? degrees
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5', '11', '8'],
-        hint1: 'Use $\\sqrt{a^2+b^2}$.',
-        hint2: 'Multiply matching components and add.',
-        hint3: 'Add components independently.',
-        explanation: 'Magnitude is 5, dot product is 11, and the resulting $y$-component is 8.'
+        correctAnswers: ['7', '25', '60'],
+        hint1: '$5(2) + (-1)(3) = 10 - 3 = 7$.',
+        hint2: '$3^2 + 4^2 = 9 + 16 = 25$.',
+        hint3: '$\\cos\\theta = \\frac{1}{2 \\cdot 1} = \\frac{1}{2}$, so $\\theta = 60°$.',
+        explanation: '1) $7$. 2) $25$. 3) $60°$.'
       }
     },
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p2-s5-dropdown',
+      id: 'p2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Dot Product Properties** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'magnitude',
-            options: ['scalar from component-wise multiplication and sum', 'component of one vector along another', 'length of a vector', 'angle measured from positive $x$-axis']
+            label: 'The dot product of parallel vectors (same direction) is:',
+            options: ['$0$', 'Positive', 'Negative', 'Undefined'],
+            correctAnswer: 1
           },
           {
-            label: 'direction angle',
-            options: ['angle measured from positive $x$-axis', 'vector with magnitude 1', 'component of one vector along another', 'scalar from component-wise multiplication and sum']
+            label: '$\\langle 3, 4 \\rangle$ is perpendicular to:',
+            options: ['$\\langle 4, 3 \\rangle$', '$\\langle -4, 3 \\rangle$', '$\\langle 3, -4 \\rangle$'],
+            correctAnswer: 1
           },
           {
-            label: 'dot product',
-            options: ['component of one vector along another', 'vector with magnitude 1', 'scalar from component-wise multiplication and sum', 'single vector equivalent to a combined effect']
+            label: 'The dot product is:',
+            options: ['A vector', 'A scalar', 'Sometimes vector, sometimes scalar'],
+            correctAnswer: 1
+          },
+          {
+            label: '$\\vec{v} \\cdot \\vec{v} = 0$ implies:',
+            options: ['$\\vec{v}$ is a unit vector', '$\\vec{v}$ is the zero vector', '$\\vec{v}$ is perpendicular to itself'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['length of a vector', 'angle measured from positive $x$-axis', 'scalar from component-wise multiplication and sum'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: magnitude, direction angle, and dot product align with their exact definitions used in this part.'
+        correctAnswers: ['Positive', '$\\langle -4, 3 \\rangle$', 'A scalar', '$\\vec{v}$ is the zero vector'],
+        hint1: 'Parallel, same direction: $\\theta = 0$, $\\cos 0 = 1 > 0$.',
+        hint2: '$3(-4)+4(3) = -12+12 = 0$.',
+        hint3: 'Dot product always produces a single number.',
+        explanation: 'Parallel same direction: positive. $\\langle -4,3 \\rangle \\perp \\langle 3,4 \\rangle$. Dot product is scalar. $\\vec{v}\\cdot\\vec{v} = |\\vec{v}|^2 = 0$ only for zero vector.'
       }
     },
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p2-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to magnitude, direction angle, and dot product so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-vectors-two-dimensions-precalc-p2-s7-mcq-applied',
+      id: 'p2-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is combining movement instructions. Which term best anchors the next reasoning step if the key idea is: component of one vector along another?',
-            options: [
-              'dot product',
-              'magnitude',
-              'projection',
-              'direction angle'
-            ],
+            question: 'The angle between $\\vec{u} = \\langle 1, 1 \\rangle$ and $\\vec{v} = \\langle -1, 1 \\rangle$ is:',
+            options: ['$45°$', '$60°$', '$90°$', '$120°$'],
             correctAnswer: 2,
-            explanation: 'projection matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$\\vec{u}\\cdot\\vec{v} = -1+1 = 0$. Perpendicular → $90°$.'
           },
           {
-            question: 'A student is solving a mixed vectors in two dimensions prompt. Which term best anchors the next reasoning step if the key idea is: vector with magnitude 1?',
-            options: [
-              'unit vector',
-              'resultant',
-              'dot product',
-              'projection'
-            ],
-            correctAnswer: 0,
-            explanation: 'unit vector matches that description and keeps the model-to-interpretation chain consistent.'
+            question: '$|\\vec{u}+\\vec{v}|^2 = |\\vec{u}|^2 + 2\\vec{u}\\cdot\\vec{v} + |\\vec{v}|^2$ is analogous to:',
+            options: ['Pythagorean theorem', '$(a+b)^2 = a^2+2ab+b^2$', 'Triangle inequality', 'Law of cosines'],
+            correctAnswer: 1,
+            explanation: 'This is the vector version of the algebraic identity $(a+b)^2 = a^2+2ab+b^2$.'
           }
         ]
       }

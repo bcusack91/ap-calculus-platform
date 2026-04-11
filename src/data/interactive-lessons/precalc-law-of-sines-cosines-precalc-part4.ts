@@ -2,188 +2,221 @@ export const precalcLawSinesCosinesPart4Data = {
   topicSlug: 'law-of-sines-cosines-precalc',
   sections: [
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p4-s1-intro',
+      id: 'p4-intro',
       type: 'text' as const,
       content: `
-      ## Law of Sines and Cosines: Law of Cosines for SAS/SSS
-      
-      **Part 4 of 7**
-      
-      This part focuses on finding unknown angles from side data. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **SSA ambiguity**: data set that may produce two, one, or zero triangles
-      - **triangle area**: can be found with two sides and included angle
-      - **bearing**: direction measured from north or east references
-      
-      
-      ### Worked Example
-      Given $a=8$, $b=6$, and included angle $C=60^\circ$, find $c$.
-      
-      $$c^2 = a^2+b^2-2ab\cos C = 8^2+6^2-2(8)(6)\cos 60^\circ = 52$$
-      
-      So $c=\sqrt{52}=2\sqrt{13}$. This setup uses side-side-angle data with the included angle, so the Law of Cosines is the clean choice.
+# 🔄 Choosing the Right Law & Combined Problems
+
+**Part 4 of 7**
+
+Knowing when to use Law of Sines vs Law of Cosines is half the battle. This part helps you develop that judgment.
+
+### Decision Guide
+
+$$\\boxed{\\text{Do you have a complete angle–side pair (angle and its opposite side)?}}$$
+
+| Answer | Case | Method |
+|:-------|:-----|:-------|
+| **Yes** + need another side/angle | AAS, ASA, SSA | Law of Sines |
+| **No** + have SAS | Two sides + included angle | Law of Cosines (find side) |
+| **No** + have SSS | Three sides | Law of Cosines (find angle) |
+
+### Mixed Strategy
+
+Many problems require **both laws**:
+1. Start with Law of Cosines to find a missing side or angle
+2. Switch to Law of Sines (which is easier) for the remaining parts
       `
     },
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p4-s2-mcq-core',
+      id: 'p4-examples',
+      type: 'text' as const,
+      content: `
+## 📝 Worked Examples
+
+### Example 1: SAS → Find All Parts
+
+$a = 9$, $b = 12$, $C = 75°$.
+
+**Step 1 (Law of Cosines):** Find $c$.
+$$c^2 = 81 + 144 - 216\\cos 75° = 225 - 216(0.2588) = 225 - 55.9 = 169.1$$
+$$c \\approx 13.0$$
+
+**Step 2 (Law of Sines):** Find $A$.
+$$\\frac{\\sin A}{9} = \\frac{\\sin 75°}{13.0} \\implies \\sin A = \\frac{9(0.9659)}{13.0} \\approx 0.6687$$
+$$A \\approx 41.9°$$
+
+**Step 3:** $B = 180° - 75° - 41.9° = 63.1°$
+
+### Example 2: SSS → Find All Angles
+
+$a = 6$, $b = 8$, $c = 11$.
+
+**Step 1:** Find the largest angle (opposite longest side $c$):
+$$\\cos C = \\frac{36 + 64 - 121}{96} = \\frac{-21}{96} \\approx -0.219$$
+$$C \\approx 102.6°$$
+
+**Step 2 (Law of Sines):** $\\sin A = \\frac{6 \\sin 102.6°}{11} \\approx \\frac{6(0.976)}{11} \\approx 0.532$
+$$A \\approx 32.2°$$
+
+**Step 3:** $B = 180° - 102.6° - 32.2° = 45.2°$
+      `
+    },
+    {
+      id: 'p4-heron',
+      type: 'text' as const,
+      content: `
+## 📐 Hero's Formula (Heron's Formula)
+
+When you know all three sides, you can find the area directly:
+
+$$\\boxed{\\text{Area} = \\sqrt{s(s-a)(s-b)(s-c)}}$$
+
+where $s = \\frac{a + b + c}{2}$ is the **semi-perimeter**.
+
+### Example: $a = 5$, $b = 12$, $c = 13$
+
+$s = \\frac{5 + 12 + 13}{2} = 15$
+
+$$\\text{Area} = \\sqrt{15(15-5)(15-12)(15-13)} = \\sqrt{15 \\cdot 10 \\cdot 3 \\cdot 2} = \\sqrt{900} = 30$$
+
+Verify: This is a 5-12-13 right triangle. Area $= \\frac{1}{2}(5)(12) = 30$ ✓
+
+### When to Use Each Area Formula
+
+| Formula | When to Use |
+|:--------|:-----------|
+| $\\frac{1}{2}bh$ | Base and height known |
+| $\\frac{1}{2}ab\\sin C$ | SAS: two sides + included angle |
+| Heron's formula | SSS: all three sides |
+      `
+    },
+    {
+      id: 'p4-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Strategy Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of SSA ambiguity.',
+            question: 'You know all three sides of a triangle. To find the area most efficiently, use:',
             options: [
-              'can be found with two sides and included angle',
-              'direction measured from north or east references',
-              'data set that may produce two, one, or zero triangles',
-              'triangle requiring generalized trig methods'
+              'Law of Sines then $\\frac{1}{2}ab\\sin C$',
+              'Law of Cosines then $\\frac{1}{2}ab\\sin C$',
+              'Heron\'s formula directly',
+              'Convert to right triangle'
             ],
             correctAnswer: 2,
-            explanation: 'SSA ambiguity is defined as: data set that may produce two, one, or zero triangles.'
+            explanation: 'Heron\'s formula gives the area directly from three sides — no need to find any angles first.'
           },
           {
-            question: 'In finding unknown angles from side data, which expression is the best starting model?',
+            question: 'Given $a=8$, $b=10$, $C=60°$: the correct first step is:',
             options: [
-              '$A+B+C=180^\\circ$',
-              '$c^2=a^2+b^2-2ab\\cos C$',
-              '$K=\\frac12 ab\\sin C$',
-              '$\\frac{a}{\\sin A}=\\frac{b}{\\sin B}=\\frac{c}{\\sin C}$'
+              'Use Law of Sines to find $A$',
+              'Use Law of Cosines to find $c$',
+              'Find the perimeter',
+              'Use Heron\'s formula'
+            ],
+            correctAnswer: 1,
+            explanation: 'This is SAS — no complete angle–side pair exists yet. Start with Law of Cosines to find $c$.'
+          },
+          {
+            question: 'Heron\'s formula with $a = 3$, $b = 4$, $c = 5$: the semi-perimeter $s$ is:',
+            options: [
+              '$6$',
+              '$12$',
+              '$5$',
+              '$7$'
             ],
             correctAnswer: 0,
-            explanation: 'Use $A+B+C=180^\\circ$ first, then substitute known quantities from the prompt.'
+            explanation: '$s = \\frac{3+4+5}{2} = \\frac{12}{2} = 6$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p4-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Angle sum | $A+B+C=180^\circ$ | triangle closure check |
-      | Law of Sines | $\\frac{a}{\sin A}=\\frac{b}{\sin B}=\\frac{c}{\sin C}$ | AAS/ASA/SSA contexts |
-      | Law of Cosines | $c^2=a^2+b^2-2ab\cos C$ | SAS/SSS contexts |
-      | Area formula | $K=\\frac12 ab\sin C$ | two sides + included angle |
-      
-      ### Common pitfalls
-      - Do not use the Law of Sines first when only sides are known.
-      - SSA can create a second valid triangle; test geometry constraints.
-      - Carry angle mode consistency (degrees vs radians) on calculators.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-law-of-sines-cosines-precalc-p4-s4-input',
+      id: 'p4-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Non-Right Triangles**
-      
-      1) In a triangle, $a=10$, $A=30^\circ$, $B=30^\circ$. Find $b$.
-      2) If $a=6$, $b=8$, and included angle $C=90^\circ$, find $c$.
-      3) Compute area with $a=6$, $b=10$, $C=30^\circ$ using $K=
-      rac12 ab\sin C$.
+**Area Calculations** 🧮
+
+**1)** $a = 7$, $b = 10$, $c = 13$. Compute $s$ (semi-perimeter). (e.g., for sides 3, 4, 5: $s = \\frac{3+4+5}{2} = 6$)
+
+**2)** Using $s = 15$ from the triangle with sides $a = 7$, $b = 10$, $c = 13$: Area $= \\sqrt{15 \\cdot 8 \\cdot 5 \\cdot 2}$. What is the area to the nearest integer? (e.g., $\\sqrt{900} = 30$)
+
+**3)** Triangle with $a = 10$, $b = 10$, included angle $C = 30°$. Area = ? (e.g., $\\frac{1}{2}(8)(8)\\sin 60° = 32(0.866) = 28$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['10', '10', '15'],
-        hint1: 'Equal opposite angles imply equal opposite sides via Law of Sines.',
-        hint2: 'Law of Cosines reduces to Pythagorean form when $C=90^\\circ$.',
-        hint3: 'Substitute directly into $\\rac12 ab\\sin C$.',
-        explanation: 'Symmetry gives $b=10$, cosine law gives $c=10$, and area evaluates to 15.'
+        correctAnswers: ['15', '35', '25'],
+        hint1: '$s = \\frac{7+10+13}{2} = \\frac{30}{2} = 15$.',
+        hint2: '$\\sqrt{15 \\cdot 8 \\cdot 5 \\cdot 2} = \\sqrt{1200} \\approx 34.6 \\approx 35$.',
+        hint3: 'Area $= \\frac{1}{2}(10)(10)\\sin 30° = 50(0.5) = 25$.',
+        explanation: '1) $s = 15$. 2) $\\sqrt{1200} \\approx 35$. 3) $50 \\sin 30° = 25$.'
       }
     },
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p4-s5-dropdown',
+      id: 'p4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Method Selection** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'SSA ambiguity',
-            options: ['triangle requiring generalized trig methods', 'data set that may produce two, one, or zero triangles', 'direction measured from north or east references', 'can be found with two sides and included angle']
+            label: 'AAS: $A=50°$, $B=70°$, $a=12$ → first use',
+            options: ['Law of Sines', 'Law of Cosines', 'Heron\'s formula']
           },
           {
-            label: 'triangle area',
-            options: ['can be found with two sides and included angle', 'direction measured from north or east references', 'triangle requiring generalized trig methods', 'verifying solved lengths and angles agree']
+            label: 'SAS: $a=5$, $b=7$, $C=110°$ → first use',
+            options: ['Law of Sines', 'Law of Cosines', 'Heron\'s formula']
           },
           {
-            label: 'bearing',
-            options: ['direction measured from north or east references', 'triangle requiring generalized trig methods', 'verifying solved lengths and angles agree', 'ratio relation $\\rac{a}{\\sin A}=\\rac{b}{\\sin B}=\\rac{c}{\\sin C}$']
+            label: 'SSS: $a=8$, $b=9$, $c=10$ → to find an angle, use',
+            options: ['Law of Sines', 'Law of Cosines', 'Heron\'s formula']
+          },
+          {
+            label: 'SSS: to find area WITHOUT finding angles, use',
+            options: ['Law of Sines', 'Law of Cosines', 'Heron\'s formula']
           }
         ],
-        correctAnswers: ['data set that may produce two, one, or zero triangles', 'can be found with two sides and included angle', 'direction measured from north or east references'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: SSA ambiguity, triangle area, and bearing align with their exact definitions used in this part.'
+        correctAnswers: ['Law of Sines', 'Law of Cosines', 'Law of Cosines', 'Heron\'s formula'],
+        hint1: 'AAS gives a complete angle–side pair, so Law of Sines works.',
+        hint2: 'SAS has no complete pair — need Law of Cosines.',
+        hint3: 'SSS requires Law of Cosines to find first angle; Heron\'s for area directly.',
+        explanation: 'AAS → Law of Sines. SAS → Law of Cosines. SSS → Law of Cosines for angles, Heron\'s for area.'
       }
     },
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to SSA ambiguity, triangle area, and bearing so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-law-of-sines-cosines-precalc-p4-s7-mcq-applied',
+      id: 'p4-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is finding unknown angles from side data. Which term best anchors the next reasoning step if the key idea is: triangle requiring generalized trig methods?',
+            question: 'Using Heron\'s formula with $a = 13$, $b = 14$, $c = 15$: $s = 21$. The area is:',
             options: [
-              'bearing',
-              'triangle area',
-              'non-right triangle',
-              'SSA ambiguity'
+              '$\\sqrt{21 \\cdot 8 \\cdot 7 \\cdot 6} = 84$',
+              '$\\sqrt{21 \\cdot 7 \\cdot 8 \\cdot 6} = 42$',
+              '$\\sqrt{21 \\cdot 8 \\cdot 7 \\cdot 6} \\approx 74$',
+              '$21 \\cdot 8 \\cdot 7 \\cdot 6 = 7056$'
             ],
-            correctAnswer: 2,
-            explanation: 'non-right triangle matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 0,
+            explanation: '$s = 21$. Area $= \\sqrt{21 \\cdot 8 \\cdot 7 \\cdot 6} = \\sqrt{7056} = 84$.'
           },
           {
-            question: 'A student is solving a mixed law of sines and cosines prompt. Which term best anchors the next reasoning step if the key idea is: verifying solved lengths and angles agree?',
+            question: 'To completely solve an SAS triangle, you typically need:',
             options: [
-              'bearing',
-              'Law of Sines',
-              'consistency check',
-              'non-right triangle'
+              'Only Law of Sines',
+              'Only Law of Cosines',
+              'Law of Cosines first, then Law of Sines',
+              'Heron\'s formula first'
             ],
             correctAnswer: 2,
-            explanation: 'consistency check matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Start with Law of Cosines (find missing side), then switch to Law of Sines (easier for remaining angles).'
           }
         ]
       }

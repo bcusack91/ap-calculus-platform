@@ -8,7 +8,26 @@ export const chemPeriodicTrendsPart2Data = {
 
 **Part 2 of 7 — How Big Are Atoms?**
 
-Atomic radius is one of the most intuitive periodic trends. You can often predict which atom is larger just by knowing its position on the periodic table. In this lesson, we'll learn the two rules that govern atomic size and practice ranking atoms by radius.`
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| Approximate Atomic Radii (in pm) |
+| Why? |
+| Example: Period 2 |
+| Why? |
+| Example: Group 1 (Alkali Metals) |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'pt2-definition',
@@ -40,9 +59,11 @@ For periodic trend discussions, we usually refer to the **covalent (bonding) ato
     {
       id: 'pt2-across-period',
       type: 'text' as const,
-      content: `## 📈 Trend Across a Period (Left → Right)
+      content: `## � Trend Across a Period (Left → Right)
 
 **Atomic radius decreases across a period.**
+
+> 🔑 **Key Concept:** More protons + same shielding = higher $Z_{eff}$ = electrons pulled closer = smaller atom.
 
 
 ---
@@ -61,7 +82,7 @@ As you move from left to right across a period:
 
 ### Example: Period 2
 
-$$\\text{Li} > \\text{Be} > \\text{B} > \\text{C} > \\text{N} > \\text{O} > \\text{F}$$
+$$\\boxed{\\text{Li} > \\text{Be} > \\text{B} > \\text{C} > \\text{N} > \\text{O} > \\text{F}}$$
 $$152 > 112 > 87 > 77 > 75 > 73 > 72 \\text{ pm}$$
 
 The radius drops by more than half from lithium to fluorine — a dramatic shrinkage driven entirely by increasing $Z_{eff}$.`
@@ -72,6 +93,8 @@ The radius drops by more than half from lithium to fluorine — a dramatic shrin
       content: `## 📈 Trend Down a Group (Top → Bottom)
 
 **Atomic radius increases down a group.**
+
+> 🔑 **Key Concept:** Each new period adds an entire electron shell, pushing valence electrons farther from the nucleus.
 
 
 ---
@@ -116,7 +139,9 @@ The **largest atoms** are in the **bottom-left** of the periodic table (Cs, Fr).
 
 The **smallest atoms** are in the **top-right** (excluding noble gases, which aren't typically measured by covalent radius).
 
-Think: **"Down and to the left = bigger."**`
+Think: **"Down and to the left = bigger."**
+
+> 💡 **Tip:** When comparing atoms in different groups AND different periods, check both directions. If both effects agree (e.g., lower period AND farther left), the answer is clear. If they conflict, you may need data.`
     },
     {
       id: 'pt2-ranking-quiz',
@@ -167,11 +192,11 @@ Think: **"Down and to the left = bigger."**`
 
 For each pair, type the chemical symbol of the atom with the **larger** atomic radius.
 
-1. K vs. Ca (both in Period 4)
+**1.** K vs. Ca (both in Period 4)
 
-2. Br vs. I (both in Group 17)
+**2.** Br vs. I (both in Group 17)
 
-3. Al vs. N (Al is in Period 3 Group 13; N is in Period 2 Group 15)`,
+**3.** Al vs. N (Al is in Period 3 Group 13; N is in Period 2 Group 15)`,
       exercise: {
         inputs: [
           {

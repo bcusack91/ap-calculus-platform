@@ -8,7 +8,20 @@ export const chemPeriodicTrendsPart6Data = {
 
 **Part 6 of 7 — How Does Gaining or Losing Electrons Change Size?**
 
-When atoms become ions, their size changes dramatically. Cations shrink and anions expand. Understanding ionic radius — especially in isoelectronic series — is a classic AP Chemistry skill.`
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'pt6-cations',
@@ -16,6 +29,8 @@ When atoms become ions, their size changes dramatically. Cations shrink and anio
       content: `## 📌 Cations Are Smaller Than Their Parent Atoms
 
 When an atom **loses** electrons to form a cation:
+
+> 💡 **Tip:** Cations lose electrons → fewer electrons, same protons → electrons pulled in tighter → **smaller** ion.
 
 1. The outermost shell may be **completely emptied**, exposing a smaller inner shell
 2. Even if the shell isn't emptied, fewer electrons means less electron-electron repulsion
@@ -153,7 +168,7 @@ In an isoelectronic series, all species have the same electron count, so the siz
 
 $$\\boxed{\\text{More protons} = \\text{smaller radius}}$$
 
-The ion with the **most protons** pulls its electrons in the tightest and is the **smallest**.
+> 🔑 **Key Concept:** In an isoelectronic series, rank by proton count — the species with the **most protons** is the **smallest**.
 
 $$\\text{N}^{3-} > \\text{O}^{2-} > \\text{F}^- > \\text{Na}^+ > \\text{Mg}^{2+} > \\text{Al}^{3+}$$`
     },
@@ -193,9 +208,9 @@ $$\\text{N}^{3-} > \\text{O}^{2-} > \\text{F}^- > \\text{Na}^+ > \\text{Mg}^{2+}
       type: 'input-box' as const,
       content: `### Ranking Exercises
 
-1. Rank the following isoelectronic species from **smallest to largest** radius: K⁺, Cl⁻, Ca²⁺, S²⁻. All have 18 electrons. Type your answer as symbols separated by commas (smallest first).
+**1.** Rank the following isoelectronic species from **smallest to largest** radius: K⁺, Cl⁻, Ca²⁺, S²⁻. All have 18 electrons. Type your answer as symbols separated by commas (smallest first).
 
-2. Consider the pair Mg²⁺ and O²⁻. Both have 10 electrons. Which has the larger radius? (Type the ion, e.g., "Mg2+" or "O2-".)`,
+**2.** Consider the pair Mg²⁺ and O²⁻. Both have 10 electrons. Which has the larger radius? (Type the ion, e.g., "Mg2+" or "O2-".)`,
       exercise: {
         inputs: [
           {

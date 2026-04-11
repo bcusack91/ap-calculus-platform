@@ -4,13 +4,30 @@ export const chemGibbsFreeEnergyPart1Data = {
     {
       id: 'gf1-intro',
       type: 'text' as const,
-      content: `
-# ⚡ Gibbs Free Energy and Spontaneity
+      content: `# ⚡ Gibbs Free Energy and Spontaneity
 
 **Part 1 of 7 — ΔG = ΔH − TΔS**
 
-Gibbs Free Energy ($G$) is the single most important thermodynamic quantity for chemists. It combines enthalpy and entropy into one number that tells you whether a reaction is spontaneous — without needing to calculate the entropy of the surroundings.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚡ Defining Gibbs Free Energy |
+| Where Does This Come From? |
+| ⚡ The Spontaneity Criterion |
+| Why Gibbs Free Energy Is So Useful |
+| What "Free" Means |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gf1-definition',
@@ -22,8 +39,9 @@ $$G = H - TS$$
 
 The **change** in Gibbs free energy at constant temperature:
 
-$$\\Delta G = \\Delta H - T\\Delta S$$
+$$\boxed{\Delta G = \Delta H - T\Delta S}$$
 
+> 🔑 **Key Equation:** This is the master equation of Gibbs free energy — it combines enthalpy and entropy into a single criterion for spontaneity.
 
 ---
 
@@ -41,7 +59,7 @@ $$-T\\Delta S_{\\text{universe}} = \\Delta H_{\\text{sys}} - T\\Delta S_{\\text{
 
 Since $\\Delta S_{\\text{universe}} > 0$ for spontaneous processes:
 
-$$\\Delta G < 0 \\quad \\text{(spontaneous)}$$
+$$\boxed{\Delta G < 0 \quad \text{(spontaneous)}}$$
       `
     },
     {
@@ -55,8 +73,7 @@ $$\\Delta G < 0 \\quad \\text{(spontaneous)}$$
 | $\\Delta G < 0$ | Spontaneous (thermodynamically favorable) |
 | $\\Delta G = 0$ | At equilibrium |
 | $\\Delta G > 0$ | Nonspontaneous (reverse reaction is spontaneous) |
-
-
+> 🔑 **Key Concept:** Memorize this table — it's the foundation for every Gibbs free energy problem on the AP exam.
 ---
 
 ### Why Gibbs Free Energy Is So Useful
@@ -72,7 +89,7 @@ $$\\Delta G < 0 \\quad \\text{(spontaneous)}$$
 
 "Free energy" is the maximum amount of energy **available to do useful work** (non-$PV$ work) in a reaction.
 
-$$w_{\\text{max}} = \\Delta G$$
+$$\boxed{w_{\text{max}} = \Delta G}$$
 
 If $\\Delta G = -100$ kJ, the reaction can do at most 100 kJ of useful work.
       `
@@ -87,15 +104,14 @@ From $\\Delta G = \\Delta H - T\\Delta S$, we see that temperature affects spont
 
 - At **low temperatures**: $\\Delta H$ dominates ($T\\Delta S$ is small)
 - At **high temperatures**: $T\\Delta S$ dominates ($T\\Delta S$ is large)
-
-
+> ⚠️ **Warning:** Temperature must always be in **Kelvin** in thermodynamic equations. Also ensure $\Delta H$ and $T\Delta S$ use the **same units** (both kJ or both J).
 ---
 
 ### The Crossover Temperature
 
 When $\\Delta G = 0$ (equilibrium):
 
-$$T = \\frac{\\Delta H}{\\Delta S}$$
+$$\boxed{T = \frac{\Delta H}{\Delta S}}$$
 
 This is the temperature at which the reaction switches between spontaneous and nonspontaneous.
 
@@ -106,7 +122,7 @@ This is the temperature at which the reaction switches between spontaneous and n
 
 > **Problem:** For ice melting: $\\Delta H = +6.01$ kJ/mol, $\\Delta S = +22.0$ J/(mol·K)
 
-**Solution:**
+> **Solution:**
 
 $$T = \\frac{6010}{22.0} = 273 \\text{ K} = 0°\\text{C}$$
 

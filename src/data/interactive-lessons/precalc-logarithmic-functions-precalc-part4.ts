@@ -2,186 +2,225 @@ export const precalcLogarithmicPart4Data = {
   topicSlug: 'logarithmic-functions-precalc',
   sections: [
     {
-      id: 'precalc-logarithmic-functions-precalc-p4-s1-intro',
+      id: 'p4-intro',
       type: 'text' as const,
       content: `
-      ## Logarithmic Functions: Solving log equations
-      
-      **Part 4 of 7**
-      
-      This part focuses on filtering extraneous solutions from domain checks. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **quotient rule**: $\log_b(x/y)=\log_b x-\log_b y$
-      - **power rule**: $\log_b(x^k)=k\log_b x$
-      - **change of base**: rewrite logs using convenient computational bases
-      
-      
-      ### Worked Example
-      Part 4 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🔍 Logarithmic Functions — Solving Log Equations
+
+**Part 4 of 7**
+
+### The Two Core Strategies
+
+| Strategy | When to Use | Key Move |
+|:---------|:-----------|:---------|
+| **Rewrite as exponential** | Single log on one side | $\\log_b(\\text{stuff}) = c \\implies \\text{stuff} = b^c$ |
+| **Condense then convert** | Multiple logs | Combine into one log, then convert |
+
+> ⚠️ **Always check solutions!** Every candidate must make all original log arguments positive.
       `
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p4-s2-mcq-core',
+      id: 'p4-type1',
+      type: 'text' as const,
+      content: `
+## 📝 Type 1: Single Log = Number
+
+### Worked Example 1
+
+> **Solve $\\log_3(2x + 1) = 4$**
+
+| Step | Action | Result |
+|:-----|:-------|:-------|
+| 1 | Convert to exponential | $2x + 1 = 3^4 = 81$ |
+| 2 | Solve linear equation | $2x = 80$ |
+| 3 | Isolate $x$ | $x = 40$ |
+| 4 | **Check:** $\\log_3(2(40)+1)$ | $= \\log_3(81) = 4$ ✔ |
+
+$$\\boxed{x = 40}$$
+
+### Worked Example 2
+
+> **Solve $\\ln(x - 3) = 2$**
+
+$x - 3 = e^2 \\implies x = e^2 + 3 \\approx 10.389$
+
+**Check:** $x - 3 = e^2 > 0$ ✔
+      `
+    },
+    {
+      id: 'p4-type2',
+      type: 'text' as const,
+      content: `
+## 📝 Type 2: Log = Log (One-to-One Property)
+
+If $\\log_b A = \\log_b B$, then $A = B$ (as long as both arguments are positive).
+
+### Worked Example 3
+
+> **Solve $\\log_2(x + 5) = \\log_2(3x - 1)$**
+
+$x + 5 = 3x - 1$
+
+$6 = 2x \\implies x = 3$
+
+**Check:** $\\log_2(3+5) = \\log_2(8) = 3$ and $\\log_2(3(3)-1) = \\log_2(8) = 3$ ✔
+      `
+    },
+    {
+      id: 'p4-type3',
+      type: 'text' as const,
+      content: `
+## 📝 Type 3: Multiple Logs — Condense First
+
+### Worked Example 4: Extraneous Solution Alert! 
+
+> **Solve $\\log(x) + \\log(x - 3) = 1$**
+
+| Step | Action | Result |
+|:-----|:-------|:-------|
+| 1 | Product rule | $\\log[x(x-3)] = 1$ |
+| 2 | Convert to exponential | $x(x-3) = 10^1 = 10$ |
+| 3 | Expand | $x^2 - 3x - 10 = 0$ |
+| 4 | Factor | $(x-5)(x+2) = 0$ |
+| 5 | Candidates | $x = 5$ or $x = -2$ |
+
+**Domain check — both original arguments must be positive:**
+- $x = 5$: $\\log(5)$ ✔ and $\\log(5-3) = \\log(2)$ ✔ → **valid**
+- $x = -2$: $\\log(-2)$ ❌ → **extraneous, reject**
+
+$$\\boxed{x = 5}$$
+
+### ⚠️ Why Extraneous Solutions Appear
+
+When you condense logs, you may expand the domain. The product $x(x-3)$ can be positive even when the individual factors aren't both positive. Always check **each original log argument separately**.
+      `
+    },
+    {
+      id: 'p4-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Solving Strategies Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of quotient rule.',
+            question: 'Solve $\\log_5(x-1) = 2$.',
             options: [
-              'rewrite logs using convenient computational bases',
-              'log input must stay strictly positive',
-              '$\\log_b(x^k)=k\\log_b x$',
-              '$\\log_b(x/y)=\\log_b x-\\log_b y$'
-            ],
-            correctAnswer: 3,
-            explanation: 'quotient rule is defined as: $\\log_b(x/y)=\\log_b x-\\log_b y$.'
-          },
-          {
-            question: 'In filtering extraneous solutions from domain checks, which expression is the best starting model?',
-            options: [
-              '$\\log_b x = y \\iff b^y=x$',
-              '$\\log_b(x^k)=k\\log_b x$',
-              '$\\log_b x=\\frac{\\log_k x}{\\log_k b}$',
-              '$\\log_b(xy)=\\log_b x+\\log_b y$'
+              '$x = 10$',
+              '$x = 24$',
+              '$x = 26$',
+              '$x = 23$'
             ],
             correctAnswer: 2,
-            explanation: 'Use $\\log_b x=\\frac{\\log_k x}{\\log_k b}$ first, then substitute known quantities from the prompt.'
+            explanation: '$x - 1 = 5^2 = 25$, so $x = 26$. Check: $\\log_5(25) = 2$ ✔.'
+          },
+          {
+            question: 'Solve $\\ln x + \\ln 4 = \\ln 20$.',
+            options: [
+              '$x = 16$',
+              '$x = 5$',
+              '$x = 80$',
+              '$x = \\frac{20}{4} = 5$'
+            ],
+            correctAnswer: 1,
+            explanation: '$\\ln(4x) = \\ln 20 \\implies 4x = 20 \\implies x = 5$. Both B and D give the same answer.'
+          },
+          {
+            question: 'For $\\log_2(x) + \\log_2(x-6) = 4$, which solution is extraneous?',
+            options: [
+              '$x = 8$ is extraneous',
+              '$x = -2$ is extraneous',
+              'Both are valid',
+              'Neither — the equation has no solution'
+            ],
+            correctAnswer: 1,
+            explanation: '$\\log_2[x(x-6)] = 4 \\implies x^2-6x = 16 \\implies x^2-6x-16 = 0 \\implies (x-8)(x+2)=0$. $x = -2$ fails because $\\log_2(-2)$ is undefined.'
           }
         ]
       }
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p4-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Change of base | $\log_b x=\\frac{\log_k x}{\log_k b}$ | calculator evaluation |
-      | Definition | $\log_b x = y \iff b^y=x$ | inverse conversion |
-      | Product | $\log_b(xy)=\log_b x+\log_b y$ | expression expansion |
-      | Power | $\log_b(x^k)=k\log_b x$ | exponent extraction |
-      
-      ### Common pitfalls
-      - Applying log rules across sums, like $\log(x+y)$, is invalid.
-      - Always test candidate solutions against positive-input domain restrictions.
-      - Keep base notation explicit when combining terms.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-logarithmic-functions-precalc-p4-s4-input',
+      id: 'p4-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Logarithm Computation**
-      
-      1) Evaluate $\log_2 32$.
-      2) Solve $\log_{10}(x)=2$.
-      3) Evaluate $\ln(e^4)$.
+**Solve for $x$** 🧮
+
+**1)** $\\log_4(3x) = 2$. Find $x$. (e.g., $\\log_3(2x) = 3$: $2x = 27$, $x = 13.5$)
+
+**2)** $\\log(x) + \\log(5) = 3$. Find $x$. (e.g., $\\log(x) + \\log(2) = 2$: $\\log(2x) = 2$, $2x = 100$, $x = 50$)
+
+**3)** $2\\ln(x) = \\ln(25)$. Find $x$. (e.g., $2\\ln(x) = \\ln(9)$: $\\ln(x^2) = \\ln(9)$, $x^2 = 9$, $x = 3$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5', '100', '4'],
-        hint1: 'Ask: $2^{?}=32$.',
-        hint2: 'Rewrite in exponential form.',
-        hint3: '$\\ln$ and $e^x$ are inverse operations.',
-        explanation: 'Outputs are 5, 100, and 4 by inverse log-exponential conversion.'
+        correctAnswers: ['16/3', '200', '5'],
+        hint1: '$3x = 4^2 = 16$.',
+        hint2: '$\\log(5x) = 3 \\implies 5x = 1000$.',
+        hint3: 'Power rule: $\\ln(x^2) = \\ln(25) \\implies x^2 = 25$. Take positive root.',
+        explanation: '1) $3x = 16$, so $x = 16/3$. 2) $\\log(5x) = 3$, so $5x = 1000$, $x = 200$. 3) $x^2 = 25$, $x = 5$ (reject $-5$ since $\\ln(-5)$ undefined).'
       }
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p4-s5-dropdown',
+      id: 'p4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Strategy Selection** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'quotient rule',
-            options: ['log input must stay strictly positive', 'rewrite logs using convenient computational bases', '$\\log_b(x^k)=k\\log_b x$', '$\\log_b(x/y)=\\log_b x-\\log_b y$']
+            label: '$\\log_3(x+2) = 5$ — first step is',
+            options: ['condense logs', 'convert to exponential', 'take $\\ln$ of both sides', 'apply product rule']
           },
           {
-            label: 'power rule',
-            options: ['vertical line where log input approaches zero', 'rewrite logs using convenient computational bases', 'log input must stay strictly positive', '$\\log_b(x^k)=k\\log_b x$']
+            label: '$\\log x + \\log(x+3) = 1$ — first step is',
+            options: ['convert to exponential', 'condense using product rule', 'subtract logs', 'take $e$ of both sides']
           },
           {
-            label: 'change of base',
-            options: ['vertical line where log input approaches zero', 'log input must stay strictly positive', 'exponent needed to produce a value from a base', 'rewrite logs using convenient computational bases']
+            label: 'After solving, you must check that each log argument is',
+            options: ['an integer', 'positive', 'less than the base', 'equal to the other side']
+          },
+          {
+            label: 'A solution that fails the domain check is called',
+            options: ['undefined', 'imaginary', 'extraneous', 'irrational']
           }
         ],
-        correctAnswers: ['$\\log_b(x/y)=\\log_b x-\\log_b y$', '$\\log_b(x^k)=k\\log_b x$', 'rewrite logs using convenient computational bases'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: quotient rule, power rule, and change of base align with their exact definitions used in this part.'
+        correctAnswers: ['convert to exponential', 'condense using product rule', 'positive', 'extraneous'],
+        hint1: 'Single log = number → convert immediately.',
+        hint2: 'Two logs added → combine into one first.',
+        hint3: 'Log arguments must be in the domain $(0, \\infty)$.',
+        explanation: 'Single log: convert to exponential. Multiple logs: condense first. Always verify positivity. Failed solutions are extraneous.'
       }
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to quotient rule, power rule, and change of base so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-logarithmic-functions-precalc-p4-s7-mcq-applied',
+      id: 'p4-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is filtering extraneous solutions from domain checks. Which term best anchors the next reasoning step if the key idea is: log input must stay strictly positive?',
+            question: 'How many valid solutions does $\\log_2(x-1) + \\log_2(x+1) = 3$ have?',
             options: [
-              'domain condition',
-              'quotient rule',
-              'change of base',
-              'power rule'
+              '$0$',
+              '$1$',
+              '$2$',
+              'Cannot be determined'
             ],
-            correctAnswer: 0,
-            explanation: 'domain condition matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 1,
+            explanation: '$\\log_2[(x-1)(x+1)] = 3 \\implies x^2 - 1 = 8 \\implies x^2 = 9 \\implies x = \\pm 3$. Check: $x = 3$ gives $\\log_2(2) + \\log_2(4) = 1 + 2 = 3$ ✔. $x = -3$ gives $\\log_2(-4)$ ❌. Only $1$ valid solution.'
           },
           {
-            question: 'A student is solving a mixed logarithmic functions prompt. Which term best anchors the next reasoning step if the key idea is: vertical line where log input approaches zero?',
+            question: 'Solve $\\log(x^2) = 4$.',
             options: [
-              'asymptote',
-              'change of base',
-              'logarithm',
-              'domain condition'
+              '$x = 100$ only',
+              '$x = \\pm 100$',
+              '$x = 10{,}000$',
+              '$x = \\pm 10{,}000$'
             ],
-            correctAnswer: 0,
-            explanation: 'asymptote matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 1,
+            explanation: '$\\log(x^2) = 4 \\implies x^2 = 10^4 = 10{,}000 \\implies x = \\pm 100$. Both work because $(\\pm 100)^2 = 10{,}000 > 0$.'
           }
         ]
       }

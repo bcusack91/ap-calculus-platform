@@ -2,186 +2,195 @@ export const precalcTransformationsPart2Data = {
   topicSlug: 'transformations-precalc',
   sections: [
     {
-      id: 'precalc-transformations-precalc-p2-s1-intro',
+      id: 'p2-intro',
       type: 'text' as const,
       content: `
-      ## Function Transformations: Vertical and horizontal shifts
-      
-      **Part 2 of 7**
-      
-      This part focuses on tracking shift direction from function notation. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **vertical shift**: adds constant outside function value
-      - **horizontal shift**: replaces $x$ with $x-h$ inside input
-      - **reflection**: multiplies input or output by $-1$
-      
-      
-      ### Worked Example
-      Part 2 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🔄 Reflections
+
+**Part 2 of 7**
+
+### Reflection Over the $x$-axis
+
+$$y = -f(x)$$
+
+Negate the **output**: flip the graph upside down.
+
+### Reflection Over the $y$-axis
+
+$$y = f(-x)$$
+
+Negate the **input**: flip the graph left-right.
+
+### Quick Reference
+
+| Transformation | Effect | Example |
+|:---------------|:-------|:--------|
+| $-f(x)$ | Reflect over $x$-axis | $-x^2$: opens down |
+| $f(-x)$ | Reflect over $y$-axis | $(-x)^3 = -x^3$ |
+| $-f(-x)$ | Reflect over both (= rotate $180°$) | Origin symmetry |
       `
     },
     {
-      id: 'precalc-transformations-precalc-p2-s2-mcq-core',
+      id: 'p2-examples',
+      type: 'text' as const,
+      content: `
+## 📝 Examples
+
+### Example 1: $y = -\\sqrt{x}$
+
+Start with $y = \\sqrt{x}$ (half-parabola in Q1).
+
+$-f(x)$: reflect over $x$-axis → now in Q4.
+
+Points: $(0,0) \\to (0,0)$, $(4,2) \\to (4,-2)$, $(9,3) \\to (9,-3)$.
+
+### Example 2: $y = \\sqrt{-x}$
+
+$f(-x)$: reflect over $y$-axis → now in Q2.
+
+Points: $(0,0)\\to(0,0)$, $(4,2)\\to(-4,2)$.
+
+### Even and Odd Functions
+
+- **Even**: $f(-x) = f(x)$ → symmetric about $y$-axis (e.g., $x^2, \\cos x$)
+- **Odd**: $f(-x) = -f(x)$ → symmetric about origin (e.g., $x^3, \\sin x$)
+
+> 💡 Reflecting an even function over the $y$-axis gives the same graph!
+      `
+    },
+    {
+      id: 'p2-combined',
+      type: 'text' as const,
+      content: `
+## 🔀 Combining Reflections with Shifts
+
+Order matters! Apply transformations in the correct sequence.
+
+### Example: $y = -|x-2|+3$
+
+1. Start with $y = |x|$
+2. Shift right 2: $y = |x-2|$
+3. Reflect over $x$-axis: $y = -|x-2|$
+4. Shift up 3: $y = -|x-2|+3$
+
+Vertex: $(2, 3)$, opening downward.
+
+### Example: $y = (-x)^3 + 1 = -x^3+1$
+
+1. Start with $y = x^3$
+2. Reflect over $y$-axis: $y = (-x)^3 = -x^3$
+3. Shift up 1: $y = -x^3+1$
+
+> 💡 For odd functions, reflecting over the $y$-axis is the same as reflecting over the $x$-axis!
+      `
+    },
+    {
+      id: 'p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Reflections Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of vertical shift.',
-            options: [
-              'multiplies input or output by $-1$',
-              'replaces $x$ with $x-h$ inside input',
-              'multiplies output by factor with magnitude $>1$',
-              'adds constant outside function value'
-            ],
-            correctAnswer: 3,
-            explanation: 'vertical shift is defined as: adds constant outside function value.'
+            question: 'Which reflects $y=x^2$ over the $x$-axis?',
+            options: ['$y = x^2+1$', '$y = (-x)^2$', '$y = -x^2$', '$y = x^{-2}$'],
+            correctAnswer: 2,
+            explanation: '$-f(x) = -x^2$ reflects over the $x$-axis.'
           },
           {
-            question: 'In tracking shift direction from function notation, which expression is the best starting model?',
-            options: [
-              '$-f(x),\\;f(-x)$',
-              '$g(x)=a\\,f(b(x-h))+k$',
-              '$f(x)+k$',
-              '$f(x-h)$'
-            ],
-            correctAnswer: 3,
-            explanation: 'Use $f(x-h)$ first, then substitute known quantities from the prompt.'
+            question: '$f(x)=x^3$ is:',
+            options: ['Even', 'Odd', 'Neither', 'Both'],
+            correctAnswer: 1,
+            explanation: '$f(-x) = (-x)^3 = -x^3 = -f(x)$ → odd.'
+          },
+          {
+            question: 'The point $(3, -5)$ on $f$ becomes what point on $-f(-x)$?',
+            options: ['$(-3, 5)$', '$(3, 5)$', '$(-3, -5)$', '$(5, -3)$'],
+            correctAnswer: 0,
+            explanation: '$-f(-x)$: negate both coordinates: $(3,-5) \\to (-3, 5)$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-transformations-precalc-p2-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Horizontal shift | $f(x-h)$ | right by $h$ when $h>0$ |
-      | Vertical shift | $f(x)+k$ | up by $k$ when $k>0$ |
-      | Reflections | $-f(x),\;f(-x)$ | over $x$-axis and $y$-axis |
-      | General transform | $g(x)=a\,f(b(x-h))+k$ | all major parameter moves |
-      
-      ### Common pitfalls
-      - A negative outside coefficient reflects across the $x$-axis.
-      - Apply transformations in the order implied by expression structure.
-      - Inside changes reverse intuitive direction for horizontal moves.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-transformations-precalc-p2-s4-input',
+      id: 'p2-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Transformation Parameters**
-      
-      1) In $g(x)=f(x-3)+2$, how many units right is the graph shifted?
-      2) In $y=-2f(x)$, what is the vertical stretch factor magnitude?
-      3) If $f(x)=x^2$, compute $f(-4)$.
+**Reflections Practice** 🧮
+
+The point $(4, 7)$ is on $y = f(x)$.
+
+**1)** On $y = -f(x)$, this becomes $(4,$ ?$)$
+
+**2)** On $y = f(-x)$, this becomes $($?$, 7)$
+
+**3)** Is $f(x) = x^4 + x^2$ even, odd, or neither? (Type "even", "odd", or "neither")
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3', '2', '16'],
-        hint1: 'Inside subtraction shifts right.',
-        hint2: 'Read absolute value of outside multiplier.',
-        hint3: 'Square the input after substitution.',
-        explanation: 'Shift is 3 right, stretch magnitude is 2, and $f(-4)=16$.'
+        correctAnswers: ['-7', '-4', 'even'],
+        hint1: '$-f(x)$ negates the $y$-value.',
+        hint2: '$f(-x)$ negates the $x$-value.',
+        hint3: '$f(-x) = (-x)^4+(-x)^2 = x^4+x^2 = f(x)$.',
+        explanation: '1) $-7$. 2) $-4$. 3) Even (all even powers).'
       }
     },
     {
-      id: 'precalc-transformations-precalc-p2-s5-dropdown',
+      id: 'p2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Reflection Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'vertical shift',
-            options: ['multiplies output by factor with magnitude $>1$', 'multiplies input or output by $-1$', 'replaces $x$ with $x-h$ inside input', 'adds constant outside function value']
+            label: '$-f(x)$ reflects over:',
+            options: ['$x$-axis', '$y$-axis', 'Origin', 'Line $y=x$'],
+            correctAnswer: 0
           },
           {
-            label: 'horizontal shift',
-            options: ['multiplies output by factor with magnitude $>1$', 'scales graph toward an axis', 'multiplies input or output by $-1$', 'replaces $x$ with $x-h$ inside input']
+            label: '$f(-x)$ reflects over:',
+            options: ['$x$-axis', '$y$-axis', 'Origin', 'Line $y=x$'],
+            correctAnswer: 1
           },
           {
-            label: 'reflection',
-            options: ['multiple transformations applied to one parent', 'multiplies output by factor with magnitude $>1$', 'scales graph toward an axis', 'multiplies input or output by $-1$']
+            label: 'If $f$ is even, its graph is symmetric about:',
+            options: ['$x$-axis', '$y$-axis', 'Origin', 'No symmetry'],
+            correctAnswer: 1
+          },
+          {
+            label: 'If $f$ is odd, its graph is symmetric about:',
+            options: ['$x$-axis', '$y$-axis', 'Origin', 'No symmetry'],
+            correctAnswer: 2
           }
         ],
-        correctAnswers: ['adds constant outside function value', 'replaces $x$ with $x-h$ inside input', 'multiplies input or output by $-1$'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: vertical shift, horizontal shift, and reflection align with their exact definitions used in this part.'
+        correctAnswers: ['$x$-axis', '$y$-axis', '$y$-axis', 'Origin'],
+        hint1: 'Negating outputs flips vertically.',
+        hint2: 'Negating inputs flips horizontally.',
+        hint3: 'Even: $f(-x) = f(x)$ → $y$-axis symmetry.',
+        explanation: '$-f(x)$: $x$-axis reflection. $f(-x)$: $y$-axis reflection. Even: $y$-axis symmetry. Odd: origin symmetry.'
       }
     },
     {
-      id: 'precalc-transformations-precalc-p2-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to vertical shift, horizontal shift, and reflection so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-transformations-precalc-p2-s7-mcq-applied',
+      id: 'p2-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is tracking shift direction from function notation. Which term best anchors the next reasoning step if the key idea is: multiplies output by factor with magnitude $>1$?',
-            options: [
-              'vertical shift',
-              'vertical stretch',
-              'reflection',
-              'horizontal shift'
-            ],
+            question: '$f(x)=x^3-x$ is:',
+            options: ['Even', 'Odd', 'Neither'],
             correctAnswer: 1,
-            explanation: 'vertical stretch matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$f(-x) = -x^3+x = -(x^3-x) = -f(x)$ → odd.'
           },
           {
-            question: 'A student is solving a mixed function transformations prompt. Which term best anchors the next reasoning step if the key idea is: scales graph toward an axis?',
-            options: [
-              'vertical stretch',
-              'reflection',
-              'composite transform',
-              'compression'
-            ],
-            correctAnswer: 3,
-            explanation: 'compression matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Reflecting $y = 2^x$ over the $y$-axis gives:',
+            options: ['$y = -2^x$', '$y = 2^{-x}$', '$y = -2^{-x}$', '$y = \\log_2 x$'],
+            correctAnswer: 1,
+            explanation: '$f(-x) = 2^{-x} = (1/2)^x$.'
           }
         ]
       }

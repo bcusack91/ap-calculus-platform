@@ -4,13 +4,28 @@ export const chemIceTablesCalculationsPart5Data = {
     {
       id: 'ic5-intro',
       type: 'text' as const,
-      content: `
-# 🧊 When the Approximation Fails — The Quadratic Formula
+      content: `# 🧊 When the Approximation Fails — The Quadratic Formula
 
 **Part 5 of 7 — Exact Solutions**
 
-When K is not small enough for the 5% approximation, or when the 5% test fails, you must solve the full quadratic equation. This part covers the systematic approach.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 The Quadratic Formula |
+| In Equilibrium Problems |
+| 🧪 Worked Example |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ic5-quadratic-review',
@@ -22,24 +37,27 @@ For $ax^2 + bx + c = 0$:
 
 $$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$
 
+---
+
+### 🧪 When to Use the Quadratic
+
+| Test | Condition | Action |
+|------|-----------|--------|
+| Ratio check | $\\frac{[\\text{initial}]}{K} < 100$ | Must use quadratic |
+| 5% rule | Approximation yields > 5% change | Must use quadratic |
+| $K$ relative to $[C]_0$ | $K$ is not very small vs. initial conc. | Must use quadratic |
 
 ---
 
-### In Equilibrium Problems
+### ⚠️ Choosing the Correct Root
 
-- You\'ll always get two solutions
-- Only the **positive** root that gives physically meaningful (non-negative) concentrations is valid
-- Reject any root that gives a negative concentration
+| Root | Accept? | Why |
+|------|---------|-----|
+| Positive, gives $[C] \\geq 0$ | ✅ Yes | Physically meaningful |
+| Negative | ❌ Reject | Concentrations can't be negative |
+| Larger than initial conc. | ❌ Reject | Can't lose more than you started with |
 
-
----
-
-### When You Need the Quadratic
-
-The approximation fails when:
-- $K$ is not very small relative to initial concentrations
-- $\\frac{[\\text{initial}]}{K} < 100$
-- The 5% check yields > 5%
+> ⚠️ **Always check:** Both roots of the quadratic, then reject the one that gives a negative or impossible concentration.
       `
     },
     {
@@ -48,11 +66,9 @@ The approximation fails when:
       content: `
 ## 🧪 Worked Example
 
-$\\text{A}(g) \\rightleftharpoons \\text{B}(g) + \\text{C}(g)$, $K_c = 0.50$
+> **Problem:** For $\\text{A}(g) \\rightleftharpoons \\text{B}(g) + \\text{C}(g)$ with $K_c = 0.50$, find the equilibrium concentrations given $[\\text{A}] = 1.00$ M, $[\\text{B}] = [\\text{C}] = 0$.
 
-Initial: $[\\text{A}] = 1.00$ M, $[\\text{B}] = [\\text{C}] = 0$
-
-**Check approximation:** $1.00/0.50 = 2.0 < 100$ → approximation NOT valid
+> **Solution:** **Check approximation:** $1.00/0.50 = 2.0 < 100$ → approximation NOT valid
 
 |  | A | B | C |
 |--|---|---|---|
@@ -84,7 +100,7 @@ $x = 0.50$
 
 **Check:** $K = (0.50)(0.50)/0.50 = 0.50$ ✓
 
-Note: If we had used the approximation: $x = \\sqrt{0.50} = 0.71$. The 5% check: $0.71/1.00 = 71\\%$ → fails badly!
+> 💡 **Tip:** If we had used the approximation: $x = \\sqrt{0.50} = 0.71$. The 5% check: $0.71/1.00 = 71\\%$ → fails badly! Always verify with the 5% test.
       `
     },
     {

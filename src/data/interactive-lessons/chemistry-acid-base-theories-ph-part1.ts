@@ -4,13 +4,28 @@ export const chemAcidBaseTheoriesPhPart1Data = {
     {
       id: 'ab1-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Arrhenius Acids and Bases
+      content: `# 🧪 Arrhenius Acids and Bases
 
 **Part 1 of 7 — The First Modern Definition**
 
-The study of acids and bases is central to chemistry — from biochemistry to industrial processes, these substances shape reactions across every field. We begin with the oldest modern definition: the **Arrhenius model**.
-      `
+---
+
+### Three Acid-Base Theories — Where We're Headed
+
+| Theory | Acid Is... | Base Is... | This Part |
+|--------|-----------|-----------|-----------|
+| **Arrhenius** | Produces $H^+$ in water | Produces $OH^-$ in water | ✅ Part 1 |
+| Brønsted-Lowry | Proton donor | Proton acceptor | Part 2 |
+| Lewis | Electron pair acceptor | Electron pair donor | Part 3 |
+
+> 🔑 **Why this matters:** The Arrhenius model is the foundation — every acid-base theory that follows builds on these ideas.
+
+---
+
+### What You'll Master in Part 1
+- Defining Arrhenius acids and bases by what they produce in water
+- Identifying limitations of the Arrhenius model
+- Recognizing strong acids and the hydronium ion concept`
     },
     {
       id: 'ab1-arrhenius-definition',
@@ -33,7 +48,7 @@ In 1884, Svante Arrhenius proposed a simple classification:
 - Acids increase $[H^+]$ in water
 - Bases increase $[OH^-]$ in water
 - Neutralization produces water: $H^+(aq) + OH^-(aq) \\rightarrow H_2O(l)$
-
+> 🔑 **Key idea:** Arrhenius acids add $H^+$ to solution; Arrhenius bases add $OH^-$.
 
 ---
 
@@ -43,6 +58,8 @@ The Arrhenius model only works in **aqueous solutions** and cannot explain:
 - Why $NH_3$ acts as a base (it doesn\'t contain $OH^-$)
 - Acid-base behavior in non-aqueous solvents
 - Reactions between gases that show acid-base character
+
+> ⚠️ These limitations led to the development of the broader Brønsted-Lowry and Lewis definitions (Parts 2–3).
       `
     },
     {
@@ -74,7 +91,7 @@ The Arrhenius model only works in **aqueous solutions** and cannot explain:
 | $Ca(OH)_2$ | Calcium hydroxide | $Ca(OH)_2 \\rightarrow Ca^{2+} + 2OH^-$ |
 | $Ba(OH)_2$ | Barium hydroxide | $Ba(OH)_2 \\rightarrow Ba^{2+} + 2OH^-$ |
 
-**Memorize the 6 strong acids and 4 strong bases** — everything else is weak!
+> 💡 **Memorize the 6 strong acids and 4 strong bases** — everything else is weak!
       `
     },
     {
@@ -105,9 +122,9 @@ $$2H_2O(l) \\rightleftharpoons H_3O^+(aq) + OH^-(aq)$$
 
 The equilibrium constant for this process is:
 
-$$K_w = [H^+][OH^-] = 1.0 \\times 10^{-14} \\text{ at 25°C}$$
+$$\\boxed{K_w = [H^+][OH^-] = 1.0 \\times 10^{-14} \\text{ at 25°C}}$$
 
-In pure water: $[H^+] = [OH^-] = 1.0 \\times 10^{-7}$ M
+> 🔑 In pure water: $[H^+] = [OH^-] = 1.0 \\times 10^{-7}$ M
       `
     },
     {
@@ -173,9 +190,9 @@ $$HCl(aq) + NaOH(aq) \\rightarrow NaCl(aq) + H_2O(l)$$
 
 **Net ionic equation:**
 
-$$H^+(aq) + OH^-(aq) \\rightarrow H_2O(l)$$
+$$\\boxed{H^+(aq) + OH^-(aq) \\rightarrow H_2O(l)}$$
 
-This net ionic equation is the **same for all strong acid–strong base neutralizations**!
+> 🔑 This net ionic equation is the **same for all strong acid–strong base neutralizations**!
 
 
 ---
@@ -184,7 +201,7 @@ This net ionic equation is the **same for all strong acid–strong base neutrali
 
 $$H_2SO_4(aq) + 2KOH(aq) \\rightarrow K_2SO_4(aq) + 2H_2O(l)$$
 
-Note: sulfuric acid is **diprotic** — it has 2 acidic protons, so it requires 2 moles of $KOH$.
+> 💡 Sulfuric acid is **diprotic** — it has 2 acidic protons, so it requires 2 moles of $KOH$.
       `
     },
     {

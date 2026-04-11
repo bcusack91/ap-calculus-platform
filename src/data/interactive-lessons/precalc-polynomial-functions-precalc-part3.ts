@@ -2,186 +2,220 @@ export const precalcPolynomialPart3Data = {
   topicSlug: 'polynomial-functions-precalc',
   sections: [
     {
-      id: 'precalc-polynomial-functions-precalc-p3-s1-intro',
+      id: 'p3-intro',
       type: 'text' as const,
       content: `
-      ## Polynomial Functions: Multiplicity and graph contact
-      
-      **Part 3 of 7**
-      
-      This part focuses on predicting bounce versus cross behavior. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **zero**: input value where polynomial output is zero
-      - **multiplicity**: number of times a factor repeats
-      - **remainder theorem**: remainder of division by $x-c$ equals $p(c)$
-      
-      
-      ### Worked Example
-      Part 3 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📐 Multiplicity and Graph Behavior at Zeros
+
+**Part 3 of 7 — Crossing, Bouncing & Flattening**
+
+Not all zeros look the same on a graph. Some create clean crossings, others produce "bounces," and still others create flat, S-shaped passes through the axis. The secret? **Multiplicity** — how many times a factor repeats.
       `
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p3-s2-mcq-core',
+      id: 'p3-multiplicity-defined',
+      type: 'text' as const,
+      content: `
+## 📖 What Is Multiplicity?
+
+The **multiplicity** of a zero $r$ is the exponent on its corresponding factor $(x - r)$ in the fully factored polynomial.
+
+For example, in $p(x) = 2(x + 1)^3(x - 4)^2(x - 7)$:
+
+| Zero | Factor | Multiplicity |
+|:----:|:------:|:------------:|
+| $x = -1$ | $(x + 1)^3$ | 3 |
+| $x = 4$ | $(x - 4)^2$ | 2 |
+| $x = 7$ | $(x - 7)^1$ | 1 |
+
+> 🔑 **Key idea:** The sum of all multiplicities equals the degree of the polynomial. Here: $3 + 2 + 1 = 6$, so $p(x)$ is degree 6.
+      `
+    },
+    {
+      id: 'p3-graph-behavior',
+      type: 'text' as const,
+      content: `
+## 📈 Multiplicity and Graph Behavior
+
+The multiplicity determines exactly how the graph interacts with the $x$-axis at each zero:
+
+| Multiplicity | Behavior at the zero | Visual |
+|:------------:|---------------------|:------:|
+| **1** (odd) | Graph **crosses** the axis cleanly | ╱ or ╲ |
+| **2** (even) | Graph **bounces** off the axis (touches but doesn't cross) | ∪ or ∩ |
+| **3** (odd) | Graph **crosses** with an S-shaped flattening | ∼ |
+| **4** (even) | Graph **bounces** with extra flattening | ⌒ |
+
+> 🔑 **The rule:** **Odd** multiplicity → crosses. **Even** multiplicity → bounces.
+
+The higher the multiplicity, the more the graph **flattens out** near the zero before crossing or bouncing.
+
+
+---
+
+### Worked Example
+
+> **Describe the graph behavior at each zero of $f(x) = -3(x + 2)^2(x)(x - 5)^3$.**
+
+| Zero | Multiplicity | Odd/Even | Graph behavior |
+|:----:|:--:|:--:|-----------|
+| $x = -2$ | 2 | Even | **Bounces** off the $x$-axis |
+| $x = 0$ | 1 | Odd | **Crosses** the $x$-axis cleanly |
+| $x = 5$ | 3 | Odd | **Crosses** with S-shaped flattening |
+
+The degree is $2 + 1 + 3 = 6$ (even), and the leading coefficient is $-3$ (negative), so both ends point **down**.
+      `
+    },
+    {
+      id: 'p3-sign-chart',
+      type: 'text' as const,
+      content: `
+## 📊 Sign Analysis Between Zeros
+
+Between consecutive zeros, the polynomial is either entirely positive or entirely negative. The sign **changes** at crossings (odd multiplicity) but **stays the same** at bounces (even multiplicity).
+
+### Example: $f(x) = (x + 3)(x - 1)^2(x - 4)$
+
+**Zeros:** $x = -3$ (mult 1), $x = 1$ (mult 2), $x = 4$ (mult 1)
+
+**Test a point in each interval:**
+
+| Interval | Test point | Sign of $f$ | Reason |
+|----------|:---------:|:----------:|--------|
+| $(-\\infty, -3)$ | $x = -4$ | $+$ | All factors' net sign is positive |
+| $(-3, 1)$ | $x = 0$ | $-$ | Crossed at $x = -3$, sign changed |
+| $(1, 4)$ | $x = 2$ | $-$ | Bounced at $x = 1$, sign stayed same |
+| $(4, +\\infty)$ | $x = 5$ | $+$ | Crossed at $x = 4$, sign changed |
+
+> ⚠️ **Common mistake:** Forgetting that even-multiplicity zeros don't change the sign. The graph touches the axis but comes right back.
+      `
+    },
+    {
+      id: 'p3-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Multiplicity Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of zero.',
+            question: 'The polynomial $g(x) = (x - 3)^4(x + 1)$ has what behavior at $x = 3$?',
             options: [
-              'input value where polynomial output is zero',
-              'number of times a factor repeats',
-              'remainder of division by $x-c$ equals $p(c)$',
-              '$p(c)=0$ implies $(x-c)$ is a factor'
-            ],
-            correctAnswer: 0,
-            explanation: 'zero is defined as: input value where polynomial output is zero.'
-          },
-          {
-            question: 'In predicting bounce versus cross behavior, which expression is the best starting model?',
-            options: [
-              '$p(x)=a\\prod (x-r_i)^{m_i}$',
-              '$x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}$',
-              '$\\deg(pq)=\\deg p+\\deg q$',
-              '$\\text{rem}(p\\div (x-c))=p(c)$'
+              'Crosses the $x$-axis cleanly',
+              'Bounces off the $x$-axis',
+              'Crosses with S-shaped flattening',
+              'Does not touch the $x$-axis'
             ],
             correctAnswer: 1,
-            explanation: 'Use $x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}$ first, then substitute known quantities from the prompt.'
+            explanation: 'At $x = 3$, the multiplicity is 4 (even). Even multiplicity means the graph **bounces** — it touches the axis and turns around without crossing.'
+          },
+          {
+            question: 'If a polynomial has zeros at $x = -1$ (multiplicity 2), $x = 0$ (multiplicity 1), and $x = 3$ (multiplicity 3), what is the minimum possible degree?',
+            options: [
+              '3',
+              '5',
+              '6',
+              '7'
+            ],
+            correctAnswer: 2,
+            explanation: 'The degree must be at least the sum of multiplicities: $2 + 1 + 3 = 6$.'
+          },
+          {
+            question: 'At a zero with multiplicity 3, the graph:',
+            options: [
+              'Bounces off the axis',
+              'Crosses the axis cleanly like a line',
+              'Crosses the axis with a flat, S-shaped curve',
+              'Has a vertical tangent'
+            ],
+            correctAnswer: 2,
+            explanation: 'Multiplicity 3 is odd (so it crosses), but the cube power creates a flat, S-shaped transition through the axis — similar to the shape of $y = x^3$ near the origin.'
           }
         ]
       }
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p3-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Quadratic roots | $x=\\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ | embedded factor analysis |
-      | Degree sum | $\deg(pq)=\deg p+\deg q$ | model-building checks |
-      | Factored form | $p(x)=a\prod (x-r_i)^{m_i}$ | zero/multiplicity encoding |
-      | Remainder theorem | $\\text{rem}(p\div (x-c))=p(c)$ | fast root testing |
-      
-      ### Common pitfalls
-      - A numerical approximation can hide repeated roots if precision is low.
-      - Multiplicity affects local graph shape at zeros.
-      - Even/odd degree does not determine all turning behavior.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-polynomial-functions-precalc-p3-s4-input',
+      id: 'p3-calculation-drill',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Polynomial Structure**
-      
-      1) Evaluate $p(3)$ for $p(x)=x^3-2x$.
-      2) Compute $p(2)$ for $p(x)=x^2-5x+6$.
-      3) Find degree of $(x^2+1)(x^3-1)$.
+**Multiplicity Drill** 🧮
+
+**1)** What is the multiplicity of $x = 2$ in $p(x) = (x - 2)^3(x + 5)$? (e.g., for $(x-1)^4(x+2)$, the multiplicity of $x = 1$ is $4$)
+
+**2)** What is the degree of $f(x) = 5(x + 1)^2(x - 3)^2(x - 6)$? (e.g., add all the multiplicities)
+
+**3)** How many zeros of $g(x) = x^2(x - 4)^3(x + 7)^2$ cause the graph to **cross** the axis? (e.g., only odd-multiplicity zeros cross)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['21', '0', '5'],
-        hint1: 'Substitute and simplify term by term.',
-        hint2: 'Use the remainder/factor theorem shortcut.',
-        hint3: 'Degrees add under multiplication.',
-        explanation: 'Values are 21 and 0, and the product polynomial has degree 5.'
+        correctAnswers: ['3', '5', '1'],
+        hint1: 'The exponent on $(x - 2)$ tells you the multiplicity directly.',
+        hint2: 'Add the exponents: $2 + 2 + 1$.',
+        hint3: 'Identify which zeros have odd multiplicity: $x = 0$ (mult 2, even), $x = 4$ (mult 3, odd), $x = -7$ (mult 2, even). Only odd ones cross.',
+        explanation: '1) The exponent on $(x-2)$ is 3. 2) Degree $= 2 + 2 + 1 = 5$. 3) Only $x = 4$ has odd multiplicity (3), so exactly 1 zero causes a crossing.'
       }
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p3-s5-dropdown',
+      id: 'p3-dropdown-practice',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Multiplicity Concepts — Fill in the Blanks** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'zero',
-            options: ['$p(c)=0$ implies $(x-c)$ is a factor', 'remainder of division by $x-c$ equals $p(c)$', 'input value where polynomial output is zero', 'number of times a factor repeats']
+            label: 'Even multiplicity causes the graph to ______ at the zero',
+            options: ['cross', 'bounce', 'have a vertical asymptote', 'be undefined']
           },
           {
-            label: 'multiplicity',
-            options: ['number of times a factor repeats', '$p(c)=0$ implies $(x-c)$ is a factor', 'remainder of division by $x-c$ equals $p(c)$', 'direction of graph tails as $x	o\\pm\\infty$']
+            label: 'Odd multiplicity causes the graph to ______ at the zero',
+            options: ['bounce', 'cross', 'approach infinity', 'have a hole']
           },
           {
-            label: 'remainder theorem',
-            options: ['non-real roots of real polynomials occur in pairs', '$p(c)=0$ implies $(x-c)$ is a factor', 'direction of graph tails as $x	o\\pm\\infty$', 'remainder of division by $x-c$ equals $p(c)$']
+            label: 'The sign of the polynomial ______ at an even-multiplicity zero',
+            options: ['changes', 'stays the same', 'becomes zero permanently', 'is undefined']
+          },
+          {
+            label: 'Higher multiplicity causes more ______ near the zero',
+            options: ['oscillation', 'steepness', 'flattening', 'asymptotic behavior']
           }
         ],
-        correctAnswers: ['input value where polynomial output is zero', 'number of times a factor repeats', 'remainder of division by $x-c$ equals $p(c)$'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: zero, multiplicity, and remainder theorem align with their exact definitions used in this part.'
+        correctAnswers: ['bounce', 'cross', 'stays the same', 'flattening'],
+        hint1: 'Even multiplicity means the graph touches the axis and turns around.',
+        hint2: 'Odd multiplicity means the graph passes through to the other side.',
+        hint3: 'If the graph bounces, the sign on both sides is the same.',
+        explanation: 'Even multiplicity → bounce (no sign change). Odd multiplicity → cross (sign changes). Higher multiplicity creates more flattening near the axis.'
       }
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p3-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to zero, multiplicity, and remainder theorem so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-polynomial-functions-precalc-p3-s7-mcq-applied',
+      id: 'p3-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz — Multiplicity** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is predicting bounce versus cross behavior. Which term best anchors the next reasoning step if the key idea is: $p(c)=0$ implies $(x-c)$ is a factor?',
+            question: 'Which polynomial\'s graph bounces at $x = -2$ and crosses at $x = 5$?',
             options: [
-              'zero',
-              'multiplicity',
-              'remainder theorem',
-              'factor theorem'
+              '$f(x) = (x + 2)(x - 5)^2$',
+              '$f(x) = (x + 2)^2(x - 5)$',
+              '$f(x) = (x - 2)^2(x + 5)$',
+              '$f(x) = (x + 2)^3(x - 5)^2$'
             ],
-            correctAnswer: 3,
-            explanation: 'factor theorem matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 1,
+            explanation: 'Bounce at $x = -2$ requires even multiplicity on $(x + 2)$, and crossing at $x = 5$ requires odd multiplicity on $(x - 5)$. $(x+2)^2(x-5)$ fits: multiplicity 2 at $-2$ (bounce), multiplicity 1 at $5$ (cross).'
           },
           {
-            question: 'A student is solving a mixed polynomial functions prompt. Which term best anchors the next reasoning step if the key idea is: direction of graph tails as $x	o\\pm\\infty$?',
+            question: 'A degree-5 polynomial has a zero at $x = 1$ with multiplicity 2 and a zero at $x = -3$ with multiplicity 3. How does the graph behave at these two zeros?',
             options: [
-              'conjugate roots',
-              'factor theorem',
-              'end behavior',
-              'remainder theorem'
+              'Crosses at both',
+              'Bounces at both',
+              'Bounces at $x = 1$, crosses at $x = -3$',
+              'Crosses at $x = 1$, bounces at $x = -3$'
             ],
             correctAnswer: 2,
-            explanation: 'end behavior matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Multiplicity 2 (even) at $x = 1$ → bounce. Multiplicity 3 (odd) at $x = -3$ → cross (with S-shaped flattening).'
           }
         ]
       }

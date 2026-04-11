@@ -4,13 +4,24 @@ export const chemElectrolyticCellsFaradayPart7Data = {
     {
       id: 'ef7-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Synthesis & AP Review — Electrolytic Cells and Faraday
+      content: `# 🎯 Synthesis & AP Review — Electrolytic Cells and Faraday
 
 **Part 7 of 7 — Complete Mastery**
 
-This final review integrates everything about electrolytic cells: the comparison with galvanic cells, predicting products, Faraday\'s law calculations, and industrial applications. Master these and you will own the electrochemistry portion of the AP exam.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'ef7-master-summary',
@@ -28,6 +39,8 @@ This final review integrates everything about electrolytic cells: the comparison
 | Anode | − | + |
 | Cathode | + | − |
 
+> 💡 **Memory Trick:** In both cell types, the anode is where oxidation occurs (AN OX) and the cathode is where reduction occurs (RED CAT). Only the signs flip!
+
 
 ---
 
@@ -37,12 +50,14 @@ This final review integrates everything about electrolytic cells: the comparison
 
 **Anode:** Halide → halogen; oxyanion/F⁻ → O₂
 
+> 🔑 **AP Quick Check:** If the metal is above H₂ in the activity series (active metals like Na, K, Al), then H₂ forms at the cathode instead of the metal.
+
 
 ---
 
 ### Faraday\'s Law
 
-$$m = \\frac{ItM}{nF}$$
+$$\\boxed{m = \\frac{ItM}{nF}}$$
 
 $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \\frac{\\text{mol } e^-}{n}$$
 

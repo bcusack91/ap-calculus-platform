@@ -4,13 +4,30 @@ export const chemMolesMolarMassPart2Data = {
     {
       id: 'mm2-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Molar Mass
+      content: `# ⚖️ Molar Mass
 
 **Part 2 of 7 — The Mass of One Mole**
 
-Now that we know what a mole is, we need a way to connect **moles** to **grams** — something we can actually measure on a balance. That connection is the **molar mass**.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📖 What Is Molar Mass? |
+| For Elements |
+| Key Insight |
+| 📌 Molar Mass of Compounds |
+| Example 1: Water (H₂O) |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'mm2-definition',
@@ -20,7 +37,7 @@ Now that we know what a mole is, we need a way to connect **moles** to **grams**
 
 The **molar mass** ($M$) of a substance is the mass in grams of one mole of that substance.
 
-$$M = \\frac{\\text{mass (g)}}{\\text{moles (mol)}}$$
+$$\\boxed{M = \\frac{\\text{mass (g)}}{\\text{moles (mol)}}}$$
 
 Units: **g/mol**
 
@@ -39,12 +56,14 @@ The molar mass of an element equals its **atomic mass from the periodic table**,
 | Sodium (Na) | 22.99 | 22.99 |
 | Iron (Fe) | 55.85 | 55.85 |
 
+> 💡 **Tip:** To find the molar mass of any element, simply look up its atomic mass on the periodic table and change the units from amu to g/mol.
+
 
 ---
 
 ### Key Insight
 
-The number on the periodic table does double duty: it tells you the **mass of one atom in amu** and the **mass of one mole of atoms in grams**.
+> 🔑 **Key Concept:** The number on the periodic table does double duty — it tells you the **mass of one atom in amu** and the **mass of one mole of atoms in grams**.
       `
     },
     {
@@ -102,7 +121,9 @@ $$M_{\\text{C}_6\\text{H}_{12}\\text{O}_6} = 6(12.01) + 12(1.008) + 6(16.00) = 7
 
 ---
 
-### Tip: Watch for Parentheses!
+### 💡 Watch for Parentheses!
+
+> 💡 **Tip:** When parentheses appear in a formula like Ca(OH)₂, the subscript outside multiplies **everything** inside — both the O and the H.
 
 > **Problem:** What is the molar mass of calcium hydroxide, Ca(OH)₂?
 

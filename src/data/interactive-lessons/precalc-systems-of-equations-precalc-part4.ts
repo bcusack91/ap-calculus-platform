@@ -2,186 +2,202 @@ export const precalcSystemsPart4Data = {
   topicSlug: 'systems-of-equations-precalc',
   sections: [
     {
-      id: 'precalc-systems-of-equations-precalc-p4-s1-intro',
+      id: 'p4-intro',
       type: 'text' as const,
       content: `
-      ## Systems of Equations: Matrix and determinant perspective
-      
-      **Part 4 of 7**
-      
-      This part focuses on testing uniqueness with determinants. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **dependent system**: equations represent same relation and infinitely many solutions
-      - **substitution**: replace one variable expression into another equation
-      - **elimination**: combine equations to remove a variable
-      
-      
-      ### Worked Example
-      Part 4 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📊 Systems of Inequalities
+
+**Part 4 of 7**
+
+### Linear Inequalities in Two Variables
+
+$$2x + y \\leq 6$$
+
+The solution is a **half-plane** — all points on one side of the boundary line.
+
+### Graphing Steps
+
+1. **Graph the boundary** ($=$): solid if $\\leq/\\geq$, dashed if $</>$
+2. **Test a point** (use $(0,0)$ if not on the line)
+3. **Shade** the side that satisfies the inequality
+
+### Example: $2x + y \\leq 6$
+
+- Boundary: $y = -2x + 6$ (solid line)
+- Test $(0,0)$: $0 + 0 = 0 \\leq 6$ ✓ → shade the origin side
+
+### Systems of Inequalities
+
+The solution is the **intersection** of all shaded regions — the overlap.
+
+$$\\begin{cases} x + y \\leq 5 \\\\ x \\geq 0 \\\\ y \\geq 0 \\end{cases}$$
+
+This gives a **triangular region** in the first quadrant.
       `
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p4-s2-mcq-core',
+      id: 'p4-feasible',
+      type: 'text' as const,
+      content: `
+## 🎯 Feasible Regions & Corner Points
+
+### Bounded vs Unbounded
+
+- **Bounded**: region is enclosed (polygon) — happens when enough constraints
+- **Unbounded**: region extends to infinity
+
+### Finding Corner Points
+
+Corner points (vertices) are found by solving pairs of boundary equations simultaneously.
+
+**Example**: $\\begin{cases} x+y \\leq 5 \\\\ 2x+y \\leq 8 \\\\ x \\geq 0, y \\geq 0 \\end{cases}$
+
+Corner points:
+- $(0,0)$: intersection of $x=0, y=0$
+- $(4,0)$: intersection of $2x+y=8, y=0$
+- $(3,2)$: intersection of $x+y=5, 2x+y=8$
+- $(0,5)$: intersection of $x+y=5, x=0$
+
+### Why Corner Points Matter
+
+**Fundamental Theorem of Linear Programming**: The max/min of a linear function on a feasible region occurs at a **corner point**.
+      `
+    },
+    {
+      id: 'p4-lp',
+      type: 'text' as const,
+      content: `
+## 💰 Linear Programming
+
+### Optimize $P = 3x + 2y$ subject to:
+
+$$\\begin{cases} x+y \\leq 5 \\\\ 2x+y \\leq 8 \\\\ x \\geq 0, y \\geq 0 \\end{cases}$$
+
+**Evaluate $P$ at each corner point:**
+
+| Corner | $P = 3x+2y$ |
+|:-------|:------------|
+| $(0,0)$ | $0$ |
+| $(4,0)$ | $12$ |
+| $(3,2)$ | $13$ ← **Maximum** |
+| $(0,5)$ | $10$ |
+
+**Maximum profit**: $P = 13$ at $(3, 2)$.
+
+### Real-World Applications
+
+- Manufacturing: maximize profit given resource constraints
+- Nutrition: minimize cost while meeting dietary needs
+- Scheduling: optimize efficiency under time limits
+      `
+    },
+    {
+      id: 'p4-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Inequalities Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of dependent system.',
-            options: [
-              'replace one variable expression into another equation',
-              'combine equations to remove a variable',
-              'matrix containing variable coefficients',
-              'equations represent same relation and infinitely many solutions'
-            ],
-            correctAnswer: 3,
-            explanation: 'dependent system is defined as: equations represent same relation and infinitely many solutions.'
+            question: 'The boundary for $y > 2x+1$ is:',
+            options: ['Dashed line', 'Solid line', 'No boundary', 'Dotted line'],
+            correctAnswer: 0,
+            explanation: 'Strict inequality ($>$, not $\\geq$) → dashed line (boundary not included).'
           },
           {
-            question: 'In testing uniqueness with determinants, which expression is the best starting model?',
-            options: [
-              '$\\Delta=a_1b_2-a_2b_1$',
-              '$\\begin{cases}a_1x+b_1y=c_1\\\\a_2x+b_2y=c_2\\end{cases}$',
-              '$y=\\frac{a_1c_2-a_2c_1}{\\Delta}$',
-              '$x=\\frac{c_1b_2-c_2b_1}{\\Delta}$'
-            ],
-            correctAnswer: 2,
-            explanation: 'Use $y=\\frac{a_1c_2-a_2c_1}{\\Delta}$ first, then substitute known quantities from the prompt.'
+            question: 'Where does max/min of a linear objective function occur?',
+            options: ['Center of region', 'At a corner point', 'On any edge', 'Cannot determine'],
+            correctAnswer: 1,
+            explanation: 'Fundamental theorem: optimal value occurs at a vertex of the feasible region.'
+          },
+          {
+            question: 'The feasible region for $x \\geq 0, y \\geq 0, x+y \\leq 4$ has how many corners?',
+            options: ['2', '3', '4', '5'],
+            correctAnswer: 1,
+            explanation: 'Corners: $(0,0), (4,0), (0,4)$ — a triangle has 3 vertices.'
           }
         ]
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p4-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Cramer's y | $y=\\frac{a_1c_2-a_2c_1}{\Delta}$ | explicit solution form |
-      | Linear system | $\\begin{cases}a_1x+b_1y=c_1\\a_2x+b_2y=c_2\end{cases}$ | two-variable framework |
-      | Determinant | $\Delta=a_1b_2-a_2b_1$ | uniqueness criterion |
-      | Cramer's x | $x=\\frac{c_1b_2-c_2b_1}{\Delta}$ | explicit solution form |
-      
-      ### Common pitfalls
-      - Parallel lines in graph form indicate no solution.
-      - Arithmetic sign slips in elimination often flip outcomes.
-      - State whether the system has one, none, or infinitely many solutions.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-systems-of-equations-precalc-p4-s4-input',
+      id: 'p4-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Solving Systems**
-      
-      1) Solve for $x$: $x+y=10$, $x-y=2$.
-      2) Solve for $y$: $2x+3y=12$, $x-y=1$.
-      3) Compute determinant of $\\begin{bmatrix}2&1\\5&3\end{bmatrix}$.
+**Linear Programming** 🧮
+
+Maximize $P = 5x+4y$ with corners $(0,0), (3,0), (2,3), (0,4)$.
+
+**1)** $P$ at $(2,3)$ = ?
+
+**2)** $P$ at $(0,4)$ = ?
+
+**3)** Maximum value of $P$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6', '2', '1'],
-        hint1: 'Add the two equations to eliminate $y$.',
-        hint2: 'Use substitution from $x=y+1$.',
-        hint3: 'Use $ad-bc$ for the determinant.',
-        explanation: 'The system gives $x=6$ and $y=2$, with determinant 1 confirming uniqueness.'
+        correctAnswers: ['22', '16', '22'],
+        hint1: '$P = 5(2)+4(3) = 10+12$.',
+        hint2: '$P = 5(0)+4(4) = 16$.',
+        hint3: 'Compare all: $0, 15, 22, 16$.',
+        explanation: '$(2,3)$: $22$. $(0,4)$: $16$. $(3,0)$: $15$. Max = $22$ at $(2,3)$.'
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p4-s5-dropdown',
+      id: 'p4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Inequality Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'dependent system',
-            options: ['replace one variable expression into another equation', 'equations represent same relation and infinitely many solutions', 'combine equations to remove a variable', 'matrix containing variable coefficients']
+            label: '$y \\leq 3$ shades:',
+            options: ['Above $y=3$', 'Below $y=3$ (including)', 'Left of $y=3$', 'Right of $y=3$'],
+            correctAnswer: 1
           },
           {
-            label: 'substitution',
-            options: ['combine equations to remove a variable', 'nonzero determinant implies unique 2x2 linear solution', 'matrix containing variable coefficients', 'replace one variable expression into another equation']
+            label: 'A feasible region with finite area is called:',
+            options: ['Bounded', 'Unbounded', 'Infeasible', 'Optimal'],
+            correctAnswer: 0
           },
           {
-            label: 'elimination',
-            options: ['all ordered pairs satisfying every equation', 'combine equations to remove a variable', 'matrix containing variable coefficients', 'nonzero determinant implies unique 2x2 linear solution']
+            label: 'If no region satisfies all constraints:',
+            options: ['Max is 0', 'System is infeasible', 'Use unbounded region', 'Ignore one constraint'],
+            correctAnswer: 1
+          },
+          {
+            label: 'The overlap of two half-planes is:',
+            options: ['Always empty', 'A polygon', 'A region (possibly unbounded)', 'A line'],
+            correctAnswer: 2
           }
         ],
-        correctAnswers: ['equations represent same relation and infinitely many solutions', 'replace one variable expression into another equation', 'combine equations to remove a variable'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: dependent system, substitution, and elimination align with their exact definitions used in this part.'
+        correctAnswers: ['Below $y=3$ (including)', 'Bounded', 'System is infeasible', 'A region (possibly unbounded)'],
+        hint1: '$y \\leq 3$ means $y$ values at or below 3.',
+        hint2: 'Bounded = enclosed.',
+        hint3: 'No overlap = no feasible solution.',
+        explanation: '$y\\leq 3$: below (solid). Finite area: bounded. No overlap: infeasible. Two half-planes: region.'
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to dependent system, substitution, and elimination so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-systems-of-equations-precalc-p4-s7-mcq-applied',
+      id: 'p4-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is testing uniqueness with determinants. Which term best anchors the next reasoning step if the key idea is: matrix containing variable coefficients?',
-            options: [
-              'dependent system',
-              'elimination',
-              'coefficient matrix',
-              'substitution'
-            ],
-            correctAnswer: 2,
-            explanation: 'coefficient matrix matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Minimize $C = 2x+3y$ at corners $(1,2), (4,1), (3,5)$:',
+            options: ['$C=8$ at $(1,2)$', '$C=11$ at $(4,1)$', '$C=7$ at $(1,2)$', '$C=21$ at $(3,5)$'],
+            correctAnswer: 0,
+            explanation: '$(1,2)$: $2+6=8$. $(4,1)$: $8+3=11$. $(3,5)$: $6+15=21$. Min = $8$.'
           },
           {
-            question: 'A student is solving a mixed systems of equations prompt. Which term best anchors the next reasoning step if the key idea is: nonzero determinant implies unique 2x2 linear solution?',
-            options: [
-              'coefficient matrix',
-              'solution set',
-              'determinant test',
-              'elimination'
-            ],
-            correctAnswer: 2,
-            explanation: 'determinant test matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'A strict inequality $y > 2x$ uses:',
+            options: ['Solid line, shade above', 'Dashed line, shade above', 'Solid line, shade below', 'Dashed line, shade below'],
+            correctAnswer: 1,
+            explanation: 'Strict ($>$): dashed. $y > 2x$: shade above the line.'
           }
         ]
       }

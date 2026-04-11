@@ -4,13 +4,30 @@ export const chemEquilibriumConstantsPart1Data = {
     {
       id: 'ece1-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Equilibrium Constants and Expressions
+      content: `# ⚖️ Equilibrium Constants and Expressions
 
 **Part 1 of 7 — What Is Chemical Equilibrium?**
 
-Before we can write equilibrium expressions or calculate $K$ values, we need a solid understanding of **what equilibrium actually means** at the molecular level and how to recognize it experimentally.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚖️ Dynamic Equilibrium Revisited |
+| Key Features |
+| ⚖️ The Equilibrium Constant |
+| What $K$ Tells Us |
+| Critical Facts About $K$ |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ece1-dynamic-eq',
@@ -37,9 +54,7 @@ $$\\text{Rate}_{\\text{forward}} = \\text{Rate}_{\\text{reverse}}$$
 
 ---
 
-### Common Misconception
-
-> Equilibrium does **NOT** mean the concentrations of reactants and products are equal. It means they are **constant**.
+> ⚠️ **Common Misconception:** Equilibrium does **NOT** mean the concentrations of reactants and products are equal. It means they are **constant**.
 
 For example, in the Haber process:
 
@@ -106,7 +121,7 @@ $$a\\text{A} + b\\text{B} \\rightleftharpoons c\\text{C} + d\\text{D}$$
 
 The equilibrium constant expression is:
 
-$$K_c = \\frac{[\\text{C}]^c[\\text{D}]^d}{[\\text{A}]^a[\\text{B}]^b}$$
+$$\\boxed{K_c = \\frac{[\\text{C}]^c[\\text{D}]^d}{[\\text{A}]^a[\\text{B}]^b}}$$
 
 
 ---
@@ -124,7 +139,8 @@ $$K_c = \\frac{[\\text{C}]^c[\\text{D}]^d}{[\\text{A}]^a[\\text{B}]^b}$$
 
 ### Critical Facts About $K$
 
-- $K$ depends **only on temperature** — not on initial concentrations, pressure, or catalysts
+> 🔑 **Key Concept:** $K$ depends **only on temperature** — not on initial concentrations, pressure, or catalysts.
+
 - $K$ is **unitless** (in the thermodynamic definition using activities)
 - A larger $K$ means more products at equilibrium
       `

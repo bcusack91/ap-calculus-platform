@@ -6,15 +6,22 @@ export const chemPhotoelectronSpectroscopyPart6Data = {
       type: 'text' as const,
       content: `# Problem-Solving Workshop
 
-Now it is time to put your PES knowledge to work. This section features multi-step problems that require you to integrate everything you have learned:
+**Part 6 of 7 — Problem-Solving Workshop**
 
-- Reading PES spectra (axes, peaks, heights)
-- Connecting peaks to electron configurations
-- Identifying elements from PES data
-- Predicting PES spectra from known configurations
-- Applying periodic trends
+---
 
-These problems mirror the style and difficulty of AP Chemistry exam questions.`
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'ps6-problem1',
@@ -37,25 +44,27 @@ When given PES data and asked to identify an element, follow this systematic app
 
 **Step 5:** Look up the element.
 
-**Step 6:** Verify your answer makes chemical sense.`
+**Step 6:** Verify your answer makes chemical sense.
+
+> 💡 **Tip:** Always check that each peak height doesn’t exceed the subshell maximum (s ≤ 2, p ≤ 6, d ≤ 10, f ≤ 14). This catches assignment errors quickly.`
     },
     {
       id: 'ps6-quiz1',
       type: 'multiple-choice' as const,
-      content: `### Problem 1: Mystery Element
+      content: `### ✏️ Problem 1: Mystery Element
 
-A PES spectrum shows six peaks with the following data:
-
-| Peak | Relative Height | Binding Energy (MJ/mol) |
-|------|----------------|------------------------|
-| 1 | 2 | 151 |
-| 2 | 2 | 17.4 |
-| 3 | 6 | 13.5 |
-| 4 | 2 | 1.95 |
-| 5 | 6 | 1.01 |
-| 6 | 1 | 0.58 |
-
-What element is this?`,
+> **Problem:** A PES spectrum shows six peaks with the following data:
+>
+> | Peak | Relative Height | Binding Energy (MJ/mol) |
+> |------|----------------|------------------------|
+> | 1 | 2 | 151 |
+> | 2 | 2 | 17.4 |
+> | 3 | 6 | 13.5 |
+> | 4 | 2 | 1.95 |
+> | 5 | 6 | 1.01 |
+> | 6 | 1 | 0.58 |
+>
+> What element is this?`,
       exercise: {
         questions: [
           {
@@ -75,9 +84,9 @@ What element is this?`,
     {
       id: 'ps6-quiz2',
       type: 'multiple-choice' as const,
-      content: `### Problem 2: Predicting Spectra
+      content: `### ✏️ Problem 2: Predicting Spectra
 
-If you were to draw the PES spectrum for aluminum (Al, Z = 13), how many peaks would appear and what would their relative heights be?`,
+> **Problem:** If you were to draw the PES spectrum for aluminum (Al, Z = 13), how many peaks would appear and what would their relative heights be?`,
       exercise: {
         questions: [
           {
@@ -97,9 +106,9 @@ If you were to draw the PES spectrum for aluminum (Al, Z = 13), how many peaks w
     {
       id: 'ps6-input1',
       type: 'input-boxes' as const,
-      content: `### Problem 3: Multi-Step Analysis
+      content: `### ✏️ Problem 3: Multi-Step Analysis
 
-Two PES spectra are compared. Element X has peaks: 2, 2, 6, 2, 2. Element Y has peaks: 2, 2, 6, 2, 3. Both are neutral atoms.`,
+> **Problem:** Two PES spectra are compared. Element X has peaks: 2, 2, 6, 2, 2. Element Y has peaks: 2, 2, 6, 2, 3. Both are neutral atoms.`,
       exercise: {
         inputs: [
           {
@@ -123,9 +132,9 @@ Two PES spectra are compared. Element X has peaks: 2, 2, 6, 2, 2. Element Y has 
     {
       id: 'ps6-dropdown1',
       type: 'dropdown-select' as const,
-      content: `### Problem 4: Reasoning About Spectra
+      content: `### ✏️ Problem 4: Reasoning About Spectra
 
-An unknown element has a PES spectrum with peak heights: 2, 2, 6, 2, 6, 2, 6 (from highest to lowest binding energy).`,
+> **Problem:** An unknown element has a PES spectrum with peak heights: 2, 2, 6, 2, 6, 2, 6 (from highest to lowest binding energy).`,
       exercise: {
         dropdowns: [
           {
@@ -146,11 +155,11 @@ An unknown element has a PES spectrum with peak heights: 2, 2, 6, 2, 6, 2, 6 (fr
     {
       id: 'ps6-ap-style',
       type: 'multiple-choice' as const,
-      content: `### Problem 5: AP-Style Question
+      content: `### ✏️ Problem 5: AP-Style Question
 
-A student analyzes the PES spectrum of an unknown gaseous element. The spectrum shows 5 peaks. The first peak (highest BE) has a relative height of 2. The second peak has a relative height of 2. The third peak has a relative height of 6. The fourth and fifth peaks (lowest BE) have relative heights of 2 and 4, respectively.
-
-The student claims the element must be in Period 3 of the periodic table. Is the student correct, and what element is it?`,
+> **Problem:** A student analyzes the PES spectrum of an unknown gaseous element. The spectrum shows 5 peaks. The first peak (highest BE) has a relative height of 2. The second peak has a relative height of 2. The third peak has a relative height of 6. The fourth and fifth peaks (lowest BE) have relative heights of 2 and 4, respectively.
+>
+> The student claims the element must be in Period 3 of the periodic table. Is the student correct, and what element is it?`,
       exercise: {
         questions: [
           {
@@ -170,7 +179,7 @@ The student claims the element must be in Period 3 of the periodic table. Is the
     {
       id: 'ps6-input2',
       type: 'input-boxes' as const,
-      content: `### Problem 6: Predicting Peak Heights
+      content: `### ✏️ Problem 6: Predicting Peak Heights
 
 Write the expected PES peak heights (from highest to lowest binding energy) for the following element. Separate your answers with commas.`,
       exercise: {
@@ -186,18 +195,53 @@ Write the expected PES peak heights (from highest to lowest binding energy) for 
     {
       id: 'ps6-summary',
       type: 'text' as const,
-      content: `## 📋 Part 6 Summary
+      content: `## 📋 Part 6 Summary: PES Problem-Solving
 
-Problem-solving strategies for PES:
+---
 
-1. **Systematic approach**: List peaks → assign subshells → sum electrons → identify element
-2. **Check subshell maximums**: s ≤ 2, p ≤ 6, d ≤ 10, f ≤ 14
-3. **Don't forget 3d**: For elements beyond Ca (Z > 20), the 3d subshell must appear
-4. **Compare spectra**: Adjacent elements differ by one electron; all BEs shift with Z
-5. **Predict spectra**: Write the electron configuration, then each subshell becomes one peak
-6. **Verify**: Total electrons must equal atomic number for neutral atoms
+### 🧪 Systematic Approach
 
-In the final part, we will review everything and practice AP exam-style questions.`
+| Step | Action | Check |
+|------|--------|-------|
+| 1 | List all peaks (left → right) | Highest BE to lowest BE |
+| 2 | Assign subshells | s ≤ 2, p ≤ 6, d ≤ 10, f ≤ 14 |
+| 3 | Sum all electrons | Must equal atomic number |
+| 4 | Identify the element | Use periodic table |
+
+---
+
+### ⚠️ Common AP Mistakes
+
+| Mistake | Correct Approach |
+|---------|------------------|
+| Forgetting 3d for Z > 20 | Always include 3d subshell for transition metals |
+| Writing 2, 2, 6, 2, 6, 2, 6 for TMs | Must show 3d peak (up to height 10) between 3p and 4p |
+| Not verifying total | Always sum peak heights = atomic number |
+
+---
+
+### 📌 Key Skills
+
+| Task | Strategy |
+|------|----------|
+| Compare spectra | Adjacent elements differ by 1 e⁻; all BEs shift with Z |
+| Predict a spectrum | Write e⁻ config → each subshell = one peak |
+| Verify answer | Total e⁻ must = atomic number for neutral atoms |
+
+---
+
+### ✅ Your Checklist Before Moving On
+
+- ☐ I can systematically identify an element from PES data
+- ☐ I check subshell maximums for each peak
+- ☐ I always include 3d for transition metals (Z > 20)
+- ☐ I can predict PES spectra from electron configurations
+
+---
+
+### 🔮 What's Next
+
+In **Part 7** (final), we will review everything and practice **AP exam-style questions** to solidify your mastery.`
     }
   ]
 }

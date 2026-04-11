@@ -10,17 +10,16 @@ export async function GET(request: NextRequest) {
     if ('error' in authResult) return authResult.error
 
     const search = request.nextUrl.searchParams.get('search') || ''
-    if (!search || search.length < 2) {
-      return NextResponse.json([])
-    }
 
     const users = await prisma.user.findMany({
-      where: {
-        OR: [
-          { email: { contains: search, mode: 'insensitive' } },
-          { name: { contains: search, mode: 'insensitive' } },
-        ],
-      },
+      where: search.length >= 2
+        ? {
+            OR: [
+              { email: { contains: search, mode: 'insensitive' } },
+              { name: { contains: search, mode: 'insensitive' } },
+            ],
+          }
+        : {},
       select: {
         id: true,
         name: true,
@@ -30,7 +29,7 @@ export async function GET(request: NextRequest) {
         createdAt: true,
       },
       take: 20,
-      orderBy: { name: 'asc' },
+      orderBy: search.length >= 2 ? { name: 'asc' } : { createdAt: 'desc' },
     })
 
     return NextResponse.json(users)

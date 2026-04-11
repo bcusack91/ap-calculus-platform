@@ -2,193 +2,221 @@ export const precalcTrigIdentitiesPart4Data = {
   topicSlug: 'trigonometric-identities-precalc',
   sections: [
     {
-      id: 'precalc-trigonometric-identities-precalc-p4-s1-intro',
+      id: 'p4-intro',
       type: 'text' as const,
       content: `
-      ## Trigonometric Identities: Sum-difference identities
-      
-      **Part 4 of 7**
-      
-      This part focuses on expanding combined-angle expressions. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **even-odd identity**: sign behavior under $\\heta\mapsto -\\heta$
-      - **cofunction identity**: relation between complementary angles
-      - **sum identity**: formula for trig of $A\pm B$
-      
-      
-      ### Worked Example
-      Simplify $
-      rac{1-\cos^2\\heta}{\sin\\heta}$ for $\sin\\heta
-      eq0$.
-      
-      Use $1-\cos^2\\heta=\sin^2\\heta$:
-      
-      $$
-      rac{1-\cos^2\\heta}{\sin\\heta}=
-      rac{\sin^2\\heta}{\sin\\heta}=\sin\\heta$$
-      
-      Identity substitution first, then cancellation, keeps the algebra clean.
+# ➕ Trigonometric Identities — Sum & Difference Formulas
+
+**Part 4 of 7**
+
+The **sum and difference** identities let you expand $\\sin(A \\pm B)$, $\\cos(A \\pm B)$, and $\\tan(A \\pm B)$ into expressions involving only $\\sin A$, $\\cos A$, $\\sin B$, $\\cos B$.
+
+### The Big Six Formulas
+
+$$\\boxed{\\sin(A \\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B}$$
+
+$$\\boxed{\\cos(A \\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B}$$
+
+$$\\boxed{\\tan(A \\pm B) = \\frac{\\tan A \\pm \\tan B}{1 \\mp \\tan A\\tan B}}$$
+
+### Sign Pattern Summary
+
+| Formula | Plus version | Minus version |
+|:--------|:------------|:-------------|
+| $\\sin(A \\pm B)$ | same sign ($+$) | same sign ($-$) |
+| $\\cos(A \\pm B)$ | **opposite** sign ($-$) | **opposite** sign ($+$) |
+| $\\tan(A \\pm B)$ | numerator $+$, denominator $-$ | numerator $-$, denominator $+$ |
+
+> **Memory aid for cosine**: "Cosine is contrary" — the sign in the formula is **opposite** the sign in the argument.
       `
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p4-s2-mcq-core',
+      id: 'p4-examples',
+      type: 'text' as const,
+      content: `
+## 📝 Worked Examples
+
+### Example 1: Find the exact value of $\\cos 75°$
+
+Split: $75° = 45° + 30°$
+
+$$\\cos 75° = \\cos 45°\\cos 30° - \\sin 45°\\sin 30°$$
+
+$$= \\frac{\\sqrt{2}}{2} \\cdot \\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{2}}{2} \\cdot \\frac{1}{2} = \\frac{\\sqrt{6} - \\sqrt{2}}{4}$$
+
+### Example 2: Find the exact value of $\\sin 15°$
+
+Split: $15° = 45° - 30°$
+
+$$\\sin 15° = \\sin 45°\\cos 30° - \\cos 45°\\sin 30°$$
+
+$$= \\frac{\\sqrt{2}}{2} \\cdot \\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{2}}{2} \\cdot \\frac{1}{2} = \\frac{\\sqrt{6} - \\sqrt{2}}{4}$$
+
+### Example 3: Simplify $\\sin(x + \\pi)$
+
+$$\\sin(x + \\pi) = \\sin x\\cos\\pi + \\cos x\\sin\\pi = \\sin x(-1) + \\cos x(0) = -\\sin x$$
+
+This confirms the identity: shifting by $\\pi$ negates sine.
+
+### Example 4: Find $\\tan 75°$
+
+$$\\tan(45° + 30°) = \\frac{\\tan 45° + \\tan 30°}{1 - \\tan 45°\\tan 30°} = \\frac{1 + \\frac{\\sqrt{3}}{3}}{1 - \\frac{\\sqrt{3}}{3}} = \\frac{3 + \\sqrt{3}}{3 - \\sqrt{3}} = 2 + \\sqrt{3}$$
+      `
+    },
+    {
+      id: 'p4-strategy',
+      type: 'text' as const,
+      content: `
+## 🎯 Choosing the Right Angle Decomposition
+
+### Common Angle Splits
+
+| Target Angle | Split As | Using |
+|:------------|:---------|:------|
+| $15°$ | $45° - 30°$ | Difference |
+| $75°$ | $45° + 30°$ | Sum |
+| $105°$ | $60° + 45°$ | Sum |
+| $165°$ | $180° - 15°$ | or $120° + 45°$ |
+| $\\frac{\\pi}{12}$ | $\\frac{\\pi}{4} - \\frac{\\pi}{6}$ | Difference |
+| $\\frac{5\\pi}{12}$ | $\\frac{\\pi}{4} + \\frac{\\pi}{6}$ | Sum |
+| $\\frac{7\\pi}{12}$ | $\\frac{\\pi}{3} + \\frac{\\pi}{4}$ | Sum |
+
+### When to Use Sum/Difference Formulas
+
+| Situation | Example |
+|:----------|:--------|
+| Exact value of a non-standard angle | $\\sin 75°$, $\\cos 15°$ |
+| Expression has $\\sin A\\cos B \\pm \\cos A\\sin B$ | Condense to $\\sin(A \\pm B)$ |
+| Proving an identity | Expand one side, simplify to match the other |
+| Deriving double-angle formulas | Set $B = A$ in the sum formulas |
+      `
+    },
+    {
+      id: 'p4-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of even-odd identity.',
+            question: '$\\cos(A + B)$ expands to:',
             options: [
-              'formula for trig of $A\\pm B$',
-              'expressions for trig of $2\\heta$',
-              'relation between complementary angles',
-              'sign behavior under $\\heta\\mapsto -\\heta$'
+              '$\\cos A\\cos B + \\sin A\\sin B$',
+              '$\\cos A\\cos B - \\sin A\\sin B$',
+              '$\\sin A\\cos B + \\cos A\\sin B$',
+              '$\\sin A\\cos B - \\cos A\\sin B$'
             ],
-            correctAnswer: 3,
-            explanation: 'even-odd identity is defined as: sign behavior under $\\heta\\mapsto -\\heta$.'
+            correctAnswer: 1,
+            explanation: '"Cosine is contrary" — the sum formula uses subtraction: $\\cos(A+B) = \\cos A\\cos B - \\sin A\\sin B$.'
           },
           {
-            question: 'In expanding combined-angle expressions, which expression is the best starting model?',
+            question: 'Which angle split would you use for $\\sin\\!\\left(\\frac{5\\pi}{12}\\right)$?',
             options: [
-              '$\\cos(A+B)=\\cos A\\cos B-\\sin A\\sin B$',
-              '$\\sin^2\\theta+\\cos^2\\theta=1$',
-              '$\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}$',
-              '$\\sin(2\\theta)=2\\sin\\theta\\cos\\theta$'
+              '$\\frac{\\pi}{3} - \\frac{\\pi}{12}$',
+              '$\\frac{\\pi}{4} + \\frac{\\pi}{6}$',
+              '$\\frac{\\pi}{2} - \\frac{\\pi}{12}$',
+              '$\\frac{\\pi}{6} + \\frac{\\pi}{6}$'
             ],
-            correctAnswer: 3,
-            explanation: 'Use $\\sin(2\\theta)=2\\sin\\theta\\cos\\theta$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 1,
+            explanation: '$\\frac{\\pi}{4} + \\frac{\\pi}{6} = \\frac{3\\pi}{12} + \\frac{2\\pi}{12} = \\frac{5\\pi}{12}$, and both $\\pi/4$ and $\\pi/6$ have known exact values.'
+          },
+          {
+            question: '$\\sin(x - \\frac{\\pi}{2})$ simplifies to:',
+            options: [
+              '$\\cos x$',
+              '$-\\cos x$',
+              '$\\sin x$',
+              '$-\\sin x$'
+            ],
+            correctAnswer: 1,
+            explanation: '$\\sin(x - \\frac{\\pi}{2}) = \\sin x\\cos\\frac{\\pi}{2} - \\cos x\\sin\\frac{\\pi}{2} = 0 - \\cos x = -\\cos x$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p4-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Sine double-angle | $\sin(2\\theta)=2\sin\\theta\cos\\theta$ | power reduction and simplification |
-      | Pythagorean | $\sin^2\\theta+\cos^2\\theta=1$ | fundamental conversion |
-      | Tangent | $\\tan\\theta=\\frac{\sin\\theta}{\cos\\theta}$ | quotient rewrite |
-      | Cosine sum | $\cos(A+B)=\cos A\cos B-\sin A\sin B$ | angle combination |
-      
-      ### Common pitfalls
-      - Do not treat identities as equations to solve unless the task requests solving.
-      - Keep track of domain restrictions when dividing by trig expressions.
-      - Choose one target form early to prevent circular verification.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-trigonometric-identities-precalc-p4-s4-input',
+      id: 'p4-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Identity Values**
-      
-      1) Compute $\sin^2 30^\circ + \cos^2 30^\circ$.
-      2) Compute $\\an 45^\circ$.
-      3) Compute $\sec 60^\circ$.
+**Exact Value Computation** 🧮
+
+**1)** Find the exact value of $\\cos 15°$. The answer has the form $\\frac{\\sqrt{a}+\\sqrt{b}}{4}$. What is $a + b$? (e.g., if the answer were $\\frac{\\sqrt{5}+\\sqrt{3}}{4}$, you'd enter $8$)
+
+**2)** Simplify $\\cos(x + 2\\pi)$. Write as a single trig function of $x$ (e.g., sin, cos, tan). (e.g., $\\sin(x + 2\\pi) = \\sin x$ by periodicity)
+
+**3)** Evaluate $\\sin 45°\\cos 15° + \\cos 45°\\sin 15°$. This matches $\\sin(A+B)$; enter the result as a fraction. (e.g., $\\sin 30° = 1/2$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1', '1', '2'],
-        hint1: 'Use the Pythagorean identity.',
-        hint2: 'Recall special-angle values.',
-        hint3: 'Use reciprocal: $\\sec\\heta=1/\\cos\\heta$.',
-        explanation: 'Pythagorean identity gives 1, tangent at 45° is 1, and secant at 60° is 2.'
+        correctAnswers: ['8', 'cos', 'sqrt(3)/2'],
+        hint1: '$\\cos 15° = \\cos(45°-30°)$. Expand and combine. You get $\\frac{\\sqrt{6}+\\sqrt{2}}{4}$, so $a=6, b=2$.',
+        hint2: 'Since $\\cos$ has period $2\\pi$, adding $2\\pi$ to the argument changes nothing.',
+        hint3: 'Recognize the pattern: $\\sin A\\cos B + \\cos A\\sin B = \\sin(A+B)$. What is $45° + 15°$?',
+        explanation: '1) $\\cos 15° = \\frac{\\sqrt{6}+\\sqrt{2}}{4}$, so $a+b=6+2=8$. 2) $\\cos(x+2\\pi) = \\cos x$. 3) $\\sin(45°+15°) = \\sin 60° = \\frac{\\sqrt{3}}{2}$.'
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p4-s5-dropdown',
+      id: 'p4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Formula Matching** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'even-odd identity',
-            options: ['formula for trig of $A\\pm B$', 'relation between complementary angles', 'expressions for trig of $2\\heta$', 'sign behavior under $\\heta\\mapsto -\\heta$']
+            label: '$\\sin A\\cos B - \\cos A\\sin B$ equals',
+            options: ['$\\sin(A+B)$', '$\\sin(A-B)$', '$\\cos(A+B)$', '$\\cos(A-B)$']
           },
           {
-            label: 'cofunction identity',
-            options: ['relation between complementary angles', 'expressions for trig of $2\\heta$', 'rewrite one side with targeted identities', 'formula for trig of $A\\pm B$']
+            label: '$\\cos A\\cos B + \\sin A\\sin B$ equals',
+            options: ['$\\cos(A+B)$', '$\\cos(A-B)$', '$\\sin(A+B)$', '$\\sin(A-B)$']
           },
           {
-            label: 'sum identity',
-            options: ['$\\sin^2\\heta+\\cos^2\\heta=1$', 'expressions for trig of $2\\heta$', 'formula for trig of $A\\pm B$', 'rewrite one side with targeted identities']
+            label: 'To find an exact value of $\\sin 105°$, split as',
+            options: ['$60° + 45°$', '$90° + 15°$', '$120° - 15°$', '$180° - 75°$']
+          },
+          {
+            label: 'In $\\cos(A+B)$, the sign between the two terms is',
+            options: ['Plus ($+$)', 'Minus ($-$)', 'Depends on the quadrant', 'Undefined']
           }
         ],
-        correctAnswers: ['sign behavior under $\\heta\\mapsto -\\heta$', 'relation between complementary angles', 'formula for trig of $A\\pm B$'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: even-odd identity, cofunction identity, and sum identity align with their exact definitions used in this part.'
+        correctAnswers: ['$\\sin(A-B)$', '$\\cos(A-B)$', '$60° + 45°$', 'Minus ($-$)'],
+        hint1: 'The minus between the two products signals the difference formula for sine.',
+        hint2: 'Plus between the products is the cosine difference formula (signs are flipped).',
+        hint3: 'Both 60° and 45° have known exact values; their sum is 105°.',
+        explanation: '$\\sin A\\cos B - \\cos A\\sin B = \\sin(A-B)$. $\\cos A\\cos B + \\sin A\\sin B = \\cos(A-B)$. $105° = 60°+45°$ uses standard angles. Cosine sum has a minus sign.'
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to even-odd identity, cofunction identity, and sum identity so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-trigonometric-identities-precalc-p4-s7-mcq-applied',
+      id: 'p4-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is expanding combined-angle expressions. Which term best anchors the next reasoning step if the key idea is: expressions for trig of $2\\heta$?',
+            question: '$\\cos 40°\\cos 50° - \\sin 40°\\sin 50°$ equals:',
             options: [
-              'sum identity',
-              'even-odd identity',
-              'cofunction identity',
-              'double-angle identity'
+              '$\\cos 10°$',
+              '$\\cos 90°$',
+              '$\\sin 90°$',
+              '$\\sin 10°$'
             ],
-            correctAnswer: 3,
-            explanation: 'double-angle identity matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 1,
+            explanation: 'This matches $\\cos(A+B) = \\cos A\\cos B - \\sin A\\sin B$ with $A=40°, B=50°$. So $\\cos(40°+50°) = \\cos 90° = 0$.'
           },
           {
-            question: 'A student is solving a mixed trigonometric identities prompt. Which term best anchors the next reasoning step if the key idea is: rewrite one side with targeted identities?',
+            question: 'The exact value of $\\sin 75°$ is:',
             options: [
-              'verification strategy',
-              'double-angle identity',
-              'sum identity',
-              'Pythagorean identity'
+              '$\\frac{\\sqrt{6}+\\sqrt{2}}{4}$',
+              '$\\frac{\\sqrt{6}-\\sqrt{2}}{4}$',
+              '$\\frac{\\sqrt{3}+1}{4}$',
+              '$\\frac{\\sqrt{3}}{2}$'
             ],
             correctAnswer: 0,
-            explanation: 'verification strategy matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$\\sin 75° = \\sin(45°+30°) = \\sin 45°\\cos 30° + \\cos 45°\\sin 30° = \\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2} = \\frac{\\sqrt{6}+\\sqrt{2}}{4}$.'
           }
         ]
       }

@@ -4,13 +4,30 @@ export const chemStoichiometryLimitingReactantsPart4Data = {
     {
       id: 'sl4-intro',
       type: 'text' as const,
-      content: `
-# 📊 Theoretical, Actual, and Percent Yield
+      content: `# 📊 Theoretical, Actual, and Percent Yield
 
 **Part 4 of 7 — How Efficient Is Your Reaction?**
 
-In the real world, reactions rarely produce as much product as calculations predict. The **percent yield** measures how efficient a reaction actually is compared to the theoretical maximum.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📂 Three Types of Yield |
+| Theoretical Yield |
+| Actual Yield |
+| Percent Yield |
+| Key Facts |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sl4-definitions',
@@ -33,7 +50,9 @@ The amount of product **actually obtained** in the lab (measured experimentally)
 ### Percent Yield
 The ratio of actual to theoretical yield, expressed as a percentage:
 
-$$\\% \\text{ yield} = \\frac{\\text{actual yield}}{\\text{theoretical yield}} \\times 100$$
+> 🔑 **Key Concept:** Percent yield measures reaction efficiency:
+
+$$\\boxed{\\% \\text{ yield} = \\frac{\\text{actual yield}}{\\text{theoretical yield}} \\times 100}$$
 
 
 ---
@@ -65,12 +84,16 @@ $$\\% \\text{ yield} = \\frac{\\text{actual yield}}{\\text{theoretical yield}} \
 
 ---
 
+> ⚠️ **Warning:** A percent yield greater than 100% is physically impossible for pure product — it signals contamination, impurities, or measurement error.
+
 ### In Practice
 
 - Industrial processes aim for yields of **60–90%**
 - Pharmaceutical synthesis may involve many steps, each with <100% yield
 - Multi-step synthesis: overall yield = product of individual yields
   - Example: 3 steps at 80% each → $0.80^3 = 0.512 = 51.2\\%$ overall
+
+> 💡 **Tip:** To find the required theoretical yield when you know the desired actual yield: Theoretical = Actual ÷ (% yield / 100).
       `
     },
     {
@@ -79,7 +102,7 @@ $$\\% \\text{ yield} = \\frac{\\text{actual yield}}{\\text{theoretical yield}} \
       content: `
 ## 🧪 Worked Example
 
-**Problem:** In the reaction $2\\text{Al} + 3\\text{Cl}_2 \\rightarrow 2\\text{AlCl}_3$, a student starts with 54.0 g of Al ($M = 26.98$) and excess Cl₂. The student obtains 200.0 g of AlCl₃ ($M = 133.34$). What is the percent yield?
+> **Problem:** In the reaction $2\\text{Al} + 3\\text{Cl}_2 \\rightarrow 2\\text{AlCl}_3$, a student starts with 54.0 g of Al ($M = 26.98$) and excess Cl₂. The student obtains 200.0 g of AlCl₃ ($M = 133.34$). What is the percent yield?
 
 
 ---
@@ -97,7 +120,7 @@ Grams AlCl₃ (theoretical): $2.001 \\times 133.34 = 266.8$ g
 
 ### Step 2: Calculate Percent Yield
 
-$$\\% \\text{ yield} = \\frac{200.0}{266.8} \\times 100 = 75.0\\%$$
+$$\\boxed{\\% \\text{ yield} = \\frac{200.0}{266.8} \\times 100 = 75.0\\%}$$
 
 
 ---

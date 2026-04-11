@@ -9,7 +9,20 @@ export const chemHybridizationSigmaPiBondsPart7Data = {
 
 **Part 7 of 7 — Connecting Hybridization to VSEPR, Polarity, and the AP Exam**
 
-In this final part, we tie hybridization and sigma/pi bonds into the broader picture of molecular structure. The AP Chemistry exam expects you to move fluently between Lewis structures, VSEPR, hybridization, and polarity — so let\'s practice that integration.`
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'hy-7-2',
@@ -51,7 +64,7 @@ For any molecule on the AP exam, you should be able to perform this complete ana
 
 ### The Link
 
-Hybridization → Geometry → Symmetry → Polarity
+> 🔑 **Key Concept:** Hybridization → Geometry → Symmetry → Polarity. This chain determines whether a molecule is polar or nonpolar.
 
 | Hybridization | Geometry (no lone pairs) | Symmetric? | Polar? |
 |:---:|:---:|:---:|:---:|
@@ -231,7 +244,9 @@ A common AP question: *"Explain why CO₂ is nonpolar but SO₂ is polar."*
       id: 'hy-7-8',
       type: 'text',
       title: 'Course Summary',
-      content: `## 🏆 Congratulations — Hybridization and Sigma/Pi Bonds Complete!
+      content: `---
+
+## 🏆 Congratulations — Hybridization and Sigma/Pi Bonds Complete!
 
 ### The Big Picture
 
@@ -248,6 +263,8 @@ You now understand the orbital-level explanation for molecular bonding:
 | **Bond counting** | Single = 1σ, Double = 1σ+1π, Triple = 1σ+2π |
 
 ### AP Exam Tips
+
+> 💡 **Tip:** These are the most commonly tested hybridization concepts on the AP Chemistry exam.
 
 1. **Always start with the Lewis structure** — hybridization flows from electron domains
 2. **Don\'t confuse electron geometry with molecular geometry** — lone pairs affect shape but still count for hybridization

@@ -2,191 +2,191 @@ export const precalcVectors2DPart4Data = {
   topicSlug: 'vectors-two-dimensions-precalc',
   sections: [
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p4-s1-intro',
+      id: 'p4-intro',
       type: 'text' as const,
       content: `
-      ## Vectors in Two Dimensions: Dot product and angle relation
-      
-      **Part 4 of 7**
-      
-      This part focuses on testing perpendicular and parallel vectors. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **dot product**: scalar from component-wise multiplication and sum
-      - **projection**: component of one vector along another
-      - **unit vector**: vector with magnitude 1
-      
-      
-      ### Worked Example
-      Part 4 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🧭 Vector Applications — Navigation & Forces
+
+**Part 4 of 7**
+
+### Resultant of Forces
+
+When multiple forces act on an object, the **resultant** is their vector sum:
+
+$$\\vec{R} = \\vec{F}_1 + \\vec{F}_2 + \\cdots + \\vec{F}_n$$
+
+### Equilibrium
+
+An object is in **equilibrium** when the resultant force is zero:
+
+$$\\vec{F}_1 + \\vec{F}_2 + \\cdots + \\vec{F}_n = \\vec{0}$$
+
+### Navigation Vectors
+
+- **Heading/bearing**: measured clockwise from north
+- **Ground speed**: magnitude of the resultant velocity
+- **Course**: direction of actual travel (resultant)
       `
     },
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p4-s2-mcq-core',
+      id: 'p4-example',
+      type: 'text' as const,
+      content: `
+## 📝 Example: Airplane in Wind
+
+A plane flies at 500 mph on heading $070°$ (from north). Wind blows at 60 mph from heading $200°$.
+
+### Convert to Standard Math Angles
+
+Bearing $070°$ → math angle $= 90° - 70° = 20°$
+
+Plane: $\\vec{v}_p = \\langle 500\\cos 20°, 500\\sin 20° \\rangle \\approx \\langle 469.8, 171.0 \\rangle$
+
+Wind from $200°$ means wind blows toward $020°$: math angle $= 70°$
+
+Wind: $\\vec{v}_w = \\langle 60\\cos 70°, 60\\sin 70° \\rangle \\approx \\langle 20.5, 56.4 \\rangle$
+
+### Resultant
+
+$\\vec{R} = \\langle 490.3, 227.4 \\rangle$
+
+Ground speed $= |\\vec{R}| \\approx \\sqrt{490.3^2 + 227.4^2} \\approx 540$ mph
+
+Course angle $= \\tan^{-1}\\frac{227.4}{490.3} \\approx 24.9°$ → Bearing $\\approx 065°$
+      `
+    },
+    {
+      id: 'p4-forces',
+      type: 'text' as const,
+      content: `
+## ⚖️ Example: Forces in Equilibrium
+
+A 100 lb weight hangs from two cables making angles of $30°$ and $45°$ with the ceiling.
+
+Let $T_1$ = tension at $30°$, $T_2$ = tension at $45°$ from horizontal.
+
+### Force Equations (equilibrium)
+
+**Horizontal**: $T_1\\cos 30° = T_2\\cos 45°$
+
+$\\frac{\\sqrt{3}}{2}T_1 = \\frac{\\sqrt{2}}{2}T_2 \\implies T_2 = \\frac{\\sqrt{3}}{\\sqrt{2}}T_1 = \\frac{\\sqrt{6}}{2}T_1$
+
+**Vertical**: $T_1\\sin 30° + T_2\\sin 45° = 100$
+
+$\\frac{1}{2}T_1 + \\frac{\\sqrt{2}}{2} \\cdot \\frac{\\sqrt{6}}{2}T_1 = 100$
+
+$\\frac{1}{2}T_1 + \\frac{\\sqrt{12}}{4}T_1 = 100$
+
+$T_1\\left(\\frac{1}{2} + \\frac{\\sqrt{3}}{2}\\right) = 100$
+
+$T_1 = \\frac{200}{1+\\sqrt{3}} \\approx 73.2$ lb, $\\quad T_2 \\approx 89.7$ lb
+      `
+    },
+    {
+      id: 'p4-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Applications Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of dot product.',
-            options: [
-              'component of one vector along another',
-              'vector with magnitude 1',
-              'single vector equivalent to a combined effect',
-              'scalar from component-wise multiplication and sum'
-            ],
-            correctAnswer: 3,
-            explanation: 'dot product is defined as: scalar from component-wise multiplication and sum.'
+            question: 'Two forces of $\\langle 5, 0 \\rangle$ and $\\langle 0, 12 \\rangle$ have resultant magnitude:',
+            options: ['$17$', '$13$', '$7$', '$60$'],
+            correctAnswer: 1,
+            explanation: 'Resultant $= \\langle 5, 12 \\rangle$, $|R| = \\sqrt{25+144} = 13$.'
           },
           {
-            question: 'In testing perpendicular and parallel vectors, which expression is the best starting model?',
-            options: [
-              '$\\|\\langle a,b\\rangle\\|=\\sqrt{a^2+b^2}$',
-              '$\\langle a,b\\rangle\\cdot\\langle c,d\\rangle=ac+bd$',
-              '$\\mathbf u\\cdot\\mathbf v=\\|\\mathbf u\\|\\|\\mathbf v\\|\\cos\\theta$',
-              '$\\hat{\\mathbf u}=\\frac{\\mathbf u}{\\|\\mathbf u\\|}$'
-            ],
-            correctAnswer: 3,
-            explanation: 'Use $\\hat{\\mathbf u}=\\frac{\\mathbf u}{\\|\\mathbf u\\|}$ first, then substitute known quantities from the prompt.'
+            question: 'A bearing of $180°$ corresponds to heading:',
+            options: ['East', 'South', 'West', 'North'],
+            correctAnswer: 1,
+            explanation: 'Bearing is measured clockwise from north. $180°$ = due south.'
+          },
+          {
+            question: 'For equilibrium, three forces must:',
+            options: ['All be equal', 'Sum to the zero vector', 'All point in the same direction', 'Be perpendicular'],
+            correctAnswer: 1,
+            explanation: 'Equilibrium means $\\vec{F}_1+\\vec{F}_2+\\vec{F}_3 = \\vec{0}$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p4-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Unit vector | $\hat{\mathbf u}=\\frac{\mathbf u}{\|\mathbf u\|}$ | direction-only normalization |
-      | Magnitude | $\|\langle a,b\\rangle\|=\sqrt{a^2+b^2}$ | length computation |
-      | Dot product | $\langle a,b\\rangle\cdot\langle c,d\\rangle=ac+bd$ | angle and projection |
-      | Angle relation | $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\\theta$ | finding angle between vectors |
-      
-      ### Common pitfalls
-      - Magnitude is always nonnegative.
-      - A zero dot product indicates orthogonality, not parallelism.
-      - Keep component order consistent as $(x,y)$.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-vectors-two-dimensions-precalc-p4-s4-input',
+      id: 'p4-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Vector Calculations**
-      
-      1) Compute magnitude of $\langle 3,4
-      angle$.
-      2) Compute $\langle 1,2
-      angle\cdot\langle 3,4
-      angle$.
-      3) Compute the $y$-component of $\langle 2,5
-      angle+\langle -1,3
-      angle$.
+**Force Calculations** 🧮
+
+**1)** Forces $\\vec{F}_1 = \\langle 8, 6 \\rangle$ and $\\vec{F}_2 = \\langle -3, 2 \\rangle$. Resultant $x$-component = ?
+
+**2)** Same forces: resultant $y$-component = ?
+
+**3)** What single force $\\vec{F}_3$ (give $x$-component) would create equilibrium? (The $x$-component that makes the sum zero)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5', '11', '8'],
-        hint1: 'Use $\\sqrt{a^2+b^2}$.',
-        hint2: 'Multiply matching components and add.',
-        hint3: 'Add components independently.',
-        explanation: 'Magnitude is 5, dot product is 11, and the resulting $y$-component is 8.'
+        correctAnswers: ['5', '8', '-5'],
+        hint1: '$8 + (-3) = 5$.',
+        hint2: '$6 + 2 = 8$.',
+        hint3: 'For equilibrium: $F_{3x} = -5$.',
+        explanation: '1) $5$. 2) $8$. 3) $F_{3x} = -5$ (to cancel the resultant).'
       }
     },
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p4-s5-dropdown',
+      id: 'p4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Navigation & Forces** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'dot product',
-            options: ['vector with magnitude 1', 'component of one vector along another', 'scalar from component-wise multiplication and sum', 'single vector equivalent to a combined effect']
+            label: 'Bearing $090°$ corresponds to:',
+            options: ['North', 'East', 'South', 'West'],
+            correctAnswer: 1
           },
           {
-            label: 'projection',
-            options: ['single vector equivalent to a combined effect', 'vector with magnitude 1', 'component of one vector along another', 'vectors with dot product zero']
+            label: 'A headwind directly opposes your velocity. Its effect is to:',
+            options: ['Increase ground speed', 'Decrease ground speed', 'Change direction only'],
+            correctAnswer: 1
           },
           {
-            label: 'unit vector',
-            options: ['single vector equivalent to a combined effect', 'vectors with dot product zero', 'vector written as ordered components like $\langle a,b\\rangle$', 'vector with magnitude 1']
+            label: 'If two cables support a weight, increasing one cable\'s angle:',
+            options: ['Increases its tension', 'Decreases its tension', 'No effect'],
+            correctAnswer: 0
+          },
+          {
+            label: 'The equilibrant force is:',
+            options: ['Equal to the resultant', 'Opposite to the resultant', 'Perpendicular to the resultant'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['scalar from component-wise multiplication and sum', 'component of one vector along another', 'vector with magnitude 1'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: dot product, projection, and unit vector align with their exact definitions used in this part.'
+        correctAnswers: ['East', 'Decrease ground speed', 'Increases its tension', 'Opposite to the resultant'],
+        hint1: '$90°$ clockwise from north = east.',
+        hint2: 'Headwind subtracts from your velocity along the line of travel.',
+        hint3: 'Steeper angle means less horizontal component, more tension needed.',
+        explanation: 'Bearing $90°$ = east. Headwind decreases ground speed. Steeper cable = more tension. Equilibrant = negative of resultant.'
       }
     },
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to dot product, projection, and unit vector so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-vectors-two-dimensions-precalc-p4-s7-mcq-applied',
+      id: 'p4-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is testing perpendicular and parallel vectors. Which term best anchors the next reasoning step if the key idea is: single vector equivalent to a combined effect?',
-            options: [
-              'dot product',
-              'resultant',
-              'unit vector',
-              'projection'
-            ],
-            correctAnswer: 1,
-            explanation: 'resultant matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'A boat motors at 10 knots heading north. Current flows east at 5 knots. The ground speed is:',
+            options: ['$15$ knots', '$5\\sqrt{5}$ knots', '$5$ knots', '$\\sqrt{125}$ knots'],
+            correctAnswer: 3,
+            explanation: 'Resultant $= \\langle 5, 10 \\rangle$. Speed $= \\sqrt{25+100} = \\sqrt{125} = 5\\sqrt{5}$ knots. Both B and D are the same value.'
           },
           {
-            question: 'A student is solving a mixed vectors in two dimensions prompt. Which term best anchors the next reasoning step if the key idea is: vectors with dot product zero?',
-            options: [
-              'resultant',
-              'component form',
-              'unit vector',
-              'orthogonal'
-            ],
-            correctAnswer: 3,
-            explanation: 'orthogonal matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Three forces $\\vec{F}_1 = \\langle 4, 0 \\rangle$, $\\vec{F}_2 = \\langle 0, 3 \\rangle$, $\\vec{F}_3 = \\langle a, b \\rangle$ are in equilibrium. Then $(a, b) =$',
+            options: ['$(4, 3)$', '$(-4, -3)$', '$(3, 4)$', '$(-3, -4)$'],
+            correctAnswer: 1,
+            explanation: '$\\vec{F}_3 = -(\\vec{F}_1+\\vec{F}_2) = -\\langle 4, 3 \\rangle = \\langle -4, -3 \\rangle$.'
           }
         ]
       }

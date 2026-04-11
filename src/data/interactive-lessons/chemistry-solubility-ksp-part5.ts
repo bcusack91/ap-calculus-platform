@@ -4,13 +4,30 @@ export const chemSolubilityKspPart5Data = {
     {
       id: 'sk5-intro',
       type: 'text' as const,
-      content: `
-# 💎 Selective Precipitation
+      content: `# 💎 Selective Precipitation
 
 **Part 5 of 7 — Separating Ions by Adding Precipitating Agents**
 
-When a solution contains multiple ions that can form insoluble salts with the same reagent, you can selectively precipitate them by controlling the reagent concentration. The ion with the **smallest $K_{sp}$** precipitates first.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📏 The Principle |
+| Which precipitates first? |
+| Strategy |
+| 🧪 Worked Example |
+| Step 1: Find $[\\text{Cl}^-]$ to begin precipitating each |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sk5-principle',
@@ -45,6 +62,8 @@ Since $K_{sp}(\\text{AgCl})$ is much smaller, AgCl precipitates at a much lower 
 2. The ion requiring less reagent precipitates first
 3. Increase reagent until just before the second ion begins to precipitate
 4. Filter to separate the first precipitate
+
+> 🔑 **Key Concept:** In selective precipitation, the salt with the smallest $K_{sp}$ generally precipitates first because it reaches saturation ($Q_{sp} = K_{sp}$) at the lowest reagent concentration.
       `
     },
     {
@@ -53,7 +72,9 @@ Since $K_{sp}(\\text{AgCl})$ is much smaller, AgCl precipitates at a much lower 
       content: `
 ## 🧪 Worked Example
 
-A solution contains $[\\text{Ag}^+] = 0.010$ M and $[\\text{Pb}^{2+}] = 0.010$ M. NaCl is added slowly.
+> **Problem:** A solution contains $[\\text{Ag}^+] = 0.010$ M and $[\\text{Pb}^{2+}] = 0.010$ M. NaCl is added slowly. Which precipitates first, and can they be separated?
+
+> **Solution:**
 
 
 ---
@@ -82,6 +103,8 @@ When $[\\text{Cl}^-] = 0.041$ M (just before PbCl₂ starts), what is $[\\text{A
 $[\\text{Ag}^+] = \\frac{K_{sp}}{[\\text{Cl}^-]} = \\frac{1.8 \\times 10^{-10}}{0.041} = 4.4 \\times 10^{-9}$ M
 
 This is essentially zero compared to the initial 0.010 M — virtually **all** Ag⁺ has precipitated before any Pb²⁺ does. Excellent separation!
+
+> 💡 **Tip:** When $K_{sp}$ values differ by several orders of magnitude, selective precipitation gives nearly complete separation. The greater the difference, the cleaner the separation.
       `
     },
     {

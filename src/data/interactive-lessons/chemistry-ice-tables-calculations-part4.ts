@@ -4,13 +4,28 @@ export const chemIceTablesCalculationsPart4Data = {
     {
       id: 'ic4-intro',
       type: 'text' as const,
-      content: `
-# 🧊 The 5% Approximation
+      content: `# 🧊 The 5% Approximation
 
 **Part 4 of 7 — When x Is Small Enough to Ignore**
 
-When K is very small ($K < 10^{-3}$) relative to initial concentrations, the change $x$ is often negligible compared to the initial values. This allows us to simplify the algebra dramatically.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 When Can You Use the Approximation? |
+| Why This Works |
+| 🧪 Worked Example |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ic4-when-to-use',
@@ -18,11 +33,9 @@ When K is very small ($K < 10^{-3}$) relative to initial concentrations, the cha
       content: `
 ## 📌 When Can You Use the Approximation?
 
-### The Rule of Thumb
+> 💡 **Tip — Rule of Thumb:** If $\\frac{[\\text{initial}]}{K} > 100$ (or equivalently, $K < 0.01 \\times [\\text{initial}]$), then $x$ is small enough to approximate:
 
-If $\\frac{[\\text{initial}]}{K} > 100$ (or equivalently, $K < 0.01 \\times [\\text{initial}]$), then $x$ is small enough to approximate:
-
-$$[\\text{initial}] - x \\approx [\\text{initial}]$$
+$$\\boxed{[\\text{initial}] - x \\approx [\\text{initial}]}$$
 
 
 ---
@@ -34,11 +47,16 @@ When K is very small, the reaction barely shifts — very little product forms. 
 
 ---
 
-### The 5% Test
+> 🔑 **The 5% Test:** After solving, check:
 
-After solving, check: $\\frac{x}{[\\text{initial}]} \\times 100\\% < 5\\%$
+$$\\boxed{\\frac{x}{[\\text{initial}]} \\times 100\\% < 5\\%}$$
 
-If the change is less than 5% of the initial concentration, the approximation is valid.
+> If the change is less than 5% of the initial concentration, the approximation is valid.
+
+
+---
+
+> ⚠️ **Warning:** If the 5% test fails (change > 5%), your approximated answer is inaccurate. Discard it and solve the full quadratic equation instead.
       `
     },
     {
@@ -47,11 +65,9 @@ If the change is less than 5% of the initial concentration, the approximation is
       content: `
 ## 🧪 Worked Example
 
-$\\text{N}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{NO}(g)$, $K_c = 4.0 \\times 10^{-4}$
+> **Problem:** For $\\text{N}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{NO}(g)$ with $K_c = 4.0 \\times 10^{-4}$, find the equilibrium concentrations given $[\\text{N}_2] = 0.80$ M, $[\\text{O}_2] = 0.20$ M, $[\\text{NO}] = 0$.
 
-Initial: $[\\text{N}_2] = 0.80$ M, $[\\text{O}_2] = 0.20$ M, $[\\text{NO}] = 0$
-
-**Check:** $0.20 / (4.0 \\times 10^{-4}) = 500 > 100$ ✓ → approximation valid
+> **Solution:** **Check:** $0.20 / (4.0 \\times 10^{-4}) = 500 > 100$ ✓ → approximation valid
 
 |  | N₂ | O₂ | NO |
 |--|-----|-----|-----|

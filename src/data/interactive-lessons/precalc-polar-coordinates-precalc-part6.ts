@@ -2,124 +2,202 @@ export const precalcPolarPart6Data = {
   topicSlug: 'polar-coordinates-precalc',
   sections: [
     {
-      id: 'polar6-intro',
+      id: 'p6-intro',
       type: 'text' as const,
       content: `
-# Problem-Solving Workshop
+# 🪐 Conic Sections in Polar Form
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7**
 
-### 1. Complex number
+### The Focus-Directrix Form
 
-z = a + bi plotted as (a, b) in complex plane
+Any conic section (ellipse, parabola, hyperbola) with one focus at the origin can be written:
 
-### 2. Polar (trigonometric) form
+$$r = \\frac{ed}{1 \\pm e\\cos\\theta} \\quad \\text{or} \\quad r = \\frac{ed}{1 \\pm e\\sin\\theta}$$
 
-z = r(cos θ + i sin θ) where r = |z|
+where:
+- **$e$** = eccentricity (determines shape)
+- **$d$** = distance from focus to directrix
 
-### 3. De Moivre's Theorem
+### Classification by Eccentricity
 
-zⁿ = rⁿ(cos(nθ) + i sin(nθ))
+| Eccentricity | Conic Type |
+|:-------------|:-----------|
+| $e = 0$ | Circle |
+| $0 < e < 1$ | Ellipse |
+| $e = 1$ | Parabola |
+| $e > 1$ | Hyperbola |
 
-### 4. nth roots
+### Orientation
 
-n equally spaced roots on a circle of radius r^(1/n)
+- $1 + e\\cos\\theta$: directrix to the **right** of focus
+- $1 - e\\cos\\theta$: directrix to the **left** of focus
+- $1 + e\\sin\\theta$: directrix **above** focus
+- $1 - e\\sin\\theta$: directrix **below** focus
       `
     },
     {
-      id: 'polar6-quiz1',
+      id: 'p6-example',
+      type: 'text' as const,
+      content: `
+## 📝 Example: Identify and Analyze $r = \\frac{6}{2 + \\cos\\theta}$
+
+### Step 1: Standard Form
+
+Divide numerator and denominator by 2: $r = \\frac{3}{1 + \\frac{1}{2}\\cos\\theta}$
+
+So $e = \\frac{1}{2}$ and $ed = 3 \\implies d = 6$.
+
+### Step 2: Classify
+
+$e = \\frac{1}{2} < 1$ → **Ellipse**
+
+### Step 3: Key Points
+
+- At $\\theta = 0$: $r = \\frac{6}{2+1} = 2$ (closest to directrix)
+- At $\\theta = \\pi$: $r = \\frac{6}{2-1} = 6$ (farthest)
+- At $\\theta = \\frac{\\pi}{2}$: $r = \\frac{6}{2} = 3$
+
+### Step 4: Semi-major axis
+
+$a = \\frac{r_{\\min}+r_{\\max}}{2} = \\frac{2+6}{2} = 4$
+
+Center is at distance $ae = 4 \\cdot \\frac{1}{2} = 2$ from the focus (origin).
+      `
+    },
+    {
+      id: 'p6-parabola',
+      type: 'text' as const,
+      content: `
+## 🎯 Special Case: Parabola ($e = 1$)
+
+$$r = \\frac{d}{1 + \\cos\\theta}$$
+
+- At $\\theta = 0$: $r = \\frac{d}{2}$ (vertex)
+- At $\\theta = \\frac{\\pi}{2}$: $r = d$ (end of latus rectum)
+- At $\\theta = \\pi$: **undefined** (approaches infinity — the curve opens left)
+
+**Latus rectum**: The chord through the focus perpendicular to the axis has length $2d$.
+
+### Converting to Rectangular
+
+$r = \\frac{d}{1+\\cos\\theta} \\implies r(1+\\cos\\theta) = d \\implies r + x = d$
+
+$\\sqrt{x^2+y^2} = d - x \\implies x^2+y^2 = d^2 - 2dx + x^2 \\implies y^2 = -2dx + d^2$
+
+This is a parabola opening leftward!
+      `
+    },
+    {
+      id: 'p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Check Your Understanding** 🎯
+**Conic Classification** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which of the following correctly describes Complex number?',
-            options: [
-              'z = r(cos θ + i sin θ) where r = |z|',
-              'n equally spaced roots on a circle of radius r^(1/n)',
-              'z = a + bi plotted as (a, b) in complex plane',
-              'zⁿ = rⁿ(cos(nθ) + i sin(nθ))'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — Complex number: z = a + bi plotted as (a, b) in complex plane. The other options describe different concepts from this topic.'
+            question: '$r = \\frac{4}{1 + 2\\sin\\theta}$ is a:',
+            options: ['Circle', 'Ellipse', 'Parabola', 'Hyperbola'],
+            correctAnswer: 3,
+            explanation: '$e = 2 > 1$, so this is a hyperbola.'
           },
           {
-            question: 'Which of the following is true about De Moivre\'s Theorem?',
-            options: [
-              'n equally spaced roots on a circle of radius r^(1/n)',
-              'z = r(cos θ + i sin θ) where r = |z|',
-              'zⁿ = rⁿ(cos(nθ) + i sin(nθ))',
-              'z = a + bi plotted as (a, b) in complex plane'
-            ],
-            correctAnswer: 2,
-            explanation: 'Correct — De Moivre\'s Theorem: zⁿ = rⁿ(cos(nθ) + i sin(nθ)). Be careful to distinguish between the different concepts in this topic.'
+            question: '$r = \\frac{3}{1 - \\sin\\theta}$: the directrix is located:',
+            options: ['To the right of the focus', 'To the left of the focus', 'Above the focus', 'Below the focus'],
+            correctAnswer: 3,
+            explanation: 'The form $1 - \\sin\\theta$ means the directrix is below the focus.'
+          },
+          {
+            question: 'For $r = \\frac{10}{2 + 2\\cos\\theta}$ (simplified: $r = \\frac{5}{1+\\cos\\theta}$), the eccentricity is:',
+            options: ['$\\frac{1}{2}$', '$1$', '$2$', '$5$'],
+            correctAnswer: 1,
+            explanation: 'Standard form $\\frac{5}{1+1\\cdot\\cos\\theta}$, so $e = 1$. This is a parabola.'
           }
         ]
       }
     },
     {
-      id: 'polar6-detail',
-      type: 'text' as const,
+      id: 'p6-input',
+      type: 'input-boxes' as const,
       content: `
-### Key Concepts Summary
+**Analyze Conics** 🧮
 
-- **Complex number**: z = a + bi plotted as (a, b) in complex plane
-- **Polar (trigonometric) form**: z = r(cos θ + i sin θ) where r = |z|
-- **De Moivre's Theorem**: zⁿ = rⁿ(cos(nθ) + i sin(nθ))
-- **nth roots**: n equally spaced roots on a circle of radius r^(1/n)
-      `
-    },
-    {
-      id: 'polar6-quiz2',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
+For $r = \\frac{12}{3 + \\cos\\theta}$:
+
+**1)** Divide to standard form. The eccentricity $e$ = ? (Enter as a fraction like "1/3")
+
+**2)** What is $r$ at $\\theta = 0$? (Enter a whole number)
+
+**3)** What is $r$ at $\\theta = \\pi$? (Enter a whole number)
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Which concept relates directly to problem-solving workshop?',
-            options: [
-              'n equally spaced roots on a circle of radius r^(1/n)',
-              'Only complex analysis',
-              'Exclusively abstract algebra',
-              'This applies only to statistics'
-            ],
-            correctAnswer: 0,
-            explanation: 'nth roots: n equally spaced roots on a circle of radius r^(1/n)'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['1/3', '3', '6'],
+        hint1: '$r = \\frac{12/3}{1 + \\frac{1}{3}\\cos\\theta} = \\frac{4}{1+\\frac{1}{3}\\cos\\theta}$. So $e = \\frac{1}{3}$.',
+        hint2: 'At $\\theta = 0$: $r = \\frac{12}{3+1} = \\frac{12}{4} = 3$.',
+        hint3: 'At $\\theta = \\pi$: $r = \\frac{12}{3-1} = \\frac{12}{2} = 6$.',
+        explanation: '1) $e = \\frac{1}{3}$ (ellipse). 2) $r(0) = 3$. 3) $r(\\pi) = 6$.'
       }
     },
     {
-      id: 'polar6-dropdown',
+      id: 'p6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+**Conic Properties** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Complex number',
-            options: ['z = a + bi plotted as (a, b) in complex plane', 'zⁿ = rⁿ(cos(nθ) + i sin(nθ))', 'z = r(cos θ + i sin θ) where r = |z|', 'n equally spaced roots on a circle of radius r^(1/n)']
+            label: 'An eccentricity of $e = 0.8$ gives a:',
+            options: ['Circle', 'Ellipse', 'Parabola', 'Hyperbola'],
+            correctAnswer: 1
           },
           {
-            label: 'Polar (trigonometric) form',
-            options: ['z = r(cos θ + i sin θ) where r = |z|', 'z = a + bi plotted as (a, b) in complex plane', 'n equally spaced roots on a circle of radius r^(1/n)', 'zⁿ = rⁿ(cos(nθ) + i sin(nθ))']
+            label: 'A parabola in polar form has $r \\to \\infty$ at:',
+            options: ['$\\theta = 0$', '$\\theta = \\pi$', 'Depends on form', 'Never'],
+            correctAnswer: 2
           },
           {
-            label: 'De Moivre\'s Theorem',
-            options: ['z = a + bi plotted as (a, b) in complex plane', 'zⁿ = rⁿ(cos(nθ) + i sin(nθ))', 'z = r(cos θ + i sin θ) where r = |z|', 'n equally spaced roots on a circle of radius r^(1/n)']
+            label: 'In $r = \\frac{ed}{1+e\\cos\\theta}$, the vertex (closest point) is at:',
+            options: ['$\\theta = 0$', '$\\theta = \\pi$', '$\\theta = \\frac{\\pi}{2}$'],
+            correctAnswer: 0
+          },
+          {
+            label: 'For an ellipse with $e = \\frac{1}{2}$, $r_{\\max}/r_{\\min}$ equals:',
+            options: ['$2$', '$3$', '$\\frac{3}{2}$'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['z = a + bi plotted as (a, b) in complex plane', 'z = r(cos θ + i sin θ) where r = |z|', 'zⁿ = rⁿ(cos(nθ) + i sin(nθ))'],
-        hint1: 'Think about what each concept specifically describes in Problem-Solving Workshop.',
-        hint2: 'Look for key terms that distinguish each concept from the others.',
-        hint3: 'Remember the specific details — each concept has unique characteristics.',
-        explanation: 'Each concept in Problem-Solving Workshop describes a specific idea. Complex number: z = a + bi plotted as (a, b) in complex plane. Polar (trigonometric) form: z = r(cos θ + i sin θ) where r = |z|. De Moivre\'s Theorem: zⁿ = rⁿ(cos(nθ) + i sin(nθ)).'
+        correctAnswers: ['Ellipse', 'Depends on form', '$\\theta = 0$', '$3$'],
+        hint1: '$0 < 0.8 < 1$, so ellipse.',
+        hint2: 'For $1+e\\cos\\theta$: $r \\to \\infty$ at $\\theta = \\pi$; for $1-e\\cos\\theta$: at $\\theta = 0$; etc.',
+        hint3: '$r_{\\min}$ at $\\theta = 0$: $r = \\frac{ed}{1+e}$. $r_{\\max}$ at $\\theta = \\pi$: $r = \\frac{ed}{1-e}$. Ratio: $\\frac{1+e}{1-e} = \\frac{3/2}{1/2} = 3$.',
+        explanation: '$e = 0.8$: ellipse. Asymptotic $\\theta$ depends on the $\\pm$ form. Closest at $\\theta = 0$ for $+\\cos$ form. Ratio $= \\frac{1+e}{1-e} = 3$.'
+      }
+    },
+    {
+      id: 'p6-exit',
+      type: 'multiple-choice' as const,
+      content: `
+**Exit Quiz** ✅
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Which polar equation represents a circle?',
+            options: ['$r = \\frac{4}{1+\\cos\\theta}$', '$r = \\frac{4}{2+\\cos\\theta}$', '$r = 4$', '$r = \\frac{4}{1+2\\cos\\theta}$'],
+            correctAnswer: 2,
+            explanation: '$r = 4$ is a circle of radius 4 centered at the origin. (The others are parabola, ellipse, and hyperbola.)'
+          },
+          {
+            question: 'For $r = \\frac{6}{2-2\\sin\\theta}$, simplified to $r = \\frac{3}{1-\\sin\\theta}$, the conic is:',
+            options: ['Ellipse', 'Parabola', 'Hyperbola', 'Circle'],
+            correctAnswer: 1,
+            explanation: '$e = 1$, so it is a parabola opening downward (directrix below focus).'
+          }
+        ]
       }
     }
   ]
-}
+};

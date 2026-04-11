@@ -4,13 +4,30 @@ export const chemStoichiometryLimitingReactantsPart1Data = {
     {
       id: 'sl1-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Mole Ratios
+      content: `# ⚖️ Mole Ratios
 
 **Part 1 of 7 — The Foundation of Stoichiometry**
 
-Stoichiometry is the math of chemistry — it lets you calculate **how much** of each substance is involved in a reaction. The foundation of all stoichiometric calculations is the **mole ratio**, which comes directly from the coefficients in a balanced equation.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Coefficients Tell the Story |
+| ✍️ Writing Mole Ratios |
+| Example: $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$ |
+| ⚖️ Mole-to-Mole Conversions |
+| The Simplest Stoichiometry Problem |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sl1-coefficients',
@@ -29,12 +46,7 @@ The coefficients tell us that:
 
 ---
 
-### Key Insight
-
-Coefficients give **mole ratios**, not mass ratios. The ratio 2:1:2 means:
-- 2 mol H₂ : 1 mol O₂ : 2 mol H₂O
-
-This ratio is the **conversion factor** for all stoichiometric calculations.
+> 🔑 **Key Concept:** Coefficients give **mole ratios**, not mass ratios. The ratio 2:1:2 means 2 mol H₂ : 1 mol O₂ : 2 mol H₂O. This ratio is the **conversion factor** for all stoichiometric calculations.
       `
     },
     {
@@ -61,9 +73,7 @@ All possible mole ratios:
 
 ---
 
-### How to Choose
-
-Pick the ratio that **cancels the given unit** and **introduces the desired unit**.
+> 💡 **Tip:** Pick the ratio that **cancels the given unit** and **introduces the desired unit**.
 
 If you know moles of N₂ and want moles of NH₃:
 
@@ -83,20 +93,18 @@ Given moles of one substance, find moles of another using the mole ratio.
 
 ---
 
-### Worked Example
+> **Problem:** Given $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$, how many moles of NH₃ are produced from 5.0 mol N₂?
 
-**Given:** $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$
-
-How many moles of NH₃ are produced from 5.0 mol N₂?
+> **Solution:**
 
 $$\\text{mol NH}_3 = 5.0 \\text{ mol N}_2 \\times \\frac{2 \\text{ mol NH}_3}{1 \\text{ mol N}_2} = 10.0 \\text{ mol NH}_3$$
 
 
 ---
 
-### Another Example
+> **Problem:** How many moles of H₂ are needed to react with 4.0 mol N₂?
 
-How many moles of H₂ are needed to react with 4.0 mol N₂?
+> **Solution:**
 
 $$\\text{mol H}_2 = 4.0 \\text{ mol N}_2 \\times \\frac{3 \\text{ mol H}_2}{1 \\text{ mol N}_2} = 12.0 \\text{ mol H}_2$$
 
@@ -105,7 +113,7 @@ $$\\text{mol H}_2 = 4.0 \\text{ mol N}_2 \\times \\frac{3 \\text{ mol H}_2}{1 \\
 
 ### General Formula
 
-$$\\text{mol of B} = \\text{mol of A} \\times \\frac{\\text{coefficient of B}}{\\text{coefficient of A}}$$
+$$\\boxed{\\text{mol of B} = \\text{mol of A} \\times \\frac{\\text{coefficient of B}}{\\text{coefficient of A}}}$$
       `
     },
     {

@@ -2,186 +2,203 @@ export const precalcSystemsPart5Data = {
   topicSlug: 'systems-of-equations-precalc',
   sections: [
     {
-      id: 'precalc-systems-of-equations-precalc-p5-s1-intro',
+      id: 'p5-intro',
       type: 'text' as const,
       content: `
-      ## Systems of Equations: Nonlinear system setups
-      
-      **Part 5 of 7**
-      
-      This part focuses on solving line-circle intersections. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **substitution**: replace one variable expression into another equation
-      - **elimination**: combine equations to remove a variable
-      - **coefficient matrix**: matrix containing variable coefficients
-      
-      
-      ### Worked Example
-      Part 5 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🔢 Partial Fractions
+
+**Part 5 of 7**
+
+### Why Partial Fractions?
+
+Decompose **complex fractions** into simpler ones — essential for integration in calculus!
+
+$$\\frac{5x+3}{(x+1)(x+2)} = \\frac{A}{x+1} + \\frac{B}{x+2}$$
+
+### The Process
+
+1. Factor the denominator completely
+2. Write one fraction per factor
+3. Solve for the unknown constants
+
+### Case 1: Distinct Linear Factors
+
+$$\\frac{5x+3}{(x+1)(x+2)}$$
+
+Multiply both sides by $(x+1)(x+2)$:
+$$5x+3 = A(x+2) + B(x+1)$$
+
+**Method 1 — Strategic substitution:**
+- Let $x = -1$: $-2 = A(1) \\implies A = -2$
+- Let $x = -2$: $-7 = B(-1) \\implies B = 7$
+
+$$\\frac{5x+3}{(x+1)(x+2)} = \\frac{-2}{x+1} + \\frac{7}{x+2}$$
       `
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p5-s2-mcq-core',
+      id: 'p5-repeated',
+      type: 'text' as const,
+      content: `
+## 📝 Repeated & Quadratic Factors
+
+### Case 2: Repeated Linear Factor
+
+$$\\frac{3x+5}{(x-1)^2} = \\frac{A}{x-1} + \\frac{B}{(x-1)^2}$$
+
+Multiply: $3x+5 = A(x-1)+B$
+
+$x=1$: $8 = B$. Expand: $3x+5 = Ax-A+8 \\implies A=3$.
+
+$$= \\frac{3}{x-1}+\\frac{8}{(x-1)^2}$$
+
+### Case 3: Irreducible Quadratic Factor
+
+$$\\frac{2x^2+x+3}{(x+1)(x^2+1)} = \\frac{A}{x+1}+\\frac{Bx+C}{x^2+1}$$
+
+Note: quadratic factor gets $Bx+C$ (not just $B$).
+
+$x=-1$: $2-1+3 = A(2) \\implies A=2$.
+
+Expand and equate: $B=0, C=1$.
+
+$$= \\frac{2}{x+1}+\\frac{1}{x^2+1}$$
+      `
+    },
+    {
+      id: 'p5-method',
+      type: 'text' as const,
+      content: `
+## 🧮 Coefficient Matching Method
+
+When substitution isn't enough, **equate coefficients** of each power of $x$.
+
+### Example
+
+$$\\frac{x^2+2}{(x-1)(x^2+x+1)} = \\frac{A}{x-1}+\\frac{Bx+C}{x^2+x+1}$$
+
+Multiply: $x^2+2 = A(x^2+x+1)+(Bx+C)(x-1)$
+
+**$x=1$**: $3 = 3A \\implies A = 1$
+
+Expand right side: $x^2+x+1+(Bx^2-Bx+Cx-C)$
+$= (1+B)x^2+(1-B+C)x+(1-C)$
+
+**Equate coefficients:**
+- $x^2$: $1 = 1+B \\implies B = 0$
+- $x^0$: $2 = 1-C \\implies C = -1$
+
+$$= \\frac{1}{x-1}+\\frac{-1}{x^2+x+1}$$
+
+> 💡 Always check: is the degree of numerator < degree of denominator? If not, do **long division first**.
+      `
+    },
+    {
+      id: 'p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Partial Fractions Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of substitution.',
-            options: [
-              'combine equations to remove a variable',
-              'nonzero determinant implies unique 2x2 linear solution',
-              'replace one variable expression into another equation',
-              'matrix containing variable coefficients'
-            ],
-            correctAnswer: 2,
-            explanation: 'substitution is defined as: replace one variable expression into another equation.'
+            question: '$\\frac{3}{(x-1)(x+2)}$: the setup is:',
+            options: ['$\\frac{A}{x-1}+\\frac{B}{x+2}$', '$\\frac{Ax+B}{(x-1)(x+2)}$', '$\\frac{A}{x-1}+\\frac{Bx}{x+2}$', '$\\frac{A}{x-1}+\\frac{B}{(x+2)^2}$'],
+            correctAnswer: 0,
+            explanation: 'Two distinct linear factors → $A/(x-1) + B/(x+2)$.'
           },
           {
-            question: 'In solving line-circle intersections, which expression is the best starting model?',
-            options: [
-              '$x=\\frac{c_1b_2-c_2b_1}{\\Delta}$',
-              '$y=\\frac{a_1c_2-a_2c_1}{\\Delta}$',
-              '$\\Delta=a_1b_2-a_2b_1$',
-              '$\\begin{cases}a_1x+b_1y=c_1\\\\a_2x+b_2y=c_2\\end{cases}$'
-            ],
-            correctAnswer: 3,
-            explanation: 'Use $\\begin{cases}a_1x+b_1y=c_1\\\\a_2x+b_2y=c_2\\end{cases}$ first, then substitute known quantities from the prompt.'
+            question: 'For $(x+1)^3$ in the denominator, how many terms?',
+            options: ['1', '2', '3', '4'],
+            correctAnswer: 2,
+            explanation: '$\\frac{A}{x+1}+\\frac{B}{(x+1)^2}+\\frac{C}{(x+1)^3}$ — one for each power.'
+          },
+          {
+            question: 'Irreducible quadratic $x^2+4$ gets numerator:',
+            options: ['$A$', '$Ax+B$', '$Ax^2+B$', '$A/x$'],
+            correctAnswer: 1,
+            explanation: 'Quadratic denominator → linear numerator $Ax+B$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p5-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Linear system | $\\begin{cases}a_1x+b_1y=c_1\\a_2x+b_2y=c_2\end{cases}$ | two-variable framework |
-      | Determinant | $\Delta=a_1b_2-a_2b_1$ | uniqueness criterion |
-      | Cramer's x | $x=\\frac{c_1b_2-c_2b_1}{\Delta}$ | explicit solution form |
-      | Cramer's y | $y=\\frac{a_1c_2-a_2c_1}{\Delta}$ | explicit solution form |
-      
-      ### Common pitfalls
-      - Arithmetic sign slips in elimination often flip outcomes.
-      - State whether the system has one, none, or infinitely many solutions.
-      - Parallel lines in graph form indicate no solution.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-systems-of-equations-precalc-p5-s4-input',
+      id: 'p5-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Solving Systems**
-      
-      1) Solve for $x$: $x+y=10$, $x-y=2$.
-      2) Solve for $y$: $2x+3y=12$, $x-y=1$.
-      3) Compute determinant of $\\begin{bmatrix}2&1\\5&3\end{bmatrix}$.
+**Find the Constants** 🧮
+
+$\\frac{7x+1}{(x+1)(x-2)} = \\frac{A}{x+1}+\\frac{B}{x-2}$
+
+**1)** $A$ = ? (set $x = -1$)
+
+**2)** $B$ = ? (set $x = 2$)
+
+**3)** $\\frac{4}{x(x+2)} = \\frac{A}{x}+\\frac{B}{x+2}$. $A$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6', '2', '1'],
-        hint1: 'Add the two equations to eliminate $y$.',
-        hint2: 'Use substitution from $x=y+1$.',
-        hint3: 'Use $ad-bc$ for the determinant.',
-        explanation: 'The system gives $x=6$ and $y=2$, with determinant 1 confirming uniqueness.'
+        correctAnswers: ['2', '5', '2'],
+        hint1: '$x=-1$: $-6 = A(-3) \\implies A = 2$.',
+        hint2: '$x=2$: $15 = B(3) \\implies B = 5$.',
+        hint3: '$x=0$: $4 = A(2) \\implies A=2$.',
+        explanation: '1) $A=2$. 2) $B=5$. 3) $A=2$ (and $B=-2$).'
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p5-s5-dropdown',
+      id: 'p5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Partial Fractions Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'substitution',
-            options: ['combine equations to remove a variable', 'nonzero determinant implies unique 2x2 linear solution', 'matrix containing variable coefficients', 'replace one variable expression into another equation']
+            label: 'Before decomposing, ensure:',
+            options: ['Numerator degree < denominator degree', 'Denominator is factored', 'Both A and B', 'Neither'],
+            correctAnswer: 2
           },
           {
-            label: 'elimination',
-            options: ['combine equations to remove a variable', 'all ordered pairs satisfying every equation', 'nonzero determinant implies unique 2x2 linear solution', 'matrix containing variable coefficients']
+            label: 'If degree(num) ≥ degree(den):',
+            options: ['Cannot decompose', 'Do long division first', 'Factor numerator', 'Multiply by -1'],
+            correctAnswer: 1
           },
           {
-            label: 'coefficient matrix',
-            options: ['nonzero determinant implies unique 2x2 linear solution', 'matrix containing variable coefficients', 'all ordered pairs satisfying every equation', 'system with at least one solution']
+            label: 'The "cover-up" method uses:',
+            options: ['Coefficient matching', 'Strategic substitution', 'Graphing', 'Elimination'],
+            correctAnswer: 1
+          },
+          {
+            label: 'Partial fractions are most useful in:',
+            options: ['Graphing', 'Integration (calculus)', 'Factoring', 'Statistics'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['replace one variable expression into another equation', 'combine equations to remove a variable', 'matrix containing variable coefficients'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: substitution, elimination, and coefficient matrix align with their exact definitions used in this part.'
+        correctAnswers: ['Both A and B', 'Do long division first', 'Strategic substitution', 'Integration (calculus)'],
+        hint1: 'Must be proper fraction with factored denominator.',
+        hint2: 'Long division makes it a proper fraction.',
+        hint3: 'Plug in roots of the denominator.',
+        explanation: 'Need proper + factored. Improper → divide first. Cover-up = substitution. Main use: calculus integration.'
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p5-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to substitution, elimination, and coefficient matrix so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-systems-of-equations-precalc-p5-s7-mcq-applied',
+      id: 'p5-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is solving line-circle intersections. Which term best anchors the next reasoning step if the key idea is: nonzero determinant implies unique 2x2 linear solution?',
-            options: [
-              'determinant test',
-              'elimination',
-              'substitution',
-              'coefficient matrix'
-            ],
+            question: '$\\frac{x+5}{x^2-x-6}$ decomposes over which factors?',
+            options: ['$(x-3)(x+2)$', '$(x+3)(x-2)$', '$(x-6)(x+1)$', 'Cannot factor'],
             correctAnswer: 0,
-            explanation: 'determinant test matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$x^2-x-6 = (x-3)(x+2)$. Product $-6$, sum $-1$.'
           },
           {
-            question: 'A student is solving a mixed systems of equations prompt. Which term best anchors the next reasoning step if the key idea is: all ordered pairs satisfying every equation?',
-            options: [
-              'determinant test',
-              'consistent system',
-              'solution set',
-              'coefficient matrix'
-            ],
-            correctAnswer: 2,
-            explanation: 'solution set matches that description and keeps the model-to-interpretation chain consistent.'
+            question: '$\\frac{x+5}{(x-3)(x+2)} = \\frac{A}{x-3}+\\frac{B}{x+2}$. $A+B$ = ?',
+            options: ['$1$', '$2$', '$\\frac{8}{5}+\\frac{-3}{5}$', '$\\frac{8}{5}+\\frac{3}{5}$'],
+            correctAnswer: 0,
+            explanation: '$x=3$: $8=5A \\implies A=8/5$. $x=-2$: $3=-5B \\implies B=-3/5$. $A+B=1$ (always equals leading coeff ratio).'
           }
         ]
       }

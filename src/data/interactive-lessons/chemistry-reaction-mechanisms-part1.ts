@@ -4,13 +4,30 @@ export const chemReactionMechanismsPart1Data = {
     {
       id: 'rm1-intro',
       type: 'text' as const,
-      content: `
-# ⚙️ Elementary Steps
+      content: `# ⚙️ Elementary Steps
 
 **Part 1 of 7 — Breaking Reactions into Steps**
 
-Most chemical reactions do not occur in a single step. Instead, they proceed through a series of simpler reactions called **elementary steps**. The collection of elementary steps that makes up an overall reaction is called the **reaction mechanism**.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📖 What Is an Elementary Step? |
+| Example |
+| ⚖️ Molecularity |
+| 📏 Rules for Valid Mechanisms |
+| Rule 1: Steps Must Sum to the Overall Reaction |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rm1-elementary-steps',
@@ -23,9 +40,7 @@ An **elementary step** (or elementary reaction) is a single molecular event — 
 
 ---
 
-### Key Property
-
-For an elementary step, the **rate law can be written directly from the stoichiometry** of that step. This is NOT true for overall reactions.
+> 🔑 **Key Concept:** For an elementary step, the **rate law can be written directly from the stoichiometry** of that step. This is NOT true for overall reactions.
 
 
 ---
@@ -56,10 +71,12 @@ Each step is an elementary reaction with its own rate law determined by its mole
 | 2 | Bimolecular | $2\\text{A} \\rightarrow \\text{products}$ | $\\text{rate} = k[\\text{A}]^2$ |
 | 3 | Termolecular | $\\text{A} + \\text{B} + \\text{C} \\rightarrow \\text{products}$ | $\\text{rate} = k[\\text{A}][\\text{B}][\\text{C}]$ |
 
+$$\\boxed{\\text{Elementary step: Rate law exponents} = \\text{stoichiometric coefficients}}$$
+
 
 ---
 
-### Important
+> ⚠️ **Warning:** Molecularity applies **only** to elementary steps — never to overall reactions. **Molecularity ≠ Order** for overall reactions, but they ARE equal for elementary steps.
 
 - **Termolecular** steps are extremely rare because three-body collisions are very unlikely
 - Molecularity is always a **positive integer** (1, 2, or 3)
@@ -131,7 +148,7 @@ When all elementary steps are added together, intermediates cancel, and the resu
 
 ### Rule 2: Rate Law Must Be Consistent
 
-The rate law predicted by the mechanism must match the experimentally observed rate law.
+> 🔑 **Key Concept:** The rate law predicted by the mechanism must match the experimentally observed rate law.
 
 
 ---
@@ -143,9 +160,9 @@ Overall: $2\\text{NO}_2 + \\text{F}_2 \\rightarrow 2\\text{NO}_2\\text{F}$
 Step 1: $\\text{NO}_2 + \\text{F}_2 \\rightarrow \\text{NO}_2\\text{F} + \\text{F}$
 Step 2: $\\text{NO}_2 + \\text{F} \\rightarrow \\text{NO}_2\\text{F}$
 
-**Sum:** $2\\text{NO}_2 + \\text{F}_2 + \\text{F} \\rightarrow 2\\text{NO}_2\\text{F} + \\text{F}$
+**Sum:** $2\\text{NO}_2 + \\text{F}_2 + \\cancel{\\text{F}} \\rightarrow 2\\text{NO}_2\\text{F} + \\cancel{\\text{F}}$
 
-F cancels: $2\\text{NO}_2 + \\text{F}_2 \\rightarrow 2\\text{NO}_2\\text{F}$ ✓
+$$\\boxed{2\\text{NO}_2 + \\text{F}_2 \\rightarrow 2\\text{NO}_2\\text{F}}$$ ✓
       `
     },
     {

@@ -4,13 +4,30 @@ export const chemBufferSolutionsHendersonHasselbalchPart3Data = {
     {
       id: 'bf3-intro',
       type: 'text' as const,
-      content: `
-# 📐 The Henderson-Hasselbalch Equation
+      content: `# 📐 The Henderson-Hasselbalch Equation
 
 **Part 3 of 7 — The Master Buffer Equation**
 
-The Henderson-Hasselbalch equation is the most important formula for buffer calculations. It directly relates pH to the $pK_a$ and the ratio of conjugate base to acid.
-      `
+---
+
+### The Henderson-Hasselbalch Equation
+
+$$pH = pK_a + \log\frac{[A^-]}{[HA]}$$
+
+| Ratio $[A^-]/[HA]$ | $\log$ term | pH vs p$K_a$ |
+|--------------------|------------|--------------|
+| 10 : 1 | +1 | pH = p$K_a$ + 1 |
+| 1 : 1 | 0 | **pH = p$K_a$** |
+| 1 : 10 | −1 | pH = p$K_a$ − 1 |
+
+> 🔑 **Why this matters:** Henderson-Hasselbalch is the single most important equation for buffer calculations — and the ratio shortcut saves enormous time on the AP exam.
+
+---
+
+### What You'll Master in Part 3
+- Deriving Henderson-Hasselbalch from the $K_a$ expression
+- Using the equation to find pH, p$K_a$, or concentration ratios
+- Applying the basic buffer version: pOH = p$K_b$ + log([BH⁺]/[B])`
     },
     {
       id: 'bf3-derivation',
@@ -43,6 +60,8 @@ $$\\boxed{pH = pK_a + \\log\\frac{[A^-]}{[HA]}}$$
 - When $[A^-] > [HA]$: $pH > pK_a$ (more basic)
 - When $[A^-] < [HA]$: $pH < pK_a$ (more acidic)
 - The log term adjusts pH relative to $pK_a$
+
+> 🔑 **Key Insight:** The $pK_a$ is the "anchor" of a buffer’s pH. The log ratio just shifts the pH up or down from that anchor.
       `
     },
     {
@@ -86,6 +105,8 @@ When $[A^-] = [HA]$:
 $$pH = pK_a + \\log(1) = pK_a$$
 
 This is a critically important result: **the pH of a buffer with equal concentrations equals the $pK_a$!**
+
+> 🔑 **AP Must-Know:** When $[A^-] = [HA]$, $pH = pK_a$. This is the half-equivalence point during a titration and the point of maximum buffer capacity.
       `
     },
     {
@@ -174,6 +195,8 @@ $$pOH = pK_b + \\log\\frac{[BH^+]}{[B]}$$
 Then $pH = 14 - pOH$.
 
 Both methods give the same answer. Method 1 is usually preferred for consistency.
+
+> 💡 **Tip:** On the AP exam, always convert to $pK_a$ and use Method 1. This avoids sign errors with the $pOH$ form.
       `
     },
     {

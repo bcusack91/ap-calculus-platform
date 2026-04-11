@@ -4,13 +4,30 @@ export const chemEnthalpyCalorimetryPart5Data = {
     {
       id: 'eh5-intro',
       type: 'text' as const,
-      content: `
-# 🔄 Hess's Law — Adding Enthalpy Changes
+      content: `# 🔄 Hess's Law — Adding Enthalpy Changes
 
 **Part 5 of 7 — The Power of State Functions**
 
-Some reactions are impossible to carry out directly in a calorimeter. How do we find $\\Delta H$ for them? Hess\'s Law gives us the answer: since enthalpy is a state function, we can add up the enthalpy changes of individual steps to get the total.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📏 Hess's Law |
+| Rules for Manipulating Equations |
+| 🛠️ Problem-Solving Strategy |
+| Step-by-Step Approach |
+| Worked Example |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'eh5-hess-law',
@@ -20,14 +37,9 @@ Some reactions are impossible to carry out directly in a calorimeter. How do we 
 
 **Hess\'s Law:** If a reaction can be expressed as the sum of two or more other reactions, the enthalpy change of the overall reaction is the **sum** of the enthalpy changes of the individual reactions.
 
-$$\\Delta H_{\\text{overall}} = \\Delta H_1 + \\Delta H_2 + \\Delta H_3 + \\cdots$$
+$$\\boxed{\\Delta H_{\\text{overall}} = \\Delta H_1 + \\Delta H_2 + \\Delta H_3 + \\cdots}$$
 
-
----
-
-### Why It Works
-
-Because enthalpy is a **state function**, the total enthalpy change depends only on the initial and final states, not on the path. Whether a reaction occurs in one step or ten steps, $\\Delta H$ is the same.
+> 🔑 **Why It Works:** Because enthalpy is a state function, the total $\\Delta H$ depends only on the initial and final states, not the path. Whether a reaction occurs in one step or ten, $\\Delta H$ is the same.
 
 
 ---
@@ -62,11 +74,11 @@ Because enthalpy is a **state function**, the total enthalpy change depends only
 
 ### Worked Example
 
-**Find $\\Delta H$ for:** $\\text{C}(s) + \\frac{1}{2}\\text{O}_2(g) \\rightarrow \\text{CO}(g)$
-
-**Given:**
-1. $\\text{C}(s) + \\text{O}_2(g) \\rightarrow \\text{CO}_2(g) \\quad \\Delta H_1 = -393.5$ kJ
-2. $\\text{CO}(g) + \\frac{1}{2}\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) \\quad \\Delta H_2 = -283.0$ kJ
+> **Problem:** Find $\\Delta H$ for: $\\text{C}(s) + \\frac{1}{2}\\text{O}_2(g) \\rightarrow \\text{CO}(g)$
+>
+> **Given:**
+> 1. $\\text{C}(s) + \\text{O}_2(g) \\rightarrow \\text{CO}_2(g) \\quad \\Delta H_1 = -393.5$ kJ
+> 2. $\\text{CO}(g) + \\frac{1}{2}\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) \\quad \\Delta H_2 = -283.0$ kJ
 
 **Solution:**
 - Keep reaction 1 as written (has C as reactant ✓)

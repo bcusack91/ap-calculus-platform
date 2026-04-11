@@ -8,7 +8,26 @@ export const chemTypesOfChemicalBondsPart2Data = {
 
 **Part 2 of 7 — Electron Sharing**
 
-While ionic bonds involve the **transfer** of electrons, **covalent bonds** form when atoms **share** electrons. Covalent bonding is the dominant bond type in molecular compounds — the molecules that make up most of organic chemistry, biochemistry, and atmospheric chemistry.`
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| Why Share? |
+| Example: $\\text{H}_2$ |
+| The Bonding Pair |
+| Examples |
+| Key Pattern |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'cb2-sharing',
@@ -108,6 +127,8 @@ $$\\text{N≡N}$$
 
 The number of bonds an atom typically forms = **8 minus the number of valence electrons** (for atoms that follow the octet rule).
 
+> 🔑 **Key Concept:** Bonds formed = 8 − valence electrons (for atoms following the octet rule). Carbon forms 4, nitrogen 3, oxygen 2, halogens 1.
+
 | Atom | Valence $e^-$ | Bonds Typically Formed |
 |------|--------------|----------------------|
 | C | 4 | 4 (single, double, or triple) |
@@ -158,9 +179,11 @@ The number of bonds an atom typically forms = **8 minus the number of valence el
 
 **Bond energy** is the energy required to break one mole of a particular bond in the gas phase:
 
-$$\\text{A—B}(g) \\rightarrow \\text{A}(g) + \\text{B}(g) \\quad \\Delta H = \\text{bond energy} > 0$$
+$$\boxed{\text{A—B}(g) \rightarrow \text{A}(g) + \text{B}(g) \quad \Delta H = \text{bond energy} > 0}$$
 
 Breaking bonds always requires energy (endothermic). Forming bonds always releases energy (exothermic).
+
+> 💡 **Tip:** Bond energy is always the energy required to **break** a bond (endothermic, $\Delta H > 0$). Forming the same bond **releases** the same amount of energy (exothermic).
 
 
 ---
@@ -247,11 +270,11 @@ More shared electron pairs means:
       type: 'input-box' as const,
       content: `### Part 2 Practice — Bond Analysis
 
-1. How many shared electron pairs are in a double bond?
+**1.** How many shared electron pairs are in a double bond?
 
-2. A C—C single bond is 154 pm long and a C≡C triple bond is 120 pm. Which is shorter: the single or triple bond? (Enter "single" or "triple")
+**2.** A C—C single bond is 154 pm long and a C≡C triple bond is 120 pm. Which is shorter: the single or triple bond? (Enter "single" or "triple")
 
-3. Carbon has 4 valence electrons. Using the rule (8 minus valence electrons), how many bonds does carbon typically form?`,
+**3.** Carbon has 4 valence electrons. Using the rule (8 minus valence electrons), how many bonds does carbon typically form?`,
       exercise: {
         inputs: [
           {

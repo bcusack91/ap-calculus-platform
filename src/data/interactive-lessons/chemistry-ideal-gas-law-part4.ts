@@ -4,13 +4,30 @@ export const chemIdealGasLawPart4Data = {
     {
       id: 'gl4-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Molar Mass & Gas Density
+      content: `# ⚖️ Molar Mass & Gas Density
 
 **Part 4 of 7 — Connecting Gases to Molar Mass**
 
-The ideal gas law can be rearranged to find the **molar mass** of an unknown gas, or to calculate the **density** of a gas at any temperature and pressure. These are powerful lab techniques used frequently in AP Chemistry.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 💨 Molar Mass from Gas Data |
+| Example |
+| Lab Application: Dumas Method |
+| 💨 Gas Density |
+| Key Observations |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gl4-molar-mass',
@@ -24,7 +41,7 @@ $$PV = \\frac{m}{M}RT$$
 
 Solving for molar mass:
 
-$$M = \\frac{mRT}{PV}$$
+$$\\boxed{M = \\frac{mRT}{PV}}$$
 
 
 ---
@@ -33,7 +50,7 @@ $$M = \\frac{mRT}{PV}$$
 
 > **Problem:** A 0.325 g sample of gas occupies 225 mL at 100°C and 0.960 atm. Find the molar mass.
 
-**Solution:**
+> **Solution:**
 
 $$T = 100 + 273.15 = 373.15 \\text{ K}, \\quad V = 0.225 \\text{ L}$$
 
@@ -45,6 +62,8 @@ This matches ethanol (C₂H₅OH), which has $M = 46.07$ g/mol.
 ---
 
 ### Lab Application: Dumas Method
+
+> 💡 **Tip:** The Dumas method is a classic lab technique for finding the molar mass of volatile liquids.
 
 In the Dumas method for finding molar mass:
 1. Vaporize a liquid in a flask of known volume
@@ -81,7 +100,7 @@ $$\\boxed{d = \\frac{PM}{RT}}$$
 
 > **Problem:** What is the density of O₂ ($M = 32.00$ g/mol) at STP?
 
-**Solution:**
+> **Solution:**
 
 $$d = \\frac{PM}{RT} = \\frac{(1.00)(32.00)}{(0.0821)(273.15)} = \\frac{32.00}{22.43} = 1.43 \\text{ g/L}$$
 

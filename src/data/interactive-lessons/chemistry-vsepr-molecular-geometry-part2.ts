@@ -9,27 +9,26 @@ export const chemVseprMolecularGeometryPart2Data = {
 
 **Part 2 of 7 — The Core Geometries**
 
-## Linear Geometry
+---
 
-When a central atom has **2 electron domains** (steric number = 2), they arrange themselves **180° apart** on opposite sides of the atom.
+### Topics in This Part
 
-$$\\text{Bond angle} = 180°$$
+| Section |
+|---------|
+| Linear Geometry |
+| Characteristics |
+| Examples |
+| Characteristics |
+| Examples |
 
-### Characteristics
-- Shape: straight line through all three atoms
-- Bond angle: exactly **180°**
-- All atoms in a straight line
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
-### Examples
+---
 
-| Molecule | Central Atom | Electron Domains | Lone Pairs | Geometry |
-|----------|-------------|------------------|------------|----------|
-| CO₂ | C | 2 (double bonds) | 0 | Linear |
-| HCN | C | 2 (triple + single) | 0 | Linear |
-| BeCl₂ | Be | 2 (single bonds) | 0 | Linear |
-| CS₂ | C | 2 (double bonds) | 0 | Linear |
-
-Note: CO₂ has two double bonds, but each double bond is one electron domain, giving a steric number of 2.`
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'vg-2-2',
@@ -39,7 +38,7 @@ Note: CO₂ has two double bonds, but each double bond is one electron domain, g
 
 When a central atom has **3 electron domains** (steric number = 3), they spread out equally in a flat plane, **120° apart**.
 
-$$\\text{Bond angle} = 120°$$
+$$\\boxed{\\text{Bond angle} = 120°}$$
 
 ### Characteristics
 - Shape: flat triangle with the central atom at the center
@@ -57,7 +56,9 @@ $$\\text{Bond angle} = 120°$$
 
 ### Important: Boron is Special
 
-Boron (B) commonly forms only 3 bonds and has **no lone pairs**, making it naturally trigonal planar. BF₃ has only 6 electrons around B — it is an **electron-deficient** compound (an exception to the octet rule).`
+Boron (B) commonly forms only 3 bonds and has **no lone pairs**, making it naturally trigonal planar. BF₃ has only 6 electrons around B — it is an **electron-deficient** compound (an exception to the octet rule).
+
+---`
     },
     {
       id: 'vg-2-3',
@@ -95,7 +96,7 @@ Boron (B) commonly forms only 3 bonds and has **no lone pairs**, making it natur
 
 When a central atom has **4 electron domains** (steric number = 4), they arrange in a three-dimensional shape called a **tetrahedron**.
 
-$$\\text{Bond angle} = 109.5°$$
+$$\\boxed{\\text{Bond angle} = 109.5°}$$
 
 ### Characteristics
 - Shape: 3D triangular pyramid with 4 vertices
@@ -106,7 +107,7 @@ $$\\text{Bond angle} = 109.5°$$
 
 The angle 109.5° is the angle that maximizes the distance between 4 points on a sphere. It\'s derived from the geometry of a regular tetrahedron:
 
-$$\\cos(109.5°) = -\\frac{1}{3}$$
+$$\\boxed{\\cos(109.5°) = -\\frac{1}{3}}$$
 
 ### Examples
 
@@ -117,7 +118,9 @@ $$\\cos(109.5°) = -\\frac{1}{3}$$
 | SiH₄ | Si | 4 (single bonds) | 0 | Tetrahedral |
 | NH₄⁺ | N | 4 (single bonds) | 0 | Tetrahedral |
 
-The tetrahedral geometry is extremely common in organic chemistry — every sp³-hybridized carbon is tetrahedral.`
+The tetrahedral geometry is extremely common in organic chemistry — every sp³-hybridized carbon is tetrahedral.
+
+---`
     },
     {
       id: 'vg-2-5',
@@ -159,12 +162,16 @@ The tetrahedral geometry is extremely common in organic chemistry — every sp³
 
 ### The Pattern
 
+> 🔑 **Key Concept:** As the steric number increases, the bond angle **decreases** (180° → 120° → 109.5°). More electron domains must share the space around the central atom.
+
 As the steric number increases:
 - The bond angle **decreases** (180° → 120° → 109.5°)
 - The geometry becomes more **three-dimensional**
 - The electron domains spread into **more directions**
 
 ### Hybridization Connection
+
+> 💡 **Tip:** Each base geometry maps to a specific hybridization — sp (linear), sp² (trigonal planar), sp³ (tetrahedral). Knowing one tells you the other.
 
 Each geometry corresponds to a specific hybridization of the central atom:
 - **sp** → linear (2 hybrid orbitals)

@@ -2,186 +2,201 @@ export const precalcTransformationsPart5Data = {
   topicSlug: 'transformations-precalc',
   sections: [
     {
-      id: 'precalc-transformations-precalc-p5-s1-intro',
+      id: 'p5-intro',
       type: 'text' as const,
       content: `
-      ## Function Transformations: Composed transformations
-      
-      **Part 5 of 7**
-      
-      This part focuses on untangling multi-step parameter changes. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **vertical stretch**: multiplies output by factor with magnitude $>1$
-      - **compression**: scales graph toward an axis
-      - **composite transform**: multiple transformations applied to one parent
-      
-      
-      ### Worked Example
-      Part 5 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📚 Parent Functions Gallery
+
+**Part 5 of 7**
+
+### The Essential Toolkit
+
+Every function you transform begins as one of these **parent functions**.
+
+| Function | Equation | Key Features |
+|:---------|:---------|:-------------|
+| Linear | $y = x$ | Slope 1, through origin |
+| Quadratic | $y = x^2$ | U-shape, vertex $(0,0)$ |
+| Cubic | $y = x^3$ | S-shape, inflection at origin |
+| Square Root | $y = \\sqrt{x}$ | Half-parabola, $x \\geq 0$ |
+| Cube Root | $y = \\sqrt[3]{x}$ | S-shape, all reals |
+| Absolute Value | $y = |x|$ | V-shape, vertex $(0,0)$ |
+| Reciprocal | $y = 1/x$ | Hyperbola, asymptotes at axes |
+| Exponential | $y = 2^x$ | Growth, asymptote $y=0$ |
+| Logarithmic | $y = \\log x$ | Slow growth, $x > 0$ |
+| Sine | $y = \\sin x$ | Period $2\\pi$, range $[-1,1]$ |
+| Cosine | $y = \\cos x$ | Period $2\\pi$, range $[-1,1]$ |
+| Tangent | $y = \\tan x$ | Period $\\pi$, vertical asymptotes |
       `
     },
     {
-      id: 'precalc-transformations-precalc-p5-s2-mcq-core',
+      id: 'p5-power',
+      type: 'text' as const,
+      content: `
+## 🔢 Power & Root Functions
+
+### Even Powers: $y = x^2, x^4, x^6, ...$
+
+- Symmetric about $y$-axis (even functions)
+- Shape: U gets flatter near origin, steeper away
+- Higher power → more "rectangular"
+
+### Odd Powers: $y = x^3, x^5, x^7, ...$
+
+- Symmetric about origin (odd functions)
+- Shape: S-curve through origin
+- Higher power → flatter near 0, steeper far away
+
+### Root Functions
+
+$$y = x^{1/n}$$
+
+- Even roots ($\\sqrt{x}, \\sqrt[4]{x}$): domain $x \\geq 0$
+- Odd roots ($\\sqrt[3]{x}, \\sqrt[5]{x}$): domain all reals
+- Inverse of corresponding power function
+
+### Key Relationship
+
+$y = x^n$ and $y = x^{1/n}$ (same parity) are **inverse functions** — they reflect across $y = x$.
+      `
+    },
+    {
+      id: 'p5-special',
+      type: 'text' as const,
+      content: `
+## ⭐ Special Functions
+
+### Greatest Integer (Floor) Function
+
+$$y = \\lfloor x \\rfloor$$
+
+- Step function: jumps at every integer
+- $\\lfloor 2.7 \\rfloor = 2$, $\\lfloor -1.3 \\rfloor = -2$
+- Used in pricing (round down), computer science
+
+### Piecewise-Defined Functions
+
+$$f(x) = \\begin{cases} x^2 & x < 0 \\\\ 2x+1 & x \\geq 0 \\end{cases}$$
+
+- Different rules for different intervals
+- Check continuity at boundary points
+
+### Logistic Function
+
+$$y = \\frac{L}{1 + e^{-k(x-x_0)}}$$
+
+- S-shaped (sigmoid)
+- Models population growth, learning curves
+- Horizontal asymptotes at $y=0$ and $y=L$
+
+**Recognizing parent functions is the FIRST step** in any transformation problem!
+      `
+    },
+    {
+      id: 'p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Parent Function Recognition** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of vertical stretch.',
-            options: [
-              'multiple transformations applied to one parent',
-              'multiplies output by factor with magnitude $>1$',
-              'point unchanged by selected transformation',
-              'scales graph toward an axis'
-            ],
+            question: 'Which parent function has domain $[0, \\infty)$ and range $[0, \\infty)$?',
+            options: ['$y = x^2$', '$y = \\sqrt{x}$', '$y = |x|$', '$y = 1/x$'],
             correctAnswer: 1,
-            explanation: 'vertical stretch is defined as: multiplies output by factor with magnitude $>1$.'
+            explanation: '$y=\\sqrt{x}$: domain $[0,\\infty)$, range $[0,\\infty)$. $y=x^2$ has domain $(-\\infty,\\infty)$.'
           },
           {
-            question: 'In untangling multi-step parameter changes, which expression is the best starting model?',
-            options: [
-              '$f(x-h)$',
-              '$g(x)=a\\,f(b(x-h))+k$',
-              '$f(x)+k$',
-              '$-f(x),\\;f(-x)$'
-            ],
-            correctAnswer: 1,
-            explanation: 'Use $g(x)=a\\,f(b(x-h))+k$ first, then substitute known quantities from the prompt.'
+            question: 'Which parent function has two asymptotes?',
+            options: ['$y = \\log x$', '$y = 2^x$', '$y = 1/x$', '$y = \\tan x$'],
+            correctAnswer: 2,
+            explanation: '$y = 1/x$ has asymptotes $x=0$ (vertical) and $y=0$ (horizontal).'
+          },
+          {
+            question: 'Which function is both even AND has range $[0, \\infty)$?',
+            options: ['$y = x^3$', '$y = x^2$', '$y = |x|$', 'Both B and C'],
+            correctAnswer: 3,
+            explanation: '$y=x^2$ and $y=|x|$ are both even and have range $[0,\\infty)$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-transformations-precalc-p5-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | General transform | $g(x)=a\,f(b(x-h))+k$ | all major parameter moves |
-      | Horizontal shift | $f(x-h)$ | right by $h$ when $h>0$ |
-      | Vertical shift | $f(x)+k$ | up by $k$ when $k>0$ |
-      | Reflections | $-f(x),\;f(-x)$ | over $x$-axis and $y$-axis |
-      
-      ### Common pitfalls
-      - A negative outside coefficient reflects across the $x$-axis.
-      - Apply transformations in the order implied by expression structure.
-      - Inside changes reverse intuitive direction for horizontal moves.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-transformations-precalc-p5-s4-input',
+      id: 'p5-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Transformation Parameters**
-      
-      1) In $g(x)=f(x-3)+2$, how many units right is the graph shifted?
-      2) In $y=-2f(x)$, what is the vertical stretch factor magnitude?
-      3) If $f(x)=x^2$, compute $f(-4)$.
+**Parent Function Properties** 🧮
+
+**1)** $y = x^3$: $f(-2)$ = ?
+
+**2)** $y = |x|$: $f(-5)$ = ?
+
+**3)** $y = 2^x$: $f(3)$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3', '2', '16'],
-        hint1: 'Inside subtraction shifts right.',
-        hint2: 'Read absolute value of outside multiplier.',
-        hint3: 'Square the input after substitution.',
-        explanation: 'Shift is 3 right, stretch magnitude is 2, and $f(-4)=16$.'
+        correctAnswers: ['-8', '5', '8'],
+        hint1: '$(-2)^3 = -8$.',
+        hint2: '$|-5| = 5$.',
+        hint3: '$2^3 = 8$.',
+        explanation: '1) $-8$. 2) $5$. 3) $8$.'
       }
     },
     {
-      id: 'precalc-transformations-precalc-p5-s5-dropdown',
+      id: 'p5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Match Parent Functions** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'vertical stretch',
-            options: ['scales graph toward an axis', 'multiple transformations applied to one parent', 'point unchanged by selected transformation', 'multiplies output by factor with magnitude $>1$']
+            label: 'V-shaped graph:',
+            options: ['$y = x^2$', '$y = |x|$', '$y = 1/x$', '$y = \\sqrt{x}$'],
+            correctAnswer: 1
           },
           {
-            label: 'compression',
-            options: ['point unchanged by selected transformation', 'scales graph toward an axis', 'base graph before transformations', 'multiple transformations applied to one parent']
+            label: 'Horizontal asymptote at $y = 0$, passes through $(0,1)$:',
+            options: ['$y = 2^x$', '$y = \\log x$', '$y = 1/x$', '$y = x^2$'],
+            correctAnswer: 0
           },
           {
-            label: 'composite transform',
-            options: ['base graph before transformations', 'adds constant outside function value', 'point unchanged by selected transformation', 'multiple transformations applied to one parent']
+            label: 'Vertical asymptote at $x = 0$, passes through $(1,0)$:',
+            options: ['$y = \\log x$', '$y = \\sqrt{x}$', '$y = 2^x$', '$y = |x|$'],
+            correctAnswer: 0
+          },
+          {
+            label: 'Period of $\\pi$:',
+            options: ['$y = \\sin x$', '$y = \\cos x$', '$y = \\tan x$', '$y = 2^x$'],
+            correctAnswer: 2
           }
         ],
-        correctAnswers: ['multiplies output by factor with magnitude $>1$', 'scales graph toward an axis', 'multiple transformations applied to one parent'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: vertical stretch, compression, and composite transform align with their exact definitions used in this part.'
+        correctAnswers: ['$y = |x|$', '$y = 2^x$', '$y = \\log x$', '$y = \\tan x$'],
+        hint1: 'V-shape = absolute value.',
+        hint2: '$2^0 = 1$ and $y \\to 0$ as $x \\to -\\infty$.',
+        hint3: '$\\log 1 = 0$ and $x > 0$.',
+        explanation: 'V: absolute value. $(0,1)$ with HA $y=0$: exponential. VA $x=0$ + $(1,0)$: log. Period $\\pi$: tangent.'
       }
     },
     {
-      id: 'precalc-transformations-precalc-p5-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to vertical stretch, compression, and composite transform so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-transformations-precalc-p5-s7-mcq-applied',
+      id: 'p5-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is untangling multi-step parameter changes. Which term best anchors the next reasoning step if the key idea is: point unchanged by selected transformation?',
-            options: [
-              'vertical stretch',
-              'composite transform',
-              'compression',
-              'invariant point'
-            ],
-            correctAnswer: 3,
-            explanation: 'invariant point matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'The graph of $y = -\\sqrt[3]{x-2}+4$ uses which parent function?',
+            options: ['Square root', 'Cube root', 'Cubic', 'Absolute value'],
+            correctAnswer: 1,
+            explanation: 'The parent is $y = \\sqrt[3]{x}$, then reflected, shifted right 2, up 4.'
           },
           {
-            question: 'A student is solving a mixed function transformations prompt. Which term best anchors the next reasoning step if the key idea is: base graph before transformations?',
-            options: [
-              'parent function',
-              'composite transform',
-              'vertical shift',
-              'invariant point'
-            ],
-            correctAnswer: 0,
-            explanation: 'parent function matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Which parent function passes through all four quadrants?',
+            options: ['$y = x^2$', '$y = |x|$', '$y = x^3$', '$y = \\sqrt{x}$'],
+            correctAnswer: 2,
+            explanation: '$y=x^3$: negative outputs for negative inputs, positive for positive → quadrants I and III.'
           }
         ]
       }

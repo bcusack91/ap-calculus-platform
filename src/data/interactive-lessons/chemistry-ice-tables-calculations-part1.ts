@@ -4,13 +4,28 @@ export const chemIceTablesCalculationsPart1Data = {
     {
       id: 'ic1-intro',
       type: 'text' as const,
-      content: `
-# 🧊 Setting Up ICE Tables
+      content: `# 🧊 Setting Up ICE Tables
 
 **Part 1 of 7 — Initial, Change, Equilibrium**
 
-ICE tables are the systematic method for solving equilibrium problems. ICE stands for **I**nitial, **C**hange, **E**quilibrium — the three rows that track how concentrations evolve from start to finish.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🏗️ The ICE Table Structure |
+| 🧪 Worked Example |
+| Substitute into K expression: |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ic1-structure',
@@ -29,24 +44,23 @@ For the reaction: $aA + bB \\rightleftharpoons cC + dD$
 
 ---
 
-### Key Rules
-
-1. **I row**: Fill in starting concentrations (often products start at 0)
-2. **C row**: Use the variable $x$ with stoichiometric ratios
-   - Reactants decrease (negative sign)
-   - Products increase (positive sign)
-   - Coefficients become multipliers of $x$
-3. **E row**: I + C for each column
-4. Substitute the E row into the $K$ expression and solve for $x$
+> 🔑 **Key Rules:**
+> 1. **I row** — Fill in starting concentrations (often products start at 0)
+> 2. **C row** — Use the variable $x$ with stoichiometric ratios: reactants decrease (negative sign), products increase (positive sign), coefficients become multipliers of $x$
+> 3. **E row** — I + C for each column
+> 4. Substitute the E row into the $K$ expression and solve for $x$
 
 
 ---
 
-### Important
+> ⚠️ **Warning:** The signs in the C row depend on the **direction of shift**:
+> - If the reaction shifts right: reactants lose ($-$), products gain ($+$)
+> - If the reaction shifts left: reactants gain ($+$), products lose ($-$)
 
-- The signs in the C row depend on the **direction of shift**
-- If the reaction shifts right: reactants lose ($-$), products gain ($+$)
-- If the reaction shifts left: reactants gain ($+$), products lose ($-$)
+
+---
+
+> 💡 **Tip:** When products start at 0, their equilibrium expressions simplify to just the stoichiometric coefficient times $x$ (e.g., $0 + 2x = 2x$).
       `
     },
     {
@@ -55,11 +69,9 @@ For the reaction: $aA + bB \\rightleftharpoons cC + dD$
       content: `
 ## 🧪 Worked Example
 
-$\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$, $K_c = 50.0$
+> **Problem:** For $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$ with $K_c = 50.0$, find the equilibrium concentrations given $[\\text{H}_2] = 1.00$ M, $[\\text{I}_2] = 1.00$ M, $[\\text{HI}] = 0$ M.
 
-**Initial:** $[\\text{H}_2] = 1.00$ M, $[\\text{I}_2] = 1.00$ M, $[\\text{HI}] = 0$ M
-
-Since we start with no products and $K > 0$, the reaction shifts **right**.
+> **Solution:** Since we start with no products and $K > 0$, the reaction shifts **right**.
 
 |  | H₂ | I₂ | 2 HI |
 |--|-----|-----|------|
@@ -72,7 +84,7 @@ Since we start with no products and $K > 0$, the reaction shifts **right**.
 
 ### Substitute into K expression:
 
-$$K_c = \\frac{[\\text{HI}]^2}{[\\text{H}_2][\\text{I}_2]} = \\frac{(2x)^2}{(1.00 - x)(1.00 - x)} = \\frac{4x^2}{(1.00 - x)^2}$$
+$$\\boxed{K_c = \\frac{[\\text{HI}]^2}{[\\text{H}_2][\\text{I}_2]}} = \\frac{(2x)^2}{(1.00 - x)(1.00 - x)} = \\frac{4x^2}{(1.00 - x)^2}$$
 
 $$50.0 = \\frac{4x^2}{(1.00 - x)^2}$$
 

@@ -4,13 +4,30 @@ export const chemWeakAcidsBasesKaKbPart2Data = {
     {
       id: 'wk2-intro',
       type: 'text' as const,
-      content: `
-# 🧊 ICE Tables for Weak Acids
+      content: `# 🧊 ICE Tables for Weak Acids
 
 **Part 2 of 7 — Calculating pH of Weak Acid Solutions**
 
-The ICE table (Initial, Change, Equilibrium) is the essential tool for calculating the pH of weak acid solutions. Combined with the **5% approximation**, it simplifies calculations dramatically.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Setting Up an ICE Table |
+| 📌 The 5% Approximation |
+| When Does the Approximation Work? |
+| If the Approximation Fails |
+| 🧪 Worked Example |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'wk2-ice-table',
@@ -41,6 +58,8 @@ This is a quadratic equation in $x$. But we can often avoid the quadratic formul
       content: `
 ## 📌 The 5% Approximation
 
+> 🔑 **Key Concept:** If dissociation is small ($x < 5\\%$ of $C$), we can simplify the math dramatically.
+
 If $x \\ll C$ (specifically, if $x < 5\\%$ of $C$), we can approximate:
 
 $$C - x \\approx C$$
@@ -51,7 +70,7 @@ $$K_a \\approx \\frac{x^2}{C}$$
 
 $$x = \\sqrt{K_a \\cdot C}$$
 
-$$[H^+] = x = \\sqrt{K_a \\cdot C}$$
+$$\\boxed{[H^+] = x = \\sqrt{K_a \\cdot C}}$$
 
 $$pH = -\\log(\\sqrt{K_a \\cdot C})$$
 
@@ -62,7 +81,7 @@ $$pH = -\\log(\\sqrt{K_a \\cdot C})$$
 
 The approximation is valid when:
 
-$$\\frac{C}{K_a} > 400 \\quad \\text{(conservative rule)}$$
+$$\\boxed{\\frac{C}{K_a} > 400 \\quad \\text{(conservative rule)}}$$
 
 Or equivalently, when $\\frac{x}{C} \\times 100\\% < 5\\%$.
 
@@ -71,11 +90,11 @@ Or equivalently, when $\\frac{x}{C} \\times 100\\% < 5\\%$.
 
 ### If the Approximation Fails
 
-Use the quadratic formula:
+> ⚠️ **Warning:** When $C/K_a < 400$, the 5% approximation is invalid. You **must** use the quadratic formula.
 
 $$x^2 + K_a x - K_a C = 0$$
 
-$$x = \\frac{-K_a + \\sqrt{K_a^2 + 4K_a C}}{2}$$
+$$\\boxed{x = \\frac{-K_a + \\sqrt{K_a^2 + 4K_a C}}{2}}$$
 
 (Take the positive root only — concentrations can\'t be negative!)
       `
@@ -86,8 +105,9 @@ $$x = \\frac{-K_a + \\sqrt{K_a^2 + 4K_a C}}{2}$$
       content: `
 ## 🧪 Worked Example
 
-Find the pH of 0.10 M acetic acid ($CH_3COOH$, $K_a = 1.8 \\times 10^{-5}$).
+> **Problem:** Find the pH of 0.10 M acetic acid ($CH_3COOH$, $K_a = 1.8 \\times 10^{-5}$).
 
+> **Solution:**
 
 ---
 

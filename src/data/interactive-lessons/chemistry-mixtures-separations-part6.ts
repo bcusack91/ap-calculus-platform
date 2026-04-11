@@ -4,13 +4,24 @@ export const chemMixturesSeparationsPart6Data = {
     {
       id: 'mx6-intro',
       type: 'text' as const,
-      content: `
-# 🔧 Problem-Solving Workshop
+      content: `# 🔧 Problem-Solving Workshop
 
 **Part 6 of 7 — Choosing Methods & Beer\'s Law Calculations**
 
-In this workshop, you\'ll practice the critical thinking skills needed for AP Chemistry: **choosing the right separation or analysis method** for a given situation, performing **Beer\'s Law calculations**, and working through multi-step analytical problems.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'mx6-choosing-methods',
@@ -28,6 +39,8 @@ In this workshop, you\'ll practice the critical thinking skills needed for AP Ch
 | Determine mass of a specific ion | **Gravimetric analysis** |
 | Determine concentration using known reagent | **Titration** |
 | Separate using magnetism | **Magnetic separation** (e.g., iron filings from sand) |
+
+> 💡 **Tip:** When choosing a method, identify the **key physical property** that differs between components: particle size → filtration, boiling point → distillation, solubility → crystallization, color → spectroscopy.
 
 
 ---
@@ -79,7 +92,9 @@ $$c = \\frac{A}{\\varepsilon b} = \\frac{0.525}{75.0} = 0.0070 \\text{ M}$$
 
 If the unknown was diluted before measurement, you must account for this:
 
-$$c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{total}}}{V_{\\text{sample}}}$$
+$$\\boxed{c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{total}}}{V_{\\text{sample}}}}$$
+
+> ⚠️ **Warning:** If the unknown was **diluted** before measurement, you must multiply back by the dilution factor to find the original concentration. Forgetting this step is a common AP exam mistake.
       `
     },
     {

@@ -8,7 +8,26 @@ export const chemPeriodicTrendsPart3Data = {
 
 **Part 3 of 7 — How Tightly Do Atoms Hold Their Electrons?**
 
-Ionization energy measures how difficult it is to remove an electron from an atom. This property is central to understanding reactivity: metals lose electrons easily (low ionization energy), while nonmetals hold onto them tightly (high ionization energy).`
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| Important Details |
+| Why? |
+| First Ionization Energies in Period 2 (kJ/mol) |
+| Notice the Exceptions! |
+| Why? |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'pt3-definition',
@@ -17,7 +36,7 @@ Ionization energy measures how difficult it is to remove an electron from an ato
 
 **Ionization energy (IE)** is the minimum energy required to remove the most loosely bound electron from a gaseous atom or ion.
 
-$$X(g) \\rightarrow X^+(g) + e^- \\qquad \\Delta E = IE_1$$
+$$\\boxed{X(g) \\rightarrow X^+(g) + e^- \\qquad \\Delta E = IE_1}$$
 
 - $IE_1$ = **first ionization energy** (removing the first electron)
 - $IE_2$ = **second ionization energy** (removing a second electron from $X^+$)
@@ -38,6 +57,8 @@ $$X(g) \\rightarrow X^+(g) + e^- \\qquad \\Delta E = IE_1$$
       content: `## 📈 Trend Across a Period (Left → Right)
 
 **First ionization energy generally increases across a period.**
+
+> 🔑 **Key Concept:** Higher $Z_{eff}$ across a period means valence electrons are held more tightly, requiring more energy to remove.
 
 
 ---
@@ -65,11 +86,11 @@ Moving left to right across a period:
 
 The trend is **generally** upward, but there are two dips:
 
-1. **B < Be:** Boron's outermost electron is in a $2p$ orbital (higher energy, easier to remove) versus beryllium's $2s$ orbital.
+> ⚠️ **Warning:** These two IE exceptions are **frequently tested** on the AP exam.
 
-2. **O < N:** Nitrogen has a half-filled $2p^3$ configuration (extra stability). Oxygen's fourth $2p$ electron is **paired**, experiencing electron-electron repulsion that makes it easier to remove.
+**1.** **B < Be (Group 13 < Group 2):** Boron's outermost electron is in a $2p$ orbital (higher energy, easier to remove) versus beryllium's $2s$ orbital.
 
-These exceptions are frequently tested on the AP exam!`
+**2.** **O < N (Group 16 < Group 15):** Nitrogen has a half-filled $2p^3$ configuration (extra stability). Oxygen's fourth $2p$ electron is **paired**, experiencing electron-electron repulsion that makes it easier to remove.`
     },
     {
       id: 'pt3-down-group',
@@ -173,6 +194,8 @@ The jump from $IE_2$ to $IE_3$ is **enormous** — more than 5× larger! This is
 
 ### AP Insight
 
+> 🔑 **Key Concept:** The location of the "big jump" in successive IEs reveals the number of valence electrons.
+
 If you see successive IE data, the **location of the big jump** tells you the **number of valence electrons**:
 - Jump after $IE_2$ → 2 valence electrons (Group 2)
 - Jump after $IE_3$ → 3 valence electrons (Group 13)
@@ -214,9 +237,9 @@ If you see successive IE data, the **location of the big jump** tells you the **
       type: 'input-box' as const,
       content: `### Practice Problems
 
-1. Rank these elements from lowest to highest $IE_1$: Na, Mg, K. Type your answer as three symbols separated by commas with the lowest first (e.g., "K, Na, Mg").
+**1.** Rank these elements from lowest to highest $IE_1$: Na, Mg, K. Type your answer as three symbols separated by commas with the lowest first (e.g., "K, Na, Mg").
 
-2. An element has successive IEs (kJ/mol): 786, 1,577, 3,232, 4,356, 16,091. How many valence electrons does this element have? (Enter a number.)`,
+**2.** An element has successive IEs (kJ/mol): 786, 1,577, 3,232, 4,356, 16,091. How many valence electrons does this element have? (Enter a number.)`,
       exercise: {
         inputs: [
           {

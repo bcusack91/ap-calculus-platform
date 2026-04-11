@@ -2,188 +2,194 @@ export const precalcContinuityPart4Data = {
   topicSlug: 'continuity-precalc',
   sections: [
     {
-      id: 'precalc-continuity-precalc-p4-s1-intro',
+      id: 'p4-intro',
       type: 'text' as const,
       content: `
-      ## Continuity: Discontinuity types and diagnostics
-      
-      **Part 4 of 7**
-      
-      This part focuses on classifying removable versus jump breaks. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **jump discontinuity**: left and right limits exist but are unequal
-      - **infinite discontinuity**: function grows without bound near a point
-      - **one-sided limit**: limit from only the left or only the right
-      
-      
-      ### Worked Example
-      Part 4 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🎯 Continuity on Intervals
+
+**Part 4 of 7**
+
+### Continuous on an Interval
+
+$f$ is **continuous on $(a, b)$** if it is continuous at every point in $(a, b)$.
+
+$f$ is **continuous on $[a, b]$** if:
+- Continuous on $(a, b)$
+- $\\lim_{x \\to a^+} f(x) = f(a)$ (right-continuous at left endpoint)
+- $\\lim_{x \\to b^-} f(x) = f(b)$ (left-continuous at right endpoint)
+
+### Why Closed Intervals Matter
+
+Many theorems (IVT, EVT, MVT) require continuity on a **closed** interval $[a,b]$. Endpoints must be included.
+
+### Examples
+
+- $f(x) = \\sqrt{x}$: continuous on $[0, \\infty)$
+- $f(x) = \\ln x$: continuous on $(0, \\infty)$
+- $f(x) = 1/x$: continuous on $(0, \\infty)$ and $(-\\infty, 0)$ but NOT on any interval containing $0$
       `
     },
     {
-      id: 'precalc-continuity-precalc-p4-s2-mcq-core',
+      id: 'p4-domain',
+      type: 'text' as const,
+      content: `
+## Continuity and Domain
+
+### Key Principle
+
+A function is continuous **on its domain** if it has no discontinuities within that domain.
+
+### Functions Continuous on Their Entire Domain
+
+| Function | Domain | Continuous on domain? |
+|:---------|:-------|:---------------------|
+| $x^n$ | $\\mathbb{R}$ | Yes |
+| $1/x$ | $x \\neq 0$ | Yes |
+| $\\sqrt{x}$ | $x \\geq 0$ | Yes |
+| $\\ln x$ | $x > 0$ | Yes |
+| $\\tan x$ | $x \\neq \\pi/2 + n\\pi$ | Yes |
+
+All of these are continuous **where they're defined**. The "discontinuities" are really just **domain restrictions**.
+
+### Continuity Tests for Common Types
+
+- **Polynomial**: Always continuous. No test needed.
+- **Rational $p(x)/q(x)$**: Continuous everywhere except where $q(x) = 0$.
+- **Composed**: If $f$ and $g$ are continuous, so is $f(g(x))$ (in domain).
+      `
+    },
+    {
+      id: 'p4-theorems',
+      type: 'text' as const,
+      content: `
+## Theorems Requiring Continuity
+
+### Intermediate Value Theorem (IVT)
+
+If $f$ is continuous on $[a,b]$, then $f$ takes every value between $f(a)$ and $f(b)$.
+
+**Requires**: continuity on $[a,b]$.
+
+### Extreme Value Theorem (EVT)
+
+If $f$ is continuous on $[a,b]$, then $f$ has an **absolute maximum** and **absolute minimum** on $[a,b]$.
+
+**Requires**: continuous + closed interval.
+
+### Why These Fail Without Continuity
+
+$f(x) = \\begin{cases} 1 & x = 0 \\\\ 0 & x \\neq 0 \\end{cases}$ on $[-1,1]$
+
+- Discontinuous at $x=0$
+- Never takes values between 0 and 1 (violates IVT spirit)
+- Still has max/min, but pathological cases can fail EVT without continuity
+      `
+    },
+    {
+      id: 'p4-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Interval Continuity Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of jump discontinuity.',
-            options: [
-              'left and right limits exist but are unequal',
-              'continuous functions on closed intervals take all intermediate values',
-              'function grows without bound near a point',
-              'limit from only the left or only the right'
-            ],
+            question: '$f(x) = \\sqrt{4-x}$ is continuous on:',
+            options: ['$(-\\infty, 4]$', '$(4, \\infty)$', '$[0, \\infty)$', '$(-\\infty, \\infty)$'],
             correctAnswer: 0,
-            explanation: 'jump discontinuity is defined as: left and right limits exist but are unequal.'
+            explanation: 'Domain: $4-x \\geq 0 \\Rightarrow x \\leq 4$. Continuous on $(-\\infty, 4]$.'
           },
           {
-            question: 'In classifying removable versus jump breaks, which expression is the best starting model?',
-            options: [
-              '$\\lim_{x\\to a^-}f(x)=\\lim_{x\\to a^+}f(x)$',
-              '$\\lim_{x\\to a} f(x) = f(a)$',
-              '$\\frac{x^2-c^2}{x-c}=x+c\\;(x\\neq c)$',
-              '$\\frac{f(b)-f(a)}{b-a}$'
-            ],
+            question: 'EVT requires continuity on:',
+            options: ['Open interval', 'Closed interval', 'Half-open interval', 'Any set'],
+            correctAnswer: 1,
+            explanation: 'EVT needs a closed interval $[a,b]$ and continuity throughout.'
+          },
+          {
+            question: '$f(x)=\\frac{1}{x-3}$ is continuous on which interval?',
+            options: ['$[0, 5]$', '$[0, 3]$', '$(3, \\infty)$', '$(-\\infty, \\infty)$'],
             correctAnswer: 2,
-            explanation: 'Use $\\frac{x^2-c^2}{x-c}=x+c\\;(x\\neq c)$ first, then substitute known quantities from the prompt.'
+            explanation: 'Discontinuous at $x=3$. Continuous on $(3,\\infty)$ (and on $(-\\infty,3)$).'
           }
         ]
       }
     },
     {
-      id: 'precalc-continuity-precalc-p4-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Rational hole repair | $\\frac{x^2-c^2}{x-c}=x+c\;(x\\neq c)$ | removable discontinuity cleanup |
-      | Continuity test | $\lim_{x\\to a} f(x) = f(a)$ | pointwise verification |
-      | Average rate | $\\frac{f(b)-f(a)}{b-a}$ | bridge to local behavior |
-      | One-sided match | $\lim_{x\\to a^-}f(x)=\lim_{x\\to a^+}f(x)$ | two-sided existence |
-      
-      ### Common pitfalls
-      - A defined value at $x=a$ does not guarantee continuity.
-      - Do not classify a vertical asymptote as removable.
-      - For piecewise functions, evaluate left limit, right limit, and value separately.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-continuity-precalc-p4-s4-input',
+      id: 'p4-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Continuity and Limits**
-      
-      1) Compute $\lim_{x	o 3} (2x^2-x)$. 
-      2) Compute $
-      rac{f(5)-f(2)}{5-2}$ for $f(x)=x^2$.
-      3) Compute $\lim_{x	o 4}
-      rac{x^2-16}{x-4}$.
+**Determine domains of continuity:**
+
+**1)** $f(x) = \\sqrt{x-2}$. Continuous for $x \\geq$ ?
+
+**2)** $f(x) = \\ln(x+5)$. Continuous for $x >$ ?
+
+**3)** $f(x) = \\frac{1}{x^2-9}$. Discontinuous at $x = 3$ and $x =$ ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['15', '7', '8'],
-        hint1: 'Polynomials are continuous, so substitute directly.',
-        hint2: 'Use average rate of change with two function values.',
-        hint3: 'Factor numerator as $(x-4)(x+4)$ before canceling.',
-        explanation: 'Direct substitution gives 15, average rate gives 7, and simplification gives 8.'
+        correctAnswers: ['2', '-5', '-3'],
+        hint1: 'Need $x-2 \\geq 0$.',
+        hint2: 'Need $x+5 > 0$.',
+        hint3: '$x^2-9=(x-3)(x+3)=0$ at two values.',
+        explanation: '(1) $x \\geq 2$. (2) $x > -5$. (3) $x = \\pm 3$, so the other is $-3$.'
       }
     },
     {
-      id: 'precalc-continuity-precalc-p4-s5-dropdown',
+      id: 'p4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Interval Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'jump discontinuity',
-            options: ['function grows without bound near a point', 'left and right limits exist but are unequal', 'continuous functions on closed intervals take all intermediate values', 'limit from only the left or only the right']
+            label: 'Continuous on $[a,b]$ means endpoints need:',
+            options: ['Nothing special', 'One-sided continuity', 'Two-sided continuity', 'Differentiability'],
+            correctAnswer: 1
           },
           {
-            label: 'infinite discontinuity',
-            options: ['rule changes across intervals of the domain', 'function grows without bound near a point', 'continuous functions on closed intervals take all intermediate values', 'limit from only the left or only the right']
+            label: '$\\tan x$ is continuous except at:',
+            options: ['$x = n\\pi$', '$x = \\pi/2 + n\\pi$', '$x = 0$', 'All $x$'],
+            correctAnswer: 1
           },
           {
-            label: 'one-sided limit',
-            options: ['continuous functions on closed intervals take all intermediate values', 'value approached by a function as input approaches a target', 'limit from only the left or only the right', 'rule changes across intervals of the domain']
+            label: 'IVT guarantees:',
+            options: ['Maximum exists', 'Intermediate values achieved', 'Function is differentiable', 'Limit exists'],
+            correctAnswer: 1
+          },
+          {
+            label: 'A polynomial on $[a,b]$ satisfies EVT because:',
+            options: ['It is periodic', 'It is continuous on closed interval', 'It has degree > 0', 'It is monotonic'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['left and right limits exist but are unequal', 'function grows without bound near a point', 'limit from only the left or only the right'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: jump discontinuity, infinite discontinuity, and one-sided limit align with their exact definitions used in this part.'
+        correctAnswers: ['One-sided continuity', '$x = \\pi/2 + n\\pi$', 'Intermediate values achieved', 'It is continuous on closed interval'],
+        hint1: 'Endpoints only have one side.',
+        hint2: '$\\cos x = 0$ at odd multiples of $\\pi/2$.',
+        hint3: 'IVT is about hitting intermediate $y$-values.',
+        explanation: 'Endpoints: one-sided. $\\tan$ fails at $\\pi/2+n\\pi$. IVT: intermediate values. EVT: continuous + closed.'
       }
     },
     {
-      id: 'precalc-continuity-precalc-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to jump discontinuity, infinite discontinuity, and one-sided limit so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-continuity-precalc-p4-s7-mcq-applied',
+      id: 'p4-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is classifying removable versus jump breaks. Which term best anchors the next reasoning step if the key idea is: continuous functions on closed intervals take all intermediate values?',
-            options: [
-              'jump discontinuity',
-              'IVT',
-              'infinite discontinuity',
-              'one-sided limit'
-            ],
-            correctAnswer: 1,
-            explanation: 'IVT matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Which function is continuous on $(-\\infty, \\infty)$?',
+            options: ['$1/x$', '$\\ln x$', '$\\sqrt{x}$', '$e^x$'],
+            correctAnswer: 3,
+            explanation: '$e^x$ is defined and continuous for all real $x$. Others have restricted domains.'
           },
           {
-            question: 'A student is solving a mixed continuity prompt. Which term best anchors the next reasoning step if the key idea is: rule changes across intervals of the domain?',
-            options: [
-              'piecewise function',
-              'limit',
-              'one-sided limit',
-              'IVT'
-            ],
+            question: '$f(x) = x^3 - 2x$ on $[-1, 2]$. Does EVT apply?',
+            options: ['Yes — polynomial, closed interval', 'No — not continuous', 'No — open interval', 'Cannot tell'],
             correctAnswer: 0,
-            explanation: 'piecewise function matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Polynomial = continuous everywhere. Closed interval. EVT applies: guaranteed max and min.'
           }
         ]
       }

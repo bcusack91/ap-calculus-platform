@@ -2,195 +2,223 @@ export const precalcInverseTrigPart5Data = {
   topicSlug: 'inverse-trig-functions-precalc',
   sections: [
     {
-      id: 'precalc-inverse-trig-functions-precalc-p5-s1-intro',
+      id: 'p5-intro',
       type: 'text' as const,
       content: `
-      ## Inverse Trigonometric Functions: Right-triangle reconstruction from inverse values
-      
-      **Part 5 of 7**
-      
-      This part focuses on building triangles from ratio data. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **arctan**: inverse of tangent on $(-
-      rac\pi2,
-      rac\pi2)$
-      - **composition**: applying one function to the output of another
-      - **reference triangle**: triangle built from known trig ratios
-      
-      
-      ### Worked Example
-      Part 5 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📐 Inverse Trig with Right Triangles
+
+**Part 5 of 7**
+
+Inverse trig functions let us **find angles** in right triangles when we know the sides.
+
+### The Setup
+
+Given a right triangle with known side lengths, find an angle $\\theta$:
+
+$$\\boxed{\\theta = \\arctan\\!\\left(\\frac{\\text{opposite}}{\\text{adjacent}}\\right) = \\arcsin\\!\\left(\\frac{\\text{opposite}}{\\text{hypotenuse}}\\right) = \\arccos\\!\\left(\\frac{\\text{adjacent}}{\\text{hypotenuse}}\\right)}$$
+
+### Example: Triangle with sides 5, 12, 13
+
+For the angle opposite the side of length 5:
+
+$$\\theta = \\arcsin\\!\\left(\\frac{5}{13}\\right) = \\arctan\\!\\left(\\frac{5}{12}\\right) \\approx 22.6°$$
+
+For the angle opposite the side of length 12:
+
+$$\\alpha = \\arcsin\\!\\left(\\frac{12}{13}\\right) = \\arctan\\!\\left(\\frac{12}{5}\\right) \\approx 67.4°$$
+
+Verify: $22.6° + 67.4° + 90° = 180°$ ✓
       `
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p5-s2-mcq-core',
+      id: 'p5-algebraic',
+      type: 'text' as const,
+      content: `
+## 🔢 Algebraic Expressions with Inverse Trig
+
+### Writing Trig Ratios as Algebraic Expressions
+
+**Problem:** Write $\\sin(\\arctan \\frac{x}{3})$ as an algebraic expression in $x$.
+
+**Solution:**
+1. Let $\\theta = \\arctan \\frac{x}{3}$, so $\\tan\\theta = \\frac{x}{3}$
+2. Right triangle: opposite = $x$, adjacent = $3$
+3. Hypotenuse = $\\sqrt{x^2 + 9}$
+4. $\\sin\\theta = \\frac{x}{\\sqrt{x^2 + 9}}$
+
+$$\\boxed{\\sin\\!\\left(\\arctan \\frac{x}{3}\\right) = \\frac{x}{\\sqrt{x^2 + 9}}}$$
+
+### Common General Formulas
+
+| Expression | Algebraic Form |
+|:-----------|:--------------|
+| $\\sin(\\arccos x)$ | $\\sqrt{1 - x^2}$ |
+| $\\cos(\\arcsin x)$ | $\\sqrt{1 - x^2}$ |
+| $\\tan(\\arcsin x)$ | $\\frac{x}{\\sqrt{1 - x^2}}$ |
+| $\\cos(\\arctan x)$ | $\\frac{1}{\\sqrt{1 + x^2}}$ |
+| $\\sin(\\arctan x)$ | $\\frac{x}{\\sqrt{1 + x^2}}$ |
+      `
+    },
+    {
+      id: 'p5-solving',
+      type: 'text' as const,
+      content: `
+## ✏️ Solving for Missing Angles
+
+### Example 1: Ladder Problem
+
+A 20-foot ladder leans against a wall with its base 8 feet from the wall. Find the angle with the ground.
+
+Adjacent = $8$, hypotenuse = $20$.
+
+$$\\theta = \\arccos\\!\\left(\\frac{8}{20}\\right) = \\arccos(0.4) \\approx 66.4°$$
+
+### Example 2: Finding Both Acute Angles
+
+In a right triangle with legs $a = 7$ and $b = 24$:
+
+$$\\alpha = \\arctan\\!\\left(\\frac{7}{24}\\right) \\approx 16.3°$$
+$$\\beta = \\arctan\\!\\left(\\frac{24}{7}\\right) \\approx 73.7°$$
+
+Check: $16.3° + 73.7° = 90°$ ✓ (The acute angles in a right triangle sum to $90°$.)
+
+### Example 3: Using a Known Hypotenuse
+
+Right triangle with opposite $= 6$, hypotenuse $= 10$.
+
+$$\\theta = \\arcsin\\!\\left(\\frac{6}{10}\\right) = \\arcsin(0.6) \\approx 36.9°$$
+
+This is a 3-4-5 triangle scaled by 2 (sides 6, 8, 10), and $\\arcsin(0.6) = 36.87°$.
+      `
+    },
+    {
+      id: 'p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Triangle & Algebra Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of arctan.',
+            question: '$\\cos(\\arctan x)$ simplifies to:',
             options: [
-              'inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$',
-              'applying one function to the output of another',
-              'triangle built from known trig ratios',
-              'placing angles inside principal intervals'
+              '$\\frac{x}{\\sqrt{1+x^2}}$',
+              '$\\frac{1}{\\sqrt{1+x^2}}$',
+              '$\\sqrt{1-x^2}$',
+              '$\\frac{x}{1+x}$'
             ],
-            correctAnswer: 0,
-            explanation: 'arctan is defined as: inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$.'
+            correctAnswer: 1,
+            explanation: 'Let $\\theta = \\arctan x$. Triangle: opp = $x$, adj = $1$, hyp = $\\sqrt{1+x^2}$. $\\cos\\theta = \\frac{1}{\\sqrt{1+x^2}}$.'
           },
           {
-            question: 'In building triangles from ratio data, which expression is the best starting model?',
+            question: 'In a right triangle with hypotenuse 10 and opposite side 6, the angle is:',
             options: [
-              '$\\sin(\\arcsin x)=x$',
-              '$\\arccos x \\in [0,\\pi]$',
-              '$\\arctan x + \\arctan\\!\\left(\\frac1x\\right)=\\frac\\pi2\\;(x>0)$',
-              '$\\tan(\\arctan x)=x$'
+              '$\\arctan(\\frac{6}{10})$',
+              '$\\arcsin(\\frac{6}{10})$',
+              '$\\arccos(\\frac{6}{10})$',
+              '$\\arctan(\\frac{10}{6})$'
             ],
-            correctAnswer: 0,
-            explanation: 'Use $\\sin(\\arcsin x)=x$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 1,
+            explanation: '$\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{6}{10}$, so $\\theta = \\arcsin(\\frac{6}{10})$.'
+          },
+          {
+            question: '$\\tan(\\arcsin \\frac{x}{5})$ simplifies to:',
+            options: [
+              '$\\frac{x}{5}$',
+              '$\\frac{x}{\\sqrt{25 - x^2}}$',
+              '$\\frac{5}{x}$',
+              '$\\frac{\\sqrt{25 - x^2}}{x}$'
+            ],
+            correctAnswer: 1,
+            explanation: 'Triangle: opp = $x$, hyp = $5$, adj = $\\sqrt{25 - x^2}$. $\\tan\\theta = \\frac{x}{\\sqrt{25-x^2}}$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p5-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Inverse identity | $\sin(\arcsin x)=x$ | valid for $x\in[-1,1]$ |
-      | Principal output | $\arccos x \in [0,\pi]$ | range control |
-      | Tangent inverse | $\\tan(\arctan x)=x$ | all real inputs |
-      | Reciprocal relation | $\arctan x + \arctan\!\left(\\frac1x\\right)=\\frac\pi2\;(x>0)$ | angle decomposition |
-      
-      ### Common pitfalls
-      - A composition can fail if the inner output leaves the inverse domain.
-      - Use principal intervals before comparing equivalent angle expressions.
-      - Inverse trig outputs are angles, not raw ratio values.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-inverse-trig-functions-precalc-p5-s4-input',
+      id: 'p5-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Inverse Trig Values**
-      
-      Use degree values for angle outputs when prompted.
-      
-      1) Compute $rcsin\left(
-      rac{1}{2}
-      ight)$ in degrees.
-      2) Compute $rccos\left(
-      rac{\sqrt{2}}{2}
-      ight)$ in degrees.
-      3) Compute $\\an(rctan(
-      rac{3}{4}))$.
+**Solving Triangles** 🧮
+
+Round to the nearest degree.
+
+**1)** Right triangle: opposite = 3, adjacent = 4. Find angle $\\theta$ in degrees. (e.g., if opposite = 5, adjacent = 12, then $\\theta = \\arctan(\\frac{5}{12}) \\approx 23°$)
+
+**2)** Right triangle: opposite = 7, hypotenuse = 25. Find angle $\\theta$ in degrees. (e.g., if opp = 5, hyp = 13, then $\\theta = \\arcsin(\\frac{5}{13}) \\approx 23°$)
+
+**3)** Right triangle: adjacent = 9, hypotenuse = 15. Find angle $\\theta$ in degrees. (e.g., if adj = 4, hyp = 5, then $\\theta = \\arccos(\\frac{4}{5}) \\approx 37°$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['30', '45', '0.75'],
-        hint1: 'Use principal range for arcsin.',
-        hint2: 'Use principal range for arccos.',
-        hint3: 'A function and its inverse undo each other on valid inputs.',
-        explanation: 'Principal angles are 30° and 45°, and composition returns 0.75.'
+        correctAnswers: ['37', '16', '53'],
+        hint1: '$\\arctan(\\frac{3}{4}) = \\arctan(0.75) \\approx 36.87°$.',
+        hint2: '$\\arcsin(\\frac{7}{25}) = \\arcsin(0.28) \\approx 16.26°$.',
+        hint3: '$\\arccos(\\frac{9}{15}) = \\arccos(0.6) \\approx 53.13°$.',
+        explanation: '1) $\\arctan(0.75) \\approx 37°$. 2) $\\arcsin(0.28) \\approx 16°$. 3) $\\arccos(0.6) \\approx 53°$.'
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p5-s5-dropdown',
+      id: 'p5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Choose the Right Expression** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'arctan',
-            options: ['applying one function to the output of another', 'triangle built from known trig ratios', 'placing angles inside principal intervals', 'inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$']
+            label: '$\\sin(\\arccos x)$ simplifies to',
+            options: ['$\\sqrt{1-x^2}$', '$\\frac{x}{\\sqrt{1+x^2}}$', '$\\frac{1}{x}$', '$1-x^2$']
           },
           {
-            label: 'composition',
-            options: ['placing angles inside principal intervals', 'triangle built from known trig ratios', 'applying one function to the output of another', 'standard output interval used by an inverse trig function']
+            label: 'To find angle $\\theta$ given opposite and adjacent sides, use',
+            options: ['$\\arcsin$', '$\\arccos$', '$\\arctan$']
           },
           {
-            label: 'reference triangle',
-            options: ['placing angles inside principal intervals', 'standard output interval used by an inverse trig function', 'input interval chosen to make trig one-to-one', 'triangle built from known trig ratios']
+            label: '$\\cos(\\arcsin x)$ simplifies to',
+            options: ['$\\sqrt{1-x^2}$', '$x$', '$\\frac{x}{\\sqrt{1+x^2}}$', '$1-x$']
+          },
+          {
+            label: '$\\sin(\\arctan x)$ simplifies to',
+            options: ['$\\sqrt{1-x^2}$', '$\\frac{1}{\\sqrt{1+x^2}}$', '$\\frac{x}{\\sqrt{1+x^2}}$', '$x$']
           }
         ],
-        correctAnswers: ['inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$', 'applying one function to the output of another', 'triangle built from known trig ratios'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: arctan, composition, and reference triangle align with their exact definitions used in this part.'
+        correctAnswers: ['$\\sqrt{1-x^2}$', '$\\arctan$', '$\\sqrt{1-x^2}$', '$\\frac{x}{\\sqrt{1+x^2}}$'],
+        hint1: 'Draw triangle with adj = $x$, hyp = 1, find opposite.',
+        hint2: '$\\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}}$, so we invert with $\\arctan$.',
+        hint3: 'Draw triangle with opp = $x$, hyp = 1, find adjacent.',
+        explanation: '$\\sin(\\arccos x)$ and $\\cos(\\arcsin x)$ both equal $\\sqrt{1-x^2}$. Use $\\arctan$ for opp/adj. $\\sin(\\arctan x) = \\frac{x}{\\sqrt{1+x^2}}$.'
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p5-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to arctan, composition, and reference triangle so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-inverse-trig-functions-precalc-p5-s7-mcq-applied',
+      id: 'p5-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is building triangles from ratio data. Which term best anchors the next reasoning step if the key idea is: placing angles inside principal intervals?',
+            question: 'A ramp rises 3 meters over a horizontal distance of 12 meters. The angle of incline is:',
             options: [
-              'reference triangle',
-              'composition',
-              'angle normalization',
-              'arctan'
+              '$\\arcsin(\\frac{3}{12})$',
+              '$\\arctan(\\frac{3}{12})$',
+              '$\\arccos(\\frac{3}{12})$',
+              '$\\arctan(\\frac{12}{3})$'
             ],
-            correctAnswer: 2,
-            explanation: 'angle normalization matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 1,
+            explanation: 'Rise = opposite = 3, run = adjacent = 12. Angle = $\\arctan(\\frac{\\text{opp}}{\\text{adj}}) = \\arctan(\\frac{3}{12}) \\approx 14°$.'
           },
           {
-            question: 'A student is solving a mixed inverse trigonometric functions prompt. Which term best anchors the next reasoning step if the key idea is: standard output interval used by an inverse trig function?',
+            question: '$\\sec(\\arctan x)$ simplifies to:',
             options: [
-              'restricted domain',
-              'reference triangle',
-              'principal value',
-              'angle normalization'
+              '$\\sqrt{1 + x^2}$',
+              '$\\frac{1}{\\sqrt{1+x^2}}$',
+              '$\\frac{x}{\\sqrt{1+x^2}}$',
+              '$1 + x$'
             ],
-            correctAnswer: 2,
-            explanation: 'principal value matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 0,
+            explanation: 'Triangle: opp = $x$, adj = 1, hyp = $\\sqrt{1+x^2}$. $\\sec\\theta = \\frac{\\text{hyp}}{\\text{adj}} = \\sqrt{1+x^2}$.'
           }
         ]
       }

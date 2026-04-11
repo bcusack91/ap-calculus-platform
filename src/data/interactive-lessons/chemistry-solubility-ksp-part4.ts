@@ -4,13 +4,29 @@ export const chemSolubilityKspPart4Data = {
     {
       id: 'sk4-intro',
       type: 'text' as const,
-      content: `
-# 💎 Predicting Precipitation — Q vs K_sp
+      content: `# 💎 Predicting Precipitation — Q vs K_sp
 
 **Part 4 of 7 — Will a Precipitate Form?**
 
-When two solutions containing ions are mixed, will a precipitate form? The answer depends on whether the **ion product** ($Q_{sp}$) exceeds the solubility product ($K_{sp}$).
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚛️ The Ion Product, Q_sp |
+| Comparing Q_sp to K_sp |
+| Key Steps |
+| 📌 Don't Forget Dilution! |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sk4-qsp',
@@ -20,7 +36,7 @@ When two solutions containing ions are mixed, will a precipitate form? The answe
 
 $Q_{sp}$ is calculated exactly like $K_{sp}$, but using the **actual** (non-equilibrium) ion concentrations in solution:
 
-$$Q_{sp} = [\\text{M}^{n+}]^a_{\\text{actual}}[\\text{X}^{m-}]^b_{\\text{actual}}$$
+$$\\boxed{Q_{sp} = [\\text{M}^{n+}]^a_{\\text{actual}}[\\text{X}^{m-}]^b_{\\text{actual}}}$$
 
 
 ---
@@ -33,6 +49,9 @@ $$Q_{sp} = [\\text{M}^{n+}]^a_{\\text{actual}}[\\text{X}^{m-}]^b_{\\text{actual}
 | $Q_{sp} = K_{sp}$ | Solution is exactly saturated | At equilibrium; no change |
 | $Q_{sp} > K_{sp}$ | Solution is supersaturated | **Precipitate forms** until $Q_{sp} = K_{sp}$ |
 
+> 💡 **Tip:** If $Q_{sp} > K_{sp}$, a precipitate **will** form. The system removes ions from solution until $Q_{sp}$ decreases back to $K_{sp}$.
+
+> 🔑 **Key Concept:** Always calculate $Q_{sp}$ using actual ion concentrations (after dilution), then compare to $K_{sp}$. This three-step method works for any precipitation prediction.
 
 ---
 
@@ -51,14 +70,15 @@ $$Q_{sp} = [\\text{M}^{n+}]^a_{\\text{actual}}[\\text{X}^{m-}]^b_{\\text{actual}
 
 When mixing two solutions, the total volume increases and concentrations decrease:
 
-$$[\\text{ion}]_{\\text{after mixing}} = \\frac{[\\text{ion}]_{\\text{initial}} \\times V_{\\text{initial}}}{V_{\\text{total}}}$$
+$$\\boxed{[\\text{ion}]_{\\text{after mixing}} = \\frac{[\\text{ion}]_{\\text{initial}} \\times V_{\\text{initial}}}{V_{\\text{total}}}}$$
 
+> ⚠️ **Warning:** Always account for dilution when mixing solutions! Forgetting this step overestimates $Q_{sp}$ and can lead to incorrect precipitation predictions.
 
 ---
 
-### Worked Example
+> **Problem:** 50.0 mL of $0.0020$ M $\\text{Pb(NO}_3)_2$ is mixed with 50.0 mL of $0.0040$ M NaCl. Does PbCl₂ precipitate? ($K_{sp} = 1.7 \\times 10^{-5}$)
 
-50.0 mL of $0.0020$ M $\\text{Pb(NO}_3)_2$ is mixed with 50.0 mL of $0.0040$ M NaCl. Does PbCl₂ precipitate? ($K_{sp} = 1.7 \\times 10^{-5}$)
+> **Solution:**
 
 **Step 1: Calculate concentrations after mixing**
 

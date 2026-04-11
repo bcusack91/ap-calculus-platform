@@ -4,13 +4,30 @@ export const chemReactionQuotientLeChatPart1Data = {
     {
       id: 'ql1-intro',
       type: 'text' as const,
-      content: `
-# 🔄 The Reaction Quotient Q
+      content: `# 🔄 The Reaction Quotient Q
 
 **Part 1 of 7 — Same Expression as K, but at Any Time**
 
-The reaction quotient $Q$ has the exact same mathematical form as the equilibrium constant $K$, but it uses **current** concentrations (or pressures) rather than equilibrium values. It tells us where the system is relative to equilibrium.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Defining Q |
+| Key Distinction |
+| Q at Special Times |
+| 🔢 Calculating Q |
+| The Rules for Solids and Liquids |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ql1-definition',
@@ -22,9 +39,9 @@ For the general reaction:
 
 $$aA + bB \\rightleftharpoons cC + dD$$
 
-$$Q_c = \\frac{[C]^c[D]^d}{[A]^a[B]^b} \\quad \\text{(using current concentrations)}$$
+$$\\boxed{Q_c = \frac{[C]^c[D]^d}{[A]^a[B]^b}} \quad \text{(using current concentrations)}$$
 
-$$Q_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b} \\quad \\text{(using current pressures)}$$
+$$\\boxed{Q_p = \frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}} \quad \text{(using current pressures)}$$
 
 
 ---
@@ -45,7 +62,7 @@ $$Q_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b} \\quad \\text{(using current pres
 - At $t = 0$ (only reactants): $Q = 0$ (numerator = 0)
 - At equilibrium: $Q = K$
 - If only products present: $Q = \\infty$ (denominator = 0)
-      `
+> 🔑 **Key Concept:** $Q = K$ means equilibrium. $Q < K$ → reaction shifts forward (right). $Q > K$ → reaction shifts in reverse (left).      `
     },
     {
       id: 'ql1-calculating-q',
@@ -53,24 +70,22 @@ $$Q_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b} \\quad \\text{(using current pres
       content: `
 ## 🔢 Calculating Q
 
-### Example
+> **Problem:** For $\text{N}_2(g) + 3\,\text{H}_2(g) \rightleftharpoons 2\,\text{NH}_3(g)$, $K_c = 0.50$ at 400°C. Current concentrations: $[\text{N}_2] = 1.0$ M, $[\text{H}_2] = 2.0$ M, $[\text{NH}_3] = 3.0$ M. Calculate $Q$ and predict the direction of shift.
 
-For: $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$, $K_c = 0.50$ at 400°C
-
-Current concentrations: $[\\text{N}_2] = 1.0$ M, $[\\text{H}_2] = 2.0$ M, $[\\text{NH}_3] = 3.0$ M
-
-$$Q_c = \\frac{[\\text{NH}_3]^2}{[\\text{N}_2][\\text{H}_2]^3} = \\frac{(3.0)^2}{(1.0)(2.0)^3} = \\frac{9.0}{8.0} = 1.125$$
-
-Since $Q_c = 1.125 > K_c = 0.50$:
-- The system has **too many products** relative to equilibrium
-- The reaction will shift to the **left** (toward reactants) to reach equilibrium
+> **Solution:**
+>
+> $$\\boxed{Q_c = \frac{[\text{NH}_3]^2}{[\text{N}_2][\text{H}_2]^3} = \frac{(3.0)^2}{(1.0)(2.0)^3} = \frac{9.0}{8.0} = 1.125}$$
+>
+> Since $Q_c = 1.125 > K_c = 0.50$:
+> - The system has **too many products** relative to equilibrium
+> - The reaction will shift to the **left** (toward reactants) to reach equilibrium
 
 
 ---
 
 ### The Rules for Solids and Liquids
 
-Just like with $K$, pure solids and pure liquids are **excluded** from the $Q$ expression.
+> 💡 **Tip:** Just like with $K$, pure solids and pure liquids are **excluded** from the $Q$ expression — their activities are defined as 1.
       `
     },
     {

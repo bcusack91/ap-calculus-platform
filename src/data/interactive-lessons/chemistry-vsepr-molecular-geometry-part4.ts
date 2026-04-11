@@ -9,17 +9,26 @@ export const chemVseprMolecularGeometryPart4Data = {
 
 **Part 4 of 7 — Bent, Trigonal Pyramidal, Seesaw, T-Shaped, Square Pyramidal, and Square Planar**
 
-When lone pairs occupy electron domain positions, they are "invisible" to molecular geometry but still exert repulsive forces. This creates molecular shapes that differ from the electron domain geometry.
+---
 
-### Key Principle: Lone Pair Repulsion is Stronger
+### Topics in This Part
 
-Lone pairs repel more strongly than bonding pairs because they are held closer to the central atom and spread out more. The repulsion strength order is:
+| Section |
+|---------|
+| Key Principle: Lone Pair Repulsion is Stronger |
+| Tetrahedral (0 lone pairs) |
+| Trigonal Pyramidal (1 lone pair) |
+| Bent (2 lone pairs) |
+| The Compression Pattern |
 
-$$\\text{Lone pair–Lone pair} > \\text{Lone pair–Bond pair} > \\text{Bond pair–Bond pair}$$
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
-This means:
-- Lone pairs **compress** bond angles slightly below the ideal values
-- The more lone pairs present, the smaller the bond angles become`
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'vg-4-2',
@@ -48,13 +57,17 @@ All of these have **tetrahedral electron domain geometry** but different molecul
 
 ### The Compression Pattern
 
+> 🔑 **Key Concept:** Each additional lone pair on the central atom compresses bond angles by about 2–2.5° from the ideal value.
+
 | Molecule | Lone Pairs | Bond Angle | Why? |
 |----------|-----------|------------|------|
 | CH₄ | 0 | 109.5° | Ideal tetrahedral |
 | NH₃ | 1 | ≈107° | 1 LP compresses bonds |
 | H₂O | 2 | ≈104.5° | 2 LPs compress more |
 
-Each additional lone pair compresses the bond angle by about 2–2.5°.`
+Each additional lone pair compresses the bond angle by about 2–2.5°.
+
+---`
     },
     {
       id: 'vg-4-3',
@@ -96,6 +109,10 @@ Each additional lone pair compresses the bond angle by about 2–2.5°.`
       content: `## Molecular Shapes from Steric Number 5
 
 Starting from trigonal bipyramidal electron domain geometry, lone pairs always go in **equatorial** positions first (fewer 90° repulsions).
+
+> 💡 **Tip:** In a trigonal bipyramid, always place lone pairs in **equatorial** positions first — they have only 2 neighbors at 90° (vs. 3 for axial), minimizing repulsion.
+
+---
 
 ### Trigonal Bipyramidal (0 lone pairs)
 - **Example:** PCl₅
@@ -163,6 +180,8 @@ Starting from octahedral electron domain geometry:
 | 2 | Square planar | XeF₄ |
 
 ### Why Trans for 2 Lone Pairs?
+
+> 💡 **Tip:** In an octahedral arrangement with 2 lone pairs, they always adopt **trans** (180° apart) positions to minimize the very strong lone pair–lone pair repulsion.
 
 If the 2 lone pairs were adjacent (cis), they would be only 90° apart — very strong repulsion. By placing them opposite (trans, 180° apart), LP–LP repulsion is minimized.`
     },

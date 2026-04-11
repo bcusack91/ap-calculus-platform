@@ -4,13 +4,30 @@ export const chemMolesMolarMassPart3Data = {
     {
       id: 'mm3-intro',
       type: 'text' as const,
-      content: `
-# 🔄 Mole-Mass Conversions
+      content: `# 🔄 Mole-Mass Conversions
 
 **Part 3 of 7 — Grams, Moles, and Particles**
 
-You now know what a mole is and what molar mass means. The next step is the most practical skill in chemistry: **converting between grams, moles, and particles**. This is the foundation of all stoichiometry.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚖️ Grams → Moles |
+| Example 1 |
+| Example 2 |
+| ⚖️ Moles → Grams |
+| Example 3 |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'mm3-grams-to-moles',
@@ -20,9 +37,11 @@ You now know what a mole is and what molar mass means. The next step is the most
 
 To convert from grams to moles, divide by the molar mass:
 
-$$n = \\frac{m}{M}$$
+$$\\boxed{n = \\frac{m}{M}}$$
 
 where $n$ = moles, $m$ = mass in grams, $M$ = molar mass in g/mol.
+
+> 🔑 **Key Concept:** This is the most important equation in mole chemistry — always set up dimensional analysis so that units cancel properly.
 
 
 ---
@@ -50,7 +69,7 @@ $$\\text{mol NaCl} = 100.0 \\; \\cancel{\\text{g NaCl}} \\times \\frac{1 \\text{
 
 To convert from moles to grams, multiply by the molar mass:
 
-$$m = n \\times M$$
+$$\\boxed{m = n \\times M}$$
 
 
 ---
@@ -75,6 +94,8 @@ Often you need to go from **grams to particles** (or vice versa). This requires 
 $$\\text{grams} \\xrightarrow{\\div M} \\text{moles} \\xrightarrow{\\times N_A} \\text{particles}$$
 
 $$\\text{particles} \\xrightarrow{\\div N_A} \\text{moles} \\xrightarrow{\\times M} \\text{grams}$$
+
+> ⚠️ **Warning:** Always check your units! A common error is multiplying when you should divide (or vice versa). If your answer has nonsensical units, retrace your conversion factors.
 
 
 ---

@@ -4,13 +4,30 @@ export const chemAcidBaseTitrationsPart3Data = {
     {
       id: 'at3-intro',
       type: 'text' as const,
-      content: `
-# 📈 Weak Acid–Strong Base Titration Curves
+      content: `# 📈 Weak Acid–Strong Base Titration Curves
 
 **Part 3 of 7 — The Most Important Titration for AP Chemistry**
 
-When a weak acid is titrated with a strong base, the curve is dramatically different from the strong-strong case. Understanding every region of this curve is essential — it combines equilibrium, buffers, and stoichiometry.
-      `
+---
+
+### Weak Acid–Strong Base: What Changes
+
+| Feature | Strong-Strong | Weak-Strong |
+|---------|--------------|-------------|
+| Initial pH | Very low | Higher (partial dissociation) |
+| Buffer region | None | Yes! (before equivalence) |
+| Half-equivalence | No special significance | **pH = p$K_a$** |
+| Equivalence pH | 7.00 | **> 7** (conjugate base is basic) |
+| After equivalence | Same | Same (excess strong base) |
+
+> 🔑 **Why this matters:** Weak acid–strong base titrations are the single most tested titration type on the AP exam — understanding the buffer region and half-equivalence point is critical.
+
+---
+
+### What You'll Master in Part 3
+- Identifying the four regions of a weak acid–strong base titration curve
+- Explaining why the buffer region exists and using Henderson-Hasselbalch there
+- Calculating pH at the half-equivalence point using pH = p$K_a$`
     },
     {
       id: 'at3-regions',
@@ -55,6 +72,8 @@ $$CH_3COO^-(aq) + H_2O(l) \\rightleftharpoons CH_3COOH(aq) + OH^-(aq)$$
 
 $$pH > 7$$ (basic, NOT neutral!)
 
+> ⚠️ **Critical:** The equivalence point of a weak acid + strong base titration is ALWAYS above pH 7 because the conjugate base hydrolyzes.
+
 
 ---
 
@@ -78,6 +97,8 @@ $$pH = pK_a + \\log\\frac{[A^-]}{[HA]} = pK_a + \\log(1) = pK_a$$
 $$\\boxed{\\text{At the half-equivalence point: } pH = pK_a}$$
 
 This is how you can **determine $K_a$ experimentally** — read the pH at the half-equivalence point!
+
+> 🔑 **AP Must-Know:** Read pH at the half-equivalence point from the titration curve. That pH equals $pK_a$, so $K_a = 10^{-pK_a}$.
 
 For acetic acid: $pH = pK_a = 4.74$ at the half-equivalence point.
 
@@ -163,6 +184,8 @@ $$pOH = -\\log(5.3 \\times 10^{-6}) = 5.28$$
 $$pH = 14 - 5.28 = 8.72$$
 
 **The equivalence point is at pH 8.72** — clearly basic, not neutral!
+
+> 💡 **Tip:** Whenever the equivalence pH is above 7, you know the original acid was weak (its conjugate base makes the solution basic).
       `
     },
     {

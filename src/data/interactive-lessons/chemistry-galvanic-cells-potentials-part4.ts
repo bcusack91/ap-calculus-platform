@@ -4,13 +4,30 @@ export const chemGalvanicCellsPotentialsPart4Data = {
     {
       id: 'gc4-intro',
       type: 'text' as const,
-      content: `
-# 📝 Cell Notation (Line Notation)
+      content: `# 📝 Cell Notation (Line Notation)
 
 **Part 4 of 7 — Shorthand for Electrochemical Cells**
 
-Cell notation (also called line notation) is a compact way to describe a galvanic cell. It is frequently tested on the AP exam. Learning to read and write cell notation is essential.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📝 Cell Notation Rules |
+| The Format |
+| Conventions |
+| Example: Daniell Cell |
+| ⭐ Special Cases in Cell Notation |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gc4-rules',
@@ -20,7 +37,7 @@ Cell notation (also called line notation) is a compact way to describe a galvani
 
 ### The Format
 
-$$\\text{Anode} \\mid \\text{Anode ion} \\| \\text{Cathode ion} \\mid \\text{Cathode}$$
+$$\\boxed{\\text{Anode} \\mid \\text{Anode ion} \\| \\text{Cathode ion} \\mid \\text{Cathode}}$$
 
 
 ---
@@ -35,12 +52,13 @@ $$\\text{Anode} \\mid \\text{Anode ion} \\| \\text{Cathode ion} \\mid \\text{Cat
 | Cathode on the **right** | Reduction half-cell |
 | Concentrations in parentheses | e.g., $(1.0$ M$)$ |
 
+> 🔑 **Key Concept:** Read cell notation **left to right** — anode (oxidation) → salt bridge → cathode (reduction).
 
 ---
 
 ### Example: Daniell Cell
 
-$$\\text{Zn}(s) \\mid \\text{Zn}^{2+}(aq) \\| \\text{Cu}^{2+}(aq) \\mid \\text{Cu}(s)$$
+$$\\boxed{\\text{Zn}(s) \\mid \\text{Zn}^{2+}(aq) \\| \\text{Cu}^{2+}(aq) \\mid \\text{Cu}(s)}$$
 
 **Read left to right:**
 1. Zn solid electrode (anode)

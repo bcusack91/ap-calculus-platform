@@ -4,13 +4,30 @@ export const chemElectrolyticCellsFaradayPart2Data = {
     {
       id: 'ef2-intro',
       type: 'text' as const,
-      content: `
-# 🔄 Galvanic vs. Electrolytic Cells
+      content: `# 🔄 Galvanic vs. Electrolytic Cells
 
 **Part 2 of 7 — A Detailed Comparison**
 
-Understanding the similarities and differences between galvanic and electrolytic cells is one of the most frequently tested concepts on the AP Chemistry exam. Let\'s compare them side by side.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚖️ Complete Comparison |
+| What STAYS THE SAME |
+| What CHANGES |
+| 🔋 Recharging: Galvanic → Electrolytic |
+| ⬇️ Discharging (Galvanic Mode) |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ef2-comparison-table',
@@ -40,6 +57,8 @@ Understanding the similarities and differences between galvanic and electrolytic
 - **Electrons flow from anode to cathode**
 - **Cations migrate toward cathode, anions toward anode**
 
+> 🔑 **AP Must-Know:** AN OX / RED CAT applies to ALL electrochemical cells. This never changes.
+
 
 ---
 
@@ -48,6 +67,8 @@ Understanding the similarities and differences between galvanic and electrolytic
 - **Sign of anode/cathode** (reversed!)
 - **Direction of energy flow** (chemical ↔ electrical)
 - **Spontaneity** (spontaneous vs. forced)
+
+> 💡 **Memory Aid:** In galvanic cells the anode is (−) and cathode is (+). In electrolytic cells, it flips: anode is (+) and cathode is (−).
       `
     },
     {

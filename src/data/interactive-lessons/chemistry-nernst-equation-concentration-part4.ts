@@ -81,7 +81,7 @@ Even small $E°$ values correspond to **enormous** equilibrium constants!
 
 > **Problem:** For the Daniell cell: $E° = 1.10$ V, $n = 2$
 
-**Solution:**
+> **Solution:**
 
 $$\\log K = \\frac{nE°}{0.0592} = \\frac{(2)(1.10)}{0.0592} = 37.2$$
 
@@ -96,7 +96,7 @@ This enormous $K$ means the reaction goes essentially to completion.
 
 > **Problem:** A reaction has $K = 1.0 \\times 10^{10}$ and $n = 2$.
 
-**Solution:**
+> **Solution:**
 
 $$E° = \\frac{0.0592}{2}\\log(10^{10}) = 0.0296 \\times 10 = 0.296 \\text{ V}$$
 
@@ -105,7 +105,7 @@ $$E° = \\frac{0.0592}{2}\\log(10^{10}) = 0.0296 \\times 10 = 0.296 \\text{ V}$$
 
 ### Example 3: The Complete Thermodynamic Triangle
 
-$$\\Delta G° = -nFE° = -RT\\ln K$$
+$$\\boxed{\\Delta G° = -nFE° = -RT\\ln K}$$
 
 All three quantities are interconnected:
 - Know any one → calculate the other two

@@ -4,13 +4,31 @@ export const chemAcidBaseTitrationsPart1Data = {
     {
       id: 'at1-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Titration Fundamentals
+      content: `# 🧪 Titration Fundamentals
 
 **Part 1 of 7 — Setup, Terminology, and Calculations**
 
-Acid-base titrations are quantitative experiments where a solution of known concentration (the **titrant**) is gradually added to a solution of unknown concentration (the **analyte**) until the reaction is complete. This technique is fundamental to analytical chemistry and AP Chemistry.
-      `
+---
+
+### Titration Essentials
+
+| Term | Definition |
+|------|-----------|
+| **Titrant** | Solution of known concentration (in the buret) |
+| **Analyte** | Solution of unknown concentration (in the flask) |
+| **Equivalence point** | Moles of acid = moles of base |
+| **Endpoint** | Indicator changes color (ideally ≈ equivalence point) |
+
+$$n_{acid} \times \text{(acid ratio)} = n_{base} \times \text{(base ratio)}$$
+
+> 🔑 **Why this matters:** Titrations appear on nearly every AP Chemistry exam — both in multiple choice and as multi-part free-response questions.
+
+---
+
+### What You'll Master in Part 1
+- Understanding titration setup, terminology, and the equivalence point concept
+- Using the moles relationship to find unknown concentrations
+- Calculating pH before, at, and after the equivalence point for strong-strong titrations`
     },
     {
       id: 'at1-setup',
@@ -36,13 +54,13 @@ Acid-base titrations are quantitative experiments where a solution of known conc
 
 At the equivalence point:
 
-$$n_{acid} = n_{base}$$
+$$\\boxed{n_{acid} = n_{base}}$$
 
-$$M_{acid} \\times V_{acid} = M_{base} \\times V_{base}$$
+$$\\boxed{M_{acid} \\times V_{acid} = M_{base} \\times V_{base}}$$
 
 (for 1:1 stoichiometry)
 
-This allows you to calculate the unknown concentration!
+> 🔑 **Key Equation:** This relationship lets you find the unknown concentration from the known titrant and measured volumes.
       `
     },
     {
@@ -75,7 +93,9 @@ $$[H^+] = \\frac{\\text{mol } H^+ - \\text{mol } OH^-}{\\text{total volume}}$$
 
 All acid and base have reacted. Only $NaCl$ and $H_2O$ remain.
 
-$$pH = 7.00$$ (neutral — neither ion hydrolyzes)
+$$pH = 7.00$$
+
+> 🔑 **Key Fact:** Strong acid + strong base always gives pH = 7 at equivalence — neither ion hydrolyzes.
 
 
 ---
@@ -137,12 +157,12 @@ $$[OH^-] = \\frac{\\text{mol } OH^- - \\text{mol } H^+}{\\text{total volume}}$$
       content: `
 ## 🧪 Worked Example: Finding Unknown Concentration
 
-A 25.0 mL sample of $HCl$ of unknown concentration requires 18.5 mL of 0.150 M $NaOH$ to reach the equivalence point. What is $[HCl]$?
+> **Problem:** A 25.0 mL sample of $HCl$ of unknown concentration requires 18.5 mL of 0.150 M $NaOH$ to reach the equivalence point. What is $[HCl]$?
 
 
 ---
 
-### Solution
+> **Solution:**
 
 $$n_{NaOH} = 0.150 \\text{ M} \\times 0.0185 \\text{ L} = 2.775 \\times 10^{-3} \\text{ mol}$$
 

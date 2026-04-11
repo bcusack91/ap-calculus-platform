@@ -4,13 +4,30 @@ export const chemIntroEquilibriumPart5Data = {
     {
       id: 'ie5-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Magnitude of K and Extent of Reaction
+      content: `# ⚖️ Magnitude of K and Extent of Reaction
 
 **Part 5 of 7 — What K Tells Us About the Reaction**
 
-The numerical value of the equilibrium constant tells you how far a reaction proceeds toward products before reaching equilibrium. Understanding the magnitude of K is crucial for predicting whether products or reactants dominate at equilibrium.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Large K: Products Favored |
+| Interpretation |
+| Examples |
+| 📌 Small K: Reactants Favored |
+| Interpretation |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ie5-large-k',
@@ -32,6 +49,8 @@ This means the **numerator** (products) is much larger than the **denominator** 
 - At equilibrium, mostly **products** are present
 - The forward reaction is strongly favored
 - The reaction goes "nearly to completion"
+
+> 🔑 **Key Concept:** $K \\gg 1$ means products dominate — the larger the $K$, the more the equilibrium lies to the right.
 
 
 ---
@@ -64,6 +83,8 @@ The **denominator** (reactants) is much larger than the **numerator** (products)
 - At equilibrium, mostly **reactants** remain
 - The forward reaction barely proceeds
 - Very little product forms
+
+> 🔑 **Key Concept:** $K \\ll 1$ means reactants dominate — the smaller the $K$, the less the reaction proceeds toward products.
 
 
 ---
@@ -150,7 +171,7 @@ The equilibrium constant is a **function of temperature only**.
 - Adding a catalyst
 - Adding an inert gas
 
-These factors may shift the equilibrium **position** (where Q moves relative to K), but K itself remains constant at a given temperature.
+> ⚠️ **Warning:** These factors may shift the equilibrium **position** (where $Q$ moves relative to $K$), but $K$ itself remains constant at a given temperature. Only **temperature** changes $K$!
 
 
 ---

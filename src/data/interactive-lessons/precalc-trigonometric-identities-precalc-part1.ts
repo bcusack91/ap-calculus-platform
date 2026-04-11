@@ -2,195 +2,217 @@ export const precalcTrigIdentitiesPart1Data = {
   topicSlug: 'trigonometric-identities-precalc',
   sections: [
     {
-      id: 'precalc-trigonometric-identities-precalc-p1-s1-intro',
+      id: 'p1-intro',
       type: 'text' as const,
       content: `
-      ## Trigonometric Identities: Pythagorean identity family
-      
-      **Part 1 of 7**
-      
-      This part focuses on simplifying expressions before solving equations. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **Pythagorean identity**: $\sin^2\\heta+\cos^2\\heta=1$
-      - **quotient identity**: $\\an\\heta=
-      rac{\sin\\heta}{\cos\\heta}$
-      - **reciprocal identity**: $\sec\\heta=
-      rac1{\cos\\heta}$ and analogs
-      
-      
-      ### Worked Example
-      Simplify $
-      rac{1-\cos^2\\heta}{\sin\\heta}$ for $\sin\\heta
-      eq0$.
-      
-      Use $1-\cos^2\\heta=\sin^2\\heta$:
-      
-      $$
-      rac{1-\cos^2\\heta}{\sin\\heta}=
-      rac{\sin^2\\heta}{\sin\\heta}=\sin\\heta$$
-      
-      Identity substitution first, then cancellation, keeps the algebra clean.
+# 🔗 Trigonometric Identities — Pythagorean Identities
+
+**Part 1 of 7**
+
+The **Pythagorean identities** are the foundation of all trig simplification. They come from dividing $\\sin^2\\theta + \\cos^2\\theta = 1$ by different functions.
+
+### The Three Pythagorean Identities
+
+| Identity | Derived by | Most useful when... |
+|:---------|:-----------|:-------------------|
+| $\\boxed{\\sin^2\\theta + \\cos^2\\theta = 1}$ | Unit circle definition | Expression has $\\sin^2$ and $\\cos^2$ |
+| $\\boxed{1 + \\tan^2\\theta = \\sec^2\\theta}$ | Dividing by $\\cos^2\\theta$ | Expression has $\\tan^2$ or $\\sec^2$ |
+| $\\boxed{1 + \\cot^2\\theta = \\csc^2\\theta}$ | Dividing by $\\sin^2\\theta$ | Expression has $\\cot^2$ or $\\csc^2$ |
+
+### Useful Rearrangements
+
+| Form | Rearrangement |
+|:-----|:-------------|
+| $\\sin^2\\theta = $ | $1 - \\cos^2\\theta$ |
+| $\\cos^2\\theta = $ | $1 - \\sin^2\\theta$ |
+| $\\tan^2\\theta = $ | $\\sec^2\\theta - 1$ |
+| $\\sec^2\\theta = $ | $1 + \\tan^2\\theta$ |
+| $\\cot^2\\theta = $ | $\\csc^2\\theta - 1$ |
+| $\\csc^2\\theta = $ | $1 + \\cot^2\\theta$ |
       `
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p1-s2-mcq-core',
+      id: 'p1-examples',
+      type: 'text' as const,
+      content: `
+## 📝 Worked Examples
+
+### Example 1: Simplify $\\frac{1 - \\cos^2\\theta}{\\sin\\theta}$
+
+Replace $1 - \\cos^2\\theta$ with $\\sin^2\\theta$:
+
+$$\\frac{1 - \\cos^2\\theta}{\\sin\\theta} = \\frac{\\sin^2\\theta}{\\sin\\theta} = \\sin\\theta$$
+
+### Example 2: Simplify $\\sec^2\\theta - \\tan^2\\theta$
+
+From $1 + \\tan^2\\theta = \\sec^2\\theta$, rearrange:
+
+$$\\sec^2\\theta - \\tan^2\\theta = 1$$
+
+> This is **always** $1$, regardless of $\\theta$. Great exam shortcut!
+
+### Example 3: Express $\\tan^2\\theta$ in terms of $\\cos\\theta$ only
+
+$\\tan^2\\theta = \\sec^2\\theta - 1 = \\frac{1}{\\cos^2\\theta} - 1 = \\frac{1 - \\cos^2\\theta}{\\cos^2\\theta} = \\frac{\\sin^2\\theta}{\\cos^2\\theta}$
+
+### Example 4: Given $\\sin\\theta = \\frac{2}{3}$ (Q I), find all six trig values
+
+| Step | Computation |
+|:-----|:-----------|
+| $\\cos\\theta$ | $\\sqrt{1 - 4/9} = \\frac{\\sqrt{5}}{3}$ |
+| $\\tan\\theta$ | $\\frac{2/3}{\\sqrt{5}/3} = \\frac{2}{\\sqrt{5}} = \\frac{2\\sqrt{5}}{5}$ |
+| $\\csc\\theta$ | $\\frac{3}{2}$ |
+| $\\sec\\theta$ | $\\frac{3}{\\sqrt{5}} = \\frac{3\\sqrt{5}}{5}$ |
+| $\\cot\\theta$ | $\\frac{\\sqrt{5}}{2}$ |
+      `
+    },
+    {
+      id: 'p1-strategy',
+      type: 'text' as const,
+      content: `
+## 🎯 Simplification Strategy
+
+### Decision Tree for Pythagorean Identities
+
+| See this in the expression... | Replace with... |
+|:------------------------------|:---------------|
+| $\\sin^2\\theta + \\cos^2\\theta$ | $1$ |
+| $1 - \\sin^2\\theta$ | $\\cos^2\\theta$ |
+| $1 - \\cos^2\\theta$ | $\\sin^2\\theta$ |
+| $\\sec^2\\theta - 1$ | $\\tan^2\\theta$ |
+| $\\sec^2\\theta - \\tan^2\\theta$ | $1$ |
+| $\\csc^2\\theta - 1$ | $\\cot^2\\theta$ |
+| $\\csc^2\\theta - \\cot^2\\theta$ | $1$ |
+
+> **Pro tip:** When you see a sum or difference involving squared trig functions and the number $1$, a Pythagorean identity is almost certainly the key.
+      `
+    },
+    {
+      id: 'p1-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of Pythagorean identity.',
+            question: 'Simplify: $\\csc^2\\theta - \\cot^2\\theta$',
             options: [
-              '$\\sin^2\\heta+\\cos^2\\heta=1$',
-              'sign behavior under $\\heta\\mapsto -\\heta$',
-              '$\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs',
-              '$\\an\\heta=\\rac{\\sin\\heta}{\\cos\\heta}$'
+              '$0$',
+              '$1$',
+              '$\\sin^2\\theta$',
+              '$\\cos^2\\theta$'
             ],
-            correctAnswer: 0,
-            explanation: 'Pythagorean identity is defined as: $\\sin^2\\heta+\\cos^2\\heta=1$.'
+            correctAnswer: 1,
+            explanation: 'From $1 + \\cot^2\\theta = \\csc^2\\theta$, we get $\\csc^2\\theta - \\cot^2\\theta = 1$.'
           },
           {
-            question: 'In simplifying expressions before solving equations, which expression is the best starting model?',
+            question: 'Which expression equals $\\frac{\\sin^2\\theta}{1 - \\sin^2\\theta}$?',
             options: [
-              '$\\cos(A+B)=\\cos A\\cos B-\\sin A\\sin B$',
-              '$\\sin(2\\theta)=2\\sin\\theta\\cos\\theta$',
-              '$\\tan\\theta=\\frac{\\sin\\theta}{\\cos\\theta}$',
-              '$\\sin^2\\theta+\\cos^2\\theta=1$'
+              '$\\cos^2\\theta$',
+              '$\\tan^2\\theta$',
+              '$\\cot^2\\theta$',
+              '$\\sec^2\\theta$'
             ],
-            correctAnswer: 3,
-            explanation: 'Use $\\sin^2\\theta+\\cos^2\\theta=1$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 1,
+            explanation: '$1 - \\sin^2\\theta = \\cos^2\\theta$, so $\\frac{\\sin^2\\theta}{\\cos^2\\theta} = \\tan^2\\theta$.'
+          },
+          {
+            question: 'If $\\cos\\theta = \\frac{3}{5}$ (Q IV), what is $\\sin\\theta$?',
+            options: [
+              '$\\frac{4}{5}$',
+              '$-\\frac{4}{5}$',
+              '$\\frac{3}{5}$',
+              '$-\\frac{3}{5}$'
+            ],
+            correctAnswer: 1,
+            explanation: '$\\sin^2\\theta = 1 - 9/25 = 16/25$. In Q IV, sine is negative: $\\sin\\theta = -4/5$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p1-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Pythagorean | $\sin^2\\theta+\cos^2\\theta=1$ | fundamental conversion |
-      | Tangent | $\\tan\\theta=\\frac{\sin\\theta}{\cos\\theta}$ | quotient rewrite |
-      | Cosine sum | $\cos(A+B)=\cos A\cos B-\sin A\sin B$ | angle combination |
-      | Sine double-angle | $\sin(2\\theta)=2\sin\\theta\cos\\theta$ | power reduction and simplification |
-      
-      ### Common pitfalls
-      - Do not treat identities as equations to solve unless the task requests solving.
-      - Keep track of domain restrictions when dividing by trig expressions.
-      - Choose one target form early to prevent circular verification.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-trigonometric-identities-precalc-p1-s4-input',
+      id: 'p1-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Identity Values**
-      
-      1) Compute $\sin^2 30^\circ + \cos^2 30^\circ$.
-      2) Compute $\\an 45^\circ$.
-      3) Compute $\sec 60^\circ$.
+**Pythagorean Identity Practice** 🧮
+
+**1)** Simplify $\\frac{\\cos^2\\theta}{1 - \\sin^2\\theta}$. Write the simplified result. (e.g., $\\frac{\\sin^2\\theta}{1 - \\cos^2\\theta} = \\frac{\\sin^2\\theta}{\\sin^2\\theta} = 1$)
+
+**2)** If $\\sec\\theta = \\frac{5}{4}$ and $\\theta$ is in Q I, find $\\tan\\theta$. Write as a fraction. (e.g., $\\sec\\alpha = \\frac{13}{5}$: $\\tan^2\\alpha = 169/25 - 1 = 144/25$, so $\\tan\\alpha = 12/5$)
+
+**3)** Simplify $\\sin^2\\theta \\cdot \\csc^2\\theta + \\cos^2\\theta \\cdot \\sec^2\\theta$. Write as an integer. (e.g., $\\sin\\theta \\cdot \\csc\\theta = 1$ since they're reciprocals)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1', '1', '2'],
-        hint1: 'Use the Pythagorean identity.',
-        hint2: 'Recall special-angle values.',
-        hint3: 'Use reciprocal: $\\sec\\heta=1/\\cos\\heta$.',
-        explanation: 'Pythagorean identity gives 1, tangent at 45° is 1, and secant at 60° is 2.'
+        correctAnswers: ['1', '3/4', '2'],
+        hint1: 'Replace $1 - \\sin^2\\theta$ with $\\cos^2\\theta$ in the denominator.',
+        hint2: '$\\tan^2\\theta = \\sec^2\\theta - 1 = 25/16 - 1 = 9/16$. Take the positive root (Q I).',
+        hint3: '$\\sin^2\\theta \\cdot \\csc^2\\theta = \\sin^2\\theta \\cdot \\frac{1}{\\sin^2\\theta} = 1$. Same logic for the second term.',
+        explanation: '1) $\\frac{\\cos^2\\theta}{\\cos^2\\theta} = 1$. 2) $\\tan^2\\theta = 25/16 - 1 = 9/16$, so $\\tan\\theta = 3/4$. 3) Each product equals $1$: $1 + 1 = 2$.'
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p1-s5-dropdown',
+      id: 'p1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Identity Matching** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Pythagorean identity',
-            options: ['$\\an\\heta=\\rac{\\sin\\heta}{\\cos\\heta}$', '$\\sin^2\\heta+\\cos^2\\heta=1$', 'sign behavior under $\\heta\\mapsto -\\heta$', '$\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs']
+            label: '$1 - \\cos^2\\theta$ simplifies to',
+            options: ['$\\tan^2\\theta$', '$\\sin^2\\theta$', '$\\sec^2\\theta$', '$\\cot^2\\theta$']
           },
           {
-            label: 'quotient identity',
-            options: ['relation between complementary angles', '$\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs', 'sign behavior under $\\heta\\mapsto -\\heta$', '$\\an\\heta=\\rac{\\sin\\heta}{\\cos\\heta}$']
+            label: '$\\sec^2\\theta - 1$ simplifies to',
+            options: ['$\\sin^2\\theta$', '$\\cos^2\\theta$', '$\\tan^2\\theta$', '$\\csc^2\\theta$']
           },
           {
-            label: 'reciprocal identity',
-            options: ['sign behavior under $\\heta\\mapsto -\\heta$', 'formula for trig of $A\\pm B$', '$\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs', 'relation between complementary angles']
+            label: 'Dividing $\\sin^2\\theta + \\cos^2\\theta = 1$ by $\\sin^2\\theta$ gives',
+            options: ['$1 + \\tan^2\\theta = \\sec^2\\theta$', '$1 + \\cot^2\\theta = \\csc^2\\theta$', '$\\sin^2\\theta + \\cos^2\\theta = 1$', '$\\sec^2\\theta - \\tan^2\\theta = 1$']
+          },
+          {
+            label: '$\\csc^2\\theta - \\cot^2\\theta$ always equals',
+            options: ['$0$', '$1$', '$2$', 'Depends on $\\theta$']
           }
         ],
-        correctAnswers: ['$\\sin^2\\heta+\\cos^2\\heta=1$', '$\\an\\heta=\\rac{\\sin\\heta}{\\cos\\heta}$', '$\\sec\\heta=\\rac1{\\cos\\heta}$ and analogs'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: Pythagorean identity, quotient identity, and reciprocal identity align with their exact definitions used in this part.'
+        correctAnswers: ['$\\sin^2\\theta$', '$\\tan^2\\theta$', '$1 + \\cot^2\\theta = \\csc^2\\theta$', '$1$'],
+        hint1: 'This is the most basic form of the Pythagorean identity rearranged.',
+        hint2: 'Start from $1 + \\tan^2\\theta = \\sec^2\\theta$ and isolate $\\tan^2\\theta$.',
+        hint3: 'Dividing by $\\sin^2\\theta$: $1 + \\frac{\\cos^2\\theta}{\\sin^2\\theta} = \\frac{1}{\\sin^2\\theta}$.',
+        explanation: '$1 - \\cos^2\\theta = \\sin^2\\theta$. $\\sec^2\\theta - 1 = \\tan^2\\theta$. Dividing by $\\sin^2\\theta$ gives $1 + \\cot^2\\theta = \\csc^2\\theta$. $\\csc^2\\theta - \\cot^2\\theta = 1$ always.'
       }
     },
     {
-      id: 'precalc-trigonometric-identities-precalc-p1-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to Pythagorean identity, quotient identity, and reciprocal identity so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-trigonometric-identities-precalc-p1-s7-mcq-applied',
+      id: 'p1-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is simplifying expressions before solving equations. Which term best anchors the next reasoning step if the key idea is: sign behavior under $\\heta\\mapsto -\\heta$?',
+            question: 'Simplify: $\\frac{\\tan^2\\theta}{\\sec^2\\theta}$',
             options: [
-              'Pythagorean identity',
-              'even-odd identity',
-              'quotient identity',
-              'reciprocal identity'
+              '$\\sin^2\\theta$',
+              '$\\cos^2\\theta$',
+              '$1$',
+              '$\\sec^2\\theta$'
             ],
-            correctAnswer: 1,
-            explanation: 'even-odd identity matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 0,
+            explanation: '$\\frac{\\tan^2\\theta}{\\sec^2\\theta} = \\frac{\\sin^2\\theta/\\cos^2\\theta}{1/\\cos^2\\theta} = \\sin^2\\theta$.'
           },
           {
-            question: 'A student is solving a mixed trigonometric identities prompt. Which term best anchors the next reasoning step if the key idea is: relation between complementary angles?',
+            question: 'If $\\cot\\theta = 7$ and $\\theta$ is in Q I, find $\\csc\\theta$.',
             options: [
-              'reciprocal identity',
-              'cofunction identity',
-              'sum identity',
-              'even-odd identity'
+              '$\\sqrt{50}$',
+              '$5\\sqrt{2}$',
+              '$7\\sqrt{2}$',
+              '$\\sqrt{48}$'
             ],
             correctAnswer: 1,
-            explanation: 'cofunction identity matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$\\csc^2\\theta = 1 + \\cot^2\\theta = 1 + 49 = 50$. So $\\csc\\theta = \\sqrt{50} = 5\\sqrt{2}$.'
           }
         ]
       }

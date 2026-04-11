@@ -2,190 +2,183 @@ export const precalcConicsPart6Data = {
   topicSlug: 'conic-sections-precalc',
   sections: [
     {
-      id: 'precalc-conic-sections-precalc-p6-s1-intro',
+      id: 'p6-intro',
       type: 'text' as const,
       content: `
-      ## Conic Sections: Modeling contexts with conic equations
-      
-      **Part 6 of 7**
-      
-      This part focuses on fitting a conic to engineering data. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **focus**: reference point used in geometric definitions of conics
-      - **directrix**: line used with a focus to define a parabola
-      - **eccentricity**: ratio that describes how stretched a conic is
-      
-      
-      ### Worked Example
-      Part 6 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🌍 Applications of Conic Sections
+
+**Part 6 of 7**
+
+Conics appear throughout science, engineering, and nature:
+
+### Planetary Orbits (Ellipses)
+Kepler's First Law: planets orbit the Sun in **ellipses** with the Sun at one focus.
+
+### Satellite Dishes & Headlights (Parabolas)
+The **reflective property** of parabolas focuses signals to a single point or projects light in parallel beams.
+
+### Hyperbolic Navigation (Hyperbolas)
+**LORAN** (Long Range Navigation) uses the difference in signal arrival times from two stations, which traces a hyperbola.
+
+### Architecture (All Conics)
+- **Elliptical** rooms (whispering galleries)
+- **Parabolic** arches and bridges
+- **Hyperbolic** cooling towers
       `
     },
     {
-      id: 'precalc-conic-sections-precalc-p6-s2-mcq-core',
+      id: 'p6-orbits',
+      type: 'text' as const,
+      content: `
+## 🪐 Orbital Mechanics
+
+A body under gravity follows a conic section. The type depends on its energy:
+
+| Energy | Orbit Type | Eccentricity |
+|:-------|:-----------|:-------------|
+| $E < 0$ (bound) | Ellipse | $0 \\leq e < 1$ |
+| $E = 0$ (escape) | Parabola | $e = 1$ |
+| $E > 0$ (unbound) | Hyperbola | $e > 1$ |
+
+### Example: Earth's Orbit
+
+$a = 1.496 \\times 10^8$ km, $e = 0.0167$
+
+- Perihelion (closest): $a(1-e) = 1.471 \\times 10^8$ km
+- Aphelion (farthest): $a(1+e) = 1.521 \\times 10^8$ km
+
+The nearly circular orbit ($e \\approx 0$) gives us relatively stable seasons.
+      `
+    },
+    {
+      id: 'p6-acoustics',
+      type: 'text' as const,
+      content: `
+## 🔊 Acoustic & Optical Applications
+
+### Whispering Gallery (Ellipse)
+
+In an elliptical room, sound from one focus reflects off the wall and converges at the other focus. Famous examples:
+- **St. Paul's Cathedral**, London
+- **National Statuary Hall**, U.S. Capitol
+
+### Parabolic Reflectors
+
+A parabolic mirror reflects all incoming parallel rays to the focus:
+- **Telescopes** (reflecting telescopes)
+- **Solar cookers**
+- **Microphone dishes** (for recording distant sounds)
+
+### Hyperbolic Mirrors
+
+Used in **Cassegrain telescopes**: the secondary mirror is hyperbolic, redirecting light from the primary parabolic mirror to a more convenient focal point.
+      `
+    },
+    {
+      id: 'p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Applications Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of focus.',
-            options: [
-              'ratio that describes how stretched a conic is',
-              'line used with a focus to define a parabola',
-              'reference point used in geometric definitions of conics',
-              'set of points equidistant from a focus and a directrix'
-            ],
-            correctAnswer: 2,
-            explanation: 'focus is defined as: reference point used in geometric definitions of conics.'
+            question: 'A comet with eccentricity $e = 1.2$ follows what kind of path?',
+            options: ['Circular', 'Elliptical', 'Parabolic', 'Hyperbolic'],
+            correctAnswer: 3,
+            explanation: '$e > 1$ → hyperbolic trajectory. The comet will not return.'
           },
           {
-            question: 'In fitting a conic to engineering data, which expression is the best starting model?',
-            options: [
-              '$\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1$',
-              '$(x-h)^2 + (y-k)^2 = r^2$',
-              '$\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1$',
-              '$(x-h)^2 = 4p(y-k)$'
-            ],
+            question: 'Why are satellite dishes parabolic?',
+            options: ['They are cheapest to manufacture', 'Parallel signals focus to the receiver at the focus', 'They look professional', 'They withstand wind better'],
             correctAnswer: 1,
-            explanation: 'Use $(x-h)^2 + (y-k)^2 = r^2$ first, then substitute known quantities from the prompt.'
+            explanation: 'Parabolic reflectors concentrate parallel incoming waves at the focus, where the receiver is placed.'
+          },
+          {
+            question: 'In a whispering gallery, the special acoustic points are the:',
+            options: ['Vertices', 'Foci', 'Centers', 'Endpoints of the minor axis'],
+            correctAnswer: 1,
+            explanation: 'Sound from one focus reflects off the elliptical wall and converges at the other focus.'
           }
         ]
       }
     },
     {
-      id: 'precalc-conic-sections-precalc-p6-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Circle | $(x-h)^2 + (y-k)^2 = r^2$ | center-radius modeling |
-      | Ellipse | $\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1$ | sum-of-distances relation |
-      | Hyperbola | $\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1$ | difference-of-distances relation |
-      | Parabola (vertical) | $(x-h)^2 = 4p(y-k)$ | focus/directrix geometry |
-      
-      ### Common pitfalls
-      - A parabola has one focus, while ellipse and hyperbola have two.
-      - Do not infer the center by reading signs without reversing them in $(x-h)$ and $(y-k)$.
-      - For ellipses and hyperbolas, identify the positive term before choosing major axis direction.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-conic-sections-precalc-p6-s4-input',
+      id: 'p6-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Conic Computations**
-      
-      Provide exact values when possible.
-      
-      1) For $(x-1)^2 = 8(y+2)$, find $p$ in $4p=8$.
-      2) For $(x-3)^2 + (y+1)^2 = 25$, find the radius.
-      3) For $
-      rac{x^2}{25}+
-      rac{y^2}{9}=1$, compute $c$ where $c^2=a^2-b^2$.
+**Application Calculations** 🧮
+
+**1)** A planet orbits with $a = 10$ AU and $e = 0.6$. Perihelion $= a(1-e) = $ ? AU
+
+**2)** Same planet: aphelion $= a(1+e) = $ ? AU
+
+**3)** A parabolic dish has equation $x^2 = 8y$ (in feet). The receiver should be placed at the focus: $y = $ ? feet
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '5', '4'],
-        hint1: 'Match coefficients in $(x-h)^2=4p(y-k)$.',
-        hint2: 'Use $r=\\sqrt{r^2}$ from circle standard form.',
-        hint3: 'For the ellipse, use $a=5$, $b=3$, then $c=\\sqrt{25-9}$.',
-        explanation: 'The values are $p=2$, radius from $r^2$ in standard form, and $c=4$ from focal relation.'
+        correctAnswers: ['4', '16', '2'],
+        hint1: '$10(1-0.6) = 10(0.4) = 4$.',
+        hint2: '$10(1+0.6) = 10(1.6) = 16$.',
+        hint3: '$x^2 = 4py$: $4p=8, p=2$. Focus at $(0, 2)$.',
+        explanation: '1) Perihelion: $4$ AU. 2) Aphelion: $16$ AU. 3) Receiver at $y=2$ feet above vertex.'
       }
     },
     {
-      id: 'precalc-conic-sections-precalc-p6-s5-dropdown',
+      id: 'p6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Real-World Conics** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'focus',
-            options: ['ratio that describes how stretched a conic is', 'line used with a focus to define a parabola', 'reference point used in geometric definitions of conics', 'set of points equidistant from a focus and a directrix']
+            label: 'Cooling towers at power plants are shaped like:',
+            options: ['Ellipses', 'Parabolas', 'Hyperboloids', 'Cylinders'],
+            correctAnswer: 2
           },
           {
-            label: 'directrix',
-            options: ['set of points at fixed radius from a center', 'set of points equidistant from a focus and a directrix', 'line used with a focus to define a parabola', 'ratio that describes how stretched a conic is']
+            label: 'LORAN navigation is based on:',
+            options: ['Ellipses (sum of distances)', 'Hyperbolas (difference of distances)', 'Parabolas (equal distances)', 'Circles (fixed distance)'],
+            correctAnswer: 1
           },
           {
-            label: 'eccentricity',
-            options: ['set of points equidistant from a focus and a directrix', 'set of points whose distances to two foci sum to a constant', 'ratio that describes how stretched a conic is', 'set of points at fixed radius from a center']
+            label: 'A ball thrown in a vacuum (no air) follows a:',
+            options: ['Circular arc', 'Parabolic arc', 'Hyperbolic arc', 'Straight line'],
+            correctAnswer: 1
+          },
+          {
+            label: 'The orbit of a body with exactly escape velocity is a:',
+            options: ['Circle', 'Ellipse', 'Parabola', 'Hyperbola'],
+            correctAnswer: 2
           }
         ],
-        correctAnswers: ['reference point used in geometric definitions of conics', 'line used with a focus to define a parabola', 'ratio that describes how stretched a conic is'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: focus, directrix, and eccentricity align with their exact definitions used in this part.'
+        correctAnswers: ['Hyperboloids', 'Hyperbolas (difference of distances)', 'Parabolic arc', 'Parabola'],
+        hint1: 'Cooling towers use hyperbolic shapes for structural strength.',
+        hint2: 'LORAN measures time differences → distance differences → hyperbola.',
+        hint3: 'Projectile motion under gravity: parabola.',
+        explanation: 'Cooling towers: hyperboloids. LORAN: hyperbolas. Projectiles: parabolas. Escape velocity: parabolic orbit ($e=1$).'
       }
     },
     {
-      id: 'precalc-conic-sections-precalc-p6-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to focus, directrix, and eccentricity so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-conic-sections-precalc-p6-s7-mcq-applied',
+      id: 'p6-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is fitting a conic to engineering data. Which term best anchors the next reasoning step if the key idea is: set of points equidistant from a focus and a directrix?',
-            options: [
-              'eccentricity',
-              'directrix',
-              'parabola',
-              'focus'
-            ],
+            question: 'An asteroid approaches the Sun on a hyperbolic path. It will:',
+            options: ['Enter a stable orbit', 'Crash into the Sun', 'Pass by and never return', 'Become a satellite'],
             correctAnswer: 2,
-            explanation: 'parabola matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$e > 1$ means hyperbolic — the asteroid has enough energy to escape. It passes by once.'
           },
           {
-            question: 'A student is solving a mixed conic sections prompt. Which term best anchors the next reasoning step if the key idea is: set of points at fixed radius from a center?',
-            options: [
-              'ellipse',
-              'parabola',
-              'eccentricity',
-              'circle'
-            ],
-            correctAnswer: 3,
-            explanation: 'circle matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'A reflecting telescope uses a parabolic primary mirror because:',
+            options: ['It is the cheapest shape', 'All parallel rays converge to one focal point', 'It magnifies more', 'It has no aberration at any angle'],
+            correctAnswer: 1,
+            explanation: 'The parabolic reflective property ensures all incoming light focuses at a single point.'
           }
         ]
       }

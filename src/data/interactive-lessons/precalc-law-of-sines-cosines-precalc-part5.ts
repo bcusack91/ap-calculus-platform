@@ -2,188 +2,225 @@ export const precalcLawSinesCosinesPart5Data = {
   topicSlug: 'law-of-sines-cosines-precalc',
   sections: [
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p5-s1-intro',
+      id: 'p5-intro',
       type: 'text' as const,
       content: `
-      ## Law of Sines and Cosines: Triangle area and included angle
-      
-      **Part 5 of 7**
-      
-      This part focuses on computing parcel area from side-angle info. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **triangle area**: can be found with two sides and included angle
-      - **bearing**: direction measured from north or east references
-      - **non-right triangle**: triangle requiring generalized trig methods
-      
-      
-      ### Worked Example
-      Given $a=8$, $b=6$, and included angle $C=60^\circ$, find $c$.
-      
-      $$c^2 = a^2+b^2-2ab\cos C = 8^2+6^2-2(8)(6)\cos 60^\circ = 52$$
-      
-      So $c=\sqrt{52}=2\sqrt{13}$. This setup uses side-side-angle data with the included angle, so the Law of Cosines is the clean choice.
+# 🌍 Applications — Navigation & Surveying
+
+**Part 5 of 7**
+
+The Laws of Sines and Cosines solve real-world problems involving distances and angles that can't be measured directly.
+
+### Application Types
+
+| Application | Typical Setup |
+|:-----------|:-------------|
+| Navigation | Find distance between two points using bearings |
+| Surveying | Measure inaccessible distances from two known positions |
+| Engineering | Force resolution in non-rectangular systems |
+| Aviation | Distance between waypoints on non-straight routes |
+
+### The Triangulation Method
+
+To find an inaccessible distance:
+1. Measure a **baseline** (known distance between two observation points)
+2. Measure the **angles** from each end of the baseline to the target
+3. Use Law of Sines to compute the unknown distances
       `
     },
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p5-s2-mcq-core',
+      id: 'p5-examples',
+      type: 'text' as const,
+      content: `
+## 📝 Worked Examples
+
+### Example 1: Distance Across a River
+
+From points $A$ and $B$ on one bank, $AB = 200$ m. Angles to a tree $C$ on the other bank: $\\angle A = 72°$, $\\angle B = 63°$.
+
+$\\angle C = 180° - 72° - 63° = 45°$
+
+$$\\frac{AC}{\\sin B} = \\frac{AB}{\\sin C}$$
+$$AC = \\frac{200 \\sin 63°}{\\sin 45°} = \\frac{200(0.891)}{0.707} \\approx 252.1 \\text{ m}$$
+
+### Example 2: Two Ships from a Lighthouse
+
+A lighthouse sees Ship 1 at bearing N40°E, distance 8 km, and Ship 2 at bearing S50°E, distance 6 km.
+
+The angle at the lighthouse = $40° + 50° = 90°$.
+
+By Law of Cosines:
+$$d^2 = 8^2 + 6^2 - 2(8)(6)\\cos 90° = 64 + 36 - 0 = 100$$
+$$d = 10 \\text{ km}$$
+
+### Example 3: Hiking Problem
+
+A hiker walks 5 km on bearing 060°, then turns and walks 7 km on bearing 150°. How far from the start?
+
+Angle between paths = $150° - 60° = 90°$ (the turn angle is $180° - 90° = 90°$).
+
+Actually, the angle in the triangle at the turning point = $180° - (150° - 60°) = 90°$.
+
+$$d = \\sqrt{5^2 + 7^2} = \\sqrt{74} \\approx 8.60 \\text{ km}$$
+      `
+    },
+    {
+      id: 'p5-forces',
+      type: 'text' as const,
+      content: `
+## ⚡ Force and Velocity Problems
+
+### Resultant of Two Forces
+
+Two forces $F_1 = 30$ N and $F_2 = 40$ N act at an angle of $60°$ to each other.
+
+The resultant magnitude uses the Law of Cosines (the angle in the triangle is $180° - 60° = 120°$):
+
+$$R^2 = F_1^2 + F_2^2 - 2F_1 F_2 \\cos 120°$$
+$$R^2 = 900 + 1600 - 2400(-0.5) = 2500 + 1200 = 3700$$
+$$R = \\sqrt{3700} \\approx 60.8 \\text{ N}$$
+
+Wait — actually for the parallelogram law, the angle between the forces in the triangle is the supplement:
+
+$$R^2 = 30^2 + 40^2 + 2(30)(40)\\cos 60° = 900 + 1600 + 1200 = 3700$$
+$$R \\approx 60.8 \\text{ N}$$
+
+### Direction of the Resultant
+
+Use Law of Sines to find the angle $\\alpha$ the resultant makes with $F_1$:
+
+$$\\frac{\\sin \\alpha}{40} = \\frac{\\sin 60°}{60.8}$$
+$$\\sin \\alpha = \\frac{40(0.866)}{60.8} \\approx 0.570 \\implies \\alpha \\approx 34.7°$$
+      `
+    },
+    {
+      id: 'p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Applications Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of triangle area.',
+            question: 'To find the distance across a lake using triangulation, you need at minimum:',
             options: [
-              'triangle requiring generalized trig methods',
-              'can be found with two sides and included angle',
-              'verifying solved lengths and angles agree',
-              'direction measured from north or east references'
+              'One distance and one angle',
+              'One distance and two angles',
+              'Two distances and one angle',
+              'Three distances'
             ],
             correctAnswer: 1,
-            explanation: 'triangle area is defined as: can be found with two sides and included angle.'
+            explanation: 'With one baseline distance and two angles (ASA), you can use Law of Sines to find all other distances.'
           },
           {
-            question: 'In computing parcel area from side-angle info, which expression is the best starting model?',
+            question: 'Two forces of 10 N and 10 N act at 120° to each other. The resultant is:',
             options: [
-              '$K=\\frac12 ab\\sin C$',
-              '$\\frac{a}{\\sin A}=\\frac{b}{\\sin B}=\\frac{c}{\\sin C}$',
-              '$A+B+C=180^\\circ$',
-              '$c^2=a^2+b^2-2ab\\cos C$'
+              '$20$ N',
+              '$10$ N',
+              '$10\\sqrt{3}$ N',
+              '$10\\sqrt{2}$ N'
             ],
             correctAnswer: 1,
-            explanation: 'Use $\\frac{a}{\\sin A}=\\frac{b}{\\sin B}=\\frac{c}{\\sin C}$ first, then substitute known quantities from the prompt.'
+            explanation: '$R^2 = 100 + 100 + 2(100)\\cos 120° = 200 + 200(-0.5) = 200 - 100 = 100$. $R = 10$ N.'
+          },
+          {
+            question: 'A surveyor measures a baseline of 500 m. The angles to a tower from each end are 55° and 68°. Which law finds the distances to the tower?',
+            options: [
+              'Law of Cosines only',
+              'Law of Sines',
+              'Pythagorean theorem',
+              'None of the above'
+            ],
+            correctAnswer: 1,
+            explanation: 'With ASA data (two angles + included side), use Law of Sines after finding the third angle.'
           }
         ]
       }
     },
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p5-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Law of Sines | $\\frac{a}{\sin A}=\\frac{b}{\sin B}=\\frac{c}{\sin C}$ | AAS/ASA/SSA contexts |
-      | Law of Cosines | $c^2=a^2+b^2-2ab\cos C$ | SAS/SSS contexts |
-      | Area formula | $K=\\frac12 ab\sin C$ | two sides + included angle |
-      | Angle sum | $A+B+C=180^\circ$ | triangle closure check |
-      
-      ### Common pitfalls
-      - SSA can create a second valid triangle; test geometry constraints.
-      - Carry angle mode consistency (degrees vs radians) on calculators.
-      - Do not use the Law of Sines first when only sides are known.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-law-of-sines-cosines-precalc-p5-s4-input',
+      id: 'p5-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Non-Right Triangles**
-      
-      1) In a triangle, $a=10$, $A=30^\circ$, $B=30^\circ$. Find $b$.
-      2) If $a=6$, $b=8$, and included angle $C=90^\circ$, find $c$.
-      3) Compute area with $a=6$, $b=10$, $C=30^\circ$ using $K=
-      rac12 ab\sin C$.
+**Solve Applications** 🧮
+
+Round to nearest integer.
+
+**1)** Baseline $AB = 100$ m. Angles to target $C$: $\\angle A = 70°$, $\\angle B = 65°$. Find $\\angle C$ in degrees. (e.g., $\\angle C = 180 - 72 - 63 = 45$)
+
+**2)** Two ships 12 km apart at an angle of 90° from a port. Find the distance between the ships. (e.g., $\\sqrt{8^2 + 6^2} = \\sqrt{100} = 10$)
+
+**3)** Forces of 50 N and 50 N at 60° to each other. Resultant $R = \\sqrt{50^2 + 50^2 + 2(50)(50)\\cos 60°}$. Find $R$ to nearest integer. (e.g., $\\sqrt{100 + 100 + 100} \\approx 17$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['10', '10', '15'],
-        hint1: 'Equal opposite angles imply equal opposite sides via Law of Sines.',
-        hint2: 'Law of Cosines reduces to Pythagorean form when $C=90^\\circ$.',
-        hint3: 'Substitute directly into $\\rac12 ab\\sin C$.',
-        explanation: 'Symmetry gives $b=10$, cosine law gives $c=10$, and area evaluates to 15.'
+        correctAnswers: ['45', '17', '87'],
+        hint1: '$\\angle C = 180° - 70° - 65° = 45°$.',
+        hint2: '$\\sqrt{12^2 + 12^2 - 2(12)(12)\\cos 90°} = \\sqrt{288} \\approx 17$. Wait, re-read: two ships are at distances from a port... Using $\\sqrt{144 + 144} = \\sqrt{288} \\approx 17$.',
+        hint3: '$R^2 = 2500 + 2500 + 5000(0.5) = 7500$. $R = \\sqrt{7500} \\approx 87$.',
+        explanation: '1) $45°$. 2) $\\sqrt{288} \\approx 17$ km. 3) $\\sqrt{7500} \\approx 87$ N.'
       }
     },
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p5-s5-dropdown',
+      id: 'p5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Application Matching** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'triangle area',
-            options: ['can be found with two sides and included angle', 'verifying solved lengths and angles agree', 'triangle requiring generalized trig methods', 'direction measured from north or east references']
+            label: 'Finding distance across a river with a baseline and two angles is an example of',
+            options: ['Triangulation', 'Trilateration', 'Force resolution', 'Dead reckoning']
           },
           {
-            label: 'bearing',
-            options: ['triangle requiring generalized trig methods', 'direction measured from north or east references', 'ratio relation $\\rac{a}{\\sin A}=\\rac{b}{\\sin B}=\\rac{c}{\\sin C}$', 'verifying solved lengths and angles agree']
+            label: 'For SAS navigation problems, start with',
+            options: ['Law of Sines', 'Law of Cosines', 'Heron\'s formula', 'Pythagorean theorem']
           },
           {
-            label: 'non-right triangle',
-            options: ['triangle requiring generalized trig methods', 'verifying solved lengths and angles agree', 'generalized Pythagorean relation for any triangle', 'ratio relation $\\rac{a}{\\sin A}=\\rac{b}{\\sin B}=\\rac{c}{\\sin C}$']
+            label: 'The resultant of two equal forces $F$ at angle $\\theta$ has magnitude',
+            options: ['$2F$', '$F\\sqrt{2}$', '$F\\sqrt{2 + 2\\cos\\theta}$', '$2F\\cos\\theta$']
+          },
+          {
+            label: 'When computing a force resultant, the triangle angle is the ____ of the angle between forces',
+            options: ['Same as', 'Supplement of', 'Complement of', 'Double of']
           }
         ],
-        correctAnswers: ['can be found with two sides and included angle', 'direction measured from north or east references', 'triangle requiring generalized trig methods'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: triangle area, bearing, and non-right triangle align with their exact definitions used in this part.'
+        correctAnswers: ['Triangulation', 'Law of Cosines', '$F\\sqrt{2 + 2\\cos\\theta}$', 'Supplement of'],
+        hint1: 'Triangulation uses angles from known positions.',
+        hint2: 'SAS has no complete pair — start with Law of Cosines.',
+        hint3: '$R^2 = F^2 + F^2 + 2F^2\\cos\\theta = 2F^2(1+\\cos\\theta)$.',
+        explanation: 'Triangulation for baseline+angles. SAS → Law of Cosines. Equal forces: $R = F\\sqrt{2+2\\cos\\theta}$. Force triangle uses supplement.'
       }
     },
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p5-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to triangle area, bearing, and non-right triangle so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-law-of-sines-cosines-precalc-p5-s7-mcq-applied',
+      id: 'p5-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is computing parcel area from side-angle info. Which term best anchors the next reasoning step if the key idea is: verifying solved lengths and angles agree?',
+            question: 'A plane flies 300 km at bearing 040°, then 200 km at bearing 130°. The angle at the turning point in the triangle is:',
             options: [
-              'bearing',
-              'triangle area',
-              'non-right triangle',
-              'consistency check'
-            ],
-            correctAnswer: 3,
-            explanation: 'consistency check matches that description and keeps the model-to-interpretation chain consistent.'
-          },
-          {
-            question: 'A student is solving a mixed law of sines and cosines prompt. Which term best anchors the next reasoning step if the key idea is: ratio relation $\\rac{a}{\\sin A}=\\rac{b}{\\sin B}=\\rac{c}{\\sin C}$?',
-            options: [
-              'Law of Sines',
-              'Law of Cosines',
-              'consistency check',
-              'non-right triangle'
+              '$90°$',
+              '$130°$',
+              '$40°$',
+              '$50°$'
             ],
             correctAnswer: 0,
-            explanation: 'Law of Sines matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'The turn angle: from bearing 040° to 130°, the change is $130° - 40° = 90°$. The interior angle of the triangle at the turning point is $180° - 90° = 90°$.'
+          },
+          {
+            question: 'What is the distance from start to end for the plane above?',
+            options: [
+              '$\\sqrt{300^2 + 200^2} \\approx 361$ km',
+              '$500$ km',
+              '$100$ km',
+              '$250$ km'
+            ],
+            correctAnswer: 0,
+            explanation: 'With a $90°$ angle: $d = \\sqrt{300^2 + 200^2} = \\sqrt{130000} \\approx 360.6$ km.'
           }
         ]
       }

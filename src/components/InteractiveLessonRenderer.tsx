@@ -132,12 +132,54 @@ function InlineLatex({ text, className }: { text: string; className?: string }) 
   )
 }
 
+// Normalize Unicode superscript digits to regular digits
+function normalizeSuperscripts(text: string): string {
+  const map: Record<string, string> = {
+    '⁰': '0', '¹': '1', '²': '2', '³': '3', '⁴': '4',
+    '⁵': '5', '⁶': '6', '⁷': '7', '⁸': '8', '⁹': '9'
+  }
+  return text.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g, ch => map[ch] || ch)
+}
+
+// Detect if a string looks like an electron configuration
+function looksLikeElectronConfig(text: string): boolean {
+  return /(\[[A-Za-z]{1,2}\]|[1-7][spdf]\d)/.test(text)
+}
+
+// Format electron configuration text with superscript JSX
+function FormatElectronConfig({ text }: { text: string }): React.ReactElement {
+  const regex = /(\[[A-Za-z]{1,2}\])|([1-7][spdf])(\d{1,2})/g
+  const parts: React.ReactNode[] = []
+  let lastIndex = 0
+  let match
+  let key = 0
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      const between = text.slice(lastIndex, match.index)
+      if (between.trim()) parts.push(<span key={key++}>{between}</span>)
+    }
+    if (match[1]) {
+      parts.push(<span key={key++}>{match[1]}</span>)
+    } else if (match[2] && match[3]) {
+      parts.push(<span key={key++}>{match[2]}<sup>{match[3]}</sup></span>)
+    }
+    lastIndex = match.index + match[0].length
+  }
+  if (lastIndex < text.length) {
+    const rest = text.slice(lastIndex)
+    if (rest.trim()) parts.push(<span key={key++}>{rest}</span>)
+  }
+
+  return <span className="font-mono text-lg tracking-tight">{parts}</span>
+}
+
 // Smart numeric answer comparison for sig fig tolerance
 // Handles trailing zeros, scientific notation, and minor rounding differences
 function isAnswerMatch(studentAnswer: string, correctAnswer: string): boolean {
   if (!studentAnswer || !correctAnswer) return false
-  const sa = studentAnswer.trim().toLowerCase().replace(/\s+/g, '')
-  const ca = correctAnswer.trim().toLowerCase().replace(/\s+/g, '')
+  const sa = normalizeSuperscripts(studentAnswer).trim().toLowerCase().replace(/\s+/g, '')
+  const ca = normalizeSuperscripts(correctAnswer).trim().toLowerCase().replace(/\s+/g, '')
 
   // Exact string match
   if (sa === ca) return true
@@ -3865,6 +3907,9 @@ function InputBoxExercise({
 
   const isCorrect = areAllAnswersCorrect(answers, correctAnswersList)
 
+  // Detect if any correct answer looks like electron configuration notation
+  const hasElectronConfigAnswers = correctAnswersList.some(a => looksLikeElectronConfig(a))
+
   // Add Q-labels to numbered questions so they match the answer boxes (Q1, Q2, etc.)
   const labeledContent = (section.content || '').replace(/^(\d+)\)/gm, (_, num) => `**Q${num}.**`)
 
@@ -3875,28 +3920,40 @@ function InputBoxExercise({
       {/* Inputs format: labeled input fields with descriptions */}
       {hasInputsFormat ? (
         <div className="space-y-4">
-          {exerciseInputs.map((input: ExerciseInput, index: number) => (
-            <div key={index} className="flex items-center gap-4 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <label className="flex-1 text-base font-medium text-gray-700 dark:text-gray-300">
-                <InlineLatex text={input.label} />
-              </label>
-              <input
-                ref={(el) => { inputRefs.current[index] = el }}
-                type="text"
-                value={answers[index]}
-                onChange={(e) => handleInputChange(index, e.target.value)}
-                className="w-32 px-3 py-2 text-lg text-center border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                disabled={isComplete || showAnswer}
-                placeholder="?"
-              />
-              {/* Per-input feedback */}
-              {hasSubmitted && (
-                <span className="text-xl">
-                  {isAnswerMatch(answers[index], correctAnswersList[index]) ? '✅' : '❌'}
-                </span>
+          {exerciseInputs.map((input: ExerciseInput, index: number) => {
+            const isEConfig = looksLikeElectronConfig(input.correctAnswer)
+            return (
+            <div key={index} className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+              <div className="flex items-center gap-4">
+                <label className="flex-1 text-base font-medium text-gray-700 dark:text-gray-300">
+                  <InlineLatex text={input.label} />
+                </label>
+                <input
+                  ref={(el) => { inputRefs.current[index] = el }}
+                  type="text"
+                  value={answers[index]}
+                  onChange={(e) => handleInputChange(index, e.target.value)}
+                  className={`${isEConfig ? 'w-64' : 'w-32'} px-3 py-2 text-lg text-center border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-200 bg-white dark:bg-gray-700 text-gray-900 dark:text-white`}
+                  disabled={isComplete || showAnswer}
+                  placeholder={isEConfig ? 'e.g. [Ne]3s23p5' : '?'}
+                />
+                {/* Per-input feedback */}
+                {hasSubmitted && (
+                  <span className="text-xl">
+                    {isAnswerMatch(answers[index], correctAnswersList[index]) ? '✅' : '❌'}
+                  </span>
+                )}
+              </div>
+              {/* Live formatted preview for electron config inputs */}
+              {isEConfig && answers[index].trim().length > 0 && (
+                <div className="mt-2 ml-2 flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                  <span>Preview:</span>
+                  <FormatElectronConfig text={normalizeSuperscripts(answers[index])} />
+                </div>
               )}
             </div>
-          ))}
+            )
+          })}
         </div>
       ) : (
         /* Original boxes format: simple grid of input squares */
@@ -3970,7 +4027,12 @@ function InputBoxExercise({
               {exerciseInputs.map((input: ExerciseInput, index: number) => (
                 <div key={index} className="pl-4 border-l-2 border-green-400">
                   <p className="font-medium text-green-900 dark:text-green-200">
-                    <InlineLatex text={input.label} />: <strong>{input.correctAnswer}</strong>
+                    <InlineLatex text={input.label} />:{' '}
+                    {looksLikeElectronConfig(input.correctAnswer) ? (
+                      <strong><FormatElectronConfig text={input.correctAnswer} /></strong>
+                    ) : (
+                      <strong>{input.correctAnswer}</strong>
+                    )}
                   </p>
                   {input.explanation && (
                     <p className="text-sm text-green-800 dark:text-green-300 mt-1">

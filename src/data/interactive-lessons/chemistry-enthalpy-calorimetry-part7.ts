@@ -4,13 +4,24 @@ export const chemEnthalpyCalorimetryPart7Data = {
     {
       id: 'eh7-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Synthesis & AP Review — Enthalpy and Calorimetry
+      content: `# 🎯 Synthesis & AP Review — Enthalpy and Calorimetry
 
 **Part 7 of 7 — Bringing It All Together**
 
-This final part integrates everything: energy flow, calorimetry, Hess\'s Law, and formation enthalpies. Master these connections and you\'ll be ready for any AP-level thermochemistry question.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'eh7-summary',
@@ -73,6 +84,8 @@ This final part integrates everything: energy flow, calorimetry, Hess\'s Law, an
 - Forgetting that $\\Delta H°_f = 0$ for elements in their standard states
 - Mixing up $q_{\\text{rxn}}$ and $q_{\\text{solution}}$ (they have opposite signs)
 - Not converting between J and kJ
+
+> ⚠️ **Unit Warning:** $q = mc\\Delta T$ gives joules. $\\Delta H°_f$ values are in kJ/mol. Always check your units before combining!
       `
     },
     {

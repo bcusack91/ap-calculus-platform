@@ -4,13 +4,30 @@ export const chemSolutionsSolubilityPart5Data = {
     {
       id: 'ss5-intro',
       type: 'text' as const,
-      content: `
-# 🔬 Osmotic Pressure and the van\'t Hoff Factor
+      content: `# 🔬 Osmotic Pressure and the van\'t Hoff Factor
 
 **Part 5 of 7 — $\\Pi = iMRT$, Electrolytes vs. Nonelectrolytes**
 
-Osmotic pressure is the fourth colligative property — and arguably the most important in biology and medicine. It governs water balance across cell membranes, IV fluid design, and kidney function. On the AP exam, you need to calculate it and connect it to the van\'t Hoff factor.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Osmosis |
+| Semipermeable Membrane |
+| Driving Force |
+| Direction Rules |
+| Biological Importance |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ss5-osmosis',
@@ -63,7 +80,7 @@ The solvent naturally moves to dilute the more concentrated side — this is an 
 
 **Osmotic pressure** is the minimum pressure that must be applied to the solution side to **prevent** osmosis.
 
-$$\\Pi = iMRT$$
+$$\\boxed{\\Pi = iMRT}$$
 
 where:
 - $\\Pi$ = osmotic pressure (atm)
@@ -86,7 +103,9 @@ With the van\'t Hoff factor for electrolytes: $\\Pi = iMRT$
 
 ### Worked Example
 
-Calculate the osmotic pressure at 25°C of a 0.100 M NaCl ($i = 2$) solution.
+> **Problem:** Calculate the osmotic pressure at 25°C of a 0.100 M NaCl ($i = 2$) solution.
+
+> **Solution:**
 
 $$T = 25 + 273 = 298 \\text{ K}$$
 

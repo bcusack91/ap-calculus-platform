@@ -2,186 +2,204 @@ export const precalcSystemsPart7Data = {
   topicSlug: 'systems-of-equations-precalc',
   sections: [
     {
-      id: 'precalc-systems-of-equations-precalc-p7-s1-intro',
+      id: 'p7-intro',
       type: 'text' as const,
       content: `
-      ## Systems of Equations: Mixed-method synthesis
-      
-      **Part 7 of 7**
-      
-      This part focuses on choosing fastest method per structure. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **coefficient matrix**: matrix containing variable coefficients
-      - **determinant test**: nonzero determinant implies unique 2x2 linear solution
-      - **solution set**: all ordered pairs satisfying every equation
-      
-      
-      ### Worked Example
-      Part 7 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🏆 Systems of Equations — Full Synthesis
+
+**Part 7 of 7**
+
+### Method Selection Guide
+
+| System Type | Best Method |
+|:-----------|:-----------|
+| One variable isolated | Substitution |
+| Coefficients nearly match | Elimination |
+| 3+ variables, systematic | Gaussian elimination |
+| Nonlinear | Substitution |
+| Optimization | Linear programming |
+| Integration prep | Partial fractions |
+
+### Solution Types Summary
+
+| Type | What Happens | Geometry |
+|:-----|:------------|:---------|
+| Unique | Consistent, one answer | Lines/curves cross |
+| None | Inconsistent, contradiction ($0=5$) | Parallel/no intersection |
+| Infinite | Dependent, identity ($0=0$) | Same line/overlap |
+
+### Key Formulas
+
+- Elimination: multiply to match, add/subtract
+- Substitution: isolate, plug in, solve
+- LP: evaluate objective at corner points
+- Partial fractions: factor, decompose, solve for constants
       `
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p7-s2-mcq-core',
+      id: 'p7-mixed',
+      type: 'text' as const,
+      content: `
+## 🔄 Mixed Practice Strategies
+
+### Quick-Solve Techniques
+
+**Symmetric systems**: $x+y=S, x-y=D \\implies x=\\frac{S+D}{2}, y=\\frac{S-D}{2}$
+
+**Product-Sum**: $x+y=s, xy=p$ → solve $t^2-st+p=0$
+
+**Three-variable shortcut**: Add all equations first to find $x+y+z$.
+
+### Example: Mixed Nonlinear
+
+$$\\begin{cases} x^2+y=10 \\\\ x+y^2=10 \\end{cases}$$
+
+By symmetry, try $x=y$: $x^2+x=10 \\implies x=\\frac{-1+\\sqrt{41}}{2} \\approx 2.7$
+
+But also check non-symmetric solutions: subtract equations:
+$x^2-y^2-(x-y)=0 \\implies (x-y)(x+y-1)=0$
+
+So either $x=y$ or $x+y=1$ — two families of solutions!
+
+### Common Pitfalls
+
+- Forgetting to check solutions in ALL original equations
+- Losing solutions when dividing by a variable (might be 0!)
+- Not verifying extraneous solutions from squaring
+      `
+    },
+    {
+      id: 'p7-connect',
+      type: 'text' as const,
+      content: `
+## 🔗 Calculus Connections
+
+### Systems Appear Everywhere
+
+**Related Rates (Calculus):** Set up systems relating rates of change.
+
+**Optimization (Calculus):** Lagrange multipliers create systems:
+$$\\nabla f = \\lambda \\nabla g$$
+
+**Differential Equations:** Systems of DEs govern:
+- Population dynamics (predator-prey)
+- Electrical circuits
+- Economic models
+
+### Linear Algebra Preview
+
+Systems can be written as matrix equations:
+
+$$\\begin{bmatrix} 2 & 1 \\\\ 1 & -1 \\end{bmatrix} \\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 7 \\\\ 2 \\end{bmatrix}$$
+
+This leads to **matrices** — our next topic!
+      `
+    },
+    {
+      id: 'p7-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Synthesis Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of coefficient matrix.',
-            options: [
-              'system with at least one solution',
-              'matrix containing variable coefficients',
-              'nonzero determinant implies unique 2x2 linear solution',
-              'all ordered pairs satisfying every equation'
-            ],
-            correctAnswer: 1,
-            explanation: 'coefficient matrix is defined as: matrix containing variable coefficients.'
+            question: '$\\begin{cases} 3x+2y=12 \\\\ 6x+4y=24 \\end{cases}$ has:',
+            options: ['One solution', 'No solution', 'Infinitely many', 'Two solutions'],
+            correctAnswer: 2,
+            explanation: 'Eq2 = 2×Eq1. Same line → infinitely many solutions.'
           },
           {
-            question: 'In choosing fastest method per structure, which expression is the best starting model?',
-            options: [
-              '$\\begin{cases}a_1x+b_1y=c_1\\\\a_2x+b_2y=c_2\\end{cases}$',
-              '$y=\\frac{a_1c_2-a_2c_1}{\\Delta}$',
-              '$x=\\frac{c_1b_2-c_2b_1}{\\Delta}$',
-              '$\\Delta=a_1b_2-a_2b_1$'
-            ],
+            question: 'Best approach: $\\begin{cases} y = x^2-3 \\\\ y = 2x+1 \\end{cases}$',
+            options: ['Elimination', 'Set equal: $x^2-3=2x+1$', 'Matrix method', 'Graphing only'],
+            correctAnswer: 1,
+            explanation: 'Both solved for $y$: set them equal and solve the quadratic.'
+          },
+          {
+            question: '$\\begin{cases} x+y+z = 12 \\\\ x-y+z = 4 \\end{cases}$: what can we determine?',
+            options: ['All three variables', 'Only $y = 4$', '$x + z = 8$ and $y = 4$', 'Nothing'],
             correctAnswer: 2,
-            explanation: 'Use $x=\\frac{c_1b_2-c_2b_1}{\\Delta}$ first, then substitute known quantities from the prompt.'
+            explanation: 'Add: $2x+2z=16 \\implies x+z=8$. Subtract: $2y=8 \\implies y=4$. $x,z$ need another eq.'
           }
         ]
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p7-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Cramer's x | $x=\\frac{c_1b_2-c_2b_1}{\Delta}$ | explicit solution form |
-      | Cramer's y | $y=\\frac{a_1c_2-a_2c_1}{\Delta}$ | explicit solution form |
-      | Linear system | $\\begin{cases}a_1x+b_1y=c_1\\a_2x+b_2y=c_2\end{cases}$ | two-variable framework |
-      | Determinant | $\Delta=a_1b_2-a_2b_1$ | uniqueness criterion |
-      
-      ### Common pitfalls
-      - Parallel lines in graph form indicate no solution.
-      - Arithmetic sign slips in elimination often flip outcomes.
-      - State whether the system has one, none, or infinitely many solutions.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-systems-of-equations-precalc-p7-s4-input',
+      id: 'p7-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Solving Systems**
-      
-      1) Solve for $x$: $x+y=10$, $x-y=2$.
-      2) Solve for $y$: $2x+3y=12$, $x-y=1$.
-      3) Compute determinant of $\\begin{bmatrix}2&1\\5&3\end{bmatrix}$.
+**Final Calculations** 🧮
+
+**1)** $x+y=10, xy=21$. Larger value = ?
+
+**2)** $\\frac{1}{(x-1)(x-2)}$ at $x=3$: value = ?
+
+**3)** Max of $P=x+2y$ at corners $(0,0),(4,0),(2,3),(0,5)$: max $P$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6', '2', '1'],
-        hint1: 'Add the two equations to eliminate $y$.',
-        hint2: 'Use substitution from $x=y+1$.',
-        hint3: 'Use $ad-bc$ for the determinant.',
-        explanation: 'The system gives $x=6$ and $y=2$, with determinant 1 confirming uniqueness.'
+        correctAnswers: ['7', '0.5', '10'],
+        hint1: '$t^2-10t+21=0 \\implies (t-3)(t-7)=0$.',
+        hint2: '$\\frac{1}{(2)(1)} = 0.5$.',
+        hint3: 'At $(0,5)$: $P = 0+10 = 10$.',
+        explanation: '1) $7$ (and 3). 2) $1/2$. 3) Check all: $0, 4, 8, 10$. Max = $10$.'
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p7-s5-dropdown',
+      id: 'p7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Systems Master** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'coefficient matrix',
-            options: ['system with at least one solution', 'matrix containing variable coefficients', 'nonzero determinant implies unique 2x2 linear solution', 'all ordered pairs satisfying every equation']
+            label: '2 equations, 3 unknowns typically gives:',
+            options: ['Unique solution', 'No solution', 'Infinitely many', 'Undefined'],
+            correctAnswer: 2
           },
           {
-            label: 'determinant test',
-            options: ['nonzero determinant implies unique 2x2 linear solution', 'all ordered pairs satisfying every equation', 'system with no common solution', 'system with at least one solution']
+            label: 'Partial fractions require the fraction to be:',
+            options: ['Improper', 'Proper', 'Unit', 'Complex'],
+            correctAnswer: 1
           },
           {
-            label: 'solution set',
-            options: ['equations represent same relation and infinitely many solutions', 'system with no common solution', 'system with at least one solution', 'all ordered pairs satisfying every equation']
+            label: '$0 = 0$ after elimination means:',
+            options: ['No solution', 'Unique solution', 'Dependent (infinite)', 'Error'],
+            correctAnswer: 2
+          },
+          {
+            label: 'Nonlinear systems can have:',
+            options: ['At most 2 solutions', 'Any number of solutions', 'Only odd numbers of solutions', 'At most 1 solution'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['matrix containing variable coefficients', 'nonzero determinant implies unique 2x2 linear solution', 'all ordered pairs satisfying every equation'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: coefficient matrix, determinant test, and solution set align with their exact definitions used in this part.'
+        correctAnswers: ['Infinitely many', 'Proper', 'Dependent (infinite)', 'Any number of solutions'],
+        hint1: 'Under-determined system.',
+        hint2: 'degree(num) < degree(den).',
+        hint3: '$0=0$ is always true: no new info.',
+        explanation: 'Under-determined: infinite. Proper fraction. $0=0$: dependent. Nonlinear: any count possible.'
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p7-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to coefficient matrix, determinant test, and solution set so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-systems-of-equations-precalc-p7-s7-mcq-applied',
+      id: 'p7-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is choosing fastest method per structure. Which term best anchors the next reasoning step if the key idea is: system with at least one solution?',
-            options: [
-              'coefficient matrix',
-              'solution set',
-              'consistent system',
-              'determinant test'
-            ],
-            correctAnswer: 2,
-            explanation: 'consistent system matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Decompose $\\frac{5}{x^2-1}$: $A$ in $\\frac{A}{x-1}+\\frac{B}{x+1}$?',
+            options: ['$5/2$', '$-5/2$', '$5$', '$-5$'],
+            correctAnswer: 0,
+            explanation: '$5 = A(x+1)+B(x-1)$. $x=1$: $5=2A \\implies A=5/2$.'
           },
           {
-            question: 'A student is solving a mixed systems of equations prompt. Which term best anchors the next reasoning step if the key idea is: system with no common solution?',
-            options: [
-              'solution set',
-              'dependent system',
-              'inconsistent system',
-              'consistent system'
-            ],
-            correctAnswer: 2,
-            explanation: 'inconsistent system matches that description and keeps the model-to-interpretation chain consistent.'
+            question: '$\\begin{cases} xy = 12 \\\\ x + y = 7 \\end{cases}$: solutions?',
+            options: ['$(3,4)$ and $(4,3)$', '$(2,6)$ and $(6,2)$', '$(3,4)$ only', 'No solution'],
+            correctAnswer: 0,
+            explanation: '$t^2-7t+12=0 \\implies (t-3)(t-4)=0$. Solutions: $(3,4)$ and $(4,3)$.'
           }
         ]
       }

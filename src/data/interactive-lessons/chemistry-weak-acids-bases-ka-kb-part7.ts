@@ -4,13 +4,24 @@ export const chemWeakAcidsBasesKaKbPart7Data = {
     {
       id: 'wk7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — Weak Acids, Bases, and $K_a$/$K_b$**
 
-This final part provides comprehensive AP-style review covering all weak acid/base concepts: $K_a$/$K_b$ calculations, ICE tables, the 5% approximation, percent ionization, polyprotic acids, and salt solutions.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'wk7-summary',
@@ -29,16 +40,21 @@ This final part provides comprehensive AP-style review covering all weak acid/ba
 | Percent ionization | $\\% = ([H^+]/C) \\times 100$ |
 | 5% rule threshold | $C/K_a > 400$ |
 
+$$\\boxed{[H^+] = \\sqrt{K_a \\cdot C}} \\qquad \\boxed{K_a \\times K_b = K_w} \\qquad \\boxed{pK_a + pK_b = 14}$$
 
 ---
 
 ### Decision Flowchart
+
+> 🔑 **Key Concept:** Follow this flowchart for any acid-base pH calculation:
 
 1. **Strong acid/base?** → Use concentration directly
 2. **Weak acid?** → ICE table with $K_a$
 3. **Weak base?** → ICE table with $K_b$, find $[OH^-]$ first
 4. **Salt?** → Identify hydrolyzable ion, use $K_b = K_w/K_a$ or $K_a = K_w/K_b$
 5. **Always check** the 5% approximation!
+
+> ⚠️ **Warning:** Forgetting the 5% check is a common AP exam mistake. If $C/K_a < 400$, use the quadratic formula!
       `
     },
     {

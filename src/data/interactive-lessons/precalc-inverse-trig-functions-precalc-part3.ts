@@ -2,197 +2,229 @@ export const precalcInverseTrigPart3Data = {
   topicSlug: 'inverse-trig-functions-precalc',
   sections: [
     {
-      id: 'precalc-inverse-trig-functions-precalc-p3-s1-intro',
+      id: 'p3-intro',
       type: 'text' as const,
       content: `
-      ## Inverse Trigonometric Functions: Evaluating inverse trig exactly
-      
-      **Part 3 of 7**
-      
-      This part focuses on evaluating exact special-angle outputs. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **arcsin**: inverse of sine on $[-
-      rac\pi2,
-      rac\pi2]$
-      - **arccos**: inverse of cosine on $[0,\pi]$
-      - **arctan**: inverse of tangent on $(-
-      rac\pi2,
-      rac\pi2)$
-      
-      
-      ### Worked Example
-      Part 3 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🎯 Evaluating Inverse Trig — Exact Values
+
+**Part 3 of 7**
+
+Evaluating inverse trig functions means finding **exact angle values** from the unit circle. The key is memorizing outputs for special inputs.
+
+### Complete Special-Value Table
+
+| $x$ | $\\arcsin x$ | $\\arccos x$ | $\\arctan x$ |
+|:----|:------------|:------------|:------------|
+| $-1$ | $-\\frac{\\pi}{2}$ | $\\pi$ | — |
+| $-\\frac{\\sqrt{3}}{2}$ | $-\\frac{\\pi}{3}$ | $\\frac{5\\pi}{6}$ | — |
+| $-\\frac{\\sqrt{2}}{2}$ | $-\\frac{\\pi}{4}$ | $\\frac{3\\pi}{4}$ | — |
+| $-\\frac{1}{2}$ | $-\\frac{\\pi}{6}$ | $\\frac{2\\pi}{3}$ | — |
+| $0$ | $0$ | $\\frac{\\pi}{2}$ | $0$ |
+| $\\frac{1}{2}$ | $\\frac{\\pi}{6}$ | $\\frac{\\pi}{3}$ | — |
+| $\\frac{\\sqrt{2}}{2}$ | $\\frac{\\pi}{4}$ | $\\frac{\\pi}{4}$ | — |
+| $\\frac{\\sqrt{3}}{2}$ | $\\frac{\\pi}{3}$ | $\\frac{\\pi}{6}$ | — |
+| $1$ | $\\frac{\\pi}{2}$ | $0$ | $\\frac{\\pi}{4}$ |
+
+### Arctan Special Values
+
+| $x$ | $\\arctan x$ |
+|:----|:------------|
+| $-\\sqrt{3}$ | $-\\frac{\\pi}{3}$ |
+| $-1$ | $-\\frac{\\pi}{4}$ |
+| $-\\frac{\\sqrt{3}}{3}$ | $-\\frac{\\pi}{6}$ |
+| $0$ | $0$ |
+| $\\frac{\\sqrt{3}}{3}$ | $\\frac{\\pi}{6}$ |
+| $1$ | $\\frac{\\pi}{4}$ |
+| $\\sqrt{3}$ | $\\frac{\\pi}{3}$ |
       `
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p3-s2-mcq-core',
+      id: 'p3-strategy',
+      type: 'text' as const,
+      content: `
+## 🧠 Evaluation Strategy
+
+### Step-by-Step Process
+
+$$\\boxed{\\text{1. Identify the function → 2. Recall its range → 3. Find the angle in that range}}$$
+
+### Example 1: $\\arcsin\\!\\left(-\\frac{\\sqrt{2}}{2}\\right)$
+
+1. Function: $\\arcsin$ → range is $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$
+2. Need $\\theta$ with $\\sin\\theta = -\\frac{\\sqrt{2}}{2}$ and $\\theta \\in [-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$
+3. $\\theta = -\\frac{\\pi}{4}$ ✓
+
+### Example 2: $\\arccos\\!\\left(-\\frac{1}{2}\\right)$
+
+1. Function: $\\arccos$ → range is $[0, \\pi]$
+2. Need $\\theta$ with $\\cos\\theta = -\\frac{1}{2}$ and $\\theta \\in [0, \\pi]$
+3. $\\theta = \\frac{2\\pi}{3}$ ✓
+
+### Example 3: Undefined Inputs
+
+$\\arcsin(2)$ is **undefined** — there's no angle whose sine equals $2$ (sine only outputs $[-1, 1]$).
+
+$\\arccos(-3)$ is also **undefined** for the same reason.
+
+$\\arctan(100)$ IS defined — tangent can take any real value, so arctan accepts all reals.
+      `
+    },
+    {
+      id: 'p3-practice',
+      type: 'text' as const,
+      content: `
+## 📝 More Practice
+
+### Example 4: Converting Between Degrees and Radians
+
+$\\arcsin(\\frac{1}{2}) = 30° = \\frac{\\pi}{6}$ rad
+
+Always be aware of whether the problem asks for degrees or radians!
+
+### Example 5: Tricky Negative Values
+
+$\\arccos(-\\frac{\\sqrt{3}}{2})$:
+- We know $\\cos 30° = \\frac{\\sqrt{3}}{2}$
+- For the negative input, the angle must be in Quadrant II: $180° - 30° = 150°$
+- $\\arccos(-\\frac{\\sqrt{3}}{2}) = 150° = \\frac{5\\pi}{6}$
+
+### Pattern for Negative Inputs
+
+| Function | Negative Input Formula |
+|:---------|:---------------------|
+| $\\arcsin(-x)$ | $= -\\arcsin(x)$ |
+| $\\arccos(-x)$ | $= \\pi - \\arccos(x)$ |
+| $\\arctan(-x)$ | $= -\\arctan(x)$ |
+      `
+    },
+    {
+      id: 'p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Exact Value Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of arcsin.',
+            question: '$\\arccos\\!\\left(-\\frac{\\sqrt{2}}{2}\\right)$ equals:',
             options: [
-              'applying one function to the output of another',
-              'inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$',
-              'inverse of sine on $[-\\rac\\pi2,\\rac\\pi2]$',
-              'inverse of cosine on $[0,\\pi]$'
+              '$\\frac{\\pi}{4}$',
+              '$\\frac{3\\pi}{4}$',
+              '$-\\frac{\\pi}{4}$',
+              '$\\frac{5\\pi}{4}$'
             ],
-            correctAnswer: 2,
-            explanation: 'arcsin is defined as: inverse of sine on $[-\\rac\\pi2,\\rac\\pi2]$.'
+            correctAnswer: 1,
+            explanation: '$\\cos \\frac{3\\pi}{4} = -\\frac{\\sqrt{2}}{2}$ and $\\frac{3\\pi}{4} \\in [0, \\pi]$.'
           },
           {
-            question: 'In evaluating exact special-angle outputs, which expression is the best starting model?',
+            question: 'Which is undefined?',
             options: [
-              '$\\tan(\\arctan x)=x$',
-              '$\\sin(\\arcsin x)=x$',
-              '$\\arctan x + \\arctan\\!\\left(\\frac1x\\right)=\\frac\\pi2\\;(x>0)$',
-              '$\\arccos x \\in [0,\\pi]$'
+              '$\\arctan(1000)$',
+              '$\\arcsin(0.5)$',
+              '$\\arccos(1.5)$',
+              '$\\arcsin(-1)$'
             ],
-            correctAnswer: 0,
-            explanation: 'Use $\\tan(\\arctan x)=x$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 2,
+            explanation: '$\\arccos(1.5)$ is undefined because $1.5$ is outside the domain $[-1, 1]$. Arctan accepts any real, while the other values are in range.'
+          },
+          {
+            question: '$\\arctan\\!\\left(-\\frac{\\sqrt{3}}{3}\\right)$ equals:',
+            options: [
+              '$\\frac{\\pi}{6}$',
+              '$-\\frac{\\pi}{6}$',
+              '$\\frac{5\\pi}{6}$',
+              '$-\\frac{\\pi}{3}$'
+            ],
+            correctAnswer: 1,
+            explanation: '$\\tan(-\\frac{\\pi}{6}) = -\\frac{\\sqrt{3}}{3}$ and $-\\frac{\\pi}{6} \\in (-\\frac{\\pi}{2}, \\frac{\\pi}{2})$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p3-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Tangent inverse | $\\tan(\arctan x)=x$ | all real inputs |
-      | Reciprocal relation | $\arctan x + \arctan\!\left(\\frac1x\\right)=\\frac\pi2\;(x>0)$ | angle decomposition |
-      | Inverse identity | $\sin(\arcsin x)=x$ | valid for $x\in[-1,1]$ |
-      | Principal output | $\arccos x \in [0,\pi]$ | range control |
-      
-      ### Common pitfalls
-      - Use principal intervals before comparing equivalent angle expressions.
-      - Inverse trig outputs are angles, not raw ratio values.
-      - A composition can fail if the inner output leaves the inverse domain.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-inverse-trig-functions-precalc-p3-s4-input',
+      id: 'p3-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Inverse Trig Values**
-      
-      Use degree values for angle outputs when prompted.
-      
-      1) Compute $rcsin\left(
-      rac{1}{2}
-      ight)$ in degrees.
-      2) Compute $rccos\left(
-      rac{\sqrt{2}}{2}
-      ight)$ in degrees.
-      3) Compute $\\an(rctan(
-      rac{3}{4}))$.
+**Compute Exact Values** 🧮
+
+Give answers in degrees.
+
+**1)** $\\arcsin(-1)$ = ? (e.g., $\\arcsin(1) = 90$ since $\\sin 90° = 1$)
+
+**2)** $\\arccos(-\\frac{1}{2})$ = ? (e.g., $\\arccos(\\frac{1}{2}) = 60$ since $\\cos 60° = \\frac{1}{2}$)
+
+**3)** $\\arctan(-\\sqrt{3})$ = ? (e.g., $\\arctan(\\sqrt{3}) = 60$ since $\\tan 60° = \\sqrt{3}$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['30', '45', '0.75'],
-        hint1: 'Use principal range for arcsin.',
-        hint2: 'Use principal range for arccos.',
-        hint3: 'A function and its inverse undo each other on valid inputs.',
-        explanation: 'Principal angles are 30° and 45°, and composition returns 0.75.'
+        correctAnswers: ['-90', '120', '-60'],
+        hint1: '$\\sin(-90°) = -1$ and $-90° \\in [-90°, 90°]$.',
+        hint2: 'For negative input to $\\arccos$: angle is in QII. $180° - 60° = 120°$.',
+        hint3: '$\\arctan(-\\sqrt{3}) = -\\arctan(\\sqrt{3}) = -60°$.',
+        explanation: '1) $\\arcsin(-1) = -90°$. 2) $\\arccos(-\\frac{1}{2}) = 120°$. 3) $\\arctan(-\\sqrt{3}) = -60°$.'
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p3-s5-dropdown',
+      id: 'p3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Quick Evaluation** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'arcsin',
-            options: ['applying one function to the output of another', 'inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$', 'inverse of sine on $[-\\rac\\pi2,\\rac\\pi2]$', 'inverse of cosine on $[0,\\pi]$']
+            label: '$\\arcsin(0)$ =',
+            options: ['$0$', '$\\frac{\\pi}{2}$', '$\\pi$', 'Undefined']
           },
           {
-            label: 'arccos',
-            options: ['applying one function to the output of another', 'triangle built from known trig ratios', 'inverse of cosine on $[0,\\pi]$', 'inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$']
+            label: '$\\arccos(0)$ =',
+            options: ['$0$', '$\\frac{\\pi}{2}$', '$\\pi$', 'Undefined']
           },
           {
-            label: 'arctan',
-            options: ['applying one function to the output of another', 'triangle built from known trig ratios', 'inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$', 'placing angles inside principal intervals']
+            label: '$\\arctan(0)$ =',
+            options: ['$0$', '$\\frac{\\pi}{2}$', '$\\pi$', 'Undefined']
+          },
+          {
+            label: '$\\arcsin(2)$ =',
+            options: ['$0$', '$\\frac{\\pi}{2}$', '$\\pi$', 'Undefined']
           }
         ],
-        correctAnswers: ['inverse of sine on $[-\\rac\\pi2,\\rac\\pi2]$', 'inverse of cosine on $[0,\\pi]$', 'inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: arcsin, arccos, and arctan align with their exact definitions used in this part.'
+        correctAnswers: ['$0$', '$\\frac{\\pi}{2}$', '$0$', 'Undefined'],
+        hint1: '$\\sin 0 = 0$.',
+        hint2: '$\\cos \\frac{\\pi}{2} = 0$.',
+        hint3: '$\\tan 0 = 0$; and $\\sin$ never equals $2$.',
+        explanation: '$\\arcsin(0) = 0$, $\\arccos(0) = \\frac{\\pi}{2}$, $\\arctan(0) = 0$, $\\arcsin(2)$ is undefined.'
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p3-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to arcsin, arccos, and arctan so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-inverse-trig-functions-precalc-p3-s7-mcq-applied',
+      id: 'p3-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is evaluating exact special-angle outputs. Which term best anchors the next reasoning step if the key idea is: applying one function to the output of another?',
+            question: '$\\arcsin\\!\\left(-\\frac{\\sqrt{3}}{2}\\right) + \\arccos\\!\\left(-\\frac{\\sqrt{3}}{2}\\right)$ equals:',
             options: [
-              'arcsin',
-              'arccos',
-              'composition',
-              'arctan'
+              '$0$',
+              '$\\pi$',
+              '$\\frac{\\pi}{2}$',
+              '$-\\frac{\\pi}{3}$'
             ],
             correctAnswer: 2,
-            explanation: 'composition matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'By the complementary identity: $\\arcsin x + \\arccos x = \\frac{\\pi}{2}$ for ANY $x \\in [-1,1]$, including $x = -\\frac{\\sqrt{3}}{2}$.'
           },
           {
-            question: 'A student is solving a mixed inverse trigonometric functions prompt. Which term best anchors the next reasoning step if the key idea is: triangle built from known trig ratios?',
+            question: 'How many of these are defined? $\\arcsin(-0.5)$, $\\arccos(1)$, $\\arctan(-99)$, $\\arcsin(\\pi)$',
             options: [
-              'composition',
-              'angle normalization',
-              'arctan',
-              'reference triangle'
+              '2',
+              '3',
+              '4',
+              '1'
             ],
-            correctAnswer: 3,
-            explanation: 'reference triangle matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 1,
+            explanation: '$\\arcsin(-0.5)$ ✓, $\\arccos(1)$ ✓, $\\arctan(-99)$ ✓ (arctan accepts all reals), $\\arcsin(\\pi)$ ✗ ($\\pi \\approx 3.14 > 1$). Three are defined.'
           }
         ]
       }

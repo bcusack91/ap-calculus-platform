@@ -4,13 +4,30 @@ export const chemReactionQuotientLeChatPart5Data = {
     {
       id: 'ql5-intro',
       type: 'text' as const,
-      content: `
-# 🔄 Catalysts and Inert Gas Addition
+      content: `# 🔄 Catalysts and Inert Gas Addition
 
 **Part 5 of 7 — Stresses That Don\'t Shift Equilibrium**
 
-Not every change to a system causes an equilibrium shift. Two important cases: **catalysts** and **inert gas addition** (at constant volume).
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚖️ Catalysts and Equilibrium |
+| What Catalysts Do |
+| Key Facts About Catalysts at Equilibrium |
+| Why No Shift? |
+| What Catalysts ARE Useful For |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ql5-catalysts',
@@ -40,7 +57,7 @@ A catalyst speeds up a reaction by providing an **alternative pathway** with a l
 
 ### Why No Shift?
 
-A catalyst speeds up both the forward and reverse reactions by the same factor. Since both rates increase equally, the ratio of rates (and hence the equilibrium position) doesn\'t change.
+> ⚠️ **Warning:** A catalyst does **not** shift equilibrium. It speeds up both the forward and reverse reactions by the same factor. The equilibrium position and K are unchanged — you just get there faster.
 
 
 ---
@@ -107,7 +124,7 @@ Adding inert gas at constant pressure:
 
 ### AP Exam Note
 
-On the AP exam, "adding an inert gas" typically means at **constant volume** unless stated otherwise. The answer is usually **no effect**.
+> 💡 **Tip:** On the AP exam, "adding an inert gas" typically means at **constant volume** unless stated otherwise. The answer is usually **no effect** on equilibrium.
       `
     },
     {
@@ -159,6 +176,8 @@ On the AP exam, "adding an inert gas" typically means at **constant volume** unl
       type: 'text' as const,
       content: `
 ## 📋 Complete Summary of All Stresses
+
+> 🔑 **Key Concept:** Only **temperature** changes K. Catalysts and inert gas (at constant V) cause **no shift**. All other stresses shift the position but leave K the same.
 
 | Stress | Shift Direction | K Changes? |
 |--------|----------------|------------|

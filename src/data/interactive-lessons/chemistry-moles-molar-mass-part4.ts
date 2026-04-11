@@ -4,13 +4,30 @@ export const chemMolesMolarMassPart4Data = {
     {
       id: 'mm4-intro',
       type: 'text' as const,
-      content: `
-# 📊 Percent Composition
+      content: `# 📊 Percent Composition
 
 **Part 4 of 7 — What's in Your Compound?**
 
-When chemists analyze a substance, one of the first questions they ask is: "What percentage of the mass comes from each element?" This is called **percent composition**, and it is a powerful tool for identifying compounds and determining formulas.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Mass Percent Formula |
+| Example 1 |
+| Example 2 |
+| 🔍 Finding Empirical Formula from Percent Composition |
+| Method |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'mm4-definition',
@@ -20,7 +37,9 @@ When chemists analyze a substance, one of the first questions they ask is: "What
 
 The **mass percent** of an element in a compound is:
 
-$$\\% \\text{ by mass} = \\frac{\\text{mass of element in 1 mol of compound}}{\\text{molar mass of compound}} \\times 100\\%$$
+$$\\boxed{\\% \\text{ by mass} = \\frac{\\text{mass of element in 1 mol of compound}}{\\text{molar mass of compound}} \\times 100\\%}$$
+
+> 🔑 **Key Concept:** Percent composition tells you what fraction of a compound's mass comes from each element — essential for identifying unknown compounds.
 
 
 ---
@@ -68,6 +87,8 @@ If you know the percent composition, you can determine the **empirical formula**
 ---
 
 ### Method
+
+> 💡 **Tip:** By assuming exactly 100 g, every percentage converts directly to grams — making the math much simpler!
 
 1. **Assume 100 g** of the compound (so percentages become grams directly)
 2. **Convert grams to moles** for each element: $n = m/M$

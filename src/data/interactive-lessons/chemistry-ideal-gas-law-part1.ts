@@ -4,15 +4,30 @@ export const chemIdealGasLawPart1Data = {
     {
       id: 'gl1-intro',
       type: 'text' as const,
-      content: `
-# 🌬️ Gas Properties & Kinetic Molecular Theory
+      content: `# 🌬️ Gas Properties & Kinetic Molecular Theory
 
 **Part 1 of 7 — Understanding Gas Behavior**
 
-Gases are everywhere — the air you breathe, the atmosphere above you, the propane in a grill tank. What makes gases unique among the states of matter is their ability to **expand to fill any container**, be **easily compressed**, and exert **pressure** on the walls of their container.
+---
 
-In this lesson, we explore the four key measurable properties of gases and the **kinetic molecular theory (KMT)** that explains gas behavior at the molecular level.
-      `
+### Topics in This Part
+
+| Section |
+|---------|
+| 💨 The Four Gas Variables |
+| Pressure |
+| Temperature |
+| Volume |
+| Amount |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gl1-four-variables',
@@ -46,7 +61,9 @@ Key conversions:
 
 Temperature must always be in **Kelvin** for gas law calculations:
 
-$$T(K) = T(°C) + 273.15$$
+$$\\boxed{T(K) = T(°C) + 273.15}$$
+
+> ⚠️ **Warning:** Always convert to Kelvin before any gas law calculation. Using Celsius will give incorrect results!
 
 At $0 \\text{ K}$ (absolute zero), molecular motion theoretically stops.
 
@@ -79,9 +96,11 @@ The kinetic molecular theory describes an **ideal gas** with the following assum
 4. **No intermolecular forces** — gas particles don't attract or repel each other.
 5. **Average kinetic energy is proportional to temperature** (in Kelvin):
 
-$$KE_{\\text{avg}} = \\frac{3}{2}k_BT$$
+$$\\boxed{KE_{\\text{avg}} = \\frac{3}{2}k_BT}$$
 
 where $k_B = 1.38 \\times 10^{-23}$ J/K is the Boltzmann constant.
+
+> 🔑 **Key Concept:** Average kinetic energy depends *only* on temperature — not on the identity or mass of the gas.
 
 
 ---
@@ -90,7 +109,7 @@ where $k_B = 1.38 \\times 10^{-23}$ J/K is the Boltzmann constant.
 
 The average speed of gas molecules depends on temperature and molar mass:
 
-$$v_{\\text{rms}} = \\sqrt{\\frac{3RT}{M}}$$
+$$\\boxed{v_{\\text{rms}} = \\sqrt{\\frac{3RT}{M}}}$$
 
 where $R = 8.314$ J/(mol·K) and $M$ is the molar mass in kg/mol.
 

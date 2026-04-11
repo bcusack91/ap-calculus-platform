@@ -4,13 +4,30 @@ export const chemWeakAcidsBasesKaKbPart5Data = {
     {
       id: 'wk5-intro',
       type: 'text' as const,
-      content: `
-# 📈 Percent Ionization and Polyprotic Acids
+      content: `# 📈 Percent Ionization and Polyprotic Acids
 
 **Part 5 of 7 — Advanced Weak Acid Concepts**
 
-This part covers two important topics: how concentration affects the degree of dissociation, and how acids with multiple ionizable protons behave.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚛️ Percent Ionization |
+| Key Trend |
+| Mathematical Proof |
+| Example: 0.10 M vs 0.010 M Acetic Acid |
+| 🧪 Polyprotic Acids |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'wk5-percent-ionization',
@@ -18,14 +35,14 @@ This part covers two important topics: how concentration affects the degree of d
       content: `
 ## ⚛️ Percent Ionization
 
-$$\\text{Percent ionization} = \\frac{[H^+]_{eq}}{[HA]_0} \\times 100\\%$$
+$$\\boxed{\\text{Percent ionization} = \\frac{[H^+]_{eq}}{[HA]_0} \\times 100\\%}$$
 
 
 ---
 
 ### Key Trend
 
-For a given weak acid, **diluting** the solution **increases** percent ionization.
+> 🔑 **Key Concept:** For a given weak acid, **diluting** the solution **increases** percent ionization.
 
 Why? Le Chatelier\'s principle: dilution shifts the equilibrium $HA \\rightleftharpoons H^+ + A^-$ to the **right** (toward more ions, since there are more moles of product than reactant).
 
@@ -85,7 +102,7 @@ $$HPO_4^{2-} \\rightleftharpoons H^+ + PO_4^{3-} \\qquad K_{a3} = 4.8 \\times 10
 
 ### Critical Rule
 
-$$K_{a1} \\gg K_{a2} \\gg K_{a3}$$
+$$\\boxed{K_{a1} \\gg K_{a2} \\gg K_{a3}}$$
 
 Each successive dissociation is **much weaker** because it\'s harder to remove $H^+$ from an increasingly negative ion.
 
@@ -94,7 +111,7 @@ Each successive dissociation is **much weaker** because it\'s harder to remove $
 
 ### Practical Consequence
 
-For pH calculations, **only the first dissociation matters** (in most cases). The second and third contribute negligible additional $[H^+]$.
+> 💡 **Tip:** For pH calculations, **only the first dissociation matters** (in most cases). The second and third contribute negligible additional $[H^+]$.
       `
     },
     {

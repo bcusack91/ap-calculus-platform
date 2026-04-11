@@ -4,13 +4,24 @@ export const chemReactionTypesPart6Data = {
     {
       id: 'rt6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Problem-Solving Workshop
+      content: `# 🛠️ Problem-Solving Workshop
 
 **Part 6 of 7 — Identifying, Balancing, and Predicting**
 
-It\'s time to put together everything you\'ve learned about reaction types. In this workshop, you\'ll practice the complete workflow: **identify** the reaction type, **predict** the products, and **balance** the equation.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'rt6-workflow',
@@ -19,6 +30,8 @@ It\'s time to put together everything you\'ve learned about reaction types. In t
 ## 📌 The Complete Workflow
 
 ### Step 1: Identify the Reaction Type
+
+> 💡 **Tip:** On the AP exam, quickly classify reactions by counting reactants/products and looking for O₂, free elements, or ionic compounds exchanging partners.
 
 | Clue | Reaction Type |
 |------|--------------|
@@ -63,35 +76,47 @@ Use coefficients. Check every atom. Simplify to smallest whole numbers.
 
 ### Example 1
 
-**Given:** $\\text{Mg} + \\text{N}_2 \\rightarrow$ ?
+> **Problem:** $\\text{Mg} + \\text{N}_2 \\rightarrow$ ?
+
+> **Solution:**
 
 1. **Type:** Two elements combining → **Synthesis**
 2. **Product:** Mg²⁺ + N³⁻ → Mg₃N₂ (cross charges: 3 Mg, 2 N)
-3. **Balance:** $3\\text{Mg} + \\text{N}_2 \\rightarrow \\text{Mg}_3\\text{N}_2$ ✓
+3. **Balance:**
+
+$$\\boxed{3\\text{Mg} + \\text{N}_2 \\rightarrow \\text{Mg}_3\\text{N}_2}$$
 
 
 ---
 
 ### Example 2
 
-**Given:** $\\text{Fe} + \\text{AgNO}_3 \\rightarrow$ ?
+> **Problem:** $\\text{Fe} + \\text{AgNO}_3 \\rightarrow$ ?
+
+> **Solution:**
 
 1. **Type:** Element + compound → **Single replacement**
 2. **Activity series:** Fe is above Ag → reaction proceeds
 3. **Product:** Fe replaces Ag. Fe has charge +2 → Fe(NO₃)₂ + Ag
-4. **Balance:** $\\text{Fe} + 2\\text{AgNO}_3 \\rightarrow \\text{Fe(NO}_3)_2 + 2\\text{Ag}$ ✓
+4. **Balance:**
+
+$$\\boxed{\\text{Fe} + 2\\text{AgNO}_3 \\rightarrow \\text{Fe(NO}_3)_2 + 2\\text{Ag}}$$
 
 
 ---
 
 ### Example 3
 
-**Given:** $\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow$ ?
+> **Problem:** $\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow$ ?
+
+> **Solution:**
 
 1. **Type:** Two ionic compounds → **Double replacement**
 2. **Swap:** Na⁺ with Cl⁻ → NaCl; Ca²⁺ with CO₃²⁻ → CaCO₃
 3. **Driving force:** CaCO₃ is insoluble → precipitate forms ✓
-4. **Balance:** $\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow \\text{CaCO}_3\\downarrow + 2\\text{NaCl}$ ✓
+4. **Balance:**
+
+$$\\boxed{\\text{Na}_2\\text{CO}_3 + \\text{CaCl}_2 \\rightarrow \\text{CaCO}_3\\downarrow + 2\\text{NaCl}}$$
       `
     },
     {

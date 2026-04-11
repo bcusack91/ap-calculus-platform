@@ -4,13 +4,29 @@ export const chemAcidBaseTheoriesPhPart2Data = {
     {
       id: 'ab2-intro',
       type: 'text' as const,
-      content: `
-# 🔄 Brønsted-Lowry Acids and Bases
+      content: `# 🔄 Brønsted-Lowry Acids and Bases
 
 **Part 2 of 7 — Proton Donors and Acceptors**
 
-The Brønsted-Lowry model expands our understanding of acids and bases beyond aqueous solutions. Instead of focusing on $H^+$ and $OH^-$ production, it centers on **proton transfer**.
-      `
+---
+
+### Arrhenius vs. Brønsted-Lowry
+
+| Feature | Arrhenius | Brønsted-Lowry |
+|---------|----------|----------------|
+| Acid definition | Produces $H^+$ in water | Donates a proton ($H^+$) |
+| Base definition | Produces $OH^-$ in water | Accepts a proton |
+| Works in... | Aqueous solutions only | Any solvent |
+| Introduces... | — | Conjugate pairs |
+
+> 🔑 **Why this matters:** The Brønsted-Lowry model is what the AP exam uses most — conjugate acid-base pairs appear in nearly every acid-base question.
+
+---
+
+### What You'll Master in Part 2
+- Identifying proton donors (acids) and proton acceptors (bases)
+- Writing conjugate acid-base pairs for any reaction
+- Recognizing amphoteric substances like water`
     },
     {
       id: 'ab2-definition',
@@ -29,6 +45,8 @@ The Brønsted-Lowry model expands our understanding of acids and bases beyond aq
 ### Key Advantage
 
 This definition works in **any solvent** — not just water!
+
+> 🔑 Unlike Arrhenius, Brønsted-Lowry doesn't require water — any proton transfer counts.
 
 
 ---
@@ -50,7 +68,7 @@ $$NH_3(aq) + H_2O(l) \\rightleftharpoons NH_4^+(aq) + OH^-(aq)$$
 - $NH_3$ **accepts** a proton → **base**
 - $H_2O$ **donates** a proton → **acid**
 
-Notice: water can act as either an acid or a base! This is called being **amphoteric** (or **amphiprotic**).
+> 💡 Water can act as either an acid or a base! This is called being **amphoteric** (or **amphiprotic**).
       `
     },
     {
@@ -81,14 +99,14 @@ $$\\underbrace{HA}_{\\text{acid}} + \\underbrace{B}_{\\text{base}} \\rightleftha
 
 ### Critical Rule
 
-A conjugate pair always differs by exactly **one proton** ($H^+$).
+> 🔑 A conjugate pair always differs by exactly **one proton** ($H^+$).
 
 
 ---
 
 ### Strength Relationship
 
-**Strong acid → very weak conjugate base** (and vice versa)
+> ⚠️ **Strong acid → very weak conjugate base** (and vice versa)
 
 - $HCl$ is strong → $Cl^-$ is a negligible base (does not accept protons)
 - $CH_3COOH$ is weak → $CH_3COO^-$ is a moderate conjugate base
@@ -204,11 +222,11 @@ For the reaction: $NH_3 + H_2O \\rightleftharpoons NH_4^+ + OH^-$
 
 Identify the conjugate partners:
 
-**1)** What is the conjugate base of $H_2CO_3$? (Enter the chemical formula, e.g. HCO3-)
+**1)** What is the conjugate base of $H_2CO_3$? (Enter the chemical formula, e.g. Cl-)
 
-**2)** What is the conjugate acid of $PO_4^{3-}$? (Enter the chemical formula, e.g. HPO42-)
+**2)** What is the conjugate acid of $PO_4^{3-}$? (Enter the chemical formula, e.g. H2SO4)
 
-**3)** What is the conjugate base of $H_2O$? (Enter the chemical formula, e.g. OH-)
+**3)** What is the conjugate base of $H_2O$? (Enter the chemical formula, e.g. F-)
       `,
       exercise: {
         boxes: 3,

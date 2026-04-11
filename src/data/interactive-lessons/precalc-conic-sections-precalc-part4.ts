@@ -2,190 +2,184 @@ export const precalcConicsPart4Data = {
   topicSlug: 'conic-sections-precalc',
   sections: [
     {
-      id: 'precalc-conic-sections-precalc-p4-s1-intro',
+      id: 'p4-intro',
       type: 'text' as const,
       content: `
-      ## Conic Sections: Hyperbolas and asymptotic behavior
-      
-      **Part 4 of 7**
-      
-      This part focuses on interpreting difference-of-distances loci. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **hyperbola**: set of points whose distances to two foci differ by a constant
-      - **vertex**: turning point or endpoint on a principal axis
-      - **focus**: reference point used in geometric definitions of conics
-      
-      
-      ### Worked Example
-      Part 4 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📐 The Hyperbola
+
+**Part 4 of 7**
+
+### Definition
+
+A **hyperbola** is the set of all points where the **difference** of distances to two foci is constant: $|d_1 - d_2| = 2a$.
+
+### Standard Forms (Center at Origin)
+
+| Opens | Equation | Vertices | Foci | Asymptotes |
+|:------|:---------|:---------|:-----|:-----------|
+| Left-Right | $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ | $(\\pm a, 0)$ | $(\\pm c, 0)$ | $y = \\pm\\frac{b}{a}x$ |
+| Up-Down | $\\frac{y^2}{a^2}-\\frac{x^2}{b^2}=1$ | $(0, \\pm a)$ | $(0, \\pm c)$ | $y = \\pm\\frac{a}{b}x$ |
+
+Key relationship: $c^2 = a^2 + b^2$ (note the **+** sign, unlike the ellipse!)
       `
     },
     {
-      id: 'precalc-conic-sections-precalc-p4-s2-mcq-core',
+      id: 'p4-example',
+      type: 'text' as const,
+      content: `
+## 📝 Worked Example
+
+### Analyze $\\frac{x^2}{9} - \\frac{y^2}{16} = 1$
+
+$a^2 = 9, b^2 = 16 \\implies a = 3, b = 4$
+
+$c^2 = 9 + 16 = 25 \\implies c = 5$
+
+- **Center**: $(0, 0)$
+- **Vertices**: $(\\pm 3, 0)$
+- **Foci**: $(\\pm 5, 0)$
+- **Asymptotes**: $y = \\pm\\frac{4}{3}x$
+- **Eccentricity**: $e = \\frac{c}{a} = \\frac{5}{3} \\approx 1.67$
+
+### Graphing Strategy
+
+1. Plot vertices at $(\\pm a, 0)$
+2. Mark co-vertices at $(0, \\pm b)$
+3. Draw the **central rectangle** through these four points
+4. Draw asymptotes as diagonals of this rectangle
+5. Sketch the hyperbola approaching but never touching the asymptotes
+      `
+    },
+    {
+      id: 'p4-theory',
+      type: 'text' as const,
+      content: `
+## 🧠 Hyperbola vs. Ellipse
+
+| Property | Ellipse | Hyperbola |
+|:---------|:--------|:----------|
+| Definition | $d_1 + d_2 = 2a$ | $|d_1 - d_2| = 2a$ |
+| $c$ relationship | $c^2 = a^2 - b^2$ | $c^2 = a^2 + b^2$ |
+| Shape | Closed curve | Two open branches |
+| Eccentricity | $0 < e < 1$ | $e > 1$ |
+| Asymptotes | None | $y = \\pm\\frac{b}{a}x$ |
+
+### Eccentricity of Hyperbolas
+
+- $e$ close to $1$: branches open very narrowly
+- $e = \\sqrt{2}$: **rectangular** hyperbola ($a = b$)
+- $e$ large: branches open very widely
+
+> 💡 The **conjugate axis** has length $2b$; the **transverse axis** has length $2a$ and connects the vertices.
+      `
+    },
+    {
+      id: 'p4-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Hyperbola Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of hyperbola.',
-            options: [
-              'set of points whose distances to two foci differ by a constant',
-              'line used with a focus to define a parabola',
-              'turning point or endpoint on a principal axis',
-              'reference point used in geometric definitions of conics'
-            ],
-            correctAnswer: 0,
-            explanation: 'hyperbola is defined as: set of points whose distances to two foci differ by a constant.'
+            question: 'Which equation represents a hyperbola opening up and down?',
+            options: ['$\\frac{x^2}{4}-\\frac{y^2}{9}=1$', '$\\frac{y^2}{4}-\\frac{x^2}{9}=1$', '$\\frac{x^2}{4}+\\frac{y^2}{9}=1$', '$x^2=4y$'],
+            correctAnswer: 1,
+            explanation: '$\\frac{y^2}{a^2}-\\frac{x^2}{b^2}=1$ opens up-down. Positive $y^2$ term is first.'
           },
           {
-            question: 'In interpreting difference-of-distances loci, which expression is the best starting model?',
-            options: [
-              '$\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1$',
-              '$\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1$',
-              '$(x-h)^2 + (y-k)^2 = r^2$',
-              '$(x-h)^2 = 4p(y-k)$'
-            ],
-            correctAnswer: 0,
-            explanation: 'Use $\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1$ first, then substitute known quantities from the prompt.'
+            question: 'For $\\frac{x^2}{25}-\\frac{y^2}{144}=1$, find $c$:',
+            options: ['$11$', '$12$', '$13$', '$\\sqrt{119}$'],
+            correctAnswer: 2,
+            explanation: '$c^2 = 25+144 = 169$, so $c = 13$.'
+          },
+          {
+            question: 'The asymptotes of $\\frac{x^2}{4}-\\frac{y^2}{9}=1$ are:',
+            options: ['$y=\\pm\\frac{2}{3}x$', '$y=\\pm\\frac{3}{2}x$', '$y=\\pm 2x$', '$y=\\pm 3x$'],
+            correctAnswer: 1,
+            explanation: '$a=2, b=3$. Asymptotes: $y = \\pm\\frac{b}{a}x = \\pm\\frac{3}{2}x$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-conic-sections-precalc-p4-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Hyperbola | $\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1$ | difference-of-distances relation |
-      | Parabola (vertical) | $(x-h)^2 = 4p(y-k)$ | focus/directrix geometry |
-      | Circle | $(x-h)^2 + (y-k)^2 = r^2$ | center-radius modeling |
-      | Ellipse | $\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1$ | sum-of-distances relation |
-      
-      ### Common pitfalls
-      - Do not infer the center by reading signs without reversing them in $(x-h)$ and $(y-k)$.
-      - For ellipses and hyperbolas, identify the positive term before choosing major axis direction.
-      - A parabola has one focus, while ellipse and hyperbola have two.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-conic-sections-precalc-p4-s4-input',
+      id: 'p4-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Conic Computations**
-      
-      Provide exact values when possible.
-      
-      1) For $(x-1)^2 = 8(y+2)$, find $p$ in $4p=8$.
-      2) For $(x-3)^2 + (y+1)^2 = 25$, find the radius.
-      3) For $
-      rac{x^2}{25}+
-      rac{y^2}{9}=1$, compute $c$ where $c^2=a^2-b^2$.
+**Hyperbola Calculations** 🧮
+
+For $\\frac{y^2}{36}-\\frac{x^2}{64}=1$:
+
+**1)** $a$ = ?
+
+**2)** $c$ = ?
+
+**3)** Eccentricity $e$ = ? (Enter as a fraction)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '5', '4'],
-        hint1: 'Match coefficients in $(x-h)^2=4p(y-k)$.',
-        hint2: 'Use $r=\\sqrt{r^2}$ from circle standard form.',
-        hint3: 'For the ellipse, use $a=5$, $b=3$, then $c=\\sqrt{25-9}$.',
-        explanation: 'The values are $p=2$, radius from $r^2$ in standard form, and $c=4$ from focal relation.'
+        correctAnswers: ['6', '10', '5/3'],
+        hint1: 'Positive term is $y^2$, so $a^2=36$, $a=6$.',
+        hint2: '$c^2 = 36+64 = 100$, $c = 10$.',
+        hint3: '$e = c/a = 10/6 = 5/3$.',
+        explanation: '1) $a = 6$. 2) $c = 10$. 3) $e = 5/3$.'
       }
     },
     {
-      id: 'precalc-conic-sections-precalc-p4-s5-dropdown',
+      id: 'p4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Hyperbola Properties** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'hyperbola',
-            options: ['set of points whose distances to two foci differ by a constant', 'turning point or endpoint on a principal axis', 'reference point used in geometric definitions of conics', 'line used with a focus to define a parabola']
+            label: 'For a hyperbola, $c$ is always:',
+            options: ['Less than $a$', 'Equal to $a$', 'Greater than $a$'],
+            correctAnswer: 2
           },
           {
-            label: 'vertex',
-            options: ['line used with a focus to define a parabola', 'turning point or endpoint on a principal axis', 'ratio that describes how stretched a conic is', 'reference point used in geometric definitions of conics']
+            label: 'A rectangular hyperbola ($a = b$) has eccentricity:',
+            options: ['$1$', '$\\sqrt{2}$', '$2$', '$\\pi$'],
+            correctAnswer: 1
           },
           {
-            label: 'focus',
-            options: ['line used with a focus to define a parabola', 'ratio that describes how stretched a conic is', 'set of points equidistant from a focus and a directrix', 'reference point used in geometric definitions of conics']
+            label: 'The conjugate axis of $\\frac{x^2}{a^2}-\\frac{y^2}{b^2}=1$ is:',
+            options: ['Horizontal, length $2a$', 'Vertical, length $2b$', 'Horizontal, length $2b$'],
+            correctAnswer: 1
+          },
+          {
+            label: 'Hyperbolas appear in:',
+            options: ['Sonic booms (shock cones)', 'Circular orbits', 'Uniform motion'],
+            correctAnswer: 0
           }
         ],
-        correctAnswers: ['set of points whose distances to two foci differ by a constant', 'turning point or endpoint on a principal axis', 'reference point used in geometric definitions of conics'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: hyperbola, vertex, and focus align with their exact definitions used in this part.'
+        correctAnswers: ['Greater than $a$', '$\\sqrt{2}$', 'Vertical, length $2b$', 'Sonic booms (shock cones)'],
+        hint1: '$c^2 = a^2 + b^2 > a^2$.',
+        hint2: '$a = b$: $c^2 = 2a^2$, $e = c/a = \\sqrt{2}$.',
+        hint3: 'Transverse axis connects vertices; conjugate axis is perpendicular.',
+        explanation: '$c > a$ always. Rectangular hyperbola: $e=\\sqrt{2}$. Conjugate axis is perpendicular to transverse. Sonic boom shapes are hyperbolic cross-sections.'
       }
     },
     {
-      id: 'precalc-conic-sections-precalc-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to hyperbola, vertex, and focus so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-conic-sections-precalc-p4-s7-mcq-applied',
+      id: 'p4-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is interpreting difference-of-distances loci. Which term best anchors the next reasoning step if the key idea is: line used with a focus to define a parabola?',
-            options: [
-              'focus',
-              'hyperbola',
-              'vertex',
-              'directrix'
-            ],
+            question: 'Which conic has the property $|d_1 - d_2| = \\text{constant}$?',
+            options: ['Circle', 'Ellipse', 'Parabola', 'Hyperbola'],
             correctAnswer: 3,
-            explanation: 'directrix matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Hyperbola: difference of distances to foci is constant.'
           },
           {
-            question: 'A student is solving a mixed conic sections prompt. Which term best anchors the next reasoning step if the key idea is: ratio that describes how stretched a conic is?',
-            options: [
-              'parabola',
-              'directrix',
-              'focus',
-              'eccentricity'
-            ],
-            correctAnswer: 3,
-            explanation: 'eccentricity matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'A hyperbola has vertices at $(0,\\pm 4)$ and foci at $(0,\\pm 5)$. Find $b$:',
+            options: ['$1$', '$3$', '$\\sqrt{41}$', '$9$'],
+            correctAnswer: 1,
+            explanation: '$a=4, c=5$. $b^2 = c^2-a^2 = 25-16 = 9$. $b = 3$.'
           }
         ]
       }

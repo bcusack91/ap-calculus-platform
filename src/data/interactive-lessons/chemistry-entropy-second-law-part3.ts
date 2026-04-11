@@ -4,13 +4,30 @@ export const chemEntropySecondLawPart3Data = {
     {
       id: 'en3-intro',
       type: 'text' as const,
-      content: `
-# 🌍 The Second Law of Thermodynamics
+      content: `# 🌍 The Second Law of Thermodynamics
 
 **Part 3 of 7 — ΔS_universe > 0 for Spontaneous Processes**
 
-The Second Law is one of the most profound principles in all of science. It tells us which direction processes naturally go and provides the ultimate criterion for spontaneity.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📏 The Second Law |
+| Three Cases |
+| What Does "Spontaneous" Mean? |
+| 🌡️ Entropy of the Surroundings |
+| Why the Negative Sign? |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'en3-second-law',
@@ -20,7 +37,7 @@ The Second Law is one of the most profound principles in all of science. It tell
 
 **The entropy of the universe increases for every spontaneous process.**
 
-$$\\Delta S_{\\text{universe}} = \\Delta S_{\\text{system}} + \\Delta S_{\\text{surroundings}} > 0$$
+$$\\boxed{\\Delta S_{\\text{universe}} = \\Delta S_{\\text{system}} + \\Delta S_{\\text{surroundings}} > 0}$$
 
 
 ---
@@ -55,7 +72,7 @@ It DOES mean:
 
 The entropy change of the surroundings depends on the heat flow and temperature:
 
-$$\\Delta S_{\\text{surroundings}} = -\\frac{q_{\\text{system}}}{T} = -\\frac{\\Delta H_{\\text{system}}}{T}$$
+$$\\boxed{\\Delta S_{\\text{surroundings}} = -\\frac{q_{\\text{system}}}{T} = -\\frac{\\Delta H_{\\text{system}}}{T}}$$
 
 (at constant pressure and temperature)
 
@@ -83,7 +100,7 @@ The same amount of heat has a **greater impact** on entropy at **lower temperatu
 
 $$\\Delta S_{\\text{universe}} = \\Delta S_{\\text{system}} + \\left(-\\frac{\\Delta H_{\\text{system}}}{T}\\right)$$
 
-This equation connects entropy, enthalpy, and spontaneity — leading directly to Gibbs Free Energy (covered in Topic 3).
+> 🔑 **Key Concept:** This equation connects entropy, enthalpy, and spontaneity — rearranging gives $\\Delta G = \\Delta H - T\\Delta S$, the Gibbs Free Energy equation.
       `
     },
     {

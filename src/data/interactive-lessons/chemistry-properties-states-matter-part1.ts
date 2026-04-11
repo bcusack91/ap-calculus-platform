@@ -5,15 +5,30 @@ export const chemPropertiesStatesMatterPart1Data = {
       id: 'sm1-intro',
       type: 'text' as const,
       title: 'Kinetic Molecular Theory — Introduction',
-      content: `
-# 🌡️ Kinetic Molecular Theory
+      content: `# 🌡️ Kinetic Molecular Theory
 
 **Part 1 of 7 — Particle Motion in Solids, Liquids, and Gases**
 
-Matter exists in three common phases — solid, liquid, and gas — and the **Kinetic Molecular Theory (KMT)** explains their properties by focusing on the behavior of individual particles (atoms, molecules, or ions).
+---
 
-The central idea: **all particles are in constant motion**, and the type and extent of that motion determines the phase of matter.
-      `
+### Topics in This Part
+
+| Section |
+|---------|
+| Postulates of Kinetic Molecular Theory |
+| How Particles Move in Each Phase |
+| Solids 🧊 |
+| Liquids 💧 |
+| Gases 💨 |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sm1-kmt-postulates',
@@ -28,7 +43,7 @@ The KMT was originally developed for ideal gases, but its principles extend to a
 
 2. **Temperature** is a measure of the **average kinetic energy** of the particles:
 
-$$KE_{\\text{avg}} = \\frac{3}{2} k_B T$$
+$$\\boxed{KE_{\\text{avg}} = \\frac{3}{2} k_B T}$$
 
 where $k_B = 1.38 \\times 10^{-23}$ J/K is Boltzmann\'s constant and $T$ is the absolute temperature in kelvin.
 
@@ -38,9 +53,9 @@ where $k_B = 1.38 \\times 10^{-23}$ J/K is Boltzmann\'s constant and $T$ is the 
 
 5. There are **no attractive or repulsive forces** between ideal gas particles (real gases deviate from this).
 
-### Key Takeaway
+---
 
-At a given temperature, **all gases have the same average kinetic energy**, regardless of molar mass. Heavier molecules move more slowly; lighter molecules move faster.
+> 🔑 **Key Concept:** At a given temperature, **all gases have the same average kinetic energy**, regardless of molar mass. Heavier molecules move more slowly; lighter molecules move faster.
       `
     },
     {
@@ -153,7 +168,7 @@ $$KE_{\\text{avg}} = \\frac{3}{2} k_B T$$
 
 For a mole of particles, we can write:
 
-$$KE_{\\text{avg per mole}} = \\frac{3}{2} RT$$
+$$\\boxed{KE_{\\text{avg per mole}} = \\frac{3}{2} RT}$$
 
 where $R = 8.314$ J/(mol·K) is the ideal gas constant.
 
@@ -161,15 +176,15 @@ where $R = 8.314$ J/(mol·K) is the ideal gas constant.
 
 The **rms speed** ($v_{\\text{rms}}$) relates KE to the molar mass $M$:
 
-$$v_{\\text{rms}} = \\sqrt{\\frac{3RT}{M}}$$
+$$\\boxed{v_{\\text{rms}} = \\sqrt{\\frac{3RT}{M}}}$$
 
 where $M$ is the molar mass in **kg/mol** (not g/mol!).
 
-### Important Consequences
+---
 
-- **Doubling the temperature** (in kelvin) doubles the average KE.
-- **Doubling the temperature** increases $v_{\\text{rms}}$ by a factor of $\\sqrt{2}$ (not 2!).
-- At the same temperature, a gas with **4× the molar mass** has **half** the rms speed.
+> 💡 **Tip:** Doubling the temperature (in kelvin) doubles the average KE but only increases $v_{\\text{rms}}$ by a factor of $\\sqrt{2}$ — not 2!
+
+> ⚠️ **Warning:** At the same temperature, a gas with **4× the molar mass** has **half** the rms speed. Don\'t confuse molar mass with speed — they are inversely related through $v_{\\text{rms}} = \\sqrt{3RT/M}$.
       `
     },
     {

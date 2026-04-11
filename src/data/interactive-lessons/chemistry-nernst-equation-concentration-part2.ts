@@ -4,13 +4,30 @@ export const chemNernstEquationConcentrationPart2Data = {
     {
       id: 'ne2-intro',
       type: 'text' as const,
-      content: `
-# 🔢 Simplified Nernst at 25°C
+      content: `# 🔢 Simplified Nernst at 25°C
 
 **Part 2 of 7 — E = E° − (0.0592/n) log Q**
 
-At 25°C (298 K), the Nernst equation simplifies to a convenient form using base-10 logarithms. This is the version most commonly used on the AP exam.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 The Simplified Form |
+| Why This Form Is Useful |
+| Example |
+| 🔋 Applications of the Simplified Nernst |
+| Effect of 10-Fold Concentration Change |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ne2-simplification',
@@ -46,7 +63,7 @@ $$\\boxed{E = E° - \\frac{0.0592}{n}\\log Q} \\quad \\text{(at 25°C)}$$
 
 > **Problem:** For a 2-electron cell with $E° = 1.10$ V and $Q = 100$:
 
-**Solution:**
+> **Solution:**
 
 $$E = 1.10 - \\frac{0.0592}{2}\\log(100) = 1.10 - (0.0296)(2) = 1.10 - 0.059 = 1.04 \\text{ V}$$
       `
@@ -65,6 +82,7 @@ $$\\Delta E = \\frac{0.0592}{n} \\cdot 1 = \\frac{0.0592}{n} \\text{ V per decad
 
 For a 2-electron process: each 10× change in $Q$ shifts $E$ by $0.0296$ V
 
+> 🔑 **Key Concept:** When $Q < 1$ (excess reactants), $E > E°$ — the cell produces **more** voltage. When $Q > 1$ (excess products), $E < E°$ — voltage **decreases** toward zero.
 
 ---
 
@@ -77,6 +95,8 @@ Remember: solids and pure liquids are excluded from Q!
 | $\\text{Zn} + \\text{Cu}^{2+} \\rightarrow \\text{Zn}^{2+} + \\text{Cu}$ | $Q = [\\text{Zn}^{2+}]/[\\text{Cu}^{2+}]$ |
 | $\\text{2Ag}^+ + \\text{Cu} \\rightarrow 2\\text{Ag} + \\text{Cu}^{2+}$ | $Q = [\\text{Cu}^{2+}]/[\\text{Ag}^+]^2$ |
 | $\\text{Fe}^{2+} + \\text{Ag}^+ \\rightarrow \\text{Fe}^{3+} + \\text{Ag}$ | $Q = [\\text{Fe}^{3+}]/([\\text{Fe}^{2+}][\\text{Ag}^+])$ |
+
+> ⚠️ **Warning:** Always write $Q$ as **products over reactants**, and never include solids or pure liquids. Getting $Q$ upside down flips the sign of the correction term!
       `
     },
     {

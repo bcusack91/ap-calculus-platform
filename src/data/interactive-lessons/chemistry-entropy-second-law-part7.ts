@@ -4,13 +4,24 @@ export const chemEntropySecondLawPart7Data = {
     {
       id: 'en7-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Synthesis & AP Review — Entropy
+      content: `# 🎯 Synthesis & AP Review — Entropy
 
 **Part 7 of 7 — Bringing It All Together**
 
-This review integrates all entropy concepts: microstates, predicting signs, the Second and Third Laws, calculating $\\Delta S°$, and connecting entropy to spontaneity.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'en7-summary',
@@ -51,12 +62,12 @@ This review integrates all entropy concepts: microstates, predicting signs, the 
 | − | − | Spontaneous at low T |
 | + | + | Spontaneous at high T |
 
+> 🔑 **Key Concept:** Memorize this table — it determines spontaneity via $\\Delta G = \\Delta H - T\\Delta S$.
+
 
 ---
 
-### Critical Unit Reminder
-
-$\\Delta H$ → kJ, $\\Delta S$ → J/K. Convert before combining!
+> ⚠️ **Warning:** $\\Delta H$ is in **kJ** and $\\Delta S$ is in **J/K** — always convert before combining in $\\Delta G = \\Delta H - T\\Delta S$!
       `
     },
     {

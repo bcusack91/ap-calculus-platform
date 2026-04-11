@@ -2,195 +2,216 @@ export const precalcInverseTrigPart1Data = {
   topicSlug: 'inverse-trig-functions-precalc',
   sections: [
     {
-      id: 'precalc-inverse-trig-functions-precalc-p1-s1-intro',
+      id: 'p1-intro',
       type: 'text' as const,
       content: `
-      ## Inverse Trigonometric Functions: Principal values and restricted domains
-      
-      **Part 1 of 7**
-      
-      This part focuses on recovering unknown launch angles. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **principal value**: standard output interval used by an inverse trig function
-      - **restricted domain**: input interval chosen to make trig one-to-one
-      - **arcsin**: inverse of sine on $[-
-      rac\pi2,
-      rac\pi2]$
-      
-      
-      ### Worked Example
-      Part 1 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🔄 Inverse Trigonometric Functions — Principal Values & Restricted Domains
+
+**Part 1 of 7**
+
+Trig functions are **not** one-to-one, so to define inverses we must **restrict** the domain to an interval where the function passes the horizontal line test.
+
+### The Three Main Inverse Functions
+
+| Function | Notation | Restricted Domain | Range (Principal Values) |
+|:---------|:---------|:-----------------|:------------------------|
+| $\\arcsin x$ | $\\sin^{-1}x$ | $[-1, 1]$ | $\\left[-\\frac{\\pi}{2},\\, \\frac{\\pi}{2}\\right]$ |
+| $\\arccos x$ | $\\cos^{-1}x$ | $[-1, 1]$ | $[0,\\, \\pi]$ |
+| $\\arctan x$ | $\\tan^{-1}x$ | $(-\\infty, \\infty)$ | $\\left(-\\frac{\\pi}{2},\\, \\frac{\\pi}{2}\\right)$ |
+
+### Key Idea
+
+$$\\boxed{\\text{Inverse trig functions output ANGLES, not ratios}}$$
+
+$\\arcsin\\!\\left(\\frac{1}{2}\\right) = \\frac{\\pi}{6}$ means "the angle (in the principal range) whose sine is $\\frac{1}{2}$".
+
+> **Notation warning**: $\\sin^{-1}x$ means $\\arcsin x$, NOT $\\frac{1}{\\sin x}$ (that's $\\csc x$).
       `
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p1-s2-mcq-core',
+      id: 'p1-examples',
+      type: 'text' as const,
+      content: `
+## 📝 Worked Examples
+
+### Example 1: Evaluate $\\arcsin\\!\\left(\\frac{\\sqrt{3}}{2}\\right)$
+
+Ask: "What angle $\\theta \\in [-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$ has $\\sin\\theta = \\frac{\\sqrt{3}}{2}$?"
+
+$$\\theta = \\frac{\\pi}{3} = 60°$$
+
+### Example 2: Evaluate $\\arccos(-1)$
+
+Ask: "What angle $\\theta \\in [0, \\pi]$ has $\\cos\\theta = -1$?"
+
+$$\\theta = \\pi = 180°$$
+
+### Example 3: Evaluate $\\arctan(-1)$
+
+Ask: "What angle $\\theta \\in (-\\frac{\\pi}{2}, \\frac{\\pi}{2})$ has $\\tan\\theta = -1$?"
+
+$$\\theta = -\\frac{\\pi}{4} = -45°$$
+
+### Example 4: Why $\\arcsin(\\sin 240°) \\neq 240°$
+
+$\\sin 240° = -\\frac{\\sqrt{3}}{2}$. The principal value of $\\arcsin(-\\frac{\\sqrt{3}}{2})$ is $-60°$, not $240°$, because $\\arcsin$ outputs must be in $[-90°, 90°]$.
+      `
+    },
+    {
+      id: 'p1-why-restrict',
+      type: 'text' as const,
+      content: `
+## 🔍 Why We Restrict the Domain
+
+### Without Restriction: Infinitely Many Answers
+
+$\\sin\\theta = \\frac{1}{2}$ has solutions $\\theta = 30°, 150°, 390°, 510°, \\ldots$ and also $-210°, -330°, \\ldots$
+
+A function can only return **one** output. So we pick the interval where each trig function is one-to-one:
+
+| Function | Why This Interval? |
+|:---------|:------------------|
+| $\\sin$ restricted to $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$ | Sine goes from $-1$ to $1$ (hits every y-value exactly once) |
+| $\\cos$ restricted to $[0, \\pi]$ | Cosine goes from $1$ to $-1$ (hits every y-value exactly once) |
+| $\\tan$ restricted to $(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$ | Tangent covers all reals (hits every y-value exactly once) |
+
+### Quick Reference: Special Angle Outputs
+
+| Input $x$ | $\\arcsin x$ | $\\arccos x$ |
+|:----------|:------------|:------------|
+| $0$ | $0°$ | $90°$ |
+| $\\frac{1}{2}$ | $30°$ | $60°$ |
+| $\\frac{\\sqrt{2}}{2}$ | $45°$ | $45°$ |
+| $\\frac{\\sqrt{3}}{2}$ | $60°$ | $30°$ |
+| $1$ | $90°$ | $0°$ |
+      `
+    },
+    {
+      id: 'p1-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of principal value.',
+            question: '$\\arccos\\!\\left(\\frac{1}{2}\\right)$ equals:',
             options: [
-              'standard output interval used by an inverse trig function',
-              'inverse of sine on $[-\\rac\\pi2,\\rac\\pi2]$',
-              'inverse of cosine on $[0,\\pi]$',
-              'input interval chosen to make trig one-to-one'
+              '$30°$',
+              '$60°$',
+              '$120°$',
+              '$-60°$'
             ],
-            correctAnswer: 0,
-            explanation: 'principal value is defined as: standard output interval used by an inverse trig function.'
+            correctAnswer: 1,
+            explanation: '$\\cos 60° = \\frac{1}{2}$ and $60° \\in [0°, 180°]$, so $\\arccos(\\frac{1}{2}) = 60°$.'
           },
           {
-            question: 'In recovering unknown launch angles, which expression is the best starting model?',
+            question: 'The range of $\\arctan x$ is:',
             options: [
-              '$\\arccos x \\in [0,\\pi]$',
-              '$\\tan(\\arctan x)=x$',
-              '$\\sin(\\arcsin x)=x$',
-              '$\\arctan x + \\arctan\\!\\left(\\frac1x\\right)=\\frac\\pi2\\;(x>0)$'
+              '$[-90°, 90°]$',
+              '$(-90°, 90°)$',
+              '$[0°, 180°]$',
+              '$(-180°, 180°)$'
             ],
-            correctAnswer: 2,
-            explanation: 'Use $\\sin(\\arcsin x)=x$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 1,
+            explanation: '$\\arctan$ has range $(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$ or $(-90°, 90°)$ — open interval (never reaches $\\pm 90°$).'
+          },
+          {
+            question: '$\\arcsin(\\sin 150°)$ equals:',
+            options: [
+              '$150°$',
+              '$30°$',
+              '$-30°$',
+              '$-150°$'
+            ],
+            correctAnswer: 1,
+            explanation: '$\\sin 150° = \\frac{1}{2}$. Then $\\arcsin(\\frac{1}{2}) = 30°$ (principal value in $[-90°, 90°]$).'
           }
         ]
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p1-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Inverse identity | $\sin(\arcsin x)=x$ | valid for $x\in[-1,1]$ |
-      | Principal output | $\arccos x \in [0,\pi]$ | range control |
-      | Tangent inverse | $\\tan(\arctan x)=x$ | all real inputs |
-      | Reciprocal relation | $\arctan x + \arctan\!\left(\\frac1x\\right)=\\frac\pi2\;(x>0)$ | angle decomposition |
-      
-      ### Common pitfalls
-      - Inverse trig outputs are angles, not raw ratio values.
-      - A composition can fail if the inner output leaves the inverse domain.
-      - Use principal intervals before comparing equivalent angle expressions.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-inverse-trig-functions-precalc-p1-s4-input',
+      id: 'p1-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Inverse Trig Values**
-      
-      Use degree values for angle outputs when prompted.
-      
-      1) Compute $rcsin\left(
-      rac{1}{2}
-      ight)$ in degrees.
-      2) Compute $rccos\left(
-      rac{\sqrt{2}}{2}
-      ight)$ in degrees.
-      3) Compute $\\an(rctan(
-      rac{3}{4}))$.
+**Inverse Trig Evaluation** 🧮
+
+**1)** $\\arcsin\\!\\left(\\frac{\\sqrt{2}}{2}\\right)$ in degrees = ? (e.g., $\\arcsin(\\frac{\\sqrt{3}}{2}) = 60$ since $\\sin 60° = \\frac{\\sqrt{3}}{2}$)
+
+**2)** $\\arccos(0)$ in degrees = ? (e.g., $\\arccos(1) = 0$ since $\\cos 0° = 1$)
+
+**3)** $\\arctan(\\sqrt{3})$ in degrees = ? (e.g., $\\arctan(1) = 45$ since $\\tan 45° = 1$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['30', '45', '0.75'],
-        hint1: 'Use principal range for arcsin.',
-        hint2: 'Use principal range for arccos.',
-        hint3: 'A function and its inverse undo each other on valid inputs.',
-        explanation: 'Principal angles are 30° and 45°, and composition returns 0.75.'
+        correctAnswers: ['45', '90', '60'],
+        hint1: '$\\sin 45° = \\frac{\\sqrt{2}}{2}$ and $45° \\in [-90°, 90°]$.',
+        hint2: '$\\cos 90° = 0$ and $90° \\in [0°, 180°]$.',
+        hint3: '$\\tan 60° = \\sqrt{3}$ and $60° \\in (-90°, 90°)$.',
+        explanation: '1) $\\arcsin(\\frac{\\sqrt{2}}{2}) = 45°$. 2) $\\arccos(0) = 90°$. 3) $\\arctan(\\sqrt{3}) = 60°$.'
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p1-s5-dropdown',
+      id: 'p1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Domain & Range Matching** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'principal value',
-            options: ['inverse of sine on $[-\\rac\\pi2,\\rac\\pi2]$', 'standard output interval used by an inverse trig function', 'inverse of cosine on $[0,\\pi]$', 'input interval chosen to make trig one-to-one']
+            label: 'The domain of $\\arcsin x$ is',
+            options: ['$[-1, 1]$', '$(-\\infty, \\infty)$', '$[0, \\pi]$', '$[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$']
           },
           {
-            label: 'restricted domain',
-            options: ['inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$', 'inverse of cosine on $[0,\\pi]$', 'inverse of sine on $[-\\rac\\pi2,\\rac\\pi2]$', 'input interval chosen to make trig one-to-one']
+            label: 'The range of $\\arccos x$ is',
+            options: ['$[-1, 1]$', '$[0, \\pi]$', '$(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$', '$(-\\infty, \\infty)$']
           },
           {
-            label: 'arcsin',
-            options: ['applying one function to the output of another', 'inverse of sine on $[-\\rac\\pi2,\\rac\\pi2]$', 'inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$', 'inverse of cosine on $[0,\\pi]$']
+            label: '$\\sin^{-1}x$ is another notation for',
+            options: ['$\\csc x$', '$\\frac{1}{\\sin x}$', '$\\arcsin x$', '$\\sin(\\frac{1}{x})$']
+          },
+          {
+            label: 'The domain of $\\arctan x$ is',
+            options: ['$[-1, 1]$', '$[0, \\pi]$', '$(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$', '$(-\\infty, \\infty)$']
           }
         ],
-        correctAnswers: ['standard output interval used by an inverse trig function', 'input interval chosen to make trig one-to-one', 'inverse of sine on $[-\\rac\\pi2,\\rac\\pi2]$'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: principal value, restricted domain, and arcsin align with their exact definitions used in this part.'
+        correctAnswers: ['$[-1, 1]$', '$[0, \\pi]$', '$\\arcsin x$', '$(-\\infty, \\infty)$'],
+        hint1: 'Sine outputs values between $-1$ and $1$, so its inverse accepts those as input.',
+        hint2: 'Cosine was restricted to $[0, \\pi]$, so that becomes the range of arccos.',
+        hint3: '$\\sin^{-1}$ means inverse function, not reciprocal.',
+        explanation: 'Domain of $\\arcsin$: $[-1,1]$. Range of $\\arccos$: $[0,\\pi]$. $\\sin^{-1}x = \\arcsin x$. Domain of $\\arctan$: all reals.'
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p1-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to principal value, restricted domain, and arcsin so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-inverse-trig-functions-precalc-p1-s7-mcq-applied',
+      id: 'p1-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is recovering unknown launch angles. Which term best anchors the next reasoning step if the key idea is: inverse of cosine on $[0,\\pi]$?',
+            question: 'Why does $\\arcsin(\\sin 200°)$ NOT equal $200°$?',
             options: [
-              'restricted domain',
-              'arcsin',
-              'arccos',
-              'principal value'
+              'Because $\\sin 200°$ is undefined',
+              'Because $200°$ is outside the range $[-90°, 90°]$ of $\\arcsin$',
+              'Because $\\arcsin$ only accepts positive inputs',
+              'Because $200°$ is not a special angle'
             ],
-            correctAnswer: 2,
-            explanation: 'arccos matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 1,
+            explanation: '$\\arcsin$ can only output angles in $[-90°, 90°]$. Since $200°$ is outside this range, the output is a different angle with the same sine value.'
           },
           {
-            question: 'A student is solving a mixed inverse trigonometric functions prompt. Which term best anchors the next reasoning step if the key idea is: inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$?',
+            question: '$\\arccos(-\\frac{\\sqrt{3}}{2})$ equals:',
             options: [
-              'arctan',
-              'composition',
-              'arccos',
-              'arcsin'
+              '$-30°$',
+              '$150°$',
+              '$210°$',
+              '$-150°$'
             ],
-            correctAnswer: 0,
-            explanation: 'arctan matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 1,
+            explanation: '$\\cos 150° = -\\frac{\\sqrt{3}}{2}$ and $150° \\in [0°, 180°]$. So $\\arccos(-\\frac{\\sqrt{3}}{2}) = 150°$.'
           }
         ]
       }

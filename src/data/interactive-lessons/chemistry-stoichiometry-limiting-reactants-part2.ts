@@ -4,19 +4,38 @@ export const chemStoichiometryLimitingReactantsPart2Data = {
     {
       id: 'sl2-intro',
       type: 'text' as const,
-      content: `
-# 🔬 Mass-to-Mass Stoichiometry
+      content: `# 🔬 Mass-to-Mass Stoichiometry
 
 **Part 2 of 7 — Converting Between Grams**
 
-In the lab, you weigh substances in **grams**, not moles. Mass-to-mass stoichiometry lets you convert grams of one substance to grams of another using the balanced equation. The key is the **three-step bridge**: grams → moles → moles → grams.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚖️ The Stoichiometry Roadmap |
+| The Three Steps |
+| Combined Formula |
+| 🧪 Worked Example 1 |
+| Step 1: Grams CH₄ → Moles CH₄ |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sl2-roadmap',
       type: 'text' as const,
       content: `
 ## ⚖️ The Stoichiometry Roadmap
+
+> 🔑 **Key Concept:** The Mole Road Map — every stoichiometry problem follows this path:
 
 $$\\text{grams A} \\xrightarrow{\\div M_A} \\text{moles A} \\xrightarrow{\\text{mole ratio}} \\text{moles B} \\xrightarrow{\\times M_B} \\text{grams B}$$
 
@@ -36,14 +55,14 @@ $$\\text{grams A} \\xrightarrow{\\div M_A} \\text{moles A} \\xrightarrow{\\text{
 
 ### Combined Formula
 
-$$\\text{grams B} = \\text{grams A} \\times \\frac{1}{M_A} \\times \\frac{\\text{coeff B}}{\\text{coeff A}} \\times M_B$$
+$$\\boxed{\\text{grams B} = \\text{grams A} \\times \\frac{1}{M_A} \\times \\frac{\\text{coeff B}}{\\text{coeff A}} \\times M_B}$$
 
 
 ---
 
-### Key Point
+> ⚠️ **Warning:** You **cannot** skip steps! You must go through moles — there is no direct grams-to-grams conversion factor from the balanced equation.
 
-You **cannot** skip steps! You must go through moles — there is no direct grams-to-grams conversion factor from the balanced equation.
+> 💡 **Tip:** Set up the entire calculation as one line of dimensional analysis before computing — verify that all units cancel before reaching for your calculator.
       `
     },
     {
@@ -52,8 +71,8 @@ You **cannot** skip steps! You must go through moles — there is no direct gram
       content: `
 ## 🧪 Worked Example 1
 
-**Problem:** How many grams of water are produced from burning 32.0 g of methane?
-
+> **Problem:** How many grams of water are produced from burning 32.0 g of methane?
+> **Solution:**
 $$\\text{CH}_4 + 2\\text{O}_2 \\rightarrow \\text{CO}_2 + 2\\text{H}_2\\text{O}$$
 
 **Molar masses:** CH₄ = 16.04 g/mol, H₂O = 18.02 g/mol
@@ -88,7 +107,9 @@ $$m_{\text{H}_2\text{O}} = 3.990 \; \cancel{\text{mol H}_2\text{O}} \times \frac
       content: `
 ## 🧪 Worked Example 2
 
-**Problem:** How many grams of aluminum are needed to produce 51.0 g of aluminum oxide?
+> **Problem:** How many grams of aluminum are needed to produce 51.0 g of aluminum oxide?
+
+> **Solution:**
 
 $$4\\text{Al} + 3\\text{O}_2 \\rightarrow 2\\text{Al}_2\\text{O}_3$$
 

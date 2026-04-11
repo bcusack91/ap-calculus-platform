@@ -4,7 +4,7 @@ export const chemLewisStructuresFormalChargePart3Data = {
     {
       id: 'ls-3-1',
       type: 'text',
-      title: 'When Single Bonds Aren\'t Enough',
+      title: '🔗 When Single Bonds Aren\'t Enough',
       content: `Sometimes, after placing all single bonds and distributing lone pairs to the outer atoms, the central atom **still doesn\'t have an octet**. When this happens, you must form **multiple bonds**.\n\n**The fix:** Convert one or more lone pairs from an adjacent atom into bonding pairs (additional bonds).\n\n- Converting 1 lone pair → **double bond** (4 shared electrons)\n- Converting 2 lone pairs → **triple bond** (6 shared electrons)\n\n**How to know when you need multiple bonds:**\nAfter Step 4 of the algorithm, check the central atom\'s electron count. If it\'s less than 8, you need to form multiple bonds.\n\n**Important:** Multiple bonds are most commonly formed between:\n- C, N, O, and S (second-period and some third-period elements)\n- These atoms are small enough for effective side-by-side (pi) orbital overlap`
     },
     {
@@ -43,22 +43,22 @@ export const chemLewisStructuresFormalChargePart3Data = {
       exercise: {
         inputs: [
           {
-            label: 'Total valence electrons in CO₂',
+            label: '**1.** Total valence electrons in CO₂',
             correctAnswer: '16',
             explanation: 'C has 4 and each O has 6. Total = 4 + 2(6) = 16 valence electrons.'
           },
           {
-            label: 'Electrons remaining after drawing 2 single C—O bonds',
+            label: '**2.** Electrons remaining after drawing 2 single C—O bonds',
             correctAnswer: '12',
             explanation: '2 bonds × 2 e⁻ = 4 electrons used. 16 − 4 = 12 electrons remain.'
           },
           {
-            label: 'After placing 3 lone pairs on each O (12 e⁻ used), how many electrons does the central carbon have?',
+            label: '**3.** After placing 3 lone pairs on each O (12 e⁻ used), how many electrons does the central carbon have?',
             correctAnswer: '4',
             explanation: 'Carbon has only 2 e⁻ from each single bond = 4 e⁻ total. It needs 8, so it\'s short by 4 electrons. We need to form double bonds.'
           },
           {
-            label: 'How many double bonds does CO₂ have in its final Lewis structure?',
+            label: '**4.** How many double bonds does CO₂ have in its final Lewis structure?',
             correctAnswer: '2',
             explanation: 'CO₂ has the structure O=C=O with two double bonds. Each O converts 1 lone pair into a bonding pair. C: 2 × 4 = 8 e⁻ ✓. Each O: 4 (double bond) + 4 (2 lone pairs) = 8 e⁻ ✓.'
           }
@@ -68,7 +68,7 @@ export const chemLewisStructuresFormalChargePart3Data = {
     {
       id: 'ls-3-6',
       type: 'text',
-      title: 'Bond Strength and Bond Length',
+      title: '📏 Bond Strength and Bond Length',
       content: `Multiple bonds differ from single bonds in both strength and length:\n\n| Bond Type | Bond Order | Relative Strength | Relative Length |\n|-----------|-----------|-------------------|----------------|\n| Single (—) | 1 | Weakest | Longest |\n| Double (=) | 2 | Moderate | Moderate |\n| Triple (≡) | 3 | Strongest | Shortest |\n\n**Key trends:**\n- More shared electrons → stronger bond → shorter bond\n- N≡N bond energy ≈ 946 kJ/mol (very strong!)\n- This is why N₂ is so unreactive — it takes enormous energy to break the triple bond\n\n**Bond order** = number of bonding pairs between two atoms\n- Single bond: bond order = 1\n- Double bond: bond order = 2\n- Triple bond: bond order = 3`
     },
     {

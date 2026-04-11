@@ -4,13 +4,30 @@ export const chemReactionRatesAndRateLawsPart4Data = {
     {
       id: 'rr4-intro',
       type: 'text' as const,
-      content: `
-# 📊 Method of Initial Rates
+      content: `# 📊 Method of Initial Rates
 
 **Part 4 of 7 — Systematic Rate Law Determination**
 
-The **method of initial rates** is the gold standard for determining a rate law experimentally. You measure the initial rate of a reaction for several trials, varying concentrations systematically, and use the data to find each reactant\'s order and the rate constant $k$.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📋 Step-by-Step Method |
+| Given Data Table Format |
+| The Algorithm |
+| Using Logarithms for Non-Integer Orders |
+| 🧪 Worked Example 1 |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rr4-method-steps',
@@ -39,7 +56,7 @@ The **method of initial rates** is the gold standard for determining a rate law 
 $$\\frac{\\text{Rate}_2}{\\text{Rate}_1} = \\left(\\frac{[A]_2}{[A]_1}\\right)^m$$
 
 **Step 4:** Solve for $m$ using logarithms if needed:
-$$m = \\frac{\\ln(\\text{Rate}_2/\\text{Rate}_1)}{\\ln([A]_2/[A]_1)}$$
+$$\\boxed{m = \\frac{\\ln(\\text{Rate}_2/\\text{Rate}_1)}{\\ln([A]_2/[A]_1)}}$$
 
 **Step 5:** Repeat for each reactant
 
@@ -55,7 +72,7 @@ If $\\frac{\\text{Rate}_2}{\\text{Rate}_1} = 2.83$ and $\\frac{[A]_2}{[A]_1} = 2
 $$m = \\frac{\\ln(2.83)}{\\ln(2)} = \\frac{1.04}{0.693} = 1.5$$
 
 So the order is $\\frac{3}{2}$ (fractional order).
-      `
+> 💡 **Tip:** When the rate ratio isn\'t a clean power of the concentration ratio, use logarithms to find the order. Fractional orders are common for multi-step mechanisms.      `
     },
     {
       id: 'rr4-worked-example-1',
@@ -63,13 +80,15 @@ So the order is $\\frac{3}{2}$ (fractional order).
       content: `
 ## 🧪 Worked Example 1
 
-For the reaction $\\text{A} + \\text{B} \\rightarrow \\text{C}$:
+> **Problem:** For the reaction $\\text{A} + \\text{B} \\rightarrow \\text{C}$, determine the rate law.
 
 | Experiment | [A] (M) | [B] (M) | Initial Rate (M/s) |
 |-----------|---------|---------|-------------------|
 | 1 | 0.100 | 0.100 | 4.0 × 10⁻⁵ |
 | 2 | 0.200 | 0.100 | 16.0 × 10⁻⁵ |
 | 3 | 0.100 | 0.300 | 4.0 × 10⁻⁵ |
+
+> **Solution:**
 
 **Finding order in A** (compare Exp 1 & 2, [B] constant):
 $$\\frac{16.0 \\times 10^{-5}}{4.0 \\times 10^{-5}} = \\left(\\frac{0.200}{0.100}\\right)^m \\Rightarrow 4 = 2^m \\Rightarrow m = 2$$
@@ -80,7 +99,7 @@ $$\\frac{4.0 \\times 10^{-5}}{4.0 \\times 10^{-5}} = \\left(\\frac{0.300}{0.100}
 **Rate law:** Rate = k[A]² (zero-order in B!)
 
 **Finding k:** Using Exp 1: $4.0 \\times 10^{-5} = k(0.100)^2$
-$$k = \\frac{4.0 \\times 10^{-5}}{0.0100} = 4.0 \\times 10^{-3} \\; \\text{M}^{-1}\\text{s}^{-1}$$
+$$\\boxed{k = \\frac{4.0 \\times 10^{-5}}{0.0100} = 4.0 \\times 10^{-3} \\; \\text{M}^{-1}\\text{s}^{-1}}$$
       `
     },
     {
@@ -120,13 +139,15 @@ For the reaction $\\text{P} + \\text{Q} \\rightarrow \\text{R}$:
       content: `
 ## 🧪 Worked Example 2: Three Reactants
 
-For $2\\text{NO}(g) + \\text{Cl}_2(g) \\rightarrow 2\\text{NOCl}(g)$:
+> **Problem:** For $2\\text{NO}(g) + \\text{Cl}_2(g) \\rightarrow 2\\text{NOCl}(g)$, determine the rate law.
 
 | Experiment | [NO] (M) | [Cl₂] (M) | Initial Rate (M/s) |
 |-----------|----------|-----------|-------------------|
 | 1 | 0.10 | 0.10 | 0.18 |
 | 2 | 0.10 | 0.20 | 0.36 |
 | 3 | 0.20 | 0.10 | 0.72 |
+
+> **Solution:**
 
 **Order in Cl₂** (Exp 1 vs 2, [NO] constant):
 $$\\frac{0.36}{0.18} = \\left(\\frac{0.20}{0.10}\\right)^n \\Rightarrow 2 = 2^n \\Rightarrow n = 1$$
@@ -137,9 +158,9 @@ $$\\frac{0.72}{0.18} = \\left(\\frac{0.20}{0.10}\\right)^m \\Rightarrow 4 = 2^m 
 **Rate law:** Rate = k[NO]²[Cl₂]
 
 **Finding k:** $0.18 = k(0.10)^2(0.10) = k(0.001)$
-$$k = 180 \\; \\text{M}^{-2}\\text{s}^{-1}$$
+$$\\boxed{k = 180 \\; \\text{M}^{-2}\\text{s}^{-1}}$$
 
-Note: The orders (2 and 1) match the stoichiometric coefficients here, but this is coincidental — it happens because this reaction proceeds via an elementary bimolecular step.
+> ⚠️ **Warning:** The orders (2 and 1) happen to match the stoichiometric coefficients here, but this is **coincidental** — it only works because the rate-determining step happens to be bimolecular with these exact stoichiometries.
       `
     },
     {

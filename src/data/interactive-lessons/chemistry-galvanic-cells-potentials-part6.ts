@@ -4,13 +4,24 @@ export const chemGalvanicCellsPotentialsPart6Data = {
     {
       id: 'gc6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Problem-Solving Workshop — Galvanic Cells
+      content: `# 🛠️ Problem-Solving Workshop — Galvanic Cells
 
 **Part 6 of 7 — Practice and Integration**
 
-This workshop brings together all galvanic cell concepts: half-reactions, cell notation, standard potentials, and the $\\Delta G^\\circ$–$E^\\circ$ connection. Practice solving the types of problems you will see on the AP exam.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'gc6-strategy',
@@ -19,6 +30,8 @@ This workshop brings together all galvanic cell concepts: half-reactions, cell n
 ## 🛠️ Problem-Solving Strategy
 
 ### Step-by-Step Approach
+
+> 🔑 **Key Concept:** Follow this systematic approach for every galvanic cell problem:
 
 1. **Identify** the two half-reactions
 2. **Determine** which is oxidized (anode) and which is reduced (cathode) using $E^\\circ$ values
@@ -31,6 +44,8 @@ This workshop brings together all galvanic cell concepts: half-reactions, cell n
 ---
 
 ### Common Mistakes to Avoid
+
+> ⚠️ **Warning:** These are the most frequent errors on the AP exam:
 
 | Mistake | Correction |
 |---------|-----------|

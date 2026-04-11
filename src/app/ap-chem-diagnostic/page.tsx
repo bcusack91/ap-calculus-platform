@@ -8,6 +8,7 @@ import {
   generateAPChemDiagnosticTest,
   scoreAPChemDiagnostic,
   pickNextForm,
+  TOTAL_FORMS,
   type APChemDiagnosticTestData,
   type APChemDiagnosticResults,
 } from '@/data/ap-chemistry-diagnostic'
@@ -115,9 +116,9 @@ export default function APChemDiagnosticPage() {
     const previousForms = history
       .map(h => {
         const r = h.results as Record<string, unknown> | null
-        return r?.form as 'A' | 'B' | undefined
+        return r?.form as number | undefined
       })
-      .filter((f): f is 'A' | 'B' => f === 'A' || f === 'B')
+      .filter((f): f is number => typeof f === 'number' && f >= 1 && f <= TOTAL_FORMS)
 
     const form = pickNextForm(previousForms)
     const data = generateAPChemDiagnosticTest(form)
@@ -522,7 +523,7 @@ export default function APChemDiagnosticPage() {
               <ol className="space-y-2 text-sm text-blue-700 dark:text-blue-400 list-decimal list-inside">
                 <li>Review the {results.recommendedTopics.length} recommended module{results.recommendedTopics.length > 1 ? 's' : ''} above</li>
                 <li>Complete each module&apos;s lessons, practice problems, and flashcards</li>
-                <li>Come back and take the next diagnostic test (Form {results.form === 'A' ? 'B' : 'A'}) — different questions, same breadth</li>
+                <li>Come back and take the next diagnostic test (Form {results.form >= TOTAL_FORMS ? 1 : results.form + 1}) — different questions, same breadth</li>
                 <li>Get a new set of personalized recommendations based on your updated results</li>
                 <li>Repeat until you&apos;re scoring 4+ across all domains!</li>
               </ol>
@@ -692,7 +693,7 @@ export default function APChemDiagnosticPage() {
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                Alternating forms (A/B) — each test has different questions
+                10 unique forms — each test draws different questions from a pool of 300+
               </li>
             </ul>
 
@@ -716,7 +717,7 @@ export default function APChemDiagnosticPage() {
                 { step: '1', text: 'Take the diagnostic test — questions cover all 9 AP Chemistry units' },
                 { step: '2', text: 'Get your results and 3-5 module recommendations based on what you missed' },
                 { step: '3', text: 'Study those specific modules (lessons, problems, flashcards)' },
-                { step: '4', text: 'Retake the diagnostic — a different form with fresh questions' },
+                { step: '4', text: 'Retake the diagnostic — each of the 10 forms has different questions' },
                 { step: '5', text: 'Repeat until you\'re scoring 4+ across all units!' },
               ].map(item => (
                 <div key={item.step} className="flex items-start gap-3">

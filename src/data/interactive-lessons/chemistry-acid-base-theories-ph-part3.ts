@@ -4,13 +4,30 @@ export const chemAcidBaseTheoriesPhPart3Data = {
     {
       id: 'ab3-intro',
       type: 'text' as const,
-      content: `
-# 🔬 Lewis Acids and Bases
+      content: `# 🔬 Lewis Acids and Bases
 
 **Part 3 of 7 — Electron Pair Donors and Acceptors**
 
-The Lewis definition is the **broadest** acid-base theory. It doesn\'t require protons at all — it focuses on **electron pairs**.
-      `
+---
+
+### How the Three Theories Compare
+
+| Theory | Key Question | Broadest? |
+|--------|-------------|-----------|
+| Arrhenius | Does it produce $H^+$ or $OH^-$? | Narrowest |
+| Brønsted-Lowry | Does it donate or accept $H^+$? | Middle |
+| **Lewis** | **Does it donate or accept electron pairs?** | **Broadest** |
+
+The Lewis model captures reactions that have nothing to do with protons!
+
+> 🔑 **Why this matters:** Lewis acid-base theory explains coordination chemistry, organic reactions, and metal complex formation — all tested on the AP exam.
+
+---
+
+### What You'll Master in Part 3
+- Defining Lewis acids (electron pair acceptors) and bases (electron pair donors)
+- Identifying Lewis acids: metal cations, incomplete octets, $H^+$
+- Comparing all three acid-base theories on the AP exam`
     },
     {
       id: 'ab3-lewis-definition',
@@ -41,7 +58,9 @@ The Lewis definition is the **broadest** acid-base theory. It doesn\'t require p
 
 Every Arrhenius acid is a Brønsted-Lowry acid, and every Brønsted-Lowry acid involves a Lewis acid interaction. The Lewis definition is the **most inclusive**.
 
-$$\\text{Arrhenius} \\subset \\text{Brønsted-Lowry} \\subset \\text{Lewis}$$
+$$\\boxed{\\text{Arrhenius} \\subset \\text{Br\\o nsted-Lowry} \\subset \\text{Lewis}}$$
+
+> 🔑 If you can’t explain a reaction with Arrhenius or Brønsted-Lowry, try Lewis — it covers everything.
       `
     },
     {
@@ -69,6 +88,8 @@ $$BF_3 + NH_3 \\rightarrow F_3B\\text{-}NH_3$$
 - $BF_3$: Lewis acid (boron has only 6 electrons, empty p orbital)
 - $NH_3$: Lewis base (nitrogen has a lone pair)
 
+> 💡 Molecules with **incomplete octets** (like $BF_3$ and $AlCl_3$) are classic Lewis acids.
+
 
 ---
 
@@ -82,7 +103,7 @@ This shows how the Lewis definition encompasses the Brønsted-Lowry definition.
 
 ## ✏️ Common Lewis Bases
 
-Any species with a **lone pair** can be a Lewis base:
+> 🔑 Any species with a **lone pair** can be a Lewis base:
 - $NH_3$, $H_2O$, $OH^-$, $F^-$, $CN^-$
 - Molecules with lone pairs on N, O, S, or halide ions
       `
@@ -142,6 +163,8 @@ When a Lewis base donates an electron pair to a Lewis acid, the resulting bond i
 $$F_3B + :NH_3 \\rightarrow F_3B\\text{←}NH_3$$
 
 The arrow ← shows that **both** electrons in the bond came from the nitrogen of $NH_3$.
+
+> 💡 A **coordinate covalent bond** (dative bond) is formed whenever a Lewis base donates a lone pair to a Lewis acid.
 
 
 ---

@@ -4,13 +4,24 @@ export const chemOxidationReductionReactionsPart6Data = {
     {
       id: 'or6-intro',
       type: 'text' as const,
-      content: `
-# ⚡ Problem-Solving Workshop
+      content: `# ⚡ Problem-Solving Workshop
 
 **Part 6 of 7 — Mixed Redox Balancing Practice**
 
-This workshop brings together all the redox skills: assigning oxidation states, identifying oxidized/reduced species, balancing in acidic solution, and balancing in basic solution. Work through these problems systematically using the half-reaction method.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'or6-strategy',
@@ -29,10 +40,14 @@ This workshop brings together all the redox skills: assigning oxidation states, 
 5. **Equalize and add** — cancel electrons
 6. **Verify** — atoms AND charge must balance
 
+> 💡 **Tip:** Always verify BOTH atoms and charge in your final answer — a common source of lost points on the AP exam.
+
 
 ---
 
 ### Common Patterns to Recognize
+
+> 🔑 **Key Concept:** Memorize these common species and their typical products — they appear frequently on the AP exam.
 
 | Species | Typical Behavior | Product |
 |---------|-----------------|---------|

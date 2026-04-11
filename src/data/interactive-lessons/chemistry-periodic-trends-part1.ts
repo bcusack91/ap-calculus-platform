@@ -6,11 +6,27 @@ export const chemPeriodicTrendsPart1Data = {
       type: 'text' as const,
       content: `# Part 1: Introduction to Periodic Trends
 
-**Welcome to Periodic Trends!**
+**Part 1 of 7 — Atomic Radius**
 
-The periodic table is one of the most powerful tools in all of chemistry. It isn't just a list of elements — it's a **map** that reveals predictable patterns in how elements behave. These patterns, called **periodic trends**, let you compare and predict properties like size, energy, and reactivity without memorizing data for every element.
+---
 
-In this seven-part series, you'll master the major periodic trends tested on the AP Chemistry exam.`
+### Topics in This Part
+
+| Section |
+|---------|
+| Key Regions |
+| The Basic Idea |
+| Example: Sodium (Na, $Z = 11$) |
+| Key Points |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'pt1-organization',
@@ -70,7 +86,7 @@ The modern periodic table arranges elements by increasing **atomic number (Z)**.
     {
       id: 'pt1-zeff-intro',
       type: 'text' as const,
-      content: `## 📊 Effective Nuclear Charge ($Z_{eff}$)
+      content: `## ⚛️ Effective Nuclear Charge ($Z_{eff}$)
 
 The single most important concept for understanding periodic trends is **effective nuclear charge**.
 
@@ -83,28 +99,27 @@ An atom's nucleus has a charge of $+Z$ (where $Z$ = atomic number). But the oute
 
 The net positive charge experienced by a valence electron is called the **effective nuclear charge**:
 
-$$Z_{eff} = Z - S$$
+$$\\boxed{Z_{eff} = Z - S}$$
 
 where:
 - $Z$ = actual nuclear charge (atomic number)
 - $S$ = shielding constant (approximately equal to the number of core electrons)
+
+> 🔑 **Key Concept:** $Z_{eff}$ is the single most important idea for explaining periodic trends. Almost every trend can be traced back to how $Z_{eff}$ changes across a period or down a group.
 
 
 ---
 
 ### Example: Sodium (Na, $Z = 11$)
 
-Sodium has the electron configuration $1s^2\\,2s^2\\,2p^6\\,3s^1$.
+> **Problem:** Calculate $Z_{eff}$ for the valence electron of sodium ($Z = 11$, config: $1s^2\\,2s^2\\,2p^6\\,3s^1$).
 
-- Core electrons (inner shells): $2 + 2 + 6 = 10$
-- $Z_{eff} \\approx 11 - 10 = +1$
-
-The single valence electron in sodium feels an effective pull of only about $+1$, even though the nucleus has $+11$ protons.`
+> **Solution:** Core electrons (inner shells) = $2 + 2 + 6 = 10$. Therefore $Z_{eff} \\approx 11 - 10 = +1$. The single valence electron feels an effective pull of only about $+1$, even though the nucleus has $+11$ protons.`
     },
     {
       id: 'pt1-shielding',
       type: 'text' as const,
-      content: `## 📊 The Shielding Effect
+      content: `## �️ The Shielding Effect
 
 **Shielding** (or screening) is the reduction of nuclear attraction experienced by valence electrons due to the repulsion from inner-shell electrons.
 
@@ -125,7 +140,9 @@ The single valence electron in sodium feels an effective pull of only about $+1$
 4. **Down a group (top → bottom):**
    - Each new period adds a new shell of core electrons (good shielding)
    - The increase in $Z$ is largely offset by the increase in $S$
-   - Result: $Z_{eff}$ felt by valence electrons stays **roughly constant** or increases only slightly`
+   - Result: $Z_{eff}$ felt by valence electrons stays **roughly constant** or increases only slightly
+
+> 🔑 **Key Concept:** Across a period → $Z_{eff}$ rises (same shielding, more protons). Down a group → $Z_{eff}$ stays roughly constant (shielding increases with $Z$).`
     },
     {
       id: 'pt1-zeff-quiz',
@@ -165,11 +182,11 @@ The single valence electron in sodium feels an effective pull of only about $+1$
 
 Using the approximation $Z_{eff} \\approx Z - S$ (where $S$ is the number of core electrons), calculate the effective nuclear charge for a valence electron in each element.
 
-1. Beryllium (Be, $Z = 4$, config: $1s^2\\,2s^2$). Core electrons = 2.
+**1.** Beryllium (Be, $Z = 4$, config: $1s^2\\,2s^2$). Core electrons = 2.
 
-2. Oxygen (O, $Z = 8$, config: $1s^2\\,2s^2\\,2p^4$). Core electrons = 2.
+**2.** Oxygen (O, $Z = 8$, config: $1s^2\\,2s^2\\,2p^4$). Core electrons = 2.
 
-3. Potassium (K, $Z = 19$, config: $[Ar]\\,4s^1$). Core electrons = 18.`,
+**3.** Potassium (K, $Z = 19$, config: $[Ar]\\,4s^1$). Core electrons = 18.`,
       exercise: {
         inputs: [
           {

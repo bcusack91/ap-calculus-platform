@@ -4,13 +4,30 @@ export const chemNetIonicEquationsPart5Data = {
     {
       id: 'ni5-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Acid-Base Net Ionic Equations
+      content: `# 🧪 Acid-Base Net Ionic Equations
 
 **Part 5 of 7 — Strong and Weak Acid-Base Reactions**
 
-Acid-base reactions are one of the most important categories for net ionic equations on the AP exam. The driving force is the formation of **water** ($\\text{H}_2\\text{O}$). How you write the net ionic equation depends on whether the acid and base are **strong** or **weak**.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🧪 Strong Acid + Strong Base |
+| The Universal Net Ionic Equation |
+| 🧪 Weak Acid + Strong Base |
+| Example: Acetic acid + Sodium hydroxide |
+| 🧪 Strong Acid + Weak Base |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ni5-strong-strong',
@@ -28,15 +45,16 @@ $$\\text{HCl}(aq) + \\text{NaOH}(aq) \\rightarrow \\text{NaCl}(aq) + \\text{H}_2
 **Complete ionic:**
 $$\\text{H}^+(aq) + \\text{Cl}^-(aq) + \\text{Na}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{Na}^+(aq) + \\text{Cl}^-(aq) + \\text{H}_2\\text{O}(l)$$
 
-**Net ionic** (cancel Na⁺ and Cl⁻):
-$$\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)$$
+**Cancel spectators:**
+$$\text{H}^+(aq) + \cancel{\text{Cl}^-(aq)} + \cancel{\text{Na}^+(aq)} + \text{OH}^-(aq) \rightarrow \cancel{\text{Na}^+(aq)} + \cancel{\text{Cl}^-(aq)} + \text{H}_2\text{O}(l)$$
+
+**Net ionic:**
+$$\boxed{\text{H}^+(aq) + \text{OH}^-(aq) \rightarrow \text{H}_2\text{O}(l)}$$
 
 
 ---
 
-### Key Point
-
-**Every** strong acid–strong base reaction has the same net ionic equation! The identity of the acid and base doesn\'t matter because the salt ions are always spectators.
+> 🔑 **Key Concept:** **Every** strong acid–strong base reaction has the same net ionic equation! The identity of the acid and base doesn\'t matter because the salt ions are always spectators.
 
 | Reaction | Same Net Ionic |
 |----------|---------------|
@@ -66,14 +84,12 @@ $$\\text{CH}_3\\text{COOH}(aq) + \\text{NaOH}(aq) \\rightarrow \\text{NaCH}_3\\t
 $$\\text{CH}_3\\text{COOH}(aq) + \\text{Na}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{Na}^+(aq) + \\text{CH}_3\\text{COO}^-(aq) + \\text{H}_2\\text{O}(l)$$
 
 **Net ionic** (cancel Na⁺):
-$$\\text{CH}_3\\text{COOH}(aq) + \\text{OH}^-(aq) \\rightarrow \\text{CH}_3\\text{COO}^-(aq) + \\text{H}_2\\text{O}(l)$$
+$$\boxed{\text{CH}_3\text{COOH}(aq) + \text{OH}^-(aq) \rightarrow \text{CH}_3\text{COO}^-(aq) + \text{H}_2\text{O}(l)}$$
 
 
 ---
 
-### Why Is This Different?
-
-The weak acid doesn\'t fully dissociate, so it cannot be written as H⁺ + anion. It must appear as the **complete molecule**. The net ionic equation is unique to each weak acid.
+> ⚠️ **Warning:** The weak acid doesn\'t fully dissociate, so it cannot be written as H⁺ + anion. It must appear as the **complete molecule**. The net ionic equation is unique to each weak acid — a critical AP exam distinction!
       `
     },
     {
@@ -96,7 +112,7 @@ $$\\text{HCl}(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_4\\text{Cl}(aq)$$
 $$\\text{H}^+(aq) + \\text{Cl}^-(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_4^+(aq) + \\text{Cl}^-(aq)$$
 
 **Net ionic** (cancel Cl⁻):
-$$\\text{H}^+(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_4^+(aq)$$
+$$\boxed{\text{H}^+(aq) + \text{NH}_3(aq) \rightarrow \text{NH}_4^+(aq)}$$
 
 
 ---

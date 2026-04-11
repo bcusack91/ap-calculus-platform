@@ -9,13 +9,20 @@ export const chemHybridizationSigmaPiBondsPart6Data = {
 
 **Part 6 of 7 — Mixed Practice on Hybridization and Sigma/Pi Bonds**
 
-Time to put everything together. In this workshop you\'ll practice:
-- Determining hybridization from Lewis structures
-- Counting sigma and pi bonds
-- Connecting hybridization to molecular geometry
-- Identifying bond angles
+---
 
-Work through each problem carefully — these are the types of questions that appear on the AP exam.`
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'hy-6-2',
@@ -28,7 +35,7 @@ Work through each problem carefully — these are the types of questions that ap
 **Step 1:** Draw the Lewis structure (show all bonds and lone pairs).
 
 **Step 2:** For each atom of interest, count electron domains:
-$$\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}$$
+$$\boxed{\text{Steric Number} = \text{bonded atoms} + \text{lone pairs}}$$
 
 **Step 3:** Assign hybridization:
 | Steric Number | Hybridization | Geometry | Angle |
@@ -42,7 +49,9 @@ $$\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}$$
 - Double bond = 1σ + 1π
 - Triple bond = 1σ + 2π
 
-**Step 5:** Total σ = total number of bonds between atom pairs. Total π = total number of extra bonds beyond the first in each pair.`
+**Step 5:** Total σ = total number of bonds between atom pairs. Total π = total number of extra bonds beyond the first in each pair.
+
+> 💡 **Tip:** On the AP exam, always start with the Lewis structure — every other analysis flows from it.`
     },
     {
       id: 'hy-6-3',
@@ -213,7 +222,9 @@ $$\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}$$
       id: 'hy-6-8',
       type: 'text',
       title: 'Workshop Summary',
-      content: `## Workshop Takeaways
+      content: `---
+
+## Workshop Takeaways
 
 ### Quick Reference Card
 

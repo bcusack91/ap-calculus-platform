@@ -4,13 +4,30 @@ export const chemGalvanicCellsPotentialsPart5Data = {
     {
       id: 'gc5-intro',
       type: 'text' as const,
-      content: `
-# 🔗 Connecting Free Energy and Cell Potential
+      content: `# 🔗 Connecting Free Energy and Cell Potential
 
 **Part 5 of 7 — $\\Delta G^\\circ = -nFE^\\circ$**
 
-One of the most important equations in AP Chemistry links Gibbs free energy directly to cell potential. This bridges thermodynamics and electrochemistry into a unified framework.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🔑 The Key Equation |
+| 🤔 Why the Negative Sign? |
+| 📏 Unit Check |
+| 🔗 The Thermodynamic Triangle |
+| 🗺️ The Web of Connections |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gc5-equation',

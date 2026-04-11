@@ -4,13 +4,30 @@ export const chemEnthalpyCalorimetryPart2Data = {
     {
       id: 'eh2-intro',
       type: 'text' as const,
-      content: `
-# 🌡️ Enthalpy (ΔH) — The Heat of Reaction
+      content: `# 🌡️ Enthalpy (ΔH) — The Heat of Reaction
 
 **Part 2 of 7 — State Functions and Standard Enthalpy**
 
-Enthalpy is the most commonly used thermodynamic quantity in chemistry. It tells us how much heat is absorbed or released during a reaction at constant pressure — which is how most reactions happen in the lab and in nature.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📖 What Is Enthalpy? |
+| At Constant Pressure |
+| Key Signs |
+| 🌡️ Enthalpy Is a State Function |
+| What This Means |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'eh2-enthalpy-defined',
@@ -35,9 +52,11 @@ $$\\Delta H = H_{\\text{products}} - H_{\\text{reactants}}$$
 
 At constant pressure (open beaker, atmospheric conditions):
 
-$$\\Delta H = q_p$$
+$$\\boxed{\\Delta H = q_p}$$
 
 The enthalpy change equals the heat transferred at constant pressure. This is why chemists love enthalpy — it directly corresponds to the heat you can measure!
+
+> 🔑 **Key Insight:** At constant pressure (like an open beaker), the enthalpy change IS the heat. This makes $\\Delta H$ the most practically useful thermodynamic quantity.
 
 
 ---
@@ -66,6 +85,8 @@ A **state function** depends only on the current state of the system, not on how
 - The enthalpy change $\\Delta H$ depends only on the **initial and final states**
 - It does **not** depend on the pathway or mechanism
 - The same reaction will have the same $\\Delta H$ regardless of how many steps it takes
+
+> 💡 **Analogy:** Think of altitude — your change in altitude depends only on start and end, not the trail you took. Enthalpy works the same way.
 
 
 ---

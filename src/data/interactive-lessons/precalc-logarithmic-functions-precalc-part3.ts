@@ -2,186 +2,246 @@ export const precalcLogarithmicPart3Data = {
   topicSlug: 'logarithmic-functions-precalc',
   sections: [
     {
-      id: 'precalc-logarithmic-functions-precalc-p3-s1-intro',
+      id: 'p3-intro',
       type: 'text' as const,
       content: `
-      ## Logarithmic Functions: Transformations and graph behavior
-      
-      **Part 3 of 7**
-      
-      This part focuses on graphing translated logarithmic models. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **product rule**: $\log_b(xy)=\log_b x+\log_b y$
-      - **quotient rule**: $\log_b(x/y)=\log_b x-\log_b y$
-      - **power rule**: $\log_b(x^k)=k\log_b x$
-      
-      
-      ### Worked Example
-      Part 3 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📈 Logarithmic Functions — Transformations & Graphs
+
+**Part 3 of 7**
+
+The general transformed logarithmic function:
+
+$$\\boxed{g(x) = a \\cdot \\log_b(x - h) + k}$$
+
+### Parameter Effects
+
+| Parameter | Effect | Example |
+|:----------|:-------|:--------|
+| $a$ | Vertical stretch ($|a|>1$) / compression ($|a|<1$); reflection over $x$-axis if $a<0$ | $a = -2$: flips & stretches ×2 |
+| $h$ | Horizontal shift: right if $h>0$, left if $h<0$ | $h = 3$: shift right 3 |
+| $k$ | Vertical shift: up if $k>0$, down if $k<0$ | $k = -1$: shift down 1 |
+| $b$ | Base controls steepness: larger $b$ = less steep | $b = 10$ vs $b = 2$ |
       `
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p3-s2-mcq-core',
+      id: 'p3-parent',
+      type: 'text' as const,
+      content: `
+## 📊 The Parent Function $y = \\log_b x$
+
+### Key Points of $y = \\log_2 x$ (parent)
+
+| $x$ | $y = \\log_2 x$ |
+|:----|:----------------|
+| $\\frac{1}{4}$ | $-2$ |
+| $\\frac{1}{2}$ | $-1$ |
+| $1$ | $0$ |
+| $2$ | $1$ |
+| $4$ | $2$ |
+| $8$ | $3$ |
+
+### Features of Every Parent Log Function
+
+| Feature | Value |
+|:--------|:------|
+| Domain | $(0, \\infty)$ |
+| Range | $(-\\infty, \\infty)$ |
+| $x$-intercept | $(1, 0)$ — always |
+| Vertical asymptote | $x = 0$ |
+| Increasing/decreasing | Increasing if $b > 1$; decreasing if $0 < b < 1$ |
+      `
+    },
+    {
+      id: 'p3-transformations',
+      type: 'text' as const,
+      content: `
+## 🔄 Applying Transformations Step by Step
+
+### Worked Example
+
+> **Graph $g(x) = -2\\log_3(x + 1) + 4$ and identify all key features.**
+
+Start from the parent $y = \\log_3 x$ and track the anchor point $(1, 0)$:
+
+| Step | Transformation | Anchor Point | VA |
+|:-----|:--------------|:-------------|:---|
+| Parent | $y = \\log_3 x$ | $(1, 0)$ | $x = 0$ |
+| 1. Replace $x$ with $x+1$ | Shift left $1$ | $(0, 0)$ | $x = -1$ |
+| 2. Multiply by $-2$ | Reflect & stretch | $(0, 0)$ | $x = -1$ |
+| 3. Add $4$ | Shift up $4$ | $(0, 4)$ | $x = -1$ |
+
+### Key Features of $g(x) = -2\\log_3(x + 1) + 4$
+
+| Feature | Value |
+|:--------|:------|
+| Domain | $(-1, \\infty)$ |
+| Range | $(-\\infty, \\infty)$ |
+| VA | $x = -1$ |
+| New "anchor" | $(0, 4)$ |
+| Behavior | **Decreasing** (because $a = -2 < 0$) |
+
+### Quick Rules for Domain & VA
+
+$$\\boxed{\\text{Domain of } \\log_b(x - h): \\quad x > h \\quad \\text{VA at } x = h}$$
+      `
+    },
+    {
+      id: 'p3-finding-x-int',
+      type: 'text' as const,
+      content: `
+## 🎯 Finding the $x$-Intercept Algebraically
+
+Set $g(x) = 0$ and solve:
+
+$-2\\log_3(x + 1) + 4 = 0$
+
+$\\log_3(x + 1) = 2$
+
+$x + 1 = 3^2 = 9$
+
+$x = 8$
+
+**$x$-intercept:** $(8, 0)$ ✔
+
+### General Method
+
+For $g(x) = a\\log_b(x-h)+k$, set $g = 0$:
+
+$$\\log_b(x - h) = -\\frac{k}{a} \\implies x = b^{-k/a} + h$$
+
+### Finding the $y$-Intercept
+
+Set $x = 0$: only exists if $0$ is in the domain (i.e., $h < 0$).
+
+$g(0) = a\\log_b(0 - h) + k = a\\log_b(-h) + k$
+      `
+    },
+    {
+      id: 'p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Transformation Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of product rule.',
+            question: 'The vertical asymptote of $f(x) = \\ln(x - 5)$ is:',
             options: [
-              'rewrite logs using convenient computational bases',
-              '$\\log_b(xy)=\\log_b x+\\log_b y$',
-              '$\\log_b(x/y)=\\log_b x-\\log_b y$',
-              '$\\log_b(x^k)=k\\log_b x$'
+              '$x = 0$',
+              '$x = 5$',
+              '$x = -5$',
+              '$y = 5$'
             ],
             correctAnswer: 1,
-            explanation: 'product rule is defined as: $\\log_b(xy)=\\log_b x+\\log_b y$.'
+            explanation: '$\\ln(x-5)$ shifts right $5$. VA moves from $x = 0$ to $x = 5$. Domain: $(5, \\infty)$.'
           },
           {
-            question: 'In graphing translated logarithmic models, which expression is the best starting model?',
+            question: 'The graph of $g(x) = \\log_2(x) + 3$ compared to $y = \\log_2 x$ is:',
             options: [
-              '$\\log_b(xy)=\\log_b x+\\log_b y$',
-              '$\\log_b x=\\frac{\\log_k x}{\\log_k b}$',
-              '$\\log_b x = y \\iff b^y=x$',
-              '$\\log_b(x^k)=k\\log_b x$'
+              'Shifted right 3',
+              'Shifted left 3',
+              'Shifted up 3',
+              'Vertically stretched by 3'
             ],
-            correctAnswer: 3,
-            explanation: 'Use $\\log_b(x^k)=k\\log_b x$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 2,
+            explanation: 'Adding $3$ outside the log shifts every point up by $3$. The VA stays at $x = 0$.'
+          },
+          {
+            question: 'Which function is decreasing with VA at $x = 2$?',
+            options: [
+              '$f(x) = \\log_3(x - 2)$',
+              '$f(x) = -\\log_3(x - 2)$',
+              '$f(x) = \\log_3(x + 2)$',
+              '$f(x) = -\\log_3(x + 2)$'
+            ],
+            correctAnswer: 1,
+            explanation: 'VA at $x = 2$ requires $(x - 2)$ inside. Negative coefficient makes it decreasing.'
           }
         ]
       }
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p3-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Power | $\log_b(x^k)=k\log_b x$ | exponent extraction |
-      | Change of base | $\log_b x=\\frac{\log_k x}{\log_k b}$ | calculator evaluation |
-      | Definition | $\log_b x = y \iff b^y=x$ | inverse conversion |
-      | Product | $\log_b(xy)=\log_b x+\log_b y$ | expression expansion |
-      
-      ### Common pitfalls
-      - Keep base notation explicit when combining terms.
-      - Applying log rules across sums, like $\log(x+y)$, is invalid.
-      - Always test candidate solutions against positive-input domain restrictions.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-logarithmic-functions-precalc-p3-s4-input',
+      id: 'p3-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Logarithm Computation**
-      
-      1) Evaluate $\log_2 32$.
-      2) Solve $\log_{10}(x)=2$.
-      3) Evaluate $\ln(e^4)$.
+**Graph Analysis** 🧮
+
+**1)** Find the $x$-intercept of $f(x) = \\log_2(x - 3) - 4$. Set $f = 0$, solve for $x$. (e.g., for $\\log_3(x-1) - 2 = 0$: $\\log_3(x-1) = 2$, $x-1 = 9$, $x = 10$)
+
+**2)** The domain of $g(x) = \\ln(2x + 6)$ is $x > $ what value? (e.g., for $\\ln(3x + 9)$: set $3x + 9 > 0$, so $x > -3$)
+
+**3)** If $h(x) = 5\\log(x) - 10$, find $h(100)$. (e.g., $3\\log(1000) - 6 = 3(3) - 6 = 3$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5', '100', '4'],
-        hint1: 'Ask: $2^{?}=32$.',
-        hint2: 'Rewrite in exponential form.',
-        hint3: '$\\ln$ and $e^x$ are inverse operations.',
-        explanation: 'Outputs are 5, 100, and 4 by inverse log-exponential conversion.'
+        correctAnswers: ['19', '-3', '0'],
+        hint1: '$\\log_2(x-3) = 4 \\implies x - 3 = 2^4 = 16$.',
+        hint2: '$2x + 6 > 0 \\implies x > ?$.',
+        hint3: '$\\log(100) = \\log(10^2) = 2$. Then $5(2) - 10 = ?$.',
+        explanation: '1) $\\log_2(x-3) = 4$, so $x - 3 = 16$, $x = 19$. 2) $2x + 6 > 0 \\implies x > -3$. 3) $h(100) = 5\\log(100) - 10 = 5(2) - 10 = 0$.'
       }
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p3-s5-dropdown',
+      id: 'p3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Transformation Identification** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'product rule',
-            options: ['$\\log_b(x^k)=k\\log_b x$', '$\\log_b(x/y)=\\log_b x-\\log_b y$', 'rewrite logs using convenient computational bases', '$\\log_b(xy)=\\log_b x+\\log_b y$']
+            label: '$y = \\log_2(x - 4)$ is the parent shifted',
+            options: ['left 4', 'right 4', 'up 4', 'down 4']
           },
           {
-            label: 'quotient rule',
-            options: ['rewrite logs using convenient computational bases', '$\\log_b(x/y)=\\log_b x-\\log_b y$', '$\\log_b(x^k)=k\\log_b x$', 'log input must stay strictly positive']
+            label: 'A negative coefficient $a < 0$ causes a reflection over the',
+            options: ['$y$-axis', '$x$-axis', 'line $y = x$', 'vertical asymptote']
           },
           {
-            label: 'power rule',
-            options: ['$\\log_b(x^k)=k\\log_b x$', 'log input must stay strictly positive', 'vertical line where log input approaches zero', 'rewrite logs using convenient computational bases']
+            label: 'The VA of $f(x) = 3\\ln(x + 7) - 2$ is',
+            options: ['$x = 7$', '$x = -7$', '$x = 2$', '$x = -2$']
+          },
+          {
+            label: 'Adding $k$ outside the log shifts the graph',
+            options: ['horizontally', 'vertically', 'diagonally', 'does not shift']
           }
         ],
-        correctAnswers: ['$\\log_b(xy)=\\log_b x+\\log_b y$', '$\\log_b(x/y)=\\log_b x-\\log_b y$', '$\\log_b(x^k)=k\\log_b x$'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: product rule, quotient rule, and power rule align with their exact definitions used in this part.'
+        correctAnswers: ['right 4', '$x$-axis', '$x = -7$', 'vertically'],
+        hint1: 'Replacing $x$ with $x - 4$ moves right.',
+        hint2: 'Multiplying the output by a negative flips over which axis?',
+        hint3: 'Set the argument $x + 7 = 0$.',
+        explanation: '$(x-4)$ shifts right 4. Negative $a$ reflects over $x$-axis. VA: $x + 7 = 0 \\implies x = -7$. Adding $k$ shifts vertically.'
       }
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p3-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to product rule, quotient rule, and power rule so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-logarithmic-functions-precalc-p3-s7-mcq-applied',
+      id: 'p3-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is graphing translated logarithmic models. Which term best anchors the next reasoning step if the key idea is: rewrite logs using convenient computational bases?',
+            question: 'The graph of $y = -\\log_2(x-1) + 3$ passes through which point?',
             options: [
-              'change of base',
-              'power rule',
-              'product rule',
-              'quotient rule'
+              '$(2, 3)$',
+              '$(1, 3)$',
+              '$(3, 2)$',
+              '$(2, 0)$'
             ],
             correctAnswer: 0,
-            explanation: 'change of base matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$g(2) = -\\log_2(2-1) + 3 = -\\log_2(1) + 3 = 0 + 3 = 3$. So $(2, 3)$ is on the graph.'
           },
           {
-            question: 'A student is solving a mixed logarithmic functions prompt. Which term best anchors the next reasoning step if the key idea is: log input must stay strictly positive?',
+            question: 'The range of any transformed log function $g(x) = a\\log_b(x-h)+k$ (with $a \\neq 0$) is:',
             options: [
-              'domain condition',
-              'change of base',
-              'power rule',
-              'asymptote'
+              '$(k, \\infty)$',
+              '$(0, \\infty)$',
+              '$(-\\infty, \\infty)$',
+              '$(h, \\infty)$'
             ],
-            correctAnswer: 0,
-            explanation: 'domain condition matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 2,
+            explanation: 'Logarithmic functions always have range $(-\\infty, \\infty)$ regardless of transformations (as long as $a \\neq 0$).'
           }
         ]
       }

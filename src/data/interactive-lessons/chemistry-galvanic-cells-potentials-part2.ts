@@ -4,13 +4,30 @@ export const chemGalvanicCellsPotentialsPart2Data = {
     {
       id: 'gc2-intro',
       type: 'text' as const,
-      content: `
-# 🔋 Galvanic Cell Structure
+      content: `# 🔋 Galvanic Cell Structure
 
 **Part 2 of 7 — Salt Bridges, Electron Flow, and Ion Flow**
 
-A galvanic (voltaic) cell converts the energy of a spontaneous redox reaction into electrical energy. By physically separating the two half-reactions, we force electrons to travel through an external circuit — generating an electric current.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🏗️ Anatomy of a Galvanic Cell |
+| The Two Half-Cells |
+| Key Components |
+| The Zn-Cu Cell (Daniell Cell) |
+| 🔀 Flow Directions |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gc2-cell-anatomy',

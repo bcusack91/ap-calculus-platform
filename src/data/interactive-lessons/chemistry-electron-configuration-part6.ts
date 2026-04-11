@@ -6,7 +6,26 @@ export const chemElectronConfigPart6Data = {
       type: 'text' as const,
       content: `# Part 6: Orbital Diagrams and Quantum Numbers
 
-Electron configurations tell us **which** subshells are occupied. Orbital diagrams and quantum numbers give us a more detailed picture — showing the spin of each electron and the exact "address" of every electron in an atom.`
+**Part 6 of 7 — Problem-Solving Workshop**
+
+---
+
+### From Configuration to Quantum Address
+
+| Level of Detail | What It Tells You | Example (for a 2p electron) |
+|----------------|-------------------|----------------------------|
+| Configuration | Which subshells are occupied | 2p⁴ |
+| Orbital diagram | Spin of each electron | ↑↓ ↑ ↑ |
+| Quantum numbers | Exact "address" of one electron | n=2, l=1, $m_l$=−1, $m_s$=+½ |
+
+> 🔑 **Why this matters:** Quantum numbers give every electron a unique identity — like a GPS coordinate inside the atom.
+
+---
+
+### What You'll Master in Part 6
+- Drawing orbital diagrams with correct Hund's rule application
+- Assigning all four quantum numbers (n, l, $m_l$, $m_s$) to any electron
+- Calculating the number of orbitals in a subshell using 2l + 1`
     },
     {
       id: 'ec6-orbital-diagrams',
@@ -14,8 +33,8 @@ Electron configurations tell us **which** subshells are occupied. Orbital diagra
       content: `## 📝 Orbital Diagrams (Box-Arrow Notation)
 
 An orbital diagram represents each orbital as a **box** (or line) and each electron as an **arrow**:
-- ↑ represents spin-up (\\(m_s = +\\frac{1}{2}\\))
-- ↓ represents spin-down (\\(m_s = -\\frac{1}{2}\\))
+- ↑ represents spin-up ($m_s = +\\frac{1}{2}$)
+- ↓ represents spin-down ($m_s = -\\frac{1}{2}$)
 
 **Example: Nitrogen (N, Z = 7)**
 
@@ -24,6 +43,8 @@ An orbital diagram represents each orbital as a **box** (or line) and each elect
 | ↑↓ | ↑↓ | ↑ ↑ ↑ |
 
 Each of the three 2p orbitals gets **one electron first** (Hund's rule) before any pairing occurs. All three unpaired electrons have the same spin direction.
+
+> 🔑 **Key Rule:** Hund’s Rule in action — fill each orbital singly with parallel spins before any pairing. This minimizes electron-electron repulsion.
 
 **Example: Oxygen (O, Z = 8)**
 
@@ -76,16 +97,16 @@ Every electron in an atom is described by a unique set of four quantum numbers �
 
 ---
 
-### 3. Magnetic Quantum Number (\\(m_l\\))
+### 3. Magnetic Quantum Number ($m_l$)
 - **Allowed values:** −l to +l (including 0)
 - Describes the **orientation** of the orbital in space
-- For p orbitals (l = 1): \\(m_l\\) = −1, 0, +1 → three orientations
+- For p orbitals (l = 1): $m_l$ = −1, 0, +1 → three orientations
 
 
 ---
 
-### 4. Spin Quantum Number (\\(m_s\\))
-- **Allowed values:** \\(+\\frac{1}{2}\\) or \\(-\\frac{1}{2}\\)
+### 4. Spin Quantum Number ($m_s$)
+- **Allowed values:** $+\\frac{1}{2}$ or $-\\frac{1}{2}$
 - Describes the **spin direction** of the electron
 - Two electrons in the same orbital must have opposite spins (Pauli exclusion)`
     },
@@ -94,7 +115,7 @@ Every electron in an atom is described by a unique set of four quantum numbers �
       type: 'text' as const,
       content: `## 📋 Allowed Values Summary
 
-| Subshell | n (example) | l | \\(m_l\\) values | # orbitals | Max e⁻ |
+| Subshell | n (example) | l | $m_l$ values | # orbitals | Max e⁻ |
 |----------|-------------|---|----------------|------------|--------|
 | 1s | 1 | 0 | 0 | 1 | 2 |
 | 2p | 2 | 1 | −1, 0, +1 | 3 | 6 |
@@ -156,15 +177,42 @@ Use the relationships between quantum numbers to answer.`,
     {
       id: 'ec6-summary',
       type: 'text' as const,
-      content: `## 📌 Key Takeaways
+      content: `## � Part 6 Summary: Orbital Diagrams & Quantum Numbers
 
-1. **Orbital diagrams** show each orbital as a box with arrows for electrons; Hund's rule requires filling singly before pairing.
-2. **Four quantum numbers** (n, l, \\(m_l\\), \\(m_s\\)) uniquely identify every electron.
-3. **n** determines the energy level; **l** determines the subshell shape; **\\(m_l\\)** determines the orbital orientation; **\\(m_s\\)** determines the spin.
-4. Allowed values: l = 0 to n−1; \\(m_l\\) = −l to +l; \\(m_s\\) = ±½.
-5. Number of orbitals in a subshell = 2l + 1; max electrons = 2(2l + 1).
+---
 
-Next: Part 7 brings it all together with AP-style synthesis problems!`
+### 🧰 The Four Quantum Numbers
+
+| Quantum Number | Symbol | Determines | Allowed Values |
+|----------------|--------|------------|----------------|
+| Principal | n | Energy level / shell | 1, 2, 3, ... |
+| Angular momentum | l | Subshell shape | 0 to n − 1 |
+| Magnetic | $m_l$ | Orbital orientation | −l to +l |
+| Spin | $m_s$ | Electron spin | +½ or −½ |
+
+---
+
+### 📌 Quick Formulas
+
+| Formula | Meaning | Example (l = 2, d subshell) |
+|---------|---------|-----------------------------|
+| # orbitals = 2l + 1 | Orbitals in a subshell | 2(2) + 1 = 5 orbitals |
+| max e⁻ = 2(2l + 1) | Electrons in a subshell | 2(5) = 10 electrons |
+
+---
+
+### ✅ Your Checklist Before Moving On
+
+- ☐ I can draw orbital diagrams using boxes and arrows (↑↓)
+- ☐ I apply Hund's rule: fill all orbitals singly before pairing
+- ☐ I know all four quantum numbers and their allowed values
+- ☐ I can determine the quantum numbers for any electron in an atom
+
+---
+
+### 🔮 What's Next
+
+**Part 7** brings it all together with **AP-style synthesis problems** that combine electron configuration with periodic trends, ionization energy, and other core concepts.`
     }
   ]
 }

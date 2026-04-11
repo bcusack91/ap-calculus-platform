@@ -4,13 +4,32 @@ export const chemActivationEnergyArrheniusPart3Data = {
     {
       id: 'ae3-intro',
       type: 'text' as const,
-      content: `
-# 📐 The Arrhenius Equation
+      content: `# 📐 The Arrhenius Equation
 
 **Part 3 of 7 — Connecting Rate Constants to Temperature**
 
-The Arrhenius equation is one of the most important equations in chemical kinetics. It quantitatively describes how the rate constant $k$ depends on temperature and activation energy.
-      `
+---
+
+### The Arrhenius Equation
+
+$$k = Ae^{-E_a/RT}$$
+
+| Symbol | Meaning | Units |
+|--------|---------|-------|
+| $k$ | Rate constant | Depends on order |
+| $A$ | Frequency factor | Same as $k$ |
+| $E_a$ | Activation energy | J/mol |
+| $R$ | Gas constant | 8.314 J/(mol·K) |
+| $T$ | Temperature | K (Kelvin!) |
+
+> 🔑 **Why this matters:** The Arrhenius equation is one of the most important in kinetics — it quantitatively connects rate constants to temperature and activation energy.
+
+---
+
+### What You'll Master in Part 3
+- Understanding each variable in $k = Ae^{-E_a/RT}$
+- Explaining how $k$ changes with temperature and $E_a$
+- Calculating rate constants at different temperatures`
     },
     {
       id: 'ae3-equation',
@@ -168,7 +187,7 @@ The frequency factor $A$ represents the maximum possible rate constant — the v
 
 ### Key Point for AP
 
-$A$ is assumed to be approximately **independent of temperature** (it has a very weak $T$ dependence that is negligible compared to the exponential). All the temperature dependence of $k$ comes from the $e^{-E_a/(RT)}$ term.
+> 🔑 $A$ is approximately **independent of temperature** — all the temperature dependence of $k$ comes from the $e^{-E_a/(RT)}$ term.
       `
     },
     {

@@ -4,13 +4,30 @@ export const chemReactionRatesAndRateLawsPart5Data = {
     {
       id: 'rr5-intro',
       type: 'text' as const,
-      content: `
-# 📏 Units of the Rate Constant k
+      content: `# 📏 Units of the Rate Constant k
 
 **Part 5 of 7 — How Units Change with Reaction Order**
 
-The rate constant $k$ has different units depending on the **overall order** of the reaction. Understanding why — and being able to derive or recognize the correct units — is a key AP Chemistry skill.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Deriving Units of k |
+| Summary Table |
+| The Pattern |
+| ⚗️ Zero-Order Reactions |
+| When Do Zero-Order Reactions Occur? |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rr5-deriving-units',
@@ -28,7 +45,7 @@ Solving for $k$:
 
 $$k = \\frac{\\text{Rate}}{[A]^m[B]^n}$$
 
-$$\\text{Units of } k = \\frac{\\text{M/s}}{\\text{M}^{m+n}} = \\text{M}^{1-(m+n)} \\cdot \\text{s}^{-1}$$
+$$\\boxed{\\text{Units of } k = \\frac{\\text{M/s}}{\\text{M}^{m+n}} = \\text{M}^{1-(m+n)} \\cdot \\text{s}^{-1}}$$
 
 
 ---
@@ -47,9 +64,11 @@ $$\\text{Units of } k = \\frac{\\text{M/s}}{\\text{M}^{m+n}} = \\text{M}^{1-(m+n
 
 ### The Pattern
 
-$$\\text{Units of } k = \\text{M}^{1-n}\\text{s}^{-1}$$
+$$\\boxed{\\text{Units of } k = \\text{M}^{1-n}\\text{s}^{-1}}$$
 
 where $n$ = overall order. As order increases by 1, the power of M decreases by 1.
+
+> 💡 **Tip:** Units of $k$ vary with reaction order! You can identify the overall order from the units of $k$, and vice versa. This is a common AP exam shortcut.
       `
     },
     {
@@ -102,7 +121,7 @@ where $n$ = overall order. As order increases by 1, the power of M decreases by 
       content: `
 ## ⚗️ Zero-Order Reactions
 
-$$\\text{Rate} = k$$
+$$\boxed{\text{Rate} = k}$$
 
 - Rate is **constant** — independent of concentration
 - Units of $k$: **M/s**
@@ -134,18 +153,20 @@ Decomposition of NH₃ on a hot tungsten surface: Rate = k. The tungsten surface
 
 ### First-Order ($n = 1$)
 
-$$\\text{Rate} = k[A]$$
+$$\boxed{\text{Rate} = k[A]}$$
 
 - Units of $k$: **s⁻¹**
-- Half-life: $t_{1/2} = \\frac{0.693}{k}$ (independent of concentration!)
+- Half-life: $\boxed{t_{1/2} = \frac{0.693}{k}}$ (**independent** of concentration!)
 - Examples: Radioactive decay, many decomposition reactions
+
+> 💡 **Tip:** First-order half-life is **constant** — it doesn't depend on how much reactant you start with. This makes it uniquely useful for radioactive decay and pharmacokinetics.
 
 
 ---
 
 ### Second-Order ($n = 2$)
 
-$$\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]$$
+$$\boxed{\text{Rate} = k[A]^2 \quad \text{or} \quad \text{Rate} = k[A][B]}$$
 
 - Units of $k$: **M⁻¹s⁻¹** (for both cases)
 - Half-life: $t_{1/2} = \\frac{1}{k[A]_0}$ (depends on concentration)

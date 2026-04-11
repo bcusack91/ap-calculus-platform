@@ -5,13 +5,30 @@ export const chemTypesIntermolecularForcesPart7Data = {
       id: 'if-ap-overview',
       type: 'text',
       title: 'AP Chemistry IMF Review',
-      content: `Let\'s bring everything together for the AP exam. IMF questions are among the most commonly tested topics. Here\'s your complete toolkit:\n\n**The IMF Hierarchy (similar-sized molecules):**\n$$\\text{Ion-Dipole} > \\text{H-bonding} > \\text{Dipole-Dipole} > \\text{LDF}$$\n\n**Quick Identification Guide:**\n1. **Ion + polar molecule?** $\\rightarrow$ Ion-dipole\n2. **H bonded to N, O, or F?** $\\rightarrow$ Hydrogen bonding\n3. **Polar molecule?** $\\rightarrow$ Dipole-dipole (+ LDF)\n4. **Nonpolar molecule?** $\\rightarrow$ LDF only\n\n**Property Trends (stronger IMFs $\\rightarrow$):**\n- Boiling point: $\\uparrow$\n- Melting point: $\\uparrow$\n- Surface tension: $\\uparrow$\n- Viscosity: $\\uparrow$\n- Vapor pressure: $\\downarrow$ (inverse!)\n\n**Remember:** ALL molecules have LDF. Polar molecules have DD + LDF. H-bonding molecules have H-bond + DD + LDF.`
+      content: `Let\'s bring everything together for the AP exam. IMF questions are among the most commonly tested topics. Here\'s your complete toolkit:\n\n**The IMF Hierarchy (similar-sized molecules):**\n$$\\boxed{\\text{Ion-Dipole} > \\text{H-bonding} > \\text{Dipole-Dipole} > \\text{LDF}}$$\n\n**Quick Identification Guide:**\n1. **Ion + polar molecule?** $\\rightarrow$ Ion-dipole\n2. **H bonded to N, O, or F?** $\\rightarrow$ Hydrogen bonding\n3. **Polar molecule?** $\\rightarrow$ Dipole-dipole (+ LDF)\n4. **Nonpolar molecule?** $\\rightarrow$ LDF only\n\n**Property Trends (stronger IMFs $\\rightarrow$):**\n- Boiling point: $\\uparrow$\n- Melting point: $\\uparrow$\n- Surface tension: $\\uparrow$\n- Viscosity: $\\uparrow$\n- Vapor pressure: $\\downarrow$ (inverse!)\n\n**Remember:** ALL molecules have LDF. Polar molecules have DD + LDF. H-bonding molecules have H-bond + DD + LDF.\n\n> 🔑 **Key Concept:** IMF questions are among the most commonly tested AP Chemistry topics. Master the hierarchy and the identification flowchart.
+
+**Part 7 of 7 — Synthesis & AP Review**
+
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'if-ap-common-mistakes',
       type: 'text',
       title: 'Common AP Mistakes to Avoid',
-      content: `**Mistake 1: Saying hydrogen bonds are chemical bonds**\nHydrogen bonds are IMFs (between molecules), NOT chemical bonds (within molecules). Never say a molecule "has hydrogen bonds" — say it "exhibits hydrogen bonding" or "participates in hydrogen bonding."\n\n**Mistake 2: Thinking HCl has hydrogen bonding**\nHCl has an H–Cl bond, but Cl is NOT N, O, or F. HCl only has dipole-dipole forces + LDF. The "hydrogen" in hydrogen bonding doesn\'t mean any bond to hydrogen — it specifically means H bonded to FON.\n\n**Mistake 3: Confusing IMFs with intramolecular bonds**\nIMFs are forces BETWEEN molecules. Covalent, ionic, and metallic bonds are forces WITHIN a compound. Boiling and melting break IMFs, not covalent bonds.\n\n**Mistake 4: Ignoring molar mass when comparing LDF**\nA large nonpolar molecule can have stronger IMFs than a small polar one. Always consider size.\n\n**Mistake 5: Forgetting that LDF are in ALL molecules**\nPolar molecules have dipole-dipole AND LDF. Hydrogen bonding molecules have H-bonding AND DD AND LDF.`
+      content: `**Mistake 1: Saying hydrogen bonds are chemical bonds**\nHydrogen bonds are IMFs (between molecules), NOT chemical bonds (within molecules). $\\cancel{\\text{hydrogen bond = covalent bond}}$ — Never say a molecule "has hydrogen bonds" — say it "exhibits hydrogen bonding" or "participates in hydrogen bonding."\n\n**Mistake 2: Thinking HCl has hydrogen bonding**\n$\\cancel{\\text{HCl has H-bonding}}$ — HCl has an H–Cl bond, but Cl is NOT N, O, or F. HCl only has dipole-dipole forces + LDF. The "hydrogen" in hydrogen bonding doesn\'t mean any bond to hydrogen — it specifically means H bonded to FON.\n\n**Mistake 3: Confusing IMFs with intramolecular bonds**\n\n> ⚠️ **Warning:** IMFs are forces BETWEEN molecules. Covalent, ionic, and metallic bonds are forces WITHIN a compound. Boiling and melting break IMFs, not covalent bonds.\n\n**Mistake 4: Ignoring molar mass when comparing LDF**\nA large nonpolar molecule can have stronger IMFs than a small polar one. Always consider size.\n\n**Mistake 5: Forgetting that LDF are in ALL molecules**\nPolar molecules have dipole-dipole AND LDF. Hydrogen bonding molecules have H-bonding AND DD AND LDF.`
     },
     {
       id: 'if-ap-q1',

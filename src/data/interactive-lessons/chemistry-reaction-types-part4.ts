@@ -4,13 +4,30 @@ export const chemReactionTypesPart4Data = {
     {
       id: 'rt4-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Balancing Chemical Equations
+      content: `# ⚖️ Balancing Chemical Equations
 
 **Part 4 of 7 — The Coefficient Method**
 
-A balanced equation has equal numbers of each type of atom on both sides. This is required by the **Law of Conservation of Mass** — atoms are neither created nor destroyed in a chemical reaction.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚖️ Rules for Balancing Equations |
+| What You CAN Do |
+| What You CANNOT Do |
+| Step-by-Step Method |
+| Example: Balancing $\\text{Al} + \\text{O}_2 \\rightarrow \\text{Al}_2\\text{O}_3$ |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rt4-rules',
@@ -25,8 +42,8 @@ A balanced equation has equal numbers of each type of atom on both sides. This i
 ---
 
 ### What You CANNOT Do
-- Change **subscripts** (that changes the compound itself!)
-- Add or remove substances
+
+> ⚠️ **Warning:** Never change **subscripts** — that changes the identity of the compound! You also cannot add or remove substances. Only adjust **coefficients**.
 
 
 ---
@@ -60,7 +77,7 @@ A balanced equation has equal numbers of each type of atom on both sides. This i
       content: `
 ## ⚛️ The Polyatomic Ion Shortcut
 
-When a polyatomic ion appears **unchanged** on both sides of an equation, treat it as a **single unit** rather than balancing individual atoms.
+> 💡 **Tip:** When a polyatomic ion appears **unchanged** on both sides of an equation, treat it as a **single unit** rather than balancing individual atoms.
 
 
 ---
@@ -76,7 +93,7 @@ Instead of counting individual H, O, and P atoms, notice:
 - Count H: left has 3(2) + 2(3) = 12. Right needs 12 → coefficient of H₂O = 6
 - Check O from OH and H₂O: left 3(2) = 6 from OH; right 6 from H₂O ✓
 
-$$3\\text{Ca(OH)}_2 + 2\\text{H}_3\\text{PO}_4 \\rightarrow \\text{Ca}_3(\\text{PO}_4)_2 + 6\\text{H}_2\\text{O}$$
+$$\\boxed{3\\text{Ca(OH)}_2 + 2\\text{H}_3\\text{PO}_4 \\rightarrow \\text{Ca}_3(\\text{PO}_4)_2 + 6\\text{H}_2\\text{O}}$$
 
 
 ---
@@ -96,24 +113,33 @@ $$3\\text{Ca(OH)}_2 + 2\\text{H}_3\\text{PO}_4 \\rightarrow \\text{Ca}_3(\\text{
       content: `
 ## 🧪 Worked Examples
 
-### Example 1: $\\text{Fe} + \\text{O}_2 \\rightarrow \\text{Fe}_2\\text{O}_3$
+### Example 1
+
+> **Problem:** Balance $\\text{Fe} + \\text{O}_2 \\rightarrow \\text{Fe}_2\\text{O}_3$
+
+> **Solution:**
 
 - Balance Fe: $2\\text{Fe} + \\text{O}_2 \\rightarrow \\text{Fe}_2\\text{O}_3$ → Fe: 2 = 2 ✓
 - Balance O: need 3 O on left, but O₂ gives even numbers → use LCM of 2 and 3 = 6
 - $2\\text{Fe} + 1.5\\text{O}_2 \\rightarrow \\text{Fe}_2\\text{O}_3$ → multiply all by 2:
-$$4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3$$
+$$\\boxed{4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3}$$
 
 Check: Fe: 4 = 4 ✓, O: 6 = 6 ✓
 
 
 ---
 
-### Example 2: $\\text{Al} + \\text{HCl} \\rightarrow \\text{AlCl}_3 + \\text{H}_2$
+### Example 2
+
+> **Problem:** Balance $\\text{Al} + \\text{HCl} \\rightarrow \\text{AlCl}_3 + \\text{H}_2$
+
+> **Solution:**
 
 - Balance Cl: $\\text{Al} + 3\\text{HCl} \\rightarrow \\text{AlCl}_3 + \\text{H}_2$
 - Balance H: 3H on left, 2H on right → LCM = 6
 - $\\text{Al} + 6\\text{HCl} \\rightarrow 2\\text{AlCl}_3 + 3\\text{H}_2$ → wait, now Cl: 6 vs 6 ✓
-- Balance Al: need 2 on left → $2\\text{Al} + 6\\text{HCl} \\rightarrow 2\\text{AlCl}_3 + 3\\text{H}_2$
+- Balance Al: need 2 on left:
+$$\\boxed{2\\text{Al} + 6\\text{HCl} \\rightarrow 2\\text{AlCl}_3 + 3\\text{H}_2}$$
 
 Check: Al: 2 = 2 ✓, H: 6 = 6 ✓, Cl: 6 = 6 ✓
       `

@@ -4,13 +4,24 @@ export const chemNetIonicEquationsPart6Data = {
     {
       id: 'ni6-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Problem-Solving Workshop
+      content: `# 🧪 Problem-Solving Workshop
 
 **Part 6 of 7 — Writing Net Ionic Equations for Various Reaction Types**
 
-Time to practice the complete process — from identifying the reaction type, through molecular and complete ionic equations, to the final net ionic equation. This workshop covers precipitation, acid-base, and gas-forming reactions.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'ni6-gas-forming',
@@ -40,9 +51,9 @@ Some double-replacement reactions produce an **unstable compound** that decompos
 $$2\\text{HCl}(aq) + \\text{Na}_2\\text{CO}_3(aq) \\rightarrow 2\\text{NaCl}(aq) + \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)$$
 
 **Net ionic:**
-$$2\\text{H}^+(aq) + \\text{CO}_3^{2-}(aq) \\rightarrow \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)$$
+$$\boxed{2\text{H}^+(aq) + \text{CO}_3^{2-}(aq) \rightarrow \text{H}_2\text{O}(l) + \text{CO}_2(g)}$$
 
-The fizzing you see when acid hits baking soda is CO₂ gas escaping!
+> 💡 **Tip:** The fizzing you see when acid hits baking soda is CO₂ gas escaping!
       `
     },
     {
@@ -64,22 +75,19 @@ The fizzing you see when acid hits baking soda is CO₂ gas escaping!
 
 ---
 
-### Decision Tree for Splitting
-
-Ask: Is this species...
-- A solid, liquid, or gas? → **Keep molecular**
-- A weak electrolyte? → **Keep molecular**
-- An aqueous strong electrolyte? → **Split into ions**
+> 🔑 **Decision Tree for Splitting:**
+> - A solid, liquid, or gas? → **Keep molecular**
+> - A weak electrolyte? → **Keep molecular**
+> - An aqueous strong electrolyte? → **Split into ions**
 
 
 ---
 
-### Common Mistakes to Avoid
-
-1. Splitting a precipitate into ions (NO — it\'s a solid!)
-2. Splitting a weak acid like HF or CH₃COOH (NO — weak electrolyte!)
-3. Forgetting to balance the molecular equation first
-4. Not checking charge balance in the net ionic equation
+> ⚠️ **Common AP Mistakes:**
+> 1. Splitting a precipitate into ions (NO — it\'s a solid!)
+> 2. Splitting a weak acid like HF or CH₃COOH (NO — weak electrolyte!)
+> 3. Forgetting to balance the molecular equation first
+> 4. Not checking charge balance in the net ionic equation
       `
     },
     {

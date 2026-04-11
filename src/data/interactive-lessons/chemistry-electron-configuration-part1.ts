@@ -6,7 +6,26 @@ export const chemElectronConfigPart1Data = {
       type: 'text' as const,
       content: `# Part 1: Atomic Structure Review
 
-Before we dive into electron configurations, let's make sure the fundamentals of atomic structure are solid. Every atom is built from three subatomic particles, and understanding how they're counted is essential for everything that follows.`
+**Part 1 of 7 — Quantum Numbers & Orbitals**
+
+---
+
+### Quick Reference
+
+| Particle | Charge | Location | How to Find Count |
+|----------|--------|----------|-------------------|
+| Proton (p⁺) | +1 | Nucleus | = Atomic number (Z) |
+| Neutron (n⁰) | 0 | Nucleus | = Mass number − Z |
+| Electron (e⁻) | −1 | Electron cloud | = Z (neutral atom) |
+
+> 🔑 **Why this matters:** The atomic number defines the element, and the electron count determines all chemical behavior — bonding, reactivity, and periodic trends.
+
+---
+
+### What You'll Master in Part 1
+- Identifying protons, neutrons, and electrons from atomic/mass numbers
+- Using isotope notation to describe different forms of an element
+- Calculating particle counts in ions (cations and anions)`
     },
     {
       id: 'ec1-particles',
@@ -24,7 +43,9 @@ Before we dive into electron configurations, let's make sure the fundamentals of
 - The **mass number (A)** = protons + neutrons
 - Number of neutrons = A − Z
 
-The identity of an element is determined entirely by its number of protons. Change the proton count and you change the element.`
+The identity of an element is determined entirely by its number of protons. Change the proton count and you change the element.
+
+> 🔑 **Key Point:** The atomic number (protons) defines the element. Everything else — neutrons, electrons — can vary.`
     },
     {
       id: 'ec1-notation',
@@ -35,11 +56,11 @@ Atoms of the same element can have different numbers of neutrons. These variants
 
 We write isotope notation as:
 
-$$^{A}_{Z}X$$
+$$\\boxed{^{A}_{Z}X}$$
 
 where **A** is the mass number (top), **Z** is the atomic number (bottom), and **X** is the element symbol.
 
-**Example:** \\(^{14}_{6}\\text{C}\\) — Carbon-14
+**Example:** $^{14}_{6}\\text{C}$ — Carbon-14
 - Protons = 6
 - Electrons = 6 (neutral atom)
 - Neutrons = 14 − 6 = 8
@@ -68,7 +89,7 @@ How many protons are in an atom of phosphorus (P, atomic number 15)?`,
       type: 'input-box' as const,
       content: `### Calculating Neutrons
 
-Chlorine-37 (\\(^{37}_{17}\\text{Cl}\\)) has a mass number of 37 and an atomic number of 17. How many neutrons does it have?
+Chlorine-37 ($^{37}_{17}\\text{Cl}$) has a mass number of 37 and an atomic number of 17. How many neutrons does it have?
 
 *Remember: neutrons = mass number − atomic number*`,
       exercise: {
@@ -93,7 +114,7 @@ When an atom gains or loses **electrons**, it becomes an **ion**:
 - **Anion** (negative ion): atom gains electrons → more electrons than protons
   - Cl → Cl⁻ (17 protons, 18 electrons)
 
-**Important:** Gaining or losing electrons does NOT change the atomic number or the identity of the element. Only changing protons does that.`
+> ⚠️ **Important:** Gaining or losing electrons does NOT change the atomic number or the identity of the element. Only changing protons does that.`
     },
     {
       id: 'ec1-quiz-ion',
@@ -117,7 +138,7 @@ How many electrons does the ion Ca²⁺ have? (Calcium has atomic number 20.)`,
       type: 'dropdown-select' as const,
       content: `### Comprehensive Review
 
-An atom of \\(^{56}_{26}\\text{Fe}\\) — let's verify you can identify all its particles.`,
+An atom of $^{56}_{26}\\text{Fe}$ — let's verify you can identify all its particles.`,
       exercise: {
         dropdowns: [
           {

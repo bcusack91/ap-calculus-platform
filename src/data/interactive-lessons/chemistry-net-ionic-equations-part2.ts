@@ -4,13 +4,30 @@ export const chemNetIonicEquationsPart2Data = {
     {
       id: 'ni2-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Complete Ionic Equations
+      content: `# 🧪 Complete Ionic Equations
 
 **Part 2 of 7 — Breaking Strong Electrolytes into Ions**
 
-Now that you can write balanced molecular equations, it\'s time to show what\'s **really happening** in solution. In a complete ionic equation, every strong electrolyte dissolved in water is written as its constituent ions. This reveals which species actually participate in the reaction.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ✍️ Rules for Writing Complete Ionic Equations |
+| What Gets Split into Ions? |
+| The Six Strong Acids (memorize these!) |
+| Strong Bases |
+| 📏 Solubility Rules |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ni2-rules',
@@ -35,21 +52,21 @@ Only **aqueous strong electrolytes** are written as separated ions:
 
 ### The Six Strong Acids (memorize these!)
 
-$$\\text{HCl, HBr, HI, HNO}_3\\text{, H}_2\\text{SO}_4\\text{, HClO}_4$$
+$$\boxed{\text{HCl, HBr, HI, HNO}_3\text{, H}_2\text{SO}_4\text{, HClO}_4}$$
+
+> 💡 **Tip:** Memorize these six strong acids — everything else is weak. A common mnemonic: **HCl, HBr, HI** (the binary acids) + **HNO₃, H₂SO₄, HClO₄** (the oxy-acids).
 
 
 ---
 
 ### Strong Bases
 
-$$\\text{LiOH, NaOH, KOH, Ca(OH)}_2\\text{, Sr(OH)}_2\\text{, Ba(OH)}_2$$
+$$\boxed{\text{LiOH, NaOH, KOH, Ca(OH)}_2\text{, Sr(OH)}_2\text{, Ba(OH)}_2}$$
 
 
 ---
 
-### Important
-
-Weak acids (HF, CH₃COOH, H₂CO₃, H₃PO₄) and weak bases (NH₃) are **NOT** split into ions — they stay as complete formulas.
+> ⚠️ **Warning:** Weak acids (HF, CH₃COOH, H₂CO₃, H₃PO₄) and weak bases (NH₃) are **NOT** split into ions — they stay as complete formulas. This is the #1 AP exam mistake!
       `
     },
     {
@@ -88,11 +105,7 @@ To determine if an ionic compound is $(aq)$ or $(s)$, use the solubility rules:
 
 ---
 
-### Using Solubility Rules
-
-If an ionic compound is **soluble** → label $(aq)$ → split into ions
-
-If an ionic compound is **insoluble** → label $(s)$ → keep as formula
+> 🔑 **Key Concept:** If an ionic compound is **soluble** → label $(aq)$ → split into ions. If an ionic compound is **insoluble** → label $(s)$ → keep as formula.
       `
     },
     {
@@ -101,9 +114,11 @@ If an ionic compound is **insoluble** → label $(s)$ → keep as formula
       content: `
 ## 🧪 Worked Example
 
-Write the complete ionic equation for:
+> **Problem:** Write the complete ionic equation for:
+>
+> $$\text{AgNO}_3(aq) + \text{NaCl}(aq) \rightarrow \text{AgCl}(s) + \text{NaNO}_3(aq)$$
 
-$$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{NaNO}_3(aq)$$
+> **Solution:**
 
 
 ---
@@ -122,7 +137,7 @@ $$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{Na
 
 ### Step 2: Write the complete ionic equation
 
-$$\\text{Ag}^+(aq) + \\text{NO}_3^-(aq) + \\text{Na}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s) + \\text{Na}^+(aq) + \\text{NO}_3^-(aq)$$
+$$\boxed{\text{Ag}^+(aq) + \text{NO}_3^-(aq) + \text{Na}^+(aq) + \text{Cl}^-(aq) \rightarrow \text{AgCl}(s) + \text{Na}^+(aq) + \text{NO}_3^-(aq)}$$
 
 
 ---

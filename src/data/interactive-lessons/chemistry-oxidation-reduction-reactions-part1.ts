@@ -4,13 +4,30 @@ export const chemOxidationReductionReactionsPart1Data = {
     {
       id: 'or1-intro',
       type: 'text' as const,
-      content: `
-# ⚡ Oxidation States
+      content: `# ⚡ Oxidation States
 
 **Part 1 of 7 — Rules for Assigning Oxidation Numbers**
 
-Oxidation-reduction (redox) reactions involve the **transfer of electrons** between species. To track where electrons go, we assign **oxidation states** (also called oxidation numbers) to every atom. These are not always real charges — they\'re a bookkeeping tool that lets us identify which atoms gain or lose electrons.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📏 Rules for Assigning Oxidation States |
+| Rule 6 Is Your Calculation Tool |
+| 🧪 Worked Examples |
+| Example 1: H₂SO₄ |
+| Example 2: MnO₄⁻ (permanganate ion) |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'or1-rules',
@@ -19,6 +36,8 @@ Oxidation-reduction (redox) reactions involve the **transfer of electrons** betw
 ## 📏 Rules for Assigning Oxidation States
 
 Apply these rules **in order of priority** (Rule 1 overrides Rule 2, etc.):
+
+> 💡 **Tip:** Always apply the rules in order — higher-numbered rules yield to lower-numbered ones when there's a conflict.
 
 | Rule | Description | Example |
 |------|-------------|---------|
@@ -36,11 +55,13 @@ Apply these rules **in order of priority** (Rule 1 overrides Rule 2, etc.):
 
 ---
 
+> 🔑 **Key Concept:** Rule 6 is your primary calculation tool — if you know all oxidation states except one, solve for the unknown!
+
 ### Rule 6 Is Your Calculation Tool
 
 For any compound or polyatomic ion:
 
-$$\\sum \\text{(oxidation states)} = \\text{overall charge}$$
+$$\\boxed{\\sum \\text{(oxidation states)} = \\text{overall charge}}$$
       `
     },
     {
@@ -51,36 +72,47 @@ $$\\sum \\text{(oxidation states)} = \\text{overall charge}$$
 
 ### Example 1: H₂SO₄
 
-- H = +1 (Rule 5), O = −2 (Rule 4)
-- $2(+1) + S + 4(-2) = 0$
-- $+2 + S - 8 = 0$
-- $S = +6$
+> **Problem:** Find the oxidation state of sulfur in H₂SO₄.
+
+> **Solution:**
+> - H = +1 (Rule 5), O = −2 (Rule 4)
+> - $2(+1) + S + 4(-2) = 0$
+> - $+2 + S - 8 = 0$
+> - $\\boxed{S = +6}$
 
 
 ---
 
 ### Example 2: MnO₄⁻ (permanganate ion)
 
-- O = −2 (Rule 4)
-- $\\text{Mn} + 4(-2) = -1$ (charge of ion)
-- $\\text{Mn} - 8 = -1$
-- $\\text{Mn} = +7$
+> **Problem:** Find the oxidation state of manganese in MnO₄⁻.
+
+> **Solution:**
+> - O = −2 (Rule 4)
+> - $\\text{Mn} + 4(-2) = -1$ (charge of ion)
+> - $\\text{Mn} - 8 = -1$
+> - $\\boxed{\\text{Mn} = +7}$
 
 
 ---
 
 ### Example 3: Cr₂O₇²⁻ (dichromate ion)
 
-- O = −2 (Rule 4)
-- $2(\\text{Cr}) + 7(-2) = -2$
-- $2\\text{Cr} - 14 = -2$
-- $2\\text{Cr} = +12$
-- $\\text{Cr} = +6$
+> **Problem:** Find the oxidation state of chromium in Cr₂O₇²⁻.
+
+> **Solution:**
+> - O = −2 (Rule 4)
+> - $2(\\text{Cr}) + 7(-2) = -2$
+> - $2\\text{Cr} - 14 = -2$
+> - $2\\text{Cr} = +12$
+> - $\\boxed{\\text{Cr} = +6}$
 
 
 ---
 
 ### Example 4: Na₂O₂ (sodium peroxide)
+
+> ⚠️ **Warning:** Peroxides are a common exception — oxygen is −1, not −2!
 
 - Na = +1 (Rule 2, Group 1 metal)
 - $2(+1) + 2(\\text{O}) = 0$

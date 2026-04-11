@@ -4,13 +4,30 @@ export const chemElectrolyticCellsFaradayPart3Data = {
     {
       id: 'ef3-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Electrolysis of Molten Salts and Aqueous Solutions
+      content: `# 🧪 Electrolysis of Molten Salts and Aqueous Solutions
 
 **Part 3 of 7 — Predicting Products**
 
-One of the trickiest parts of electrolysis is predicting **what forms at each electrode**. The products depend on whether you are electrolyzing a molten salt or an aqueous solution.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🔋 Electrolysis of Molten Salts |
+| Why Molten? |
+| Simple Case: Molten NaCl |
+| Molten Salt Rule |
+| Examples |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ef3-molten-salts',

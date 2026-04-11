@@ -4,13 +4,28 @@ export const chemIntegratedRateLawsPart4Data = {
     {
       id: 'ir4-intro',
       type: 'text' as const,
-      content: `
-# 📊 Graphical Analysis
+      content: `# 📊 Graphical Analysis
 
 **Part 4 of 7 — Identifying Reaction Order from Plots**
 
-On the AP exam, you may be given data or graphs and asked to determine the reaction order. The key technique: make three plots and see which one is linear. This part gives you systematic practice with this approach.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🎯 The Three-Plot Strategy |
+| How to Check Linearity |
+| 🧪 Worked Example: Identifying Order |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ir4-strategy',
@@ -35,16 +50,15 @@ Given concentration-vs-time data, create:
 2. **Constant slope**: Calculate $\\Delta y / \\Delta x$ between successive points — is it constant?
 3. **$R^2$ value**: In a calculator, the best fit gives $R^2$ closest to 1.
 
+> ⚠️ **Warning:** A plot of $[A]$ vs $t$ is **always curved** for first and second-order — don't mistake a gentle curve for a straight line!
+
 
 ---
 
-### AP Exam Shortcut
-
-If you are given just the raw data, calculate the transformed values and check which set has constant spacing:
-
-- If $\\Delta[A]$ is constant per $\\Delta t$ → **zero-order**
-- If $\\Delta(\\ln[A])$ is constant per $\\Delta t$ → **first-order**
-- If $\\Delta(1/[A])$ is constant per $\\Delta t$ → **second-order**
+> 💡 **Tip — AP Exam Shortcut:** If you are given just the raw data, calculate the transformed values and check which set has constant spacing:
+> - If $\\Delta[A]$ is constant per $\\Delta t$ → **zero-order**
+> - If $\\Delta(\\ln[A])$ is constant per $\\Delta t$ → **first-order**
+> - If $\\Delta(1/[A])$ is constant per $\\Delta t$ → **second-order**
       `
     },
     {
@@ -52,6 +66,8 @@ If you are given just the raw data, calculate the transformed values and check w
       type: 'text' as const,
       content: `
 ## 🧪 Worked Example: Identifying Order
+
+> **Problem:** Given the following data, determine the reaction order and find $k$.
 
 | $t$ (s) | $[A]$ (M) | $\\ln[A]$ | $1/[A]$ (M⁻¹) |
 |---------|----------|---------|--------------|
@@ -61,6 +77,8 @@ If you are given just the raw data, calculate the transformed values and check w
 | 30 | 0.223 | −1.500 | 4.484 |
 | 40 | 0.135 | −2.000 | 7.407 |
 
+> **Solution:**
+
 **Test [A] vs t:** Differences in [A]: −0.393, −0.239, −0.145, −0.088 → NOT constant ✗
 
 **Test ln[A] vs t:** Differences in ln[A]: −0.500, −0.500, −0.500, −0.500 → CONSTANT ✓
@@ -69,7 +87,7 @@ If you are given just the raw data, calculate the transformed values and check w
 
 **Conclusion:** The reaction is **first-order**.
 
-$k = -\\text{slope} = -(-0.500/10) = 0.0500 \\text{ s}^{-1}$
+$$\\boxed{k = -\\text{slope} = -(-0.500/10) = 0.0500 \\text{ s}^{-1}}$$
       `
     },
     {

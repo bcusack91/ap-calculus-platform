@@ -4,13 +4,24 @@ export const chemSolutionsSolubilityPart6Data = {
     {
       id: 'ss6-intro',
       type: 'text' as const,
-      content: `
-# 🧮 Problem-Solving Workshop
+      content: `# 🧮 Problem-Solving Workshop
 
 **Part 6 of 7 — Mixed Concentration and Colligative Property Calculations**
 
-This part brings together everything from Parts 2–5: concentration conversions, dilution, boiling point elevation, freezing point depression, and osmotic pressure. Work through these multi-step problems carefully — they mirror what you will see on the AP exam.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'ss6-strategy',
@@ -58,31 +69,33 @@ This part brings together everything from Parts 2–5: concentration conversions
       content: `
 ## 🧪 Worked Example 1: Concentration Conversion
 
-**Problem:** A solution is prepared by dissolving 34.2 g of sucrose (C₁₂H₂₂O₁₁, $M = 342.30$ g/mol) in 200.0 g of water. The density of the resulting solution is 1.024 g/mL. Calculate:
+> **Problem:** A solution is prepared by dissolving 34.2 g of sucrose (C₁₂H₂₂O₁₁, $M = 342.30$ g/mol) in 200.0 g of water. The density of the resulting solution is 1.024 g/mL. Calculate molality, molarity, mass percent, and mole fraction.
 
-**(a) Molality**
+### Given
 
-$$n = 34.2 \\; \\cancel{\\text{g C}_{12}\\text{H}_{22}\\text{O}_{11}} \\times \\frac{1 \\text{ mol C}_{12}\\text{H}_{22}\\text{O}_{11}}{342.30 \\; \\cancel{\\text{g C}_{12}\\text{H}_{22}\\text{O}_{11}}} = 0.0999 \\text{ mol C}_{12}\\text{H}_{22}\\text{O}_{11}$$
+| Quantity | Value |
+|----------|-------|
+| Mass of sucrose | 34.2 g |
+| $M_{\\text{sucrose}}$ | 342.30 g/mol |
+| Mass of water | 200.0 g |
+| $d_{\\text{solution}}$ | 1.024 g/mL |
 
-$$m = \\frac{0.0999}{0.2000} = 0.500 \\; m$$
+---
 
-**(b) Molarity**
+### Step-by-Step Solution
 
-Total mass of solution = $34.2 + 200.0 = 234.2$ g
+| Step | Find | Calculation | Result |
+|------|------|-------------|--------|
+| 1 | Moles of sucrose | $34.2 / 342.30$ | 0.0999 mol |
+| 2 | **(a) Molality** | $0.0999 / 0.2000$ kg | $m = 0.500$ m |
+| 3 | Total mass of solution | $34.2 + 200.0$ | 234.2 g |
+| 4 | Volume of solution | $234.2 / 1.024$ | 228.7 mL = 0.2287 L |
+| 5 | **(b) Molarity** | $0.0999 / 0.2287$ | $M = 0.437$ M |
+| 6 | **(c) Mass percent** | $(34.2 / 234.2) \\times 100$ | 14.6% |
+| 7 | Moles of water | $200.0 / 18.02$ | 11.10 mol |
+| 8 | **(d) Mole fraction** | $0.0999 / (0.0999 + 11.10)$ | $\\chi = 0.00893$ |
 
-Volume of solution: $V = \\frac{234.2 \\text{ g}}{1.024 \\text{ g/mL}} = 228.7 \\text{ mL} = 0.2287 \\text{ L}$
-
-$$M = \\frac{0.0999}{0.2287} = 0.437 \\text{ M}$$
-
-**(c) Mass percent**
-
-$$\\text{mass \\%} = \\frac{34.2}{234.2} \\times 100 = 14.6\\%$$
-
-**(d) Mole fraction of sucrose**
-
-$$n_{\\text{water}} = \\frac{200.0}{18.02} = 11.10 \\text{ mol}$$
-
-$$\\chi_{\\text{sucrose}} = \\frac{0.0999}{0.0999 + 11.10} = 0.00893$$
+> 🔑 **Tip:** Notice how each concentration unit uses different denominators: molality uses kg of **solvent**, molarity uses L of **solution**, mass percent uses g of **solution**, and mole fraction uses total moles.
       `
     },
     {
@@ -158,26 +171,30 @@ $$\\chi_{\\text{sucrose}} = \\frac{0.0999}{0.0999 + 11.10} = 0.00893$$
       content: `
 ## 🧪 Worked Example 2: Finding Molar Mass from Colligative Data
 
-**Problem:** A solution of 5.00 g of an unknown nonelectrolyte in 100.0 g of water freezes at $-0.930$ °C. Find the molar mass of the unknown.
+> **Problem:** A solution of 5.00 g of an unknown nonelectrolyte in 100.0 g of water freezes at $-0.930$ °C. Find the molar mass of the unknown.
 
-**Step 1:** Find $\\Delta T_f$
-$$\\Delta T_f = 0.0 - (-0.930) = 0.930 \\text{ °C}$$
+### Given
 
-**Step 2:** Find molality
-$$m = \\frac{\\Delta T_f}{iK_f} = \\frac{0.930}{(1)(1.86)} = 0.500 \\; m$$
-
-**Step 3:** Find moles
-$$n = m \\times \\text{kg solvent} = 0.500 \\times 0.1000 = 0.0500 \\text{ mol}$$
-
-**Step 4:** Find molar mass
-$$M = \\frac{\\text{mass}}{\\text{moles}} = \\frac{5.00}{0.0500} = 100.0 \\text{ g/mol}$$
-
+| Quantity | Value |
+|----------|-------|
+| Mass of unknown | 5.00 g |
+| Mass of water | 100.0 g = 0.1000 kg |
+| Freezing point | $-0.930$ °C |
+| $i$ (nonelectrolyte) | 1 |
+| $K_f$ (water) | 1.86 °C/m |
 
 ---
 
-### Common AP Application
+### Step-by-Step Solution
 
-This technique is used in the lab to identify unknown compounds — a classic AP free-response question topic.
+| Step | Action | Calculation | Result |
+|------|--------|-------------|--------|
+| 1 | Find $\\Delta T_f$ | $0.0 - (-0.930)$ | 0.930 °C |
+| 2 | Find molality | $\\Delta T_f / (iK_f) = 0.930 / (1)(1.86)$ | $m = 0.500$ m |
+| 3 | Find moles | $m \\times \\text{kg solvent} = 0.500 \\times 0.1000$ | 0.0500 mol |
+| 4 | Find molar mass | $\\text{mass} / \\text{moles} = 5.00 / 0.0500$ | **100.0 g/mol** |
+
+> 🔑 **AP Application:** This technique is used in the lab to identify unknown compounds — a classic AP free-response question topic.
       `
     },
     {

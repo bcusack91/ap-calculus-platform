@@ -4,13 +4,30 @@ export const chemEquilibriumConstantsPart3Data = {
     {
       id: 'ece3-intro',
       type: 'text' as const,
-      content: `
-# 🔄 $K_c$ vs $K_p$
+      content: `# 🔄 $K_c$ vs $K_p$
 
 **Part 3 of 7 — Concentration vs. Pressure Equilibrium Constants**
 
-For gas-phase equilibria, we can express $K$ in terms of molar concentrations ($K_c$) or partial pressures ($K_p$). This part covers both forms and how to convert between them.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 💨 $K_p$ — The Pressure-Based Constant |
+| Example |
+| 🔄 Converting Between $K_c$ and $K_p$ |
+| Finding $\\Delta n$ |
+| When $\\Delta n = 0$ |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ece3-kp-definition',
@@ -22,7 +39,7 @@ For gas-phase reactions, we can use partial pressures instead of molar concentra
 
 For: $a\\text{A}(g) + b\\text{B}(g) \\rightleftharpoons c\\text{C}(g) + d\\text{D}(g)$
 
-$$K_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}$$
+$$\\boxed{K_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}}$$
 
 where $P_X$ is the partial pressure of species X in **atm** (for AP Chemistry).
 
@@ -71,14 +88,14 @@ If the total moles of gas are the same on both sides:
 
 $$K_p = K_c(RT)^0 = K_c$$
 
-**They are equal!**
+> 🔑 **Key Concept:** When $\\Delta n = 0$, $K_p = K_c$ — they are equal!
 
 
 ---
 
-### Example Calculation
+> **Problem:** For $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$ at 25°C, $K_c = 4.61 \\times 10^{-3}$. Calculate $K_p$.
 
-For $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$ at 25°C, $K_c = 4.61 \\times 10^{-3}$
+> **Solution:**
 
 $\\Delta n = 2 - 1 = 1$
 

@@ -4,15 +4,30 @@ export const chemReactionRatesAndRateLawsPart1Data = {
     {
       id: 'rr1-intro',
       type: 'text' as const,
-      content: `
-# ⚗️ Measuring Reaction Rates
+      content: `# ⚗️ Measuring Reaction Rates
 
 **Part 1 of 7 — How Fast Does It Go?**
 
-Chemical kinetics is the study of **how fast** reactions occur. While thermodynamics tells us *whether* a reaction is favorable, kinetics tells us *how quickly* it reaches products. Some reactions (like explosions) happen in microseconds; others (like rusting) take years.
+---
 
-In this part, we define **reaction rate** precisely and learn how to measure it.
-      `
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚗️ Defining Reaction Rate |
+| Key Points |
+| Example |
+| ⏱️ Average Rate vs. Instantaneous Rate |
+| Average Rate |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rr1-defining-rate',
@@ -26,7 +41,7 @@ $$aA + bB \\rightarrow cC + dD$$
 
 The **rate of reaction** is defined as the change in concentration of a reactant or product per unit time:
 
-$$\\text{Rate} = -\\frac{1}{a}\\frac{\\Delta[A]}{\\Delta t} = -\\frac{1}{b}\\frac{\\Delta[B]}{\\Delta t} = +\\frac{1}{c}\\frac{\\Delta[C]}{\\Delta t} = +\\frac{1}{d}\\frac{\\Delta[D]}{\\Delta t}$$
+$$\\boxed{\\text{Rate} = -\\frac{1}{a}\\frac{\\Delta[A]}{\\Delta t} = -\\frac{1}{b}\\frac{\\Delta[B]}{\\Delta t} = +\\frac{1}{c}\\frac{\\Delta[C]}{\\Delta t} = +\\frac{1}{d}\\frac{\\Delta[D]}{\\Delta t}}$$
 
 
 ---
@@ -40,6 +55,7 @@ $$\\text{Rate} = -\\frac{1}{a}\\frac{\\Delta[A]}{\\Delta t} = -\\frac{1}{b}\\fra
 | Negative sign for reactants | Reactants are consumed, so $\\Delta[A] < 0$; the negative sign makes rate positive |
 | Stoichiometric coefficients | Divide by coefficient to get a single, unique rate |
 
+> 🔑 **Key Concept:** Rate is always defined as a **positive quantity**. The negative sign for reactants ensures this, since reactant concentrations decrease over time ($\\Delta[A] < 0$).
 
 ---
 
@@ -47,11 +63,11 @@ $$\\text{Rate} = -\\frac{1}{a}\\frac{\\Delta[A]}{\\Delta t} = -\\frac{1}{b}\\fra
 
 > **Problem:** For $2\\text{N}_2\\text{O}_5 \\rightarrow 4\\text{NO}_2 + \\text{O}_2$:
 
-**Solution:**
-
-$$\\text{Rate} = -\\frac{1}{2}\\frac{\\Delta[\\text{N}_2\\text{O}_5]}{\\Delta t} = +\\frac{1}{4}\\frac{\\Delta[\\text{NO}_2]}{\\Delta t} = +\\frac{\\Delta[\\text{O}_2]}{\\Delta t}$$
-
-If $\\text{O}_2$ appears at $0.024$ M/s, then $\\text{NO}_2$ appears at $4 \\times 0.024 = 0.096$ M/s and $\\text{N}_2\\text{O}_5$ disappears at $2 \\times 0.024 = 0.048$ M/s.
+> **Solution:**
+>
+> $$\\boxed{\\text{Rate} = -\\frac{1}{2}\\frac{\\Delta[\\text{N}_2\\text{O}_5]}{\\Delta t} = +\\frac{1}{4}\\frac{\\Delta[\\text{NO}_2]}{\\Delta t} = +\\frac{\\Delta[\\text{O}_2]}{\\Delta t}}$$
+>
+> If $\\text{O}_2$ appears at $0.024$ M/s, then $\\text{NO}_2$ appears at $4 \\times 0.024 = 0.096$ M/s and $\\text{N}_2\\text{O}_5$ disappears at $2 \\times 0.024 = 0.048$ M/s.
       `
     },
     {
@@ -108,7 +124,7 @@ If $\\text{O}_2$ appears at $0.024$ M/s, then $\\text{NO}_2$ appears at $4 \\tim
 
 The **average rate** is calculated over a finite time interval:
 
-$$\\text{Average rate} = -\\frac{\\Delta[A]}{\\Delta t} = -\\frac{[A]_{t_2} - [A]_{t_1}}{t_2 - t_1}$$
+$$\\boxed{\\text{Average rate} = -\\frac{\\Delta[A]}{\\Delta t} = -\\frac{[A]_{t_2} - [A]_{t_1}}{t_2 - t_1}}$$
 
 
 ---
@@ -117,7 +133,7 @@ $$\\text{Average rate} = -\\frac{\\Delta[A]}{\\Delta t} = -\\frac{[A]_{t_2} - [A
 
 The **instantaneous rate** is the rate at a specific moment — the slope of the tangent line to the concentration-vs-time curve:
 
-$$\\text{Instantaneous rate} = -\\frac{d[A]}{dt}$$
+$$\\boxed{\\text{Instantaneous rate} = -\\frac{d[A]}{dt}}$$
 
 
 ---
@@ -140,6 +156,8 @@ The **initial rate** is the instantaneous rate at $t = 0$, before significant pr
 - Concentrations are known precisely (the starting concentrations)
 - Reverse reactions have not yet become significant
 - It is used in the **method of initial rates** to determine rate laws
+
+> 🔑 **Key Concept:** The **initial rate** is key to determining rate laws because concentrations are precisely known and the reverse reaction hasn't started.
       `
     },
     {
@@ -198,7 +216,7 @@ The **initial rate** is the instantaneous rate at $t = 0$, before significant pr
 
 For colored species, absorbance is directly proportional to concentration:
 
-$$A = \\varepsilon b c$$
+$$\\boxed{A = \\varepsilon b c}$$
 
 where $\\varepsilon$ = molar absorptivity, $b$ = path length, $c$ = concentration. By measuring absorbance over time, you can track $[\\text{colored species}]$ over time.
       `

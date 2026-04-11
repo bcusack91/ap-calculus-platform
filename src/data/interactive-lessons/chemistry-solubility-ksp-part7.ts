@@ -4,13 +4,24 @@ export const chemSolubilityKspPart7Data = {
     {
       id: 'sk7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — Solubility Equilibria and K_sp**
 
-This final part reviews all solubility concepts: $K_{sp}$ expressions, molar solubility, common ion effect, precipitation predictions ($Q_{sp}$ vs $K_{sp}$), and selective precipitation. Questions mirror AP Chemistry exam formats.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'sk7-summary',
@@ -22,9 +33,11 @@ This final part reviews all solubility concepts: $K_{sp}$ expressions, molar sol
 
 For $\\text{M}_a\\text{X}_b(s) \\rightleftharpoons a\\,\\text{M}^{n+} + b\\,\\text{X}^{m-}$:
 
-$$K_{sp} = [\\text{M}^{n+}]^a[\\text{X}^{m-}]^b$$
+$$\\boxed{K_{sp} = [\\text{M}^{n+}]^a[\\text{X}^{m-}]^b}$$
 
 (Solid excluded — pure solid activity = 1)
+
+> 🔑 **Key Concept:** All solubility equilibria problems start with writing the correct $K_{sp}$ expression. From there, identify the problem type (find $K_{sp}$, find solubility, common ion, precipitation, or selective precipitation) and apply the appropriate method.
 
 
 ---

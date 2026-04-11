@@ -4,13 +4,24 @@ export const chemEquilibriumConstantsPart6Data = {
     {
       id: 'ece6-intro',
       type: 'text' as const,
-      content: `
-# 🔍 The Reaction Quotient $Q$
+      content: `# 🔍 The Reaction Quotient $Q$
 
 **Part 6 of 7 — Reaction Quotient $Q$**
 
-The reaction quotient $Q$ has the same form as $K$ but uses **current** concentrations instead of equilibrium concentrations. Comparing $Q$ to $K$ lets us predict which direction a reaction will shift to reach equilibrium.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'ece6-q-definition',
@@ -20,7 +31,7 @@ The reaction quotient $Q$ has the same form as $K$ but uses **current** concentr
 
 For: $a\\text{A} + b\\text{B} \\rightleftharpoons c\\text{C} + d\\text{D}$
 
-$$Q_c = \\frac{[\\text{C}]^c[\\text{D}]^d}{[\\text{A}]^a[\\text{B}]^b}$$
+$$\\boxed{Q_c = \\frac{[\\text{C}]^c[\\text{D}]^d}{[\\text{A}]^a[\\text{B}]^b}}$$
 
 This looks exactly like $K_c$ — but the concentrations plugged in are the **current** (non-equilibrium) values, not the equilibrium concentrations.
 
@@ -38,12 +49,7 @@ This looks exactly like $K_c$ — but the concentrations plugged in are the **cu
 
 ---
 
-### Intuition
-
-Think of it this way:
-- $Q < K$: The system needs to make **more products** to reach equilibrium → forward reaction
-- $Q > K$: The system has **too many products** → reverse reaction
-- $Q = K$: Already at equilibrium → no net change
+> 🔑 **Key Intuition:** $Q < K$ → system shifts **right** (needs more products). $Q > K$ → system shifts **left** (too many products). $Q = K$ → **at equilibrium** (no net change).
       `
     },
     {
@@ -96,13 +102,9 @@ Think of it this way:
       content: `
 ## 🧪 Worked Example: Using $Q$
 
-### Problem
+> **Problem:** For $\\text{CO}(g) + \\text{H}_2\\text{O}(g) \\rightleftharpoons \\text{CO}_2(g) + \\text{H}_2(g)$, $K_c = 5.10$ at 700 K. Current concentrations: $[\\text{CO}] = 0.20\\;\\text{M}$, $[\\text{H}_2\\text{O}] = 0.30\\;\\text{M}$, $[\\text{CO}_2] = 0.40\\;\\text{M}$, $[\\text{H}_2] = 0.50\\;\\text{M}$. Determine the direction of shift.
 
-For $\\text{CO}(g) + \\text{H}_2\\text{O}(g) \\rightleftharpoons \\text{CO}_2(g) + \\text{H}_2(g)$
-
-$K_c = 5.10$ at 700 K
-
-At a certain moment: $[\\text{CO}] = 0.20\\;\\text{M}$, $[\\text{H}_2\\text{O}] = 0.30\\;\\text{M}$, $[\\text{CO}_2] = 0.40\\;\\text{M}$, $[\\text{H}_2] = 0.50\\;\\text{M}$
+> **Solution:**
 
 **Step 1: Calculate $Q$**
 
@@ -119,9 +121,7 @@ Since $Q < K$, the reaction shifts **right** (forward) to produce more CO₂ and
 
 ---
 
-### AP Test Strategy 💡
-
-> Always calculate $Q$ first, then compare to $K$. Don't try to guess the direction without doing the math!
+> 💡 **AP Strategy:** Always calculate $Q$ first, then compare to $K$. Don't try to guess the direction without doing the math!
       `
     },
     {

@@ -2,186 +2,192 @@ export const precalcRatesOfChangePart4Data = {
   topicSlug: 'rates-of-change-precalc',
   sections: [
     {
-      id: 'precalc-rates-of-change-precalc-p4-s1-intro',
+      id: 'p4-intro',
       type: 'text' as const,
       content: `
-      ## Rates of Change: Piecewise rates and intervals
-      
-      **Part 4 of 7**
-      
-      This part focuses on computing interval-specific change in piecewise pricing. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **increasing interval**: interval where function values rise as input increases
-      - **decreasing interval**: interval where function values fall as input increases
-      - **local behavior**: small-interval trend around one input
-      
-      
-      ### Worked Example
-      Part 4 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# ⚡ Instantaneous Rate of Change
+
+**Part 4 of 7**
+
+### AROC vs IROC
+
+| Feature | AROC | IROC |
+|:--------|:-----|:-----|
+| Formula | $\\frac{f(b)-f(a)}{b-a}$ | $\\lim_{h \\to 0}\\frac{f(a+h)-f(a)}{h}$ |
+| Geometry | Secant line slope | Tangent line slope |
+| Interval | Finite $[a,b]$ | Single point $x=a$ |
+| Measures | Average behavior | Instantaneous behavior |
+
+### Physical Interpretation
+
+- **AROC of position** = average velocity
+- **IROC of position** = instantaneous velocity (speedometer reading)
+- **AROC of velocity** = average acceleration
+- **IROC of velocity** = instantaneous acceleration
       `
     },
     {
-      id: 'precalc-rates-of-change-precalc-p4-s2-mcq-core',
+      id: 'p4-compute',
+      type: 'text' as const,
+      content: `
+## Computing IROC
+
+### Method 1: Difference Quotient Limit
+
+For $f(x) = x^2 + 2x$ at $x = 3$:
+
+$$\\lim_{h \\to 0}\\frac{(3+h)^2 + 2(3+h) - (9+6)}{h}$$
+
+$$= \\lim_{h \\to 0}\\frac{9 + 6h + h^2 + 6 + 2h - 15}{h}$$
+
+$$= \\lim_{h \\to 0}\\frac{8h + h^2}{h} = \\lim_{h \\to 0}(8 + h) = 8$$
+
+### Method 2: Shrinking Intervals
+
+Approximate IROC at $x=3$ for $f(x)=x^2$:
+
+| Interval | AROC |
+|:---------|:-----|
+| $[3, 4]$ | $7$ |
+| $[3, 3.1]$ | $6.1$ |
+| $[3, 3.01]$ | $6.01$ |
+| $[3, 3.001]$ | $6.001$ |
+
+Pattern: AROC → $6$ as interval shrinks. So IROC at $x=3$ is $6$.
+      `
+    },
+    {
+      id: 'p4-interpret',
+      type: 'text' as const,
+      content: `
+## Interpreting IROC
+
+### Sign of IROC
+
+- $f'(a) > 0$: function is **increasing** at $a$
+- $f'(a) < 0$: function is **decreasing** at $a$
+- $f'(a) = 0$: function has a **horizontal tangent** (possible max/min)
+
+### Magnitude of IROC
+
+- $|f'(a)|$ is large: function is changing **rapidly**
+- $|f'(a)|$ is small: function is changing **slowly**
+- $|f'(a)| = 0$: momentarily not changing
+
+### Example: Population Growth
+
+If $P(t) = 1000e^{0.05t}$ gives population at time $t$:
+- $P'(0) = 50$: growing at 50 organisms/year initially
+- $P'(10) \\approx 82$: growing faster later (exponential!)
+
+The IROC itself is increasing — **accelerating growth**.
+      `
+    },
+    {
+      id: 'p4-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**IROC Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of increasing interval.',
-            options: [
-              'relative change expressed as a percent',
-              'small-interval trend around one input',
-              'interval where function values rise as input increases',
-              'interval where function values fall as input increases'
-            ],
-            correctAnswer: 2,
-            explanation: 'increasing interval is defined as: interval where function values rise as input increases.'
+            question: 'IROC at $x=2$ for $f(x)=x^2$ (using $f\'(x)=2x$):',
+            options: ['$2$', '$4$', '$8$', '$0$'],
+            correctAnswer: 1,
+            explanation: '$f\'(2) = 2(2) = 4$.'
           },
           {
-            question: 'In computing interval-specific change in piecewise pricing, which expression is the best starting model?',
-            options: [
-              '$m=\\frac{y_2-y_1}{x_2-x_1}$',
-              '$y=mx+b$',
-              '$\\frac{f(b)-f(a)}{b-a}$',
-              '$\\frac{\\text{new}-\\text{old}}{\\text{old}}\\cdot 100\\%$'
-            ],
+            question: 'If $f\'(5) = -3$, at $x=5$ the function is:',
+            options: ['Increasing at rate 3', 'Decreasing at rate 3', 'At a maximum', 'Undefined'],
             correctAnswer: 1,
-            explanation: 'Use $y=mx+b$ first, then substitute known quantities from the prompt.'
+            explanation: 'Negative derivative means decreasing. $|{-3}| = 3$ is the rate.'
+          },
+          {
+            question: 'How do shrinking intervals approximate IROC?',
+            options: ['AROC values approach IROC', 'Secant slopes diverge', 'No connection', 'IROC = average of AROCs'],
+            correctAnswer: 0,
+            explanation: 'As the interval shrinks to zero width, AROC converges to IROC.'
           }
         ]
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p4-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Linear model | $y=mx+b$ | constant-rate baseline |
-      | Average rate | $\\frac{f(b)-f(a)}{b-a}$ | secant computation |
-      | Slope | $m=\\frac{y_2-y_1}{x_2-x_1}$ | point-pair rate |
-      | Percent change | $\\frac{\\text{new}-\\text{old}}{\\text{old}}\cdot 100\%$ | relative growth/decline |
-      
-      ### Common pitfalls
-      - A positive average rate on an interval does not force monotonic increase everywhere inside.
-      - Rate units must combine output units per input unit.
-      - Do not compare rates across intervals without checking interval lengths.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-rates-of-change-precalc-p4-s4-input',
+      id: 'p4-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Rate Calculations**
-      
-      1) Compute average rate for $f(x)=x^2$ on $[2,5]$.
-      2) Find slope through $(1,3)$ and $(4,15)$.
-      3) Compute percent change from 50 to 65.
+**Find the IROC:**
+
+**1)** $f(x)=x^2-3x$ at $x=4$ (DQ simplifies to $2x+h-3$):
+
+**2)** $f(x)=x^3$ at $x=1$ (DQ limit: $3x^2$):
+
+**3)** Position $s(t) = t^2 + 5t$. Instantaneous velocity at $t=3$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7', '4', '30'],
-        hint1: 'Use $\\rac{f(5)-f(2)}{5-2}$.',
-        hint2: 'Use slope formula with ordered pairs.',
-        hint3: 'Relative change is $\\rac{15}{50}\\cdot100\\%$.',
-        explanation: 'Average rate is 7, secant slope is 4, and percent increase is 30%.'
+        correctAnswers: ['5', '3', '11'],
+        hint1: '$2(4)+0-3 = 5$.',
+        hint2: '$3(1)^2 = 3$.',
+        hint3: '$s\'(t) = 2t+5$, so $s\'(3) = 11$.',
+        explanation: '(1) $2(4)-3=5$. (2) $3(1)=3$. (3) $2(3)+5=11$ units/time.'
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p4-s5-dropdown',
+      id: 'p4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**IROC Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'increasing interval',
-            options: ['interval where function values rise as input increases', 'relative change expressed as a percent', 'interval where function values fall as input increases', 'small-interval trend around one input']
+            label: 'IROC is the slope of the:',
+            options: ['Secant line', 'Tangent line', 'Normal line', 'Horizontal line'],
+            correctAnswer: 1
           },
           {
-            label: 'decreasing interval',
-            options: ['small-interval trend around one input', 'how well a function captures observed change', 'relative change expressed as a percent', 'interval where function values fall as input increases']
+            label: 'If IROC = 0, the tangent is:',
+            options: ['Vertical', 'Horizontal', 'Diagonal', 'Undefined'],
+            correctAnswer: 1
           },
           {
-            label: 'local behavior',
-            options: ['change in output divided by change in input', 'how well a function captures observed change', 'small-interval trend around one input', 'relative change expressed as a percent']
+            label: 'Instantaneous velocity is IROC of:',
+            options: ['Acceleration', 'Position', 'Speed', 'Force'],
+            correctAnswer: 1
+          },
+          {
+            label: 'As $h \\to 0$ in the DQ, secant becomes:',
+            options: ['Vertical', 'Tangent', 'Horizontal', 'Disappears'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['interval where function values rise as input increases', 'interval where function values fall as input increases', 'small-interval trend around one input'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: increasing interval, decreasing interval, and local behavior align with their exact definitions used in this part.'
+        correctAnswers: ['Tangent line', 'Horizontal', 'Position', 'Tangent'],
+        hint1: 'IROC = instantaneous rate = tangent slope.',
+        hint2: 'Zero slope = flat = horizontal.',
+        hint3: 'Velocity = rate of position change.',
+        explanation: 'IROC = tangent slope. Zero → horizontal. Velocity = dPosition/dt. h→0: secant → tangent.'
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to increasing interval, decreasing interval, and local behavior so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-rates-of-change-precalc-p4-s7-mcq-applied',
+      id: 'p4-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is computing interval-specific change in piecewise pricing. Which term best anchors the next reasoning step if the key idea is: relative change expressed as a percent?',
-            options: [
-              'percent change',
-              'local behavior',
-              'decreasing interval',
-              'increasing interval'
-            ],
-            correctAnswer: 0,
-            explanation: 'percent change matches that description and keeps the model-to-interpretation chain consistent.'
+            question: '$f(x) = 5x^2$. IROC at $x = -1$ (DQ limit: $10x$):',
+            options: ['$10$', '$-10$', '$5$', '$-5$'],
+            correctAnswer: 1,
+            explanation: '$f\'(x) = 10x$, so $f\'(-1) = -10$. Negative = decreasing.'
           },
           {
-            question: 'A student is solving a mixed rates of change prompt. Which term best anchors the next reasoning step if the key idea is: how well a function captures observed change?',
-            options: [
-              'local behavior',
-              'percent change',
-              'average rate of change',
-              'model fit'
-            ],
-            correctAnswer: 3,
-            explanation: 'model fit matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'The relationship between AROC and IROC:',
+            options: ['AROC = IROC always', 'IROC = limit of AROC as interval → 0', 'They are unrelated', 'AROC > IROC always'],
+            correctAnswer: 1,
+            explanation: 'IROC is the limit of AROC as the interval width shrinks to zero.'
           }
         ]
       }

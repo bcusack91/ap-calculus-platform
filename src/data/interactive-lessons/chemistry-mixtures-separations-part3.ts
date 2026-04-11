@@ -4,13 +4,30 @@ export const chemMixturesSeparationsPart3Data = {
     {
       id: 'mx3-intro',
       type: 'text' as const,
-      content: `
-# 📊 Chromatography
+      content: `# 📊 Chromatography
 
 **Part 3 of 7 — Separating by Differential Affinity**
 
-Chromatography is a powerful family of separation techniques that work on a single elegant principle: different substances move at **different rates** through a medium based on their relative affinities for a **stationary phase** and a **mobile phase**.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🔧 How Chromatography Works |
+| The Separation Principle |
+| 📌 Paper Chromatography |
+| Rf Values |
+| Example |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'mx3-principles',
@@ -56,7 +73,9 @@ The simplest form of chromatography:
 
 The **retention factor** ($R_f$) quantifies how far a component travels:
 
-$$R_f = \\frac{\\text{distance traveled by substance}}{\\text{distance traveled by solvent front}}$$
+$$\\boxed{R_f = \\frac{\\text{distance traveled by substance}}{\\text{distance traveled by solvent front}}}$$
+
+> 🔑 **Key Concept:** Each substance has a characteristic $R_f$ in a given solvent system. Use $R_f$ values to **identify unknowns** by comparing to known standards.
 
 - $R_f$ is always between 0 and 1
 - Each substance has a characteristic $R_f$ in a given solvent
@@ -67,9 +86,9 @@ $$R_f = \\frac{\\text{distance traveled by substance}}{\\text{distance traveled 
 
 ### Example
 
-> **Problem:** A spot travels 4.2 cm while the solvent front travels 7.0 cm:
+> **Problem:** A spot travels 4.2 cm while the solvent front travels 7.0 cm. Calculate the $R_f$ value.
 
-**Solution:**
+> **Solution:**
 
 $$R_f = \\frac{4.2}{7.0} = 0.60$$
       `

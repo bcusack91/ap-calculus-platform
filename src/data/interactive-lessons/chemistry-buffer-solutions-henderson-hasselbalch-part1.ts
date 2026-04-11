@@ -4,13 +4,29 @@ export const chemBufferSolutionsHendersonHasselbalchPart1Data = {
     {
       id: 'bf1-intro',
       type: 'text' as const,
-      content: `
-# 🛡️ What Is a Buffer?
+      content: `# 🛡️ What Is a Buffer?
 
 **Part 1 of 7 — Resisting pH Change**
 
-Buffer solutions are among the most important concepts in AP Chemistry and biochemistry. They maintain a nearly constant pH even when small amounts of acid or base are added. Your blood, for example, is buffered at pH 7.4!
-      `
+---
+
+### What Makes a Buffer?
+
+| ✅ Buffer | ❌ NOT a Buffer |
+|----------|----------------|
+| Weak acid + its conjugate base | Strong acid + strong base |
+| $CH_3COOH$ + $CH_3COONa$ | HCl + NaOH |
+| $NH_3$ + $NH_4Cl$ | NaCl solution |
+| Weak base + its conjugate acid | Strong acid alone |
+
+> 🔑 **Why this matters:** Buffers are essential in biochemistry (blood pH = 7.4), lab work, and industry — and they appear on every AP Chemistry exam.
+
+---
+
+### What You'll Master in Part 1
+- Defining what a buffer is and identifying buffer vs. non-buffer solutions
+- Understanding why buffers need BOTH a weak acid AND its conjugate base
+- Explaining qualitatively how buffers resist pH changes`
     },
     {
       id: 'bf1-definition',
@@ -46,6 +62,8 @@ Neither component is consumed quickly because both are present in significant am
 ---
 
 ### What Does NOT Make a Buffer?
+
+> ⚠️ **Common AP Trap:** Not every acid/base mixture is a buffer!
 
 - Strong acid + strong base → complete reaction, no equilibrium
 - Strong acid alone → no conjugate base reservoir
@@ -84,7 +102,7 @@ The weak acid **consumes** the added $OH^-$, converting it to conjugate base. Ag
 
 ### Key Insight
 
-The buffer works because the added strong acid or base is **completely consumed** by reaction with one buffer component, and the $[A^-]/[HA]$ ratio changes only slightly if the buffer is concentrated enough.
+> 🔑 The buffer works because the added strong acid or base is **completely consumed** by reaction with one buffer component, and the $[A^-]/[HA]$ ratio changes only slightly if the buffer is concentrated enough.
       `
     },
     {

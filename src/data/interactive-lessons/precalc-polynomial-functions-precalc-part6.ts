@@ -2,186 +2,241 @@ export const precalcPolynomialPart6Data = {
   topicSlug: 'polynomial-functions-precalc',
   sections: [
     {
-      id: 'precalc-polynomial-functions-precalc-p6-s1-intro',
+      id: 'p6-intro',
       type: 'text' as const,
       content: `
-      ## Polynomial Functions: Building models from zeros
-      
-      **Part 6 of 7**
-      
-      This part focuses on constructing a polynomial from constraints. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **factor theorem**: $p(c)=0$ implies $(x-c)$ is a factor
-      - **end behavior**: direction of graph tails as $x	o\pm\infty$
-      - **conjugate roots**: non-real roots of real polynomials occur in pairs
-      
-      
-      ### Worked Example
-      Part 6 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📐 Building Polynomials from Zeros
+
+**Part 6 of 7 — Constructing Polynomials from Given Information**
+
+One of the most powerful skills in precalculus is working **backwards** — starting from zeros, intercepts, or graph features and building the polynomial that matches. This part teaches a systematic approach for constructing polynomials from constraints.
       `
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p6-s2-mcq-core',
+      id: 'p6-from-zeros',
+      type: 'text' as const,
+      content: `
+## 📖 Building from Zeros
+
+If you know the zeros $r_1, r_2, \\ldots, r_n$ and their multiplicities, the polynomial has the form:
+
+$$\\boxed{p(x) = a(x - r_1)^{m_1}(x - r_2)^{m_2} \\cdots (x - r_n)^{m_n}}$$
+
+The degree is $m_1 + m_2 + \\cdots + m_n$, and $a$ is a scaling constant determined by another condition (like a point the graph passes through).
+
+
+---
+
+### Step-by-Step Process
+
+| Step | Action | Example |
+|:----:|--------|---------|
+| 1 | List all zeros and their multiplicities | $x = -1$ (mult 1), $x = 3$ (mult 2) |
+| 2 | Write the factored skeleton | $p(x) = a(x + 1)(x - 3)^2$ |
+| 3 | Use an additional point to solve for $a$ | If $p(0) = 18$: $a(1)(9) = 18 \\Rightarrow a = 2$ |
+| 4 | Write the final answer | $p(x) = 2(x + 1)(x - 3)^2$ |
+
+> ⚠️ **Common mistake:** Forgetting the leading coefficient $a$. Without an extra condition, you can never determine $a$ — there are infinitely many polynomials with the same zeros.
+      `
+    },
+    {
+      id: 'p6-worked-example',
+      type: 'text' as const,
+      content: `
+## ✏️ Worked Examples
+
+### Example 1: From Zeros and a Point
+
+> **Find a polynomial of degree 3 with zeros at $x = -2$, $x = 1$, and $x = 4$, given that $p(0) = -16$.**
+
+**Step 1:** Write the skeleton:
+$$p(x) = a(x + 2)(x - 1)(x - 4)$$
+
+**Step 2:** Substitute $(0, -16)$:
+$$-16 = a(2)(-1)(-4) = 8a$$
+
+**Step 3:** Solve: $a = -2$
+
+$$\\boxed{p(x) = -2(x + 2)(x - 1)(x - 4)}$$
+
+
+---
+
+### Example 2: From a Graph Description
+
+> **A degree-4 polynomial bounces at $x = 2$, crosses at $x = -1$ and $x = 5$, and passes through $(0, 20)$.**
+
+**Step 1:** Interpret graph behavior:
+- Bounces at $x = 2$ → even multiplicity → $(x - 2)^2$
+- Crosses at $x = -1$ → odd multiplicity → $(x + 1)$
+- Crosses at $x = 5$ → odd multiplicity → $(x - 5)$
+
+Check: degree $= 2 + 1 + 1 = 4$ ✔
+
+**Step 2:** Skeleton: $p(x) = a(x + 1)(x - 2)^2(x - 5)$
+
+**Step 3:** Use $p(0) = 20$:
+$$20 = a(1)(4)(-5) = -20a \\implies a = -1$$
+
+$$\\boxed{p(x) = -(x + 1)(x - 2)^2(x - 5)}$$
+      `
+    },
+    {
+      id: 'p6-with-complex-zeros',
+      type: 'text' as const,
+      content: `
+## 🔑 Including Complex Zeros
+
+When a polynomial with real coefficients has a complex zero $a + bi$, you must also include $a - bi$.
+
+The pair produces a **real quadratic factor**:
+
+$$(x - (a+bi))(x - (a-bi)) = x^2 - 2ax + (a^2 + b^2)$$
+
+### Example
+
+> **Find a degree-3 polynomial with real coefficients, zeros at $x = 4$ and $x = 1 + 2i$, and leading coefficient $1$.**
+
+**Step 1:** Include the conjugate: $x = 1 - 2i$
+
+**Step 2:** Build factors:
+$$(x - 4) \\cdot [(x - (1+2i))(x - (1-2i))]$$
+
+**Step 3:** Simplify the complex pair:
+$$(x - 1 - 2i)(x - 1 + 2i) = (x-1)^2 - (2i)^2 = x^2 - 2x + 1 + 4 = x^2 - 2x + 5$$
+
+**Step 4:** Final answer:
+$$\\boxed{p(x) = (x - 4)(x^2 - 2x + 5)}$$
+
+Expanded: $p(x) = x^3 - 6x^2 + 13x - 20$
+      `
+    },
+    {
+      id: 'p6-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Building Polynomials Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of factor theorem.',
+            question: 'A degree-3 polynomial has zeros at $x = 0$, $x = 2$, and $x = -5$, with $p(1) = 12$. What is the value of $a$?',
             options: [
-              'non-real roots of real polynomials occur in pairs',
-              '$p(c)=0$ implies $(x-c)$ is a factor',
-              'highest exponent with nonzero coefficient',
-              'direction of graph tails as $x	o\\pm\\infty$'
+              '$a = 1$',
+              '$a = -2$',
+              '$a = 2$',
+              '$a = -1$'
             ],
             correctAnswer: 1,
-            explanation: 'factor theorem is defined as: $p(c)=0$ implies $(x-c)$ is a factor.'
+            explanation: '$p(x) = a \\cdot x(x-2)(x+5)$. Substituting $x = 1$: $p(1) = a(1)(-1)(6) = -6a = 12$, so $a = -2$.'
           },
           {
-            question: 'In constructing a polynomial from constraints, which expression is the best starting model?',
+            question: 'Which polynomial has the smallest possible degree, bounces at $x = 3$, and crosses at $x = -1$?',
             options: [
-              '$\\deg(pq)=\\deg p+\\deg q$',
-              '$x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}$',
-              '$\\text{rem}(p\\div (x-c))=p(c)$',
-              '$p(x)=a\\prod (x-r_i)^{m_i}$'
+              '$(x - 3)(x + 1)$ — degree 2',
+              '$(x - 3)^2(x + 1)$ — degree 3',
+              '$(x - 3)(x + 1)^2$ — degree 3',
+              '$(x - 3)^2(x + 1)^2$ — degree 4'
             ],
-            correctAnswer: 2,
-            explanation: 'Use $\\text{rem}(p\\div (x-c))=p(c)$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 1,
+            explanation: 'Bouncing requires even multiplicity (minimum 2), crossing requires odd multiplicity (minimum 1). The smallest degree is $2 + 1 = 3$: $(x-3)^2(x+1)$.'
+          },
+          {
+            question: 'A polynomial with real coefficients has zeros $x = 2$ and $x = 3 - i$. What is the minimum degree?',
+            options: [
+              '2',
+              '3',
+              '4',
+              '5'
+            ],
+            correctAnswer: 1,
+            explanation: 'Complex zeros come in conjugate pairs, so $3 + i$ is also a zero. That gives 3 zeros total: $x = 2$, $x = 3-i$, $x = 3+i$. Minimum degree is 3.'
           }
         ]
       }
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p6-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Remainder theorem | $\\text{rem}(p\div (x-c))=p(c)$ | fast root testing |
-      | Quadratic roots | $x=\\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ | embedded factor analysis |
-      | Degree sum | $\deg(pq)=\deg p+\deg q$ | model-building checks |
-      | Factored form | $p(x)=a\prod (x-r_i)^{m_i}$ | zero/multiplicity encoding |
-      
-      ### Common pitfalls
-      - A numerical approximation can hide repeated roots if precision is low.
-      - Multiplicity affects local graph shape at zeros.
-      - Even/odd degree does not determine all turning behavior.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-polynomial-functions-precalc-p6-s4-input',
+      id: 'p6-calculation-drill',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Polynomial Structure**
-      
-      1) Evaluate $p(3)$ for $p(x)=x^3-2x$.
-      2) Compute $p(2)$ for $p(x)=x^2-5x+6$.
-      3) Find degree of $(x^2+1)(x^3-1)$.
+**Construction Drill** 🧮
+
+**1)** A polynomial has zeros at $x = 1$ and $x = -3$ (each with multiplicity 1) and $p(0) = 6$. What is the leading coefficient $a$? Use $p(x) = a(x-1)(x+3)$. (e.g., for $a(x-2)(x+1)$ with $p(0) = 4$, $a(-2)(1) = 4$ gives $a = -2$)
+
+**2)** What is the $y$-intercept of $p(x) = 3(x-1)(x+2)(x-4)$? Evaluate $p(0)$. (e.g., for $2(x-1)(x+3)$, $p(0) = 2(-1)(3) = -6$)
+
+**3)** Two complex zeros are $x = 2 + 3i$ and $x = 2 - 3i$. Their quadratic factor is $x^2 - 4x + c$. What is $c$? (e.g., for $1 \\pm 2i$, $c = 1^2 + 2^2 = 5$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['21', '0', '5'],
-        hint1: 'Substitute and simplify term by term.',
-        hint2: 'Use the remainder/factor theorem shortcut.',
-        hint3: 'Degrees add under multiplication.',
-        explanation: 'Values are 21 and 0, and the product polynomial has degree 5.'
+        correctAnswers: ['-2', '24', '13'],
+        hint1: '$p(0) = a(0-1)(0+3) = a(-1)(3) = -3a$. Set equal to $6$.',
+        hint2: '$p(0) = 3(-1)(2)(-4)$. Multiply carefully with signs.',
+        hint3: 'For $a \\pm bi$: $c = a^2 + b^2 = 4 + 9$.',
+        explanation: '1) $-3a = 6 \\Rightarrow a = -2$. 2) $3(-1)(2)(-4) = 24$. 3) $c = 2^2 + 3^2 = 13$.'
       }
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p6-s5-dropdown',
+      id: 'p6-dropdown-practice',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Building Polynomials — Fill in the Blanks** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'factor theorem',
-            options: ['highest exponent with nonzero coefficient', 'direction of graph tails as $x	o\\pm\\infty$', 'non-real roots of real polynomials occur in pairs', '$p(c)=0$ implies $(x-c)$ is a factor']
+            label: 'To determine the leading coefficient $a$, you need',
+            options: ['just the zeros', 'the degree', 'an additional point or condition', 'the factored form']
           },
           {
-            label: 'end behavior',
-            options: ['direction of graph tails as $x	o\\pm\\infty$', 'non-real roots of real polynomials occur in pairs', 'highest exponent with nonzero coefficient', 'coefficient of the highest-degree term']
+            label: 'Complex zeros $a + bi$ and $a - bi$ multiply to give a',
+            options: ['linear factor', 'real quadratic factor', 'complex cubic factor', 'constant']
           },
           {
-            label: 'conjugate roots',
-            options: ['non-real roots of real polynomials occur in pairs', 'input value where polynomial output is zero', 'highest exponent with nonzero coefficient', 'coefficient of the highest-degree term']
+            label: 'A degree-4 polynomial with 3 distinct real zeros must have at least one zero with multiplicity',
+            options: ['1', '2', '3', '4']
+          },
+          {
+            label: 'The $y$-intercept of a polynomial equals',
+            options: ['the leading coefficient', '$p(1)$', 'the constant term ($p(0)$)', 'the degree']
           }
         ],
-        correctAnswers: ['$p(c)=0$ implies $(x-c)$ is a factor', 'direction of graph tails as $x	o\\pm\\infty$', 'non-real roots of real polynomials occur in pairs'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: factor theorem, end behavior, and conjugate roots align with their exact definitions used in this part.'
+        correctAnswers: ['an additional point or condition', 'real quadratic factor', '2', 'the constant term ($p(0)$)'],
+        hint1: 'Zeros alone give the shape but not the vertical scaling.',
+        hint2: '$(x-(a+bi))(x-(a-bi))$ always simplifies to a real quadratic.',
+        hint3: 'With 3 distinct zeros and degree 4, one zero must repeat.',
+        explanation: 'You need an extra point/condition to find $a$. Complex conjugate pairs produce real quadratics. Degree 4 with 3 distinct zeros means one has multiplicity 2. The $y$-intercept is $p(0)$, the constant term.'
       }
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p6-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to factor theorem, end behavior, and conjugate roots so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-polynomial-functions-precalc-p6-s7-mcq-applied',
+      id: 'p6-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz — Building Polynomials** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is constructing a polynomial from constraints. Which term best anchors the next reasoning step if the key idea is: highest exponent with nonzero coefficient?',
+            question: 'A polynomial bounces at $x = -1$, crosses at $x = 3$, passes through $(0, -6)$, and has the smallest possible degree. Which is the correct polynomial?',
             options: [
-              'degree',
-              'end behavior',
-              'conjugate roots',
-              'factor theorem'
+              '$p(x) = 2(x+1)^2(x-3)$',
+              '$p(x) = -2(x+1)^2(x-3)$',
+              '$p(x) = 2(x-1)^2(x+3)$',
+              '$p(x) = -2(x-1)^2(x+3)$'
             ],
             correctAnswer: 0,
-            explanation: 'degree matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Bounces at $-1$: $(x+1)^2$. Crosses at $3$: $(x-3)$. So $p(x) = a(x+1)^2(x-3)$. $p(0) = a(1)(-3) = -3a = -6 \\Rightarrow a = 2$. Answer: $2(x+1)^2(x-3)$.'
           },
           {
-            question: 'A student is solving a mixed polynomial functions prompt. Which term best anchors the next reasoning step if the key idea is: coefficient of the highest-degree term?',
+            question: 'Write a polynomial with real coefficients, degree 4, zeros at $x = 0$, $x = 3$, and $x = i$, and leading coefficient $1$. In standard form, what is the constant term?',
             options: [
-              'degree',
-              'leading coefficient',
-              'zero',
-              'conjugate roots'
+              '$0$',
+              '$3$',
+              '$-3$',
+              '$1$'
             ],
-            correctAnswer: 1,
-            explanation: 'leading coefficient matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 0,
+            explanation: 'Zeros: $0, 3, i, -i$ (conjugate pair). $p(x) = x(x-3)(x-i)(x+i) = x(x-3)(x^2+1)$. Expanding: $x(x^3 - 3x^2 + x - 3) = x^4 - 3x^3 + x^2 - 3x$. The constant term is $0$ (since $x = 0$ is a zero, $p(0) = 0$).'
           }
         ]
       }

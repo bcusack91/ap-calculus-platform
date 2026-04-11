@@ -2,188 +2,219 @@ export const precalcExponentialPart2Data = {
   topicSlug: 'exponential-functions-precalc',
   sections: [
     {
-      id: 'precalc-exponential-functions-precalc-p2-s1-intro',
+      id: 'p2-intro',
       type: 'text' as const,
       content: `
-      ## Exponential Functions: Transformations of exponential graphs
-      
-      **Part 2 of 7**
-      
-      This part focuses on comparing transformed growth curves. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **growth factor**: multiplier per unit increase in input
-      - **decay factor**: multiplier between 0 and 1 per input step
-      - **initial value**: value when input is zero
-      
-      
-      ### Worked Example
-      Part 2 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🔄 Transformations of Exponential Graphs
+
+**Part 2 of 7**
+
+The parent exponential function is $f(x) = b^x$. Every transformation follows the general form:
+
+$$\\boxed{g(x) = a \\cdot b^{x - h} + k}$$
+
+| Parameter | Effect | Example on $2^x$ |
+|:----------|:-------|:-----------------|
+| $a$ | Vertical stretch/compress; if $a < 0$, reflect over $x$-axis | $-2^x$ flips graph upside down |
+| $h$ | Horizontal shift (right if $h > 0$) | $2^{x-3}$ shifts right $3$ |
+| $k$ | Vertical shift (up if $k > 0$) | $2^x + 5$ shifts up $5$ |
+| Replace $x$ with $-x$ | Reflect over $y$-axis | $2^{-x} = \\left(\\frac{1}{2}\\right)^x$ |
+
+> **Critical change:** The horizontal asymptote moves from $y = 0$ to $y = k$ whenever a vertical shift is applied.
       `
     },
     {
-      id: 'precalc-exponential-functions-precalc-p2-s2-mcq-core',
+      id: 'p2-transformations-detail',
+      type: 'text' as const,
+      content: `
+## 🧩 Transformation Breakdown
+
+### Vertical Stretch & Reflection ($a$)
+
+| Function | $a$ value | Effect |
+|:---------|:----------|:-------|
+| $3 \\cdot 2^x$ | $a = 3$ | Stretched vertically by factor $3$; $y$-int at $(0, 3)$ |
+| $0.5 \\cdot 2^x$ | $a = 0.5$ | Compressed vertically; $y$-int at $(0, 0.5)$ |
+| $-2^x$ | $a = -1$ | Reflected over $x$-axis; range becomes $(-\\infty, 0)$ |
+
+### Horizontal & Vertical Shifts ($h$ and $k$)
+
+| Function | Shift | New HA | New $y$-intercept |
+|:---------|:------|:-------|:-------------------|
+| $2^{x-2}$ | Right $2$ | $y = 0$ | $f(0) = 2^{-2} = 0.25$ |
+| $2^{x+1}$ | Left $1$ | $y = 0$ | $f(0) = 2^1 = 2$ |
+| $2^x + 4$ | Up $4$ | $y = 4$ | $f(0) = 1 + 4 = 5$ |
+| $2^x - 3$ | Down $3$ | $y = -3$ | $f(0) = 1 - 3 = -2$ |
+
+### Worked Example
+
+> **Graph $g(x) = -3 \\cdot 2^{x+1} + 4$ starting from the parent $f(x) = 2^x$.**
+
+| Step | Transformation | Key Point $(0,1) \\to$ | HA |
+|:-----|:--------------|:----------------------|:---|
+| Start | $2^x$ | $(0, 1)$ | $y = 0$ |
+| Shift left $1$ | $2^{x+1}$ | $(-1, 1)$ | $y = 0$ |
+| Stretch by $3$ | $3 \\cdot 2^{x+1}$ | $(-1, 3)$ | $y = 0$ |
+| Reflect $x$-axis | $-3 \\cdot 2^{x+1}$ | $(-1, -3)$ | $y = 0$ |
+| Shift up $4$ | $-3 \\cdot 2^{x+1} + 4$ | $(-1, 1)$ | $y = 4$ |
+
+**Final:** HA at $y = 4$, $y$-intercept at $g(0) = -3(2) + 4 = -2$, range $(-\\infty, 4)$.
+      `
+    },
+    {
+      id: 'p2-domain-range',
+      type: 'text' as const,
+      content: `
+## 📐 Domain & Range After Transformations
+
+The domain of exponential functions is **always** $(-\\infty, \\infty)$ — no transformation changes this.
+
+The range depends on $a$ and $k$:
+
+| Condition | Range |
+|:----------|:------|
+| $a > 0$ | $(k, \\infty)$ |
+| $a < 0$ | $(-\\infty, k)$ |
+
+### Quick Check Method
+
+To find the $y$-intercept of $g(x) = a \\cdot b^{x-h} + k$:
+
+$$\\boxed{g(0) = a \\cdot b^{-h} + k}$$
+
+To find where $g(x) = 0$ (if it crosses the $x$-axis):
+
+Set $a \\cdot b^{x-h} + k = 0 \\implies b^{x-h} = -\\frac{k}{a}$
+
+This has a solution only when $-\\frac{k}{a} > 0$ (i.e., $k$ and $a$ have opposite signs).
+      `
+    },
+    {
+      id: 'p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Transformation Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of growth factor.',
+            question: 'What is the horizontal asymptote of $f(x) = 5 \\cdot 3^x - 7$?',
             options: [
-              'input interval required to multiply output by 2',
-              'value when input is zero',
-              'multiplier per unit increase in input',
-              'multiplier between 0 and 1 per input step'
+              '$y = 5$',
+              '$y = 3$',
+              '$y = -7$',
+              '$y = 0$'
             ],
             correctAnswer: 2,
-            explanation: 'growth factor is defined as: multiplier per unit increase in input.'
+            explanation: 'The vertical shift $k = -7$ moves the HA from $y = 0$ to $y = -7$. The stretch factor $a = 5$ does not affect the asymptote.'
           },
           {
-            question: 'In comparing transformed growth curves, which expression is the best starting model?',
+            question: 'The graph of $g(x) = 2^{-x}$ is the same as:',
             options: [
-              '$T_d=\\frac{\\ln 2}{k}$',
-              '$T_{1/2}=\\frac{\\ln 2}{|k|}$',
-              '$f(t)=Ae^{kt}$',
-              '$f(x)=ab^x$'
+              '$-2^x$ (reflection over $x$-axis)',
+              '$\\left(\\frac{1}{2}\\right)^x$ (reflection over $y$-axis)',
+              '$2^x - 1$ (shift down)',
+              '$\\frac{1}{2^x}$ and $\\left(\\frac{1}{2}\\right)^x$ (both correct)'
             ],
-            correctAnswer: 2,
-            explanation: 'Use $f(t)=Ae^{kt}$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 3,
+            explanation: '$2^{-x} = (2^{-1})^x = \\left(\\frac{1}{2}\\right)^x = \\frac{1}{2^x}$. Replacing $x$ with $-x$ reflects over the $y$-axis, converting growth into decay.'
+          },
+          {
+            question: 'Which transformation shifts the $y$-intercept of $2^x$ from $(0, 1)$ to $(0, 4)$ WITHOUT changing the HA?',
+            options: [
+              '$2^x + 3$',
+              '$4 \\cdot 2^x$',
+              '$2^{x-2}$',
+              '$2^x + 4$'
+            ],
+            correctAnswer: 1,
+            explanation: '$4 \\cdot 2^x$ at $x = 0$: $4 \\cdot 1 = 4$. HA stays at $y = 0$. Adding $3$ would give $y$-int $4$ but changes HA to $y = 3$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-exponential-functions-precalc-p2-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Continuous model | $f(t)=Ae^{kt}$ | growth/decay by constant relative rate |
-      | Doubling time | $T_d=\\frac{\ln 2}{k}$ | continuous growth timing |
-      | Half-life | $T_{1/2}=\\frac{\ln 2}{|k|}$ | continuous decay timing |
-      | Exponential form | $f(x)=ab^x$ | model construction |
-      
-      ### Common pitfalls
-      - A linear graph of raw data is not exponential evidence; inspect ratios.
-      - When solving exponents, isolate the exponential expression before applying logs.
-      - Do not confuse the base $b$ with the initial value $a$.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-exponential-functions-precalc-p2-s4-input',
+      id: 'p2-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Exponential Evaluation**
-      
-      1) Solve $2^x=32$ for $x$.
-      2) Evaluate $f(3)$ for $f(x)=5\left(
-      rac{1}{2}
-      ight)^x$.
-      3) If $P(t)=100(1.1)^t$, compute $P(2)$.
+**Transformation Drill** 🧮
+
+**1)** Find the $y$-intercept of $g(x) = 6 \\cdot 3^{x-1} - 2$. (e.g., for $h(x) = 4 \\cdot 2^{x-2} + 1$: $h(0) = 4 \\cdot 2^{-2} + 1 = 4 \\cdot 0.25 + 1 = 2$)
+
+**2)** What is the horizontal asymptote ($y$-value) of $f(x) = -10 \\cdot 5^x + 12$? (e.g., $3 \\cdot 2^x - 8$ has HA $y = -8$)
+
+**3)** The function $f(x) = 2^{x+3}$ is equivalent to $c \\cdot 2^x$. What is $c$? (e.g., $3^{x+2} = 9 \\cdot 3^x$ so $c = 9$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5', '0.625', '121'],
-        hint1: 'Rewrite 32 as a power of 2.',
-        hint2: 'Compute $(1/2)^3$ first, then scale by 5.',
-        hint3: 'Square the growth factor 1.1 and multiply by 100.',
-        explanation: 'The answers are 5, 0.625, and 121 after direct exponential substitution.'
+        correctAnswers: ['0', '12', '8'],
+        hint1: '$g(0) = 6 \\cdot 3^{-1} - 2 = 6 \\cdot \\frac{1}{3} - 2$.',
+        hint2: 'The HA is determined by $k$ alone. What is $k$ here?',
+        hint3: '$2^{x+3} = 2^3 \\cdot 2^x$. What is $2^3$?',
+        explanation: '1) $g(0) = 6(\\frac{1}{3}) - 2 = 2 - 2 = 0$. 2) $k = 12$, so HA is $y = 12$. 3) $2^{x+3} = 2^3 \\cdot 2^x = 8 \\cdot 2^x$, so $c = 8$.'
       }
     },
     {
-      id: 'precalc-exponential-functions-precalc-p2-s5-dropdown',
+      id: 'p2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Identify the Transformation** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'growth factor',
-            options: ['value when input is zero', 'multiplier per unit increase in input', 'input interval required to multiply output by 2', 'multiplier between 0 and 1 per input step']
+            label: 'Replacing $x$ with $x - 5$ in $2^x$ shifts the graph',
+            options: ['left 5', 'right 5', 'up 5', 'down 5']
           },
           {
-            label: 'decay factor',
-            options: ['input interval required to multiply output by $\\rac12$', 'input interval required to multiply output by 2', 'value when input is zero', 'multiplier between 0 and 1 per input step']
+            label: 'Multiplying $2^x$ by $-1$ reflects the graph over the',
+            options: ['$x$-axis', '$y$-axis', 'line $y = x$', 'origin']
           },
           {
-            label: 'initial value',
-            options: ['input interval required to multiply output by 2', 'value when input is zero', 'percent change per step or per unit time', 'input interval required to multiply output by $\\rac12$']
+            label: 'Adding $k > 0$ to $b^x$ changes the range to',
+            options: ['$(k, \\infty)$', '$(-\\infty, k)$', '$(0, k)$', '$(0, \\infty)$']
+          },
+          {
+            label: 'The domain of ANY transformed exponential $a \\cdot b^{x-h} + k$ is',
+            options: ['$(0, \\infty)$', '$(h, \\infty)$', '$(-\\infty, \\infty)$', 'depends on $a$']
           }
         ],
-        correctAnswers: ['multiplier per unit increase in input', 'multiplier between 0 and 1 per input step', 'value when input is zero'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: growth factor, decay factor, and initial value align with their exact definitions used in this part.'
+        correctAnswers: ['right 5', '$x$-axis', '$(k, \\infty)$', '$(-\\infty, \\infty)$'],
+        hint1: 'Inside the exponent: $x - h$ shifts right by $h$.',
+        hint2: 'Multiplying outputs by $-1$ flips them vertically.',
+        hint3: 'When $a > 0$, outputs are positive; adding $k$ shifts the minimum up.',
+        explanation: 'Horizontal shifts are opposite in sign. Multiplying by $-1$ reflects over $x$-axis. Adding $k > 0$ with $a > 0$ changes range to $(k, \\infty)$. Domain is always all reals.'
       }
     },
     {
-      id: 'precalc-exponential-functions-precalc-p2-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to growth factor, decay factor, and initial value so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-exponential-functions-precalc-p2-s7-mcq-applied',
+      id: 'p2-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is comparing transformed growth curves. Which term best anchors the next reasoning step if the key idea is: input interval required to multiply output by 2?',
+            question: 'The function $g(x) = -2 \\cdot 4^{x-1} + 8$ has range:',
             options: [
-              'initial value',
-              'growth factor',
-              'decay factor',
-              'doubling time'
+              '$(8, \\infty)$',
+              '$(-\\infty, 8)$',
+              '$(-\\infty, -2)$',
+              '$(0, \\infty)$'
             ],
-            correctAnswer: 3,
-            explanation: 'doubling time matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 1,
+            explanation: 'Since $a = -2 < 0$, the exponential term $-2 \\cdot 4^{x-1}$ is always negative. Adding $8$ means outputs approach $8$ from below but never reach it. Range: $(-\\infty, 8)$.'
           },
           {
-            question: 'A student is solving a mixed exponential functions prompt. Which term best anchors the next reasoning step if the key idea is: input interval required to multiply output by $\\rac12$?',
+            question: 'Starting from $f(x) = 3^x$, which sequence produces $g(x) = 3^{x+2} - 9$?',
             options: [
-              'relative rate',
-              'initial value',
-              'doubling time',
-              'half-life'
+              'Shift left $2$, then shift down $9$',
+              'Shift right $2$, then shift down $9$',
+              'Shift left $2$, then shift up $9$',
+              'Stretch by $9$, then shift left $2$'
             ],
-            correctAnswer: 3,
-            explanation: 'half-life matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 0,
+            explanation: '$x + 2$ means $h = -2$, which is a shift left by $2$. Then $-9$ means $k = -9$, a shift down by $9$. Order: left $2$, down $9$.'
           }
         ]
       }

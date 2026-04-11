@@ -5,18 +5,24 @@ export const chemPropertiesStatesMatterPart6Data = {
       id: 'sm6-intro',
       type: 'text' as const,
       title: 'Problem-Solving Workshop — Introduction',
-      content: `
-# 🔧 Problem-Solving Workshop
+      content: `# 🔧 Problem-Solving Workshop
 
 **Part 6 of 7 — Predicting States and Comparing Properties Based on IMFs**
 
-In this workshop, we\'ll practice the most important skill for AP Chemistry: **connecting the type and strength of intermolecular forces to observable physical properties** of substances.
+---
 
-The chain of reasoning is:
-$$\\text{Structure} \\rightarrow \\text{IMFs} \\rightarrow \\text{Physical Properties}$$
+### Practice Makes Perfect
 
-Stronger IMFs → higher melting/boiling points, higher surface tension, higher viscosity, lower vapor pressure.
-      `
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'sm6-imf-review',
@@ -27,27 +33,28 @@ Stronger IMFs → higher melting/boiling points, higher surface tension, higher 
 
 From **weakest to strongest**:
 
-1. **London Dispersion Forces (LDF)** — present in ALL molecules
-   - Strength increases with molar mass and surface area
-   - Only force in nonpolar molecules
+---
 
-2. **Dipole-Dipole Forces** — between polar molecules
-   - Stronger than LDF of comparable size
-   - Requires permanent dipoles
+### 🧪 IMF Comparison Table
 
-3. **Hydrogen Bonding** — special, strong dipole-dipole
-   - Requires H bonded to **F, O, or N** and a lone pair on F, O, or N on another molecule
-   - Much stronger than ordinary dipole-dipole
+| IMF Type | Present In | Key Detail |
+|----------|-----------|------------|
+| **London Dispersion (LDF)** | ALL molecules | Strength ↑ with molar mass & surface area |
+| **Dipole-Dipole** | Polar molecules | Requires permanent dipoles |
+| **Hydrogen Bonding** | H bonded to **F, O, or N** | Much stronger than ordinary dipole-dipole |
+| **Ion-Dipole** | Ions + polar molecules | Key for dissolving ionic compounds in water |
 
-4. **Ion-Dipole Forces** — between ions and polar molecules
-   - Important for dissolving ionic compounds in water
+---
 
-### Critical Reminder
+### 📌 Comparing Substances
 
-When comparing two substances:
-- First identify the **dominant IMF** in each.
-- If both have the same type of IMF, compare **molar mass** (affects LDF strength).
-- The substance with stronger IMFs has: higher bp, higher surface tension, higher viscosity, **lower** vapor pressure.
+| Step | Action |
+|------|--------|
+| 1 | Identify the **dominant IMF** in each substance |
+| 2 | If same IMF type → compare **molar mass** (affects LDF strength) |
+| 3 | Stronger IMFs → higher bp, higher surface tension, higher viscosity, **lower** vapor pressure |
+
+> ⚠️ **Key Rule:** Hydrogen bonding requires H bonded to **F, O, or N** AND a lone pair on F, O, or N on another molecule. Don't forget both conditions!
       `
     },
     {

@@ -4,13 +4,29 @@ export const chemActivationEnergyArrheniusPart4Data = {
     {
       id: 'ae4-intro',
       type: 'text' as const,
-      content: `
-# 📉 Linearized Arrhenius Equation
+      content: `# 📉 Linearized Arrhenius Equation
 
 **Part 4 of 7 — Finding Ea from Graphical Data**
 
-The Arrhenius equation in its exponential form is difficult to work with graphically. By taking the natural log, we convert it to a **linear form** that allows us to extract $E_a$ and $A$ from a plot.
-      `
+---
+
+### From Exponential to Linear
+
+| Form | Equation | Graph |
+|------|----------|-------|
+| Exponential | $k = Ae^{-E_a/RT}$ | Curved — hard to analyze |
+| **Linear** | $\ln k = -\frac{E_a}{R} \cdot \frac{1}{T} + \ln A$ | **Straight line** |
+
+Plot $\ln k$ vs $1/T$ → slope = $-E_a/R$, y-intercept = $\ln A$
+
+> 🔑 **Why this matters:** The AP exam often provides data as a table of temperatures and rate constants — you need to know how to plot and analyze it graphically.
+
+---
+
+### What You'll Master in Part 4
+- Deriving the linearized Arrhenius equation from the exponential form
+- Determining $E_a$ from the slope of a $\ln k$ vs $1/T$ plot
+- Interpreting Arrhenius plots for AP exam data analysis questions`
     },
     {
       id: 'ae4-linearization',

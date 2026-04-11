@@ -4,13 +4,29 @@ export const chemIceTablesCalculationsPart2Data = {
     {
       id: 'ic2-intro',
       type: 'text' as const,
-      content: `
-# 🧊 Solving for K from Equilibrium Data
+      content: `# 🧊 Solving for K from Equilibrium Data
 
 **Part 2 of 7 — When You Know the Equilibrium Concentrations**
 
-The simplest ICE table problem: you\'re given enough information about the equilibrium state to directly calculate K. No algebra needed — just plug and chug.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚖️ Method: All Equilibrium Concentrations Given |
+| Example 1 |
+| ⚖️ Method: Initial + One Equilibrium Value Given |
+| Example 2 |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ic2-direct-method',
@@ -18,18 +34,18 @@ The simplest ICE table problem: you\'re given enough information about the equil
       content: `
 ## ⚖️ Method: All Equilibrium Concentrations Given
 
-If you know ALL equilibrium concentrations, just plug them into the K expression.
+> 🔑 **Key Concept:** If you know ALL equilibrium concentrations, just plug them into the K expression.
 
 
 ---
 
 ### Example 1
 
-$\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$
+> **Problem:** For $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$, at equilibrium: $[\\text{N}_2] = 0.50$, $[\\text{H}_2] = 0.30$, $[\\text{NH}_3] = 0.20$ M. Find $K_c$.
 
-At equilibrium: $[\\text{N}_2] = 0.50$, $[\\text{H}_2] = 0.30$, $[\\text{NH}_3] = 0.20$ M
+> **Solution:**
 
-$$K_c = \\frac{[\\text{NH}_3]^2}{[\\text{N}_2][\\text{H}_2]^3} = \\frac{(0.20)^2}{(0.50)(0.30)^3} = \\frac{0.040}{(0.50)(0.027)} = \\frac{0.040}{0.0135} = 2.96 \\approx 3.0$$
+$$\\boxed{K_c = \\frac{[\\text{NH}_3]^2}{[\\text{N}_2][\\text{H}_2]^3}} = \\frac{(0.20)^2}{(0.50)(0.30)^3} = \\frac{0.040}{(0.50)(0.027)} = \\frac{0.040}{0.0135} = 2.96 \\approx 3.0$$
       `
     },
     {
@@ -38,18 +54,16 @@ $$K_c = \\frac{[\\text{NH}_3]^2}{[\\text{N}_2][\\text{H}_2]^3} = \\frac{(0.20)^2
       content: `
 ## ⚖️ Method: Initial + One Equilibrium Value Given
 
-When you know initial concentrations and ONE equilibrium concentration, use the ICE table to find x, then calculate all equilibrium concentrations.
+> 💡 **Tip:** When you know initial concentrations and ONE equilibrium concentration, use the ICE table to find x, then calculate all equilibrium concentrations.
 
 
 ---
 
 ### Example 2
 
-$\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$
+> **Problem:** For $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$, initial $[\\text{PCl}_5] = 1.00$ M, $[\\text{PCl}_3] = [\\text{Cl}_2] = 0$. At equilibrium, $[\\text{PCl}_5] = 0.60$ M. Find $K_c$.
 
-Initial: $[\\text{PCl}_5] = 1.00$ M, $[\\text{PCl}_3] = [\\text{Cl}_2] = 0$
-
-At equilibrium: $[\\text{PCl}_5] = 0.60$ M
+> **Solution:**
 
 |  | PCl₅ | PCl₃ | Cl₂ |
 |--|------|------|-----|
@@ -61,7 +75,12 @@ From the equilibrium value: $1.00 - x = 0.60 \\implies x = 0.40$
 
 So: $[\\text{PCl}_3] = [\\text{Cl}_2] = 0.40$ M
 
-$$K_c = \\frac{(0.40)(0.40)}{0.60} = \\frac{0.16}{0.60} = 0.267 \\approx 0.27$$
+$$\\boxed{K_c = \\frac{(0.40)(0.40)}{0.60}} = \\frac{0.16}{0.60} = 0.267 \\approx 0.27$$
+
+
+---
+
+> ⚠️ **Warning:** When finding $x$ from a change with a stoichiometric coefficient, remember to divide: if $2x = 0.40$, then $x = 0.20$, not $0.40$.
       `
     },
     {

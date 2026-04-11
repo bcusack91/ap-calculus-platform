@@ -2,186 +2,195 @@ export const precalcTransformationsPart3Data = {
   topicSlug: 'transformations-precalc',
   sections: [
     {
-      id: 'precalc-transformations-precalc-p3-s1-intro',
+      id: 'p3-intro',
       type: 'text' as const,
       content: `
-      ## Function Transformations: Reflections across axes
-      
-      **Part 3 of 7**
-      
-      This part focuses on interpreting mirrored behaviors. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **horizontal shift**: replaces $x$ with $x-h$ inside input
-      - **reflection**: multiplies input or output by $-1$
-      - **vertical stretch**: multiplies output by factor with magnitude $>1$
-      
-      
-      ### Worked Example
-      Part 3 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📏 Stretches & Compressions
+
+**Part 3 of 7**
+
+### Vertical Stretch/Compression
+
+$$y = a \\cdot f(x)$$
+
+| $|a| > 1$ | Vertical **stretch** by factor $|a|$ |
+|:----------|:------------------------------------|
+| $0 < |a| < 1$ | Vertical **compression** by factor $|a|$ |
+| $a < 0$ | Also reflects over $x$-axis |
+
+### Horizontal Stretch/Compression
+
+$$y = f(bx)$$
+
+| $|b| > 1$ | Horizontal **compression** by factor $\\frac{1}{|b|}$ |
+|:----------|:-----------------------------------------------------|
+| $0 < |b| < 1$ | Horizontal **stretch** by factor $\\frac{1}{|b|}$ |
+
+> ⚠️ Horizontal scaling is **reciprocal**: $f(2x)$ compresses by half, not stretches by 2!
       `
     },
     {
-      id: 'precalc-transformations-precalc-p3-s2-mcq-core',
+      id: 'p3-examples',
+      type: 'text' as const,
+      content: `
+## 📝 Examples
+
+### Example 1: $y = 3\\sin x$
+
+Vertical stretch by 3. Amplitude changes from 1 to 3.
+
+Points: $(\\pi/2, 1) \\to (\\pi/2, 3)$.
+
+### Example 2: $y = \\sin(2x)$
+
+Horizontal compression by $1/2$. Period changes from $2\\pi$ to $\\pi$.
+
+Points: $(\\pi/2, 1) \\to (\\pi/4, 1)$.
+
+### Example 3: $y = \\frac{1}{2}x^2$
+
+Vertical compression by $1/2$. The parabola is "wider."
+
+Points: $(2, 4) \\to (2, 2)$, $(4, 16) \\to (4, 8)$.
+
+### Key Insight
+
+Vertical changes multiply $y$-values.
+
+Horizontal changes divide $x$-values by $b$ (or multiply by $1/b$).
+      `
+    },
+    {
+      id: 'p3-period',
+      type: 'text' as const,
+      content: `
+## 🔄 Effect on Period & Amplitude
+
+For trig functions $y = A\\sin(Bx)$:
+
+- **Amplitude** $= |A|$ (vertical stretch)
+- **Period** $= \\frac{2\\pi}{|B|}$ (horizontal compression)
+
+### Example: $y = 4\\cos(3x)$
+
+Amplitude: $4$, Period: $\\frac{2\\pi}{3}$
+
+### For General Functions
+
+| Original Feature | After $y = af(bx)$ |
+|:-----------------|:-------------------|
+| Point $(x, y)$ | $(x/b, ay)$ |
+| Width/period $T$ | $T/|b|$ |
+| Height $h$ | $|a| \\cdot h$ |
+| $x$-intercepts | Divide by $b$ |
+| $y$-intercept | Multiply by $a$ |
+      `
+    },
+    {
+      id: 'p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Stretches Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of horizontal shift.',
-            options: [
-              'replaces $x$ with $x-h$ inside input',
-              'multiplies output by factor with magnitude $>1$',
-              'multiplies input or output by $-1$',
-              'scales graph toward an axis'
-            ],
-            correctAnswer: 0,
-            explanation: 'horizontal shift is defined as: replaces $x$ with $x-h$ inside input.'
+            question: '$y = f(3x)$ does what to the graph?',
+            options: ['Stretches horizontally by 3', 'Compresses horizontally by 1/3', 'Stretches vertically by 3', 'Compresses vertically by 1/3'],
+            correctAnswer: 1,
+            explanation: '$f(bx)$ with $b=3$: horizontal compression by $1/3$.'
           },
           {
-            question: 'In interpreting mirrored behaviors, which expression is the best starting model?',
-            options: [
-              '$g(x)=a\\,f(b(x-h))+k$',
-              '$f(x-h)$',
-              '$-f(x),\\;f(-x)$',
-              '$f(x)+k$'
-            ],
-            correctAnswer: 3,
-            explanation: 'Use $f(x)+k$ first, then substitute known quantities from the prompt.'
+            question: 'The amplitude of $y = -5\\sin x$ is:',
+            options: ['$5$', '$-5$', '$1/5$', '$10$'],
+            correctAnswer: 0,
+            explanation: 'Amplitude $= |A| = |-5| = 5$. (The negative reflects but does not affect amplitude.)'
+          },
+          {
+            question: 'The period of $y = \\cos(\\pi x)$ is:',
+            options: ['$\\pi$', '$2\\pi$', '$2$', '$1/\\pi$'],
+            correctAnswer: 2,
+            explanation: 'Period $= 2\\pi/|\\pi| = 2$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-transformations-precalc-p3-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Vertical shift | $f(x)+k$ | up by $k$ when $k>0$ |
-      | Reflections | $-f(x),\;f(-x)$ | over $x$-axis and $y$-axis |
-      | General transform | $g(x)=a\,f(b(x-h))+k$ | all major parameter moves |
-      | Horizontal shift | $f(x-h)$ | right by $h$ when $h>0$ |
-      
-      ### Common pitfalls
-      - Apply transformations in the order implied by expression structure.
-      - Inside changes reverse intuitive direction for horizontal moves.
-      - A negative outside coefficient reflects across the $x$-axis.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-transformations-precalc-p3-s4-input',
+      id: 'p3-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Transformation Parameters**
-      
-      1) In $g(x)=f(x-3)+2$, how many units right is the graph shifted?
-      2) In $y=-2f(x)$, what is the vertical stretch factor magnitude?
-      3) If $f(x)=x^2$, compute $f(-4)$.
+**Stretch Calculations** 🧮
+
+**1)** $y = 2f(x)$: the point $(3, 5)$ becomes $(3, $ ?$)$
+
+**2)** $y = f(4x)$: the point $(8, 5)$ becomes $($?$, 5)$
+
+**3)** The period of $y = \\sin(4x)$: $\\frac{2\\pi}{?}$. Enter the number.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3', '2', '16'],
-        hint1: 'Inside subtraction shifts right.',
-        hint2: 'Read absolute value of outside multiplier.',
-        hint3: 'Square the input after substitution.',
-        explanation: 'Shift is 3 right, stretch magnitude is 2, and $f(-4)=16$.'
+        correctAnswers: ['10', '2', '4'],
+        hint1: 'Vertical stretch by 2: $y$-values double.',
+        hint2: 'Horizontal compress by $1/4$: $x$-values divided by $4$.',
+        hint3: 'Period = $2\\pi / |B| = 2\\pi / 4$.',
+        explanation: '1) $10$. 2) $2$. 3) $4$ (period $= \\pi/2$).'
       }
     },
     {
-      id: 'precalc-transformations-precalc-p3-s5-dropdown',
+      id: 'p3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Stretch Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'horizontal shift',
-            options: ['multiplies output by factor with magnitude $>1$', 'scales graph toward an axis', 'replaces $x$ with $x-h$ inside input', 'multiplies input or output by $-1$']
+            label: '$y = \\frac{1}{3}f(x)$ is a vertical:',
+            options: ['Stretch by 3', 'Compression by 1/3', 'Shift down 3'],
+            correctAnswer: 1
           },
           {
-            label: 'reflection',
-            options: ['scales graph toward an axis', 'multiple transformations applied to one parent', 'multiplies output by factor with magnitude $>1$', 'multiplies input or output by $-1$']
+            label: '$y = f(x/2)$ is a horizontal:',
+            options: ['Compression by 1/2', 'Stretch by 2', 'Shift right 2'],
+            correctAnswer: 1
           },
           {
-            label: 'vertical stretch',
-            options: ['multiplies output by factor with magnitude $>1$', 'scales graph toward an axis', 'point unchanged by selected transformation', 'multiple transformations applied to one parent']
+            label: 'Vertical stretches affect:',
+            options: ['$x$-intercepts', '$y$-intercepts', 'Neither'],
+            correctAnswer: 1
+          },
+          {
+            label: 'Horizontal compressions affect:',
+            options: ['$x$-intercepts', '$y$-intercepts', 'Neither'],
+            correctAnswer: 0
           }
         ],
-        correctAnswers: ['replaces $x$ with $x-h$ inside input', 'multiplies input or output by $-1$', 'multiplies output by factor with magnitude $>1$'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: horizontal shift, reflection, and vertical stretch align with their exact definitions used in this part.'
+        correctAnswers: ['Compression by 1/3', 'Stretch by 2', '$y$-intercepts', '$x$-intercepts'],
+        hint1: '$|a| = 1/3 < 1$: compression.',
+        hint2: '$b = 1/2$: reciprocal is $2$: stretch.',
+        hint3: 'Multiplying $y$ changes where the graph crosses the $y$-axis.',
+        explanation: 'Multiply $y$ by $1/3$: compression. $f(x/2)$: stretch by 2. Vertical changes affect $y$-intercept. Horizontal changes affect $x$-intercepts.'
       }
     },
     {
-      id: 'precalc-transformations-precalc-p3-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to horizontal shift, reflection, and vertical stretch so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-transformations-precalc-p3-s7-mcq-applied',
+      id: 'p3-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is interpreting mirrored behaviors. Which term best anchors the next reasoning step if the key idea is: scales graph toward an axis?',
-            options: [
-              'reflection',
-              'horizontal shift',
-              'vertical stretch',
-              'compression'
-            ],
-            correctAnswer: 3,
-            explanation: 'compression matches that description and keeps the model-to-interpretation chain consistent.'
+            question: '$y = 3f(2x)$ transforms $(4, 5)$ to:',
+            options: ['$(2, 15)$', '$(8, 15)$', '$(2, 5/3)$', '$(12, 10)$'],
+            correctAnswer: 0,
+            explanation: 'Horizontal: $4/2 = 2$. Vertical: $5 \\times 3 = 15$. Point: $(2, 15)$.'
           },
           {
-            question: 'A student is solving a mixed function transformations prompt. Which term best anchors the next reasoning step if the key idea is: multiple transformations applied to one parent?',
-            options: [
-              'composite transform',
-              'invariant point',
-              'compression',
-              'vertical stretch'
-            ],
-            correctAnswer: 0,
-            explanation: 'composite transform matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Which makes the graph wider?',
+            options: ['$y = f(2x)$', '$y = f(x/2)$', '$y = 2f(x)$', '$y = f(x)+2$'],
+            correctAnswer: 1,
+            explanation: '$f(x/2)$: horizontal stretch by 2 → wider graph.'
           }
         ]
       }

@@ -6,16 +6,22 @@ export const chemPhotoelectronSpectroscopyPart7Data = {
       type: 'text' as const,
       content: `# Synthesis & AP Review
 
-This final part brings together everything about Photoelectron Spectroscopy. We will review the key concepts, connect PES to ionization energy, address common mistakes, and practice AP exam-style questions.
+**Part 7 of 7 — Synthesis & AP Review**
 
-## 🔄 Key Concepts Review
+---
 
-1. **PES measures binding energies** of electrons using $BE = E_{photon} - KE$
-2. **Each peak** = one subshell; **peak height** = number of electrons
-3. **X-axis**: binding energy (high → low, left → right)
-4. **Core electrons** = high BE (left); **valence electrons** = low BE (right)
-5. **Across a period**: all binding energies increase due to increasing $Z_{eff}$
-6. **Element identification**: sum peak heights = atomic number`
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'ps7-ionization',
@@ -24,9 +30,11 @@ This final part brings together everything about Photoelectron Spectroscopy. We 
 
 The **first ionization energy (IE₁)** of an element is directly related to the PES spectrum:
 
-$$IE_1 = \\text{binding energy of the outermost (valence) electron}$$
+$$\boxed{IE_1 = \text{binding energy of the outermost (valence) electron}}$$
 
 The **rightmost peak** on a PES spectrum (lowest binding energy) corresponds to the outermost subshell. The binding energy of this peak equals the first ionization energy.
+
+> 🔑 **Key Concept:** The first ionization energy equals the binding energy of the rightmost PES peak. This directly connects PES data to periodic table trends.
 
 
 ---
@@ -44,9 +52,9 @@ PES data can also help explain **successive ionization energies**. The large jum
     {
       id: 'ps7-quiz1',
       type: 'multiple-choice' as const,
-      content: `### AP Review Question 1
+      content: `### ✏️ AP Review Question 1
 
-The PES spectrum of an element shows the rightmost peak at a binding energy of 1.09 MJ/mol. This value corresponds to which property of the element?`,
+> **Problem:** The PES spectrum of an element shows the rightmost peak at a binding energy of 1.09 MJ/mol. This value corresponds to which property of the element?`,
       exercise: {
         questions: [
           {
@@ -66,7 +74,9 @@ The PES spectrum of an element shows the rightmost peak at a binding energy of 1
     {
       id: 'ps7-mistakes',
       type: 'text' as const,
-      content: `## 📌 Common Mistakes on the AP Exam
+      content: `## ⚠️ Common Mistakes on the AP Exam
+
+> ⚠️ **Warning:** These five mistakes cost students the most points on PES questions:
 
 ### Mistake 1: Confusing the X-Axis Direction
 ❌ Assuming binding energy increases left to right (like most graphs)
@@ -103,9 +113,9 @@ The PES spectrum of an element shows the rightmost peak at a binding energy of 1
     {
       id: 'ps7-quiz2',
       type: 'multiple-choice' as const,
-      content: `### AP Review Question 2
+      content: `### ✏️ AP Review Question 2
 
-Two elements, X and Y, are in the same period. Element X has PES peak heights of 2, 2, 6, 2, 3, and Element Y has PES peak heights of 2, 2, 6, 2, 4. Which statement is correct?`,
+> **Problem:** Two elements, X and Y, are in the same period. Element X has PES peak heights of 2, 2, 6, 2, 3, and Element Y has PES peak heights of 2, 2, 6, 2, 4. Which statement is correct?`,
       exercise: {
         questions: [
           {
@@ -125,14 +135,14 @@ Two elements, X and Y, are in the same period. Element X has PES peak heights of
     {
       id: 'ps7-quiz3',
       type: 'multiple-choice' as const,
-      content: `### AP Review Question 3
+      content: `### ✏️ AP Review Question 3
 
-A student is given PES data for an unknown element:
-- Peak 1: BE = 76.0 MJ/mol, relative height = 2
-- Peak 2: BE = 8.8 MJ/mol, relative height = 2
-- Peak 3: BE = 6.8 MJ/mol, relative height = 3
-
-The student is asked to identify the element. Which reasoning is correct?`,
+> **Problem:** A student is given PES data for an unknown element:
+> - Peak 1: BE = 76.0 MJ/mol, relative height = 2
+> - Peak 2: BE = 8.8 MJ/mol, relative height = 2
+> - Peak 3: BE = 6.8 MJ/mol, relative height = 3
+>
+> The student is asked to identify the element. Which reasoning is correct?`,
       exercise: {
         questions: [
           {
@@ -152,17 +162,17 @@ The student is asked to identify the element. Which reasoning is correct?`,
     {
       id: 'ps7-input1',
       type: 'input-boxes' as const,
-      content: `### AP Review Question 4
+      content: `### ✏️ AP Review Question 4
 
-Use the following PES data for an unknown element:
-
-| Peak | Binding Energy (MJ/mol) | Relative Height |
-|------|------------------------|----------------|
-| A | 200.2 | 2 |
-| B | 23.4 | 2 |
-| C | 18.7 | 6 |
-| D | 2.45 | 2 |
-| E | 1.09 | 2 |
+> **Problem:** Use the following PES data for an unknown element:
+>
+> | Peak | Binding Energy (MJ/mol) | Relative Height |
+> |------|------------------------|----------------|
+> | A | 200.2 | 2 |
+> | B | 23.4 | 2 |
+> | C | 18.7 | 6 |
+> | D | 2.45 | 2 |
+> | E | 1.09 | 2 |
 
 *Round all answers to 3 significant figures.*
       `,
@@ -189,7 +199,7 @@ Use the following PES data for an unknown element:
     {
       id: 'ps7-dropdown1',
       type: 'dropdown-select' as const,
-      content: `### AP Review Question 5
+      content: `### ✏️ AP Review Question 5
 
 Consider the successive ionization energies of magnesium (Mg):
 IE₁ = 0.74 MJ/mol, IE₂ = 1.45 MJ/mol, IE₃ = 7.73 MJ/mol
@@ -220,9 +230,9 @@ There is a large jump between IE₂ and IE₃.`,
     {
       id: 'ps7-final',
       type: 'multiple-choice' as const,
-      content: `### Final Challenge
+      content: `### ✏️ Final Challenge
 
-An element has a PES spectrum with 7 peaks. The peak heights from left to right are: 2, 2, 6, 2, 6, 2, 10. What is this element, and what is special about it?`,
+> **Problem:** An element has a PES spectrum with 7 peaks. The peak heights from left to right are: 2, 2, 6, 2, 6, 2, 10. What is this element, and what is special about it?`,
       exercise: {
         questions: [
           {
@@ -244,42 +254,52 @@ An element has a PES spectrum with 7 peaks. The peak heights from left to right 
       type: 'text' as const,
       content: `## 📋 Complete PES Summary
 
-Congratulations on completing the Photoelectron Spectroscopy unit! Here is everything you need to know for the AP exam:
-
-
----
-
-### Essential Equations
-- $E_{photon} = BE + KE$ → $BE = E_{photon} - KE$
-- $Z_{eff} = Z - S$
-- $IE_1$ = binding energy of the rightmost PES peak
-
+Congratulations on completing the Photoelectron Spectroscopy unit! Here is everything you need for the AP exam:
 
 ---
 
-### Reading Spectra
-- X-axis: BE (high left, low right)
-- Y-axis: relative number of electrons
-- Each peak = one subshell
-- Total peak heights = atomic number
+### 🧪 Essential Equations
 
-
----
-
-### Periodic Trends
-- Across a period: all BEs increase (higher $Z_{eff}$)
-- Exceptions at B/Be and O/N due to subshell effects
-- Core vs valence gap visible on spectra
-
+| Equation | Used For |
+|----------|----------|
+| $BE = E_{photon} - KE$ | Calculate binding energy from PES data |
+| $Z_{eff} = Z - S$ | Determine effective nuclear charge |
+| $IE_1$ = BE of rightmost peak | First ionization energy from spectrum |
 
 ---
 
-### Common AP Tasks
-1. Identify elements from PES data
-2. Predict PES spectra from electron configurations
-3. Connect PES to ionization energies
-4. Explain periodic trends using $Z_{eff}$
-5. Recognize subshell exceptions`
+### 📊 Reading Spectra
+
+| Feature | Interpretation |
+|---------|----------------|
+| X-axis | Binding energy (high left, low right) |
+| Y-axis | Relative number of electrons |
+| Each peak | One subshell |
+| Sum of peak heights | Atomic number (for neutral atoms) |
+| Leftmost peak | 1s (innermost, highest BE) |
+| Rightmost peak | Valence electrons (lowest BE) |
+
+---
+
+### 📈 Periodic Trends on PES
+
+| Trend | PES Effect | Exception |
+|-------|------------|----------|
+| Across a period: $Z_{eff}$ ↑ | All peaks shift left (higher BE) | IE drops at B and O |
+| Core vs. valence gap | Large BE gap separates them | Boundary depends on period |
+
+---
+
+### ✅ Final Checklist
+
+- ☐ I can identify elements from PES data
+- ☐ I can predict PES spectra from electron configurations
+- ☐ I can connect PES to ionization energies
+- ☐ I can explain periodic trends using $Z_{eff}$
+- ☐ I can recognize subshell exceptions (Be→B, N→O)
+- ☐ I always include 3d for transition metals
+
+You are now fully prepared for any PES question on the AP Chemistry exam. 🎯`
     }
   ]
 }

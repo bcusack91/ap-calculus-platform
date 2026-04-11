@@ -4,13 +4,30 @@ export const chemElectrolyticCellsFaradayPart4Data = {
     {
       id: 'ef4-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Faraday\'s Laws of Electrolysis
+      content: `# ⚖️ Faraday\'s Laws of Electrolysis
 
 **Part 4 of 7 — Quantitative Electrolysis: mol = It/(nF)**
 
-Faraday\'s laws connect the **amount of substance** produced or consumed during electrolysis to the **electric current** and **time**. This is one of the most calculation-heavy topics on the AP exam.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📏 Faraday\'s Laws |
+| The Key Equation |
+| Step-by-Step Problem Solving |
+| Important: What Is n? |
+| 🧪 Worked Example |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ef4-faradays-laws',
@@ -20,7 +37,7 @@ Faraday\'s laws connect the **amount of substance** produced or consumed during 
 
 ### The Key Equation
 
-$$\\text{mol of substance} = \\frac{It}{nF}$$
+$$\\boxed{\\text{mol of substance} = \\frac{It}{nF}}$$
 
 | Symbol | Meaning | Units |
 |--------|---------|-------|
@@ -47,6 +64,8 @@ $$\\text{mol of substance} = \\frac{It}{nF}$$
 
 $n$ = number of electrons in the **balanced half-reaction**
 
+> 🔑 **Key Point:** Always write the half-reaction first to determine $n$. Getting $n$ wrong is the most common Faraday’s law mistake.
+
 | Half-Reaction | $n$ |
 |--------------|-----|
 | $\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$ | 1 |
@@ -59,33 +78,39 @@ $n$ = number of electrons in the **balanced half-reaction**
       id: 'ef4-worked-example',
       type: 'text' as const,
       content: `
-## 🧪 Worked Example
+## 🧪 Worked Example — Faraday's Law
 
-How many grams of Cu are deposited by passing a current of $2.00$ A through $\\text{CuSO}_4$ solution for $1.00$ hour?
+> **Problem:** How many grams of Cu are deposited by passing a current of $2.00$ A through $\\text{CuSO}_4$ solution for $1.00$ hour?
 
+### Given
 
----
-
-### Half-reaction: $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$ ($n = 2$)
-
-**Step 1: Total charge**
-$$q = It = (2.00)(3600) = 7200 \\text{ C}$$
-
-**Step 2: Moles of electrons**
-$$\\text{mol } e^- = \\frac{7200}{96{,}485} = 0.07462 \\text{ mol}$$
-
-**Step 3: Moles of Cu**
-$$\\text{mol Cu} = \\frac{\\text{mol } e^-}{n} = \\frac{0.07462}{2} = 0.03731 \\text{ mol}$$
-
-**Step 4: Mass of Cu**
-$$m = (0.03731)(63.55) = 2.37 \\text{ g}$$
-
+| Quantity | Value |
+|----------|-------|
+| Current ($I$) | 2.00 A |
+| Time ($t$) | 1.00 h = 3600 s |
+| Half-reaction | $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$ |
+| $n$ (electrons per ion) | 2 |
+| $M_{\\text{Cu}}$ | 63.55 g/mol |
+| $F$ | 96,485 C/mol $e^-$ |
 
 ---
 
-### Alternative One-Step Formula
+### Step-by-Step Solution
 
-$$m = \\frac{It \\cdot M}{nF} = \\frac{(2.00)(3600)(63.55)}{(2)(96{,}485)} = 2.37 \\text{ g}$$
+| Step | Action | Calculation | Result |
+|------|--------|-------------|--------|
+| 1 | Total charge | $q = It = (2.00)(3600)$ | 7200 C |
+| 2 | Moles of electrons | $q / F = 7200 / 96{,}485$ | 0.07462 mol $e^-$ |
+| 3 | Moles of Cu | $\\text{mol } e^- / n = 0.07462 / 2$ | 0.03731 mol Cu |
+| 4 | Mass of Cu | $(0.03731)(63.55)$ | **2.37 g** |
+
+---
+
+### Alternative: One-Step Formula
+
+$$\\boxed{m = \\frac{It \\cdot M}{nF}} = \\frac{(2.00)(3600)(63.55)}{(2)(96{,}485)} = 2.37 \\text{ g}$$
+
+> 🔑 **Tip:** The one-step formula combines all four steps. Use it for speed on the AP exam, but understand each step for conceptual questions.
       `
     },
     {

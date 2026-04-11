@@ -9,18 +9,26 @@ export const chemVseprMolecularGeometryPart1Data = {
 
 **Part 1 of 7 — Introduction to VSEPR**
 
-VSEPR stands for **Valence Shell Electron Pair Repulsion**. It is one of the most powerful tools in chemistry for predicting the three-dimensional shapes of molecules.
+---
 
-The core idea is simple: **electron groups around a central atom repel each other and arrange themselves as far apart as possible** to minimize repulsion.
+### Topics in This Part
 
-### Why Does Shape Matter?
+| Section |
+|---------|
+| Why Does Shape Matter? |
+| Critical Rule |
+| Example Calculation |
+| Electron Domain Geometry |
+| Molecular Geometry |
 
-Molecular geometry determines:
-- **Polarity** of the molecule (and therefore solubility, boiling point, etc.)
-- **Reactivity** and how molecules interact with each other
-- **Biological function** — even slight shape changes in proteins can cause disease
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
-In this lesson series, you\'ll learn to predict the geometry of any molecule from its Lewis structure.`
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'vg-1-2',
@@ -40,6 +48,10 @@ An **electron domain** (also called an **electron group** or **region of electro
 ### Critical Rule
 
 **A double bond counts as ONE electron domain.** A triple bond also counts as ONE electron domain. Only the number of *regions* of electron density matters, not the total number of electrons.
+
+> 🔑 **Key Concept:** A double or triple bond counts as **one** electron domain — only the number of distinct regions of electron density matters, not the bond order or total electron count.
+
+---
 
 **Examples:**
 - **CO₂**: C has 2 double bonds → **2 electron domains**
@@ -83,9 +95,13 @@ An **electron domain** (also called an **electron group** or **region of electro
 
 The **steric number** is the total number of electron domains around the central atom. It is calculated as:
 
-$$\\text{Steric Number} = \\text{(number of atoms bonded to central atom)} + \\text{(number of lone pairs on central atom)}$$
+$$\\boxed{\\text{Steric Number} = \\text{(number of atoms bonded to central atom)} + \\text{(number of lone pairs on central atom)}}$$
 
 The steric number determines the **electron domain geometry** — the arrangement of ALL electron groups (both bonding and lone pairs) in 3D space.
+
+> 💡 **Tip:** The steric number equals the number of "things" attached to the central atom — count each bond (regardless of type) and each lone pair as one.
+
+---
 
 | Steric Number | Electron Domain Geometry |
 |--------------|--------------------------|
@@ -102,6 +118,8 @@ The steric number determines the **electron domain geometry** — the arrangemen
 - Lone pairs on O = 2
 - Steric number = 2 + 2 = **4**
 - Electron domain geometry = **Tetrahedral**
+
+> 🔑 **Key Concept:** The steric number maps directly to the electron domain geometry — memorize the five base shapes (linear, trigonal planar, tetrahedral, trigonal bipyramidal, octahedral).
 
 Note: The *molecular* geometry (shape based only on atom positions) may differ from the electron domain geometry when lone pairs are present. We\'ll explore this distinction next.`
     },
@@ -155,6 +173,8 @@ This is one of the **most important distinctions** in VSEPR theory:
 
 ### When Are They Different?
 
+> 🔑 **Key Concept:** Electron domain geometry ≠ molecular geometry when lone pairs are present. The electron domain geometry includes lone pairs; the molecular geometry shows only atom positions.
+
 They are the **same** when there are **no lone pairs** on the central atom.
 
 They are **different** when **lone pairs are present** — because lone pairs take up space in the electron domain geometry but are invisible in the molecular shape.
@@ -167,7 +187,11 @@ They are **different** when **lone pairs are present** — because lone pairs ta
 | NH₃ | 4 | 1 | Tetrahedral | Trigonal pyramidal |
 | H₂O | 4 | 2 | Tetrahedral | Bent |
 
-All three have the same electron domain geometry (tetrahedral), but the molecular geometry changes as lone pairs replace bonding pairs.`
+All three have the same electron domain geometry (tetrahedral), but the molecular geometry changes as lone pairs replace bonding pairs.
+
+---
+
+> 💡 **Tip:** To find the molecular geometry, start with the electron domain geometry and "remove" the lone pairs — what remains is the molecular shape.`
     },
     {
       id: 'vg-1-7',

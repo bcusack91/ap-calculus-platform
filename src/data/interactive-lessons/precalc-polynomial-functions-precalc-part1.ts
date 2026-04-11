@@ -2,186 +2,235 @@ export const precalcPolynomialPart1Data = {
   topicSlug: 'polynomial-functions-precalc',
   sections: [
     {
-      id: 'precalc-polynomial-functions-precalc-p1-s1-intro',
+      id: 'p1-intro',
       type: 'text' as const,
       content: `
-      ## Polynomial Functions: Degree, leading term, and end behavior
-      
-      **Part 1 of 7**
-      
-      This part focuses on interpreting long-run trend of models. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **degree**: highest exponent with nonzero coefficient
-      - **leading coefficient**: coefficient of the highest-degree term
-      - **zero**: input value where polynomial output is zero
-      
-      
-      ### Worked Example
-      Part 1 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📐 Introduction to Polynomial Functions
+
+**Part 1 of 7 — Degree, Leading Term & End Behavior**
+
+Polynomial functions are the backbone of algebra and calculus. They model everything from projectile motion to profit curves to population growth. Understanding their structure — degree, leading term, and end behavior — gives you the power to predict how they behave without ever touching a calculator.
       `
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p1-s2-mcq-core',
+      id: 'p1-what-is-polynomial',
+      type: 'text' as const,
+      content: `
+## 📖 What Is a Polynomial?
+
+A **polynomial function** is a function of the form:
+
+$$\\boxed{p(x) = a_n x^n + a_{n-1} x^{n-1} + \\cdots + a_1 x + a_0}$$
+
+where:
+- $a_n, a_{n-1}, \\ldots, a_0$ are real-number **coefficients**
+- $n$ is a non-negative integer (the **degree**)
+- $a_n \\neq 0$ (the **leading coefficient**)
+
+> 🔑 **Key idea:** Every polynomial is a sum of terms, each with a whole-number exponent. No square roots, no variables in denominators, no absolute values.
+
+
+---
+
+### Quick Classification
+
+| Expression | Polynomial? | Why / Why not |
+|-----------|:-----------:|---------------|
+| $3x^4 - 2x + 7$ | ✅ | All whole-number exponents |
+| $5x^{-2} + x$ | ❌ | Negative exponent ($x^{-2} = 1/x^2$) |
+| $\\sqrt{x} + 1$ | ❌ | Fractional exponent ($x^{1/2}$) |
+| $\\pi x^3 - ex$ | ✅ | $\\pi$ and $e$ are just constant coefficients |
+| $7$ | ✅ | Constant polynomial (degree 0) |
+      `
+    },
+    {
+      id: 'p1-degree-leading-term',
+      type: 'text' as const,
+      content: `
+## 📌 Degree and Leading Term
+
+The **degree** of a polynomial is the highest power of $x$ with a nonzero coefficient. The **leading term** is the term containing that highest power.
+
+| Polynomial | Degree | Leading Term | Leading Coefficient |
+|-----------|:------:|:------------:|:-------------------:|
+| $4x^5 - 3x^2 + 1$ | 5 | $4x^5$ | $4$ |
+| $-x^3 + 7x$ | 3 | $-x^3$ | $-1$ |
+| $2x^2 - 8x + 6$ | 2 | $2x^2$ | $2$ |
+| $9$ | 0 | $9$ | $9$ |
+
+
+---
+
+### Why Does the Degree Matter?
+
+The degree tells you:
+
+1. **Maximum number of zeros** — a degree-$n$ polynomial has at most $n$ real zeros
+2. **Maximum number of turning points** — at most $n - 1$
+3. **End behavior** — whether the graph ultimately rises or falls on each side
+
+> 🔑 **Key idea:** The leading term dominates for large $|x|$. All other terms become negligible by comparison.
+      `
+    },
+    {
+      id: 'p1-end-behavior',
+      type: 'text' as const,
+      content: `
+## 📈 End Behavior
+
+**End behavior** describes what happens to $p(x)$ as $x \\to +\\infty$ and as $x \\to -\\infty$. It depends on only two things: the **degree** and the **sign of the leading coefficient**.
+
+| Degree | Leading Coefficient | As $x \\to -\\infty$ | As $x \\to +\\infty$ | Memory Aid |
+|:------:|:------------------:|:------------------:|:------------------:|:----------:|
+| Even | Positive ($+$) | $p(x) \\to +\\infty$ | $p(x) \\to +\\infty$ | Both ends up ↑↑ |
+| Even | Negative ($-$) | $p(x) \\to -\\infty$ | $p(x) \\to -\\infty$ | Both ends down ↓↓ |
+| Odd | Positive ($+$) | $p(x) \\to -\\infty$ | $p(x) \\to +\\infty$ | Falls left, rises right ↙↗ |
+| Odd | Negative ($-$) | $p(x) \\to +\\infty$ | $p(x) \\to -\\infty$ | Rises left, falls right ↗↙ |
+
+> ⚠️ **Common mistake:** Students sometimes check end behavior using the constant term or the coefficient of $x$. Only the **leading term** determines end behavior.
+
+
+---
+
+### Worked Example
+
+> **Describe the end behavior of $f(x) = -2x^4 + 5x^3 - x + 3$.**
+
+**Step 1:** Identify the leading term → $-2x^4$
+
+**Step 2:** Degree is **4** (even), leading coefficient is **$-2$** (negative)
+
+**Step 3:** From the table: both ends point **down**
+
+$$\\boxed{\\text{As } x \\to -\\infty, \\; f(x) \\to -\\infty \\quad \\text{and} \\quad \\text{as } x \\to +\\infty, \\; f(x) \\to -\\infty}$$
+      `
+    },
+    {
+      id: 'p1-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Degree & End Behavior Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of degree.',
+            question: 'What is the degree of the polynomial $g(x) = 7x^3 - 4x^5 + 2x - 9$?',
             options: [
-              'number of times a factor repeats',
-              'input value where polynomial output is zero',
-              'coefficient of the highest-degree term',
-              'highest exponent with nonzero coefficient'
+              '3',
+              '4',
+              '5',
+              '7'
             ],
-            correctAnswer: 3,
-            explanation: 'degree is defined as: highest exponent with nonzero coefficient.'
+            correctAnswer: 2,
+            explanation: 'The highest power of $x$ is $x^5$ (from the $-4x^5$ term), so the degree is 5. Don\'t be tricked by the order the terms are written — always find the largest exponent.'
           },
           {
-            question: 'In interpreting long-run trend of models, which expression is the best starting model?',
+            question: 'Which polynomial has end behavior where both ends point upward ($\\uparrow \\uparrow$)?',
             options: [
-              '$p(x)=a\\prod (x-r_i)^{m_i}$',
-              '$\\deg(pq)=\\deg p+\\deg q$',
-              '$x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}$',
-              '$\\text{rem}(p\\div (x-c))=p(c)$'
+              '$f(x) = -x^4 + 3x$',
+              '$f(x) = 2x^3 - x$',
+              '$f(x) = x^6 - 5x^2 + 1$',
+              '$f(x) = -3x^5 + x^4$'
             ],
-            correctAnswer: 0,
-            explanation: 'Use $p(x)=a\\prod (x-r_i)^{m_i}$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 2,
+            explanation: 'Both ends up requires an **even** degree with a **positive** leading coefficient. $x^6 - 5x^2 + 1$ has degree 6 (even) and leading coefficient $+1$ (positive).'
+          },
+          {
+            question: 'As $x \\to +\\infty$, what happens to $h(x) = -5x^3 + 100x^2$?',
+            options: [
+              '$h(x) \\to +\\infty$',
+              '$h(x) \\to -\\infty$',
+              '$h(x) \\to 0$',
+              'It depends on the other terms'
+            ],
+            correctAnswer: 1,
+            explanation: 'The leading term is $-5x^3$: odd degree, negative coefficient. As $x \\to +\\infty$, $-5x^3 \\to -\\infty$. Despite the large $+100x^2$ term, the $x^3$ term dominates for large $x$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p1-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Factored form | $p(x)=a\prod (x-r_i)^{m_i}$ | zero/multiplicity encoding |
-      | Remainder theorem | $\\text{rem}(p\div (x-c))=p(c)$ | fast root testing |
-      | Quadratic roots | $x=\\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ | embedded factor analysis |
-      | Degree sum | $\deg(pq)=\deg p+\deg q$ | model-building checks |
-      
-      ### Common pitfalls
-      - Multiplicity affects local graph shape at zeros.
-      - Even/odd degree does not determine all turning behavior.
-      - A numerical approximation can hide repeated roots if precision is low.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-polynomial-functions-precalc-p1-s4-input',
+      id: 'p1-calculation-drill',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Polynomial Structure**
-      
-      1) Evaluate $p(3)$ for $p(x)=x^3-2x$.
-      2) Compute $p(2)$ for $p(x)=x^2-5x+6$.
-      3) Find degree of $(x^2+1)(x^3-1)$.
+**Polynomial Evaluation Drill** 🧮
+
+**1)** Evaluate $p(3)$ for $p(x) = x^3 - 2x$. (e.g., for $p(1)$ you'd get $-1$)
+
+**2)** What is the degree of the product $(x^2 + 1)(x^3 - x)$? (e.g., for $(x)(x^2)$ the degree would be $3$)
+
+**3)** What is the leading coefficient of $f(x) = 4 - 7x + 3x^3$? (e.g., for $5x^2 - x$ the leading coefficient is $5$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['21', '0', '5'],
-        hint1: 'Substitute and simplify term by term.',
-        hint2: 'Use the remainder/factor theorem shortcut.',
-        hint3: 'Degrees add under multiplication.',
-        explanation: 'Values are 21 and 0, and the product polynomial has degree 5.'
+        correctAnswers: ['21', '5', '3'],
+        hint1: 'Substitute $x = 3$: $p(3) = 3^3 - 2(3) = 27 - 6$.',
+        hint2: 'When multiplying polynomials, add the degrees: $\\deg(fg) = \\deg f + \\deg g$.',
+        hint3: 'Rewrite in standard form to find the highest-degree term: $3x^3 - 7x + 4$.',
+        explanation: '1) $p(3) = 27 - 6 = 21$. 2) Degree $2 + 3 = 5$. 3) The highest-degree term is $3x^3$, so the leading coefficient is $3$.'
       }
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p1-s5-dropdown',
+      id: 'p1-dropdown-practice',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**End Behavior — Fill in the Blanks** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'degree',
-            options: ['coefficient of the highest-degree term', 'input value where polynomial output is zero', 'highest exponent with nonzero coefficient', 'number of times a factor repeats']
+            label: 'End behavior is determined by the',
+            options: ['constant term', 'number of terms', 'leading term', 'y-intercept']
           },
           {
-            label: 'leading coefficient',
-            options: ['input value where polynomial output is zero', 'coefficient of the highest-degree term', 'remainder of division by $x-c$ equals $p(c)$', 'number of times a factor repeats']
+            label: 'A degree-4 polynomial has at most ______ turning points',
+            options: ['3', '4', '5', '2']
           },
           {
-            label: 'zero',
-            options: ['input value where polynomial output is zero', 'remainder of division by $x-c$ equals $p(c)$', '$p(c)=0$ implies $(x-c)$ is a factor', 'number of times a factor repeats']
+            label: 'If the degree is odd and the leading coefficient is positive, the right end',
+            options: ['goes to $-\\\\infty$', 'goes to $+\\\\infty$', 'approaches zero', 'oscillates']
+          },
+          {
+            label: 'A polynomial of degree $n$ can have at most ______ real zeros',
+            options: ['$n - 1$', '$n$', '$n + 1$', '$2n$']
           }
         ],
-        correctAnswers: ['highest exponent with nonzero coefficient', 'coefficient of the highest-degree term', 'input value where polynomial output is zero'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: degree, leading coefficient, and zero align with their exact definitions used in this part.'
+        correctAnswers: ['leading term', '3', 'goes to $+\\\\infty$', '$n$'],
+        hint1: 'Which single term controls what happens for very large $|x|$?',
+        hint2: 'The maximum number of turning points is always one less than the degree.',
+        hint3: 'Odd degree + positive leading coefficient means the graph rises to the right.',
+        explanation: 'End behavior depends on the leading term. A degree-$n$ polynomial has at most $n - 1$ turning points and at most $n$ real zeros. Odd degree with positive leading coefficient means the right end goes to $+\\infty$.'
       }
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p1-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to degree, leading coefficient, and zero so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-polynomial-functions-precalc-p1-s7-mcq-applied',
+      id: 'p1-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz — Degree & End Behavior** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is interpreting long-run trend of models. Which term best anchors the next reasoning step if the key idea is: number of times a factor repeats?',
+            question: 'A polynomial has the end behavior: as $x \\to -\\infty$, $p(x) \\to +\\infty$ and as $x \\to +\\infty$, $p(x) \\to -\\infty$. Which could be its leading term?',
             options: [
-              'leading coefficient',
-              'zero',
-              'degree',
-              'multiplicity'
+              '$2x^4$',
+              '$-3x^3$',
+              '$x^6$',
+              '$-x^2$'
             ],
-            correctAnswer: 3,
-            explanation: 'multiplicity matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 1,
+            explanation: 'The described behavior (rises left, falls right) requires **odd** degree with a **negative** leading coefficient. $-3x^3$ is the only option that fits: odd degree (3), negative coefficient ($-3$).'
           },
           {
-            question: 'A student is solving a mixed polynomial functions prompt. Which term best anchors the next reasoning step if the key idea is: remainder of division by $x-c$ equals $p(c)$?',
+            question: 'The polynomial $f(x) = 2x^5 - x^3 + 4$ has how many possible turning points at most?',
             options: [
-              'factor theorem',
-              'multiplicity',
-              'remainder theorem',
-              'zero'
+              '3',
+              '4',
+              '5',
+              '6'
             ],
-            correctAnswer: 2,
-            explanation: 'remainder theorem matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 1,
+            explanation: 'A degree-5 polynomial can have at most $5 - 1 = 4$ turning points.'
           }
         ]
       }

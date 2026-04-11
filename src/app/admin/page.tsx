@@ -197,6 +197,13 @@ export default function AdminPanel() {
     void Promise.all([loadAnalytics(), loadAlertNotifications(), loadMonthlyDigest()])
   }, [])
 
+  // Load recent users when switching to users tab
+  useEffect(() => {
+    if (tab === 'users' && users.length === 0 && !loading) {
+      void searchUsers()
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tab])
   const acknowledgeNotification = async (notificationId: number) => {
     setAlertActionKey(`ack-${notificationId}`)
     setMessage(null)
@@ -264,11 +271,11 @@ export default function AdminPanel() {
   }
 
   const searchUsers = async () => {
-    if (search.length < 2) return
     setLoading(true)
     setMessage(null)
     try {
-      const res = await fetch(`/api/admin/users?search=${encodeURIComponent(search)}`)
+      const query = search.length >= 2 ? `?search=${encodeURIComponent(search)}` : ''
+      const res = await fetch(`/api/admin/users${query}`)
       if (res.status === 403) {
         router.push('/dashboard')
         return
@@ -873,7 +880,7 @@ export default function AdminPanel() {
           />
           <button
             onClick={searchUsers}
-            disabled={search.length < 2 || loading}
+            disabled={loading}
             className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
           >
             {loading ? 'Searching...' : 'Search'}
@@ -935,9 +942,9 @@ export default function AdminPanel() {
           </div>
         )}
 
-        {users.length === 0 && search.length >= 2 && !loading && (
+        {users.length === 0 && !loading && (
           <div className="text-center py-12 text-gray-500 dark:text-gray-400">
-            No users found matching &ldquo;{search}&rdquo;
+            {search.length >= 2 ? `No users found matching \u201c${search}\u201d` : 'No users found'}
           </div>
         )}
           </div>

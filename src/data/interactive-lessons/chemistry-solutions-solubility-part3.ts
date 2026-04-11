@@ -4,13 +4,30 @@ export const chemSolutionsSolubilityPart3Data = {
     {
       id: 'ss3-intro',
       type: 'text' as const,
-      content: `
-# 🔬 Dilution
+      content: `# 🔬 Dilution
 
 **Part 3 of 7 — $M_1V_1 = M_2V_2$, Preparing Solutions, and Serial Dilutions**
 
-In the laboratory, concentrated stock solutions are routinely diluted to lower concentrations. The dilution equation is one of the most frequently used formulas in chemistry — and a favorite on the AP exam.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 The Dilution Equation |
+| Why It Works |
+| Important Notes |
+| 🧪 Worked Example |
+| 📌 Serial Dilutions |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ss3-dilution-equation',
@@ -22,7 +39,9 @@ When you dilute a solution, you add more solvent. The **amount of solute stays t
 
 Since moles of solute before = moles of solute after:
 
-$$M_1V_1 = M_2V_2$$
+$$\\boxed{M_1V_1 = M_2V_2}$$
+
+> 🔑 **Key Concept:** The dilution equation works because **moles of solute are conserved** — only the volume changes. Since moles $= M \\times V$, we get $M_1V_1 = M_2V_2$.
 
 where:
 - $M_1$ = initial molarity (concentrated)
@@ -56,7 +75,9 @@ Since moles don\'t change: $M_1V_1 = M_2V_2$
       content: `
 ## 🧪 Worked Example
 
-**Problem:** How would you prepare 500.0 mL of 0.100 M HCl from a 12.0 M HCl stock solution?
+> **Problem:** How would you prepare 500.0 mL of 0.100 M HCl from a 12.0 M HCl stock solution?
+
+> **Solution:**
 
 **Step 1:** Identify knowns.
 - $M_1 = 12.0$ M, $M_2 = 0.100$ M, $V_2 = 500.0$ mL, $V_1 = ?$
@@ -74,9 +95,7 @@ $$V_1 = \\frac{M_2V_2}{M_1} = \\frac{(0.100)(500.0)}{12.0} = 4.17 \\text{ mL}$$
 
 ---
 
-### Safety Note ⚠️
-
-Always add **acid to water** ("Do as you oughta — add acid to water"). Adding water to concentrated acid can cause violent spattering due to the large heat of dilution.
+> ⚠️ **Warning:** Always add **acid to water** ("Do as you oughta — add acid to water"). Adding water to concentrated acid can cause violent spattering due to the large heat of dilution.
       `
     },
     {
@@ -156,7 +175,7 @@ If each step dilutes by a factor of 10 (e.g., 1 mL into 9 mL):
 
 After $n$ serial dilutions, each with dilution factor $f$:
 
-$$C_n = C_0 \\times f^n$$
+$$\\boxed{C_n = C_0 \\times f^n}$$
 
 For a 1:10 dilution ($f = 0.1$), after 3 steps:
 

@@ -4,13 +4,24 @@ export const chemEquilibriumConstantsPart7Data = {
     {
       id: 'ece7-intro',
       type: 'text' as const,
-      content: `
-# 🎯 AP Review — Equilibrium Constants & Expressions
+      content: `# 🎯 AP Review — Equilibrium Constants & Expressions
 
 **Part 7 of 7 — Putting It All Together**
 
-This final section covers AP-style problems that combine multiple concepts: writing expressions, calculating $K$, using $Q$, converting between $K_c$ and $K_p$, and manipulating equilibrium constants.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'ece7-summary',
@@ -36,13 +47,12 @@ This final section covers AP-style problems that combine multiple concepts: writ
 
 ---
 
-### Common AP Mistakes to Avoid ⚠️
-
-1. **Forgetting to exclude solids/liquids** from the $K$ expression
-2. **Confusing coefficients as multipliers** instead of exponents
-3. **Using Celsius instead of Kelvin** in $K_p = K_c(RT)^{\\Delta n}$
-4. **Counting all moles for $\\Delta n$** instead of only gaseous moles
-5. **Thinking $K$ tells us about rate** — it only describes the equilibrium position
+> ⚠️ **Common AP Mistakes to Avoid:**
+> 1. **Forgetting to exclude solids/liquids** from the $K$ expression
+> 2. **Confusing coefficients as multipliers** instead of exponents
+> 3. **Using Celsius instead of Kelvin** in $K_p = K_c(RT)^{\\Delta n}$
+> 4. **Counting all moles for $\\Delta n$** instead of only gaseous moles
+> 5. **Thinking $K$ tells us about rate** — it only describes the equilibrium position
       `
     },
     {

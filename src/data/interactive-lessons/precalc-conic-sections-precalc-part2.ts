@@ -2,190 +2,191 @@ export const precalcConicsPart2Data = {
   topicSlug: 'conic-sections-precalc',
   sections: [
     {
-      id: 'precalc-conic-sections-precalc-p2-s1-intro',
+      id: 'p2-intro',
       type: 'text' as const,
       content: `
-      ## Conic Sections: Circles from center-radius structure
-      
-      **Part 2 of 7**
-      
-      This part focuses on designing circular sensor boundaries. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **circle**: set of points at fixed radius from a center
-      - **ellipse**: set of points whose distances to two foci sum to a constant
-      - **hyperbola**: set of points whose distances to two foci differ by a constant
-      
-      
-      ### Worked Example
-      Part 2 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🔵 The Ellipse
+
+**Part 2 of 7**
+
+### Standard Form (Center at Origin)
+
+**Horizontal major axis**: $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1 \\quad (a > b)$
+
+**Vertical major axis**: $\\frac{x^2}{b^2} + \\frac{y^2}{a^2} = 1 \\quad (a > b)$
+
+### Key Elements
+
+| Element | Horizontal Major Axis |
+|:--------|:---------------------|
+| Vertices | $(\\pm a, 0)$ |
+| Co-vertices | $(0, \\pm b)$ |
+| Foci | $(\\pm c, 0)$ where $c^2 = a^2 - b^2$ |
+| Eccentricity | $e = \\frac{c}{a}$ (with $0 < e < 1$) |
+| Major axis length | $2a$ |
+| Minor axis length | $2b$ |
+
+### Defining Property
+
+The sum of distances from any point on the ellipse to both foci is constant: $d_1 + d_2 = 2a$.
       `
     },
     {
-      id: 'precalc-conic-sections-precalc-p2-s2-mcq-core',
+      id: 'p2-example',
+      type: 'text' as const,
+      content: `
+## 📝 Example: Analyze $\\frac{x^2}{25} + \\frac{y^2}{9} = 1$
+
+$a^2 = 25, b^2 = 9 \\implies a = 5, b = 3$
+
+$c^2 = 25 - 9 = 16 \\implies c = 4$
+
+- **Center**: $(0, 0)$
+- **Vertices**: $(\\pm 5, 0)$
+- **Co-vertices**: $(0, \\pm 3)$
+- **Foci**: $(\\pm 4, 0)$
+- **Eccentricity**: $e = \\frac{4}{5} = 0.8$
+
+Since $e$ is close to 1, this ellipse is fairly elongated.
+
+### Translated Ellipse
+
+$$\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1$$
+
+Same shape, centered at $(h, k)$ instead of the origin.
+      `
+    },
+    {
+      id: 'p2-eccentricity',
+      type: 'text' as const,
+      content: `
+## 📊 Eccentricity: Shape of an Ellipse
+
+| Eccentricity | Shape |
+|:-------------|:------|
+| $e = 0$ | Circle (foci coincide at center) |
+| $e = 0.1$ | Nearly circular |
+| $e = 0.5$ | Moderate oval |
+| $e = 0.9$ | Very elongated |
+| $e \\to 1$ | Approaches a line segment |
+
+### Real-World Eccentricities
+
+- Earth's orbit: $e \\approx 0.017$ (nearly circular)
+- Mars's orbit: $e \\approx 0.093$
+- Halley's comet: $e \\approx 0.967$ (very elongated)
+- Pluto: $e \\approx 0.248$
+
+> 💡 A higher eccentricity means the foci are farther from the center relative to the size of the ellipse.
+      `
+    },
+    {
+      id: 'p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Ellipse Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of circle.',
-            options: [
-              'set of points at fixed radius from a center',
-              'set of points whose distances to two foci differ by a constant',
-              'turning point or endpoint on a principal axis',
-              'set of points whose distances to two foci sum to a constant'
-            ],
-            correctAnswer: 0,
-            explanation: 'circle is defined as: set of points at fixed radius from a center.'
+            question: 'For $\\frac{x^2}{16}+\\frac{y^2}{25}=1$, the major axis is:',
+            options: ['Horizontal', 'Vertical', 'Diagonal', 'Cannot determine'],
+            correctAnswer: 1,
+            explanation: '$25 > 16$, and the larger denominator is under $y^2$, so the major axis is vertical.'
           },
           {
-            question: 'In designing circular sensor boundaries, which expression is the best starting model?',
-            options: [
-              '$\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1$',
-              '$(x-h)^2 = 4p(y-k)$',
-              '$\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1$',
-              '$(x-h)^2 + (y-k)^2 = r^2$'
-            ],
+            question: 'Same ellipse: the foci are at:',
+            options: ['$(\\pm 3, 0)$', '$(0, \\pm 3)$', '$(\\pm 9, 0)$', '$(0, \\pm 9)$'],
+            correctAnswer: 1,
+            explanation: '$c^2 = 25-16 = 9, c = 3$. Vertical major axis → foci at $(0, \\pm 3)$.'
+          },
+          {
+            question: 'An ellipse with $a = 10$ and $b = 6$: the sum of focal distances for any point is:',
+            options: ['$6$', '$10$', '$16$', '$20$'],
             correctAnswer: 3,
-            explanation: 'Use $(x-h)^2 + (y-k)^2 = r^2$ first, then substitute known quantities from the prompt.'
+            explanation: 'Sum of distances to foci $= 2a = 20$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-conic-sections-precalc-p2-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Circle | $(x-h)^2 + (y-k)^2 = r^2$ | center-radius modeling |
-      | Ellipse | $\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1$ | sum-of-distances relation |
-      | Hyperbola | $\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1$ | difference-of-distances relation |
-      | Parabola (vertical) | $(x-h)^2 = 4p(y-k)$ | focus/directrix geometry |
-      
-      ### Common pitfalls
-      - For ellipses and hyperbolas, identify the positive term before choosing major axis direction.
-      - A parabola has one focus, while ellipse and hyperbola have two.
-      - Do not infer the center by reading signs without reversing them in $(x-h)$ and $(y-k)$.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-conic-sections-precalc-p2-s4-input',
+      id: 'p2-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Conic Computations**
-      
-      Provide exact values when possible.
-      
-      1) For $(x-1)^2 = 8(y+2)$, find $p$ in $4p=8$.
-      2) For $(x-3)^2 + (y+1)^2 = 25$, find the radius.
-      3) For $
-      rac{x^2}{25}+
-      rac{y^2}{9}=1$, compute $c$ where $c^2=a^2-b^2$.
+**Ellipse Calculations** 🧮
+
+For $\\frac{x^2}{36}+\\frac{y^2}{4}=1$:
+
+**1)** $a$ = ?
+
+**2)** $c$ = ? (Enter like "4sqrt2" if needed)
+
+**3)** Eccentricity $e = \\frac{c}{a}$ = ? (Enter as a fraction like "4/6" or simplify)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['2', '5', '4'],
-        hint1: 'Match coefficients in $(x-h)^2=4p(y-k)$.',
-        hint2: 'Use $r=\\sqrt{r^2}$ from circle standard form.',
-        hint3: 'For the ellipse, use $a=5$, $b=3$, then $c=\\sqrt{25-9}$.',
-        explanation: 'The values are $p=2$, radius from $r^2$ in standard form, and $c=4$ from focal relation.'
+        correctAnswers: ['6', '4sqrt2', '2sqrt2/3'],
+        hint1: '$a^2 = 36$, so $a = 6$.',
+        hint2: '$c^2 = 36-4 = 32$, so $c = \\sqrt{32} = 4\\sqrt{2}$.',
+        hint3: '$e = \\frac{4\\sqrt{2}}{6} = \\frac{2\\sqrt{2}}{3}$.',
+        explanation: '1) $a = 6$. 2) $c = 4\\sqrt{2}$. 3) $e = \\frac{2\\sqrt{2}}{3} \\approx 0.943$.'
       }
     },
     {
-      id: 'precalc-conic-sections-precalc-p2-s5-dropdown',
+      id: 'p2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Ellipse Properties** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'circle',
-            options: ['turning point or endpoint on a principal axis', 'set of points whose distances to two foci differ by a constant', 'set of points at fixed radius from a center', 'set of points whose distances to two foci sum to a constant']
+            label: 'In an ellipse, always $a > b > 0$ and:',
+            options: ['$c > a$', '$c < a$', '$c = a$'],
+            correctAnswer: 1
           },
           {
-            label: 'ellipse',
-            options: ['turning point or endpoint on a principal axis', 'reference point used in geometric definitions of conics', 'set of points whose distances to two foci sum to a constant', 'set of points whose distances to two foci differ by a constant']
+            label: 'The relationship $c^2 = a^2 - b^2$ gives:',
+            options: ['$c < a$ always', '$c < b$ always', '$c$ could be larger than $b$'],
+            correctAnswer: 2
           },
           {
-            label: 'hyperbola',
-            options: ['set of points whose distances to two foci differ by a constant', 'line used with a focus to define a parabola', 'reference point used in geometric definitions of conics', 'turning point or endpoint on a principal axis']
+            label: 'An ellipse with $a = b$ is a:',
+            options: ['Line', 'Circle', 'Point', 'Parabola'],
+            correctAnswer: 1
+          },
+          {
+            label: 'Whispering galleries work because:',
+            options: ['Sound from one focus reflects to the other focus', 'The ceiling is a parabola', 'Sound travels in circles'],
+            correctAnswer: 0
           }
         ],
-        correctAnswers: ['set of points at fixed radius from a center', 'set of points whose distances to two foci sum to a constant', 'set of points whose distances to two foci differ by a constant'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: circle, ellipse, and hyperbola align with their exact definitions used in this part.'
+        correctAnswers: ['$c < a$', '$c$ could be larger than $b$', 'Circle', 'Sound from one focus reflects to the other focus'],
+        hint1: '$c^2 = a^2-b^2 < a^2$, so $c < a$.',
+        hint2: 'If $b$ is very small, $c \\approx a > b$.',
+        hint3: '$a = b$ means equal semi-axes: a circle.',
+        explanation: '$c < a$ always. $c$ can exceed $b$ when the ellipse is elongated. $a=b$: circle. Whispering galleries use the elliptical reflection property.'
       }
     },
     {
-      id: 'precalc-conic-sections-precalc-p2-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to circle, ellipse, and hyperbola so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-conic-sections-precalc-p2-s7-mcq-applied',
+      id: 'p2-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is designing circular sensor boundaries. Which term best anchors the next reasoning step if the key idea is: turning point or endpoint on a principal axis?',
-            options: [
-              'hyperbola',
-              'vertex',
-              'circle',
-              'ellipse'
-            ],
-            correctAnswer: 1,
-            explanation: 'vertex matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'The ellipse $\\frac{(x-1)^2}{9}+\\frac{(y+2)^2}{4}=1$ has center:',
+            options: ['$(1, -2)$', '$(-1, 2)$', '$(9, 4)$', '$(3, 2)$'],
+            correctAnswer: 0,
+            explanation: 'Center at $(h, k) = (1, -2)$.'
           },
           {
-            question: 'A student is solving a mixed conic sections prompt. Which term best anchors the next reasoning step if the key idea is: reference point used in geometric definitions of conics?',
-            options: [
-              'directrix',
-              'focus',
-              'vertex',
-              'hyperbola'
-            ],
+            question: 'An ellipse has foci at $(\\pm 3, 0)$ and vertices at $(\\pm 5, 0)$. Then $b =$',
+            options: ['$2$', '$4$', '$\\sqrt{34}$', '$8$'],
             correctAnswer: 1,
-            explanation: 'focus matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$a = 5, c = 3$. $b^2 = a^2-c^2 = 25-9 = 16$. $b = 4$.'
           }
         ]
       }

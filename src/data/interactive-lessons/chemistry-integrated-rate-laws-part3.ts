@@ -4,13 +4,30 @@ export const chemIntegratedRateLawsPart3Data = {
     {
       id: 'ir3-intro',
       type: 'text' as const,
-      content: `
-# 📊 Second-Order Integrated Rate Law
+      content: `# 📊 Second-Order Integrated Rate Law
 
 **Part 3 of 7 — Inverse Concentration and Time**
 
-Second-order reactions complete our trio of integrated rate laws. The mathematics involves the reciprocal of concentration, and the behavior is distinctly different from both zero and first-order kinetics.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⏱️ Derivation (for Rate = k[A]²) |
+| Linear Form: $1/[A]$ vs $t$ |
+| 📌 Second-Order Half-Life |
+| Successive Half-Lives |
+| ⚖️ Comparing All Three Orders |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ir3-derivation',
@@ -47,9 +64,7 @@ $$\\boxed{\\frac{1}{[A]} = kt + \\frac{1}{[A]_0}}$$
 
 ---
 
-### Key Feature
-
-A plot of $1/[A]$ vs $t$ is **linear** for a second-order reaction. The slope equals $+k$ (positive!).
+> 🔑 **Key Concept:** A plot of $1/[A]$ vs $t$ is **linear** for a second-order reaction. The slope equals $+k$ (positive!).
       `
     },
     {
@@ -115,11 +130,9 @@ $$\\boxed{t_{1/2} = \\frac{1}{k[A]_0}}$$
 
 ---
 
-### Key Feature
-
-The half-life of a second-order reaction is **inversely proportional** to $[A]_0$:
-- Higher $[A]_0$ → shorter half-life
-- Each successive half-life is **longer** (doubles each time!)
+> 🔑 **Key Concept:** The half-life of a second-order reaction is **inversely proportional** to $[A]_0$:
+> - Higher $[A]_0$ → shorter half-life
+> - Each successive half-life is **longer** (doubles each time!)
 
 
 ---
@@ -173,6 +186,8 @@ A second-order reaction has $k = 0.50$ M⁻¹s⁻¹ and $[A]_0 = 0.80$ M.
 | Half-life | $[A]_0/(2k)$ | $0.693/k$ | $1/(k[A]_0)$ |
 | Successive $t_{1/2}$ | Shorter | **Constant** | Longer |
 | Units of $k$ | M/s | s⁻¹ | M⁻¹s⁻¹ |
+
+> 💡 **Tip:** Only second-order has a **positive** slope in its linear plot. Zero and first-order both have slope $= -k$.
       `
     },
     {

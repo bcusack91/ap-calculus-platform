@@ -4,13 +4,24 @@ export const chemGalvanicCellsPotentialsPart7Data = {
     {
       id: 'gc7-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Synthesis & AP Review — Galvanic Cells
+      content: `# 🎯 Synthesis & AP Review — Galvanic Cells
 
 **Part 7 of 7 — Mastery Check**
 
-This final review covers everything about galvanic cells: redox fundamentals, cell structure, standard potentials, cell notation, and the thermodynamic connections. Be ready for any AP question on this topic.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'gc7-master-summary',
@@ -26,6 +37,13 @@ This final review covers everything about galvanic cells: redox fundamentals, ce
 | $\\Delta G^{\\circ} = -nFE^{\\circ}$ | Connect free energy to voltage |
 | $E^{\\circ} = \\frac{0.0592}{n}\\log K$ | Connect voltage to equilibrium (at 25°C) |
 
+> 🔑 **Key Equations — Memorize These:**
+
+$$\\boxed{E^{\\circ}_{\\text{cell}} = E^{\\circ}_{\\text{cathode}} - E^{\\circ}_{\\text{anode}}}$$
+
+$$\\boxed{\\Delta G^{\\circ} = -nFE^{\\circ}}$$
+
+$$\\boxed{E^{\\circ} = \\frac{0.0592}{n}\\log K \\quad (\\text{at } 25°\\text{C})}$$
 
 ---
 
@@ -42,6 +60,8 @@ This final review covers everything about galvanic cells: redox fundamentals, ce
 ---
 
 ### Spontaneity Criteria
+
+> 🔑 **Key Concept:** These three quantities are always linked — know one, know them all.
 
 | Quantity | Spontaneous | Equilibrium | Nonspontaneous |
 |----------|------------|-------------|----------------|

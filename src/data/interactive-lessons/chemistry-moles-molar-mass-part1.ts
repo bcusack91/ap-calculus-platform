@@ -4,15 +4,30 @@ export const chemMolesMolarMassPart1Data = {
     {
       id: 'mm1-intro',
       type: 'text' as const,
-      content: `
-# ⚗️ Introduction to the Mole
+      content: `# ⚗️ Introduction to the Mole
 
 **Part 1 of 7 — Avogadro's Number & Counting by Weighing**
 
-Chemistry deals with incredibly tiny particles — atoms, molecules, and ions. A single drop of water contains roughly $10^{21}$ molecules. How do chemists keep track of such enormous numbers?
+---
 
-The answer is the **mole** — one of the most important concepts in all of chemistry.
-      `
+### Topics in This Part
+
+| Section |
+|---------|
+| 📖 What Is a Mole? |
+| Putting It in Perspective |
+| Why Such a Specific Number? |
+| 📌 Counting by Weighing |
+| The Analogy |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'mm1-what-is-mole',
@@ -22,9 +37,11 @@ The answer is the **mole** — one of the most important concepts in all of chem
 
 A **mole** (abbreviated **mol**) is a counting unit, just like a "dozen" means 12 items. But instead of 12, a mole is a **very** large number:
 
-$$1 \\text{ mol} = 6.022 \\times 10^{23} \\text{ particles}$$
+$$\\boxed{1 \\text{ mol} = 6.022 \\times 10^{23} \\text{ particles}}$$
 
 This number is called **Avogadro's number** ($N_A$), named after Italian scientist Amedeo Avogadro.
+
+> 🔑 **Key Concept:** The mole is the bridge between the atomic world and the laboratory — one mole always contains exactly $6.022 \\times 10^{23}$ particles, regardless of the substance.
 
 
 ---
@@ -77,9 +94,9 @@ Imagine you work at a hardware store and need to sell 500 nails. You could count
 
 ### The Core Conversion
 
-$$\\text{moles} = \\frac{\\text{number of particles}}{6.022 \\times 10^{23}}$$
+$$\\boxed{\\text{moles} = \\frac{\\text{number of particles}}{6.022 \\times 10^{23}}}$$
 
-$$\\text{number of particles} = \\text{moles} \\times 6.022 \\times 10^{23}$$
+$$\\boxed{\\text{number of particles} = \\text{moles} \\times 6.022 \\times 10^{23}}$$
       `
     },
     {
@@ -111,6 +128,8 @@ $$\\text{mol CO}_2 = 3.011 \\times 10^{23} \\; \\cancel{\\text{molecules CO}_2} 
 ---
 
 ### Watch Out for Polyatomic Molecules!
+
+> ⚠️ **Warning:** Don't confuse molecules with atoms! One molecule of H₂O contains 3 atoms (2 H + 1 O). Always check whether the question asks for molecules or individual atoms.
 
 > **Problem:** If you have 1 mol of H₂O, how many molecules and atoms do you have?
 

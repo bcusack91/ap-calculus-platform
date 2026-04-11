@@ -4,13 +4,30 @@ export const chemEntropySecondLawPart1Data = {
     {
       id: 'en1-intro',
       type: 'text' as const,
-      content: `
-# 🎲 What Is Entropy?
+      content: `# 🎲 What Is Entropy?
 
 **Part 1 of 7 — Disorder, Microstates, and S = k ln W**
 
-Why do ice cubes melt at room temperature but never spontaneously re-freeze? Why does gas expand to fill a container? The answer lies in **entropy** — a measure of the number of ways energy and matter can be distributed in a system.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🌡️ Entropy and "Disorder" |
+| Everyday Examples of Increasing Entropy |
+| 📌 Microstates and the Boltzmann Equation |
+| What Is a Microstate? |
+| Boltzmann's Equation |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'en1-disorder',
@@ -35,9 +52,7 @@ Entropy ($S$) is often described as a measure of **disorder** or **randomness**.
 
 ---
 
-### Key Insight
-
-Systems naturally tend toward states of **higher entropy**. This is not because nature "prefers disorder" — it is because there are vastly more disordered arrangements than ordered ones.
+> 🔑 **Key Concept:** Systems naturally tend toward states of **higher entropy** — not because nature "prefers disorder," but because there are vastly more disordered arrangements than ordered ones.
       `
     },
     {
@@ -55,7 +70,7 @@ A **microstate** ($W$) is a specific arrangement of particles and energy in a sy
 
 ### Boltzmann's Equation
 
-$$S = k_B \\ln W$$
+$$\\boxed{S = k_B \\ln W}$$
 
 | Symbol | Meaning | Value |
 |--------|---------|-------|
@@ -83,9 +98,7 @@ For $10^{23}$ particles (a mole), the number of microstates is astronomically la
 
 ---
 
-### Entropy Is Extensive
-
-Entropy depends on the amount of substance — double the amount, double the entropy.
+> 💡 **Tip:** Entropy is **extensive** — double the amount of substance, double the entropy.
       `
     },
     {
@@ -98,7 +111,7 @@ Entropy depends on the amount of substance — double the amount, double the ent
 
 Entropy is measured in **J/K** (joules per kelvin) or **J/(mol·K)** for molar entropy.
 
-Note: Unlike enthalpy (kJ), entropy uses **joules** — a common source of unit errors on the AP exam!
+> ⚠️ **Warning:** Unlike enthalpy (kJ), entropy uses **joules** — a common source of unit errors on the AP exam!
 
 
 ---
@@ -115,9 +128,7 @@ Note: Unlike enthalpy (kJ), entropy uses **joules** — a common source of unit 
 
 ---
 
-### Entropy Is NOT Conserved
-
-Unlike energy, entropy can be **created** (in irreversible processes). The total entropy of the universe always increases for spontaneous processes.
+> ⚠️ **Warning:** Unlike energy, entropy is **NOT conserved** — it can be created in irreversible processes. The total entropy of the universe always increases for spontaneous processes.
       `
     },
     {

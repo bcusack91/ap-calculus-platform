@@ -4,13 +4,29 @@ export const chemAcidBaseTitrationsPart7Data = {
     {
       id: 'at7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — Acid-Base Titrations**
 
-This comprehensive review integrates all titration concepts: setup, calculations at every point, curve analysis, indicator selection, and polyprotic systems. Master these for AP Chemistry success!
-      `
+---
+
+### Everything at a Glance
+
+| Titration Type | Equivalence pH | Special Features |
+|---------------|---------------|-----------------|
+| Strong acid + Strong base | = 7.00 | Sharp, symmetric curve |
+| Weak acid + Strong base | > 7 | Buffer region, pH = p$K_a$ at half-eq |
+| Weak base + Strong acid | < 7 | Inverted curve |
+| Polyprotic acid | Multiple eq pts | Separate steps for each proton |
+
+> 🔑 **Why this matters:** AP exam questions can test any titration type — this review prepares you for the full range of possible questions.
+
+---
+
+### What You'll Master in Part 7
+- Distinguishing all titration types from curve shape alone
+- Solving AP-style multi-step titration problems under timed conditions
+- Connecting titrations to buffer chemistry and equilibrium concepts`
     },
     {
       id: 'at7-summary',
@@ -44,7 +60,9 @@ This comprehensive review integrates all titration concepts: setup, calculations
 
 ### Indicator Selection Rule
 
-Choose an indicator whose $pK_{In}$ is close to the equivalence point pH.
+$$\\boxed{\\text{Choose an indicator whose } pK_{In} \\text{ is close to the equivalence point pH.}}$$
+
+> 🔑 **Summary:** Initial → ICE with $K_a$ | Buffer → Henderson-Hasselbalch | Equivalence → ICE with $K_b$ | Post-equivalence → excess $OH^-$.
       `
     },
     {

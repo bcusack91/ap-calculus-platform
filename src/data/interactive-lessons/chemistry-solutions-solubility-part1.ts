@@ -4,13 +4,30 @@ export const chemSolutionsSolubilityPart1Data = {
     {
       id: 'ss1-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Solution Terminology
+      content: `# 🧪 Solution Terminology
 
 **Part 1 of 7 — Solutes, Solvents, and Solution Types**
 
-Almost every chemical reaction you encounter in the lab takes place in **solution**. Understanding solution terminology is the foundation for mastering concentration calculations, colligative properties, and solubility equilibria — all high-yield AP Chemistry topics.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Solute and Solvent |
+| Key Points |
+| Aqueous Solutions |
+| 🧊 Saturation States |
+| Three Saturation States |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ss1-basic-definitions',
@@ -136,7 +153,7 @@ The amount of solute that dissolves depends on the **solubility** of that solute
 
 This is the most important rule for predicting solubility:
 
-> **Polar solutes dissolve in polar solvents. Nonpolar solutes dissolve in nonpolar solvents.**
+> 🔑 **Key Concept:** Polar solutes dissolve in polar solvents. Nonpolar solutes dissolve in nonpolar solvents.
 
 
 ---
@@ -241,9 +258,7 @@ For the AP exam, you need to know which ionic compounds are soluble in water:
 
 ---
 
-### Memory Tip
-
-**"NAG SAG"** — **N**itrates **A**lways dissolve, **G**roup 1 **S**alts **A**lways **G**o into solution.
+> 💡 **Tip:** Remember **"NAG SAG"** — **N**itrates **A**lways dissolve, **G**roup 1 **S**alts **A**lways **G**o into solution.
       `
     },
     {

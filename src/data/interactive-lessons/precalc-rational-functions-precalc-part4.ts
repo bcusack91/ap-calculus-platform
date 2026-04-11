@@ -2,189 +2,217 @@ export const precalcRationalPart4Data = {
   topicSlug: 'rational-functions-precalc',
   sections: [
     {
-      id: 'precalc-rational-functions-precalc-p4-s1-intro',
+      id: 'p4-intro',
       type: 'text' as const,
       content: `
-      ## Rational Functions: Algebraic simplification and decomposition
-      
-      **Part 4 of 7**
-      
-      This part focuses on simplifying expressions before evaluating. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **horizontal asymptote**: output value approached for large $|x|$
-      - **hole**: removable point from common-factor cancellation
-      - **end behavior**: trend as input magnitude becomes large
-      
-      
-      ### Worked Example
-      Part 4 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# ✂️ Simplifying Rational Expressions
+
+**Part 4 of 7 — Algebraic Simplification, Addition, & Division**
+
+Before you can graph or analyze a rational function, you often need to simplify it first. This part covers the algebraic mechanics: factoring and canceling, adding/subtracting with common denominators, multiplying/dividing rational expressions, and rewriting via polynomial long division.
       `
     },
     {
-      id: 'precalc-rational-functions-precalc-p4-s2-mcq-core',
+      id: 'p4-cancel',
+      type: 'text' as const,
+      content: `
+## 📖 Factoring & Canceling
+
+The fundamental simplification technique:
+
+$$\\boxed{\\frac{A \\cdot C}{B \\cdot C} = \\frac{A}{B}, \\quad C \\neq 0}$$
+
+### Step-by-Step
+
+| Step | Action | Example: $\\frac{x^2 + 5x + 6}{x^2 + 3x + 2}$ |
+|:----:|--------|------------------------------------------------|
+| 1 | Factor numerator | $(x+2)(x+3)$ |
+| 2 | Factor denominator | $(x+1)(x+2)$ |
+| 3 | Cancel common factors | $\\frac{\\cancel{(x+2)}(x+3)}{(x+1)\\cancel{(x+2)}}$ |
+| 4 | Write simplified form + restriction | $\\frac{x+3}{x+1}, \\quad x \\neq -2$ |
+
+> ⚠️ **Never cancel terms — only factors!** $\\frac{x + 3}{x + 5} \\neq \\frac{3}{5}$. You can only cancel something that multiplies the entire numerator and entire denominator.
+      `
+    },
+    {
+      id: 'p4-operations',
+      type: 'text' as const,
+      content: `
+## 🔧 Operations with Rational Expressions
+
+### Adding & Subtracting (LCD Method)
+
+$$\\frac{A}{B} + \\frac{C}{D} = \\frac{AD + BC}{BD}$$
+
+**Example:** $\\frac{2}{x-1} + \\frac{3}{x+4}$
+
+LCD $= (x-1)(x+4)$
+
+$$= \\frac{2(x+4) + 3(x-1)}{(x-1)(x+4)} = \\frac{2x + 8 + 3x - 3}{(x-1)(x+4)} = \\frac{5x + 5}{(x-1)(x+4)} = \\frac{5(x+1)}{(x-1)(x+4)}$$
+
+---
+
+### Multiplying & Dividing
+
+| Operation | Rule | Example |
+|:----------|:-----|:--------|
+| Multiply | $\\frac{A}{B} \\cdot \\frac{C}{D} = \\frac{AC}{BD}$ | $\\frac{x}{x+1} \\cdot \\frac{x+1}{x^2} = \\frac{1}{x}$ |
+| Divide | $\\frac{A}{B} \\div \\frac{C}{D} = \\frac{A}{B} \\cdot \\frac{D}{C}$ | $\\frac{x}{3} \\div \\frac{x}{6} = \\frac{x}{3} \\cdot \\frac{6}{x} = 2$ |
+
+> 💡 **Always factor before multiplying** — it makes cancellation much easier.
+      `
+    },
+    {
+      id: 'p4-long-division',
+      type: 'text' as const,
+      content: `
+## ✏️ Polynomial Long Division for Rationals
+
+When $\\deg(p) \\geq \\deg(q)$, you can rewrite $\\frac{p(x)}{q(x)}$ as:
+
+$$\\frac{p(x)}{q(x)} = \\text{quotient} + \\frac{\\text{remainder}}{q(x)}$$
+
+This is essential for finding **slant asymptotes** and understanding **end behavior**.
+
+### Worked Example
+
+> **Rewrite $\\frac{2x^2 + 3x - 5}{x + 2}$ in quotient-remainder form.**
+
+Dividing:
+- $2x^2 \\div x = 2x$. Multiply: $2x(x+2) = 2x^2 + 4x$. Subtract: $(2x^2 + 3x) - (2x^2 + 4x) = -x$.
+- Bring down: $-x - 5$. Divide: $-x \\div x = -1$. Multiply: $-1(x+2) = -x - 2$. Subtract: $(-x-5) - (-x-2) = -3$.
+
+$$\\boxed{\\frac{2x^2 + 3x - 5}{x + 2} = 2x - 1 + \\frac{-3}{x + 2}}$$
+
+As $x \\to \\pm\\infty$, $\\frac{-3}{x+2} \\to 0$, so the **slant asymptote** is $y = 2x - 1$.
+      `
+    },
+    {
+      id: 'p4-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Simplification Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of horizontal asymptote.',
+            question: 'Simplify: $\\frac{x^2 - 16}{x^2 - x - 12}$',
             options: [
-              'removable point from common-factor cancellation',
-              'tool for asymptote prediction',
-              'output value approached for large $|x|$',
-              'trend as input magnitude becomes large'
-            ],
-            correctAnswer: 2,
-            explanation: 'horizontal asymptote is defined as: output value approached for large $|x|$.'
-          },
-          {
-            question: 'In simplifying expressions before evaluating, which expression is the best starting model?',
-            options: [
-              '$\\frac{(x-a)g(x)}{(x-a)h(x)}=\\frac{g(x)}{h(x)}\\;(x\\neq a)$',
-              '$\\deg p < \\deg q \\Rightarrow y=0$',
-              '$q(c)=0\\text{ and factor not cancelled}$',
-              '$f(x)=\\frac{p(x)}{q(x)}$'
+              '$\\frac{x + 4}{x + 3}$',
+              '$\\frac{x - 4}{x - 3}$',
+              '$\\frac{x + 4}{x - 3}$  (hole at $x = 4$)',
+              '$\\frac{x + 4}{x + 3}$  (hole at $x = 4$)'
             ],
             correctAnswer: 0,
-            explanation: 'Use $\\frac{(x-a)g(x)}{(x-a)h(x)}=\\frac{g(x)}{h(x)}\\;(x\\neq a)$ first, then substitute known quantities from the prompt.'
+            explanation: 'Numerator: $(x-4)(x+4)$. Denominator: $(x-4)(x+3)$. Cancel $(x-4)$: $\\frac{x+4}{x+3}$ for $x \\neq 4$.'
+          },
+          {
+            question: 'What is $\\frac{1}{x} + \\frac{1}{x+1}$?',
+            options: [
+              '$\\frac{2}{2x + 1}$',
+              '$\\frac{2x + 1}{x(x+1)}$',
+              '$\\frac{2x + 1}{x^2 + 1}$',
+              '$\\frac{1}{x^2 + x}$'
+            ],
+            correctAnswer: 1,
+            explanation: 'LCD $= x(x+1)$. $\\frac{x+1}{x(x+1)} + \\frac{x}{x(x+1)} = \\frac{2x+1}{x(x+1)}$.'
+          },
+          {
+            question: 'When you rewrite $\\frac{x^2 + 1}{x - 3}$ via long division, the quotient is $x + 3$ with remainder $10$. The slant asymptote is:',
+            options: [
+              '$y = 10$',
+              '$y = x + 3$',
+              '$y = x - 3$',
+              '$y = x + 3 + \\frac{10}{x-3}$'
+            ],
+            correctAnswer: 1,
+            explanation: 'The slant asymptote is the quotient portion: $y = x + 3$. The remainder term $\\frac{10}{x-3} \\to 0$ as $x \\to \\pm\\infty$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-rational-functions-precalc-p4-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Hole simplification | $\\frac{(x-a)g(x)}{(x-a)h(x)}=\\frac{g(x)}{h(x)}\;(x\\neq a)$ | removable cleanup |
-      | General form | $f(x)=\\frac{p(x)}{q(x)}$ | ratio modeling |
-      | Vertical asymptote test | $q(c)=0\\text{ and factor not cancelled}$ | non-removable singularity |
-      | Horizontal rule | $\deg p < \deg q \\Rightarrow y=0$ | end behavior shortcut |
-      
-      ### Common pitfalls
-      - Cancellation removes factors, not domain restrictions.
-      - Asymptotes are approach lines, not always graph intersections to forbid.
-      - Match algebra and graph features before concluding function type.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-rational-functions-precalc-p4-s4-input',
+      id: 'p4-input-drill',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Rational Evaluation**
-      
-      1) Evaluate $
-      rac{x^2-9}{x-3}$ at $x=5$ after simplification.
-      2) State vertical asymptote for $f(x)=
-      rac1{x-4}$.
-      3) Evaluate $
-      rac{2x+1}{x+2}$ at $x=2$.
+**Simplification Drill** 🧮
+
+**1)** Simplify $\\frac{x^2 - 25}{x + 5}$ and evaluate at $x = 3$. (e.g., $\\frac{x^2-4}{x+2} = x - 2$, so at $x = 3$: $3 - 2 = 1$)
+
+**2)** What is $\\frac{2}{x} + \\frac{3}{x}$? Evaluate at $x = 5$. (e.g., $\\frac{1}{x} + \\frac{4}{x} = \\frac{5}{x}$, so at $x = 5$: $\\frac{5}{5} = 1$)
+
+**3)** Divide: $\\frac{x^2 + 2x + 1}{x + 1}$. Evaluate at $x = 4$. (e.g., $\\frac{x^2+6x+9}{x+3} = x + 3$, so at $x = 4$: $7$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8', '4', '1.25'],
-        hint1: 'Factor numerator as $(x-3)(x+3)$.',
-        hint2: 'Set denominator equal to zero.',
-        hint3: 'Substitute then divide carefully.',
-        explanation: 'Simplified evaluation gives 8, asymptote is $x=4$, and direct substitution gives 1.25.'
+        correctAnswers: ['-2', '1', '5'],
+        hint1: '$x^2 - 25 = (x-5)(x+5)$. Cancel $(x+5)$. Then evaluate $x - 5$ at $x = 3$.',
+        hint2: 'Same denominator: $\\frac{2+3}{x} = \\frac{5}{x}$. Then $\\frac{5}{5}$.',
+        hint3: '$x^2 + 2x + 1 = (x+1)^2$. Cancel one $(x+1)$. Then $4 + 1 = 5$.',
+        explanation: '1) $(x-5)(x+5)/(x+5) = x - 5$. At $x=3$: $-2$. 2) $\\frac{5}{x}$. At $x=5$: $1$. 3) $(x+1)^2/(x+1) = x+1$. At $x=4$: $5$.'
       }
     },
     {
-      id: 'precalc-rational-functions-precalc-p4-s5-dropdown',
+      id: 'p4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Simplification Rules — Fill in the Blanks** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'horizontal asymptote',
-            options: ['removable point from common-factor cancellation', 'tool for asymptote prediction', 'output value approached for large $|x|$', 'trend as input magnitude becomes large']
+            label: 'You can cancel between numerator and denominator only when the expression is a',
+            options: ['term (added/subtracted)', 'factor (multiplied)', 'coefficient', 'constant']
           },
           {
-            label: 'hole',
-            options: ['removable point from common-factor cancellation', 'rewrite into simpler rational terms', 'tool for asymptote prediction', 'trend as input magnitude becomes large']
+            label: 'To add $\\frac{A}{B} + \\frac{C}{D}$, you first need the',
+            options: ['GCF of A and C', 'LCD (least common denominator)', 'sum $B + D$', 'product of numerators']
           },
           {
-            label: 'end behavior',
-            options: ['tool for asymptote prediction', 'ratio of two polynomials with nonzero denominator', 'trend as input magnitude becomes large', 'rewrite into simpler rational terms']
+            label: 'To divide by a fraction, you multiply by its',
+            options: ['numerator', 'denominator', 'reciprocal', 'square']
+          },
+          {
+            label: 'Polynomial long division rewrites $\\frac{p(x)}{q(x)}$ as $Q(x) +$',
+            options: ['$\\frac{q(x)}{r(x)}$', '$\\frac{r(x)}{q(x)}$', '$r(x) \\cdot q(x)$', '$p(x) - Q(x)$']
           }
         ],
-        correctAnswers: ['output value approached for large $|x|$', 'removable point from common-factor cancellation', 'trend as input magnitude becomes large'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: horizontal asymptote, hole, and end behavior align with their exact definitions used in this part.'
+        correctAnswers: ['factor (multiplied)', 'LCD (least common denominator)', 'reciprocal', '$\\frac{r(x)}{q(x)}$'],
+        hint1: 'You can only cancel things connected by multiplication.',
+        hint2: 'You need a common denominator before adding fractions.',
+        hint3: '"Invert and multiply" — dividing by a fraction means multiplying by its flip.',
+        explanation: 'Cancel factors only (not terms). Use LCD for addition. Divide by multiplying by the reciprocal. Long division gives quotient + remainder/divisor.'
       }
     },
     {
-      id: 'precalc-rational-functions-precalc-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to horizontal asymptote, hole, and end behavior so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-rational-functions-precalc-p4-s7-mcq-applied',
+      id: 'p4-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz — Simplification** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is simplifying expressions before evaluating. Which term best anchors the next reasoning step if the key idea is: tool for asymptote prediction?',
+            question: 'Simplify: $\\frac{x^2 - 4x + 3}{x^2 - 1} \\cdot \\frac{x + 1}{x - 3}$',
             options: [
-              'degree comparison',
-              'end behavior',
-              'hole',
-              'horizontal asymptote'
+              '$1$',
+              '$\\frac{x-1}{x+1}$',
+              '$\\frac{1}{x+1}$',
+              '$\\frac{(x-1)}{(x+1)}$'
             ],
             correctAnswer: 0,
-            explanation: 'degree comparison matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Factor: $\\frac{(x-1)(x-3)}{(x-1)(x+1)} \\cdot \\frac{x+1}{x-3}$. Cancel $(x-1)$, $(x+1)$, and $(x-3)$: result is $1$ (with restrictions $x \\neq 1, -1, 3$).'
           },
           {
-            question: 'A student is solving a mixed rational functions prompt. Which term best anchors the next reasoning step if the key idea is: rewrite into simpler rational terms?',
+            question: 'A student simplifies $\\frac{x + 3}{x + 5}$ by canceling the $x$\'s to get $\\frac{3}{5}$. What is wrong?',
             options: [
-              'degree comparison',
-              'partial fraction idea',
-              'end behavior',
-              'rational function'
+              'Nothing — this is correct',
+              'The $x$ is a term (added), not a factor (multiplied) — you cannot cancel terms',
+              'They should have canceled the $3$ and $5$ instead',
+              'The answer should be $\\frac{x}{x} = 1$'
             ],
             correctAnswer: 1,
-            explanation: 'partial fraction idea matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'In $\\frac{x+3}{x+5}$, the $x$ is added to $3$ and $5$ — it is a term, not a factor. You can only cancel factors that multiply the entire numerator and denominator. This is one of the most common algebra errors.'
           }
         ]
       }

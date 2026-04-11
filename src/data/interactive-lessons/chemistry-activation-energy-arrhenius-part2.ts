@@ -4,13 +4,30 @@ export const chemActivationEnergyArrheniusPart2Data = {
     {
       id: 'ae2-intro',
       type: 'text' as const,
-      content: `
-# ⛰️ Activation Energy & Energy Diagrams
+      content: `# ⛰️ Activation Energy & Energy Diagrams
 
 **Part 2 of 7 — The Energy Landscape of Reactions**
 
-Energy diagrams (also called reaction coordinate diagrams or potential energy diagrams) are one of the most important tools in chemistry. They show the energy changes that occur as reactants transform into products, and reveal the **activation energy** barrier that must be overcome.
-      `
+---
+
+### Reading an Energy Diagram
+
+| Feature | What It Represents | How to Find It |
+|---------|-------------------|----------------|
+| Y-axis height of reactants | Potential energy of reactants | Starting level |
+| Y-axis height of products | Potential energy of products | Ending level |
+| Peak height | Transition state energy | Highest point on curve |
+| $E_a$ (forward) | Activation energy | Peak − Reactants |
+| $\Delta H$ | Enthalpy change | Products − Reactants |
+
+> 🔑 **Why this matters:** Energy diagrams appear frequently on the AP exam — you must be able to read, label, and calculate $E_a$ and $\Delta H$ from them.
+
+---
+
+### What You'll Master in Part 2
+- Labeling all parts of an energy diagram (reactants, products, $E_a$, transition state)
+- Distinguishing exothermic ($\Delta H < 0$) from endothermic ($\Delta H > 0$) diagrams
+- Calculating forward and reverse activation energies from diagram data`
     },
     {
       id: 'ae2-energy-diagram',
@@ -39,11 +56,11 @@ An energy diagram plots **potential energy** (y-axis) vs. **reaction progress** 
 
 ### Mathematical Relationship
 
-$$E_a(\\text{reverse}) = E_a(\\text{forward}) - \\Delta H$$
+$$\\boxed{E_a(\\text{reverse}) = E_a(\\text{forward}) - \\Delta H}$$
 
 Or equivalently:
 
-$$\\Delta H = E_a(\\text{forward}) - E_a(\\text{reverse})$$
+$$\\boxed{\\Delta H = E_a(\\text{forward}) - E_a(\\text{reverse})}$$
       `
     },
     {
@@ -78,7 +95,7 @@ $$\\text{Reactants} \\xrightarrow{E_a} \\text{Transition State} \\rightarrow \\t
 
 ### Important
 
-$E_a$ is **always positive** — it is always an energy *barrier* that must be overcome, regardless of whether the reaction is exo- or endothermic.
+> ⚠️ $E_a$ is **always positive** — it is always an energy *barrier* that must be overcome, regardless of whether the reaction is exo- or endothermic.
       `
     },
     {

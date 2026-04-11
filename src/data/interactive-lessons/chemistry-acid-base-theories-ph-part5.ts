@@ -4,13 +4,29 @@ export const chemAcidBaseTheoriesPhPart5Data = {
     {
       id: 'ab5-intro',
       type: 'text' as const,
-      content: `
-# 💪 Strong Acids and Bases — pH Calculations
+      content: `# 💪 Strong Acids and Bases — pH Calculations
 
 **Part 5 of 7 — Complete Dissociation Means Easy Math**
 
-Strong acids and bases dissociate **completely** in water. This makes pH calculations straightforward — the concentration of $H^+$ or $OH^-$ equals the initial concentration of the acid or base.
-      `
+---
+
+### Strong = Complete Dissociation
+
+| Type | Example | Key Calculation |
+|------|---------|-----------------|
+| Strong monoprotic acid | 0.025 M HCl | $[H^+] = 0.025$ M, pH = 1.60 |
+| Strong diprotic acid | 0.010 M $H_2SO_4$ | $[H^+] \approx 0.020$ M |
+| Strong base (Group 1) | 0.010 M NaOH | $[OH^-] = 0.010$ M, pOH = 2.00 |
+| Strong base (Group 2) | 0.005 M $Ba(OH)_2$ | $[OH^-] = 0.010$ M |
+
+> 🔑 **Why this matters:** Strong acid/base pH problems are the foundation for all later calculations — titrations, buffers, and equilibrium all build from here.
+
+---
+
+### What You'll Master in Part 5
+- Calculating pH of strong monoprotic and diprotic acids
+- Calculating pOH and pH of strong bases (Group 1 and Group 2)
+- Handling dilution before calculating pH`
     },
     {
       id: 'ab5-strong-acids',
@@ -24,7 +40,7 @@ $$HA \\rightarrow H^+ + A^-$$
 
 Since dissociation is **100% complete**: $[H^+] = C$
 
-$$pH = -\\log C$$
+$$\\boxed{pH = -\\log C}$$
 
 
 ---
@@ -61,7 +77,7 @@ For dilute solutions, each mole of $H_2SO_4$ produces approximately **2 moles** 
 
 $$[H^+] \\approx 2C \\text{ (for dilute solutions)}$$
 
-**Note:** The second dissociation of $H_2SO_4$ ($HSO_4^-$) is weak ($K_a = 0.012$), so at higher concentrations the approximation $[H^+] = 2C$ may not hold exactly.
+> ⚠️ The second dissociation of $H_2SO_4$ ($HSO_4^-$) is weak ($K_a = 0.012$), so at higher concentrations the approximation $[H^+] = 2C$ may not hold exactly.
       `
     },
     {
@@ -76,8 +92,7 @@ $$NaOH \\rightarrow Na^+ + OH^-$$
 
 $[OH^-] = C$, then:
 
-$$pOH = -\\log C$$
-$$pH = 14 - pOH$$
+$$\\boxed{pOH = -\\log C \\quad\\Rightarrow\\quad pH = 14 - pOH}$$
 
 
 ---
@@ -169,7 +184,7 @@ $$pH = 14 - 2.00 = 12.00$$
 
 ### Diluting a Strong Acid
 
-Use $M_1V_1 = M_2V_2$:
+> 🔑 Use $M_1V_1 = M_2V_2$ for dilution problems:
 
 **Example:** 25.0 mL of 0.10 M $HCl$ is diluted to 100.0 mL. What is the new pH?
 

@@ -6,7 +6,26 @@ export const chemElectronConfigPart3Data = {
       type: 'text' as const,
       content: `# Part 3: Writing Electron Configurations
 
-Now that you know the subshells and filling order, it is time to write full electron configurations. Three fundamental rules govern how electrons fill orbitals.`
+**Part 3 of 7 — Writing Electron Configurations**
+
+---
+
+### The Three Rules at a Glance
+
+| Rule | What It Controls | Key Idea |
+|------|-----------------|----------|
+| **Aufbau Principle** | Filling order | Lowest energy subshell fills first |
+| **Pauli Exclusion** | Orbital capacity | Max 2 electrons per orbital (opposite spins) |
+| **Hund's Rule** | Degenerate orbitals | Fill singly before pairing |
+
+> 🔑 **Why this matters:** These three rules are the complete recipe for writing any electron configuration — and they're tested heavily on the AP exam.
+
+---
+
+### What You'll Master in Part 3
+- Applying all three rules to write configurations for any element
+- Building configurations step-by-step with running electron counts
+- Verifying configurations by checking total electrons match Z`
     },
     {
       id: 'ec3-three-rules',
@@ -32,29 +51,90 @@ No two electrons in the same atom can have the same set of four quantum numbers.
 ### 3. Hund's Rule
 When filling orbitals of **equal energy** (degenerate orbitals, such as the three 2p orbitals), electrons fill each orbital **singly first** with parallel spins before any orbital gets a second electron.
 
-Think of it like a bus: passengers sit in empty seats before doubling up.`
+Think of it like a bus: passengers sit in empty seats before doubling up.
+
+> 🔑 **The Three Rules:** Aufbau (lowest energy first) + Pauli (max 2 per orbital, opposite spins) + Hund’s (fill degenerate orbitals singly before pairing) = the complete rules for electron configuration.`
     },
     {
-      id: 'ec3-examples',
+      id: 'ec3-examples-intro',
       type: 'text' as const,
       content: `## 🧪 Step-by-Step Examples
 
-**Hydrogen (H, Z = 1):** 1 electron  
-Configuration: **1s¹**
+Let's build electron configurations from scratch, starting simple and working up to transition metals.`
+    },
+    {
+      id: 'ec3-example-hydrogen',
+      type: 'text' as const,
+      content: `### Example 1: Hydrogen (H, Z = 1)
 
-**Carbon (C, Z = 6):** 6 electrons  
-1s² 2s² 2p² → **1s² 2s² 2p²**  
-(By Hund's rule, the two 2p electrons occupy two separate p orbitals with parallel spins.)
+**Total electrons:** 1
 
-**Sodium (Na, Z = 11):** 11 electrons  
-**1s² 2s² 2p⁶ 3s¹**
+| Step | Subshell | Electrons Added | Running Total |
+|------|----------|-----------------|---------------|
+| 1 | 1s | 1 | 1 ✓ |
 
-**Iron (Fe, Z = 26):** 26 electrons  
-**1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶**  
-Notice: 4s fills before 3d in the Aufbau order, so 4s² appears before 3d⁶.
+**Configuration: 1s¹**
 
-**Tip:** Always verify your total by adding the superscripts:  
-2 + 2 + 6 + 2 + 6 + 2 + 6 = 26 ✓`
+Only one electron — it goes into the lowest energy subshell, 1s.`
+    },
+    {
+      id: 'ec3-example-carbon',
+      type: 'text' as const,
+      content: `### Example 2: Carbon (C, Z = 6)
+
+**Total electrons:** 6
+
+| Step | Subshell | Electrons Added | Running Total |
+|------|----------|-----------------|---------------|
+| 1 | 1s | 2 | 2 |
+| 2 | 2s | 2 | 4 |
+| 3 | 2p | 2 | 6 ✓ |
+
+**Configuration: 1s² 2s² 2p²**
+
+By Hund's rule, the two 2p electrons occupy **two separate** p orbitals with parallel spins — they don't pair up in the same orbital.`
+    },
+    {
+      id: 'ec3-example-sodium',
+      type: 'text' as const,
+      content: `### Example 3: Sodium (Na, Z = 11)
+
+**Total electrons:** 11
+
+| Step | Subshell | Electrons Added | Running Total |
+|------|----------|-----------------|---------------|
+| 1 | 1s | 2 | 2 |
+| 2 | 2s | 2 | 4 |
+| 3 | 2p | 6 | 10 |
+| 4 | 3s | 1 | 11 ✓ |
+
+**Configuration: 1s² 2s² 2p⁶ 3s¹**
+
+The first 10 electrons fill the n = 1 and n = 2 levels completely. The 11th electron starts a new shell.`
+    },
+    {
+      id: 'ec3-example-iron',
+      type: 'text' as const,
+      content: `### Example 4: Iron (Fe, Z = 26)
+
+**Total electrons:** 26
+
+| Step | Subshell | Electrons Added | Running Total |
+|------|----------|-----------------|---------------|
+| 1 | 1s | 2 | 2 |
+| 2 | 2s | 2 | 4 |
+| 3 | 2p | 6 | 10 |
+| 4 | 3s | 2 | 12 |
+| 5 | 3p | 6 | 18 |
+| 6 | 4s | 2 | 20 |
+| 7 | 3d | 6 | 26 ✓ |
+
+**Configuration: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶**
+
+Notice: **4s fills before 3d** in the Aufbau order, so 4s² appears before 3d⁶.
+
+> 💡 **Tip:** Always verify your total by adding the superscripts:
+> 2 + 2 + 6 + 2 + 6 + 2 + 6 = 26 ✓`
     },
     {
       id: 'ec3-quiz-identify',
@@ -78,7 +158,7 @@ Which element has the electron configuration **1s² 2s² 2p⁶ 3s² 3p⁴**?`,
       type: 'input-box' as const,
       content: `### Write the Configuration
 
-Write the full electron configuration for the following elements. Use the format: 1s2 2s2 2p6 (no superscripts needed, just the number after each subshell letter).`,
+Write the full electron configuration for the following elements (e.g., 1s2 2s2 2p6). A formatted preview will appear as you type.`,
       exercise: {
         inputs: [
           {
@@ -140,15 +220,36 @@ Which of the following electron configurations is INCORRECT?`,
     {
       id: 'ec3-summary',
       type: 'text' as const,
-      content: `## 📌 Key Takeaways
+      content: `## � Part 3 Summary: Writing Electron Configurations
 
-1. **Aufbau principle:** Fill lowest energy subshells first.
-2. **Pauli exclusion:** Max 2 electrons per orbital (opposite spins).
-3. **Hund's rule:** Fill degenerate orbitals singly before pairing.
-4. Always **verify** by summing superscripts to match the atomic number.
-5. Remember that **4s fills before 3d** — this is the most common filling-order mistake.
+---
 
-Next up: Noble gas shorthand notation to simplify these long configurations!`
+### 🧰 The Three Rules
+
+| Rule | What It Says | Common Mistake |
+|------|-------------|----------------|
+| **Aufbau Principle** | Fill the lowest energy subshell first | Putting electrons in 3d before 4s |
+| **Pauli Exclusion** | Max 2 electrons per orbital (opposite spins ↑↓) | Putting 3 electrons in one orbital |
+| **Hund's Rule** | Fill degenerate orbitals singly before pairing | Pairing 2p electrons before all three 2p orbitals have one |
+
+---
+
+### ✅ Your Checklist Before Moving On
+
+- ☐ I can write the full configuration for any element up to Z = 36
+- ☐ I know that **4s fills before 3d** in the Aufbau order
+- ☐ I always verify my total electron count matches the atomic number
+- ☐ I understand why Hund's rule leads to unpaired electrons in partially filled subshells
+
+---
+
+### 🔮 What's Next
+
+In **Part 4**, you'll learn **noble gas shorthand notation** — a way to simplify long configurations like:
+
+1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶ → **[Ar] 4s² 3d⁶**
+
+This will save you time on the AP exam and make it easier to focus on the valence electrons that matter most for chemistry.`
     }
   ]
 }

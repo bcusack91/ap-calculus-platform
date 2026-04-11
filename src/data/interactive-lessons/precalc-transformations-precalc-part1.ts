@@ -2,186 +2,199 @@ export const precalcTransformationsPart1Data = {
   topicSlug: 'transformations-precalc',
   sections: [
     {
-      id: 'precalc-transformations-precalc-p1-s1-intro',
+      id: 'p1-intro',
       type: 'text' as const,
       content: `
-      ## Function Transformations: Parent functions and baseline shapes
-      
-      **Part 1 of 7**
-      
-      This part focuses on matching altered graphs to formulas. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **parent function**: base graph before transformations
-      - **vertical shift**: adds constant outside function value
-      - **horizontal shift**: replaces $x$ with $x-h$ inside input
-      
-      
-      ### Worked Example
-      Part 1 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📐 Translations (Shifts)
+
+**Part 1 of 7**
+
+### Vertical Shifts
+
+$y = f(x) + k$
+
+| $k > 0$ | Shift **up** $k$ units |
+|:---------|:----------------------|
+| $k < 0$ | Shift **down** $|k|$ units |
+
+### Horizontal Shifts
+
+$y = f(x - h)$
+
+| $h > 0$ | Shift **right** $h$ units |
+|:---------|:-------------------------|
+| $h < 0$ | Shift **left** $|h|$ units |
+
+> ⚠️ Horizontal shifts work **opposite** to what you might expect! $f(x-3)$ shifts **right** 3, not left.
+
+### Combined Example
+
+$y = (x-2)^2 + 5$: Take $y=x^2$, shift right $2$, up $5$. Vertex: $(2, 5)$.
       `
     },
     {
-      id: 'precalc-transformations-precalc-p1-s2-mcq-core',
+      id: 'p1-examples',
+      type: 'text' as const,
+      content: `
+## 📝 Worked Examples
+
+### Example 1: $y = \\sqrt{x+4} - 3$
+
+Start with $y = \\sqrt{x}$.
+
+1. Replace $x$ with $x+4$: shift **left** $4$
+2. Subtract $3$: shift **down** $3$
+
+Starting point moves from $(0,0)$ to $(-4, -3)$.
+
+### Example 2: $y = |x-1| + 2$
+
+Start with $y = |x|$.
+
+1. Replace $x$ with $x-1$: shift **right** $1$
+2. Add $2$: shift **up** $2$
+
+Vertex moves from $(0,0)$ to $(1, 2)$.
+
+### Why Horizontal Shifts Are "Backwards"
+
+$f(x-3) = 0$ when $x-3 = 0$, i.e., $x = 3$. The zero moved **right** by $3$.
+
+The $x$-value must be $3$ more to produce the same result → the graph shifts right.
+      `
+    },
+    {
+      id: 'p1-general',
+      type: 'text' as const,
+      content: `
+## 🧠 The General Translation
+
+$$y - k = f(x - h) \\quad \\Leftrightarrow \\quad y = f(x-h)+k$$
+
+Every point $(a, b)$ on $y=f(x)$ moves to $(a+h, b+k)$.
+
+### Translating Key Points
+
+For $y = (x-3)^3 + 1$ (parent: $y = x^3$):
+
+| Parent point | Translated point |
+|:------------|:----------------|
+| $(-1, -1)$ | $(2, 0)$ |
+| $(0, 0)$ | $(3, 1)$ |
+| $(1, 1)$ | $(4, 2)$ |
+
+### Effect on Domain and Range
+
+If $f$ has domain $[a, b]$ and range $[c, d]$:
+
+$y = f(x-h)+k$ has domain $[a+h, b+h]$ and range $[c+k, d+k]$.
+      `
+    },
+    {
+      id: 'p1-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Translations Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of parent function.',
-            options: [
-              'adds constant outside function value',
-              'multiplies input or output by $-1$',
-              'replaces $x$ with $x-h$ inside input',
-              'base graph before transformations'
-            ],
-            correctAnswer: 3,
-            explanation: 'parent function is defined as: base graph before transformations.'
+            question: '$y = (x+5)^2$ is the graph of $y=x^2$ shifted:',
+            options: ['Right 5', 'Left 5', 'Up 5', 'Down 5'],
+            correctAnswer: 1,
+            explanation: '$x+5 = x-(-5)$, so $h = -5$ → shift left 5.'
           },
           {
-            question: 'In matching altered graphs to formulas, which expression is the best starting model?',
-            options: [
-              '$g(x)=a\\,f(b(x-h))+k$',
-              '$f(x-h)$',
-              '$-f(x),\\;f(-x)$',
-              '$f(x)+k$'
-            ],
+            question: 'The vertex of $y = |x-3| - 7$ is at:',
+            options: ['$(3, -7)$', '$(-3, 7)$', '$(-3, -7)$', '$(3, 7)$'],
             correctAnswer: 0,
-            explanation: 'Use $g(x)=a\\,f(b(x-h))+k$ first, then substitute known quantities from the prompt.'
+            explanation: 'Shift right 3, down 7: vertex $(3, -7)$.'
+          },
+          {
+            question: '$y = \\sqrt{x} + 4$ shifts the graph:',
+            options: ['Left 4', 'Right 4', 'Up 4', 'Down 4'],
+            correctAnswer: 2,
+            explanation: 'Adding 4 outside the function shifts up.'
           }
         ]
       }
     },
     {
-      id: 'precalc-transformations-precalc-p1-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | General transform | $g(x)=a\,f(b(x-h))+k$ | all major parameter moves |
-      | Horizontal shift | $f(x-h)$ | right by $h$ when $h>0$ |
-      | Vertical shift | $f(x)+k$ | up by $k$ when $k>0$ |
-      | Reflections | $-f(x),\;f(-x)$ | over $x$-axis and $y$-axis |
-      
-      ### Common pitfalls
-      - Inside changes reverse intuitive direction for horizontal moves.
-      - A negative outside coefficient reflects across the $x$-axis.
-      - Apply transformations in the order implied by expression structure.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-transformations-precalc-p1-s4-input',
+      id: 'p1-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Transformation Parameters**
-      
-      1) In $g(x)=f(x-3)+2$, how many units right is the graph shifted?
-      2) In $y=-2f(x)$, what is the vertical stretch factor magnitude?
-      3) If $f(x)=x^2$, compute $f(-4)$.
+**Translation Practice** 🧮
+
+**1)** The graph of $y=x^2$ is shifted left 3 and up 2. New equation vertex $h$ = ?
+
+**2)** Same: vertex $k$ = ?
+
+**3)** $y = (x+1)^3 - 4$ has inflection point at $x$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3', '2', '16'],
-        hint1: 'Inside subtraction shifts right.',
-        hint2: 'Read absolute value of outside multiplier.',
-        hint3: 'Square the input after substitution.',
-        explanation: 'Shift is 3 right, stretch magnitude is 2, and $f(-4)=16$.'
+        correctAnswers: ['-3', '2', '-1'],
+        hint1: 'Left 3 means $h = -3$.',
+        hint2: 'Up 2 means $k = 2$.',
+        hint3: '$x^3$ has inflection at $x=0$. Shifted left 1: $x=-1$.',
+        explanation: '1) $h = -3$. 2) $k = 2$. Equation: $y = (x+3)^2+2$. 3) $x = -1$.'
       }
     },
     {
-      id: 'precalc-transformations-precalc-p1-s5-dropdown',
+      id: 'p1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Translation Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'parent function',
-            options: ['multiplies input or output by $-1$', 'replaces $x$ with $x-h$ inside input', 'adds constant outside function value', 'base graph before transformations']
+            label: '$f(x-h)$ shifts the graph:',
+            options: ['Left $h$', 'Right $h$', 'Up $h$', 'Down $h$'],
+            correctAnswer: 1
           },
           {
-            label: 'vertical shift',
-            options: ['multiplies output by factor with magnitude $>1$', 'replaces $x$ with $x-h$ inside input', 'multiplies input or output by $-1$', 'adds constant outside function value']
+            label: '$f(x) + k$ shifts the graph:',
+            options: ['Left $k$', 'Right $k$', 'Up $k$', 'Down $k$'],
+            correctAnswer: 2
           },
           {
-            label: 'horizontal shift',
-            options: ['scales graph toward an axis', 'replaces $x$ with $x-h$ inside input', 'multiplies input or output by $-1$', 'multiplies output by factor with magnitude $>1$']
+            label: 'Translations change:',
+            options: ['The shape of the graph', 'The position of the graph', 'Both shape and position'],
+            correctAnswer: 1
+          },
+          {
+            label: 'The asymptote of $y = \\frac{1}{x-2}+3$ is:',
+            options: ['$y = 2$', '$y = 3$', '$y = -3$', '$y = 0$'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['base graph before transformations', 'adds constant outside function value', 'replaces $x$ with $x-h$ inside input'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: parent function, vertical shift, and horizontal shift align with their exact definitions used in this part.'
+        correctAnswers: ['Right $h$', 'Up $k$', 'The position of the graph', '$y = 3$'],
+        hint1: 'Inside the function, opposite direction.',
+        hint2: 'Outside the function, same direction.',
+        hint3: 'Translations only move, they do not stretch or reflect.',
+        explanation: '$f(x-h)$: right $h$. $f(x)+k$: up $k$. Translations preserve shape. HA shifts from $y=0$ to $y=3$.'
       }
     },
     {
-      id: 'precalc-transformations-precalc-p1-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to parent function, vertical shift, and horizontal shift so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-transformations-precalc-p1-s7-mcq-applied',
+      id: 'p1-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is matching altered graphs to formulas. Which term best anchors the next reasoning step if the key idea is: multiplies input or output by $-1$?',
-            options: [
-              'vertical shift',
-              'reflection',
-              'parent function',
-              'horizontal shift'
-            ],
-            correctAnswer: 1,
-            explanation: 'reflection matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'If $f(x)$ has domain $[0, 5]$, then $f(x-3)$ has domain:',
+            options: ['$[0, 5]$', '$[-3, 2]$', '$[3, 8]$', '$[0, 8]$'],
+            correctAnswer: 2,
+            explanation: 'Shift right 3: $[0+3, 5+3] = [3, 8]$.'
           },
           {
-            question: 'A student is solving a mixed function transformations prompt. Which term best anchors the next reasoning step if the key idea is: multiplies output by factor with magnitude $>1$?',
-            options: [
-              'reflection',
-              'compression',
-              'horizontal shift',
-              'vertical stretch'
-            ],
-            correctAnswer: 3,
-            explanation: 'vertical stretch matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Which transformation moves $(1, 4)$ to $(3, 1)$?',
+            options: ['Right 2, down 3', 'Left 2, up 3', 'Right 2, up 3', 'Left 2, down 3'],
+            correctAnswer: 0,
+            explanation: '$x$: $1 \\to 3$ (right 2). $y$: $4 \\to 1$ (down 3).'
           }
         ]
       }

@@ -9,18 +9,26 @@ export const chemHybridizationSigmaPiBondsPart1Data = {
 
 **Part 1 of 7 — Introduction to Hybridization**
 
-Atomic orbitals (s, p, d) describe where electrons are likely to be found in isolated atoms. But when atoms form covalent bonds, something remarkable happens — the orbitals **mix** to create new, equivalent orbitals that are better suited for bonding.
+---
 
-This mixing process is called **hybridization**.
+### Topics in This Part
 
-### Why Do We Need Hybridization?
+| Section |
+|---------|
+| Why Do We Need Hybridization? |
+| Key Principles |
+| Energy Perspective |
+| Properties of sp³ Orbitals |
+| How sp³ Works in Methane (CH₄) |
 
-Consider carbon in methane (CH₄):
-- Carbon\'s electron configuration is $1s^2\\,2s^2\\,2p^2$
-- The $2s$ orbital and three $2p$ orbitals have **different shapes and energies**
-- Yet all four C–H bonds in CH₄ are **identical** in length and strength
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
-How can different orbitals produce identical bonds? The answer: the orbitals hybridize into four equivalent **sp³ hybrid orbitals** before bonding occurs.`
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'hy-1-2',
@@ -83,7 +91,7 @@ When one s orbital mixes with **three** p orbitals, four equivalent **sp³ hybri
 - **H₂O**: O is sp³ (2 bonds + 2 lone pairs = 4 electron domains)
 - **CCl₄**: C is sp³ (4 bonds + 0 lone pairs)
 
-**Rule: Any atom with 4 electron domains is sp³ hybridized.**`
+> 🔑 **Key Concept:** Any atom with 4 electron domains is sp³ hybridized.`
     },
     {
       id: 'hy-1-4',
@@ -149,7 +157,7 @@ The large lobe of an sp³ orbital extends **further from the nucleus** than eith
 
 ### Key Takeaway
 
-Hybridization is the atom\'s way of optimizing orbital geometry for bonding. The "cost" of promoting an electron is more than repaid by the **stronger, more directional bonds** that hybrid orbitals form.`
+> 🔑 **Key Concept:** Hybridization is the atom\'s way of optimizing orbital geometry for bonding. The "cost" of promoting an electron is more than repaid by the **stronger, more directional bonds** that hybrid orbitals form.`
     },
     {
       id: 'hy-1-6',
@@ -216,7 +224,9 @@ Hybridization is the atom\'s way of optimizing orbital geometry for bonding. The
       id: 'hy-1-8',
       type: 'text',
       title: 'Part 1 Summary',
-      content: `## Summary — Introduction to Hybridization
+      content: `---
+
+## Summary — Introduction to Hybridization
 
 ### Key Ideas
 

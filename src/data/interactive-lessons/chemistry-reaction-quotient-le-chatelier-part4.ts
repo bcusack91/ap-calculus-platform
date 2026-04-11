@@ -4,13 +4,30 @@ export const chemReactionQuotientLeChatPart4Data = {
     {
       id: 'ql4-intro',
       type: 'text' as const,
-      content: `
-# 🔄 Le Chatelier — Pressure/Volume and Temperature
+      content: `# 🔄 Le Chatelier — Pressure/Volume and Temperature
 
 **Part 4 of 7 — How Gases and Heat Affect Equilibrium**
 
-Pressure/volume changes affect gaseous equilibria by changing concentrations. Temperature changes are unique because they actually change the value of K.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 💨 Pressure and Volume Changes |
+| The Rule |
+| Why? |
+| Example |
+| Special Case: Equal Moles |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ql4-pressure-volume',
@@ -20,12 +37,7 @@ Pressure/volume changes affect gaseous equilibria by changing concentrations. Te
 
 ### The Rule
 
-For gaseous equilibria, when volume decreases (pressure increases):
-- The system shifts toward the side with **fewer moles of gas**
-- This reduces the total number of gas molecules, partially relieving the pressure
-
-When volume increases (pressure decreases):
-- The system shifts toward the side with **more moles of gas**
+> 💡 **Tip:** For gaseous equilibria, decreasing volume (increasing pressure) shifts toward the side with **fewer moles of gas**. Increasing volume shifts toward **more moles of gas**.
 
 
 ---
@@ -39,7 +51,7 @@ Decreasing volume concentrates all species equally. The side with more moles of 
 
 ### Example
 
-$$\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$$
+$$\\boxed{\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)}$$
 
 - Reactant side: $1 + 3 = 4$ moles of gas
 - Product side: $2$ moles of gas
@@ -65,7 +77,7 @@ Both sides have 2 moles of gas. **No shift** occurs with pressure/volume changes
       content: `
 ## 🌡️ Temperature Changes
 
-Temperature is **unique** — it\'s the only stress that changes the value of $K$.
+> ⚠️ **Warning:** Temperature is **unique** — it\'s the only stress that changes the value of $K$. All other stresses shift the equilibrium position but leave K unchanged.
 
 
 ---
@@ -107,7 +119,7 @@ $$\\text{N}_2 + 3\\,\\text{H}_2 \\rightleftharpoons 2\\,\\text{NH}_3 + \\text{he
 
 ### Key Point
 
-Pressure, volume, and concentration changes shift the equilibrium **position** but do NOT change K. Temperature changes BOTH the position AND the value of K.
+> 🔑 **Key Concept:** Pressure, volume, and concentration changes shift the equilibrium **position** but do NOT change K. Temperature changes BOTH the position AND the value of K.
       `
     },
     {

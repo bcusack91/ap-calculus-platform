@@ -2,187 +2,194 @@ export const precalcMatricesPart2Data = {
   topicSlug: 'matrices-precalc',
   sections: [
     {
-      id: 'precalc-matrices-precalc-p2-s1-intro',
+      id: 'p2-intro',
       type: 'text' as const,
       content: `
-      ## Matrices: Addition, subtraction, scalar scaling
-      
-      **Part 2 of 7**
-      
-      This part focuses on combining weighted data transforms. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **entry**: single value identified by row and column
-      - **matrix product**: composition of linear mappings
-      - **determinant**: scalar indicating area scaling and invertibility in $2	imes2$
-      
-      
-      ### Worked Example
-      Solve $\\begin{cases}x+y=7\\2x-y=5\end{cases}$ by elimination.
-      
-      Add equations: $3x=12$, so $x=4$. Substitute into $x+y=7$ to get $y=3$.
-      
-      A quick matrix check with $\\begin{bmatrix}1&1\\2&-1\end{bmatrix}$ confirms a nonzero determinant, so the solution is unique.
+# ✖️ Matrix Multiplication
+
+**Part 2 of 7**
+
+### The Rule: Row × Column
+
+To multiply $A \\cdot B$:
+- $A$ must have same number of **columns** as $B$ has **rows**
+- Result dimensions: (rows of $A$) × (columns of $B$)
+
+$$A_{m \\times n} \\cdot B_{n \\times p} = C_{m \\times p}$$
+
+### How to Compute Entry $c_{ij}$
+
+**Dot product** of row $i$ of $A$ with column $j$ of $B$:
+
+$$c_{ij} = \\sum_{k=1}^n a_{ik} \\cdot b_{kj}$$
+
+### Example
+
+$$\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix} \\begin{bmatrix} 5 & 6 \\\\ 7 & 8 \\end{bmatrix} = \\begin{bmatrix} 1(5)+2(7) & 1(6)+2(8) \\\\ 3(5)+4(7) & 3(6)+4(8) \\end{bmatrix} = \\begin{bmatrix} 19 & 22 \\\\ 43 & 50 \\end{bmatrix}$$
       `
     },
     {
-      id: 'precalc-matrices-precalc-p2-s2-mcq-core',
+      id: 'p2-properties',
+      type: 'text' as const,
+      content: `
+## ⚠️ Important Properties
+
+### NOT Commutative!
+
+$$AB \\neq BA \\text{ (in general)}$$
+
+**Example**: $AB = \\begin{bmatrix} 19 & 22 \\\\ 43 & 50 \\end{bmatrix}$ but $BA = \\begin{bmatrix} 23 & 34 \\\\ 31 & 46 \\end{bmatrix}$
+
+### Other Properties
+
+- $(AB)C = A(BC)$ — associative ✓
+- $A(B+C) = AB+AC$ — distributive ✓
+- $AI = IA = A$ — identity ✓
+- $kA \\cdot B = k(AB) = A \\cdot kB$ — scalar ✓
+
+### Dimension Check
+
+$A$ is $2 \\times 3$, $B$ is $3 \\times 4$:
+- $AB$: ✅ ($2 \\times 4$ result)
+- $BA$: ❌ ($4 \\neq 2$, can't multiply)
+
+> 💡 **Memory trick**: inner dimensions must match, outer dimensions give result size.
+      `
+    },
+    {
+      id: 'p2-special',
+      type: 'text' as const,
+      content: `
+## 🎯 Special Multiplications
+
+### Matrix × Column Vector
+
+$$\\begin{bmatrix} 2 & 1 \\\\ 3 & -1 \\end{bmatrix} \\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 2x+y \\\\ 3x-y \\end{bmatrix}$$
+
+This is how $A\\vec{x} = \\vec{b}$ works!
+
+### Powers of Matrices
+
+$$A^2 = A \\cdot A, \\quad A^3 = A \\cdot A \\cdot A$$
+
+Only defined for **square** matrices.
+
+### The Identity Matrix
+
+$$I_2 = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}, \\quad I_3 = \\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{bmatrix}$$
+
+$AI = IA = A$ for any compatible matrix $A$.
+
+Like multiplying by 1 in regular arithmetic!
+      `
+    },
+    {
+      id: 'p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Multiplication Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of entry.',
-            options: [
-              'matrix that undoes another matrix',
-              'single value identified by row and column',
-              'scalar indicating area scaling and invertibility in $2	imes2$',
-              'composition of linear mappings'
-            ],
-            correctAnswer: 1,
-            explanation: 'entry is defined as: single value identified by row and column.'
+            question: '$\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix} \\begin{bmatrix} 3 & 7 \\\\ -2 & 5 \\end{bmatrix} = ?$',
+            options: ['$\\begin{bmatrix} 3 & 7 \\\\ -2 & 5 \\end{bmatrix}$', '$\\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}$', '$\\begin{bmatrix} 3 & 0 \\\\ 0 & 5 \\end{bmatrix}$', '$\\begin{bmatrix} 4 & 7 \\\\ -2 & 6 \\end{bmatrix}$'],
+            correctAnswer: 0,
+            explanation: 'Identity times any matrix = that matrix.'
           },
           {
-            question: 'In combining weighted data transforms, which expression is the best starting model?',
-            options: [
-              '$(AB)_{ij}=\\sum_k a_{ik}b_{kj}$',
-              '$\\det\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}=ad-bc$',
-              '$A^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}$',
-              '$AI=IA=A$'
-            ],
+            question: 'Can a $(3 \\times 2)$ matrix multiply a $(3 \\times 2)$ matrix?',
+            options: ['Yes, result is $3 \\times 2$', 'Yes, result is $2 \\times 3$', 'No', 'Yes, result is $3 \\times 3$'],
             correctAnswer: 2,
-            explanation: 'Use $A^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}$ first, then substitute known quantities from the prompt.'
+            explanation: 'Inner dimensions: $2 \\neq 3$. Cannot multiply.'
+          },
+          {
+            question: '$\\begin{bmatrix} 2 & 1 \\end{bmatrix} \\begin{bmatrix} 3 \\\\ 4 \\end{bmatrix} = ?$',
+            options: ['$10$', '$\\begin{bmatrix} 6 \\\\ 4 \\end{bmatrix}$', '$\\begin{bmatrix} 6 & 4 \\end{bmatrix}$', 'Cannot multiply'],
+            correctAnswer: 0,
+            explanation: '$(1 \\times 2)(2 \\times 1) = (1 \\times 1)$: $2(3)+1(4) = 10$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-matrices-precalc-p2-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | 2x2 inverse | $A^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\-c&a\end{bmatrix}$ | solving small systems |
-      | Product entry | $(AB)_{ij}=\sum_k a_{ik}b_{kj}$ | matrix multiplication |
-      | Identity action | $AI=IA=A$ | structure check |
-      | 2x2 determinant | $\det\\begin{bmatrix}a&b\\c&d\end{bmatrix}=ad-bc$ | invertibility test |
-      
-      ### Common pitfalls
-      - Dimension mismatch blocks addition or multiplication.
-      - A zero determinant means no inverse exists.
-      - Matrix multiplication is not commutative in general.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-matrices-precalc-p2-s4-input',
+      id: 'p2-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Matrix Mechanics**
-      
-      1) Compute $\det\\begin{bmatrix}5&2\\3&4\end{bmatrix}$.
-      2) Compute first entry of $\\begin{bmatrix}1&2\\0&1\end{bmatrix}\\begin{bmatrix}3\\4\end{bmatrix}$.
-      3) Compute trace of $\\begin{bmatrix}2&1\\5&7\end{bmatrix}$.
+**Compute** 🧮
+
+$\\begin{bmatrix} 2 & 3 \\\\ 1 & 0 \\end{bmatrix} \\begin{bmatrix} 1 & 4 \\\\ 2 & -1 \\end{bmatrix}$
+
+**1)** Entry $(1,1)$ = ?
+
+**2)** Entry $(1,2)$ = ?
+
+**3)** Entry $(2,1)$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['14', '11', '9'],
-        hint1: 'Use $ad-bc$.',
-        hint2: 'Dot first row with the column vector.',
-        hint3: 'Trace is the sum of diagonal entries.',
-        explanation: 'Determinant is 14, product entry is 11, and trace is 9.'
+        correctAnswers: ['8', '5', '1'],
+        hint1: '$2(1)+3(2) = 8$.',
+        hint2: '$2(4)+3(-1) = 5$.',
+        hint3: '$1(1)+0(2) = 1$.',
+        explanation: 'Row 1 · Col 1: $8$. Row 1 · Col 2: $5$. Row 2 · Col 1: $1$.'
       }
     },
     {
-      id: 'precalc-matrices-precalc-p2-s5-dropdown',
+      id: 'p2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Multiplication Rules** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'entry',
-            options: ['matrix that undoes another matrix', 'single value identified by row and column', 'scalar indicating area scaling and invertibility in $2	imes2$', 'composition of linear mappings']
+            label: 'Matrix multiplication is:',
+            options: ['Commutative', 'Not commutative', 'Always undefined', 'Same as addition'],
+            correctAnswer: 1
           },
           {
-            label: 'matrix product',
-            options: ['scalar indicating area scaling and invertibility in $2	imes2$', 'matrix that undoes another matrix', 'composition of linear mappings', 'multiplicative neutral matrix']
+            label: '$(2 \\times 3)(3 \\times 5)$ gives dimensions:',
+            options: ['$2 \\times 5$', '$3 \\times 3$', '$5 \\times 2$', 'Undefined'],
+            correctAnswer: 0
           },
           {
-            label: 'determinant',
-            options: ['system coefficients with constants in one array', 'matrix that undoes another matrix', 'scalar indicating area scaling and invertibility in $2	imes2$', 'multiplicative neutral matrix']
+            label: '$A \\cdot I = ?$',
+            options: ['$I$', '$A$', '$O$', '$A^2$'],
+            correctAnswer: 1
+          },
+          {
+            label: 'To compute $c_{23}$, use:',
+            options: ['Row 2 of A, Column 3 of B', 'Row 3 of A, Column 2 of B', 'Row 2 of B, Column 3 of A', 'Diagonal entries'],
+            correctAnswer: 0
           }
         ],
-        correctAnswers: ['single value identified by row and column', 'composition of linear mappings', 'scalar indicating area scaling and invertibility in $2	imes2$'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: entry, matrix product, and determinant align with their exact definitions used in this part.'
+        correctAnswers: ['Not commutative', '$2 \\times 5$', '$A$', 'Row 2 of A, Column 3 of B'],
+        hint1: '$AB \\neq BA$ in general.',
+        hint2: 'Outer dims: $2, 5$.',
+        hint3: 'Identity is like multiplying by 1.',
+        explanation: 'Not commutative. $2×5$. $AI=A$. $c_{ij}$: row $i$ of $A$ · col $j$ of $B$.'
       }
     },
     {
-      id: 'precalc-matrices-precalc-p2-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to entry, matrix product, and determinant so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-matrices-precalc-p2-s7-mcq-applied',
+      id: 'p2-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is combining weighted data transforms. Which term best anchors the next reasoning step if the key idea is: matrix that undoes another matrix?',
-            options: [
-              'inverse matrix',
-              'matrix product',
-              'entry',
-              'determinant'
-            ],
+            question: '$\\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}^2$: entry $(2,2)$?',
+            options: ['$22$', '$16$', '$50$', '$20$'],
             correctAnswer: 0,
-            explanation: 'inverse matrix matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$A^2 = AA$. Row 2 · Col 2: $3(2)+4(4) = 6+16 = 22$.'
           },
           {
-            question: 'A student is solving a mixed matrices prompt. Which term best anchors the next reasoning step if the key idea is: multiplicative neutral matrix?',
-            options: [
-              'inverse matrix',
-              'identity matrix',
-              'determinant',
-              'augmented matrix'
-            ],
-            correctAnswer: 1,
-            explanation: 'identity matrix matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'If $A$ is $4 \\times 2$ and $B$ is $2 \\times 7$, what is $AB$?',
+            options: ['$4 \\times 7$', '$2 \\times 2$', '$7 \\times 4$', 'Undefined'],
+            correctAnswer: 0,
+            explanation: '$(4 \\times 2)(2 \\times 7) = 4 \\times 7$. Inner dims match: $2 = 2$.'
           }
         ]
       }

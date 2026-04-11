@@ -5,17 +5,30 @@ export const chemPropertiesStatesMatterPart2Data = {
       id: 'sm2-intro',
       type: 'text' as const,
       title: 'Properties of Solids — Introduction',
-      content: `
-# 🧊 Properties of Solids
+      content: `# 🧊 Properties of Solids
 
 **Part 2 of 7 — Types of Solids and Their Properties**
 
-Solids have a definite shape and definite volume because their particles are held in fixed positions by **strong interparticle forces**. But not all solids are the same — the **type of particles** and **bonding** within a solid determine its physical properties.
+---
 
-We classify solids into two broad categories:
-- **Crystalline solids** — particles arranged in a **regular, repeating 3D pattern** (a crystal lattice)
-- **Amorphous solids** — particles arranged in a **random, disordered** pattern (no long-range order)
-      `
+### Topics in This Part
+
+| Section |
+|---------|
+| Crystalline vs. Amorphous Solids |
+| Crystalline Solids |
+| Amorphous Solids |
+| Types of Crystalline Solids |
+| 1. Ionic Solids |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sm2-crystalline-vs-amorphous',
@@ -90,7 +103,7 @@ We classify solids into two broad categories:
 
 The lattice energy (strength of ionic bonding) depends on **charge** and **ionic radius**:
 
-$$\\text{Lattice Energy} \\propto \\frac{q^+ \\times q^-}{r^+ + r^-}$$
+$$\\boxed{\\text{Lattice Energy} \\propto \\frac{q^+ \\times q^-}{r^+ + r^-}}$$
 
 MgO has 2+/2− charges vs. NaCl\'s 1+/1−, and smaller ions, giving MgO much stronger ionic bonds.
       `
@@ -112,9 +125,11 @@ MgO has 2+/2− charges vs. NaCl\'s 1+/1−, and smaller ions, giving MgO much s
 
 **Examples:** Ice (H₂O, 0°C mp), dry ice (CO₂, sublimes at −78°C), sugar (C₁₂H₂₂O₁₁), I₂
 
-### Key Insight
+---
 
-The **intramolecular bonds** (covalent bonds within each molecule) are strong, but the **intermolecular forces** (between molecules) are relatively weak. It\'s the IMFs that determine the melting point — you\'re separating molecules from each other, not breaking covalent bonds.
+> 🔑 **Key Concept:** The **intramolecular bonds** (covalent bonds within each molecule) are strong, but the **intermolecular forces** (between molecules) are relatively weak. It\'s the IMFs that determine the melting point — you\'re separating molecules from each other, not breaking covalent bonds.
+
+> ⚠️ **Warning:** On the AP exam, never say a molecular solid has a low melting point because it has "weak bonds." The covalent bonds *within* each molecule are strong — it\'s the IMFs *between* molecules that are weak.
       `
     },
     {
@@ -166,6 +181,10 @@ When layers of a metal are displaced, the delocalized electrons shift to maintai
 Both are pure carbon, but:
 - **Diamond**: 3D network of $sp^3$ bonds → extremely hard, does not conduct
 - **Graphite**: 2D sheets of $sp^2$ bonds with delocalized $\\pi$ electrons → slippery layers, conducts electricity
+
+---
+
+> 💡 **Tip:** Graphite is the rare exception — a network covalent solid that **conducts electricity** due to delocalized $\\pi$ electrons between its carbon layers.
       `
     },
     {
@@ -260,7 +279,7 @@ The melting point of a solid depends on the **strength of the forces** holding p
 
 **Ranking by typical melting points (from lowest to highest):**
 
-$$\\text{Molecular} < \\text{Metallic (varies)} < \\text{Ionic} < \\text{Network Covalent}$$
+$$\\boxed{\\text{Molecular} < \\text{Metallic (varies)} < \\text{Ionic} < \\text{Network Covalent}}$$
 
 ### Within each category:
 

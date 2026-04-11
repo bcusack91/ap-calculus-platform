@@ -4,13 +4,30 @@ export const chemEnthalpyCalorimetryPart3Data = {
     {
       id: 'eh3-intro',
       type: 'text' as const,
-      content: `
-# ☕ Calorimetry — Measuring Heat
+      content: `# ☕ Calorimetry — Measuring Heat
 
 **Part 3 of 7 — q = mcΔT and the Coffee-Cup Calorimeter**
 
-How do we actually measure enthalpy changes? We use **calorimetry** — the science of measuring heat flow. The basic idea is simple: if a reaction releases heat, the surrounding water gets warmer. By measuring that temperature change, we can calculate how much heat was transferred.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 The Heat Equation |
+| Specific Heat Capacity |
+| 📌 The Coffee-Cup Calorimeter |
+| How It Works |
+| Key Assumptions |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'eh3-heat-equation',
@@ -18,7 +35,7 @@ How do we actually measure enthalpy changes? We use **calorimetry** — the scie
       content: `
 ## 📌 The Heat Equation
 
-$$q = mc\\Delta T$$
+$$\\boxed{q = mc\\Delta T}$$
 
 | Symbol | Meaning | Common Units |
 |--------|---------|-------------|
@@ -78,9 +95,11 @@ A simple calorimeter made from a **Styrofoam cup** with a lid and thermometer.
 
 ### Important Sign Convention
 
-$$q_{\\text{rxn}} = -q_{\\text{solution}}$$
+$$\\boxed{q_{\\text{rxn}} = -q_{\\text{solution}}}$$
 
 If the solution **warms up** ($q_{\\text{solution}} > 0$), the reaction is **exothermic** ($q_{\\text{rxn}} < 0$).
+
+> ⚠️ **Common AP Mistake:** Don’t forget the negative sign! $q_{\\text{rxn}}$ and $q_{\\text{solution}}$ always have opposite signs.
 
 
 ---
@@ -96,29 +115,35 @@ $$q_p = \\Delta H$$
       id: 'eh3-example-walkthrough',
       type: 'text' as const,
       content: `
-## 🧪 Worked Example
+## 🧪 Worked Example — Coffee-Cup Calorimetry
 
-**Problem:** When 50.0 mL of 1.00 M HCl is mixed with 50.0 mL of 1.00 M NaOH in a coffee-cup calorimeter, the temperature rises from 22.0°C to 28.9°C. Calculate $\\Delta H$ per mole of water formed.
+> **Problem:** When 50.0 mL of 1.00 M HCl is mixed with 50.0 mL of 1.00 M NaOH in a coffee-cup calorimeter, the temperature rises from 22.0°C to 28.9°C. Calculate $\\Delta H$ per mole of water formed.
 
-**Step 1: Calculate total mass**
-$$m = 100.0 \\text{ mL} \\times 1.00 \\text{ g/mL} = 100.0 \\text{ g}$$
+### Given
 
-**Step 2: Calculate $\\Delta T$**
-$$\\Delta T = 28.9 - 22.0 = 6.9°\\text{C}$$
+| Quantity | Value |
+|----------|-------|
+| Volume of HCl | 50.0 mL of 1.00 M |
+| Volume of NaOH | 50.0 mL of 1.00 M |
+| $T_i$ | 22.0°C |
+| $T_f$ | 28.9°C |
+| $c_{\\text{water}}$ | 4.184 J/(g·°C) |
+| $d_{\\text{solution}}$ | 1.00 g/mL |
 
-**Step 3: Calculate $q_{\\text{solution}}$**
-$$q_{\\text{solution}} = mc\\Delta T = (100.0)(4.184)(6.9) = 2887 \\text{ J} = 2.89 \\text{ kJ}$$
+---
 
-**Step 4: Find $q_{\\text{rxn}}$**
-$$q_{\\text{rxn}} = -q_{\\text{solution}} = -2.89 \\text{ kJ}$$
+### Step-by-Step Solution
 
-**Step 5: Calculate moles of water formed**
-$$n = 0.0500 \\text{ L} \\times 1.00 \\text{ M} = 0.0500 \\text{ mol}$$
+| Step | Action | Calculation | Result |
+|------|--------|-------------|--------|
+| 1 | Mass of solution | $100.0 \\text{ mL} \\times 1.00 \\text{ g/mL}$ | 100.0 g |
+| 2 | Temperature change | $28.9 - 22.0$ | $\\Delta T = 6.9°\\text{C}$ |
+| 3 | Heat absorbed by solution | $(100.0)(4.184)(6.9)$ | $q_{\\text{sol}} = 2887 \\text{ J} = 2.89 \\text{ kJ}$ |
+| 4 | Heat of reaction | $-q_{\\text{solution}}$ | $q_{\\text{rxn}} = -2.89 \\text{ kJ}$ |
+| 5 | Moles of water formed | $0.0500 \\text{ L} \\times 1.00 \\text{ M}$ | 0.0500 mol |
+| 6 | $\\Delta H$ per mole | $-2.89 / 0.0500$ | $\\Delta H = -57.8 \\text{ kJ/mol}$ |
 
-**Step 6: Calculate $\\Delta H$ per mole**
-$$\\Delta H = \\frac{-2.89 \\text{ kJ}}{0.0500 \\text{ mol}} = -57.8 \\text{ kJ/mol}$$
-
-The accepted value is $-55.8$ kJ/mol — our measurement is close!
+> 🔑 **Result:** $\\Delta H = -57.8$ kJ/mol. The accepted value is $-55.8$ kJ/mol — our measurement is close! The negative sign confirms the reaction is **exothermic**.
       `
     },
     {

@@ -2,186 +2,191 @@ export const precalcRatesOfChangePart2Data = {
   topicSlug: 'rates-of-change-precalc',
   sections: [
     {
-      id: 'precalc-rates-of-change-precalc-p2-s1-intro',
+      id: 'p2-intro',
       type: 'text' as const,
       content: `
-      ## Rates of Change: Units and interpretation
-      
-      **Part 2 of 7**
-      
-      This part focuses on translating slope units in science models. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **secant slope**: slope through two points on a graph
-      - **unit rate**: rate normalized to one input unit
-      - **increasing interval**: interval where function values rise as input increases
-      
-      
-      ### Worked Example
-      Part 2 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🔬 The Difference Quotient
+
+**Part 2 of 7**
+
+### From AROC to Instant Rate
+
+The **difference quotient** uses a variable step size $h$:
+
+$$\\frac{f(x+h) - f(x)}{h}$$
+
+This represents the AROC over the interval $[x, x+h]$.
+
+As $h \\to 0$, the secant line approaches the **tangent line** — giving the **instantaneous rate of change**.
+
+### The Big Idea
+
+$$\\text{IROC} = \\lim_{h \\to 0}\\frac{f(x+h) - f(x)}{h}$$
+
+This limit IS the derivative $f'(x)$. But in precalculus, we focus on **computing the difference quotient** and understanding what happens as $h$ shrinks.
       `
     },
     {
-      id: 'precalc-rates-of-change-precalc-p2-s2-mcq-core',
+      id: 'p2-examples',
+      type: 'text' as const,
+      content: `
+## Worked Examples
+
+### Example 1: $f(x) = x^2$
+
+$$\\frac{f(x+h) - f(x)}{h} = \\frac{(x+h)^2 - x^2}{h}$$
+
+Expand: $(x+h)^2 = x^2 + 2xh + h^2$
+
+$$= \\frac{x^2 + 2xh + h^2 - x^2}{h} = \\frac{2xh + h^2}{h} = \\frac{h(2x + h)}{h} = 2x + h$$
+
+As $h \\to 0$: difference quotient $\\to 2x$. So the slope at any point is $2x$.
+
+### Example 2: $f(x) = 3x + 5$
+
+$$\\frac{(3(x+h)+5) - (3x+5)}{h} = \\frac{3h}{h} = 3$$
+
+Constant! The "derivative" of a linear function is its slope.
+
+### Example 3: $f(x) = 1/x$
+
+$$\\frac{\\frac{1}{x+h} - \\frac{1}{x}}{h} = \\frac{\\frac{x - (x+h)}{x(x+h)}}{h} = \\frac{-h}{hx(x+h)} = \\frac{-1}{x(x+h)}$$
+
+As $h \\to 0$: $\\frac{-1}{x^2}$. The slope at $x$ is $-1/x^2$.
+      `
+    },
+    {
+      id: 'p2-simplify',
+      type: 'text' as const,
+      content: `
+## Simplification Strategies
+
+### Step-by-Step Process
+
+1. **Write** $f(x+h)$ — replace every $x$ with $(x+h)$
+2. **Subtract** $f(x)$
+3. **Expand** all terms
+4. **Cancel** — the $f(x)$ terms must vanish
+5. **Factor out** $h$ from the numerator
+6. **Cancel** the $h$ in numerator and denominator
+7. **Let $h \\to 0$** (for the limit / IROC)
+
+### Common Expansion Patterns
+
+- $(x+h)^2 = x^2 + 2xh + h^2$
+- $(x+h)^3 = x^3 + 3x^2h + 3xh^2 + h^3$
+- $\\sqrt{x+h}$: rationalize with conjugate
+
+### Key Insight
+
+After simplifying, $h$ **must** cancel from the denominator. If it doesn't, you made an algebra error.
+      `
+    },
+    {
+      id: 'p2-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Difference Quotient Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of secant slope.',
-            options: [
-              'interval where function values rise as input increases',
-              'slope through two points on a graph',
-              'interval where function values fall as input increases',
-              'rate normalized to one input unit'
-            ],
+            question: 'Difference quotient of $f(x) = x^2$ simplifies to:',
+            options: ['$2x$', '$2x + h$', '$x^2 + h$', '$2xh$'],
             correctAnswer: 1,
-            explanation: 'secant slope is defined as: slope through two points on a graph.'
+            explanation: '$\\frac{(x+h)^2-x^2}{h} = \\frac{2xh+h^2}{h} = 2x+h$.'
           },
           {
-            question: 'In translating slope units in science models, which expression is the best starting model?',
-            options: [
-              '$y=mx+b$',
-              '$\\frac{f(b)-f(a)}{b-a}$',
-              '$\\frac{\\text{new}-\\text{old}}{\\text{old}}\\cdot 100\\%$',
-              '$m=\\frac{y_2-y_1}{x_2-x_1}$'
-            ],
-            correctAnswer: 3,
-            explanation: 'Use $m=\\frac{y_2-y_1}{x_2-x_1}$ first, then substitute known quantities from the prompt.'
+            question: 'As $h \\to 0$ in the difference quotient of $x^2$, we get:',
+            options: ['$0$', '$2x$', '$x^2$', '$2$'],
+            correctAnswer: 1,
+            explanation: '$2x + h \\to 2x + 0 = 2x$.'
+          },
+          {
+            question: 'Difference quotient of $f(x) = 5x - 1$:',
+            options: ['$5$', '$5 + h$', '$5x$', '$5h$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{5(x+h)-1-(5x-1)}{h} = \\frac{5h}{h} = 5$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p2-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Slope | $m=\\frac{y_2-y_1}{x_2-x_1}$ | point-pair rate |
-      | Percent change | $\\frac{\\text{new}-\\text{old}}{\\text{old}}\cdot 100\%$ | relative growth/decline |
-      | Linear model | $y=mx+b$ | constant-rate baseline |
-      | Average rate | $\\frac{f(b)-f(a)}{b-a}$ | secant computation |
-      
-      ### Common pitfalls
-      - Rate units must combine output units per input unit.
-      - Do not compare rates across intervals without checking interval lengths.
-      - A positive average rate on an interval does not force monotonic increase everywhere inside.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-rates-of-change-precalc-p2-s4-input',
+      id: 'p2-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Rate Calculations**
-      
-      1) Compute average rate for $f(x)=x^2$ on $[2,5]$.
-      2) Find slope through $(1,3)$ and $(4,15)$.
-      3) Compute percent change from 50 to 65.
+**Simplify each difference quotient:**
+
+**1)** $f(x) = x^2 + 3x$. Simplified DQ = $2x + h + ?$ (fill in the number)
+
+**2)** $f(x) = 4x^2$. Simplified DQ = $?x + 4h$ (fill the coefficient)
+
+**3)** Limit as $h \\to 0$ of DQ for $f(x) = x^3$ at $x = 2$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7', '4', '30'],
-        hint1: 'Use $\\rac{f(5)-f(2)}{5-2}$.',
-        hint2: 'Use slope formula with ordered pairs.',
-        hint3: 'Relative change is $\\rac{15}{50}\\cdot100\\%$.',
-        explanation: 'Average rate is 7, secant slope is 4, and percent increase is 30%.'
+        correctAnswers: ['3', '8', '12'],
+        hint1: 'DQ = $\\frac{(x+h)^2+3(x+h)-x^2-3x}{h}$. Expand and simplify.',
+        hint2: 'DQ = $\\frac{4(x+h)^2 - 4x^2}{h} = \\frac{4(2xh+h^2)}{h} = 8x + 4h$.',
+        hint3: 'DQ of $x^3$ simplifies to $3x^2 + 3xh + h^2$. At $x=2, h=0$: $3(4) = 12$.',
+        explanation: '(1) DQ = $2x+h+3$. (2) $8x+4h$. (3) $3(2)^2 = 12$.'
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p2-s5-dropdown',
+      id: 'p2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**DQ Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'secant slope',
-            options: ['interval where function values fall as input increases', 'slope through two points on a graph', 'interval where function values rise as input increases', 'rate normalized to one input unit']
+            label: 'The first step in computing a DQ is:',
+            options: ['Take the limit', 'Find $f(x+h)$', 'Factor', 'Set $h=0$'],
+            correctAnswer: 1
           },
           {
-            label: 'unit rate',
-            options: ['small-interval trend around one input', 'interval where function values fall as input increases', 'rate normalized to one input unit', 'interval where function values rise as input increases']
+            label: 'If $h$ doesn\'t cancel, you should:',
+            options: ['Set $h=0$', 'Check algebra for errors', 'Conclude limit DNE', 'Skip the problem'],
+            correctAnswer: 1
           },
           {
-            label: 'increasing interval',
-            options: ['interval where function values fall as input increases', 'interval where function values rise as input increases', 'small-interval trend around one input', 'relative change expressed as a percent']
+            label: 'DQ of a constant function $f(x) = 7$:',
+            options: ['$7$', '$1$', '$0$', '$7/h$'],
+            correctAnswer: 2
+          },
+          {
+            label: 'The limit of the DQ as $h \\to 0$ gives:',
+            options: ['Average velocity', 'Instantaneous rate of change', 'Total change', 'Acceleration'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['slope through two points on a graph', 'rate normalized to one input unit', 'interval where function values rise as input increases'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: secant slope, unit rate, and increasing interval align with their exact definitions used in this part.'
+        correctAnswers: ['Find $f(x+h)$', 'Check algebra for errors', '$0$', 'Instantaneous rate of change'],
+        hint1: 'Replace $x$ with $x+h$ in the function.',
+        hint2: 'The $h$ MUST cancel — algebra error otherwise.',
+        hint3: '$\\frac{7-7}{h} = 0$.',
+        explanation: 'Start with $f(x+h)$. $h$ must cancel. Constant DQ = 0. $h \\to 0$ gives IROC (the derivative).'
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p2-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to secant slope, unit rate, and increasing interval so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-rates-of-change-precalc-p2-s7-mcq-applied',
+      id: 'p2-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is translating slope units in science models. Which term best anchors the next reasoning step if the key idea is: interval where function values fall as input increases?',
-            options: [
-              'unit rate',
-              'decreasing interval',
-              'secant slope',
-              'increasing interval'
-            ],
-            correctAnswer: 1,
-            explanation: 'decreasing interval matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Difference quotient of $f(x) = x^2 - 4x$:',
+            options: ['$2x + h - 4$', '$2x - 4$', '$2x + h$', '$x^2 + h - 4$'],
+            correctAnswer: 0,
+            explanation: 'Expand: $(x+h)^2-4(x+h)-x^2+4x = 2xh+h^2-4h$. Divide by $h$: $2x+h-4$.'
           },
           {
-            question: 'A student is solving a mixed rates of change prompt. Which term best anchors the next reasoning step if the key idea is: small-interval trend around one input?',
-            options: [
-              'increasing interval',
-              'decreasing interval',
-              'local behavior',
-              'percent change'
-            ],
-            correctAnswer: 2,
-            explanation: 'local behavior matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'The difference quotient is the slope of a:',
+            options: ['Tangent line', 'Secant line', 'Horizontal line', 'Vertical line'],
+            correctAnswer: 1,
+            explanation: 'DQ = slope of secant through $(x,f(x))$ and $(x+h,f(x+h))$. The LIMIT gives the tangent.'
           }
         ]
       }

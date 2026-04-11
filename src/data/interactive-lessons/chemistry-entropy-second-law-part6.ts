@@ -4,13 +4,24 @@ export const chemEntropySecondLawPart6Data = {
     {
       id: 'en6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Problem-Solving Workshop — Entropy
+      content: `# 🛠️ Problem-Solving Workshop — Entropy
 
 **Part 6 of 7 — Practice and Strategies**
 
-This workshop focuses on the types of entropy problems you will encounter on the AP exam. We will practice predicting signs, calculating $\\Delta S°$, and connecting entropy to spontaneity.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'en6-strategy-review',
@@ -18,37 +29,28 @@ This workshop focuses on the types of entropy problems you will encounter on the
       content: `
 ## 🛠️ Problem-Solving Strategies
 
-### Strategy 1: Predict the Sign of ΔS
+---
 
-1. Count moles of gas: $\\Delta n_{\\text{gas}} = \\text{mol gas (products)} - \\text{mol gas (reactants)}$
-2. If $\\Delta n_{\\text{gas}} > 0$: $\\Delta S > 0$
-3. If $\\Delta n_{\\text{gas}} < 0$: $\\Delta S < 0$
-4. If $\\Delta n_{\\text{gas}} = 0$: consider phase changes, complexity, and total moles
+### 📌 Strategy Reference
 
+| Strategy | Formula / Method | Key Warning |
+|----------|-----------------|-------------|
+| Predict sign of ΔS | Count $\\Delta n_{\\text{gas}}$ (products − reactants) | If $\\Delta n = 0$, consider phase & complexity |
+| Calculate ΔS° | $\\Delta S° = \\sum n \\cdot S°(\\text{prod}) - \\sum m \\cdot S°(\\text{react})$ | $S°$ for elements is **NOT** zero! |
+| Unit conversion | Convert ΔS from J/K to kJ/K (÷ 1000) | Must match ΔH units before computing ΔG |
+| Entropy of surroundings | $\\Delta S_{\\text{surr}} = -\\frac{\\Delta H_{\\text{sys}}}{T}$ | Exothermic → positive ΔSₛᵤᵣᵣ |
 
 ---
 
-### Strategy 2: Calculate ΔS°
+### ⚠️ Predicting the Sign of ΔS
 
-$$\\Delta S° = \\sum n \\cdot S°(\\text{products}) - \\sum m \\cdot S°(\\text{reactants})$$
+| $\\Delta n_{\\text{gas}}$ | Sign of ΔS | Reasoning |
+|--------------------------|------------|-----------|
+| > 0 | Positive (+) | More gas moles = more disorder |
+| < 0 | Negative (−) | Fewer gas moles = less disorder |
+| = 0 | Check other factors | Phase changes, molecular complexity |
 
-Remember: $S°$ for elements is NOT zero!
-
-
----
-
-### Strategy 3: Unit Conversion
-
-- $\\Delta H$ is typically in **kJ**
-- $\\Delta S$ is typically in **J/K**
-- For $\\Delta G = \\Delta H - T\\Delta S$: convert $\\Delta S$ to kJ/K by dividing by 1000
-
-
----
-
-### Strategy 4: Entropy of Surroundings
-
-$$\\Delta S_{\\text{surr}} = -\\frac{\\Delta H_{\\text{sys}}}{T}$$
+> ⚠️ **Critical:** $\\Delta H$ is in **kJ** but $\\Delta S$ is in **J/K**. Always convert before computing $\\Delta G = \\Delta H - T\\Delta S$!
       `
     },
     {

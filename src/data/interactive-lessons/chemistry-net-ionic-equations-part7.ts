@@ -4,13 +4,24 @@ export const chemNetIonicEquationsPart7Data = {
     {
       id: 'ni7-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Synthesis & AP Review
+      content: `# 🧪 Synthesis & AP Review
 
 **Part 7 of 7 — AP-Style Net Ionic Equation Problems**
 
-This final lesson brings together everything: molecular equations, complete ionic equations, net ionic equations, solubility rules, acid-base chemistry, and gas-forming reactions. The problems mirror the style and difficulty of AP Chemistry free-response questions.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'ni7-ap-tips',
@@ -41,13 +52,12 @@ On the AP Chemistry exam, you may be asked to:
 
 ---
 
-### Scoring Tips
-
-1. **Correct formulas** — wrong formula = wrong answer
-2. **Correct charges** — always include charges on ions
-3. **Correct phases** — $(s)$, $(l)$, $(g)$, $(aq)$ matter
-4. **Balanced** — both atoms and charges must balance
-5. **Lowest whole-number coefficients** — simplify the equation
+> 💡 **AP Scoring Tips:**
+> 1. **Correct formulas** — wrong formula = wrong answer
+> 2. **Correct charges** — always include charges on ions
+> 3. **Correct phases** — $(s)$, $(l)$, $(g)$, $(aq)$ matter
+> 4. **Balanced** — both atoms and charges must balance
+> 5. **Lowest whole-number coefficients** — simplify the equation
       `
     },
     {
@@ -71,12 +81,11 @@ On the AP Chemistry exam, you may be asked to:
 
 ---
 
-### Quick Solubility Reminders
-
-- **Always soluble:** Na⁺, K⁺, NH₄⁺, NO₃⁻
-- **Usually soluble:** Cl⁻, Br⁻, I⁻ (except Ag⁺, Pb²⁺, Hg₂²⁺)
-- **Usually soluble:** SO₄²⁻ (except Ba²⁺, Pb²⁺, Ca²⁺, Sr²⁺)
-- **Usually insoluble:** OH⁻, S²⁻, CO₃²⁻, PO₄³⁻ (except Group 1, NH₄⁺)
+> 🔑 **Quick Solubility Rules:**
+> - **Always soluble:** Na⁺, K⁺, NH₄⁺, NO₃⁻
+> - **Usually soluble:** Cl⁻, Br⁻, I⁻ (except Ag⁺, Pb²⁺, Hg₂²⁺)
+> - **Usually soluble:** SO₄²⁻ (except Ba²⁺, Pb²⁺, Ca²⁺, Sr²⁺)
+> - **Usually insoluble:** OH⁻, S²⁻, CO₃²⁻, PO₄³⁻ (except Group 1, NH₄⁺)
       `
     },
     {

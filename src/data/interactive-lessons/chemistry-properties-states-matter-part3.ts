@@ -5,19 +5,30 @@ export const chemPropertiesStatesMatterPart3Data = {
       id: 'sm3-intro',
       type: 'text' as const,
       title: 'Properties of Liquids — Introduction',
-      content: `
-# 💧 Properties of Liquids
+      content: `# 💧 Properties of Liquids
 
 **Part 3 of 7 — Surface Tension, Viscosity, Capillary Action, and Vapor Pressure**
 
-Liquids occupy a middle ground between solids and gases. Their particles are close together (like solids) but can move past one another (like gases). This unique combination gives liquids several distinctive properties that are directly tied to the **strength of their intermolecular forces (IMFs)**.
+---
 
-The four key liquid properties we\'ll explore:
-1. **Surface tension** — the "skin" on a liquid surface
-2. **Viscosity** — resistance to flow
-3. **Capillary action** — liquid climbing up narrow tubes
-4. **Vapor pressure** — tendency of molecules to escape to the gas phase
-      `
+### Topics in This Part
+
+| Section |
+|---------|
+| Surface Tension |
+| What Is It? |
+| Why Does It Happen? |
+| Factors Affecting Surface Tension |
+| Examples |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sm3-surface-tension',
@@ -118,9 +129,9 @@ For a liquid to flow, molecules must **slide past one another**. Anything that m
 | Motor oil | ~200 | Large molecules, tangling |
 | Honey | ~2,000–10,000 | Sugars with extensive H-bonding |
 
-### Temperature Dependence
+---
 
-This is why warming honey makes it flow more easily — increased thermal energy helps molecules overcome intermolecular attractions.
+> 💡 **Tip:** Warming honey makes it flow more easily — increased thermal energy helps molecules overcome intermolecular attractions, reducing viscosity.
       `
     },
     {
@@ -248,19 +259,17 @@ Vapor pressure is the **pressure exerted by a vapor in equilibrium with its liqu
 - **Higher temperature → higher vapor pressure** (more molecules have enough KE to escape)
 - The relationship is exponential, described by the **Clausius-Clapeyron equation**:
 
-$$\\ln P = -\\frac{\\Delta H_{\\text{vap}}}{RT} + C$$
+$$\\boxed{\\ln P = -\\frac{\\Delta H_{\\text{vap}}}{RT} + C}$$
 
 or in its two-point form:
 
-$$\\ln\\frac{P_2}{P_1} = -\\frac{\\Delta H_{\\text{vap}}}{R}\\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)$$
+$$\\boxed{\\ln\\frac{P_2}{P_1} = -\\frac{\\Delta H_{\\text{vap}}}{R}\\left(\\frac{1}{T_2} - \\frac{1}{T_1}\\right)}$$
 
-### Boiling Point Connection
+---
 
-A liquid **boils** when its vapor pressure equals the external (atmospheric) pressure.
+> 🔑 **Key Concept:** A liquid **boils** when its vapor pressure equals the external (atmospheric) pressure. The **normal boiling point** is the temperature at which vapor pressure = 1 atm (101.3 kPa).
 
-- **Normal boiling point**: the temperature at which vapor pressure = 1 atm (101.3 kPa)
-- At higher altitudes (lower atmospheric pressure), liquids boil at **lower** temperatures
-- In a pressure cooker (higher pressure), liquids boil at **higher** temperatures
+> 💡 **Tip:** At higher altitudes (lower atmospheric pressure), liquids boil at **lower** temperatures. In a pressure cooker (higher pressure), liquids boil at **higher** temperatures.
       `
     },
     {

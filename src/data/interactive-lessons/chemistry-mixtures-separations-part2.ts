@@ -4,13 +4,30 @@ export const chemMixturesSeparationsPart2Data = {
     {
       id: 'mx2-intro',
       type: 'text' as const,
-      content: `
-# 🔥 Separation by Physical Properties
+      content: `# 🔥 Separation by Physical Properties
 
 **Part 2 of 7 — Filtration, Evaporation, and Distillation**
 
-Since mixtures are physically combined (not chemically bonded), they can be separated using **differences in physical properties** — such as particle size, boiling point, and solubility. These techniques are essential lab skills tested on the AP Chemistry exam.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Filtration |
+| How It Works |
+| When to Use |
+| Gravity vs. Vacuum Filtration |
+| 📌 Evaporation |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'mx2-filtration',
@@ -82,6 +99,8 @@ Since mixtures are physically combined (not chemically bonded), they can be sepa
 - Destroys volatile or heat-sensitive solutes
 - Wastes the solvent
 - Cannot separate two dissolved solids from each other
+
+> ⚠️ **Warning:** Evaporation only recovers the **solid** — the solvent is lost. If you need both components, use **distillation** instead.
       `
     },
     {

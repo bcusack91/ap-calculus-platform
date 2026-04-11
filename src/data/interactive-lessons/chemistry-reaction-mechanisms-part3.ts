@@ -4,13 +4,30 @@ export const chemReactionMechanismsPart3Data = {
     {
       id: 'rm3-intro',
       type: 'text' as const,
-      content: `
-# 🐢 Rate-Determining Step
+      content: `# 🐢 Rate-Determining Step
 
 **Part 3 of 7 — The Bottleneck**
 
-In a multi-step mechanism, one step is usually much slower than the others. This **rate-determining step** (RDS) controls the overall rate of the reaction — just like the slowest person in a relay race determines the team\'s time.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⏱️ The Rate-Determining Step (RDS) |
+| Definition |
+| Key Principle |
+| On an Energy Diagram |
+| ⏱️ Case 1: First Step Is Rate-Determining |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rm3-rds-concept',
@@ -27,7 +44,7 @@ The **rate-determining step** is the **slowest** elementary step in a mechanism.
 
 ### Key Principle
 
-$$\\text{Overall rate} \\approx \\text{Rate of the slowest step}$$
+$$\\boxed{\\text{Overall rate} \\approx \\text{Rate of the slowest step}}$$
 
 
 ---
@@ -39,9 +56,7 @@ The RDS corresponds to the **tallest peak** (largest $E_a$ barrier) on the energ
 
 ---
 
-### Why It Matters
-
-The rate law for the overall reaction is determined by the rate-determining step. This is how we connect mechanisms to experimentally measured rate laws.
+> 🔑 **Key Concept:** The rate law for the overall reaction is determined by the rate-determining step. This is how we connect mechanisms to experimentally measured rate laws.
       `
     },
     {
@@ -99,26 +114,22 @@ This is the simplest case. When Step 1 is slow, the rate law comes directly from
 
 ---
 
-### Example
+> **Problem:** Derive the rate law for $2\\text{NO}_2 + \\text{F}_2 \\rightarrow 2\\text{NO}_2\\text{F}$ given the mechanism below.
 
-Overall: $2\\text{NO}_2 + \\text{F}_2 \\rightarrow 2\\text{NO}_2\\text{F}$
-
-Mechanism:
+**Mechanism:**
 - Step 1: $\\text{NO}_2 + \\text{F}_2 \\rightarrow \\text{NO}_2\\text{F} + \\text{F}$ (slow — RDS)
 - Step 2: $\\text{NO}_2 + \\text{F} \\rightarrow \\text{NO}_2\\text{F}$ (fast)
 
-**Rate law from the slow step:**
+> **Solution:** Write the rate law from the slow step (bimolecular elementary step):
 
-$$\\text{Rate} = k_1[\\text{NO}_2][\\text{F}_2]$$
+$$\\boxed{\\text{Rate} = k_1[\\text{NO}_2][\\text{F}_2]}$$
 
 This is a bimolecular step, so exponents come from stoichiometry. The rate law is **first order in NO₂ and first order in F₂** — overall second order.
 
 
 ---
 
-### Notice
-
-The rate law only involves species from the **slow step**. The fast step has no effect on the rate law.
+> ⚠️ **Warning:** The rate law only involves species from the **slow step**. The fast step has no effect on the rate law.
       `
     },
     {
@@ -133,6 +144,8 @@ When a later step is rate-determining, the rate law from that step may contain a
 ---
 
 ### The Pre-Equilibrium Method
+
+> 💡 **Tip:** If a fast reversible step precedes the slow step, use the equilibrium expression to eliminate the intermediate from the rate law.
 
 If Step 1 is fast and reversible, it establishes an equilibrium before the slow step:
 
@@ -150,9 +163,14 @@ $$[\\text{C}] = K_{eq}[\\text{A}][\\text{B}]$$
 
 Substitute:
 
-$$\\text{Rate} = k_2 K_{eq}[\\text{A}][\\text{B}][\\text{D}] = k_{\\text{obs}}[\\text{A}][\\text{B}][\\text{D}]$$
+$$\\boxed{\\text{Rate} = k_2 K_{eq}[\\text{A}][\\text{B}][\\text{D}] = k_{\\text{obs}}[\\text{A}][\\text{B}][\\text{D}]}$$
 
 where $k_{\\text{obs}} = k_2 K_{eq}$.
+
+
+---
+
+> 💡 **Tip:** An alternative to pre-equilibrium is the **steady-state approximation**, which assumes $d[\\text{intermediate}]/dt \\approx 0$. Both methods eliminate intermediates, but steady-state is more general and works even when the fast step is not fully reversible.
       `
     },
     {

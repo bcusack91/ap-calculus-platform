@@ -4,13 +4,30 @@ export const chemWeakAcidsBasesKaKbPart3Data = {
     {
       id: 'wk3-intro',
       type: 'text' as const,
-      content: `
-# 🧴 Weak Bases and $K_b$
+      content: `# 🧴 Weak Bases and $K_b$
 
 **Part 3 of 7 — The Base Dissociation Constant**
 
-Weak bases partially react with water to produce $OH^-$ ions. The extent of this reaction is measured by the **base dissociation constant**, $K_b$.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚖️ Weak Base Equilibrium |
+| Key Points |
+| Common Weak Bases |
+| 📌 ICE Table for Weak Bases |
+| Worked Example |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'wk3-weak-base-equilibrium',
@@ -24,7 +41,7 @@ $$B(aq) + H_2O(l) \\rightleftharpoons BH^+(aq) + OH^-(aq)$$
 
 The equilibrium expression is:
 
-$$K_b = \\frac{[BH^+][OH^-]}{[B]}$$
+$$\\boxed{K_b = \\frac{[BH^+][OH^-]}{[B]}}$$
 
 
 ---
@@ -35,6 +52,8 @@ $$K_b = \\frac{[BH^+][OH^-]}{[B]}$$
 - $K_b$ is small → partial reaction only
 - **Larger $K_b$** = stronger weak base
 - The base **accepts** a proton from water (Brønsted-Lowry)
+
+> 💡 **Tip:** Compare $K_b$ values to rank base strength, just like $K_a$ for acids.
 
 
 ---
@@ -69,16 +88,18 @@ $$NH_3(aq) + H_2O(l) \\rightleftharpoons NH_4^+(aq) + OH^-(aq)$$
 
 $$K_b = \\frac{x^2}{C - x} \\approx \\frac{x^2}{C}$$
 
-$$x = [OH^-] = \\sqrt{K_b \\cdot C}$$
+$$\\boxed{x = [OH^-] = \\sqrt{K_b \\cdot C}}$$
 
-Then: $pOH = -\\log[OH^-]$ and $pH = 14 - pOH$
+Then: $pOH = -\\log[OH^-]$ and $\\boxed{pH = 14 - pOH}$
 
 
 ---
 
 ### Worked Example
 
-Find the pH of 0.15 M $NH_3$ ($K_b = 1.8 \\times 10^{-5}$).
+> **Problem:** Find the pH of 0.15 M $NH_3$ ($K_b = 1.8 \\times 10^{-5}$).
+
+> **Solution:**
 
 $$[OH^-] = \\sqrt{(1.8 \\times 10^{-5})(0.15)} = \\sqrt{2.7 \\times 10^{-6}} = 1.64 \\times 10^{-3} \\text{ M}$$
 

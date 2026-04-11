@@ -4,13 +4,24 @@ export const chemSolubilityKspPart6Data = {
     {
       id: 'sk6-intro',
       type: 'text' as const,
-      content: `
-# 🧮 Problem-Solving Workshop: Solubility Equilibria
+      content: `# 🧮 Problem-Solving Workshop: Solubility Equilibria
 
 **Part 6 of 7 — Mixed Ksp Problems**
 
-This workshop combines all solubility skills: writing $K_{sp}$ expressions, calculating molar solubility, applying the common ion effect, predicting precipitation, and selective precipitation.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'sk6-strategy',
@@ -25,6 +36,8 @@ This workshop combines all solubility skills: writing $K_{sp}$ expressions, calc
 | Common ion | Dissolving in a solution with a shared ion | Use the common ion as the initial concentration |
 | Precipitation? | Mixing two solutions | Calculate $Q_{sp}$ (don\'t forget dilution!), compare to $K_{sp}$ |
 | Selective precipitation | Multiple ions + one reagent | Find $[\\text{reagent}]$ to precipitate each, compare |
+
+> 💡 **Tip:** Read each problem carefully for key clues — "in a solution of..." signals common ion, "mixed with..." signals precipitation, and "separate ions" signals selective precipitation.
       `
     },
     {

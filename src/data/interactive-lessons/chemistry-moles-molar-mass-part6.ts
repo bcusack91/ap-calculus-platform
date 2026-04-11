@@ -4,13 +4,24 @@ export const chemMolesMolarMassPart6Data = {
     {
       id: 'mm6-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Problem-Solving Workshop
+      content: `# 🧪 Problem-Solving Workshop
 
 **Part 6 of 7 — Multi-Step Conversions & Real-World Applications**
 
-You now have all the core tools: moles, molar mass, percent composition, and formulas. This part puts them all together with multi-step problems, real lab scenarios, and mixed practice.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'mm6-conversion-map',
@@ -20,7 +31,9 @@ You now have all the core tools: moles, molar mass, percent composition, and for
 
 Here is the complete conversion roadmap you should have memorized:
 
-$$\\text{Particles} \\xleftrightarrow{\\times \\text{ or } \\div \\; N_A} \\text{Moles} \\xleftrightarrow{\\times \\text{ or } \\div \\; M} \\text{Grams}$$
+$$\\boxed{\\text{Particles} \\xleftrightarrow{\\times \\text{ or } \\div \\; N_A} \\text{Moles} \\xleftrightarrow{\\times \\text{ or } \\div \\; M} \\text{Grams}}$$
+
+> 🔑 **Key Concept:** Moles are always at the center of conversions — you must pass through moles to convert between grams and particles.
 
 
 ---
@@ -40,6 +53,8 @@ $$\\text{Particles} \\xleftrightarrow{\\times \\text{ or } \\div \\; N_A} \\text
 ---
 
 ### Strategy for Multi-Step Problems
+
+> 💡 **Tip:** When stuck on a multi-step problem, write down the units of what you have and what you need, then build a conversion path through moles.
 
 1. **Identify** what you are given and what you need to find
 2. **Plan** the conversion path (grams → moles → particles, etc.)

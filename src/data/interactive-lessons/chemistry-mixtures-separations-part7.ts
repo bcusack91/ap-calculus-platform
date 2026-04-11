@@ -4,13 +4,24 @@ export const chemMixturesSeparationsPart7Data = {
     {
       id: 'mx7-intro',
       type: 'text' as const,
-      content: `
-# 🏆 Synthesis & AP Review
+      content: `# 🏆 Synthesis & AP Review
 
 **Part 7 of 7 — Lab Technique Connections & AP-Style Questions**
 
-You\'ve learned about mixture types, separation techniques, chromatography, spectroscopy, and quantitative analysis. Now let\'s connect everything together with AP-style questions that integrate multiple concepts — exactly how they appear on the exam.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'mx7-lab-connections',
@@ -53,6 +64,8 @@ The AP Chemistry exam frequently tests your ability to **design an experimental 
 
 AP free-response questions often ask how errors affect results:
 
+> 🔑 **Key Concept:** For error analysis, trace the effect step-by-step: error → measured value too high/low → calculated result too high/low. Always follow the math.
+
 
 ---
 
@@ -66,6 +79,8 @@ AP free-response questions often ask how errors affect results:
 | Cuvette has fingerprints (spectroscopy) | Absorbance too high → calculated concentration too high |
 | Air bubbles in buret during titration | Volume reading too low → calculated concentration too low |
 | Forget to subtract water vapor pressure | Gas pressure too high → calculated moles too high |
+
+> ⚠️ **Warning:** On the AP exam, the most common error analysis mistake is not tracing through the full chain of logic. Always connect the experimental error to the **final calculated result**.
 
 
 ---

@@ -4,13 +4,29 @@ export const chemEntropySecondLawPart5Data = {
     {
       id: 'en5-intro',
       type: 'text' as const,
-      content: `
-# 🔢 Calculating ΔS°_rxn from Standard Entropies
+      content: `# 🔢 Calculating ΔS°_rxn from Standard Entropies
 
 **Part 5 of 7 — The Entropy Version of the Master Equation**
 
-Just as we calculated $\\Delta H°_{\\text{rxn}}$ from formation enthalpies, we can calculate $\\Delta S°_{\\text{rxn}}$ from standard molar entropies. The formula is very similar — products minus reactants.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🌡️ The Entropy Master Equation |
+| Key Differences from the Enthalpy Version |
+| 🧪 Worked Example |
+| Check: Does the Sign Make Sense? |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'en5-formula',
@@ -18,7 +34,7 @@ Just as we calculated $\\Delta H°_{\\text{rxn}}$ from formation enthalpies, we 
       content: `
 ## 🌡️ The Entropy Master Equation
 
-$$\\Delta S°_{\\text{rxn}} = \\sum n \\cdot S°(\\text{products}) - \\sum m \\cdot S°(\\text{reactants})$$
+$$\\boxed{\\Delta S°_{\\text{rxn}} = \\sum n \\cdot S°(\\text{products}) - \\sum m \\cdot S°(\\text{reactants})}$$
 
 where $n$ and $m$ are stoichiometric coefficients.
 
@@ -37,9 +53,9 @@ where $n$ and $m$ are stoichiometric coefficients.
 
 ---
 
-### Critical Warning ⚠️
+> ⚠️ **Warning:** $S°$ for elements is **NOT zero**! This is the #1 mistake students make. Absolute entropies are always positive at temperatures above 0 K.
 
-$S°$ for elements is **NOT zero**! This is the #1 mistake students make. Absolute entropies are always positive at temperatures above 0 K.
+> ⚠️ **Warning:** Entropy is in **J/K** but enthalpy is in **kJ**. When computing $\\Delta G = \\Delta H - T\\Delta S$, divide $\\Delta S$ by 1000 (or multiply $\\Delta H$ by 1000) so units match.
       `
     },
     {
@@ -48,7 +64,7 @@ $S°$ for elements is **NOT zero**! This is the #1 mistake students make. Absolu
       content: `
 ## 🧪 Worked Example
 
-Calculate $\\Delta S°$ for: $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g)$
+> **Problem:** Calculate $\\Delta S°$ for: $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g)$
 
 | Substance | $S°$ [J/(mol·K)] |
 |-----------|-----------------|

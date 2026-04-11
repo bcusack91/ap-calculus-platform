@@ -4,13 +4,30 @@ export const chemNetIonicEquationsPart4Data = {
     {
       id: 'ni4-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Precipitation Reactions
+      content: `# 🧪 Precipitation Reactions
 
 **Part 4 of 7 — Using Solubility Rules to Predict Precipitates**
 
-Precipitation reactions are among the most common types you\'ll encounter in AP Chemistry. When two aqueous solutions are mixed, an **insoluble solid** (precipitate) may form. Your job is to predict **if** and **what** precipitates, then write the net ionic equation.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚗️ Predicting Precipitation Reactions |
+| Strategy: The Ion-Swap Method |
+| Example: Mix AgNO₃(aq) and NaCl(aq) |
+| 📌 Common Precipitates on the AP Exam |
+| Net Ionic Patterns |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ni4-predicting',
@@ -40,7 +57,7 @@ When two ionic compounds in solution are mixed:
 
 **Result:** AgCl precipitates!
 
-$$\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s)$$
+$$\boxed{\text{Ag}^+(aq) + \text{Cl}^-(aq) \rightarrow \text{AgCl}(s)}$$
       `
     },
     {
@@ -70,9 +87,9 @@ $$\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s)$$
 
 All precipitation reactions follow the same net ionic pattern:
 
-$$\\text{cation}(aq) + \\text{anion}(aq) \\rightarrow \\text{insoluble salt}(s)$$
+$$\boxed{\text{cation}(aq) + \text{anion}(aq) \rightarrow \text{insoluble salt}(s)}$$
 
-The spectator ions are always the "other" pair that forms a soluble compound.
+> 🔑 **Key Concept:** The spectator ions are always the "other" pair that forms a soluble compound.
       `
     },
     {
@@ -81,7 +98,9 @@ The spectator ions are always the "other" pair that forms a soluble compound.
       content: `
 ## 🧪 Multi-Step Example
 
-**Mix: $\\text{FeCl}_3(aq) + 3\\text{NaOH}(aq) \\rightarrow$ ?**
+> **Problem:** Mix $\text{FeCl}_3(aq) + 3\text{NaOH}(aq) \rightarrow$ ? Write the net ionic equation.
+
+> **Solution:**
 
 
 ---
@@ -108,11 +127,14 @@ $$\\text{FeCl}_3(aq) + 3\\text{NaOH}(aq) \\rightarrow \\text{Fe(OH)}_3(s) + 3\\t
 ### Step 4: Complete ionic equation
 $$\\text{Fe}^{3+}(aq) + 3\\text{Cl}^-(aq) + 3\\text{Na}^+(aq) + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(s) + 3\\text{Na}^+(aq) + 3\\text{Cl}^-(aq)$$
 
+**Cancel spectators:**
+$$\text{Fe}^{3+}(aq) + \cancel{3\text{Cl}^-(aq)} + \cancel{3\text{Na}^+(aq)} + 3\text{OH}^-(aq) \rightarrow \text{Fe(OH)}_3(s) + \cancel{3\text{Na}^+(aq)} + \cancel{3\text{Cl}^-(aq)}$$
+
 
 ---
 
-### Step 5: Net ionic equation (cancel Na⁺ and Cl⁻)
-$$\\text{Fe}^{3+}(aq) + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(s)$$
+### Step 5: Net ionic equation
+$$\boxed{\text{Fe}^{3+}(aq) + 3\text{OH}^-(aq) \rightarrow \text{Fe(OH)}_3(s)}$$
 
 **Charge check:** (+3) + 3(−1) = 0 on left; 0 on right ✓
       `

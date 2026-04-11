@@ -2,189 +2,214 @@ export const precalcExponentialPart4Data = {
   topicSlug: 'exponential-functions-precalc',
   sections: [
     {
-      id: 'precalc-exponential-functions-precalc-p4-s1-intro',
+      id: 'p4-intro',
       type: 'text' as const,
       content: `
-      ## Exponential Functions: Half-life and decay constants
-      
-      **Part 4 of 7**
-      
-      This part focuses on estimating radioactive decay timelines. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **initial value**: value when input is zero
-      - **doubling time**: input interval required to multiply output by 2
-      - **half-life**: input interval required to multiply output by $
-      rac12$
-      
-      
-      ### Worked Example
-      Part 4 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# ☢️ Half-Life & Exponential Decay
+
+**Part 4 of 7**
+
+**Half-life** is the time it takes for a quantity to reduce to half its current value.
+
+$$\\boxed{A(t) = A_0 \\cdot \\left(\\frac{1}{2}\\right)^{t/T_{1/2}}}$$
+
+| Variable | Meaning |
+|:---------|:--------|
+| $A(t)$ | Amount remaining at time $t$ |
+| $A_0$ | Initial amount |
+| $T_{1/2}$ | Half-life (time to halve) |
+
+This formula works because after each half-life period:
+- After $1$ half-life: $\\frac{1}{2}$ remains
+- After $2$ half-lives: $\\frac{1}{4}$ remains
+- After $3$ half-lives: $\\frac{1}{8}$ remains
+- After $n$ half-lives: $\\left(\\frac{1}{2}\\right)^n$ remains
       `
     },
     {
-      id: 'precalc-exponential-functions-precalc-p4-s2-mcq-core',
+      id: 'p4-halflife-examples',
+      type: 'text' as const,
+      content: `
+## 🧪 Worked Examples
+
+### Example 1: Carbon-14 Dating
+
+> **Carbon-14 has a half-life of $5{,}730$ years. A fossil has $25\\%$ of its original C-14. How old is it?**
+
+$25\\% = \\frac{1}{4} = \\left(\\frac{1}{2}\\right)^2$ → exactly $2$ half-lives have passed.
+
+Age $= 2 \\times 5730 = 11{,}460$ years.
+
+### Example 2: Medicine Clearance
+
+> **A drug has a half-life of $4$ hours. A patient takes $200\\text{ mg}$. How much remains after $10$ hours?**
+
+$A(10) = 200 \\cdot \\left(\\frac{1}{2}\\right)^{10/4} = 200 \\cdot \\left(\\frac{1}{2}\\right)^{2.5}$
+
+$= 200 \\cdot \\frac{1}{2^{2.5}} = 200 \\cdot \\frac{1}{5.657} \\approx 35.4\\text{ mg}$
+
+### Reference Table: Common Real-World Half-Lives
+
+| Substance | Half-Life | Context |
+|:----------|:----------|:--------|
+| Carbon-14 | $5{,}730$ years | Archaeological dating |
+| Iodine-131 | $8$ days | Thyroid treatment |
+| Caffeine | $\\sim 5$ hours | Metabolism |
+| Uranium-238 | $4.5$ billion years | Geological dating |
+      `
+    },
+    {
+      id: 'p4-decay-constant',
+      type: 'text' as const,
+      content: `
+## 🔗 Connecting Half-Life to the Decay Constant
+
+The continuous decay model $A(t) = A_0 e^{kt}$ (with $k < 0$) is related to half-life by:
+
+$$\\boxed{T_{1/2} = \\frac{\\ln 2}{|k|} \\quad \\Longleftrightarrow \\quad k = -\\frac{\\ln 2}{T_{1/2}}}$$
+
+### Worked Example
+
+> **A radioactive sample decays according to $A(t) = 500e^{-0.1t}$ (grams, hours). Find the half-life.**
+
+$$T_{1/2} = \\frac{\\ln 2}{|-0.1|} = \\frac{0.6931}{0.1} \\approx 6.93 \\text{ hours}$$
+
+### Converting Between Forms
+
+| Given | Find | Method |
+|:------|:-----|:-------|
+| Half-life $= 8$ days | Decay constant $k$ | $k = -\\frac{\\ln 2}{8} \\approx -0.0866$ |
+| $k = -0.05$ | Half-life | $T_{1/2} = \\frac{\\ln 2}{0.05} \\approx 13.86$ |
+| Periodic base $b = 0.75$ | $k$ | $k = \\ln(0.75) \\approx -0.2877$ |
+| $k = -0.2$ | Periodic base $b$ | $b = e^{-0.2} \\approx 0.8187$ |
+      `
+    },
+    {
+      id: 'p4-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Half-Life Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of initial value.',
+            question: 'A radioactive substance has a half-life of $10$ days. After $30$ days, what fraction of the original remains?',
             options: [
-              'input interval required to multiply output by $\\rac12$',
-              'percent change per step or per unit time',
-              'input interval required to multiply output by 2',
-              'value when input is zero'
+              '$\\frac{1}{3}$',
+              '$\\frac{1}{4}$',
+              '$\\frac{1}{8}$',
+              '$\\frac{1}{16}$'
             ],
-            correctAnswer: 3,
-            explanation: 'initial value is defined as: value when input is zero.'
+            correctAnswer: 2,
+            explanation: '$30$ days $= 3$ half-lives. Remaining: $\\left(\\frac{1}{2}\\right)^3 = \\frac{1}{8}$.'
           },
           {
-            question: 'In estimating radioactive decay timelines, which expression is the best starting model?',
+            question: 'If $A(t) = 100e^{-0.2t}$, the half-life is closest to:',
             options: [
-              '$T_{1/2}=\\frac{\\ln 2}{|k|}$',
-              '$T_d=\\frac{\\ln 2}{k}$',
-              '$f(x)=ab^x$',
-              '$f(t)=Ae^{kt}$'
+              '$2$ units',
+              '$3.5$ units',
+              '$5$ units',
+              '$10$ units'
             ],
-            correctAnswer: 0,
-            explanation: 'Use $T_{1/2}=\\frac{\\ln 2}{|k|}$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 1,
+            explanation: '$T_{1/2} = \\frac{\\ln 2}{0.2} = \\frac{0.693}{0.2} = 3.47 \\approx 3.5$ units.'
+          },
+          {
+            question: 'Which model is equivalent to $A(t) = 800\\left(\\frac{1}{2}\\right)^{t/6}$?',
+            options: [
+              '$A(t) = 800e^{-6t}$',
+              '$A(t) = 800e^{-(\\ln 2/6)t}$',
+              '$A(t) = 800e^{-0.5t}$',
+              '$A(t) = 800 \\cdot 0.5^t$'
+            ],
+            correctAnswer: 1,
+            explanation: '$(\\frac{1}{2})^{t/6} = e^{(\\ln(1/2)) \\cdot t/6} = e^{-(\\ln 2/6)t}$. The decay constant is $k = -\\frac{\\ln 2}{6}$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-exponential-functions-precalc-p4-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Half-life | $T_{1/2}=\\frac{\ln 2}{|k|}$ | continuous decay timing |
-      | Exponential form | $f(x)=ab^x$ | model construction |
-      | Continuous model | $f(t)=Ae^{kt}$ | growth/decay by constant relative rate |
-      | Doubling time | $T_d=\\frac{\ln 2}{k}$ | continuous growth timing |
-      
-      ### Common pitfalls
-      - Do not confuse the base $b$ with the initial value $a$.
-      - A linear graph of raw data is not exponential evidence; inspect ratios.
-      - When solving exponents, isolate the exponential expression before applying logs.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-exponential-functions-precalc-p4-s4-input',
+      id: 'p4-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Exponential Evaluation**
-      
-      1) Solve $2^x=32$ for $x$.
-      2) Evaluate $f(3)$ for $f(x)=5\left(
-      rac{1}{2}
-      ight)^x$.
-      3) If $P(t)=100(1.1)^t$, compute $P(2)$.
+**Decay Calculations** 🧮
+
+**1)** A sample starts at $400\\text{ g}$ with half-life $5$ years. How many grams remain after $15$ years? (e.g., $600\\text{ g}$ with half-life $3$ years after $6$ years: $600 \\cdot (\\frac{1}{2})^2 = 150\\text{ g}$)
+
+**2)** If $k = -0.04$, what is the half-life? Round to one decimal. (e.g., $k = -0.1$: $T_{1/2} = \\frac{0.693}{0.1} = 6.9$)
+
+**3)** How many half-lives occur in $24$ hours if each half-life is $8$ hours? (e.g., half-life of $6$ hours in $18$ hours: $18/6 = 3$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5', '0.625', '121'],
-        hint1: 'Rewrite 32 as a power of 2.',
-        hint2: 'Compute $(1/2)^3$ first, then scale by 5.',
-        hint3: 'Square the growth factor 1.1 and multiply by 100.',
-        explanation: 'The answers are 5, 0.625, and 121 after direct exponential substitution.'
+        correctAnswers: ['50', '17.3', '3'],
+        hint1: '$15$ years $= 3$ half-lives. $400 \\cdot (\\frac{1}{2})^3$.',
+        hint2: '$T_{1/2} = \\frac{\\ln 2}{|k|} = \\frac{0.693}{0.04}$.',
+        hint3: '$24 \\div 8 = ?$',
+        explanation: '1) $400 \\cdot (\\frac{1}{2})^3 = 400 \\cdot \\frac{1}{8} = 50\\text{ g}$. 2) $\\frac{0.693}{0.04} = 17.3$. 3) $24/8 = 3$ half-lives.'
       }
     },
     {
-      id: 'precalc-exponential-functions-precalc-p4-s5-dropdown',
+      id: 'p4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Decay Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'initial value',
-            options: ['input interval required to multiply output by 2', 'input interval required to multiply output by $\\frac12$', 'percent change per step or per unit time', 'value when input is zero']
+            label: 'In the formula $A = A_0(\\frac{1}{2})^{t/T}$, the exponent $t/T$ counts the number of',
+            options: ['years', 'half-lives elapsed', 'grams remaining', 'decay constants']
           },
           {
-            label: 'doubling time',
-            options: ['input interval required to multiply output by 2', 'input interval required to multiply output by $\\frac12$', 'percent change per step or per unit time', 'using logarithms to solve for exponents']
+            label: 'A decay constant $k = -0.05$ means the quantity decays continuously at',
+            options: ['$5\\%$ per unit time', '$50\\%$ per unit time', '$0.5\\%$ per unit time', '$95\\%$ per unit time']
           },
           {
-            label: 'half-life',
-            options: ['function of the form $f(x)=ab^x$ with $b>0, b\\neq1$', 'using logarithms to solve for exponents', 'input interval required to multiply output by $\\frac12$', 'percent change per step or per unit time']
+            label: 'After exactly $1$ half-life, the fraction remaining is',
+            options: ['$\\frac{1}{e}$', '$\\frac{1}{4}$', '$\\frac{1}{2}$', '$0$']
+          },
+          {
+            label: 'Doubling time and half-life both use the constant',
+            options: ['$\\pi$', '$e$', '$\\ln 2$', '$\\ln 10$']
           }
         ],
-        correctAnswers: ['value when input is zero', 'input interval required to multiply output by 2', 'input interval required to multiply output by $\\frac12$'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: initial value, doubling time, and half-life align with their exact definitions used in this part.'
+        correctAnswers: ['half-lives elapsed', '$5\\%$ per unit time', '$\\frac{1}{2}$', '$\\ln 2$'],
+        hint1: 'The exponent tells you how many half-life intervals have passed.',
+        hint2: '$|k| = 0.05 = 5\\%$.',
+        hint3: 'By definition, half-life is when $\\frac{1}{2}$ remains.',
+        explanation: '$t/T$ counts half-lives. $|k| = 0.05$ is a $5\\%$ continuous rate. One half-life leaves $\\frac{1}{2}$. Both formulas use $\\ln 2 \\approx 0.693$.'
       }
     },
     {
-      id: 'precalc-exponential-functions-precalc-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to initial value, doubling time, and half-life so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-exponential-functions-precalc-p4-s7-mcq-applied',
+      id: 'p4-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is estimating radioactive decay timelines. Which term best anchors the next reasoning step if the key idea is: percent change per step or per unit time?',
+            question: 'A substance decays from $1{,}000\\text{ g}$ to $62.5\\text{ g}$. If the half-life is $3$ hours, how much total time has passed?',
             options: [
-              'half-life',
-              'initial value',
-              'doubling time',
-              'relative rate'
+              '$9$ hours',
+              '$12$ hours',
+              '$15$ hours',
+              '$6$ hours'
             ],
-            correctAnswer: 3,
-            explanation: 'relative rate matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 1,
+            explanation: '$\\frac{62.5}{1000} = \\frac{1}{16} = \\left(\\frac{1}{2}\\right)^4$. So $4$ half-lives passed: $4 \\times 3 = 12$ hours.'
           },
           {
-            question: 'A student is solving a mixed exponential functions prompt. Which term best anchors the next reasoning step if the key idea is: using logarithms to solve for exponents?',
+            question: 'Two substances: A has half-life $2$ hours, B has half-life $8$ hours. Both start at $100\\text{ g}$. After $8$ hours, which has MORE remaining?',
             options: [
-              'half-life',
-              'relative rate',
-              'log linearization',
-              'exponential function'
+              'A — because shorter half-life means faster recovery',
+              'B — it has undergone only $1$ half-life ($50\\text{ g}$ remaining)',
+              'Equal — both are at $50\\text{ g}$',
+              'Cannot determine without decay constants'
             ],
-            correctAnswer: 2,
-            explanation: 'log linearization matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 1,
+            explanation: 'A: $4$ half-lives → $(\\frac{1}{2})^4 \\cdot 100 = 6.25\\text{ g}$. B: $1$ half-life → $(\\frac{1}{2})^1 \\cdot 100 = 50\\text{ g}$. B has far more remaining. Shorter half-life = faster decay.'
           }
         ]
       }

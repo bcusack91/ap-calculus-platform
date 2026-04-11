@@ -4,13 +4,30 @@ export const chemReactionMechanismsPart2Data = {
     {
       id: 'rm2-intro',
       type: 'text' as const,
-      content: `
-# 🔎 Intermediates and Catalysts
+      content: `# 🔎 Intermediates and Catalysts
 
 **Part 2 of 7 — Species That Appear and Disappear**
 
-In reaction mechanisms, some species are produced in one step and consumed in another. These transient species are classified as either **intermediates** or **catalysts**, and understanding the difference is essential for AP Chemistry.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚗️ Reaction Intermediates |
+| How to Identify Intermediates |
+| Example |
+| On an Energy Diagram |
+| ⚙️ Catalysts in Mechanisms |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rm2-intermediates',
@@ -27,6 +44,8 @@ A **reaction intermediate** is a species that is:
 ---
 
 ### How to Identify Intermediates
+
+> 🔑 **Key Concept:** Any species that is **produced** in one step and **consumed** in a later step (cancelling out when steps are summed) is an intermediate.
 
 1. Write out all elementary steps
 2. Add them up to get the overall reaction
@@ -47,7 +66,7 @@ Step 2: $\\text{NO}_2 + \\textbf{F} \\rightarrow \\text{NO}_2\\text{F}$ (fast)
 
 ### On an Energy Diagram
 
-Intermediates sit in an energy **valley** (local minimum) between two transition state **peaks**.
+> 🔑 **Key Concept:** Intermediates sit in an energy **valley** (local minimum) between two transition state **peaks**.
       `
     },
     {
@@ -67,6 +86,8 @@ A **catalyst** is a species that is:
 
 ### How to Identify Catalysts
 
+> 💡 **Tip:** A catalyst is **consumed** early and **regenerated** later — it’s present at both the start and end of the reaction.
+
 1. Look for species present in the **reactants** of an early step that **reappear** in the **products** of a later step
 2. The catalyst cancels when steps are added
 
@@ -78,7 +99,9 @@ A **catalyst** is a species that is:
 Step 1: $\\text{Cl} + \\text{O}_3 \\rightarrow \\text{ClO} + \\text{O}_2$
 Step 2: $\\text{ClO} + \\text{O} \\rightarrow \\text{Cl} + \\text{O}_2$
 
-Overall: $\\text{O}_3 + \\text{O} \\rightarrow 2\\text{O}_2$
+Overall: $\\cancel{\\text{Cl}} + \\text{O}_3 + \\cancel{\\text{ClO}} + \\text{O} \\rightarrow \\cancel{\\text{ClO}} + \\text{O}_2 + \\cancel{\\text{Cl}} + \\text{O}_2$
+
+$$\\boxed{\\text{O}_3 + \\text{O} \\rightarrow 2\\text{O}_2}$$
 
 - **Cl** = catalyst (consumed in Step 1, regenerated in Step 2)
 - **ClO** = intermediate (produced in Step 1, consumed in Step 2)
@@ -213,9 +236,9 @@ Has 3 peaks and 2 valleys (2 intermediates).
 
 ### General Rule
 
-For an $n$-step mechanism:
-- $n$ transition states (peaks)
-- $n - 1$ intermediates (valleys)
+> 🔑 **Key Concept:** For an $n$-step mechanism: $n$ transition states (peaks) and $n - 1$ intermediates (valleys).
+
+$$\\boxed{n \\text{ steps} \\rightarrow n \\text{ peaks (TS)}, \\; (n-1) \\text{ valleys (intermediates)}}$$
       `
     },
     {

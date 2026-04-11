@@ -2,186 +2,195 @@ export const precalcRatesOfChangePart3Data = {
   topicSlug: 'rates-of-change-precalc',
   sections: [
     {
-      id: 'precalc-rates-of-change-precalc-p3-s1-intro',
+      id: 'p3-intro',
       type: 'text' as const,
       content: `
-      ## Rates of Change: Comparing linear and nonlinear changes
-      
-      **Part 3 of 7**
-      
-      This part focuses on comparing linear approximation against curved trends. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **unit rate**: rate normalized to one input unit
-      - **increasing interval**: interval where function values rise as input increases
-      - **decreasing interval**: interval where function values fall as input increases
-      
-      
-      ### Worked Example
-      Part 3 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📐 Secant Lines to Tangent Lines
+
+**Part 3 of 7**
+
+### The Visual Story
+
+As the two points on a curve get **closer together**, the secant line **rotates** toward the tangent line:
+
+1. Secant through $(a, f(a))$ and $(b, f(b))$ — wide interval
+2. Move $b$ closer to $a$ — secant rotates
+3. In the **limit** as $b \\to a$ — secant BECOMES the tangent
+
+$$\\text{Tangent slope} = \\lim_{h \\to 0}\\frac{f(a+h) - f(a)}{h}$$
+
+### Why This Matters
+
+The tangent line gives the **best linear approximation** to the curve at a point. It tells you:
+- The **direction** the curve is heading
+- The **instantaneous rate** of change
+- Whether the function is **increasing or decreasing** at that point
       `
     },
     {
-      id: 'precalc-rates-of-change-precalc-p3-s2-mcq-core',
+      id: 'p3-tangent',
+      type: 'text' as const,
+      content: `
+## Finding Tangent Lines
+
+### Process
+
+1. Compute $f'(a) = \\lim_{h \\to 0}\\frac{f(a+h)-f(a)}{h}$ (the slope)
+2. Use point-slope form: $y - f(a) = f'(a)(x - a)$
+
+### Example: Tangent to $f(x)=x^2$ at $x=3$
+
+**Slope**: From the difference quotient, $f'(x) = 2x$, so $f'(3) = 6$.
+
+**Point**: $(3, 9)$.
+
+**Tangent**: $y - 9 = 6(x - 3) \\Rightarrow y = 6x - 9$
+
+### Example: Tangent to $f(x)=\\sqrt{x}$ at $x=4$
+
+DQ: $\\frac{\\sqrt{x+h}-\\sqrt{x}}{h} \\cdot \\frac{\\sqrt{x+h}+\\sqrt{x}}{\\sqrt{x+h}+\\sqrt{x}} = \\frac{1}{\\sqrt{x+h}+\\sqrt{x}}$
+
+As $h \\to 0$: slope $= \\frac{1}{2\\sqrt{x}}$. At $x=4$: slope $= \\frac{1}{4}$.
+
+**Tangent**: $y - 2 = \\frac{1}{4}(x-4) \\Rightarrow y = \\frac{x}{4} + 1$
+      `
+    },
+    {
+      id: 'p3-approx',
+      type: 'text' as const,
+      content: `
+## Linear Approximation Preview
+
+### Using the Tangent Line to Estimate
+
+Near $x = a$, the tangent line approximates $f$:
+
+$$f(x) \\approx f(a) + f'(a)(x - a)$$
+
+### Example
+
+Estimate $\\sqrt{4.1}$ using tangent to $\\sqrt{x}$ at $x=4$:
+
+$$\\sqrt{4.1} \\approx 2 + \\frac{1}{4}(4.1 - 4) = 2 + 0.025 = 2.025$$
+
+Actual: $\\sqrt{4.1} = 2.02485...$  Error: $0.00015$!
+
+### Secant Line Approximation (Less Accurate)
+
+Using the secant through $(4,2)$ and $(9,3)$:
+
+$$\\text{slope} = \\frac{3-2}{9-4} = 0.2$$
+
+Estimate: $2 + 0.2(0.1) = 2.02$ — less accurate than the tangent estimate.
+
+This is why **instantaneous** rates beat **average** rates for local estimation.
+      `
+    },
+    {
+      id: 'p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Secant → Tangent Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of unit rate.',
-            options: [
-              'small-interval trend around one input',
-              'interval where function values fall as input increases',
-              'interval where function values rise as input increases',
-              'rate normalized to one input unit'
-            ],
-            correctAnswer: 3,
-            explanation: 'unit rate is defined as: rate normalized to one input unit.'
+            question: 'The tangent line at $x=a$ is the limit of:',
+            options: ['Horizontal lines', 'Vertical lines', 'Secant lines as second point → $a$', 'Normal lines'],
+            correctAnswer: 2,
+            explanation: 'As the second point approaches $a$, the secant becomes the tangent.'
           },
           {
-            question: 'In comparing linear approximation against curved trends, which expression is the best starting model?',
-            options: [
-              '$\\frac{\\text{new}-\\text{old}}{\\text{old}}\\cdot 100\\%$',
-              '$\\frac{f(b)-f(a)}{b-a}$',
-              '$m=\\frac{y_2-y_1}{x_2-x_1}$',
-              '$y=mx+b$'
-            ],
-            correctAnswer: 0,
-            explanation: 'Use $\\frac{\\text{new}-\\text{old}}{\\text{old}}\\cdot 100\\%$ first, then substitute known quantities from the prompt.'
+            question: 'Tangent to $f(x)=x^2$ at $x=1$ has slope:',
+            options: ['$1$', '$2$', '$3$', '$0$'],
+            correctAnswer: 1,
+            explanation: 'DQ limit gives $f\'(x) = 2x$. At $x=1$: slope = $2$.'
+          },
+          {
+            question: 'The tangent at a maximum has slope:',
+            options: ['Positive', 'Negative', '$0$', 'Undefined'],
+            correctAnswer: 2,
+            explanation: 'At a local max, the function momentarily stops increasing — tangent is horizontal (slope 0).'
           }
         ]
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p3-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Percent change | $\\frac{\\text{new}-\\text{old}}{\\text{old}}\cdot 100\%$ | relative growth/decline |
-      | Linear model | $y=mx+b$ | constant-rate baseline |
-      | Average rate | $\\frac{f(b)-f(a)}{b-a}$ | secant computation |
-      | Slope | $m=\\frac{y_2-y_1}{x_2-x_1}$ | point-pair rate |
-      
-      ### Common pitfalls
-      - Do not compare rates across intervals without checking interval lengths.
-      - A positive average rate on an interval does not force monotonic increase everywhere inside.
-      - Rate units must combine output units per input unit.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-rates-of-change-precalc-p3-s4-input',
+      id: 'p3-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Rate Calculations**
-      
-      1) Compute average rate for $f(x)=x^2$ on $[2,5]$.
-      2) Find slope through $(1,3)$ and $(4,15)$.
-      3) Compute percent change from 50 to 65.
+**Find tangent line components:**
+
+**1)** $f(x) = x^2$, at $x = 5$. Tangent slope = ?
+
+**2)** $f(x) = x^3$, at $x = 1$. Tangent slope (DQ limit: $3x^2$) = ?
+
+**3)** Using tangent to $x^2$ at $x=3$: estimate $f(3.1)$ ≈ ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7', '4', '30'],
-        hint1: 'Use $\\rac{f(5)-f(2)}{5-2}$.',
-        hint2: 'Use slope formula with ordered pairs.',
-        hint3: 'Relative change is $\\rac{15}{50}\\cdot100\\%$.',
-        explanation: 'Average rate is 7, secant slope is 4, and percent increase is 30%.'
+        correctAnswers: ['10', '3', '9.6'],
+        hint1: 'Slope = $2x = 2(5) = 10$.',
+        hint2: 'Slope = $3x^2 = 3(1) = 3$.',
+        hint3: '$f(3)=9$, slope=$6$: $9 + 6(0.1) = 9.6$.',
+        explanation: '(1) $2(5) = 10$. (2) $3(1)^2 = 3$. (3) $f(3) + f\'(3)(0.1) = 9 + 0.6 = 9.6$.'
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p3-s5-dropdown',
+      id: 'p3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Tangent Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'unit rate',
-            options: ['interval where function values fall as input increases', 'interval where function values rise as input increases', 'rate normalized to one input unit', 'small-interval trend around one input']
+            label: 'Tangent line touches the curve at:',
+            options: ['Two points', 'Exactly one point (locally)', 'No points', 'All points'],
+            correctAnswer: 1
           },
           {
-            label: 'increasing interval',
-            options: ['interval where function values rise as input increases', 'interval where function values fall as input increases', 'relative change expressed as a percent', 'small-interval trend around one input']
+            label: 'If tangent slope > 0, the function is locally:',
+            options: ['Decreasing', 'Increasing', 'Constant', 'Undefined'],
+            correctAnswer: 1
           },
           {
-            label: 'decreasing interval',
-            options: ['interval where function values fall as input increases', 'how well a function captures observed change', 'small-interval trend around one input', 'relative change expressed as a percent']
+            label: 'Linear approximation is most accurate:',
+            options: ['Far from the point', 'Close to the tangent point', 'At infinity', 'At discontinuities'],
+            correctAnswer: 1
+          },
+          {
+            label: 'The tangent to a linear function is:',
+            options: ['A point', 'The function itself', 'Perpendicular', 'Undefined'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['rate normalized to one input unit', 'interval where function values rise as input increases', 'interval where function values fall as input increases'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: unit rate, increasing interval, and decreasing interval align with their exact definitions used in this part.'
+        correctAnswers: ['Exactly one point (locally)', 'Increasing', 'Close to the tangent point', 'The function itself'],
+        hint1: 'Locally, the tangent just "touches."',
+        hint2: 'Positive slope = going up.',
+        hint3: 'Tangent approximation degrades with distance.',
+        explanation: 'Tangent touches locally at one point. Positive slope → increasing. Near point → good approximation. Line\'s tangent = itself.'
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p3-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to unit rate, increasing interval, and decreasing interval so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-rates-of-change-precalc-p3-s7-mcq-applied',
+      id: 'p3-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is comparing linear approximation against curved trends. Which term best anchors the next reasoning step if the key idea is: small-interval trend around one input?',
-            options: [
-              'decreasing interval',
-              'local behavior',
-              'unit rate',
-              'increasing interval'
-            ],
-            correctAnswer: 1,
-            explanation: 'local behavior matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Tangent to $f(x) = x^2 + 1$ at $x=2$: equation?',
+            options: ['$y = 4x - 3$', '$y = 4x + 1$', '$y = 2x + 1$', '$y = 4x - 5$'],
+            correctAnswer: 0,
+            explanation: '$f(2) = 5, f\'(2) = 4$. $y - 5 = 4(x-2) \\Rightarrow y = 4x - 3$.'
           },
           {
-            question: 'A student is solving a mixed rates of change prompt. Which term best anchors the next reasoning step if the key idea is: relative change expressed as a percent?',
-            options: [
-              'model fit',
-              'local behavior',
-              'decreasing interval',
-              'percent change'
-            ],
-            correctAnswer: 3,
-            explanation: 'percent change matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'What does a steeper tangent line indicate?',
+            options: ['Slower change', 'Faster rate of change', 'No change', 'Discontinuity'],
+            correctAnswer: 1,
+            explanation: 'Steeper tangent = larger |slope| = faster instantaneous rate of change.'
           }
         ]
       }

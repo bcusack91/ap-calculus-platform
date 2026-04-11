@@ -8,7 +8,26 @@ export const chemTypesOfChemicalBondsPart5Data = {
 
 **Part 5 of 7 — Ionic, Covalent, and Metallic Properties Side by Side**
 
-Now that you've studied all three bond types individually, it's time to bring them together. Being able to **compare and predict** bond types and their resulting properties is essential for the AP Chemistry exam.`
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| Key Distinctions to Remember |
+| Decision Tree |
+| Exceptions and Special Cases |
+| The Polyatomic Ion Exception |
+| What Are They? |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'cb5-comparison-table',
@@ -36,7 +55,9 @@ Now that you've studied all three bond types individually, it's time to bring th
 1. **Ionic solids** don't conduct; ionic **liquids/solutions** do
 2. **Metals** conduct in **all** states (solid and liquid)
 3. **Molecular (covalent) compounds** generally don't conduct in any state
-4. **Ionic and metallic** compounds have high melting points; **molecular** compounds have low melting points`
+4. **Ionic and metallic** compounds have high melting points; **molecular** compounds have low melting points
+
+> 🔑 **Key Concept:** Only metals conduct electricity as solids (delocalized electrons). Ionic compounds conduct only when molten or dissolved (mobile ions). Molecular compounds generally don’t conduct in any state.`
     },
     {
       id: 'cb5-comparison-quiz',
@@ -103,6 +124,8 @@ You can predict the most likely bond type based on the **types of elements** inv
 3. **Metal + metal** → **Metallic bond**
    - Delocalized valence electrons
    - Examples: Fe, Cu, brass (Cu + Zn alloy)
+
+> 💡 **Tip:** Quick decision — Metal + Nonmetal → Ionic; Nonmetal + Nonmetal → Covalent; Metal + Metal → Metallic.
 
 
 ---
@@ -239,11 +262,11 @@ In a covalent network solid, atoms are connected by **continuous covalent bonds*
       type: 'input-box' as const,
       content: `### Part 5 Practice
 
-1. Do ionic solids conduct electricity? (Enter "yes" or "no")
+**1.** Do ionic solids conduct electricity? (Enter "yes" or "no")
 
-2. What type of bonding is present in a sample of pure copper? (Enter "ionic", "covalent", or "metallic")
+**2.** What type of bonding is present in a sample of pure copper? (Enter "ionic", "covalent", or "metallic")
 
-3. A substance is hard, brittle, has a high melting point, and conducts when dissolved. What bond type is present? (Enter "ionic", "covalent", or "metallic")`,
+**3.** A substance is hard, brittle, has a high melting point, and conducts when dissolved. What bond type is present? (Enter "ionic", "covalent", or "metallic")`,
       exercise: {
         inputs: [
           {

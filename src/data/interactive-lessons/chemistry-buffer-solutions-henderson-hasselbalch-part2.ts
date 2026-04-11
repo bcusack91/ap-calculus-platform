@@ -4,13 +4,27 @@ export const chemBufferSolutionsHendersonHasselbalchPart2Data = {
     {
       id: 'bf2-intro',
       type: 'text' as const,
-      content: `
-# ⚔️ How Buffers Work — Neutralizing Added Acid or Base
+      content: `# ⚔️ How Buffers Work — Neutralizing Added Acid or Base
 
 **Part 2 of 7 — Quantitative Buffer Calculations**
 
-Now we\'ll calculate exactly how much the pH changes when acid or base is added to a buffer. The key is treating the neutralization as a **stoichiometry problem first**, then an equilibrium problem.
-      `
+---
+
+### The Two-Step Buffer Method
+
+| Step | What You Do | Tool |
+|------|-------------|------|
+| **1. Stoichiometry** | Neutralization: strong acid/base reacts completely with one buffer component | ICE table (in moles) |
+| **2. Equilibrium** | Calculate new pH from adjusted [HA]/[A⁻] ratio | Henderson-Hasselbalch |
+
+> 🔑 **Why this matters:** This two-step method is how every buffer problem on the AP exam is solved — master it and you can handle any buffer calculation.
+
+---
+
+### What You'll Master in Part 2
+- Setting up stoichiometry tables for buffer + strong acid/base
+- Calculating new concentrations after neutralization
+- Applying Henderson-Hasselbalch with the updated ratio`
     },
     {
       id: 'bf2-method',
@@ -48,9 +62,11 @@ $$pH = pK_a + \\log\\frac{\\text{mol } A^-}{\\text{mol } HA}$$
       content: `
 ## 🧪 Worked Example: Adding Strong Acid
 
-A buffer contains 0.15 mol $CH_3COOH$ and 0.15 mol $CH_3COO^-$ in 1.0 L. What is the pH after adding 0.020 mol $HCl$?
+> **Problem:** A buffer contains 0.15 mol $CH_3COOH$ and 0.15 mol $CH_3COO^-$ in 1.0 L. What is the pH after adding 0.020 mol $HCl$?
+>
+> $K_a = 1.8 \\times 10^{-5}$, $pK_a = 4.74$
 
-$K_a = 1.8 \\times 10^{-5}$, $pK_a = 4.74$
+**Solution:**
 
 
 ---
@@ -82,6 +98,8 @@ $$pH = 4.74 + \\log\\frac{0.13}{0.17} = 4.74 + \\log(0.765) = 4.74 + (-0.12) = 4
 The pH only dropped from **4.74 to 4.62** — a change of just **0.12 units**!
 
 Without the buffer, adding 0.020 mol $HCl$ to 1.0 L water would give pH = $-\\log(0.020) = 1.70$ — a change of 5.3 pH units!
+
+> 🔑 **Key Comparison:** Buffer changed pH by **0.12 units**. Without the buffer, the same acid would change pH by **5.3 units**. This is why buffers matter!
       `
     },
     {
@@ -123,7 +141,9 @@ Without the buffer, adding 0.020 mol $HCl$ to 1.0 L water would give pH = $-\\lo
       content: `
 ## 🧪 Worked Example: Adding Strong Base
 
-Same buffer: 0.15 mol $CH_3COOH$ and 0.15 mol $CH_3COO^-$ in 1.0 L. What is the pH after adding 0.030 mol $NaOH$?
+> **Problem:** Same buffer: 0.15 mol $CH_3COOH$ and 0.15 mol $CH_3COO^-$ in 1.0 L. What is the pH after adding 0.030 mol $NaOH$?
+
+**Solution:**
 
 
 ---
@@ -181,6 +201,8 @@ A buffer is **destroyed** when all of one component is consumed:
 
 - Adding enough $H^+$ to consume all the $A^-$ → no more base component
 - Adding enough $OH^-$ to consume all the $HA$ → no more acid component
+
+> ⚠️ **AP Exam Alert:** After a buffer is destroyed, you must switch to a simple strong acid/base calculation — Henderson-Hasselbalch no longer applies!
 
 
 ---

@@ -2,186 +2,244 @@ export const precalcPolynomialPart2Data = {
   topicSlug: 'polynomial-functions-precalc',
   sections: [
     {
-      id: 'precalc-polynomial-functions-precalc-p2-s1-intro',
+      id: 'p2-intro',
       type: 'text' as const,
       content: `
-      ## Polynomial Functions: Factoring structure and zeros
-      
-      **Part 2 of 7**
-      
-      This part focuses on extracting roots from factored forms. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **leading coefficient**: coefficient of the highest-degree term
-      - **zero**: input value where polynomial output is zero
-      - **multiplicity**: number of times a factor repeats
-      
-      
-      ### Worked Example
-      Part 2 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📐 Zeros and Factored Form
+
+**Part 2 of 7 — Finding Zeros & Writing in Factored Form**
+
+The **zeros** (or **roots**) of a polynomial are the $x$-values where the graph crosses or touches the $x$-axis. Finding them is one of the most important skills in algebra and precalculus — and the key is **factoring**.
       `
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p2-s2-mcq-core',
+      id: 'p2-zeros-definition',
+      type: 'text' as const,
+      content: `
+## 📖 What Are Zeros?
+
+A **zero** of a polynomial $p(x)$ is any value $c$ such that $p(c) = 0$.
+
+Zeros have several equivalent names:
+
+| Term | Meaning |
+|------|---------|
+| **Zero** of $p(x)$ | Value $c$ where $p(c) = 0$ |
+| **Root** of the equation | Solution to $p(x) = 0$ |
+| **$x$-intercept** of the graph | Point $(c, 0)$ where the graph meets the $x$-axis |
+
+> 🔑 **Key idea:** Zero, root, and $x$-intercept all refer to the same concept viewed from different perspectives — algebraic, equation, and graphical.
+
+
+---
+
+### Example
+
+For $p(x) = x^2 - 5x + 6$:
+
+$$p(2) = 4 - 10 + 6 = 0 \\quad \\checkmark$$
+$$p(3) = 9 - 15 + 6 = 0 \\quad \\checkmark$$
+
+So $x = 2$ and $x = 3$ are zeros. The graph crosses the $x$-axis at $(2, 0)$ and $(3, 0)$.
+      `
+    },
+    {
+      id: 'p2-factored-form',
+      type: 'text' as const,
+      content: `
+## 📌 Factored Form
+
+If a polynomial of degree $n$ has zeros at $r_1, r_2, \\ldots, r_n$, it can be written as:
+
+$$\\boxed{p(x) = a(x - r_1)(x - r_2) \\cdots (x - r_n)}$$
+
+where $a$ is the leading coefficient.
+
+> ⚠️ **Watch the signs!** If a zero is $x = -3$, the factor is $(x - (-3)) = (x + 3)$, **not** $(x - 3)$.
+
+
+---
+
+### Standard vs. Factored Form
+
+| Form | Example | What it reveals |
+|------|---------|-----------------|
+| Standard | $p(x) = 2x^3 - 10x^2 + 12x$ | Degree, leading coefficient, $y$-intercept |
+| Factored | $p(x) = 2x(x - 2)(x - 3)$ | Zeros, sign changes, $x$-intercepts |
+
+
+---
+
+### Converting: Standard → Factored
+
+> **Factor $p(x) = x^3 - 4x^2 + 3x$ completely.**
+
+**Step 1:** Factor out the GCF:
+
+$$p(x) = x(x^2 - 4x + 3)$$
+
+**Step 2:** Factor the quadratic:
+
+$$p(x) = x(x - 1)(x - 3)$$
+
+**Zeros:** $x = 0, \\; x = 1, \\; x = 3$
+      `
+    },
+    {
+      id: 'p2-factoring-techniques',
+      type: 'text' as const,
+      content: `
+## 🛠️ Factoring Techniques
+
+Different polynomials require different factoring strategies:
+
+| Technique | When to use | Example |
+|-----------|------------|---------|
+| **GCF** | All terms share a common factor | $6x^3 - 9x^2 = 3x^2(2x - 3)$ |
+| **Trinomial** ($x^2 + bx + c$) | Leading coefficient is 1 | $x^2 - 7x + 12 = (x-3)(x-4)$ |
+| **AC method** ($ax^2 + bx + c$) | Leading coefficient $\\neq 1$ | $2x^2 + 7x + 3 = (2x+1)(x+3)$ |
+| **Difference of squares** | $a^2 - b^2$ | $x^2 - 9 = (x-3)(x+3)$ |
+| **Sum/difference of cubes** | $a^3 \\pm b^3$ | $x^3 - 8 = (x-2)(x^2 + 2x + 4)$ |
+| **Grouping** | 4+ terms with pairwise common factors | $x^3 + x^2 - 4x - 4 = (x+1)(x-2)(x+2)$ |
+
+
+---
+
+### The Factor Theorem
+
+The **Factor Theorem** connects zeros and factors directly:
+
+$$\\boxed{p(c) = 0 \\quad \\Longleftrightarrow \\quad (x - c) \\text{ is a factor of } p(x)}$$
+
+This means: if you can verify that $p(c) = 0$ by substitution, then you know $(x - c)$ divides evenly into $p(x)$.
+      `
+    },
+    {
+      id: 'p2-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Zeros & Factoring Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of leading coefficient.',
+            question: 'What are the zeros of $f(x) = (x + 4)(x - 1)(x - 7)$?',
             options: [
-              'remainder of division by $x-c$ equals $p(c)$',
-              'input value where polynomial output is zero',
-              'coefficient of the highest-degree term',
-              'number of times a factor repeats'
+              '$x = 4, \\; x = -1, \\; x = -7$',
+              '$x = -4, \\; x = 1, \\; x = 7$',
+              '$x = -4, \\; x = -1, \\; x = -7$',
+              '$x = 4, \\; x = 1, \\; x = 7$'
             ],
-            correctAnswer: 2,
-            explanation: 'leading coefficient is defined as: coefficient of the highest-degree term.'
+            correctAnswer: 1,
+            explanation: 'Set each factor equal to zero: $x + 4 = 0 \\Rightarrow x = -4$, $x - 1 = 0 \\Rightarrow x = 1$, $x - 7 = 0 \\Rightarrow x = 7$. Watch the sign flip from factor to zero!'
           },
           {
-            question: 'In extracting roots from factored forms, which expression is the best starting model?',
+            question: 'Which factoring technique would you use first on $3x^4 - 12x^2$?',
             options: [
-              '$p(x)=a\\prod (x-r_i)^{m_i}$',
-              '$\\deg(pq)=\\deg p+\\deg q$',
-              '$x=\\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}$',
-              '$\\text{rem}(p\\div (x-c))=p(c)$'
+              'Difference of cubes',
+              'AC method',
+              'Factor out the GCF, then difference of squares',
+              'Trinomial factoring'
             ],
-            correctAnswer: 3,
-            explanation: 'Use $\\text{rem}(p\\div (x-c))=p(c)$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 2,
+            explanation: '$3x^4 - 12x^2 = 3x^2(x^2 - 4) = 3x^2(x-2)(x+2)$. Always start with GCF, then recognize the remaining pattern.'
+          },
+          {
+            question: 'If $p(5) = 0$, which statement must be true?',
+            options: [
+              '$(x + 5)$ is a factor of $p(x)$',
+              '$(x - 5)$ is a factor of $p(x)$',
+              '$p(x)$ has degree 5',
+              'The leading coefficient is 5'
+            ],
+            correctAnswer: 1,
+            explanation: 'By the Factor Theorem: $p(c) = 0$ means $(x - c)$ is a factor. Since $p(5) = 0$, $(x - 5)$ is a factor.'
           }
         ]
       }
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p2-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Remainder theorem | $\\text{rem}(p\div (x-c))=p(c)$ | fast root testing |
-      | Quadratic roots | $x=\\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ | embedded factor analysis |
-      | Degree sum | $\deg(pq)=\deg p+\deg q$ | model-building checks |
-      | Factored form | $p(x)=a\prod (x-r_i)^{m_i}$ | zero/multiplicity encoding |
-      
-      ### Common pitfalls
-      - Even/odd degree does not determine all turning behavior.
-      - A numerical approximation can hide repeated roots if precision is low.
-      - Multiplicity affects local graph shape at zeros.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-polynomial-functions-precalc-p2-s4-input',
+      id: 'p2-calculation-drill',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Polynomial Structure**
-      
-      1) Evaluate $p(3)$ for $p(x)=x^3-2x$.
-      2) Compute $p(2)$ for $p(x)=x^2-5x+6$.
-      3) Find degree of $(x^2+1)(x^3-1)$.
+**Factoring & Zeros Drill** 🧮
+
+**1)** How many real zeros does $p(x) = x(x-2)(x+5)$ have? (e.g., $(x-1)(x+1)$ has $2$ zeros)
+
+**2)** What is the $y$-intercept of $p(x) = (x-1)(x+3)(x-4)$? Evaluate $p(0)$. (e.g., for $(x-2)(x+1)$, $p(0) = (-2)(1) = -2$)
+
+**3)** Factor $x^2 - 16$ using difference of squares. What is the positive zero? (e.g., for $x^2 - 25$, the positive zero is $5$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['21', '0', '5'],
-        hint1: 'Substitute and simplify term by term.',
-        hint2: 'Use the remainder/factor theorem shortcut.',
-        hint3: 'Degrees add under multiplication.',
-        explanation: 'Values are 21 and 0, and the product polynomial has degree 5.'
+        correctAnswers: ['3', '12', '4'],
+        hint1: 'Count the distinct factors — each gives one zero.',
+        hint2: 'The $y$-intercept is $p(0) = (0-1)(0+3)(0-4) = (-1)(3)(-4)$.',
+        hint3: '$x^2 - 16 = (x-4)(x+4)$. The positive zero is the positive value.',
+        explanation: '1) Three factors give 3 zeros: $x = 0, 2, -5$. 2) $p(0) = (-1)(3)(-4) = 12$. 3) $x^2 - 16 = (x-4)(x+4)$, positive zero is $4$.'
       }
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p2-s5-dropdown',
+      id: 'p2-dropdown-practice',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Factoring Concepts — Fill in the Blanks** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'leading coefficient',
-            options: ['remainder of division by $x-c$ equals $p(c)$', 'input value where polynomial output is zero', 'number of times a factor repeats', 'coefficient of the highest-degree term']
+            label: 'If $p(c) = 0$, then $(x - c)$ is a ______ of $p(x)$',
+            options: ['zero', 'factor', 'coefficient', 'degree']
           },
           {
-            label: 'zero',
-            options: ['remainder of division by $x-c$ equals $p(c)$', 'number of times a factor repeats', 'input value where polynomial output is zero', '$p(c)=0$ implies $(x-c)$ is a factor']
+            label: 'The expression $x^2 - 25$ is an example of',
+            options: ['perfect square trinomial', 'sum of cubes', 'difference of squares', 'grouping pattern']
           },
           {
-            label: 'multiplicity',
-            options: ['direction of graph tails as $x	o\\pm\\infty$', 'number of times a factor repeats', 'remainder of division by $x-c$ equals $p(c)$', '$p(c)=0$ implies $(x-c)$ is a factor']
+            label: 'To find the $y$-intercept of a polynomial, evaluate $p$ at',
+            options: ['$x = 1$', '$x = -1$', '$x = 0$', 'the leading coefficient']
+          },
+          {
+            label: 'A degree-4 polynomial can have at most ______ real zeros',
+            options: ['3', '4', '5', '8']
           }
         ],
-        correctAnswers: ['coefficient of the highest-degree term', 'input value where polynomial output is zero', 'number of times a factor repeats'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: leading coefficient, zero, and multiplicity align with their exact definitions used in this part.'
+        correctAnswers: ['factor', 'difference of squares', '$x = 0$', '4'],
+        hint1: 'The Factor Theorem connects zeros to what kind of expression?',
+        hint2: '$a^2 - b^2$ is the classic pattern name.',
+        hint3: 'The $y$-intercept occurs where the graph crosses the $y$-axis.',
+        explanation: 'The Factor Theorem says $p(c) = 0$ iff $(x-c)$ is a factor. $x^2 - 25 = (x-5)(x+5)$ is difference of squares. The $y$-intercept is $p(0)$. Degree $n$ means at most $n$ real zeros.'
       }
     },
     {
-      id: 'precalc-polynomial-functions-precalc-p2-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to leading coefficient, zero, and multiplicity so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-polynomial-functions-precalc-p2-s7-mcq-applied',
+      id: 'p2-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz — Zeros & Factored Form** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is extracting roots from factored forms. Which term best anchors the next reasoning step if the key idea is: remainder of division by $x-c$ equals $p(c)$?',
+            question: 'Which polynomial has zeros at $x = -2$, $x = 0$, and $x = 3$?',
             options: [
-              'leading coefficient',
-              'multiplicity',
-              'remainder theorem',
-              'zero'
-            ],
-            correctAnswer: 2,
-            explanation: 'remainder theorem matches that description and keeps the model-to-interpretation chain consistent.'
-          },
-          {
-            question: 'A student is solving a mixed polynomial functions prompt. Which term best anchors the next reasoning step if the key idea is: $p(c)=0$ implies $(x-c)$ is a factor?',
-            options: [
-              'remainder theorem',
-              'factor theorem',
-              'multiplicity',
-              'end behavior'
+              '$p(x) = x(x-2)(x+3)$',
+              '$p(x) = x(x+2)(x-3)$',
+              '$p(x) = (x-2)(x+3)$',
+              '$p(x) = x(x+2)(x+3)$'
             ],
             correctAnswer: 1,
-            explanation: 'factor theorem matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Zeros at $-2, 0, 3$ require factors $(x+2)$, $x$, and $(x-3)$. Only $x(x+2)(x-3)$ has all three.'
+          },
+          {
+            question: 'The polynomial $g(x) = x^3 - x$ factors as:',
+            options: [
+              '$x(x^2 - 1)$',
+              '$x(x - 1)(x + 1)$',
+              '$(x - 1)(x^2 + x)$',
+              'It cannot be factored further'
+            ],
+            correctAnswer: 1,
+            explanation: '$x^3 - x = x(x^2 - 1) = x(x-1)(x+1)$. Recognize the difference of squares $x^2 - 1 = (x-1)(x+1)$ for the complete factorization.'
           }
         ]
       }

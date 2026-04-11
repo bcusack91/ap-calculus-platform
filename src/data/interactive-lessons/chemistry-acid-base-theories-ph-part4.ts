@@ -4,13 +4,32 @@ export const chemAcidBaseTheoriesPhPart4Data = {
     {
       id: 'ab4-intro',
       type: 'text' as const,
-      content: `
-# 📊 The pH Scale
+      content: `# 📊 The pH Scale
 
 **Part 4 of 7 — Measuring Acidity and Basicity**
 
-The pH scale provides a convenient way to express the acidity or basicity of a solution. It converts the wide range of $[H^+]$ values (from $10^0$ to $10^{-14}$ M) into a simple 0–14 scale.
-      `
+---
+
+### The pH Scale at a Glance
+
+| pH | $[H^+]$ (M) | Character | Example |
+|----|-------------|-----------|---------|
+| 0 | $10^0$ | Strongly acidic | Battery acid |
+| 3 | $10^{-3}$ | Acidic | Vinegar |
+| 7 | $10^{-7}$ | Neutral | Pure water |
+| 11 | $10^{-11}$ | Basic | Ammonia |
+| 14 | $10^{-14}$ | Strongly basic | Drain cleaner |
+
+Each pH unit = a **10-fold** change in $[H^+]$.
+
+> 🔑 **Why this matters:** pH calculations are on virtually every AP Chemistry exam — mastering the logarithmic relationship between $[H^+]$ and pH is essential.
+
+---
+
+### What You'll Master in Part 4
+- Converting between $[H^+]$, pH, $[OH^-]$, and pOH
+- Understanding the pH + pOH = 14 relationship
+- Interpreting what pH values mean for acidity and basicity`
     },
     {
       id: 'ab4-ph-definition',
@@ -20,14 +39,14 @@ The pH scale provides a convenient way to express the acidity or basicity of a s
 
 ### pH Definition
 
-$$pH = -\\log[H^+]$$
+$$\\boxed{pH = -\\log[H^+]}$$
 
 
 ---
 
 ### pOH Definition
 
-$$pOH = -\\log[OH^-]$$
+$$\\boxed{pOH = -\\log[OH^-]}$$
 
 
 ---
@@ -36,7 +55,7 @@ $$pOH = -\\log[OH^-]$$
 
 At 25°C:
 
-$$pH + pOH = 14$$
+$$\\boxed{pH + pOH = 14}$$
 
 This comes from $K_w$:
 
@@ -68,7 +87,9 @@ $$pH + pOH = 14$$
 
 ### From $[H^+]$ to pH
 
-**Example:** $[H^+] = 3.2 \\times 10^{-4}$ M
+> **Problem:** $[H^+] = 3.2 \\times 10^{-4}$ M. Find pH.
+
+**Solution:**
 
 $$pH = -\\log(3.2 \\times 10^{-4}) = -(-3.49) = 3.49$$
 
@@ -77,7 +98,9 @@ $$pH = -\\log(3.2 \\times 10^{-4}) = -(-3.49) = 3.49$$
 
 ### From pH to $[H^+]$
 
-**Example:** $pH = 5.60$
+> **Problem:** $pH = 5.60$. Find $[H^+]$.
+
+**Solution:**
 
 $$[H^+] = 10^{-pH} = 10^{-5.60} = 2.5 \\times 10^{-6} \\text{ M}$$
 
@@ -86,7 +109,9 @@ $$[H^+] = 10^{-pH} = 10^{-5.60} = 2.5 \\times 10^{-6} \\text{ M}$$
 
 ### From $[OH^-]$ to pH
 
-**Example:** $[OH^-] = 4.0 \\times 10^{-3}$ M
+> **Problem:** $[OH^-] = 4.0 \\times 10^{-3}$ M. Find pH.
+
+**Solution:**
 
 Step 1: $pOH = -\\log(4.0 \\times 10^{-3}) = 2.40$
 
@@ -97,9 +122,9 @@ Step 2: $pH = 14 - pOH = 14 - 2.40 = 11.60$
 
 ### The "p" Notation
 
-The prefix "p" always means $-\\log$:
+> 🔑 The prefix **"p"** always means $-\\log$:
 
-$$pX = -\\log X$$
+$$\\boxed{pX = -\\log X}$$
 
 So $pK_a = -\\log K_a$, $pK_b = -\\log K_b$, $pK_w = -\\log K_w = 14$
       `
@@ -156,7 +181,7 @@ So $pK_a = -\\log K_a$, $pK_b = -\\log K_b$, $pK_w = -\\log K_w = 14$
 
 An important AP Chemistry rule:
 
-> The number of **decimal places** in the pH equals the number of **significant figures** in $[H^+]$.
+> 🔑 The number of **decimal places** in the pH equals the number of **significant figures** in $[H^+]$.
 
 
 ---
@@ -169,7 +194,7 @@ An important AP Chemistry rule:
 | $2.5 \\times 10^{-6}$ | 2 | 5.60 | 2 |
 | $3.45 \\times 10^{-8}$ | 3 | 7.462 | 3 |
 
-The digits **before** the decimal in pH only indicate the order of magnitude — they don\'t count as sig figs!
+> ⚠️ The digits **before** the decimal in pH only indicate the order of magnitude — they don\'t count as sig figs!
       `
     },
     {
@@ -180,7 +205,7 @@ The digits **before** the decimal in pH only indicate the order of magnitude —
 
 **1)** What is the pH of a solution with $[H^+] = 5.0 \\times 10^{-9}$ M? (2 decimal places)
 
-**2)** What is the $[H^+]$ in a solution with $pH = 4.30$? (Enter in scientific notation, e.g. 5.0e-5)
+**2)** What is the $[H^+]$ in a solution with $pH = 4.30$? (Enter in scientific notation, e.g. 2.5e-3)
 
 **3)** What is the pH of a solution with $[OH^-] = 2.0 \\times 10^{-4}$ M? (2 decimal places)
       `,

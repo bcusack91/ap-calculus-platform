@@ -4,15 +4,30 @@ export const chemIdealGasLawPart2Data = {
     {
       id: 'gl2-intro',
       type: 'text' as const,
-      content: `
-# 📏 Boyle's, Charles's, and Avogadro's Laws
+      content: `# 📏 Boyle's, Charles's, and Avogadro's Laws
 
 **Part 2 of 7 — The Foundational Gas Laws**
 
-Before the ideal gas law was discovered, scientists identified three separate relationships between gas variables. Each law holds **one or two variables constant** while examining how the remaining variables relate.
+---
 
-These "simple" gas laws are the building blocks of $PV = nRT$.
-      `
+### Topics in This Part
+
+| Section |
+|---------|
+| 📏 Boyle's Law (Pressure–Volume) |
+| Example |
+| Conceptual Picture |
+| 📏 Charles's Law (Volume–Temperature) |
+| Example |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gl2-boyles',
@@ -22,7 +37,7 @@ These "simple" gas laws are the building blocks of $PV = nRT$.
 
 **At constant temperature and amount of gas:**
 
-$$P_1V_1 = P_2V_2$$
+$$\\boxed{P_1V_1 = P_2V_2}$$
 
 Pressure and volume are **inversely proportional**. When you compress a gas (decrease volume), the pressure increases — and vice versa.
 
@@ -33,7 +48,7 @@ Pressure and volume are **inversely proportional**. When you compress a gas (dec
 
 > **Problem:** A gas occupies 4.00 L at 1.00 atm. What is the volume if the pressure increases to 2.00 atm?
 
-**Solution:**
+> **Solution:**
 
 $$V_2 = \\frac{P_1V_1}{P_2} = \\frac{(1.00)(4.00)}{2.00} = 2.00 \\text{ L}$$
 
@@ -53,7 +68,7 @@ When volume decreases, molecules hit the walls more often → more collisions pe
 
 **At constant pressure and amount of gas:**
 
-$$\\frac{V_1}{T_1} = \\frac{V_2}{T_2}$$
+$$\\boxed{\\frac{V_1}{T_1} = \\frac{V_2}{T_2}}$$
 
 Volume and temperature are **directly proportional** (temperature in Kelvin!). Heat a gas and it expands; cool it and it contracts.
 
@@ -64,7 +79,7 @@ Volume and temperature are **directly proportional** (temperature in Kelvin!). H
 
 > **Problem:** A balloon has a volume of 2.50 L at 20°C. What volume will it have at 80°C? (Pressure constant)
 
-**Solution:**
+> **Solution:**
 
 $$T_1 = 20 + 273.15 = 293.15 \\text{ K}, \\quad T_2 = 80 + 273.15 = 353.15 \\text{ K}$$
 
@@ -75,7 +90,7 @@ $$V_2 = V_1 \\times \\frac{T_2}{T_1} = 2.50 \\times \\frac{353.15}{293.15} = 3.0
 
 ### Why Kelvin?
 
-If you use Celsius, 0°C would imply zero volume — which is nonsensical. Kelvin starts at absolute zero, where molecular motion stops.
+> ⚠️ **Warning:** If you use Celsius, 0°C would imply zero volume — which is nonsensical. Kelvin starts at absolute zero, where molecular motion stops.
       `
     },
     {
@@ -86,7 +101,7 @@ If you use Celsius, 0°C would imply zero volume — which is nonsensical. Kelvi
 
 **At constant temperature and pressure:**
 
-$$\\frac{V_1}{n_1} = \\frac{V_2}{n_2}$$
+$$\\boxed{\\frac{V_1}{n_1} = \\frac{V_2}{n_2}}$$
 
 Volume and amount of gas (in moles) are **directly proportional**. More molecules → more volume (at the same $T$ and $P$).
 
@@ -97,7 +112,7 @@ Volume and amount of gas (in moles) are **directly proportional**. More molecule
 
 > **Problem:** 3.00 mol of gas occupies 6.00 L. What volume will 5.00 mol occupy under the same conditions?
 
-**Solution:**
+> **Solution:**
 
 $$V_2 = V_1 \\times \\frac{n_2}{n_1} = 6.00 \\times \\frac{5.00}{3.00} = 10.0 \\text{ L}$$
 
@@ -106,7 +121,7 @@ $$V_2 = V_1 \\times \\frac{n_2}{n_1} = 6.00 \\times \\frac{5.00}{3.00} = 10.0 \\
 
 ### At STP
 
-At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal gas** occupies **22.4 L**. This is the **molar volume** at STP.
+> 💡 **Tip:** At standard temperature and pressure (STP: 0°C, 1 atm), **1 mole of any ideal gas** occupies **22.4 L**. This is the **molar volume** at STP — a useful shortcut!
       `
     },
     {

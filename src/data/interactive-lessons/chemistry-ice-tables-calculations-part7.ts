@@ -4,13 +4,24 @@ export const chemIceTablesCalculationsPart7Data = {
     {
       id: 'ic7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — ICE Tables and Equilibrium Calculations**
 
-This final part reviews all ICE table techniques: setup, solving for K, solving for concentrations, the 5% approximation, and the quadratic formula. These questions mirror AP Chemistry exam formats.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'ic7-summary',
@@ -52,9 +63,26 @@ This final part reviews all ICE table techniques: setup, solving for K, solving 
 
 ---
 
-### Verification
+### Key Formulas
 
-Always check: Plug equilibrium concentrations back into K expression. The calculated K should match the given K.
+$$\\boxed{E = I + C \\quad \\text{(for each species)}}$$
+
+$$\\boxed{\\frac{x}{[\\text{initial}]} \\times 100\\% < 5\\% \\quad \\text{(validation test)}}$$
+
+
+---
+
+> 🔑 **Verification:** Always check — plug equilibrium concentrations back into the K expression. The calculated K should match the given K.
+
+
+---
+
+> 💡 **Tip:** For a quick mental check, confirm all equilibrium concentrations are non-negative and that the shift direction is consistent with $Q$ vs $K$.
+
+
+---
+
+> ⚠️ **Warning:** The most common ICE table error is forgetting that stoichiometric coefficients multiply $x$ in the Change row — e.g., for $2\\text{A} \\rightleftharpoons \\text{B}$, $\\Delta[\\text{A}] = -2x$, not $-x$.
       `
     },
     {
@@ -107,9 +135,7 @@ Always check: Plug equilibrium concentrations back into K expression. The calcul
       content: `
 **AP Free-Response Style** 🧮
 
-$\\text{CO}(g) + \\text{Cl}_2(g) \\rightleftharpoons \\text{COCl}_2(g)$, $K_c = 255$ at 100°C
-
-A 1.00 L flask is charged with 0.400 mol CO and 0.400 mol Cl₂. No COCl₂ is initially present.
+> **Problem:** For $\\text{CO}(g) + \\text{Cl}_2(g) \\rightleftharpoons \\text{COCl}_2(g)$ with $K_c = 255$ at 100°C, a 1.00 L flask is charged with 0.400 mol CO and 0.400 mol Cl₂. No COCl₂ is initially present.
 
 **1)** Write the K expression and set up the ICE table. What is $[\\text{COCl}_2]$ at equilibrium in terms of x? (Enter, e.g., "x")
 

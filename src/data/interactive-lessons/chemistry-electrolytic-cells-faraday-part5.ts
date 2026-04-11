@@ -4,13 +4,30 @@ export const chemElectrolyticCellsFaradayPart5Data = {
     {
       id: 'ef5-intro',
       type: 'text' as const,
-      content: `
-# 🏭 Electroplating and Industrial Applications
+      content: `# 🏭 Electroplating and Industrial Applications
 
 **Part 5 of 7 — Real-World Electrolysis**
 
-Electrolysis has enormous industrial importance. From electroplating jewelry to producing aluminum, these applications demonstrate the practical power of electrochemistry.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🔋 Electroplating |
+| Setup |
+| How It Works |
+| Controlling Thickness |
+| Common Plating Metals |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ef5-electroplating',
@@ -28,6 +45,8 @@ Electroplating is the process of coating an object with a thin layer of metal us
 - **Cathode**: the object to be plated (e.g., a spoon)
 - **Anode**: a piece of the plating metal (e.g., silver)
 - **Electrolyte**: a solution of the plating metal ions (e.g., AgNO₃)
+
+> 🔑 **Key Rule:** The object you want to coat is ALWAYS the cathode (where metal deposits). The plating metal is the anode (where it dissolves).
 
 
 ---
@@ -79,6 +98,8 @@ $$2\\text{Al}_2\\text{O}_3(l) \\rightarrow 4\\text{Al}(l) + 3\\text{O}_2(g)$$
 - Carbon anodes are consumed: $\\text{C} + \\text{O}^{2-} \\rightarrow \\text{CO}_2 + e^-$
 - Produces ~65 million tonnes of Al per year worldwide
 
+> 💡 **Why Electrolysis?** Aluminum is too reactive to reduce with carbon alone. The Hall-Héroult process was a breakthrough that made aluminum affordable.
+
 
 ---
 
@@ -99,6 +120,8 @@ $$2\\text{NaCl}(aq) + 2\\text{H}_2\\text{O}(l) \\rightarrow \\text{Cl}_2(g) + \\
 - Cu²⁺ from impure anode deposits as pure Cu on cathode
 - Impurities fall to the bottom ("anode mud") — contains Ag, Au, Pt!
 - Produces 99.99% pure copper for electrical wiring
+
+> ⚠️ **Don’t Confuse:** In electrorefining, both electrodes are copper! The impure Cu dissolves at the anode, and pure Cu deposits at the cathode. Impurities that don’t dissolve collect as valuable "anode mud."
       `
     },
     {

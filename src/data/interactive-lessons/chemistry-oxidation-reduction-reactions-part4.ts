@@ -4,13 +4,30 @@ export const chemOxidationReductionReactionsPart4Data = {
     {
       id: 'or4-intro',
       type: 'text' as const,
-      content: `
-# ⚡ Balancing Redox in Basic Solution
+      content: `# ⚡ Balancing Redox in Basic Solution
 
 **Part 4 of 7 — Adding OH⁻ to Neutralize H⁺**
 
-Many redox reactions occur in **basic** (alkaline) solution — for example, in batteries and biological systems. The method is almost identical to the acidic method, with one extra step at the end: we neutralize H⁺ by adding OH⁻.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🧪 The Basic Solution Method |
+| Strategy: Balance in Acid First, Then Convert |
+| Why This Works |
+| The Key Conversion |
+| 🧪 Worked Example |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'or4-method',
@@ -19,6 +36,8 @@ Many redox reactions occur in **basic** (alkaline) solution — for example, in 
 ## 🧪 The Basic Solution Method
 
 ### Strategy: Balance in Acid First, Then Convert
+
+> 🔑 **Key Concept:** Always balance in acidic solution first (Steps 1–7), then convert to basic by adding OH⁻.
 
 | Step | Action |
 |------|--------|
@@ -32,14 +51,16 @@ Many redox reactions occur in **basic** (alkaline) solution — for example, in 
 
 ### Why This Works
 
-In basic solution, free H⁺ ions don\'t exist — they would react with the abundant OH⁻. By adding OH⁻ to neutralize every H⁺, we convert to a form appropriate for basic conditions.
+> ⚠️ **Warning:** In basic solution, free H⁺ ions don\'t exist! If your final equation still has H⁺, you haven\'t finished converting.
+
+By adding OH⁻ to neutralize every H⁺, we convert to a form appropriate for basic conditions.
 
 
 ---
 
 ### The Key Conversion
 
-$$\\text{H}^+ + \\text{OH}^- \\rightarrow \\text{H}_2\\text{O}$$
+$$\\boxed{\\text{H}^+ + \\text{OH}^- \\rightarrow \\text{H}_2\\text{O}}$$
 
 If there are 6 H⁺ in your acidic-balanced equation, add 6 OH⁻ to **both sides**.
       `
@@ -50,7 +71,7 @@ If there are 6 H⁺ in your acidic-balanced equation, add 6 OH⁻ to **both side
       content: `
 ## 🧪 Worked Example
 
-Balance in **basic** solution:
+> **Problem:** Balance in **basic** solution:
 
 $$\\text{MnO}_4^- + \\text{Br}^- \\rightarrow \\text{MnO}_2 + \\text{BrO}_3^-$$
 
@@ -89,7 +110,7 @@ $$2\\text{H}_2\\text{O} + 2\\text{MnO}_4^- + \\text{Br}^- \\rightarrow 2\\text{M
 
 Cancel 1 H₂O from both sides:
 
-$$\\text{H}_2\\text{O} + 2\\text{MnO}_4^- + \\text{Br}^- \\rightarrow 2\\text{MnO}_2 + \\text{BrO}_3^- + 2\\text{OH}^-$$
+$$\\boxed{\\text{H}_2\\text{O} + 2\\text{MnO}_4^- + \\text{Br}^- \\rightarrow 2\\text{MnO}_2 + \\text{BrO}_3^- + 2\\text{OH}^-}$$
 
 ✅ No H⁺ remains — appropriate for basic solution!
       `

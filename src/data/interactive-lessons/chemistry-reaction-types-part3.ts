@@ -4,13 +4,30 @@ export const chemReactionTypesPart3Data = {
     {
       id: 'rt3-intro',
       type: 'text' as const,
-      content: `
-# 🔥 Combustion Reactions
+      content: `# 🔥 Combustion Reactions
 
 **Part 3 of 7 — Burning It Down**
 
-Combustion is one of the most important reaction types in chemistry and everyday life. From powering car engines to heating homes, combustion reactions release energy by reacting substances with **oxygen gas**.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Complete Combustion of Hydrocarbons |
+| General Form |
+| Common Examples |
+| Key Recognition |
+| 📌 Combustion of Oxygenated Compounds |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rt3-complete-combustion',
@@ -25,7 +42,7 @@ When a hydrocarbon (a compound containing only C and H) burns in **excess oxygen
 
 ### General Form
 
-$$\\text{C}_x\\text{H}_y + \\left(x + \\frac{y}{4}\\right)\\text{O}_2 \\rightarrow x\\text{CO}_2 + \\frac{y}{2}\\text{H}_2\\text{O}$$
+$$\\boxed{\\text{C}_x\\text{H}_y + \\left(x + \\frac{y}{4}\\right)\\text{O}_2 \\rightarrow x\\text{CO}_2 + \\frac{y}{2}\\text{H}_2\\text{O}}$$
 
 
 ---
@@ -44,7 +61,7 @@ $$\\text{C}_x\\text{H}_y + \\left(x + \\frac{y}{4}\\right)\\text{O}_2 \\rightarr
 
 ### Key Recognition
 
-If you see a hydrocarbon + O₂ → it\'s combustion. The products are **always CO₂ + H₂O** for complete combustion.
+> 💡 **Tip:** If you see a hydrocarbon + O₂ → it\'s combustion. The products are **always CO₂ + H₂O** for complete combustion.
       `
     },
     {
@@ -71,9 +88,9 @@ Compounds containing C, H, **and O** (like alcohols and sugars) also undergo com
 
 ### Cellular Respiration
 
-Glucose combustion is chemically identical to cellular respiration — your body "burns" glucose to release energy!
+> 💡 **Tip:** Glucose combustion is chemically identical to cellular respiration — your body "burns" glucose to release energy!
 
-$$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 \\rightarrow 6\\text{CO}_2 + 6\\text{H}_2\\text{O} + \\text{energy}$$
+$$\\boxed{\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 \\rightarrow 6\\text{CO}_2 + 6\\text{H}_2\\text{O} + \\text{energy}}$$
       `
     },
     {
@@ -96,7 +113,8 @@ $$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 \\rightarrow 6\\text{CO}_2
 - Products may include: **CO** (carbon monoxide), **C** (soot), or both, along with H₂O
 - Yellow/orange flame
 - Less energy released
-- **Carbon monoxide is toxic** — this is why proper ventilation matters
+
+> ⚠️ **Warning:** **Carbon monoxide (CO) is toxic** and odorless — this is why proper ventilation matters. CO binds to hemoglobin more strongly than O₂, preventing oxygen transport.
 
 
 ---

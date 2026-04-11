@@ -4,13 +4,29 @@ export const chemAcidBaseTitrationsPart5Data = {
     {
       id: 'at5-intro',
       type: 'text' as const,
-      content: `
-# 🎨 Acid-Base Indicators
+      content: `# 🎨 Acid-Base Indicators
 
 **Part 5 of 7 — Choosing the Right Indicator**
 
-An indicator is a weak acid (or base) that changes color in a specific pH range. Choosing the right indicator is critical — its color change should occur as close to the equivalence point as possible.
-      `
+---
+
+### Indicator Selection at a Glance
+
+| Indicator | Color Change | pH Range | Best For |
+|-----------|-------------|----------|----------|
+| Methyl orange | Red → Yellow | 3.1–4.4 | Strong base titrating strong acid |
+| Bromothymol blue | Yellow → Blue | 6.0–7.6 | Strong-strong titrations |
+| Phenolphthalein | Colorless → Pink | 8.2–10.0 | Weak acid–strong base |
+| Alizarin yellow R | Yellow → Red | 10.1–12.0 | Very basic equivalence points |
+
+> 🔑 **Why this matters:** Choosing the wrong indicator gives a false endpoint — the AP exam tests whether you can match an indicator's range to the equivalence point pH.
+
+---
+
+### What You'll Master in Part 5
+- Understanding how indicators work as weak acids that change color
+- Matching indicator pH range to the equivalence point pH
+- Comparing indicators to pH meters for accuracy`
     },
     {
       id: 'at5-how-indicators-work',
@@ -44,9 +60,11 @@ $$\\frac{[In^-]}{[HIn]} = \\frac{1}{10} \\text{ to } \\frac{10}{1}$$
 
 Using Henderson-Hasselbalch for the indicator:
 
-$$pH = pK_{In} \\pm 1$$
+$$\\boxed{pH = pK_{In} \\pm 1}$$
 
 The indicator changes color over approximately **2 pH units** centered on its $pK_{In}$.
+
+> 🔑 **Key Rule:** An indicator is useful when its $pK_{In}$ is close to the equivalence point pH.
       `
     },
     {
@@ -70,6 +88,8 @@ The indicator changes color over approximately **2 pH units** centered on its $p
 ### Choosing the Right Indicator
 
 **Match the indicator range to the equivalence point pH!**
+
+> ⚠️ **Common AP Error:** Students pick phenolphthalein for every titration. It only works when equivalence pH is 8–10 (weak acid + strong base).
 
 | Titration Type | Equivalence pH | Best Indicator |
 |---------------|----------------|----------------|
@@ -186,6 +206,8 @@ The indicator changes color over approximately **2 pH units** centered on its $p
 Plot pH vs. volume. The equivalence point is at the **inflection point** — where the curve is steepest (maximum $\\Delta pH/\\Delta V$).
 
 Alternatively, plot the **first derivative** ($\\Delta pH/\\Delta V$ vs. $V$). The equivalence point is at the **peak** of this graph.
+
+> 💡 **Tip:** On the AP exam, a pH meter graph with a clear inflection point is a strong clue to identify the equivalence volume.
       `
     },
     {

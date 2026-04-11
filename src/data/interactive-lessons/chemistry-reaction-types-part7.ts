@@ -4,13 +4,24 @@ export const chemReactionTypesPart7Data = {
     {
       id: 'rt7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — AP-Style Questions on Reaction Classification**
 
-This final part brings together everything from the entire topic. You\'ll face AP-level questions that require you to classify reactions, predict products, balance equations, and apply your knowledge of the activity series, driving forces, and combustion patterns.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'rt7-summary',
@@ -26,6 +37,14 @@ This final part brings together everything from the entire topic. You\'ll face A
 | Double Replacement | $AB + CD \\rightarrow AD + CB$ | Two ionic compounds swap ions |
 | Combustion | $\\text{Fuel} + \\text{O}_2 \\rightarrow \\text{CO}_2 + \\text{H}_2\\text{O}$ | Organic + O₂ |
 
+
+---
+
+> 🔑 **Key Concept:** To classify any reaction, follow this decision tree: (1) Only one reactant? → **Decomposition**. (2) Only one product? → **Synthesis**. (3) O₂ + fuel → CO₂ + H₂O? → **Combustion**. (4) Free element + compound? → **Single replacement**. (5) Two ionic compounds? → **Double replacement**.
+
+
+---
+
 ## 📌 AP Exam Tips
 
 1. **Read carefully** — the AP exam often describes reactions in words rather than symbols
@@ -34,6 +53,13 @@ This final part brings together everything from the entire topic. You\'ll face A
 4. **Balancing must be correct** — even if the products are right, unbalanced equations lose points
 5. **State symbols matter** — (s), (l), (g), (aq) are often tested
 6. **Net ionic equations** — AP frequently asks for these in double replacement reactions
+
+
+---
+
+> 💡 **Tip:** On the AP exam, quickly scan for visual cues: a **lone reactant** (decomposition), **O₂ on the left with CO₂ + H₂O on the right** (combustion), a **free element** mixed with a compound (single replacement), or **two aqueous ionic compounds** (double replacement).
+
+> ⚠️ **Warning:** Common errors when predicting products: (1) writing incorrect ionic formulas by not cross-checking charges, (2) forgetting to consult the activity series for single replacement, (3) predicting a double replacement when no driving force exists (no precipitate, gas, or water), and (4) submitting unbalanced equations.
       `
     },
     {
@@ -44,28 +70,28 @@ This final part brings together everything from the entire topic. You\'ll face A
 
 For double replacement reactions in solution, the AP exam often asks for net ionic equations.
 
+---
+
+### 📌 Step-by-Step Method
+
+| Step | Action | Example |
+|------|--------|---------|
+| 1 | Write balanced **molecular** equation | $\\text{AgNO}_3(\\text{aq}) + \\text{NaCl}(\\text{aq}) \\rightarrow \\text{AgCl}(\\text{s}) + \\text{NaNO}_3(\\text{aq})$ |
+| 2 | Split soluble ionic compounds into **ions** | $\\text{Ag}^+ + \\text{NO}_3^- + \\text{Na}^+ + \\text{Cl}^- \\rightarrow \\text{AgCl}(\\text{s}) + \\text{Na}^+ + \\text{NO}_3^-$ |
+| 3 | Cancel **spectator ions** (unchanged on both sides) | Na⁺ and NO₃⁻ cancel |
+| 4 | Write the **net ionic** equation | $\\text{Ag}^+(\\text{aq}) + \\text{Cl}^-(\\text{aq}) \\rightarrow \\text{AgCl}(\\text{s})$ |
 
 ---
 
-### Steps
+### 🧪 What to Split vs. Keep Whole
 
-1. Write the balanced molecular equation
-2. Write the complete ionic equation (split soluble ionic compounds into ions)
-3. Cancel spectator ions (ions that appear unchanged on both sides)
-4. What remains is the net ionic equation
+| Split into ions | Keep as one formula |
+|----------------|-------------------|
+| Soluble ionic compounds (aq) | Precipitates (s) |
+| Strong acids (aq) | Weak acids / bases |
+| Strong bases (aq) | Water, gases |
 
-
----
-
-### Example
-
-**Molecular:** $\\text{AgNO}_3(\\text{aq}) + \\text{NaCl}(\\text{aq}) \\rightarrow \\text{AgCl}(\\text{s}) + \\text{NaNO}_3(\\text{aq})$
-
-**Complete ionic:** $\\text{Ag}^+(\\text{aq}) + \\text{NO}_3^-(\\text{aq}) + \\text{Na}^+(\\text{aq}) + \\text{Cl}^-(\\text{aq}) \\rightarrow \\text{AgCl}(\\text{s}) + \\text{Na}^+(\\text{aq}) + \\text{NO}_3^-(\\text{aq})$
-
-**Net ionic:** $\\text{Ag}^+(\\text{aq}) + \\text{Cl}^-(\\text{aq}) \\rightarrow \\text{AgCl}(\\text{s})$
-
-The spectator ions (Na⁺ and NO₃⁻) are removed because they don\'t participate in the actual reaction.
+> 💡 **Spectator ions** appear unchanged on both sides — they don't participate in the actual reaction.
       `
     },
     {

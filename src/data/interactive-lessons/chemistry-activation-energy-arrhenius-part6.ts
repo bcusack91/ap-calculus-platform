@@ -4,13 +4,29 @@ export const chemActivationEnergyArrheniusPart6Data = {
     {
       id: 'ae6-intro',
       type: 'text' as const,
-      content: `
-# 🧬 Catalysts
+      content: `# 🧬 Catalysts
 
 **Part 6 of 7 — Lowering the Energy Barrier**
 
-Catalysts are substances that speed up reactions without being consumed. They are essential in industry, biology, and everyday life. This part explores how catalysts work at the molecular level and distinguishes between different types.
-      `
+---
+
+### Catalyst Effects on the Energy Diagram
+
+| Feature | Without Catalyst | With Catalyst |
+|---------|-----------------|---------------|
+| $E_a$ | Higher | **Lower** (new pathway) |
+| $\Delta H$ | Unchanged | **Unchanged** |
+| $K$ (equilibrium constant) | Value X | **Still X** (unchanged!) |
+| Rate | Slower | **Faster** (both directions equally) |
+
+> 🔑 **Why this matters:** The AP exam frequently tests what catalysts do and do NOT change — especially the distinction between kinetics (rate) and thermodynamics (equilibrium).
+
+---
+
+### What You'll Master in Part 6
+- Explaining how catalysts lower $E_a$ by providing an alternative reaction pathway
+- Distinguishing homogeneous, heterogeneous, and biological (enzyme) catalysts
+- Understanding that catalysts speed up both forward and reverse reactions equally`
     },
     {
       id: 'ae6-how-catalysts-work',
@@ -20,7 +36,9 @@ Catalysts are substances that speed up reactions without being consumed. They ar
 
 A catalyst provides an **alternative reaction pathway** with a **lower activation energy**:
 
-$$E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})$$
+$$\\boxed{E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})}$$
+
+> 🔑 **Key Principle:** A catalyst lowers $E_a$ but does NOT change $\\Delta H$ or $\\Delta G$.
 
 
 ---
@@ -172,7 +190,7 @@ Product molecules detach from the surface, freeing active sites for new reactant
 
 ---
 
-### Catalyst Poisoning
+### ⚠️ Catalyst Poisoning
 
 If a substance binds strongly to active sites and cannot be removed, the catalyst is **poisoned**:
 - Lead poisons Pt catalytic converters (why leaded gas is banned)

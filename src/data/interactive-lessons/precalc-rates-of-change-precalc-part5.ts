@@ -2,186 +2,194 @@ export const precalcRatesOfChangePart5Data = {
   topicSlug: 'rates-of-change-precalc',
   sections: [
     {
-      id: 'precalc-rates-of-change-precalc-p5-s1-intro',
+      id: 'p5-intro',
       type: 'text' as const,
       content: `
-      ## Rates of Change: Instantaneous intuition from local behavior
-      
-      **Part 5 of 7**
-      
-      This part focuses on estimating local behavior from nearby points. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **decreasing interval**: interval where function values fall as input increases
-      - **local behavior**: small-interval trend around one input
-      - **percent change**: relative change expressed as a percent
-      
-      
-      ### Worked Example
-      Part 5 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🚗 Motion & Velocity Applications
+
+**Part 5 of 7**
+
+### Position, Velocity, Acceleration
+
+For a particle moving along a line with position $s(t)$:
+
+| Quantity | Definition | Rate of |
+|:---------|:----------|:--------|
+| Position $s(t)$ | Location at time $t$ | — |
+| Velocity $v(t)$ | $s'(t) = \\lim_{h \\to 0}\\frac{s(t+h)-s(t)}{h}$ | Position |
+| Speed | $|v(t)|$ | — |
+| Acceleration $a(t)$ | Rate of change of velocity | Velocity |
+
+### Positive vs Negative Velocity
+
+- $v(t) > 0$: moving in the **positive direction** (right/up)
+- $v(t) < 0$: moving in the **negative direction** (left/down)
+- $v(t) = 0$: momentarily **at rest** (possible direction change)
       `
     },
     {
-      id: 'precalc-rates-of-change-precalc-p5-s2-mcq-core',
+      id: 'p5-example',
+      type: 'text' as const,
+      content: `
+## Motion Example
+
+### Ball Thrown Upward
+
+$s(t) = -16t^2 + 64t + 80$ feet, $t$ in seconds.
+
+**Velocity** (DQ limit of $-16t^2 + 64t + 80$ gives): $v(t) = -32t + 64$
+
+**When is the ball at rest?** $v(t)=0$: $-32t+64=0 \\Rightarrow t=2$ seconds
+
+**Maximum height**: At $t=2$: $s(2) = -16(4)+128+80 = 144$ feet
+
+**When does it hit ground?** $s(t)=0$: $-16t^2+64t+80=0$
+$t^2 - 4t - 5 = 0 \\Rightarrow (t-5)(t+1)=0 \\Rightarrow t=5$ seconds
+
+**Impact velocity**: $v(5) = -32(5)+64 = -96$ ft/s (downward at 96 ft/s)
+
+### Average vs Instantaneous Velocity
+
+- Average velocity from $t=0$ to $t=5$: $\\frac{s(5)-s(0)}{5} = \\frac{0-80}{5} = -16$ ft/s
+- Instantaneous velocity at $t=1$: $v(1) = -32+64 = 32$ ft/s (upward)
+      `
+    },
+    {
+      id: 'p5-distance',
+      type: 'text' as const,
+      content: `
+## Displacement vs Total Distance
+
+### Displacement
+
+Change in position from $t=a$ to $t=b$:
+$$\\text{Displacement} = s(b) - s(a)$$
+
+Can be positive, negative, or zero.
+
+### Total Distance Traveled
+
+Sum of all |movement| regardless of direction. Must account for direction changes.
+
+### Example
+
+A particle: $s(0)=2$, moves right to $s(1)=7$, then left to $s(3)=1$.
+
+- **Displacement**: $s(3)-s(0) = 1-2 = -1$ (net: 1 unit left)
+- **Total distance**: $|7-2| + |1-7| = 5 + 6 = 11$ units
+
+### Key Insight
+
+Average velocity = displacement / time (can be zero even if object moved!)
+
+Average speed = total distance / time (always ≥ 0)
+      `
+    },
+    {
+      id: 'p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Motion Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of decreasing interval.',
-            options: [
-              'small-interval trend around one input',
-              'relative change expressed as a percent',
-              'how well a function captures observed change',
-              'interval where function values fall as input increases'
-            ],
-            correctAnswer: 3,
-            explanation: 'decreasing interval is defined as: interval where function values fall as input increases.'
+            question: '$s(t) = t^2 - 6t$. When is the particle at rest?',
+            options: ['$t=0$', '$t=3$', '$t=6$', '$t=-3$'],
+            correctAnswer: 1,
+            explanation: '$v(t)=2t-6=0 \\Rightarrow t=3$.'
           },
           {
-            question: 'In estimating local behavior from nearby points, which expression is the best starting model?',
-            options: [
-              '$y=mx+b$',
-              '$\\frac{f(b)-f(a)}{b-a}$',
-              '$\\frac{\\text{new}-\\text{old}}{\\text{old}}\\cdot 100\\%$',
-              '$m=\\frac{y_2-y_1}{x_2-x_1}$'
-            ],
+            question: 'Negative velocity means:',
+            options: ['Slowing down', 'Moving in negative direction', 'Stopped', 'Accelerating'],
             correctAnswer: 1,
-            explanation: 'Use $\\frac{f(b)-f(a)}{b-a}$ first, then substitute known quantities from the prompt.'
+            explanation: 'Negative velocity = moving in the negative direction (left/down).'
+          },
+          {
+            question: 'If $v(t)=0$ and $a(t)<0$, the ball is at a:',
+            options: ['Minimum', 'Maximum', 'Inflection point', 'Rest forever'],
+            correctAnswer: 1,
+            explanation: 'Zero velocity + negative acceleration = top of trajectory (local max of position).'
           }
         ]
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p5-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Average rate | $\\frac{f(b)-f(a)}{b-a}$ | secant computation |
-      | Slope | $m=\\frac{y_2-y_1}{x_2-x_1}$ | point-pair rate |
-      | Percent change | $\\frac{\\text{new}-\\text{old}}{\\text{old}}\cdot 100\%$ | relative growth/decline |
-      | Linear model | $y=mx+b$ | constant-rate baseline |
-      
-      ### Common pitfalls
-      - Rate units must combine output units per input unit.
-      - Do not compare rates across intervals without checking interval lengths.
-      - A positive average rate on an interval does not force monotonic increase everywhere inside.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-rates-of-change-precalc-p5-s4-input',
+      id: 'p5-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Rate Calculations**
-      
-      1) Compute average rate for $f(x)=x^2$ on $[2,5]$.
-      2) Find slope through $(1,3)$ and $(4,15)$.
-      3) Compute percent change from 50 to 65.
+For $s(t) = -16t^2 + 48t$:
+
+**1)** Velocity function: $v(t) = -32t + ?$
+
+**2)** Time when ball is at its highest (v=0): $t$ = ?
+
+**3)** Maximum height: $s$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7', '4', '30'],
-        hint1: 'Use $\\rac{f(5)-f(2)}{5-2}$.',
-        hint2: 'Use slope formula with ordered pairs.',
-        hint3: 'Relative change is $\\rac{15}{50}\\cdot100\\%$.',
-        explanation: 'Average rate is 7, secant slope is 4, and percent increase is 30%.'
+        correctAnswers: ['48', '1.5', '36'],
+        hint1: 'DQ of $-16t^2+48t$ gives $-32t + 48$.',
+        hint2: '$-32t + 48 = 0 \\Rightarrow t = 48/32$.',
+        hint3: '$s(1.5) = -16(2.25) + 48(1.5) = -36 + 72$.',
+        explanation: '(1) $v(t) = -32t+48$. (2) $t=1.5$. (3) $s(1.5)=-36+72=36$.'
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p5-s5-dropdown',
+      id: 'p5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Motion Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'decreasing interval',
-            options: ['relative change expressed as a percent', 'how well a function captures observed change', 'small-interval trend around one input', 'interval where function values fall as input increases']
+            label: 'Speed is:',
+            options: ['Velocity', 'Absolute value of velocity', 'Acceleration', 'Position'],
+            correctAnswer: 1
           },
           {
-            label: 'local behavior',
-            options: ['relative change expressed as a percent', 'change in output divided by change in input', 'how well a function captures observed change', 'small-interval trend around one input']
+            label: 'Displacement can be:',
+            options: ['Only positive', 'Only negative', 'Positive, negative, or zero', 'Only zero'],
+            correctAnswer: 2
           },
           {
-            label: 'percent change',
-            options: ['slope through two points on a graph', 'change in output divided by change in input', 'how well a function captures observed change', 'relative change expressed as a percent']
+            label: 'Object moving right then left with same distance:',
+            options: ['Displacement = 0, distance > 0', 'Both = 0', 'Displacement > 0', 'Distance = 0'],
+            correctAnswer: 0
+          },
+          {
+            label: 'At the highest point of a projectile:',
+            options: ['$v > 0$', '$v = 0$', '$v < 0$', '$a = 0$'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['interval where function values fall as input increases', 'small-interval trend around one input', 'relative change expressed as a percent'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: decreasing interval, local behavior, and percent change align with their exact definitions used in this part.'
+        correctAnswers: ['Absolute value of velocity', 'Positive, negative, or zero', 'Displacement = 0, distance > 0', '$v = 0$'],
+        hint1: 'Speed = how fast, regardless of direction.',
+        hint2: 'You can end where you started (0) or anywhere.',
+        hint3: 'Round trip: displacement cancels, distance doesn\'t.',
+        explanation: 'Speed = |v|. Displacement: any sign. Round trip: disp=0 but dist>0. Highest point: v=0.'
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p5-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to decreasing interval, local behavior, and percent change so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-rates-of-change-precalc-p5-s7-mcq-applied',
+      id: 'p5-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is estimating local behavior from nearby points. Which term best anchors the next reasoning step if the key idea is: how well a function captures observed change?',
-            options: [
-              'model fit',
-              'percent change',
-              'local behavior',
-              'decreasing interval'
-            ],
+            question: '$s(t)=t^3-3t$. Average velocity on $[0,2]$:',
+            options: ['$1$', '$2$', '$-1$', '$0$'],
             correctAnswer: 0,
-            explanation: 'model fit matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$\\frac{s(2)-s(0)}{2} = \\frac{(8-6)-0}{2} = \\frac{2}{2} = 1$.'
           },
           {
-            question: 'A student is solving a mixed rates of change prompt. Which term best anchors the next reasoning step if the key idea is: change in output divided by change in input?',
-            options: [
-              'average rate of change',
-              'percent change',
-              'secant slope',
-              'model fit'
-            ],
+            question: 'A car goes 60 mi east then 60 mi west. Displacement and total distance:',
+            options: ['0 mi, 120 mi', '120 mi, 0 mi', '0 mi, 0 mi', '60 mi, 60 mi'],
             correctAnswer: 0,
-            explanation: 'average rate of change matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Returns to start: displacement = 0. Total distance = 60 + 60 = 120 mi.'
           }
         ]
       }

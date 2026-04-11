@@ -4,13 +4,29 @@ export const chemBufferSolutionsHendersonHasselbalchPart6Data = {
     {
       id: 'bf6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Problem-Solving Workshop
+      content: `# 🛠️ Problem-Solving Workshop
 
 **Part 6 of 7 — Buffer Solutions & Henderson-Hasselbalch**
 
-This workshop features multi-step problems combining buffer identification, pH calculation, capacity analysis, and preparation — the types of questions that appear on AP Chemistry free-response sections.
-      `
+---
+
+### Problem Types in This Workshop
+
+| Type | What's Tested |
+|------|---------------|
+| Buffer after multiple additions | Repeated stoichiometry + H-H |
+| Buffer vs. non-buffer ID | Composition requirements |
+| Buffer capacity limits | When does the buffer break? |
+| Design a buffer | Choose acid + calculate amounts |
+
+> 🔑 **Why this matters:** AP free-response problems often chain 3-4 buffer calculations together — this workshop builds the stamina and accuracy you need.
+
+---
+
+### What You'll Master in Part 6
+- Solving multi-addition buffer problems step by step
+- Distinguishing buffer solutions from non-buffer mixtures
+- Calculating buffer capacity and identifying when a buffer is overwhelmed`
     },
     {
       id: 'bf6-problem1',
@@ -18,7 +34,9 @@ This workshop features multi-step problems combining buffer identification, pH c
       content: `
 ## 🛡️ Problem 1: Buffer After Multiple Additions
 
-A 1.0 L buffer contains 0.30 mol $HCOOH$ (formic acid, $pK_a = 3.75$) and 0.30 mol $HCOONa$ (sodium formate).
+> **Problem:** A 1.0 L buffer contains 0.30 mol $HCOOH$ (formic acid, $pK_a = 3.75$) and 0.30 mol $HCOONa$ (sodium formate). Find the pH after adding 0.10 mol $NaOH$, then 0.05 mol $HCl$.
+
+**Solution:**
 
 **Initial pH:** $pH = 3.75 + \\log(0.30/0.30) = 3.75$
 
@@ -89,6 +107,8 @@ After: $HF = 0$, $F^- = 0.010$, $OH^-$ = 0 ❌ **Not a buffer** (only $F^-$ rema
 **C)** 50 mL of 0.20 M $HCl$ + 50 mL of 0.10 M $NaCl$
 
 $HCl$ is a strong acid. ❌ **Not a buffer** (no weak acid/base pair)
+
+> ⚠️ **AP Trap:** A mixture of a strong acid + its salt (like $HCl$ + $NaCl$) is NEVER a buffer. You need a WEAK acid/base pair.
       `
     },
     {

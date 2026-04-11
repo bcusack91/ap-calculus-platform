@@ -5,20 +5,24 @@ export const chemPropertiesStatesMatterPart7Data = {
       id: 'sm7-intro',
       type: 'text' as const,
       title: 'Synthesis & AP Review — Introduction',
-      content: `
-# 🎯 Synthesis & AP Review
+      content: `# 🎯 Synthesis & AP Review
 
 **Part 7 of 7 — Connecting IMFs to Physical Properties and AP-Style Problems**
 
-This final part brings everything together. On the AP Chemistry exam, you\'ll be expected to:
+---
 
-1. **Identify** the types of IMFs present in a substance from its structure.
-2. **Compare** physical properties (bp, mp, vapor pressure, viscosity, surface tension) of different substances based on their IMFs.
-3. **Interpret** heating curves and phase diagrams.
-4. **Explain** macroscopic observations using particulate-level reasoning.
+### Bringing It All Together
 
-Let\'s practice with AP-style questions and synthesis problems.
-      `
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'sm7-big-picture',
@@ -27,7 +31,7 @@ Let\'s practice with AP-style questions and synthesis problems.
       content: `
 ## The Central Chain of Reasoning
 
-$$\\text{Molecular Structure} \\xrightarrow{\\text{determines}} \\text{IMFs} \\xrightarrow{\\text{determines}} \\text{Physical Properties}$$
+$$\\boxed{\\text{Molecular Structure} \\xrightarrow{\\text{determines}} \\text{IMFs} \\xrightarrow{\\text{determines}} \\text{Physical Properties}}$$
 
 ### Complete Property Summary
 
@@ -41,12 +45,9 @@ $$\\text{Molecular Structure} \\xrightarrow{\\text{determines}} \\text{IMFs} \\x
 | $\\Delta H_{\\text{vap}}$ | **Larger** | More energy needed to overcome IMFs during vaporization |
 | $\\Delta H_{\\text{fus}}$ | **Larger** | More energy needed to overcome IMFs during melting |
 
-### The AP Exam Wants You To...
+---
 
-- **Never** say "stronger bonds" when you mean "stronger intermolecular forces"
-- **Distinguish** IMFs (between molecules) from intramolecular bonds (within molecules)
-- **Be specific**: say "hydrogen bonding" or "London Dispersion Forces," not just "IMFs"
-- **Explain** trends using particle-level reasoning
+> ⚠️ **Warning — AP Exam:** **Never** say "stronger bonds" when you mean "stronger intermolecular forces." **Distinguish** IMFs (between molecules) from intramolecular bonds (within molecules). **Be specific**: say "hydrogen bonding" or "London Dispersion Forces," not just "IMFs." Always **explain** trends using particle-level reasoning.
       `
     },
     {
@@ -164,9 +165,9 @@ But the actual order is: CH₄ (−161) < H₂S (−60) < HF (19.5) < H₂O (100
 - **HF**: H-bonding (H–F) → high bp, but only one H per molecule limits the H-bond network
 - **H₂O**: H-bonding (O–H), and each molecule has 2 H atoms and 2 lone pairs → extensive 3D H-bonding network → highest bp
 
-### Key Lesson
+---
 
-Water\'s extraordinarily high boiling point (relative to its molar mass) is due to its ability to form an **extensive hydrogen bonding network** — each water molecule can form up to 4 hydrogen bonds.
+> 🔑 **Key Concept:** Water\'s extraordinarily high boiling point (relative to its molar mass) is due to its ability to form an **extensive hydrogen bonding network** — each water molecule can form up to 4 hydrogen bonds.
       `
     },
     {

@@ -4,13 +4,30 @@ export const chemActivationEnergyArrheniusPart5Data = {
     {
       id: 'ae5-intro',
       type: 'text' as const,
-      content: `
-# 🔄 Two-Point Arrhenius Equation
+      content: `# 🔄 Two-Point Arrhenius Equation
 
 **Part 5 of 7 — Finding Ea from Two Temperatures**
 
-Often you don\'t have enough data to make a full Arrhenius plot. Instead, you know $k$ at two different temperatures. The **two-point form** of the Arrhenius equation lets you find $E_a$ directly.
-      `
+---
+
+### When You Have Just Two Data Points
+
+$$\ln\frac{k_2}{k_1} = \frac{E_a}{R}\left(\frac{1}{T_1} - \frac{1}{T_2}\right)$$
+
+| Given | Can Solve For |
+|-------|--------------|
+| $k_1$, $k_2$, $T_1$, $T_2$ | $E_a$ |
+| $k_1$, $E_a$, $T_1$, $T_2$ | $k_2$ |
+| $k_1$, $k_2$, $E_a$, $T_1$ | $T_2$ |
+
+> 🔑 **Why this matters:** This is the most commonly tested Arrhenius equation form on the AP exam — many free-response problems give exactly two (T, k) data points.
+
+---
+
+### What You'll Master in Part 5
+- Using the two-point Arrhenius equation to find $E_a$, $k$, or $T$
+- Correctly converting temperatures to Kelvin before substituting
+- Recognizing which form to use based on given data`
     },
     {
       id: 'ae5-derivation',

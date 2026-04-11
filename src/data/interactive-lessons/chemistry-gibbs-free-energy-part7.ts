@@ -4,13 +4,24 @@ export const chemGibbsFreeEnergyPart7Data = {
     {
       id: 'gf7-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Synthesis & AP Review — Gibbs Free Energy
+      content: `# 🎯 Synthesis & AP Review — Gibbs Free Energy
 
 **Part 7 of 7 — Mastering the Connections**
 
-Gibbs free energy ties together enthalpy, entropy, equilibrium, and electrochemistry. This final review ensures you can navigate all the relationships and solve any AP-level problem.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'gf7-master-summary',
@@ -19,7 +30,7 @@ Gibbs free energy ties together enthalpy, entropy, equilibrium, and electrochemi
 ## 🌡️ The Web of Thermodynamic Equations
 
 ### Core Equations
-
+> 🔑 **Key Concept:** These five equations form the complete Gibbs free energy toolkit for AP Chemistry.
 | Equation | When to Use |
 |----------|-------------|
 | $\\Delta G = \\Delta H - T\\Delta S$ | Calculate ΔG from enthalpy and entropy |
@@ -44,7 +55,7 @@ Gibbs free energy ties together enthalpy, entropy, equilibrium, and electrochemi
 ---
 
 ### Critical Relationships
-
+> ⚠️ **Warning:** Notice the distinction — $\Delta G°$ (with °) predicts equilibrium position, while $\Delta G$ (without °) predicts reaction direction.
 - $\\Delta G° < 0 \\Leftrightarrow K > 1$ (products favored)
 - $\\Delta G° = 0 \\Leftrightarrow K = 1$
 - $\\Delta G° > 0 \\Leftrightarrow K < 1$ (reactants favored)

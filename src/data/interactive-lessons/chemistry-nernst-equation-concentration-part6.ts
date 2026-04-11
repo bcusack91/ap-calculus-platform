@@ -4,13 +4,24 @@ export const chemNernstEquationConcentrationPart6Data = {
     {
       id: 'ne6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Problem-Solving Workshop — Nernst Equation
+      content: `# 🛠️ Problem-Solving Workshop — Nernst Equation
 
 **Part 6 of 7 — Practice and Integration**
 
-This workshop provides practice with the Nernst equation, concentration cells, the E°-K relationship, and battery applications. These are the types of calculations you will encounter on the AP exam.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'ne6-strategy',
@@ -31,12 +42,11 @@ This workshop provides practice with the Nernst equation, concentration cells, t
 
 ---
 
-### Common Pitfalls
-
-1. **Forgetting to exclude solids/liquids from Q**
-2. **Using 0.0592 at temperatures other than 25°C**
-3. **Confusing log and ln** ($\\ln K = 2.303\\log K$)
-4. **Getting Q upside down** (products over reactants!)
+> ⚠️ **Common Pitfalls:**
+> 1. **Forgetting to exclude solids/liquids from Q**
+> 2. **Using 0.0592 at temperatures other than 25°C**
+> 3. **Confusing log and ln** ($\ln K = 2.303\log K$)
+> 4. **Getting Q upside down** (products over reactants!)
       `
     },
     {

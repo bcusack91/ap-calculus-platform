@@ -4,13 +4,24 @@ export const chemOxidationReductionReactionsPart7Data = {
     {
       id: 'or7-intro',
       type: 'text' as const,
-      content: `
-# ⚡ Synthesis & AP Review
+      content: `# ⚡ Synthesis & AP Review
 
 **Part 7 of 7 — Connecting Redox to Electrochemistry and AP-Style Problems**
 
-Redox reactions are the foundation of **electrochemistry** — the study of how chemical energy and electrical energy interconvert. This final lesson connects the redox concepts you\'ve learned to galvanic cells, electrolysis, and the types of problems you\'ll see on the AP exam.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'or7-electrochemistry-connection',
@@ -34,7 +45,8 @@ A galvanic cell converts **chemical energy → electrical energy** using a spont
 
 ### Memory Aid
 
-**AN OX** and a **RED CAT**:
+> 🔑 **Key Concept:** **AN OX** and a **RED CAT** — **An**ode = **Ox**idation, **Red**uction = **Cat**hode.
+
 - **An**ode = **Ox**idation
 - **Red**uction = **Cat**hode
 
@@ -43,7 +55,7 @@ A galvanic cell converts **chemical energy → electrical energy** using a spont
 
 ### Cell Notation
 
-$$\\text{Anode} | \\text{Anode ion} || \\text{Cathode ion} | \\text{Cathode}$$
+$$\\boxed{\\text{Anode} | \\text{Anode ion} || \\text{Cathode ion} | \\text{Cathode}}$$
 
 Example: $\\text{Zn}(s) | \\text{Zn}^{2+}(aq) || \\text{Cu}^{2+}(aq) | \\text{Cu}(s)$
 
@@ -58,7 +70,7 @@ This represents: Zn is oxidized at the anode, Cu²⁺ is reduced at the cathode.
 
 ### Calculating $E^\\circ_{\\text{cell}}$
 
-$$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}}$$
+$$\\boxed{E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}}}$$
 
 
 ---
@@ -83,6 +95,8 @@ $$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}
 
 ### Spontaneity
 
+> 💡 **Tip:** Positive $E^\\circ_{\\text{cell}}$ means the reaction runs on its own (galvanic cell). Negative means you must force it (electrolysis).
+
 - $E^\\circ_{\\text{cell}} > 0$ → **spontaneous** (galvanic cell)
 - $E^\\circ_{\\text{cell}} < 0$ → **non-spontaneous** (requires electrolysis)
 
@@ -91,7 +105,7 @@ $$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}
 
 ### Relationship to Free Energy
 
-$$\\Delta G^\\circ = -nFE^\\circ_{\\text{cell}}$$
+$$\\boxed{\\Delta G^\\circ = -nFE^\\circ_{\\text{cell}}}$$
 
 Where $n$ = moles of electrons transferred, $F$ = Faraday\'s constant (96,485 C/mol).
       `

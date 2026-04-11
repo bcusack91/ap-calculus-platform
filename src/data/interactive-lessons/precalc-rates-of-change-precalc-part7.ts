@@ -2,186 +2,204 @@ export const precalcRatesOfChangePart7Data = {
   topicSlug: 'rates-of-change-precalc',
   sections: [
     {
-      id: 'precalc-rates-of-change-precalc-p7-s1-intro',
+      id: 'p7-intro',
       type: 'text' as const,
       content: `
-      ## Rates of Change: Mixed rate interpretation synthesis
-      
-      **Part 7 of 7**
-      
-      This part focuses on handling mixed graph/table/equation prompts. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **percent change**: relative change expressed as a percent
-      - **model fit**: how well a function captures observed change
-      - **average rate of change**: change in output divided by change in input
-      
-      
-      ### Worked Example
-      Part 7 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🏆 Rates of Change — Complete Synthesis
+
+**Part 7 of 7**
+
+### Everything Connected
+
+\`\`\`
+Rates of Change Master Map
+│
+├─ Average Rate (AROC)
+│   ├─ Formula: [f(b)-f(a)]/(b-a)
+│   ├─ Geometry: Secant line slope
+│   └─ Physics: Average velocity
+│
+├─ Difference Quotient
+│   ├─ Formula: [f(x+h)-f(x)]/h
+│   ├─ Algebraic simplification
+│   └─ Must cancel h from denominator
+│
+├─ Instantaneous Rate (IROC)
+│   ├─ = lim(h→0) of DQ
+│   ├─ Geometry: Tangent line slope
+│   ├─ Physics: Instantaneous velocity
+│   └─ THIS IS THE DERIVATIVE
+│
+└─ Applications
+    ├─ Motion: position → velocity → acceleration
+    ├─ Economics: cost → marginal cost
+    ├─ Biology: population → growth rate
+    └─ Always include units and context
+\`\`\`
       `
     },
     {
-      id: 'precalc-rates-of-change-precalc-p7-s2-mcq-core',
+      id: 'p7-review',
+      type: 'text' as const,
+      content: `
+## Key Formulas Reference
+
+### The Core Three
+
+$$\\text{AROC} = \\frac{f(b)-f(a)}{b-a} \\quad \\text{(secant slope)}$$
+
+$$\\text{DQ} = \\frac{f(x+h)-f(x)}{h} \\quad \\text{(general secant)}$$
+
+$$\\text{IROC} = f'(a) = \\lim_{h \\to 0}\\frac{f(a+h)-f(a)}{h} \\quad \\text{(tangent slope)}$$
+
+### Known DQ Results
+
+| $f(x)$ | DQ simplified | Limit ($f'(x)$) |
+|:--------|:-------------|:----------------|
+| $mx + b$ | $m$ | $m$ |
+| $x^2$ | $2x + h$ | $2x$ |
+| $x^3$ | $3x^2 + 3xh + h^2$ | $3x^2$ |
+| $1/x$ | $-1/[x(x+h)]$ | $-1/x^2$ |
+| $\\sqrt{x}$ | $1/(\\sqrt{x+h}+\\sqrt{x})$ | $1/(2\\sqrt{x})$ |
+
+### Tangent Line Formula
+
+$$y = f(a) + f'(a)(x - a)$$
+      `
+    },
+    {
+      id: 'p7-bridge',
+      type: 'text' as const,
+      content: `
+## Bridge to Calculus
+
+### What Calculus Adds
+
+In calculus, you'll learn **shortcut rules** so you don't need the limit process each time:
+
+- **Power Rule**: $\\frac{d}{dx}[x^n] = nx^{n-1}$
+- **Product Rule**: $(fg)' = f'g + fg'$
+- **Chain Rule**: $[f(g(x))]' = f'(g(x)) \\cdot g'(x)$
+
+But the **limit definition** is where it all starts. Everything builds from here.
+
+### The Precalculus → Calculus Pipeline
+
+1. ✅ Functions & graphs (completed)
+2. ✅ Limits (computed and understood)
+3. ✅ Rates of change (AROC → IROC)
+4. ➡️ **Next**: Derivatives (formalized IROC)
+5. ➡️ **Then**: Integrals (reverse of derivatives)
+6. ➡️ **Finally**: FTC (connects derivatives & integrals)
+
+You now have the conceptual foundation for ALL of calculus!
+      `
+    },
+    {
+      id: 'p7-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Master Rates Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of percent change.',
-            options: [
-              'slope through two points on a graph',
-              'how well a function captures observed change',
-              'relative change expressed as a percent',
-              'change in output divided by change in input'
-            ],
-            correctAnswer: 2,
-            explanation: 'percent change is defined as: relative change expressed as a percent.'
+            question: 'DQ of $f(x) = x^2 + 5x - 2$ simplifies to:',
+            options: ['$2x + h + 5$', '$2x + 5$', '$2x + h - 2$', '$x^2 + 5$'],
+            correctAnswer: 0,
+            explanation: 'Expand $(x+h)^2 + 5(x+h) - 2 - x^2 - 5x + 2 = 2xh + h^2 + 5h$. Divide by $h$: $2x+h+5$.'
           },
           {
-            question: 'In handling mixed graph/table/equation prompts, which expression is the best starting model?',
-            options: [
-              '$y=mx+b$',
-              '$m=\\frac{y_2-y_1}{x_2-x_1}$',
-              '$\\frac{\\text{new}-\\text{old}}{\\text{old}}\\cdot 100\\%$',
-              '$\\frac{f(b)-f(a)}{b-a}$'
-            ],
-            correctAnswer: 2,
-            explanation: 'Use $\\frac{\\text{new}-\\text{old}}{\\text{old}}\\cdot 100\\%$ first, then substitute known quantities from the prompt.'
+            question: 'The tangent line to $f(x)=x^3$ at $x=2$ passes through:',
+            options: ['$(2, 8)$ with slope $12$', '$(2, 8)$ with slope $6$', '$(2, 4)$ with slope $12$', '$(2, 8)$ with slope $8$'],
+            correctAnswer: 0,
+            explanation: '$f(2) = 8$, $f\'(2) = 3(4) = 12$. Point $(2,8)$ with slope $12$.'
+          },
+          {
+            question: 'Ball at $s(t)=-16t^2+96t$. Maximum height occurs at:',
+            options: ['$t = 2$', '$t = 3$', '$t = 4$', '$t = 6$'],
+            correctAnswer: 1,
+            explanation: '$v(t) = -32t + 96 = 0 \\Rightarrow t = 3$ seconds.'
           }
         ]
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p7-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Percent change | $\\frac{\\text{new}-\\text{old}}{\\text{old}}\cdot 100\%$ | relative growth/decline |
-      | Linear model | $y=mx+b$ | constant-rate baseline |
-      | Average rate | $\\frac{f(b)-f(a)}{b-a}$ | secant computation |
-      | Slope | $m=\\frac{y_2-y_1}{x_2-x_1}$ | point-pair rate |
-      
-      ### Common pitfalls
-      - A positive average rate on an interval does not force monotonic increase everywhere inside.
-      - Rate units must combine output units per input unit.
-      - Do not compare rates across intervals without checking interval lengths.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-rates-of-change-precalc-p7-s4-input',
+      id: 'p7-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Rate Calculations**
-      
-      1) Compute average rate for $f(x)=x^2$ on $[2,5]$.
-      2) Find slope through $(1,3)$ and $(4,15)$.
-      3) Compute percent change from 50 to 65.
+**Mixed Practice:**
+
+**1)** AROC of $f(x) = x^2$ on $[1,5]$:
+
+**2)** IROC of $f(x) = x^2$ at $x = 3$ (use $f'(x)=2x$):
+
+**3)** Tangent to $f(x)=x^2$ at $x=3$: $y = 6x - ?$
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['7', '4', '30'],
-        hint1: 'Use $\\rac{f(5)-f(2)}{5-2}$.',
-        hint2: 'Use slope formula with ordered pairs.',
-        hint3: 'Relative change is $\\rac{15}{50}\\cdot100\\%$.',
-        explanation: 'Average rate is 7, secant slope is 4, and percent increase is 30%.'
+        correctAnswers: ['6', '6', '9'],
+        hint1: '$\\frac{25-1}{4} = 6$.',
+        hint2: '$f\'(3) = 2(3) = 6$.',
+        hint3: '$y - 9 = 6(x-3) \\Rightarrow y = 6x - 9$.',
+        explanation: '(1) $(25-1)/4 = 6$. (2) $2(3) = 6$. (3) $y = 6x - 9$, so the blank is $9$.'
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p7-s5-dropdown',
+      id: 'p7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Synthesis** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'percent change',
-            options: ['relative change expressed as a percent', 'change in output divided by change in input', 'slope through two points on a graph', 'how well a function captures observed change']
+            label: 'AROC is to secant as IROC is to:',
+            options: ['Chord', 'Tangent', 'Normal', 'Axis'],
+            correctAnswer: 1
           },
           {
-            label: 'model fit',
-            options: ['slope through two points on a graph', 'change in output divided by change in input', 'rate normalized to one input unit', 'how well a function captures observed change']
+            label: 'Power Rule for $x^4$ gives $f\'(x)$ =',
+            options: ['$x^3$', '$4x^3$', '$4x^4$', '$3x^4$'],
+            correctAnswer: 1
           },
           {
-            label: 'average rate of change',
-            options: ['interval where function values rise as input increases', 'change in output divided by change in input', 'slope through two points on a graph', 'rate normalized to one input unit']
+            label: 'The derivative of a constant is:',
+            options: ['The constant', '$1$', '$0$', 'Undefined'],
+            correctAnswer: 2
+          },
+          {
+            label: 'The precalculus foundation for calculus is:',
+            options: ['Geometry', 'Limits and rates of change', 'Statistics', 'Number theory'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['relative change expressed as a percent', 'how well a function captures observed change', 'change in output divided by change in input'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: percent change, model fit, and average rate of change align with their exact definitions used in this part.'
+        correctAnswers: ['Tangent', '$4x^3$', '$0$', 'Limits and rates of change'],
+        hint1: 'IROC = tangent slope.',
+        hint2: 'Power Rule: $nx^{n-1}$, so $4x^3$.',
+        hint3: 'Constants don\'t change → rate = 0.',
+        explanation: 'AROC:secant :: IROC:tangent. Power Rule: $4x^3$. Constant\' = 0. Calc built on limits & rates.'
       }
     },
     {
-      id: 'precalc-rates-of-change-precalc-p7-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to percent change, model fit, and average rate of change so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-rates-of-change-precalc-p7-s7-mcq-applied',
+      id: 'p7-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is handling mixed graph/table/equation prompts. Which term best anchors the next reasoning step if the key idea is: slope through two points on a graph?',
-            options: [
-              'model fit',
-              'secant slope',
-              'average rate of change',
-              'percent change'
-            ],
-            correctAnswer: 1,
-            explanation: 'secant slope matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Use the tangent at $x=4$ ($f(x)=\\sqrt{x}$, $f\'(x)=1/(2\\sqrt{x})$) to estimate $\\sqrt{4.04}$:',
+            options: ['$2.01$', '$2.02$', '$2.1$', '$2.001$'],
+            correctAnswer: 0,
+            explanation: '$f(4)=2, f\'(4)=1/4$. $\\sqrt{4.04} \\approx 2 + (1/4)(0.04) = 2 + 0.01 = 2.01$.'
           },
           {
-            question: 'A student is solving a mixed rates of change prompt. Which term best anchors the next reasoning step if the key idea is: rate normalized to one input unit?',
-            options: [
-              'unit rate',
-              'increasing interval',
-              'average rate of change',
-              'secant slope'
-            ],
-            correctAnswer: 0,
-            explanation: 'unit rate matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'The single most important idea bridging precalculus to calculus:',
+            options: ['Factoring', 'The limit', 'Quadratic formula', 'Unit circle'],
+            correctAnswer: 1,
+            explanation: 'The limit is THE bridge. Derivatives = limits. Integrals = limits. Continuity = limits. It all starts here.'
           }
         ]
       }

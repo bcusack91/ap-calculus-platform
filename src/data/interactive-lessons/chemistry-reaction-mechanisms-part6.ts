@@ -4,13 +4,24 @@ export const chemReactionMechanismsPart6Data = {
     {
       id: 'rm6-intro',
       type: 'text' as const,
-      content: `
-# 🔧 Problem-Solving Workshop
+      content: `# 🔧 Problem-Solving Workshop
 
 **Part 6 of 7 — Mechanism Analysis Practice**
 
-This workshop focuses on the types of mechanism problems you\'ll see on the AP Chemistry exam: analyzing mechanisms, deriving rate laws, identifying species, and validating proposals.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'rm6-problem-1',
@@ -18,9 +29,11 @@ This workshop focuses on the types of mechanism problems you\'ll see on the AP C
       content: `
 ## ⚙️ Problem 1: Complete Mechanism Analysis
 
+> **Problem:** Analyze the ozone decomposition mechanism and verify it matches the experimental rate law.
+
 The reaction $2\\text{O}_3 \\rightarrow 3\\text{O}_2$ has the experimental rate law:
 
-$$\\text{Rate} = k\\frac{[\\text{O}_3]^2}{[\\text{O}_2]}$$
+$$\\boxed{\\text{Rate} = k\\frac{[\\text{O}_3]^2}{[\\text{O}_2]}}$$
 
 **Proposed mechanism:**
 - Step 1: $\\text{O}_3 \\rightleftharpoons \\text{O}_2 + \\text{O}$ (fast, reversible)
@@ -77,6 +90,8 @@ $$\\text{Rate} = k\\frac{[\\text{O}_3]^2}{[\\text{O}_2]}$$
       content: `
 **Problem 2: Enzyme Kinetics Mechanism** 🧮
 
+> **Problem:** Derive the rate law for the simplified enzyme-catalyzed reaction and identify all species.
+
 An enzyme-catalyzed reaction has the mechanism:
 - Step 1: $\\text{E} + \\text{S} \\rightleftharpoons \\text{ES}$ (fast, $K_{eq}$)
 - Step 2: $\\text{ES} \\rightarrow \\text{E} + \\text{P}$ (slow)
@@ -104,11 +119,13 @@ where E = enzyme, S = substrate, ES = enzyme-substrate complex, P = product.
       content: `
 ## ⚖️ Problem 3: Comparing Mechanisms
 
+> **Problem:** Compare mechanisms A and B for H₂O₂ decomposition and determine which matches the experimental rate law Rate = $k[\\text{H}_2\\text{O}_2][\\text{I}^-]$.
+
 **Overall:** $2\\text{H}_2\\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O} + \\text{O}_2$
 
 **Experimental:** Rate = $k[\\text{H}_2\\text{O}_2][\\text{I}^-]$
 
-Note: I⁻ is not in the overall equation — it must be a catalyst.
+> 💡 **Tip:** A negative-order dependence (rate ∝ 1/[product]) means adding that product shifts a pre-equilibrium backward, reducing the intermediate concentration.
 
 **Mechanism A:**
 - Step 1: $\\text{H}_2\\text{O}_2 + \\text{I}^- \\rightarrow \\text{IO}^- + \\text{H}_2\\text{O}$ (slow)

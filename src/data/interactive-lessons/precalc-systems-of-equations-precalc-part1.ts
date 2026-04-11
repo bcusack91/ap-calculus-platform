@@ -2,186 +2,214 @@ export const precalcSystemsPart1Data = {
   topicSlug: 'systems-of-equations-precalc',
   sections: [
     {
-      id: 'precalc-systems-of-equations-precalc-p1-s1-intro',
+      id: 'p1-intro',
       type: 'text' as const,
       content: `
-      ## Systems of Equations: Graphical interpretation of solutions
-      
-      **Part 1 of 7**
-      
-      This part focuses on locating intersection-based model agreements. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **solution set**: all ordered pairs satisfying every equation
-      - **consistent system**: system with at least one solution
-      - **inconsistent system**: system with no common solution
-      
-      
-      ### Worked Example
-      Part 1 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🔗 Systems of Linear Equations
+
+**Part 1 of 7**
+
+### What Is a System?
+
+A **system of equations** is a set of two or more equations with the same variables.
+
+$$\\begin{cases} 2x + y = 7 \\\\ x - y = 2 \\end{cases}$$
+
+A **solution** is an ordered pair $(x, y)$ that satisfies ALL equations simultaneously.
+
+### Three Possible Outcomes
+
+| Type | Graph | Solutions |
+|:-----|:------|:----------|
+| Independent | Lines cross | Exactly one $(x,y)$ |
+| Inconsistent | Parallel lines | No solution |
+| Dependent | Same line | Infinitely many |
+
+### Checking a Solution
+
+Is $(3, 1)$ a solution to the system above?
+- $2(3)+1 = 7$ ✓
+- $3-1 = 2$ ✓
+
+**Yes!** Both equations are satisfied.
       `
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p1-s2-mcq-core',
+      id: 'p1-substitution',
+      type: 'text' as const,
+      content: `
+## 🔄 Substitution Method
+
+### Steps:
+1. Solve one equation for one variable
+2. Substitute into the other equation
+3. Solve for the remaining variable
+4. Back-substitute to find the other
+
+### Example
+
+$$\\begin{cases} y = 3x - 1 \\\\ 2x + y = 9 \\end{cases}$$
+
+**Step 1**: $y$ is already isolated: $y = 3x - 1$
+
+**Step 2**: Substitute into equation 2:
+$$2x + (3x-1) = 9$$
+
+**Step 3**: Solve:
+$$5x - 1 = 9 \\implies 5x = 10 \\implies x = 2$$
+
+**Step 4**: Back-substitute:
+$$y = 3(2)-1 = 5$$
+
+**Solution**: $(2, 5)$
+
+> 💡 Substitution works best when one variable is already isolated or has coefficient 1.
+      `
+    },
+    {
+      id: 'p1-elimination',
+      type: 'text' as const,
+      content: `
+## ➕ Elimination Method
+
+### Steps:
+1. Align equations in standard form ($ax+by=c$)
+2. Multiply one or both equations so a variable cancels
+3. Add (or subtract) the equations
+4. Solve and back-substitute
+
+### Example
+
+$$\\begin{cases} 3x + 2y = 12 \\\\ 2x - 2y = 8 \\end{cases}$$
+
+The $y$-terms already cancel when we add:
+
+$$5x = 20 \\implies x = 4$$
+
+Back-substitute: $3(4)+2y = 12 \\implies y = 0$.
+
+**Solution**: $(4, 0)$
+
+### When Coefficients Don't Match
+
+$$\\begin{cases} 3x + 4y = 10 \\\\ 2x + 3y = 7 \\end{cases}$$
+
+Multiply eq1 by 3, eq2 by $-4$:
+$$9x+12y = 30$$
+$$-8x-12y = -28$$
+
+Add: $x = 2$. Then $y = 1$.
+
+> 💡 Elimination is ideal when coefficients are already close to matching.
+      `
+    },
+    {
+      id: 'p1-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Systems Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of solution set.',
-            options: [
-              'system with no common solution',
-              'system with at least one solution',
-              'all ordered pairs satisfying every equation',
-              'equations represent same relation and infinitely many solutions'
-            ],
-            correctAnswer: 2,
-            explanation: 'solution set is defined as: all ordered pairs satisfying every equation.'
+            question: 'Solve: $\\begin{cases} x+y=5 \\\\ x-y=1 \\end{cases}$',
+            options: ['$(3, 2)$', '$(2, 3)$', '$(4, 1)$', '$(1, 4)$'],
+            correctAnswer: 0,
+            explanation: 'Add: $2x = 6 \\implies x = 3$. Then $y = 2$.'
           },
           {
-            question: 'In locating intersection-based model agreements, which expression is the best starting model?',
-            options: [
-              '$\\Delta=a_1b_2-a_2b_1$',
-              '$\\begin{cases}a_1x+b_1y=c_1\\\\a_2x+b_2y=c_2\\end{cases}$',
-              '$y=\\frac{a_1c_2-a_2c_1}{\\Delta}$',
-              '$x=\\frac{c_1b_2-c_2b_1}{\\Delta}$'
-            ],
-            correctAnswer: 1,
-            explanation: 'Use $\\begin{cases}a_1x+b_1y=c_1\\\\a_2x+b_2y=c_2\\end{cases}$ first, then substitute known quantities from the prompt.'
+            question: 'If two lines have the same slope but different $y$-intercepts, the system is:',
+            options: ['Independent', 'Dependent', 'Inconsistent', 'Underdetermined'],
+            correctAnswer: 2,
+            explanation: 'Same slope, different intercepts → parallel → no intersection → inconsistent.'
+          },
+          {
+            question: 'Best method for: $y = 2x+1$ and $3x+2y = 12$?',
+            options: ['Substitution', 'Elimination', 'Graphing', 'Matrix'],
+            correctAnswer: 0,
+            explanation: '$y$ is already isolated, so substitution is most efficient.'
           }
         ]
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p1-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Linear system | $\\begin{cases}a_1x+b_1y=c_1\\a_2x+b_2y=c_2\end{cases}$ | two-variable framework |
-      | Determinant | $\Delta=a_1b_2-a_2b_1$ | uniqueness criterion |
-      | Cramer's x | $x=\\frac{c_1b_2-c_2b_1}{\Delta}$ | explicit solution form |
-      | Cramer's y | $y=\\frac{a_1c_2-a_2c_1}{\Delta}$ | explicit solution form |
-      
-      ### Common pitfalls
-      - Parallel lines in graph form indicate no solution.
-      - Arithmetic sign slips in elimination often flip outcomes.
-      - State whether the system has one, none, or infinitely many solutions.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-systems-of-equations-precalc-p1-s4-input',
+      id: 'p1-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Solving Systems**
-      
-      1) Solve for $x$: $x+y=10$, $x-y=2$.
-      2) Solve for $y$: $2x+3y=12$, $x-y=1$.
-      3) Compute determinant of $\\begin{bmatrix}2&1\\5&3\end{bmatrix}$.
+**Solve the Systems** 🧮
+
+$\\begin{cases} 2x+y=10 \\\\ x-y=2 \\end{cases}$
+
+**1)** $x$ = ?
+
+**2)** $y$ = ?
+
+**3)** $\\begin{cases} y=4x \\\\ 2x+y=18 \\end{cases}$ → $x$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6', '2', '1'],
-        hint1: 'Add the two equations to eliminate $y$.',
-        hint2: 'Use substitution from $x=y+1$.',
-        hint3: 'Use $ad-bc$ for the determinant.',
-        explanation: 'The system gives $x=6$ and $y=2$, with determinant 1 confirming uniqueness.'
+        correctAnswers: ['4', '2', '3'],
+        hint1: 'Add equations: $3x = 12$.',
+        hint2: 'Substitute $x=4$ into $x-y=2$.',
+        hint3: 'Substitute $y=4x$: $2x+4x = 18 \\implies 6x=18$.',
+        explanation: '1) $x=4$. 2) $y=2$. 3) $x=3$.'
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p1-s5-dropdown',
+      id: 'p1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Methods & Types** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'solution set',
-            options: ['all ordered pairs satisfying every equation', 'system with no common solution', 'equations represent same relation and infinitely many solutions', 'system with at least one solution']
+            label: 'Two identical equations give:',
+            options: ['One solution', 'No solution', 'Infinitely many solutions', 'Undefined'],
+            correctAnswer: 2
           },
           {
-            label: 'consistent system',
-            options: ['system with no common solution', 'system with at least one solution', 'replace one variable expression into another equation', 'equations represent same relation and infinitely many solutions']
+            label: 'Substitution requires:',
+            options: ['Matching coefficients', 'Isolating a variable', 'Graphing both lines', 'Using matrices'],
+            correctAnswer: 1
           },
           {
-            label: 'inconsistent system',
-            options: ['combine equations to remove a variable', 'equations represent same relation and infinitely many solutions', 'system with no common solution', 'replace one variable expression into another equation']
+            label: '$\\begin{cases} x+y=4 \\\\ 2x+2y=8 \\end{cases}$ is:',
+            options: ['Independent', 'Inconsistent', 'Dependent', 'Contradictory'],
+            correctAnswer: 2
+          },
+          {
+            label: 'Elimination works by:',
+            options: ['Isolating a variable', 'Adding/subtracting equations', 'Factoring', 'Graphing'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['all ordered pairs satisfying every equation', 'system with at least one solution', 'system with no common solution'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: solution set, consistent system, and inconsistent system align with their exact definitions used in this part.'
+        correctAnswers: ['Infinitely many solutions', 'Isolating a variable', 'Dependent', 'Adding/subtracting equations'],
+        hint1: 'Same line → all points are solutions.',
+        hint2: 'Solve for $x$ or $y$ first.',
+        hint3: 'Second equation = 2 × first.',
+        explanation: 'Identical eqs: infinite solutions. Substitution: isolate. $2x+2y=8$ is $2(x+y=4)$: dependent. Elimination: add/subtract.'
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p1-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to solution set, consistent system, and inconsistent system so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-systems-of-equations-precalc-p1-s7-mcq-applied',
+      id: 'p1-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is locating intersection-based model agreements. Which term best anchors the next reasoning step if the key idea is: equations represent same relation and infinitely many solutions?',
-            options: [
-              'solution set',
-              'dependent system',
-              'consistent system',
-              'inconsistent system'
-            ],
-            correctAnswer: 1,
-            explanation: 'dependent system matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Solve: $\\begin{cases} 3x-y=7 \\\\ x+2y=0 \\end{cases}$ → $x = ?$',
+            options: ['$2$', '$1$', '$3$', '$-1$'],
+            correctAnswer: 0,
+            explanation: 'From eq2: $x=-2y$. Sub: $3(-2y)-y=7 \\implies -7y=7 \\implies y=-1$. $x=2$.'
           },
           {
-            question: 'A student is solving a mixed systems of equations prompt. Which term best anchors the next reasoning step if the key idea is: replace one variable expression into another equation?',
-            options: [
-              'substitution',
-              'inconsistent system',
-              'elimination',
-              'dependent system'
-            ],
-            correctAnswer: 0,
-            explanation: 'substitution matches that description and keeps the model-to-interpretation chain consistent.'
+            question: '$\\begin{cases} 2x+4y=10 \\\\ x+2y=3 \\end{cases}$ has:',
+            options: ['One solution', 'No solution', 'Infinite solutions', 'Two solutions'],
+            correctAnswer: 1,
+            explanation: 'Eq1 ÷ 2: $x+2y=5$. But eq2 says $x+2y=3$. Contradiction → no solution.'
           }
         ]
       }

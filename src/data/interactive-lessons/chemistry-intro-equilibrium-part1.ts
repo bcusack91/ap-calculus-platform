@@ -4,13 +4,30 @@ export const chemIntroEquilibriumPart1Data = {
     {
       id: 'ie1-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Dynamic Equilibrium
+      content: `# ⚖️ Dynamic Equilibrium
 
 **Part 1 of 7 — Forward and Reverse Rates**
 
-Chemical reactions don\'t always go to completion. Many reactions are **reversible** — the products can react to re-form the reactants. When the forward and reverse reactions occur at the **same rate**, the system reaches **dynamic equilibrium**.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚗️ Reversible Reactions |
+| What "Dynamic" Means |
+| ⏱️ Rates Over Time |
+| Before Equilibrium |
+| At Equilibrium |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ie1-reversible-reactions',
@@ -38,6 +55,8 @@ At equilibrium:
 - The system is NOT static — it is constantly reacting in both directions
 
 This is why we call it **dynamic** equilibrium.
+
+> 🔑 **Key Concept:** Dynamic equilibrium means both forward and reverse reactions continue at equal rates — the system is NOT static, it is constantly reacting.
       `
     },
     {
@@ -59,7 +78,7 @@ This is why we call it **dynamic** equilibrium.
 
 ### At Equilibrium
 
-$$\\text{Rate}_{\\text{forward}} = \\text{Rate}_{\\text{reverse}}$$
+$$\boxed{\text{Rate}_{\text{forward}} = \text{Rate}_{\text{reverse}}}$$
 
 - Concentrations of reactants and products remain **constant** (not necessarily equal!)
 - The ratio $[\\text{products}]/[\\text{reactants}]$ stays fixed at a given temperature
@@ -67,14 +86,7 @@ $$\\text{Rate}_{\\text{forward}} = \\text{Rate}_{\\text{reverse}}$$
 
 ---
 
-### Key Misconception
-
-Equilibrium does **NOT** mean:
-- The reaction has stopped
-- Concentrations of reactants and products are equal
-- Nothing is happening
-
-It means the rates are balanced so there is no **net** change.
+> ⚠️ **Common Misconception:** Equilibrium does **NOT** mean the reaction has stopped, that concentrations of reactants and products are equal, or that nothing is happening. It means the rates are balanced so there is no **net** change.
       `
     },
     {
@@ -135,6 +147,8 @@ For a system to reach equilibrium, several conditions must be met:
 ### 1. Closed System
 The system must be **closed** — no matter can enter or leave. (Energy transfer is allowed.)
 
+> 🔑 **Key Concept:** A closed system is essential — if matter can escape, concentrations cannot stabilize and equilibrium cannot be established.
+
 
 ---
 
@@ -162,6 +176,8 @@ You know a system is at equilibrium when:
 - All macroscopic properties (concentration, pressure, color, pH) remain **constant**
 - The system is **closed**
 - The reaction is **reversible**
+
+> 💡 **Tip:** On the AP exam, look for phrases like "constant concentration," "no further change," or "sealed container" as clues that a system is at equilibrium.
       `
     },
     {

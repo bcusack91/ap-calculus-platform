@@ -2,187 +2,193 @@ export const precalcMatricesPart5Data = {
   topicSlug: 'matrices-precalc',
   sections: [
     {
-      id: 'precalc-matrices-precalc-p5-s1-intro',
+      id: 'p5-intro',
       type: 'text' as const,
       content: `
-      ## Matrices: Systems via augmented matrices
-      
-      **Part 5 of 7**
-      
-      This part focuses on solving a two-variable system with elimination matrix steps. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **inverse matrix**: matrix that undoes another matrix
-      - **identity matrix**: multiplicative neutral matrix
-      - **augmented matrix**: system coefficients with constants in one array
-      
-      
-      ### Worked Example
-      Solve $\\begin{cases}x+y=7\\2x-y=5\end{cases}$ by elimination.
-      
-      Add equations: $3x=12$, so $x=4$. Substitute into $x+y=7$ to get $y=3$.
-      
-      A quick matrix check with $\\begin{bmatrix}1&1\\2&-1\end{bmatrix}$ confirms a nonzero determinant, so the solution is unique.
+# 📊 Row Reduction & Gaussian Elimination
+
+**Part 5 of 7**
+
+### Elementary Row Operations
+
+Three legal moves (they don't change solutions):
+
+| Operation | Notation | Example |
+|:----------|:---------|:--------|
+| Swap rows | $R_i \\leftrightarrow R_j$ | $R_1 \\leftrightarrow R_2$ |
+| Scale row | $kR_i \\to R_i$ | $2R_1 \\to R_1$ |
+| Add multiple | $R_i + kR_j \\to R_i$ | $R_2 - 3R_1 \\to R_2$ |
+
+### Goal: Row Echelon Form (REF)
+
+$$\\begin{bmatrix} 1 & * & * & | & * \\\\ 0 & 1 & * & | & * \\\\ 0 & 0 & 1 & | & * \\end{bmatrix}$$
+
+Leading 1s form a staircase pattern.
+
+### Reduced Row Echelon Form (RREF)
+
+$$\\begin{bmatrix} 1 & 0 & 0 & | & * \\\\ 0 & 1 & 0 & | & * \\\\ 0 & 0 & 1 & | & * \\end{bmatrix}$$
+
+Solution reads directly from the right side!
       `
     },
     {
-      id: 'precalc-matrices-precalc-p5-s2-mcq-core',
+      id: 'p5-example',
+      type: 'text' as const,
+      content: `
+## 📝 Worked Example
+
+Solve: $\\begin{cases} x+2y=5 \\\\ 3x+4y=11 \\end{cases}$
+
+$$\\left[\\begin{array}{cc|c} 1 & 2 & 5 \\\\ 3 & 4 & 11 \\end{array}\\right]$$
+
+**Step 1**: $R_2 - 3R_1 \\to R_2$
+
+$$\\left[\\begin{array}{cc|c} 1 & 2 & 5 \\\\ 0 & -2 & -4 \\end{array}\\right]$$
+
+**Step 2**: $-\\frac{1}{2}R_2 \\to R_2$
+
+$$\\left[\\begin{array}{cc|c} 1 & 2 & 5 \\\\ 0 & 1 & 2 \\end{array}\\right]$$
+
+**Step 3**: $R_1 - 2R_2 \\to R_1$
+
+$$\\left[\\begin{array}{cc|c} 1 & 0 & 1 \\\\ 0 & 1 & 2 \\end{array}\\right]$$
+
+**Solution**: $x = 1, y = 2$ ✓
+      `
+    },
+    {
+      id: 'p5-3x3',
+      type: 'text' as const,
+      content: `
+## 🔢 3×3 Example
+
+$$\\begin{cases} x+y+z=6 \\\\ 2x+3y+z=14 \\\\ x-y+2z=2 \\end{cases}$$
+
+$$\\left[\\begin{array}{ccc|c} 1 & 1 & 1 & 6 \\\\ 2 & 3 & 1 & 14 \\\\ 1 & -1 & 2 & 2 \\end{array}\\right]$$
+
+$R_2-2R_1$, $R_3-R_1$:
+
+$$\\left[\\begin{array}{ccc|c} 1 & 1 & 1 & 6 \\\\ 0 & 1 & -1 & 2 \\\\ 0 & -2 & 1 & -4 \\end{array}\\right]$$
+
+$R_3+2R_2$:
+
+$$\\left[\\begin{array}{ccc|c} 1 & 1 & 1 & 6 \\\\ 0 & 1 & -1 & 2 \\\\ 0 & 0 & -1 & 0 \\end{array}\\right]$$
+
+Back-substitute: $z=0, y=2, x=4$.
+
+**Solution**: $(4, 2, 0)$ ✓
+      `
+    },
+    {
+      id: 'p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Row Reduction Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of inverse matrix.',
-            options: [
-              'matrix that undoes another matrix',
-              'legal transformation preserving system solutions',
-              'multiplicative neutral matrix',
-              'system coefficients with constants in one array'
-            ],
-            correctAnswer: 0,
-            explanation: 'inverse matrix is defined as: matrix that undoes another matrix.'
+            question: 'Which is NOT a valid row operation?',
+            options: ['$R_1 + 2R_2 \\to R_1$', '$3R_1 \\to R_1$', '$R_1 \\cdot R_2 \\to R_1$', '$R_1 \\leftrightarrow R_3$'],
+            correctAnswer: 2,
+            explanation: 'Multiplying two rows together is not a valid elementary row operation.'
           },
           {
-            question: 'In solving a two-variable system with elimination matrix steps, which expression is the best starting model?',
-            options: [
-              '$AI=IA=A$',
-              '$(AB)_{ij}=\\sum_k a_{ik}b_{kj}$',
-              '$A^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}$',
-              '$\\det\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}=ad-bc$'
-            ],
-            correctAnswer: 3,
-            explanation: 'Use $\\det\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}=ad-bc$ first, then substitute known quantities from the prompt.'
+            question: 'RREF has:',
+            options: ['Leading 1s only, zeros above and below', 'Zeros everywhere', 'No restrictions', 'Only integers'],
+            correctAnswer: 0,
+            explanation: 'RREF: leading 1s with all zeros in their column (above AND below).'
+          },
+          {
+            question: 'If row reduction gives $\\begin{bmatrix} 1 & 0 & | & 3 \\\\ 0 & 0 & | & 5 \\end{bmatrix}$:',
+            options: ['$x=3, y=5$', 'Infinite solutions', 'No solution', '$x=3$'],
+            correctAnswer: 2,
+            explanation: 'Row 2 says $0=5$: contradiction → no solution.'
           }
         ]
       }
     },
     {
-      id: 'precalc-matrices-precalc-p5-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | 2x2 determinant | $\det\\begin{bmatrix}a&b\\c&d\end{bmatrix}=ad-bc$ | invertibility test |
-      | 2x2 inverse | $A^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\-c&a\end{bmatrix}$ | solving small systems |
-      | Product entry | $(AB)_{ij}=\sum_k a_{ik}b_{kj}$ | matrix multiplication |
-      | Identity action | $AI=IA=A$ | structure check |
-      
-      ### Common pitfalls
-      - Dimension mismatch blocks addition or multiplication.
-      - A zero determinant means no inverse exists.
-      - Matrix multiplication is not commutative in general.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-matrices-precalc-p5-s4-input',
+      id: 'p5-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Matrix Mechanics**
-      
-      1) Compute $\det\\begin{bmatrix}5&2\\3&4\end{bmatrix}$.
-      2) Compute first entry of $\\begin{bmatrix}1&2\\0&1\end{bmatrix}\\begin{bmatrix}3\\4\end{bmatrix}$.
-      3) Compute trace of $\\begin{bmatrix}2&1\\5&7\end{bmatrix}$.
+**Row Operations** 🧮
+
+$\\left[\\begin{array}{cc|c} 2 & 4 & 10 \\\\ 1 & 3 & 7 \\end{array}\\right]$
+
+After $\\frac{1}{2}R_1$: first row becomes $\\begin{bmatrix} 1 & ? & | & ? \\end{bmatrix}$
+
+**1)** New $a_{12}$ = ?
+
+**2)** New $a_{13}$ (constant) = ?
+
+**3)** After $R_2 - R_1 \\to R_2$: new $a_{22}$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['14', '11', '9'],
-        hint1: 'Use $ad-bc$.',
-        hint2: 'Dot first row with the column vector.',
-        hint3: 'Trace is the sum of diagonal entries.',
-        explanation: 'Determinant is 14, product entry is 11, and trace is 9.'
+        correctAnswers: ['2', '5', '1'],
+        hint1: '$4/2 = 2$.',
+        hint2: '$10/2 = 5$.',
+        hint3: 'New $R_1 = [1,2,5]$. $R_2 - R_1 = [0, 3-2, 7-5] = [0,1,2]$.',
+        explanation: '1) $2$. 2) $5$. 3) $3-2=1$.'
       }
     },
     {
-      id: 'precalc-matrices-precalc-p5-s5-dropdown',
+      id: 'p5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Gauss Concepts** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'inverse matrix',
-            options: ['matrix that undoes another matrix', 'legal transformation preserving system solutions', 'multiplicative neutral matrix', 'system coefficients with constants in one array']
+            label: 'Row echelon form has zeros:',
+            options: ['Above leading 1s', 'Below leading 1s', 'Above and below', 'Nowhere specific'],
+            correctAnswer: 1
           },
           {
-            label: 'identity matrix',
-            options: ['system coefficients with constants in one array', 'multiplicative neutral matrix', 'legal transformation preserving system solutions', 'rows by columns descriptor of a matrix']
+            label: 'RREF has zeros:',
+            options: ['Only below', 'Only above', 'Above and below leading 1s', 'Nowhere'],
+            correctAnswer: 2
           },
           {
-            label: 'augmented matrix',
-            options: ['rows by columns descriptor of a matrix', 'system coefficients with constants in one array', 'legal transformation preserving system solutions', 'single value identified by row and column']
+            label: 'A row of all zeros indicates:',
+            options: ['No solution', 'Free variable (infinite solutions)', 'Unique solution', 'Error'],
+            correctAnswer: 1
+          },
+          {
+            label: 'Gaussian elimination uses:',
+            options: ['Only swaps', 'Only scaling', 'All three row operations', 'Determinants'],
+            correctAnswer: 2
           }
         ],
-        correctAnswers: ['matrix that undoes another matrix', 'multiplicative neutral matrix', 'system coefficients with constants in one array'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: inverse matrix, identity matrix, and augmented matrix align with their exact definitions used in this part.'
+        correctAnswers: ['Below leading 1s', 'Above and below leading 1s', 'Free variable (infinite solutions)', 'All three row operations'],
+        hint1: 'REF: staircase down.',
+        hint2: 'RREF: complete elimination.',
+        hint3: 'Zero row = one less equation = free variable.',
+        explanation: 'REF: below. RREF: full. Zero row: free variable. Gauss: all three ops.'
       }
     },
     {
-      id: 'precalc-matrices-precalc-p5-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to inverse matrix, identity matrix, and augmented matrix so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-matrices-precalc-p5-s7-mcq-applied',
+      id: 'p5-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is solving a two-variable system with elimination matrix steps. Which term best anchors the next reasoning step if the key idea is: legal transformation preserving system solutions?',
-            options: [
-              'identity matrix',
-              'inverse matrix',
-              'row operation',
-              'augmented matrix'
-            ],
-            correctAnswer: 2,
-            explanation: 'row operation matches that description and keeps the model-to-interpretation chain consistent.'
+            question: '$\\left[\\begin{array}{cc|c} 1 & 0 & 3 \\\\ 0 & 1 & -2 \\end{array}\\right]$ in RREF gives:',
+            options: ['$x=3, y=-2$', '$x=-2, y=3$', '$x=3, y=2$', 'No solution'],
+            correctAnswer: 0,
+            explanation: 'Read directly: $x=3, y=-2$.'
           },
           {
-            question: 'A student is solving a mixed matrices prompt. Which term best anchors the next reasoning step if the key idea is: rows by columns descriptor of a matrix?',
-            options: [
-              'row operation',
-              'augmented matrix',
-              'entry',
-              'dimension'
-            ],
-            correctAnswer: 3,
-            explanation: 'dimension matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'How many solutions if RREF is $\\left[\\begin{array}{ccc|c} 1 & 0 & 2 & 5 \\\\ 0 & 1 & -1 & 3 \\\\ 0 & 0 & 0 & 0 \\end{array}\\right]$?',
+            options: ['One', 'None', 'Infinitely many', 'Three'],
+            correctAnswer: 2,
+            explanation: 'Third row all zeros → $z$ is free → infinitely many solutions.'
           }
         ]
       }

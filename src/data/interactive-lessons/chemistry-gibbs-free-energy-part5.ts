@@ -4,13 +4,30 @@ export const chemGibbsFreeEnergyPart5Data = {
     {
       id: 'gf5-intro',
       type: 'text' as const,
-      content: `
-# 📊 Non-Standard Conditions — ΔG = ΔG° + RT ln Q
+      content: `# 📊 Non-Standard Conditions — ΔG = ΔG° + RT ln Q
 
 **Part 5 of 7 — Real-World Free Energy**
 
-$\\Delta G°$ tells us about equilibrium, but real reactions rarely start at standard conditions. To determine spontaneity at any concentration, pressure, or composition, we need $\\Delta G$ (without the °), which uses the reaction quotient $Q$.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚡ The Non-Standard Free Energy Equation |
+| Recall: Q vs K |
+| 📌 Interpreting ΔG, Q, and K |
+| Key Insight |
+| The Big Picture |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gf5-equation',
@@ -18,7 +35,7 @@ $\\Delta G°$ tells us about equilibrium, but real reactions rarely start at sta
       content: `
 ## ⚡ The Non-Standard Free Energy Equation
 
-$$\\Delta G = \\Delta G° + RT\\ln Q$$
+$$\boxed{\Delta G = \Delta G° + RT\ln Q}$$
 
 | Symbol | Meaning |
 |--------|---------|
@@ -50,8 +67,7 @@ $$Q = \\frac{[\\text{products}]^n}{[\\text{reactants}]^m}$$ (same form as K, but
 | $Q < K$ | Below equilibrium | $\\Delta G < 0$ | Forward reaction spontaneous |
 | $Q = K$ | At equilibrium | $\\Delta G = 0$ | No net change |
 | $Q > K$ | Above equilibrium | $\\Delta G > 0$ | Reverse reaction spontaneous |
-
-
+> 🔑 **Key Concept:** The relationship between $Q$ and $K$ determines the direction of spontaneous change — always toward equilibrium.
 ---
 
 ### Key Insight
@@ -67,7 +83,7 @@ This is how we derived the $\\Delta G°$–$K$ relationship!
 ---
 
 ### The Big Picture
-
+> ⚠️ **Warning:** Don't confuse $\Delta G°$ and $\Delta G$ — they answer different questions:
 - $\\Delta G°$ tells you WHERE equilibrium lies (the value of $K$)
 - $\\Delta G$ tells you WHICH DIRECTION the reaction will go from current conditions
 - A reaction with $\\Delta G° > 0$ can still proceed forward if $Q$ is small enough
@@ -77,27 +93,33 @@ This is how we derived the $\\Delta G°$–$K$ relationship!
       id: 'gf5-worked-example',
       type: 'text' as const,
       content: `
-## 🧪 Worked Example
+## 🧪 Worked Example — Non-Standard ΔG
 
-For the reaction $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightleftharpoons 2\\text{NH}_3(g)$
+> **Problem:** For the reaction $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightleftharpoons 2\\text{NH}_3(g)$, with $\\Delta G° = -33.0$ kJ/mol at 298 K, calculate $\\Delta G$ when $P_{\\text{N}_2} = 1.0$ atm, $P_{\\text{H}_2} = 3.0$ atm, $P_{\\text{NH}_3} = 0.50$ atm.
 
-$\\Delta G° = -33.0$ kJ/mol at 298 K
+### Given
 
-Calculate $\\Delta G$ when $P_{\\text{N}_2} = 1.0$ atm, $P_{\\text{H}_2} = 3.0$ atm, $P_{\\text{NH}_3} = 0.50$ atm.
+| Quantity | Value |
+|----------|-------|
+| $\\Delta G°$ | $-33.0$ kJ/mol = $-33{,}000$ J/mol |
+| $T$ | 298 K |
+| $R$ | 8.314 J/(mol·K) |
+| $P_{\\text{N}_2}$ | 1.0 atm |
+| $P_{\\text{H}_2}$ | 3.0 atm |
+| $P_{\\text{NH}_3}$ | 0.50 atm |
 
-**Step 1: Calculate Q**
+---
 
-$$Q = \\frac{(P_{\\text{NH}_3})^2}{(P_{\\text{N}_2})(P_{\\text{H}_2})^3} = \\frac{(0.50)^2}{(1.0)(3.0)^3} = \\frac{0.25}{27} = 0.00926$$
+### Step-by-Step Solution
 
-**Step 2: Calculate ΔG**
+| Step | Action | Calculation | Result |
+|------|--------|-------------|--------|
+| 1 | Calculate $Q$ | $\\frac{(0.50)^2}{(1.0)(3.0)^3} = \\frac{0.25}{27}$ | $Q = 0.00926$ |
+| 2 | Calculate $RT$ | $(8.314)(298)$ | $2478 \\text{ J/mol}$ |
+| 3 | Calculate $RT\\ln Q$ | $(2478)(\\ln 0.00926) = (2478)(-4.682)$ | $-11{,}602 \\text{ J}$ |
+| 4 | Calculate $\\Delta G$ | $-33{,}000 + (-11{,}602)$ | $\\Delta G = -44.6 \\text{ kJ}$ |
 
-$$\\Delta G = \\Delta G° + RT\\ln Q$$
-$$= -33{,}000 + (8.314)(298)\\ln(0.00926)$$
-$$= -33{,}000 + (2478)(-4.682)$$
-$$= -33{,}000 + (-11{,}602)$$
-$$= -44{,}602 \\text{ J} = -44.6 \\text{ kJ}$$
-
-Since $\\Delta G < 0$ and $Q < K$, the forward reaction is spontaneous — more $\\text{NH}_3$ will form.
+> 🔑 **Interpretation:** Since $\\Delta G < 0$ and $Q < K$, the forward reaction is spontaneous — more $\\text{NH}_3$ will form until the system reaches equilibrium.
       `
     },
     {

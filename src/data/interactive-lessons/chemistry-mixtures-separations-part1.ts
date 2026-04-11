@@ -4,13 +4,30 @@ export const chemMixturesSeparationsPart1Data = {
     {
       id: 'mx1-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Types of Mixtures
+      content: `# 🧪 Types of Mixtures
 
 **Part 1 of 7 — Homogeneous vs. Heterogeneous Mixtures**
 
-Most matter around you is a **mixture** — a combination of two or more substances that are **not chemically bonded** together. Each substance in a mixture retains its own chemical identity and properties. Understanding mixtures is essential for chemistry because separation techniques are the foundation of analytical chemistry and lab work on the AP exam.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🧪 Pure Substances vs. Mixtures |
+| Key Differences |
+| 🧪 Homogeneous Mixtures (Solutions) |
+| Solutions |
+| Properties of Solutions |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'mx1-pure-vs-mixture',
@@ -41,6 +58,8 @@ Most matter around you is a **mixture** — a combination of two or more substan
 ## 🧪 Homogeneous Mixtures (Solutions)
 
 A **homogeneous mixture** has a **uniform composition** throughout — you cannot distinguish the components visually.
+
+> 🔑 **Key Concept:** A **homogeneous** mixture looks the same throughout (uniform composition), while a **heterogeneous** mixture has visibly different regions or phases.
 
 
 ---
@@ -113,6 +132,8 @@ A **heterogeneous mixture** has a **non-uniform composition** — you can see or
 | Filter? | No | No | Yes |
 | Tyndall effect? | No | Yes | Yes (if not settled) |
 | Appearance | Clear | Cloudy/translucent | Opaque |
+
+> 💡 **Tip:** The **Tyndall effect** (shining a light beam through the mixture) is the quickest way to distinguish a colloid from a true solution — colloids scatter light, solutions do not.
       `
     },
     {

@@ -4,13 +4,29 @@ export const chemIntegratedRateLawsPart5Data = {
     {
       id: 'ir5-intro',
       type: 'text' as const,
-      content: `
-# ⏱️ Half-Life Problems
+      content: `# ⏱️ Half-Life Problems
 
 **Part 5 of 7 — Calculations for Each Order and Radioactive Decay**
 
-Half-life is one of the most-tested topics on the AP Chemistry exam. This part provides intensive practice with half-life calculations for all three orders, plus applications to radioactive decay (which is always first-order).
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📋 Half-Life Formulas Summary |
+| 📌 Radioactive Decay: Always First-Order |
+| Carbon-14 Dating |
+| Example |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ir5-summary',
@@ -24,10 +40,12 @@ Half-life is one of the most-tested topics on the AP Chemistry exam. This part p
 | First | $t_{1/2} = \\frac{0.693}{k}$ | **Independent** — t₁/₂ is always the same |
 | Second | $t_{1/2} = \\frac{1}{k[A]_0}$ | Inversely proportional — higher [A]₀ → shorter t₁/₂ |
 
+> ⚠️ **Warning:** For zero and second-order, "$n$ half-lives" does NOT mean $n \\times t_{1/2}$ total time, because each successive half-life has a different duration!
+
 
 ---
 
-### Pattern of Successive Half-Lives
+> 🔑 **Key Concept:** The pattern of successive half-lives uniquely identifies reaction order:
 
 | Order | 1st t₁/₂ | 2nd t₁/₂ | 3rd t₁/₂ | Pattern |
 |-------|----------|----------|----------|---------|
@@ -111,13 +129,15 @@ A second-order reaction has $k = 0.40$ M⁻¹s⁻¹ and $[A]_0 = 0.50$ M.
 
 All radioactive decay processes follow first-order kinetics:
 
-$$N = N_0 e^{-\\lambda t}$$
+$$\\boxed{N = N_0 e^{-\\lambda t}}$$
 
 $$\\ln\\frac{N}{N_0} = -\\lambda t$$
 
-$$t_{1/2} = \\frac{0.693}{\\lambda}$$
+$$\\boxed{t_{1/2} = \\frac{0.693}{\\lambda}}$$
 
 where $\\lambda$ = decay constant (same role as $k$), $N$ = number of atoms remaining.
+
+> 🔑 **Key Concept:** All radioactive decay is first-order — the probability of any one nucleus decaying is constant per unit time, regardless of how many nuclei remain.
 
 
 ---

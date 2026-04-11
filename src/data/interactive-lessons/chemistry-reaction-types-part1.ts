@@ -4,13 +4,30 @@ export const chemReactionTypesPart1Data = {
     {
       id: 'rt1-intro',
       type: 'text' as const,
-      content: `
-# ⚗️ Synthesis & Decomposition Reactions
+      content: `# ⚗️ Synthesis & Decomposition Reactions
 
 **Part 1 of 7 — Building Up and Breaking Down**
 
-Chemistry is fundamentally about rearranging atoms. The simplest patterns involve either **combining** simple substances into a complex product or **breaking** a complex substance into simpler pieces. These two reaction types — synthesis and decomposition — are mirror images of each other.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🎯 Synthesis (Combination) Reactions |
+| General Form |
+| Classic Examples |
+| Key Pattern |
+| Real-World Example |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rt1-synthesis',
@@ -25,7 +42,7 @@ A synthesis reaction occurs when two or more reactants combine to form a **singl
 
 ### General Form
 
-$$A + B \\rightarrow AB$$
+$$\\boxed{A + B \\rightarrow AB}$$
 
 
 ---
@@ -44,7 +61,7 @@ $$A + B \\rightarrow AB$$
 
 ### Key Pattern
 
-Look for **multiple reactants** forming **one product**. The number of reactants is always greater than the number of products (which is 1).
+> 🔑 **Key Concept:** Look for **multiple reactants** forming **one product**. The number of reactants is always greater than the number of products (which is 1).
 
 
 ---
@@ -52,7 +69,7 @@ Look for **multiple reactants** forming **one product**. The number of reactants
 ### Real-World Example
 
 Rust formation is a synthesis reaction:
-$$4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3$$
+$$\\boxed{4\\text{Fe} + 3\\text{O}_2 \\rightarrow 2\\text{Fe}_2\\text{O}_3}$$
       `
     },
     {
@@ -68,7 +85,7 @@ A decomposition reaction occurs when a **single reactant** breaks down into two 
 
 ### General Form
 
-$$AB \\rightarrow A + B$$
+$$\\boxed{AB \\rightarrow A + B}$$
 
 
 ---
@@ -87,7 +104,7 @@ $$AB \\rightarrow A + B$$
 
 ### Key Pattern
 
-Look for **one reactant** producing **multiple products**. Decomposition often requires energy input (heat, electricity, or light).
+> 🔑 **Key Concept:** Look for **one reactant** producing **multiple products**. Decomposition often requires energy input (heat, electricity, or light).
 
 
 ---
@@ -117,6 +134,8 @@ Look for **one reactant** producing **multiple products**. Decomposition often r
 ---
 
 ### Memory Trick
+
+> 💡 **Tip:** Use word roots to remember:
 
 - **Synthesis** = "put together" (syn- means together)
 - **Decomposition** = "break apart" (de- means undo, compose means put together)

@@ -4,15 +4,30 @@ export const chemStoichiometryLimitingReactantsPart5Data = {
     {
       id: 'sl5-intro',
       type: 'text' as const,
-      content: `
-# 🧫 Solution Stoichiometry
+      content: `# 🧫 Solution Stoichiometry
 
 **Part 5 of 7 — Using Molarity in Stoichiometry**
 
-Many reactions take place in aqueous solution. Instead of weighing solids, you measure **volumes of solutions** with known **molarities**. The key relationship is:
+---
 
-$$M \\times V = n \\quad \\text{(moles = molarity × volume in liters)}$$
-      `
+### Topics in This Part
+
+| Section |
+|---------|
+| 🔄 Molarity Review |
+| Unit Conversion Reminder |
+| Example |
+| 🧪 Solution Stoichiometry Roadmap |
+| The Steps |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sl5-molarity-review',
@@ -24,30 +39,28 @@ $$M \\times V = n \\quad \\text{(moles = molarity × volume in liters)}$$
 
 $$M = \\frac{n}{V} \\quad \\text{or} \\quad n = M \\times V$$
 
-where:
-- $M$ = molarity (mol/L)
-- $n$ = moles of solute
-- $V$ = volume of solution **in liters**
+---
 
+### 📌 Variable Reference
+
+| Variable | Meaning | Units |
+|----------|---------|-------|
+| $M$ | Molarity | mol/L |
+| $n$ | Moles of solute | mol |
+| $V$ | Volume of solution | **Liters** (L) |
+
+> ⚠️ **Always convert mL to L** before using the formula! (÷ 1000)
 
 ---
 
-### Unit Conversion Reminder
+### 🧪 Worked Example
 
-- 1 L = 1000 mL
-- Always convert mL to L before using the formula!
-- Example: 250 mL = 0.250 L
+| Step | Action | Calculation |
+|------|--------|-------------|
+| Given | 500 mL of 0.200 M NaOH | $V = 0.500$ L, $M = 0.200$ mol/L |
+| Solve | $n = M \\times V$ | $0.200 \\times 0.500 = 0.100$ mol NaOH |
 
-
----
-
-### Example
-
-> **Problem:** How many moles of NaOH are in 500 mL of 0.200 M NaOH?
-
-**Solution:**
-
-$$n = M \\times V = 0.200 \\times 0.500 = 0.100 \\text{ mol NaOH}$$
+> 💡 Once you have moles from $n = M \\times V$, follow the same **mole ratio logic** as any other stoichiometry problem.
       `
     },
     {
@@ -100,9 +113,9 @@ A **titration** is a lab technique where you add a solution of known concentrati
 
 $$n_{\\text{acid}} \\times \\text{(acid-to-base ratio)} = n_{\\text{base}}$$
 
-For a 1:1 acid-base reaction:
+> 🔑 **Key Concept:** For a 1:1 acid-base reaction at the equivalence point:
 
-$$M_A \\times V_A = M_B \\times V_B$$
+$$\\boxed{M_A \\times V_A = M_B \\times V_B}$$
 
 
 ---

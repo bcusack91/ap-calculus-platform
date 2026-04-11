@@ -2,188 +2,230 @@ export const precalcExponentialPart3Data = {
   topicSlug: 'exponential-functions-precalc',
   sections: [
     {
-      id: 'precalc-exponential-functions-precalc-p3-s1-intro',
+      id: 'p3-intro',
       type: 'text' as const,
       content: `
-      ## Exponential Functions: Compound growth models
-      
-      **Part 3 of 7**
-      
-      This part focuses on modeling annual investment compounding. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **decay factor**: multiplier between 0 and 1 per input step
-      - **initial value**: value when input is zero
-      - **doubling time**: input interval required to multiply output by 2
-      
-      
-      ### Worked Example
-      Part 3 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 💰 Compound Interest & Continuous Growth
+
+**Part 3 of 7**
+
+When interest is compounded periodically, we use:
+
+$$\\boxed{A = P\\left(1 + \\frac{r}{n}\\right)^{nt}}$$
+
+| Variable | Meaning |
+|:---------|:--------|
+| $A$ | Final amount |
+| $P$ | Principal (initial investment) |
+| $r$ | Annual interest rate (decimal) |
+| $n$ | Number of compounding periods per year |
+| $t$ | Time in years |
+
+### Common Compounding Frequencies
+
+| Frequency | $n$ |
+|:----------|:----|
+| Annually | $1$ |
+| Semi-annually | $2$ |
+| Quarterly | $4$ |
+| Monthly | $12$ |
+| Daily | $365$ |
+| Continuously | Use $A = Pe^{rt}$ instead |
       `
     },
     {
-      id: 'precalc-exponential-functions-precalc-p3-s2-mcq-core',
+      id: 'p3-worked-examples',
+      type: 'text' as const,
+      content: `
+## 📊 Worked Examples
+
+### Example 1: Quarterly Compounding
+
+> **$\\$5{,}000$ is invested at $6\\%$ annual interest compounded quarterly. Find the balance after $3$ years.**
+
+$$A = 5000\\left(1 + \\frac{0.06}{4}\\right)^{4 \\cdot 3} = 5000(1.015)^{12}$$
+
+$(1.015)^{12} \\approx 1.19562$ → $A \\approx \\$5{,}978.09$
+
+### Example 2: Comparing Frequencies
+
+> **$\\$10{,}000$ at $8\\%$ for $5$ years. Compare annual vs monthly compounding.**
+
+| Frequency | $n$ | Calculation | Final Amount |
+|:----------|:----|:-----------|:-------------|
+| Annual | $1$ | $10000(1.08)^5$ | $\\$14{,}693.28$ |
+| Monthly | $12$ | $10000(1.00\\overline{6})^{60}$ | $\\$14{,}898.46$ |
+| Difference | — | — | $\\$205.18$ more |
+
+More frequent compounding always gives a **higher** return, but with diminishing marginal benefit.
+      `
+    },
+    {
+      id: 'p3-continuous',
+      type: 'text' as const,
+      content: `
+## ♾️ Continuous Compounding & the Number $e$
+
+As $n \\to \\infty$, the compound interest formula approaches:
+
+$$\\boxed{A = Pe^{rt}}$$
+
+where $e \\approx 2.71828...$
+
+### Why $e$?
+
+$$\\lim_{n \\to \\infty}\\left(1 + \\frac{1}{n}\\right)^n = e$$
+
+This limit is the foundation of continuous growth.
+
+### Worked Example
+
+> **$\\$2{,}000$ invested at $5\\%$ compounded continuously for $10$ years.**
+
+$A = 2000e^{0.05 \\cdot 10} = 2000e^{0.5} = 2000(1.6487...) \\approx \\$3{,}297.44$
+
+### Converting Between Forms
+
+To convert $A = Pe^{rt}$ to $A = P \\cdot b^t$:
+
+$$b = e^r$$
+
+To convert $A = P \\cdot b^t$ to $A = Pe^{rt}$:
+
+$$r = \\ln(b)$$
+
+| Periodic Form | Continuous Equivalent |
+|:--------------|:---------------------|
+| $1000(1.06)^t$ | $1000e^{0.0583t}$ because $\\ln(1.06) \\approx 0.0583$ |
+| $500(0.92)^t$ | $500e^{-0.0834t}$ because $\\ln(0.92) \\approx -0.0834$ |
+      `
+    },
+    {
+      id: 'p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Compound Interest Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of decay factor.',
+            question: '$\\$8{,}000$ is invested at $4\\%$ compounded semi-annually for $6$ years. Which expression gives the final amount?',
             options: [
-              'value when input is zero',
-              'input interval required to multiply output by $\\rac12$',
-              'input interval required to multiply output by 2',
-              'multiplier between 0 and 1 per input step'
+              '$8000(1.04)^6$',
+              '$8000(1.02)^{12}$',
+              '$8000(1.04)^{12}$',
+              '$8000e^{0.04 \\cdot 6}$'
             ],
-            correctAnswer: 3,
-            explanation: 'decay factor is defined as: multiplier between 0 and 1 per input step.'
+            correctAnswer: 1,
+            explanation: 'Semi-annually: $n = 2$. Rate per period: $\\frac{0.04}{2} = 0.02$. Total periods: $2 \\times 6 = 12$. So $A = 8000(1.02)^{12}$.'
           },
           {
-            question: 'In modeling annual investment compounding, which expression is the best starting model?',
+            question: 'Which compounding frequency produces the LARGEST balance (same rate, same time)?',
             options: [
-              '$T_d=\\frac{\\ln 2}{k}$',
-              '$f(x)=ab^x$',
-              '$f(t)=Ae^{kt}$',
-              '$T_{1/2}=\\frac{\\ln 2}{|k|}$'
+              'Annually',
+              'Quarterly',
+              'Daily',
+              'Continuously'
             ],
-            correctAnswer: 0,
-            explanation: 'Use $T_d=\\frac{\\ln 2}{k}$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 3,
+            explanation: 'More compounding periods → larger balance. Continuous compounding ($n \\to \\infty$) is the theoretical maximum.'
+          },
+          {
+            question: 'If $A = 1000e^{0.07t}$, what is the equivalent annual growth factor $b$?',
+            options: [
+              '$0.07$',
+              '$e^{0.07} \\approx 1.0725$',
+              '$1.07$',
+              '$e \\approx 2.718$'
+            ],
+            correctAnswer: 1,
+            explanation: '$A = 1000(e^{0.07})^t = 1000b^t$ where $b = e^{0.07} \\approx 1.0725$. Note: this is slightly more than $1.07$ because of the continuous effect.'
           }
         ]
       }
     },
     {
-      id: 'precalc-exponential-functions-precalc-p3-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Doubling time | $T_d=\\frac{\ln 2}{k}$ | continuous growth timing |
-      | Half-life | $T_{1/2}=\\frac{\ln 2}{|k|}$ | continuous decay timing |
-      | Exponential form | $f(x)=ab^x$ | model construction |
-      | Continuous model | $f(t)=Ae^{kt}$ | growth/decay by constant relative rate |
-      
-      ### Common pitfalls
-      - When solving exponents, isolate the exponential expression before applying logs.
-      - Do not confuse the base $b$ with the initial value $a$.
-      - A linear graph of raw data is not exponential evidence; inspect ratios.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-exponential-functions-precalc-p3-s4-input',
+      id: 'p3-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Exponential Evaluation**
-      
-      1) Solve $2^x=32$ for $x$.
-      2) Evaluate $f(3)$ for $f(x)=5\left(
-      rac{1}{2}
-      ight)^x$.
-      3) If $P(t)=100(1.1)^t$, compute $P(2)$.
+**Compound Interest Drill** 🧮
+
+**1)** $\\$1{,}000$ at $10\\%$ compounded annually for $2$ years. What is $A$? (e.g., $\\$500$ at $8\\%$ annually for $1$ year: $500(1.08) = 540$)
+
+**2)** How many compounding periods in $4$ years of monthly compounding? (e.g., quarterly for $3$ years: $4 \\times 3 = 12$ periods)
+
+**3)** Evaluate $e^1$ rounded to two decimal places. (e.g., $e^0 = 1.00$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5', '0.625', '121'],
-        hint1: 'Rewrite 32 as a power of 2.',
-        hint2: 'Compute $(1/2)^3$ first, then scale by 5.',
-        hint3: 'Square the growth factor 1.1 and multiply by 100.',
-        explanation: 'The answers are 5, 0.625, and 121 after direct exponential substitution.'
+        correctAnswers: ['1210', '48', '2.72'],
+        hint1: '$A = 1000(1.10)^2$. Compute $(1.10)^2 = 1.21$ first.',
+        hint2: 'Monthly means $n = 12$. Total periods = $12 \\times 4$.',
+        hint3: '$e \\approx 2.71828...$',
+        explanation: '1) $1000(1.10)^2 = 1000(1.21) = 1210$. 2) $12 \\times 4 = 48$ periods. 3) $e^1 \\approx 2.72$.'
       }
     },
     {
-      id: 'precalc-exponential-functions-precalc-p3-s5-dropdown',
+      id: 'p3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Classify Each Scenario** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'decay factor',
-            options: ['value when input is zero', 'input interval required to multiply output by $\\rac12$', 'input interval required to multiply output by 2', 'multiplier between 0 and 1 per input step']
+            label: 'Interest compounded $12$ times per year uses $n =$',
+            options: ['$1$', '$4$', '$12$', '$365$']
           },
           {
-            label: 'initial value',
-            options: ['input interval required to multiply output by $\\rac12$', 'input interval required to multiply output by 2', 'percent change per step or per unit time', 'value when input is zero']
+            label: 'The formula $A = Pe^{rt}$ is used when compounding is',
+            options: ['annual', 'quarterly', 'daily', 'continuous']
           },
           {
-            label: 'doubling time',
-            options: ['percent change per step or per unit time', 'input interval required to multiply output by 2', 'using logarithms to solve for exponents', 'input interval required to multiply output by $\\rac12$']
+            label: 'Increasing compounding frequency with fixed $r$ and $t$ makes $A$',
+            options: ['smaller', 'larger', 'unchanged', 'unpredictable']
+          },
+          {
+            label: 'To convert $b^t$ form to $e^{kt}$ form, use $k =$',
+            options: ['$b$', '$\\ln(b)$', '$e^b$', '$\\frac{1}{b}$']
           }
         ],
-        correctAnswers: ['multiplier between 0 and 1 per input step', 'value when input is zero', 'input interval required to multiply output by 2'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: decay factor, initial value, and doubling time align with their exact definitions used in this part.'
+        correctAnswers: ['$12$', 'continuous', 'larger', '$\\ln(b)$'],
+        hint1: 'Monthly = $12$ months per year.',
+        hint2: '$e^{rt}$ is the limiting case as $n \\to \\infty$.',
+        hint3: 'More compounding = more "interest on interest."',
+        explanation: '$n = 12$ for monthly. $Pe^{rt}$ is continuous. More compounding → larger $A$. Convert: $b = e^k \\implies k = \\ln(b)$.'
       }
     },
     {
-      id: 'precalc-exponential-functions-precalc-p3-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to decay factor, initial value, and doubling time so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-exponential-functions-precalc-p3-s7-mcq-applied',
+      id: 'p3-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is modeling annual investment compounding. Which term best anchors the next reasoning step if the key idea is: input interval required to multiply output by $\\rac12$?',
+            question: 'An account earns $6\\%$ compounded monthly. What is the effective annual rate (APY)?',
             options: [
-              'initial value',
-              'half-life',
-              'doubling time',
-              'decay factor'
+              '$6\\%$',
+              '$\\left(1 + \\frac{0.06}{12}\\right)^{12} - 1 \\approx 6.17\\%$',
+              '$e^{0.06} - 1 \\approx 6.18\\%$',
+              '$6.5\\%$'
             ],
             correctAnswer: 1,
-            explanation: 'half-life matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'APY $= \\left(1 + \\frac{r}{n}\\right)^n - 1 = (1.005)^{12} - 1 \\approx 0.0617 = 6.17\\%$. This is slightly less than the continuous rate $e^{0.06} - 1 \\approx 6.18\\%$.'
           },
           {
-            question: 'A student is solving a mixed exponential functions prompt. Which term best anchors the next reasoning step if the key idea is: percent change per step or per unit time?',
+            question: 'A population modeled by $P(t) = 250e^{0.03t}$ will double when:',
             options: [
-              'relative rate',
-              'doubling time',
-              'half-life',
-              'log linearization'
+              '$t = \\frac{\\ln 2}{0.03} \\approx 23.1$ years',
+              '$t = \\frac{0.03}{\\ln 2} \\approx 0.043$ years',
+              '$t = \\frac{2}{0.03} \\approx 66.7$ years',
+              '$t = \\frac{250}{0.03}$ years'
             ],
             correctAnswer: 0,
-            explanation: 'relative rate matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Set $250e^{0.03t} = 500$: $e^{0.03t} = 2$, so $0.03t = \\ln 2$, giving $t = \\frac{\\ln 2}{0.03} \\approx 23.1$ years. This is the **doubling time** formula.'
           }
         ]
       }

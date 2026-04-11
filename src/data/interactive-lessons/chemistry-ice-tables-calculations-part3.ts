@@ -4,13 +4,28 @@ export const chemIceTablesCalculationsPart3Data = {
     {
       id: 'ic3-intro',
       type: 'text' as const,
-      content: `
-# 🧊 Solving for Equilibrium Concentrations Given K
+      content: `# 🧊 Solving for Equilibrium Concentrations Given K
 
 **Part 3 of 7 — The Classic ICE Table Problem**
 
-This is the most common ICE table scenario: you know K and the initial concentrations, and you need to find the equilibrium concentrations. This requires setting up and solving an algebraic equation.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 General Method |
+| 🧪 Worked Example: Perfect-Square Case |
+| 🧪 Worked Example: Quadratic Required |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ic3-method',
@@ -30,11 +45,12 @@ This is the most common ICE table scenario: you know K and the initial concentra
 
 ---
 
-### Perfect-Square Shortcut
+> 💡 **Tip — Perfect-Square Shortcut:** When the K expression can be written as a perfect square, take the square root of both sides to avoid the quadratic formula. This works when: $K = \\frac{(\\text{something})^2}{(\\text{something else})^2}$
 
-When the K expression can be written as a perfect square, take the square root of both sides to avoid the quadratic formula.
 
-This works when: $K = \\frac{(\\text{something})^2}{(\\text{something else})^2}$
+---
+
+> 🔑 **Key Concept:** Always verify your answer — plug the equilibrium concentrations back into the K expression. If the result doesn't match the given K, recheck your algebra.
       `
     },
     {
@@ -43,9 +59,9 @@ This works when: $K = \\frac{(\\text{something})^2}{(\\text{something else})^2}$
       content: `
 ## 🧪 Worked Example: Perfect-Square Case
 
-$\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$, $K_c = 64.0$
+> **Problem:** For $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$ with $K_c = 64.0$, find the equilibrium concentrations given $[\\text{H}_2] = 0.50$ M, $[\\text{I}_2] = 0.50$ M, $[\\text{HI}] = 0$.
 
-Initial: $[\\text{H}_2] = 0.50$ M, $[\\text{I}_2] = 0.50$ M, $[\\text{HI}] = 0$
+> **Solution:**
 
 |  | H₂ | I₂ | HI |
 |--|-----|-----|-----|
@@ -53,7 +69,7 @@ Initial: $[\\text{H}_2] = 0.50$ M, $[\\text{I}_2] = 0.50$ M, $[\\text{HI}] = 0$
 | **C** | $-x$ | $-x$ | $+2x$ |
 | **E** | $0.50-x$ | $0.50-x$ | $2x$ |
 
-$$64.0 = \\frac{(2x)^2}{(0.50-x)(0.50-x)} = \\frac{4x^2}{(0.50-x)^2}$$
+$$\\boxed{64.0 = \\frac{(2x)^2}{(0.50-x)(0.50-x)} = \\frac{4x^2}{(0.50-x)^2}}$$
 
 Take the square root:
 
@@ -76,9 +92,9 @@ $$x = 0.40$$
       content: `
 ## 🧪 Worked Example: Quadratic Required
 
-$\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$, $K_c = 0.36$
+> **Problem:** For $\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\,\\text{NO}_2(g)$ with $K_c = 0.36$, find the equilibrium concentrations given $[\\text{N}_2\\text{O}_4] = 1.00$ M, $[\\text{NO}_2] = 0$.
 
-Initial: $[\\text{N}_2\\text{O}_4] = 1.00$ M, $[\\text{NO}_2] = 0$
+> **Solution:**
 
 |  | N₂O₄ | NO₂ |
 |--|-------|------|
@@ -86,7 +102,7 @@ Initial: $[\\text{N}_2\\text{O}_4] = 1.00$ M, $[\\text{NO}_2] = 0$
 | **C** | $-x$ | $+2x$ |
 | **E** | $1.00 - x$ | $2x$ |
 
-$$0.36 = \\frac{(2x)^2}{1.00 - x} = \\frac{4x^2}{1.00 - x}$$
+$$\\boxed{0.36 = \\frac{(2x)^2}{1.00 - x} = \\frac{4x^2}{1.00 - x}}$$
 
 $$0.36(1.00 - x) = 4x^2$$
 
@@ -101,6 +117,11 @@ $$x = \\frac{-0.36 \\pm \\sqrt{0.1296 + 5.76}}{8} = \\frac{-0.36 \\pm \\sqrt{5.8
 Taking the positive root: $x = \\frac{-0.36 + 2.427}{8} = \\frac{2.067}{8} = 0.258$
 
 **Equilibrium:** $[\\text{N}_2\\text{O}_4] = 0.742$ M, $[\\text{NO}_2] = 0.516$ M
+
+
+---
+
+> ⚠️ **Warning:** Always reject the negative root of the quadratic — it would give physically impossible (negative) concentrations.
       `
     },
     {

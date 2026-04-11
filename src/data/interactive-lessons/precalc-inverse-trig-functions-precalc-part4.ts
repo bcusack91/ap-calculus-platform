@@ -2,195 +2,228 @@ export const precalcInverseTrigPart4Data = {
   topicSlug: 'inverse-trig-functions-precalc',
   sections: [
     {
-      id: 'precalc-inverse-trig-functions-precalc-p4-s1-intro',
+      id: 'p4-intro',
       type: 'text' as const,
       content: `
-      ## Inverse Trigonometric Functions: Compositions and domain constraints
-      
-      **Part 4 of 7**
-      
-      This part focuses on testing valid compositions with domain filters. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **arccos**: inverse of cosine on $[0,\pi]$
-      - **arctan**: inverse of tangent on $(-
-      rac\pi2,
-      rac\pi2)$
-      - **composition**: applying one function to the output of another
-      
-      
-      ### Worked Example
-      Part 4 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🔗 Compositions of Trig & Inverse Trig
+
+**Part 4 of 7**
+
+One of the most important skills is simplifying compositions like $\\sin(\\arccos x)$ or $\\cos(\\arctan x)$.
+
+### Two Types of Compositions
+
+**Type 1: Trig(InverseTrig)** — e.g., $\\sin(\\arccos \\frac{3}{5})$
+
+Strategy: Draw a right triangle from the inverse trig value.
+
+**Type 2: InverseTrig(Trig)** — e.g., $\\arcsin(\\sin \\frac{5\\pi}{6})$
+
+Strategy: Check if the angle is in the principal range. If not, find the equivalent angle.
+
+### Type 1 — The Right Triangle Method
+
+$$\\boxed{\\text{Let } \\theta = \\arccos x \\text{, draw triangle, find desired ratio}}$$
+
+If $\\theta = \\arccos\\!\\left(\\frac{3}{5}\\right)$, then $\\cos\\theta = \\frac{3}{5}$.
+
+Draw a right triangle: adjacent = $3$, hypotenuse = $5$, so opposite = $\\sqrt{25 - 9} = 4$.
+
+$$\\sin(\\arccos \\tfrac{3}{5}) = \\sin\\theta = \\frac{4}{5}$$
       `
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p4-s2-mcq-core',
+      id: 'p4-examples',
+      type: 'text' as const,
+      content: `
+## 📝 Worked Examples
+
+### Example 1: $\\tan(\\arcsin \\frac{5}{13})$
+
+Let $\\theta = \\arcsin \\frac{5}{13}$, so $\\sin\\theta = \\frac{5}{13}$.
+
+Right triangle: opposite = $5$, hypotenuse = $13$, adjacent = $\\sqrt{169 - 25} = 12$
+
+$$\\tan(\\arcsin \\tfrac{5}{13}) = \\frac{5}{12}$$
+
+### Example 2: $\\cos(\\arctan 2)$
+
+Let $\\theta = \\arctan 2$, so $\\tan\\theta = \\frac{2}{1}$.
+
+Right triangle: opposite = $2$, adjacent = $1$, hypotenuse = $\\sqrt{4 + 1} = \\sqrt{5}$
+
+$$\\cos(\\arctan 2) = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$$
+
+### Example 3: General Formula $\\sin(\\arccos x)$
+
+Let $\\theta = \\arccos x$. Then $\\cos\\theta = x = \\frac{x}{1}$.
+
+Adjacent = $x$, hypotenuse = $1$, opposite = $\\sqrt{1 - x^2}$
+
+$$\\boxed{\\sin(\\arccos x) = \\sqrt{1 - x^2}}$$
+      `
+    },
+    {
+      id: 'p4-type2',
+      type: 'text' as const,
+      content: `
+## 🔄 Type 2: InverseTrig(Trig)
+
+### The Cancellation Rules
+
+These only work when the angle is in the **principal range**:
+
+| Expression | Simplifies to | Condition |
+|:-----------|:-------------|:----------|
+| $\\arcsin(\\sin\\theta)$ | $\\theta$ | $\\theta \\in [-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$ |
+| $\\arccos(\\cos\\theta)$ | $\\theta$ | $\\theta \\in [0, \\pi]$ |
+| $\\arctan(\\tan\\theta)$ | $\\theta$ | $\\theta \\in (-\\frac{\\pi}{2}, \\frac{\\pi}{2})$ |
+
+### Example 4: $\\arcsin(\\sin \\frac{7\\pi}{6})$
+
+$\\frac{7\\pi}{6}$ is NOT in $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$, so we can't just cancel.
+
+$\\sin \\frac{7\\pi}{6} = -\\frac{1}{2}$
+
+$\\arcsin(-\\frac{1}{2}) = -\\frac{\\pi}{6}$
+
+### Example 5: $\\arccos(\\cos(-\\frac{\\pi}{3}))$
+
+$-\\frac{\\pi}{3}$ is NOT in $[0, \\pi]$, so we can't cancel.
+
+$\\cos(-\\frac{\\pi}{3}) = \\frac{1}{2}$
+
+$\\arccos(\\frac{1}{2}) = \\frac{\\pi}{3}$
+      `
+    },
+    {
+      id: 'p4-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Composition Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of arccos.',
+            question: '$\\sin\\!\\left(\\arccos \\frac{4}{5}\\right)$ equals:',
             options: [
-              'inverse of cosine on $[0,\\pi]$',
-              'inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$',
-              'applying one function to the output of another',
-              'triangle built from known trig ratios'
+              '$\\frac{4}{5}$',
+              '$\\frac{3}{5}$',
+              '$\\frac{5}{4}$',
+              '$\\frac{3}{4}$'
             ],
-            correctAnswer: 0,
-            explanation: 'arccos is defined as: inverse of cosine on $[0,\\pi]$.'
+            correctAnswer: 1,
+            explanation: 'Triangle: adj = 4, hyp = 5, opp = $\\sqrt{25-16} = 3$. So $\\sin\\theta = \\frac{3}{5}$.'
           },
           {
-            question: 'In testing valid compositions with domain filters, which expression is the best starting model?',
+            question: '$\\arccos(\\cos \\frac{5\\pi}{3})$ equals:',
             options: [
-              '$\\sin(\\arcsin x)=x$',
-              '$\\tan(\\arctan x)=x$',
-              '$\\arccos x \\in [0,\\pi]$',
-              '$\\arctan x + \\arctan\\!\\left(\\frac1x\\right)=\\frac\\pi2\\;(x>0)$'
+              '$\\frac{5\\pi}{3}$',
+              '$\\frac{\\pi}{3}$',
+              '$-\\frac{\\pi}{3}$',
+              '$\\frac{2\\pi}{3}$'
             ],
-            correctAnswer: 3,
-            explanation: 'Use $\\arctan x + \\arctan\\!\\left(\\frac1x\\right)=\\frac\\pi2\\;(x>0)$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 1,
+            explanation: '$\\cos \\frac{5\\pi}{3} = \\frac{1}{2}$. Then $\\arccos(\\frac{1}{2}) = \\frac{\\pi}{3}$ (in $[0, \\pi]$).'
+          },
+          {
+            question: '$\\cos(\\arccos x) = x$ is true for:',
+            options: [
+              'All real $x$',
+              '$x \\in [-1, 1]$ only',
+              '$x \\in [0, \\pi]$ only',
+              '$x > 0$ only'
+            ],
+            correctAnswer: 1,
+            explanation: '$\\cos(\\arccos x) = x$ holds whenever $\\arccos x$ is defined, i.e., $x \\in [-1, 1]$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p4-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Reciprocal relation | $\arctan x + \arctan\!\left(\\frac1x\\right)=\\frac\pi2\;(x>0)$ | angle decomposition |
-      | Inverse identity | $\sin(\arcsin x)=x$ | valid for $x\in[-1,1]$ |
-      | Principal output | $\arccos x \in [0,\pi]$ | range control |
-      | Tangent inverse | $\\tan(\arctan x)=x$ | all real inputs |
-      
-      ### Common pitfalls
-      - Inverse trig outputs are angles, not raw ratio values.
-      - A composition can fail if the inner output leaves the inverse domain.
-      - Use principal intervals before comparing equivalent angle expressions.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-inverse-trig-functions-precalc-p4-s4-input',
+      id: 'p4-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Inverse Trig Values**
-      
-      Use degree values for angle outputs when prompted.
-      
-      1) Compute $rcsin\left(
-      rac{1}{2}
-      ight)$ in degrees.
-      2) Compute $rccos\left(
-      rac{\sqrt{2}}{2}
-      ight)$ in degrees.
-      3) Compute $\\an(rctan(
-      rac{3}{4}))$.
+**Evaluate Compositions** 🧮
+
+Write answers as simplified fractions or integers.
+
+**1)** $\\tan(\\arccos \\frac{3}{5})$ = ? (e.g., $\\sin(\\arccos \\frac{4}{5}) = \\frac{3}{5}$ using a 3-4-5 triangle)
+
+**2)** $\\arcsin(\\sin 210°)$ in degrees = ? (e.g., $\\arcsin(\\sin 150°) = 30°$ since $\\sin 150° = \\frac{1}{2}$ and $\\arcsin \\frac{1}{2} = 30°$)
+
+**3)** $\\cos(\\arctan \\frac{3}{4})$ = ? Write as a decimal like 0.8 (e.g., $\\cos(\\arctan 1) = \\frac{\\sqrt{2}}{2} \\approx 0.707$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['30', '45', '0.75'],
-        hint1: 'Use principal range for arcsin.',
-        hint2: 'Use principal range for arccos.',
-        hint3: 'A function and its inverse undo each other on valid inputs.',
-        explanation: 'Principal angles are 30° and 45°, and composition returns 0.75.'
+        correctAnswers: ['4/3', '-30', '0.8'],
+        hint1: 'Triangle: adj = 3, hyp = 5, opp = 4. $\\tan\\theta = \\frac{\\text{opp}}{\\text{adj}}$.',
+        hint2: '$\\sin 210° = -\\frac{1}{2}$. $\\arcsin(-\\frac{1}{2}) = -30°$.',
+        hint3: 'Triangle: opp = 3, adj = 4, hyp = 5. $\\cos\\theta = \\frac{4}{5} = 0.8$.',
+        explanation: '1) $\\frac{4}{3}$. 2) $\\sin 210° = -\\frac{1}{2}$, $\\arcsin(-\\frac{1}{2}) = -30°$. 3) 3-4-5 triangle: $\\frac{4}{5} = 0.8$.'
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p4-s5-dropdown',
+      id: 'p4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**True or False** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'arccos',
-            options: ['applying one function to the output of another', 'inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$', 'inverse of cosine on $[0,\\pi]$', 'triangle built from known trig ratios']
+            label: '$\\sin(\\arcsin x) = x$ for all $x \\in [-1, 1]$',
+            options: ['True', 'False']
           },
           {
-            label: 'arctan',
-            options: ['inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$', 'applying one function to the output of another', 'triangle built from known trig ratios', 'placing angles inside principal intervals']
+            label: '$\\arcsin(\\sin x) = x$ for all real $x$',
+            options: ['True', 'False']
           },
           {
-            label: 'composition',
-            options: ['standard output interval used by an inverse trig function', 'placing angles inside principal intervals', 'applying one function to the output of another', 'triangle built from known trig ratios']
+            label: '$\\cos(\\arctan x)$ can be simplified using a right triangle',
+            options: ['True', 'False']
+          },
+          {
+            label: '$\\arccos(\\cos(-\\frac{\\pi}{4})) = -\\frac{\\pi}{4}$',
+            options: ['True', 'False']
           }
         ],
-        correctAnswers: ['inverse of cosine on $[0,\\pi]$', 'inverse of tangent on $(-\\rac\\pi2,\\rac\\pi2)$', 'applying one function to the output of another'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: arccos, arctan, and composition align with their exact definitions used in this part.'
+        correctAnswers: ['True', 'False', 'True', 'False'],
+        hint1: '$\\sin(\\arcsin x) = x$ always works when the input is in the domain.',
+        hint2: '$\\arcsin(\\sin x) = x$ only when $x$ is already in $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$.',
+        hint3: 'Yes, let $\\theta = \\arctan x$, draw a triangle with opp = $x$, adj = $1$.',
+        explanation: '$\\sin(\\arcsin x) = x$ ✓. $\\arcsin(\\sin x) \\neq x$ in general. Triangle method works. $\\arccos(\\cos(-\\frac{\\pi}{4})) = \\frac{\\pi}{4}$ (not $-\\frac{\\pi}{4}$).'
       }
     },
     {
-      id: 'precalc-inverse-trig-functions-precalc-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to arccos, arctan, and composition so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-inverse-trig-functions-precalc-p4-s7-mcq-applied',
+      id: 'p4-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is testing valid compositions with domain filters. Which term best anchors the next reasoning step if the key idea is: triangle built from known trig ratios?',
+            question: 'The general formula for $\\sin(\\arccos x)$ is:',
             options: [
-              'composition',
-              'arccos',
-              'reference triangle',
-              'arctan'
-            ],
-            correctAnswer: 2,
-            explanation: 'reference triangle matches that description and keeps the model-to-interpretation chain consistent.'
-          },
-          {
-            question: 'A student is solving a mixed inverse trigonometric functions prompt. Which term best anchors the next reasoning step if the key idea is: placing angles inside principal intervals?',
-            options: [
-              'composition',
-              'angle normalization',
-              'reference triangle',
-              'principal value'
+              '$1 - x$',
+              '$\\sqrt{1 - x^2}$',
+              '$\\frac{1}{x}$',
+              '$x^2 - 1$'
             ],
             correctAnswer: 1,
-            explanation: 'angle normalization matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Draw triangle with adj = $x$, hyp = 1, opp = $\\sqrt{1 - x^2}$. Then $\\sin\\theta = \\frac{\\sqrt{1-x^2}}{1}$.'
+          },
+          {
+            question: '$\\arctan(\\tan \\frac{3\\pi}{4})$ equals:',
+            options: [
+              '$\\frac{3\\pi}{4}$',
+              '$-\\frac{\\pi}{4}$',
+              '$\\frac{\\pi}{4}$',
+              '$-\\frac{3\\pi}{4}$'
+            ],
+            correctAnswer: 1,
+            explanation: '$\\frac{3\\pi}{4}$ is NOT in $(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$. $\\tan\\frac{3\\pi}{4} = -1$. $\\arctan(-1) = -\\frac{\\pi}{4}$.'
           }
         ]
       }

@@ -4,19 +4,32 @@ export const chemIdealGasLawPart7Data = {
     {
       id: 'gl7-intro',
       type: 'text' as const,
-      content: `
-# 🏆 Synthesis & AP Review
+      content: `# 🏆 Synthesis & AP Review
 
 **Part 7 of 7 — Ideal vs. Real Gases & AP Exam Preparation**
 
-You've mastered the ideal gas law and all its variations. Now we examine when the ideal gas model **breaks down**, introduce the **van der Waals equation** for real gases, and tackle AP-style free-response questions.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'gl7-ideal-vs-real',
       type: 'text' as const,
       content: `
 ## 📌 Ideal vs. Real Gases
+
+> ⚠️ **Warning:** The ideal gas law is an approximation! Real gases deviate from ideal behavior, especially at high pressures and low temperatures.
 
 The ideal gas law works well under many conditions, but **real gases** deviate from ideal behavior when:
 
@@ -39,6 +52,8 @@ The ideal gas law works well under many conditions, but **real gases** deviate f
 
 ### When Is Ideal Behavior Best?
 
+> 🔑 **Key Concept:** Gases behave most ideally at high temperature and low pressure — conditions where molecules are far apart and moving fast.
+
 - **Low pressure** → molecules far apart → negligible volume and attractions
 - **High temperature** → fast-moving molecules → overcome attractions easily
 - **Noble gases and small nonpolar molecules** → weakest intermolecular forces
@@ -52,7 +67,7 @@ The ideal gas law works well under many conditions, but **real gases** deviate f
 
 To correct for real gas behavior:
 
-$$\\left(P + \\frac{an^2}{V^2}\\right)(V - nb) = nRT$$
+$$\\boxed{\\left(P + \\frac{an^2}{V^2}\\right)(V - nb) = nRT}$$
 
 | Correction | Term | What It Fixes |
 |-----------|------|---------------|

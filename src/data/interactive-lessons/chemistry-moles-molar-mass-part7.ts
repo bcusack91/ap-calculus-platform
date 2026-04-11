@@ -4,13 +4,24 @@ export const chemMolesMolarMassPart7Data = {
     {
       id: 'mm7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — Connecting Concepts & Exam Preparation**
 
-This final part ties together everything from Parts 1–6. You will practice AP-style multiple-choice questions, tackle free-response-style calculations, and learn the most common mistakes to avoid on exam day.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'mm7-concept-map',
@@ -20,14 +31,16 @@ This final part ties together everything from Parts 1–6. You will practice AP-
 
 All of the mole concepts are interconnected:
 
-$$\\text{Percent Composition} \\rightarrow \\text{Empirical Formula} \\xrightarrow{+\\,M} \\text{Molecular Formula}$$
+$$\\boxed{\\text{Percent Composition} \\rightarrow \\text{Empirical Formula} \\xrightarrow{+\\,M} \\text{Molecular Formula}}$$
 
-$$\\text{Mass (g)} \\xleftrightarrow{M} \\text{Moles} \\xleftrightarrow{N_A} \\text{Particles}$$
+$$\\boxed{\\text{Mass (g)} \\xleftrightarrow{M} \\text{Moles} \\xleftrightarrow{N_A} \\text{Particles}}$$
 
 
 ---
 
 ### The Big Ideas
+
+> 🔑 **Key Concept:** Everything in quantitative chemistry flows through the mole — master these conversions and you can solve virtually any stoichiometry problem.
 
 1. **The mole** bridges the atomic and macroscopic worlds
 2. **Molar mass** connects mass (measurable) to amount (moles)
@@ -54,37 +67,36 @@ $$\\text{Mass (g)} \\xleftrightarrow{M} \\text{Moles} \\xleftrightarrow{N_A} \\t
 ## 📌 Common Mistakes to Avoid ⚠️
 
 ### 1. Confusing Atomic Mass and Molar Mass Units
-- Atomic mass → **amu** (for single atoms)
-- Molar mass → **g/mol** (for one mole)
-- The numbers are the same; only the units differ!
+
+> ⚠️ **Warning:** The numbers are the same but the units differ! Atomic mass → **amu** (for single atoms), Molar mass → **g/mol** (for one mole).
 
 
 ---
 
 ### 2. Forgetting Subscripts in Molar Mass Calculations
-- $M_{\\text{Ca(OH)}_2} \\neq 40.08 + 16.00 + 1.008$
-- $M_{\\text{Ca(OH)}_2} = 40.08 + 2(16.00) + 2(1.008) = 74.10$ g/mol ✓
+
+> ⚠️ **Warning:** Don't forget that subscripts outside parentheses multiply everything inside! $M_{\\text{Ca(OH)}_2} \\neq 40.08 + 16.00 + 1.008$. Correct: $M_{\\text{Ca(OH)}_2} = 40.08 + 2(16.00) + 2(1.008) = 74.10$ g/mol ✓
 
 
 ---
 
 ### 3. Atoms vs. Molecules
-- 1 mol H₂O = $6.022 \\times 10^{23}$ **molecules** (not atoms!)
-- Total atoms in 1 mol H₂O = $3 \times 6.022 \times 10^{23} = 1.807 \times 10^{24}$ atoms
+
+> ⚠️ **Warning:** 1 mol H₂O = $6.022 \\times 10^{23}$ **molecules** (not atoms!). Total atoms in 1 mol H₂O = $3 \\times 6.022 \\times 10^{23} = 1.807 \\times 10^{24}$ atoms (3 per molecule).
 
 
 ---
 
 ### 4. Rounding Mole Ratios Too Soon
-- A ratio of 1.33 is NOT 1 — it is $4/3$, so multiply all by 3
-- A ratio of 1.50 is NOT 2 — it is $3/2$, so multiply all by 2
-- A ratio of 1.25 is $5/4$, so multiply all by 4
+
+> ⚠️ **Warning:** Do not round non-integer mole ratios! 1.33 = $4/3$ (multiply by 3), 1.50 = $3/2$ (multiply by 2), 1.25 = $5/4$ (multiply by 4).
 
 
 ---
 
 ### 5. Forgetting to Use the Mole Ratio (Not Mass Ratio)
-- In stoichiometry, always convert to **moles** first, never work directly with grams
+
+> ⚠️ **Warning:** In stoichiometry, always convert to **moles** first — never work directly with grams!
       `
     },
     {

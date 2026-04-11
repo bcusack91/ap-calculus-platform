@@ -4,13 +4,29 @@ export const chemAcidBaseTheoriesPhPart6Data = {
     {
       id: 'ab6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Problem-Solving Workshop
+      content: `# 🛠️ Problem-Solving Workshop
 
 **Part 6 of 7 — Acid-Base Theories and pH**
 
-Let\'s put everything together with multi-step problems that mirror the AP Chemistry exam. Each problem integrates acid-base theory identification, pH calculations, and conceptual reasoning.
-      `
+---
+
+### Problem Types You'll Practice
+
+| Problem Type | Skills Combined |
+|-------------|-----------------|
+| Theory identification | Arrhenius vs. Brønsted-Lowry vs. Lewis |
+| Multi-step pH | Dilution → dissociation → $-\log$ |
+| Conceptual reasoning | Very dilute acid pH limits |
+| Conjugate pair analysis | Identifying donors/acceptors |
+
+> 🔑 **Why this matters:** AP Chemistry free-response questions often combine acid-base theory with pH calculations — exactly the type of multi-step problems in this workshop.
+
+---
+
+### What You'll Master in Part 6
+- Solving multi-step pH problems with dilution
+- Identifying acid-base behavior across all three theories
+- Reasoning about edge cases like very dilute strong acids`
     },
     {
       id: 'ab6-problem1',
@@ -30,6 +46,8 @@ For each reaction, the acid-base theory required is:
 - Reaction A: **Brønsted-Lowry** (proton transfer from $HF$ to $H_2O$)
 - Reaction B: **Lewis** ($BF_3$ accepts electron pair from $F^-$)
 - Reaction C: **Arrhenius** ($NaOH$ produces $OH^-$ in water)
+
+> 🔑 When classifying, always use the **simplest** theory that explains the observation.
       `
     },
     {
@@ -37,6 +55,10 @@ For each reaction, the acid-base theory required is:
       type: 'multiple-choice' as const,
       content: `
 **Problem 1 Practice** 🎯
+
+**Reaction A:** $HF(aq) + H_2O(l) \\rightleftharpoons F^-(aq) + H_3O^+(aq)$
+
+**Reaction B:** $BF_3 + F^- \\rightarrow BF_4^-$
       `,
       exercise: {
         questions: [
@@ -115,7 +137,7 @@ $pH = -\\log(8.75 \\times 10^{-3}) = 2.06$
 
 A student mixes 25.0 mL of 0.080 M $HNO_3$ with 15.0 mL of 0.080 M $KOH$.
 
-**1)** How many moles of excess $H^+$ remain? (Enter in scientific notation, e.g. 8.0e-4)
+**1)** How many moles of excess $H^+$ remain? (Enter in scientific notation, e.g. 3.5e-3)
 
 **2)** What is the total volume in liters? (3 decimal places)
 
@@ -138,17 +160,19 @@ A student mixes 25.0 mL of 0.080 M $HNO_3$ with 15.0 mL of 0.080 M $KOH$.
 
 ### The pH of Very Dilute Strong Acids
 
-When a strong acid is extremely dilute (e.g., $10^{-8}$ M $HCl$), you **cannot** simply say $pH = 8$. An acid solution can never have $pH > 7$!
+When a strong acid is extremely dilute (e.g., $10^{-8}$ M $HCl$), you **cannot** simply say $pH = 8$.
+
+> ⚠️ **An acid solution can never have $pH > 7$!**
 
 The autoionization of water contributes $[H^+] = 10^{-7}$ M, which is much larger than the acid\'s contribution.
 
 **Correct approach:**
 
-$$[H^+]_{\\text{total}} = [H^+]_{\\text{acid}} + [H^+]_{\\text{water}} \\approx 10^{-8} + 10^{-7} = 1.1 \\times 10^{-7} \\text{ M}$$
+$$\\boxed{[H^+]_{\\text{total}} = [H^+]_{\\text{acid}} + [H^+]_{\\text{water}} \\approx 10^{-8} + 10^{-7} = 1.1 \\times 10^{-7} \\text{ M}}$$
 
 $$pH = -\\log(1.1 \\times 10^{-7}) = 6.96$$
 
-This is slightly below 7, as expected for an acidic solution.
+> 💡 This is slightly below 7, as expected for an acidic solution.
       `
     },
     {

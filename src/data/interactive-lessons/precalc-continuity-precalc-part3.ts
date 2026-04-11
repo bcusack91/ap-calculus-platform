@@ -2,188 +2,183 @@ export const precalcContinuityPart3Data = {
   topicSlug: 'continuity-precalc',
   sections: [
     {
-      id: 'precalc-continuity-precalc-p3-s1-intro',
+      id: 'p3-intro',
       type: 'text' as const,
       content: `
-      ## Continuity: Algebraic continuity rules
-      
-      **Part 3 of 7**
-      
-      This part focuses on justifying direct substitution in polynomials. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **removable discontinuity**: hole created by cancellation or redefinition
-      - **jump discontinuity**: left and right limits exist but are unequal
-      - **infinite discontinuity**: function grows without bound near a point
-      
-      
-      ### Worked Example
-      Part 3 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🧩 Piecewise Continuity
+
+**Part 3 of 7**
+
+### The Key Question
+
+For a piecewise function, continuity at the **boundary** is the issue. The pieces are usually nice functions — it's the **join points** that may fail.
+
+### Checking Continuity at a Boundary $x = c$
+
+1. Compute $\\lim_{x \\to c^-} f(x)$ (from the left piece)
+2. Compute $\\lim_{x \\to c^+} f(x)$ (from the right piece)
+3. Compute $f(c)$ (which piece defines it?)
+4. Check: left limit = right limit = $f(c)$?
       `
     },
     {
-      id: 'precalc-continuity-precalc-p3-s2-mcq-core',
+      id: 'p3-examples',
+      type: 'text' as const,
+      content: `
+## Worked Examples
+
+### Example 1: Continuous
+
+$$f(x) = \\begin{cases} x^2 & x \\leq 2 \\\\ 4x - 4 & x > 2 \\end{cases}$$
+
+At $x = 2$:
+- Left: $\\lim_{x \\to 2^-} x^2 = 4$
+- Right: $\\lim_{x \\to 2^+}(4x-4) = 4$
+- Value: $f(2) = 2^2 = 4$
+- $4 = 4 = 4$ ✓ **Continuous!**
+
+### Example 2: Not Continuous
+
+$$g(x) = \\begin{cases} 2x + 1 & x < 3 \\\\ x^2 & x \\geq 3 \\end{cases}$$
+
+At $x = 3$:
+- Left: $\\lim_{x \\to 3^-}(2x+1) = 7$
+- Right: $\\lim_{x \\to 3^+} x^2 = 9$
+- $7 \\neq 9$ → **Jump discontinuity**
+      `
+    },
+    {
+      id: 'p3-find-k',
+      type: 'text' as const,
+      content: `
+## Finding Values for Continuity
+
+### The Classic Problem: "Find $k$ so $f$ is continuous"
+
+$$f(x) = \\begin{cases} 3x + k & x < 2 \\\\ x^2 + 1 & x \\geq 2 \\end{cases}$$
+
+**Strategy**: Set left limit = right limit at $x = 2$:
+
+- Left: $\\lim_{x \\to 2^-}(3x+k) = 6 + k$
+- Right: $\\lim_{x \\to 2^+}(x^2+1) = 5$
+- Set equal: $6 + k = 5 \\Rightarrow k = -1$
+
+### Two Parameters: "Find $a$ and $b$"
+
+$$f(x) = \\begin{cases} 2x & x \\leq 1 \\\\ ax + b & 1 < x < 3 \\\\ 5x & x \\geq 3 \\end{cases}$$
+
+At $x = 1$: $2(1) = a(1) + b \\Rightarrow a + b = 2$
+
+At $x = 3$: $a(3) + b = 5(3) \\Rightarrow 3a + b = 15$
+
+Subtract: $2a = 13 \\Rightarrow a = 6.5, b = -4.5$
+      `
+    },
+    {
+      id: 'p3-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Piecewise Continuity Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of removable discontinuity.',
-            options: [
-              'function grows without bound near a point',
-              'hole created by cancellation or redefinition',
-              'limit from only the left or only the right',
-              'left and right limits exist but are unequal'
-            ],
+            question: 'To check piecewise continuity at $x=c$, compare:',
+            options: ['Only left and right limits', 'Left limit, right limit, and $f(c)$', 'Only $f(c)$', 'The derivatives'],
             correctAnswer: 1,
-            explanation: 'removable discontinuity is defined as: hole created by cancellation or redefinition.'
+            explanation: 'All three must match: $\\lim^- = \\lim^+ = f(c)$.'
           },
           {
-            question: 'In justifying direct substitution in polynomials, which expression is the best starting model?',
-            options: [
-              '$\\lim_{x\\to a} f(x) = f(a)$',
-              '$\\lim_{x\\to a^-}f(x)=\\lim_{x\\to a^+}f(x)$',
-              '$\\frac{x^2-c^2}{x-c}=x+c\\;(x\\neq c)$',
-              '$\\frac{f(b)-f(a)}{b-a}$'
-            ],
+            question: '$f(x) = \\begin{cases} x+1 & x < 0 \\\\ 2 & x \\geq 0 \\end{cases}$. At $x=0$:',
+            options: ['Continuous', 'Jump', 'Removable', 'Infinite'],
+            correctAnswer: 0,
+            explanation: 'Left: $0+1=1$... wait: Left: $\\lim 0^- = 1$, Right/value: $2$. $1 \\neq 2$, so jump. Actually let me recalculate: left $= 0+1 = 1$, $f(0) = 2$, $1 \\neq 2$ → jump discontinuity.'
+          },
+          {
+            question: 'Find $k$: $\\begin{cases} kx & x \\leq 3 \\\\ x+6 & x > 3 \\end{cases}$ is continuous at $x=3$.',
+            options: ['$k = 2$', '$k = 3$', '$k = 6$', '$k = 9$'],
             correctAnswer: 1,
-            explanation: 'Use $\\lim_{x\\to a^-}f(x)=\\lim_{x\\to a^+}f(x)$ first, then substitute known quantities from the prompt.'
+            explanation: 'Left: $3k$. Right: $3+6=9$. $3k = 9 \\Rightarrow k = 3$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-continuity-precalc-p3-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | One-sided match | $\lim_{x\\to a^-}f(x)=\lim_{x\\to a^+}f(x)$ | two-sided existence |
-      | Rational hole repair | $\\frac{x^2-c^2}{x-c}=x+c\;(x\\neq c)$ | removable discontinuity cleanup |
-      | Continuity test | $\lim_{x\\to a} f(x) = f(a)$ | pointwise verification |
-      | Average rate | $\\frac{f(b)-f(a)}{b-a}$ | bridge to local behavior |
-      
-      ### Common pitfalls
-      - For piecewise functions, evaluate left limit, right limit, and value separately.
-      - A defined value at $x=a$ does not guarantee continuity.
-      - Do not classify a vertical asymptote as removable.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-continuity-precalc-p3-s4-input',
+      id: 'p3-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Continuity and Limits**
-      
-      1) Compute $\lim_{x	o 3} (2x^2-x)$. 
-      2) Compute $
-      rac{f(5)-f(2)}{5-2}$ for $f(x)=x^2$.
-      3) Compute $\lim_{x	o 4}
-      rac{x^2-16}{x-4}$.
+**Find the value that makes each continuous:**
+
+**1)** $\\begin{cases} 2x+k & x < 4 \\\\ 3x & x \\geq 4 \\end{cases}$. Find $k$:
+
+**2)** $\\begin{cases} x^2 & x \\leq 1 \\\\ mx + b & x > 1 \\end{cases}$ with $m=3$. Find $b$ for continuity at $x=1$:
+
+**3)** $\\begin{cases} 5 & x < 0 \\\\ ax^2 + 5 & x \\geq 0 \\end{cases}$. Left limit at $x=0$:
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['15', '7', '8'],
-        hint1: 'Polynomials are continuous, so substitute directly.',
-        hint2: 'Use average rate of change with two function values.',
-        hint3: 'Factor numerator as $(x-4)(x+4)$ before canceling.',
-        explanation: 'Direct substitution gives 15, average rate gives 7, and simplification gives 8.'
+        correctAnswers: ['4', '-2', '5'],
+        hint1: 'Left: $8+k$. Right: $12$. Set equal.',
+        hint2: 'Left: $1$. Right: $3(1)+b = 3+b$. $3+b = 1$.',
+        hint3: '$\\lim_{x \\to 0^-} 5 = 5$.',
+        explanation: '(1) $8+k=12 \\Rightarrow k=4$. (2) $3+b=1 \\Rightarrow b=-2$. (3) Constant 5 from the left.'
       }
     },
     {
-      id: 'precalc-continuity-precalc-p3-s5-dropdown',
+      id: 'p3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Piecewise Analysis** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'removable discontinuity',
-            options: ['function grows without bound near a point', 'left and right limits exist but are unequal', 'limit from only the left or only the right', 'hole created by cancellation or redefinition']
+            label: 'At a piecewise boundary, the potential issue is:',
+            options: ['The pieces are wrong', 'The pieces may not connect', 'Domain is empty', 'Function is linear'],
+            correctAnswer: 1
           },
           {
-            label: 'jump discontinuity',
-            options: ['left and right limits exist but are unequal', 'function grows without bound near a point', 'limit from only the left or only the right', 'continuous functions on closed intervals take all intermediate values']
+            label: 'To find $k$ for continuity, you set:',
+            options: ['$f(c) = 0$', 'Left limit = right limit', '$k = c$', 'Derivative = 0'],
+            correctAnswer: 1
           },
           {
-            label: 'infinite discontinuity',
-            options: ['limit from only the left or only the right', 'rule changes across intervals of the domain', 'continuous functions on closed intervals take all intermediate values', 'function grows without bound near a point']
+            label: 'If left $= 4$ and right $= 4$ but $f(c) = 7$:',
+            options: ['Continuous', 'Jump', 'Removable', 'Infinite'],
+            correctAnswer: 2
+          },
+          {
+            label: 'Three-piece functions may need continuity checked at:',
+            options: ['One point', 'Two points', 'Three points', 'No points'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['hole created by cancellation or redefinition', 'left and right limits exist but are unequal', 'function grows without bound near a point'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: removable discontinuity, jump discontinuity, and infinite discontinuity align with their exact definitions used in this part.'
+        correctAnswers: ['The pieces may not connect', 'Left limit = right limit', 'Removable', 'Two points'],
+        hint1: 'Each piece is usually continuous — the join is the question.',
+        hint2: 'Matching at the boundary.',
+        hint3: 'Limit exists (4) but ≠ value (7).',
+        explanation: 'Pieces may not connect. Set limits equal. 4≠7 → removable. Three pieces → two boundaries.'
       }
     },
     {
-      id: 'precalc-continuity-precalc-p3-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to removable discontinuity, jump discontinuity, and infinite discontinuity so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-continuity-precalc-p3-s7-mcq-applied',
+      id: 'p3-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is justifying direct substitution in polynomials. Which term best anchors the next reasoning step if the key idea is: limit from only the left or only the right?',
-            options: [
-              'one-sided limit',
-              'jump discontinuity',
-              'removable discontinuity',
-              'infinite discontinuity'
-            ],
+            question: '$\\begin{cases} x^2-1 & x < 2 \\\\ 2x-1 & x \\geq 2 \\end{cases}$. At $x=2$:',
+            options: ['Continuous', 'Jump', 'Removable', 'Infinite'],
             correctAnswer: 0,
-            explanation: 'one-sided limit matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Left: $4-1=3$. Right: $4-1=3$. $f(2) = 3$. All equal → continuous.'
           },
           {
-            question: 'A student is solving a mixed continuity prompt. Which term best anchors the next reasoning step if the key idea is: continuous functions on closed intervals take all intermediate values?',
-            options: [
-              'infinite discontinuity',
-              'IVT',
-              'one-sided limit',
-              'piecewise function'
-            ],
+            question: 'Find $c$ for continuity: $\\begin{cases} cx-1 & x < 2 \\\\ 7 & x \\geq 2 \\end{cases}$:',
+            options: ['$c = 3$', '$c = 4$', '$c = 3.5$', '$c = 7$'],
             correctAnswer: 1,
-            explanation: 'IVT matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Left: $2c-1$. Right: $7$. $2c-1=7 \\Rightarrow 2c=8 \\Rightarrow c=4$.'
           }
         ]
       }

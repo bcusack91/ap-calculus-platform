@@ -4,13 +4,30 @@ export const chemReactionTypesPart2Data = {
     {
       id: 'rt2-intro',
       type: 'text' as const,
-      content: `
-# 🔄 Single & Double Replacement Reactions
+      content: `# 🔄 Single & Double Replacement Reactions
 
 **Part 2 of 7 — Trading Partners**
 
-In replacement reactions, atoms or ions **switch places**. Understanding these reactions requires knowing which elements can displace others — that\'s where the **activity series** comes in.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Single Replacement (Single Displacement) |
+| General Form |
+| Examples |
+| No Reaction Example |
+| 📌 The Activity Series |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rt2-single-replacement',
@@ -25,7 +42,7 @@ A more reactive element displaces a less reactive element from a compound.
 
 ### General Form
 
-$$A + BC \\rightarrow AC + B$$
+$$\\boxed{A + BC \\rightarrow AC + B}$$
 
 Element A replaces element B in compound BC, but **only if A is more reactive than B**.
 
@@ -47,7 +64,7 @@ Element A replaces element B in compound BC, but **only if A is more reactive th
 
 $$\\text{Cu} + \\text{ZnSO}_4 \\rightarrow \\text{No Reaction}$$
 
-Copper is **less reactive** than zinc, so it cannot displace zinc from solution.
+> ⚠️ **Warning:** Copper is **less reactive** than zinc, so it cannot displace zinc from solution. Always check the activity series before predicting products — if the free element is below the element in the compound, **no reaction** occurs.
       `
     },
     {
@@ -71,6 +88,8 @@ The activity series ranks metals (and hydrogen) by their ability to lose electro
 ---
 
 ### Key Rules
+
+> 🔑 **Key Concept:** The activity series determines which replacement reactions will occur:
 
 1. **A metal above H₂** can react with acids to produce H₂ gas
 2. **A metal below H₂** (Cu, Ag, Au) cannot dissolve in common acids
@@ -98,7 +117,7 @@ Two ionic compounds in solution **exchange ions** to form two new compounds.
 
 ### General Form
 
-$$AB + CD \\rightarrow AD + CB$$
+$$\\boxed{AB + CD \\rightarrow AD + CB}$$
 
 The cations and anions switch partners.
 
@@ -131,7 +150,7 @@ A double replacement reaction occurs when one of the products is:
 
 The reaction of an acid with a base to form salt and water is a special case of double replacement:
 
-$$\\text{Acid} + \\text{Base} \\rightarrow \\text{Salt} + \\text{Water}$$
+$$\\boxed{\\text{Acid} + \\text{Base} \\rightarrow \\text{Salt} + \\text{Water}}$$
       `
     },
     {

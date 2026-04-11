@@ -9,11 +9,26 @@ export const chemHybridizationSigmaPiBondsPart2Data = {
 
 **Part 2 of 7 — Trigonal Planar and Linear Geometries**
 
-In Part 1 we saw that four electron domains lead to sp³ hybridization. But what happens when an atom has only **three** or **two** electron domains?
+---
 
-The atom uses fewer p orbitals in hybridization, leaving unhybridized p orbitals available. These leftover p orbitals play a crucial role — they form **pi (π) bonds**, which we\'ll explore in depth in Part 3.
+### Topics in This Part
 
-For now, let\'s focus on the geometry and properties of sp² and sp hybrid orbitals.`
+| Section |
+|---------|
+| Properties of sp² Orbitals |
+| The Unhybridized p Orbital |
+| Example: BF₃ (Boron Trifluoride) |
+| Example: Formaldehyde (H₂C=O) |
+| Properties of sp Orbitals |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'hy-2-2',
@@ -35,7 +50,7 @@ When one s orbital mixes with **two** p orbitals, three equivalent **sp² hybrid
 
 ### The Unhybridized p Orbital
 
-This is critical: the one p orbital that is **not** used in hybridization remains perpendicular to the plane of the three sp² orbitals. It is available for pi bonding.
+> 🔑 **Key Concept:** The one p orbital that is **not** used in hybridization remains perpendicular to the plane of the three sp² orbitals. It is available for pi bonding.
 
 ### Example: BF₃ (Boron Trifluoride)
 
@@ -100,7 +115,7 @@ When one s orbital mixes with **one** p orbital, two equivalent **sp hybrid orbi
 
 ### Two Unhybridized p Orbitals
 
-An sp-hybridized atom has **two** leftover p orbitals, both perpendicular to each other and to the axis of the sp hybrids. These can form **two pi bonds**, enabling triple bonds.
+> 🔑 **Key Concept:** An sp-hybridized atom has **two** leftover p orbitals, both perpendicular to each other and to the axis of the sp hybrids. These can form **two pi bonds**, enabling triple bonds.
 
 ### Example: CO₂ (Carbon Dioxide)
 
@@ -164,7 +179,7 @@ An sp-hybridized atom has **two** leftover p orbitals, both perpendicular to eac
 
 ### The Quick Rule
 
-$$\\text{Hybridization} = \\text{based on number of electron domains (steric number)}$$
+$$\boxed{\text{Hybridization} = \text{based on number of electron domains (steric number)}}$$
 
 | Electron Domains | Hybridization |
 |-----------------|---------------|
@@ -172,9 +187,7 @@ $$\\text{Hybridization} = \\text{based on number of electron domains (steric num
 | 3 | sp² |
 | 4 | sp³ |
 
-### Important Note
-
-Remember that a **double bond counts as 1 electron domain** and a **triple bond counts as 1 electron domain**. Only the number of groups matters, not the bond order.`
+> ⚠️ **Warning:** A **double bond counts as 1 electron domain** and a **triple bond counts as 1 electron domain**. Only the number of groups matters, not the bond order.`
     },
     {
       id: 'hy-2-7',

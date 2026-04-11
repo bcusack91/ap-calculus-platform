@@ -4,13 +4,30 @@ export const chemReactionRatesAndRateLawsPart2Data = {
     {
       id: 'rr2-intro',
       type: 'text' as const,
-      content: `
-# 🌡️ Factors Affecting Reaction Rate
+      content: `# 🌡️ Factors Affecting Reaction Rate
 
 **Part 2 of 7 — What Makes Reactions Faster?**
 
-Not all reactions proceed at the same speed. Some are explosively fast, while others take geological timescales. In this part, we explore the four major factors that determine how quickly a reaction occurs.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📊 Factor 1: Concentration of Reactants |
+| Why? |
+| Mathematical Connection |
+| Example |
+| 📊 Factor 2: Temperature |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rr2-concentration',
@@ -34,7 +51,7 @@ More particles per unit volume means more frequent collisions. More collisions p
 
 The rate law (which we will derive in later parts) often takes the form:
 
-$$\\text{Rate} = k[A]^m[B]^n$$
+$$\\boxed{\\text{Rate} = k[A]^m[B]^n}$$
 
 Increasing $[A]$ or $[B]$ directly increases the rate (when $m, n > 0$).
 
@@ -70,12 +87,14 @@ At higher temperatures:
 
 For many reactions, a **10°C increase** roughly **doubles** the rate. This is an approximation — the actual factor depends on the activation energy.
 
+> 💡 **Tip:** The "rate doubles per 10°C" rule is a rough estimate. The actual factor depends on $E_a$ — reactions with higher activation energies are more sensitive to temperature changes.
+
 
 ---
 
 ### Quantitative: The Arrhenius Equation
 
-$$k = Ae^{-E_a/(RT)}$$
+$$\\boxed{k = Ae^{-E_a/(RT)}}$$
 
 where:
 - $k$ = rate constant
@@ -136,7 +155,7 @@ Finely powdered combustible materials (flour, coal dust, grain dust) have enormo
 
 A catalyst provides an **alternative reaction pathway** with a **lower activation energy** ($E_a$).
 
-$$E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})$$
+$$\\boxed{E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})}$$
 
 
 ---
@@ -148,6 +167,8 @@ $$E_a(\\text{catalyzed}) < E_a(\\text{uncatalyzed})$$
 - **Do NOT change** $\\Delta H$ or $\\Delta G$ — thermodynamics is unaffected
 - **Do NOT shift equilibrium** — both forward and reverse rates increase equally
 - **Speed up both directions** equally
+
+> 🔑 **Key Concept:** A catalyst **lowers $E_a$** but does NOT change $\\Delta H$, $\\Delta G$, or the equilibrium position. It speeds up both forward and reverse reactions equally.
 
 
 ---

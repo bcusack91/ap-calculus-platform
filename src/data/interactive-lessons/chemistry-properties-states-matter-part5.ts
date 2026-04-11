@@ -5,13 +5,30 @@ export const chemPropertiesStatesMatterPart5Data = {
       id: 'sm5-intro',
       type: 'text' as const,
       title: 'Phase Diagrams — Introduction',
-      content: `
-# 📊 Phase Diagrams
+      content: `# 📊 Phase Diagrams
 
 **Part 5 of 7 — Triple Points, Critical Points, and Reading Phase Diagrams**
 
-A **phase diagram** is a graph that shows which phase of a substance is most stable at any given combination of **temperature** (x-axis) and **pressure** (y-axis). Phase diagrams encode an enormous amount of information about a substance\'s behavior in a single image.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| Anatomy of a Phase Diagram |
+| The Three Regions |
+| The Three Boundary Lines |
+| Two Special Points |
+| How to Read a Phase Diagram |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sm5-features',
@@ -45,14 +62,9 @@ Each line represents conditions where **two phases coexist** in equilibrium:
 
 ### Two Special Points
 
-**Triple Point** — where all three boundary lines meet
-- The **unique** temperature and pressure where **solid, liquid, and gas coexist** simultaneously
-- For water: $T = 0.01°C$, $P = 611.7$ Pa (0.00604 atm)
+> 🔑 **Key Concept — Triple Point:** The **unique** temperature and pressure where **solid, liquid, and gas coexist** simultaneously. For water: $T = 0.01°C$, $P = 611.7$ Pa (0.00604 atm).
 
-**Critical Point** — the end of the liquid-gas boundary line
-- Above this temperature and pressure, liquid and gas become **indistinguishable** → a **supercritical fluid**
-- For water: $T_c = 374°C$, $P_c = 218$ atm
-- For CO₂: $T_c = 31.1°C$, $P_c = 73$ atm
+> 🔑 **Key Concept — Critical Point:** Above this temperature and pressure, liquid and gas become **indistinguishable** → a **supercritical fluid**. For water: $T_c = 374°C$, $P_c = 218$ atm. For CO₂: $T_c = 31.1°C$, $P_c = 73$ atm.
       `
     },
     {
@@ -128,7 +140,9 @@ At 1 atm pressure, trace a horizontal line across the CO₂ phase diagram:
 - You cross the **solid-gas** line (sublimation curve) — but **not** the solid-liquid or liquid-gas lines!
 - CO₂ goes directly from solid → gas (**sublimation**).
 
-Why? Because 1 atm is **below** the triple point pressure of CO₂ (5.11 atm). At pressures below the triple point, the liquid phase does not exist — the substance sublimes.
+---
+
+> 💡 **Tip:** At 1 atm, CO₂ goes directly from solid → gas (**sublimation**) because 1 atm is **below** the triple point pressure of CO₂ (5.11 atm). At pressures below the triple point, the liquid phase does not exist!
 
 This is why dry ice sublimes at atmospheric pressure instead of melting!
       `
@@ -183,9 +197,9 @@ Water\'s solid-liquid line slopes **to the left** (negative slope)! This means:
 - Increasing pressure at constant temperature can **melt ice** → favors the liquid.
 - **Ice is less dense than liquid water** — an anomaly among substances.
 
-### Why Is Ice Less Dense?
+---
 
-In ice, water molecules form a **hexagonal crystal lattice** stabilized by hydrogen bonds. This open structure has empty space, making ice **less dense** than liquid water (where H-bond network is partially disrupted and molecules are more randomly packed).
+> 🔑 **Key Concept:** In ice, water molecules form a **hexagonal crystal lattice** stabilized by hydrogen bonds. This open structure has empty space, making ice **less dense** than liquid water (where the H-bond network is partially disrupted and molecules pack more closely).
 
 ### Consequences of Water\'s Anomaly
 

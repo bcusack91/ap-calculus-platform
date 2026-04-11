@@ -4,13 +4,29 @@ export const chemEquilibriumConstantsPart4Data = {
     {
       id: 'ece4-intro',
       type: 'text' as const,
-      content: `
-# 📏 Magnitude of K
+      content: `# 📏 Magnitude of K
 
 **Part 4 of 7 — What the Size of $K$ Tells Us**
 
-The numerical value of $K$ carries enormous meaning. In this part, we'll learn to interpret $K$ values and understand how they connect to the extent of a reaction.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Interpreting the Magnitude of $K$ |
+| Real-World Examples |
+| 🔢 Calculating $K$ from Equilibrium Concentrations |
+| Steps |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ece4-interpretation',
@@ -42,9 +58,7 @@ The equilibrium constant tells us the **extent** to which a reaction proceeds:
 
 ---
 
-### AP Key Point 💡
-
-> A very large $K$ does **not** mean the reaction is fast. $K$ tells us about equilibrium position (thermodynamics), not rate (kinetics).
+> 💡 **Key Point:** A very large $K$ does **not** mean the reaction is fast. $K$ tells us about equilibrium position (thermodynamics), not rate (kinetics).
       `
     },
     {
@@ -102,11 +116,9 @@ If we know the equilibrium concentrations, we can calculate $K$ by direct substi
 
 ---
 
-### Example
+> **Problem:** For $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$, calculate $K_c$ given equilibrium concentrations: $[\\text{N}_2] = 0.50\\;\\text{M}$, $[\\text{H}_2] = 0.30\\;\\text{M}$, $[\\text{NH}_3] = 0.20\\;\\text{M}$.
 
-For $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$
-
-At equilibrium: $[\\text{N}_2] = 0.50\\;\\text{M}$, $[\\text{H}_2] = 0.30\\;\\text{M}$, $[\\text{NH}_3] = 0.20\\;\\text{M}$
+> **Solution:**
 
 $$K_c = \\frac{[\\text{NH}_3]^2}{[\\text{N}_2][\\text{H}_2]^3} = \\frac{(0.20)^2}{(0.50)(0.30)^3}$$
 

@@ -4,13 +4,29 @@ export const chemAcidBaseTitrationsPart2Data = {
     {
       id: 'at2-intro',
       type: 'text' as const,
-      content: `
-# 📈 Strong Acid–Strong Base Titration Curves
+      content: `# 📈 Strong Acid–Strong Base Titration Curves
 
 **Part 2 of 7 — Analyzing the S-Shaped Curve**
 
-The titration curve plots pH vs. volume of titrant added. For a strong acid–strong base titration, the curve has a characteristic S-shape with a sharp jump at the equivalence point. Understanding each region is essential for AP Chemistry.
-      `
+---
+
+### The Four Regions of a Strong-Strong Titration
+
+| Region | What's Happening | pH Determined By |
+|--------|-----------------|-----------------|
+| Before equivalence | Excess acid remains | $[H^+]$ from unreacted acid |
+| Near equivalence | Rapid pH change | Very small excess of acid/base |
+| At equivalence | Complete neutralization | pH = 7.00 (strong-strong only) |
+| After equivalence | Excess base added | $[OH^-]$ from excess base |
+
+> 🔑 **Why this matters:** Understanding each region of the curve is essential — the AP exam asks you to calculate pH at specific volumes and interpret the curve shape.
+
+---
+
+### What You'll Master in Part 2
+- Sketching the S-shaped titration curve for strong acid–strong base
+- Calculating pH at key points before, at, and after equivalence
+- Explaining why the equivalence point pH = 7.00 for strong-strong titrations`
     },
     {
       id: 'at2-regions',
@@ -51,6 +67,8 @@ Consider titrating 50.0 mL of 0.100 M $HCl$ with 0.100 M $NaOH$:
 - All $H^+$ and $OH^-$ have reacted
 - Only $NaCl$ + $H_2O$ remain
 
+> 🔑 **Key Fact:** Strong acid + strong base → equivalence at pH 7.00 every time.
+
 
 ---
 
@@ -81,6 +99,8 @@ Consider titrating 50.0 mL of 0.100 M $HCl$ with 0.100 M $NaOH$:
 | 75.0 | $[OH^-] = 0.00250/0.125 = 0.0200$ | 12.30 |
 
 Notice: pH jumps from ~4 to ~10 in just 0.2 mL! That\'s the dramatic equivalence point region.
+
+> 💡 **Tip:** On the AP exam, look for the steepest part of the curve — that marks the equivalence point.
       `
     },
     {
@@ -159,6 +179,8 @@ Titrating 25.0 mL of 0.200 M $HCl$ with 0.200 M $NaOH$:
 ### Why pH 7 at Equivalence?
 
 The products are water and a salt of a strong acid/strong base (e.g., $NaCl$, $KNO_3$). These salts are **neutral** — their ions do not react with water (no hydrolysis).
+
+> ⚠️ **Common Mistake:** pH 7 at equivalence ONLY applies to strong acid + strong base. Weak acid or weak base titrations have equivalence pH ≠ 7.
 
 
 ---

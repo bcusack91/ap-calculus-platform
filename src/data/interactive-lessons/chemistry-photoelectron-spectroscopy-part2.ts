@@ -6,14 +6,27 @@ export const chemPhotoelectronSpectroscopyPart2Data = {
       type: 'text' as const,
       content: `# Reading PES Spectra
 
-Now that you understand how PES works, let's learn how to **read and interpret** the spectra it produces. A PES spectrum is a graph that displays all the information about the binding energies and number of electrons in an atom.
+**Part 2 of 7 — Interpreting PES Spectra**
 
-## 📌 Axes of a PES Spectrum
+---
 
-- **X-axis: Binding Energy** — Measured in megajoules per mole (MJ/mol) or electron volts (eV). The x-axis runs from **high binding energy on the left** to **low binding energy on the right**.
-- **Y-axis: Relative Number of Electrons** — The height of each peak indicates the **number of electrons** in that subshell.
+### Topics in This Part
 
-> ⚠️ **Important**: The x-axis is reversed compared to most graphs — high values are on the LEFT. This is a common source of confusion!`
+| Section |
+|---------|
+| 📌 Axes of a PES Spectrum |
+| Peak Position (Left-Right) |
+| Peak Height (Relative) |
+| Example: Lithium (Li, Z = 3) |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ps2-peaks',
@@ -37,6 +50,8 @@ Each **peak** in a PES spectrum corresponds to a **subshell** (1s, 2s, 2p, 3s, e
 - A peak that is **3 times taller** than another contains **3 times as many electrons**
 - For example, a 2p subshell (6 electrons) produces a peak 3 times taller than a 2s subshell (2 electrons)
 
+> 🔑 **Key Concept:** Peak **height** = relative number of electrons. Peak **position** (left/right) = binding energy. Don’t confuse the two!
+
 
 ---
 
@@ -50,7 +65,7 @@ A PES spectrum for lithium shows:
     {
       id: 'ps2-quiz1',
       type: 'multiple-choice' as const,
-      content: `### Check Your Understanding
+      content: `### ✏️ Check Your Understanding
 
 On a PES spectrum, the x-axis displays binding energy. How is it oriented?`,
       exercise: {
@@ -93,9 +108,9 @@ Its PES spectrum shows **three peaks**:
     {
       id: 'ps2-quiz2',
       type: 'multiple-choice' as const,
-      content: `### Practice: Reading Spectra
+      content: `### ✏️ Practice: Reading Spectra
 
-A PES spectrum shows three peaks with relative heights of 2, 2, and 6 (from left to right, i.e., from highest to lowest binding energy). How many total electrons does this atom have?`,
+> **Problem:** A PES spectrum shows three peaks with relative heights of 2, 2, and 6 (from left to right, i.e., from highest to lowest binding energy). How many total electrons does this atom have?`,
       exercise: {
         questions: [
           {
@@ -115,14 +130,14 @@ A PES spectrum shows three peaks with relative heights of 2, 2, and 6 (from left
     {
       id: 'ps2-input1',
       type: 'input-boxes' as const,
-      content: `### Spectrum Analysis
+      content: `### ✏️ Spectrum Analysis
 
-A PES spectrum for an unknown element shows four peaks with the following relative heights (listed from highest to lowest binding energy):
-
-Peak 1: height = 2
-Peak 2: height = 2
-Peak 3: height = 6
-Peak 4: height = 1`,
+> **Problem:** A PES spectrum for an unknown element shows four peaks with the following relative heights (listed from highest to lowest binding energy):
+>
+> Peak 1: height = 2
+> Peak 2: height = 2
+> Peak 3: height = 6
+> Peak 4: height = 1`,
       exercise: {
         inputs: [
           {
@@ -141,7 +156,7 @@ Peak 4: height = 1`,
     {
       id: 'ps2-dropdown1',
       type: 'dropdown-select' as const,
-      content: `### Interpreting Peak Heights
+      content: `### ✏️ Interpreting Peak Heights
 
 Consider a PES spectrum with peaks at relative heights of 2, 2, 6, 2, and 3 (from left to right).`,
       exercise: {
@@ -164,18 +179,36 @@ Consider a PES spectrum with peaks at relative heights of 2, 2, 6, 2, and 3 (fro
     {
       id: 'ps2-summary',
       type: 'text' as const,
-      content: `## 📋 Part 2 Summary
+      content: `## 📋 Part 2 Summary: Reading PES Spectra
 
-Key points for reading PES spectra:
+---
 
-1. **X-axis**: Binding energy — high on the left, low on the right
-2. **Y-axis**: Relative number of electrons — peak height tells you how many electrons are in each subshell
-3. **Each peak** = one subshell (1s, 2s, 2p, 3s, 3p, etc.)
-4. **Left-most peak** = highest binding energy = innermost electrons (1s)
-5. **Right-most peak** = lowest binding energy = outermost (valence) electrons
-6. **Total electrons** = sum of all peak heights = atomic number (for neutral atoms)
+### 🧪 Anatomy of a PES Spectrum
 
-In the next part, we will connect PES spectra directly to electron configurations.`
+| Axis / Feature | What It Shows | Key Detail |
+|----------------|---------------|------------|
+| X-axis | Binding energy (BE) | High on **left**, low on **right** |
+| Y-axis | Relative # of electrons | Peak height = electrons in that subshell |
+| Each peak | One subshell | 1s, 2s, 2p, 3s, 3p, etc. |
+| Left-most peak | Innermost electrons (1s) | Highest binding energy |
+| Right-most peak | Valence electrons | Lowest binding energy |
+
+> 💡 **Quick Check:** Sum all peak heights → must equal the atomic number for a neutral atom.
+
+---
+
+### ✅ Your Checklist Before Moving On
+
+- ☐ I know the x-axis runs from high BE (left) to low BE (right)
+- ☐ I can determine the number of electrons from peak heights
+- ☐ I can identify which peaks correspond to core vs. valence electrons
+- ☐ I can verify total electrons = atomic number
+
+---
+
+### 🔮 What's Next
+
+In **Part 3**, we will connect PES spectra directly to **electron configurations** — turning peaks into subshell notation.`
     }
   ]
 }

@@ -4,13 +4,30 @@ export const chemEquilibriumConstantsPart2Data = {
     {
       id: 'ece2-intro',
       type: 'text' as const,
-      content: `
-# ✍️ Writing Equilibrium Expressions
+      content: `# ✍️ Writing Equilibrium Expressions
 
 **Part 2 of 7 — Writing $K$ Expressions**
 
-Now that we understand what $K$ represents, let's master the rules for writing equilibrium constant expressions from balanced equations.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ✍️ Rules for Writing $K_c$ Expressions |
+| What Goes In and What Stays Out |
+| Example 1 |
+| Example 2 |
+| 📌 Homogeneous vs. Heterogeneous Equilibria |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ece2-rules',
@@ -133,9 +150,7 @@ The solid carbon is omitted.
 
 ---
 
-### AP Tip 💡
-
-> The AP exam loves to test whether you know to **exclude** pure solids and liquids. If you see $(s)$ or $(l)$, leave it out of $K$.
+> 💡 **AP Tip:** The AP exam loves to test whether you know to **exclude** pure solids and liquids. If you see $(s)$ or $(l)$, leave it out of $K$.
       `
     },
     {

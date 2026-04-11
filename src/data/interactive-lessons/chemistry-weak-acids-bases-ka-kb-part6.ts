@@ -4,13 +4,24 @@ export const chemWeakAcidsBasesKaKbPart6Data = {
     {
       id: 'wk6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Problem-Solving Workshop
+      content: `# 🛠️ Problem-Solving Workshop
 
 **Part 6 of 7 — Weak Acids, Bases, and $K_a$/$K_b$**
 
-This workshop brings together ICE tables, $K_a$/$K_b$ relationships, percent ionization, and polyprotic acid concepts in multi-step AP-style problems.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'wk6-problem1',
@@ -18,8 +29,9 @@ This workshop brings together ICE tables, $K_a$/$K_b$ relationships, percent ion
       content: `
 ## 🧪 Problem 1: Complete Weak Acid Analysis
 
-A 0.20 M solution of benzoic acid ($C_6H_5COOH$, $K_a = 6.3 \\times 10^{-5}$) is prepared.
+> **Problem:** A 0.20 M solution of benzoic acid ($C_6H_5COOH$, $K_a = 6.3 \\times 10^{-5}$) is prepared. Find pH, percent ionization, and $K_b$ of the conjugate base.
 
+> **Solution:**
 
 ---
 
@@ -48,12 +60,14 @@ $pH = -\\log(3.55 \\times 10^{-3}) = 2.45$
 
 $\\% = (3.55 \\times 10^{-3}/0.20) \\times 100 = 1.8\\%$ ✓ (under 5%)
 
+> ⚠️ **Warning:** Always verify the 5% check! If percent ionization exceeds 5%, redo with the quadratic formula.
+
 
 ---
 
 ### Step 5: $K_b$ of conjugate base
 
-$K_b(C_6H_5COO^-) = K_w/K_a = 1.0 \\times 10^{-14}/(6.3 \\times 10^{-5}) = 1.6 \\times 10^{-10}$
+$$\\boxed{K_b(C_6H_5COO^-) = \\frac{K_w}{K_a} = \\frac{1.0 \\times 10^{-14}}{6.3 \\times 10^{-5}} = 1.6 \\times 10^{-10}}$$
       `
     },
     {
@@ -85,8 +99,9 @@ Perform the same analysis for 0.15 M $HNO_2$ ($K_a = 4.5 \\times 10^{-4}$):
       content: `
 ## 🧪 Problem 2: Salt Solution pH
 
-What is the pH of 0.30 M sodium fluoride ($NaF$)?
+> **Problem:** What is the pH of 0.30 M sodium fluoride ($NaF$)?
 
+> **Solution:**
 
 ---
 

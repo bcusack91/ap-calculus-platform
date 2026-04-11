@@ -5,13 +5,26 @@ export const chemTypesIntermolecularForcesPart4Data = {
       id: 'if-id-intro',
       type: 'text',
       title: 'Ion-Dipole Forces',
-      content: `Ion-dipole forces occur between an **ion** (a charged particle) and a **polar molecule** (a dipole).\n\nThese forces are extremely important in chemistry because they explain how **ionic compounds dissolve** in polar solvents like water.\n\n**How they work:**\n- A **cation** (positive ion) attracts the $\\delta^-$ end of a polar molecule\n- An **anion** (negative ion) attracts the $\\delta^+$ end of a polar molecule\n\nIon-dipole forces are generally the **strongest** type of intermolecular force (stronger than hydrogen bonding, dipole-dipole, and LDF) because ions carry full charges rather than partial charges.\n\n$$\\text{Strength: Ion-Dipole} > \\text{H-bonding} > \\text{Dipole-Dipole} > \\text{LDF}$$\n\n(This ranking is for forces between molecules of similar size)`
+      content: `Ion-dipole forces occur between an **ion** (a charged particle) and a **polar molecule** (a dipole).\n\nThese forces are extremely important in chemistry because they explain how **ionic compounds dissolve** in polar solvents like water.\n\n**How they work:**\n- A **cation** (positive ion) attracts the $\\delta^-$ end of a polar molecule\n- An **anion** (negative ion) attracts the $\\delta^+$ end of a polar molecule\n\nIon-dipole forces are generally the **strongest** type of intermolecular force (stronger than hydrogen bonding, dipole-dipole, and LDF) because ions carry full charges rather than partial charges.\n\n$$\\boxed{\\text{Strength: Ion-Dipole} > \\text{H-bonding} > \\text{Dipole-Dipole} > \\text{LDF}}$$\n\n(This ranking is for forces between molecules of similar size)\n\n> 🔑 **Key Concept:** Ion-dipole forces are the strongest IMF because ions carry **full** charges, not partial charges like dipoles.
+
+**Part 4 of 7 — Ion-Dipole Interactions**
+
+---
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'if-id-dissolving',
       type: 'text',
       title: 'Ion-Dipole Forces in Dissolving',
-      content: `When NaCl dissolves in water, here\'s what happens at the molecular level:\n\n**Step 1:** Water molecules orient around the ions on the crystal surface.\n- The $\\delta^-$ oxygen end of water points toward $\\text{Na}^+$ cations\n- The $\\delta^+$ hydrogen end of water points toward $\\text{Cl}^-$ anions\n\n**Step 2:** Ion-dipole attractions between water and the ions on the surface become strong enough to overcome the ionic bonds holding the crystal together.\n\n**Step 3:** Individual ions are pulled away from the crystal and become **hydrated** (surrounded by a shell of water molecules). This shell is called a **hydration shell** or **solvation shell**.\n\n$$\\text{NaCl}(s) \\xrightarrow{\\text{H}_2\\text{O}} \\text{Na}^+(aq) + \\text{Cl}^-(aq)$$\n\nThe (aq) symbol means the ion is surrounded by water molecules — held by ion-dipole forces.`
+      content: `When NaCl dissolves in water, here\'s what happens at the molecular level:\n\n**Step 1:** Water molecules orient around the ions on the crystal surface.\n- The $\\delta^-$ oxygen end of water points toward $\\text{Na}^+$ cations\n- The $\\delta^+$ hydrogen end of water points toward $\\text{Cl}^-$ anions\n\n**Step 2:** Ion-dipole attractions between water and the ions on the surface become strong enough to overcome the ionic bonds holding the crystal together.\n\n**Step 3:** Individual ions are pulled away from the crystal and become **hydrated** (surrounded by a shell of water molecules). This shell is called a **hydration shell** or **solvation shell**.\n\n$$\\boxed{\\text{NaCl}(s) \\xrightarrow{\\text{H}_2\\text{O}} \\text{Na}^+(aq) + \\text{Cl}^-(aq)}$$\n\nThe (aq) symbol means the ion is surrounded by water molecules — held by ion-dipole forces.`
     },
     {
       id: 'if-id-dissolving-q',
@@ -73,7 +86,7 @@ export const chemTypesIntermolecularForcesPart4Data = {
       id: 'if-id-strength-factors',
       type: 'text',
       title: 'Factors Affecting Ion-Dipole Strength',
-      content: `The strength of ion-dipole forces depends on two main factors:\n\n**1. Charge of the ion**\nHigher charge $\\rightarrow$ stronger ion-dipole force\n- $\\text{Mg}^{2+}$ creates stronger ion-dipole forces than $\\text{Na}^+$\n- $\\text{Al}^{3+}$ creates even stronger ion-dipole forces\n\n**2. Size of the ion**\nSmaller ion $\\rightarrow$ higher charge density $\\rightarrow$ stronger ion-dipole force\n- $\\text{Li}^+$ (small) creates stronger ion-dipole forces than $\\text{K}^+$ (larger)\n- Both have +1 charge, but Li⁺ concentrates that charge in a smaller volume\n\n**Charge density** = charge / volume\n\nThe combination of high charge and small size gives the highest charge density and the strongest ion-dipole interactions.\n\nThis is why salts of small, highly charged ions (like $\\text{MgCl}_2$) tend to have very exothermic heats of hydration.`
+      content: `The strength of ion-dipole forces depends on two main factors:\n\n**1. Charge of the ion**\nHigher charge $\\rightarrow$ stronger ion-dipole force\n- $\\text{Mg}^{2+}$ creates stronger ion-dipole forces than $\\text{Na}^+$\n- $\\text{Al}^{3+}$ creates even stronger ion-dipole forces\n\n**2. Size of the ion**\nSmaller ion $\\rightarrow$ higher charge density $\\rightarrow$ stronger ion-dipole force\n- $\\text{Li}^+$ (small) creates stronger ion-dipole forces than $\\text{K}^+$ (larger)\n- Both have +1 charge, but Li⁺ concentrates that charge in a smaller volume\n\n**Charge density** = charge / volume\n\nThe combination of high charge and small size gives the highest charge density and the strongest ion-dipole interactions.\n\nThis is why salts of small, highly charged ions (like $\\text{MgCl}_2$) tend to have very exothermic heats of hydration.\n\n> 💡 **Tip:** Remember — higher charge AND smaller size = higher charge density = stronger ion-dipole forces.`
     },
     {
       id: 'if-id-strength-q',
@@ -111,7 +124,7 @@ export const chemTypesIntermolecularForcesPart4Data = {
       id: 'if-id-like-dissolves-like',
       type: 'text',
       title: '"Like Dissolves Like"',
-      content: `Ion-dipole forces help explain the famous rule **"like dissolves like"**:\n\n- **Ionic and polar solutes** dissolve well in **polar solvents** (like water)\n  - Ion-dipole forces stabilize the dissolved ions\n  - Example: NaCl dissolves in water\n\n- **Nonpolar solutes** dissolve well in **nonpolar solvents**\n  - LDF between solute and solvent replace similar LDF in pure substances\n  - Example: Oil (nonpolar) dissolves in hexane (nonpolar)\n\n- **Ionic/polar solutes** do NOT dissolve well in **nonpolar solvents**\n  - Nonpolar solvents cannot form ion-dipole forces\n  - The ionic bonds in the crystal are too strong to break without ion-dipole stabilization\n  - Example: NaCl does NOT dissolve in hexane\n\nThis principle is central to understanding solubility in AP Chemistry.`
+      content: `Ion-dipole forces help explain the famous rule **"like dissolves like"**:\n\n- **Ionic and polar solutes** dissolve well in **polar solvents** (like water)\n  - Ion-dipole forces stabilize the dissolved ions\n  - Example: NaCl dissolves in water\n\n- **Nonpolar solutes** dissolve well in **nonpolar solvents**\n  - LDF between solute and solvent replace similar LDF in pure substances\n  - Example: Oil (nonpolar) dissolves in hexane (nonpolar)\n\n- **Ionic/polar solutes** do NOT dissolve well in **nonpolar solvents**\n  - Nonpolar solvents cannot form ion-dipole forces\n  - The ionic bonds in the crystal are too strong to break without ion-dipole stabilization\n  - Example: NaCl does NOT dissolve in hexane\n\nThis principle is central to understanding solubility in AP Chemistry.\n\n> 🔑 **Key Concept:** "Like dissolves like" — ionic/polar solutes dissolve in polar solvents (via ion-dipole forces), nonpolar solutes dissolve in nonpolar solvents (via LDF).`
     },
     {
       id: 'if-id-input-summary',

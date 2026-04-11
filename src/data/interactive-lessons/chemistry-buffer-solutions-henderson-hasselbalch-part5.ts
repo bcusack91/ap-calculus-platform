@@ -4,13 +4,28 @@ export const chemBufferSolutionsHendersonHasselbalchPart5Data = {
     {
       id: 'bf5-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Preparing Buffers
+      content: `# 🧪 Preparing Buffers
 
 **Part 5 of 7 — Choosing the Right Acid and Designing a Buffer**
 
-In the lab, you need to prepare buffers at specific pH values with specific capacities. This requires choosing the right weak acid and calculating the correct amounts of acid and conjugate base.
-      `
+---
+
+### Buffer Preparation Strategy
+
+| Step | Question | How to Answer |
+|------|----------|---------------|
+| 1 | What weak acid? | Choose one with p$K_a$ ≈ target pH |
+| 2 | What ratio? | $[A^-]/[HA] = 10^{(pH - pK_a)}$ |
+| 3 | How much of each? | Use desired total molarity and ratio |
+
+> 🔑 **Why this matters:** Lab-based AP questions ask you to design a buffer at a specific pH — you need to know how to choose the acid and calculate amounts.
+
+---
+
+### What You'll Master in Part 5
+- Selecting a weak acid with p$K_a$ close to the target pH
+- Calculating the required conjugate base-to-acid ratio
+- Understanding alternative preparation methods (partial neutralization)`
     },
     {
       id: 'bf5-choosing-acid',
@@ -19,6 +34,8 @@ In the lab, you need to prepare buffers at specific pH values with specific capa
 ## 🧪 Step 1: Choose the Right Weak Acid
 
 **Rule:** Choose a weak acid whose $pK_a$ is as close as possible to the desired pH.
+
+> 🔑 **AP Strategy:** Always pick the acid with $pK_a$ nearest your target pH. This gives the ratio closest to 1:1 and the strongest buffer.
 
 
 ---
@@ -56,14 +73,16 @@ $$pH = pK_a + \\log\\frac{[A^-]}{[HA]}$$
 
 $$\\log\\frac{[A^-]}{[HA]} = pH - pK_a$$
 
-$$\\frac{[A^-]}{[HA]} = 10^{(pH - pK_a)}$$
+$$\\boxed{\\frac{[A^-]}{[HA]} = 10^{(pH - pK_a)}}$$
 
 
 ---
 
 ### Worked Example
 
-Prepare 1.0 L of a pH 5.00 buffer using acetic acid ($pK_a = 4.74$) with a total buffer concentration of 0.20 M.
+> **Problem:** Prepare 1.0 L of a pH 5.00 buffer using acetic acid ($pK_a = 4.74$) with a total buffer concentration of 0.20 M.
+
+**Solution:**
 
 **Step 1:** Find the ratio
 
@@ -154,6 +173,8 @@ $$NH_3 + H^+ \\rightarrow NH_4^+$$
 - $NH_3$ remaining: 0.10 mol
 - $NH_4^+$ formed: 0.10 mol
 - Buffer at $pH = pK_a(NH_4^+) = 9.25$
+
+> 💡 **Tip:** Partial neutralization is how buffers are often made in lab. You don’t need to buy both the acid and its salt—just start with excess weak acid (or base) and neutralize part of it.
       `
     },
     {

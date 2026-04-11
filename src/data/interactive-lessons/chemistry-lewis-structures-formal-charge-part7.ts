@@ -4,14 +4,31 @@ export const chemLewisStructuresFormalChargePart7Data = {
     {
       id: 'ls-7-1',
       type: 'text',
-      title: 'Synthesis: Putting It All Together',
-      content: `Drawing Lewis structures on the AP exam requires combining **all** the skills from this unit. Here\'s your complete checklist:\n\n**Step 1:** Count total valence electrons (adjust for charges)\n**Step 2:** Identify the central atom (least electronegative, not H or F)\n**Step 3:** Draw single bonds to all terminal atoms\n**Step 4:** Distribute remaining electrons as lone pairs (outer atoms first)\n**Step 5:** Check octets — form multiple bonds if needed\n**Step 6:** Calculate formal charges and choose the best structure\n**Step 7:** Check for resonance — draw all equivalent structures\n**Step 8:** Consider exceptions (incomplete octets, expanded octets, radicals)\n\n**AP Exam Tips:**\n- Always show lone pairs on your drawings\n- Put brackets and the charge around ions: [structure]²⁻\n- When asked to "justify" your structure, discuss formal charges\n- Know that bond order from resonance affects bond length and strength`
+      title: '🎯 Synthesis: Putting It All Together',
+      content: `Drawing Lewis structures on the AP exam requires combining **all** the skills from this unit. Here\'s your complete checklist:\n\n**Step 1:** Count total valence electrons (adjust for charges)\n**Step 2:** Identify the central atom (least electronegative, not H or F)\n**Step 3:** Draw single bonds to all terminal atoms\n**Step 4:** Distribute remaining electrons as lone pairs (outer atoms first)\n**Step 5:** Check octets — form multiple bonds if needed\n**Step 6:** Calculate formal charges and choose the best structure\n**Step 7:** Check for resonance — draw all equivalent structures\n**Step 8:** Consider exceptions (incomplete octets, expanded octets, radicals)\n\n**AP Exam Tips:**\n- Always show lone pairs on your drawings\n- Put brackets and the charge around ions: [structure]²⁻\n- When asked to "justify" your structure, discuss formal charges\n- Know that bond order from resonance affects bond length and strength
+
+**Part 7 of 7 — Synthesis & AP Review**
+
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'ls-7-2',
       type: 'text',
-      title: 'Complex Example: SOCl₂ (Thionyl Chloride)',
-      content: `Let\'s work through a complex molecule: SOCl₂ (S is central).\n\n**Step 1:** Total valence electrons\n- S: 6, O: 6, Cl: 7 × 2 = 14\n- Total = 6 + 6 + 14 = 26 e⁻\n\n**Step 2:** Sulfur is the central atom\n\n**Step 3:** Draw single bonds: S—O, S—Cl, S—Cl (uses 6 e⁻)\n- Remaining: 26 − 6 = 20 e⁻\n\n**Step 4:** Fill octets on outer atoms:\n- O gets 3 lone pairs (6 e⁻), each Cl gets 3 lone pairs (6 e⁻ each)\n- Total distributed: 6 + 6 + 6 = 18 e⁻\n- Remaining: 20 − 18 = 2 e⁻ → 1 lone pair on S\n\n**Step 5:** Check S: 3 bonds (6 e⁻) + 1 lone pair (2 e⁻) = 8 ✓\n\n**Step 6:** Formal charges:\n- S: 6 − 2 − 6/2 = +1\n- O: 6 − 6 − 2/2 = −1\n- Each Cl: 7 − 6 − 2/2 = 0\n\nAlternative structure with S=O double bond:\n- S: 6 − 2 − 8/2 = 0, O: 6 − 4 − 4/2 = 0\n- **All formal charges zero — this is preferred!**\n- S can have expanded octet (Period 3), so 10 e⁻ around S is allowed.`
+      title: '✏️ Complex Example: SOCl₂ (Thionyl Chloride)',
+      content: `> **Problem:** Draw the best Lewis structure for SOCl₂ (S is central).\n\n**Solution:**\n\nLet\'s work through a complex molecule: SOCl₂ (S is central).\n\n**Step 1:** Total valence electrons\n- S: 6, O: 6, Cl: 7 × 2 = 14\n- Total = 6 + 6 + 14 = 26 e⁻\n\n**Step 2:** Sulfur is the central atom\n\n**Step 3:** Draw single bonds: S—O, S—Cl, S—Cl (uses 6 e⁻)\n- Remaining: 26 − 6 = 20 e⁻\n\n**Step 4:** Fill octets on outer atoms:\n- O gets 3 lone pairs (6 e⁻), each Cl gets 3 lone pairs (6 e⁻ each)\n- Total distributed: 6 + 6 + 6 = 18 e⁻\n- Remaining: 20 − 18 = 2 e⁻ → 1 lone pair on S\n\n**Step 5:** Check S: 3 bonds (6 e⁻) + 1 lone pair (2 e⁻) = 8 ✓\n\n**Step 6:** Formal charges:\n- S: 6 − 2 − 6/2 = +1\n- O: 6 − 6 − 2/2 = −1\n- Each Cl: 7 − 6 − 2/2 = 0\n\nAlternative structure with S=O double bond:\n- S: 6 − 2 − 8/2 = 0, O: 6 − 4 − 4/2 = 0\n- **All formal charges zero — this is preferred!**\n- S can have expanded octet (Period 3), so 10 e⁻ around S is allowed.`
     },
     {
       id: 'ls-7-3',
@@ -42,22 +59,22 @@ export const chemLewisStructuresFormalChargePart7Data = {
       exercise: {
         inputs: [
           {
-            label: 'Total valence electrons in POCl₃',
+            label: '**1.** Total valence electrons in POCl₃',
             correctAnswer: '32',
             explanation: 'P has 5, O has 6, and each Cl has 7. Total = 5 + 6 + 3(7) = 5 + 6 + 21 = 32.'
           },
           {
-            label: 'Electrons used in 4 single bonds (P—O and 3 P—Cl)',
+            label: '**2.** Electrons used in 4 single bonds (P—O and 3 P—Cl)',
             correctAnswer: '8',
             explanation: '4 bonds × 2 e⁻ = 8 electrons used in bonding.'
           },
           {
-            label: 'In the structure with all single bonds, what is the formal charge on P? (P has 5 valence e⁻, 0 lone pairs, 4 bonds)',
+            label: '**3.** In the structure with all single bonds, what is the formal charge on P? (P has 5 valence e⁻, 0 lone pairs, 4 bonds)',
             correctAnswer: '+1',
             explanation: 'FC = 5 − 0 − 8/2 = 5 − 0 − 4 = +1.'
           },
           {
-            label: 'In the preferred structure with a P=O double bond, what is the formal charge on P? (P: 5 valence e⁻, 0 lone pairs, 5 bonds)',
+            label: '**4.** In the preferred structure with a P=O double bond, what is the formal charge on P? (P: 5 valence e⁻, 0 lone pairs, 5 bonds)',
             correctAnswer: '0',
             explanation: 'FC = 5 − 0 − 10/2 = 5 − 0 − 5 = 0. With the double bond to O, all formal charges become 0. P can have an expanded octet since it is in Period 3.'
           }
@@ -67,7 +84,7 @@ export const chemLewisStructuresFormalChargePart7Data = {
     {
       id: 'ls-7-5',
       type: 'text',
-      title: 'AP Exam: Choosing the Best Structure',
+      title: '🎓 AP Exam: Choosing the Best Structure',
       content: `On the AP exam, you may be given multiple Lewis structures and asked which is "best" or "most reasonable." Here\'s a decision framework:\n\n**Priority order for evaluating structures:**\n\n1. **All atoms have octets** (or appropriate exceptions)\n2. **Formal charges are minimized** (as close to 0 as possible)\n3. **Negative FC on more electronegative atoms**\n4. **No adjacent atoms with same-sign formal charges**\n\n**Common AP question types:**\n- "Draw the Lewis structure for X" — use the full algorithm\n- "Which structure is most stable?" — compare formal charges\n- "How many resonance structures?" — count equivalent placements\n- "Predict bond order" — total bonds ÷ number of positions\n- "Why is this bond length between single and double?" — resonance\n- "Explain why BF₃ acts as a Lewis acid" — incomplete octet`
     },
     {

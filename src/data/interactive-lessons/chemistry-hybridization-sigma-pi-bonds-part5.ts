@@ -9,7 +9,26 @@ export const chemHybridizationSigmaPiBondsPart5Data = {
 
 **Part 5 of 7 — Double Bonds, Triple Bonds, and Orbital Pictures**
 
-Now let\'s bring together hybridization and sigma/pi bond counting to analyze molecules with multiple bonds in detail. We\'ll examine how the orbital picture explains the geometry and bond composition of key molecules.`
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| Orbital Picture of Ethene (C₂H₄) |
+| Why Ethene Is Planar |
+| Orbital Picture of Acetylene (C₂H₂) |
+| Orbital Picture of HCN |
+| Key Observations |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'hy-5-2',
@@ -37,7 +56,7 @@ Every double bond consists of exactly **one sigma bond** and **one pi bond**.
 
 ### Why Ethene Is Planar
 
-The pi bond requires the unhybridized p orbitals to be parallel (side-by-side). This forces all 6 atoms into the same plane. Rotation around the C=C bond would break the pi bond — this is why double bonds are **rigid**.`
+> 🔑 **Key Concept:** The pi bond requires the unhybridized p orbitals to be parallel (side-by-side). This forces all 6 atoms into the same plane. Rotation around the C=C bond would break the pi bond — this is why double bonds are **rigid**.`
     },
     {
       id: 'hy-5-3',
@@ -127,6 +146,8 @@ Adding pi bonds to a sigma bond makes the overall bond **stronger** and **shorte
 | C≡C triple | 3 | C₂H₂ | ~839 | 120 |
 
 ### Key Observations
+
+> 🔑 **Key Concept:** Higher bond order → shorter and stronger bonds, but each additional pi bond contributes less than the sigma bond.
 
 1. A double bond is **not** twice as strong as a single bond
    - C=C (614) < 2 × C–C (696)

@@ -4,13 +4,29 @@ export const chemGalvanicCellsPotentialsPart3Data = {
     {
       id: 'gc3-intro',
       type: 'text' as const,
-      content: `
-# ⚡ Standard Reduction Potentials
+      content: `# ⚡ Standard Reduction Potentials
 
 **Part 3 of 7 — E° and Calculating Cell Voltage**
 
-Every half-reaction has a **standard reduction potential** ($E°$) that measures its tendency to gain electrons. By comparing two half-reactions, we can calculate the voltage (EMF) of a galvanic cell.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚡ Standard Reduction Potential Table |
+| 🔢 Calculating Standard Cell Potential |
+| ⚠️ Important Rules |
+| 🧪 Worked Example: Zn-Cu Cell |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gc3-table',
@@ -36,11 +52,11 @@ All half-reactions are written as **reductions** (gaining electrons):
 
 ---
 
-### Reading the Table
-
-- **More positive** $E°$: stronger tendency to be reduced (stronger oxidizing agent)
-- **More negative** $E°$: stronger tendency to be oxidized (stronger reducing agent)
-- The **Standard Hydrogen Electrode (SHE)** is the reference: $E° = 0.00$ V
+> 🔑 **Key Concept — Reading the Table:**
+>
+> - **More positive** $E°$: stronger tendency to be reduced (stronger oxidizing agent)
+> - **More negative** $E°$: stronger tendency to be oxidized (stronger reducing agent)
+> - The **Standard Hydrogen Electrode (SHE)** is the reference: $E° = 0.00$ V
       `
     },
     {
@@ -49,9 +65,9 @@ All half-reactions are written as **reductions** (gaining electrons):
       content: `
 ## 🔢 Calculating Standard Cell Potential
 
-> **The Master Equation:**
+> 🔑 **The Master Equation:**
 >
-> $$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}}$$
+> $$\\boxed{E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}}}$$
 
 ---
 
@@ -64,16 +80,20 @@ All half-reactions are written as **reductions** (gaining electrons):
 | 3 | The species with the **lower** (more negative) $E°$ is oxidized (**anode**) |
 | 4 | A spontaneous galvanic cell always has $E^\\circ_{\\text{cell}} > 0$ |
 
+> ⚠️ **Warning:** Never multiply $E°$ values by stoichiometric coefficients. $E°$ is an **intensive property** — it does not change when you scale the equation.
+
 ---
 
 ### 🧪 Worked Example: Zn-Cu Cell
 
-> **Given half-reactions:**
+> **Problem:** Calculate $E^\\circ_{\\text{cell}}$ for a Zn-Cu galvanic cell.
 >
 > - Cathode: $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$ &nbsp;&nbsp; ($E° = +0.34$ V)
 > - Anode: $\\text{Zn}^{2+} + 2e^- \\rightarrow \\text{Zn}$ &nbsp;&nbsp; ($E° = -0.76$ V)
 
-$$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}} = (+0.34) - (-0.76) = +1.10 \\text{ V}$$
+> **Solution:**
+
+$$\\boxed{E^\\circ_{\\text{cell}} = (+0.34) - (-0.76) = +1.10 \\text{ V}}$$
 
 > ✅ The positive $E^\\circ_{\\text{cell}}$ confirms the reaction is **spontaneous**.
       `

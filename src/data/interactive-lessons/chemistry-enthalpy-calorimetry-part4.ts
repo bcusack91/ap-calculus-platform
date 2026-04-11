@@ -4,13 +4,30 @@ export const chemEnthalpyCalorimetryPart4Data = {
     {
       id: 'eh4-intro',
       type: 'text' as const,
-      content: `
-# 💣 Bomb Calorimetry
+      content: `# 💣 Bomb Calorimetry
 
 **Part 4 of 7 — Constant-Volume Calorimetry**
 
-While coffee-cup calorimeters work at constant pressure, some reactions — especially combustion — release enormous amounts of gas and energy. For these, we use a **bomb calorimeter**, which operates at constant volume. This distinction has important thermodynamic consequences.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🏗️ Bomb Calorimeter Structure |
+| Key Feature: Constant Volume |
+| Relationship Between $\\Delta H$ and $\\Delta E$ |
+| 📌 Heat Capacity of the Calorimeter |
+| Important Distinction |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'eh4-bomb-structure',
@@ -38,6 +55,8 @@ The bomb is **sealed and rigid** — the volume cannot change. This means:
 - At constant volume: $q_v = \\Delta E$ (internal energy change)
 - This is different from coffee-cup calorimetry where $q_p = \\Delta H$
 
+> 🔑 **Key Distinction:** Coffee-cup = constant pressure → measures $\\Delta H$. Bomb = constant volume → measures $\\Delta E$.
+
 
 ---
 
@@ -49,7 +68,7 @@ For reactions involving only solids and liquids, $\\Delta H \\approx \\Delta E$.
 
 For reactions involving gases:
 
-$$\\Delta H = \\Delta E + \\Delta n_{\\text{gas}} RT$$
+$$\\boxed{\\Delta H = \\Delta E + \\Delta n_{\\text{gas}} RT}$$
 
 where $\\Delta n_{\\text{gas}}$ = moles of gaseous products − moles of gaseous reactants.
       `
@@ -62,7 +81,7 @@ where $\\Delta n_{\\text{gas}}$ = moles of gaseous products − moles of gaseous
 
 For a bomb calorimeter, we use the **heat capacity of the entire calorimeter** ($C_{\\text{cal}}$):
 
-$$q_{\\text{cal}} = C_{\\text{cal}} \\Delta T$$
+$$\\boxed{q_{\\text{cal}} = C_{\\text{cal}} \\Delta T}$$
 
 | Symbol | Meaning | Units |
 |--------|---------|-------|
@@ -96,27 +115,33 @@ The negative sign reflects that heat released by the reaction is absorbed by the
       id: 'eh4-example',
       type: 'text' as const,
       content: `
-## 🧪 Worked Example
+## 🧪 Worked Example — Bomb Calorimetry
 
-**Problem:** A 1.50 g sample of benzoic acid ($\\text{C}_7\\text{H}_6\\text{O}_2$, molar mass = 122.12 g/mol) is burned in a bomb calorimeter with $C_{\\text{cal}} = 10.34$ kJ/°C. The temperature rises from 22.45°C to 25.71°C. Calculate the molar heat of combustion.
+> **Problem:** A 1.50 g sample of benzoic acid ($\\text{C}_7\\text{H}_6\\text{O}_2$, molar mass = 122.12 g/mol) is burned in a bomb calorimeter with $C_{\\text{cal}} = 10.34$ kJ/°C. The temperature rises from 22.45°C to 25.71°C. Calculate the molar heat of combustion.
 
-**Step 1: Calculate $\\Delta T$**
-$$\\Delta T = 25.71 - 22.45 = 3.26°\\text{C}$$
+### Given
 
-**Step 2: Calculate $q_{\\text{cal}}$**
-$$q_{\\text{cal}} = C_{\\text{cal}} \\Delta T = (10.34)(3.26) = 33.71 \\text{ kJ}$$
+| Quantity | Value |
+|----------|-------|
+| Mass of sample | 1.50 g |
+| Molar mass ($\\text{C}_7\\text{H}_6\\text{O}_2$) | 122.12 g/mol |
+| $C_{\\text{cal}}$ | 10.34 kJ/°C |
+| $T_i$ | 22.45°C |
+| $T_f$ | 25.71°C |
 
-**Step 3: Find $q_{\\text{rxn}}$**
-$$q_{\\text{rxn}} = -q_{\\text{cal}} = -33.71 \\text{ kJ}$$
+---
 
-**Step 4: Calculate moles of benzoic acid**
+### Step-by-Step Solution
 
-$$n = 1.50 \\; \\cancel{\\text{g C}_7\\text{H}_6\\text{O}_2} \\times \\frac{1 \\text{ mol C}_7\\text{H}_6\\text{O}_2}{122.12 \\; \\cancel{\\text{g C}_7\\text{H}_6\\text{O}_2}} = 0.01228 \\text{ mol C}_7\\text{H}_6\\text{O}_2$$
+| Step | Action | Calculation | Result |
+|------|--------|-------------|--------|
+| 1 | Temperature change | $25.71 - 22.45$ | $\\Delta T = 3.26°\\text{C}$ |
+| 2 | Heat absorbed by calorimeter | $(10.34)(3.26)$ | $q_{\\text{cal}} = 33.71 \\text{ kJ}$ |
+| 3 | Heat of reaction | $-q_{\\text{cal}}$ | $q_{\\text{rxn}} = -33.71 \\text{ kJ}$ |
+| 4 | Moles of benzoic acid | $1.50 / 122.12$ | $0.01228 \\text{ mol}$ |
+| 5 | Molar heat of combustion | $-33.71 / 0.01228$ | $\\Delta E = -2745 \\text{ kJ/mol}$ |
 
-**Step 5: Calculate molar heat of combustion**
-$$\\Delta E = \\frac{-33.71}{0.01228} = -2745 \\text{ kJ/mol}$$
-
-Note: This gives $\\Delta E$ (internal energy), not $\\Delta H$, because the bomb calorimeter operates at constant volume. For this reaction, $\\Delta H \\approx \\Delta E$ because $\\Delta n_{\\text{gas}}$ is small.
+> ⚠️ **Note:** This gives $\\Delta E$ (internal energy), not $\\Delta H$, because the bomb calorimeter operates at constant volume. For this reaction, $\\Delta H \\approx \\Delta E$ because $\\Delta n_{\\text{gas}}$ is small.
       `
     },
     {

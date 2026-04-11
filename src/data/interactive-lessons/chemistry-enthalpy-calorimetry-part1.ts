@@ -4,13 +4,30 @@ export const chemEnthalpyCalorimetryPart1Data = {
     {
       id: 'eh1-intro',
       type: 'text' as const,
-      content: `
-# 🔥 Energy, Systems, and Surroundings
+      content: `# 🔥 Energy, Systems, and Surroundings
 
 **Part 1 of 7 — Foundations of Thermochemistry**
 
-Every chemical reaction involves energy changes. Thermochemistry is the branch of chemistry that studies the heat absorbed or released during chemical reactions and physical changes. Before we can calculate enthalpy, we need to understand the language of energy flow.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 System and Surroundings |
+| Energy Transfer |
+| Sign Conventions |
+| 📌 Endothermic vs. Exothermic Processes |
+| Exothermic ($q < 0$) |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'eh1-system-surroundings',
@@ -117,7 +134,7 @@ Energy diagrams visually show the energy change during a reaction.
 
 ### Key Relationship
 
-$$\\Delta H_{\\text{forward}} = -\\Delta H_{\\text{reverse}}$$
+$$\\boxed{\\Delta H_{\\text{forward}} = -\\Delta H_{\\text{reverse}}}$$
 
 If a reaction is exothermic in the forward direction, it is endothermic in reverse, and vice versa.
       `

@@ -4,19 +4,32 @@ export const chemGibbsFreeEnergyPart6Data = {
     {
       id: 'gf6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Problem-Solving Workshop — Gibbs Free Energy
+      content: `# 🛠️ Problem-Solving Workshop — Gibbs Free Energy
 
 **Part 6 of 7 — Practice and Integration**
 
-This workshop brings together all the Gibbs free energy tools: calculating ΔG from ΔH and ΔS, using formation values, the four sign cases, ΔG°-K relationships, and non-standard conditions.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'gf6-strategy-review',
       type: 'text' as const,
       content: `
 ## 🛠️ Problem-Solving Flowchart
+
+> 💡 **Tip:** On the AP exam, identify what you're **given** first, then choose the correct equation.
 
 ### What Are You Given? → What Method to Use?
 
@@ -31,6 +44,8 @@ This workshop brings together all the Gibbs free energy tools: calculating ΔG f
 ---
 
 ### Common Unit Traps
+
+> ⚠️ **Warning:** Unit mismatches are the #1 source of errors in Gibbs free energy calculations!
 
 | Quantity | Common Units | Watch Out |
 |----------|-------------|-----------|

@@ -9,22 +9,26 @@ export const chemVseprMolecularGeometryPart3Data = {
 
 **Part 3 of 7 — 5 and 6 Electron Domains**
 
-Elements in **Period 3 and beyond** can accommodate more than 8 electrons in their valence shell because they have access to empty **d orbitals**. This allows steric numbers of 5 and 6.
+---
 
-### Which Elements Can Expand?
+### Topics in This Part
 
-- Must be in **Period 3 or higher** (have d orbitals available)
-- Common elements: P, S, Cl, Br, I, Xe, Se
-- Elements in Period 2 (C, N, O, F) **cannot** expand their octet
+| Section |
+|---------|
+| Which Elements Can Expand? |
+| Examples of Expanded Octets |
+| Axial vs. Equatorial Positions |
+| Bond Angles |
+| Why This Matters |
 
-### Examples of Expanded Octets
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
-| Molecule | Central Atom | Valence e⁻ Around Central | Steric Number |
-|----------|-------------|---------------------------|---------------|
-| PCl₅ | P (Period 3) | 10 | 5 |
-| SF₆ | S (Period 3) | 12 | 6 |
-| XeF₄ | Xe (Period 5) | 12 | 6 |
-| IF₅ | I (Period 5) | 12 | 6 |`
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'vg-3-2',
@@ -41,11 +45,13 @@ When a central atom has **5 electron domains**, they arrange in a **trigonal bip
 
 ### Bond Angles
 
-$$\\text{Equatorial–Equatorial} = 120°$$
-$$\\text{Axial–Equatorial} = 90°$$
+$$\\boxed{\\text{Equatorial–Equatorial} = 120°}$$
+$$\\boxed{\\text{Axial–Equatorial} = 90°}$$
 $$\\text{Axial–Axial} = 180°$$
 
 ### Why This Matters
+
+> 🔑 **Key Concept:** In a trigonal bipyramid, the axial and equatorial positions are **not equivalent**. Lone pairs always prefer **equatorial** positions because they have fewer 90° neighbors (only 2 vs. 3).
 
 Unlike tetrahedral or octahedral geometries, the positions in a trigonal bipyramid are **NOT equivalent**. This has important consequences:
 - Lone pairs preferentially occupy **equatorial** positions (more room)
@@ -58,7 +64,9 @@ Phosphorus pentachloride has 5 bonding pairs and 0 lone pairs:
 - Steric number = 5
 - Electron domain geometry = trigonal bipyramidal
 - Molecular geometry = trigonal bipyramidal
-- Bond angles: 90° (ax–eq) and 120° (eq–eq)`
+- Bond angles: 90° (ax–eq) and 120° (eq–eq)
+
+---`
     },
     {
       id: 'vg-3-3',
@@ -103,10 +111,12 @@ When a central atom has **6 electron domains**, they arrange in an **octahedral*
 
 ### Bond Angles
 
-$$\\text{Adjacent positions} = 90°$$
+$$\\boxed{\\text{Adjacent positions} = 90°}$$
 $$\\text{Opposite positions} = 180°$$
 
 ### Key Feature: All Positions Are Equivalent
+
+> 🔑 **Key Concept:** Unlike the trigonal bipyramid, **all 6 positions in an octahedron are equivalent** — each has exactly 4 neighbors at 90° and 1 at 180°.
 
 Unlike the trigonal bipyramid, **all 6 positions in an octahedron are equivalent**. Each position has exactly 4 neighbors at 90° and 1 neighbor at 180°.
 
@@ -127,7 +137,9 @@ Or equivalently: place atoms along the +x, −x, +y, −y, +z, and −z axes.
 | PCl₆⁻ | P | 6 | 0 | Octahedral |
 | SiF₆²⁻ | Si | 6 | 0 | Octahedral |
 
-SF₆ is a classic example: sulfur forms 6 equivalent bonds to fluorine with all F–S–F angles = 90°.`
+SF₆ is a classic example: sulfur forms 6 equivalent bonds to fluorine with all F–S–F angles = 90°.
+
+---`
     },
     {
       id: 'vg-3-5',
@@ -177,7 +189,7 @@ SF₆ is a classic example: sulfur forms 6 equivalent bonds to fluorine with all
 
 More electron domains must share the space around the central atom, so each pair gets pushed closer together:
 
-$$180° \\to 120° \\to 109.5° \\to 90°$$
+$$\\boxed{180° \\to 120° \\to 109.5° \\to 90°}$$
 
 ### Dimensionality
 

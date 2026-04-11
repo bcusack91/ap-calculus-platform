@@ -2,189 +2,223 @@ export const precalcRationalPart2Data = {
   topicSlug: 'rational-functions-precalc',
   sections: [
     {
-      id: 'precalc-rational-functions-precalc-p2-s1-intro',
+      id: 'p2-intro',
       type: 'text' as const,
       content: `
-      ## Rational Functions: Vertical and horizontal asymptotes
-      
-      **Part 2 of 7**
-      
-      This part focuses on predicting long-run behavior of ratio models. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **domain restriction**: input value making denominator zero is excluded
-      - **vertical asymptote**: line where function magnitude grows without bound
-      - **horizontal asymptote**: output value approached for large $|x|$
-      
-      
-      ### Worked Example
-      Part 2 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 📈 Vertical & Horizontal Asymptotes
+
+**Part 2 of 7 — Predicting Long-Run and Singular Behavior**
+
+Asymptotes are invisible boundary lines that a rational function's graph approaches but (usually) never reaches. They tell us what happens at the **extremes** — near excluded values and as $x \\to \\pm\\infty$.
       `
     },
     {
-      id: 'precalc-rational-functions-precalc-p2-s2-mcq-core',
+      id: 'p2-vertical',
+      type: 'text' as const,
+      content: `
+## 📖 Vertical Asymptotes
+
+A **vertical asymptote** occurs at $x = c$ when:
+1. $q(c) = 0$ (denominator is zero), AND
+2. The factor $(x - c)$ does **not** cancel with the numerator
+
+$$\\boxed{\\text{VA at } x = c \\iff q(c) = 0 \\text{ and } p(c) \\neq 0}$$
+
+### What Happens Near a VA
+
+As $x$ approaches $c$, $f(x) \\to +\\infty$ or $f(x) \\to -\\infty$ (the graph shoots up or down).
+
+### Worked Example
+
+> **Find the vertical asymptote(s) of $f(x) = \\frac{2x}{x^2 - 1}$.**
+
+**Step 1:** Factor denominator: $x^2 - 1 = (x-1)(x+1)$
+
+**Step 2:** Set each factor to zero: $x = 1$ and $x = -1$
+
+**Step 3:** Check numerator: $2(1) = 2 \\neq 0$ and $2(-1) = -2 \\neq 0$
+
+**Result:** Vertical asymptotes at $x = 1$ and $x = -1$
+
+> ⚠️ If both numerator and denominator are zero at $x = c$, the common factor cancels and you get a **hole** (Part 3), not a vertical asymptote.
+      `
+    },
+    {
+      id: 'p2-horizontal',
+      type: 'text' as const,
+      content: `
+## 📖 Horizontal Asymptotes
+
+A **horizontal asymptote** tells you the output value that $f(x)$ approaches as $x \\to \\pm\\infty$. It depends entirely on comparing the **degrees** of the numerator and denominator.
+
+| Degree Comparison | Horizontal Asymptote | Why |
+|:------------------|:-------------------:|:----|
+| $\\deg(p) < \\deg(q)$ | $y = 0$ | Denominator grows faster → ratio shrinks to $0$ |
+| $\\deg(p) = \\deg(q)$ | $y = \\frac{a_n}{b_n}$ (ratio of leading coefficients) | Leading terms dominate equally |
+| $\\deg(p) > \\deg(q)$ | **None** (oblique/slant asymptote instead) | Numerator grows faster → ratio grows without bound |
+
+---
+
+### Worked Examples
+
+**Example 1:** $f(x) = \\frac{3x + 1}{x^2 + 5}$ → $\\deg(p) = 1 < \\deg(q) = 2$ → HA: $y = 0$
+
+**Example 2:** $g(x) = \\frac{4x^2 - 1}{2x^2 + 3}$ → $\\deg(p) = \\deg(q) = 2$ → HA: $y = \\frac{4}{2} = 2$
+
+**Example 3:** $h(x) = \\frac{x^3}{x + 1}$ → $\\deg(p) = 3 > \\deg(q) = 1$ → No HA (slant asymptote exists)
+
+> 💡 **Memory aid:** "Bottom wins → $y = 0$. Tie → ratio of leaders. Top wins → no HA."
+      `
+    },
+    {
+      id: 'p2-slant',
+      type: 'text' as const,
+      content: `
+## 📐 Slant (Oblique) Asymptotes
+
+When $\\deg(p) = \\deg(q) + 1$ (numerator is exactly one degree higher), the function has a **slant asymptote** found by polynomial long division.
+
+### Example
+
+> **Find the slant asymptote of $f(x) = \\frac{x^2 + 3x + 5}{x + 1}$.**
+
+Divide $x^2 + 3x + 5$ by $x + 1$:
+
+$$x^2 + 3x + 5 = (x + 1)(x + 2) + 3$$
+
+$$f(x) = x + 2 + \\frac{3}{x + 1}$$
+
+As $x \\to \\pm\\infty$, $\\frac{3}{x+1} \\to 0$, so:
+
+$$\\boxed{\\text{Slant asymptote: } y = x + 2}$$
+      `
+    },
+    {
+      id: 'p2-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Asymptote Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of domain restriction.',
+            question: 'What is the horizontal asymptote of $f(x) = \\frac{5x^3 + 2}{5x^3 - 1}$?',
             options: [
-              'removable point from common-factor cancellation',
-              'line where function magnitude grows without bound',
-              'output value approached for large $|x|$',
-              'input value making denominator zero is excluded'
+              '$y = 0$',
+              '$y = 1$',
+              '$y = 5$',
+              'No horizontal asymptote'
             ],
-            correctAnswer: 3,
-            explanation: 'domain restriction is defined as: input value making denominator zero is excluded.'
+            correctAnswer: 1,
+            explanation: '$\\deg(p) = \\deg(q) = 3$, so HA is the ratio of leading coefficients: $y = \\frac{5}{5} = 1$.'
           },
           {
-            question: 'In predicting long-run behavior of ratio models, which expression is the best starting model?',
+            question: 'How many vertical asymptotes does $f(x) = \\frac{x}{x^2 + 4}$ have?',
             options: [
-              '$\\frac{(x-a)g(x)}{(x-a)h(x)}=\\frac{g(x)}{h(x)}\\;(x\\neq a)$',
-              '$f(x)=\\frac{p(x)}{q(x)}$',
-              '$\\deg p < \\deg q \\Rightarrow y=0$',
-              '$q(c)=0\\text{ and factor not cancelled}$'
+              '0',
+              '1',
+              '2',
+              'Infinitely many'
             ],
-            correctAnswer: 3,
-            explanation: 'Use $q(c)=0\\text{ and factor not cancelled}$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 0,
+            explanation: '$x^2 + 4 = 0$ gives $x^2 = -4$, which has no real solutions. No denominator zeros means no vertical asymptotes.'
+          },
+          {
+            question: 'Which function has a slant asymptote?',
+            options: [
+              '$\\frac{x}{x^2 + 1}$',
+              '$\\frac{x^2 + 1}{x^2 - 1}$',
+              '$\\frac{x^2 + 1}{x - 1}$',
+              '$\\frac{x^3 + 1}{x}$'
+            ],
+            correctAnswer: 2,
+            explanation: 'A slant asymptote occurs when $\\deg(p) = \\deg(q) + 1$. For $\\frac{x^2+1}{x-1}$: $\\deg(p) = 2 = 1 + 1 = \\deg(q) + 1$. Option D has $\\deg(p) = 3$ and $\\deg(q) = 1$, so $\\deg(p) = \\deg(q) + 2$ — that gives a parabolic asymptote, not slant.'
           }
         ]
       }
     },
     {
-      id: 'precalc-rational-functions-precalc-p2-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Vertical asymptote test | $q(c)=0\\text{ and factor not cancelled}$ | non-removable singularity |
-      | Horizontal rule | $\deg p < \deg q \\Rightarrow y=0$ | end behavior shortcut |
-      | Hole simplification | $\\frac{(x-a)g(x)}{(x-a)h(x)}=\\frac{g(x)}{h(x)}\;(x\\neq a)$ | removable cleanup |
-      | General form | $f(x)=\\frac{p(x)}{q(x)}$ | ratio modeling |
-      
-      ### Common pitfalls
-      - Asymptotes are approach lines, not always graph intersections to forbid.
-      - Match algebra and graph features before concluding function type.
-      - Cancellation removes factors, not domain restrictions.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-rational-functions-precalc-p2-s4-input',
+      id: 'p2-input-drill',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Rational Evaluation**
-      
-      1) Evaluate $
-      rac{x^2-9}{x-3}$ at $x=5$ after simplification.
-      2) State vertical asymptote for $f(x)=
-      rac1{x-4}$.
-      3) Evaluate $
-      rac{2x+1}{x+2}$ at $x=2$.
+**Asymptote Drill** 🧮
+
+**1)** What is the horizontal asymptote of $f(x) = \\frac{6x^2 + 1}{3x^2 - 7}$? Give the $y$-value. (e.g., for $\\frac{8x^2}{4x^2 + 1}$, HA is $y = \\frac{8}{4} = 2$)
+
+**2)** How many vertical asymptotes does $g(x) = \\frac{1}{x^2 - 5x + 6}$ have? (e.g., for $\\frac{1}{x^2-1}$, factor to $(x-1)(x+1)$ → $2$ VAs)
+
+**3)** For $h(x) = \\frac{x^2 + x}{x + 1}$, after canceling the common factor, what is $h(x)$ simplified? Give just the simplified expression as a number (evaluate $h(2)$). (e.g., $\\frac{x(x+3)}{x+3} = x$, so $h(2) = 2$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8', '4', '1.25'],
-        hint1: 'Factor numerator as $(x-3)(x+3)$.',
-        hint2: 'Set denominator equal to zero.',
-        hint3: 'Substitute then divide carefully.',
-        explanation: 'Simplified evaluation gives 8, asymptote is $x=4$, and direct substitution gives 1.25.'
+        correctAnswers: ['2', '2', '2'],
+        hint1: 'Leading coefficients: $\\frac{6}{3}$.',
+        hint2: 'Factor: $x^2 - 5x + 6 = (x-2)(x-3)$. How many distinct roots?',
+        hint3: '$x^2 + x = x(x+1)$. Cancel $(x+1)$. Then $h(x) = x$ (for $x \\neq -1$).',
+        explanation: '1) $\\frac{6}{3} = 2$. 2) $(x-2)(x-3) = 0$ at $x = 2, 3$ — two VAs. 3) $\\frac{x(x+1)}{x+1} = x$, so $h(2) = 2$.'
       }
     },
     {
-      id: 'precalc-rational-functions-precalc-p2-s5-dropdown',
+      id: 'p2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Asymptote Rules — Fill in the Blanks** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'domain restriction',
-            options: ['line where function magnitude grows without bound', 'removable point from common-factor cancellation', 'input value making denominator zero is excluded', 'output value approached for large $|x|$']
+            label: 'When $\\deg(p) < \\deg(q)$, the horizontal asymptote is',
+            options: ['$y = 1$', '$y = 0$', 'the ratio of leading coefficients', 'there is no HA']
           },
           {
-            label: 'vertical asymptote',
-            options: ['trend as input magnitude becomes large', 'line where function magnitude grows without bound', 'removable point from common-factor cancellation', 'output value approached for large $|x|$']
+            label: 'A vertical asymptote at $x = c$ means $q(c) = 0$ and',
+            options: ['$p(c) = 0$ also', '$p(c) \\neq 0$ (factor does not cancel)', 'the degree of $p$ is less than $q$', '$f(c) = \\infty$']
           },
           {
-            label: 'horizontal asymptote',
-            options: ['removable point from common-factor cancellation', 'tool for asymptote prediction', 'trend as input magnitude becomes large', 'output value approached for large $|x|$']
+            label: 'A slant asymptote exists when $\\deg(p)$ exceeds $\\deg(q)$ by exactly',
+            options: ['0', '1', '2', 'any amount']
+          },
+          {
+            label: 'Can a rational function cross its horizontal asymptote?',
+            options: ['Never', 'Yes, but only finitely many times', 'Only at $x = 0$', 'Only when $\\deg(p) = \\deg(q)$']
           }
         ],
-        correctAnswers: ['input value making denominator zero is excluded', 'line where function magnitude grows without bound', 'output value approached for large $|x|$'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: domain restriction, vertical asymptote, and horizontal asymptote align with their exact definitions used in this part.'
+        correctAnswers: ['$y = 0$', '$p(c) \\neq 0$ (factor does not cancel)', '1', 'Yes, but only finitely many times'],
+        hint1: 'If the denominator grows faster, the ratio shrinks toward zero.',
+        hint2: 'If both are zero, the common factor cancels → hole, not VA.',
+        hint3: 'Difference of 1 → linear quotient → slant. Difference of 0 → HA. Difference ≥ 2 → neither.',
+        explanation: 'Bottom wins → $y=0$. VA requires the factor to NOT cancel. Slant needs exactly degree difference 1. A function CAN cross its HA — the HA only describes end behavior as $x \\to \\pm\\infty$.'
       }
     },
     {
-      id: 'precalc-rational-functions-precalc-p2-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to domain restriction, vertical asymptote, and horizontal asymptote so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-rational-functions-precalc-p2-s7-mcq-applied',
+      id: 'p2-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz — Asymptotes** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is predicting long-run behavior of ratio models. Which term best anchors the next reasoning step if the key idea is: removable point from common-factor cancellation?',
+            question: 'The function $f(x) = \\frac{2x^2 - 3x + 1}{x^2 - 4}$ has:',
             options: [
-              'domain restriction',
-              'horizontal asymptote',
-              'hole',
-              'vertical asymptote'
+              'HA at $y = 2$, VAs at $x = 2$ and $x = -2$',
+              'HA at $y = 0$, VAs at $x = 2$ and $x = -2$',
+              'HA at $y = 2$, VA at $x = 2$ only',
+              'Slant asymptote $y = 2x - 3$, VAs at $x = \\pm 2$'
             ],
-            correctAnswer: 2,
-            explanation: 'hole matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 0,
+            explanation: '$\\deg(p) = \\deg(q) = 2$, so HA: $y = \\frac{2}{1} = 2$. Denominator: $x^2 - 4 = (x-2)(x+2) = 0$ at $x = 2, -2$. Numerator at those values: $p(2) = 8-6+1 = 3 \\neq 0$ and $p(-2) = 8+6+1 = 15 \\neq 0$, so both are VAs (not holes).'
           },
           {
-            question: 'A student is solving a mixed rational functions prompt. Which term best anchors the next reasoning step if the key idea is: trend as input magnitude becomes large?',
+            question: 'Which statement about $f(x) = \\frac{x^2 - x - 6}{x - 3}$ is correct?',
             options: [
-              'degree comparison',
-              'hole',
-              'end behavior',
-              'horizontal asymptote'
+              'VA at $x = 3$, HA at $y = 0$',
+              'VA at $x = 3$, slant asymptote $y = x + 2$',
+              'No VA (hole at $x = 3$), the function simplifies to $x + 2$',
+              'VA at $x = 3$ and $x = -2$'
             ],
             correctAnswer: 2,
-            explanation: 'end behavior matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$x^2 - x - 6 = (x-3)(x+2)$. The $(x-3)$ cancels: $f(x) = x + 2$ for $x \\neq 3$. Since the factor cancels, $x = 3$ is a hole, not a VA. The simplified function is linear — no asymptotes at all.'
           }
         ]
       }

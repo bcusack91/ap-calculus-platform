@@ -4,13 +4,30 @@ export const chemStoichiometryLimitingReactantsPart3Data = {
     {
       id: 'sl3-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Limiting Reactant
+      content: `# 🧪 Limiting Reactant
 
 **Part 3 of 7 — Which Reactant Runs Out First?**
 
-In real chemistry, reactants are rarely present in perfect stoichiometric proportions. One reactant will be used up first, stopping the reaction. That reactant is the **limiting reactant** — it limits how much product can form. The other reactant is in **excess**.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 The Sandwich Analogy |
+| ⚖️ Finding the Limiting Reactant |
+| Method: Compare Moles of Product Each Reactant Can Produce |
+| Worked Example |
+| 🔍 Finding the Excess Amount |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sl3-analogy',
@@ -32,9 +49,7 @@ If you have **10 slices of bread** and **7 slices of cheese**:
 
 ---
 
-### The Principle
-
-The limiting reactant determines the maximum amount of product. The excess reactant is left over.
+> 🔑 **Key Concept:** The limiting reactant is the one that runs out first — it determines the maximum amount of product. The excess reactant is left over.
       `
     },
     {
@@ -65,6 +80,8 @@ Given: 3.0 mol H₂ and 2.0 mol O₂. Which is limiting?
 H₂ produces less → **H₂ is the limiting reactant**
 
 Maximum H₂O produced = **3.0 mol** (from the limiting reactant)
+
+> 💡 **Tip:** Always calculate how much product each reactant could produce separately. The one that gives **less product** is the limiting reactant — it’s not necessarily the one with fewer moles!
       `
     },
     {
@@ -73,7 +90,7 @@ Maximum H₂O produced = **3.0 mol** (from the limiting reactant)
       content: `
 ## 🔍 Finding the Excess Amount
 
-After identifying the limiting reactant, you can find how much excess reactant remains.
+> 💡 **Tip:** To find leftover excess, use the limiting reactant and the mole ratio to calculate how much excess was consumed, then subtract from the initial amount.
 
 
 ---
@@ -90,7 +107,7 @@ $$\\text{mol O}_2 \\text{ consumed} = 3.0 \\text{ mol H}_2 \\times \\frac{1 \\te
 
 **Step 2:** How much O₂ remains?
 
-$$\\text{excess O}_2 = 2.0 - 1.5 = 0.5 \\text{ mol O}_2$$
+$$\\boxed{\\text{excess O}_2 = 2.0 - 1.5 = 0.5 \\text{ mol O}_2}$$
 
 
 ---

@@ -26,13 +26,37 @@ type MCATItemAnalyticsRow = {
   isCorrect: boolean
 }
 
+// Ensure the AnalyticsEvent table exists (created lazily by /api/analytics/events)
+async function ensureAnalyticsEventTable() {
+  await prisma.$executeRawUnsafe(`
+    CREATE TABLE IF NOT EXISTS "AnalyticsEvent" (
+      "id" BIGSERIAL PRIMARY KEY,
+      "eventName" TEXT NOT NULL,
+      "pageTemplate" TEXT,
+      "ctaType" TEXT,
+      "location" TEXT,
+      "destination" TEXT,
+      "courseSlug" TEXT,
+      "topicSlug" TEXT,
+      "metadata" JSONB,
+      "createdAt" TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    )
+  `)
+}
+
 // GET /api/admin/analytics — aggregate site analytics
 export async function GET() {
   const authResult = await requireAdmin()
   if ('error' in authResult) return authResult.error
 
-  const data = await getCachedAnalytics()
-  return NextResponse.json(data)
+  try {
+    await ensureAnalyticsEventTable()
+    const data = await getCachedAnalytics()
+    return NextResponse.json(data)
+  } catch (error) {
+    console.error('[GET /api/admin/analytics]', error)
+    return NextResponse.json({ error: 'Failed to load analytics' }, { status: 500 })
+  }
 }
 
 const getCachedAnalytics = unstable_cache(

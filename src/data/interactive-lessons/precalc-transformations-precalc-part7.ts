@@ -2,186 +2,205 @@ export const precalcTransformationsPart7Data = {
   topicSlug: 'transformations-precalc',
   sections: [
     {
-      id: 'precalc-transformations-precalc-p7-s1-intro',
+      id: 'p7-intro',
       type: 'text' as const,
       content: `
-      ## Function Transformations: Mixed transformation synthesis
-      
-      **Part 7 of 7**
-      
-      This part focuses on solving mixed transformation exam prompts. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **composite transform**: multiple transformations applied to one parent
-      - **invariant point**: point unchanged by selected transformation
-      - **parent function**: base graph before transformations
-      
-      
-      ### Worked Example
-      Part 7 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🏆 Transformations — Full Synthesis
+
+**Part 7 of 7**
+
+### Master Checklist
+
+| Transformation | Formula | Effect |
+|:--------------|:--------|:-------|
+| Vertical shift | $f(x)+k$ | Up ($k>0$) or down ($k<0$) |
+| Horizontal shift | $f(x-h)$ | Right ($h>0$) or left ($h<0$) |
+| Vertical stretch | $af(x)$, $|a|>1$ | Narrower |
+| Vertical compress | $af(x)$, $|a|<1$ | Wider |
+| Horizontal stretch | $f(bx)$, $|b|<1$ | Wider |
+| Horizontal compress | $f(bx)$, $|b|>1$ | Narrower |
+| Reflect $x$-axis | $-f(x)$ | Flip vertically |
+| Reflect $y$-axis | $f(-x)$ | Flip horizontally |
+
+### The Master Formula
+
+$$y = a \\cdot f(b(x-h))+k$$
+
+Transform point $(x,y) \\to \\left(\\frac{x}{b}+h,\\; ay+k\\right)$
+
+### Even & Odd Functions
+
+- **Even**: $f(-x) = f(x)$ — symmetric about $y$-axis
+- **Odd**: $f(-x) = -f(x)$ — symmetric about origin
       `
     },
     {
-      id: 'precalc-transformations-precalc-p7-s2-mcq-core',
+      id: 'p7-strategy',
+      type: 'text' as const,
+      content: `
+## 🧠 Problem-Solving Strategies
+
+### Strategy 1: Transform Key Points
+
+Given $y = -2f(x+1)-3$ and parent points $\\{(-2,4), (0,0), (2,4)\\}$:
+
+| Parent $(x,y)$ | Shift: $(x-1, y)$ | Scale: $(x-1, -2y-3)$ |
+|:------|:------|:------|
+| $(-2, 4)$ | $(-3, 4)$ | $(-3, -11)$ |
+| $(0, 0)$ | $(-1, 0)$ | $(-1, -3)$ |
+| $(2, 4)$ | $(1, 4)$ | $(1, -11)$ |
+
+### Strategy 2: Identify from Description
+
+"Graph $y = \\sqrt{x}$, shift left 4, stretch vertically by 3, reflect, shift up 2."
+
+$$y = -3\\sqrt{x+4}+2$$
+
+### Strategy 3: Match Domain/Range
+
+Parent $y = \\sqrt{x}$: domain $[0,\\infty)$, range $[0,\\infty)$.
+
+$y = -3\\sqrt{x+4}+2$: domain $[-4,\\infty)$, range $(-\\infty, 2]$.
+
+- Domain shifts by $h = -4$ (left 4)
+- Range: max is $k = 2$, goes down (reflected)
+      `
+    },
+    {
+      id: 'p7-connect',
+      type: 'text' as const,
+      content: `
+## 🔗 Connections to Calculus
+
+### Transformations Preserve Shape
+
+If $f'(x_0) = m$ (slope at $x_0$), then for $g(x) = af(b(x-h))+k$:
+
+$$g'(x) = ab \\cdot f'(b(x-h))$$
+
+The derivative scales by $ab$! This is the **chain rule** preview.
+
+### Domain & Range Transformations
+
+| Operation | Domain | Range |
+|:----------|:-------|:------|
+| $f(x)+k$ | Same | Shifts by $k$ |
+| $f(x-h)$ | Shifts by $h$ | Same |
+| $af(x)$ | Same | Scales by $a$ |
+| $f(bx)$ | Scales by $1/b$ | Same |
+
+### Function Composition as Transformation
+
+$g(x) = 2f(x-3)+1$ is really $g = T \\circ f$ where $T(y) = 2y+1$ and the input is shifted.
+
+**Transformations unite algebra, geometry, and calculus!**
+      `
+    },
+    {
+      id: 'p7-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Synthesis Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of composite transform.',
-            options: [
-              'multiple transformations applied to one parent',
-              'adds constant outside function value',
-              'base graph before transformations',
-              'point unchanged by selected transformation'
-            ],
+            question: '$y = -3|x+2|-5$: vertex and opening direction?',
+            options: ['$(-2, -5)$, opens down', '$(2, -5)$, opens up', '$(-2, 5)$, opens down', '$(2, 5)$, opens up'],
             correctAnswer: 0,
-            explanation: 'composite transform is defined as: multiple transformations applied to one parent.'
+            explanation: '$h=-2, k=-5 \\implies$ vertex $(-2,-5)$. $a=-3<0$: opens down.'
           },
           {
-            question: 'In solving mixed transformation exam prompts, which expression is the best starting model?',
-            options: [
-              '$f(x-h)$',
-              '$-f(x),\\;f(-x)$',
-              '$f(x)+k$',
-              '$g(x)=a\\,f(b(x-h))+k$'
-            ],
+            question: 'If $f$ has domain $[0, 4]$ and range $[1, 5]$, what is the range of $-2f(x)+3$?',
+            options: ['$[-7, 1]$', '$[-7, -1]$', '$[1, 7]$', '$[-1, 7]$'],
+            correctAnswer: 0,
+            explanation: 'Range of $f$: $[1,5]$. $-2[1,5] = [-10,-2]$. $[-10,-2]+3 = [-7, 1]$.'
+          },
+          {
+            question: 'Which transform changes the period of $\\sin x$?',
+            options: ['$3\\sin x$', '$\\sin(x-\\pi)$', '$\\sin(2x)$', '$\\sin(x)+4$'],
             correctAnswer: 2,
-            explanation: 'Use $f(x)+k$ first, then substitute known quantities from the prompt.'
+            explanation: '$\\sin(2x)$: period = $2\\pi/2 = \\pi$. Amplitude and shifts do not affect period.'
           }
         ]
       }
     },
     {
-      id: 'precalc-transformations-precalc-p7-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Vertical shift | $f(x)+k$ | up by $k$ when $k>0$ |
-      | Reflections | $-f(x),\;f(-x)$ | over $x$-axis and $y$-axis |
-      | General transform | $g(x)=a\,f(b(x-h))+k$ | all major parameter moves |
-      | Horizontal shift | $f(x-h)$ | right by $h$ when $h>0$ |
-      
-      ### Common pitfalls
-      - Inside changes reverse intuitive direction for horizontal moves.
-      - A negative outside coefficient reflects across the $x$-axis.
-      - Apply transformations in the order implied by expression structure.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-transformations-precalc-p7-s4-input',
+      id: 'p7-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Transformation Parameters**
-      
-      1) In $g(x)=f(x-3)+2$, how many units right is the graph shifted?
-      2) In $y=-2f(x)$, what is the vertical stretch factor magnitude?
-      3) If $f(x)=x^2$, compute $f(-4)$.
+**Master Calculations** 🧮
+
+**1)** $y = 4(x-1)^2-3$: the $y$-intercept ($x=0$, $y$ = ?)
+
+**2)** $y = -|x+3|+7$: the $x$-intercepts are $x = 4$ and $x = $ ?
+
+**3)** Domain of $y = \\sqrt{2x-6}$: $x \\geq$ ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3', '2', '16'],
-        hint1: 'Inside subtraction shifts right.',
-        hint2: 'Read absolute value of outside multiplier.',
-        hint3: 'Square the input after substitution.',
-        explanation: 'Shift is 3 right, stretch magnitude is 2, and $f(-4)=16$.'
+        correctAnswers: ['1', '-10', '3'],
+        hint1: '$y = 4(0-1)^2-3 = 4-3 = 1$.',
+        hint2: '$0 = -|x+3|+7 \\implies |x+3| = 7 \\implies x = 4$ or $x = -10$.',
+        hint3: '$2x-6 \\geq 0 \\implies x \\geq 3$.',
+        explanation: '1) $1$. 2) $-10$. 3) $3$.'
       }
     },
     {
-      id: 'precalc-transformations-precalc-p7-s5-dropdown',
+      id: 'p7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Transformations Master** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'composite transform',
-            options: ['base graph before transformations', 'point unchanged by selected transformation', 'multiple transformations applied to one parent', 'adds constant outside function value']
+            label: '$f(-x)$ produces:',
+            options: ['Reflection over $x$-axis', 'Reflection over $y$-axis', 'Reflection over origin', '180° rotation'],
+            correctAnswer: 1
           },
           {
-            label: 'invariant point',
-            options: ['point unchanged by selected transformation', 'adds constant outside function value', 'replaces $x$ with $x-h$ inside input', 'base graph before transformations']
+            label: '$y = f(x-h)+k$ — the vertex/key point is at:',
+            options: ['$(h, k)$', '$(-h, k)$', '$(-h, -k)$', '$(k, h)$'],
+            correctAnswer: 0
           },
           {
-            label: 'parent function',
-            options: ['multiplies input or output by $-1$', 'base graph before transformations', 'adds constant outside function value', 'replaces $x$ with $x-h$ inside input']
+            label: 'A wider parabola than $y = x^2$ has $|a|$:',
+            options: ['$> 1$', '$= 1$', '$< 1$', 'Undefined'],
+            correctAnswer: 2
+          },
+          {
+            label: 'Horizontal stretch by 3 means replacing $x$ with:',
+            options: ['$3x$', '$x/3$', '$x-3$', '$x+3$'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['multiple transformations applied to one parent', 'point unchanged by selected transformation', 'base graph before transformations'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: composite transform, invariant point, and parent function align with their exact definitions used in this part.'
+        correctAnswers: ['Reflection over $y$-axis', '$(h, k)$', '$< 1$', '$x/3$'],
+        hint1: '$f(-x)$ replaces input with opposite: horizontal flip.',
+        hint2: 'Standard form: $f(x-h)+k$.',
+        hint3: 'Wider = compressed = $|a| < 1$.',
+        explanation: '$f(-x)$: reflect $y$-axis. Key point: $(h,k)$. Wider: $|a|<1$. Stretch by 3: $f(x/3)$.'
       }
     },
     {
-      id: 'precalc-transformations-precalc-p7-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to composite transform, invariant point, and parent function so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-transformations-precalc-p7-s7-mcq-applied',
+      id: 'p7-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is solving mixed transformation exam prompts. Which term best anchors the next reasoning step if the key idea is: adds constant outside function value?',
-            options: [
-              'invariant point',
-              'parent function',
-              'vertical shift',
-              'composite transform'
-            ],
-            correctAnswer: 2,
-            explanation: 'vertical shift matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Given $g(x) = -f(2x)+3$ and $f(4) = 5$: what is $g(2)$?',
+            options: ['$-2$', '$8$', '$-7$', '$13$'],
+            correctAnswer: 0,
+            explanation: '$g(2) = -f(2 \\cdot 2)+3 = -f(4)+3 = -5+3 = -2$.'
           },
           {
-            question: 'A student is solving a mixed function transformations prompt. Which term best anchors the next reasoning step if the key idea is: replaces $x$ with $x-h$ inside input?',
-            options: [
-              'horizontal shift',
-              'parent function',
-              'reflection',
-              'vertical shift'
-            ],
+            question: 'Transform $y = x^2$: reflect $x$-axis, right 3, up 7. The equation:',
+            options: ['$y = -(x-3)^2+7$', '$y = -(x+3)^2+7$', '$y = (x-3)^2-7$', '$y = -(x-3)^2-7$'],
             correctAnswer: 0,
-            explanation: 'horizontal shift matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'Reflect: $-x^2$. Right 3: $-(x-3)^2$. Up 7: $-(x-3)^2+7$.'
           }
         ]
       }

@@ -4,13 +4,30 @@ export const chemNetIonicEquationsPart1Data = {
     {
       id: 'ni1-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Molecular vs. Ionic Equations
+      content: `# 🧪 Molecular vs. Ionic Equations
 
 **Part 1 of 7 — Writing Full Molecular Equations**
 
-When ionic compounds dissolve in water, they dissociate into ions. To properly describe reactions in aqueous solution, chemists use three levels of detail: **molecular equations**, **complete ionic equations**, and **net ionic equations**. In this lesson, we start with the most familiar form — the full molecular equation.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚖️ Full Molecular Equations |
+| Example |
+| Key Features |
+| Phase Labels Review |
+| 🔋 Electrolytes and Dissociation |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ni1-molecular-equations',
@@ -25,7 +42,7 @@ A **molecular equation** (also called a formula equation) shows all reactants an
 
 ### Example
 
-$$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{NaNO}_3(aq)$$
+$$\boxed{\text{AgNO}_3(aq) + \text{NaCl}(aq) \rightarrow \text{AgCl}(s) + \text{NaNO}_3(aq)}$$
 
 
 ---
@@ -50,6 +67,8 @@ $$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{Na
 | $(l)$ | Liquid (pure) |
 | $(g)$ | Gas |
 | $(aq)$ | Aqueous (dissolved in water) |
+
+> 💡 **Tip:** Phase labels are critical on the AP exam — they determine how each species is written in ionic equations.
       `
     },
     {
@@ -71,7 +90,7 @@ To move beyond molecular equations, you must know which substances **dissociate*
 | Strong bases | NaOH, KOH, Ca(OH)₂, Ba(OH)₂ |
 | Soluble ionic compounds | NaCl, KNO₃, AgNO₃ (any soluble salt) |
 
-$$\\text{NaCl}(aq) \\rightarrow \\text{Na}^+(aq) + \\text{Cl}^-(aq)$$
+$$\boxed{\text{NaCl}(aq) \rightarrow \text{Na}^+(aq) + \text{Cl}^-(aq)}$$
 
 
 ---
@@ -98,9 +117,7 @@ These remain mostly as intact molecules in solution and are written in **molecul
 
 ---
 
-### Critical Rule
-
-Only **strong electrolytes in aqueous solution** are written as separated ions. Solids, liquids, gases, weak electrolytes, and non-electrolytes stay as complete formulas.
+> 🔑 **Key Concept:** Only **strong electrolytes in aqueous solution** are written as separated ions. Solids, liquids, gases, weak electrolytes, and non-electrolytes stay as complete formulas.
       `
     },
     {
@@ -119,7 +136,9 @@ Only **strong electrolytes in aqueous solution** are written as separated ions. 
 
 ---
 
-### Example: Silver Nitrate + Sodium Chloride
+> **Problem:** Write the balanced molecular equation for the reaction of silver nitrate with sodium chloride.
+
+> **Solution:**
 
 **Step 1:** Reactants: AgNO₃ and NaCl (both in aqueous solution)
 
@@ -133,9 +152,7 @@ $$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{Na
 
 ---
 
-### Common Pitfall
-
-Always check solubility to assign correct phase labels. A reaction may not occur if no precipitate, gas, or water forms!
+> ⚠️ **Warning:** Always check solubility to assign correct phase labels. A reaction may not occur if no precipitate, gas, or water forms!
       `
     },
     {

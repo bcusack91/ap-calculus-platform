@@ -4,13 +4,31 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
     {
       id: 'bf7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — Buffer Solutions & Henderson-Hasselbalch**
 
-This comprehensive review covers all buffer concepts: composition, mechanism, Henderson-Hasselbalch calculations, capacity, effective range, preparation, and multi-step problems.
-      `
+---
+
+### Buffer Mastery Checklist
+
+| Concept | Key Formula or Rule |
+|---------|-------------------|
+| Buffer composition | Weak acid + conjugate base (or weak base + conjugate acid) |
+| pH calculation | $pH = pK_a + \log([A^-]/[HA])$ |
+| Adding acid/base | Step 1: Stoichiometry → Step 2: Henderson-Hasselbalch |
+| Effective range | p$K_a$ ± 1 |
+| Max capacity | When $[HA] = [A^-]$ (pH = p$K_a$) |
+| Choosing an acid | p$K_a$ ≈ target pH |
+
+> 🔑 **Why this matters:** Buffers connect to titrations, equilibrium, and biochemistry — expect cross-topic AP questions that use buffers as the foundation.
+
+---
+
+### What You'll Master in Part 7
+- Tackling AP-style questions that integrate buffers with titrations and equilibrium
+- Writing clear free-response explanations of buffer mechanisms
+- Avoiding the most common AP exam mistakes in buffer problems`
     },
     {
       id: 'bf7-summary',
@@ -30,10 +48,14 @@ This comprehensive review covers all buffer concepts: composition, mechanism, He
 | **Capacity** | Depends on concentration of buffer components |
 | **Destroyed when** | All of one component is consumed |
 
+> ⚠️ **Remember:** Once a buffer is destroyed, Henderson-Hasselbalch no longer applies. Switch to a simple acid/base or salt calculation.
+
 
 ---
 
 ### Problem-Solving Strategy
+
+> 🔑 **5-Step Buffer Method for the AP Exam:**
 
 1. **Identify** if a buffer exists (weak acid + conjugate base?)
 2. **Stoichiometry** first — react any added strong acid/base completely

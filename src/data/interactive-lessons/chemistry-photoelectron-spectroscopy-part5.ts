@@ -6,18 +6,28 @@ export const chemPhotoelectronSpectroscopyPart5Data = {
       type: 'text' as const,
       content: `# PES and Periodic Trends
 
-PES spectra don't just tell us about individual atoms — they reveal **periodic trends** that help explain the behavior of elements across the periodic table. The key concept connecting PES to periodic trends is **effective nuclear charge ($Z_{eff}$)**.
+**Part 5 of 7 — Identifying Elements from PES**
 
-## 📊 Effective Nuclear Charge
+---
 
-$$Z_{eff} = Z - S$$
+### Topics in This Part
 
-Where:
-- **$Z$** = atomic number (total number of protons)
-- **$S$** = shielding constant (approximate number of core electrons shielding the valence electrons)
-- **$Z_{eff}$** = effective nuclear charge felt by a valence electron
+| Section |
+|---------|
+| 📊 Effective Nuclear Charge |
+| Example: Period 2 First Ionization Energies and 1s Binding Energies |
+| Sodium (Na, Z = 11): 1s² 2s² 2p⁶ 3s¹ |
+| Magnesium (Mg, Z = 12): 1s² 2s² 2p⁶ 3s² |
+| Key Comparisons: |
 
-As $Z_{eff}$ increases, valence electrons are held **more tightly**, resulting in **higher binding energies** on PES spectra.`
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ps5-across-period',
@@ -49,12 +59,14 @@ As you move **left to right across a period**, the binding energies of ALL elect
 
 **Notice:** Both the 1s binding energy and the valence binding energy generally increase across the period.
 
-> The slight **decreases** at B (after Be) and O (after N) are due to subshell effects — B starts filling the 2p subshell, and O begins pairing electrons in 2p.`
+> The slight **decreases** at B (after Be) and O (after N) are due to subshell effects — B starts filling the 2p subshell, and O begins pairing electrons in 2p.
+
+> ⚠️ **Warning:** Don’t expect a perfectly smooth increase in ionization energy across a period. The B/Be and O/N exceptions appear frequently on AP exams — know why they happen!`
     },
     {
       id: 'ps5-quiz1',
       type: 'multiple-choice' as const,
-      content: `### Trend Check
+      content: `### ✏️ Trend Check
 
 As you move from left to right across Period 3 (Na to Ar), what happens to the binding energy of the 1s electrons?`,
       exercise: {
@@ -107,7 +119,7 @@ When comparing PES spectra of adjacent elements in the same period, you should n
     {
       id: 'ps5-quiz2',
       type: 'multiple-choice' as const,
-      content: `### Comparing Elements
+      content: `### ✏️ Comparing Elements
 
 Which of the following correctly compares the PES spectra of fluorine (F, Z = 9) and neon (Ne, Z = 10)?`,
       exercise: {
@@ -129,9 +141,9 @@ Which of the following correctly compares the PES spectra of fluorine (F, Z = 9)
     {
       id: 'ps5-input1',
       type: 'input-boxes' as const,
-      content: `### Effective Nuclear Charge
+      content: `### ✏️ Effective Nuclear Charge
 
-Calculate the approximate effective nuclear charge ($Z_{eff}$) felt by a valence electron for the following atoms. Use the simple approximation $Z_{eff} = Z - S$ where $S$ equals the number of core electrons.`,
+> **Problem:** Calculate the approximate effective nuclear charge ($Z_{eff}$) felt by a valence electron for the following atoms. Use the simple approximation $Z_{eff} = Z - S$ where $S$ equals the number of core electrons.`,
       exercise: {
         inputs: [
           {
@@ -150,7 +162,7 @@ Calculate the approximate effective nuclear charge ($Z_{eff}$) felt by a valence
     {
       id: 'ps5-dropdown1',
       type: 'dropdown-select' as const,
-      content: `### Applying Periodic Trends to PES
+      content: `### ✏️ Applying Periodic Trends to PES
 
 Use your knowledge of periodic trends and effective nuclear charge to answer these questions.`,
       exercise: {
@@ -178,18 +190,49 @@ Use your knowledge of periodic trends and effective nuclear charge to answer the
     {
       id: 'ps5-summary',
       type: 'text' as const,
-      content: `## 📋 Part 5 Summary
+      content: `## 📋 Part 5 Summary: PES & Periodic Trends
 
-PES and periodic trends:
+---
 
-1. **Effective nuclear charge** ($Z_{eff} = Z - S$) determines how tightly valence electrons are held
-2. **Across a period**, $Z_{eff}$ increases → all binding energies increase → all PES peaks shift left
-3. **All electrons** are affected by increasing nuclear charge, not just valence electrons
-4. **Exceptions** at B (after Be) and O (after N) arise from subshell transitions and electron pairing
-5. **Comparing adjacent elements**: same peak structure but shifted binding energies
-6. **Higher $Z_{eff}$** = higher binding energy = harder to remove electrons
+### 🧪 Effective Nuclear Charge
 
-In the next part, we will apply all of this knowledge to solve challenging PES problems.`
+$$Z_{eff} = Z - S$$
+
+where $Z$ = atomic number (# protons) and $S$ = shielding (# core electrons)
+
+---
+
+### 📌 Trends Across a Period
+
+| What Happens | Why | PES Effect |
+|-------------|-----|------------|
+| $Z_{eff}$ increases | More protons, same shielding | All peaks shift **left** (higher BE) |
+| **All** electrons affected | Nuclear charge pulls entire cloud tighter | Core AND valence BEs increase |
+| IE generally increases | Harder to remove valence e⁻ | Rightmost peak moves left |
+
+---
+
+### ⚠️ AP Exceptions
+
+| Transition | What Happens | Why |
+|-----------|-------------|-----|
+| Be → B | IE **drops** | B removes a 2p e⁻ (higher energy than Be's 2s) |
+| N → O | IE **drops** | O has a paired 2p e⁻; electron-electron repulsion |
+
+---
+
+### ✅ Your Checklist Before Moving On
+
+- ☐ I can calculate $Z_{eff}$ using $Z - S$
+- ☐ I understand why all BEs increase across a period
+- ☐ I can explain the Be→B and N→O exceptions
+- ☐ I can predict how PES spectra shift for adjacent elements
+
+---
+
+### 🔮 What's Next
+
+In **Part 6**, you will apply all of this knowledge to **solve challenging PES problems** with a systematic approach.`
     }
   ]
 }

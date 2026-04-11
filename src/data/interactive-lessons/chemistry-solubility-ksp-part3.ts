@@ -4,13 +4,30 @@ export const chemSolubilityKspPart3Data = {
     {
       id: 'sk3-intro',
       type: 'text' as const,
-      content: `
-# 💎 The Common Ion Effect
+      content: `# 💎 The Common Ion Effect
 
 **Part 3 of 7 — Reduced Solubility in the Presence of a Common Ion**
 
-When a slightly soluble salt dissolves in a solution that already contains one of its ions, its solubility **decreases**. This is the **common ion effect** — a direct application of Le Chatelier\'s principle.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🤔 Why Does the Common Ion Reduce Solubility? |
+| Mathematically |
+| 🧪 Worked Example |
+| In Pure Water (for comparison) |
+| In 0.10 M NaCl |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sk3-explanation',
@@ -32,9 +49,13 @@ The $\\text{Cl}^-$ from NaCl shifts the equilibrium **left** (Le Chatelier\'s), 
 - In pure water: $K_{sp} = s \\cdot s = s^2$, so $s = \\sqrt{K_{sp}}$
 - In 0.10 M NaCl: $K_{sp} = s \\cdot (s + 0.10)$
 
-Since $s \\ll 0.10$: $K_{sp} \\approx s \\cdot 0.10$, so $s \\approx \\frac{K_{sp}}{0.10}$
+Since $s \ll 0.10$:
 
-This gives a much smaller $s$ than in pure water!
+$$\\boxed{s \\approx \\frac{K_{sp}}{[\\text{common ion}]}}$$
+
+> 🔑 **Key Concept:** The common ion effect is Le Chatelier's principle applied to dissolution equilibria — adding an ion that appears in the $K_{sp}$ expression shifts the equilibrium toward the solid, reducing solubility.
+
+> 💡 **Tip:** When the common ion concentration is much larger than $s$, you can ignore $s$ in the sum, greatly simplifying the calculation.
       `
     },
     {
@@ -43,7 +64,9 @@ This gives a much smaller $s$ than in pure water!
       content: `
 ## 🧪 Worked Example
 
-Find the molar solubility of $\\text{AgCl}$ ($K_{sp} = 1.8 \\times 10^{-10}$) in 0.10 M NaCl.
+> **Problem:** Find the molar solubility of $\\text{AgCl}$ ($K_{sp} = 1.8 \\times 10^{-10}$) in 0.10 M NaCl.
+
+> **Solution:**
 
 
 ---
@@ -63,7 +86,7 @@ $$K_{sp} = [\\text{Ag}^+][\\text{Cl}^-] = (s)(0.10 + s)$$
 
 Since $s \\ll 0.10$: $(s)(0.10) \\approx 1.8 \\times 10^{-10}$
 
-$$s = \\frac{1.8 \\times 10^{-10}}{0.10} = 1.8 \\times 10^{-9} \\text{ M}$$
+$$\\boxed{s = \\frac{1.8 \\times 10^{-10}}{0.10} = 1.8 \\times 10^{-9} \\text{ M}}$$
 
 
 ---

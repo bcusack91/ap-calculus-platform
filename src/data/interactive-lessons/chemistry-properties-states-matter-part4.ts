@@ -5,13 +5,30 @@ export const chemPropertiesStatesMatterPart4Data = {
       id: 'sm4-intro',
       type: 'text' as const,
       title: 'Phase Changes — Introduction',
-      content: `
-# 🔥 Phase Changes
+      content: `# 🔥 Phase Changes
 
 **Part 4 of 7 — Melting, Boiling, Sublimation, and Heating Curves**
 
-A **phase change** (or phase transition) occurs when matter converts from one phase to another. Energy is either absorbed or released during the process, but the **temperature remains constant** during the phase change itself — all the energy goes into overcoming intermolecular forces, not increasing kinetic energy.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| The Six Phase Changes |
+| Key Relationships |
+| Heating Curves |
+| The Five Regions |
+| Calculating Total Energy for Heating Curves |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sm4-types-of-phase-changes',
@@ -33,13 +50,11 @@ A **phase change** (or phase transition) occurs when matter converts from one ph
 
 Since enthalpy is a state function, sublimation can be thought of as melting + vaporization:
 
-$$\\Delta H_{\\text{sub}} = \\Delta H_{\\text{fus}} + \\Delta H_{\\text{vap}}$$
+$$\\boxed{\\Delta H_{\\text{sub}} = \\Delta H_{\\text{fus}} + \\Delta H_{\\text{vap}}}$$
 
-### Why Does $\\Delta H_{\\text{vap}} > \\Delta H_{\\text{fus}}$?
+---
 
-- **Melting** only partially disrupts IMFs — particles go from fixed positions to sliding past each other, but remain close.
-- **Vaporization** completely overcomes IMFs — particles go from close together to far apart.
-- Therefore, vaporization always requires **more energy** than melting for the same substance.
+> ⚠️ **Warning:** $\\Delta H_{\\text{vap}}$ is **always** greater than $\\Delta H_{\\text{fus}}$ for the same substance. Vaporization completely overcomes IMFs; melting only partially disrupts them. Don\'t confuse the two!
 
 For water: $\\Delta H_{\\text{fus}} = 6.01$ kJ/mol vs. $\\Delta H_{\\text{vap}} = 40.7$ kJ/mol
       `
@@ -121,11 +136,11 @@ A **heating curve** plots **temperature vs. heat added** as a substance is heate
 - $q = m \\times c_{\\text{gas}} \\times \\Delta T$
 - Gas particles move faster; temperature increases
 
-### Key Features
+---
 
-- **Flat regions** = phase changes (temperature constant, energy disrupts/forms IMFs)
-- **Sloped regions** = single phase (temperature changes, energy increases KE)
-- The **slope** of each region depends on the specific heat capacity $c$ of that phase
+> 🔑 **Key Concept:** **Flat regions** on a heating curve = phase changes (temperature constant, energy overcomes IMFs). **Sloped regions** = single phase (temperature rises, energy increases KE).
+
+> 💡 **Tip:** The boiling plateau is **longer** than the melting plateau because $\\Delta H_{\\text{vap}} > \\Delta H_{\\text{fus}}$. The **slope** of each region depends on the specific heat capacity $c$ of that phase — a smaller $c$ gives a steeper slope.
       `
     },
     {
@@ -168,9 +183,9 @@ A **heating curve** plots **temperature vs. heat added** as a substance is heate
 
 To calculate the total energy required to heat a substance through a phase change, you must add the energy for each region separately.
 
-### Example: Heating ice at −20°C to steam at 120°C
+> **Problem:** Calculate the total energy required to heat 1 mole (18.015 g) of ice at −20°C to steam at 120°C.
 
-For water ($m$ = 18.015 g/mol):
+Given for water:
 - $c_{\\text{ice}} = 2.09$ J/(g·°C)
 - $\\Delta H_{\\text{fus}} = 6.01$ kJ/mol = 334 J/g
 - $c_{\\text{water}} = 4.18$ J/(g·°C)
@@ -178,6 +193,8 @@ For water ($m$ = 18.015 g/mol):
 - $c_{\\text{steam}} = 2.01$ J/(g·°C)
 
 For 1 mole (18.015 g) of water:
+
+> **Solution:**
 
 **Step 1:** Heat ice from −20°C to 0°C: $q_1 = 18.015 \\times 2.09 \\times 20 = 753$ J
 
@@ -230,9 +247,9 @@ A **cooling curve** is the reverse of a heating curve — it plots temperature v
 - Energy is **released** (exothermic) during phase changes: condensation and freezing.
 - The magnitudes of $\\Delta H$ are the same, but the sign is negative (energy released).
 
-### Supercooling
+---
 
-Sometimes a liquid can be cooled below its freezing point without solidifying — this is called **supercooling**. When crystallization finally begins, the temperature may briefly rise back to the freezing point as the exothermic freezing process releases heat.
+> ⚠️ **Warning:** **Supercooling** can occur — a liquid cooled below its freezing point without solidifying. When crystallization finally begins, the temperature may briefly **rise** back to the freezing point as the exothermic freezing process releases heat. Don\'t confuse this with a normal heating curve feature!
       `
     },
     {

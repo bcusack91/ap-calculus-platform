@@ -2,187 +2,198 @@ export const precalcMatricesPart7Data = {
   topicSlug: 'matrices-precalc',
   sections: [
     {
-      id: 'precalc-matrices-precalc-p7-s1-intro',
+      id: 'p7-intro',
       type: 'text' as const,
       content: `
-      ## Matrices: Mixed matrix operations synthesis
-      
-      **Part 7 of 7**
-      
-      This part focuses on integrating operations in mixed-response problems. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **augmented matrix**: system coefficients with constants in one array
-      - **row operation**: legal transformation preserving system solutions
-      - **dimension**: rows by columns descriptor of a matrix
-      
-      
-      ### Worked Example
-      Solve $\\begin{cases}x+y=7\\2x-y=5\end{cases}$ by elimination.
-      
-      Add equations: $3x=12$, so $x=4$. Substitute into $x+y=7$ to get $y=3$.
-      
-      A quick matrix check with $\\begin{bmatrix}1&1\\2&-1\end{bmatrix}$ confirms a nonzero determinant, so the solution is unique.
+# 🏆 Matrices — Full Synthesis
+
+**Part 7 of 7**
+
+### Master Reference
+
+| Tool | When to Use |
+|:-----|:-----------|
+| Addition/Scalar mult | Combine or scale data |
+| Multiplication $AB$ | Compose transformations, solve systems |
+| Determinant | Check invertibility, find area |
+| Inverse $A^{-1}$ | Solve $A\\vec{x}=\\vec{b}$ directly |
+| Cramer's Rule | Quick solve small systems |
+| Gaussian elimination | Systematic solve of any system |
+| Transformation matrices | Geometry (rotate, reflect, scale) |
+
+### Invertibility Checklist
+
+A matrix is invertible when:
+- $\\det(A) \\neq 0$
+- Row reduces to identity
+- $A\\vec{x} = \\vec{b}$ has a unique solution for every $\\vec{b}$
+- Columns are linearly independent
+- Zero is NOT an eigenvalue
       `
     },
     {
-      id: 'precalc-matrices-precalc-p7-s2-mcq-core',
+      id: 'p7-compare',
+      type: 'text' as const,
+      content: `
+## 🔄 Method Comparison: Solving Systems
+
+### Small Systems (2×2)
+- **Fastest**: Cramer's Rule or inverse formula
+- $x = D_x/D$, $y = D_y/D$
+
+### Medium Systems (3×3)
+- **Best**: Gaussian elimination
+- Systematic, always works, handles special cases
+
+### Large Systems
+- **Standard**: RREF (computer-assisted)
+- Technology: calculators, MATLAB, Python
+
+### When Each Method Fails
+
+| Method | Fails When |
+|:-------|:----------|
+| Cramer's | $\\det = 0$ |
+| Inverse | $\\det = 0$ |
+| Gauss | Never fails — reveals no solution or $\\infty$ solutions |
+
+> 💡 Gaussian elimination is the **most robust** method.
+      `
+    },
+    {
+      id: 'p7-connect',
+      type: 'text' as const,
+      content: `
+## 🔗 Linear Algebra Preview
+
+### Eigenvalues & Eigenvectors
+
+$A\\vec{v} = \\lambda \\vec{v}$ — special vectors that are only scaled (not rotated).
+
+For $A = \\begin{bmatrix} 2 & 1 \\\\ 0 & 3 \\end{bmatrix}$:
+
+$\\det(A - \\lambda I) = 0 \\implies (2-\\lambda)(3-\\lambda) = 0$
+
+Eigenvalues: $\\lambda = 2, 3$.
+
+### Applications of Matrices
+
+- **Computer Graphics**: transformations for 3D rendering
+- **Machine Learning**: data processing, neural networks
+- **Economics**: input-output models
+- **Physics**: quantum mechanics states
+- **Cryptography**: encoding/decoding messages
+
+### From Precalc to Linear Algebra
+
+Precalc matrices → Linear algebra → Abstract algebra → Modern math!
+      `
+    },
+    {
+      id: 'p7-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Synthesis Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of augmented matrix.',
-            options: [
-              'legal transformation preserving system solutions',
-              'rows by columns descriptor of a matrix',
-              'system coefficients with constants in one array',
-              'single value identified by row and column'
-            ],
-            correctAnswer: 2,
-            explanation: 'augmented matrix is defined as: system coefficients with constants in one array.'
+            question: '$\\det \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} = 0$ implies:',
+            options: ['Unique solution', 'No inverse exists', 'The matrix equals zero', 'Rows are orthogonal'],
+            correctAnswer: 1,
+            explanation: 'Det = 0 → singular → no inverse → no unique solution.'
           },
           {
-            question: 'In integrating operations in mixed-response problems, which expression is the best starting model?',
-            options: [
-              '$\\det\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}=ad-bc$',
-              '$A^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\\\-c&a\\end{bmatrix}$',
-              '$AI=IA=A$',
-              '$(AB)_{ij}=\\sum_k a_{ik}b_{kj}$'
-            ],
-            correctAnswer: 3,
-            explanation: 'Use $(AB)_{ij}=\\sum_k a_{ik}b_{kj}$ first, then substitute known quantities from the prompt.'
+            question: 'Which method ALWAYS reveals the type of solution?',
+            options: ['Cramer\'s Rule', 'Inverse method', 'Gaussian elimination', 'Substitution'],
+            correctAnswer: 2,
+            explanation: 'Gauss-Jordan: unique ($I$), infinite (free variables), none ($0=c$).'
+          },
+          {
+            question: '$A = \\begin{bmatrix} 2 & 0 \\\\ 0 & 5 \\end{bmatrix}$. $A^{-1}$?',
+            options: ['$\\begin{bmatrix} 1/2 & 0 \\\\ 0 & 1/5 \\end{bmatrix}$', '$\\begin{bmatrix} 5 & 0 \\\\ 0 & 2 \\end{bmatrix}$', '$\\begin{bmatrix} 2 & 0 \\\\ 0 & 5 \\end{bmatrix}$', 'Does not exist'],
+            correctAnswer: 0,
+            explanation: 'Diagonal inverse: reciprocal of each diagonal entry. $\\det=10\\neq 0$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-matrices-precalc-p7-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Product entry | $(AB)_{ij}=\sum_k a_{ik}b_{kj}$ | matrix multiplication |
-      | Identity action | $AI=IA=A$ | structure check |
-      | 2x2 determinant | $\det\\begin{bmatrix}a&b\\c&d\end{bmatrix}=ad-bc$ | invertibility test |
-      | 2x2 inverse | $A^{-1}=\\frac{1}{ad-bc}\\begin{bmatrix}d&-b\\-c&a\end{bmatrix}$ | solving small systems |
-      
-      ### Common pitfalls
-      - Matrix multiplication is not commutative in general.
-      - Dimension mismatch blocks addition or multiplication.
-      - A zero determinant means no inverse exists.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-matrices-precalc-p7-s4-input',
+      id: 'p7-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Matrix Mechanics**
-      
-      1) Compute $\det\\begin{bmatrix}5&2\\3&4\end{bmatrix}$.
-      2) Compute first entry of $\\begin{bmatrix}1&2\\0&1\end{bmatrix}\\begin{bmatrix}3\\4\end{bmatrix}$.
-      3) Compute trace of $\\begin{bmatrix}2&1\\5&7\end{bmatrix}$.
+**Final Calculations** 🧮
+
+**1)** $\\det \\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \\end{bmatrix}$ = ?
+
+**2)** $\\begin{bmatrix} 1 & 2 \\\\ 0 & 3 \\end{bmatrix} \\begin{bmatrix} 1 \\\\ 1 \\end{bmatrix}$: top entry = ?
+
+**3)** Eigenvalues of $\\begin{bmatrix} 5 & 0 \\\\ 0 & 2 \\end{bmatrix}$: sum = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['14', '11', '9'],
-        hint1: 'Use $ad-bc$.',
-        hint2: 'Dot first row with the column vector.',
-        hint3: 'Trace is the sum of diagonal entries.',
-        explanation: 'Determinant is 14, product entry is 11, and trace is 9.'
+        correctAnswers: ['-2', '3', '7'],
+        hint1: '$1(4)-2(3) = -2$.',
+        hint2: '$1(1)+2(1) = 3$.',
+        hint3: 'Diagonal matrix: eigenvalues are the diagonal entries. $5+2=7$.',
+        explanation: '1) $-2$. 2) $3$. 3) $5+2=7$.'
       }
     },
     {
-      id: 'precalc-matrices-precalc-p7-s5-dropdown',
+      id: 'p7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Matrices Master** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'augmented matrix',
-            options: ['system coefficients with constants in one array', 'rows by columns descriptor of a matrix', 'single value identified by row and column', 'legal transformation preserving system solutions']
+            label: 'Matrix multiplication order matters because:',
+            options: ['Not commutative', 'Not associative', 'Not defined', 'Always gives zero'],
+            correctAnswer: 0
           },
           {
-            label: 'row operation',
-            options: ['composition of linear mappings', 'single value identified by row and column', 'legal transformation preserving system solutions', 'rows by columns descriptor of a matrix']
+            label: 'The identity matrix $I$ satisfies:',
+            options: ['$AI = A$', '$IA = A$', '$AI = IA = A$', '$I = 0$'],
+            correctAnswer: 2
           },
           {
-            label: 'dimension',
-            options: ['composition of linear mappings', 'scalar indicating area scaling and invertibility in $2	imes2$', 'rows by columns descriptor of a matrix', 'single value identified by row and column']
+            label: '$\\det(AB) = ?$',
+            options: ['$\\det(A)+\\det(B)$', '$\\det(A) \\cdot \\det(B)$', '$\\det(A+B)$', '$\\det(A)/\\det(B)$'],
+            correctAnswer: 1
+          },
+          {
+            label: 'Eigenvalues of the identity matrix:',
+            options: ['All 0', 'All 1', 'All -1', 'Undefined'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['system coefficients with constants in one array', 'legal transformation preserving system solutions', 'rows by columns descriptor of a matrix'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: augmented matrix, row operation, and dimension align with their exact definitions used in this part.'
+        correctAnswers: ['Not commutative', '$AI = IA = A$', '$\\det(A) \\cdot \\det(B)$', 'All 1'],
+        hint1: '$AB \\neq BA$ generally.',
+        hint2: 'Identity works on both sides.',
+        hint3: 'Determinant is multiplicative.',
+        explanation: 'Not commutative. $AI=IA=A$. $\\det(AB)=\\det(A)\\det(B)$. $I\\vec{v}=1\\cdot\\vec{v}$.'
       }
     },
     {
-      id: 'precalc-matrices-precalc-p7-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to augmented matrix, row operation, and dimension so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-matrices-precalc-p7-s7-mcq-applied',
+      id: 'p7-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is integrating operations in mixed-response problems. Which term best anchors the next reasoning step if the key idea is: single value identified by row and column?',
-            options: [
-              'row operation',
-              'dimension',
-              'entry',
-              'augmented matrix'
-            ],
+            question: 'Best method for a 5×5 system?',
+            options: ['Cramer\'s Rule', 'Substitution', 'Gaussian elimination / RREF', 'Graphing'],
             correctAnswer: 2,
-            explanation: 'entry matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'For large systems, Gaussian elimination (especially with technology) is by far the best.'
           },
           {
-            question: 'A student is solving a mixed matrices prompt. Which term best anchors the next reasoning step if the key idea is: composition of linear mappings?',
-            options: [
-              'entry',
-              'determinant',
-              'dimension',
-              'matrix product'
-            ],
-            correctAnswer: 3,
-            explanation: 'matrix product matches that description and keeps the model-to-interpretation chain consistent.'
+            question: '$A^2 = I$ (involution). Then $A^{-1} = ?$',
+            options: ['$A$', '$I$', '$-A$', '$A^2$'],
+            correctAnswer: 0,
+            explanation: '$A^2=I \\implies A \\cdot A = I \\implies A^{-1} = A$. $A$ is its own inverse!'
           }
         ]
       }

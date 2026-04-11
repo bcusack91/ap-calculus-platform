@@ -4,13 +4,24 @@ export const chemReactionRatesAndRateLawsPart6Data = {
     {
       id: 'rr6-intro',
       type: 'text' as const,
-      content: `
-# 🔧 Problem-Solving Workshop
+      content: `# 🔧 Problem-Solving Workshop
 
 **Part 6 of 7 — Rate Law Problems from Data Tables**
 
-This workshop focuses on building fluency with rate law determination from experimental data. You will work through progressively challenging problems that mirror AP Chemistry exam questions.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'rr6-strategy',
@@ -28,14 +39,16 @@ This workshop focuses on building fluency with rate law determination from exper
 6. ✅ Verify $k$ using a second experiment
 7. ✅ Check that units of $k$ are consistent with the overall order
 
+> 🔑 **Key Concept:** Always verify your rate constant by plugging it into a **different experiment** than the one you used to calculate it. If the predicted rate matches, your rate law is correct.
+
 
 ---
 
 ### Tip for the AP Exam
 
-When the rate ratio is not a clean power, use logarithms:
+> 💡 **Tip:** When the rate ratio is not a clean power, use logarithms:
 
-$$m = \\frac{\\log(\\text{Rate ratio})}{\\log(\\text{Concentration ratio})}$$
+$$\boxed{m = \frac{\log(\text{Rate ratio})}{\log(\text{Concentration ratio})}}$$
       `
     },
     {

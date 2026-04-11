@@ -6,7 +6,29 @@ export const chemElectronConfigPart2Data = {
       type: 'text' as const,
       content: `# Part 2: Energy Levels and Subshells
 
-Electrons don't just float randomly around the nucleus — they occupy specific **energy levels** and **subshells**. Understanding this organization is the foundation of electron configuration.`
+**Part 2 of 7 — Orbital Filling Order**
+
+---
+
+### Energy Level Overview
+
+| Level (n) | Subshells Available | Max Electrons ($2n^2$) |
+|-----------|--------------------|-----------------------|
+| 1 | 1s | 2 |
+| 2 | 2s, 2p | 8 |
+| 3 | 3s, 3p, 3d | 18 |
+| 4 | 4s, 4p, 4d, 4f | 32 |
+
+The filling order **does not** follow simple numerical order — 4s fills before 3d!
+
+> 🔑 **Why this matters:** The Aufbau filling order determines where every electron goes, and it explains why the periodic table is shaped the way it is.
+
+---
+
+### What You'll Master in Part 2
+- Understanding principal energy levels and the $2n^2$ formula
+- Knowing the four subshell types (s, p, d, f) and their capacities
+- Memorizing the Aufbau filling order with the diagonal rule`
     },
     {
       id: 'ec2-principal-levels',
@@ -24,7 +46,7 @@ The **principal quantum number (n)** describes the main energy level of an elect
 
 The formula for the maximum number of electrons in a principal energy level is:
 
-$$\\text{Max electrons} = 2n^2$$
+$$\\boxed{\\text{Max electrons} = 2n^2}$$
 
 As *n* increases, the energy level is farther from the nucleus on average and the electrons have higher energy.`
     },
@@ -80,6 +102,8 @@ Electrons fill subshells in order of **increasing energy**, not simply by princi
 
 Notice that **4s fills before 3d** — this is because 4s is lower in energy than 3d for most elements.
 
+> ⚠️ **AP Watch Out:** The filling order is NOT the same as the shell order. 4s fills before 3d, 5s before 4d, 6s before 4f. This catches many students on the exam.
+
 **The diagonal rule** is a visual trick to remember this order:
 
 Write the subshells in a grid and draw diagonal arrows from upper-right to lower-left:
@@ -128,7 +152,7 @@ Determine which subshell fills next in the Aufbau order.`,
       type: 'input-box' as const,
       content: `### Maximum Electron Calculations
 
-Use the formula \\(2n^2\\) to determine the maximum number of electrons in a principal energy level.`,
+Use the formula $2n^2$ to determine the maximum number of electrons in a principal energy level.`,
       exercise: {
         inputs: [
           {
@@ -147,14 +171,43 @@ Use the formula \\(2n^2\\) to determine the maximum number of electrons in a pri
     {
       id: 'ec2-summary',
       type: 'text' as const,
-      content: `## 📌 Key Takeaways
+      content: `## � Part 2 Summary: Energy Levels & Subshells
 
-1. **Principal quantum number (n)** determines the main energy level; max electrons = \\(2n^2\\).
-2. **Subshells** (s, p, d, f) hold 2, 6, 10, and 14 electrons respectively.
-3. The **Aufbau filling order** follows the diagonal rule — energy order differs from simple numerical order (e.g., 4s fills before 3d).
-4. Each **orbital** holds at most 2 electrons with opposite spins.
+---
 
-In Part 3, we will use these rules to write complete electron configurations for real elements.`
+### 🧰 Quick Reference
+
+| Subshell | l value | # Orbitals | Max Electrons |
+|----------|---------|------------|---------------|
+| s | 0 | 1 | 2 |
+| p | 1 | 3 | 6 |
+| d | 2 | 5 | 10 |
+| f | 3 | 7 | 14 |
+
+---
+
+### 📌 Key Concepts
+
+| Concept | Rule | Example |
+|---------|------|---------|
+| Energy level capacity | Max electrons = $2n^2$ | n = 3 → 18 electrons max |
+| Aufbau filling order | Fill lowest energy first | 4s fills before 3d |
+| Orbital capacity | Max 2 electrons per orbital | Opposite spins (↑↓) |
+
+---
+
+### ✅ Your Checklist Before Moving On
+
+- ☐ I know the four subshell types and how many electrons each holds
+- ☐ I can use the diagonal rule to determine filling order
+- ☐ I understand that energy order ≠ numerical order (4s < 3d)
+- ☐ I know that each orbital holds at most 2 electrons with opposite spins
+
+---
+
+### 🔮 What's Next
+
+In **Part 3**, we will use these rules to **write complete electron configurations** for real elements — from hydrogen all the way through the transition metals.`
     }
   ]
 }

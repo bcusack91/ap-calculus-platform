@@ -2,186 +2,194 @@ export const precalcSystemsPart6Data = {
   topicSlug: 'systems-of-equations-precalc',
   sections: [
     {
-      id: 'precalc-systems-of-equations-precalc-p6-s1-intro',
+      id: 'p6-intro',
       type: 'text' as const,
       content: `
-      ## Systems of Equations: Applied mixture and constraint models
-      
-      **Part 6 of 7**
-      
-      This part focuses on handling two-condition application problems. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **elimination**: combine equations to remove a variable
-      - **coefficient matrix**: matrix containing variable coefficients
-      - **determinant test**: nonzero determinant implies unique 2x2 linear solution
-      
-      
-      ### Worked Example
-      Part 6 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🌍 Applications of Systems
+
+**Part 6 of 7**
+
+### Mixture Problems
+
+**Problem**: Mix a 30% acid solution with a 70% acid solution to get 100 mL of 40% acid.
+
+Let $x$ = mL of 30%, $y$ = mL of 70%.
+
+$$\\begin{cases} x + y = 100 \\\\ 0.30x + 0.70y = 40 \\end{cases}$$
+
+From eq1: $y = 100-x$. Substitute:
+
+$0.30x + 0.70(100-x) = 40$
+
+$0.30x + 70 - 0.70x = 40$
+
+$-0.40x = -30 \\implies x = 75$
+
+**Answer**: 75 mL of 30% and 25 mL of 70%.
       `
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p6-s2-mcq-core',
+      id: 'p6-motion',
+      type: 'text' as const,
+      content: `
+## ✈️ Distance/Rate/Time Problems
+
+### With Wind / Current
+
+| Direction | Rate | Time | Distance |
+|:----------|:-----|:-----|:---------|
+| With wind | $p + w$ | $t_1$ | $d$ |
+| Against wind | $p - w$ | $t_2$ | $d$ |
+
+**Example**: Plane flies 600 mi with wind in 2 hrs, return in 3 hrs.
+
+$$\\begin{cases} (p+w) \\cdot 2 = 600 \\\\ (p-w) \\cdot 3 = 600 \\end{cases}$$
+
+$p+w = 300$ and $p-w = 200$.
+
+Add: $2p = 500 \\implies p = 250$ mph. $w = 50$ mph.
+
+### Relative Motion
+
+Two trains leave same station in opposite directions at 60 and 80 mph. When are they 350 mi apart?
+
+$60t + 80t = 350 \\implies 140t = 350 \\implies t = 2.5$ hours.
+      `
+    },
+    {
+      id: 'p6-money',
+      type: 'text' as const,
+      content: `
+## 💰 Investment & Work Problems
+
+### Investment
+
+\\$10,000 split between 5% and 8% annual interest, earning \\$680 total.
+
+$$\\begin{cases} x + y = 10000 \\\\ 0.05x + 0.08y = 680 \\end{cases}$$
+
+$x = 10000-y$: $0.05(10000-y)+0.08y=680$
+
+$500-0.05y+0.08y=680 \\implies 0.03y=180 \\implies y=6000$
+
+**\\$4,000 at 5%** and **\\$6,000 at 8%**.
+
+### Work Rate Problems
+
+Worker A: job in 6 hrs. Worker B: job in 4 hrs. Together?
+
+Rates: $\\frac{1}{6} + \\frac{1}{4} = \\frac{2+3}{12} = \\frac{5}{12}$
+
+Time together: $\\frac{12}{5} = 2.4$ hours.
+
+> 💡 The key to word problems: **define variables clearly** and **write equations for each constraint**.
+      `
+    },
+    {
+      id: 'p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Applications Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of elimination.',
-            options: [
-              'nonzero determinant implies unique 2x2 linear solution',
-              'matrix containing variable coefficients',
-              'all ordered pairs satisfying every equation',
-              'combine equations to remove a variable'
-            ],
-            correctAnswer: 3,
-            explanation: 'elimination is defined as: combine equations to remove a variable.'
+            question: 'Tickets: adults \\$8, kids \\$5. 200 tickets, \\$1,300. How many adults?',
+            options: ['100', '120', '80', '150'],
+            correctAnswer: 0,
+            explanation: '$8a+5(200-a)=1300 \\implies 3a=300 \\implies a=100$.'
           },
           {
-            question: 'In handling two-condition application problems, which expression is the best starting model?',
-            options: [
-              '$x=\\frac{c_1b_2-c_2b_1}{\\Delta}$',
-              '$\\Delta=a_1b_2-a_2b_1$',
-              '$y=\\frac{a_1c_2-a_2c_1}{\\Delta}$',
-              '$\\begin{cases}a_1x+b_1y=c_1\\\\a_2x+b_2y=c_2\\end{cases}$'
-            ],
+            question: 'Boat: 12 km/hr in still water, current 3 km/hr. Upstream speed?',
+            options: ['9 km/hr', '15 km/hr', '12 km/hr', '6 km/hr'],
+            correctAnswer: 0,
+            explanation: 'Upstream: $12-3 = 9$ km/hr.'
+          },
+          {
+            question: 'If workers A and B can each finish alone in 5 and 10 hrs, their combined rate is:',
+            options: ['$1/15$', '$3/10$', '$1/5$', '$2/15$'],
             correctAnswer: 1,
-            explanation: 'Use $\\Delta=a_1b_2-a_2b_1$ first, then substitute known quantities from the prompt.'
+            explanation: '$1/5 + 1/10 = 2/10 + 1/10 = 3/10$ of the job per hour.'
           }
         ]
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p6-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Determinant | $\Delta=a_1b_2-a_2b_1$ | uniqueness criterion |
-      | Cramer's x | $x=\\frac{c_1b_2-c_2b_1}{\Delta}$ | explicit solution form |
-      | Cramer's y | $y=\\frac{a_1c_2-a_2c_1}{\Delta}$ | explicit solution form |
-      | Linear system | $\\begin{cases}a_1x+b_1y=c_1\\a_2x+b_2y=c_2\end{cases}$ | two-variable framework |
-      
-      ### Common pitfalls
-      - State whether the system has one, none, or infinitely many solutions.
-      - Parallel lines in graph form indicate no solution.
-      - Arithmetic sign slips in elimination often flip outcomes.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-systems-of-equations-precalc-p6-s4-input',
+      id: 'p6-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Solving Systems**
-      
-      1) Solve for $x$: $x+y=10$, $x-y=2$.
-      2) Solve for $y$: $2x+3y=12$, $x-y=1$.
-      3) Compute determinant of $\\begin{bmatrix}2&1\\5&3\end{bmatrix}$.
+**Word Problems** 🧮
+
+**1)** Sum of two numbers is 20, difference is 6. Larger number = ?
+
+**2)** 40% + 60% solutions mixed to get 200 mL of 45%. How many mL of 40%?
+
+**3)** \\$5,000 at rate $r$ earns \\$350/yr. Rate (%) = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6', '2', '1'],
-        hint1: 'Add the two equations to eliminate $y$.',
-        hint2: 'Use substitution from $x=y+1$.',
-        hint3: 'Use $ad-bc$ for the determinant.',
-        explanation: 'The system gives $x=6$ and $y=2$, with determinant 1 confirming uniqueness.'
+        correctAnswers: ['13', '150', '7'],
+        hint1: '$x+y=20, x-y=6 \\implies 2x=26$.',
+        hint2: '$0.4x+0.6(200-x)=90 \\implies -0.2x=-30$.',
+        hint3: '$5000r = 350 \\implies r = 0.07 = 7\\%$.',
+        explanation: '1) $13$. 2) $150$ mL. 3) $7$%.'
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p6-s5-dropdown',
+      id: 'p6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Problem Setup** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'elimination',
-            options: ['matrix containing variable coefficients', 'nonzero determinant implies unique 2x2 linear solution', 'all ordered pairs satisfying every equation', 'combine equations to remove a variable']
+            label: 'Mixture problems always have:',
+            options: ['A total amount equation', 'A concentration equation', 'Both', 'Neither'],
+            correctAnswer: 2
           },
           {
-            label: 'coefficient matrix',
-            options: ['system with at least one solution', 'nonzero determinant implies unique 2x2 linear solution', 'matrix containing variable coefficients', 'all ordered pairs satisfying every equation']
+            label: 'Against the current, effective speed is:',
+            options: ['Boat + current', 'Boat - current', 'Boat × current', 'Current - boat'],
+            correctAnswer: 1
           },
           {
-            label: 'determinant test',
-            options: ['system with at least one solution', 'nonzero determinant implies unique 2x2 linear solution', 'system with no common solution', 'all ordered pairs satisfying every equation']
+            label: 'First step in any word problem:',
+            options: ['Solve the equation', 'Define variables', 'Graph the system', 'Use matrices'],
+            correctAnswer: 1
+          },
+          {
+            label: 'Work rate formula: combined rate =',
+            options: ['$r_1 + r_2$', '$r_1 \\times r_2$', '$1/(r_1 + r_2)$', '$r_1 - r_2$'],
+            correctAnswer: 0
           }
         ],
-        correctAnswers: ['combine equations to remove a variable', 'matrix containing variable coefficients', 'nonzero determinant implies unique 2x2 linear solution'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: elimination, coefficient matrix, and determinant test align with their exact definitions used in this part.'
+        correctAnswers: ['Both', 'Boat - current', 'Define variables', '$r_1 + r_2$'],
+        hint1: 'Total volume AND total solute.',
+        hint2: 'Current opposes: subtract.',
+        hint3: 'Can\'t write equations without knowing what $x$ and $y$ represent.',
+        explanation: 'Mixtures: total + concentration. Against current: subtract. First: define variables. Rates add.'
       }
     },
     {
-      id: 'precalc-systems-of-equations-precalc-p6-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to elimination, coefficient matrix, and determinant test so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-systems-of-equations-precalc-p6-s7-mcq-applied',
+      id: 'p6-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is handling two-condition application problems. Which term best anchors the next reasoning step if the key idea is: all ordered pairs satisfying every equation?',
-            options: [
-              'coefficient matrix',
-              'elimination',
-              'determinant test',
-              'solution set'
-            ],
-            correctAnswer: 3,
-            explanation: 'solution set matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Two numbers: product 72, sum 18. What are they?',
+            options: ['6 and 12', '8 and 10', '9 and 9', '4 and 14'],
+            correctAnswer: 0,
+            explanation: '$x(18-x)=72 \\implies x^2-18x+72=0 \\implies (x-6)(x-12)=0$.'
           },
           {
-            question: 'A student is solving a mixed systems of equations prompt. Which term best anchors the next reasoning step if the key idea is: system with at least one solution?',
-            options: [
-              'solution set',
-              'inconsistent system',
-              'consistent system',
-              'determinant test'
-            ],
-            correctAnswer: 2,
-            explanation: 'consistent system matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'Train A (60 mph) leaves 1 hr before Train B (80 mph), same direction. When does B catch A?',
+            options: ['3 hours after B leaves', '4 hours after B leaves', '2 hours after B leaves', 'Never'],
+            correctAnswer: 0,
+            explanation: '$60(t+1) = 80t \\implies 60t+60=80t \\implies 20t=60 \\implies t=3$ hrs.'
           }
         ]
       }

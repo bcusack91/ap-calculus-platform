@@ -4,19 +4,38 @@ export const chemReactionTypesPart5Data = {
     {
       id: 'rt5-intro',
       type: 'text' as const,
-      content: `
-# 🔮 Predicting Products
+      content: `# 🔮 Predicting Products
 
 **Part 5 of 7 — Using Reaction Types to Predict What Forms**
 
-One of the most important skills in chemistry is being able to look at reactants and predict what the products will be. The key is to first **identify the reaction type**, then apply the pattern for that type.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🎯 Product Prediction Strategy |
+| Step 1: Classify the Reactants |
+| Step 2: Apply the Pattern |
+| Step 3: Balance the Equation |
+| 🎯 Predicting Synthesis Products |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rt5-strategy',
       type: 'text' as const,
       content: `
 ## 🎯 Product Prediction Strategy
+
+> 🔑 **Key Concept:** The key to predicting products is to first **identify the reaction type**, then apply the pattern for that type.
 
 ### Step 1: Classify the Reactants
 
@@ -110,7 +129,8 @@ Use charges to determine the formula:
 
 ### Key Memory Tool
 
-Think of decomposition as "un-synthesizing" — the reverse of combining:
+> 💡 **Tip:** Think of decomposition as "un-synthesizing" — the reverse of combining:
+
 - Carbonates → oxide + CO₂
 - Hydroxides → oxide + H₂O  
 - Chlorates → chloride + O₂
@@ -130,6 +150,8 @@ Think of decomposition as "un-synthesizing" — the reverse of combining:
 $$\\text{Zn} + \\text{CuSO}_4 \\rightarrow \\text{ZnSO}_4 + \\text{Cu}$$
 
 Zn replaces Cu because Zn is higher in the activity series.
+
+> ⚠️ **Warning:** A common error is forgetting to check the activity series. If the free element is **below** the element in the compound, write **NR** (no reaction).
 
 
 ---

@@ -2,188 +2,198 @@ export const precalcContinuityPart6Data = {
   topicSlug: 'continuity-precalc',
   sections: [
     {
-      id: 'precalc-continuity-precalc-p6-s1-intro',
+      id: 'p6-intro',
       type: 'text' as const,
       content: `
-      ## Continuity: Piecewise definitions and endpoint checks
-      
-      **Part 6 of 7**
-      
-      This part focuses on testing continuity in piecewise shipping costs. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **one-sided limit**: limit from only the left or only the right
-      - **IVT**: continuous functions on closed intervals take all intermediate values
-      - **piecewise function**: rule changes across intervals of the domain
-      
-      
-      ### Worked Example
-      Part 6 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🔬 Continuity & Limits — Deep Connections
+
+**Part 6 of 7**
+
+### Continuity IS a Limit Statement
+
+The definition of continuity at $c$ is exactly:
+
+$$\\lim_{x \\to c} f(x) = f(c)$$
+
+This single equation packs all three conditions:
+- $f(c)$ must be defined (right side exists)
+- The limit must exist (left side exists)
+- They must be equal
+
+### Composites and Continuity
+
+If $g$ is continuous at $c$ and $f$ is continuous at $g(c)$, then $f \\circ g$ is continuous at $c$.
+
+$$\\lim_{x \\to c} f(g(x)) = f\\left(\\lim_{x \\to c} g(x)\\right) = f(g(c))$$
+
+You can "pass the limit inside" a continuous function!
       `
     },
     {
-      id: 'precalc-continuity-precalc-p6-s2-mcq-core',
+      id: 'p6-swap',
+      type: 'text' as const,
+      content: `
+## Swapping Limits and Continuous Functions
+
+### The Rule
+
+If $f$ is continuous: $\\lim_{x \\to c} f(g(x)) = f(\\lim_{x \\to c} g(x))$
+
+### Example 1
+
+$$\\lim_{x \\to 0} \\sqrt{4 + \\sin x} = \\sqrt{\\lim_{x \\to 0}(4 + \\sin x)} = \\sqrt{4 + 0} = 2$$
+
+We pulled the limit inside $\\sqrt{\\phantom{x}}$ because square root is continuous.
+
+### Example 2
+
+$$\\lim_{x \\to 1} e^{x^2-1} = e^{\\lim_{x \\to 1}(x^2-1)} = e^0 = 1$$
+
+We pulled the limit inside $e^{\\phantom{x}}$ because the exponential is continuous.
+
+### When You CANNOT Swap
+
+If the outer function is NOT continuous at the limit value, this doesn't work. For example, floor function: $\\lim_{x \\to 2} \\lfloor x \\rfloor \\neq \\lfloor \\lim_{x \\to 2} x \\rfloor$ when the limit is at a discontinuity of $\\lfloor \\cdot \\rfloor$.
+      `
+    },
+    {
+      id: 'p6-abs',
+      type: 'text' as const,
+      content: `
+## Special Cases
+
+### Absolute Value and Continuity
+
+$|x|$ is continuous everywhere but NOT differentiable at $x = 0$. This is an important distinction:
+
+**Continuous ≠ Differentiable**
+
+Continuity is necessary for differentiability, but NOT sufficient.
+
+### Continuous but Not Differentiable Examples
+
+- $|x|$ at $x = 0$ (sharp corner)
+- $\\sqrt[3]{x}$ at $x = 0$ (vertical tangent)
+- $x\\sin(1/x)$ at $x = 0$ (if defined as 0 there)
+
+### Differentiable → Continuous (Always True!)
+
+If $f$ is differentiable at $c$, then $f$ is continuous at $c$.
+
+**Proof sketch**: $f(x) - f(c) = \\frac{f(x)-f(c)}{x-c} \\cdot (x-c) \\to f'(c) \\cdot 0 = 0$
+
+So $\\lim_{x \\to c} f(x) = f(c)$. ✓
+
+### The Hierarchy
+
+$$\\text{Differentiable} \\subset \\text{Continuous} \\subset \\text{Has limits}$$
+      `
+    },
+    {
+      id: 'p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Deep Connections Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of one-sided limit.',
-            options: [
-              'value approached by a function as input approaches a target',
-              'limit from only the left or only the right',
-              'rule changes across intervals of the domain',
-              'continuous functions on closed intervals take all intermediate values'
-            ],
+            question: '$\\lim_{x \\to 0} e^{\\sin x}$ = ?',
+            options: ['$0$', '$1$', '$e$', 'DNE'],
             correctAnswer: 1,
-            explanation: 'one-sided limit is defined as: limit from only the left or only the right.'
+            explanation: '$e$ is continuous, so $e^{\\lim \\sin x} = e^0 = 1$.'
           },
           {
-            question: 'In testing continuity in piecewise shipping costs, which expression is the best starting model?',
-            options: [
-              '$\\lim_{x\\to a^-}f(x)=\\lim_{x\\to a^+}f(x)$',
-              '$\\lim_{x\\to a} f(x) = f(a)$',
-              '$\\frac{x^2-c^2}{x-c}=x+c\\;(x\\neq c)$',
-              '$\\frac{f(b)-f(a)}{b-a}$'
-            ],
-            correctAnswer: 3,
-            explanation: 'Use $\\frac{f(b)-f(a)}{b-a}$ first, then substitute known quantities from the prompt.'
+            question: 'Every differentiable function is:',
+            options: ['Polynomial', 'Continuous', 'Monotonic', 'Bounded'],
+            correctAnswer: 1,
+            explanation: 'Differentiability implies continuity. Always.'
+          },
+          {
+            question: '$|x|$ at $x=0$ is:',
+            options: ['Continuous and differentiable', 'Continuous but not differentiable', 'Neither', 'Differentiable but not continuous'],
+            correctAnswer: 1,
+            explanation: '$|x|$ is continuous everywhere but has a sharp corner at 0 → not differentiable there.'
           }
         ]
       }
     },
     {
-      id: 'precalc-continuity-precalc-p6-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Average rate | $\\frac{f(b)-f(a)}{b-a}$ | bridge to local behavior |
-      | One-sided match | $\lim_{x\\to a^-}f(x)=\lim_{x\\to a^+}f(x)$ | two-sided existence |
-      | Rational hole repair | $\\frac{x^2-c^2}{x-c}=x+c\;(x\\neq c)$ | removable discontinuity cleanup |
-      | Continuity test | $\lim_{x\\to a} f(x) = f(a)$ | pointwise verification |
-      
-      ### Common pitfalls
-      - For piecewise functions, evaluate left limit, right limit, and value separately.
-      - A defined value at $x=a$ does not guarantee continuity.
-      - Do not classify a vertical asymptote as removable.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-continuity-precalc-p6-s4-input',
+      id: 'p6-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Continuity and Limits**
-      
-      1) Compute $\lim_{x	o 3} (2x^2-x)$. 
-      2) Compute $
-      rac{f(5)-f(2)}{5-2}$ for $f(x)=x^2$.
-      3) Compute $\lim_{x	o 4}
-      rac{x^2-16}{x-4}$.
+**Evaluate using continuity:**
+
+**1)** $\\lim_{x \\to \\pi} \\cos(x)$ = ?
+
+**2)** $\\lim_{x \\to 4} \\sqrt{x + 5}$ = ?
+
+**3)** $\\lim_{x \\to 0} e^{3x}$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['15', '7', '8'],
-        hint1: 'Polynomials are continuous, so substitute directly.',
-        hint2: 'Use average rate of change with two function values.',
-        hint3: 'Factor numerator as $(x-4)(x+4)$ before canceling.',
-        explanation: 'Direct substitution gives 15, average rate gives 7, and simplification gives 8.'
+        correctAnswers: ['-1', '3', '1'],
+        hint1: 'Cosine is continuous: $\\cos(\\pi) = -1$.',
+        hint2: 'Square root is continuous: $\\sqrt{9} = 3$.',
+        hint3: '$e^{3(0)} = e^0 = 1$.',
+        explanation: '(1) $\\cos \\pi = -1$. (2) $\\sqrt{4+5} = 3$. (3) $e^0 = 1$. Direct substitution works for continuous functions.'
       }
     },
     {
-      id: 'precalc-continuity-precalc-p6-s5-dropdown',
+      id: 'p6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Deep Connections** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'one-sided limit',
-            options: ['limit from only the left or only the right', 'rule changes across intervals of the domain', 'continuous functions on closed intervals take all intermediate values', 'value approached by a function as input approaches a target']
+            label: 'You can "pass a limit inside" a function when the function is:',
+            options: ['Differentiable', 'Continuous', 'Bounded', 'Periodic'],
+            correctAnswer: 1
           },
           {
-            label: 'IVT',
-            options: ['continuous functions on closed intervals take all intermediate values', 'limit exists and equals the function value', 'value approached by a function as input approaches a target', 'rule changes across intervals of the domain']
+            label: 'Differentiable ⟹ Continuous is:',
+            options: ['Always true', 'Sometimes true', 'Never true', 'Undefined'],
+            correctAnswer: 0
           },
           {
-            label: 'piecewise function',
-            options: ['limit exists and equals the function value', 'value approached by a function as input approaches a target', 'rule changes across intervals of the domain', 'hole created by cancellation or redefinition']
+            label: 'Continuous ⟹ Differentiable is:',
+            options: ['Always true', 'Sometimes true (not always)', 'Never true', 'Only for polynomials'],
+            correctAnswer: 1
+          },
+          {
+            label: '$|x|$ has a _____ at $x=0$:',
+            options: ['Smooth curve', 'Sharp corner', 'Vertical asymptote', 'Hole'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['limit from only the left or only the right', 'continuous functions on closed intervals take all intermediate values', 'rule changes across intervals of the domain'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: one-sided limit, IVT, and piecewise function align with their exact definitions used in this part.'
+        correctAnswers: ['Continuous', 'Always true', 'Sometimes true (not always)', 'Sharp corner'],
+        hint1: 'Continuity allows limit-function swap.',
+        hint2: 'Differentiable always implies continuous.',
+        hint3: 'Counterexample: $|x|$.',
+        explanation: 'Continuous: swap ok. Diff→Cont: always. Cont→Diff: not always (|x|). |x| has corner.'
       }
     },
     {
-      id: 'precalc-continuity-precalc-p6-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to one-sided limit, IVT, and piecewise function so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-continuity-precalc-p6-s7-mcq-applied',
+      id: 'p6-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is testing continuity in piecewise shipping costs. Which term best anchors the next reasoning step if the key idea is: value approached by a function as input approaches a target?',
-            options: [
-              'piecewise function',
-              'one-sided limit',
-              'limit',
-              'IVT'
-            ],
-            correctAnswer: 2,
-            explanation: 'limit matches that description and keeps the model-to-interpretation chain consistent.'
+            question: '$\\lim_{x \\to 2} \\ln(x^2 + 1)$ = ?',
+            options: ['$\\ln 5$', '$\\ln 3$', '$\\ln 4$', '$0$'],
+            correctAnswer: 0,
+            explanation: '$\\ln$ is continuous for positive arguments. $\\ln(4+1) = \\ln 5$.'
           },
           {
-            question: 'A student is solving a mixed continuity prompt. Which term best anchors the next reasoning step if the key idea is: limit exists and equals the function value?',
-            options: [
-              'limit',
-              'piecewise function',
-              'removable discontinuity',
-              'continuity at a point'
-            ],
-            correctAnswer: 3,
-            explanation: 'continuity at a point matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'The hierarchy from strongest to weakest:',
+            options: ['Continuous ⊂ Differentiable ⊂ Has limits', 'Has limits ⊂ Continuous ⊂ Differentiable', 'Differentiable ⊂ Continuous ⊂ Has limits', 'All are equivalent'],
+            correctAnswer: 2,
+            explanation: 'Differentiable is the strongest (smallest set), then continuous, then having limits.'
           }
         ]
       }

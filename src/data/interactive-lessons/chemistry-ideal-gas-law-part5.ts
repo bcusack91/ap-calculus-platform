@@ -4,13 +4,30 @@ export const chemIdealGasLawPart5Data = {
     {
       id: 'gl5-intro',
       type: 'text' as const,
-      content: `
-# 🎈 Dalton's Law of Partial Pressures
+      content: `# 🎈 Dalton's Law of Partial Pressures
 
 **Part 5 of 7 — Gas Mixtures**
 
-Most gases we encounter are actually **mixtures** — air itself is about 78% N₂, 21% O₂, and 1% Ar plus trace gases. **Dalton's Law** tells us how to handle the pressure contributions from each gas in a mixture.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📏 Dalton's Law |
+| Using the Ideal Gas Law |
+| Example |
+| ⚖️ Mole Fraction |
+| Example |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gl5-daltons-law',
@@ -20,7 +37,7 @@ Most gases we encounter are actually **mixtures** — air itself is about 78% N�
 
 The **total pressure** of a gas mixture equals the **sum of the partial pressures** of each component gas:
 
-$$P_{\\text{total}} = P_1 + P_2 + P_3 + \\cdots$$
+$$\\boxed{P_{\\text{total}} = P_1 + P_2 + P_3 + \\cdots}$$
 
 Each partial pressure is the pressure that gas would exert if it **alone** occupied the entire container.
 
@@ -44,7 +61,7 @@ $$P_{\\text{total}} = \\frac{n_{\\text{total}}RT}{V}$$
 
 > **Problem:** A 10.0 L container at 300 K holds 0.200 mol N₂ and 0.300 mol O₂.
 
-**Solution:**
+> **Solution:**
 
 $$P_{N_2} = \\frac{(0.200)(0.0821)(300)}{10.0} = 0.493 \\text{ atm}$$
 
@@ -65,7 +82,7 @@ $$\\chi_i = \\frac{n_i}{n_{\\text{total}}}$$
 
 The partial pressure is related to mole fraction by:
 
-$$P_i = \\chi_i \\times P_{\\text{total}}$$
+$$\\boxed{P_i = \\chi_i \\times P_{\\text{total}}}$$
 
 
 ---
@@ -74,7 +91,7 @@ $$P_i = \\chi_i \\times P_{\\text{total}}$$
 
 > **Problem:** A mixture has 2.0 mol He and 3.0 mol Ne at a total pressure of 5.0 atm.
 
-**Solution:**
+> **Solution:**
 
 $$\\chi_{He} = \\frac{2.0}{2.0 + 3.0} = 0.40$$
 
@@ -91,9 +108,9 @@ $$\\chi_{Ne} = \\frac{3.0}{5.0} = 0.60, \\quad P_{Ne} = 0.60 \\times 5.0 = 3.0 \
       content: `
 ## 💨 Gas Collection Over Water
 
-When a gas is collected by displacement of water, the collected gas is **mixed with water vapor**. You must subtract the vapor pressure of water:
+> 💡 **Tip:** When a gas is collected by displacement of water, the collected gas is **mixed with water vapor**. You must subtract the vapor pressure of water:
 
-$$P_{\\text{gas}} = P_{\\text{total}} - P_{\\text{H}_2\\text{O}}$$
+$$\\boxed{P_{\\text{gas}} = P_{\\text{total}} - P_{\\text{H}_2\\text{O}}}$$
 
 The vapor pressure of water depends on temperature (values are given in data tables).
 

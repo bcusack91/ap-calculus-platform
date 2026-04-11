@@ -4,13 +4,30 @@ export const chemOxidationReductionReactionsPart5Data = {
     {
       id: 'or5-intro',
       type: 'text' as const,
-      content: `
-# ⚡ Activity Series and Predicting Redox
+      content: `# ⚡ Activity Series and Predicting Redox
 
 **Part 5 of 7 — Metals Activity Series and Spontaneous Reactions**
 
-Not every possible redox reaction actually occurs. The **activity series** ranks metals (and hydrogen) by their tendency to lose electrons. This ranking lets you predict whether a single-replacement reaction will happen spontaneously.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 The Activity Series of Metals |
+| Ranked from Most Active to Least Active |
+| 📌 Using the Activity Series |
+| The Golden Rule |
+| Examples |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'or5-activity-series',
@@ -47,11 +64,11 @@ Not every possible redox reaction actually occurs. The **activity series** ranks
 
 ### The Golden Rule
 
-A metal can **displace** (replace) any metal **below it** in the activity series from a solution of that metal\'s ions.
+> 🔑 **Key Concept:** A metal can **displace** (replace) any metal **below it** in the activity series from a solution of that metal\'s ions.
 
-$$\\text{More active metal} + \\text{Less active metal ion} \\rightarrow \\text{Reaction occurs!}$$
+$$\\boxed{\\text{More active metal} + \\text{Less active metal ion} \\rightarrow \\text{Reaction occurs!}}$$
 
-$$\\text{Less active metal} + \\text{More active metal ion} \\rightarrow \\text{No reaction (NR)}$$
+$$\\boxed{\\text{Less active metal} + \\text{More active metal ion} \\rightarrow \\text{No reaction (NR)}}$$
 
 
 ---
@@ -74,7 +91,7 @@ Metals **above hydrogen** in the activity series react with dilute acids (HCl, H
 
 $$\\text{Zn}(s) + 2\\text{HCl}(aq) \\rightarrow \\text{ZnCl}_2(aq) + \\text{H}_2(g)$$
 
-Metals **below hydrogen** (Cu, Ag, Pt, Au) do **NOT** react with dilute HCl or H₂SO₄.
+> ⚠️ **Warning:** Metals **below hydrogen** (Cu, Ag, Pt, Au) do **NOT** react with dilute HCl or H₂SO₄.
       `
     },
     {
@@ -85,7 +102,7 @@ Metals **below hydrogen** (Cu, Ag, Pt, Au) do **NOT** react with dilute HCl or H
 
 ### Why Gold Doesn\'t Corrode
 
-Gold (Au) is at the **bottom** of the activity series. It cannot be oxidized by water, air, or common acids. This is why gold jewelry stays shiny for thousands of years.
+> 💡 **Tip:** Gold (Au) is at the **bottom** of the activity series — it cannot be oxidized by water, air, or common acids. This is why gold jewelry stays shiny for thousands of years.
 
 
 ---

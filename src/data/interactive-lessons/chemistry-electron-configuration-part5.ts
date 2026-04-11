@@ -6,7 +6,28 @@ export const chemElectronConfigPart5Data = {
       type: 'text' as const,
       content: `# Part 5: Exceptions and Ion Configurations
 
-The Aufbau principle works for most elements, but a handful of important exceptions exist. Additionally, when atoms form ions, the order of electron removal is NOT the same as the filling order. Both concepts are heavily tested on the AP exam.`
+**Part 5 of 7 — Exceptions & Ion Configurations**
+
+---
+
+### The Two Must-Know Exceptions
+
+| Element | Expected Config | Actual Config | Why? |
+|---------|----------------|---------------|------|
+| **Cr** (Z=24) | [Ar] 4s² 3d⁴ | **[Ar] 3d⁵ 4s¹** | Half-filled d⁵ is extra stable |
+| **Cu** (Z=29) | [Ar] 4s² 3d⁹ | **[Ar] 3d¹⁰ 4s¹** | Fully filled d¹⁰ is extra stable |
+
+And the critical ion rule: **remove electrons from the highest n first** (4s before 3d).
+
+> 🔑 **Why this matters:** These exceptions and the ion formation rule are among the most frequently tested topics on the AP Chemistry exam.
+
+---
+
+### What You'll Master in Part 5
+- Recognizing and writing the Cr and Cu exceptions
+- Forming cation configurations by removing from the highest n first
+- Writing anion configurations by adding electrons
+- Identifying isoelectronic species`
     },
     {
       id: 'ec5-exceptions',
@@ -28,7 +49,9 @@ The Aufbau principle works for most elements, but a handful of important excepti
 - **Exchange energy:** More favorable electron-electron interactions when orbitals are symmetrically occupied.
 - Electrons in the 4s and 3d subshells are very close in energy, so the stabilization from a half-filled or fully filled d subshell outweighs the cost of promoting one electron from 4s.
 
-Other elements in the same columns (Mo, Ag, etc.) show similar exceptions, but **Cr and Cu are the ones you must know for the AP exam**.`
+Other elements in the same columns (Mo, Ag, etc.) show similar exceptions, but **Cr and Cu are the ones you must know for the AP exam**.
+
+> ⚠️ **AP Must-Know:** Cr is [Ar] 3d⁵ 4s¹ (not 4s² 3d⁴) and Cu is [Ar] 3d¹⁰ 4s¹ (not 4s² 3d⁹). Half-filled and fully filled d subshells have extra stability.`
     },
     {
       id: 'ec5-quiz-exceptions',
@@ -60,28 +83,50 @@ What is the correct electron configuration for chromium (Cr, Z = 24)?`,
 ### Cations (Positive Ions)
 When forming cations, electrons are removed from the subshell with the **highest principal quantum number (n)** first.
 
-**Critical rule for transition metals:** Remove electrons from **4s before 3d**, even though 4s filled first!
+> ⚠️ **Critical Rule for Transition Metals:** Remove electrons from **4s before 3d**, even though 4s filled first!
 
-**Example: Fe²⁺ (Z = 26, 24 electrons)**
-- Neutral Fe: [Ar] 4s² 3d⁶
-- Remove 2 electrons from 4s (highest n = 4)
-- Fe²⁺: **[Ar] 3d⁶**
+---
 
-**Example: Fe³⁺ (Z = 26, 23 electrons)**
-- Start from Fe²⁺: [Ar] 3d⁶
-- Remove 1 more electron from 3d
-- Fe³⁺: **[Ar] 3d⁵**
+### Example 1: Fe²⁺ (Z = 26, 24 electrons)
 
+| Step | Action | Result |
+|------|--------|--------|
+| 1 | Write neutral Fe configuration | [Ar] 4s² 3d⁶ |
+| 2 | Identify highest n to remove from | 4s (n = 4) |
+| 3 | Remove 2 electrons from 4s | 4s⁰ (both 4s electrons gone) |
+
+**Fe²⁺: [Ar] 3d⁶**
+
+---
+
+### Example 2: Fe³⁺ (Z = 26, 23 electrons)
+
+| Step | Action | Result |
+|------|--------|--------|
+| 1 | Start from Fe²⁺ | [Ar] 3d⁶ |
+| 2 | 4s is already empty — remove from 3d | Remove 1 electron from 3d |
+| 3 | Final configuration | [Ar] 3d⁵ |
+
+**Fe³⁺: [Ar] 3d⁵**
+
+> 🔑 **Notice:** Fe³⁺ has a half-filled 3d⁵ subshell, giving it extra stability — this is why Fe³⁺ is a very common ion.
 
 ---
 
 ### Anions (Negative Ions)
 When forming anions, electrons are **added** to the next available subshell.
 
-**Example: Cl⁻ (Z = 17, 18 electrons)**
-- Neutral Cl: [Ne] 3s² 3p⁵
-- Add 1 electron to 3p
-- Cl⁻: **[Ne] 3s² 3p⁶** (same as Ar — isoelectronic!)`
+### Example 3: Cl⁻ (Z = 17, 18 electrons)
+
+| Step | Action | Result |
+|------|--------|--------|
+| 1 | Write neutral Cl configuration | [Ne] 3s² 3p⁵ |
+| 2 | Add 1 electron to 3p | 3p⁵ → 3p⁶ |
+| 3 | Final configuration | [Ne] 3s² 3p⁶ |
+
+**Cl⁻: [Ne] 3s² 3p⁶**
+
+> 💡 Cl⁻ has 18 electrons — the same as Argon. They are **isoelectronic**!`
     },
     {
       id: 'ec5-quiz-ions',
@@ -112,7 +157,7 @@ Recall: Cu (Z = 29) has the configuration [Ar] 3d¹⁰ 4s¹ (exception).`,
       type: 'input-box' as const,
       content: `### Write Ion Configurations
 
-Write the noble gas shorthand electron configuration for each ion. Use the format: [Xx] 3d6 (no superscripts, brackets around noble gas).
+Write the noble gas shorthand electron configuration for each ion (e.g., [Ar] 3d6). A formatted preview will appear as you type.
 
 Remember: Remove electrons from the highest n first!`,
       exercise: {
@@ -156,13 +201,43 @@ These require careful attention to exception rules and ion formation rules.`,
     {
       id: 'ec5-summary',
       type: 'text' as const,
-      content: `## 📌 Key Takeaways
+      content: `## � Part 5 Summary: Exceptions & Ion Configurations
 
-1. **Chromium** and **copper** are the two critical exceptions: they "steal" an electron from 4s to achieve a half-filled (d⁵) or fully filled (d¹⁰) d subshell.
-2. When forming **cations**, remove electrons from the subshell with the **highest n** first — for transition metals, this means **4s before 3d**.
-3. When forming **anions**, add electrons to the next available subshell.
-4. **Isoelectronic** species have the same number of electrons and the same electron configuration.
-5. These rules are among the most commonly tested topics on the AP Chemistry exam.`
+---
+
+### 🧰 The Two Critical Exceptions
+
+| Element | Expected | Actual | Why |
+|---------|----------|--------|-----|
+| Cr (Z = 24) | [Ar] 4s² 3d⁴ | [Ar] 3d⁵ 4s¹ | Half-filled d⁵ = extra stability |
+| Cu (Z = 29) | [Ar] 4s² 3d⁹ | [Ar] 3d¹⁰ 4s¹ | Fully filled d¹⁰ = extra stability |
+
+---
+
+### 📌 Ion Configuration Rules
+
+| Ion Type | Rule | Example |
+|----------|------|---------|
+| Cations (+) | Remove from **highest n** first | Fe²⁺: remove 4s² → [Ar] 3d⁶ |
+| Anions (−) | Add to next available subshell | Cl⁻: add to 3p → [Ne] 3s² 3p⁶ |
+| Isoelectronic | Same e⁻ count = same configuration | Na⁺, F⁻, Ne all have 10 e⁻ |
+
+> ⚠️ **AP Trap:** For transition metal cations, always remove 4s electrons before 3d — even though 4s filled first!
+
+---
+
+### ✅ Your Checklist Before Moving On
+
+- ☐ I know the configurations of Cr and Cu (and why they are exceptions)
+- ☐ I can write ion configurations by removing from the highest n first
+- ☐ I can identify isoelectronic species
+- ☐ I will not mistakenly remove 3d electrons before 4s when forming cations
+
+---
+
+### 🔮 What's Next
+
+In **Part 6**, we explore **orbital diagrams** (box-arrow notation) and the **four quantum numbers** that uniquely identify every electron in an atom.`
     }
   ]
 }

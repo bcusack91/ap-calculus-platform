@@ -4,13 +4,30 @@ export const chemNernstEquationConcentrationPart5Data = {
     {
       id: 'ne5-intro',
       type: 'text' as const,
-      content: `
-# 🔋 Batteries — Primary, Secondary, and Fuel Cells
+      content: `# 🔋 Batteries — Primary, Secondary, and Fuel Cells
 
 **Part 5 of 7 — Real-World Applications**
 
-Batteries are galvanic cells engineered for practical use. Understanding the chemistry behind common batteries connects electrochemistry to everyday life — and appears frequently on the AP exam.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| � Primary Batteries (Non-Rechargeable) |
+| ⚡ Alkaline Battery — The Household Workhorse |
+| 🌬️ Zinc-Air Battery — Breathing Electricity |
+| � Secondary Batteries (Rechargeable) |
+| 🚗 Lead-Acid Battery — Under Every Hood |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ne5-primary',
@@ -103,6 +120,8 @@ Batteries are galvanic cells engineered for practical use. Understanding the che
 | Lead-Acid | Secondary | 2.0 V | ✅ | Cars |
 | Li-ion | Secondary | 3.7 V | ✅ | Electronics |
 | NiMH | Secondary | 1.2 V | ✅ | Hybrids |
+
+> ⚠️ **Warning:** Don't confuse primary and secondary! **Primary** = irreversible = non-rechargeable. **Secondary** = reversible = rechargeable. A fuel cell is neither — reactants are continuously supplied from outside.
       `
     },
     {

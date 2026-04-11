@@ -4,13 +4,24 @@ export const chemReactionRatesAndRateLawsPart7Data = {
     {
       id: 'rr7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — AP-Style Rate Law Determination**
 
-This final part brings together all the concepts from Parts 1–6 with AP exam-level questions. You will work through complete rate law problems including determining orders, calculating k, predicting rates, and interpreting results.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'rr7-key-concepts-review',
@@ -22,25 +33,27 @@ This final part brings together all the concepts from Parts 1–6 with AP exam-l
 
 For $aA + bB \\rightarrow cC + dD$:
 
-$$\\text{Rate} = -\\frac{1}{a}\\frac{\\Delta[A]}{\\Delta t} = +\\frac{1}{c}\\frac{\\Delta[C]}{\\Delta t}$$
+$$\boxed{\text{Rate} = -\frac{1}{a}\frac{\Delta[A]}{\Delta t} = +\frac{1}{c}\frac{\Delta[C]}{\Delta t}}$$
 
 
 ---
 
 ### Rate Law
 
-$$\\text{Rate} = k[A]^m[B]^n$$
+$$\boxed{\text{Rate} = k[A]^m[B]^n}$$
 
 - Determined **experimentally** (not from coefficients)
 - $k$ depends on temperature only
 - Overall order = $m + n$
+
+> ⚠️ **Warning:** Rate law exponents are determined **experimentally** — they do NOT come from balanced equation coefficients (except for elementary steps).
 
 
 ---
 
 ### Units of k
 
-$$\\text{Units} = \\text{M}^{1-(m+n)}\\text{s}^{-1}$$
+$$\boxed{\text{Units} = \text{M}^{1-(m+n)}\text{s}^{-1}}$$
 
 
 ---

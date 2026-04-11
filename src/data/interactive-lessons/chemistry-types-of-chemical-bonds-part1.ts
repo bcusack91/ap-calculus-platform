@@ -6,13 +6,28 @@ export const chemTypesOfChemicalBondsPart1Data = {
       type: 'text' as const,
       content: `# Part 1: Ionic Bonds
 
-**Welcome to Types of Chemical Bonds!**
+**Part 1 of 7 — Ionic Bonds**
 
-Chemical bonds hold atoms together to form compounds. The type of bond that forms depends on the properties of the atoms involved — particularly their **electronegativity** and whether they are metals or nonmetals.
+---
 
-In this seven-part series, you'll master ionic, covalent, and metallic bonding — essential knowledge for the AP Chemistry exam.
+### Topics in This Part
 
-In Part 1, we focus on **ionic bonds**: how they form, what holds them together, and the properties they produce.`
+| Section |
+|---------|
+| The Process |
+| Example: Sodium Chloride (NaCl) |
+| Why Does This Happen? |
+| What Is Lattice Energy? |
+| Coulomb\'s Law for Ions |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'cb1-electron-transfer',
@@ -46,7 +61,9 @@ $$\\text{Cl} + e^- \\rightarrow \\text{Cl}^-$$
 
 ### Why Does This Happen?
 
-Metals have **low ionization energies** (easy to remove electrons) and nonmetals have **high electron affinities** (favorable to gain electrons). Both ions achieve a stable noble gas electron configuration.`
+Metals have **low ionization energies** (easy to remove electrons) and nonmetals have **high electron affinities** (favorable to gain electrons). Both ions achieve a stable noble gas electron configuration.
+
+> 🔑 **Key Concept:** Ionic bonds form between metals (low IE) and nonmetals (high EA) through electron transfer, producing cations and anions held together by Coulombic forces.`
     },
     {
       id: 'cb1-transfer-quiz',
@@ -104,7 +121,7 @@ Once ions form, they don't exist as isolated pairs. They arrange into a **crysta
 
 **Lattice energy** is the energy released when gaseous ions come together to form one mole of an ionic solid:
 
-$$\\text{M}^{n+}(g) + \\text{X}^{m-}(g) \\rightarrow \\text{MX}(s) \\quad \\Delta H_{lattice} < 0$$
+$$\\boxed{\\text{M}^{n+}(g) + \\text{X}^{m-}(g) \\rightarrow \\text{MX}(s) \\quad \\Delta H_{lattice} < 0}$$
 
 A **larger (more negative)** lattice energy means a **more stable** ionic compound.
 
@@ -115,7 +132,7 @@ A **larger (more negative)** lattice energy means a **more stable** ionic compou
 
 The lattice energy is proportional to the Coulombic attraction between ions:
 
-$$E \\propto \\frac{q_+ \\times q_-}{r_+ + r_-}$$
+$$\\boxed{E \\propto \\frac{q_+ \\times q_-}{r_+ + r_-}}$$
 
 where:
 - $q_+$ and $q_-$ are the charges on the cation and anion
@@ -130,6 +147,8 @@ where:
 |--------|------------------------|
 | Higher ion charges | **Increases** lattice energy (stronger attraction) |
 | Smaller ionic radii | **Increases** lattice energy (ions closer together) |
+
+> 🔑 **Key Concept:** Lattice energy increases with higher ion charges and smaller ionic radii — both factors strengthen the Coulombic attraction between ions.
 
 
 ---
@@ -188,6 +207,8 @@ The strong electrostatic forces in ionic crystal lattices give ionic compounds d
 | **Do NOT conduct as solids** | Ions are locked in fixed positions in the crystal lattice |
 | **Soluble in polar solvents** | Water molecules can stabilize separated ions through ion-dipole interactions |
 
+> ⚠️ **Warning:** Ionic compounds do **not** exist as discrete molecules. The formula NaCl represents a **formula unit** — the simplest ratio of ions in the crystal lattice.
+
 
 ---
 
@@ -235,11 +256,11 @@ When a force shifts one layer of the lattice, cations end up next to cations and
 
 Determine the charge on each ion formed and the formula of the resulting ionic compound.
 
-1. Calcium ($Z = 20$, Group 2) loses electrons to form a cation. What is the charge on the calcium ion? (Enter as a number, e.g., 2)
+**1.** Calcium ($Z = 20$, Group 2) loses electrons to form a cation. What is the charge on the calcium ion? (Enter as a number, e.g., 2)
 
-2. Fluorine ($Z = 9$, Group 17) gains electrons to form an anion. What is the charge on the fluoride ion? (Enter as a number, e.g., -1)
+**2.** Fluorine ($Z = 9$, Group 17) gains electrons to form an anion. What is the charge on the fluoride ion? (Enter as a number, e.g., -1)
 
-3. What is the ratio of Ca ions to F ions in calcium fluoride? (Enter as a ratio like 1:2)`,
+**3.** What is the ratio of Ca ions to F ions in calcium fluoride? (Enter as a ratio like 1:2)`,
       exercise: {
         inputs: [
           {

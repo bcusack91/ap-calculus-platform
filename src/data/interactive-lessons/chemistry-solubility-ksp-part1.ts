@@ -4,13 +4,30 @@ export const chemSolubilityKspPart1Data = {
     {
       id: 'sk1-intro',
       type: 'text' as const,
-      content: `
-# 💎 Dissolution Equilibrium and K_sp
+      content: `# 💎 Dissolution Equilibrium and K_sp
 
 **Part 1 of 7 — The Solubility Product Constant**
 
-When an ionic compound dissolves in water, it establishes an equilibrium between the solid and its dissolved ions. The equilibrium constant for this process is called the **solubility product constant**, $K_{sp}$.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚖️ Dissolution as an Equilibrium |
+| The K_sp Expression |
+| General Form |
+| 📌 Common K_sp Expressions |
+| Key Points |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sk1-dissolution',
@@ -44,7 +61,9 @@ $$K_{sp} = [\\text{Ag}^+][\\text{Cl}^-]$$
 
 For $\\text{M}_a\\text{X}_b(s) \\rightleftharpoons a\\,\\text{M}^{b+}(aq) + b\\,\\text{X}^{a-}(aq)$:
 
-$$K_{sp} = [\\text{M}^{b+}]^a[\\text{X}^{a-}]^b$$
+$$\\boxed{K_{sp} = [\\text{M}^{b+}]^a[\\text{X}^{a-}]^b}$$
+
+> 🔑 **Key Concept:** The $K_{sp}$ expression includes only dissolved ion concentrations, each raised to its stoichiometric coefficient. The pure solid is always excluded (activity = 1).
       `
     },
     {
@@ -66,7 +85,10 @@ $$K_{sp} = [\\text{M}^{b+}]^a[\\text{X}^{a-}]^b$$
 ### Key Points
 
 - $K_{sp}$ values are typically very small (e.g., $1.8 \\times 10^{-10}$ for AgCl)
-- Smaller $K_{sp}$ → less soluble
+- Smaller $K_{sp}$ → less soluble (for compounds with the same formula type)
+
+> ⚠️ **Warning:** Comparing $K_{sp}$ values directly to rank solubility only works for compounds with the **same ion ratio** (e.g., both 1:1). For different formula types, calculate and compare molar solubilities.
+
 - $K_{sp}$ depends only on temperature (like all equilibrium constants)
 - The solid must be present for $K_{sp}$ to apply (saturated solution)
       `

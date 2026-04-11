@@ -4,13 +4,24 @@ export const chemReactionMechanismsPart7Data = {
     {
       id: 'rm7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — Comprehensive Mechanism Problems**
 
-This final part presents AP exam-level problems that integrate all mechanism concepts: elementary steps, intermediates, catalysts, rate-determining steps, rate law derivation, and mechanism validation.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'rm7-key-concepts',
@@ -18,34 +29,51 @@ This final part presents AP exam-level problems that integrate all mechanism con
       content: `
 ## 📋 Key Concepts Summary
 
-### Mechanism Fundamentals
-- A mechanism is a series of **elementary steps** that sum to the overall reaction
-- **Molecularity** (1, 2, or 3) = number of reactant particles in an elementary step
-- For elementary steps only: rate law exponents = stoichiometric coefficients
+---
 
+### 🧪 Mechanism Fundamentals
+
+| Concept | Definition |
+|---------|-----------|
+| Mechanism | Series of **elementary steps** that sum to the overall reaction |
+| Molecularity | Number of reactant particles in an elementary step (1, 2, or 3) |
+| Elementary rate law | Exponents = stoichiometric coefficients (only for elementary steps!) |
 
 ---
 
-### Species Classification
-- **Intermediate**: produced in one step, consumed in another (not in overall equation)
-- **Catalyst**: consumed early, regenerated later (present at start and end)
-- **n steps** → **n transition states** and **n − 1 intermediates**
+### 📌 Species Classification
 
+| Species | How to Identify | Appears in Overall Equation? |
+|---------|----------------|------------------------------|
+| **Intermediate** | Produced in one step, consumed in another | ❌ No |
+| **Catalyst** | Consumed early, regenerated later | ❌ No (but present at start & end) |
+| **Transition state** | One per elementary step | ❌ No |
 
----
-
-### Rate Law Derivation
-- Rate law comes from the **rate-determining step** (slowest = highest $E_a$)
-- If RDS rate law contains intermediates → use **pre-equilibrium** to eliminate
-- Final rate law must contain only **reactants** (and catalysts)
-
+> 💡 **Counting rule:** $n$ steps → $n$ transition states and $n - 1$ intermediates
 
 ---
 
-### Validation
-- Steps must **sum** to the overall equation
-- Derived rate law must **match** the experimental rate law
-- A consistent mechanism is **not proven** — only not disproven
+### 🎯 Rate Law Derivation
+
+| Step | Action |
+|------|--------|
+| 1 | Identify the **RDS** (slowest step = highest $E_a$) |
+| 2 | Write its elementary rate law |
+| 3 | Eliminate intermediates using **pre-equilibrium** or steady-state |
+
+$$\\text{Overall Rate} \\approx \\text{Rate of the slowest step (RDS)}$$
+
+---
+
+### ✅ Validation Checklist
+
+| Test | Requirement |
+|------|-------------|
+| Steps sum correctly | Elementary steps must add up to the overall equation |
+| Rate law matches | Derived rate law must match experimental rate law |
+| Not "proven" | A valid mechanism is only **not disproven** — never proven |
+
+$$\\text{Valid mechanism} \\iff \\text{Steps sum correctly} \\; \\textbf{and} \\; \\text{Rate law matches experiment}$$
       `
     },
     {

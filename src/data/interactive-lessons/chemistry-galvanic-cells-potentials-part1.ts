@@ -4,13 +4,30 @@ export const chemGalvanicCellsPotentialsPart1Data = {
     {
       id: 'gc1-intro',
       type: 'text' as const,
-      content: `
-# ⚡ Galvanic Cells — Redox Review
+      content: `# ⚡ Galvanic Cells — Redox Review
 
 **Part 1 of 7 — Half-Reactions and Electron Transfer**
 
-Electrochemistry converts chemical energy into electrical energy (and vice versa). It is all built on **redox** reactions — reactions involving the transfer of electrons. Let\'s review the fundamentals before building galvanic cells.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🔄 Redox Review |
+| Oxidation and Reduction |
+| Oxidation Numbers |
+| Identifying Redox |
+| ✍️ Writing Half-Reactions |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gc1-redox-basics',
@@ -25,7 +42,7 @@ Electrochemistry converts chemical energy into electrical energy (and vice versa
 | **Oxidation** | Loss of electrons | Electrons leave | OIL (Oxidation Is Loss) |
 | **Reduction** | Gain of electrons | Electrons arrive | RIG (Reduction Is Gain) |
 
-Together: **OIL RIG**
+> 🔑 **Key Concept:** Remember **OIL RIG** — Oxidation Is Loss, Reduction Is Gain.
 
 
 ---
@@ -84,7 +101,7 @@ Copper gains 2 electrons — oxidation number changes from $+2$ to $0$.
 - The electrode where **oxidation** occurs is the **anode**
 - The electrode where **reduction** occurs is the **cathode**
 
-> **Memory trick: AN OX, RED CAT**
+> 🔑 **Key Concept — AN OX, RED CAT:**
 >
 > **AN**ode = **OX**idation &nbsp;|&nbsp; **RED**uction = **CAT**hode
       `

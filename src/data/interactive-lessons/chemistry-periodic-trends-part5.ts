@@ -8,7 +8,26 @@ export const chemPeriodicTrendsPart5Data = {
 
 **Part 5 of 7 — Who Pulls Harder on Shared Electrons?**
 
-Electronegativity is the property that determines how electrons are distributed in chemical bonds. It's the bridge between atomic properties and molecular behavior — and it shows up constantly on the AP exam.`
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| The Pauling Scale |
+| Key Facts |
+| Across a Period (Left → Right) |
+| Down a Group (Top → Bottom) |
+| Summary |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'pt5-definition',
@@ -80,7 +99,9 @@ The most electronegative elements are in the **top-right** corner (F, O, N, Cl).
 
 The least electronegative elements are in the **bottom-left** corner (Cs, Fr, Ba).
 
-This trend mirrors ionization energy and is the **opposite** of atomic radius.`
+> 🔑 **Key Concept:** Electronegativity follows the same pattern as ionization energy and is the **opposite** of atomic radius. Small atoms with high $Z_{eff}$ pull hardest on bonding electrons.
+
+> 💡 **Tip:** If you know the atomic radius trend, you know the EN trend — just flip the direction!`
     },
     {
       id: 'pt5-bond-polarity',
@@ -88,6 +109,8 @@ This trend mirrors ionization energy and is the **opposite** of atomic radius.`
       content: `## 🔋 Electronegativity and Bond Polarity
 
 The **difference** in electronegativity ($\\Delta EN$) between two bonded atoms determines the type of bond:
+
+$$\\boxed{\\Delta EN = |EN_A - EN_B|}$$
 
 | $\\Delta EN$ | Bond Type | Example |
 |-------------|-----------|---------|
@@ -156,11 +179,11 @@ The dipole arrow points **toward** the more electronegative atom.`
 
 Calculate the electronegativity difference ($\\Delta EN$) for each bond and classify it. Use the values: H = 2.1, C = 2.5, O = 3.5, F = 4.0, Na = 0.9, Cl = 3.0.
 
-1. $\\text{C-O}$ bond: What is $\\Delta EN$? (Give your answer to 3 significant figures.)
+**1.** $\\text{C-O}$ bond: What is $\\Delta EN$? (Give your answer to 3 significant figures.)
 
-2. $\\text{Na-Cl}$ bond: What is $\\Delta EN$? (Give your answer to 3 significant figures.)
+**2.** $\\text{Na-Cl}$ bond: What is $\\Delta EN$? (Give your answer to 3 significant figures.)
 
-3. $\\text{C-H}$ bond: What is $\\Delta EN$? (Give your answer to 3 significant figures.)`,
+**3.** $\\text{C-H}$ bond: What is $\\Delta EN$? (Give your answer to 3 significant figures.)`,
       exercise: {
         inputs: [
           {

@@ -4,13 +4,30 @@ export const chemIntroEquilibriumPart2Data = {
     {
       id: 'ie2-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Equilibrium Expressions: $K_c$ and $K_p$
+      content: `# ⚖️ Equilibrium Expressions: $K_c$ and $K_p$
 
 **Part 2 of 7 — Writing and Using Equilibrium Constants**
 
-The equilibrium constant quantifies the ratio of product concentrations to reactant concentrations at equilibrium. There are two forms: $K_c$ (using molar concentrations) and $K_p$ (using partial pressures for gaseous systems).
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚖️ The Equilibrium Constant $K_c$ |
+| Rules for Writing $K_c$ |
+| Example |
+| ⚖️ The Equilibrium Constant $K_p$ |
+| Relationship Between $K_c$ and $K_p$ |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ie2-kc-expression',
@@ -24,7 +41,7 @@ $$aA + bB \\rightleftharpoons cC + dD$$
 
 The equilibrium constant expression is:
 
-$$K_c = \\frac{[C]^c[D]^d}{[A]^a[B]^b}$$
+$$\boxed{K_c = \frac{[C]^c[D]^d}{[A]^a[B]^b}}$$
 
 
 ---
@@ -35,6 +52,8 @@ $$K_c = \\frac{[C]^c[D]^d}{[A]^a[B]^b}$$
 2. Each concentration is raised to the power of its **stoichiometric coefficient**
 3. $K_c$ uses **molar concentrations** (mol/L)
 4. $K_c$ is dimensionless by convention on the AP exam
+
+> 🔑 **Key Concept:** Stoichiometric coefficients become **exponents**, not multipliers, in the equilibrium expression.
 
 
 ---
@@ -54,14 +73,14 @@ $$K_c = \\frac{[\\text{NH}_3]^2}{[\\text{N}_2][\\text{H}_2]^3}$$
 
 For gaseous reactions, we can use partial pressures instead of concentrations:
 
-$$K_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}$$
+$$\boxed{K_p = \frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}}$$
 
 
 ---
 
 ### Relationship Between $K_c$ and $K_p$
 
-$$K_p = K_c(RT)^{\\Delta n}$$
+$$\boxed{K_p = K_c(RT)^{\Delta n}}$$
 
 Where:
 - $R = 0.08206$ L·atm/(mol·K)
@@ -86,7 +105,7 @@ $$K_p = K_c(RT)^{-2}$$
 
 ### Special Case: $\\Delta n = 0$
 
-When $\\Delta n = 0$, then $K_p = K_c$ because $(RT)^0 = 1$.
+> 💡 **Tip:** When $\Delta n = 0$, then $K_p = K_c$ because $(RT)^0 = 1$. This is a useful shortcut on the AP exam!
       `
     },
     {
@@ -166,9 +185,9 @@ At equilibrium: $[\\text{H}_2] = 0.10$ M, $[\\text{I}_2] = 0.20$ M, $[\\text{HI}
       content: `
 ## 🧪 Worked Example: Converting $K_c$ to $K_p$
 
-**Problem:** For $\\text{N}_2(g) + 3\\,\\text{H}_2(g) \\rightleftharpoons 2\\,\\text{NH}_3(g)$, $K_c = 0.500$ at $T = 400$ K. Find $K_p$.
+> **Problem:** For $\text{N}_2(g) + 3\,\text{H}_2(g) \rightleftharpoons 2\,\text{NH}_3(g)$, $K_c = 0.500$ at $T = 400$ K. Find $K_p$.
 
-**Solution:**
+> **Solution:**
 
 $$\\Delta n = 2 - (1 + 3) = -2$$
 
@@ -178,7 +197,7 @@ $$K_p = 0.500 \\times (32.82)^{-2} = 0.500 \\times \\frac{1}{1077.4}$$
 
 $$K_p = 0.500 \\times 9.28 \\times 10^{-4} = 4.64 \\times 10^{-4}$$
 
-Notice that $K_p < K_c$ when $\\Delta n < 0$ (fewer moles of gas on the product side).
+> ⚠️ **Warning:** Notice that $K_p < K_c$ when $\Delta n < 0$ (fewer moles of gas on the product side). Always check the sign of $\Delta n$ before converting!
       `
     },
     {

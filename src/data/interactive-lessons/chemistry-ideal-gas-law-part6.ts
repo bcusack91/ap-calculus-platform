@@ -4,13 +4,24 @@ export const chemIdealGasLawPart6Data = {
     {
       id: 'gl6-intro',
       type: 'text' as const,
-      content: `
-# 🧪 Problem-Solving Workshop
+      content: `# 🧪 Problem-Solving Workshop
 
 **Part 6 of 7 — Mixed Gas Law Calculations**
 
-Now it's time to put all the gas laws together. In this workshop, you'll practice selecting the right equation, converting units, and solving multi-step problems — exactly the way they appear on the AP Chemistry exam.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'gl6-strategy',
@@ -35,7 +46,7 @@ Now it's time to put all the gas laws together. In this workshop, you'll practic
 
 When the amount of gas is constant but P, V, and T all change:
 
-$$\\frac{P_1V_1}{T_1} = \\frac{P_2V_2}{T_2}$$
+$$\\boxed{\\frac{P_1V_1}{T_1} = \\frac{P_2V_2}{T_2}}$$
 
 This reduces to Boyle's or Charles's law when one variable is held constant.
       `
@@ -46,9 +57,7 @@ This reduces to Boyle's or Charles's law when one variable is held constant.
       content: `
 ## 📌 STP Problems
 
-At STP (0°C = 273.15 K, 1.00 atm):
-- 1 mol of ideal gas = 22.4 L
-- This gives a quick shortcut for many calculations
+> 💡 **Tip:** At STP (0°C = 273.15 K, 1.00 atm), 1 mol of ideal gas = 22.4 L. This gives a quick shortcut for many calculations!
 
 
 ---
@@ -57,7 +66,7 @@ At STP (0°C = 273.15 K, 1.00 atm):
 
 > **Problem:** What volume does 0.750 mol of CO₂ occupy at STP?
 
-**Solution:**
+> **Solution:**
 
 $$V = 0.750 \\times 22.4 = 16.8 \\text{ L}$$
 
@@ -68,7 +77,7 @@ $$V = 0.750 \\times 22.4 = 16.8 \\text{ L}$$
 
 > **Problem:** A sample of gas occupies 5.60 L at STP. How many moles?
 
-**Solution:**
+> **Solution:**
 
 $$n = \frac{5.60}{22.4} = 0.250 \text{ mol}$$
 
@@ -79,7 +88,7 @@ $$n = \frac{5.60}{22.4} = 0.250 \text{ mol}$$
 
 > **Problem:** A gas at 2.00 atm, 10.0 L, and 300 K is changed to 1.00 atm and 600 K. New volume?
 
-**Solution:**
+> **Solution:**
 
 $$V_2 = \\frac{P_1V_1T_2}{T_1P_2} = \\frac{(2.00)(10.0)(600)}{(300)(1.00)} = 40.0 \\text{ L}$$
       `
@@ -101,7 +110,7 @@ $$\\text{grams} \\rightarrow \\text{moles} \\rightarrow \\text{mole ratio} \\rig
 
 > **Problem:** How many liters of O₂ at 25°C and 1.00 atm are produced from the decomposition of 49.0 g of KClO₃?
 
-**Solution:**
+> **Solution:**
 
 $$2\\text{KClO}_3 \\rightarrow 2\\text{KCl} + 3\\text{O}_2$$
 

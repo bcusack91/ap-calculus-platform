@@ -4,13 +4,24 @@ export const chemElectrolyticCellsFaradayPart6Data = {
     {
       id: 'ef6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Problem-Solving Workshop — Electrolysis and Faraday
+      content: `# 🛠️ Problem-Solving Workshop — Electrolysis and Faraday
 
 **Part 6 of 7 — Practice and Integration**
 
-This workshop combines all electrolysis concepts: cell comparisons, product prediction, and Faraday\'s law calculations. These are the exact problem types you will face on the AP exam.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'ef6-strategy',
@@ -19,6 +30,8 @@ This workshop combines all electrolysis concepts: cell comparisons, product pred
 ## 🛠️ Problem-Solving Checklist
 
 ### For Faraday\'s Law Problems
+
+> ⚠️ **First Step Always:** Convert time to seconds before calculating!
 
 1. ✅ Convert time to **seconds** ($1 \\text{ min} = 60 \\text{ s}$, $1 \\text{ hr} = 3600 \\text{ s}$)
 2. ✅ Calculate charge: $q = It$
@@ -40,12 +53,14 @@ This workshop combines all electrolysis concepts: cell comparisons, product pred
 | Aqueous, halide anion | — | Halogen (Cl₂, Br₂, I₂) |
 | Aqueous, oxyanion/F⁻ | — | O₂ |
 
+> 🔑 **Quick Rule:** Active metals (Na, K, Ca, Al) can’t be deposited from aqueous solution—you get H₂ instead. Use molten salts for these metals.
+
 
 ---
 
 ### The One-Step Mass Formula
 
-$$m = \\frac{ItM}{nF}$$
+$$\\boxed{m = \\frac{ItM}{nF}}$$
 
 This combines all steps into one equation.
       `

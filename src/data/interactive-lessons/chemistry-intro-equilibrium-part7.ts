@@ -4,13 +4,24 @@ export const chemIntroEquilibriumPart7Data = {
     {
       id: 'ie7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — Introduction to Equilibrium**
 
-This final part reviews all key concepts: dynamic equilibrium, $K_c$/$K_p$ expressions, heterogeneous equilibrium, manipulating K, and the meaning of K\'s magnitude. These questions mirror AP Chemistry free-response and multiple-choice formats.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'ie7-concept-map',
@@ -56,6 +67,10 @@ This final part reviews all key concepts: dynamic equilibrium, $K_c$/$K_p$ expre
 - $K \\gg 1$: product-favored
 - $K \\ll 1$: reactant-favored
 - Only **temperature** changes K
+
+> 💡 **Tip:** For the AP exam, remember the three operations on $K$: reverse → reciprocal, multiply coefficients → raise to power, add reactions → multiply $K$ values.
+
+> ⚠️ **Warning:** A common AP mistake is confusing what changes $K$ versus what shifts equilibrium position. Only **temperature** changes $K$!
       `
     },
     {

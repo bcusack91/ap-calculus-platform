@@ -4,13 +4,30 @@ export const chemReactionMechanismsPart5Data = {
     {
       id: 'rm5-intro',
       type: 'text' as const,
-      content: `
-# ✅ Validating Mechanisms
+      content: `# ✅ Validating Mechanisms
 
 **Part 5 of 7 — Testing Proposed Mechanisms**
 
-A proposed mechanism is a hypothesis — it must be tested against experimental evidence. In this part, you\'ll learn the two essential criteria for validating a mechanism and practice evaluating proposed mechanisms.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 The Two Essential Criteria |
+| Criterion 1: Steps Sum to the Overall Reaction |
+| Criterion 2: Rate Law Matches Experiment |
+| 🧪 Worked Example: Validating a Mechanism |
+| 📌 Common AP Mistakes to Avoid |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 5
+- Understanding the core concepts covered in Part 5
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'rm5-two-criteria',
@@ -27,7 +44,7 @@ A valid mechanism must satisfy **both** of these conditions:
 
 When all elementary steps are added and intermediates/catalysts are cancelled, the result must equal the experimentally determined overall balanced equation.
 
-$$\\text{Step 1} + \\text{Step 2} + \\cdots = \\text{Overall Reaction}$$
+$$\\boxed{\\text{Step 1} + \\text{Step 2} + \\cdots = \\text{Overall Reaction}}$$
 
 
 ---
@@ -36,14 +53,12 @@ $$\\text{Step 1} + \\text{Step 2} + \\cdots = \\text{Overall Reaction}$$
 
 The rate law derived from the mechanism (using the RDS and pre-equilibrium as needed) must agree with the experimentally observed rate law.
 
-$$\\text{Rate law}_{\\text{mechanism}} = \\text{Rate law}_{\\text{experimental}}$$
+$$\\boxed{\\text{Rate law}_{\\text{mechanism}} = \\text{Rate law}_{\\text{experimental}}}$$
 
 
 ---
 
-### Important Caveat
-
-Even if both criteria are met, the mechanism is not proven — it is only **consistent with the data**. Other mechanisms might also be consistent. We can **disprove** a mechanism but never definitively prove one.
+> ⚠️ **Warning:** Even if both criteria are met, the mechanism is not proven — it is only **consistent with the data**. Other mechanisms might also be consistent. We can **disprove** a mechanism but never definitively prove one.
       `
     },
     {
@@ -52,26 +67,37 @@ Even if both criteria are met, the mechanism is not proven — it is only **cons
       content: `
 ## 🧪 Worked Example: Validating a Mechanism
 
-**Overall reaction:** $2\\text{NO} + \\text{O}_2 \\rightarrow 2\\text{NO}_2$
+> **Problem:** Validate the proposed mechanisms for $2\\text{NO} + \\text{O}_2 \\rightarrow 2\\text{NO}_2$ given the experimental rate law Rate = $k[\\text{NO}]^2[\\text{O}_2]$.
 
-**Experimental rate law:** Rate = $k[\\text{NO}]^2[\\text{O}_2]$
+---
 
-**Proposed Mechanism A:**
-- Step 1: $2\\text{NO} + \\text{O}_2 \\rightarrow 2\\text{NO}_2$ (slow, one step)
+### Mechanism A: Single Termolecular Step
 
-Test Criterion 1: Sum = $2\\text{NO} + \\text{O}_2 \\rightarrow 2\\text{NO}_2$ ✓
-Test Criterion 2: rate = $k[\\text{NO}]^2[\\text{O}_2]$ ✓ (termolecular step)
+| Test | Check | Result |
+|------|-------|--------|
+| Steps | $2\\text{NO} + \\text{O}_2 \\rightarrow 2\\text{NO}_2$ (slow, one step) | — |
+| Criterion 1: Sum = overall? | $2\\text{NO} + \\text{O}_2 \\rightarrow 2\\text{NO}_2$ | ✅ |
+| Criterion 2: Rate law matches? | rate $= k[\\text{NO}]^2[\\text{O}_2]$ | ✅ |
 
-BUT: termolecular steps are extremely unlikely! Look for alternative.
+> ⚠️ **Problem:** Termolecular collisions (3 molecules simultaneously) are extremely unlikely. This mechanism is mathematically valid but physically implausible.
 
-**Proposed Mechanism B:**
-- Step 1: $2\\text{NO} \\rightleftharpoons \\text{N}_2\\text{O}_2$ (fast)
-- Step 2: $\\text{N}_2\\text{O}_2 + \\text{O}_2 \\rightarrow 2\\text{NO}_2$ (slow)
+---
 
-Test Criterion 1: Sum = $2\\text{NO} + \\text{O}_2 \\rightarrow 2\\text{NO}_2$ ✓
-Test Criterion 2: Rate = $k_2[\\text{N}_2\\text{O}_2][\\text{O}_2]$ → $[\\text{N}_2\\text{O}_2] = K_{eq}[\\text{NO}]^2$ → Rate = $k_{obs}[\\text{NO}]^2[\\text{O}_2]$ ✓
+### Mechanism B: Two-Step with Pre-Equilibrium
 
-Mechanism B is **preferred** because it avoids the improbable termolecular step.
+| Step | Elementary Reaction | Type |
+|------|---------------------|------|
+| 1 | $2\\text{NO} \\rightleftharpoons \\text{N}_2\\text{O}_2$ | Fast equilibrium |
+| 2 | $\\text{N}_2\\text{O}_2 + \\text{O}_2 \\rightarrow 2\\text{NO}_2$ | Slow (RDS) |
+
+| Test | Check | Result |
+|------|-------|--------|
+| Criterion 1: Sum = overall? | $2\\text{NO} + \\text{O}_2 \\rightarrow 2\\text{NO}_2$ | ✅ |
+| Criterion 2: Rate from RDS | $k_2[\\text{N}_2\\text{O}_2][\\text{O}_2]$ | — |
+| Substitute intermediate | $[\\text{N}_2\\text{O}_2] = K_{eq}[\\text{NO}]^2$ | — |
+| Final rate law | $k_{obs}[\\text{NO}]^2[\\text{O}_2]$ | ✅ |
+
+> 🔑 **Conclusion:** Mechanism B is **preferred** — it matches the experimental rate law AND avoids the improbable termolecular step.
       `
     },
     {
@@ -158,32 +184,22 @@ Mechanism B is **preferred** because it avoids the improbable termolecular step.
       content: `
 ## 📌 Common AP Mistakes to Avoid
 
-### Mistake 1: Confusing Order and Molecularity
-
-- **Order** is experimental (can be 0, 1, 2, fractional)
-- **Molecularity** is theoretical (must be 1, 2, or 3)
-- They are equal ONLY for elementary steps
+> ⚠️ **Warning:** Don\'t confuse **order** (experimental: can be 0, 1, 2, fractional) with **molecularity** (theoretical: must be 1, 2, or 3). They are equal ONLY for elementary steps.
 
 
 ---
 
-### Mistake 2: Writing Rate Law from Overall Equation
-
-The rate law for an overall reaction must be determined **experimentally**. Only for elementary steps can you write the rate law from stoichiometry.
+> ⚠️ **Warning:** The rate law for an overall reaction must be determined **experimentally**. Only for elementary steps can you write the rate law from stoichiometry.
 
 
 ---
 
-### Mistake 3: Leaving Intermediates in the Rate Law
-
-The final rate law should contain only reactants (and catalysts). If your rate law has an intermediate, you need to eliminate it.
+> ⚠️ **Warning:** The final rate law should contain only reactants (and catalysts). If your rate law has an intermediate, you need to eliminate it.
 
 
 ---
 
-### Mistake 4: Forgetting to Check BOTH Criteria
-
-A mechanism that gives the correct rate law but doesn\'t sum to the overall equation is INVALID (and vice versa).
+> ⚠️ **Warning:** A mechanism that gives the correct rate law but doesn\'t sum to the overall equation is INVALID (and vice versa). Always check **both** criteria.
       `
     },
     {

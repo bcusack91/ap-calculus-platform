@@ -9,9 +9,24 @@ export const chemHybridizationSigmaPiBondsPart4Data = {
 
 **Part 4 of 7 — Using Steric Number to Assign Hybridization**
 
-Now that you know the three main hybridization types (sp, sp², sp³), it\'s time to develop a systematic method for determining the hybridization of **any** atom in **any** molecule.
+---
 
-The key is the **steric number** — the total count of electron domains around the atom of interest.`
+### Topics in This Part
+
+| Section |
+|---------|
+| Step 1: Draw the Lewis Structure |
+| Step 2: Count Electron Domains |
+| Step 3: Match Steric Number to Hybridization |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'hy-4-2',
@@ -31,7 +46,7 @@ For the atom in question, count:
 - Each triple bond = 1 domain
 - Each lone pair = 1 domain
 
-$$\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}$$
+$$\boxed{\text{Steric Number} = \text{bonded atoms} + \text{lone pairs}}$$
 
 ### Step 3: Match Steric Number to Hybridization
 
@@ -41,9 +56,7 @@ $$\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}$$
 | 3 | sp² | Trigonal planar (120°) |
 | 4 | sp³ | Tetrahedral (109.5°) |
 
-### Critical Reminder
-
-Lone pairs count as electron domains! An atom with 2 bonds and 2 lone pairs has steric number 4 → sp³ (not sp).`
+> ⚠️ **Warning:** Lone pairs count as electron domains! An atom with 2 bonds and 2 lone pairs has steric number 4 → sp³ (not sp).`
     },
     {
       id: 'hy-4-3',
@@ -51,33 +64,43 @@ Lone pairs count as electron domains! An atom with 2 bonds and 2 lone pairs has 
       title: 'Worked Examples',
       content: `## Worked Examples
 
-### Example 1: Water (H₂O)
+> **Problem:** Determine the hybridization of oxygen in water (H₂O).
 
-- O has 2 bonds + 2 lone pairs = **4 electron domains**
-- Steric number = 4 → **sp³**
-- Electron geometry: tetrahedral
-- Molecular geometry: bent (because 2 lone pairs are "invisible")
-- Bond angle: ~104.5° (less than 109.5° due to lone pair compression)
+> **Solution:**
+> - O has 2 bonds + 2 lone pairs = **4 electron domains**
+> - Steric number = 4 → **sp³**
+> - Electron geometry: tetrahedral
+> - Molecular geometry: bent (because 2 lone pairs are "invisible")
+> - Bond angle: ~104.5° (less than 109.5° due to lone pair compression)
 
-### Example 2: Ozone (O₃)
+---
 
-- Central O has 1 single bond + 1 double bond + 1 lone pair = **3 electron domains**
-- Steric number = 3 → **sp²**
-- Electron geometry: trigonal planar
-- Molecular geometry: bent
-- Bond angle: ~117° (lone pair compresses slightly from 120°)
+> **Problem:** Determine the hybridization of the central oxygen in ozone (O₃).
 
-### Example 3: Carbon in Cyanide Ion (CN⁻)
+> **Solution:**
+> - Central O has 1 single bond + 1 double bond + 1 lone pair = **3 electron domains**
+> - Steric number = 3 → **sp²**
+> - Electron geometry: trigonal planar
+> - Molecular geometry: bent
+> - Bond angle: ~117° (lone pair compresses slightly from 120°)
 
-- Carbon has 1 triple bond to nitrogen + 1 lone pair = **2 electron domains**
-- Steric number = 2 → **sp**
-- Geometry: linear
+---
 
-### Example 4: Nitrogen in Ammonia (NH₃)
+> **Problem:** Determine the hybridization of carbon in the cyanide ion (CN⁻).
 
-- N has 3 bonds + 1 lone pair = **4 electron domains**
-- Steric number = 4 → **sp³**
-- Even though NH₃ has a trigonal pyramidal *molecular* shape, the nitrogen is still sp³ hybridized`
+> **Solution:**
+> - Carbon has 1 triple bond to nitrogen + 1 lone pair = **2 electron domains**
+> - Steric number = 2 → **sp**
+> - Geometry: linear
+
+---
+
+> **Problem:** Determine the hybridization of nitrogen in ammonia (NH₃).
+
+> **Solution:**
+> - N has 3 bonds + 1 lone pair = **4 electron domains**
+> - Steric number = 4 → **sp³**
+> - Even though NH₃ has a trigonal pyramidal *molecular* shape, the nitrogen is still sp³ hybridized`
     },
     {
       id: 'hy-4-4',
@@ -149,26 +172,25 @@ Lone pairs count as electron domains! An atom with 2 bonds and 2 lone pairs has 
       title: 'Common Mistakes',
       content: `## Common Mistakes to Avoid
 
-### Mistake 1: Confusing Molecular Geometry with Hybridization
+> ⚠️ **Warning:** Hybridization ≠ molecular geometry! The shape you "see" may differ from what hybridization implies:
+> - H₂O is **bent** but oxygen is **sp³**
+> - NH₃ is **trigonal pyramidal** but nitrogen is **sp³**
+>
+> Hybridization depends on the **total** number of electron domains (steric number), not just the bonding arrangement.
 
-The molecular geometry (shape you "see") may differ from what the hybridization implies:
-- H₂O is **bent** but oxygen is **sp³**
-- NH₃ is **trigonal pyramidal** but nitrogen is **sp³**
+---
 
-Hybridization depends on the **total** number of electron domains (steric number), not just the bonding arrangement.
+> ⚠️ **Warning:** Don\'t count double/triple bonds as multiple domains!
+> - C=O is **1** electron domain (not 2)
+> - C≡N is **1** electron domain (not 3)
 
-### Mistake 2: Counting Double/Triple Bonds as Multiple Domains
+---
 
-- C=O is **1** electron domain (not 2)
-- C≡N is **1** electron domain (not 3)
+> ⚠️ **Warning:** Always check for lone pairs on the atom of interest. They occupy hybrid orbitals just like bonding pairs — lone pairs count in hybridization!
 
-### Mistake 3: Forgetting Lone Pairs
+---
 
-Always check for lone pairs on the atom of interest. They occupy hybrid orbitals just like bonding pairs.
-
-### Mistake 4: Over-Applying Hybridization
-
-Hybridization applies to atoms that form covalent bonds. Terminal atoms (like H or F) don\'t need hybridization analysis — focus on **central atoms** or atoms bonded to multiple groups.`
+> 💡 **Tip:** Hybridization applies to atoms that form covalent bonds. Terminal atoms (like H or F) don\'t need hybridization analysis — focus on **central atoms** or atoms bonded to multiple groups.`
     },
     {
       id: 'hy-4-7',

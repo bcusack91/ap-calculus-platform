@@ -4,13 +4,30 @@ export const chemReactionQuotientLeChatPart2Data = {
     {
       id: 'ql2-intro',
       type: 'text' as const,
-      content: `
-# 🔄 Comparing Q and K
+      content: `# 🔄 Comparing Q and K
 
 **Part 2 of 7 — Predicting the Direction of Shift**
 
-By comparing Q to K, you can predict exactly which direction a reaction will shift to reach equilibrium. This is one of the most powerful tools in equilibrium chemistry.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 The Three Cases |
+| Case 1: $Q < K$ — Shift Right (→) |
+| Case 2: $Q > K$ — Shift Left (←) |
+| Case 3: $Q = K$ — At Equilibrium |
+| Memory Aid |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ql2-three-cases',
@@ -20,7 +37,9 @@ By comparing Q to K, you can predict exactly which direction a reaction will shi
 
 ### Case 1: $Q < K$ — Shift Right (→)
 
-$$Q < K \\implies \\frac{\\text{products}}{\\text{reactants}} < \\text{equilibrium ratio}$$
+$$\\boxed{Q < K \\implies \\text{shift right (forward)}}$$
+
+$$\\frac{\\text{products}}{\\text{reactants}} < \\text{equilibrium ratio}$$
 
 - There are **too few products** (or too many reactants)
 - The system shifts **right** (forward) to make more products
@@ -31,7 +50,9 @@ $$Q < K \\implies \\frac{\\text{products}}{\\text{reactants}} < \\text{equilibri
 
 ### Case 2: $Q > K$ — Shift Left (←)
 
-$$Q > K \\implies \\frac{\\text{products}}{\\text{reactants}} > \\text{equilibrium ratio}$$
+$$\\boxed{Q > K \\implies \\text{shift left (reverse)}}$$
+
+$$\\frac{\\text{products}}{\\text{reactants}} > \\text{equilibrium ratio}$$
 
 - There are **too many products** (or too few reactants)
 - The system shifts **left** (reverse) to make more reactants
@@ -42,7 +63,7 @@ $$Q > K \\implies \\frac{\\text{products}}{\\text{reactants}} > \\text{equilibri
 
 ### Case 3: $Q = K$ — At Equilibrium
 
-$$Q = K \\implies \\text{system is at equilibrium}$$
+$$\\boxed{Q = K \implies \text{system is at equilibrium}}$$
 
 - No net change occurs
 - Forward and reverse rates are equal
@@ -52,9 +73,11 @@ $$Q = K \\implies \\text{system is at equilibrium}$$
 
 ### Memory Aid
 
-Think of Q as "chasing" K:
-- $Q < K$: Q needs to increase → more products → shift right
-- $Q > K$: Q needs to decrease → more reactants → shift left
+> 💡 **Tip:** Think of Q as "chasing" K:
+> - $Q < K$: Q needs to increase → more products → shift right
+> - $Q > K$: Q needs to decrease → more reactants → shift left
+
+> 🔑 **Key Concept:** $Q < K$ → forward shift. $Q > K$ → reverse shift. $Q = K$ → equilibrium. These three cases are the foundation of predicting reaction direction.
       `
     },
     {
@@ -70,16 +93,16 @@ $$\\underbrace{Q = 0}_{\\text{pure reactants}} \\quad \\xleftarrow{\\text{shift 
 
 ### Worked Example
 
-$\\text{CO}(g) + \\text{H}_2\\text{O}(g) \\rightleftharpoons \\text{CO}_2(g) + \\text{H}_2(g)$, $K_c = 5.0$ at 700 K
+> **Problem:** $\text{CO}(g) + \text{H}_2\text{O}(g) \rightleftharpoons \text{CO}_2(g) + \text{H}_2(g)$, $K_c = 5.0$ at 700 K. Given: $[\text{CO}] = 0.10$, $[\text{H}_2\text{O}] = 0.10$, $[\text{CO}_2] = 0.20$, $[\text{H}_2] = 0.20$ M. Predict the direction of shift.
 
-Given: $[\\text{CO}] = 0.10$, $[\\text{H}_2\\text{O}] = 0.10$, $[\\text{CO}_2] = 0.20$, $[\\text{H}_2] = 0.20$ M
-
-$$Q_c = \\frac{[\\text{CO}_2][\\text{H}_2]}{[\\text{CO}][\\text{H}_2\\text{O}]} = \\frac{(0.20)(0.20)}{(0.10)(0.10)} = \\frac{0.04}{0.01} = 4.0$$
-
-Since $Q = 4.0 < K = 5.0$:
-- The system shifts **right** to produce more CO₂ and H₂
-- $[\\text{CO}]$ and $[\\text{H}_2\\text{O}]$ will decrease
-- $[\\text{CO}_2]$ and $[\\text{H}_2]$ will increase
+> **Solution:**
+>
+> $$\\boxed{Q_c = \frac{[\text{CO}_2][\text{H}_2]}{[\text{CO}][\text{H}_2\text{O}]} = \frac{(0.20)(0.20)}{(0.10)(0.10)} = \frac{0.04}{0.01} = 4.0}$$
+>
+> Since $Q = 4.0 < K = 5.0$:
+> - The system shifts **right** to produce more CO₂ and H₂
+> - $[\text{CO}]$ and $[\text{H}_2\text{O}]$ will decrease
+> - $[\text{CO}_2]$ and $[\text{H}_2]$ will increase
       `
     },
     {

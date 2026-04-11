@@ -4,13 +4,30 @@ export const chemOxidationReductionReactionsPart3Data = {
     {
       id: 'or3-intro',
       type: 'text' as const,
-      content: `
-# ⚡ Balancing Redox in Acidic Solution
+      content: `# ⚡ Balancing Redox in Acidic Solution
 
 **Part 3 of 7 — The Half-Reaction Method**
 
-Balancing redox equations is more complex than balancing regular equations because you must balance both **atoms** and **charge**. The half-reaction method breaks the problem into two manageable pieces: one for oxidation and one for reduction.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚗️ The Half-Reaction Method (Acidic Solution) |
+| The 7 Steps |
+| Key Principle |
+| 🧪 Worked Example |
+| Step 1: Write half-reactions |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'or3-method',
@@ -35,7 +52,7 @@ Balancing redox equations is more complex than balancing regular equations becau
 
 ### Key Principle
 
-Electrons lost in oxidation must **equal** electrons gained in reduction. This is why we equalize in Step 6.
+> 🔑 **Key Concept:** Electrons lost in oxidation must **equal** electrons gained in reduction — electrons are neither created nor destroyed.
       `
     },
     {
@@ -44,7 +61,7 @@ Electrons lost in oxidation must **equal** electrons gained in reduction. This i
       content: `
 ## 🧪 Worked Example
 
-Balance in acidic solution:
+> **Problem:** Balance in acidic solution:
 
 $$\\text{MnO}_4^- + \\text{Fe}^{2+} \\rightarrow \\text{Mn}^{2+} + \\text{Fe}^{3+}$$
 
@@ -96,12 +113,15 @@ $$5\\text{Fe}^{2+} \\rightarrow 5\\text{Fe}^{3+} + 5e^-$$
 ---
 
 ### Step 7: Add and cancel e⁻
-$$5\\text{Fe}^{2+} + 8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow 5\\text{Fe}^{3+} + \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}$$
+$$\\boxed{5\\text{Fe}^{2+} + 8\\text{H}^+ + \\text{MnO}_4^- \\rightarrow 5\\text{Fe}^{3+} + \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}}$$
 
 
 ---
 
-### Verify
+### ✅ Verify
+
+> ⚠️ **Warning:** Always verify both atoms AND charge — a common mistake is balancing atoms but not charge!
+
 - **Atoms:** 5 Fe ✓, 1 Mn ✓, 4 O ✓, 8 H ✓
 - **Charge:** Left: 5(+2) + 8(+1) + (−1) = +17. Right: 5(+3) + (+2) + 0 = +17 ✓
       `

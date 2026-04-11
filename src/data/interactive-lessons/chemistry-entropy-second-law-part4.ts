@@ -4,13 +4,30 @@ export const chemEntropySecondLawPart4Data = {
     {
       id: 'en4-intro',
       type: 'text' as const,
-      content: `
-# ❄️ The Third Law and Standard Molar Entropy
+      content: `# ❄️ The Third Law and Standard Molar Entropy
 
 **Part 4 of 7 — S = 0 at Absolute Zero**
 
-The Third Law of Thermodynamics provides a reference point for entropy. Unlike enthalpy, where we can only measure changes, entropy has an **absolute scale** — and it starts at zero.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📏 The Third Law of Thermodynamics |
+| Why Zero? |
+| Consequences |
+| 🌡️ Standard Molar Entropy ($S°$) |
+| Key Values to Know |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'en4-third-law',
@@ -20,7 +37,7 @@ The Third Law of Thermodynamics provides a reference point for entropy. Unlike e
 
 **The entropy of a perfect crystal at absolute zero (0 K) is exactly zero.**
 
-$$S = 0 \\quad \\text{at } T = 0 \\text{ K (perfect crystal)}$$
+$$\\boxed{S = 0 \\quad \\text{at } T = 0 \\text{ K (perfect crystal)}}$$
 
 
 ---
@@ -80,9 +97,7 @@ The entropy of **one mole** of a substance at **standard conditions** (1 atm, us
 
 ---
 
-### Important: $S° > 0$ for ALL substances at 298 K
-
-Unlike $\\Delta H°_f$, which is zero for elements, $S°$ is **never zero** at room temperature. Every substance has entropy at temperatures above 0 K.
+> ⚠️ **Warning:** Unlike $\\Delta H°_f$ (which is zero for elements), $S°$ is **never zero** at room temperature. Every substance has positive entropy at temperatures above 0 K — this is the #1 source of mistakes in entropy calculations!
       `
     },
     {
@@ -107,16 +122,14 @@ As temperature increases from 0 K, entropy increases through several stages:
 
 ---
 
-### Key Feature
-
-The jump at the **boiling point** is much larger than at the melting point, because the liquid → gas transition involves a much greater increase in molecular freedom.
+> 💡 **Tip:** The entropy jump at the **boiling point** is much larger than at the melting point, because the liquid → gas transition involves a vastly greater increase in molecular freedom.
 
 
 ---
 
 ### Phase Transition Entropy
 
-$$\\Delta S_{\\text{transition}} = \\frac{\\Delta H_{\\text{transition}}}{T_{\\text{transition}}}$$
+$$\\boxed{\\Delta S_{\\text{transition}} = \\frac{\\Delta H_{\\text{transition}}}{T_{\\text{transition}}}}$$
 
 This formula applies at the **equilibrium** transition temperature, where the process is reversible.
       `

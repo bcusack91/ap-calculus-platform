@@ -4,13 +4,30 @@ export const chemAcidBaseTheoriesPhPart7Data = {
     {
       id: 'ab7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — Acid-Base Theories and pH**
 
-This final part ties together all the concepts: Arrhenius, Brønsted-Lowry, and Lewis definitions, conjugate pairs, the pH scale, and strong acid/base calculations. These are high-yield AP exam topics!
-      `
+---
+
+### Everything Comes Together
+
+| Topic | Key Equation or Concept |
+|-------|------------------------|
+| Three theories | Arrhenius ⊂ Brønsted-Lowry ⊂ Lewis |
+| pH/pOH | $pH + pOH = 14$ |
+| Strong acids | $[H^+]$ = concentration (complete dissociation) |
+| Conjugate pairs | Acid → conjugate base + $H^+$ |
+| $K_w$ | $[H^+][OH^-] = 1.0 \times 10^{-14}$ at 25°C |
+
+> 🔑 **Why this matters:** This review mirrors the AP exam format — expect questions that require you to connect theory, calculations, and conceptual reasoning in a single problem.
+
+---
+
+### What You'll Master in Part 7
+- Tackling AP-style multiple choice across all acid-base topics
+- Writing free-response explanations using proper chemistry terminology
+- Identifying common AP traps and avoiding them`
     },
     {
       id: 'ab7-summary',
@@ -31,9 +48,9 @@ This final part ties together all the concepts: Arrhenius, Brønsted-Lowry, and 
 
 ### Key Equations
 
-$$pH = -\\log[H^+] \\qquad pOH = -\\log[OH^-]$$
+$$\\boxed{pH = -\\log[H^+] \\qquad pOH = -\\log[OH^-]}$$
 
-$$pH + pOH = 14 \\qquad K_w = [H^+][OH^-] = 1.0 \\times 10^{-14}$$
+$$\\boxed{pH + pOH = 14 \\qquad K_w = [H^+][OH^-] = 1.0 \\times 10^{-14}}$$
 
 $$[H^+] = 10^{-pH} \\qquad [OH^-] = 10^{-pOH}$$
 
@@ -46,6 +63,8 @@ $$[H^+] = 10^{-pH} \\qquad [OH^-] = 10^{-pOH}$$
 - Strong bases: Group 1 hydroxides + $Ca(OH)_2, Sr(OH)_2, Ba(OH)_2$
 - $[H^+] = C_{acid}$ for monoprotic strong acids
 - $[OH^-] = nC_{base}$ where $n$ = number of $OH^-$ per formula unit
+
+> 🔑 **Strong = complete dissociation.** No $K_a$ or $K_b$ needed — just use the concentration directly.
       `
     },
     {
@@ -100,7 +119,7 @@ $$[H^+] = 10^{-pH} \\qquad [OH^-] = 10^{-pOH}$$
 
 **1)** What is the pH of a solution made by mixing 100.0 mL of 0.15 M $HCl$ with 75.0 mL of 0.15 M $NaOH$? (2 decimal places)
 
-**2)** A solution has a pH of 11.50. What is $[H^+]$? (Enter in scientific notation, e.g. 3.2e-12)
+**2)** A solution has a pH of 11.50. What is $[H^+]$? (Enter in scientific notation, e.g. 4.7e-9)
 
 **3)** What volume (mL) of 0.20 M $NaOH$ is needed to exactly neutralize 50.0 mL of 0.10 M $H_2SO_4$? (Enter as whole number)
       `,

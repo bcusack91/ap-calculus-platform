@@ -4,13 +4,30 @@ export const chemGibbsFreeEnergyPart3Data = {
     {
       id: 'gf3-intro',
       type: 'text' as const,
-      content: `
-# 🏗️ Standard Free Energy of Formation
+      content: `# 🏗️ Standard Free Energy of Formation
 
 **Part 3 of 7 — Calculating ΔG° from Tables**
 
-Just as we used $\\Delta H°_f$ to calculate $\\Delta H°_{\\text{rxn}}$, we can use standard free energies of formation ($\\Delta G°_f$) to calculate $\\Delta G°_{\\text{rxn}}$. The formula is identical in structure.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| ⚡ Standard Free Energy of Formation ($\\Delta G°_f$) |
+| The Master Equation |
+| Key Rule |
+| Sample Values |
+| 🧪 Worked Example |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'gf3-definition',
@@ -25,16 +42,16 @@ The free energy change when **one mole** of a compound is formed from its **elem
 
 ### The Master Equation
 
-$$\\Delta G°_{\\text{rxn}} = \\sum n \\cdot \\Delta G°_f(\\text{products}) - \\sum m \\cdot \\Delta G°_f(\\text{reactants})$$
+$$\boxed{\Delta G°_{\text{rxn}} = \sum n \cdot \Delta G°_f(\text{products}) - \sum m \cdot \Delta G°_f(\text{reactants})}$$
 
 
 ---
 
 ### Key Rule
 
-$$\\Delta G°_f = 0 \\text{ for all elements in their standard states}$$
+$$\boxed{\Delta G°_f = 0 \text{ for all elements in their standard states}}$$
 
-(Same convention as $\\Delta H°_f$)
+> 🔑 **Key Concept:** Same convention as $\Delta H°_f$ — elements in their standard states are the reference point.
 
 
 ---
@@ -59,7 +76,7 @@ $$\\Delta G°_f = 0 \\text{ for all elements in their standard states}$$
       content: `
 ## 🧪 Worked Example
 
-Calculate $\\Delta G°$ for: $\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(l)$
+> **Problem:** Calculate $\Delta G°$ for: $\text{CH}_4(g) + 2\text{O}_2(g) \rightarrow \text{CO}_2(g) + 2\text{H}_2\text{O}(l)$
 
 | Substance | $\\Delta G°_f$ (kJ/mol) |
 |-----------|----------------------|
@@ -67,7 +84,7 @@ Calculate $\\Delta G°$ for: $\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\t
 | $\\text{O}_2(g)$ | $0$ |
 | $\\text{CO}_2(g)$ | $-394.4$ |
 | $\\text{H}_2\\text{O}(l)$ | $-237.1$ |
-
+> **Solution:**
 $$\\Delta G° = [(-394.4) + 2(-237.1)] - [(-50.7) + 2(0)]$$
 $$= [-394.4 - 474.2] - [-50.7]$$
 $$= -868.6 + 50.7 = -817.9 \\text{ kJ}$$
@@ -175,9 +192,9 @@ Both methods give the same answer at 25°C.
 
 ### Common AP Mistake
 
-Students often confuse these three quantities. Remember:
-- $\\Delta H°_f$ and $\\Delta G°_f$ are **zero** for elements in standard states
-- $S°$ is **NOT zero** — it is always positive at $T > 0$ K
+> ⚠️ **Warning:** Students often confuse these three quantities. Remember:
+> - $\Delta H°_f$ and $\Delta G°_f$ are **zero** for elements in standard states
+> - $S°$ is **NOT zero** — it is always positive at $T > 0$ K
       `
     },
     {

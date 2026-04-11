@@ -4,19 +4,32 @@ export const chemReactionQuotientLeChatPart6Data = {
     {
       id: 'ql6-intro',
       type: 'text' as const,
-      content: `
-# 🧮 Problem-Solving Workshop
+      content: `# 🧮 Problem-Solving Workshop
 
 **Part 6 of 7 — Q, K, and Le Chatelier Calculations**
 
-This workshop combines Q vs K comparisons with Le Chatelier\'s principle predictions. These multi-step problems mirror AP exam formats.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'ql6-strategy',
       type: 'text' as const,
       content: `
 ## 🛠️ Problem-Solving Strategy
+
+> 🔑 **Key Concept:** Always start by calculating $Q$, then compare to $K$. For Le Chatelier problems, identify the stress type first — only temperature changes $K$.
 
 ### For Q vs K Problems
 
@@ -48,17 +61,17 @@ This workshop combines Q vs K comparisons with Le Chatelier\'s principle predict
       content: `
 ## 🧪 Worked Example 1
 
-$\\text{CO}(g) + \\text{H}_2\\text{O}(g) \\rightleftharpoons \\text{CO}_2(g) + \\text{H}_2(g)$, $K_c = 5.10$ at 700 K
+> **Problem:** $\\text{CO}(g) + \\text{H}_2\\text{O}(g) \\rightleftharpoons \\text{CO}_2(g) + \\text{H}_2(g)$, $K_c = 5.10$ at 700 K. A flask contains: $[\\text{CO}] = 0.200$, $[\\text{H}_2\\text{O}] = 0.300$, $[\\text{CO}_2] = 0.400$, $[\\text{H}_2] = 0.500$ M. Determine the direction of shift.
 
-A flask contains: $[\\text{CO}] = 0.200$, $[\\text{H}_2\\text{O}] = 0.300$, $[\\text{CO}_2] = 0.400$, $[\\text{H}_2] = 0.500$ M
-
-$$Q = \\frac{(0.400)(0.500)}{(0.200)(0.300)} = \\frac{0.200}{0.060} = 3.33$$
-
-$Q = 3.33 < K = 5.10$ → shift **right**
-
-At the new equilibrium:
-- $[\\text{CO}]$ decreases, $[\\text{H}_2\\text{O}]$ decreases
-- $[\\text{CO}_2]$ increases, $[\\text{H}_2]$ increases
+> **Solution:**
+>
+> $$\\boxed{Q = \\frac{(0.400)(0.500)}{(0.200)(0.300)} = \\frac{0.200}{0.060} = 3.33}$$
+>
+> $Q = 3.33 < K = 5.10$ → shift **right**
+>
+> At the new equilibrium:
+> - $[\\text{CO}]$ decreases, $[\\text{H}_2\\text{O}]$ decreases
+> - $[\\text{CO}_2]$ increases, $[\\text{H}_2]$ increases
       `
     },
     {

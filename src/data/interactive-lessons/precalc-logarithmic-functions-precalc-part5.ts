@@ -2,186 +2,227 @@ export const precalcLogarithmicPart5Data = {
   topicSlug: 'logarithmic-functions-precalc',
   sections: [
     {
-      id: 'precalc-logarithmic-functions-precalc-p5-s1-intro',
+      id: 'p5-intro',
       type: 'text' as const,
       content: `
-      ## Logarithmic Functions: Change of base and calculator fluency
-      
-      **Part 5 of 7**
-      
-      This part focuses on switching bases for practical computation. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **power rule**: $\log_b(x^k)=k\log_b x$
-      - **change of base**: rewrite logs using convenient computational bases
-      - **domain condition**: log input must stay strictly positive
-      
-      
-      ### Worked Example
-      Part 5 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🔀 Logarithmic Functions — Change of Base & Calculator Fluency
+
+**Part 5 of 7**
+
+Calculators only have **LOG** ($\\log_{10}$) and **LN** ($\\ln$) keys. To evaluate any other base, use the **Change of Base Formula**:
+
+$$\\boxed{\\log_b x = \\frac{\\log x}{\\log b} = \\frac{\\ln x}{\\ln b}}$$
+
+### Why It Works
+
+Starting from $\\log_b x = y$:
+
+$b^y = x \\implies \\ln(b^y) = \\ln x \\implies y \\ln b = \\ln x \\implies y = \\frac{\\ln x}{\\ln b}$
       `
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p5-s2-mcq-core',
+      id: 'p5-examples',
+      type: 'text' as const,
+      content: `
+## 🧮 Evaluating with Change of Base
+
+### Example 1: $\\log_7 50$
+
+$$\\log_7 50 = \\frac{\\ln 50}{\\ln 7} = \\frac{3.912}{1.946} \\approx 2.011$$
+
+**Sanity check:** $7^2 = 49 \\approx 50$ ✔ (answer should be slightly above $2$)
+
+### Example 2: $\\log_3 100$
+
+$$\\log_3 100 = \\frac{\\log 100}{\\log 3} = \\frac{2}{0.477} \\approx 4.192$$
+
+**Sanity check:** $3^4 = 81$ and $3^5 = 243$, so answer is between $4$ and $5$ ✔
+
+### Quick Reference for Common Calculations
+
+| Expression | Calculator Entry | Result |
+|:-----------|:----------------|:-------|
+| $\\log_2 10$ | $\\ln(10)/\\ln(2)$ | $\\approx 3.322$ |
+| $\\log_5 30$ | $\\ln(30)/\\ln(5)$ | $\\approx 2.113$ |
+| $\\log_8 1000$ | $\\log(1000)/\\log(8)$ | $\\approx 3.322$ |
+| $\\log_{0.5} 3$ | $\\ln(3)/\\ln(0.5)$ | $\\approx -1.585$ |
+      `
+    },
+    {
+      id: 'p5-special-relationships',
+      type: 'text' as const,
+      content: `
+## 🔗 Useful Relationships from Change of Base
+
+### Reciprocal Property
+
+$$\\boxed{\\log_b a = \\frac{1}{\\log_a b}}$$
+
+**Example:** $\\log_2 8 = 3$ and $\\log_8 2 = \\frac{1}{3}$. Product: $3 \\times \\frac{1}{3} = 1$ ✔
+
+### Converting Between Bases
+
+To convert $\\log_a x$ into $\\log_b x$:
+
+$$\\log_a x = \\frac{\\log_b x}{\\log_b a}$$
+
+### Change of Base in Equations
+
+> **Solve $\\log_2 x = \\log_3 5$**
+
+Convert right side: $\\log_3 5 = \\frac{\\ln 5}{\\ln 3} \\approx 1.465$
+
+So $\\log_2 x = 1.465 \\implies x = 2^{1.465} \\approx 2.760$
+      `
+    },
+    {
+      id: 'p5-graphing',
+      type: 'text' as const,
+      content: `
+## 📊 Graphing Any Log with Change of Base
+
+To graph $y = \\log_b x$ on a calculator, enter:
+
+$$y = \\frac{\\ln x}{\\ln b}$$
+
+### Base Comparison Table
+
+| Base | $y = \\log_b(10)$ | Growth Rate | Steepness |
+|:-----|:------------------|:------------|:----------|
+| $b = 2$ | $3.322$ | Fastest | Steepest |
+| $b = e$ | $2.303$ | Middle | Medium |
+| $b = 10$ | $1.000$ | Slower | Flatter |
+| $b = 100$ | $0.500$ | Slowest | Flattest |
+
+> **Key insight:** Larger base = slower growth = flatter curve. All pass through $(1, 0)$.
+      `
+    },
+    {
+      id: 'p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Change of Base Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of power rule.',
+            question: 'Which calculator expression evaluates $\\log_6 42$?',
             options: [
-              'vertical line where log input approaches zero',
-              'log input must stay strictly positive',
-              'rewrite logs using convenient computational bases',
-              '$\\log_b(x^k)=k\\log_b x$'
+              '$6 \\div 42$',
+              '$\\ln(42) / \\ln(6)$',
+              '$\\ln(6) / \\ln(42)$',
+              '$42^{1/6}$'
             ],
-            correctAnswer: 3,
-            explanation: 'power rule is defined as: $\\log_b(x^k)=k\\log_b x$.'
+            correctAnswer: 1,
+            explanation: 'Change of base: $\\log_6 42 = \\frac{\\ln 42}{\\ln 6}$. The argument goes on top, the base goes on the bottom.'
           },
           {
-            question: 'In switching bases for practical computation, which expression is the best starting model?',
+            question: 'If $\\log_5 3 \\approx 0.683$, then $\\log_3 5 \\approx$',
             options: [
-              '$\\log_b x=\\frac{\\log_k x}{\\log_k b}$',
-              '$\\log_b(x^k)=k\\log_b x$',
-              '$\\log_b(xy)=\\log_b x+\\log_b y$',
-              '$\\log_b x = y \\iff b^y=x$'
+              '$0.317$',
+              '$1.465$',
+              '$-0.683$',
+              '$0.683$'
             ],
-            correctAnswer: 3,
-            explanation: 'Use $\\log_b x = y \\iff b^y=x$ first, then substitute known quantities from the prompt.'
+            correctAnswer: 1,
+            explanation: 'Reciprocal property: $\\log_3 5 = \\frac{1}{\\log_5 3} = \\frac{1}{0.683} \\approx 1.465$.'
+          },
+          {
+            question: '$\\log_4 16 + \\log_{16} 4 = $',
+            options: [
+              '$\\frac{5}{2}$',
+              '$3$',
+              '$4$',
+              '$\\frac{3}{2}$'
+            ],
+            correctAnswer: 0,
+            explanation: '$\\log_4 16 = 2$ (since $4^2 = 16$) and $\\log_{16} 4 = \\frac{1}{2}$ (since $16^{1/2} = 4$). Sum: $2 + \\frac{1}{2} = \\frac{5}{2}$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p5-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Definition | $\log_b x = y \iff b^y=x$ | inverse conversion |
-      | Product | $\log_b(xy)=\log_b x+\log_b y$ | expression expansion |
-      | Power | $\log_b(x^k)=k\log_b x$ | exponent extraction |
-      | Change of base | $\log_b x=\\frac{\log_k x}{\log_k b}$ | calculator evaluation |
-      
-      ### Common pitfalls
-      - Always test candidate solutions against positive-input domain restrictions.
-      - Keep base notation explicit when combining terms.
-      - Applying log rules across sums, like $\log(x+y)$, is invalid.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-logarithmic-functions-precalc-p5-s4-input',
+      id: 'p5-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Logarithm Computation**
-      
-      1) Evaluate $\log_2 32$.
-      2) Solve $\log_{10}(x)=2$.
-      3) Evaluate $\ln(e^4)$.
+**Calculator Practice** 🧮
+
+**1)** Evaluate $\\log_2 32$ using change of base: $\\frac{\\log 32}{\\log 2}$. (e.g., $\\log_3 27 = \\frac{\\log 27}{\\log 3} = \\frac{1.431}{0.477} = 3$)
+
+**2)** If $\\log_4 7 \\approx 1.404$, find $\\log_7 4$ to three decimal places. (e.g., if $\\log_3 5 \\approx 1.465$, then $\\log_5 3 = 1/1.465 \\approx 0.683$)
+
+**3)** Evaluate $\\log_9 27$ exactly. Hint: write both as powers of $3$. (e.g., $\\log_8 32$: $8 = 2^3$, $32 = 2^5$, so answer is $\\frac{5}{3}$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5', '100', '4'],
-        hint1: 'Ask: $2^{?}=32$.',
-        hint2: 'Rewrite in exponential form.',
-        hint3: '$\\ln$ and $e^x$ are inverse operations.',
-        explanation: 'Outputs are 5, 100, and 4 by inverse log-exponential conversion.'
+        correctAnswers: ['5', '0.712', '3/2'],
+        hint1: '$\\log 32 / \\log 2 = \\log(2^5)/\\log 2 = 5\\log 2 / \\log 2$.',
+        hint2: 'Reciprocal: $1/1.404 \\approx ?$.',
+        hint3: '$9 = 3^2$ and $27 = 3^3$. $\\log_{3^2}(3^3) = \\frac{3}{2}$.',
+        explanation: '1) $\\frac{\\log 32}{\\log 2} = \\frac{5\\log 2}{\\log 2} = 5$. 2) $\\frac{1}{1.404} \\approx 0.712$. 3) $\\log_9 27 = \\frac{\\log 3^3}{\\log 3^2} = \\frac{3}{2}$.'
       }
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p5-s5-dropdown',
+      id: 'p5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Base Fluency** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'power rule',
-            options: ['$\\log_b(x^k)=k\\log_b x$', 'log input must stay strictly positive', 'vertical line where log input approaches zero', 'rewrite logs using convenient computational bases']
+            label: '$\\frac{\\ln x}{\\ln 5}$ equals',
+            options: ['$\\ln(x/5)$', '$\\log_5 x$', '$\\log_x 5$', '$5\\ln x$']
           },
           {
-            label: 'change of base',
-            options: ['rewrite logs using convenient computational bases', 'log input must stay strictly positive', 'vertical line where log input approaches zero', 'exponent needed to produce a value from a base']
+            label: '$\\log_b a \\cdot \\log_a b$ always equals',
+            options: ['$0$', '$1$', '$a + b$', '$\\log(ab)$']
           },
           {
-            label: 'domain condition',
-            options: ['vertical line where log input approaches zero', 'log input must stay strictly positive', 'log and exponential functions undo each other', 'exponent needed to produce a value from a base']
+            label: 'The steepest log graph (for $x > 1$) among $\\log_2 x$, $\\log_{10} x$, $\\ln x$ is',
+            options: ['$\\log_2 x$', '$\\ln x$', '$\\log_{10} x$', 'all identical']
+          },
+          {
+            label: '$\\log_b 1$ equals ___ for any valid base',
+            options: ['$1$', '$b$', '$0$', 'undefined']
           }
         ],
-        correctAnswers: ['$\\log_b(x^k)=k\\log_b x$', 'rewrite logs using convenient computational bases', 'log input must stay strictly positive'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: power rule, change of base, and domain condition align with their exact definitions used in this part.'
+        correctAnswers: ['$\\log_5 x$', '$1$', '$\\log_2 x$', '$0$'],
+        hint1: 'Change of base formula: numerator is $\\ln(\\text{argument})$, denominator is $\\ln(\\text{base})$.',
+        hint2: 'Reciprocal property: $\\log_b a = 1/\\log_a b$.',
+        hint3: 'Smallest base = steepest curve.',
+        explanation: '$\\frac{\\ln x}{\\ln 5} = \\log_5 x$. Reciprocal property gives product $= 1$. Smaller base = steeper. $\\log_b 1 = 0$ always.'
       }
     },
     {
-      id: 'precalc-logarithmic-functions-precalc-p5-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to power rule, change of base, and domain condition so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-logarithmic-functions-precalc-p5-s7-mcq-applied',
+      id: 'p5-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is switching bases for practical computation. Which term best anchors the next reasoning step if the key idea is: vertical line where log input approaches zero?',
+            question: 'Simplify: $\\frac{\\log_3 8}{\\log_3 2}$',
             options: [
-              'domain condition',
-              'change of base',
-              'asymptote',
-              'power rule'
+              '$\\log_3 4$',
+              '$4$',
+              '$3$',
+              '$\\log_2 8$'
             ],
             correctAnswer: 2,
-            explanation: 'asymptote matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: 'By change of base (in reverse): $\\frac{\\log_3 8}{\\log_3 2} = \\log_2 8 = 3$. So both C and D are correct representations, but $3$ is the simplified value.'
           },
           {
-            question: 'A student is solving a mixed logarithmic functions prompt. Which term best anchors the next reasoning step if the key idea is: exponent needed to produce a value from a base?',
+            question: 'Solve $\\log_5 x = 2.5$ to the nearest integer.',
             options: [
-              'logarithm',
-              'asymptote',
-              'inverse relation',
-              'domain condition'
+              '$x \\approx 13$',
+              '$x \\approx 56$',
+              '$x \\approx 25$',
+              '$x \\approx 12$'
             ],
-            correctAnswer: 0,
-            explanation: 'logarithm matches that description and keeps the model-to-interpretation chain consistent.'
+            correctAnswer: 1,
+            explanation: '$x = 5^{2.5} = 5^2 \\cdot 5^{0.5} = 25\\sqrt{5} \\approx 25(2.236) \\approx 55.9 \\approx 56$.'
           }
         ]
       }

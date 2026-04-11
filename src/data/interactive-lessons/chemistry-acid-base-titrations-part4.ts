@@ -4,13 +4,29 @@ export const chemAcidBaseTitrationsPart4Data = {
     {
       id: 'at4-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Special Points on the Titration Curve
+      content: `# 🎯 Special Points on the Titration Curve
 
 **Part 4 of 7 — Half-Equivalence, Equivalence, and Beyond**
 
-AP Chemistry frequently asks you to identify and calculate pH at specific points on a titration curve. This lesson focuses on the critical points that earn you maximum credit on free-response questions.
-      `
+---
+
+### Critical Points Summary
+
+| Point | Volume of Base | How to Find pH | Key Feature |
+|-------|---------------|----------------|-------------|
+| Initial | 0 mL | ICE table with $K_a$ | Weak acid equilibrium |
+| Half-equivalence | ½ $V_{eq}$ | pH = p$K_a$ | Max buffer capacity |
+| Equivalence | $V_{eq}$ | Hydrolysis of conjugate base ($K_b$) | pH > 7 for weak acid |
+| After equivalence | > $V_{eq}$ | Excess $[OH^-]$ | Same for all titrations |
+
+> 🔑 **Why this matters:** The AP exam frequently asks you to identify these points on a graph and calculate pH at each — this is high-yield content.
+
+---
+
+### What You'll Master in Part 4
+- Finding pH at the half-equivalence, equivalence, and post-equivalence points
+- Understanding weak base–strong acid titrations (inverted curves)
+- Handling polyprotic acid titrations with multiple equivalence points`
     },
     {
       id: 'at4-critical-points',
@@ -39,6 +55,8 @@ For titrating a weak acid $HA$ with strong base $NaOH$:
 | Weak acid + Strong base | $> 7$ |
 | Strong acid + Weak base | $< 7$ |
 | Weak acid + Weak base | Depends on relative $K_a$ and $K_b$ |
+
+> 🔑 **Key Pattern:** Equivalence pH tells you the titration type: pH 7 = strong+strong, pH > 7 = weak acid+strong base, pH < 7 = strong acid+weak base.
       `
     },
     {
@@ -68,6 +86,8 @@ $$NH_3(aq) + HCl(aq) \\rightarrow NH_4Cl(aq)$$
 ### Key Difference
 
 The curve goes from **high pH to low pH** — a mirror image of the weak acid curve!
+
+> 💡 **Tip:** For weak base titrations, $pH = pK_a$ of the conjugate acid at the half-equivalence point. Use $pK_a = 14 - pK_b$ to convert.
       `
     },
     {
@@ -142,6 +162,8 @@ The curve shows **two S-shaped jumps**!
 - First half-equivalence: $pH = pK_{a1}$
 - Midpoint between equivalences: $pH = pK_{a2}$
 - Each steep region corresponds to one deprotonation
+
+> ⚠️ **Watch Out:** For polyprotic acids, the volume to the second equivalence is always 2× the first. Each proton requires an equal amount of base.
 
 
 ---

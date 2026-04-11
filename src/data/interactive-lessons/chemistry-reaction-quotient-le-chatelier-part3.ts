@@ -4,13 +4,30 @@ export const chemReactionQuotientLeChatPart3Data = {
     {
       id: 'ql3-intro',
       type: 'text' as const,
-      content: `
-# 🔄 Le Chatelier\'s Principle — Concentration Changes
+      content: `# 🔄 Le Chatelier\'s Principle — Concentration Changes
 
 **Part 3 of 7 — How the System Responds to Stress**
 
-Le Chatelier\'s Principle states: *When a system at equilibrium is subjected to a stress, the system will shift in the direction that partially relieves that stress.* In this part, we focus on **concentration changes**.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Adding or Removing Species |
+| Adding Reactant → Shift Right |
+| Adding Product → Shift Left |
+| Removing a Species → Opposite Shift |
+| Key Insight |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 3
+- Understanding the core concepts covered in Part 3
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ql3-adding-reactant',
@@ -56,7 +73,7 @@ If we add more NH₃:
 
 ### Key Insight
 
-The system shifts to **partially** counteract the change. It never fully restores the original concentrations — it finds a **new** equilibrium position.
+> ⚠️ **Warning:** The system shifts to **partially** counteract the change. It never fully restores the original concentrations — it finds a **new** equilibrium position.
       `
     },
     {
@@ -65,23 +82,22 @@ The system shifts to **partially** counteract the change. It never fully restore
       content: `
 ## 🧪 Worked Example
 
-$\\text{CO}(g) + 2\\,\\text{H}_2(g) \\rightleftharpoons \\text{CH}_3\\text{OH}(g)$, $K_c = 14.5$
+> **Problem:** $\\text{CO}(g) + 2\\,\\text{H}_2(g) \\rightleftharpoons \\text{CH}_3\\text{OH}(g)$, $K_c = 14.5$. Original equilibrium: $[\\text{CO}] = 0.20$, $[\\text{H}_2] = 0.30$, $[\\text{CH}_3\\text{OH}] = 0.26$ M. **Stress:** Add CO to make $[\\text{CO}] = 0.40$ M. Predict the shift.
 
-**Original equilibrium:** $[\\text{CO}] = 0.20$, $[\\text{H}_2] = 0.30$, $[\\text{CH}_3\\text{OH}] = 0.26$ M
-
-**Verify:** $Q = \\frac{0.26}{(0.20)(0.30)^2} = \\frac{0.26}{0.018} = 14.4 \\approx K$ ✓
-
-**Stress:** Add CO to make $[\\text{CO}] = 0.40$ M
-
-**Immediate Q:**
-$$Q = \\frac{0.26}{(0.40)(0.30)^2} = \\frac{0.26}{0.036} = 7.2$$
-
-Since $Q = 7.2 < K = 14.5$: the system shifts **right**.
-
-**At the new equilibrium:**
-- $[\\text{CO}]$ is higher than 0.20 but lower than 0.40 (some consumed)
-- $[\\text{H}_2]$ is lower than 0.30 (consumed)
-- $[\\text{CH}_3\\text{OH}]$ is higher than 0.26 (produced)
+> **Solution:**
+>
+> **Verify original:** $Q = \\frac{0.26}{(0.20)(0.30)^2} = \\frac{0.26}{0.018} = 14.4 \\approx K$ ✓
+>
+> **Immediate Q after stress:**
+>
+> $$\\boxed{Q = \\frac{0.26}{(0.40)(0.30)^2} = \\frac{0.26}{0.036} = 7.2}$$
+>
+> Since $Q = 7.2 < K = 14.5$: the system shifts **right**.
+>
+> At the new equilibrium:
+> - $[\\text{CO}]$ is higher than 0.20 but lower than 0.40 (some consumed)
+> - $[\\text{H}_2]$ is lower than 0.30 (consumed)
+> - $[\\text{CH}_3\\text{OH}]$ is higher than 0.26 (produced)
       `
     },
     {

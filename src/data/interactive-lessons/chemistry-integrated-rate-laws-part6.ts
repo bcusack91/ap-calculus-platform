@@ -4,13 +4,24 @@ export const chemIntegratedRateLawsPart6Data = {
     {
       id: 'ir6-intro',
       type: 'text' as const,
-      content: `
-# 🔧 Problem-Solving Workshop
+      content: `# 🔧 Problem-Solving Workshop
 
 **Part 6 of 7 — Mixed Order Identification and Calculations**
 
-This workshop combines all three integrated rate laws in problems that require you to first identify the order, then perform calculations. These mirror the multi-step problems found on the AP exam.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'ir6-strategy-review',
@@ -18,33 +29,36 @@ This workshop combines all three integrated rate laws in problems that require y
       content: `
 ## 🛠️ Problem-Solving Flowchart
 
+---
+
 ### Step 1: Identify the Order
 
-Method A — **Graphical**: Plot [A], ln[A], and 1/[A] vs t. The linear one wins.
-
-Method B — **Successive half-lives**:
-- Half-lives equal → first-order
-- Half-lives decreasing → zero-order
-- Half-lives increasing (doubling) → second-order
-
-Method C — **Initial rates**: Compare experiments (covered in earlier parts).
-
+| Method | How It Works | Result |
+|--------|-------------|--------|
+| **Graphical** | Plot [A], ln[A], and 1/[A] vs. $t$ | The **linear** plot reveals the order |
+| **Successive half-lives** | Compare $t_{1/2}$ values | Equal = 1st; Decreasing = 0th; Doubling = 2nd |
+| **Initial rates** | Compare experiments (covered earlier) | Change [A], observe rate change |
 
 ---
 
-### Step 2: Find k
+### Step 2: Find $k$ from the Linear Plot
 
-Use the slope of the appropriate linear plot:
-- Zero: slope of [A] vs t = $-k$
-- First: slope of ln[A] vs t = $-k$
-- Second: slope of 1/[A] vs t = $+k$
-
+| Order | Linear Plot | Slope |
+|-------|------------|-------|
+| Zero | [A] vs. $t$ | $-k$ |
+| First | $\\ln$[A] vs. $t$ | $-k$ |
+| Second | $1/$[A] vs. $t$ | $+k$ |
 
 ---
 
 ### Step 3: Solve the Problem
 
-Use the appropriate integrated rate law to find concentration at any time, time to reach a certain concentration, or half-life.
+Use the appropriate integrated rate law to find:
+- Concentration at any time
+- Time to reach a certain concentration
+- Half-life
+
+> ⚠️ **Always check the units of $k$** to confirm the order you identified. Wrong units = wrong order!
       `
     },
     {

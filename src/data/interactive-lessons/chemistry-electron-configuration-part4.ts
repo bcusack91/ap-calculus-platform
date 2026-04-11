@@ -4,9 +4,40 @@ export const chemElectronConfigPart4Data = {
     {
       id: 'ec4-intro',
       type: 'text' as const,
-      content: `# Part 4: Noble Gas (Shorthand) Notation
+      content: `# 📦 Noble Gas (Shorthand) Notation
 
-Writing out 1s² 2s² 2p⁶ 3s² 3p⁶ every time gets tedious. Chemists use **noble gas shorthand notation** to simplify electron configurations by replacing the inner-shell electrons with the symbol of the preceding noble gas in brackets.`
+**Part 4 of 7 — Simplifying Electron Configurations**
+
+---
+
+### The Problem
+
+Writing out full configurations gets long fast:
+
+| Element | Z | Full Configuration | That's a lot... |
+|---------|---|--------------------|-----------------|
+| Na | 11 | 1s² 2s² 2p⁶ 3s¹ | 4 subshells |
+| Fe | 26 | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶ | 7 subshells |
+| Br | 35 | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁵ | 8 subshells |
+
+### The Solution
+
+Replace the inner-shell electrons with the **preceding noble gas in brackets**:
+
+| Element | Full Configuration | → | Shorthand |
+|---------|--------------------|----|-----------|
+| Na | 1s² 2s² 2p⁶ 3s¹ | → | **[Ne] 3s¹** |
+| Fe | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶ | → | **[Ar] 4s² 3d⁶** |
+| Br | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁵ | → | **[Ar] 4s² 3d¹⁰ 4p⁵** |
+
+> 🔑 **Why this matters:** Noble gas shorthand lets you focus on the **valence electrons** — the ones that actually determine chemical behavior and bonding.
+
+---
+
+### What You'll Master in Part 4
+- Identifying the correct noble gas core for any element
+- Converting between full and shorthand notation
+- Recognizing that shorthand highlights the chemically important electrons`
     },
     {
       id: 'ec4-noble-gases',
@@ -30,24 +61,56 @@ To use shorthand notation:
     {
       id: 'ec4-examples',
       type: 'text' as const,
-      content: `## 🧪 Examples
+      content: `## 🧪 Step-by-Step Examples
 
-**Sodium (Na, Z = 11)**  
-Full: 1s² 2s² 2p⁶ 3s¹  
-The preceding noble gas is Neon (Z = 10): 1s² 2s² 2p⁶  
-Shorthand: **[Ne] 3s¹**
+### Example 1: Sodium (Na, Z = 11)
 
-**Iron (Fe, Z = 26)**  
-Full: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶  
-The preceding noble gas is Argon (Z = 18): 1s² 2s² 2p⁶ 3s² 3p⁶  
-Shorthand: **[Ar] 4s² 3d⁶**
+**Total electrons:** 11
 
-**Bromine (Br, Z = 35)**  
-Full: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁵  
-The preceding noble gas is Argon (Z = 18)  
-Shorthand: **[Ar] 4s² 3d¹⁰ 4p⁵**
+| Step | Action | Result |
+|------|--------|--------|
+| 1 | Write the full configuration | 1s² 2s² 2p⁶ 3s¹ |
+| 2 | Identify the preceding noble gas | Neon (Ne, Z = 10) |
+| 3 | Ne accounts for: | 1s² 2s² 2p⁶ (10 electrons) |
+| 4 | Remaining electrons: 11 − 10 = 1 | 3s¹ |
 
-The shorthand is especially useful for heavier elements where the full configuration would be extremely long.`
+**Shorthand: [Ne] 3s¹**
+
+> 🔑 The single 3s¹ electron is sodium's **valence electron** — the one it loses to form Na⁺.
+
+---
+
+### Example 2: Iron (Fe, Z = 26)
+
+**Total electrons:** 26
+
+| Step | Action | Result |
+|------|--------|--------|
+| 1 | Write the full configuration | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶ |
+| 2 | Identify the preceding noble gas | Argon (Ar, Z = 18) |
+| 3 | Ar accounts for: | 1s² 2s² 2p⁶ 3s² 3p⁶ (18 electrons) |
+| 4 | Remaining electrons: 26 − 18 = 8 | 4s² 3d⁶ |
+
+**Shorthand: [Ar] 4s² 3d⁶**
+
+> ⚠️ **Why not [Kr]?** Krypton has Z = 36, which is **more** than 26. Always use the noble gas that comes **before** your element.
+
+---
+
+### Example 3: Bromine (Br, Z = 35)
+
+**Total electrons:** 35
+
+| Step | Action | Result |
+|------|--------|--------|
+| 1 | Write the full configuration | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁵ |
+| 2 | Identify the preceding noble gas | Argon (Ar, Z = 18) |
+| 3 | Ar accounts for: | 1s² 2s² 2p⁶ 3s² 3p⁶ (18 electrons) |
+| 4 | Remaining electrons: 35 − 18 = 17 | 4s² 3d¹⁰ 4p⁵ |
+
+**Shorthand: [Ar] 4s² 3d¹⁰ 4p⁵**
+
+> 💡 Notice how the shorthand cuts a **8-subshell** configuration down to just **3 subshells** — and immediately shows the 7 valence electrons (4s² + 4p⁵) that determine bromine's chemistry.`
     },
     {
       id: 'ec4-quiz-identify-core',
@@ -93,7 +156,7 @@ What is the correct noble gas shorthand notation for phosphorus (P, Z = 15)?`,
       type: 'input-box' as const,
       content: `### Convert to Shorthand
 
-Convert the following full electron configurations to noble gas shorthand. Use the format: [Xx] 3s2 3p5 (brackets around the noble gas symbol, no superscripts).`,
+Convert the following full electron configurations to noble gas shorthand (e.g., [Ne] 3s2 3p5). A formatted preview will appear as you type.`,
       exercise: {
         inputs: [
           {
@@ -135,14 +198,47 @@ Match each element with its correct shorthand electron configuration.`,
     {
       id: 'ec4-summary',
       type: 'text' as const,
-      content: `## 📌 Key Takeaways
+      content: `## � Part 4 Summary: Noble Gas Shorthand
 
-1. **Noble gas shorthand** replaces the inner electron core with the preceding noble gas symbol in brackets.
-2. Always choose the noble gas that comes **immediately before** your element in the periodic table.
-3. After the bracket, continue writing the remaining subshells in Aufbau filling order.
-4. This notation makes it easy to focus on the **valence electrons** — the outer electrons that participate in bonding and determine chemical properties.
+---
 
-Next: We will tackle the important exceptions to the Aufbau order and learn how to write configurations for ions.`
+### 🧰 The Method
+
+| Step | Action | Example (Bromine, Z = 35) |
+|------|--------|---------------------------|
+| 1 | Write the full configuration | 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁵ |
+| 2 | Find the preceding noble gas | Argon (Ar, Z = 18) |
+| 3 | Replace the noble gas core with brackets | [Ar] |
+| 4 | Write the remaining subshells | 4s² 3d¹⁰ 4p⁵ |
+| **Result** | **Noble gas shorthand** | **[Ar] 4s² 3d¹⁰ 4p⁵** |
+
+---
+
+### 📌 Noble Gas Reference
+
+| Noble Gas | Z | Use for elements with Z = |
+|-----------|---|---------------------------|
+| He | 2 | 3–10 |
+| Ne | 10 | 11–18 |
+| Ar | 18 | 19–36 |
+| Kr | 36 | 37–54 |
+| Xe | 54 | 55–86 |
+| Rn | 86 | 87+ |
+
+---
+
+### ✅ Your Checklist Before Moving On
+
+- ☐ I can identify the correct noble gas core for any element
+- ☐ I can convert a full configuration to noble gas shorthand
+- ☐ I can convert noble gas shorthand back to the full configuration
+- ☐ I understand that shorthand highlights the **valence electrons** — the ones that determine chemical behavior
+
+---
+
+### 🔮 What's Next
+
+In **Part 5**, we tackle the important **exceptions** to the Aufbau filling order (Chromium and Copper) and learn how to write electron configurations for **ions** — including the critical rule that 4s electrons are removed before 3d when forming cations.`
     }
   ]
 }

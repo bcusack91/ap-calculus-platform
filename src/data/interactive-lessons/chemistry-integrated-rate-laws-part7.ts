@@ -4,19 +4,32 @@ export const chemIntegratedRateLawsPart7Data = {
     {
       id: 'ir7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — AP-Style Integrated Rate Law Problems**
 
-This final part challenges you with comprehensive, exam-level problems that combine order identification, integrated rate law calculations, half-life analysis, and graphical interpretation.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'ir7-master-summary',
       type: 'text' as const,
       content: `
 ## 📋 Complete Integrated Rate Laws Summary
+
+> 🔑 **Key Concept:** Memorize this table — it is the foundation for all integrated rate law problems on the AP exam.
 
 | | Zero-Order | First-Order | Second-Order |
 |---|-----------|-------------|-------------|
@@ -27,6 +40,8 @@ This final part challenges you with comprehensive, exam-level problems that comb
 | **$t_{1/2}$** | $\\frac{[A]_0}{2k}$ | $\\frac{0.693}{k}$ | $\\frac{1}{k[A]_0}$ |
 | **Units of $k$** | M/s | s⁻¹ | M⁻¹s⁻¹ |
 | **Successive $t_{1/2}$** | Decrease (halve) | Constant | Increase (double) |
+
+> ⚠️ **Warning:** On the AP exam, always write the correct units of $k$ with your answer. M/s (zero), s⁻¹ (first), M⁻¹s⁻¹ (second) — getting units wrong can cost points!
       `
     },
     {

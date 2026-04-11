@@ -98,7 +98,7 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'competitive',
     parts: [
       { title: 'Foundations', loader: () => import('./physics2-density-pressure-part1').then(m => m.physics2DensityPressurePart1Data) },
-      { title: 'Depth Pressure & Pascal\\\'s Law', loader: () => import('./physics2-density-pressure-part2').then(m => m.physics2DensityPressurePart2Data) },
+      { title: 'Depth Pressure & Pascal\'s Law', loader: () => import('./physics2-density-pressure-part2').then(m => m.physics2DensityPressurePart2Data) },
       { title: 'Manometers & Barometers', loader: () => import('./physics2-density-pressure-part3').then(m => m.physics2DensityPressurePart3Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./physics2-density-pressure-part4').then(m => m.physics2DensityPressurePart4Data) },
       { title: 'Forces on Submerged Surfaces', loader: () => import('./physics2-density-pressure-part5').then(m => m.physics2DensityPressurePart5Data) },
@@ -135,7 +135,7 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Energy Conservation for Fluids', loader: () => import('./physics2-bernoulli-part1').then(m => m.physics2BernoulliPart1Data) },
       { title: 'The Venturi Effect', loader: () => import('./physics2-bernoulli-part2').then(m => m.physics2BernoulliPart2Data) },
-      { title: 'Torricelli\\\'s Theorem', loader: () => import('./physics2-bernoulli-part3').then(m => m.physics2BernoulliPart3Data) },
+      { title: 'Torricelli\'s Theorem', loader: () => import('./physics2-bernoulli-part3').then(m => m.physics2BernoulliPart3Data) },
       { title: 'Lift & Aerodynamics', loader: () => import('./physics2-bernoulli-part4').then(m => m.physics2BernoulliPart4Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./physics2-bernoulli-part5').then(m => m.physics2BernoulliPart5Data) },
       { title: 'Measurement Devices', loader: () => import('./physics2-bernoulli-part6').then(m => m.physics2BernoulliPart6Data) },
@@ -422,10 +422,10 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'competitive',
     parts: [
       { title: 'Gas Properties & Pressure', loader: () => import('./chemistry-ideal-gas-law-part1').then(m => m.chemIdealGasLawPart1Data) },
-      { title: 'Boyle\\\'s, Charles\\\'s & Avogadro\\\'s Laws', loader: () => import('./chemistry-ideal-gas-law-part2').then(m => m.chemIdealGasLawPart2Data) },
+      { title: 'Boyle\'s, Charles\'s & Avogadro\'s Laws', loader: () => import('./chemistry-ideal-gas-law-part2').then(m => m.chemIdealGasLawPart2Data) },
       { title: 'The Ideal Gas Law (PV=nRT)', loader: () => import('./chemistry-ideal-gas-law-part3').then(m => m.chemIdealGasLawPart3Data) },
       { title: 'Gas Stoichiometry', loader: () => import('./chemistry-ideal-gas-law-part4').then(m => m.chemIdealGasLawPart4Data) },
-      { title: 'Dalton\\\'s Law of Partial Pressures', loader: () => import('./chemistry-ideal-gas-law-part5').then(m => m.chemIdealGasLawPart5Data) },
+      { title: 'Dalton\'s Law of Partial Pressures', loader: () => import('./chemistry-ideal-gas-law-part5').then(m => m.chemIdealGasLawPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./chemistry-ideal-gas-law-part6').then(m => m.chemIdealGasLawPart6Data) },
       { title: 'Synthesis & AP Review', loader: () => import('./chemistry-ideal-gas-law-part7').then(m => m.chemIdealGasLawPart7Data) },
     ],
@@ -545,7 +545,7 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Exothermic & Endothermic', loader: () => import('./chemistry-enthalpy-calorimetry-part2').then(m => m.chemEnthalpyCalorimetryPart2Data) },
       { title: 'Coffee Cup Calorimetry', loader: () => import('./chemistry-enthalpy-calorimetry-part3').then(m => m.chemEnthalpyCalorimetryPart3Data) },
       { title: 'Bomb Calorimetry', loader: () => import('./chemistry-enthalpy-calorimetry-part4').then(m => m.chemEnthalpyCalorimetryPart4Data) },
-      { title: 'Hess\\\'s Law', loader: () => import('./chemistry-enthalpy-calorimetry-part5').then(m => m.chemEnthalpyCalorimetryPart5Data) },
+      { title: 'Hess\'s Law', loader: () => import('./chemistry-enthalpy-calorimetry-part5').then(m => m.chemEnthalpyCalorimetryPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./chemistry-enthalpy-calorimetry-part6').then(m => m.chemEnthalpyCalorimetryPart6Data) },
       { title: 'Synthesis & AP Review', loader: () => import('./chemistry-enthalpy-calorimetry-part7').then(m => m.chemEnthalpyCalorimetryPart7Data) },
     ],
@@ -623,7 +623,7 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'The Reaction Quotient (Q)', loader: () => import('./chemistry-reaction-quotient-le-chatelier-part1').then(m => m.chemReactionQuotientLeChatPart1Data) },
       { title: 'Comparing Q and K', loader: () => import('./chemistry-reaction-quotient-le-chatelier-part2').then(m => m.chemReactionQuotientLeChatPart2Data) },
-      { title: 'Le Chatelier\\\'s Principle', loader: () => import('./chemistry-reaction-quotient-le-chatelier-part3').then(m => m.chemReactionQuotientLeChatPart3Data) },
+      { title: 'Le Chatelier\'s Principle', loader: () => import('./chemistry-reaction-quotient-le-chatelier-part3').then(m => m.chemReactionQuotientLeChatPart3Data) },
       { title: 'Changes in Concentration', loader: () => import('./chemistry-reaction-quotient-le-chatelier-part4').then(m => m.chemReactionQuotientLeChatPart4Data) },
       { title: 'Changes in Temperature & Pressure', loader: () => import('./chemistry-reaction-quotient-le-chatelier-part5').then(m => m.chemReactionQuotientLeChatPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./chemistry-reaction-quotient-le-chatelier-part6').then(m => m.chemReactionQuotientLeChatPart6Data) },
@@ -733,7 +733,7 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Electrolytic vs Galvanic Cells', loader: () => import('./chemistry-electrolytic-cells-faraday-part2').then(m => m.chemElectrolyticCellsFaradayPart2Data) },
       { title: 'Electrolysis of Molten Salts', loader: () => import('./chemistry-electrolytic-cells-faraday-part3').then(m => m.chemElectrolyticCellsFaradayPart3Data) },
       { title: 'Electrolysis of Aqueous Solutions', loader: () => import('./chemistry-electrolytic-cells-faraday-part4').then(m => m.chemElectrolyticCellsFaradayPart4Data) },
-      { title: 'Faraday\\\'s Laws of Electrolysis', loader: () => import('./chemistry-electrolytic-cells-faraday-part5').then(m => m.chemElectrolyticCellsFaradayPart5Data) },
+      { title: 'Faraday\'s Laws of Electrolysis', loader: () => import('./chemistry-electrolytic-cells-faraday-part5').then(m => m.chemElectrolyticCellsFaradayPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./chemistry-electrolytic-cells-faraday-part6').then(m => m.chemElectrolyticCellsFaradayPart6Data) },
       { title: 'Synthesis & AP Review', loader: () => import('./chemistry-electrolytic-cells-faraday-part7').then(m => m.chemElectrolyticCellsFaradayPart7Data) },
     ],
@@ -789,9 +789,9 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
   'newtons-first-second-laws': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Inertia & Newton\\\'s First Law', loader: () => import('./physics1-newtons-first-second-laws-part1').then(m => m.physics1NewtonsFirstSecondLawsPart1Data) },
+      { title: 'Inertia & Newton\'s First Law', loader: () => import('./physics1-newtons-first-second-laws-part1').then(m => m.physics1NewtonsFirstSecondLawsPart1Data) },
       { title: 'Force & Net Force', loader: () => import('./physics1-newtons-first-second-laws-part2').then(m => m.physics1NewtonsFirstSecondLawsPart2Data) },
-      { title: 'Newton\\\'s Second Law (F=ma)', loader: () => import('./physics1-newtons-first-second-laws-part3').then(m => m.physics1NewtonsFirstSecondLawsPart3Data) },
+      { title: 'Newton\'s Second Law (F=ma)', loader: () => import('./physics1-newtons-first-second-laws-part3').then(m => m.physics1NewtonsFirstSecondLawsPart3Data) },
       { title: 'Free-Body Diagrams', loader: () => import('./physics1-newtons-first-second-laws-part4').then(m => m.physics1NewtonsFirstSecondLawsPart4Data) },
       { title: 'Weight & Normal Force', loader: () => import('./physics1-newtons-first-second-laws-part5').then(m => m.physics1NewtonsFirstSecondLawsPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./physics1-newtons-first-second-laws-part6').then(m => m.physics1NewtonsFirstSecondLawsPart6Data) },
@@ -861,7 +861,7 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
   'elastic-potential-energy': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Hooke\\\'s Law', loader: () => import('./physics1-elastic-potential-energy-part1').then(m => m.physics1ElasticPotentialEnergyPart1Data) },
+      { title: 'Hooke\'s Law', loader: () => import('./physics1-elastic-potential-energy-part1').then(m => m.physics1ElasticPotentialEnergyPart1Data) },
       { title: 'Spring Constant', loader: () => import('./physics1-elastic-potential-energy-part2').then(m => m.physics1ElasticPotentialEnergyPart2Data) },
       { title: 'Elastic PE Formula', loader: () => import('./physics1-elastic-potential-energy-part3').then(m => m.physics1ElasticPotentialEnergyPart3Data) },
       { title: 'Work Done by Springs', loader: () => import('./physics1-elastic-potential-energy-part4').then(m => m.physics1ElasticPotentialEnergyPart4Data) },
@@ -945,10 +945,10 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
   'universal-gravitation': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Newton\\\'s Law of Gravitation', loader: () => import('./physics1-universal-gravitation-part1').then(m => m.physics1UniversalGravitationPart1Data) },
+      { title: 'Newton\'s Law of Gravitation', loader: () => import('./physics1-universal-gravitation-part1').then(m => m.physics1UniversalGravitationPart1Data) },
       { title: 'Gravitational Field Strength', loader: () => import('./physics1-universal-gravitation-part2').then(m => m.physics1UniversalGravitationPart2Data) },
       { title: 'Orbits & Satellite Motion', loader: () => import('./physics1-universal-gravitation-part3').then(m => m.physics1UniversalGravitationPart3Data) },
-      { title: 'Kepler\\\'s Laws', loader: () => import('./physics1-universal-gravitation-part4').then(m => m.physics1UniversalGravitationPart4Data) },
+      { title: 'Kepler\'s Laws', loader: () => import('./physics1-universal-gravitation-part4').then(m => m.physics1UniversalGravitationPart4Data) },
       { title: 'Gravitational PE (Universal)', loader: () => import('./physics1-universal-gravitation-part5').then(m => m.physics1UniversalGravitationPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./physics1-universal-gravitation-part6').then(m => m.physics1UniversalGravitationPart6Data) },
       { title: 'Synthesis & AP Review', loader: () => import('./physics1-universal-gravitation-part7').then(m => m.physics1UniversalGravitationPart7Data) },

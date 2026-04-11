@@ -2,191 +2,193 @@ export const precalcVectors2DPart6Data = {
   topicSlug: 'vectors-two-dimensions-precalc',
   sections: [
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p6-s1-intro',
+      id: 'p6-intro',
       type: 'text' as const,
       content: `
-      ## Vectors in Two Dimensions: Motion and force applications
-      
-      **Part 6 of 7**
-      
-      This part focuses on modeling resultant forces. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **unit vector**: vector with magnitude 1
-      - **resultant**: single vector equivalent to a combined effect
-      - **orthogonal**: vectors with dot product zero
-      
-      
-      ### Worked Example
-      Part 6 uses direct precalculus notation to move from structure to computation.
-      
-      Start with a model statement, substitute known values, and simplify step by step using exact form first.
-      When needed, convert to decimals only after the symbolic setup is complete.
+# 🔄 Vectors & Complex Numbers
+
+**Part 6 of 7**
+
+### Vectors as Complex Numbers
+
+There is a natural correspondence:
+
+$$\\vec{v} = \\langle a, b \\rangle \\quad \\longleftrightarrow \\quad z = a + bi$$
+
+| Vector Operation | Complex Number |
+|:----------------|:---------------|
+| Addition | Addition |
+| Scalar multiplication | Real scalar mult |
+| Magnitude | Modulus $|z|$ |
+| Direction angle | Argument $\\arg(z)$ |
+| Rotation by $\\theta$ | Multiply by $e^{i\\theta}$ |
+
+### Polar Form of Complex Numbers
+
+$$z = r(\\cos\\theta + i\\sin\\theta) = re^{i\\theta}$$
+
+where $r = |z|$ and $\\theta = \\arg(z)$.
       `
     },
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p6-s2-mcq-core',
+      id: 'p6-rotation',
+      type: 'text' as const,
+      content: `
+## 🔁 Rotation Using Vectors
+
+To rotate a vector $\\vec{v} = \\langle a, b \\rangle$ by angle $\\alpha$ counterclockwise:
+
+$$\\vec{v}' = \\langle a\\cos\\alpha - b\\sin\\alpha, \\; a\\sin\\alpha + b\\cos\\alpha \\rangle$$
+
+This comes from the **rotation matrix**:
+
+$$\\begin{pmatrix} \\cos\\alpha & -\\sin\\alpha \\\\ \\sin\\alpha & \\cos\\alpha \\end{pmatrix} \\begin{pmatrix} a \\\\ b \\end{pmatrix}$$
+
+### Example: Rotate $\\langle 1, 0 \\rangle$ by $90°$
+
+$\\vec{v}' = \\langle 1\\cdot 0 - 0\\cdot 1, \\; 1\\cdot 1 + 0\\cdot 0 \\rangle = \\langle 0, 1 \\rangle$ ✓
+
+### Example: Rotate $\\langle 3, 4 \\rangle$ by $180°$
+
+$\\vec{v}' = \\langle 3(-1)-4(0), \\; 3(0)+4(-1) \\rangle = \\langle -3, -4 \\rangle$ ✓
+
+(Rotation by $180°$ just negates the vector.)
+      `
+    },
+    {
+      id: 'p6-demovire',
+      type: 'text' as const,
+      content: `
+## 📐 De Moivre's Theorem
+
+For complex numbers in polar form:
+
+$$[r(\\cos\\theta + i\\sin\\theta)]^n = r^n(\\cos n\\theta + i\\sin n\\theta)$$
+
+### Application: Finding $n$th Roots
+
+The $n$th roots of $z = r(\\cos\\theta + i\\sin\\theta)$:
+
+$$z_k = r^{1/n}\\left(\\cos\\frac{\\theta+2k\\pi}{n} + i\\sin\\frac{\\theta+2k\\pi}{n}\\right)$$
+
+for $k = 0, 1, \\ldots, n-1$.
+
+### Example: Cube Roots of $8$
+
+$8 = 8(\\cos 0 + i\\sin 0)$. The three cube roots:
+
+- $k=0$: $2(\\cos 0 + i\\sin 0) = 2$
+- $k=1$: $2(\\cos\\frac{2\\pi}{3} + i\\sin\\frac{2\\pi}{3}) = -1 + i\\sqrt{3}$
+- $k=2$: $2(\\cos\\frac{4\\pi}{3} + i\\sin\\frac{4\\pi}{3}) = -1 - i\\sqrt{3}$
+
+They form an equilateral triangle on the circle of radius 2!
+      `
+    },
+    {
+      id: 'p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Rotation & Complex Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of unit vector.',
-            options: [
-              'vector written as ordered components like $\langle a,b\\rangle$',
-              'single vector equivalent to a combined effect',
-              'vectors with dot product zero',
-              'vector with magnitude 1'
-            ],
-            correctAnswer: 3,
-            explanation: 'unit vector is defined as: vector with magnitude 1.'
+            question: 'Rotating $\\langle 0, 1 \\rangle$ by $90°$ CCW gives:',
+            options: ['$\\langle 1, 0 \\rangle$', '$\\langle 0, -1 \\rangle$', '$\\langle -1, 0 \\rangle$', '$\\langle 0, 1 \\rangle$'],
+            correctAnswer: 2,
+            explanation: '$\\langle 0\\cdot 0 - 1\\cdot 1, 0\\cdot 1 + 1\\cdot 0 \\rangle = \\langle -1, 0 \\rangle$.'
           },
           {
-            question: 'In modeling resultant forces, which expression is the best starting model?',
-            options: [
-              '$\\mathbf u\\cdot\\mathbf v=\\|\\mathbf u\\|\\|\\mathbf v\\|\\cos\\theta$',
-              '$\\langle a,b\\rangle\\cdot\\langle c,d\\rangle=ac+bd$',
-              '$\\|\\langle a,b\\rangle\\|=\\sqrt{a^2+b^2}$',
-              '$\\hat{\\mathbf u}=\\frac{\\mathbf u}{\\|\\mathbf u\\|}$'
-            ],
+            question: 'The modulus of $z = 3 + 4i$ is:',
+            options: ['$7$', '$5$', '$25$', '$1$'],
             correctAnswer: 1,
-            explanation: 'Use $\\langle a,b\\rangle\\cdot\\langle c,d\\rangle=ac+bd$ first, then substitute known quantities from the prompt.'
+            explanation: '$|z| = \\sqrt{9+16} = 5$.'
+          },
+          {
+            question: 'By De Moivre\'s theorem, $(\\cos\\frac{\\pi}{6}+i\\sin\\frac{\\pi}{6})^6 =$',
+            options: ['$1$', '$-1$', '$i$', '$-i$'],
+            correctAnswer: 1,
+            explanation: '$(\\cos\\frac{\\pi}{6}+i\\sin\\frac{\\pi}{6})^6 = \\cos\\pi + i\\sin\\pi = -1$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p6-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Dot product | $\langle a,b\\rangle\cdot\langle c,d\\rangle=ac+bd$ | angle and projection |
-      | Angle relation | $\mathbf u\cdot\mathbf v=\|\mathbf u\|\|\mathbf v\|\cos\\theta$ | finding angle between vectors |
-      | Unit vector | $\hat{\mathbf u}=\\frac{\mathbf u}{\|\mathbf u\|}$ | direction-only normalization |
-      | Magnitude | $\|\langle a,b\\rangle\|=\sqrt{a^2+b^2}$ | length computation |
-      
-      ### Common pitfalls
-      - Keep component order consistent as $(x,y)$.
-      - Magnitude is always nonnegative.
-      - A zero dot product indicates orthogonality, not parallelism.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-vectors-two-dimensions-precalc-p6-s4-input',
+      id: 'p6-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Vector Calculations**
-      
-      1) Compute magnitude of $\langle 3,4
-      angle$.
-      2) Compute $\langle 1,2
-      angle\cdot\langle 3,4
-      angle$.
-      3) Compute the $y$-component of $\langle 2,5
-      angle+\langle -1,3
-      angle$.
+**Complex & Rotation** 🧮
+
+**1)** $z = 1 + i$: $|z|$ = ? (Enter like "sqrt2")
+
+**2)** The argument of $z = 1 + i$ in degrees = ?
+
+**3)** How many 4th roots does any nonzero complex number have?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5', '11', '8'],
-        hint1: 'Use $\\sqrt{a^2+b^2}$.',
-        hint2: 'Multiply matching components and add.',
-        hint3: 'Add components independently.',
-        explanation: 'Magnitude is 5, dot product is 11, and the resulting $y$-component is 8.'
+        correctAnswers: ['sqrt2', '45', '4'],
+        hint1: '$|1+i| = \\sqrt{1+1} = \\sqrt{2}$.',
+        hint2: '$\\arg(1+i) = \\tan^{-1}(1/1) = 45°$.',
+        hint3: 'The fundamental theorem of algebra: an $n$th degree equation has $n$ roots.',
+        explanation: '1) $\\sqrt{2}$. 2) $45°$. 3) $4$ roots (evenly spaced on a circle).'
       }
     },
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p6-s5-dropdown',
+      id: 'p6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Complex Connections** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'unit vector',
-            options: ['vector written as ordered components like $\langle a,b\\rangle$', 'vectors with dot product zero', 'single vector equivalent to a combined effect', 'vector with magnitude 1']
+            label: 'Multiplying by $i$ corresponds to rotation by:',
+            options: ['$0°$', '$90°$', '$180°$', '$270°$'],
+            correctAnswer: 1
           },
           {
-            label: 'resultant',
-            options: ['length of a vector', 'single vector equivalent to a combined effect', 'vectors with dot product zero', 'vector written as ordered components like $\langle a,b\\rangle$']
+            label: 'The $n$th roots of unity lie on:',
+            options: ['A line', 'A circle of radius 1', 'A circle of radius $n$', 'A parabola'],
+            correctAnswer: 1
           },
           {
-            label: 'orthogonal',
-            options: ['length of a vector', 'vector written as ordered components like $\langle a,b\\rangle$', 'vectors with dot product zero', 'angle measured from positive $x$-axis']
+            label: 'Euler\'s formula states $e^{i\\pi} =$',
+            options: ['$1$', '$-1$', '$i$', '$0$'],
+            correctAnswer: 1
+          },
+          {
+            label: 'The complex conjugate of $a+bi$ is:',
+            options: ['$-a-bi$', '$a-bi$', '$b+ai$', '$-a+bi$'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['vector with magnitude 1', 'single vector equivalent to a combined effect', 'vectors with dot product zero'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: unit vector, resultant, and orthogonal align with their exact definitions used in this part.'
+        correctAnswers: ['$90°$', 'A circle of radius 1', '$-1$', '$a-bi$'],
+        hint1: '$i = e^{i\\pi/2}$: rotation by $\\frac{\\pi}{2} = 90°$.',
+        hint2: 'Roots of $z^n = 1$ have $|z| = 1$.',
+        hint3: '$e^{i\\pi} = \\cos\\pi + i\\sin\\pi = -1$.',
+        explanation: '$i$ = 90° rotation. $n$th roots of unity on unit circle. $e^{i\\pi} = -1$ (Euler). Conjugate: negate the imaginary part.'
       }
     },
     {
-      id: 'precalc-vectors-two-dimensions-precalc-p6-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to unit vector, resultant, and orthogonal so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-vectors-two-dimensions-precalc-p6-s7-mcq-applied',
+      id: 'p6-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is modeling resultant forces. Which term best anchors the next reasoning step if the key idea is: vector written as ordered components like $\langle a,b\\rangle$?',
-            options: [
-              'unit vector',
-              'resultant',
-              'orthogonal',
-              'component form'
-            ],
-            correctAnswer: 3,
-            explanation: 'component form matches that description and keeps the model-to-interpretation chain consistent.'
+            question: 'The square roots of $i$ are:',
+            options: ['$\\pm 1$', '$\\pm i$', '$\\pm\\frac{\\sqrt{2}}{2}(1+i)$', '$\\pm\\frac{1}{2}(1+i)$'],
+            correctAnswer: 2,
+            explanation: '$i = \\cos\\frac{\\pi}{2}+i\\sin\\frac{\\pi}{2}$. Square roots: $\\cos\\frac{\\pi}{4}+i\\sin\\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}(1+i)$ and the negative.'
           },
           {
-            question: 'A student is solving a mixed vectors in two dimensions prompt. Which term best anchors the next reasoning step if the key idea is: length of a vector?',
-            options: [
-              'magnitude',
-              'component form',
-              'direction angle',
-              'orthogonal'
-            ],
+            question: 'Rotating $\\langle 2, 0 \\rangle$ by $60°$ gives:',
+            options: ['$\\langle 1, \\sqrt{3} \\rangle$', '$\\langle \\sqrt{3}, 1 \\rangle$', '$\\langle 0, 2 \\rangle$', '$\\langle 1, 1 \\rangle$'],
             correctAnswer: 0,
-            explanation: 'magnitude matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$\\langle 2\\cos 60°, 2\\sin 60° \\rangle = \\langle 1, \\sqrt{3} \\rangle$.'
           }
         ]
       }

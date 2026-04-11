@@ -2,191 +2,224 @@ export const precalcLawSinesCosinesPart1Data = {
   topicSlug: 'law-of-sines-cosines-precalc',
   sections: [
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p1-s1-intro',
+      id: 'p1-intro',
       type: 'text' as const,
       content: `
-      ## Law of Sines and Cosines: When to use each law
-      
-      **Part 1 of 7**
-      
-      This part focuses on solving survey-triangle side lengths. Keep notation precise and connect each symbolic step to geometric or functional meaning.
-      
-      ### Core definitions
-      - **Law of Sines**: ratio relation $
-      rac{a}{\sin A}=
-      rac{b}{\sin B}=
-      rac{c}{\sin C}$
-      - **Law of Cosines**: generalized Pythagorean relation for any triangle
-      - **included angle**: angle between two known sides
-      
-      
-      ### Worked Example
-      Given $a=8$, $b=6$, and included angle $C=60^\circ$, find $c$.
-      
-      $$c^2 = a^2+b^2-2ab\cos C = 8^2+6^2-2(8)(6)\cos 60^\circ = 52$$
-      
-      So $c=\sqrt{52}=2\sqrt{13}$. This setup uses side-side-angle data with the included angle, so the Law of Cosines is the clean choice.
+# ⚖️ Law of Sines
+
+**Part 1 of 7**
+
+The Law of Sines lets us solve **oblique triangles** (no right angle) when we know an angle–side pair.
+
+### The Law of Sines
+
+For any triangle with sides $a$, $b$, $c$ opposite angles $A$, $B$, $C$:
+
+$$\\boxed{\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}}$$
+
+Equivalently: $\\frac{\\sin A}{a} = \\frac{\\sin B}{b} = \\frac{\\sin C}{c}$
+
+### When to Use It
+
+| Known | Case Name | Law of Sines? |
+|:------|:----------|:-------------|
+| Two angles + one side (AAS or ASA) | Angle–Angle–Side | ✅ Yes |
+| Two sides + angle opposite one (SSA) | Side–Side–Angle | ✅ Yes (watch for ambiguous case!) |
+| Two sides + included angle (SAS) | Side–Angle–Side | ❌ Use Law of Cosines |
+| Three sides (SSS) | Side-Side-Side | ❌ Use Law of Cosines |
       `
     },
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p1-s2-mcq-core',
+      id: 'p1-examples',
+      type: 'text' as const,
+      content: `
+## 📝 Worked Examples
+
+### Example 1: AAS — Find a Missing Side
+
+In $\\triangle ABC$: $A = 42°$, $B = 73°$, $a = 12$.
+
+**Step 1:** Find $C$: $C = 180° - 42° - 73° = 65°$
+
+**Step 2:** Use Law of Sines to find $b$:
+$$\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$$
+$$\\frac{12}{\\sin 42°} = \\frac{b}{\\sin 73°}$$
+$$b = \\frac{12 \\sin 73°}{\\sin 42°} = \\frac{12(0.9563)}{0.6691} \\approx 17.15$$
+
+### Example 2: ASA — Find a Missing Side
+
+In $\\triangle ABC$: $A = 50°$, $C = 60°$, $b = 20$.
+
+$B = 180° - 50° - 60° = 70°$
+
+$$\\frac{b}{\\sin B} = \\frac{a}{\\sin A} \\implies a = \\frac{20 \\sin 50°}{\\sin 70°} \\approx \\frac{20(0.766)}{0.940} \\approx 16.30$$
+
+### Example 3: Finding an Angle
+
+In $\\triangle ABC$: $a = 10$, $b = 15$, $A = 30°$.
+
+$$\\frac{\\sin B}{b} = \\frac{\\sin A}{a} \\implies \\sin B = \\frac{15 \\sin 30°}{10} = \\frac{15(0.5)}{10} = 0.75$$
+$$B = \\arcsin(0.75) \\approx 48.6°$$
+      `
+    },
+    {
+      id: 'p1-strategy',
+      type: 'text' as const,
+      content: `
+## 🧠 Step-by-Step Strategy
+
+### Solving AAS/ASA Triangles
+
+1. **Find the third angle** using $A + B + C = 180°$
+2. **Set up the proportion** using the known angle–side pair
+3. **Cross-multiply and solve**
+
+### Key Formula Rearrangements
+
+To find side $b$: $b = \\frac{a \\sin B}{\\sin A}$
+
+To find angle $B$: $\\sin B = \\frac{b \\sin A}{a}$, then $B = \\arcsin(\\ldots)$
+
+### Triangle Area with Law of Sines
+
+The area of any triangle can be found using:
+$$\\boxed{\\text{Area} = \\frac{1}{2}ab\\sin C}$$
+
+This formula uses two sides and their **included angle**.
+
+**Example:** $a = 8$, $b = 11$, $C = 40°$
+
+$$\\text{Area} = \\frac{1}{2}(8)(11)\\sin 40° = 44(0.6428) \\approx 28.3 \\text{ sq units}$$
+      `
+    },
+    {
+      id: 'p1-mcq',
       type: 'multiple-choice' as const,
       content: `
-      **Multiple-choice check (2 questions)**
+**Law of Sines Basics** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Choose the most accurate definition of Law of Sines.',
+            question: 'In $\\triangle ABC$, $A = 35°$, $B = 80°$, $a = 9$. What is $C$?',
             options: [
-              'generalized Pythagorean relation for any triangle',
-              'ratio relation $\\rac{a}{\\sin A}=\\rac{b}{\\sin B}=\\rac{c}{\\sin C}$',
-              'angle between two known sides',
-              'data set that may produce two, one, or zero triangles'
+              '$55°$',
+              '$65°$',
+              '$75°$',
+              '$45°$'
             ],
             correctAnswer: 1,
-            explanation: 'Law of Sines is defined as: ratio relation $\\rac{a}{\\sin A}=\\rac{b}{\\sin B}=\\rac{c}{\\sin C}$.'
+            explanation: '$C = 180° - 35° - 80° = 65°$.'
           },
           {
-            question: 'In solving survey-triangle side lengths, which expression is the best starting model?',
+            question: 'Which case CANNOT be solved with the Law of Sines alone?',
             options: [
-              '$\\frac{a}{\\sin A}=\\frac{b}{\\sin B}=\\frac{c}{\\sin C}$',
-              '$A+B+C=180^\\circ$',
-              '$K=\\frac12 ab\\sin C$',
-              '$c^2=a^2+b^2-2ab\\cos C$'
+              'AAS',
+              'ASA',
+              'SAS',
+              'SSA'
+            ],
+            correctAnswer: 2,
+            explanation: 'SAS (two sides and included angle) requires the Law of Cosines because no angle–side pair is complete.'
+          },
+          {
+            question: 'In $\\triangle ABC$, $\\frac{a}{\\sin A} = \\frac{b}{\\sin B}$. If $a = 6$, $A = 30°$, $B = 45°$, then $b$ equals:',
+            options: [
+              '$6\\sqrt{2}$',
+              '$3\\sqrt{2}$',
+              '$6$',
+              '$12$'
             ],
             correctAnswer: 0,
-            explanation: 'Use $\\frac{a}{\\sin A}=\\frac{b}{\\sin B}=\\frac{c}{\\sin C}$ first, then substitute known quantities from the prompt.'
+            explanation: '$b = \\frac{6\\sin 45°}{\\sin 30°} = \\frac{6 \\cdot \\frac{\\sqrt{2}}{2}}{\\frac{1}{2}} = 6\\sqrt{2}$.'
           }
         ]
       }
     },
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p1-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive: formulas and decision rules
-      
-      Use this table to pick the right expression before computing.
-      
-      | Tool | Formula | Best use |
-      |---|---|---|
-      | Law of Sines | $\\frac{a}{\sin A}=\\frac{b}{\sin B}=\\frac{c}{\sin C}$ | AAS/ASA/SSA contexts |
-      | Law of Cosines | $c^2=a^2+b^2-2ab\cos C$ | SAS/SSS contexts |
-      | Area formula | $K=\\frac12 ab\sin C$ | two sides + included angle |
-      | Angle sum | $A+B+C=180^\circ$ | triangle closure check |
-      
-      ### Common pitfalls
-      - Do not use the Law of Sines first when only sides are known.
-      - SSA can create a second valid triangle; test geometry constraints.
-      - Carry angle mode consistency (degrees vs radians) on calculators.
-      
-      ### Precision checks
-      1. Identify givens and unknowns before selecting a formula.
-      2. Keep exact values through symbolic simplification when possible.
-      3. Verify units, angle mode, or domain constraints before finalizing.
-      `
-    },
-    {
-      id: 'precalc-law-of-sines-cosines-precalc-p1-s4-input',
+      id: 'p1-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — Non-Right Triangles**
-      
-      1) In a triangle, $a=10$, $A=30^\circ$, $B=30^\circ$. Find $b$.
-      2) If $a=6$, $b=8$, and included angle $C=90^\circ$, find $c$.
-      3) Compute area with $a=6$, $b=10$, $C=30^\circ$ using $K=
-      rac12 ab\sin C$.
+**Solve Triangles** 🧮
+
+Round to the nearest integer.
+
+**1)** $\\triangle ABC$: $A = 40°$, $B = 60°$, $a = 10$. Find $C$ in degrees. (e.g., if $A = 50°, B = 70°$, then $C = 180 - 50 - 70 = 60$)
+
+**2)** Same triangle: find $b$ to nearest integer. Use $b = \\frac{a \\sin B}{\\sin A}$. (e.g., $\\frac{10 \\cdot \\sin 45°}{\\sin 30°} = \\frac{10(0.707)}{0.5} = 14$)
+
+**3)** Area of triangle with $a = 10$, $b = 14$, included angle $= 50°$. Round to nearest integer. (e.g., Area $= \\frac{1}{2}(8)(10)\\sin 60° = 40(0.866) = 35$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['10', '10', '15'],
-        hint1: 'Equal opposite angles imply equal opposite sides via Law of Sines.',
-        hint2: 'Law of Cosines reduces to Pythagorean form when $C=90^\\circ$.',
-        hint3: 'Substitute directly into $\\rac12 ab\\sin C$.',
-        explanation: 'Symmetry gives $b=10$, cosine law gives $c=10$, and area evaluates to 15.'
+        correctAnswers: ['80', '13', '54'],
+        hint1: '$C = 180° - 40° - 60° = 80°$.',
+        hint2: '$b = \\frac{10 \\sin 60°}{\\sin 40°} = \\frac{10(0.866)}{0.643} \\approx 13.5 \\approx 13$.',
+        hint3: 'Area $= \\frac{1}{2}(10)(14)\\sin 50° = 70(0.766) \\approx 53.6 \\approx 54$.',
+        explanation: '1) $80°$. 2) $\\approx 13$. 3) $\\approx 54$ sq units.'
       }
     },
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p1-s5-dropdown',
+      id: 'p1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown-select practice (3 prompts)**
+**Matching** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Law of Sines',
-            options: ['ratio relation $\\rac{a}{\\sin A}=\\rac{b}{\\sin B}=\\rac{c}{\\sin C}$', 'angle between two known sides', 'data set that may produce two, one, or zero triangles', 'generalized Pythagorean relation for any triangle']
+            label: 'The Law of Sines relates',
+            options: ['Sides to their opposite angles', 'Sides to their adjacent angles', 'All three sides to one angle', 'Angles to the perimeter']
           },
           {
-            label: 'Law of Cosines',
-            options: ['angle between two known sides', 'generalized Pythagorean relation for any triangle', 'can be found with two sides and included angle', 'data set that may produce two, one, or zero triangles']
+            label: 'Given AAS information, the first step is usually',
+            options: ['Find the third angle', 'Use Law of Cosines', 'Find the area', 'Check for the ambiguous case']
           },
           {
-            label: 'included angle',
-            options: ['direction measured from north or east references', 'angle between two known sides', 'data set that may produce two, one, or zero triangles', 'can be found with two sides and included angle']
+            label: 'The formula $\\text{Area} = \\frac{1}{2}ab\\sin C$ requires',
+            options: ['Two sides and their included angle', 'Two sides and any angle', 'Three sides', 'One side and two angles']
+          },
+          {
+            label: 'To find angle $B$ using Law of Sines, compute',
+            options: ['$\\cos^{-1}(\\frac{b\\sin A}{a})$', '$\\sin^{-1}(\\frac{b\\sin A}{a})$', '$\\tan^{-1}(\\frac{b}{a})$', '$\\frac{a\\sin B}{b}$']
           }
         ],
-        correctAnswers: ['ratio relation $\\rac{a}{\\sin A}=\\rac{b}{\\sin B}=\\rac{c}{\\sin C}$', 'generalized Pythagorean relation for any triangle', 'angle between two known sides'],
-        hint1: 'Match each term to the full definition, not just a keyword.',
-        hint2: 'Use elimination by checking whether each definition captures the right dependency.',
-        hint3: 'Read the label and option together as one complete mathematical sentence.',
-        explanation: 'Correct mapping: Law of Sines, Law of Cosines, and included angle align with their exact definitions used in this part.'
+        correctAnswers: ['Sides to their opposite angles', 'Find the third angle', 'Two sides and their included angle', '$\\sin^{-1}(\\frac{b\\sin A}{a})$'],
+        hint1: 'Each ratio pairs a side with the sine of the angle across from it.',
+        hint2: 'With two angles known, find the third via $A + B + C = 180°$.',
+        hint3: '$C$ must be the angle between sides $a$ and $b$.',
+        explanation: 'Law of Sines: side/sin(opposite angle). AAS → find third angle first. Area needs included angle. Find $B$ via $\\arcsin$.'
       }
     },
     {
-      id: 'precalc-law-of-sines-cosines-precalc-p1-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### Strategy: graphing, calculator, and exam tactics
-      
-      **Graphing tactics**
-      - Sketch anchor points or intercept behavior before detailed algebra.
-      - Use symmetry, domain limits, and asymptotes to verify shape quickly.
-      
-      **Calculator tactics**
-      - Confirm angle mode before trig operations.
-      - Store intermediate values to avoid rounded drift.
-      - Use table mode to test reasonableness around key inputs.
-      
-      **Exam tactics**
-      - Translate words to symbols first, then choose the matching formula family.
-      - Eliminate options that violate domain or structure.
-      - If two choices are close, substitute back into the original relationship.
-      
-      Tie each step to Law of Sines, Law of Cosines, and included angle so your reasoning is explicit and checkable.
-      `
-    },
-    {
-      id: 'precalc-law-of-sines-cosines-precalc-p1-s7-mcq-applied',
+      id: 'p1-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Applied mixed questions (2 questions)**
+**Exit Quiz** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A student is solving survey-triangle side lengths. Which term best anchors the next reasoning step if the key idea is: data set that may produce two, one, or zero triangles?',
+            question: 'In $\\triangle ABC$: $A = 30°$, $C = 90°$, $c = 20$. Find $a$.',
             options: [
-              'Law of Cosines',
-              'Law of Sines',
-              'SSA ambiguity',
-              'included angle'
-            ],
-            correctAnswer: 2,
-            explanation: 'SSA ambiguity matches that description and keeps the model-to-interpretation chain consistent.'
-          },
-          {
-            question: 'A student is solving a mixed law of sines and cosines prompt. Which term best anchors the next reasoning step if the key idea is: can be found with two sides and included angle?',
-            options: [
-              'triangle area',
-              'SSA ambiguity',
-              'included angle',
-              'bearing'
+              '$10$',
+              '$10\\sqrt{3}$',
+              '$20$',
+              '$20\\sqrt{3}$'
             ],
             correctAnswer: 0,
-            explanation: 'triangle area matches that description and keeps the model-to-interpretation chain consistent.'
+            explanation: '$\\frac{a}{\\sin 30°} = \\frac{20}{\\sin 90°}$. $a = 20 \\sin 30° = 20 \\cdot \\frac{1}{2} = 10$.'
+          },
+          {
+            question: 'The area of $\\triangle ABC$ with $b = 7$, $c = 10$, $A = 90°$ is:',
+            options: [
+              '$35$',
+              '$70$',
+              '$17$',
+              '$24.5$'
+            ],
+            correctAnswer: 0,
+            explanation: 'Area $= \\frac{1}{2}(7)(10)\\sin 90° = \\frac{1}{2}(70)(1) = 35$.'
           }
         ]
       }

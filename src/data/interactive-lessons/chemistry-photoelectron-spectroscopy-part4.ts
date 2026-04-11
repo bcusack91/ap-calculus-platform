@@ -6,16 +6,25 @@ export const chemPhotoelectronSpectroscopyPart4Data = {
       type: 'text' as const,
       content: `# Core vs Valence Electrons in PES
 
-PES spectra make the distinction between **core electrons** and **valence electrons** visually obvious. Understanding this distinction is critical for predicting chemical behavior and interpreting spectra.
+**Part 4 of 7 — Relative Peak Heights**
 
-## 📖 Definitions
+---
 
-- **Core electrons**: Inner-shell electrons that are NOT involved in chemical bonding. They have **high binding energies** and appear on the **left side** of PES spectra.
-- **Valence electrons**: Outermost electrons that participate in chemical bonding. They have **low binding energies** and appear on the **right side** of PES spectra.
+### Topics in This Part
 
-## 📌 Visual Signature
+| Section |
+|---------|
+| 📖 Definitions |
+| 📌 Visual Signature |
 
-On a PES spectrum, you will typically see a **large gap** in binding energy between the core electrons and the valence electrons. This gap makes it easy to visually separate the two groups.`
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 4
+- Understanding the core concepts covered in Part 4
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ps4-example',
@@ -38,12 +47,14 @@ PES spectrum (left to right):
 - The **core electrons** (1s, 2s, 2p) have binding energies ranging from ~13 to ~189 MJ/mol
 - The **valence electrons** (3s, 3p) have binding energies around ~0.8–1.1 MJ/mol
 - There is a **huge gap** between the 2p peak (~13 MJ/mol) and the 3s peak (~1.1 MJ/mol)
-- This gap clearly separates core from valence electrons`
+- This gap clearly separates core from valence electrons
+
+> 💡 **Tip:** Look for the largest gap between adjacent peaks — everything to the left of that gap is core, everything to the right is valence.`
     },
     {
       id: 'ps4-quiz1',
       type: 'multiple-choice' as const,
-      content: `### Core vs Valence
+      content: `### ✏️ Core vs Valence
 
 In a PES spectrum, where do valence electrons appear?`,
       exercise: {
@@ -81,9 +92,9 @@ On PES spectra for these elements:
     {
       id: 'ps4-quiz2',
       type: 'multiple-choice' as const,
-      content: `### Practice Problem
+      content: `### ✏️ Practice Problem
 
-For an atom with the PES peak heights 2, 2, 6, 2, 6 (from left to right), how many valence electrons does it have?`,
+> **Problem:** For an atom with the PES peak heights 2, 2, 6, 2, 6 (from left to right), how many valence electrons does it have?`,
       exercise: {
         questions: [
           {
@@ -103,9 +114,9 @@ For an atom with the PES peak heights 2, 2, 6, 2, 6 (from left to right), how ma
     {
       id: 'ps4-input1',
       type: 'input-boxes' as const,
-      content: `### Identifying Core and Valence
+      content: `### ✏️ Identifying Core and Valence
 
-An element has PES peaks with heights: 2, 2, 6, 2, 3 (from highest to lowest binding energy). The first three peaks are clustered at high binding energies and the last two peaks are at much lower binding energies.`,
+> **Problem:** An element has PES peaks with heights: 2, 2, 6, 2, 3 (from highest to lowest binding energy). The first three peaks are clustered at high binding energies and the last two peaks are at much lower binding energies.`,
       exercise: {
         inputs: [
           {
@@ -129,7 +140,7 @@ An element has PES peaks with heights: 2, 2, 6, 2, 3 (from highest to lowest bin
     {
       id: 'ps4-dropdown1',
       type: 'dropdown-select' as const,
-      content: `### Conceptual Understanding
+      content: `### ✏️ Conceptual Understanding
 
 Consider the PES spectrum of oxygen (O, Z = 8) with configuration 1s² 2s² 2p⁴.`,
       exercise: {
@@ -158,18 +169,44 @@ Consider the PES spectrum of oxygen (O, Z = 8) with configuration 1s² 2s² 2p�
     {
       id: 'ps4-summary',
       type: 'text' as const,
-      content: `## 📋 Part 4 Summary
+      content: `## 📋 Part 4 Summary: Core vs. Valence Electrons
 
-Core vs valence electrons in PES:
+---
 
-1. **Core electrons** appear on the **left** (high binding energy) — they are inner-shell electrons not involved in bonding
-2. **Valence electrons** appear on the **right** (low binding energy) — they are outermost electrons that participate in bonding
-3. A **large gap** in binding energy often separates core from valence peaks
-4. Across a period, the number of **core electrons stays constant** while **valence electrons increase**
-5. For **Period 2 elements**, only 1s electrons are core; for **Period 3 elements**, 1s² 2s² 2p⁶ are core
-6. The number of **valence electrons** determines the element's chemical properties
+### 🧪 Core vs. Valence on PES
 
-Next, we will explore how PES connects to periodic trends, especially effective nuclear charge.`
+| Feature | Core Electrons | Valence Electrons |
+|---------|---------------|-------------------|
+| Position on spectrum | **Left** (high BE) | **Right** (low BE) |
+| Role | Not involved in bonding | Participate in bonding & reactions |
+| Across a period | Number stays **constant** | Number **increases** |
+
+---
+
+### 📌 Core Electrons by Period
+
+| Period | Core Configuration | # Core e⁻ |
+|--------|-------------------|------------|
+| 2 | 1s² | 2 |
+| 3 | 1s² 2s² 2p⁶ | 10 |
+| 4 | 1s² 2s² 2p⁶ 3s² 3p⁶ | 18 |
+
+> 💡 A **large gap** in binding energy on the spectrum often marks the boundary between core and valence electrons.
+
+---
+
+### ✅ Your Checklist Before Moving On
+
+- ☐ I can identify core vs. valence peaks on a PES spectrum
+- ☐ I know that the # of valence electrons determines chemical properties
+- ☐ I understand why core electrons stay constant across a period
+- ☐ I can spot the BE gap that separates core from valence
+
+---
+
+### 🔮 What's Next
+
+In **Part 5**, we explore how PES connects to **periodic trends**, especially **effective nuclear charge** ($Z_{eff}$).`
     }
   ]
 }

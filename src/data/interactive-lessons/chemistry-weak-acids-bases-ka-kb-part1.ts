@@ -4,13 +4,30 @@ export const chemWeakAcidsBasesKaKbPart1Data = {
     {
       id: 'wk1-intro',
       type: 'text' as const,
-      content: `
-# ⚖️ Weak Acid Equilibrium
+      content: `# ⚖️ Weak Acid Equilibrium
 
 **Part 1 of 7 — The $K_a$ Expression**
 
-Unlike strong acids that dissociate completely, **weak acids** only partially ionize in water. This partial ionization is an **equilibrium process** described by the acid dissociation constant, $K_a$.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🧪 Weak Acid Dissociation |
+| Key Features |
+| Common Weak Acids and Their $K_a$ Values |
+| 📌 The $pK_a$ Scale |
+| Interpreting $pK_a$ |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'wk1-weak-acid-equilibrium',
@@ -24,7 +41,7 @@ $$HA(aq) \\rightleftharpoons H^+(aq) + A^-(aq)$$
 
 The equilibrium expression is:
 
-$$K_a = \\frac{[H^+][A^-]}{[HA]}$$
+$$\\boxed{K_a = \\frac{[H^+][A^-]}{[HA]}}$$
 
 
 ---
@@ -36,6 +53,7 @@ $$K_a = \\frac{[H^+][A^-]}{[HA]}$$
 - **Smaller $K_a$** = weaker acid (less dissociation)
 - Water is omitted from the expression (pure liquid)
 
+> 💡 **Tip:** Larger $K_a$ = stronger acid. Compare $K_a$ values directly to rank weak acid strength.
 
 ---
 
@@ -59,7 +77,7 @@ Relative strength: $HF > CH_3COOH > H_2CO_3 > HCN$
 
 Just as $pH = -\\log[H^+]$, we define:
 
-$$pK_a = -\\log K_a$$
+$$\\boxed{pK_a = -\\log K_a}$$
 
 
 ---
@@ -69,7 +87,7 @@ $$pK_a = -\\log K_a$$
 - **Lower $pK_a$** → **stronger** acid (larger $K_a$)
 - **Higher $pK_a$** → **weaker** acid (smaller $K_a$)
 
-This is the **inverse** relationship — don\'t mix it up!
+> 🔑 **Key Concept:** This is the **inverse** relationship — lower $pK_a$ means stronger acid. Don\'t mix it up!
 
 | $K_a$ | $pK_a$ | Relative Strength |
 |-------|--------|-------------------|
@@ -82,7 +100,7 @@ This is the **inverse** relationship — don\'t mix it up!
 
 ### Converting Between $K_a$ and $pK_a$
 
-$$K_a = 10^{-pK_a} \\qquad pK_a = -\\log K_a$$
+$$\\boxed{K_a = 10^{-pK_a} \\qquad pK_a = -\\log K_a}$$
       `
     },
     {

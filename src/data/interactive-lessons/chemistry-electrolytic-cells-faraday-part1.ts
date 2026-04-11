@@ -4,13 +4,30 @@ export const chemElectrolyticCellsFaradayPart1Data = {
     {
       id: 'ef1-intro',
       type: 'text' as const,
-      content: `
-# ⚡ Electrolysis — Driving Non-Spontaneous Reactions
+      content: `# ⚡ Electrolysis — Driving Non-Spontaneous Reactions
 
 **Part 1 of 7 — Electrolytic Cells and External Voltage**
 
-In a galvanic cell, a spontaneous reaction produces electricity. In an **electrolytic cell**, it is the opposite: we use an external power source to force a **non-spontaneous** reaction to occur. This process is called **electrolysis**.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 🔧 How Electrolysis Works |
+| The Key Idea |
+| Requirements |
+| Electrode Conventions in Electrolytic Cells |
+| ⚡ Energy Considerations |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 1
+- Understanding the core concepts covered in Part 1
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ef1-how-it-works',

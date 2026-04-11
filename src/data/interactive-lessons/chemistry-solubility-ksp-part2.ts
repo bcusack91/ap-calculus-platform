@@ -4,13 +4,30 @@ export const chemSolubilityKspPart2Data = {
     {
       id: 'sk2-intro',
       type: 'text' as const,
-      content: `
-# 💎 Calculating Molar Solubility from K_sp
+      content: `# 💎 Calculating Molar Solubility from K_sp
 
 **Part 2 of 7 — From K_sp to Dissolved Concentration**
 
-**Molar solubility** ($s$) is the number of moles of solute that dissolve per liter to form a saturated solution. We can calculate it directly from $K_{sp}$.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 The ICE-Table Approach |
+| For a 1:1 salt: $\\text{MX}(s) \\rightleftharpoons \\text{M}^+(aq) + \\text{X}^-(aq)$ |
+| For a 1:2 salt: $\\text{MX}_2(s) \\rightleftharpoons \\text{M}^{2+}(aq) + 2\\,\\text{X}^-(aq)$ |
+| For a 2:3 salt: $\\text{M}_2\\text{X}_3(s) \\rightleftharpoons 2\\,\\text{M}^{3+}(aq) + 3\\,\\text{X}^{2-}(aq)$ |
+| 🧪 Worked Examples |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'sk2-method',
@@ -23,8 +40,10 @@ export const chemSolubilityKspPart2Data = {
 If molar solubility = $s$, then:
 - $[\\text{M}^+] = s$ and $[\\text{X}^-] = s$
 - $K_{sp} = s \\cdot s = s^2$
-- $s = \\sqrt{K_{sp}}$
 
+$$\\boxed{s = \\sqrt{K_{sp}}}$$
+
+> 🔑 **Key Concept:** Set molar solubility = $s$, express each ion concentration in terms of $s$ using stoichiometry, substitute into $K_{sp}$, and solve.
 
 ---
 
@@ -33,8 +52,8 @@ If molar solubility = $s$, then:
 If molar solubility = $s$, then:
 - $[\\text{M}^{2+}] = s$ and $[\\text{X}^-] = 2s$
 - $K_{sp} = (s)(2s)^2 = 4s^3$
-- $s = \\sqrt[3]{\\frac{K_{sp}}{4}}$
 
+$$\\boxed{s = \\sqrt[3]{\\frac{K_{sp}}{4}}}$$
 
 ---
 
@@ -42,7 +61,8 @@ If molar solubility = $s$, then:
 
 - $[\\text{M}^{3+}] = 2s$ and $[\\text{X}^{2-}] = 3s$
 - $K_{sp} = (2s)^2(3s)^3 = 4s^2 \\cdot 27s^3 = 108s^5$
-- $s = \\sqrt[5]{\\frac{K_{sp}}{108}}$
+
+$$\\boxed{s = \\sqrt[5]{\\frac{K_{sp}}{108}}}$$
       `
     },
     {
@@ -51,29 +71,31 @@ If molar solubility = $s$, then:
       content: `
 ## 🧪 Worked Examples
 
-### Example 1: AgCl ($K_{sp} = 1.8 \\times 10^{-10}$)
+> **Problem:** Find the molar solubility of AgCl ($K_{sp} = 1.8 \\times 10^{-10}$).
+
+> **Solution:**
 
 $\\text{AgCl}(s) \\rightleftharpoons \\text{Ag}^+(aq) + \\text{Cl}^-(aq)$
 
-$K_{sp} = s^2 \\implies s = \\sqrt{1.8 \\times 10^{-10}} = 1.3 \\times 10^{-5}$ M
+$$\\boxed{s = \\sqrt{K_{sp}} = \\sqrt{1.8 \\times 10^{-10}} = 1.3 \\times 10^{-5} \\text{ M}}$$
 
 
 ---
 
-### Example 2: PbCl₂ ($K_{sp} = 1.7 \\times 10^{-5}$)
+> **Problem:** Find the molar solubility of PbCl₂ ($K_{sp} = 1.7 \\times 10^{-5}$).
+
+> **Solution:**
 
 $\\text{PbCl}_2(s) \\rightleftharpoons \\text{Pb}^{2+}(aq) + 2\\,\\text{Cl}^-(aq)$
 
 $K_{sp} = (s)(2s)^2 = 4s^3$
 
-$s = \\sqrt[3]{\\frac{1.7 \\times 10^{-5}}{4}} = \\sqrt[3]{4.25 \\times 10^{-6}} = 1.6 \\times 10^{-2}$ M
+$$\\boxed{s = \\sqrt[3]{\\frac{1.7 \\times 10^{-5}}{4}} = \\sqrt[3]{4.25 \\times 10^{-6}} = 1.6 \\times 10^{-2} \\text{ M}}$$
 
 
 ---
 
-### Important Note
-
-You **cannot** directly compare $K_{sp}$ values to rank solubility unless the compounds have the **same formula type** (same ratio of ions). For different types, you must compare molar solubilities.
+> ⚠️ **Warning:** You **cannot** directly compare $K_{sp}$ values to rank solubility unless the compounds have the **same formula type** (same ratio of ions). For different types, you must compare molar solubilities.
       `
     },
     {

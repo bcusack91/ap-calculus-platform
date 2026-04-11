@@ -4,13 +4,30 @@ export const chemOxidationReductionReactionsPart2Data = {
     {
       id: 'or2-intro',
       type: 'text' as const,
-      content: `
-# ⚡ Identifying Redox Reactions
+      content: `# ⚡ Identifying Redox Reactions
 
 **Part 2 of 7 — OIL RIG and Oxidizing/Reducing Agents**
 
-Now that you can assign oxidation states, it\'s time to use them to **identify** redox reactions and determine which species is oxidized, which is reduced, and who the oxidizing and reducing agents are.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 OIL RIG — The Key Mnemonic |
+| How to Spot a Redox Reaction |
+| Example |
+| ⚡ Oxidizing and Reducing Agents |
+| Definitions |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'or2-oil-rig',
@@ -18,7 +35,9 @@ Now that you can assign oxidation states, it\'s time to use them to **identify**
       content: `
 ## 📌 OIL RIG — The Key Mnemonic
 
-$$\\text{OIL RIG}$$
+> 🔑 **Key Concept:** OIL RIG — **O**xidation **I**s **L**oss, **R**eduction **I**s **G**ain of electrons.
+
+$$\\boxed{\\text{OIL RIG}}$$
 
 | | Meaning | Electrons | Oxidation State |
 |-|---------|-----------|-----------------|
@@ -65,7 +84,8 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
 
 ### The Tricky Part
 
-The names seem backwards! Remember:
+> ⚠️ **Warning:** The names seem backwards! The agent is named for what it does to the *other* species, not what happens to itself.
+
 - The **oxidizing agent** is the one that **takes** electrons (gets reduced)
 - The **reducing agent** is the one that **gives** electrons (gets oxidized)
 
@@ -126,7 +146,7 @@ $$\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{
 
 ### Quick Test
 
-If **elements appear as reactants or products** (in their free state, oxidation state = 0), the reaction is almost certainly redox.
+> 💡 **Tip:** If **elements appear as reactants or products** (in their free state, oxidation state = 0), the reaction is almost certainly redox.
       `
     },
     {

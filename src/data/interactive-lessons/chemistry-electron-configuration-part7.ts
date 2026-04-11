@@ -6,7 +6,29 @@ export const chemElectronConfigPart7Data = {
       type: 'text' as const,
       content: `# Part 7: Synthesis & AP Review
 
-This final part ties together everything from Parts 1–6 with AP-style questions. Expect multi-concept problems that combine electron configuration with periodic trends, ionization energy, and other core ideas. These are the types of questions that appear on the AP Chemistry exam.`
+**Part 7 of 7 — Synthesis & AP Review**
+
+---
+
+### Concepts You'll Integrate
+
+| Concept | From Part | How It Connects |
+|---------|-----------|----------------|
+| Subatomic particles | Part 1 | Identify elements from configurations |
+| Aufbau filling order | Part 2 | Write any configuration correctly |
+| Three rules | Part 3 | Avoid common errors |
+| Noble gas shorthand | Part 4 | Simplify and focus on valence electrons |
+| Exceptions & ions | Part 5 | Handle Cr, Cu, and transition metal ions |
+| Quantum numbers | Part 6 | Full electron "addresses" |
+
+> 🔑 **Why this matters:** The AP exam tests electron configuration in multiple-choice, free-response, AND as background knowledge for bonding, periodicity, and spectroscopy questions.
+
+---
+
+### What You'll Master in Part 7
+- Solving multi-concept problems that combine configurations with periodic trends
+- Connecting ionization energy exceptions to electron configuration
+- Identifying elements from configurations and predicting ion behavior`
     },
     {
       id: 'ec7-trends-review',
@@ -15,20 +37,22 @@ This final part ties together everything from Parts 1–6 with AP-style question
 
 Electron configurations explain **why** periodic trends exist:
 
-**Atomic Radius:**
-- Increases **down** a group (higher n → electrons farther from nucleus)
-- Decreases **across** a period (more protons pull electrons closer)
+| Trend | Across a Period (→) | Down a Group (↓) | Why |
+|-------|---------------------|-------------------|-----|
+| Atomic Radius | **Decreases** | **Increases** | More protons pull e⁻ closer (→); higher n = farther from nucleus (↓) |
+| Ionization Energy | Generally **increases** | **Decreases** | Greater $Z_{eff}$ holds e⁻ tighter (→); valence e⁻ farther out (↓) |
+| Electronegativity | **Increases** | **Decreases** | Higher $Z_{eff}$ attracts bonding e⁻ (→); distance reduces pull (↓) |
 
-**Ionization Energy (IE):**
-- Decreases **down** a group (valence electrons farther from nucleus, easier to remove)
-- Generally increases **across** a period (greater nuclear charge holds electrons tighter)
-- **Exceptions:** IE drops from Group 2 → 13 (removing from higher-energy p vs. s) and from Group 15 → 16 (paired vs. unpaired p electron)
+---
 
-**Electronegativity:**
-- Increases **up** and **to the right** (F is most electronegative)
-- Noble gases are generally excluded
+### ⚠️ AP Exceptions
 
-All of these trends trace back to electron configuration — the number of shells (n), effective nuclear charge (\\(Z_{eff}\\)), and subshell occupancy.`
+| Exception | What Happens | Why |
+|-----------|-------------|-----|
+| IE: Be → B | IE **drops** | B removes a 2p e⁻ (higher energy) vs. Be's 2s e⁻ |
+| IE: N → O | IE **drops** | O has a paired 2p e⁻; N's half-filled 2p³ has extra stability |
+
+> ⚠️ These exceptions are **frequently tested** on the AP exam. Always connect your explanation back to electron configuration and subshell occupancy.`
     },
     {
       id: 'ec7-ap-mc1',
@@ -134,7 +158,7 @@ The ion Ti²⁺ is used in some catalytic processes. What is the ground-state el
       type: 'input-box' as const,
       content: `### Challenge Problems
 
-Write the electron configuration in noble gas shorthand. Format: [Xx] 3d5 4s1 (no superscripts, brackets around noble gas).`,
+Write the electron configuration in noble gas shorthand (e.g., [Ar] 3d5 4s1). A formatted preview will appear as you type.`,
       exercise: {
         inputs: [
           {
@@ -186,16 +210,32 @@ These questions connect electron configuration to other chemistry concepts.`,
 
 Congratulations on completing all 7 parts! Here is everything you need to know:
 
-1. **Atomic structure:** Protons define the element; electrons determine chemical behavior.
-2. **Energy levels and subshells:** n determines the shell; s, p, d, f subshells hold 2, 6, 10, 14 electrons.
-3. **Three rules:** Aufbau (lowest energy first), Pauli (max 2 per orbital, opposite spins), Hund (fill singly before pairing).
-4. **Noble gas shorthand:** Replace inner electrons with [noble gas] bracket.
-5. **Exceptions:** Cr is [Ar] 3d⁵ 4s¹; Cu is [Ar] 3d¹⁰ 4s¹.
-6. **Ion configurations:** Remove from highest n first (4s before 3d for transition metals).
-7. **Quantum numbers:** n, l, \\(m_l\\), \\(m_s\\) uniquely identify every electron.
-8. **Periodic trends:** Atomic radius, IE, and electronegativity all stem from electron configuration.
+---
 
-You are now prepared for any electron configuration question on the AP Chemistry exam. Good luck!`
+### 🧰 Master Reference Table
+
+| Topic | Key Fact | AP Must-Know |
+|-------|----------|-------------|
+| Subshells | s, p, d, f hold 2, 6, 10, 14 e⁻ | Know max electrons per subshell |
+| Three Rules | Aufbau → Pauli → Hund's | Apply in this order |
+| Noble Gas Shorthand | Replace core with [noble gas] | Focus on valence electrons |
+| Exceptions | Cr: [Ar] 3d⁵ 4s¹, Cu: [Ar] 3d¹⁰ 4s¹ | Half-filled/full d = extra stability |
+| Ion Configs | Remove from highest n first | 4s before 3d for TM cations |
+| Quantum Numbers | n, l, $m_l$, $m_s$ | Uniquely identify every electron |
+| Periodic Trends | Radius, IE, EN from e⁻ config | Know the exceptions (Be→B, N→O) |
+
+---
+
+### ✅ Final Checklist
+
+- ☐ I can write the full and shorthand configuration for any element
+- ☐ I know the Cr and Cu exceptions and can explain why
+- ☐ I can write ion configurations (removing 4s before 3d)
+- ☐ I can assign all four quantum numbers to any electron
+- ☐ I can explain periodic trends using electron configuration
+- ☐ I can identify IE exceptions and explain them
+
+You are now prepared for any electron configuration question on the AP Chemistry exam. Good luck! 🎯`
     }
   ]
 }

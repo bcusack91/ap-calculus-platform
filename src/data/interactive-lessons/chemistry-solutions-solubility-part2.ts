@@ -4,13 +4,30 @@ export const chemSolutionsSolubilityPart2Data = {
     {
       id: 'ss2-intro',
       type: 'text' as const,
-      content: `
-# 📏 Concentration Units
+      content: `# 📏 Concentration Units
 
 **Part 2 of 7 — Molarity, Molality, Mass Percent, Mole Fraction, and ppm**
 
-There are many ways to express how much solute is dissolved in a solution. Each concentration unit has specific advantages depending on the context — molarity for stoichiometry, molality for colligative properties, and ppm for trace analysis.
-      `
+---
+
+### Topics in This Part
+
+| Section |
+|---------|
+| 📌 Molarity ($M$) |
+| Units: mol/L (or simply $M$) |
+| Example |
+| Key Points |
+| 📌 Molality ($m$) |
+
+> 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
+
+---
+
+### What You'll Master in Part 2
+- Understanding the core concepts covered in Part 2
+- Applying these ideas to solve practice problems
+- Building toward AP exam readiness for this topic`
     },
     {
       id: 'ss2-molarity',
@@ -20,7 +37,7 @@ There are many ways to express how much solute is dissolved in a solution. Each 
 
 **Molarity** is the most commonly used concentration unit in chemistry.
 
-$$M = \\frac{\\text{moles of solute}}{\\text{liters of solution}}$$
+$$\\boxed{M = \\frac{\\text{moles of solute}}{\\text{liters of solution}}}$$
 
 
 ---
@@ -54,7 +71,7 @@ $$M = \\frac{0.100 \\text{ mol}}{0.5000 \\text{ L}} = 0.200 \\text{ M}$$
       content: `
 ## 📌 Molality ($m$)
 
-$$m = \\frac{\\text{moles of solute}}{\\text{kilograms of solvent}}$$
+$$\\boxed{m = \\frac{\\text{moles of solute}}{\\text{kilograms of solvent}}}$$
 
 
 ---
@@ -80,6 +97,8 @@ $$m = \\frac{0.0999 \\text{ mol}}{0.2500 \\text{ kg}} = 0.400 \\; m$$
 - Molality depends on **mass of solvent**, which does **not** change with temperature
 - This makes molality ideal for **colligative property** calculations (boiling point elevation, freezing point depression)
 - On the AP exam, colligative property formulas use molality, not molarity
+
+> 💡 **Tip:** Molality uses **mass of solvent** (kg), while molarity uses **volume of solution** (L). In dilute aqueous solutions they are approximately equal, but they diverge at higher concentrations.
       `
     },
     {
@@ -90,7 +109,7 @@ $$m = \\frac{0.0999 \\text{ mol}}{0.2500 \\text{ kg}} = 0.400 \\; m$$
 
 ### Mass Percent (Weight Percent)
 
-$$\\text{mass \\%} = \\frac{\\text{mass of solute}}{\\text{mass of solution}} \\times 100\\%$$
+$$\\boxed{\\text{mass \\%} = \\frac{\\text{mass of solute}}{\\text{mass of solution}} \\times 100\\%}$$
 
 Example: 5.0 g NaCl in 95.0 g H₂O → mass% = $\\frac{5.0}{5.0 + 95.0} \\times 100 = 5.0\\%$
 
@@ -99,7 +118,7 @@ Example: 5.0 g NaCl in 95.0 g H₂O → mass% = $\\frac{5.0}{5.0 + 95.0} \\times
 
 ### Mole Fraction ($\\chi$)
 
-$$\\chi_A = \\frac{n_A}{n_A + n_B + \\cdots}$$
+$$\\boxed{\\chi_A = \\frac{n_A}{n_A + n_B + \\cdots}}$$
 
 - Mole fraction is **unitless** and always between 0 and 1
 - The sum of all mole fractions in a solution equals **1**
@@ -110,7 +129,7 @@ $$\\chi_A = \\frac{n_A}{n_A + n_B + \\cdots}$$
 
 ### Parts Per Million (ppm)
 
-$$\\text{ppm} = \\frac{\\text{mass of solute}}{\\text{mass of solution}} \\times 10^6$$
+$$\\boxed{\\text{ppm} = \\frac{\\text{mass of solute}}{\\text{mass of solution}} \\times 10^6}$$
 
 - Used for very dilute solutions (trace contaminants, water quality)
 - 1 ppm = 1 mg solute per 1 kg solution (for dilute aqueous solutions, 1 ppm ≈ 1 mg/L)
@@ -202,7 +221,9 @@ $$\\text{ppm} = \\frac{\\text{mass of solute}}{\\text{mass of solution}} \\times
       content: `
 ## 🧪 Mole Fraction Worked Example
 
-**Problem:** A solution contains 46.0 g of ethanol (C₂H₅OH, $M = 46.07$ g/mol) and 72.0 g of water ($M = 18.02$ g/mol). Calculate the mole fraction of ethanol.
+> **Problem:** A solution contains 46.0 g of ethanol (C₂H₅OH, $M = 46.07$ g/mol) and 72.0 g of water ($M = 18.02$ g/mol). Calculate the mole fraction of ethanol.
+
+> **Solution:**
 
 **Step 1:** Moles of ethanol: $n_{\\text{eth}} = 46.0/46.07 = 0.9985$ mol
 

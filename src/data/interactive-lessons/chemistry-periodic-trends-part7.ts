@@ -8,7 +8,20 @@ export const chemPeriodicTrendsPart7Data = {
 
 **Part 7 of 7 — Putting It All Together**
 
-On the AP Chemistry exam, periodic trend questions rarely test just one property. You'll need to combine your knowledge of atomic radius, ionization energy, electron affinity, electronegativity, and ionic radius to answer complex comparison and explanation questions. This final lesson pulls everything together.`
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'pt7-master-summary',
@@ -28,7 +41,7 @@ On the AP Chemistry exam, periodic trend questions rarely test just one property
 
 ### The Big Pattern
 
-**Atomic radius** goes in the **opposite direction** from IE, EA, and EN.
+> 🔑 **Key Concept:** Atomic radius goes in the **opposite direction** from IE, EA, and EN. All four trends are driven by $Z_{eff}$ (across periods) and distance/shells (down groups).
 
 - Small atom → tightly held electrons → high IE, high EN, very negative EA
 - Large atom → loosely held electrons → low IE, low EN, near-zero EA
@@ -44,37 +57,30 @@ All four major trends are ultimately explained by the same two factors:
 
 The AP exam frequently tests these exceptions:
 
+---
+
+### 📌 Exception Reference Table
+
+| Exception | What Happens | Why |
+|-----------|-------------|-----|
+| IE: B < Be | IE **drops** going from Be to B | B removes a $2p$ e⁻ (higher energy) vs. Be's $2s$ e⁻ |
+| IE: O < N | IE **drops** going from N to O | O has a paired $2p$ e⁻; N's half-filled $2p^3$ is extra stable |
+| EA: F < Cl (less negative) | F gains e⁻ less readily than Cl | F is so small → e⁻–e⁻ repulsion in tiny $2p$ orbitals |
+| EA ≈ 0: N, Be, Ne | Won't accept an extra electron | Stable configs: half-filled $2p^3$, full $2s^2$, full octet |
 
 ---
 
-### 1. IE: B < Be and O < N
-- **B < Be:** B removes a $2p$ electron (higher energy) vs. Be's $2s$ electron
-- **O < N:** O has a paired $2p$ electron; N's half-filled $2p^3$ has extra stability
+### 🧪 EA Values to Know
 
-
----
-
-### 2. EA: F less negative than Cl
-- Fluorine is so small that electron-electron repulsion in its tiny $2p$ orbitals offsets the energy gain
-- $EA_\\text{F} = -328$ kJ/mol vs. $EA_\\text{Cl} = -349$ kJ/mol
-
+| Element | $EA$ (kJ/mol) | Why? |
+|---------|---------------|------|
+| F | −328 | Small size → repulsion offsets gain |
+| Cl | −349 | Larger, less repulsion → **most negative** EA |
+| N, Be, Ne | ≈ 0 | Stable subshell configs resist extra e⁻ |
 
 ---
 
-### 3. EA ≈ 0 for N, Be, Ne
-- **N:** Half-filled $2p^3$ — stable configuration resists an extra electron
-- **Be:** Full $2s^2$ subshell — added electron would go to higher-energy $2p$
-- **Ne:** Full octet — added electron enters $3s$ (much higher energy)
-
-
----
-
-### AP Writing Tip
-
-When asked to "explain" a trend, always state:
-1. What happens to $Z_{eff}$ (or distance from nucleus)
-2. Why that affects the property
-3. Connect back to electron configuration when exceptions arise`
+> 💡 **AP Writing Tip:** When explaining a trend exception, always state: (1) what happens to $Z_{eff}$ or distance, (2) why it affects the property, and (3) connect to electron configuration and subshell occupancy.`
     },
     {
       id: 'pt7-multi-trend-quiz',
@@ -189,11 +195,11 @@ On the AP exam, you often must **explain** a trend, not just state it. Here is a
       type: 'input-box' as const,
       content: `### Mixed Practice
 
-1. Of Li, C, F, and Na — which element has the highest first ionization energy? (Type the symbol.)
+**1.** Of Li, C, F, and Na — which element has the highest first ionization energy? (Type the symbol.)
 
-2. Rank the following from smallest to largest ionic radius: Na⁺, Mg²⁺, F⁻. All have 10 electrons. (Type as symbols separated by commas, smallest first, e.g., "Mg2+, Na+, F-".)
+**2.** Rank the following from smallest to largest ionic radius: Na⁺, Mg²⁺, F⁻. All have 10 electrons. (Type as symbols separated by commas, smallest first, e.g., "Mg2+, Na+, F-".)
 
-3. Which element in Period 3 has the smallest atomic radius (excluding noble gases)? (Type the symbol.)`,
+**3.** Which element in Period 3 has the smallest atomic radius (excluding noble gases)? (Type the symbol.)`,
       exercise: {
         inputs: [
           {

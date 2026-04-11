@@ -4,13 +4,24 @@ export const chemSolutionsSolubilityPart7Data = {
     {
       id: 'ss7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — Connecting Solubility Rules, Concentration, and Colligative Properties**
 
-This final part ties together everything from the unit: solution terminology, concentration units, dilution, colligative properties, and osmotic pressure. The questions are designed in AP exam style — expect multi-step reasoning, conceptual traps, and calculations that require you to integrate multiple topics.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'ss7-big-picture',
@@ -201,9 +212,9 @@ $$\\text{Solubility Rules} \\rightarrow \\text{Does it dissolve?} \\rightarrow \
       content: `
 ## ✏️ AP Free-Response Practice Problem
 
-**A student performs a freezing point depression experiment.**
+> **Problem:** A student performs a freezing point depression experiment. She dissolves 2.56 g of an unknown compound in 50.0 g of water. The solution freezes at $-0.744$ °C.
 
-She dissolves 2.56 g of an unknown compound in 50.0 g of water. The solution freezes at $-0.744$ °C.
+> **Solution:**
 
 **(a)** Calculate the molality of the solution.
 

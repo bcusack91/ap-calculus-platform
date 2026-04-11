@@ -4,13 +4,24 @@ export const chemStoichiometryLimitingReactantsPart7Data = {
     {
       id: 'sl7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — Comprehensive Stoichiometry Problems & AP Exam Strategies**
 
-This final part challenges you with AP-level stoichiometry problems that combine every concept: mole ratios, mass-to-mass conversions, limiting reactants, percent yield, and solution stoichiometry. Master these, and you\'re ready for the AP exam.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'sl7-summary',
@@ -37,6 +48,14 @@ This final part challenges you with AP-level stoichiometry problems that combine
 4. **Label everything** — always include units and chemical formulas
 5. **Check your answer** — does the magnitude make sense?
 6. **Common mistake**: forgetting to balance the equation before using mole ratios
+
+---
+
+> 🔑 **Key Concept:** Dimensional analysis is the universal approach — set up conversion factors so units cancel, whether working with mass, moles, volume, or molarity.
+
+> ⚠️ **Warning:** On the AP exam, a common mistake is using subscripts instead of coefficients for mole ratios. Subscripts describe the formula; coefficients describe the reaction.
+
+> 💡 **Tip:** On free-response questions, show every conversion factor and cancel units explicitly — this earns partial credit even if your arithmetic has an error.
       `
     },
     {
@@ -45,7 +64,9 @@ This final part challenges you with AP-level stoichiometry problems that combine
       content: `
 ## 📌 AP-Style Problem Walkthrough
 
-**Problem:** A student reacts 25.0 mL of 0.400 M Pb(NO₃)₂ with 35.0 mL of 0.300 M KI. Find the mass of PbI₂ precipitate formed.
+> **Problem:** A student reacts 25.0 mL of 0.400 M Pb(NO₃)₂ with 35.0 mL of 0.300 M KI. Find the mass of PbI₂ precipitate formed.
+
+> **Solution:**
 
 $$\\text{Pb(NO}_3)_2(\\text{aq}) + 2\\text{KI}(\\text{aq}) \\rightarrow \\text{PbI}_2(\\text{s}) + 2\\text{KNO}_3(\\text{aq})$$
 

@@ -4,13 +4,24 @@ export const chemReactionQuotientLeChatPart7Data = {
     {
       id: 'ql7-intro',
       type: 'text' as const,
-      content: `
-# 🎓 Synthesis & AP Review
+      content: `# 🎓 Synthesis & AP Review
 
 **Part 7 of 7 — Reaction Quotient & Le Chatelier\'s Principle**
 
-This final part reviews Q vs K comparisons, Le Chatelier predictions for all types of stress, and combines them in AP-style questions.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'ql7-summary',
@@ -20,7 +31,8 @@ This final part reviews Q vs K comparisons, Le Chatelier predictions for all typ
 
 ### Reaction Quotient Q
 - Same expression as K, using current (not equilibrium) concentrations
-- $Q < K$ → shift right | $Q > K$ → shift left | $Q = K$ → at equilibrium
+
+$$\\boxed{Q < K \\to \\text{shift right} \\quad|\\quad Q > K \\to \\text{shift left} \\quad|\\quad Q = K \\to \\text{equilibrium}}$$
 
 
 ---
@@ -44,9 +56,10 @@ This final part reviews Q vs K comparisons, Le Chatelier predictions for all typ
 ---
 
 ### Key Reminders
-- Only **temperature** changes K
-- A catalyst speeds up the approach to equilibrium but doesn\'t change position or K
-- The system **partially** counteracts a stress — never fully
+
+> ⚠️ **Warning:** Only **temperature** changes K. A catalyst speeds up the approach to equilibrium but doesn\'t change position or K.
+
+> 🔑 **Key Concept:** The system **partially** counteracts a stress — never fully. This is the defining feature of Le Chatelier\'s Principle.
       `
     },
     {

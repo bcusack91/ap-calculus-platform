@@ -4,13 +4,24 @@ export const chemNernstEquationConcentrationPart7Data = {
     {
       id: 'ne7-intro',
       type: 'text' as const,
-      content: `
-# 🎯 Synthesis & AP Review — Nernst Equation
+      content: `# 🎯 Synthesis & AP Review — Nernst Equation
 
 **Part 7 of 7 — Complete Mastery**
 
-This final review integrates the Nernst equation, concentration cells, the E°-K relationship, and battery applications. Master these connections and you will be fully prepared for the electrochemistry portion of the AP exam.
-      `
+---
+
+### Bringing It All Together
+
+This comprehensive review connects every concept from Parts 1–6 with AP-style problems. The questions are designed to mirror what you'll see on the actual exam — multi-step, multi-concept, and requiring clear written explanations.
+
+> 🔑 **Why this matters:** AP Chemistry exam questions rarely test one concept in isolation — success requires connecting ideas across topics.
+
+---
+
+### What You'll Master in Part 7
+- Solving AP-style questions that integrate multiple concepts from this unit
+- Writing clear, concise explanations using proper chemistry terminology
+- Identifying and avoiding common AP exam traps and mistakes`
     },
     {
       id: 'ne7-master-summary',
@@ -45,6 +56,8 @@ $$\\Delta G° \\xleftrightarrow{-nF} E° \\xleftrightarrow{0.0592/n} \\log K \\x
 | Secondary | Yes | Li-ion, lead-acid | Reversible reaction |
 | Fuel cell | Continuous | H₂/O₂ | Reactants fed in |
 | Concentration | Until equal | Same-metal | E° = 0 |
+
+> 🔑 **Key Concept:** Know any one of $\Delta G°$, $E°$, or $K$ — and you can calculate the other two. This "thermodynamic triangle" unifies equilibrium, electrochemistry, and thermodynamics.
       `
     },
     {

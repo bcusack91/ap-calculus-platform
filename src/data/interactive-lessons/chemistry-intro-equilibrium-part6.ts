@@ -4,13 +4,24 @@ export const chemIntroEquilibriumPart6Data = {
     {
       id: 'ie6-intro',
       type: 'text' as const,
-      content: `
-# 🧮 Problem-Solving Workshop
+      content: `# 🧮 Problem-Solving Workshop
 
 **Part 6 of 7 — Equilibrium Expression and K Calculations**
 
-This workshop brings together everything from Parts 1–5: writing equilibrium expressions, calculating K, manipulating K values, and interpreting results. These multi-step problems mirror AP-level questions.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'ie6-strategy',
@@ -25,6 +36,8 @@ This workshop brings together everything from Parts 1–5: writing equilibrium e
 3. **Write** the $K$ expression: products over reactants with coefficient exponents
 4. **Plug in** equilibrium values
 5. **Check** — does the magnitude of K make sense?
+
+> 💡 **Tip:** On the AP exam, always verify your answer: if $K \\gg 1$, products should dominate; if $K \\ll 1$, reactants should dominate.
 
 
 ---
@@ -46,13 +59,9 @@ This workshop brings together everything from Parts 1–5: writing equilibrium e
       content: `
 ## 🔢 Worked Example 1: Calculating $K_c$
 
-**Problem:** At 450°C, the equilibrium concentrations for the reaction
+> **Problem:** At 450°C, the equilibrium concentrations for $\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$ are: $[\\text{H}_2] = 0.0050$ M, $[\\text{I}_2] = 0.0050$ M, $[\\text{HI}] = 0.040$ M. Find $K_c$.
 
-$$\\text{H}_2(g) + \\text{I}_2(g) \\rightleftharpoons 2\\,\\text{HI}(g)$$
-
-are: $[\\text{H}_2] = 0.0050$ M, $[\\text{I}_2] = 0.0050$ M, $[\\text{HI}] = 0.040$ M.
-
-**Solution:**
+> **Solution:**
 
 $$K_c = \\frac{[\\text{HI}]^2}{[\\text{H}_2][\\text{I}_2]} = \\frac{(0.040)^2}{(0.0050)(0.0050)}$$
 
@@ -92,15 +101,9 @@ At equilibrium: $[\\text{PCl}_5] = 0.20$ M, $[\\text{PCl}_3] = 0.30$ M, $[\\text
       content: `
 ## 🧪 Worked Example 2: Combining K Values
 
-**Problem:** Given:
+> **Problem:** Given $\\text{NO}(g) + \\frac{1}{2}\\text{O}_2(g) \\rightleftharpoons \\text{NO}_2(g)$, $K_1 = 1.3 \\times 10^{6}$. Find $K$ for $2\\,\\text{NO}_2(g) \\rightleftharpoons 2\\,\\text{NO}(g) + \\text{O}_2(g)$.
 
-$$\\text{Reaction 1: } \\text{NO}(g) + \\frac{1}{2}\\text{O}_2(g) \\rightleftharpoons \\text{NO}_2(g) \\quad K_1 = 1.3 \\times 10^{6}$$
-
-Find $K$ for:
-
-$$2\\,\\text{NO}_2(g) \\rightleftharpoons 2\\,\\text{NO}(g) + \\text{O}_2(g)$$
-
-**Solution:**
+> **Solution:**
 
 Step 1: The target is the reverse of Reaction 1, multiplied by 2.
 

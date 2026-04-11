@@ -4,13 +4,24 @@ export const chemStoichiometryLimitingReactantsPart6Data = {
     {
       id: 'sl6-intro',
       type: 'text' as const,
-      content: `
-# 🛠️ Problem-Solving Workshop
+      content: `# 🛠️ Problem-Solving Workshop
 
 **Part 6 of 7 — Multi-Step Stoichiometry with Limiting Reactants and Yield**
 
-This workshop brings together everything: mass-to-mass conversions, limiting reactants, excess calculations, and percent yield — all in one problem. These are the types of problems you\'ll see on the AP exam.
-      `
+---
+
+### Practice Makes Perfect
+
+This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+
+> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+
+---
+
+### What You'll Master in Part 6
+- Working through complete multi-step problems from start to finish
+- Building problem-solving strategies you can apply on the AP exam
+- Identifying which concepts to apply and in what order`
     },
     {
       id: 'sl6-strategy',
@@ -27,13 +38,15 @@ This workshop brings together everything: mass-to-mass conversions, limiting rea
 5. **Find excess** remaining (if asked)
 6. **Apply percent yield** (if given or asked)
 
+> 🔑 **Key Concept:** Every stoichiometry problem is a series of conversions — grams ↔ moles ↔ moles ↔ grams — always chained through the mole ratio from a balanced equation.
+
 
 ---
 
 ### Master Formula Chain
 
 $$\\text{grams A} \\xrightarrow{\\div M_A} \\text{mol A} \\xrightarrow{\\text{ratio}} \\text{mol product} \\xrightarrow{\\times M_P} \\text{theoretical yield (g)} \\xrightarrow{\\times \\%/100} \\text{actual yield (g)}$$
-      `
+> ⚠️ **Warning:** Never apply percent yield to the excess reactant — only to the product calculated from the limiting reactant.      `
     },
     {
       id: 'sl6-worked-example',
@@ -41,11 +54,13 @@ $$\\text{grams A} \\xrightarrow{\\div M_A} \\text{mol A} \\xrightarrow{\\text{ra
       content: `
 ## 🧪 Comprehensive Worked Example
 
-**Problem:** In the reaction below, 50.0 g of Fe₂O₃ ($M = 159.7$) reacts with 30.0 g of Al ($M = 26.98$). The percent yield is 78%. Find:
-a) the limiting reactant
-b) the theoretical yield of Fe ($M = 55.85$)
-c) the actual yield of Fe
-d) the mass of excess reactant remaining
+> **Problem:** In the reaction below, 50.0 g of Fe₂O₃ ($M = 159.7$) reacts with 30.0 g of Al ($M = 26.98$). The percent yield is 78%. Find:
+> a) the limiting reactant
+> b) the theoretical yield of Fe ($M = 55.85$)
+> c) the actual yield of Fe
+> d) the mass of excess reactant remaining
+
+> **Solution:**
 
 $$\\text{Fe}_2\\text{O}_3 + 2\\text{Al} \\rightarrow \\text{Al}_2\\text{O}_3 + 2\\text{Fe}$$
 
@@ -88,6 +103,8 @@ $$\\text{actual} = 35.0 \\times 0.78 = 27.3 \\text{ g Fe}$$
 Al consumed: $0.3131 \\; \\cancel{\\text{mol Fe}_2\\text{O}_3} \\times \\frac{2 \\text{ mol Al}}{1 \\; \\cancel{\\text{mol Fe}_2\\text{O}_3}} = 0.6262$ mol Al
 
 Al remaining: $(1.112 - 0.6262) \\; \\cancel{\\text{mol Al}} \\times \\frac{26.98 \\text{ g Al}}{1 \\; \\cancel{\\text{mol Al}}} = 13.1$ g Al
+
+> 💡 **Tip:** Use an ICE-style table (Initial → Consumed → End) to organize your work and verify that the limiting reactant reaches exactly zero.
       `
     },
     {
