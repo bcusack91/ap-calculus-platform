@@ -47,7 +47,9 @@ $y = 2x+1$ and $y = -x+7$: At intersection $2x+1 = -x+7$, so $3x = 6$, $x = 2$, 
 **Solve by graphing** 🧮
 
 1) $y=x+1$, $y=-x+3$, find $x$
+
 2) $y=2x$, $y=x+2$, find $x$
+
 3) $y=3x-1$, $y=3x+2$, are they parallel? (yes/no)
       `,
       exercise: {

@@ -86,7 +86,9 @@ export const psychMoodPsychPart1Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: persistent low mood or loss of interest with functional impairment
+
       2) Write the concept that matches: chronic depressed mood lasting at least two years
+
       3) Write the concept that matches: elevated or irritable mood with increased energy and reduced need for sleep
 
       Use the exact vocabulary term from this part.

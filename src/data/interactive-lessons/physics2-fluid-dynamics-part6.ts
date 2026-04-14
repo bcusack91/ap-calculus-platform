@@ -115,7 +115,9 @@ Jet engines take in air through a wide intake and accelerate it through progress
 A sprinkler system has one main pipe (radius 2.0 cm, speed 3.0 m/s) that feeds 8 identical sprinkler heads.
 
 1) Total flow rate in the main pipe (in L/s)
+
 2) Flow rate per sprinkler (in L/s)
+
 3) If each sprinkler head has radius 0.30 cm, the exit speed at each head (in m/s)
 
 *Round all answers to 3 significant figures.*

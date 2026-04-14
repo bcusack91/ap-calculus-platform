@@ -95,7 +95,9 @@ export const bioEvidencePart1Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **chronological evidence of historical life forms in rock strata**
+
       2) Term for this definition: **shared anatomy due to common ancestry**
+
       3) Term for this definition: **similar function evolved independently in different lineages**
       `,
       exercise: {

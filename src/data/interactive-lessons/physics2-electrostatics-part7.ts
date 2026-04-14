@@ -119,7 +119,9 @@ The equilibrium point is at **d/3 from the smaller charge** — closer to the sm
 Two identical spheres, each with charge $+6\\ \\mu\\text{C}$, are 0.20 m apart.
 
 1) Force between them (in N, use $k = 9 \\times 10^9$)
+
 2) One sphere touches a neutral identical sphere, then is returned. Its new charge? (in μC)
+
 3) New force between the original pair (in N, round to 2 decimals)
 
 *Round all answers to 3 significant figures.*

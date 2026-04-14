@@ -86,7 +86,9 @@ export const psychGroupPart5Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: structured intergroup contact can reduce prejudice
+
       2) Write the concept that matches: poor group decisions from pressure to maintain consensus
+
       3) Write the concept that matches: part of self-concept derived from group membership
 
       Use the exact vocabulary term from this part.

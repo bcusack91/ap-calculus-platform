@@ -68,6 +68,7 @@ This converts stress into an actionable checkpoint strategy.\n        `
         type: 'input-boxes' as const,
         content: `\n**Execution Math**
 1) Reading has 40 questions in 35 minutes. Enter average seconds per question (nearest whole number).
+
 2) You save 15 seconds on each of 12 easy questions. Enter total seconds saved.
 3) If you leave 5 questions blank versus random guessing, how many additional attempts does guessing provide?\n        `,
         exercise: {

@@ -88,7 +88,9 @@ export const oChemAminoAcidsPart1Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: species containing both positive and negative charges
+
       2) Term for: pH where net charge is zero
+
       3) Product pattern expected under amino acid + amino acid, coupling reagent
       `,
       exercise: {

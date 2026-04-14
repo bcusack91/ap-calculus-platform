@@ -95,7 +95,9 @@ export const bioCellCompartmentPart2Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **contains hydrolytic enzymes for intracellular digestion**
+
       2) Term for this definition: **modifies, sorts, and packages proteins and lipids**
+
       3) Term for this definition: **internal ER space where folding and processing occur**
       `,
       exercise: {

@@ -88,7 +88,9 @@ export const oChemCarbsPart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: functional group from alcohol addition to aldehyde
+
       2) Term for: double-alkoxy carbon stable to base
+
       3) Product pattern expected under glycosyl donor + acceptor OH
       `,
       exercise: {

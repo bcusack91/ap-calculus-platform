@@ -49,7 +49,9 @@ Check: $y = 2x+1$ and $y = 2x+5$ → parallel (no solution). $y = 3x-2$ and $6x-
 **Classify** 🧮
 
 1) $y=x+1$, $y=x+3$: solutions? (0/1/inf)
+
 2) $y=2x$, $y=-x+3$: solutions?
+
 3) $2y=4x+6$, $y=2x+3$: solutions?
       `,
       exercise: {

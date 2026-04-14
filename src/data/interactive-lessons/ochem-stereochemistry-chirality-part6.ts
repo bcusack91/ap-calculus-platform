@@ -88,7 +88,9 @@ export const oChemStereoPart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: rotation of plane-polarized light by chiral compounds
+
       2) Term for: 1:1 enantiomer mixture with zero net rotation
+
       3) Product pattern expected under chair flip in cyclohexane
       `,
       exercise: {

@@ -86,7 +86,9 @@ export const psychGroupPart4Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: an unjustified negative attitude toward a group
+
       2) Write the concept that matches: unequal behavior toward people based on group membership
+
       3) Write the concept that matches: structured intergroup contact can reduce prejudice
 
       Use the exact vocabulary term from this part.

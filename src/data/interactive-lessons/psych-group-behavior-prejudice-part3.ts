@@ -86,7 +86,9 @@ export const psychGroupPart3Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: overattributing others' behavior to disposition rather than situation
+
       2) Write the concept that matches: a generalized belief about members of a group
+
       3) Write the concept that matches: an unjustified negative attitude toward a group
 
       Use the exact vocabulary term from this part.

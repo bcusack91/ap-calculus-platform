@@ -88,7 +88,9 @@ export const oChemAminesPart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: carbonyl + amine then reduction to C-N single bond
+
       2) Term for: aryl-N2+ intermediate used for substitution
+
       3) Product pattern expected under ArNH2 + NaNO2/HCl (0-5 °C)
       `,
       exercise: {

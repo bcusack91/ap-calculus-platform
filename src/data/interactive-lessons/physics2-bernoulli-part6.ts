@@ -139,7 +139,9 @@ $$v = \\sqrt{\\frac{2P}{\\rho}} = \\sqrt{\\frac{2(300{,}000)}{1000}} = 24.5 \\te
 Street main pressure: 400,000 Pa. The pipe (constant area) goes up to the 10th floor, 30 m above street level. (Same pipe area, so $v$ stays constant.)
 
 1) Pressure loss due to height (in Pa)
+
 2) Pressure at the 10th floor (in Pa)
+
 3) Maximum building height where water pressure reaches 0 gauge (in m)
       `,
       exercise: {

@@ -175,7 +175,9 @@ A proton is launched horizontally into a region of uniform magnetic field pointi
 An electron ($m = 9.11 \\times 10^{-31}$ kg, $q = 1.6 \\times 10^{-19}$ C) is accelerated from rest through a potential difference of 500 V, then enters a uniform 0.010 T magnetic field perpendicular to its velocity.
 
 1) Speed of the electron after acceleration (in m/s, use scientific notation like 1.3e7)
+
 2) Radius of the circular path in the magnetic field (in m, to 3 significant figures)
+
 3) Cyclotron period (in s, use scientific notation like 3.6e-9)
       `,
       exercise: {

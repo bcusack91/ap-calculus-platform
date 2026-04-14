@@ -86,7 +86,9 @@ export const psychDisordersPart4Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: repetitive behavior performed to reduce distress or prevent feared outcomes
+
       2) Write the concept that matches: disruption in integration of consciousness, memory, or identity
+
       3) Write the concept that matches: framework integrating biological, psychological, and social influences
 
       Use the exact vocabulary term from this part.

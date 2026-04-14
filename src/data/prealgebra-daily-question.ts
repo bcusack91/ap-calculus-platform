@@ -51,7 +51,7 @@ export interface PreAlgebraDailyQuestion {
 export async function getDailyQuestions(): Promise<PreAlgebraDailyQuestion[]> {
   const day = dayOfYear()
   const topicSlug = TOPIC_SLUGS[day % TOPIC_SLUGS.length]
-  const form = day % 2 === 0 ? 'A' : 'B'
+  const form = (day % 10) + 1
   const diagnostic = generatePreAlgebraDiagnosticTest(form)
   const filtered = diagnostic.questions.filter((q) => q.topicSlug === topicSlug)
   const source = filtered.length > 0 ? filtered : diagnostic.questions

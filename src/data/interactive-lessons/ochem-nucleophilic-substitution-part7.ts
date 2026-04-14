@@ -88,7 +88,9 @@ export const oChemSNPart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: configuration inversion at SN2 stereocenter
+
       2) Term for: partial mixture from planar carbocation attack
+
       3) Product pattern expected under 1° alkyl bromide + NaCN in DMSO
       `,
       exercise: {

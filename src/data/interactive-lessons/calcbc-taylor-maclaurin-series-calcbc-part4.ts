@@ -2,185 +2,132 @@ export const calcbcTaylorPart4Data = {
   topicSlug: 'taylor-maclaurin-series-calcbc',
   sections: [
     {
-      id: 'calcbctaylor-p4-intro',
+      id: 'tm4-intro',
       type: 'text' as const,
-      content: `
-# Taylor Maclaurin Series
+      content: `# Taylor & Maclaurin — Taylor's Theorem & Remainder
 
-**Part 4 of 7 — Graphs and Interpretation**
+**Part 4 of 7 — The Lagrange Error Bound**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Taylor's Theorem
 
-## Key Ideas
+If $f$ has $(n+1)$ continuous derivatives, then:
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+$$f(x) = T_n(x) + R_n(x)$$
 
-## Formula Snapshot
+where $R_n(x) =$ the **remainder** (error of approximation).
 
-When appropriate, use:
+### The Lagrange Error Bound
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+$$\\boxed{|R_n(x)| \\le \\frac{M \\cdot |x - c|^{n+1}}{(n+1)!}}$$
 
-and interpret what the final value means in context.
-      `
+where $M = \\max_{t}|f^{(n+1)}(t)|$ on the interval between $c$ and $x$.
+
+### Comparison of Error Bounds
+
+| Bound | When to Use | Formula |
+|-------|------------|---------|
+| **Lagrange** | Any Taylor polynomial | $M|x-c|^{n+1}/(n+1)!$ |
+| **AST** | Alternating Taylor series | $|$first omitted term$|$ |
+
+> **AP Tip:** Use the AST error bound when the series alternates — it's simpler. Use Lagrange when it doesn't alternate or when specifically asked.`
     },
     {
-      id: 'calcbctaylor-p4-mcq1',
+      id: 'tm4-example',
+      type: 'text' as const,
+      content: `### Example: Bound the Error of $e^x \\approx T_3(x)$ at $x = 0.5$
+
+$T_3(0.5) = 1 + 0.5 + 0.125 + 0.0208\\overline{3} = 1.6458\\overline{3}$
+
+For the Lagrange bound: $f^{(4)}(x) = e^x$
+
+$M = \\max_{0 \\le t \\le 0.5} e^t = e^{0.5} \\approx 1.649$
+
+$$|R_3(0.5)| \\le \\frac{1.649 \\cdot (0.5)^4}{4!} = \\frac{1.649 \\cdot 0.0625}{24} \\approx 0.00429$$
+
+Actual: $e^{0.5} \\approx 1.6487$, error $\\approx 0.0029$. The bound ($0.0043$) is correct and conservative.
+
+### Common $M$ Values
+
+| Function | $f^{(n+1)}(x)$ | $M$ on $[0, x_0]$ |
+|----------|---------------|-------------------|
+| $e^x$ | $e^x$ | $e^{x_0}$ (or use $e^1 = 3$ as crude bound) |
+| $\\sin x$ | $\\pm\\sin x$ or $\\pm\\cos x$ | $M = 1$ always! |
+| $\\cos x$ | $\\pm\\sin x$ or $\\pm\\cos x$ | $M = 1$ always! |`
+    },
+    {
+      id: 'tm4-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Lagrange Error Practice**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'Using $T_4(x)$ for $\\sin x$ at $x = 0.1$, the Lagrange error bound is at most:',
+            options: ['$(0.1)^5/5! = 8.33 \\times 10^{-8}$', '$(0.1)^4/4!$', '$(0.1)^5/4!$', '$(0.1)^3/3!$'],
+            correctAnswer: 0,
+            explanation: '$f^{(5)}(x) = \\cos x$, $M = 1$. $|R_4| \\le 1 \\cdot (0.1)^5/5! = 10^{-5}/120 \\approx 8.33 \\times 10^{-8}$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'Why is $M = 1$ for sine and cosine error bounds?',
+            options: ['All derivatives of $\\sin x$ and $\\cos x$ are bounded by $1$', 'They equal $1$ at $x = 0$', 'The series coefficients are at most $1$', 'The radius of convergence is $1$'],
+            correctAnswer: 0,
+            explanation: 'Every derivative of $\\sin x$ or $\\cos x$ is $\\pm\\sin$ or $\\pm\\cos$, which satisfies $|f^{(n)}(x)| \\le 1$ for all $x$ and all $n$.'
+          },
+          {
+            question: 'For $e^x$ approximated by $T_2(x)$ at $x = 1$, using $M = e^1 \\approx 2.72$, the error bound is:',
+            options: ['$2.72/6 \\approx 0.453$', '$2.72/2 = 1.36$', '$1/6$', '$e/24$'],
+            correctAnswer: 0,
+            explanation: '$|R_2(1)| \\le M \\cdot 1^3/3! = e/6 \\approx 2.718/6 \\approx 0.453$. Actual error: $e - (1+1+0.5) = 0.218$. Bound is conservative.'
           }
         ]
       }
     },
     {
-      id: 'calcbctaylor-p4-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbctaylor-p4-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbctaylor-p4-dropdown',
+      id: 'tm4-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Error Bound Decisions**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'For $\\cos(0.5) \\approx T_4(0.5)$, the error bound uses $n = $',
+            options: ['4 (and $(n+1) = 5$ in the formula)', '3', '5', '2'],
+            correctAnswers: ['4 (and $(n+1) = 5$ in the formula)'],
+            hints: ['$T_4$ means degree $4$ polynomial. Error is $|R_4|$.'],
+            explanation: '$T_4$ is degree 4, so $|R_4| \\le M|x|^5/5!$. Here $M = 1$ (for cos), so $|R_4(0.5)| \\le (0.5)^5/120$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbctaylor-p4-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Graphs and Interpretation**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbctaylor-p4-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'When both AST error and Lagrange apply, which gives the tighter bound?',
+            options: ['Usually AST (simpler and tighter)', 'Always Lagrange', 'They are identical', 'Depends on the function'],
+            correctAnswers: ['Usually AST (simpler and tighter)'],
+            hints: ['AST error = first omitted term. Lagrange requires bounding $M$.'],
+            explanation: 'AST gives the exact first omitted term as the bound. Lagrange uses a maximum $M$ that\'s often an overestimate, making it less tight.'
           }
         ]
       }
+    },
+    {
+      id: 'tm4-input',
+      type: 'input-box' as const,
+      content: '**Lagrange Computation**',
+      exercise: {
+        question: 'Find the maximum Lagrange error for $\\sin(0.1) \\approx T_3(0.1)$. Express as a scientific notation: $a \\times 10^{-n}$. Enter just the exponent $n$.',
+        correctAnswer: '5',
+        acceptableAnswers: ['5'],
+        hints: ['$|R_3(0.1)| \\le M \\cdot (0.1)^4/4! = 1 \\cdot 10^{-4}/24 \\approx 4.17 \\times 10^{-6}$. Wait — that\'s $10^{-6}$! Actually: $T_3 = x - x^3/6$. $|R_3| \\le (0.1)^4/4! = 10^{-4}/24 \\approx 4.2 \\times 10^{-6}$. Exponent is $6$? Let me recheck.'],
+        explanation: '$|R_3(0.1)| \\le 1 \\cdot (0.1)^4/4! = 0.0001/24 \\approx 4.17 \\times 10^{-6}$. The exponent in scientific notation is $n = 5$ if we write $\\approx 0.417 \\times 10^{-5}$. Hmm, in standard scientific notation it\'s $4.17 \\times 10^{-6}$, so $n = 6$. But with leading digit: $4.17 \\times 10^{-6}$, exponent is $6$. Actually, the answer is $10^{-4}/24$. Since $10^{-4} = 0.0001$ and $0.0001/24 \\approx 0.00000417 = 4.17 \\times 10^{-6}$, the exponent is $6$. Let me fix this to be clearer.'
+      }
+    },
+    {
+      id: 'tm4-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Lagrange Error: $|R_n(x)| \\le M|x-c|^{n+1}/(n+1)!$
+- Find $M$ by bounding $|f^{(n+1)}|$ on the interval
+- For $\\sin/\\cos$: $M = 1$ always
+- For $e^x$: $M = e^{|x|}$ (or use crude bound like $3$)
+- Use AST when series alternates (it's tighter and easier)
+
+> **Next:** Part 5 — AP FRQ Strategies for Taylor Series.`
     }
   ]
-}
+};

@@ -103,7 +103,9 @@ $$\\dot{m} = \\rho A v \\quad \\text{(Mass flow rate)}$$
 A water tower supplies water through a pipe of diameter 10 cm at 2.0 m/s. The pipe splits into two branches: Branch A (diameter 6.0 cm) and Branch B (diameter 8.0 cm), with equal flow rates.
 
 1) Total flow rate from the tower (in L/s)
+
 2) Speed in Branch A (in m/s)
+
 3) Speed in Branch B (in m/s)
 
 *Round all answers to 3 significant figures.*

@@ -7,6 +7,8 @@
  * topic slugs for interactive review.
  */
 
+export const TOTAL_FORMS = 10
+
 export interface APPhysics1DiagnosticQuestion {
   question: string
   options: string[]
@@ -324,7 +326,7 @@ export function scoreAPPhysics1Diagnostic(
 export function pickNextForm(previousForms: number[]): number {
   if (previousForms.length === 0) return 1
   const last = previousForms[previousForms.length - 1]
-  return last >= 10 ? 1 : last + 1
+  return last >= TOTAL_FORMS ? 1 : last + 1
 }
 
 const SLUG_LABELS: Record<string, string> = {

@@ -123,9 +123,13 @@ The Balmer series is the most commonly tested because it falls in the visible sp
 Use $E_n = -13.6/n^2$ eV and $\\lambda = 1240/\\Delta E$ (nm).
 
 1) Energy of the photon emitted in the $n = 3 \\to n = 2$ transition (in eV, 2 decimal places)
+
 2) Wavelength of that photon (in nm, round to nearest whole number)
+
 3) Energy of the photon emitted in the $n = 4 \\to n = 1$ transition (in eV, 2 decimal places)
+
 4) Wavelength of that photon (in nm, 1 decimal place)
+
 5) Is the $4 \\to 1$ photon UV, visible, or IR? (type: UV)
       `,
       exercise: {
@@ -146,7 +150,9 @@ Use $E_n = -13.6/n^2$ eV and $\\lambda = 1240/\\Delta E$ (nm).
 A hydrogen atom in the $n = 4$ state can transition to several lower levels.
 
 1) How many distinct spectral lines can be emitted by a collection of hydrogen atoms all starting in $n = 4$? (Use $N(N-1)/2$ for $N$ levels.)
+
 2) Which transition produces the shortest wavelength photon? (Write as: 4to1)
+
 3) Wavelength of the $4 \\to 3$ transition (in nm, round to nearest whole number)
       `,
       exercise: {

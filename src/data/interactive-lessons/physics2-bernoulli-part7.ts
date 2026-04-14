@@ -99,7 +99,9 @@ This final part ties together everything from all four fluid mechanics topics: d
 A fire hose (diameter 6.0 cm) is connected to a hydrant at ground level with pressure 400,000 Pa. The hose goes up 10 m to a nozzle (diameter 2.0 cm) that is open to the atmosphere ($P_{\\text{atm}} = 100{,}000$ Pa).
 
 1) If the speed in the hose at ground level is $v_1$, find $v_2$ in terms of $v_1$ (ratio $v_2/v_1$)
+
 2) Using Bernoulli (with continuity), find $v_1$ (in m/s) [Hint: $v_2 = 9v_1$]
+
 3) Speed of water exiting the nozzle (in m/s)
 
 *Round all answers to 3 significant figures.*

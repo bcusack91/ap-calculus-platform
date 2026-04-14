@@ -86,7 +86,9 @@ export const psychAttitudesPart4Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: gaining compliance with a small request before a larger one
+
       2) Write the concept that matches: evaluation of messages relative to existing attitude anchors
+
       3) Write the concept that matches: building resistance to persuasion by exposing weak counterarguments
 
       Use the exact vocabulary term from this part.

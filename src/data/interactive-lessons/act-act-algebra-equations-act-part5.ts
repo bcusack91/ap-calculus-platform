@@ -97,7 +97,9 @@ Both valid! But always check — sometimes one case is extraneous.
 For each, give the LARGER solution.
 
 1) $|x - 4| = 9$
+
 2) $|3x + 6| = 12$
+
 3) $|x| + 3 = 10$
       `,
       exercise: {

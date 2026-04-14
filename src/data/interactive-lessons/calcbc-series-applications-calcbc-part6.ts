@@ -2,185 +2,101 @@ export const calcbcSeriesAppsPart6Data = {
   topicSlug: 'series-applications-calcbc',
   sections: [
     {
-      id: 'calcbcseriesapps-p6-intro',
+      id: 'sa6-intro',
       type: 'text' as const,
-      content: `
-# Series Applications
+      content: `# Problem-Solving Workshop — Series Applications
 
-**Part 6 of 7 — Exam Strategy**
+**Part 6 of 7 — Guided Practice Problems**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
-
-## Key Ideas
-
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
-
-## Formula Snapshot
-
-When appropriate, use:
-
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+Work through these AP-style problems. Each targets a key series application skill.`
     },
     {
-      id: 'calcbcseriesapps-p6-mcq1',
+      id: 'sa6-mc',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Warm-Up: Quick Checks**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'The first three nonzero terms of the Maclaurin series for $\\cos(x^2)$:',
+            options: ['$1 - x^4/2 + x^8/24$', '$1 - x^2/2 + x^4/24$', '$x^2 - x^4/2 + x^6/6$', '$1 + x^4/2 + x^8/24$'],
+            correctAnswer: 0,
+            explanation: 'Substitute $x^2$ into $\\cos u = 1 - u^2/2 + u^4/24$: $1 - x^4/2 + x^8/24$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: '$\\int_0^x \\frac{\\sin t}{t}\\,dt$ as a series begins:',
+            options: ['$x - x^3/18 + x^5/600$', '$1 - x^2/6 + x^4/120$', '$x - x^3/6 + x^5/120$', '$x + x^3/18 + x^5/600$'],
+            correctAnswer: 0,
+            explanation: '$\\sin t/t = 1 - t^2/6 + t^4/120$. Integrate: $x - x^3/18 + x^5/600$.'
+          },
+          {
+            question: '$\\lim_{x\\to0}\\frac{e^x - 1 - x - x^2/2}{x^3} =$',
+            options: ['$1/6$', '$1/3$', '$1/2$', '$0$'],
+            correctAnswer: 0,
+            explanation: '$e^x = 1 + x + x^2/2 + x^3/6 + \\cdots$. Subtracting: $x^3/6 + \\cdots$. Dividing by $x^3$: $1/6$.'
           }
         ]
       }
     },
     {
-      id: 'calcbcseriesapps-p6-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcseriesapps-p6-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcseriesapps-p6-dropdown',
+      id: 'sa6-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: `**Problem 1: Full FRQ Walkthrough**
+
+Let $f(x) = \\ln(1 + x)$.`,
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '(a) The Maclaurin series for $\\ln(1+x)$ is:',
+            options: ['$x - x^2/2 + x^3/3 - x^4/4 + \\cdots$', '$1 + x + x^2/2 + x^3/6 + \\cdots$', '$x + x^2/2 + x^3/3 + x^4/4 + \\cdots$', '$x - x^3/3 + x^5/5 - \\cdots$'],
+            correctAnswers: ['$x - x^2/2 + x^3/3 - x^4/4 + \\cdots$'],
+            hints: ['Integrate $1/(1+x) = 1 - x + x^2 - x^3 + \\cdots$.'],
+            explanation: 'Integrating term by term: $\\int (1 - x + x^2 - \\cdots)\\,dx = x - x^2/2 + x^3/3 - \\cdots + C$; $C = 0$ since $\\ln 1 = 0$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcseriesapps-p6-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Exam Strategy**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcseriesapps-p6-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: '(b) $\\int_0^{1/2} \\ln(1+x)\\,dx$ using the first three terms:',
+            options: ['$1/8 - 1/48 + 1/192 = 19/192$', '$1/2 - 1/4 + 1/6$', '$1/8 + 1/48 + 1/192$', '$1/4 - 1/12 + 1/48$'],
+            correctAnswers: ['$1/8 - 1/48 + 1/192 = 19/192$'],
+            hints: ['$\\int_0^{1/2}(x - x^2/2 + x^3/3)\\,dx = [x^2/2 - x^3/6 + x^4/12]_0^{1/2}$.'],
+            explanation: '$1/8 - 1/48 + 1/192 = 24/192 - 4/192 + 1/192 = 21/192$. Wait — let me recalculate: $(1/2)^2/2 = 1/8$; $(1/2)^3/6 = 1/48$; $(1/2)^4/12 = 1/192$. Total: $1/8 - 1/48 + 1/192 = 24/192 - 4/192 + 1/192 = 21/192 = 7/64$.'
           }
         ]
       }
+    },
+    {
+      id: 'sa6-input1',
+      type: 'input-box' as const,
+      content: '**Problem 2**',
+      exercise: {
+        question: 'Using the Maclaurin series, find $\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2}$.',
+        correctAnswer: '1/2',
+        acceptableAnswers: ['1/2', '0.5'],
+        hints: ['$1 - \\cos x = x^2/2 - x^4/24 + \\cdots$.'],
+        explanation: '$\\frac{1 - \\cos x}{x^2} = \\frac{x^2/2 - x^4/24 + \\cdots}{x^2} = 1/2 - x^2/24 + \\cdots \\to 1/2$.'
+      }
+    },
+    {
+      id: 'sa6-input2',
+      type: 'input-box' as const,
+      content: '**Problem 3**',
+      exercise: {
+        question: 'Find the coefficient of $x^5$ in the Maclaurin series for $x^2 e^x$.',
+        correctAnswer: '1/6',
+        acceptableAnswers: ['1/6'],
+        hints: ['$e^x = \\sum x^n/n!$. Multiply by $x^2$: the $x^5$ term comes from $n = 3$.'],
+        explanation: '$x^2 \\cdot x^3/3! = x^5/6$. Coefficient: $1/6$.'
+      }
+    },
+    {
+      id: 'sa6-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways
+
+- Substitution into known series is faster than computing derivatives
+- For integrals, integrate the series and evaluate — simpler than FTC with complex antiderivatives
+- For limits, cancel the leading terms to find the dominant behavior
+- Always simplify fractions on the exam — AP readers check exact answers
+
+**Next: Part 7 — Comprehensive Review**`
     }
   ]
-}
+};

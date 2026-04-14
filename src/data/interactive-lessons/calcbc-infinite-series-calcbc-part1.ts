@@ -2,54 +2,125 @@ export const calcbcSeriesPart1Data = {
   topicSlug: 'infinite-series-calcbc',
   sections: [
     {
-      id: 'ser1-intro',
+      id: 'is1-intro',
       type: 'text' as const,
-      content: `# Infinite Series
+      content: `# Infinite Series — Convergence Tests
 
-**Part 1 of 7 — Partial Sums & Geometric Series**
+**Part 1 of 7 — The Integral Test**
 
-### Partial Sums
+### Review: Series Convergence
 
-$$S_n = \sum_{k=1}^n a_k = a_1 + a_2 + \cdots + a_n$$
+$\\sum_{n=1}^\\infty a_n$ converges if and only if $\\lim_{N \\to \\infty} S_N$ exists (finite).
 
-$\sum_{n=1}^{\infty} a_n = L$ means $\lim_{n \\to \infty} S_n = L$.
+We already know:
+- Geometric series: $|r| < 1$
+- $p$-series: $p > 1$
+- $n$th term test: $a_n \\not\\to 0 \\implies$ divergence
 
-### Geometric Series
+Now we develop systematic convergence tests.
 
-$$\sum_{n=0}^{\infty} ar^n = \\frac{a}{1-r} \quad \\text{if } |r| < 1$$
+### The Integral Test
 
-Diverges if $|r| \geq 1$.
+If $f(x)$ is continuous, positive, and decreasing for $x \\ge 1$, and $a_n = f(n)$, then:
 
-### Example
+$$\\boxed{\\sum_{n=1}^\\infty a_n \\text{ and } \\int_1^\\infty f(x)\\,dx \\text{ either both converge or both diverge.}}$$
 
-$\sum_{n=0}^{\infty} \\frac{3}{4^n} = \\frac{3}{1 - 1/4} = 4$`
+> **Key Fact:** The integral test does NOT give the sum — only whether the series converges.`
     },
     {
-      id: 'ser1-quiz1',
+      id: 'is1-examples',
+      type: 'text' as const,
+      content: `### Example 1 — Proving $p$-series
+
+Show $\\sum 1/n^2$ converges using the integral test.
+
+$f(x) = 1/x^2$: continuous, positive, decreasing for $x \\ge 1$. ✓
+
+$$\\int_1^\\infty \\frac{1}{x^2}\\,dx = \\lim_{b \\to \\infty}\\left[-\\frac{1}{x}\\right]_1^b = 0 - (-1) = 1$$
+
+Integral converges $\\implies$ series converges. ✓
+
+### Example 2 — Harmonic series diverges
+
+$f(x) = 1/x$: continuous, positive, decreasing.
+
+$$\\int_1^\\infty \\frac{1}{x}\\,dx = \\lim_{b \\to \\infty} \\ln b = \\infty$$
+
+Integral diverges $\\implies$ $\\sum 1/n$ diverges. ✓
+
+### Remainder Estimate
+
+If $\\sum a_n$ converges and $S$ denotes its sum, then:
+
+$$\\int_{N+1}^\\infty f(x)\\,dx \\le S - S_N \\le \\int_N^\\infty f(x)\\,dx$$`
+    },
+    {
+      id: 'is1-mc1',
       type: 'multiple-choice' as const,
-      content: '**Geometric Series** 🎯',
+      content: '**Practice Problems**',
       exercise: {
         questions: [
           {
-            question: '$\\sum_{n=1}^{\\infty} \\left(\\frac{2}{3}\\right)^n = $',
-            options: ['$2$', '$3$', '$2/3$', '$3/2$'],
+            question: 'The integral test requires $f(x)$ to be:',
+            options: ['Continuous, positive, and decreasing', 'Just continuous', 'Just positive', 'Differentiable'],
             correctAnswer: 0,
-            explanation: '$\\sum_{n=1}^{\\infty} (2/3)^n = \\frac{2/3}{1 - 2/3} = \\frac{2/3}{1/3} = 2$.'
+            explanation: 'All three conditions are needed: continuous (so the integral makes sense), positive (terms are comparable), and decreasing (monotonicity ensures the comparison works).'
           },
           {
-            question: '$\\sum_{n=0}^{\\infty} (-1)^n \\cdot \\frac{1}{2^n} = $',
-            options: ['$2/3$', '$1/2$', '$1$', 'Diverges'],
+            question: '$\\sum_{n=1}^\\infty \\frac{1}{n^2 + 1}$ converges because:',
+            options: ['$\\int_1^\\infty \\frac{dx}{x^2+1} = \\pi/2 - \\pi/4 = \\pi/4$ (finite)', '$1/(n^2+1) < 1/n$', 'The terms alternate', 'It is geometric'],
             correctAnswer: 0,
-            explanation: 'Geometric with $r = -1/2$: $\\frac{1}{1-(-1/2)} = \\frac{1}{3/2} = 2/3$.'
+            explanation: '$f(x) = 1/(x^2+1)$ is continuous, positive, decreasing. $\\int_1^\\infty \\frac{dx}{x^2+1} = [\\arctan x]_1^\\infty = \\pi/2 - \\pi/4 = \\pi/4$. Converges.'
           }
         ]
       }
     },
     {
-      id: 'ser1-summary',
+      id: 'is1-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Concept Checks**',
+      exercise: {
+        dropdowns: [
+          {
+            label: 'The integral test tells you the value of the series sum.',
+            options: ['False — it only tells convergence or divergence', 'True', 'True for $p$-series only', 'Sometimes'],
+            correctAnswers: ['False — it only tells convergence or divergence'],
+            hints: ['$\\int_1^\\infty 1/x^2\\,dx = 1$, but $\\sum 1/n^2 = \\pi^2/6 \\ne 1$.'],
+            explanation: 'The integral value is related to but not equal to the series sum. $\\sum 1/n^2 = \\pi^2/6 \\approx 1.645$, not $1$.'
+          },
+          {
+            label: '$\\sum_{n=2}^\\infty \\frac{1}{n\\ln n}$:',
+            options: ['Diverges ($\\int_2^\\infty \\frac{dx}{x\\ln x} = \\infty$)', 'Converges', 'Inconclusive', 'Is a $p$-series'],
+            correctAnswers: ['Diverges ($\\int_2^\\infty \\frac{dx}{x\\ln x} = \\infty$)'],
+            hints: ['$\\int \\frac{dx}{x\\ln x} = \\ln(\\ln x) + C$.'],
+            explanation: '$\\int_2^\\infty \\frac{dx}{x\\ln x} = [\\ln(\\ln x)]_2^\\infty = \\infty$. Diverges by integral test.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'is1-input',
+      type: 'input-box' as const,
+      content: '**Computation**',
+      exercise: {
+        question: 'Use the integral test to evaluate $\\int_1^\\infty e^{-x}\\,dx$. If it converges, $\\sum_{n=1}^\\infty e^{-n}$ also converges. What is $\\int_1^\\infty e^{-x}\\,dx$? (Give a decimal to 2 places.)',
+        correctAnswer: '0.37',
+        acceptableAnswers: ['0.37', '0.368', '1/e', 'e^{-1}'],
+        hints: ['$\\int_1^\\infty e^{-x}\\,dx = [-e^{-x}]_1^\\infty = 0 - (-e^{-1}) = e^{-1}$.'],
+        explanation: '$e^{-1} \\approx 0.3679 \\approx 0.37$. Since this is finite, $\\sum e^{-n}$ converges (it is also geometric with $r = e^{-1}$).'
+      }
+    },
+    {
+      id: 'is1-summary',
       type: 'text' as const,
-      content: `### Key Takeaways — Part 1
-Geometric: $\\frac{a}{1-r}$ when $|r| < 1$. First ratio, then answer!`
+      content: `### Summary
+
+- Integral test: compare $\\sum a_n$ with $\\int f(x)\\,dx$ (same convergence behavior)
+- Requires: continuous, positive, decreasing $f$
+- Does NOT give the sum, only convergence/divergence
+- Useful for proving $p$-series results and testing unfamiliar series
+
+> **Next:** Part 2 — Comparison and Limit Comparison tests.`
     }
   ]
 };

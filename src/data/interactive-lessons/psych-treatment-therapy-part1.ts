@@ -86,7 +86,9 @@ export const psychTreatmentPart1Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: structured psychological treatment delivered by a trained professional
+
       2) Write the concept that matches: identifying and modifying maladaptive thought patterns
+
       3) Write the concept that matches: gradual and systematic confrontation of feared stimuli
 
       Use the exact vocabulary term from this part.

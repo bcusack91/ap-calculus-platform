@@ -86,7 +86,9 @@ export const psychMemoryEncodePart5Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: memory for skills and actions
+
       2) Write the concept that matches: improved retention when practice is distributed over time
+
       3) Write the concept that matches: brief retention of sensory information
 
       Use the exact vocabulary term from this part.

@@ -109,7 +109,9 @@ $$= x^3 + 5x^2 + 5x - 3$$
 Give the coefficient requested for each product.
 
 1) $(3x + 2)(x - 4)$ — What is the coefficient of $x$? 
+
 2) $(x + 5)^2$ — What is the constant term?
+
 3) $(2x - 1)(2x + 1)$ — What is the constant term?
       `,
       exercise: {

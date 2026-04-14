@@ -88,7 +88,9 @@ export const oChemLipidsPart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: C=C bonds in fatty chains affecting packing
+
       2) Term for: base + sugar + phosphate monomer
+
       3) Product pattern expected under phosphodiester cleavage (nuclease conditions)
       `,
       exercise: {

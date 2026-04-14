@@ -2,185 +2,160 @@ export const calcabFRQPart4Data = {
   topicSlug: 'free-response-strategies-calcab',
   sections: [
     {
-      id: 'calcabfrq-p4-intro',
+      id: 'frq4-intro',
       type: 'text' as const,
-      content: `
-# Free Response Strategies
+      content: `# Free-Response Strategies \u2014 Graph-Based FRQs
 
-**Part 4 of 7 — Graphs and Interpretation**
+**Part 4 of 7**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+---
 
-## Key Ideas
+### Graph-Based FRQ Overview
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+These FRQs give you the graph of $f$, $f'$, or $f''$ and ask you to extract information.
 
-## Formula Snapshot
+### What You Can Read from Each Graph
 
-When appropriate, use:
+| Given Graph of | You Can Determine |
+|:---|:---|
+| $f$ | Values $f(a)$, zeros, positive/negative regions |
+| $f'$ | Where $f$ is increasing/decreasing, local extrema |
+| $f''$ | Concavity and inflection points of $f$ |
+| $f'$ | $\\int_a^b f'(x)\\,dx = f(b)-f(a)$ (area under $f'$) |
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+### Reading $f'$ Graph \u2194 Properties of $f$
 
-and interpret what the final value means in context.
-      `
+| Feature of $f'$ Graph | Meaning for $f$ |
+|:---|:---|
+| $f'(x) > 0$ | $f$ is increasing |
+| $f'(x) < 0$ | $f$ is decreasing |
+| $f'$ crosses $x$-axis from $+$ to $-$ | $f$ has local maximum |
+| $f'$ crosses $x$-axis from $-$ to $+$ | $f$ has local minimum |
+| $f'$ is increasing | $f$ is concave up |
+| $f'$ is decreasing | $f$ is concave down |
+| $f'$ has a local extremum | $f$ has inflection point |
+
+> **Key Fact:** When given graph of $f'$, compute $\\int f'\\,dx$ to find net change of $f$. Use geometric area formulas (triangles, semicircles).
+
+---
+
+### Worked Example \u2014 Graph of $f'$
+
+Suppose $f'$ is piecewise linear on $[0, 8]$:
+- $f'(0) = 2$, $f'(2) = 0$, $f'(5) = -3$, $f'(8) = 0$
+
+**(a)** On what intervals is $f$ increasing?
+
+$f' > 0$ on $(0, 2)$ \u2192 $f$ increasing on $[0, 2]$.
+
+**(b)** Local max of $f$ at $x = ?$
+
+$f'$ changes from $+$ to $-$ at $x = 2$ \u2192 local max.
+
+**(c)** $f(0) = 5$. Find $f(2)$.
+
+$f(2) = f(0) + \\int_0^2 f'(x)\\,dx = 5 +$ area of triangle $= 5 + \\frac{1}{2}(2)(2) = 7$.
+
+**(d)** Inflection point of $f$?
+
+$f'$ has a local min at $x = 5$ \u2192 $f''$ changes sign \u2192 inflection point at $x = 5$.`
     },
     {
-      id: 'calcabfrq-p4-mcq1',
+      id: 'frq4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Graph-Based FRQ Quiz** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'If the graph of $f\'$ is above the $x$-axis on $(1, 4)$, then $f$ is:',
+            options: ['Increasing on $(1, 4)$', 'Concave up on $(1, 4)$', 'Positive on $(1, 4)$', 'Has a max at some point in $(1, 4)$'],
+            correctAnswer: 0,
+            explanation: '$f\'>0$ means $f$ is increasing. We cannot determine $f$\u2019s sign or concavity from $f\'>0$ alone.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'The graph of $f\'$ has a local maximum at $x = 3$. For $f$, $x = 3$ is:',
+            options: ['An inflection point', 'A local maximum', 'A local minimum', 'A zero'],
+            correctAnswer: 0,
+            explanation: '$f\'$ has a local max at $x=3$ means $f\'\' = 0$ and $f\'\'$ changes sign \u2192 inflection point of $f$.'
+          },
+          {
+            question: 'Given graph of $f\'$, to find $f(5) - f(1)$ you compute:',
+            options: ['The area under $f\'$ from $1$ to $5$', '$f\'(5) - f\'(1)$', 'The slope of $f\'$ at $x = 3$', '$f\'(3) \\cdot 4$'],
+            correctAnswer: 0,
+            explanation: 'FTC: $\\int_1^5 f\'(x)\\,dx = f(5)-f(1)$. Use geometric areas from the graph.'
           }
         ]
       }
     },
     {
-      id: 'calcabfrq-p4-example',
+      id: 'frq4-areas',
       type: 'text' as const,
-      content: `
-## Worked Example
+      content: `### Geometric Area Formulas for Graphs
 
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
+| Shape | Formula |
+|:---|:---|
+| Rectangle | $\\text{base} \\times \\text{height}$ |
+| Triangle | $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$ |
+| Semicircle | $\\frac{1}{2}\\pi r^2$ |
+| Trapezoid | $\\frac{1}{2}(b_1 + b_2) \\times h$ |
 
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
+> **AP Tip:** Areas below the $x$-axis count as NEGATIVE when computing $\\int f'\\,dx$.`
     },
     {
-      id: 'calcabfrq-p4-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcabfrq-p4-dropdown',
+      id: 'frq4-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Analyze the graph of $f\'$.** \ud83d\udd0d',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '$f\'(x) = 0$ at $x = 2$ and $f\'$ changes sign. At $x = 2$, $f$ has:',
+            options: ['A local extremum', 'An inflection point', 'A zero', 'A vertical tangent'],
+            correctAnswers: ['A local extremum'],
+            hints: ['$f\' = 0$ and sign change \u2192 first derivative test.'],
+            explanation: '$f\' = 0$ with sign change means local max (if $+$ to $-$) or local min (if $-$ to $+$).'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
+            label: 'Graph of $f\'$ is a triangle with base $[0,4]$ and height $6$. Then $\\int_0^4 f\'(x)\\,dx =$',
+            options: ['$12$', '$24$', '$6$', '$4$'],
+            correctAnswers: ['$12$'],
+            hints: ['Area of triangle = $\\frac{1}{2}(4)(6)$.'],
+            explanation: '$\\frac{1}{2}(4)(6) = 12$. So $f(4)-f(0) = 12$.'
           },
           {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcabfrq-p4-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Graphs and Interpretation**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcabfrq-p4-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'Graph of $f\'$ is a semicircle of radius 3 below the $x$-axis:',
+            options: ['$\\int = -\\frac{9\\pi}{2}$', '$\\int = \\frac{9\\pi}{2}$', '$\\int = -9\\pi$', '$\\int = 9\\pi$'],
+            correctAnswers: ['$\\int = -\\frac{9\\pi}{2}$'],
+            hints: ['Below $x$-axis means negative. Semicircle area = $\\frac{1}{2}\\pi r^2$.'],
+            explanation: 'Area $= \\frac{1}{2}\\pi(9) = \\frac{9\\pi}{2}$. Below axis \u2192 negative: $-\\frac{9\\pi}{2}$.'
           }
         ]
       }
+    },
+    {
+      id: 'frq4-input',
+      type: 'input-box' as const,
+      content: '**Compute from the graph.** \u270d\ufe0f',
+      exercise: {
+        question: 'The graph of $f\'$ is a line from $(0, 4)$ to $(6, -2)$. If $f(0) = 3$, find $f(6)$.',
+        correctAnswer: '9',
+        acceptableAnswers: ['9'],
+        hints: [
+          '$\\int_0^6 f\'(x)\\,dx = $ area of trapezoid (partly above, partly below $x$-axis).',
+          '$f\' = 0$ at $x=4$ (line from 4 to $-2$ crosses zero at $x=4$). Triangle above: $\\frac{1}{2}(4)(4) = 8$. Triangle below: $\\frac{1}{2}(2)(2) = 2$.',
+          'Net area $= 8 - 2 = 6$. $f(6) = 3 + 6 = 9$.'
+        ],
+        explanation: '$\\int_0^6 f\' = 8 - 2 = 6$. $f(6) = f(0) + 6 = 9$.'
+      }
+    },
+    {
+      id: 'frq4-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 4
+
+- Graph of $f'$: above $x$-axis \u2192 $f$ increasing; below \u2192 $f$ decreasing
+- $f'$ sign change at zero \u2192 local extremum of $f$
+- $f'$ local extremum \u2192 inflection point of $f$
+- Use geometric area formulas; below-axis area is negative`
     }
   ]
-}
+};

@@ -95,7 +95,9 @@ export const bioPopulationPart1Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **population increase at a constant per-capita rate**
+
       2) Term for this definition: **growth slowing as population approaches carrying capacity**
+
       3) Term for this definition: **maximum sustainable population size in an environment**
       `,
       exercise: {

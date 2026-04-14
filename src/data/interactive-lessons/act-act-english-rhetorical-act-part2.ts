@@ -123,7 +123,9 @@ Which is the best topic sentence?
 Fill in the correct term for each description.
 
 1) A sentence that states the main idea of a paragraph is called a __________ sentence (two words).
+
 2) Arranging events by when they happened is called __________ order (one word).
+
 3) "These results," "this approach," and "such methods" are examples of __________ references (one word, starts with "d").
       `,
       exercise: {

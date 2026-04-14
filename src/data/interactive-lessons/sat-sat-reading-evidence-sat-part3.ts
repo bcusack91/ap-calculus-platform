@@ -59,7 +59,102 @@ Inference questions ask you to determine what the passage **implies** or **sugge
             explanation: 'SAT inferences must be textually grounded. Outside knowledge, level of detail, and personal opinions are all unreliable criteria. Always ask: "What specific words in the passage support this?"'
           }
         ]
+      }    },
+    {
+      id: 're3-text2',
+      type: 'text' as const,
+      content: `## Deep Dive: Inference vs. Speculation
+
+### Worked Example 1: Testing Whether an Inference Is Valid
+
+**Passage:** "After decades of decline, the bald eagle population in the continental United States rebounded from 417 nesting pairs in 1963 to over 71,400 in 2020, largely attributed to the ban on DDT pesticides and federal habitat protections."
+
+| Proposed Inference | Valid? | Text Evidence |
+|---|---|---|
+| Environmental policy can successfully reverse species decline | ✅ Yes | DDT ban + habitat protections → population rebound |
+| DDT was the sole cause of eagle decline | ❌ No | "Largely attributed" ≠ "sole cause" |
+| All bird species have recovered similarly | ❌ No | Only discusses eagles |
+| Conservation efforts require government intervention | ✅ Borderline | Federal protections helped, but passage doesn't say they're required |
+
+### Worked Example 2: Tone-Based Inference
+
+**Passage:** "The committee's proposal, though well-intentioned, overlooks the economic realities that small business owners face daily."
+
+| Inference | Valid? | Clue |
+|---|---|---|
+| The author has concerns about the proposal | ✅ Yes | "Overlooks" = criticism |
+| The author thinks the committee is dishonest | ❌ No | "Well-intentioned" acknowledges good faith |
+| The author prioritizes economic concerns | ✅ Yes | "Economic realities" is the objection |
+| The author opposes all committee proposals | ❌ No | Only about THIS proposal |
+
+### Inference Strength Scale
+
+| Language | Strength | SAT Likelihood |
+|---|---|---|
+| "The passage proves…" | Too strong | ❌ Almost always wrong |
+| "The passage establishes…" | Strong | Sometimes correct |
+| "The passage suggests…" | Moderate | ✅ Usually correct |
+| "It can be inferred…" | Moderate | ✅ Standard inference Q |
+| "The passage hints…" | Weak | Acceptable if supported |`
+    },
+    {
+      id: 're3-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Advanced Inference Challenge** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: 'A passage states: "The new medication reduced symptoms in 73% of participants, though 15% reported mild side effects including headache and fatigue." We can infer:',
+            options: ['The medication is broadly effective but not without drawbacks', 'The medication should be approved immediately', 'The side effects are dangerous', 'All patients should take this medication'],
+            correctAnswer: 0,
+            explanation: '73% effectiveness = broadly effective. 15% with side effects = not without drawbacks. The passage doesn\'t say anything about approval, danger level, or universal recommendation.'
+          },
+          {
+            question: 'An author writes about a CEO: "She transformed a struggling startup into a Fortune 500 company, though former employees describe a workplace culture of relentless pressure." The author\'s attitude is most likely:',
+            options: ['Acknowledging both achievement and its human cost', 'Entirely admiring of the CEO', 'Entirely critical of the CEO', 'Indifferent to the CEO\'s success'],
+            correctAnswer: 0,
+            explanation: '"Transformed" + "Fortune 500" = acknowledging achievement. "Relentless pressure" = noting the cost. The author presents both sides, suggesting a balanced/nuanced view.'
+          },
+          {
+            question: 'Which inference goes too far? Passage: "The study was conducted with 50 college students at a single university."',
+            options: ['"The results may not generalize to all populations"', '"The researchers had limited resources"', '"College students are poor research subjects"', '"The study is one step in a larger body of research"'],
+            correctAnswer: 2,
+            explanation: 'The passage says 50 students at one university — we can infer limited generalizability. But calling college students "poor research subjects" goes beyond what the passage states and adds a judgment not supported by the text.'
+          }
+        ]
       }
-    }
+    },
+    {
+      id: 're3-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Inference Check** — Select the correct answer.',
+      exercise: {
+        dropdowns: [
+          'A valid inference is supported by [specific text evidence|outside knowledge|common sense|personal opinion]',
+          '"The passage proves" is usually [too strong|perfectly fine|required|neutral]',
+          'If a passage says "largely attributed to," you can infer [it was a major factor, not the only one|it was the only cause|it was unimportant|the author is uncertain]',
+          'Speculation goes [beyond what the text supports|exactly as far as the text|not far enough|nowhere]'
+        ],
+        correctAnswers: ['specific text evidence', 'too strong', 'it was a major factor, not the only one', 'beyond what the text supports'],
+        hint1: 'Always point to specific words as support.',
+        hint2: '"Proves" is too absolute for most SAT passages.',
+        hint3: '"Largely" = not entirely.',
+        explanation: 'Inferences need text evidence. "Proves" is too strong. "Largely" means important but not sole. Speculation = going beyond the text.'
+      }
+    },
+    {
+      id: 're3-summary',
+      type: 'text' as const,
+      content: `## Part 3 Summary
+
+| Concept | Key Rule |
+|---|---|
+| Valid inference | Must be supported by SPECIFIC text |
+| Speculation | Goes beyond what text supports — always wrong |
+| "Proves" / "definitely" | Too strong for SAT — usually wrong |
+| "Suggests" / "implies" | ✅ Standard SAT inference language |
+| Tone-based inference | Word choice reveals author's attitude |
+
+*Next: Vocabulary in Context →*`    }
   ]
 };

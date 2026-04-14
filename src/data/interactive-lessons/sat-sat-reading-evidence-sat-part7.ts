@@ -61,7 +61,112 @@ When you see a Reading question:
             explanation: 'The data doesn\'t disprove that green spaces are beneficial—it shows they\'re declining. This complicates the narrative: the benefits are real but access is shrinking. "Complicates" is the nuanced answer the SAT favors.'
           }
         ]
+      }    },
+    {
+      id: 're7-text2',
+      type: 'text' as const,
+      content: `## Deep Dive: Reading Comprehension Master Review
+
+### Worked Example 1: Multi-Skill Question
+
+**Passage:** "The prevailing theory held that dinosaurs were cold-blooded reptiles, sluggish and dependent on external heat. However, recent bone structure analyses suggest many species maintained high metabolic rates consistent with warm-bloodedness."
+
+| Question Type | Question | Answer |
+|---|---|---|
+| Main idea | What does the passage suggest? | New evidence challenges the cold-blooded dinosaur theory |
+| Vocabulary | "Prevailing" most nearly means… | Widely accepted/dominant |
+| Inference | The author implies that… | The traditional view may be incorrect |
+| Purpose | "However" in sentence 2 serves to… | Introduce evidence that challenges the previous claim |
+| Evidence | Which supports the new theory? | "Bone analyses suggest high metabolic rates" |
+
+### Worked Example 2: Quick Classification
+
+| Question Stem | Type | Strategy |
+|---|---|---|
+| "The main idea of the passage is…" | Main Idea | One-sentence summary → match |
+| "Which quote best supports…" | Evidence | Direct support for the specific claim |
+| "It can be inferred that…" | Inference | Text evidence only — no speculation |
+| "As used in line 5, X means…" | Vocabulary | Cover → predict → substitute |
+| "The author includes the anecdote to…" | Purpose | Ask WHY, not WHAT |
+| "The graph suggests that…" | Data | Check scale, units, then integrate |
+
+### The SAT Reading Scoring Zones
+
+| Score Range | What You Need |
+|---|---|
+| 350-450 | Get main idea and basic vocab right |
+| 450-550 | + Evidence matching and basic inference |
+| 550-650 | + Purpose, tone analysis, data integration |
+| 650-750 | + Nuanced inferences, qualified answers |
+| 750-800 | + Recognize subtle traps, manage time perfectly |`
+    },
+    {
+      id: 're7-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Reading Comprehension Final Challenge** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: 'A passage presents two scientists\' opposing views on dark matter. The passage\'s primary purpose is most likely to:',
+            options: ['Present the current scientific debate about dark matter', 'Prove that dark matter exists', 'Argue that one scientist is wrong', 'Entertain readers with a scientific mystery'],
+            correctAnswer: 0,
+            explanation: 'When a passage presents opposing views without declaring a winner, its purpose is to present/frame the debate. If the author took a side, the answer would be "argue." And "prove" is too absolute.'
+          },
+          {
+            question: '"The committee\'s MEASURED response to the crisis reassured the public." "Measured" most nearly means:',
+            options: ['careful and deliberate', 'quantified in units', 'averaged out', 'estimated'],
+            correctAnswer: 0,
+            explanation: 'A "measured response" that "reassured" = calm, deliberate, carefully considered. The common meaning (quantified in units) is the trap.'
+          },
+          {
+            question: 'Which approach handles ALL reading question types most effectively?',
+            options: ['Read the question first → read the passage with purpose → predict → eliminate', 'Read the passage three times before looking at questions', 'Jump straight to answer choices', 'Read only the first and last sentences'],
+            correctAnswer: 0,
+            explanation: 'This four-step approach (question → passage → predict → eliminate) works for main idea, evidence, inference, vocabulary, purpose, and data questions alike.'
+          }
+        ]
       }
-    }
+    },
+    {
+      id: 're7-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Reading Evidence Final Check** — Select the correct answer.',
+      exercise: {
+        dropdowns: [
+          'For vocab questions, the common definition is usually [wrong|correct|helpful|irrelevant]',
+          '"It can be inferred" means you need [text evidence|outside knowledge|personal opinion|common sense]',
+          'When a passage presents both sides, the main idea should be [balanced|one-sided|vague|extreme]',
+          'Best overall strategy: [question first → passage → predict → eliminate|read passage 3 times|guess and check|longest answer wins]'
+        ],
+        correctAnswers: ['wrong', 'text evidence', 'balanced', 'question first → passage → predict → eliminate'],
+        hint1: 'SAT tests secondary meanings, not primary ones.',
+        hint2: 'Inferences must be grounded in the text.',
+        hint3: 'Match the scope of the passage.',
+        explanation: 'Common definitions = traps. Inferences need text evidence. Balanced passages need balanced main ideas. Question-first reading is the most efficient approach.'
+      }
+    },
+    {
+      id: 're7-summary',
+      type: 'text' as const,
+      content: `## Full Topic Summary: Reading Evidence
+
+| Part | Topic | Core Strategy |
+|---|---|---|
+| 1 | Main Idea | One-sentence summary → match |
+| 2 | Command of Evidence | DIRECT support for the SPECIFIC claim |
+| 3 | Inference | Must be text-supported, not speculation |
+| 4 | Vocabulary in Context | Cover → predict → substitute (not common def) |
+| 5 | Purpose & Rhetoric | Ask WHY the author included it |
+| 6 | Data Interpretation | Check scale/units → integrate with text |
+| 7 | Review | Question first → passage → predict → eliminate |
+
+### The 5 Golden Rules of SAT Reading
+1. **Question first** — know what you're looking for
+2. **Predict before checking choices** — avoid traps
+3. **Text evidence only** — no outside knowledge
+4. **"Proves" / "always" = usually wrong** — SAT hedges
+5. **Same topic ≠ same claim** — evidence must be DIRECT
+
+🎉 *Reading Evidence complete!*`    }
   ]
 };

@@ -86,7 +86,9 @@ export const psychPersonalityPart4Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: ambiguous stimulus task intended to reveal underlying motives
+
       2) Write the concept that matches: structured questionnaire for personality assessment
+
       3) Write the concept that matches: question of trait consistency versus situational influence
 
       Use the exact vocabulary term from this part.

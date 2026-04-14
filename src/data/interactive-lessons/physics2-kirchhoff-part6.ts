@@ -169,8 +169,11 @@ $$q(t) = CV_0\\,e^{-t/RC}$$
 A $20\\;\\text{V}$ battery charges a capacitor ($C = 100\\;\\mu\\text{F}$) through a resistor ($R = 50\\;\\text{k}\\Omega$).
 
 1) Time constant $\\tau$ (in seconds):
+
 2) Initial current $I_0$ at $t = 0$ (in mA):
+
 3) Voltage across the capacitor after one time constant, $V_C(\\tau)$ (in V, to one decimal place):
+
 4) After a long time, the capacitor is disconnected and discharged through a $25\\;\\text{k}\\Omega$ resistor. New time constant (in seconds):
       `,
       exercise: {

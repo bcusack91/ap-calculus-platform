@@ -66,7 +66,101 @@ Transition questions test whether you understand the logical relationship betwee
             explanation: '"Nevertheless" means "despite what was just said" — it introduces a contrasting result that goes against expectation. It belongs in the contrast/concession category alongside "however" and "yet."'
           }
         ]
+      }    },
+    {
+      id: 'rw3-text2',
+      type: 'text' as const,
+      content: `## Deep Dive: Transition Mastery
+
+### Worked Example 1: Predicting the Relationship
+
+| Sentence 1 | Sentence 2 | Relationship | Correct Transition |
+|---|---|---|---|
+| "Sales increased 20%." | "The company hired 50 new employees." | Cause → Effect | As a result |
+| "Sales increased 20%." | "Customer complaints also rose." | Addition (unexpected) | However / Nevertheless |
+| "Sales increased 20%." | "Revenue grew from \\$1M to \\$1.2M." | Example / Restatement | Specifically / In fact |
+| "Sales increased 20%." | "Costs increased 30%." | Contrast | However / Yet |
+
+### Worked Example 2: The "However" Trap
+
+**Students overuse "However" because it sounds academic.** Test yourself:
+
+| Sentence Pair | "However" correct? | Right Transition |
+|---|---|---|
+| "The plan is expensive. _____, it produces results." | ✅ Yes | However (contrast: cost vs. effectiveness) |
+| "The plan is expensive. _____, it requires significant funding." | ❌ No | Indeed / In fact (continuation, not contrast) |
+| "The plan is expensive. _____, the company invested in it." | ⚠️ Maybe | Nevertheless (despite the cost) |
+| "The plan is expensive. _____, the team cut the budget in half." | ✅ Yes | Therefore (cause → response) |
+
+### Transition Decision Flowchart
+
+| Is sentence 2… | Use |
+|---|---|
+| Adding more of the SAME idea? | Moreover, Furthermore, Additionally |
+| CONTRASTING or COMPLICATING sentence 1? | However, Nevertheless, On the other hand |
+| A RESULT of sentence 1? | Therefore, Consequently, As a result |
+| An EXAMPLE of sentence 1's claim? | For instance, For example, Specifically |
+| A CONCESSION before a counter? | Admittedly, Granted, While it is true that |`
+    },
+    {
+      id: 'rw3-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Advanced Transitions Challenge** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: '"The vaccine was 95% effective in trials. _____, the company applied for emergency authorization." Best transition:',
+            options: ['Accordingly — the effectiveness justified the application', 'However — this contrasts with effectiveness', 'For example — this illustrates effectiveness', 'Nevertheless — despite the effectiveness'],
+            correctAnswer: 0,
+            explanation: 'High effectiveness → applying for authorization. This is a cause/effect + logical consequence relationship. "Accordingly" means "as a logical result."'
+          },
+          {
+            question: '"The evidence overwhelmingly supports the theory. _____, not all scientists are convinced." Best transition:',
+            options: ['Nevertheless — contrast despite evidence', 'Therefore — scientists should be convinced', 'Moreover — adds more supporting info', 'For instance — gives an example'],
+            correctAnswer: 0,
+            explanation: 'Despite overwhelming evidence, some scientists disagree. "Nevertheless" captures this "despite what you\'d expect" contrast.'
+          },
+          {
+            question: '"The city built 5 new parks. _____, it expanded the public transit system." Best transition:',
+            options: ['In addition — both are city improvements', 'However — parks contrast with transit', 'Therefore — parks caused transit expansion', 'For example — transit is an example of parks'],
+            correctAnswer: 0,
+            explanation: 'Both sentences describe city improvements — this is a continuation/addition relationship. "In addition" adds another similar action.'
+          }
+        ]
       }
-    }
+    },
+    {
+      id: 'rw3-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Transition Check** — Select the correct transition.',
+      exercise: {
+        dropdowns: [
+          '"The data is strong. _____, more research is needed." [Nevertheless|Therefore|For example|Moreover]',
+          '"She trained for months. _____, she won the race." [As a result|However|For instance|Admittedly]',
+          '"Coral reefs are declining. _____, Arctic ice is melting." [Similarly|However|Therefore|For example]',
+          '"The policy was popular. _____, 80% of voters supported it." [In fact|However|Nevertheless|Therefore]'
+        ],
+        correctAnswers: ['Nevertheless', 'As a result', 'Similarly', 'In fact'],
+        hint1: 'Strong data BUT more research needed = contrast.',
+        hint2: 'Training → winning = cause → effect.',
+        hint3: 'Two parallel environmental problems = similar/addition.',
+        explanation: 'Strong data but more needed = Nevertheless. Training → winning = As a result. Two similar problems = Similarly. Specific number supporting a claim = In fact.'
+      }
+    },
+    {
+      id: 'rw3-summary',
+      type: 'text' as const,
+      content: `## Part 3 Summary
+
+| Relationship | Transitions |
+|---|---|
+| Addition | Moreover, Furthermore, In addition, Also |
+| Contrast | However, Nevertheless, On the other hand, Yet |
+| Cause/Effect | Therefore, Consequently, As a result, Accordingly |
+| Example | For instance, For example, Specifically |
+| Concession | Admittedly, Granted, While true |
+| #1 trap | "However" when the relationship is actually addition |
+
+*Next: Conciseness & Redundancy →*`    }
   ]
 };

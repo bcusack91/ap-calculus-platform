@@ -52,7 +52,9 @@ $x + 3 > 7 \\implies x > 4$. Graph with open circle at 4, arrow right.
 **Graph descriptions** 🧮
 
 1) $x > 5$: open or closed circle?
+
 2) $x \\leq -2$: arrow left or right?
+
 3) $x \\geq 0$: circle at what number?
       `,
       exercise: {

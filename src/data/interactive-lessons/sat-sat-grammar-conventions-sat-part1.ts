@@ -86,7 +86,9 @@ When the subject comes **after** the verb, agreement still applies:
 Type the correct form of the verb in parentheses.
 
 1) Neither the coach nor the players _____ (was/were) satisfied with the result.
+
 2) The collection of rare stamps _____ (is/are) worth thousands of dollars.
+
 3) Everyone in the two classes _____ (has/have) completed the assignment.
       `,
       exercise: {

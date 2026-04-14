@@ -2,185 +2,132 @@ export const calcbcConvergencePart2Data = {
   topicSlug: 'convergence-tests-summary-calcbc',
   sections: [
     {
-      id: 'calcbcconvergence-p2-intro',
+      id: 'ct2-intro',
       type: 'text' as const,
-      content: `
-# Convergence Tests Summary
+      content: `# Comparison Tests Deep Dive
 
-**Part 2 of 7 — Worked Examples**
+**Part 2 of 7 — Direct & Limit Comparison**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Direct Comparison Test (DCT)
 
-## Key Ideas
+For $0 \\le a_n \\le b_n$ for all $n$ (eventually):
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+$$\\sum b_n \\text{ converges} \\Rightarrow \\sum a_n \\text{ converges}$$
+$$\\sum a_n \\text{ diverges} \\Rightarrow \\sum b_n \\text{ diverges}$$
 
-## Formula Snapshot
+### Limit Comparison Test (LCT)
 
-When appropriate, use:
+For $a_n, b_n > 0$: if $\\lim_{n \\to \\infty} a_n/b_n = L$ where $0 < L < \\infty$, then $\\sum a_n$ and $\\sum b_n$ have the **same behavior**.
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+### When to Use Which
 
-and interpret what the final value means in context.
-      `
+| Situation | Use |
+|-----------|-----|
+| Easy to compare term-by-term | DCT |
+| Hard to prove $a_n \\le b_n$ directly | LCT |
+| Series "looks like" a $p$-series | LCT with $1/n^p$ |
+
+> **Key Fact:** LCT is usually easier on the AP exam because you don't need to prove an inequality — just compute a limit.`
     },
     {
-      id: 'calcbcconvergence-p2-mcq1',
+      id: 'ct2-examples',
+      type: 'text' as const,
+      content: `### LCT Example: $\\sum \\frac{n+1}{n^3 - 5}$
+
+Looks like $1/n^2$ for large $n$. Compare with $b_n = 1/n^2$:
+
+$$\\lim \\frac{(n+1)/(n^3-5)}{1/n^2} = \\lim \\frac{n^2(n+1)}{n^3 - 5} = \\lim \\frac{n^3 + n^2}{n^3 - 5} = 1$$
+
+Since $0 < 1 < \\infty$ and $\\sum 1/n^2$ converges ($p = 2$), $\\sum (n+1)/(n^3-5)$ converges.
+
+### DCT Example: $\\sum \\frac{\\sin^2 n}{n^2}$
+
+$0 \\le \\sin^2 n \\le 1$, so $0 \\le \\sin^2 n/n^2 \\le 1/n^2$.
+
+$\\sum 1/n^2$ converges → $\\sum \\sin^2 n/n^2$ converges by DCT.
+
+### DCT Example: $\\sum \\frac{1}{n - \\ln n}$
+
+For large $n$: $n - \\ln n < n$, so $1/(n - \\ln n) > 1/n$.
+
+Since $\\sum 1/n$ diverges and our series is term-by-term larger, $\\sum 1/(n - \\ln n)$ diverges by DCT.
+
+> **AP Tip:** For LCT, pick the comparison series by looking at the **dominant terms** in numerator and denominator.`
+    },
+    {
+      id: 'ct2-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Comparison Practice**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: '$\\sum \\frac{1}{2^n + n}$. Best comparison:',
+            options: ['DCT with $1/2^n$: since $2^n + n > 2^n$, $1/(2^n+n) < 1/2^n$. Converges.', 'LCT with $1/n$', 'Integral Test', 'AST'],
+            correctAnswer: 0,
+            explanation: '$1/(2^n + n) < 1/2^n$ and $\\sum 1/2^n$ converges (geometric). DCT works cleanly.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: '$\\sum \\frac{n^2 + 3}{n^4 + n + 7}$. Best comparison series for LCT:',
+            options: ['$1/n^2$ (dominant terms: $n^2/n^4 = 1/n^2$)', '$1/n^4$', '$1/n^3$', '$1/n$'],
+            correctAnswer: 0,
+            explanation: 'Dominant: $n^2/n^4 = 1/n^2$. LCT: $\\lim (n^2+3)/(n^4+n+7) \\cdot n^2 = 1$. Converges.'
+          },
+          {
+            question: 'For LCT, if $\\lim a_n/b_n = 0$:',
+            options: ['If $\\sum b_n$ converges, $\\sum a_n$ converges (but not vice versa)', 'Both have same behavior', '$\\sum a_n$ diverges', 'Test is inconclusive'],
+            correctAnswer: 0,
+            explanation: '$L = 0$ means $a_n$ is much smaller than $b_n$. If $b_n$ converges, $a_n$ does too. But $a_n$ could converge while $b_n$ diverges.'
           }
         ]
       }
     },
     {
-      id: 'calcbcconvergence-p2-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcconvergence-p2-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcconvergence-p2-dropdown',
+      id: 'ct2-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Comparison Selection**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '$\\sum \\frac{\\ln n}{n^2}$. Compare with $1/n^{3/2}$ using LCT:',
+            options: ['$\\lim (\\ln n /n^2)/(1/n^{3/2}) = \\lim \\ln n / \\sqrt{n} = 0$. Since $\\sum 1/n^{3/2}$ converges, so does ours.', '$\\lim = \\infty$, inconclusive', '$\\lim = 1$, same behavior', 'Cannot use LCT here'],
+            correctAnswers: ['$\\lim (\\ln n /n^2)/(1/n^{3/2}) = \\lim \\ln n / \\sqrt{n} = 0$. Since $\\sum 1/n^{3/2}$ converges, so does ours.'],
+            hints: ['$\\ln n$ grows slower than any power of $n$.'],
+            explanation: '$\\ln n/\\sqrt{n} \\to 0$. $L = 0$ with convergent comparison → our series converges.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcconvergence-p2-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Worked Examples**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcconvergence-p2-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: '$\\sum \\frac{1}{\\sqrt{n^2 + 1}}$. Best comparison for LCT:',
+            options: ['$1/n$ ($\\sqrt{n^2+1} \\approx n$). Limit $= 1$, same behavior: diverges.', '$1/n^2$, converges', '$1/\\sqrt{n}$, diverges', '$1/n^3$'],
+            correctAnswers: ['$1/n$ ($\\sqrt{n^2+1} \\approx n$). Limit $= 1$, same behavior: diverges.'],
+            hints: ['$\\sqrt{n^2+1} \\approx n$ for large $n$.'],
+            explanation: '$\\lim n/\\sqrt{n^2+1} = 1$. $\\sum 1/n$ diverges → our series diverges.'
           }
         ]
       }
+    },
+    {
+      id: 'ct2-input',
+      type: 'input-box' as const,
+      content: '**LCT Limit**',
+      exercise: {
+        question: 'Compute $\\lim_{n \\to \\infty} \\frac{(2n+3)/(n^3+1)}{1/n^2}$ for an LCT with $\\sum (2n+3)/(n^3+1)$.',
+        correctAnswer: '2',
+        acceptableAnswers: ['2', '2.0'],
+        hints: ['$(2n+3)/(n^3+1) \\cdot n^2 = n^2(2n+3)/(n^3+1) = (2n^3+3n^2)/(n^3+1)$.'],
+        explanation: '$\\lim (2n^3+3n^2)/(n^3+1) = 2$. Since $0 < 2 < \\infty$ and $\\sum 1/n^2$ converges, $\\sum (2n+3)/(n^3+1)$ converges.'
+      }
+    },
+    {
+      id: 'ct2-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- DCT: prove $a_n \\le b_n$ directly; used when comparison is obvious
+- LCT: compute $\\lim a_n/b_n$; easier, more flexible
+- Pick comparison by looking at dominant terms
+- $L = 0$ or $L = \\infty$: partial results (one direction only)
+- $0 < L < \\infty$: both series have same behavior
+
+> **Next:** Part 3 — Integral Test and Unusual Series.`
     }
   ]
-}
+};

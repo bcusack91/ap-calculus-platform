@@ -88,7 +88,9 @@ export const oChemAlkynesPart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: enol rearranges to carbonyl form
+
       2) Term for: adds water equivalent across triple bond
+
       3) Product pattern expected under BH3 then H2O2/NaOH
       `,
       exercise: {

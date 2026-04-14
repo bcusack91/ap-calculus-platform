@@ -2,89 +2,137 @@ export const calcbcRadConvPart3Data = {
   topicSlug: 'radius-convergence-calcbc',
   sections: [
     {
-      id: 'radiusconvergence-p3-intro',
+      id: 'rc3-intro',
       type: 'text' as const,
-      content: `# ✂️ Differentiation & Integration of Power Series
+      content: `# Special Cases & Tricky Series
 
-**Part 3 of 7 — Term-by-Term Operations**
+**Part 3 of 7 — Non-Standard Power Series**
 
----
+### Series with Only Even or Odd Powers
 
-### Theorem
+$\\sum c_n x^{2n}$: substitute $u = x^2$ to get $\\sum c_n u^n$.
 
-Within its interval of convergence, a power series can be:
-- **Differentiated** term by term
-- **Integrated** term by term
+Find $R_u$ for the $u$-series, then $|x^2| < R_u \\Rightarrow |x| < \\sqrt{R_u}$.
 
-The radius of convergence is **preserved** (but endpoints may change).
+**Example:** $\\cos x = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}$
 
-### Differentiation
+Ratio of consecutive terms: $\\frac{x^2}{(2n+2)(2n+1)} \\to 0$ for all $x$. $R = \\infty$.
 
-$$f(x) = \\\\sum_{n=0}^{\\\\infty} c_n(x-a)^n \\\\implies f'(x) = \\\\sum_{n=1}^{\\\\infty} nc_n(x-a)^{n-1}$$
+### Series with $(x - a)^{kn}$
 
-### Integration
+$\\sum c_n (x - a)^{3n}$: let $u = (x-a)^3$. Find $R_u$, then $|x - a| < R_u^{1/3}$.
 
-$$\\\\int f(x)\\\\,dx = C + \\\\sum_{n=0}^{\\\\infty} \\\\frac{c_n(x-a)^{n+1}}{n+1}$$
+### Non-Integer Center Issues
 
----
+$\\sum_{n=0}^{\\infty} \\frac{(x - \\pi)^n}{n!}$: center $a = \\pi$, $R = \\infty$ (it's $e^{x - \\pi}$).
 
-### Example
+> **Key Fact:** The center $a$ only shifts the interval. It never changes $R$ — the radius depends solely on the coefficients $c_n$.`
+    },
+    {
+      id: 'rc3-missing-terms',
+      type: 'text' as const,
+      content: `### Series with Missing Terms
 
-$\\\\frac{1}{1-x} = \\\\sum_{n=0}^{\\\\infty} x^n$ for $|x| < 1$
+**$\\sin x = x - x^3/3! + x^5/5! - \\cdots$**
 
-Differentiate: $\\\\frac{1}{(1-x)^2} = \\\\sum_{n=1}^{\\\\infty} nx^{n-1}$
+The "missing" even terms have coefficient $0$. You can't directly use $|c_{n+1}/c_n|$ because of division by zero.
 
-Integrate: $-\\\\ln(1-x) = \\\\sum_{n=0}^{\\\\infty} \\\\frac{x^{n+1}}{n+1} = \\\\sum_{n=1}^{\\\\infty} \\\\frac{x^n}{n}$`
-    },    {
-      id: 'radiusconvergence-p3-mcq',
+**Fix:** Use the Ratio Test on the actual (nonzero) terms:
+
+$$\\left|\\frac{a_{n+1}}{a_n}\\right| = \\frac{x^2}{(2n+2)(2n+1)} \\to 0$$
+
+$R = \\infty$.
+
+### Bessel-Type Series
+
+$$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(n!)^2 \\cdot 4^n}$$
+
+Ratio of consecutive terms (in $x^2$):
+
+$$\\frac{|x|^2}{4(n+1)^2} \\to 0 \\quad \\Rightarrow \\quad R = \\infty$$
+
+### Summary of Special Cases
+
+| Type | Strategy |
+|------|----------|
+| Only even/odd powers | Substitute $u = x^k$ |
+| Missing terms | Apply Ratio Test to nonzero terms |
+| Shifted center | $R$ unchanged; interval shifts |
+| $(c_n)$ with formula involving $(-1)^n$ | Take absolute value in Ratio Test |`
+    },
+    {
+      id: 'rc3-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** \U0001f3af
-      `,
+      content: '**Special Cases**',
       exercise: {
         questions: [
           {
-            question: 'When you differentiate a power series, $R$:',
-            options: ['Increases', 'Decreases', 'Stays the same', 'Becomes 0'],
-            correctAnswer: 2,
-            explanation: 'The radius of convergence is preserved under differentiation and integration.'
+            question: '$\\sum_{n=0}^{\\infty} \\frac{x^{2n}}{9^n}$. The radius of convergence (in $x$) is:',
+            options: ['$3$ (since $|x^2| < 9$ gives $|x| < 3$)', '$9$', '$1/9$', '$81$'],
+            correctAnswer: 0,
+            explanation: 'In $u = x^2$: $\\sum (u/9)^n$, geometric, $R_u = 9$. In $x$: $|x| < \\sqrt{9} = 3$.'
           },
           {
-            question: '$\\\\sum_{n=0}^{\\\\infty} x^n = 1/(1-x)$. Differentiating gives:',
-            options: ['$\\\\sum nx^{n-1} = 1/(1-x)^2$', '$\\\\sum nx^n = x/(1-x)^2$', '$\\\\sum x^{n+1}/(n+1) = -\\\\ln(1-x)$', '$\\\\sum x^n/n$'],
+            question: 'For $\\sum n! (x-2)^n$, the IOC is:',
+            options: ['$\\{2\\}$ only ($R = 0$)', '$(1, 3)$', '$(-\\infty, \\infty)$', '$[1, 3]$'],
             correctAnswer: 0,
-            explanation: '$d/dx[1/(1-x)] = 1/(1-x)^2$, and $d/dx[\\\\sum x^n] = \\\\sum nx^{n-1}$.'
+            explanation: '$|c_{n+1}/c_n| = (n+1) \\to \\infty$. $R = 0$. Converges only at $x = 2$.'
           },
           {
-            question: 'Integrating $\\\\sum_{n=0}^{\\\\infty} x^n$ gives:',
-            options: ['$\\\\sum x^{n+1}/(n+1)$', '$\\\\sum nx^{n-1}$', '$\\\\sum x^n/n$', '$\\\\sum (n+1)x^n$'],
+            question: 'Two power series are centered at different points but have the same coefficients. Their radii of convergence are:',
+            options: ['Equal ($R$ depends only on coefficients)', 'Different (center affects $R$)', 'Cannot determine', 'One is always larger'],
             correctAnswer: 0,
-            explanation: '$\\\\int x^n dx = x^{n+1}/(n+1)$, applied term by term.'
+            explanation: '$R$ depends on $\\lim |c_{n+1}/c_n|$, which involves only the coefficients.'
           }
         ]
       }
-    },    {
-      id: 'radiusconvergence-p3-input',
-      type: 'input-boxes' as const,
-      content: `
-**Power Series Operations** 🧮
-
-Given $\\\\ln(1+x) = \\\\sum_{n=1}^{\\\\infty} \\\\frac{(-1)^{n+1} x^n}{n}$ for $|x| \\\\leq 1$.
-
-**1)** Differentiate to find a series for $\\\\frac{1}{1+x}$. What is the general term?
-
-**2)** $R = ?$ (after differentiation)
-
-**3)** $\\\\ln(2)$ equals what series sum? (substitute $x = ?$)
-      `,
+    },
+    {
+      id: 'rc3-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Non-Standard Series**',
       exercise: {
-        boxes: 3,
-        correctAnswers: ['(-1)^(n+1)*x^(n-1)', '1', '1'],
-        hint1: 'Differentiate each term: $d/dx[x^n/n] = x^{n-1}$',
-        hint2: '$R$ is preserved',
-        hint3: '$\\\\ln(1 + 1) = \\\\ln 2$',
-        explanation: '1) $(-1)^{n+1}x^{n-1}$ (or equivalently $(-x)^{n-1}$). 2) $R = 1$ (preserved). 3) $x = 1$: $\\\\ln 2 = 1 - 1/2 + 1/3 - 1/4 + \\\\cdots$.'
+        dropdowns: [
+          {
+            label: '$\\sum_{n=0}^{\\infty} \\frac{(x+1)^{3n}}{8^n}$. Let $u = (x+1)^3$. $R_u = 8$, so $R_x =$',
+            options: ['$2$ (since $|x+1| < 8^{1/3} = 2$)', '$8$', '$8^{1/3} = 2$', '$512$'],
+            correctAnswers: ['$2$ (since $|x+1| < 8^{1/3} = 2$)'],
+            hints: ['Geometric in $u$: $|u| < 8$. Then $|(x+1)^3| < 8 \\Rightarrow |x+1| < 2$.'],
+            explanation: '$|x+1|^3 < 8 \\Rightarrow |x+1| < 2$. $R = 2$, IOC centered at $-1$: $(-3, 1)$ (check endpoints).'
+          },
+          {
+            label: '$\\sum_{n=1}^{\\infty} \\frac{x^n}{n \\cdot (\\ln n)^2}$ ($n \\ge 2$). At $x = 1$: $\\sum 1/(n(\\ln n)^2)$. This:',
+            options: ['Converges (Integral Test: $\\int 1/(x(\\ln x)^2)\\,dx$ converges)', 'Diverges', 'Inconclusive', 'Converges by AST'],
+            correctAnswers: ['Converges (Integral Test: $\\int 1/(x(\\ln x)^2)\\,dx$ converges)'],
+            hints: ['$\\int_2^{\\infty} 1/(x(\\ln x)^2)\\,dx$: let $u = \\ln x$, $du = dx/x$. Get $\\int 1/u^2\\,du$.'],
+            explanation: '$\\int 1/u^2\\,du = -1/u$, which converges. So $\\sum 1/(n(\\ln n)^2)$ converges.'
+          }
+        ]
       }
+    },
+    {
+      id: 'rc3-input',
+      type: 'input-box' as const,
+      content: '**Compute R**',
+      exercise: {
+        question: 'Find $R$ for $\\sum_{n=0}^{\\infty} \\frac{n! \\cdot x^{2n}}{(2n)!}$. Enter "infinity" if infinite.',
+        correctAnswer: 'infinity',
+        acceptableAnswers: ['infinity', 'inf', 'Infinity'],
+        hints: ['In terms of $u = x^2$: ratio $= u(n+1)/((2n+2)(2n+1)) \\to 0$.'],
+        explanation: 'Ratio $\\to 0$ for any $x$. $R = \\infty$.'
+      }
+    },
+    {
+      id: 'rc3-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Even/odd power series: substitute and adjust $R$ with a root
+- Missing terms: apply Ratio Test to consecutive nonzero terms
+- Center only shifts the interval, not $R$
+- Endpoint tests may involve Integral Test for unusual series
+
+> **Next:** Part 4 — Differentiation and Integration of Power Series.`
     }
   ]
 };

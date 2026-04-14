@@ -95,7 +95,9 @@ export const bioEvidencePart4Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **sequence similarity indicating evolutionary relatedness**
+
       2) Term for this definition: **hypothesized pattern of evolutionary relationships**
+
       3) Term for this definition: **geographic distribution of species across regions and time**
       `,
       exercise: {

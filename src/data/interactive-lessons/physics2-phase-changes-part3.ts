@@ -120,10 +120,15 @@ Calculate the total energy to convert **0.500 kg of ice at $-10$°C to steam at 
 Use: $c_{\\text{ice}} = 2{,}090$ J/(kg·°C), $L_f = 334{,}000$ J/kg, $c_{\\text{water}} = 4{,}186$ J/(kg·°C), $L_v = 2{,}260{,}000$ J/kg, $c_{\\text{steam}} = 2{,}010$ J/(kg·°C).
 
 1) $Q_1$: Energy to heat ice from $-10$°C to 0°C (in kJ)
+
 2) $Q_2$: Energy to melt all the ice (in kJ)
+
 3) $Q_3$: Energy to heat water from 0°C to 100°C (in kJ)
+
 4) $Q_4$: Energy to vaporize all the water (in kJ)
+
 5) $Q_5$: Energy to heat steam from 100°C to 110°C (in kJ)
+
 6) $Q_{\\text{total}}$ (in kJ)
 
 *Round all answers to 3 significant figures.*

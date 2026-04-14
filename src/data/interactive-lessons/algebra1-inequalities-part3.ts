@@ -47,7 +47,9 @@ $4(x-1) + 6 < 18 \\implies 4x - 4 + 6 < 18 \\implies 4x < 16 \\implies x < 4$
 **Multi-step** 🧮
 
 1) $5x - 3 > 17$: $x > ?$
+
 2) $-3x + 9 \\leq 0$: $x \\geq ?$
+
 3) $2(x+4) < 14$: $x < ?$
       `,
       exercise: {

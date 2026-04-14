@@ -86,7 +86,9 @@ export const psychTreatmentPart5Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: strategies that reduce risk of symptom return
+
       2) Write the concept that matches: integration of best research, clinical expertise, and client values
+
       3) Write the concept that matches: structured psychological treatment delivered by a trained professional
 
       Use the exact vocabulary term from this part.

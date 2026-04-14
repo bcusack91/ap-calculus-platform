@@ -95,7 +95,9 @@ export const bioFeedbackPart1Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **response amplifies the initial stimulus**
+
       2) Term for this definition: **response counteracts change to restore set point**
+
       3) Term for this definition: **dynamic maintenance of internal stability**
       `,
       exercise: {

@@ -22,11 +22,26 @@ But: $3\\sqrt{2} + 5\\sqrt{3}$ **cannot** be simplified further.
 
 $\\sqrt{12} + \\sqrt{27} = 2\\sqrt{3} + 3\\sqrt{3} = 5\\sqrt{3}$
 
-### Nested Radicals and Exponents
+---
 
-$$\\left(\\frac{x^4}{y^2}\\right)^{3/2} = \\frac{x^6}{y^3}$$
+### Worked Example 1
 
-Apply the exponent to both numerator and denominator: $x^{4 \\cdot 3/2} = x^6$ and $y^{2 \\cdot 3/2} = y^3$.`
+**Simplify $\\sqrt{18} + \\sqrt{50} - \\sqrt{8}$.**
+
+| Step | Work |
+|------|------|
+| Simplify each | $\\sqrt{18} = 3\\sqrt{2}$, $\\sqrt{50} = 5\\sqrt{2}$, $\\sqrt{8} = 2\\sqrt{2}$ |
+| Combine | $3\\sqrt{2} + 5\\sqrt{2} - 2\\sqrt{2}$ |
+| Result | $6\\sqrt{2}$ |
+
+### Worked Example 2
+
+**Simplify $\\left(\\frac{x^4}{y^2}\\right)^{3/2}$.**
+
+| Step | Work |
+|------|------|
+| Apply exponent to num. & denom. | $\\frac{(x^4)^{3/2}}{(y^2)^{3/2}}$ |
+| Multiply exponents | $\\frac{x^6}{y^3}$ |`
     },
     {
       id: 'er6-quiz1',
@@ -56,14 +71,102 @@ Apply the exponent to both numerator and denominator: $x^{4 \\cdot 3/2} = x^6$ a
       }
     },
     {
+      id: 'er6-text2',
+      type: 'text' as const,
+      content: `### Multiplying Radical Expressions
+
+Use FOIL when multiplying binomials with radicals.
+
+### Worked Example 3
+
+**Expand $(3 + \\sqrt{5})(3 - \\sqrt{5})$.**
+
+| Step | Work |
+|------|------|
+| Difference of squares | $(3)^2 - (\\sqrt{5})^2$ |
+| Simplify | $9 - 5 = 4$ |
+
+This is the **conjugate pattern** — the radical disappears!
+
+### Worked Example 4
+
+**Expand $(2\\sqrt{3} + 1)^2$.**
+
+| Step | Work |
+|------|------|
+| FOIL pattern | $(2\\sqrt{3})^2 + 2(2\\sqrt{3})(1) + 1^2$ |
+| Simplify | $12 + 4\\sqrt{3} + 1$ |
+| Result | $13 + 4\\sqrt{3}$ |
+
+### Worked Example 5
+
+**Simplify $\\frac{x^{2/3} \\cdot x^{-1/6}}{x^{1/2}}$.**
+
+| Step | Work |
+|------|------|
+| Add exponents in numerator | $x^{2/3 + (-1/6)} = x^{4/6 - 1/6} = x^{3/6} = x^{1/2}$ |
+| Subtract denominator | $x^{1/2 - 1/2} = x^0 = 1$ |`
+    },
+    {
+      id: 'er6-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Complex Simplification** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: 'What is $(\\sqrt{7} - 2)(\\sqrt{7} + 2)$?',
+            options: ['$3$', '$7$', '$-3$', '$11$'],
+            correctAnswer: 0,
+            explanation: 'Conjugate: $(\\sqrt{7})^2 - 2^2 = 7 - 4 = 3$.'
+          },
+          {
+            question: 'Simplify: $\\frac{\\sqrt{48}}{\\sqrt{3}}$',
+            options: ['$4$', '$\\sqrt{16}$', '$4\\sqrt{3}$', 'Both A and B'],
+            correctAnswer: 3,
+            explanation: '$\\frac{\\sqrt{48}}{\\sqrt{3}} = \\sqrt{48/3} = \\sqrt{16} = 4$. Both A and B are correct.'
+          },
+          {
+            question: 'Simplify: $\\frac{x^{1/3} \\cdot x^{1/3}}{x^{-1/3}}$',
+            options: ['$x$', '$x^{1/3}$', '$x^{2/3}$', '$x^{3}$'],
+            correctAnswer: 0,
+            explanation: 'Numerator: $x^{1/3 + 1/3} = x^{2/3}$. Divide: $x^{2/3 - (-1/3)} = x^{2/3 + 1/3} = x^1 = x$.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'er6-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Can These Be Combined?** 🔍\n\nDetermine whether each pair can be simplified into a single term.',
+      exercise: {
+        dropdowns: [
+          { label: '$3\\sqrt{5} + 2\\sqrt{5}$', options: ['Yes → 5√5', 'No — different radicands', 'Yes → 5√10', 'Yes → 6√5'] },
+          { label: '$\\sqrt{3} + \\sqrt{12}$', options: ['Yes → 3√3', 'No — different radicands', 'Yes → √15', 'Yes → 4√3'] },
+          { label: '$2\\sqrt{3} + 5\\sqrt{2}$', options: ['No — different radicands', 'Yes → 7√5', 'Yes → 7√6', 'Yes → √34'] },
+          { label: '$\\sqrt{50} - \\sqrt{32}$', options: ['Yes → √2', 'No — different radicands', 'Yes → √18', 'Yes → 2√2'] }
+        ],
+        correctAnswers: ['Yes → 5√5', 'Yes → 3√3', 'No — different radicands', 'Yes → √2'],
+        hint1: 'Same radicand ($\\sqrt{5}$) → combine coefficients.',
+        hint2: '$\\sqrt{12} = 2\\sqrt{3}$, so now both have $\\sqrt{3}$.',
+        hint3: '$\\sqrt{3}$ and $\\sqrt{2}$ are different radicands — can\'t combine.',
+        explanation: '$3\\sqrt{5} + 2\\sqrt{5} = 5\\sqrt{5}$. $\\sqrt{3} + 2\\sqrt{3} = 3\\sqrt{3}$. $2\\sqrt{3} + 5\\sqrt{2}$ can\'t be combined. $5\\sqrt{2} - 4\\sqrt{2} = \\sqrt{2}$.'
+      }
+    },
+    {
       id: 'er6-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 6
 
-- Only combine radicals with the **same radicand**: $a\\sqrt{n} \\pm b\\sqrt{n}$
-- Simplify each radical first, THEN combine
-- Fraction exponents distribute to numerator and denominator
-- Convert everything to exponent form when the expression is complex`
+| Rule | When It Works |
+|------|--------------|
+| $a\\sqrt{n} + b\\sqrt{n} = (a+b)\\sqrt{n}$ | Same radicand only |
+| $\\sqrt{a} \\cdot \\sqrt{b} = \\sqrt{ab}$ | Always (for non-negative $a, b$) |
+| $(a + \\sqrt{b})(a - \\sqrt{b}) = a^2 - b$ | Conjugate pattern |
+| Simplify first, then combine | $\\sqrt{12} + \\sqrt{27} = 2\\sqrt{3} + 3\\sqrt{3}$ |
+
+- Convert to exponent form for complex fraction simplification
+- Conjugate multiplication eliminates radicals in denominators
+- $\\sqrt{a} + \\sqrt{b} \\neq \\sqrt{a + b}$ — radicals don't distribute over addition!`
     }
   ]
 };

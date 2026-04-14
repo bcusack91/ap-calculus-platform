@@ -1,6 +1,12 @@
 /**
- * Exit Quiz - AP Biology
- * 40 questions across core AP Bio domains.
+ * AP Biology Exit Quiz Question Pool
+ *
+ * Covers all major AP Biology domains.
+ * Each question is tagged with:
+ *  - `domain`     : broad diagnostic domain (matches APBioDomain.id)
+ *  - `topicSlug`  : specific DB topic slug for remediation recommendations
+ *  - `formSet`    : 'A' | 'B' | 'both' — which diagnostic form may use this question
+ *  - `difficulty` : 'easy' | 'medium' | 'hard'
  */
 
 export interface ExitQuizQuestion {
@@ -12,6 +18,17 @@ export interface ExitQuizQuestion {
   category: string
 }
 
+export interface APBioQuestion {
+  question: string
+  options: string[]
+  correctAnswer: number
+  explanation: string
+  difficulty: 'easy' | 'medium' | 'hard'
+  domain: string
+  topicSlug: string
+  formSet: 'A' | 'B' | 'both'
+}
+
 interface BioQuestionTemplate {
   id: string
   topicSlug: string
@@ -20,6 +37,9 @@ interface BioQuestionTemplate {
   options: string[]
   correctIndex: number
   explanation: string
+  difficulty?: 'easy' | 'medium' | 'hard'
+  domain?: string
+  formSet?: 'A' | 'B' | 'both'
 }
 
 function shuffle<T>(arr: T[]): T[] {
@@ -331,7 +351,123 @@ const questionPool: BioQuestionTemplate[] = [
   { id: 'bio-q296', topicSlug: 'ap-bio-immune-system', category: 'Physiology', question: 'Fever helps fight infection by:', options: ['Cooling the body', 'Increasing enzyme activity and inhibiting pathogen growth', 'Stopping all immune responses', 'Reducing blood flow'], correctIndex: 1, explanation: 'Elevated body temperature enhances immune function and slows microbial growth.' },
   { id: 'bio-q297', topicSlug: 'ap-bio-immune-system', category: 'Physiology', question: 'Histamine is released by mast cells and causes:', options: ['Vasoconstriction', 'Vasodilation and increased permeability', 'Blood clotting', 'Antibody production'], correctIndex: 1, explanation: 'Histamine promotes blood flow and allows immune cells to reach infected tissue.' },
 
+  // Hardy-Weinberg
+  { id: 'bio-q298', topicSlug: 'ap-bio-hardy-weinberg', category: 'Evolution', question: 'In the Hardy-Weinberg equation p² + 2pq + q² = 1, 2pq represents:', options: ['Homozygous dominant frequency', 'Heterozygous frequency', 'Homozygous recessive frequency', 'Allele frequency'], correctIndex: 1, explanation: '2pq gives the expected frequency of heterozygous individuals in an ideal population.', difficulty: 'medium' as const, domain: 'natural-selection' },
+  { id: 'bio-q299', topicSlug: 'ap-bio-hardy-weinberg', category: 'Evolution', question: 'Which is NOT a condition for Hardy-Weinberg equilibrium?', options: ['No mutation', 'Random mating', 'Natural selection acting on the population', 'Large population size'], correctIndex: 2, explanation: 'Hardy-Weinberg requires NO natural selection. All five conditions must be met for equilibrium.', difficulty: 'easy' as const, domain: 'natural-selection' },
+
+  // Phylogenetics
+  { id: 'bio-q300', topicSlug: 'ap-bio-phylogenetics', category: 'Evolution', question: 'On a cladogram, a node represents:', options: ['An extant species', 'A common ancestor', 'A homologous structure', 'An analogous trait'], correctIndex: 1, explanation: 'Nodes represent the most recent common ancestor shared by the taxa that branch from it.', difficulty: 'easy' as const, domain: 'natural-selection' },
+  { id: 'bio-q301', topicSlug: 'ap-bio-phylogenetics', category: 'Evolution', question: 'Shared derived characters used to build cladograms are called:', options: ['Symplesiomorphies', 'Synapomorphies', 'Homoplasies', 'Analogies'], correctIndex: 1, explanation: 'Synapomorphies are shared derived traits that indicate common ancestry within a clade.', difficulty: 'hard' as const, domain: 'natural-selection' },
+
+  // DNA Technology
+  { id: 'bio-q302', topicSlug: 'ap-bio-dna-technology', category: 'Gene Expression', question: 'Restriction enzymes cut DNA at:', options: ['Any random location', 'Specific palindromic recognition sequences', 'The centromere', 'Only introns'], correctIndex: 1, explanation: 'Restriction enzymes recognize and cut specific palindromic sequences, creating fragments used in genetic engineering.', difficulty: 'easy' as const, domain: 'gene-expression' },
+  { id: 'bio-q303', topicSlug: 'ap-bio-dna-technology', category: 'Gene Expression', question: 'In gel electrophoresis, smaller DNA fragments migrate:', options: ['Slower and stay near the wells', 'Faster and travel farther from the wells', 'At the same rate as large fragments', 'Toward the negative electrode'], correctIndex: 1, explanation: 'DNA is negatively charged and migrates toward the positive electrode; smaller fragments move faster through the gel matrix.', difficulty: 'medium' as const, domain: 'gene-expression' },
+
+  // Viral Biology
+  { id: 'bio-q304', topicSlug: 'ap-bio-viral-biology', category: 'Cell Structure', question: 'During the lysogenic cycle, the viral DNA:', options: ['Immediately lyses the host cell', 'Integrates into the host chromosome as a prophage', 'Is destroyed by host enzymes', 'Exits the cell via budding'], correctIndex: 1, explanation: 'In lysogeny, phage DNA integrates into the bacterial chromosome and replicates passively with the host.', difficulty: 'medium' as const, domain: 'cell-structure' },
+  { id: 'bio-q305', topicSlug: 'ap-bio-viral-biology', category: 'Cell Structure', question: 'Retroviruses use reverse transcriptase to:', options: ['Translate mRNA into protein', 'Convert RNA genome into DNA', 'Replicate DNA directly', 'Digest host DNA'], correctIndex: 1, explanation: 'Reverse transcriptase synthesizes DNA from the retroviral RNA template, which then integrates into the host genome.', difficulty: 'medium' as const, domain: 'cell-structure' },
+
+  // Nervous System
+  { id: 'bio-q306', topicSlug: 'ap-bio-nervous-system', category: 'Physiology', question: 'The resting membrane potential of a typical neuron is approximately:', options: ['+40 mV', '0 mV', '-70 mV', '-90 mV'], correctIndex: 2, explanation: 'The resting potential is about -70 mV, maintained by the Na+/K+ ATPase and ion leak channels.', difficulty: 'easy' as const, domain: 'cell-communication' },
+  { id: 'bio-q307', topicSlug: 'ap-bio-nervous-system', category: 'Physiology', question: 'Saltatory conduction occurs because:', options: ['Action potentials jump between nodes of Ranvier', 'Myelin allows ions to pass through it', 'Dendrites conduct signals backward', 'Neurotransmitters travel along the axon'], correctIndex: 0, explanation: 'In myelinated neurons, action potentials jump between gaps in the myelin sheath (nodes of Ranvier), greatly increasing conduction speed.', difficulty: 'medium' as const, domain: 'cell-communication' },
+
+  // Endocrine System
+  { id: 'bio-q308', topicSlug: 'ap-bio-endocrine-system', category: 'Physiology', question: 'Steroid hormones differ from peptide hormones because they:', options: ['Cannot cross cell membranes', 'Bind to intracellular receptors and directly affect gene expression', 'Are always faster acting', 'Use cAMP as a second messenger'], correctIndex: 1, explanation: 'Steroid hormones are lipid-soluble, cross the plasma membrane, and bind intracellular receptors to regulate transcription directly.', difficulty: 'medium' as const, domain: 'cell-communication' },
+  { id: 'bio-q309', topicSlug: 'ap-bio-endocrine-system', category: 'Physiology', question: 'Negative feedback in the thyroid axis means:', options: ['TSH always increases T3/T4 without limit', 'High T3/T4 levels inhibit further TSH release', 'The hypothalamus has no role', 'Positive feedback dominates'], correctIndex: 1, explanation: 'When T3/T4 levels are high, they inhibit TRH and TSH release, preventing overproduction — a classic negative feedback loop.', difficulty: 'medium' as const, domain: 'cell-communication' },
+
+  // Animal Behavior
+  { id: 'bio-q310', topicSlug: 'ap-bio-animal-behavior', category: 'Ecology', question: 'Hamilton\'s rule for altruism states that altruistic behavior is favored when:', options: ['Cost exceeds benefit', 'rB > C (relatedness × benefit > cost)', 'The organism is solitary', 'Benefits are always zero'], correctIndex: 1, explanation: 'Hamilton\'s rule predicts altruism evolves when the genetic relatedness times the benefit to the recipient exceeds the cost to the altruist.', difficulty: 'hard' as const, domain: 'ecology' },
+  { id: 'bio-q311', topicSlug: 'ap-bio-animal-behavior', category: 'Ecology', question: 'A fixed action pattern is:', options: ['A learned behavior modified by experience', 'An innate, stereotyped behavior triggered by a sign stimulus', 'A response that varies each time', 'Only found in vertebrates'], correctIndex: 1, explanation: 'Fixed action patterns are innate, highly stereotyped behaviors that, once triggered by a specific stimulus, run to completion.', difficulty: 'easy' as const, domain: 'ecology' },
+
+  // Chromosomal Inheritance
+  { id: 'bio-q312', topicSlug: 'ap-bio-chromosomal-inheritance', category: 'Heredity', question: 'X-linked recessive traits are more common in males because:', options: ['Males have two X chromosomes', 'Males have only one X, so one recessive allele is expressed', 'Y chromosome carries many genes', 'Females cannot carry recessive alleles'], correctIndex: 1, explanation: 'Males are hemizygous for X-linked genes — they have only one copy, so a single recessive allele is sufficient for expression.', difficulty: 'easy' as const, domain: 'heredity' },
+  { id: 'bio-q313', topicSlug: 'ap-bio-chromosomal-inheritance', category: 'Heredity', question: 'Nondisjunction during meiosis I results in:', options: ['Normal gametes', 'Gametes with an extra or missing chromosome', 'Only haploid cells', 'DNA point mutations'], correctIndex: 1, explanation: 'Nondisjunction is the failure of homologous chromosomes to separate, producing aneuploid gametes (e.g., trisomy or monosomy).', difficulty: 'medium' as const, domain: 'heredity' },
+
+  // Origins of Life
+  { id: 'bio-q314', topicSlug: 'ap-bio-origins-of-life', category: 'Evolution', question: 'The Miller-Urey experiment demonstrated that:', options: ['Life can be created in a lab', 'Organic molecules can form under early Earth conditions', 'DNA was the first genetic material', 'Oxygen was abundant on early Earth'], correctIndex: 1, explanation: 'Miller and Urey showed that amino acids and other organic molecules form from inorganic precursors under simulated early Earth atmospheric conditions.', difficulty: 'easy' as const, domain: 'natural-selection' },
+  { id: 'bio-q315', topicSlug: 'ap-bio-origins-of-life', category: 'Evolution', question: 'Evidence for the endosymbiotic theory includes:', options: ['Mitochondria having their own circular DNA and 70S ribosomes', 'All cells lacking organelles', 'Viruses containing mitochondria', 'Eukaryotes lacking membranes'], correctIndex: 0, explanation: 'Mitochondria and chloroplasts have circular DNA, 70S ribosomes, double membranes, and replicate by binary fission — all consistent with a bacterial origin.', difficulty: 'medium' as const, domain: 'natural-selection' },
+
+  // Biodiversity & Conservation
+  { id: 'bio-q316', topicSlug: 'ap-bio-biodiversity', category: 'Ecology', question: 'The Shannon diversity index (H\') accounts for both:', options: ['Only species richness', 'Species richness and evenness', 'Only population size', 'Genetic diversity alone'], correctIndex: 1, explanation: 'The Shannon index considers both the number of species (richness) and their relative abundances (evenness) in a community.', difficulty: 'medium' as const, domain: 'ecology' },
+  { id: 'bio-q317', topicSlug: 'ap-bio-biodiversity', category: 'Ecology', question: 'Habitat fragmentation threatens biodiversity by:', options: ['Increasing gene flow', 'Isolating populations and reducing genetic diversity', 'Creating new habitats', 'Eliminating all invasive species'], correctIndex: 1, explanation: 'Fragmentation breaks continuous habitat into smaller patches, isolating populations and increasing vulnerability to genetic drift and inbreeding.', difficulty: 'medium' as const, domain: 'ecology' },
+
+  // Biogeochemical Cycles
+  { id: 'bio-q318', topicSlug: 'ap-bio-biogeochemical-cycles', category: 'Ecology', question: 'Nitrogen fixation converts atmospheric N₂ into:', options: ['Nitrate (NO₃⁻)', 'Ammonia (NH₃)', 'Nitrogen gas (N₂)', 'Nitrous oxide (N₂O)'], correctIndex: 1, explanation: 'Nitrogen-fixing bacteria (e.g., Rhizobium) convert atmospheric N₂ into ammonia (NH₃), which can then be used by plants.', difficulty: 'medium' as const, domain: 'ecology' },
+  { id: 'bio-q319', topicSlug: 'ap-bio-biogeochemical-cycles', category: 'Ecology', question: 'Unlike nitrogen and carbon, the phosphorus cycle:', options: ['Includes a major atmospheric component', 'Has no significant gaseous phase', 'Relies on photosynthesis', 'Only occurs in aquatic ecosystems'], correctIndex: 1, explanation: 'Phosphorus cycles primarily through rocks, soil, water, and organisms with no significant atmospheric reservoir.', difficulty: 'easy' as const, domain: 'ecology' },
+
+  // Plant Structure
+  { id: 'bio-q320', topicSlug: 'ap-bio-plant-structure', category: 'Cell Structure', question: 'The cohesion-tension theory explains water movement in plants through:', options: ['Active transport by root cells', 'Transpiration pull, cohesion of water molecules, and tension in xylem', 'Osmosis in leaves only', 'Pressure from the soil pushing water up'], correctIndex: 1, explanation: 'Water evaporates from leaf stomata (transpiration), creating tension that pulls a cohesive column of water upward through xylem vessels.', difficulty: 'medium' as const, domain: 'cell-structure' },
+  { id: 'bio-q321', topicSlug: 'ap-bio-plant-structure', category: 'Cell Structure', question: 'Guard cells regulate:', options: ['Root hair growth', 'Stomatal opening and closing', 'Phloem loading', 'Seed germination'], correctIndex: 1, explanation: 'Guard cells control gas exchange by opening and closing stomata in response to light, CO₂ concentration, and water availability.', difficulty: 'easy' as const, domain: 'cell-structure' },
+
+  // CRISPR / Gene Editing
+  { id: 'bio-q322', topicSlug: 'ap-bio-dna-technology', category: 'Gene Expression', question: 'CRISPR-Cas9 achieves targeted gene editing by:', options: ['Randomly inserting DNA', 'Using a guide RNA to direct the Cas9 enzyme to a specific DNA sequence', 'Removing all introns', 'Only working on prokaryotic genomes'], correctIndex: 1, explanation: 'CRISPR-Cas9 uses a customizable guide RNA that base-pairs with the target DNA sequence, directing Cas9 to make a precise double-strand break.', difficulty: 'medium' as const, domain: 'gene-expression' },
+  { id: 'bio-q323', topicSlug: 'ap-bio-dna-technology', category: 'Gene Expression', question: 'PCR (polymerase chain reaction) amplifies DNA by:', options: ['Using restriction enzymes to cut DNA', 'Repeated cycles of denaturation, annealing, and extension', 'Cloning genes into bacteria', 'Transcribing DNA into mRNA'], correctIndex: 1, explanation: 'PCR uses thermal cycling: heat denatures DNA, primers anneal to templates, and DNA polymerase extends new strands — doubling copies each cycle.', difficulty: 'easy' as const, domain: 'gene-expression' },
+
 ]
+
+/* ------------------------------------------------------------------ */
+/*  Domain & difficulty mapping                                        */
+/* ------------------------------------------------------------------ */
+
+const TOPIC_TO_DOMAIN: Record<string, string> = {
+  'ap-bio-chemistry-of-life': 'chemistry-of-life',
+  'ap-bio-cell-structure-function': 'cell-structure',
+  'ap-bio-membrane-transport': 'cell-structure',
+  'ap-bio-cell-cycle-mitosis': 'cell-communication',
+  'ap-bio-cell-communication': 'cell-communication',
+  'ap-bio-cellular-energetics': 'cellular-energetics',
+  'ap-bio-photosynthesis': 'cellular-energetics',
+  'ap-bio-meiosis': 'heredity',
+  'ap-bio-mendelian-genetics': 'heredity',
+  'ap-bio-molecular-genetics': 'gene-expression',
+  'ap-bio-gene-regulation': 'gene-expression',
+  'ap-bio-natural-selection': 'natural-selection',
+  'ap-bio-evolution-evidence': 'natural-selection',
+  'ap-bio-ecology-energy-flow': 'ecology',
+  'ap-bio-population-ecology': 'ecology',
+  'ap-bio-ecology-interactions': 'ecology',
+  'ap-bio-immune-system': 'cell-communication',
+  'ap-bio-biotechnology': 'gene-expression',
+  'ap-bio-experimental-design': 'ecology',
+  'ap-bio-hardy-weinberg': 'natural-selection',
+  'ap-bio-phylogenetics': 'natural-selection',
+  'ap-bio-dna-technology': 'gene-expression',
+  'ap-bio-viral-biology': 'cell-structure',
+  'ap-bio-nervous-system': 'cell-communication',
+  'ap-bio-endocrine-system': 'cell-communication',
+  'ap-bio-animal-behavior': 'ecology',
+  'ap-bio-chromosomal-inheritance': 'heredity',
+  'ap-bio-origins-of-life': 'natural-selection',
+  'ap-bio-biodiversity': 'ecology',
+  'ap-bio-biogeochemical-cycles': 'ecology',
+  'ap-bio-plant-structure': 'cell-structure',
+}
+
+function inferDifficulty(idx: number, total: number): 'easy' | 'medium' | 'hard' {
+  const pct = idx / total
+  if (pct < 0.35) return 'easy'
+  if (pct < 0.75) return 'medium'
+  return 'hard'
+}
+
+/**
+ * Exported question pool in the same format as AP Chemistry.
+ * Used by the diagnostic generator for seeded 10-form selection.
+ */
+export const apBioQuestionPool: APBioQuestion[] = questionPool.map((q, i) => ({
+  question: q.question,
+  options: q.options,
+  correctAnswer: q.correctIndex,
+  explanation: q.explanation,
+  difficulty: q.difficulty ?? inferDifficulty(i, questionPool.length),
+  domain: q.domain ?? TOPIC_TO_DOMAIN[q.topicSlug] ?? 'chemistry-of-life',
+  topicSlug: q.topicSlug,
+  formSet: q.formSet ?? (i % 3 === 0 ? 'A' : i % 3 === 1 ? 'B' : 'both'),
+}))
+
+/* ------------------------------------------------------------------ */
+/*  Generator function — used by exit quiz registry                   */
+/* ------------------------------------------------------------------ */
 
 export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
   const pool = topicSlug

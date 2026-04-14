@@ -96,7 +96,9 @@ Because pressure increases with depth. The lower part of the wall experiences mo
 A rectangular tank (2.0 m wide × 1.0 m long × 1.5 m deep) is filled completely with water.
 
 1) Force on the horizontal bottom (gauge, in N)
+
 2) Average gauge pressure on one of the 2.0 m wide vertical walls (in Pa)
+
 3) Total force on that vertical wall (in N)
       `,
       exercise: {

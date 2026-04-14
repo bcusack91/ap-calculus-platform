@@ -88,7 +88,9 @@ export const oChemAminesPart1Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: depends on lone-pair availability and stabilization
+
       2) Term for: nitrogen lone pair attacks electrophilic centers
+
       3) Product pattern expected under R-X + NH3 (excess)
       `,
       exercise: {

@@ -88,7 +88,9 @@ export const oChemAminesPart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: aryl-N2+ intermediate used for substitution
+
       2) Term for: lone pair delocalization lowers amide basicity
+
       3) Product pattern expected under ArN2+ + CuBr
       `,
       exercise: {

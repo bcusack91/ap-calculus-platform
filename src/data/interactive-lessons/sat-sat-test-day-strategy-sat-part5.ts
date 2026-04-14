@@ -47,6 +47,111 @@ If you must guess randomly on multiple questions, pick the same letter for all o
       ],
       correctAnswer: 1,
       explanation: 'The Digital SAT has NO wrong-answer penalty. Always guess rather than leaving a question blank. Even a random guess gives you a 25% chance. If you can eliminate even one choice, your odds improve to 33%.'
+    },
+    {
+      id: 'tds5-text2',
+      type: 'text' as const,
+      content: `## Deep Dive: Advanced Elimination Techniques
+
+### Worked Example 1: Math POE in Action
+
+| Step | Work |
+|---|---|
+| **Problem** | "A rectangle's area is 84 cm². Its length is 5 more than its width. What is the width?" |
+| **Choices** | A) 5 B) 7 C) 12 D) 17 |
+| **Estimate** | Width × (width + 5) = 84. Width ≈ $\\sqrt{84}$ ≈ 9. So width < 9. |
+| **Eliminate** | C) 12 and D) 17 are too large ❌ |
+| **Test B** | $7 \\times 12 = 84$ ✅ |
+| **Answer** | B) 7 |
+
+### Worked Example 2: R&W POE Breakdown
+
+| Choice | Analysis | Verdict |
+|---|---|---|
+| A) "The author enthusiastically endorses the new policy" | "Enthusiastically" is too strong — passage says "cautiously supports" | ❌ Too extreme |
+| B) "The author presents evidence both for and against the policy" | Passage only gives supporting evidence | ❌ Half-right |
+| C) "The author cautiously supports the policy while noting limitations" | Matches tone and content | ✅ Correct |
+| D) "The author discusses immigration reform" | Passage is about education policy | ❌ Out of scope |
+
+### Probability of Correct Guess After Elimination
+
+| Choices Eliminated | Remaining | Probability | Expected Points (out of 4 such Qs) |
+|---|---|---|---|
+| 0 | 4 | 25% | 1.0 |
+| 1 | 3 | 33% | 1.3 |
+| 2 | 2 | 50% | 2.0 |
+| 3 | 1 | 100% | 4.0 |
+
+### Common Wrong Answer Patterns
+
+| Pattern | Math Example | R&W Example |
+|---|---|---|
+| Right process, sign error | Answer is $-3$ but $3$ is a choice | — |
+| Solves for wrong variable | Asked for $y$, solved for $x$ | — |
+| Partial calculation | Finds rate but doesn't multiply by time | — |
+| Opposite tone | — | Passage is positive, answer is negative |
+| True but irrelevant | — | Statement is true but doesn't answer the question |`
+    },
+    {
+      id: 'tds5-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Elimination Challenge** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: 'You can eliminate 2 of 4 answer choices. Your probability of guessing correctly is:',
+            options: ['25%', '33%', '50%', '75%'],
+            correctAnswer: 2,
+            explanation: 'With 2 eliminated, you have 2 remaining choices. Random guess between 2 = 1/2 = 50%.'
+          },
+          {
+            question: 'On the SAT, "Letter of the Day" means:',
+            options: ['Always choosing the longest answer', 'Picking the same letter for all random guesses', 'Reading every answer choice carefully', 'Skipping questions you cannot answer'],
+            correctAnswer: 1,
+            explanation: '"Letter of the Day" is a time-saving strategy: if you must randomly guess on multiple questions, pick the same letter (e.g., C) for all of them. Statistically, you\'ll get ~25% right, same as random but faster.'
+          },
+          {
+            question: 'A Math answer should be positive (you\'re finding a length). Choices are: A) $-8$ B) $3$ C) $8$ D) $15$. Which can you eliminate immediately?',
+            options: ['A only', 'A and D', 'B and C', 'None — you need to calculate'],
+            correctAnswer: 0,
+            explanation: 'Lengths must be positive, so A) $-8$ is impossible. You cannot eliminate D) $15$ just because it\'s large — without calculating, it could be correct.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'tds5-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Elimination Quick Check** — Select the correct answer.',
+      exercise: {
+        dropdowns: [
+          'SAT wrong-answer penalty = [none|−¼ point|−½ point|−1 point]',
+          '"Always," "never," "completely" in R&W answers are usually [wrong|correct|neutral|tricky]',
+          'If you must guess randomly on 4 questions, the best strategy is [same letter for all|random each time|skip them|alternate A-B-C-D]',
+          'Eliminating 1 choice raises your odds from 25% to [33%|50%|75%|100%]'
+        ],
+        correctAnswers: ['none', 'wrong', 'same letter for all', '33%'],
+        hint1: 'The Digital SAT has no penalty for incorrect answers.',
+        hint2: 'Extreme language usually overstates what the passage says.',
+        hint3: 'Same letter = same expected value as random, but saves time.',
+        explanation: 'No penalty → always guess. Extreme words are usually wrong. Same letter is fastest for random guessing. Eliminating 1 of 4 leaves 3 choices = 33%.'
+      }
+    },
+    {
+      id: 'tds5-summary',
+      type: 'text' as const,
+      content: `## Part 5 Summary
+
+| Strategy | Detail |
+|---|---|
+| Always guess | No penalty — never leave blanks |
+| Math POE | Estimate, check sign/units, reasonableness |
+| R&W POE | Too extreme, half-right, out of scope, opposite |
+| Eliminate 2 | 50% chance of correct guess |
+| Letter of the Day | Same letter for all random guesses |
+| Common traps | Sign errors, wrong variable, partial calculation |
+
+*Next: The Week Before Test Day →*`
     }
   ]
 };

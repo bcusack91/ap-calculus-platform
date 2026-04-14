@@ -88,7 +88,9 @@ export const oChemSNPart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: polar solvent that enhances anionic nucleophile reactivity
+
       2) Term for: configuration inversion at SN2 stereocenter
+
       3) Product pattern expected under strong base, heat on 2° halide
       `,
       exercise: {

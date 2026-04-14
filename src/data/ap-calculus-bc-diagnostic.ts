@@ -5,8 +5,9 @@
  * This diagnostic pulls questions from BOTH the AB pool (foundational) and the
  * BC pool (BC-exclusive) to give a comprehensive assessment.
  *
- * Produces two alternate forms (A and B) each with ~35 questions spanning
- * both AB-foundational and BC-exclusive domains.
+ * Produces 10 alternate forms (1–10) each with ~37 questions spanning
+ * both AB-foundational and BC-exclusive domains. Each form uses a seeded
+ * PRNG to deterministically select a different subset of questions.
  */
 
 import { calcABQuestionPool, type CalcABQuestion } from './exit-quizzes/ap-calculus-ab'
@@ -34,8 +35,10 @@ export interface CalcBCDomain {
   source: 'ab' | 'bc'
 }
 
+export const TOTAL_FORMS = 10
+
 export interface CalcBCDiagnosticTestData {
-  form: 'A' | 'B'
+  form: number
   questions: CalcBCDiagnosticQuestion[]
   domains: CalcBCDomain[]
   totalQuestions: number
@@ -59,7 +62,7 @@ export interface CalcBCRecommendedTopic {
 }
 
 export interface CalcBCDiagnosticResults {
-  form: 'A' | 'B'
+  form: number
   totalCorrect: number
   totalQuestions: number
   percentage: number
@@ -197,19 +200,43 @@ const CALC_BC_DOMAINS: CalcBCDomain[] = [
 export { CALC_BC_DOMAINS }
 
 /* ------------------------------------------------------------------ */
+/*  Seeded PRNG (mulberry32) for deterministic per-form selection      */
+/* ------------------------------------------------------------------ */
+
+function mulberry32(seed: number) {
+  return function () {
+    // eslint-disable-next-line no-param-reassign
+    seed |= 0; seed = (seed + 0x6d2b79f5) | 0
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+function seededShuffle<T>(arr: T[], rng: () => number): T[] {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+/* ------------------------------------------------------------------ */
 /*  Generator                                                          */
 /* ------------------------------------------------------------------ */
 
-export function generateCalcBCDiagnosticTest(form: 'A' | 'B'): CalcBCDiagnosticTestData {
+export function generateCalcBCDiagnosticTest(form: number): CalcBCDiagnosticTestData {
+  const rng = mulberry32(form * 7919)
   const questions: CalcBCDiagnosticQuestion[] = []
 
   for (const domain of CALC_BC_DOMAINS) {
     const pool: (CalcABQuestion | CalcBCQuestion)[] =
       domain.source === 'ab'
-        ? calcABQuestionPool.filter(q => q.domain === domain.id && (q.formSet === form || q.formSet === 'both'))
-        : calcBCQuestionPool.filter(q => q.domain === domain.id && (q.formSet === form || q.formSet === 'both'))
+        ? calcABQuestionPool.filter(q => q.domain === domain.id)
+        : calcBCQuestionPool.filter(q => q.domain === domain.id)
 
-    const shuffled = [...pool].sort(() => Math.random() - 0.5)
+    const shuffled = seededShuffle(pool, rng)
     const selected = shuffled.slice(0, domain.questionTarget)
 
     for (const q of selected) {
@@ -224,11 +251,13 @@ export function generateCalcBCDiagnosticTest(form: 'A' | 'B'): CalcBCDiagnosticT
     }
   }
 
+  const shuffledQuestions = seededShuffle(questions, rng)
+
   return {
     form,
-    questions: questions.sort(() => Math.random() - 0.5),
+    questions: shuffledQuestions,
     domains: CALC_BC_DOMAINS,
-    totalQuestions: questions.length,
+    totalQuestions: shuffledQuestions.length,
     timeLimitMinutes: 50,
   }
 }
@@ -238,7 +267,7 @@ export function generateCalcBCDiagnosticTest(form: 'A' | 'B'): CalcBCDiagnosticT
 /* ------------------------------------------------------------------ */
 
 export function scoreCalcBCDiagnostic(
-  form: 'A' | 'B',
+  form: number,
   questions: CalcBCDiagnosticQuestion[],
   answers: Record<number, number>,
 ): CalcBCDiagnosticResults {
@@ -365,9 +394,10 @@ export function scoreCalcBCDiagnostic(
 /*  Helpers                                                            */
 /* ------------------------------------------------------------------ */
 
-export function pickNextForm(previousForms: ('A' | 'B')[]): 'A' | 'B' {
-  if (previousForms.length === 0) return 'A'
-  return previousForms[previousForms.length - 1] === 'A' ? 'B' : 'A'
+export function pickNextForm(previousForms: number[]): number {
+  if (previousForms.length === 0) return 1
+  const last = previousForms[previousForms.length - 1]
+  return last >= TOTAL_FORMS ? 1 : last + 1
 }
 
 const SLUG_LABELS: Record<string, string> = {

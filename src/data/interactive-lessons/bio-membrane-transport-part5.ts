@@ -2,190 +2,203 @@ export const bioMembraneTransportPart5Data = {
   topicSlug: 'membrane-transport',
   sections: [
     {
-      id: 'bio-membrane-transport-p5-s1-intro',
+      id: 'mt5-intro',
       type: 'text' as const,
       content: `
-      ## Membrane Transport: Bulk Transport
-      
-      **Part 5 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through endocytosis and exocytosis events.
-      
-      ### Worked biological example
-      A student team investigates endocytosis and exocytosis events. Their first interpretation step is to identify how **aquaporin** and **active transport** work together in the same pathway.
-      
-      - They classify the primary signal using **aquaporin**: channel protein enabling rapid water transport.
-      - They trace the downstream response using **active transport**: movement against gradient requiring energy input.
-      - They then compare outcomes with **sodium-potassium pump** and **endocytosis** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **aquaporin**
-      - **active transport**
-      - **sodium-potassium pump**
-      - **endocytosis**
+## Bulk Transport — Vesicle-Mediated Movement
+
+**Part 5 of 7**
+
+Some materials are too large to cross the membrane through channels or carriers (e.g., proteins, polysaccharides, whole cells).  These are transported in membrane-bound **vesicles** through processes called **endocytosis** (into the cell) and **exocytosis** (out of the cell).
+
+Both processes require **energy** (ATP) and involve the dynamic remodeling of the plasma membrane.
       `
     },
     {
-      id: 'bio-membrane-transport-p5-s2-mcq-core',
+      id: 'mt5-exo',
+      type: 'text' as const,
+      content: `
+### Exocytosis — Secretion
+
+In exocytosis, a **vesicle** fuses with the plasma membrane and releases its contents outside the cell:
+
+1. Material is packaged into a vesicle (often by the Golgi apparatus)
+2. The vesicle is transported to the cell surface along the cytoskeleton
+3. **SNARE proteins** on the vesicle (v-SNARE) and target membrane (t-SNARE) interact, bringing the membranes together
+4. The vesicle membrane fuses with the plasma membrane
+5. Contents are released to the exterior; vesicle membrane becomes part of the plasma membrane
+
+**Examples of exocytosis:**
+- Secretion of neurotransmitters at synapses
+- Release of hormones (insulin from beta cells)
+- Secretion of digestive enzymes
+- Secretion of extracellular matrix components
+- Mucus secretion by goblet cells
+
+> **Membrane Recycling:** Exocytosis adds membrane to the plasma membrane. This is balanced by endocytosis, which removes membrane — keeping the total surface area relatively constant.
+      `
+    },
+    {
+      id: 'mt5-endo',
+      type: 'text' as const,
+      content: `
+### Endocytosis — Uptake
+
+Endocytosis is the inward folding of the plasma membrane to form a vesicle that brings material INTO the cell:
+
+**Three types of endocytosis:**
+
+| Type | Mechanism | What is taken in | Example |
+|------|-----------|-----------------|---------|
+| **Phagocytosis** ("cell eating") | Cell extends pseudopods to engulf large particles | Cells, bacteria, debris | Macrophages engulfing pathogens |
+| **Pinocytosis** ("cell drinking") | Small indentations of membrane capture droplets of extracellular fluid | Small dissolved molecules in fluid | Most cell types; non-specific |
+| **Receptor-mediated endocytosis** | Specific molecules bind to receptors, triggering clathrin-coated pit formation | Specific molecules (ligands) | Cholesterol uptake via LDL receptors |
+
+**Receptor-mediated endocytosis in detail:**
+1. Ligands (e.g., LDL particles carrying cholesterol) bind to specific receptor proteins on the cell surface
+2. Receptors cluster in **clathrin-coated pits** — regions of the membrane lined with the protein clathrin on the cytoplasmic side
+3. The coated pit invaginates (folds inward) and pinches off as a **clathrin-coated vesicle**
+4. The clathrin coat is removed; the vesicle fuses with an **early endosome**
+5. Contents are processed (e.g., LDL is broken down to release cholesterol)
+6. Receptors may be recycled back to the membrane
+
+> **Clinical Connection:** In **familial hypercholesterolemia**, mutations in the LDL receptor reduce or eliminate receptor-mediated endocytosis of LDL cholesterol. Cholesterol accumulates in the blood, dramatically increasing the risk of cardiovascular disease.
+      `
+    },
+    {
+      id: 'mt5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Bulk Transport
       `,
       exercise: {
         questions: [
           {
-            question: 'For Bulk Transport, what best describes aquaporin?',
+            question: 'A macrophage engulfs a bacterium by extending pseudopods around it and forming a phagosome. This is an example of:',
             options: [
-              'uptake of extracellular material via vesicle formation',
-              'channel protein enabling rapid water transport',
-              'ATPase exchanging Na+ and K+ across plasma membrane',
-              'movement against gradient requiring energy input'
+              'Pinocytosis',
+              'Receptor-mediated endocytosis',
+              'Phagocytosis',
+              'Exocytosis'
             ],
-            correctAnswer: 1,
-            explanation: 'aquaporin is best matched with: channel protein enabling rapid water transport.'
+            correctAnswer: 2,
+            explanation: 'Phagocytosis ("cell eating") involves the extension of pseudopods to surround and engulf large particles (like bacteria). The resulting vesicle is called a phagosome, which fuses with a lysosome for digestion.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of active transport?',
+            question: 'Why is receptor-mediated endocytosis more efficient than pinocytosis for taking up specific molecules like cholesterol?',
             options: [
-              'ATPase exchanging Na+ and K+ across plasma membrane',
-              'movement against gradient requiring energy input',
-              'channel protein enabling rapid water transport',
-              'release of intracellular cargo via vesicle fusion'
+              'It uses more ATP',
+              'Receptors concentrate specific molecules in clathrin-coated pits before internalization, enabling selective and efficient uptake even at low extracellular concentrations',
+              'Pinocytosis cannot take in molecules at all',
+              'Receptor-mediated endocytosis does not require membrane invagination'
             ],
             correctAnswer: 1,
-            explanation: 'active transport is best matched with: movement against gradient requiring energy input.'
+            explanation: 'Receptor-mediated endocytosis is specific — receptors bind particular ligands and cluster them in coated pits. This concentrating effect allows cells to take up specific molecules efficiently, even when their external concentration is very low. Pinocytosis is non-specific and takes in whatever is dissolved in the fluid.'
+          },
+          {
+            question: 'A neuron releases acetylcholine at a synapse by vesicle fusion with the presynaptic membrane. This is:',
+            options: [
+              'Endocytosis',
+              'Phagocytosis',
+              'Exocytosis',
+              'Facilitated diffusion'
+            ],
+            correctAnswer: 2,
+            explanation: 'Neurotransmitter release is a classic example of exocytosis. Synaptic vesicles containing acetylcholine fuse with the presynaptic membrane (mediated by SNARE proteins), releasing the neurotransmitter into the synaptic cleft.'
           }
         ]
       }
     },
     {
-      id: 'bio-membrane-transport-p5-s3-deep-dive',
+      id: 'mt5-comparison',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Bulk Transport
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → aquaporin
-      - **Immediate processing** → active transport
-      - **System-level consequence** → sodium-potassium pump
-      - **Measured readout** → endocytosis
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | aquaporin | channel protein enabling rapid water transport | Early shift in the primary variable |
-      | active transport | movement against gradient requiring energy input | Mid-pathway change in process rate |
-      | sodium-potassium pump | ATPase exchanging Na+ and K+ across plasma membrane | Downstream phenotype trend |
-      | endocytosis | uptake of extracellular material via vesicle formation | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Comprehensive Comparison of All Transport Types
+
+| Transport Type | Direction relative to gradient | Energy required? | Protein required? | Examples |
+|---------------|-------------------------------|-----------------|------------------|---------|
+| Simple diffusion | Down | No | No | O\\(_2\\), CO\\(_2\\), ethanol |
+| Facilitated diffusion (channels) | Down | No | Yes (channel) | K\\(^+\\) leak channels, aquaporins |
+| Facilitated diffusion (carriers) | Down | No | Yes (carrier) | GLUT glucose transporters |
+| Primary active transport | Against | Yes (ATP) | Yes (pump) | Na\\(^+\\)/K\\(^+\\) ATPase, Ca\\(^{2+}\\) ATPase |
+| Secondary active transport | Against (for cargo) | Yes (indirect — gradient) | Yes (cotransporter) | SGLT1, Na\\(^+\\)/H\\(^+\\) exchanger |
+| Exocytosis | Out of cell | Yes (ATP) | Yes (SNAREs) | Neurotransmitter release, insulin secretion |
+| Endocytosis | Into cell | Yes (ATP) | Yes (clathrin, receptors) | Phagocytosis, LDL receptor uptake |
       `
     },
     {
-      id: 'bio-membrane-transport-p5-s4-input',
+      id: 'mt5-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **channel protein enabling rapid water transport**
-      2) Term for this definition: **movement against gradient requiring energy input**
-      3) Term for this definition: **ATPase exchanging Na+ and K+ across plasma membrane**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['aquaporin', 'active transport', 'sodium-potassium pump'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'channel protein enabling rapid water transport\'.',
-        hint2: 'Second blank points to active transport; think about the role \'movement against gradient requiring energy input\'.',
-        hint3: 'Third blank is sodium-potassium pump; connect it to \'ATPase exchanging Na+ and K+ across plasma membrane\'.',
-        explanation: 'Correct set: aquaporin, active transport, sodium-potassium pump. These three terms define the core mechanism chain for Bulk Transport.'
-      }
-    },
-    {
-      id: 'bio-membrane-transport-p5-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'aquaporin',
-            options: ['channel protein enabling rapid water transport', 'movement against gradient requiring energy input', 'uptake of extracellular material via vesicle formation', 'ATPase exchanging Na+ and K+ across plasma membrane']
-          },
-          {
-            label: 'active transport',
-            options: ['release of intracellular cargo via vesicle fusion', 'ATPase exchanging Na+ and K+ across plasma membrane', 'movement against gradient requiring energy input', 'uptake of extracellular material via vesicle formation']
-          },
-          {
-            label: 'sodium-potassium pump',
-            options: ['ATPase exchanging Na+ and K+ across plasma membrane', 'release of intracellular cargo via vesicle fusion', 'membrane property allowing some molecules to cross more easily', 'uptake of extracellular material via vesicle formation']
-          }
-        ],
-        correctAnswers: ['channel protein enabling rapid water transport', 'movement against gradient requiring energy input', 'ATPase exchanging Na+ and K+ across plasma membrane'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'aquaporin, active transport, and sodium-potassium pump should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-membrane-transport-p5-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because aquaporin channel protein enabling rapid water transport, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Transport direction depends on gradients and membrane proteins, not molecule intent.
-      - Facilitated diffusion remains passive even though proteins are involved.
-      - Osmosis describes water movement, not solute movement.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-membrane-transport-p5-s7-mcq-final',
-      type: 'multiple-choice' as const,
-      content: `
-      **Final application MCQ (2 questions)**
+### Key Terms — Bulk Transport
       `,
       exercise: {
         questions: [
           {
-            question: 'In endocytosis and exocytosis events, the observed pattern is: uptake of extracellular material via vesicle formation. What term should anchor the explanation?',
-            options: [
-              'active transport',
-              'sodium-potassium pump',
-              'aquaporin',
-              'endocytosis'
-            ],
-            correctAnswer: 3,
-            explanation: 'Use endocytosis because it directly maps to the described biological pattern: uptake of extracellular material via vesicle formation.'
+            question: 'The protein that coats the cytoplasmic side of membrane pits during receptor-mediated endocytosis:',
+            answer: 'clathrin',
+            acceptableAnswers: ['clathrin', 'Clathrin'],
+            placeholder: 'e.g. actin'
           },
           {
-            question: 'In an AP-style free-response about bulk transport, the observed pattern is: release of intracellular cargo via vesicle fusion. What term should anchor the explanation?',
+            question: 'The general term for vesicle fusion with the plasma membrane to release contents outside the cell:',
+            answer: 'exocytosis',
+            acceptableAnswers: ['exocytosis', 'Exocytosis'],
+            placeholder: 'e.g. endocytosis'
+          },
+          {
+            question: 'The type of endocytosis that is non-specific and takes in extracellular fluid:',
+            answer: 'pinocytosis',
+            acceptableAnswers: ['pinocytosis', 'Pinocytosis', 'cell drinking'],
+            placeholder: 'e.g. phagocytosis'
+          }
+        ]
+      }
+    },
+    {
+      id: 'mt5-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+### Match the Transport Type
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A white blood cell engulfing a pathogen:',
+            options: ['Exocytosis', 'Phagocytosis', 'Pinocytosis', 'Receptor-mediated endocytosis'],
+            correctAnswer: 'Phagocytosis'
+          },
+          {
+            question: 'LDL cholesterol binding to receptors and being internalized via coated pits:',
+            options: ['Exocytosis', 'Phagocytosis', 'Pinocytosis', 'Receptor-mediated endocytosis'],
+            correctAnswer: 'Receptor-mediated endocytosis'
+          },
+          {
+            question: 'Insulin packaged by the Golgi being released from a beta cell:',
+            options: ['Exocytosis', 'Phagocytosis', 'Pinocytosis', 'Receptor-mediated endocytosis'],
+            correctAnswer: 'Exocytosis'
+          }
+        ]
+      }
+    },
+    {
+      id: 'mt5-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Exit Ticket — Bulk Transport
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A cell is actively performing endocytosis. Over time, what would happen to the plasma membrane if exocytosis did not also occur?',
             options: [
-              'endocytosis',
-              'selective permeability',
-              'sodium-potassium pump',
-              'exocytosis'
+              'The membrane would grow larger and larger',
+              'The plasma membrane surface area would decrease as membrane is internalized, potentially compromising cell function',
+              'Nothing — membrane is continuously synthesized at the same rate',
+              'The cell would divide to compensate'
             ],
-            correctAnswer: 3,
-            explanation: 'Use exocytosis because it directly maps to the described biological pattern: release of intracellular cargo via vesicle fusion.'
+            correctAnswer: 1,
+            explanation: 'Each endocytic event removes a portion of the plasma membrane to form a vesicle. Without compensating exocytosis (which adds membrane back), the plasma membrane would shrink. In healthy cells, these processes are balanced to maintain constant membrane area.'
           }
         ]
       }

@@ -115,7 +115,9 @@ The buoyant force depends on:
 A block with volume $V = 0.005$ m³ is fully submerged in water.
 
 1) Buoyant force on the block (in N)
+
 2) If the block has mass 3 kg, will it sink or float? (type "sink" or "float")
+
 3) If the block has mass 8 kg, its apparent weight when submerged (in N)
       `,
       exercise: {

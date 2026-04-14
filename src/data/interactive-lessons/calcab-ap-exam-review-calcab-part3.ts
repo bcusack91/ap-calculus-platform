@@ -2,185 +2,153 @@ export const calcabExamReviewPart3Data = {
   topicSlug: 'ap-exam-review-calcab',
   sections: [
     {
-      id: 'calcabexamreview-p3-intro',
+      id: 'examrev3-intro',
       type: 'text' as const,
-      content: `
-# Ap Exam Review
+      content: `# AP Exam Review \u2014 Applications of Derivatives
 
-**Part 3 of 7 — Problem-Solving Patterns**
+**Part 3 of 7**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+---
 
-## Key Ideas
+### Applications of Derivatives Overview
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+| Application | Key Idea |
+|:---|:---|
+| Related Rates | Differentiate an equation involving changing quantities with respect to time |
+| Optimization | Find absolute max/min on a domain |
+| Curve Sketching | Use $f'$ and $f''$ to determine behavior |
+| Linearization | $L(x) = f(a) + f'(a)(x-a)$ approximates $f$ near $a$ |
+| L\u2019H\u00f4pital\u2019s Rule | $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$ \u2192 differentiate top and bottom |
 
-## Formula Snapshot
+### First & Second Derivative Analysis
 
-When appropriate, use:
+| Sign of $f'$ | Sign of $f''$ | Behavior of $f$ |
+|:---:|:---:|:---|
+| $+$ | $+$ | Increasing, concave up |
+| $+$ | $-$ | Increasing, concave down |
+| $-$ | $+$ | Decreasing, concave up |
+| $-$ | $-$ | Decreasing, concave down |
+| $0$ | $+$ | Local minimum |
+| $0$ | $-$ | Local maximum |
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+> **Key Fact:** The second derivative test fails when $f''(c) = 0$. Use the first derivative test instead.
 
-and interpret what the final value means in context.
-      `
+---
+
+### Related Rates Checklist
+
+1. Draw a diagram and label variables
+2. Write an equation relating the variables
+3. Differentiate both sides with respect to $t$
+4. Substitute known values and solve
+
+### Worked Example \u2014 Related Rates
+
+A balloon\u2019s radius increases at $\\frac{dr}{dt} = 2$ cm/s. Find $\\frac{dV}{dt}$ when $r = 5$.
+
+$V = \\frac{4}{3}\\pi r^3 \\implies \\frac{dV}{dt} = 4\\pi r^2 \\frac{dr}{dt} = 4\\pi(25)(2) = 200\\pi$ cm\u00b3/s.`
     },
     {
-      id: 'calcabexamreview-p3-mcq1',
+      id: 'examrev3-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Applications Quiz** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'If $f\'(x) > 0$ and $f\'\'(x) < 0$ on an interval, then $f$ is:',
+            options: ['Increasing and concave down', 'Increasing and concave up', 'Decreasing and concave down', 'Decreasing and concave up'],
+            correctAnswer: 0,
+            explanation: '$f\'>0$ means increasing. $f\'\'<0$ means concave down.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: '$f(x) = x^3 - 3x$ has a local minimum at:',
+            options: ['$x = 1$', '$x = -1$', '$x = 0$', '$x = 3$'],
+            correctAnswer: 0,
+            explanation: '$f\'(x) = 3x^2-3 = 0 \\implies x = \\pm 1$. $f\'\'(x) = 6x$. $f\'\'(1)=6>0$ \u2192 local min.'
+          },
+          {
+            question: 'To find the absolute maximum of $f$ on $[a,b]$, you must check:',
+            options: ['Critical points and endpoints', 'Only critical points', 'Only endpoints', 'Inflection points'],
+            correctAnswer: 0,
+            explanation: 'EVT guarantees max/min exist on a closed interval. Check critical points AND endpoints.'
           }
         ]
       }
     },
     {
-      id: 'calcabexamreview-p3-example',
+      id: 'examrev3-optimization',
       type: 'text' as const,
-      content: `
-## Worked Example
+      content: `### Optimization Strategy
 
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
+$$\\boxed{\\text{Absolute extrema on } [a,b]: \\text{ compare } f(\\text{critical pts}) \\text{ and } f(a), f(b)}$$
 
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
+**Example:** Maximize $f(x) = -x^2 + 6x - 5$ on $[0, 5]$.
 
-### Common Trap
+$f'(x) = -2x + 6 = 0 \\implies x = 3$ (critical point).
 
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
+| $x$ | $f(x)$ |
+|:---:|:---:|
+| $0$ | $-5$ |
+| $3$ | $4$ |
+| $5$ | $0$ |
+
+Absolute max = $4$ at $x=3$. Absolute min = $-5$ at $x=0$.`
     },
     {
-      id: 'calcabexamreview-p3-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcabexamreview-p3-dropdown',
+      id: 'examrev3-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Identify the scenario.** \ud83d\udd0d',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '$f\'(c) = 0$ and $f\'$ changes from $-$ to $+$ at $c$:',
+            options: ['Local minimum', 'Local maximum', 'Inflection point', 'Neither'],
+            correctAnswers: ['Local minimum'],
+            hints: ['$f$ goes from decreasing to increasing.'],
+            explanation: 'First derivative test: $-$ to $+$ means a valley \u2014 local minimum.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
+            label: '$f\'\'$ changes sign at $x = c$:',
+            options: ['Inflection point', 'Local maximum', 'Local minimum', 'Endpoint'],
+            correctAnswers: ['Inflection point'],
+            hints: ['Concavity changes from up to down or vice versa.'],
+            explanation: 'An inflection point is where concavity changes, which requires $f\'\'$ to change sign.'
           },
           {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcabexamreview-p3-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Problem-Solving Patterns**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcabexamreview-p3-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'A 10 ft ladder slides down a wall. To find how fast the base moves, use:',
+            options: ['Related rates', 'Optimization', 'Linearization', 'L\u2019H\u00f4pital\u2019s Rule'],
+            correctAnswers: ['Related rates'],
+            hints: ['Quantities are changing with respect to time.'],
+            explanation: 'Related rates: differentiate $x^2+y^2=100$ with respect to $t$.'
           }
         ]
       }
+    },
+    {
+      id: 'examrev3-input',
+      type: 'input-box' as const,
+      content: '**Solve the optimization problem.** \u270d\ufe0f',
+      exercise: {
+        question: 'Find the absolute maximum value of $f(x) = x^3 - 12x$ on $[-3, 4]$.',
+        correctAnswer: '16',
+        acceptableAnswers: ['16'],
+        hints: [
+          '$f\'(x) = 3x^2 - 12 = 0 \\implies x^2 = 4 \\implies x = \\pm 2$.',
+          'Evaluate: $f(-3) = -27+36 = 9$, $f(-2) = -8+24 = 16$, $f(2)= 8-24 = -16$, $f(4) = 64-48 = 16$.',
+          'Maximum value is $16$, occurring at $x=-2$ and $x=4$.'
+        ],
+        explanation: 'Critical points at $x = \\pm 2$. $f(-2) = 16$, $f(4) = 16$. Absolute max $= 16$.'
+      }
+    },
+    {
+      id: 'examrev3-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 3
+
+- Use $f'$ for increasing/decreasing and local extrema
+- Use $f''$ for concavity and inflection points
+- Related rates: differentiate an equation with respect to $t$
+- Optimization on closed intervals: check critical points AND endpoints`
     }
   ]
-}
+};

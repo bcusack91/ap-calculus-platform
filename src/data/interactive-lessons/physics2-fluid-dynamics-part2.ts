@@ -98,7 +98,9 @@ This is why:
 Water flows through a circular pipe of radius 3.0 cm at 2.0 m/s. The pipe narrows to a radius of 1.0 cm.
 
 1) Area of the wide section (in cm²)
+
 2) Area of the narrow section (in cm²)
+
 3) Speed in the narrow section (in m/s)
 
 *Round all answers to 3 significant figures.*

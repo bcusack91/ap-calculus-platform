@@ -130,7 +130,9 @@ Match each situation to the correct formula or result:
 A student performs a double-slit experiment with $\\lambda = 632.8$ nm (He-Ne laser), slit separation $d = 0.30$ mm, and screen distance $L = 1.5$ m.
 
 1) Calculate the fringe spacing (in mm, to 3 significant figures)
+
 2) The student then covers one slit. The central maximum width of the resulting single-slit pattern is 12.0 mm. What is the slit width $a$? (in mm, to 3 significant figures)
+
 3) A diffraction grating with 300 lines/mm replaces the double slit. At what angle does the 2nd-order maximum appear? (in degrees, to 3 significant figures)
       `,
       exercise: {

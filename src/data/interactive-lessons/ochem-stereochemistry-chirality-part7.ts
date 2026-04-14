@@ -88,7 +88,9 @@ export const oChemStereoPart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: 1:1 enantiomer mixture with zero net rotation
+
       2) Term for: mechanism dictates one stereochemical relation
+
       3) Product pattern expected under SN2 at stereocenter
       `,
       exercise: {

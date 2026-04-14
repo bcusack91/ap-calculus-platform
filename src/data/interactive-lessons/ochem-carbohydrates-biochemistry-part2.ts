@@ -88,7 +88,9 @@ export const oChemCarbsPart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: former carbonyl carbon in cyclic sugar
+
       2) Term for: anomeric substituent trans to CH2OH in D-sugars
+
       3) Product pattern expected under H2O, acid
       `,
       exercise: {

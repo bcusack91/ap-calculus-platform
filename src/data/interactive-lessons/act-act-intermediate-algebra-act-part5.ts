@@ -107,7 +107,9 @@ $$x = 3x - 6 \\implies -2x = -6 \\implies x = 3$$
 **Logarithm Practice** 🧮
 
 1) What is $\\log_5 125$?
+
 2) Solve $\\log_2 x = 5$. What is $x$?
+
 3) Simplify $\\log_3 9 + \\log_3 3$. (enter the numerical answer)
       `,
       exercise: {

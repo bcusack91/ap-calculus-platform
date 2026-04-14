@@ -101,10 +101,15 @@ $$I_{\\text{total}} = \\frac{V}{R_{\\text{total}}} = \\frac{24}{9} = \\frac{8}{3
 $R_1 = 5 \\; \\Omega$ is in series with the parallel combination of $R_2 = 10 \\; \\Omega$ and $R_3 = 40 \\; \\Omega$. The battery provides $V = 20$ V.
 
 1) Equivalent resistance of $R_2$ and $R_3$ in parallel (in $\\Omega$)
+
 2) Total circuit resistance (in $\\Omega$)
+
 3) Total current from the battery (in A)
+
 4) Voltage across $R_1$ (in V)
+
 5) Voltage across the parallel group (in V)
+
 6) Current through $R_2$ (in A)
 
 *Round all answers to 3 significant figures.*

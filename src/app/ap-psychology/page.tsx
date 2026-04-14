@@ -75,6 +75,18 @@ const features = [
     stats: 'New daily · All units',
   },
   {
+    title: 'FRQ Practice',
+    description: 'Practice AP Psychology free-response questions with concept application and research design prompts, rubrics, and sample answers.',
+    href: '/ap-psych-frq',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+      </svg>
+    ),
+    color: 'from-fuchsia-500 to-pink-500',
+    stats: '33% of AP score · Timed mode',
+  },
+  {
     title: 'Exit Quizzes',
     description: 'Short assessments after each lesson to confirm understanding before moving on.',
     href: '/courses/ap-psychology',

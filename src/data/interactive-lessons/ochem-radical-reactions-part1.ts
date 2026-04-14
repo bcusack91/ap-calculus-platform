@@ -88,7 +88,9 @@ export const oChemRadicalsPart1Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: bond cleavage giving one electron to each fragment
+
       2) Term for: self-propagating sequence of radical steps
+
       3) Product pattern expected under Br2, hν
       `,
       exercise: {

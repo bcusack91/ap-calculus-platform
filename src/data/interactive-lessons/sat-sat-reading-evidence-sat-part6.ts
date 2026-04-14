@@ -57,7 +57,102 @@ The Digital SAT includes informational graphics alongside some Reading & Writing
             explanation: 'Start with the passage to understand the argument, then examine the graph with attention to title, axes, and units. Integration of both is always required for correct answers.'
           }
         ]
+      }    },
+    {
+      id: 're6-text2',
+      type: 'text' as const,
+      content: `## Deep Dive: Text + Data Integration
+
+### Worked Example 1: Does the Data Support or Complicate the Text?
+
+**Text claim:** "Electric vehicle sales have surged, suggesting widespread consumer adoption."
+
+**Graph data:** EV sales grew from 1% to 8% of total car sales (2018-2024).
+
+| Analysis | Result |
+|---|---|
+| Did sales grow? | Yes — 1% to 8% is 8× growth |
+| Does "surge" fit? | ✅ Yes — 8× growth qualifies as a surge |
+| Does "widespread adoption" fit? | ⚠️ Questionable — 8% is still a small minority |
+| Verdict | Data PARTIALLY supports: "surged" ✅ but "widespread" may overstate 8% share |
+
+### Worked Example 2: Reading Graph Details Carefully
+
+| Graph Element | What to Check | Common Mistake |
+|---|---|---|
+| **Y-axis** | Does it start at 0? | A graph starting at 50 exaggerates changes |
+| **Scale** | Linear or logarithmic? | Log scale makes exponential growth look linear |
+| **Units** | %, absolute numbers, per capita? | 50% increase FROM 2 = only 3 |
+| **Time range** | What years are shown? | Trend in 2020-2024 may differ from 2000-2024 |
+| **Title** | What does it actually measure? | "Revenue" ≠ "profit" ≠ "units sold" |
+
+### Data-Text Relationship Types
+
+| Relationship | Signal | Example |
+|---|---|---|
+| Data supports text | "As the graph shows…" | Text says "rising" + graph shows increase |
+| Data qualifies text | "However, the data suggests…" | Text says "dramatic" but change is small |
+| Data contradicts text | "Contrary to the claim…" | Text says "decline" but graph shows increase |
+| Data extends text | "Furthermore, the data reveals…" | Text discusses cause, data shows magnitude |`
+    },
+    {
+      id: 're6-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Data Interpretation Challenge** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: 'A bar chart shows Country A spending 5% of GDP on education and Country B spending 4.9%. The text claims "a substantial gap in education investment." The data:',
+            options: ['Undermines the claim — a 0.1% difference is not "substantial"', 'Fully supports the claim', 'Is irrelevant to the claim', 'Proves the claim definitively'],
+            correctAnswer: 0,
+            explanation: '5% vs. 4.9% = 0.1 percentage point difference. While technically A spends more, calling this "substantial" is an overstatement that the data doesn\'t support.'
+          },
+          {
+            question: 'A graph shows temperatures rising from 14.0°C to 14.8°C over 100 years, but the y-axis starts at 13.5°C instead of 0. This means:',
+            options: ['The visual exaggerates the temperature increase', 'The temperature change is larger than it appears', 'The data is incorrect', 'The graph is unreadable'],
+            correctAnswer: 0,
+            explanation: 'A truncated y-axis (not starting at 0) magnifies visual differences. The 0.8°C increase looks much larger on a 13.5-15.0 scale than it would on a 0-15 scale. Always check the axis range.'
+          },
+          {
+            question: 'Text claims: "Exercise reduces heart disease risk." A table shows 50% lower risk for those exercising 150+ min/week vs. sedentary. The data:',
+            options: ['Strongly supports the claim with quantitative evidence', 'Partially supports — 50% is not enough', 'Contradicts the claim', 'Is irrelevant'],
+            correctAnswer: 0,
+            explanation: 'A 50% risk reduction is substantial quantitative evidence directly supporting the claim that exercise reduces heart disease risk. The data and text align well.'
+          }
+        ]
       }
-    }
+    },
+    {
+      id: 're6-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Data + Reading Check** — Select the correct answer.',
+      exercise: {
+        dropdowns: [
+          'Always check the graph\'s [y-axis scale and units|color scheme|font size|legend position]',
+          'Text says "dramatic increase," data shows 0.5% change → [data qualifies/undermines the text|data supports|data is wrong|text is always right]',
+          'Read the [passage first, then the graph|graph first|passage only|graph only]',
+          'A graph not starting at 0 can [exaggerate visual differences|hide the data|be ignored|simplify the analysis]'
+        ],
+        correctAnswers: ['y-axis scale and units', 'data qualifies/undermines the text', 'passage first, then the graph', 'exaggerate visual differences'],
+        hint1: 'Scale and units determine how to interpret the data.',
+        hint2: '"Dramatic" is strong language for 0.5%.',
+        hint3: 'Understand the argument first, then check the data.',
+        explanation: 'Always check scale/units. Small data changes don\'t support "dramatic" claims. Read the passage first. Truncated y-axes exaggerate visual differences.'
+      }
+    },
+    {
+      id: 're6-summary',
+      type: 'text' as const,
+      content: `## Part 6 Summary
+
+| Concept | Key Rule |
+|---|---|
+| Integration | Read text first → examine graph → compare |
+| Check graph | Y-axis, scale, units, title, time range |
+| Data can | Support, qualify, contradict, or extend the text |
+| Truncated y-axis | Exaggerates visual differences |
+| Common trap | Text uses strong language but data shows small change |
+
+*Next: Reading Comprehension Review →*`    }
   ]
 };

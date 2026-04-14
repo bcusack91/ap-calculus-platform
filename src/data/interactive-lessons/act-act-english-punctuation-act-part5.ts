@@ -108,7 +108,9 @@ Most ACT passages use declarative sentences, so the period is the most common en
 What end punctuation mark should close each sentence? Type "period," "question mark," or "exclamation point."
 
 1) "She wondered whether the results would be significant ___" — What goes in the blank?
+
 2) "What factors contributed to the colony\'s decline ___" — What goes in the blank?
+
 3) "The researchers published their findings in a peer-reviewed journal ___" — What goes in the blank?
       `,
       exercise: {

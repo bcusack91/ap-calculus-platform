@@ -88,7 +88,9 @@ export const oChemConjugatedPart3Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: electrophile and nucleophile add across adjacent carbons
+
       2) Term for: net addition across conjugated system termini
+
       3) Product pattern expected under Br2 allylic conditions
       `,
       exercise: {

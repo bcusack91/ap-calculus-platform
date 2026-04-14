@@ -107,7 +107,9 @@ $$m = -\\frac{d_i}{d_o} = -\\frac{-6}{24} = +\\frac{1}{4} = +0.25$$
 A diverging lens has $f = -12$ cm. An object of height 9.0 cm is placed 36 cm from the lens.
 
 1) Image distance $d_i$ (in cm)
+
 2) Magnification $m$ (as a fraction or decimal)
+
 3) Image height $h_i$ (in cm)
 
 *Round all answers to 3 significant figures.*
@@ -130,7 +132,9 @@ A diverging lens has $f = -12$ cm. An object of height 9.0 cm is placed 36 cm fr
 An object is placed 20 cm from a lens. Calculate $d_i$ for each lens:
 
 1) Converging lens with $f = +10$ cm: $d_i$ = ? (in cm)
+
 2) Diverging lens with $f = -10$ cm: $d_i$ = ? (in cm)
+
 3) What is the magnification for the diverging lens?
 
 *Round all answers to 3 significant figures.*

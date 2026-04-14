@@ -88,7 +88,9 @@ export const oChemAromaticPart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: cyclic planar conjugated system with 4n pi electrons
+
       2) Term for: fails planarity or conjugation requirement
+
       3) Product pattern expected under HNO3, H2SO4
       `,
       exercise: {

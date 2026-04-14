@@ -60,21 +60,39 @@ Wrong answers often restate a **supporting detail** as if it were the main idea.
       }
     },
     {
-      id: 're1-detail',
+      id: 're1-text2',
       type: 'text' as const,
-      content: `## Strategy: The "One Sentence Summary" Test
+      content: `## Deep Dive: Main Idea Mastery
 
-After reading a passage, try to summarize it in ONE sentence. If your summary matches an answer choice, that's likely correct.
+### Worked Example 1: Testing Each Answer Choice
 
-**Practice this pattern:**
+**Passage summary:** "Research shows screen time before bed disrupts melatonin production, worsening sleep quality. However, screen type matters — e-readers on night mode had minimal effect."
 
-| Passage About | One-Sentence Summary |
+| Answer Choice | Verdict | Why |
+|---|---|---|
+| A) "All screen time is harmful" | ❌ Too extreme | Passage says some screens have minimal effect |
+| B) "Screen time's effect on sleep depends on screen type and settings" | ✅ Correct | Captures the nuance: not all screens are equal |
+| C) "E-readers are better than phones" | ❌ Too narrow | Just one detail, not the main idea |
+| D) "Melatonin production is complex" | ❌ Too broad | Passage is about screens and sleep, not melatonin in general |
+
+### Worked Example 2: The One-Sentence Summary Method
+
+| Passage Topic | After Reading, You Think… | One-Sentence Summary |
+|---|---|---|
+| Wolves in Yellowstone | "Wolves changed the whole ecosystem" | "Reintroducing apex predators triggers cascading ecological benefits" |
+| Urban farming | "City gardens help communities" | "Urban agriculture improves food access and community cohesion" |
+| Bilingual education | "Being bilingual helps your brain" | "Bilingualism enhances cognitive flexibility and executive function" |
+
+Now match your summary to the answer choices. The best match = correct answer.
+
+### Main Idea vs. Supporting Detail
+
+| Statement | Main Idea or Detail? |
 |---|---|
-| Sleep and memory research | "Sleep plays a critical role in memory consolidation" |
-| Jane Austen's writing style | "Austen used irony to critique social class structures" |
-| Climate change and migration | "Climate change is becoming a significant driver of human migration" |
-
-If you can't summarize in one sentence, you may need to reread the passage more carefully.
+| "Urban green spaces improve mental health" | Main idea (broad claim) |
+| "A 2023 study of 500 participants found 20% lower anxiety" | Detail (specific evidence) |
+| "Parks reduce stress and increase social interaction" | Main idea (captures scope) |
+| "Central Park spans 843 acres" | Detail (single fact) |
 
 ### Red Flags in Wrong Answers
 
@@ -82,6 +100,65 @@ If you can't summarize in one sentence, you may need to reread the passage more 
 - **Too narrow:** Focuses on one paragraph instead of the whole passage
 - **Reversed logic:** States the opposite of the author's argument
 - **Out of scope:** Introduces ideas not discussed in the passage`
+    },
+    {
+      id: 're1-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Advanced Main Idea Challenge** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: 'A passage discusses how traditional Indigenous fire management techniques are being adopted by modern wildfire agencies. Which is the best main idea?',
+            options: ['Indigenous land management practices offer valuable approaches for modern wildfire prevention', 'Indigenous people used fire for thousands of years', 'Modern agencies have failed to prevent wildfires', 'Fire is a natural part of many ecosystems'],
+            correctAnswer: 0,
+            explanation: 'The passage connects Indigenous techniques to modern adoption — that connection IS the main idea. B is too narrow (historical fact only). C makes a negative claim not warranted. D is too broad.'
+          },
+          {
+            question: 'How can you tell a "supporting detail" answer from a "main idea" answer?',
+            options: ['The detail mentions specific numbers, studies, or examples; the main idea is a broad claim', 'The main idea is always the longest answer choice', 'The detail uses more complex vocabulary', 'The main idea always appears in the first sentence'],
+            correctAnswer: 0,
+            explanation: 'Supporting details are specific (numbers, named studies, individual examples). Main ideas are broader claims that the details support. Length, vocabulary, and position are unreliable indicators.'
+          },
+          {
+            question: 'A passage about deep-sea mining presents both economic benefits and environmental risks. The best main idea answer will:',
+            options: ['Acknowledge both sides of the issue', 'Focus only on the economic benefits', 'Focus only on the environmental risks', 'Declare that mining should be banned'],
+            correctAnswer: 0,
+            explanation: 'If the passage presents both sides, the correct main idea must capture that balance. One-sided answers represent only part of the passage — they\'re "too narrow."'
+          }
+        ]
+      }
+    },
+    {
+      id: 're1-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Main Idea Check** — Select the correct answer.',
+      exercise: {
+        dropdowns: [
+          'An answer that mentions one specific study is likely a [supporting detail|main idea|inference|vocabulary question]',
+          '"Proves definitively" in an answer choice is usually [wrong — too absolute|correct|neutral|irrelevant]',
+          'The one-sentence summary should match the [correct main idea answer|longest answer|most specific answer|first answer]',
+          'Too-broad answers go [beyond the passage scope|into specific detail|against the author|nowhere]'
+        ],
+        correctAnswers: ['supporting detail', 'wrong — too absolute', 'correct main idea answer', 'beyond the passage scope'],
+        hint1: 'Specific studies = evidence, not the big picture.',
+        hint2: 'SAT passages rarely use absolute language like "proves."',
+        hint3: 'Your mental summary = your guide to the right answer.',
+        explanation: 'Specific studies are details. Absolute language is usually wrong. Your one-sentence summary guides your choice. Too-broad answers discuss more than the passage covers.'
+      }
+    },
+    {
+      id: 're1-summary',
+      type: 'text' as const,
+      content: `## Part 1 Summary
+
+| Skill | Strategy |
+|---|---|
+| Find the main idea | One-sentence summary, then match |
+| Eliminate wrong answers | Too broad, too narrow, too extreme, reversed logic |
+| Distinguish detail from main idea | Details are specific; main ideas are broad claims |
+| Watch for traps | "Proves," "always," "the only" = usually wrong |
+
+*Next: Command of Evidence — Textual →*`
     }
   ]
 };

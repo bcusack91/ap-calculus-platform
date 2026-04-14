@@ -66,6 +66,7 @@ Subtracting overlap once is the key move. ACT often tests this exact trap.\n    
         type: 'input-boxes' as const,
         content: `\n**Numeric Practice**
 1) Dataset: 4, 7, 9, 10. Enter the median.
+
 2) If P(A)=0.4 and P(B)=0.5 and P(A and B)=0.2, enter P(A or B).
 3) How many 2-letter arrangements can be made from letters A, B, C with no repetition?\n        `,
         exercise: {

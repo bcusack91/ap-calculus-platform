@@ -95,7 +95,9 @@ export const bioMendelianPart7Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **grid method for predicting genotype combinations**
+
       2) Term for this definition: **cross with homozygous recessive to reveal unknown genotype**
+
       3) Term for this definition: **family diagram tracking trait inheritance across generations**
       `,
       exercise: {

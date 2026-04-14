@@ -265,6 +265,58 @@ const quizLoaders: Record<string, QuizLoader> = {
   'atomic-structure': () => import('./ap-physics-2'),
 
   // ═══════════════════════════════════════════════════
+  // AP Physics C: Mechanics Exit Quizzes
+  // ═══════════════════════════════════════════════════
+  'ap-physics-c-mechanics': () => import('./ap-physics-c-mechanics'),
+  // Kinematics
+  'physics-c-1d-kinematics': () => import('./ap-physics-c-mechanics'),
+  'physics-c-2d-kinematics': () => import('./ap-physics-c-mechanics'),
+  'physics-c-variable-acceleration': () => import('./ap-physics-c-mechanics'),
+  // Newton's Laws
+  'physics-c-newtons-laws-calculus': () => import('./ap-physics-c-mechanics'),
+  'physics-c-friction-inclines': () => import('./ap-physics-c-mechanics'),
+  'physics-c-circular-motion': () => import('./ap-physics-c-mechanics'),
+  // Work, Energy, Power
+  'physics-c-work-power': () => import('./ap-physics-c-mechanics'),
+  'physics-c-conservative-forces': () => import('./ap-physics-c-mechanics'),
+  'physics-c-potential-energy-curves': () => import('./ap-physics-c-mechanics'),
+  // Momentum
+  'physics-c-momentum-collisions': () => import('./ap-physics-c-mechanics'),
+  'physics-c-center-of-mass': () => import('./ap-physics-c-mechanics'),
+  'physics-c-variable-mass': () => import('./ap-physics-c-mechanics'),
+  // Rotation & Oscillation
+  'physics-c-rotational-kinematics-dynamics': () => import('./ap-physics-c-mechanics'),
+  'physics-c-angular-momentum': () => import('./ap-physics-c-mechanics'),
+  'physics-c-simple-harmonic-motion': () => import('./ap-physics-c-mechanics'),
+
+  // ═══════════════════════════════════════════════════
+  // AP Physics C: E&M Exit Quizzes
+  // ═══════════════════════════════════════════════════
+  'ap-physics-c-em': () => import('./ap-physics-c-em'),
+  // Electrostatics
+  'physics-c-coulomb-law': () => import('./ap-physics-c-em'),
+  'physics-c-electric-fields': () => import('./ap-physics-c-em'),
+  'physics-c-gauss-law': () => import('./ap-physics-c-em'),
+  // Electric Potential
+  'physics-c-electric-potential': () => import('./ap-physics-c-em'),
+  'physics-c-conductors-equilibrium': () => import('./ap-physics-c-em'),
+  'physics-c-potential-energy': () => import('./ap-physics-c-em'),
+  // Capacitors & Dielectrics
+  'physics-c-capacitors': () => import('./ap-physics-c-em'),
+  'physics-c-dielectrics': () => import('./ap-physics-c-em'),
+  'physics-c-energy-density': () => import('./ap-physics-c-em'),
+  // Circuits
+  'physics-c-dc-circuits': () => import('./ap-physics-c-em'),
+  'physics-c-rc-circuits': () => import('./ap-physics-c-em'),
+  'physics-c-power-circuits': () => import('./ap-physics-c-em'),
+  // Magnetism & EM Induction
+  'physics-c-magnetic-forces': () => import('./ap-physics-c-em'),
+  'physics-c-magnetic-field-sources': () => import('./ap-physics-c-em'),
+  'physics-c-faraday-induction': () => import('./ap-physics-c-em'),
+  'physics-c-inductance-rl': () => import('./ap-physics-c-em'),
+  'physics-c-maxwell-equations': () => import('./ap-physics-c-em'),
+
+  // ═══════════════════════════════════════════════════
   // AP Calculus AB Exit Quizzes
   // ═══════════════════════════════════════════════════
   'ap-calculus-ab': () => import('./ap-calculus-ab'),
@@ -315,6 +367,28 @@ const quizLoaders: Record<string, QuizLoader> = {
   'logistic-models-calcbc': () => import('./ap-calculus-bc'),
   'bc-exam-strategies-calcbc': () => import('./ap-calculus-bc'),
   'review-connections-calcbc': () => import('./ap-calculus-bc'),
+
+  // ═══════════════════════════════════════════════════
+  // Pre-Algebra Exit Quizzes
+  // ═══════════════════════════════════════════════════
+  'pre-algebra': () => import('./pre-algebra'),
+  'pre-algebra-integers': () => import('./pre-algebra'),
+  'pre-algebra-fractions': () => import('./pre-algebra'),
+  'pre-algebra-decimals': () => import('./pre-algebra'),
+  'pre-algebra-percents': () => import('./pre-algebra'),
+  'pre-algebra-ratios': () => import('./pre-algebra'),
+  'pre-algebra-expressions': () => import('./pre-algebra'),
+  'pre-algebra-equations': () => import('./pre-algebra'),
+  'pre-algebra-inequalities': () => import('./pre-algebra'),
+  'pre-algebra-geometry': () => import('./pre-algebra'),
+  'pre-algebra-exponents': () => import('./pre-algebra'),
+  'pre-algebra-data-graphs': () => import('./pre-algebra'),
+  'integers-operations': () => import('./pre-algebra'),
+  'fractions-operations': () => import('./pre-algebra'),
+  'decimals-operations': () => import('./pre-algebra'),
+  'percents-basics': () => import('./pre-algebra'),
+  'ratios-proportions': () => import('./pre-algebra'),
+  'order-of-operations': () => import('./pre-algebra'),
 
   // ═══════════════════════════════════════════════════
   // Algebra 1 Exit Quizzes

@@ -2,185 +2,117 @@ export const calcbcArcLengthPart3Data = {
   topicSlug: 'arc-length-surface-area-calcbc',
   sections: [
     {
-      id: 'calcbcarclength-p3-intro',
+      id: 'al3-intro',
       type: 'text' as const,
-      content: `
-# Arc Length Surface Area
+      content: `# Arc Length & Surface Area — Surface Area of Revolution
 
-**Part 3 of 7 — Problem-Solving Patterns**
+**Part 3 of 7 — Surfaces of Revolution**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+When a curve is rotated about an axis, it sweeps out a surface. The surface area is:
 
-## Key Ideas
+### About the $x$-axis ($y \\ge 0$):
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+$$\\boxed{S = 2\\pi \\int_a^b y\\,ds = 2\\pi \\int_a^b f(x)\\sqrt{1 + (f'(x))^2}\\,dx}$$
 
-## Formula Snapshot
+### About the $y$-axis ($x \\ge 0$):
 
-When appropriate, use:
+$$\\boxed{S = 2\\pi \\int_a^b x\\,ds = 2\\pi \\int_a^b x\\sqrt{1 + (f'(x))^2}\\,dx}$$
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+| Axis of Revolution | Radius of Revolution | Formula |
+|-------------------|---------------------|---------|
+| $x$-axis | $y = f(x)$ | $2\\pi\\int y\\,ds$ |
+| $y$-axis | $x$ | $2\\pi\\int x\\,ds$ |
 
-and interpret what the final value means in context.
-      `
+> **Key Fact:** The formula is $S = 2\\pi\\int(\\text{radius})(ds)$. The "radius" is the distance from the curve to the axis of rotation.`
     },
     {
-      id: 'calcbcarclength-p3-mcq1',
+      id: 'al3-examples',
+      type: 'text' as const,
+      content: `### Example 1 — Sphere Surface Area
+
+Rotate $y = \\sqrt{r^2 - x^2}$ (semicircle) about the $x$-axis, $-r \\le x \\le r$.
+
+$y' = \\frac{-x}{\\sqrt{r^2-x^2}}$, $1 + (y')^2 = \\frac{r^2}{r^2 - x^2}$
+
+$$S = 2\\pi\\int_{-r}^{r} \\sqrt{r^2 - x^2}\\cdot\\frac{r}{\\sqrt{r^2-x^2}}\\,dx = 2\\pi r\\int_{-r}^{r}dx = 2\\pi r(2r) = 4\\pi r^2$$
+
+This confirms the known sphere surface area formula. ✓
+
+### Example 2 — Cone Lateral Surface
+
+Rotate $y = 2x$ from $x = 0$ to $x = 3$ about the $x$-axis.
+
+$y' = 2$, $ds = \\sqrt{1+4}\\,dx = \\sqrt{5}\\,dx$
+
+$$S = 2\\pi\\int_0^3 2x\\cdot\\sqrt{5}\\,dx = 4\\pi\\sqrt{5}\\cdot\\frac{9}{2} = 18\\pi\\sqrt{5}$$`
+    },
+    {
+      id: 'al3-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Practice Problems**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'The surface area formula $S = 2\\pi\\int y\\,ds$ assumes revolution about which axis?',
+            options: ['The $x$-axis', 'The $y$-axis', 'Either axis', 'The line $y = x$'],
+            correctAnswer: 0,
+            explanation: 'When revolving about the $x$-axis, each point traces a circle of radius $y$ (its distance from the $x$-axis). So the integrand involves $2\\pi y$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'For revolution about the $y$-axis, the "radius of revolution" for a point $(x, y)$ is:',
+            options: ['$x$ (horizontal distance to the $y$-axis)', '$y$', '$\\sqrt{x^2+y^2}$', '$x + y$'],
+            correctAnswer: 0,
+            explanation: 'Distance from $(x, y)$ to the $y$-axis is $|x|$. With $x \\ge 0$, this is simply $x$.'
           }
         ]
       }
     },
     {
-      id: 'calcbcarclength-p3-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcarclength-p3-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcarclength-p3-dropdown',
+      id: 'al3-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Concept Checks**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'Rotating $y = x^2$ from $x = 0$ to $x = 1$ about the $x$-axis gives $S = $',
+            options: ['$2\\pi\\int_0^1 x^2\\sqrt{1+4x^2}\\,dx$', '$2\\pi\\int_0^1 x\\sqrt{1+4x^2}\\,dx$', '$2\\pi\\int_0^1 \\sqrt{1+4x^2}\\,dx$', '$\\pi\\int_0^1 x^4\\,dx$'],
+            correctAnswers: ['$2\\pi\\int_0^1 x^2\\sqrt{1+4x^2}\\,dx$'],
+            hints: ['About the $x$-axis: radius $= y = x^2$, $ds = \\sqrt{1+(2x)^2}\\,dx$.'],
+            explanation: '$S = 2\\pi\\int y\\,ds = 2\\pi\\int_0^1 x^2\\sqrt{1+4x^2}\\,dx$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcarclength-p3-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Problem-Solving Patterns**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcarclength-p3-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'If a curve lies below the $x$-axis and is rotated about the $x$-axis, the radius is:',
+            options: ['$|y|$ (take absolute value)', '$y$ (negative)', '$-y$', '0'],
+            correctAnswers: ['$|y|$ (take absolute value)'],
+            hints: ['Surface area must be positive.'],
+            explanation: 'Distance from the curve to the axis is $|y|$. Surface area is always non-negative.'
           }
         ]
       }
+    },
+    {
+      id: 'al3-input',
+      type: 'input-box' as const,
+      content: '**Verification**',
+      exercise: {
+        question: 'Rotate $y = r$ (horizontal line, constant) from $x = 0$ to $x = h$ about the $x$-axis. The surface is a cylinder. Its surface area is $2\\pi r h$. Verify: $y\' = 0$, so $S = 2\\pi\\int_0^h r\\cdot 1\\,dx = ?$ Give the answer in terms of $r$ and $h$ as "2pirh".',
+        correctAnswer: '2pirh',
+        acceptableAnswers: ['2pirh', '2πrh', '2pi*r*h', '2 pi r h'],
+        hints: ['$ds = \\sqrt{1+0}\\,dx = dx$.'],
+        explanation: '$S = 2\\pi\\int_0^h r\\,dx = 2\\pi r[x]_0^h = 2\\pi rh$. This is the lateral surface area of a cylinder. ✓'
+      }
+    },
+    {
+      id: 'al3-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Surface area of revolution = $2\\pi\\int(\\text{radius})(ds)$
+- About $x$-axis: radius $= |y|$
+- About $y$-axis: radius $= |x|$
+- Verify with known shapes: sphere ($4\\pi r^2$), cylinder ($2\\pi rh$), cone ($\\pi r\\ell$)
+
+> **Next:** Part 4 — Parametric and polar surface area formulas.`
     }
   ]
-}
+};

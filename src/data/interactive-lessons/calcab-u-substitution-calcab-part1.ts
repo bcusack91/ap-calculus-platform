@@ -8,41 +8,65 @@ export const calcabUSubPart1Data = {
 
 **Part 1 of 7 — Basic u-Substitution**
 
-### The Idea
+| Part | Topic |
+|:---:|:---:|
+| **1** | **Basic u-Substitution** |
+| 2 | Adjusting for Missing Constants |
+| 3 | Definite Integrals with u-Sub |
+| 4 | Trickier Substitutions |
+| 5 | Long Division & Completing the Square |
+| 6 | Problem-Solving Workshop |
+| 7 | Comprehensive Review |
 
-u-Substitution is the **reverse of the Chain Rule**. When you see a composite function inside an integral, you substitute $u$ for the inner function.
+### The Big Idea
 
-### The Method
+$$\\boxed{\\text{u-Substitution is the REVERSE of the Chain Rule}}$$
 
-1. **Identify** the inner function — call it $u$
-2. **Compute** $du = u'(x)\\,dx$
-3. **Rewrite** the entire integral in terms of $u$ and $du$
-4. **Integrate** in terms of $u$
-5. **Substitute back** to $x$
+The Chain Rule says: $\\frac{d}{dx}[F(g(x))] = F'(g(x)) \\cdot g'(x) = f(g(x)) \\cdot g'(x)$.
 
-### Worked Example 1
+Working backwards: $\\int f(g(x)) \\cdot g'(x)\\,dx = F(g(x)) + C$.
 
-$$\\int 2x \\cos(x^2)\\,dx$$
+### The 5-Step Method
 
-Let $u = x^2$, so $du = 2x\\,dx$.
+| Step | Action | Example: $\\int 2x\\cos(x^2)\\,dx$ |
+|:---:|:---:|:---:|
+| 1 | Choose $u$ = inner function | $u = x^2$ |
+| 2 | Find $du$ | $du = 2x\\,dx$ |
+| 3 | Rewrite in terms of $u$ | $\\int \\cos(u)\\,du$ |
+| 4 | Integrate | $\\sin(u) + C$ |
+| 5 | Substitute back | $\\sin(x^2) + C$ |`
+    },
+    {
+      id: 'usub1-choosing',
+      type: 'text' as const,
+      content: `### How to Choose $u$
 
-$$\\int \\cos(u)\\,du = \\sin(u) + C = \\sin(x^2) + C$$
+$$\\boxed{u = \\text{the inner function of a composition}}$$
 
-### Worked Example 2
+| Look For | Choose $u$ | Why |
+|:---:|:---:|:---:|
+| $(\\text{stuff})^n$ with its derivative nearby | $u = \\text{stuff}$ | Power of a function |
+| $e^{\\text{stuff}}$ with derivative of stuff | $u = \\text{stuff}$ | Exponential compound |
+| $\\sin(\\text{stuff})$, $\\cos(\\text{stuff})$ | $u = \\text{stuff}$ | Trig compound |
+| $\\ln(\\text{stuff})$ in denominator | $u = \\text{stuff}$ | Log pattern |
 
-$$\\int 3x^2 e^{x^3}\\,dx$$
+### Worked Examples
 
-Let $u = x^3$, so $du = 3x^2\\,dx$.
+**Example 1:** $\\int 3x^2 e^{x^3}\\,dx$
 
-$$\\int e^u\\,du = e^u + C = e^{x^3} + C$$
+$u = x^3$, $du = 3x^2\\,dx$ → $\\int e^u\\,du = e^{x^3} + C$
 
-### Worked Example 3
+**Example 2:** $\\int \\frac{5}{(5x+1)^3}\\,dx$
 
-$$\\int \\frac{5}{(5x+1)^3}\\,dx$$
+$u = 5x+1$, $du = 5\\,dx$ → $\\int u^{-3}\\,du = -\\frac{1}{2}u^{-2} + C = -\\frac{1}{2(5x+1)^2} + C$
 
-Let $u = 5x + 1$, so $du = 5\\,dx$, meaning $dx = \\frac{du}{5}$.
+**Example 3:** $\\int x\\sqrt{x^2+1}\\,dx$
 
-$$\\int \\frac{5}{u^3} \\cdot \\frac{du}{5} = \\int u^{-3}\\,du = \\frac{u^{-2}}{-2} + C = -\\frac{1}{2(5x+1)^2} + C$$`
+$u = x^2+1$, $du = 2x\\,dx$, so $x\\,dx = \\frac{du}{2}$
+
+$\\frac{1}{2}\\int u^{1/2}\\,du = \\frac{1}{2} \\cdot \\frac{2}{3}u^{3/2} = \\frac{1}{3}(x^2+1)^{3/2} + C$
+
+> **AP Tip:** Always check your answer by differentiating! If $\\frac{d}{dx}[\\text{answer}] = \\text{integrand}$, you're correct.`
     },
     {
       id: 'usub1-quiz1',
@@ -52,23 +76,87 @@ $$\\int \\frac{5}{u^3} \\cdot \\frac{du}{5} = \\int u^{-3}\\,du = \\frac{u^{-2}}
         questions: [
           {
             question: 'Evaluate $\\int 4x(x^2 + 3)^5\\,dx$.',
-            options: ['$\\frac{(x^2+3)^6}{3} + C$', '$\\frac{2(x^2+3)^6}{6} + C$', '$\\frac{(x^2+3)^6}{6} + C$', '$\\frac{4(x^2+3)^6}{6} + C$'],
+            options: ['$\\frac{(x^2+3)^6}{3} + C$', '$\\frac{(x^2+3)^6}{6} + C$', '$\\frac{2(x^2+3)^6}{3} + C$', '$4 \\cdot \\frac{(x^2+3)^6}{6} + C$'],
             correctAnswer: 0,
-            explanation: 'Let $u = x^2 + 3$, $du = 2x\\,dx$, so $4x\\,dx = 2\\,du$. $\\int 2u^5\\,du = \\frac{2u^6}{6} = \\frac{u^6}{3} = \\frac{(x^2+3)^6}{3} + C$.'
+            explanation: '$u = x^2+3$, $du = 2x\\,dx$, so $4x\\,dx = 2\\,du$. $2\\int u^5\\,du = \\frac{2u^6}{6} = \\frac{(x^2+3)^6}{3} + C$.'
           },
           {
             question: 'Evaluate $\\int \\cos(3x)\\,dx$.',
             options: ['$\\sin(3x) + C$', '$3\\sin(3x) + C$', '$\\frac{\\sin(3x)}{3} + C$', '$-\\sin(3x) + C$'],
             correctAnswer: 2,
-            explanation: 'Let $u = 3x$, $du = 3\\,dx$, so $dx = \\frac{du}{3}$. $\\frac{1}{3}\\int \\cos(u)\\,du = \\frac{\\sin(u)}{3} = \\frac{\\sin(3x)}{3} + C$.'
+            explanation: '$u = 3x$, $du = 3\\,dx$. $\\frac{1}{3}\\int \\cos u\\,du = \\frac{\\sin(3x)}{3} + C$.'
           },
           {
             question: 'Evaluate $\\int x\\sqrt{x^2 + 1}\\,dx$.',
             options: ['$\\frac{1}{3}(x^2+1)^{3/2} + C$', '$\\frac{2}{3}(x^2+1)^{3/2} + C$', '$\\frac{1}{2}(x^2+1)^{3/2} + C$', '$(x^2+1)^{3/2} + C$'],
             correctAnswer: 0,
-            explanation: 'Let $u = x^2+1$, $du = 2x\\,dx$, so $x\\,dx = \\frac{du}{2}$. $\\frac{1}{2}\\int u^{1/2}\\,du = \\frac{1}{2} \\cdot \\frac{u^{3/2}}{3/2} = \\frac{1}{3}u^{3/2} = \\frac{1}{3}(x^2+1)^{3/2} + C$.'
+            explanation: '$u = x^2+1$, $du = 2x\\,dx$. $\\frac{1}{2}\\int u^{1/2}\\,du = \\frac{1}{3}(x^2+1)^{3/2} + C$.'
           }
         ]
+      }
+    },
+    {
+      id: 'usub1-common',
+      type: 'text' as const,
+      content: `### The Linear Substitution Shortcut
+
+For $\\int f(ax + b)\\,dx$ where $f$ has a known antiderivative $F$:
+
+$$\\boxed{\\int f(ax+b)\\,dx = \\frac{1}{a}F(ax+b) + C}$$
+
+| Integral | Result | Using $a = $ |
+|:---:|:---:|:---:|
+| $\\int \\sin(5x)\\,dx$ | $-\\frac{1}{5}\\cos(5x) + C$ | $a = 5$ |
+| $\\int e^{-2x}\\,dx$ | $-\\frac{1}{2}e^{-2x} + C$ | $a = -2$ |
+| $\\int (3x+7)^4\\,dx$ | $\\frac{(3x+7)^5}{15} + C$ | $a = 3$ |
+| $\\int \\sec^2(4x)\\,dx$ | $\\frac{1}{4}\\tan(4x) + C$ | $a = 4$ |
+
+> **Key Fact:** This shortcut ONLY works for LINEAR inner functions ($ax + b$). For nonlinear inner functions, you must do the full u-sub process.`
+    },
+    {
+      id: 'usub1-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Choose the right $u$ for each integral.** 🔍',
+      exercise: {
+        dropdowns: [
+          {
+            label: 'For $\\int x^3 \\cos(x^4)\\,dx$, choose $u =$:',
+            options: ['$x^3$', '$x^4$', '$\\cos(x^4)$', '$x^3\\cos(x^4)$'],
+            correctAnswers: ['$x^4$'],
+            hints: ['$x^4$ is the inner function, and $x^3$ is related to its derivative.'],
+            explanation: '$u = x^4$, $du = 4x^3\\,dx$. Then $\\frac{1}{4}\\int \\cos u\\,du = \\frac{\\sin(x^4)}{4} + C$.'
+          },
+          {
+            label: 'For $\\int \\frac{e^x}{1+e^x}\\,dx$, choose $u =$:',
+            options: ['$e^x$', '$1 + e^x$', '$\\frac{1}{1+e^x}$', '$\\ln(1+e^x)$'],
+            correctAnswers: ['$1 + e^x$'],
+            hints: ['Look for $\\frac{f\'}{f}$ pattern — the derivative of the denominator is in the numerator.'],
+            explanation: '$u = 1+e^x$, $du = e^x\\,dx$. $\\int \\frac{du}{u} = \\ln|1+e^x| + C$.'
+          },
+          {
+            label: 'For $\\int \\sin^3(x)\\cos(x)\\,dx$, choose $u =$:',
+            options: ['$\\sin^3(x)$', '$\\sin(x)$', '$\\cos(x)$', '$\\sin(x)\\cos(x)$'],
+            correctAnswers: ['$\\sin(x)$'],
+            hints: ['$\\cos(x)$ is the derivative of $\\sin(x)$, and $\\sin^3(x)$ is a power of $\\sin(x)$.'],
+            explanation: '$u = \\sin x$, $du = \\cos x\\,dx$. $\\int u^3\\,du = \\frac{\\sin^4(x)}{4} + C$.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'usub1-input',
+      type: 'input-box' as const,
+      content: '**Compute the integral.** ✍️',
+      exercise: {
+        question: 'Evaluate $\\int_0^2 x(x^2+1)^3\\,dx$.\n\n(Enter a fraction like a/b or a whole number.)',
+        correctAnswer: '78',
+        acceptableAnswers: ['78', '78.0'],
+        hints: [
+          'Let $u = x^2+1$, $du = 2x\\,dx$.',
+          'Change limits: $x=0 \\Rightarrow u=1$, $x=2 \\Rightarrow u=5$.',
+          '$\\frac{1}{2}\\int_1^5 u^3\\,du = \\frac{1}{2} \\cdot \\frac{u^4}{4}\\Big|_1^5 = \\frac{1}{8}(625 - 1)$.'
+        ],
+        explanation: '$u = x^2+1$. $\\frac{1}{2}\\int_1^5 u^3\\,du = \\frac{1}{8}[u^4]_1^5 = \\frac{1}{8}(625-1) = \\frac{624}{8} = 78$.'
       }
     },
     {
@@ -76,10 +164,15 @@ $$\\int \\frac{5}{u^3} \\cdot \\frac{du}{5} = \\int u^{-3}\\,du = \\frac{u^{-2}}
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-1. u-Substitution reverses the Chain Rule
-2. Choose $u$ = inner function of a composition
-3. Compute $du$, then rewrite **everything** in terms of $u$
-4. If $du$ doesn't appear exactly, adjust with constants`
+| Concept | Key Rule |
+|:---:|:---:|
+| u-Sub = reverse Chain Rule | $\\int f(g(x))g'(x)\\,dx = F(g(x)) + C$ |
+| Choose $u$ | Inner function of composition |
+| Find $du$ | Differentiate $u$ |
+| Linear shortcut | $\\int f(ax+b) = \\frac{1}{a}F(ax+b)$ |
+| Verify | Differentiate your answer! |
+
+> **Up Next:** Part 2 — Adjusting for Missing Constants.`
     }
   ]
 };

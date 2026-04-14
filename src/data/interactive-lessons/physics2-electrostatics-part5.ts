@@ -77,7 +77,9 @@ Two identical metal spheres: A has $+8\\ \\mu\\text{C}$ and B has $-4\\ \\mu\\te
 They touch and then separate. Enter:
 
 1) Total charge of the system (in μC)
+
 2) Charge on each sphere after separation (in μC)
+
 3) If sphere A then touches a third neutral identical sphere C, what is A's final charge? (in μC)
       `,
       exercise: {

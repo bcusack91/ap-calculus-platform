@@ -93,7 +93,9 @@ Comparisons must compare **like things**.
 Rewrite ONLY the underlined/incorrect element to make each sentence parallel.
 
 1) The coach emphasized **speed**, **agility**, and **being strong**. → Type the corrected third item.
+
 2) She would rather **read a book** than **watching television**. → Type the corrected second activity.
+
 3) His paintings are more abstract than **his brother**. → Type the corrected comparison.
       `,
       exercise: {

@@ -137,7 +137,9 @@ $$T_F = \\frac{9}{5}(-40) + 32 = -72 + 32 = -40°F \\checkmark$$
 Convert the following temperatures. Round to the nearest whole number.
 
 1) 68°F = ___ °C
+
 2) 25°C = ___ K
+
 3) 500 K = ___ °C
       `,
       exercise: {

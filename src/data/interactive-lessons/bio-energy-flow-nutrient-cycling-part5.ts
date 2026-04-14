@@ -95,7 +95,9 @@ export const bioEnergyFlowPart5Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **representation of total mass at successive trophic levels**
+
       2) Term for this definition: **incorporation of inorganic carbon into organic molecules**
+
       3) Term for this definition: **oxidation of organic molecules releasing usable energy**
       `,
       exercise: {

@@ -88,7 +88,9 @@ export const oChemSNPart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: solvent that hydrogen-bonds and can dampen nucleophiles
+
       2) Term for: polar solvent that enhances anionic nucleophile reactivity
+
       3) Product pattern expected under allylic halide + nucleophile
       `,
       exercise: {

@@ -88,7 +88,9 @@ export const oChemEASPart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: substituent decreasing ring reactivity
+
       2) Term for: halogens direct ortho/para but deactivate overall
+
       3) Product pattern expected under RCOCl/AlCl3
       `,
       exercise: {

@@ -2,185 +2,93 @@ export const calcbcReviewPart6Data = {
   topicSlug: 'review-connections-calcbc',
   sections: [
     {
-      id: 'calcbcreview-p6-intro',
+      id: 'rc6-intro',
       type: 'text' as const,
-      content: `
-# Review Connections
+      content: `# Mixed-Topic Workshop
 
-**Part 6 of 7 — Exam Strategy**
+**Part 6 of 7 — Cross-Topic Problem Solving**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
-
-## Key Ideas
-
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
-
-## Formula Snapshot
-
-When appropriate, use:
-
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+These problems intentionally mix topics. On the AP exam, you must identify which tool to use — that's the real skill.`
     },
     {
-      id: 'calcbcreview-p6-mcq1',
+      id: 'rc6-mc',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Mixed MC Block**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'The length of the curve $x = t^2$, $y = t^3$ from $t = 0$ to $t = 1$ is:',
+            options: ['$\\int_0^1 \\sqrt{4t^2 + 9t^4}\\,dt$', '$\\int_0^1 (2t + 3t^2)\\,dt$', '$\\int_0^1 \\sqrt{t^4 + t^6}\\,dt$', '$\\sqrt{1 + 1} = \\sqrt{2}$'],
+            correctAnswer: 0,
+            explanation: '$x\' = 2t$, $y\' = 3t^2$. Arc length $= \\int_0^1 \\sqrt{(2t)^2 + (3t^2)^2}\\,dt = \\int_0^1 \\sqrt{4t^2 + 9t^4}\\,dt$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: '$\\sum_{n=1}^\\infty \\frac{(-3)^n}{n!}$ equals:',
+            options: ['$e^{-3} - 1$', '$e^{-3}$', '$e^3 - 1$', 'Diverges'],
+            correctAnswer: 0,
+            explanation: '$e^x = \\sum_{n=0}^\\infty x^n/n!$. So $\\sum_{n=1}^\\infty (-3)^n/n! = e^{-3} - 1$ (subtracting the $n=0$ term).'
+          },
+          {
+            question: 'If $dy/dx = y/x$ and $y(1) = 2$, then $y(e) =$',
+            options: ['$2e$', '$e^2$', '$2$', '$e$'],
+            correctAnswer: 0,
+            explanation: 'Separable: $dy/y = dx/x \\Rightarrow \\ln|y| = \\ln|x| + C \\Rightarrow y = Ax$. $y(1) = 2 \\Rightarrow A = 2$. $y(e) = 2e$.'
+          },
+          {
+            question: 'The area inside $r = 2\\sin\\theta$ is:',
+            options: ['$\\pi$', '$2\\pi$', '$4\\pi$', '$\\pi/2$'],
+            correctAnswer: 0,
+            explanation: '$r = 2\\sin\\theta$ is a circle of radius 1 (diameter 2). Area $= \\pi(1)^2 = \\pi$. Or: $\\frac{1}{2}\\int_0^\\pi 4\\sin^2\\theta\\,d\\theta = 2 \\cdot \\pi/2 = \\pi$.'
           }
         ]
       }
     },
     {
-      id: 'calcbcreview-p6-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcreview-p6-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcreview-p6-dropdown',
+      id: 'rc6-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Multi-Step Problem**\n\nConsider $f(x) = \\sum_{n=0}^\\infty \\frac{x^{2n+1}}{(2n+1)!}$.',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'This series represents:',
+            options: ['$\\sinh x$ (hyperbolic sine)', '$\\sin x$', '$\\cos x$', '$e^x$'],
+            correctAnswers: ['$\\sinh x$ (hyperbolic sine)'],
+            hints: ['Compare with $\\sin x = \\sum (-1)^n x^{2n+1}/(2n+1)!$. This has no alternating sign.'],
+            explanation: 'Without the $(-1)^n$, this is $\\sinh x = (e^x - e^{-x})/2 = x + x^3/6 + x^5/120 + \\cdots$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcreview-p6-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Exam Strategy**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcreview-p6-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: '$f\'(x) =$',
+            options: ['$\\cosh x = \\sum x^{2n}/(2n)!$', '$\\cos x$', '$-\\sinh x$', '$e^x$'],
+            correctAnswers: ['$\\cosh x = \\sum x^{2n}/(2n)!$'],
+            hints: ['Differentiate term by term: $\\sum (2n+1)x^{2n}/((2n+1)\\cdot(2n)!) = \\sum x^{2n}/(2n)!$.'],
+            explanation: '$f\'(x) = \\sum x^{2n}/(2n)! = \\cosh x$. Just like $\\sin\' = \\cos$, we get $\\sinh\' = \\cosh$.'
           }
         ]
       }
+    },
+    {
+      id: 'rc6-input',
+      type: 'input-box' as const,
+      content: '**Challenge Problem**',
+      exercise: {
+        question: 'A particle moves with velocity $v(t) = \\langle 2t, 3t^2 \\rangle$ and position $\\vec{r}(0) = \\langle 1, -1 \\rangle$. Find the $x$-coordinate of $\\vec{r}(2)$.',
+        correctAnswer: '5',
+        acceptableAnswers: ['5', '5.0'],
+        hints: ['$x(t) = \\int 2t\\,dt = t^2 + C$. $x(0) = 1 \\Rightarrow C = 1$.'],
+        explanation: '$x(t) = t^2 + 1$, so $x(2) = 4 + 1 = 5$.'
+      }
+    },
+    {
+      id: 'rc6-summary',
+      type: 'text' as const,
+      content: `### Workshop Takeaways
+
+- Identify the topic before choosing a method
+- Series recognition (with or without $(-1)^n$) is critical
+- Parametric/polar: always start with derivatives
+- DEs: separate variables when possible
+
+**Next: Part 7 — Final Comprehensive Review**`
     }
   ]
-}
+};

@@ -86,7 +86,9 @@ export const psychBrainPart4Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: frontal region supporting planning, inhibition, and decision-making
+
       2) Write the concept that matches: left frontal language region associated with speech production
+
       3) Write the concept that matches: a method that records electrical brain activity with high temporal resolution
 
       Use the exact vocabulary term from this part.

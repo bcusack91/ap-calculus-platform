@@ -88,7 +88,9 @@ export const oChemAcidsBasesPart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: delocalization that lowers basicity of a conjugate base
+
       2) Term for: electron withdrawal through sigma bonds alters acidity
+
       3) Product pattern expected under CF3-substituted acid comparison
       `,
       exercise: {

@@ -95,7 +95,9 @@ export const bioEnergyFlowPart3Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **fraction of energy passed to the next trophic level**
+
       2) Term for this definition: **network of interconnected feeding relationships**
+
       3) Term for this definition: **representation of total mass at successive trophic levels**
       `,
       exercise: {

@@ -2,185 +2,130 @@ export const calcbcSeriesAppsPart1Data = {
   topicSlug: 'series-applications-calcbc',
   sections: [
     {
-      id: 'calcbcseriesapps-p1-intro',
+      id: 'sa1-intro',
       type: 'text' as const,
-      content: `
-# Series Applications
+      content: `# Series Applications — Using Taylor Series
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Approximating Functions**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Why Use Series?
 
-## Key Ideas
+Taylor and Maclaurin series convert functions into polynomials, making them useful for:
+- Approximating difficult function values
+- Evaluating limits
+- Computing integrals that have no closed-form antiderivative
+- Solving differential equations
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+### Key Series to Know
 
-## Formula Snapshot
+| Function | Maclaurin Series | Interval |
+|----------|-----------------|----------|
+| $e^x$ | $\\sum_{n=0}^\\infty \\frac{x^n}{n!}$ | $(-\\infty, \\infty)$ |
+| $\\sin x$ | $\\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$ | $(-\\infty, \\infty)$ |
+| $\\cos x$ | $\\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n}}{(2n)!}$ | $(-\\infty, \\infty)$ |
+| $\\frac{1}{1-x}$ | $\\sum_{n=0}^\\infty x^n$ | $(-1, 1)$ |
+| $\\ln(1+x)$ | $\\sum_{n=1}^\\infty \\frac{(-1)^{n+1} x^n}{n}$ | $(-1, 1]$ |
+| $\\arctan x$ | $\\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{2n+1}$ | $[-1, 1]$ |
 
-When appropriate, use:
-
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+$$\\boxed{\\text{Memorize these six — they appear on every BC exam}}$$`
     },
     {
-      id: 'calcbcseriesapps-p1-mcq1',
+      id: 'sa1-approx',
+      type: 'text' as const,
+      content: `### Approximating Function Values
+
+To approximate $e^{0.1}$ using a 3rd-degree Maclaurin polynomial:
+
+$$e^x \\approx 1 + x + \\frac{x^2}{2} + \\frac{x^3}{6}$$
+
+$$e^{0.1} \\approx 1 + 0.1 + 0.005 + 0.000167 = 1.105167$$
+
+Actual value: $e^{0.1} = 1.105171...$  Error $< 0.000004$.
+
+### Creating New Series by Substitution
+
+To find the series for $e^{-x^2}$, substitute $-x^2$ for $x$ in $e^x$:
+
+$$e^{-x^2} = \\sum_{n=0}^\\infty \\frac{(-x^2)^n}{n!} = \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n}}{n!}$$
+
+$$= 1 - x^2 + \\frac{x^4}{2} - \\frac{x^6}{6} + \\cdots$$
+
+> **AP Tip:** Substitution into a known series is the fastest way to build new series on the AP exam.`
+    },
+    {
+      id: 'sa1-mc',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Check Your Understanding**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'The Maclaurin series for $\\cos(2x)$ is obtained by:',
+            options: ['Substituting $2x$ for $x$ in the $\\cos x$ series', 'Multiplying the $\\cos x$ series by 2', 'Differentiating the $\\sin(2x)$ series', 'Using the formula for $\\cos x$ and doubling each term'],
+            correctAnswer: 0,
+            explanation: '$\\cos(2x) = \\sum (-1)^n (2x)^{2n}/(2n)! = \\sum (-1)^n 4^n x^{2n}/(2n)!$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'The first three nonzero terms of $\\sin(x^2)$ are:',
+            options: ['$x^2 - \\frac{x^6}{6} + \\frac{x^{10}}{120}$', '$x - \\frac{x^3}{6} + \\frac{x^5}{120}$', '$x^2 - \\frac{x^4}{6} + \\frac{x^6}{120}$', '$x^4 - \\frac{x^8}{6} + \\frac{x^{12}}{120}$'],
+            correctAnswer: 0,
+            explanation: 'Replace $x$ with $x^2$ in $\\sin x = x - x^3/6 + x^5/120 - \\cdots$: $x^2 - x^6/6 + x^{10}/120$.'
+          },
+          {
+            question: 'The geometric series $\\frac{1}{1-x} = \\sum x^n$ converges for:',
+            options: ['$|x| < 1$', 'All $x$', '$x \\ge 0$', '$|x| \\le 1$'],
+            correctAnswer: 0,
+            explanation: 'Geometric series converges when $|r| < 1$, i.e., $|x| < 1$.'
           }
         ]
       }
     },
     {
-      id: 'calcbcseriesapps-p1-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcseriesapps-p1-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcseriesapps-p1-dropdown',
+      id: 'sa1-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Series Construction**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'The series for $\\frac{1}{1+x}$ is obtained from $\\frac{1}{1-x}$ by replacing $x$ with:',
+            options: ['$-x$ (giving $\\sum (-1)^n x^n$)', '$x+1$', '$1/x$', '$-1$'],
+            correctAnswers: ['$-x$ (giving $\\sum (-1)^n x^n$)'],
+            hints: ['$\\frac{1}{1+x} = \\frac{1}{1-(-x)}$.'],
+            explanation: '$\\frac{1}{1-(-x)} = \\sum_{n=0}^\\infty (-x)^n = \\sum (-1)^n x^n$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcseriesapps-p1-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Core Concepts**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcseriesapps-p1-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'The series for $\\frac{x}{1-x^2}$ starts with:',
+            options: ['$x + x^3 + x^5 + \\cdots$ (substitute $x^2$, multiply by $x$)', '$x + x^2 + x^3 + \\cdots$', '$1 + x^2 + x^4 + \\cdots$', '$x - x^3 + x^5 - \\cdots$'],
+            correctAnswers: ['$x + x^3 + x^5 + \\cdots$ (substitute $x^2$, multiply by $x$)'],
+            hints: ['$\\frac{1}{1-x^2} = \\sum (x^2)^n = \\sum x^{2n}$. Then multiply by $x$.'],
+            explanation: '$x \\cdot \\sum x^{2n} = \\sum x^{2n+1} = x + x^3 + x^5 + \\cdots$.'
           }
         ]
       }
+    },
+    {
+      id: 'sa1-input',
+      type: 'input-box' as const,
+      content: '**Practice**',
+      exercise: {
+        question: 'Using $e^x \\approx 1 + x + x^2/2$, approximate $e^{0.5}$ to 2 decimal places.',
+        correctAnswer: '1.63',
+        acceptableAnswers: ['1.63', '1.625'],
+        hints: ['$1 + 0.5 + 0.25/2 = 1 + 0.5 + 0.125 = 1.625$.'],
+        explanation: '$e^{0.5} \\approx 1 + 0.5 + 0.125 = 1.625$. (Actual: 1.6487.)'
+      }
+    },
+    {
+      id: 'sa1-summary',
+      type: 'text' as const,
+      content: `### Key Techniques
+
+$$\\boxed{\\text{Known series} + \\text{substitution} = \\text{new series}}$$
+
+- Memorize the six standard Maclaurin series
+- Create new series by substituting into known ones
+- Polynomial approximations are most accurate near the center
+
+**Next: Part 2 — Series for Computing Integrals**`
     }
   ]
-}
+};

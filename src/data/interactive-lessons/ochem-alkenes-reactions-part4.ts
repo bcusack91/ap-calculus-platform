@@ -88,7 +88,9 @@ export const oChemAlkenesPart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: functional group ends on less substituted alkene carbon
+
       2) Term for: both new groups add to same alkene face
+
       3) Product pattern expected under BH3·THF; H2O2, NaOH
       `,
       exercise: {

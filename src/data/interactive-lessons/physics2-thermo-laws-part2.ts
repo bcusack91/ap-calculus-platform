@@ -50,25 +50,55 @@ If you add 500 J of heat and the gas does 200 J of work expanding, then $\\Delta
       content: `
 ## First Law Applied to Special Processes
 
-### 1. Isothermal Process ($T$ = constant)
-- $\\Delta U = 0$ (internal energy depends only on $T$)
-- $Q = W$
-- All heat added is converted to work (or vice versa)
+<div class="my-8 rounded-2xl border border-cyan-200/80 dark:border-cyan-700/60 bg-gradient-to-br from-cyan-50 via-white to-blue-50 dark:from-cyan-950/30 dark:via-gray-900 dark:to-blue-950/30 p-6 shadow-lg">
+  <p class="m-0 text-base md:text-lg font-semibold text-cyan-900 dark:text-cyan-100">
+    Quick frame: every process is still <code>&Delta;U = Q - W</code>. What changes is which term gets locked.
+  </p>
+</div>
 
-### 2. Adiabatic Process ($Q = 0$, no heat exchange)
-- $\\Delta U = -W$
-- If the gas expands ($W > 0$): $\\Delta U < 0$ → temperature **drops**
-- If the gas compresses ($W < 0$): $\\Delta U > 0$ → temperature **rises**
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-8">
+  <div class="rounded-2xl border border-amber-200 dark:border-amber-700/60 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 p-5 shadow-md">
+    <h3 class="mt-0 mb-2 text-xl font-extrabold text-amber-900 dark:text-amber-100">1) Isothermal (<em>T</em> constant)</h3>
+    <p class="mb-3 text-amber-900/90 dark:text-amber-100/90">Temperature stays fixed, so internal energy does not change.</p>
+    <ul class="my-0 space-y-1.5 text-amber-900 dark:text-amber-100">
+      <li><code>&Delta;U = 0</code></li>
+      <li><code>Q = W</code></li>
+      <li>Heat in becomes work out (or vice versa)</li>
+    </ul>
+  </div>
 
-### 3. Isochoric (Isovolumetric) Process ($V$ = constant)
-- $W = 0$ (no volume change → no work)
-- $\\Delta U = Q$
-- All heat goes directly into changing internal energy (temperature)
+  <div class="rounded-2xl border border-rose-200 dark:border-rose-700/60 bg-gradient-to-br from-rose-50 to-red-50 dark:from-rose-950/30 dark:to-red-950/30 p-5 shadow-md">
+    <h3 class="mt-0 mb-2 text-xl font-extrabold text-rose-900 dark:text-rose-100">2) Adiabatic (<em>Q</em> = 0)</h3>
+    <p class="mb-3 text-rose-900/90 dark:text-rose-100/90">No heat crosses the boundary, so energy change comes entirely from work.</p>
+    <ul class="my-0 space-y-1.5 text-rose-900 dark:text-rose-100">
+      <li><code>&Delta;U = -W</code></li>
+      <li>Expand (<code>W &gt; 0</code>) &rArr; <code>&Delta;U &lt; 0</code> &rArr; gas cools</li>
+      <li>Compress (<code>W &lt; 0</code>) &rArr; <code>&Delta;U &gt; 0</code> &rArr; gas warms</li>
+    </ul>
+  </div>
 
-### 4. Isobaric Process ($P$ = constant)
-- $W = P\\Delta V$
-- $\\Delta U = Q - P\\Delta V$
-- Heat goes into both internal energy AND work
+  <div class="rounded-2xl border border-emerald-200 dark:border-emerald-700/60 bg-gradient-to-br from-emerald-50 to-lime-50 dark:from-emerald-950/30 dark:to-lime-950/30 p-5 shadow-md">
+    <h3 class="mt-0 mb-2 text-xl font-extrabold text-emerald-900 dark:text-emerald-100">3) Isochoric (<em>V</em> constant)</h3>
+    <p class="mb-3 text-emerald-900/90 dark:text-emerald-100/90">Volume does not change, so the gas cannot do pressure-volume work.</p>
+    <ul class="my-0 space-y-1.5 text-emerald-900 dark:text-emerald-100">
+      <li><code>W = 0</code></li>
+      <li><code>&Delta;U = Q</code></li>
+      <li>All added heat changes internal energy (temperature)</li>
+    </ul>
+  </div>
+
+  <div class="rounded-2xl border border-indigo-200 dark:border-indigo-700/60 bg-gradient-to-br from-indigo-50 to-sky-50 dark:from-indigo-950/30 dark:to-sky-950/30 p-5 shadow-md">
+    <h3 class="mt-0 mb-2 text-xl font-extrabold text-indigo-900 dark:text-indigo-100">4) Isobaric (<em>P</em> constant)</h3>
+    <p class="mb-3 text-indigo-900/90 dark:text-indigo-100/90">Pressure stays fixed while the system may expand or compress.</p>
+    <ul class="my-0 space-y-1.5 text-indigo-900 dark:text-indigo-100">
+      <li><code>W = P&Delta;V</code></li>
+      <li><code>&Delta;U = Q - P&Delta;V</code></li>
+      <li>Heat splits between raising <em>U</em> and doing boundary work</li>
+    </ul>
+  </div>
+</div>
+
+> Memory trick: **isothermal locks $\\Delta U$**, **adiabatic locks $Q$**, **isochoric locks $W$**, and **isobaric locks $P$**.
       `
     },
     {
@@ -146,7 +176,9 @@ If you add 500 J of heat and the gas does 200 J of work expanding, then $\\Delta
 Apply $\\Delta U = Q - W$ to each scenario.
 
 1) $Q = 1200$ J, $W = 500$ J. Find $\\Delta U$ (in J).
+
 2) A gas does 300 J of work while its internal energy decreases by 100 J. Find $Q$ (in J).
+
 3) An adiabatic compression does 600 J of work on the gas ($W = -600$ J by the gas). Find $\\Delta U$ (in J).
       `,
       exercise: {

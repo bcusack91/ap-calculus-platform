@@ -142,7 +142,9 @@ KVL Right (clockwise): $4I_2 - 4I_3 - 8 = 0$
 Solve:
 
 1) $I_2$ (in A):
+
 2) $I_3$ (in A):
+
 3) $I_1$ (in A):
       `,
       exercise: {
@@ -172,7 +174,9 @@ Left loop (clockwise): $14 - 4I_1 - 6I_2 = 0$
 Right loop (clockwise): $6I_2 - 2I_3 - 4 = 0$
 
 1) Solve for $I_1$ (in A):
+
 2) Solve for $I_2$ (in A):
+
 3) Solve for $I_3$ (in A):
       `,
       exercise: {

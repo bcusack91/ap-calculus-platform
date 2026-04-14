@@ -119,7 +119,9 @@ The underlined clause primarily serves to:
 Fill in the missing key term for each description.
 
 1) A sentence that is off-topic and should be removed is called __________ (one word: "irrelevant" or "redundant"? Pick the one that means "not related").
+
 2) When a phrase limits or softens a broad claim, it __________ the claim (one word, starts with "q").
+
 3) A sentence that restates something already said is called __________ (one word, starts with "r").
       `,
       exercise: {

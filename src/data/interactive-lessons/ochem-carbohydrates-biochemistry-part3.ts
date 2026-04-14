@@ -88,7 +88,9 @@ export const oChemCarbsPart3Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: anomeric substituent trans to CH2OH in D-sugars
+
       2) Term for: anomeric substituent cis to CH2OH in D-sugars
+
       3) Product pattern expected under NaBH4
       `,
       exercise: {

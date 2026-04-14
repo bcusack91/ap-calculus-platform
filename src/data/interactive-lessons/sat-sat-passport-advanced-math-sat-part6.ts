@@ -113,7 +113,9 @@ $$f^{-1}(x) = \\frac{x+6}{3}$$
 Let $f(x) = 4x - 3$ and $g(x) = x^2 + 1$.
 
 1) What is $f(g(2))$?
+
 2) Find $f^{-1}(x)$ and evaluate $f^{-1}(9)$.
+
 3) What is $g(f(1))$?
       `,
       exercise: {

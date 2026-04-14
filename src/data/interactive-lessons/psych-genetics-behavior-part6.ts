@@ -86,7 +86,9 @@ export const psychGeneticsPart6Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: the proportion of trait variation in a population attributable to genetic differences
+
       2) Write the concept that matches: an organism's genetic makeup
+
       3) Write the concept that matches: observable characteristics produced by genes and environment
 
       Use the exact vocabulary term from this part.

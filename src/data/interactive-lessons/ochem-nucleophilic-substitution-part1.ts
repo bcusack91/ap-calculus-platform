@@ -88,7 +88,9 @@ export const oChemSNPart1Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: one-step backside attack with inversion
+
       2) Term for: two-step substitution through carbocation intermediate
+
       3) Product pattern expected under 1° alkyl bromide + NaCN in DMSO
       `,
       exercise: {

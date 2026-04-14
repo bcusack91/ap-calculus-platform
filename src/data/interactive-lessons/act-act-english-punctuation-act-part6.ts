@@ -117,7 +117,9 @@ The ACT isn't just testing whether you know where to **put** punctuation — it'
 Identify the punctuation error in each sentence. Type "comma splice," "unnecessary comma," or "run-on."
 
 1) "The museum opened in 1985, it has since become one of the city\'s most popular attractions."
+
 2) "The researchers conducted a thorough analysis, and concluded that the data supported the hypothesis."
+
 3) "The concert was sold out fans lined up for hours hoping to get standing-room tickets."
       `,
       exercise: {

@@ -51,7 +51,9 @@ This works because $W_{\\text{air}} - W_{\\text{water}} = F_B = \\rho_w V g$, an
 A metal block weighs 45 N in air and 35 N when fully submerged in water.
 
 1) Buoyant force on the block (in N)
+
 2) Volume of the block (in m³)
+
 3) Density of the block (in kg/m³)
 
 *Round all answers to 3 significant figures.*

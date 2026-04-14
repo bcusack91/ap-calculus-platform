@@ -95,7 +95,9 @@ export const bioFeedbackPart3Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **dynamic maintenance of internal stability**
+
       2) Term for this definition: **target value around which a variable is regulated**
+
       3) Term for this definition: **component that detects a change in a regulated variable**
       `,
       exercise: {

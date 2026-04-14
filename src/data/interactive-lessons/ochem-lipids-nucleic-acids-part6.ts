@@ -88,7 +88,9 @@ export const oChemLipidsPart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: linkage joining nucleotides in nucleic acids
+
       2) Term for: noncovalent pairing interactions between nucleobases
+
       3) Product pattern expected under amide coupling in lipid-modified molecules
       `,
       exercise: {

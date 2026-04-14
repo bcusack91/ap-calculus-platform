@@ -64,14 +64,103 @@ If you see $(0.95)^{t/2}$:
       }
     },
     {
+      id: 'ef6-text2',
+      type: 'text' as const,
+      content: `### Worked Example 1 — What Does the Base Represent?
+
+**$P(t) = 2000(1.03)^{4t}$. What does $1.03$ represent?**
+
+| Analysis | Meaning |
+|----------|---------|
+| Exponent $4t$ | 4 compounding periods per year → quarterly |
+| Base $1.03$ | Growth factor per quarter |
+| Interpretation | "The quantity grows by 3% each quarter" |
+
+**To find annual rate:** Rewrite as $2000[(1.03)^4]^t = 2000(1.1255)^t$ → annual rate ≈ $12.55\\%$.
+
+### Worked Example 2 — Rewriting for a Different Period
+
+**$A(t) = 500(2)^{t/10}$ models doubling every 10 years. What is the yearly growth factor?**
+
+| Step | Work |
+|------|------|
+| Rewrite | $500(2^{1/10})^t$ |
+| Calculate $2^{1/10}$ | $\\approx 1.0718$ |
+| Interpretation | About $7.18\\%$ growth per year |
+
+### Common SAT Rewrite Patterns
+
+| Given Form | Rewritten as $a \\cdot c^t$ | Period Rate |
+|-----------|---------------------------|-------------|
+| $a(1.02)^{12t}$ | $a(1.2682)^t$ | Monthly rate 2% |
+| $a(0.95)^{t/3}$ | $a(0.9830)^t$ | Decays ~5% every 3 periods |
+| $a(3)^{t/5}$ | $a(1.2457)^t$ | Triples every 5 periods |`
+    },
+    {
+      id: 'ef6-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Equivalence & Interpretation** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: '$f(t) = 100(0.90)^{t/3}$. What does this model?',
+            options: ['Decays 10% every 3 time periods', 'Decays 90% every 3 time periods', 'Decays 10% every time period', 'Grows 90% every 3 time periods'],
+            correctAnswer: 0,
+            explanation: 'Base $0.90$ → loses 10%. Exponent $t/3$ → this happens every 3 time units.'
+          },
+          {
+            question: 'Which is equivalent to $200(4)^{t/2}$?',
+            options: ['$200(2)^t$', '$200(16)^t$', '$100(4)^t$', '$400(2)^t$'],
+            correctAnswer: 0,
+            explanation: '$200(4)^{t/2} = 200(4^{1/2})^t = 200(2)^t$.'
+          },
+          {
+            question: 'Monthly growth rate is 1%. What is the approximate annual growth rate?',
+            options: ['About $12.7\\%$', 'About $12\\%$', 'About $1\\%$', 'About $10\\%$'],
+            correctAnswer: 0,
+            explanation: '$(1.01)^{12} \\approx 1.127$. Annual rate $\\approx 12.7\\%$. It\'s higher than $12 \\times 1\\% = 12\\%$ due to compounding.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'ef6-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Interpret the Exponent** 🔍\n\nWhat does the exponent structure tell you about the time period?',
+      exercise: {
+        dropdowns: [
+          { label: '$f(t) = a(b)^{12t}$', options: ['Rate applies monthly (12 per year)', 'Rate applies every 12 years', 'Rate applies daily', 'Rate applies annually'] },
+          { label: '$f(t) = a(b)^{t/5}$', options: ['Rate applies every 5 time units', 'Rate applies 5 times per unit', 'Rate applies every 1/5 unit', 'Rate is divided by 5'] },
+          { label: '$f(t) = a(b)^{t}$', options: ['Rate applies per time unit', 'Rate applies monthly', 'No specific period', 'Rate applies daily'] },
+          { label: '$f(t) = a(b)^{365t}$', options: ['Rate applies daily (365 per year)', 'Rate applies yearly', 'Rate applies every 365 years', 'Rate applies weekly'] }
+        ],
+        correctAnswers: ['Rate applies monthly (12 per year)', 'Rate applies every 5 time units', 'Rate applies per time unit', 'Rate applies daily (365 per year)'],
+        hint1: 'The number multiplied by $t$ tells you how many times per unit the rate applies.',
+        hint2: 'When $t$ is divided, the denominator is the period length.',
+        hint3: '$b^{365t}$ → rate of $b$ applies 365 times per year → daily.',
+        explanation: '$12t$: 12 per year → monthly. $t/5$: once per 5 units. $t$: once per unit. $365t$: 365 per year → daily.'
+      }
+    },
+    {
       id: 'ef6-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 6
 
-- Rewrite $a \\cdot b^{ct}$ as $a \\cdot (b^c)^t$ to find the rate per unit time
-- Rewrite $a \\cdot b^{t/c}$ as $a \\cdot (b^{1/c})^t$ similarly
-- Monthly rate ≠ annual rate ÷ 12 (compounding makes it higher)
-- Exponent $nt$: the base gives the rate per $1/n$ of a time unit`
+| Rewrite Goal | Method |
+|-------------|--------|
+| Find rate per unit time | $a \\cdot b^{ct} = a(b^c)^t$; rate $= b^c - 1$ |
+| Find rate per longer period | $a \\cdot b^{t/c} = a(b^{1/c})^t$; rate $= b^{1/c} - 1$ |
+| Convert monthly → annual | $(1 + r_{\\text{monthly}})^{12} - 1$ |
+| Convert annual → monthly | $(1 + r_{\\text{annual}})^{1/12} - 1$ |
+
+| SAT Interpretation Pattern |
+|---|
+| $(1.03)^{4t}$: "3% growth per quarter" |
+| $(0.95)^{t/2}$: "5% decay every 2 periods" |
+| $(2)^{t/10}$: "doubles every 10 periods" |
+
+- Monthly rate × 12 ≠ annual rate (compounding makes it higher)
+- Always rewrite so the exponent is just $t$ to find the per-unit rate`
     }
   ]
 };

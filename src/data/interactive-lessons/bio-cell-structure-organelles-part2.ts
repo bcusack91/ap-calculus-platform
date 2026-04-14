@@ -2,190 +2,217 @@ export const bioCellStructurePart2Data = {
   topicSlug: 'cell-structure-organelles',
   sections: [
     {
-      id: 'bio-cell-structure-organelles-p2-s1-intro',
+      id: 'cs2-intro',
+      type: 'text' as const,
+      content: `# 🦠 Prokaryotes vs. Eukaryotes
+
+**Part 2 of 7 — Two Fundamental Cell Plans**
+
+---
+
+> 🔑 **Big idea:** All cells fall into one of two categories — **prokaryotic** (no membrane-bound nucleus) or **eukaryotic** (membrane-bound nucleus and organelles). Understanding these differences is foundational for AP Biology.
+
+---
+
+### What You'll Master in Part 2
+- Structural and functional differences between prokaryotic and eukaryotic cells
+- Features shared by all cells
+- Size comparison and the significance of compartmentalization
+- The domains of life and their cell types`
+    },
+    {
+      id: 'cs2-comparison',
       type: 'text' as const,
       content: `
-      ## Cell Structure and Organelles: Prokaryotes vs Eukaryotes
-      
-      **Part 2 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through comparing bacterial and animal cell architecture.
-      
-      ### Worked biological example
-      A student team investigates comparing bacterial and animal cell architecture. Their first interpretation step is to identify how **nucleus** and **ribosome** work together in the same pathway.
-      
-      - They classify the primary signal using **nucleus**: stores DNA and regulates gene expression.
-      - They trace the downstream response using **ribosome**: translates mRNA into polypeptide chains.
-      - They then compare outcomes with **rough ER** and **smooth ER** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **nucleus**
-      - **ribosome**
-      - **rough ER**
-      - **smooth ER**
+## 📊 Side-by-Side Comparison
+
+| Feature | Prokaryotic Cell | Eukaryotic Cell |
+|---------|-----------------|-----------------|
+| **Size** | 0.1–5 μm | 10–100 μm |
+| **Nucleus** | No — DNA in **nucleoid** region | Yes — membrane-bound nucleus |
+| **DNA shape** | Single, circular chromosome | Multiple, linear chromosomes |
+| **Membrane-bound organelles** | None | Mitochondria, ER, Golgi, etc. |
+| **Ribosomes** | 70S (50S + 30S) | 80S (60S + 40S) |
+| **Cell wall** | Present (peptidoglycan in bacteria) | Present in plants/fungi; absent in animals |
+| **Cytoskeleton** | Simple (FtsZ, MreB) | Complex (microtubules, microfilaments, intermediate filaments) |
+| **Reproduction** | Binary fission | Mitosis / meiosis |
+| **Gene regulation** | Operons, polycistronic mRNA | Complex (enhancers, silencers, splicing) |
+
+---
+
+### Features Shared by ALL Cells
+
+Every cell — whether prokaryotic or eukaryotic — has:
+
+1. **Plasma membrane** — phospholipid bilayer with embedded proteins
+2. **DNA** — genetic material encoding the organism's information
+3. **Ribosomes** — molecular machines for protein synthesis
+4. **Cytoplasm** — aqueous interior where metabolic reactions occur
+
+> 🔑 These four features reflect the common ancestry of all living things — a key concept tested on the AP exam.
       `
     },
     {
-      id: 'bio-cell-structure-organelles-p2-s2-mcq-core',
+      id: 'cs2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+**Prokaryote vs. Eukaryote Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'For Prokaryotes vs Eukaryotes, what best describes nucleus?',
+            question: 'A cell is observed to have a single circular chromosome, 70S ribosomes, and no membrane-bound organelles. This cell is most likely:',
             options: [
-              'stores DNA and regulates gene expression',
-              'synthesizes lipids and supports detoxification',
-              'synthesizes and folds proteins for export or membranes',
-              'translates mRNA into polypeptide chains'
-            ],
-            correctAnswer: 0,
-            explanation: 'nucleus is best matched with: stores DNA and regulates gene expression.'
-          },
-          {
-            question: 'In this part\'s context, what is the strongest definition of ribosome?',
-            options: [
-              'synthesizes and folds proteins for export or membranes',
-              'stores DNA and regulates gene expression',
-              'translates mRNA into polypeptide chains',
-              'modifies and sorts cargo from the ER'
+              'A plant cell',
+              'An animal cell',
+              'A prokaryotic cell',
+              'A fungal cell'
             ],
             correctAnswer: 2,
-            explanation: 'ribosome is best matched with: translates mRNA into polypeptide chains.'
+            explanation: 'Circular chromosome, 70S ribosomes, and no membrane-bound organelles are all hallmarks of prokaryotic cells. Eukaryotes (plants, animals, fungi) have linear chromosomes, 80S ribosomes, and membrane-bound organelles.'
+          },
+          {
+            question: 'Which feature is found in BOTH prokaryotic and eukaryotic cells?',
+            options: [
+              'Nuclear envelope',
+              'Endoplasmic reticulum',
+              'Plasma membrane',
+              'Mitochondria'
+            ],
+            correctAnswer: 2,
+            explanation: 'The plasma membrane is universal to all cells. The nuclear envelope, ER, and mitochondria are found only in eukaryotes. Both cell types need a plasma membrane to regulate what enters and exits the cell.'
+          },
+          {
+            question: 'Prokaryotic ribosomes are 70S while eukaryotic cytoplasmic ribosomes are 80S. Why is this difference medically significant?',
+            options: [
+              'It allows eukaryotic cells to make larger proteins',
+              'Antibiotics can target 70S ribosomes without harming host 80S ribosomes',
+              'Prokaryotic ribosomes produce different amino acids',
+              '70S ribosomes cannot read eukaryotic mRNA'
+            ],
+            correctAnswer: 1,
+            explanation: "This structural difference is the basis for many antibiotics (tetracycline, chloramphenicol, erythromycin). These drugs bind to bacterial 70S ribosomes but not human 80S ribosomes, killing bacteria without harming the patient's cells."
           }
         ]
       }
     },
     {
-      id: 'bio-cell-structure-organelles-p2-s3-deep-dive',
+      id: 'cs2-domains',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Prokaryotes vs Eukaryotes
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → nucleus
-      - **Immediate processing** → ribosome
-      - **System-level consequence** → rough ER
-      - **Measured readout** → smooth ER
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | nucleus | stores DNA and regulates gene expression | Early shift in the primary variable |
-      | ribosome | translates mRNA into polypeptide chains | Mid-pathway change in process rate |
-      | rough ER | synthesizes and folds proteins for export or membranes | Downstream phenotype trend |
-      | smooth ER | synthesizes lipids and supports detoxification | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+## 🌍 The Three Domains of Life
+
+| Domain | Cell Type | Key Features | Examples |
+|--------|----------|-------------|----------|
+| **Bacteria** | Prokaryotic | Peptidoglycan cell walls; most are unicellular | *E. coli*, *Streptococcus* |
+| **Archaea** | Prokaryotic | No peptidoglycan; many are extremophiles | Methanogens, halophiles, thermophiles |
+| **Eukarya** | Eukaryotic | Membrane-bound organelles; includes unicellular and multicellular | Animals, plants, fungi, protists |
+
+---
+
+### Bacteria vs. Archaea — Not the Same!
+
+Although both are prokaryotic, Bacteria and Archaea differ in important ways:
+
+| Feature | Bacteria | Archaea |
+|---------|---------|---------|
+| **Cell wall** | Peptidoglycan | Pseudopeptidoglycan or protein |
+| **Membrane lipids** | Ester-linked fatty acids | Ether-linked isoprenes |
+| **RNA polymerase** | One type (simple) | Multiple types (more like eukaryotes) |
+| **Response to antibiotics** | Susceptible to most | Resistant to most bacterial antibiotics |
+
+> 🔑 **AP Exam Tip:** Archaea are actually more closely related to Eukarya than to Bacteria on the phylogenetic tree. This is a frequently tested concept.
+
+---
+
+### Why Compartmentalization Matters
+
+Eukaryotic cells are 10–100× larger than prokaryotic cells. Membrane-bound compartments solve the scaling problem:
+
+- **Concentrate enzymes** in specific locations (e.g., digestive enzymes in lysosomes)
+- **Separate conflicting reactions** (e.g., protein synthesis in cytoplasm vs. DNA replication in nucleus)
+- **Increase membrane surface area** for reactions (e.g., cristae in mitochondria)
+- **Create specialized environments** (e.g., low pH in lysosomes)
       `
     },
     {
-      id: 'bio-cell-structure-organelles-p2-s4-input',
+      id: 'cs2-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **stores DNA and regulates gene expression**
-      2) Term for this definition: **translates mRNA into polypeptide chains**
-      3) Term for this definition: **synthesizes and folds proteins for export or membranes**
+**Key Terms — Fill in the Blanks** ✏️
+
+Enter the correct term for each description.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['nucleus', 'ribosome', 'rough ER'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'stores DNA and regulates gene expression\'.',
-        hint2: 'Second blank points to ribosome; think about the role \'translates mRNA into polypeptide chains\'.',
-        hint3: 'Third blank is rough ER; connect it to \'synthesizes and folds proteins for export or membranes\'.',
-        explanation: 'Correct set: nucleus, ribosome, rough ER. These three terms define the core mechanism chain for Prokaryotes vs Eukaryotes.'
+        correctAnswers: ['nucleoid', 'peptidoglycan', 'binary fission'],
+        hint1: 'The region in a prokaryotic cell where the circular chromosome is located (not enclosed by a membrane).',
+        hint2: 'The polymer that makes up bacterial cell walls — a target of antibiotics like penicillin.',
+        hint3: 'The process by which prokaryotic cells reproduce — splitting into two identical daughter cells.',
+        explanation: 'The nucleoid is the non-membrane-bound region containing prokaryotic DNA. Peptidoglycan is unique to bacterial cell walls and is targeted by penicillin/lysozyme. Binary fission is asexual reproduction in prokaryotes — no mitotic spindle is involved.'
       }
     },
     {
-      id: 'bio-cell-structure-organelles-p2-s5-dropdown',
+      id: 'cs2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-      **Dropdown matching (3 prompts)**
+**Cell Classification** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'nucleus',
-            options: ['translates mRNA into polypeptide chains', 'synthesizes and folds proteins for export or membranes', 'stores DNA and regulates gene expression', 'synthesizes lipids and supports detoxification']
+            label: 'An organism with ether-linked membrane lipids and no peptidoglycan belongs to domain',
+            options: ['Bacteria', 'Archaea', 'Eukarya', 'Protista']
           },
           {
-            label: 'ribosome',
-            options: ['translates mRNA into polypeptide chains', 'synthesizes lipids and supports detoxification', 'modifies and sorts cargo from the ER', 'synthesizes and folds proteins for export or membranes']
+            label: 'Eukaryotic cytoplasmic ribosomes have a sedimentation coefficient of',
+            options: ['30S', '50S', '70S', '80S']
           },
           {
-            label: 'rough ER',
-            options: ['site of aerobic ATP production', 'modifies and sorts cargo from the ER', 'synthesizes lipids and supports detoxification', 'synthesizes and folds proteins for export or membranes']
+            label: 'The primary advantage of compartmentalization in eukaryotic cells is',
+            options: ['Faster binary fission', 'Separating incompatible reactions into specialized compartments', 'Eliminating the need for ribosomes', 'Reducing the number of genes needed']
+          },
+          {
+            label: 'On the phylogenetic tree, Archaea are most closely related to',
+            options: ['Bacteria', 'Eukarya', 'Viruses', 'Protists']
           }
         ],
-        correctAnswers: ['stores DNA and regulates gene expression', 'translates mRNA into polypeptide chains', 'synthesizes and folds proteins for export or membranes'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'nucleus, ribosome, and rough ER should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
+        correctAnswers: ['Archaea', '80S', 'Separating incompatible reactions into specialized compartments', 'Eukarya'],
+        hint1: 'Ether-linked lipids and no peptidoglycan rule out Bacteria.',
+        hint2: 'Prokaryotic = 70S, Eukaryotic cytoplasmic = 80S.',
+        hint3: 'Compartmentalization allows different chemical environments within one cell.',
+        explanation: 'Archaea have unique ether-linked membrane lipids. Eukaryotic cytoplasmic ribosomes are 80S (mitochondrial ribosomes are 70S — evidence for endosymbiosis). Compartmentalization is the key evolutionary advantage of eukaryotes. Archaea share more molecular features with Eukarya than with Bacteria.'
       }
     },
     {
-      id: 'bio-cell-structure-organelles-p2-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because nucleus stores DNA and regulates gene expression, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Ribosomes are not membrane-bound, yet they are essential organelles.
-      - Mitochondria are not only in animal cells; many eukaryotes have them.
-      - Cell structure should be interpreted with function, not memorized as a static list.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-cell-structure-organelles-p2-s7-mcq-final',
+      id: 'cs2-exit',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+**Exit Quiz — Prokaryotes vs. Eukaryotes** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'In comparing bacterial and animal cell architecture, the observed pattern is: synthesizes lipids and supports detoxification. What term should anchor the explanation?',
+            question: 'Mitochondria contain 70S ribosomes and circular DNA, similar to bacteria. This observation best supports which hypothesis?',
             options: [
-              'rough ER',
-              'ribosome',
-              'smooth ER',
-              'nucleus'
+              'Mitochondria evolved from the nuclear genome',
+              'Bacteria evolved from eukaryotic cells',
+              'Mitochondria originated as endosymbiotic bacteria',
+              'All organelles contain their own DNA'
             ],
             correctAnswer: 2,
-            explanation: 'Use smooth ER because it directly maps to the described biological pattern: synthesizes lipids and supports detoxification.'
+            explanation: 'The endosymbiotic theory proposes that mitochondria (and chloroplasts) were once free-living bacteria that were engulfed by an ancestral eukaryotic cell. Evidence includes: 70S ribosomes, circular DNA, double membrane, and independent replication by binary fission.'
           },
           {
-            question: 'In an AP-style free-response about prokaryotes vs eukaryotes, the observed pattern is: modifies and sorts cargo from the ER. What term should anchor the explanation?',
+            question: 'A researcher treats cells with an antibiotic that specifically binds to the 50S ribosomal subunit. Which cells would be MOST affected?',
             options: [
-              'rough ER',
-              'Golgi',
-              'smooth ER',
-              'mitochondrion'
+              'Human liver cells only',
+              'Plant cells only',
+              'Bacterial cells and mitochondria within eukaryotic cells',
+              'Only cells in the domain Archaea'
             ],
-            correctAnswer: 1,
-            explanation: 'Use Golgi because it directly maps to the described biological pattern: modifies and sorts cargo from the ER.'
+            correctAnswer: 2,
+            explanation: 'The 50S subunit is part of the 70S prokaryotic ribosome. Both bacteria and mitochondria have 70S ribosomes (supporting endosymbiotic theory). This is why some antibiotics can have side effects — they can partially inhibit mitochondrial protein synthesis.'
           }
         ]
       }

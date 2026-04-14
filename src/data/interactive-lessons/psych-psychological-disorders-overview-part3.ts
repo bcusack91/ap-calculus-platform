@@ -86,7 +86,9 @@ export const psychDisordersPart3Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns
+
       2) Write the concept that matches: intrusive, unwanted thought that causes distress
+
       3) Write the concept that matches: repetitive behavior performed to reduce distress or prevent feared outcomes
 
       Use the exact vocabulary term from this part.

@@ -88,7 +88,9 @@ export const oChemConjugatedPart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: forms faster via lower activation barrier
+
       2) Term for: more stable product favored at equilibrium
+
       3) Product pattern expected under UV isomerization
       `,
       exercise: {

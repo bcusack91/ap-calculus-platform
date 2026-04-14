@@ -50,7 +50,9 @@ $-2x + 5 > 11 \\implies x < -3$. $|x + 1| > 4 \\implies x < -5$ or $x > 3$.
 **Review** 🧮
 
 1) $-5x + 2 > -8$: $x < ?$
+
 2) $|x| \\geq 6$: smaller critical value?
+
 3) $2 \\leq 3x - 1 \\leq 8$: range of $x$? (lower bound)
       `,
       exercise: {

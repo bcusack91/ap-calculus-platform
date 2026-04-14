@@ -86,7 +86,9 @@ export const psychAttitudesPart2Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: increased liking after repeated exposure
+
       2) Write the concept that matches: persuasion through careful analysis of message quality
+
       3) Write the concept that matches: persuasion through cues such as attractiveness or authority
 
       Use the exact vocabulary term from this part.

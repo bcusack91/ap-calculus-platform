@@ -112,7 +112,9 @@ No real solutions.
 **Quadratic Practice** 🧮
 
 1) Solve $x^2 - 7x + 12 = 0$. Enter the **smaller** root.
+
 2) What is the discriminant of $x^2 + 2x + 5 = 0$?
+
 3) Solve $x^2 - 16 = 0$. Enter the **positive** root.
       `,
       exercise: {

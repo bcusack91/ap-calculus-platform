@@ -2,190 +2,195 @@ export const bioCellCyclePart7Data = {
   topicSlug: 'cell-cycle-mitosis',
   sections: [
     {
-      id: 'bio-cell-cycle-mitosis-p7-s1-intro',
+      id: 'cc7-intro',
       type: 'text' as const,
       content: `
-      ## Cell Cycle and Mitosis: AP Review
-      
-      **Part 7 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through exam scenarios integrating cell-cycle control.
-      
-      ### Worked biological example
-      A student team investigates exam scenarios integrating cell-cycle control. Their first interpretation step is to identify how **cytokinesis** and **checkpoint** work together in the same pathway.
-      
-      - They classify the primary signal using **cytokinesis**: division of cytoplasm to produce two daughter cells.
-      - They trace the downstream response using **checkpoint**: control step that validates readiness before progression.
-      - They then compare outcomes with **cyclin-CDK** and **G1 phase** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **cytokinesis**
-      - **checkpoint**
-      - **cyclin-CDK**
-      - **G1 phase**
+## AP Review — Cell Cycle and Mitosis
+
+**Part 7 of 7**
+
+Comprehensive AP-exam-style questions integrating all cell cycle and mitosis concepts.
       `
     },
     {
-      id: 'bio-cell-cycle-mitosis-p7-s2-mcq-core',
+      id: 'cc7-summary',
+      type: 'text' as const,
+      content: `
+### Key Principles Summary
+
+1. The cell cycle consists of **interphase** (G\\(_1\\), S, G\\(_2\\)) and **M phase** (mitosis + cytokinesis)
+2. **Mitosis** produces two genetically identical daughter cells (preserving chromosome number)
+3. **Cyclin-Cdk complexes** drive progression through each phase; cyclin degradation resets the system
+4. **Checkpoints** (G\\(_1\\)/S, G\\(_2\\)/M, SAC) ensure accuracy before committing to the next phase
+5. **Cancer** results from mutations in proto-oncogenes (gain of function) and tumor suppressors (loss of function)
+6. Cytokinesis uses a **cleavage furrow** (animal) or **cell plate** (plant)
+      `
+    },
+    {
+      id: 'cc7-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### AP-Style Questions — Set 1
       `,
       exercise: {
         questions: [
           {
-            question: 'For AP Review, what best describes cytokinesis?',
+            question: 'An organism has a diploid number of 2n = 8. During G2, how many DNA molecules (double helices) are present in each cell?',
             options: [
-              'division of cytoplasm to produce two daughter cells',
-              'control step that validates readiness before progression',
-              'cell growth and biosynthesis before DNA replication',
-              'regulatory complex that drives cell-cycle transitions'
-            ],
-            correctAnswer: 0,
-            explanation: 'cytokinesis is best matched with: division of cytoplasm to produce two daughter cells.'
-          },
-          {
-            question: 'In this part\'s context, what is the strongest definition of checkpoint?',
-            options: [
-              'regulatory complex that drives cell-cycle transitions',
-              'division of cytoplasm to produce two daughter cells',
-              'control step that validates readiness before progression',
-              'DNA is replicated to form sister chromatids'
+              '4',
+              '8',
+              '16 — each of the 8 chromosomes has been replicated (sister chromatids), so there are 16 DNA molecules',
+              '32'
             ],
             correctAnswer: 2,
-            explanation: 'checkpoint is best matched with: control step that validates readiness before progression.'
+            explanation: 'In G2, each chromosome has been replicated and consists of 2 sister chromatids, each containing one DNA molecule. With 8 chromosomes, there are 8 x 2 = 16 DNA molecules. Note: the chromosome count is still 8 (counted by centromeres).'
+          },
+          {
+            question: 'HPV (Human Papillomavirus) produces the E7 protein, which binds and inactivates Rb. How does this contribute to cervical cancer?',
+            options: [
+              'E7 directly damages DNA',
+              'E7 inactivates Rb, releasing E2F to constitutively activate S-phase genes — the cell bypasses the G1/S checkpoint and proliferates without growth factor signals',
+              'E7 prevents cytokinesis',
+              'E7 blocks apoptosis only'
+            ],
+            correctAnswer: 1,
+            explanation: 'By binding and inactivating Rb, the viral E7 protein mimics the effect of Rb phosphorylation. E2F is free to activate S-phase genes regardless of growth signals or cell cycle status. Combined with E6 (which degrades p53), HPV effectively disables both major tumor suppressor pathways.'
+          },
+          {
+            question: 'Taxol (paclitaxel) is a chemotherapy drug that stabilizes microtubules and prevents their depolymerization. How does this kill cancer cells?',
+            options: [
+              'It prevents DNA replication',
+              'It blocks chromosome condensation',
+              'It prevents sister chromatid separation — stabilized kinetochore microtubules cannot shorten during anaphase, activating the spindle assembly checkpoint and arresting cells in mitosis, eventually triggering apoptosis',
+              'It prevents cytokinesis only'
+            ],
+            correctAnswer: 2,
+            explanation: 'Taxol locks microtubules in a polymerized state. During anaphase A, kinetochore microtubules must depolymerize to pull chromatids to the poles. With stabilized microtubules, proper separation fails, the SAC is chronically activated, and prolonged mitotic arrest eventually triggers apoptosis.'
           }
         ]
       }
     },
     {
-      id: 'bio-cell-cycle-mitosis-p7-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive Map: AP Review
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → cytokinesis
-      - **Immediate processing** → checkpoint
-      - **System-level consequence** → cyclin-CDK
-      - **Measured readout** → G1 phase
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | cytokinesis | division of cytoplasm to produce two daughter cells | Early shift in the primary variable |
-      | checkpoint | control step that validates readiness before progression | Mid-pathway change in process rate |
-      | cyclin-CDK | regulatory complex that drives cell-cycle transitions | Downstream phenotype trend |
-      | G1 phase | cell growth and biosynthesis before DNA replication | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
-      `
-    },
-    {
-      id: 'bio-cell-cycle-mitosis-p7-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **division of cytoplasm to produce two daughter cells**
-      2) Term for this definition: **control step that validates readiness before progression**
-      3) Term for this definition: **regulatory complex that drives cell-cycle transitions**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['cytokinesis', 'checkpoint', 'cyclin-CDK'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'division of cytoplasm to produce two daughter cells\'.',
-        hint2: 'Second blank points to checkpoint; think about the role \'control step that validates readiness before progression\'.',
-        hint3: 'Third blank is cyclin-CDK; connect it to \'regulatory complex that drives cell-cycle transitions\'.',
-        explanation: 'Correct set: cytokinesis, checkpoint, cyclin-CDK. These three terms define the core mechanism chain for AP Review.'
-      }
-    },
-    {
-      id: 'bio-cell-cycle-mitosis-p7-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'cytokinesis',
-            options: ['division of cytoplasm to produce two daughter cells', 'regulatory complex that drives cell-cycle transitions', 'control step that validates readiness before progression', 'cell growth and biosynthesis before DNA replication']
-          },
-          {
-            label: 'checkpoint',
-            options: ['cell growth and biosynthesis before DNA replication', 'regulatory complex that drives cell-cycle transitions', 'DNA is replicated to form sister chromatids', 'control step that validates readiness before progression']
-          },
-          {
-            label: 'cyclin-CDK',
-            options: ['DNA is replicated to form sister chromatids', 'cell growth and biosynthesis before DNA replication', 'regulatory complex that drives cell-cycle transitions', 'cell prepares for mitosis and verifies replication']
-          }
-        ],
-        correctAnswers: ['division of cytoplasm to produce two daughter cells', 'control step that validates readiness before progression', 'regulatory complex that drives cell-cycle transitions'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'cytokinesis, checkpoint, and cyclin-CDK should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-cell-cycle-mitosis-p7-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because cytokinesis division of cytoplasm to produce two daughter cells, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Chromosome number remains stable through mitosis under normal conditions.
-      - Checkpoint failure can lead to genomic instability long before visible tumors form.
-      - Interphase is an active preparation period, not a resting pause.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-cell-cycle-mitosis-p7-s7-mcq-final',
+      id: 'cc7-quiz2',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### AP-Style Questions — Set 2
       `,
       exercise: {
         questions: [
           {
-            question: 'In exam scenarios integrating cell-cycle control, the observed pattern is: cell growth and biosynthesis before DNA replication. What term should anchor the explanation?',
+            question: 'Stem cells can divide asymmetrically — producing one daughter cell that remains a stem cell and one that differentiates. What must be differently distributed during this division?',
             options: [
-              'cytokinesis',
-              'checkpoint',
-              'cyclin-CDK',
-              'G1 phase'
+              'DNA — one cell gets more chromosomes',
+              'Regulatory molecules (transcription factors, signaling proteins) must be asymmetrically partitioned so that the two daughter cells receive different developmental signals despite having identical genomes',
+              'Mitochondria — one cell gets all the mitochondria',
+              'The two cells receive different chromosomes'
             ],
-            correctAnswer: 3,
-            explanation: 'Use G1 phase because it directly maps to the described biological pattern: cell growth and biosynthesis before DNA replication.'
+            correctAnswer: 1,
+            explanation: 'Both daughter cells receive identical chromosomes through mitosis. Asymmetric division depends on the unequal distribution of cell-fate determinants (transcription factors, mRNAs, signaling molecules) during cytokinesis. The daughter that inherits "stemness" factors remains a stem cell; the other differentiates.'
           },
           {
-            question: 'In an AP-style free-response about ap review, the observed pattern is: DNA is replicated to form sister chromatids. What term should anchor the explanation?',
+            question: 'The unicellular organism Caulobacter crescentus divides asymmetrically into a stalked cell and a swarmer cell, despite having identical DNA. This best illustrates:',
             options: [
-              'S phase',
-              'G2 phase',
-              'cyclin-CDK',
-              'G1 phase'
+              'Mutation during cell division',
+              'Differential gene expression — the same genome can produce different cell types by expressing different sets of genes, regulated by asymmetrically distributed transcription factors',
+              'Different DNA sequences in the two cells',
+              'Random variation with no regulatory basis'
             ],
-            correctAnswer: 0,
-            explanation: 'Use S phase because it directly maps to the described biological pattern: DNA is replicated to form sister chromatids.'
+            correctAnswer: 1,
+            explanation: 'Both daughter cells have identical genomes, but asymmetric distribution of regulatory proteins (like CtrA in Caulobacter) during division causes different sets of genes to be expressed in each cell. This is a fundamental principle of developmental biology — identical genomes, different gene expression.'
+          },
+          {
+            question: 'After mitosis, each daughter cell has 46 chromosomes. If a cell undergoes mitosis without cytokinesis, and then undergoes a second round of mitosis WITH cytokinesis, how many chromosomes will each final daughter cell have?',
+            options: [
+              '23',
+              '46',
+              '92 — the first division without cytokinesis doubles the chromosome number to 92 in a single cell; the second mitosis distributes these equally, giving each daughter 92 chromosomes',
+              '184'
+            ],
+            correctAnswer: 2,
+            explanation: 'After the first mitosis without cytokinesis, the cell has 92 chromosomes (two complete sets, tetraploid). In the second round, these 92 chromosomes replicate during S phase (92 replicated chromosomes = 184 chromatids), then separate during mitosis. Each daughter cell receives 92 chromosomes.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cc7-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+### Comprehensive Matching
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Sister chromatids are separated by cleavage of cohesin:',
+            options: ['Prophase', 'Metaphase', 'Anaphase', 'Telophase', 'S phase'],
+            correctAnswer: 'Anaphase'
+          },
+          {
+            question: 'DNA replication occurs:',
+            options: ['G1 phase', 'S phase', 'G2 phase', 'Prophase', 'Anaphase'],
+            correctAnswer: 'S phase'
+          },
+          {
+            question: 'Cyclin B-Cdk1 (MPF) triggers entry into this phase:',
+            options: ['G1 phase', 'S phase', 'G2 phase', 'M phase (mitosis)', 'G0'],
+            correctAnswer: 'M phase (mitosis)'
+          },
+          {
+            question: 'The Rb protein blocks E2F to prevent progression into:',
+            options: ['G1 phase', 'S phase', 'G2 phase', 'M phase', 'Cytokinesis'],
+            correctAnswer: 'S phase'
+          },
+          {
+            question: 'The contractile ring of actin and myosin functions during:',
+            options: ['Prophase', 'Metaphase', 'Anaphase', 'Cytokinesis', 'S phase'],
+            correctAnswer: 'Cytokinesis'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cc7-input',
+      type: 'input-boxes' as const,
+      content: `
+### Final Review
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'The chemotherapy drug that stabilizes microtubules, preventing depolymerization:',
+            answer: 'Taxol',
+            acceptableAnswers: ['Taxol', 'taxol', 'paclitaxel', 'Paclitaxel'],
+            placeholder: 'e.g. colchicine'
+          },
+          {
+            question: 'The viral protein from HPV that inactivates Rb:',
+            answer: 'E7',
+            acceptableAnswers: ['E7', 'e7'],
+            placeholder: 'e.g. E6'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cc7-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Final Exit Ticket
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Integration question: A cancer cell has three mutations — Ras is constitutively active, p53 is non-functional, and telomerase is overexpressed. Explain how EACH mutation contributes to the cancer phenotype.',
+            options: [
+              'Only one mutation is needed for cancer',
+              'Ras constitutively active → continuous growth signaling without growth factors; p53 non-functional → no G1/S arrest or apoptosis in response to DNA damage; telomerase overexpressed → unlimited replication capacity by maintaining telomere length (normally, somatic cells have a Hayflick limit)',
+              'All three mutations have the same effect',
+              'These mutations only cause cancer if inherited'
+            ],
+            correctAnswer: 1,
+            explanation: 'Cancer typically requires multiple mutations affecting different regulatory pathways: (1) Ras (oncogene) provides constant proliferative signaling. (2) p53 (tumor suppressor) loss eliminates DNA damage checkpoints and apoptosis. (3) Telomerase (normally silent in somatic cells) allows indefinite replication by preventing telomere shortening. Together, these create an immortal, uncontrollably dividing, damage-tolerant cell.'
           }
         ]
       }

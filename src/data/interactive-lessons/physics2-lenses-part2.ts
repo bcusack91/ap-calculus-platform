@@ -141,7 +141,9 @@ Since $|m| = 0.5 < 1$: the image is **reduced** (half the object height).
 A converging lens has $f = 12$ cm. An object of height 6.0 cm is placed 18 cm from the lens.
 
 1) Image distance $d_i$ (in cm)
+
 2) Magnification $m$
+
 3) Image height $h_i$ (in cm, negative if inverted)
       `,
       exercise: {

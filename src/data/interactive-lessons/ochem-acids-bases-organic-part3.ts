@@ -88,7 +88,9 @@ export const oChemAcidsBasesPart3Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: species formed after an acid loses H+
+
       2) Term for: log-scale measure of acid strength; lower means stronger acid
+
       3) Product pattern expected under NaOEt/EtOH
       `,
       exercise: {

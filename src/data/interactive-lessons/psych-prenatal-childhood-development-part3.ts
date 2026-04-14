@@ -86,7 +86,9 @@ export const psychPrenatalPart3Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: time window when specific experiences strongly shape development
+
       2) Write the concept that matches: understanding that objects continue to exist when out of sight
+
       3) Write the concept that matches: caregiver bond marked by trust and comfort in reunion
 
       Use the exact vocabulary term from this part.

@@ -95,7 +95,9 @@ export const bioEcologyPart6Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **interaction where both species gain fitness benefits**
+
       2) Term for this definition: **interaction where species reduce each other's resource access**
+
       3) Term for this definition: **directional change in community composition over time**
       `,
       exercise: {

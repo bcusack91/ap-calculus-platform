@@ -88,7 +88,9 @@ export const oChemAcidsBasesPart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: proton transfer favors side with weaker acid/base pair
+
       2) Term for: delocalization that lowers basicity of a conjugate base
+
       3) Product pattern expected under NaHCO3 wash
       `,
       exercise: {

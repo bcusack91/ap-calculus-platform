@@ -95,7 +95,9 @@ export const bioFitnessPart4Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **benefit in one function paired with cost in another**
+
       2) Term for this definition: **direction and strength of selection on a trait**
+
       3) Term for this definition: **favors intermediate phenotypes**
       `,
       exercise: {

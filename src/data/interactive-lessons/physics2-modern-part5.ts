@@ -177,8 +177,11 @@ where 1 u = 1 atomic mass unit = $1.66 \\times 10^{-27}$ kg.
 The mass of $^{4}_{2}\\text{He}$ is 4.0026 u. Use $m_p = 1.0073$ u, $m_n = 1.0087$ u, and 1 u = 931.5 MeV/$c^2$.
 
 1) Total mass of 2 free protons + 2 free neutrons (in u, 3 significant figures)
+
 2) Mass defect $\\Delta m$ (in u, 3 significant figures)
+
 3) Binding energy of $^{4}_{2}\\text{He}$ (in MeV, 3 significant figures)
+
 4) Binding energy per nucleon (in MeV, 3 significant figures)
       `,
       exercise: {

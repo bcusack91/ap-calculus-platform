@@ -153,7 +153,9 @@ A circuit node has five branches connected to it. The currents are:
 - Branch 5: 4 A out of the node
 
 1) Total current flowing out of the node (in A, not counting $I_3$):
+
 2) Value of $I_3$ (in A):
+
 3) A different node has currents 10 A in, 4 A in, $I_a$ out, and $I_b$ out. If $I_a = 3I_b$, find $I_b$ (in A):
 
 *Round all answers to 3 significant figures.*

@@ -88,7 +88,9 @@ export const oChemCarbsPart1Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: single carbohydrate unit with multiple hydroxyls
+
       2) Term for: former carbonyl carbon in cyclic sugar
+
       3) Product pattern expected under ROH, acid catalyst
       `,
       exercise: {

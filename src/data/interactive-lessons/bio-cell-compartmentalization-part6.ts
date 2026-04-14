@@ -95,7 +95,9 @@ export const bioCellCompartmentPart6Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **short amino acid sequence directing protein destination**
+
       2) Term for this definition: **difference in proton concentration across a membrane**
+
       3) Term for this definition: **origin model where mitochondria and chloroplasts derive from bacteria**
       `,
       exercise: {

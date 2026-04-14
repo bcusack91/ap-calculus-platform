@@ -86,7 +86,9 @@ export const psychMemoryEncodePart4Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: stabilization of memories over time
+
       2) Write the concept that matches: concepts connected by meaningful associations
+
       3) Write the concept that matches: memory for skills and actions
 
       Use the exact vocabulary term from this part.

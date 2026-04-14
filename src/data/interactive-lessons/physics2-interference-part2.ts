@@ -129,7 +129,9 @@ This produces equally spaced bright and dark fringes — the hallmark of double-
 A double-slit experiment uses $\\lambda = 550$ nm, slit separation $d = 0.25$ mm, and screen distance $L = 2.0$ m.
 
 1) Fringe spacing $\\Delta y$ (in mm)
+
 2) Position of the 3rd bright fringe from center (in mm)
+
 3) Position of the 1st dark fringe from center (in mm)
 
 *Round all answers to 3 significant figures.*

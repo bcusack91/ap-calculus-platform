@@ -95,7 +95,9 @@ export const bioEvidencePart7Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **reduced structure inherited from an ancestral function**
+
       2) Term for this definition: **environmental factor that alters differential survival**
+
       3) Term for this definition: **documented heritable change in populations over generations**
       `,
       exercise: {

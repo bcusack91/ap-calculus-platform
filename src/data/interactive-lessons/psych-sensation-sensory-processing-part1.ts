@@ -86,7 +86,9 @@ export const psychSensationPart1Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: detection of physical energy by sensory receptors
+
       2) Write the concept that matches: conversion of physical stimulus energy into neural signals
+
       3) Write the concept that matches: minimum stimulus intensity detected 50% of the time
 
       Use the exact vocabulary term from this part.

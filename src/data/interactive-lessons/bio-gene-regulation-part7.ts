@@ -95,7 +95,9 @@ export const bioGeneRegPart7Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **chromatin modification generally increasing accessibility**
+
       2) Term for this definition: **small RNA that suppresses gene expression post-transcriptionally**
+
       3) Term for this definition: **gene-silencing pathway using small RNAs and complementary binding**
       `,
       exercise: {

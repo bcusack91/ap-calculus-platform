@@ -95,7 +95,9 @@ export const bioNatSelectionPart6Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **null model where allele frequencies remain constant**
+
       2) Term for this definition: **random allele frequency change strongest in small populations**
+
       3) Term for this definition: **allele movement among populations through migration**
       `,
       exercise: {

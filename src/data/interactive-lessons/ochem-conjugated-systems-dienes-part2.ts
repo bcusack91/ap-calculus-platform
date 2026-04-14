@@ -88,7 +88,9 @@ export const oChemConjugatedPart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: cation/radical adjacent to double bond
+
       2) Term for: electrophile and nucleophile add across adjacent carbons
+
       3) Product pattern expected under HBr, higher temperature
       `,
       exercise: {

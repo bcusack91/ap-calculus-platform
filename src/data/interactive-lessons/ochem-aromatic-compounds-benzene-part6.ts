@@ -88,7 +88,9 @@ export const oChemAromaticPart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: valid Lewis structure sharing electron delocalization
+
       2) Term for: carbon adjacent to aromatic ring
+
       3) Product pattern expected under KMnO4, heat
       `,
       exercise: {

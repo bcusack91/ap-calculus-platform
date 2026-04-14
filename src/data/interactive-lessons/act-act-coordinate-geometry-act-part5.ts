@@ -110,7 +110,9 @@ $$y = a(x - h)^2 + k$$
 **Conic Section Identification** 🧮
 
 1) Vertex x-coordinate of $y = -(x - 6)^2 + 2$?
+
 2) Vertex y-coordinate of $y = -(x - 6)^2 + 2$?
+
 3) For $\\frac{x^2}{16} + \\frac{y^2}{4} = 1$, what is the value of $a$ (the larger semi-axis)?
       `,
       exercise: {

@@ -86,7 +86,9 @@ export const psychSensationPart3Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: framework separating sensitivity from response bias under uncertainty
+
       2) Write the concept that matches: focusing cognitive resources on relevant input
+
       3) Write the concept that matches: analysis that begins with sensory features
 
       Use the exact vocabulary term from this part.

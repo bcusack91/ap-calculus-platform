@@ -88,7 +88,9 @@ export const oChemAlkenesPart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: OsO4 gives vicinal syn diol
+
       2) Term for: O3 cleaves C=C into carbonyl fragments
+
       3) Product pattern expected under HBr (no peroxides)
       `,
       exercise: {

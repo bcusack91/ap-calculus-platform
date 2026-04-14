@@ -174,8 +174,11 @@ Use $h = 6.63 \\times 10^{-34}$ J·s, $c = 3.00 \\times 10^{8}$ m/s, $1 \\text{ 
 A sodium surface has work function $\\phi = 2.28$ eV. Ultraviolet light of wavelength 250 nm shines on it.
 
 1) Photon energy in joules ($\\times 10^{-19}$ J, 3 significant figures)
+
 2) Photon energy in eV (3 significant figures)
+
 3) Maximum KE of ejected electrons in eV (3 significant figures)
+
 4) Stopping voltage in V (3 significant figures)
       `,
       exercise: {

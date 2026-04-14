@@ -1,8 +1,10 @@
 /**
  * Pre-Algebra Diagnostic Test Generator
  *
- * Two alternate forms (A / B), ~30 questions spanning 6 core domains.
+ * 10 alternate forms (1–10), ~30 questions spanning 6 core domains.
  */
+
+export const TOTAL_FORMS = 10
 
 export interface PreAlgebraQuestion {
   question: string
@@ -21,7 +23,7 @@ export interface PreAlgebraDomain {
 }
 
 export interface PreAlgebraTestData {
-  form: 'A' | 'B'
+  form: number
   questions: PreAlgebraQuestion[]
   domains: PreAlgebraDomain[]
   totalQuestions: number
@@ -40,7 +42,7 @@ export interface PreAlgebraDomainResult {
 export interface PreAlgebraRecommendedTopic { slug: string; name: string; domainId: string; priority: 'high' | 'medium' }
 
 export interface PreAlgebraResults {
-  form: 'A' | 'B'
+  form: number
   totalCorrect: number
   totalQuestions: number
   percentage: number
@@ -127,26 +129,39 @@ const questionPool: PoolQuestion[] = [
   { question: 'The probability of an impossible event is:', options: ['0', '1', '0.5', '−1'], correctAnswer: 0, explanation: 'An impossible event has probability 0.', domain: 'data-probability', topicSlug: 'intro-statistics-prealg', formSet: 'both' },
 ]
 
-function shuffle<T>(arr: T[]): T[] {
+function mulberry32(seed: number) {
+  return function () {
+    // eslint-disable-next-line no-param-reassign
+    seed |= 0; seed = (seed + 0x6d2b79f5) | 0
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+function seededShuffle<T>(arr: T[], rng: () => number): T[] {
   const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
   return a
 }
 
-export function generatePreAlgebraDiagnosticTest(form: 'A' | 'B'): PreAlgebraTestData {
-  const eligible = questionPool.filter(q => q.formSet === form || q.formSet === 'both')
+export function generatePreAlgebraDiagnosticTest(form: number): PreAlgebraTestData {
+  const rng = mulberry32(form * 7919)
   const selected: PoolQuestion[] = []
   for (const domain of PREALGEBRA_DOMAINS) {
-    const domainQs = shuffle(eligible.filter(q => q.domain === domain.id))
+    const domainQs = seededShuffle(questionPool.filter(q => q.domain === domain.id), rng)
     selected.push(...domainQs.slice(0, domain.questionTarget))
   }
-  const questions: PreAlgebraQuestion[] = shuffle(selected).map(q => ({
+  const questions: PreAlgebraQuestion[] = seededShuffle(selected, rng).map(q => ({
     question: q.question, options: q.options, correctAnswer: q.correctAnswer, explanation: q.explanation, domain: q.domain, topicSlug: q.topicSlug,
   }))
   return { form, questions, domains: PREALGEBRA_DOMAINS, totalQuestions: questions.length, timeLimitMinutes: 30 }
 }
 
-export function scorePreAlgebraDiagnostic(form: 'A' | 'B', questions: PreAlgebraQuestion[], answers: Record<number, number>): PreAlgebraResults {
+export function scorePreAlgebraDiagnostic(form: number, questions: PreAlgebraQuestion[], answers: Record<number, number>): PreAlgebraResults {
   const domainMap = new Map<string, { correct: number; total: number }>()
   PREALGEBRA_DOMAINS.forEach(d => domainMap.set(d.id, { correct: 0, total: 0 }))
   questions.forEach((q, i) => { const entry = domainMap.get(q.domain)!; entry.total++; if (answers[i] === q.correctAnswer) entry.correct++ })
@@ -169,7 +184,8 @@ export function scorePreAlgebraDiagnostic(form: 'A' | 'B', questions: PreAlgebra
   return { form, totalCorrect, totalQuestions, percentage: pct, estimatedLevel, domains: domainResults, weakAreas, moderateAreas, strengths, recommendedTopics }
 }
 
-export function pickNextForm(previousForms: ('A' | 'B')[]): 'A' | 'B' {
-  if (previousForms.length === 0) return 'A'
-  return previousForms[0] === 'A' ? 'B' : 'A'
+export function pickNextForm(previousForms: number[]): number {
+  if (previousForms.length === 0) return 1
+  const last = previousForms[previousForms.length - 1]
+  return last >= TOTAL_FORMS ? 1 : last + 1
 }

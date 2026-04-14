@@ -95,7 +95,9 @@ export const bioMendelianPart2Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **different gene pairs assort independently when unlinked**
+
       2) Term for this definition: **allele expressed in heterozygous genotype**
+
       3) Term for this definition: **allele expressed when no dominant allele is present**
       `,
       exercise: {

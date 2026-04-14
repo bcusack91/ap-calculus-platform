@@ -125,7 +125,9 @@ At high speeds, a Formula 1 car generates enough downforce to drive upside down 
 A hurricane with wind speed 50 m/s blows over a flat roof. The air inside the house is still.
 
 1) Dynamic pressure of the wind: $\\frac{1}{2}\\rho v^2$ (in Pa)
+
 2) Net upward pressure on the roof (in Pa)
+
 3) If the roof area is 200 m², the upward force (in kN)
       `,
       exercise: {

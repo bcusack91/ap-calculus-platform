@@ -8,17 +8,31 @@ export const calcabChainRulePart1Data = {
 
 **Part 1 of 7 — Chain Rule Basics**
 
+Welcome to the Chain Rule — arguably the most important differentiation rule in calculus!
+
+| Part | Topic |
+|------|-------|
+| **1** | **Chain Rule Basics** |
+| 2 | Nested Functions & Double Chain Rule |
+| 3 | Implicit Differentiation |
+| 4 | Related Rates |
+| 5 | Advanced Applications |
+| 6 | Problem-Solving Workshop |
+| 7 | Comprehensive Review |
+
 ### Why Do We Need the Chain Rule?
 
 So far, you can differentiate functions like $x^3$, $\\sin x$, or $e^x$. But what about **composite functions** — functions inside other functions?
 
-Consider $f(x) = (3x + 1)^5$. You *could* expand this, but that is painful. What about $\\sin(x^2)$ or $e^{3x}$? There is no shortcut without the Chain Rule.
+- $(3x + 1)^5$ — expanding this is painful
+- $\\sin(x^2)$ — can't use basic trig rule directly
+- $e^{3x}$ — the exponent isn't just $x$
+
+The Chain Rule handles ALL of these.
 
 ### The Chain Rule Formula
 
-If $y = f(g(x))$, then:
-
-$$\\frac{dy}{dx} = f'(g(x)) \\cdot g'(x)$$
+$$\\boxed{\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)}$$
 
 In words: **differentiate the outer function** (leaving the inner function untouched), then **multiply by the derivative of the inner function**.
 
@@ -26,13 +40,16 @@ In words: **differentiate the outer function** (leaving the inner function untou
 
 If $y = f(u)$ where $u = g(x)$, then:
 
-$$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$
+$$\\boxed{\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}}$$
 
----
+> **Key Fact:** The Chain Rule is needed whenever you see a function INSIDE another function. It appears in ~80% of all derivative problems on the AP exam.`
+    },
+    {
+      id: 'chain1-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Step by Step
 
-### Worked Example 1
-
-**Find** $\\frac{d}{dx}(3x+1)^5$
+**Example 1:** Find $\\frac{d}{dx}(3x+1)^5$
 
 | Step | Work |
 |------|------|
@@ -41,9 +58,9 @@ $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$
 | Differentiate inner | $\\frac{d}{dx}(3x+1) = 3$ |
 | Multiply | $5(3x+1)^4 \\cdot 3 = 15(3x+1)^4$ |
 
-### Worked Example 2
+---
 
-**Find** $\\frac{d}{dx}\\sin(x^2)$
+**Example 2:** Find $\\frac{d}{dx}\\sin(x^2)$
 
 | Step | Work |
 |------|------|
@@ -52,12 +69,34 @@ $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$
 | Differentiate inner | $\\frac{d}{dx}(x^2) = 2x$ |
 | Multiply | $\\cos(x^2) \\cdot 2x = 2x\\cos(x^2)$ |
 
-> **AP Tip:** The Chain Rule appears in nearly every derivative problem on the AP exam. Master it now.`
+---
+
+**Example 3:** Find $\\frac{d}{dx}\\sqrt{x^2 + 1}$
+
+Rewrite: $\\sqrt{x^2+1} = (x^2+1)^{1/2}$
+
+| Step | Work |
+|------|------|
+| Outer derivative | $\\frac{1}{2}(x^2+1)^{-1/2}$ |
+| Inner derivative | $2x$ |
+| Chain Rule | $\\frac{1}{2}(x^2+1)^{-1/2} \\cdot 2x = \\frac{x}{\\sqrt{x^2+1}}$ |
+
+---
+
+**Example 4:** Find $\\frac{d}{dx}e^{-x^2}$
+
+| Step | Work |
+|------|------|
+| Outer: $e^u$ | $e^{-x^2}$ (unchanged) |
+| Inner: $u = -x^2$ | $-2x$ |
+| Chain Rule | $e^{-x^2} \\cdot (-2x) = -2xe^{-x^2}$ |
+
+> **AP Tip:** The most common Chain Rule error is **forgetting to multiply by the inner derivative**. Always ask: "Did I multiply by the derivative of what's inside?"`
     },
     {
       id: 'chain1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Check Your Understanding** 🎯\n\nCompute the derivative using the Chain Rule.',
+      content: '**Apply the Chain Rule** 🎯',
       exercise: {
         questions: [
           {
@@ -71,47 +110,51 @@ $$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$$
             options: ['$-\\sin(5x)$', '$-5\\sin(5x)$', '$5\\cos(5x)$', '$-5\\cos(5x)$'],
             correctAnswer: 1,
             explanation: 'Outer: $\\cos(u) \\Rightarrow -\\sin(u)$. Inner: $5x \\Rightarrow 5$. Multiply: $-\\sin(5x) \\cdot 5 = -5\\sin(5x)$.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'chain1-text2',
-      type: 'text' as const,
-      content: `### Worked Example 3
-
-**Find** $\\frac{d}{dx}\\sqrt{x^2 + 1}$
-
-Rewrite: $\\sqrt{x^2+1} = (x^2+1)^{1/2}$
-
-| Step | Work |
-|------|------|
-| Outer derivative | $\\frac{1}{2}(x^2+1)^{-1/2}$ |
-| Inner derivative | $2x$ |
-| Chain Rule | $\\frac{1}{2}(x^2+1)^{-1/2} \\cdot 2x = \\frac{x}{\\sqrt{x^2+1}}$ |
-
-### Worked Example 4
-
-**Find** $\\frac{d}{dx}e^{-x^2}$
-
-| Step | Work |
-|------|------|
-| Outer: $e^u$ | $e^{-x^2}$ |
-| Inner: $u = -x^2$ | $-2x$ |
-| Chain Rule | $e^{-x^2} \\cdot (-2x) = -2xe^{-x^2}$ |`
-    },
-    {
-      id: 'chain1-quiz2',
-      type: 'multiple-choice' as const,
-      content: '**Apply the Chain Rule** 🎯',
-      exercise: {
-        questions: [
+          },
           {
             question: 'Find $\\frac{d}{dx}e^{4x}$.',
             options: ['$e^{4x}$', '$4e^{4x}$', '$e^{4}$', '$4xe^{4x-1}$'],
             correctAnswer: 1,
             explanation: 'Outer: $e^u \\Rightarrow e^u = e^{4x}$. Inner: $4x \\Rightarrow 4$. Result: $4e^{4x}$.'
-          },
+          }
+        ]
+      }
+    },
+    {
+      id: 'chain1-patterns',
+      type: 'text' as const,
+      content: `### Chain Rule Pattern Reference
+
+> **Key Concept:** Every basic derivative rule has a "chain rule version" where you multiply by the inner derivative.
+
+| Function | Without Chain Rule | **With Chain Rule** |
+|:---:|:---:|:---:|
+| $u^n$ | $nx^{n-1}$ | $n[g(x)]^{n-1} \\cdot g'(x)$ |
+| $\\sin u$ | $\\cos x$ | $\\cos(g(x)) \\cdot g'(x)$ |
+| $\\cos u$ | $-\\sin x$ | $-\\sin(g(x)) \\cdot g'(x)$ |
+| $\\tan u$ | $\\sec^2 x$ | $\\sec^2(g(x)) \\cdot g'(x)$ |
+| $e^u$ | $e^x$ | $e^{g(x)} \\cdot g'(x)$ |
+| $\\ln u$ | $\\frac{1}{x}$ | $\\frac{g'(x)}{g(x)}$ |
+
+### The "Stuff" Method (Quick Shorthand)
+
+Replace the inner function with "stuff":
+
+| Function | Derivative ("stuff" method) |
+|----------|---------------------------|
+| $(\\text{stuff})^n$ | $n(\\text{stuff})^{n-1} \\cdot (\\text{stuff})'$ |
+| $\\sin(\\text{stuff})$ | $\\cos(\\text{stuff}) \\cdot (\\text{stuff})'$ |
+| $e^{\\text{stuff}}$ | $e^{\\text{stuff}} \\cdot (\\text{stuff})'$ |
+| $\\ln(\\text{stuff})$ | $\\frac{(\\text{stuff})'}{\\text{stuff}}$ |
+
+> **AP Tip:** This shorthand method is how most students actually think about Chain Rule on the exam. Practice until it's automatic!`
+    },
+    {
+      id: 'chain1-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**More Chain Rule Practice** 🎯',
+      exercise: {
+        questions: [
           {
             question: 'Find $\\frac{d}{dx}\\sqrt{5x - 3}$.',
             options: ['$\\frac{1}{2\\sqrt{5x-3}}$', '$\\frac{5}{2\\sqrt{5x-3}}$', '$\\frac{5}{\\sqrt{5x-3}}$', '$\\frac{1}{2}(5x-3)^{1/2}$'],
@@ -133,16 +176,51 @@ Rewrite: $\\sqrt{x^2+1} = (x^2+1)^{1/2}$
       content: '**Identify the Outer Function** 🔍\n\nFor each composite function, select the correct outer function.',
       exercise: {
         dropdowns: [
-          { label: '$\\sin(x^3)$', options: ['$\\sin(u)$', '$u^3$', '$x^3$', '$\\cos(u)$'] },
-          { label: '$(\\ln x)^4$', options: ['$\\ln(u)$', '$u^4$', '$x^4$', '$e^u$'] },
-          { label: '$e^{\\sin x}$', options: ['$\\sin(u)$', '$e^u$', '$u \\cdot \\sin(u)$', '$\\cos(u)$'] },
-          { label: '$\\ln(x^2 + 5)$', options: ['$u^2 + 5$', '$x^2$', '$\\ln(u)$', '$\\frac{1}{u}$'] }
+          {
+            label: '$\\sin(x^3)$ — Outer function:',
+            options: ['$\\sin(u)$', '$u^3$', '$x^3$', '$\\cos(u)$'],
+            correctAnswers: ['$\\sin(u)$'],
+            hints: ['The outer function is the last operation you would perform when evaluating.'],
+            explanation: 'You first cube $x$ (inner), then take sine (outer). Outer = $\\sin(u)$.'
+          },
+          {
+            label: '$(\\ln x)^4$ — Outer function:',
+            options: ['$\\ln(u)$', '$u^4$', '$x^4$', '$e^u$'],
+            correctAnswers: ['$u^4$'],
+            hints: ['First take $\\ln x$, then raise to the 4th power.'],
+            explanation: 'Inner = $\\ln x$. Outer = $u^4$ (the 4th power). Derivative: $4(\\ln x)^3 \\cdot \\frac{1}{x}$.'
+          },
+          {
+            label: '$e^{\\sin x}$ — Outer function:',
+            options: ['$\\sin(u)$', '$e^u$', '$u \\cdot \\sin(u)$', '$\\cos(u)$'],
+            correctAnswers: ['$e^u$'],
+            hints: ['First take $\\sin x$ (inner), then $e$ to that power (outer).'],
+            explanation: 'Inner = $\\sin x$. Outer = $e^u$. Derivative: $e^{\\sin x} \\cdot \\cos x$.'
+          },
+          {
+            label: '$\\ln(x^2 + 5)$ — Outer function:',
+            options: ['$u^2 + 5$', '$x^2$', '$\\ln(u)$', '$\\frac{1}{u}$'],
+            correctAnswers: ['$\\ln(u)$'],
+            hints: ['First compute $x^2+5$ (inner), then take ln (outer).'],
+            explanation: 'Inner = $x^2+5$. Outer = $\\ln(u)$. Derivative: $\\frac{2x}{x^2+5}$.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'chain1-input',
+      type: 'input-box' as const,
+      content: '**Chain Rule computation.** ✍️',
+      exercise: {
+        question: 'Find $\\frac{d}{dx}[e^{3x}]$ evaluated at $x = 0$. That is, find $f\'(0)$ where $f(x) = e^{3x}$.',
+        correctAnswer: '3',
+        acceptableAnswers: ['3', '3.0'],
+        hints: [
+          'Apply Chain Rule: $f\'(x) = e^{3x} \\cdot 3 = 3e^{3x}$.',
+          'Evaluate at $x = 0$: $f\'(0) = 3e^{3(0)} = 3e^0$.',
+          'What is $e^0$?'
         ],
-        correctAnswers: ['$\\sin(u)$', '$u^4$', '$e^u$', '$\\ln(u)$'],
-        hint1: 'The outer function is the last operation you would perform when evaluating from inside out.',
-        hint2: 'For $\\sin(x^3)$: you first cube $x$, then take sine. Sine is the outer function.',
-        hint3: 'For $(\\ln x)^4$: you first take $\\ln x$, then raise to the 4th power.',
-        explanation: 'The outer function is the last operation performed. $\\sin(x^3)$: outer = $\\sin$. $(\\ln x)^4$: outer = $u^4$. $e^{\\sin x}$: outer = $e^u$. $\\ln(x^2+5)$: outer = $\\ln$.'
+        explanation: '$f\'(x) = e^{3x} \\cdot 3 = 3e^{3x}$.\\n\\nAt $x = 0$: $f\'(0) = 3e^0 = 3(1) = 3$.'
       }
     },
     {
@@ -150,13 +228,19 @@ Rewrite: $\\sqrt{x^2+1} = (x^2+1)^{1/2}$
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-| Function | Derivative |
-|----------|-----------|
+$$\\boxed{\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)}$$
+
+| Function Type | Derivative Pattern |
+|:---:|:---:|
 | $(\\text{stuff})^n$ | $n(\\text{stuff})^{n-1} \\cdot (\\text{stuff})'$ |
 | $\\sin(\\text{stuff})$ | $\\cos(\\text{stuff}) \\cdot (\\text{stuff})'$ |
 | $\\cos(\\text{stuff})$ | $-\\sin(\\text{stuff}) \\cdot (\\text{stuff})'$ |
 | $e^{\\text{stuff}}$ | $e^{\\text{stuff}} \\cdot (\\text{stuff})'$ |
-| $\\ln(\\text{stuff})$ | $\\frac{1}{\\text{stuff}} \\cdot (\\text{stuff})'$ |`
+| $\\ln(\\text{stuff})$ | $\\frac{(\\text{stuff})'}{\\text{stuff}}$ |
+
+**The #1 Chain Rule mistake:** Forgetting the inner derivative. ALWAYS multiply by $g'(x)$!
+
+> **Up Next:** Part 2 — Nested Functions & the Double Chain Rule.`
     }
   ]
 };

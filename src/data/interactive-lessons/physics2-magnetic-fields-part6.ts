@@ -168,7 +168,9 @@ The deflection angle is proportional to the current, making it a useful measurin
 A rectangular coil has 50 turns, dimensions 8.0 cm × 5.0 cm, carries 2.0 A, and sits in a 0.30 T uniform magnetic field.
 
 1) Magnetic dipole moment $\\mu$ (in A·m²)
+
 2) Maximum torque on the coil (in N·m)
+
 3) Torque when $\\vec{\\mu}$ makes a 30° angle with $\\vec{B}$ (in N·m)
 
 *Round all answers to 3 significant figures.*

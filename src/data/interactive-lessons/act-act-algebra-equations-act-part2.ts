@@ -88,7 +88,9 @@ Substitute back: $2(3) + 3y = 12 \\implies y = 2$.
 System: $3x + 2y = 19$ and $x - 2y = -3$.
 
 1) What is $x$?
+
 2) What is $y$?
+
 3) What is $x + y$?
       `,
       exercise: {

@@ -147,7 +147,9 @@ A charge $q_1 = +4\\ \\mu\\text{C}$ is at the origin. $q_2 = -2\\ \\mu\\text{C}$
 Point P is at $x = 0.2$ m.
 
 1) $V$ from $q_1$ at P (in volts)
+
 2) $V$ from $q_2$ at P (in volts)
+
 3) $V_{\\text{net}}$ at P (in volts)
       `,
       exercise: {

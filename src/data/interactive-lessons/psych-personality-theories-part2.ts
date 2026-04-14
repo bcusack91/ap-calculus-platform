@@ -86,7 +86,9 @@ export const psychPersonalityPart2Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: approach emphasizing unconscious processes and early relationships
+
       2) Write the concept that matches: humanistic concept of fulfilling one's potential
+
       3) Write the concept that matches: behavior, cognition, and environment mutually influence each other
 
       Use the exact vocabulary term from this part.

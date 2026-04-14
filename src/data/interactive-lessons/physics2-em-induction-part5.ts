@@ -132,7 +132,9 @@ Power lines use **high voltage** ($\\sim$500 kV) to reduce current, which reduce
 A step-up transformer has 200 turns on the primary and 5000 turns on the secondary. The primary is connected to a 120 V AC source supplying 10 A.
 
 1) Secondary voltage $V_2$ (in V)
+
 2) Secondary current $I_2$ (in A)
+
 3) Power delivered to the load (in W)
 
 *Round all answers to 3 significant figures.*

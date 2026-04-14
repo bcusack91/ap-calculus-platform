@@ -88,7 +88,9 @@ export const oChemLipidsPart3Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: base hydrolysis of fatty acid esters to soaps
+
       2) Term for: C=C bonds in fatty chains affecting packing
+
       3) Product pattern expected under H2, Pd/C on unsaturated lipid
       `,
       exercise: {

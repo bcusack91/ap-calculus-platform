@@ -127,7 +127,9 @@ Only 10.5% of an iceberg is visible above the surface!
 A rectangular barge ($6.0 \\times 3.0 \\times 1.0$ m) has mass 12,000 kg. It floats in freshwater ($\\rho = 1000$ kg/m³).
 
 1) Volume of the barge (in m³)
+
 2) Volume of water displaced (in m³)
+
 3) Depth the barge sinks to (draft, in m)
 
 *Round all answers to 3 significant figures.*

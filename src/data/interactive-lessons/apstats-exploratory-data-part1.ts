@@ -4,46 +4,41 @@ export const apStatsEDAPart1Data = {
     {
       id: 'exploratorydata-p1-intro',
       type: 'text' as const,
-      content: `# 📊 Exploratory Data Analysis
+      content: `# 🔍 Exploratory Data Analysis
 
-**Part 1 of 7 — Boxplots & Five-Number Summary**
-
----
-
-### Five-Number Summary
-
-| Statistic | Description |
-|-----------|-------------|
-| **Minimum** | Smallest value |
-| **Q1** | 25th percentile (median of lower half) |
-| **Median** | 50th percentile (middle value) |
-| **Q3** | 75th percentile (median of upper half) |
-| **Maximum** | Largest value |
-
-### IQR (Interquartile Range)
-$$IQR = Q3 - Q1$$
-
-The IQR contains the middle 50% of the data.
+**Part 1 of 7 — EDA Overview**
 
 ---
 
-### Modified Boxplot
+### What Is EDA?
 
-A modified boxplot identifies **outliers** using the 1.5 × IQR rule:
-- **Low outliers:** below $Q1 - 1.5 \\\\times IQR$
-- **High outliers:** above $Q3 + 1.5 \\\\times IQR$
+Exploratory Data Analysis (EDA) is the process of using graphs and summary statistics to understand the key features of a dataset.
 
-Whiskers extend to the most extreme non-outlier values. Outliers are shown as individual dots.
+### The Four Features (SOCS)
+
+When describing a distribution, always mention:
+
+| Feature | What to Look For |
+|---------|-----------------|
+| **S**hape | Symmetric, skewed left, skewed right, bimodal, uniform |
+| **O**utliers | Unusual values far from the pattern |
+| **C**enter | Mean, median |
+| **S**pread | Range, IQR, standard deviation |
 
 ---
 
-### Example
-Data: 2, 5, 7, 8, 9, 10, 11, 12, 14, 30
-- Min = 2, Q1 = 7, Med = 9.5, Q3 = 12, Max = 30
-- IQR = 5, Upper fence = $12 + 7.5 = 19.5$
-- 30 is an outlier!`
-    },
-    {
+### Types of Data
+
+| Type | Examples |
+|------|---------|
+| **Categorical** | Gender, color, yes/no |
+| **Quantitative** | Height, test scores, income |
+
+### Graphs for Categorical vs. Quantitative
+
+- Categorical: bar chart, pie chart
+- Quantitative: histogram, stemplot, boxplot, dotplot`
+    },    {
       id: 'exploratorydata-p1-mcq',
       type: 'multiple-choice' as const,
       content: `
@@ -52,12 +47,46 @@ Data: 2, 5, 7, 8, 9, 10, 11, 12, 14, 30
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes boxplots & five-number summary?',
-            options: ['A fundamental concept in this unit', 'Not covered on the AP exam', 'Only relevant for AP Calculus', 'A concept from physics'],
-            correctAnswer: 0,
-            explanation: 'Boxplots & Five-Number Summary is a core AP Statistics concept tested on the exam.'
+            question: 'When describing a distribution, SOCS stands for:',
+            options: ['Sum, Origin, Count, Slope', 'Shape, Outliers, Center, Spread', 'Standard deviation, Outliers, Correlation, Skewness', 'Sample, Observation, Category, Scale'],
+            correctAnswer: 1,
+            explanation: 'SOCS: Shape, Outliers, Center, Spread — the four features to describe in any distribution.'
+          },
+          {
+            question: 'Which graph is best for quantitative data?',
+            options: ['Bar chart', 'Pie chart', 'Histogram', 'None of these'],
+            correctAnswer: 2,
+            explanation: 'Histograms display the distribution of quantitative data. Bar charts are for categorical data.'
+          },
+          {
+            question: 'A distribution skewed right has:',
+            options: ['A long tail to the left', 'A long tail to the right', 'Equal tails', 'No tail'],
+            correctAnswer: 1,
+            explanation: 'Right-skewed = long right tail. Mean > median. Examples: income, home prices.'
           }
         ]
+      }
+    },    {
+      id: 'exploratorydata-p1-input',
+      type: 'input-boxes' as const,
+      content: `
+**Data Classification** 🧮
+
+Classify each as categorical (C) or quantitative (Q):
+
+**1)** Zip code
+
+**2)** Temperature in degrees Fahrenheit
+
+**3)** Number of siblings
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['C', 'Q', 'Q'],
+        hint1: 'Although numeric, zip codes are labels',
+        hint2: 'Measured on a continuous scale',
+        hint3: 'Counted, but can be ordered/averaged',
+        explanation: '1) C — zip codes are labels, not measurable quantities. 2) Q — temperature is measured numerically. 3) Q — number of siblings is a count.'
       }
     }
   ]

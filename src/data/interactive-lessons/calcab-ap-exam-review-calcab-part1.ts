@@ -2,185 +2,139 @@ export const calcabExamReviewPart1Data = {
   topicSlug: 'ap-exam-review-calcab',
   sections: [
     {
-      id: 'calcabexamreview-p1-intro',
+      id: 'examrev1-intro',
       type: 'text' as const,
-      content: `
-# Ap Exam Review
+      content: `# AP Calculus AB Exam Review
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 \u2014 Limits & Continuity Review**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Topic Overview
 
-## Key Ideas
+| Part | Review Topic |
+|:---:|:---|
+| **1** | **Limits & Continuity** |
+| 2 | Differentiation Rules |
+| 3 | Applications of Derivatives |
+| 4 | Integration Techniques |
+| 5 | Applications of Integration |
+| 6 | Differential Equations & Modeling |
+| 7 | Full Practice Exam |
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+> **Exam Weight:** Units 1\u20132 (Limits & Continuity) = **10\u201312%** of the AP exam.
 
-## Formula Snapshot
+---
 
-When appropriate, use:
+### Limit Evaluation Techniques
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+| Technique | When to Use | Example |
+|:---|:---|:---|
+| Direct substitution | No indeterminate form | $\\lim_{x\\to 3}(x^2+1) = 10$ |
+| Factoring | $\\frac{0}{0}$ with polynomials | $\\frac{x^2-4}{x-2} = x+2$ |
+| Rationalizing | Square roots give $\\frac{0}{0}$ | Multiply by conjugate |
+| Trig identities | $\\frac{\\sin x}{x}$ type | $\\lim \\frac{\\sin x}{x}=1$ |
 
-and interpret what the final value means in context.
-      `
+### Essential Trig Limits
+
+$$\\boxed{\\lim_{x\\to 0}\\frac{\\sin x}{x} = 1 \\qquad \\lim_{x\\to 0}\\frac{1-\\cos x}{x} = 0}$$
+
+### Limits at Infinity \u2014 Rational Functions
+
+| Degrees | Limit | HA |
+|:---|:---:|:---:|
+| deg(top) $<$ deg(bottom) | $0$ | $y=0$ |
+| deg(top) $=$ deg(bottom) | $\\frac{\\text{leading coeff.}}{\\text{leading coeff.}}$ | $y = \\frac{a}{b}$ |
+| deg(top) $>$ deg(bottom) | $\\pm\\infty$ | None |
+
+### Continuity Conditions
+
+$f$ is continuous at $x = a$ if ALL THREE hold:
+
+1. $f(a)$ is defined
+2. $\\lim_{x\\to a} f(x)$ exists
+3. $\\lim_{x\\to a} f(x) = f(a)$`
     },
     {
-      id: 'calcabexamreview-p1-mcq1',
+      id: 'examrev1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Limits Review Quiz** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: '$\\lim_{x\\to 5}\\frac{x^2-25}{x-5} =$',
+            options: ['$10$', '$5$', '$0$', 'DNE'],
+            correctAnswer: 0,
+            explanation: '$\\frac{(x-5)(x+5)}{x-5} = x+5 \\to 10$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: '$\\lim_{x\\to 0}\\frac{\\sin(3x)}{x} =$',
+            options: ['$3$', '$1$', '$0$', '$1/3$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{\\sin(3x)}{x} = 3 \\cdot \\frac{\\sin(3x)}{3x} \\to 3 \\cdot 1 = 3$.'
+          },
+          {
+            question: '$\\lim_{x\\to 4}\\frac{\\sqrt{x}-2}{x-4} =$',
+            options: ['$1/4$', '$1/2$', '$0$', '$4$'],
+            correctAnswer: 0,
+            explanation: '$x-4 = (\\sqrt{x}-2)(\\sqrt{x}+2)$. So $\\frac{1}{\\sqrt{x}+2} \\to \\frac{1}{4}$.'
           }
         ]
       }
     },
     {
-      id: 'calcabexamreview-p1-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcabexamreview-p1-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcabexamreview-p1-dropdown',
+      id: 'examrev1-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Identify the concept.** \ud83d\udd0d',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'Left-hand limit $\\ne$ right-hand limit means:',
+            options: ['Jump discontinuity', 'Removable discontinuity', 'Infinite discontinuity', 'Continuous'],
+            correctAnswers: ['Jump discontinuity'],
+            hints: ['One-sided limits exist but differ.'],
+            explanation: 'When one-sided limits exist but are unequal, the graph \u201cjumps.\u201d'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
+            label: 'To show a root exists on an interval, use:',
+            options: ['IVT', 'MVT', 'EVT', 'Squeeze Theorem'],
+            correctAnswers: ['IVT'],
+            hints: ['Which theorem guarantees a value between $f(a)$ and $f(b)$?'],
+            explanation: 'IVT: if $f$ is continuous and $0$ is between $f(a)$ and $f(b)$, a root exists.'
           },
           {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcabexamreview-p1-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Core Concepts**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcabexamreview-p1-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: '$\\lim_{x\\to\\infty}\\frac{6x^2+1}{3x^2-7} =$',
+            options: ['$2$', '$0$', '$\\infty$', '$6/3 = 2$'],
+            correctAnswers: ['$2$'],
+            hints: ['Same degree \u2014 ratio of leading coefficients.'],
+            explanation: '$\\frac{6}{3} = 2$. Equal degrees: limit is ratio of leading coefficients.'
           }
         ]
       }
+    },
+    {
+      id: 'examrev1-input',
+      type: 'input-box' as const,
+      content: '**Compute the limit.** \u270d\ufe0f',
+      exercise: {
+        question: '$\\lim_{x\\to 0}\\frac{\\sin(5x)}{\\sin(2x)} = \\frac{a}{b}$ in lowest terms. Enter **$a + b$**.',
+        correctAnswer: '7',
+        acceptableAnswers: ['7'],
+        hints: [
+          '$\\frac{\\sin(5x)}{\\sin(2x)} = \\frac{\\sin(5x)}{5x}\\cdot\\frac{2x}{\\sin(2x)}\\cdot\\frac{5}{2}$.',
+          'Each ratio $\\to 1$.',
+          'Limit $= 5/2$. $a+b = 5+2 = 7$.'
+        ],
+        explanation: '$\\frac{\\sin(5x)}{\\sin(2x)} \\to \\frac{5}{2}$. $a+b = 7$.'
+      }
+    },
+    {
+      id: 'examrev1-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 1
+
+- Always try direct substitution first
+- $\\frac{0}{0}$ requires algebraic manipulation
+- Compare degrees for limits at infinity
+- Continuity needs all three conditions verified`
     }
   ]
-}
+};

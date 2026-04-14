@@ -406,7 +406,7 @@ export default function DashboardPage() {
             <Link href="/profile" className="px-4 py-2 text-sm font-medium rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-700 dark:text-gray-300">
               Edit Profile
             </Link>
-            <Link href="/flashcards/review/dashboard" className="px-4 py-2 text-sm font-medium rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all">
+            <Link href="/flashcards/review" className="px-4 py-2 text-sm font-medium rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all">
               Review Flashcards {overview && overview.dueFlashcards > 0 && (
                 <span className="ml-1 px-2 py-0.5 bg-white/20 rounded-full text-xs">{overview.dueFlashcards} due</span>
               )}

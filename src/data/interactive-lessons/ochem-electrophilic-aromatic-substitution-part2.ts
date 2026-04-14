@@ -88,7 +88,9 @@ export const oChemEASPart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: substituent that donates electron density to o/p positions
+
       2) Term for: electron-withdrawing substituent directing meta substitution
+
       3) Product pattern expected under Br2/FeBr3
       `,
       exercise: {

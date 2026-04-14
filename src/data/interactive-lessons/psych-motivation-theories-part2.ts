@@ -86,7 +86,9 @@ export const psychMotivationPart2Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: motivation depends on expected success and value of outcome
+
       2) Write the concept that matches: autonomy, competence, and relatedness support intrinsic motivation
+
       3) Write the concept that matches: engaging in an activity for inherent interest or enjoyment
 
       Use the exact vocabulary term from this part.

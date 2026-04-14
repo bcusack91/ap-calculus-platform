@@ -2,185 +2,134 @@ export const calcbcReviewPart4Data = {
   topicSlug: 'review-connections-calcbc',
   sections: [
     {
-      id: 'calcbcreview-p4-intro',
+      id: 'rc4-intro',
       type: 'text' as const,
-      content: `
-# Review Connections
+      content: `# Convergence and Series — The Big Picture
 
-**Part 4 of 7 — Graphs and Interpretation**
+**Part 4 of 7 — How All the Series Tests Fit Together**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### The Convergence Decision Tree
 
-## Key Ideas
+$$\\text{Given } \\sum a_n: \\text{ Does it converge?}$$
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+| Step | Check | Test to use |
+|------|-------|------------|
+| 1 | Is $a_n \\not\\to 0$? | **Divergence Test** → diverges |
+| 2 | Is it geometric? | **Geometric:** converges iff $|r| < 1$ |
+| 3 | Is it a p-series? | **p-series:** converges iff $p > 1$ |
+| 4 | Does it alternate? | **AST:** $a_n \\to 0$ decreasingly → converges |
+| 5 | Factorials or exponentials? | **Ratio Test:** $L < 1$ converges, $L > 1$ diverges |
+| 6 | $n$th powers? | **Root Test:** same criteria as ratio |
+| 7 | Can you compare? | **Comparison/LCT** with known series |
+| 8 | Decreasing positive terms? | **Integral Test** |
 
-## Formula Snapshot
-
-When appropriate, use:
-
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+> **AP Tip:** On the exam, 90% of convergence questions are answered by steps 1–5.`
     },
     {
-      id: 'calcbcreview-p4-mcq1',
+      id: 'rc4-power',
+      type: 'text' as const,
+      content: `### Power Series: From Convergence to Application
+
+$$\\sum_{n=0}^\\infty c_n(x-a)^n$$
+
+**Three-step process:**
+
+1. **Find radius $R$:** Ratio test on $|c_{n+1}/c_n|$ or root test
+2. **Test endpoints:** Plug in $x = a \\pm R$ and test each resulting numeric series
+3. **Use the series:** Substitute, differentiate, or integrate
+
+**What radius of convergence tells you:**
+
+| $R$ | Meaning |
+|-----|---------|
+| $R = 0$ | Converges only at $x = a$ (useless) |
+| $0 < R < \\infty$ | Converges on $(a-R, a+R)$, diverges outside |
+| $R = \\infty$ | Converges everywhere ($e^x$, $\\sin x$, $\\cos x$) |
+
+> The interval may include 0, 1, or 2 endpoints depending on endpoint tests.`
+    },
+    {
+      id: 'rc4-mc',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Test Selection**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: '$\\sum_{n=1}^\\infty \\frac{n^2}{2^n}$ — which test is most efficient?',
+            options: ['Ratio test', 'Integral test', 'p-series', 'Direct comparison'],
+            correctAnswer: 0,
+            explanation: 'Exponential denominator → ratio test. $L = \\lim \\frac{(n+1)^2}{2^{n+1}} \\cdot \\frac{2^n}{n^2} = \\frac{1}{2} \\lim (1 + 1/n)^2 = 1/2 < 1$. Converges.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: '$\\sum_{n=2}^\\infty \\frac{1}{n\\ln n}$ — which test works?',
+            options: ['Integral test', 'Ratio test', 'Geometric series', 'Alternating series test'],
+            correctAnswer: 0,
+            explanation: 'Not geometric, not alternating, ratio test gives $L = 1$ (inconclusive). Integral test: $\\int_2^\\infty \\frac{dx}{x\\ln x} = [\\ln(\\ln x)]_2^\\infty = \\infty$. Diverges.'
+          },
+          {
+            question: 'Absolute convergence implies convergence, but conditional convergence means:',
+            options: ['$\\sum a_n$ converges but $\\sum |a_n|$ diverges', '$\\sum a_n$ and $\\sum |a_n|$ both converge', 'The series oscillates without settling', 'The partial sums are bounded'],
+            correctAnswer: 0,
+            explanation: 'Conditional convergence: the series converges only because of cancellation between positive and negative terms. Example: $\\sum (-1)^n/n$.'
           }
         ]
       }
     },
     {
-      id: 'calcbcreview-p4-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcreview-p4-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcreview-p4-dropdown',
+      id: 'rc4-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Classify Each Series**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '$\\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{n}$:',
+            options: ['Conditionally convergent', 'Absolutely convergent', 'Divergent', 'Cannot be determined'],
+            correctAnswers: ['Conditionally convergent'],
+            hints: ['AST shows convergence. $\\sum 1/n$ diverges (harmonic).'],
+            explanation: 'Converges by AST. $\\sum |a_n| = \\sum 1/n$ diverges. Conditionally convergent.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
+            label: '$\\sum_{n=1}^\\infty \\frac{(-1)^n}{n^2}$:',
+            options: ['Absolutely convergent', 'Conditionally convergent', 'Divergent', 'Cannot be determined'],
+            correctAnswers: ['Absolutely convergent'],
+            hints: ['$\\sum 1/n^2$ converges (p-series, $p = 2$).'],
+            explanation: '$\\sum |a_n| = \\sum 1/n^2$ converges. Absolutely convergent.'
           },
           {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcreview-p4-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Graphs and Interpretation**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcreview-p4-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: '$\\sum_{n=1}^\\infty \\frac{n}{n+1}$:',
+            options: ['Divergent (divergence test)', 'Conditionally convergent', 'Absolutely convergent', 'Converges to 1'],
+            correctAnswers: ['Divergent (divergence test)'],
+            hints: ['$\\lim n/(n+1) = 1 \\neq 0$.'],
+            explanation: '$a_n \\to 1 \\neq 0$. Diverges by the divergence test. Always check this first!'
           }
         ]
       }
+    },
+    {
+      id: 'rc4-input',
+      type: 'input-box' as const,
+      content: '**Practice**',
+      exercise: {
+        question: 'Find the radius of convergence of $\\sum_{n=0}^\\infty \\frac{x^n}{3^n}$.',
+        correctAnswer: '3',
+        acceptableAnswers: ['3', '3.0'],
+        hints: ['This is geometric with ratio $x/3$.'],
+        explanation: 'Geometric series with ratio $x/3$. Converges when $|x/3| < 1$, i.e., $|x| < 3$. Radius $R = 3$.'
+      }
+    },
+    {
+      id: 'rc4-summary',
+      type: 'text' as const,
+      content: `### Series Big Picture
+
+- **Divergence test** → always check first ($a_n \\to 0$?)
+- **Geometric/p-series** → direct conclusion if the form matches
+- **Ratio/root** → factorial or exponential terms
+- **AST** → alternating series
+- **Comparison/integral** → everything else
+- **Power series** → ratio test for $R$, then check endpoints
+
+**Next: Part 5 — Integration Techniques Review**`
     }
   ]
-}
+};

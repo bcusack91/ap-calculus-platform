@@ -115,7 +115,9 @@ $$(x, y) \\to (kx, ky)$$
 **Transformation Calculations** 🧮
 
 1) Rotate $(4, 2)$ by $90°$ counterclockwise. What is the new x-coordinate?
+
 2) Reflect $(7, -3)$ over the line $y = x$. What is the new x-coordinate?
+
 3) Dilate $(6, 9)$ by scale factor $\\frac{1}{3}$. What is the new y-coordinate?
       `,
       exercise: {

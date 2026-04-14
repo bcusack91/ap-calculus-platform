@@ -95,7 +95,9 @@ export const bioBiotechPart4Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **amplifies a target DNA region through thermal cycling**
+
       2) Term for this definition: **carries foreign DNA into host cells for replication**
+
       3) Term for this definition: **uptake of external DNA by a bacterial cell**
       `,
       exercise: {

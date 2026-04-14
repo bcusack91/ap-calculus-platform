@@ -95,7 +95,9 @@ export const bioPopulationPart7Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **count of different species in a community**
+
       2) Term for this definition: **how evenly individuals are distributed among species**
+
       3) Term for this definition: **ability to resist or recover from disturbance**
       `,
       exercise: {

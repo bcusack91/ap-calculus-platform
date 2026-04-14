@@ -95,7 +95,9 @@ export const bioMendelianPart1Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **allele pairs separate during gamete formation**
+
       2) Term for this definition: **different gene pairs assort independently when unlinked**
+
       3) Term for this definition: **allele expressed in heterozygous genotype**
       `,
       exercise: {

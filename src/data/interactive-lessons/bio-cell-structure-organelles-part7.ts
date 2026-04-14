@@ -2,190 +2,194 @@ export const bioCellStructurePart7Data = {
   topicSlug: 'cell-structure-organelles',
   sections: [
     {
-      id: 'bio-cell-structure-organelles-p7-s1-intro',
+      id: 'cs7-intro',
       type: 'text' as const,
-      content: `
-      ## Cell Structure and Organelles: AP Review
-      
-      **Part 7 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through cross-topic cell organization synthesis.
-      
-      ### Worked biological example
-      A student team investigates cross-topic cell organization synthesis. Their first interpretation step is to identify how **mitochondrion** and **chloroplast** work together in the same pathway.
-      
-      - They classify the primary signal using **mitochondrion**: site of aerobic ATP production.
-      - They trace the downstream response using **chloroplast**: site of photosynthesis in plants and algae.
-      - They then compare outcomes with **cytoskeleton** and **plasma membrane** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **mitochondrion**
-      - **chloroplast**
-      - **cytoskeleton**
-      - **plasma membrane**
-      `
+      content: `# 🎯 AP Review — Cell Structure & Organelles
+
+**Part 7 of 7 — Comprehensive Review**
+
+---
+
+> This final part brings together all concepts from Parts 1–6 with AP exam-style questions. Focus on **application and analysis**, not just recall.
+
+---
+
+### High-Yield Topics for the AP Exam
+
+| Topic | Why It's Tested | Common Question Types |
+|-------|---------------|---------------------|
+| Endomembrane system flow | Tests understanding of organelle relationships | Trace protein through ER → Golgi → vesicle |
+| Endosymbiotic theory evidence | Tests evidence-based reasoning | Identify evidence for mitochondria/chloroplast origin |
+| SA:V ratio | Tests mathematical reasoning | Calculate ratio, predict consequences |
+| Prokaryote vs. eukaryote | Tests comparison skills | Table-based comparison questions |
+| Cell specialization | Tests structure-function connections | Predict organelle abundance from cell function |`
     },
     {
-      id: 'bio-cell-structure-organelles-p7-s2-mcq-core',
+      id: 'cs7-review-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+**AP-Style Questions — Set 1** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'For AP Review, what best describes mitochondrion?',
+            question: 'A cell biologist uses autoradiography with tritiated (³H) leucine (a radioactive amino acid) to track protein production. After 5 minutes, radioactivity is concentrated in the rough ER. After 20 minutes, radioactivity is concentrated in the Golgi. After 60 minutes, radioactivity is found outside the cell. This experiment demonstrates:',
             options: [
-              'site of photosynthesis in plants and algae',
-              'site of aerobic ATP production',
-              'protein network for structure, transport, and movement',
-              'selective barrier controlling exchange with the environment'
+              'Proteins are synthesized in the Golgi and secreted via the ER',
+              'The secretory pathway: rough ER → Golgi → secretory vesicles → extracellular space',
+              'Radioactive amino acids are toxic and are expelled from the cell',
+              'Proteins are synthesized outside the cell and imported via endocytosis'
             ],
             correctAnswer: 1,
-            explanation: 'mitochondrion is best matched with: site of aerobic ATP production.'
+            explanation: 'This is George Palade\'s classic pulse-chase experiment (Nobel Prize, 1974). The temporal sequence of radioactivity precisely maps the secretory pathway: rough ER (synthesis) → Golgi (modification/sorting) → secretory vesicles → exocytosis.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of chloroplast?',
+            question: 'Cyanide inhibits cytochrome c oxidase, a protein in the mitochondrial electron transport chain. A cell treated with cyanide would:',
             options: [
-              'stores DNA and regulates gene expression',
-              'protein network for structure, transport, and movement',
-              'site of aerobic ATP production',
-              'site of photosynthesis in plants and algae'
+              'Increase its rate of aerobic respiration to compensate',
+              'Continue to produce ATP at the same rate via glycolysis',
+              'Dramatically reduce ATP production because oxidative phosphorylation is blocked',
+              'Switch to photosynthesis for energy production'
             ],
-            correctAnswer: 3,
-            explanation: 'chloroplast is best matched with: site of photosynthesis in plants and algae.'
+            correctAnswer: 2,
+            explanation: 'Cyanide blocks Complex IV of the ETC, halting electron flow and preventing the H⁺ gradient from being maintained. Without the gradient, ATP synthase cannot produce ATP via oxidative phosphorylation. Glycolysis can still produce a small amount of ATP (2 per glucose), but this is far less than the ~30-34 from oxidative phosphorylation.'
+          },
+          {
+            question: 'Which of the following correctly pairs a cellular structure with the type of cell in which it would be MOST abundant?',
+            options: [
+              'Smooth ER — white blood cells',
+              'Chloroplasts — root cells',
+              'Rough ER — pancreatic acinar cells',
+              'Central vacuole — animal muscle cells'
+            ],
+            correctAnswer: 2,
+            explanation: 'Pancreatic acinar cells secrete digestive enzymes (proteins), requiring extensive rough ER for protein synthesis. Smooth ER is most abundant in liver cells (detox) and steroid-producing cells. Chloroplasts are in photosynthetic cells (leaves, not roots). Central vacuoles are in plant cells, not animal cells.'
           }
         ]
       }
     },
     {
-      id: 'bio-cell-structure-organelles-p7-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive Map: AP Review
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → mitochondrion
-      - **Immediate processing** → chloroplast
-      - **System-level consequence** → cytoskeleton
-      - **Measured readout** → plasma membrane
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | mitochondrion | site of aerobic ATP production | Early shift in the primary variable |
-      | chloroplast | site of photosynthesis in plants and algae | Mid-pathway change in process rate |
-      | cytoskeleton | protein network for structure, transport, and movement | Downstream phenotype trend |
-      | plasma membrane | selective barrier controlling exchange with the environment | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
-      `
-    },
-    {
-      id: 'bio-cell-structure-organelles-p7-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **site of aerobic ATP production**
-      2) Term for this definition: **site of photosynthesis in plants and algae**
-      3) Term for this definition: **protein network for structure, transport, and movement**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['mitochondrion', 'chloroplast', 'cytoskeleton'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'site of aerobic ATP production\'.',
-        hint2: 'Second blank points to chloroplast; think about the role \'site of photosynthesis in plants and algae\'.',
-        hint3: 'Third blank is cytoskeleton; connect it to \'protein network for structure, transport, and movement\'.',
-        explanation: 'Correct set: mitochondrion, chloroplast, cytoskeleton. These three terms define the core mechanism chain for AP Review.'
-      }
-    },
-    {
-      id: 'bio-cell-structure-organelles-p7-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'mitochondrion',
-            options: ['site of aerobic ATP production', 'protein network for structure, transport, and movement', 'site of photosynthesis in plants and algae', 'selective barrier controlling exchange with the environment']
-          },
-          {
-            label: 'chloroplast',
-            options: ['stores DNA and regulates gene expression', 'site of photosynthesis in plants and algae', 'selective barrier controlling exchange with the environment', 'protein network for structure, transport, and movement']
-          },
-          {
-            label: 'cytoskeleton',
-            options: ['selective barrier controlling exchange with the environment', 'protein network for structure, transport, and movement', 'stores DNA and regulates gene expression', 'translates mRNA into polypeptide chains']
-          }
-        ],
-        correctAnswers: ['site of aerobic ATP production', 'site of photosynthesis in plants and algae', 'protein network for structure, transport, and movement'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'mitochondrion, chloroplast, and cytoskeleton should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-cell-structure-organelles-p7-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because mitochondrion site of aerobic ATP production, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Mitochondria are not only in animal cells; many eukaryotes have them.
-      - Cell structure should be interpreted with function, not memorized as a static list.
-      - All cells share core features, but not all cells contain every organelle type.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-cell-structure-organelles-p7-s7-mcq-final',
+      id: 'cs7-review-quiz2',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+**AP-Style Questions — Set 2** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In cross-topic cell organization synthesis, the observed pattern is: selective barrier controlling exchange with the environment. What term should anchor the explanation?',
+            question: 'A student argues that viruses disprove cell theory because they can reproduce without being composed of cells. The best response to this argument is:',
             options: [
-              'plasma membrane',
-              'cytoskeleton',
-              'chloroplast',
-              'mitochondrion'
+              'Viruses are actually composed of very small cells',
+              'Viruses are not considered living organisms and therefore do not contradict cell theory for living things',
+              'Cell theory has been disproven and is no longer accepted',
+              'Viruses contain their own ribosomes and can reproduce independently'
             ],
-            correctAnswer: 0,
-            explanation: 'Use plasma membrane because it directly maps to the described biological pattern: selective barrier controlling exchange with the environment.'
+            correctAnswer: 1,
+            explanation: 'Cell theory applies to living organisms. Viruses lack key characteristics of life — they have no metabolism, cannot reproduce independently (they hijack host cell machinery), and are not made of cells. Most biologists classify viruses as "non-living" or "obligate intracellular parasites," so they exist outside the scope of cell theory.'
           },
           {
-            question: 'In an AP-style free-response about ap review, the observed pattern is: stores DNA and regulates gene expression. What term should anchor the explanation?',
+            question: 'An antibiotic targets the 30S ribosomal subunit. This drug would inhibit protein synthesis in:',
             options: [
-              'plasma membrane',
-              'cytoskeleton',
-              'ribosome',
-              'nucleus'
+              'Eukaryotic cells only (which have 30S subunits in their 80S ribosomes)',
+              'Bacteria only (which have 30S subunits in their 70S ribosomes)',
+              'Both bacteria and human mitochondria',
+              'Neither bacteria nor eukaryotic cells'
+            ],
+            correctAnswer: 2,
+            explanation: 'Both bacteria and mitochondria have 70S ribosomes (composed of 30S + 50S subunits). An antibiotic targeting the 30S subunit would inhibit protein synthesis in both. This explains why some antibiotics can cause mitochondrial side effects — a direct consequence of endosymbiotic origin.'
+          },
+          {
+            question: 'If a cell\'s Golgi apparatus were removed, which of the following would still occur normally?',
+            options: [
+              'Secretion of proteins to the cell exterior',
+              'Formation of lysosomes',
+              'Glycosylation of membrane proteins',
+              'Transcription of mRNA in the nucleus'
             ],
             correctAnswer: 3,
-            explanation: 'Use nucleus because it directly maps to the described biological pattern: stores DNA and regulates gene expression.'
+            explanation: 'Transcription occurs in the nucleus and does not depend on the Golgi. Without the Golgi, protein secretion would fail (no vesicle sorting), lysosomes could not form (enzymes not targeted), and full glycosylation could not be completed (Golgi modifies carbohydrate chains started in the ER).'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cs7-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+**Comprehensive Review Matching** 🔍
+      `,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'Tay-Sachs disease results from a deficiency of enzymes in the',
+            options: ['Mitochondria', 'Lysosomes', 'Peroxisomes', 'Golgi apparatus']
+          },
+          {
+            label: 'The 9+2 arrangement of microtubules is found in',
+            options: ['Centrioles', 'Cilia and flagella', 'The mitotic spindle', 'Intermediate filaments']
+          },
+          {
+            label: 'A cell with many mitochondria and extensive rough ER is likely specialized for',
+            options: ['Photosynthesis', 'Protein secretion', 'Fat storage', 'Gas exchange']
+          },
+          {
+            label: 'Prokaryotic cells lack all of the following EXCEPT',
+            options: ['Nucleus', 'Ribosomes', 'Mitochondria', 'Endoplasmic reticulum']
+          }
+        ],
+        correctAnswers: ['Lysosomes', 'Cilia and flagella', 'Protein secretion', 'Ribosomes'],
+        hint1: 'Tay-Sachs is a lysosomal storage disease — lipids accumulate because the degrading enzyme is missing.',
+        hint2: 'The 9+2 axoneme arrangement (9 outer doublets + 2 central microtubules) is the hallmark of motile cilia and flagella.',
+        hint3: 'Energy (mitochondria) + protein synthesis (rough ER) = secretory cell.',
+        explanation: 'Tay-Sachs is caused by missing hexosaminidase A in lysosomes. The 9+2 microtubule pattern is unique to motile cilia and flagella (centrioles have 9×3). Abundant mitochondria + rough ER indicates a protein-secreting cell. Ribosomes are universal to ALL cells.'
+      }
+    },
+    {
+      id: 'cs7-input',
+      type: 'input-boxes' as const,
+      content: `
+**Final Key Terms** ✏️
+
+Enter the correct term for each description.
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['endosymbiosis', 'plasmodesmata', 'peroxisome'],
+        hint1: 'The theory that mitochondria and chloroplasts originated from engulfed prokaryotes.',
+        hint2: 'Channels through plant cell walls that allow direct cytoplasmic communication between adjacent cells.',
+        hint3: 'An organelle that breaks down fatty acids and detoxifies hydrogen peroxide using catalase.',
+        explanation: 'Endosymbiotic theory (Lynn Margulis, 1967) explains the origin of mitochondria and chloroplasts. Plasmodesmata are plant-specific cell junctions. Peroxisomes are single-membrane organelles that oxidize fatty acids and use catalase to convert H₂O₂ to water.'
+      }
+    },
+    {
+      id: 'cs7-exit',
+      type: 'multiple-choice' as const,
+      content: `
+**Final Exit Quiz — Cell Structure & Organelles** ✅
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A researcher isolates mitochondria from cells and places them in a test tube with the necessary substrates. The mitochondria continue to produce ATP. This observation supports the idea that:',
+            options: [
+              'Mitochondria are not important for cell function',
+              'ATP can only be produced inside living cells',
+              'Mitochondria are semi-autonomous organelles capable of independent function',
+              'Mitochondria do not need substrates to make ATP'
+            ],
+            correctAnswer: 2,
+            explanation: 'The ability of isolated mitochondria to function independently supports their semi-autonomous nature — consistent with endosymbiotic theory. They retain the molecular machinery (DNA, ribosomes, enzymes) needed for energy conversion, just as their free-living bacterial ancestors did.'
+          },
+          {
+            question: 'A cube-shaped cell has sides of length 10 μm. If it divides into eight equal cubes (each with sides of 5 μm), how does the TOTAL surface area of the eight small cells compare to the surface area of the original large cell?',
+            options: [
+              'It is the same',
+              'It doubles',
+              'It quadruples',
+              'It is halved'
+            ],
+            correctAnswer: 1,
+            explanation: 'Original cell: SA = 6(10²) = 600 μm². Each small cell: SA = 6(5²) = 150 μm². Total for 8 cells: 8 × 150 = 1,200 μm². That is exactly double (1,200/600 = 2). This is why dividing into smaller cells increases total surface area available for exchange — a key biological advantage.'
           }
         ]
       }

@@ -88,7 +88,9 @@ export const oChemEASPart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: halogens direct ortho/para but deactivate overall
+
       2) Term for: acid/Lewis acid forms strongly reactive species
+
       3) Product pattern expected under desulfonation (H3O+, heat)
       `,
       exercise: {

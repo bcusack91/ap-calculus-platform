@@ -100,7 +100,9 @@ $$120 \\times (1 - 0.35) = 120 \\times 0.65 = \\$78$$
 **Percent Practice** 🧮
 
 1) What is $40\\%$ of $90$?
+
 2) A $\\$50$ item is $20\\%$ off. What is the sale price in dollars?
+
 3) A value increased from $80$ to $100$. What is the percent increase?
       `,
       exercise: {

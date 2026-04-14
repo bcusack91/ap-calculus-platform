@@ -144,7 +144,9 @@ $$5i_1 - 3i_2 = 9 \\quad \\text{...(1)}$$
 $$-3i_1 + 7i_2 = 5 \\quad \\text{...(2)}$$
 
 1) Multiply equation (1) by 7 and equation (2) by 3, then add. What is $i_1$ (in A)?
+
 2) Substitute back to find $i_2$ (in A):
+
 3) The current through the shared resistor is $i_1 - i_2$. Find this value (in A):
       `,
       exercise: {

@@ -8,6 +8,7 @@ import {
   generateGeometryDiagnosticTest,
   scoreGeometryDiagnostic,
   pickNextForm,
+  TOTAL_FORMS,
   type GeometryDiagnosticTestData,
   type GeometryDiagnosticResults,
 } from '@/data/geometry-diagnostic'
@@ -69,8 +70,8 @@ export default function GeometryDiagnosticPage() {
 
   const startTest = useCallback(() => {
     const previousForms = history
-      .map(h => (h.results as Record<string, unknown> | null)?.form as 'A' | 'B' | undefined)
-      .filter((f): f is 'A' | 'B' => f === 'A' || f === 'B')
+      .map(h => Number((h.results as Record<string, unknown> | null)?.form))
+      .filter((f): f is number => Number.isFinite(f))
     const form = pickNextForm(previousForms)
     const data = generateGeometryDiagnosticTest(form)
     setTestData(data); setCurrentIndex(0); setAnswers(new Array(data.questions.length).fill(null))
@@ -267,7 +268,7 @@ export default function GeometryDiagnosticPage() {
             <ol className="space-y-2 text-sm text-teal-700 dark:text-teal-400 list-decimal list-inside">
               <li>Review the recommended topics above</li>
               <li>Complete each topic&apos;s lessons and practice problems</li>
-              <li>Come back and take the next diagnostic (Form {results.form === 'A' ? 'B' : 'A'})</li>
+              <li>Come back and take the next diagnostic (Form {results.form < TOTAL_FORMS ? results.form + 1 : 1})</li>
               <li>Get updated personalized recommendations</li>
               <li>Repeat until you reach the Advanced level!</li>
             </ol>
@@ -324,7 +325,7 @@ export default function GeometryDiagnosticPage() {
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
           <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">What to Expect</h3>
           <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-            {['~30 questions spanning 6 Geometry domains', '35 minute time limit', 'Proficiency level assessment with per-domain breakdown', 'Personalized topic recommendations', 'Alternating forms (A/B) with different questions each time'].map(item => (
+            {['~30 questions spanning 6 Geometry domains', '35 minute time limit', 'Proficiency level assessment with per-domain breakdown', 'Personalized topic recommendations', `${TOTAL_FORMS} unique forms with different questions each time`].map(item => (
               <li key={item} className="flex items-start gap-2"><svg className="mt-0.5 h-4 w-4 shrink-0 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>{item}</li>
             ))}
           </ul>

@@ -2,190 +2,177 @@ export const bioCellCyclePart2Data = {
   topicSlug: 'cell-cycle-mitosis',
   sections: [
     {
-      id: 'bio-cell-cycle-mitosis-p2-s1-intro',
+      id: 'cc2-intro',
       type: 'text' as const,
       content: `
-      ## Cell Cycle and Mitosis: Interphase
-      
-      **Part 2 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through DNA replication checkpoints in S phase.
-      
-      ### Worked biological example
-      A student team investigates DNA replication checkpoints in S phase. Their first interpretation step is to identify how **S phase** and **G2 phase** work together in the same pathway.
-      
-      - They classify the primary signal using **S phase**: DNA is replicated to form sister chromatids.
-      - They trace the downstream response using **G2 phase**: cell prepares for mitosis and verifies replication.
-      - They then compare outcomes with **prophase** and **metaphase** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **S phase**
-      - **G2 phase**
-      - **prophase**
-      - **metaphase**
+## Interphase — Preparation for Division
+
+**Part 2 of 7**
+
+Interphase is often called the "resting phase," but this is a misnomer — the cell is extremely active during interphase.  It is growing, producing proteins, duplicating organelles, and (during S phase) replicating its entire genome.
       `
     },
     {
-      id: 'bio-cell-cycle-mitosis-p2-s2-mcq-core',
+      id: 'cc2-g1',
+      type: 'text' as const,
+      content: `
+### G\\(_1\\) Phase — Growth and Preparation
+
+G\\(_1\\) is typically the longest and most variable phase of interphase:
+
+**Key events:**
+- Cell growth — increase in cell size and mass
+- Synthesis of proteins, lipids, and carbohydrates
+- Duplication of organelles (ribosomes, mitochondria, ER)
+- Centriole duplication begins (in animal cells)
+- Gene expression patterns establish the functional identity of the cell
+
+**G\\(_1\\)/S Checkpoint (Restriction Point):**
+- The most important checkpoint in the cell cycle
+- The cell "decides" whether to commit to division
+- Checks: adequate cell size, sufficient nutrients, growth factor signals, and intact DNA
+- If the cell passes this checkpoint, it is committed to S phase and division
+- If conditions are unfavorable, the cell enters **G\\(_0\\)**
+
+> **Growth Factors:** External signals (like PDGF, EGF, and insulin-like growth factor) bind to receptors and activate signaling cascades that promote passage through the G\\(_1\\)/S checkpoint.  Cancer cells often have mutations that make them independent of growth factor signaling.
+      `
+    },
+    {
+      id: 'cc2-s',
+      type: 'text' as const,
+      content: `
+### S Phase — DNA Replication
+
+During S phase, the entire genome is copied:
+
+**Key events:**
+- Each chromosome is replicated by **DNA polymerase** using semi-conservative replication
+- Replication begins at many **origins of replication** simultaneously (humans have ~30,000-50,000 origins)
+- New histone proteins are synthesized and assembled onto the replicated DNA
+- After replication, each chromosome consists of two **sister chromatids** joined at the **centromere** by **cohesin** proteins
+- The centrosome (containing two centrioles in animal cells) is also duplicated
+
+**Replication timing:**
+- Not all chromosomes replicate simultaneously
+- Euchromatin (active genes) replicates early in S phase
+- Heterochromatin (condensed, inactive regions) replicates late in S phase
+- Each origin of replication fires only ONCE per S phase (licensing system prevents re-replication)
+
+> **DNA Content Notation:** A cell in G\\(_1\\) has **2n** chromosomes and **2C** DNA content.  After S phase (in G\\(_2\\)), it has **2n** chromosomes but **4C** DNA content (each chromosome has doubled its DNA).
+      `
+    },
+    {
+      id: 'cc2-g2',
+      type: 'text' as const,
+      content: `
+### G\\(_2\\) Phase — Final Preparation
+
+G\\(_2\\) is the final preparation period before mitosis:
+
+**Key events:**
+- Continued cell growth and protein synthesis
+- Synthesis of proteins needed for mitosis (e.g., tubulin for the mitotic spindle)
+- Final duplication of centrosomes completed
+- **G\\(_2\\)/M Checkpoint** — the cell verifies:
+  - All DNA has been completely and accurately replicated
+  - DNA damage has been repaired
+  - The cell is large enough to divide
+  - Critical mitotic proteins are present
+
+> **If DNA damage is detected:** The checkpoint kinase **ATM/ATR** activates **p53**, which can halt the cell cycle (allowing time for repair) or trigger **apoptosis** (programmed cell death) if the damage is too severe to repair.
+      `
+    },
+    {
+      id: 'cc2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Interphase
       `,
       exercise: {
         questions: [
           {
-            question: 'For Interphase, what best describes S phase?',
+            question: 'Why is the G1/S checkpoint considered the most critical decision point in the cell cycle?',
             options: [
-              'chromosomes condense and spindle begins forming',
-              'cell prepares for mitosis and verifies replication',
-              'chromosomes align at the metaphase plate',
-              'DNA is replicated to form sister chromatids'
-            ],
-            correctAnswer: 3,
-            explanation: 'S phase is best matched with: DNA is replicated to form sister chromatids.'
-          },
-          {
-            question: 'In this part\'s context, what is the strongest definition of G2 phase?',
-            options: [
-              'DNA is replicated to form sister chromatids',
-              'cell prepares for mitosis and verifies replication',
-              'chromosomes condense and spindle begins forming',
-              'sister chromatids separate toward opposite poles'
+              'It determines the speed of DNA replication',
+              'Once a cell passes this checkpoint, it is committed to completing the cell cycle and dividing; before this point, the cell can exit to G0',
+              'It controls the separation of sister chromatids',
+              'It regulates cytokinesis'
             ],
             correctAnswer: 1,
-            explanation: 'G2 phase is best matched with: cell prepares for mitosis and verifies replication.'
+            explanation: 'The G1/S checkpoint (also called the restriction point in mammalian cells) is the commitment point. Before it, the cell can pause or exit the cycle. After it, the cell proceeds through S, G2, and M without needing further external signals. This is why it is a frequent target of mutations in cancer.'
+          },
+          {
+            question: 'After S phase, a cell has the same number of chromosomes as before S phase. How is this possible if all the DNA was replicated?',
+            options: [
+              'Some DNA was degraded during replication',
+              'Each replicated chromosome consists of two sister chromatids joined at the centromere — it counts as ONE chromosome. The chromosome number (counted by centromeres) is unchanged.',
+              'Only half the chromosomes were replicated',
+              'The extra DNA is stored in the nucleus as free fragments'
+            ],
+            correctAnswer: 1,
+            explanation: 'Chromosome number counts centromeres. After replication, each chromosome has two copies (sister chromatids) linked at one centromere. So the number of chromosomes remains 2n = 46 in humans, but the DNA content doubles from 2C to 4C.'
+          },
+          {
+            question: 'A mutation in ATM kinase prevents the cell from detecting DNA damage at the G2/M checkpoint. What is the likely consequence?',
+            options: [
+              'The cell will be unable to replicate its DNA',
+              'Cells with damaged DNA will proceed into mitosis, potentially propagating mutations and contributing to genomic instability',
+              'All cells will immediately undergo apoptosis',
+              'DNA repair will become more efficient'
+            ],
+            correctAnswer: 1,
+            explanation: 'ATM kinase is a key sensor for DNA double-strand breaks. Without it, the G2/M checkpoint cannot detect damage, and cells with broken or improperly replicated DNA enter mitosis. This leads to genomic instability — a hallmark of cancer.'
           }
         ]
       }
     },
     {
-      id: 'bio-cell-cycle-mitosis-p2-s3-deep-dive',
-      type: 'text' as const,
-      content: `
-      ### Deep-Dive Map: Interphase
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → S phase
-      - **Immediate processing** → G2 phase
-      - **System-level consequence** → prophase
-      - **Measured readout** → metaphase
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | S phase | DNA is replicated to form sister chromatids | Early shift in the primary variable |
-      | G2 phase | cell prepares for mitosis and verifies replication | Mid-pathway change in process rate |
-      | prophase | chromosomes condense and spindle begins forming | Downstream phenotype trend |
-      | metaphase | chromosomes align at the metaphase plate | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
-      `
-    },
-    {
-      id: 'bio-cell-cycle-mitosis-p2-s4-input',
+      id: 'cc2-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **DNA is replicated to form sister chromatids**
-      2) Term for this definition: **cell prepares for mitosis and verifies replication**
-      3) Term for this definition: **chromosomes condense and spindle begins forming**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['S phase', 'G2 phase', 'prophase'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'DNA is replicated to form sister chromatids\'.',
-        hint2: 'Second blank points to G2 phase; think about the role \'cell prepares for mitosis and verifies replication\'.',
-        hint3: 'Third blank is prophase; connect it to \'chromosomes condense and spindle begins forming\'.',
-        explanation: 'Correct set: S phase, G2 phase, prophase. These three terms define the core mechanism chain for Interphase.'
-      }
-    },
-    {
-      id: 'bio-cell-cycle-mitosis-p2-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'S phase',
-            options: ['chromosomes condense and spindle begins forming', 'chromosomes align at the metaphase plate', 'cell prepares for mitosis and verifies replication', 'DNA is replicated to form sister chromatids']
-          },
-          {
-            label: 'G2 phase',
-            options: ['sister chromatids separate toward opposite poles', 'cell prepares for mitosis and verifies replication', 'chromosomes condense and spindle begins forming', 'chromosomes align at the metaphase plate']
-          },
-          {
-            label: 'prophase',
-            options: ['sister chromatids separate toward opposite poles', 'division of cytoplasm to produce two daughter cells', 'chromosomes align at the metaphase plate', 'chromosomes condense and spindle begins forming']
-          }
-        ],
-        correctAnswers: ['DNA is replicated to form sister chromatids', 'cell prepares for mitosis and verifies replication', 'chromosomes condense and spindle begins forming'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'S phase, G2 phase, and prophase should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-cell-cycle-mitosis-p2-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because S phase DNA is replicated to form sister chromatids, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Mitosis and cytokinesis are related but distinct events.
-      - Chromosome number remains stable through mitosis under normal conditions.
-      - Checkpoint failure can lead to genomic instability long before visible tumors form.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-cell-cycle-mitosis-p2-s7-mcq-final',
-      type: 'multiple-choice' as const,
-      content: `
-      **Final application MCQ (2 questions)**
+### Key Terms — Interphase
       `,
       exercise: {
         questions: [
           {
-            question: 'In DNA replication checkpoints in S phase, the observed pattern is: chromosomes align at the metaphase plate. What term should anchor the explanation?',
-            options: [
-              'S phase',
-              'G2 phase',
-              'prophase',
-              'metaphase'
-            ],
-            correctAnswer: 3,
-            explanation: 'Use metaphase because it directly maps to the described biological pattern: chromosomes align at the metaphase plate.'
+            question: 'The proteins that hold sister chromatids together at the centromere after replication:',
+            answer: 'cohesin',
+            acceptableAnswers: ['cohesin', 'Cohesin', 'cohesins'],
+            placeholder: 'e.g. condensin'
           },
           {
-            question: 'In an AP-style free-response about interphase, the observed pattern is: sister chromatids separate toward opposite poles. What term should anchor the explanation?',
+            question: 'The tumor suppressor protein activated by ATM/ATR when DNA damage is detected:',
+            answer: 'p53',
+            acceptableAnswers: ['p53', 'P53', 'TP53', 'tp53'],
+            placeholder: 'e.g. Rb'
+          },
+          {
+            question: 'The DNA content abbreviation for a cell after completing S phase:',
+            answer: '4C',
+            acceptableAnswers: ['4C', '4c'],
+            placeholder: 'e.g. 2C'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cc2-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Exit Ticket — Interphase
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A researcher measures the DNA content per cell in a population and obtains a histogram. Most cells show 2C DNA content, with a smaller peak at 4C.  What interpretation is correct?',
             options: [
-              'anaphase',
-              'cytokinesis',
-              'prophase',
-              'metaphase'
+              'The 4C cells are haploid',
+              'Most cells are in G1 (or G0) with unreplicated DNA (2C); the smaller 4C peak represents cells in G2 or M phase that have completed DNA replication',
+              'The 2C cells have completed mitosis and the 4C cells are about to undergo meiosis',
+              'All cells are in S phase'
             ],
-            correctAnswer: 0,
-            explanation: 'Use anaphase because it directly maps to the described biological pattern: sister chromatids separate toward opposite poles.'
+            correctAnswer: 1,
+            explanation: 'In a dividing population, cells in G1 (or G0) have 2C DNA content. After S phase, DNA content doubles to 4C (G2 and M). Since G1 is the longest phase, more cells are found at 2C. Cells in the process of S phase would show intermediate values between 2C and 4C.'
           }
         ]
       }

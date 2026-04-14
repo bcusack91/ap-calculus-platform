@@ -88,7 +88,9 @@ export const oChemStereoPart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: absolute stereochemical descriptor from CIP ranking
+
       2) Term for: non-superimposable mirror-image stereoisomers
+
       3) Product pattern expected under SN1 at stereocenter
       `,
       exercise: {

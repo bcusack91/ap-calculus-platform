@@ -109,7 +109,9 @@ A **fragment** is a group of words that looks like a sentence but is missing a s
 Type "fragment," "run-on," or "comma splice" for each sentence.
 
 1) "Walking to the store after finishing her homework."
+
 2) "The alarm went off we rushed outside."
+
 3) "The cake looked delicious, nobody wanted to cut it."
       `,
       exercise: {

@@ -2,185 +2,130 @@ export const calcbcPowerSeriesPart5Data = {
   topicSlug: 'power-series-calcbc',
   sections: [
     {
-      id: 'calcbcpowerseries-p5-intro',
+      id: 'ps5-intro',
       type: 'text' as const,
-      content: `
-# Power Series
+      content: `# Power Series — Differential Equations & AP Strategies
 
-**Part 5 of 7 — Applications**
+**Part 5 of 7 — Series Solutions & Exam Techniques**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Power Series Solutions to DEs
 
-## Key Ideas
+Some AP problems ask you to find coefficients of a power series solution to a DE.
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+**Setup:** Assume $y = \\sum a_n x^n = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \\cdots$
 
-## Formula Snapshot
+Then $y' = \\sum_{n=1}^\\infty n a_n x^{n-1} = a_1 + 2a_2 x + 3a_3 x^2 + \\cdots$
 
-When appropriate, use:
+**Example:** $y' = y$, $y(0) = 1$
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+Substituting: $a_1 + 2a_2 x + 3a_3 x^2 + \\cdots = a_0 + a_1 x + a_2 x^2 + \\cdots$
 
-and interpret what the final value means in context.
-      `
+Matching coefficients: $a_1 = a_0 = 1$, $2a_2 = a_1 \\Rightarrow a_2 = 1/2$, $3a_3 = a_2 \\Rightarrow a_3 = 1/6$
+
+Pattern: $a_n = 1/n!$ → solution is $y = e^x$ ✓
+
+> **AP Tip:** These problems typically ask for the first 3 or 4 nonzero terms, not the general pattern.`
     },
     {
-      id: 'calcbcpowerseries-p5-mcq1',
+      id: 'ps5-ap-frq',
+      type: 'text' as const,
+      content: `### Common AP FRQ Formats
+
+**Type 1: "Write the first four nonzero terms..."**
+- Use known series + operations
+- Example: First 4 terms of $e^x \\sin x$ → multiply truncated series
+
+**Type 2: "Find the coefficient of $x^n$..."**
+- Use Taylor formula: $a_n = f^{(n)}(0)/n!$
+- Or manipulate known series
+
+**Type 3: "Use the series to approximate..."**
+- Evaluate at specific $x$, bound error
+- Use alternating series error bound when applicable
+
+**Type 4: "Find the interval of convergence"**
+- Ratio test for $R$, then test endpoints
+
+### Quick AP Checks
+
+$$\\boxed{f(x) = \\sum_{n=0}^\\infty \\frac{f^{(n)}(c)}{n!}(x-c)^n \\implies a_n = \\frac{f^{(n)}(c)}{n!}}$$
+
+So if you know the series, you know the derivatives at the center:
+$f^{(n)}(c) = n! \\cdot a_n$`
+    },
+    {
+      id: 'ps5-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**AP-Style Practice**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'If $f(x) = \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n}}{(2n)!}$, then $f\'\'(0) = $',
+            options: ['$-1$', '$0$', '$1$', '$-2$'],
+            correctAnswer: 0,
+            explanation: 'This is $\\cos x$. $f\'\'(0) = -\\cos(0)$... Actually: $a_n$ is the coefficient of $x^n$. Coefficient of $x^2$: $(-1)^1/(2!) = -1/2$. Since $a_2 = f\'\'(0)/2!$, we get $f\'\'(0) = 2! \\cdot (-1/2) = -1$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'For the DE $y\' = 2xy$ with $y(0) = 1$, if $y = a_0 + a_1 x + a_2 x^2 + \\cdots$, then $a_2 = $',
+            options: ['$1$', '$0$', '$2$', '$1/2$'],
+            correctAnswer: 0,
+            explanation: '$y(0) = a_0 = 1$. $y\' = a_1 + 2a_2 x + \\cdots$, $2xy = 2a_0 x + 2a_1 x^2 + \\cdots$. Constant terms: $a_1 = 0$. $x$ terms: $2a_2 = 2a_0 = 2$, so $a_2 = 1$.'
+          },
+          {
+            question: 'If $g(x) = \\sum_{n=0}^\\infty \\frac{x^n}{(n+1)!}$, then $g(x) = $',
+            options: ['$(e^x - 1)/x$', '$e^x/x$', '$\\ln(1+x)/x$', '$e^x - 1$'],
+            correctAnswer: 0,
+            explanation: '$e^x = \\sum x^n/n!$. Then $e^x - 1 = \\sum_{n=1}^\\infty x^n/n!$. Dividing by $x$: $(e^x-1)/x = \\sum_{n=1}^\\infty x^{n-1}/n! = \\sum_{n=0}^\\infty x^n/(n+1)!$. ✓'
           }
         ]
       }
     },
     {
-      id: 'calcbcpowerseries-p5-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcpowerseries-p5-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcpowerseries-p5-dropdown',
+      id: 'ps5-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Series & Derivatives**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'If $f(x) = \\sum_{n=0}^\\infty \\frac{3^n x^n}{n!}$, then $f^{(5)}(0) = $',
+            options: ['$243$ ($= 3^5$)', '$3^5/5! = 243/120$', '$5! = 120$', '$15$'],
+            correctAnswers: ['$243$ ($= 3^5$)'],
+            hints: ['$f^{(n)}(0) = n! \\cdot a_n = n! \\cdot 3^n/n! = 3^n$.'],
+            explanation: '$a_n = 3^n/n!$, so $f^{(5)}(0) = 5! \\cdot a_5 = 5! \\cdot 3^5/5! = 3^5 = 243$. (Note: $f(x) = e^{3x}$, and $f^{(5)}(x) = 3^5 e^{3x}$, so $f^{(5)}(0) = 243$ ✓.)'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcpowerseries-p5-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Applications**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcpowerseries-p5-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'On an AP FRQ, "write the first four nonzero terms" for $\\sin(x^2)$:',
+            options: ['$x^2 - x^6/6 + x^{10}/120 - x^{14}/5040$', '$x - x^3/6 + x^5/120 - x^7/5040$', '$x^2 - x^4/2 + x^6/24 - x^8/720$', '$1 - x^4/2 + x^8/24 - x^{12}/720$'],
+            correctAnswers: ['$x^2 - x^6/6 + x^{10}/120 - x^{14}/5040$'],
+            hints: ['$\\sin u = u - u^3/6 + u^5/120 - u^7/5040 + \\cdots$. Set $u = x^2$.'],
+            explanation: '$\\sin(x^2) = x^2 - (x^2)^3/3! + (x^2)^5/5! - (x^2)^7/7! = x^2 - x^6/6 + x^{10}/120 - x^{14}/5040$.'
           }
         ]
       }
+    },
+    {
+      id: 'ps5-input',
+      type: 'input-box' as const,
+      content: '**DE Series Solution**',
+      exercise: {
+        question: 'For $y\' = y + 1$ with $y(0) = 0$: if $y = a_0 + a_1 x + a_2 x^2 + \\cdots$, find $a_1$.',
+        correctAnswer: '1',
+        acceptableAnswers: ['1'],
+        hints: ['$y(0) = a_0 = 0$. Constant terms in $y\' = y + 1$: $a_1 = a_0 + 1$.'],
+        explanation: '$a_0 = y(0) = 0$. From $y\' = y + 1$: constant terms give $a_1 = a_0 + 1 = 0 + 1 = 1$.'
+      }
+    },
+    {
+      id: 'ps5-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Power series can solve DEs by matching coefficients
+- $f^{(n)}(c) = n! \\cdot a_n$ connects series coefficients to derivatives
+- AP FRQ: "first four nonzero terms" is the most common format
+- Build series from known ones rather than computing derivatives
+
+> **Next:** Part 6 — Problem-Solving Workshop.`
     }
   ]
-}
+};

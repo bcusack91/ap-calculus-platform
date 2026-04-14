@@ -88,7 +88,9 @@ export const oChemCarboxylicAcidsPart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: addition-elimination at acyl carbon
+
       2) Term for: acid-catalyzed carboxylic acid + alcohol condensation
+
       3) Product pattern expected under LiAlH4 reduction
       `,
       exercise: {

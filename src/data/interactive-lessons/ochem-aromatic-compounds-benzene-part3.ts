@@ -88,7 +88,9 @@ export const oChemAromaticPart3Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: fails planarity or conjugation requirement
+
       2) Term for: 4n+2 pi electron count predicts aromatic stabilization
+
       3) Product pattern expected under SO3, H2SO4
       `,
       exercise: {

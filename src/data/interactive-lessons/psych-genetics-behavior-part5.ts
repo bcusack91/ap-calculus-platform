@@ -86,7 +86,9 @@ export const psychGeneticsPart5Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: design comparing adoptees to biological and adoptive relatives
+
       2) Write the concept that matches: experiences that make siblings different from one another
+
       3) Write the concept that matches: the proportion of trait variation in a population attributable to genetic differences
 
       Use the exact vocabulary term from this part.

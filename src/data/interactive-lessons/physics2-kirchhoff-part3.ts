@@ -124,8 +124,11 @@ A single loop contains (going clockwise):
 - Resistor: $R_3 = 6\\;\\Omega$
 
 1) Net EMF around the loop (in V):
+
 2) Total resistance (in Ω):
+
 3) Current in the loop (in A):
+
 4) Voltage across $R_2$ (in V):
       `,
       exercise: {
@@ -152,7 +155,9 @@ A single loop contains:
 - $R_3 = 5\\;\\Omega$
 
 1) Net EMF with clockwise positive (in V):
+
 2) Current magnitude (in A):
+
 3) Voltage across $R_3$ (in V):
 
 *Round all answers to 3 significant figures.*

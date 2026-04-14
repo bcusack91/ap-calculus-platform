@@ -2,190 +2,203 @@ export const bioMembraneTransportPart4Data = {
   topicSlug: 'membrane-transport',
   sections: [
     {
-      id: 'bio-membrane-transport-p4-s1-intro',
+      id: 'mt4-intro',
       type: 'text' as const,
       content: `
-      ## Membrane Transport: Active Transport
-      
-      **Part 4 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through ATP-powered ion pumping.
-      
-      ### Worked biological example
-      A student team investigates ATP-powered ion pumping. Their first interpretation step is to identify how **osmosis** and **aquaporin** work together in the same pathway.
-      
-      - They classify the primary signal using **osmosis**: water movement across a semipermeable membrane.
-      - They trace the downstream response using **aquaporin**: channel protein enabling rapid water transport.
-      - They then compare outcomes with **active transport** and **sodium-potassium pump** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **osmosis**
-      - **aquaporin**
-      - **active transport**
-      - **sodium-potassium pump**
+## Active Transport — Moving Against the Gradient
+
+**Part 4 of 7**
+
+Active transport moves substances **against** their concentration (or electrochemical) gradient — from low to high concentration.  This requires **energy input**, typically from ATP hydrolysis.
+
+Active transport is essential for:
+- Maintaining ion gradients across membranes
+- Accumulating nutrients inside cells
+- Removing waste products
+- Generating electrical signals in neurons
       `
     },
     {
-      id: 'bio-membrane-transport-p4-s2-mcq-core',
+      id: 'mt4-primary',
+      type: 'text' as const,
+      content: `
+### Primary Active Transport: The Na+/K+ ATPase
+
+The most important primary active transport protein in animal cells is the **sodium-potassium pump** (Na\\(^+\\)/K\\(^+\\) ATPase):
+
+**For each ATP hydrolyzed, the pump moves:**
+- **3 Na\\(^+\\) ions OUT** of the cell
+- **2 K\\(^+\\) ions INTO** the cell
+
+This creates and maintains steep concentration gradients:
+- High Na\\(^+\\) outside, low Na\\(^+\\) inside
+- High K\\(^+\\) inside, low K\\(^+\\) outside
+- Net export of positive charge → contributes to the negative resting membrane potential (-70 mV)
+
+**The pump cycle:**
+1. 3 Na\\(^+\\) bind to cytoplasmic side of the pump
+2. ATP is hydrolyzed; phosphate group is transferred to the pump (phosphorylation)
+3. Conformational change exposes Na\\(^+\\) to the extracellular side; Na\\(^+\\) is released
+4. 2 K\\(^+\\) bind to the extracellular side
+5. Dephosphorylation causes conformational change back
+6. K\\(^+\\) is released into the cytoplasm
+
+> **Energy Cost:** The Na\\(^+\\)/K\\(^+\\) ATPase consumes approximately **25-30% of total cellular ATP** in many animal cells. In neurons, this figure can reach 70%.
+
+**Other primary active transport pumps:**
+- **Ca\\(^{2+}\\) ATPase** — pumps Ca\\(^{2+}\\) out of the cytoplasm (into ER or extracellular space)
+- **H\\(^+\\)/K\\(^+\\) ATPase** — pumps H\\(^+\\) into the stomach lumen (gastric acid secretion)
+- **H\\(^+\\) ATPase (proton pump)** — in plant cell membranes, creates proton gradients for secondary transport
+      `
+    },
+    {
+      id: 'mt4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Primary Active Transport
       `,
       exercise: {
         questions: [
           {
-            question: 'For Active Transport, what best describes osmosis?',
+            question: 'The Na+/K+ ATPase pumps 3 Na+ out and 2 K+ in per ATP. Why does this contribute to the membrane potential?',
             options: [
-              'channel protein enabling rapid water transport',
-              'ATPase exchanging Na+ and K+ across plasma membrane',
-              'water movement across a semipermeable membrane',
-              'movement against gradient requiring energy input'
-            ],
-            correctAnswer: 2,
-            explanation: 'osmosis is best matched with: water movement across a semipermeable membrane.'
-          },
-          {
-            question: 'In this part\'s context, what is the strongest definition of aquaporin?',
-            options: [
-              'water movement across a semipermeable membrane',
-              'channel protein enabling rapid water transport',
-              'movement against gradient requiring energy input',
-              'uptake of extracellular material via vesicle formation'
+              'It does not contribute to membrane potential',
+              'The unequal exchange of ions (3 positive charges out, 2 positive charges in) creates a net export of positive charge, making the inside more negative',
+              'It only moves uncharged molecules',
+              'Na+ and K+ cancel each other out'
             ],
             correctAnswer: 1,
-            explanation: 'aquaporin is best matched with: channel protein enabling rapid water transport.'
+            explanation: 'Each cycle of the pump exports 3 positive charges (Na+) and imports only 2 positive charges (K+). The net export of 1 positive charge per cycle contributes to the negative resting membrane potential. However, the pump accounts for only ~10% of the membrane potential — the rest comes from K+ leak channels.'
+          },
+          {
+            question: 'Why is the Na+/K+ ATPase classified as an "active" transporter?',
+            options: [
+              'It moves Na+ and K+ down their concentration gradients',
+              'It uses energy from ATP hydrolysis to move ions AGAINST their electrochemical gradients',
+              'It only works when the cell is metabolically active',
+              'It transports molecules faster than channel proteins'
+            ],
+            correctAnswer: 1,
+            explanation: 'Active transport requires direct energy input (ATP hydrolysis in this case) because it moves substances against their gradient. Na+ is pumped out despite being at lower concentration inside, and K+ is pumped in despite being at lower concentration outside.'
           }
         ]
       }
     },
     {
-      id: 'bio-membrane-transport-p4-s3-deep-dive',
+      id: 'mt4-secondary',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Active Transport
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → osmosis
-      - **Immediate processing** → aquaporin
-      - **System-level consequence** → active transport
-      - **Measured readout** → sodium-potassium pump
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | osmosis | water movement across a semipermeable membrane | Early shift in the primary variable |
-      | aquaporin | channel protein enabling rapid water transport | Mid-pathway change in process rate |
-      | active transport | movement against gradient requiring energy input | Downstream phenotype trend |
-      | sodium-potassium pump | ATPase exchanging Na+ and K+ across plasma membrane | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Secondary Active Transport (Cotransport)
+
+Secondary active transport uses the energy stored in an **existing ion gradient** (established by primary active transport) to drive the transport of another substance.
+
+**Two types:**
+
+**1. Symport (cotransport):**
+- Both substances move in the **same direction**
+- The ion moves DOWN its gradient, providing energy for the other substance to move AGAINST its gradient
+- Example: **SGLT1** — Na\\(^+\\)/glucose symporter in the intestinal epithelium uses the Na\\(^+\\) gradient (established by Na\\(^+\\)/K\\(^+\\) ATPase) to import glucose against its gradient
+
+**2. Antiport (exchange):**
+- Substances move in **opposite directions**
+- Example: **Na\\(^+\\)/H\\(^+\\) exchanger** — Na\\(^+\\) enters (down its gradient), H\\(^+\\) exits (against its gradient), helping regulate intracellular pH
+
+> **Key Concept:** Secondary active transport is "indirectly" active — it does not directly use ATP, but it depends on a gradient that was created by a primary active transporter that DID use ATP. The energy was stored in the gradient.
+
+**In plants:** The H\\(^+\\) ATPase (proton pump) in the plasma membrane creates a proton gradient. This gradient powers secondary active transport of sucrose, amino acids, and other nutrients into the cell via H\\(^+\\)/solute symporters.
       `
     },
     {
-      id: 'bio-membrane-transport-p4-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **water movement across a semipermeable membrane**
-      2) Term for this definition: **channel protein enabling rapid water transport**
-      3) Term for this definition: **movement against gradient requiring energy input**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['osmosis', 'aquaporin', 'active transport'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'water movement across a semipermeable membrane\'.',
-        hint2: 'Second blank points to aquaporin; think about the role \'channel protein enabling rapid water transport\'.',
-        hint3: 'Third blank is active transport; connect it to \'movement against gradient requiring energy input\'.',
-        explanation: 'Correct set: osmosis, aquaporin, active transport. These three terms define the core mechanism chain for Active Transport.'
-      }
-    },
-    {
-      id: 'bio-membrane-transport-p4-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'osmosis',
-            options: ['ATPase exchanging Na+ and K+ across plasma membrane', 'water movement across a semipermeable membrane', 'movement against gradient requiring energy input', 'channel protein enabling rapid water transport']
-          },
-          {
-            label: 'aquaporin',
-            options: ['channel protein enabling rapid water transport', 'ATPase exchanging Na+ and K+ across plasma membrane', 'uptake of extracellular material via vesicle formation', 'movement against gradient requiring energy input']
-          },
-          {
-            label: 'active transport',
-            options: ['movement against gradient requiring energy input', 'release of intracellular cargo via vesicle fusion', 'ATPase exchanging Na+ and K+ across plasma membrane', 'uptake of extracellular material via vesicle formation']
-          }
-        ],
-        correctAnswers: ['water movement across a semipermeable membrane', 'channel protein enabling rapid water transport', 'movement against gradient requiring energy input'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'osmosis, aquaporin, and active transport should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-membrane-transport-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because osmosis water movement across a semipermeable membrane, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Active transport is defined by movement against gradient, not merely ATP presence nearby.
-      - Transport direction depends on gradients and membrane proteins, not molecule intent.
-      - Facilitated diffusion remains passive even though proteins are involved.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-membrane-transport-p4-s7-mcq-final',
+      id: 'mt4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Checkpoint — Secondary Active Transport
       `,
       exercise: {
         questions: [
           {
-            question: 'In ATP-powered ion pumping, the observed pattern is: ATPase exchanging Na+ and K+ across plasma membrane. What term should anchor the explanation?',
+            question: 'In the small intestine, glucose is absorbed against its concentration gradient using a Na+/glucose symporter (SGLT1). Why is this considered secondary active transport?',
             options: [
-              'active transport',
-              'sodium-potassium pump',
-              'aquaporin',
-              'osmosis'
+              'It uses ATP directly to pump glucose',
+              'It uses the Na+ gradient (created by the Na+/K+ ATPase) as an energy source — Na+ flows down its gradient, providing energy to move glucose against its gradient',
+              'Glucose moves down its gradient alongside Na+',
+              'It uses GTP instead of ATP'
             ],
             correctAnswer: 1,
-            explanation: 'Use sodium-potassium pump because it directly maps to the described biological pattern: ATPase exchanging Na+ and K+ across plasma membrane.'
+            explanation: 'SGLT1 couples the downhill movement of Na+ (established by the Na+/K+ ATPase on the basolateral membrane) with the uphill movement of glucose. The energy for glucose transport comes indirectly from ATP — via the Na+ gradient — hence "secondary" active transport.'
           },
           {
-            question: 'In an AP-style free-response about active transport, the observed pattern is: uptake of extracellular material via vesicle formation. What term should anchor the explanation?',
+            question: 'What is the difference between a symporter and an antiporter?',
             options: [
-              'endocytosis',
-              'exocytosis',
-              'sodium-potassium pump',
-              'active transport'
+              'A symporter uses ATP; an antiporter does not',
+              'A symporter moves two substances in the same direction; an antiporter moves them in opposite directions',
+              'A symporter moves one substance; an antiporter moves two',
+              'There is no functional difference'
             ],
-            correctAnswer: 0,
-            explanation: 'Use endocytosis because it directly maps to the described biological pattern: uptake of extracellular material via vesicle formation.'
+            correctAnswer: 1,
+            explanation: 'In symport (cotransport), both the ion and the transported molecule move in the same direction across the membrane. In antiport (exchange), the ion and transported molecule move in opposite directions. Both are powered by the existing ion gradient.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'mt4-input',
+      type: 'input-boxes' as const,
+      content: `
+### Key Terms — Active Transport
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'The pump that maintains the Na+ and K+ gradients in animal cells (common name):',
+            answer: 'sodium-potassium pump',
+            acceptableAnswers: ['sodium-potassium pump', 'Na+/K+ ATPase', 'Na/K ATPase', 'sodium potassium pump', 'Na+/K+ pump'],
+            placeholder: 'e.g. calcium pump'
+          },
+          {
+            question: 'A transporter where two substances move in the same direction:',
+            answer: 'symporter',
+            acceptableAnswers: ['symporter', 'Symporter', 'symport', 'cotransporter', 'cotransport'],
+            placeholder: 'e.g. antiporter'
+          },
+          {
+            question: 'Number of Na+ ions exported per cycle of the Na+/K+ ATPase:',
+            answer: '3',
+            acceptableAnswers: ['3', 'three', 'Three'],
+            placeholder: 'e.g. 2'
+          }
+        ]
+      }
+    },
+    {
+      id: 'mt4-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Exit Ticket — Active Transport
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'If a cell is treated with a metabolic poison that stops ATP production, which of the following would be directly affected?',
+            options: [
+              'Simple diffusion of O2 across the membrane',
+              'Osmosis through aquaporins',
+              'The Na+/K+ ATPase and all other primary active transport systems',
+              'Facilitated diffusion of glucose through GLUT channels'
+            ],
+            correctAnswer: 2,
+            explanation: 'Primary active transport (like the Na+/K+ ATPase) directly requires ATP. Without ATP, these pumps stop. Passive processes (simple diffusion, osmosis, facilitated diffusion) do not require ATP and would continue, though gradient-dependent secondary transport would gradually fail as the Na+ gradient collapses.'
+          },
+          {
+            question: 'A drug called ouabain specifically inhibits the Na+/K+ ATPase. If ouabain is applied to intestinal epithelial cells, what would happen to glucose absorption via SGLT1?',
+            options: [
+              'Glucose absorption would increase',
+              'Glucose absorption would decrease because the Na+ gradient that powers SGLT1 would collapse without the Na+/K+ ATPase to maintain it',
+              'Glucose absorption would be unaffected because SGLT1 uses ATP directly',
+              'The cells would switch to simple diffusion for glucose uptake'
+            ],
+            correctAnswer: 1,
+            explanation: 'SGLT1 (secondary active transport) depends on the Na+ gradient maintained by the Na+/K+ ATPase (primary active transport). Ouabain inhibits the pump, causing Na+ to accumulate inside the cell, collapsing the Na+ gradient. Without this gradient, SGLT1 cannot drive glucose against its gradient.'
           }
         ]
       }

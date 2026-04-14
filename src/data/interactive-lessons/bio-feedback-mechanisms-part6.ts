@@ -95,7 +95,9 @@ export const bioFeedbackPart6Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **component that carries out corrective response**
+
       2) Term for this definition: **hormone lowering blood glucose by promoting uptake/storage**
+
       3) Term for this definition: **hormone raising blood glucose by mobilizing reserves**
       `,
       exercise: {

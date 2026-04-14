@@ -2,185 +2,103 @@ export const calcbcArcLengthPart6Data = {
   topicSlug: 'arc-length-surface-area-calcbc',
   sections: [
     {
-      id: 'calcbcarclength-p6-intro',
+      id: 'al6-intro',
       type: 'text' as const,
-      content: `
-# Arc Length Surface Area
+      content: `# Arc Length & Surface Area — Workshop
 
-**Part 6 of 7 — Exam Strategy**
+**Part 6 of 7 — Problem-Solving Workshop**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+Mixed problems covering all forms of arc length and surface area.
 
-## Key Ideas
+### Workshop Overview
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
-
-## Formula Snapshot
-
-When appropriate, use:
-
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+| Problem | Topic |
+|---------|-------|
+| 1 | Cartesian arc length (hand computation) |
+| 2 | Parametric surface area |
+| 3 | Choosing the right form |`
     },
     {
-      id: 'calcbcarclength-p6-mcq1',
+      id: 'al6-prob1',
+      type: 'text' as const,
+      content: `### Problem 1 — Cartesian
+
+Find the arc length of $y = \\frac{x^3}{3} + \\frac{1}{4x}$ from $x = 1$ to $x = 3$.
+
+$y' = x^2 - \\frac{1}{4x^2}$
+
+$(y')^2 = x^4 - \\frac{1}{2} + \\frac{1}{16x^4}$
+
+$1 + (y')^2 = x^4 + \\frac{1}{2} + \\frac{1}{16x^4} = \\left(x^2 + \\frac{1}{4x^2}\\right)^2$
+
+$$L = \\int_1^3 \\left(x^2 + \\frac{1}{4x^2}\\right)dx = \\left[\\frac{x^3}{3} - \\frac{1}{4x}\\right]_1^3 = \\left(9 - \\frac{1}{12}\\right) - \\left(\\frac{1}{3} - \\frac{1}{4}\\right) = \\frac{108 - 1}{12} - \\frac{1}{12} = \\frac{106}{12} = \\frac{53}{6}$$`
+    },
+    {
+      id: 'al6-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Workshop Questions**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'The key step in Problem 1 was recognizing that $1 + (y\')^2$ is:',
+            options: ['A perfect square', 'Equal to 1', 'A constant', 'Zero'],
+            correctAnswer: 0,
+            explanation: 'The function was chosen so $1 + (y\')^2 = (x^2 + \\frac{1}{4x^2})^2$. This is the standard "perfect square" arc length trick.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'The surface area when rotating $y = \\sqrt{x}$ from $x = 0$ to $x = 4$ about the $x$-axis is:',
+            options: ['$\\frac{\\pi}{6}(17\\sqrt{17} - 1)$', '$4\\pi$', '$8\\pi\\sqrt{2}$', '$\\frac{\\pi}{3}(17\\sqrt{17})$'],
+            correctAnswer: 0,
+            explanation: '$y\' = \\frac{1}{2\\sqrt{x}}$, $1 + (y\')^2 = 1 + \\frac{1}{4x} = \\frac{4x+1}{4x}$. $S = 2\\pi\\int_0^4 \\sqrt{x}\\cdot\\frac{\\sqrt{4x+1}}{2\\sqrt{x}}\\,dx = \\pi\\int_0^4\\sqrt{4x+1}\\,dx = \\frac{\\pi}{6}[(4x+1)^{3/2}]_0^4 = \\frac{\\pi}{6}(17\\sqrt{17}-1)$.'
           }
         ]
       }
     },
     {
-      id: 'calcbcarclength-p6-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcarclength-p6-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcarclength-p6-dropdown',
+      id: 'al6-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Form Selection Practice**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'For the curve $r = 1 + \\cos\\theta$, use the _____ arc length formula.',
+            options: ['Polar', 'Cartesian', 'Parametric', 'Any — all give the same integral'],
+            correctAnswers: ['Polar'],
+            hints: ['The curve is given in polar form.'],
+            explanation: 'Use $L = \\int\\sqrt{r^2 + (r\')^2}\\,d\\theta$. Converting to Cartesian would make it much harder.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcarclength-p6-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Exam Strategy**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcarclength-p6-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'Perfect-square arc length problems always involve functions of the form $y = \\frac{x^n}{n} + \\frac{1}{cx^m}$ because:',
+            options: ['$(y\')^2$ produces cross terms that cancel to give a perfect square with $+1$', 'It is a coincidence', 'The integral is always rational', 'These are the only functions with finite arc length'],
+            correctAnswers: ['$(y\')^2$ produces cross terms that cancel to give a perfect square with $+1$'],
+            hints: ['When $y\' = ax^k - bx^{-k}$, $(y\')^2 + 1 = (ax^k + bx^{-k})^2$ if $2ab = 1$.'],
+            explanation: 'If $y\' = f - g$ with $fg = 1/2$, then $(y\')^2 + 1 = f^2 + 2fg + g^2 = (f+g)^2$. The function is engineered so the square root simplifies.'
           }
         ]
       }
+    },
+    {
+      id: 'al6-input',
+      type: 'input-box' as const,
+      content: '**Workshop Computation**',
+      exercise: {
+        question: 'From Problem 1, what is the arc length $53/6$ as a decimal (round to 2 places)?',
+        correctAnswer: '8.83',
+        acceptableAnswers: ['8.83', '8.833', '53/6'],
+        hints: ['$53 \\div 6 = 8.8\\overline{3}$.'],
+        explanation: '$53/6 = 8.833\\ldots \\approx 8.83$.'
+      }
+    },
+    {
+      id: 'al6-summary',
+      type: 'text' as const,
+      content: `### Workshop Summary
+
+- Recognize perfect-square arc length problems: $y = ax^n + bx^{-m}$
+- Choose polar form for polar curves, parametric for parametric curves
+- Surface area: always $2\\pi\\int(\\text{radius})\\,ds$
+
+> **Next:** Part 7 — Comprehensive Review.`
     }
   ]
-}
+};

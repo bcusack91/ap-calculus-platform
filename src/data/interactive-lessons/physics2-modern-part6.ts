@@ -185,8 +185,11 @@ Activity is measured in **becquerels** (Bq) = decays per second.
 A radioactive isotope has a half-life of 8.0 days. You start with $6.4 \\times 10^{20}$ atoms.
 
 1) Number of atoms remaining after 24 days ($\\times 10^{19}$)
+
 2) Number of half-lives that have elapsed after 24 days
+
 3) Fraction of the original sample that has decayed after 24 days (as a decimal)
+
 4) If the initial activity is 2400 Bq, activity after 32 days (in Bq)
 
 *Round all answers to 3 significant figures.*

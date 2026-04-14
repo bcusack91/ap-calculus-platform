@@ -88,7 +88,9 @@ export const oChemEASPart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: acid/Lewis acid forms strongly reactive species
+
       2) Term for: multiple alkyl substitutions after activation
+
       3) Product pattern expected under HNO3/H2SO4
       `,
       exercise: {

@@ -69,7 +69,99 @@ Choose the word whose connotation matches the author's attitude.`
             explanation: 'The passage praises the architect, so we need a positive connotation. "Visionary" (positive), "weird" (negative), "radical" (neutral-to-negative in this context), "unusual" (neutral but underwhelming). "Visionary" best matches the praising tone.'
           }
         ]
+      }    },
+    {
+      id: 'ei1-text2',
+      type: 'text' as const,
+      content: `## Deep Dive: Word Choice Mastery
+
+### Worked Example 1: Precision Step-by-Step
+
+| Step | Action |
+|---|---|
+| **Sentence** | "The experiment _____ the theory that sleep deprivation reduces cognitive performance." |
+| **Choices** | A) proved B) confirmed C) showed D) demonstrated |
+| **Context** | Academic passage; the theory already existed and the experiment provided supporting evidence |
+| **Eliminate** | A) *proved* — too strong (science rarely "proves") |
+| **Eliminate** | C) *showed* — vague, doesn't capture the confirmatory relationship |
+| **Choose** | B) *confirmed* — matches the idea of supporting an existing theory |
+| **Runner-up** | D) *demonstrated* — valid but less precise for confirming a prior theory |
+
+### Worked Example 2: Connotation in Context
+
+| Sentence Context | Word Needed | Right Choice | Wrong Choice (and why) |
+|---|---|---|---|
+| "The CEO's _____ response calmed investors" | Positive: composed | **measured** ✅ | *slow* ❌ (negative connotation) |
+| "Critics called the plan _____" | Negative tone | **reckless** ✅ | *bold* ❌ (positive connotation) |
+| "The _____ volunteers worked through the night" | Positive: hard-working | **dedicated** ✅ | *obsessive* ❌ (negative connotation) |
+
+### Common SAT Word Traps
+
+| Trap | Example | Why It's Wrong |
+|---|---|---|
+| Right meaning, wrong tone | "The data *totally* supports this" | "Totally" is informal |
+| Over-specific | "The *octogenarian* speaker" when passage just says "older" | Adds information not in the passage |
+| Right tone, wrong meaning | "The findings *corroborate* the decline" | "Corroborate" means confirm — you can't confirm a decline, you can document it |
+| Sounds smart but redundant | "She *hypothesized a theory*" | Hypothesis IS a theory — redundant |`
+    },
+    {
+      id: 'ei1-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Advanced Word Choice Challenge** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: 'A passage criticizes a historical policy. Which word best completes: "The policy\'s _____ consequences became apparent only decades later"?',
+            options: ['detrimental', 'bad', 'unfortunate', 'interesting'],
+            correctAnswer: 0,
+            explanation: '"Detrimental" is formal, precise, and carries the right negative weight for a critical passage. "Bad" is too informal. "Unfortunate" is too mild. "Interesting" is neutral and doesn\'t match the critical tone.'
+          },
+          {
+            question: 'A passage describes a scientist\'s careful experiment. Best fit: "She _____ each variable to ensure accurate results."',
+            options: ['controlled', 'handled', 'dealt with', 'managed'],
+            correctAnswer: 0,
+            explanation: '"Controlled" is the precise scientific term for managing variables in experiments. "Handled" and "dealt with" are too informal. "Managed" is acceptable but less specific to the scientific context.'
+          },
+          {
+            question: 'Which answer choice is a "right meaning, wrong tone" trap? Passage is formal academic writing.',
+            options: ['"The findings were pretty significant"', '"The findings were statistically significant"', '"The findings were noteworthy"', '"The findings were consequential"'],
+            correctAnswer: 0,
+            explanation: '"Pretty" is colloquial/informal. In casual speech, "pretty significant" works, but in formal academic writing, it clashes with the register. The other options all maintain formal tone.'
+          }
+        ]
       }
-    }
+    },
+    {
+      id: 'ei1-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Word Choice Check** — Select the best answer.',
+      exercise: {
+        dropdowns: [
+          'Formal passage: "The economy _____ in Q3." [contracted|shrank|went down|got worse]',
+          'Positive connotation for a leader: [assertive|aggressive|pushy|bossy]',
+          'Scientific precision: "The study _____ a link." [established|found|saw|noticed]',
+          'Matching tone: formal passage ≠ [colloquial language|precise vocabulary|technical terms|academic register]'
+        ],
+        correctAnswers: ['contracted', 'assertive', 'established', 'colloquial language'],
+        hint1: '"Contracted" is the formal economic term for decline.',
+        hint2: '"Assertive" is positive; the others are negative.',
+        hint3: '"Established" carries more scientific weight than "found."',
+        explanation: '"Contracted" = formal economic term. "Assertive" = positive leadership connotation. "Established" = precise scientific language. Colloquial language never belongs in formal passages.'
+      }
+    },
+    {
+      id: 'ei1-summary',
+      type: 'text' as const,
+      content: `## Part 1 Summary
+
+| Concept | Key Rule |
+|---|---|
+| Precision | Specific > vague ("discovered" > "found out") |
+| Tone | Match the passage's register (formal/academic) |
+| Connotation | Positive/negative must match author's attitude |
+| Common traps | Right meaning + wrong tone, over-specific, redundant |
+| Strategy | Read the sentence in context, predict your own word, then match |
+
+*Next: Organization & Logical Sequence →*`    }
   ]
 };

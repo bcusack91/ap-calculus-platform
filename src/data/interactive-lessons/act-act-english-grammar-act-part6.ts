@@ -108,7 +108,9 @@ The ACT includes several questions that test whether you know the difference bet
 **Choose the Correct Word** ✏️
 
 1) "The dog wagged _____ (its/it's) tail happily." — Type the correct word.
+
 2) "She is smarter _____ (then/than) her older brother." — Type the correct word.
+
 3) "_____ (Whose/Who's) responsible for this mess?" — Type the correct word.
       `,
       exercise: {

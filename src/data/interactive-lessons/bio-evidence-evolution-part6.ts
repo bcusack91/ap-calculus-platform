@@ -95,7 +95,9 @@ export const bioEvidencePart6Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **geographic distribution of species across regions and time**
+
       2) Term for this definition: **reduced structure inherited from an ancestral function**
+
       3) Term for this definition: **environmental factor that alters differential survival**
       `,
       exercise: {

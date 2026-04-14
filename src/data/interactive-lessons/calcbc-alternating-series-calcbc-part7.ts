@@ -2,185 +2,116 @@ export const calcbcAlternatingPart7Data = {
   topicSlug: 'alternating-series-calcbc',
   sections: [
     {
-      id: 'calcbcalternating-p7-intro',
+      id: 'as7-intro',
       type: 'text' as const,
-      content: `
-# Alternating Series
+      content: `# Alternating Series — Comprehensive Review
 
-**Part 7 of 7 — Mixed Review**
+**Part 7 of 7 — Full Topic Review**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Complete Reference
 
-## Key Ideas
+| Concept | Key Formula/Rule |
+|---------|-----------------|
+| AST | $b_n > 0$, $b_{n+1} \\le b_n$, $b_n \\to 0$ → converges |
+| Error Bound | $|S - S_N| \\le b_{N+1}$ |
+| Over/Under | Odd $N$ + positive first → over; Even $N$ → under |
+| Absolute | $\\sum |a_n|$ converges |
+| Conditional | $\\sum a_n$ conv. but $\\sum |a_n|$ div. |
+| Rearrangement | Conditionally conv. → rearrange to any sum |
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
-
-## Formula Snapshot
-
-When appropriate, use:
-
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+$$\\boxed{\\text{Alternating series: check conditions, bound the error, classify the convergence.}}$$`
     },
     {
-      id: 'calcbcalternating-p7-mcq1',
+      id: 'as7-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Comprehensive Review MC**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'Which of the following converges CONDITIONALLY?',
+            options: ['$\\sum (-1)^n / \\sqrt[3]{n}$', '$\\sum (-1)^n / n^2$', '$\\sum (-1)^n / 2^n$', '$\\sum (-1)^n / n!$'],
+            correctAnswer: 0,
+            explanation: '$\\sum 1/n^{1/3}$ diverges ($p = 1/3 < 1$), but the alternating series converges by AST. The others all converge absolutely.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'The alternating series error bound states that the error is bounded by:',
+            options: ['The first omitted term', 'The last included term', 'Half the first omitted term', 'The square of the first omitted term'],
+            correctAnswer: 0,
+            explanation: '$|S - S_N| \\le b_{N+1}$ — the absolute value of the first term NOT included in the partial sum.'
+          },
+          {
+            question: '$\\sum_{n=1}^\\infty \\frac{(-1)^{n+1} n!}{10^n}$. This series:',
+            options: ['Diverges ($n!/10^n \\to \\infty$)', 'Converges conditionally', 'Converges absolutely', 'Need Ratio Test to determine'],
+            correctAnswer: 0,
+            explanation: '$b_n = n!/10^n$. By Stirling or direct inspection, $n!/10^n \\to \\infty$. Since $b_n \\not\\to 0$, the series diverges by the Divergence Test.'
+          },
+          {
+            question: 'At the endpoint $x = -R$ of a power series $\\sum c_n x^n$ with radius $R > 0$, the series:',
+            options: ['May converge or diverge — must test', 'Always converges', 'Always diverges', 'Is always an alternating series'],
+            correctAnswer: 0,
+            explanation: 'Endpoints must be tested individually. The series might converge (possibly conditionally via AST), or diverge. There\'s no general rule.'
           }
         ]
       }
     },
     {
-      id: 'calcbcalternating-p7-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcalternating-p7-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcalternating-p7-dropdown',
+      id: 'as7-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Final Classification Drill**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '$\\sum_{n=1}^\\infty \\frac{(-1)^n}{n + 10}$:',
+            options: ['Conditionally convergent', 'Absolutely convergent', 'Divergent'],
+            correctAnswers: ['Conditionally convergent'],
+            hints: ['$\\sum 1/(n+10)$ diverges (like harmonic). AST conditions met.'],
+            explanation: '$\\sum 1/(n+10)$ diverges (LCT with $1/n$). AST: $b_n = 1/(n+10)$ positive, decreasing, $\\to 0$. Conditional convergence.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
+            label: '$\\sum_{n=1}^\\infty \\frac{(-1)^n n}{3^n}$:',
+            options: ['Absolutely convergent', 'Conditionally convergent', 'Divergent'],
+            correctAnswers: ['Absolutely convergent'],
+            hints: ['Test $\\sum n/3^n$ with Ratio Test.'],
+            explanation: '$\\sum |a_n| = \\sum n/3^n$. Ratio Test: $(n+1)/(3n) \\to 1/3 < 1$. Absolute convergence.'
           },
           {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcalternating-p7-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Mixed Review**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcalternating-p7-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: '$\\sum_{n=1}^\\infty (-1)^n \\sin(1/n)$:',
+            options: ['Conditionally convergent', 'Absolutely convergent', 'Divergent'],
+            correctAnswers: ['Conditionally convergent'],
+            hints: ['$\\sin(1/n) \\sim 1/n$ for large $n$. Is $\\sin(1/n)$ decreasing?'],
+            explanation: '$\\sin(1/n) > 0$, decreasing, $\\to 0$. AST ✓ → converges. $\\sum |\\sin(1/n)| \\sim \\sum 1/n$ diverges (LCT). Conditional.'
           }
         ]
       }
+    },
+    {
+      id: 'as7-input',
+      type: 'input-box' as const,
+      content: '**Final Error Bound Problem**',
+      exercise: {
+        question: '$\\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{n^5}$ is approximated by $S_2 = 1 - 1/32$. What is the maximum error? Express as a fraction.',
+        correctAnswer: '1/243',
+        acceptableAnswers: ['1/243'],
+        hints: ['$S_2$ uses $n=1,2$. The first omitted term is $n=3$: $b_3 = 1/3^5$.'],
+        explanation: 'Error $\\le b_3 = 1/3^5 = 1/243 \\approx 0.00412$.'
+      }
+    },
+    {
+      id: 'as7-summary',
+      type: 'text' as const,
+      content: `### Alternating Series — Complete Summary
+
+You've mastered:
+- **Alternating Series Test** — the three conditions and verification
+- **Error Bound** — first omitted term bounds the error
+- **Over/Underestimate** — parity of partial sum count
+- **Absolute vs. Conditional** — classification procedure
+- **Taylor Series Connection** — AST error bound as an alternative to Lagrange
+- **AP Exam Strategies** — full justification requirements
+
+> **Key Fact:** Alternating series and error bounds appear on virtually every BC exam. This is one of the highest-yield topics for your score.
+
+> **Up Next:** Power Series — representation, convergence, and manipulation.`
     }
   ]
-}
+};

@@ -88,7 +88,9 @@ export const oChemAminoAcidsPart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: linear amino acid sequence
+
       2) Term for: local alpha-helix and beta-sheet motifs
+
       3) Product pattern expected under oxidative cysteine coupling
       `,
       exercise: {

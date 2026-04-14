@@ -86,7 +86,9 @@ export const psychMemoryEncodePart2Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: relatively enduring store of knowledge, skills, and experiences
+
       2) Write the concept that matches: transforming input into a storable memory representation
+
       3) Write the concept that matches: linking new information to meaning and prior knowledge
 
       Use the exact vocabulary term from this part.

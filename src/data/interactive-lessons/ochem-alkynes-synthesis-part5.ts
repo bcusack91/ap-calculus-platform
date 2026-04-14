@@ -88,7 +88,9 @@ export const oChemAlkynesPart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: Na/NH3 gives trans alkene from alkyne
+
       2) Term for: enol rearranges to carbonyl form
+
       3) Product pattern expected under HgSO4, H2SO4, H2O
       `,
       exercise: {

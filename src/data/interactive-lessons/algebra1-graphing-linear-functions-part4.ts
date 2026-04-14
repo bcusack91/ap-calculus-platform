@@ -66,7 +66,9 @@ $x$-int: $(4, 0)$, $y$-int: $(0, 3)$
 **Find the intercepts** 🧮
 
 1) $x$-int of $4x + 3y = 12$
+
 2) $y$-int of $2x + 5y = 10$
+
 3) $x$-int of $6x - 2y = 18$
       `,
       exercise: {

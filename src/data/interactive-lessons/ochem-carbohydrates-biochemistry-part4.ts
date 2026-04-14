@@ -88,7 +88,9 @@ export const oChemCarbsPart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: anomeric substituent cis to CH2OH in D-sugars
+
       2) Term for: equilibration between anomers via open-chain form
+
       3) Product pattern expected under Br2/H2O
       `,
       exercise: {

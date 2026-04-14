@@ -115,7 +115,9 @@ The #1 grammar rule tested on the ACT. The subject and verb must match in number
 **Punctuation Quick Check** 📝
 
 1) Two independent clauses joined by a comma alone is called a comma __________.
+
 2) "It's" with an apostrophe is short for "it __________."
+
 3) A colon must follow an __________ clause (a clause that can stand alone as a sentence).
       `,
       exercise: {

@@ -97,7 +97,9 @@ This is exactly the speed an object would have if it **fell freely** from height
 A large water tank has a small hole 5.0 m below the water surface. The hole has area $2.0 \\times 10^{-4}$ m².
 
 1) Exit speed of the water (in m/s)
+
 2) Volume flow rate from the hole (in L/s)
+
 3) How far horizontally the water lands if the hole is 1.2 m above the ground (in m)
 
 *Round all answers to 3 significant figures.*

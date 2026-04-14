@@ -112,7 +112,9 @@ $$F \\propto q_1 \\qquad F \\propto q_2 \\qquad F \\propto \\frac{1}{r^2}$$
 Enter the **multiplier** for force in each case:
 
 1) Distance is doubled (charges unchanged)
+
 2) Distance is halved (charges unchanged)
+
 3) One charge is doubled AND distance is doubled
 
 Use fractions like \$21/4\` or whole numbers like \$24\`.

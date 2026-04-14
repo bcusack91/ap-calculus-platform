@@ -125,7 +125,9 @@ $$t = \\frac{(2.0)(334{,}000)}{500} = \\frac{668{,}000}{500} = 1336 \\text{ s} \
 Use: $L_f = 334{,}000$ J/kg, $L_v = 2{,}260{,}000$ J/kg for water.
 
 1) Energy needed to melt 0.50 kg of ice at 0°C (in kJ)
+
 2) Energy released when 3.0 kg of steam at 100°C condenses to water at 100°C (in MJ)
+
 3) Mass of ice at 0°C that can be melted by 1.00 MJ of energy (in kg)
 
 *Round all answers to 3 significant figures.*

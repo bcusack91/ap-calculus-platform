@@ -88,7 +88,9 @@ export const oChemAlkenesPart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: planar cation that enables rearrangement risk
+
       2) Term for: electrophile adds to carbon with more hydrogens first
+
       3) Product pattern expected under HBr, ROOR
       `,
       exercise: {

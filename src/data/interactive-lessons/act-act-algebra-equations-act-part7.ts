@@ -77,7 +77,9 @@ You have **60 minutes for 60 questions** — exactly 1 minute per question.
 **Mixed Skills** 🧮
 
 1) Solve: $4(x - 3) = 2(x + 5)$. What is $x$?
+
 2) Factor: $x^2 - 16 = (x + a)(x - a)$. What is $a$?
+
 3) System: $x + y = 9$ and $x - y = 3$. What is $x$?
       `,
       exercise: {

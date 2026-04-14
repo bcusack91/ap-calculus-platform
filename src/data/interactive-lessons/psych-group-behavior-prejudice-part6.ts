@@ -86,7 +86,9 @@ export const psychGroupPart6Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: part of self-concept derived from group membership
+
       2) Write the concept that matches: favoring one's own group over outgroups
+
       3) Write the concept that matches: adjusting behavior or beliefs to align with a group
 
       Use the exact vocabulary term from this part.

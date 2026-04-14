@@ -91,7 +91,9 @@ Used for wishes, demands, suggestions, and hypothetical situations:
 **Type the Correct Verb Form** 🧮
 
 1) If I _____ (was/were) the president, I would change that law.
+
 2) She _____ (has lived / had lived) in Paris for three years before moving to London.
+
 3) By 2030, scientists _____ (will discover / will have discovered) a cure for the disease, researchers predict.
       `,
       exercise: {

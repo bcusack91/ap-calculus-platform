@@ -2,190 +2,176 @@ export const bioCellCyclePart4Data = {
   topicSlug: 'cell-cycle-mitosis',
   sections: [
     {
-      id: 'bio-cell-cycle-mitosis-p4-s1-intro',
+      id: 'cc4-intro',
       type: 'text' as const,
       content: `
-      ## Cell Cycle and Mitosis: Cytokinesis
-      
-      **Part 4 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through cytoplasmic division in animal versus plant cells.
-      
-      ### Worked biological example
-      A student team investigates cytoplasmic division in animal versus plant cells. Their first interpretation step is to identify how **prophase** and **metaphase** work together in the same pathway.
-      
-      - They classify the primary signal using **prophase**: chromosomes condense and spindle begins forming.
-      - They trace the downstream response using **metaphase**: chromosomes align at the metaphase plate.
-      - They then compare outcomes with **anaphase** and **cytokinesis** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **prophase**
-      - **metaphase**
-      - **anaphase**
-      - **cytokinesis**
+## Cytokinesis — Dividing the Cytoplasm
+
+**Part 4 of 7**
+
+Cytokinesis is the division of the cytoplasm to produce two separate daughter cells.  It typically begins during anaphase or telophase and overlaps with the final stages of mitosis.
+
+The mechanism differs between animal and plant cells.
       `
     },
     {
-      id: 'bio-cell-cycle-mitosis-p4-s2-mcq-core',
+      id: 'cc4-animal',
+      type: 'text' as const,
+      content: `
+### Cytokinesis in Animal Cells — Cleavage Furrow
+
+Animal cells divide by **cleavage**:
+
+1. A **contractile ring** of actin microfilaments and myosin II motor proteins assembles just beneath the plasma membrane at the former metaphase plate
+2. The position of the contractile ring is determined by signals from the **mitotic spindle** (specifically, the central spindle — overlapping polar microtubules between the separating chromosomes)
+3. Myosin II hydrolyzes ATP and slides along actin filaments, constricting the ring
+4. This creates an inward indentation called the **cleavage furrow**
+5. The furrow deepens progressively until the cell is pinched in two
+6. Final separation (abscission) involves membrane fusion at the narrow bridge connecting the two cells
+
+> **Why the middle?** The position of the contractile ring is specified by signals from the spindle midzone and astral microtubules. The RhoA GTPase pathway activates myosin II and actin assembly at the equator. This ensures the cell divides between the two sets of chromosomes.
+      `
+    },
+    {
+      id: 'cc4-plant',
+      type: 'text' as const,
+      content: `
+### Cytokinesis in Plant Cells — Cell Plate
+
+Plant cells cannot form a cleavage furrow because of their rigid **cell wall**.  Instead, they build a new cell wall from the inside out:
+
+1. **Golgi-derived vesicles** carrying cell wall materials (polysaccharides, glycoproteins) are transported along remaining spindle microtubules to the center of the cell
+2. Vesicles fuse to form the **cell plate**, which grows outward from the center toward the existing cell wall
+3. The cell plate matures into a new **middle lamella** (shared layer between adjacent cell walls) and regions of new cell wall (primary wall)
+4. New plasma membrane lines each side of the cell plate
+5. The cell plate eventually fuses with the existing cell wall, completing the division
+
+**Plasmodesmata** (channels connecting adjacent plant cells) are established during cell plate formation — portions of ER become trapped in the forming plate, creating cytoplasmic bridges between daughter cells.
+
+| Feature | Animal Cytokinesis | Plant Cytokinesis |
+|---------|-------------------|-------------------|
+| Mechanism | Cleavage furrow (contractile ring) | Cell plate formation |
+| Direction | Outside → in (constriction) | Inside → out (vesicle fusion) |
+| Key proteins | Actin, myosin II | Golgi vesicles, phragmoplast microtubules |
+| Cell wall | Not present | New cell wall built |
+      `
+    },
+    {
+      id: 'cc4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Cytokinesis
       `,
       exercise: {
         questions: [
           {
-            question: 'For Cytokinesis, what best describes prophase?',
+            question: 'What would happen if an animal cell were treated with a drug that inhibits actin polymerization during telophase?',
             options: [
-              'division of cytoplasm to produce two daughter cells',
-              'sister chromatids separate toward opposite poles',
-              'chromosomes align at the metaphase plate',
-              'chromosomes condense and spindle begins forming'
-            ],
-            correctAnswer: 3,
-            explanation: 'prophase is best matched with: chromosomes condense and spindle begins forming.'
-          },
-          {
-            question: 'In this part\'s context, what is the strongest definition of metaphase?',
-            options: [
-              'chromosomes condense and spindle begins forming',
-              'chromosomes align at the metaphase plate',
-              'sister chromatids separate toward opposite poles',
-              'control step that validates readiness before progression'
+              'Mitosis would be blocked at metaphase',
+              'The cell would complete nuclear division but fail to form a cleavage furrow, resulting in a binucleate cell',
+              'DNA replication would be blocked',
+              'The cell would undergo apoptosis before reaching telophase'
             ],
             correctAnswer: 1,
-            explanation: 'metaphase is best matched with: chromosomes align at the metaphase plate.'
+            explanation: 'The cleavage furrow depends on a contractile ring made of actin and myosin. Blocking actin polymerization prevents ring formation, so the cytoplasm cannot divide. The nuclei divide normally (mitosis is microtubule-dependent, not actin-dependent), producing a binucleate cell.'
+          },
+          {
+            question: 'In plant cell cytokinesis, the cell plate forms:',
+            options: [
+              'By constriction of the cell wall from outside to inside',
+              'By fusion of Golgi-derived vesicles at the center of the cell, growing outward until it reaches the existing cell wall',
+              'By dissolution of the existing cell wall',
+              'By invagination of the plasma membrane'
+            ],
+            correctAnswer: 1,
+            explanation: 'Plant cell cytokinesis builds a new partition from the inside out. Golgi vesicles carrying cell wall precursors are guided to the cell center by phragmoplast microtubules, fuse into a cell plate, and expand outward until they merge with the existing cell wall.'
           }
         ]
       }
     },
     {
-      id: 'bio-cell-cycle-mitosis-p4-s3-deep-dive',
+      id: 'cc4-binary',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Cytokinesis
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → prophase
-      - **Immediate processing** → metaphase
-      - **System-level consequence** → anaphase
-      - **Measured readout** → cytokinesis
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | prophase | chromosomes condense and spindle begins forming | Early shift in the primary variable |
-      | metaphase | chromosomes align at the metaphase plate | Mid-pathway change in process rate |
-      | anaphase | sister chromatids separate toward opposite poles | Downstream phenotype trend |
-      | cytokinesis | division of cytoplasm to produce two daughter cells | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Binary Fission in Prokaryotes
+
+Prokaryotes (bacteria and archaea) do not undergo mitosis.  They reproduce by **binary fission**:
+
+1. The single circular chromosome is replicated starting from the **origin of replication** (oriC)
+2. The two copies of the chromosome are moved to opposite ends of the cell (by proteins attached to the membrane, including ParA/ParB system)
+3. The cell elongates
+4. A **septum** (new cell wall and membrane) forms at the midpoint, guided by the **FtsZ protein ring** (a tubulin-like protein that forms a contractile ring analogous to the animal cell contractile ring)
+5. The cell divides into two identical daughter cells
+
+**Key differences from mitosis:**
+
+| Feature | Binary Fission | Mitosis |
+|---------|---------------|---------|
+| Organism | Prokaryotes | Eukaryotes |
+| Chromosome type | Single, circular | Multiple, linear |
+| Spindle apparatus | None (FtsZ ring instead) | Mitotic spindle with microtubules |
+| Speed | Very fast (20 min in E. coli) | Slower (1+ hour for M phase) |
+| Nuclear envelope | None (no nucleus) | Breaks down and reforms |
       `
     },
     {
-      id: 'bio-cell-cycle-mitosis-p4-s4-input',
+      id: 'cc4-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **chromosomes condense and spindle begins forming**
-      2) Term for this definition: **chromosomes align at the metaphase plate**
-      3) Term for this definition: **sister chromatids separate toward opposite poles**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['prophase', 'metaphase', 'anaphase'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'chromosomes condense and spindle begins forming\'.',
-        hint2: 'Second blank points to metaphase; think about the role \'chromosomes align at the metaphase plate\'.',
-        hint3: 'Third blank is anaphase; connect it to \'sister chromatids separate toward opposite poles\'.',
-        explanation: 'Correct set: prophase, metaphase, anaphase. These three terms define the core mechanism chain for Cytokinesis.'
-      }
-    },
-    {
-      id: 'bio-cell-cycle-mitosis-p4-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'prophase',
-            options: ['sister chromatids separate toward opposite poles', 'division of cytoplasm to produce two daughter cells', 'chromosomes condense and spindle begins forming', 'chromosomes align at the metaphase plate']
-          },
-          {
-            label: 'metaphase',
-            options: ['sister chromatids separate toward opposite poles', 'division of cytoplasm to produce two daughter cells', 'control step that validates readiness before progression', 'chromosomes align at the metaphase plate']
-          },
-          {
-            label: 'anaphase',
-            options: ['control step that validates readiness before progression', 'regulatory complex that drives cell-cycle transitions', 'sister chromatids separate toward opposite poles', 'division of cytoplasm to produce two daughter cells']
-          }
-        ],
-        correctAnswers: ['chromosomes condense and spindle begins forming', 'chromosomes align at the metaphase plate', 'sister chromatids separate toward opposite poles'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'prophase, metaphase, and anaphase should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-cell-cycle-mitosis-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because prophase chromosomes condense and spindle begins forming, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Checkpoint failure can lead to genomic instability long before visible tumors form.
-      - Interphase is an active preparation period, not a resting pause.
-      - Mitosis and cytokinesis are related but distinct events.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-cell-cycle-mitosis-p4-s7-mcq-final',
-      type: 'multiple-choice' as const,
-      content: `
-      **Final application MCQ (2 questions)**
+### Key Terms — Cytokinesis
       `,
       exercise: {
         questions: [
           {
-            question: 'In cytoplasmic division in animal versus plant cells, the observed pattern is: division of cytoplasm to produce two daughter cells. What term should anchor the explanation?',
-            options: [
-              'cytokinesis',
-              'prophase',
-              'anaphase',
-              'metaphase'
-            ],
-            correctAnswer: 0,
-            explanation: 'Use cytokinesis because it directly maps to the described biological pattern: division of cytoplasm to produce two daughter cells.'
+            question: 'The inward indentation formed during animal cell cytokinesis:',
+            answer: 'cleavage furrow',
+            acceptableAnswers: ['cleavage furrow', 'Cleavage furrow'],
+            placeholder: 'e.g. cell plate'
           },
           {
-            question: 'In an AP-style free-response about cytokinesis, the observed pattern is: control step that validates readiness before progression. What term should anchor the explanation?',
+            question: 'The structure formed by vesicle fusion during plant cell cytokinesis:',
+            answer: 'cell plate',
+            acceptableAnswers: ['cell plate', 'Cell plate'],
+            placeholder: 'e.g. cleavage furrow'
+          },
+          {
+            question: 'The prokaryotic tubulin-like protein that forms a ring during binary fission:',
+            answer: 'FtsZ',
+            acceptableAnswers: ['FtsZ', 'ftsZ', 'Ftsz', 'FTSZ'],
+            placeholder: 'e.g. actin'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cc4-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Exit Ticket — Cytokinesis
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'FtsZ in bacteria is considered a homolog of eukaryotic tubulin. What does this suggest about the evolution of cell division?',
             options: [
-              'anaphase',
-              'cytokinesis',
-              'cyclin-CDK',
-              'checkpoint'
+              'Bacteria evolved from eukaryotes',
+              'The fundamental mechanisms of cell division are ancient, with FtsZ and tubulin likely sharing a common ancestor — evidence for the evolutionary relationship between prokaryotic and eukaryotic division',
+              'Tubulin was acquired by horizontal gene transfer from bacteria',
+              'FtsZ and tubulin have no functional similarity'
             ],
-            correctAnswer: 3,
-            explanation: 'Use checkpoint because it directly maps to the described biological pattern: control step that validates readiness before progression.'
+            correctAnswer: 1,
+            explanation: 'FtsZ and tubulin share structural and functional similarities despite billions of years of divergence. Both polymerize into filaments and are essential for cell division. Their homology suggests that the basic molecular machinery for cell division was present in the last common ancestor of prokaryotes and eukaryotes.'
+          },
+          {
+            question: 'A mutation disrupts the signaling pathway that positions the cleavage furrow in an animal cell.  The furrow forms, but at a random position instead of the cell equator.  What is the likely outcome?',
+            options: [
+              'Normal division — position does not matter',
+              'Daughter cells of unequal size, with one potentially receiving both nuclei or neither nucleus — asymmetric and likely abnormal division',
+              'The cell will switch to plant-type cytokinesis',
+              'The furrow will self-correct automatically'
+            ],
+            correctAnswer: 1,
+            explanation: 'The cleavage furrow must form at the cell equator to ensure each daughter cell receives one nucleus. If positioned randomly, one daughter cell might get both nuclei (or no nucleus), and the cells would be unequal in size. Proper spindle-to-cortex signaling is essential for accurate division.'
           }
         ]
       }

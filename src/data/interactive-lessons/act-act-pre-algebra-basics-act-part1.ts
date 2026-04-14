@@ -102,7 +102,9 @@ Take the **higher** power of every prime: $2^3 \\times 3 = 24$.
 **Number Properties Practice** 🧮
 
 1) What is $\\text{GCF}(18, 30)$?
+
 2) What is $\\text{LCM}(6, 10)$?
+
 3) How many prime numbers are between 10 and 30?
       `,
       exercise: {

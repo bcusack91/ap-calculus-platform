@@ -2,185 +2,129 @@ export const calcbcPowerSeriesPart4Data = {
   topicSlug: 'power-series-calcbc',
   sections: [
     {
-      id: 'calcbcpowerseries-p4-intro',
+      id: 'ps4-intro',
       type: 'text' as const,
-      content: `
-# Power Series
+      content: `# Power Series — Function Representation
 
-**Part 4 of 7 — Graphs and Interpretation**
+**Part 4 of 7 — Building Series from Known Functions**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### The Essential Known Series
 
-## Key Ideas
+Memorize these — they're the building blocks:
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+| Function | Series | IOC |
+|----------|--------|-----|
+| $\\frac{1}{1-x}$ | $\\sum_{n=0}^\\infty x^n$ | $(-1,1)$ |
+| $e^x$ | $\\sum_{n=0}^\\infty \\frac{x^n}{n!}$ | $(-\\infty, \\infty)$ |
+| $\\sin x$ | $\\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$ | $(-\\infty, \\infty)$ |
+| $\\cos x$ | $\\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n}}{(2n)!}$ | $(-\\infty, \\infty)$ |
+| $\\ln(1+x)$ | $\\sum_{n=1}^\\infty \\frac{(-1)^{n+1} x^n}{n}$ | $(-1, 1]$ |
+| $\\arctan x$ | $\\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{2n+1}$ | $[-1, 1]$ |
 
-## Formula Snapshot
+$$\\boxed{\\text{Most AP power series problems reduce to manipulating these six.}}$$
 
-When appropriate, use:
-
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+> **AP Tip:** You'll often need to find a series by relating the function to one of these through substitution, differentiation, or integration.`
     },
     {
-      id: 'calcbcpowerseries-p4-mcq1',
+      id: 'ps4-techniques',
+      type: 'text' as const,
+      content: `### Technique: Partial Fractions + Geometric
+
+**Find the series for** $f(x) = \\frac{3}{2-x}$:
+
+$\\frac{3}{2-x} = \\frac{3}{2} \\cdot \\frac{1}{1 - x/2} = \\frac{3}{2} \\sum_{n=0}^\\infty \\left(\\frac{x}{2}\\right)^n = \\sum_{n=0}^\\infty \\frac{3 x^n}{2^{n+1}}$
+
+IOC: $|x/2| < 1 \\implies |x| < 2$
+
+### Technique: Composition
+
+**Find the series for** $e^{x^2}$:
+
+$e^u = \\sum u^n/n!$. Set $u = x^2$:
+
+$e^{x^2} = \\sum_{n=0}^\\infty \\frac{x^{2n}}{n!} = 1 + x^2 + \\frac{x^4}{2} + \\frac{x^6}{6} + \\cdots$
+
+### Technique: Integration of Known Series
+
+**Find the series for** $\\int_0^x e^{-t^2}\\,dt$ (no elementary form!):
+
+$e^{-t^2} = \\sum (-1)^n t^{2n}/n!$. Integrate: $\\int_0^x = \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{(2n+1) n!}$
+
+This is related to the error function $\\text{erf}(x)$ — series representation gives exact computation!`
+    },
+    {
+      id: 'ps4-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Function Representation**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'The first three nonzero terms of the Maclaurin series for $x \\sin x$ are:',
+            options: ['$x^2 - x^4/6 + x^6/120$', '$x - x^3/6 + x^5/120$', '$x^2 - x^4/3! + x^6/5!$', '$1 - x^2/2 + x^4/24$'],
+            correctAnswer: 0,
+            explanation: '$\\sin x = x - x^3/3! + x^5/5! - \\cdots$. Multiply by $x$: $x\\sin x = x^2 - x^4/6 + x^6/120 - \\cdots$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'Which series represents $\\frac{1}{1+x^2}$?',
+            options: ['$\\sum_{n=0}^\\infty (-1)^n x^{2n}$', '$\\sum (-1)^n x^n$', '$\\sum x^{2n}$', '$\\sum x^n/(1+n^2)$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{1}{1+x^2} = \\frac{1}{1-(-x^2)} = \\sum_{n=0}^\\infty (-x^2)^n = \\sum (-1)^n x^{2n}$, for $|x| < 1$.'
+          },
+          {
+            question: 'The Maclaurin series for $\\cos(2x)$ is obtained by:',
+            options: ['Substituting $2x$ for $x$ in $\\cos x = \\sum (-1)^n x^{2n}/(2n)!$', 'Differentiating $\\sin(2x)$ series', 'Multiplying $\\cos x$ series by 2', 'Squaring the $\\cos x$ series'],
+            correctAnswer: 0,
+            explanation: '$\\cos(2x) = \\sum_{n=0}^\\infty \\frac{(-1)^n (2x)^{2n}}{(2n)!} = \\sum \\frac{(-1)^n 4^n x^{2n}}{(2n)!}$.'
           }
         ]
       }
     },
     {
-      id: 'calcbcpowerseries-p4-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcpowerseries-p4-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcpowerseries-p4-dropdown',
+      id: 'ps4-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Series Building**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'The series for $\\frac{x}{1+x}$ is obtained from $\\frac{1}{1-u} = \\sum u^n$ by:',
+            options: ['Setting $u = -x$, then multiply by $x$: $\\sum_{n=0}^\\infty (-1)^n x^{n+1}$', 'Setting $u = x$ and dividing by $x$', 'Integrating the geometric series', 'Differentiating $\\ln(1+x)$'],
+            correctAnswers: ['Setting $u = -x$, then multiply by $x$: $\\sum_{n=0}^\\infty (-1)^n x^{n+1}$'],
+            hints: ['$x/(1+x) = x \\cdot 1/(1+x) = x \\cdot 1/(1-(-x))$.'],
+            explanation: '$1/(1+x) = \\sum (-x)^n = \\sum (-1)^n x^n$. Multiply by $x$: $x/(1+x) = \\sum (-1)^n x^{n+1}$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcpowerseries-p4-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Graphs and Interpretation**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcpowerseries-p4-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'The coefficient of $x^4$ in the Maclaurin series for $e^x \\cos x$ through $x^4$ is:',
+            options: ['$-1/6$', '$1/24$', '$-1/3$', '$1/4$'],
+            correctAnswers: ['$-1/6$'],
+            hints: ['Multiply the first few terms of $e^x$ and $\\cos x$ series and collect $x^4$ terms.'],
+            explanation: '$e^x = 1 + x + x^2/2 + x^3/6 + x^4/24 + \\cdots$, $\\cos x = 1 - x^2/2 + x^4/24 - \\cdots$. $x^4$ terms: $1 \\cdot x^4/24 + (x^2/2)(-x^2/2) + x^4/24 \\cdot 1 = 1/24 - 1/4 + 1/24$. Wait: $1\\cdot(x^4/24) + (x)(0) + (x^2/2)(-x^2/2) + (x^3/6)(0) + (x^4/24)(1) = 1/24 - 1/4 + 1/24 = 2/24 - 6/24 = -4/24 = -1/6$.'
           }
         ]
       }
+    },
+    {
+      id: 'ps4-input',
+      type: 'input-box' as const,
+      content: '**Coefficient Finding**',
+      exercise: {
+        question: 'In the Maclaurin series for $f(x) = 1/(1-2x)$, what is the coefficient of $x^3$?',
+        correctAnswer: '8',
+        acceptableAnswers: ['8'],
+        hints: ['$1/(1-2x) = \\sum (2x)^n = \\sum 2^n x^n$. Coefficient of $x^3$ is $2^3$.'],
+        explanation: '$1/(1-2x) = \\sum_{n=0}^\\infty (2x)^n = \\sum 2^n x^n$. Coefficient of $x^3$: $2^3 = 8$.'
+      }
+    },
+    {
+      id: 'ps4-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Six essential series to memorize (geometric, $e^x$, $\\sin$, $\\cos$, $\\ln$, $\\arctan$)
+- Build new series via substitution, multiplication, differentiation, integration
+- Partial fractions reduce rational functions to geometric-type series
+- Series let you "compute" functions with no elementary antiderivative
+
+> **Next:** Part 5 — Power Series and Differential Equations.`
     }
   ]
-}
+};

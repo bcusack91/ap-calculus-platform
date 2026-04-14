@@ -106,7 +106,9 @@ $$= \\frac{x(x+3) - 2(x-3)}{(x-3)(x+3)} = \\frac{x^2 + 3x - 2x + 6}{x^2 - 9} = \
 **Rational Expression Practice** 🧮
 
 1) Simplify $\\frac{x^2 - 4}{x + 2}$. What is the simplified expression evaluated at $x = 5$?
+
 2) $\\frac{1}{x} + \\frac{1}{x+1}$ — if $x = 2$, what is the value? Write as a fraction: numerator/denominator (e.g. 5/6).
+
 3) For $\\frac{x+3}{x^2-9}$, what value of $x$ (positive) is NOT in the domain?
       `,
       exercise: {

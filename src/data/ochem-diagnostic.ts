@@ -1,9 +1,11 @@
 /**
  * Organic Chemistry Diagnostic Test Generator
  *
- * Two alternate forms (A / B), ~33 questions covering major OChem topics.
+ * 10 alternate forms (1–10), ~33 questions covering major OChem topics.
  * Weak areas map to topic slugs for targeted review.
  */
+
+export const TOTAL_FORMS = 10
 
 export interface OChemDiagnosticQuestion {
   question: string
@@ -22,7 +24,7 @@ export interface OChemDomain {
 }
 
 export interface OChemDiagnosticTestData {
-  form: 'A' | 'B'
+  form: number
   questions: OChemDiagnosticQuestion[]
   domains: OChemDomain[]
   totalQuestions: number
@@ -46,7 +48,7 @@ export interface OChemRecommendedTopic {
 }
 
 export interface OChemDiagnosticResults {
-  form: 'A' | 'B'
+  form: number
   totalCorrect: number
   totalQuestions: number
   percentage: number
@@ -153,19 +155,28 @@ const questionPool: PoolQuestion[] = [
   { question: 'Friedel-Crafts alkylation requires:', options: ['Only benzene and an alkyl halide', 'A Lewis acid catalyst (e.g., AlCl₃)', 'An oxidizing agent', 'UV light'], correctAnswer: 1, explanation: 'Friedel-Crafts alkylation needs a Lewis acid (AlCl₃) to generate the electrophilic carbocation from the alkyl halide.', domain: 'aromatic-chemistry', topicSlug: 'electrophilic-aromatic-substitution', formSet: 'both' },
 ]
 
-export function generateOChemDiagnosticTest(form: 'A' | 'B'): OChemDiagnosticTestData {
+function mulberry32(seed: number): () => number {
+  return () => { let t = (seed += 0x6d2b79f5); t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }
+}
+
+function seededShuffle<T>(arr: T[], rng: () => number): T[] {
+  const a = [...arr]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a;
+}
+
+export function generateOChemDiagnosticTest(form: number): OChemDiagnosticTestData {
+  const rng = mulberry32(form * 7919)
   const questions: OChemDiagnosticQuestion[] = []
   for (const domain of OCHEM_DOMAINS) {
-    const pool = questionPool.filter(q => q.domain === domain.id && (q.formSet === form || q.formSet === 'both'))
-    const shuffled = [...pool].sort(() => Math.random() - 0.5)
+    const pool = questionPool.filter(q => q.domain === domain.id)
+    const shuffled = seededShuffle(pool, rng)
     for (const q of shuffled.slice(0, domain.questionTarget)) {
       questions.push({ question: q.question, options: q.options, correctAnswer: q.correctAnswer, explanation: q.explanation, domain: domain.id, topicSlug: q.topicSlug })
     }
   }
-  return { form, questions: questions.sort(() => Math.random() - 0.5), domains: OCHEM_DOMAINS, totalQuestions: questions.length, timeLimitMinutes: 45 }
+  return { form, questions: seededShuffle(questions, rng), domains: OCHEM_DOMAINS, totalQuestions: questions.length, timeLimitMinutes: 45 }
 }
 
-export function scoreOChemDiagnostic(form: 'A' | 'B', questions: OChemDiagnosticQuestion[], answers: Record<number, number>): OChemDiagnosticResults {
+export function scoreOChemDiagnostic(form: number, questions: OChemDiagnosticQuestion[], answers: Record<number, number>): OChemDiagnosticResults {
   const domainResults: OChemDomainResult[] = OCHEM_DOMAINS.map(domain => {
     const domainQs = questions.map((q, i) => ({ q, i })).filter(({ q }) => q.domain === domain.id)
     const correct = domainQs.filter(({ i }) => answers[i] !== undefined && answers[i] === questions[i].correctAnswer).length
@@ -213,9 +224,10 @@ export function scoreOChemDiagnostic(form: 'A' | 'B', questions: OChemDiagnostic
   return { form, totalCorrect, totalQuestions, percentage, estimatedScore, domains: domainResults, weakAreas, moderateAreas, strengths, recommendedTopics: recommendedTopics.slice(0, 5) }
 }
 
-export function pickNextForm(previousForms: ('A' | 'B')[]): 'A' | 'B' {
-  if (previousForms.length === 0) return 'A'
-  return previousForms[previousForms.length - 1] === 'A' ? 'B' : 'A'
+export function pickNextForm(previousForms: number[]): number {
+  if (previousForms.length === 0) return 1
+  const last = previousForms[previousForms.length - 1]
+  return last >= TOTAL_FORMS ? 1 : last + 1
 }
 
 const SLUG_LABELS: Record<string, string> = {

@@ -95,7 +95,9 @@ export const bioGeneRegPart6Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **chemical tagging often associated with reduced transcription**
+
       2) Term for this definition: **chromatin modification generally increasing accessibility**
+
       3) Term for this definition: **small RNA that suppresses gene expression post-transcriptionally**
       `,
       exercise: {

@@ -103,8 +103,11 @@ Left loop (CW): $24 - 4I_1 - 6I_2 = 0$
 Right loop (CW): $6I_2 - 6I_3 - 6 = 0$
 
 1) Find $I_1$ (in A):
+
 2) Find $I_2$ (in A):
+
 3) Find $I_3$ (in A):
+
 4) Power dissipated by $R_2$ (in W):
       `,
       exercise: {
@@ -125,8 +128,11 @@ Right loop (CW): $6I_2 - 6I_3 - 6 = 0$
 A $30\\;\\text{V}$ battery is connected in series with a $200\\;\\Omega$ resistor and a $500\\;\\mu\\text{F}$ capacitor. The capacitor is initially uncharged.
 
 1) Time constant $\\tau$ (in s):
+
 2) Maximum current $I_0$ (in A):
+
 3) Current at $t = 0.2$ s (in A, to three decimal places):
+
 4) Voltage across the capacitor at $t = 0.1$ s (in V, to one decimal place):
       `,
       exercise: {

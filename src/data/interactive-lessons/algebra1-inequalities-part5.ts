@@ -48,7 +48,9 @@ $|2x - 1| \\leq 5: -5 \\leq 2x - 1 \\leq 5 \\implies -2 \\leq x \\leq 3$
 **Absolute value** 🧮
 
 1) $|x| \\leq 3$: upper bound?
+
 2) $|x+1| > 5$: two critical values?
+
 3) $|3x| < 12$: $x$ range upper bound?
       `,
       exercise: {

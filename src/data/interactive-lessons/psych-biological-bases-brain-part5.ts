@@ -86,7 +86,9 @@ export const psychBrainPart5Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: a method that records electrical brain activity with high temporal resolution
+
       2) Write the concept that matches: an imaging method that infers neural activity via blood-oxygen changes
+
       3) Write the concept that matches: an all-or-none electrical impulse traveling down the axon
 
       Use the exact vocabulary term from this part.

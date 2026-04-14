@@ -2,185 +2,155 @@ export const calcabExamReviewPart6Data = {
   topicSlug: 'ap-exam-review-calcab',
   sections: [
     {
-      id: 'calcabexamreview-p6-intro',
+      id: 'examrev6-intro',
       type: 'text' as const,
-      content: `
-# Ap Exam Review
+      content: `# AP Exam Review \u2014 Differential Equations & Modeling
 
-**Part 6 of 7 — Exam Strategy**
+**Part 6 of 7**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+---
 
-## Key Ideas
+### Differential Equations on the AP Exam
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+| Type | Form | Method |
+|:---|:---|:---|
+| Separable | $\\frac{dy}{dx} = f(x)g(y)$ | Separate and integrate |
+| Initial Value Problem | DE + $y(x_0) = y_0$ | Solve DE, use condition for $C$ |
+| Slope Fields | $\\frac{dy}{dx} = F(x,y)$ | Sketch slopes at grid points |
+| Exponential Growth/Decay | $\\frac{dy}{dt} = ky$ | $y = y_0 e^{kt}$ |
 
-## Formula Snapshot
+### Separable Equations \u2014 Steps
 
-When appropriate, use:
+$$\\boxed{\\frac{dy}{dx} = f(x)g(y) \\implies \\frac{dy}{g(y)} = f(x)\\,dx \\implies \\int \\frac{dy}{g(y)} = \\int f(x)\\,dx}$$
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+### Worked Example \u2014 Separable DE
 
-and interpret what the final value means in context.
-      `
+Solve $\\frac{dy}{dx} = 2xy$, $y(0) = 3$.
+
+**Step 1:** Separate: $\\frac{dy}{y} = 2x\\,dx$
+
+**Step 2:** Integrate: $\\ln|y| = x^2 + C$
+
+**Step 3:** Solve for $y$: $y = Ae^{x^2}$ where $A = e^C$
+
+**Step 4:** Apply IC: $y(0) = A = 3$
+
+$$y = 3e^{x^2}$$
+
+---
+
+### Exponential Growth & Decay
+
+$$\\boxed{\\frac{dy}{dt} = ky \\implies y(t) = y_0 e^{kt}}$$
+
+| $k > 0$ | $k < 0$ |
+|:---|:---|
+| Exponential growth | Exponential decay |
+| Population growth | Radioactive decay |
+| Compound interest | Cooling (Newton\u2019s Law) |
+
+> **Key Fact:** Half-life formula: $t_{1/2} = \\frac{\\ln 2}{|k|}$`
     },
     {
-      id: 'calcabexamreview-p6-mcq1',
+      id: 'examrev6-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Differential Equations Quiz** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'Which DE is separable?',
+            options: ['$\\frac{dy}{dx} = \\frac{x}{y}$', '$\\frac{dy}{dx} = x + y$', '$\\frac{dy}{dx} = xy + x$', 'Both A and C'],
+            correctAnswer: 3,
+            explanation: 'A: $y\\,dy = x\\,dx$ \u2713. C: $\\frac{dy}{dx} = x(y+1)$ is also separable. B is NOT separable.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'A population doubles every 5 years. What is $k$?',
+            options: ['$\\frac{\\ln 2}{5}$', '$\\frac{2}{5}$', '$\\frac{5}{\\ln 2}$', '$\\frac{\\ln 5}{2}$'],
+            correctAnswer: 0,
+            explanation: '$2y_0 = y_0 e^{5k} \\implies 5k = \\ln 2 \\implies k = \\frac{\\ln 2}{5}$.'
+          },
+          {
+            question: 'On a slope field, horizontal segments ($\\frac{dy}{dx}=0$) for $\\frac{dy}{dx} = y-2$ occur at:',
+            options: ['$y = 2$', '$x = 2$', '$y = 0$', '$x = 0$'],
+            correctAnswer: 0,
+            explanation: '$y-2=0 \\implies y=2$. The slope is zero whenever $y=2$, regardless of $x$.'
           }
         ]
       }
     },
     {
-      id: 'calcabexamreview-p6-example',
+      id: 'examrev6-slopefields',
       type: 'text' as const,
-      content: `
-## Worked Example
+      content: `### Slope Fields \u2014 Reading Guide
 
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
+| Observation | Meaning |
+|:---|:---|
+| All segments same slope in a row | DE depends only on $y$ |
+| All segments same slope in a column | DE depends only on $x$ |
+| Segments get steeper as you move right | DE is increasing in $x$ |
+| Horizontal segments along a line | That line is an equilibrium ($dy/dx=0$) |
 
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
+### AP Slope Field Tips
 
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
+- **Matching:** Plug in specific $(x,y)$ values to check if the slope matches
+- **Sketching solutions:** Follow the slopes like a river
+- **Equilibrium:** $\\frac{dy}{dx} = 0$ lines are equilibrium solutions`
     },
     {
-      id: 'calcabexamreview-p6-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcabexamreview-p6-dropdown',
+      id: 'examrev6-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Classify the differential equation.** \ud83d\udd0d',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '$\\frac{dy}{dt} = -0.03y$ describes:',
+            options: ['Exponential decay', 'Exponential growth', 'Logistic growth', 'Linear model'],
+            correctAnswers: ['Exponential decay'],
+            hints: ['$k = -0.03 < 0$.'],
+            explanation: 'Negative $k$ means exponential decay. $y = y_0 e^{-0.03t}$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
+            label: '$\\frac{dy}{dx} = \\frac{x^2}{y}$ \u2014 to solve, first:',
+            options: ['Separate: $y\\,dy = x^2\\,dx$', 'Use integrating factor', 'Apply FTC', 'Take $\\ln$ of both sides'],
+            correctAnswers: ['Separate: $y\\,dy = x^2\\,dx$'],
+            hints: ['Multiply both sides by $y$ and by $dx$.'],
+            explanation: 'Separable DE: move $y$ to left, $x^2$ and $dx$ to right, then integrate.'
           },
           {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcabexamreview-p6-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Exam Strategy**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcabexamreview-p6-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'On a slope field for $\\frac{dy}{dx} = x - y$, the slope at $(2, 1)$ is:',
+            options: ['$1$', '$-1$', '$3$', '$0$'],
+            correctAnswers: ['$1$'],
+            hints: ['Plug in: $2 - 1 = ?$'],
+            explanation: '$\\frac{dy}{dx}\\big|_{(2,1)} = 2-1 = 1$.'
           }
         ]
       }
+    },
+    {
+      id: 'examrev6-input',
+      type: 'input-box' as const,
+      content: '**Solve the IVP.** \u270d\ufe0f',
+      exercise: {
+        question: 'Solve $\\frac{dy}{dx} = 6x^2$, $y(1) = 5$. Find $y(2)$.',
+        correctAnswer: '19',
+        acceptableAnswers: ['19'],
+        hints: [
+          'Integrate: $y = 2x^3 + C$.',
+          'Apply IC: $y(1) = 2(1) + C = 5 \\implies C = 3$.',
+          '$y = 2x^3 + 3$. $y(2) = 2(8) + 3 = 19$.'
+        ],
+        explanation: '$y = 2x^3 + 3$. $y(2) = 16 + 3 = 19$.'
+      }
+    },
+    {
+      id: 'examrev6-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 6
+
+- Separable DEs: move $y$ terms to one side, $x$ terms to the other
+- Always apply the initial condition AFTER integrating
+- Exponential model: $\\frac{dy}{dt} = ky$ has solution $y = y_0 e^{kt}$
+- Slope fields: plug in points to verify slopes, look for equilibrium lines`
     }
   ]
-}
+};

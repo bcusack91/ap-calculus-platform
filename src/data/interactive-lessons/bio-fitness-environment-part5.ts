@@ -95,7 +95,9 @@ export const bioFitnessPart5Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **direction and strength of selection on a trait**
+
       2) Term for this definition: **favors intermediate phenotypes**
+
       3) Term for this definition: **favors one phenotypic extreme**
       `,
       exercise: {

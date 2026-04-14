@@ -111,12 +111,17 @@ const withMDX = createMDX({
   extension: /\.mdx?$/,
 });
 
-export default withSentryConfig(analyzeBundles(withMDX(nextConfig)), {
+const baseConfig = analyzeBundles(withMDX(nextConfig))
+const shouldEnableSentry = Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)
+
+const sentryWebpackOptions = {
   // Sentry options
   org: process.env.SENTRY_ORG,
   project: process.env.SENTRY_PROJECT,
   silent: !process.env.CI,
   widenClientFileUpload: true,
-  // Only upload source maps when DSN is configured
-  ...(process.env.NEXT_PUBLIC_SENTRY_DSN ? {} : { dryRun: true }),
-});
+}
+
+export default shouldEnableSentry
+  ? withSentryConfig(baseConfig, sentryWebpackOptions)
+  : baseConfig

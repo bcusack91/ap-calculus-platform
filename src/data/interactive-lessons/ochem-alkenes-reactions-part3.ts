@@ -88,7 +88,9 @@ export const oChemAlkenesPart3Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: electrophile adds to carbon with more hydrogens first
+
       2) Term for: functional group ends on less substituted alkene carbon
+
       3) Product pattern expected under Hg(OAc)2, H2O; NaBH4
       `,
       exercise: {

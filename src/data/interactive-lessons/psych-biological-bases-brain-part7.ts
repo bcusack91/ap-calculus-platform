@@ -86,7 +86,9 @@ export const psychBrainPart7Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: a neurotransmitter linked to reward, movement, and motivation
+
       2) Write the concept that matches: a neurotransmitter involved in mood, appetite, and sleep regulation
+
       3) Write the concept that matches: a medial temporal structure essential for new explicit memories
 
       Use the exact vocabulary term from this part.

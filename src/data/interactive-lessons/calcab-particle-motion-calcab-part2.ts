@@ -6,57 +6,133 @@ export const calcabParticleMotionPart2Data = {
       type: 'text' as const,
       content: `# Particle Motion
 
-**Part 2 of 7 \u2014 Displacement vs Total Distance**
+**Part 2 of 7 \u2014 Speed & Direction of Motion**
 
-### Displacement (Net Change)
+### Speed vs. Velocity
 
-$$\\text{Displacement} = \\int_a^b v(t)\\,dt = s(b) - s(a)$$
+$$\\boxed{\\text{Speed} = |v(t)|}$$
 
-### Total Distance Traveled
+| Concept | Formula | Always positive? |
+|:---:|:---:|:---:|
+| Velocity | $v(t) = s'(t)$ | No (has sign) |
+| Speed | $|v(t)|$ | Yes |
 
-$$\\text{Total Distance} = \\int_a^b |v(t)|\\,dt$$
+### Direction of Motion
 
-Split the integral where $v(t) = 0$ (direction changes).
+| $v(t)$ | Direction | Meaning |
+|:---:|:---:|:---:|
+| $v(t) > 0$ | Moving right (or up) | Position increasing |
+| $v(t) < 0$ | Moving left (or down) | Position decreasing |
+| $v(t) = 0$ | At rest | Possibly changing direction |
+
+### Speeding Up vs. Slowing Down
+
+$$\\boxed{\\text{Speeding up: } v \\text{ and } a \\text{ have the SAME sign}}$$
+$$\\boxed{\\text{Slowing down: } v \\text{ and } a \\text{ have OPPOSITE signs}}$$
+
+| $v(t)$ | $a(t)$ | Speed is... |
+|:---:|:---:|:---:|
+| $+$ | $+$ | Increasing |
+| $-$ | $-$ | Increasing |
+| $+$ | $-$ | Decreasing |
+| $-$ | $+$ | Decreasing |
 
 ### Worked Example
 
-$v(t) = t^2 - 4$ on $[0, 3]$.
+> $s(t) = t^3 - 6t^2 + 9t$. When is the particle speeding up on $[0, 4]$?
 
-$v = 0$ at $t = 2$.
+$v(t) = 3(t-1)(t-3)$, $a(t) = 6(t-2)$
 
-Displacement: $\\int_0^3 (t^2-4)\\,dt = [\\frac{t^3}{3} - 4t]_0^3 = 9-12 = -3$
+- $v > 0$ on $(0,1)$ and $(3,4)$; $v < 0$ on $(1,3)$
+- $a > 0$ on $(2,4)$; $a < 0$ on $(0,2)$
 
-Total distance: $\\int_0^2 |t^2-4|\\,dt + \\int_2^3 |t^2-4|\\,dt$
-$= \\int_0^2 (4-t^2)\\,dt + \\int_2^3 (t^2-4)\\,dt = \\frac{16}{3} + \\frac{7}{3} = \\frac{23}{3}$`
+Same sign: $(1,2)$ (both negative) and $(3,4)$ (both positive).
+
+**Speeding up on $(1, 2) \\cup (3, 4)$.**`
     },
     {
       id: 'pm2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Displacement vs Distance** \ud83c\udfaf',
+      content: '**Practice \u2014 Speed & Direction** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'If $v(t) = 3t^2 - 6t$ on $[0, 3]$, find the total distance traveled.',
-            options: ['$9$', '$5$', '$4$', '$13$'],
-            correctAnswer: 1,
-            explanation: '$v = 3t(t-2) = 0$ at $t = 0, 2$. $\\int_0^2 |3t^2-6t|\\,dt + \\int_2^3 |3t^2-6t|\\,dt = \\int_0^2 (6t-3t^2)\\,dt + \\int_2^3 (3t^2-6t)\\,dt = 4 + 5 = 9$. Actually: $[3t^2 - t^3]_0^2 = 12-8 = 4$ and $[t^3 - 3t^2]_2^3 = 27-27-(8-12) = 0+4 = 4$. Hmm, let me recompute: $\\int_0^2(6t-3t^2)dt = [3t^2-t^3]_0^2 = 12-8=4$. $\\int_2^3(3t^2-6t)dt = [t^3-3t^2]_2^3 = (27-27)-(8-12) = 0+4 = 4$. Hmm that gives 8. Let me recheck: displacement = $\\int_0^3(3t^2-6t)dt = [t^3-3t^2]_0^3 = 27-27=0$. Not matching the options perfectly.'
+            question: 'If $v(3) = -5$ and $a(3) = -2$, at $t = 3$ the particle is:',
+            options: ['Speeding up', 'Slowing down', 'At rest', 'Not moving'],
+            correctAnswer: 0,
+            explanation: '$v$ and $a$ both negative \u2014 same sign \u2014 speeding up.'
           },
           {
-            question: 'A particle has velocity $v(t) = \\cos t$ on $[0, 2\\pi]$. What is the total distance traveled?',
-            options: ['$4$', '$0$', '$2$', '$2\\pi$'],
+            question: 'If $v(t) = 4$ and $a(t) = -1$, the particle is:',
+            options: ['Moving right and slowing down', 'Moving right and speeding up', 'Moving left and slowing down', 'At rest'],
             correctAnswer: 0,
-            explanation: 'Displacement = 0 (one full cycle). But total distance = $4$ (area under one full period of $|\\cos t|$).'
+            explanation: '$v > 0$: moving right. $v$ and $a$ have opposite signs: slowing down.'
+          },
+          {
+            question: 'The speed of a particle is $|v(t)|$. If $v(t) = -7$, the speed is:',
+            options: ['$7$', '$-7$', '$0$', '$49$'],
+            correctAnswer: 0,
+            explanation: 'Speed $= |v(t)| = |-7| = 7$.'
           }
         ]
+      }
+    },
+    {
+      id: 'pm2-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Classify the motion.** \ud83d\udd0d',
+      exercise: {
+        dropdowns: [
+          {
+            label: '$v(t) = -3$, $a(t) = 2$. The particle is:',
+            options: ['Moving left and slowing down', 'Moving left and speeding up', 'Moving right and slowing down', 'At rest'],
+            correctAnswers: ['Moving left and slowing down'],
+            hints: ['$v < 0$: left. Opposite signs: slowing.'],
+            explanation: '$v < 0$: moving left. $v$ and $a$ opposite signs: slowing down.'
+          },
+          {
+            label: 'A particle changes direction when:',
+            options: ['$v(t)$ changes sign', '$a(t) = 0$', '$s(t) = 0$', '$a(t)$ changes sign'],
+            correctAnswers: ['$v(t)$ changes sign'],
+            hints: ['Direction reversal means velocity goes from $+$ to $-$ or vice versa.'],
+            explanation: 'The particle changes direction when $v(t)$ changes from positive to negative or vice versa.'
+          },
+          {
+            label: 'Speed is increasing when:',
+            options: ['$v$ and $a$ have the same sign', '$v$ and $a$ have opposite signs', '$a > 0$', '$v > 0$'],
+            correctAnswers: ['$v$ and $a$ have the same sign'],
+            hints: ['Speeding up = same sign.'],
+            explanation: 'Speed increases when velocity and acceleration point in the same direction (same sign).'
+          }
+        ]
+      }
+    },
+    {
+      id: 'pm2-input',
+      type: 'input-box' as const,
+      content: '**Find the speed.** \u270d\ufe0f',
+      exercise: {
+        question: '$s(t) = t^3 - 6t^2 + 9t$. Find the speed at $t = 2$.\n\n(Enter an integer.)',
+        correctAnswer: '3',
+        acceptableAnswers: ['3'],
+        hints: [
+          '$v(t) = 3t^2 - 12t + 9$.',
+          '$v(2) = 12 - 24 + 9 = -3$.',
+          'Speed $= |v(2)| = |-3| = 3$.'
+        ],
+        explanation: '$v(2) = -3$. Speed $= |{-3}| = 3$.'
       }
     },
     {
       id: 'pm2-summary',
       type: 'text' as const,
       content: `### Key Takeaways \u2014 Part 2
-1. Displacement can be negative (net change in position)
-2. Total distance is always positive (use $|v(t)|$)
-3. Split at points where $v(t) = 0$ (direction changes)`
+
+- Speed $= |v(t)|$, always non-negative
+- $v > 0$: right/up; $v < 0$: left/down
+- Speeding up: $v$ and $a$ same sign
+- Slowing down: $v$ and $a$ opposite signs
+- Direction change: $v(t)$ changes sign`
     }
   ]
 };

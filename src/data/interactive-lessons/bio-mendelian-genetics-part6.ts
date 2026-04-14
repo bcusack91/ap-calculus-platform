@@ -95,7 +95,9 @@ export const bioMendelianPart6Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **genotype carrying two identical alleles**
+
       2) Term for this definition: **grid method for predicting genotype combinations**
+
       3) Term for this definition: **cross with homozygous recessive to reveal unknown genotype**
       `,
       exercise: {

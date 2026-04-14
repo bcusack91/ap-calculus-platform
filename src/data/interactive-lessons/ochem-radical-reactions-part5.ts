@@ -88,7 +88,9 @@ export const oChemRadicalsPart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: radical-radical combination removing chain carriers
+
       2) Term for: tertiary and resonance-stabilized radicals are favored
+
       3) Product pattern expected under AIBN initiator
       `,
       exercise: {

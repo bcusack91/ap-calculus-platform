@@ -88,7 +88,9 @@ export const oChemRadicalsPart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: radical adjacent to C=C with resonance support
+
       2) Term for: allylic/benzylic bromination under radical conditions
+
       3) Product pattern expected under Br2, hν
       `,
       exercise: {

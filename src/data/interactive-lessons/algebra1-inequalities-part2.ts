@@ -47,7 +47,9 @@ $-5x \\leq 20 \\implies x \\geq -4$. Flip because we divided by $-5$.
 **Solve** 🧮
 
 1) $x + 7 > 10$: $x > ?$
+
 2) $-2x \\geq 8$: $x \\leq ?$
+
 3) $\\frac{x}{3} < -4$: $x < ?$
       `,
       exercise: {

@@ -62,14 +62,103 @@ Range $=$ max $-$ min
       }
     },
     {
+      id: 'ds1-text2',
+      type: 'text' as const,
+      content: `### Worked Example 1 — Finding a Missing Value
+
+**The mean of 6 numbers is 12. Five of the numbers are 8, 10, 14, 15, 9. Find the 6th number.**
+
+| Step | Work |
+|------|------|
+| Total from mean | $6 \\times 12 = 72$ |
+| Sum of 5 known | $8 + 10 + 14 + 15 + 9 = 56$ |
+| Missing value | $72 - 56 = 16$ |
+
+### Worked Example 2 — Weighted Average
+
+**A class of 20 students averages 75 on a test. A class of 30 students averages 85. What is the combined average?**
+
+| Step | Work |
+|------|------|
+| Sum for class 1 | $20 \\times 75 = 1500$ |
+| Sum for class 2 | $30 \\times 85 = 2550$ |
+| Combined mean | $\\frac{1500 + 2550}{20 + 30} = \\frac{4050}{50} = 81$ |
+
+**Note:** The combined average is NOT simply $(75 + 85)/2 = 80$. The larger class pulls the average closer to its mean.
+
+### Median from a Frequency Table
+
+| Score | Frequency |
+|-------|-----------|
+| 70 | 3 |
+| 80 | 5 |
+| 90 | 4 |
+| 100 | 2 |
+
+14 values total → median = average of 7th and 8th values. Count: positions 1–3 are 70, positions 4–8 are 80. Both 7th and 8th are 80, so median = **80**.`
+    },
+    {
+      id: 'ds1-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Advanced Mean & Median** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: 'A student scores 82, 91, 78, and 85 on four tests. What score is needed on the 5th test for a mean of 85?',
+            options: ['$89$', '$85$', '$90$', '$88$'],
+            correctAnswer: 0,
+            explanation: 'Need total $= 85 \\times 5 = 425$. Current sum $= 82+91+78+85 = 336$. Need $425 - 336 = 89$.'
+          },
+          {
+            question: 'Data set: $\\{3, 7, 7, 10, 12, x\\}$ in order. If the median is 8.5, what is $x$?',
+            options: ['$x = 10$ (median = $(7+10)/2 = 8.5$)', '$x = 8$', '$x = 9$', '$x = 17$'],
+            correctAnswer: 0,
+            explanation: '6 values → median = average of 3rd and 4th. The 3rd value is 7. We need $(7 + \\text{4th})/2 = 8.5$, so 4th value = 10. Since 10 is already there, $x = 10$ works.'
+          },
+          {
+            question: 'Group A (10 people, mean 60) and Group B (40 people, mean 80). Combined mean?',
+            options: ['$76$', '$70$', '$75$', '$80$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{10(60) + 40(80)}{50} = \\frac{600 + 3200}{50} = \\frac{3800}{50} = 76$. Weighted toward the larger group.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'ds1-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Mean vs. Median** 🔍\n\nWhich measure of center is more appropriate?',
+      exercise: {
+        dropdowns: [
+          { label: 'Salaries at a company where the CEO makes $10M and everyone else makes ~$60K', options: ['Median (outlier skews mean)', 'Mean (more accurate)', 'Mode (most common)', 'Range'] },
+          { label: 'Test scores that are evenly distributed between 60 and 100', options: ['Mean (no outliers, symmetric)', 'Median (always better)', 'Mode (most frequent)', 'Range'] },
+          { label: 'Home prices in a neighborhood where one mansion sold for $5M', options: ['Median (outlier skews mean)', 'Mean (includes all data)', 'Mode (typical price)', 'Range'] },
+          { label: '"Find the average score to determine the class grade"', options: ['Mean (average = mean)', 'Median (middle value)', 'Mode (most common)', 'Cannot determine'] }
+        ],
+        correctAnswers: ['Median (outlier skews mean)', 'Mean (no outliers, symmetric)', 'Median (outlier skews mean)', 'Mean (average = mean)'],
+        hint1: 'When outliers exist, the mean gets pulled toward them.',
+        hint2: 'Symmetric data with no outliers → mean and median are similar, but mean uses all data.',
+        hint3: '"Average" on the SAT always means the mean unless stated otherwise.',
+        explanation: 'Outliers (CEO salary, mansion) pull the mean away from the typical value — use median. Symmetric data → mean is fine. "Average" = mean by definition.'
+      }
+    },
+    {
       id: 'ds1-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Mean: sum ÷ count. Use "sum = mean × count" to find missing totals
-- Median: middle value (or average of two middles)
-- Outliers affect the mean much more than the median
-- For "add a value" problems: recalculate sum, then divide by new count`
+| Concept | Formula / Rule |
+|---------|---------------|
+| Mean | Sum ÷ Count |
+| Median | Middle value (avg of two middles if even count) |
+| Mode | Most frequent value |
+| Range | Max − Min |
+| Find missing value | Sum = Mean × Count, then subtract known values |
+| Weighted average | $\\frac{n_1 \\cdot \\bar{x}_1 + n_2 \\cdot \\bar{x}_2}{n_1 + n_2}$ |
+| Outlier effect | Mean shifts toward outlier; median barely moves |
+
+- On the SAT, "average" always means **mean** unless otherwise specified
+- The weighted average is always closer to the group with more data points`
     }
   ]
 };

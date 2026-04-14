@@ -59,7 +59,9 @@ $$V_{\\text{out}} = 9 \\times \\frac{6}{3 + 6} = 9 \\times \\frac{6}{9} = 6 \\te
 **Voltage Divider Drill**
 
 1) A voltage divider with $R_1 = 2 \\; \\text{k}\\Omega$ and $R_2 = 8 \\; \\text{k}\\Omega$ is connected to 10 V. What is $V_{\\text{out}}$ across $R_2$? (in V)
+
 2) You need $V_{\\text{out}} = 3$ V from a 12 V source using a voltage divider. If $R_2 = 1 \\; \\text{k}\\Omega$, what must $R_1$ be? (in k$\\Omega$)
+
 3) A voltage divider uses $R_1 = R_2 = 5 \\; \\text{k}\\Omega$ with a 20 V input. What is $V_{\\text{out}}$? (in V)
       `,
       exercise: {
@@ -140,7 +142,9 @@ The $4 \\; \\Omega$ resistor (smaller) gets the larger current (4.5 A). ✓
 A total current of 10 A enters a node and splits between $R_1 = 6 \\; \\Omega$ and $R_2 = 4 \\; \\Omega$ in parallel.
 
 1) Current through $R_1$ (in A)
+
 2) Current through $R_2$ (in A)
+
 3) Voltage across the parallel combination (in V)
       `,
       exercise: {

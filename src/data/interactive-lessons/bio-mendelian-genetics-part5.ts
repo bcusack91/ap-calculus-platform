@@ -95,7 +95,9 @@ export const bioMendelianPart5Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **genotype carrying two different alleles**
+
       2) Term for this definition: **genotype carrying two identical alleles**
+
       3) Term for this definition: **grid method for predicting genotype combinations**
       `,
       exercise: {

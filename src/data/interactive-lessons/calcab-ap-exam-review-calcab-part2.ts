@@ -2,185 +2,182 @@ export const calcabExamReviewPart2Data = {
   topicSlug: 'ap-exam-review-calcab',
   sections: [
     {
-      id: 'calcabexamreview-p2-intro',
+      id: 'examrev2-intro',
       type: 'text' as const,
-      content: `
-# Ap Exam Review
+      content: `# AP Exam Review \u2014 Differentiation Rules
 
-**Part 2 of 7 — Worked Examples**
+**Part 2 of 7**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+---
 
-## Key Ideas
+### Differentiation Rules Reference
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+| Rule | Formula |
+|:---|:---|
+| Power | $\\frac{d}{dx}[x^n] = nx^{n-1}$ |
+| Product | $(fg)' = f'g + fg'$ |
+| Quotient | $\\left(\\frac{f}{g}\\right)' = \\frac{f'g - fg'}{g^2}$ |
+| Chain | $\\frac{d}{dx}[f(g(x))] = f'(g(x))\\cdot g'(x)$ |
+| $e^x$ | $\\frac{d}{dx}[e^{g(x)}] = e^{g(x)}\\cdot g'(x)$ |
+| $\\ln x$ | $\\frac{d}{dx}[\\ln u] = \\frac{u'}{u}$ |
+| $\\sin x$ | $\\cos x$ |
+| $\\cos x$ | $-\\sin x$ |
+| $\\tan x$ | $\\sec^2 x$ |
 
-## Formula Snapshot
+### When to Use Each Rule
 
-When appropriate, use:
+| Scenario | Rule | Example |
+|:---|:---|:---|
+| Two functions multiplied | Product | $x^2 \\sin x$ |
+| One function divided by another | Quotient | $\\frac{\\ln x}{x}$ |
+| Function inside a function | Chain | $\\sin(x^3)$ |
+| Product inside a composition | Chain + Product | $e^{x\\sin x}$ |
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+> **Key Fact:** The chain rule is the most-tested differentiation rule on the AP exam.
 
-and interpret what the final value means in context.
-      `
+---
+
+### Worked Example \u2014 Multi-Rule Problem
+
+Find $f'(x)$ for $f(x) = \\frac{x^2 e^{3x}}{\\cos x}$.
+
+**Step 1:** Identify \u2014 quotient rule with numerator = product.
+
+**Numerator:** $h(x) = x^2 e^{3x}$
+
+$h'(x) = 2x\\,e^{3x} + x^2\\cdot 3e^{3x} = e^{3x}(2x + 3x^2)$
+
+**Step 2:** Quotient rule:
+
+$$f'(x) = \\frac{e^{3x}(2x+3x^2)\\cos x - x^2 e^{3x}(-\\sin x)}{\\cos^2 x}$$
+
+$$= \\frac{x\\,e^{3x}[(2+3x)\\cos x + x\\sin x]}{\\cos^2 x}$$`
     },
     {
-      id: 'calcabexamreview-p2-mcq1',
+      id: 'examrev2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Differentiation Rules Quiz** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: '$\\frac{d}{dx}[x^3 \\ln x] =$',
+            options: ['$x^2(3\\ln x + 1)$', '$3x^2 \\ln x$', '$\\frac{x^2}{x}$', '$3x^2 + \\frac{1}{x}$'],
+            correctAnswer: 0,
+            explanation: 'Product rule: $3x^2 \\ln x + x^3 \\cdot \\frac{1}{x} = 3x^2 \\ln x + x^2 = x^2(3\\ln x+1)$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: '$\\frac{d}{dx}[\\sin(x^2)] =$',
+            options: ['$2x\\cos(x^2)$', '$\\cos(x^2)$', '$2x\\sin(x^2)$', '$x^2\\cos(x^2)$'],
+            correctAnswer: 0,
+            explanation: 'Chain rule: $\\cos(x^2)\\cdot 2x = 2x\\cos(x^2)$.'
+          },
+          {
+            question: 'If $f(x) = e^{\\sin x}$, then $f\'(x) =$',
+            options: ['$e^{\\sin x}\\cos x$', '$e^{\\cos x}$', '$\\cos x \\cdot e^x$', '$e^{\\sin x}\\sin x$'],
+            correctAnswer: 0,
+            explanation: 'Chain rule: $e^{\\sin x}\\cdot \\cos x$.'
           }
         ]
       }
     },
     {
-      id: 'calcabexamreview-p2-example',
+      id: 'examrev2-implicit',
       type: 'text' as const,
-      content: `
-## Worked Example
+      content: `### Implicit Differentiation Review
 
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
+For equations not solved for $y$, differentiate both sides with respect to $x$, treating $y$ as a function of $x$.
 
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
+$$\\boxed{\\text{Every } y \\text{ term gets a } \\frac{dy}{dx} \\text{ factor (chain rule)}}$$
 
-### Common Trap
+**Example:** $x^2 + y^2 = 25$
 
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
+$2x + 2y\\frac{dy}{dx} = 0 \\implies \\frac{dy}{dx} = -\\frac{x}{y}$
+
+### AP Tips for Derivative Problems
+
+| Tip | Why It Matters |
+|:---|:---|
+| Simplify BEFORE differentiating | Avoids unnecessary product/quotient rules |
+| Check for chain rule | Most common error is forgetting inner derivative |
+| Read carefully for $f'(a)$ vs $f(a)$ | Question may ask for the derivative at a point |
+| Know trig derivatives cold | These appear frequently in MC |`
     },
     {
-      id: 'calcabexamreview-p2-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
+      id: 'examrev2-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**More Practice** \ud83d\udcdd',
       exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
+        questions: [
+          {
+            question: 'If $x^2y + y^3 = 10$, find $\\frac{dy}{dx}$ at $(1, 2)$.',
+            options: ['$-\\frac{2}{7}$', '$-\\frac{4}{13}$', '$\\frac{2}{7}$', '$-\\frac{1}{6}$'],
+            correctAnswer: 1,
+            explanation: '$2xy + x^2\\frac{dy}{dx} + 3y^2\\frac{dy}{dx} = 0$. $\\frac{dy}{dx}(x^2+3y^2) = -2xy$. At $(1,2): \\frac{dy}{dx} = \\frac{-4}{1+12} = -\\frac{4}{13}$.'
+          },
+          {
+            question: '$\\frac{d}{dx}[\\ln(\\cos x)] =$',
+            options: ['$-\\tan x$', '$\\frac{1}{\\cos x}$', '$\\tan x$', '$-\\sec x$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{-\\sin x}{\\cos x} = -\\tan x$.'
+          }
+        ]
       }
     },
     {
-      id: 'calcabexamreview-p2-dropdown',
+      id: 'examrev2-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Match the rule.** \ud83d\udd0d',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '$\\frac{d}{dx}[\\tan^2(3x)]$ requires:',
+            options: ['Power + Chain', 'Product rule', 'Quotient rule', 'Only chain rule'],
+            correctAnswers: ['Power + Chain'],
+            hints: ['$\\tan^2(3x) = [\\tan(3x)]^2$. Bring down the 2, then chain.'],
+            explanation: 'Power rule on the outer square, chain rule on $\\tan(3x)$, chain again on $3x$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
+            label: '$\\frac{d}{dx}\\left[\\frac{e^x}{x}\\right]$ requires:',
+            options: ['Quotient rule', 'Product rule', 'Chain rule only', 'Power rule'],
+            correctAnswers: ['Quotient rule'],
+            hints: ['A function divided by another function.'],
+            explanation: '$\\frac{e^x \\cdot x - e^x \\cdot 1}{x^2} = \\frac{e^x(x-1)}{x^2}$.'
           },
           {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcabexamreview-p2-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Worked Examples**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcabexamreview-p2-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: '$\\frac{d}{dx}[x\\sin x\\cos x]$ requires:',
+            options: ['Product rule (twice)', 'Chain rule', 'Quotient rule', 'Power rule'],
+            correctAnswers: ['Product rule (twice)'],
+            hints: ['Three functions multiplied together.'],
+            explanation: 'Triple product: differentiate one factor at a time while keeping the others.'
           }
         ]
       }
+    },
+    {
+      id: 'examrev2-input',
+      type: 'input-box' as const,
+      content: '**Compute the derivative.** \u270d\ufe0f',
+      exercise: {
+        question: 'If $f(x) = (2x+1)^5$, find $f\'(1)$. Enter the numerical value.',
+        correctAnswer: '810',
+        acceptableAnswers: ['810'],
+        hints: [
+          'Chain rule: $f\'(x) = 5(2x+1)^4 \\cdot 2 = 10(2x+1)^4$.',
+          'At $x=1$: $f\'(1) = 10(3)^4$.',
+          '$3^4 = 81$. $f\'(1) = 10 \\cdot 81 = 810$.'
+        ],
+        explanation: '$f\'(x) = 10(2x+1)^4$. $f\'(1) = 10(3)^4 = 810$.'
+      }
+    },
+    {
+      id: 'examrev2-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 2
+
+- Master the product, quotient, and chain rules
+- Chain rule applies whenever a function is composed with another
+- Implicit differentiation: every $y$ gets $\\frac{dy}{dx}$
+- Simplify before differentiating when possible`
     }
   ]
-}
+};

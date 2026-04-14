@@ -86,7 +86,9 @@ export const psychPersonalityPart6Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: a relatively stable disposition influencing behavior across situations
+
       2) Write the concept that matches: five broad trait dimensions: openness, conscientiousness, extraversion, agreeableness, neuroticism
+
       3) Write the concept that matches: approach emphasizing unconscious processes and early relationships
 
       Use the exact vocabulary term from this part.

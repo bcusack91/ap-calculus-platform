@@ -88,7 +88,9 @@ export const oChemAlkenesPart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: new groups add to opposite faces
+
       2) Term for: OsO4 gives vicinal syn diol
+
       3) Product pattern expected under O3 then Me2S
       `,
       exercise: {

@@ -86,7 +86,9 @@ export const psychRetrievalPart1Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: stimulus that helps access stored information
+
       2) Write the concept that matches: retrieval is best when cues match encoding conditions
+
       3) Write the concept that matches: recall improves when internal state matches learning state
 
       Use the exact vocabulary term from this part.

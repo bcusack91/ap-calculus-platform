@@ -142,7 +142,9 @@ On a **Pressure vs. Volume** (PV) diagram, the **work equals the area under the 
 All processes are isobaric (constant pressure). Give magnitude and correct sign.
 
 1) $P = 100$ kPa, gas expands from 3.0 L to 8.0 L. Work by gas (in J)?
+
 2) $P = 250$ kPa, gas compresses from 10.0 L to 4.0 L. Work by gas (in J)?
+
 3) A gas at 150 kPa does 450 J of work while expanding. What is $\\Delta V$ (in L)?
       `,
       exercise: {

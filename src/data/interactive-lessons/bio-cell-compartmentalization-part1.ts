@@ -95,7 +95,9 @@ export const bioCellCompartmentPart1Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **separates cellular processes into distinct membrane-bound regions**
+
       2) Term for this definition: **contains hydrolytic enzymes for intracellular digestion**
+
       3) Term for this definition: **modifies, sorts, and packages proteins and lipids**
       `,
       exercise: {

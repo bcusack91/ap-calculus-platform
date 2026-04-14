@@ -68,7 +68,110 @@ The most **obvious** definition is almost always wrong. If "table" is in the ans
             explanation: 'Predicting before looking prevents you from being attracted to trap answers. Your prediction based on context will almost always match the correct choice.'
           }
         ]
+      }    },
+    {
+      id: 're4-text2',
+      type: 'text' as const,
+      content: `## Deep Dive: Vocabulary in Context Mastery
+
+### Worked Example 1: The Substitution Method Step-by-Step
+
+| Step | Action |
+|---|---|
+| **Sentence** | "The new regulations effectively **checked** the company's rapid expansion into foreign markets." |
+| **Cover the word** | "The new regulations effectively _____ the company's rapid expansion…" |
+| **Predict** | "limited" or "restrained" or "slowed" |
+| **Choices** | A) verified B) examined C) restrained D) marked |
+| **Match** | C) restrained matches "limited/slowed" ✅ |
+| **Trap** | A) verified — the most common meaning of "check" |
+
+### Worked Example 2: Multiple-Meaning Words in Action
+
+| Word | Common Meaning | SAT Meaning | Context Clue |
+|---|---|---|---|
+| "The discovery **arrested** the decline" | Detained (police) | Stopped, halted | "Decline" → something being stopped |
+| "She **qualified** her support" | Became eligible | Limited, added conditions to | "Qualified" modifying "support" |
+| "The **gravity** of the situation" | Physical force | Seriousness | "Of the situation" → not physics |
+| "He **championed** the cause" | Won a competition | Advocated for | "The cause" → advocacy context |
+
+### Top 20 SAT Multiple-Meaning Words
+
+| Word | Trap Definition | SAT Definition |
+|---|---|---|
+| Table | Furniture | Postpone |
+| Arrest | Detain | Halt/stop |
+| Check | Verify | Restrain |
+| Qualify | Meet requirements | Limit/restrict |
+| Gravity | Physical force | Seriousness |
+| Champion | Winner | Advocate |
+| Craft | Arts and crafts | Skill/expertise |
+| Provincial | From a province | Narrow-minded |
+| Pedestrian | Walker | Ordinary/dull |
+| Temper | Anger | Moderate/soften |
+| Cultivate | Farm | Develop/nurture |
+| Resolve | Solve | Determination |
+| Appreciate | Be grateful | Increase in value |
+| Telling | Narrating | Revealing/significant |
+| Singular | One | Remarkable/unique |`
+    },
+    {
+      id: 're4-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Advanced Vocabulary Challenge** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: '"The teacher sought to CULTIVATE a love of reading in her students." "Cultivate" most nearly means:',
+            options: ['develop and nurture', 'farm', 'dig up', 'harvest'],
+            correctAnswer: 0,
+            explanation: '"Cultivate" here means to develop and nurture over time. The farming-related definitions (farm, dig, harvest) are the common/literal meanings — the SAT tests the figurative meaning.'
+          },
+          {
+            question: '"The **singular** achievement of landing on the moon united the nation." "Singular" most nearly means:',
+            options: ['remarkable and unique', 'one in number', 'isolated', 'grammatically singular'],
+            correctAnswer: 0,
+            explanation: 'In context, "singular achievement" means remarkable/unique — not just "one." The moon landing was unique, extraordinary, and unprecedented.'
+          },
+          {
+            question: 'The #1 rule for vocabulary-in-context questions is:',
+            options: ['The most common definition is almost always the WRONG answer', 'Choose the longest word', 'Pick the hardest vocabulary word', 'The answer is always the first word you think of'],
+            correctAnswer: 0,
+            explanation: 'The SAT deliberately tests secondary meanings. If "check" is the word, "verify" (the common meaning) is the trap. The contextual meaning (restrain, examine, etc.) is what they want.'
+          }
+        ]
       }
-    }
+    },
+    {
+      id: 're4-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Vocabulary in Context Check** — Select the SAT meaning.',
+      exercise: {
+        dropdowns: [
+          '"The discovery arrested the decline" → arrested means [stopped|jailed|photographed|identified]',
+          '"The gravity of the crisis" → gravity means [seriousness|weight|physics|attraction]',
+          '"She qualified her endorsement" → qualified means [limited|earned|completed|improved]',
+          'First step for vocab questions: [cover the word and predict|read all choices first|pick the common meaning|guess]'
+        ],
+        correctAnswers: ['stopped', 'seriousness', 'limited', 'cover the word and predict'],
+        hint1: 'A decline being "arrested" = being stopped.',
+        hint2: 'A crisis has gravity = has seriousness/weight.',
+        hint3: 'A "qualified" endorsement = one with conditions/limits.',
+        explanation: 'Arrested = stopped. Gravity = seriousness. Qualified = limited. Always predict before looking at choices — this prevents trap answers from attracting you.'
+      }
+    },
+    {
+      id: 're4-summary',
+      type: 'text' as const,
+      content: `## Part 4 Summary
+
+| Strategy | Detail |
+|---|---|
+| Substitution method | Cover word → predict → match |
+| #1 trap | The most common definition is usually wrong |
+| Multiple-meaning words | SAT tests secondary/contextual meanings |
+| Key words to know | Table, arrest, check, qualify, gravity, champion, craft, temper |
+| Context clues | Surrounding words reveal the intended meaning |
+
+*Next: Purpose & Rhetoric →*`    }
   ]
 };

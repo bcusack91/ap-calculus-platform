@@ -300,6 +300,7 @@ Light goes from air ($n_1=1.00$) into glass ($n_2=1.50$) at $\\theta_1=30^\\circ
 
 Enter in order (to 3 significant figures where applicable):
 1) $\\sin\\theta_2$
+
 2) $\\theta_2$ in degrees
 3) Direction phrase: \`toward\` or \`away\`
       `,

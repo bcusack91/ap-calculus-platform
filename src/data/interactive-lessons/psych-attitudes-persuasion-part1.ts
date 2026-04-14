@@ -86,7 +86,9 @@ export const psychAttitudesPart1Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: a learned evaluation of a person, object, or idea
+
       2) Write the concept that matches: the affective, behavioral, and cognitive components of an attitude
+
       3) Write the concept that matches: increased liking after repeated exposure
 
       Use the exact vocabulary term from this part.

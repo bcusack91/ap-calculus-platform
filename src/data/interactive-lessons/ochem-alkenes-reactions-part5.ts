@@ -88,7 +88,9 @@ export const oChemAlkenesPart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: both new groups add to same alkene face
+
       2) Term for: new groups add to opposite faces
+
       3) Product pattern expected under Br2 in CCl4
       `,
       exercise: {

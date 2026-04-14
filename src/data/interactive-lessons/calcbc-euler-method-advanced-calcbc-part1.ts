@@ -2,185 +2,143 @@ export const calcbcEulerPart1Data = {
   topicSlug: 'euler-method-advanced-calcbc',
   sections: [
     {
-      id: 'calcbceuler-p1-intro',
+      id: 'euler1-intro',
       type: 'text' as const,
-      content: `
-# Euler Method Advanced
+      content: `# Euler's Method — Foundations
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Numerical Approximation of Differential Equations**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Why Euler's Method?
 
-## Key Ideas
+Many differential equations cannot be solved analytically. Euler's method gives a numerical approximation of the solution using tangent-line steps.
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+### The Core Idea
 
-## Formula Snapshot
+Given $\\frac{dy}{dx} = f(x, y)$ with initial condition $(x_0, y_0)$:
 
-When appropriate, use:
+$$\\boxed{y_{n+1} = y_n + f(x_n, y_n) \\cdot \\Delta x}$$
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+Each step:
+1. Evaluate the slope at the current point: $m = f(x_n, y_n)$
+2. Step forward: $x_{n+1} = x_n + \\Delta x$
+3. Update $y$: $y_{n+1} = y_n + m \\cdot \\Delta x$
 
-and interpret what the final value means in context.
-      `
+### Visual Interpretation
+
+You're walking along tangent lines, taking small steps. Each step uses the slope at the current point — NOT the slope at the destination.
+
+| Step | $x_n$ | $y_n$ | $f(x_n, y_n)$ | $\\Delta y = f \\cdot \\Delta x$ | $y_{n+1}$ |
+|------|--------|--------|----------------|------|-----------|
+| 0 | $x_0$ | $y_0$ | $f(x_0, y_0)$ | — | — |
+| 1 | $x_0 + \\Delta x$ | $y_0 + f \\cdot \\Delta x$ | ... | ... | ... |
+
+> **Key Fact:** Euler's method is a first-order method — the error per step is proportional to $(\\Delta x)^2$, and the global error is proportional to $\\Delta x$.`
     },
     {
-      id: 'calcbceuler-p1-mcq1',
+      id: 'euler1-example',
+      type: 'text' as const,
+      content: `### Worked Example
+
+$\\frac{dy}{dx} = x + y$, $y(0) = 1$, $\\Delta x = 0.1$. Approximate $y(0.3)$.
+
+| Step | $x_n$ | $y_n$ | $f = x_n + y_n$ | $\\Delta y$ | $y_{n+1}$ |
+|------|--------|--------|-----------------|-----------|-----------|
+| 0→1 | 0 | 1 | 1 | 0.1 | 1.1 |
+| 1→2 | 0.1 | 1.1 | 1.2 | 0.12 | 1.22 |
+| 2→3 | 0.2 | 1.22 | 1.42 | 0.142 | 1.362 |
+
+$$\\boxed{y(0.3) \\approx 1.362}$$
+
+### Step Size Matters
+
+| $\\Delta x$ | Approximation of $y(1)$ | Actual = $2e - 1 \\approx 4.437$ |
+|------------|------------------------|----------------------------------|
+| 0.5 | 3.5 | Error ≈ 21% |
+| 0.1 | 4.187 | Error ≈ 5.6% |
+| 0.01 | 4.411 | Error ≈ 0.6% |
+
+Smaller step size → better approximation (but more computation).`
+    },
+    {
+      id: 'euler1-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Euler\'s Method Basics**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: '$\\frac{dy}{dx} = 2x$, $y(1) = 3$, $\\Delta x = 0.5$. What is $y(1.5)$?',
+            options: ['$y = 3 + 2(1)(0.5) = 4$', '$y = 3 + 2(1.5)(0.5) = 4.5$', '$y = 3 + 2(0.5) = 4$', '$y = 3 + 1 = 4$'],
+            correctAnswer: 0,
+            explanation: 'Slope at $(1, 3)$: $f(1, 3) = 2(1) = 2$. $y(1.5) = 3 + 2(0.5) = 4$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'In Euler\'s method, the slope used at each step is evaluated at:',
+            options: ['The beginning of the step (current point)', 'The end of the step', 'The midpoint of the step', 'The average of beginning and end'],
+            correctAnswer: 0,
+            explanation: 'Euler\'s method uses the slope at the current point $(x_n, y_n)$, not the destination.'
+          },
+          {
+            question: 'If $\\Delta x$ is halved, the global error approximately:',
+            options: ['Halves (error is proportional to $\\Delta x$)', 'Quarters', 'Stays the same', 'Doubles'],
+            correctAnswer: 0,
+            explanation: 'Euler\'s method has first-order global error: $E \\propto \\Delta x$.'
           }
         ]
       }
     },
     {
-      id: 'calcbceuler-p1-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbceuler-p1-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbceuler-p1-dropdown',
+      id: 'euler1-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Step-by-Step Practice**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '$dy/dx = y$, $y(0) = 1$, $\\Delta x = 0.5$. The slope at $(0, 1)$ is:',
+            options: ['$f(0, 1) = 1$', '$f(0, 1) = 0$', '$f(0, 1) = 0.5$', '$f(0, 1) = 2$'],
+            correctAnswers: ['$f(0, 1) = 1$'],
+            hints: ['$f(x, y) = y$, so $f(0, 1) = 1$.'],
+            explanation: 'The slope equals $y = 1$ at the initial point.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
+            label: 'Continuing: $y(0.5) = 1 + 1 \\cdot 0.5 = 1.5$. The slope at $(0.5, 1.5)$ is:',
+            options: ['$f(0.5, 1.5) = 1.5$', '$f(0.5, 1.5) = 0.5$', '$f(0.5, 1.5) = 2$', '$f(0.5, 1.5) = 1$'],
+            correctAnswers: ['$f(0.5, 1.5) = 1.5$'],
+            hints: ['$f(x, y) = y$, so $f(0.5, 1.5) = 1.5$.'],
+            explanation: '$f = y = 1.5$ at $(0.5, 1.5)$.'
           },
           {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbceuler-p1-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Core Concepts**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbceuler-p1-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'So $y(1) \\approx$:',
+            options: ['$1.5 + 1.5(0.5) = 2.25$', '$1.5 + 1(0.5) = 2.0$', '$1 + 1.5(0.5) = 1.75$', '$1.5 + 0.5(0.5) = 1.75$'],
+            correctAnswers: ['$1.5 + 1.5(0.5) = 2.25$'],
+            hints: ['$y(1) = y(0.5) + f(0.5, 1.5) \\cdot 0.5 = 1.5 + 1.5(0.5)$.'],
+            explanation: '$y(1) \\approx 2.25$. The exact answer is $e \\approx 2.718$, so the approximation undershoots (concave up curve).'
           }
         ]
       }
+    },
+    {
+      id: 'euler1-input',
+      type: 'input-box' as const,
+      content: '**Compute**',
+      exercise: {
+        question: '$dy/dx = x - y$, $y(0) = 2$, $\\Delta x = 0.1$. Compute $y(0.1)$. Enter your answer as a decimal.',
+        correctAnswer: '1.8',
+        acceptableAnswers: ['1.8', '1.80'],
+        hints: ['Slope at $(0, 2)$: $f(0, 2) = 0 - 2 = -2$. $y(0.1) = 2 + (-2)(0.1)$.'],
+        explanation: '$f(0, 2) = 0 - 2 = -2$. $y(0.1) = 2 + (-2)(0.1) = 2 - 0.2 = 1.8$.'
+      }
+    },
+    {
+      id: 'euler1-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Euler's method: $y_{n+1} = y_n + f(x_n, y_n) \\cdot \\Delta x$
+- Uses tangent-line approximation at each step
+- Smaller $\\Delta x$ → better accuracy but more steps
+- First-order method: global error $\\propto \\Delta x$
+
+> **Next:** Part 2 — Multi-Step Computations and Table Problems.`
     }
   ]
-}
+};

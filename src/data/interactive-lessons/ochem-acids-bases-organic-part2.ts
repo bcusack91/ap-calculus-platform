@@ -88,7 +88,9 @@ export const oChemAcidsBasesPart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: proton acceptor in a reaction step
+
       2) Term for: species formed after an acid loses H+
+
       3) Product pattern expected under LDA, -78 °C
       `,
       exercise: {

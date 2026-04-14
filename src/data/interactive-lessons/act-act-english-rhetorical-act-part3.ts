@@ -118,7 +118,9 @@ Choose the word whose connotation matches the passage's attitude toward the subj
 Replace each wordy phrase with a single concise word.
 
 1) "at this point in time" → __________ (one word)
+
 2) "in the event that" → __________ (one word)
+
 3) "has the ability to" → __________ (one word)
       `,
       exercise: {

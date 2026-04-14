@@ -69,6 +69,7 @@ Correct conclusion: 1 m is highest. This avoids a common ACT trap where students
         type: 'input-boxes' as const,
         content: `\n**Timed Accuracy Drill**
 1) You budget 35 minutes for 40 questions. What is the average seconds per question (rounded to nearest whole number)?
+
 2) A chart value moves from 24 to 30. Enter the increase.
 3) You spend 2 minutes 20 seconds on a hard item but target 50 seconds. Enter how many extra seconds you used.\n        `,
         exercise: {

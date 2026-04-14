@@ -45,6 +45,7 @@ Let's tackle the full-blown Bernoulli problems that combine continuity + Bernoul
 Water flows through a pipe that rises 8.0 m. At the bottom: area $A_1 = 40$ cm², speed $v_1 = 5.0$ m/s, pressure $P_1 = 300{,}000$ Pa. At the top: area $A_2 = 20$ cm².
 
 1) Speed at the top, $v_2$ (in m/s)
+
 2) Pressure at the top, $P_2$ (in Pa)
       `,
       exercise: {
@@ -64,7 +65,9 @@ Water flows through a pipe that rises 8.0 m. At the bottom: area $A_1 = 40$ cm²
 A Pitot tube on an airplane measures the stagnation pressure (air brought to rest) and the static pressure. Stagnation pressure: 102,000 Pa. Static pressure: 100,000 Pa.
 
 1) Pressure difference (in Pa)
+
 2) Air speed of the airplane (in m/s)
+
 3) This speed in km/h (multiply m/s by 3.6)
 
 *Round all answers to 3 significant figures.*
@@ -120,6 +123,7 @@ A Pitot tube on an airplane measures the stagnation pressure (air brought to res
 A large open tank has water 10 m deep. A pipe at the bottom carries water horizontally to a nozzle that is 3.0 m above the bottom of the tank. The nozzle exit area is very small (open to atmosphere).
 
 1) Speed of water exiting the nozzle (in m/s)
+
 2) If the nozzle area is $1.0 \\times 10^{-4}$ m², the flow rate (in L/s)
       `,
       exercise: {

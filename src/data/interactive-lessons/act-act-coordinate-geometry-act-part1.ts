@@ -100,7 +100,9 @@ $$\\frac{x + 7}{2} = 5 \\implies x + 7 = 10 \\implies x = 3$$
 **Distance & Midpoint Calculations** 🧮
 
 1) Distance between $(3, 0)$ and $(0, 4)$?
+
 2) Midpoint of $(1, 5)$ and $(9, 1)$: what is the x-coordinate?
+
 3) Midpoint of $(-2, 6)$ and $(4, -2)$: what is the y-coordinate?
       `,
       exercise: {

@@ -99,7 +99,9 @@ $$F_B = \\rho_{\\text{fluid}} \\cdot V_{\\text{displaced}} \\cdot g$$
 An object has mass 2.0 kg and volume $8.0 \\times 10^{-4}$ m³.
 
 1) Density of the object (in kg/m³)
+
 2) Will it sink or float in water? (type "sink" or "float")
+
 3) Its apparent weight when fully submerged in water (in N)
       `,
       exercise: {

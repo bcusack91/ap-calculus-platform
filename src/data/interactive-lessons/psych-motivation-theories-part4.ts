@@ -86,7 +86,9 @@ export const psychMotivationPart4Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: aiming to attain a positive outcome
+
       2) Write the concept that matches: aiming to prevent a negative outcome
+
       3) Write the concept that matches: moderate arousal often optimizes performance on many tasks
 
       Use the exact vocabulary term from this part.

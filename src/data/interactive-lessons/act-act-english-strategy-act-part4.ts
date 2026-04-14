@@ -108,7 +108,9 @@ Transition questions ask you to pick the word or phrase that best connects two i
 Identify the relationship each transition signals.
 
 1) "Therefore" signals a __________ relationship (cause and …).
+
 2) "On the other hand" signals a __________ between two ideas.
+
 3) "Furthermore" signals that additional __________ is being provided.
       `,
       exercise: {

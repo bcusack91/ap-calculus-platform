@@ -88,7 +88,9 @@ export const oChemAminoAcidsPart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: covalent S-S linkage between cysteine residues
+
       2) Term for: loss of higher-order structure without peptide cleavage
+
       3) Product pattern expected under amino acid + amino acid, coupling reagent
       `,
       exercise: {

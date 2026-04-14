@@ -95,7 +95,9 @@ export const bioBiotechPart2Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **joins DNA fragments by sealing phosphodiester bonds**
+
       2) Term for this definition: **separates DNA fragments by size through a matrix**
+
       3) Term for this definition: **amplifies a target DNA region through thermal cycling**
       `,
       exercise: {

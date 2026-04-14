@@ -95,7 +95,9 @@ export const bioFeedbackPart5Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **component that detects a change in a regulated variable**
+
       2) Term for this definition: **component that carries out corrective response**
+
       3) Term for this definition: **hormone lowering blood glucose by promoting uptake/storage**
       `,
       exercise: {

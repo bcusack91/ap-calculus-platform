@@ -90,7 +90,9 @@ Here is your complete **cheat sheet** of coordinate geometry formulas for the AC
 **Mixed Calculations** 🧮
 
 1) Slope of the line through $(2, 5)$ and $(8, 17)$?
+
 2) The midpoint of $(0, 0)$ and $(10, 6)$: what is the x-coordinate?
+
 3) A circle has equation $(x-1)^2 + (y+3)^2 = 64$. What is the radius?
       `,
       exercise: {

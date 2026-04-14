@@ -72,32 +72,33 @@ Research question: Does caffeine improve test performance?
       `
     },
     {
-      id: 'histo3-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'histo3-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) What type of research method is the ONLY one that can establish cause-and-effect?
+
+      2) What is the term for the variable that the researcher manipulates? (two words)
+
+      3) What process ensures each participant has an equal chance of being in any group? (two words)
+
+      Use the exact term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'In an experiment testing if music affects study performance, the independent variable is:',
-            options: [
-              'Study performance',
-              'Music (present or absent)',
-              'The time of day',
-              'The participants\' age'
-            ],
-            correctAnswer: 1,
-            explanation: 'The independent variable is what the researcher manipulates — in this case, whether music is present or absent during studying.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['experiment', 'independent variable', 'random assignment'],
+        hint1: 'Starts with: E',
+        hint2: 'Two words, starts with: I V',
+        hint3: 'Two words, starts with: R A',
+        explanation: 'Expected answers: experiment (only method establishing causation), independent variable (what is manipulated), and random assignment (ensures equivalent groups).'
       }
     },
     {
       id: 'histo3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+      **Fill in the Blanks** 🔍
       `,
       exercise: {
         dropdowns: [
@@ -119,6 +120,58 @@ Research question: Does caffeine improve test performance?
         hint2: 'This eliminates selection bias.',
         hint3: 'This variable "depends" on what the researcher does.',
         explanation: 'Correlation cannot prove causation. Random assignment creates equivalent groups. The dependent variable is what is measured.'
+      }
+    },
+    {
+      id: 'histo3-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Correlation does NOT mean there is no relationship — it means you CANNOT conclude causation. A strong correlation (r = 0.90) is still NOT proof of cause-and-effect.
+      - Random ASSIGNMENT is NOT the same as random SAMPLING — assignment distributes participants into groups; sampling selects who participates from the population.
+      - A confounding variable is NOT the same as an extraneous variable — a confound systematically varies WITH the IV; an extraneous variable is any other variable.
+      - Naturalistic observation is NOT the same as a case study — observation studies behavior in natural settings; case studies do in-depth investigation of individuals.
+
+      ### AP Strategy Moves
+      - When the AP exam asks "can we conclude causation?", check for: (1) manipulation of IV, (2) random assignment, (3) control group. All three needed.
+      - Know the strengths AND weaknesses of each research method — the exam often asks you to evaluate a study's design.
+      - "Correlation ≠ causation" is tested in nearly every AP Psychology exam — be ready to explain WHY (third variables, directionality problem).
+      - For FRQ: if asked to design an experiment, always include IV, DV, control group, random assignment, and operational definitions.
+      `
+    },
+    {
+      id: 'histo3-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A study finds that students who sleep more have higher GPAs. A newspaper headline reads: "More sleep leads to better grades!" What is wrong with this headline?',
+            options: [
+              'It implies causation from a correlational finding — a third variable like motivation could explain both',
+              'The study used too large a sample size',
+              'Sleep and grades cannot be correlated',
+              'The headline correctly reports the finding'
+            ],
+            correctAnswer: 0,
+            explanation: 'This is a classic correlation ≠ causation error. The study only found an association. A third variable (e.g., motivation or time management) could cause BOTH more sleep and higher grades. Without random assignment and manipulation, causation cannot be claimed.'
+          },
+          {
+            question: 'A researcher wants to study the effects of caffeine on reaction time. She has 50 participants drink either coffee or water, then measures their reaction time on a computer task. However, she lets participants choose which group they want to be in. What is the biggest problem with this design?',
+            options: [
+              'No random assignment — participants who choose coffee may differ systematically from those who choose water',
+              'The sample size is too small',
+              'She should have used a survey instead',
+              'Reaction time cannot be measured on a computer'
+            ],
+            correctAnswer: 0,
+            explanation: 'Without random assignment, the groups may differ in ways besides caffeine intake (e.g., regular coffee drinkers may choose coffee, and they may already have faster reaction times). This creates a confounding variable that makes causal conclusions impossible.'
+          }
+        ]
       }
     }
   ]

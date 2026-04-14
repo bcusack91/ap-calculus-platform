@@ -101,7 +101,9 @@ $$\\frac{V_{\\text{submerged}}}{V_{\\text{total}}} = \\frac{\\rho_{\\text{object
 A U-tube has water ($\\rho = 1000$ kg/m³) in the left arm and oil (SG = 0.80) in the right arm. The water surface is 0.20 m above the oil-water interface.
 
 1) Density of the oil (in kg/m³)
+
 2) Height of oil above the interface (in m)
+
 3) Difference in surface levels — which is higher and by how much? (oil surface height − water surface height, in m)
 
 *Round all answers to 3 significant figures.*

@@ -86,7 +86,9 @@ export const psychMotivationPart5Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: moderate arousal often optimizes performance on many tasks
+
       2) Write the concept that matches: persistent effort toward standards of excellence
+
       3) Write the concept that matches: motivation to reduce physiological tension and restore homeostasis
 
       Use the exact vocabulary term from this part.

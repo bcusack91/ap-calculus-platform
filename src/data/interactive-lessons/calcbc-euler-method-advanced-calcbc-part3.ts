@@ -2,185 +2,136 @@ export const calcbcEulerPart3Data = {
   topicSlug: 'euler-method-advanced-calcbc',
   sections: [
     {
-      id: 'calcbceuler-p3-intro',
+      id: 'euler3-intro',
       type: 'text' as const,
-      content: `
-# Euler Method Advanced
+      content: `# Over- and Under-Estimates
 
-**Part 3 of 7 — Problem-Solving Patterns**
+**Part 3 of 7 — Concavity Determines Error Direction**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### The Key Principle
 
-## Key Ideas
+$$\\boxed{\\text{Concave up} \\Rightarrow \\text{Euler underestimates}}$$
+$$\\boxed{\\text{Concave down} \\Rightarrow \\text{Euler overestimates}}$$
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+### Why?
 
-## Formula Snapshot
+Euler's method follows the tangent line. If the curve is:
+- **Concave up** ($y'' > 0$): the curve bends ABOVE the tangent → tangent-line values are too LOW
+- **Concave down** ($y'' < 0$): the curve bends BELOW the tangent → tangent-line values are too HIGH
 
-When appropriate, use:
+### How to Determine Concavity
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+Given $dy/dx = f(x, y)$, find $d^2y/dx^2$ using the chain rule:
 
-and interpret what the final value means in context.
-      `
+$$\\frac{d^2y}{dx^2} = \\frac{\\partial f}{\\partial x} + \\frac{\\partial f}{\\partial y} \\cdot f(x, y)$$
+
+Or more simply: differentiate $f(x,y)$ implicitly with respect to $x$.
+
+| If $d^2y/dx^2$ | And solution is increasing | Then Euler... |
+|----------------|--------------------------|---------------|
+| $> 0$ (concave up) | — | Underestimates |
+| $< 0$ (concave down) | — | Overestimates |
+
+> **AP Tip:** The AP exam frequently asks "Is your Euler approximation an overestimate or underestimate? Justify." You MUST explain using concavity.`
     },
     {
-      id: 'calcbceuler-p3-mcq1',
+      id: 'euler3-example',
+      type: 'text' as const,
+      content: `### Example 1
+
+$dy/dx = y$, $y(0) = 1$. Is Euler's method an overestimate or underestimate on $[0, 1]$?
+
+**Solution:** $y = e^x$, so $y'' = e^x > 0$. Concave up → **underestimate**.
+
+Verification: With $\\Delta x = 1$, Euler gives $y(1) = 1 + 1(1) = 2$. Actual: $e \\approx 2.718$. Indeed $2 < 2.718$. ✓
+
+### Example 2
+
+$dy/dx = -y$, $y(0) = 1$. Is Euler's method an overestimate or underestimate on $[0, 1]$?
+
+**Solution:** $y = e^{-x}$, so $y'' = e^{-x} > 0$. Concave up → **underestimate**.
+
+But wait — the function is DECREASING. "Underestimate" means Euler's values are BELOW the actual curve.
+
+With $\\Delta x = 1$: Euler gives $y(1) = 1 + (-1)(1) = 0$. Actual: $e^{-1} \\approx 0.368$. Indeed $0 < 0.368$. ✓
+
+### Key Insight
+
+"Overestimate/underestimate" refers to the $y$-values, not the behavior. A decreasing, concave-up function is still underestimated by Euler.`
+    },
+    {
+      id: 'euler3-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Over/Under Practice**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: '$dy/dx = \\sqrt{y}$, $y(0) = 4$. $y\'\' = \\frac{1}{2\\sqrt{y}} \\cdot \\sqrt{y} \\cdot \\frac{1}{2\\sqrt{y}} > 0$... wait. Actually $y\'\' = \\frac{1}{2}$. Since $y\'\' > 0$, Euler\'s method:',
+            options: ['Underestimates the true solution', 'Overestimates the true solution', 'Gives the exact solution', 'Cannot determine without step size'],
+            correctAnswer: 0,
+            explanation: '$y\'\' > 0$ means concave up, so the tangent line lies below the curve. Euler underestimates.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: '$dy/dx = \\cos x$, $y(0) = 0$, estimating $y(\\pi/2)$ with $\\Delta x = \\pi/4$. Since $y = \\sin x$ and $y\'\' = -\\sin x < 0$ on $(0, \\pi)$:',
+            options: ['Euler overestimates', 'Euler underestimates', 'Euler is exact', 'Error direction changes'],
+            correctAnswer: 0,
+            explanation: 'Concave down on $(0, \\pi)$ → tangent line is above the curve → overestimate.'
+          },
+          {
+            question: 'On an AP FRQ, which justification earns full credit for "Is your approximation an overestimate?"',
+            options: ['"Since $d^2y/dx^2 < 0$ on the interval, the solution is concave down, so Euler overestimates."', '"The answer is too big."', '"By looking at the graph."', '"Because $\\Delta x$ is large."'],
+            correctAnswer: 0,
+            explanation: 'Must explicitly state concavity (second derivative sign) and connect it to over/underestimate.'
           }
         ]
       }
     },
     {
-      id: 'calcbceuler-p3-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbceuler-p3-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbceuler-p3-dropdown',
+      id: 'euler3-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Concavity Analysis**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '$dy/dx = x^2 + 1$, $y(0) = 0$. Then $y\'\' =$',
+            options: ['$2x$', '$x^2 + 1$', '$2$', '$0$'],
+            correctAnswers: ['$2x$'],
+            hints: ['$y\' = x^2 + 1$, so $y\'\' = 2x$.'],
+            explanation: '$y\'\' = 2x$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbceuler-p3-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Problem-Solving Patterns**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbceuler-p3-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'On $(0, 1)$, $y\'\' = 2x > 0$, so Euler:',
+            options: ['Underestimates ($y\'\' > 0$ → concave up)', 'Overestimates', 'Is exact', 'Cannot tell'],
+            correctAnswers: ['Underestimates ($y\'\' > 0$ → concave up)'],
+            hints: ['Concave up → tangent is below → underestimate.'],
+            explanation: 'Concave up on $(0,1)$ → Euler underestimates.'
           }
         ]
       }
+    },
+    {
+      id: 'euler3-input',
+      type: 'input-box' as const,
+      content: '**Analyze**',
+      exercise: {
+        question: '$dy/dx = -2y$, $y(0) = 3$. The exact solution is $y = 3e^{-2x}$, so $y\'\' = 12e^{-2x}$. Is Euler an overestimate or underestimate on $[0, 1]$? Enter "over" or "under".',
+        correctAnswer: 'under',
+        acceptableAnswers: ['under', 'underestimate', 'underestimates'],
+        hints: ['$y\'\' = 12e^{-2x} > 0$ for all $x$. Concave up.'],
+        explanation: '$y\'\' > 0$ → concave up → Euler underestimates the true $y$-values.'
+      }
+    },
+    {
+      id: 'euler3-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Concave up ($y'' > 0$) → Euler underestimates
+- Concave down ($y'' < 0$) → Euler overestimates
+- Find $y''$ by differentiating $f(x,y)$ with respect to $x$
+- AP FRQs require concavity justification, not just the answer
+
+> **Next:** Part 4 — Euler's Method with Slope Fields.`
     }
   ]
-}
+};

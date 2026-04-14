@@ -88,7 +88,9 @@ export const oChemEnolatePart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: more substituted enolate formed at equilibrium
+
       2) Term for: enolate adds to carbonyl giving beta-hydroxy product
+
       3) Product pattern expected under aldol product, heat
       `,
       exercise: {

@@ -1,8 +1,10 @@
 /**
  * Algebra 2 Diagnostic Test Generator
  *
- * Two alternate forms (A / B), ~30 questions spanning 6 core domains.
+ * 10 alternate forms (1–10), ~30 questions spanning 6 core domains.
  */
+
+export const TOTAL_FORMS = 10
 
 export interface Algebra2DiagnosticQuestion {
   question: string
@@ -21,7 +23,7 @@ export interface Algebra2Domain {
 }
 
 export interface Algebra2DiagnosticTestData {
-  form: 'A' | 'B'
+  form: number
   questions: Algebra2DiagnosticQuestion[]
   domains: Algebra2Domain[]
   totalQuestions: number
@@ -45,7 +47,7 @@ export interface Algebra2RecommendedTopic {
 }
 
 export interface Algebra2DiagnosticResults {
-  form: 'A' | 'B'
+  form: number
   totalCorrect: number
   totalQuestions: number
   percentage: number
@@ -140,30 +142,40 @@ const questionPool: PoolQuestion[] = [
   { question: 'C(n, 0) for any n ≥ 0 equals:', options: ['1', '0', 'n', 'n!'], correctAnswer: 0, explanation: 'C(n, 0) = 1 for any n. There is exactly 1 way to choose nothing.', domain: 'sequences-probability', topicSlug: 'series-probability-alg2', formSet: 'both' },
 ]
 
-function shuffle<T>(arr: T[]): T[] {
+function mulberry32(seed: number) {
+  return function () {
+    // eslint-disable-next-line no-param-reassign
+    seed |= 0; seed = (seed + 0x6d2b79f5) | 0
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+function seededShuffle<T>(arr: T[], rng: () => number): T[] {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
+    const j = Math.floor(rng() * (i + 1))
     ;[a[i], a[j]] = [a[j], a[i]]
   }
   return a
 }
 
-export function generateAlgebra2DiagnosticTest(form: 'A' | 'B'): Algebra2DiagnosticTestData {
-  const eligible = questionPool.filter(q => q.formSet === form || q.formSet === 'both')
+export function generateAlgebra2DiagnosticTest(form: number): Algebra2DiagnosticTestData {
+  const rng = mulberry32(form * 7919)
   const selected: PoolQuestion[] = []
   for (const domain of ALGEBRA2_DOMAINS) {
-    const domainQs = shuffle(eligible.filter(q => q.domain === domain.id))
+    const domainQs = seededShuffle(questionPool.filter(q => q.domain === domain.id), rng)
     selected.push(...domainQs.slice(0, domain.questionTarget))
   }
-  const questions: Algebra2DiagnosticQuestion[] = shuffle(selected).map(q => ({
+  const questions: Algebra2DiagnosticQuestion[] = seededShuffle(selected, rng).map(q => ({
     question: q.question, options: q.options, correctAnswer: q.correctAnswer, explanation: q.explanation, domain: q.domain, topicSlug: q.topicSlug,
   }))
   return { form, questions, domains: ALGEBRA2_DOMAINS, totalQuestions: questions.length, timeLimitMinutes: 40 }
 }
 
 export function scoreAlgebra2Diagnostic(
-  form: 'A' | 'B',
+  form: number,
   questions: Algebra2DiagnosticQuestion[],
   answers: Record<number, number>,
 ): Algebra2DiagnosticResults {
@@ -196,7 +208,8 @@ export function scoreAlgebra2Diagnostic(
   return { form, totalCorrect, totalQuestions, percentage: pct, estimatedLevel, domains: domainResults, weakAreas, moderateAreas, strengths, recommendedTopics }
 }
 
-export function pickNextForm(previousForms: ('A' | 'B')[]): 'A' | 'B' {
-  if (previousForms.length === 0) return 'A'
-  return previousForms[0] === 'A' ? 'B' : 'A'
+export function pickNextForm(previousForms: number[]): number {
+  if (previousForms.length === 0) return 1
+  const last = previousForms[previousForms.length - 1]
+  return last >= TOTAL_FORMS ? 1 : last + 1
 }

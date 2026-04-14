@@ -172,7 +172,9 @@ The current decays exponentially with the same time constant $\\tau = L/R$.
 An RL circuit has $L = 0.2$ H and $R = 10\\;\\Omega$, connected to a 20 V battery.
 
 1) Time constant $\\tau$ (in s)
+
 2) Maximum (steady-state) current (in A)
+
 3) Energy stored in the inductor at steady state (in J)
 
 *Round all answers to 3 significant figures.*

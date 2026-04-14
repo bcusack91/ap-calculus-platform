@@ -2,185 +2,124 @@ export const calcbcVectorsPart1Data = {
   topicSlug: 'vector-valued-functions-calcbc',
   sections: [
     {
-      id: 'calcbcvectors-p1-intro',
+      id: 'vv1-intro',
       type: 'text' as const,
-      content: `
-# Vector Valued Functions
+      content: `# Vector-Valued Functions
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Introduction & Position Vectors**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+A **vector-valued function** describes a curve using a position vector:
 
-## Key Ideas
+$$\\vec{r}(t) = \\langle x(t),\\, y(t) \\rangle = x(t)\\,\\mathbf{i} + y(t)\\,\\mathbf{j}$$
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+This is the natural extension of parametric equations — same information, vector notation.
 
-## Formula Snapshot
+### Parametric vs. Vector Form
 
-When appropriate, use:
+| Parametric | Vector |
+|-----------|--------|
+| $x = f(t),\\; y = g(t)$ | $\\vec{r}(t) = \\langle f(t), g(t) \\rangle$ |
+| Point $(x, y)$ | Position vector $\\vec{r}$ |
+| Motion over $[a, b]$ | Path traced by tip of $\\vec{r}(t)$ |
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+> **Key Fact:** The AP BC exam uses both notations interchangeably. Be fluent in both.`
     },
     {
-      id: 'calcbcvectors-p1-mcq1',
+      id: 'vv1-examples',
+      type: 'text' as const,
+      content: `### Examples of Vector-Valued Functions
+
+**Example 1.** Circular motion:  
+$$\\vec{r}(t) = \\langle \\cos t,\\, \\sin t \\rangle$$
+traces the unit circle counterclockwise.
+
+**Example 2.** Line through $(1, 3)$ with direction $\\langle 2, -1 \\rangle$:  
+$$\\vec{r}(t) = \\langle 1 + 2t,\\, 3 - t \\rangle$$
+
+**Example 3.** Parabolic path:  
+$$\\vec{r}(t) = \\langle t,\\, t^2 \\rangle$$
+
+### Domain and Continuity
+
+$\\vec{r}(t)$ is continuous at $t = c$ if both component functions $x(t)$ and $y(t)$ are continuous at $c$.
+
+$$\\lim_{t \\to c} \\vec{r}(t) = \\left\\langle \\lim_{t \\to c} x(t),\\; \\lim_{t \\to c} y(t) \\right\\rangle$$`
+    },
+    {
+      id: 'vv1-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Practice Problems**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'The vector-valued function $\\vec{r}(t) = \\langle 3\\cos t, 3\\sin t \\rangle$ traces:',
+            options: ['A circle of radius 3 centered at the origin', 'A line with slope 1', 'An ellipse', 'A parabola'],
+            correctAnswer: 0,
+            explanation: '$x^2 + y^2 = 9\\cos^2 t + 9\\sin^2 t = 9$. This is a circle of radius 3.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'If $\\vec{r}(t) = \\langle t^2 - 1, 2t + 3 \\rangle$, what is $\\vec{r}(2)$?',
+            options: ['$\\langle 3, 7 \\rangle$', '$\\langle 5, 7 \\rangle$', '$\\langle 3, 4 \\rangle$', '$\\langle 1, 7 \\rangle$'],
+            correctAnswer: 0,
+            explanation: '$x(2) = 4 - 1 = 3$, $y(2) = 4 + 3 = 7$. So $\\vec{r}(2) = \\langle 3, 7 \\rangle$.'
+          },
+          {
+            question: '$\\lim_{t \\to 0} \\langle \\frac{\\sin t}{t}, e^t \\rangle = $',
+            options: ['$\\langle 1, 1 \\rangle$', '$\\langle 0, 1 \\rangle$', '$\\langle 1, 0 \\rangle$', 'Does not exist'],
+            correctAnswer: 0,
+            explanation: '$\\lim \\frac{\\sin t}{t} = 1$ and $\\lim e^t = e^0 = 1$. Limits are taken component-wise.'
           }
         ]
       }
     },
     {
-      id: 'calcbcvectors-p1-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcvectors-p1-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcvectors-p1-dropdown',
+      id: 'vv1-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Concept Checks**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '$\\vec{r}(t) = \\langle 2+t, 5-3t \\rangle$ represents a:',
+            options: ['Line', 'Circle', 'Parabola', 'Ellipse'],
+            correctAnswers: ['Line'],
+            hints: ['Both components are linear functions of $t$.'],
+            explanation: 'Linear component functions produce a line. Eliminating $t$: $t = x - 2$, so $y = 5 - 3(x-2) = 11 - 3x$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcvectors-p1-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Core Concepts**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcvectors-p1-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'The position at $t = 0$ for $\\vec{r}(t) = \\langle e^t, \\ln(t+1) \\rangle$ is:',
+            options: ['$\\langle 1, 0 \\rangle$', '$\\langle 0, 0 \\rangle$', '$\\langle 1, 1 \\rangle$', '$\\langle e, 0 \\rangle$'],
+            correctAnswers: ['$\\langle 1, 0 \\rangle$'],
+            hints: ['$e^0 = 1$, $\\ln 1 = 0$.'],
+            explanation: '$\\vec{r}(0) = \\langle e^0, \\ln 1 \\rangle = \\langle 1, 0 \\rangle$.'
           }
         ]
       }
+    },
+    {
+      id: 'vv1-input',
+      type: 'input-box' as const,
+      content: '**Computation**',
+      exercise: {
+        question: 'For $\\vec{r}(t) = \\langle 4t, t^2 \\rangle$, eliminate the parameter to write $y$ in terms of $x$. If $y = x^2/k$, what is $k$?',
+        correctAnswer: '16',
+        acceptableAnswers: ['16'],
+        hints: ['From $x = 4t$, we get $t = x/4$.', 'Then $y = t^2 = (x/4)^2 = x^2/16$.'],
+        explanation: '$t = x/4$, so $y = (x/4)^2 = x^2/16$. Therefore $k = 16$.'
+      }
+    },
+    {
+      id: 'vv1-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Vector-valued functions: $\\vec{r}(t) = \\langle x(t), y(t) \\rangle$
+- Equivalent to parametric equations in vector notation
+- Limits and continuity are evaluated component-wise
+- The path is traced by the tip of the position vector
+
+$$\\boxed{\\vec{r}(t) = \\langle x(t),\\, y(t) \\rangle}$$
+
+> **Next:** Part 2 — Velocity, speed, and acceleration vectors.`
     }
   ]
-}
+};

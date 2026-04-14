@@ -94,7 +94,9 @@ A **squinting modifier** is ambiguously placed between two things it could modif
 Type "dangling," "misplaced," "squinting," or "correct" for each sentence.
 
 1) Covered in chocolate, the children eagerly ate the strawberries.
+
 2) She only ate vegetables for dinner last night.
+
 3) Driving to work, the accident blocked the highway.
       `,
       exercise: {

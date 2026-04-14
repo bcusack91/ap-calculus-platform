@@ -88,7 +88,9 @@ export const oChemConjugatedPart1Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: alternating pi and sigma bonds allowing delocalization
+
       2) Term for: cation/radical adjacent to double bond
+
       3) Product pattern expected under HBr, low temperature
       `,
       exercise: {

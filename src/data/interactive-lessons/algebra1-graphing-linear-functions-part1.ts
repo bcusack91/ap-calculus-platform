@@ -70,7 +70,9 @@ $$m = \\frac{7 - (-1)}{2 - 2} = \\frac{8}{0} \\text{ (undefined — vertical)}$$
 **Find the slope** 🧮
 
 1) Through $(0, 0)$ and $(3, 12)$
+
 2) Through $(-2, 5)$ and $(4, -1)$
+
 3) Through $(1, 7)$ and $(5, 7)$
       `,
       exercise: {

@@ -2,190 +2,152 @@ export const bioDnaReplicationPart2Data = {
   topicSlug: 'dna-replication',
   sections: [
     {
-      id: 'bio-dna-replication-p2-s1-intro',
+      id: 'dr2-intro',
       type: 'text' as const,
       content: `
-      ## DNA Replication: Semiconservative Replication
-      
-      **Part 2 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through experimental evidence supporting semiconservative models.
-      
-      ### Worked biological example
-      A student team investigates experimental evidence supporting semiconservative models. Their first interpretation step is to identify how **helicase** and **primase** work together in the same pathway.
-      
-      - They classify the primary signal using **helicase**: unwinds the DNA double helix at the replication fork.
-      - They trace the downstream response using **primase**: synthesizes short RNA primers for DNA polymerase.
-      - They then compare outcomes with **DNA polymerase** and **leading strand** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **helicase**
-      - **primase**
-      - **DNA polymerase**
-      - **leading strand**
+## Semiconservative Replication
+
+**Part 2 of 7**
+
+Three models for DNA replication were proposed:
+1. **Conservative** — the original double helix remains intact; a completely new copy is made
+2. **Semiconservative** — each new double helix consists of one original (parental) strand and one new strand
+3. **Dispersive** — parental and new DNA are interspersed throughout both strands
+
+The **Meselson-Stahl experiment** (1958) elegantly determined which model is correct.
       `
     },
     {
-      id: 'bio-dna-replication-p2-s2-mcq-core',
+      id: 'dr2-meselson',
+      type: 'text' as const,
+      content: `
+### The Meselson-Stahl Experiment
+
+**Design:**
+1. E. coli were grown for many generations in medium containing **heavy nitrogen** (\\(^{15}\\)N) — all DNA became uniformly "heavy"
+2. Cells were transferred to medium containing **light nitrogen** (\\(^{14}\\)N)
+3. DNA was extracted after each generation and centrifuged in a **CsCl density gradient**
+
+**Results:**
+
+| Generation | DNA bands observed | Interpretation |
+|-----------|-------------------|----------------|
+| 0 (all \\(^{15}\\)N) | One heavy band | All DNA is heavy |
+| 1 (one round of replication in \\(^{14}\\)N) | One intermediate band | Each DNA molecule has one heavy and one light strand |
+| 2 | Half intermediate, half light | Half the molecules retain a heavy strand; half are entirely light |
+| 3 | 1/4 intermediate, 3/4 light | Pattern continues predictably |
+
+**Conclusion:** DNA replication is **semiconservative** — each daughter molecule contains one parental strand and one newly synthesized strand.
+
+> **Why this rules out other models:**
+> - Conservative would show heavy + light bands at generation 1 (not intermediate)
+> - Dispersive would show all intermediate bands that become progressively lighter (never a pure light band)
+> - Only semiconservative predicts one intermediate band at generation 1, then both intermediate and light at generation 2
+      `
+    },
+    {
+      id: 'dr2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Semiconservative Replication
       `,
       exercise: {
         questions: [
           {
-            question: 'For Semiconservative Replication, what best describes helicase?',
+            question: 'In the Meselson-Stahl experiment, after 3 generations in light (14N) medium starting from all heavy (15N) DNA, what fraction of DNA molecules will have intermediate density?',
             options: [
-              'unwinds the DNA double helix at the replication fork',
-              'synthesized continuously toward the replication fork',
-              'synthesizes short RNA primers for DNA polymerase',
-              'extends DNA strands in the 5\' to 3\' direction'
+              '1/2',
+              '1/4 — each generation halves the number of molecules retaining a heavy parental strand',
+              '3/4',
+              '1/8'
             ],
-            correctAnswer: 0,
-            explanation: 'helicase is best matched with: unwinds the DNA double helix at the replication fork.'
+            correctAnswer: 1,
+            explanation: 'After generation 1: all intermediate (2/2). After generation 2: 2/4 intermediate, 2/4 light. After generation 3: 2/8 intermediate, 6/8 light. The number of intermediate molecules stays constant (2), but the total number doubles each generation. So 2/8 = 1/4.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of primase?',
+            question: 'If replication were conservative, what would Meselson and Stahl have observed after one generation?',
             options: [
-              'synthesizes short RNA primers for DNA polymerase',
-              'extends DNA strands in the 5\' to 3\' direction',
-              'unwinds the DNA double helix at the replication fork',
-              'synthesized discontinuously as Okazaki fragments'
+              'One intermediate band',
+              'Two bands — one heavy (the original intact molecule) and one light (the entirely new copy)',
+              'One light band',
+              'Three bands — heavy, intermediate, and light'
             ],
-            correctAnswer: 0,
-            explanation: 'primase is best matched with: synthesizes short RNA primers for DNA polymerase.'
+            correctAnswer: 1,
+            explanation: 'Conservative replication predicts the original double helix stays fully heavy (both parental strands together) and a completely new light copy is made. This would produce two distinct bands — heavy and light — with NO intermediate. Meselson-Stahl observed intermediate, ruling this out.'
           }
         ]
       }
     },
     {
-      id: 'bio-dna-replication-p2-s3-deep-dive',
+      id: 'dr2-origins',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Semiconservative Replication
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → helicase
-      - **Immediate processing** → primase
-      - **System-level consequence** → DNA polymerase
-      - **Measured readout** → leading strand
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | helicase | unwinds the DNA double helix at the replication fork | Early shift in the primary variable |
-      | primase | synthesizes short RNA primers for DNA polymerase | Mid-pathway change in process rate |
-      | DNA polymerase | extends DNA strands in the 5' to 3' direction | Downstream phenotype trend |
-      | leading strand | synthesized continuously toward the replication fork | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Origins of Replication
+
+DNA replication begins at specific sequences called **origins of replication**:
+
+**Prokaryotes:**
+- Single circular chromosome with **one origin** (oriC in E. coli)
+- Replication proceeds **bidirectionally** from the origin, creating two replication forks that move in opposite directions and meet on the opposite side of the chromosome
+- Total replication time: ~40 minutes
+
+**Eukaryotes:**
+- Multiple linear chromosomes with **many origins** (30,000-50,000 in human cells)
+- Multiple origins allow the much larger genome to be replicated within the S phase time window
+- Each origin fires once per S phase (controlled by the **licensing system** — pre-replication complexes mark origins for use)
+- Adjacent origins define a **replicon** — the segment of DNA replicated from one origin
+- Replication forks from adjacent origins meet and the replicons fuse
+
+> **Why multiple origins?** Human DNA polymerase moves at ~50 nucleotides/second. With 6.4 billion bp and bidirectional replication from one origin, it would take ~2 years. Multiple origins reduce this to ~8 hours.
       `
     },
     {
-      id: 'bio-dna-replication-p2-s4-input',
+      id: 'dr2-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **unwinds the DNA double helix at the replication fork**
-      2) Term for this definition: **synthesizes short RNA primers for DNA polymerase**
-      3) Term for this definition: **extends DNA strands in the 5' to 3' direction**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['helicase', 'primase', 'DNA polymerase'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'unwinds the DNA double helix at the replication fork\'.',
-        hint2: 'Second blank points to primase; think about the role \'synthesizes short RNA primers for DNA polymerase\'.',
-        hint3: 'Third blank is DNA polymerase; connect it to \'extends DNA strands in the 5\' to 3\' direction\'.',
-        explanation: 'Correct set: helicase, primase, DNA polymerase. These three terms define the core mechanism chain for Semiconservative Replication.'
-      }
-    },
-    {
-      id: 'bio-dna-replication-p2-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'helicase',
-            options: ['synthesized continuously toward the replication fork', 'extends DNA strands in the 5\' to 3\' direction', 'unwinds the DNA double helix at the replication fork', 'synthesizes short RNA primers for DNA polymerase']
-          },
-          {
-            label: 'primase',
-            options: ['extends DNA strands in the 5\' to 3\' direction', 'synthesized discontinuously as Okazaki fragments', 'synthesized continuously toward the replication fork', 'synthesizes short RNA primers for DNA polymerase']
-          },
-          {
-            label: 'DNA polymerase',
-            options: ['synthesized discontinuously as Okazaki fragments', 'extends DNA strands in the 5\' to 3\' direction', 'joins adjacent DNA fragments after primer replacement', 'synthesized continuously toward the replication fork']
-          }
-        ],
-        correctAnswers: ['unwinds the DNA double helix at the replication fork', 'synthesizes short RNA primers for DNA polymerase', 'extends DNA strands in the 5\' to 3\' direction'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'helicase, primase, and DNA polymerase should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-dna-replication-p2-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because helicase unwinds the DNA double helix at the replication fork, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Leading and lagging refer to synthesis pattern, not strand importance.
-      - Proofreading reduces errors but does not eliminate all mutations.
-      - Primers are required because DNA polymerase cannot start de novo.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-dna-replication-p2-s7-mcq-final',
-      type: 'multiple-choice' as const,
-      content: `
-      **Final application MCQ (2 questions)**
+### Key Terms — Replication Model
       `,
       exercise: {
         questions: [
           {
-            question: 'In experimental evidence supporting semiconservative models, the observed pattern is: synthesized continuously toward the replication fork. What term should anchor the explanation?',
-            options: [
-              'primase',
-              'helicase',
-              'DNA polymerase',
-              'leading strand'
-            ],
-            correctAnswer: 3,
-            explanation: 'Use leading strand because it directly maps to the described biological pattern: synthesized continuously toward the replication fork.'
+            question: 'The replication model confirmed by Meselson and Stahl:',
+            answer: 'semiconservative',
+            acceptableAnswers: ['semiconservative', 'Semiconservative', 'semi-conservative'],
+            placeholder: 'e.g. conservative'
           },
           {
-            question: 'In an AP-style free-response about semiconservative replication, the observed pattern is: synthesized discontinuously as Okazaki fragments. What term should anchor the explanation?',
+            question: 'In E. coli, the single origin of replication is called:',
+            answer: 'oriC',
+            acceptableAnswers: ['oriC', 'OriC', 'oricC', 'ori C'],
+            placeholder: 'e.g. ori1'
+          },
+          {
+            question: 'The isotope of nitrogen used to make heavy DNA in the Meselson-Stahl experiment:',
+            answer: '15N',
+            acceptableAnswers: ['15N', 'N-15', 'nitrogen-15', '15-N'],
+            placeholder: 'e.g. 14C'
+          }
+        ]
+      }
+    },
+    {
+      id: 'dr2-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Exit Ticket
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'If a drug blocks the licensing of replication origins, what would be the consequence?',
             options: [
-              'DNA ligase',
-              'DNA polymerase',
-              'leading strand',
-              'lagging strand'
+              'DNA would replicate faster',
+              'Cells would be unable to initiate DNA replication at the blocked origins, preventing complete genome duplication and potentially arresting the cell cycle',
+              'DNA would replicate conservatively instead',
+              'The cell would use RNA instead of DNA'
             ],
-            correctAnswer: 3,
-            explanation: 'Use lagging strand because it directly maps to the described biological pattern: synthesized discontinuously as Okazaki fragments.'
+            correctAnswer: 1,
+            explanation: 'The licensing system ensures that pre-replication complexes are loaded at origins during G1. If licensing is blocked, origins cannot fire during S phase, DNA replication cannot initiate (or is incomplete), and the cell cannot proceed through the cell cycle.'
           }
         ]
       }

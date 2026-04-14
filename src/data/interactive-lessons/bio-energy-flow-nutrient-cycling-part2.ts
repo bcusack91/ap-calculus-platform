@@ -95,7 +95,9 @@ export const bioEnergyFlowPart2Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **organism obtaining energy by feeding on other organisms**
+
       2) Term for this definition: **fraction of energy passed to the next trophic level**
+
       3) Term for this definition: **network of interconnected feeding relationships**
       `,
       exercise: {

@@ -88,7 +88,9 @@ export const oChemAlkynesPart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: strong nucleophile/base formed by deprotonation
+
       2) Term for: acetylide attacks primary alkyl halide
+
       3) Product pattern expected under acetylide + 1° alkyl bromide
       `,
       exercise: {

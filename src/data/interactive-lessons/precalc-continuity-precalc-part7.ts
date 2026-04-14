@@ -90,8 +90,10 @@ export const precalcContinuityPart7Data = {
       **Input Practice — Continuity and Limits**
       
       1) Compute $\lim_{x	o 3} (2x^2-x)$. 
+
       2) Compute $
       rac{f(5)-f(2)}{5-2}$ for $f(x)=x^2$.
+
       3) Compute $\lim_{x	o 4}
       rac{x^2-16}{x-4}$.
       `,

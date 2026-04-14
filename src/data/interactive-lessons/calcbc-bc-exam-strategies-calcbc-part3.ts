@@ -2,185 +2,132 @@ export const calcbcExamStrategyPart3Data = {
   topicSlug: 'bc-exam-strategies-calcbc',
   sections: [
     {
-      id: 'calcbcexamstrategy-p3-intro',
+      id: 'es3-intro',
       type: 'text' as const,
-      content: `
-# Bc Exam Strategies
+      content: `# Free-Response Strategies
 
-**Part 3 of 7 — Problem-Solving Patterns**
+**Part 3 of 7 — Maximizing Points on FRQs**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### How FRQs Are Scored
 
-## Key Ideas
+Each FRQ has **9 points** distributed across parts (a)–(d). Points are earned for:
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+| Action | Points |
+|--------|--------|
+| Correct integral/derivative setup | 1–2 pts |
+| Correct evaluation/simplification | 1–2 pts |
+| Proper justification | 1–2 pts |
+| Answer with correct units (if applicable) | 1 pt |
+| Final numerical answer | 1 pt |
 
-## Formula Snapshot
+> **Key Fact:** You can earn setup points even if your final computation is wrong. **Always show your setup!**
 
-When appropriate, use:
+### The "Bald Answer" Rule
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+If you write ONLY the final answer with no work:
+- **Correct:** Full credit
+- **Incorrect:** ZERO credit
 
-and interpret what the final value means in context.
-      `
+If you show setup AND get the wrong numerical answer:
+- You can still earn 50–75% of the points
+
+**Bottom line: Always show work.**`
     },
     {
-      id: 'calcbcexamstrategy-p3-mcq1',
+      id: 'es3-notation',
+      type: 'text' as const,
+      content: `### Notation That Earns (or Loses) Points
+
+**DO:**
+- Write $\\int_a^b$ with limits, not just $\\int$
+- Write $\\frac{d}{dx}[\\ldots]$ or $f'(x) = \\ldots$
+- Use proper limit notation: $\\lim_{x \\to a}$
+- Include units when the problem gives them
+- Label which part you're answering: (a), (b), etc.
+
+**DON'T:**
+- Write $\\frac{dy}{dx} = \\frac{\\text{top}}{\\text{bottom}}$ — use $\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt}$
+- Use calculator syntax like nDeriv or fnInt
+- Cross out work unless you're replacing it (readers look at crossed-out work)
+- Write contradictory statements (you get the WORSE of the two scores)
+
+> **AP Tip:** If you write two different answers for the same part, the reader scores the WORSE one. Cross out work you don't want scored.`
+    },
+    {
+      id: 'es3-mc',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**FRQ Scoring Practice**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'A student writes $\\int_0^3 f(x)\\,dx = 12$ with no work shown. The correct answer is $12$. The student earns:',
+            options: ['Full credit — correct bald answer', '0 points — no work shown', 'Partial credit only', '1 point for the answer'],
+            correctAnswer: 0,
+            explanation: 'A correct "bald answer" earns full credit. But this is risky — if the answer were wrong, they\'d get 0 points.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'On an FRQ about particle motion, a student forgets to include units. This typically costs:',
+            options: ['1 point (units are usually worth 1 pt when required)', '0 points — units don\'t matter', '3 points', 'The entire question score'],
+            correctAnswer: 0,
+            explanation: 'When units are specified in the problem, omitting them typically costs 1 point. Always check if the problem gives units.'
+          },
+          {
+            question: 'A student writes two different answers for part (b) without crossing either out. The reader:',
+            options: ['Scores the worse of the two answers', 'Scores the better of the two', 'Averages the scores', 'Ignores both'],
+            correctAnswer: 0,
+            explanation: 'AP readers score the worse answer when two contradictory responses are given. Always cross out work you don\'t want scored.'
           }
         ]
       }
     },
     {
-      id: 'calcbcexamstrategy-p3-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcexamstrategy-p3-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcexamstrategy-p3-dropdown',
+      id: 'es3-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**FRQ Setup Practice**\n\nA particle moves along a curve with $x(t) = t^2$, $y(t) = t^3$ for $0 \\leq t \\leq 2$.',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'The correct setup for arc length is:',
+            options: ['$\\int_0^2 \\sqrt{(2t)^2 + (3t^2)^2}\\,dt$', '$\\int_0^2 \\sqrt{x^2 + y^2}\\,dt$', '$\\int_0^2 (2t + 3t^2)\\,dt$', '$\\int_0^2 \\sqrt{t^4 + t^6}\\,dt$'],
+            correctAnswers: ['$\\int_0^2 \\sqrt{(2t)^2 + (3t^2)^2}\\,dt$'],
+            hints: ['Arc length = $\\int \\sqrt{(dx/dt)^2 + (dy/dt)^2}\\,dt$.'],
+            explanation: '$dx/dt = 2t$, $dy/dt = 3t^2$. Arc length $= \\int_0^2 \\sqrt{4t^2 + 9t^4}\\,dt$. The setup alone is worth points.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcexamstrategy-p3-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Problem-Solving Patterns**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcexamstrategy-p3-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'For speed at $t = 1$, the proper notation is:',
+            options: ['$\\sqrt{(x\'(1))^2 + (y\'(1))^2} = \\sqrt{4 + 9} = \\sqrt{13}$', '$|x(1) + y(1)| = |1 + 1| = 2$', '$x\'(1) + y\'(1) = 2 + 3 = 5$', '$\\sqrt{1^2 + 1^2} = \\sqrt{2}$'],
+            correctAnswers: ['$\\sqrt{(x\'(1))^2 + (y\'(1))^2} = \\sqrt{4 + 9} = \\sqrt{13}$'],
+            hints: ['Speed = magnitude of velocity vector.'],
+            explanation: '$x\'(1) = 2$, $y\'(1) = 3$. Speed $= \\sqrt{4 + 9} = \\sqrt{13}$.'
           }
         ]
       }
+    },
+    {
+      id: 'es3-input',
+      type: 'input-box' as const,
+      content: '**Justification Practice**',
+      exercise: {
+        question: 'A particle is at rest when speed $= 0$. Given $x\'(t) = 2t$ and $y\'(t) = 3t^2$, at what time $t \\geq 0$ is the particle at rest?',
+        correctAnswer: '0',
+        acceptableAnswers: ['0', 't=0', 't = 0'],
+        hints: ['Speed $= \\sqrt{(2t)^2 + (3t^2)^2} = 0$ requires both components to be zero.'],
+        explanation: '$x\'(t) = 0 \\Rightarrow t = 0$ and $y\'(t) = 0 \\Rightarrow t = 0$. Both are zero only at $t = 0$.'
+      }
+    },
+    {
+      id: 'es3-summary',
+      type: 'text' as const,
+      content: `### FRQ Scoring Summary
+
+1. **Show all setup** — integral bounds, derivative formulas
+2. **Use proper notation** — no calculator syntax
+3. **Include units** when the problem provides them
+4. **Cross out** wrong work; never leave contradictory answers
+5. **Write something** for every part — partial credit exists
+6. **Label each part** clearly: (a), (b), (c), (d)
+
+**Next: Part 4 — Time Management and Common Mistakes**`
     }
   ]
-}
+};

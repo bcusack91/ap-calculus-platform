@@ -88,7 +88,9 @@ export const oChemCarboxylicAcidsPart3Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: carboxylic derivative with alkoxy leaving group
+
       2) Term for: least reactive common derivative due to resonance donation
+
       3) Product pattern expected under ester + NaOH, heat
       `,
       exercise: {

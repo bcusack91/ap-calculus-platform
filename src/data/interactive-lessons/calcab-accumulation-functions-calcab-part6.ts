@@ -6,41 +6,75 @@ export const calcabAccumulationPart6Data = {
       type: 'text' as const,
       content: `# Accumulation Functions
 
-**Part 6 of 7 \u2014 Practice Workshop**
+**Part 6 of 7 — Problem-Solving Workshop**
 
-### Graph \u2192 Accumulation Function Analysis
+### Graph-to-Accumulation Strategy
 
-This is one of the most heavily tested skills on the AP exam. Given the **graph of $f$**, you must be able to determine:
+Given a graph of $f$ and $g(x) = \\int_a^x f(t)\\,dt$:
 
-| To find... | Use... |
-|---|---|
-| $g(x) = \\int_0^x f(t)\\,dt$ | Signed area under $f$ from $0$ to $x$ |
-| Where $g$ increases | Where $f(x) > 0$ |
-| Where $g$ decreases | Where $f(x) < 0$ |
-| Local max of $g$ | Where $f$ changes from $+$ to $-$ |
-| Local min of $g$ | Where $f$ changes from $-$ to $+$ |
-| Concavity of $g$ | $g'' = f'$: concave up when $f$ is increasing |
-| Inflection points of $g$ | Where $f$ changes from increasing to decreasing (or vice versa) |
+| Step | What to Find | How |
+|:---:|:---:|:---:|
+| 1 | $g(c)$ for specific $c$ | Compute signed area from $a$ to $c$ |
+| 2 | $g'(x)$ | Equals $f(x)$ by FTC |
+| 3 | $g$ increasing/decreasing | Where $f > 0$ / $f < 0$ |
+| 4 | Local max/min of $g$ | Where $f$ changes sign |
+| 5 | $g''(x)$ | Equals $f'(x)$ (slope of $f$) |
+| 6 | Concavity of $g$ | Where $f$ is increasing/decreasing |
+| 7 | Inflection points of $g$ | Where $f$ has local extrema |
 
-> **Strategy:** Always write down $g' = f$ and $g'' = f'$ before answering any question.`
+> **Key Fact:** Every property of $g$ is read from $f$ — you never need to find a formula for $g$.`
+    },
+    {
+      id: 'acc6-worked1',
+      type: 'text' as const,
+      content: `### Worked Example: Piecewise Linear Graph
+
+Suppose $f$ is piecewise linear with vertices at $(0,0)$, $(2,4)$, $(5,4)$, $(7,0)$, $(9,-2)$, and $g(x) = \\int_0^x f(t)\\,dt$.
+
+**Computing $g$ values using geometric areas:**
+
+| $x$ | Shape from previous to $x$ | Area | $g(x)$ (running total) |
+|:---:|:---:|:---:|:---:|
+| $0$ | — | — | $0$ |
+| $2$ | Triangle: $\\frac{1}{2}(2)(4)$ | $+4$ | $4$ |
+| $5$ | Rectangle: $3 \\times 4$ | $+12$ | $16$ |
+| $7$ | Triangle: $\\frac{1}{2}(2)(4)$ | $+4$ | $20$ |
+| $9$ | Triangle: $\\frac{1}{2}(2)(-2)$ | $-2$ | $18$ |
+
+**Analysis of $g$:**
+
+| Property | Answer | Reasoning |
+|:---:|:---:|:---:|
+| $g$ increasing | $(0, 7)$ | $f > 0$ on $(0,7)$ |
+| $g$ decreasing | $(7, 9)$ | $f < 0$ on $(7,9)$ |
+| Absolute max of $g$ | $x = 7$, $g(7)=20$ | $f$ changes from $+$ to $-$ |
+| $g$ concave up | $(0, 2)$ | $f$ increasing (slope $> 0$) |
+| $g$ concave down | $(2, 5)$? No, $f$ constant on $(2,5)$ | $f'=0$, so $g$ is linear there |
+| Inflection points | $x=2, 5, 7$ | $f$ changes from increasing to constant, etc. |`
     },
     {
       id: 'acc6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Piecewise Linear Graph Analysis** \ud83c\udfaf',
+      content: '**Graph Analysis Practice** 🎯',
       exercise: {
         questions: [
           {
-            question: 'The graph of $f$ is piecewise linear: $f(0)=4$, $f(2)=4$, $f(5)=-2$, $f(7)=-2$. Let $g(x) = \\int_0^x f(t)\\,dt$. What is $g(2)$?',
-            options: ['$4$', '$8$', '$2$', '$6$'],
-            correctAnswer: 1,
-            explanation: '$g(2) = \\int_0^2 f(t)\\,dt$. Since $f = 4$ (constant) on $[0,2]$, the area is $4 \\times 2 = 8$.'
+            question: 'Let $g(x) = \\int_0^x f(t)\\,dt$ where $f$ has a local maximum at $x=3$. At $x=3$, $g$ has:',
+            options: ['A local maximum', 'A local minimum', 'An inflection point', 'Cannot determine without more information'],
+            correctAnswer: 2,
+            explanation: '$g\'\'(x) = f\'(x)$. Local max of $f$ means $f\'$ changes from $+$ to $-$, so $g\'\'$ changes sign: inflection point of $g$.'
           },
           {
-            question: 'Using the same graph ($f(0)=4$, $f(2)=4$, $f(5)=-2$, $f(7)=-2$), at what $x$-value does $g$ have its absolute maximum on $[0, 7]$?',
-            options: ['$x = 0$', '$x = 2$', '$x = 4$', '$x = 5$'],
-            correctAnswer: 2,
-            explanation: '$g\'(x) = f(x)$. On $[2, 5]$, $f$ is linear from $4$ to $-2$: $f(x) = -2(x-2)+4 = -2x+8$. Setting $f(x) = 0$: $x = 4$. Since $f$ changes from positive to negative at $x = 4$, $g$ has its maximum there.'
+            question: 'If $f(x) > 0$ for all $x$ in $(a,b)$ and $g(x) = \\int_a^x f(t)\\,dt$, then on $(a,b)$:',
+            options: ['$g$ is positive and increasing', '$g$ is increasing (but may start at 0)', '$g$ is concave up', '$g$ is decreasing'],
+            correctAnswer: 1,
+            explanation: '$g\'(x) = f(x) > 0$, so $g$ is increasing. $g(a) = 0$, so $g$ starts at $0$ and increases.'
+          },
+          {
+            question: 'If $f$ is linear with positive slope on $[a,b]$, then $g(x) = \\int_a^x f(t)\\,dt$ is:',
+            options: ['Linear', 'Quadratic and concave up', 'Quadratic and concave down', 'Cubic'],
+            correctAnswer: 1,
+            explanation: '$f$ linear ($f\'$ = positive constant) means $g\'\'(x) = f\'(x) > 0$, so $g$ is concave up. Integrating a linear function gives a quadratic.'
           }
         ]
       }
@@ -48,76 +82,84 @@ This is one of the most heavily tested skills on the AP exam. Given the **graph 
     {
       id: 'acc6-quiz2',
       type: 'multiple-choice' as const,
-      content: '**Concavity & Inflection Points** \ud83c\udfaf',
+      content: '**Combined Topics** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Let $g(x) = \\int_0^x f(t)\\,dt$. If $f$ is increasing on $(1,3)$ and decreasing on $(3,5)$, what is true about $g$ at $x = 3$?',
-            options: ['$g$ has a local maximum', '$g$ has a local minimum', '$g$ has an inflection point', '$g$ is undefined'],
-            correctAnswer: 2,
-            explanation: '$g\'\'(x) = f\'(x)$. Since $f$ changes from increasing to decreasing at $x = 3$, $f\'$ changes sign from $+$ to $-$, so $g\'\'$ changes sign. This means $g$ has an inflection point at $x = 3$.'
-          },
-          {
-            question: 'Let $g(x) = \\int_0^x f(t)\\,dt$. On an interval where $f$ is positive and decreasing, $g$ is:',
-            options: ['Increasing and concave up', 'Increasing and concave down', 'Decreasing and concave up', 'Decreasing and concave down'],
+            question: 'The average value of $f$ on $[0,6]$ is $5$. Then $\\int_0^6 f(x)\\,dx =$',
+            options: ['$5$', '$30$', '$\\frac{5}{6}$', '$\\frac{6}{5}$'],
             correctAnswer: 1,
-            explanation: '$g\' = f > 0$, so $g$ is increasing. $g\'\' = f\' < 0$ (since $f$ is decreasing), so $g$ is concave down. Therefore: increasing and concave down.'
+            explanation: '$f_{avg} = \\frac{1}{6}\\int_0^6 f\\,dx = 5$, so $\\int_0^6 f\\,dx = 30$.'
+          },
+          {
+            question: '$\\frac{d}{dx}\\int_0^{x^3} \\cos(t)\\,dt =$',
+            options: ['$\\cos(x^3)$', '$3x^2\\cos(x^3)$', '$\\sin(x^3) \\cdot 3x^2$', '$-\\sin(x^3) \\cdot 3x^2$'],
+            correctAnswer: 1,
+            explanation: 'By FTC + chain rule: $\\cos(x^3) \\cdot 3x^2$.'
           }
         ]
       }
     },
     {
-      id: 'acc6-quiz3',
-      type: 'multiple-choice' as const,
-      content: '**Computing g from Areas** \ud83c\udfaf',
+      id: 'acc6-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Identify the correct analysis.** 🔍',
       exercise: {
-        questions: [
+        dropdowns: [
           {
-            question: 'The graph of $f$ consists of a semicircle of radius $2$ above the $x$-axis on $[0, 4]$ and a triangle with vertices $(4, 0)$, $(6, 0)$, $(6, -3)$ below the $x$-axis. Let $g(x) = \\int_0^x f(t)\\,dt$. What is $g(6)$?',
-            options: ['$2\\pi - 3$', '$2\\pi + 3$', '$2\\pi$', '$\\pi - 3$'],
-            correctAnswer: 0,
-            explanation: 'Semicircle area: $\\frac{1}{2}\\pi(2)^2 = 2\\pi$ (positive, above axis). Triangle area: $\\frac{1}{2}(2)(3) = 3$ (negative, below axis). $g(6) = 2\\pi - 3$.'
+            label: '$g(x) = \\int_0^x f(t)\\,dt$. If $f(3) = 0$ and $f$ changes from positive to negative at $x=3$:',
+            options: ['$g$ has a local max at $x=3$', '$g$ has a local min at $x=3$', '$g$ has an inflection point at $x=3$', '$g(3) = 0$'],
+            correctAnswers: ['$g$ has a local max at $x=3$'],
+            hints: ['$g\' = f$ changes from $+$ to $-$: that is a local max of $g$.'],
+            explanation: '$g\'(3)=f(3)=0$ and $g\'$ changes from $+$ to $-$, giving a local max.'
           },
           {
-            question: 'Using the same graph, on which interval is $g$ decreasing?',
-            options: ['$(0, 2)$', '$(2, 4)$', '$(4, 6)$', '$(0, 4)$'],
-            correctAnswer: 2,
-            explanation: '$g\' = f$. The semicircle is above the $x$-axis on $(0,4)$ so $f > 0$ and $g$ is increasing there. The triangle is below the axis on $(4,6)$ so $f < 0$ and $g$ is decreasing.'
+            label: 'If $f$ is constant ($f(t) = k$), then $g(x) = \\int_0^x k\\,dt$ is:',
+            options: ['Constant', 'Linear: $g(x) = kx$', 'Quadratic', 'Exponential'],
+            correctAnswers: ['Linear: $g(x) = kx$'],
+            hints: ['Integral of a constant is a linear function.'],
+            explanation: '$g(x) = kx$, which is linear with slope $k$.'
+          },
+          {
+            label: 'Net change from a rate table: $R(t)$ at $t=0,2,4,6$ is $3,5,4,1$. Best approximation of $\\int_0^6 R(t)\\,dt$ using trapezoids:',
+            options: ['$12$', '$22$', '$24$', '$26$'],
+            correctAnswers: ['$22$'],
+            hints: ['Trapezoidal: $\\frac{\\Delta t}{2}[R_0 + 2R_1 + 2R_2 + R_3]$.'],
+            explanation: '$\\frac{2}{2}(3+2(5)+2(4)+1) = 1 \\cdot 22 = 22$.'
           }
         ]
       }
     },
     {
-      id: 'acc6-quiz4',
-      type: 'multiple-choice' as const,
-      content: '**Local Extrema from the Graph of f** \ud83c\udfaf',
+      id: 'acc6-input',
+      type: 'input-box' as const,
+      content: '**Compute from a graph.** ✍️',
       exercise: {
-        questions: [
-          {
-            question: 'Let $g(x) = \\int_0^x f(t)\\,dt$. The values of $f$ are: $f(0) = 2$, $f(1) = 0$, $f(2) = -1$, $f(3) = 0$, $f(4) = 3$. At how many points does $g$ have a local extremum on $(0, 4)$?',
-            options: ['$0$', '$1$', '$2$', '$3$'],
-            correctAnswer: 2,
-            explanation: '$g\' = f$. Local extrema of $g$ occur where $f$ changes sign. $f$ changes from $+$ to $-$ at $x = 1$ (local max of $g$) and from $-$ to $+$ at $x = 3$ (local min of $g$). That is $2$ local extrema.'
-          },
-          {
-            question: 'For the same function, is $g(4)$ positive, negative, or zero?',
-            options: ['Positive', 'Negative', 'Zero', 'Cannot be determined'],
-            correctAnswer: 0,
-            explanation: '$g(4) = \\int_0^4 f(t)\\,dt$. The positive area ($f > 0$ on $[0,1]$ and $[3,4]$) exceeds the negative area ($f < 0$ on $[1,3]$ with min value $-1$). By estimation, the net signed area is positive.'
-          }
-        ]
+        question: '$f$ is piecewise linear: $(0,2)$ to $(3,2)$ to $(5,-2)$ to $(7,-2)$. If $g(x)=\\int_0^x f(t)\\,dt$, find $g(7)$.\n\n(Enter an integer.)',
+        correctAnswer: '2',
+        acceptableAnswers: ['2'],
+        hints: [
+          '$[0,3]$: rectangle $3 \\times 2 = 6$.',
+          '$[3,5]$: trapezoid $\\frac{1}{2}(2)(2+(-2)) = 0$.',
+          '$[5,7]$: rectangle $2 \\times (-2) = -4$. Total: $6+0+(-4)$.'
+        ],
+        explanation: '$g(7) = 6 + 0 + (-4) = 2$. Rectangle + trapezoid + rectangle (negative).'
       }
     },
     {
       id: 'acc6-summary',
       type: 'text' as const,
-      content: `### Workshop Complete! \ud83c\udfaf
+      content: `### Key Takeaways — Part 6
 
-**Key Connections:**
-- $g' = f$ \u2192 use the **values** of $f$ to find where $g$ increases/decreases
-- $g'' = f'$ \u2192 use the **slope** of $f$ to find concavity of $g$
-- Local extrema of $g$ \u2192 where $f$ **changes sign**
-- Inflection points of $g$ \u2192 where $f$ changes from **increasing to decreasing** (or vice versa)`
+| To find... | Look at... |
+|:---:|:---:|
+| $g(c)$ | Signed area of $f$ from $a$ to $c$ |
+| $g$ increasing/decreasing | Sign of $f$ |
+| Local extrema of $g$ | Sign changes of $f$ |
+| Concavity of $g$ | Increasing/decreasing behavior of $f$ |
+| Inflection points of $g$ | Local extrema of $f$ |
+
+> **Up Next:** Part 7 — Comprehensive Assessment.`
     }
   ]
 };

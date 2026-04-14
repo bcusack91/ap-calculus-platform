@@ -124,7 +124,9 @@ $$m_{\\max} = \\left\\lfloor \\frac{d}{\\lambda} \\right\\rfloor$$
 A diffraction grating has 800 lines/mm. Monochromatic light of $\\lambda = 550$ nm is incident on it.
 
 1) Slit spacing $d$ (in μm)
+
 2) Angle of the 1st-order maximum (in degrees, to 3 significant figures)
+
 3) Maximum observable order $m_{\\max}$
       `,
       exercise: {
@@ -145,6 +147,7 @@ A diffraction grating has 800 lines/mm. Monochromatic light of $\\lambda = 550$ 
 A grating has 5000 total slits.
 
 1) What is the resolving power in the 2nd order?
+
 2) In the 2nd order, what is the minimum wavelength difference $\\Delta\\lambda$ that can be resolved near $\\lambda = 589$ nm? (in nm, to 3 significant figures)
       `,
       exercise: {

@@ -88,7 +88,9 @@ export const oChemCarboxylicAcidsPart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: acid-catalyzed carboxylic acid + alcohol condensation
+
       2) Term for: base-promoted irreversible ester hydrolysis
+
       3) Product pattern expected under RCOCl + ROH, pyridine
       `,
       exercise: {

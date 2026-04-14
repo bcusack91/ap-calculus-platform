@@ -88,7 +88,9 @@ export const oChemStereoPart1Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: tetrahedral atom bonded to four different substituents
+
       2) Term for: absolute stereochemical descriptor from CIP ranking
+
       3) Product pattern expected under SN2 at stereocenter
       `,
       exercise: {

@@ -4,37 +4,37 @@ export const apStatsErrorsPart1Data = {
     {
       id: 'typeerrorspower-p1-intro',
       type: 'text' as const,
-      content: `# ⚠️ Type I & Type II Errors
+      content: `# ⚠️ Type I and Type II Errors
 
-**Part 1 of 7 — Understanding Decision Errors**
+**Part 1 of 7 — Error Types**
 
 ---
 
-### The Four Possible Outcomes
+### Two Kinds of Errors
 
-| | $H_0$ True | $H_0$ False |
-|---|-----------|-------------|
+|  | $H_0$ True | $H_0$ False |
+|--|-----------|------------|
 | **Reject $H_0$** | Type I Error ($\\\\alpha$) | Correct! (Power) |
 | **Fail to reject** | Correct! | Type II Error ($\\\\beta$) |
 
 ---
 
-### Type I Error
-- **What:** Rejecting $H_0$ when it’s actually true
-- **Probability:** $\\\\alpha$ (significance level)
-- **Real-world:** Convicting an innocent person; approving an ineffective drug
+### Definitions
 
-### Type II Error
-- **What:** Failing to reject $H_0$ when it’s actually false
-- **Probability:** $\\\\beta$
-- **Real-world:** Acquitting a guilty person; missing an effective drug
+- **Type I Error:** Rejecting $H_0$ when it’s actually true (false positive)
+  - Probability = $\\\\alpha$ (significance level)
+- **Type II Error:** Failing to reject $H_0$ when it’s actually false (false negative)
+  - Probability = $\\\\beta$
 
-### Power
-$$\\\\text{Power} = 1 - \\\\beta = P(\\\\text{reject } H_0 | H_0 \\\\text{ is false})$$
+### Analogy
 
-> 🔑 Power is the probability of correctly detecting a real effect.`
-    },
-    {
+| Error | Court Trial | Medical Test |
+|-------|-------------|-------------|
+| Type I | Convicting an innocent person | False positive (healthy diagnosed sick) |
+| Type II | Acquitting a guilty person | False negative (sick diagnosed healthy) |
+
+> 🔑 The significance level $\\\\alpha$ is the probability of a Type I error. YOU choose $\\\\alpha$ before the test.`
+    },    {
       id: 'typeerrorspower-p1-mcq',
       type: 'multiple-choice' as const,
       content: `
@@ -43,12 +43,46 @@ $$\\\\text{Power} = 1 - \\\\beta = P(\\\\text{reject } H_0 | H_0 \\\\text{ is fa
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes type i & type ii errors?',
-            options: ['A fundamental concept in this unit', 'Not covered on the AP exam', 'Only relevant for AP Calculus', 'A concept from physics'],
-            correctAnswer: 0,
-            explanation: 'Type I & Type II Errors is a core AP Statistics concept tested on the exam.'
+            question: 'A Type I error occurs when:',
+            options: ['You reject a false $H_0$', 'You reject a true $H_0$', 'You fail to reject a false $H_0$', 'You fail to reject a true $H_0$'],
+            correctAnswer: 1,
+            explanation: 'Type I = rejecting $H_0$ when it IS true. This is a false alarm.'
+          },
+          {
+            question: 'The probability of a Type I error equals:',
+            options: ['$\\\\beta$', 'The p-value', '$\\\\alpha$', '$1 - \\\\alpha$'],
+            correctAnswer: 2,
+            explanation: '$P(\\\\text{Type I}) = \\\\alpha$, the significance level chosen before the test.'
+          },
+          {
+            question: 'In a medical test, a Type II error means:',
+            options: ['A healthy person is told they’re sick', 'A sick person is told they’re healthy', 'The test is invalid', 'The sample is too small'],
+            correctAnswer: 1,
+            explanation: 'Type II = failing to detect a real condition (false negative).'
           }
         ]
+      }
+    },    {
+      id: 'typeerrorspower-p1-input',
+      type: 'input-boxes' as const,
+      content: `
+**Error Classification** 🧮
+
+$H_0$: The defendant is innocent. $H_a$: The defendant is guilty.
+
+**1)** A Type I error in this context means: convicting an _______ person. (innocent/guilty)
+
+**2)** A Type II error means: acquitting a _______ person. (innocent/guilty)
+
+**3)** If $\\\\alpha = 0.01$, the probability of wrongly convicting an innocent person is ___.
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['innocent', 'guilty', '0.01'],
+        hint1: 'Rejecting $H_0$ when true',
+        hint2: 'Failing to reject $H_0$ when false',
+        hint3: '$\\\\alpha$ = P(Type I)',
+        explanation: '1) Innocent (Type I = rejecting truth). 2) Guilty (Type II = missing reality). 3) 0.01 = $\\\\alpha$.'
       }
     }
   ]

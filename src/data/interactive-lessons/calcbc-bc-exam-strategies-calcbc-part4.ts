@@ -2,185 +2,114 @@ export const calcbcExamStrategyPart4Data = {
   topicSlug: 'bc-exam-strategies-calcbc',
   sections: [
     {
-      id: 'calcbcexamstrategy-p4-intro',
+      id: 'es4-intro',
       type: 'text' as const,
-      content: `
-# Bc Exam Strategies
+      content: `# Time Management and Common Mistakes
 
-**Part 4 of 7 — Graphs and Interpretation**
+**Part 4 of 7 — Avoiding Costly Errors Under Pressure**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Time Allocation Strategy
 
-## Key Ideas
+| Section | Time | Per Question | Strategy |
+|---------|------|--------------|----------|
+| MC No-Calc | 60 min | 2 min | Fast; skip hard ones |
+| MC Calc | 45 min | 3 min | Use calculator efficiently |
+| FRQ Calc | 30 min | 15 min | Graph first, compute second |
+| FRQ No-Calc | 60 min | 15 min | Show all work; answer every part |
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
-
-## Formula Snapshot
-
-When appropriate, use:
-
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+> **AP Tip:** On FRQs, you can work on ANY question in the current section. If stuck on one, move to another and return.`
     },
     {
-      id: 'calcbcexamstrategy-p4-mcq1',
+      id: 'es4-mistakes',
+      type: 'text' as const,
+      content: `### Top 10 BC-Specific Mistakes
+
+| # | Mistake | How to avoid |
+|---|---------|-------------|
+| 1 | Forgetting $+C$ on indefinite integrals | Only on FRQs — MC gives specific answers |
+| 2 | Wrong chain rule on parametric: $dy/dx \\neq y'(t)/x'(t)$ when using $d^2y/dx^2$ | $d^2y/dx^2 = \\frac{d}{dt}[dy/dx] \\div \\frac{dx}{dt}$ |
+| 3 | Confusing convergence tests | Use the flowchart: geometric → p-series → ratio → AST |
+| 4 | Wrong radius of convergence | Ratio test gives $|x - a| < R$; check endpoints separately |
+| 5 | Forgetting to check endpoints | Radius ≠ interval; always test $x = a \\pm R$ |
+| 6 | Speed vs. velocity | Speed $= |v|$ (scalar); velocity is signed or vector |
+| 7 | Using wrong error bound | Alternating → AST bound; non-alternating → Lagrange |
+| 8 | Integration by parts sign error | Use tabular method to reduce mistakes |
+| 9 | Polar area: forgetting $1/2$ | $A = \\frac{1}{2}\\int r^2\\,d\\theta$ |
+| 10 | Not simplifying series answers | $\\sum$ must match a known series for credit |`
+    },
+    {
+      id: 'es4-mc',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Error Detection**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'A student writes $\\frac{d^2y}{dx^2} = \\frac{y\'\'(t)}{x\'\'(t)}$. This is:',
+            options: ['Incorrect — the formula is $\\frac{d}{dt}[dy/dx] \\div \\frac{dx}{dt}$', 'Correct for parametric curves', 'Correct only when $t$ is time', 'Correct when $x\'(t) \\neq 0$'],
+            correctAnswer: 0,
+            explanation: 'The second derivative $d^2y/dx^2 \\neq y\'\'(t)/x\'\'(t)$. Correct formula: differentiate $dy/dx = y\'(t)/x\'(t)$ with respect to $t$, then divide by $x\'(t)$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'A student applies the ratio test to $\\sum (-1)^n/n$ and gets $L = 1$. They conclude the series diverges. This is:',
+            options: ['Incorrect — ratio test is inconclusive when $L = 1$; AST shows convergence', 'Correct — $L = 1$ means divergence', 'Incorrect — should have used the root test', 'Correct — all alternating series diverge'],
+            correctAnswer: 0,
+            explanation: '$L = 1$ means the ratio test is inconclusive. The alternating series test shows $\\sum (-1)^n/n$ converges (alternating harmonic series).'
+          },
+          {
+            question: 'On a polar area problem, a student writes $A = \\int_0^{\\pi} r^2\\,d\\theta$ instead of $A = \\frac{1}{2}\\int_0^{\\pi} r^2\\,d\\theta$. This costs:',
+            options: ['Setup points — the $1/2$ is required', 'Nothing — the reader will assume they meant $1/2$', 'Only the final numerical answer point', 'All 9 points on the problem'],
+            correctAnswer: 0,
+            explanation: 'The $1/2$ in the polar area formula is essential. Missing it loses setup/integrand points.'
           }
         ]
       }
     },
     {
-      id: 'calcbcexamstrategy-p4-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcexamstrategy-p4-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcexamstrategy-p4-dropdown',
+      id: 'es4-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Time Management Decision Making**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'You\'ve spent 4 minutes on an MC question with no progress. Best action:',
+            options: ['Mark it and move on — come back if time permits', 'Keep working — you\'re almost there', 'Guess randomly and leave', 'Skip it permanently'],
+            correctAnswers: ['Mark it and move on — come back if time permits'],
+            hints: ['Each MC question is worth the same. Don\'t sacrifice 2–3 easier questions for one hard one.'],
+            explanation: 'One hard question isn\'t worth missing several easier ones. Mark and return with fresh eyes.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcexamstrategy-p4-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Graphs and Interpretation**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcexamstrategy-p4-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'On an FRQ, you can\'t solve part (b) but can do parts (c) and (d). You should:',
+            options: ['Skip (b) and do (c) and (d) — they may be independent', 'Give up on the whole question', 'Spend all remaining time on (b)', 'Write "see part (a)" for parts (c) and (d)'],
+            correctAnswers: ['Skip (b) and do (c) and (d) — they may be independent'],
+            hints: ['FRQ parts are often (but not always) independent.'],
+            explanation: 'Parts (c) and (d) may not depend on (b). Even if they do, you can often use "the result from (b)" as a placeholder and earn method points.'
           }
         ]
       }
+    },
+    {
+      id: 'es4-input',
+      type: 'input-box' as const,
+      content: '**Quick Check**',
+      exercise: {
+        question: 'If $x(t) = \\cos t$ and $y(t) = \\sin t$, what is $\\frac{d^2y}{dx^2}$ at $t = \\pi/4$? Use the correct parametric formula.',
+        correctAnswer: '-sqrt(2)',
+        acceptableAnswers: ['-sqrt(2)', '-√2', '-1.414', '-1.41'],
+        hints: ['$dy/dx = \\cos t / (-\\sin t) = -\\cot t$. Then $\\frac{d}{dt}[-\\cot t] = \\csc^2 t$. Divide by $dx/dt = -\\sin t$.'],
+        explanation: '$dy/dx = -\\cot t$. $\\frac{d}{dt}(-\\cot t) = \\csc^2 t$. $d^2y/dx^2 = \\csc^2 t / (-\\sin t) = -\\csc^3 t$. At $t = \\pi/4$: $-\\csc^3(\\pi/4) = -(\\sqrt{2})^3 = -2\\sqrt{2}$.'
+      }
+    },
+    {
+      id: 'es4-summary',
+      type: 'text' as const,
+      content: `### Time & Error Summary
+
+- **MC:** 2 min/question (no-calc), 3 min/question (calc)
+- **FRQ:** 15 min/question; skip and return if stuck
+- Watch for: chain rule in parametric, $1/2$ in polar area, endpoint checks in convergence
+- **Never leave a question blank** — partial credit is real
+
+**Next: Part 5 — BC-Specific Topic Strategies**`
     }
   ]
-}
+};

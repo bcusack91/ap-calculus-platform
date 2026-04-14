@@ -95,7 +95,9 @@ export const bioFeedbackPart4Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **target value around which a variable is regulated**
+
       2) Term for this definition: **component that detects a change in a regulated variable**
+
       3) Term for this definition: **component that carries out corrective response**
       `,
       exercise: {

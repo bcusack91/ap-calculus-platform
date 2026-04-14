@@ -51,7 +51,9 @@ Substitute: $2x + (3x - 1) = 9 \\implies 5x = 10 \\implies x = 2, y = 5$.
 **Substitution Practice** 🧮
 
 1) $y = 2x$, $x + y = 9$: $x = ?$
+
 2) $x = y - 4$, $3x + y = 8$: $y = ?$
+
 3) $y = -x + 5$, $2x + y = 7$: $x = ?$
       `,
       exercise: {

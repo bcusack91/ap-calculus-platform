@@ -123,7 +123,9 @@ The fluid exits 2,500× faster than the plunger moves!
 A syringe barrel has diameter 2.0 cm. The needle has diameter 1.0 mm. The plunger is pushed at 1.0 cm/s.
 
 1) Area of the barrel (in cm²)
+
 2) Area ratio $A_{\\text{barrel}}/A_{\\text{needle}}$
+
 3) Speed of fluid exiting the needle (in m/s)
 
 *Round all answers to 3 significant figures.*

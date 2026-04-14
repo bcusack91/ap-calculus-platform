@@ -88,7 +88,9 @@ export const oChemRadicalsPart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: self-propagating sequence of radical steps
+
       2) Term for: step that first generates radicals
+
       3) Product pattern expected under Cl2, hν
       `,
       exercise: {

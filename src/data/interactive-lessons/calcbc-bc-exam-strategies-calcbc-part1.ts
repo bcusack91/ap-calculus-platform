@@ -2,185 +2,132 @@ export const calcbcExamStrategyPart1Data = {
   topicSlug: 'bc-exam-strategies-calcbc',
   sections: [
     {
-      id: 'calcbcexamstrategy-p1-intro',
+      id: 'es1-intro',
       type: 'text' as const,
-      content: `
-# Bc Exam Strategies
+      content: `# Understanding the AP Calculus BC Exam
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Exam Format, Scoring, and the AB Subscore**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Exam Structure
 
-## Key Ideas
+| Section | Questions | Time | Calculator | Weight |
+|---------|-----------|------|------------|--------|
+| I-A (MC) | 30 questions | 60 min | **No** | 33.3% |
+| I-B (MC) | 15 questions | 45 min | **Yes** | 16.7% |
+| II-A (FRQ) | 2 questions | 30 min | **Yes** | 16.7% |
+| II-B (FRQ) | 4 questions | 60 min | **No** | 33.3% |
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+**Total: 45 MC + 6 FRQ, 3 hours 15 minutes**
 
-## Formula Snapshot
+### The AB Subscore
 
-When appropriate, use:
+The BC exam also generates an **AB subscore** from a subset of questions. This subscore covers AB-level topics:
+- Limits, derivatives, and integrals
+- Applications (related rates, optimization, volumes)
+- FTC and accumulation functions
+- Basic differential equations
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+> **Key Fact:** About 60% of the BC exam covers AB topics. A strong AB foundation is essential for BC success.`
     },
     {
-      id: 'calcbcexamstrategy-p1-mcq1',
+      id: 'es1-scoring',
+      type: 'text' as const,
+      content: `### Scoring Breakdown
+
+**Multiple Choice:**
+- 1 point per correct answer
+- No deduction for wrong answers — **always guess!**
+
+**Free Response:**
+- Each FRQ is worth 9 points
+- Partial credit is available on every part
+- Points are earned for:
+  - Correct setup (even without the final answer)
+  - Proper notation (e.g., $\\frac{d}{dx}$, $\\int_a^b$)
+  - Justification and reasoning
+
+### BC-Specific FRQ Topics
+
+The BC exam **always** includes FRQs on:
+1. **Series** — Taylor/Maclaurin, interval of convergence, error bounds
+2. **Parametric/polar/vector** — motion, area, arc length
+
+These are **guaranteed BC-only** FRQ topics. Prepare them thoroughly.`
+    },
+    {
+      id: 'es1-mc',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Format Check**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'On the AP BC exam, how many FRQs are there total?',
+            options: ['6', '4', '8', '5'],
+            correctAnswer: 0,
+            explanation: 'There are 6 FRQs: 2 with calculator (Section II-A) and 4 without (Section II-B).'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'If you do not know the answer to a multiple-choice question, you should:',
+            options: ['Guess — there is no penalty for wrong answers', 'Leave it blank', 'Mark C always', 'Skip and come back only if time permits'],
+            correctAnswer: 0,
+            explanation: 'There is no penalty for wrong answers. Always guess if you cannot eliminate options.'
+          },
+          {
+            question: 'The AB subscore is important because:',
+            options: ['Some colleges accept the AB subscore for credit even if the overall BC score is lower', 'It determines your grade in the class', 'It is reported separately on your transcript', 'It affects scholarship eligibility directly'],
+            correctAnswer: 0,
+            explanation: 'Some colleges award AB credit based on the AB subscore, even if the overall BC score doesn\'t qualify for BC credit.'
           }
         ]
       }
     },
     {
-      id: 'calcbcexamstrategy-p1-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcexamstrategy-p1-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcexamstrategy-p1-dropdown',
+      id: 'es1-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Topic Frequency on BC Exam**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'The topic MOST likely to appear as a full FRQ on the BC exam:',
+            options: ['Taylor/Maclaurin series', 'Related rates', 'Optimization', 'Volumes of revolution'],
+            correctAnswers: ['Taylor/Maclaurin series'],
+            hints: ['This BC-only topic appears nearly every year.'],
+            explanation: 'A Taylor/Maclaurin series FRQ appears on almost every BC exam. It typically includes finding terms, determining convergence, and bounding error.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcexamstrategy-p1-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Core Concepts**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcexamstrategy-p1-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'The BC exam calculator sections allow you to:',
+            options: ['Graph, solve numerically, evaluate integrals, find derivatives at points', 'Only graph functions', 'Use a CAS (Computer Algebra System)', 'Access the internet for formulas'],
+            correctAnswers: ['Graph, solve numerically, evaluate integrals, find derivatives at points'],
+            hints: ['Four calculator capabilities are expected by the AP exam.'],
+            explanation: 'The AP exam expects four calculator uses: graphing, numerical solving, numerical differentiation, and numerical integration.'
           }
         ]
       }
+    },
+    {
+      id: 'es1-input',
+      type: 'input-box' as const,
+      content: '**Quick Math**',
+      exercise: {
+        question: 'If a student earns 32/45 on MC and 40/54 on FRQ, what is the approximate composite percentage? (Round to the nearest whole number.)',
+        correctAnswer: '73',
+        acceptableAnswers: ['73', '73%'],
+        hints: ['MC is 50% of composite, FRQ is 50%. Weight each score accordingly.'],
+        explanation: 'MC: 32/45 = 71.1%. FRQ: 40/54 = 74.1%. Average: (71.1 + 74.1)/2 ≈ 72.6% ≈ 73%. (In reality, College Board uses a more complex curve.)'
+      }
+    },
+    {
+      id: 'es1-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways
+
+- The BC exam is 3 hours 15 minutes: 45 MC + 6 FRQ
+- **Always guess** on MC — no penalty for wrong answers
+- Series and parametric/polar FRQs appear nearly every year
+- The AB subscore covers ~60% of the exam content
+- Calculator is allowed on Section I-B and Section II-A only
+
+**Next: Part 2 — Multiple-Choice Strategies**`
     }
   ]
-}
+};

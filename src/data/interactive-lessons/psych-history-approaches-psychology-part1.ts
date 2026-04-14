@@ -82,32 +82,33 @@ Wundt is considered the **"father of psychology"** for establishing the first ex
       `
     },
     {
-      id: 'histo1-quiz2',
-      type: 'multiple-choice' as const,
+      id: 'histo1-input',
+      type: 'input-boxes' as const,
       content: `
-**Concept Check** 🎯
+      **Applied Recall (exact term answers)** ✍️
+
+      1) Who established the first experimental psychology laboratory in 1879?
+
+      2) Which early school of psychology used introspection to identify the basic elements of consciousness?
+
+      3) Which school, founded by William James, focused on the purpose and adaptive function of consciousness?
+
+      Use the exact term from this part.
       `,
       exercise: {
-        questions: [
-          {
-            question: 'Functionalism was most influenced by:',
-            options: [
-              'Freudian theory',
-              'Darwin\'s theory of evolution',
-              'Gestalt principles',
-              'Classical conditioning'
-            ],
-            correctAnswer: 1,
-            explanation: 'William James and functionalism were heavily influenced by Darwin, asking how mental processes help organisms adapt and survive.'
-          }
-        ]
+        boxes: 3,
+        correctAnswers: ['Wundt', 'structuralism', 'functionalism'],
+        hint1: 'Starts with: W',
+        hint2: 'Starts with: S',
+        hint3: 'Starts with: F',
+        explanation: 'Expected answers: Wundt (first lab, Leipzig 1879), structuralism (Wundt & Titchener, introspection), and functionalism (James, purpose of behavior).'
       }
     },
     {
       id: 'histo1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+      **Fill in the Blanks** 🔍
       `,
       exercise: {
         dropdowns: [
@@ -128,7 +129,59 @@ Wundt is considered the **"father of psychology"** for establishing the first ex
         hint1: 'Wundt\'s lab date.',
         hint2: 'Structure = building blocks/elements.',
         hint3: 'This school emphasized perception and organization.',
-        explanation: 'The first lab was in 1879. Structuralism studied the elements of consciousness. Gestalt psychology emphasized holistic perception.'
+        explanation: 'Wundt\'s lab opened in 1879. Structuralism broke consciousness into basic elements. Gestalt psychology emphasized that perception is more than its individual parts.'
+      }
+    },
+    {
+      id: 'histo1-strategy',
+      type: 'text' as const,
+      content: `
+      ## Common Misconceptions and Exam Strategy
+
+      ### Misconceptions to Avoid
+      - Wundt is the father of psychology, NOT Freud — Freud founded psychoanalysis but came later.
+      - Structuralism and functionalism are NOT the same — structuralism asks "what is consciousness?" while functionalism asks "what is consciousness FOR?"
+      - Introspection is NOT the same as simply thinking about yourself — it was a trained, systematic method of reporting conscious experience.
+      - Gestalt psychology is NOT about therapy (Gestalt therapy is a different thing) — it's about perceptual organization.
+
+      ### AP Strategy Moves
+      - Know the key figures: Wundt (structuralism), James (functionalism), Wertheimer (Gestalt) — the AP exam loves matching researchers to schools.
+      - 1879 is one of the most frequently tested dates in AP Psychology.
+      - Be ready to compare and contrast the early schools: what each studied, their methods, and their limitations.
+      - For free-response, always define the school of thought first, then connect to the specific researcher and method.
+      `
+    },
+    {
+      id: 'histo1-applied',
+      type: 'multiple-choice' as const,
+      content: `
+      **Applied Scenarios** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A researcher asks trained participants to describe their moment-by-moment sensory experience while looking at an apple — reporting the color, shape, texture, and emotional response. This method is most consistent with:',
+            options: [
+              'structuralism — using introspection to break consciousness into basic elements',
+              'functionalism — studying the purpose of the experience',
+              'behaviorism — observing measurable responses to stimuli',
+              'Gestalt psychology — studying the whole perceptual experience'
+            ],
+            correctAnswer: 0,
+            explanation: 'This is introspection as used by structuralists: trained participants systematically report their conscious experience of a stimulus, trying to identify its basic elements (color, shape, texture, feeling).'
+          },
+          {
+            question: 'A psychologist studies how fear helps humans avoid danger and survive. This "what is it FOR?" approach most closely aligns with:',
+            options: [
+              'functionalism — studying the adaptive purpose of mental processes',
+              'structuralism — identifying the elements of fear',
+              'psychodynamic — exploring unconscious sources of fear',
+              'Gestalt — studying how fear is perceived as a whole'
+            ],
+            correctAnswer: 0,
+            explanation: 'Functionalism, influenced by Darwin, asks how mental processes help organisms adapt. Studying the survival purpose of fear is a classic functionalist question — "What function does this serve?"'
+          }
+        ]
       }
     }
   ]

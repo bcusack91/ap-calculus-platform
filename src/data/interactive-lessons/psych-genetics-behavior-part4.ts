@@ -86,7 +86,9 @@ export const psychGeneticsPart4Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: the degree to which related individuals share a trait
+
       2) Write the concept that matches: genetically influenced limits within which environment shapes outcomes
+
       3) Write the concept that matches: design comparing adoptees to biological and adoptive relatives
 
       Use the exact vocabulary term from this part.

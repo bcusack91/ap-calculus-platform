@@ -83,3 +83,22 @@ export const courseDailyQuestionMap: Record<string, SimpleLinkConfig> = {
   'pre-algebra': { href: '/prealgebra-daily-question', label: 'Today\'s Question' },
   'organic-chemistry': { href: '/ochem-daily-question', label: 'Today\'s Question' },
 }
+
+export const coursePracticeTestMap: Record<string, SimpleLinkConfig> = {
+  'ap-precalculus': { href: '/ap-precalc-practice', label: 'Practice Test' },
+}
+
+export const courseFRQMap: Record<string, SimpleLinkConfig> = {
+  'ap-precalculus': { href: '/ap-precalc-frq', label: 'FRQ Practice' },
+}
+
+export const courseStudyPlanMap: Record<string, SimpleLinkConfig> = {
+  'ap-precalculus': { href: '/ap-precalc-study-plans', label: 'Study Plans' },
+}
+
+export const courseFlashcardMap: Record<string, SimpleLinkConfig> = {
+  'ap-precalculus': { href: '/flashcards?course=ap-precalculus', label: 'Flashcards' },
+  'algebra-2': { href: '/flashcards?course=algebra-2', label: 'Flashcards' },
+  'pre-algebra': { href: '/flashcards?course=pre-algebra', label: 'Flashcards' },
+  'grade-8-math': { href: '/flashcards?course=grade-8-math', label: 'Flashcards' },
+}

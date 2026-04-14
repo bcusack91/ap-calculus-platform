@@ -51,7 +51,9 @@ Choose the best method:
 **Solve any method** 🧮
 
 1) $y=x-1$, $x+y=5$: $x=?$
+
 2) $2x+3y=13$, $2x-y=5$: $y=?$
+
 3) $x+y=8$, $2x+3y=21$: $x=?$
       `,
       exercise: {

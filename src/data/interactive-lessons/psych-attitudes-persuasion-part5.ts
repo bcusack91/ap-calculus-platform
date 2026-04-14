@@ -86,7 +86,9 @@ export const psychAttitudesPart5Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: building resistance to persuasion by exposing weak counterarguments
+
       2) Write the concept that matches: motivation to reassert freedom when one feels pressured
+
       3) Write the concept that matches: a learned evaluation of a person, object, or idea
 
       Use the exact vocabulary term from this part.

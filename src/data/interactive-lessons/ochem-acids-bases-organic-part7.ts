@@ -88,7 +88,9 @@ export const oChemAcidsBasesPart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: electron withdrawal through sigma bonds alters acidity
+
       2) Term for: bulk can reduce basic-site accessibility
+
       3) Product pattern expected under NaH, THF
       `,
       exercise: {

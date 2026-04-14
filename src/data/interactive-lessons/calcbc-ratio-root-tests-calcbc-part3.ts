@@ -2,84 +2,133 @@ export const calcbcRatioRootPart3Data = {
   topicSlug: 'ratio-root-tests-calcbc',
   sections: [
     {
-      id: 'ratioroottests-p3-intro',
+      id: 'rr3-intro',
       type: 'text' as const,
-      content: `# 🔍 Choosing the Right Convergence Test
+      content: `# Ratio vs. Root — Decision Guide
 
-**Part 3 of 7 — Decision Framework**
+**Part 3 of 7 — Choosing the Right Tool**
 
----
+### Side-by-Side Comparison
 
-### Convergence Test Flowchart
+| Feature | Ratio Test | Root Test |
+|---------|-----------|----------|
+| Formula | $\\lim |a_{n+1}/a_n|$ | $\\lim |a_n|^{1/n}$ |
+| Best for | Factorials, mixed products | $n$th powers |
+| Weakness | Inconclusive for $p$-series | Inconclusive for $p$-series |
+| AP frequency | **Very common** | Occasional |
 
-1. **Divergence Test first:** Does $\\\\lim a_n \\\\neq 0$? → Diverges
-2. **Geometric?** $\\\\sum ar^n$ → converges iff $|r| < 1$
-3. **p-series?** $\\\\sum 1/n^p$ → converges iff $p > 1$
-4. **Alternating?** Try Alternating Series Test
-5. **Factorials/exponentials?** Try **Ratio Test**
-6. **$n$-th powers?** Try **Root Test**
-7. **Rational function of $n$?** Try **Limit Comparison** with p-series
-8. **Decreasing positive?** Try **Integral Test**
-9. **Smaller than known convergent?** Try **Direct Comparison**
+### Decision Tree
 
----
+1. Does $a_n$ contain $n!$ or $(kn)!$? → **Ratio Test**
+2. Is $a_n = (\\text{something})^n$? → **Root Test**
+3. Does $a_n$ contain $r^n$ (geometric-type)? → **Either** (Ratio is usually simpler)
+4. Is $a_n$ a rational function of $n$? → **Neither** (use Limit Comparison or $p$-Series)
 
-### The Ratio and Root Tests’ Weakness
+> **Key Fact:** If both tests give a finite $L$, they give the SAME $L$. The choice is about which computation is simpler.`
+    },
+    {
+      id: 'rr3-edge-cases',
+      type: 'text' as const,
+      content: `### Edge Cases and Pitfalls
 
-Both are **inconclusive** ($L = 1$) for:
-- $\\\\sum 1/n^p$ (p-series)
-- $\\\\sum 1/(n \\\\ln n)$
-- Most series where terms decrease polynomially`
-    },    {
-      id: 'ratioroottests-p3-mcq',
+**Case 1: $L = 1$ — Need Another Test**
+
+$\\sum 1/n$ and $\\sum 1/n^2$ both give $L = 1$ with Ratio AND Root. But one diverges, one converges. You need Integral Test, $p$-Series, or Comparison.
+
+**Case 2: Ratio Limit DNE, Root Works**
+
+$$a_n = \\begin{cases} 2^{-n} & n \\text{ even} \\\\ 3^{-n} & n \\text{ odd} \\end{cases}$$
+
+Ratio: $|a_{n+1}/a_n|$ alternates between $2^n/3^{n+1}$ and $3^n/2^{n+1}$ — no limit!
+
+Root: $|a_n|^{1/n} \\to$ either $1/2$ or $1/3$, both $< 1$. Series converges.
+
+**Case 3: Geometric Series**
+
+$\\sum ar^n$: Ratio gives $|r|$, Root gives $|r|$. Same answer, equally easy.
+
+### Common Ratio Test Simplifications
+
+| Expression | $a_{n+1}/a_n$ simplifies to |
+|-----------|---------------------------|
+| $n!/(n+1)!$ | $1/(n+1)$ |
+| $(2n+2)!/(2n)!$ | $(2n+2)(2n+1)$ |
+| $r^{n+1}/r^n$ | $r$ |
+| $(n+1)^k/n^k$ | $(1+1/n)^k \\to 1$ |`
+    },
+    {
+      id: 'rr3-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** \U0001f3af
-      `,
+      content: '**Which Test?**',
       exercise: {
         questions: [
           {
-            question: 'Which test should you use first on any series?',
-            options: ['Ratio Test', 'Root Test', 'Divergence Test', 'Integral Test'],
-            correctAnswer: 2,
-            explanation: 'Always check if $\\\\lim a_n \\\\neq 0$ first. If so, the series diverges immediately.'
+            question: '$\\sum_{n=1}^{\\infty} \\frac{n!}{e^n}$ — best first test:',
+            options: ['Ratio Test ($n!$ present)', 'Root Test', 'Integral Test', 'Comparison Test'],
+            correctAnswer: 0,
+            explanation: 'Factorial → Ratio Test. $L = \\lim (n+1)/e = \\infty$. Diverges.'
           },
           {
-            question: '$\\\\sum \\\\frac{n^2}{2^n}$: best test?',
-            options: ['Integral Test', 'Ratio Test', 'p-series', 'Alternating Series Test'],
-            correctAnswer: 1,
-            explanation: 'Exponential $2^n$ in denominator → Ratio Test works well.'
+            question: '$\\sum_{n=1}^{\\infty} \\left(\\frac{n}{n+1}\\right)^{n^2}$ — best first test:',
+            options: ['Root Test ($n$th power structure)', 'Ratio Test', 'Divergence Test', 'Integral Test'],
+            correctAnswer: 0,
+            explanation: 'Root: $|a_n|^{1/n} = (n/(n+1))^n \\to 1/e < 1$. Converges.'
           },
           {
-            question: '$\\\\sum \\\\frac{1}{n^2 + 3}$: best test?',
-            options: ['Ratio Test', 'Root Test', 'Limit Comparison with $1/n^2$', 'Divergence Test'],
-            correctAnswer: 2,
-            explanation: 'Rational function of $n$ → compare with corresponding p-series.'
+            question: '$\\sum_{n=1}^{\\infty} \\frac{n^3}{5^n}$ — Ratio Test gives $L =$',
+            options: ['$1/5$ (polynomial part ratio $\\to 1$, exponential gives $1/5$)', '$1/5^3$', '$3/5$', '$5$'],
+            correctAnswer: 0,
+            explanation: '$|a_{n+1}/a_n| = ((n+1)^3/5^{n+1})(5^n/n^3) = (1/5)((n+1)/n)^3 \\to 1/5$. Converges.'
           }
         ]
       }
-    },    {
-      id: 'ratioroottests-p3-input',
-      type: 'input-boxes' as const,
-      content: `
-**Test Selection** 🧮
-
-Name the best convergence test for each series:
-
-**1)** $\\\\sum \\\\frac{(-1)^n}{n^3}$ (alternating/ratio/root/comparison)
-
-**2)** $\\\\sum \\\\frac{n!}{5^n}$ (alternating/ratio/root/comparison)
-
-**3)** $\\\\sum \\\\frac{1}{\\\\sqrt{n}}$ (series type and does it converge or diverge?)
-      `,
+    },
+    {
+      id: 'rr3-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Test Selection and Application**',
       exercise: {
-        boxes: 3,
-        correctAnswers: ['alternating', 'ratio', 'diverges'],
-        hint1: '$(-1)^n$ pattern',
-        hint2: 'Factorial in numerator',
-        hint3: 'p-series with $p = 1/2$',
-        explanation: '1) Alternating Series Test (and it converges). 2) Ratio Test ($L = \\\\infty$, diverges). 3) p-series $p = 1/2 < 1$, diverges.'
+        dropdowns: [
+          {
+            label: '$\\sum n^{10}/2^n$: the dominant feature is the $2^n$ denominator. Best test and result:',
+            options: ['Ratio: $L = 1/2$, converges', 'Root: $L = 10/2$, diverges', '$p$-Series: converges', 'Divergence Test: diverges'],
+            correctAnswers: ['Ratio: $L = 1/2$, converges'],
+            hints: ['Exponential dominates polynomial. Ratio: $(n+1)^{10}/(2 \\cdot n^{10}) \\to 1/2$.'],
+            explanation: 'Ratio: $L = (1/2) \\cdot \\lim ((n+1)/n)^{10} = 1/2 < 1$. Converges.'
+          },
+          {
+            label: '$\\sum (n!)^2/(2n)!$: best approach:',
+            options: ['Ratio: simplify $(n+1)!^2/(2n+2)! \\cdot (2n)!/(n!)^2$', 'Root Test', 'Divergence Test', 'Limit Comparison with $1/n$'],
+            correctAnswers: ['Ratio: simplify $(n+1)!^2/(2n+2)! \\cdot (2n)!/(n!)^2$'],
+            hints: ['Double factorial terms — Ratio Test handles this cleanly.'],
+            explanation: 'Ratio: $(n+1)^2/((2n+2)(2n+1)) = (n+1)/(2(2n+1)) \\to 1/4 < 1$. Converges.'
+          }
+        ]
       }
+    },
+    {
+      id: 'rr3-input',
+      type: 'input-box' as const,
+      content: '**Compute L**',
+      exercise: {
+        question: 'For $\\sum_{n=1}^{\\infty} \\frac{(n!)^2}{(2n)!}$, compute $L$ from the Ratio Test as a fraction.',
+        correctAnswer: '1/4',
+        acceptableAnswers: ['1/4', '0.25'],
+        hints: ['$\\frac{a_{n+1}}{a_n} = \\frac{((n+1)!)^2}{(2n+2)!} \\cdot \\frac{(2n)!}{(n!)^2}$', 'Simplify: $(n+1)^2/((2n+2)(2n+1)) = (n+1)/(2(2n+1))$.'],
+        explanation: '$L = \\lim (n+1)/(2(2n+1)) = \\lim (n+1)/(4n+2) = 1/4$.'
+      }
+    },
+    {
+      id: 'rr3-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Factorial → Ratio Test; $n$th power → Root Test
+- Both give same $L$ when both work
+- $L = 1$: switch to another test entirely
+- On AP, Ratio Test is far more common
+
+> **Next:** Part 4 — Ratio Test and Power Series.`
     }
   ]
 };

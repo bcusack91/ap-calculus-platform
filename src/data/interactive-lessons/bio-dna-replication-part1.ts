@@ -2,190 +2,157 @@ export const bioDnaReplicationPart1Data = {
   topicSlug: 'dna-replication',
   sections: [
     {
-      id: 'bio-dna-replication-p1-s1-intro',
+      id: 'dr1-intro',
       type: 'text' as const,
       content: `
-      ## DNA Replication: DNA Structure
-      
-      **Part 1 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through replication fork progression in rapidly dividing cells.
-      
-      ### Worked biological example
-      A student team investigates replication fork progression in rapidly dividing cells. Their first interpretation step is to identify how **semiconservative replication** and **helicase** work together in the same pathway.
-      
-      - They classify the primary signal using **semiconservative replication**: each daughter DNA molecule retains one parental strand.
-      - They trace the downstream response using **helicase**: unwinds the DNA double helix at the replication fork.
-      - They then compare outcomes with **primase** and **DNA polymerase** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **semiconservative replication**
-      - **helicase**
-      - **primase**
-      - **DNA polymerase**
+## DNA Structure — The Molecular Basis of Heredity
+
+**Part 1 of 7**
+
+Understanding DNA replication requires a thorough understanding of DNA structure.  The double helix model, proposed by Watson and Crick in 1953 (based on X-ray crystallography data from Rosalind Franklin and Maurice Wilkins), remains one of the most important discoveries in biology.
       `
     },
     {
-      id: 'bio-dna-replication-p1-s2-mcq-core',
+      id: 'dr1-nucleotide',
+      type: 'text' as const,
+      content: `
+### Nucleotide Structure
+
+DNA is a polymer of **nucleotides**.  Each nucleotide has three components:
+
+1. **Deoxyribose sugar** (5-carbon sugar lacking an -OH group at the 2' carbon)
+2. **Phosphate group** (attached to the 5' carbon of the sugar)
+3. **Nitrogenous base** (attached to the 1' carbon of the sugar)
+
+**The four DNA bases:**
+
+| Base | Type | Rings | Pairs with |
+|------|------|-------|-----------|
+| **Adenine (A)** | Purine | 2 rings | Thymine (T) — 2 hydrogen bonds |
+| **Guanine (G)** | Purine | 2 rings | Cytosine (C) — 3 hydrogen bonds |
+| **Thymine (T)** | Pyrimidine | 1 ring | Adenine (A) — 2 hydrogen bonds |
+| **Cytosine (C)** | Pyrimidine | 1 ring | Guanine (G) — 3 hydrogen bonds |
+
+> **Chargaff's Rules:** In any DNA molecule, the amount of A equals the amount of T, and the amount of G equals the amount of C.  This 1:1 ratio (A=T, G=C) was critical evidence for the base-pairing model.
+
+**Key structural features of the double helix:**
+- Two antiparallel strands (one runs 5' → 3', the other 3' → 5')
+- Sugar-phosphate backbones on the outside; bases face inward
+- Bases held together by **hydrogen bonds** (A-T: 2 H-bonds; G-C: 3 H-bonds)
+- The helix has a **major groove** and a **minor groove** (important for protein-DNA interactions)
+- One complete turn = 10 base pairs = 3.4 nm
+- Diameter = 2 nm
+      `
+    },
+    {
+      id: 'dr1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — DNA Structure
       `,
       exercise: {
         questions: [
           {
-            question: 'For DNA Structure, what best describes semiconservative replication?',
+            question: 'DNA from organism X is analyzed and found to contain 30% adenine.  What percentage of the bases is cytosine?',
             options: [
-              'unwinds the DNA double helix at the replication fork',
-              'each daughter DNA molecule retains one parental strand',
-              'extends DNA strands in the 5\' to 3\' direction',
-              'synthesizes short RNA primers for DNA polymerase'
+              '30%',
+              '20%',
+              '40%',
+              '10%'
             ],
             correctAnswer: 1,
-            explanation: 'semiconservative replication is best matched with: each daughter DNA molecule retains one parental strand.'
+            explanation: 'By Chargaff\\u2019s rules: A = T = 30%.  So A + T = 60%.  Since A + T + G + C = 100%, G + C = 40%.  Since G = C, each is 20%.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of helicase?',
+            question: 'Why is a G-C base pair more stable than an A-T base pair?',
             options: [
-              'synthesized continuously toward the replication fork',
-              'unwinds the DNA double helix at the replication fork',
-              'synthesizes short RNA primers for DNA polymerase',
-              'each daughter DNA molecule retains one parental strand'
+              'G-C pairs have longer hydrogen bonds',
+              'G-C pairs have 3 hydrogen bonds compared to 2 in A-T pairs, providing more energy to disrupt',
+              'G-C pairs are covalently bonded',
+              'A-T pairs are not real base pairs'
             ],
             correctAnswer: 1,
-            explanation: 'helicase is best matched with: unwinds the DNA double helix at the replication fork.'
+            explanation: 'Guanine-cytosine base pairs are held together by three hydrogen bonds, while adenine-thymine pairs have only two. The extra hydrogen bond means more energy is required to separate G-C pairs. DNA rich in G-C content has a higher melting temperature (Tm).'
+          },
+          {
+            question: 'The two strands of DNA run antiparallel.  What does this mean?',
+            options: [
+              'They are identical sequences',
+              'One strand runs 5\\u2019 to 3\\u2019 while the complementary strand runs 3\\u2019 to 5\\u2019 in the opposite direction',
+              'They have different base compositions',
+              'They are wound in opposite rotational directions'
+            ],
+            correctAnswer: 1,
+            explanation: 'Antiparallel means the two strands have opposite directionality.  The 5\\u2019 end of one strand is paired with the 3\\u2019 end of the other.  This arrangement is critical for replication and transcription, as enzymes that process DNA have inherent directionality.'
           }
         ]
       }
     },
     {
-      id: 'bio-dna-replication-p1-s3-deep-dive',
+      id: 'dr1-packaging',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: DNA Structure
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → semiconservative replication
-      - **Immediate processing** → helicase
-      - **System-level consequence** → primase
-      - **Measured readout** → DNA polymerase
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | semiconservative replication | each daughter DNA molecule retains one parental strand | Early shift in the primary variable |
-      | helicase | unwinds the DNA double helix at the replication fork | Mid-pathway change in process rate |
-      | primase | synthesizes short RNA primers for DNA polymerase | Downstream phenotype trend |
-      | DNA polymerase | extends DNA strands in the 5' to 3' direction | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### DNA Packaging in Eukaryotes
+
+Human cells contain about **6.4 billion base pairs** of DNA (~2 meters per cell if stretched out).  This must be packaged into a nucleus only ~6 \\(\\mu\\)m in diameter — a compaction ratio of ~10,000:1.
+
+**Packaging hierarchy:**
+1. **Nucleosome** — 147 bp of DNA wraps ~1.65 times around a histone octamer (2 copies each of H2A, H2B, H3, H4); the fundamental unit of chromatin (11 nm "beads on a string")
+2. **Linker histone H1** binds between nucleosomes, helping them pack into a **30 nm fiber**
+3. **Looped domains** — 30 nm fiber forms loops of 30,000-100,000 bp attached to a protein scaffold
+4. **Heterochromatin** — maximally condensed, transcriptionally inactive
+5. **Metaphase chromosome** — highest compaction (~10,000-fold), visible under a light microscope
+
+> **Epigenetics and Histones:** Chemical modifications to histones (acetylation, methylation, phosphorylation) alter chromatin structure and gene accessibility.  **Histone acetylation** (by HATs) generally OPENS chromatin (euchromatin, active).  **Histone deacetylation** (by HDACs) CLOSES it (heterochromatin, silenced).
       `
     },
     {
-      id: 'bio-dna-replication-p1-s4-input',
+      id: 'dr1-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **each daughter DNA molecule retains one parental strand**
-      2) Term for this definition: **unwinds the DNA double helix at the replication fork**
-      3) Term for this definition: **synthesizes short RNA primers for DNA polymerase**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['semiconservative replication', 'helicase', 'primase'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'each daughter DNA molecule retains one parental strand\'.',
-        hint2: 'Second blank points to helicase; think about the role \'unwinds the DNA double helix at the replication fork\'.',
-        hint3: 'Third blank is primase; connect it to \'synthesizes short RNA primers for DNA polymerase\'.',
-        explanation: 'Correct set: semiconservative replication, helicase, primase. These three terms define the core mechanism chain for DNA Structure.'
-      }
-    },
-    {
-      id: 'bio-dna-replication-p1-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'semiconservative replication',
-            options: ['each daughter DNA molecule retains one parental strand', 'synthesizes short RNA primers for DNA polymerase', 'unwinds the DNA double helix at the replication fork', 'extends DNA strands in the 5\' to 3\' direction']
-          },
-          {
-            label: 'helicase',
-            options: ['synthesized continuously toward the replication fork', 'unwinds the DNA double helix at the replication fork', 'synthesizes short RNA primers for DNA polymerase', 'extends DNA strands in the 5\' to 3\' direction']
-          },
-          {
-            label: 'primase',
-            options: ['synthesizes short RNA primers for DNA polymerase', 'extends DNA strands in the 5\' to 3\' direction', 'synthesized continuously toward the replication fork', 'synthesized discontinuously as Okazaki fragments']
-          }
-        ],
-        correctAnswers: ['each daughter DNA molecule retains one parental strand', 'unwinds the DNA double helix at the replication fork', 'synthesizes short RNA primers for DNA polymerase'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'semiconservative replication, helicase, and primase should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-dna-replication-p1-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because semiconservative replication each daughter DNA molecule retains one parental strand, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Replication is bidirectional from origins, not one-direction copying of entire chromosomes.
-      - Leading and lagging refer to synthesis pattern, not strand importance.
-      - Proofreading reduces errors but does not eliminate all mutations.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-dna-replication-p1-s7-mcq-final',
-      type: 'multiple-choice' as const,
-      content: `
-      **Final application MCQ (2 questions)**
+### Key Terms — DNA Structure
       `,
       exercise: {
         questions: [
           {
-            question: 'In replication fork progression in rapidly dividing cells, the observed pattern is: extends DNA strands in the 5\' to 3\' direction. What term should anchor the explanation?',
-            options: [
-              'helicase',
-              'primase',
-              'DNA polymerase',
-              'semiconservative replication'
-            ],
-            correctAnswer: 2,
-            explanation: 'Use DNA polymerase because it directly maps to the described biological pattern: extends DNA strands in the 5\' to 3\' direction.'
+            question: 'The type of bond that holds complementary bases together (A-T, G-C):',
+            answer: 'hydrogen bonds',
+            acceptableAnswers: ['hydrogen bonds', 'hydrogen bond', 'Hydrogen bonds', 'H bonds', 'h-bonds'],
+            placeholder: 'e.g. covalent bonds'
           },
           {
-            question: 'In an AP-style free-response about dna structure, the observed pattern is: synthesized continuously toward the replication fork. What term should anchor the explanation?',
+            question: 'A purine with 2 rings that pairs with thymine:',
+            answer: 'adenine',
+            acceptableAnswers: ['adenine', 'Adenine', 'A'],
+            placeholder: 'e.g. guanine'
+          },
+          {
+            question: 'The protein complex around which DNA wraps to form nucleosomes:',
+            answer: 'histone octamer',
+            acceptableAnswers: ['histone octamer', 'histones', 'histone', 'Histones', 'Histone octamer'],
+            placeholder: 'e.g. condensin'
+          }
+        ]
+      }
+    },
+    {
+      id: 'dr1-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Exit Ticket — DNA Structure
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A double-stranded DNA molecule is 1000 bp long.  How many hydrogen bonds hold the two strands together if the molecule is 40% G-C?',
             options: [
-              'leading strand',
-              'primase',
-              'DNA polymerase',
-              'lagging strand'
+              '2000',
+              '2400 — 400 G-C pairs contribute 3 H-bonds each (1200) and 600 A-T pairs contribute 2 H-bonds each (1200), totaling 2400',
+              '3000',
+              '1000'
             ],
-            correctAnswer: 0,
-            explanation: 'Use leading strand because it directly maps to the described biological pattern: synthesized continuously toward the replication fork.'
+            correctAnswer: 1,
+            explanation: '40% G-C means 400 G-C base pairs (x 3 H-bonds = 1200) and 60% A-T means 600 A-T pairs (x 2 H-bonds = 1200).  Total = 1200 + 1200 = 2400 hydrogen bonds.'
           }
         ]
       }

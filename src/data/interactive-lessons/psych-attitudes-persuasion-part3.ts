@@ -86,7 +86,9 @@ export const psychAttitudesPart3Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: persuasion through cues such as attractiveness or authority
+
       2) Write the concept that matches: discomfort from inconsistent beliefs and behaviors
+
       3) Write the concept that matches: gaining compliance with a small request before a larger one
 
       Use the exact vocabulary term from this part.

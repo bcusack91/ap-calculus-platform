@@ -99,7 +99,9 @@ Zeros: $x = 2, 3, -1$.
 **Polynomial Practice** 🧮
 
 1) What is the degree of $7x^4 + 2x^2 - x + 9$?
+
 2) If $P(x) = x^2 - 5x + 6$, what is $P(3)$?
+
 3) Expand: $(x + 1)(x - 1) = x^2 - \\;?$ (enter the constant)
       `,
       exercise: {

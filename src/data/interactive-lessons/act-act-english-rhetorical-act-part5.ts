@@ -131,7 +131,9 @@ Best fix: *"She was unique."* — "Very" can't modify "unique" (it's absolute), 
 Replace each wordy phrase with a single word (or two-word phrase).
 
 1) "in order to achieve" → __________ (one word: "to" + a verb, or just "to")
+
 2) "made the decision to" → __________ (past tense, one word)
+
 3) "despite the fact that" → __________ (one word)
       `,
       exercise: {

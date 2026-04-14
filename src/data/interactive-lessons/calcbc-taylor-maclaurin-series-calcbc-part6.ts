@@ -2,185 +2,94 @@ export const calcbcTaylorPart6Data = {
   topicSlug: 'taylor-maclaurin-series-calcbc',
   sections: [
     {
-      id: 'calcbctaylor-p6-intro',
+      id: 'tm6-intro',
       type: 'text' as const,
-      content: `
-# Taylor Maclaurin Series
+      content: `# Taylor & Maclaurin — Problem-Solving Workshop
 
-**Part 6 of 7 — Exam Strategy**
+**Part 6 of 7 — Mixed Practice**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Workshop Focus
 
-## Key Ideas
-
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
-
-## Formula Snapshot
-
-When appropriate, use:
-
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+This workshop covers the full range of Taylor series tasks:
+- Computing series from scratch
+- Manipulating known series
+- Finding intervals of convergence
+- Error bound calculations
+- Integrating/differentiating series`
     },
     {
-      id: 'calcbctaylor-p6-mcq1',
+      id: 'tm6-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Workshop Problems**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'The third-degree Taylor polynomial for $f(x) = \\tan x$ at $c = 0$ is:',
+            options: ['$x + x^3/3$', '$x - x^3/3$', '$x + x^3/6$', '$x - x^3/6$'],
+            correctAnswer: 0,
+            explanation: '$f=\\tan x$: $f(0)=0$, $f\'(0)=\\sec^2(0)=1$, $f\'\'(0)=2\\sec^2(0)\\tan(0)=0$, $f\'\'\'(0)=2\\sec^4(0)+4\\sec^2(0)\\tan^2(0)=2$. $T_3 = x + (2/6)x^3 = x + x^3/3$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
+            question: 'The Maclaurin series for $\\frac{1}{\\sqrt{1+x}}$ through the $x^2$ term is:',
+            options: ['$1 - x/2 + 3x^2/8$', '$1 + x/2 - x^2/8$', '$1 - x/2 + x^2/4$', '$1 - x + x^2$'],
+            correctAnswer: 0,
+            explanation: '$(1+x)^{-1/2} = 1 + (-1/2)x + \\frac{(-1/2)(-3/2)}{2!}x^2 + \\cdots = 1 - x/2 + 3x^2/8$.'
+          },
+          {
+            question: '$\\int_0^{0.5} e^{-t^2}\\,dt$ approximated by the first 3 terms of the series equals:',
+            options: ['$0.5 - (0.5)^3/3 + (0.5)^5/10 \\approx 0.4612$', '$0.5 - 0.125/3 + 0.03125/10$', 'Both are equivalent and correct', '$e^{-0.25} - 1$'],
             correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            explanation: '$e^{-t^2} = 1 - t^2 + t^4/2 - \\cdots$. $\\int_0^{0.5} = [t - t^3/3 + t^5/10]_0^{0.5} = 0.5 - 0.125/3 + 0.03125/10 = 0.5 - 0.04167 + 0.003125 = 0.4615$.'
           }
         ]
       }
     },
     {
-      id: 'calcbctaylor-p6-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbctaylor-p6-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbctaylor-p6-dropdown',
+      id: 'tm6-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Series Identification**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'The series $\\sum_{n=0}^\\infty \\frac{(-1)^n \\pi^{2n}}{(2n)!}$ equals:',
+            options: ['$\\cos(\\pi) = -1$', '$\\sin(\\pi) = 0$', '$e^{-\\pi}$', '$1/\\pi$'],
+            correctAnswers: ['$\\cos(\\pi) = -1$'],
+            hints: ['$\\cos x = \\sum (-1)^n x^{2n}/(2n)!$. Set $x = \\pi$.'],
+            explanation: '$\\sum (-1)^n \\pi^{2n}/(2n)! = \\cos(\\pi) = -1$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbctaylor-p6-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Exam Strategy**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbctaylor-p6-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'The series $1 + 2 + 2 + 4/3 + 2/3 + \\cdots$ with general term $2^n/n!$ sums to:',
+            options: ['$e^2$', '$2e$', '$e^2 - 1$', '$2^e$'],
+            correctAnswers: ['$e^2$'],
+            hints: ['$\\sum 2^n/n! = e^2$ from the exponential series.'],
+            explanation: '$\\sum_{n=0}^\\infty 2^n/n! = e^2 \\approx 7.389$.'
           }
         ]
       }
+    },
+    {
+      id: 'tm6-input',
+      type: 'input-box' as const,
+      content: '**Derivative from Series**',
+      exercise: {
+        question: 'If $f(x) = \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$, find $f^{(5)}(0)$. (Hint: identify $f$ first.)',
+        correctAnswer: '1',
+        acceptableAnswers: ['1'],
+        hints: ['This is $\\sin x$. $f^{(5)}(x) = \\cos x$, $f^{(5)}(0) = 1$. Or: coefficient of $x^5$ is $(-1)^2/5! = 1/120$, so $f^{(5)}(0) = 5! \\cdot 1/120 = 1$.'],
+        explanation: '$f(x) = \\sin x$. $f^{(5)}(x) = \\cos x$, so $f^{(5)}(0) = \\cos(0) = 1$. Alternatively: $a_5 = 1/5!$, so $f^{(5)}(0) = 5! \\cdot a_5 = 5!/5! = 1$.'
+      }
+    },
+    {
+      id: 'tm6-summary',
+      type: 'text' as const,
+      content: `### Workshop Takeaways
+
+- Derivative table method for unfamiliar functions (like $\\tan x$)
+- Binomial series for $(1+x)^p$ when $p$ is not a positive integer
+- Series evaluation by identifying the function
+- Integration of series for functions with no elementary antiderivative
+
+> **Next:** Part 7 — Comprehensive Review.`
     }
   ]
-}
+};

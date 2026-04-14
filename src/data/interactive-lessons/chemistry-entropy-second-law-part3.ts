@@ -91,7 +91,7 @@ Heat released by the system ($-q$) is absorbed by the surroundings ($+q$), and v
 The same amount of heat has a **greater impact** on entropy at **lower temperature**:
 
 - Adding 100 J of heat to a cold system (200 K) creates a larger entropy change than adding 100 J to a hot system (1000 K)
-- This is like adding $10 to someone with $100 vs. someone with $10,000
+- This is like adding \\$10 to someone with \\$100 vs. someone with \\$10,000
 
 
 ---

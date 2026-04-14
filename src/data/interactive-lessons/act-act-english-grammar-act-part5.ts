@@ -103,7 +103,9 @@ A **dangling modifier** is an introductory phrase that doesn't logically modify 
 Rewrite the underlined portion to make it parallel. Type only the corrected word or phrase.
 
 1) "The job requires patience, creativity, and being organized." → Change "being organized" to: _____
+
 2) "He likes to swim, to hike, and running." → Change "running" to: _____
+
 3) "The recipe calls for chopping the onions, dicing the tomatoes, and the peppers should be sliced." → Change the last item to: _____
       `,
       exercise: {

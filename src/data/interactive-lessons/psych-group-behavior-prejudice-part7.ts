@@ -86,7 +86,9 @@ export const psychGroupPart7Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: adjusting behavior or beliefs to align with a group
+
       2) Write the concept that matches: compliance with direct commands from authority
+
       3) Write the concept that matches: overattributing others' behavior to disposition rather than situation
 
       Use the exact vocabulary term from this part.

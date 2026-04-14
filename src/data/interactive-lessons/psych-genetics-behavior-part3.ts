@@ -86,7 +86,9 @@ export const psychGeneticsPart3Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: when environmental effects differ by genotype
+
       2) Write the concept that matches: changes in gene expression without altering DNA sequence
+
       3) Write the concept that matches: the degree to which related individuals share a trait
 
       Use the exact vocabulary term from this part.

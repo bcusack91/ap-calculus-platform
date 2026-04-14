@@ -2,185 +2,119 @@ export const calcbcArcLengthPart2Data = {
   topicSlug: 'arc-length-surface-area-calcbc',
   sections: [
     {
-      id: 'calcbcarclength-p2-intro',
+      id: 'al2-intro',
       type: 'text' as const,
-      content: `
-# Arc Length Surface Area
+      content: `# Arc Length & Surface Area — Parametric & Polar Arc Length
 
-**Part 2 of 7 — Worked Examples**
+**Part 2 of 7 — Arc Length in Parametric and Polar Forms**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Parametric Arc Length
 
-## Key Ideas
+For $x = f(t)$, $y = g(t)$, $a \\le t \\le b$:
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+$$\\boxed{L = \\int_a^b \\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}\\,dt}$$
 
-## Formula Snapshot
+### Polar Arc Length
 
-When appropriate, use:
+For $r = f(\\theta)$, $\\alpha \\le \\theta \\le \\beta$:
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+$$\\boxed{L = \\int_\\alpha^\\beta \\sqrt{r^2 + \\left(\\frac{dr}{d\\theta}\\right)^2}\\,d\\theta}$$
 
-and interpret what the final value means in context.
-      `
+| Form | $ds$ expression |
+|------|----------------|
+| Cartesian | $\\sqrt{1 + (dy/dx)^2}\\,dx$ |
+| Parametric | $\\sqrt{(dx/dt)^2 + (dy/dt)^2}\\,dt$ |
+| Polar | $\\sqrt{r^2 + (dr/d\\theta)^2}\\,d\\theta$ |
+
+> **Key Fact:** The polar formula comes from substituting $x = r\\cos\\theta$, $y = r\\sin\\theta$ into the parametric formula.`
     },
     {
-      id: 'calcbcarclength-p2-mcq1',
+      id: 'al2-examples',
+      type: 'text' as const,
+      content: `### Examples
+
+**Parametric:** $x = \\cos t$, $y = \\sin t$, $0 \\le t \\le 2\\pi$.
+
+$dx/dt = -\\sin t$, $dy/dt = \\cos t$.
+
+$L = \\int_0^{2\\pi}\\sqrt{\\sin^2 t + \\cos^2 t}\\,dt = \\int_0^{2\\pi} 1\\,dt = 2\\pi$ ✓
+
+**Polar:** $r = 1$ (unit circle), $0 \\le \\theta \\le 2\\pi$.
+
+$dr/d\\theta = 0$.
+
+$L = \\int_0^{2\\pi}\\sqrt{1 + 0}\\,d\\theta = 2\\pi$ ✓
+
+**Polar arc length of $r = e^\\theta$** from $\\theta = 0$ to $\\theta = \\ln 2$:
+
+$dr/d\\theta = e^\\theta$. $L = \\int_0^{\\ln 2}\\sqrt{e^{2\\theta} + e^{2\\theta}}\\,d\\theta = \\int_0^{\\ln 2}e^\\theta\\sqrt{2}\\,d\\theta = \\sqrt{2}[e^\\theta]_0^{\\ln 2} = \\sqrt{2}(2-1) = \\sqrt{2}$`
+    },
+    {
+      id: 'al2-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Practice Problems**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'The circumference of the circle $r = 2a\\cos\\theta$ ($a > 0$) is:',
+            options: ['$2\\pi a$', '$4\\pi a$', '$\\pi a$', '$2\\pi a^2$'],
+            correctAnswer: 0,
+            explanation: 'This is a circle of diameter $2a$ (radius $a$), so circumference $= 2\\pi a$. The curve traces the full circle for $\\theta \\in [0, \\pi]$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'For the parametric curve $x = t^2$, $y = t^3$ from $t = 0$ to $t = 1$, the arc length integral is:',
+            options: ['$\\int_0^1 \\sqrt{4t^2 + 9t^4}\\,dt$', '$\\int_0^1 \\sqrt{t^4 + t^6}\\,dt$', '$\\int_0^1 (2t + 3t^2)\\,dt$', '$\\int_0^1 \\sqrt{4 + 9t^2}\\,dt$'],
+            correctAnswer: 0,
+            explanation: '$dx/dt = 2t$, $dy/dt = 3t^2$. $L = \\int_0^1\\sqrt{4t^2 + 9t^4}\\,dt = \\int_0^1 t\\sqrt{4 + 9t^2}\\,dt$.'
           }
         ]
       }
     },
     {
-      id: 'calcbcarclength-p2-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcarclength-p2-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcarclength-p2-dropdown',
+      id: 'al2-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Form Selection**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'For the spiral $r = \\theta$, $0 \\le \\theta \\le 2\\pi$, the arc length integral has $r^2 + (dr/d\\theta)^2 = $',
+            options: ['$\\theta^2 + 1$', '$\\theta^2$', '$2\\theta^2$', '$1$'],
+            correctAnswers: ['$\\theta^2 + 1$'],
+            hints: ['$r = \\theta$, $dr/d\\theta = 1$.'],
+            explanation: '$r^2 + (r\')^2 = \\theta^2 + 1$. So $L = \\int_0^{2\\pi}\\sqrt{\\theta^2 + 1}\\,d\\theta$ (requires trig substitution or calculator).'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcarclength-p2-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Worked Examples**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcarclength-p2-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'The polar arc length formula reduces to the Cartesian formula when $r = $ constant because:',
+            options: ['$dr/d\\theta = 0$, so $ds = r\\,d\\theta$, giving the circumference formula', 'Polar and Cartesian are identical', 'The substitution fails', 'It does not reduce'],
+            correctAnswers: ['$dr/d\\theta = 0$, so $ds = r\\,d\\theta$, giving the circumference formula'],
+            hints: ['What happens when the radius is fixed?'],
+            explanation: 'With $r$ constant and $dr/d\\theta = 0$: $L = \\int_\\alpha^\\beta r\\,d\\theta = r(\\beta - \\alpha)$. Over $[0, 2\\pi]$: $L = 2\\pi r$.'
           }
         ]
       }
+    },
+    {
+      id: 'al2-input',
+      type: 'input-box' as const,
+      content: '**Computation**',
+      exercise: {
+        question: 'Find the arc length of $x = 3t$, $y = 4t$ from $t = 0$ to $t = 2$.',
+        correctAnswer: '10',
+        acceptableAnswers: ['10', '10.0'],
+        hints: ['$dx/dt = 3$, $dy/dt = 4$.', '$\\sqrt{9+16} = 5$.'],
+        explanation: '$L = \\int_0^2 \\sqrt{9+16}\\,dt = \\int_0^2 5\\,dt = 10$. Straight line from origin to $(6,8)$ — distance $= \\sqrt{36+64} = 10$. ✓'
+      }
+    },
+    {
+      id: 'al2-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Parametric: $L = \\int_a^b \\sqrt{(x\')^2 + (y\')^2}\\,dt$
+- Polar: $L = \\int_\\alpha^\\beta \\sqrt{r^2 + (r\')^2}\\,d\\theta$
+- All arc length formulas come from $ds = \\sqrt{dx^2 + dy^2}$
+
+> **Next:** Part 3 — Surface area of revolution.`
     }
   ]
-}
+};

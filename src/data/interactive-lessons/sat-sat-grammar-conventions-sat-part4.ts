@@ -96,7 +96,9 @@ Uses subordinating conjunctions: **because, although, since, while, if, when, af
 Type "fragment," "run-on," "comma splice," or "correct" for each sentence.
 
 1) She studied hard for the final exam, she felt confident on test day.
+
 2) Although he had never traveled abroad before.
+
 3) The sun set behind the mountains, and the sky turned a deep shade of orange.
       `,
       exercise: {

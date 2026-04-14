@@ -95,7 +95,9 @@ export const bioSpeciationPart1Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **species defined by reproductive compatibility**
+
       2) Term for this definition: **speciation following geographic isolation**
+
       3) Term for this definition: **speciation without geographic separation**
       `,
       exercise: {

@@ -86,7 +86,9 @@ export const psychDisordersPart2Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: extent to which a diagnosis captures a distinct clinical condition
+
       2) Write the concept that matches: disorder characterized by excessive fear or anxiety and related behaviors
+
       3) Write the concept that matches: trauma-related disorder involving intrusion, avoidance, and hyperarousal patterns
 
       Use the exact vocabulary term from this part.

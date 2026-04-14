@@ -78,7 +78,9 @@ $$\\frac{(x+3)(x-3)}{x+3} = x - 3 \\quad (x \\neq -3)$$
 Give the numerical result.
 
 1) Expand and simplify: $(x + 3)(x - 3)$ when $x = 5$. Answer?
+
 2) If $x^2 + 6x + 9 = (x + a)^2$, what is $a$?
+
 3) $2(3x + 4) - (x - 2) = ?x + ?$ — what is the coefficient of $x$?
       `,
       exercise: {

@@ -95,7 +95,9 @@ export const bioEnergyFlowPart6Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **incorporation of inorganic carbon into organic molecules**
+
       2) Term for this definition: **oxidation of organic molecules releasing usable energy**
+
       3) Term for this definition: **microbial conversion of ammonium to nitrite and nitrate**
       `,
       exercise: {

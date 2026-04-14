@@ -86,7 +86,9 @@ export const psychSensationPart4Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: analysis that begins with sensory features
+
       2) Write the concept that matches: perception shaped by expectations and prior knowledge
+
       3) Write the concept that matches: reduced sensitivity to constant stimulation
 
       Use the exact vocabulary term from this part.

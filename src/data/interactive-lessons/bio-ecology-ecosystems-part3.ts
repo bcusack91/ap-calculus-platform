@@ -95,7 +95,9 @@ export const bioEcologyPart3Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **position in feeding hierarchy based on energy source**
+
       2) Term for this definition: **rate at which autotrophs convert energy into biomass**
+
       3) Term for this definition: **organism that recycles nutrients from organic matter**
       `,
       exercise: {

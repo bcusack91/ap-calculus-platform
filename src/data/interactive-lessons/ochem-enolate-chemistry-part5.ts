@@ -88,7 +88,9 @@ export const oChemEnolatePart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: enolate adds to carbonyl giving beta-hydroxy product
+
       2) Term for: dehydration of aldol product to enone
+
       3) Product pattern expected under ester + alkoxide base
       `,
       exercise: {

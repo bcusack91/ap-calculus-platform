@@ -86,7 +86,9 @@ export const psychTreatmentPart3Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: collaborative bond and agreement on goals and tasks
+
       2) Write the concept that matches: humanistic approach emphasizing empathy and unconditional positive regard
+
       3) Write the concept that matches: use of medication to treat psychological symptoms
 
       Use the exact vocabulary term from this part.

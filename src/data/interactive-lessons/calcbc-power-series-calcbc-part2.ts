@@ -2,185 +2,130 @@ export const calcbcPowerSeriesPart2Data = {
   topicSlug: 'power-series-calcbc',
   sections: [
     {
-      id: 'calcbcpowerseries-p2-intro',
+      id: 'ps2-intro',
       type: 'text' as const,
-      content: `
-# Power Series
+      content: `# Power Series — Interval of Convergence
 
-**Part 2 of 7 — Worked Examples**
+**Part 2 of 7 — Endpoint Testing**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### From Radius to Interval
 
-## Key Ideas
+After finding $R$, the open interval $( c - R,\\ c + R )$ is guaranteed. But endpoints need individual testing.
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+### Endpoint Testing Procedure
 
-## Formula Snapshot
+1. Find $R$ using Ratio/Root Test
+2. Substitute $x = c - R$ into $\\sum a_n(x-c)^n$ → get a numerical series
+3. Substitute $x = c + R$ → get another numerical series
+4. Test each for convergence (often $p$-series, alternating, geometric, etc.)
 
-When appropriate, use:
+### Complete Example: $\\sum_{n=1}^\\infty \\frac{x^n}{n}$
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+**Step 1:** $|a_{n+1}/a_n| = n/(n+1) \\to 1$. So $R = 1$.
 
-and interpret what the final value means in context.
-      `
+**Step 2:** At $x = 1$: $\\sum 1/n$ — **diverges** (harmonic)
+
+**Step 3:** At $x = -1$: $\\sum (-1)^n/n$ — **converges** (alternating harmonic)
+
+$$\\boxed{\\text{Interval of convergence: } [-1, 1)}$$
+
+> **AP Tip:** The interval notation matters! Use brackets $[$ for included endpoints, parentheses $($ for excluded.`
     },
     {
-      id: 'calcbcpowerseries-p2-mcq1',
+      id: 'ps2-patterns',
+      type: 'text' as const,
+      content: `### Common Endpoint Patterns
+
+| Series | $R$ | At $x = c+R$ | At $x = c-R$ | IOC |
+|--------|-----|-------------|-------------|-----|
+| $\\sum x^n/n$ | 1 | $\\sum 1/n$ div. | $\\sum(-1)^n/n$ conv. | $[-1,1)$ |
+| $\\sum x^n/n^2$ | 1 | $\\sum 1/n^2$ conv. | $\\sum(-1)^n/n^2$ conv. | $[-1,1]$ |
+| $\\sum x^n$ | 1 | $\\sum 1$ div. | $\\sum(-1)^n$ div. | $(-1,1)$ |
+| $\\sum n! x^n$ | 0 | N/A | N/A | $\\{0\\}$ |
+| $\\sum x^n/n!$ | $\\infty$ | N/A | N/A | $(-\\infty,\\infty)$ |
+
+### Key Insight
+
+At the positive endpoint ($x = c + R$): all terms are positive → test with $p$-series, comparison, etc.
+
+At the negative endpoint ($x = c - R$): signs alternate → often use AST.
+
+Common outcome: one endpoint includes (alternating convergence), one excludes (divergence).`
+    },
+    {
+      id: 'ps2-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Endpoint Testing Practice**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: '$\\sum_{n=1}^\\infty \\frac{(x-2)^n}{n \\cdot 3^n}$. The interval of convergence is:',
+            options: ['$[-1, 5)$', '$(-1, 5)$', '$[-1, 5]$', '$(-1, 5]$'],
+            correctAnswer: 0,
+            explanation: '$R = 3$, centered at $c = 2$. At $x = 5$: $\\sum 1/n$ diverges. At $x = -1$: $\\sum (-1)^n/n$ converges. IOC: $[-1, 5)$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: '$\\sum_{n=0}^\\infty \\frac{(x+1)^n}{2^n}$. The interval is:',
+            options: ['$(-3, 1)$', '$[-3, 1]$', '$(-3, 1]$', '$[-3, 1)$'],
+            correctAnswer: 0,
+            explanation: 'Geometric: $r = (x+1)/2$. $|r| < 1$ when $|x+1| < 2$, so $-3 < x < 1$. At $x = -3$: $\\sum (-1)^n$ diverges. At $x = 1$: $\\sum 1$ diverges. IOC: $(-3, 1)$.'
+          },
+          {
+            question: '$\\sum_{n=1}^\\infty \\frac{(-1)^n x^n}{n^2}$. The interval is:',
+            options: ['$[-1, 1]$', '$(-1, 1)$', '$[-1, 1)$', '$(-1, 1]$'],
+            correctAnswer: 0,
+            explanation: '$R = 1$. At $x = 1$: $\\sum (-1)^n/n^2$ converges absolutely. At $x = -1$: $\\sum (-1)^n(-1)^n/n^2 = \\sum 1/n^2$ converges. Both endpoints in: $[-1, 1]$.'
           }
         ]
       }
     },
     {
-      id: 'calcbcpowerseries-p2-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcpowerseries-p2-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcpowerseries-p2-dropdown',
+      id: 'ps2-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Interval Determination**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '$\\sum_{n=1}^\\infty \\frac{n(x-4)^n}{5^n}$. At $x = 9$ the endpoint series is:',
+            options: ['$\\sum n$ — diverges', '$\\sum (-1)^n n$ — diverges', '$\\sum n/5^n$ — converges', '$\\sum 1/n$ — diverges'],
+            correctAnswers: ['$\\sum n$ — diverges'],
+            hints: ['$x = 9$: $(x-4)^n/5^n = (5/5)^n = 1$. Series becomes $\\sum n$.'],
+            explanation: 'At $x = 9$: $\\sum n \\cdot 1^n = \\sum n$ diverges. Right endpoint not included.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcpowerseries-p2-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Worked Examples**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcpowerseries-p2-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'For the same series at $x = -1$:',
+            options: ['$\\sum (-1)^n n$ — diverges', '$\\sum n$ — converges', '$\\sum (-1)^n / n$ — converges', '$\\sum n / (-5)^n$ — converges'],
+            correctAnswers: ['$\\sum (-1)^n n$ — diverges'],
+            hints: ['$x = -1$: $(x-4)^n = (-5)^n$. Then $(-5)^n/5^n = (-1)^n$.'],
+            explanation: 'At $x = -1$: $\\sum n(-1)^n$. Since $|a_n| = n \\to \\infty$, this diverges. IOC: $(-1, 9)$.'
           }
         ]
       }
+    },
+    {
+      id: 'ps2-input',
+      type: 'input-box' as const,
+      content: '**Find the Left Endpoint**',
+      exercise: {
+        question: '$\\sum_{n=0}^\\infty \\frac{(x+3)^n}{4^n}$ has center $c = -3$ and radius $R = 4$. What is the LEFT endpoint of the open interval? Enter a number.',
+        correctAnswer: '-7',
+        acceptableAnswers: ['-7'],
+        hints: ['Left endpoint: $c - R = -3 - 4$.'],
+        explanation: 'Left endpoint: $c - R = -3 - 4 = -7$. The open interval is $(-7, 1)$. Test endpoints to determine if brackets or parentheses.'
+      }
+    },
+    {
+      id: 'ps2-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- After finding $R$, always test both endpoints
+- Positive endpoint often yields a positive-term series
+- Negative endpoint often yields an alternating series
+- Four possible IOC shapes: $(a,b)$, $[a,b)$, $(a,b]$, $[a,b]$
+- AP exam ALWAYS expects endpoint testing — don't skip it!
+
+> **Next:** Part 3 — Operations on Power Series.`
     }
   ]
-}
+};

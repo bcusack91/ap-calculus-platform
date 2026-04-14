@@ -88,7 +88,9 @@ export const oChemLipidsPart1Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: glycerol triester storing chemical energy
+
       2) Term for: amphiphilic lipid with phosphate-containing headgroup
+
       3) Product pattern expected under triacylglycerol + NaOH, heat
       `,
       exercise: {

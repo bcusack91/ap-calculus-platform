@@ -86,7 +86,9 @@ export const psychMoodPsychPart3Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: a fixed false belief resistant to contradictory evidence
+
       2) Write the concept that matches: perception-like experience without an external stimulus
+
       3) Write the concept that matches: reductions in normal emotional or motivational functioning
 
       Use the exact vocabulary term from this part.

@@ -86,7 +86,9 @@ export const psychMemoryEncodePart3Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: linking new information to meaning and prior knowledge
+
       2) Write the concept that matches: grouping information into manageable units
+
       3) Write the concept that matches: stabilization of memories over time
 
       Use the exact vocabulary term from this part.

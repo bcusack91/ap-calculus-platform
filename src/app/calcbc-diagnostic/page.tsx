@@ -10,6 +10,7 @@ import {
   generateCalcBCDiagnosticTest,
   scoreCalcBCDiagnostic,
   pickNextForm,
+  TOTAL_FORMS,
   type CalcBCDiagnosticTestData,
   type CalcBCDiagnosticResults,
 } from '@/data/ap-calculus-bc-diagnostic'
@@ -96,8 +97,8 @@ export default function CalcBCDiagnosticPage() {
 
   const startTest = useCallback(() => {
     const previousForms = history
-      .map(h => (h.results as Record<string, unknown>)?.form as 'A' | 'B' | undefined)
-      .filter((f): f is 'A' | 'B' => f === 'A' || f === 'B')
+      .map(h => Number((h.results as Record<string, unknown>)?.form))
+      .filter((f): f is number => Number.isFinite(f) && f >= 1 && f <= TOTAL_FORMS)
 
     const form = pickNextForm(previousForms)
     const data = generateCalcBCDiagnosticTest(form)
@@ -405,7 +406,7 @@ export default function CalcBCDiagnosticPage() {
               <ol className="space-y-2 text-sm text-blue-700 dark:text-blue-400 list-decimal list-inside">
                 <li>Review the {results.recommendedTopics.length} recommended module{results.recommendedTopics.length > 1 ? 's' : ''} above</li>
                 <li>Complete each module&apos;s lessons, practice problems, and flashcards</li>
-                <li>Come back and take the next diagnostic test (Form {results.form === 'A' ? 'B' : 'A'}) — different questions, same breadth</li>
+                <li>Come back and take the next diagnostic test (Form {results.form >= TOTAL_FORMS ? 1 : results.form + 1}) — different questions, same breadth</li>
                 <li>Get a new set of personalized recommendations based on your updated results</li>
                 <li>Repeat until you&apos;re scoring 4+ across all units!</li>
               </ol>
@@ -484,7 +485,7 @@ export default function CalcBCDiagnosticPage() {
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">What to Expect</h3>
             <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              {['~35 questions covering both AB foundations and BC-exclusive content', '50 minute time limit', 'Estimated AP Score (1–5) with AB Subscore — just like the real exam', 'Per-unit breakdown across all 11 tested domains', '3-5 personalized module recommendations', 'Alternating forms (A/B) with different questions each time'].map(text => (
+              {['~35 questions covering both AB foundations and BC-exclusive content', '50 minute time limit', 'Estimated AP Score (1–5) with AB Subscore — just like the real exam', 'Per-unit breakdown across all 11 tested domains', '3-5 personalized module recommendations', '10 unique forms with different questions each time'].map(text => (
                 <li key={text} className="flex items-start gap-2">
                   <svg className="mt-0.5 h-4 w-4 shrink-0 text-violet-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                   {text}

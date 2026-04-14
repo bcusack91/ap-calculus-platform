@@ -2,190 +2,241 @@ export const bioCellRespirationPart2Data = {
   topicSlug: 'cellular-respiration',
   sections: [
     {
-      id: 'bio-cellular-respiration-p2-s1-intro',
+      id: 'cr2-intro',
       type: 'text' as const,
       content: `
-      ## Cellular Respiration: Glycolysis
-      
-      **Part 2 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through substrate-level phosphorylation in glycolysis.
-      
-      ### Worked biological example
-      A student team investigates substrate-level phosphorylation in glycolysis. Their first interpretation step is to identify how **pyruvate oxidation** and **citric acid cycle** work together in the same pathway.
-      
-      - They classify the primary signal using **pyruvate oxidation**: converts pyruvate to acetyl-CoA and releases CO2.
-      - They trace the downstream response using **citric acid cycle**: oxidizes acetyl groups and generates NADH/FADH2.
-      - They then compare outcomes with **electron transport chain** and **chemiosmosis** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **pyruvate oxidation**
-      - **citric acid cycle**
-      - **electron transport chain**
-      - **chemiosmosis**
+## Glycolysis — Splitting Glucose
+
+**Part 2 of 7**
+
+Glycolysis (from Greek *glykys* = sweet, *lysis* = splitting) is the first stage of cellular respiration and is one of the most ancient metabolic pathways — virtually all living organisms perform glycolysis, suggesting it evolved before the atmosphere contained significant oxygen.
+
+**Key facts:**
+- Location: **Cytoplasm** (cytosol)
+- Does **not** require oxygen (anaerobic)
+- Converts one 6-carbon glucose into two 3-carbon **pyruvate** molecules
+- Net yield: **2 ATP** and **2 NADH** per glucose
       `
     },
     {
-      id: 'bio-cellular-respiration-p2-s2-mcq-core',
+      id: 'cr2-phases',
+      type: 'text' as const,
+      content: `
+### The Two Phases of Glycolysis
+
+Glycolysis consists of **10 enzyme-catalyzed reactions** divided into two phases:
+
+**Phase 1: Energy Investment Phase (Steps 1-5)**
+
+In this phase, the cell *spends* 2 ATP to phosphorylate and rearrange glucose:
+
+1. **Hexokinase** phosphorylates glucose to glucose-6-phosphate (costs 1 ATP)
+2. Isomerase converts glucose-6-phosphate to fructose-6-phosphate
+3. **Phosphofructokinase (PFK)** phosphorylates fructose-6-phosphate to fructose-1,6-bisphosphate (costs 1 ATP) — *this is the committed step and primary regulatory point*
+4. Aldolase splits the 6-carbon sugar into two 3-carbon molecules (G3P and DHAP)
+5. Isomerase converts DHAP to G3P — from here, every reaction occurs **twice** (once per G3P)
+
+**Phase 2: Energy Payoff Phase (Steps 6-10)**
+
+Each G3P molecule is oxidized and rearranged, producing ATP and NADH:
+
+6. G3P is oxidized; NAD\\(^+\\) is reduced to **NADH** (×2)
+7. Substrate-level phosphorylation produces **1 ATP** per G3P (×2)
+8-9. Molecular rearrangements prepare the substrate for the final step
+10. **Pyruvate kinase** catalyzes the final substrate-level phosphorylation: **1 ATP** per G3P (×2)
+
+**Net accounting per glucose:**
+
+| Item | Invested | Produced | Net |
+|------|----------|----------|-----|
+| ATP | -2 | +4 | **+2** |
+| NADH | 0 | +2 | **+2** |
+| Pyruvate | 0 | +2 | **+2** |
+      `
+    },
+    {
+      id: 'cr2-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Glycolysis Steps
       `,
       exercise: {
         questions: [
           {
-            question: 'For Glycolysis, what best describes pyruvate oxidation?',
+            question: 'Why is the phosphofructokinase (PFK) reaction considered the "committed step" of glycolysis?',
             options: [
-              'uses proton gradient energy to drive ATP synthesis',
-              'transfers electrons to oxygen through membrane complexes',
-              'oxidizes acetyl groups and generates NADH/FADH2',
-              'converts pyruvate to acetyl-CoA and releases CO2'
-            ],
-            correctAnswer: 3,
-            explanation: 'pyruvate oxidation is best matched with: converts pyruvate to acetyl-CoA and releases CO2.'
-          },
-          {
-            question: 'In this part\'s context, what is the strongest definition of citric acid cycle?',
-            options: [
-              'transfers electrons to oxygen through membrane complexes',
-              'enzyme complex that phosphorylates ADP using proton flow',
-              'oxidizes acetyl groups and generates NADH/FADH2',
-              'converts pyruvate to acetyl-CoA and releases CO2'
+              'It is the first reaction in the pathway',
+              'It produces the first ATP',
+              'It is irreversible and commits the sugar to being split — plus PFK is the primary allosteric regulatory enzyme',
+              'It is the only step that requires oxygen'
             ],
             correctAnswer: 2,
-            explanation: 'citric acid cycle is best matched with: oxidizes acetyl groups and generates NADH/FADH2.'
+            explanation: 'PFK catalyzes an irreversible reaction and is allosterically regulated by ATP (inhibitor), AMP (activator), and citrate (inhibitor). Once fructose-1,6-bisphosphate is formed, the cell is committed to completing glycolysis.'
+          },
+          {
+            question: 'Glycolysis produces 4 ATP but has a net yield of only 2 ATP. Why?',
+            options: [
+              '2 ATP are consumed by the electron transport chain',
+              '2 ATP are used during the energy investment phase to phosphorylate the sugar',
+              '2 ATP are broken down to produce NADH',
+              '2 ATP remain attached to pyruvate'
+            ],
+            correctAnswer: 1,
+            explanation: 'Steps 1 and 3 each consume 1 ATP to phosphorylate the sugar (energy investment phase). Steps 7 and 10 each produce 2 ATP (one per G3P). Gross = 4 ATP, investment = 2 ATP, net = 2 ATP.'
+          },
+          {
+            question: 'After step 4 of glycolysis (aldolase reaction), every subsequent reaction occurs twice per original glucose molecule. Why?',
+            options: [
+              'Two glucose molecules enter glycolysis simultaneously',
+              'The 6-carbon sugar is split into two 3-carbon molecules (G3P)',
+              'Each enzyme has two active sites',
+              'Isomerase duplicates the G3P molecule'
+            ],
+            correctAnswer: 1,
+            explanation: 'Aldolase cleaves fructose-1,6-bisphosphate into glyceraldehyde-3-phosphate (G3P) and dihydroxyacetone phosphate (DHAP). DHAP is then converted to a second G3P. Each G3P proceeds through steps 6-10 independently.'
           }
         ]
       }
     },
     {
-      id: 'bio-cellular-respiration-p2-s3-deep-dive',
+      id: 'cr2-regulation',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Glycolysis
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → pyruvate oxidation
-      - **Immediate processing** → citric acid cycle
-      - **System-level consequence** → electron transport chain
-      - **Measured readout** → chemiosmosis
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | pyruvate oxidation | converts pyruvate to acetyl-CoA and releases CO2 | Early shift in the primary variable |
-      | citric acid cycle | oxidizes acetyl groups and generates NADH/FADH2 | Mid-pathway change in process rate |
-      | electron transport chain | transfers electrons to oxygen through membrane complexes | Downstream phenotype trend |
-      | chemiosmosis | uses proton gradient energy to drive ATP synthesis | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Regulation of Glycolysis
+
+The rate of glycolysis is tightly controlled to match the energy needs of the cell.  The key regulatory enzyme is **phosphofructokinase (PFK)**, which is allosterically regulated:
+
+| Regulator | Effect on PFK | Biological Logic |
+|-----------|--------------|-----------------|
+| **ATP** (high) | Inhibits | Cell has plenty of energy — slow down |
+| **AMP** (high) | Activates | Cell is running low on energy — speed up |
+| **Citrate** (high) | Inhibits | Citric acid cycle is backed up — slow down glycolysis |
+| **Fructose-2,6-bisphosphate** | Activates | Hormonal signal (insulin) promotes glucose use |
+
+This is a classic example of **feedback inhibition** — the end product (ATP) inhibits an early enzyme in the pathway, preventing wasteful overproduction.
+
+**Hexokinase** is also regulated: its product, glucose-6-phosphate, acts as a competitive inhibitor. When glycolysis slows (backing up G6P), hexokinase activity decreases, preventing unnecessary glucose phosphorylation.
+
+> **AP Exam Tip:** The AP Biology exam frequently asks about regulatory mechanisms. Remember that PFK is the primary control point of glycolysis, and that ATP is both a *product* of the pathway and an *inhibitor* of PFK — a direct feedback loop.
       `
     },
     {
-      id: 'bio-cellular-respiration-p2-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **converts pyruvate to acetyl-CoA and releases CO2**
-      2) Term for this definition: **oxidizes acetyl groups and generates NADH/FADH2**
-      3) Term for this definition: **transfers electrons to oxygen through membrane complexes**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['pyruvate oxidation', 'citric acid cycle', 'electron transport chain'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'converts pyruvate to acetyl-CoA and releases CO2\'.',
-        hint2: 'Second blank points to citric acid cycle; think about the role \'oxidizes acetyl groups and generates NADH/FADH2\'.',
-        hint3: 'Third blank is electron transport chain; connect it to \'transfers electrons to oxygen through membrane complexes\'.',
-        explanation: 'Correct set: pyruvate oxidation, citric acid cycle, electron transport chain. These three terms define the core mechanism chain for Glycolysis.'
-      }
-    },
-    {
-      id: 'bio-cellular-respiration-p2-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'pyruvate oxidation',
-            options: ['converts pyruvate to acetyl-CoA and releases CO2', 'uses proton gradient energy to drive ATP synthesis', 'transfers electrons to oxygen through membrane complexes', 'oxidizes acetyl groups and generates NADH/FADH2']
-          },
-          {
-            label: 'citric acid cycle',
-            options: ['transfers electrons to oxygen through membrane complexes', 'enzyme complex that phosphorylates ADP using proton flow', 'oxidizes acetyl groups and generates NADH/FADH2', 'uses proton gradient energy to drive ATP synthesis']
-          },
-          {
-            label: 'electron transport chain',
-            options: ['enzyme complex that phosphorylates ADP using proton flow', 'high-energy electron carrier delivering reducing power', 'uses proton gradient energy to drive ATP synthesis', 'transfers electrons to oxygen through membrane complexes']
-          }
-        ],
-        correctAnswers: ['converts pyruvate to acetyl-CoA and releases CO2', 'oxidizes acetyl groups and generates NADH/FADH2', 'transfers electrons to oxygen through membrane complexes'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'pyruvate oxidation, citric acid cycle, and electron transport chain should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-cellular-respiration-p2-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because pyruvate oxidation converts pyruvate to acetyl-CoA and releases CO2, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Oxygen is the terminal electron acceptor, not a direct reactant in every step.
-      - NADH and FADH2 are not ATP themselves; they transfer electron energy.
-      - Pathway location matters for interpretation of transport and regulation questions.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-cellular-respiration-p2-s7-mcq-final',
+      id: 'cr2-quiz2',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Checkpoint — Regulation
       `,
       exercise: {
         questions: [
           {
-            question: 'In substrate-level phosphorylation in glycolysis, the observed pattern is: uses proton gradient energy to drive ATP synthesis. What term should anchor the explanation?',
+            question: 'A cell has very high ATP levels and low AMP levels. How will this affect glycolysis?',
             options: [
-              'pyruvate oxidation',
-              'chemiosmosis',
-              'electron transport chain',
-              'citric acid cycle'
+              'Glycolysis will speed up because ATP activates PFK',
+              'Glycolysis will slow down because ATP inhibits PFK',
+              'Glycolysis will stop completely because ATP inhibits hexokinase',
+              'There will be no effect on the rate of glycolysis'
             ],
             correctAnswer: 1,
-            explanation: 'Use chemiosmosis because it directly maps to the described biological pattern: uses proton gradient energy to drive ATP synthesis.'
+            explanation: 'High ATP inhibits PFK allosterically, slowing glycolysis. Low AMP means there is no activating signal. The cell has sufficient energy, so there is no need to break down more glucose.'
           },
           {
-            question: 'In an AP-style free-response about glycolysis, the observed pattern is: enzyme complex that phosphorylates ADP using proton flow. What term should anchor the explanation?',
+            question: 'Which molecule serves as a positive allosteric activator of PFK, signaling that the cell needs more energy?',
             options: [
-              'electron transport chain',
-              'ATP synthase',
-              'NADH',
-              'chemiosmosis'
+              'ATP',
+              'Citrate',
+              'AMP',
+              'Glucose-6-phosphate'
+            ],
+            correctAnswer: 2,
+            explanation: 'AMP accumulates when ATP is being consumed faster than it is produced (ATP -> ADP -> AMP). High AMP signals energy deficit and activates PFK to speed up glycolysis and ATP production.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cr2-input',
+      type: 'input-boxes' as const,
+      content: `
+### Key Terms — Glycolysis
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'The 3-carbon product of glycolysis that proceeds to the next stage of respiration:',
+            answer: 'pyruvate',
+            acceptableAnswers: ['pyruvate', 'Pyruvate', 'pyruvic acid', 'Pyruvic acid'],
+            placeholder: 'e.g. acetaldehyde'
+          },
+          {
+            question: 'The primary regulatory enzyme of glycolysis (abbreviation is acceptable):',
+            answer: 'PFK',
+            acceptableAnswers: ['PFK', 'phosphofructokinase', 'Phosphofructokinase', 'pfk'],
+            placeholder: 'e.g. hexokinase'
+          },
+          {
+            question: 'The net number of ATP molecules produced per glucose during glycolysis:',
+            answer: '2',
+            acceptableAnswers: ['2', 'two', 'Two'],
+            placeholder: 'e.g. 4'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cr2-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+### Match the Glycolysis Concept
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'The enzyme that catalyzes the committed step of glycolysis is:',
+            options: ['Hexokinase', 'Phosphofructokinase', 'Pyruvate kinase', 'Aldolase'],
+            correctAnswer: 'Phosphofructokinase'
+          },
+          {
+            question: 'The phase where ATP is consumed to phosphorylate glucose is the:',
+            options: ['Energy payoff phase', 'Energy investment phase', 'Oxidation phase', 'Reduction phase'],
+            correctAnswer: 'Energy investment phase'
+          },
+          {
+            question: 'The type of phosphorylation that produces ATP in glycolysis is:',
+            options: ['Oxidative phosphorylation', 'Photophosphorylation', 'Substrate-level phosphorylation', 'Chemiosmosis'],
+            correctAnswer: 'Substrate-level phosphorylation'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cr2-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Exit Ticket — Glycolysis Mastery
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A yeast cell is placed in an anaerobic environment with abundant glucose. Which of the following will it still be able to perform?',
+            options: [
+              'Oxidative phosphorylation',
+              'The citric acid cycle',
+              'Glycolysis',
+              'Pyruvate oxidation'
+            ],
+            correctAnswer: 2,
+            explanation: 'Glycolysis does not require oxygen and occurs in the cytoplasm. In anaerobic conditions, the cell can still perform glycolysis, followed by fermentation to regenerate NAD+ for continued glycolysis.'
+          },
+          {
+            question: 'If a mutation inactivated the enzyme aldolase, what would be the direct consequence?',
+            options: [
+              'Glucose could not be phosphorylated',
+              'Fructose-1,6-bisphosphate could not be split into two 3-carbon molecules',
+              'Pyruvate could not be converted to acetyl-CoA',
+              'NAD+ could not be reduced to NADH'
             ],
             correctAnswer: 1,
-            explanation: 'Use ATP synthase because it directly maps to the described biological pattern: enzyme complex that phosphorylates ADP using proton flow.'
+            explanation: 'Aldolase catalyzes step 4 — the cleavage of fructose-1,6-bisphosphate into G3P and DHAP. Without aldolase, the 6-carbon intermediate accumulates, and no 3-carbon products are formed for the payoff phase.'
           }
         ]
       }

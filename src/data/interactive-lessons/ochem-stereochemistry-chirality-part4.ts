@@ -88,7 +88,9 @@ export const oChemStereoPart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: stereoisomers that are not mirror images
+
       2) Term for: achiral molecule containing stereocenters and internal symmetry
+
       3) Product pattern expected under OsO4 dihydroxylation
       `,
       exercise: {

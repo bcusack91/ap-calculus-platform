@@ -88,7 +88,9 @@ export const oChemCarboxylicAcidsPart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: derivative containing two acyl groups linked by oxygen
+
       2) Term for: carboxylic derivative with alkoxy leaving group
+
       3) Product pattern expected under RCO2H + ROH, H+
       `,
       exercise: {

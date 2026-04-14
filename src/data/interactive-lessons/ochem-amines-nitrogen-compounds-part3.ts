@@ -88,7 +88,9 @@ export const oChemAminesPart3Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: successive alkylation can push to quaternary ammonium
+
       2) Term for: carbonyl + amine then reduction to C-N single bond
+
       3) Product pattern expected under R-COCl + R'NH2
       `,
       exercise: {

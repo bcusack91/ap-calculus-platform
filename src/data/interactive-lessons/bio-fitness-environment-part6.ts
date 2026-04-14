@@ -95,7 +95,9 @@ export const bioFitnessPart6Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **favors intermediate phenotypes**
+
       2) Term for this definition: **favors one phenotypic extreme**
+
       3) Term for this definition: **favors multiple extremes over intermediates**
       `,
       exercise: {

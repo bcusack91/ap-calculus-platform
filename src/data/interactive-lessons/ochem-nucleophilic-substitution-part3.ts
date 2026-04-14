@@ -88,7 +88,9 @@ export const oChemSNPart3Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: group that departs with electron pair
+
       2) Term for: reactivity of electron pair donor toward electrophile
+
       3) Product pattern expected under 2° substrate + NaI in acetone
       `,
       exercise: {

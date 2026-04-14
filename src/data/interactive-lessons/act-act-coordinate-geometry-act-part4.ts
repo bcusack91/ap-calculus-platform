@@ -88,7 +88,9 @@ Center $= (4, -3)$, radius $= 6$. ✓
 Given $x^2 + y^2 - 4x + 10y + 20 = 0$, complete the square.
 
 1) What is the x-coordinate of the center?
+
 2) What is the y-coordinate of the center?
+
 3) What is the radius?
       `,
       exercise: {

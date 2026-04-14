@@ -94,7 +94,9 @@ $$= \\frac{8^2}{4} - 9 = \\frac{64}{4} - 9 = 16 - 9 = 7$$
 **Exponents & Roots Practice** 🧮
 
 1) Evaluate: $2^5$
+
 2) Simplify $\\sqrt{48}$. Enter in the form $a\\sqrt{b}$ *(e.g. 4sqrt3)*.
+
 3) Evaluate: $5 \\times 3 - 4^2 + 1$
       `,
       exercise: {

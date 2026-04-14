@@ -83,7 +83,9 @@ $$y - 1 = -2(x - 4) \\implies y = -2x + 9$$
 **Slope Calculations** 🧮
 
 1) Slope through $(0, 4)$ and $(2, 10)$?
+
 2) y-intercept of $y = -3x + 7$? (just the number)
+
 3) If a line has slope $5$, its perpendicular has slope $-1/k$. What is $k$?
       `,
       exercise: {

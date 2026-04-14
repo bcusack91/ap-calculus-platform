@@ -10,7 +10,7 @@ import type { StudyPlanTemplate } from '@/lib/study-plan-utils'
 /*  Accent colour map — every class literal for Tailwind detection     */
 /* ------------------------------------------------------------------ */
 
-type AccentColor = 'blue' | 'emerald' | 'green' | 'rose' | 'cyan' | 'amber' | 'red'
+type AccentColor = 'blue' | 'emerald' | 'green' | 'rose' | 'cyan' | 'amber' | 'red' | 'violet'
 
 const A: Record<AccentColor, {
   pageBg: string; selBorder: string; selRing: string; btnBg: string
@@ -64,6 +64,13 @@ const A: Record<AccentColor, {
     btnBg: 'from-red-600 to-rose-600', btnBorder: 'border-red-500',
     btnText: 'text-red-600 dark:text-red-400', btnHover: 'hover:bg-red-50 dark:hover:bg-red-900/20',
     link: 'text-red-600 hover:underline dark:text-red-400',
+  },
+  violet: {
+    pageBg: 'from-violet-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900',
+    selBorder: 'border-violet-500', selRing: 'ring-violet-300 dark:ring-violet-600',
+    btnBg: 'from-violet-600 to-purple-600', btnBorder: 'border-violet-500',
+    btnText: 'text-violet-600 dark:text-violet-400', btnHover: 'hover:bg-violet-50 dark:hover:bg-violet-900/20',
+    link: 'text-violet-600 hover:underline dark:text-violet-400',
   },
 }
 

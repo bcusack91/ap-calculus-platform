@@ -86,7 +86,9 @@ export const psychMoodPsychPart7Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: elevated or irritable mood with increased energy and reduced need for sleep
+
       2) Write the concept that matches: disorder involving episodes of depression and mania or hypomania
+
       3) Write the concept that matches: a fixed false belief resistant to contradictory evidence
 
       Use the exact vocabulary term from this part.

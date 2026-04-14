@@ -2,190 +2,215 @@ export const bioPhotosynthesisPart6Data = {
   topicSlug: 'photosynthesis',
   sections: [
     {
-      id: 'bio-photosynthesis-p6-s1-intro',
+      id: 'ps6-intro',
       type: 'text' as const,
       content: `
-      ## Photosynthesis: Problem-Solving Workshop
-      
-      **Part 6 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through photosynthesis experiment data analysis.
-      
-      ### Worked biological example
-      A student team investigates photosynthesis experiment data analysis. Their first interpretation step is to identify how **photorespiration** and **C4 pathway** work together in the same pathway.
-      
-      - They classify the primary signal using **photorespiration**: oxygenation pathway that reduces photosynthetic efficiency.
-      - They trace the downstream response using **C4 pathway**: carbon-concentrating mechanism reducing photorespiration.
-      - They then compare outcomes with **CAM pathway** and **stomata** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **photorespiration**
-      - **C4 pathway**
-      - **CAM pathway**
-      - **stomata**
+## Problem-Solving Workshop — Photosynthesis
+
+**Part 6 of 7**
+
+This workshop applies photosynthesis concepts to experimental scenarios and data interpretation problems commonly tested on the AP Biology exam.
       `
     },
     {
-      id: 'bio-photosynthesis-p6-s2-mcq-core',
+      id: 'ps6-scenario1',
+      type: 'text' as const,
+      content: `
+### Scenario 1: Hill Reaction Experiment
+
+In 1937, Robert Hill demonstrated that isolated chloroplasts could produce O\\(_2\\) in the presence of an artificial electron acceptor (like DCPIP, a dye that changes from blue to colorless when reduced), even without CO\\(_2\\).
+
+**Experimental setup:**
+- Tube A: Chloroplasts + DCPIP + light → DCPIP decolorizes; O\\(_2\\) produced
+- Tube B: Chloroplasts + DCPIP + dark → No color change; no O\\(_2\\)
+- Tube C: Boiled chloroplasts + DCPIP + light → No color change; no O\\(_2\\)
+- Tube D: Chloroplasts + no DCPIP + light → Minimal O\\(_2\\) (DCPIP is needed as electron acceptor)
+
+This experiment demonstrated that:
+1. The light reactions can occur independently of the Calvin cycle
+2. O\\(_2\\) comes from water splitting, not from CO\\(_2\\)
+3. Light and functional proteins are both required
+      `
+    },
+    {
+      id: 'ps6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Scenario 1 Questions
       `,
       exercise: {
         questions: [
           {
-            question: 'For Problem-Solving Workshop, what best describes photorespiration?',
+            question: 'In the Hill reaction experiment, why does Tube C (boiled chloroplasts) not produce O2 or decolorize DCPIP?',
             options: [
-              'carbon-concentrating mechanism reducing photorespiration',
-              'leaf pores regulating gas exchange and water loss',
-              'oxygenation pathway that reduces photosynthetic efficiency',
-              'temporal separation of CO2 capture and Calvin cycle'
+              'Boiling removes CO2 from the solution',
+              'Boiling denatures the photosystem proteins and enzymes required for the light reactions',
+              'Boiling destroys the chlorophyll pigments completely (they photobleach)',
+              'Boiling prevents DCPIP from accepting electrons'
             ],
-            correctAnswer: 2,
-            explanation: 'photorespiration is best matched with: oxygenation pathway that reduces photosynthetic efficiency.'
+            correctAnswer: 1,
+            explanation: 'Boiling denatures proteins, including the photosystem complexes, electron transport chain components, and the oxygen-evolving complex. Without functional proteins, the light reactions cannot proceed, even though chlorophyll pigments may still be present.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of C4 pathway?',
+            question: 'The Hill reaction showed that O2 production does not require CO2. What does this tell us about the source of O2 in photosynthesis?',
             options: [
-              'temporal separation of CO2 capture and Calvin cycle',
-              'capture light energy to generate ATP and NADPH',
-              'carbon-concentrating mechanism reducing photorespiration',
-              'oxygenation pathway that reduces photosynthetic efficiency'
+              'O2 comes from the breakdown of CO2',
+              'O2 comes from the splitting of water molecules, which does not require CO2',
+              'O2 comes from decarboxylation reactions',
+              'O2 is released from the DCPIP dye'
             ],
-            correctAnswer: 2,
-            explanation: 'C4 pathway is best matched with: carbon-concentrating mechanism reducing photorespiration.'
+            correctAnswer: 1,
+            explanation: 'Since O2 is produced without CO2, the oxygen cannot come from CO2. Instead, it comes from the photolysis (splitting) of water at PSII. This was later confirmed by isotope tracing experiments using 18-O labeled water.'
           }
         ]
       }
     },
     {
-      id: 'bio-photosynthesis-p6-s3-deep-dive',
+      id: 'ps6-scenario2',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Problem-Solving Workshop
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → photorespiration
-      - **Immediate processing** → C4 pathway
-      - **System-level consequence** → CAM pathway
-      - **Measured readout** → stomata
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | photorespiration | oxygenation pathway that reduces photosynthetic efficiency | Early shift in the primary variable |
-      | C4 pathway | carbon-concentrating mechanism reducing photorespiration | Mid-pathway change in process rate |
-      | CAM pathway | temporal separation of CO2 capture and Calvin cycle | Downstream phenotype trend |
-      | stomata | leaf pores regulating gas exchange and water loss | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Scenario 2: The Lollipop Experiment (Calvin and Benson)
+
+Melvin Calvin and Andrew Benson used the "lollipop" apparatus and \\(^{14}\\text{C}\\)-labeled CO\\(_2\\) to trace the path of carbon through photosynthesis:
+
+1. Algae (*Chlorella*) were grown in a thin, flat flask illuminated continuously
+2. \\(^{14}\\text{CO}_2\\) was injected into the culture
+3. At various time intervals (5 seconds, 30 seconds, 5 minutes), samples were killed in hot methanol
+4. Radioactive compounds were separated by **two-dimensional paper chromatography** and identified by autoradiography
+
+**Results:**
+- After **5 seconds:** Nearly all \\(^{14}\\text{C}\\) was in **3-PGA** (confirming it as the first stable product)
+- After **30 seconds:** \\(^{14}\\text{C}\\) appeared in G3P, RuBP, and several sugar phosphates
+- After **5 minutes:** \\(^{14}\\text{C}\\) was found in glucose, amino acids, and lipids
+
+This experiment mapped out the complete Calvin cycle and earned Calvin the 1961 Nobel Prize.
       `
     },
     {
-      id: 'bio-photosynthesis-p6-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **oxygenation pathway that reduces photosynthetic efficiency**
-      2) Term for this definition: **carbon-concentrating mechanism reducing photorespiration**
-      3) Term for this definition: **temporal separation of CO2 capture and Calvin cycle**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['photorespiration', 'C4 pathway', 'CAM pathway'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'oxygenation pathway that reduces photosynthetic efficiency\'.',
-        hint2: 'Second blank points to C4 pathway; think about the role \'carbon-concentrating mechanism reducing photorespiration\'.',
-        hint3: 'Third blank is CAM pathway; connect it to \'temporal separation of CO2 capture and Calvin cycle\'.',
-        explanation: 'Correct set: photorespiration, C4 pathway, CAM pathway. These three terms define the core mechanism chain for Problem-Solving Workshop.'
-      }
-    },
-    {
-      id: 'bio-photosynthesis-p6-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'photorespiration',
-            options: ['carbon-concentrating mechanism reducing photorespiration', 'leaf pores regulating gas exchange and water loss', 'oxygenation pathway that reduces photosynthetic efficiency', 'temporal separation of CO2 capture and Calvin cycle']
-          },
-          {
-            label: 'C4 pathway',
-            options: ['temporal separation of CO2 capture and Calvin cycle', 'capture light energy to generate ATP and NADPH', 'carbon-concentrating mechanism reducing photorespiration', 'leaf pores regulating gas exchange and water loss']
-          },
-          {
-            label: 'CAM pathway',
-            options: ['leaf pores regulating gas exchange and water loss', 'initiates electron flow by oxidizing water', 'temporal separation of CO2 capture and Calvin cycle', 'capture light energy to generate ATP and NADPH']
-          }
-        ],
-        correctAnswers: ['oxygenation pathway that reduces photosynthetic efficiency', 'carbon-concentrating mechanism reducing photorespiration', 'temporal separation of CO2 capture and Calvin cycle'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'photorespiration, C4 pathway, and CAM pathway should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-photosynthesis-p6-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because photorespiration oxygenation pathway that reduces photosynthetic efficiency, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Oxygen released in photosynthesis comes from water splitting, not CO2.
-      - C4 and CAM pathways are adaptations to environmental constraints, not universally superior modes.
-      - Rate-limiting factors can change depending on conditions.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-photosynthesis-p6-s7-mcq-final',
+      id: 'ps6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Scenario 2 Questions
       `,
       exercise: {
         questions: [
           {
-            question: 'In photosynthesis experiment data analysis, the observed pattern is: leaf pores regulating gas exchange and water loss. What term should anchor the explanation?',
+            question: 'In the Calvin-Benson experiment, why was 3-PGA the first molecule to become radioactively labeled?',
             options: [
-              'photorespiration',
-              'C4 pathway',
-              'stomata',
-              'CAM pathway'
-            ],
-            correctAnswer: 2,
-            explanation: 'Use stomata because it directly maps to the described biological pattern: leaf pores regulating gas exchange and water loss.'
-          },
-          {
-            question: 'In an AP-style free-response about problem-solving workshop, the observed pattern is: capture light energy to generate ATP and NADPH. What term should anchor the explanation?',
-            options: [
-              'photosystem II',
-              'light reactions',
-              'stomata',
-              'CAM pathway'
+              'Because 3-PGA is the most abundant molecule in the chloroplast',
+              'Because 3-PGA is the first stable product of CO2 fixation by RuBisCO',
+              'Because 3-PGA directly absorbs 14C from the atmosphere',
+              'Because RuBisCO converts 3-PGA into RuBP'
             ],
             correctAnswer: 1,
-            explanation: 'Use light reactions because it directly maps to the described biological pattern: capture light energy to generate ATP and NADPH.'
+            explanation: 'When 14CO2 enters the Calvin cycle, RuBisCO attaches the 14C to RuBP (5C), forming an unstable 6C intermediate that immediately splits into two 3-PGA molecules. Since this is the first stable product, 3-PGA is the first to contain the radioactive label.'
+          },
+          {
+            question: 'If the light is suddenly turned OFF while 14CO2 is being supplied, what would happen to the levels of 3-PGA and RuBP?',
+            options: [
+              'Both would increase',
+              '3-PGA would increase (cannot be reduced without NADPH); RuBP would decrease (consumed but not regenerated)',
+              'Both would decrease',
+              '3-PGA would decrease; RuBP would increase'
+            ],
+            correctAnswer: 1,
+            explanation: 'Without light, the light reactions stop producing ATP and NADPH. 3-PGA cannot be reduced to G3P (needs NADPH and ATP), so it accumulates. RuBP cannot be regenerated (needs ATP), so it is consumed but not replaced, and its level drops.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'ps6-scenario3',
+      type: 'text' as const,
+      content: `
+### Scenario 3: Comparing C3 and C4 Productivity
+
+Researchers measure net photosynthesis rates in a C3 grass and a C4 grass under varying temperatures:
+
+| Temperature (°C) | C3 Net Photosynthesis (\\(\\mu\\)mol CO\\(_2\\)/m\\(^2\\)/s) | C4 Net Photosynthesis (\\(\\mu\\)mol CO\\(_2\\)/m\\(^2\\)/s) |
+|------|------|------|
+| 10 | 12 | 5 |
+| 20 | 22 | 18 |
+| 30 | 18 | 30 |
+| 35 | 10 | 35 |
+| 40 | 3 | 28 |
+| 45 | 0 | 8 |
+      `
+    },
+    {
+      id: 'ps6-quiz3',
+      type: 'multiple-choice' as const,
+      content: `
+### Scenario 3 Questions
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'At 30 °C, C3 net photosynthesis drops from its peak, but C4 continues to increase. What explains this difference?',
+            options: [
+              'C4 plants have more chloroplasts',
+              'C3 plants experience increasing photorespiration at higher temperatures, while C4 plants concentrate CO2 around RuBisCO, avoiding this problem',
+              'C4 plants use a completely different form of RuBisCO',
+              'C3 plants cannot absorb light at high temperatures'
+            ],
+            correctAnswer: 1,
+            explanation: 'At higher temperatures, RuBisCO in C3 plants increasingly fixes O2 instead of CO2 (photorespiration), reducing net carbon gain. C4 plants pump CO2 into bundle-sheath cells via PEP carboxylase, maintaining high CO2 around RuBisCO and virtually eliminating photorespiration.'
+          },
+          {
+            question: 'At 10 °C, the C3 grass outperforms the C4 grass. Why?',
+            options: [
+              'C3 plants have antifreeze proteins',
+              'At low temperatures, photorespiration is minimal (C4 advantage disappears), and the extra ATP cost of the C4 pathway is wasteful',
+              'C4 plants cannot perform photosynthesis below 15 °C',
+              'The Calvin cycle only works in C3 plants at low temperatures'
+            ],
+            correctAnswer: 1,
+            explanation: 'At cool temperatures, the ratio of CO2:O2 fixation by RuBisCO favors CO2, so photorespiration is low in C3 plants. The C4 carbon-concentrating mechanism (which costs 2 extra ATP per CO2) becomes an unnecessary expense, putting C4 plants at a net energy disadvantage.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'ps6-input',
+      type: 'input-boxes' as const,
+      content: `
+### Apply Your Knowledge
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'If light is turned off, 3-PGA levels will (increase/decrease):',
+            answer: 'increase',
+            acceptableAnswers: ['increase', 'Increase', 'go up', 'rise'],
+            placeholder: 'e.g. stay the same'
+          },
+          {
+            question: 'If CO2 is suddenly removed, RuBP levels will (increase/decrease):',
+            answer: 'increase',
+            acceptableAnswers: ['increase', 'Increase', 'go up', 'rise', 'accumulate'],
+            placeholder: 'e.g. decrease'
+          }
+        ]
+      }
+    },
+    {
+      id: 'ps6-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Exit Ticket — Workshop
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A researcher adds DCMU (a herbicide that blocks electron flow from PSII to plastoquinone) to illuminated chloroplasts. What will happen?',
+            options: [
+              'O2 production continues but NADPH production stops',
+              'Both O2 production and NADPH production stop; the proton gradient collapses; no ATP or NADPH for the Calvin cycle',
+              'The Calvin cycle speeds up to compensate',
+              'Cyclic electron flow around PSI stops'
+            ],
+            correctAnswer: 1,
+            explanation: 'DCMU blocks electron flow from PSII. Without electron flow, water splitting stops (no O2), no electrons reach PSI or NADP+ (no NADPH), and proton pumping by cytochrome b6f stops (reduced ATP). The Calvin cycle loses both ATP and NADPH and shuts down.'
           }
         ]
       }

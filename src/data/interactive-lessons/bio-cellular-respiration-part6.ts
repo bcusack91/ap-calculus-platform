@@ -2,190 +2,227 @@ export const bioCellRespirationPart6Data = {
   topicSlug: 'cellular-respiration',
   sections: [
     {
-      id: 'bio-cellular-respiration-p6-s1-intro',
+      id: 'cr6-intro',
       type: 'text' as const,
       content: `
-      ## Cellular Respiration: Problem-Solving Workshop
-      
-      **Part 6 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through energy accounting with pathway data.
-      
-      ### Worked biological example
-      A student team investigates energy accounting with pathway data. Their first interpretation step is to identify how **ATP synthase** and **NADH** work together in the same pathway.
-      
-      - They classify the primary signal using **ATP synthase**: enzyme complex that phosphorylates ADP using proton flow.
-      - They trace the downstream response using **NADH**: high-energy electron carrier delivering reducing power.
-      - They then compare outcomes with **FADH2** and **substrate-level phosphorylation** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **ATP synthase**
-      - **NADH**
-      - **FADH2**
-      - **substrate-level phosphorylation**
+## Problem-Solving Workshop — Cellular Respiration
+
+**Part 6 of 7**
+
+This workshop applies concepts from Parts 1-5 to experimental scenarios and data-analysis problems commonly seen on the AP Biology exam.  Work through each scenario carefully — these question types test higher-order thinking, not just memorization.
       `
     },
     {
-      id: 'bio-cellular-respiration-p6-s2-mcq-core',
+      id: 'cr6-scenario1',
+      type: 'text' as const,
+      content: `
+### Scenario 1: Respirometer Experiment
+
+A student uses a **respirometer** to measure the rate of cellular respiration in germinating vs. non-germinating pea seeds at two temperatures (10 °C and 25 °C).  The respirometer measures **O\\(_2\\) consumption** by tracking the movement of a fluid indicator in a sealed system.  KOH is included to absorb any CO\\(_2\\) produced, so the only gas change measured is O\\(_2\\) uptake.
+
+| Condition | O\\(_2\\) consumed (mL/min) |
+|-----------|--------------------------|
+| Germinating seeds, 25 °C | 0.21 |
+| Germinating seeds, 10 °C | 0.10 |
+| Non-germinating seeds, 25 °C | 0.02 |
+| Non-germinating seeds, 10 °C | 0.01 |
+
+**Key observations:**
+- Germinating seeds consume far more O\\(_2\\) than non-germinating seeds
+- Higher temperature increases O\\(_2\\) consumption for both conditions
+      `
+    },
+    {
+      id: 'cr6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Scenario 1 Questions
       `,
       exercise: {
         questions: [
           {
-            question: 'For Problem-Solving Workshop, what best describes ATP synthase?',
+            question: 'Why do germinating seeds consume more O2 than non-germinating seeds?',
             options: [
-              'electron carrier feeding electrons at a lower-energy entry point',
-              'enzyme complex that phosphorylates ADP using proton flow',
-              'high-energy electron carrier delivering reducing power',
-              'direct ATP formation from a phosphorylated intermediate'
+              'Germinating seeds are photosynthesizing',
+              'Germinating seeds have higher metabolic rates — they are actively growing, dividing, and building new structures, requiring more ATP and therefore more aerobic respiration',
+              'Non-germinating seeds do not contain mitochondria',
+              'Germinating seeds produce more CO2, which displaces O2'
             ],
             correctAnswer: 1,
-            explanation: 'ATP synthase is best matched with: enzyme complex that phosphorylates ADP using proton flow.'
+            explanation: 'Germinating seeds are metabolically active — mobilizing stored energy, synthesizing new proteins, and undergoing cell division. This requires much more ATP, which drives increased aerobic respiration and O2 consumption.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of NADH?',
+            question: 'Why does increasing temperature from 10 °C to 25 °C increase O2 consumption?',
             options: [
-              'enzyme complex that phosphorylates ADP using proton flow',
-              'high-energy electron carrier delivering reducing power',
-              'electron carrier feeding electrons at a lower-energy entry point',
-              'splits glucose into pyruvate while producing ATP and NADH'
+              'Higher temperature creates more O2 through thermal decomposition of water',
+              'Higher temperature increases the kinetic energy of molecules, increasing the rate of enzyme-catalyzed metabolic reactions',
+              'Higher temperature decreases enzyme affinity, causing more O2 to bind',
+              'Higher temperature expands the gas, making more O2 available'
             ],
             correctAnswer: 1,
-            explanation: 'NADH is best matched with: high-energy electron carrier delivering reducing power.'
+            explanation: 'Temperature affects enzyme kinetics. Within the normal range, higher temperature increases molecular kinetic energy, leading to more frequent enzyme-substrate collisions and faster reaction rates. This increases the overall rate of cellular respiration.'
+          },
+          {
+            question: 'Why is KOH included in the respirometer?',
+            options: [
+              'To provide additional O2 for respiration',
+              'To absorb CO2 so that the only gas change measured is O2 consumption',
+              'To prevent fermentation',
+              'To neutralize the acids produced by respiration'
+            ],
+            correctAnswer: 1,
+            explanation: 'KOH absorbs CO2 produced by respiration. Without KOH, the CO2 released would partially offset the volume decrease from O2 consumption, making measurement inaccurate. With KOH absorbing CO2, any gas volume change reflects only O2 uptake.'
           }
         ]
       }
     },
     {
-      id: 'bio-cellular-respiration-p6-s3-deep-dive',
+      id: 'cr6-scenario2',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Problem-Solving Workshop
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → ATP synthase
-      - **Immediate processing** → NADH
-      - **System-level consequence** → FADH2
-      - **Measured readout** → substrate-level phosphorylation
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | ATP synthase | enzyme complex that phosphorylates ADP using proton flow | Early shift in the primary variable |
-      | NADH | high-energy electron carrier delivering reducing power | Mid-pathway change in process rate |
-      | FADH2 | electron carrier feeding electrons at a lower-energy entry point | Downstream phenotype trend |
-      | substrate-level phosphorylation | direct ATP formation from a phosphorylated intermediate | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Scenario 2: Metabolic Poisons
+
+A researcher treats four groups of cells with different metabolic poisons and measures their effects:
+
+| Poison | Target | Observation |
+|--------|--------|-------------|
+| **Fluoroacetate** | Aconitase (step 2 of citric acid cycle) | Citrate accumulates; NADH production from cycle drops |
+| **Rotenone** | Complex I of ETC | NADH accumulates; proton gradient weakens; ATP output drops sharply |
+| **Oligomycin** | ATP synthase (blocks proton channel) | Proton gradient builds to maximum; ATP production stops; ETC eventually slows |
+| **DNP (dinitrophenol)** | None — creates proton leak in membrane | Proton gradient collapses; ETC runs at maximum rate; energy released as heat; ATP drops |
       `
     },
     {
-      id: 'bio-cellular-respiration-p6-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **enzyme complex that phosphorylates ADP using proton flow**
-      2) Term for this definition: **high-energy electron carrier delivering reducing power**
-      3) Term for this definition: **electron carrier feeding electrons at a lower-energy entry point**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['ATP synthase', 'NADH', 'FADH2'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'enzyme complex that phosphorylates ADP using proton flow\'.',
-        hint2: 'Second blank points to NADH; think about the role \'high-energy electron carrier delivering reducing power\'.',
-        hint3: 'Third blank is FADH2; connect it to \'electron carrier feeding electrons at a lower-energy entry point\'.',
-        explanation: 'Correct set: ATP synthase, NADH, FADH2. These three terms define the core mechanism chain for Problem-Solving Workshop.'
-      }
-    },
-    {
-      id: 'bio-cellular-respiration-p6-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'ATP synthase',
-            options: ['high-energy electron carrier delivering reducing power', 'enzyme complex that phosphorylates ADP using proton flow', 'direct ATP formation from a phosphorylated intermediate', 'electron carrier feeding electrons at a lower-energy entry point']
-          },
-          {
-            label: 'NADH',
-            options: ['direct ATP formation from a phosphorylated intermediate', 'splits glucose into pyruvate while producing ATP and NADH', 'electron carrier feeding electrons at a lower-energy entry point', 'high-energy electron carrier delivering reducing power']
-          },
-          {
-            label: 'FADH2',
-            options: ['electron carrier feeding electrons at a lower-energy entry point', 'converts pyruvate to acetyl-CoA and releases CO2', 'splits glucose into pyruvate while producing ATP and NADH', 'direct ATP formation from a phosphorylated intermediate']
-          }
-        ],
-        correctAnswers: ['enzyme complex that phosphorylates ADP using proton flow', 'high-energy electron carrier delivering reducing power', 'electron carrier feeding electrons at a lower-energy entry point'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'ATP synthase, NADH, and FADH2 should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-cellular-respiration-p6-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because ATP synthase enzyme complex that phosphorylates ADP using proton flow, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Oxygen is the terminal electron acceptor, not a direct reactant in every step.
-      - NADH and FADH2 are not ATP themselves; they transfer electron energy.
-      - Pathway location matters for interpretation of transport and regulation questions.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-cellular-respiration-p6-s7-mcq-final',
+      id: 'cr6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Scenario 2 Questions
       `,
       exercise: {
         questions: [
           {
-            question: 'In energy accounting with pathway data, the observed pattern is: direct ATP formation from a phosphorylated intermediate. What term should anchor the explanation?',
+            question: 'Oligomycin blocks the proton channel of ATP synthase. Why does the ETC eventually slow down when oligomycin is added?',
             options: [
-              'substrate-level phosphorylation',
-              'NADH',
-              'ATP synthase',
-              'FADH2'
-            ],
-            correctAnswer: 0,
-            explanation: 'Use substrate-level phosphorylation because it directly maps to the described biological pattern: direct ATP formation from a phosphorylated intermediate.'
-          },
-          {
-            question: 'In an AP-style free-response about problem-solving workshop, the observed pattern is: splits glucose into pyruvate while producing ATP and NADH. What term should anchor the explanation?',
-            options: [
-              'FADH2',
-              'glycolysis',
-              'substrate-level phosphorylation',
-              'pyruvate oxidation'
+              'The ETC enzymes are directly inhibited by oligomycin',
+              'Without proton flow through ATP synthase, the gradient becomes so large that Complexes I, III, and IV cannot pump more protons against it',
+              'Oligomycin destroys the inner mitochondrial membrane',
+              'NADH is depleted'
             ],
             correctAnswer: 1,
-            explanation: 'Use glycolysis because it directly maps to the described biological pattern: splits glucose into pyruvate while producing ATP and NADH.'
+            explanation: 'Oligomycin blocks the only significant route for protons to return to the matrix. The gradient builds up until the back-pressure (electrochemical force opposing further pumping) equals the energy available from electron transfer, at which point the complexes can no longer pump protons and the chain stalls.'
+          },
+          {
+            question: 'DNP (an uncoupler) causes cells to consume oxygen at an accelerated rate and generate excessive heat. Why?',
+            options: [
+              'DNP activates Complex IV to work faster',
+              'Without the proton gradient to restrain the chain, electron flow and O2 consumption increase; but since protons bypass ATP synthase, the energy is released as heat instead of being captured as ATP',
+              'DNP converts ATP directly into heat',
+              'DNP stimulates glycolysis and fermentation simultaneously'
+            ],
+            correctAnswer: 1,
+            explanation: 'Normally, the proton gradient acts as back-pressure on the ETC. DNP dissipates this gradient by allowing protons to leak freely. Without back-pressure, the ETC runs unrestricted, consuming O2 rapidly. Since protons bypass ATP synthase, the free energy is released as thermal energy (heat) rather than driving ATP synthesis.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cr6-scenario3',
+      type: 'text' as const,
+      content: `
+### Scenario 3: ATP Accounting Challenge
+
+Complete the ATP accounting table for the aerobic oxidation of one glucose molecule:
+
+| Stage | ATP by SLP | NADH | FADH\\(_2\\) | ATP from e\\(^-\\) carriers* |
+|-------|-----------|------|------------|---------------------------|
+| Glycolysis | 2 | 2 | 0 | 2 × 2.5 = 5** |
+| Pyruvate oxidation | 0 | 2 | 0 | 2 × 2.5 = 5 |
+| Citric acid cycle | 2 | 6 | 2 | (6 × 2.5) + (2 × 1.5) = 18 |
+| **Total** | **4** | **10** | **2** | **28** |
+
+*Using 2.5 ATP per NADH and 1.5 ATP per FADH\\(_2\\)
+
+**The cytoplasmic NADH from glycolysis may yield only 1.5 ATP each if transported via the glycerol-3-phosphate shuttle (instead of 2.5 via the malate-aspartate shuttle), reducing the total to 30 ATP.
+
+**Grand total: 30-32 ATP per glucose** (4 by SLP + 26-28 by oxidative phosphorylation)
+
+> **AP Exam Note:** The AP exam uses the approximate value of 30-32 ATP per glucose.  Older textbooks cite 36-38, but this figure has been revised downward based on more accurate measurements of the H+/ATP ratio and shuttle system costs.
+      `
+    },
+    {
+      id: 'cr6-quiz3',
+      type: 'multiple-choice' as const,
+      content: `
+### ATP Accounting Questions
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Why is the total ATP yield from glucose oxidation described as an approximation (30-32) rather than an exact number?',
+            options: [
+              'Because some ATP is immediately used by the cell',
+              'Because the number of protons needed per ATP and the shuttle used for cytoplasmic NADH both introduce variability',
+              'Because cells always perform fermentation simultaneously',
+              'Because some glucose molecules are only partially oxidized'
+            ],
+            correctAnswer: 1,
+            explanation: 'Two factors create variability: (1) the H+/ATP ratio may not be exactly 4:1, and (2) cytoplasmic NADH from glycolysis must be transported into mitochondria via shuttle systems — the malate-aspartate shuttle preserves 2.5 ATP/NADH while the glycerol-3-phosphate shuttle yields only 1.5 ATP/NADH.'
+          },
+          {
+            question: 'Approximately what percentage of the ATP from aerobic respiration comes from oxidative phosphorylation?',
+            options: [
+              'About 10%',
+              'About 50%',
+              'About 75%',
+              'About 85-90%'
+            ],
+            correctAnswer: 3,
+            explanation: 'Oxidative phosphorylation produces about 26-28 ATP out of 30-32 total, which is approximately 85-90%. Only 4 ATP are produced by substrate-level phosphorylation (2 in glycolysis, 2 in the citric acid cycle).'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cr6-input',
+      type: 'input-boxes' as const,
+      content: `
+### Apply Your Knowledge
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'How many total NADH molecules are produced from one glucose (all stages combined)?',
+            answer: '10',
+            acceptableAnswers: ['10', 'ten', 'Ten'],
+            placeholder: 'e.g. 6'
+          },
+          {
+            question: 'The poison that uncouples the ETC from ATP synthesis by creating proton leaks (abbreviation):',
+            answer: 'DNP',
+            acceptableAnswers: ['DNP', 'dnp', 'dinitrophenol', 'Dinitrophenol', '2,4-dinitrophenol'],
+            placeholder: 'e.g. KCN'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cr6-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Exit Ticket — Workshop Synthesis
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A student compares ATP production in muscle cells under aerobic and anaerobic conditions. Which statement is correct?',
+            options: [
+              'Anaerobic conditions produce the same amount of ATP as aerobic conditions, just more slowly',
+              'Aerobic conditions produce approximately 15 times more ATP per glucose than anaerobic conditions',
+              'Anaerobic conditions produce more ATP because fermentation is more efficient',
+              'Both conditions produce exactly 36 ATP per glucose'
+            ],
+            correctAnswer: 1,
+            explanation: 'Aerobic respiration produces ~30-32 ATP per glucose, while anaerobic glycolysis + fermentation produces only 2 ATP per glucose (net from glycolysis). That is approximately a 15:1 ratio, demonstrating the dramatic efficiency advantage of aerobic respiration.'
           }
         ]
       }

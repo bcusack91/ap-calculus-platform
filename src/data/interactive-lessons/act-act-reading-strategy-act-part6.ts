@@ -61,6 +61,7 @@ Weak choices over-focus on one detail (for example, only costs) or overstate cer
         type: 'input-boxes' as const,
         content: `\n**Measurable Pacing Drill**
 1) You plan 8 minutes per passage for 4 passages. How many minutes does that use?
+
 2) In a passage with 10 questions, you answer 7 in 6 minutes. Enter average seconds per answered question (nearest whole number).
 3) You flag 3 inference questions and return later, gaining 2 correct answers. Enter the number gained.\n        `,
         exercise: {

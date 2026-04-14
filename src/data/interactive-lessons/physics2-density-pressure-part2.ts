@@ -120,7 +120,9 @@ You amplified the force by 50×! But there's a trade-off: the small piston moves
 **Depth-Pressure Drill** (use $g = 10$ m/s², $P_{\\text{atm}} = 10^5$ Pa, $\\rho_{\\text{water}} = 1000$ kg/m³)
 
 1) Gauge pressure at 5 m depth in water (in Pa)
+
 2) Absolute pressure at 5 m depth (in Pa)
+
 3) Depth at which absolute pressure is 2 atm (in m)
       `,
       exercise: {
@@ -141,7 +143,9 @@ You amplified the force by 50×! But there's a trade-off: the small piston moves
 A car (mass 1500 kg, weight 15,000 N) sits on a hydraulic lift piston with area $A_2 = 0.25$ m².
 
 1) Pressure under the car piston (in Pa)
+
 2) Area of small input piston needed if you can push with 300 N (in m²)
+
 3) How far must the small piston move to raise the car 0.10 m? (in m)
 
 *Round all answers to 3 significant figures.*

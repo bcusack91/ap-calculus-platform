@@ -2,185 +2,132 @@ export const calcbcTaylorPart1Data = {
   topicSlug: 'taylor-maclaurin-series-calcbc',
   sections: [
     {
-      id: 'calcbctaylor-p1-intro',
+      id: 'tm1-intro',
       type: 'text' as const,
-      content: `
-# Taylor Maclaurin Series
+      content: `# Taylor & Maclaurin Series — The General Formula
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Taylor Polynomial Construction**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Taylor Series Centered at $x = c$
 
-## Key Ideas
+$$\\boxed{f(x) = \\sum_{n=0}^\\infty \\frac{f^{(n)}(c)}{n!}(x - c)^n}$$
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+$= f(c) + f'(c)(x-c) + \\frac{f''(c)}{2!}(x-c)^2 + \\frac{f'''(c)}{3!}(x-c)^3 + \\cdots$
 
-## Formula Snapshot
+### Maclaurin Series (Special Case: $c = 0$)
 
-When appropriate, use:
+$$f(x) = \\sum_{n=0}^\\infty \\frac{f^{(n)}(0)}{n!} x^n = f(0) + f'(0)x + \\frac{f''(0)}{2!}x^2 + \\cdots$$
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+### Taylor Polynomials
 
-and interpret what the final value means in context.
-      `
+The $n$th-degree Taylor polynomial is the partial sum:
+
+$$T_n(x) = \\sum_{k=0}^{n} \\frac{f^{(k)}(c)}{k!}(x-c)^k$$
+
+| Degree | Polynomial | Approximation Quality |
+|--------|-----------|---------------------|
+| $T_0$ | $f(c)$ | Constant (matches value) |
+| $T_1$ | $f(c) + f'(c)(x-c)$ | Linear (matches slope) |
+| $T_2$ | $+ f''(c)(x-c)^2/2$ | Quadratic (matches concavity) |
+
+> **AP Tip:** "Write the $n$th-degree Taylor polynomial" means $T_n(x)$. "Write the first four nonzero terms of the Taylor series" may give a higher-degree polynomial.`
     },
     {
-      id: 'calcbctaylor-p1-mcq1',
+      id: 'tm1-example',
+      type: 'text' as const,
+      content: `### Example: Taylor Series for $e^x$ at $c = 0$
+
+$f(x) = e^x \\implies f^{(n)}(x) = e^x \\implies f^{(n)}(0) = 1$ for all $n$
+
+$$e^x = \\sum_{n=0}^\\infty \\frac{x^n}{n!} = 1 + x + \\frac{x^2}{2} + \\frac{x^3}{6} + \\frac{x^4}{24} + \\cdots$$
+
+### Example: Taylor Series for $\\sin x$ at $c = 0$
+
+| $n$ | $f^{(n)}(x)$ | $f^{(n)}(0)$ |
+|-----|-------------|-------------|
+| 0 | $\\sin x$ | $0$ |
+| 1 | $\\cos x$ | $1$ |
+| 2 | $-\\sin x$ | $0$ |
+| 3 | $-\\cos x$ | $-1$ |
+| 4 | $\\sin x$ | $0$ |
+
+Pattern repeats with period 4: $0, 1, 0, -1, 0, 1, 0, -1, \\ldots$
+
+$$\\sin x = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7!} + \\cdots = \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{(2n+1)!}$$`
+    },
+    {
+      id: 'tm1-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Taylor Polynomial Basics**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'The coefficient of $(x-c)^n$ in the Taylor series of $f$ about $c$ is:',
+            options: ['$f^{(n)}(c)/n!$', '$f^{(n)}(c)$', '$f(c)/n!$', '$f^{(n)}(0)/n!$'],
+            correctAnswer: 0,
+            explanation: 'By definition: $a_n = f^{(n)}(c)/n!$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'The 3rd-degree Maclaurin polynomial for $\\cos x$ is:',
+            options: ['$1 - x^2/2$', '$1 - x^2/2 + x^4/24$', '$x - x^3/6$', '$1 - x + x^2/2 - x^3/6$'],
+            correctAnswer: 0,
+            explanation: '$\\cos x = 1 - x^2/2 + x^4/24 - \\cdots$. The 3rd-degree polynomial includes terms up to $x^3$: since the $x^3$ coefficient is $0$, $T_3(x) = 1 - x^2/2$.'
+          },
+          {
+            question: 'A Maclaurin series is a Taylor series centered at:',
+            options: ['$c = 0$', '$c = 1$', 'Any $c$', '$c = \\pi$'],
+            correctAnswer: 0,
+            explanation: 'Maclaurin = Taylor centered at $0$. Named after Colin Maclaurin.'
           }
         ]
       }
     },
     {
-      id: 'calcbctaylor-p1-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbctaylor-p1-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbctaylor-p1-dropdown',
+      id: 'tm1-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Building Taylor Polynomials**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'For $f(x) = \\ln x$ centered at $c = 1$: $f(1) = 0$, $f\'(1) = 1$, $f\'\'(1) = -1$. The $T_2(x)$ is:',
+            options: ['$(x-1) - (x-1)^2/2$', '$x - x^2/2$', '$(x-1) + (x-1)^2/2$', '$1 + (x-1) - (x-1)^2/2$'],
+            correctAnswers: ['$(x-1) - (x-1)^2/2$'],
+            hints: ['$T_2 = f(1) + f\'(1)(x-1) + f\'\'(1)(x-1)^2/2!$.'],
+            explanation: '$T_2 = 0 + 1\\cdot(x-1) + (-1)(x-1)^2/2 = (x-1) - (x-1)^2/2$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbctaylor-p1-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Core Concepts**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbctaylor-p1-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'The key difference between "4th-degree Taylor polynomial" and "first 4 nonzero terms" is:',
+            options: ['Degree polynomial has exactly terms through $x^4$; nonzero terms skips zeros', 'They are the same thing', 'Degree is always larger', 'Nonzero terms is always larger'],
+            correctAnswers: ['Degree polynomial has exactly terms through $x^4$; nonzero terms skips zeros'],
+            hints: ['For $\\sin x$: $T_4 = x - x^3/6$ (only 2 nonzero terms), but "first 4 nonzero terms" = $x - x^3/6 + x^5/120 - x^7/5040$.'],
+            explanation: '$T_4(\\sin x) = x - x^3/6$ (no $x^4$ term). First 4 nonzero terms goes up to $x^7$. They\'re different!'
           }
         ]
       }
+    },
+    {
+      id: 'tm1-input',
+      type: 'input-box' as const,
+      content: '**Derivative Extraction**',
+      exercise: {
+        question: 'The Maclaurin series for $f$ has $a_4 = 5/24$. Find $f^{(4)}(0)$. (Enter a whole number.)',
+        correctAnswer: '5',
+        acceptableAnswers: ['5'],
+        hints: ['$a_4 = f^{(4)}(0)/4! = f^{(4)}(0)/24$.'],
+        explanation: '$f^{(4)}(0)/4! = 5/24$, so $f^{(4)}(0) = 24 \\cdot 5/24 = 5$.'
+      }
+    },
+    {
+      id: 'tm1-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Taylor series: $\\sum f^{(n)}(c)(x-c)^n/n!$
+- Maclaurin series: Taylor at $c = 0$
+- $T_n(x)$ = partial sum through degree $n$
+- Know the difference between "degree $n$" and "first $k$ nonzero terms"
+
+> **Next:** Part 2 — Computing Taylor Series from Scratch.`
     }
   ]
-}
+};

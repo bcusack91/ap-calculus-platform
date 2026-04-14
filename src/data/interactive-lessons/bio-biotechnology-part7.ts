@@ -95,7 +95,9 @@ export const bioBiotechPart7Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **uses guide RNA to direct sequence-specific DNA cutting**
+
       2) Term for this definition: **base-pairs with target DNA to position Cas9**
+
       3) Term for this definition: **banding profile used for identity comparison**
       `,
       exercise: {

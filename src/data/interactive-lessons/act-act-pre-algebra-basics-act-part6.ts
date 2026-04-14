@@ -99,7 +99,9 @@ Range: $50 - 25 = 25$ units.
 **Statistics Practice** 🧮
 
 1) Find the mean of $\\{10, 14, 18, 22, 26\\}$.
+
 2) The mean of 4 numbers is $15$. Three of them are $12, 16, 20$. What is the fourth?
+
 3) Find the range of $\\{3, 8, 1, 15, 7\\}$.
       `,
       exercise: {

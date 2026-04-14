@@ -88,7 +88,9 @@ export const oChemEASPart3Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: electron-withdrawing substituent directing meta substitution
+
       2) Term for: substituent increasing ring reactivity
+
       3) Product pattern expected under SO3/H2SO4
       `,
       exercise: {

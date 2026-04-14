@@ -88,7 +88,9 @@ export const oChemAminesPart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: lone pair delocalization lowers amide basicity
+
       2) Term for: C=N product from carbonyl + primary amine
+
       3) Product pattern expected under quaternary ammonium hydroxide, heat
       `,
       exercise: {

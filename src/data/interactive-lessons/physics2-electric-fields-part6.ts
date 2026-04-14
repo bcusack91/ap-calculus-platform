@@ -143,7 +143,9 @@ This is the simplest and most important field configuration in AP Physics 2.
 Two parallel plates are separated by $d = 5.0$ mm. The top plate is at $+600$ V and the bottom plate is at $0$ V.
 
 1) Electric field between the plates (in V/m)
+
 2) Potential at the exact midpoint between the plates (in V)
+
 3) Force on a proton ($q = 1.6 \\times 10^{-19}$ C) between the plates (in N, use scientific notation: e.g., 1.92e-14)
 
 *Round all answers to 3 significant figures.*

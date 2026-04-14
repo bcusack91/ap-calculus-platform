@@ -88,7 +88,9 @@ export const oChemAlkenesPart1Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: alkene electrons attack electrophiles in first step
+
       2) Term for: planar cation that enables rearrangement risk
+
       3) Product pattern expected under HBr (no peroxides)
       `,
       exercise: {

@@ -95,7 +95,9 @@ export const bioPopulationPart6Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **life-history pattern favoring competitive efficiency near carrying capacity**
+
       2) Term for this definition: **count of different species in a community**
+
       3) Term for this definition: **how evenly individuals are distributed among species**
       `,
       exercise: {

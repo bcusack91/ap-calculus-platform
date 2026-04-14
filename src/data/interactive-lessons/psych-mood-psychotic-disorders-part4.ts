@@ -86,7 +86,9 @@ export const psychMoodPsychPart4Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: reductions in normal emotional or motivational functioning
+
       2) Write the concept that matches: vulnerability interacts with stress to increase disorder risk
+
       3) Write the concept that matches: co-occurrence of two or more disorders
 
       Use the exact vocabulary term from this part.

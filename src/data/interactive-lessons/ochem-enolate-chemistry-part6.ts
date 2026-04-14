@@ -88,7 +88,9 @@ export const oChemEnolatePart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: dehydration of aldol product to enone
+
       2) Term for: ester enolate acylation yielding beta-keto ester
+
       3) Product pattern expected under enolate + enone
       `,
       exercise: {

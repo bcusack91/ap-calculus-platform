@@ -100,7 +100,9 @@ $(2x^3 - x^2) + (-6x + 3) = x^2(2x - 1) - 3(2x - 1) = (2x - 1)(x^2 - 3)$
 **Factoring Coefficients** 🧮
 
 1) Factor $x^2 - 9x + 20$. What are the two constant terms in the binomial factors? Give the **larger** one.
+
 2) Factor $2x^2 + 7x + 3 = (2x + a)(x + b)$. What is $a$?
+
 3) Factor $x^3 + 64$. In the trinomial factor $(x^2 + bx + c)$, what is $c$?
       `,
       exercise: {

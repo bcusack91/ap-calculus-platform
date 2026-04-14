@@ -88,7 +88,9 @@ export const oChemAminesPart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: nitrogen lone pair attacks electrophilic centers
+
       2) Term for: successive alkylation can push to quaternary ammonium
+
       3) Product pattern expected under R-CHO + R'NH2, then NaBH3CN
       `,
       exercise: {

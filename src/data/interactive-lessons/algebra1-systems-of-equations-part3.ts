@@ -51,7 +51,9 @@ Add: $4x = 16 \\implies x = 4, y = 2$.
 **Elimination** 🧮
 
 1) $x+y=10$, $x-y=4$: $x=?$
+
 2) $2x+3y=12$, $2x+y=8$: $y=?$
+
 3) $3x+y=7$, $x+y=3$: $x=?$
       `,
       exercise: {

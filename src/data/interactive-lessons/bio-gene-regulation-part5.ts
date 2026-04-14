@@ -95,7 +95,9 @@ export const bioGeneRegPart5Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **heritable chromatin modification not changing DNA sequence**
+
       2) Term for this definition: **chemical tagging often associated with reduced transcription**
+
       3) Term for this definition: **chromatin modification generally increasing accessibility**
       `,
       exercise: {

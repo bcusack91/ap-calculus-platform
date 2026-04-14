@@ -2,88 +2,138 @@ export const calcbcRadConvPart2Data = {
   topicSlug: 'radius-convergence-calcbc',
   sections: [
     {
-      id: 'radiusconvergence-p2-intro',
+      id: 'rc2-intro',
       type: 'text' as const,
-      content: `# 📐 Interval of Convergence
+      content: `# Endpoint Testing
 
-**Part 2 of 7 — Checking Endpoints**
+**Part 2 of 7 — Completing the Interval**
 
----
+### The Endpoint Testing Process
 
-### Steps to Find the Interval of Convergence
+At $x = a + R$ and $x = a - R$, substitute and get a **numeric series**.
 
-1. **Find $R$** using Ratio or Root Test
-2. **Identify** the open interval $(a-R, a+R)$
-3. **Check each endpoint** separately by substituting $x = a - R$ and $x = a + R$
-4. **Include** endpoints where the series converges
+Then apply whichever convergence test fits:
 
-### Endpoint Behavior
+| Endpoint series type | Test to use |
+|---------------------|------------|
+| $\\sum 1/n^p$ | $p$-Series ($p > 1$: converges) |
+| $\\sum (-1)^n/n^p$ | AST ($p > 0$: converges) |
+| $\\sum 1/n$ | Harmonic (diverges) |
+| $\\sum (-1)^n$ | Divergence Test (diverges) |
+| $\\sum 1/n(\\ln n)^p$ | Integral Test |
 
-At endpoints, the power series often becomes:
-- A **p-series** ($\\\\sum 1/n^p$)
-- An **alternating series** ($\\\\sum (-1)^n/n^p$)
-- The **harmonic series** ($\\\\sum 1/n$)
+### Four Possible IOC Outcomes
 
----
+$$\\boxed{(a-R, a+R) \\quad [a-R, a+R) \\quad (a-R, a+R] \\quad [a-R, a+R]}$$
 
-### Example: $\\\\sum \\\\frac{x^n}{n}$ (centered at 0)
+> **Key Fact:** There's no shortcut — every endpoint produces a different series that must be checked individually.`
+    },
+    {
+      id: 'rc2-examples',
+      type: 'text' as const,
+      content: `### Complete Example: $\\sum_{n=1}^{\\infty} \\frac{(-1)^n (x+1)^n}{n \\cdot 3^n}$
 
-$R = 1$ (by Ratio Test)
+**Step 1 — Find $R$:**
 
-**At $x = 1$:** $\\\\sum 1/n$ = harmonic series → **diverges**
-**At $x = -1$:** $\\\\sum (-1)^n/n$ = alternating harmonic → **converges**
+$|c_{n+1}/c_n| = \\frac{n}{(n+1) \\cdot 3} \\to \\frac{1}{3}$. $R = 3$.
 
-Interval of convergence: $[-1, 1)$`
-    },    {
-      id: 'radiusconvergence-p2-mcq',
+Center $a = -1$: open interval $(-4, 2)$.
+
+**Step 2 — Right endpoint $x = 2$:**
+
+$\\sum \\frac{(-1)^n (3)^n}{n \\cdot 3^n} = \\sum \\frac{(-1)^n}{n}$
+
+Alternating harmonic → **converges** (AST).
+
+**Step 3 — Left endpoint $x = -4$:**
+
+$\\sum \\frac{(-1)^n (-3)^n}{n \\cdot 3^n} = \\sum \\frac{(-1)^n \\cdot (-1)^n \\cdot 3^n}{n \\cdot 3^n} = \\sum \\frac{1}{n}$
+
+Harmonic → **diverges**.
+
+**IOC: $(-4, 2]$**
+
+### Common Endpoint Patterns
+
+| $c_n$ | Right endpoint ($x = a + R$) | Left endpoint ($x = a - R$) |
+|-------|------------------------------|----------------------------|
+| $1/n$ | $\\sum 1/n$ (div) | $\\sum (-1)^n/n$ (conv) |
+| $1/n^2$ | $\\sum 1/n^2$ (conv) | $\\sum (-1)^n/n^2$ (conv) |
+| $(-1)^n/n$ | $\\sum (-1)^n \\cdot 1/n$ (conv) | $\\sum 1/n$ (div) |`
+    },
+    {
+      id: 'rc2-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** \U0001f3af
-      `,
+      content: '**Endpoint Testing**',
       exercise: {
         questions: [
           {
-            question: 'After finding $R$, you must always:',
-            options: ['Assume endpoints diverge', 'Check endpoints separately', 'Include both endpoints', 'Exclude both endpoints'],
-            correctAnswer: 1,
-            explanation: 'Endpoints require individual testing — they can go either way.'
-          },
-          {
-            question: '$\\\\sum \\\\frac{x^n}{n^2}$ at $x = 1$ gives:',
-            options: ['$\\\\sum 1/n^2$ (converges)', '$\\\\sum 1/n$ (diverges)', '$\\\\sum (-1)^n/n^2$ (converges)', '$\\\\sum n^2$ (diverges)'],
+            question: '$\\sum_{n=1}^{\\infty} \\frac{x^n}{n^2}$, $R = 1$. At $x = 1$: $\\sum 1/n^2$. At $x = -1$: $\\sum (-1)^n/n^2$. IOC:',
+            options: ['$[-1, 1]$', '$(-1, 1)$', '$[-1, 1)$', '$(-1, 1]$'],
             correctAnswer: 0,
-            explanation: 'At $x = 1$: $\\\\sum 1/n^2$ is a convergent p-series ($p = 2 > 1$).'
+            explanation: '$x = 1$: $\\sum 1/n^2$ converges ($p = 2$). $x = -1$: $\\sum (-1)^n/n^2$ converges (AST or absolute). Both endpoints included.'
           },
           {
-            question: '$\\\\sum \\\\frac{x^n}{n^2}$ has interval of convergence:',
-            options: ['$(-1, 1)$', '$[-1, 1]$', '$[-1, 1)$', '$(-1, 1]$'],
-            correctAnswer: 1,
-            explanation: 'At $x = 1$: $\\\\sum 1/n^2$ converges. At $x = -1$: $\\\\sum (-1)^n/n^2$ converges (absolutely). Both included: $[-1, 1]$.'
+            question: 'At an endpoint you get $\\sum (-1)^n \\sqrt{n}$. This:',
+            options: ['Diverges (terms $\\to \\infty$, fails Divergence Test)', 'Converges by AST', 'Converges absolutely', 'Is inconclusive'],
+            correctAnswer: 0,
+            explanation: '$|(-1)^n\\sqrt{n}| = \\sqrt{n} \\to \\infty \\neq 0$. Diverges by Divergence Test.'
+          },
+          {
+            question: 'For $\\sum n! x^n$, $R = 0$. How many endpoints to check?',
+            options: ['None — $R = 0$ means the series converges only at $x = 0$', 'Two', 'One', 'Infinitely many'],
+            correctAnswer: 0,
+            explanation: 'When $R = 0$, the IOC is just $\\{0\\}$. No endpoints to check.'
           }
         ]
       }
-    },    {
-      id: 'radiusconvergence-p2-input',
-      type: 'input-boxes' as const,
-      content: `
-**Interval of Convergence** 🧮
-
-$\\\\sum_{n=1}^{\\\\infty} \\\\frac{(x-1)^n}{n \\\\cdot 3^n}$
-
-**1)** $R = ?$
-
-**2)** At $x = 4$: what series results? (harmonic/alternating harmonic/p-series)
-
-**3)** Interval of convergence? (e.g., [-2, 4) )
-      `,
+    },
+    {
+      id: 'rc2-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Endpoint Analysis**',
       exercise: {
-        boxes: 3,
-        correctAnswers: ['3', 'harmonic', '[-2, 4)'],
-        hint1: 'Ratio: $|x-1|/3 < 1$',
-        hint2: 'At $x = 4$: $(x-1)^n/3^n = 1$, leaves $\\\\sum 1/n$',
-        hint3: '$x = -2$: $\\\\sum (-1)^n/n$ converges (AST)',
-        explanation: '1) $R = 3$. 2) Harmonic ($\\\\sum 1/n$, diverges). 3) $[-2, 4)$ (includes $-2$, excludes $4$).'
+        dropdowns: [
+          {
+            label: '$\\sum_{n=1}^{\\infty} \\frac{(x-5)^n}{n\\sqrt{n} \\cdot 2^n}$, $R = 2$. At $x = 7$ ($= 5 + 2$):: $\\sum 1/(n\\sqrt{n})$. This:',
+            options: ['Converges ($p$-series with $p = 3/2 > 1$)', 'Diverges (harmonic-like)', 'Inconclusive', 'Alternates'],
+            correctAnswers: ['Converges ($p$-series with $p = 3/2 > 1$)'],
+            hints: ['$1/(n \\cdot n^{1/2}) = 1/n^{3/2}$, a $p$-series.'],
+            explanation: '$\\sum 1/n^{3/2}$ converges since $p = 3/2 > 1$.'
+          },
+          {
+            label: 'Same series at $x = 3$ ($= 5 - 2$): $\\sum (-1)^n/(n^{3/2})$. This:',
+            options: ['Converges (AST or absolutely since $\\sum 1/n^{3/2}$ converges)', 'Diverges', 'Inconclusive', 'Need more terms'],
+            correctAnswers: ['Converges (AST or absolutely since $\\sum 1/n^{3/2}$ converges)'],
+            hints: ['If $\\sum |a_n|$ converges, then $\\sum a_n$ converges absolutely.'],
+            explanation: '$\\sum |a_n| = \\sum 1/n^{3/2}$ converges, so the series converges absolutely. IOC: $[3, 7]$.'
+          }
+        ]
       }
+    },
+    {
+      id: 'rc2-input',
+      type: 'input-box' as const,
+      content: '**Full IOC**',
+      exercise: {
+        question: '$\\sum_{n=1}^{\\infty} \\frac{(x+4)^n}{n \\cdot 7^n}$. $R = 7$, center $a = -4$. The IOC is $(-11, 3]$, $[-11, 3)$, $(-11, 3)$, or $[-11, 3]$? Enter in interval notation.',
+        correctAnswer: '[-11, 3)',
+        acceptableAnswers: ['[-11, 3)', '[-11,3)'],
+        hints: ['$x = 3$: $(3+4)^n/(n \\cdot 7^n) = 1/n$ → harmonic, diverges.', '$x = -11$: $(-7)^n/(n \\cdot 7^n) = (-1)^n/n$ → alternating harmonic, converges.'],
+        explanation: '$x = 3$: $\\sum 1/n$ diverges. $x = -11$: $\\sum (-1)^n/n$ converges. IOC: $[-11, 3)$.'
+      }
+    },
+    {
+      id: 'rc2-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Always check both endpoints when $0 < R < \\infty$
+- Substitute $x = a \\pm R$ to get a numeric series
+- Apply the appropriate convergence test to each
+- Four possible bracket combinations: use $[$ for convergent, $($ for divergent
+
+> **Next:** Part 3 — Special Cases and Tricky Series.`
     }
   ]
 };

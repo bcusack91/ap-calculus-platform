@@ -149,7 +149,9 @@ Even modest changes in flux through many-turn coils can produce significant volt
 A square coil has 80 turns, each with side length 10 cm. The coil sits in a uniform field ($\\theta = 0°$) that decreases from 0.6 T to 0.2 T in 0.05 s.
 
 1) Area of each turn (in m²)
+
 2) Change in flux per turn $|\\Delta\\Phi|$ (in Wb)
+
 3) Magnitude of the induced EMF (in V)
 
 *Round all answers to 3 significant figures.*

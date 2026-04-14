@@ -113,7 +113,9 @@ Parentheses **de-emphasize** information — they tell the reader, "This is a si
 Type "dashes," "parentheses," or "commas" for the best choice in each sentence.
 
 1) "The keynote speaker — a Nobel laureate ___ captivated the audience." — What should replace the blank to close the aside?
+
 2) "The festival (held annually in October) ___ attracts visitors from across the country." — What punctuation, if any, goes in the blank?
+
 3) "Three countries ___ France, Germany, and Italy ___ signed the agreement." — What paired punctuation best sets off this list in an emphatic way?
       `,
       exercise: {

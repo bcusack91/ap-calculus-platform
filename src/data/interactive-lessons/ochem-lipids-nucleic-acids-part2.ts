@@ -88,7 +88,9 @@ export const oChemLipidsPart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: amphiphilic lipid with phosphate-containing headgroup
+
       2) Term for: base hydrolysis of fatty acid esters to soaps
+
       3) Product pattern expected under acid-catalyzed esterification
       `,
       exercise: {

@@ -95,7 +95,9 @@ export const bioMendelianPart3Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **allele expressed in heterozygous genotype**
+
       2) Term for this definition: **allele expressed when no dominant allele is present**
+
       3) Term for this definition: **genotype carrying two different alleles**
       `,
       exercise: {

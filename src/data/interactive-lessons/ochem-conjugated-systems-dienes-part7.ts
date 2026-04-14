@@ -88,7 +88,9 @@ export const oChemConjugatedPart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: [4+2] cycloaddition of diene and dienophile
+
       2) Term for: required diene geometry for Diels-Alder
+
       3) Product pattern expected under HBr, low temperature
       `,
       exercise: {

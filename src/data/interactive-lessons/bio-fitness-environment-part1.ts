@@ -95,7 +95,9 @@ export const bioFitnessPart1Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **relative reproductive success in a specific environment**
+
       2) Term for this definition: **heritable trait improving performance under selection**
+
       3) Term for this definition: **ability of one genotype to produce different phenotypes**
       `,
       exercise: {

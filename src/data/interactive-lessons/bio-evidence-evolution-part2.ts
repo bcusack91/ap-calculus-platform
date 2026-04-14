@@ -95,7 +95,9 @@ export const bioEvidencePart2Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **shared anatomy due to common ancestry**
+
       2) Term for this definition: **similar function evolved independently in different lineages**
+
       3) Term for this definition: **sequence similarity indicating evolutionary relatedness**
       `,
       exercise: {

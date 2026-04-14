@@ -88,7 +88,9 @@ export const oChemLipidsPart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: base + sugar + phosphate monomer
+
       2) Term for: linkage joining nucleotides in nucleic acids
+
       3) Product pattern expected under phosphorylation of nucleoside
       `,
       exercise: {

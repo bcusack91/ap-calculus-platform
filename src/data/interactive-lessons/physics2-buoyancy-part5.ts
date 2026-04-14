@@ -125,7 +125,9 @@ $$T + F_B = W \\implies T = W - F_B$$
 A wooden ball ($\\rho = 500$ kg/m³, $V = 0.002$ m³) is tied to the bottom of a pool by a string.
 
 1) Weight of the ball (in N)
+
 2) Buoyant force on the ball (in N)
+
 3) Tension in the string (in N)
       `,
       exercise: {

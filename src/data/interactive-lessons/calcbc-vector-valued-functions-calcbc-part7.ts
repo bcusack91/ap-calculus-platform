@@ -2,185 +2,121 @@ export const calcbcVectorsPart7Data = {
   topicSlug: 'vector-valued-functions-calcbc',
   sections: [
     {
-      id: 'calcbcvectors-p7-intro',
+      id: 'vv7-intro',
       type: 'text' as const,
-      content: `
-# Vector Valued Functions
+      content: `# Vector-Valued Functions — Comprehensive Review
 
-**Part 7 of 7 — Mixed Review**
+**Part 7 of 7 — Full Topic Review**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Master Reference Table
 
-## Key Ideas
+| Concept | Formula |
+|---------|---------|
+| Position | $\\vec{r}(t) = \\langle x(t), y(t) \\rangle$ |
+| Velocity | $\\vec{v}(t) = \\langle x'(t), y'(t) \\rangle$ |
+| Acceleration | $\\vec{a}(t) = \\langle x''(t), y''(t) \\rangle$ |
+| Speed | $\\|\\vec{v}\\| = \\sqrt{(x')^2 + (y')^2}$ |
+| Distance | $\\int_a^b \\|\\vec{v}\\|\\,dt$ |
+| Displacement | $\\int_a^b \\vec{v}\\,dt = \\vec{r}(b) - \\vec{r}(a)$ |
+| Unit tangent | $\\hat{T} = \\vec{v}/\\|\\vec{v}\\|$ |
+| At rest | $\\vec{v}(t) = \\vec{0}$ |
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
-
-## Formula Snapshot
-
-When appropriate, use:
-
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+> **AP Tip:** This table covers everything you need for vector motion questions. Memorize it.`
     },
     {
-      id: 'calcbcvectors-p7-mcq1',
+      id: 'vv7-review',
+      type: 'text' as const,
+      content: `### Key Connections
+
+**Vectors ↔ Parametric:** Same math, different notation. $\\vec{r}(t) = \\langle x(t), y(t) \\rangle$ is the same as $x = x(t), y = y(t)$.
+
+**Vectors ↔ 1D Motion:** Extends AB motion concepts:
+- AB: $v(t) = s'(t)$, distance $= \\int|v|\\,dt$
+- BC: $\\vec{v}(t) = \\vec{r}\\,'(t)$, distance $= \\int\\|\\vec{v}\\|\\,dt$
+
+**Common Mistakes:**
+1. Confusing displacement (vector) with distance (scalar)
+2. Forgetting to check BOTH components for "at rest"
+3. Using $|x'| + |y'|$ instead of $\\sqrt{(x')^2+(y')^2}$ for speed
+4. Not applying initial conditions after integration`
+    },
+    {
+      id: 'vv7-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Review Questions**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'If $\\|\\vec{v}(t)\\|$ is constant and nonzero, which is true?',
+            options: ['$\\vec{a} \\cdot \\vec{v} = 0$ (acceleration perpendicular to velocity)', 'Acceleration is zero', 'The path is a straight line', 'Speed is increasing'],
+            correctAnswer: 0,
+            explanation: '$\\frac{d}{dt}(\\vec{v}\\cdot\\vec{v}) = 2\\vec{v}\\cdot\\vec{a} = \\frac{d}{dt}(c^2) = 0$. So $\\vec{a} \\perp \\vec{v}$. (Uniform circular motion is a classic example.)'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'The displacement from $t = 0$ to $t = T$ equals $\\langle 0, 0 \\rangle$. This means:',
+            options: ['The particle returns to its starting point', 'The particle never moved', 'The speed was zero', 'The path was a straight line'],
+            correctAnswer: 0,
+            explanation: 'Zero displacement means $\\vec{r}(T) = \\vec{r}(0)$: the particle is back where it started. It may have traveled a long distance (e.g., a full circle).'
+          },
+          {
+            question: 'Which increases the total distance traveled?',
+            options: ['Higher speed over the interval', 'Higher acceleration', 'Starting farther from the origin', 'None of these necessarily'],
+            correctAnswer: 0,
+            explanation: 'Distance $= \\int \\|\\vec{v}\\|\\,dt$. Higher speed (larger $\\|\\vec{v}\\|$) directly increases the integral.'
           }
         ]
       }
     },
     {
-      id: 'calcbcvectors-p7-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcvectors-p7-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcvectors-p7-dropdown',
+      id: 'vv7-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Concept Checks**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'For $\\vec{r}(t) = \\langle t - \\sin t, 1 - \\cos t \\rangle$ (cycloid), the particle is at rest when:',
+            options: ['$t = 2k\\pi$ (multiples of $2\\pi$)', '$t = k\\pi$', '$t = \\pi/2 + k\\pi$', 'Never'],
+            correctAnswers: ['$t = 2k\\pi$ (multiples of $2\\pi$)'],
+            hints: ['$\\vec{v} = \\langle 1 - \\cos t, \\sin t \\rangle = \\vec{0}$ when?'],
+            explanation: '$1 - \\cos t = 0 \\implies \\cos t = 1 \\implies t = 2k\\pi$. And $\\sin(2k\\pi) = 0$ ✓. Both components are zero at $t = 2k\\pi$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcvectors-p7-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Mixed Review**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcvectors-p7-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'If $\\vec{v}(t) = \\langle t^2, t \\rangle$, the total distance from $t = 0$ to $t = 1$ is:',
+            options: ['$\\int_0^1 \\sqrt{t^4 + t^2}\\,dt$', '$\\langle 1/3, 1/2 \\rangle$', '$\\sqrt{1/9 + 1/4}$', '$\\int_0^1(t^2 + t)\\,dt$'],
+            correctAnswers: ['$\\int_0^1 \\sqrt{t^4 + t^2}\\,dt$'],
+            hints: ['Distance $= \\int \\|\\vec{v}\\|\\,dt$, not $\\int(|v_x|+|v_y|)\\,dt$.'],
+            explanation: '$\\|\\vec{v}\\| = \\sqrt{t^4 + t^2}$. Distance $= \\int_0^1 \\sqrt{t^4 + t^2}\\,dt = \\int_0^1 t\\sqrt{t^2+1}\\,dt$ (since $t \\ge 0$).'
           }
         ]
       }
+    },
+    {
+      id: 'vv7-input',
+      type: 'input-box' as const,
+      content: '**Final Computation**',
+      exercise: {
+        question: 'A particle moves along $\\vec{r}(t) = \\langle 3t, 4t \\rangle$. What is the total distance from $t = 0$ to $t = 10$?',
+        correctAnswer: '50',
+        acceptableAnswers: ['50', '50.0'],
+        hints: ['Speed $= \\sqrt{9+16} = 5$.', 'Distance $= 5 \\times 10$.'],
+        explanation: 'Speed $= 5$ (constant). Distance $= 5 \\cdot 10 = 50$. Straight-line motion at constant speed.'
+      }
+    },
+    {
+      id: 'vv7-summary',
+      type: 'text' as const,
+      content: `### Topic Complete!
+
+You've mastered vector-valued functions:
+- Position, velocity, acceleration — component-wise derivatives
+- Speed vs. velocity vs. displacement vs. distance
+- Integration with initial conditions
+- Arc length and unit tangent vectors
+- AP FRQ strategies for motion problems
+
+$$\\boxed{\\vec{v}(t) = \\vec{r}\\,'(t) \\qquad \\text{Distance} = \\int_a^b \\|\\vec{v}(t)\\|\\,dt}$$
+
+> **Up next:** Arc Length & Surface Area — extending these ideas to general curves.`
     }
   ]
-}
+};

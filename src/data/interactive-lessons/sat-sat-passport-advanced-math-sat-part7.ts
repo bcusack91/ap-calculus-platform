@@ -102,7 +102,9 @@ Always read the notation carefully and work from the inside out.
 **Mixed Calculations** 🧮
 
 1) Factor $x^2 - 11x + 30 = (x - a)(x - b)$ where $a < b$. What is $b$?
+
 2) Evaluate: $27^{1/3} + 16^{1/2}$.
+
 3) If $f(x) = 3x - 7$, find $f^{-1}(2)$.
       `,
       exercise: {

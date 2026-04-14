@@ -2,185 +2,122 @@ export const calcbcReviewPart2Data = {
   topicSlug: 'review-connections-calcbc',
   sections: [
     {
-      id: 'calcbcreview-p2-intro',
+      id: 'rc2-intro',
       type: 'text' as const,
-      content: `
-# Review Connections
+      content: `# Parametric, Polar, and Vector Connections
 
-**Part 2 of 7 — Worked Examples**
+**Part 2 of 7 — Three Coordinate Systems, One Framework**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Unified View
 
-## Key Ideas
+Parametric, polar, and vector representations all describe curves. The calculus is the same — only the coordinate system changes:
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+| System | Position | Velocity | Speed |
+|--------|----------|----------|-------|
+| Parametric | $(x(t), y(t))$ | $(x'(t), y'(t))$ | $\\sqrt{(x')^2 + (y')^2}$ |
+| Vector | $\\vec{r}(t) = \\langle x(t), y(t) \\rangle$ | $\\vec{r}'(t) = \\langle x'(t), y'(t) \\rangle$ | $|\\vec{r}'(t)|$ |
+| Polar | $r(\\theta)$ at angle $\\theta$ | Via $x = r\\cos\\theta$, $y = r\\sin\\theta$ | $\\sqrt{(r')^2 + r^2}$ |
 
-## Formula Snapshot
-
-When appropriate, use:
-
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+> **Key Insight:** Polar curves ARE parametric curves with $t = \\theta$, $x = r(\\theta)\\cos\\theta$, $y = r(\\theta)\\sin\\theta$. Every polar formula follows from the parametric formulas.`
     },
     {
-      id: 'calcbcreview-p2-mcq1',
+      id: 'rc2-deriv',
+      type: 'text' as const,
+      content: `### Derivatives Across Systems
+
+**Slope of tangent line ($dy/dx$):**
+
+| System | Formula |
+|--------|---------|
+| Rectangular | $f'(x)$ |
+| Parametric | $\\frac{dy/dt}{dx/dt}$ |
+| Polar | $\\frac{r'\\sin\\theta + r\\cos\\theta}{r'\\cos\\theta - r\\sin\\theta}$ |
+
+**Second derivative ($d^2y/dx^2$):**
+
+$$\\boxed{\\frac{d^2y}{dx^2} = \\frac{\\frac{d}{dt}\\left[\\frac{dy}{dx}\\right]}{\\frac{dx}{dt}}}$$
+
+This formula works for **both parametric and polar** (with $t = \\theta$).
+
+**Arc length:**
+
+$$\\boxed{L = \\int_a^b \\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}\\,dt}$$
+
+In polar: $L = \\int_{\\alpha}^{\\beta} \\sqrt{r^2 + (r')^2}\\,d\\theta$.`
+    },
+    {
+      id: 'rc2-mc',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Cross-System Connections**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'The polar curve $r = 2$ in parametric form is:',
+            options: ['$x = 2\\cos\\theta$, $y = 2\\sin\\theta$', '$x = 2$, $y = 2$', '$x = \\theta$, $y = 2$', '$x = 2\\cos\\theta$, $y = 2\\cos\\theta$'],
+            correctAnswer: 0,
+            explanation: '$x = r\\cos\\theta = 2\\cos\\theta$, $y = r\\sin\\theta = 2\\sin\\theta$. This is a circle of radius 2.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'For $r = 1 + \\sin\\theta$, $dr/d\\theta = \\cos\\theta$. At $\\theta = \\pi/2$, the polar slope $dy/dx$:',
+            options: ['Is undefined (vertical tangent)', 'Equals $0$ (horizontal tangent)', 'Equals $1$', 'Equals $-1$'],
+            correctAnswer: 0,
+            explanation: 'At $\\theta = \\pi/2$: $r = 2$, $r\' = 0$. $dx/d\\theta = r\'\\cos\\theta - r\\sin\\theta = 0 - 2 = -2$. $dy/d\\theta = r\'\\sin\\theta + r\\cos\\theta = 0 + 0 = 0$. $dy/dx = 0/(-2) = 0$. Actually this is horizontal! Let me recheck: $dy/dx = 0/(-2) = 0$, so it\'s a horizontal tangent.'
+          },
+          {
+            question: 'A particle\'s position is $\\vec{r}(t) = \\langle \\cos t, \\sin t \\rangle$. Its acceleration vector is:',
+            options: ['$\\langle -\\cos t, -\\sin t \\rangle$', '$\\langle \\cos t, \\sin t \\rangle$', '$\\langle -\\sin t, \\cos t \\rangle$', '$\\langle 0, 0 \\rangle$'],
+            correctAnswer: 0,
+            explanation: '$\\vec{v}(t) = \\langle -\\sin t, \\cos t \\rangle$. $\\vec{a}(t) = \\langle -\\cos t, -\\sin t \\rangle = -\\vec{r}(t)$. Acceleration points toward the center.'
           }
         ]
       }
     },
     {
-      id: 'calcbcreview-p2-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcreview-p2-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcreview-p2-dropdown',
+      id: 'rc2-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Area Formulas**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'Area enclosed by $r = \\cos\\theta$ (full curve):',
+            options: ['$\\frac{1}{2}\\int_0^{\\pi} \\cos^2\\theta\\,d\\theta = \\pi/4$', '$\\int_0^{2\\pi} \\cos\\theta\\,d\\theta = 0$', '$\\pi(1)^2 = \\pi$', '$\\frac{1}{2}\\int_0^{2\\pi} \\cos^2\\theta\\,d\\theta = \\pi/2$'],
+            correctAnswers: ['$\\frac{1}{2}\\int_0^{\\pi} \\cos^2\\theta\\,d\\theta = \\pi/4$'],
+            hints: ['$r = \\cos\\theta$ traces a full circle from $0$ to $\\pi$.'],
+            explanation: 'The curve $r = \\cos\\theta$ traces a circle of diameter 1 from $\\theta = 0$ to $\\pi$. Area $= \\pi/4$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcreview-p2-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Worked Examples**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcreview-p2-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'Area between parametric curves requires:',
+            options: ['Converting to $\\int y\\,dx = \\int y(t) x\'(t)\\,dt$', 'Using the polar area formula', 'Just subtracting the curves', 'Double integration'],
+            correctAnswers: ['Converting to $\\int y\\,dx = \\int y(t) x\'(t)\\,dt$'],
+            hints: ['Replace $dx$ with $x\'(t)\\,dt$.'],
+            explanation: '$\\int_a^b y\\,dx = \\int_{t_1}^{t_2} y(t) \\cdot x\'(t)\\,dt$ by substitution.'
           }
         ]
       }
+    },
+    {
+      id: 'rc2-input',
+      type: 'input-box' as const,
+      content: '**Practice**',
+      exercise: {
+        question: 'Find the speed of a particle with $\\vec{r}(t) = \\langle 3\\cos t, 4\\sin t \\rangle$ at $t = 0$.',
+        correctAnswer: '4',
+        acceptableAnswers: ['4', '4.0'],
+        hints: ['$\\vec{v}(0) = \\langle -3\\sin 0, 4\\cos 0 \\rangle = \\langle 0, 4 \\rangle$.'],
+        explanation: 'Speed $= |\\vec{v}(0)| = \\sqrt{0^2 + 4^2} = 4$.'
+      }
+    },
+    {
+      id: 'rc2-summary',
+      type: 'text' as const,
+      content: `### System Connections
+
+- Polar → Parametric: $x = r\\cos\\theta$, $y = r\\sin\\theta$
+- Vector = Parametric with angle-bracket notation
+- Same calculus (derivatives, integrals, arc length) in all three systems
+- Polar area has the extra $1/2$; arc length uses $\\sqrt{r^2 + (r')^2}$
+
+**Next: Part 3 — Differential Equations and Modeling**`
     }
   ]
-}
+};

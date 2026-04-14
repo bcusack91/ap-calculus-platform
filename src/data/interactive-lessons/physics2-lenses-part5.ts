@@ -140,8 +140,11 @@ The negative sign indicates the image is inverted.
 Two converging lenses are 55 cm apart. Lens 1: $f_1 = 15$ cm. Lens 2: $f_2 = 10$ cm. An object is 30 cm in front of lens 1.
 
 1) Image distance from lens 1: $d_{i1}$ (in cm)
+
 2) Object distance for lens 2: $d_{o2}$ (in cm)
+
 3) Image distance from lens 2: $d_{i2}$ (in cm, round to 1 decimal)
+
 4) Total magnification $m_{\\text{total}}$ (round to 2 decimals)
 
 *Round all answers to 3 significant figures.*

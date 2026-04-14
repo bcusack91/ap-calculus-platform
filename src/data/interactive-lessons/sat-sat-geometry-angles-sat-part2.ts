@@ -75,6 +75,113 @@ In 30-60-90 triangles, students often mix up which leg is which. Remember: the *
           }
         ]
       }
+    },
+    {
+      id: 'geo2-text2',
+      type: 'text' as const,
+      content: `## Deep Dive: Applying Triangle Properties
+
+### Worked Example 1: Special Triangle → Area
+
+| Step | Work |
+|---|---|
+| **Problem** | An equilateral triangle has side length 8. Find its area. |
+| **Strategy** | Split into two 30-60-90 triangles by drawing the height. |
+| **Find height** | Half-base $= 4$ (short leg). Height $= 4\\sqrt{3}$ (long leg of 30-60-90). |
+| **Area** | $A = \\frac{1}{2}(8)(4\\sqrt{3}) = 16\\sqrt{3} \\approx 27.7$ |
+
+> **SAT shortcut:** Area of equilateral triangle $= \\frac{s^2\\sqrt{3}}{4}$. Plug in: $\\frac{64\\sqrt{3}}{4} = 16\\sqrt{3}$ ✓
+
+### Worked Example 2: Similar Triangles with Algebra
+
+| Step | Work |
+|---|---|
+| **Problem** | △ABC ~ △DEF. In △ABC: $AB = 6$, $BC = 9$. In △DEF: $DE = 10$, $EF = ?$ |
+| **Set up proportion** | $\\frac{AB}{DE} = \\frac{BC}{EF}$ → $\\frac{6}{10} = \\frac{9}{EF}$ |
+| **Cross multiply** | $6 \\cdot EF = 90$ → $EF = 15$ |
+
+### Pythagorean Triples to Memorize
+
+| Triple | Multiples You'll See |
+|---|---|
+| $3, 4, 5$ | $6, 8, 10$; $9, 12, 15$; $15, 20, 25$ |
+| $5, 12, 13$ | $10, 24, 26$ |
+| $8, 15, 17$ | Less common but appears |
+| $7, 24, 25$ | Rare on SAT |
+
+Recognizing these saves you from using the Pythagorean theorem every time.
+
+### Triangle Inequality: Finding the Range
+
+If two sides are $5$ and $11$, the third side $x$ must satisfy:
+$$11 - 5 < x < 11 + 5$$
+$$6 < x < 16$$`
+    },
+    {
+      id: 'geo2-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Advanced Triangle Problems** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: 'A 30-60-90 triangle has a long leg of $9\\sqrt{3}$. What is the hypotenuse?',
+            options: ['$18$', '$9$', '$9\\sqrt{2}$', '$18\\sqrt{3}$'],
+            correctAnswer: 0,
+            explanation: 'Long leg $= x\\sqrt{3} = 9\\sqrt{3}$, so $x = 9$ (short leg). Hypotenuse $= 2x = 18$.'
+          },
+          {
+            question: 'Two sides of a triangle are 7 and 13. Which CANNOT be the third side?',
+            options: ['$20$', '$8$', '$10$', '$15$'],
+            correctAnswer: 0,
+            explanation: 'Third side must satisfy $13 - 7 < x < 13 + 7$, so $6 < x < 20$. Since $20$ is not strictly less than $20$, it cannot form a triangle.'
+          },
+          {
+            question: 'Two similar triangles have corresponding sides in ratio $2:3$. If the area of the larger triangle is 54, what is the area of the smaller?',
+            options: ['$24$', '$36$', '$18$', '$12$'],
+            correctAnswer: 0,
+            explanation: 'Area ratio $= $ (side ratio)$^2 = (2/3)^2 = 4/9$. Smaller area $= 54 \\times \\frac{4}{9} = 24$.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'geo2-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Match the Triangle Property** — Select the correct value for each scenario.',
+      exercise: {
+        dropdowns: [
+          '45-45-90 triangle, leg = 7. Hypotenuse = [7√2|14|7√3|7]',
+          '30-60-90 triangle, hypotenuse = 12. Short leg = [6|4|6√3|12√3]',
+          'Sides 5 and 12, right angle between them. Hypotenuse = [13|17|√119|10]',
+          'Similar triangles, scale factor 1:4. Area ratio = [1:16|1:4|1:8|1:64]'
+        ],
+        correctAnswers: ['7√2', '6', '13', '1:16'],
+        hint1: 'For 45-45-90: hypotenuse = leg × √2.',
+        hint2: 'For 30-60-90: hypotenuse = 2 × short leg.',
+        hint3: 'Area ratio = (side ratio)².',
+        explanation: '45-45-90: hyp = 7√2. 30-60-90: short leg = 12/2 = 6. Pythagorean: √(25+144) = √169 = 13 (a 5-12-13 triple). Area scales as the square of the side ratio: (1/4)² = 1/16.'
+      }
+    },
+    {
+      id: 'geo2-summary',
+      type: 'text' as const,
+      content: `## Part 2 Summary: Triangle Properties
+
+| Property | Key Facts |
+|---|---|
+| 45-45-90 | Legs $= x$, hyp $= x\\sqrt{2}$ |
+| 30-60-90 | Short $= x$, long $= x\\sqrt{3}$, hyp $= 2x$ |
+| Pythagorean theorem | $a^2 + b^2 = c^2$ (right triangles only) |
+| Triangle inequality | Sum of two sides $>$ third side |
+| Similar triangles | Equal angles → proportional sides |
+| Area ratio (similar) | $= $ (side ratio)$^2$ |
+
+### SAT Strategy
+- **Spot Pythagorean triples** (3-4-5, 5-12-13) before computing.
+- For special right triangles, identify which angle or side you're given first, then find $x$.
+- In similar triangle problems, **match corresponding sides** carefully — order matters.
+
+*Next: Area, perimeter, and quadrilateral properties →*`
     }
   ]
 };

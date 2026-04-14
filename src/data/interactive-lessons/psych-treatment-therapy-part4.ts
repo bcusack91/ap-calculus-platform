@@ -86,7 +86,9 @@ export const psychTreatmentPart4Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: use of medication to treat psychological symptoms
+
       2) Write the concept that matches: selective serotonin reuptake inhibitor commonly used for mood and anxiety disorders
+
       3) Write the concept that matches: strategies that reduce risk of symptom return
 
       Use the exact vocabulary term from this part.

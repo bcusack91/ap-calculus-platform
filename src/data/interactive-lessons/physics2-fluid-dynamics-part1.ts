@@ -124,7 +124,9 @@ Units: 1 m³/s = 1000 liters/s. Typical garden hose: $Q \\approx 3 \\times 10^{-
 Water flows through a circular pipe of diameter 4.0 cm at a speed of 3.0 m/s.
 
 1) Cross-sectional area of the pipe (in m², scientific notation: e.g., "1.26e-3")
+
 2) Volume flow rate (in m³/s, use same format)
+
 3) How many seconds to fill a 50-liter (0.050 m³) bucket?
 
 *Round all answers to 3 significant figures.*

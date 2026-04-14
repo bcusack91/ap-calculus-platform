@@ -88,7 +88,9 @@ export const oChemCarboxylicAcidsPart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: least reactive common derivative due to resonance donation
+
       2) Term for: addition intermediate before elimination
+
       3) Product pattern expected under RCOCl + NH3
       `,
       exercise: {

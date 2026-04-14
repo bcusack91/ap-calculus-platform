@@ -113,7 +113,9 @@ This passage tests five rules in a single paragraph — a realistic representati
 Identify the specific punctuation error in each sentence.
 
 1) "The new library — designed by a world-famous architect, will open to the public in September."
+
 2) "Its important to review you\'re notes before the exam begins."
+
 3) "The coach praised the players hard work, and encouraged them to keep practicing, and studying film."
       `,
       exercise: {

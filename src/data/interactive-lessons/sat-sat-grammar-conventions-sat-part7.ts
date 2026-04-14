@@ -98,7 +98,9 @@ When you see an underlined portion on the SAT, run through these checks:
 Identify the grammar error type in each sentence. Type one of: "subject-verb agreement," "pronoun error," "tense shift," "fragment," "comma splice," "dangling modifier," "parallelism error," or "faulty comparison."
 
 1) The mayor, along with several council members, were present at the ceremony.
+
 2) Running late for the interview, the bus was missed.
+
 3) She enjoys painting, reading, and to cook new recipes.
       `,
       exercise: {

@@ -93,9 +93,9 @@ export default function APBioDiagnosticPage() {
     const previousForms = history
       .map(h => {
         const r = h.results as Record<string, unknown> | null
-        return r?.form as 'A' | 'B' | undefined
+        return r?.form as number | undefined
       })
-      .filter((f): f is 'A' | 'B' => f === 'A' || f === 'B')
+      .filter((f): f is number => typeof f === 'number')
 
     const form = pickNextForm(previousForms)
     const data = generateAPBioDiagnosticTest(form)
@@ -502,7 +502,7 @@ export default function APBioDiagnosticPage() {
               <ol className="space-y-2 text-sm text-blue-700 dark:text-blue-400 list-decimal list-inside">
                 <li>Review the {results.recommendedTopics.length} recommended module{results.recommendedTopics.length > 1 ? 's' : ''} above</li>
                 <li>Complete each module&apos;s lessons, practice problems, and flashcards</li>
-                <li>Come back and take the next diagnostic test (Form {results.form === 'A' ? 'B' : 'A'}) — different questions, same breadth</li>
+                <li>Come back and take the next diagnostic test (Form {results.form + 1 > 10 ? 1 : results.form + 1}) — different questions, same breadth</li>
                 <li>Get a new set of personalized recommendations based on your updated results</li>
                 <li>Repeat until you&apos;re scoring 4+ across all domains!</li>
               </ol>
@@ -672,7 +672,7 @@ export default function APBioDiagnosticPage() {
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                Alternating forms (A/B) — each test has different questions
+                10 rotating forms — each test has different questions
               </li>
             </ul>
 

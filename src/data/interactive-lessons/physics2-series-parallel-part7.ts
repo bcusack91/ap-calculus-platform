@@ -157,9 +157,13 @@ AP Physics 2 circuit FRQs typically ask you to:
 A circuit has a 36 V battery connected to $R_1 = 12 \\; \\Omega$ in series with the parallel combination of $R_2 = 8 \\; \\Omega$ and $R_3 = 24 \\; \\Omega$.
 
 1) $R_{\\text{total}}$ of the circuit (in $\\Omega$)
+
 2) Total current from the battery (in A)
+
 3) Power dissipated by $R_1$ (in W)
+
 4) Current through $R_3$ (in A)
+
 5) Total power delivered by the battery (in W)
 
 *Round all answers to 3 significant figures.*

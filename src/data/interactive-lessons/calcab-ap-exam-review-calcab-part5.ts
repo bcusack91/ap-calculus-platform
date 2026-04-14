@@ -2,185 +2,146 @@ export const calcabExamReviewPart5Data = {
   topicSlug: 'ap-exam-review-calcab',
   sections: [
     {
-      id: 'calcabexamreview-p5-intro',
+      id: 'examrev5-intro',
       type: 'text' as const,
-      content: `
-# Ap Exam Review
+      content: `# AP Exam Review \u2014 Applications of Integration
 
-**Part 5 of 7 — Applications**
+**Part 5 of 7**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+---
 
-## Key Ideas
+### Applications of Integration Summary
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+| Application | Formula |
+|:---|:---|
+| Area under curve | $\\int_a^b f(x)\\,dx$ |
+| Area between curves | $\\int_a^b [f(x) - g(x)]\\,dx$ ($f \\ge g$) |
+| Volume \u2014 Disk | $\\pi\\int_a^b [R(x)]^2\\,dx$ |
+| Volume \u2014 Washer | $\\pi\\int_a^b \\left([R(x)]^2 - [r(x)]^2\\right)dx$ |
+| Accumulation | $F(x) = F(a) + \\int_a^x f(t)\\,dt$ |
+| Average value | $\\frac{1}{b-a}\\int_a^b f(x)\\,dx$ |
 
-## Formula Snapshot
+### Area Between Curves \u2014 Setup
 
-When appropriate, use:
+$$\\boxed{A = \\int_a^b [\\text{top} - \\text{bottom}]\\,dx \\quad\\text{or}\\quad \\int_c^d [\\text{right} - \\text{left}]\\,dy}$$
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+> **Key Fact:** When curves cross, split the integral at intersection points.
 
-and interpret what the final value means in context.
-      `
+### Worked Example \u2014 Area Between Curves
+
+Find the area between $y = x^2$ and $y = x$ on $[0,1]$.
+
+Intersection: $x^2 = x \\implies x=0, x=1$. On $[0,1]$: $x \\ge x^2$.
+
+$$A = \\int_0^1 (x - x^2)\\,dx = \\left[\\frac{x^2}{2} - \\frac{x^3}{3}\\right]_0^1 = \\frac{1}{2} - \\frac{1}{3} = \\frac{1}{6}$$`
     },
     {
-      id: 'calcabexamreview-p5-mcq1',
+      id: 'examrev5-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Applications of Integration Quiz** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'The area between $y=4-x^2$ and $y=0$ from $x=-2$ to $x=2$ is:',
+            options: ['$32/3$', '$16/3$', '$8$', '$16$'],
+            correctAnswer: 0,
+            explanation: '$\\int_{-2}^{2}(4-x^2)\\,dx = [4x - x^3/3]_{-2}^2 = (8-8/3)-(-8+8/3) = 32/3$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'Which integral gives the volume of the solid formed by rotating $y=\\sqrt{x}$ about the $x$-axis from $x=0$ to $x=4$?',
+            options: ['$\\pi\\int_0^4 x\\,dx$', '$\\pi\\int_0^4 \\sqrt{x}\\,dx$', '$\\pi\\int_0^2 y^4\\,dy$', '$2\\pi\\int_0^4 x\\sqrt{x}\\,dx$'],
+            correctAnswer: 0,
+            explanation: 'Disk method: $\\pi\\int_0^4 (\\sqrt{x})^2\\,dx = \\pi\\int_0^4 x\\,dx$.'
+          },
+          {
+            question: 'If $\\int_0^6 f(x)\\,dx = 18$, the average value of $f$ on $[0,6]$ is:',
+            options: ['$3$', '$18$', '$6$', '$108$'],
+            correctAnswer: 0,
+            explanation: '$f_{\\text{avg}} = \\frac{1}{6-0}\\cdot 18 = 3$.'
           }
         ]
       }
     },
     {
-      id: 'calcabexamreview-p5-example',
+      id: 'examrev5-volumes',
       type: 'text' as const,
-      content: `
-## Worked Example
+      content: `### Volume Methods Comparison
 
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
+| Method | Axis | Slice Shape | Formula |
+|:---|:---|:---|:---|
+| Disk | $x$ | Circle | $\\pi\\int [R(x)]^2\\,dx$ |
+| Washer | $x$ | Ring | $\\pi\\int ([R]^2 - [r]^2)\\,dx$ |
+| Disk ($y$-axis) | $y$ | Circle | $\\pi\\int [R(y)]^2\\,dy$ |
 
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
+### Worked Example \u2014 Washer Method
 
-### Common Trap
+Region between $y = x$ and $y = x^2$ rotated about the $x$-axis on $[0,1]$.
 
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
+Outer radius: $R = x$. Inner radius: $r = x^2$.
+
+$$V = \\pi\\int_0^1 (x^2 - x^4)\\,dx = \\pi\\left[\\frac{x^3}{3} - \\frac{x^5}{5}\\right]_0^1 = \\pi\\left(\\frac{1}{3} - \\frac{1}{5}\\right) = \\frac{2\\pi}{15}$$
+
+### Accumulation Functions
+
+$$\\boxed{F(x) = F(a) + \\int_a^x f(t)\\,dt}$$
+
+This says: starting value + net accumulation = current value.`
     },
     {
-      id: 'calcabexamreview-p5-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcabexamreview-p5-dropdown',
+      id: 'examrev5-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Choose the correct setup.** \ud83d\udd0d',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'Area between $y=x$ and $y=x^3$ on $[0,1]$ \u2014 integrand is:',
+            options: ['$x - x^3$', '$x^3 - x$', '$x \\cdot x^3$', '$x + x^3$'],
+            correctAnswers: ['$x - x^3$'],
+            hints: ['On $[0,1]$, $x \\ge x^3$. Area = top minus bottom.'],
+            explanation: '$x \\ge x^3$ on $[0,1]$, so integrand = $x - x^3$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
+            label: 'Volume when $y=\\sqrt{x}$ is rotated about $x$-axis uses:',
+            options: ['Disk method', 'Washer method', 'Shell method', 'Cross-section method'],
+            correctAnswers: ['Disk method'],
+            hints: ['Only one curve and the axis \u2014 no hole in the middle.'],
+            explanation: 'Single curve rotated about the adjacent axis \u2192 disk. $R = \\sqrt{x}$.'
           },
           {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcabexamreview-p5-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Applications**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcabexamreview-p5-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'If $v(t) \\ge 0$, then $\\int_a^b v(t)\\,dt$ represents:',
+            options: ['Total distance traveled', 'Net displacement', 'Average velocity', 'Acceleration'],
+            correctAnswers: ['Total distance traveled'],
+            hints: ['When velocity is non-negative, displacement equals distance.'],
+            explanation: 'When $v \\ge 0$, $\\int v\\,dt$ gives both displacement and distance.'
           }
         ]
       }
+    },
+    {
+      id: 'examrev5-input',
+      type: 'input-box' as const,
+      content: '**Compute the volume.** \u270d\ufe0f',
+      exercise: {
+        question: 'Find the volume when $y = x^2$ is rotated about the $x$-axis from $x=0$ to $x=3$. Express as $\\frac{a\\pi}{b}$ in lowest terms. Enter $a + b$.',
+        correctAnswer: '248',
+        acceptableAnswers: ['248'],
+        hints: [
+          'Disk method: $V = \\pi\\int_0^3 (x^2)^2\\,dx = \\pi\\int_0^3 x^4\\,dx$.',
+          '$= \\pi\\left[\\frac{x^5}{5}\\right]_0^3 = \\pi\\cdot\\frac{243}{5}$.',
+          '$\\frac{243\\pi}{5}$. $a+b = 243+5 = 248$.'
+        ],
+        explanation: '$V = \\pi\\cdot\\frac{3^5}{5} = \\frac{243\\pi}{5}$. $a+b = 248$.'
+      }
+    },
+    {
+      id: 'examrev5-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 5
+
+- Area between curves: $\\int [\\text{top} - \\text{bottom}]\\,dx$
+- Disk: one curve, no hole. Washer: two curves (outer - inner)
+- Accumulation: initial value + integral of rate = total
+- Average value = $\\frac{1}{b-a}\\int_a^b f$`
     }
   ]
-}
+};

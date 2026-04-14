@@ -86,7 +86,9 @@ export const psychPrenatalPart6Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: fertilized egg in the earliest stage of development
+
       2) Write the concept that matches: developing organism from implantation to about eight weeks
+
       3) Write the concept that matches: prenatal stage from roughly nine weeks to birth
 
       Use the exact vocabulary term from this part.

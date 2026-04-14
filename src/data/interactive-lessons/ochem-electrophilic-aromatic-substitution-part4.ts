@@ -88,7 +88,9 @@ export const oChemEASPart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: substituent increasing ring reactivity
+
       2) Term for: substituent decreasing ring reactivity
+
       3) Product pattern expected under RCl/AlCl3
       `,
       exercise: {

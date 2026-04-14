@@ -95,7 +95,9 @@ export const bioSpeciationPart6Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **genome duplication that can create instant reproductive isolation**
+
       2) Term for this definition: **rapid diversification from a common ancestor into niches**
+
       3) Term for this definition: **large-scale evolutionary patterns above the species level**
       `,
       exercise: {

@@ -88,7 +88,9 @@ export const oChemAlkynesPart3Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: acetylide attacks primary alkyl halide
+
       2) Term for: poisoned catalyst giving cis alkene from alkyne
+
       3) Product pattern expected under H2, Lindlar
       `,
       exercise: {

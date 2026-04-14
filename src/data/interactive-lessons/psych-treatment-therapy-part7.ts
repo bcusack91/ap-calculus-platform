@@ -86,7 +86,9 @@ export const psychTreatmentPart7Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: gradual and systematic confrontation of feared stimuli
+
       2) Write the concept that matches: increasing engagement in rewarding and goal-directed activities
+
       3) Write the concept that matches: collaborative bond and agreement on goals and tasks
 
       Use the exact vocabulary term from this part.

@@ -123,7 +123,9 @@ $$\\text{Floating } (\\text{fraction} = \\rho_{\\text{obj}}/\\rho_{\\text{fluid}
 **Final Mixed Drill** (use $g = 10$ m/s², $P_{\\text{atm}} = 10^5$ Pa)
 
 1) Pressure at 25 m depth in a lake (absolute, in Pa)
+
 2) A 0.004 m³ block of wood (density 600 kg/m³) floats. Volume above water (in m³)
+
 3) Force needed on a 0.002 m² piston to hold back water at 15 m depth (gauge force, in N)
 
 *Round all answers to 3 significant figures.*

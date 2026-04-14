@@ -88,7 +88,9 @@ export const oChemStereoPart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: achiral molecule containing stereocenters and internal symmetry
+
       2) Term for: rotation of plane-polarized light by chiral compounds
+
       3) Product pattern expected under epoxidation then acid opening
       `,
       exercise: {

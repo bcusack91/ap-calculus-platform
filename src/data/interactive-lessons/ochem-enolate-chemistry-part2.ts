@@ -88,7 +88,9 @@ export const oChemEnolatePart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: resonance-stabilized anion of carbonyl compound
+
       2) Term for: less substituted enolate formed fastest
+
       3) Product pattern expected under NaOEt/EtOH
       `,
       exercise: {

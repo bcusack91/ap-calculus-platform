@@ -88,7 +88,9 @@ export const oChemConjugatedPart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: net addition across conjugated system termini
+
       2) Term for: forms faster via lower activation barrier
+
       3) Product pattern expected under diene + maleic anhydride, heat
       `,
       exercise: {

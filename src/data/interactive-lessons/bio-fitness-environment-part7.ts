@@ -95,7 +95,9 @@ export const bioFitnessPart7Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **favors one phenotypic extreme**
+
       2) Term for this definition: **favors multiple extremes over intermediates**
+
       3) Term for this definition: **population evolves traits tuned to local conditions**
       `,
       exercise: {

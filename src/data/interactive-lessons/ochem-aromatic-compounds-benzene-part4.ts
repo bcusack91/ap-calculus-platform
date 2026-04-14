@@ -88,7 +88,9 @@ export const oChemAromaticPart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: 4n+2 pi electron count predicts aromatic stabilization
+
       2) Term for: magnetic anisotropy signature of aromatic systems
+
       3) Product pattern expected under RCl, AlCl3
       `,
       exercise: {

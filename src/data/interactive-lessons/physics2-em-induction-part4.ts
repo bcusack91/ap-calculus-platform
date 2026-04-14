@@ -156,7 +156,9 @@ $$P = I^2R = (0.3)^2(2) = 0.18 \\text{ W} \\quad \\checkmark$$
 A conducting rod of length 0.8 m slides at 5 m/s along rails connected to a 4 Ω resistor in a uniform field $B = 0.5$ T (perpendicular to the rail plane).
 
 1) Induced EMF (in V)
+
 2) Current in the circuit (in A)
+
 3) Force needed to maintain constant velocity (in N)
 
 *Round all answers to 3 significant figures.*

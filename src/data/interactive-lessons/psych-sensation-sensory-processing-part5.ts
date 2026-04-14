@@ -86,7 +86,9 @@ export const psychSensationPart5Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: reduced sensitivity to constant stimulation
+
       2) Write the concept that matches: minimum change needed to notice a difference
+
       3) Write the concept that matches: detection of physical energy by sensory receptors
 
       Use the exact vocabulary term from this part.

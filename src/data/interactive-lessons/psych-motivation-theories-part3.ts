@@ -86,7 +86,9 @@ export const psychMotivationPart3Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: engaging in an activity for inherent interest or enjoyment
+
       2) Write the concept that matches: engaging in an activity for external outcomes
+
       3) Write the concept that matches: aiming to attain a positive outcome
 
       Use the exact vocabulary term from this part.

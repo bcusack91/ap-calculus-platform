@@ -88,7 +88,9 @@ A pronoun is **ambiguous** when it could refer to more than one antecedent.
 Type the correct pronoun for each blank.
 
 1) Each of the boys must submit _____ essay by Friday. (his / their)
+
 2) The award was given to Maria and _____ . (I / me)
+
 3) _____ should we contact about the project? (Who / Whom)
       `,
       exercise: {

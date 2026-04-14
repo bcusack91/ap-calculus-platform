@@ -86,7 +86,9 @@ export const psychPrenatalPart4Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: caregiver bond marked by trust and comfort in reunion
+
       2) Write the concept that matches: high warmth with firm, consistent expectations
+
       3) Write the concept that matches: supporting a child just beyond current independent ability
 
       Use the exact vocabulary term from this part.

@@ -95,7 +95,9 @@ export const bioNatSelectionPart4Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **selection driven by mating success differences**
+
       2) Term for this definition: **proportion of a specific allele in a population**
+
       3) Term for this definition: **null model where allele frequencies remain constant**
       `,
       exercise: {

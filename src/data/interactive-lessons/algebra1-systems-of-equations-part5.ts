@@ -51,7 +51,9 @@ $x + y = 20$, $x - y = 6$. Add: $2x = 26, x = 13, y = 7$.
 **Word Problems** 🧮
 
 1) Sum of two numbers is 15, difference is 3. Larger = ?
+
 2) 3 pens + 2 notebooks = \$11, 1 pen + 2 notebooks = \$7. Pen costs?
+
 3) Perimeter of rectangle = 30, length = 2 × width. Width = ?
       `,
       exercise: {

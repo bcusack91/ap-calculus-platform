@@ -131,8 +131,11 @@ If **any** resistor in a series circuit burns out (open circuit), current drops 
 A 24 V battery is connected to three resistors in series: $R_1 = 4 \\; \\Omega$, $R_2 = 8 \\; \\Omega$, $R_3 = 12 \\; \\Omega$.
 
 1) Total resistance $R_{\\text{total}}$ (in $\\Omega$)
+
 2) Current through the circuit (in A)
+
 3) Voltage across $R_2$ (in V)
+
 4) Voltage across $R_3$ (in V)
       `,
       exercise: {
@@ -153,7 +156,9 @@ A 24 V battery is connected to three resistors in series: $R_1 = 4 \\; \\Omega$,
 Two resistors are connected in series to a 20 V battery. The voltage across the first resistor is 8 V, and the current through the circuit is 0.5 A.
 
 1) Voltage across the second resistor (in V)
+
 2) Resistance of the first resistor (in $\\Omega$)
+
 3) Resistance of the second resistor (in $\\Omega$)
       `,
       exercise: {

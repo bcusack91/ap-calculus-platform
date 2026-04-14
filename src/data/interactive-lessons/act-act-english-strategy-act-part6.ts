@@ -109,7 +109,9 @@ DELETE is correct here — "tall skyscraper" already conveys the idea. The under
 **Trap Identification** 📝
 
 1) "She returned back home" contains a __________ (the error type where words repeat the same meaning).
+
 2) When DELETE appears as an answer choice, it is correct roughly __________–40% of the time.
+
 3) "Due to the fact that" should be replaced with the single word "__________.".
       `,
       exercise: {

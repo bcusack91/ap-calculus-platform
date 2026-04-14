@@ -88,7 +88,9 @@ export const oChemCarboxylicAcidsPart1Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: most reactive common carboxylic acid derivative
+
       2) Term for: derivative containing two acyl groups linked by oxygen
+
       3) Product pattern expected under RCOCl + ROH, pyridine
       `,
       exercise: {

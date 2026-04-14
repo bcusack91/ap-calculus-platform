@@ -2,190 +2,238 @@ export const bioCellRespirationPart4Data = {
   topicSlug: 'cellular-respiration',
   sections: [
     {
-      id: 'bio-cellular-respiration-p4-s1-intro',
+      id: 'cr4-intro',
       type: 'text' as const,
       content: `
-      ## Cellular Respiration: Citric Acid Cycle
-      
-      **Part 4 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through electron carrier production in the matrix.
-      
-      ### Worked biological example
-      A student team investigates electron carrier production in the matrix. Their first interpretation step is to identify how **electron transport chain** and **chemiosmosis** work together in the same pathway.
-      
-      - They classify the primary signal using **electron transport chain**: transfers electrons to oxygen through membrane complexes.
-      - They trace the downstream response using **chemiosmosis**: uses proton gradient energy to drive ATP synthesis.
-      - They then compare outcomes with **ATP synthase** and **NADH** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **electron transport chain**
-      - **chemiosmosis**
-      - **ATP synthase**
-      - **NADH**
+## The Citric Acid Cycle (Krebs Cycle)
+
+**Part 4 of 7**
+
+The citric acid cycle — also called the **Krebs cycle** (after Hans Krebs, who elucidated it in 1937) or the **tricarboxylic acid (TCA) cycle** — is the central metabolic hub of the cell.  It completes the oxidation of the carbon atoms originally present in glucose, producing CO\\(_2\\), and generates most of the NADH and FADH\\(_2\\) that will drive ATP production in the electron transport chain.
+
+**Location:** Mitochondrial matrix
+
+**Overall function:** Oxidize the acetyl group from acetyl-CoA, releasing 2 CO\\(_2\\) and capturing energy as NADH, FADH\\(_2\\), and GTP (equivalent to ATP).
       `
     },
     {
-      id: 'bio-cellular-respiration-p4-s2-mcq-core',
+      id: 'cr4-steps',
+      type: 'text' as const,
+      content: `
+### The Eight Steps of the Citric Acid Cycle
+
+The cycle begins when **acetyl-CoA** donates its 2-carbon acetyl group to the 4-carbon molecule **oxaloacetate**, forming the 6-carbon molecule **citrate**:
+
+| Step | Enzyme | Reaction | Products |
+|------|--------|----------|----------|
+| 1 | Citrate synthase | Acetyl-CoA + Oxaloacetate \\(\\rightarrow\\) Citrate | Citrate (6C), free CoA |
+| 2 | Aconitase | Citrate \\(\\rightarrow\\) Isocitrate | Isocitrate (6C) |
+| 3 | **Isocitrate dehydrogenase** | Isocitrate \\(\\rightarrow\\) \\(\\alpha\\)-ketoglutarate | **NADH**, CO\\(_2\\) (5C) |
+| 4 | **\\(\\alpha\\)-ketoglutarate dehydrogenase** | \\(\\alpha\\)-KG \\(\\rightarrow\\) Succinyl-CoA | **NADH**, CO\\(_2\\) (4C) |
+| 5 | Succinyl-CoA synthetase | Succinyl-CoA \\(\\rightarrow\\) Succinate | **GTP** (=ATP), free CoA |
+| 6 | **Succinate dehydrogenase** | Succinate \\(\\rightarrow\\) Fumarate | **FADH\\(_2\\)** |
+| 7 | Fumarase | Fumarate \\(\\rightarrow\\) Malate | Malate (4C) |
+| 8 | Malate dehydrogenase | Malate \\(\\rightarrow\\) Oxaloacetate | **NADH** |
+
+The regenerated **oxaloacetate** is ready to combine with another acetyl-CoA, continuing the cycle.
+
+**Per acetyl-CoA (one turn):**
+- 2 CO\\(_2\\) released
+- 3 NADH produced
+- 1 FADH\\(_2\\) produced
+- 1 GTP (= ATP) produced
+
+**Per glucose (two turns):**
+- 4 CO\\(_2\\), 6 NADH, 2 FADH\\(_2\\), 2 ATP
+
+> **Note:** The 4 CO\\(_2\\) from the citric acid cycle plus the 2 CO\\(_2\\) from pyruvate oxidation = 6 CO\\(_2\\) total, matching the 6 carbons in the original glucose.
+      `
+    },
+    {
+      id: 'cr4-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Citric Acid Cycle Steps
       `,
       exercise: {
         questions: [
           {
-            question: 'For Citric Acid Cycle, what best describes electron transport chain?',
+            question: 'What is the 4-carbon molecule that combines with acetyl-CoA to begin the citric acid cycle?',
             options: [
-              'transfers electrons to oxygen through membrane complexes',
-              'uses proton gradient energy to drive ATP synthesis',
-              'high-energy electron carrier delivering reducing power',
-              'enzyme complex that phosphorylates ADP using proton flow'
+              'Citrate',
+              'Succinate',
+              'Oxaloacetate',
+              'Alpha-ketoglutarate'
             ],
-            correctAnswer: 0,
-            explanation: 'electron transport chain is best matched with: transfers electrons to oxygen through membrane complexes.'
+            correctAnswer: 2,
+            explanation: 'Oxaloacetate (4C) combines with the acetyl group from acetyl-CoA (2C) to form citrate (6C) in the first step of the cycle, catalyzed by citrate synthase.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of chemiosmosis?',
+            question: 'How many CO2 molecules are released per turn of the citric acid cycle?',
             options: [
-              'enzyme complex that phosphorylates ADP using proton flow',
-              'uses proton gradient energy to drive ATP synthesis',
-              'transfers electrons to oxygen through membrane complexes',
-              'electron carrier feeding electrons at a lower-energy entry point'
+              '1',
+              '2',
+              '4',
+              '6'
             ],
             correctAnswer: 1,
-            explanation: 'chemiosmosis is best matched with: uses proton gradient energy to drive ATP synthesis.'
+            explanation: 'Two CO2 molecules are released per turn — one at step 3 (isocitrate to alpha-ketoglutarate) and one at step 4 (alpha-ketoglutarate to succinyl-CoA). These represent the two carbons that entered as the acetyl group.'
+          },
+          {
+            question: 'Which electron carrier is produced at step 6 (succinate to fumarate) rather than NADH?',
+            options: [
+              'FADH2',
+              'ATP',
+              'Coenzyme Q',
+              'Cytochrome c'
+            ],
+            correctAnswer: 0,
+            explanation: 'Succinate dehydrogenase produces FADH2 instead of NADH. This enzyme is unique because it is embedded in the inner mitochondrial membrane and is also Complex II of the electron transport chain.'
           }
         ]
       }
     },
     {
-      id: 'bio-cellular-respiration-p4-s3-deep-dive',
+      id: 'cr4-regulation',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Citric Acid Cycle
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → electron transport chain
-      - **Immediate processing** → chemiosmosis
-      - **System-level consequence** → ATP synthase
-      - **Measured readout** → NADH
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | electron transport chain | transfers electrons to oxygen through membrane complexes | Early shift in the primary variable |
-      | chemiosmosis | uses proton gradient energy to drive ATP synthesis | Mid-pathway change in process rate |
-      | ATP synthase | enzyme complex that phosphorylates ADP using proton flow | Downstream phenotype trend |
-      | NADH | high-energy electron carrier delivering reducing power | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Regulation and Metabolic Hub
+
+The citric acid cycle is regulated at three key enzymes:
+
+1. **Citrate synthase** — inhibited by ATP, NADH, and citrate
+2. **Isocitrate dehydrogenase** — stimulated by ADP; inhibited by ATP and NADH
+3. **\\(\\alpha\\)-ketoglutarate dehydrogenase** — inhibited by succinyl-CoA and NADH; activated by Ca\\(^{2+}\\)
+
+**The Citric Acid Cycle as a Metabolic Hub:**
+
+The cycle is not just for glucose catabolism.  It intersects with many other metabolic pathways:
+
+- **Amino acid metabolism:** Several amino acids can be converted to citric acid cycle intermediates (e.g., glutamate \\(\\rightarrow\\) \\(\\alpha\\)-ketoglutarate)
+- **Fat metabolism:** Fatty acids are broken down to acetyl-CoA via \\(\\beta\\)-oxidation
+- **Gluconeogenesis:** Oxaloacetate can be used to make new glucose
+- **Biosynthesis:** Cycle intermediates serve as precursors for amino acids, fatty acids, and porphyrins
+
+When intermediates are pulled out for biosynthesis, they must be replenished through **anaplerotic reactions** (e.g., pyruvate carboxylase converts pyruvate to oxaloacetate).
       `
     },
     {
-      id: 'bio-cellular-respiration-p4-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **transfers electrons to oxygen through membrane complexes**
-      2) Term for this definition: **uses proton gradient energy to drive ATP synthesis**
-      3) Term for this definition: **enzyme complex that phosphorylates ADP using proton flow**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['electron transport chain', 'chemiosmosis', 'ATP synthase'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'transfers electrons to oxygen through membrane complexes\'.',
-        hint2: 'Second blank points to chemiosmosis; think about the role \'uses proton gradient energy to drive ATP synthesis\'.',
-        hint3: 'Third blank is ATP synthase; connect it to \'enzyme complex that phosphorylates ADP using proton flow\'.',
-        explanation: 'Correct set: electron transport chain, chemiosmosis, ATP synthase. These three terms define the core mechanism chain for Citric Acid Cycle.'
-      }
-    },
-    {
-      id: 'bio-cellular-respiration-p4-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'electron transport chain',
-            options: ['high-energy electron carrier delivering reducing power', 'transfers electrons to oxygen through membrane complexes', 'uses proton gradient energy to drive ATP synthesis', 'enzyme complex that phosphorylates ADP using proton flow']
-          },
-          {
-            label: 'chemiosmosis',
-            options: ['high-energy electron carrier delivering reducing power', 'enzyme complex that phosphorylates ADP using proton flow', 'electron carrier feeding electrons at a lower-energy entry point', 'uses proton gradient energy to drive ATP synthesis']
-          },
-          {
-            label: 'ATP synthase',
-            options: ['direct ATP formation from a phosphorylated intermediate', 'electron carrier feeding electrons at a lower-energy entry point', 'high-energy electron carrier delivering reducing power', 'enzyme complex that phosphorylates ADP using proton flow']
-          }
-        ],
-        correctAnswers: ['transfers electrons to oxygen through membrane complexes', 'uses proton gradient energy to drive ATP synthesis', 'enzyme complex that phosphorylates ADP using proton flow'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'electron transport chain, chemiosmosis, and ATP synthase should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-cellular-respiration-p4-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because electron transport chain transfers electrons to oxygen through membrane complexes, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Pathway location matters for interpretation of transport and regulation questions.
-      - Most ATP in aerobic respiration is generated during oxidative phosphorylation, not glycolysis.
-      - Oxygen is the terminal electron acceptor, not a direct reactant in every step.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-cellular-respiration-p4-s7-mcq-final',
+      id: 'cr4-quiz2',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Checkpoint — Regulation and Integration
       `,
       exercise: {
         questions: [
           {
-            question: 'In electron carrier production in the matrix, the observed pattern is: high-energy electron carrier delivering reducing power. What term should anchor the explanation?',
+            question: 'The citric acid cycle is called a "metabolic hub" because:',
             options: [
-              'ATP synthase',
-              'electron transport chain',
-              'NADH',
-              'chemiosmosis'
+              'It only processes glucose-derived molecules',
+              'It produces more ATP than any other pathway',
+              'Its intermediates connect to amino acid, fat, and carbohydrate metabolism',
+              'It operates in every compartment of the cell'
             ],
             correctAnswer: 2,
-            explanation: 'Use NADH because it directly maps to the described biological pattern: high-energy electron carrier delivering reducing power.'
+            explanation: 'The citric acid cycle sits at the crossroads of metabolism. Amino acids, fatty acids, and carbohydrates can all feed into the cycle, and its intermediates can be withdrawn for biosynthetic pathways.'
           },
           {
-            question: 'In an AP-style free-response about citric acid cycle, the observed pattern is: electron carrier feeding electrons at a lower-energy entry point. What term should anchor the explanation?',
+            question: 'What are anaplerotic reactions?',
             options: [
-              'substrate-level phosphorylation',
-              'NADH',
-              'FADH2',
-              'ATP synthase'
+              'Reactions that break down citric acid cycle intermediates',
+              'Reactions that replenish citric acid cycle intermediates when they are withdrawn for biosynthesis',
+              'Reactions that produce ATP from cycle intermediates',
+              'Reactions that convert CO2 back into organic molecules'
+            ],
+            correctAnswer: 1,
+            explanation: 'Anaplerotic (from Greek "to fill up") reactions replenish cycle intermediates. The most important is the conversion of pyruvate to oxaloacetate by pyruvate carboxylase, ensuring the cycle can continue even when intermediates are diverted.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cr4-input',
+      type: 'input-boxes' as const,
+      content: `
+### Key Terms — Citric Acid Cycle
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'The 6-carbon molecule formed when acetyl-CoA combines with oxaloacetate:',
+            answer: 'citrate',
+            acceptableAnswers: ['citrate', 'Citrate', 'citric acid', 'Citric acid'],
+            placeholder: 'e.g. succinate'
+          },
+          {
+            question: 'The process by which fatty acids are broken down to acetyl-CoA (use Greek letter or English name):',
+            answer: 'beta-oxidation',
+            acceptableAnswers: ['beta-oxidation', 'Beta-oxidation', 'beta oxidation', 'Beta oxidation', 'b-oxidation'],
+            placeholder: 'e.g. glycolysis'
+          },
+          {
+            question: 'The scientist who elucidated the citric acid cycle (last name):',
+            answer: 'Krebs',
+            acceptableAnswers: ['Krebs', 'krebs', 'Hans Krebs'],
+            placeholder: 'e.g. Calvin'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cr4-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+### Match the Cycle Component
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'The enzyme embedded in the inner mitochondrial membrane (also Complex II of the ETC):',
+            options: ['Citrate synthase', 'Isocitrate dehydrogenase', 'Succinate dehydrogenase', 'Malate dehydrogenase'],
+            correctAnswer: 'Succinate dehydrogenase'
+          },
+          {
+            question: 'The 4-carbon molecule regenerated at the end of each cycle to restart the process:',
+            options: ['Citrate', 'Succinate', 'Fumarate', 'Oxaloacetate'],
+            correctAnswer: 'Oxaloacetate'
+          },
+          {
+            question: 'The high-energy nucleotide produced at step 5 (equivalent to ATP):',
+            options: ['GMP', 'GDP', 'GTP', 'cAMP'],
+            correctAnswer: 'GTP'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cr4-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Exit Ticket — Citric Acid Cycle Mastery
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'After all stages up to and including the citric acid cycle (starting from 1 glucose), how many total CO2 molecules have been released?',
+            options: [
+              '2',
+              '4',
+              '6',
+              '12'
             ],
             correctAnswer: 2,
-            explanation: 'Use FADH2 because it directly maps to the described biological pattern: electron carrier feeding electrons at a lower-energy entry point.'
+            explanation: 'Pyruvate oxidation releases 2 CO2 (one per pyruvate). The citric acid cycle releases 4 CO2 (2 per turn x 2 turns). Total = 6 CO2, accounting for all 6 carbon atoms from the original glucose.'
+          },
+          {
+            question: 'If the citric acid cycle is running but the electron transport chain is inhibited, which of the following will accumulate?',
+            options: [
+              'NAD+ and FAD',
+              'NADH and FADH2',
+              'ATP and GTP',
+              'CO2 and H2O'
+            ],
+            correctAnswer: 1,
+            explanation: 'Without the ETC, NADH and FADH2 cannot be reoxidized. They accumulate, and without NAD+ and FAD to accept electrons, the dehydrogenase reactions of the citric acid cycle slow and eventually stop.'
           }
         ]
       }

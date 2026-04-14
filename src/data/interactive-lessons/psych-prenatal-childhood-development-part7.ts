@@ -86,7 +86,9 @@ export const psychPrenatalPart7Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: prenatal stage from roughly nine weeks to birth
+
       2) Write the concept that matches: environmental agent that can harm prenatal development
+
       3) Write the concept that matches: time window when specific experiences strongly shape development
 
       Use the exact vocabulary term from this part.

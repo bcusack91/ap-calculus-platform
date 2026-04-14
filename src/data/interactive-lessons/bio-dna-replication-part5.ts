@@ -2,190 +2,182 @@ export const bioDnaReplicationPart5Data = {
   topicSlug: 'dna-replication',
   sections: [
     {
-      id: 'bio-dna-replication-p5-s1-intro',
+      id: 'dr5-intro',
       type: 'text' as const,
       content: `
-      ## DNA Replication: Proofreading & Repair
-      
-      **Part 5 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through mismatch correction after polymerase errors.
-      
-      ### Worked biological example
-      A student team investigates mismatch correction after polymerase errors. Their first interpretation step is to identify how **leading strand** and **lagging strand** work together in the same pathway.
-      
-      - They classify the primary signal using **leading strand**: synthesized continuously toward the replication fork.
-      - They trace the downstream response using **lagging strand**: synthesized discontinuously as Okazaki fragments.
-      - They then compare outcomes with **DNA ligase** and **proofreading** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **leading strand**
-      - **lagging strand**
-      - **DNA ligase**
-      - **proofreading**
+## Telomeres and the End Replication Problem
+
+**Part 5 of 7**
+
+Linear chromosomes in eukaryotes face a unique challenge: the **end replication problem**.  This problem does not exist in prokaryotes because their chromosomes are circular.
       `
     },
     {
-      id: 'bio-dna-replication-p5-s2-mcq-core',
+      id: 'dr5-problem',
+      type: 'text' as const,
+      content: `
+### The End Replication Problem
+
+**The problem:**
+- On the lagging strand, an RNA primer must initiate each Okazaki fragment
+- At the very end of the chromosome (3' end of the template), the last RNA primer is synthesized, and DNA polymerase extends from it
+- When this primer is removed, there is a short gap at the 5' end of the new strand that CANNOT be filled — there is no upstream 3'-OH for DNA polymerase to extend from
+- Result: the daughter strand is slightly shorter than the parent
+
+**Consequence:** With each round of replication, chromosomes get shorter at both ends.  After many divisions, essential genes near the ends would be lost.
+
+### Telomeres — The Protective Solution
+
+**Telomeres** are repetitive, non-coding DNA sequences at the ends of linear chromosomes:
+- Human telomere repeat: **TTAGGG** (repeated 1000-2000 times, totaling 5-15 kb)
+- Telomeres provide a "buffer zone" of expendable sequence — shortening removes repeats, not genes
+- Telomeres also form a protective structure called a **T-loop** (the 3' overhang folds back and invades the double-stranded region) with a protein complex called **shelterin** that prevents the cell from recognizing chromosome ends as DNA breaks
+
+> **Hayflick Limit:** Normal somatic cells can divide approximately **50-70 times** before telomeres become critically short.  At this point, cells enter **replicative senescence** (a permanent G\\(_0\\) state) or undergo apoptosis.  This is a tumor-suppression mechanism.
+      `
+    },
+    {
+      id: 'dr5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint
       `,
       exercise: {
         questions: [
           {
-            question: 'For Proofreading & Repair, what best describes leading strand?',
+            question: 'Why does the end replication problem only affect eukaryotes, not prokaryotes?',
             options: [
-              'polymerase correction of misincorporated nucleotides',
-              'joins adjacent DNA fragments after primer replacement',
-              'synthesized discontinuously as Okazaki fragments',
-              'synthesized continuously toward the replication fork'
+              'Prokaryotes have smaller genomes',
+              'Prokaryotic chromosomes are circular — there are no "ends" where incomplete replication can occur; the lagging strand is eventually completed all the way around',
+              'Prokaryotes do not use Okazaki fragments',
+              'Prokaryotic DNA polymerase can synthesize in both directions'
             ],
-            correctAnswer: 3,
-            explanation: 'leading strand is best matched with: synthesized continuously toward the replication fork.'
+            correctAnswer: 1,
+            explanation: 'Circular chromosomes have no free ends. The last Okazaki fragment on the lagging strand can be completed by extending from the adjacent fragment or by closing the circle. Only linear chromosomes have terminal sequences that cannot be fully replicated.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of lagging strand?',
+            question: 'What would happen if telomeres were removed from a chromosome?',
             options: [
-              'synthesized continuously toward the replication fork',
-              'post-replication pathway correcting base-pair errors',
-              'joins adjacent DNA fragments after primer replacement',
-              'synthesized discontinuously as Okazaki fragments'
+              'Nothing — telomeres have no function',
+              'The chromosome ends would be recognized as double-strand breaks, triggering DNA repair (end-to-end fusions via NHEJ) or apoptosis; coding genes at the ends would also be lost during replication',
+              'The chromosome would replicate faster',
+              'The cell would become cancerous immediately'
             ],
-            correctAnswer: 3,
-            explanation: 'lagging strand is best matched with: synthesized discontinuously as Okazaki fragments.'
+            correctAnswer: 1,
+            explanation: 'Without telomeres and their associated shelterin complex, chromosome ends resemble DSBs. The cell tries to "repair" them by fusing chromosomes together (creating dicentric chromosomes) or by triggering checkpoint-mediated apoptosis. Additionally, essential genes near the ends would be eroded.'
           }
         ]
       }
     },
     {
-      id: 'bio-dna-replication-p5-s3-deep-dive',
+      id: 'dr5-telomerase',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Proofreading & Repair
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → leading strand
-      - **Immediate processing** → lagging strand
-      - **System-level consequence** → DNA ligase
-      - **Measured readout** → proofreading
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | leading strand | synthesized continuously toward the replication fork | Early shift in the primary variable |
-      | lagging strand | synthesized discontinuously as Okazaki fragments | Mid-pathway change in process rate |
-      | DNA ligase | joins adjacent DNA fragments after primer replacement | Downstream phenotype trend |
-      | proofreading | polymerase correction of misincorporated nucleotides | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Telomerase — Extending the Ends
+
+**Telomerase** is a specialized enzyme that extends telomeres, counteracting the end replication problem:
+
+**Structure:**
+- Telomerase is a **ribonucleoprotein** (protein + RNA)
+- Contains **TERT** (telomerase reverse transcriptase) — the catalytic protein subunit
+- Contains **TERC** (telomerase RNA component) — includes a template sequence complementary to the telomeric repeat
+
+**Mechanism:**
+1. The TERC template (3'-AAUCCC-5') base-pairs with the 3' overhang of the telomere
+2. TERT extends the 3' end using the RNA template (reverse transcription — RNA → DNA)
+3. Telomerase translocates and repeats, adding multiple TTAGGG repeats
+4. Primase then synthesizes a primer on the extended 3' overhang
+5. DNA polymerase fills in the complementary strand
+6. The primer is removed, leaving a slightly extended chromosome
+
+**Telomerase expression:**
+- **Active** in: germ cells, stem cells, early embryonic cells — these cells must divide indefinitely
+- **Inactive** in: most somatic cells — contributes to the Hayflick limit and aging
+- **Reactivated** in: ~85-90% of cancers — telomerase reactivation grants immortality
+
+> **Cancer Connection:** Telomerase reactivation is one of the hallmarks of cancer. Drugs targeting telomerase (e.g., imetelstat) are being developed as potential cancer therapies.  However, targeting telomerase could also affect stem cells, posing a therapeutic challenge.
       `
     },
     {
-      id: 'bio-dna-replication-p5-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **synthesized continuously toward the replication fork**
-      2) Term for this definition: **synthesized discontinuously as Okazaki fragments**
-      3) Term for this definition: **joins adjacent DNA fragments after primer replacement**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['leading strand', 'lagging strand', 'DNA ligase'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'synthesized continuously toward the replication fork\'.',
-        hint2: 'Second blank points to lagging strand; think about the role \'synthesized discontinuously as Okazaki fragments\'.',
-        hint3: 'Third blank is DNA ligase; connect it to \'joins adjacent DNA fragments after primer replacement\'.',
-        explanation: 'Correct set: leading strand, lagging strand, DNA ligase. These three terms define the core mechanism chain for Proofreading & Repair.'
-      }
-    },
-    {
-      id: 'bio-dna-replication-p5-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'leading strand',
-            options: ['synthesized continuously toward the replication fork', 'joins adjacent DNA fragments after primer replacement', 'synthesized discontinuously as Okazaki fragments', 'polymerase correction of misincorporated nucleotides']
-          },
-          {
-            label: 'lagging strand',
-            options: ['synthesized discontinuously as Okazaki fragments', 'polymerase correction of misincorporated nucleotides', 'joins adjacent DNA fragments after primer replacement', 'post-replication pathway correcting base-pair errors']
-          },
-          {
-            label: 'DNA ligase',
-            options: ['joins adjacent DNA fragments after primer replacement', 'post-replication pathway correcting base-pair errors', 'polymerase correction of misincorporated nucleotides', 'each daughter DNA molecule retains one parental strand']
-          }
-        ],
-        correctAnswers: ['synthesized continuously toward the replication fork', 'synthesized discontinuously as Okazaki fragments', 'joins adjacent DNA fragments after primer replacement'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'leading strand, lagging strand, and DNA ligase should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-dna-replication-p5-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because leading strand synthesized continuously toward the replication fork, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Replication is bidirectional from origins, not one-direction copying of entire chromosomes.
-      - Leading and lagging refer to synthesis pattern, not strand importance.
-      - Proofreading reduces errors but does not eliminate all mutations.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-dna-replication-p5-s7-mcq-final',
+      id: 'dr5-quiz2',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Checkpoint — Telomerase
       `,
       exercise: {
         questions: [
           {
-            question: 'In mismatch correction after polymerase errors, the observed pattern is: polymerase correction of misincorporated nucleotides. What term should anchor the explanation?',
+            question: 'Telomerase contains an RNA component (TERC). Why is this RNA essential?',
             options: [
-              'lagging strand',
-              'proofreading',
-              'leading strand',
-              'DNA ligase'
+              'It provides structural stability only',
+              'The RNA serves as a template for synthesizing the telomeric DNA repeat — TERT (the enzyme) uses the RNA template to add TTAGGG repeats to the chromosome end via reverse transcription',
+              'It catalyzes the reaction',
+              'It protects TERT from degradation'
             ],
             correctAnswer: 1,
-            explanation: 'Use proofreading because it directly maps to the described biological pattern: polymerase correction of misincorporated nucleotides.'
+            explanation: 'TERC contains a short template sequence (complementary to the telomere repeat) that TERT uses to synthesize new telomeric DNA. This makes telomerase a reverse transcriptase — it copies RNA into DNA. Without TERC, TERT has no template and cannot extend telomeres.'
           },
           {
-            question: 'In an AP-style free-response about proofreading & repair, the observed pattern is: post-replication pathway correcting base-pair errors. What term should anchor the explanation?',
+            question: 'If telomerase is inhibited in cancer cells, what is the predicted long-term effect?',
             options: [
-              'semiconservative replication',
-              'mismatch repair',
-              'proofreading',
-              'DNA ligase'
+              'The cells would die immediately',
+              'Over multiple divisions, telomeres would progressively shorten until they reach critical length, triggering senescence or apoptosis — the cancer cells would eventually stop dividing',
+              'The cells would switch to a different replication mechanism',
+              'Nothing — cancer cells do not need telomerase'
             ],
             correctAnswer: 1,
-            explanation: 'Use mismatch repair because it directly maps to the described biological pattern: post-replication pathway correcting base-pair errors.'
+            explanation: 'Telomerase inhibition does not kill cells immediately. Rather, with each division, telomeres shorten further. After many divisions (depends on initial telomere length), telomeres become critically short, triggering checkpoint-mediated senescence or apoptosis. This is why telomerase inhibitors require prolonged treatment.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'dr5-input',
+      type: 'input-boxes' as const,
+      content: `
+### Key Terms — Telomeres
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'The repetitive DNA sequence at human chromosome ends:',
+            answer: 'TTAGGG',
+            acceptableAnswers: ['TTAGGG', 'ttaggg'],
+            placeholder: 'e.g. AATCGG'
+          },
+          {
+            question: 'The approximate maximum number of times a normal somatic cell can divide:',
+            answer: '50-70',
+            acceptableAnswers: ['50-70', '50', '50 to 70', 'about 50', 'approximately 50'],
+            placeholder: 'e.g. 100'
+          },
+          {
+            question: 'The protein subunit of telomerase that acts as a reverse transcriptase:',
+            answer: 'TERT',
+            acceptableAnswers: ['TERT', 'tert', 'telomerase reverse transcriptase'],
+            placeholder: 'e.g. TERC'
+          }
+        ]
+      }
+    },
+    {
+      id: 'dr5-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Exit Ticket
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Dolly the sheep (the first mammal cloned from an adult somatic cell) had shortened telomeres compared to age-matched naturally born sheep. Why?',
+            options: [
+              'Cloning damages DNA',
+              'The nucleus used for cloning came from an adult cell that had already undergone many divisions and had shortened telomeres; the telomeres were not fully restored during cloning',
+              'Sheep do not have telomerase',
+              'Dolly was genetically different from normal sheep'
+            ],
+            correctAnswer: 1,
+            explanation: 'The donor nucleus had the shortened telomeres characteristic of an adult somatic cell. During reprogramming and subsequent development, telomeres were not fully restored to embryonic length. This meant Dolly effectively started life with "older" chromosomes, which may have contributed to her premature aging.'
           }
         ]
       }

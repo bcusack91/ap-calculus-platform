@@ -137,7 +137,9 @@ $$\\boxed{v = \\frac{E}{B}}$$
 A proton ($m = 1.67 \\times 10^{-27}$ kg, $q = 1.6 \\times 10^{-19}$ C) moves at $4.0 \\times 10^6$ m/s perpendicular to a 0.20 T magnetic field.
 
 1) Radius of the circular path (in m, to 3 significant figures)
+
 2) Cyclotron period (in s, use scientific notation like 3.3e-7)
+
 3) Cyclotron frequency (in Hz, use scientific notation like 3.0e6)
       `,
       exercise: {

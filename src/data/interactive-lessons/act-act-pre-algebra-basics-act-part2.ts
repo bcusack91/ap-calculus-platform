@@ -96,7 +96,9 @@ $$\\frac{3}{5} < \\frac{2}{3} < \\frac{7}{10}$$
 **Fraction & Decimal Practice** 🧮
 
 1) Simplify $\\frac{2}{3} + \\frac{5}{6}$. Enter the answer as a fraction *(e.g. 3/2)*.
+
 2) What is $\\frac{7}{8}$ as a decimal?
+
 3) Convert the mixed number $2\\frac{3}{5}$ to an improper fraction. Enter the numerator.
       `,
       exercise: {

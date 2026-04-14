@@ -95,7 +95,9 @@ export const bioEnergyFlowPart1Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **organism that captures external energy to make organic molecules**
+
       2) Term for this definition: **organism obtaining energy by feeding on other organisms**
+
       3) Term for this definition: **fraction of energy passed to the next trophic level**
       `,
       exercise: {

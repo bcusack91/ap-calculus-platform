@@ -162,7 +162,9 @@ If charges are arranged symmetrically (e.g., equal charges at corners of an equi
 $q_1 = +5\\ \\mu\\text{C}$ at $x = 0$, $q_2 = +5\\ \\mu\\text{C}$ at $x = 1.0$ m.
 
 1) Field from $q_1$ at $x = 0.25$ m (in N/C)
+
 2) Field from $q_2$ at $x = 0.25$ m (in N/C, just magnitude)
+
 3) Net field at $x = 0.25$ m (in N/C, give magnitude only)
       `,
       exercise: {

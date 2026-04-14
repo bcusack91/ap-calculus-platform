@@ -84,7 +84,9 @@ Notice how "give" (not "gives") maintains parallelism with "create" and "build,"
 **Passage Analysis** 📝
 
 1) In [A], the subject is plural, so the verb should be "__________ been."
+
 2) In [B], the best replacement for "However" is "In __________,"
+
 3) In [C], the verb "gives" should be changed to "__________ " for parallel structure.
       `,
       exercise: {

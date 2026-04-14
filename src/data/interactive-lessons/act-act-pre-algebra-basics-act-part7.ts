@@ -95,7 +95,9 @@ $$0.80P = 64 \\implies P = 80$$
 **Mixed Practice** 🧮
 
 1) Evaluate: $(-2)^3 + 5^2$
+
 2) What is $\\text{LCM}(9, 12)$?
+
 3) A cyclist rides $45$ miles in $3$ hours. What is the speed in mph?
       `,
       exercise: {

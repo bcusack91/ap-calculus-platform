@@ -95,7 +95,9 @@ export const bioEvidencePart3Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **similar function evolved independently in different lineages**
+
       2) Term for this definition: **sequence similarity indicating evolutionary relatedness**
+
       3) Term for this definition: **hypothesized pattern of evolutionary relationships**
       `,
       exercise: {

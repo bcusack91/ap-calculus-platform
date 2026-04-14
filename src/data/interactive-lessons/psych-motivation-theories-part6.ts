@@ -86,7 +86,9 @@ export const psychMotivationPart6Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: motivation to reduce physiological tension and restore homeostasis
+
       2) Write the concept that matches: motivation shaped by external rewards and consequences
+
       3) Write the concept that matches: motivation depends on expected success and value of outcome
 
       Use the exact vocabulary term from this part.

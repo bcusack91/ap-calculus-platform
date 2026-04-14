@@ -47,7 +47,9 @@ Full example: Solve $5x + 3y = 21$, $2x + 3y = 12$. Subtract: $3x = 9, x = 3, y 
 **Final Review** 🧮
 
 1) $x+y=10, 2x-y=5$: $x=?$
+
 2) $y=4x, x+y=15$: $y=?$
+
 3) $3x+2y=16, x-y=2$: $x=?$
       `,
       exercise: {

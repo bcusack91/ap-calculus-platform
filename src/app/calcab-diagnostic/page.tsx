@@ -11,6 +11,7 @@ import {
   generateCalcABDiagnosticTest,
   scoreCalcABDiagnostic,
   pickNextForm,
+  TOTAL_FORMS,
   type CalcABDiagnosticTestData,
   type CalcABDiagnosticResults,
 } from '@/data/ap-calculus-ab-diagnostic'
@@ -468,7 +469,7 @@ export default function CalcABDiagnosticPage() {
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">What to Expect</h3>
             <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              {['~35 questions spanning all 7 AP Calculus AB units', '45 minute time limit', 'Estimated AP score (1–5) with per-unit breakdown', '3-5 personalized module recommendations to focus your studying', 'Alternating forms (A/B) — each test has different questions'].map(text => (
+              {['~35 questions spanning all 7 AP Calculus AB units', '45 minute time limit', 'Estimated AP score (1–5) with per-unit breakdown', '3-5 personalized module recommendations to focus your studying', '10 unique forms with different questions each time'].map(text => (
                 <li key={text} className="flex items-start gap-2">
                   <svg className="mt-0.5 h-4 w-4 shrink-0 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                   {text}

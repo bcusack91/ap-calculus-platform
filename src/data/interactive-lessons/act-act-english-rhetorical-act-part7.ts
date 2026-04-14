@@ -124,7 +124,9 @@ Rhetorical questions can't be answered by looking at the underlined portion alon
 Answer each question with a single key term.
 
 1) What type of transition would you use between a problem and its solution? (two words, e.g., "cause-effect" or "problem-solution" or similar)
+
 2) If an answer choice contains the phrase "the reason is because," you should flag it as __________ (one word).
+
 3) When the ACT asks whether an essay achieves a specific goal, you should evaluate the essay against the __________ (one word, starts with "g").
       `,
       exercise: {

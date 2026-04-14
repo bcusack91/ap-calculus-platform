@@ -2,185 +2,119 @@ export const calcbcPolarPart5Data = {
   topicSlug: 'polar-calculus-calcbc',
   sections: [
     {
-      id: 'calcbcpolar-p5-intro',
+      id: 'pol5-intro',
       type: 'text' as const,
-      content: `
-# Polar Calculus
+      content: `# Polar Calculus
 
-**Part 5 of 7 — Applications**
+**Part 5 of 7 \u2014 Arc Length in Polar Coordinates**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### The Polar Arc Length Formula
 
-## Key Ideas
+For $r = f(\\theta)$ from $\\theta = \\alpha$ to $\\theta = \\beta$:
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+$$\\boxed{L = \\int_{\\alpha}^{\\beta}\\sqrt{r^2 + \\left(\\frac{dr}{d\\theta}\\right)^2}\\,d\\theta}$$
 
-## Formula Snapshot
+**Derivation:** From the parametric formula with $x = r\\cos\\theta$, $y = r\\sin\\theta$:
 
-When appropriate, use:
+$$(dx/d\\theta)^2 + (dy/d\\theta)^2 = (r')^2\\cos^2\\theta - 2rr'\\cos\\theta\\sin\\theta + r^2\\sin^2\\theta$$
+$$+ (r')^2\\sin^2\\theta + 2rr'\\sin\\theta\\cos\\theta + r^2\\cos^2\\theta = (r')^2 + r^2$$
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+> **Key Fact:** The polar arc length formula is simpler than the parametric one because the cross terms cancel!`
     },
     {
-      id: 'calcbcpolar-p5-mcq1',
+      id: 'pol5-examples',
+      type: 'text' as const,
+      content: `### Example 1: Arc Length of a Circle
+
+$r = a$ (constant). $dr/d\\theta = 0$.
+
+$$L = \\int_0^{2\\pi}\\sqrt{a^2+0}\\,d\\theta = a \\cdot 2\\pi = 2\\pi a \\checkmark$$
+
+### Example 2: Cardioid $r = 1 + \\cos\\theta$
+
+$dr/d\\theta = -\\sin\\theta$
+
+$$L = \\int_0^{2\\pi}\\sqrt{(1+\\cos\\theta)^2 + \\sin^2\\theta}\\,d\\theta$$
+
+$$= \\int_0^{2\\pi}\\sqrt{2 + 2\\cos\\theta}\\,d\\theta = \\int_0^{2\\pi}\\sqrt{4\\cos^2(\\theta/2)}\\,d\\theta = \\int_0^{2\\pi}2|\\cos(\\theta/2)|\\,d\\theta$$
+
+Using symmetry: $= 4\\int_0^{\\pi}\\cos(\\theta/2)\\,d\\theta = 4[2\\sin(\\theta/2)]_0^{\\pi} = 8$
+
+> **AP Note:** The half-angle identity $1 + \\cos\\theta = 2\\cos^2(\\theta/2)$ is essential for cardioid problems.`
+    },
+    {
+      id: 'pol5-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Practice Problems**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'The arc length of $r = 2$ from $\\theta = 0$ to $\\theta = \\pi$ is:',
+            options: ['$2\\pi$', '$\\pi$', '$4\\pi$', '$2$'],
+            correctAnswer: 0,
+            explanation: '$L = \\int_0^{\\pi}\\sqrt{4+0}\\,d\\theta = 2\\pi$. This is half the circumference of a circle of radius $2$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'For $r = e^\\theta$, $\\sqrt{r^2 + (r\')^2}$ simplifies to:',
+            options: ['$e^\\theta\\sqrt{2}$', '$e^\\theta$', '$2e^\\theta$', '$e^{2\\theta}$'],
+            correctAnswer: 0,
+            explanation: '$r\' = e^\\theta$. $\\sqrt{e^{2\\theta}+e^{2\\theta}} = e^\\theta\\sqrt{2}$.'
+          },
+          {
+            question: 'The arc length of the spiral $r = \\theta$ from $\\theta = 0$ to $\\theta = 2\\pi$ requires:',
+            options: ['$\\int_0^{2\\pi}\\sqrt{\\theta^2 + 1}\\,d\\theta$ (trig sub or formula)', '$\\int_0^{2\\pi}\\theta\\,d\\theta$', '$\\int_0^{2\\pi}\\sqrt{\\theta}\\,d\\theta$', '$2\\pi^2$'],
+            correctAnswer: 0,
+            explanation: '$r = \\theta$, $r\' = 1$. $L = \\int_0^{2\\pi}\\sqrt{\\theta^2+1}\\,d\\theta$. This requires trig substitution or a hyperbolic formula.'
           }
         ]
       }
     },
     {
-      id: 'calcbcpolar-p5-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcpolar-p5-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcpolar-p5-dropdown',
+      id: 'pol5-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Setting Up Arc Length**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'For one petal of $r = \\cos(2\\theta)$, the arc length integral limits are:',
+            options: ['$-\\pi/4$ to $\\pi/4$', '$0$ to $\\pi/2$', '$0$ to $\\pi$', '$0$ to $2\\pi$'],
+            correctAnswers: ['$-\\pi/4$ to $\\pi/4$'],
+            hints: ['The first petal exists where $\\cos(2\\theta) \\ge 0$.'],
+            explanation: '$\\cos(2\\theta) \\ge 0$ when $-\\pi/4 \\le \\theta \\le \\pi/4$. This traces one petal.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcpolar-p5-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Applications**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcpolar-p5-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'The identity $1 + \\cos\\theta = 2\\cos^2(\\theta/2)$ is most useful for:',
+            options: ['Cardioid arc length integrals', 'Rose curve areas', 'Converting coordinates', 'Finding slopes'],
+            correctAnswers: ['Cardioid arc length integrals'],
+            hints: ['It simplifies $\\sqrt{(1+\\cos\\theta)^2 + \\sin^2\\theta}$.'],
+            explanation: 'In cardioid arc length, the integrand becomes $\\sqrt{2+2\\cos\\theta}$, which simplifies to $2|\\cos(\\theta/2)|$ via this identity.'
           }
         ]
       }
+    },
+    {
+      id: 'pol5-input',
+      type: 'input-box' as const,
+      content: '**Compute**',
+      exercise: {
+        question: 'Find the arc length of the logarithmic spiral $r = e^\\theta$ from $\\theta = 0$ to $\\theta = \\ln 2$. The integrand is $e^\\theta\\sqrt{2}$. Evaluate and express as $a(\\sqrt{2})$ where $a$ is a number. What is $a$?',
+        correctAnswer: '1',
+        acceptableAnswers: ['1', '1.0'],
+        hints: ['$L = \\sqrt{2}\\int_0^{\\ln 2}e^\\theta\\,d\\theta = \\sqrt{2}[e^\\theta]_0^{\\ln 2}$.', '$= \\sqrt{2}(2 - 1) = \\sqrt{2}$.'],
+        explanation: '$L = \\sqrt{2}(e^{\\ln 2} - e^0) = \\sqrt{2}(2-1) = \\sqrt{2} = 1 \\cdot \\sqrt{2}$. So $a = 1$.'
+      }
+    },
+    {
+      id: 'pol5-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways
+
+- Polar arc length: $L = \\int\\sqrt{r^2 + (dr/d\\theta)^2}\\,d\\theta$
+- For a circle $r = a$: arc length on $[\\alpha, \\beta]$ is $a(\\beta - \\alpha)$
+- Half-angle identities simplify cardioid integrals
+- Logarithmic spiral $r = e^\\theta$: integrand is $e^\\theta\\sqrt{2}$ (nice!)
+
+> **Next:** Part 6 is a **Problem-Solving Workshop** with mixed polar problems.`
     }
   ]
-}
+};

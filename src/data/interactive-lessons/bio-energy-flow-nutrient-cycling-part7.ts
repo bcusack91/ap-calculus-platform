@@ -95,7 +95,9 @@ export const bioEnergyFlowPart7Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **oxidation of organic molecules releasing usable energy**
+
       2) Term for this definition: **microbial conversion of ammonium to nitrite and nitrate**
+
       3) Term for this definition: **microbial reduction of nitrate to gaseous nitrogen forms**
       `,
       exercise: {

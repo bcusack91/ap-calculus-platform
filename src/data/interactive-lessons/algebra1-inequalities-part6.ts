@@ -43,7 +43,9 @@ Mixed: $3x + 1 > 7$ → $x > 2$. $|x - 4| \\leq 3$ → $1 \\leq x \\leq 7$. Inte
 **Mixed** 🧮
 
 1) $4x + 1 > 13$: $x > ?$
+
 2) $|x - 2| \\leq 5$: max $x$?
+
 3) $-3 \\leq 2x - 1 < 7$: max $x$?
       `,
       exercise: {

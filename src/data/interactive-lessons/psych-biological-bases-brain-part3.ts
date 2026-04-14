@@ -86,7 +86,9 @@ export const psychBrainPart3Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: a medial temporal structure essential for new explicit memories
+
       2) Write the concept that matches: a limbic structure involved in emotional processing, especially threat
+
       3) Write the concept that matches: frontal region supporting planning, inhibition, and decision-making
 
       Use the exact vocabulary term from this part.

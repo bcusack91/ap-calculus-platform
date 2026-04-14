@@ -294,6 +294,31 @@ function renderWindowKatex(input: string, fallback: string, displayMode = false)
   return windowKatex.renderToString(input, { throwOnError: false, displayMode })
 }
 
+function extractTextContent(node: unknown): string {
+  if (typeof node === 'string' || typeof node === 'number') return String(node)
+  if (Array.isArray(node)) return node.map(extractTextContent).join('')
+  if (node && typeof node === 'object' && 'props' in node) {
+    const propsNode = node as { props?: { children?: unknown } }
+    return extractTextContent(propsNode.props?.children)
+  }
+  return ''
+}
+
+function renderMarkdownH3({ children }: { children?: React.ReactNode }) {
+  const headingText = extractTextContent(children)
+  const isNumberedSubsection = /^\s*\d+\.\s+/.test(headingText)
+
+  if (isNumberedSubsection) {
+    return (
+      <h3 className="text-xl sm:text-2xl font-bold mb-3 mt-6 rounded-xl border border-sky-200 bg-gradient-to-br from-sky-50 to-white px-4 py-3 text-sky-900 shadow-sm dark:border-sky-700/70 dark:from-sky-900/30 dark:to-slate-900 dark:text-sky-100">
+        {children}
+      </h3>
+    )
+  }
+
+  return <h3 className="text-2xl font-bold mb-3 mt-6 text-gray-800 dark:text-gray-100">{children}</h3>
+}
+
 interface InteractiveLessonRendererProps {
   topicSlug: string
   courseSlug?: string
@@ -2725,7 +2750,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
                 components={{
                   h1: ({ children }) => <h1 className="text-4xl font-extrabold mb-6 mt-2 text-gray-900 dark:text-white leading-tight">{children}</h1>,
                   h2: ({ children }) => <h2 className="text-3xl font-bold mb-4 mt-8 text-gray-900 dark:text-white leading-snug">{children}</h2>,
-                  h3: ({ children }) => <h3 className="text-2xl font-bold mb-3 mt-6 text-gray-800 dark:text-gray-100">{children}</h3>,
+                  h3: renderMarkdownH3,
                   p: ({ children }) => <p className="text-lg leading-relaxed mb-4">{children}</p>,
                   strong: ({ children }) => <strong className="font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
                   ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,
@@ -2764,7 +2789,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
           components={{
             h1: ({ children }) => <h1 className="text-4xl font-extrabold mb-6 mt-2 text-gray-900 dark:text-white leading-tight">{children}</h1>,
             h2: ({ children }) => <h2 className="text-3xl font-bold mb-4 mt-8 text-gray-900 dark:text-white leading-snug">{children}</h2>,
-            h3: ({ children }) => <h3 className="text-2xl font-bold mb-3 mt-6 text-gray-800 dark:text-gray-100">{children}</h3>,
+            h3: renderMarkdownH3,
             p: ({ children }) => <p className="text-lg leading-relaxed mb-4">{children}</p>,
             strong: ({ children }) => <strong className="font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
             ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,
@@ -2797,7 +2822,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
           components={{
             h1: ({ children }) => <h1 className="text-4xl font-extrabold mb-6 mt-2 text-gray-900 dark:text-white leading-tight">{children}</h1>,
             h2: ({ children }) => <h2 className="text-3xl font-bold mb-4 mt-8 text-gray-900 dark:text-white leading-snug">{children}</h2>,
-            h3: ({ children }) => <h3 className="text-2xl font-bold mb-3 mt-6 text-gray-800 dark:text-gray-100">{children}</h3>,
+            h3: renderMarkdownH3,
             p: ({ children }) => <p className="text-lg leading-relaxed mb-4">{children}</p>,
             strong: ({ children }) => <strong className="font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
             ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,
@@ -2835,7 +2860,7 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
         components={{
           h1: ({ children }) => <h1 className="text-4xl font-extrabold mb-6 mt-2 text-gray-900 dark:text-white leading-tight">{children}</h1>,
           h2: ({ children }) => <h2 className="text-3xl font-bold mb-4 mt-8 text-gray-900 dark:text-white leading-snug">{children}</h2>,
-          h3: ({ children }) => <h3 className="text-2xl font-bold mb-3 mt-6 text-gray-800 dark:text-gray-100">{children}</h3>,
+          h3: renderMarkdownH3,
           p: ({ children }) => <p className="text-lg leading-relaxed mb-4">{children}</p>,
           strong: ({ children }) => <strong className="font-bold text-purple-700 dark:text-purple-400">{children}</strong>,
           ul: ({ children }) => <ul className="space-y-3 text-lg ml-6">{children}</ul>,

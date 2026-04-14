@@ -95,7 +95,9 @@ export const bioSpeciationPart7Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **rapid diversification from a common ancestor into niches**
+
       2) Term for this definition: **large-scale evolutionary patterns above the species level**
+
       3) Term for this definition: **restriction of gene flow between populations**
       `,
       exercise: {

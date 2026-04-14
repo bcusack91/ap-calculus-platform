@@ -88,7 +88,9 @@ export const oChemCarbsPart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: double-alkoxy carbon stable to base
+
       2) Term for: acetal linkage connecting sugar units
+
       3) Product pattern expected under ROH, acid catalyst
       `,
       exercise: {

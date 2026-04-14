@@ -95,7 +95,9 @@ export const bioGeneRegPart3Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **regulatory protein reducing transcription when bound**
+
       2) Term for this definition: **DNA element increasing transcription from a distance**
+
       3) Term for this definition: **heritable chromatin modification not changing DNA sequence**
       `,
       exercise: {

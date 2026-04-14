@@ -95,7 +95,9 @@ export const bioBiotechPart6Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **uptake of external DNA by a bacterial cell**
+
       2) Term for this definition: **uses guide RNA to direct sequence-specific DNA cutting**
+
       3) Term for this definition: **base-pairs with target DNA to position Cas9**
       `,
       exercise: {

@@ -139,8 +139,11 @@ $$^{2}_{1}\\text{H} + ^{3}_{1}\\text{H} \\to ^{4}_{2}\\text{He} + ^{1}_{0}n + 17
 Light of wavelength 200 nm strikes a metal surface with work function $\\phi = 4.20$ eV. Use $h = 6.63 \\times 10^{-34}$ J·s, $c = 3.00 \\times 10^{8}$ m/s, $1 \\text{ eV} = 1.60 \\times 10^{-19}$ J.
 
 1) Photon energy in eV (3 significant figures)
+
 2) Maximum KE of ejected electrons in eV (3 significant figures)
+
 3) Stopping voltage in V (3 significant figures)
+
 4) de Broglie wavelength of the fastest ejected electron ($\\times 10^{-10}$ m, 3 significant figures). Use $m_e = 9.11 \\times 10^{-31}$ kg.
       `,
       exercise: {

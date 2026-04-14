@@ -338,17 +338,18 @@ const questionPool: PoolQuestion[] = [
 
 /* ---------- helpers ---------- */
 
-function seededRandom(seed: number): () => number {
-  let s = seed | 0
-  return () => {
-    s = (s * 1664525 + 1013904223) | 0
-    return (s >>> 0) / 4294967296
+function mulberry32(seed: number) {
+  return function () {
+    // eslint-disable-next-line no-param-reassign
+    seed |= 0; seed = (seed + 0x6d2b79f5) | 0
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
   }
 }
 
-function seededShuffle<T>(arr: T[], seed: number): T[] {
+function seededShuffle<T>(arr: T[], rng: () => number): T[] {
   const a = [...arr]
-  const rng = seededRandom(seed)
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(rng() * (i + 1))
     ;[a[i], a[j]] = [a[j], a[i]]
@@ -356,24 +357,17 @@ function seededShuffle<T>(arr: T[], seed: number): T[] {
   return a
 }
 
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }
-  return a
-}
-
 /* ---------- generator ---------- */
 
 export function generateAPPrecalculusDiagnosticTest(form: DiagnosticFormNumber): APPrecalculusTestData {
+  const rng = mulberry32(form * 7919)
   const selected: PoolQuestion[] = []
   for (const domain of AP_PRECALCULUS_DOMAINS) {
     const domainQs = questionPool.filter(q => q.domain === domain.id)
-    // Seeded shuffle ensures same form always selects same questions
-    const shuffled = seededShuffle(domainQs, form * 7919 + domain.id.charCodeAt(0))
+    const shuffled = seededShuffle(domainQs, rng)
     selected.push(...shuffled.slice(0, domain.questionTarget))
   }
-  // Presentation order is randomly shuffled (different each attempt)
-  const questions: APPrecalculusQuestion[] = shuffle(selected).map(q => ({
+  const questions: APPrecalculusQuestion[] = seededShuffle(selected, rng).map(q => ({
     question: q.question, options: q.options, correctAnswer: q.correctAnswer, explanation: q.explanation, domain: q.domain, topicSlug: q.topicSlug,
   }))
   return { form, questions, domains: AP_PRECALCULUS_DOMAINS, totalQuestions: questions.length, timeLimitMinutes: 40 }

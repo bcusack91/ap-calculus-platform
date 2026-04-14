@@ -88,7 +88,9 @@ export const oChemCarbsPart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: equilibration between anomers via open-chain form
+
       2) Term for: functional group from alcohol addition to aldehyde
+
       3) Product pattern expected under periodate cleavage
       `,
       exercise: {

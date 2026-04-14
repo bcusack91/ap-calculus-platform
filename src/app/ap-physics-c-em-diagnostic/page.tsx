@@ -71,8 +71,11 @@ export default function APPhysicsCEMDiagnosticPage() {
 
   const startTest = useCallback(() => {
     const previousForms = history
-      .map(h => (h.results as Record<string, unknown> | null)?.form as 'A' | 'B' | undefined)
-      .filter((f): f is 'A' | 'B' => f === 'A' || f === 'B')
+      .map(h => {
+        const f = (h.results as Record<string, unknown> | null)?.form
+        return typeof f === 'number' ? f : typeof f === 'string' ? parseInt(f, 10) : undefined
+      })
+      .filter((f): f is number => typeof f === 'number' && !isNaN(f))
     const form = pickNextForm(previousForms)
     const data = generateAPPhysicsCEMTest(form)
     setTestData(data); setCurrentIndex(0); setAnswers(new Array(data.questions.length).fill(null))
@@ -279,7 +282,7 @@ export default function APPhysicsCEMDiagnosticPage() {
             <ol className="space-y-2 text-sm text-amber-700 dark:text-amber-400 list-decimal list-inside">
               <li>Review the recommended topics above</li>
               <li>Complete each topic&apos;s lessons and practice problems</li>
-              <li>Come back and take the next diagnostic (Form {results.form === 'A' ? 'B' : 'A'})</li>
+              <li>Come back and take the next diagnostic (Form {(results.form % 10) + 1} of 10)</li>
               <li>Get updated personalized recommendations</li>
               <li>Repeat until you&apos;re scoring 4+ across all domains!</li>
             </ol>
@@ -336,7 +339,7 @@ export default function APPhysicsCEMDiagnosticPage() {
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
           <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">What to Expect</h3>
           <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-            {['~30 questions spanning 5 AP Physics C: E&M domains', '40 minute time limit', 'Estimated AP score (1–5) with per-domain breakdown', 'Personalized topic recommendations', 'Alternating forms (A/B) with different questions each time'].map(item => (
+            {['~30 questions spanning 5 AP Physics C: E&M domains', '40 minute time limit', 'Estimated AP score (1–5) with per-domain breakdown', 'Personalized topic recommendations', '10 rotating forms with different questions each time'].map(item => (
               <li key={item} className="flex items-start gap-2"><svg className="mt-0.5 h-4 w-4 shrink-0 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>{item}</li>
             ))}
           </ul>

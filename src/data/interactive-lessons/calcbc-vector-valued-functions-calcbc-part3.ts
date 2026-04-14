@@ -2,185 +2,121 @@ export const calcbcVectorsPart3Data = {
   topicSlug: 'vector-valued-functions-calcbc',
   sections: [
     {
-      id: 'calcbcvectors-p3-intro',
+      id: 'vv3-intro',
       type: 'text' as const,
-      content: `
-# Vector Valued Functions
+      content: `# Vector-Valued Functions — Integration & Displacement
 
-**Part 3 of 7 — Problem-Solving Patterns**
+**Part 3 of 7 — Antiderivatives and Distance**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+Integration of vector functions is also done component-wise:
 
-## Key Ideas
+$$\\int_a^b \\vec{r}\\,'(t)\\,dt = \\vec{r}(b) - \\vec{r}(a) = \\text{displacement}$$
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+### Displacement vs. Distance
 
-## Formula Snapshot
+| Concept | Formula | Type |
+|---------|---------|------|
+| **Displacement** | $\\int_a^b \\vec{v}(t)\\,dt = \\langle \\int_a^b x'\\,dt,\\, \\int_a^b y'\\,dt \\rangle$ | Vector |
+| **Total distance** | $\\int_a^b \\|\\vec{v}(t)\\|\\,dt = \\int_a^b \\sqrt{(x')^2 + (y')^2}\\,dt$ | Scalar |
 
-When appropriate, use:
-
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+> **AP Tip:** "How far" = total distance (scalar). "Net change in position" = displacement (vector). The exam is precise about this distinction.`
     },
     {
-      id: 'calcbcvectors-p3-mcq1',
+      id: 'vv3-examples',
+      type: 'text' as const,
+      content: `### Example
+
+A particle has velocity $\\vec{v}(t) = \\langle 2t, 3 \\rangle$ and initial position $\\vec{r}(0) = \\langle 1, -2 \\rangle$.
+
+**Position function:**
+$$\\vec{r}(t) = \\int \\vec{v}(t)\\,dt = \\langle t^2 + C_1,\\, 3t + C_2 \\rangle$$
+
+Apply ICs: $\\vec{r}(0) = \\langle C_1, C_2 \\rangle = \\langle 1, -2 \\rangle$
+
+$$\\boxed{\\vec{r}(t) = \\langle t^2 + 1,\\, 3t - 2 \\rangle}$$
+
+**Displacement from $t=0$ to $t=2$:**
+$$\\vec{r}(2) - \\vec{r}(0) = \\langle 5, 4 \\rangle - \\langle 1, -2 \\rangle = \\langle 4, 6 \\rangle$$
+
+**Total distance from $t=0$ to $t=2$:**
+$$\\int_0^2 \\sqrt{4t^2 + 9}\\,dt$$
+This requires trig sub or a calculator. On the AP exam, a calculator-active section would provide a numerical answer.`
+    },
+    {
+      id: 'vv3-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Practice Problems**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'Displacement is a _____ and total distance is a _____.',
+            options: ['vector; scalar', 'scalar; vector', 'scalar; scalar', 'vector; vector'],
+            correctAnswer: 0,
+            explanation: 'Displacement $= \\int \\vec{v}\\,dt$ is a vector (has direction). Distance $= \\int \\|\\vec{v}\\|\\,dt$ is a scalar (magnitude only).'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'If $\\vec{v}(t) = \\langle 1, -1 \\rangle$ for $0 \\le t \\le 4$, the total distance traveled is:',
+            options: ['$4\\sqrt{2}$', '$4$', '$0$', '$\\sqrt{2}$'],
+            correctAnswer: 0,
+            explanation: 'Speed $= \\sqrt{1+1} = \\sqrt{2}$. Distance $= \\sqrt{2} \\cdot 4 = 4\\sqrt{2}$.'
+          },
+          {
+            question: 'A particle with $\\vec{r}(t) = \\langle \\sin t, \\cos t \\rangle$ travels from $t = 0$ to $t = 2\\pi$. Its displacement is:',
+            options: ['$\\langle 0, 0 \\rangle$', '$\\langle 2\\pi, 0 \\rangle$', '$\\langle 0, 2\\pi \\rangle$', '$\\langle 1, 1 \\rangle$'],
+            correctAnswer: 0,
+            explanation: '$\\vec{r}(2\\pi) - \\vec{r}(0) = \\langle 0, 1 \\rangle - \\langle 0, 1 \\rangle = \\langle 0, 0 \\rangle$. The particle returns to start (full circle).'
           }
         ]
       }
     },
     {
-      id: 'calcbcvectors-p3-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcvectors-p3-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcvectors-p3-dropdown',
+      id: 'vv3-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Concept Checks**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'If $\\vec{a}(t) = \\langle 0, -g \\rangle$ (projectile motion), then $\\vec{v}(t) = $',
+            options: ['$\\langle v_{0x},\\, v_{0y} - gt \\rangle$', '$\\langle -gt, 0 \\rangle$', '$\\langle 0, -gt \\rangle$', '$\\langle gt, -g \\rangle$'],
+            correctAnswers: ['$\\langle v_{0x},\\, v_{0y} - gt \\rangle$'],
+            hints: ['Integrate $\\vec{a}(t)$ and apply initial velocity.'],
+            explanation: '$\\vec{v}(t) = \\int \\langle 0, -g \\rangle\\,dt = \\langle C_1, -gt + C_2 \\rangle$. At $t = 0$: $\\vec{v}(0) = \\langle v_{0x}, v_{0y} \\rangle$, so $C_1 = v_{0x}$, $C_2 = v_{0y}$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcvectors-p3-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Problem-Solving Patterns**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcvectors-p3-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: '$\\int_0^3 \\langle 2t, 6t^2 \\rangle\\,dt$ equals:',
+            options: ['$\\langle 9, 54 \\rangle$', '$\\langle 6, 18 \\rangle$', '$\\langle 3, 54 \\rangle$', '$\\langle 9, 18 \\rangle$'],
+            correctAnswers: ['$\\langle 9, 54 \\rangle$'],
+            hints: ['Integrate each component: $\\int_0^3 2t\\,dt$ and $\\int_0^3 6t^2\\,dt$.'],
+            explanation: '$\\int_0^3 2t\\,dt = [t^2]_0^3 = 9$. $\\int_0^3 6t^2\\,dt = [2t^3]_0^3 = 54$. Result: $\\langle 9, 54 \\rangle$.'
           }
         ]
       }
+    },
+    {
+      id: 'vv3-input',
+      type: 'input-box' as const,
+      content: '**Computation**',
+      exercise: {
+        question: 'A particle has $\\vec{v}(t) = \\langle 3, 4 \\rangle$ (constant). What is the total distance traveled from $t = 0$ to $t = 3$?',
+        correctAnswer: '15',
+        acceptableAnswers: ['15', '15.0'],
+        hints: ['Speed $= \\|\\vec{v}\\| = \\sqrt{9 + 16} = 5$.', 'Distance $= \\text{speed} \\times \\text{time}$.'],
+        explanation: 'Speed $= 5$ (constant). Distance $= 5 \\cdot 3 = 15$.'
+      }
+    },
+    {
+      id: 'vv3-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Integrate vector functions component-wise
+- Displacement $= \\int_a^b \\vec{v}\\,dt$ (vector)
+- Total distance $= \\int_a^b \\|\\vec{v}\\|\\,dt$ (scalar)
+- Use initial conditions to find constants of integration
+
+$$\\boxed{\\text{Distance} = \\int_a^b \\sqrt{[x'(t)]^2 + [y'(t)]^2}\\,dt}$$
+
+> **Next:** Part 4 — Arc length and the unit tangent vector.`
     }
   ]
-}
+};

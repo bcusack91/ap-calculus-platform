@@ -64,7 +64,9 @@ Let's review everything from this topic:
 **Final Practice** 🧮
 
 1) Perpendicular slope to $m = 4$?
+
 2) $y$-int of $2x + y = 10$?
+
 3) Slope of $y = 7$?
       `,
       exercise: {

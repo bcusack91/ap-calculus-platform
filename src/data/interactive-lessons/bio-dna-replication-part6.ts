@@ -2,190 +2,143 @@ export const bioDnaReplicationPart6Data = {
   topicSlug: 'dna-replication',
   sections: [
     {
-      id: 'bio-dna-replication-p6-s1-intro',
+      id: 'dr6-intro',
       type: 'text' as const,
       content: `
-      ## DNA Replication: Problem-Solving Workshop
-      
-      **Part 6 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through mutation-rate interpretation from sequence data.
-      
-      ### Worked biological example
-      A student team investigates mutation-rate interpretation from sequence data. Their first interpretation step is to identify how **lagging strand** and **DNA ligase** work together in the same pathway.
-      
-      - They classify the primary signal using **lagging strand**: synthesized discontinuously as Okazaki fragments.
-      - They trace the downstream response using **DNA ligase**: joins adjacent DNA fragments after primer replacement.
-      - They then compare outcomes with **proofreading** and **mismatch repair** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **lagging strand**
-      - **DNA ligase**
-      - **proofreading**
-      - **mismatch repair**
+## Problem-Solving Workshop — DNA Replication
+
+**Part 6 of 7**
+
+This workshop applies DNA replication concepts to experimental scenarios and quantitative problems.
       `
     },
     {
-      id: 'bio-dna-replication-p6-s2-mcq-core',
+      id: 'dr6-scenario1',
+      type: 'text' as const,
+      content: `
+### Scenario 1: Replication Fork Analysis
+
+A researcher treats E. coli with radioactive thymidine (\\(^3\\)H-thymidine) for a brief pulse, then chases with unlabeled thymidine. After autoradiography of the replicating DNA:
+
+- The label appears as a band along the newly synthesized DNA
+- The leading strand shows a continuous band of label
+- The lagging strand shows a series of short labeled segments (Okazaki fragments) with gaps where primers were located
+
+**If the pulse is very short** (seconds), only the most recently synthesized DNA is labeled.  The leading strand shows label near the fork, while the lagging strand shows label in the most recently completed Okazaki fragment.
+
+**If the chase is long enough**, DNA Pol I replaces primers with DNA and ligase joins fragments, so the lagging strand eventually looks continuous.
+      `
+    },
+    {
+      id: 'dr6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Scenario 1 Questions
       `,
       exercise: {
         questions: [
           {
-            question: 'For Problem-Solving Workshop, what best describes lagging strand?',
+            question: 'If DNA ligase is mutated (non-functional), what would autoradiography of the replicated DNA reveal?',
             options: [
-              'polymerase correction of misincorporated nucleotides',
-              'post-replication pathway correcting base-pair errors',
-              'synthesized discontinuously as Okazaki fragments',
-              'joins adjacent DNA fragments after primer replacement'
-            ],
-            correctAnswer: 2,
-            explanation: 'lagging strand is best matched with: synthesized discontinuously as Okazaki fragments.'
-          },
-          {
-            question: 'In this part\'s context, what is the strongest definition of DNA ligase?',
-            options: [
-              'polymerase correction of misincorporated nucleotides',
-              'joins adjacent DNA fragments after primer replacement',
-              'synthesized discontinuously as Okazaki fragments',
-              'each daughter DNA molecule retains one parental strand'
+              'Normal continuous strands on both sides',
+              'The leading strand would appear normal and continuous; the lagging strand would remain fragmented (Okazaki fragments not joined) because ligase cannot seal the nicks between them',
+              'Both strands would be fragmented',
+              'No replication would occur'
             ],
             correctAnswer: 1,
-            explanation: 'DNA ligase is best matched with: joins adjacent DNA fragments after primer replacement.'
+            explanation: 'The leading strand is synthesized as one continuous piece — no ligation needed (beyond the initial primer replacement). The lagging strand consists of many Okazaki fragments that require ligase to be joined. Without ligase, Okazaki fragments remain separate, and the lagging strand is fragmented.'
           }
         ]
       }
     },
     {
-      id: 'bio-dna-replication-p6-s3-deep-dive',
+      id: 'dr6-scenario2',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Problem-Solving Workshop
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → lagging strand
-      - **Immediate processing** → DNA ligase
-      - **System-level consequence** → proofreading
-      - **Measured readout** → mismatch repair
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | lagging strand | synthesized discontinuously as Okazaki fragments | Early shift in the primary variable |
-      | DNA ligase | joins adjacent DNA fragments after primer replacement | Mid-pathway change in process rate |
-      | proofreading | polymerase correction of misincorporated nucleotides | Downstream phenotype trend |
-      | mismatch repair | post-replication pathway correcting base-pair errors | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Scenario 2: Density Gradient Predictions
+
+Starting with one double-stranded DNA molecule where BOTH strands are labeled with \\(^{15}\\)N (heavy):
+
+**After 1 generation in \\(^{14}\\)N:**
+- 2 molecules, each with one \\(^{15}\\)N strand + one \\(^{14}\\)N strand = **2 intermediate**
+
+**After 2 generations in \\(^{14}\\)N:**
+- 4 molecules total
+- 2 have one \\(^{15}\\)N + one \\(^{14}\\)N = **2 intermediate**  
+- 2 have both \\(^{14}\\)N = **2 light**
+
+**After n generations:**
+- Total molecules = \\(2^n\\)
+- Intermediate molecules = **always 2** (the two original parental strands + a new partner)
+- Light molecules = \\(2^n - 2\\)
+- Heavy molecules = **0** (after generation 1)
+
+> **Quantitative AP Tip:** The number of intermediate-density molecules never changes (always 2) because the two original heavy strands are conserved indefinitely, each paired with a new light strand.
       `
     },
     {
-      id: 'bio-dna-replication-p6-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **synthesized discontinuously as Okazaki fragments**
-      2) Term for this definition: **joins adjacent DNA fragments after primer replacement**
-      3) Term for this definition: **polymerase correction of misincorporated nucleotides**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['lagging strand', 'DNA ligase', 'proofreading'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'synthesized discontinuously as Okazaki fragments\'.',
-        hint2: 'Second blank points to DNA ligase; think about the role \'joins adjacent DNA fragments after primer replacement\'.',
-        hint3: 'Third blank is proofreading; connect it to \'polymerase correction of misincorporated nucleotides\'.',
-        explanation: 'Correct set: lagging strand, DNA ligase, proofreading. These three terms define the core mechanism chain for Problem-Solving Workshop.'
-      }
-    },
-    {
-      id: 'bio-dna-replication-p6-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'lagging strand',
-            options: ['post-replication pathway correcting base-pair errors', 'joins adjacent DNA fragments after primer replacement', 'polymerase correction of misincorporated nucleotides', 'synthesized discontinuously as Okazaki fragments']
-          },
-          {
-            label: 'DNA ligase',
-            options: ['each daughter DNA molecule retains one parental strand', 'polymerase correction of misincorporated nucleotides', 'joins adjacent DNA fragments after primer replacement', 'post-replication pathway correcting base-pair errors']
-          },
-          {
-            label: 'proofreading',
-            options: ['each daughter DNA molecule retains one parental strand', 'unwinds the DNA double helix at the replication fork', 'post-replication pathway correcting base-pair errors', 'polymerase correction of misincorporated nucleotides']
-          }
-        ],
-        correctAnswers: ['synthesized discontinuously as Okazaki fragments', 'joins adjacent DNA fragments after primer replacement', 'polymerase correction of misincorporated nucleotides'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'lagging strand, DNA ligase, and proofreading should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-dna-replication-p6-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because lagging strand synthesized discontinuously as Okazaki fragments, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Leading and lagging refer to synthesis pattern, not strand importance.
-      - Proofreading reduces errors but does not eliminate all mutations.
-      - Primers are required because DNA polymerase cannot start de novo.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-dna-replication-p6-s7-mcq-final',
+      id: 'dr6-quiz2',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Scenario 2 Questions
       `,
       exercise: {
         questions: [
           {
-            question: 'In mutation-rate interpretation from sequence data, the observed pattern is: post-replication pathway correcting base-pair errors. What term should anchor the explanation?',
+            question: 'After 5 generations of replication in 14N medium (starting from all 15N DNA), how many total DNA molecules are there and how many are intermediate density?',
             options: [
-              'lagging strand',
-              'DNA ligase',
-              'proofreading',
-              'mismatch repair'
+              '32 total, 16 intermediate',
+              '32 total, 2 intermediate and 30 light',
+              '64 total, 2 intermediate',
+              '10 total, 5 intermediate'
             ],
-            correctAnswer: 3,
-            explanation: 'Use mismatch repair because it directly maps to the described biological pattern: post-replication pathway correcting base-pair errors.'
+            correctAnswer: 1,
+            explanation: 'After 5 generations: 2^5 = 32 total molecules. The two original 15N strands are each paired with a 14N strand = 2 intermediate molecules. The remaining 30 molecules are all-14N (light). The number of intermediate molecules is always exactly 2.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'dr6-input',
+      type: 'input-boxes' as const,
+      content: `
+### Apply Your Knowledge
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'After 4 generations of semiconservative replication, one original DNA molecule produces how many total molecules?',
+            answer: '16',
+            acceptableAnswers: ['16', 'sixteen', '2^4'],
+            placeholder: 'e.g. 8'
           },
           {
-            question: 'In an AP-style free-response about problem-solving workshop, the observed pattern is: each daughter DNA molecule retains one parental strand. What term should anchor the explanation?',
+            question: 'Of those molecules, how many contain a parental (original) strand?',
+            answer: '2',
+            acceptableAnswers: ['2', 'two'],
+            placeholder: 'e.g. 4'
+          }
+        ]
+      }
+    },
+    {
+      id: 'dr6-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Exit Ticket — Workshop
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'BrdU (bromodeoxyuridine) is a thymidine analog that is incorporated into newly synthesized DNA and can be detected by antibodies. If cells replicate once in BrdU, then once without BrdU, what pattern of BrdU labeling would be seen in the daughter chromosomes?',
             options: [
-              'proofreading',
-              'helicase',
-              'mismatch repair',
-              'semiconservative replication'
+              'All four chromatids would be labeled',
+              'In the second division: each replicated chromosome would have one chromatid labeled (containing the BrdU strand from round 1) and one unlabeled (containing only thymidine), demonstrating semiconservative replication at the chromosomal level',
+              'No chromatids would be labeled — BrdU is diluted out',
+              'Only the leading strand would contain BrdU'
             ],
-            correctAnswer: 3,
-            explanation: 'Use semiconservative replication because it directly maps to the described biological pattern: each daughter DNA molecule retains one parental strand.'
+            correctAnswer: 1,
+            explanation: 'After replication in BrdU (round 1), both daughter molecules have one BrdU strand and one original strand. After replication WITHOUT BrdU (round 2), each of the two chromatids contains either the BrdU strand + unlabeled new strand (labeled chromatid) or the original strand + unlabeled new strand (unlabeled chromatid). This produces a "harlequin" pattern visible by staining.'
           }
         ]
       }

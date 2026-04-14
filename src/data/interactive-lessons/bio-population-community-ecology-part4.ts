@@ -95,7 +95,9 @@ export const bioPopulationPart4Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **factor whose effect changes with population density**
+
       2) Term for this definition: **life-history pattern favoring high reproduction in unstable settings**
+
       3) Term for this definition: **life-history pattern favoring competitive efficiency near carrying capacity**
       `,
       exercise: {

@@ -136,7 +136,9 @@ Or equivalently: 1 mmHg ≈ 133.3 Pa.
 A closed-end manometer has mercury ($\\rho = 13{,}600$ kg/m³) with a height of 0.50 m.
 
 1) Gas pressure in Pa
+
 2) Gas pressure in atm (round to 2 decimals)
+
 3) Gas pressure in mmHg
 
 *Round all answers to 3 significant figures.*

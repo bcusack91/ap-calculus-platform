@@ -101,7 +101,9 @@ $$f(g(x)) = f(3x) = 3x + 5$$
 Let $f(x) = 2x - 1$ and $g(x) = x^2 + 3$.
 
 1) What is $f(5)$?
+
 2) What is $g(-2)$?
+
 3) What is $f(g(1))$?
       `,
       exercise: {

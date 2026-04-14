@@ -88,7 +88,9 @@ export const oChemEnolatePart1Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: proton adjacent to carbonyl and relatively acidic
+
       2) Term for: resonance-stabilized anion of carbonyl compound
+
       3) Product pattern expected under LDA, THF, -78 °C
       `,
       exercise: {

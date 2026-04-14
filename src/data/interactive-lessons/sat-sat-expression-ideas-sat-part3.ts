@@ -59,7 +59,99 @@ A conclusion should:
             explanation: 'This topic sentence names the issue (decline), quantifies it (40%), situates it in time (past decade), and explains its significance (agriculture + ecosystems). The other options are either too general or off-topic.'
           }
         ]
+      }    },
+    {
+      id: 'ei3-text2',
+      type: 'text' as const,
+      content: `## Deep Dive: Crafting Strong Openings & Closings
+
+### Worked Example 1: Evaluating Topic Sentences
+
+| Candidate Topic Sentence | Paragraph About | Verdict |
+|---|---|---|
+| "Dogs are great." | Benefits of therapy dogs in hospitals | ❌ Too vague, too informal |
+| "Therapy dogs can improve patient outcomes." | Benefits of therapy dogs in hospitals | ✅ Specific, matches scope |
+| "Golden retrievers make excellent therapy dogs." | Benefits of therapy dogs in hospitals | ❌ Too narrow (only one breed) |
+| "Animals have been domesticated for millennia." | Benefits of therapy dogs in hospitals | ❌ Too broad |
+
+### Worked Example 2: Evaluating Conclusions
+
+**Paragraph topic:** "How vertical farms use less water than traditional farming."
+
+| Candidate Conclusion | Verdict | Why |
+|---|---|---|
+| "Vertical farming's water efficiency may prove critical as freshwater scarcity intensifies." | ✅ Best | Synthesizes main point + looks forward |
+| "Vertical farms also produce food closer to urban markets." | ❌ | New information (not about water) |
+| "Water is important for all life on Earth." | ❌ | Too broad, doesn't connect to vertical farming |
+| "Traditional farming uses a lot of water." | ❌ | Restates known info, doesn't conclude |
+
+### Introduction vs. Conclusion Checklist
+
+| Feature | Introduction | Conclusion |
+|---|---|---|
+| States main point | ✅ Previews | ✅ Summarizes |
+| Introduces new data | ✅ Sets up | ❌ Never |
+| Broad or specific? | Broad enough to cover paragraph | Synthesizes specifics into a takeaway |
+| Connects to other paragraphs | Forward-looking | Backward-looking |
+| Uses "In conclusion" | ❌ Not on SAT | ❌ Cliché — avoid |`
+    },
+    {
+      id: 'ei3-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Introductions & Conclusions Challenge** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: 'A paragraph discusses three advantages of electric vehicles: lower emissions, cheaper fuel costs, and reduced noise pollution. Which conclusion is best?',
+            options: ['By reducing emissions, costs, and noise, electric vehicles offer practical benefits that extend beyond environmental impact.', 'Electric vehicles were first invented in the 1830s by Robert Anderson.', 'There are many types of electric vehicles available today.', 'In conclusion, electric vehicles are good.'],
+            correctAnswer: 0,
+            explanation: 'A mentions all three benefits (synthesizes) and adds forward-looking significance. B introduces history (new info). C is vague. D is simplistic and uses the cliché "In conclusion."'
+          },
+          {
+            question: 'A topic sentence for a paragraph about antibiotic resistance should:',
+            options: ['Name the problem, hint at its significance, and set up the evidence that follows', 'List every statistic that will appear in the paragraph', 'Begin with "In this paragraph, I will discuss..."', 'Make a bold claim with no connection to the paragraph content'],
+            correctAnswer: 0,
+            explanation: 'A good topic sentence previews the paragraph\'s content without listing every detail. It names the subject, signals its importance, and creates expectations for the evidence to follow.'
+          },
+          {
+            question: 'Which is a red flag that a conclusion is wrong?',
+            options: ['It introduces brand-new information not discussed in the paragraph', 'It refers back to the topic sentence', 'It uses slightly different wording than the introduction', 'It is shorter than the topic sentence'],
+            correctAnswer: 0,
+            explanation: 'Conclusions synthesize — they do NOT introduce new facts, studies, or topics. If a "conclusion" brings up something never mentioned, it\'s a wrong answer on the SAT.'
+          }
+        ]
       }
-    }
+    },
+    {
+      id: 'ei3-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Openings & Closings Check** — Select the correct answer.',
+      exercise: {
+        dropdowns: [
+          'A topic sentence should be [specific enough to preview but broad enough to cover|as vague as possible|exactly one word|a question]',
+          'Conclusions should [synthesize the main point|introduce new evidence|restate the intro word-for-word|ask a new question]',
+          'A good conclusion for a paragraph about water conservation would mention [water conservation|space exploration|cooking tips|exercise]',
+          '"In conclusion" on the SAT is [cliché — avoid|required|preferred|the best transition]'
+        ],
+        correctAnswers: ['specific enough to preview but broad enough to cover', 'synthesize the main point', 'water conservation', 'cliché — avoid'],
+        hint1: 'Not too broad, not too narrow — just right.',
+        hint2: 'Synthesize = summarize + add significance.',
+        hint3: 'The conclusion must relate to the paragraph\'s topic.',
+        explanation: 'Topic sentences preview without being too broad or narrow. Conclusions synthesize, never introduce new info. Conclusions connect to the paragraph\'s topic. "In conclusion" is formulaic — the SAT prefers more sophisticated transitions.'
+      }
+    },
+    {
+      id: 'ei3-summary',
+      type: 'text' as const,
+      content: `## Part 3 Summary
+
+| Element | Must Do | Must NOT Do |
+|---|---|---|
+| Topic sentence | Preview the paragraph's scope | Be too broad or too narrow |
+| Conclusion | Synthesize main point(s) | Introduce new information |
+| Introduction | Connect to previous paragraph | Use "In this paragraph…" |
+| Conclusion | Look forward (significance) | Restate intro word-for-word |
+
+*Next: Synthesis & Integrating Information →*`    }
   ]
 };

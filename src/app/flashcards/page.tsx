@@ -61,7 +61,7 @@ export default async function FlashcardsPage({
         {/* Quick Action Button */}
         <div className="mb-8">
           <Link
-            href="/flashcards/review-dashboard"
+            href="/flashcards/review"
             className="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-lg transition-all"
           >
             🎯 Start Review Session

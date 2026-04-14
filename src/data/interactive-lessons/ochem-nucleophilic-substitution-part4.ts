@@ -88,7 +88,9 @@ export const oChemSNPart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: reactivity of electron pair donor toward electrophile
+
       2) Term for: solvent that hydrogen-bonds and can dampen nucleophiles
+
       3) Product pattern expected under benzyl halide + methanol
       `,
       exercise: {

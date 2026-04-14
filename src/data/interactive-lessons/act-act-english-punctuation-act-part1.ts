@@ -115,7 +115,9 @@ Two adjectives are **coordinate** (equal) when you can swap their order or inser
 Type the correct punctuation mark (comma, no comma, two commas) for each sentence.
 
 1) "The museum ___ which was built in 1920 ___ is undergoing renovation." — What punctuation goes in each blank?
+
 2) "Running through the park ___ she noticed a rare bird." — What punctuation goes in the blank?
+
 3) "They brought sandwiches ___ drinks ___ and fruit to the picnic." — What punctuation goes in each blank?
       `,
       exercise: {

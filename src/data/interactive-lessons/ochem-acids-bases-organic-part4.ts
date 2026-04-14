@@ -88,7 +88,9 @@ export const oChemAcidsBasesPart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: log-scale measure of acid strength; lower means stronger acid
+
       2) Term for: proton transfer favors side with weaker acid/base pair
+
       3) Product pattern expected under H3O+ workup
       `,
       exercise: {

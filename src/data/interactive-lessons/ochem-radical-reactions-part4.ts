@@ -88,7 +88,9 @@ export const oChemRadicalsPart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: steps that consume and regenerate radicals
+
       2) Term for: radical-radical combination removing chain carriers
+
       3) Product pattern expected under HBr, ROOR
       `,
       exercise: {

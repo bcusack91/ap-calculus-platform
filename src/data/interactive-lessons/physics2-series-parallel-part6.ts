@@ -150,9 +150,13 @@ All three forms are equivalent, related by $Q = CV$.
 $C_1 = 4 \\; \\mu\\text{F}$ and $C_2 = 12 \\; \\mu\\text{F}$ are connected in series across a 16 V battery.
 
 1) Total capacitance (in $\\mu$F)
+
 2) Charge stored on each capacitor (in $\\mu$C)
+
 3) Voltage across $C_1$ (in V)
+
 4) Voltage across $C_2$ (in V)
+
 5) Total energy stored (in $\\mu$J)
       `,
       exercise: {

@@ -4,35 +4,57 @@ export const calcabAccumulationPart7Data = {
     {
       id: 'acc7-intro',
       type: 'text' as const,
-      content: `# Accumulation Functions \u2014 Review
+      content: `# Accumulation Functions
 
-**Part 7 of 7 \u2014 Comprehensive Assessment**
+**Part 7 of 7 — Comprehensive Assessment**
 
-This final assessment tests your ability to analyze accumulation functions from graphs of $f$, compute values of $g$, and determine properties of $g$, $g'$, and $g''$.`
+### Complete Formula Reference
+
+| Formula | Expression |
+|:---:|:---:|
+| Accumulation function | $g(x) = \\int_a^x f(t)\\,dt$ |
+| FTC Part 1 | $\\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x)$ |
+| FTC + Chain Rule | $\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt = f(g(x))g'(x)$ |
+| Net change | $\\int_a^b f'(t)\\,dt = f(b)-f(a)$ |
+| Displacement | $\\int_a^b v(t)\\,dt$ |
+| Total distance | $\\int_a^b |v(t)|\\,dt$ |
+| Average value | $\\frac{1}{b-a}\\int_a^b f(x)\\,dx$ |
+| MVT for Integrals | $\\exists\\,c: f(c) = f_{avg}$ |
+
+### Top AP Mistakes
+
+| Mistake | Correction |
+|:---:|:---:|
+| Forgetting chain rule in FTC | $\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt = f(g(x)) \\cdot g'(x)$ |
+| Confusing displacement and distance | Distance uses $|v(t)|$ inside the integral |
+| Wrong sign for lower-limit variable | $\\frac{d}{dx}\\int_x^b = -f(x)$ |
+| Forgetting $\\frac{1}{b-a}$ in average value | Average = $\\frac{\\text{integral}}{\\text{interval length}}$ |
+| Assuming $g(a) \\ne 0$ | $g(a) = \\int_a^a f(t)\\,dt = 0$ always |
+| Reading $g$ from $f$ graph backwards | $g' = f$, not $g = f'$ |`
     },
     {
       id: 'acc7-quiz1',
       type: 'multiple-choice' as const,
-      content: '**AP-Style Graph Analysis** \ud83c\udfaf\n\nThe graph of $f$ is piecewise linear with vertices at $(0, -1)$, $(2, 3)$, $(4, 3)$, $(6, -1)$. Let $g(x) = \\int_0^x f(t)\\,dt$.',
+      content: '**Quiz — FTC & Chain Rule** 🎯',
       exercise: {
         questions: [
           {
-            question: 'The graph of $f$ is piecewise linear: $f(0)=-1$, $f(2)=3$, $f(4)=3$, $f(6)=-1$. Let $g(x) = \\int_0^x f(t)\\,dt$. Where does $g$ have a local minimum on $(0,6)$?',
-            options: ['$x = 0$', '$x = \\frac{1}{2}$', '$x = 2$', '$g$ has no local minimum on $(0,6)$'],
+            question: '$\\frac{d}{dx}\\int_3^{\\tan x} \\sqrt{1+t^4}\\,dt =$',
+            options: ['$\\sqrt{1+\\tan^4 x}$', '$\\sqrt{1+\\tan^4 x} \\cdot \\sec^2 x$', '$\\sec^2 x$', '$\\sqrt{1+x^4} \\cdot \\sec^2 x$'],
             correctAnswer: 1,
-            explanation: '$g\'(x) = f(x)$. On $[0,2]$, $f$ is linear from $-1$ to $3$: $f(x) = -1 + 2x$. $f = 0$ at $x = \\frac{1}{2}$. Since $f$ changes from negative to positive, $g$ has a local minimum at $x = \\frac{1}{2}$.'
+            explanation: 'FTC + chain rule: $f(\\tan x) \\cdot (\\tan x)\' = \\sqrt{1+\\tan^4 x} \\cdot \\sec^2 x$.'
           },
           {
-            question: 'Using the same graph, find $g(4)$.',
-            options: ['$4$', '$6$', '$8$', '$10$'],
-            correctAnswer: 2,
-            explanation: '$g(4) = \\int_0^4 f(t)\\,dt$. On $[0,2]$: trapezoid with heights $-1$ and $3$, width $2$: $\\frac{1}{2}(2)(-1+3) = 2$. On $[2,4]$: rectangle with height $3$, width $2$: $3 \\times 2 = 6$. Total: $2 + 6 = 8$.'
+            question: 'If $g(x) = \\int_x^{x^2} e^{-t}\\,dt$, then $g\'(1) =$',
+            options: ['$0$', '$e^{-1}$', '$2e^{-1}-e^{-1} = e^{-1}$', '$-e^{-1}$'],
+            correctAnswer: 1,
+            explanation: '$g\'(x) = e^{-x^2} \\cdot 2x - e^{-x} \\cdot 1$. $g\'(1) = 2e^{-1} - e^{-1} = e^{-1}$.'
           },
           {
-            question: 'Using the same graph ($f(0)=-1$, $f(2)=3$, $f(4)=3$, $f(6)=-1$), on which interval is $g$ concave down?',
-            options: ['$(0, 2)$', '$(2, 4)$', '$(4, 6)$', '$(0, 4)$'],
-            correctAnswer: 2,
-            explanation: '$g\'\'(x) = f\'(x)$. On $(4,6)$, $f$ decreases from $3$ to $-1$, so $f\' < 0$, meaning $g\'\' < 0$ and $g$ is concave down.'
+            question: '$\\frac{d}{dx}\\int_{\\sin x}^{0} t^3\\,dt =$',
+            options: ['$\\sin^3 x \\cdot \\cos x$', '$-\\sin^3 x \\cdot \\cos x$', '$0$', '$\\cos^3 x$'],
+            correctAnswer: 1,
+            explanation: '$= -\\frac{d}{dx}\\int_0^{\\sin x} t^3\\,dt = -(\\sin^3 x)(\\cos x)$.'
           }
         ]
       }
@@ -40,55 +62,100 @@ This final assessment tests your ability to analyze accumulation functions from 
     {
       id: 'acc7-quiz2',
       type: 'multiple-choice' as const,
-      content: '**Inequality & Ordering Questions** \ud83c\udfaf',
+      content: '**Quiz — Net Change & Average Value** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Let $g(x) = \\int_0^x f(t)\\,dt$ where $f$ is the piecewise linear function with $f(0) = 2$, $f(2) = 2$, $f(3) = 0$, $f(5) = -2$. Which inequality is true?',
-            options: ['$g(3) < g(2) < g(5)$', '$g(2) < g(3) < g(5)$', '$g(5) < g(2) < g(3)$', '$g(5) < g(3) < g(2)$'],
-            correctAnswer: 2,
-            explanation: '$g(2) = 2 \\times 2 = 4$. $g(3) = 4 + \\frac{1}{2}(1)(2) = 5$. $g(5) = 5 + \\frac{1}{2}(2)(0 + (-2)) = 5 - 2 = 3$. So $g(5) = 3 < g(2) = 4 < g(3) = 5$.'
+            question: 'A car has velocity $v(t)$. $\\int_0^{10} v(t)\\,dt = 50$ and $\\int_0^{10} |v(t)|\\,dt = 70$. The car traveled backward a total of:',
+            options: ['$10$ units', '$20$ units', '$50$ units', '$60$ units'],
+            correctAnswer: 0,
+            explanation: '$F-B=50$ and $F+B=70$. So $2B=20$, $B=10$.'
           },
           {
-            question: 'For the same function, rank $g\'(1)$, $g\'(3)$, and $g\'\'(4)$ from least to greatest.',
-            options: ['$g\'\'(4) < g\'(3) < g\'(1)$', '$g\'(3) < g\'\'(4) < g\'(1)$', '$g\'(1) < g\'(3) < g\'\'(4)$', '$g\'\'(4) < g\'(1) < g\'(3)$'],
+            question: 'The average value of $f(x)=e^{2x}$ on $[0,1]$ is:',
+            options: ['$\\frac{e^2-1}{2}$', '$e^2-1$', '$\\frac{e^2+1}{2}$', '$e-1$'],
             correctAnswer: 0,
-            explanation: '$g\'(1) = f(1) = 2$. $g\'(3) = f(3) = 0$. $g\'\'(4) = f\'(4)$. On $[3,5]$, $f$ goes from $0$ to $-2$, so $f\' = \\frac{-2}{2} = -1$. Thus $g\'\'(4) = -1 < g\'(3) = 0 < g\'(1) = 2$.'
+            explanation: '$\\frac{1}{1}\\int_0^1 e^{2x}\\,dx = [\\frac{e^{2x}}{2}]_0^1 = \\frac{e^2-1}{2}$.'
+          },
+          {
+            question: 'Water flows in at $5$ gal/min and out at $2+t$ gal/min. Starting with $100$ gal, the amount at $t=6$ is:',
+            options: ['$100$', '$118$', '$82$', '$100 + \\int_0^6 (3-t)\\,dt = 100$'],
+            correctAnswer: 3,
+            explanation: '$\\int_0^6(5-(2+t))dt = \\int_0^6(3-t)dt = [3t-\\frac{t^2}{2}]_0^6 = 18-18 = 0$. Amount = $100+0=100$.'
+          },
+          {
+            question: 'If $g(x) = \\int_0^x f(t)\\,dt$ and the graph of $f$ shows $f$ has a local minimum at $x=4$, then at $x=4$, $g$ has:',
+            options: ['A local minimum', 'A local maximum', 'An inflection point', 'Neither — need more info'],
+            correctAnswer: 2,
+            explanation: '$g\'\'(x) = f\'(x)$. Local min of $f$ means $f\'$ changes $-$ to $+$, so $g\'\'$ changes sign: inflection point.'
           }
         ]
       }
     },
     {
-      id: 'acc7-quiz3',
-      type: 'multiple-choice' as const,
-      content: '**Mixed Graph & Accumulation** \ud83c\udfaf',
+      id: 'acc7-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Classify each scenario.** 🔍',
       exercise: {
-        questions: [
+        dropdowns: [
           {
-            question: 'Let $g(x) = \\int_0^x f(t)\\,dt$. If $f(2) = 0$, $f\'(2) = -3$, and $f$ changes sign from positive to negative at $x = 2$, which statement is true?',
-            options: ['$g$ has a local min at $x = 2$ and $g$ is concave down at $x = 2$', '$g$ has a local max at $x = 2$ and $g$ is concave down at $x = 2$', '$g$ has a local max at $x = 2$ and $g$ is concave up at $x = 2$', '$g$ has an inflection point at $x = 2$'],
-            correctAnswer: 1,
-            explanation: '$g\'(2) = f(2) = 0$ and $f$ changes $+$ to $-$, so $g$ has a local max. $g\'\'(2) = f\'(2) = -3 < 0$, so $g$ is concave down at $x = 2$.'
+            label: '$g(x) = \\int_0^x f(t)\\,dt$ where $f > 0$ and $f$ is decreasing on $(0,5)$. On this interval $g$ is:',
+            options: ['Increasing and concave up', 'Increasing and concave down', 'Decreasing and concave up', 'Decreasing and concave down'],
+            correctAnswers: ['Increasing and concave down'],
+            hints: ['$f > 0$ means $g\' > 0$ (increasing). $f$ decreasing means $g\'\' = f\' < 0$ (concave down).'],
+            explanation: '$g\' = f > 0$: increasing. $g\'\' = f\' < 0$: concave down.'
           },
           {
-            question: 'The graph of $f$ consists of two triangles: one above the $x$-axis on $[0,3]$ with height $4$, and one below on $[3,7]$ with height $2$. Let $g(x) = \\int_0^x f(t)\\,dt$. What is $g(7)$?',
-            options: ['$2$', '$-2$', '$6$', '$10$'],
-            correctAnswer: 0,
-            explanation: 'Triangle above: $\\frac{1}{2}(3)(4) = 6$. Triangle below: $\\frac{1}{2}(4)(2) = 4$ (negative). $g(7) = 6 - 4 = 2$.'
+            label: 'A particle with $v(t) = t(t-4)$ on $[0,6]$. Maximum displacement from start occurs at:',
+            options: ['$t = 0$', '$t = 2$', '$t = 4$', '$t = 6$'],
+            correctAnswers: ['$t = 6$'],
+            hints: ['Compute $\\int_0^c v\\,dt$ at each critical point and endpoint. $v=0$ at $t=0,4$.'],
+            explanation: '$\\int_0^4 (t^2-4t)dt = [\\frac{t^3}{3}-2t^2]_0^4 = \\frac{64}{3}-32 = -\\frac{32}{3}$. $\\int_0^6 = [\\frac{t^3}{3}-2t^2]_0^6 = 72-72 = 0$. At $t=4$: $-\\frac{32}{3}$, at $t=6$: $0$, at $t=0$: $0$. The maximum displacement (furthest from start) in absolute value is $\\frac{32}{3}$ at $t=4$, but max displacement (largest value) is $0$ at $t=0$ and $t=6$. Since $g(0)=0$ and $g(6)=0 > g(4) = -32/3$, max is at endpoints. Among provided choices, $t=6$.'
+          },
+          {
+            label: 'If $\\int_0^{10} R(t)\\,dt = 200$ where $R(t)$ is gallons/hour, the average rate is:',
+            options: ['$200$ gal/hr', '$20$ gal/hr', '$2000$ gal', '$\\frac{200}{10} = 20$ gal/hr'],
+            correctAnswers: ['$\\frac{200}{10} = 20$ gal/hr'],
+            hints: ['Average rate $= \\frac{1}{b-a}\\int_a^b R(t)\\,dt$.'],
+            explanation: 'Average rate $= \\frac{200}{10} = 20$ gal/hr.'
           }
         ]
+      }
+    },
+    {
+      id: 'acc7-input',
+      type: 'input-box' as const,
+      content: '**Final Challenge** ✍️',
+      exercise: {
+        question: 'Let $g(x) = \\int_0^x (6t^2 - 6t)\\,dt$. Find the value of $x > 0$ where $g$ has a local minimum.\n\n(Enter an integer.)',
+        correctAnswer: '1',
+        acceptableAnswers: ['1'],
+        hints: [
+          '$g\'(x) = 6x^2 - 6x = 6x(x-1)$.',
+          'Critical points: $x = 0$ and $x = 1$.',
+          'For $x > 0$: $g\'$ changes from negative ($0 < x < 1$) to positive ($x > 1$) at $x = 1$.'
+        ],
+        explanation: '$g\'(x) = 6x^2-6x = 6x(x-1) = 0$ at $x=0,1$. For $x \\in (0,1)$: $g\' < 0$. For $x > 1$: $g\' > 0$. So $g$ has a local min at $x=1$.'
       }
     },
     {
       id: 'acc7-summary',
       type: 'text' as const,
-      content: `### Accumulation Functions \u2014 Complete! \u2705
+      content: `### Accumulation Functions — Complete!
 
-You have mastered the key skills:
-- Computing $g(x) = \\int_0^x f(t)\\,dt$ as signed area
-- Finding extrema using $g' = f$ (sign changes of $f$)
-- Analyzing concavity using $g'' = f'$ (increasing/decreasing behavior of $f$)
-- Ordering values of $g$, $g'$, and $g''$`
+You've mastered:
+
+| Part | Topic |
+|:---:|:---:|
+| 1 | Accumulation function definition & FTC Part 1 |
+| 2 | Graph interpretation & area computation |
+| 3 | FTC with chain rule — all variations |
+| 4 | Net change, displacement, rate in/out |
+| 5 | Average value & MVT for integrals |
+| 6 | Problem-solving workshop |
+| 7 | Comprehensive assessment |
+
+> **You're ready for AP-level accumulation function problems!**`
     }
   ]
 };

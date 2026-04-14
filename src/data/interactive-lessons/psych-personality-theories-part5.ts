@@ -86,7 +86,9 @@ export const psychPersonalityPart5Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: question of trait consistency versus situational influence
+
       2) Write the concept that matches: early-appearing emotional reactivity and regulation tendencies
+
       3) Write the concept that matches: a relatively stable disposition influencing behavior across situations
 
       Use the exact vocabulary term from this part.

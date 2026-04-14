@@ -107,7 +107,9 @@ Every question is **passage-based**: an underlined portion in the text is follow
 **Quick Recall** 📝
 
 1) How many total questions are on the ACT English section? __________
+
 2) How many seconds per question does 75 Qs in 45 min give you? __________
+
 3) The two broad categories are Usage/Mechanics and __________ Skills.
       `,
       exercise: {

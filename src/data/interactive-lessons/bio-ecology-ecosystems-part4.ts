@@ -95,7 +95,9 @@ export const bioEcologyPart4Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **rate at which autotrophs convert energy into biomass**
+
       2) Term for this definition: **organism that recycles nutrients from organic matter**
+
       3) Term for this definition: **interaction where both species gain fitness benefits**
       `,
       exercise: {

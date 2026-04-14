@@ -158,7 +158,9 @@ Faraday discovered that **changing flux induces an EMF** (voltage) in the loop. 
 A rectangular loop has dimensions 20 cm × 30 cm and sits in a uniform magnetic field of $B = 0.5$ T.
 
 1) Area of the loop in m²
+
 2) Maximum possible flux through the loop (in Wb)
+
 3) Flux when the loop is tilted so $\\theta = 60°$ (in Wb)
 
 *Round all answers to 3 significant figures.*

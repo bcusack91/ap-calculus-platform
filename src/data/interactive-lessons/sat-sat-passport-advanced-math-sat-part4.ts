@@ -110,7 +110,9 @@ $$x^2 - 6x + 5 = 0 \\implies (x-5)(x-1) = 0 \\implies x = 5 \\text{ or } x = 1$$
 **Radical Calculations** 🧮
 
 1) Evaluate $27^{2/3}$.
+
 2) Solve $\\sqrt{x+7} = 4$. What is $x$?
+
 3) Simplify $\\sqrt{50}$ in the form $a\\sqrt{b}$. What is $a$?
       `,
       exercise: {

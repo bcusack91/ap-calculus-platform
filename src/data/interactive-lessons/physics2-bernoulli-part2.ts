@@ -111,7 +111,9 @@ By measuring the pressure drop between wide and narrow sections, you can calcula
 A horizontal Venturi tube has wide diameter 8.0 cm and narrow diameter 4.0 cm. The pressure difference between the two sections is 9000 Pa.
 
 1) Area ratio $A_1/A_2$
+
 2) Express $v_1$ in terms of the pressure difference (solve for $v_1$, in m/s)
+
 3) Flow rate through the tube (in L/s)
 
 *Round all answers to 3 significant figures.*

@@ -148,7 +148,9 @@ The dielectric **polarizes** — its molecules align with the external field, cr
 A parallel-plate capacitor: plate area $A = 0.01\\ \\text{m}^2$, separation $d = 0.001$ m, no dielectric. Use $\\epsilon_0 = 8.85 \\times 10^{-12}$ F/m.
 
 1) Capacitance (in pF, where 1 pF = $10^{-12}$ F)
+
 2) If charged to $V = 200$ V, charge stored $Q$ (in nC, where 1 nC = $10^{-9}$ C)
+
 3) Energy stored (in μJ, where 1 μJ = $10^{-6}$ J)
 
 *Round all answers to 3 significant figures.*

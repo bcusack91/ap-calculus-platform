@@ -88,7 +88,9 @@ export const oChemAminoAcidsPart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: 3D fold from side-chain interactions
+
       2) Term for: covalent S-S linkage between cysteine residues
+
       3) Product pattern expected under electrophoresis at chosen pH
       `,
       exercise: {

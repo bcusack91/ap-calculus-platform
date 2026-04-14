@@ -95,7 +95,9 @@ export const bioSpeciationPart3Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **speciation without geographic separation**
+
       2) Term for this definition: **reproductive isolation mechanism before fertilization**
+
       3) Term for this definition: **isolation mechanism reducing hybrid viability or fertility**
       `,
       exercise: {

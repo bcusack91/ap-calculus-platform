@@ -143,7 +143,9 @@ This is the principle behind thermometers! The thermometer (C) reaches equilibri
 Convert between heat energy units. Round to the nearest whole number.
 
 1) 500 calories = ___ joules (use 1 cal = 4.186 J)
+
 2) 8{,}372 J = ___ kilocalories
+
 3) 3 food Calories (kcal) = ___ joules
       `,
       exercise: {

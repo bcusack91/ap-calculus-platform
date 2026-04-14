@@ -86,7 +86,9 @@ export const psychDisordersPart5Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: framework integrating biological, psychological, and social influences
+
       2) Write the concept that matches: social devaluation linked to a condition or identity
+
       3) Write the concept that matches: standardized symptom and duration requirements for diagnosis
 
       Use the exact vocabulary term from this part.

@@ -2,190 +2,195 @@ export const bioPhotosynthesisPart5Data = {
   topicSlug: 'photosynthesis',
   sections: [
     {
-      id: 'bio-photosynthesis-p5-s1-intro',
+      id: 'ps5-intro',
       type: 'text' as const,
       content: `
-      ## Photosynthesis: Photosynthesis Factors
-      
-      **Part 5 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through rate responses to light, CO2, and temperature.
-      
-      ### Worked biological example
-      A student team investigates rate responses to light, CO2, and temperature. Their first interpretation step is to identify how **Rubisco** and **photorespiration** work together in the same pathway.
-      
-      - They classify the primary signal using **Rubisco**: enzyme catalyzing CO2 fixation with RuBP.
-      - They trace the downstream response using **photorespiration**: oxygenation pathway that reduces photosynthetic efficiency.
-      - They then compare outcomes with **C4 pathway** and **CAM pathway** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **Rubisco**
-      - **photorespiration**
-      - **C4 pathway**
-      - **CAM pathway**
+## Factors Affecting Photosynthesis
+
+**Part 5 of 7**
+
+The rate of photosynthesis is influenced by several environmental variables.  Understanding how each factor affects the light reactions and Calvin cycle is essential for predicting plant productivity and interpreting experimental data on the AP exam.
+
+The three main **limiting factors** are:
+1. **Light intensity**
+2. **CO\\(_2\\) concentration**
+3. **Temperature**
       `
     },
     {
-      id: 'bio-photosynthesis-p5-s2-mcq-core',
+      id: 'ps5-light',
+      type: 'text' as const,
+      content: `
+### Light Intensity
+
+As light intensity increases from zero:
+- The rate of photosynthesis increases **linearly** at first (light is the limiting factor)
+- The curve gradually levels off and reaches a **plateau** (the light-saturation point)
+- Beyond the saturation point, increasing light does not increase the rate — another factor (CO\\(_2\\), temperature, or enzyme capacity) becomes limiting
+
+**Compensation point:** The light intensity at which the rate of photosynthesis equals the rate of cellular respiration (net gas exchange = 0).  Below this point, the plant consumes more O\\(_2\\) than it produces.
+
+**Very high light intensity** can actually cause **photoinhibition** — damage to PSII reaction centers from excess absorbed energy, reducing photosynthetic efficiency.
+
+> **Experiment Tip:** The leaf disc flotation assay is a common AP lab technique that measures photosynthetic rate by counting how quickly leaf discs float to the surface (O\\(_2\\) production makes them buoyant).  Light intensity is varied by changing the distance between the light source and the beaker.
+      `
+    },
+    {
+      id: 'ps5-co2',
+      type: 'text' as const,
+      content: `
+### CO2 Concentration
+
+CO\\(_2\\) is a substrate for RuBisCO in the Calvin cycle:
+- At low CO\\(_2\\): The rate of carbon fixation is limited because RuBisCO is not saturated
+- As CO\\(_2\\) increases: The rate increases linearly
+- At high CO\\(_2\\): The rate plateaus when RuBisCO is fully saturated or when the light reactions cannot supply enough ATP/NADPH
+
+**Current atmospheric CO\\(_2\\)** (~420 ppm) is below the saturation point for most C3 plants, meaning **CO\\(_2\\) enrichment can increase photosynthetic rates** in greenhouses.
+
+C4 and CAM plants are less responsive to CO\\(_2\\) enrichment because their carbon-concentrating mechanisms already saturate RuBisCO under normal conditions.
+      `
+    },
+    {
+      id: 'ps5-temp',
+      type: 'text' as const,
+      content: `
+### Temperature
+
+Temperature affects the rate of enzyme-catalyzed reactions:
+- From 0 to the optimum (~25-30 °C for most C3 plants, ~30-40 °C for C4 plants): The rate increases as molecular kinetic energy increases
+- At the **optimum temperature**: The rate is maximized
+- Above the optimum: Enzymes begin to **denature**, active sites lose shape, and the rate drops sharply
+- At extremely high temperatures: Enzymes are completely denatured and photosynthesis stops
+
+**Temperature also affects the ratio of RuBisCO carboxylation to oxygenation:**
+- Higher temperatures decrease the relative solubility of CO\\(_2\\) vs O\\(_2\\)
+- RuBisCO also has lower affinity for CO\\(_2\\) at higher temperatures
+- Both effects increase **photorespiration** in C3 plants
+
+This is why C4 plants (which circumvent photorespiration) dominate in tropical grasslands, while C3 plants dominate in temperate forests.
+      `
+    },
+    {
+      id: 'ps5-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Limiting Factors
       `,
       exercise: {
         questions: [
           {
-            question: 'For Photosynthesis Factors, what best describes Rubisco?',
+            question: 'A graph shows photosynthetic rate vs. light intensity reaching a plateau. What could you do to increase the rate beyond the plateau?',
             options: [
-              'enzyme catalyzing CO2 fixation with RuBP',
-              'carbon-concentrating mechanism reducing photorespiration',
-              'temporal separation of CO2 capture and Calvin cycle',
-              'oxygenation pathway that reduces photosynthetic efficiency'
+              'Increase light intensity further',
+              'Increase CO2 concentration or optimize temperature (change the limiting factor)',
+              'Decrease O2 concentration around the plant',
+              'Both B and C could potentially work'
             ],
-            correctAnswer: 0,
-            explanation: 'Rubisco is best matched with: enzyme catalyzing CO2 fixation with RuBP.'
+            correctAnswer: 3,
+            explanation: 'At the light-saturation plateau, light is no longer limiting. Increasing CO2 would accelerate the Calvin cycle, and decreasing O2 would reduce photorespiration — both would increase the net rate. Increasing light further would not help and might cause photoinhibition.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of photorespiration?',
+            question: 'The compensation point is the light intensity at which:',
             options: [
-              'enzyme catalyzing CO2 fixation with RuBP',
-              'leaf pores regulating gas exchange and water loss',
-              'oxygenation pathway that reduces photosynthetic efficiency',
-              'carbon-concentrating mechanism reducing photorespiration'
+              'Photosynthesis reaches its maximum rate',
+              'The rate of photosynthesis equals the rate of cellular respiration',
+              'Photorespiration begins',
+              'Stomata close completely'
             ],
-            correctAnswer: 2,
-            explanation: 'photorespiration is best matched with: oxygenation pathway that reduces photosynthetic efficiency.'
+            correctAnswer: 1,
+            explanation: 'At the compensation point, the rate of O2 production by photosynthesis equals the rate of O2 consumption by respiration. Net gas exchange is zero. Below this point, the plant is a net consumer of O2 and producer of CO2.'
+          },
+          {
+            question: 'Why are C3 plants more responsive to CO2 enrichment than C4 plants?',
+            options: [
+              'C3 plants have more chloroplasts',
+              'In C3 plants, RuBisCO is not saturated at current atmospheric CO2 levels, while C4 plants already concentrate CO2 around RuBisCO',
+              'C4 plants do not use the Calvin cycle',
+              'C3 plants have more stomata'
+            ],
+            correctAnswer: 1,
+            explanation: 'At current atmospheric CO2 (~420 ppm), RuBisCO in C3 plants is below its saturation point — more CO2 directly increases fixation. C4 plants use PEP carboxylase to concentrate CO2 around RuBisCO, which is already saturated, so additional atmospheric CO2 provides little benefit.'
           }
         ]
       }
     },
     {
-      id: 'bio-photosynthesis-p5-s3-deep-dive',
+      id: 'ps5-interactions',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Photosynthesis Factors
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → Rubisco
-      - **Immediate processing** → photorespiration
-      - **System-level consequence** → C4 pathway
-      - **Measured readout** → CAM pathway
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | Rubisco | enzyme catalyzing CO2 fixation with RuBP | Early shift in the primary variable |
-      | photorespiration | oxygenation pathway that reduces photosynthetic efficiency | Mid-pathway change in process rate |
-      | C4 pathway | carbon-concentrating mechanism reducing photorespiration | Downstream phenotype trend |
-      | CAM pathway | temporal separation of CO2 capture and Calvin cycle | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Interactions Between Factors
+
+In real ecosystems, multiple factors interact:
+
+| Scenario | Primary Limiting Factor | Explanation |
+|----------|------------------------|-------------|
+| Winter morning, clear sky | Temperature & light | Cold slows enzyme kinetics; short days limit light duration |
+| Summer noon, full sun | CO\\(_2\\) (and photorespiration) | Abundant light and heat, but atmospheric CO\\(_2\\) limits Calvin cycle |
+| Cloudy day, warm temperature | Light intensity | Temperature and CO\\(_2\\) are adequate but insufficient light limits the light reactions |
+| Greenhouse with supplemental CO\\(_2\\) and lighting | Temperature or enzyme capacity | Once light and CO\\(_2\\) are optimized, the biochemical machinery reaches its maximum capacity |
+
+**Liebig's Law of the Minimum** applies: the rate of photosynthesis is determined by whichever factor is most limiting, regardless of the abundance of other factors.
       `
     },
     {
-      id: 'bio-photosynthesis-p5-s4-input',
+      id: 'ps5-input',
       type: 'input-boxes' as const,
       content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **enzyme catalyzing CO2 fixation with RuBP**
-      2) Term for this definition: **oxygenation pathway that reduces photosynthetic efficiency**
-      3) Term for this definition: **carbon-concentrating mechanism reducing photorespiration**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Rubisco', 'photorespiration', 'C4 pathway'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'enzyme catalyzing CO2 fixation with RuBP\'.',
-        hint2: 'Second blank points to photorespiration; think about the role \'oxygenation pathway that reduces photosynthetic efficiency\'.',
-        hint3: 'Third blank is C4 pathway; connect it to \'carbon-concentrating mechanism reducing photorespiration\'.',
-        explanation: 'Correct set: Rubisco, photorespiration, C4 pathway. These three terms define the core mechanism chain for Photosynthesis Factors.'
-      }
-    },
-    {
-      id: 'bio-photosynthesis-p5-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Rubisco',
-            options: ['enzyme catalyzing CO2 fixation with RuBP', 'carbon-concentrating mechanism reducing photorespiration', 'oxygenation pathway that reduces photosynthetic efficiency', 'temporal separation of CO2 capture and Calvin cycle']
-          },
-          {
-            label: 'photorespiration',
-            options: ['leaf pores regulating gas exchange and water loss', 'oxygenation pathway that reduces photosynthetic efficiency', 'carbon-concentrating mechanism reducing photorespiration', 'temporal separation of CO2 capture and Calvin cycle']
-          },
-          {
-            label: 'C4 pathway',
-            options: ['capture light energy to generate ATP and NADPH', 'leaf pores regulating gas exchange and water loss', 'carbon-concentrating mechanism reducing photorespiration', 'temporal separation of CO2 capture and Calvin cycle']
-          }
-        ],
-        correctAnswers: ['enzyme catalyzing CO2 fixation with RuBP', 'oxygenation pathway that reduces photosynthetic efficiency', 'carbon-concentrating mechanism reducing photorespiration'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'Rubisco, photorespiration, and C4 pathway should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-photosynthesis-p5-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because Rubisco enzyme catalyzing CO2 fixation with RuBP, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Plants respire continuously; photosynthesis does not replace respiration.
-      - Oxygen released in photosynthesis comes from water splitting, not CO2.
-      - C4 and CAM pathways are adaptations to environmental constraints, not universally superior modes.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-photosynthesis-p5-s7-mcq-final',
-      type: 'multiple-choice' as const,
-      content: `
-      **Final application MCQ (2 questions)**
+### Key Terms — Photosynthetic Factors
       `,
       exercise: {
         questions: [
           {
-            question: 'In rate responses to light, CO2, and temperature, the observed pattern is: temporal separation of CO2 capture and Calvin cycle. What term should anchor the explanation?',
-            options: [
-              'Rubisco',
-              'photorespiration',
-              'CAM pathway',
-              'C4 pathway'
-            ],
-            correctAnswer: 2,
-            explanation: 'Use CAM pathway because it directly maps to the described biological pattern: temporal separation of CO2 capture and Calvin cycle.'
+            question: 'The light intensity where photosynthetic rate equals respiration rate:',
+            answer: 'compensation point',
+            acceptableAnswers: ['compensation point', 'Compensation point', 'light compensation point'],
+            placeholder: 'e.g. saturation point'
           },
           {
-            question: 'In an AP-style free-response about photosynthesis factors, the observed pattern is: leaf pores regulating gas exchange and water loss. What term should anchor the explanation?',
+            question: 'The principle stating that the rate is controlled by the most limiting factor:',
+            answer: 'limiting factor',
+            acceptableAnswers: ['limiting factor', 'Limiting factor', 'law of the minimum', 'law of minimum'],
+            placeholder: 'e.g. rate law'
+          },
+          {
+            question: 'Damage to PSII caused by excessive light absorption:',
+            answer: 'photoinhibition',
+            acceptableAnswers: ['photoinhibition', 'Photoinhibition', 'photo-inhibition', 'photodamage'],
+            placeholder: 'e.g. photorespiration'
+          }
+        ]
+      }
+    },
+    {
+      id: 'ps5-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Exit Ticket — Factors Affecting Photosynthesis
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A researcher measures O2 production from an aquatic plant at different temperatures while keeping light and CO2 constant. At 45 °C, O2 production drops to near zero. What is the most likely explanation?',
             options: [
-              'CAM pathway',
-              'C4 pathway',
-              'stomata',
-              'light reactions'
+              'The water evaporated',
+              'Enzymes involved in photosynthesis (especially RuBisCO and those in the light reactions) are denaturing at this high temperature',
+              'The plant switched to CAM photosynthesis',
+              'All the CO2 was consumed'
             ],
-            correctAnswer: 2,
-            explanation: 'Use stomata because it directly maps to the described biological pattern: leaf pores regulating gas exchange and water loss.'
+            correctAnswer: 1,
+            explanation: 'At 45 °C, proteins begin to denature (lose their 3D shape). Since all stages of photosynthesis depend on enzyme catalysis, denaturation of key enzymes (RuBisCO, photosystem proteins, Calvin cycle enzymes) halts photosynthesis.'
+          },
+          {
+            question: 'Greenhouse growers often add CO2 to the air and provide supplemental lighting. After both are optimized, what typically becomes the next limiting factor?',
+            options: [
+              'Water availability',
+              'Temperature (enzyme kinetics)',
+              'Oxygen concentration',
+              'Nitrogen in the soil'
+            ],
+            correctAnswer: 1,
+            explanation: 'After light and CO2 are optimized, the biochemical reaction rates become limited by temperature (enzyme kinetics). Greenhouses therefore also control temperature to maintain optimal enzyme function and maximize photosynthetic rate.'
           }
         ]
       }

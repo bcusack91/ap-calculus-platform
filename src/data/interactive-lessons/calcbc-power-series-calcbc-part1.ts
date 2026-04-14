@@ -2,185 +2,136 @@ export const calcbcPowerSeriesPart1Data = {
   topicSlug: 'power-series-calcbc',
   sections: [
     {
-      id: 'calcbcpowerseries-p1-intro',
+      id: 'ps1-intro',
       type: 'text' as const,
-      content: `
-# Power Series
+      content: `# Power Series — Definition & Convergence
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Introduction to Power Series**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### What Is a Power Series?
 
-## Key Ideas
+A power series centered at $x = c$ is:
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+$$\\boxed{\\sum_{n=0}^\\infty a_n (x - c)^n = a_0 + a_1(x-c) + a_2(x-c)^2 + \\cdots}$$
 
-## Formula Snapshot
+When $c = 0$, this is a **Maclaurin-type** power series: $\\sum a_n x^n$.
 
-When appropriate, use:
+### Key Terminology
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+| Term | Meaning |
+|------|---------|
+| **Center** $c$ | The point about which the series is expanded |
+| **Coefficients** $a_n$ | The constants multiplying each power |
+| **Radius of convergence** $R$ | Series converges for $|x - c| < R$ |
+| **Interval of convergence** | Full interval including endpoint analysis |
 
-and interpret what the final value means in context.
-      `
+### Three Convergence Possibilities
+
+For any power series, exactly ONE is true:
+1. Converges only at $x = c$ (radius $R = 0$)
+2. Converges for all $x$ (radius $R = \\infty$)
+3. Converges for $|x - c| < R$ and diverges for $|x - c| > R$ (finite $R > 0$)
+
+> **AP Tip:** The Ratio Test is the primary tool for finding the radius of convergence.`
     },
     {
-      id: 'calcbcpowerseries-p1-mcq1',
+      id: 'ps1-ratio',
+      type: 'text' as const,
+      content: `### Finding the Radius with the Ratio Test
+
+For $\\sum a_n (x-c)^n$, apply the Ratio Test:
+
+$$L = \\lim_{n\\to\\infty} \\left|\\frac{a_{n+1}}{a_n}\\right| \\cdot |x - c|$$
+
+Converges when $L < 1$, i.e., $|x - c| < \\frac{1}{\\lim |a_{n+1}/a_n|}$.
+
+$$\\boxed{R = \\frac{1}{\\lim_{n\\to\\infty} |a_{n+1}/a_n|}}$$
+
+### Example: $\\sum_{n=0}^\\infty \\frac{x^n}{n!}$
+
+$\\left|\\frac{a_{n+1}}{a_n}\\right| = \\frac{1}{n+1} \\to 0$
+
+So $L = 0 \\cdot |x| = 0 < 1$ for all $x$. Radius $R = \\infty$. (This is the series for $e^x$.)
+
+### Example: $\\sum_{n=0}^\\infty n! x^n$
+
+$\\left|\\frac{a_{n+1}}{a_n}\\right| = n+1 \\to \\infty$
+
+So $L = \\infty$ for any $x \\neq 0$. Radius $R = 0$. Converges only at $x = 0$.`
+    },
+    {
+      id: 'ps1-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Finding Radius of Convergence**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: '$\\sum_{n=0}^\\infty \\frac{x^n}{3^n}$. The radius of convergence is:',
+            options: ['$R = 3$', '$R = 1$', '$R = 1/3$', '$R = \\infty$'],
+            correctAnswer: 0,
+            explanation: 'This is geometric: $\\sum (x/3)^n$. Converges when $|x/3| < 1$, i.e., $|x| < 3$. So $R = 3$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: '$\\sum_{n=1}^\\infty \\frac{n x^n}{2^n}$. The radius of convergence is:',
+            options: ['$R = 2$', '$R = 1$', '$R = 1/2$', '$R = \\infty$'],
+            correctAnswer: 0,
+            explanation: '$|a_{n+1}/a_n| = (n+1)\\cdot 2^n / (n \\cdot 2^{n+1}) = (n+1)/(2n) \\to 1/2$. So $R = 1/(1/2) = 2$.'
+          },
+          {
+            question: 'A power series centered at $c = 3$ with $R = 5$ converges on which interval (before endpoint testing)?',
+            options: ['$(-2, 8)$', '$(3, 8)$', '$(-5, 5)$', '$(0, 6)$'],
+            correctAnswer: 0,
+            explanation: '$|x - 3| < 5$ means $-5 < x - 3 < 5$, so $-2 < x < 8$. Endpoints must be tested separately.'
           }
         ]
       }
     },
     {
-      id: 'calcbcpowerseries-p1-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcpowerseries-p1-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcpowerseries-p1-dropdown',
+      id: 'ps1-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Convergence Analysis**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '$\\sum_{n=0}^\\infty (2x)^n$ converges when:',
+            options: ['$|x| < 1/2$ (geometric, $r = 2x$)', '$|x| < 1$', '$|x| < 2$', 'All $x$'],
+            correctAnswers: ['$|x| < 1/2$ (geometric, $r = 2x$)'],
+            hints: ['Geometric series $\\sum r^n$ converges when $|r| < 1$.'],
+            explanation: '$\\sum (2x)^n$ is geometric with ratio $r = 2x$. Converges when $|2x| < 1$, i.e., $|x| < 1/2$. $R = 1/2$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcpowerseries-p1-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Core Concepts**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcpowerseries-p1-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'If the Ratio Test gives $L = |x-1|/4$, the radius of convergence is:',
+            options: ['$R = 4$ (converges when $|x-1|/4 < 1$)', '$R = 1/4$', '$R = 1$', 'Cannot determine'],
+            correctAnswers: ['$R = 4$ (converges when $|x-1|/4 < 1$)'],
+            hints: ['$L < 1$ means $|x-1| < 4$.'],
+            explanation: '$L = |x-1|/4 < 1 \\iff |x-1| < 4$. So $R = 4$, centered at $c = 1$.'
           }
         ]
       }
+    },
+    {
+      id: 'ps1-input',
+      type: 'input-box' as const,
+      content: '**Radius Computation**',
+      exercise: {
+        question: 'Find the radius of convergence of $\\sum_{n=0}^\\infty \\frac{n^2 x^n}{5^n}$. Enter $R$ as a whole number.',
+        correctAnswer: '5',
+        acceptableAnswers: ['5'],
+        hints: ['$|a_{n+1}/a_n| \\cdot |x| = ((n+1)^2/n^2) \\cdot |x|/5 \\to |x|/5$.'],
+        explanation: '$\\frac{|(n+1)^2 x^{n+1}/5^{n+1}|}{|n^2 x^n/5^n|} = \\frac{(n+1)^2}{5n^2}|x| \\to |x|/5$. Converges when $|x|/5 < 1$, so $R = 5$.'
+      }
+    },
+    {
+      id: 'ps1-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Power series: $\\sum a_n(x-c)^n$ — an "infinite polynomial"
+- Radius found via Ratio Test: $R = 1/\\lim|a_{n+1}/a_n|$
+- Three possibilities: $R = 0$, $R = \\infty$, or finite $R$
+- Endpoints must ALWAYS be tested separately
+
+> **Next:** Part 2 — Interval of Convergence (Endpoint Testing).`
     }
   ]
-}
+};

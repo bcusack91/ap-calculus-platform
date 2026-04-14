@@ -88,7 +88,9 @@ export const oChemRadicalsPart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: tertiary and resonance-stabilized radicals are favored
+
       2) Term for: radical adjacent to C=C with resonance support
+
       3) Product pattern expected under thiol-ene conditions
       `,
       exercise: {

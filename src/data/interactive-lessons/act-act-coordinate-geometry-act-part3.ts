@@ -86,7 +86,9 @@ Given $y = mx + b$:
 For each equation, find the requested intercept value.
 
 1) y-intercept of $4x + y = 9$? (just the y-value)
+
 2) x-intercept of $2x - 6y = 18$? (just the x-value)
+
 3) y-intercept of $y = 5x - 15$? (just the y-value)
       `,
       exercise: {

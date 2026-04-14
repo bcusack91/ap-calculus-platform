@@ -144,9 +144,13 @@ $$P_{\\text{total}} = 48 + 24 = 72 \\text{ W}$$
 A 24 V battery is connected to $R_1 = 4 \\; \\Omega$ in series with the parallel combination of $R_2 = 6 \\; \\Omega$ and $R_3 = 12 \\; \\Omega$.
 
 1) Total resistance of the circuit (in $\\Omega$)
+
 2) Total current (in A)
+
 3) Power dissipated by $R_1$ (in W)
+
 4) Power dissipated by $R_2$ (in W)
+
 5) Total power delivered by the battery (in W)
       `,
       exercise: {

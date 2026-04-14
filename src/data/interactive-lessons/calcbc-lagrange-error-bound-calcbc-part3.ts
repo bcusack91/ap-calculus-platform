@@ -2,185 +2,131 @@ export const calcbcLagrangePart3Data = {
   topicSlug: 'lagrange-error-bound-calcbc',
   sections: [
     {
-      id: 'calcbclagrange-p3-intro',
+      id: 'le3-intro',
       type: 'text' as const,
-      content: `
-# Lagrange Error Bound
+      content: `# Bounding Derivatives Strategically
 
-**Part 3 of 7 — Problem-Solving Patterns**
+**Part 3 of 7 — Finding $M$ for Different Functions**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### The Core Challenge
 
-## Key Ideas
+The Lagrange bound $|R_n(x)| \\le M|x-c|^{n+1}/(n+1)!$ requires:
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+$$M = \\max_{t \\in I} |f^{(n+1)}(t)|$$
 
-## Formula Snapshot
+This is straightforward for $\\sin, \\cos, e^x$. For other functions, you need **strategy**.
 
-When appropriate, use:
+### Function-by-Function Guide
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+| Function | $f^{(n+1)}(t)$ pattern | Bounding strategy |
+|----------|----------------------|-------------------|
+| $\\sin x, \\cos x$ | $\\pm \\sin, \\pm \\cos$ | Always $M = 1$ |
+| $e^x$ | $e^x$ | $M = e^{\\max(c,x)}$ (increasing) |
+| $e^{-x}$ | $\\pm e^{-x}$ | $M = e^{-\\min(c,x)}$ (decreasing $|\\cdot|$) |
+| $\\ln(1+x)$ | $\\pm n!/(1+t)^{n+1}$ | Max at smallest $(1+t)$ |
+| $(1+x)^p$ | Product with decreasing terms | Case-by-case |
+| $\\arctan x$ | Rational functions | Often given on AP |
 
-and interpret what the final value means in context.
-      `
+> **Key Fact:** On the AP exam, complicated derivatives are often **given** to you. You just plug into the formula.`
     },
     {
-      id: 'calcbclagrange-p3-mcq1',
+      id: 'le3-examples',
+      type: 'text' as const,
+      content: `### Example 1: $\\ln(1+x)$ at $c = 0$, $x = 0.5$, $n = 3$
+
+$f(x) = \\ln(1+x)$. Derivatives:
+- $f'(x) = (1+x)^{-1}$
+- $f''(x) = -(1+x)^{-2}$
+- $f'''(x) = 2(1+x)^{-3}$
+- $f^{(4)}(x) = -6(1+x)^{-4}$
+
+$$|f^{(4)}(t)| = \\frac{6}{(1+t)^4}$$
+
+On $[0, 0.5]$: decreasing, so max at $t = 0$: $M = 6$.
+
+$$|R_3(0.5)| \\le \\frac{6(0.5)^4}{4!} = \\frac{6 \\cdot 0.0625}{24} = \\frac{0.375}{24} = 0.015625$$
+
+### Example 2: When $M$ is Given
+
+*"$f$ has derivatives of all orders. It is known that $|f^{(5)}(t)| \\le 12$ for all $t$ in $[2, 3]$."*
+
+$$|R_4(3)| \\le \\frac{12 \\cdot |3 - 2|^5}{5!} = \\frac{12}{120} = 0.1$$
+
+> **AP Tip:** When the bound on a derivative is stated in an FRQ, that IS the value of $M$. Don't second-guess it.`
+    },
+    {
+      id: 'le3-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Bounding Strategies**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'For $f(x) = 1/(1-x)$ centered at $c = 0$, $f^{(n+1)}(t) = (n+1)!/(1-t)^{n+2}$. On $[0, 0.5]$, where is $|f^{(n+1)}(t)|$ maximized?',
+            options: ['At $t = 0.5$ (denominator is smallest)', 'At $t = 0$ (denominator is largest)', 'At $t = 0.25$ (midpoint)', 'Cannot determine without $n$'],
+            correctAnswer: 0,
+            explanation: '$|f^{(n+1)}(t)| = (n+1)!/(1-t)^{n+2}$. As $t \\to 0.5$, $(1-t) \\to 0.5$ gets smaller, making the fraction larger. Max at $t = 0.5$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'An FRQ states: "$|f^{(4)}(t)| \\le 25$ on $[1, 1.5]$." Which error bound setup is correct for $T_3$ at $x = 1.5$, $c = 1$?',
+            options: ['$25(0.5)^4/4! = 25/384$', '$25(1.5)^4/4!$', '$25(0.5)^3/3!$', '$4 \\cdot 25(0.5)^4$'],
+            correctAnswer: 0,
+            explanation: '$|R_3| \\le M|x-c|^{n+1}/(n+1)! = 25(0.5)^4/4! = 25 \\cdot 0.0625/24 = 25/384$.'
+          },
+          {
+            question: 'For $e^{-x}$ centered at $0$, evaluated at $x = 2$: $|f^{(n+1)}(t)| = e^{-t}$. On $[0, 2]$, $M = $',
+            options: ['$e^0 = 1$', '$e^{-2}$', '$e^2$', '$2e^{-1}$'],
+            correctAnswer: 0,
+            explanation: '$e^{-t}$ is decreasing on $[0, 2]$. Its maximum absolute value on $[0,2]$ occurs at $t = 0$: $e^0 = 1$.'
           }
         ]
       }
     },
     {
-      id: 'calcbclagrange-p3-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbclagrange-p3-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbclagrange-p3-dropdown',
+      id: 'le3-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**M-Value Practice**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '$f(x) = \\sqrt{1+x}$. $f^{(3)}(x) = 3/8 \\cdot (1+x)^{-5/2}$. On $[0, 1]$, $M = $',
+            options: ['$3/8$ (max at $t = 0$: $(1+0)^{-5/2} = 1$)', '$3/8 \\cdot 2^{-5/2}$', '$3/8 \\cdot 2^{5/2}$', '$3/8 \\cdot (3/2)^{-5/2}$'],
+            correctAnswers: ['$3/8$ (max at $t = 0$: $(1+0)^{-5/2} = 1$)'],
+            hints: ['$(1+t)^{-5/2}$ is decreasing. Max when $t$ is smallest.'],
+            explanation: '$(1+t)^{-5/2}$ is largest at $t = 0$: $(1+0)^{-5/2} = 1$. So $M = 3/8$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbclagrange-p3-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Problem-Solving Patterns**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbclagrange-p3-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'AP gives: "$|f^{(6)}(t)| \\le 40$ on $[3, 3.2]$". Error bound for $T_5(3.2)$ centered at $3$:',
+            options: ['$40(0.2)^6/6! = 40 \\cdot 6.4 \\times 10^{-5}/720 \\approx 3.56 \\times 10^{-6}$', '$40(3.2)^6/6!$', '$40(0.2)^5/5!$', '$6 \\cdot 40(0.2)^6$'],
+            correctAnswers: ['$40(0.2)^6/6! = 40 \\cdot 6.4 \\times 10^{-5}/720 \\approx 3.56 \\times 10^{-6}$'],
+            hints: ['$|x - c| = |3.2 - 3| = 0.2$, $n + 1 = 6$.'],
+            explanation: '$|R_5| \\le 40(0.2)^6/6! = 40(6.4 \\times 10^{-5})/720 \\approx 3.56 \\times 10^{-6}$.'
           }
         ]
       }
+    },
+    {
+      id: 'le3-input',
+      type: 'input-box' as const,
+      content: '**Computing the Bound**',
+      exercise: {
+        question: 'For $\\ln(1.2)$ using $T_4$ centered at $1$ (i.e., $\\ln(x)$ near $c = 1$), $f^{(5)}(t) = 4!/ t^5$. On $[1, 1.2]$, $M = 24$. Compute $|R_4(1.2)|$ bound as a fraction.',
+        correctAnswer: '1/12500',
+        acceptableAnswers: ['1/12500', '0.00008', '8e-5', '8/100000'],
+        hints: ['$|R_4| \\le 24 \\cdot (0.2)^5/5! = 24 \\cdot 0.00032/120$.'],
+        explanation: '$|R_4(1.2)| \\le 24(0.2)^5/5! = 24(3.2 \\times 10^{-4})/120 = 0.00768/120 = 6.4 \\times 10^{-5}$. As a fraction: $24 \\cdot (1/5)^5/120 = 24/(5^5 \\cdot 120) = 24/(3125 \\cdot 120) = 24/375000 = 1/15625$. Actually: $(0.2)^5 = 0.00032$, $24(0.00032)/120 = 0.00768/120 = 0.000064 = 8/125000 = 1/15625$.'
+      }
+    },
+    {
+      id: 'le3-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- For $\\sin/\\cos$: $M = 1$
+- For $e^x$: use monotonicity to find max on interval
+- For quotient-type derivatives: max where denominator is smallest
+- When AP provides the bound, just plug in
+
+> **Next:** Part 4 — Lagrange vs. AST Error Bounds.`
     }
   ]
-}
+};

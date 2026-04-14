@@ -2,190 +2,315 @@ export const bioCellStructurePart1Data = {
   topicSlug: 'cell-structure-organelles',
   sections: [
     {
-      id: 'bio-cell-structure-organelles-p1-s1-intro',
+      id: 'cs1-intro',
+      type: 'text' as const,
+      content: `# 🔬 Cell Theory — The Foundation of Biology
+
+**Part 1 of 7 — The Three Tenets and Cell Discovery**
+
+---
+
+### What You'll Master in This Topic
+
+| Part | Focus | This Part |
+|------|-------|-----------|
+| **1** | **Cell Theory** | ✅ You are here |
+| 2 | Prokaryotes vs Eukaryotes | |
+| 3 | Membrane-Bound Organelles | |
+| 4 | Endomembrane System | |
+| 5 | Energy Organelles | |
+| 6 | Problem-Solving Workshop | |
+| 7 | AP Review | |
+
+> 🔑 **Why this matters:** Cell theory is one of the unifying theories of biology — every living organism consists of cells, and understanding cell structure is essential for nearly every AP Biology topic.
+
+---
+
+### What You'll Master in Part 1
+- The three tenets of cell theory
+- How cell theory was developed through microscopy
+- The relationship between surface area and volume in cells
+- Why cells must remain small`
+    },
+    {
+      id: 'cs1-cell-theory',
       type: 'text' as const,
       content: `
-      ## Cell Structure and Organelles: Cell Theory
-      
-      **Part 1 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through microscope identification of unknown cells.
-      
-      ### Worked biological example
-      A student team investigates microscope identification of unknown cells. Their first interpretation step is to identify how **plasma membrane** and **nucleus** work together in the same pathway.
-      
-      - They classify the primary signal using **plasma membrane**: selective barrier controlling exchange with the environment.
-      - They trace the downstream response using **nucleus**: stores DNA and regulates gene expression.
-      - They then compare outcomes with **ribosome** and **rough ER** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **plasma membrane**
-      - **nucleus**
-      - **ribosome**
-      - **rough ER**
+## 📖 The Three Tenets of Cell Theory
+
+Cell theory was established in the 1830s–1850s by **Schleiden**, **Schwann**, and **Virchow**:
+
+| Tenet | Statement | Key Scientist |
+|-------|-----------|---------------|
+| **1** | All living things are composed of one or more cells | Schleiden & Schwann (1838–1839) |
+| **2** | The cell is the basic unit of structure and function in living organisms | Schwann (1839) |
+| **3** | All cells arise from pre-existing cells | Virchow (1855) — "*Omnis cellula e cellula*" |
+
+---
+
+### Modern Additions to Cell Theory
+
+| Addition | Explanation |
+|----------|------------|
+| DNA is the hereditary material | Genetic information is passed from parent cell to daughter cell |
+| All cells have the same basic chemical composition | All cells use DNA, RNA, proteins, carbohydrates, and lipids |
+| Energy flow occurs within cells | All cells require energy and carry out metabolic processes |
+
+> 🔑 **AP Exam Tip:** The third tenet — all cells come from pre-existing cells — directly contradicts spontaneous generation. Pasteur's swan-neck flask experiment (1859) provided definitive evidence.
+
+---
+
+### Key Historical Experiments
+
+| Scientist | Contribution | Year |
+|-----------|-------------|------|
+| **Robert Hooke** | First to observe cells (cork) and coin the term "cell" | 1665 |
+| **Anton van Leeuwenhoek** | First to observe living cells (bacteria, protists) | 1670s |
+| **Matthias Schleiden** | All plants are made of cells | 1838 |
+| **Theodor Schwann** | All animals are made of cells | 1839 |
+| **Rudolf Virchow** | All cells come from pre-existing cells | 1855 |
+| **Louis Pasteur** | Disproved spontaneous generation | 1859 |
       `
     },
     {
-      id: 'bio-cell-structure-organelles-p1-s2-mcq-core',
+      id: 'cs1-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+**Cell Theory Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'For Cell Theory, what best describes plasma membrane?',
+            question: 'Which tenet of cell theory did Rudolf Virchow contribute?',
             options: [
-              'translates mRNA into polypeptide chains',
-              'synthesizes and folds proteins for export or membranes',
-              'selective barrier controlling exchange with the environment',
-              'stores DNA and regulates gene expression'
+              'All living things are composed of cells',
+              'The cell is the basic unit of life',
+              'All cells arise from pre-existing cells',
+              'DNA is the hereditary material'
             ],
             correctAnswer: 2,
-            explanation: 'plasma membrane is best matched with: selective barrier controlling exchange with the environment.'
+            explanation: 'Virchow (1855) stated "Omnis cellula e cellula" — all cells come from pre-existing cells. This was the third and final tenet of classical cell theory, contradicting spontaneous generation.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of nucleus?',
+            question: 'Robert Hooke observed cells in cork tissue and coined the term "cell." Why did he choose this word?',
             options: [
-              'stores DNA and regulates gene expression',
-              'translates mRNA into polypeptide chains',
-              'selective barrier controlling exchange with the environment',
-              'synthesizes lipids and supports detoxification'
+              'The cells were moving like living organisms',
+              'The empty chambers reminded him of monastery rooms (cellae)',
+              'He could see the nucleus inside each cell',
+              'The cork contained visible organelles'
             ],
-            correctAnswer: 0,
-            explanation: 'nucleus is best matched with: stores DNA and regulates gene expression.'
+            correctAnswer: 1,
+            explanation: 'Hooke saw empty, box-like chambers in dead cork cells that reminded him of the small rooms (cellae) that monks lived in. He was actually looking at the cell walls of dead plant cells — the cytoplasm had long since dried away.'
+          },
+          {
+            question: 'Which of the following would violate cell theory?',
+            options: [
+              'A multicellular organism growing by cell division',
+              'A virus reproducing inside a host cell',
+              'A living organism that is not composed of cells',
+              'A bacterial cell dividing by binary fission'
+            ],
+            correctAnswer: 2,
+            explanation: 'Cell theory states all living things are composed of cells. A living organism without cells would violate this fundamental tenet. Viruses are considered exceptions to cell theory — they are not composed of cells, which is one reason biologists debate whether viruses are truly "alive."'
           }
         ]
       }
     },
     {
-      id: 'bio-cell-structure-organelles-p1-s3-deep-dive',
+      id: 'cs1-sa-vol',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Cell Theory
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → plasma membrane
-      - **Immediate processing** → nucleus
-      - **System-level consequence** → ribosome
-      - **Measured readout** → rough ER
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | plasma membrane | selective barrier controlling exchange with the environment | Early shift in the primary variable |
-      | nucleus | stores DNA and regulates gene expression | Mid-pathway change in process rate |
-      | ribosome | translates mRNA into polypeptide chains | Downstream phenotype trend |
-      | rough ER | synthesizes and folds proteins for export or membranes | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+## 📐 Surface Area-to-Volume Ratio
+
+A critical constraint on cell size is the **surface area-to-volume ratio (SA:V)**. As a cell grows, its volume increases faster than its surface area.
+
+### Why This Matters
+
+| Factor | Surface Area | Volume | SA:V Ratio |
+|--------|-------------|--------|------------|
+| Small cell (1 μm) | $6 \\text{ μm}^2$ | $1 \\text{ μm}^3$ | **6:1** |
+| Medium cell (2 μm) | $24 \\text{ μm}^2$ | $8 \\text{ μm}^3$ | **3:1** |
+| Large cell (4 μm) | $96 \\text{ μm}^2$ | $64 \\text{ μm}^3$ | **1.5:1** |
+
+> For a cube with side length $s$: SA $= 6s^2$, Volume $= s^3$, SA:V $= \\frac{6}{s}$
+
+---
+
+### Consequences for Cell Function
+
+As a cell gets **larger**:
+
+1. **Diffusion becomes too slow** — Nutrients and waste cannot reach/exit the cell interior quickly enough
+2. **DNA bottleneck** — A single nucleus cannot produce enough mRNA to serve the entire cytoplasm
+3. **Membrane capacity** — Not enough membrane surface for needed transport proteins
+
+> 🔑 **Key idea:** Cells must stay small to maintain an adequate SA:V ratio. When cells need to grow, organisms increase **cell number** (by mitosis), not cell size.
+
+---
+
+### Adaptations to Increase SA:V
+
+| Adaptation | Example | How It Helps |
+|-----------|---------|-------------|
+| **Microvilli** | Intestinal epithelial cells | Finger-like projections increase absorptive surface area |
+| **Infoldings** | Inner mitochondrial membrane (cristae) | Increases surface for ATP synthesis |
+| **Flattened shape** | Red blood cells | Maximizes diffusion across the membrane |
+| **Multinucleated** | Skeletal muscle fibers | Multiple nuclei serve a large cytoplasmic volume |
       `
     },
     {
-      id: 'bio-cell-structure-organelles-p1-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **selective barrier controlling exchange with the environment**
-      2) Term for this definition: **stores DNA and regulates gene expression**
-      3) Term for this definition: **translates mRNA into polypeptide chains**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['plasma membrane', 'nucleus', 'ribosome'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'selective barrier controlling exchange with the environment\'.',
-        hint2: 'Second blank points to nucleus; think about the role \'stores DNA and regulates gene expression\'.',
-        hint3: 'Third blank is ribosome; connect it to \'translates mRNA into polypeptide chains\'.',
-        explanation: 'Correct set: plasma membrane, nucleus, ribosome. These three terms define the core mechanism chain for Cell Theory.'
-      }
-    },
-    {
-      id: 'bio-cell-structure-organelles-p1-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'plasma membrane',
-            options: ['selective barrier controlling exchange with the environment', 'synthesizes and folds proteins for export or membranes', 'translates mRNA into polypeptide chains', 'stores DNA and regulates gene expression']
-          },
-          {
-            label: 'nucleus',
-            options: ['translates mRNA into polypeptide chains', 'synthesizes lipids and supports detoxification', 'synthesizes and folds proteins for export or membranes', 'stores DNA and regulates gene expression']
-          },
-          {
-            label: 'ribosome',
-            options: ['synthesizes lipids and supports detoxification', 'modifies and sorts cargo from the ER', 'synthesizes and folds proteins for export or membranes', 'translates mRNA into polypeptide chains']
-          }
-        ],
-        correctAnswers: ['selective barrier controlling exchange with the environment', 'stores DNA and regulates gene expression', 'translates mRNA into polypeptide chains'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'plasma membrane, nucleus, and ribosome should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-cell-structure-organelles-p1-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because plasma membrane selective barrier controlling exchange with the environment, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - All cells share core features, but not all cells contain every organelle type.
-      - Ribosomes are not membrane-bound, yet they are essential organelles.
-      - Mitochondria are not only in animal cells; many eukaryotes have them.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-cell-structure-organelles-p1-s7-mcq-final',
+      id: 'cs1-quiz2',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+**Surface Area & Volume Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In microscope identification of unknown cells, the observed pattern is: synthesizes and folds proteins for export or membranes. What term should anchor the explanation?',
+            question: 'A spherical cell doubles its diameter. What happens to its surface area-to-volume ratio?',
             options: [
-              'nucleus',
-              'rough ER',
-              'plasma membrane',
-              'ribosome'
+              'It doubles',
+              'It stays the same',
+              'It is cut in half',
+              'It quadruples'
             ],
-            correctAnswer: 1,
-            explanation: 'Use rough ER because it directly maps to the described biological pattern: synthesizes and folds proteins for export or membranes.'
+            correctAnswer: 2,
+            explanation: 'For a sphere, SA:V = 3/r. When the diameter doubles, the radius doubles, so SA:V is halved. This is why larger cells face increasing difficulty with transport and diffusion.'
           },
           {
-            question: 'In an AP-style free-response about cell theory, the observed pattern is: synthesizes lipids and supports detoxification. What term should anchor the explanation?',
+            question: 'Intestinal epithelial cells have microvilli on their apical surface. This adaptation directly addresses which cellular constraint?',
             options: [
-              'ribosome',
-              'rough ER',
-              'Golgi',
-              'smooth ER'
+              'The need for more ribosomes to produce enzymes',
+              'The decreasing SA:V ratio as cells grow',
+              'The requirement for more mitochondria',
+              'The need to store more DNA'
             ],
-            correctAnswer: 3,
-            explanation: 'Use smooth ER because it directly maps to the described biological pattern: synthesizes lipids and supports detoxification.'
+            correctAnswer: 1,
+            explanation: 'Microvilli are finger-like projections that dramatically increase the surface area of the cell membrane without increasing volume. This allows more nutrient absorption per cell — a direct solution to the SA:V constraint.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cs1-microscopy',
+      type: 'text' as const,
+      content: `
+## 🔬 Microscopy & Cell Observation
+
+Different types of microscopes reveal different levels of cellular detail:
+
+| Microscope Type | Max Resolution | What It Reveals | Specimen |
+|----------------|---------------|-----------------|----------|
+| **Light microscope (LM)** | ~200 nm | Cells, large organelles (nucleus, chloroplasts) | Living or fixed |
+| **Transmission electron (TEM)** | ~0.2 nm | Internal ultrastructure, membranes, ribosomes | Fixed & stained (2D) |
+| **Scanning electron (SEM)** | ~2 nm | 3D surface topology | Fixed & coated (3D) |
+
+---
+
+### Key Definitions
+
+- **Resolution** — The minimum distance between two points that can be distinguished as separate; determines image clarity
+- **Magnification** — How much larger an image appears compared to actual size
+- **Contrast** — The difference in brightness between structures; staining improves contrast
+
+> ⚠️ **Common misconception:** Higher magnification does NOT automatically mean better images. Resolution is the limiting factor. Blowing up a blurry image just makes a bigger blurry image.
+
+---
+
+### Cell Size Reference
+
+| Structure | Approximate Size |
+|-----------|-----------------|
+| Water molecule | 0.3 nm |
+| Ribosome | 25 nm |
+| Virus | 50–200 nm |
+| Bacterium | 1–5 μm |
+| Mitochondrion | 1–10 μm |
+| Animal cell | 10–30 μm |
+| Plant cell | 10–100 μm |
+| Human egg cell | ~100 μm |
+
+> 💡 **Size scale:** 1 mm = 1,000 μm = 1,000,000 nm
+      `
+    },
+    {
+      id: 'cs1-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+**Microscopy Classification** 🔍
+      `,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'To view the 3D surface of a pollen grain, you would use',
+            options: ['Light microscope', 'TEM', 'SEM', 'Fluorescence microscope']
+          },
+          {
+            label: 'To view the internal cristae of a mitochondrion, you would use',
+            options: ['Light microscope', 'TEM', 'SEM', 'Dissecting microscope']
+          },
+          {
+            label: 'The factor that limits the useful detail in an image is',
+            options: ['Magnification', 'Resolution', 'Contrast', 'Brightness']
+          },
+          {
+            label: 'A typical animal cell is approximately',
+            options: ['0.2 nm', '1–5 μm', '10–30 μm', '1 mm']
+          }
+        ],
+        correctAnswers: ['SEM', 'TEM', 'Resolution', '10–30 μm'],
+        hint1: 'SEM provides 3D surface images of specimens.',
+        hint2: 'TEM shoots electrons through thin sections to reveal internal ultrastructure.',
+        hint3: 'Resolution determines the minimum distance between two distinguishable points.',
+        explanation: 'SEM gives 3D surface views (pollen grain surface). TEM reveals internal structure at the nanometer scale (cristae inside mitochondria). Resolution is the true determinant of image detail — not magnification. Typical animal cells are 10–30 μm in diameter.'
+      }
+    },
+    {
+      id: 'cs1-input',
+      type: 'input-boxes' as const,
+      content: `
+**Key Terms — Fill in the Blanks** ✏️
+
+Enter the correct term for each description.
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['resolution', 'Virchow', 'surface area'],
+        hint1: 'This is the minimum distance between two points that can still be distinguished as separate.',
+        hint2: 'This scientist stated "Omnis cellula e cellula" — all cells from cells.',
+        hint3: 'As a cell grows, which measurement increases more slowly than volume?',
+        explanation: 'Resolution determines image clarity (not magnification). Virchow contributed the third tenet of cell theory. Surface area increases as the square of the radius, while volume increases as the cube — so surface area cannot keep up with volume as cells grow.'
+      }
+    },
+    {
+      id: 'cs1-exit',
+      type: 'multiple-choice' as const,
+      content: `
+**Exit Quiz — Cell Theory** ✅
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A researcher discovers an organism in a deep-sea vent that carries out metabolic reactions and reproduces. Under a microscope, it appears to contain cytoplasm enclosed by a membrane. Which statement about this organism is most consistent with cell theory?',
+            options: [
+              'It must be a prokaryote because it lives in an extreme environment',
+              'It is composed of at least one cell since all living things are made of cells',
+              'It must contain a nucleus because all cells have nuclei',
+              'It arose spontaneously from minerals in the vent'
+            ],
+            correctAnswer: 1,
+            explanation: 'Cell theory states all living things are made of one or more cells. Since this organism carries out metabolism, reproduces, and has membrane-enclosed cytoplasm, it is composed of at least one cell. It could be prokaryotic or eukaryotic — not all cells have nuclei (prokaryotes lack them). Spontaneous generation has been disproven.'
+          },
+          {
+            question: 'A cube-shaped cell has a side length of 3 μm. What is its surface area-to-volume ratio?',
+            options: [
+              '1:1',
+              '2:1',
+              '3:1',
+              '6:1'
+            ],
+            correctAnswer: 1,
+            explanation: 'For a cube: SA = 6s² = 6(9) = 54 μm². Volume = s³ = 27 μm³. SA:V = 54/27 = 2:1. As the cell grows from 1→2→3 μm, the SA:V drops from 6:1 → 3:1 → 2:1, illustrating why larger cells face diffusion limitations.'
           }
         ]
       }

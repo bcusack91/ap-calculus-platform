@@ -88,7 +88,9 @@ export const oChemAromaticPart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: carbon adjacent to aromatic ring
+
       2) Term for: substituent increases EAS rate
+
       3) Product pattern expected under Br2, FeBr3
       `,
       exercise: {

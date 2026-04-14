@@ -130,7 +130,9 @@ At any point open to air, $P = P_{\\text{atm}}$ (atmospheric pressure).
 Water flows horizontally through a pipe. At point 1: $P_1 = 200{,}000$ Pa, $v_1 = 3.0$ m/s. At point 2 (same height): $v_2 = 5.0$ m/s.
 
 1) Dynamic pressure at point 1: $\\frac{1}{2}\\rho v_1^2$ (in Pa)
+
 2) Dynamic pressure at point 2 (in Pa)
+
 3) Pressure at point 2 (in Pa)
       `,
       exercise: {

@@ -88,7 +88,9 @@ export const oChemSNPart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: two-step substitution through carbocation intermediate
+
       2) Term for: group that departs with electron pair
+
       3) Product pattern expected under 3° alkyl chloride in H2O
       `,
       exercise: {

@@ -2,185 +2,134 @@ export const calcbcLagrangePart7Data = {
   topicSlug: 'lagrange-error-bound-calcbc',
   sections: [
     {
-      id: 'calcbclagrange-p7-intro',
+      id: 'le7-intro',
       type: 'text' as const,
-      content: `
-# Lagrange Error Bound
+      content: `# Comprehensive Review
 
-**Part 7 of 7 — Mixed Review**
+**Part 7 of 7 — Lagrange Error Bound Mastery**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Complete Formula Reference
 
-## Key Ideas
+$$\\boxed{|R_n(x)| \\le \\frac{M \\cdot |x - c|^{n+1}}{(n+1)!}, \\quad M = \\max_{t \\in [c,x]} |f^{(n+1)}(t)|}$$
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+### Decision Flowchart
 
-## Formula Snapshot
+1. **Is the series alternating?**
+   - Yes → Use AST bound (unless told otherwise)
+   - No → Use Lagrange
 
-When appropriate, use:
+2. **Is $M$ given in the problem?**
+   - Yes → Use it directly
+   - No → Find max of $|f^{(n+1)}|$ on the interval
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+3. **Plug into the formula and conclude.**
 
-and interpret what the final value means in context.
-      `
+### Quick $M$ Reference
+
+| Function | $M$ value |
+|----------|-----------|
+| $\\sin x, \\cos x$ | $1$ |
+| $e^x$ on $[0, a]$ ($a > 0$) | $e^a$ (or use $3$ if $a \\le 1$) |
+| $e^{-x}$ on $[0, a]$ | $1$ |
+| $\\ln(1+x)$, $n$th remainder | $n!$ at $t = 0$ |
+| Given: "$|f^{(k)}| \\le K$" | $K$ |`
     },
     {
-      id: 'calcbclagrange-p7-mcq1',
+      id: 'le7-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Review — Conceptual**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'The Lagrange error bound GUARANTEES that the actual error is:',
+            options: ['Less than or equal to the computed bound', 'Equal to the computed bound', 'Greater than the computed bound', 'Within 10% of the computed bound'],
+            correctAnswer: 0,
+            explanation: 'It is an upper bound. The actual error could be much smaller.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'If you use $M = 5$ but the true max of $|f^{(n+1)}|$ is $3$, the bound is:',
+            options: ['Still valid (overestimate, but correct direction)', 'Invalid (you used too large an $M$)', 'Exact', 'Undefined'],
+            correctAnswer: 0,
+            explanation: 'Using a larger $M$ gives a looser but still valid upper bound. You can always overestimate $M$.'
+          },
+          {
+            question: 'For what type of function does Lagrange typically give the TIGHTEST bound?',
+            options: ['Functions where $|f^{(n+1)}|$ is nearly constant on $[c, x]$', 'Oscillating functions', 'Polynomials of degree $> n$', 'Step functions'],
+            correctAnswer: 0,
+            explanation: 'When the $(n+1)$st derivative varies little, $M$ is close to the actual max, making the bound tight.'
           }
         ]
       }
     },
     {
-      id: 'calcbclagrange-p7-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbclagrange-p7-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
+      id: 'le7-mc2',
+      type: 'multiple-choice' as const,
+      content: '**Review — Computation**',
       exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
+        questions: [
+          {
+            question: '$|R_7(0.2)|$ for $\\sin x$ at $c = 0$:',
+            options: ['$(0.2)^8/8! = 2.56 \\times 10^{-6}/40320 \\approx 6.35 \\times 10^{-11}$', '$(0.2)^7/7!$', '$(0.2)^8/7!$', '$(0.2)^7/8!$'],
+            correctAnswer: 0,
+            explanation: '$M = 1$. $|R_7| \\le (0.2)^8/8! = 2.56 \\times 10^{-6}/40320 \\approx 6.35 \\times 10^{-11}$.'
+          },
+          {
+            question: 'FRQ: $|f^{(3)}(t)| \\le 10$ on $[4, 4.5]$. $|R_2(4.5)| \\le$',
+            options: ['$10(0.5)^3/3! = 10(0.125)/6 \\approx 0.2083$', '$10(4.5)^3/3!$', '$10(0.5)^2/2!$', '$3 \\cdot 10(0.5)^3$'],
+            correctAnswer: 0,
+            explanation: '$|R_2| \\le 10(0.5)^3/3! = 10/48 \\approx 0.2083$.'
+          }
+        ]
       }
     },
     {
-      id: 'calcbclagrange-p7-dropdown',
+      id: 'le7-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Review — Identify the Error**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'A student writes: "$|R_4| \\le M(x-c)^5/4!$." The mistake is:',
+            options: ['Denominator should be $5!$ not $4!$', 'Exponent should be $4$', 'Missing absolute value on $x - c$', 'No mistake'],
+            correctAnswers: ['Denominator should be $5!$ not $4!$'],
+            hints: ['$|R_n| \\le M|x-c|^{n+1}/(n+1)!$. What is $(n+1)!$ when $n = 4$?'],
+            explanation: 'When $n = 4$: exponent is $n+1 = 5$ ✓, but denominator must be $(n+1)! = 5! = 120$, not $4! = 24$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbclagrange-p7-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Mixed Review**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbclagrange-p7-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'A student uses $M = \\sin(0.5)$ to bound $|R_4|$ for $\\sin x$ at $x = 0.5$. This is:',
+            options: ['Wrong — $M$ should be $1$ (max of ALL derivatives, not value of $f$)', 'Correct but not optimal', 'Correct and optimal', 'Wrong — $M$ should be $\\cos(0.5)$'],
+            correctAnswers: ['Wrong — $M$ should be $1$ (max of ALL derivatives, not value of $f$)'],
+            hints: ['$M$ bounds $|f^{(n+1)}(t)|$, not $|f(x)|$.'],
+            explanation: '$M$ is the max of the $(n+1)$st derivative on the interval, not the function value. For $\\sin$, all derivatives are bounded by $1$.'
           }
         ]
       }
+    },
+    {
+      id: 'le7-input',
+      type: 'input-box' as const,
+      content: '**Review — Final Challenge**',
+      exercise: {
+        question: 'What minimum degree $n$ ensures $T_n(1)$ for $e^x$ (at $c = 0$, $M = 3$) is accurate within $10^{-6}$? Solve $3/( n+1)! < 10^{-6}$, i.e., $(n+1)! > 3{,}000{,}000$. Enter $n$.',
+        correctAnswer: '9',
+        acceptableAnswers: ['9'],
+        hints: ['$8! = 40320$, $9! = 362880$, $10! = 3628800$.'],
+        explanation: '$(n+1)! > 3{,}000{,}000$. $10! = 3{,}628{,}800 > 3{,}000{,}000$ ✓. $9! = 362{,}880 < 3{,}000{,}000$ ✗. So $n + 1 = 10$, $n = 9$.'
+      }
+    },
+    {
+      id: 'le7-summary',
+      type: 'text' as const,
+      content: `### Topic Complete!
+
+You've mastered the Lagrange Error Bound:
+- The formula and what each part means
+- Finding $M$ for common functions
+- Determining how many terms you need
+- Lagrange vs. AST: when to use each
+- AP FRQ response format for full credit
+
+> **Key Takeaway:** The Lagrange Error Bound is one of the most tested BC topics. Master the formula, practice finding $M$, and always conclude with an explicit inequality.`
     }
   ]
-}
+};

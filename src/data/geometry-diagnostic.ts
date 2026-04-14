@@ -1,8 +1,10 @@
 /**
  * Geometry Diagnostic Test Generator
  *
- * Two alternate forms (A / B), ~30 questions spanning 6 core domains.
+ * 10 alternate forms (1–10), ~30 questions spanning 6 core domains.
  */
+
+export const TOTAL_FORMS = 10
 
 export interface GeometryDiagnosticQuestion {
   question: string
@@ -21,7 +23,7 @@ export interface GeometryDomain {
 }
 
 export interface GeometryDiagnosticTestData {
-  form: 'A' | 'B'
+  form: number
   questions: GeometryDiagnosticQuestion[]
   domains: GeometryDomain[]
   totalQuestions: number
@@ -40,7 +42,7 @@ export interface GeometryDomainResult {
 export interface GeometryRecommendedTopic { slug: string; name: string; domainId: string; priority: 'high' | 'medium' }
 
 export interface GeometryDiagnosticResults {
-  form: 'A' | 'B'
+  form: number
   totalCorrect: number
   totalQuestions: number
   percentage: number
@@ -127,26 +129,39 @@ const questionPool: PoolQuestion[] = [
   { question: 'The equation of a circle centered at (h, k) with radius r is:', options: ['(x−h)² + (y−k)² = r²', 'x² + y² = r²', '(x+h)² + (y+k)² = r', 'x² + y² + hx + ky = r²'], correctAnswer: 0, explanation: 'Standard form: (x − h)² + (y − k)² = r².', domain: 'coordinate-geometry', topicSlug: 'special-segments-triangles', formSet: 'both' },
 ]
 
-function shuffle<T>(arr: T[]): T[] {
+function mulberry32(seed: number) {
+  return function () {
+    // eslint-disable-next-line no-param-reassign
+    seed |= 0; seed = (seed + 0x6d2b79f5) | 0
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
+  }
+}
+
+function seededShuffle<T>(arr: T[], rng: () => number): T[] {
   const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] }
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1))
+    ;[a[i], a[j]] = [a[j], a[i]]
+  }
   return a
 }
 
-export function generateGeometryDiagnosticTest(form: 'A' | 'B'): GeometryDiagnosticTestData {
-  const eligible = questionPool.filter(q => q.formSet === form || q.formSet === 'both')
+export function generateGeometryDiagnosticTest(form: number): GeometryDiagnosticTestData {
+  const rng = mulberry32(form * 7919)
   const selected: PoolQuestion[] = []
   for (const domain of GEOMETRY_DOMAINS) {
-    const domainQs = shuffle(eligible.filter(q => q.domain === domain.id))
+    const domainQs = seededShuffle(questionPool.filter(q => q.domain === domain.id), rng)
     selected.push(...domainQs.slice(0, domain.questionTarget))
   }
-  const questions: GeometryDiagnosticQuestion[] = shuffle(selected).map(q => ({
+  const questions: GeometryDiagnosticQuestion[] = seededShuffle(selected, rng).map(q => ({
     question: q.question, options: q.options, correctAnswer: q.correctAnswer, explanation: q.explanation, domain: q.domain, topicSlug: q.topicSlug,
   }))
   return { form, questions, domains: GEOMETRY_DOMAINS, totalQuestions: questions.length, timeLimitMinutes: 35 }
 }
 
-export function scoreGeometryDiagnostic(form: 'A' | 'B', questions: GeometryDiagnosticQuestion[], answers: Record<number, number>): GeometryDiagnosticResults {
+export function scoreGeometryDiagnostic(form: number, questions: GeometryDiagnosticQuestion[], answers: Record<number, number>): GeometryDiagnosticResults {
   const domainMap = new Map<string, { correct: number; total: number }>()
   GEOMETRY_DOMAINS.forEach(d => domainMap.set(d.id, { correct: 0, total: 0 }))
   questions.forEach((q, i) => { const entry = domainMap.get(q.domain)!; entry.total++; if (answers[i] === q.correctAnswer) entry.correct++ })
@@ -169,7 +184,8 @@ export function scoreGeometryDiagnostic(form: 'A' | 'B', questions: GeometryDiag
   return { form, totalCorrect, totalQuestions, percentage: pct, estimatedLevel, domains: domainResults, weakAreas, moderateAreas, strengths, recommendedTopics }
 }
 
-export function pickNextForm(previousForms: ('A' | 'B')[]): 'A' | 'B' {
-  if (previousForms.length === 0) return 'A'
-  return previousForms[0] === 'A' ? 'B' : 'A'
+export function pickNextForm(previousForms: number[]): number {
+  if (previousForms.length === 0) return 1
+  const last = previousForms[previousForms.length - 1]
+  return last >= TOTAL_FORMS ? 1 : last + 1
 }

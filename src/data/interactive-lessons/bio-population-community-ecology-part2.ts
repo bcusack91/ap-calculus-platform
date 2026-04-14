@@ -95,7 +95,9 @@ export const bioPopulationPart2Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **growth slowing as population approaches carrying capacity**
+
       2) Term for this definition: **maximum sustainable population size in an environment**
+
       3) Term for this definition: **factor whose effect changes with population density**
       `,
       exercise: {

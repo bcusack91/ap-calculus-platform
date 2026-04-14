@@ -86,7 +86,9 @@ export const psychRetrievalPart4Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: remembering by rebuilding details from fragments and schemas
+
       2) Write the concept that matches: post-event information alters memory reports
+
       3) Write the concept that matches: active recall used to strengthen later remembering
 
       Use the exact vocabulary term from this part.

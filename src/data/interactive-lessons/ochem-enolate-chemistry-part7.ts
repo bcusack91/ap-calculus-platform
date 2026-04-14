@@ -88,7 +88,9 @@ export const oChemEnolatePart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: ester enolate acylation yielding beta-keto ester
+
       2) Term for: 1,4-conjugate addition to alpha,beta-unsaturated carbonyl
+
       3) Product pattern expected under LDA, THF, -78 °C
       `,
       exercise: {

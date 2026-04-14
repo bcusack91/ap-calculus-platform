@@ -95,7 +95,9 @@ export const bioEcologyPart7Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **interaction where species reduce each other's resource access**
+
       2) Term for this definition: **directional change in community composition over time**
+
       3) Term for this definition: **species with disproportionately large community impact**
       `,
       exercise: {

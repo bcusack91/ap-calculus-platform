@@ -2,190 +2,174 @@ export const bioDnaReplicationPart3Data = {
   topicSlug: 'dna-replication',
   sections: [
     {
-      id: 'bio-dna-replication-p3-s1-intro',
+      id: 'dr3-intro',
       type: 'text' as const,
       content: `
-      ## DNA Replication: Enzymes of Replication
-      
-      **Part 3 of 7**
-      
-      In this lesson, you will connect mechanism-level biology to exam-ready reasoning through enzyme coordination at a moving fork.
-      
-      ### Worked biological example
-      A student team investigates enzyme coordination at a moving fork. Their first interpretation step is to identify how **primase** and **DNA polymerase** work together in the same pathway.
-      
-      - They classify the primary signal using **primase**: synthesizes short RNA primers for DNA polymerase.
-      - They trace the downstream response using **DNA polymerase**: extends DNA strands in the 5' to 3' direction.
-      - They then compare outcomes with **leading strand** and **lagging strand** to separate mechanism from correlation.
-      
-      ### Key terms for this part
-      - **primase**
-      - **DNA polymerase**
-      - **leading strand**
-      - **lagging strand**
+## The Replication Machinery
+
+**Part 3 of 7**
+
+DNA replication requires a team of enzymes and proteins working together at the **replication fork** — the Y-shaped region where the parental double helix is unwound and new strands are synthesized.
       `
     },
     {
-      id: 'bio-dna-replication-p3-s2-mcq-core',
+      id: 'dr3-enzymes',
+      type: 'text' as const,
+      content: `
+### Key Enzymes and Proteins
+
+| Enzyme/Protein | Function |
+|---------------|----------|
+| **Helicase** | Unwinds the double helix by breaking hydrogen bonds between bases; moves along the DNA using ATP hydrolysis |
+| **Single-strand binding proteins (SSB)** | Bind to exposed single-stranded DNA to prevent reannealing and protect from nuclease degradation |
+| **Topoisomerase (Gyrase in prokaryotes)** | Relieves torsional strain (supercoiling) ahead of the replication fork by cutting, swiveling, and re-joining the DNA backbone |
+| **Primase** | RNA polymerase that synthesizes a short **RNA primer** (5-10 nucleotides) complementary to the template; provides the free 3'-OH needed by DNA polymerase |
+| **DNA Polymerase III** (prokaryotes) | The main replicative polymerase; adds nucleotides to the 3' end of the primer/growing strand in the 5' → 3' direction |
+| **DNA Polymerase I** (prokaryotes) | Removes RNA primers (5' → 3' exonuclease activity) and replaces them with DNA |
+| **DNA Ligase** | Seals the nick (phosphodiester bond) between adjacent Okazaki fragments after primer removal |
+| **Sliding clamp (PCNA in eukaryotes)** | Ring-shaped protein that encircles DNA and tethers DNA polymerase to the template, increasing processivity |
+| **Clamp loader** | Uses ATP to load the sliding clamp onto DNA at primer-template junctions |
+
+> **Why primers?** DNA polymerase can only ADD nucleotides to an existing 3'-OH group.  It cannot start a new strand from scratch.  Primase (an RNA polymerase) CAN start de novo, providing the initial 3'-OH.
+      `
+    },
+    {
+      id: 'dr3-quiz1',
       type: 'multiple-choice' as const,
       content: `
-      **Checkpoint MCQ (2 questions)**
+### Checkpoint — Replication Enzymes
       `,
       exercise: {
         questions: [
           {
-            question: 'For Enzymes of Replication, what best describes primase?',
+            question: 'Why is an RNA primer necessary for DNA replication to begin?',
             options: [
-              'synthesizes short RNA primers for DNA polymerase',
-              'synthesized discontinuously as Okazaki fragments',
-              'synthesized continuously toward the replication fork',
-              'extends DNA strands in the 5\' to 3\' direction'
+              'DNA polymerase requires RNA as a template',
+              'DNA polymerase can only extend an existing strand — it needs a free 3\\u2019-OH group to add nucleotides. It cannot initiate a new strand de novo.',
+              'RNA primers protect the DNA from damage',
+              'Primers speed up helicase activity'
             ],
-            correctAnswer: 0,
-            explanation: 'primase is best matched with: synthesizes short RNA primers for DNA polymerase.'
+            correctAnswer: 1,
+            explanation: 'DNA polymerase has a fundamental limitation — it can only add nucleotides to the 3\\u2019-OH of an existing nucleic acid chain. Primase synthesizes a short RNA primer to provide this initial 3\\u2019-OH, which DNA polymerase then extends with deoxyribonucleotides.'
           },
           {
-            question: 'In this part\'s context, what is the strongest definition of DNA polymerase?',
+            question: 'If topoisomerase is inhibited while helicase continues to unwind DNA, what occurs?',
             options: [
-              'synthesizes short RNA primers for DNA polymerase',
-              'joins adjacent DNA fragments after primer replacement',
-              'synthesized continuously toward the replication fork',
-              'extends DNA strands in the 5\' to 3\' direction'
+              'DNA replication speeds up',
+              'Positive supercoiling accumulates ahead of the fork, eventually generating so much torsional strain that the fork cannot advance — replication stalls',
+              'The DNA spontaneously unwinds',
+              'Primers cannot be synthesized'
             ],
-            correctAnswer: 3,
-            explanation: 'DNA polymerase is best matched with: extends DNA strands in the 5\' to 3\' direction.'
+            correctAnswer: 1,
+            explanation: 'As helicase unwinds the helix, it creates positive supercoils (overwinding) ahead of the fork. Without topoisomerase to relieve this tension, the DNA becomes so tightly wound that helicase can no longer separate the strands. Many antibiotics (fluoroquinolones) and anticancer drugs (camptothecin) target topoisomerases.'
           }
         ]
       }
     },
     {
-      id: 'bio-dna-replication-p3-s3-deep-dive',
+      id: 'dr3-leading-lagging',
       type: 'text' as const,
       content: `
-      ### Deep-Dive Map: Enzymes of Replication
-      
-      Use this diagram-style summary to track causation and evidence.
-      
-      #### Flow logic
-      - **Signal/Input** → primase
-      - **Immediate processing** → DNA polymerase
-      - **System-level consequence** → leading strand
-      - **Measured readout** → lagging strand
-      
-      #### Mechanism table
-      | Component | Biological role | Typical evidence pattern |
-      |---|---|---|
-      | primase | synthesizes short RNA primers for DNA polymerase | Early shift in the primary variable |
-      | DNA polymerase | extends DNA strands in the 5' to 3' direction | Mid-pathway change in process rate |
-      | leading strand | synthesized continuously toward the replication fork | Downstream phenotype trend |
-      | lagging strand | synthesized discontinuously as Okazaki fragments | Quantifiable endpoint in data summary |
-      
-      #### Reasoning checkpoints
-      1. Name the mechanism before describing the trend line.
-      2. Separate proximate mechanism from ecological or historical context.
-      3. Verify that each claim is tied to a measurable biological readout.
+### Leading and Lagging Strands
+
+Because DNA polymerase can only synthesize in the **5' → 3' direction**, and the two parental strands are antiparallel, the two daughter strands are synthesized differently:
+
+**Leading strand:**
+- Template runs 3' → 5' (so new strand grows 5' → 3' toward the fork)
+- Synthesized **continuously** with a single primer
+- DNA polymerase moves in the same direction as the fork
+
+**Lagging strand:**
+- Template runs 5' → 3' (so new strand must grow 5' → 3' AWAY from the fork)
+- Synthesized **discontinuously** as a series of short fragments called **Okazaki fragments**
+  - ~1000-2000 nt in prokaryotes; ~100-200 nt in eukaryotes
+- Each Okazaki fragment requires its own RNA primer
+- After synthesis, **DNA Polymerase I** removes the RNA primers and fills in with DNA
+- **DNA Ligase** seals the remaining nicks, joining the Okazaki fragments into a continuous strand
+
+> **The lagging strand is the "complex" strand** — it requires repeated cycles of priming, extension, primer removal, gap filling, and ligation.  This makes lagging strand synthesis more error-prone and slower than leading strand synthesis.
       `
     },
     {
-      id: 'bio-dna-replication-p3-s4-input',
-      type: 'input-boxes' as const,
-      content: `
-      **Input Practice — concrete vocabulary retrieval**
-      
-      Fill in each blank with the exact biological term.
-      
-      1) Term for this definition: **synthesizes short RNA primers for DNA polymerase**
-      2) Term for this definition: **extends DNA strands in the 5' to 3' direction**
-      3) Term for this definition: **synthesized continuously toward the replication fork**
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['primase', 'DNA polymerase', 'leading strand'],
-        hint1: 'Start with the first item: it is the mechanism term used when a process is described as \'synthesizes short RNA primers for DNA polymerase\'.',
-        hint2: 'Second blank points to DNA polymerase; think about the role \'extends DNA strands in the 5\' to 3\' direction\'.',
-        hint3: 'Third blank is leading strand; connect it to \'synthesized continuously toward the replication fork\'.',
-        explanation: 'Correct set: primase, DNA polymerase, leading strand. These three terms define the core mechanism chain for Enzymes of Replication.'
-      }
-    },
-    {
-      id: 'bio-dna-replication-p3-s5-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-      **Dropdown matching (3 prompts)**
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'primase',
-            options: ['synthesized continuously toward the replication fork', 'extends DNA strands in the 5\' to 3\' direction', 'synthesizes short RNA primers for DNA polymerase', 'synthesized discontinuously as Okazaki fragments']
-          },
-          {
-            label: 'DNA polymerase',
-            options: ['extends DNA strands in the 5\' to 3\' direction', 'synthesized continuously toward the replication fork', 'synthesized discontinuously as Okazaki fragments', 'joins adjacent DNA fragments after primer replacement']
-          },
-          {
-            label: 'leading strand',
-            options: ['synthesized continuously toward the replication fork', 'joins adjacent DNA fragments after primer replacement', 'polymerase correction of misincorporated nucleotides', 'synthesized discontinuously as Okazaki fragments']
-          }
-        ],
-        correctAnswers: ['synthesizes short RNA primers for DNA polymerase', 'extends DNA strands in the 5\' to 3\' direction', 'synthesized continuously toward the replication fork'],
-        hint1: 'Match each term to the definition that captures mechanism, not just keywords.',
-        hint2: 'If two definitions feel close, choose the one with the exact process direction.',
-        hint3: 'Read each label out loud, then pick the option that completes a causal sentence.',
-        explanation: 'primase, DNA polymerase, and leading strand should map to their exact mechanistic definitions. When options look similar, anchor your choice to process direction and biological scale.'
-      }
-    },
-    {
-      id: 'bio-dna-replication-p3-s6-strategy',
-      type: 'text' as const,
-      content: `
-      ### ACT/AP strategy and misconception repair
-      
-      On ACT/AP style prompts, score gains come from linking vocabulary to evidence, not from isolated memorization.
-      
-      #### Strategy sequence
-      1. **Name the mechanism first**: identify whether the item is asking for process, structure, regulation, or population effect.
-      2. **Use a causation sentence**: "Because primase synthesizes short RNA primers for DNA polymerase, we expect ...".
-      3. **Audit units and scale**: molecular claims, cellular claims, and ecosystem claims should not be mixed.
-      
-      #### Common misconceptions to avoid
-      - Proofreading reduces errors but does not eliminate all mutations.
-      - Primers are required because DNA polymerase cannot start de novo.
-      - Replication is bidirectional from origins, not one-direction copying of entire chromosomes.
-      
-      #### Exam execution tip
-      When two answer choices sound plausible, prefer the one that includes a direct mechanism and a measurable biological consequence.
-      `
-    },
-    {
-      id: 'bio-dna-replication-p3-s7-mcq-final',
+      id: 'dr3-quiz2',
       type: 'multiple-choice' as const,
       content: `
-      **Final application MCQ (2 questions)**
+### Checkpoint — Leading and Lagging
       `,
       exercise: {
         questions: [
           {
-            question: 'In enzyme coordination at a moving fork, the observed pattern is: synthesized discontinuously as Okazaki fragments. What term should anchor the explanation?',
+            question: 'A mutation knocks out DNA ligase activity.  Which strand would be most severely affected?',
             options: [
-              'DNA polymerase',
-              'lagging strand',
-              'primase',
-              'leading strand'
+              'The leading strand — it needs ligase to connect to the origin',
+              'The lagging strand — without ligase, Okazaki fragments cannot be joined into a continuous strand, resulting in fragmented DNA',
+              'Both equally — ligase is needed for both',
+              'Neither — ligase is not essential'
             ],
             correctAnswer: 1,
-            explanation: 'Use lagging strand because it directly maps to the described biological pattern: synthesized discontinuously as Okazaki fragments.'
+            explanation: 'The leading strand is synthesized continuously and needs only one ligation event. The lagging strand consists of hundreds or thousands of Okazaki fragments, each needing to be ligated to the next. Without ligase, the lagging strand remains in fragments — a severe defect.'
           },
           {
-            question: 'In an AP-style free-response about enzymes of replication, the observed pattern is: joins adjacent DNA fragments after primer replacement. What term should anchor the explanation?',
+            question: 'How many RNA primers are needed to replicate a linear DNA molecule with one origin of replication?',
             options: [
-              'leading strand',
-              'lagging strand',
-              'proofreading',
-              'DNA ligase'
+              'One',
+              'Two — one for each leading strand',
+              'Many — one for each leading strand PLUS one for every Okazaki fragment on each lagging strand',
+              'None — eukaryotes do not use primers'
             ],
-            correctAnswer: 3,
-            explanation: 'Use DNA ligase because it directly maps to the described biological pattern: joins adjacent DNA fragments after primer replacement.'
+            correctAnswer: 2,
+            explanation: 'Bidirectional replication from one origin creates two replication forks. Each fork has one leading strand (one primer) and one lagging strand (many primers — one per Okazaki fragment). Total primers = 2 (leading strands) + many (all Okazaki fragments) = many primers.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'dr3-input',
+      type: 'input-boxes' as const,
+      content: `
+### Key Terms — Replication Machinery
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Short DNA fragments synthesized on the lagging strand:',
+            answer: 'Okazaki fragments',
+            acceptableAnswers: ['Okazaki fragments', 'okazaki fragments', 'Okazaki', 'okazaki'],
+            placeholder: 'e.g. restriction fragments'
+          },
+          {
+            question: 'The enzyme that synthesizes RNA primers:',
+            answer: 'primase',
+            acceptableAnswers: ['primase', 'Primase', 'RNA primase'],
+            placeholder: 'e.g. polymerase'
+          },
+          {
+            question: 'The enzyme that seals nicks between Okazaki fragments:',
+            answer: 'DNA ligase',
+            acceptableAnswers: ['DNA ligase', 'ligase', 'Ligase', 'DNA Ligase'],
+            placeholder: 'e.g. helicase'
+          }
+        ]
+      }
+    },
+    {
+      id: 'dr3-exit',
+      type: 'multiple-choice' as const,
+      content: `
+### Exit Ticket
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'An antibiotic targets the bacterial DNA gyrase (topoisomerase II).  Why would this drug selectively affect bacteria without harming human cells?',
+            options: [
+              'Human cells do not have topoisomerases',
+              'Bacterial DNA gyrase is structurally different from eukaryotic topoisomerases — the drug binds specifically to the bacterial enzyme. Human topoisomerases are not affected at therapeutic doses.',
+              'Human cells do not replicate their DNA',
+              'The antibiotic is only taken up by bacterial cells'
+            ],
+            correctAnswer: 1,
+            explanation: 'Bacterial DNA gyrase (topoisomerase II) and eukaryotic topoisomerases are related but structurally different. Fluoroquinolone antibiotics (e.g., ciprofloxacin) specifically inhibit the bacterial enzyme. Human topoisomerase II is sufficiently different that it is not targeted at therapeutic doses.'
           }
         ]
       }

@@ -86,7 +86,9 @@ export const psychPersonalityPart3Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: behavior, cognition, and environment mutually influence each other
+
       2) Write the concept that matches: belief in one's ability to execute actions for specific outcomes
+
       3) Write the concept that matches: ambiguous stimulus task intended to reveal underlying motives
 
       Use the exact vocabulary term from this part.

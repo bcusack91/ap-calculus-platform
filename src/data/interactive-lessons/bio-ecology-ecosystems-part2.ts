@@ -95,7 +95,9 @@ export const bioEcologyPart2Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **nonliving environmental variable such as light or pH**
+
       2) Term for this definition: **position in feeding hierarchy based on energy source**
+
       3) Term for this definition: **rate at which autotrophs convert energy into biomass**
       `,
       exercise: {

@@ -71,7 +71,9 @@ A container has three layers:
 - Bottom: 0.1 m of mercury ($\\rho = 13{,}600$ kg/m³)
 
 1) Gauge pressure at the bottom of the gasoline layer (in Pa)
+
 2) Gauge pressure at the bottom of the water layer (in Pa)
+
 3) Absolute pressure at the very bottom (in Pa)
       `,
       exercise: {

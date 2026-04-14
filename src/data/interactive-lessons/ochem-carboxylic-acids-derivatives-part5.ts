@@ -88,7 +88,9 @@ export const oChemCarboxylicAcidsPart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: addition intermediate before elimination
+
       2) Term for: addition-elimination at acyl carbon
+
       3) Product pattern expected under amide + H3O+, heat
       `,
       exercise: {

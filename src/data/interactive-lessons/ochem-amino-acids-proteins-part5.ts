@@ -88,7 +88,9 @@ export const oChemAminoAcidsPart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: local alpha-helix and beta-sheet motifs
+
       2) Term for: 3D fold from side-chain interactions
+
       3) Product pattern expected under ninhydrin test
       `,
       exercise: {

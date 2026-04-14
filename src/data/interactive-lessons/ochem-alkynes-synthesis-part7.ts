@@ -88,7 +88,9 @@ export const oChemAlkynesPart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: adds water equivalent across triple bond
+
       2) Term for: anti-Markovnikov hydration path for terminal alkynes
+
       3) Product pattern expected under NaNH2, liquid NH3
       `,
       exercise: {

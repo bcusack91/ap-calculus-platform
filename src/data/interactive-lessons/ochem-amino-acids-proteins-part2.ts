@@ -88,7 +88,9 @@ export const oChemAminoAcidsPart2Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: pH where net charge is zero
+
       2) Term for: amide linkage between amino acid residues
+
       3) Product pattern expected under acidic hydrolysis
       `,
       exercise: {

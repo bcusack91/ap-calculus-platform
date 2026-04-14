@@ -2,185 +2,141 @@ export const calcabFRQPart1Data = {
   topicSlug: 'free-response-strategies-calcab',
   sections: [
     {
-      id: 'calcabfrq-p1-intro',
+      id: 'frq1-intro',
       type: 'text' as const,
-      content: `
-# Free Response Strategies
+      content: `# Free-Response Strategies
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 \u2014 FRQ Structure & Core Skills**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### Topic Overview
 
-## Key Ideas
+| Part | Focus |
+|:---:|:---|
+| **1** | **FRQ Structure & Core Skills** |
+| 2 | Rate & Accumulation FRQs |
+| 3 | Table-Based FRQs |
+| 4 | Graph-Based FRQs |
+| 5 | Differential Equation FRQs |
+| 6 | Area & Volume FRQs |
+| 7 | Full Practice FRQ Set |
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+---
 
-## Formula Snapshot
+### AP Calculus AB FRQ Format
 
-When appropriate, use:
+| Section | # of FRQs | Time | Calculator |
+|:---:|:---:|:---:|:---:|
+| Part A | 2 | 30 min | **Yes** |
+| Part B | 4 | 60 min | **No** |
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+Each FRQ typically has **4 parts** (a\u2013d), each worth 1\u20133 points out of 9 total.
 
-and interpret what the final value means in context.
-      `
+> **Key Fact:** You can earn partial credit on every part. ALWAYS attempt every sub-part, even if you couldn\u2019t solve an earlier part.
+
+### Six Core Skills Tested
+
+| Skill | What It Means | Example Task |
+|:---|:---|:---|
+| Evaluate a rate | Find $f'(a)$ or average rate | \u201cFind the rate of change at $t=3$\u201d |
+| Interpret meaning | Explain in context | \u201cExplain the meaning of $\\int_0^5 r(t)\\,dt$\u201d |
+| Justify with theorems | Name and apply IVT/MVT/EVT | \u201cExplain why there exists a $c$...\u201d |
+| Set up an integral | Write $\\int_a^b f(x)\\,dx$ | \u201cWrite an expression for...\u201d |
+| Compute a value | Evaluate integral or derivative | \u201cFind the value of...\u201d |
+| Analyze behavior | Inc/dec, concavity, extrema | \u201cIs the amount increasing or decreasing?\u201d |
+
+### FRQ Presentation Rules
+
+$$\\boxed{\\text{Show work} \\to \\text{Label with units} \\to \\text{Answer in context}}$$
+
+| Common Deduction | Points Lost |
+|:---|:---:|
+| No work shown | All points |
+| Missing units | 1 point |
+| Not answering in context | 1 point |
+| Decimal rounding errors | 1 point |`
     },
     {
-      id: 'calcabfrq-p1-mcq1',
+      id: 'frq1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**FRQ Skills Quiz** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'On an FRQ, \u201cExplain the meaning of $\\int_2^8 r(t)\\,dt = 50$\u201d requires you to:',
+            options: ['State what the integral represents in the problem\u2019s context with units', 'Just write \u201c50\u201d', 'Show the antiderivative computation', 'Graph $r(t)$'],
+            correctAnswer: 0,
+            explanation: 'Interpretation: \u201cThe total amount of [quantity] from $t=2$ to $t=8$ is 50 [units].\u201d Context and units are required.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'Which theorem justifies: \u201cThere exists a $c$ in $(1,5)$ such that $f\'(c) = \\frac{f(5)-f(1)}{5-1}$\u201d?',
+            options: ['Mean Value Theorem', 'Intermediate Value Theorem', 'Extreme Value Theorem', 'Fundamental Theorem of Calculus'],
+            correctAnswer: 0,
+            explanation: 'MVT guarantees a point where instantaneous rate equals average rate, provided $f$ is continuous on $[1,5]$ and differentiable on $(1,5)$.'
+          },
+          {
+            question: 'If the FRQ says \u201cJustify your answer,\u201d you must:',
+            options: ['Name the theorem and verify its conditions', 'Write \u201cbecause the answer is obvious\u201d', 'Show a graph', 'Only state the conclusion'],
+            correctAnswer: 0,
+            explanation: 'Justification = name the theorem + verify hypotheses + state the conclusion.'
           }
         ]
       }
     },
     {
-      id: 'calcabfrq-p1-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcabfrq-p1-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcabfrq-p1-dropdown',
+      id: 'frq1-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Match the FRQ task to its approach.** \ud83d\udd0d',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '\u201cFind the average rate of change of $f$ on $[2, 6]$\u201d:',
+            options: ['$\\frac{f(6)-f(2)}{6-2}$', '$f\'(4)$', '$\\frac{1}{4}\\int_2^6 f(x)\\,dx$', '$f(6)-f(2)$'],
+            correctAnswers: ['$\\frac{f(6)-f(2)}{6-2}$'],
+            hints: ['Average rate of change = slope of secant line.'],
+            explanation: 'Average rate of change is $\\frac{\\Delta y}{\\Delta x} = \\frac{f(6)-f(2)}{4}$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
+            label: '\u201cFind the average value of $f$ on $[2, 6]$\u201d:',
+            options: ['$\\frac{1}{4}\\int_2^6 f(x)\\,dx$', '$\\frac{f(6)-f(2)}{4}$', '$f\'(4)$', '$\\int_2^6 f(x)\\,dx$'],
+            correctAnswers: ['$\\frac{1}{4}\\int_2^6 f(x)\\,dx$'],
+            hints: ['Average *value* uses the average value formula, not slope.'],
+            explanation: 'Average value $= \\frac{1}{b-a}\\int_a^b f(x)\\,dx = \\frac{1}{4}\\int_2^6 f$.'
           },
           {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcabfrq-p1-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Core Concepts**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcabfrq-p1-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: '\u201cFind the total change of $f$ on $[2, 6]$\u201d:',
+            options: ['$\\int_2^6 f\'(x)\\,dx$', '$f\'(6)-f\'(2)$', '$\\frac{f(6)-f(2)}{4}$', '$f(2)+f(6)$'],
+            correctAnswers: ['$\\int_2^6 f\'(x)\\,dx$'],
+            hints: ['Net change theorem: $\\int_a^b f\' = f(b)-f(a)$.'],
+            explanation: 'Total change = $\\int_a^b f\'(x)\\,dx = f(6)-f(2)$. Both forms earn credit.'
           }
         ]
       }
+    },
+    {
+      id: 'frq1-input',
+      type: 'input-box' as const,
+      content: '**Practice computation.** \u270d\ufe0f',
+      exercise: {
+        question: 'The average rate of change of $f(x) = x^3$ on $[1, 3]$ is $\\frac{a}{b}$ in lowest terms. Enter $a + b$.',
+        correctAnswer: '14',
+        acceptableAnswers: ['14'],
+        hints: [
+          '$\\frac{f(3)-f(1)}{3-1} = \\frac{27-1}{2}$.',
+          '$= \\frac{26}{2} = 13$.',
+          '$13 = \\frac{13}{1}$. $a+b = 13+1 = 14$.'
+        ],
+        explanation: '$\\frac{27-1}{2} = 13 = \\frac{13}{1}$. $a+b = 14$.'
+      }
+    },
+    {
+      id: 'frq1-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 1
+
+- FRQs test six core skills: evaluate, interpret, justify, set up, compute, analyze
+- Always show work, include units, and answer in context
+- Average rate of change $\\ne$ average value \u2014 know the difference
+- Name theorems explicitly when justifying`
     }
   ]
-}
+};

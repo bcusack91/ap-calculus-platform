@@ -2,185 +2,164 @@ export const calcabFRQPart7Data = {
   topicSlug: 'free-response-strategies-calcab',
   sections: [
     {
-      id: 'calcabfrq-p7-intro',
+      id: 'frq7-intro',
       type: 'text' as const,
-      content: `
-# Free Response Strategies
+      content: `# Free-Response Strategies \u2014 Full Practice FRQ Set
 
-**Part 7 of 7 — Mixed Review**
+**Part 7 of 7**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+---
 
-## Key Ideas
+### Practice FRQ Format
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+This section simulates exam conditions with mixed-topic questions covering all major FRQ types.
 
-## Formula Snapshot
+### FRQ Scoring Checklist
 
-When appropriate, use:
+| Criterion | Points at Stake |
+|:---|:---:|
+| Correct setup/method | 1\u20132 |
+| Correct computation | 1\u20132 |
+| Correct answer with units | 1 |
+| Justification (theorem name + verification) | 1\u20132 |
+| Interpretation in context | 1 |
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+### Master Formula Sheet
 
-and interpret what the final value means in context.
-      `
+| Formula | Usage |
+|:---|:---|
+| $f'(a) = \\lim_{h\\to 0}\\frac{f(a+h)-f(a)}{h}$ | Definition of derivative |
+| $(fg)' = f'g + fg'$ | Product rule |
+| $[f(g(x))]' = f'(g(x))g'(x)$ | Chain rule |
+| $\\int_a^b f'(x)\\,dx = f(b)-f(a)$ | Net change / FTC 2 |
+| $\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt = f(g(x))g'(x)$ | FTC 1 + chain |
+| $f_{\\text{avg}} = \\frac{1}{b-a}\\int_a^b f$ | Average value |
+| $A = \\int [\\text{top}-\\text{bottom}]\\,dx$ | Area between curves |
+| $V = \\pi\\int [R^2-r^2]\\,dx$ | Washer volume |`
     },
     {
-      id: 'calcabfrq-p7-mcq1',
+      id: 'frq7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Mixed Practice \u2014 Set 1** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'If $g(x) = \\int_0^x f(t)\\,dt$ and $f$ is continuous, then $g\'(3) =$',
+            options: ['$f(3)$', '$\\int_0^3 f(t)\\,dt$', '$f\'(3)$', '$g(3)$'],
+            correctAnswer: 0,
+            explanation: 'FTC Part 1: $g\'(x) = f(x)$, so $g\'(3) = f(3)$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'A particle\u2019s position is $s(t) = t^3 - 6t^2$. The particle is at rest when:',
+            options: ['$t = 0$ and $t = 4$', '$t = 2$ only', '$t = 0$ only', '$t = 4$ only'],
+            correctAnswer: 0,
+            explanation: '$v(t) = 3t^2 - 12t = 3t(t-4) = 0$ at $t=0$ and $t=4$.'
+          },
+          {
+            question: 'The MVT guarantees that for $f(x)=\\sqrt{x}$ on $[1,9]$, there exists $c$ such that $f\'(c) =$',
+            options: ['$1/4$', '$1/2$', '$1/3$', '$2$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{f(9)-f(1)}{9-1} = \\frac{3-1}{8} = \\frac{1}{4}$.'
           }
         ]
       }
     },
     {
-      id: 'calcabfrq-p7-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcabfrq-p7-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
+      id: 'frq7-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Mixed Practice \u2014 Set 2** \ud83d\udcdd',
       exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
+        questions: [
+          {
+            question: '$\\int_1^4 \\frac{1}{\\sqrt{x}}\\,dx =$',
+            options: ['$2$', '$4$', '$1$', '$3$'],
+            correctAnswer: 0,
+            explanation: '$\\int x^{-1/2}\\,dx = 2\\sqrt{x}$. $[2\\sqrt{x}]_1^4 = 4-2 = 2$.'
+          },
+          {
+            question: 'If $\\frac{dy}{dx} = 2y$ and $y(0)=5$, then $y(t) =$',
+            options: ['$5e^{2t}$', '$2e^{5t}$', '$5 + 2t$', '$e^{10t}$'],
+            correctAnswer: 0,
+            explanation: '$y\' = 2y \\implies y = Ce^{2t}$. $y(0)=5 \\implies C=5$.'
+          },
+          {
+            question: 'The total distance traveled by a particle with $v(t) = t - 2$ on $[0, 4]$ is:',
+            options: ['$4$', '$0$', '$2$', '$8$'],
+            correctAnswer: 0,
+            explanation: '$v=0$ at $t=2$. $\\int_0^2 |t-2|\\,dt + \\int_2^4 |t-2|\\,dt = \\int_0^2 (2-t)\\,dt + \\int_2^4 (t-2)\\,dt = 2+2 = 4$.'
+          }
+        ]
       }
     },
     {
-      id: 'calcabfrq-p7-dropdown',
+      id: 'frq7-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**FRQ strategy identification.** \ud83d\udd0d',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '\u201cFind the total amount of water that flowed in from $t=0$ to $t=8$\u201d:',
+            options: ['$\\int_0^8 r(t)\\,dt$', '$r(8) - r(0)$', '$r\'(4) \\cdot 8$', '$\\frac{r(0)+r(8)}{2}$'],
+            correctAnswers: ['$\\int_0^8 r(t)\\,dt$'],
+            hints: ['Integral of rate = total accumulation.'],
+            explanation: 'Net change theorem: $\\int_0^8 r(t)\\,dt$ gives total water.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
+            label: '\u201cExplain why there must be a time $c$ where $v(c) = 0$\u201d:',
+            options: ['IVT applied to $v$', 'MVT applied to $s$', 'EVT on $[a,b]$', 'FTC'],
+            correctAnswers: ['IVT applied to $v$'],
+            hints: ['If $v$ changes sign, IVT guarantees it passes through 0.'],
+            explanation: 'IVT: if $v$ is continuous and changes sign, then $v(c)=0$ for some $c$.'
           },
           {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcabfrq-p7-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Mixed Review**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcabfrq-p7-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: '\u201cSet up but do not evaluate an integral for the volume\u201d means:',
+            options: ['Write the integral with limits and integrand, then stop', 'Evaluate and box the answer', 'Use a Riemann sum', 'Graph the region only'],
+            correctAnswers: ['Write the integral with limits and integrand, then stop'],
+            hints: ['AP says \u201cset up\u201d = write it out. \u201cDo not evaluate\u201d = don\u2019t compute.'],
+            explanation: 'Full points for a correct integral expression. DO NOT waste time computing.'
           }
         ]
       }
+    },
+    {
+      id: 'frq7-input',
+      type: 'input-box' as const,
+      content: '**Final computation.** \u270d\ufe0f',
+      exercise: {
+        question: 'Find the average value of $f(x) = 6x^2$ on $[0, 2]$.',
+        correctAnswer: '8',
+        acceptableAnswers: ['8'],
+        hints: [
+          '$f_{\\text{avg}} = \\frac{1}{2-0}\\int_0^2 6x^2\\,dx$.',
+          '$= \\frac{1}{2}[2x^3]_0^2 = \\frac{1}{2}(16)$.',
+          '$= 8$.'
+        ],
+        explanation: '$\\frac{1}{2}\\int_0^2 6x^2\\,dx = \\frac{1}{2}\\cdot 16 = 8$.'
+      }
+    },
+    {
+      id: 'frq7-completion',
+      type: 'text' as const,
+      content: `### Completion Checklist
+
+| Part | Topic | Status |
+|:---:|:---|:---:|
+| 1 | FRQ Structure & Core Skills | \u2705 |
+| 2 | Rate & Accumulation FRQs | \u2705 |
+| 3 | Table-Based FRQs | \u2705 |
+| 4 | Graph-Based FRQs | \u2705 |
+| 5 | Differential Equation FRQs | \u2705 |
+| 6 | Area & Volume FRQs | \u2705 |
+| 7 | Full Practice FRQ Set | \u2705 |
+
+**You\u2019ve completed the Free-Response Strategies unit! You\u2019re ready for the FRQ section.** \ud83c\udf89
+
+### Final Reminders
+
+- Show ALL work on every FRQ part
+- Include units whenever the problem involves a physical quantity
+- Name theorems explicitly (IVT, MVT, EVT)
+- \u201cSet up but do not evaluate\u201d = write the integral and STOP`
     }
   ]
-}
+};

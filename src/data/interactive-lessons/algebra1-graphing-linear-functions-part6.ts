@@ -68,7 +68,9 @@ $$y - 50 = 2.5(x - 10) \\implies y = 2.5x + 25$$
 **Solve** 🧮
 
 1) Slope of line through $(3, 7)$ and $(9, 19)$?
+
 2) $y$-intercept of line with $m = -2$ through $(3, 1)$?
+
 3) $x$-intercept of $y = 4x - 8$?
       `,
       exercise: {

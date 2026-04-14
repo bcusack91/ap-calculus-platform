@@ -88,7 +88,9 @@ export const oChemConjugatedPart6Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: more stable product favored at equilibrium
+
       2) Term for: [4+2] cycloaddition of diene and dienophile
+
       3) Product pattern expected under Pd-catalyzed coupling of allylic substrates
       `,
       exercise: {

@@ -66,6 +66,7 @@ On ACT Science, interpolation is usually linear unless the graph clearly curves.
         type: 'input-boxes' as const,
         content: `\n**Computation Set**
 1) A value rises from 14 to 23. Enter the increase.
+
 2) A quantity changes from 50 to 65 over 3 minutes. Enter average rate per minute (decimal allowed).
 3) If a point estimate is 31 and measured value is 28, enter absolute error.\n        `,
         exercise: {

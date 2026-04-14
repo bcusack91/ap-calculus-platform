@@ -97,7 +97,9 @@ A tense shift is an error when the time frame hasn't changed but the verb tense 
 **Choose the Correct Tense** ✏️
 
 1) "By the time we arrived, the movie _____ (started / had started)." — Type the correct form.
+
 2) "She _____ (has worked / worked) at the company since 2018." — Type the correct form.
+
 3) "Yesterday, he _____ (walks / walked) to school." — Type the correct form.
       `,
       exercise: {

@@ -111,7 +111,9 @@ Use contrast transitions when the second idea **opposes, limits, or surprises** 
 Classify each transition word by writing "contrast," "addition," or "cause-effect."
 
 1) "Nevertheless" → __________
+
 2) "Moreover" → __________
+
 3) "Consequently" → __________
       `,
       exercise: {

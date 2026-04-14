@@ -109,7 +109,9 @@ Discriminant: $100 - 168 = -68 < 0$. **No intersection** — the line misses the
 **Nonlinear System Calculations** 🧮
 
 1) Solve $y = x^2$ and $y = 9$. What is the positive value of $x$?
+
 2) The circle $(x-1)^2 + (y-2)^2 = r^2$ passes through the origin. What is $r^2$?
+
 3) System: $y = x^2 - 1$ and $y = 3$. How many solutions?
       `,
       exercise: {

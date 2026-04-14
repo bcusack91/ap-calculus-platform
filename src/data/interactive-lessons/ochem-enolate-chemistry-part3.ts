@@ -88,7 +88,9 @@ export const oChemEnolatePart3Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: less substituted enolate formed fastest
+
       2) Term for: more substituted enolate formed at equilibrium
+
       3) Product pattern expected under enolate + aldehyde
       `,
       exercise: {

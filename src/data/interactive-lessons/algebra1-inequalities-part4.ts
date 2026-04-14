@@ -46,7 +46,9 @@ $-1 < 2x + 3 \\leq 9 \\implies -4 < 2x \\leq 6 \\implies -2 < x \\leq 3$
 **Compound** 🧮
 
 1) $1 < x+2 < 6$: lower bound of $x$?
+
 2) $-4 \\leq 2x \\leq 10$: upper bound of $x$?
+
 3) $x < -3$ or $x > 3$: is $x=0$ a solution? (yes/no)
       `,
       exercise: {

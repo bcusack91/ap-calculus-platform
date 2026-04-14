@@ -101,7 +101,9 @@ Don't use a colon after a preposition or a verb that directly leads into its obj
 Type "semicolon" or "colon" for each blank.
 
 1) "The museum has an impressive collection ___ ancient sculptures, Renaissance paintings, and modern art." — The blank needs a …
+
 2) "She finished her essay early ___ therefore, she had time to review it." — The blank needs a …
+
 3) "He had one goal ___ to finish the marathon." — The blank needs a …
       `,
       exercise: {

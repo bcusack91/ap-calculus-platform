@@ -141,34 +141,34 @@ $$\boxed{\text{Rate}_{\text{forward}} = \text{Rate}_{\text{reverse}}}$$
 
 For a system to reach equilibrium, several conditions must be met:
 
+<div class="my-8 rounded-2xl border border-sky-200/80 dark:border-sky-700/60 bg-gradient-to-br from-sky-50 via-white to-indigo-50 dark:from-sky-950/30 dark:via-gray-900 dark:to-indigo-950/30 p-6 shadow-lg">
+  <p class="m-0 text-base md:text-lg font-semibold text-sky-900 dark:text-sky-100">
+    Quick frame: equilibrium is about stable macroscopic behavior, not a stopped reaction.
+  </p>
+</div>
 
----
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-8">
+  <div class="rounded-2xl border border-emerald-200 dark:border-emerald-700/60 bg-gradient-to-br from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/30 p-5 shadow-md">
+    <h3 class="mt-0 mb-2 text-xl font-extrabold text-emerald-900 dark:text-emerald-100">1) Closed System</h3>
+    <p class="mb-2 text-emerald-900/90 dark:text-emerald-100/90">No matter enters or leaves (energy transfer can still occur).</p>
+    <p class="mb-0 text-emerald-900 dark:text-emerald-100"><strong>Key idea:</strong> if matter escapes, concentrations cannot stabilize.</p>
+  </div>
 
-### 1. Closed System
-The system must be **closed** — no matter can enter or leave. (Energy transfer is allowed.)
+  <div class="rounded-2xl border border-violet-200 dark:border-violet-700/60 bg-gradient-to-br from-violet-50 to-fuchsia-50 dark:from-violet-950/30 dark:to-fuchsia-950/30 p-5 shadow-md">
+    <h3 class="mt-0 mb-2 text-xl font-extrabold text-violet-900 dark:text-violet-100">2) Reversible Reaction</h3>
+    <p class="mb-0 text-violet-900 dark:text-violet-100">The process must proceed in both directions so forward and reverse rates can eventually match.</p>
+  </div>
 
-> 🔑 **Key Concept:** A closed system is essential — if matter can escape, concentrations cannot stabilize and equilibrium cannot be established.
+  <div class="rounded-2xl border border-amber-200 dark:border-amber-700/60 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 p-5 shadow-md">
+    <h3 class="mt-0 mb-2 text-xl font-extrabold text-amber-900 dark:text-amber-100">3) Constant Temperature</h3>
+    <p class="mb-0 text-amber-900 dark:text-amber-100">Temperature must stay fixed. Changing temperature shifts the equilibrium position.</p>
+  </div>
 
-
----
-
-### 2. Reversible Reaction
-The reaction must be able to proceed in both directions.
-
-
----
-
-### 3. Constant Temperature
-Temperature must remain constant. (Changing temperature shifts the equilibrium position.)
-
-
----
-
-### 4. Sufficient Time
-The system needs time to reach equilibrium. Some reactions reach it in milliseconds; others take days.
-
-
----
+  <div class="rounded-2xl border border-rose-200 dark:border-rose-700/60 bg-gradient-to-br from-rose-50 to-red-50 dark:from-rose-950/30 dark:to-red-950/30 p-5 shadow-md">
+    <h3 class="mt-0 mb-2 text-xl font-extrabold text-rose-900 dark:text-rose-100">4) Sufficient Time</h3>
+    <p class="mb-0 text-rose-900 dark:text-rose-100">Some systems equilibrate in milliseconds; others require hours or days.</p>
+  </div>
+</div>
 
 ### Recognizing Equilibrium
 

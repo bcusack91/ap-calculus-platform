@@ -95,7 +95,9 @@ export const bioCellCompartmentPart4Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **internal ER space where folding and processing occur**
+
       2) Term for this definition: **pinches off a membrane packet for cargo transport**
+
       3) Term for this definition: **short amino acid sequence directing protein destination**
       `,
       exercise: {

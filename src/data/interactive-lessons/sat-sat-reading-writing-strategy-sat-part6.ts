@@ -61,6 +61,115 @@ All four answer choices will use information from the notes. The trap is choosin
           }
         ]
       }
+    },
+    {
+      id: 'rw6-text2',
+      type: 'text' as const,
+      content: `## Deep Dive: Mastering Rhetorical Synthesis
+
+### Worked Example 1: Matching Goals to Answers
+
+**Notes:**
+- Coral reefs support ~25% of marine species despite covering <1% of the ocean floor
+- Rising ocean temperatures cause coral bleaching
+- Some coral species can adapt to warmer waters
+- Marine biologists are studying heat-resistant coral strains
+
+| Goal | Best Answer Strategy |
+|---|---|
+| "Emphasize an environmental threat" | Focus on bleaching + temperature rise |
+| "Highlight coral reefs' ecological importance" | Focus on 25% of species + <1% coverage |
+| "Present a reason for optimism" | Focus on adaptation + heat-resistant research |
+| "Introduce the topic to a general audience" | Combine importance + broad overview |
+
+### Worked Example 2: Eliminating Wrong Answers
+
+| Answer Choice | Goal: "Emphasize an environmental threat" | Why? |
+|---|---|---|
+| "Coral reefs support 25% of marine species." | ❌ Wrong goal | This is importance, not threat |
+| "Rising temperatures cause bleaching, threatening reef ecosystems." | ✅ Correct | Directly addresses threat |
+| "Some corals can adapt to warmer waters." | ❌ Wrong goal | This is optimism, not threat |
+| "Biologists study heat-resistant strains." | ❌ Wrong goal | This is research, not threat |
+
+### The 3-Step Rhetorical Synthesis Method
+
+| Step | Action | Example |
+|---|---|---|
+| 1. Read the goal | Underline key verbs: "emphasize," "compare," "introduce" | "Emphasize a **difference**" |
+| 2. Filter notes | Which notes relate to that goal? | Notes mentioning both JWST AND Hubble |
+| 3. Match & eliminate | Which answer uses those notes for that purpose? | Answer comparing mirror sizes |
+
+### Common Goal Keywords
+
+| Keyword | Meaning | What the Answer Should Do |
+|---|---|---|
+| Emphasize | Stress / highlight | Focus narrowly on one aspect |
+| Compare / contrast | Show similarities or differences | Mention BOTH items |
+| Introduce | Give overview | Be general and accessible |
+| Support the claim that… | Provide evidence | Directly back up the stated claim |
+| Present a finding | State a result | Include research outcome or data |`
+    },
+    {
+      id: 'rw6-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Advanced Rhetorical Synthesis** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: 'Notes: Octopuses have three hearts and blue blood. They can change color and texture in milliseconds. A 2021 study found octopuses throw debris at other octopuses they seem irritated with. Octopuses have been observed using coconut shells as portable shelters. Goal: "Present evidence of intelligent behavior."',
+            options: ['"Octopuses demonstrate intelligence by using coconut shells as portable shelters and deliberately throwing debris at other octopuses."', '"With three hearts and blue blood, octopuses are among the most physiologically unique marine animals."', '"Octopuses can change color and texture in milliseconds, a remarkable camouflage ability."', '"A 2021 study documented several notable behaviors in octopuses, including debris throwing."'],
+            correctAnswer: 0,
+            explanation: 'The goal is "evidence of intelligent behavior." Tool use (coconut shells) and deliberate social behavior (throwing debris) are intelligence indicators. B discusses physiology, C discusses camouflage, and D is too vague about intelligence.'
+          },
+          {
+            question: 'A student is writing about solar energy. Notes mention cost decreases, efficiency improvements, environmental benefits, and land use concerns. Goal: "Acknowledge a limitation of solar energy." Which type of information should the answer focus on?',
+            options: ['Land use concerns', 'Cost decreases', 'Efficiency improvements', 'Environmental benefits'],
+            correctAnswer: 0,
+            explanation: '"Acknowledge a limitation" means address a drawback. Land use concerns are the only negative aspect in the notes. Cost decreases, efficiency improvements, and environmental benefits are all positives.'
+          },
+          {
+            question: 'Why does the SAT make all four answer choices factually correct in rhetorical synthesis questions?',
+            options: ['To test whether you can match information to a specific rhetorical purpose', 'To make the questions easier by removing factual errors', 'To test reading comprehension of the notes', 'To ensure students read all the notes carefully'],
+            correctAnswer: 0,
+            explanation: 'Rhetorical synthesis tests PURPOSE, not accuracy. All answers are true based on the notes — the skill is selecting the one that achieves the stated GOAL. This is what makes goal-reading the critical first step.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'rw6-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Rhetorical Synthesis Check** — Select the correct answer.',
+      exercise: {
+        dropdowns: [
+          'First step: read the [goal|notes|answers|title]',
+          '"Emphasize a difference" requires mentioning [both items|one item|all notes|the main topic]',
+          'All four answers will be factually [correct|incorrect|similar|identical]',
+          'The trap is choosing an answer that is correct but doesn\'t match the [goal|notes|format|tone]'
+        ],
+        correctAnswers: ['goal', 'both items', 'correct', 'goal'],
+        hint1: 'The goal determines which answer is right.',
+        hint2: 'You can\'t compare without mentioning both.',
+        hint3: 'All answers come from the notes — all are factually accurate.',
+        explanation: 'Goal first, always. Comparisons need both items mentioned. All answers are factually correct — the differentiator is purpose. The classic trap: correct info, wrong goal.'
+      }
+    },
+    {
+      id: 'rw6-summary',
+      type: 'text' as const,
+      content: `## Part 6 Summary
+
+| Concept | Key Rule |
+|---|---|
+| Question format | Notes + goal → match answer to goal |
+| First step | Always read the goal/purpose first |
+| Common trap | Factually correct answer that serves wrong goal |
+| "Emphasize" | Focus narrowly on one aspect |
+| "Compare/contrast" | Must mention both items being compared |
+| "Introduce" | Be general and accessible |
+| 3-step method | Goal → filter notes → match & eliminate |
+
+*Next: R&W Module Review & Test Strategy →*`
     }
   ]
 };

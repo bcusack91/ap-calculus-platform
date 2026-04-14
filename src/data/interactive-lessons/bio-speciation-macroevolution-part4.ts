@@ -95,7 +95,9 @@ export const bioSpeciationPart4Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **reproductive isolation mechanism before fertilization**
+
       2) Term for this definition: **isolation mechanism reducing hybrid viability or fertility**
+
       3) Term for this definition: **genome duplication that can create instant reproductive isolation**
       `,
       exercise: {

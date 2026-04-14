@@ -103,7 +103,9 @@ Use these benchmarks during the test:
 **Pacing Math** 📝
 
 1) 45 minutes ÷ 5 passages = __________ minutes per passage.
+
 2) If you're at question 45 with 20 minutes left, you are __________ of pace (ahead/behind).
+
 3) When skipping a question, you should still bubble in a __________ answer.
       `,
       exercise: {

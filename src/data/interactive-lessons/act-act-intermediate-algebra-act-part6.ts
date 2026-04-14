@@ -107,7 +107,9 @@ Then $a_1 = a_3 - 2d = 14 - 8 = 6$.
 **Sequences Practice** 🧮
 
 1) Find the 12th term of the arithmetic sequence $4, 10, 16, 22, \\ldots$
+
 2) Find the common ratio of $5, 15, 45, 135, \\ldots$
+
 3) Find the sum of the first 10 terms of $1, 2, 3, \\ldots, 10$.
       `,
       exercise: {

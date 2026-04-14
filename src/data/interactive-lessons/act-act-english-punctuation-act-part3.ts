@@ -112,7 +112,9 @@ Apostrophe questions appear on virtually every ACT English section. They test tw
 **It's vs. Its — Type the Correct Word** ✏️
 
 1) "The university announced ___ new admissions policy." — Type "its" or "it's."
+
 2) "___ going to be a challenging semester." — Type "Its" or "It's."
+
 3) "The cat cleaned ___ paws after dinner." — Type "its" or "it's."
       `,
       exercise: {

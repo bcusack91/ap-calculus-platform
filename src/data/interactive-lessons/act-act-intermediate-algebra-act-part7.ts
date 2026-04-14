@@ -93,7 +93,9 @@ $$a_6 = a_3 \\cdot r^3 \\implies 96 = 12r^3 \\implies r^3 = 8 \\implies r = 2$$
 **Mixed Practice — Fill In** 🧮
 
 1) Solve $x^2 + 2x - 15 = 0$. Enter the **positive** root.
+
 2) If $\\log_3 x = 4$, what is $x$?
+
 3) Find the 7th term of the arithmetic sequence $10, 14, 18, 22, \\ldots$
       `,
       exercise: {

@@ -86,7 +86,9 @@ export const psychRetrievalPart3Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: new learning disrupts old memories
+
       2) Write the concept that matches: temporary inability to retrieve known information
+
       3) Write the concept that matches: remembering by rebuilding details from fragments and schemas
 
       Use the exact vocabulary term from this part.

@@ -47,7 +47,7 @@ export interface OChemDailyQuestion {
 export async function getDailyQuestions(): Promise<OChemDailyQuestion[]> {
   const day = dayOfYear()
   const topicSlug = TOPIC_SLUGS[day % TOPIC_SLUGS.length]
-  const form = day % 2 === 0 ? 'A' : 'B'
+  const form = (day % 10) + 1
   const diagnostic = generateOChemDiagnosticTest(form)
   const filtered = diagnostic.questions.filter((q) => q.topicSlug === topicSlug)
   const source = filtered.length > 0 ? filtered : diagnostic.questions

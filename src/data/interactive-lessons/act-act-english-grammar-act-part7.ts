@@ -106,7 +106,9 @@ Read each sentence and identify the error type before looking at the answer:
 Identify the error type in each sentence. Type your answer.
 
 1) "Neither the students nor the teacher were happy with the results." → Error type:
+
 2) "The report, which was written by the interns, have several typos." → Error type:
+
 3) "Running late for the interview, the car wouldn't start." → Error type:
       `,
       exercise: {

@@ -88,7 +88,9 @@ export const oChemLipidsPart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: noncovalent pairing interactions between nucleobases
+
       2) Term for: molecule with both hydrophilic and hydrophobic regions
+
       3) Product pattern expected under triacylglycerol + NaOH, heat
       `,
       exercise: {

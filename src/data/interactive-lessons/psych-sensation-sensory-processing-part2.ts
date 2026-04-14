@@ -86,7 +86,9 @@ export const psychSensationPart2Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: minimum stimulus intensity detected 50% of the time
+
       2) Write the concept that matches: smallest detectable difference between two stimuli
+
       3) Write the concept that matches: framework separating sensitivity from response bias under uncertainty
 
       Use the exact vocabulary term from this part.

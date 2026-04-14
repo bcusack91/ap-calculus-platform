@@ -8,6 +8,7 @@ import {
   generateACTDiagnosticTest,
   scoreACTDiagnostic,
   pickNextForm,
+  TOTAL_FORMS,
   type ACTDiagnosticTestData,
   type ACTDiagnosticResults,
 } from '@/data/act-practice/diagnostic-generator'
@@ -72,8 +73,8 @@ export default function ACTDiagnosticPage() {
   const startTest = useCallback(async () => {
     setLoading(true)
     const previousForms = history
-      .map(h => (h.results as Record<string, unknown> | null)?.form as 'A' | 'B' | undefined)
-      .filter((f): f is 'A' | 'B' => f === 'A' || f === 'B')
+      .map(h => Number((h.results as Record<string, unknown> | null)?.form))
+      .filter((f): f is number => Number.isFinite(f))
     const form = pickNextForm(previousForms)
     const data = await generateACTDiagnosticTest({ form })
     setTestData(data); setCurrentIndex(0); setAnswers(new Array(data.questions.length).fill(null))
@@ -321,7 +322,7 @@ export default function ACTDiagnosticPage() {
               <li>Take the <strong>entrance quiz</strong> to pinpoint which lesson parts you need</li>
               <li>Work through the <strong>interactive lessons</strong> at your own pace</li>
               <li>Pass the <strong>exit quiz</strong> to confirm you&apos;ve mastered the topic</li>
-              <li>Come back and take the next diagnostic (Form {results.form === 'A' ? 'B' : 'A'})</li>
+              <li>Come back and take the next diagnostic (Form {results.form < TOTAL_FORMS ? results.form + 1 : 1})</li>
               <li>Repeat until you&apos;re reaching your target composite score!</li>
             </ol>
             {completedModules > 0 && <p className="mt-3 text-xs text-red-500 dark:text-red-400">You&apos;ve taken {completedModules} diagnostic test{completedModules > 1 ? 's' : ''} so far — keep going!</p>}
@@ -383,7 +384,7 @@ export default function ACTDiagnosticPage() {
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
           <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">What to Expect</h3>
           <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-            {['~40 questions dynamically generated across English, Math, Reading & Science', '40 minute time limit', 'Estimated ACT composite score (1–36) with per-section scores', 'Personalized study recommendations with entrance quiz → lesson → exit quiz flow', 'Fresh questions each time from our question bank'].map(item => (
+            {['~40 questions dynamically generated across English, Math, Reading & Science', '40 minute time limit', 'Estimated ACT composite score (1–36) with per-section scores', 'Personalized study recommendations with entrance quiz → lesson → exit quiz flow', 'Fresh questions each time — 10 unique forms from our question bank'].map(item => (
               <li key={item} className="flex items-start gap-2"><svg className="mt-0.5 h-4 w-4 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>{item}</li>
             ))}
           </ul>

@@ -2,185 +2,127 @@ export const calcbcEulerPart2Data = {
   topicSlug: 'euler-method-advanced-calcbc',
   sections: [
     {
-      id: 'calcbceuler-p2-intro',
+      id: 'euler2-intro',
       type: 'text' as const,
-      content: `
-# Euler Method Advanced
+      content: `# Multi-Step Computations
 
-**Part 2 of 7 — Worked Examples**
+**Part 2 of 7 — Table Problems and Extended Calculations**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### AP Table Format
 
-## Key Ideas
+The AP exam often presents Euler's method as a table to fill in:
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+| $n$ | $x_n$ | $y_n$ | $dy/dx = f(x_n, y_n)$ | $\\Delta y = f \\cdot \\Delta x$ |
+|-----|--------|--------|----------------------|------|
+| 0 | given | given | compute | compute |
+| 1 | update | update | compute | compute |
+| ... | ... | ... | ... | ... |
 
-## Formula Snapshot
+### Systematic Approach
 
-When appropriate, use:
+For $\\frac{dy}{dx} = 2x - y$, $y(0) = 1$, $\\Delta x = 0.2$, approximate $y(0.6)$:
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+| $n$ | $x_n$ | $y_n$ | $f = 2x_n - y_n$ | $\\Delta y$ | $y_{n+1}$ |
+|-----|--------|--------|-------------------|-----------|-----------|
+| 0 | 0 | 1 | $-1$ | $-0.2$ | 0.8 |
+| 1 | 0.2 | 0.8 | $-0.4$ | $-0.08$ | 0.72 |
+| 2 | 0.4 | 0.72 | $0.08$ | $0.016$ | 0.736 |
 
-and interpret what the final value means in context.
-      `
+$$\\boxed{y(0.6) \\approx 0.736}$$
+
+> **AP Tip:** On FRQs, show ALL columns of the table. Partial credit is available for correct intermediate steps even if the final answer is wrong.`
     },
     {
-      id: 'calcbceuler-p2-mcq1',
+      id: 'euler2-nonlinear',
+      type: 'text' as const,
+      content: `### Nonlinear ODE Example
+
+$\\frac{dy}{dx} = y^2 - x$, $y(1) = 0$, $\\Delta x = 0.25$. Approximate $y(1.75)$.
+
+| $n$ | $x_n$ | $y_n$ | $f = y_n^2 - x_n$ | $\\Delta y$ | $y_{n+1}$ |
+|-----|--------|--------|-------------------|-----------|-----------|
+| 0 | 1 | 0 | $-1$ | $-0.25$ | $-0.25$ |
+| 1 | 1.25 | $-0.25$ | $-1.1875$ | $-0.2969$ | $-0.5469$ |
+| 2 | 1.5 | $-0.5469$ | $-1.2011$ | $-0.3003$ | $-0.8472$ |
+
+$$\\boxed{y(1.75) \\approx -0.847}$$
+
+### Common Mistakes
+
+| Mistake | How to avoid |
+|---------|-------------|
+| Using $x_{n+1}$ for slope | Always use the LEFT point $(x_n, y_n)$ |
+| Forgetting to update $y$ | $y_{n+1} = y_n + \\Delta y$, not $y_0 + \\sum \\Delta y$ |
+| Rounding too early | Keep 3–4 decimal places throughout |
+| Wrong sign on $\\Delta y$ | $\\Delta y$ can be negative (slope is negative) |`
+    },
+    {
+      id: 'euler2-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Multi-Step Practice**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: '$dy/dx = xy$, $y(0) = 1$, $\\Delta x = 0.1$. After TWO steps of Euler\'s method, $y(0.2) \\approx$:',
+            options: ['$1.01$ (step 1: $y = 1$; step 2: $y = 1 + 0.01(0.1) = 1.01$)', '$1.1$', '$1.0$', '$1.02$'],
+            correctAnswer: 0,
+            explanation: 'Step 1: $f(0,1) = 0$, $y(0.1) = 1 + 0(0.1) = 1$. Step 2: $f(0.1, 1) = 0.1$, $y(0.2) = 1 + 0.1(0.1) = 1.01$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: 'When an FRQ says "use Euler\'s method with two steps of equal size to approximate $y(1)$ given $y(0) = 2$," what is $\\Delta x$?',
+            options: ['$0.5$', '$1$', '$0.25$', '$2$'],
+            correctAnswer: 0,
+            explanation: 'Two equal steps from $x = 0$ to $x = 1$: $\\Delta x = (1 - 0)/2 = 0.5$.'
           }
         ]
       }
     },
     {
-      id: 'calcbceuler-p2-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbceuler-p2-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbceuler-p2-dropdown',
+      id: 'euler2-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Table Completion**\n\n$dy/dx = 1 + y$, $y(0) = 0$, $\\Delta x = 0.5$',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'Step 1: $f(0, 0) = 1 + 0 = 1$. So $y(0.5) =$',
+            options: ['$0 + 1(0.5) = 0.5$', '$0 + 1 = 1$', '$0 + 0.5 = 0.5$', '$1 + 0.5 = 1.5$'],
+            correctAnswers: ['$0 + 1(0.5) = 0.5$'],
+            hints: ['$y_{n+1} = y_n + f \\cdot \\Delta x = 0 + 1(0.5)$.'],
+            explanation: '$y(0.5) = 0 + 1 \\cdot 0.5 = 0.5$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbceuler-p2-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Worked Examples**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbceuler-p2-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'Step 2: $f(0.5, 0.5) = 1.5$. So $y(1) =$',
+            options: ['$0.5 + 1.5(0.5) = 1.25$', '$0.5 + 1.5 = 2$', '$0 + 1.5(0.5) = 0.75$', '$1.5 + 0.5 = 2$'],
+            correctAnswers: ['$0.5 + 1.5(0.5) = 1.25$'],
+            hints: ['$y(1) = y(0.5) + f(0.5, 0.5) \\cdot \\Delta x = 0.5 + 1.5(0.5)$.'],
+            explanation: '$y(1) \\approx 1.25$. (Exact: $e - 1 \\approx 1.718$, so big step undershoots.)'
           }
         ]
       }
+    },
+    {
+      id: 'euler2-input',
+      type: 'input-box' as const,
+      content: '**Compute**',
+      exercise: {
+        question: '$dy/dx = 3 - y$, $y(0) = 1$, $\\Delta x = 0.1$. Compute $y(0.2)$ using two Euler steps. Enter your answer as a decimal.',
+        correctAnswer: '1.38',
+        acceptableAnswers: ['1.38', '1.380'],
+        hints: ['Step 1: $f(0,1) = 2$, $y(0.1) = 1 + 2(0.1) = 1.2$. Step 2: $f(0.1, 1.2) = 1.8$, $y(0.2) = 1.2 + 1.8(0.1)$.'],
+        explanation: 'Step 1: $y(0.1) = 1 + 2(0.1) = 1.2$. Step 2: $f = 3 - 1.2 = 1.8$, $y(0.2) = 1.2 + 0.18 = 1.38$.'
+      }
+    },
+    {
+      id: 'euler2-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Organize multi-step computations in a table
+- Always compute slope at the CURRENT point
+- Keep sufficient decimal precision
+- Show all work on FRQs for partial credit
+
+> **Next:** Part 3 — Over- and Under-Estimates.`
     }
   ]
-}
+};

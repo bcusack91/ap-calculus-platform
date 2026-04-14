@@ -88,7 +88,9 @@ export const oChemAromaticPart5Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: magnetic anisotropy signature of aromatic systems
+
       2) Term for: valid Lewis structure sharing electron delocalization
+
       3) Product pattern expected under RCOCl, AlCl3
       `,
       exercise: {

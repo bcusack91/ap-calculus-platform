@@ -44,7 +44,9 @@ Time to tackle multi-step continuity problems — the kind that appear on AP exa
 A main water pipe (radius 5.0 cm, speed 2.0 m/s) splits into two branches. Branch A has radius 3.0 cm and Branch B has radius 4.0 cm.
 
 1) Flow rate in the main pipe (in L/s)
+
 2) If Branch A carries 60% of the flow, speed in Branch A (in m/s)
+
 3) Speed in Branch B (in m/s)
 
 *Round all answers to 3 significant figures.*
@@ -67,7 +69,9 @@ A main water pipe (radius 5.0 cm, speed 2.0 m/s) splits into two branches. Branc
 A circular pipe (diameter 4.0 cm) delivers water at 5.0 m/s into a cylindrical tank (diameter 2.0 m).
 
 1) Volume flow rate (in m³/s, use "1.26e-3" format)
+
 2) Rate at which the water level rises in the tank (in m/s, use same format)
+
 3) Time to fill the tank to a depth of 1.0 m (in seconds)
       `,
       exercise: {

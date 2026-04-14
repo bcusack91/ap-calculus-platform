@@ -103,7 +103,9 @@ The ACT loves to insert a **prepositional phrase** between the subject and verb 
 **Fill in the Correct Verb** ✏️
 
 1) "The group of scientists _____ (is/are) publishing their findings." — Type the correct verb.
+
 2) "Neither the coach nor the players _____ (was/were) satisfied." — Type the correct verb.
+
 3) "Everybody in the two classes _____ (has/have) finished the test." — Type the correct verb.
       `,
       exercise: {

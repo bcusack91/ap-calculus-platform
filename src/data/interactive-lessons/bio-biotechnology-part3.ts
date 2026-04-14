@@ -95,7 +95,9 @@ export const bioBiotechPart3Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **separates DNA fragments by size through a matrix**
+
       2) Term for this definition: **amplifies a target DNA region through thermal cycling**
+
       3) Term for this definition: **carries foreign DNA into host cells for replication**
       `,
       exercise: {

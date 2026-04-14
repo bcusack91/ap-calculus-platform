@@ -125,8 +125,11 @@ $$T_f = 23.2°\\text{C}$$
 Use: $c_w = 4{,}186$ J/(kg·°C), $L_f = 334{,}000$ J/kg.
 
 1) Energy needed to melt all the ice (in J)
+
 2) Energy available from water cooling to 0°C (in J)
+
 3) Does all the ice melt? Enter "yes" or "no"
+
 4) Final temperature of the mixture (in °C, round to 1 decimal)
 
 *Round all answers to 3 significant figures.*

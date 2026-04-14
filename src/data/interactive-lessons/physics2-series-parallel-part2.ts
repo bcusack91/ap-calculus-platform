@@ -121,9 +121,13 @@ Unlike series circuits, if one branch in a parallel circuit opens, **the other b
 A 30 V battery is connected to three resistors in parallel: $R_1 = 10 \\; \\Omega$, $R_2 = 15 \\; \\Omega$, $R_3 = 30 \\; \\Omega$.
 
 1) Current through $R_1$ (in A)
+
 2) Current through $R_2$ (in A)
+
 3) Current through $R_3$ (in A)
+
 4) Total current from the battery (in A)
+
 5) Total resistance of the circuit (in $\\Omega$)
       `,
       exercise: {

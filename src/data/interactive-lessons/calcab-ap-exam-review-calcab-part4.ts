@@ -2,185 +2,155 @@ export const calcabExamReviewPart4Data = {
   topicSlug: 'ap-exam-review-calcab',
   sections: [
     {
-      id: 'calcabexamreview-p4-intro',
+      id: 'examrev4-intro',
       type: 'text' as const,
-      content: `
-# Ap Exam Review
+      content: `# AP Exam Review \u2014 Integration Techniques
 
-**Part 4 of 7 — Graphs and Interpretation**
+**Part 4 of 7**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+---
 
-## Key Ideas
+### Integration Formulas Reference
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+| Integral | Result |
+|:---|:---|
+| $\\int x^n\\,dx$ | $\\frac{x^{n+1}}{n+1} + C$ ($n \\ne -1$) |
+| $\\int \\frac{1}{x}\\,dx$ | $\\ln|x| + C$ |
+| $\\int e^x\\,dx$ | $e^x + C$ |
+| $\\int \\sin x\\,dx$ | $-\\cos x + C$ |
+| $\\int \\cos x\\,dx$ | $\\sin x + C$ |
+| $\\int \\sec^2 x\\,dx$ | $\\tan x + C$ |
 
-## Formula Snapshot
+### Fundamental Theorem of Calculus
 
-When appropriate, use:
+$$\\boxed{\\text{FTC Part 1: } \\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x)}$$
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+$$\\boxed{\\text{FTC Part 2: } \\int_a^b f(x)\\,dx = F(b) - F(a)}$$
 
-and interpret what the final value means in context.
-      `
+> **Chain Rule Variant:** $\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt = f(g(x))\\cdot g'(x)$
+
+---
+
+### $u$-Substitution Strategy
+
+| Step | Action |
+|:---|:---|
+| 1 | Identify inner function $u = g(x)$ |
+| 2 | Compute $du = g'(x)\\,dx$ |
+| 3 | Rewrite integral entirely in terms of $u$ |
+| 4 | Integrate and substitute back |
+
+### Worked Example \u2014 $u$-Substitution
+
+$$\\int x\\cos(x^2)\\,dx$$
+
+Let $u = x^2$, $du = 2x\\,dx$, so $x\\,dx = \\frac{du}{2}$.
+
+$$\\frac{1}{2}\\int \\cos u\\,du = \\frac{1}{2}\\sin u + C = \\frac{1}{2}\\sin(x^2) + C$$`
     },
     {
-      id: 'calcabexamreview-p4-mcq1',
+      id: 'examrev4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Integration Quiz** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: '$\\int_0^2 (3x^2 - 4x + 1)\\,dx =$',
+            options: ['$2$', '$3$', '$0$', '$4$'],
+            correctAnswer: 0,
+            explanation: '$[x^3-2x^2+x]_0^2 = (8-8+2) - 0 = 2$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: '$\\int \\frac{2x}{x^2+1}\\,dx =$',
+            options: ['$\\ln(x^2+1) + C$', '$\\frac{1}{x^2+1} + C$', '$\\ln|2x| + C$', '$\\arctan x + C$'],
+            correctAnswer: 0,
+            explanation: '$u = x^2+1$, $du = 2x\\,dx$. $\\int \\frac{du}{u} = \\ln|u| + C = \\ln(x^2+1) + C$.'
+          },
+          {
+            question: 'If $F(x) = \\int_1^x \\sqrt{t^3+1}\\,dt$, then $F\'(3) =$',
+            options: ['$\\sqrt{28}$', '$\\sqrt{10}$', '$3\\sqrt{28}$', '$28$'],
+            correctAnswer: 0,
+            explanation: 'FTC Part 1: $F\'(x) = \\sqrt{x^3+1}$. $F\'(3) = \\sqrt{27+1} = \\sqrt{28}$.'
           }
         ]
       }
     },
     {
-      id: 'calcabexamreview-p4-example',
+      id: 'examrev4-definite',
       type: 'text' as const,
-      content: `
-## Worked Example
+      content: `### Definite Integral Properties
 
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
+| Property | Formula |
+|:---|:---|
+| Additivity | $\\int_a^b f + \\int_b^c f = \\int_a^c f$ |
+| Constant multiple | $\\int_a^b kf = k\\int_a^b f$ |
+| Reverse limits | $\\int_a^b f = -\\int_b^a f$ |
+| Zero width | $\\int_a^a f = 0$ |
+| Sum/Difference | $\\int_a^b (f \\pm g) = \\int_a^b f \\pm \\int_a^b g$ |
 
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
+### Average Value Formula
 
-### Common Trap
+$$\\boxed{f_{\\text{avg}} = \\frac{1}{b-a}\\int_a^b f(x)\\,dx}$$
 
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
+**Example:** Average value of $f(x) = x^2$ on $[0,3]$:
+
+$$f_{\\text{avg}} = \\frac{1}{3}\\int_0^3 x^2\\,dx = \\frac{1}{3}\\cdot\\frac{27}{3} = 3$$`
     },
     {
-      id: 'calcabexamreview-p4-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcabexamreview-p4-dropdown',
+      id: 'examrev4-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Match the technique.** \ud83d\udd0d',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: '$\\int e^{5x}\\,dx$ \u2014 What substitution?',
+            options: ['$u = 5x$', '$u = e^x$', '$u = e^{5x}$', 'No substitution needed'],
+            correctAnswers: ['$u = 5x$'],
+            hints: ['The inner function of the exponential is $5x$.'],
+            explanation: '$u=5x$, $du=5\\,dx$. $\\frac{1}{5}e^{5x}+C$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
+            label: '$\\frac{d}{dx}\\int_0^{x^2} \\sin t\\,dt$ uses:',
+            options: ['FTC + Chain Rule', 'FTC Part 2 only', '$u$-substitution', 'Integration by parts'],
+            correctAnswers: ['FTC + Chain Rule'],
+            hints: ['The upper limit is $x^2$, not just $x$.'],
+            explanation: '$\\sin(x^2)\\cdot 2x$. The chain rule multiplies by the derivative of the upper limit.'
           },
           {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcabexamreview-p4-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Graphs and Interpretation**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcabexamreview-p4-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: '$\\int_2^5 f(x)\\,dx = 7$ and $\\int_2^5 g(x)\\,dx = 3$. Then $\\int_2^5 [2f(x) - g(x)]\\,dx =$',
+            options: ['$11$', '$7$', '$17$', '$4$'],
+            correctAnswers: ['$11$'],
+            hints: ['Use linearity: $2(7) - 3$.'],
+            explanation: '$2\\int f - \\int g = 2(7)-3 = 11$.'
           }
         ]
       }
+    },
+    {
+      id: 'examrev4-input',
+      type: 'input-box' as const,
+      content: '**Compute the integral.** \u270d\ufe0f',
+      exercise: {
+        question: '$\\int_0^4 \\sqrt{x}\\,dx =$ Enter your answer as a fraction $\\frac{a}{b}$ in lowest terms. Give $a + b$.',
+        correctAnswer: '19',
+        acceptableAnswers: ['19'],
+        hints: [
+          '$\\sqrt{x} = x^{1/2}$. Antiderivative: $\\frac{x^{3/2}}{3/2} = \\frac{2}{3}x^{3/2}$.',
+          '$\\frac{2}{3}(4)^{3/2} - 0 = \\frac{2}{3}\\cdot 8$.',
+          '$= \\frac{16}{3}$. $a+b = 16+3 = 19$.'
+        ],
+        explanation: '$\\frac{2}{3}x^{3/2}\\Big|_0^4 = \\frac{2}{3}(8) = \\frac{16}{3}$. $a+b=19$.'
+      }
+    },
+    {
+      id: 'examrev4-summary',
+      type: 'text' as const,
+      content: `### Key Takeaways \u2014 Part 4
+
+- Know antiderivative formulas for power, exponential, trig, and $\\ln$
+- FTC Part 1 connects derivatives and integrals
+- $u$-substitution reverses the chain rule
+- Average value = $\\frac{1}{b-a}\\int_a^b f(x)\\,dx$`
     }
   ]
-}
+};

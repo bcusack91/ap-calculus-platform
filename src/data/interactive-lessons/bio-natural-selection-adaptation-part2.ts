@@ -95,7 +95,9 @@ export const bioNatSelectionPart2Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **environmental factor influencing reproductive success**
+
       2) Term for this definition: **trait increasing fitness in a specific environment**
+
       3) Term for this definition: **selection driven by mating success differences**
       `,
       exercise: {

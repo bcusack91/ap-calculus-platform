@@ -70,7 +70,9 @@ $$y = -\\frac{1}{2}x + 4$$
 **Identify the slope and $y$-intercept** 🧮
 
 1) $y = 4x + 1$ → slope = ?
+
 2) $y = -3x + 8$ → $y$-intercept = ?
+
 3) $3y = 9x - 6$ → slope = ?
       `,
       exercise: {

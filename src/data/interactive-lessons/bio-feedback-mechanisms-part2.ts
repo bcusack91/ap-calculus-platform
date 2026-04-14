@@ -95,7 +95,9 @@ export const bioFeedbackPart2Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **response counteracts change to restore set point**
+
       2) Term for this definition: **dynamic maintenance of internal stability**
+
       3) Term for this definition: **target value around which a variable is regulated**
       `,
       exercise: {

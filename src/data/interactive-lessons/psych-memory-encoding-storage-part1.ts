@@ -86,7 +86,9 @@ export const psychMemoryEncodePart1Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: brief retention of sensory information
+
       2) Write the concept that matches: active short-term processing system with limited capacity
+
       3) Write the concept that matches: relatively enduring store of knowledge, skills, and experiences
 
       Use the exact vocabulary term from this part.

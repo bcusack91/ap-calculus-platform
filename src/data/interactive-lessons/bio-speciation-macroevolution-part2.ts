@@ -95,7 +95,9 @@ export const bioSpeciationPart2Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **speciation following geographic isolation**
+
       2) Term for this definition: **speciation without geographic separation**
+
       3) Term for this definition: **reproductive isolation mechanism before fertilization**
       `,
       exercise: {

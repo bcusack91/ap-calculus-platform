@@ -104,7 +104,9 @@ Students fall into two traps with "NO CHANGE":
 **Strategy Recall** 📝
 
 1) The recommended reading method is called "Read-As-You-__________."
+
 2) For pronoun questions, check the __________ (the noun the pronoun replaces).
+
 3) "NO CHANGE" is correct for roughly __________–20 out of 75 questions.
       `,
       exercise: {

@@ -88,7 +88,9 @@ export const oChemAlkynesPart4Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: poisoned catalyst giving cis alkene from alkyne
+
       2) Term for: Na/NH3 gives trans alkene from alkyne
+
       3) Product pattern expected under Na, NH3(l)
       `,
       exercise: {

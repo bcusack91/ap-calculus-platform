@@ -121,7 +121,9 @@ The raft can hold up to 800 kg before going under!
 A styrofoam raft ($\\rho = 50$ kg/m³) is $2.0 \\times 1.0 \\times 0.20$ m.
 
 1) Mass of the raft (in kg)
+
 2) Maximum buoyant force when fully submerged (in N)
+
 3) Maximum extra mass it can carry before sinking (in kg)
       `,
       exercise: {

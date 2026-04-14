@@ -95,7 +95,9 @@ export const bioNatSelectionPart7Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **random allele frequency change strongest in small populations**
+
       2) Term for this definition: **allele movement among populations through migration**
+
       3) Term for this definition: **change in population allele frequencies over generations**
       `,
       exercise: {

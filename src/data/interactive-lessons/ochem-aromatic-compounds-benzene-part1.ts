@@ -88,7 +88,9 @@ export const oChemAromaticPart1Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: cyclic, planar, fully conjugated system with 4n+2 pi electrons
+
       2) Term for: cyclic planar conjugated system with 4n pi electrons
+
       3) Product pattern expected under Br2, FeBr3
       `,
       exercise: {

@@ -95,7 +95,9 @@ export const bioEcologyPart1Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **living component that influences ecosystem dynamics**
+
       2) Term for this definition: **nonliving environmental variable such as light or pH**
+
       3) Term for this definition: **position in feeding hierarchy based on energy source**
       `,
       exercise: {

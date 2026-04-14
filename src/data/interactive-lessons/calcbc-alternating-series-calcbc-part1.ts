@@ -2,185 +2,130 @@ export const calcbcAlternatingPart1Data = {
   topicSlug: 'alternating-series-calcbc',
   sections: [
     {
-      id: 'calcbcalternating-p1-intro',
+      id: 'as1-intro',
       type: 'text' as const,
-      content: `
-# Alternating Series
+      content: `# Alternating Series — The Alternating Series Test
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Foundations**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+### What Is an Alternating Series?
 
-## Key Ideas
+A series whose terms alternate in sign:
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+$$\\sum_{n=1}^\\infty (-1)^{n+1} b_n = b_1 - b_2 + b_3 - b_4 + \\cdots$$
 
-## Formula Snapshot
+or equivalently $\\sum (-1)^n b_n$ where $b_n > 0$.
 
-When appropriate, use:
+### The Alternating Series Test (AST)
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
+$$\\boxed{\\text{If } b_n > 0,\\ b_{n+1} \\le b_n \\text{ (decreasing), and } \\lim_{n\\to\\infty} b_n = 0, \\text{ then } \\sum (-1)^{n+1} b_n \\text{ converges.}}$$
 
-and interpret what the final value means in context.
-      `
+### The Three Hypotheses
+
+| # | Condition | Why It's Needed |
+|---|----------|----------------|
+| 1 | $b_n > 0$ | Terms truly alternate |
+| 2 | $b_n$ eventually decreasing | Partial sums "squeeze" toward limit |
+| 3 | $\\lim b_n = 0$ | Without this, Divergence Test kicks in |
+
+> **AP Tip:** On the AP exam, you must explicitly verify ALL three conditions. Simply stating "by AST" is not sufficient for full credit.`
     },
     {
-      id: 'calcbcalternating-p1-mcq1',
+      id: 'as1-examples',
+      type: 'text' as const,
+      content: `### Classic Examples
+
+**Alternating Harmonic Series:**
+
+$\\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{n} = 1 - \\frac{1}{2} + \\frac{1}{3} - \\frac{1}{4} + \\cdots = \\ln 2$
+
+Check: $b_n = 1/n > 0$ ✓, $1/(n+1) < 1/n$ ✓, $1/n \\to 0$ ✓ → Converges by AST.
+
+**Non-Example:**
+
+$\\sum_{n=1}^\\infty \\frac{(-1)^{n+1} n}{n+1}$
+
+$b_n = n/(n+1) \\to 1 \\neq 0$. The third condition FAILS. This series diverges by the Divergence Test.
+
+### Why "Eventually Decreasing" Suffices
+
+$b_n$ only needs to be decreasing for $n \\ge N$ (some fixed $N$). A finite number of "bad" terms don't affect convergence.
+
+To show decreasing: verify $b_{n+1} < b_n$, or equivalently $b_{n+1}/b_n < 1$, or show $f'(x) < 0$ for the continuous version.`
+    },
+    {
+      id: 'as1-mc1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Practice: Applying the AST**',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: 'Which condition is NOT required by the Alternating Series Test?',
+            options: ['$b_n$ is differentiable', '$b_n > 0$', '$b_n$ is decreasing', '$\\lim b_n = 0$'],
+            correctAnswer: 0,
+            explanation: 'The AST requires positivity, (eventual) monotone decrease, and limit zero. Differentiability is not required — it\'s just a convenient way to check if $b_n$ is decreasing.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: '$\\sum_{n=1}^\\infty \\frac{(-1)^n}{\\sqrt{n+3}}$. Does this converge by AST?',
+            options: ['Yes — all three conditions met', 'No — $b_n$ not decreasing', 'No — $b_n \\not\\to 0$', 'Inconclusive'],
+            correctAnswer: 0,
+            explanation: '$b_n = 1/\\sqrt{n+3}$: positive ✓, decreasing ✓, $\\to 0$ ✓. Converges by AST.'
+          },
+          {
+            question: '$\\sum_{n=1}^\\infty (-1)^n \\frac{n^2}{n^2+1}$. This series:',
+            options: ['Diverges ($b_n \\to 1$)', 'Converges by AST', 'Converges absolutely', 'Inconclusive'],
+            correctAnswer: 0,
+            explanation: '$b_n = n^2/(n^2+1) \\to 1 \\neq 0$. Diverges by the Divergence Test (not even close to meeting AST conditions).'
           }
         ]
       }
     },
     {
-      id: 'calcbcalternating-p1-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcbcalternating-p1-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
-      }
-    },
-    {
-      id: 'calcbcalternating-p1-dropdown',
+      id: 'as1-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Verify AST Conditions**',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'For $\\sum (-1)^{n+1} \\frac{\\ln n}{n}$, is $b_n = \\ln n / n$ eventually decreasing?',
+            options: ['Yes — $f\'(x) = (1-\\ln x)/x^2 < 0$ for $x > e$', 'No — $\\ln n$ increases', 'Cannot determine'],
+            correctAnswers: ['Yes — $f\'(x) = (1-\\ln x)/x^2 < 0$ for $x > e$'],
+            hints: ['Take $f(x) = \\ln x / x$ and find $f\'(x)$.'],
+            explanation: '$f\'(x) = (1 - \\ln x)/x^2 < 0$ when $\\ln x > 1$, i.e., $x > e$. So $b_n$ is decreasing for $n \\ge 3$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
-          },
-          {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcbcalternating-p1-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Core Concepts**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcbcalternating-p1-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'For the same series, does $b_n \\to 0$?',
+            options: ['Yes — by L\'Hôpital\'s Rule, $\\ln n / n \\to 0$', 'No — $\\ln n \\to \\infty$', 'Depends on starting index'],
+            correctAnswers: ['Yes — by L\'Hôpital\'s Rule, $\\ln n / n \\to 0$'],
+            hints: ['Apply L\'Hôpital: $\\lim \\ln x / x = \\lim (1/x)/1 = 0$.'],
+            explanation: '$\\lim_{n\\to\\infty} \\ln n / n = 0$ by L\'Hôpital. All three AST conditions met → converges.'
           }
         ]
       }
+    },
+    {
+      id: 'as1-input',
+      type: 'input-box' as const,
+      content: '**Quick Check**',
+      exercise: {
+        question: 'For $\\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{2n-1} = 1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + \\cdots$, this famous series converges to $\\pi/k$. What is $k$?',
+        correctAnswer: '4',
+        acceptableAnswers: ['4'],
+        hints: ['This is the Leibniz formula: $\\arctan(1) = \\pi/4$.'],
+        explanation: '$\\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{2n-1} = \\arctan(1) = \\pi/4$. So $k = 4$.'
+      }
+    },
+    {
+      id: 'as1-summary',
+      type: 'text' as const,
+      content: `### Summary
+
+- Alternating Series Test: three conditions ($b_n > 0$, decreasing, $\\to 0$)
+- Must verify ALL three explicitly on the AP exam
+- "Eventually decreasing" is sufficient
+- The AST tells you a series converges but does NOT give the sum
+
+> **Next:** Part 2 — Alternating Series Error Bound (Remainder Estimation).`
     }
   ]
-}
+};

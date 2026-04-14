@@ -86,7 +86,9 @@ export const psychGeneticsPart2Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: observable characteristics produced by genes and environment
+
       2) Write the concept that matches: influenced by many genes with small effects
+
       3) Write the concept that matches: when environmental effects differ by genotype
 
       Use the exact vocabulary term from this part.

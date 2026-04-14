@@ -62,7 +62,9 @@ Perpendicular slope $m = -\\frac{1}{2}$: $y = -\\frac{1}{2}x + 3$
 **Find the slope** 🧮
 
 1) Parallel to $y = 5x - 2$: $m = ?$
+
 2) Perpendicular to $y = -3x + 1$: $m = ?$
+
 3) Perpendicular to $y = \\frac{1}{4}x$: $m = ?$
       `,
       exercise: {

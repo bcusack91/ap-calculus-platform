@@ -88,7 +88,9 @@ export const oChemAlkynesPart1Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: alkyne bearing acidic proton on sp carbon
+
       2) Term for: strong nucleophile/base formed by deprotonation
+
       3) Product pattern expected under NaNH2, liquid NH3
       `,
       exercise: {

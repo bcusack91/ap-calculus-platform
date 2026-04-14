@@ -96,7 +96,9 @@ $$= \\frac{2}{x+1} \\cdot \\frac{(x+1)^2}{4} = \\frac{2(x+1)}{4} = \\frac{x+1}{2
 **Rational Expression Practice** 🧮
 
 1) Simplify $\\frac{x^2 - 25}{x + 5}$. The result is $x - \\;?$ (enter the number)
+
 2) $\\frac{1}{3} + \\frac{1}{6} = \\frac{?}{6}$ (enter the numerator)
+
 3) For $\\frac{x}{x - 4}$, what value of $x$ makes the expression undefined?
       `,
       exercise: {

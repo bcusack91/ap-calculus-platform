@@ -86,7 +86,9 @@ export const psychMoodPsychPart5Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: co-occurrence of two or more disorders
+
       2) Write the concept that matches: early period of subtle symptoms before full disorder onset
+
       3) Write the concept that matches: persistent low mood or loss of interest with functional impairment
 
       Use the exact vocabulary term from this part.

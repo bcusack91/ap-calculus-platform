@@ -68,7 +68,9 @@ $$y - (-2) = 3(x - 1) \\implies y = 3x - 5$$
 **Convert to slope-intercept form** 🧮
 
 1) $y - 4 = 3(x - 1)$ → $b = ?$
+
 2) $y + 2 = -1(x - 5)$ → $b = ?$
+
 3) Through $(2, 8)$ and $(6, 0)$ → $m = ?$
       `,
       exercise: {

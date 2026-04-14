@@ -80,7 +80,9 @@ $$-3 < x - 5 < 3 \\implies 2 < x < 8$$
 Give the boundary value (the number $x$ is compared to).
 
 1) $5x + 2 > 27$ → $x > \\text{?}$
+
 2) $-3x \\geq 12$ → $x \\leq \\text{?}$
+
 3) $|x - 1| < 4$ → lower bound of $x$ is?
       `,
       exercise: {

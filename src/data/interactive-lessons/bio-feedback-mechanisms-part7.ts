@@ -95,7 +95,9 @@ export const bioFeedbackPart7Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **hormone lowering blood glucose by promoting uptake/storage**
+
       2) Term for this definition: **hormone raising blood glucose by mobilizing reserves**
+
       3) Term for this definition: **physiological control of body temperature**
       `,
       exercise: {

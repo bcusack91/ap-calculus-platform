@@ -3,7 +3,7 @@
  *
  * A ~40-question assessment that dynamically samples from exit quiz pools
  * across all 4 ACT sections (English, Math, Reading, Science) to identify
- * student strengths and weaknesses. Supports alternate forms (A/B) for retakes.
+ * student strengths and weaknesses. Supports 10 alternate forms (1–10) for retakes.
  *
  * Follows the same pattern as the MCAT and SAT diagnostic generators:
  *   1. Loads questions dynamically from exit quiz banks
@@ -11,6 +11,8 @@
  *   3. Scores per-section and maps to ACT composite (1–36)
  *   4. Recommends specific topics based on missed questions
  */
+
+export const TOTAL_FORMS = 10
 
 import { generateExitQuiz, type ExitQuizQuestion } from '../exit-quizzes'
 
@@ -35,7 +37,7 @@ export interface ACTDiagnosticDomain {
 }
 
 export interface ACTDiagnosticTestData {
-  form: 'A' | 'B'
+  form: number
   questions: ACTDiagnosticQuestion[]
   domains: ACTDiagnosticDomain[]
   totalQuestions: number
@@ -60,7 +62,7 @@ export interface ACTRecommendedTopic {
 }
 
 export interface ACTDiagnosticResults {
-  form: 'A' | 'B'
+  form: number
   totalCorrect: number
   totalQuestions: number
   percentage: number
@@ -77,7 +79,7 @@ export interface ACTDiagnosticResults {
 }
 
 export type ACTDiagnosticGenerationOptions = {
-  form?: 'A' | 'B'
+  form?: number
   excludeQuestionIds?: Set<string>
 }
 
@@ -202,17 +204,21 @@ export { DIAGNOSTIC_DOMAINS }
 /*  Helpers                                                            */
 /* ------------------------------------------------------------------ */
 
-function shuffle<T>(items: T[]): T[] {
+function mulberry32(seed: number): () => number {
+  return () => { let t = (seed += 0x6d2b79f5); t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }
+}
+
+function shuffle<T>(items: T[], rng: () => number = Math.random): T[] {
   const out = [...items]
   for (let i = out.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1))
+    const j = Math.floor(rng() * (i + 1))
     ;[out[i], out[j]] = [out[j], out[i]]
   }
   return out
 }
 
-function pickRandom<T>(items: T[], count: number): T[] {
-  return shuffle(items).slice(0, Math.min(count, items.length))
+function pickRandom<T>(items: T[], count: number, rng: () => number = Math.random): T[] {
+  return shuffle(items, rng).slice(0, Math.min(count, items.length))
 }
 
 function hashString(input: string): string {
@@ -235,23 +241,24 @@ function selectByDifficulty(
   pool: ACTDiagnosticQuestion[],
   count: number,
   mix?: { easy: number; medium: number; hard: number },
+  rng: () => number = Math.random,
 ): ACTDiagnosticQuestion[] {
-  if (!mix) return pickRandom(pool, count)
+  if (!mix) return pickRandom(pool, count, rng)
 
   const easy = pool.filter(q => inferDifficulty(q) === 'easy')
   const medium = pool.filter(q => inferDifficulty(q) === 'medium')
   const hard = pool.filter(q => inferDifficulty(q) === 'hard')
 
   const selected = [
-    ...pickRandom(easy, mix.easy),
-    ...pickRandom(medium, mix.medium),
-    ...pickRandom(hard, mix.hard),
+    ...pickRandom(easy, mix.easy, rng),
+    ...pickRandom(medium, mix.medium, rng),
+    ...pickRandom(hard, mix.hard, rng),
   ]
 
   if (selected.length < count) {
     const usedIds = new Set(selected.map(q => q.id))
     const remaining = pool.filter(q => !usedIds.has(q.id))
-    selected.push(...pickRandom(remaining, count - selected.length))
+    selected.push(...pickRandom(remaining, count - selected.length, rng))
   }
 
   return dedupeQuestions(selected).slice(0, count)
@@ -311,13 +318,14 @@ function canonicalizeSlug(slug: string): string {
 export async function generateACTDiagnosticTest(
   options: ACTDiagnosticGenerationOptions = {},
 ): Promise<ACTDiagnosticTestData> {
-  const form = options.form ?? 'A'
+  const form = options.form ?? 1
+  const rng = mulberry32(form * 7919)
   const excludeIds = options.excludeQuestionIds ?? new Set<string>()
   const allQuestions: ACTDiagnosticQuestion[] = []
 
   for (const domain of DIAGNOSTIC_DOMAINS) {
     const domainPool: ACTDiagnosticQuestion[] = []
-    const shuffledSlugs = shuffle(domain.slugs)
+    const shuffledSlugs = shuffle(domain.slugs, rng)
 
     for (const slug of shuffledSlugs) {
       try {
@@ -355,7 +363,7 @@ export async function generateACTDiagnosticTest(
     const poolToSample = unseen.length >= domain.questionCount ? unseen : domainPool
 
     // Select with difficulty balancing
-    const selected = selectByDifficulty(poolToSample, domain.questionCount, domain.difficultyMix)
+    const selected = selectByDifficulty(poolToSample, domain.questionCount, domain.difficultyMix, rng)
     allQuestions.push(...selected)
   }
 
@@ -363,7 +371,7 @@ export async function generateACTDiagnosticTest(
   const sectionOrder: ACTDiagnosticQuestion['section'][] = ['english', 'math', 'reading', 'science']
   const ordered: ACTDiagnosticQuestion[] = []
   for (const section of sectionOrder) {
-    ordered.push(...shuffle(allQuestions.filter(q => q.section === section)))
+    ordered.push(...shuffle(allQuestions.filter(q => q.section === section), rng))
   }
 
   return {
@@ -410,7 +418,7 @@ function percentToACTScore(pct: number): number {
 }
 
 export function scoreACTDiagnostic(
-  form: 'A' | 'B',
+  form: number,
   questions: ACTDiagnosticQuestion[],
   answers: Record<number, number>,
 ): ACTDiagnosticResults {
@@ -535,7 +543,8 @@ export function scoreACTDiagnostic(
 /*  Form alternation helper                                            */
 /* ------------------------------------------------------------------ */
 
-export function pickNextForm(previousForms: ('A' | 'B')[]): 'A' | 'B' {
-  if (previousForms.length === 0) return 'A'
-  return previousForms[previousForms.length - 1] === 'A' ? 'B' : 'A'
+export function pickNextForm(previousForms: number[]): number {
+  if (previousForms.length === 0) return 1
+  const last = previousForms[previousForms.length - 1]
+  return last >= TOTAL_FORMS ? 1 : last + 1
 }

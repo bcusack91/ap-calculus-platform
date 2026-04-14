@@ -77,7 +77,9 @@ $$\\text{Avg speed} = \\frac{\\text{total distance}}{\\text{total time}} = \\fra
 **Word Problem Workout** 🧮
 
 1) The sum of three consecutive integers is 48. What is the smallest?
+
 2) A cyclist travels at 15 mph for $t$ hours covering 60 miles. What is $t$?
+
 3) A phone plan charges \\$25/month plus \\$0.10 per text. If the bill is \\$40, how many texts were sent?
       `,
       exercise: {

@@ -86,7 +86,9 @@ export const psychRetrievalPart5Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: active recall used to strengthen later remembering
+
       2) Write the concept that matches: challenging learning conditions that improve long-term retention
+
       3) Write the concept that matches: stimulus that helps access stored information
 
       Use the exact vocabulary term from this part.

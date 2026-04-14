@@ -88,7 +88,9 @@ export const oChemAminoAcidsPart3Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: amide linkage between amino acid residues
+
       2) Term for: linear amino acid sequence
+
       3) Product pattern expected under base-promoted hydrolysis
       `,
       exercise: {

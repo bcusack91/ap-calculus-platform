@@ -98,7 +98,9 @@ Store B is cheaper.
 **Ratio & Rate Practice** 🧮
 
 1) Solve: $\\frac{4}{9} = \\frac{x}{27}$. What is $x$?
+
 2) A printer prints $120$ pages in $8$ minutes. Pages per minute?
+
 3) Markers and pens are in a $3 : 4$ ratio. If there are $28$ pens, how many markers?
       `,
       exercise: {

@@ -86,7 +86,9 @@ export const psychBrainPart6Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: an all-or-none electrical impulse traveling down the axon
+
       2) Write the concept that matches: the junction where one neuron communicates with another cell
+
       3) Write the concept that matches: a neurotransmitter linked to reward, movement, and motivation
 
       Use the exact vocabulary term from this part.

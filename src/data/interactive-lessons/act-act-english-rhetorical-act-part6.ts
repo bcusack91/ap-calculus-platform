@@ -132,7 +132,9 @@ The ACT sometimes asks: *"Suppose the writer's goal was to [X]. Does this essay 
 For each description, write the author's primary purpose (inform, persuade, entertain, describe, or explain).
 
 1) A newspaper article reporting election results with no editorial commentary → __________
+
 2) A speech urging citizens to volunteer at local food banks → __________
+
 3) A step-by-step guide on how to change a car tyre → __________
       `,
       exercise: {

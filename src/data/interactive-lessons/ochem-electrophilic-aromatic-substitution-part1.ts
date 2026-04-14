@@ -88,7 +88,9 @@ export const oChemEASPart1Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: arenium ion intermediate after electrophile attack
+
       2) Term for: substituent that donates electron density to o/p positions
+
       3) Product pattern expected under HNO3/H2SO4
       `,
       exercise: {

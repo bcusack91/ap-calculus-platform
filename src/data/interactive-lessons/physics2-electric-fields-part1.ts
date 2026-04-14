@@ -135,7 +135,9 @@ The key insight: **the field is a property of the source charge**. It doesn't de
 A point charge $Q = +3\\ \\mu\\text{C}$ is at the origin. Use $k = 9 \\times 10^9\\ \\text{N}\\cdot\\text{m}^2/\\text{C}^2$.
 
 1) Electric field magnitude at $r = 0.10$ m (in N/C)
+
 2) Electric field magnitude at $r = 0.30$ m (in N/C)
+
 3) Ratio $E_{0.10}/E_{0.30}$
       `,
       exercise: {

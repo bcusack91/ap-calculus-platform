@@ -88,7 +88,9 @@ export const oChemStereoPart3Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: non-superimposable mirror-image stereoisomers
+
       2) Term for: stereoisomers that are not mirror images
+
       3) Product pattern expected under Br2 addition to alkene
       `,
       exercise: {

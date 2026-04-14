@@ -128,7 +128,9 @@ A helium balloon has volume 0.50 m³. The envelope + string mass is 0.010 kg.
 $\\rho_{\\text{air}} = 1.2$ kg/m³, $\\rho_{\\text{He}} = 0.16$ kg/m³.
 
 1) Buoyant force on the balloon (in N)
+
 2) Total weight (helium + envelope) (in N)
+
 3) Maximum payload mass it can lift (in kg)
 
 *Round all answers to 3 significant figures.*

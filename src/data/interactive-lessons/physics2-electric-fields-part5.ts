@@ -119,7 +119,9 @@ It's tiny in everyday terms, but perfectly sized for atomic/nuclear physics.
 Two charges: $q_1 = +3\\ \\mu\\text{C}$ and $q_2 = -6\\ \\mu\\text{C}$, initially 0.30 m apart.
 
 1) Initial PE of the system (in J, include sign)
+
 2) They move to 0.10 m apart. New PE (in J)
+
 3) Work done by the electric force during this move (in J, include sign)
 
 *Round all answers to 3 significant figures.*

@@ -86,7 +86,9 @@ export const psychPrenatalPart5Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: supporting a child just beyond current independent ability
+
       2) Write the concept that matches: understanding that others have distinct beliefs and perspectives
+
       3) Write the concept that matches: fertilized egg in the earliest stage of development
 
       Use the exact vocabulary term from this part.

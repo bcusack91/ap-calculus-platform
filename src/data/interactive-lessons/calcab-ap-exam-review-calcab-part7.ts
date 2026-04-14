@@ -2,185 +2,181 @@ export const calcabExamReviewPart7Data = {
   topicSlug: 'ap-exam-review-calcab',
   sections: [
     {
-      id: 'calcabexamreview-p7-intro',
+      id: 'examrev7-intro',
       type: 'text' as const,
-      content: `
-# Ap Exam Review
+      content: `# AP Exam Review \u2014 Full Practice Exam
 
-**Part 7 of 7 — Mixed Review**
+**Part 7 of 7**
 
-This lesson is built to match the interactive gold-standard format: concise theory, worked examples, and SAT/AP-style practice.
+---
 
-## Key Ideas
+### AP Calculus AB Exam Format
 
-- Identify the governing concept before computing.
-- Keep algebra organized line-by-line.
-- Use units and interpretation checks at the end.
+| Section | Questions | Time | Calculator |
+|:---:|:---|:---:|:---:|
+| MC Part A | 30 questions | 60 min | No |
+| MC Part B | 15 questions | 45 min | Yes |
+| FRQ Part A | 2 questions | 30 min | Yes |
+| FRQ Part B | 4 questions | 60 min | No |
 
-## Formula Snapshot
+### Formula Quick Reference
 
-When appropriate, use:
+| Category | Key Formula |
+|:---|:---|
+| Derivative | $\\frac{d}{dx}[f(g(x))] = f'(g(x))\\cdot g'(x)$ |
+| FTC 1 | $\\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x)$ |
+| FTC 2 | $\\int_a^b f(x)\\,dx = F(b)-F(a)$ |
+| MVT | $f'(c) = \\frac{f(b)-f(a)}{b-a}$ |
+| Average value | $\\frac{1}{b-a}\\int_a^b f(x)\\,dx$ |
+| Disk volume | $\\pi\\int_a^b [R(x)]^2\\,dx$ |
+| Accumulation | $f(b) = f(a) + \\int_a^b f'(t)\\,dt$ |
 
-$$
-\\text{Rate of Change} = \\frac{\Delta y}{\Delta x},
-\quad
-\\text{Average Value} = \\frac{1}{b-a}\int_a^b f(x)\,dx
-$$
-
-and interpret what the final value means in context.
-      `
+> **Key Fact:** You must show ALL work on FRQs. An answer without justification earns 0 points.`
     },
     {
-      id: 'calcabexamreview-p7-mcq1',
+      id: 'examrev7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Quick Check**
-      `,
+      content: '**Practice Exam \u2014 No Calculator** \ud83c\udfaf',
       exercise: {
         questions: [
           {
-            question: 'Which approach is most reliable when solving a multi-step calculus problem under time pressure?',
-            options: [
-              'Do mental math and skip writing steps',
-              'Write structured steps and verify the final interpretation',
-              'Start with answer choices and guess quickly',
-              'Memorize only one formula and apply it everywhere'
-            ],
-            correctAnswer: 1,
-            explanation: 'Structured steps reduce errors and make it easier to catch sign mistakes, domain errors, and interpretation issues.'
+            question: '$\\lim_{x\\to 0}\\frac{\\tan x}{x} =$',
+            options: ['$1$', '$0$', '$\\infty$', 'DNE'],
+            correctAnswer: 0,
+            explanation: '$\\frac{\\tan x}{x} = \\frac{\\sin x}{x}\\cdot\\frac{1}{\\cos x} \\to 1\\cdot 1 = 1$.'
           },
           {
-            question: 'A result has correct algebra but incorrect units. What is most likely true?',
-            options: [
-              'The result is still fully correct',
-              'Units never matter in AP/SAT-style problems',
-              'The setup or interpretation step is flawed',
-              'Only graphing questions require units'
-            ],
-            correctAnswer: 2,
-            explanation: 'Incorrect units usually indicate a setup mismatch or a misinterpreted quantity (rate vs amount, etc.).'
+            question: '$\\frac{d}{dx}[e^{x^2}] =$',
+            options: ['$2xe^{x^2}$', '$e^{x^2}$', '$x^2 e^{x^2-1}$', '$2e^{x^2}$'],
+            correctAnswer: 0,
+            explanation: 'Chain rule: $e^{x^2}\\cdot 2x = 2xe^{x^2}$.'
+          },
+          {
+            question: '$\\int_0^{\\pi} \\sin x\\,dx =$',
+            options: ['$2$', '$0$', '$1$', '$-2$'],
+            correctAnswer: 0,
+            explanation: '$[-\\cos x]_0^{\\pi} = -\\cos\\pi + \\cos 0 = 1+1 = 2$.'
+          },
+          {
+            question: 'If $f(x) = x^4 - 4x^3$, then $f$ has an inflection point at:',
+            options: ['$x = 0$ and $x = 2$', '$x = 3$ only', '$x = 0$ only', '$x = 2$ only'],
+            correctAnswer: 0,
+            explanation: '$f\'\'(x) = 12x^2 - 24x = 12x(x-2) = 0$ at $x=0,2$. Sign changes at both \u2192 both are inflection points.'
           }
         ]
       }
     },
     {
-      id: 'calcabexamreview-p7-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-Suppose a model is $f(x)=x^2-4x+3$ on $[0,4]$.
-
-1. **Evaluate key values:**
-   $f(0)=3$, $f(2)=-1$, $f(4)=3$.
-2. **Average rate of change** from 0 to 4:
-   $$
-   \\frac{f(4)-f(0)}{4-0} = \\frac{3-3}{4} = 0
-   $$
-3. **Interpretation:** symmetry can produce zero average change even when the function varies in between.
-
-### Common Trap
-
-Students often report only the numeric value and skip interpretation. On AP-style items, interpretation can be required for full credit.
-      `
-    },
-    {
-      id: 'calcabexamreview-p7-inputs',
-      type: 'input-boxes' as const,
-      content: `
-**Compute and enter exact values when possible.**
-
-1) For $g(x)=3x-5$, compute $g(6)$.
-
-2) For $h(x)=x^2$, compute average rate of change on $[1,5]$.
-
-3) If $p(x)=2x+1$, solve $p(x)=11$.
-      `,
+      id: 'examrev7-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Practice Exam \u2014 Calculator Active** \ud83d\udcf1',
       exercise: {
-        boxes: 3,
-        correctAnswers: ['13', '6', '5'],
-        hint1: 'Substitute x = 6 directly into 3x - 5.',
-        hint2: 'Use (h(5)-h(1))/(5-1).',
-        hint3: 'Set 2x+1=11 and isolate x.',
-        explanation: '1) 3(6)-5=13. 2) (25-1)/4=6. 3) 2x=10 so x=5.'
+        questions: [
+          {
+            question: 'The area enclosed by $y = \\sin x$ and $y = 0$ from $x = 0$ to $x = 2\\pi$ is:',
+            options: ['$4$', '$0$', '$2$', '$2\\pi$'],
+            correctAnswer: 0,
+            explanation: '$\\int_0^{\\pi}\\sin x\\,dx + \\int_{\\pi}^{2\\pi}|\\sin x|\\,dx = 2 + 2 = 4$. Must use absolute value for area.'
+          },
+          {
+            question: 'A particle\u2019s velocity is $v(t) = t^2 - 4t + 3$. The particle changes direction at:',
+            options: ['$t = 1$ and $t = 3$', '$t = 2$ only', '$t = 1$ only', '$t = 3$ only'],
+            correctAnswer: 0,
+            explanation: '$v(t) = (t-1)(t-3) = 0$ at $t=1,3$. $v$ changes sign at both \u2192 direction changes.'
+          },
+          {
+            question: 'If $\\int_0^5 f(x)\\,dx = 12$ and $\\int_0^3 f(x)\\,dx = 7$, then $\\int_3^5 f(x)\\,dx =$',
+            options: ['$5$', '$19$', '$-5$', '$7$'],
+            correctAnswer: 0,
+            explanation: '$\\int_0^5 = \\int_0^3 + \\int_3^5 \\implies 12 = 7 + \\int_3^5 \\implies \\int_3^5 = 5$.'
+          }
+        ]
       }
     },
     {
-      id: 'calcabexamreview-p7-dropdown',
+      id: 'examrev7-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Match each prompt to the best strategy.**
-      `,
+      content: '**Quick-fire theorem check.** \ud83d\udd0d',
       exercise: {
         dropdowns: [
           {
-            label: 'Question asks for average rate of change on [a,b]',
-            options: ['Use difference quotient', 'Use product rule', 'Use chain rule']
+            label: 'To guarantee $f(c)=0$ for some $c$ in $(a,b)$, use:',
+            options: ['IVT', 'MVT', 'EVT', 'FTC'],
+            correctAnswers: ['IVT'],
+            hints: ['Which theorem guarantees an intermediate value?'],
+            explanation: 'IVT: if $f(a)$ and $f(b)$ have opposite signs and $f$ is continuous, then $f(c)=0$.'
           },
           {
-            label: 'Question asks for total accumulated change from a to b',
-            options: ['Use definite integral', 'Use midpoint only', 'Use slope at one point']
+            label: 'To guarantee $f\'(c) = \\frac{f(b)-f(a)}{b-a}$, use:',
+            options: ['MVT', 'IVT', 'EVT', 'Rolle\u2019s Theorem'],
+            correctAnswers: ['MVT'],
+            hints: ['Relates the average rate to an instantaneous rate.'],
+            explanation: 'Mean Value Theorem: some tangent line has the same slope as the secant line.'
           },
           {
-            label: 'Question asks for instantaneous rate at x=c',
-            options: ['Use derivative at c', 'Use area formula', 'Use endpoint average']
-          }
-        ],
-        correctAnswers: ['Use difference quotient', 'Use definite integral', 'Use derivative at c'],
-        hint1: 'Average rate uses two function values.',
-        hint2: 'Accumulation over interval is area/net change.',
-        hint3: 'Instantaneous rate = tangent slope.',
-        explanation: 'These mappings separate three commonly-confused prompts: average change, accumulated change, and instantaneous change.'
-      }
-    },
-    {
-      id: 'calcabexamreview-p7-strategy',
-      type: 'text' as const,
-      content: `
-## Exam Strategy Focus
-
-For **Mixed Review**, use this checklist:
-
-1. Translate the question into a target quantity.
-2. Choose the smallest correct method.
-3. Compute carefully with clean algebra.
-4. Interpret in sentence form.
-
-If you finish early, do a 10-second validation: sign, magnitude, and units.
-      `
-    },
-    {
-      id: 'calcabexamreview-p7-mcq2',
-      type: 'multiple-choice' as const,
-      content: `
-**AP/SAT-Style Wrap-Up**
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student gets a negative value for a quantity that represents area. Best immediate action?',
-            options: [
-              'Keep it negative because calculators are always right',
-              'Recheck setup and use absolute value if question asks geometric area',
-              'Round heavily until positive',
-              'Ignore and move on'
-            ],
-            correctAnswer: 1,
-            explanation: 'Signed integrals can be negative, but geometric area is nonnegative unless explicitly stated otherwise.'
-          },
-          {
-            question: 'Which habit most improves reliability on free-response and multi-step questions?',
-            options: [
-              'Skipping units to save time',
-              'Combining all algebra into one line',
-              'Annotating each step with what it computes',
-              'Only checking the final digit'
-            ],
-            correctAnswer: 2,
-            explanation: 'Step annotations reduce conceptual drift and make error detection much faster under test conditions.'
+            label: 'To guarantee $f$ has an absolute max on $[a,b]$, use:',
+            options: ['EVT', 'MVT', 'IVT', 'FTC'],
+            correctAnswers: ['EVT'],
+            hints: ['Which theorem guarantees extrema exist on a closed interval?'],
+            explanation: 'Extreme Value Theorem: continuous function on a closed interval attains max and min.'
           }
         ]
       }
+    },
+    {
+      id: 'examrev7-input',
+      type: 'input-box' as const,
+      content: '**FRQ-style computation.** \u270d\ufe0f',
+      exercise: {
+        question: 'Let $g(x) = \\int_0^x (t^2 - 4)\\,dt$. Find $g(3)$.',
+        correctAnswer: '-3',
+        acceptableAnswers: ['-3'],
+        hints: [
+          '$g(3) = \\int_0^3 (t^2-4)\\,dt$.',
+          '$= \\left[\\frac{t^3}{3} - 4t\\right]_0^3$.',
+          '$= (9 - 12) - 0 = -3$.'
+        ],
+        explanation: '$g(3) = \\frac{27}{3} - 12 = 9 - 12 = -3$.'
+      }
+    },
+    {
+      id: 'examrev7-strategies',
+      type: 'text' as const,
+      content: `### AP Exam Day Strategies
+
+| Strategy | Details |
+|:---|:---|
+| Time management | ~2 min/MC question, 15 min/FRQ |
+| MC tips | Eliminate obviously wrong answers first |
+| FRQ tips | Show all work; label answers with units |
+| Common mistakes | Forgetting $+C$, sign errors, chain rule omission |
+| Calculator section | Use it for graphing and numerical integration |
+
+### Common AP Mistakes to Avoid
+
+| Mistake | Correction |
+|:---|:---|
+| Writing $\\int f(x)$ without $dx$ | Always include $dx$ |
+| Forgetting $+C$ on indefinite integrals | Points deducted every time |
+| Not justifying with theorems | Name the theorem (IVT, MVT, etc.) |
+| Plugging in before differentiating | Differentiate first, THEN substitute |
+| Confusing displacement vs. distance | Distance uses $|v(t)|$ |
+
+---
+
+### Completion Checklist
+
+| Unit | Review Topic | Status |
+|:---:|:---|:---:|
+| 1\u20132 | Limits & Continuity | \u2705 |
+| 3\u20134 | Differentiation Rules | \u2705 |
+| 5 | Applications of Derivatives | \u2705 |
+| 6 | Integration Techniques | \u2705 |
+| 7\u20138 | Applications of Integration | \u2705 |
+| 7 | Differential Equations | \u2705 |
+| \u2014 | Full Practice Exam | \u2705 |
+
+**You\u2019ve completed the AP Calculus AB Exam Review! Good luck on exam day!** \ud83c\udf89`
     }
   ]
-}
+};

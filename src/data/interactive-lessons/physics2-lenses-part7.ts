@@ -112,8 +112,11 @@ This final part ties together everything about lenses: the thin lens equation, s
 A 4.0 cm tall object is placed 24 cm from a converging lens with $f = 8.0$ cm.
 
 1) Image distance $d_i$ (in cm)
+
 2) Magnification $m$
+
 3) Image height $h_i$ (in cm, negative if inverted)
+
 4) Is the image real or virtual? (enter "real" or "virtual")
 
 *Round all answers to 3 significant figures.*

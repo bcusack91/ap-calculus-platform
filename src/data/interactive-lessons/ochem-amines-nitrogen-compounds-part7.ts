@@ -88,7 +88,9 @@ export const oChemAminesPart7Data = {
       **Input Practice — enter exact chemistry terms**
       
       1) Term for: C=N product from carbonyl + primary amine
+
       2) Term for: quaternary ammonium gives less substituted alkene
+
       3) Product pattern expected under R-X + NH3 (excess)
       `,
       exercise: {

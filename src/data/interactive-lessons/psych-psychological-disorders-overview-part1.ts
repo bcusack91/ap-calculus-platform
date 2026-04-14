@@ -86,7 +86,9 @@ export const psychDisordersPart1Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: standardized symptom and duration requirements for diagnosis
+
       2) Write the concept that matches: consistency of diagnostic judgments across clinicians or time
+
       3) Write the concept that matches: extent to which a diagnosis captures a distinct clinical condition
 
       Use the exact vocabulary term from this part.

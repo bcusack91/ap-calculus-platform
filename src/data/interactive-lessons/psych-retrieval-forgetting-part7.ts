@@ -86,7 +86,9 @@ export const psychRetrievalPart7Data = {
       **Applied Recall (exact term answers)** ✍️
 
       1) Write the concept that matches: recall improves when internal state matches learning state
+
       2) Write the concept that matches: old learning disrupts new learning
+
       3) Write the concept that matches: new learning disrupts old memories
 
       Use the exact vocabulary term from this part.

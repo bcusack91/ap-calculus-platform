@@ -8,7 +8,7 @@ export const satLinearEquationsPart1Data = {
 
 **Part 1 of 7 — Slope-Intercept and Standard Form**
 
-The SAT Math section heavily tests your ability to work with linear equations. You'll see these in both calculator and no-calculator modules.
+The SAT Math section heavily tests your ability to work with linear equations. You'll see these in both calculator and no-calculator modules. Mastering the two main forms — and converting between them — is essential.
 
 ### Slope-Intercept Form: $y = mx + b$
 
@@ -25,13 +25,30 @@ $$y = 0.10x + 45$$
 - x-intercept: set $y = 0$ → $x = C/A$
 - y-intercept: set $x = 0$ → $y = C/B$
 
-### Converting Between Forms
+---
 
-To convert $3x + 2y = 12$ to slope-intercept:
-$$2y = -3x + 12$$
-$$y = -\\frac{3}{2}x + 6$$
+### Worked Example 1
 
-So slope $= -3/2$ and y-intercept $= 6$.
+**Convert $5x + 4y = 20$ to slope-intercept form and identify the intercepts.**
+
+| Step | Work |
+|------|------|
+| Isolate $y$ | $4y = -5x + 20$ |
+| Divide by 4 | $y = -\\frac{5}{4}x + 5$ |
+| Read slope | $m = -5/4$ |
+| Read y-intercept | $b = 5$ → point $(0, 5)$ |
+| Find x-intercept | Set $y = 0$: $5x = 20$ → $x = 4$ → point $(4, 0)$ |
+
+### Worked Example 2
+
+**A streaming service costs \\$12/month after a one-time \\$5 setup fee. Write the total cost $C$ after $m$ months and find the cost after 6 months.**
+
+| Step | Work |
+|------|------|
+| Identify slope | \\$12/month → $m = 12$ |
+| Identify y-intercept | \\$5 setup → $b = 5$ |
+| Write equation | $C = 12m + 5$ |
+| Evaluate at $m = 6$ | $C = 12(6) + 5 = 77$ |
 
 ### SAT Trap ⚠️
 
@@ -65,14 +82,99 @@ When the SAT gives you standard form and asks for the slope, students often forg
       }
     },
     {
+      id: 'le1-text2',
+      type: 'text' as const,
+      content: `### Point-Slope Form: $y - y_1 = m(x - x_1)$
+
+This form is ideal when you know a point on the line and the slope.
+
+### Worked Example 3
+
+**Write the equation of a line through $(2, 7)$ with slope $3$.**
+
+| Step | Work |
+|------|------|
+| Point-slope setup | $y - 7 = 3(x - 2)$ |
+| Distribute | $y - 7 = 3x - 6$ |
+| Slope-intercept | $y = 3x + 1$ |
+
+### Worked Example 4
+
+**A line passes through $(-1, 4)$ and $(3, -8)$. Find its equation in standard form.**
+
+| Step | Work |
+|------|------|
+| Find slope | $m = \\frac{-8 - 4}{3 - (-1)} = \\frac{-12}{4} = -3$ |
+| Point-slope | $y - 4 = -3(x + 1)$ |
+| Expand | $y = -3x - 3 + 4 = -3x + 1$ |
+| Standard form | $3x + y = 1$ |
+
+### Slope Formula Shortcut
+
+$$m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{\\text{rise}}{\\text{run}}$$
+
+> **SAT Tip:** When two points are given and the question asks for the equation, always compute the slope first.`
+    },
+    {
+      id: 'le1-quiz2',
+      type: 'multiple-choice' as const,
+      content: '**Building Equations from Points** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: 'A line passes through $(1, 2)$ and $(4, 11)$. What is the y-intercept?',
+            options: ['$-1$', '$1$', '$2$', '$3$'],
+            correctAnswer: 0,
+            explanation: 'Slope $= (11-2)/(4-1) = 9/3 = 3$. Using point $(1,2)$: $2 = 3(1) + b$ → $b = -1$.'
+          },
+          {
+            question: 'Which equation represents a line through $(0, -4)$ and $(6, 8)$?',
+            options: ['$y = 2x - 4$', '$y = -2x + 4$', '$y = 2x + 4$', '$y = \\frac{1}{2}x - 4$'],
+            correctAnswer: 0,
+            explanation: 'Slope $= (8-(-4))/(6-0) = 12/6 = 2$. Y-intercept is the $y$-value at $x = 0$, which is $-4$. So $y = 2x - 4$.'
+          },
+          {
+            question: 'The line $y - 5 = -2(x - 3)$ has the same slope as which equation?',
+            options: ['$4x + 2y = 9$', '$2x + 4y = 9$', '$-2x + y = 1$', '$x - 2y = 3$'],
+            correctAnswer: 0,
+            explanation: 'The given line has slope $-2$. Check $4x + 2y = 9$: $2y = -4x + 9$ → $y = -2x + 4.5$. Slope is $-2$. ✓'
+          }
+        ]
+      }
+    },
+    {
+      id: 'le1-dropdown',
+      type: 'dropdown-select' as const,
+      content: '**Identify the Form** 🔍\n\nFor each equation, select the correct form it is written in.',
+      exercise: {
+        dropdowns: [
+          { label: '$y = 4x - 7$', options: ['Slope-intercept', 'Standard form', 'Point-slope'] },
+          { label: '$3x + 5y = 15$', options: ['Slope-intercept', 'Standard form', 'Point-slope'] },
+          { label: '$y - 2 = 6(x - 1)$', options: ['Slope-intercept', 'Standard form', 'Point-slope'] },
+          { label: '$y = -\\frac{1}{3}x + 9$', options: ['Slope-intercept', 'Standard form', 'Point-slope'] }
+        ],
+        correctAnswers: ['Slope-intercept', 'Standard form', 'Point-slope', 'Slope-intercept'],
+        hint1: 'Slope-intercept has $y$ isolated: $y = mx + b$.',
+        hint2: 'Standard form has both variables on one side: $Ax + By = C$.',
+        hint3: 'Point-slope has the pattern $y - y_1 = m(x - x_1)$.',
+        explanation: '$y = 4x - 7$ is slope-intercept ($y = mx + b$). $3x + 5y = 15$ is standard form ($Ax + By = C$). $y - 2 = 6(x - 1)$ is point-slope. $y = -\\frac{1}{3}x + 9$ is slope-intercept.'
+      }
+    },
+    {
       id: 'le1-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- **Slope-intercept** ($y = mx + b$): slope is the coefficient of $x$, y-int is the constant
-- **Standard form** ($Ax + By = C$): slope $= -A/B$, NOT $A/B$
+| Form | Template | When to Use |
+|------|----------|-------------|
+| Slope-intercept | $y = mx + b$ | Know slope & y-intercept |
+| Standard | $Ax + By = C$ | Finding intercepts; slope $= -A/B$ |
+| Point-slope | $y - y_1 = m(x - x_1)$ | Know a point & slope |
+
 - Real-world problems: the rate = slope, the starting value = y-intercept
-- Always isolate $y$ before identifying the slope from standard form`
+- Always isolate $y$ before identifying the slope from standard form
+- The slope formula $m = \\frac{y_2 - y_1}{x_2 - x_1}$ works with any two points on the line
+- On the SAT, check which form the answer choices use before you start solving`
     }
   ]
 };

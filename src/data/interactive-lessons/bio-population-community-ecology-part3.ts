@@ -95,7 +95,9 @@ export const bioPopulationPart3Data = {
       Fill in each blank with the exact biological term.
       
       1) Term for this definition: **maximum sustainable population size in an environment**
+
       2) Term for this definition: **factor whose effect changes with population density**
+
       3) Term for this definition: **life-history pattern favoring high reproduction in unstable settings**
       `,
       exercise: {

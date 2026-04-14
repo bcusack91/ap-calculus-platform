@@ -154,8 +154,11 @@ Use $E_n = -13.6/n^2$ eV and $\\lambda = 1240/\\Delta E$ (nm).
 A hydrogen atom transitions from the $n = 5$ level to the $n = 2$ level.
 
 1) Energy of $n = 5$ level (in eV, 3 significant figures)
+
 2) Energy of $n = 2$ level (in eV, 3 significant figures)
+
 3) Energy of emitted photon (in eV, 3 significant figures)
+
 4) Wavelength of emitted photon (in nm, round to nearest whole number)
       `,
       exercise: {

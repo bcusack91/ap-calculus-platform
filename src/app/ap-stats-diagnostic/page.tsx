@@ -79,9 +79,9 @@ export default function APStatsDiagnosticPage() {
     const previousForms = history
       .map(h => {
         const r = h.results as Record<string, unknown> | null
-        return r?.form as 'A' | 'B' | undefined
+        return Number(r?.form)
       })
-      .filter((f): f is 'A' | 'B' => f === 'A' || f === 'B')
+      .filter((f): f is number => Number.isFinite(f) && f >= 1)
 
     const form = pickNextForm(previousForms)
     const data = generateAPStatsDiagnosticTest(form)
@@ -382,7 +382,7 @@ export default function APStatsDiagnosticPage() {
               <ol className="space-y-2 text-sm text-blue-700 dark:text-blue-400 list-decimal list-inside">
                 <li>Review the recommended modules above</li>
                 <li>Complete each module&apos;s lessons, practice problems, and flashcards</li>
-                <li>Come back and take the next diagnostic test (Form {results.form === 'A' ? 'B' : 'A'})</li>
+                <li>Come back and take the next diagnostic test (Form {results.form >= 10 ? 1 : results.form + 1})</li>
                 <li>Get updated personalized recommendations</li>
                 <li>Repeat until you&apos;re scoring 4+ across all domains!</li>
               </ol>
@@ -462,7 +462,7 @@ export default function APStatsDiagnosticPage() {
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">What to Expect</h3>
             <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              {['~33 questions spanning all 4 AP Statistics content areas', '45 minute time limit', 'Estimated AP score (1–5) with per-unit breakdown', '3-5 personalized module recommendations', 'Alternating forms (A/B) with different questions each time'].map(item => (
+              {['~33 questions spanning all 6 AP Statistics domains', '45 minute time limit', 'Estimated AP score (1–5) with per-unit breakdown', '3-5 personalized module recommendations', '10 unique forms with different questions each time'].map(item => (
                 <li key={item} className="flex items-start gap-2">
                   <svg className="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                   {item}
