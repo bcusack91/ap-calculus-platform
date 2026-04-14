@@ -16,7 +16,9 @@ export async function GET() {
         status: 'IN_PROGRESS',
       },
       orderBy: { lastAccessed: 'desc' },
-      include: {
+      select: {
+        masteryLevel: true,
+        lastAccessed: true,
         topic: {
           select: {
             title: true,

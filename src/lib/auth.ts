@@ -107,20 +107,27 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           token.role = dbUser.role
           token.stripeCustomerId = dbUser.stripeCustomerId ?? undefined
           token.emailVerified = dbUser.emailVerified
+          token.lastRefreshed = Date.now()
         }
       }
 
-      // Refresh emailVerified (and role) from DB on every session update
-      // so changes like email verification are reflected without re-login
+      // Refresh role/emailVerified from DB periodically (every 5 minutes)
+      // instead of on every single auth() call, to avoid redundant DB queries.
+      // Changes like email verification or role upgrades will reflect within 5 min.
       if (!user && token.sub) {
-        const dbUser = await prisma.user.findUnique({
-          where: { id: token.sub },
-          select: { emailVerified: true, role: true, stripeCustomerId: true },
-        })
-        if (dbUser) {
-          token.emailVerified = dbUser.emailVerified
-          token.role = dbUser.role
-          token.stripeCustomerId = dbUser.stripeCustomerId ?? undefined
+        const lastRefreshed = (token.lastRefreshed as number) || 0
+        const fiveMinutes = 5 * 60 * 1000
+        if (Date.now() - lastRefreshed > fiveMinutes) {
+          const dbUser = await prisma.user.findUnique({
+            where: { id: token.sub },
+            select: { emailVerified: true, role: true, stripeCustomerId: true },
+          })
+          if (dbUser) {
+            token.emailVerified = dbUser.emailVerified
+            token.role = dbUser.role
+            token.stripeCustomerId = dbUser.stripeCustomerId ?? undefined
+          }
+          token.lastRefreshed = Date.now()
         }
       }
 

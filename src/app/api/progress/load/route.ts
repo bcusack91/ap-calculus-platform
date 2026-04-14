@@ -23,10 +23,25 @@ export async function GET(request: Request) {
       )
     }
     
-    // Get topic ID from slug
+    // Get topic and user progress in a single query
     const topic = await prisma.topic.findUnique({
       where: { slug: topicSlug },
-      select: { id: true } // Only select ID for efficiency
+      select: {
+        id: true,
+        topicProgress: {
+          where: { userId: session.user.id },
+          select: {
+            status: true,
+            masteryLevel: true,
+            timeSpent: true,
+            lastAccessed: true,
+            completedAt: true,
+            variant: true,
+            failedExitParts: true,
+          },
+          take: 1,
+        },
+      },
     })
 
     if (!topic) {
@@ -36,27 +51,19 @@ export async function GET(request: Request) {
       )
     }
 
-    // Get user's progress for this topic
-    const progress = await prisma.topicProgress.findUnique({
-      where: {
-        userId_topicId: {
-          userId: session.user.id,
-          topicId: topic.id,
-        }
-      }
-    })
+    const progress = topic.topicProgress[0] ?? null
 
     if (!progress) {
       return NextResponse.json({
         exists: false,
-        topicId: topic.id, // Return topicId for caching
+        topicId: topic.id,
         progress: null
       })
     }
 
     return NextResponse.json({
       exists: true,
-      topicId: topic.id, // Return topicId for caching
+      topicId: topic.id,
       progress: {
         status: progress.status,
         masteryLevel: progress.masteryLevel,

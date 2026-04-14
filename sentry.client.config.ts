@@ -4,8 +4,8 @@ Sentry.init({
   dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || '',
   enabled: !!process.env.NEXT_PUBLIC_SENTRY_DSN,
 
-  // Performance monitoring
-  tracesSampleRate: process.env.NODE_ENV === 'production' ? 0.1 : 1.0,
+  // Performance monitoring — keep low to minimize compute overhead
+  tracesSampleRate: process.env.NODE_ENV === 'production' ? 0.01 : 1.0,
 
   // Session replay (optional — only if you want it)
   replaysSessionSampleRate: 0,

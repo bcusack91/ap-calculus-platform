@@ -88,14 +88,7 @@ const getCachedAnalytics = unstable_cache(
     quizAttemptsToday,
     roleCounts,
     signupsByDay,
-    activeLearnerUsersWeek,
-    quizTakerUsersWeek,
-    diagnosticUsersWeek,
-    exitQuizUsersWeek,
-    activeLearnerUsersPrevWeek,
-    quizTakerUsersPrevWeek,
-    diagnosticUsersPrevWeek,
-    exitQuizUsersPrevWeek,
+    funnelCounts,
     templateBreakdownRaw,
     ctaTypeBreakdownRaw,
     ctaTypeTrendRaw,
@@ -123,46 +116,27 @@ const getCachedAnalytics = unstable_cache(
       GROUP BY DATE("createdAt")
       ORDER BY date ASC
     `,
-    prisma.topicProgress.findMany({
-      where: { lastAccessed: { gte: weekAgo } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-    prisma.quizAttempt.findMany({
-      where: { startedAt: { gte: weekAgo } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-    prisma.diagnosticTest.findMany({
-      where: { createdAt: { gte: weekAgo } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-    prisma.exitQuizAttempt.findMany({
-      where: { completedAt: { gte: weekAgo } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-    prisma.topicProgress.findMany({
-      where: { lastAccessed: { gte: prevWeekAgo, lt: weekAgo } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-    prisma.quizAttempt.findMany({
-      where: { startedAt: { gte: prevWeekAgo, lt: weekAgo } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-    prisma.diagnosticTest.findMany({
-      where: { createdAt: { gte: prevWeekAgo, lt: weekAgo } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-    prisma.exitQuizAttempt.findMany({
-      where: { completedAt: { gte: prevWeekAgo, lt: weekAgo } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
+    // Single raw SQL query replaces 8 separate findMany+distinct calls
+    prisma.$queryRaw<[{
+      active_curr: bigint
+      quiz_curr: bigint
+      diag_curr: bigint
+      exit_curr: bigint
+      active_prev: bigint
+      quiz_prev: bigint
+      diag_prev: bigint
+      exit_prev: bigint
+    }]>`
+      SELECT
+        (SELECT COUNT(DISTINCT "userId") FROM "TopicProgress" WHERE "lastAccessed" >= ${weekAgo}) AS active_curr,
+        (SELECT COUNT(DISTINCT "userId") FROM "QuizAttempt" WHERE "startedAt" >= ${weekAgo}) AS quiz_curr,
+        (SELECT COUNT(DISTINCT "userId") FROM "DiagnosticTest" WHERE "createdAt" >= ${weekAgo}) AS diag_curr,
+        (SELECT COUNT(DISTINCT "userId") FROM "ExitQuizAttempt" WHERE "completedAt" >= ${weekAgo}) AS exit_curr,
+        (SELECT COUNT(DISTINCT "userId") FROM "TopicProgress" WHERE "lastAccessed" >= ${prevWeekAgo} AND "lastAccessed" < ${weekAgo}) AS active_prev,
+        (SELECT COUNT(DISTINCT "userId") FROM "QuizAttempt" WHERE "startedAt" >= ${prevWeekAgo} AND "startedAt" < ${weekAgo}) AS quiz_prev,
+        (SELECT COUNT(DISTINCT "userId") FROM "DiagnosticTest" WHERE "createdAt" >= ${prevWeekAgo} AND "createdAt" < ${weekAgo}) AS diag_prev,
+        (SELECT COUNT(DISTINCT "userId") FROM "ExitQuizAttempt" WHERE "completedAt" >= ${prevWeekAgo} AND "completedAt" < ${weekAgo}) AS exit_prev
+    `,
     prisma.$queryRaw<{ pageTemplate: string | null; clicks: bigint; destinations: bigint }[]>`
       SELECT
         COALESCE("pageTemplate", 'unknown') AS "pageTemplate",
@@ -232,15 +206,15 @@ const getCachedAnalytics = unstable_cache(
     count: Number(row.count),
   }))
 
-  const activeLearners = activeLearnerUsersWeek.length
-  const quizTakers = quizTakerUsersWeek.length
-  const diagnosticTakers = diagnosticUsersWeek.length
-  const exitQuizTakers = exitQuizUsersWeek.length
+  const activeLearners = Number(funnelCounts[0].active_curr)
+  const quizTakers = Number(funnelCounts[0].quiz_curr)
+  const diagnosticTakers = Number(funnelCounts[0].diag_curr)
+  const exitQuizTakers = Number(funnelCounts[0].exit_curr)
 
-  const activeLearnersPrev = activeLearnerUsersPrevWeek.length
-  const quizTakersPrev = quizTakerUsersPrevWeek.length
-  const diagnosticTakersPrev = diagnosticUsersPrevWeek.length
-  const exitQuizTakersPrev = exitQuizUsersPrevWeek.length
+  const activeLearnersPrev = Number(funnelCounts[0].active_prev)
+  const quizTakersPrev = Number(funnelCounts[0].quiz_prev)
+  const diagnosticTakersPrev = Number(funnelCounts[0].diag_prev)
+  const exitQuizTakersPrev = Number(funnelCounts[0].exit_prev)
 
   const pct = (num: number, den: number) => (den > 0 ? Math.round((num / den) * 100) : 0)
   const deltaPct = (curr: number, prev: number) => (prev > 0 ? Math.round(((curr - prev) / prev) * 100) : 0)

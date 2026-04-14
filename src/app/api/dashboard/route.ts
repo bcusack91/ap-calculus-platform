@@ -21,7 +21,11 @@ export async function GET() {
       // Topic progress across all courses
       prisma.topicProgress.findMany({
         where: { userId },
-        include: {
+        select: {
+          status: true,
+          masteryLevel: true,
+          timeSpent: true,
+          lastAccessed: true,
           topic: {
             select: {
               title: true,
@@ -55,7 +59,10 @@ export async function GET() {
       // Recent activity (last 10 topic interactions)
       prisma.topicProgress.findMany({
         where: { userId },
-        include: {
+        select: {
+          status: true,
+          masteryLevel: true,
+          lastAccessed: true,
           topic: {
             select: {
               title: true,

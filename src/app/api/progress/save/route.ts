@@ -121,10 +121,17 @@ export async function POST(request: Request) {
         // Get the full topic with content
         const fullTopic = await prisma.topic.findUnique({
           where: { id: topic.id },
-          include: {
-            flashcards: true,
-            exampleProblems: true,
-          }
+          select: {
+            id: true,
+            title: true,
+            textContent: true,
+            flashcards: {
+              select: { id: true, lessonPart: true },
+            },
+            exampleProblems: {
+              select: { question: true, solution: true },
+            },
+          },
         })
 
         if (fullTopic && fullTopic.flashcards.length === 0) {
@@ -145,34 +152,34 @@ export async function POST(request: Request) {
           const topFlashcards = getTopFlashcards(candidates, 8)
 
           if (topFlashcards.length > 0) {
-            // Create flashcards in database
-            await Promise.all(
-              topFlashcards.map(async (card) => {
-                const flashcard = await prisma.flashcard.create({
+            // Create flashcards in a single batch, then initialize progress in a batch
+            const createdFlashcards = await prisma.$transaction(
+              topFlashcards.map((card) =>
+                prisma.flashcard.create({
                   data: {
                     topicId: fullTopic.id,
                     front: card.front,
                     back: card.back,
                     hint: card.hint,
-                    isPremium: false
-                  }
+                    isPremium: false,
+                  },
+                  select: { id: true },
                 })
-
-                // Initialize progress for the user
-                await prisma.flashcardProgress.create({
-                  data: {
-                    userId: session.user.id,
-                    flashcardId: flashcard.id,
-                    easeFactor: 2.5,
-                    interval: 0,
-                    repetitions: 0,
-                    nextReview: new Date(),
-                    lastReviewed: new Date(),
-                    reviewCount: 0
-                  }
-                })
-              })
+              )
             )
+
+            await prisma.flashcardProgress.createMany({
+              data: createdFlashcards.map((fc) => ({
+                userId: session.user.id,
+                flashcardId: fc.id,
+                easeFactor: 2.5,
+                interval: 0,
+                repetitions: 0,
+                nextReview: new Date(),
+                lastReviewed: new Date(),
+                reviewCount: 0,
+              })),
+            })
 
             flashcardsCreated = true
             flashcardCount = topFlashcards.length
@@ -225,23 +232,19 @@ export async function POST(request: Request) {
           totalFlashcards = fullTopic.flashcards.length
           
           if (uninitializedCards.length > 0) {
-            // Initialize all cards that should be available for completed parts
-
-            
-            for (const flashcard of uninitializedCards) {
-              await prisma.flashcardProgress.create({
-                data: {
-                  userId: session.user.id,
-                  flashcardId: flashcard.id,
-                  easeFactor: 2.5,
-                  interval: 0,
-                  repetitions: 0,
-                  nextReview: new Date(),
-                  lastReviewed: new Date(),
-                  reviewCount: 0
-                }
-              })
-            }
+            // Initialize all cards in a single batch query
+            await prisma.flashcardProgress.createMany({
+              data: uninitializedCards.map((flashcard) => ({
+                userId: session.user.id,
+                flashcardId: flashcard.id,
+                easeFactor: 2.5,
+                interval: 0,
+                repetitions: 0,
+                nextReview: new Date(),
+                lastReviewed: new Date(),
+                reviewCount: 0,
+              })),
+            })
             
             flashcardsCreated = true
             flashcardCount = uninitializedCards.length

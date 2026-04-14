@@ -3,9 +3,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { unstable_cache } from 'next/cache'
 
-export const dynamic = 'force-dynamic'
-
-// Course list rarely changes — cache for 5 minutes on the server
+// Course list rarely changes — cache for 30 minutes on the server
 const getCachedCourses = unstable_cache(
   () =>
     prisma.course.findMany({
@@ -13,7 +11,7 @@ const getCachedCourses = unstable_cache(
       orderBy: { order: 'asc' },
     }),
   ['navbar-courses'],
-  { revalidate: 300, tags: ['courses'] }
+  { revalidate: 1800, tags: ['courses'] }
 )
 
 /**
@@ -39,7 +37,7 @@ export async function GET() {
           return user?.avatarData ?? null
         },
         [`navbar-avatar-${session.user.id}`],
-        { revalidate: 300 }
+        { revalidate: 1800 }
       )
       avatarData = await getCachedAvatar(session.user.id)
     }

@@ -69,8 +69,8 @@ export function Navbar() {
     if (cached) {
       try {
         const parsed = JSON.parse(cached)
-        // Use cached data if under 5 minutes old
-        if (parsed._ts && Date.now() - parsed._ts < 5 * 60 * 1000) {
+        // Use cached data if under 30 minutes old
+        if (parsed._ts && Date.now() - parsed._ts < 30 * 60 * 1000) {
           const timeoutId = setTimeout(() => {
             setCourses(parsed.courses ?? [])
             if (parsed.avatarData) setAvatarData(parsed.avatarData)

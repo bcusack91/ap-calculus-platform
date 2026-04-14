@@ -46,67 +46,37 @@ export async function calculateWeeklyFunnelAlertSnapshot(): Promise<WeeklyFunnel
   const prevWindowStart = new Date(windowEnd)
   prevWindowStart.setDate(prevWindowStart.getDate() - 14)
 
-  const [
-    activeLearnerUsersWeek,
-    quizTakerUsersWeek,
-    diagnosticUsersWeek,
-    exitQuizUsersWeek,
-    activeLearnerUsersPrevWeek,
-    quizTakerUsersPrevWeek,
-    diagnosticUsersPrevWeek,
-    exitQuizUsersPrevWeek,
-  ] = await Promise.all([
-    prisma.topicProgress.findMany({
-      where: { lastAccessed: { gte: windowStart } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-    prisma.quizAttempt.findMany({
-      where: { startedAt: { gte: windowStart } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-    prisma.diagnosticTest.findMany({
-      where: { createdAt: { gte: windowStart } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-    prisma.exitQuizAttempt.findMany({
-      where: { completedAt: { gte: windowStart } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-    prisma.topicProgress.findMany({
-      where: { lastAccessed: { gte: prevWindowStart, lt: windowStart } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-    prisma.quizAttempt.findMany({
-      where: { startedAt: { gte: prevWindowStart, lt: windowStart } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-    prisma.diagnosticTest.findMany({
-      where: { createdAt: { gte: prevWindowStart, lt: windowStart } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-    prisma.exitQuizAttempt.findMany({
-      where: { completedAt: { gte: prevWindowStart, lt: windowStart } },
-      distinct: ['userId'],
-      select: { userId: true },
-    }),
-  ])
+  // Use COUNT(DISTINCT) raw SQL instead of findMany + distinct to avoid full table scans
+  const [funnelCounts] = await prisma.$queryRaw<[{
+    active_curr: bigint
+    quiz_curr: bigint
+    diag_curr: bigint
+    exit_curr: bigint
+    active_prev: bigint
+    quiz_prev: bigint
+    diag_prev: bigint
+    exit_prev: bigint
+  }]>`
+    SELECT
+      (SELECT COUNT(DISTINCT "userId") FROM "TopicProgress" WHERE "lastAccessed" >= ${windowStart}) AS active_curr,
+      (SELECT COUNT(DISTINCT "userId") FROM "QuizAttempt" WHERE "startedAt" >= ${windowStart}) AS quiz_curr,
+      (SELECT COUNT(DISTINCT "userId") FROM "DiagnosticTest" WHERE "createdAt" >= ${windowStart}) AS diag_curr,
+      (SELECT COUNT(DISTINCT "userId") FROM "ExitQuizAttempt" WHERE "completedAt" >= ${windowStart}) AS exit_curr,
+      (SELECT COUNT(DISTINCT "userId") FROM "TopicProgress" WHERE "lastAccessed" >= ${prevWindowStart} AND "lastAccessed" < ${windowStart}) AS active_prev,
+      (SELECT COUNT(DISTINCT "userId") FROM "QuizAttempt" WHERE "startedAt" >= ${prevWindowStart} AND "startedAt" < ${windowStart}) AS quiz_prev,
+      (SELECT COUNT(DISTINCT "userId") FROM "DiagnosticTest" WHERE "createdAt" >= ${prevWindowStart} AND "createdAt" < ${windowStart}) AS diag_prev,
+      (SELECT COUNT(DISTINCT "userId") FROM "ExitQuizAttempt" WHERE "completedAt" >= ${prevWindowStart} AND "completedAt" < ${windowStart}) AS exit_prev
+  `
 
-  const activeLearners = activeLearnerUsersWeek.length
-  const quizTakers = quizTakerUsersWeek.length
-  const diagnosticTakers = diagnosticUsersWeek.length
-  const exitQuizTakers = exitQuizUsersWeek.length
+  const activeLearners = Number(funnelCounts.active_curr)
+  const quizTakers = Number(funnelCounts.quiz_curr)
+  const diagnosticTakers = Number(funnelCounts.diag_curr)
+  const exitQuizTakers = Number(funnelCounts.exit_curr)
 
-  const activeLearnersPrev = activeLearnerUsersPrevWeek.length
-  const quizTakersPrev = quizTakerUsersPrevWeek.length
-  const diagnosticTakersPrev = diagnosticUsersPrevWeek.length
-  const exitQuizTakersPrev = exitQuizUsersPrevWeek.length
+  const activeLearnersPrev = Number(funnelCounts.active_prev)
+  const quizTakersPrev = Number(funnelCounts.quiz_prev)
+  const diagnosticTakersPrev = Number(funnelCounts.diag_prev)
+  const exitQuizTakersPrev = Number(funnelCounts.exit_prev)
 
   const quizFromActivePct = pct(quizTakers, activeLearners)
   const diagnosticFromQuizPct = pct(diagnosticTakers, quizTakers)

@@ -18,7 +18,9 @@ export async function GET() {
       },
       orderBy: { masteryLevel: 'asc' },
       take: 10,
-      include: {
+      select: {
+        topicId: true,
+        masteryLevel: true,
         topic: {
           select: {
             title: true,
