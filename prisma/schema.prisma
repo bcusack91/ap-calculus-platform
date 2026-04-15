@@ -58,6 +58,8 @@ model User {
   notes                     StudentNote[]
   studyPlans                StudyPlan[]
   challengeParticipations   ChallengeParticipant[]
+  asyncChallengesSent       AsyncChallenge[]              @relation("AsyncChallengeSender")
+  asyncChallengesReceived   AsyncChallenge[]              @relation("AsyncChallengeRecipient")
   satTestAttempts           SatTestAttempt[]
   mcatTestAttempts          McatTestAttempt[]
 }
@@ -539,6 +541,46 @@ model CompetitiveMatch {
   @@index([startedAt])
   @@index([player1Id])
   @@index([player2Id])
+}
+
+// Async (turn-based) challenges — challenger plays first, then shares link for opponent to play later
+model AsyncChallenge {
+  id               String              @id @default(cuid())
+  challengerId     String
+  recipientId      String?             // null until recipient accepts
+  topicSlug        String
+  questionCount    Int                 @default(10)
+  timeLimit        Int                 @default(300) // seconds per player
+  questions        Json                // pre-generated questions array
+  challengerScore  Int                 @default(0)
+  challengerTime   Int?                // milliseconds to complete
+  challengerAnswers Json?              // array of { questionIndex, answerIndex, correct, timeMs }
+  recipientScore   Int?
+  recipientTime    Int?
+  recipientAnswers Json?
+  winnerId         String?
+  status           AsyncChallengeStatus @default(CHALLENGER_PLAYING)
+  expiresAt        DateTime            // challenge expires if not accepted
+  challengerPlayedAt DateTime?
+  recipientPlayedAt  DateTime?
+  completedAt      DateTime?
+  createdAt        DateTime            @default(now())
+  updatedAt        DateTime            @updatedAt
+  challenger       User                @relation("AsyncChallengeSender", fields: [challengerId], references: [id], onDelete: Cascade)
+  recipient        User?               @relation("AsyncChallengeRecipient", fields: [recipientId], references: [id], onDelete: SetNull)
+
+  @@index([challengerId])
+  @@index([recipientId])
+  @@index([status])
+  @@index([expiresAt])
+}
+
+enum AsyncChallengeStatus {
+  CHALLENGER_PLAYING  // challenger is still answering
+  WAITING_FOR_OPPONENT // challenger done, waiting for recipient
+  RECIPIENT_PLAYING    // recipient is answering
+  COMPLETED            // both done
+  EXPIRED              // not accepted before deadline
 }
 
 model MMRHistory {

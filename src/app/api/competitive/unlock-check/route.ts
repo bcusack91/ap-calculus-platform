@@ -42,10 +42,16 @@ export async function GET() {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }
 
-    // Check for ANY completed topic with 60%+ mastery (lowered from 80% for accessibility)
+    // Check for ANY topic with meaningful progress (any non-zero mastery or started status)
+    // This is intentionally lenient — if a student has started any lesson, they can try competitive mode
     const completedTopics = user.topicProgress.filter(tp => 
       (tp.status === 'COMPLETED' || tp.status === 'MASTERED') ||
       (tp.masteryLevel || 0) >= 0.6
+    )
+
+    // Also consider any topic the user has at least started (mastery > 0 or IN_PROGRESS)
+    const startedTopics = user.topicProgress.filter(tp =>
+      tp.status === 'IN_PROGRESS' || (tp.masteryLevel || 0) > 0
     )
     
     const completedTopicSlugsFromProgress = completedTopics.map(tp => tp.topic.slug)
@@ -103,7 +109,12 @@ export async function GET() {
     const uniqueDiagnosticSlugs = [...new Set(passedDiagnosticSlugs)]
 
     const completedTopicSlugs = [...new Set([...completedTopicSlugsFromProgress, ...passedQuizSlugs])]
+    // Include started topics in the slug list for category matching
+    const startedTopicSlugs = startedTopics.map(tp => tp.topic.slug)
+    const allProgressSlugs = [...new Set([...completedTopicSlugs, ...startedTopicSlugs])]
     const hasCompletedAnyTopic = completedTopicSlugs.length > 0 || uniqueDiagnosticSlugs.length > 0
+    // Unlock if user has ANY progress at all (completed, started, quiz, or diagnostic)
+    const hasAnyProgress = allProgressSlugs.length > 0 || uniqueDiagnosticSlugs.length > 0
 
     // Check for teacher-granted competitive access
     const teacherGrants = user.competitiveGrantsReceived || []
@@ -120,106 +131,106 @@ export async function GET() {
       cats.forEach(c => grantedCategories.add(c))
     }
 
-    // Map completed topic slugs to competitive categories
-    // A competitive category is available if the user completed at least one matching topic
+    // Map topic slugs to competitive categories
+    // A competitive category is available if the user has progress in at least one matching topic
     // OR if a teacher granted access to that category
     // OR if the user scored 60%+ on a matching diagnostic test
     const competitiveCategories: Record<string, boolean> = {
-      'the-unit-circle': grantAllCategories || grantedCategories.has('the-unit-circle') || completedTopicSlugs.includes('the-unit-circle') || uniqueDiagnosticSlugs.includes('the-unit-circle'),
-      'reflection-refraction': grantAllCategories || grantedCategories.has('reflection-refraction') || completedTopicSlugs.includes('reflection-refraction') || uniqueDiagnosticSlugs.includes('reflection-refraction'),
-      'derivatives': grantAllCategories || grantedCategories.has('derivatives') || uniqueDiagnosticSlugs.includes('derivatives') || completedTopicSlugs.some(s => 
+      'the-unit-circle': grantAllCategories || grantedCategories.has('the-unit-circle') || allProgressSlugs.includes('the-unit-circle') || uniqueDiagnosticSlugs.includes('the-unit-circle'),
+      'reflection-refraction': grantAllCategories || grantedCategories.has('reflection-refraction') || allProgressSlugs.includes('reflection-refraction') || uniqueDiagnosticSlugs.includes('reflection-refraction'),
+      'derivatives': grantAllCategories || grantedCategories.has('derivatives') || uniqueDiagnosticSlugs.includes('derivatives') || allProgressSlugs.some(s => 
         s.includes('derivative') || s.includes('differentiation') || s.includes('definition-of-derivative')
       ),
-      'limits': grantAllCategories || grantedCategories.has('limits') || uniqueDiagnosticSlugs.includes('limits') || completedTopicSlugs.some(s => 
+      'limits': grantAllCategories || grantedCategories.has('limits') || uniqueDiagnosticSlugs.includes('limits') || allProgressSlugs.some(s => 
         s.includes('limit') || s.includes('continuity')
       ),
-      'integrals': grantAllCategories || grantedCategories.has('integrals') || uniqueDiagnosticSlugs.includes('integrals') || completedTopicSlugs.some(s => 
+      'integrals': grantAllCategories || grantedCategories.has('integrals') || uniqueDiagnosticSlugs.includes('integrals') || allProgressSlugs.some(s => 
         s.includes('integral') || s.includes('antiderivative') || s.includes('integration')
       ),
-      'algebra': grantAllCategories || grantedCategories.has('algebra') || uniqueDiagnosticSlugs.includes('algebra') || completedTopicSlugs.some(s => 
+      'algebra': grantAllCategories || grantedCategories.has('algebra') || uniqueDiagnosticSlugs.includes('algebra') || allProgressSlugs.some(s => 
         (s.includes('algebra1') || s.includes('-algebra1')) || s.includes('linear-equation') || s.includes('quadratic') || 
         s.includes('factoring') || s.includes('systems') ||
         s.includes('functions-basics')
       ),
-      'algebra2': grantAllCategories || grantedCategories.has('algebra2') || uniqueDiagnosticSlugs.includes('algebra2') || completedTopicSlugs.some(s => 
+      'algebra2': grantAllCategories || grantedCategories.has('algebra2') || uniqueDiagnosticSlugs.includes('algebra2') || allProgressSlugs.some(s => 
         s.includes('algebra2') || s.includes('-alg2') || s.includes('polynomial-operations') || 
         s.includes('rational-operations') || s.includes('simplifying-rationals') ||
         s.includes('exponential-functions') || s.includes('complex-numbers') ||
         s.includes('logarithm')
       ),
-      'sat-punctuation-commas-semicolons': grantAllCategories || grantedCategories.has('sat-punctuation-commas-semicolons') || completedTopicSlugs.some(s =>
+      'sat-punctuation-commas-semicolons': grantAllCategories || grantedCategories.has('sat-punctuation-commas-semicolons') || allProgressSlugs.some(s =>
         s.includes('sat-punctuation-commas-semicolons')
       ),
-      'sat-punctuation': grantAllCategories || grantedCategories.has('sat-punctuation') || uniqueDiagnosticSlugs.includes('sat-punctuation') || completedTopicSlugs.some(s =>
+      'sat-punctuation': grantAllCategories || grantedCategories.has('sat-punctuation') || uniqueDiagnosticSlugs.includes('sat-punctuation') || allProgressSlugs.some(s =>
         s.includes('sat-punctuation')
       ),
-      'parametric-equations': grantAllCategories || grantedCategories.has('parametric-equations') || completedTopicSlugs.some(s =>
+      'parametric-equations': grantAllCategories || grantedCategories.has('parametric-equations') || allProgressSlugs.some(s =>
         s.includes('parametric-equations') || s.includes('parametric-equations-precalc')
       ),
-      'vectors': grantAllCategories || grantedCategories.has('vectors') || completedTopicSlugs.some(s =>
+      'vectors': grantAllCategories || grantedCategories.has('vectors') || allProgressSlugs.some(s =>
         s.includes('vectors-two-dimensions') || s.includes('vectors-in-plane') || s.includes('vector')
       ),
-      'polar-coordinates': grantAllCategories || grantedCategories.has('polar-coordinates') || completedTopicSlugs.some(s =>
+      'polar-coordinates': grantAllCategories || grantedCategories.has('polar-coordinates') || allProgressSlugs.some(s =>
         s.includes('polar-coordinates') || s.includes('polar-coord')
       ),
-      'ap-biology': grantAllCategories || grantedCategories.has('ap-biology') || uniqueDiagnosticSlugs.includes('ap-biology') || completedTopicSlugs.some(s =>
+      'ap-biology': grantAllCategories || grantedCategories.has('ap-biology') || uniqueDiagnosticSlugs.includes('ap-biology') || allProgressSlugs.some(s =>
         s.includes('ap-biology') || s.includes('apbio') || s.includes('cell-biology') || s.includes('genetics')
       ),
-      'ap-chemistry': grantAllCategories || grantedCategories.has('ap-chemistry') || uniqueDiagnosticSlugs.includes('ap-chemistry') || completedTopicSlugs.some(s =>
+      'ap-chemistry': grantAllCategories || grantedCategories.has('ap-chemistry') || uniqueDiagnosticSlugs.includes('ap-chemistry') || allProgressSlugs.some(s =>
         s.includes('ap-chemistry') || s.includes('apchem') || s.includes('stoichiometry') || s.includes('thermochemistry')
       ),
-      'ap-psychology': grantAllCategories || grantedCategories.has('ap-psychology') || uniqueDiagnosticSlugs.includes('ap-psychology') || completedTopicSlugs.some(s =>
+      'ap-psychology': grantAllCategories || grantedCategories.has('ap-psychology') || uniqueDiagnosticSlugs.includes('ap-psychology') || allProgressSlugs.some(s =>
         s.includes('ap-psychology') || s.includes('appsych') || s.includes('psychology')
       ),
-      'ap-statistics': grantAllCategories || grantedCategories.has('ap-statistics') || uniqueDiagnosticSlugs.includes('ap-statistics') || completedTopicSlugs.some(s =>
+      'ap-statistics': grantAllCategories || grantedCategories.has('ap-statistics') || uniqueDiagnosticSlugs.includes('ap-statistics') || allProgressSlugs.some(s =>
         s.includes('ap-statistics') || s.includes('apstats') || s.includes('statistics')
       ),
-      'ap-physics1': grantAllCategories || grantedCategories.has('ap-physics1') || uniqueDiagnosticSlugs.includes('ap-physics1') || completedTopicSlugs.some(s =>
+      'ap-physics1': grantAllCategories || grantedCategories.has('ap-physics1') || uniqueDiagnosticSlugs.includes('ap-physics1') || allProgressSlugs.some(s =>
         s.includes('ap-physics') || s.includes('physics1') || s.includes('kinematics') || s.includes('newtons-laws')
       ),
-      'sat-math': grantAllCategories || grantedCategories.has('sat-math') || uniqueDiagnosticSlugs.includes('sat-math') || completedTopicSlugs.some(s =>
+      'sat-math': grantAllCategories || grantedCategories.has('sat-math') || uniqueDiagnosticSlugs.includes('sat-math') || allProgressSlugs.some(s =>
         s.includes('sat-math') || s.includes('sat-algebra') || s.includes('sat-problem-solving')
       ),
-      'sat-reading': grantAllCategories || grantedCategories.has('sat-reading') || uniqueDiagnosticSlugs.includes('sat-reading') || completedTopicSlugs.some(s =>
+      'sat-reading': grantAllCategories || grantedCategories.has('sat-reading') || uniqueDiagnosticSlugs.includes('sat-reading') || allProgressSlugs.some(s =>
         s.includes('sat-reading') || s.includes('sat-writing') || s.includes('sat-evidence')
       ),
-      'act-math': grantAllCategories || grantedCategories.has('act-math') || uniqueDiagnosticSlugs.includes('act-math') || completedTopicSlugs.some(s =>
+      'act-math': grantAllCategories || grantedCategories.has('act-math') || uniqueDiagnosticSlugs.includes('act-math') || allProgressSlugs.some(s =>
         s.includes('act-math') || s.includes('act-algebra') || s.includes('act-geometry')
       ),
-      'act-science': grantAllCategories || grantedCategories.has('act-science') || uniqueDiagnosticSlugs.includes('act-science') || completedTopicSlugs.some(s =>
+      'act-science': grantAllCategories || grantedCategories.has('act-science') || uniqueDiagnosticSlugs.includes('act-science') || allProgressSlugs.some(s =>
         s.includes('act-science') || s.includes('act-data') || s.includes('act-research')
       ),
-      'ochem': grantAllCategories || grantedCategories.has('ochem') || uniqueDiagnosticSlugs.includes('ochem') || completedTopicSlugs.some(s =>
+      'ochem': grantAllCategories || grantedCategories.has('ochem') || uniqueDiagnosticSlugs.includes('ochem') || allProgressSlugs.some(s =>
         s.includes('organic-chemistry') || s.includes('ochem') || s.includes('nomenclature')
       ),
-      'precalc': grantAllCategories || grantedCategories.has('precalc') || uniqueDiagnosticSlugs.includes('precalc') || completedTopicSlugs.some(s =>
+      'precalc': grantAllCategories || grantedCategories.has('precalc') || uniqueDiagnosticSlugs.includes('precalc') || allProgressSlugs.some(s =>
         s.includes('precalc') || s.includes('pre-calculus') || s.includes('trigonometric-functions')
       ),
-      'geometry': grantAllCategories || grantedCategories.has('geometry') || uniqueDiagnosticSlugs.includes('geometry') || completedTopicSlugs.some(s =>
+      'geometry': grantAllCategories || grantedCategories.has('geometry') || uniqueDiagnosticSlugs.includes('geometry') || allProgressSlugs.some(s =>
         s.includes('geometry') || s.includes('triangles') || s.includes('circles-geometry') || s.includes('congruence')
       ),
-      'ap-physics2': grantAllCategories || grantedCategories.has('ap-physics2') || uniqueDiagnosticSlugs.includes('ap-physics2') || completedTopicSlugs.some(s =>
+      'ap-physics2': grantAllCategories || grantedCategories.has('ap-physics2') || uniqueDiagnosticSlugs.includes('ap-physics2') || allProgressSlugs.some(s =>
         s.includes('ap-physics-2') || s.includes('physics2') || s.includes('electrostatics') || s.includes('magnetism')
       ),
-      'ap-calculus-ab': grantAllCategories || grantedCategories.has('ap-calculus-ab') || uniqueDiagnosticSlugs.includes('ap-calculus-ab') || completedTopicSlugs.some(s =>
+      'ap-calculus-ab': grantAllCategories || grantedCategories.has('ap-calculus-ab') || uniqueDiagnosticSlugs.includes('ap-calculus-ab') || allProgressSlugs.some(s =>
         s.includes('ap-calculus-ab') || s.includes('calculus-ab') || s.includes('derivative') || s.includes('integral')
       ),
-      'ap-calculus-bc': grantAllCategories || grantedCategories.has('ap-calculus-bc') || uniqueDiagnosticSlugs.includes('ap-calculus-bc') || completedTopicSlugs.some(s =>
+      'ap-calculus-bc': grantAllCategories || grantedCategories.has('ap-calculus-bc') || uniqueDiagnosticSlugs.includes('ap-calculus-bc') || allProgressSlugs.some(s =>
         s.includes('ap-calculus-bc') || s.includes('calculus-bc') || s.includes('series') || s.includes('taylor')
       ),
-      'ap-physics-c-mech': grantAllCategories || grantedCategories.has('ap-physics-c-mech') || uniqueDiagnosticSlugs.includes('ap-physics-c-mech') || completedTopicSlugs.some(s =>
+      'ap-physics-c-mech': grantAllCategories || grantedCategories.has('ap-physics-c-mech') || uniqueDiagnosticSlugs.includes('ap-physics-c-mech') || allProgressSlugs.some(s =>
         s.includes('ap-physics-c-mech') || s.includes('physics-c-mechanics') || s.includes('rotational-dynamics')
       ),
-      'ap-physics-c-em': grantAllCategories || grantedCategories.has('ap-physics-c-em') || uniqueDiagnosticSlugs.includes('ap-physics-c-em') || completedTopicSlugs.some(s =>
+      'ap-physics-c-em': grantAllCategories || grantedCategories.has('ap-physics-c-em') || uniqueDiagnosticSlugs.includes('ap-physics-c-em') || allProgressSlugs.some(s =>
         s.includes('ap-physics-c-em') || s.includes('physics-c-em') || s.includes('gauss-law') || s.includes('ampere')
       ),
-      'ap-precalculus': grantAllCategories || grantedCategories.has('ap-precalculus') || uniqueDiagnosticSlugs.includes('ap-precalculus') || completedTopicSlugs.some(s =>
+      'ap-precalculus': grantAllCategories || grantedCategories.has('ap-precalculus') || uniqueDiagnosticSlugs.includes('ap-precalculus') || allProgressSlugs.some(s =>
         s.includes('ap-precalculus') || s.includes('ap-precalc') || s.includes('polynomial-functions') || s.includes('rational-functions')
       ),
     }
 
     // Compute which specific Algebra 2 subtopics are unlocked
-    const unlockedAlgebra2Subtopics = getUnlockedAlgebra2Subtopics(completedTopicSlugs)
+    const unlockedAlgebra2Subtopics = getUnlockedAlgebra2Subtopics(allProgressSlugs)
     const algebra2SubtopicDetails = unlockedAlgebra2Subtopics.map(st => ({
       key: st,
       label: ALGEBRA2_SUBTOPIC_LABELS[st]
@@ -237,9 +248,9 @@ export async function GET() {
       })
     }
 
-    const shouldUnlock = hasCompletedAnyTopic || hasTeacherGrant
+    const shouldUnlock = hasAnyProgress || hasTeacherGrant
 
-    // Auto-unlock if user has completed any topic with 80%+ mastery OR has a teacher grant
+    // Auto-unlock if user has any topic progress OR has a teacher grant
     if (shouldUnlock && !user.competitiveProfile) {
       const profile = await prisma.competitiveProfile.create({
         data: {
@@ -287,11 +298,25 @@ export async function GET() {
     const topicSlug = bestProgress?.topic.slug || ''
     const topicTitle = bestProgress?.topic.title || 'any topic'
 
+    // Include debug info: all topic progress so we can diagnose unlock issues
+    const allProgress = user.topicProgress.map(tp => ({
+      slug: tp.topic.slug,
+      status: tp.status,
+      mastery: tp.masteryLevel,
+    }))
+
     return NextResponse.json({
       unlocked: false,
       completedTopics: [],
+      debug: {
+        totalTopicProgress: user.topicProgress.length,
+        allProgress,
+        completedTopicSlugs,
+        startedTopicSlugs,
+        hasAnyProgress,
+      },
       requirements: {
-        message: 'Complete any topic with 60%+ mastery, score 70%+ on an entrance quiz, or 60%+ on a diagnostic test to unlock competitive mode. You can also ask your teacher for access or accept a challenge from a friend!',
+        message: 'Start any interactive lesson to unlock competitive mode. You can also ask your teacher for access or accept a challenge from a friend!',
         currentTopic: topicSlug,
         currentTopicTitle: topicTitle,
         masteryLevel: masteryLevel,

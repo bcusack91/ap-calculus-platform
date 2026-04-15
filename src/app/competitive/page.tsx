@@ -40,6 +40,19 @@ interface UnlockCheckResponse {
   justUnlocked?: boolean
 }
 
+interface AsyncChallengeSummary {
+  id: string
+  topicSlug: string
+  questionCount: number
+  status: string
+  challengerScore: number
+  recipientScore: number | null
+  expiresAt: string
+  createdAt: string
+  challenger?: { id: string; name: string | null; image: string | null }
+  recipient?: { id: string; name: string | null; image: string | null } | null
+}
+
 export default function CompetitivePage() {
   const router = useRouter()
   const { data: session, status } = useSession()
@@ -56,6 +69,8 @@ export default function CompetitivePage() {
   const [requirements, setRequirements] = useState<UnlockRequirements | null>(null)
   const [showAIOptions, setShowAIOptions] = useState(false)
   const [activeGroup, setActiveGroup] = useState<string>('all')
+  const [asyncChallenges, setAsyncChallenges] = useState<{ sent: AsyncChallengeSummary[]; received: AsyncChallengeSummary[] }>({ sent: [], received: [] })
+  const [creatingAsync, setCreatingAsync] = useState(false)
 
   // Topic groups for organized navigation
   const topicGroups = [
@@ -260,6 +275,41 @@ export default function CompetitivePage() {
     }
   }, [router, selectedMode])
 
+  const fetchAsyncChallenges = useCallback(async () => {
+    try {
+      const res = await fetch('/api/competitive/async-challenge')
+      if (res.ok) {
+        const data = await res.json()
+        setAsyncChallenges(data)
+      }
+    } catch (e) {
+      console.error('Error fetching async challenges:', e)
+    }
+  }, [])
+
+  const createAsyncChallenge = async () => {
+    setCreatingAsync(true)
+    try {
+      const res = await fetch('/api/competitive/async-challenge', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          topicSlug: selectedTopic,
+          questionCount: 10,
+          timeLimit: 300,
+        }),
+      })
+      const data = await res.json()
+      if (data.challengeId) {
+        router.push(`/competitive/async/${data.challengeId}`)
+      }
+    } catch (e) {
+      console.error('Error creating async challenge:', e)
+    } finally {
+      setCreatingAsync(false)
+    }
+  }
+
   // Redirect to signin if not authenticated
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -271,10 +321,11 @@ export default function CompetitivePage() {
     if (session) {
       const timeoutId = setTimeout(() => {
         void checkUnlock()
+        void fetchAsyncChallenges()
       }, 0)
       return () => clearTimeout(timeoutId)
     }
-  }, [session])
+  }, [session, fetchAsyncChallenges])
 
   useEffect(() => {
     if (inQueue) {
@@ -591,7 +642,7 @@ export default function CompetitivePage() {
         </div>
 
         {/* Game Modes */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <div 
             onClick={() => setSelectedMode('SPEED_RACE')}
             className={`bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 cursor-pointer transition-all ${
@@ -627,11 +678,36 @@ export default function CompetitivePage() {
               Team up! First team to 15 combined points wins!
             </p>
           </div>
+
+          <div 
+            onClick={() => setSelectedMode('ASYNC_CHALLENGE')}
+            className={`bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 cursor-pointer transition-all ${
+              selectedMode === 'ASYNC_CHALLENGE' ? 'ring-4 ring-emerald-500' : ''
+            }`}
+          >
+            <h3 className="text-2xl font-bold mb-2">📬 Async Challenge</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Play now, share the link — your friend plays later!
+            </p>
+          </div>
         </div>
 
         {/* Queue Section */}
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-8">
-          {!inQueue ? (
+          {selectedMode === 'ASYNC_CHALLENGE' ? (
+            <div className="text-center">
+              <button
+                onClick={createAsyncChallenge}
+                disabled={creatingAsync}
+                className="px-12 py-6 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold rounded-lg text-2xl transition-all shadow-lg hover:shadow-xl mb-4 disabled:opacity-50"
+              >
+                {creatingAsync ? 'Creating...' : '📬 Create Async Challenge'}
+              </button>
+              <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">
+                You&apos;ll answer 10 questions, then share a link for your friend to beat your score anytime.
+              </p>
+            </div>
+          ) : !inQueue ? (
             <div className="text-center">
               <button
                 onClick={joinQueue}
@@ -725,7 +801,101 @@ export default function CompetitivePage() {
           </div>
         )}
 
-        {/* Challenge a Friend */}
+        {/* Async Challenges Inbox */}
+        {profile && (asyncChallenges.sent.length > 0 || asyncChallenges.received.length > 0) && (
+          <div className="mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">📬 Your Async Challenges</h3>
+
+            {asyncChallenges.received.filter(c => c.status === 'WAITING_FOR_OPPONENT').length > 0 && (
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-emerald-500 uppercase tracking-wider mb-3">Awaiting Your Response</h4>
+                <div className="space-y-2">
+                  {asyncChallenges.received
+                    .filter(c => c.status === 'WAITING_FOR_OPPONENT')
+                    .map(c => (
+                      <button
+                        key={c.id}
+                        onClick={() => router.push(`/competitive/async/${c.id}`)}
+                        className="w-full flex items-center justify-between p-3 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-700/50 rounded-lg hover:bg-emerald-100 dark:hover:bg-emerald-900/30 transition-colors"
+                      >
+                        <div className="flex items-center gap-3">
+                          <span className="text-2xl">⚔️</span>
+                          <div className="text-left">
+                            <p className="font-semibold text-gray-900 dark:text-white text-sm">
+                              {c.challenger?.name || 'Someone'} challenged you
+                            </p>
+                            <p className="text-xs text-gray-500">{c.topicSlug.replace(/-/g, ' ')} · {c.questionCount} questions</p>
+                          </div>
+                        </div>
+                        <span className="px-3 py-1 bg-emerald-600 text-white text-xs font-bold rounded-full">Play Now</span>
+                      </button>
+                    ))}
+                </div>
+              </div>
+            )}
+
+            {asyncChallenges.sent.filter(c => c.status === 'WAITING_FOR_OPPONENT').length > 0 && (
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-amber-500 uppercase tracking-wider mb-3">Waiting for Opponent</h4>
+                <div className="space-y-2">
+                  {asyncChallenges.sent
+                    .filter(c => c.status === 'WAITING_FOR_OPPONENT')
+                    .map(c => (
+                      <button
+                        key={c.id}
+                        onClick={() => router.push(`/competitive/async/${c.id}`)}
+                        className="w-full flex items-center justify-between p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/50 rounded-lg hover:bg-amber-100 dark:hover:bg-amber-900/30 transition-colors"
+                      >
+                        <div className="flex items-center gap-3">
+                          <span className="text-2xl">⏳</span>
+                          <div className="text-left">
+                            <p className="font-semibold text-gray-900 dark:text-white text-sm">
+                              Your {c.topicSlug.replace(/-/g, ' ')} challenge
+                            </p>
+                            <p className="text-xs text-gray-500">Score: {c.challengerScore}/{c.questionCount} · Waiting for opponent</p>
+                          </div>
+                        </div>
+                        <span className="px-3 py-1 bg-amber-600 text-white text-xs font-bold rounded-full">Share Link</span>
+                      </button>
+                    ))}
+                </div>
+              </div>
+            )}
+
+            {[...asyncChallenges.sent, ...asyncChallenges.received].filter(c => c.status === 'COMPLETED').length > 0 && (
+              <div>
+                <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Completed</h4>
+                <div className="space-y-2">
+                  {[...asyncChallenges.sent, ...asyncChallenges.received]
+                    .filter(c => c.status === 'COMPLETED')
+                    .slice(0, 5)
+                    .map(c => (
+                      <button
+                        key={c.id}
+                        onClick={() => router.push(`/competitive/async/${c.id}`)}
+                        className="w-full flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700/30 border border-gray-200 dark:border-gray-600/50 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700/50 transition-colors"
+                      >
+                        <div className="flex items-center gap-3">
+                          <span className="text-2xl">✅</span>
+                          <div className="text-left">
+                            <p className="font-semibold text-gray-900 dark:text-white text-sm">
+                              {c.topicSlug.replace(/-/g, ' ')}
+                            </p>
+                            <p className="text-xs text-gray-500">
+                              {c.challengerScore} vs {c.recipientScore ?? '?'}
+                            </p>
+                          </div>
+                        </div>
+                        <span className="text-xs text-gray-400">View Results</span>
+                      </button>
+                    ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Challenge a Friend (link-based unlock) */}
         {profile && (
           <div className="mt-8">
             <ChallengeAFriend />

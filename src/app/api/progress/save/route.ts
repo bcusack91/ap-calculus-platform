@@ -69,6 +69,25 @@ export async function POST(request: Request) {
       status = 'NOT_STARTED'
     }
 
+    // Never downgrade mastery or status — fetch existing record first
+    const existing = await prisma.topicProgress.findUnique({
+      where: {
+        userId_topicId: {
+          userId: session.user.id,
+          topicId: topic.id,
+        }
+      },
+      select: { masteryLevel: true, status: true }
+    })
+
+    const statusRank = { NOT_STARTED: 0, IN_PROGRESS: 1, COMPLETED: 2, MASTERED: 3 } as const
+    const effectiveMastery = existing
+      ? Math.max(masteryLevel || 0, existing.masteryLevel || 0)
+      : (masteryLevel || 0)
+    const effectiveStatus = existing && statusRank[existing.status as keyof typeof statusRank] > statusRank[status]
+      ? existing.status as typeof status
+      : status
+
     // Upsert topic progress
     const progress = await prisma.topicProgress.upsert({
       where: {
@@ -78,21 +97,21 @@ export async function POST(request: Request) {
         }
       },
       update: {
-        masteryLevel: masteryLevel || 0,
-        status,
+        masteryLevel: effectiveMastery,
+        status: effectiveStatus,
         lastAccessed: new Date(),
         timeSpent: timeSpent || 0,
-        completedAt: status === 'COMPLETED' || status === 'MASTERED' ? new Date() : null,
+        completedAt: effectiveStatus === 'COMPLETED' || effectiveStatus === 'MASTERED' ? new Date() : null,
         ...(variant !== undefined && { variant }),
         ...(failedExitParts !== undefined && { failedExitParts }),
       },
       create: {
         userId: session.user.id,
         topicId: topic.id,
-        masteryLevel: masteryLevel || 0,
-        status,
+        masteryLevel: effectiveMastery,
+        status: effectiveStatus,
         timeSpent: timeSpent || 0,
-        completedAt: status === 'COMPLETED' || status === 'MASTERED' ? new Date() : null,
+        completedAt: effectiveStatus === 'COMPLETED' || effectiveStatus === 'MASTERED' ? new Date() : null,
         ...(variant !== undefined && { variant }),
         ...(failedExitParts !== undefined && { failedExitParts }),
       }

@@ -1,0 +1,539 @@
+'use client'
+
+import { useEffect, useState, useCallback, useRef } from 'react'
+import { useRouter } from 'next/navigation'
+import { useSession } from 'next-auth/react'
+import { use } from 'react'
+import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import AvatarDisplay from '@/components/AvatarDisplay'
+import { AvatarData } from '@/types/avatar'
+import 'katex/dist/katex.min.css'
+
+interface Question {
+  id: number
+  question?: string
+  prompt?: string
+  options?: string[]
+  answerIndex?: number
+  correctAnswer?: number
+  explanation?: string
+  type?: string
+}
+
+interface ChallengeData {
+  id: string
+  topicSlug: string
+  questionCount: number
+  timeLimit: number
+  status: string
+  expiresAt: string
+  challenger: { id: string; name: string | null; image: string | null; avatarData: unknown }
+  recipient: { id: string; name: string | null; image: string | null; avatarData: unknown } | null
+  challengerScore: number
+  challengerTime: number | null
+  recipientScore: number | null
+  recipientTime: number | null
+  winnerId: string | null
+  completedAt: string | null
+  isChallenger: boolean
+  isRecipient: boolean
+  canPlay: boolean
+  questions?: Question[]
+  challengerAnswers?: Array<{ questionIndex: number; answerIndex: number; correct: boolean; timeMs?: number }>
+  recipientAnswers?: Array<{ questionIndex: number; answerIndex: number; correct: boolean; timeMs?: number }>
+}
+
+const TOPIC_LABELS: Record<string, string> = {
+  'the-unit-circle': 'Unit Circle',
+  'derivatives': 'Derivatives',
+  'limits': 'Limits',
+  'integrals': 'Integrals',
+  'algebra': 'Algebra 1',
+  'algebra2': 'Algebra 2',
+  'geometry': 'Geometry',
+  'precalc': 'Pre-Calculus',
+  'ap-calculus-ab': 'AP Calculus AB',
+  'ap-calculus-bc': 'AP Calculus BC',
+  'ap-chemistry': 'AP Chemistry',
+  'ap-biology': 'AP Biology',
+  'ap-psychology': 'AP Psychology',
+  'ap-statistics': 'AP Statistics',
+  'ap-physics1': 'AP Physics 1',
+  'ap-physics2': 'AP Physics 2',
+  'sat-math': 'SAT Math',
+  'sat-reading': 'SAT Reading',
+  'act-math': 'ACT Math',
+  'act-science': 'ACT Science',
+  'ochem': 'Organic Chemistry',
+}
+
+export default function AsyncChallengePage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params)
+  const router = useRouter()
+  const { data: session, status: sessionStatus } = useSession()
+  const [challenge, setChallenge] = useState<ChallengeData | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  // Play state
+  const [phase, setPhase] = useState<'loading' | 'lobby' | 'playing' | 'submitting' | 'results'>('loading')
+  const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [answers, setAnswers] = useState<Array<{ questionIndex: number; answerIndex: number; timeMs: number }>>([])
+  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
+  const [showFeedback, setShowFeedback] = useState(false)
+  const [timeRemaining, setTimeRemaining] = useState(0)
+  const [totalElapsed, setTotalElapsed] = useState(0)
+  const startTimeRef = useRef<number>(0)
+  const questionStartRef = useRef<number>(0)
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+
+  // Score tracking during play
+  const [liveScore, setLiveScore] = useState(0)
+
+  useEffect(() => { preloadKatex() }, [])
+
+  const fetchChallenge = useCallback(async () => {
+    try {
+      const res = await fetch(`/api/competitive/async-challenge/${id}`)
+      if (!res.ok) {
+        const data = await res.json()
+        setError(data.error || 'Failed to load challenge')
+        setLoading(false)
+        return
+      }
+      const data: ChallengeData = await res.json()
+      setChallenge(data)
+      setLoading(false)
+
+      if (data.status === 'COMPLETED' || data.status === 'EXPIRED') {
+        setPhase('results')
+      } else if (data.canPlay) {
+        setPhase('lobby')
+      } else {
+        // Can't play — show status
+        setPhase('lobby')
+      }
+    } catch {
+      setError('Failed to load challenge')
+      setLoading(false)
+    }
+  }, [id])
+
+  useEffect(() => {
+    if (sessionStatus === 'authenticated') {
+      fetchChallenge()
+    } else if (sessionStatus === 'unauthenticated') {
+      router.push(`/auth/signin?callbackUrl=${encodeURIComponent(`/competitive/async/${id}`)}`)
+    }
+  }, [sessionStatus, fetchChallenge, router, id])
+
+  const startPlaying = () => {
+    if (!challenge?.questions) return
+    setPhase('playing')
+    setCurrentQuestion(0)
+    setAnswers([])
+    setSelectedAnswer(null)
+    setLiveScore(0)
+    startTimeRef.current = Date.now()
+    questionStartRef.current = Date.now()
+    setTimeRemaining(challenge.timeLimit)
+
+    timerRef.current = setInterval(() => {
+      const elapsed = Math.floor((Date.now() - startTimeRef.current) / 1000)
+      const remaining = Math.max(0, challenge.timeLimit - elapsed)
+      setTimeRemaining(remaining)
+      setTotalElapsed(Date.now() - startTimeRef.current)
+
+      if (remaining <= 0) {
+        // Time's up — auto-submit
+        if (timerRef.current) clearInterval(timerRef.current)
+        submitAllAnswers()
+      }
+    }, 250)
+  }
+
+  const handleAnswer = (answerIndex: number) => {
+    if (selectedAnswer !== null || !challenge?.questions) return
+    setSelectedAnswer(answerIndex)
+
+    const q = challenge.questions[currentQuestion]
+    const correctIdx = q.answerIndex ?? q.correctAnswer ?? -1
+    const isCorrect = answerIndex === correctIdx
+    if (isCorrect) setLiveScore(prev => prev + 1)
+
+    const timeMs = Date.now() - questionStartRef.current
+
+    setAnswers(prev => [...prev, { questionIndex: currentQuestion, answerIndex, timeMs }])
+    setShowFeedback(true)
+
+    setTimeout(() => {
+      setShowFeedback(false)
+      setSelectedAnswer(null)
+
+      if (currentQuestion + 1 < challenge.questions!.length) {
+        setCurrentQuestion(prev => prev + 1)
+        questionStartRef.current = Date.now()
+      } else {
+        // Done — submit
+        if (timerRef.current) clearInterval(timerRef.current)
+        // Use updated answers (including this last one)
+        const allAnswers = [...answers, { questionIndex: currentQuestion, answerIndex, timeMs }]
+        submitAllAnswers(allAnswers)
+      }
+    }, 800)
+  }
+
+  const submitAllAnswers = async (finalAnswers?: typeof answers) => {
+    setPhase('submitting')
+    if (timerRef.current) clearInterval(timerRef.current)
+
+    const answersToSubmit = finalAnswers || answers
+    const elapsed = Date.now() - startTimeRef.current
+
+    try {
+      const res = await fetch(`/api/competitive/async-challenge/${id}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ answers: answersToSubmit, totalTime: elapsed }),
+      })
+      if (res.ok) {
+        // Refresh challenge data to get results
+        await fetchChallenge()
+        setPhase('results')
+      } else {
+        const data = await res.json()
+        setError(data.error || 'Failed to submit')
+      }
+    } catch {
+      setError('Failed to submit answers')
+    }
+  }
+
+  // Cleanup timer
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current)
+    }
+  }, [])
+
+  if (loading || sessionStatus === 'loading') {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-500" />
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 flex items-center justify-center p-4">
+        <div className="bg-gray-800 rounded-2xl p-8 max-w-md text-center">
+          <p className="text-red-400 text-lg mb-4">{error}</p>
+          <button onClick={() => router.push('/competitive')} className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
+            Back to Competitive
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  if (!challenge) return null
+
+  const topicLabel = TOPIC_LABELS[challenge.topicSlug] || challenge.topicSlug
+
+  // === RESULTS PHASE ===
+  if (phase === 'results') {
+    const isCompleted = challenge.status === 'COMPLETED'
+    const isExpired = challenge.status === 'EXPIRED'
+    const isWaiting = challenge.status === 'WAITING_FOR_OPPONENT'
+
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 p-4">
+        <div className="max-w-2xl mx-auto pt-8">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold text-white mb-2">
+              {isCompleted ? '🏆 Challenge Complete!' : isExpired ? '⏰ Challenge Expired' : '⏳ Waiting for Opponent'}
+            </h1>
+            <p className="text-gray-400">{topicLabel} · {challenge.questionCount} questions</p>
+          </div>
+
+          {/* Share link (for challenger waiting) */}
+          {isWaiting && challenge.isChallenger && (
+            <div className="bg-indigo-900/30 border border-indigo-500/30 rounded-xl p-6 mb-6">
+              <h3 className="text-lg font-semibold text-white mb-2">Share this challenge!</h3>
+              <p className="text-gray-300 text-sm mb-3">Send this link to a friend — they&apos;ll play the same questions and you&apos;ll see who scores higher.</p>
+              <div className="flex gap-2">
+                <input
+                  readOnly
+                  value={`${typeof window !== 'undefined' ? window.location.origin : ''}/competitive/async/${id}`}
+                  className="flex-1 px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-gray-300 text-sm"
+                />
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText(`${window.location.origin}/competitive/async/${id}`)
+                  }}
+                  className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 text-sm font-medium whitespace-nowrap"
+                >
+                  Copy Link
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Scoreboard */}
+          <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 mb-6">
+            <div className="grid grid-cols-2 gap-6">
+              {/* Challenger */}
+              <div className={`text-center p-4 rounded-xl ${isCompleted && challenge.winnerId === challenge.challenger.id ? 'bg-yellow-500/10 border border-yellow-500/30' : 'bg-gray-700/30'}`}>
+                <div className="flex justify-center mb-2">
+                  {challenge.challenger.avatarData ? (
+                    <AvatarDisplay avatarData={challenge.challenger.avatarData as AvatarData} size={48} />
+                  ) : (
+                    <div className="w-12 h-12 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold text-lg">
+                      {(challenge.challenger.name || '?')[0]}
+                    </div>
+                  )}
+                </div>
+                <p className="text-white font-semibold text-sm mb-1">{challenge.challenger.name || 'Challenger'}</p>
+                <p className="text-3xl font-bold text-white">{challenge.challengerScore}/{challenge.questionCount}</p>
+                {challenge.challengerTime != null && (
+                  <p className="text-gray-400 text-xs mt-1">{(challenge.challengerTime / 1000).toFixed(1)}s</p>
+                )}
+                {isCompleted && challenge.winnerId === challenge.challenger.id && (
+                  <span className="inline-block mt-2 px-2 py-0.5 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">Winner!</span>
+                )}
+              </div>
+
+              {/* Recipient */}
+              <div className={`text-center p-4 rounded-xl ${isCompleted && challenge.winnerId && challenge.winnerId !== challenge.challenger.id ? 'bg-yellow-500/10 border border-yellow-500/30' : 'bg-gray-700/30'}`}>
+                <div className="flex justify-center mb-2">
+                  {challenge.recipient?.avatarData ? (
+                    <AvatarDisplay avatarData={challenge.recipient.avatarData as AvatarData} size={48} />
+                  ) : challenge.recipient ? (
+                    <div className="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold text-lg">
+                      {(challenge.recipient.name || '?')[0]}
+                    </div>
+                  ) : (
+                    <div className="w-12 h-12 rounded-full bg-gray-600 flex items-center justify-center text-gray-400 text-lg">?</div>
+                  )}
+                </div>
+                <p className="text-white font-semibold text-sm mb-1">{challenge.recipient?.name || 'Waiting...'}</p>
+                {challenge.recipientScore != null ? (
+                  <p className="text-3xl font-bold text-white">{challenge.recipientScore}/{challenge.questionCount}</p>
+                ) : (
+                  <p className="text-xl text-gray-500">—</p>
+                )}
+                {challenge.recipientTime != null && (
+                  <p className="text-gray-400 text-xs mt-1">{(challenge.recipientTime / 1000).toFixed(1)}s</p>
+                )}
+                {isCompleted && challenge.winnerId && challenge.winnerId !== challenge.challenger.id && (
+                  <span className="inline-block mt-2 px-2 py-0.5 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">Winner!</span>
+                )}
+                {isCompleted && !challenge.winnerId && (
+                  <span className="inline-block mt-2 px-2 py-0.5 bg-gray-500/20 text-gray-400 text-xs rounded-full">Tie</span>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Question-by-question breakdown (only when completed) */}
+          {isCompleted && challenge.questions && challenge.challengerAnswers && challenge.recipientAnswers && (
+            <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 mb-6">
+              <h3 className="text-lg font-semibold text-white mb-4">Question Breakdown</h3>
+              <div className="space-y-3">
+                {(challenge.questions as Question[]).map((q, i) => {
+                  const cAnswer = challenge.challengerAnswers?.find(a => a.questionIndex === i)
+                  const rAnswer = challenge.recipientAnswers?.find(a => a.questionIndex === i)
+                  return (
+                    <div key={i} className="flex items-center gap-3 py-2 border-b border-gray-700/50 last:border-0">
+                      <span className="text-gray-400 text-sm w-6">Q{i + 1}</span>
+                      <p className="flex-1 text-gray-300 text-sm truncate" dangerouslySetInnerHTML={{
+                        __html: renderKatexSync(q.question || q.prompt || `Question ${i + 1}`)
+                      }} />
+                      <div className="flex gap-4">
+                        <span className={`text-sm font-medium ${cAnswer?.correct ? 'text-green-400' : 'text-red-400'}`}>
+                          {cAnswer?.correct ? '✓' : '✗'}
+                        </span>
+                        <span className={`text-sm font-medium ${rAnswer?.correct ? 'text-green-400' : 'text-red-400'}`}>
+                          {rAnswer?.correct ? '✓' : '✗'}
+                        </span>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+
+          <div className="flex gap-3 justify-center">
+            <button
+              onClick={() => router.push('/competitive')}
+              className="px-6 py-3 bg-gray-700 text-white rounded-xl hover:bg-gray-600 font-medium"
+            >
+              Back to Competitive
+            </button>
+            {isCompleted && (
+              <button
+                onClick={() => router.push(`/competitive?mode=async&topic=${challenge.topicSlug}`)}
+                className="px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 font-medium"
+              >
+                Rematch
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // === LOBBY PHASE ===
+  if (phase === 'lobby') {
+    const isWaitingForMe = challenge.canPlay && !challenge.isChallenger
+    const isMyTurn = challenge.canPlay
+
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 flex items-center justify-center p-4">
+        <div className="max-w-lg w-full">
+          <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-8 text-center">
+            <div className="text-5xl mb-4">⚔️</div>
+            <h1 className="text-2xl font-bold text-white mb-2">Async Challenge</h1>
+            <p className="text-gray-400 mb-6">{topicLabel} · {challenge.questionCount} questions · {Math.floor(challenge.timeLimit / 60)}min</p>
+
+            {challenge.isChallenger && challenge.status === 'CHALLENGER_PLAYING' && (
+              <>
+                <p className="text-gray-300 mb-6">You created this challenge. Play your round first, then share the link with a friend!</p>
+                <button
+                  onClick={startPlaying}
+                  className="w-full py-3 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 text-lg transition-colors"
+                >
+                  Start Playing
+                </button>
+              </>
+            )}
+
+            {isWaitingForMe && (
+              <>
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  {challenge.challenger.avatarData ? (
+                    <AvatarDisplay avatarData={challenge.challenger.avatarData as AvatarData} size={40} />
+                  ) : (
+                    <div className="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold">
+                      {(challenge.challenger.name || '?')[0]}
+                    </div>
+                  )}
+                  <span className="text-white font-semibold">{challenge.challenger.name || 'Someone'}</span>
+                  <span className="text-gray-400">challenged you!</span>
+                </div>
+                <p className="text-gray-300 text-sm mb-6">Answer the same {challenge.questionCount} questions and see who scores higher. You have {Math.floor(challenge.timeLimit / 60)} minutes.</p>
+                <button
+                  onClick={startPlaying}
+                  className="w-full py-3 bg-emerald-600 text-white font-bold rounded-xl hover:bg-emerald-700 text-lg transition-colors"
+                >
+                  Accept & Play
+                </button>
+              </>
+            )}
+
+            {!isMyTurn && challenge.status === 'WAITING_FOR_OPPONENT' && !challenge.isChallenger && (
+              <p className="text-gray-300">This challenge is waiting for an opponent. If you&apos;re logged in, you can accept it!</p>
+            )}
+
+            <button
+              onClick={() => router.push('/competitive')}
+              className="mt-4 text-gray-400 hover:text-gray-300 text-sm"
+            >
+              ← Back to Competitive
+            </button>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // === PLAYING PHASE ===
+  if (phase === 'playing' && challenge.questions) {
+    const q = challenge.questions[currentQuestion]
+    const progress = ((currentQuestion) / challenge.questions.length) * 100
+    const minutes = Math.floor(timeRemaining / 60)
+    const seconds = timeRemaining % 60
+
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 p-4">
+        <div className="max-w-2xl mx-auto pt-4">
+          {/* Top bar */}
+          <div className="flex items-center justify-between mb-6">
+            <div className="text-white font-semibold">
+              Q{currentQuestion + 1}/{challenge.questions.length}
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-emerald-400 font-bold">{liveScore} correct</span>
+              <span className={`font-mono text-lg font-bold ${timeRemaining <= 30 ? 'text-red-400 animate-pulse' : 'text-white'}`}>
+                {minutes}:{seconds.toString().padStart(2, '0')}
+              </span>
+            </div>
+          </div>
+
+          {/* Progress bar */}
+          <div className="w-full h-1.5 bg-gray-700 rounded-full mb-8">
+            <div className="h-full bg-indigo-500 rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
+          </div>
+
+          {/* Question */}
+          <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 mb-6">
+            <p
+              className="text-white text-lg leading-relaxed"
+              dangerouslySetInnerHTML={{
+                __html: renderKatexSync(q.question || q.prompt || '')
+              }}
+            />
+          </div>
+
+          {/* Options */}
+          <div className="space-y-3">
+            {q.options?.map((opt, i) => {
+              const correctIdx = q.answerIndex ?? q.correctAnswer ?? -1
+              const isSelected = selectedAnswer === i
+              const isCorrect = i === correctIdx
+              let className = 'w-full text-left p-4 rounded-xl border transition-all duration-200 '
+
+              if (showFeedback && isSelected && isCorrect) {
+                className += 'bg-green-900/30 border-green-500 text-green-300'
+              } else if (showFeedback && isSelected && !isCorrect) {
+                className += 'bg-red-900/30 border-red-500 text-red-300'
+              } else if (showFeedback && isCorrect) {
+                className += 'bg-green-900/20 border-green-500/50 text-green-300'
+              } else if (isSelected) {
+                className += 'bg-indigo-900/30 border-indigo-500 text-white'
+              } else {
+                className += 'bg-gray-800/50 border-gray-600 text-gray-300 hover:border-indigo-500/50 hover:bg-gray-700/50 cursor-pointer'
+              }
+
+              return (
+                <button
+                  key={i}
+                  onClick={() => handleAnswer(i)}
+                  disabled={selectedAnswer !== null}
+                  className={className}
+                >
+                  <span className="font-medium mr-3 text-gray-500">{String.fromCharCode(65 + i)}.</span>
+                  <span dangerouslySetInnerHTML={{ __html: renderKatexSync(opt) }} />
+                </button>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // === SUBMITTING ===
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-500 mx-auto mb-4" />
+        <p className="text-gray-400">Submitting your answers...</p>
+      </div>
+    </div>
+  )
+}
