@@ -20,10 +20,11 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
     prefix: 'rl:api',
     analytics: true,
   })
-  // Auth endpoints: stricter — 10 requests per 60 seconds per IP
+  // Auth endpoints: stricter — 30 requests per 60 seconds per IP
+  // (OAuth flows like Google involve multiple internal round-trips)
   authRatelimit = new Ratelimit({
     redis,
-    limiter: Ratelimit.slidingWindow(10, '60 s'),
+    limiter: Ratelimit.slidingWindow(30, '60 s'),
     prefix: 'rl:auth',
     analytics: true,
   })
@@ -64,9 +65,12 @@ export async function middleware(request: NextRequest) {
 
     const ip = getClientIp(request)
 
-    // Use stricter limiter for auth endpoints
+    // Use stricter limiter for auth endpoints, but exclude NextAuth
+    // internal routes (callback, session, csrf, providers) since OAuth
+    // flows involve multiple rapid internal round-trips
     const isAuthEndpoint = nextUrl.pathname.startsWith('/api/auth/')
-    const limiter = isAuthEndpoint ? authRatelimit : apiRatelimit
+    const isNextAuthInternal = /^\/api\/auth\/(callback|session|csrf|providers)/.test(nextUrl.pathname)
+    const limiter = (isAuthEndpoint && !isNextAuthInternal) ? authRatelimit : apiRatelimit
 
     if (limiter) {
       try {
