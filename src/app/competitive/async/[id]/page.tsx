@@ -70,7 +70,7 @@ const TOPIC_LABELS: Record<string, string> = {
 export default function AsyncChallengePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params)
   const router = useRouter()
-  const { data: session, status: sessionStatus } = useSession()
+  const { status: sessionStatus } = useSession()
   const [challenge, setChallenge] = useState<ChallengeData | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -82,7 +82,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
   const [showFeedback, setShowFeedback] = useState(false)
   const [timeRemaining, setTimeRemaining] = useState(0)
-  const [totalElapsed, setTotalElapsed] = useState(0)
+  const [, setTotalElapsed] = useState(0)
   const startTimeRef = useRef<number>(0)
   const questionStartRef = useRef<number>(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
@@ -121,13 +121,42 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
 
   useEffect(() => {
     if (sessionStatus === 'authenticated') {
-      fetchChallenge()
+      const timeoutId = setTimeout(() => {
+        void fetchChallenge()
+      }, 0)
+      return () => clearTimeout(timeoutId)
     } else if (sessionStatus === 'unauthenticated') {
       router.push(`/auth/signin?callbackUrl=${encodeURIComponent(`/competitive/async/${id}`)}`)
     }
   }, [sessionStatus, fetchChallenge, router, id])
 
-  const startPlaying = () => {
+  const submitAllAnswers = useCallback(async (finalAnswers?: typeof answers) => {
+    setPhase('submitting')
+    if (timerRef.current) clearInterval(timerRef.current)
+
+    const answersToSubmit = finalAnswers || answers
+    const elapsed = Date.now() - startTimeRef.current
+
+    try {
+      const res = await fetch(`/api/competitive/async-challenge/${id}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ answers: answersToSubmit, totalTime: elapsed }),
+      })
+      if (res.ok) {
+        // Refresh challenge data to get results
+        await fetchChallenge()
+        setPhase('results')
+      } else {
+        const data = await res.json()
+        setError(data.error || 'Failed to submit')
+      }
+    } catch {
+      setError('Failed to submit answers')
+    }
+  }, [answers, id, fetchChallenge])
+
+  const startPlaying = useCallback(() => {
     if (!challenge?.questions) return
     setPhase('playing')
     setCurrentQuestion(0)
@@ -150,9 +179,9 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
         submitAllAnswers()
       }
     }, 250)
-  }
+  }, [challenge, submitAllAnswers])
 
-  const handleAnswer = (answerIndex: number) => {
+  const handleAnswer = useCallback((answerIndex: number) => {
     if (selectedAnswer !== null || !challenge?.questions) return
     setSelectedAnswer(answerIndex)
 
@@ -181,33 +210,9 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
         submitAllAnswers(allAnswers)
       }
     }, 800)
-  }
+  }, [selectedAnswer, challenge, currentQuestion, answers, submitAllAnswers])
 
-  const submitAllAnswers = async (finalAnswers?: typeof answers) => {
-    setPhase('submitting')
-    if (timerRef.current) clearInterval(timerRef.current)
 
-    const answersToSubmit = finalAnswers || answers
-    const elapsed = Date.now() - startTimeRef.current
-
-    try {
-      const res = await fetch(`/api/competitive/async-challenge/${id}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ answers: answersToSubmit, totalTime: elapsed }),
-      })
-      if (res.ok) {
-        // Refresh challenge data to get results
-        await fetchChallenge()
-        setPhase('results')
-      } else {
-        const data = await res.json()
-        setError(data.error || 'Failed to submit')
-      }
-    } catch {
-      setError('Failed to submit answers')
-    }
-  }
 
   // Cleanup timer
   useEffect(() => {

@@ -63,7 +63,7 @@ export default function CompetitivePage() {
   const [queueStatus, setQueueStatus] = useState<QueueStatus | null>(null)
   const [selectedMode, setSelectedMode] = useState('SPEED_RACE')
   const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'algebra2' | 'sat-punctuation-commas-semicolons' | 'sat-punctuation' | 'parametric-equations' | 'vectors' | 'polar-coordinates' | 'ap-biology' | 'ap-chemistry' | 'ap-psychology' | 'ap-statistics' | 'ap-physics1' | 'ap-physics2' | 'ap-calculus-ab' | 'ap-calculus-bc' | 'ap-physics-c-mech' | 'ap-physics-c-em' | 'ap-precalculus' | 'sat-math' | 'sat-reading' | 'act-math' | 'act-science' | 'ochem' | 'precalc' | 'geometry' | 'cumulative'>('the-unit-circle')
-  const [completedTopics, setCompletedTopics] = useState<string[]>([])
+  const [, setCompletedTopics] = useState<string[]>([])
   const [competitiveCategories, setCompetitiveCategories] = useState<Record<string, boolean>>({})
   const [algebra2SubtopicDetails, setAlgebra2SubtopicDetails] = useState<{key: string; label: string}[]>([])
   const [requirements, setRequirements] = useState<UnlockRequirements | null>(null)

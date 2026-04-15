@@ -112,7 +112,7 @@ export async function GET() {
     // Include started topics in the slug list for category matching
     const startedTopicSlugs = startedTopics.map(tp => tp.topic.slug)
     const allProgressSlugs = [...new Set([...completedTopicSlugs, ...startedTopicSlugs])]
-    const hasCompletedAnyTopic = completedTopicSlugs.length > 0 || uniqueDiagnosticSlugs.length > 0
+    const _hasCompletedAnyTopic = completedTopicSlugs.length > 0 || uniqueDiagnosticSlugs.length > 0
     // Unlock if user has ANY progress at all (completed, started, quiz, or diagnostic)
     const hasAnyProgress = allProgressSlugs.length > 0 || uniqueDiagnosticSlugs.length > 0
 
