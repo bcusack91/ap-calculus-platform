@@ -61,7 +61,7 @@ export async function POST(request: Request) {
     
     if (masteryLevel >= 0.9) {
       status = 'MASTERED'
-    } else if (masteryLevel >= 0.8) {
+    } else if (masteryLevel >= 0.6) {
       status = 'COMPLETED'
     } else if ((lessonPart !== undefined && lessonPart > 1) || (completedSections && completedSections.length > 0)) {
       status = 'IN_PROGRESS'

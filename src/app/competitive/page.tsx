@@ -55,6 +55,83 @@ export default function CompetitivePage() {
   const [algebra2SubtopicDetails, setAlgebra2SubtopicDetails] = useState<{key: string; label: string}[]>([])
   const [requirements, setRequirements] = useState<UnlockRequirements | null>(null)
   const [showAIOptions, setShowAIOptions] = useState(false)
+  const [activeGroup, setActiveGroup] = useState<string>('all')
+
+  // Topic groups for organized navigation
+  const topicGroups = [
+    {
+      id: 'calculus',
+      label: 'Calculus',
+      icon: '∫',
+      topics: [
+        { id: 'ap-calculus-ab' as const, emoji: '∫', name: 'AP Calculus AB', desc: 'Limits, Derivatives & Integrals' },
+        { id: 'ap-calculus-bc' as const, emoji: '∑', name: 'AP Calculus BC', desc: 'Series, Parametric & Polar' },
+        { id: 'derivatives' as const, emoji: '📐', name: 'Derivatives', desc: 'Power, Chain, Product Rules' },
+        { id: 'limits' as const, emoji: '♾️', name: 'Limits', desc: "L'Hôpital, Squeeze Theorem" },
+        { id: 'integrals' as const, emoji: '∫', name: 'Integrals', desc: 'Antiderivatives & FTC' },
+        { id: 'the-unit-circle' as const, emoji: '🔵', name: 'Unit Circle', desc: 'Angles & Coordinates' },
+      ]
+    },
+    {
+      id: 'math-foundations',
+      label: 'Math Foundations',
+      icon: '🔢',
+      topics: [
+        { id: 'algebra' as const, emoji: '🔢', name: 'Algebra 1', desc: 'Equations & Functions' },
+        { id: 'algebra2' as const, emoji: '📊', name: 'Algebra 2', desc: 'Polynomials, Rationals & Logs' },
+        { id: 'geometry' as const, emoji: '📐', name: 'Geometry', desc: 'Proofs, Triangles & Circles' },
+        { id: 'precalc' as const, emoji: '📈', name: 'Pre-Calculus', desc: 'Functions, Series & Trig' },
+        { id: 'ap-precalculus' as const, emoji: '📊', name: 'AP Precalculus', desc: 'Functions & Modeling' },
+      ]
+    },
+    {
+      id: 'science',
+      label: 'AP Science',
+      icon: '🔬',
+      topics: [
+        { id: 'ap-biology' as const, emoji: '🧬', name: 'AP Biology', desc: 'Cells, Genetics & Evolution' },
+        { id: 'ap-chemistry' as const, emoji: '⚗️', name: 'AP Chemistry', desc: 'Reactions, Bonding & Equilibrium' },
+        { id: 'ap-physics1' as const, emoji: '🚀', name: 'AP Physics 1', desc: 'Kinematics, Forces & Energy' },
+        { id: 'ap-physics2' as const, emoji: '⚡', name: 'AP Physics 2', desc: 'Electricity, Magnetism & Optics' },
+        { id: 'ap-physics-c-mech' as const, emoji: '🔧', name: 'AP Physics C: Mech', desc: 'Calculus-Based Mechanics' },
+        { id: 'ap-physics-c-em' as const, emoji: '🧲', name: 'AP Physics C: E&M', desc: 'Calculus-Based E&M' },
+      ]
+    },
+    {
+      id: 'humanities',
+      label: 'Humanities & Stats',
+      icon: '🧠',
+      topics: [
+        { id: 'ap-psychology' as const, emoji: '🧠', name: 'AP Psychology', desc: 'Brain, Behavior & Cognition' },
+        { id: 'ap-statistics' as const, emoji: '📊', name: 'AP Statistics', desc: 'Probability & Inference' },
+      ]
+    },
+    {
+      id: 'test-prep',
+      label: 'Test Prep',
+      icon: '📝',
+      topics: [
+        { id: 'sat-math' as const, emoji: '📐', name: 'SAT Math', desc: 'Algebra, Geometry & Data' },
+        { id: 'sat-reading' as const, emoji: '📖', name: 'SAT Reading', desc: 'Comprehension & Evidence' },
+        { id: 'sat-punctuation' as const, emoji: '📝', name: 'SAT Punctuation', desc: 'All Punctuation Rules' },
+        { id: 'sat-punctuation-commas-semicolons' as const, emoji: '✏️', name: 'Commas & Semicolons', desc: 'SAT Punctuation Focus' },
+        { id: 'act-math' as const, emoji: '🔢', name: 'ACT Math', desc: 'Pre-Algebra through Trig' },
+        { id: 'act-science' as const, emoji: '🔬', name: 'ACT Science', desc: 'Data Interpretation & Research' },
+      ]
+    },
+    {
+      id: 'advanced',
+      label: 'Advanced Topics',
+      icon: '🧪',
+      topics: [
+        { id: 'ochem' as const, emoji: '🧪', name: 'Organic Chemistry', desc: 'Reactions & Mechanisms' },
+        { id: 'parametric-equations' as const, emoji: '📈', name: 'Parametric Equations', desc: 'Curves & Eliminating Parameters' },
+        { id: 'vectors' as const, emoji: '➡️', name: 'Vectors', desc: 'Magnitude, Dot Product & More' },
+        { id: 'polar-coordinates' as const, emoji: '🌀', name: 'Polar Coordinates', desc: 'Polar Curves & Conversions' },
+        { id: 'reflection-refraction' as const, emoji: '🌈', name: 'Reflection & Refraction', desc: 'Optics & Light' },
+      ]
+    },
+  ]
 
   async function checkUnlock() {
     try {
@@ -230,10 +307,7 @@ export default function CompetitivePage() {
             <div className="text-6xl mb-6">🔒</div>
             <h1 className="text-4xl font-bold mb-4">Competitive Mode Locked</h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">
-              Complete any topic&apos;s interactive lesson with 80%+ mastery to unlock competitive challenges!
-            </p>
-            <p className="text-md text-gray-500 dark:text-gray-400 mb-8">
-              Finish an interactive lesson from any course to get started, or ask your teacher to grant you access.
+              Unlock competitive challenges by doing any ONE of the following:
             </p>
             
             {/* Progress Display */}
@@ -257,28 +331,64 @@ export default function CompetitivePage() {
 
               {/* Requirements */}
               <div className="text-left bg-gray-50 dark:bg-gray-900 rounded-lg p-6 mb-6">
-                <h3 className="text-lg font-bold mb-4 text-center">Unlock Requirements</h3>
+                <h3 className="text-lg font-bold mb-4 text-center">Unlock Requirements (any one)</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${masteryPercent > 0 ? 'bg-green-100 dark:bg-green-900 text-green-600' : 'bg-gray-100 dark:bg-gray-700 text-gray-400'}`}>
-                      {masteryPercent > 0 ? '✓' : '○'}
+                    <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${masteryPercent >= 60 ? 'bg-green-100 dark:bg-green-900 text-green-600' : 'bg-gray-100 dark:bg-gray-700 text-gray-400'}`}>
+                      {masteryPercent >= 60 ? '✓' : '○'}
                     </div>
                     <div>
-                      <p className="font-medium">Complete any topic&apos;s interactive lesson</p>
+                      <p className="font-medium">Complete any interactive lesson (60%+ mastery)</p>
                       <p className="text-sm text-gray-500 dark:text-gray-400">
-                        Go through all sections including understanding checks
+                        Your best progress: {masteryPercent}%
                       </p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${masteryPercent >= 80 ? 'bg-green-100 dark:bg-green-900 text-green-600' : 'bg-gray-100 dark:bg-gray-700 text-gray-400'}`}>
-                      {masteryPercent >= 80 ? '✓' : '○'}
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">
+                      ○
                     </div>
                     <div>
-                      <p className="font-medium">Achieve 80%+ mastery</p>
+                      <p className="font-medium">Score 70%+ on any entrance quiz</p>
                       <p className="text-sm text-gray-500 dark:text-gray-400">
-                        Your best progress: {masteryPercent}%
+                        Take an entrance quiz from any course
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">
+                      ○
+                    </div>
+                    <div>
+                      <p className="font-medium">Score 60%+ on any diagnostic test</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                        Take a diagnostic test from any course
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">
+                      ○
+                    </div>
+                    <div>
+                      <p className="font-medium">Accept a challenge from a friend</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                        Have a friend send you a challenge link!
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-gray-100 dark:bg-gray-700 text-gray-400">
+                      ○
+                    </div>
+                    <div>
+                      <p className="font-medium">Ask your teacher for access</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">
+                        Teachers can grant competitive mode access
                       </p>
                     </div>
                   </div>
@@ -358,725 +468,124 @@ export default function CompetitivePage() {
         {/* Topic Selection */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-center">Select Topic</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          
+          {/* Category Tabs */}
+          <div className="flex flex-wrap gap-2 mb-6 justify-center">
             <button
-              onClick={() => setSelectedTopic('the-unit-circle')}
-              disabled={!completedTopics.includes('the-unit-circle')}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'the-unit-circle'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !completedTopics.includes('the-unit-circle')
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
+              onClick={() => setActiveGroup('all')}
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
+                activeGroup === 'all'
+                  ? 'bg-purple-600 text-white shadow-lg'
+                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
               }`}
             >
-              <div className="text-3xl mb-2">🔵</div>
-              <h3 className="text-lg font-bold mb-1">Unit Circle</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Angles & Coordinates
-              </p>
-              {!completedTopics.includes('the-unit-circle') && (
-                <span className="text-xs text-red-500 mt-1 block">Not Completed</span>
-              )}
+              All Topics
             </button>
+            {topicGroups.map(group => {
+              const availableCount = group.topics.filter(t => competitiveCategories[t.id]).length
+              return (
+                <button
+                  key={group.id}
+                  onClick={() => setActiveGroup(group.id)}
+                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all flex items-center gap-1.5 ${
+                    activeGroup === group.id
+                      ? 'bg-purple-600 text-white shadow-lg'
+                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
+                  }`}
+                >
+                  <span>{group.icon}</span>
+                  <span>{group.label}</span>
+                  {availableCount > 0 && (
+                    <span className={`ml-1 w-5 h-5 rounded-full text-xs flex items-center justify-center ${
+                      activeGroup === group.id
+                        ? 'bg-white/20 text-white'
+                        : 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400'
+                    }`}>
+                      {availableCount}
+                    </span>
+                  )}
+                </button>
+              )
+            })}
+          </div>
 
-            <button
-              onClick={() => setSelectedTopic('reflection-refraction')}
-              disabled={!completedTopics.includes('reflection-refraction')}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'reflection-refraction'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !completedTopics.includes('reflection-refraction')
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">🌈</div>
-              <h3 className="text-lg font-bold mb-1">Reflection & Refraction</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Optics & Light
-              </p>
-              {!completedTopics.includes('reflection-refraction') && (
-                <span className="text-xs text-red-500 mt-1 block">Not Completed</span>
-              )}
-            </button>
+          {/* Topic Cards by Group */}
+          <div className="space-y-6">
+            {topicGroups
+              .filter(group => activeGroup === 'all' || activeGroup === group.id)
+              .map(group => (
+                <div key={group.id}>
+                  {activeGroup === 'all' && (
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-xl">{group.icon}</span>
+                      <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200">{group.label}</h3>
+                      <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700 ml-2" />
+                    </div>
+                  )}
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                    {group.topics.map(topic => {
+                      const isAvailable = !!competitiveCategories[topic.id]
+                      const isSelected = selectedTopic === topic.id
+                      return (
+                        <button
+                          key={topic.id}
+                          onClick={() => isAvailable && setSelectedTopic(topic.id)}
+                          disabled={!isAvailable}
+                          className={`relative p-4 rounded-xl transition-all text-left ${
+                            isSelected
+                              ? 'ring-3 ring-purple-500 bg-purple-50 dark:bg-purple-900/30 shadow-xl scale-[1.02]'
+                              : isAvailable
+                                ? 'bg-white dark:bg-gray-800 shadow-md hover:shadow-lg hover:scale-[1.01]'
+                                : 'bg-gray-100 dark:bg-gray-800/50 opacity-50 cursor-not-allowed'
+                          }`}
+                        >
+                          {isAvailable && (
+                            <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-green-500" />
+                          )}
+                          <div className="text-2xl mb-1.5">{topic.emoji}</div>
+                          <h4 className="text-sm font-bold mb-0.5 leading-tight">{topic.name}</h4>
+                          <p className="text-xs text-gray-500 dark:text-gray-400 leading-tight">
+                            {topic.id === 'algebra2' && isAvailable && algebra2SubtopicDetails.length > 0
+                              ? algebra2SubtopicDetails.map(s => s.label).join(', ')
+                              : topic.desc
+                            }
+                          </p>
+                          {!isAvailable && (
+                            <span className="inline-block mt-1.5 text-[10px] text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-900/20 px-1.5 py-0.5 rounded-full font-medium">
+                              🔒 Locked
+                            </span>
+                          )}
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+              ))
+            }
+          </div>
 
-            <button
-              onClick={() => setSelectedTopic('derivatives')}
-              disabled={!competitiveCategories['derivatives']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'derivatives'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['derivatives']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">📐</div>
-              <h3 className="text-lg font-bold mb-1">Derivatives</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Power, Chain, Product Rules
-              </p>
-              {!competitiveCategories['derivatives'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete a Derivatives Topic</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('limits')}
-              disabled={!competitiveCategories['limits']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'limits'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['limits']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">♾️</div>
-              <h3 className="text-lg font-bold mb-1">Limits</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                L&apos;Hôpital, Squeeze Theorem
-              </p>
-              {!competitiveCategories['limits'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete a Limits Topic</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('integrals')}
-              disabled={!competitiveCategories['integrals']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'integrals'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['integrals']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">∫</div>
-              <h3 className="text-lg font-bold mb-1">Integrals</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Antiderivatives & FTC
-              </p>
-              {!competitiveCategories['integrals'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete an Integrals Topic</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('algebra')}
-              disabled={!competitiveCategories['algebra']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'algebra'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['algebra']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">🔢</div>
-              <h3 className="text-lg font-bold mb-1">Algebra 1</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Equations & Functions
-              </p>
-              {!competitiveCategories['algebra'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete an Algebra 1 Topic</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('algebra2')}
-              disabled={!competitiveCategories['algebra2']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'algebra2'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['algebra2']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">📊</div>
-              <h3 className="text-lg font-bold mb-1">Algebra 2</h3>
-              {competitiveCategories['algebra2'] && algebra2SubtopicDetails.length > 0 ? (
-                <p className="text-xs text-gray-600 dark:text-gray-400">
-                  {algebra2SubtopicDetails.map(s => s.label).join(', ')}
-                </p>
-              ) : (
-                <p className="text-xs text-gray-600 dark:text-gray-400">
-                  Polynomials, Rationals & Logs
-                </p>
-              )}
-              {!competitiveCategories['algebra2'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete an Algebra 2 Topic</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('sat-punctuation-commas-semicolons')}
-              disabled={!competitiveCategories['sat-punctuation-commas-semicolons']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'sat-punctuation-commas-semicolons'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['sat-punctuation-commas-semicolons']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">✏️</div>
-              <h3 className="text-lg font-bold mb-1">Commas, Semicolons & Colons</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                SAT Punctuation
-              </p>
-              {!competitiveCategories['sat-punctuation-commas-semicolons'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('sat-punctuation')}
-              disabled={!competitiveCategories['sat-punctuation']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'sat-punctuation'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['sat-punctuation']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">📝</div>
-              <h3 className="text-lg font-bold mb-1">SAT Punctuation</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                All Punctuation Rules
-              </p>
-              {!competitiveCategories['sat-punctuation'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('parametric-equations')}
-              disabled={!competitiveCategories['parametric-equations']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'parametric-equations'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['parametric-equations']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">📈</div>
-              <h3 className="text-lg font-bold mb-1">Parametric Equations</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Curves & Eliminating Parameters
-              </p>
-              {!competitiveCategories['parametric-equations'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('vectors')}
-              disabled={!competitiveCategories['vectors']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'vectors'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['vectors']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">➡️</div>
-              <h3 className="text-lg font-bold mb-1">Vectors</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Magnitude, Dot Product & More
-              </p>
-              {!competitiveCategories['vectors'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('polar-coordinates')}
-              disabled={!competitiveCategories['polar-coordinates']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'polar-coordinates'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['polar-coordinates']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">🌀</div>
-              <h3 className="text-lg font-bold mb-1">Polar Coordinates</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Polar Curves & Conversions
-              </p>
-              {!competitiveCategories['polar-coordinates'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            {/* --- NEW SUBJECT BANKS --- */}
-            <button
-              onClick={() => setSelectedTopic('ap-biology')}
-              disabled={!competitiveCategories['ap-biology']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'ap-biology'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['ap-biology']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">🧬</div>
-              <h3 className="text-lg font-bold mb-1">AP Biology</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Cells, Genetics & Evolution
-              </p>
-              {!competitiveCategories['ap-biology'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('ap-chemistry')}
-              disabled={!competitiveCategories['ap-chemistry']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'ap-chemistry'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['ap-chemistry']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">⚗️</div>
-              <h3 className="text-lg font-bold mb-1">AP Chemistry</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Reactions, Bonding & Equilibrium
-              </p>
-              {!competitiveCategories['ap-chemistry'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('ap-psychology')}
-              disabled={!competitiveCategories['ap-psychology']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'ap-psychology'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['ap-psychology']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">🧠</div>
-              <h3 className="text-lg font-bold mb-1">AP Psychology</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Brain, Behavior & Cognition
-              </p>
-              {!competitiveCategories['ap-psychology'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('ap-statistics')}
-              disabled={!competitiveCategories['ap-statistics']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'ap-statistics'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['ap-statistics']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">📊</div>
-              <h3 className="text-lg font-bold mb-1">AP Statistics</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Probability & Inference
-              </p>
-              {!competitiveCategories['ap-statistics'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('ap-physics1')}
-              disabled={!competitiveCategories['ap-physics1']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'ap-physics1'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['ap-physics1']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">🚀</div>
-              <h3 className="text-lg font-bold mb-1">AP Physics 1</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Kinematics, Forces & Energy
-              </p>
-              {!competitiveCategories['ap-physics1'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('ap-physics2')}
-              disabled={!competitiveCategories['ap-physics2']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'ap-physics2'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['ap-physics2']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">⚡</div>
-              <h3 className="text-lg font-bold mb-1">AP Physics 2</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Electricity, Magnetism & Optics
-              </p>
-              {!competitiveCategories['ap-physics2'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('ap-physics-c-mech')}
-              disabled={!competitiveCategories['ap-physics-c-mech']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'ap-physics-c-mech'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['ap-physics-c-mech']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">🔧</div>
-              <h3 className="text-lg font-bold mb-1">AP Physics C: Mech</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Calculus-Based Mechanics
-              </p>
-              {!competitiveCategories['ap-physics-c-mech'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('ap-physics-c-em')}
-              disabled={!competitiveCategories['ap-physics-c-em']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'ap-physics-c-em'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['ap-physics-c-em']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">🧲</div>
-              <h3 className="text-lg font-bold mb-1">AP Physics C: E&M</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Calculus-Based E&M
-              </p>
-              {!competitiveCategories['ap-physics-c-em'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('ap-calculus-ab')}
-              disabled={!competitiveCategories['ap-calculus-ab']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'ap-calculus-ab'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['ap-calculus-ab']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">∫</div>
-              <h3 className="text-lg font-bold mb-1">AP Calculus AB</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Limits, Derivatives & Integrals
-              </p>
-              {!competitiveCategories['ap-calculus-ab'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('ap-calculus-bc')}
-              disabled={!competitiveCategories['ap-calculus-bc']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'ap-calculus-bc'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['ap-calculus-bc']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">∑</div>
-              <h3 className="text-lg font-bold mb-1">AP Calculus BC</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Series, Parametric & Polar
-              </p>
-              {!competitiveCategories['ap-calculus-bc'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('ap-precalculus')}
-              disabled={!competitiveCategories['ap-precalculus']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'ap-precalculus'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['ap-precalculus']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">📊</div>
-              <h3 className="text-lg font-bold mb-1">AP Precalculus</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Functions & Modeling
-              </p>
-              {!competitiveCategories['ap-precalculus'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('sat-math')}
-              disabled={!competitiveCategories['sat-math']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'sat-math'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['sat-math']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">📐</div>
-              <h3 className="text-lg font-bold mb-1">SAT Math</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Algebra, Geometry & Data
-              </p>
-              {!competitiveCategories['sat-math'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('sat-reading')}
-              disabled={!competitiveCategories['sat-reading']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'sat-reading'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['sat-reading']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">📖</div>
-              <h3 className="text-lg font-bold mb-1">SAT Reading</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Comprehension & Evidence
-              </p>
-              {!competitiveCategories['sat-reading'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('act-math')}
-              disabled={!competitiveCategories['act-math']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'act-math'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['act-math']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">🔢</div>
-              <h3 className="text-lg font-bold mb-1">ACT Math</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Pre-Algebra through Trig
-              </p>
-              {!competitiveCategories['act-math'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('act-science')}
-              disabled={!competitiveCategories['act-science']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'act-science'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['act-science']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">🔬</div>
-              <h3 className="text-lg font-bold mb-1">ACT Science</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Data Interpretation & Research
-              </p>
-              {!competitiveCategories['act-science'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('ochem')}
-              disabled={!competitiveCategories['ochem']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'ochem'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['ochem']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">🧪</div>
-              <h3 className="text-lg font-bold mb-1">Organic Chemistry</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Reactions & Mechanisms
-              </p>
-              {!competitiveCategories['ochem'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('precalc')}
-              disabled={!competitiveCategories['precalc']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'precalc'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['precalc']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">📈</div>
-              <h3 className="text-lg font-bold mb-1">Pre-Calculus</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Functions, Series & Trig
-              </p>
-              {!competitiveCategories['precalc'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
-            <button
-              onClick={() => setSelectedTopic('geometry')}
-              disabled={!competitiveCategories['geometry']}
-              className={`p-5 rounded-xl transition-all ${
-                selectedTopic === 'geometry'
-                  ? 'ring-4 ring-purple-500 bg-white dark:bg-gray-800 shadow-xl'
-                  : 'bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl'
-              } ${
-                !competitiveCategories['geometry']
-                  ? 'opacity-50 cursor-not-allowed'
-                  : 'cursor-pointer'
-              }`}
-            >
-              <div className="text-3xl mb-2">📐</div>
-              <h3 className="text-lg font-bold mb-1">Geometry</h3>
-              <p className="text-xs text-gray-600 dark:text-gray-400">
-                Proofs, Triangles & Circles
-              </p>
-              {!competitiveCategories['geometry'] && (
-                <span className="text-xs text-red-500 mt-1 block">Complete the Topic First</span>
-              )}
-            </button>
-
+          {/* Cumulative Mode */}
+          <div className="mt-4">
             <button
               onClick={() => setSelectedTopic('cumulative')}
               disabled={Object.values(competitiveCategories).filter(Boolean).length < 1}
-              className={`p-5 rounded-xl transition-all col-span-2 ${
+              className={`w-full p-5 rounded-xl transition-all ${
                 selectedTopic === 'cumulative'
-                  ? 'ring-4 ring-purple-500 bg-gradient-to-br from-purple-500 to-blue-500 text-white shadow-xl'
-                  : 'bg-gradient-to-br from-purple-400 to-blue-400 text-white shadow-lg hover:shadow-xl'
+                  ? 'ring-3 ring-purple-500 bg-gradient-to-br from-purple-600 to-blue-600 text-white shadow-xl'
+                  : 'bg-gradient-to-br from-purple-500 to-blue-500 text-white shadow-lg hover:shadow-xl hover:from-purple-600 hover:to-blue-600'
               } ${
-                completedTopics.length < 1
+                Object.values(competitiveCategories).filter(Boolean).length < 1
                   ? 'opacity-50 cursor-not-allowed'
                   : 'cursor-pointer'
               }`}
             >
-              <div className="text-3xl mb-2">🎯</div>
-              <h3 className="text-lg font-bold mb-1">Cumulative</h3>
-              <p className="text-xs text-white/90">
-                Mixed Questions from All Topics
-              </p>
-              {Object.values(competitiveCategories).filter(Boolean).length < 1 && (
-                <span className="text-xs text-red-200 mt-1 block">Complete 1+ Topic</span>
-              )}
+              <div className="flex items-center justify-center gap-3">
+                <span className="text-3xl">🎯</span>
+                <div>
+                  <h3 className="text-lg font-bold">Cumulative Mode</h3>
+                  <p className="text-sm text-white/80">Mixed questions from all your unlocked topics</p>
+                </div>
+              </div>
             </button>
           </div>
         </div>
