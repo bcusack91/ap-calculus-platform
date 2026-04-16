@@ -34,41 +34,46 @@ export async function POST(
     const { questionIndex, answerIndex, isSecondAttempt: _isSecondAttempt, playerId } = parsed.data;
     void _isSecondAttempt;
 
+    const actualPlayerId = playerId || session.user.id;
 
+    // Use a transaction with row-level lock to prevent concurrent answer
+    // submissions (user + AI) from overwriting each other's gameData changes
+    const result = await prisma.$transaction(async (tx) => {
+      // Lock the match row to prevent concurrent modifications
+      await tx.$queryRaw`SELECT id FROM "CompetitiveMatch" WHERE id = ${matchId} FOR UPDATE`;
 
-    // Fetch match
-    const match = await prisma.competitiveMatch.findUnique({
-      where: { id: matchId },
-      include: {
-        player1: {
-          include: {
-            competitiveProfile: true,
+      // Fetch match within transaction
+      const match = await tx.competitiveMatch.findUnique({
+        where: { id: matchId },
+        include: {
+          player1: {
+            include: {
+              competitiveProfile: true,
+            },
+          },
+          player2: {
+            include: {
+              competitiveProfile: true,
+            },
           },
         },
-        player2: {
-          include: {
-            competitiveProfile: true,
-          },
-        },
-      },
-    });
+      });
 
-    if (!match) {
-      return NextResponse.json({ error: 'Match not found' }, { status: 404 });
-    }
+      if (!match) {
+        return { error: 'Match not found', status: 404 };
+      }
 
-    // Verify user is a participant
-    const actualPlayerId = playerId || session.user.id; // Use provided playerId or session user
-    const isPlayer1 = match.player1Id === actualPlayerId;
-    const isPlayer2 = match.player2Id === actualPlayerId;
-    
-    if (!isPlayer1 && !isPlayer2) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
-    }
+      // Verify user is a participant
+      const isPlayer1 = match.player1Id === actualPlayerId;
+      const isPlayer2 = match.player2Id === actualPlayerId;
+      
+      if (!isPlayer1 && !isPlayer2) {
+        return { error: 'Unauthorized', status: 403 };
+      }
 
     // Verify match is still in progress
     if (match.status !== 'IN_PROGRESS') {
-      return NextResponse.json({ error: 'Match is not in progress' }, { status: 400 });
+      return { error: 'Match is not in progress', status: 400 };
     }
 
     // Parse current game data
@@ -84,11 +89,9 @@ export async function POST(
     // Get the current question index for this player
     const playerQuestionIndex = isPlayer1 ? player1QuestionIndex : player2QuestionIndex;
 
-
-
     // Check if question index matches this player's current question
     if (questionIndex !== playerQuestionIndex) {
-      return NextResponse.json({ error: 'Invalid question index' }, { status: 400 });
+      return { error: 'Invalid question index', status: 400 };
     }
 
     // Check answer
@@ -107,18 +110,15 @@ export async function POST(
 
     // ---- ACCURACY_CHALLENGE mode: scored by accuracy, 5-min timer ----
     const isAccuracyMode = match.gameMode === 'ACCURACY_CHALLENGE';
-    const ACCURACY_TOTAL_QUESTIONS = questions.length; // Use actual question count
-    const ACCURACY_TIME_LIMIT_MS = 5 * 60 * 1000; // 5 minutes
+    const ACCURACY_TOTAL_QUESTIONS = questions.length;
+    const ACCURACY_TIME_LIMIT_MS = 5 * 60 * 1000;
 
     if (isAccuracyMode) {
-      // In accuracy mode: +1 for correct, no penalty for wrong
       if (isCorrect) {
         if (isPlayer1) player1Score += 1;
         else player2Score += 1;
       }
-      // (wrong answers don't change score - score = correct count)
 
-      // Advance question index (stop at total questions)
       if (isPlayer1) {
         player1QuestionIndex = player1QuestionIndex + 1;
       } else {
@@ -129,7 +129,6 @@ export async function POST(
       const p2Answered = gameData.player2Answers?.length || 0;
       const bothDone = p1Answered >= ACCURACY_TOTAL_QUESTIONS && p2Answered >= ACCURACY_TOTAL_QUESTIONS;
 
-      // Check timer expiry
       const elapsed = match.startedAt ? Date.now() - new Date(match.startedAt).getTime() : 0;
       const timerExpired = elapsed >= ACCURACY_TIME_LIMIT_MS;
 
@@ -144,7 +143,6 @@ export async function POST(
         else if (p2Accuracy > p1Accuracy) winnerId = match.player2Id;
         else if (p1Answered > p2Answered) winnerId = match.player1Id;
         else if (p2Answered > p1Answered) winnerId = match.player2Id;
-        // else tie: winnerId stays null
 
         const player1MMR = match.player1MMRBefore || match.player1.competitiveProfile?.unitCircleMMR || 1000;
         const player2MMR = match.player2MMRBefore || match.player2.competitiveProfile?.unitCircleMMR || 1000;
@@ -157,7 +155,7 @@ export async function POST(
         const player1MMRAfter = player1MMR + player1MMRChange;
         const player2MMRAfter = player2MMR + player2MMRChange;
 
-        await prisma.competitiveMatch.update({
+        await tx.competitiveMatch.update({
           where: { id: matchId },
           data: {
             status: 'COMPLETED',
@@ -177,7 +175,7 @@ export async function POST(
         });
 
         if (match.player1.competitiveProfile) {
-          await prisma.competitiveProfile.update({
+          await tx.competitiveProfile.update({
             where: { userId: match.player1Id },
             data: {
               unitCircleMMR: player1MMRAfter,
@@ -195,7 +193,7 @@ export async function POST(
         }
 
         if (match.player2.competitiveProfile) {
-          await prisma.competitiveProfile.update({
+          await tx.competitiveProfile.update({
             where: { userId: match.player2Id },
             data: {
               unitCircleMMR: player2MMRAfter,
@@ -212,7 +210,7 @@ export async function POST(
           });
         }
 
-        await prisma.mMRHistory.create({
+        await tx.mMRHistory.create({
           data: {
             userId: match.player1Id,
             matchId,
@@ -224,7 +222,7 @@ export async function POST(
             performance: JSON.stringify({ score: player1Score, totalAnswered: p1Answered, accuracy: p1Accuracy }),
           },
         });
-        await prisma.mMRHistory.create({
+        await tx.mMRHistory.create({
           data: {
             userId: match.player2Id,
             matchId,
@@ -237,22 +235,25 @@ export async function POST(
           },
         });
 
-        return NextResponse.json({
-          correct: isCorrect,
-          matchComplete: true,
-          winnerId,
-          finalScores: { player1: player1Score, player2: player2Score },
-          mmrChange: isPlayer1 ? player1MMRChange : player2MMRChange,
-          newMMR: isPlayer1 ? player1MMRAfter : player2MMRAfter,
-          accuracy: {
-            player1: { correct: player1Score, total: p1Answered, pct: Math.round(p1Accuracy * 100) },
-            player2: { correct: player2Score, total: p2Answered, pct: Math.round(p2Accuracy * 100) },
+        return {
+          data: {
+            correct: isCorrect,
+            matchComplete: true,
+            winnerId,
+            finalScores: { player1: player1Score, player2: player2Score },
+            mmrChange: isPlayer1 ? player1MMRChange : player2MMRChange,
+            newMMR: isPlayer1 ? player1MMRAfter : player2MMRAfter,
+            accuracy: {
+              player1: { correct: player1Score, total: p1Answered, pct: Math.round(p1Accuracy * 100) },
+              player2: { correct: player2Score, total: p2Answered, pct: Math.round(p2Accuracy * 100) },
+            },
           },
-        });
+          status: 200,
+        };
       }
 
       // Match continues
-      await prisma.competitiveMatch.update({
+      await tx.competitiveMatch.update({
         where: { id: matchId },
         data: {
           player1Score,
@@ -267,18 +268,20 @@ export async function POST(
       });
 
       const myAnswered = isPlayer1 ? (gameData.player1Answers?.length || 0) : (gameData.player2Answers?.length || 0);
-      return NextResponse.json({
-        correct: isCorrect,
-        matchComplete: false,
-        currentScore: isPlayer1 ? player1Score : player2Score,
-        opponentScore: isPlayer1 ? player2Score : player1Score,
-        questionsAnswered: myAnswered,
-        totalQuestions: ACCURACY_TOTAL_QUESTIONS,
-      });
+      return {
+        data: {
+          correct: isCorrect,
+          matchComplete: false,
+          currentScore: isPlayer1 ? player1Score : player2Score,
+          opponentScore: isPlayer1 ? player2Score : player1Score,
+          questionsAnswered: myAnswered,
+          totalQuestions: ACCURACY_TOTAL_QUESTIONS,
+        },
+        status: 200,
+      };
     }
 
     // ---- Standard SPEED_RACE mode (first to 10) ----
-    // Award/deduct points - 1 point for correct, -1 for incorrect
     if (isCorrect) {
       if (isPlayer1) {
         player1Score += 1;
@@ -287,13 +290,12 @@ export async function POST(
       }
     } else {
       if (isPlayer1) {
-        player1Score = Math.max(0, player1Score - 1); // Don't go below 0
+        player1Score = Math.max(0, player1Score - 1);
       } else {
-        player2Score = Math.max(0, player2Score - 1); // Don't go below 0
+        player2Score = Math.max(0, player2Score - 1);
       }
     }
 
-    // Check if either player has reached 10 points (winner!)
     const matchComplete = player1Score >= 10 || player2Score >= 10;
     let winnerId = match.winnerId;
     let completedAt = match.completedAt;
@@ -309,14 +311,12 @@ export async function POST(
       const newStatus = 'COMPLETED' as const;
       completedAt = new Date();
       
-      // Determine winner based on who reached 10 first
       if (player1Score >= 10) {
         winnerId = match.player1Id;
       } else if (player2Score >= 10) {
         winnerId = match.player2Id;
       }
 
-      // Calculate MMR changes
       const player1MMR = match.player1MMRBefore || match.player1.competitiveProfile?.unitCircleMMR || 1000;
       const player2MMR = match.player2MMRBefore || match.player2.competitiveProfile?.unitCircleMMR || 1000;
 
@@ -332,8 +332,7 @@ export async function POST(
       const player1MMRAfter = player1MMR + player1MMRChange;
       const player2MMRAfter = player2MMR + player2MMRChange;
 
-      // Update match with final data
-      await prisma.competitiveMatch.update({
+      await tx.competitiveMatch.update({
         where: { id: matchId },
         data: {
           status: newStatus,
@@ -355,12 +354,11 @@ export async function POST(
         },
       });
 
-      // Update both players' competitive profiles
-      await prisma.competitiveProfile.update({
+      await tx.competitiveProfile.update({
         where: { userId: match.player1Id },
         data: {
           unitCircleMMR: player1MMRAfter,
-          overallMMR: player1MMRAfter, // For now, overall = unit circle
+          overallMMR: player1MMRAfter,
           totalMatches: { increment: 1 },
           wins: player1Won ? { increment: 1 } : undefined,
           losses: player2Won ? { increment: 1 } : undefined,
@@ -372,7 +370,7 @@ export async function POST(
         },
       });
 
-      await prisma.competitiveProfile.update({
+      await tx.competitiveProfile.update({
         where: { userId: match.player2Id },
         data: {
           unitCircleMMR: player2MMRAfter,
@@ -388,8 +386,7 @@ export async function POST(
         },
       });
 
-      // Create MMR history records
-      await prisma.mMRHistory.create({
+      await tx.mMRHistory.create({
         data: {
           userId: match.player1Id,
           matchId,
@@ -406,7 +403,7 @@ export async function POST(
         },
       });
 
-      await prisma.mMRHistory.create({
+      await tx.mMRHistory.create({
         data: {
           userId: match.player2Id,
           matchId,
@@ -423,17 +420,20 @@ export async function POST(
         },
       });
 
-      return NextResponse.json({
-        correct: isCorrect,
-        matchComplete: true,
-        winnerId,
-        finalScores: { player1: player1Score, player2: player2Score },
-        mmrChange: isPlayer1 ? player1MMRChange : player2MMRChange,
-        newMMR: isPlayer1 ? player1MMRAfter : player2MMRAfter,
-      });
+      return {
+        data: {
+          correct: isCorrect,
+          matchComplete: true,
+          winnerId,
+          finalScores: { player1: player1Score, player2: player2Score },
+          mmrChange: isPlayer1 ? player1MMRChange : player2MMRChange,
+          newMMR: isPlayer1 ? player1MMRAfter : player2MMRAfter,
+        },
+        status: 200,
+      };
     } else {
       // Match continues - just update scores and player's question index
-      await prisma.competitiveMatch.update({
+      await tx.competitiveMatch.update({
         where: { id: matchId },
         data: {
           player1Score,
@@ -450,13 +450,24 @@ export async function POST(
         },
       });
 
-      return NextResponse.json({
-        correct: isCorrect,
-        matchComplete: false,
-        currentScore: isPlayer1 ? player1Score : player2Score,
-        opponentScore: isPlayer1 ? player2Score : player1Score,
-      });
+      return {
+        data: {
+          correct: isCorrect,
+          matchComplete: false,
+          currentScore: isPlayer1 ? player1Score : player2Score,
+          opponentScore: isPlayer1 ? player2Score : player1Score,
+        },
+        status: 200,
+      };
     }
+    }, { timeout: 15000 }); // end transaction
+
+    // Convert transaction result to HTTP response
+    if ('error' in result) {
+      return NextResponse.json({ error: result.error }, { status: result.status });
+    }
+    return NextResponse.json(result.data, { status: result.status });
+
   } catch (error) {
     console.error('Error submitting answer:', error);
     return NextResponse.json(

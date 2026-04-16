@@ -502,33 +502,30 @@ function generateCumulativeQuestions(totalQuestions: number, completedTopics?: s
   // Gather questions from all MCQ banks
   const allBankQuestions: MatchQuestion[] = []
 
-  // Unit circle questions
-  const ucQuestions = generateMatchQuestions(3, 'the-unit-circle')
-  allBankQuestions.push(...ucQuestions)
-
   // Reflection-refraction questions
   const rrQuestions = getQuestionSet(2).map((q, i) => {
-    const serializableQuestion = Object.fromEntries(
-      Object.entries(q as unknown as Record<string, unknown>).filter(([key]) => key !== 'generateQuestion')
-    ) as Record<string, unknown>
+    const shuffled = shuffleOptions({ options: (q as unknown as Record<string, unknown>).options as string[], correctAnswer: q.correctAnswer } as OptionQuestion)
     return {
-      ...serializableQuestion,
       id: i,
-      answerIndex: q.correctAnswer,
+      question: (q as unknown as Record<string, unknown>).question as string,
+      options: shuffled.options,
+      correctAnswer: shuffled.correctAnswer,
+      answerIndex: shuffled.answerIndex,
+      explanation: (q as unknown as Record<string, unknown>).explanation as string,
       type: 'multiple-choice'
     } as MatchQuestion
   })
   allBankQuestions.push(...rrQuestions)
 
   // Derivatives
-  const dQuestions = getDerivativeQuestions(2).map((q, i) => {
+  const dQuestions = getDerivativeQuestions(3).map((q, i) => {
     const shuffled = shuffleOptions(q as unknown as OptionQuestion)
     return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
   })
   allBankQuestions.push(...dQuestions)
 
   // Limits
-  const lQuestions = getLimitQuestions(2).map((q, i) => {
+  const lQuestions = getLimitQuestions(3).map((q, i) => {
     const shuffled = shuffleOptions(q as unknown as OptionQuestion)
     return { id: i, question: q.question, options: shuffled.options, correctAnswer: shuffled.correctAnswer, answerIndex: shuffled.answerIndex, explanation: q.explanation, difficulty: q.difficulty, type: 'multiple-choice' } as MatchQuestion
   })
