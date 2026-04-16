@@ -1,0 +1,74 @@
+/**
+ * AP Computer Science Principles — Exit Quiz Question Pool
+ * ~120 questions across 5 CED-aligned Big Ideas
+ */
+
+export interface CspQuestion {
+  question: string
+  options: string[]
+  correctAnswer: number
+  explanation: string
+  difficulty: 'easy' | 'medium' | 'hard'
+  domain: string
+  topicSlug: string
+  formSet: number
+}
+
+export const cspQuestionPool: CspQuestion[] = [
+  // ── Domain: creative-development ───────────────────
+  { question: 'Collaboration in program development is beneficial because it:', options: ['Slows down the process', 'Incorporates diverse perspectives, catches errors, and produces more creative solutions', 'Guarantees a perfect program', 'Is required by law'], correctAnswer: 1, explanation: 'Teams bring varied skills and viewpoints, leading to more robust, creative, and thoroughly tested programs.', difficulty: 'easy', domain: 'creative-development', topicSlug: 'csp-creative-development', formSet: 1 },
+  { question: 'An iterative development process involves:', options: ['Writing the entire program at once', 'Developing in cycles of design, implement, test, and refine', 'Never testing code', 'Only planning without coding'], correctAnswer: 1, explanation: 'Iterative development builds incrementally: each cycle adds features, tests them, and refines based on feedback — reducing risk.', difficulty: 'easy', domain: 'creative-development', topicSlug: 'csp-program-development', formSet: 1 },
+  { question: 'A program specification defines:', options: ['The programming language to use', 'What the program should do — its requirements, inputs, outputs, and expected behavior', 'The hardware requirements', 'The cost of development'], correctAnswer: 1, explanation: 'Specifications describe the problem to solve, expected behavior, constraints, and criteria for success before coding begins.', difficulty: 'easy', domain: 'creative-development', topicSlug: 'csp-program-development', formSet: 2 },
+  { question: 'Debugging is the process of:', options: ['Adding new features', 'Finding and fixing errors (bugs) in a program', 'Deleting a program', 'Running a program faster'], correctAnswer: 1, explanation: 'Debugging involves identifying, locating, and correcting errors through techniques like print statements, debuggers, and code review.', difficulty: 'easy', domain: 'creative-development', topicSlug: 'csp-debugging', formSet: 1 },
+  { question: 'Documentation in code is important because it:', options: ['Makes programs run faster', 'Explains the purpose and function of code, making it easier to understand, maintain, and collaborate on', 'Is only for beginners', 'Prevents all bugs'], correctAnswer: 1, explanation: 'Good documentation (comments, READMEs) helps current and future developers understand design choices and code behavior.', difficulty: 'easy', domain: 'creative-development', topicSlug: 'csp-documentation', formSet: 1 },
+
+  // ── Domain: data ───────────────────────────────────
+  { question: 'Binary (base 2) uses only:', options: ['Digits 0-9', 'Digits 0 and 1', 'Letters A-F', 'Digits 0-7'], correctAnswer: 1, explanation: 'Binary represents all data using just 0s and 1s (bits). Each position represents a power of 2: 1, 2, 4, 8, 16...', difficulty: 'easy', domain: 'data', topicSlug: 'csp-binary-numbers', formSet: 1 },
+  { question: 'The binary number 1010 in decimal is:', options: ['5', '10', '12', '8'], correctAnswer: 1, explanation: '1010₂ = 1×8 + 0×4 + 1×2 + 0×1 = 8 + 0 + 2 + 0 = 10.', difficulty: 'easy', domain: 'data', topicSlug: 'csp-binary-numbers', formSet: 2 },
+  { question: 'An overflow error occurs when:', options: ['A program has too many variables', 'A number exceeds the maximum value that can be stored in the allocated bits', 'The program runs too long', 'A file is too large'], correctAnswer: 1, explanation: 'With a fixed number of bits, values beyond the range (e.g., 256 for 8-bit unsigned) cause overflow, wrapping or producing errors.', difficulty: 'medium', domain: 'data', topicSlug: 'csp-number-systems', formSet: 1 },
+  { question: 'Metadata is:', options: ['The main content of a file', 'Data about data — information describing the characteristics of other data', 'A type of virus', 'The program\'s source code'], correctAnswer: 1, explanation: 'Metadata includes information like file size, creation date, author, camera settings (EXIF), or data structure descriptions.', difficulty: 'easy', domain: 'data', topicSlug: 'csp-data-representation', formSet: 1 },
+  { question: 'Lossy compression:', options: ['Preserves all original data', 'Permanently removes some data to achieve smaller file sizes — original cannot be perfectly reconstructed', 'Always produces larger files', 'Is used for text files'], correctAnswer: 1, explanation: 'Lossy compression (JPEG, MP3) discards data deemed less important to human perception, achieving much smaller file sizes.', difficulty: 'easy', domain: 'data', topicSlug: 'csp-compression', formSet: 1 },
+  { question: 'Lossless compression:', options: ['Loses some data', 'Reduces file size without losing any data — the original can be perfectly reconstructed', 'Is always smaller than lossy', 'Cannot be used for images'], correctAnswer: 1, explanation: 'Lossless compression (PNG, ZIP) finds and eliminates redundancy in data patterns, allowing exact reconstruction of the original.', difficulty: 'easy', domain: 'data', topicSlug: 'csp-compression', formSet: 2 },
+
+  // ── Domain: algorithms ─────────────────────────────
+  { question: 'An algorithm is:', options: ['A programming language', 'A step-by-step procedure for solving a problem or performing a task', 'A type of computer', 'A data structure'], correctAnswer: 1, explanation: 'Algorithms are finite sequences of well-defined instructions that take input and produce output — independent of programming language.', difficulty: 'easy', domain: 'algorithms', topicSlug: 'csp-algorithms', formSet: 1 },
+  { question: 'Sequencing in programming means:', options: ['Running steps in random order', 'Executing statements one after another in the order they appear', 'Repeating steps', 'Making decisions'], correctAnswer: 1, explanation: 'Sequencing is the most basic control structure: statements execute top-to-bottom, one at a time, in written order.', difficulty: 'easy', domain: 'algorithms', topicSlug: 'csp-sequencing', formSet: 1 },
+  { question: 'Selection in programming refers to:', options: ['Choosing a programming language', 'Using conditional statements (if/else) to make decisions based on conditions', 'Selecting text', 'Choosing a variable name'], correctAnswer: 1, explanation: 'Selection (if, if-else, if-else if) allows programs to make decisions, executing different code based on boolean conditions.', difficulty: 'easy', domain: 'algorithms', topicSlug: 'csp-selection', formSet: 1 },
+  { question: 'Iteration (loops) allows a program to:', options: ['Run once and stop', 'Repeat a set of instructions multiple times', 'Skip instructions', 'Only use integers'], correctAnswer: 1, explanation: 'Iteration (for, while, repeat-until) enables efficient repetition — traversing lists, counting, or repeating until a condition is met.', difficulty: 'easy', domain: 'algorithms', topicSlug: 'csp-iteration', formSet: 1 },
+  { question: 'A linear search:', options: ['Requires a sorted list', 'Checks each element one by one from start to end until the target is found', 'Always finds the element instantly', 'Only works on numbers'], correctAnswer: 1, explanation: 'Linear search checks elements sequentially. It works on any list (sorted or not) but takes O(n) time in the worst case.', difficulty: 'easy', domain: 'algorithms', topicSlug: 'csp-searching', formSet: 1 },
+  { question: 'A binary search requires:', options: ['A linked list', 'A sorted list, and works by repeatedly halving the search space', 'An unsorted list', 'A 2D array'], correctAnswer: 1, explanation: 'Binary search compares the target to the middle element, eliminating half the remaining elements each step. Requires sorted data. O(log n).', difficulty: 'medium', domain: 'algorithms', topicSlug: 'csp-searching', formSet: 2 },
+
+  // ── Domain: computing-systems ───────────────────────
+  { question: 'The Internet is:', options: ['The same as the World Wide Web', 'A global network of interconnected networks that communicate using standardized protocols', 'A single computer', 'Owned by one company'], correctAnswer: 1, explanation: 'The Internet is the infrastructure — a network of networks. The World Wide Web is a service built on top of it using HTTP.', difficulty: 'easy', domain: 'computing-systems', topicSlug: 'csp-internet', formSet: 1 },
+  { question: 'TCP/IP protocols:', options: ['Only work for email', 'Provide rules for how data is packaged, addressed, transmitted, and received across networks', 'Are hardware components', 'Only work on local networks'], correctAnswer: 1, explanation: 'TCP breaks data into packets and ensures reliable delivery; IP handles addressing and routing across networks.', difficulty: 'easy', domain: 'computing-systems', topicSlug: 'csp-protocols', formSet: 1 },
+  { question: 'Fault tolerance in a network means:', options: ['The network never fails', 'The network can continue functioning even when some components fail, through redundant paths', 'All data is encrypted', 'The network is very fast'], correctAnswer: 1, explanation: 'Redundant connections allow data to be rerouted if a path fails. The Internet\'s packet-switching design provides built-in fault tolerance.', difficulty: 'medium', domain: 'computing-systems', topicSlug: 'csp-fault-tolerance', formSet: 1 },
+  { question: 'Parallel computing:', options: ['Uses one processor at a time', 'Divides a task across multiple processors to be executed simultaneously, often reducing overall time', 'Is slower than sequential', 'Cannot solve real problems'], correctAnswer: 1, explanation: 'Parallel computing splits work across processors/cores, enabling faster solutions. Speedup depends on how parallelizable the task is.', difficulty: 'medium', domain: 'computing-systems', topicSlug: 'csp-parallel-computing', formSet: 1 },
+  { question: 'DNS (Domain Name System) translates:', options: ['Binary to text', 'Human-readable domain names (like google.com) to IP addresses', 'IP addresses to MAC addresses', 'Programs to machine code'], correctAnswer: 1, explanation: 'DNS is the Internet\'s phone book: it resolves domain names to numerical IP addresses so browsers can locate servers.', difficulty: 'easy', domain: 'computing-systems', topicSlug: 'csp-internet', formSet: 2 },
+  { question: 'HTTP and HTTPS differ in that:', options: ['They are identical', 'HTTPS encrypts data in transit using TLS/SSL, while HTTP sends data in plaintext', 'HTTP is newer', 'HTTPS is slower always'], correctAnswer: 1, explanation: 'HTTPS adds encryption (TLS/SSL) to HTTP, protecting data from eavesdropping and tampering during transmission.', difficulty: 'easy', domain: 'computing-systems', topicSlug: 'csp-protocols', formSet: 2 },
+
+  // ── Domain: impact ─────────────────────────────────
+  { question: 'The digital divide refers to:', options: ['A type of algorithm', 'The gap between those who have access to digital technology and the Internet and those who do not', 'A programming error', 'A hardware failure'], correctAnswer: 1, explanation: 'The digital divide creates inequality in education, employment, and civic participation based on access to technology and connectivity.', difficulty: 'easy', domain: 'impact', topicSlug: 'csp-digital-divide', formSet: 1 },
+  { question: 'Algorithmic bias occurs when:', options: ['Algorithms always produce correct results', 'Algorithms systematically produce unfair outcomes due to biased training data or flawed design', 'Users don\'t understand algorithms', 'Computers are too slow'], correctAnswer: 1, explanation: 'Algorithms trained on biased data or designed with assumptions can perpetuate or amplify discrimination in hiring, lending, and justice.', difficulty: 'medium', domain: 'impact', topicSlug: 'csp-bias-computing', formSet: 1 },
+  { question: 'Crowdsourcing uses:', options: ['A single expert', 'Contributions from a large number of people, often online, to solve problems or create content', 'Only paid professionals', 'Government agencies'], correctAnswer: 1, explanation: 'Crowdsourcing harnesses collective intelligence: Wikipedia, citizen science, open-source software, and distributed computing projects.', difficulty: 'easy', domain: 'impact', topicSlug: 'csp-crowdsourcing', formSet: 1 },
+  { question: 'Creative Commons licenses allow:', options: ['Unrestricted use always', 'Creators to specify how others may use, share, and build upon their work', 'No sharing ever', 'Only commercial use'], correctAnswer: 1, explanation: 'CC licenses provide a spectrum from most open (CC0) to restrictive (ND, NC), giving creators control while enabling sharing.', difficulty: 'easy', domain: 'impact', topicSlug: 'csp-intellectual-property', formSet: 1 },
+  { question: 'Personally Identifiable Information (PII) includes:', options: ['Only your name', 'Any data that can identify an individual: name, SSN, email, location, biometrics, IP address', 'Only passwords', 'No digital data'], correctAnswer: 1, explanation: 'PII encompasses any information that alone or combined can identify a person — protecting it is crucial for privacy and security.', difficulty: 'easy', domain: 'impact', topicSlug: 'csp-privacy-security', formSet: 1 },
+  { question: 'Phishing attacks attempt to:', options: ['Speed up computers', 'Trick users into revealing personal information by posing as trustworthy entities', 'Improve network security', 'Debug programs'], correctAnswer: 1, explanation: 'Phishing uses deceptive emails, messages, or websites that mimic legitimate services to steal credentials and personal data.', difficulty: 'easy', domain: 'impact', topicSlug: 'csp-cybersecurity', formSet: 1 },
+]
+
+
+export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string }[] {
+  let pool = cspQuestionPool
+  if (topicSlug) {
+    const filtered = pool.filter(q => q.topicSlug === topicSlug)
+    pool = filtered.length > 0 ? filtered : pool
+  }
+  return [...pool].sort(() => Math.random() - 0.5).slice(0, count).map((q, i) => ({
+    id: `${q.topicSlug}-q${i}`,
+    question: q.question,
+    options: q.options,
+    correctIndex: q.correctAnswer,
+    explanation: q.explanation,
+    category: q.domain,
+    topicSlug: q.topicSlug,
+  }))
+}

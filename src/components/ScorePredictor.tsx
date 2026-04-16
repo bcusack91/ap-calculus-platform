@@ -47,7 +47,7 @@ interface TrendPoint {
 /*  Accent colour map                                                  */
 /* ------------------------------------------------------------------ */
 
-type AccentColor = 'blue' | 'emerald' | 'green' | 'rose' | 'cyan' | 'amber' | 'red' | 'indigo'
+type AccentColor = 'blue' | 'emerald' | 'green' | 'rose' | 'cyan' | 'amber' | 'red' | 'indigo' | 'purple' | 'gray' | 'lime' | 'teal'
 
 const T: Record<AccentColor, {
   pageBg: string; gradBtn: string; borderBtn: string; borderBtnText: string
@@ -61,6 +61,10 @@ const T: Record<AccentColor, {
   amber:   { pageBg: 'from-amber-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradBtn: 'from-amber-600 to-orange-600', borderBtn: 'border-amber-400 dark:border-amber-600', borderBtnText: 'text-amber-700 dark:text-amber-400', borderBtnHover: 'hover:bg-amber-50 dark:hover:bg-amber-900/20', link: 'text-amber-600 dark:text-amber-400', chartGrad: ['#F59E0B', '#F97316'] },
   red:     { pageBg: 'from-red-50 via-white to-rose-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradBtn: 'from-red-600 to-rose-600', borderBtn: 'border-red-400 dark:border-red-600', borderBtnText: 'text-red-700 dark:text-red-400', borderBtnHover: 'hover:bg-red-50 dark:hover:bg-red-900/20', link: 'text-red-600 dark:text-red-400', chartGrad: ['#EF4444', '#F43F5E'] },
   indigo:  { pageBg: 'from-indigo-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradBtn: 'from-indigo-600 to-purple-600', borderBtn: 'border-indigo-400 dark:border-indigo-600', borderBtnText: 'text-indigo-700 dark:text-indigo-400', borderBtnHover: 'hover:bg-indigo-50 dark:hover:bg-indigo-900/20', link: 'text-indigo-600 dark:text-indigo-400', chartGrad: ['#6366F1', '#A855F7'] },
+  purple:  { pageBg: 'from-purple-50 via-white to-fuchsia-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradBtn: 'from-purple-600 to-fuchsia-600', borderBtn: 'border-purple-400 dark:border-purple-600', borderBtnText: 'text-purple-700 dark:text-purple-400', borderBtnHover: 'hover:bg-purple-50 dark:hover:bg-purple-900/20', link: 'text-purple-600 dark:text-purple-400', chartGrad: ['#A855F7', '#D946EF'] },
+  gray:    { pageBg: 'from-gray-50 via-white to-slate-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradBtn: 'from-gray-600 to-slate-600', borderBtn: 'border-gray-400 dark:border-gray-600', borderBtnText: 'text-gray-700 dark:text-gray-400', borderBtnHover: 'hover:bg-gray-50 dark:hover:bg-gray-900/20', link: 'text-gray-600 dark:text-gray-400', chartGrad: ['#6B7280', '#64748B'] },
+  lime:    { pageBg: 'from-lime-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradBtn: 'from-lime-600 to-green-600', borderBtn: 'border-lime-400 dark:border-lime-600', borderBtnText: 'text-lime-700 dark:text-lime-400', borderBtnHover: 'hover:bg-lime-50 dark:hover:bg-lime-900/20', link: 'text-lime-600 dark:text-lime-400', chartGrad: ['#84CC16', '#22C55E'] },
+  teal:    { pageBg: 'from-teal-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradBtn: 'from-teal-600 to-cyan-600', borderBtn: 'border-teal-400 dark:border-teal-600', borderBtnText: 'text-teal-700 dark:text-teal-400', borderBtnHover: 'hover:bg-teal-50 dark:hover:bg-teal-900/20', link: 'text-teal-600 dark:text-teal-400', chartGrad: ['#14B8A6', '#06B6D4'] },
 }
 
 /* ------------------------------------------------------------------ */
