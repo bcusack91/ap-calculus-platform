@@ -2,7 +2,8 @@
 
 import { useEffect, useState, use, useCallback, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import { preloadKatex } from '@/lib/katex-lazy'
+import { renderRichText } from '@/lib/render-rich-text'
 import 'katex/dist/katex.min.css'
 
 interface Question {
@@ -203,7 +204,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
 
   function renderMath(text: string) {
     if (!katexLoaded) return text
-    return renderKatexSync(text)
+    return renderRichText(text)
   }
 
   if (loading) {

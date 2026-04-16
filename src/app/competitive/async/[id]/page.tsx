@@ -4,7 +4,8 @@ import { useEffect, useState, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import { use } from 'react'
-import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
+import { preloadKatex } from '@/lib/katex-lazy'
+import { renderRichText } from '@/lib/render-rich-text'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import 'katex/dist/katex.min.css'
@@ -354,7 +355,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
                     <div key={i} className="flex items-center gap-3 py-2 border-b border-gray-700/50 last:border-0">
                       <span className="text-gray-400 text-sm w-6">Q{i + 1}</span>
                       <p className="flex-1 text-gray-300 text-sm truncate" dangerouslySetInnerHTML={{
-                        __html: renderKatexSync(q.question || q.prompt || `Question ${i + 1}`)
+                        __html: renderRichText(q.question || q.prompt || `Question ${i + 1}`)
                       }} />
                       <div className="flex gap-4">
                         <span className={`text-sm font-medium ${cAnswer?.correct ? 'text-green-400' : 'text-red-400'}`}>
@@ -489,7 +490,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
             <p
               className="text-white text-lg leading-relaxed"
               dangerouslySetInnerHTML={{
-                __html: renderKatexSync(q.question || q.prompt || '')
+                __html: renderRichText(q.question || q.prompt || '')
               }}
             />
           </div>
@@ -522,7 +523,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
                   className={className}
                 >
                   <span className="font-medium mr-3 text-gray-500">{String.fromCharCode(65 + i)}.</span>
-                  <span dangerouslySetInnerHTML={{ __html: renderKatexSync(opt) }} />
+                  <span dangerouslySetInnerHTML={{ __html: renderRichText(opt) }} />
                 </button>
               )
             })}
