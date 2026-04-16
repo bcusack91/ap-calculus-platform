@@ -34,6 +34,18 @@ export const courseDiagnosticMap: Record<string, DiagnosticConfig> = {
   'precalculus': { href: '/precalc-diagnostic', icon: '📈', description: 'Take a diagnostic test covering all Precalculus topics. Get a personalized plan to strengthen weak areas.', borderColor: 'border-fuchsia-300 dark:border-fuchsia-700', bgGradient: 'from-fuchsia-50 to-purple-50 dark:from-fuchsia-900/20 dark:to-purple-900/20', btnGradient: 'from-fuchsia-600 to-purple-600' },
   'ap-precalculus': { href: '/ap-precalculus-diagnostic', icon: '📉', description: 'Take a diagnostic test covering all AP Precalculus units. Identify gaps and get a targeted study plan.', borderColor: 'border-violet-300 dark:border-violet-700', bgGradient: 'from-violet-50 to-indigo-50 dark:from-violet-900/20 dark:to-indigo-900/20', btnGradient: 'from-violet-600 to-indigo-600' },
   'grade-8-math': { href: '/grade8-math-diagnostic', icon: '🎓', description: 'Take a diagnostic test covering all Grade 8 Math topics. Get a personalized study plan for improvement.', borderColor: 'border-yellow-300 dark:border-yellow-700', bgGradient: 'from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20', btnGradient: 'from-yellow-600 to-amber-600' },
+  'ap-human-geography': { href: '/ap-human-geo-diagnostic', icon: '🗺️', description: 'Take a diagnostic test covering all AP Human Geography units. Get a personalized study plan.', borderColor: 'border-sky-300 dark:border-sky-700', bgGradient: 'from-sky-50 to-indigo-50 dark:from-sky-900/20 dark:to-indigo-900/20', btnGradient: 'from-sky-600 to-indigo-600' },
+  'ap-us-government': { href: '/ap-us-gov-diagnostic', icon: '🏛️', description: 'Take a diagnostic test covering all AP US Government units. Identify your strengths and weak areas.', borderColor: 'border-red-300 dark:border-red-700', bgGradient: 'from-red-50 to-blue-50 dark:from-red-900/20 dark:to-blue-900/20', btnGradient: 'from-red-600 to-blue-600' },
+  'ap-world-history': { href: '/ap-world-history-diagnostic', icon: '🌏', description: 'Take a diagnostic test covering all AP World History units. Get a targeted study plan.', borderColor: 'border-amber-300 dark:border-amber-700', bgGradient: 'from-amber-50 to-red-50 dark:from-amber-900/20 dark:to-red-900/20', btnGradient: 'from-amber-600 to-red-600' },
+  'ap-us-history': { href: '/ap-us-history-diagnostic', icon: '🇺🇸', description: 'Take a diagnostic test covering all AP US History periods. Identify gaps and build a study plan.', borderColor: 'border-blue-300 dark:border-blue-700', bgGradient: 'from-blue-50 to-red-50 dark:from-blue-900/20 dark:to-red-900/20', btnGradient: 'from-blue-600 to-red-600' },
+  'ap-macroeconomics': { href: '/ap-macro-diagnostic', icon: '📈', description: 'Take a diagnostic test covering all AP Macroeconomics units. Get a personalized study plan.', borderColor: 'border-emerald-300 dark:border-emerald-700', bgGradient: 'from-emerald-50 to-cyan-50 dark:from-emerald-900/20 dark:to-cyan-900/20', btnGradient: 'from-emerald-600 to-cyan-600' },
+  'ap-microeconomics': { href: '/ap-micro-diagnostic', icon: '📉', description: 'Take a diagnostic test covering all AP Microeconomics units. Identify areas to focus on.', borderColor: 'border-teal-300 dark:border-teal-700', bgGradient: 'from-teal-50 to-blue-50 dark:from-teal-900/20 dark:to-blue-900/20', btnGradient: 'from-teal-600 to-blue-600' },
+  'ap-african-american-studies': { href: '/ap-aas-diagnostic', icon: '✊', description: 'Take a diagnostic test covering all AP African American Studies units. Get a focused study plan.', borderColor: 'border-yellow-300 dark:border-yellow-700', bgGradient: 'from-yellow-50 to-green-50 dark:from-yellow-900/20 dark:to-green-900/20', btnGradient: 'from-yellow-600 to-green-600' },
+  'ap-english-literature': { href: '/ap-eng-lit-diagnostic', icon: '📖', description: 'Take a diagnostic test covering all AP English Literature skills. Get a personalized study plan.', borderColor: 'border-rose-300 dark:border-rose-700', bgGradient: 'from-rose-50 to-purple-50 dark:from-rose-900/20 dark:to-purple-900/20', btnGradient: 'from-rose-600 to-purple-600' },
+  'ap-english-language': { href: '/ap-eng-lang-diagnostic', icon: '✍️', description: 'Take a diagnostic test covering all AP English Language skills. Identify areas to strengthen.', borderColor: 'border-indigo-300 dark:border-indigo-700', bgGradient: 'from-indigo-50 to-violet-50 dark:from-indigo-900/20 dark:to-violet-900/20', btnGradient: 'from-indigo-600 to-violet-600' },
+  'ap-environmental-science': { href: '/ap-enviro-diagnostic', icon: '🌍', description: 'Take a diagnostic test covering all AP Environmental Science units. Get a targeted study plan.', borderColor: 'border-green-300 dark:border-green-700', bgGradient: 'from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20', btnGradient: 'from-green-600 to-teal-600' },
+  'ap-computer-science-a': { href: '/ap-csa-diagnostic', icon: '💻', description: 'Take a diagnostic test covering all AP Computer Science A units. Get a personalized study plan.', borderColor: 'border-gray-300 dark:border-gray-700', bgGradient: 'from-gray-50 to-blue-50 dark:from-gray-900/20 dark:to-blue-900/20', btnGradient: 'from-gray-600 to-blue-600' },
+  'ap-computer-science-principles': { href: '/ap-csp-diagnostic', icon: '🖥️', description: 'Take a diagnostic test covering all AP CSP big ideas. Identify strengths and weak areas.', borderColor: 'border-cyan-300 dark:border-cyan-700', bgGradient: 'from-cyan-50 to-purple-50 dark:from-cyan-900/20 dark:to-purple-900/20', btnGradient: 'from-cyan-600 to-purple-600' },
 }
 
 export const courseScorePredictorMap: Record<string, SimpleLinkConfig> = {
@@ -58,6 +70,18 @@ export const courseScorePredictorMap: Record<string, SimpleLinkConfig> = {
   'grade-8-math': { href: '/grade8-math-score-predictor', label: 'View Score Predictor' },
   'pre-algebra': { href: '/prealgebra-score-predictor', label: 'View Score Predictor' },
   'organic-chemistry': { href: '/ochem-score-predictor', label: 'View Score Predictor' },
+  'ap-human-geography': { href: '/ap-human-geo-score-predictor', label: 'View Score Predictor' },
+  'ap-us-government': { href: '/ap-us-gov-score-predictor', label: 'View Score Predictor' },
+  'ap-world-history': { href: '/ap-world-history-score-predictor', label: 'View Score Predictor' },
+  'ap-us-history': { href: '/ap-us-history-score-predictor', label: 'View Score Predictor' },
+  'ap-macroeconomics': { href: '/ap-macro-score-predictor', label: 'View Score Predictor' },
+  'ap-microeconomics': { href: '/ap-micro-score-predictor', label: 'View Score Predictor' },
+  'ap-african-american-studies': { href: '/ap-aas-score-predictor', label: 'View Score Predictor' },
+  'ap-english-literature': { href: '/ap-eng-lit-score-predictor', label: 'View Score Predictor' },
+  'ap-english-language': { href: '/ap-eng-lang-score-predictor', label: 'View Score Predictor' },
+  'ap-environmental-science': { href: '/ap-enviro-score-predictor', label: 'View Score Predictor' },
+  'ap-computer-science-a': { href: '/ap-csa-score-predictor', label: 'View Score Predictor' },
+  'ap-computer-science-principles': { href: '/ap-csp-score-predictor', label: 'View Score Predictor' },
 }
 
 export const courseDailyQuestionMap: Record<string, SimpleLinkConfig> = {
@@ -82,6 +106,18 @@ export const courseDailyQuestionMap: Record<string, SimpleLinkConfig> = {
   'grade-8-math': { href: '/grade8-math-daily-question', label: 'Today\'s Question' },
   'pre-algebra': { href: '/prealgebra-daily-question', label: 'Today\'s Question' },
   'organic-chemistry': { href: '/ochem-daily-question', label: 'Today\'s Question' },
+  'ap-human-geography': { href: '/ap-human-geo-daily-question', label: 'Today\'s Question' },
+  'ap-us-government': { href: '/ap-us-gov-daily-question', label: 'Today\'s Question' },
+  'ap-world-history': { href: '/ap-world-history-daily-question', label: 'Today\'s Question' },
+  'ap-us-history': { href: '/ap-us-history-daily-question', label: 'Today\'s Question' },
+  'ap-macroeconomics': { href: '/ap-macro-daily-question', label: 'Today\'s Question' },
+  'ap-microeconomics': { href: '/ap-micro-daily-question', label: 'Today\'s Question' },
+  'ap-african-american-studies': { href: '/ap-aas-daily-question', label: 'Today\'s Question' },
+  'ap-english-literature': { href: '/ap-eng-lit-daily-question', label: 'Today\'s Question' },
+  'ap-english-language': { href: '/ap-eng-lang-daily-question', label: 'Today\'s Question' },
+  'ap-environmental-science': { href: '/ap-enviro-daily-question', label: 'Today\'s Question' },
+  'ap-computer-science-a': { href: '/ap-csa-daily-question', label: 'Today\'s Question' },
+  'ap-computer-science-principles': { href: '/ap-csp-daily-question', label: 'Today\'s Question' },
 }
 
 export const coursePracticeTestMap: Record<string, SimpleLinkConfig> = {
