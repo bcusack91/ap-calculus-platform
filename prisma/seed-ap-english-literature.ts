@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 async function main() {
-  console.log('Seeding AP English Literature and Composition course, categories, and topics...')
+  console.log('Seeding AP English Literature and Composition (CED-aligned, 9 units)...')
 
   const course = await prisma.course.upsert({
     where: { slug: 'ap-english-literature' },
@@ -22,16 +22,16 @@ async function main() {
   // ─── Unit 1: Short Fiction I ───
   const unit1 = await prisma.category.upsert({
     where: { slug: 'englit-short-fiction-1' },
-    update: {},
+    update: { name: 'Short Fiction I', description: 'Character, setting, and the narrator in short fiction', order: 1 },
     create: {
       slug: 'englit-short-fiction-1',
       name: 'Short Fiction I',
-      description: 'Character, setting, narration, and point of view in short fiction',
+      description: 'Character, setting, and the narrator in short fiction',
       order: 1,
       courseId: course.id,
     },
   })
-  console.log('  ✓ Category: Short Fiction I')
+  console.log('  ✓ Unit 1: Short Fiction I')
 
   await prisma.topic.upsert({
     where: { slug: 'englit-character-setting' },
@@ -53,27 +53,27 @@ async function main() {
     create: {
       slug: 'englit-narration-pov',
       title: 'Narration & Point of View',
-      description: 'First-person, third-person limited and omniscient, unreliable narrator, and narrative structure',
+      description: 'First-person, third-person limited and omniscient, unreliable narrator, and narrative distance',
       order: 2,
       categoryId: unit1.id,
       isPremium: false,
-      textContent: `# 👁️ Narration & Point of View\n\nExplore types of narrators (first-person, second-person, third-person limited, third-person omniscient), the unreliable narrator, stream of consciousness, narrative structure (chronological, in medias res, frame narrative, flashback), and how point of view shapes meaning.`,
+      textContent: `# 👁️ Narration & Point of View\n\nExplore types of narrators (first-person, second-person, third-person limited, third-person omniscient), the unreliable narrator, stream of consciousness, narrative distance, and how point of view shapes reader perception and meaning.`,
     },
   })
 
   // ─── Unit 2: Poetry I ───
   const unit2 = await prisma.category.upsert({
     where: { slug: 'englit-poetry-1' },
-    update: {},
+    update: { name: 'Poetry I', description: 'Structure, figurative language, and imagery in poetry', order: 2 },
     create: {
       slug: 'englit-poetry-1',
       name: 'Poetry I',
-      description: 'Structure, form, figurative language, and imagery in poetry',
+      description: 'Structure, figurative language, and imagery in poetry',
       order: 2,
       courseId: course.id,
     },
   })
-  console.log('  ✓ Category: Poetry I')
+  console.log('  ✓ Unit 2: Poetry I')
 
   await prisma.topic.upsert({
     where: { slug: 'englit-poetic-structure-form' },
@@ -103,19 +103,19 @@ async function main() {
     },
   })
 
-  // ─── Unit 3: Short Fiction II / Longer Fiction ───
+  // ─── Unit 3: Longer Fiction or Drama I ───
   const unit3 = await prisma.category.upsert({
     where: { slug: 'englit-longer-fiction' },
-    update: {},
+    update: { name: 'Longer Fiction or Drama I', description: 'Character development, plot structure, and setting in novels and plays', order: 3 },
     create: {
       slug: 'englit-longer-fiction',
-      name: 'Longer Fiction & Drama I',
-      description: 'Plot, conflict, theme, and dramatic structure in novels and plays',
+      name: 'Longer Fiction or Drama I',
+      description: 'Character development, plot structure, and setting in novels and plays',
       order: 3,
       courseId: course.id,
     },
   })
-  console.log('  ✓ Category: Longer Fiction & Drama I')
+  console.log('  ✓ Unit 3: Longer Fiction or Drama I')
 
   await prisma.topic.upsert({
     where: { slug: 'englit-plot-conflict-theme' },
@@ -136,28 +136,70 @@ async function main() {
     update: {},
     create: {
       slug: 'englit-dramatic-structure',
-      title: 'Dramatic Structure',
-      description: 'Elements of drama: dialogue, monologue, soliloquy, staging, tragedy, comedy, and dramatic irony',
+      title: 'Dramatic Structure & Elements',
+      description: 'Dialogue, monologue, soliloquy, staging, tragedy, comedy, and dramatic irony',
       order: 2,
       categoryId: unit3.id,
       isPremium: false,
-      textContent: `# 🎭 Dramatic Structure\n\nExplore the elements of drama: dialogue, monologue, soliloquy, aside, stage directions, acts and scenes, tragedy (tragic hero, hamartia, catharsis), comedy, tragicomedy, dramatic irony, and the three unities (time, place, action).`,
+      textContent: `# 🎭 Dramatic Structure & Elements\n\nExplore the elements of drama: dialogue, monologue, soliloquy, aside, stage directions, acts and scenes, tragedy (tragic hero, hamartia, catharsis), comedy, tragicomedy, dramatic irony, and the three unities (time, place, action).`,
     },
   })
 
-  // ─── Unit 4: Poetry II ───
+  // ─── Unit 4: Short Fiction II ───
   const unit4 = await prisma.category.upsert({
-    where: { slug: 'englit-poetry-2' },
-    update: {},
+    where: { slug: 'englit-short-fiction-2' },
+    update: { name: 'Short Fiction II', description: 'Narrative complexity, multiple perspectives, and unreliable narration', order: 4 },
     create: {
-      slug: 'englit-poetry-2',
-      name: 'Poetry II',
-      description: 'Tone, attitude, speaker, and complex poetic analysis',
+      slug: 'englit-short-fiction-2',
+      name: 'Short Fiction II',
+      description: 'Narrative complexity, multiple perspectives, and unreliable narration',
       order: 4,
       courseId: course.id,
     },
   })
-  console.log('  ✓ Category: Poetry II')
+  console.log('  ✓ Unit 4: Short Fiction II')
+
+  await prisma.topic.upsert({
+    where: { slug: 'englit-narrative-perspective' },
+    update: {},
+    create: {
+      slug: 'englit-narrative-perspective',
+      title: 'Narrative Perspective & Complexity',
+      description: 'Shifting perspectives, frame narratives, multiple narrators, and narrative reliability',
+      order: 1,
+      categoryId: unit4.id,
+      isPremium: false,
+      textContent: `# 🔄 Narrative Perspective & Complexity\n\nStudy shifting and multiple perspectives, frame narratives, the relationship between narrator and author, how narrative structure creates meaning (in medias res, flashback, nonlinear chronology), and the effects of narrative distance on reader interpretation.`,
+    },
+  })
+
+  await prisma.topic.upsert({
+    where: { slug: 'englit-symbol-motif-fiction' },
+    update: {},
+    create: {
+      slug: 'englit-symbol-motif-fiction',
+      title: 'Symbol, Motif & Ambiguity',
+      description: 'Symbolism in prose, recurring motifs, textual ambiguity, and interpretive complexity',
+      order: 2,
+      categoryId: unit4.id,
+      isPremium: false,
+      textContent: `# 🔑 Symbol, Motif & Ambiguity\n\nExplore how authors use symbols (conventional and literary), recurring motifs, imagery patterns, and deliberate ambiguity to create layered meanings. Analyze how multiple valid interpretations can emerge from a single text.`,
+    },
+  })
+
+  // ─── Unit 5: Poetry II ───
+  const unit5 = await prisma.category.upsert({
+    where: { slug: 'englit-poetry-2' },
+    update: { name: 'Poetry II', description: 'Tone, speaker, structure, and the relationship between form and meaning', order: 5 },
+    create: {
+      slug: 'englit-poetry-2',
+      name: 'Poetry II',
+      description: 'Tone, speaker, structure, and the relationship between form and meaning',
+      order: 5,
+      courseId: course.id,
+    },
+  })
+  console.log('  ✓ Unit 5: Poetry II')
 
   await prisma.topic.upsert({
     where: { slug: 'englit-tone-speaker' },
@@ -167,7 +209,7 @@ async function main() {
       title: 'Tone, Speaker & Attitude',
       description: 'Diction, tone, mood, speaker vs poet, shifts, and irony types',
       order: 1,
-      categoryId: unit4.id,
+      categoryId: unit5.id,
       isPremium: false,
       textContent: `# 🗣️ Tone, Speaker & Attitude\n\nStudy diction (connotation vs denotation, register), tone (the author's attitude), mood (the reader's emotional response), the distinction between speaker and poet, tonal shifts (volta), and types of irony (verbal, situational, dramatic).`,
     },
@@ -181,25 +223,25 @@ async function main() {
       title: 'Sound Devices & Syntax',
       description: 'Alliteration, assonance, consonance, onomatopoeia, syntax, and the effects of sound on meaning',
       order: 2,
-      categoryId: unit4.id,
+      categoryId: unit5.id,
       isPremium: false,
       textContent: `# 🔊 Sound Devices & Syntax\n\nExplore sound devices: alliteration, assonance, consonance, onomatopoeia, euphony, cacophony, repetition (anaphora, epistrophe). Study how syntax (sentence structure, length, complexity, parallelism) contributes to rhythm, emphasis, and meaning.`,
     },
   })
 
-  // ─── Unit 5: Longer Fiction & Drama II ───
-  const unit5 = await prisma.category.upsert({
+  // ─── Unit 6: Longer Fiction or Drama II ───
+  const unit6 = await prisma.category.upsert({
     where: { slug: 'englit-longer-fiction-2' },
-    update: {},
+    update: { name: 'Longer Fiction or Drama II', description: 'Complex character relationships, social commentary, and thematic development', order: 6 },
     create: {
       slug: 'englit-longer-fiction-2',
-      name: 'Longer Fiction & Drama II',
-      description: 'Complex narrative techniques, multiple perspectives, and literary criticism',
-      order: 5,
+      name: 'Longer Fiction or Drama II',
+      description: 'Complex character relationships, social commentary, and thematic development',
+      order: 6,
       courseId: course.id,
     },
   })
-  console.log('  ✓ Category: Longer Fiction & Drama II')
+  console.log('  ✓ Unit 6: Longer Fiction or Drama II')
 
   await prisma.topic.upsert({
     where: { slug: 'englit-narrative-complexity' },
@@ -209,25 +251,95 @@ async function main() {
       title: 'Narrative Complexity & Interpretation',
       description: 'Multiple perspectives, ambiguity, subtext, allegory, and literary movements',
       order: 1,
-      categoryId: unit5.id,
+      categoryId: unit6.id,
       isPremium: false,
       textContent: `# 🧩 Narrative Complexity & Interpretation\n\nStudy multiple and shifting perspectives, ambiguity and open endings, subtext and implication, allegory, literary movements (Romanticism, Realism, Modernism, Postmodernism), and how context (historical, cultural, biographical) enriches interpretation.`,
     },
   })
 
-  // ─── Unit 6: Literary Argumentation ───
-  const unit6 = await prisma.category.upsert({
-    where: { slug: 'englit-argumentation' },
+  await prisma.topic.upsert({
+    where: { slug: 'englit-social-commentary-drama' },
     update: {},
     create: {
-      slug: 'englit-argumentation',
-      name: 'Literary Argumentation',
-      description: 'Thesis development, evidence, analysis, and the AP exam essay types',
-      order: 6,
+      slug: 'englit-social-commentary-drama',
+      title: 'Social Commentary in Fiction & Drama',
+      description: 'How authors use fiction and drama to critique society, explore power dynamics, and address injustice',
+      order: 2,
+      categoryId: unit6.id,
+      isPremium: false,
+      textContent: `# 🏛️ Social Commentary in Fiction & Drama\n\nAnalyze how authors use narrative and dramatic techniques to comment on society: satire, social realism, dystopian fiction, allegory, the portrayal of class/race/gender dynamics, and how literary works engage with their historical and cultural contexts.`,
+    },
+  })
+
+  // ─── Unit 7: Short Fiction III ───
+  const unit7 = await prisma.category.upsert({
+    where: { slug: 'englit-short-fiction-3' },
+    update: { name: 'Short Fiction III', description: 'Advanced analysis of prose style, structure, and literary argument', order: 7 },
+    create: {
+      slug: 'englit-short-fiction-3',
+      name: 'Short Fiction III',
+      description: 'Advanced analysis of prose style, structure, and literary argument',
+      order: 7,
       courseId: course.id,
     },
   })
-  console.log('  ✓ Category: Literary Argumentation')
+  console.log('  ✓ Unit 7: Short Fiction III')
+
+  await prisma.topic.upsert({
+    where: { slug: 'englit-prose-style-analysis' },
+    update: {},
+    create: {
+      slug: 'englit-prose-style-analysis',
+      title: 'Prose Style Analysis',
+      description: 'Analyzing an author\'s style choices: syntax, diction, pacing, sentence variety, and their cumulative effects',
+      order: 1,
+      categoryId: unit7.id,
+      isPremium: false,
+      textContent: `# ✍️ Prose Style Analysis\n\nDevelop advanced skills in analyzing prose style: how sentence structure (periodic, cumulative, balanced), diction (abstract vs concrete, formal vs colloquial), pacing, rhythm, and repetition work together to create tone, develop character, and advance thematic meaning.`,
+    },
+  })
+
+  // ─── Unit 8: Poetry III ───
+  const unit8 = await prisma.category.upsert({
+    where: { slug: 'englit-poetry-3' },
+    update: { name: 'Poetry III', description: 'Complex poetic analysis, comparison, and literary argument', order: 8 },
+    create: {
+      slug: 'englit-poetry-3',
+      name: 'Poetry III',
+      description: 'Complex poetic analysis, comparison, and literary argument',
+      order: 8,
+      courseId: course.id,
+    },
+  })
+  console.log('  ✓ Unit 8: Poetry III')
+
+  await prisma.topic.upsert({
+    where: { slug: 'englit-complex-poetic-analysis' },
+    update: {},
+    create: {
+      slug: 'englit-complex-poetic-analysis',
+      title: 'Complex Poetic Analysis',
+      description: 'Synthesizing multiple poetic elements, comparing poems, and developing sophisticated interpretations',
+      order: 1,
+      categoryId: unit8.id,
+      isPremium: false,
+      textContent: `# 🔬 Complex Poetic Analysis\n\nSynthesize analysis of structure, figurative language, imagery, tone, and sound to develop complex interpretations. Compare and contrast poems by theme, form, or period. Recognize how poets subvert conventions and use form to reinforce or challenge meaning.`,
+    },
+  })
+
+  // ─── Unit 9: Longer Fiction or Drama III ───
+  const unit9 = await prisma.category.upsert({
+    where: { slug: 'englit-longer-fiction-3' },
+    update: { name: 'Longer Fiction or Drama III', description: 'Advanced literary argument and the AP Exam essay types', order: 9 },
+    create: {
+      slug: 'englit-longer-fiction-3',
+      name: 'Longer Fiction or Drama III',
+      description: 'Advanced literary argument and the AP Exam essay types',
+      order: 9,
+      courseId: course.id,
+    },
+  })
+  console.log('  ✓ Unit 9: Longer Fiction or Drama III')
 
   await prisma.topic.upsert({
     where: { slug: 'englit-essay-writing' },
@@ -237,7 +349,7 @@ async function main() {
       title: 'AP Lit Essay Writing',
       description: 'Poetry analysis, prose analysis, and literary argument essays: thesis, evidence, commentary, and structure',
       order: 1,
-      categoryId: unit6.id,
+      categoryId: unit9.id,
       isPremium: false,
       textContent: `# ✍️ AP Lit Essay Writing\n\nMaster the three AP Lit essay types: poetry analysis (how poetic elements develop meaning), prose analysis (how narrative/stylistic choices achieve purpose), and literary argument (defending an interpretation using a chosen work). Develop defensible theses, select and integrate textual evidence, write insightful commentary, and structure coherent arguments.`,
     },
@@ -251,14 +363,27 @@ async function main() {
       title: 'Critical Approaches to Literature',
       description: 'Formalism, feminist criticism, Marxist criticism, postcolonial criticism, and reader-response theory',
       order: 2,
-      categoryId: unit6.id,
+      categoryId: unit9.id,
       isPremium: false,
       textContent: `# 🔍 Critical Approaches to Literature\n\nExplore literary critical lenses: formalism (New Criticism), feminist criticism, Marxist criticism, postcolonial criticism, psychoanalytic criticism, historicism, reader-response theory, and how different theoretical frameworks generate different interpretations of the same text.`,
     },
   })
 
+  // ─── Clean up old unit that no longer exists ───
+  // Delete the fabricated "Literary Argumentation" category if it exists
+  const oldUnit = await prisma.category.findUnique({ where: { slug: 'englit-argumentation' } })
+  if (oldUnit) {
+    // Move any topics from old unit to unit 9 before deleting
+    await prisma.topic.updateMany({
+      where: { categoryId: oldUnit.id },
+      data: { categoryId: unit9.id },
+    })
+    await prisma.category.delete({ where: { slug: 'englit-argumentation' } })
+    console.log('  🧹 Removed old "Literary Argumentation" category (merged into Unit 9)')
+  }
+
   console.log('\n🎉 AP English Literature and Composition seeding complete!')
-  console.log('  📚 6 categories, 13 topics created')
+  console.log('  📚 9 units, 15 topics created (CED-aligned 3-cycle spiral)')
 }
 
 main()

@@ -288,16 +288,16 @@ async function main() {
   // ─── Unit 7: Global Conflict (c. 1900–present) ───
   const unit7 = await prisma.category.upsert({
     where: { slug: 'wh-global-conflict' },
-    update: {},
+    update: { name: 'Global Conflict (c. 1900–present)', description: 'World Wars, totalitarianism, and mass atrocities', order: 7 },
     create: {
       slug: 'wh-global-conflict',
       name: 'Global Conflict (c. 1900–present)',
-      description: 'World Wars, the Cold War, decolonization, and genocide',
+      description: 'World Wars, totalitarianism, and mass atrocities',
       order: 7,
       courseId: course.id,
     },
   })
-  console.log('  ✓ Category: Global Conflict')
+  console.log('  ✓ Unit 7: Global Conflict')
 
   await prisma.topic.upsert({
     where: { slug: 'wh-world-wars' },
@@ -314,32 +314,74 @@ async function main() {
   })
 
   await prisma.topic.upsert({
-    where: { slug: 'wh-cold-war-decolonization' },
+    where: { slug: 'wh-mass-atrocities' },
     update: {},
     create: {
-      slug: 'wh-cold-war-decolonization',
-      title: 'Cold War & Decolonization',
-      description: 'Superpower rivalry, proxy wars, decolonization in Africa and Asia, and the Non-Aligned Movement',
+      slug: 'wh-mass-atrocities',
+      title: 'Mass Atrocities & Resistance',
+      description: 'Genocide, ethnic cleansing, resistance movements, and the development of international human rights norms',
       order: 2,
       categoryId: unit7.id,
       isPremium: false,
-      textContent: `# 🌐 Cold War & Decolonization\n\nExplore the Cold War (containment, NATO vs Warsaw Pact, nuclear arms race), proxy wars (Korea, Vietnam, Afghanistan), decolonization in Africa (Ghana, Algeria, Congo) and Asia (India, Indonesia), the Non-Aligned Movement, and the fall of the Soviet Union.`,
+      textContent: `# ⚖️ Mass Atrocities & Resistance\n\nStudy the Armenian Genocide, the Holocaust, the Holodomor, the Rwandan Genocide, resistance movements, Nuremberg Trials, the Universal Declaration of Human Rights, and the development of international humanitarian law and norms.`,
     },
   })
 
   // ─── Unit 8: Cold War & Decolonization (c. 1900–present) ───
   const unit8 = await prisma.category.upsert({
     where: { slug: 'wh-changing-world' },
-    update: {},
+    update: { name: 'Cold War & Decolonization (c. 1900–present)', description: 'Superpower rivalry, proxy wars, decolonization, and the Non-Aligned Movement', order: 8 },
     create: {
       slug: 'wh-changing-world',
-      name: 'A Changing World Order (c. 1900–present)',
-      description: 'Globalization, technology, human rights, and environmental challenges',
+      name: 'Cold War & Decolonization (c. 1900–present)',
+      description: 'Superpower rivalry, proxy wars, decolonization, and the Non-Aligned Movement',
       order: 8,
       courseId: course.id,
     },
   })
-  console.log('  ✓ Category: A Changing World Order')
+  console.log('  ✓ Unit 8: Cold War & Decolonization')
+
+  await prisma.topic.upsert({
+    where: { slug: 'wh-cold-war-decolonization' },
+    update: {},
+    create: {
+      slug: 'wh-cold-war-decolonization',
+      title: 'Cold War & Decolonization',
+      description: 'Superpower rivalry, proxy wars, decolonization in Africa and Asia, and the Non-Aligned Movement',
+      order: 1,
+      categoryId: unit8.id,
+      isPremium: false,
+      textContent: `# 🌐 Cold War & Decolonization\n\nExplore the Cold War (containment, NATO vs Warsaw Pact, nuclear arms race), proxy wars (Korea, Vietnam, Afghanistan), decolonization in Africa (Ghana, Algeria, Congo) and Asia (India, Indonesia), the Non-Aligned Movement, and the fall of the Soviet Union.`,
+    },
+  })
+
+  await prisma.topic.upsert({
+    where: { slug: 'wh-newly-independent-states' },
+    update: {},
+    create: {
+      slug: 'wh-newly-independent-states',
+      title: 'Newly Independent States',
+      description: 'Nation-building challenges, ethnic conflict, economic development, and Cold War influence on new nations',
+      order: 2,
+      categoryId: unit8.id,
+      isPremium: false,
+      textContent: `# 🏗️ Newly Independent States\n\nStudy the challenges of newly independent nations: nation-building, border conflicts, ethnic and religious tensions, economic development strategies (import substitution, export-oriented), authoritarian vs democratic paths, and superpower interference in postcolonial states.`,
+    },
+  })
+
+  // ─── Unit 9: Globalization (c. 1900–present) ───
+  const unit9 = await prisma.category.upsert({
+    where: { slug: 'wh-globalization' },
+    update: { name: 'Globalization (c. 1900–present)', description: 'Economic globalization, technology, resistance, and 21st-century challenges', order: 9 },
+    create: {
+      slug: 'wh-globalization',
+      name: 'Globalization (c. 1900–present)',
+      description: 'Economic globalization, technology, resistance, and 21st-century challenges',
+      order: 9,
+      courseId: course.id,
+    },
+  })
+  console.log('  ✓ Unit 9: Globalization')
 
   await prisma.topic.upsert({
     where: { slug: 'wh-globalization-tech' },
@@ -349,7 +391,7 @@ async function main() {
       title: 'Globalization & Technology',
       description: 'Economic globalization, international organizations, technology revolution, and cultural exchange',
       order: 1,
-      categoryId: unit8.id,
+      categoryId: unit9.id,
       isPremium: false,
       textContent: `# 🌐 Globalization & Technology\n\nStudy economic globalization (WTO, IMF, World Bank), multinational corporations, the Green Revolution, the digital revolution, cultural globalization, anti-globalization movements, and the spread of democratic ideals.`,
     },
@@ -363,14 +405,14 @@ async function main() {
       title: 'Challenges of the 21st Century',
       description: 'Climate change, terrorism, pandemic disease, human rights, and global inequality',
       order: 2,
-      categoryId: unit8.id,
+      categoryId: unit9.id,
       isPremium: false,
       textContent: `# 🌍 Challenges of the 21st Century\n\nExplore climate change and environmental degradation, global terrorism, pandemic diseases, human rights movements, income inequality, migration crises, democratization and authoritarianism, and international cooperation for sustainable development.`,
     },
   })
 
   console.log('\n🎉 AP World History: Modern seeding complete!')
-  console.log('  📚 8 categories, 16 topics created')
+  console.log('  📚 9 units, 18 topics created (CED-aligned)')
 }
 
 main()

@@ -193,13 +193,13 @@ async function main() {
     update: {},
     create: {
       slug: 'macro-fiscal-policy',
-      name: 'Fiscal Policy & Stabilization',
+      name: 'Long-Run Consequences of Stabilization Policies',
       description: 'Government spending, taxation, budget deficits, and the Phillips Curve',
       order: 5,
       courseId: course.id,
     },
   })
-  console.log('  ✓ Category: Fiscal Policy & Stabilization')
+  console.log('  ✓ Category: Long-Run Consequences of Stabilization Policies')
 
   await prisma.topic.upsert({
     where: { slug: 'macro-fiscal-policy-tools' },
