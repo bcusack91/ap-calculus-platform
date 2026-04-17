@@ -14,6 +14,7 @@ import { FlashcardNotification } from '@/components/flashcard-notification'
 import CorrectAnswerCelebration from '@/components/CorrectAnswerCelebration'
 import BookmarkButton from '@/components/BookmarkButton'
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes'
 import type { ExitQuizQuestion } from '@/data/exit-quizzes'
 import LessonProgressBar from '@/components/LessonProgressBar'
@@ -2762,8 +2763,9 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
                   th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-purple-900 dark:text-purple-100 border border-purple-300 dark:border-purple-700">{children}</th>,
                   td: ({ children }) => <td className="px-6 py-4 text-lg border border-purple-200 dark:border-purple-800">{children}</td>,
                   img: ({ src, alt }) => {
-                    // eslint-disable-next-line @next/next/no-img-element
-                    return <img src={src} alt={alt || ''} className="max-w-full h-auto my-6 rounded-lg" />
+                    const altText = alt || (src ? src.split('/').pop()?.replace(/[-_]/g, ' ').replace(/\.[^.]+$/, '') || 'Lesson image' : 'Lesson image')
+                    const isSvg = src?.endsWith('.svg')
+                    return <Image src={src || ''} alt={altText} width={800} height={450} className="max-w-full h-auto my-6 rounded-lg" sizes="(max-width: 768px) 100vw, 800px" unoptimized={isSvg} />
                   },
                   iframe: ({ src, width, height, ...props }) => <iframe src={src} width={width || '100%'} height={height || '600'} className="w-full rounded-lg my-6" {...props} />,
                 }}
@@ -2840,8 +2842,9 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
             th: ({ children }) => <th className="px-6 py-3 text-left text-lg font-bold text-purple-900 dark:text-purple-100 border border-purple-300 dark:border-purple-700">{children}</th>,
             td: ({ children }) => <td className="px-6 py-4 text-lg border border-purple-200 dark:border-purple-800">{children}</td>,
             img: ({ src, alt }) => {
-              // eslint-disable-next-line @next/next/no-img-element
-              return <img src={src} alt={alt || ''} className="max-w-full h-auto my-6 rounded-lg" />
+              const altText = alt || (src ? src.split('/').pop()?.replace(/[-_]/g, ' ').replace(/\.[^.]+$/, '') || 'Lesson image' : 'Lesson image')
+              const isSvg = src?.endsWith('.svg')
+              return <Image src={src || ''} alt={altText} width={800} height={450} className="max-w-full h-auto my-6 rounded-lg" sizes="(max-width: 768px) 100vw, 800px" unoptimized={isSvg} />
             },
             iframe: ({ src, width, height, ...props }) => <iframe src={src} width={width || '100%'} height={height || '600'} className="w-full rounded-lg my-6" {...props} />,
           }}

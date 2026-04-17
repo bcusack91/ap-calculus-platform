@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import ReactMarkdown from 'react-markdown'
+import Image from 'next/image'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
@@ -408,14 +409,21 @@ const markdownComponents = {
       {children}
     </td>
   ),
-  img: ({ src, alt }: any) => (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={src}
-      alt={alt || ''}
-      className="max-w-full h-auto my-6 rounded-lg"
-    />
-  ),
+  img: ({ src, alt }: any) => {
+    const altText = alt || (src ? src.split('/').pop()?.replace(/[-_]/g, ' ').replace(/\.[^.]+$/, '') || 'Lesson image' : 'Lesson image')
+    const isSvg = src?.endsWith('.svg')
+    return (
+      <Image
+        src={src || ''}
+        alt={altText}
+        width={800}
+        height={450}
+        className="max-w-full h-auto my-6 rounded-lg"
+        sizes="(max-width: 768px) 100vw, 800px"
+        unoptimized={isSvg}
+      />
+    )
+  },
 }
 /* eslint-enable @typescript-eslint/no-explicit-any */
 

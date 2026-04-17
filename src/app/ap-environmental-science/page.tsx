@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -142,6 +143,14 @@ const checkColors: Record<string, string> = {
 export default function ApEnvironmentalScienceHub() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd({
+        title: 'AP Environmental Science',
+        description: metadata.description as string,
+        slug: 'ap-environmental-science',
+      })) }}
+    />
       {/* Hero */}
       <section className="container py-12 sm:py-20">
         <div className="mx-auto max-w-4xl text-center">

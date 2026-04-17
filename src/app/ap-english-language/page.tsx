@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -177,6 +178,14 @@ const checkColors: Record<string, string> = {
 export default function ApEnglishLanguageHub() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd({
+        title: 'AP English Language',
+        description: metadata.description as string,
+        slug: 'ap-english-language',
+      })) }}
+    />
       {/* Hero */}
       <section className="container py-12 sm:py-20">
         <div className="mx-auto max-w-4xl text-center">

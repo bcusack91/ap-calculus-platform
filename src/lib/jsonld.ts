@@ -129,3 +129,44 @@ export function breadcrumbJsonLd(
     })),
   }
 }
+
+/** Article schema for blog posts */
+export function articleJsonLd(article: {
+  title: string
+  description: string
+  slug: string
+  datePublished: string
+  dateModified?: string
+  author?: string
+  tags?: string[]
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.description,
+    url: `${SITE_URL}/blog/${article.slug}`,
+    datePublished: article.datePublished,
+    dateModified: article.dateModified || article.datePublished,
+    author: {
+      '@type': 'Person',
+      name: article.author || 'Study Mondo Team',
+    },
+    publisher: {
+      '@type': 'EducationalOrganization',
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/icon-512.png`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}/blog/${article.slug}`,
+    },
+    ...(article.tags?.length && { keywords: article.tags.join(', ') }),
+    isAccessibleForFree: true,
+    inLanguage: 'en',
+  }
+}

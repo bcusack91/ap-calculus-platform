@@ -5,6 +5,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
 import { SocialShare } from '@/components/SocialShare'
+import { articleJsonLd } from '@/lib/jsonld'
 
 const postsDir = path.join(process.cwd(), 'content/blog')
 
@@ -64,6 +65,17 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
 
   return (
     <div className="container py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd({
+          title: post.data.title,
+          description: post.data.description || '',
+          slug: params.slug,
+          datePublished: post.data.date,
+          author: post.data.author,
+          tags: post.data.tags,
+        })) }}
+      />
       <div className="mx-auto max-w-3xl">
         <nav className="mb-6 text-sm text-gray-500 dark:text-gray-400">
           <Link href="/blog" className="hover:text-purple-600 transition-colors">
