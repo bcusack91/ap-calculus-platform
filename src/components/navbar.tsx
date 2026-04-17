@@ -141,10 +141,10 @@ export function Navbar() {
                 </defs>
                 <rect x="7" y="10" width="18" height="12" rx="2.5" fill="#fff" stroke="#7C3AED" strokeWidth="1.2"/>
                 <rect x="9" y="12" width="14" height="8" rx="1.5" fill="#e0e7ff"/>
-                <path d="M9 12 Q16 16 23 12" fill="none" stroke="#7C3AED" strokeWidth="0.7"/>
-                <ellipse cx="13" cy="17" rx="1.2" ry="1.5" fill="#7C3AED"/>
-                <ellipse cx="19" cy="17" rx="1.2" ry="1.5" fill="#7C3AED"/>
-                <path d="M14.5 20 Q16 21.5 17.5 20" stroke="#7C3AED" strokeWidth="0.7" fill="none"/>
+                <path d="M9 12 Q16 14.5 23 12" fill="none" stroke="#7C3AED" strokeWidth="0.7"/>
+                <ellipse cx="13" cy="16" rx="1.2" ry="1.5" fill="#7C3AED"/>
+                <ellipse cx="19" cy="16" rx="1.2" ry="1.5" fill="#7C3AED"/>
+                <path d="M13.5 19 Q16 20.8 18.5 19" stroke="#7C3AED" strokeWidth="0.7" fill="none"/>
               </svg>
             </span>
             <span className="text-xl font-bold">Study Mondo</span>

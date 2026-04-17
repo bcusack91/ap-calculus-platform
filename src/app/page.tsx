@@ -67,10 +67,10 @@ export default async function Home() {
                 </defs>
                 <rect x="14" y="20" width="36" height="24" rx="5" fill="#fff" stroke="#7C3AED" strokeWidth="2"/>
                 <rect x="18" y="24" width="28" height="16" rx="3" fill="#e0e7ff"/>
-                <path d="M18 24 Q32 32 46 24" fill="none" stroke="#7C3AED" strokeWidth="1.5"/>
-                <ellipse cx="26" cy="36" rx="2.5" ry="3" fill="#7C3AED"/>
-                <ellipse cx="38" cy="36" rx="2.5" ry="3" fill="#7C3AED"/>
-                <path d="M29 44 Q32 48 35 44" stroke="#7C3AED" strokeWidth="1.5" fill="none"/>
+                <path d="M18 24 Q32 29 46 24" fill="none" stroke="#7C3AED" strokeWidth="1.5"/>
+                <ellipse cx="26" cy="33" rx="2.5" ry="3" fill="#7C3AED"/>
+                <ellipse cx="38" cy="33" rx="2.5" ry="3" fill="#7C3AED"/>
+                <path d="M27 39 Q32 42.5 37 39" stroke="#7C3AED" strokeWidth="1.5" fill="none"/>
               </svg>
             </span>
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl gradient-text-accessible bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600">
