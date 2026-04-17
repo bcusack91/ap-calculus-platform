@@ -349,7 +349,41 @@ const SEED_GROUPS: { label: string; files: string[] }[] = [
       'add-mcat-subtopics.ts',
     ],
   },
-  // ── Group 21: Flashcard Decks ──
+  // ── Group 21: AP Social Sciences ──
+  {
+    label: '🌍 AP Social Sciences',
+    files: [
+      'seed-ap-human-geography.ts',
+      'seed-ap-us-government.ts',
+      'seed-ap-world-history.ts',
+      'seed-ap-us-history.ts',
+      'seed-ap-macroeconomics.ts',
+      'seed-ap-microeconomics.ts',
+      'seed-ap-african-american-studies.ts',
+    ],
+  },
+  // ── Group 22: AP English ──
+  {
+    label: '📖 AP English',
+    files: [
+      'seed-ap-english-literature.ts',
+      'seed-ap-english-language.ts',
+    ],
+  },
+  // ── Group 23: AP Environmental Science ──
+  {
+    label: '🌿 AP Environmental Science',
+    files: ['seed-ap-environmental-science.ts'],
+  },
+  // ── Group 24: AP Computer Science ──
+  {
+    label: '💻 AP Computer Science',
+    files: [
+      'seed-ap-computer-science-a.ts',
+      'seed-ap-computer-science-principles.ts',
+    ],
+  },
+  // ── Group 25: Flashcard Decks ──
   {
     label: '🃏 Flashcard Decks',
     files: [
@@ -367,7 +401,7 @@ const SEED_GROUPS: { label: string; files: string[] }[] = [
       'add-flashcards-mcat-physics.ts',
     ],
   },
-  // ── Group 22: Achievements & Extras ──
+  // ── Group 26: Achievements & Extras ──
   {
     label: '🏆 Achievements & Extras',
     files: [
@@ -378,7 +412,7 @@ const SEED_GROUPS: { label: string; files: string[] }[] = [
       'final-2-topics.ts', 'final-expansion-to-500.ts',
     ],
   },
-  // ── Group 23: Updates & Splits ──
+  // ── Group 27: Updates & Splits ──
   {
     label: '🔧 Updates & Splits',
     files: [
