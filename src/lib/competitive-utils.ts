@@ -29,6 +29,18 @@ import { getApPhysics2Questions } from '@/data/competitive-questions/ap-physics2
 import { getApPhysicsCMechQuestions } from '@/data/competitive-questions/ap-physics-c-mech-bank'
 import { getApPhysicsCEMQuestions } from '@/data/competitive-questions/ap-physics-c-em-bank'
 import { getApCalculusBCQuestions } from '@/data/competitive-questions/ap-calculus-bc-bank'
+import { getApHumanGeoQuestions } from '@/data/competitive-questions/ap-human-geo-bank'
+import { getApUSGovQuestions } from '@/data/competitive-questions/ap-us-gov-bank'
+import { getApWorldHistoryQuestions } from '@/data/competitive-questions/ap-world-history-bank'
+import { getApUSHistoryQuestions } from '@/data/competitive-questions/ap-us-history-bank'
+import { getApMacroQuestions } from '@/data/competitive-questions/ap-macro-bank'
+import { getApMicroQuestions } from '@/data/competitive-questions/ap-micro-bank'
+import { getApAASQuestions } from '@/data/competitive-questions/ap-african-american-studies-bank'
+import { getApEngLitQuestions } from '@/data/competitive-questions/ap-english-lit-bank'
+import { getApEngLangQuestions } from '@/data/competitive-questions/ap-english-lang-bank'
+import { getApAPESQuestions } from '@/data/competitive-questions/ap-enviro-bank'
+import { getApCSAQuestions } from '@/data/competitive-questions/ap-csa-bank'
+import { getApCSPQuestions } from '@/data/competitive-questions/ap-csp-bank'
 
 interface UnitCirclePosition {
   angle: number;
@@ -359,6 +371,18 @@ export function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: 
     'ap-physics-c-em': getApPhysicsCEMQuestions as unknown as (count?: number) => OptionQuestion[],
     'ap-calculus-bc': getApCalculusBCQuestions as unknown as (count?: number) => OptionQuestion[],
     'ap-precalculus': getPreCalcQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-human-geo': getApHumanGeoQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-us-gov': getApUSGovQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-world-history': getApWorldHistoryQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-us-history': getApUSHistoryQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-macro': getApMacroQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-micro': getApMicroQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-african-american-studies': getApAASQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-english-lit': getApEngLitQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-english-lang': getApEngLangQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-enviro': getApAPESQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-csa': getApCSAQuestions as unknown as (count?: number) => OptionQuestion[],
+    'ap-csp': getApCSPQuestions as unknown as (count?: number) => OptionQuestion[],
   }
 
   // For course-level topics (standard mode, no sub-topic selected), filter to completed topics only
