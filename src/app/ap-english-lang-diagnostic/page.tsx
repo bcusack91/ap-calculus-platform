@@ -12,6 +12,7 @@ import {
   type APEnglishLangDiagnosticResults,
 } from '@/data/ap-english-lang-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -73,7 +74,13 @@ export default function APEnglishLangDiagnosticPage() {
     const previousForms = history.map(h => { const r = h.results as Record<string, unknown> | null; return Number(r?.form) }).filter((f): f is number => Number.isFinite(f) && f >= 1)
     const form = pickNextForm(previousForms)
     const data = generateAPEnglishLangDiagnosticTest(form)
-    setTestData(data)
+    // Shuffle options so correct answer position is randomized
+    data.questions.forEach((q) => {
+      const s = shuffleOptions(q.options, q.correctAnswer, q.question)
+      q.options = s.options
+      q.correctAnswer = s.correctIndex
+    })
+        setTestData(data)
     setCurrentIndex(0)
     setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))

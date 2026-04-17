@@ -13,6 +13,7 @@ import {
   type ACTDiagnosticResults,
 } from '@/data/act-practice/diagnostic-generator'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -77,7 +78,13 @@ export default function ACTDiagnosticPage() {
       .filter((f): f is number => Number.isFinite(f))
     const form = pickNextForm(previousForms)
     const data = await generateACTDiagnosticTest({ form })
-    setTestData(data); setCurrentIndex(0); setAnswers(new Array(data.questions.length).fill(null))
+    // Shuffle options so correct answer position is randomized
+    data.questions.forEach((q) => {
+      const s = shuffleOptions(q.options, q.correctIndex, q.question)
+      q.options = s.options
+      q.correctIndex = s.correctIndex
+    })
+        setTestData(data); setCurrentIndex(0); setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>())); setTimeRemaining(data.timeLimitMinutes * 60); setPhase('testing'); setLoading(false)
   }, [history])
 

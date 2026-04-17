@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 interface DailyQ {
   topicSlug: string
@@ -24,7 +25,13 @@ export default function APChemDailyQuestionPage() {
   useEffect(() => {
     fetch('/api/ap-chem-daily-question')
       .then(r => r.json())
-      .then(data => setQuestions(data.questions ?? []))
+      .then(data => {
+        const qs = (data.questions ?? []).map((dq: DailyQ) => {
+          const s = shuffleOptions(dq.question.options, dq.question.correctAnswer, dq.question.question)
+          return { ...dq, question: { ...dq.question, options: s.options, correctAnswer: s.correctIndex } }
+        })
+        setQuestions(qs)
+      })
       .finally(() => setLoading(false))
   }, [])
 

@@ -9,6 +9,7 @@ import {
   trackDailyQuestionLoaded,
 } from '@/lib/analytics'
 import { getOrAssignPostCompletionCtaVariant, type PostCompletionCtaVariant } from '@/lib/experiments'
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 interface DailyQ {
   topicSlug: string
@@ -27,7 +28,13 @@ export default function Grade8MathDailyQuestionPage() {
   useEffect(() => {
     fetch('/api/grade8-math-daily-question')
       .then(r => r.json())
-      .then(data => setQuestions(data.questions ?? []))
+      .then(data => {
+        const qs = (data.questions ?? []).map((dq: DailyQ) => {
+          const s = shuffleOptions(dq.question.options, dq.question.correctAnswer, dq.question.question)
+          return { ...dq, question: { ...dq.question, options: s.options, correctAnswer: s.correctIndex } }
+        })
+        setQuestions(qs)
+      })
       .finally(() => setLoading(false))
   }, [])
 

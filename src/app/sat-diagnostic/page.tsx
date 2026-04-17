@@ -9,6 +9,7 @@ import DiagnosticTest, { DiagnosticResultsView } from '@/components/SATDiagnosti
 import DiagnosticReview from '@/components/DiagnosticReview'
 import { InArticleAd } from '@/components/ad-banner'
 import 'katex/dist/katex.min.css'
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 export default function SATDiagnosticPage() {
   const { status } = useSession()
@@ -139,7 +140,14 @@ export default function SATDiagnosticPage() {
   if (phase === 'testing') {
     if (!testData) {
       // Load test data asynchronously
-      generateDiagnosticTest().then(setTestData)
+      generateDiagnosticTest().then(data => {
+        data.questions.forEach(q => {
+          const s = shuffleOptions(q.options, q.correctIndex, q.question)
+          q.options = s.options
+          q.correctIndex = s.correctIndex
+        })
+        setTestData(data)
+      })
       return (
         <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
           <div className="container py-12">

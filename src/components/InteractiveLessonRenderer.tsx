@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
 import type { PreloadedLessonPart } from '@/data/interactive-lessons/server-loader'
 import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
@@ -32,6 +32,7 @@ import PrintButton from '@/components/PrintButton'
 import FontSizeAdjuster from '@/components/FontSizeAdjuster'
 import ReadingProgressBar from '@/components/ReadingProgressBar'
 import HintSystem from '@/components/HintSystem'
+import { shuffleOptions } from '@/lib/shuffle-options'
 import MarkForReview from '@/components/MarkForReview'
 import ScratchPad from '@/components/ScratchPad'
 import { hasReferenceSheet } from '@/data/ap-reference-sheets'
@@ -2912,6 +2913,16 @@ function MultipleChoiceQuiz({
   const questions = section.exercise?.questions || []
   const currentQuestion = questions[currentQuestionIndex]
 
+  // Pre-compute shuffled options for all questions (stable per question content)
+  const shuffledQuestions = useMemo(
+    () => questions.map((q: { options: string[]; correctAnswer: number; question?: string; text?: string }) => {
+      const seed = (q.question || q.text || '') + JSON.stringify(q.options)
+      return shuffleOptions(q.options, q.correctAnswer, seed)
+    }),
+    [questions]
+  )
+  const currentShuffled = shuffledQuestions[currentQuestionIndex]
+
   const handleAnswerSelect = (questionIndex: number, answerIndex: number) => {
     if (eliminatedOptions[questionIndex]?.has(answerIndex)) return
     const newSelectedAnswers = [...selectedAnswers]
@@ -2950,14 +2961,14 @@ function MultipleChoiceQuiz({
       // All questions answered, complete the quiz
       setQuizComplete(true)
       const finalScore = selectedAnswers.filter(
-        (answer, index) => answer === questions[index]?.correctAnswer
+        (answer, index) => answer === shuffledQuestions[index]?.correctIndex
       ).length
       onComplete(finalScore, questions.length)
     }
   }
 
   const score = selectedAnswers.filter(
-    (answer, index) => answer === questions[index]?.correctAnswer
+    (answer, index) => answer === shuffledQuestions[index]?.correctIndex
   ).length
 
   if (!questions || questions.length === 0) {
@@ -3020,9 +3031,9 @@ function MultipleChoiceQuiz({
         </h3>
 
         <div className="space-y-3">
-          {currentQuestion.options.map((option: string, optionIndex: number) => {
+          {currentShuffled.options.map((option: string, optionIndex: number) => {
             const isSelected = selectedAnswers[currentQuestionIndex] === optionIndex
-            const isCorrect = optionIndex === currentQuestion.correctAnswer
+            const isCorrect = optionIndex === currentShuffled.correctIndex
             const showingFeedback = showFeedback[currentQuestionIndex]
             const isEliminated = eliminatedOptions[currentQuestionIndex]?.has(optionIndex) ?? false
 
@@ -3092,16 +3103,16 @@ function MultipleChoiceQuiz({
         {/* Feedback */}
         {showFeedback[currentQuestionIndex] && (
           <div className={`mt-4 p-4 rounded-lg ${
-            selectedAnswers[currentQuestionIndex] === currentQuestion.correctAnswer
+            selectedAnswers[currentQuestionIndex] === currentShuffled.correctIndex
               ? 'bg-green-50 border border-green-200'
               : 'bg-red-50 border border-red-200'
           }`}>
             <p className={`font-semibold mb-2 ${
-              selectedAnswers[currentQuestionIndex] === currentQuestion.correctAnswer
+              selectedAnswers[currentQuestionIndex] === currentShuffled.correctIndex
                 ? 'text-green-800'
                 : 'text-red-800'
             }`}>
-              {selectedAnswers[currentQuestionIndex] === currentQuestion.correctAnswer
+              {selectedAnswers[currentQuestionIndex] === currentShuffled.correctIndex
                 ? '✓ Correct!'
                 : '✗ Incorrect'}
             </p>

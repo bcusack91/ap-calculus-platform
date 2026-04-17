@@ -13,6 +13,7 @@ import {
 } from '@/data/ap-biology-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
 import ReferenceSheetModal from '@/components/ReferenceSheetModal'
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -99,7 +100,13 @@ export default function APBioDiagnosticPage() {
 
     const form = pickNextForm(previousForms)
     const data = generateAPBioDiagnosticTest(form)
-    setTestData(data)
+    // Shuffle options so correct answer position is randomized
+    data.questions.forEach((q) => {
+      const s = shuffleOptions(q.options, q.correctAnswer, q.question)
+      q.options = s.options
+      q.correctAnswer = s.correctIndex
+    })
+        setTestData(data)
     setCurrentIndex(0)
     setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))

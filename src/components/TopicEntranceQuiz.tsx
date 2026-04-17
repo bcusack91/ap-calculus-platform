@@ -5,6 +5,7 @@ import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import 'katex/dist/katex.min.css'
 import type { EntranceQuizQuestion } from '@/data/entrance-quizzes'
+import { shuffleOptions } from '@/lib/shuffle-options'
 import ReferenceSheetModal from './ReferenceSheetModal'
 import { hasReferenceSheet } from '@/data/ap-reference-sheets'
 import ScratchPad from '@/components/ScratchPad'
@@ -46,10 +47,16 @@ export default function TopicEntranceQuiz({
   const question = questions[currentQuestion]
   const totalQuestions = questions.length
 
+  // Shuffle options so the correct answer position is randomized
+  const shuffled = useMemo(
+    () => question ? shuffleOptions(question.options, question.correctIndex, question.id + question.question) : { options: [], correctIndex: 0 },
+    [question]
+  )
+
   const renderedQuestion = useMemo(() => renderLatex(question?.question || ''), [question?.question, katexReady]) // eslint-disable-line react-hooks/exhaustive-deps
   const renderedOptions = useMemo(
-    () => (question?.options || []).map(o => renderLatex(o)),
-    [question?.options, katexReady] // eslint-disable-line react-hooks/exhaustive-deps
+    () => shuffled.options.map(o => renderLatex(o)),
+    [shuffled.options, katexReady] // eslint-disable-line react-hooks/exhaustive-deps
   )
   const renderedExplanation = useMemo(
     () => renderLatex(question?.explanation || ''),
@@ -84,7 +91,7 @@ export default function TopicEntranceQuiz({
 
   const handleConfirm = useCallback(() => {
     if (selectedAnswer === null) return
-    const correct = selectedAnswer === question.correctIndex
+    const correct = selectedAnswer === shuffled.correctIndex
     setAnswers(prev => [...prev, {
       questionId: question.id,
       selectedAnswer,
@@ -92,7 +99,7 @@ export default function TopicEntranceQuiz({
       partNumber: question.partNumber,
     }])
     setShowExplanation(true)
-  }, [selectedAnswer, question])
+  }, [selectedAnswer, question, shuffled.correctIndex])
 
   const handleGuessing = useCallback(() => {
     setAnswers(prev => [...prev, {
@@ -247,11 +254,11 @@ export default function TopicEntranceQuiz({
               let textColor = 'text-gray-900 dark:text-white'
 
               if (showExplanation) {
-                if (idx === question.correctIndex) {
+                if (idx === shuffled.correctIndex) {
                   borderColor = 'border-green-500'
                   bgColor = 'bg-green-50 dark:bg-green-900/20'
                   textColor = 'text-green-800 dark:text-green-200'
-                } else if (idx === selectedAnswer && idx !== question.correctIndex) {
+                } else if (idx === selectedAnswer && idx !== shuffled.correctIndex) {
                   borderColor = 'border-red-500'
                   bgColor = 'bg-red-50 dark:bg-red-900/20'
                   textColor = 'text-red-800 dark:text-red-200'

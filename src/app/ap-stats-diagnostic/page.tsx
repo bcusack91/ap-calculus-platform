@@ -13,6 +13,7 @@ import {
 } from '@/data/ap-statistics-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
 import ReferenceSheetModal from '@/components/ReferenceSheetModal'
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -85,7 +86,13 @@ export default function APStatsDiagnosticPage() {
 
     const form = pickNextForm(previousForms)
     const data = generateAPStatsDiagnosticTest(form)
-    setTestData(data)
+    // Shuffle options so correct answer position is randomized
+    data.questions.forEach((q) => {
+      const s = shuffleOptions(q.options, q.correctAnswer, q.question)
+      q.options = s.options
+      q.correctAnswer = s.correctIndex
+    })
+        setTestData(data)
     setCurrentIndex(0)
     setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))

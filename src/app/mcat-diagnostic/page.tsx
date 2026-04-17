@@ -12,6 +12,7 @@ import {
 } from '@/data/mcat-practice/diagnostic-generator'
 import { trackCustomEvent } from '@/lib/analytics'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 const MCAT_DIAGNOSTIC_SEEN_KEY = 'mcat-diagnostic-seen-v1'
 
@@ -327,7 +328,13 @@ export default function MCATDiagnosticPage() {
       window.localStorage.setItem(MCAT_DIAGNOSTIC_SEEN_KEY, JSON.stringify(updatedSeen.slice(-4000)))
     }
 
-    setTestData(data)
+    // Shuffle options so correct answer position is randomized
+    data.questions.forEach((q) => {
+      const s = shuffleOptions(q.options, q.correctAnswer, q.question)
+      q.options = s.options
+      q.correctAnswer = s.correctIndex
+    })
+        setTestData(data)
     setCurrentIndex(0)
     setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))

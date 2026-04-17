@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 interface MCATDailyQ {
   section: string
@@ -39,7 +40,13 @@ export default function MCATDailyQuestionPage() {
   useEffect(() => {
     fetch('/api/mcat-daily-question')
       .then(r => r.json())
-      .then(data => setQuestions(data.questions ?? []))
+      .then(data => {
+        const qs = (data.questions ?? []).map((dq: MCATDailyQ) => {
+          const s = shuffleOptions(dq.question.options, dq.question.correctAnswer, dq.question.question)
+          return { ...dq, question: { ...dq.question, options: s.options, correctAnswer: s.correctIndex } }
+        })
+        setQuestions(qs)
+      })
       .finally(() => setLoading(false))
   }, [])
 

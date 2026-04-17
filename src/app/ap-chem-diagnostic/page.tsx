@@ -16,6 +16,7 @@ import DiagnosticReview from '@/components/DiagnosticReview'
 import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -122,7 +123,13 @@ export default function APChemDiagnosticPage() {
 
     const form = pickNextForm(previousForms)
     const data = generateAPChemDiagnosticTest(form)
-    setTestData(data)
+    // Shuffle options so correct answer position is randomized
+    data.questions.forEach((q) => {
+      const s = shuffleOptions(q.options, q.correctAnswer, q.question)
+      q.options = s.options
+      q.correctAnswer = s.correctIndex
+    })
+        setTestData(data)
     setCurrentIndex(0)
     setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))

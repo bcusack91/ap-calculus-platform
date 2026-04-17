@@ -7,6 +7,7 @@ import 'katex/dist/katex.min.css'
 import ReferenceSheetModal from './ReferenceSheetModal'
 import { hasReferenceSheet, getCourseSlugFromTopic } from '@/data/ap-reference-sheets'
 import ScratchPad from '@/components/ScratchPad'
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 interface ExitQuizQuestion {
   id: string
@@ -68,11 +69,17 @@ export default function ExitQuiz({
   const question = questions[currentQuestion]
   const totalQuestions = questions.length
 
+  // Shuffle options so the correct answer position is randomized
+  const shuffled = useMemo(
+    () => question ? shuffleOptions(question.options, question.correctIndex, question.id + question.question) : { options: [], correctIndex: 0 },
+    [question]
+  )
+
   // Precompute rendered HTML for the current question
   const renderedQuestion = useMemo(() => renderLatex(question?.question || ''), [question?.question, katexReady])
   const renderedOptions = useMemo(
-    () => (question?.options || []).map(o => renderLatex(o)),
-    [question?.options, katexReady]
+    () => shuffled.options.map(o => renderLatex(o)),
+    [shuffled.options, katexReady]
   )
   const renderedExplanation = useMemo(
     () => renderLatex(question?.explanation || ''),
@@ -101,7 +108,7 @@ export default function ExitQuiz({
 
   const handleConfirm = () => {
     if (selectedAnswer === null) return
-    const correct = selectedAnswer === question.correctIndex
+    const correct = selectedAnswer === shuffled.correctIndex
     setShowExplanation(true)
     setAnswers(prev => [...prev, {
       questionId: question.id,
@@ -395,7 +402,7 @@ export default function ExitQuiz({
         <div className="space-y-3 mb-6">
           {question.options.map((_, i) => {
             const isSelected = selectedAnswer === i
-            const isCorrect = i === question.correctIndex
+            const isCorrect = i === shuffled.correctIndex
             const isEliminated = eliminatedOptions.has(i)
             let style = 'border-gray-200 dark:border-gray-600 hover:border-purple-400 dark:hover:border-purple-500 cursor-pointer'
 

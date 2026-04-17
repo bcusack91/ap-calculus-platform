@@ -12,6 +12,7 @@ import {
   type APHumanGeoDiagnosticResults,
 } from '@/data/ap-human-geography-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 function formatTime(seconds: number): string {
   const mins = Math.floor(seconds / 60)
@@ -83,7 +84,13 @@ export default function APHumanGeoDiagnosticPage() {
 
     const form = pickNextForm(previousForms)
     const data = generateAPHumanGeoDiagnosticTest(form)
-    setTestData(data)
+    // Shuffle options so correct answer position is randomized
+    data.questions.forEach((q) => {
+      const s = shuffleOptions(q.options, q.correctAnswer, q.question)
+      q.options = s.options
+      q.correctAnswer = s.correctIndex
+    })
+        setTestData(data)
     setCurrentIndex(0)
     setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))
