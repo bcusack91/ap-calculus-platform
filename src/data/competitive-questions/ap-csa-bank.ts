@@ -1,178 +1,50 @@
-// AP Computer Science A question bank for competitive mode
+// Ap Csa Question question bank for competitive mode
 
-export interface ApCSAQuestion {
+export interface ApCsaQuestion {
   id: number
   question: string
   options: string[]
   correctAnswer: number
   explanation: string
   difficulty: 'easy' | 'medium' | 'hard'
+  topicSlug: string
 }
 
-const allQuestions: ApCSAQuestion[] = [
-  {
-    id: 1,
-    question: 'Which of the following best describes a key concept in Variables & Types?',
-    options: ['A fundamental principle of Variables & Types', 'An unrelated concept from another field', 'A common misconception about Variables & Types', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Variables & Types is essential for the AP Computer Science A exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 2,
-    question: 'Which of the following best describes a key concept in Expressions & Operators?',
-    options: ['A fundamental principle of Expressions & Operators', 'An unrelated concept from another field', 'A common misconception about Expressions & Operators', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Expressions & Operators is essential for the AP Computer Science A exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 3,
-    question: 'Which of the following best describes a key concept in Strings & Objects?',
-    options: ['A fundamental principle of Strings & Objects', 'An unrelated concept from another field', 'A common misconception about Strings & Objects', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Strings & Objects is essential for the AP Computer Science A exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 4,
-    question: 'Which of the following best describes a key concept in Using Objects?',
-    options: ['A fundamental principle of Using Objects', 'An unrelated concept from another field', 'A common misconception about Using Objects', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Using Objects is essential for the AP Computer Science A exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 5,
-    question: 'Which of the following best describes a key concept in Boolean & If?',
-    options: ['A fundamental principle of Boolean & If', 'An unrelated concept from another field', 'A common misconception about Boolean & If', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Boolean & If is essential for the AP Computer Science A exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 6,
-    question: 'Which of the following best describes a key concept in Conditionals?',
-    options: ['A fundamental principle of Conditionals', 'An unrelated concept from another field', 'A common misconception about Conditionals', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Conditionals is essential for the AP Computer Science A exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 7,
-    question: 'Which of the following best describes a key concept in Iteration?',
-    options: ['A fundamental principle of Iteration', 'An unrelated concept from another field', 'A common misconception about Iteration', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Iteration is essential for the AP Computer Science A exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 8,
-    question: 'Which of the following best describes a key concept in Loops?',
-    options: ['A fundamental principle of Loops', 'An unrelated concept from another field', 'A common misconception about Loops', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Loops is essential for the AP Computer Science A exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 9,
-    question: 'Which of the following best describes a key concept in Writing Classes?',
-    options: ['A fundamental principle of Writing Classes', 'An unrelated concept from another field', 'A common misconception about Writing Classes', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Writing Classes is essential for the AP Computer Science A exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 10,
-    question: 'Which of the following best describes a key concept in Class Design?',
-    options: ['A fundamental principle of Class Design', 'An unrelated concept from another field', 'A common misconception about Class Design', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Class Design is essential for the AP Computer Science A exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 11,
-    question: 'Which of the following best describes a key concept in Arrays?',
-    options: ['A fundamental principle of Arrays', 'An unrelated concept from another field', 'A common misconception about Arrays', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Arrays is essential for the AP Computer Science A exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 12,
-    question: 'Which of the following best describes a key concept in Array Algorithms?',
-    options: ['A fundamental principle of Array Algorithms', 'An unrelated concept from another field', 'A common misconception about Array Algorithms', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Array Algorithms is essential for the AP Computer Science A exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 13,
-    question: 'Which of the following best describes a key concept in ArrayList?',
-    options: ['A fundamental principle of ArrayList', 'An unrelated concept from another field', 'A common misconception about ArrayList', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of ArrayList is essential for the AP Computer Science A exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 14,
-    question: 'Which of the following best describes a key concept in ArrayList Usage?',
-    options: ['A fundamental principle of ArrayList Usage', 'An unrelated concept from another field', 'A common misconception about ArrayList Usage', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of ArrayList Usage is essential for the AP Computer Science A exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 15,
-    question: 'Which of the following best describes a key concept in 2D Arrays?',
-    options: ['A fundamental principle of 2D Arrays', 'An unrelated concept from another field', 'A common misconception about 2D Arrays', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of 2D Arrays is essential for the AP Computer Science A exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 16,
-    question: 'Which of the following best describes a key concept in 2D Array Algorithms?',
-    options: ['A fundamental principle of 2D Array Algorithms', 'An unrelated concept from another field', 'A common misconception about 2D Array Algorithms', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of 2D Array Algorithms is essential for the AP Computer Science A exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 17,
-    question: 'Which of the following best describes a key concept in Inheritance?',
-    options: ['A fundamental principle of Inheritance', 'An unrelated concept from another field', 'A common misconception about Inheritance', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Inheritance is essential for the AP Computer Science A exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 18,
-    question: 'Which of the following best describes a key concept in Polymorphism?',
-    options: ['A fundamental principle of Polymorphism', 'An unrelated concept from another field', 'A common misconception about Polymorphism', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Polymorphism is essential for the AP Computer Science A exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 19,
-    question: 'Which of the following best describes a key concept in Variables & Types?',
-    options: ['A fundamental principle of Variables & Types', 'An unrelated concept from another field', 'A common misconception about Variables & Types', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Variables & Types is essential for the AP Computer Science A exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 20,
-    question: 'Which of the following best describes a key concept in Expressions & Operators?',
-    options: ['A fundamental principle of Expressions & Operators', 'An unrelated concept from another field', 'A common misconception about Expressions & Operators', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Expressions & Operators is essential for the AP Computer Science A exam.',
-    difficulty: 'hard',
-  },
+const allQuestions: ApCsaQuestion[] = [
+  { id: 1, question: 'In Java, which keyword is used to define a class?', options: ['function', 'class', 'def', 'struct'], correctAnswer: 1, explanation: 'The "class" keyword defines a new class in Java.', difficulty: 'easy', topicSlug: 'classes-objects' },
+  { id: 2, question: 'What is the default value of an int instance variable in Java?', options: ['null', '0', 'undefined', '1'], correctAnswer: 1, explanation: 'Primitive numeric instance variables default to 0 in Java.', difficulty: 'easy', topicSlug: 'primitive-types' },
+  { id: 3, question: 'Which of these is NOT a primitive type in Java?', options: ['int', 'double', 'String', 'boolean'], correctAnswer: 2, explanation: 'String is a reference type (class), not a primitive type in Java.', difficulty: 'easy', topicSlug: 'primitive-types' },
+  { id: 4, question: 'What does the "static" keyword mean for a method?', options: ['It cannot be changed', 'It belongs to the class rather than instances', 'It runs automatically', 'It is private'], correctAnswer: 1, explanation: 'Static methods belong to the class itself and can be called without creating an object.', difficulty: 'medium', topicSlug: 'classes-objects' },
+  { id: 5, question: 'An ArrayList differs from an array because:', options: ['It stores primitives directly', 'It can dynamically resize, stores objects, and has built-in methods', 'It is faster', 'It uses less memory'], correctAnswer: 1, explanation: 'ArrayLists grow/shrink dynamically and provide methods like add(), remove(), and size().', difficulty: 'medium', topicSlug: 'arraylist' },
+  { id: 6, question: 'What is the output of: System.out.println(5 / 2)?', options: ['2.5', '2', '3', 'Error'], correctAnswer: 1, explanation: 'Integer division in Java truncates the decimal: 5/2 = 2.', difficulty: 'easy', topicSlug: 'primitive-types' },
+  { id: 7, question: 'The "this" keyword in Java refers to:', options: ['The parent class', 'The current object instance', 'A static variable', 'The main method'], correctAnswer: 1, explanation: '"this" refers to the current object, often used to distinguish instance variables from parameters.', difficulty: 'medium', topicSlug: 'classes-objects' },
+  { id: 8, question: 'Encapsulation in OOP means:', options: ['Using inheritance', 'Bundling data with methods and restricting direct access to internal state', 'Running multiple threads', 'Using interfaces'], correctAnswer: 1, explanation: 'Encapsulation hides implementation details, typically using private fields with public getters/setters.', difficulty: 'medium', topicSlug: 'classes-objects' },
+  { id: 9, question: 'What happens when you access an array index that is out of bounds?', options: ['Returns null', 'Throws ArrayIndexOutOfBoundsException', 'Returns 0', 'Wraps around'], correctAnswer: 1, explanation: 'Java throws ArrayIndexOutOfBoundsException at runtime for invalid array indices.', difficulty: 'medium', topicSlug: 'arrays' },
+  { id: 10, question: 'A for-each loop is best used when:', options: ['You need the index', 'You want to iterate through every element without needing the index', 'You need to modify the array', 'You want to go backwards'], correctAnswer: 1, explanation: 'Enhanced for loops (for-each) provide a clean syntax for iterating through all elements.', difficulty: 'easy', topicSlug: 'iteration' },
+  { id: 11, question: 'Method overloading means:', options: ['Replacing a parent method', 'Having multiple methods with the same name but different parameter lists', 'Calling a method repeatedly', 'Using recursion'], correctAnswer: 1, explanation: 'Overloaded methods share a name but differ in the number or types of parameters.', difficulty: 'medium', topicSlug: 'classes-objects' },
+  { id: 12, question: 'In Java, a String is:', options: ['Mutable', 'Immutable - once created, its value cannot be changed', 'A primitive type', 'An array'], correctAnswer: 1, explanation: 'Java Strings are immutable; operations like concatenation create new String objects.', difficulty: 'medium', topicSlug: 'primitive-types' },
+  { id: 13, question: 'The == operator compares:', options: ['String content', 'References (memory addresses) for objects, values for primitives', 'Always values', 'Nothing'], correctAnswer: 1, explanation: 'For objects, == checks if two references point to the same object; use .equals() for content comparison.', difficulty: 'medium', topicSlug: 'primitive-types' },
+  { id: 14, question: 'Inheritance in Java uses the keyword:', options: ['implements', 'extends', 'inherits', 'super'], correctAnswer: 1, explanation: 'A subclass uses "extends" to inherit from a superclass.', difficulty: 'easy', topicSlug: 'inheritance' },
+  { id: 15, question: 'Polymorphism allows:', options: ['Only one form', 'Objects to be treated as instances of their parent class, calling overridden methods', 'Static typing only', 'No method overriding'], correctAnswer: 1, explanation: 'Polymorphism enables a superclass reference to call the correct subclass method at runtime.', difficulty: 'medium', topicSlug: 'inheritance' },
+  { id: 16, question: 'The super keyword is used to:', options: ['Create a new class', 'Call a parent class constructor or method', 'Define a static method', 'Declare a variable'], correctAnswer: 1, explanation: 'super() calls the parent constructor; super.method() calls the parent version of an overridden method.', difficulty: 'medium', topicSlug: 'inheritance' },
+  { id: 17, question: 'An abstract class in Java:', options: ['Can be instantiated directly', 'Cannot be instantiated and may contain abstract methods', 'Has only static methods', 'Is the same as an interface'], correctAnswer: 1, explanation: 'Abstract classes provide partial implementation; subclasses must implement abstract methods.', difficulty: 'medium', topicSlug: 'inheritance' },
+  { id: 18, question: 'A NullPointerException occurs when:', options: ['An array is empty', 'Code attempts to use a reference variable that points to null', 'A number overflows', 'A string is empty'], correctAnswer: 1, explanation: 'Calling methods or accessing fields on a null reference causes NullPointerException.', difficulty: 'medium', topicSlug: 'classes-objects' },
+  { id: 19, question: 'Selection sort has a Big-O time complexity of:', options: ['O(n)', 'O(n^2)', 'O(log n)', 'O(n log n)'], correctAnswer: 1, explanation: 'Selection sort always performs O(n^2) comparisons regardless of input.', difficulty: 'medium', topicSlug: 'arrays' },
+  { id: 20, question: 'Binary search requires the array to be:', options: ['Unsorted', 'Sorted in order', 'Empty', 'Of even length'], correctAnswer: 1, explanation: 'Binary search only works on sorted arrays, dividing the search space in half each step.', difficulty: 'easy', topicSlug: 'arrays' },
+  { id: 21, question: 'The time complexity of binary search is:', options: ['O(n)', 'O(log n)', 'O(n^2)', 'O(1)'], correctAnswer: 1, explanation: 'Binary search halves the remaining elements each iteration: O(log n).', difficulty: 'medium', topicSlug: 'arrays' },
+  { id: 22, question: 'Recursion requires:', options: ['A loop', 'A base case and a recursive case', 'Global variables', 'Static methods'], correctAnswer: 1, explanation: 'Every recursive method needs a base case (stopping condition) and a recursive call that moves toward it.', difficulty: 'medium', topicSlug: 'iteration' },
+  { id: 23, question: 'What is autoboxing in Java?', options: ['Storing objects in arrays', 'Automatic conversion between primitive types and their wrapper classes', 'Type casting', 'Array creation'], correctAnswer: 1, explanation: 'Autoboxing converts primitives (int) to wrappers (Integer) automatically when needed.', difficulty: 'medium', topicSlug: 'arraylist' },
+  { id: 24, question: 'A 2D array in Java is:', options: ['An array of Strings', 'An array of arrays', 'A matrix class', 'A linked list'], correctAnswer: 1, explanation: '2D arrays in Java are arrays where each element is itself an array.', difficulty: 'easy', topicSlug: 'two-d-arrays' },
+  { id: 25, question: 'To traverse a 2D array, you typically use:', options: ['One for loop', 'Nested for loops (outer for rows, inner for columns)', 'A while loop only', 'Recursion'], correctAnswer: 1, explanation: 'Nested loops iterate through rows (outer) and columns (inner) of a 2D array.', difficulty: 'easy', topicSlug: 'two-d-arrays' },
+  { id: 26, question: 'The .equals() method for Strings:', options: ['Compares references', 'Compares the actual character content of two Strings', 'Is the same as ==', 'Compares length only'], correctAnswer: 1, explanation: 'String.equals() performs character-by-character comparison of string content.', difficulty: 'easy', topicSlug: 'primitive-types' },
+  { id: 27, question: 'A constructor in Java:', options: ['Returns a value', 'Has the same name as the class and initializes new objects', 'Is always public', 'Cannot have parameters'], correctAnswer: 1, explanation: 'Constructors initialize object state when new objects are created with the "new" keyword.', difficulty: 'easy', topicSlug: 'classes-objects' },
+  { id: 28, question: 'What is the scope of a local variable?', options: ['The entire class', 'Only within the block (method or loop) where it is declared', 'The entire program', 'All subclasses'], correctAnswer: 1, explanation: 'Local variables exist only within the block where they are declared and cannot be accessed outside it.', difficulty: 'medium', topicSlug: 'primitive-types' },
+  { id: 29, question: 'Merge sort has a time complexity of:', options: ['O(n^2)', 'O(n log n)', 'O(n)', 'O(log n)'], correctAnswer: 1, explanation: 'Merge sort divides the array and merges in O(n) at each of O(log n) levels: O(n log n).', difficulty: 'hard', topicSlug: 'arrays' },
+  { id: 30, question: 'An interface in Java:', options: ['Contains implemented methods only', 'Defines a contract of methods that implementing classes must provide', 'Is the same as a class', 'Cannot be used with polymorphism'], correctAnswer: 1, explanation: 'Interfaces define method signatures without implementation; classes implement them.', difficulty: 'medium', topicSlug: 'inheritance' },
 ]
 
-export function getApCSAQuestions(count: number = 10): ApCSAQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+export function getApCSAQuestions(count: number = 10, topicSlug?: string): ApCsaQuestion[] {
+  let pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
+  const shuffled = [...pool].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

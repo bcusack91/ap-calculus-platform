@@ -104,39 +104,74 @@ const features = [
 
 const units = [
   {
-    title: 'Unit 1–2: Global Tapestry & Networks (1200–1450)',
-    topics: ['Song Dynasty & East Asia', 'Dar al-Islam', 'Silk Roads & Mongols', 'Indian Ocean Trade'],
+    title: 'Unit 1: The Global Tapestry (1200–1450)',
+    topics: ['Song Dynasty & East Asia', 'Dar al-Islam', 'South & Southeast Asia', 'State Building in the Americas & Africa'],
     color: 'amber',
   },
   {
-    title: 'Unit 3–4: Land-Based & Maritime Empires (1450–1750)',
-    topics: ['Ottoman & Mughal Empires', 'European Exploration', 'Columbian Exchange', 'Atlantic Slave Trade'],
+    title: 'Unit 2: Networks of Exchange (1200–1450)',
+    topics: ['Silk Roads', 'Mongol Empire', 'Indian Ocean Trade', 'Trans-Saharan Trade'],
+    color: 'orange',
+  },
+  {
+    title: 'Unit 3: Land-Based Empires (1450–1750)',
+    topics: ['Ottoman Empire', 'Safavid Empire', 'Mughal Empire', 'Qing Dynasty'],
     color: 'blue',
   },
   {
-    title: 'Unit 5–6: Revolutions & Industrialization (1750–1900)',
-    topics: ['Enlightenment', 'Political Revolutions', 'Industrial Revolution', 'Imperialism'],
+    title: 'Unit 4: Transoceanic Interconnections (1450–1750)',
+    topics: ['European Exploration', 'Columbian Exchange', 'Maritime Empires', 'Coerced Labor Systems'],
+    color: 'indigo',
+  },
+  {
+    title: 'Unit 5: Revolutions (1750–1900)',
+    topics: ['Enlightenment', 'American & French Revolutions', 'Haitian Revolution', 'Latin American Independence'],
     color: 'green',
   },
   {
-    title: 'Unit 7–9: Global Conflict & Decolonization (1900–present)',
-    topics: ['World Wars', 'Cold War', 'Decolonization', 'Globalization'],
+    title: 'Unit 6: Consequences of Industrialization (1750–1900)',
+    topics: ['Industrial Revolution', 'Imperialism', 'Economic Imperialism', 'Reform & Resistance'],
+    color: 'teal',
+  },
+  {
+    title: 'Unit 7: Global Conflict (1900–present)',
+    topics: ['World War I', 'World War II', 'Mass Atrocities', 'Total War'],
+    color: 'red',
+  },
+  {
+    title: 'Unit 8: Cold War & Decolonization (1900–present)',
+    topics: ['Cold War Conflicts', 'Decolonization in Africa & Asia', 'Proxy Wars', 'End of the Cold War'],
     color: 'purple',
+  },
+  {
+    title: 'Unit 9: Globalization (1900–present)',
+    topics: ['Economic Globalization', 'Technological Innovation', 'Disease & Environment', 'Social & Cultural Changes'],
+    color: 'pink',
   },
 ]
 
 const unitColors: Record<string, string> = {
   amber: 'text-amber-700 dark:text-amber-400',
+  orange: 'text-orange-700 dark:text-orange-400',
   blue: 'text-blue-700 dark:text-blue-400',
+  indigo: 'text-indigo-700 dark:text-indigo-400',
   green: 'text-green-700 dark:text-green-400',
+  teal: 'text-teal-700 dark:text-teal-400',
+  red: 'text-red-700 dark:text-red-400',
   purple: 'text-purple-700 dark:text-purple-400',
+  pink: 'text-pink-700 dark:text-pink-400',
 }
 
 const checkColors: Record<string, string> = {
   amber: 'text-amber-500',
+  orange: 'text-orange-500',
   blue: 'text-blue-500',
+  indigo: 'text-indigo-500',
   green: 'text-green-500',
+  teal: 'text-teal-500',
+  red: 'text-red-500',
   purple: 'text-purple-500',
+  pink: 'text-pink-500',
 }
 
 export default function ApWorldHistoryHub() {

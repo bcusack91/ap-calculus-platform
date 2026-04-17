@@ -1,178 +1,50 @@
-// AP English Literature question bank for competitive mode
+// Ap English Lit Question question bank for competitive mode
 
-export interface ApEngLitQuestion {
+export interface ApEnglishLitQuestion {
   id: number
   question: string
   options: string[]
   correctAnswer: number
   explanation: string
   difficulty: 'easy' | 'medium' | 'hard'
+  topicSlug: string
 }
 
-const allQuestions: ApEngLitQuestion[] = [
-  {
-    id: 1,
-    question: 'Which of the following best describes a key concept in Short Fiction: Character?',
-    options: ['A fundamental principle of Short Fiction: Character', 'An unrelated concept from another field', 'A common misconception about Short Fiction: Character', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Short Fiction: Character is essential for the AP English Literature exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 2,
-    question: 'Which of the following best describes a key concept in Short Fiction: Plot?',
-    options: ['A fundamental principle of Short Fiction: Plot', 'An unrelated concept from another field', 'A common misconception about Short Fiction: Plot', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Short Fiction: Plot is essential for the AP English Literature exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 3,
-    question: 'Which of the following best describes a key concept in Short Fiction: Theme?',
-    options: ['A fundamental principle of Short Fiction: Theme', 'An unrelated concept from another field', 'A common misconception about Short Fiction: Theme', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Short Fiction: Theme is essential for the AP English Literature exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 4,
-    question: 'Which of the following best describes a key concept in Poetry: Imagery?',
-    options: ['A fundamental principle of Poetry: Imagery', 'An unrelated concept from another field', 'A common misconception about Poetry: Imagery', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Poetry: Imagery is essential for the AP English Literature exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 5,
-    question: 'Which of the following best describes a key concept in Poetry: Tone?',
-    options: ['A fundamental principle of Poetry: Tone', 'An unrelated concept from another field', 'A common misconception about Poetry: Tone', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Poetry: Tone is essential for the AP English Literature exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 6,
-    question: 'Which of the following best describes a key concept in Poetic Structure?',
-    options: ['A fundamental principle of Poetic Structure', 'An unrelated concept from another field', 'A common misconception about Poetic Structure', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Poetic Structure is essential for the AP English Literature exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 7,
-    question: 'Which of the following best describes a key concept in Sound Devices?',
-    options: ['A fundamental principle of Sound Devices', 'An unrelated concept from another field', 'A common misconception about Sound Devices', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Sound Devices is essential for the AP English Literature exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 8,
-    question: 'Which of the following best describes a key concept in Novel Analysis?',
-    options: ['A fundamental principle of Novel Analysis', 'An unrelated concept from another field', 'A common misconception about Novel Analysis', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Novel Analysis is essential for the AP English Literature exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 9,
-    question: 'Which of the following best describes a key concept in Novel Themes?',
-    options: ['A fundamental principle of Novel Themes', 'An unrelated concept from another field', 'A common misconception about Novel Themes', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Novel Themes is essential for the AP English Literature exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 10,
-    question: 'Which of the following best describes a key concept in Dramatic Structure?',
-    options: ['A fundamental principle of Dramatic Structure', 'An unrelated concept from another field', 'A common misconception about Dramatic Structure', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Dramatic Structure is essential for the AP English Literature exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 11,
-    question: 'Which of the following best describes a key concept in Character & Setting?',
-    options: ['A fundamental principle of Character & Setting', 'An unrelated concept from another field', 'A common misconception about Character & Setting', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Character & Setting is essential for the AP English Literature exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 12,
-    question: 'Which of the following best describes a key concept in Narration & POV?',
-    options: ['A fundamental principle of Narration & POV', 'An unrelated concept from another field', 'A common misconception about Narration & POV', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Narration & POV is essential for the AP English Literature exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 13,
-    question: 'Which of the following best describes a key concept in Narrative Complexity?',
-    options: ['A fundamental principle of Narrative Complexity', 'An unrelated concept from another field', 'A common misconception about Narrative Complexity', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Narrative Complexity is essential for the AP English Literature exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 14,
-    question: 'Which of the following best describes a key concept in Narrative Perspective?',
-    options: ['A fundamental principle of Narrative Perspective', 'An unrelated concept from another field', 'A common misconception about Narrative Perspective', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Narrative Perspective is essential for the AP English Literature exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 15,
-    question: 'Which of the following best describes a key concept in Figurative Language?',
-    options: ['A fundamental principle of Figurative Language', 'An unrelated concept from another field', 'A common misconception about Figurative Language', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Figurative Language is essential for the AP English Literature exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 16,
-    question: 'Which of the following best describes a key concept in Tone & Speaker?',
-    options: ['A fundamental principle of Tone & Speaker', 'An unrelated concept from another field', 'A common misconception about Tone & Speaker', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Tone & Speaker is essential for the AP English Literature exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 17,
-    question: 'Which of the following best describes a key concept in Symbol & Motif?',
-    options: ['A fundamental principle of Symbol & Motif', 'An unrelated concept from another field', 'A common misconception about Symbol & Motif', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Symbol & Motif is essential for the AP English Literature exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 18,
-    question: 'Which of the following best describes a key concept in Plot & Conflict?',
-    options: ['A fundamental principle of Plot & Conflict', 'An unrelated concept from another field', 'A common misconception about Plot & Conflict', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Plot & Conflict is essential for the AP English Literature exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 19,
-    question: 'Which of the following best describes a key concept in Social Commentary?',
-    options: ['A fundamental principle of Social Commentary', 'An unrelated concept from another field', 'A common misconception about Social Commentary', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Social Commentary is essential for the AP English Literature exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 20,
-    question: 'Which of the following best describes a key concept in Short Fiction: Character?',
-    options: ['A fundamental principle of Short Fiction: Character', 'An unrelated concept from another field', 'A common misconception about Short Fiction: Character', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Short Fiction: Character is essential for the AP English Literature exam.',
-    difficulty: 'hard',
-  },
+const allQuestions: ApEnglishLitQuestion[] = [
+  { id: 1, question: 'A literary metaphor is:', options: ['A direct comparison using "like" or "as"', 'An implicit comparison without using "like" or "as"', 'An exaggeration', 'A sound device'], correctAnswer: 1, explanation: 'Metaphors directly equate two unlike things without comparative words.', difficulty: 'easy', topicSlug: 'figurative-language' },
+  { id: 2, question: 'Dramatic irony occurs when:', options: ['A character says the opposite of what they mean', 'The audience knows something a character does not', 'Something unexpected happens', 'The narrator is unreliable'], correctAnswer: 1, explanation: 'Dramatic irony creates tension by giving the audience knowledge that characters lack.', difficulty: 'medium', topicSlug: 'figurative-language' },
+  { id: 3, question: 'A Shakespearean sonnet rhyme scheme is:', options: ['AABBCCDD', 'ABAB CDCD EFEF GG', 'ABBAABBA CDECDE', 'Free verse'], correctAnswer: 1, explanation: 'The English/Shakespearean sonnet has three quatrains (ABAB CDCD EFEF) and a concluding couplet (GG).', difficulty: 'medium', topicSlug: 'poetry-analysis' },
+  { id: 4, question: 'The volta in a sonnet is:', options: ['The last line', 'A turn or shift in thought or argument', 'The rhyme scheme', 'The title'], correctAnswer: 1, explanation: 'The volta marks a change in direction, tone, or argument, often occurring at line 9 (Petrarchan) or line 13 (Shakespearean).', difficulty: 'medium', topicSlug: 'poetry-analysis' },
+  { id: 5, question: 'Free indirect discourse is:', options: ['Dialogue in quotation marks', 'A narrative technique blending third person narration with a character\'s thoughts', 'First person narration', 'Omniscient narration only'], correctAnswer: 1, explanation: 'Free indirect discourse merges the narrator\'s voice with the character\'s inner thoughts without quotation marks.', difficulty: 'hard', topicSlug: 'narrative-technique' },
+  { id: 6, question: 'An unreliable narrator is one whose:', options: ['Story is always true', 'Credibility is compromised, making the reader question their account', 'Writing style is poor', 'Story is in third person'], correctAnswer: 1, explanation: 'Unreliable narrators may be biased, naive, or deceptive, forcing readers to read between the lines.', difficulty: 'medium', topicSlug: 'narrative-technique' },
+  { id: 7, question: 'Stream of consciousness as a narrative technique:', options: ['Uses strict chronological order', 'Presents a character\'s flowing, uninterrupted thoughts', 'Is always in verse', 'Uses only dialogue'], correctAnswer: 1, explanation: 'Stream of consciousness mimics the flow of thoughts, as in works by Joyce and Woolf.', difficulty: 'medium', topicSlug: 'narrative-technique' },
+  { id: 8, question: 'A bildungsroman is:', options: ['A horror novel', 'A coming-of-age story tracing a character\'s psychological and moral development', 'A mystery genre', 'An epic poem'], correctAnswer: 1, explanation: 'Bildungsroman (formation novel) follows a protagonist from youth to maturity.', difficulty: 'medium', topicSlug: 'narrative-technique' },
+  { id: 9, question: 'Synecdoche is a figure of speech where:', options: ['A part represents the whole or the whole represents a part', 'Two unlike things are compared', 'Words sound like what they describe', 'Opposite ideas are juxtaposed'], correctAnswer: 1, explanation: 'Example: "all hands on deck" uses "hands" to represent whole sailors.', difficulty: 'medium', topicSlug: 'figurative-language' },
+  { id: 10, question: 'The purpose of a literary foil is to:', options: ['Resolve the plot', 'Contrast with another character to highlight particular qualities', 'Narrate the story', 'Provide comic relief only'], correctAnswer: 1, explanation: 'A foil character contrasts with the protagonist to emphasize specific traits through comparison.', difficulty: 'medium', topicSlug: 'character-analysis' },
+  { id: 11, question: 'An allegory is:', options: ['A simple comparison', 'A narrative where characters and events symbolize broader themes or ideas', 'A type of rhyme', 'A plot device'], correctAnswer: 1, explanation: 'Allegories use symbolic figures and actions to convey truths about human experience.', difficulty: 'medium', topicSlug: 'figurative-language' },
+  { id: 12, question: 'In medias res means a story begins:', options: ['At the beginning', 'In the middle of the action', 'At the end', 'With character descriptions'], correctAnswer: 1, explanation: 'Starting in medias res drops the reader into ongoing action, often using flashbacks to fill in backstory.', difficulty: 'easy', topicSlug: 'narrative-technique' },
+  { id: 13, question: 'Enjambment in poetry is:', options: ['A complete thought in one line', 'The continuation of a sentence beyond the end of a line', 'A rhyming couplet', 'A pause at the end of a line'], correctAnswer: 1, explanation: 'Enjambment creates momentum and connects ideas across line breaks.', difficulty: 'medium', topicSlug: 'poetry-analysis' },
+  { id: 14, question: 'A tragic hero typically:', options: ['Always wins', 'Has a fatal flaw (hamartia) that leads to their downfall', 'Is a villain', 'Is a minor character'], correctAnswer: 1, explanation: 'Aristotle defined the tragic hero as a noble character whose hamartia causes their reversal of fortune.', difficulty: 'medium', topicSlug: 'character-analysis' },
+  { id: 15, question: 'Motif differs from theme because a motif is:', options: ['The main message', 'A recurring element (image, symbol, idea) that supports the theme', 'The same as theme', 'Only in poetry'], correctAnswer: 1, explanation: 'Motifs are repeated patterns that develop and reinforce the work\'s themes.', difficulty: 'medium', topicSlug: 'figurative-language' },
+  { id: 16, question: 'The use of pathetic fallacy in literature:', options: ['Is a logical error', 'Attributes human emotions to nature or weather to reflect characters\' feelings', 'Is a type of dialogue', 'Is only used in comedy'], correctAnswer: 1, explanation: 'Example: a thunderstorm during a tragic scene mirrors the characters\' turmoil.', difficulty: 'hard', topicSlug: 'figurative-language' },
+  { id: 17, question: 'Anaphora is a rhetorical device that:', options: ['Ends sentences with the same word', 'Repeats a word or phrase at the beginning of successive clauses', 'Uses only one syllable', 'Avoids repetition'], correctAnswer: 1, explanation: 'Martin Luther King Jr.\'s "I have a dream" speech famously uses anaphora for emphasis.', difficulty: 'medium', topicSlug: 'poetry-analysis' },
+  { id: 18, question: 'A frame narrative is:', options: ['A story without a narrator', 'A story within a story, where an outer narrative provides context', 'A linear plot', 'A single perspective'], correctAnswer: 1, explanation: 'Examples include Frankenstein and Wuthering Heights, where an outer narrator frames inner stories.', difficulty: 'medium', topicSlug: 'narrative-technique' },
+  { id: 19, question: 'The term "diction" refers to:', options: ['The plot structure', 'The author\'s choice of words and their connotations', 'The setting', 'Character development'], correctAnswer: 1, explanation: 'Diction encompasses word choice including formality, connotation, and specificity.', difficulty: 'easy', topicSlug: 'figurative-language' },
+  { id: 20, question: 'Catharsis in literature refers to:', options: ['A happy ending', 'The emotional purging or release experienced by the audience', 'A plot twist', 'Character growth'], correctAnswer: 1, explanation: 'Aristotle described catharsis as the purgation of pity and fear through tragic drama.', difficulty: 'hard', topicSlug: 'character-analysis' },
+  { id: 21, question: 'An apostrophe in literature is:', options: ['A punctuation mark only', 'Addressing an absent person, abstract idea, or inanimate object directly', 'A simile', 'A metaphor'], correctAnswer: 1, explanation: 'Literary apostrophe: "O Death, where is thy sting?" addresses an abstraction directly.', difficulty: 'medium', topicSlug: 'poetry-analysis' },
+  { id: 22, question: 'Gothic literature typically features:', options: ['Pastoral settings', 'Dark settings, supernatural elements, psychological terror, and decay', 'Only humor', 'Modern urban settings'], correctAnswer: 1, explanation: 'Gothic literature uses gloomy atmospheres, mystery, and the sublime to evoke dread.', difficulty: 'medium', topicSlug: 'narrative-technique' },
+  { id: 23, question: 'A static character is one who:', options: ['Changes significantly', 'Remains largely unchanged throughout the narrative', 'Dies early', 'Is always the protagonist'], correctAnswer: 1, explanation: 'Static characters maintain consistent personality and beliefs, contrasting with dynamic characters who change.', difficulty: 'easy', topicSlug: 'character-analysis' },
+  { id: 24, question: 'Chiasmus is a rhetorical device where:', options: ['Words are repeated', 'The second part of a statement reverses the order of the first (ABBA pattern)', 'Only vowels are used', 'Sentences get shorter'], correctAnswer: 1, explanation: 'JFK\'s "Ask not what your country can do for you—ask what you can do for your country" is chiasmus.', difficulty: 'hard', topicSlug: 'figurative-language' },
+  { id: 25, question: 'Hubris in a literary character refers to:', options: ['Humility', 'Excessive pride or arrogance that leads to downfall', 'Intelligence', 'Cowardice'], correctAnswer: 1, explanation: 'Hubris is the tragic flaw of overweening pride, common in Greek tragedy.', difficulty: 'medium', topicSlug: 'character-analysis' },
+  { id: 26, question: 'A pastoral poem celebrates:', options: ['Urban life', 'The simplicity and beauty of rural or natural life', 'War and conquest', 'Industrial progress'], correctAnswer: 1, explanation: 'Pastoral poetry idealizes country life, often contrasting it with the complexity of urban existence.', difficulty: 'medium', topicSlug: 'poetry-analysis' },
+  { id: 27, question: 'The difference between tone and mood is:', options: ['They are identical', 'Tone is the author\'s attitude; mood is the emotional atmosphere felt by the reader', 'Tone is setting; mood is plot', 'Neither relates to emotion'], correctAnswer: 1, explanation: 'Tone reflects the writer\'s stance toward the subject; mood is the feeling the work evokes in readers.', difficulty: 'easy', topicSlug: 'figurative-language' },
+  { id: 28, question: 'Foreshadowing is a technique that:', options: ['Reveals the ending', 'Provides hints or clues about events that will occur later', 'Only works in poetry', 'Describes the past'], correctAnswer: 1, explanation: 'Foreshadowing builds suspense and prepares readers for future plot developments.', difficulty: 'easy', topicSlug: 'narrative-technique' },
+  { id: 29, question: 'A paradox in literature is:', options: ['A simple fact', 'A seemingly contradictory statement that reveals a deeper truth', 'An exaggeration', 'A comparison'], correctAnswer: 1, explanation: 'Example: "I must be cruel to be kind" appears contradictory but expresses a complex truth.', difficulty: 'medium', topicSlug: 'figurative-language' },
+  { id: 30, question: 'Iambic pentameter consists of:', options: ['Eight syllables per line', 'Five metrical feet of unstressed-stressed syllable pairs per line', 'Ten stressed syllables', 'Irregular rhythm'], correctAnswer: 1, explanation: 'Iambic pentameter (da-DUM x 5) is the most common meter in English poetry, especially Shakespeare.', difficulty: 'medium', topicSlug: 'poetry-analysis' },
 ]
 
-export function getApEngLitQuestions(count: number = 10): ApEngLitQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+export function getApEngLitQuestions(count: number = 10, topicSlug?: string): ApEnglishLitQuestion[] {
+  let pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
+  const shuffled = [...pool].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

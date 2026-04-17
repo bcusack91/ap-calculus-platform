@@ -1,178 +1,50 @@
-// AP Environmental Science question bank for competitive mode
+// Ap Enviro Question question bank for competitive mode
 
-export interface ApAPESQuestion {
+export interface ApEnviroQuestion {
   id: number
   question: string
   options: string[]
   correctAnswer: number
   explanation: string
   difficulty: 'easy' | 'medium' | 'hard'
+  topicSlug: string
 }
 
-const allQuestions: ApAPESQuestion[] = [
-  {
-    id: 1,
-    question: 'Which of the following best describes a key concept in Ecosystem Structure?',
-    options: ['A fundamental principle of Ecosystem Structure', 'An unrelated concept from another field', 'A common misconception about Ecosystem Structure', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Ecosystem Structure is essential for the AP Environmental Science exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 2,
-    question: 'Which of the following best describes a key concept in Biogeochemical Cycles?',
-    options: ['A fundamental principle of Biogeochemical Cycles', 'An unrelated concept from another field', 'A common misconception about Biogeochemical Cycles', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Biogeochemical Cycles is essential for the AP Environmental Science exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 3,
-    question: 'Which of the following best describes a key concept in Earth Systems?',
-    options: ['A fundamental principle of Earth Systems', 'An unrelated concept from another field', 'A common misconception about Earth Systems', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Earth Systems is essential for the AP Environmental Science exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 4,
-    question: 'Which of the following best describes a key concept in Biodiversity?',
-    options: ['A fundamental principle of Biodiversity', 'An unrelated concept from another field', 'A common misconception about Biodiversity', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Biodiversity is essential for the AP Environmental Science exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 5,
-    question: 'Which of the following best describes a key concept in Conservation?',
-    options: ['A fundamental principle of Conservation', 'An unrelated concept from another field', 'A common misconception about Conservation', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Conservation is essential for the AP Environmental Science exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 6,
-    question: 'Which of the following best describes a key concept in Biomes & Succession?',
-    options: ['A fundamental principle of Biomes & Succession', 'An unrelated concept from another field', 'A common misconception about Biomes & Succession', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Biomes & Succession is essential for the AP Environmental Science exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 7,
-    question: 'Which of the following best describes a key concept in Population Ecology?',
-    options: ['A fundamental principle of Population Ecology', 'An unrelated concept from another field', 'A common misconception about Population Ecology', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Population Ecology is essential for the AP Environmental Science exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 8,
-    question: 'Which of the following best describes a key concept in Human Population?',
-    options: ['A fundamental principle of Human Population', 'An unrelated concept from another field', 'A common misconception about Human Population', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Human Population is essential for the AP Environmental Science exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 9,
-    question: 'Which of the following best describes a key concept in Agriculture & Land?',
-    options: ['A fundamental principle of Agriculture & Land', 'An unrelated concept from another field', 'A common misconception about Agriculture & Land', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Agriculture & Land is essential for the AP Environmental Science exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 10,
-    question: 'Which of the following best describes a key concept in Water Resources?',
-    options: ['A fundamental principle of Water Resources', 'An unrelated concept from another field', 'A common misconception about Water Resources', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Water Resources is essential for the AP Environmental Science exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 11,
-    question: 'Which of the following best describes a key concept in Fossil Fuels & Nuclear?',
-    options: ['A fundamental principle of Fossil Fuels & Nuclear', 'An unrelated concept from another field', 'A common misconception about Fossil Fuels & Nuclear', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Fossil Fuels & Nuclear is essential for the AP Environmental Science exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 12,
-    question: 'Which of the following best describes a key concept in Renewable Energy?',
-    options: ['A fundamental principle of Renewable Energy', 'An unrelated concept from another field', 'A common misconception about Renewable Energy', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Renewable Energy is essential for the AP Environmental Science exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 13,
-    question: 'Which of the following best describes a key concept in Energy Concepts?',
-    options: ['A fundamental principle of Energy Concepts', 'An unrelated concept from another field', 'A common misconception about Energy Concepts', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Energy Concepts is essential for the AP Environmental Science exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 14,
-    question: 'Which of the following best describes a key concept in Atmospheric Pollution?',
-    options: ['A fundamental principle of Atmospheric Pollution', 'An unrelated concept from another field', 'A common misconception about Atmospheric Pollution', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Atmospheric Pollution is essential for the AP Environmental Science exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 15,
-    question: 'Which of the following best describes a key concept in Climate Change?',
-    options: ['A fundamental principle of Climate Change', 'An unrelated concept from another field', 'A common misconception about Climate Change', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Climate Change is essential for the AP Environmental Science exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 16,
-    question: 'Which of the following best describes a key concept in Ecosystem Structure?',
-    options: ['A fundamental principle of Ecosystem Structure', 'An unrelated concept from another field', 'A common misconception about Ecosystem Structure', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Ecosystem Structure is essential for the AP Environmental Science exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 17,
-    question: 'Which of the following best describes a key concept in Biogeochemical Cycles?',
-    options: ['A fundamental principle of Biogeochemical Cycles', 'An unrelated concept from another field', 'A common misconception about Biogeochemical Cycles', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Biogeochemical Cycles is essential for the AP Environmental Science exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 18,
-    question: 'Which of the following best describes a key concept in Earth Systems?',
-    options: ['A fundamental principle of Earth Systems', 'An unrelated concept from another field', 'A common misconception about Earth Systems', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Earth Systems is essential for the AP Environmental Science exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 19,
-    question: 'Which of the following best describes a key concept in Biodiversity?',
-    options: ['A fundamental principle of Biodiversity', 'An unrelated concept from another field', 'A common misconception about Biodiversity', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Biodiversity is essential for the AP Environmental Science exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 20,
-    question: 'Which of the following best describes a key concept in Conservation?',
-    options: ['A fundamental principle of Conservation', 'An unrelated concept from another field', 'A common misconception about Conservation', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Conservation is essential for the AP Environmental Science exam.',
-    difficulty: 'hard',
-  },
+const allQuestions: ApEnviroQuestion[] = [
+  { id: 1, question: 'Biodiversity refers to:', options: ['Only species count', 'The variety of life at all levels: genetic, species, and ecosystem diversity', 'Only animal diversity', 'Plant diversity only'], correctAnswer: 1, explanation: 'Biodiversity encompasses genetic variation, species variety, and ecosystem diversity.', difficulty: 'easy', topicSlug: 'ecosystems' },
+  { id: 2, question: 'An ecosystem includes:', options: ['Only living things', 'Both living (biotic) and nonliving (abiotic) components interacting in an area', 'Only animals', 'Only plants and soil'], correctAnswer: 1, explanation: 'Ecosystems are communities of organisms interacting with their physical environment.', difficulty: 'easy', topicSlug: 'ecosystems' },
+  { id: 3, question: 'Primary succession occurs on:', options: ['Disturbed land with soil', 'Previously bare surfaces like volcanic rock with no existing soil', 'Abandoned farmland', 'After a forest fire'], correctAnswer: 1, explanation: 'Primary succession starts from scratch on bare rock, beginning with pioneer species like lichens.', difficulty: 'medium', topicSlug: 'ecosystems' },
+  { id: 4, question: 'The greenhouse effect is:', options: ['Always harmful', 'A natural process where atmospheric gases trap heat, warming Earth\'s surface', 'Only caused by humans', 'A cooling process'], correctAnswer: 1, explanation: 'The greenhouse effect is natural and necessary; human activities enhance it through additional greenhouse gas emissions.', difficulty: 'easy', topicSlug: 'climate-change' },
+  { id: 5, question: 'The ozone layer protects Earth from:', options: ['Visible light', 'Harmful ultraviolet (UV) radiation', 'Infrared radiation', 'Radio waves'], correctAnswer: 1, explanation: 'Stratospheric ozone absorbs most UV-B and UV-C radiation, protecting life from DNA damage.', difficulty: 'easy', topicSlug: 'pollution' },
+  { id: 6, question: 'Eutrophication is caused by:', options: ['Acid rain', 'Excess nutrients (nitrogen and phosphorus) entering water bodies', 'Oil spills', 'Heavy metals'], correctAnswer: 1, explanation: 'Nutrient runoff causes algal blooms that deplete oxygen, creating dead zones in aquatic ecosystems.', difficulty: 'medium', topicSlug: 'pollution' },
+  { id: 7, question: 'The tragedy of the commons refers to:', options: ['Government failure', 'Individuals overexploiting shared resources acting in self-interest', 'Market success', 'Private property issues'], correctAnswer: 1, explanation: 'Garrett Hardin described how rational self-interest leads to depletion of shared resources.', difficulty: 'medium', topicSlug: 'sustainability' },
+  { id: 8, question: 'Renewable energy sources include:', options: ['Coal and natural gas', 'Solar, wind, hydroelectric, and geothermal energy', 'Nuclear and oil', 'Only solar'], correctAnswer: 1, explanation: 'Renewable sources are naturally replenished and produce little to no greenhouse gas emissions during operation.', difficulty: 'easy', topicSlug: 'energy' },
+  { id: 9, question: 'Biomagnification is the process by which:', options: ['Organisms grow larger', 'Toxins become more concentrated at higher trophic levels in a food chain', 'Plants absorb sunlight', 'Water evaporates'], correctAnswer: 1, explanation: 'Fat-soluble toxins like DDT and mercury accumulate and concentrate up the food chain.', difficulty: 'medium', topicSlug: 'ecosystems' },
+  { id: 10, question: 'The Clean Air Act regulates:', options: ['Water quality', 'Air pollutant emissions including criteria pollutants and hazardous air pollutants', 'Soil contamination', 'Noise pollution'], correctAnswer: 1, explanation: 'The Clean Air Act sets National Ambient Air Quality Standards (NAAQS) for six criteria pollutants.', difficulty: 'medium', topicSlug: 'pollution' },
+  { id: 11, question: 'An ecological footprint measures:', options: ['Species count', 'The amount of land and resources needed to sustain a person\'s lifestyle', 'Biodiversity', 'Forest area only'], correctAnswer: 1, explanation: 'Ecological footprint quantifies human demand on Earth\'s ecosystems in units of biologically productive area.', difficulty: 'medium', topicSlug: 'sustainability' },
+  { id: 12, question: 'Deforestation contributes to climate change by:', options: ['Cooling the atmosphere', 'Releasing stored carbon and reducing CO2 absorption by trees', 'Increasing oxygen', 'Creating more habitats'], correctAnswer: 1, explanation: 'Trees store carbon; when removed, that carbon is released, and less CO2 is absorbed from the atmosphere.', difficulty: 'easy', topicSlug: 'climate-change' },
+  { id: 13, question: 'The water cycle includes:', options: ['Only rain', 'Evaporation, condensation, precipitation, transpiration, and runoff', 'Only ocean currents', 'Only groundwater'], correctAnswer: 1, explanation: 'The water cycle moves water through earth systems via evaporation, condensation, precipitation, and flow.', difficulty: 'easy', topicSlug: 'ecosystems' },
+  { id: 14, question: 'Non-point source pollution:', options: ['Comes from a single identifiable source', 'Comes from diffuse, widespread sources like agricultural runoff', 'Is easy to regulate', 'Only affects oceans'], correctAnswer: 1, explanation: 'Non-point source pollution (farm runoff, urban stormwater) is harder to control than point-source (pipes, smokestacks).', difficulty: 'medium', topicSlug: 'pollution' },
+  { id: 15, question: 'The endangered species most often decline due to:', options: ['Natural selection', 'Habitat loss, which is the primary driver of extinction', 'Climate only', 'Hunting only'], correctAnswer: 1, explanation: 'Habitat destruction and fragmentation are the leading causes of species decline worldwide.', difficulty: 'easy', topicSlug: 'ecosystems' },
+  { id: 16, question: 'Carbon sequestration refers to:', options: ['Burning fossil fuels', 'Capturing and storing atmospheric CO2 in plants, soil, or geological formations', 'Releasing CO2', 'Mining coal'], correctAnswer: 1, explanation: 'Carbon sequestration removes CO2 from the atmosphere through natural (forests, oceans) or technological means.', difficulty: 'medium', topicSlug: 'climate-change' },
+  { id: 17, question: 'The Kyoto Protocol and Paris Agreement aim to:', options: ['Increase emissions', 'Reduce global greenhouse gas emissions to mitigate climate change', 'Promote fossil fuels', 'Deregulate industry'], correctAnswer: 1, explanation: 'These international agreements set targets for reducing greenhouse gas emissions among participating nations.', difficulty: 'medium', topicSlug: 'climate-change' },
+  { id: 18, question: 'Invasive species threaten ecosystems by:', options: ['Adding biodiversity', 'Outcompeting native species, altering habitats, and disrupting food webs', 'Improving soil quality', 'Adding nutrients'], correctAnswer: 1, explanation: 'Invasive species lack natural predators and can devastate native ecosystems.', difficulty: 'medium', topicSlug: 'ecosystems' },
+  { id: 19, question: 'Acid rain is primarily caused by:', options: ['CO2 only', 'Sulfur dioxide (SO2) and nitrogen oxides (NOx) from burning fossil fuels', 'Ozone depletion', 'Methane emissions'], correctAnswer: 1, explanation: 'SO2 and NOx react with water in the atmosphere to form sulfuric and nitric acids.', difficulty: 'medium', topicSlug: 'pollution' },
+  { id: 20, question: 'Sustainable development means:', options: ['No development', 'Meeting present needs without compromising future generations\' ability to meet theirs', 'Maximum resource extraction', 'Only economic growth'], correctAnswer: 1, explanation: 'The Brundtland Commission defined sustainability as balancing economic, social, and environmental needs.', difficulty: 'easy', topicSlug: 'sustainability' },
+  { id: 21, question: 'The nitrogen cycle includes nitrogen fixation, which is:', options: ['Releasing nitrogen gas', 'Converting atmospheric N2 into usable forms by bacteria', 'Burning nitrogen', 'Dissolving nitrogen in water'], correctAnswer: 1, explanation: 'Nitrogen-fixing bacteria convert N2 gas into ammonia (NH3) that plants can use.', difficulty: 'medium', topicSlug: 'ecosystems' },
+  { id: 22, question: 'A keystone species is one that:', options: ['Is the most abundant', 'Has a disproportionately large effect on its ecosystem relative to its population', 'Is the largest predator', 'Is always a plant'], correctAnswer: 1, explanation: 'Removing a keystone species (like sea otters or wolves) causes dramatic ecosystem changes.', difficulty: 'medium', topicSlug: 'ecosystems' },
+  { id: 23, question: 'Fracking (hydraulic fracturing) is controversial because:', options: ['It\'s too expensive', 'It can contaminate groundwater, cause earthquakes, and release methane', 'It produces no energy', 'It\'s obsolete'], correctAnswer: 1, explanation: 'Fracking extracts natural gas but raises concerns about water pollution, seismicity, and methane emissions.', difficulty: 'medium', topicSlug: 'energy' },
+  { id: 24, question: 'The difference between weather and climate is:', options: ['They are identical', 'Weather is short-term atmospheric conditions; climate is long-term patterns', 'Weather is global; climate is local', 'Climate changes daily'], correctAnswer: 1, explanation: 'Weather is day-to-day conditions; climate is the average pattern over 30+ years.', difficulty: 'easy', topicSlug: 'climate-change' },
+  { id: 25, question: 'Topsoil loss is problematic because:', options: ['It only affects appearance', 'Topsoil contains most nutrients and organic matter needed for plant growth', 'Subsoil is better for farming', 'It\'s easily replaced'], correctAnswer: 1, explanation: 'Topsoil takes thousands of years to form and is essential for agriculture and ecosystem health.', difficulty: 'medium', topicSlug: 'sustainability' },
+  { id: 26, question: 'Environmental justice addresses:', options: ['Only wildlife', 'The disproportionate environmental burden placed on minority and low-income communities', 'Only climate change', 'International trade'], correctAnswer: 1, explanation: 'Environmental justice recognizes that pollution and environmental hazards disproportionately affect marginalized communities.', difficulty: 'medium', topicSlug: 'sustainability' },
+  { id: 27, question: 'Nuclear energy is considered low-carbon but controversial due to:', options: ['High CO2 emissions', 'Radioactive waste disposal, meltdown risk, and high construction costs', 'Low energy output', 'High fuel costs'], correctAnswer: 1, explanation: 'Nuclear produces minimal greenhouse gases but creates long-lived radioactive waste and carries accident risk.', difficulty: 'medium', topicSlug: 'energy' },
+  { id: 28, question: 'Coral bleaching occurs when:', options: ['Corals change color naturally', 'Stressed corals expel symbiotic algae (zooxanthellae) due to warming waters', 'Corals grow new tissue', 'Algae overgrow corals'], correctAnswer: 1, explanation: 'Rising sea temperatures cause corals to expel the algae they depend on, often leading to coral death.', difficulty: 'medium', topicSlug: 'climate-change' },
+  { id: 29, question: 'The Clean Water Act primarily regulates:', options: ['Air pollution', 'Discharge of pollutants into US waters and quality standards for surface waters', 'Noise pollution', 'Solid waste'], correctAnswer: 1, explanation: 'The CWA aims to restore and maintain the chemical, physical, and biological integrity of the nation\'s waters.', difficulty: 'medium', topicSlug: 'pollution' },
+  { id: 30, question: 'Carrying capacity refers to:', options: ['The maximum weight something can hold', 'The maximum population size an environment can sustain indefinitely', 'Minimum population size', 'Only animal populations'], correctAnswer: 1, explanation: 'Carrying capacity (K) is limited by available resources: food, water, space, and other environmental factors.', difficulty: 'easy', topicSlug: 'ecosystems' },
 ]
 
-export function getApAPESQuestions(count: number = 10): ApAPESQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+export function getApAPESQuestions(count: number = 10, topicSlug?: string): ApEnviroQuestion[] {
+  let pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
+  const shuffled = [...pool].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

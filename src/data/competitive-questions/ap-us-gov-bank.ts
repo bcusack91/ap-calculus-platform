@@ -1,178 +1,60 @@
-// AP US Government question bank for competitive mode
+// Ap Us Gov Question question bank for competitive mode
 
-export interface ApUSGovQuestion {
+export interface ApUsGovQuestion {
   id: number
   question: string
   options: string[]
   correctAnswer: number
   explanation: string
   difficulty: 'easy' | 'medium' | 'hard'
+  topicSlug: string
 }
 
-const allQuestions: ApUSGovQuestion[] = [
-  {
-    id: 1,
-    question: 'The supremacy clause establishes that:',
-    options: ['State laws take precedence', 'Federal law is the supreme law of the land', 'The president has supreme authority', 'The judiciary is supreme'],
-    correctAnswer: 1,
-    explanation: 'The supremacy clause (Article VI) makes federal law supreme over state laws.',
-    difficulty: 'easy',
-  },
-  {
-    id: 2,
-    question: 'Judicial review was established by:',
-    options: ['The Constitution (Article III)', 'Marbury v. Madison (1803)', 'The Bill of Rights', 'The 14th Amendment'],
-    correctAnswer: 1,
-    explanation: 'Marbury v. Madison established the power of judicial review — the courts\' ability to declare laws unconstitutional.',
-    difficulty: 'easy',
-  },
-  {
-    id: 3,
-    question: 'The elastic clause (necessary and proper clause) grants Congress:',
-    options: ['The power to tax', 'Implied powers beyond those explicitly listed', 'The power to declare war', 'Control over the judiciary'],
-    correctAnswer: 1,
-    explanation: 'The elastic clause gives Congress implied powers to carry out its enumerated powers.',
-    difficulty: 'easy',
-  },
-  {
-    id: 4,
-    question: 'The Bill of Rights originally applied only to:',
-    options: ['All levels of government', 'The federal government', 'State governments', 'Local governments'],
-    correctAnswer: 1,
-    explanation: 'The Bill of Rights originally limited only the federal government; it was later applied to states through incorporation via the 14th Amendment.',
-    difficulty: 'easy',
-  },
-  {
-    id: 5,
-    question: 'A filibuster is used in the:',
-    options: ['House of Representatives', 'Senate', 'Supreme Court', 'State legislatures'],
-    correctAnswer: 1,
-    explanation: 'A filibuster is a Senate tactic of extended debate used to delay or prevent a vote.',
-    difficulty: 'easy',
-  },
-  {
-    id: 6,
-    question: 'Which amendment protects freedom of speech?',
-    options: ['Second Amendment', 'First Amendment', 'Fourth Amendment', 'Fifth Amendment'],
-    correctAnswer: 1,
-    explanation: 'The First Amendment protects freedom of speech, religion, press, assembly, and petition.',
-    difficulty: 'easy',
-  },
-  {
-    id: 7,
-    question: 'Federalism divides power between:',
-    options: ['The three branches of government', 'National and state governments', 'The president and Congress', 'The courts and legislature'],
-    correctAnswer: 1,
-    explanation: 'Federalism is the division of power between national and state levels of government.',
-    difficulty: 'easy',
-  },
-  {
-    id: 8,
-    question: 'The Electoral College determines the outcome of:',
-    options: ['Congressional elections', 'Presidential elections', 'Gubernatorial elections', 'Supreme Court appointments'],
-    correctAnswer: 1,
-    explanation: 'The Electoral College is the system used to elect the president and vice president.',
-    difficulty: 'easy',
-  },
-  {
-    id: 9,
-    question: 'Selective incorporation means:',
-    options: ['All rights apply to states at once', 'Individual rights are applied to states case by case through the 14th Amendment', 'States can select which rights to follow', 'Congress selects which amendments apply'],
-    correctAnswer: 1,
-    explanation: 'Through selective incorporation, the Supreme Court has gradually applied individual Bill of Rights protections to state governments via the 14th Amendment\'s due process clause.',
-    difficulty: 'medium',
-  },
-  {
-    id: 10,
-    question: 'The iron triangle consists of:',
-    options: ['President, Congress, and Courts', 'Congressional committees, interest groups, and bureaucratic agencies', 'State, local, and federal governments', 'Media, polls, and elections'],
-    correctAnswer: 1,
-    explanation: 'The iron triangle describes the mutually beneficial relationship between congressional committees, interest groups, and bureaucratic agencies.',
-    difficulty: 'medium',
-  },
-  {
-    id: 11,
-    question: 'In McCulloch v. Maryland (1819), the Court ruled that:',
-    options: ['States can tax the federal government', 'The necessary and proper clause gives Congress implied powers and states cannot tax the federal government', 'The federal government has unlimited power', 'States are sovereign in all matters'],
-    correctAnswer: 1,
-    explanation: 'McCulloch v. Maryland established that Congress has implied powers and that states cannot interfere with federal institutions.',
-    difficulty: 'medium',
-  },
-  {
-    id: 12,
-    question: 'The winner-take-all system in most states means:',
-    options: ['Each candidate gets proportional electoral votes', 'The candidate with the most popular votes gets all electoral votes', 'Third parties always win some votes', 'The election is decided by Congress'],
-    correctAnswer: 1,
-    explanation: 'In the winner-take-all system, the candidate receiving the most popular votes in a state receives all of that state\'s electoral votes.',
-    difficulty: 'medium',
-  },
-  {
-    id: 13,
-    question: 'Checks and balances are designed to:',
-    options: ['Give one branch ultimate power', 'Prevent any one branch from becoming too powerful', 'Speed up the legislative process', 'Eliminate conflict between branches'],
-    correctAnswer: 1,
-    explanation: 'Checks and balances ensure no single branch of government becomes too powerful by giving each branch ways to limit the others.',
-    difficulty: 'medium',
-  },
-  {
-    id: 14,
-    question: 'A congressional caucus is:',
-    options: ['A formal committee', 'An informal group of members sharing common interests', 'A type of election', 'A legislative procedure'],
-    correctAnswer: 1,
-    explanation: 'A caucus is an informal group of legislators who share common interests or goals.',
-    difficulty: 'medium',
-  },
-  {
-    id: 15,
-    question: 'The establishment clause and free exercise clause both deal with:',
-    options: ['Freedom of press', 'Freedom of religion', 'Right to bear arms', 'Right to privacy'],
-    correctAnswer: 1,
-    explanation: 'Both clauses are in the First Amendment and address religion — the establishment clause prevents government from establishing a religion, and the free exercise clause protects religious practice.',
-    difficulty: 'medium',
-  },
-  {
-    id: 16,
-    question: 'Strict constructionism interprets the Constitution:',
-    options: ['Broadly to adapt to modern needs', 'Narrowly, limiting government to powers explicitly stated', 'As a living document', 'Based on international law'],
-    correctAnswer: 1,
-    explanation: 'Strict constructionists interpret the Constitution narrowly, limiting federal power to what is explicitly stated.',
-    difficulty: 'medium',
-  },
-  {
-    id: 17,
-    question: 'Baker v. Carr (1962) established the principle of:',
-    options: ['Separation of church and state', 'One person, one vote (equal representation in legislative districts)', 'Freedom of the press', 'Right to counsel'],
-    correctAnswer: 1,
-    explanation: 'Baker v. Carr held that legislative reapportionment is a justiciable issue, leading to the "one person, one vote" principle.',
-    difficulty: 'hard',
-  },
-  {
-    id: 18,
-    question: 'Federalist No. 51 primarily argues for:',
-    options: ['A strong presidency', 'Separation of powers and checks and balances to prevent tyranny', 'Direct democracy', 'Elimination of state governments'],
-    correctAnswer: 1,
-    explanation: 'Madison\'s Federalist No. 51 argues that separating powers among branches and levels of government prevents tyranny by creating internal checks.',
-    difficulty: 'hard',
-  },
-  {
-    id: 19,
-    question: 'The antifederalists opposed the Constitution primarily because:',
-    options: ['They wanted a monarchy', 'It lacked a bill of rights and gave too much power to the federal government', 'It was too democratic', 'It preserved slavery'],
-    correctAnswer: 1,
-    explanation: 'Antifederalists feared the new Constitution concentrated too much power in the federal government and lacked protections for individual rights.',
-    difficulty: 'hard',
-  },
-  {
-    id: 20,
-    question: 'Citizens United v. FEC (2010) ruled that:',
-    options: ['Corporations cannot donate to campaigns', 'Corporate and union spending on political ads is protected free speech under the First Amendment', 'Campaign finance must be limited', 'Only individuals can participate in elections'],
-    correctAnswer: 1,
-    explanation: 'Citizens United held that the First Amendment protects corporate and union political spending as free speech, leading to the rise of Super PACs.',
-    difficulty: 'hard',
-  },
+const allQuestions: ApUsGovQuestion[] = [
+  { id: 1, question: 'The concept of federalism divides power between:', options: ['Branches of government', 'National and state governments', 'Political parties', 'Citizens and non-citizens'], correctAnswer: 1, explanation: 'Federalism is the constitutional division of power between national and state governments.', difficulty: 'easy', topicSlug: 'constitutional-foundations' },
+  { id: 2, question: 'The Supremacy Clause in Article VI establishes:', options: ['State law takes precedence', 'Federal law is the supreme law of the land', 'All laws are equal', 'Treaties are unenforceable'], correctAnswer: 1, explanation: 'The Supremacy Clause declares the Constitution and federal laws as the supreme law, overriding state laws.', difficulty: 'easy', topicSlug: 'constitutional-foundations' },
+  { id: 3, question: 'Judicial review was established by:', options: ['The Constitution explicitly', 'Marbury v. Madison (1803)', 'The Bill of Rights', 'The 14th Amendment'], correctAnswer: 1, explanation: 'Marbury v. Madison established the precedent that the Supreme Court can declare laws unconstitutional.', difficulty: 'easy', topicSlug: 'constitutional-foundations' },
+  { id: 4, question: 'The elastic clause (Necessary and Proper Clause) allows Congress to:', options: ['Declare war only', 'Pass laws needed to carry out its enumerated powers', 'Override the President', 'Amend the Constitution alone'], correctAnswer: 1, explanation: 'Article I, Section 8, Clause 18 gives Congress implied powers to execute its enumerated powers.', difficulty: 'medium', topicSlug: 'constitutional-foundations' },
+  { id: 5, question: 'The Anti-Federalists opposed ratification primarily because:', options: ['They wanted a monarchy', 'They feared a too-powerful central government without a Bill of Rights', 'They opposed democracy', 'They wanted stronger executive power'], correctAnswer: 1, explanation: 'Anti-Federalists feared centralized tyranny and demanded a Bill of Rights to protect individual liberties.', difficulty: 'medium', topicSlug: 'constitutional-foundations' },
+  { id: 6, question: 'Brutus No. 1 argued that:', options: ['A large republic protects liberty', 'A large republic would crush individual liberty', 'The judiciary should be weak', 'States should have no power'], correctAnswer: 1, explanation: 'Brutus No. 1, an Anti-Federalist essay, argued that a large republic would become tyrannical.', difficulty: 'medium', topicSlug: 'constitutional-foundations' },
+  { id: 7, question: 'Federalist No. 10 addresses the problem of:', options: ['Executive power', 'Factions and how a large republic controls them', 'Judicial appointments', 'Military policy'], correctAnswer: 1, explanation: 'Madison argued in Federalist 10 that a large republic would dilute the power of dangerous factions.', difficulty: 'medium', topicSlug: 'constitutional-foundations' },
+  { id: 8, question: 'Federalist No. 51 argues for:', options: ['A unicameral legislature', 'Separation of powers and checks and balances', 'Direct democracy', 'Strong state governments'], correctAnswer: 1, explanation: 'Madison advocated for separated institutions sharing power so ambition counteracts ambition.', difficulty: 'medium', topicSlug: 'constitutional-foundations' },
+  { id: 9, question: 'Federalist No. 78 defends:', options: ['Executive authority', 'An independent judiciary as the least dangerous branch', 'Legislative supremacy', 'State sovereignty'], correctAnswer: 1, explanation: 'Hamilton argued the judiciary is the least dangerous branch because it has neither force nor will, only judgment.', difficulty: 'medium', topicSlug: 'constitutional-foundations' },
+  { id: 10, question: 'Block grants differ from categorical grants because:', options: ['They have more federal restrictions', 'States have broad discretion in spending', 'Only cities receive them', 'They must be repaid'], correctAnswer: 1, explanation: 'Block grants give states flexibility in how to spend federal funds, unlike categorical grants with specific requirements.', difficulty: 'medium', topicSlug: 'federalism' },
+  { id: 11, question: 'Unfunded mandates are controversial because:', options: ['They give states too much money', 'The federal government requires state action without providing funding', 'They only apply to education', 'States choose to implement them'], correctAnswer: 1, explanation: 'Unfunded mandates impose federal requirements on states without corresponding financial support.', difficulty: 'medium', topicSlug: 'federalism' },
+  { id: 12, question: 'The commerce clause has been used to:', options: ['Only regulate actual commerce', 'Expand federal power over many aspects of economic life', 'Limit state power completely', 'Remove tariffs between countries'], correctAnswer: 1, explanation: 'The commerce clause has been broadly interpreted to give Congress power over economic activities affecting interstate commerce.', difficulty: 'medium', topicSlug: 'federalism' },
+  { id: 13, question: 'McCulloch v. Maryland (1819) established that:', options: ['States can tax federal entities', 'Federal law supersedes state law and implied powers exist', 'The Bank was unconstitutional', 'States are sovereign over the federal government'], correctAnswer: 1, explanation: 'McCulloch upheld the national bank under implied powers and struck down Maryland\'s tax on it.', difficulty: 'medium', topicSlug: 'federalism' },
+  { id: 14, question: 'The 14th Amendment is significant because it:', options: ['Abolished slavery', 'Applied the Bill of Rights to states through the due process clause', 'Gave women the right to vote', 'Established income tax'], correctAnswer: 1, explanation: 'The 14th Amendment\'s due process and equal protection clauses have been used to incorporate the Bill of Rights to states.', difficulty: 'medium', topicSlug: 'civil-liberties' },
+  { id: 15, question: 'Selective incorporation means:', options: ['All amendments apply to states', 'Only certain rights in the Bill of Rights apply to states through court rulings', 'States can ignore federal law', 'Only criminal rights apply'], correctAnswer: 1, explanation: 'Through selective incorporation, the Supreme Court has applied most Bill of Rights protections to state governments case by case.', difficulty: 'medium', topicSlug: 'civil-liberties' },
+  { id: 16, question: 'The exclusionary rule prevents:', options: ['Congress from passing laws', 'Illegally obtained evidence from being used in court', 'The President from vetoing bills', 'States from holding elections'], correctAnswer: 1, explanation: 'The exclusionary rule (Mapp v. Ohio) bars evidence obtained through unconstitutional searches from trial.', difficulty: 'medium', topicSlug: 'civil-liberties' },
+  { id: 17, question: 'Tinker v. Des Moines established that:', options: ['Schools can ban all speech', 'Students retain First Amendment rights in school unless speech causes substantial disruption', 'Only adults have free speech', 'Schools must allow all speech'], correctAnswer: 1, explanation: 'The Court ruled students don\'t shed their constitutional rights at the schoolhouse gate.', difficulty: 'easy', topicSlug: 'civil-liberties' },
+  { id: 18, question: 'The Lemon test determines whether a law:', options: ['Is economically viable', 'Violates the Establishment Clause', 'Is politically popular', 'Affects interstate commerce'], correctAnswer: 1, explanation: 'The Lemon test (Lemon v. Kurtzman) evaluates if a law has a secular purpose, doesn\'t advance religion, and avoids entanglement.', difficulty: 'hard', topicSlug: 'civil-liberties' },
+  { id: 19, question: 'Citizens United v. FEC (2010) ruled that:', options: ['Corporations cannot donate to campaigns', 'Corporate and union independent expenditures are protected speech', 'All campaign spending must be public', 'PACs are illegal'], correctAnswer: 1, explanation: 'Citizens United held that independent political expenditures by corporations and unions are protected First Amendment speech.', difficulty: 'medium', topicSlug: 'civil-liberties' },
+  { id: 20, question: 'The winner-take-all system in most states means:', options: ['Every candidate wins something', 'The candidate with the most votes wins all Electoral College votes', 'Votes are proportionally distributed', 'Only the popular vote matters'], correctAnswer: 1, explanation: 'In most states, the presidential candidate who wins the popular vote receives all of that state\'s electoral votes.', difficulty: 'easy', topicSlug: 'voting-elections' },
+  { id: 21, question: 'Rational choice voting theory suggests voters:', options: ['Vote randomly', 'Vote based on which candidate best serves their self-interest', 'Always vote for incumbents', 'Never consider policy'], correctAnswer: 1, explanation: 'Rational choice theory assumes voters calculate which candidate will give them the greatest personal benefit.', difficulty: 'medium', topicSlug: 'voting-elections' },
+  { id: 22, question: 'The 15th Amendment specifically prohibits voting discrimination based on:', options: ['Gender', 'Race, color, or previous condition of servitude', 'Age', 'Property ownership'], correctAnswer: 1, explanation: 'The 15th Amendment (1870) protected the right to vote regardless of race.', difficulty: 'easy', topicSlug: 'voting-elections' },
+  { id: 23, question: 'A critical election or realignment occurs when:', options: ['Turnout drops significantly', 'Voters shift party allegiance in a lasting way', 'A third party wins', 'All incumbents lose'], correctAnswer: 1, explanation: 'Realigning elections produce sharp, lasting changes in party coalitions and voter behavior.', difficulty: 'medium', topicSlug: 'voting-elections' },
+  { id: 24, question: 'The Iron Triangle refers to:', options: ['Three branches of government', 'The mutually beneficial relationship among interest groups, congressional committees, and bureaucratic agencies', 'Military alliances', 'Three levels of courts'], correctAnswer: 1, explanation: 'The Iron Triangle describes the policy-making alliance between interest groups, Congress, and bureaucracy.', difficulty: 'medium', topicSlug: 'voting-elections' },
+  { id: 25, question: 'Congressional incumbents enjoy high reelection rates due in part to:', options: ['Term limits', 'Name recognition, franking privilege, and gerrymandering', 'Lack of challengers', 'Low voter turnout only'], correctAnswer: 1, explanation: 'Incumbents benefit from name recognition, free mail (franking), staff resources, and favorable district boundaries.', difficulty: 'medium', topicSlug: 'voting-elections' },
+  { id: 26, question: 'The filibuster is a procedure used in:', options: ['The House of Representatives', 'The Senate to delay or block legislation', 'The Supreme Court', 'State legislatures only'], correctAnswer: 1, explanation: 'The filibuster allows senators to speak indefinitely to delay or block a vote. Cloture (60 votes) ends it.', difficulty: 'easy', topicSlug: 'constitutional-foundations' },
+  { id: 27, question: 'A pocket veto occurs when:', options: ['The President actively rejects a bill', 'Congress adjourns and the President doesn\'t sign a bill within 10 days', 'The Supreme Court vetoes a law', 'Congress overrides the veto'], correctAnswer: 1, explanation: 'A pocket veto happens when Congress adjourns and the President takes no action on a bill within 10 days.', difficulty: 'medium', topicSlug: 'constitutional-foundations' },
+  { id: 28, question: 'Engel v. Vitale (1962) prohibited:', options: ['Bible distribution in schools', 'Government-sponsored prayer in public schools', 'Religious clubs', 'Teaching about religion'], correctAnswer: 1, explanation: 'The Court ruled that official school prayer violated the Establishment Clause of the First Amendment.', difficulty: 'easy', topicSlug: 'civil-liberties' },
+  { id: 29, question: 'The concept of dual federalism is often called:', options: ['Cooperative federalism', 'Layer-cake federalism', 'Marble-cake federalism', 'Fiscal federalism'], correctAnswer: 1, explanation: 'Dual (layer-cake) federalism has clear divisions between state and federal responsibilities.', difficulty: 'medium', topicSlug: 'federalism' },
+  { id: 30, question: 'Cooperative federalism is often called:', options: ['Layer-cake federalism', 'Marble-cake federalism', 'Fiscal federalism', 'New federalism'], correctAnswer: 1, explanation: 'Cooperative (marble-cake) federalism involves intermingled national and state responsibilities.', difficulty: 'medium', topicSlug: 'federalism' },
+  { id: 31, question: 'The War Powers Resolution requires the President to:', options: ['Declare war through Congress', 'Notify Congress within 48 hours of committing troops', 'Get Senate approval for any military action', 'Never use military force'], correctAnswer: 1, explanation: 'The War Powers Resolution requires presidential notification to Congress within 48 hours and withdrawal within 60 days without authorization.', difficulty: 'medium', topicSlug: 'constitutional-foundations' },
+  { id: 32, question: 'Gideon v. Wainwright established:', options: ['Right to a speedy trial', 'Right to an attorney for all defendants in felony cases', 'Right to a jury trial', 'Right to remain silent'], correctAnswer: 1, explanation: 'Gideon held that the 6th Amendment right to counsel applies to state courts through the 14th Amendment.', difficulty: 'easy', topicSlug: 'civil-liberties' },
+  { id: 33, question: 'The clear and present danger test was established in:', options: ['Marbury v. Madison', 'Schenck v. United States', 'Brandenburg v. Ohio', 'Tinker v. Des Moines'], correctAnswer: 1, explanation: 'In Schenck (1919), Holmes established that speech creating clear and present danger can be restricted.', difficulty: 'medium', topicSlug: 'civil-liberties' },
+  { id: 34, question: 'Super PACs differ from traditional PACs because they:', options: ['Cannot raise money', 'Can raise unlimited funds but cannot coordinate with candidates', 'Are run by candidates', 'Are limited to $5,000 contributions'], correctAnswer: 1, explanation: 'Super PACs can raise and spend unlimited amounts but are legally prohibited from coordinating directly with campaigns.', difficulty: 'medium', topicSlug: 'voting-elections' },
+  { id: 35, question: 'The establishment clause and free exercise clause are found in the:', options: ['Second Amendment', 'First Amendment', 'Fourth Amendment', 'Fourteenth Amendment'], correctAnswer: 1, explanation: 'The First Amendment contains both the Establishment Clause (no state religion) and Free Exercise Clause (freedom to practice).', difficulty: 'easy', topicSlug: 'civil-liberties' },
+  { id: 36, question: 'Plurality elections typically favor:', options: ['Third parties', 'Two major parties (Duverger\'s law)', 'Independent candidates', 'Coalition governments'], correctAnswer: 1, explanation: 'Duverger\'s law predicts that plurality/first-past-the-post voting systems tend to produce two-party systems.', difficulty: 'medium', topicSlug: 'voting-elections' },
+  { id: 37, question: 'The 22nd Amendment limits the President to:', options: ['One term', 'Two terms', 'Three terms', 'Four terms'], correctAnswer: 1, explanation: 'The 22nd Amendment (1951) limits the President to two elected terms.', difficulty: 'easy', topicSlug: 'constitutional-foundations' },
+  { id: 38, question: 'Baker v. Carr (1962) established the principle of:', options: ['Executive privilege', 'One person, one vote in legislative apportionment', 'Judicial restraint', 'State sovereignty'], correctAnswer: 1, explanation: 'Baker v. Carr held that redistricting is a justiciable issue, leading to the one person, one vote standard.', difficulty: 'hard', topicSlug: 'voting-elections' },
+  { id: 39, question: 'Linkage institutions connect people to government and include:', options: ['Only Congress', 'Political parties, interest groups, media, and elections', 'Only the courts', 'Only the executive branch'], correctAnswer: 1, explanation: 'Linkage institutions channel citizen preferences to policymakers through parties, media, interest groups, and elections.', difficulty: 'easy', topicSlug: 'voting-elections' },
+  { id: 40, question: 'The impeachment process begins in:', options: ['The Senate', 'The House of Representatives', 'The Supreme Court', 'The executive branch'], correctAnswer: 1, explanation: 'The House impeaches (charges) an official; the Senate holds the trial.', difficulty: 'easy', topicSlug: 'constitutional-foundations' },
 ]
 
-export function getApUSGovQuestions(count: number = 10): ApUSGovQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+export function getApUSGovQuestions(count: number = 10, topicSlug?: string): ApUsGovQuestion[] {
+  let pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
+  const shuffled = [...pool].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

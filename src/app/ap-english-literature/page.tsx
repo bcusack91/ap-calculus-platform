@@ -104,38 +104,73 @@ const features = [
 
 const units = [
   {
-    title: 'Units 1–3: Short Fiction',
-    topics: ['Character Development', 'Narration & Point of View', 'Setting & Atmosphere', 'Theme & Meaning'],
+    title: 'Unit 1: Short Fiction I — Character & Setting',
+    topics: ['Character Development', 'Setting & Atmosphere', 'Narrative Distance', 'Conflict & Motivation'],
     color: 'rose',
   },
   {
-    title: 'Units 4–6: Poetry',
-    topics: ['Imagery & Figurative Language', 'Tone & Speaker', 'Poetic Structure', 'Sound Devices'],
+    title: 'Unit 2: Short Fiction II — Narration',
+    topics: ['Point of View', 'Narrative Reliability', 'Stream of Consciousness', 'Frame Narratives'],
+    color: 'pink',
+  },
+  {
+    title: 'Unit 3: Short Fiction III — Complexity',
+    topics: ['Ambiguity & Interpretation', 'Theme & Meaning', 'Irony & Satire', 'Symbolism in Fiction'],
+    color: 'fuchsia',
+  },
+  {
+    title: 'Unit 4: Poetry I — Imagery & Figure',
+    topics: ['Imagery & Figurative Language', 'Metaphor & Simile', 'Personification', 'Allusion'],
     color: 'blue',
   },
   {
-    title: 'Units 7–8: Longer Fiction & Drama',
-    topics: ['Novel Analysis', 'Dramatic Structure', 'Social Commentary', 'Symbol & Motif'],
+    title: 'Unit 5: Poetry II — Structure',
+    topics: ['Poetic Structure & Form', 'Meter & Rhythm', 'Stanza & Line Breaks', 'Sound Devices'],
+    color: 'indigo',
+  },
+  {
+    title: 'Unit 6: Poetry III — Speaker & Tone',
+    topics: ['Speaker & Voice', 'Tone & Mood', 'Shifts & Contrasts', 'Poetic Argument'],
+    color: 'violet',
+  },
+  {
+    title: 'Unit 7: Longer Fiction & Drama I',
+    topics: ['Novel Analysis', 'Dramatic Structure', 'Character Arcs', 'Social Commentary'],
     color: 'green',
   },
   {
-    title: 'Unit 9: Exam Preparation',
-    topics: ['Prose Fiction Analysis', 'Poetry Analysis', 'Literary Argument Essay', 'Timed Writing Practice'],
+    title: 'Unit 8: Longer Fiction & Drama II',
+    topics: ['Symbol & Motif', 'Narrative Complexity', 'Tragedy & Comedy', 'Thematic Development'],
+    color: 'teal',
+  },
+  {
+    title: 'Unit 9: Exam Skills & Synthesis',
+    topics: ['Prose Fiction Analysis Essay', 'Poetry Analysis Essay', 'Literary Argument Essay', 'Timed Writing Strategies'],
     color: 'purple',
   },
 ]
 
 const unitColors: Record<string, string> = {
   rose: 'text-rose-700 dark:text-rose-400',
+  pink: 'text-pink-700 dark:text-pink-400',
+  fuchsia: 'text-fuchsia-700 dark:text-fuchsia-400',
   blue: 'text-blue-700 dark:text-blue-400',
+  indigo: 'text-indigo-700 dark:text-indigo-400',
+  violet: 'text-violet-700 dark:text-violet-400',
   green: 'text-green-700 dark:text-green-400',
+  teal: 'text-teal-700 dark:text-teal-400',
   purple: 'text-purple-700 dark:text-purple-400',
 }
 
 const checkColors: Record<string, string> = {
   rose: 'text-rose-500',
+  pink: 'text-pink-500',
+  fuchsia: 'text-fuchsia-500',
   blue: 'text-blue-500',
+  indigo: 'text-indigo-500',
+  violet: 'text-violet-500',
   green: 'text-green-500',
+  teal: 'text-teal-500',
   purple: 'text-purple-500',
 }
 

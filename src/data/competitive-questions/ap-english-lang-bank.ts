@@ -1,178 +1,50 @@
-// AP English Language question bank for competitive mode
+// Ap English Lang Question question bank for competitive mode
 
-export interface ApEngLangQuestion {
+export interface ApEnglishLangQuestion {
   id: number
   question: string
   options: string[]
   correctAnswer: number
   explanation: string
   difficulty: 'easy' | 'medium' | 'hard'
+  topicSlug: string
 }
 
-const allQuestions: ApEngLangQuestion[] = [
-  {
-    id: 1,
-    question: 'Which of the following best describes a key concept in Intro to Rhetoric?',
-    options: ['A fundamental principle of Intro to Rhetoric', 'An unrelated concept from another field', 'A common misconception about Intro to Rhetoric', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Intro to Rhetoric is essential for the AP English Language exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 2,
-    question: 'Which of the following best describes a key concept in Rhetorical Situation?',
-    options: ['A fundamental principle of Rhetorical Situation', 'An unrelated concept from another field', 'A common misconception about Rhetorical Situation', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Rhetorical Situation is essential for the AP English Language exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 3,
-    question: 'Which of the following best describes a key concept in Rhetorical Writing?',
-    options: ['A fundamental principle of Rhetorical Writing', 'An unrelated concept from another field', 'A common misconception about Rhetorical Writing', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Rhetorical Writing is essential for the AP English Language exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 4,
-    question: 'Which of the following best describes a key concept in Claims & Evidence?',
-    options: ['A fundamental principle of Claims & Evidence', 'An unrelated concept from another field', 'A common misconception about Claims & Evidence', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Claims & Evidence is essential for the AP English Language exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 5,
-    question: 'Which of the following best describes a key concept in Claims Reading?',
-    options: ['A fundamental principle of Claims Reading', 'An unrelated concept from another field', 'A common misconception about Claims Reading', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Claims Reading is essential for the AP English Language exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 6,
-    question: 'Which of the following best describes a key concept in Claims Writing?',
-    options: ['A fundamental principle of Claims Writing', 'An unrelated concept from another field', 'A common misconception about Claims Writing', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Claims Writing is essential for the AP English Language exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 7,
-    question: 'Which of the following best describes a key concept in Reasoning in Reading?',
-    options: ['A fundamental principle of Reasoning in Reading', 'An unrelated concept from another field', 'A common misconception about Reasoning in Reading', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Reasoning in Reading is essential for the AP English Language exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 8,
-    question: 'Which of the following best describes a key concept in Reasoning in Writing?',
-    options: ['A fundamental principle of Reasoning in Writing', 'An unrelated concept from another field', 'A common misconception about Reasoning in Writing', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Reasoning in Writing is essential for the AP English Language exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 9,
-    question: 'Which of the following best describes a key concept in Argument Structure?',
-    options: ['A fundamental principle of Argument Structure', 'An unrelated concept from another field', 'A common misconception about Argument Structure', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Argument Structure is essential for the AP English Language exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 10,
-    question: 'Which of the following best describes a key concept in Diction & Syntax?',
-    options: ['A fundamental principle of Diction & Syntax', 'An unrelated concept from another field', 'A common misconception about Diction & Syntax', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Diction & Syntax is essential for the AP English Language exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 11,
-    question: 'Which of the following best describes a key concept in Style in Reading?',
-    options: ['A fundamental principle of Style in Reading', 'An unrelated concept from another field', 'A common misconception about Style in Reading', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Style in Reading is essential for the AP English Language exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 12,
-    question: 'Which of the following best describes a key concept in Style in Writing?',
-    options: ['A fundamental principle of Style in Writing', 'An unrelated concept from another field', 'A common misconception about Style in Writing', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Style in Writing is essential for the AP English Language exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 13,
-    question: 'Which of the following best describes a key concept in Tone & Voice?',
-    options: ['A fundamental principle of Tone & Voice', 'An unrelated concept from another field', 'A common misconception about Tone & Voice', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Tone & Voice is essential for the AP English Language exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 14,
-    question: 'Which of the following best describes a key concept in Ethos/Pathos/Logos?',
-    options: ['A fundamental principle of Ethos/Pathos/Logos', 'An unrelated concept from another field', 'A common misconception about Ethos/Pathos/Logos', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Ethos/Pathos/Logos is essential for the AP English Language exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 15,
-    question: 'Which of the following best describes a key concept in Logical Fallacies?',
-    options: ['A fundamental principle of Logical Fallacies', 'An unrelated concept from another field', 'A common misconception about Logical Fallacies', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Logical Fallacies is essential for the AP English Language exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 16,
-    question: 'Which of the following best describes a key concept in Synthesis?',
-    options: ['A fundamental principle of Synthesis', 'An unrelated concept from another field', 'A common misconception about Synthesis', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Synthesis is essential for the AP English Language exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 17,
-    question: 'Which of the following best describes a key concept in Synthesis Essay?',
-    options: ['A fundamental principle of Synthesis Essay', 'An unrelated concept from another field', 'A common misconception about Synthesis Essay', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Synthesis Essay is essential for the AP English Language exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 18,
-    question: 'Which of the following best describes a key concept in Developing Arguments?',
-    options: ['A fundamental principle of Developing Arguments', 'An unrelated concept from another field', 'A common misconception about Developing Arguments', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Developing Arguments is essential for the AP English Language exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 19,
-    question: 'Which of the following best describes a key concept in Writing for Audience?',
-    options: ['A fundamental principle of Writing for Audience', 'An unrelated concept from another field', 'A common misconception about Writing for Audience', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Writing for Audience is essential for the AP English Language exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 20,
-    question: 'Which of the following best describes a key concept in Intro to Rhetoric?',
-    options: ['A fundamental principle of Intro to Rhetoric', 'An unrelated concept from another field', 'A common misconception about Intro to Rhetoric', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Intro to Rhetoric is essential for the AP English Language exam.',
-    difficulty: 'hard',
-  },
+const allQuestions: ApEnglishLangQuestion[] = [
+  { id: 1, question: 'Ethos as a rhetorical appeal refers to:', options: ['Emotional persuasion', 'The speaker\'s credibility and trustworthiness', 'Logical reasoning', 'Storytelling'], correctAnswer: 1, explanation: 'Ethos establishes the speaker\'s authority and character to persuade the audience.', difficulty: 'easy', topicSlug: 'rhetorical-analysis' },
+  { id: 2, question: 'Pathos appeals to:', options: ['Logic', 'The audience\'s emotions', 'The speaker\'s expertise', 'Facts and statistics'], correctAnswer: 1, explanation: 'Pathos uses emotional language, vivid imagery, and personal stories to move the audience.', difficulty: 'easy', topicSlug: 'rhetorical-analysis' },
+  { id: 3, question: 'Logos relies on:', options: ['Emotional stories', 'Logic, evidence, and reasoning', 'The speaker\'s reputation', 'Repetition'], correctAnswer: 1, explanation: 'Logos uses facts, statistics, logical arguments, and evidence to persuade.', difficulty: 'easy', topicSlug: 'rhetorical-analysis' },
+  { id: 4, question: 'A rhetorical question is used to:', options: ['Get an answer', 'Make a point or provoke thought without expecting an answer', 'Fill space', 'Show uncertainty'], correctAnswer: 1, explanation: 'Rhetorical questions engage the audience and emphasize points without requiring responses.', difficulty: 'easy', topicSlug: 'rhetorical-analysis' },
+  { id: 5, question: 'The purpose of a counterargument in an essay is to:', options: ['Weaken the thesis', 'Acknowledge opposing views and then refute them to strengthen the argument', 'Confuse the reader', 'Change the topic'], correctAnswer: 1, explanation: 'Addressing counterarguments shows thoroughness and strengthens the writer\'s position.', difficulty: 'medium', topicSlug: 'argument-writing' },
+  { id: 6, question: 'Juxtaposition is a technique that:', options: ['Compares similar things', 'Places contrasting elements side by side to highlight differences', 'Uses only metaphors', 'Avoids comparisons'], correctAnswer: 1, explanation: 'Juxtaposition creates emphasis and deeper meaning through contrast.', difficulty: 'medium', topicSlug: 'rhetorical-analysis' },
+  { id: 7, question: 'A thesis statement should:', options: ['Be vague', 'Present a clear, arguable claim that the essay will support', 'Summarize all paragraphs', 'Be a question'], correctAnswer: 1, explanation: 'An effective thesis makes a specific claim that can be supported with evidence and analysis.', difficulty: 'easy', topicSlug: 'argument-writing' },
+  { id: 8, question: 'Concession in argumentation means:', options: ['Giving up your argument', 'Acknowledging a valid point from the opposing side before pivoting back', 'Repeating your thesis', 'Asking a question'], correctAnswer: 1, explanation: 'Concession shows the writer has considered opposing views, building credibility.', difficulty: 'medium', topicSlug: 'argument-writing' },
+  { id: 9, question: 'Parallelism in writing is:', options: ['Using different structures', 'Using the same grammatical structure for similar ideas to create rhythm and clarity', 'Writing run-on sentences', 'Using only short sentences'], correctAnswer: 1, explanation: 'Parallel structure creates balance and emphasis: "government of the people, by the people, for the people."', difficulty: 'medium', topicSlug: 'style-syntax' },
+  { id: 10, question: 'An ad hominem fallacy attacks:', options: ['The argument itself', 'The person making the argument rather than the argument', 'The evidence', 'The conclusion'], correctAnswer: 1, explanation: 'Ad hominem fallacies avoid addressing the actual argument by targeting the person.', difficulty: 'medium', topicSlug: 'argument-writing' },
+  { id: 11, question: 'The purpose of transitional words and phrases is to:', options: ['Make writing longer', 'Create coherence by connecting ideas and showing relationships between paragraphs', 'Add emphasis only', 'Replace thesis statements'], correctAnswer: 1, explanation: 'Transitions guide readers through the logical flow of an argument.', difficulty: 'easy', topicSlug: 'style-syntax' },
+  { id: 12, question: 'A straw man fallacy involves:', options: ['Using evidence', 'Misrepresenting an opponent\'s argument to make it easier to attack', 'Making a strong argument', 'Using emotional appeals'], correctAnswer: 1, explanation: 'Straw man arguments distort the opposition\'s position to create an easy target.', difficulty: 'medium', topicSlug: 'argument-writing' },
+  { id: 13, question: 'Syntax refers to:', options: ['Word choice', 'The arrangement and structure of words and phrases in sentences', 'The meaning of words', 'Spelling'], correctAnswer: 1, explanation: 'Syntax encompasses sentence structure, length, word order, and how these create meaning and effect.', difficulty: 'easy', topicSlug: 'style-syntax' },
+  { id: 14, question: 'An appeal to authority is effective when:', options: ['Any expert is cited', 'The cited authority is relevant and credible on the specific topic', 'The authority is famous', 'No source is named'], correctAnswer: 1, explanation: 'Legitimate authority appeals cite experts whose expertise is directly relevant to the claim.', difficulty: 'medium', topicSlug: 'rhetorical-analysis' },
+  { id: 15, question: 'Active voice is generally preferred in argumentation because it:', options: ['Sounds fancy', 'Creates directness, clarity, and emphasizes the agent of action', 'Is longer', 'Is more formal'], correctAnswer: 1, explanation: 'Active voice ("The study proved") is more direct and forceful than passive ("It was proven by the study").', difficulty: 'medium', topicSlug: 'style-syntax' },
+  { id: 16, question: 'A non sequitur fallacy is when:', options: ['Evidence is strong', 'The conclusion does not logically follow from the premise', 'Arguments are well-structured', 'Facts are accurate'], correctAnswer: 1, explanation: 'Non sequiturs make leaps in logic where the conclusion is not supported by the reasoning.', difficulty: 'medium', topicSlug: 'argument-writing' },
+  { id: 17, question: 'The purpose of a qualifying statement is to:', options: ['Weaken the argument', 'Limit or modify a claim to make it more precise and defensible', 'Eliminate the thesis', 'Add confusion'], correctAnswer: 1, explanation: 'Qualifiers like "often," "in many cases," or "may" make claims more accurate and harder to refute.', difficulty: 'medium', topicSlug: 'argument-writing' },
+  { id: 18, question: 'Antithesis places:', options: ['Similar ideas together', 'Contrasting ideas in parallel structure for emphasis', 'Only metaphors', 'No contrast'], correctAnswer: 1, explanation: '"It was the best of times, it was the worst of times" uses antithesis for powerful contrast.', difficulty: 'medium', topicSlug: 'rhetorical-analysis' },
+  { id: 19, question: 'A hasty generalization is:', options: ['A well-supported claim', 'Drawing a broad conclusion from insufficient evidence', 'Using too many examples', 'A logical argument'], correctAnswer: 1, explanation: 'Hasty generalizations jump to conclusions without adequate evidence or sample size.', difficulty: 'medium', topicSlug: 'argument-writing' },
+  { id: 20, question: 'Diction in rhetoric refers to:', options: ['Grammar rules', 'Word choice and its effects on meaning, tone, and audience', 'Paragraph structure', 'Citation style'], correctAnswer: 1, explanation: 'A speaker\'s diction (formal, informal, technical, colloquial) shapes how the message is perceived.', difficulty: 'easy', topicSlug: 'style-syntax' },
+  { id: 21, question: 'A call to action in a persuasive essay:', options: ['Summarizes the introduction', 'Urges the reader to take a specific action based on the argument presented', 'Is always at the beginning', 'Is unnecessary'], correctAnswer: 1, explanation: 'Effective persuasive writing concludes by telling the audience what to do with the information.', difficulty: 'easy', topicSlug: 'argument-writing' },
+  { id: 22, question: 'Understatement as a rhetorical device:', options: ['Exaggerates for effect', 'Deliberately represents something as less significant than it is', 'Is the same as hyperbole', 'Has no effect'], correctAnswer: 1, explanation: 'Understatement creates ironic emphasis by saying less than what is meant.', difficulty: 'medium', topicSlug: 'rhetorical-analysis' },
+  { id: 23, question: 'The Toulmin model of argumentation consists of:', options: ['Only claim and evidence', 'Claim, grounds (evidence), warrant (reasoning), and backing', 'Introduction and conclusion only', 'Five paragraphs'], correctAnswer: 1, explanation: 'Toulmin adds warrant (the logical bridge between claim and evidence) and backing to the basic argument.', difficulty: 'hard', topicSlug: 'argument-writing' },
+  { id: 24, question: 'Periodic sentences build to:', options: ['An anticlimax', 'The main idea at the end, creating suspense and emphasis', 'A question', 'A new topic'], correctAnswer: 1, explanation: 'Periodic sentences delay the main clause until the end for dramatic effect.', difficulty: 'medium', topicSlug: 'style-syntax' },
+  { id: 25, question: 'Cumulative (loose) sentences:', options: ['Save the main idea for last', 'State the main idea first, then add modifying details', 'Have no main idea', 'Are always short'], correctAnswer: 1, explanation: 'Loose sentences begin with the main clause and add subordinate elements, creating a natural flow.', difficulty: 'medium', topicSlug: 'style-syntax' },
+  { id: 26, question: 'Red herring is a fallacy that:', options: ['Uses strong evidence', 'Introduces an irrelevant topic to divert attention from the original issue', 'Supports the argument', 'Is a type of evidence'], correctAnswer: 1, explanation: 'Red herrings distract from the actual argument by raising unrelated points.', difficulty: 'medium', topicSlug: 'argument-writing' },
+  { id: 27, question: 'The rhetorical situation consists of:', options: ['Only the text', 'The speaker, audience, subject, purpose, and context', 'Only the author', 'Only the message'], correctAnswer: 1, explanation: 'Understanding the full rhetorical situation (SOAPS: Speaker, Occasion, Audience, Purpose, Subject) is essential for analysis.', difficulty: 'medium', topicSlug: 'rhetorical-analysis' },
+  { id: 28, question: 'Asyndeton is the deliberate omission of:', options: ['Verbs', 'Conjunctions between related clauses for speed and emphasis', 'Nouns', 'Adjectives'], correctAnswer: 1, explanation: '"I came, I saw, I conquered" uses asyndeton to create pace and power.', difficulty: 'hard', topicSlug: 'style-syntax' },
+  { id: 29, question: 'Polysyndeton uses:', options: ['No conjunctions', 'Multiple conjunctions to slow pace and add emphasis', 'Only commas', 'Short sentences'], correctAnswer: 1, explanation: '"And the rain came and the wind blew and the river rose" uses polysyndeton for cumulative effect.', difficulty: 'hard', topicSlug: 'style-syntax' },
+  { id: 30, question: 'An analogy in argumentation:', options: ['Is always a fallacy', 'Compares two different things to clarify or persuade by showing similarity', 'Uses only statistics', 'Is the same as a metaphor'], correctAnswer: 1, explanation: 'Analogies help make complex or abstract arguments accessible by comparing to familiar situations.', difficulty: 'medium', topicSlug: 'rhetorical-analysis' },
 ]
 
-export function getApEngLangQuestions(count: number = 10): ApEngLangQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+export function getApEngLangQuestions(count: number = 10, topicSlug?: string): ApEnglishLangQuestion[] {
+  let pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
+  const shuffled = [...pool].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

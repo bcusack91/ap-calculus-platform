@@ -104,39 +104,74 @@ const features = [
 
 const units = [
   {
-    title: 'Units 1–2: Rhetorical Situation',
-    topics: ['SOAPSTone Analysis', 'Purpose & Audience', 'Exigence & Context', 'Rhetorical Choices'],
+    title: 'Unit 1: Rhetorical Situation (Reading)',
+    topics: ['SOAPSTone Analysis', 'Purpose & Audience', 'Exigence & Context', 'Appeals & Rhetorical Choices'],
     color: 'cyan',
   },
   {
-    title: 'Units 3–5: Claims & Reasoning',
-    topics: ['Claims & Evidence', 'Reasoning & Organization', 'Line of Reasoning', 'Counterargument'],
+    title: 'Unit 2: Rhetorical Situation (Writing)',
+    topics: ['Writing for an Audience', 'Establishing Purpose', 'Strategic Choices', 'Genre Conventions'],
+    color: 'teal',
+  },
+  {
+    title: 'Unit 3: Claims & Evidence (Reading)',
+    topics: ['Identifying Claims', 'Evaluating Evidence', 'Types of Support', 'Source Credibility'],
     color: 'blue',
   },
   {
-    title: 'Units 6–7: Style & Persuasion',
-    topics: ['Diction & Syntax', 'Ethos, Pathos, Logos', 'Logical Fallacies', 'Tone & Voice'],
+    title: 'Unit 4: Claims & Evidence (Writing)',
+    topics: ['Developing a Thesis', 'Selecting Evidence', 'Commentary & Analysis', 'Integrating Sources'],
+    color: 'indigo',
+  },
+  {
+    title: 'Unit 5: Reasoning & Organization (Reading)',
+    topics: ['Line of Reasoning', 'Methods of Development', 'Logical Fallacies', 'Counterargument'],
     color: 'green',
   },
   {
-    title: 'Units 8–9: Synthesis & Argument',
-    topics: ['Synthesis Essay', 'Rhetorical Analysis Essay', 'Argument Essay', 'Timed Writing Practice'],
+    title: 'Unit 6: Reasoning & Organization (Writing)',
+    topics: ['Organizing an Argument', 'Transitions', 'Cohesion & Coherence', 'Structuring Paragraphs'],
+    color: 'emerald',
+  },
+  {
+    title: 'Unit 7: Style (Reading)',
+    topics: ['Diction & Word Choice', 'Syntax & Sentence Structure', 'Tone & Voice', 'Ethos, Pathos, Logos'],
+    color: 'violet',
+  },
+  {
+    title: 'Unit 8: Style (Writing)',
+    topics: ['Developing Voice', 'Strategic Syntax', 'Rhetorical Devices', 'Audience Awareness'],
     color: 'purple',
+  },
+  {
+    title: 'Unit 9: Developing a Complex Argument',
+    topics: ['Synthesis Essay', 'Rhetorical Analysis Essay', 'Argument Essay', 'Timed Writing Strategies'],
+    color: 'rose',
   },
 ]
 
 const unitColors: Record<string, string> = {
   cyan: 'text-cyan-700 dark:text-cyan-400',
+  teal: 'text-teal-700 dark:text-teal-400',
   blue: 'text-blue-700 dark:text-blue-400',
+  indigo: 'text-indigo-700 dark:text-indigo-400',
   green: 'text-green-700 dark:text-green-400',
+  emerald: 'text-emerald-700 dark:text-emerald-400',
+  violet: 'text-violet-700 dark:text-violet-400',
   purple: 'text-purple-700 dark:text-purple-400',
+  rose: 'text-rose-700 dark:text-rose-400',
 }
 
 const checkColors: Record<string, string> = {
   cyan: 'text-cyan-500',
+  teal: 'text-teal-500',
   blue: 'text-blue-500',
+  indigo: 'text-indigo-500',
   green: 'text-green-500',
+  emerald: 'text-emerald-500',
+  violet: 'text-violet-500',
   purple: 'text-purple-500',
+  rose: 'text-rose-500',
 }
 
 export default function ApEnglishLanguageHub() {

@@ -1,178 +1,50 @@
-// AP CS Principles question bank for competitive mode
+// Ap Csp Question question bank for competitive mode
 
-export interface ApCSPQuestion {
+export interface ApCspQuestion {
   id: number
   question: string
   options: string[]
   correctAnswer: number
   explanation: string
   difficulty: 'easy' | 'medium' | 'hard'
+  topicSlug: string
 }
 
-const allQuestions: ApCSPQuestion[] = [
-  {
-    id: 1,
-    question: 'Which of the following best describes a key concept in Creative Development?',
-    options: ['A fundamental principle of Creative Development', 'An unrelated concept from another field', 'A common misconception about Creative Development', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Creative Development is essential for the AP CS Principles exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 2,
-    question: 'Which of the following best describes a key concept in Collaboration?',
-    options: ['A fundamental principle of Collaboration', 'An unrelated concept from another field', 'A common misconception about Collaboration', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Collaboration is essential for the AP CS Principles exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 3,
-    question: 'Which of the following best describes a key concept in Binary & Data?',
-    options: ['A fundamental principle of Binary & Data', 'An unrelated concept from another field', 'A common misconception about Binary & Data', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Binary & Data is essential for the AP CS Principles exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 4,
-    question: 'Which of the following best describes a key concept in Data Compression?',
-    options: ['A fundamental principle of Data Compression', 'An unrelated concept from another field', 'A common misconception about Data Compression', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Data Compression is essential for the AP CS Principles exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 5,
-    question: 'Which of the following best describes a key concept in Data & Info?',
-    options: ['A fundamental principle of Data & Info', 'An unrelated concept from another field', 'A common misconception about Data & Info', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Data & Info is essential for the AP CS Principles exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 6,
-    question: 'Which of the following best describes a key concept in Algorithms?',
-    options: ['A fundamental principle of Algorithms', 'An unrelated concept from another field', 'A common misconception about Algorithms', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Algorithms is essential for the AP CS Principles exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 7,
-    question: 'Which of the following best describes a key concept in Algorithms & Programming?',
-    options: ['A fundamental principle of Algorithms & Programming', 'An unrelated concept from another field', 'A common misconception about Algorithms & Programming', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Algorithms & Programming is essential for the AP CS Principles exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 8,
-    question: 'Which of the following best describes a key concept in Variables & Control?',
-    options: ['A fundamental principle of Variables & Control', 'An unrelated concept from another field', 'A common misconception about Variables & Control', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Variables & Control is essential for the AP CS Principles exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 9,
-    question: 'Which of the following best describes a key concept in Procedures & Lists?',
-    options: ['A fundamental principle of Procedures & Lists', 'An unrelated concept from another field', 'A common misconception about Procedures & Lists', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Procedures & Lists is essential for the AP CS Principles exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 10,
-    question: 'Which of the following best describes a key concept in Systems & Networks?',
-    options: ['A fundamental principle of Systems & Networks', 'An unrelated concept from another field', 'A common misconception about Systems & Networks', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Systems & Networks is essential for the AP CS Principles exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 11,
-    question: 'Which of the following best describes a key concept in Internet Protocols?',
-    options: ['A fundamental principle of Internet Protocols', 'An unrelated concept from another field', 'A common misconception about Internet Protocols', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Internet Protocols is essential for the AP CS Principles exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 12,
-    question: 'Which of the following best describes a key concept in Fault Tolerance?',
-    options: ['A fundamental principle of Fault Tolerance', 'An unrelated concept from another field', 'A common misconception about Fault Tolerance', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Fault Tolerance is essential for the AP CS Principles exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 13,
-    question: 'Which of the following best describes a key concept in Impact of Computing?',
-    options: ['A fundamental principle of Impact of Computing', 'An unrelated concept from another field', 'A common misconception about Impact of Computing', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Impact of Computing is essential for the AP CS Principles exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 14,
-    question: 'Which of the following best describes a key concept in Safe Computing?',
-    options: ['A fundamental principle of Safe Computing', 'An unrelated concept from another field', 'A common misconception about Safe Computing', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Safe Computing is essential for the AP CS Principles exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 15,
-    question: 'Which of the following best describes a key concept in Social & Ethical Impacts?',
-    options: ['A fundamental principle of Social & Ethical Impacts', 'An unrelated concept from another field', 'A common misconception about Social & Ethical Impacts', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Social & Ethical Impacts is essential for the AP CS Principles exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 16,
-    question: 'Which of the following best describes a key concept in Creative Development?',
-    options: ['A fundamental principle of Creative Development', 'An unrelated concept from another field', 'A common misconception about Creative Development', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Creative Development is essential for the AP CS Principles exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 17,
-    question: 'Which of the following best describes a key concept in Collaboration?',
-    options: ['A fundamental principle of Collaboration', 'An unrelated concept from another field', 'A common misconception about Collaboration', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Collaboration is essential for the AP CS Principles exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 18,
-    question: 'Which of the following best describes a key concept in Binary & Data?',
-    options: ['A fundamental principle of Binary & Data', 'An unrelated concept from another field', 'A common misconception about Binary & Data', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Binary & Data is essential for the AP CS Principles exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 19,
-    question: 'Which of the following best describes a key concept in Data Compression?',
-    options: ['A fundamental principle of Data Compression', 'An unrelated concept from another field', 'A common misconception about Data Compression', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Data Compression is essential for the AP CS Principles exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 20,
-    question: 'Which of the following best describes a key concept in Data & Info?',
-    options: ['A fundamental principle of Data & Info', 'An unrelated concept from another field', 'A common misconception about Data & Info', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Data & Info is essential for the AP CS Principles exam.',
-    difficulty: 'hard',
-  },
+const allQuestions: ApCspQuestion[] = [
+  { id: 1, question: 'A bit is:', options: ['8 binary digits', 'The smallest unit of data, representing 0 or 1', 'A byte', 'A pixel'], correctAnswer: 1, explanation: 'A bit (binary digit) is the fundamental unit of information in computing.', difficulty: 'easy', topicSlug: 'digital-information' },
+  { id: 2, question: 'How many values can be represented with 8 bits?', options: ['8', '256 (2^8)', '64', '128'], correctAnswer: 1, explanation: 'n bits can represent 2^n unique values; 2^8 = 256.', difficulty: 'easy', topicSlug: 'digital-information' },
+  { id: 3, question: 'An algorithm is:', options: ['A programming language', 'A step-by-step procedure for solving a problem', 'A type of hardware', 'A data structure'], correctAnswer: 1, explanation: 'Algorithms are precise sequences of instructions for accomplishing a task.', difficulty: 'easy', topicSlug: 'algorithms' },
+  { id: 4, question: 'Lossy compression:', options: ['Preserves all original data', 'Permanently removes some data to reduce file size', 'Only works on text', 'Increases file size'], correctAnswer: 1, explanation: 'Lossy compression (JPEG, MP3) sacrifices some data quality for smaller files.', difficulty: 'medium', topicSlug: 'digital-information' },
+  { id: 5, question: 'Lossless compression:', options: ['Loses some data', 'Reduces file size while preserving all original data exactly', 'Only works on images', 'Is always better than lossy'], correctAnswer: 1, explanation: 'Lossless compression (PNG, ZIP) allows perfect reconstruction of the original data.', difficulty: 'medium', topicSlug: 'digital-information' },
+  { id: 6, question: 'The internet is:', options: ['The World Wide Web', 'A global network of interconnected computer networks using standard protocols', 'A single computer', 'A search engine'], correctAnswer: 1, explanation: 'The internet is a network of networks; the web is one service that runs on it.', difficulty: 'easy', topicSlug: 'internet' },
+  { id: 7, question: 'TCP/IP protocols:', options: ['Only handle email', 'Govern how data is transmitted across the internet in packets', 'Are obsolete', 'Only work on local networks'], correctAnswer: 1, explanation: 'TCP handles reliable data delivery; IP handles addressing and routing packets.', difficulty: 'medium', topicSlug: 'internet' },
+  { id: 8, question: 'An IP address is:', options: ['A website name', 'A unique numerical label assigned to each device on a network', 'A password', 'An email address'], correctAnswer: 1, explanation: 'IP addresses identify devices on a network; IPv4 uses 32-bit addresses, IPv6 uses 128-bit.', difficulty: 'easy', topicSlug: 'internet' },
+  { id: 9, question: 'DNS (Domain Name System) converts:', options: ['Binary to text', 'Human-readable domain names to IP addresses', 'Passwords to hashes', 'Files to folders'], correctAnswer: 1, explanation: 'DNS translates domain names (google.com) into IP addresses that computers use.', difficulty: 'medium', topicSlug: 'internet' },
+  { id: 10, question: 'A variable in programming:', options: ['Cannot change', 'Stores a value that can be referenced and modified', 'Is always a number', 'Must be global'], correctAnswer: 1, explanation: 'Variables are named storage locations that hold values which can change during program execution.', difficulty: 'easy', topicSlug: 'programming' },
+  { id: 11, question: 'A Boolean expression evaluates to:', options: ['A number', 'Either true or false', 'A string', 'An array'], correctAnswer: 1, explanation: 'Boolean expressions produce true or false values, used in conditions and logic.', difficulty: 'easy', topicSlug: 'programming' },
+  { id: 12, question: 'Sequencing in programming means:', options: ['Random execution', 'Executing statements in order, one after another', 'Skipping statements', 'Parallel execution'], correctAnswer: 1, explanation: 'Sequencing is the default execution order: top to bottom, one statement at a time.', difficulty: 'easy', topicSlug: 'algorithms' },
+  { id: 13, question: 'Selection in programming uses:', options: ['Loops', 'Conditional statements (if/else) to choose which code to execute', 'Functions', 'Variables'], correctAnswer: 1, explanation: 'Selection (if-else) allows programs to make decisions based on conditions.', difficulty: 'easy', topicSlug: 'algorithms' },
+  { id: 14, question: 'Iteration in programming refers to:', options: ['Choosing between options', 'Repeating a set of instructions using loops', 'Defining variables', 'Creating functions'], correctAnswer: 1, explanation: 'Iteration (loops) allows code to be executed multiple times.', difficulty: 'easy', topicSlug: 'algorithms' },
+  { id: 15, question: 'A function/procedure:', options: ['Can only be used once', 'Is a reusable block of code that performs a specific task', 'Must return a value', 'Cannot take parameters'], correctAnswer: 1, explanation: 'Functions encapsulate code for reuse, improving organization and reducing repetition.', difficulty: 'easy', topicSlug: 'programming' },
+  { id: 16, question: 'Abstraction in computer science means:', options: ['Making things more complex', 'Simplifying complex systems by focusing on essential features and hiding details', 'Removing code', 'Using only low-level languages'], correctAnswer: 1, explanation: 'Abstraction manages complexity by providing simplified interfaces to complex systems.', difficulty: 'medium', topicSlug: 'algorithms' },
+  { id: 17, question: 'The digital divide refers to:', options: ['A math operation', 'The gap between those with and without access to digital technology', 'A type of encryption', 'Binary division'], correctAnswer: 1, explanation: 'The digital divide creates inequalities in access to technology, internet, and digital literacy.', difficulty: 'easy', topicSlug: 'impact' },
+  { id: 18, question: 'Phishing is:', options: ['A legitimate email', 'A fraudulent attempt to obtain sensitive information by disguising as a trustworthy entity', 'A type of virus', 'A network protocol'], correctAnswer: 1, explanation: 'Phishing uses deceptive emails or websites to trick users into revealing passwords or personal information.', difficulty: 'easy', topicSlug: 'cybersecurity' },
+  { id: 19, question: 'Encryption transforms data into:', options: ['Larger files', 'An unreadable format that can only be decoded with the correct key', 'Compressed files', 'Binary only'], correctAnswer: 1, explanation: 'Encryption protects data confidentiality by making it unreadable without the decryption key.', difficulty: 'medium', topicSlug: 'cybersecurity' },
+  { id: 20, question: 'Open-source software means the source code is:', options: ['Hidden', 'Publicly available for anyone to view, modify, and distribute', 'Only for paying customers', 'Owned by one company'], correctAnswer: 1, explanation: 'Open-source promotes collaboration by making code freely available under permissive licenses.', difficulty: 'easy', topicSlug: 'impact' },
+  { id: 21, question: 'Big O notation describes:', options: ['File size', 'The efficiency/growth rate of an algorithm as input size increases', 'Memory usage only', 'Code readability'], correctAnswer: 1, explanation: 'Big O characterizes how an algorithm\'s time or space requirements grow with input size.', difficulty: 'medium', topicSlug: 'algorithms' },
+  { id: 22, question: 'A linear search has time complexity of:', options: ['O(log n)', 'O(n)', 'O(n^2)', 'O(1)'], correctAnswer: 1, explanation: 'Linear search checks each element one by one, taking O(n) time in the worst case.', difficulty: 'medium', topicSlug: 'algorithms' },
+  { id: 23, question: 'Metadata is:', options: ['The main data', 'Data about data (like file size, creation date, author)', 'Encrypted data', 'Deleted data'], correctAnswer: 1, explanation: 'Metadata provides context about data: when it was created, by whom, in what format, etc.', difficulty: 'easy', topicSlug: 'digital-information' },
+  { id: 24, question: 'Crowdsourcing uses:', options: ['A single expert', 'Large groups of people to contribute to a task or project', 'Only computers', 'Government resources'], correctAnswer: 1, explanation: 'Crowdsourcing distributes tasks to a large group, leveraging collective knowledge and effort.', difficulty: 'easy', topicSlug: 'impact' },
+  { id: 25, question: 'A simulation is:', options: ['Real-world testing', 'A computer model that represents a real-world process to make predictions', 'A video game only', 'A database'], correctAnswer: 1, explanation: 'Simulations model complex systems (weather, traffic, epidemics) to test hypotheses without real-world experiments.', difficulty: 'medium', topicSlug: 'algorithms' },
+  { id: 26, question: 'Two\'s complement is used to represent:', options: ['Floating point numbers', 'Negative integers in binary', 'Text characters', 'Colors'], correctAnswer: 1, explanation: 'Two\'s complement allows computers to represent negative numbers in binary and simplifies arithmetic operations.', difficulty: 'hard', topicSlug: 'digital-information' },
+  { id: 27, question: 'Symmetric encryption uses:', options: ['Different keys for encryption and decryption', 'The same key for both encryption and decryption', 'No key', 'Public keys only'], correctAnswer: 1, explanation: 'Symmetric encryption uses one shared key; it\'s fast but requires secure key exchange.', difficulty: 'medium', topicSlug: 'cybersecurity' },
+  { id: 28, question: 'Creative Commons licenses allow creators to:', options: ['Give up all rights', 'Specify how others may use their work while retaining some rights', 'Block all usage', 'Charge mandatory fees'], correctAnswer: 1, explanation: 'CC licenses let creators choose permissions (share, adapt, commercial use) for their work.', difficulty: 'medium', topicSlug: 'impact' },
+  { id: 29, question: 'Parallel computing:', options: ['Runs one task at a time', 'Divides a problem into subtasks that run simultaneously on multiple processors', 'Is slower than sequential', 'Only works on supercomputers'], correctAnswer: 1, explanation: 'Parallel computing uses multiple processors to solve problems faster by dividing work.', difficulty: 'medium', topicSlug: 'algorithms' },
+  { id: 30, question: 'A DDoS attack:', options: ['Steals passwords', 'Overwhelms a system with traffic from many sources, making it unavailable', 'Encrypts data for ransom', 'Installs malware'], correctAnswer: 1, explanation: 'Distributed Denial of Service floods a target with traffic from many compromised machines.', difficulty: 'medium', topicSlug: 'cybersecurity' },
 ]
 
-export function getApCSPQuestions(count: number = 10): ApCSPQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+export function getApCSPQuestions(count: number = 10, topicSlug?: string): ApCspQuestion[] {
+  let pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
+  const shuffled = [...pool].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

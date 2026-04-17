@@ -1,178 +1,60 @@
-// AP US History question bank for competitive mode
+// Ap Us History Question question bank for competitive mode
 
-export interface ApUSHistoryQuestion {
+export interface ApUsHistoryQuestion {
   id: number
   question: string
   options: string[]
   correctAnswer: number
   explanation: string
   difficulty: 'easy' | 'medium' | 'hard'
+  topicSlug: string
 }
 
-const allQuestions: ApUSHistoryQuestion[] = [
-  {
-    id: 1,
-    question: 'Which of the following best describes a key concept in Native Societies & Exploration?',
-    options: ['A fundamental principle of Native Societies & Exploration', 'An unrelated concept from another field', 'A common misconception about Native Societies & Exploration', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Native Societies & Exploration is essential for the AP US History exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 2,
-    question: 'Which of the following best describes a key concept in Colonial America?',
-    options: ['A fundamental principle of Colonial America', 'An unrelated concept from another field', 'A common misconception about Colonial America', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Colonial America is essential for the AP US History exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 3,
-    question: 'Which of the following best describes a key concept in Colonial Society?',
-    options: ['A fundamental principle of Colonial Society', 'An unrelated concept from another field', 'A common misconception about Colonial Society', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Colonial Society is essential for the AP US History exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 4,
-    question: 'Which of the following best describes a key concept in Revolution & Independence?',
-    options: ['A fundamental principle of Revolution & Independence', 'An unrelated concept from another field', 'A common misconception about Revolution & Independence', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Revolution & Independence is essential for the AP US History exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 5,
-    question: 'Which of the following best describes a key concept in Constitution & Early Republic?',
-    options: ['A fundamental principle of Constitution & Early Republic', 'An unrelated concept from another field', 'A common misconception about Constitution & Early Republic', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Constitution & Early Republic is essential for the AP US History exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 6,
-    question: 'Which of the following best describes a key concept in Democracy & Expansion?',
-    options: ['A fundamental principle of Democracy & Expansion', 'An unrelated concept from another field', 'A common misconception about Democracy & Expansion', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Democracy & Expansion is essential for the AP US History exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 7,
-    question: 'Which of the following best describes a key concept in Reform Movements?',
-    options: ['A fundamental principle of Reform Movements', 'An unrelated concept from another field', 'A common misconception about Reform Movements', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Reform Movements is essential for the AP US History exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 8,
-    question: 'Which of the following best describes a key concept in Civil War?',
-    options: ['A fundamental principle of Civil War', 'An unrelated concept from another field', 'A common misconception about Civil War', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Civil War is essential for the AP US History exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 9,
-    question: 'Which of the following best describes a key concept in Reconstruction?',
-    options: ['A fundamental principle of Reconstruction', 'An unrelated concept from another field', 'A common misconception about Reconstruction', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Reconstruction is essential for the AP US History exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 10,
-    question: 'Which of the following best describes a key concept in Gilded Age?',
-    options: ['A fundamental principle of Gilded Age', 'An unrelated concept from another field', 'A common misconception about Gilded Age', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Gilded Age is essential for the AP US History exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 11,
-    question: 'Which of the following best describes a key concept in Progressivism & WWI?',
-    options: ['A fundamental principle of Progressivism & WWI', 'An unrelated concept from another field', 'A common misconception about Progressivism & WWI', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Progressivism & WWI is essential for the AP US History exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 12,
-    question: 'Which of the following best describes a key concept in Depression & WWII?',
-    options: ['A fundamental principle of Depression & WWII', 'An unrelated concept from another field', 'A common misconception about Depression & WWII', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Depression & WWII is essential for the AP US History exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 13,
-    question: 'Which of the following best describes a key concept in Native Societies & Exploration?',
-    options: ['A fundamental principle of Native Societies & Exploration', 'An unrelated concept from another field', 'A common misconception about Native Societies & Exploration', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Native Societies & Exploration is essential for the AP US History exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 14,
-    question: 'Which of the following best describes a key concept in Colonial America?',
-    options: ['A fundamental principle of Colonial America', 'An unrelated concept from another field', 'A common misconception about Colonial America', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Colonial America is essential for the AP US History exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 15,
-    question: 'Which of the following best describes a key concept in Colonial Society?',
-    options: ['A fundamental principle of Colonial Society', 'An unrelated concept from another field', 'A common misconception about Colonial Society', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Colonial Society is essential for the AP US History exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 16,
-    question: 'Which of the following best describes a key concept in Revolution & Independence?',
-    options: ['A fundamental principle of Revolution & Independence', 'An unrelated concept from another field', 'A common misconception about Revolution & Independence', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Revolution & Independence is essential for the AP US History exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 17,
-    question: 'Which of the following best describes a key concept in Constitution & Early Republic?',
-    options: ['A fundamental principle of Constitution & Early Republic', 'An unrelated concept from another field', 'A common misconception about Constitution & Early Republic', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Constitution & Early Republic is essential for the AP US History exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 18,
-    question: 'Which of the following best describes a key concept in Democracy & Expansion?',
-    options: ['A fundamental principle of Democracy & Expansion', 'An unrelated concept from another field', 'A common misconception about Democracy & Expansion', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Democracy & Expansion is essential for the AP US History exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 19,
-    question: 'Which of the following best describes a key concept in Reform Movements?',
-    options: ['A fundamental principle of Reform Movements', 'An unrelated concept from another field', 'A common misconception about Reform Movements', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Reform Movements is essential for the AP US History exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 20,
-    question: 'Which of the following best describes a key concept in Civil War?',
-    options: ['A fundamental principle of Civil War', 'An unrelated concept from another field', 'A common misconception about Civil War', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Civil War is essential for the AP US History exam.',
-    difficulty: 'hard',
-  },
+const allQuestions: ApUsHistoryQuestion[] = [
+  { id: 1, question: 'The Mayflower Compact (1620) was significant because it:', options: ['Established religious freedom', 'Was an early form of self-government by consent', 'Created the first constitution', 'Ended British rule'], correctAnswer: 1, explanation: 'The Mayflower Compact was a social contract where colonists agreed to govern themselves by majority rule.', difficulty: 'easy', topicSlug: 'colonial-america' },
+  { id: 2, question: 'The Great Awakening of the 1730s-1740s:', options: ['Strengthened the Church of England', 'Was a religious revival that challenged established authority', 'Was an economic movement', 'Only affected New England'], correctAnswer: 1, explanation: 'The Great Awakening was a religious revival that emphasized individual spiritual experience and challenged established churches.', difficulty: 'medium', topicSlug: 'colonial-america' },
+  { id: 3, question: 'Mercantilism in the British colonies meant:', options: ['Free trade for all', 'Colonies existed to benefit the mother country economically', 'Colonies governed themselves', 'Trade was unrestricted'], correctAnswer: 1, explanation: 'Under mercantilism, colonies provided raw materials and served as markets for British manufactured goods.', difficulty: 'easy', topicSlug: 'colonial-america' },
+  { id: 4, question: 'The Proclamation of 1763 prohibited colonists from:', options: ['Trading with France', 'Settling west of the Appalachian Mountains', 'Owning firearms', 'Practicing religion'], correctAnswer: 1, explanation: 'After the French and Indian War, Britain restricted westward expansion to reduce conflicts with Native Americans.', difficulty: 'easy', topicSlug: 'colonial-america' },
+  { id: 5, question: 'The Stamp Act (1765) angered colonists primarily because:', options: ['It raised prices on paper', 'It taxed colonists without their consent in Parliament', 'It ended trade', 'It required military service'], correctAnswer: 1, explanation: 'The cry "no taxation without representation" expressed opposition to Parliamentary taxation without colonial representation.', difficulty: 'easy', topicSlug: 'revolution-independence' },
+  { id: 6, question: 'Thomas Paine\'s Common Sense argued for:', options: ['Reconciliation with Britain', 'Complete independence from Britain', 'A new treaty', 'Constitutional monarchy'], correctAnswer: 1, explanation: 'Common Sense (1776) persuaded many colonists to support full independence from British rule.', difficulty: 'easy', topicSlug: 'revolution-independence' },
+  { id: 7, question: 'The Declaration of Independence primarily drew on:', options: ['Biblical text', 'Enlightenment philosophy, especially John Locke', 'Roman law', 'French constitution'], correctAnswer: 1, explanation: 'Jefferson drew heavily on Locke\'s ideas of natural rights (life, liberty, pursuit of happiness) and consent of the governed.', difficulty: 'medium', topicSlug: 'revolution-independence' },
+  { id: 8, question: 'The Articles of Confederation\'s main weakness was:', options: ['Too much federal power', 'A weak central government unable to tax or regulate trade', 'Too many states', 'Military dictatorship'], correctAnswer: 1, explanation: 'The Articles created a central government that lacked the power to tax, regulate commerce, or enforce laws.', difficulty: 'easy', topicSlug: 'revolution-independence' },
+  { id: 9, question: 'The Three-Fifths Compromise counted enslaved people as:', options: ['Full persons', 'Three-fifths of a person for representation and taxation', 'Non-persons', 'Equal citizens'], correctAnswer: 1, explanation: 'The compromise counted 3/5 of the enslaved population for congressional representation and taxation purposes.', difficulty: 'medium', topicSlug: 'revolution-independence' },
+  { id: 10, question: 'The Louisiana Purchase (1803) was significant because it:', options: ['Ended French influence', 'Doubled the size of the United States', 'Added only small territory', 'Was illegal'], correctAnswer: 1, explanation: 'The Louisiana Purchase from France approximately doubled US territory for about $15 million.', difficulty: 'easy', topicSlug: 'revolution-independence' },
+  { id: 11, question: 'Manifest Destiny was the belief that:', options: ['Expansion should stop at the Mississippi', 'The US was destined to expand across North America', 'All states should be equal', 'Slavery should end'], correctAnswer: 1, explanation: 'Manifest Destiny held that American expansion across the continent was inevitable and divinely ordained.', difficulty: 'easy', topicSlug: 'civil-war' },
+  { id: 12, question: 'The Missouri Compromise (1820) maintained balance by:', options: ['Ending slavery everywhere', 'Admitting Missouri as slave and Maine as free, with a line at 36°30\'', 'Giving all new states to the South', 'Ignoring the issue'], correctAnswer: 1, explanation: 'The compromise maintained the slave/free state balance and drew the 36°30\' line for future territories.', difficulty: 'medium', topicSlug: 'civil-war' },
+  { id: 13, question: 'The Dred Scott decision (1857) ruled that:', options: ['Slaves were citizens', 'African Americans had no rights under the Constitution', 'Slavery was unconstitutional', 'The Missouri Compromise was valid'], correctAnswer: 1, explanation: 'Chief Justice Taney ruled that African Americans could not be citizens and Congress could not ban slavery in territories.', difficulty: 'medium', topicSlug: 'civil-war' },
+  { id: 14, question: 'The Emancipation Proclamation (1863):', options: ['Freed all slaves everywhere', 'Freed slaves only in Confederate states', 'Ended the war', 'Applied to border states'], correctAnswer: 1, explanation: 'Lincoln\'s proclamation freed enslaved people in rebelling states, reframing the war as a fight for freedom.', difficulty: 'medium', topicSlug: 'civil-war' },
+  { id: 15, question: 'The significance of the Battle of Gettysburg was:', options: ['It started the Civil War', 'It was the turning point, ending Confederate invasion of the North', 'It ended the war', 'It was the first battle'], correctAnswer: 1, explanation: 'Gettysburg (1863) was the war\'s bloodiest battle and turned the tide against the Confederacy.', difficulty: 'medium', topicSlug: 'civil-war' },
+  { id: 16, question: 'Reconstruction amendments (13th, 14th, 15th) collectively:', options: ['Only freed slaves', 'Abolished slavery, granted citizenship, and protected voting rights', 'Applied only to the North', 'Were repealed quickly'], correctAnswer: 1, explanation: 'The 13th abolished slavery, 14th granted citizenship and equal protection, 15th protected voting rights regardless of race.', difficulty: 'easy', topicSlug: 'reconstruction' },
+  { id: 17, question: 'Sharecropping after the Civil War:', options: ['Made freedpeople wealthy', 'Trapped many formerly enslaved in cycles of debt and poverty', 'Was a form of land reform', 'Only existed briefly'], correctAnswer: 1, explanation: 'Sharecropping kept many freedpeople economically dependent on white landowners through debt cycles.', difficulty: 'medium', topicSlug: 'reconstruction' },
+  { id: 18, question: 'The Compromise of 1877 ended Reconstruction by:', options: ['Giving rights to freedpeople', 'Withdrawing federal troops from the South in exchange for Hayes\'s presidency', 'Starting a new war', 'Amending the Constitution'], correctAnswer: 1, explanation: 'The compromise resolved the disputed 1876 election, giving Hayes the presidency and ending federal Reconstruction.', difficulty: 'medium', topicSlug: 'reconstruction' },
+  { id: 19, question: 'Jim Crow laws established:', options: ['Racial equality', 'Legal racial segregation in the South', 'Federal civil rights', 'Integration'], correctAnswer: 1, explanation: 'Jim Crow laws enforced racial segregation in public facilities, schools, transportation, and more.', difficulty: 'easy', topicSlug: 'reconstruction' },
+  { id: 20, question: 'Plessy v. Ferguson (1896) established the doctrine of:', options: ['Strict scrutiny', 'Separate but equal', 'Immediate integration', 'Color-blind constitution'], correctAnswer: 1, explanation: 'The Supreme Court upheld racial segregation under the "separate but equal" doctrine.', difficulty: 'easy', topicSlug: 'reconstruction' },
+  { id: 21, question: 'The Progressive Era (1890s-1920s) addressed:', options: ['Only foreign policy', 'Social and political reform including labor, corruption, and women\'s suffrage', 'Agricultural issues only', 'Military reform'], correctAnswer: 1, explanation: 'Progressives sought to address problems of industrialization, urbanization, and political corruption.', difficulty: 'medium', topicSlug: 'reconstruction' },
+  { id: 22, question: 'The 19th Amendment (1920) granted:', options: ['Freedom of speech', 'Women the right to vote', 'Prohibition of alcohol', 'Income tax'], correctAnswer: 1, explanation: 'The 19th Amendment prohibited denial of voting rights based on sex.', difficulty: 'easy', topicSlug: 'reconstruction' },
+  { id: 23, question: 'The New Deal\'s primary goal was:', options: ['Starting a war', 'Providing relief, recovery, and reform during the Great Depression', 'Ending Prohibition', 'Expanding territory'], correctAnswer: 1, explanation: 'FDR\'s New Deal programs aimed to provide immediate relief, economic recovery, and long-term financial reform.', difficulty: 'easy', topicSlug: 'reconstruction' },
+  { id: 24, question: 'The internment of Japanese Americans during WWII demonstrated:', options: ['Military necessity', 'Violation of civil liberties justified by wartime fear and racism', 'A fair legal process', 'Japanese aggression'], correctAnswer: 1, explanation: 'Executive Order 9066 forcibly relocated ~120,000 Japanese Americans, a wartime violation of civil liberties.', difficulty: 'medium', topicSlug: 'reconstruction' },
+  { id: 25, question: 'Brown v. Board of Education (1954) overturned:', options: ['The New Deal', 'The separate but equal doctrine in public schools', 'The 14th Amendment', 'Jim Crow voting laws'], correctAnswer: 1, explanation: 'The Warren Court unanimously ruled that "separate educational facilities are inherently unequal."', difficulty: 'easy', topicSlug: 'reconstruction' },
+  { id: 26, question: 'The Montgomery Bus Boycott (1955-56) was sparked by:', options: ['A court order', 'Rosa Parks\' arrest for refusing to give up her bus seat', 'Martin Luther King alone', 'Federal legislation'], correctAnswer: 1, explanation: 'Rosa Parks\' arrest for refusing to move to the back of a bus sparked a 381-day boycott that desegregated Montgomery buses.', difficulty: 'easy', topicSlug: 'reconstruction' },
+  { id: 27, question: 'The Civil Rights Act of 1964:', options: ['Only applied to voting', 'Prohibited discrimination based on race, color, religion, sex, or national origin', 'Only affected the South', 'Was a constitutional amendment'], correctAnswer: 1, explanation: 'The CRA banned discrimination in employment and public accommodations; a landmark legislative achievement.', difficulty: 'easy', topicSlug: 'reconstruction' },
+  { id: 28, question: 'The Gulf of Tonkin Resolution (1964) gave the President:', options: ['Limited military power', 'Broad authority to escalate US military involvement in Vietnam', 'Authority to declare war', 'Power to draft soldiers'], correctAnswer: 1, explanation: 'The resolution gave LBJ broad authority to use military force in Southeast Asia without a formal declaration of war.', difficulty: 'medium', topicSlug: 'reconstruction' },
+  { id: 29, question: 'The Watergate scandal led to:', options: ['Clinton\'s impeachment', 'Nixon\'s resignation to avoid impeachment', 'Reagan\'s election', 'Carter\'s defeat'], correctAnswer: 1, explanation: 'Nixon resigned in 1974 after the Watergate break-in cover-up, facing certain impeachment.', difficulty: 'easy', topicSlug: 'reconstruction' },
+  { id: 30, question: 'The GI Bill (1944) benefited veterans by:', options: ['Drafting them again', 'Providing education funding, home loans, and unemployment benefits', 'Reducing their pay', 'Only providing housing'], correctAnswer: 1, explanation: 'The GI Bill dramatically expanded educational and home ownership opportunities, helping create the middle class.', difficulty: 'medium', topicSlug: 'reconstruction' },
+  { id: 31, question: 'The Marshall Plan (1948) provided:', options: ['Military weapons to Europe', 'Economic aid to rebuild Western Europe after WWII', 'Support to the Soviet Union', 'Aid to Asian nations only'], correctAnswer: 1, explanation: 'The Marshall Plan provided over $13 billion in economic aid to rebuild Western European economies and counter Soviet influence.', difficulty: 'medium', topicSlug: 'reconstruction' },
+  { id: 32, question: 'The Trail of Tears refers to:', options: ['Western exploration routes', 'The forced relocation of Native Americans from the Southeast to Oklahoma', 'Civil War battles', 'Immigration routes'], correctAnswer: 1, explanation: 'The Indian Removal Act (1830) led to forced relocations of Cherokee and other tribes, causing thousands of deaths.', difficulty: 'easy', topicSlug: 'civil-war' },
+  { id: 33, question: 'The Seneca Falls Convention (1848) was significant for:', options: ['Labor rights', 'Launching the women\'s suffrage movement with the Declaration of Sentiments', 'Ending slavery', 'Native American rights'], correctAnswer: 1, explanation: 'The convention, organized by Stanton and Mott, declared that "all men and women are created equal."', difficulty: 'medium', topicSlug: 'civil-war' },
+  { id: 34, question: 'Frederick Douglass was important because he:', options: ['Was President', 'Was a formerly enslaved person who became a leading abolitionist speaker and writer', 'Led a slave revolt', 'Founded the Republican Party'], correctAnswer: 1, explanation: 'Douglass escaped slavery and became one of the most powerful voices for abolition and civil rights.', difficulty: 'easy', topicSlug: 'civil-war' },
+  { id: 35, question: 'The Dawes Act (1887) attempted to:', options: ['Preserve Native American cultures', 'Break up tribal lands and assimilate Native Americans', 'Give Native Americans more land', 'Create reservations'], correctAnswer: 1, explanation: 'The Dawes Act divided tribal lands into individual allotments, seeking to "Americanize" Native Americans.', difficulty: 'medium', topicSlug: 'reconstruction' },
+  { id: 36, question: 'Reaganomics emphasized:', options: ['Government spending increases', 'Tax cuts, deregulation, and reduced government spending', 'Higher taxes', 'Expanded welfare'], correctAnswer: 1, explanation: 'Reagan\'s economic policy (supply-side economics) cut taxes and reduced regulation to stimulate growth.', difficulty: 'medium', topicSlug: 'reconstruction' },
+  { id: 37, question: 'The Cuban Missile Crisis (1962) was resolved when:', options: ['The US invaded Cuba', 'The USSR removed missiles from Cuba; US pledged not to invade and removed missiles from Turkey', 'Cuba surrendered', 'Nothing happened'], correctAnswer: 1, explanation: 'The crisis ended with a diplomatic agreement: Soviet missile removal from Cuba for US non-invasion pledge and secret Turkish missile removal.', difficulty: 'medium', topicSlug: 'reconstruction' },
+  { id: 38, question: 'The Gilded Age was characterized by:', options: ['Political reform', 'Rapid industrialization and wealth inequality masked by prosperity', 'Agricultural dominance', 'Social equality'], correctAnswer: 1, explanation: 'Mark Twain coined "Gilded Age" to describe an era of lavish wealth on the surface but corruption and poverty underneath.', difficulty: 'medium', topicSlug: 'reconstruction' },
+  { id: 39, question: 'Populism in the 1890s primarily represented:', options: ['Urban workers', 'Farmers and rural interests against big business and banking', 'Industrial elites', 'Foreign interests'], correctAnswer: 1, explanation: 'The Populist Party represented agrarian interests, advocating for silver currency, railroad regulation, and income tax.', difficulty: 'medium', topicSlug: 'reconstruction' },
+  { id: 40, question: 'The Homestead Act (1862) encouraged westward expansion by:', options: ['Selling land at high prices', 'Granting 160 acres of public land to settlers who improved it', 'Removing all Native Americans first', 'Building railroads only'], correctAnswer: 1, explanation: 'The Homestead Act provided free land (160 acres) to settlers who lived on and cultivated it for five years.', difficulty: 'easy', topicSlug: 'civil-war' },
 ]
 
-export function getApUSHistoryQuestions(count: number = 10): ApUSHistoryQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+export function getApUSHistoryQuestions(count: number = 10, topicSlug?: string): ApUsHistoryQuestion[] {
+  let pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
+  const shuffled = [...pool].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }

@@ -109,19 +109,29 @@ const units = [
     color: 'emerald',
   },
   {
-    title: 'Unit 2: Economic Indicators',
+    title: 'Unit 2: Economic Indicators & the Business Cycle',
     topics: ['GDP & Growth', 'Unemployment', 'Inflation & CPI', 'Business Cycle'],
     color: 'blue',
   },
   {
-    title: 'Unit 3–4: AD-AS & Financial Sector',
-    topics: ['AD-AS Model', 'Multiplier Effect', 'Phillips Curve', 'Money & Banking'],
+    title: 'Unit 3: National Income & Price Determination',
+    topics: ['AD-AS Model', 'Multiplier Effect', 'Short-Run & Long-Run Equilibrium', 'Phillips Curve'],
     color: 'purple',
   },
   {
-    title: 'Unit 5–6: Policy & International',
-    topics: ['Fiscal Policy', 'Monetary Policy', 'International Trade', 'Exchange Rates'],
+    title: 'Unit 4: Financial Sector',
+    topics: ['Money & Banking', 'Money Market', 'Loanable Funds Market', 'Monetary Policy Tools'],
+    color: 'indigo',
+  },
+  {
+    title: 'Unit 5: Long-Run Consequences of Stabilization Policies',
+    topics: ['Fiscal Policy', 'Monetary Policy', 'Deficits & National Debt', 'Economic Growth'],
     color: 'amber',
+  },
+  {
+    title: 'Unit 6: Open Economy — International Trade & Finance',
+    topics: ['Comparative Advantage & Trade', 'Balance of Payments', 'Exchange Rates', 'Capital Flows'],
+    color: 'teal',
   },
 ]
 
@@ -129,14 +139,18 @@ const unitColors: Record<string, string> = {
   emerald: 'text-emerald-700 dark:text-emerald-400',
   blue: 'text-blue-700 dark:text-blue-400',
   purple: 'text-purple-700 dark:text-purple-400',
+  indigo: 'text-indigo-700 dark:text-indigo-400',
   amber: 'text-amber-700 dark:text-amber-400',
+  teal: 'text-teal-700 dark:text-teal-400',
 }
 
 const checkColors: Record<string, string> = {
   emerald: 'text-emerald-500',
   blue: 'text-blue-500',
   purple: 'text-purple-500',
+  indigo: 'text-indigo-500',
   amber: 'text-amber-500',
+  teal: 'text-teal-500',
 }
 
 export default function ApMacroeconomicsHub() {

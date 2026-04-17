@@ -1,178 +1,50 @@
-// AP African American Studies question bank for competitive mode
+// Ap African American Studies Question question bank for competitive mode
 
-export interface ApAASQuestion {
+export interface ApAfricanAmericanStudiesQuestion {
   id: number
   question: string
   options: string[]
   correctAnswer: number
   explanation: string
   difficulty: 'easy' | 'medium' | 'hard'
+  topicSlug: string
 }
 
-const allQuestions: ApAASQuestion[] = [
-  {
-    id: 1,
-    question: 'Which of the following best describes a key concept in African Kingdoms?',
-    options: ['A fundamental principle of African Kingdoms', 'An unrelated concept from another field', 'A common misconception about African Kingdoms', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of African Kingdoms is essential for the AP African American Studies exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 2,
-    question: 'Which of the following best describes a key concept in Origins of Diaspora?',
-    options: ['A fundamental principle of Origins of Diaspora', 'An unrelated concept from another field', 'A common misconception about Origins of Diaspora', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Origins of Diaspora is essential for the AP African American Studies exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 3,
-    question: 'Which of the following best describes a key concept in Transatlantic Slave Trade?',
-    options: ['A fundamental principle of Transatlantic Slave Trade', 'An unrelated concept from another field', 'A common misconception about Transatlantic Slave Trade', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Transatlantic Slave Trade is essential for the AP African American Studies exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 4,
-    question: 'Which of the following best describes a key concept in Slavery in America?',
-    options: ['A fundamental principle of Slavery in America', 'An unrelated concept from another field', 'A common misconception about Slavery in America', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Slavery in America is essential for the AP African American Studies exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 5,
-    question: 'Which of the following best describes a key concept in Resistance & Abolition?',
-    options: ['A fundamental principle of Resistance & Abolition', 'An unrelated concept from another field', 'A common misconception about Resistance & Abolition', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Resistance & Abolition is essential for the AP African American Studies exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 6,
-    question: 'Which of the following best describes a key concept in Freedom & Enslavement?',
-    options: ['A fundamental principle of Freedom & Enslavement', 'An unrelated concept from another field', 'A common misconception about Freedom & Enslavement', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Freedom & Enslavement is essential for the AP African American Studies exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 7,
-    question: 'Which of the following best describes a key concept in Reconstruction & Jim Crow?',
-    options: ['A fundamental principle of Reconstruction & Jim Crow', 'An unrelated concept from another field', 'A common misconception about Reconstruction & Jim Crow', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Reconstruction & Jim Crow is essential for the AP African American Studies exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 8,
-    question: 'Which of the following best describes a key concept in Great Migration & Harlem?',
-    options: ['A fundamental principle of Great Migration & Harlem', 'An unrelated concept from another field', 'A common misconception about Great Migration & Harlem', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Great Migration & Harlem is essential for the AP African American Studies exam.',
-    difficulty: 'easy',
-  },
-  {
-    id: 9,
-    question: 'Which of the following best describes a key concept in WWI & WWII Era?',
-    options: ['A fundamental principle of WWI & WWII Era', 'An unrelated concept from another field', 'A common misconception about WWI & WWII Era', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of WWI & WWII Era is essential for the AP African American Studies exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 10,
-    question: 'Which of the following best describes a key concept in Practice of Freedom?',
-    options: ['A fundamental principle of Practice of Freedom', 'An unrelated concept from another field', 'A common misconception about Practice of Freedom', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Practice of Freedom is essential for the AP African American Studies exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 11,
-    question: 'Which of the following best describes a key concept in Civil Rights Movement?',
-    options: ['A fundamental principle of Civil Rights Movement', 'An unrelated concept from another field', 'A common misconception about Civil Rights Movement', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Civil Rights Movement is essential for the AP African American Studies exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 12,
-    question: 'Which of the following best describes a key concept in Black Power & Beyond?',
-    options: ['A fundamental principle of Black Power & Beyond', 'An unrelated concept from another field', 'A common misconception about Black Power & Beyond', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Black Power & Beyond is essential for the AP African American Studies exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 13,
-    question: 'Which of the following best describes a key concept in Contemporary Issues?',
-    options: ['A fundamental principle of Contemporary Issues', 'An unrelated concept from another field', 'A common misconception about Contemporary Issues', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Contemporary Issues is essential for the AP African American Studies exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 14,
-    question: 'Which of the following best describes a key concept in Movements Today?',
-    options: ['A fundamental principle of Movements Today', 'An unrelated concept from another field', 'A common misconception about Movements Today', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Movements Today is essential for the AP African American Studies exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 15,
-    question: 'Which of the following best describes a key concept in African Kingdoms?',
-    options: ['A fundamental principle of African Kingdoms', 'An unrelated concept from another field', 'A common misconception about African Kingdoms', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of African Kingdoms is essential for the AP African American Studies exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 16,
-    question: 'Which of the following best describes a key concept in Origins of Diaspora?',
-    options: ['A fundamental principle of Origins of Diaspora', 'An unrelated concept from another field', 'A common misconception about Origins of Diaspora', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Origins of Diaspora is essential for the AP African American Studies exam.',
-    difficulty: 'medium',
-  },
-  {
-    id: 17,
-    question: 'Which of the following best describes a key concept in Transatlantic Slave Trade?',
-    options: ['A fundamental principle of Transatlantic Slave Trade', 'An unrelated concept from another field', 'A common misconception about Transatlantic Slave Trade', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Transatlantic Slave Trade is essential for the AP African American Studies exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 18,
-    question: 'Which of the following best describes a key concept in Slavery in America?',
-    options: ['A fundamental principle of Slavery in America', 'An unrelated concept from another field', 'A common misconception about Slavery in America', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Slavery in America is essential for the AP African American Studies exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 19,
-    question: 'Which of the following best describes a key concept in Resistance & Abolition?',
-    options: ['A fundamental principle of Resistance & Abolition', 'An unrelated concept from another field', 'A common misconception about Resistance & Abolition', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Resistance & Abolition is essential for the AP African American Studies exam.',
-    difficulty: 'hard',
-  },
-  {
-    id: 20,
-    question: 'Which of the following best describes a key concept in Freedom & Enslavement?',
-    options: ['A fundamental principle of Freedom & Enslavement', 'An unrelated concept from another field', 'A common misconception about Freedom & Enslavement', 'A secondary detail not tested on the AP exam'],
-    correctAnswer: 0,
-    explanation: 'Understanding the fundamental principles of Freedom & Enslavement is essential for the AP African American Studies exam.',
-    difficulty: 'hard',
-  },
+const allQuestions: ApAfricanAmericanStudiesQuestion[] = [
+  { id: 1, question: 'The Middle Passage refers to:', options: ['A trade route in Asia', 'The forced voyage of enslaved Africans across the Atlantic to the Americas', 'A European trade route', 'A biblical journey'], correctAnswer: 1, explanation: 'The Middle Passage was the horrific transatlantic journey where enslaved Africans endured brutal conditions.', difficulty: 'easy', topicSlug: 'origins-diaspora' },
+  { id: 2, question: 'The Harlem Renaissance was significant because:', options: ['It was a political revolution', 'It celebrated African American culture through art, literature, music, and poetry', 'It only involved music', 'It occurred in the South'], correctAnswer: 1, explanation: 'The Harlem Renaissance (1920s-30s) was a cultural explosion centered in New York\'s Harlem neighborhood.', difficulty: 'easy', topicSlug: 'culture-identity' },
+  { id: 3, question: 'W.E.B. Du Bois advocated for:', options: ['Gradual accommodation', 'Immediate civil rights, higher education, and the "Talented Tenth" leadership', 'Separatism only', 'Return to Africa'], correctAnswer: 1, explanation: 'Du Bois pushed for full civil rights and believed an educated Black elite would lead the community.', difficulty: 'medium', topicSlug: 'resistance-abolition' },
+  { id: 4, question: 'Booker T. Washington\'s Atlanta Compromise promoted:', options: ['Immediate political equality', 'Economic self-improvement and vocational education as a path to advancement', 'Armed resistance', 'Migration to Africa'], correctAnswer: 1, explanation: 'Washington emphasized industrial education and economic progress over immediate political confrontation.', difficulty: 'medium', topicSlug: 'resistance-abolition' },
+  { id: 5, question: 'The Underground Railroad was:', options: ['An actual railroad', 'A network of secret routes and safe houses for escaped enslaved people', 'A mining operation', 'A trade route'], correctAnswer: 1, explanation: 'The Underground Railroad helped thousands of enslaved people escape to freedom in the North and Canada.', difficulty: 'easy', topicSlug: 'resistance-abolition' },
+  { id: 6, question: 'The Reconstruction Amendments (13th, 14th, 15th) were undermined by:', options: ['Supreme Court support', 'Black Codes, Jim Crow laws, and the rise of groups like the KKK', 'Northern opposition only', 'Constitutional repeal'], correctAnswer: 1, explanation: 'Southern states used legal and extralegal means to circumvent the rights granted by these amendments.', difficulty: 'medium', topicSlug: 'resistance-abolition' },
+  { id: 7, question: 'The Great Migration (1910-1970) involved:', options: ['European immigration', 'Millions of African Americans moving from the rural South to Northern and Western cities', 'Southern economic boom', 'Forced relocation'], correctAnswer: 1, explanation: 'Approximately 6 million African Americans left the South seeking better economic opportunities and escaping Jim Crow.', difficulty: 'medium', topicSlug: 'community-society' },
+  { id: 8, question: 'The significance of the sit-in movement beginning in Greensboro, NC (1960):', options: ['It was ineffective', 'Students peacefully protested segregation at lunch counters, inspiring nationwide action', 'It was violent', 'It only involved one day'], correctAnswer: 1, explanation: 'Four Black college students sparked a nonviolent protest movement that spread to cities across the South.', difficulty: 'medium', topicSlug: 'resistance-abolition' },
+  { id: 9, question: 'Malcolm X initially advocated for:', options: ['Integration', 'Black nationalism and self-defense through the Nation of Islam', 'Nonviolence only', 'Return to Africa'], correctAnswer: 1, explanation: 'Malcolm X promoted Black self-determination, pride, and self-defense, later evolving his views after his pilgrimage to Mecca.', difficulty: 'medium', topicSlug: 'resistance-abolition' },
+  { id: 10, question: 'The Civil Rights Act of 1964 was significant because:', options: ['It only affected voting', 'It outlawed discrimination in public places and employment based on race, color, religion, sex, or national origin', 'It amended the Constitution', 'It only applied to the South'], correctAnswer: 1, explanation: 'The CRA was the most comprehensive civil rights legislation since Reconstruction.', difficulty: 'easy', topicSlug: 'political-struggles' },
+  { id: 11, question: 'The Voting Rights Act of 1965 primarily:', options: ['Created new voting requirements', 'Prohibited racial discrimination in voting and eliminated barriers like literacy tests', 'Only applied to one state', 'Had no enforcement power'], correctAnswer: 1, explanation: 'The VRA directly addressed and eliminated voting barriers that had disenfranchised Black Americans.', difficulty: 'easy', topicSlug: 'political-struggles' },
+  { id: 12, question: 'The Black Panther Party (1966) was founded to:', options: ['Promote integration', 'Fight police brutality, provide community programs, and advocate Black self-empowerment', 'Support the Democratic Party', 'Promote separatism only'], correctAnswer: 1, explanation: 'The Panthers combined militant self-defense with community service programs like free breakfasts.', difficulty: 'medium', topicSlug: 'political-struggles' },
+  { id: 13, question: 'Juneteenth (June 19, 1865) commemorates:', options: ['The Civil War\'s start', 'The announcement of emancipation to enslaved people in Texas', 'Lincoln\'s birthday', 'The 13th Amendment\'s ratification'], correctAnswer: 1, explanation: 'Juneteenth marks when Union soldiers arrived in Galveston, Texas, announcing freedom for enslaved people.', difficulty: 'easy', topicSlug: 'origins-diaspora' },
+  { id: 14, question: 'The concept of "double consciousness" was coined by:', options: ['Martin Luther King Jr.', 'W.E.B. Du Bois in The Souls of Black Folk', 'Frederick Douglass', 'Booker T. Washington'], correctAnswer: 1, explanation: 'Du Bois described the internal conflict of being both Black and American in a society that devalued Blackness.', difficulty: 'medium', topicSlug: 'culture-identity' },
+  { id: 15, question: 'Redlining was a practice that:', options: ['Promoted integration', 'Systematically denied services (loans, insurance) to residents of predominantly Black neighborhoods', 'Was quickly banned', 'Only affected rural areas'], correctAnswer: 1, explanation: 'Redlining by banks and insurers perpetuated racial segregation and wealth disparities in housing.', difficulty: 'medium', topicSlug: 'community-society' },
+  { id: 16, question: 'The Black Arts Movement (1960s-70s) was closely linked to:', options: ['The Harlem Renaissance', 'The Black Power movement, expressing cultural pride through art, poetry, and theater', 'European modernism', 'Country music'], correctAnswer: 1, explanation: 'The BAM was the cultural arm of the Black Power movement, emphasizing distinct Black aesthetics.', difficulty: 'medium', topicSlug: 'culture-identity' },
+  { id: 17, question: 'Brown v. Board of Education (1954) ruled that:', options: ['Separate but equal was constitutional', 'Racial segregation in public schools was unconstitutional', 'Only applied to universities', 'Had no enforcement'], correctAnswer: 1, explanation: 'The Supreme Court unanimously overturned Plessy v. Ferguson in the context of public education.', difficulty: 'easy', topicSlug: 'political-struggles' },
+  { id: 18, question: 'The Tuskegee Syphilis Study (1932-1972) demonstrated:', options: ['Good medical ethics', 'Unethical medical experimentation on Black men who were denied treatment', 'Successful treatment', 'Informed consent'], correctAnswer: 1, explanation: 'The US government studied untreated syphilis in Black men without their informed consent, a profound ethical violation.', difficulty: 'medium', topicSlug: 'community-society' },
+  { id: 19, question: 'The 1619 Project focuses on:', options: ['European exploration', 'Reframing American history with slavery and African American contributions at the center', 'Only modern events', 'Scientific discovery'], correctAnswer: 1, explanation: 'The 1619 Project marks the arrival of the first enslaved Africans in Virginia as a founding moment of America.', difficulty: 'medium', topicSlug: 'origins-diaspora' },
+  { id: 20, question: 'Hip hop culture originated in:', options: ['Los Angeles', 'The Bronx, New York in the 1970s among African American and Latino communities', 'Chicago', 'Atlanta'], correctAnswer: 1, explanation: 'Hip hop emerged from the South Bronx as a cultural movement including DJing, MCing, breakdancing, and graffiti.', difficulty: 'easy', topicSlug: 'culture-identity' },
+  { id: 21, question: 'The March on Washington (1963) is best known for:', options: ['Violence', 'Martin Luther King Jr.\'s "I Have a Dream" speech before 250,000 people', 'Ending segregation immediately', 'Military presence'], correctAnswer: 1, explanation: 'The March on Washington was a massive peaceful demonstration where King delivered his iconic speech.', difficulty: 'easy', topicSlug: 'political-struggles' },
+  { id: 22, question: 'Historically Black Colleges and Universities (HBCUs) were established primarily:', options: ['After the Civil Rights Act', 'Before and after the Civil War to provide higher education denied to Black Americans', 'Only in the North', 'By the federal government'], correctAnswer: 1, explanation: 'HBCUs were founded to provide educational opportunities when Black students were excluded from most institutions.', difficulty: 'medium', topicSlug: 'community-society' },
+  { id: 23, question: 'The Tulsa Race Massacre (1921) involved:', options: ['A natural disaster', 'The destruction of the prosperous Black community of Greenwood ("Black Wall Street")', 'A labor strike', 'A hurricane'], correctAnswer: 1, explanation: 'White mobs destroyed Greenwood, one of the wealthiest Black communities in the US, killing hundreds.', difficulty: 'medium', topicSlug: 'community-society' },
+  { id: 24, question: 'Intersectionality, coined by Kimberle Crenshaw, examines:', options: ['Only race', 'How overlapping social identities (race, gender, class) create unique experiences of discrimination', 'Only gender', 'Economic theory'], correctAnswer: 1, explanation: 'Crenshaw\'s framework shows how different forms of discrimination interact and compound.', difficulty: 'medium', topicSlug: 'culture-identity' },
+  { id: 25, question: 'The Freedmen\'s Bureau (1865) was established to:', options: ['Re-enslave people', 'Help formerly enslaved people with education, employment, and legal rights during Reconstruction', 'Arrest freedpeople', 'Support the Confederacy'], correctAnswer: 1, explanation: 'The Bureau provided essential services but was underfunded and short-lived.', difficulty: 'medium', topicSlug: 'resistance-abolition' },
+  { id: 26, question: 'The Nation of Islam, led by Elijah Muhammad, promoted:', options: ['Integration', 'Black self-reliance, separatism, and racial pride', 'Nonviolent protest', 'Political alliance with whites'], correctAnswer: 1, explanation: 'The NOI emphasized Black economic independence, discipline, and separation from white society.', difficulty: 'medium', topicSlug: 'resistance-abolition' },
+  { id: 27, question: 'Block-busting was a practice where:', options: ['Neighborhoods improved', 'Real estate agents exploited racial fears to profit from white flight', 'Integration was encouraged', 'Government built housing'], correctAnswer: 1, explanation: 'Block-busting involved scaring white homeowners into selling cheaply by suggesting Black families were moving in.', difficulty: 'medium', topicSlug: 'community-society' },
+  { id: 28, question: 'The Montgomery Improvement Association, formed during the bus boycott, was led by:', options: ['Malcolm X', 'Martin Luther King Jr., launching his civil rights leadership', 'Rosa Parks', 'W.E.B. Du Bois'], correctAnswer: 1, explanation: 'The MIA elected the young Dr. King as president, beginning his emergence as a national civil rights leader.', difficulty: 'medium', topicSlug: 'political-struggles' },
+  { id: 29, question: 'Afrofuturism as a cultural aesthetic:', options: ['Rejects technology', 'Combines African diaspora culture with science fiction and technology', 'Is only about music', 'Started in Europe'], correctAnswer: 1, explanation: 'Afrofuturism imagines Black futures through art, literature, and music, blending African culture with speculative fiction.', difficulty: 'medium', topicSlug: 'culture-identity' },
+  { id: 30, question: 'The Dred Scott decision (1857) declared that:', options: ['Enslaved people were citizens', 'African Americans had no rights as citizens and Congress could not ban slavery in territories', 'Slavery was unconstitutional', 'The Missouri Compromise was valid'], correctAnswer: 1, explanation: 'Chief Justice Taney ruled that Black people "had no rights which the white man was bound to respect."', difficulty: 'medium', topicSlug: 'resistance-abolition' },
 ]
 
-export function getApAASQuestions(count: number = 10): ApAASQuestion[] {
-  const shuffled = [...allQuestions].sort(() => Math.random() - 0.5)
+export function getApAASQuestions(count: number = 10, topicSlug?: string): ApAfricanAmericanStudiesQuestion[] {
+  let pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
+  const shuffled = [...pool].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }
