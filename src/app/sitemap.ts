@@ -61,6 +61,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+    // Competitive sub-pages
+    ...['ap-human-geo', 'ap-us-gov', 'ap-world-history', 'ap-us-history', 'ap-macro', 'ap-micro',
+      'ap-african-american-studies', 'ap-english-lit', 'ap-english-lang', 'ap-enviro', 'ap-csa', 'ap-csp',
+      'ap-biology', 'ap-chemistry', 'ap-physics1', 'ap-physics2', 'ap-physics-c-mechanics', 'ap-physics-c-em',
+      'ap-calculus-ab', 'ap-calculus-bc', 'ap-precalculus'
+    ].map(slug => ({
+      url: `${baseUrl}/competitive/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.65,
+    })),
     {
       url: `${baseUrl}/flashcards`,
       lastModified: new Date(),

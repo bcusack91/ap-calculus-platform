@@ -62,7 +62,7 @@ export default function CompetitivePage() {
   const [inQueue, setInQueue] = useState(false)
   const [queueStatus, setQueueStatus] = useState<QueueStatus | null>(null)
   const [selectedMode, setSelectedMode] = useState('SPEED_RACE')
-  const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'algebra2' | 'sat-punctuation-commas-semicolons' | 'sat-punctuation' | 'parametric-equations' | 'vectors' | 'polar-coordinates' | 'ap-biology' | 'ap-chemistry' | 'ap-psychology' | 'ap-statistics' | 'ap-physics1' | 'ap-physics2' | 'ap-calculus-ab' | 'ap-calculus-bc' | 'ap-physics-c-mech' | 'ap-physics-c-em' | 'ap-precalculus' | 'sat-math' | 'sat-reading' | 'act-math' | 'act-science' | 'ochem' | 'precalc' | 'geometry' | 'cumulative'>('the-unit-circle')
+  const [selectedTopic, setSelectedTopic] = useState<'the-unit-circle' | 'reflection-refraction' | 'derivatives' | 'limits' | 'integrals' | 'algebra' | 'algebra2' | 'sat-punctuation-commas-semicolons' | 'sat-punctuation' | 'parametric-equations' | 'vectors' | 'polar-coordinates' | 'ap-biology' | 'ap-chemistry' | 'ap-psychology' | 'ap-statistics' | 'ap-physics1' | 'ap-physics2' | 'ap-calculus-ab' | 'ap-calculus-bc' | 'ap-physics-c-mech' | 'ap-physics-c-em' | 'ap-precalculus' | 'sat-math' | 'sat-reading' | 'act-math' | 'act-science' | 'ochem' | 'precalc' | 'geometry' | 'ap-human-geo' | 'ap-us-gov' | 'ap-world-history' | 'ap-us-history' | 'ap-macro' | 'ap-micro' | 'ap-african-american-studies' | 'ap-english-lit' | 'ap-english-lang' | 'ap-enviro' | 'ap-csa' | 'ap-csp' | 'cumulative'>('the-unit-circle')
   const [, setCompletedTopics] = useState<string[]>([])
   const [competitiveCategories, setCompetitiveCategories] = useState<Record<string, boolean>>({})
   const [algebra2SubtopicDetails, setAlgebra2SubtopicDetails] = useState<{key: string; label: string}[]>([])
@@ -114,11 +114,37 @@ export default function CompetitivePage() {
     },
     {
       id: 'humanities',
-      label: 'Humanities & Stats',
+      label: 'Humanities & Social Science',
       icon: '🧠',
       topics: [
         { id: 'ap-psychology' as const, emoji: '🧠', name: 'AP Psychology', desc: 'Brain, Behavior & Cognition' },
         { id: 'ap-statistics' as const, emoji: '📊', name: 'AP Statistics', desc: 'Probability & Inference' },
+        { id: 'ap-human-geo' as const, emoji: '🌍', name: 'AP Human Geography', desc: 'Population, Culture & Urbanization' },
+        { id: 'ap-us-gov' as const, emoji: '🏛️', name: 'AP US Government', desc: 'Constitution, Federalism & Elections' },
+        { id: 'ap-macro' as const, emoji: '📈', name: 'AP Macroeconomics', desc: 'GDP, Fiscal & Monetary Policy' },
+        { id: 'ap-micro' as const, emoji: '💰', name: 'AP Microeconomics', desc: 'Supply, Demand & Markets' },
+        { id: 'ap-enviro' as const, emoji: '🌱', name: 'AP Environmental Science', desc: 'Ecosystems, Climate & Sustainability' },
+      ]
+    },
+    {
+      id: 'history-english',
+      label: 'History & English',
+      icon: '📚',
+      topics: [
+        { id: 'ap-world-history' as const, emoji: '🌐', name: 'AP World History', desc: 'Civilizations, Trade & Conflict' },
+        { id: 'ap-us-history' as const, emoji: '🇺🇸', name: 'AP US History', desc: 'Colonial Era to Modern America' },
+        { id: 'ap-african-american-studies' as const, emoji: '✊', name: 'AP African American Studies', desc: 'Culture, Identity & Resistance' },
+        { id: 'ap-english-lit' as const, emoji: '📖', name: 'AP English Literature', desc: 'Poetry, Prose & Drama Analysis' },
+        { id: 'ap-english-lang' as const, emoji: '✍️', name: 'AP English Language', desc: 'Rhetoric, Argument & Synthesis' },
+      ]
+    },
+    {
+      id: 'computer-science',
+      label: 'Computer Science',
+      icon: '💻',
+      topics: [
+        { id: 'ap-csa' as const, emoji: '☕', name: 'AP Computer Science A', desc: 'Java OOP, Arrays & Algorithms' },
+        { id: 'ap-csp' as const, emoji: '🖥️', name: 'AP CS Principles', desc: 'Data, Internet & Cybersecurity' },
       ]
     },
     {

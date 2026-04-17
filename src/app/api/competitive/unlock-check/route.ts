@@ -227,6 +227,42 @@ export async function GET() {
       'ap-precalculus': grantAllCategories || grantedCategories.has('ap-precalculus') || uniqueDiagnosticSlugs.includes('ap-precalculus') || allProgressSlugs.some(s =>
         s.includes('ap-precalculus') || s.includes('ap-precalc') || s.includes('polynomial-functions') || s.includes('rational-functions')
       ),
+      'ap-human-geo': grantAllCategories || grantedCategories.has('ap-human-geo') || uniqueDiagnosticSlugs.includes('ap-human-geography') || allProgressSlugs.some(s =>
+        s.includes('ap-human-geo') || s.includes('human-geography') || s.includes('population-distribution')
+      ),
+      'ap-us-gov': grantAllCategories || grantedCategories.has('ap-us-gov') || uniqueDiagnosticSlugs.includes('ap-us-government') || allProgressSlugs.some(s =>
+        s.includes('ap-us-gov') || s.includes('us-government') || s.includes('constitutional-foundations')
+      ),
+      'ap-world-history': grantAllCategories || grantedCategories.has('ap-world-history') || uniqueDiagnosticSlugs.includes('ap-world-history') || allProgressSlugs.some(s =>
+        s.includes('ap-world-history') || s.includes('world-history') || s.includes('global-tapestry')
+      ),
+      'ap-us-history': grantAllCategories || grantedCategories.has('ap-us-history') || uniqueDiagnosticSlugs.includes('ap-us-history') || allProgressSlugs.some(s =>
+        s.includes('ap-us-history') || s.includes('us-history') || s.includes('colonial-america')
+      ),
+      'ap-macro': grantAllCategories || grantedCategories.has('ap-macro') || uniqueDiagnosticSlugs.includes('ap-macroeconomics') || allProgressSlugs.some(s =>
+        s.includes('ap-macro') || s.includes('macroeconomics') || s.includes('gdp-growth')
+      ),
+      'ap-micro': grantAllCategories || grantedCategories.has('ap-micro') || uniqueDiagnosticSlugs.includes('ap-microeconomics') || allProgressSlugs.some(s =>
+        s.includes('ap-micro') || s.includes('microeconomics') || s.includes('supply-demand')
+      ),
+      'ap-african-american-studies': grantAllCategories || grantedCategories.has('ap-african-american-studies') || uniqueDiagnosticSlugs.includes('ap-african-american-studies') || allProgressSlugs.some(s =>
+        s.includes('ap-african-american') || s.includes('african-american-studies')
+      ),
+      'ap-english-lit': grantAllCategories || grantedCategories.has('ap-english-lit') || uniqueDiagnosticSlugs.includes('ap-english-literature') || allProgressSlugs.some(s =>
+        s.includes('ap-english-lit') || s.includes('english-literature') || s.includes('figurative-language')
+      ),
+      'ap-english-lang': grantAllCategories || grantedCategories.has('ap-english-lang') || uniqueDiagnosticSlugs.includes('ap-english-language') || allProgressSlugs.some(s =>
+        s.includes('ap-english-lang') || s.includes('english-language') || s.includes('rhetorical-analysis')
+      ),
+      'ap-enviro': grantAllCategories || grantedCategories.has('ap-enviro') || uniqueDiagnosticSlugs.includes('ap-environmental-science') || allProgressSlugs.some(s =>
+        s.includes('ap-enviro') || s.includes('environmental-science') || s.includes('ecosystems')
+      ),
+      'ap-csa': grantAllCategories || grantedCategories.has('ap-csa') || uniqueDiagnosticSlugs.includes('ap-computer-science-a') || allProgressSlugs.some(s =>
+        s.includes('ap-csa') || s.includes('computer-science-a') || s.includes('classes-objects')
+      ),
+      'ap-csp': grantAllCategories || grantedCategories.has('ap-csp') || uniqueDiagnosticSlugs.includes('ap-computer-science-principles') || allProgressSlugs.some(s =>
+        s.includes('ap-csp') || s.includes('computer-science-principles') || s.includes('digital-information')
+      ),
     }
 
     // Compute which specific Algebra 2 subtopics are unlocked
