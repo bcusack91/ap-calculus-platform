@@ -54,7 +54,7 @@ const allQuestions: ApUsHistoryQuestion[] = [
 ]
 
 export function getApUSHistoryQuestions(count: number = 10, topicSlug?: string): ApUsHistoryQuestion[] {
-  let pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
+  const pool = topicSlug ? allQuestions.filter(q => q.topicSlug === topicSlug) : allQuestions
   const shuffled = [...pool].sort(() => Math.random() - 0.5)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }
