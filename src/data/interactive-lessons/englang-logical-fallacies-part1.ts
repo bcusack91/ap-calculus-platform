@@ -2,26 +2,43 @@ export const englangLogicalFallaciesPart1Data = {
   topicSlug: 'englang-logical-fallacies',
   sections: [
     {
-      id: 'englangl1-intro',
+      id: 'ellf1-intro',
       type: 'text' as const,
       content: `
-# ✍️ Logical Fallacies
+# ⚠️ Logical Fallacies
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Identifying Flawed Reasoning in Arguments**
 
-Logical Fallacies is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## What Is a Logical Fallacy?
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Logical Fallacies |
-| **Key concept 2** | A critical component of understanding Logical Fallacies |
-| **Key concept 3** | An essential element that connects Logical Fallacies to broader themes |
+A **logical fallacy** is an error in reasoning that weakens an argument, even if the claim itself might be true.
+
+Fallacy detection is crucial for AP reading and writing:
+- In reading: evaluate argument quality
+- In writing: avoid weak reasoning in your own essays
+
+---
+
+## Common AP Fallacies
+
+| Fallacy | Definition | Example |
+|--------|------------|---------|
+| **Ad hominem** | Attacks person instead of argument | "Do not trust her climate plan; she is not even from this town." |
+| **Straw man** | Misrepresents opponent's view to make it easier to attack | "My opponent wants bike lanes, so he wants to ban cars entirely." |
+| **False dilemma** | Presents only two options when more exist | "Either cut all taxes or destroy the economy." |
+| **Hasty generalization** | Draws broad conclusion from too little evidence | "Two students cheated, so the school has no integrity." |
+| **Slippery slope** | Claims one step inevitably leads to extreme outcome | "If we allow late work, soon no deadlines will exist." |
+| **Post hoc** | Assumes sequence implies causation | "I wore lucky socks and we won, so socks caused victory." |
+| **Circular reasoning** | Claim is "proven" by restating itself | "The law is fair because it is just." |
+| **Appeal to popularity** | Claims true/good because many people believe it | "Millions use it, so it must be safe." |
+
+> 🔑 Identifying a fallacy does not automatically disprove the entire claim, but it DOES expose weakness in the argument's logic.
       `
     },
     {
-      id: 'englangl1-quiz1',
+      id: 'ellf1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +46,160 @@ Logical Fallacies is a fundamental topic in AP English Language. This part intro
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Logical Fallacies?',
+            question: '"Either we ban phones in schools or students will never learn anything." Which fallacy is this?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Logical Fallacies',
-              'A mathematical formula',
-              'A literary technique'
+              'Ad hominem',
+              'False dilemma',
+              'Post hoc',
+              'Circular reasoning'
             ],
             correctAnswer: 1,
-            explanation: 'Logical Fallacies focuses on understanding key principles and patterns within AP English Language.'
+            explanation: 'This statement presents only two extreme options and ignores possible middle-ground solutions (limited use policies, structured classroom rules, etc.). That is a false dilemma.'
           },
           {
-            question: 'Why is Logical Fallacies important in AP English Language?',
+            question: "\"My opponent's education policy is wrong because he failed algebra in high school.\" This is:",
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Straw man',
+              'Ad hominem',
+              'Appeal to popularity',
+              'Hasty generalization'
             ],
             correctAnswer: 1,
-            explanation: 'Logical Fallacies is a key topic in AP English Language that connects to multiple course themes.'
+            explanation: 'The statement attacks the person-s character/history instead of addressing the policy argument itself. That is ad hominem reasoning.'
           }
         ]
       }
     },
     {
-      id: 'englangl1-content',
+      id: 'ellf1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Fallacies in AP Passages
 
-### Key concept 1
-The foundational principle underlying Logical Fallacies. Understanding this concept is essential for mastering Logical Fallacies in AP English Language.
+### Why Writers Use Fallacies
+- Emotional impact may distract from weak evidence
+- Simplified framing can persuade quickly
+- Audience bias may reward familiar but faulty logic
 
-### Key concept 2
-A critical component of understanding Logical Fallacies. This builds on the previous concept and connects to broader themes in the course.
+### How to Analyze Fallacies Effectively
 
-### Key concept 3
-An essential element that connects Logical Fallacies to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Weak Analysis | Strong Analysis |
+|--------------|-----------------|
+| "The author uses a fallacy." | "By framing the issue as only two options, the writer creates a false dilemma that ignores viable compromises, weakening logical credibility." |
+| "This is bad logic." | "The ad hominem attack shifts focus from policy evidence to personal insult, which may energize supporters but undermines rational persuasion." |
+
+### Distinguish Rhetorical Force from Logical Validity
+A passage may be rhetorically powerful and logically flawed at the same time.
+
+Example:
+- Powerful emotional appeal to protect children
+- But uses hasty generalization from one isolated incident
+
+Your job: evaluate both rhetorical effectiveness and reasoning quality.
+
+## Avoiding Fallacies in Your Writing
+1. Represent opposing views accurately
+2. Avoid absolute binaries unless truly exhaustive
+3. Differentiate correlation from causation
+4. Use representative evidence
+5. Critique ideas, not people
       `
     },
     {
-      id: 'englangl1-input',
+      id: 'ellf1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Logical Fallacies?
+1) Attacking a person instead of addressing their argument is _______ hominem.
 
-2) What concept describes a critical component of understanding Logical Fallacies?
+2) Assuming that because one event follows another, the first caused the second is a _______ hoc fallacy.
 
-3) Name the term for an essential element that connects Logical Fallacies to broader themes.
-
-Use the exact term from this part.
+3) Presenting only two extreme options when others exist is a false _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Logical Fallacies), Key concept 2 (A critical component of understanding Logical Fallacies), and Key concept 3 (An essential element that connects Logical Fallacies to broader themes).'
+        correctAnswers: ['ad', 'post', 'dilemma'],
+        hint1: 'Latin phrase starts with "ad."',
+        hint2: 'Latin phrase starts with "post."',
+        hint3: 'Two choices only, falsely.',
+        explanation: 'Ad hominem attacks person. Post hoc confuses sequence with causation. False dilemma reduces options to extremes.'
       }
     },
     {
-      id: 'englangl1-dropdown',
+      id: 'ellf1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Identify the Fallacy** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Logical Fallacies is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: '"If we allow one extension, deadlines will disappear forever."',
+            options: ['Slippery slope', 'Circular reasoning', 'Appeal to popularity', 'Ad hominem']
           },
           {
-            label: 'A critical component of understanding Logical Fallacies describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: '"Three athletes from that city were rude; everyone there is rude."',
+            options: ['Hasty generalization', 'False dilemma', 'Post hoc', 'Straw man']
           },
           {
-            label: 'An essential element that connects Logical Fallacies to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: '"You want to regulate social media ads, so you want to censor all speech."',
+            options: ['Straw man', 'Ad hominem', 'Appeal to authority', 'Circular reasoning']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Logical Fallacies. Key concept 2 — A critical component of understanding Logical Fallacies. Key concept 3 — An essential element that connects Logical Fallacies to broader themes.'
+        correctAnswers: ['Slippery slope', 'Hasty generalization', 'Straw man'],
+        hint1: 'Predicts extreme chain reaction.',
+        hint2: 'Too few examples for broad claim.',
+        hint3: 'Distorts opponent position.',
+        explanation: 'Extreme inevitability = slippery slope. Few examples to broad claim = hasty generalization. Misrepresentation = straw man.'
       }
     },
     {
-      id: 'englangl1-strategy',
+      id: 'ellf1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Logical Fallacies
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Logical Fallacies.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- Name the fallacy and explain the specific reasoning flaw
+- Connect flaw to argumentative consequence (credibility, logic, fairness)
+- Do not over-label: ensure the fallacy truly fits
+- In essays, avoid fallacies in your own reasoning chain
+- Differentiate rhetorical intensity from logical validity
+- Fallacy-aware analysis can raise sophistication in rhetorical commentary
       `
     },
     {
-      id: 'englangl1-applied',
+      id: 'ellf1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Logical Fallacies on a free-response question. The best approach is:',
+            question: 'A speech claims: "Crime rose after bike lanes were installed, so bike lanes cause crime." Which evaluation is strongest?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Valid causal claim due to chronological order',
+              'Post hoc fallacy: temporal sequence alone does not establish causation',
+              'Ad hominem fallacy',
+              'Appeal to popularity'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The argument assumes causation from sequence only. Many confounding variables could explain crime changes. Without controlled evidence, causal inference is invalid.'
           },
           {
-            question: 'When studying Logical Fallacies, which strategy is most effective?',
+            question: 'Which revision best fixes a false dilemma?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Make language more emotional',
+              'Acknowledge multiple alternatives and evaluate tradeoffs',
+              'Add a personal insult',
+              'Repeat the binary more strongly'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'False dilemmas collapse complexity into two options. Fixing them requires presenting plausible additional options and reasoning through comparative merits.'
           }
         ]
       }
     }
   ]
-}
+};

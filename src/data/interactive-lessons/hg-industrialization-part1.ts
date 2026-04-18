@@ -2,26 +2,50 @@ export const hgIndustrializationPart1Data = {
   topicSlug: 'hg-industrialization',
   sections: [
     {
-      id: 'hgindust1-intro',
+      id: 'hgind1-intro',
       type: 'text' as const,
       content: `
-# 🌍 Industrialization & Economic Development
+# 🌍 Industrialization & Development
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Economic Sectors and Growth Models**
 
-Industrialization & Economic Development is a fundamental topic in AP Human Geography. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Economic Sectors
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Industrialization & Economic Development |
-| **Key concept 2** | A critical component of understanding Industrialization & Economic Development |
-| **Key concept 3** | An essential element that connects Industrialization & Economic Development to broader themes |
+| Sector | Activity | Example | Dominant In |
+|--------|----------|---------|------------|
+| **Primary** | Extract raw materials | Farming, mining, fishing | Periphery countries |
+| **Secondary** | Manufacturing | Factories, construction | Semi-periphery (industrializing) |
+| **Tertiary** | Services | Retail, education, healthcare | Core countries |
+| **Quaternary** | Information/knowledge | Research, IT, finance | Core countries |
+| **Quinary** | Decision-making | Government leaders, CEOs | Core countries |
+
+> 🔑 **AP Key Point:** As countries develop, their workforce shifts from primary → secondary → tertiary sectors. This is a key indicator of **economic development** on the AP exam.
+
+---
+
+## Development Models
+
+| Model | Creator | Idea |
+|-------|---------|------|
+| **Rostow Stages of Growth** | W.W. Rostow | 5 stages from traditional to high consumption (linear) |
+| **Dependency Theory** | A.G. Frank | Periphery stays poor because core exploits it |
+| **World Systems Theory** | Wallerstein | Core-semi-periphery-periphery hierarchy |
+
+### Rostow 5 Stages
+
+1. **Traditional** — subsistence agriculture, limited technology
+2. **Preconditions for takeoff** — infrastructure investment, commercial agriculture begins
+3. **Takeoff** — rapid industrialization, urbanization accelerates
+4. **Drive to maturity** — diversified economy, technology spreads widely
+5. **Age of mass consumption** — high income, service-based economy
+
+> ⚠️ **AP Critique:** Rostow assumes ALL countries follow the same path. Dependency theorists argue this ignores how colonial exploitation created structural barriers to development.
       `
     },
     {
-      id: 'hgindust1-quiz1',
+      id: 'hgind1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +53,158 @@ Industrialization & Economic Development is a fundamental topic in AP Human Geog
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Industrialization & Economic Development?',
+            question: 'A country where most workers are in agriculture and mining is primarily in the:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Industrialization & Economic Development',
-              'A mathematical formula',
-              'A literary technique'
+              'Primary sector',
+              'Secondary sector',
+              'Tertiary sector',
+              'Quaternary sector'
             ],
-            correctAnswer: 1,
-            explanation: 'Industrialization & Economic Development focuses on understanding key principles and patterns within AP Human Geography.'
+            correctAnswer: 0,
+            explanation: 'The primary sector involves extracting raw materials (farming, mining, forestry, fishing). Countries with most workers in this sector are typically less economically developed.'
           },
           {
-            question: 'Why is Industrialization & Economic Development important in AP Human Geography?',
+            question: 'Dependency theorists would argue that developing countries remain poor because:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'They lack natural resources needed for industrialization',
+              'Structural exploitation by wealthy core countries prevents development',
+              'Their populations are growing too fast',
+              'They chose not to adopt Western economic models'
             ],
             correctAnswer: 1,
-            explanation: 'Industrialization & Economic Development is a key topic in AP Human Geography that connects to multiple course themes.'
+            explanation: 'Dependency theory argues that the global economic system is structured to benefit core countries at the expense of the periphery — through unequal trade, debt, and historical colonialism.'
           }
         ]
       }
     },
     {
-      id: 'hgindust1-content',
+      id: 'hgind1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Industrial Location Theory
 
-### Key concept 1
-The foundational principle underlying Industrialization & Economic Development. Understanding this concept is essential for mastering Industrialization & Economic Development in AP Human Geography.
+### Weber Least Cost Theory (1909)
 
-### Key concept 2
-A critical component of understanding Industrialization & Economic Development. This builds on the previous concept and connects to broader themes in the course.
+Alfred Weber argued that industries locate where **costs are minimized**:
 
-### Key concept 3
-An essential element that connects Industrialization & Economic Development to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Factor | Description | Example |
+|--------|-----------|---------|
+| **Transportation costs** | Most important; minimize transport of heavy materials | Steel mills near iron ore + coal |
+| **Labor costs** | Cheap labor can offset higher transport costs | Textile factories in Bangladesh |
+| **Agglomeration** | Benefits of clustering with related industries | Silicon Valley tech cluster |
+| **Deglomeration** | Moving away when clustering causes high rents/congestion | Factories leaving expensive city centers |
+
+### Bulk-Reducing vs. Bulk-Gaining
+
+| Type | Description | Example |
+|------|-----------|---------|
+| **Bulk-reducing** | Product weighs LESS than raw materials; locate near raw materials | Copper smelting near mines |
+| **Bulk-gaining** | Product weighs MORE than components; locate near market | Soft drink bottling (add water near consumers) |
+
+## The Industrial Revolution
+
+| Wave | When | Key Industries | Where |
+|------|------|---------------|-------|
+| **First** | 1760s–1840s | Textiles, steam, iron | Britain (Manchester, Birmingham) |
+| **Second** | 1870s–1914 | Steel, chemicals, electricity | US, Germany, Japan |
+| **Third** | 1960s–present | Digital, automation, biotech | Global, but led by core countries |
       `
     },
     {
-      id: 'hgindust1-input',
+      id: 'hgind1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Industrialization & Economic Development?
+1) The economic sector focused on services (retail, education, healthcare) is the _______ sector.
 
-2) What concept describes a critical component of understanding Industrialization & Economic Development?
+2) Rostow Stages of Growth model proposes that all countries follow _______ stages of economic development.
 
-3) Name the term for an essential element that connects Industrialization & Economic Development to broader themes.
-
-Use the exact term from this part.
+3) _______ theory argues that poor countries remain poor because of exploitation by wealthy nations.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Industrialization & Economic Development), Key concept 2 (A critical component of understanding Industrialization & Economic Development), and Key concept 3 (An essential element that connects Industrialization & Economic Development to broader themes).'
+        correctAnswers: ['tertiary', '5', 'Dependency'],
+        hint1: 'The dominant sector in core countries.',
+        hint2: 'From traditional society to age of mass consumption.',
+        hint3: 'The opposite of Rostow optimistic view.',
+        explanation: 'Tertiary = service sector. Rostow = 5 stages of growth. Dependency theory = structural exploitation keeps periphery poor.'
       }
     },
     {
-      id: 'hgindust1-dropdown',
+      id: 'hgind1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Apply Weber Theory** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Industrialization & Economic Development is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'A copper smelter (heavy ore produces light metal) should locate near ___',
+            options: ['Raw materials (copper mine)', 'The consumer market', 'The cheapest labor', 'The government capital']
           },
           {
-            label: 'A critical component of understanding Industrialization & Economic Development describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A soft drink bottling plant (adds heavy water to light syrup) should locate near ___',
+            options: ['The consumer market', 'The water source', 'The sugar plantation', 'The cheapest labor']
           },
           {
-            label: 'An essential element that connects Industrialization & Economic Development to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Many tech companies clustering in Silicon Valley is an example of ___',
+            options: ['Agglomeration', 'Deglomeration', 'Bulk-reducing industry', 'Dependency']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Industrialization & Economic Development. Key concept 2 — A critical component of understanding Industrialization & Economic Development. Key concept 3 — An essential element that connects Industrialization & Economic Development to broader themes.'
+        correctAnswers: ['Raw materials (copper mine)', 'The consumer market', 'Agglomeration'],
+        hint1: 'Bulk-reducing: raw materials are heavier than the product.',
+        hint2: 'Bulk-gaining: the product is heavier than the inputs.',
+        hint3: 'Benefits of clustering with related businesses.',
+        explanation: 'Copper smelting = bulk-reducing (locate near mine). Bottling = bulk-gaining (locate near market). Silicon Valley = agglomeration (clustering benefits).'
       }
     },
     {
-      id: 'hgindust1-strategy',
+      id: 'hgind1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Industrialization
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Industrialization & Economic Development.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Human Geography for higher scores.
+- **Weber least cost theory** is heavily tested — know transport, labor, and agglomeration factors
+- **Bulk-reducing vs bulk-gaining** — practice classifying industries
+- **Rostow vs Dependency Theory** — be ready to compare and critique both
+- The shift from primary → tertiary sectors is called **sectoral transformation** or economic restructuring
+- Know how the Industrial Revolution affected urbanization, population (DTM), and social structure
+- **Fordism** (assembly line, mass production) vs **post-Fordism** (flexible, global supply chains) is increasingly tested
       `
     },
     {
-      id: 'hgindust1-applied',
+      id: 'hgind1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Industrialization & Economic Development on a free-response question. The best approach is:',
+            question: 'A developing country has 60% of workers in agriculture, 20% in manufacturing, and 20% in services. According to Rostow, this country is MOST likely in:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Stage 1 (Traditional society)',
+              'Stage 3 (Takeoff)',
+              'Stage 4 (Drive to maturity)',
+              'Stage 5 (Age of mass consumption)'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'A country with 60% of workers in agriculture (primary sector) is characteristic of Rostow Stage 1 — a traditional society with limited industrialization and subsistence agriculture.'
           },
           {
-            question: 'When studying Industrialization & Economic Development, which strategy is most effective?',
+            question: 'A factory moves from Detroit to rural Mississippi to reduce costs, while other factories move from the US to Vietnam. These both illustrate:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Agglomeration economies attracting industry',
+              'Deglomeration and the search for lower labor costs',
+              'Bulk-reducing industry location decisions',
+              'Rostow Stage 5 development'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Both moves represent deglomeration (leaving expensive clusters) and seeking cheaper labor — one at national scale (Detroit to Mississippi), one at global scale (US to Vietnam).'
           }
         ]
       }
     }
   ]
-}
+};

@@ -2,26 +2,39 @@ export const hgAgriculturalPracticesPart1Data = {
   topicSlug: 'hg-agricultural-practices',
   sections: [
     {
-      id: 'hgagricu1-intro',
+      id: 'hgap1-intro',
       type: 'text' as const,
       content: `
 # 🌍 Agricultural Practices & Land Use
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — From Subsistence to Commercial Farming**
 
-Agricultural Practices & Land Use is a fundamental topic in AP Human Geography. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Types of Agriculture
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Agricultural Practices & Land Use |
-| **Key concept 2** | A critical component of understanding Agricultural Practices & Land Use |
-| **Key concept 3** | An essential element that connects Agricultural Practices & Land Use to broader themes |
+| Type | Goal | Scale | Technology | Example |
+|------|------|-------|-----------|---------|
+| **Subsistence** | Feed family/community | Small | Low — hand tools | Shifting cultivation, pastoral nomadism |
+| **Commercial** | Sell for profit | Large | High — machinery | Grain farming, livestock ranching |
+
+> 🔑 **AP Key Point:** The AP exam focuses on WHERE different farming types occur and WHY — connecting agriculture to climate, development level, and cultural practices.
+
+---
+
+## Subsistence Agriculture Types
+
+| Practice | Description | Location |
+|----------|-----------|----------|
+| **Shifting cultivation** | Slash-and-burn; rotate fields every few years | Tropical regions (Amazon, Central Africa, SE Asia) |
+| **Pastoral nomadism** | Herding livestock; moving with grazing | Arid/semi-arid regions (Sahel, Central Asia) |
+| **Intensive subsistence (wet rice)** | Paddy rice on small plots; high labor | East and South Asia (China, India, Bangladesh) |
+| **Intensive subsistence (non-rice)** | Wheat, barley on small plots; high labor | Drier parts of Asia |
+| **Plantation** | Large-scale tropical crops for export | Tropical developing countries (coffee, rubber, palm oil) |
       `
     },
     {
-      id: 'hgagricu1-quiz1',
+      id: 'hgap1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +42,154 @@ Agricultural Practices & Land Use is a fundamental topic in AP Human Geography. 
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Agricultural Practices & Land Use?',
+            question: 'Shifting cultivation (slash-and-burn) is a form of:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Agricultural Practices & Land Use',
-              'A mathematical formula',
-              'A literary technique'
+              'Commercial agriculture',
+              'Subsistence agriculture',
+              'Plantation farming',
+              'Mixed crop and livestock farming'
             ],
             correctAnswer: 1,
-            explanation: 'Agricultural Practices & Land Use focuses on understanding key principles and patterns within AP Human Geography.'
+            explanation: 'Shifting cultivation is a subsistence practice where farmers clear forest, grow crops until soil is depleted, then move on. It feeds the local community, not external markets.'
           },
           {
-            question: 'Why is Agricultural Practices & Land Use important in AP Human Geography?',
+            question: 'Pastoral nomadism is most commonly practiced in:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Humid tropical rainforests',
+              'Arid and semi-arid grasslands',
+              'Dense urban areas',
+              'Temperate coastal regions'
             ],
             correctAnswer: 1,
-            explanation: 'Agricultural Practices & Land Use is a key topic in AP Human Geography that connects to multiple course themes.'
+            explanation: 'Pastoral nomadism occurs in arid/semi-arid regions where farming is difficult — herders move livestock to follow water and grazing land (Sahel, Central Asia, Middle East).'
           }
         ]
       }
     },
     {
-      id: 'hgagricu1-content',
+      id: 'hgap1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## The Von Thunen Model (1826)
 
-### Key concept 1
-The foundational principle underlying Agricultural Practices & Land Use. Understanding this concept is essential for mastering Agricultural Practices & Land Use in AP Human Geography.
+Johann von Thunen proposed that agricultural land use forms concentric rings around a central market:
 
-### Key concept 2
-A critical component of understanding Agricultural Practices & Land Use. This builds on the previous concept and connects to broader themes in the course.
+| Ring | Activity | Why Here? |
+|------|----------|----------|
+| **1 (closest)** | Dairy, market gardens | Perishable goods need quick transport |
+| **2** | Forest | Heavy timber expensive to transport |
+| **3** | Field crops (grain) | Less perishable, cheaper to transport |
+| **4 (farthest)** | Ranching/livestock | Animals can walk to market |
 
-### Key concept 3
-An essential element that connects Agricultural Practices & Land Use to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+**Assumptions:** Flat terrain, single market, uniform soil, no roads.
+
+**Real-world modifications:** Rivers, highways, and multiple markets distort the rings. Modern refrigeration reduces the perishability constraint. But the core principle — **transportation cost shapes land use** — remains valid.
+
+## Commercial Agriculture Types
+
+| Practice | Description | Location |
+|----------|-----------|----------|
+| **Mixed crop and livestock** | Both crops and animals on same farm | US Midwest, Western Europe |
+| **Dairy farming** | Milk production near urban markets | US Northeast, Northern Europe, New Zealand |
+| **Grain farming** | Large-scale wheat, corn, rice | US Great Plains, Canadian Prairies, Ukraine |
+| **Livestock ranching** | Extensive grazing on large areas | US West, Argentina, Australia |
+| **Mediterranean agriculture** | Olives, grapes, fruits, vegetables | Southern Europe, California, Chile |
       `
     },
     {
-      id: 'hgagricu1-input',
+      id: 'hgap1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Agricultural Practices & Land Use?
+1) Agriculture that feeds the farmer family rather than producing for sale is called _______ agriculture.
 
-2) What concept describes a critical component of understanding Agricultural Practices & Land Use?
+2) Agriculture that produces crops primarily for sale and profit is called _______ agriculture.
 
-3) Name the term for an essential element that connects Agricultural Practices & Land Use to broader themes.
-
-Use the exact term from this part.
+3) The model showing concentric rings of agricultural land use around a market is the _______ Model.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Agricultural Practices & Land Use), Key concept 2 (A critical component of understanding Agricultural Practices & Land Use), and Key concept 3 (An essential element that connects Agricultural Practices & Land Use to broader themes).'
+        correctAnswers: ['subsistence', 'commercial', 'Von Thunen'],
+        hint1: 'The opposite of commercial farming.',
+        hint2: 'Sold on markets for money.',
+        hint3: 'Named after a German economist.',
+        explanation: 'Subsistence = farming to feed your family. Commercial = farming for profit. Von Thunen Model = concentric rings based on transportation costs.'
       }
     },
     {
-      id: 'hgagricu1-dropdown',
+      id: 'hgap1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Agriculture Type** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Agricultural Practices & Land Use is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'In Von Thunen model, dairy farming is in ring 1 because ___',
+            options: ['Dairy products are perishable and expensive to transport', 'Cows need the most fertile soil', 'Dairy is the most profitable farming type', 'Government regulations require it']
           },
           {
-            label: 'A critical component of understanding Agricultural Practices & Land Use describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Wet rice intensive subsistence farming is primarily found in ___',
+            options: ['East and South Asia', 'Sub-Saharan Africa', 'Western Europe', 'North America']
           },
           {
-            label: 'An essential element that connects Agricultural Practices & Land Use to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Large-scale ranching occupies the outermost ring in Von Thunen model because ___',
+            options: ['Animals can walk to market and need lots of land', 'Ranching is the most profitable type', 'Ranchers prefer isolation', 'Government land grants are only available far from cities']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Agricultural Practices & Land Use. Key concept 2 — A critical component of understanding Agricultural Practices & Land Use. Key concept 3 — An essential element that connects Agricultural Practices & Land Use to broader themes.'
+        correctAnswers: ['Dairy products are perishable and expensive to transport', 'East and South Asia', 'Animals can walk to market and need lots of land'],
+        hint1: 'Think about what happens to milk in hot weather without refrigeration.',
+        hint2: 'Where is rice the staple food crop?',
+        hint3: 'Land is cheap far from the market.',
+        explanation: 'Dairy = perishable, must be near market. Wet rice = East/South Asia. Ranching = animals self-transport and need extensive cheap land.'
       }
     },
     {
-      id: 'hgagricu1-strategy',
+      id: 'hgap1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Agricultural Geography
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Agricultural Practices & Land Use.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Human Geography for higher scores.
+- Always connect agriculture type to **climate** and **development level**
+- Von Thunen is a theoretical model — know its assumptions AND real-world modifications
+- **Bid-rent theory** is similar to Von Thunen but for urban land use
+- Know how the Green Revolution affected developing countries (both positive and negative)
+- Understand **food deserts** — areas in developed countries with limited access to fresh food
       `
     },
     {
-      id: 'hgagricu1-applied',
+      id: 'hgap1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Agricultural Practices & Land Use on a free-response question. The best approach is:',
+            question: 'A new highway connecting a rural area to a city would MOST likely affect Von Thunen rings by:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Eliminating all agricultural activity near the highway',
+              'Extending agricultural zones along the highway corridor',
+              'Having no effect on the spatial pattern',
+              'Reversing the order of the rings'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Highways reduce transportation costs, extending the distance that perishable goods can profitably travel. This stretches the rings along the transportation corridor, distorting the concentric pattern.'
           },
           {
-            question: 'When studying Agricultural Practices & Land Use, which strategy is most effective?',
+            question: 'Which pair of agricultural practices would you most likely find in Stage 2 (developing) vs Stage 4 (developed) countries respectively?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Commercial grain farming and pastoral nomadism',
+              'Shifting cultivation and commercial dairy farming',
+              'Mediterranean agriculture and plantation agriculture',
+              'Livestock ranching and intensive subsistence farming'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Stage 2 developing countries rely on subsistence methods like shifting cultivation. Stage 4 developed countries use commercial, technology-intensive methods like dairy farming.'
           }
         ]
       }
     }
   ]
-}
+};

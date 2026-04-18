@@ -1,175 +1,144 @@
 export const aasPracticeFreedomPart1Data = {
-  topicSlug: 'aas-practice-freedom',
+  topicSlug: "aas-practice-freedom",
   sections: [
     {
-      id: 'aaspract1-intro',
+      id: "aaspract1-intro",
       type: 'text' as const,
-      content: `
-# ✊🏿 The Practice of Freedom
-
-**Part 1 of 7 — Core Concepts**
-
-The Practice of Freedom is a fundamental topic in AP African American Studies. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
-
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying The Practice of Freedom |
-| **Key concept 2** | A critical component of understanding The Practice of Freedom |
-| **Key concept 3** | An essential element that connects The Practice of Freedom to broader themes |
-      `
+      content: "# 🤝 Practices of Freedom\n\n**Part 1 of 7 - Historical Foundations, Evidence, and AP AAS Analysis**\n\n---\n\n## Core Focus: Practices of Freedom\n\nAfrican American communities practiced freedom through institution-building, education, spirituality, and collective organizing.\n\n| Core Concept | What It Refers To | Why It Matters |\n|---|---|---|\n| **Community Institution** | Churches, schools, lodges, and associations | Institutions built collective capacity and leadership |\n| **Mutual Aid** | Shared resources and support networks | Strengthened resilience under exclusion |\n| **Self-Determination** | Collective pursuit of autonomy and political voice | Anchored long-term struggles for rights |\n\n> AP African American Studies emphasizes evidence-based interpretation across historical periods and disciplines."
     },
     {
-      id: 'aaspract1-quiz1',
+      id: "aaspract1-quiz1",
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: "**Concept Check**",
       exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of The Practice of Freedom?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within The Practice of Freedom',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'The Practice of Freedom focuses on understanding key principles and patterns within AP African American Studies.'
-          },
-          {
-            question: 'Why is The Practice of Freedom important in AP African American Studies?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'The Practice of Freedom is a key topic in AP African American Studies that connects to multiple course themes.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "Which statement best reflects the significance of Community Institution?",
+                  "options": [
+                        "Community institutions were unrelated to political change.",
+                        "Community institutions often served as bases for education, organizing, and civic leadership.",
+                        "Mutual aid was unnecessary where rights were denied.",
+                        "Self-determination refers only to individual wealth."
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Community Institution is central because it helps explain continuity, change, and lived experience in context."
+            },
+            {
+                  "question": "Which approach best matches AP AAS historical reasoning?",
+                  "options": [
+                        "Treat events as isolated facts",
+                        "Connect evidence to causation, context, and consequences over time",
+                        "Rely only on memorized dates",
+                        "Avoid discussing competing interpretations"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "AP AAS rewards analysis that links evidence to historical processes, structures, and outcomes."
+            }
+      ]
+}
     },
     {
-      id: 'aaspract1-content',
+      id: "aaspract1-content",
       type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
-
-### Key concept 1
-The foundational principle underlying The Practice of Freedom. Understanding this concept is essential for mastering The Practice of Freedom in AP African American Studies.
-
-### Key concept 2
-A critical component of understanding The Practice of Freedom. This builds on the previous concept and connects to broader themes in the course.
-
-### Key concept 3
-An essential element that connects The Practice of Freedom to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+      content: "## Interpreting Practices of Freedom with Evidence\n\n### Historical Analysis Workflow\n1. Identify the central process or conflict in the period\n2. Locate key actors, institutions, and structural conditions\n3. Explain short- and long-term consequences\n\n| Strong Evidence Move | Example Frame |\n|---|---|\n| Contextualization | \"Within the context of mutual aid, this development...\" |\n| Causation | \"Because community institution intensified, communities responded by...\" |\n| Continuity/change | \"Although conditions shifted, self-determination remained...\" |\n\n### Common Pitfalls\n- Oversimplifying complex historical actors or motives\n- Ignoring regional variation and class/gender differences\n- Treating resistance as singular instead of multifaceted\n- Using modern assumptions without historical context\n\nEvidence of local institution-building is key to understanding long-term political mobilization."
     },
     {
-      id: 'aaspract1-input',
+      id: "aaspract1-input",
       type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the foundational principle underlying The Practice of Freedom?
-
-2) What concept describes a critical component of understanding The Practice of Freedom?
-
-3) Name the term for an essential element that connects The Practice of Freedom to broader themes.
-
-Use the exact term from this part.
-      `,
+      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying The Practice of Freedom), Key concept 2 (A critical component of understanding The Practice of Freedom), and Key concept 3 (An essential element that connects The Practice of Freedom to broader themes).'
-      }
+      "boxes": 3,
+      "correctAnswers": [
+            "community institution",
+            "mutual aid",
+            "self-determination"
+      ],
+      "hint1": "Concept 1: Community Institution",
+      "hint2": "Concept 2: Mutual Aid",
+      "hint3": "Concept 3: Self-Determination",
+      "explanation": "Community Institution, Mutual Aid, and Self-Determination are essential vocabulary in this topic."
+}
     },
     {
-      id: 'aaspract1-dropdown',
+      id: "aaspract1-dropdown",
       type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
+      content: "**Apply the Concept**",
       exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying The Practice of Freedom is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding The Practice of Freedom describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects The Practice of Freedom to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying The Practice of Freedom. Key concept 2 — A critical component of understanding The Practice of Freedom. Key concept 3 — An essential element that connects The Practice of Freedom to broader themes.'
-      }
+      "dropdowns": [
+            {
+                  "label": "Community Institution is best understood as ___",
+                  "options": [
+                        "Collective institutions that support autonomy and civic capacity",
+                        "A federal census category",
+                        "A transportation schedule",
+                        "A one-time protest only"
+                  ]
+            },
+            {
+                  "label": "A strong AP AAS claim should be ___",
+                  "options": [
+                        "Specific, contextualized, and evidence-based",
+                        "A broad slogan without support",
+                        "A list of names only",
+                        "A moral statement without history"
+                  ]
+            },
+            {
+                  "label": "The strongest historical analysis usually includes ___",
+                  "options": [
+                        "Cause, context, and consequence",
+                        "Dates only",
+                        "Summary only",
+                        "Personal opinion only"
+                  ]
+            }
+      ],
+      "correctAnswers": [
+            "Collective institutions that support autonomy and civic capacity",
+            "Specific, contextualized, and evidence-based",
+            "Cause, context, and consequence"
+      ],
+      "hint1": "Focus on historical function of community institution.",
+      "hint2": "Claims must be defensible and supported.",
+      "hint3": "Historical reasoning links these elements.",
+      "explanation": "High-quality AP AAS responses combine precise claims with contextual evidence and causal reasoning."
+}
     },
     {
-      id: 'aaspract1-strategy',
+      id: "aaspract1-strategy",
       type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of The Practice of Freedom.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP African American Studies for higher scores.
-      `
+      content: "## AP Exam Strategy: Practices of Freedom\n\n- Define community institution in historical context before analyzing effects\n- Distinguish immediate outcomes from long-term structural consequences\n- Integrate social, political, cultural, and economic dimensions\n- Use specific evidence and avoid generalized claims\n- Acknowledge complexity across region, class, and gender where relevant\n- Highlight grassroots institutions as engines of long-term change."
     },
     {
-      id: 'aaspract1-applied',
+      id: "aaspract1-applied",
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: "**AP-Style Application**",
       exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain The Practice of Freedom on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying The Practice of Freedom, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "A student mentions mutual aid but gives no context. What is the best revision?",
+                  "options": [
+                        "Add only one extra date",
+                        "Explain how mutual aid shaped policy, lived experience, and community response",
+                        "Replace with a modern analogy only",
+                        "Remove the concept entirely"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Concepts gain analytical value when tied to mechanisms, impacts, and historical context."
+            },
+            {
+                  "question": "Which thesis move is strongest in AP AAS writing?",
+                  "options": [
+                        "Make absolute claims with no qualification",
+                        "Advance a specific claim about how self-determination changed and persisted over time",
+                        "List events in chronological order only",
+                        "Use one term repeatedly without evidence"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "The best theses are specific, historically grounded, and attentive to continuity and change."
+            }
+      ]
+}
     }
   ]
-}
+};

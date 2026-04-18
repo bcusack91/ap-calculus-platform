@@ -2,26 +2,48 @@ export const cspImpactOfComputingPart1Data = {
   topicSlug: 'csp-impact-of-computing',
   sections: [
     {
-      id: 'cspimpac1-intro',
+      id: 'cspic1-intro',
       type: 'text' as const,
       content: `
-# 🖥️ Impact of Computing
+# 🌍 Impact of Computing
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Digital Divide, Bias, and Beneficial/Harmful Effects**
 
-Impact of Computing is a fundamental topic in AP CS Principles. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## The Digital Divide
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Impact of Computing |
-| **Key concept 2** | A critical component of understanding Impact of Computing |
-| **Key concept 3** | An essential element that connects Impact of Computing to broader themes |
+The **digital divide** is the gap between those who have access to technology and the Internet and those who do not.
+
+| Factor | Description |
+|--------|-----------|
+| **Economic** | Cost of devices and internet service |
+| **Geographic** | Rural areas often lack broadband infrastructure |
+| **Age** | Older populations may have less tech literacy |
+| **Education** | Schools in different areas have unequal tech resources |
+| **Global** | Developing nations have less connectivity |
+
+> 🔑 The digital divide creates **inequality of opportunity**. Online education, job applications, healthcare portals, and government services increasingly require internet access.
+
+---
+
+## Beneficial and Harmful Effects
+
+Computing innovations often have BOTH beneficial and harmful consequences:
+
+| Innovation | Beneficial | Harmful |
+|-----------|-----------|---------|
+| **Social media** | Connect with people worldwide | Cyberbullying, misinformation, addiction |
+| **AI/Machine learning** | Medical diagnosis, efficiency | Job displacement, algorithmic bias |
+| **Drones** | Disaster relief, delivery | Privacy invasion, weaponization |
+| **Facial recognition** | Security, finding missing people | Mass surveillance, racial bias |
+| **Self-driving cars** | Reduce human-error accidents | Job loss for drivers, ethical dilemmas |
+
+> 🔑 Most computing innovations have **dual-use** potential — they can be used for good or harm depending on implementation and intent.
       `
     },
     {
-      id: 'cspimpac1-quiz1',
+      id: 'cspic1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +51,159 @@ Impact of Computing is a fundamental topic in AP CS Principles. This part introd
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Impact of Computing?',
+            question: 'What is the digital divide?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Impact of Computing',
-              'A mathematical formula',
-              'A literary technique'
+              'The difference between digital and analog technology',
+              'The gap between those with and without access to computing and the internet',
+              'The border between safe and unsafe websites',
+              'The split between hardware and software'
             ],
             correctAnswer: 1,
-            explanation: 'Impact of Computing focuses on understanding key principles and patterns within AP CS Principles.'
+            explanation: 'The digital divide refers to inequalities in access to technology and the internet. It can be economic, geographic, or demographic, and it creates unequal opportunities in education, employment, and services.'
           },
           {
-            question: 'Why is Impact of Computing important in AP CS Principles?',
+            question: 'Which best describes the impact of most computing innovations?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'They are always beneficial',
+              'They are always harmful',
+              'They have both beneficial and harmful effects',
+              'Their effects are neutral'
             ],
-            correctAnswer: 1,
-            explanation: 'Impact of Computing is a key topic in AP CS Principles that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'Nearly every computing innovation has dual-use potential. Social media connects people (good) but also enables misinformation (bad). The impact depends on how the technology is used.'
           }
         ]
       }
     },
     {
-      id: 'cspimpac1-content',
+      id: 'cspic1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Algorithmic Bias
 
-### Key concept 1
-The foundational principle underlying Impact of Computing. Understanding this concept is essential for mastering Impact of Computing in AP CS Principles.
+**Algorithmic bias** occurs when a computer system systematically produces unfair results. Sources include:
 
-### Key concept 2
-A critical component of understanding Impact of Computing. This builds on the previous concept and connects to broader themes in the course.
+| Source | Example |
+|--------|---------|
+| **Biased training data** | Facial recognition trained mostly on lighter skin performs poorly on darker skin |
+| **Biased assumptions** | Hiring algorithm assumes past hiring patterns (which were biased) are ideal |
+| **Exclusion bias** | Health study data excludes certain demographics, skewing results |
+| **Proxy variables** | ZIP code used as a proxy correlates with race, introducing discrimination |
 
-### Key concept 3
-An essential element that connects Impact of Computing to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Reducing Bias
+- Use diverse, representative training data
+- Test systems across different demographic groups
+- Include diverse teams in development
+- Regularly audit algorithms for biased outcomes
+
+## Crowdsourcing
+**Crowdsourcing** leverages large groups of people to contribute to a project:
+- **Wikipedia**: Knowledge contributed by millions
+- **Open-source software**: Code from global communities
+- **Citizen science**: Public helps gather scientific data
+- **Crowdfunding**: Financial support from many small donors
+
+## Legal and Ethical Issues
+- **Copyright**: Protects creative works. Using without permission may be illegal
+- **Open source**: Software freely available to use, modify, and share
+- **Creative Commons**: Flexible licensing allowing specific uses of creative work
       `
     },
     {
-      id: 'cspimpac1-input',
+      id: 'cspic1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Impact of Computing?
+1) The gap between those with and without access to technology is called the digital _______.
 
-2) What concept describes a critical component of understanding Impact of Computing?
+2) When a computer system produces systematically unfair results due to biased data or assumptions, this is called algorithmic _______.
 
-3) Name the term for an essential element that connects Impact of Computing to broader themes.
-
-Use the exact term from this part.
+3) Projects that rely on contributions from large groups of people (like Wikipedia) use _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Impact of Computing), Key concept 2 (A critical component of understanding Impact of Computing), and Key concept 3 (An essential element that connects Impact of Computing to broader themes).'
+        correctAnswers: ['divide', 'bias', 'crowdsourcing'],
+        hint1: 'A divide between the haves and have-nots.',
+        hint2: 'The algorithm is biased.',
+        hint3: 'Sourcing from the crowd.',
+        explanation: 'Digital divide = access gap. Algorithmic bias = unfair systematic results. Crowdsourcing = group contributions.'
       }
     },
     {
-      id: 'cspimpac1-dropdown',
+      id: 'cspic1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Impact** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Impact of Computing is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'A facial recognition system that performs poorly on certain skin tones demonstrates ___',
+            options: ['Algorithmic bias (biased training data)', 'The digital divide', 'Data compression', 'Fault tolerance']
           },
           {
-            label: 'A critical component of understanding Impact of Computing describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Free software that anyone can modify and share is called ___',
+            options: ['Open source', 'Proprietary', 'Copyrighted', 'Crowdfunded']
           },
           {
-            label: 'An essential element that connects Impact of Computing to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Rural communities lacking broadband internet is an example of the ___',
+            options: ['Digital divide', 'Algorithmic bias', 'Digital footprint', 'Encryption gap']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Impact of Computing. Key concept 2 — A critical component of understanding Impact of Computing. Key concept 3 — An essential element that connects Impact of Computing to broader themes.'
+        correctAnswers: ['Algorithmic bias (biased training data)', 'Open source', 'Digital divide'],
+        hint1: 'Performance differs by demographic due to training data.',
+        hint2: 'Open for anyone to use and modify.',
+        hint3: 'Unequal access to technology.',
+        explanation: 'Skin tone bias = algorithmic bias. Freely modifiable = open source. No broadband = digital divide.'
       }
     },
     {
-      id: 'cspimpac1-strategy',
+      id: 'cspic1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Impact of Computing
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Impact of Computing.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP CS Principles for higher scores.
+- Any innovation can have BOTH beneficial AND harmful effects — always consider both sides
+- **Digital divide** questions test understanding of WHO lacks access and WHY it matters
+- **Algorithmic bias** stems from biased data, not intentional malice — but the effects are real
+- Know examples of crowdsourcing: Wikipedia, open source, citizen science
+- Copyright protects original works; open source/Creative Commons offer flexible alternatives
+- Exam tip: when asked about impact, provide specific examples with both positive and negative effects
       `
     },
     {
-      id: 'cspimpac1-applied',
+      id: 'cspic1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Impact of Computing on a free-response question. The best approach is:',
+            question: 'A hiring algorithm is trained on 10 years of hiring data from a company that historically hired mostly men. What is the likely result?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'The algorithm will hire the best candidates regardless of gender',
+              'The algorithm will likely favor male candidates, reflecting the bias in the training data',
+              'The algorithm will favor female candidates to compensate',
+              'The training data does not affect algorithm outcomes'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The algorithm learns patterns from historical data. If past hiring was biased toward men, the algorithm replicates that bias. This is algorithmic bias — the system reflects the biases present in its training data.'
           },
           {
-            question: 'When studying Impact of Computing, which strategy is most effective?',
+            question: 'A school district moves all coursework online. Which group is MOST negatively affected?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Students who already own computers',
+              'Students without reliable internet access at home',
+              'Teachers with technology training',
+              'Students who prefer digital assignments'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Moving coursework online makes internet access essential. Students without reliable home internet are excluded — this is the digital divide in action. The policy widens educational inequality.'
           }
         ]
       }
     }
   ]
-}
+};

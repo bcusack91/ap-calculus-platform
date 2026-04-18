@@ -2,26 +2,47 @@ export const cspDataCompressionAnalysisPart1Data = {
   topicSlug: 'csp-data-compression-analysis',
   sections: [
     {
-      id: 'cspdatac1-intro',
+      id: 'cspdca1-intro',
       type: 'text' as const,
       content: `
-# 🖥️ Data Compression & Analysis
+# 📦 Data Compression & Analysis
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Lossless vs Lossy, Compression Techniques, and Data Analysis**
 
-Data Compression & Analysis is a fundamental topic in AP CS Principles. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Why Compress Data?
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Data Compression & Analysis |
-| **Key concept 2** | A critical component of understanding Data Compression & Analysis |
-| **Key concept 3** | An essential element that connects Data Compression & Analysis to broader themes |
+Smaller files mean:
+- Faster transmission over networks
+- Less storage space needed
+- Lower bandwidth usage
+- Faster loading for users
+
+---
+
+## Lossless vs Lossy Compression
+
+| Type | Data Loss? | Quality | Smaller? | Use Cases |
+|------|-----------|---------|----------|-----------|
+| **Lossless** | No — original perfectly restored | Identical to original | Moderate reduction | Text, code, spreadsheets, medical images |
+| **Lossy** | Yes — some data permanently removed | Slightly reduced | Much smaller | Photos (JPEG), music (MP3), video (MP4) |
+
+### Lossless Example: Run-Length Encoding
+\`\`\`
+Original:  AAABBBCCDDDDDD
+Compressed: 3A3B2C6D
+\`\`\`
+The original can be perfectly reconstructed from the compressed version.
+
+### Lossy Example: JPEG Compression
+A photograph has millions of color values. JPEG removes subtle color differences that human eyes cannot easily detect. The file shrinks dramatically, but the removed data cannot be recovered.
+
+> 🔑 **Lossless** = perfect reconstruction. **Lossy** = smaller file but permanent data loss. Choose based on whether quality loss is acceptable.
       `
     },
     {
-      id: 'cspdatac1-quiz1',
+      id: 'cspdca1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +50,162 @@ Data Compression & Analysis is a fundamental topic in AP CS Principles. This par
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Data Compression & Analysis?',
+            question: 'A hospital stores digital X-ray images. Which compression type should they use?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Data Compression & Analysis',
-              'A mathematical formula',
-              'A literary technique'
+              'Lossy — to save storage space',
+              'Lossless — medical images cannot lose any detail',
+              'No compression needed',
+              'Either type works equally well'
             ],
             correctAnswer: 1,
-            explanation: 'Data Compression & Analysis focuses on understanding key principles and patterns within AP CS Principles.'
+            explanation: 'Medical images require lossless compression because any lost detail could affect diagnosis. Lossy compression removes data permanently, which is unacceptable for medical records.'
           },
           {
-            question: 'Why is Data Compression & Analysis important in AP CS Principles?',
+            question: 'A music streaming service wants to minimize bandwidth. Which compression is most appropriate?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Lossless — to preserve perfect audio quality',
+              'Lossy — most listeners cannot hear the removed frequencies, and files are much smaller',
+              'No compression — music must be uncompressed',
+              'Run-length encoding'
             ],
             correctAnswer: 1,
-            explanation: 'Data Compression & Analysis is a key topic in AP CS Principles that connects to multiple course themes.'
+            explanation: 'Lossy compression (like MP3) removes frequencies most people cannot hear, dramatically reducing file size. For streaming where bandwidth matters, lossy is the standard choice.'
           }
         ]
       }
     },
     {
-      id: 'cspdatac1-content',
+      id: 'cspdca1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Data Analysis and Visualization
 
-### Key concept 1
-The foundational principle underlying Data Compression & Analysis. Understanding this concept is essential for mastering Data Compression & Analysis in AP CS Principles.
+### Extracting Patterns from Data
+When working with large datasets, visualization reveals patterns that raw numbers cannot.
 
-### Key concept 2
-A critical component of understanding Data Compression & Analysis. This builds on the previous concept and connects to broader themes in the course.
+| Visualization | Best For |
+|--------------|---------|
+| **Bar chart** | Comparing categories |
+| **Line graph** | Showing trends over time |
+| **Scatter plot** | Showing relationships between two variables |
+| **Pie chart** | Showing parts of a whole |
+| **Histogram** | Showing frequency distributions |
 
-### Key concept 3
-An essential element that connects Data Compression & Analysis to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Filtering and Transforming Data
+\`\`\`
+// Filter: Keep only rows where score > 80
+// Sort: Order by date ascending
+// Aggregate: Calculate average score per student
+\`\`\`
+
+## Interpreting Results
+- Look for **trends** (increasing, decreasing, stable)
+- Identify **outliers** (values far from the norm)
+- Check for **clusters** (groups of similar data points)
+- Be cautious of **bias** in data collection
+
+### Challenges with Large Datasets
+- **Storage**: Require significant space
+- **Privacy**: May contain sensitive personal information
+- **Accuracy**: Errors are amplified at scale
+- **Bias**: If collection methods are biased, conclusions will be skewed
       `
     },
     {
-      id: 'cspdatac1-input',
+      id: 'cspdca1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Data Compression & Analysis?
+1) Compression that can perfectly restore the original data is called _______ compression.
 
-2) What concept describes a critical component of understanding Data Compression & Analysis?
+2) MP3 audio files use _______ compression, permanently removing some frequencies.
 
-3) Name the term for an essential element that connects Data Compression & Analysis to broader themes.
-
-Use the exact term from this part.
+3) A chart that shows the relationship between two variables using dots is called a _______ plot.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Data Compression & Analysis), Key concept 2 (A critical component of understanding Data Compression & Analysis), and Key concept 3 (An essential element that connects Data Compression & Analysis to broader themes).'
+        correctAnswers: ['lossless', 'lossy', 'scatter'],
+        hint1: 'No data is lost.',
+        hint2: 'Some data is lost permanently.',
+        hint3: 'Points are scattered across the graph.',
+        explanation: 'Lossless = perfect reconstruction. MP3 = lossy. Two-variable dot chart = scatter plot.'
       }
     },
     {
-      id: 'cspdatac1-dropdown',
+      id: 'cspdca1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Compression** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Data Compression & Analysis is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'ZIP files use ___ compression (original files perfectly restored)',
+            options: ['Lossless', 'Lossy', 'No compression', 'Hybrid']
           },
           {
-            label: 'A critical component of understanding Data Compression & Analysis describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'JPEG images use ___ compression (some color detail permanently removed)',
+            options: ['Lossy', 'Lossless', 'No compression', 'Encrypted']
           },
           {
-            label: 'An essential element that connects Data Compression & Analysis to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A line graph is best for showing ___',
+            options: ['Trends over time', 'Parts of a whole', 'Individual data points', 'Category comparisons']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Data Compression & Analysis. Key concept 2 — A critical component of understanding Data Compression & Analysis. Key concept 3 — An essential element that connects Data Compression & Analysis to broader themes.'
+        correctAnswers: ['Lossless', 'Lossy', 'Trends over time'],
+        hint1: 'ZIP must restore files perfectly.',
+        hint2: 'JPEG sacrifices quality for size.',
+        hint3: 'X-axis is usually time.',
+        explanation: 'ZIP = lossless. JPEG = lossy. Line graph = trends over time.'
       }
     },
     {
-      id: 'cspdatac1-strategy',
+      id: 'cspdca1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Data Compression & Analysis
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Data Compression & Analysis.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP CS Principles for higher scores.
+- Know the difference: **lossless** (ZIP, PNG) vs **lossy** (JPEG, MP3, MP4)
+- Lossless for critical data (medical, legal, code). Lossy for media where small quality loss is acceptable
+- Run-length encoding is the lossless technique the AP exam expects you to understand
+- Data analysis questions test your ability to interpret visualizations and identify patterns
+- **Correlation does not imply causation** — always consider confounding variables
+- Large datasets can reveal patterns but also amplify errors and privacy concerns
       `
     },
     {
-      id: 'cspdatac1-applied',
+      id: 'cspdca1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Data Compression & Analysis on a free-response question. The best approach is:',
+            question: 'A file is compressed using lossy compression, then compressed again using lossy compression. What happens to quality?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Quality improves because compression is applied twice',
+              'Quality degrades further because more data is permanently removed in each round',
+              'Quality stays the same after the first compression',
+              'The file returns to its original quality'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Each round of lossy compression removes more data. Compressing an MP3 file again as a lower-bitrate MP3 removes additional frequencies. Quality only goes down, never up. This is called generation loss.'
           },
           {
-            question: 'When studying Data Compression & Analysis, which strategy is most effective?',
+            question: 'Run-length encoding converts "AAAABBCC" to "4A2B2C". Which input would NOT benefit from this technique?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'ZZZZZZZZZ (nine Zs)',
+              'ABCDEFGH (all different characters)',
+              'RRRRRGGGGG (repeated characters)',
+              'XXXXXXXXXX (ten Xs)'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'ABCDEFGH has no repeated consecutive characters. Run-length encoding would produce 1A1B1C1D1E1F1G1H — actually LARGER than the original. RLE works best with long runs of repeated values.'
           }
         ]
       }
     }
   ]
-}
+};

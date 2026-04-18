@@ -2,26 +2,54 @@ export const csaArrayPart1Data = {
   topicSlug: 'csa-array',
   sections: [
     {
-      id: 'csaarray1-intro',
+      id: 'csaar1-intro',
       type: 'text' as const,
       content: `
-# 💻 Arrays
+# 📊 Arrays
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Declaration, Initialization, and Traversal**
 
-Arrays is a fundamental topic in AP Computer Science A. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Array Basics
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Arrays |
-| **Key concept 2** | A critical component of understanding Arrays |
-| **Key concept 3** | An essential element that connects Arrays to broader themes |
+\`\`\`java
+// Declaration and initialization
+int[] scores = new int[5];           // {0, 0, 0, 0, 0}
+int[] grades = {95, 87, 92, 78, 88}; // Literal initialization
+
+// Accessing elements
+scores[0] = 100;     // Set first element
+int val = grades[2]; // Get third element (92)
+
+// Length (field, not method!)
+int size = grades.length;  // 5 (no parentheses!)
+\`\`\`
+
+> 🔑 **Arrays are fixed-size** — once created, an array cannot grow or shrink. Use \`ArrayList\` for dynamic sizing.
+
+---
+
+## Array Properties
+
+| Property | Detail |
+|----------|--------|
+| **Zero-indexed** | First element at index 0, last at length - 1 |
+| **Fixed size** | Cannot change size after creation |
+| **Default values** | int: 0, double: 0.0, boolean: false, objects: null |
+| **Length** | \`arr.length\` (field, no parentheses) |
+| **Type safety** | All elements must be the same type |
+
+### Common Error: ArrayIndexOutOfBoundsException
+\`\`\`java
+int[] arr = new int[5];
+arr[5] = 10;  // ERROR! Valid indices are 0-4
+arr[-1] = 5;  // ERROR! No negative indices
+\`\`\`
       `
     },
     {
-      id: 'csaarray1-quiz1',
+      id: 'csaar1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +57,171 @@ Arrays is a fundamental topic in AP Computer Science A. This part introduces the
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Arrays?',
+            question: 'What is the default value of elements in new int[10]?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Arrays',
-              'A mathematical formula',
-              'A literary technique'
+              '-1',
+              'null',
+              '0',
+              'Undefined'
             ],
-            correctAnswer: 1,
-            explanation: 'Arrays focuses on understanding key principles and patterns within AP Computer Science A.'
+            correctAnswer: 2,
+            explanation: 'When an int array is created with new, all elements are initialized to 0. double arrays default to 0.0, boolean arrays to false, and object arrays to null.'
           },
           {
-            question: 'Why is Arrays important in AP Computer Science A?',
+            question: 'int[] arr = {10, 20, 30}; What is arr.length?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              '2',
+              '3',
+              '4',
+              '30'
             ],
             correctAnswer: 1,
-            explanation: 'Arrays is a key topic in AP Computer Science A that connects to multiple course themes.'
+            explanation: 'The array has 3 elements. arr.length returns the total number of elements (3), not the last index (2). Note: length is a field (no parentheses), unlike String length().'
           }
         ]
       }
     },
     {
-      id: 'csaarray1-content',
+      id: 'csaar1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Array Traversal
 
-### Key concept 1
-The foundational principle underlying Arrays. Understanding this concept is essential for mastering Arrays in AP Computer Science A.
+### Standard For Loop (Most Common)
+\`\`\`java
+int[] arr = {3, 7, 2, 9, 5};
 
-### Key concept 2
-A critical component of understanding Arrays. This builds on the previous concept and connects to broader themes in the course.
+// Forward traversal
+for (int i = 0; i < arr.length; i++) {
+    System.out.println(arr[i]);
+}
 
-### Key concept 3
-An essential element that connects Arrays to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+// Backward traversal
+for (int i = arr.length - 1; i >= 0; i--) {
+    System.out.println(arr[i]);
+}
+\`\`\`
+
+### Enhanced For Loop (For-Each)
+\`\`\`java
+for (int value : arr) {
+    System.out.println(value);
+}
+\`\`\`
+
+### When to Use Which Loop?
+
+| Use Standard For Loop When: | Use Enhanced For Loop When: |
+|----------------------------|---------------------------|
+| You need the index | You only need the values |
+| You need to modify elements | You are just reading elements |
+| You traverse backwards | Forward traversal is fine |
+| You process two arrays simultaneously | Processing one array simply |
+
+## Common Array Algorithms
+
+| Algorithm | Approach |
+|-----------|---------|
+| **Sum/Average** | Accumulator pattern: sum += arr[i] |
+| **Find max/min** | Start with arr[0], compare each element |
+| **Search** | Linear search: check each element |
+| **Count matches** | Counter pattern with if condition |
       `
     },
     {
-      id: 'csaarray1-input',
+      id: 'csaar1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Arrays?
+1) In Java, array indices start at _______ and end at length - 1.
 
-2) What concept describes a critical component of understanding Arrays?
+2) To get the number of elements in an array arr, use arr._______ (no parentheses).
 
-3) Name the term for an essential element that connects Arrays to broader themes.
-
-Use the exact term from this part.
+3) Trying to access an index outside the valid range causes an _______ exception.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Arrays), Key concept 2 (A critical component of understanding Arrays), and Key concept 3 (An essential element that connects Arrays to broader themes).'
+        correctAnswers: ['0', 'length', 'ArrayIndexOutOfBoundsException'],
+        hint1: 'Zero-based indexing.',
+        hint2: 'A field property, not a method.',
+        hint3: 'The index is out of bounds of the array.',
+        explanation: 'Arrays start at index 0. arr.length (no parentheses). ArrayIndexOutOfBoundsException for invalid indices.'
       }
     },
     {
-      id: 'csaarray1-dropdown',
+      id: 'csaar1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Choose the Right Approach** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Arrays is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'To set each element of an array to its index value, use a ___',
+            options: ['Standard for loop (need index to assign values)', 'Enhanced for-each loop', 'While loop only', 'Do-while loop only']
           },
           {
-            label: 'A critical component of understanding Arrays describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'After int[] a = new int[3]; the values are ___',
+            options: ['{0, 0, 0}', '{1, 2, 3}', '{null, null, null}', 'Uninitialized (random)']
           },
           {
-            label: 'An essential element that connects Arrays to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'arr.length vs. str.length(): the array version ___',
+            options: ['Has no parentheses (it is a field)', 'Has parentheses (it is a method)', 'Returns the last index', 'Returns the number of non-zero elements']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Arrays. Key concept 2 — A critical component of understanding Arrays. Key concept 3 — An essential element that connects Arrays to broader themes.'
+        correctAnswers: ['Standard for loop (need index to assign values)', '{0, 0, 0}', 'Has no parentheses (it is a field)'],
+        hint1: 'You need the index i to do arr[i] = i.',
+        hint2: 'int arrays default to 0.',
+        hint3: 'arr.length vs. str.length() — spot the difference.',
+        explanation: 'Need index → standard for. int[] defaults to 0s. arr.length is a field (no parens).'
       }
     },
     {
-      id: 'csaarray1-strategy',
+      id: 'csaar1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Arrays
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Arrays.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Computer Science A for higher scores.
+- **arr.length** (no parentheses) vs **str.length()** (has parentheses) — this is tested every year
+- Enhanced for loop CANNOT modify array elements — it only reads copies of values
+- Common error: for (int i = 0; i <= arr.length; i++) — the \`<=\` causes ArrayIndexOutOfBoundsException
+- Know all standard array algorithms: sum, average, max, min, search, count, shift, reverse
+- Arrays are **reference types** — assigning one array to another creates an alias, not a copy
       `
     },
     {
-      id: 'csaarray1-applied',
+      id: 'csaar1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Arrays on a free-response question. The best approach is:',
+            question: 'What is the value of max after this code?\nint[] arr = {4, 8, 2, 9, 1};\nint max = arr[0];\nfor (int i = 1; i < arr.length; i++) {\n    if (arr[i] > max) {\n        max = arr[i];\n    }\n}',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '4',
+              '8',
+              '9',
+              '1'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 2,
+            explanation: 'max starts at 4. Then: 8 > 4 (max=8), 2 > 8 (no), 9 > 8 (max=9), 1 > 9 (no). Final max = 9. Starting i at 1 is efficient since max already has arr[0].'
           },
           {
-            question: 'When studying Arrays, which strategy is most effective?',
+            question: 'What does this enhanced for loop print?\nint[] nums = {5, 10, 15};\nfor (int n : nums) {\n    n = n * 2;\n}\nSystem.out.println(nums[1]);',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '10',
+              '20',
+              '15',
+              '30'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 0,
+            explanation: 'The enhanced for loop variable n is a COPY of each element. Modifying n does not change the original array. nums[1] remains 10.'
           }
         ]
       }
     }
   ]
-}
+};

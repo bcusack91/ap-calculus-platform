@@ -2,26 +2,49 @@ export const cspCollaborationDevelopmentPart1Data = {
   topicSlug: 'csp-collaboration-development',
   sections: [
     {
-      id: 'cspcolla1-intro',
+      id: 'cspcdev1-intro',
       type: 'text' as const,
       content: `
-# 🖥️ Collaboration in Development
+# 🤝 Collaboration & Program Development
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Version Control, Testing Strategies, and Program Correctness**
 
-Collaboration in Development is a fundamental topic in AP CS Principles. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Version Control and Collaborative Tools
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Collaboration in Development |
-| **Key concept 2** | A critical component of understanding Collaboration in Development |
-| **Key concept 3** | An essential element that connects Collaboration in Development to broader themes |
+Version control systems track changes to code over time, allowing teams to work simultaneously without overwriting each other.
+
+| Feature | Description |
+|---------|-----------|
+| **Commit** | Save a snapshot of your code at a point in time |
+| **Branch** | Independent line of development (experiment without affecting main code) |
+| **Merge** | Combine changes from different branches |
+| **Conflict** | When two people edit the same line; must be resolved manually |
+| **History** | Log of all changes — can revert to any previous version |
+
+> 🔑 Version control lets teams work on different features simultaneously and merge their work together safely.
+
+---
+
+## Testing for Program Correctness
+
+| Testing Type | What It Tests | Example |
+|-------------|-------------|---------|
+| **Normal cases** | Typical expected inputs | Entering a valid age like 25 |
+| **Boundary cases** | Edge values at limits | Age = 0, Age = 120 |
+| **Invalid cases** | Inputs that should be rejected | Age = -5, Age = "abc" |
+| **Empty cases** | No input or empty data | Empty string, empty list |
+
+### Test Coverage
+Testing EVERY possible input is usually impossible. Good testers focus on:
+- **Representative** normal inputs
+- **Edge cases** at boundaries
+- **Known problematic** inputs from past bugs
       `
     },
     {
-      id: 'cspcolla1-quiz1',
+      id: 'cspcdev1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +52,152 @@ Collaboration in Development is a fundamental topic in AP CS Principles. This pa
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Collaboration in Development?',
+            question: 'Why is it usually impossible to test a program with every possible input?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Collaboration in Development',
-              'A mathematical formula',
-              'A literary technique'
+              'Testing is too expensive',
+              'The number of possible inputs is often infinite or astronomically large',
+              'Computers cannot run test cases',
+              'Testing only works on small programs'
             ],
             correctAnswer: 1,
-            explanation: 'Collaboration in Development focuses on understanding key principles and patterns within AP CS Principles.'
+            explanation: 'For most programs, the number of possible inputs is effectively infinite. A text field alone accepts any combination of characters. Instead, testers select representative test cases including edge cases.'
           },
           {
-            question: 'Why is Collaboration in Development important in AP CS Principles?',
+            question: 'What is a boundary (edge) test case for a function that accepts ages 0-120?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Age = 50',
+              'Age = 0 or Age = 120',
+              'Age = "hello"',
+              'Not providing any input'
             ],
             correctAnswer: 1,
-            explanation: 'Collaboration in Development is a key topic in AP CS Principles that connects to multiple course themes.'
+            explanation: 'Boundary cases test the limits of valid input. For ages 0-120, the boundaries are exactly 0 and 120. Many bugs occur at boundaries where conditions use < vs <=.'
           }
         ]
       }
     },
     {
-      id: 'cspcolla1-content',
+      id: 'cspcdev1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Types of Errors
 
-### Key concept 1
-The foundational principle underlying Collaboration in Development. Understanding this concept is essential for mastering Collaboration in Development in AP CS Principles.
+| Error Type | When Detected | Example |
+|-----------|-------------|---------|
+| **Syntax error** | Before running (compile/parse time) | Missing parenthesis, misspelled keyword |
+| **Runtime error** | During execution | Division by zero, accessing invalid index |
+| **Logic error** | Produces wrong output | Using + instead of -, off-by-one error |
+| **Overflow error** | When a value exceeds storage capacity | Storing 999999999999 in a 32-bit integer |
 
-### Key concept 2
-A critical component of understanding Collaboration in Development. This builds on the previous concept and connects to broader themes in the course.
+### Debugging Strategies
+1. **Add print/display statements** to trace variable values
+2. **Use a debugger** to step through code line by line
+3. **Rubber duck debugging** — explain the code out loud to find the flaw
+4. **Binary search debugging** — comment out half the code to isolate the bug
+5. **Check recent changes** — the bug is likely in code you just modified
 
-### Key concept 3
-An essential element that connects Collaboration in Development to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Incremental Development
+Build your program in small pieces, testing each piece before adding more. This approach:
+- Makes bugs easier to find (the bug is in the newest code)
+- Provides working checkpoints to fall back to
+- Builds confidence as features are verified
       `
     },
     {
-      id: 'cspcolla1-input',
+      id: 'cspcdev1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Collaboration in Development?
+1) An error caused by misspelling a keyword or forgetting a parenthesis is called a _______ error.
 
-2) What concept describes a critical component of understanding Collaboration in Development?
+2) An error where the program runs but produces the wrong output is called a _______ error.
 
-3) Name the term for an essential element that connects Collaboration in Development to broader themes.
-
-Use the exact term from this part.
+3) A version control feature that lets you experiment without affecting the main codebase is called a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Collaboration in Development), Key concept 2 (A critical component of understanding Collaboration in Development), and Key concept 3 (An essential element that connects Collaboration in Development to broader themes).'
+        correctAnswers: ['syntax', 'logic', 'branch'],
+        hint1: 'Related to the structure/grammar of the code.',
+        hint2: 'The logic of the program is flawed.',
+        hint3: 'Like a branch of a tree — a separate path.',
+        explanation: 'Syntax = grammar mistakes. Logic = wrong results. Branch = independent development line.'
       }
     },
     {
-      id: 'cspcolla1-dropdown',
+      id: 'cspcdev1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Error** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Collaboration in Development is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Dividing by zero during execution causes a ___ error',
+            options: ['Runtime error', 'Syntax error', 'Logic error', 'Overflow error']
           },
           {
-            label: 'A critical component of understanding Collaboration in Development describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A program that calculates area as length + width instead of length * width has a ___ error',
+            options: ['Logic error', 'Syntax error', 'Runtime error', 'Overflow error']
           },
           {
-            label: 'An essential element that connects Collaboration in Development to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'When a number exceeds the maximum value a variable can store, it is a(n) ___ error',
+            options: ['Overflow error', 'Syntax error', 'Logic error', 'Underflow error']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Collaboration in Development. Key concept 2 — A critical component of understanding Collaboration in Development. Key concept 3 — An essential element that connects Collaboration in Development to broader themes.'
+        correctAnswers: ['Runtime error', 'Logic error', 'Overflow error'],
+        hint1: 'Happens while the program is running.',
+        hint2: 'Uses the wrong operation — produces wrong results.',
+        hint3: 'The value overflows the storage capacity.',
+        explanation: 'Division by zero = runtime. Wrong operator = logic. Exceeded capacity = overflow.'
       }
     },
     {
-      id: 'cspcolla1-strategy',
+      id: 'cspcdev1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Collaboration & Development
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Collaboration in Development.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP CS Principles for higher scores.
+- Know the **four error types**: syntax, runtime, logic, overflow — the exam tests classification
+- **Logic errors** are the hardest to find because the program runs without crashing
+- Testing should include normal, boundary, and invalid cases
+- You CANNOT test every possible input — focus on representative and edge cases
+- Incremental development with frequent testing is the recommended approach
+- Version control terminology (commit, branch, merge) appears in conceptual questions
       `
     },
     {
-      id: 'cspcolla1-applied',
+      id: 'cspcdev1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Collaboration in Development on a free-response question. The best approach is:',
+            question: 'A student writes a program to find the average of a list. The program works for most lists but crashes when the list is empty. This is best described as:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'A syntax error',
+              'A logic error',
+              'A runtime error caused by division by zero on empty input',
+              'An overflow error'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 2,
+            explanation: 'An empty list has 0 elements. Dividing the sum by 0 causes a runtime error. This is why testing with empty/boundary inputs is essential.'
           },
           {
-            question: 'When studying Collaboration in Development, which strategy is most effective?',
+            question: 'Two programmers edit the same line of code in different branches and try to merge. What happens?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'The changes are automatically combined',
+              'A merge conflict occurs that must be resolved manually',
+              'Both changes are deleted',
+              'The program crashes'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'When two branches modify the same line, a merge conflict occurs. The version control system cannot automatically decide which change to keep, so a human must resolve it.'
           }
         ]
       }
     }
   ]
-}
+};

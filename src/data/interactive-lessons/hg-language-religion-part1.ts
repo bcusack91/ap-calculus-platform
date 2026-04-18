@@ -2,26 +2,44 @@ export const hgLanguageReligionPart1Data = {
   topicSlug: 'hg-language-religion',
   sections: [
     {
-      id: 'hglangua1-intro',
+      id: 'hglr1-intro',
       type: 'text' as const,
       content: `
-# 🌍 Language, Religion & Ethnicity
+# 🌍 Language & Religion
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Cultural Geography of Belief and Communication**
 
-Language, Religion & Ethnicity is a fundamental topic in AP Human Geography. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Language Families
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Language, Religion & Ethnicity |
-| **Key concept 2** | A critical component of understanding Language, Religion & Ethnicity |
-| **Key concept 3** | An essential element that connects Language, Religion & Ethnicity to broader themes |
+| Language Family | Major Languages | Region |
+|----------------|----------------|--------|
+| **Indo-European** | English, Spanish, Hindi, Russian | Europe, South Asia, Americas |
+| **Sino-Tibetan** | Mandarin, Cantonese, Tibetan | East and Southeast Asia |
+| **Afro-Asiatic** | Arabic, Hebrew, Amharic | North Africa, Middle East |
+| **Niger-Congo** | Swahili, Yoruba, Zulu | Sub-Saharan Africa |
+| **Austronesian** | Malay, Tagalog, Hawaiian | Southeast Asia, Pacific Islands |
+
+> 🔑 **AP Key Point:** Know the difference: **language family** (largest grouping) → **language branch** → **language group** → **individual language** → **dialect**. Indo-European is by far the largest family by speaker count.
+
+---
+
+## World Religions
+
+| Religion | Type | Hearth | Diffusion | Adherents |
+|----------|------|--------|-----------|-----------|
+| **Christianity** | Universalizing | Palestine | Relocation + hierarchical | ~2.4 billion |
+| **Islam** | Universalizing | Arabian Peninsula | Contagious + relocation | ~1.9 billion |
+| **Buddhism** | Universalizing | NE India (Nepal) | Relocation + hierarchical | ~500 million |
+| **Hinduism** | Ethnic | Indus Valley | Limited diffusion | ~1.2 billion |
+| **Judaism** | Ethnic | Palestine | Relocation (diaspora) | ~15 million |
+
+> **Universalizing** religions actively seek converts; **ethnic** religions are tied to a specific people/place.
       `
     },
     {
-      id: 'hglangua1-quiz1',
+      id: 'hglr1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +47,151 @@ Language, Religion & Ethnicity is a fundamental topic in AP Human Geography. Thi
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Language, Religion & Ethnicity?',
+            question: 'Hinduism is classified as an ethnic religion because:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Language, Religion & Ethnicity',
-              'A mathematical formula',
-              'A literary technique'
+              'It actively seeks converts worldwide',
+              'It originated recently through missionary work',
+              'It is closely tied to Indian culture and does not actively seek converts',
+              'It has more followers than any other religion'
             ],
-            correctAnswer: 1,
-            explanation: 'Language, Religion & Ethnicity focuses on understanding key principles and patterns within AP Human Geography.'
+            correctAnswer: 2,
+            explanation: 'Ethnic religions are closely tied to a particular people, ethnicity, or place. Hinduism is deeply connected to Indian culture and lacks the missionary tradition of universalizing religions.'
           },
           {
-            question: 'Why is Language, Religion & Ethnicity important in AP Human Geography?',
+            question: 'English, Spanish, Hindi, and Russian all belong to the same:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Language group',
+              'Language family (Indo-European)',
+              'Language dialect',
+              'Lingua franca zone'
             ],
             correctAnswer: 1,
-            explanation: 'Language, Religion & Ethnicity is a key topic in AP Human Geography that connects to multiple course themes.'
+            explanation: 'Despite their differences, these languages all descended from a common ancestor and belong to the Indo-European family — the largest by number of speakers.'
           }
         ]
       }
     },
     {
-      id: 'hglangua1-content',
+      id: 'hglr1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Language Concepts
 
-### Key concept 1
-The foundational principle underlying Language, Religion & Ethnicity. Understanding this concept is essential for mastering Language, Religion & Ethnicity in AP Human Geography.
+| Term | Definition | Example |
+|------|-----------|---------|
+| **Lingua franca** | Common language for communication between groups | English in international business, Swahili in East Africa |
+| **Pidgin** | Simplified mix of two languages for trade | Tok Pisin in Papua New Guinea |
+| **Creole** | A pidgin that becomes the native language of a community | Haitian Creole |
+| **Dialect** | Regional variety of a language | American vs British English |
+| **Isogloss** | Geographic boundary of a linguistic feature | Where "pop" vs "soda" usage changes |
+| **Language extinction** | When a language loses all native speakers | Many indigenous languages worldwide |
 
-### Key concept 2
-A critical component of understanding Language, Religion & Ethnicity. This builds on the previous concept and connects to broader themes in the course.
+## Religious Landscapes
 
-### Key concept 3
-An essential element that connects Language, Religion & Ethnicity to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Feature | How Religion Shapes Geography |
+|---------|------------------------------|
+| **Architecture** | Mosques, churches, temples, pagodas define skylines |
+| **Sacred sites** | Jerusalem, Mecca, Varanasi, Bodh Gaya attract pilgrimage |
+| **Dietary laws** | Kosher, halal, vegetarian practices affect agriculture and commerce |
+| **Calendar/holidays** | Ramadan, Christmas, Diwali shape economic and social rhythms |
+| **Burial practices** | Cemeteries, cremation sites shape land use |
       `
     },
     {
-      id: 'hglangua1-input',
+      id: 'hglr1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Language, Religion & Ethnicity?
+1) Religions that actively seek converts and claim universal applicability are called _______ religions.
 
-2) What concept describes a critical component of understanding Language, Religion & Ethnicity?
+2) Religions closely tied to a specific people or place are called _______ religions.
 
-3) Name the term for an essential element that connects Language, Religion & Ethnicity to broader themes.
-
-Use the exact term from this part.
+3) A language used for communication between groups with different native languages is called a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Language, Religion & Ethnicity), Key concept 2 (A critical component of understanding Language, Religion & Ethnicity), and Key concept 3 (An essential element that connects Language, Religion & Ethnicity to broader themes).'
+        correctAnswers: ['universalizing', 'ethnic', 'lingua franca'],
+        hint1: 'Christianity, Islam, and Buddhism are examples.',
+        hint2: 'Hinduism and Judaism are examples.',
+        hint3: 'English serves as this in many international settings.',
+        explanation: 'Universalizing = seek converts (Christianity, Islam, Buddhism). Ethnic = tied to specific people (Hinduism, Judaism). Lingua franca = shared communication language.'
       }
     },
     {
-      id: 'hglangua1-dropdown',
+      id: 'hglr1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Religion** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Language, Religion & Ethnicity is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Islam spread rapidly across North Africa and into Spain through conquest and trade. Its diffusion type is primarily ___',
+            options: ['Contagious and relocation diffusion', 'Hierarchical diffusion only', 'Stimulus diffusion', 'No diffusion — independent invention']
           },
           {
-            label: 'A critical component of understanding Language, Religion & Ethnicity describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'When Haitian Vodou blends Catholic saints with West African spirits, this is an example of ___',
+            options: ['Religious syncretism', 'Complete assimilation', 'Ethnic religion diffusion', 'Secularism']
           },
           {
-            label: 'An essential element that connects Language, Religion & Ethnicity to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A simplified language created for trade between Portuguese and Malay speakers is a ___',
+            options: ['Pidgin', 'Creole', 'Dialect', 'Lingua franca']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Language, Religion & Ethnicity. Key concept 2 — A critical component of understanding Language, Religion & Ethnicity. Key concept 3 — An essential element that connects Language, Religion & Ethnicity to broader themes.'
+        correctAnswers: ['Contagious and relocation diffusion', 'Religious syncretism', 'Pidgin'],
+        hint1: 'Islam spread through both trade and migration.',
+        hint2: 'A blend of two religious traditions into something new.',
+        hint3: 'A simplified mix, not yet a native language.',
+        explanation: 'Islam spread by contagious diffusion (neighbor-to-neighbor) and relocation (merchants, conquests). Vodou = syncretism (blending). Simplified trade language = pidgin.'
       }
     },
     {
-      id: 'hglangua1-strategy',
+      id: 'hglr1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Language & Religion
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Language, Religion & Ethnicity.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Human Geography for higher scores.
+- Know the **hearth** of each major religion and how it diffused
+- Language families → branches → groups → individual languages → dialects (hierarchy)
+- **Universalizing vs ethnic** is the most tested classification
+- Secularism is growing in Western Europe and parts of East Asia
+- Be ready to explain how language and religion are **centripetal** (unifying) or **centrifugal** (dividing) forces
+- Sacred spaces: know examples from multiple religions (Mecca, Jerusalem Wall/Dome, Varanasi Ganges)
       `
     },
     {
-      id: 'hglangua1-applied',
+      id: 'hglr1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Language, Religion & Ethnicity on a free-response question. The best approach is:',
+            question: 'The geographic boundary between areas where people say "pop" versus "soda" in the United States is called:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'A dialect continuum',
+              'An isogloss',
+              'A lingua franca boundary',
+              'A language branch division'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'An isogloss is a geographic boundary line marking where a specific linguistic feature (pronunciation, vocabulary, grammar) changes. Pop vs soda is a classic isogloss example.'
           },
           {
-            question: 'When studying Language, Religion & Ethnicity, which strategy is most effective?',
+            question: 'In India, conflict between Hindus and Muslims has historically been a ___ force, while Hindi as a national language acts as a ___ force.',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Centripetal; centrifugal',
+              'Centrifugal; centripetal',
+              'Centripetal; centripetal',
+              'Centrifugal; centrifugal'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Religious conflict = centrifugal (dividing). A shared national language = centripetal (unifying). India has both forces operating simultaneously.'
           }
         ]
       }
     }
   ]
-}
+};

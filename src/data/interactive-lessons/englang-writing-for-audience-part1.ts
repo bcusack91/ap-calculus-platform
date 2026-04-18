@@ -2,26 +2,49 @@ export const englangWritingForAudiencePart1Data = {
   topicSlug: 'englang-writing-for-audience',
   sections: [
     {
-      id: 'englangw1-intro',
+      id: 'elwa1-intro',
       type: 'text' as const,
       content: `
-# ✍️ Writing for Different Audiences
+# 👥 Writing for Audience
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Adapting Rhetorical Choices to Reader Expectations and Values**
 
-Writing for Different Audiences is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Audience-Centered Writing
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Writing for Different Audiences |
-| **Key concept 2** | A critical component of understanding Writing for Different Audiences |
-| **Key concept 3** | An essential element that connects Writing for Different Audiences to broader themes |
+Your argument succeeds only if the intended audience finds it credible, relevant, and compelling.
+
+### Audience Questions
+- What does this audience already believe?
+- What evidence do they trust?
+- What language level is appropriate?
+- What objections are likely?
+- What tone will persuade rather than alienate?
+
+---
+
+## Audience Profiles and Strategies
+
+| Audience Type | Best Moves | Risk to Avoid |
+|--------------|-----------|---------------|
+| Skeptical/hostile | Concession, measured tone, shared values | Mocking tone |
+| Sympathetic | Strong call to action, momentum | Preaching to choir only |
+| General public | Clear terms, relatable examples | Excessive jargon |
+| Expert audience | Technical precision, methodological rigor | Oversimplification |
+
+### Framing the Same Idea Differently
+Policy: Ban single-use plastic bags
+
+- For consumers: emphasize long-term cost savings and cleaner neighborhoods
+- For business owners: emphasize phased rollout and predictable compliance
+- For environmental groups: emphasize measurable waste reduction and ecosystem benefits
+
+> 🔑 Adaptation changes framing, evidence, and tone. It does NOT require changing your core claim.
       `
     },
     {
-      id: 'englangw1-quiz1',
+      id: 'elwa1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +52,161 @@ Writing for Different Audiences is a fundamental topic in AP English Language. T
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Writing for Different Audiences?',
+            question: 'What is the primary goal of audience adaptation?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Writing for Different Audiences',
-              'A mathematical formula',
-              'A literary technique'
+              'To impress readers with complex vocabulary',
+              'To align rhetorical choices with audience values and expectations',
+              'To avoid taking a clear stance',
+              'To use the same examples in every context'
             ],
             correctAnswer: 1,
-            explanation: 'Writing for Different Audiences focuses on understanding key principles and patterns within AP English Language.'
+            explanation: 'Audience adaptation means selecting tone, evidence, and framing that resonate with the intended audience while maintaining argumentative integrity.'
           },
           {
-            question: 'Why is Writing for Different Audiences important in AP English Language?',
+            question: 'When writing for a skeptical audience, which move is most effective?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Dismiss opposing concerns as irrational',
+              'Acknowledge concerns and address them with evidence',
+              'Use only emotional anecdotes',
+              'Avoid counterarguments entirely'
             ],
             correctAnswer: 1,
-            explanation: 'Writing for Different Audiences is a key topic in AP English Language that connects to multiple course themes.'
+            explanation: 'Skeptical audiences respond to fair-mindedness and evidence. Concession + rebuttal builds ethos and lowers defensiveness.'
           }
         ]
       }
     },
     {
-      id: 'englangw1-content',
+      id: 'elwa1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Audience Levers You Control
 
-### Key concept 1
-The foundational principle underlying Writing for Different Audiences. Understanding this concept is essential for mastering Writing for Different Audiences in AP English Language.
+### 1. Diction/Register
+- General audience: define terms, avoid unnecessary jargon
+- Expert audience: use precise technical language efficiently
 
-### Key concept 2
-A critical component of understanding Writing for Different Audiences. This builds on the previous concept and connects to broader themes in the course.
+### 2. Evidence Selection
+- Community audience: local data and concrete examples
+- Policy audience: cost-benefit analyses and implementation feasibility
+- Academic audience: peer-reviewed sources and methodological rigor
 
-### Key concept 3
-An essential element that connects Writing for Different Audiences to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### 3. Tone Management
+| Situation | Productive Tone |
+|----------|------------------|
+| Polarized issue | Respectful, measured |
+| Urgent crisis | Firm, urgent, solution-oriented |
+| Educational context | Explanatory, clear |
+
+### 4. Anticipating Resistance
+Plan a response to likely objections before your audience raises them.
+
+Example:
+"Some business owners worry that compliance costs will rise; however, phased implementation and tax credits reduce transition burdens."
+
+## Ethical Audience Adaptation
+Adaptation should persuade ethically, not manipulate:
+- Avoid misinformation and cherry-picking
+- Represent opposing views fairly
+- Use emotional appeals responsibly
+- Maintain intellectual honesty
       `
     },
     {
-      id: 'englangw1-input',
+      id: 'elwa1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Writing for Different Audiences?
+1) Matching evidence and tone to a reader group is audience _______.
 
-2) What concept describes a critical component of understanding Writing for Different Audiences?
+2) For skeptical readers, acknowledging concerns first is called a _______.
 
-3) Name the term for an essential element that connects Writing for Different Audiences to broader themes.
-
-Use the exact term from this part.
+3) Adapting to audience should not require changing your core _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Writing for Different Audiences), Key concept 2 (A critical component of understanding Writing for Different Audiences), and Key concept 3 (An essential element that connects Writing for Different Audiences to broader themes).'
+        correctAnswers: ['adaptation', 'concession', 'claim'],
+        hint1: 'You adapt rhetoric to readers.',
+        hint2: 'You concede part of opposing view.',
+        hint3: 'Your central thesis remains stable.',
+        explanation: 'Audience adaptation aligns strategy. Concession builds trust. Core claim can stay constant while framing changes.'
       }
     },
     {
-      id: 'englangw1-dropdown',
+      id: 'elwa1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Pick the Better Audience Move** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Writing for Different Audiences is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Writing for a general audience, the best diction choice is ___',
+            options: ['Clear and accessible with defined terms', 'Dense specialized jargon', 'Legalistic phrasing only', 'Highly abstract language']
           },
           {
-            label: 'A critical component of understanding Writing for Different Audiences describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'For policymakers, strongest support usually includes ___',
+            options: ['Cost-benefit and implementation evidence', 'Only personal anecdotes', 'Only emotional language', 'No data, only slogans']
           },
           {
-            label: 'An essential element that connects Writing for Different Audiences to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Ethical audience adaptation requires ___',
+            options: ['Fair representation of opposing views', 'Distorting evidence to persuade', 'Ignoring counterarguments', 'Using fear regardless of accuracy']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Writing for Different Audiences. Key concept 2 — A critical component of understanding Writing for Different Audiences. Key concept 3 — An essential element that connects Writing for Different Audiences to broader themes.'
+        correctAnswers: ['Clear and accessible with defined terms', 'Cost-benefit and implementation evidence', 'Fair representation of opposing views'],
+        hint1: 'Accessibility matters for broad readers.',
+        hint2: 'Policy audiences care about feasibility.',
+        hint3: 'Persuasion should remain honest.',
+        explanation: 'General readers need clarity. Policymakers need feasibility evidence. Ethical adaptation requires fairness and accuracy.'
       }
     },
     {
-      id: 'englangw1-strategy',
+      id: 'elwa1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Writing for Audience
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Writing for Different Audiences.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- Identify target audience in first planning minute
+- Match evidence type to what that audience trusts
+- Use concession/rebuttal for skeptical readers
+- Avoid jargon unless writing to expert audiences
+- Keep tone strategic: respectful in controversy, urgent in crisis
+- Show sophistication by balancing persuasion with fairness
       `
     },
     {
-      id: 'englangw1-applied',
+      id: 'elwa1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Writing for Different Audiences on a free-response question. The best approach is:',
+            question: 'A student argues for renewable energy to a city council by citing local outage costs, grid resilience data, and phased budget options. Why is this effective?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'It avoids evidence and relies on style only',
+              'It tailors support to council priorities: cost, reliability, and feasibility',
+              'It uses emotional language exclusively',
+              'It changes the claim for each paragraph'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'City councils prioritize practical governance concerns. Local costs, resilience, and budget phasing align evidence with audience decision criteria, making persuasion stronger.'
           },
           {
-            question: 'When studying Writing for Different Audiences, which strategy is most effective?',
+            question: 'Which opening best addresses a skeptical audience?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '"Anyone who disagrees is clearly uninformed."',
+              '"Although concerns about implementation costs are valid, current pilot programs show that phased adoption can reduce expenses over time."',
+              '"This topic is simple and has one obvious answer."',
+              '"I feel strongly about this issue."'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'This opening concedes a legitimate concern and responds with evidence-based reasoning. That balanced approach builds credibility and lowers resistance in skeptical readers.'
           }
         ]
       }
     }
   ]
-}
+};

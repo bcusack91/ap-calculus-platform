@@ -2,26 +2,50 @@ export const csaClassDesignPart1Data = {
   topicSlug: 'csa-class-design',
   sections: [
     {
-      id: 'csaclass1-intro',
+      id: 'csacd1-intro',
       type: 'text' as const,
       content: `
-# 💻 Class Design & Encapsulation
+# 🏛️ Class Design
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Static vs Instance, Scope, and Method Design**
 
-Class Design & Encapsulation is a fundamental topic in AP Computer Science A. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Static vs Instance
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Class Design & Encapsulation |
-| **Key concept 2** | A critical component of understanding Class Design & Encapsulation |
-| **Key concept 3** | An essential element that connects Class Design & Encapsulation to broader themes |
+| Feature | Instance | Static |
+|---------|----------|--------|
+| **Belongs to** | Each object | The class itself |
+| **Access** | \`object.method()\` | \`ClassName.method()\` |
+| **Can access** | Instance + static members | Static members only |
+| **Keyword** | (none) | \`static\` |
+| **Example** | \`s.length()\` | \`Math.sqrt(16)\` |
+
+\`\`\`java
+public class Counter {
+    private static int totalCount = 0;  // Shared by ALL Counter objects
+    private int myCount = 0;            // Unique to each Counter object
+
+    public Counter() {
+        totalCount++;
+    }
+
+    public void increment() {
+        myCount++;
+    }
+
+    public static int getTotalCount() {
+        return totalCount;      // OK - static method accessing static variable
+        // return myCount;      // ERROR - static method cannot access instance variable
+    }
+}
+\`\`\`
+
+> 🔑 **Static variables** are shared across all instances of a class. Changing it in one place changes it everywhere. Great for counting objects or shared constants.
       `
     },
     {
-      id: 'csaclass1-quiz1',
+      id: 'csacd1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +53,162 @@ Class Design & Encapsulation is a fundamental topic in AP Computer Science A. Th
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Class Design & Encapsulation?',
+            question: 'After creating three Counter objects, what does Counter.getTotalCount() return?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Class Design & Encapsulation',
-              'A mathematical formula',
-              'A literary technique'
+              '0',
+              '1',
+              '3',
+              'Compile error'
             ],
-            correctAnswer: 1,
-            explanation: 'Class Design & Encapsulation focuses on understanding key principles and patterns within AP Computer Science A.'
+            correctAnswer: 2,
+            explanation: 'Each time the constructor runs, totalCount++ is executed. After 3 objects are created, totalCount = 3. Since totalCount is static, it is shared by all Counter instances.'
           },
           {
-            question: 'Why is Class Design & Encapsulation important in AP Computer Science A?',
+            question: 'Why would a static method cause a compile error if it tries to access an instance variable?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Static methods run faster and cannot use slow instance data',
+              'Static methods belong to the class, not any object, so there is no "this" to reference',
+              'Instance variables are always private',
+              'Static methods can only return void'
             ],
             correctAnswer: 1,
-            explanation: 'Class Design & Encapsulation is a key topic in AP Computer Science A that connects to multiple course themes.'
+            explanation: 'A static method is called on the class (e.g., Math.sqrt()), not on an object. Since no object exists in that context, there are no instance variables to access.'
           }
         ]
       }
     },
     {
-      id: 'csaclass1-content',
+      id: 'csacd1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Variable Scope
 
-### Key concept 1
-The foundational principle underlying Class Design & Encapsulation. Understanding this concept is essential for mastering Class Design & Encapsulation in AP Computer Science A.
+| Scope | Where Declared | Where Accessible |
+|-------|---------------|-----------------|
+| **Instance variable** | In the class, outside methods | Throughout the entire class |
+| **Local variable** | Inside a method or block | Only within that method/block |
+| **Parameter** | In method signature | Only within that method |
+| **Loop variable** | In for/while loop header | Only within that loop |
 
-### Key concept 2
-A critical component of understanding Class Design & Encapsulation. This builds on the previous concept and connects to broader themes in the course.
+\`\`\`java
+public class Example {
+    private int x = 10;           // Instance: accessible everywhere in class
 
-### Key concept 3
-An essential element that connects Class Design & Encapsulation to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+    public void demo(int y) {     // Parameter: accessible in demo()
+        int z = 20;               // Local: accessible in demo()
+        for (int i = 0; i < 5; i++) {  // Loop var: accessible in loop only
+            // x, y, z, and i are all accessible here
+        }
+        // i is NOT accessible here
+    }
+    // y and z are NOT accessible here
+}
+\`\`\`
+
+## Method Design Principles
+
+| Principle | Description |
+|-----------|-----------|
+| **Single responsibility** | Each method should do one thing well |
+| **Parameters** | Pass in what the method needs; avoid accessing global state |
+| **Return values** | Return computed results rather than printing them |
+| **Method overloading** | Multiple methods with same name but different parameters |
       `
     },
     {
-      id: 'csaclass1-input',
+      id: 'csacd1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Class Design & Encapsulation?
+1) A variable declared with the static keyword is shared by all _______ of the class.
 
-2) What concept describes a critical component of understanding Class Design & Encapsulation?
+2) A variable declared inside a method is called a _______ variable and exists only while that method runs.
 
-3) Name the term for an essential element that connects Class Design & Encapsulation to broader themes.
-
-Use the exact term from this part.
+3) Having multiple methods with the same name but different parameter lists is called method _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Class Design & Encapsulation), Key concept 2 (A critical component of understanding Class Design & Encapsulation), and Key concept 3 (An essential element that connects Class Design & Encapsulation to broader themes).'
+        correctAnswers: ['instances', 'local', 'overloading'],
+        hint1: 'Every object created from the class shares it.',
+        hint2: 'It is local to the method.',
+        hint3: 'Same name, different signatures.',
+        explanation: 'Static variables shared by all instances. Local variables exist only in their method. Method overloading = same name, different parameters.'
       }
     },
     {
-      id: 'csaclass1-dropdown',
+      id: 'csacd1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Concept** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Class Design & Encapsulation is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'A variable declared in a for loop header (int i = 0) has ___ scope',
+            options: ['Loop scope (only inside the loop)', 'Method scope', 'Class scope', 'Global scope']
           },
           {
-            label: 'A critical component of understanding Class Design & Encapsulation describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Math.PI is a static final variable. It is accessed using ___',
+            options: ['The class name: Math.PI', 'An object: new Math().PI', 'A method: Math.getPI()', 'Import only']
           },
           {
-            label: 'An essential element that connects Class Design & Encapsulation to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Two methods named calculate(int x) and calculate(int x, int y) demonstrate ___',
+            options: ['Method overloading', 'Method overriding', 'Inheritance', 'Polymorphism']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Class Design & Encapsulation. Key concept 2 — A critical component of understanding Class Design & Encapsulation. Key concept 3 — An essential element that connects Class Design & Encapsulation to broader themes.'
+        correctAnswers: ['Loop scope (only inside the loop)', 'The class name: Math.PI', 'Method overloading'],
+        hint1: 'The variable dies when the loop ends.',
+        hint2: 'Static members are accessed via the class.',
+        hint3: 'Same name, different parameter count.',
+        explanation: 'Loop variables have loop scope. Static members accessed via class name. Same name + different params = overloading.'
       }
     },
     {
-      id: 'csaclass1-strategy',
+      id: 'csacd1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Class Design
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Class Design & Encapsulation.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Computer Science A for higher scores.
+- Know the difference between **static and instance** — this determines how you call methods and access data
+- **Scope** questions test whether a variable is accessible in a given context
+- A static method CANNOT access instance variables (no \`this\` exists)
+- **Overloading**: same name, different parameters. **Overriding**: subclass redefines superclass method (covered in inheritance)
+- FRQ tip: when designing a class, always start with private instance variables, then write the constructor(s), then methods
       `
     },
     {
-      id: 'csaclass1-applied',
+      id: 'csacd1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Class Design & Encapsulation on a free-response question. The best approach is:',
+            question: 'Which statement about static variables is FALSE?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Static variables are shared by all instances of a class',
+              'Static variables can be accessed using the class name',
+              'Each object gets its own copy of a static variable',
+              'Static variables exist even before any objects are created'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 2,
+            explanation: 'Static variables have ONE copy shared by all instances. They do NOT give each object its own copy — that is what instance variables do.'
           },
           {
-            question: 'When studying Class Design & Encapsulation, which strategy is most effective?',
+            question: 'What is printed?\npublic void test() {\n    int x = 5;\n    for (int i = 0; i < 3; i++) {\n        x += i;\n    }\n    System.out.println(x);\n}',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '5',
+              '8',
+              '6',
+              'Compile error (i not accessible)'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'x starts at 5. Loop: i=0, x=5+0=5; i=1, x=5+1=6; i=2, x=6+2=8. x is a local variable with method scope, so it is accessible after the loop. Final x = 8.'
           }
         ]
       }
     }
   ]
-}
+};

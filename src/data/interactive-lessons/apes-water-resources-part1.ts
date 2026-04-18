@@ -2,26 +2,50 @@ export const apesWaterResourcesPart1Data = {
   topicSlug: 'apes-water-resources',
   sections: [
     {
-      id: 'apeswate1-intro',
+      id: 'apeswr1-intro',
       type: 'text' as const,
       content: `
-# 🌿 Water Resources & Pollution
+# 💧 Water Resources
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Freshwater Supply, Use, and Pollution**
 
-Water Resources & Pollution is a fundamental topic in AP Environmental Science. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Global Water Distribution
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Water Resources & Pollution |
-| **Key concept 2** | A critical component of understanding Water Resources & Pollution |
-| **Key concept 3** | An essential element that connects Water Resources & Pollution to broader themes |
+| Water Source | Percentage of Total | Availability |
+|-------------|-------------------|-------------|
+| **Oceans (saltwater)** | 97.5% | Not directly usable |
+| **Ice caps/glaciers** | 1.7% | Locked up; melting due to climate change |
+| **Groundwater** | 0.76% | Major freshwater source; aquifers |
+| **Surface water (lakes, rivers)** | 0.01% | Most accessible; heavily used |
+| **Atmosphere/soil moisture** | 0.04% | Part of water cycle |
+
+> 🔑 **Only ~0.77% of all water on Earth is accessible fresh water** (groundwater + surface water). This makes freshwater conservation critical.
+
+---
+
+## Water Use by Sector
+
+| Sector | Global Water Use | Examples |
+|--------|-----------------|---------|
+| **Agriculture** | ~70% | Irrigation of crops, livestock |
+| **Industry** | ~20% | Manufacturing, cooling, mining |
+| **Domestic** | ~10% | Drinking, sanitation, cooking |
+
+## Key Groundwater Terms
+
+| Term | Definition |
+|------|-----------|
+| **Aquifer** | Underground layer of permeable rock holding water |
+| **Water table** | Top surface of the saturated zone |
+| **Recharge zone** | Area where water infiltrates to replenish aquifer |
+| **Cone of depression** | Lowering of water table around a pumping well |
+| **Ogallala Aquifer** | Largest aquifer in US (Great Plains); being depleted faster than recharged |
       `
     },
     {
-      id: 'apeswate1-quiz1',
+      id: 'apeswr1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +53,155 @@ Water Resources & Pollution is a fundamental topic in AP Environmental Science. 
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Water Resources & Pollution?',
+            question: 'Which sector uses the MOST fresh water globally?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Water Resources & Pollution',
-              'A mathematical formula',
-              'A literary technique'
+              'Domestic (household use)',
+              'Industrial (factories and power)',
+              'Agriculture (irrigation and livestock)',
+              'Transportation'
             ],
-            correctAnswer: 1,
-            explanation: 'Water Resources & Pollution focuses on understanding key principles and patterns within AP Environmental Science.'
+            correctAnswer: 2,
+            explanation: 'Agriculture uses approximately 70% of all freshwater globally, primarily for irrigation. This is why water-efficient irrigation techniques are crucial for sustainability.'
           },
           {
-            question: 'Why is Water Resources & Pollution important in AP Environmental Science?',
+            question: 'The Ogallala Aquifer is a concern because:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'It contains saltwater, not freshwater',
+              'It is being depleted faster than it can recharge',
+              'It causes flooding in the Great Plains',
+              'It is too deep to access with modern technology'
             ],
             correctAnswer: 1,
-            explanation: 'Water Resources & Pollution is a key topic in AP Environmental Science that connects to multiple course themes.'
+            explanation: 'The Ogallala Aquifer (beneath the US Great Plains) is being pumped for irrigation much faster than rainfall can recharge it. At current rates, significant portions could be depleted within decades.'
           }
         ]
       }
     },
     {
-      id: 'apeswate1-content',
+      id: 'apeswr1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Water Pollution
 
-### Key concept 1
-The foundational principle underlying Water Resources & Pollution. Understanding this concept is essential for mastering Water Resources & Pollution in AP Environmental Science.
+| Type | Source Category | Examples |
+|------|---------------|---------|
+| **Point source** | Single, identifiable location | Factory discharge pipe, sewage treatment outfall |
+| **Non-point source** | Diffuse, widespread | Agricultural runoff, urban stormwater, atmospheric deposition |
 
-### Key concept 2
-A critical component of understanding Water Resources & Pollution. This builds on the previous concept and connects to broader themes in the course.
+### Major Water Pollutants
 
-### Key concept 3
-An essential element that connects Water Resources & Pollution to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Pollutant | Source | Impact |
+|-----------|--------|--------|
+| **Nutrients (N, P)** | Fertilizer, sewage | Eutrophication, algal blooms, dead zones |
+| **Pathogens** | Sewage, animal waste | Cholera, typhoid, dysentery |
+| **Sediment** | Erosion, construction | Reduces water clarity; smothers habitats |
+| **Thermal pollution** | Power plant cooling water | Reduces dissolved oxygen; harms aquatic life |
+| **Heavy metals** | Mining, industry | Mercury, lead — bioaccumulate in food chains |
+| **Endocrine disruptors** | Pesticides, plastics, pharmaceuticals | Interfere with hormone systems in wildlife |
+
+## Water Treatment
+
+| Method | Purpose | Level |
+|--------|---------|-------|
+| **Primary treatment** | Physical removal (screens, settling) | Removes solids |
+| **Secondary treatment** | Biological breakdown by bacteria | Removes organic matter |
+| **Tertiary treatment** | Chemical/advanced treatment | Removes nutrients, chemicals, pathogens |
       `
     },
     {
-      id: 'apeswate1-input',
+      id: 'apeswr1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Water Resources & Pollution?
+1) Pollution from a single identifiable location (like a factory pipe) is called _______ source pollution.
 
-2) What concept describes a critical component of understanding Water Resources & Pollution?
+2) Agriculture uses approximately _______% of global freshwater.
 
-3) Name the term for an essential element that connects Water Resources & Pollution to broader themes.
-
-Use the exact term from this part.
+3) An underground layer of permeable rock that holds water is called an _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Water Resources & Pollution), Key concept 2 (A critical component of understanding Water Resources & Pollution), and Key concept 3 (An essential element that connects Water Resources & Pollution to broader themes).'
+        correctAnswers: ['point', '70', 'aquifer'],
+        hint1: 'You can point to exactly where it comes from.',
+        hint2: 'The largest water-using sector by far.',
+        hint3: 'Underground water storage in rock.',
+        explanation: 'Point source = identifiable location. Agriculture = 70% of global freshwater. Aquifer = underground water-bearing rock layer.'
       }
     },
     {
-      id: 'apeswate1-dropdown',
+      id: 'apeswr1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Pollution** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Water Resources & Pollution is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Fertilizer washing off farm fields during a rainstorm and entering a river is ___ pollution',
+            options: ['Non-point source', 'Point source', 'Thermal', 'Sediment']
           },
           {
-            label: 'A critical component of understanding Water Resources & Pollution describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A power plant discharging hot water into a lake, reducing dissolved oxygen, is ___',
+            options: ['Thermal pollution', 'Eutrophication', 'Acidification', 'Sedimentation']
           },
           {
-            label: 'An essential element that connects Water Resources & Pollution to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'The treatment stage that uses bacteria to break down organic waste is ___',
+            options: ['Secondary treatment', 'Primary treatment', 'Tertiary treatment', 'Disinfection']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Water Resources & Pollution. Key concept 2 — A critical component of understanding Water Resources & Pollution. Key concept 3 — An essential element that connects Water Resources & Pollution to broader themes.'
+        correctAnswers: ['Non-point source', 'Thermal pollution', 'Secondary treatment'],
+        hint1: 'Runoff from many fields — no single pipe.',
+        hint2: 'Heat reduces water oxygen capacity.',
+        hint3: 'Biological processing stage.',
+        explanation: 'Farm runoff = non-point source (diffuse). Hot water discharge = thermal pollution. Bacteria breakdown = secondary treatment.'
       }
     },
     {
-      id: 'apeswate1-strategy',
+      id: 'apeswr1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Water Resources
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Water Resources & Pollution.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Environmental Science for higher scores.
+- **Point vs non-point source** pollution is tested almost every year — know examples of each
+- Know the three levels of water treatment and what each removes
+- **Groundwater depletion** (especially Ogallala Aquifer) is a common FRQ topic
+- Understand cone of depression and how over-pumping affects water tables
+- Water scarcity affects 2+ billion people — know the connection to agriculture, population growth, and climate change
       `
     },
     {
-      id: 'apeswate1-applied',
+      id: 'apeswr1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Water Resources & Pollution on a free-response question. The best approach is:',
+            question: 'A city downstream from agricultural land notices algal blooms in their water supply every spring. The MOST likely cause is:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Thermal pollution from a local power plant',
+              'Non-point source runoff of nitrogen and phosphorus fertilizers from upstream farms',
+              'Point source pollution from a nearby factory',
+              'Natural seasonal algae growth unrelated to human activity'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Seasonal fertilizer application on farms leads to nutrient runoff (N and P) during spring rains. This non-point source pollution causes eutrophication and algal blooms downstream.'
           },
           {
-            question: 'When studying Water Resources & Pollution, which strategy is most effective?',
+            question: 'Which water conservation practice would MOST reduce agricultural water consumption?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Switching from flood irrigation to drip irrigation',
+              'Building more dams to store water',
+              'Increasing the number of wells pumping groundwater',
+              'Using more fertilizer to grow crops faster'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 0,
+            explanation: 'Drip irrigation delivers water directly to plant roots, using 30-50% less water than flood irrigation. This is the most effective agricultural water conservation strategy.'
           }
         ]
       }
     }
   ]
-}
+};

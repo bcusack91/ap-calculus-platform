@@ -2,26 +2,46 @@ export const cspBinaryDataPart1Data = {
   topicSlug: 'csp-binary-data',
   sections: [
     {
-      id: 'cspbinar1-intro',
+      id: 'cspbd1-intro',
       type: 'text' as const,
       content: `
-# 🖥️ Binary & Data Representation
+# 💻 Binary & Data Representation
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Binary Numbers, Conversions, and Digital Information**
 
-Binary & Data Representation is a fundamental topic in AP CS Principles. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Why Binary?
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Binary & Data Representation |
-| **Key concept 2** | A critical component of understanding Binary & Data Representation |
-| **Key concept 3** | An essential element that connects Binary & Data Representation to broader themes |
+Computers use **binary** (base-2) because electronic circuits have two states: ON (1) and OFF (0). ALL data — numbers, text, images, sound — is ultimately stored as sequences of 0s and 1s.
+
+| Base | Name | Digits Used | Example |
+|------|------|------------|---------|
+| Base-2 | Binary | 0, 1 | 1010 |
+| Base-10 | Decimal | 0-9 | 10 |
+| Base-16 | Hexadecimal | 0-9, A-F | A |
+
+---
+
+## Binary to Decimal Conversion
+
+Each binary digit (bit) represents a power of 2:
+
+| Position | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+|----------|---|---|---|---|---|---|---|---|
+| **Value** | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+
+**Example:** 1101 in binary = ?
+- 1 x 8 + 1 x 4 + 0 x 2 + 1 x 1 = 8 + 4 + 0 + 1 = **13**
+
+**Example:** 10110 in binary = ?
+- 1 x 16 + 0 x 8 + 1 x 4 + 1 x 2 + 0 x 1 = 16 + 4 + 2 = **22**
+
+> 🔑 With **n bits**, you can represent 2^n different values (0 to 2^n - 1). 8 bits = 1 byte = 256 values.
       `
     },
     {
-      id: 'cspbinar1-quiz1',
+      id: 'cspbd1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +49,165 @@ Binary & Data Representation is a fundamental topic in AP CS Principles. This pa
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Binary & Data Representation?',
+            question: 'What is the decimal value of binary 1010?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Binary & Data Representation',
-              'A mathematical formula',
-              'A literary technique'
+              '8',
+              '10',
+              '12',
+              '5'
             ],
             correctAnswer: 1,
-            explanation: 'Binary & Data Representation focuses on understanding key principles and patterns within AP CS Principles.'
+            explanation: '1010 = 1x8 + 0x4 + 1x2 + 0x1 = 8 + 0 + 2 + 0 = 10. Each position doubles in value from right to left: 1, 2, 4, 8, 16, etc.'
           },
           {
-            question: 'Why is Binary & Data Representation important in AP CS Principles?',
+            question: 'How many different values can be represented with 4 bits?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              '4',
+              '8',
+              '16',
+              '32'
             ],
-            correctAnswer: 1,
-            explanation: 'Binary & Data Representation is a key topic in AP CS Principles that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'With n bits, you can represent 2^n values. 2^4 = 16 different values (0 through 15). Adding one more bit always DOUBLES the number of possible values.'
           }
         ]
       }
     },
     {
-      id: 'cspbinar1-content',
+      id: 'cspbd1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Decimal to Binary Conversion
 
-### Key concept 1
-The foundational principle underlying Binary & Data Representation. Understanding this concept is essential for mastering Binary & Data Representation in AP CS Principles.
+Repeatedly divide by 2 and track remainders (read bottom to top):
 
-### Key concept 2
-A critical component of understanding Binary & Data Representation. This builds on the previous concept and connects to broader themes in the course.
+**Convert 25 to binary:**
+- 25 / 2 = 12 remainder **1**
+- 12 / 2 = 6 remainder **0**
+- 6 / 2 = 3 remainder **0**
+- 3 / 2 = 1 remainder **1**
+- 1 / 2 = 0 remainder **1**
+- Read upward: **11001**
 
-### Key concept 3
-An essential element that connects Binary & Data Representation to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Overflow
+
+When a value exceeds the number of bits available:
+- 4 bits can store 0-15
+- If you try to store 16 in 4 bits, it **overflows** back to 0
+- This is like an odometer rolling over from 999 to 000
+
+## Data Units
+
+| Unit | Size |
+|------|------|
+| **Bit** | Single 0 or 1 |
+| **Byte** | 8 bits |
+| **Kilobyte (KB)** | ~1,000 bytes |
+| **Megabyte (MB)** | ~1,000 KB |
+| **Gigabyte (GB)** | ~1,000 MB |
+| **Terabyte (TB)** | ~1,000 GB |
+
+## Representing Other Data Types
+- **Text**: Each character mapped to a number (ASCII: 7 bits, Unicode: up to 32 bits)
+- **Colors**: RGB values (each 0-255 = 8 bits, total 24 bits per pixel)
+- **Sound**: Sampled as numbers at regular intervals (sampling rate x bit depth)
       `
     },
     {
-      id: 'cspbinar1-input',
+      id: 'cspbd1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Binary & Data Representation?
+1) A single binary digit (0 or 1) is called a _______.
 
-2) What concept describes a critical component of understanding Binary & Data Representation?
+2) 8 bits make up one _______.
 
-3) Name the term for an essential element that connects Binary & Data Representation to broader themes.
-
-Use the exact term from this part.
+3) With n bits, you can represent _______ to the power of n different values.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Binary & Data Representation), Key concept 2 (A critical component of understanding Binary & Data Representation), and Key concept 3 (An essential element that connects Binary & Data Representation to broader themes).'
+        correctAnswers: ['bit', 'byte', '2'],
+        hint1: 'The smallest unit of data.',
+        hint2: 'The standard unit of digital storage.',
+        hint3: 'Binary is base-2.',
+        explanation: 'bit = binary digit. byte = 8 bits. 2^n possible values with n bits.'
       }
     },
     {
-      id: 'cspbinar1-dropdown',
+      id: 'cspbd1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Binary Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Binary & Data Representation is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Binary 1111 in decimal equals ___',
+            options: ['15', '16', '14', '8']
           },
           {
-            label: 'A critical component of understanding Binary & Data Representation describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'The maximum decimal value storable in 8 bits (1 byte) is ___',
+            options: ['255', '256', '128', '127']
           },
           {
-            label: 'An essential element that connects Binary & Data Representation to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Adding one more bit to a binary number ___ the number of representable values',
+            options: ['Doubles', 'Adds one to', 'Triples', 'Has no effect on']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Binary & Data Representation. Key concept 2 — A critical component of understanding Binary & Data Representation. Key concept 3 — An essential element that connects Binary & Data Representation to broader themes.'
+        correctAnswers: ['15', '255', 'Doubles'],
+        hint1: '8 + 4 + 2 + 1',
+        hint2: '2^8 - 1',
+        hint3: 'n bits = 2^n values, (n+1) bits = 2^(n+1) = 2 x 2^n.',
+        explanation: '1111 = 15. Max 8-bit value = 255 (2^8 - 1). Each additional bit doubles capacity.'
       }
     },
     {
-      id: 'cspbinar1-strategy',
+      id: 'cspbd1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Binary & Data
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Binary & Data Representation.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP CS Principles for higher scores.
+- **Memorize** powers of 2: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024
+- Know both conversions: binary-to-decimal and decimal-to-binary
+- With n bits: 2^n values, range 0 to 2^n - 1
+- **Overflow** = value exceeds bit capacity. AP loves testing this concept
+- Know how text (ASCII/Unicode), images (RGB pixels), and sound (samples) are stored in binary
+- One additional bit DOUBLES the representable values — this is the key relationship
       `
     },
     {
-      id: 'cspbinar1-applied',
+      id: 'cspbd1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Binary & Data Representation on a free-response question. The best approach is:',
+            question: 'A system uses 3 bits to store color values. How many different colors can it represent?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '3',
+              '6',
+              '8',
+              '9'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 2,
+            explanation: '2^3 = 8 different values. With 3 bits, the possible values are 000, 001, 010, 011, 100, 101, 110, 111 = 8 total.'
           },
           {
-            question: 'When studying Binary & Data Representation, which strategy is most effective?',
+            question: 'A music file is sampled at 44,100 samples per second with 16 bits per sample. How many bits does one second of mono audio require?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '44,100',
+              '705,600',
+              '16',
+              '44,116'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: '44,100 samples/sec x 16 bits/sample = 705,600 bits per second. This is how file size scales with sampling rate and bit depth.'
           }
         ]
       }
     }
   ]
-}
+};

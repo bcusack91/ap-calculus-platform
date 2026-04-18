@@ -2,26 +2,41 @@ export const hgGlobalizationTradePart1Data = {
   topicSlug: 'hg-globalization-trade',
   sections: [
     {
-      id: 'hgglobal1-intro',
+      id: 'hggt1-intro',
       type: 'text' as const,
       content: `
-# 🌍 Globalization & International Trade
+# 🌍 Globalization & Trade
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — The Interconnected World Economy**
 
-Globalization & International Trade is a fundamental topic in AP Human Geography. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## World Systems Theory (Wallerstein)
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Globalization & International Trade |
-| **Key concept 2** | A critical component of understanding Globalization & International Trade |
-| **Key concept 3** | An essential element that connects Globalization & International Trade to broader themes |
+| Concept | Definition | Example |
+|---------|-----------|---------|
+| **Core countries** | Wealthy, industrialized, high-tech | US, Japan, Germany, UK |
+| **Periphery countries** | Low-income, raw material exporters | Many in Sub-Saharan Africa, parts of South Asia |
+| **Semi-periphery** | Emerging economies between core and periphery | China, Brazil, India, Mexico |
+| **Commodity chain** | Steps from raw material to consumer product | Cotton picked in India → fabric in Bangladesh → shirt sold in US |
+
+> 🔑 **AP Key Point:** Wallerstein's **World Systems Theory** divides the world into core, semi-periphery, and periphery — the AP exam expects you to classify countries and explain power relationships between them.
+
+---
+
+## Measuring Development
+
+| Indicator | What It Measures | Core vs. Periphery |
+|-----------|-----------------|-------------------|
+| **GDP per capita** | Average economic output per person | High in core, low in periphery |
+| **HDI** (Human Development Index) | Life expectancy + education + income | Near 1.0 in core; <0.5 in low-income |
+| **GII** (Gender Inequality Index) | Gender gaps in health, empowerment, labor | Lower (better) in core countries |
+| **Literacy rate** | % of adults who can read/write | >95% in core; varies widely in periphery |
+| **Infant Mortality Rate** | Deaths per 1,000 live births | <5 in core; >50 in some periphery |
       `
     },
     {
-      id: 'hgglobal1-quiz1',
+      id: 'hggt1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +44,155 @@ Globalization & International Trade is a fundamental topic in AP Human Geography
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Globalization & International Trade?',
+            question: 'According to Wallerstein World Systems Theory, periphery countries primarily:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Globalization & International Trade',
-              'A mathematical formula',
-              'A literary technique'
+              'Manufacture high-technology goods for export',
+              'Export raw materials to core countries at low prices',
+              'Control global financial institutions',
+              'Have the highest HDI scores'
             ],
             correctAnswer: 1,
-            explanation: 'Globalization & International Trade focuses on understanding key principles and patterns within AP Human Geography.'
+            explanation: 'Periphery countries are structurally disadvantaged: they export cheap raw materials to core countries, which add value through manufacturing and sell finished goods back at higher prices.'
           },
           {
-            question: 'Why is Globalization & International Trade important in AP Human Geography?',
+            question: 'The HDI (Human Development Index) combines which three dimensions?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'GDP, military spending, and trade balance',
+              'Life expectancy, education, and income',
+              'Urbanization rate, birth rate, and literacy',
+              'Exports, imports, and inflation'
             ],
             correctAnswer: 1,
-            explanation: 'Globalization & International Trade is a key topic in AP Human Geography that connects to multiple course themes.'
+            explanation: 'HDI measures three dimensions of human development: a long and healthy life (life expectancy), knowledge (education), and a decent standard of living (GNI per capita).'
           }
         ]
       }
     },
     {
-      id: 'hgglobal1-content',
+      id: 'hggt1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Effects of Globalization
 
-### Key concept 1
-The foundational principle underlying Globalization & International Trade. Understanding this concept is essential for mastering Globalization & International Trade in AP Human Geography.
+### Positive Effects
+- Increased trade and economic growth
+- Access to information and technology
+- Cultural exchange and awareness
+- Reduced extreme poverty in some regions (China, East Asia)
 
-### Key concept 2
-A critical component of understanding Globalization & International Trade. This builds on the previous concept and connects to broader themes in the course.
+### Negative Effects
+- Widening inequality between and within countries
+- Cultural homogenization (loss of local traditions)
+- Environmental degradation from increased production
+- Labor exploitation in developing countries
+- Brain drain from periphery to core
 
-### Key concept 3
-An essential element that connects Globalization & International Trade to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Key Trade Concepts
+
+| Term | Definition |
+|------|-----------|
+| **Free trade** | Elimination of tariffs and trade barriers between countries |
+| **Fair trade** | Ensuring producers in developing countries get reasonable prices |
+| **Neocolonialism** | Economic exploitation of developing countries without formal political control |
+| **Special Economic Zone (SEZ)** | Designated area with relaxed regulations to attract foreign investment |
+| **Export Processing Zone (EPZ)** | Area where imported materials are processed and re-exported (maquiladoras in Mexico) |
+| **Outsourcing** | Hiring external workers/companies, often in lower-cost countries |
       `
     },
     {
-      id: 'hgglobal1-input',
+      id: 'hggt1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Globalization & International Trade?
+1) Wealthy, industrialized countries that dominate global trade are called _______ countries.
 
-2) What concept describes a critical component of understanding Globalization & International Trade?
+2) Low-income countries that primarily export raw materials are called _______ countries.
 
-3) Name the term for an essential element that connects Globalization & International Trade to broader themes.
-
-Use the exact term from this part.
+3) The sequence of steps from raw material to finished consumer product is called a _______ chain.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Globalization & International Trade), Key concept 2 (A critical component of understanding Globalization & International Trade), and Key concept 3 (An essential element that connects Globalization & International Trade to broader themes).'
+        correctAnswers: ['core', 'periphery', 'commodity'],
+        hint1: 'The US, Japan, and Germany.',
+        hint2: 'The opposite end of the world system.',
+        hint3: 'Also called a supply chain or value chain.',
+        explanation: 'Core = wealthy industrialized countries. Periphery = low-income raw material exporters. Commodity chain = steps from raw material to consumer product.'
       }
     },
     {
-      id: 'hgglobal1-dropdown',
+      id: 'hggt1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Concept** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Globalization & International Trade is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'A US company hires call center workers in India for lower wages. This is ___',
+            options: ['Outsourcing', 'Core-periphery reversal', 'Protectionism', 'Fair trade']
           },
           {
-            label: 'A critical component of understanding Globalization & International Trade describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A French company controls diamond mines in West Africa while the local population remains impoverished. This is ___',
+            options: ['Neocolonialism', 'Free trade', 'Supranationalism', 'Devolution']
           },
           {
-            label: 'An essential element that connects Globalization & International Trade to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'China building factories near ports with tax breaks for foreign companies has created ___',
+            options: ['Special Economic Zones (SEZs)', 'Free trade agreements', 'Commodity chains', 'Maquiladoras']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Globalization & International Trade. Key concept 2 — A critical component of understanding Globalization & International Trade. Key concept 3 — An essential element that connects Globalization & International Trade to broader themes.'
+        correctAnswers: ['Outsourcing', 'Neocolonialism', 'Special Economic Zones (SEZs)'],
+        hint1: 'Moving jobs to lower-cost countries.',
+        hint2: 'Economic exploitation without formal political control.',
+        hint3: 'Designated areas with relaxed regulations.',
+        explanation: 'Outsourcing = hiring cheaper labor abroad. Neocolonialism = economic exploitation. SEZs = zones designed to attract foreign investment.'
       }
     },
     {
-      id: 'hgglobal1-strategy',
+      id: 'hggt1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Globalization
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Globalization & International Trade.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Human Geography for higher scores.
+- **Wallerstein core/periphery/semi-periphery** — be able to classify any country and explain WHY
+- Know how commodity chains create unequal exchange (raw materials cheap, finished goods expensive)
+- **Maquiladoras** (Mexico-US border factories) are a frequently tested example of EPZs
+- Understand both **positive and negative** effects of globalization — AP FRQs often ask for both
+- **Neocolonialism** vs **colonialism**: political control vs economic control
       `
     },
     {
-      id: 'hgglobal1-applied',
+      id: 'hggt1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Globalization & International Trade on a free-response question. The best approach is:',
+            question: 'Cocoa beans grown in Ghana are shipped to Switzerland, processed into chocolate, and sold worldwide at 20x the price Ghana received. This BEST illustrates:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Fair trade practices benefiting producers',
+              'How commodity chains create unequal exchange between core and periphery',
+              'The success of free trade agreements',
+              'Ghana transitioning to a core country'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The commodity chain adds most value during processing (in core countries), not during raw material extraction (in periphery countries). Ghana gets a tiny fraction of the final product value.'
           },
           {
-            question: 'When studying Globalization & International Trade, which strategy is most effective?',
+            question: 'China is often classified as a semi-periphery country because:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'It has a weak economy with no manufacturing',
+              'It exports only raw materials like a periphery country',
+              'It has features of both core (manufacturing, technology) and periphery (cheap labor, exports)',
+              'It is a member of the EU'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 2,
+            explanation: 'Semi-periphery countries like China have characteristics of both: growing manufacturing and technology (core traits) alongside cheap labor and export-oriented production (periphery traits).'
           }
         ]
       }
     }
   ]
-}
+};

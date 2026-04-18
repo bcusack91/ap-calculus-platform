@@ -1,175 +1,87 @@
 export const microDemandSupplyEquilibriumPart1Data = {
   topicSlug: 'micro-demand-supply-equilibrium',
   sections: [
-    {
-      id: 'microdem1-intro',
-      type: 'text' as const,
-      content: `
-# 💰 Market Equilibrium
+    {id:'microdeq1-intro',type:'text' as const,content:`
+# ⚖️ Market Equilibrium & Applications
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Consumer & Producer Surplus, Double Shifts**
 
-Market Equilibrium is a fundamental topic in AP Microeconomics. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Consumer & Producer Surplus |
+| Deadweight Loss |
+| Double Shifts |
+| Allocative Efficiency |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Market Equilibrium |
-| **Key concept 2** | A critical component of understanding Market Equilibrium |
-| **Key concept 3** | An essential element that connects Market Equilibrium to broader themes |
-      `
-    },
-    {
-      id: 'microdem1-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of Market Equilibrium?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within Market Equilibrium',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'Market Equilibrium focuses on understanding key principles and patterns within AP Microeconomics.'
-          },
-          {
-            question: 'Why is Market Equilibrium important in AP Microeconomics?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'Market Equilibrium is a key topic in AP Microeconomics that connects to multiple course themes.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'microdem1-content',
-      type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
+> 🔑 **Key Concept:** At equilibrium, total economic surplus (CS + PS) is **maximized**. Any deviation from equilibrium (price controls, taxes, or market failures) creates **deadweight loss** — a reduction in total surplus.
+`},
+    {id:'microdeq1-surplus',type:'text' as const,content:`
+## 📖 Consumer & Producer Surplus
 
-### Key concept 1
-The foundational principle underlying Market Equilibrium. Understanding this concept is essential for mastering Market Equilibrium in AP Microeconomics.
+| Concept | Definition | Graphically |
+|---|---|---|
+| **Consumer Surplus (CS)** | Difference between what consumers are willing to pay and what they actually pay | Area BELOW the demand curve and ABOVE the market price |
+| **Producer Surplus (PS)** | Difference between what producers receive and the minimum they would accept | Area ABOVE the supply curve and BELOW the market price |
+| **Total Surplus** | CS + PS = total gains from trade | Triangle between D and S curves up to equilibrium quantity |
 
-### Key concept 2
-A critical component of understanding Market Equilibrium. This builds on the previous concept and connects to broader themes in the course.
+### Example
+- You're willing to pay $50 for a textbook but buy it for $30
+- Your consumer surplus = $50 − $30 = **$20**
+- The seller's cost is $15 but they sell for $30
+- Producer surplus = $30 − $15 = **$15**
+- Total surplus from this trade = $20 + $15 = **$35**
 
-### Key concept 3
-An essential element that connects Market Equilibrium to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'microdem1-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+### Allocative Efficiency
+- Achieved at market equilibrium where **MB = MC** (demand = supply)
+- Total surplus (CS + PS) is **maximized**
+- Every unit BELOW equilibrium quantity has MB > MC → should be produced
+- Every unit ABOVE equilibrium quantity has MC > MB → should NOT be produced
 
-1) What term refers to the foundational principle underlying Market Equilibrium?
+### Deadweight Loss (DWL)
+- Lost surplus when the market does NOT operate at equilibrium quantity
+- Created by: price controls, taxes, monopoly, externalities
+- Represents trades that WOULD have been mutually beneficial but don't occur
+- DWL is the cost of market inefficiency
 
-2) What concept describes a critical component of understanding Market Equilibrium?
+> 🔑 **AP Connection:** You MUST be able to identify CS, PS, and DWL on a graph. CS is always the triangle above price, below demand. PS is always the triangle below price, above supply. DWL is the triangle of lost surplus.
+`},
+    {id:'microdeq1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
+      {question:'At the market equilibrium price and quantity, total economic surplus (consumer surplus + producer surplus) is:',options:['Zero — at equilibrium, neither consumers nor producers gain any economic benefit from the transaction','Equal to producer surplus only — consumers do not gain surplus at the equilibrium price','Maximized — every mutually beneficial trade occurs, and no deadweight loss exists','Minimized — equilibrium forces both consumer and producer surplus to their lowest possible levels'],correctAnswer:2,explanation:'At equilibrium (where supply = demand, so MB = MC), every unit where MB > MC is produced, and no unit where MC > MB is produced. This means every mutually beneficial trade occurs and total surplus (CS + PS) is at its maximum. Any deviation from this quantity — whether from price controls, taxes, or monopoly — reduces total surplus by creating deadweight loss.'},
+      {question:'What is "deadweight loss"?',options:['The revenue that the government collects from a per-unit tax on a good or service','The reduction in total surplus (CS + PS) that occurs when a market does not operate at the equilibrium quantity — representing mutually beneficial trades that fail to occur','The total cost of production that firms must pay regardless of the quantity they produce','The difference between the price consumers pay and the price producers receive in a perfectly competitive market'],correctAnswer:1,explanation:'Deadweight loss represents lost economic value — trades that would have benefited both buyers and sellers but don\'t happen due to market distortions (taxes, price controls, monopoly power). Graphically, it\'s the triangle of lost surplus between the supply and demand curves for units that are NOT produced/traded. DWL is pure loss — it goes to nobody.'}
+    ]}},
+    {id:'microdeq1-double',type:'text' as const,content:`
+## 📖 Double Shifts & Indeterminate Outcomes
 
-3) Name the term for an essential element that connects Market Equilibrium to broader themes.
+When BOTH demand and supply shift simultaneously, one variable (P or Q) becomes **indeterminate** — you can determine the direction of one but not the other without knowing relative magnitudes.
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Market Equilibrium), Key concept 2 (A critical component of understanding Market Equilibrium), and Key concept 3 (An essential element that connects Market Equilibrium to broader themes).'
-      }
-    },
-    {
-      id: 'microdem1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Market Equilibrium is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Market Equilibrium describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Market Equilibrium to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Market Equilibrium. Key concept 2 — A critical component of understanding Market Equilibrium. Key concept 3 — An essential element that connects Market Equilibrium to broader themes.'
-      }
-    },
-    {
-      id: 'microdem1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
+### Double Shift Outcomes
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Market Equilibrium.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+| D Shift | S Shift | Price | Quantity |
+|---|---|---|---|
+| D ↑ | S ↑ | **Indeterminate** | ↑ |
+| D ↑ | S ↓ | ↑ | **Indeterminate** |
+| D ↓ | S ↑ | ↓ | **Indeterminate** |
+| D ↓ | S ↓ | **Indeterminate** | ↓ |
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Microeconomics for higher scores.
-      `
-    },
-    {
-      id: 'microdem1-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain Market Equilibrium on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying Market Equilibrium, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
-    }
+### How to Remember
+- If both shifts push price in the **same direction**, price change is **determinate** but Q is indeterminate
+- If both shifts push quantity in the **same direction**, quantity change is **determinate** but P is indeterminate
+- If shifts push both P and Q in different directions, determine which variable has conflicting forces → that variable is indeterminate
+
+### Example
+News: (1) A heat wave increases demand for lemonade AND (2) A lemon shortage reduces the supply of lemonade.
+- D shifts RIGHT (higher demand) → pushes P ↑ and Q ↑
+- S shifts LEFT (lower supply) → pushes P ↑ and Q ↓
+- Price: BOTH push P ↑ → **P definitely increases** ✅
+- Quantity: D says Q ↑ but S says Q ↓ → **Q is indeterminate** ❓
+
+> 🔑 **AP Connection:** Double shift questions appear frequently on the AP exam. The answer is ALWAYS that one variable changes in a definite direction and the other is "indeterminate" or "ambiguous." If you confidently answer both, you're probably wrong.
+`},
+    {id:'microdeq1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
+      {question:'If demand for a product increases simultaneously with an increase in supply, what can we say about equilibrium price and quantity?',options:['Both price and quantity will definitely increase because both shifts are in the "increase" direction','Quantity will definitely increase, but the effect on price is indeterminate — it could rise, fall, or stay the same depending on the relative magnitudes of the shifts','Price will definitely increase, but the effect on quantity is indeterminate and depends on the size of each shift','Both price and quantity are indeterminate — we cannot predict the direction of either change'],correctAnswer:1,explanation:'D ↑ pushes both P ↑ and Q ↑. S ↑ pushes P ↓ and Q ↑. Both shifts push Q in the same direction (UP) → Q definitely increases. But D pushes P up while S pushes P down — conflicting forces → P is indeterminate. The price outcome depends on which shift is larger: if demand increases more, P rises; if supply increases more, P falls; if they\'re equal, P stays the same.'},
+      {question:'A new technology reduces production costs (increasing supply) while consumer preferences shift away from the product (decreasing demand). What happens to price?',options:['Price is indeterminate — we need to know the relative magnitudes of the two shifts','Price definitely increases because new technology makes the product more valuable','Price definitely decreases — both the supply increase and demand decrease push price downward','Price definitely stays the same because the two effects perfectly cancel each other out'],correctAnswer:2,explanation:'S ↑ pushes P ↓ (more supply at every price). D ↓ pushes P ↓ (less demand at every price). Both shifts push price in the same direction (DOWN) → price definitely decreases. However, S ↑ pushes Q ↑ while D ↓ pushes Q ↓ — conflicting forces → quantity is indeterminate. When both shifts reinforce each other on one variable, that variable is determinate; the other is indeterminate.'}
+    ]}}
   ]
-}
+};

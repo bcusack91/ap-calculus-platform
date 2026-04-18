@@ -2,26 +2,57 @@ export const cspAlgorithmsProgrammingPart1Data = {
   topicSlug: 'csp-algorithms-programming',
   sections: [
     {
-      id: 'cspalgor1-intro',
+      id: 'cspap1-intro',
       type: 'text' as const,
       content: `
-# 🖥️ Algorithms & Programming
+# 💻 Algorithms & Programming
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Abstraction, Procedures, and Modularity**
 
-Algorithms & Programming is a fundamental topic in AP CS Principles. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Abstraction in Programming
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Algorithms & Programming |
-| **Key concept 2** | A critical component of understanding Algorithms & Programming |
-| **Key concept 3** | An essential element that connects Algorithms & Programming to broader themes |
+**Abstraction** means hiding complex details and exposing only what is necessary. It simplifies programs by managing complexity.
+
+| Level | Example |
+|-------|---------|
+| **Low-level** | Binary code (0110 1001) |
+| **Assembly** | MOV AX, 5 |
+| **High-level language** | x = 5 |
+| **Library/API** | sort(myList) |
+
+> 🔑 Abstraction allows programmers to use complex features without understanding their internal implementation. You use \`sort()\` without knowing the sorting algorithm inside.
+
+---
+
+## Procedures (Functions)
+
+A **procedure** is a named group of instructions that performs a specific task.
+
+\`\`\`
+PROCEDURE greet(name)
+{
+    DISPLAY("Hello, ")
+    DISPLAY(name)
+}
+
+greet("Alice")    // Output: Hello, Alice
+greet("Bob")      // Output: Hello, Bob
+\`\`\`
+
+### Benefits of Procedures
+| Benefit | Description |
+|---------|-----------|
+| **Reusability** | Write once, call many times |
+| **Readability** | Named procedures explain the code purpose |
+| **Modularity** | Break large programs into manageable pieces |
+| **Debugging** | Fix a bug in one place, fixed everywhere |
+| **Collaboration** | Team members work on different procedures |
       `
     },
     {
-      id: 'cspalgor1-quiz1',
+      id: 'cspap1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +60,168 @@ Algorithms & Programming is a fundamental topic in AP CS Principles. This part i
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Algorithms & Programming?',
+            question: 'What is the main purpose of abstraction in programming?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Algorithms & Programming',
-              'A mathematical formula',
-              'A literary technique'
+              'To make programs run faster',
+              'To manage complexity by hiding unnecessary details',
+              'To make programs use less memory',
+              'To prevent all bugs'
             ],
             correctAnswer: 1,
-            explanation: 'Algorithms & Programming focuses on understanding key principles and patterns within AP CS Principles.'
+            explanation: 'Abstraction manages complexity. When you call sort(), you do not need to know whether it uses merge sort or quicksort internally. This lets you focus on WHAT you want to do, not HOW it works internally.'
           },
           {
-            question: 'Why is Algorithms & Programming important in AP CS Principles?',
+            question: 'A procedure is called three times in a program. How many times is the procedure code written?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Three times',
+              'Once — it is defined once and called three times',
+              'Zero times if it is built in',
+              'It depends on the programming language'
             ],
             correctAnswer: 1,
-            explanation: 'Algorithms & Programming is a key topic in AP CS Principles that connects to multiple course themes.'
+            explanation: 'A key benefit of procedures is reusability. The procedure is DEFINED once but can be CALLED as many times as needed. This avoids code duplication.'
           }
         ]
       }
     },
     {
-      id: 'cspalgor1-content',
+      id: 'cspap1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Parameters and Return Values
 
-### Key concept 1
-The foundational principle underlying Algorithms & Programming. Understanding this concept is essential for mastering Algorithms & Programming in AP CS Principles.
+\`\`\`
+PROCEDURE square(n)
+{
+    RETURN n * n
+}
 
-### Key concept 2
-A critical component of understanding Algorithms & Programming. This builds on the previous concept and connects to broader themes in the course.
+result ← square(5)     // result = 25
+DISPLAY(square(3))      // Displays 9
+\`\`\`
 
-### Key concept 3
-An essential element that connects Algorithms & Programming to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Term | Definition |
+|------|-----------|
+| **Parameter** | Variable in the procedure definition that receives input |
+| **Argument** | Actual value passed when calling the procedure |
+| **Return value** | Value sent back to the caller |
+
+### Procedural Abstraction
+When you call \`calculateAverage(scores)\`, you do not need to know the implementation. The procedure name and parameters tell you WHAT it does, not HOW.
+
+## APIs and Libraries
+An **API** (Application Programming Interface) defines how software components interact. A **library** is a collection of pre-written procedures.
+
+\`\`\`
+// Using a library to create a random number
+randomNum ← RANDOM(1, 100)  // Returns random integer between 1 and 100
+\`\`\`
+
+> 🔑 APIs enable **modularity** — complex systems built from independent, interchangeable components. You can swap one component without affecting the rest.
+
+## Simulations
+Programs that model real-world processes. Simulations use:
+- **Random number generation** for unpredictable events
+- **Simplifying assumptions** to make the model manageable
+- Benefits: cheaper, faster, and safer than real experiments
+- Limitation: only as accurate as the assumptions made
       `
     },
     {
-      id: 'cspalgor1-input',
+      id: 'cspap1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Algorithms & Programming?
+1) A named group of instructions that performs a specific task is called a _______.
 
-2) What concept describes a critical component of understanding Algorithms & Programming?
+2) The value passed into a procedure call is called an _______.
 
-3) Name the term for an essential element that connects Algorithms & Programming to broader themes.
-
-Use the exact term from this part.
+3) A collection of pre-written procedures made available for programmers to use is a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Algorithms & Programming), Key concept 2 (A critical component of understanding Algorithms & Programming), and Key concept 3 (An essential element that connects Algorithms & Programming to broader themes).'
+        correctAnswers: ['procedure', 'argument', 'library'],
+        hint1: 'Also called a function or method.',
+        hint2: 'The actual value you provide when calling.',
+        hint3: 'A library of reusable code.',
+        explanation: 'Procedure = named code block. Argument = value passed in. Library = pre-built procedures.'
       }
     },
     {
-      id: 'cspalgor1-dropdown',
+      id: 'cspap1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Concept** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Algorithms & Programming is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Using sort(myList) without knowing the internal algorithm demonstrates ___',
+            options: ['Abstraction', 'Iteration', 'Binary search', 'Data compression']
           },
           {
-            label: 'A critical component of understanding Algorithms & Programming describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'In PROCEDURE add(a, b), a and b are ___',
+            options: ['Parameters', 'Arguments', 'Return values', 'Global variables']
           },
           {
-            label: 'An essential element that connects Algorithms & Programming to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A program that models traffic flow using random events is a ___',
+            options: ['Simulation', 'Database', 'Compiler', 'Search engine']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Algorithms & Programming. Key concept 2 — A critical component of understanding Algorithms & Programming. Key concept 3 — An essential element that connects Algorithms & Programming to broader themes.'
+        correctAnswers: ['Abstraction', 'Parameters', 'Simulation'],
+        hint1: 'Hiding internal details.',
+        hint2: 'They receive values in the definition.',
+        hint3: 'It simulates reality.',
+        explanation: 'Hiding details = abstraction. Definition variables = parameters. Modeling reality = simulation.'
       }
     },
     {
-      id: 'cspalgor1-strategy',
+      id: 'cspap1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Algorithms & Programming
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Algorithms & Programming.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP CS Principles for higher scores.
+- **Abstraction** reduces complexity — know examples at every level (binary to APIs)
+- Know the difference: **parameter** (in definition) vs **argument** (in call)
+- Procedures that RETURN values vs procedures that just DISPLAY — the AP exam distinguishes these
+- **RANDOM(a, b)** returns an integer from a to b inclusive — used in simulations
+- Simulations are NOT perfectly accurate — they depend on assumptions and simplifications
+- APIs and libraries are examples of procedural abstraction
       `
     },
     {
-      id: 'cspalgor1-applied',
+      id: 'cspap1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Algorithms & Programming on a free-response question. The best approach is:',
+            question: 'PROCEDURE mystery(a, b)\n{\n    RETURN a + b\n}\nx ← mystery(3, mystery(1, 2))\nWhat is the value of x?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '3',
+              '5',
+              '6',
+              '9'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 2,
+            explanation: 'Inner call: mystery(1, 2) returns 1 + 2 = 3. Outer call: mystery(3, 3) returns 3 + 3 = 6. Nested procedure calls are evaluated from the inside out.'
           },
           {
-            question: 'When studying Algorithms & Programming, which strategy is most effective?',
+            question: 'A student uses a simulation to model the spread of a disease. Which is a limitation of this approach?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Simulations always produce identical results',
+              'The results are only as accurate as the assumptions built into the model',
+              'Simulations take longer than real experiments',
+              'Simulations cannot use random numbers'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Simulations simplify reality. If the model assumes the disease spreads at a fixed rate but it actually varies, the results will be inaccurate. Simulations are limited by their assumptions.'
           }
         ]
       }
     }
   ]
-}
+};

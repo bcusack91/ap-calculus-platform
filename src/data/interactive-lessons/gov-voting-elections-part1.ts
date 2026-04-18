@@ -1,175 +1,91 @@
 export const govVotingElectionsPart1Data = {
   topicSlug: 'gov-voting-elections',
   sections: [
-    {
-      id: 'govvotin1-intro',
-      type: 'text' as const,
-      content: `
-# 🏛️ Voting & Elections
+    {id:'govvotin1-intro',type:'text' as const,content:`
+# 🗳️ Voting & Elections
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — How Americans Participate in Democracy**
 
-Voting & Elections is a fundamental topic in AP US Government. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Expansion of Suffrage |
+| Voter Turnout & Demographics |
+| Types of Elections |
+| The Electoral College |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Voting & Elections |
-| **Key concept 2** | A critical component of understanding Voting & Elections |
-| **Key concept 3** | An essential element that connects Voting & Elections to broader themes |
-      `
-    },
-    {
-      id: 'govvotin1-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of Voting & Elections?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within Voting & Elections',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'Voting & Elections focuses on understanding key principles and patterns within AP US Government.'
-          },
-          {
-            question: 'Why is Voting & Elections important in AP US Government?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'Voting & Elections is a key topic in AP US Government that connects to multiple course themes.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'govvotin1-content',
-      type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
+> 🔑 **Key Concept:** The AP exam focuses on **why Americans vote (or don't)**, how the **Electoral College** works, and how **constitutional amendments** progressively expanded voting rights to more groups.
+`},
+    {id:'govvotin1-suffrage',type:'text' as const,content:`
+## 📖 Expansion of Suffrage
 
-### Key concept 1
-The foundational principle underlying Voting & Elections. Understanding this concept is essential for mastering Voting & Elections in AP US Government.
+Voting rights expanded through amendments and legislation over two centuries:
 
-### Key concept 2
-A critical component of understanding Voting & Elections. This builds on the previous concept and connects to broader themes in the course.
+| Year | Change | Mechanism |
+|---|---|---|
+| **1870** | Cannot deny vote based on **race** | 15th Amendment |
+| **1920** | Cannot deny vote based on **sex** | 19th Amendment |
+| **1961** | Washington D.C. residents can vote for president | 23rd Amendment |
+| **1964** | Cannot require **poll taxes** in federal elections | 24th Amendment |
+| **1965** | Banned **literacy tests** and other discriminatory practices | Voting Rights Act |
+| **1971** | Voting age lowered to **18** | 26th Amendment (prompted by Vietnam War — "old enough to fight, old enough to vote") |
 
-### Key concept 3
-An essential element that connects Voting & Elections to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'govvotin1-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+### Voter Turnout Factors
+| Factor | Effect on Turnout |
+|---|---|
+| **Education** | Higher education → higher turnout (strongest predictor) |
+| **Income** | Higher income → higher turnout |
+| **Age** | Older voters → higher turnout (18–24 age group lowest) |
+| **Race** | Historically lower minority turnout (barriers); gap has narrowed |
+| **Registration laws** | Motor Voter Act (1993) made registration easier; same-day registration increases turnout |
+| **Election type** | Presidential elections > midterms > local (presidential ~60%; midterms ~40%) |
 
-1) What term refers to the foundational principle underlying Voting & Elections?
+### Why Don't Americans Vote?
+- **Registration burden** — unlike many democracies, U.S. voters must register themselves
+- **Election Day on Tuesday** — many working people can't easily get to polls
+- **Two-party system** — some voters feel unrepresented
+- **Rational ignorance/apathy** — belief that one vote doesn't matter
+- **Voter fatigue** — frequent elections at all levels
 
-2) What concept describes a critical component of understanding Voting & Elections?
+> 🔑 **AP Connection:** The AP exam tests the **socioeconomic model of voting** — education and income are the strongest predictors of turnout. Be ready to interpret data tables showing turnout by demographic group.
+`},
+    {id:'govvotin1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
+      {question:'Which demographic factor is the STRONGEST predictor of voter turnout in the United States?',options:['Geographic region — voters in Southern states consistently turn out at higher rates than other regions','Education level — individuals with higher levels of education vote at significantly higher rates than those with less education','Gender — women consistently vote at rates more than double those of men across all elections','Religious affiliation — members of organized religions vote at dramatically higher rates than non-religious citizens'],correctAnswer:1,explanation:'Research consistently shows education is the strongest predictor of voter turnout. College-educated citizens vote at rates 20-30 percentage points higher than those without a high school diploma. Education increases political knowledge, civic engagement, and the skills needed to navigate the voting process.'},
+      {question:'The 26th Amendment (1971) lowered the voting age from 21 to 18. What was the primary argument for this change?',options:['Research showed that 18-year-olds were more politically informed than older voters and would improve election outcomes','Congress wanted to increase voter turnout by adding younger voters who would be more likely to participate','If 18-year-olds were old enough to be drafted and fight in the Vietnam War, they should be old enough to vote for the leaders sending them to war','The Supreme Court ruled that the 14th Amendment\'s Equal Protection Clause required equal voting ages in all states'],correctAnswer:2,explanation:'The "old enough to fight, old enough to vote" argument drove the 26th Amendment. During the Vietnam War, hundreds of thousands of 18-20 year olds were drafted and sent to war but could not vote for or against the leaders making those decisions. The amendment was ratified in just 107 days — the fastest ratification in U.S. history.'}
+    ]}},
+    {id:'govvotin1-electoral',type:'text' as const,content:`
+## 📖 The Electoral College
 
-3) Name the term for an essential element that connects Voting & Elections to broader themes.
+### How It Works
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Voting & Elections), Key concept 2 (A critical component of understanding Voting & Elections), and Key concept 3 (An essential element that connects Voting & Elections to broader themes).'
-      }
-    },
-    {
-      id: 'govvotin1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Voting & Elections is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Voting & Elections describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Voting & Elections to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Voting & Elections. Key concept 2 — A critical component of understanding Voting & Elections. Key concept 3 — An essential element that connects Voting & Elections to broader themes.'
-      }
-    },
-    {
-      id: 'govvotin1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
+| Step | Detail |
+|---|---|
+| **Total electors** | 538 (435 House + 100 Senate + 3 D.C.) |
+| **To win** | Majority = **270 electoral votes** |
+| **Allocation** | Each state gets electors equal to its total congressional delegation (House + Senate) |
+| **Winner-take-all** | 48 states + D.C. award ALL electoral votes to the state's popular vote winner (exceptions: Maine and Nebraska use congressional district method) |
+| **No majority?** | House of Representatives chooses the president (each state delegation gets 1 vote) — 12th Amendment |
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Voting & Elections.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+### Arguments For & Against
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP US Government for higher scores.
-      `
-    },
-    {
-      id: 'govvotin1-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain Voting & Elections on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying Voting & Elections, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
-    }
+| For | Against |
+|---|---|
+| Preserves federalism — states matter as units | Candidate can win without the popular vote (2000, 2016) |
+| Protects small states — minimum of 3 electors | "Battleground state" focus — candidates ignore "safe" states |
+| Encourages coalition-building across regions | Winner-take-all means millions of votes are effectively "wasted" |
+| Provides decisive outcomes (usually) | Disproportionate representation — small states overrepresented per capita |
+
+### Electoral College Math (Key Insight)
+- California: ~39 million people, 54 electoral votes → ~722,000 people per elector
+- Wyoming: ~580,000 people, 3 electoral votes → ~193,000 people per elector
+- Result: A Wyoming voter has roughly **3.7x the electoral influence** of a California voter
+
+> 🔑 **AP Connection:** The AP exam frequently asks about the Electoral College's **winner-take-all** feature and how it creates "battleground" or "swing" states. You may also be asked to evaluate arguments for and against reform.
+`},
+    {id:'govvotin1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
+      {question:'What happens if no presidential candidate wins a majority (270) of electoral votes?',options:['The candidate with the most electoral votes automatically becomes president regardless of the margin','The election is decided by the House of Representatives, where each state delegation casts one vote for president (12th Amendment)','The Supreme Court steps in to determine the winner based on which candidate won the national popular vote','A runoff election is held between the top two candidates within 30 days of the original election'],correctAnswer:1,explanation:'Under the 12th Amendment, if no candidate wins 270 electoral votes, the House of Representatives chooses the president — but each state delegation gets only ONE vote (not each individual representative). This happened in 1824, when the House chose John Quincy Adams over Andrew Jackson, who had won the most electoral and popular votes.'},
+      {question:'Why does the Electoral College\'s "winner-take-all" system create "battleground" or "swing" states?',options:['Because all states have exactly the same number of electoral votes, making every state equally competitive','Because winner-take-all means candidates focus resources on competitive states where the outcome is uncertain, ignoring states that reliably vote for one party','Because the Constitution requires candidates to campaign in every state equally, making some states more difficult to win','Because swing states receive more federal funding than other states, giving their voters more influence'],correctAnswer:1,explanation:'Under winner-take-all rules, winning California by 1 vote or 5 million votes yields the same 54 electoral votes. Candidates therefore focus on states where the outcome is uncertain (Ohio, Pennsylvania, Arizona, etc.) because flipping a swing state changes the electoral math. "Safe" states (deeply blue or red) receive little campaign attention because the outcome is predetermined.'}
+    ]}}
   ]
-}
+};

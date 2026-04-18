@@ -1,175 +1,86 @@
 export const govConstitutionalFoundationsPart1Data = {
   topicSlug: 'gov-constitutional-foundations',
   sections: [
-    {
-      id: 'govconst1-intro',
-      type: 'text' as const,
-      content: `
+    {id:'govconst1-intro',type:'text' as const,content:`
 # 🏛️ Constitutional Foundations
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — The Constitution & Founding Principles**
 
-Constitutional Foundations is a fundamental topic in AP US Government. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Enlightenment Influences |
+| The Articles of Confederation |
+| Constitutional Convention & Key Compromises |
+| Ratification Debate: Federalists vs. Anti-Federalists |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Constitutional Foundations |
-| **Key concept 2** | A critical component of understanding Constitutional Foundations |
-| **Key concept 3** | An essential element that connects Constitutional Foundations to broader themes |
-      `
-    },
-    {
-      id: 'govconst1-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of Constitutional Foundations?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within Constitutional Foundations',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'Constitutional Foundations focuses on understanding key principles and patterns within AP US Government.'
-          },
-          {
-            question: 'Why is Constitutional Foundations important in AP US Government?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'Constitutional Foundations is a key topic in AP US Government that connects to multiple course themes.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'govconst1-content',
-      type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
+> 🔑 **Key Concept:** The AP exam heavily tests the **philosophical foundations** of the Constitution (Locke, Montesquieu, Rousseau) and the **compromises** that made ratification possible. You must know both the Federalist AND Anti-Federalist arguments.
+`},
+    {id:'govconst1-influences',type:'text' as const,content:`
+## 📖 Enlightenment Foundations
 
-### Key concept 1
-The foundational principle underlying Constitutional Foundations. Understanding this concept is essential for mastering Constitutional Foundations in AP US Government.
+The Constitution was built on ideas from Enlightenment thinkers:
 
-### Key concept 2
-A critical component of understanding Constitutional Foundations. This builds on the previous concept and connects to broader themes in the course.
+| Thinker | Key Idea | Constitutional Application |
+|---|---|---|
+| **John Locke** | Natural rights (life, liberty, property); social contract; consent of the governed | Declaration of Independence; purpose of government is to protect rights |
+| **Montesquieu** | Separation of powers into branches | Three branches: legislative, executive, judicial |
+| **Rousseau** | Popular sovereignty — government authority from the people | "We the People"; republican government |
 
-### Key concept 3
-An essential element that connects Constitutional Foundations to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'govconst1-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+### Key Documents Before the Constitution
+- **Magna Carta (1215)** — limited the power of the English king; established rule of law
+- **English Bill of Rights (1689)** — parliamentary supremacy; protected individual rights
+- **Articles of Confederation (1781)** — first U.S. government; deliberately weak central government
 
-1) What term refers to the foundational principle underlying Constitutional Foundations?
+### Why the Articles Failed
+| Problem | Detail |
+|---|---|
+| **No executive branch** | No president to enforce laws |
+| **No national judiciary** | No courts to settle disputes between states |
+| **No taxing power** | Congress could request money but not compel states to pay |
+| **Unanimous consent for amendments** | Nearly impossible to change anything |
+| **Shays' Rebellion (1786–87)** | Armed uprising in Massachusetts that Congress couldn't suppress — demonstrated need for stronger government |
 
-2) What concept describes a critical component of understanding Constitutional Foundations?
+> 🔑 **AP Connection:** Shays' Rebellion is a key turning point — it convinced leaders like Madison and Hamilton that the Articles were too weak and that a Constitutional Convention was necessary.
+`},
+    {id:'govconst1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
+      {question:'Which Enlightenment thinker\'s ideas most directly influenced the Constitution\'s separation of powers into three branches?',options:['John Locke, who argued for natural rights and consent of the governed','Montesquieu, who argued that governmental power should be divided among separate branches to prevent tyranny','Thomas Hobbes, who argued for a strong absolute sovereign to prevent chaos','Adam Smith, who argued for free-market economics and limited government regulation'],correctAnswer:1,explanation:'Montesquieu\'s The Spirit of the Laws (1748) argued that liberty is best protected when governmental power is divided among legislative, executive, and judicial branches that can check each other. The Framers directly applied this principle in Articles I, II, and III of the Constitution.'},
+      {question:'Why did Shays\' Rebellion (1786–87) convince many American leaders that the Articles of Confederation needed to be replaced?',options:['The rebellion proved that individual states were too powerful and needed to be abolished entirely','The rebellion demonstrated that the national government under the Articles was too weak to maintain order, collect taxes, or raise an army to respond to domestic crises','The rebellion was led by foreign powers seeking to reclaim American territory after the Revolution','The rebellion succeeded in establishing a military dictatorship that the Articles could not prevent'],correctAnswer:1,explanation:'Shays\' Rebellion — an armed uprising by debt-ridden Massachusetts farmers — exposed the Articles\' fatal weakness: Congress had no power to tax, no standing army, and no executive to respond. The national government had to rely on state militias. This crisis directly motivated the calling of the Constitutional Convention in 1787.'}
+    ]}},
+    {id:'govconst1-compromises',type:'text' as const,content:`
+## 📖 Constitutional Convention & Key Compromises
 
-3) Name the term for an essential element that connects Constitutional Foundations to broader themes.
+The 1787 Constitutional Convention in Philadelphia produced the Constitution through several critical compromises:
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Constitutional Foundations), Key concept 2 (A critical component of understanding Constitutional Foundations), and Key concept 3 (An essential element that connects Constitutional Foundations to broader themes).'
-      }
-    },
-    {
-      id: 'govconst1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Constitutional Foundations is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Constitutional Foundations describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Constitutional Foundations to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Constitutional Foundations. Key concept 2 — A critical component of understanding Constitutional Foundations. Key concept 3 — An essential element that connects Constitutional Foundations to broader themes.'
-      }
-    },
-    {
-      id: 'govconst1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
+### The Great Compromise (Connecticut Compromise)
+| Plan | Proposed By | Details |
+|---|---|---|
+| **Virginia Plan** | James Madison | Bicameral legislature; both chambers based on **population** (favored large states) |
+| **New Jersey Plan** | William Paterson | Unicameral legislature; **equal representation** for each state (favored small states) |
+| **Great Compromise** | Roger Sherman | Bicameral: **House** based on population + **Senate** with equal representation (2 per state) |
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Constitutional Foundations.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+### Three-Fifths Compromise
+- Question: Should enslaved people be counted for representation in the House?
+- **Southern states** wanted to count them (more representatives) but not tax them
+- **Northern states** objected to counting people who had no rights
+- **Compromise:** Each enslaved person counted as **3/5 of a person** for representation AND taxation
+- This gave slaveholding states disproportionate political power until the Civil War
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP US Government for higher scores.
-      `
-    },
-    {
-      id: 'govconst1-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain Constitutional Foundations on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying Constitutional Foundations, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
-    }
+### Electoral College
+- Compromise between election by Congress vs. direct popular vote
+- Each state gets electors equal to its total congressional representation (House + Senate)
+- Designed to balance popular will with state-level representation and prevent "mob rule" (as the Framers saw it)
+
+### Commerce & Slave Trade Compromise
+- Congress could regulate interstate and foreign commerce but could NOT ban the slave trade for **20 years** (until 1808)
+- No export taxes (protecting Southern agricultural exports)
+
+> 🔑 **AP Connection:** The Three-Fifths Compromise and Electoral College are **heavily tested**. The AP exam asks how these compromises shaped American political development and whose interests they served.
+`},
+    {id:'govconst1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
+      {question:'What problem did the Great Compromise (Connecticut Compromise) resolve at the Constitutional Convention?',options:['The dispute between Northern and Southern states over whether enslaved people should be counted for taxation purposes','The conflict between large and small states over congressional representation — creating a bicameral legislature with population-based House and equal-representation Senate','The question of whether the president should be elected by Congress or by direct popular vote','The disagreement over whether the federal government should have the power to levy taxes on imports and exports'],correctAnswer:1,explanation:'The Great Compromise merged the Virginia Plan (representation by population) and New Jersey Plan (equal representation). The result was a bicameral Congress: the House of Representatives based on population (favoring large states) and the Senate with two senators per state (protecting small states).'},
+      {question:'How did the Three-Fifths Compromise affect political power in the early United States?',options:['It gave Northern industrial states more representatives in Congress because they had larger free populations','It gave slaveholding Southern states disproportionate representation in the House by counting enslaved people (who could not vote) toward population totals','It had no practical effect because enslaved people were counted equally in all states regardless of the compromise','It reduced the South\'s political power by excluding all enslaved people from census counts'],correctAnswer:1,explanation:'By counting each enslaved person as 3/5 of a person for apportionment, the compromise inflated Southern states\' representation in the House (and the Electoral College, which is based on total congressional seats). This gave the South outsized political power despite enslaved people having no voting rights — a structural advantage that persisted until the 13th Amendment (1865).'}
+    ]}}
   ]
-}
+};

@@ -2,26 +2,45 @@ export const englangStyleWritingPart1Data = {
   topicSlug: 'englang-style-writing',
   sections: [
     {
-      id: 'englangs1-intro',
+      id: 'elsw1-intro',
       type: 'text' as const,
       content: `
-# ✍️ Style in Writing
+# 🖋️ Style in Writing
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Crafting Prose That Is Precise, Persuasive, and Purposeful**
 
-Style in Writing is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## What "Good Style" Means on AP Lang
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Style in Writing |
-| **Key concept 2** | A critical component of understanding Style in Writing |
-| **Key concept 3** | An essential element that connects Style in Writing to broader themes |
+AP style is not about sounding fancy. It is about rhetorical control:
+- Precise diction
+- Varied but purposeful syntax
+- Consistent tone
+- Clear emphasis
+- Audience-appropriate register
+
+---
+
+## Style Priorities
+
+| Priority | Why It Matters |
+|---------|----------------|
+| **Clarity** | Readers must follow your reasoning quickly |
+| **Precision** | Specific wording avoids vague claims |
+| **Control** | Syntax and transitions guide emphasis |
+| **Consistency** | Stable voice builds credibility |
+| **Energy** | Strategic variation keeps reader engaged |
+
+### Weak vs Strong Sentence
+- Weak: "There are many reasons this issue is important and people should think about it."
+- Strong: "Because housing costs now outpace wages in most metro areas, local governments must expand zoning flexibility and rental assistance."
+
+The strong version is concrete, specific, and actionable.
       `
     },
     {
-      id: 'englangs1-quiz1',
+      id: 'elsw1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +48,163 @@ Style in Writing is a fundamental topic in AP English Language. This part introd
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Style in Writing?',
+            question: 'Which sentence shows strongest AP writing style?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Style in Writing',
-              'A mathematical formula',
-              'A literary technique'
+              '"This thing is kind of bad in lots of ways for many reasons."',
+              '"Given rising flood risk and repeated infrastructure failures, the city should prioritize stormwater upgrades in vulnerable neighborhoods."',
+              '"There are issues and stuff to discuss."',
+              '"People have opinions about this topic."'
             ],
             correctAnswer: 1,
-            explanation: 'Style in Writing focuses on understanding key principles and patterns within AP English Language.'
+            explanation: 'This sentence is specific, precise, and policy-oriented. It identifies conditions (flood risk, failures) and proposes action (prioritize upgrades), demonstrating rhetorical control and clarity.'
           },
           {
-            question: 'Why is Style in Writing important in AP English Language?',
+            question: 'What is the best reason to vary sentence length in an AP essay?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'To appear sophisticated without changing meaning',
+              'To control pacing, emphasis, and reader attention',
+              'To avoid all short sentences',
+              'Because AP forbids simple sentences'
             ],
             correctAnswer: 1,
-            explanation: 'Style in Writing is a key topic in AP English Language that connects to multiple course themes.'
+            explanation: 'Sentence variation is a rhetorical tool. Longer sentences can develop nuance; shorter ones can emphasize key judgments. Variation should serve meaning, not decoration.'
           }
         ]
       }
     },
     {
-      id: 'englangs1-content',
+      id: 'elsw1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Style Moves You Can Use Immediately
 
-### Key concept 1
-The foundational principle underlying Style in Writing. Understanding this concept is essential for mastering Style in Writing in AP English Language.
+### Precision Upgrades
+| Weak Word | Stronger Alternative |
+|----------|----------------------|
+| thing | policy, practice, institution, pattern |
+| good/bad | equitable, effective, harmful, unsustainable |
+| a lot | substantially, markedly, consistently |
+| people | voters, students, workers, residents |
 
-### Key concept 2
-A critical component of understanding Style in Writing. This builds on the previous concept and connects to broader themes in the course.
+### Syntax Moves
+- Use periodic sentences for nuanced setup
+- Use short declaratives for key claims
+- Use parallelism for triadic emphasis
+- Use concession clauses ("While..., ...") for sophistication
 
-### Key concept 3
-An essential element that connects Style in Writing to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Rhythm Pattern Example
+"While short-term costs are unavoidable, long-term savings are measurable, equitable, and durable."
+
+- Concession clause adds nuance
+- Parallel adjective triad adds emphasis and cadence
+
+## Editing Pass for Style
+1. Replace vague nouns/verbs
+2. Tighten wordy phrases
+3. Check tone consistency
+4. Vary sentence openings
+5. Ensure transitions reflect logic
+
+### High-Value Revision
+Weak: "This shows that the issue matters a lot to everyone in society."
+Strong: "This pattern matters because it concentrates financial risk in communities already facing wage stagnation and housing scarcity."
       `
     },
     {
-      id: 'englangs1-input',
+      id: 'elsw1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Style in Writing?
+1) AP style emphasizes precision, clarity, and rhetorical _______.
 
-2) What concept describes a critical component of understanding Style in Writing?
+2) Replacing vague words like "thing" with specific nouns improves _______.
 
-3) Name the term for an essential element that connects Style in Writing to broader themes.
-
-Use the exact term from this part.
+3) A "While..., ..." structure often introduces _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Style in Writing), Key concept 2 (A critical component of understanding Style in Writing), and Key concept 3 (An essential element that connects Style in Writing to broader themes).'
+        correctAnswers: ['control', 'precision', 'concession'],
+        hint1: 'Writers control tone and emphasis intentionally.',
+        hint2: 'Specific wording quality.',
+        hint3: 'You acknowledge complexity before claim.',
+        explanation: 'Strong style reflects control. Specific vocabulary improves precision. "While" often signals concession.'
       }
     },
     {
-      id: 'englangs1-dropdown',
+      id: 'elsw1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Select the Stronger Style Choice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Style in Writing is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Best replacement for "people are affected" in a transit essay:',
+            options: ['Low-income commuters face longer travel times and reduced job access', 'Stuff happens to everyone', 'People have feelings', 'Things are different now']
           },
           {
-            label: 'A critical component of understanding Style in Writing describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A short sentence after two long sentences typically creates ___',
+            options: ['Emphasis and punch', 'Confusion only', 'Less clarity always', 'No effect']
           },
           {
-            label: 'An essential element that connects Style in Writing to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'For AP argument writing, style should be ___',
+            options: ['Purposeful and audience-aware', 'Decorative and vague', 'Overly complex at all times', 'Emotionally flat']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Style in Writing. Key concept 2 — A critical component of understanding Style in Writing. Key concept 3 — An essential element that connects Style in Writing to broader themes.'
+        correctAnswers: ['Low-income commuters face longer travel times and reduced job access', 'Emphasis and punch', 'Purposeful and audience-aware'],
+        hint1: 'Specific stakeholders and impacts.',
+        hint2: 'Length contrast highlights key point.',
+        hint3: 'Style serves persuasion, not ornament.',
+        explanation: 'Specific stakeholders improve precision. Short-after-long adds emphasis. Effective AP style is purposeful and audience-aware.'
       }
     },
     {
-      id: 'englangs1-strategy',
+      id: 'elsw1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Style in Writing
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Style in Writing.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- Prefer precise verbs/nouns over vague filler language
+- Keep diction aligned with your audience and argument
+- Use sentence-length variation for emphasis and pacing
+- Revise for concision: cut repetitive phrasing
+- Maintain a controlled voice; avoid abrupt register shifts
+- In timed writing, revise one paragraph deeply rather than skimming all
       `
     },
     {
-      id: 'englangs1-applied',
+      id: 'elsw1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Style in Writing on a free-response question. The best approach is:',
+            question: 'A draft says: "There are many ways this is bad and people should fix it." Which revision best improves style and argument quality?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '"This is bad."',
+              '"Because repeated lead-pipe failures contaminate drinking water, the city should prioritize replacement in high-risk neighborhoods within a two-year timeline."',
+              '"People should think about this issue seriously."',
+              '"The issue has many sides and complexities and things."'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'This revision is specific, causal, and actionable. It names the mechanism (lead-pipe failures), consequence (contamination), and policy action (timeline-based replacement).'
           },
           {
-            question: 'When studying Style in Writing, which strategy is most effective?',
+            question: 'Why does a controlled, precise style improve AP scores?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'It replaces the need for evidence',
+              'It helps readers follow reasoning and signals rhetorical competence',
+              'It guarantees sophistication automatically',
+              'It allows grammatical errors'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Precise style clarifies claims and analysis. AP readers reward prose that communicates reasoning effectively and demonstrates intentional rhetorical choices.'
           }
         ]
       }
     }
   ]
-}
+};

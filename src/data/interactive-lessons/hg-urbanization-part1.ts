@@ -2,26 +2,45 @@ export const hgUrbanizationPart1Data = {
   topicSlug: 'hg-urbanization',
   sections: [
     {
-      id: 'hgurbani1-intro',
+      id: 'hgurb1-intro',
       type: 'text' as const,
       content: `
-# 🌍 Urbanization & Urban Models
+# 🌍 Urbanization
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — The Growth of Cities**
 
-Urbanization & Urban Models is a fundamental topic in AP Human Geography. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## What Is Urbanization?
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Urbanization & Urban Models |
-| **Key concept 2** | A critical component of understanding Urbanization & Urban Models |
-| **Key concept 3** | An essential element that connects Urbanization & Urban Models to broader themes |
+**Urbanization** is the increasing percentage of a population living in urban areas. Two distinct measures:
+
+| Measure | Definition | Example |
+|---------|-----------|---------|
+| **Urbanization rate** | % of population living in cities | US: ~83%; India: ~35% |
+| **Urban growth rate** | Speed at which urban population increases | Lagos: ~3.5% per year |
+
+> 🔑 A country can have **high urbanization** (high % urban) but **low urban growth** (slow increase) — like the US. Or **low urbanization** but **high urban growth** — like sub-Saharan Africa.
+
+---
+
+## Models of Urban Structure
+
+| Model | Creator | Key Idea |
+|-------|---------|----------|
+| **Concentric Zone** | Burgess (1925) | City grows outward in rings from CBD |
+| **Sector Model** | Hoyt (1939) | Zones extend as wedges along transportation routes |
+| **Multiple Nuclei** | Harris & Ullman (1945) | City has several centers of activity, not just one CBD |
+| **Galactic City** | Harris (1990s) | Edge cities and suburbs surround a declining CBD |
+| **Latin American City** | Griffin-Ford | CBD + spine of wealth; disamenity zones on outskirts |
+| **African City** | De Blij | Three CBDs: colonial, traditional market, periodic market |
+| **Southeast Asian City** | McGee | Port zone + CBD; no single dominant center |
+
+The AP exam frequently asks you to compare these models and apply them to real cities.
       `
     },
     {
-      id: 'hgurbani1-quiz1',
+      id: 'hgurb1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +48,154 @@ Urbanization & Urban Models is a fundamental topic in AP Human Geography. This p
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Urbanization & Urban Models?',
+            question: 'The Burgess Concentric Zone Model suggests that cities grow:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Urbanization & Urban Models',
-              'A mathematical formula',
-              'A literary technique'
+              'In wedge-shaped sectors along highways',
+              'Outward in concentric rings from the CBD',
+              'Around multiple separate nuclei',
+              'Toward port areas and market zones'
             ],
             correctAnswer: 1,
-            explanation: 'Urbanization & Urban Models focuses on understanding key principles and patterns within AP Human Geography.'
+            explanation: 'Burgess proposed that cities expand from the Central Business District outward in rings: CBD → zone of transition → working class → middle class → commuter zone.'
           },
           {
-            question: 'Why is Urbanization & Urban Models important in AP Human Geography?',
+            question: 'A country with 25% of its population in cities but urban areas growing at 4% per year has:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'High urbanization, high urban growth',
+              'Low urbanization, high urban growth',
+              'High urbanization, low urban growth',
+              'Low urbanization, low urban growth'
             ],
             correctAnswer: 1,
-            explanation: 'Urbanization & Urban Models is a key topic in AP Human Geography that connects to multiple course themes.'
+            explanation: '25% urban = low urbanization level. But 4% growth rate = rapid urban growth. This is typical of Stage 2-3 countries experiencing rapid rural-to-urban migration.'
           }
         ]
       }
     },
     {
-      id: 'hgurbani1-content',
+      id: 'hgurb1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Key Urban Concepts
 
-### Key concept 1
-The foundational principle underlying Urbanization & Urban Models. Understanding this concept is essential for mastering Urbanization & Urban Models in AP Human Geography.
+| Term | Definition |
+|------|-----------|
+| **CBD** | Central Business District — commercial/financial core |
+| **Suburbanization** | Movement from city centers to suburbs (common in developed countries) |
+| **Counterurbanization** | Movement from urban to rural areas |
+| **Gentrification** | Wealthier residents moving into lower-income neighborhoods, raising property values |
+| **Edge city** | Suburban area with its own employment, shopping, and entertainment |
+| **Megacity** | Urban area with 10+ million people (Tokyo, Delhi, Shanghai) |
+| **Primate city** | Largest city dominates country disproportionately (Paris, London, Bangkok) |
+| **Rank-size rule** | nth largest city has 1/n the population of the largest city |
 
-### Key concept 2
-A critical component of understanding Urbanization & Urban Models. This builds on the previous concept and connects to broader themes in the course.
+### Primate City vs. Rank-Size Rule
 
-### Key concept 3
-An essential element that connects Urbanization & Urban Models to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- **Primate city pattern**: One city is 2-3x larger than the 2nd city (Bangkok, Paris)
+- **Rank-size pattern**: Smooth distribution — city sizes follow a predictable hierarchy
+- Most developing countries have **primate cities**; developed countries more often follow rank-size
       `
     },
     {
-      id: 'hgurbani1-input',
+      id: 'hgurb1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Urbanization & Urban Models?
+1) An urban area with 10 million or more people is called a _______.
 
-2) What concept describes a critical component of understanding Urbanization & Urban Models?
+2) When wealthier residents move into lower-income neighborhoods, raising property values, this is called _______.
 
-3) Name the term for an essential element that connects Urbanization & Urban Models to broader themes.
-
-Use the exact term from this part.
+3) The model where the largest city is 2-3x bigger than the second-largest is the _______ city pattern.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Urbanization & Urban Models), Key concept 2 (A critical component of understanding Urbanization & Urban Models), and Key concept 3 (An essential element that connects Urbanization & Urban Models to broader themes).'
+        correctAnswers: ['megacity', 'gentrification', 'primate'],
+        hint1: 'Tokyo, Delhi, and Shanghai are examples.',
+        hint2: 'Often displaces existing lower-income residents.',
+        hint3: 'One city dominates the urban hierarchy.',
+        explanation: 'Megacity = 10M+ population. Gentrification = wealthier residents moving into poorer areas. Primate city = one dominant city far larger than all others.'
       }
     },
     {
-      id: 'hgurbani1-dropdown',
+      id: 'hgurb1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Urban Model** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Urbanization & Urban Models is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'A city with a wealthy spine extending from the CBD and squatter settlements on the periphery follows the ___',
+            options: ['Latin American City Model', 'Concentric Zone Model', 'Multiple Nuclei Model', 'African City Model']
           },
           {
-            label: 'A critical component of understanding Urbanization & Urban Models describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A city where zones extend outward in wedges along major transportation routes follows the ___',
+            options: ['Sector Model (Hoyt)', 'Concentric Zone Model', 'Galactic City Model', 'Southeast Asian Model']
           },
           {
-            label: 'An essential element that connects Urbanization & Urban Models to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A sprawling metro area with edge cities and suburbs around a declining CBD follows the ___',
+            options: ['Galactic City Model', 'Concentric Zone Model', 'Latin American City Model', 'Sector Model']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Urbanization & Urban Models. Key concept 2 — A critical component of understanding Urbanization & Urban Models. Key concept 3 — An essential element that connects Urbanization & Urban Models to broader themes.'
+        correctAnswers: ['Latin American City Model', 'Sector Model (Hoyt)', 'Galactic City Model'],
+        hint1: 'Think of cities like Sao Paulo or Mexico City.',
+        hint2: 'Zones shaped by highways and rail lines.',
+        hint3: 'Think of modern American metropolitan areas like Houston or Atlanta.',
+        explanation: 'Latin American model = spine + disamenity zones. Hoyt sector model = wedges along transport. Galactic city = suburban sprawl with edge cities.'
       }
     },
     {
-      id: 'hgurbani1-strategy',
+      id: 'hgurb1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Causes of Urbanization Worldwide
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Urbanization & Urban Models.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+### In Developing Countries (rapid urbanization)
+1. **Rural-to-urban migration** — push: lack of rural jobs; pull: perceived urban opportunities
+2. **Natural increase** — young age structure in cities leads to high birth rates
+3. **Reclassification** — previously rural areas become classified as urban as they grow
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Human Geography for higher scores.
+### In Developed Countries (slow/stalled urbanization)
+1. **Suburbanization** dominates — people leave central cities for suburbs
+2. **Counterurbanization** — some move to rural areas (remote work enabling this trend)
+3. **Gentrification** — select inner-city neighborhoods see population growth
+
+> ⚠️ **AP Exam Tip:** Be prepared to analyze the CAUSES of urbanization in a specific region. The factors driving urbanization in Lagos, Nigeria differ significantly from those in London or Tokyo.
       `
     },
     {
-      id: 'hgurbani1-applied',
+      id: 'hgurb1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Urbanization & Urban Models on a free-response question. The best approach is:',
+            question: 'France largest city, Paris, has about 5 times the population of its second-largest city, Marseille. This pattern is best described by:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'The rank-size rule',
+              'The primate city pattern',
+              'The multiple nuclei model',
+              'The gravity model'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'When one city is disproportionately larger than the next (5x in this case), it is a primate city. The rank-size rule would predict Marseille at half the population of Paris.'
           },
           {
-            question: 'When studying Urbanization & Urban Models, which strategy is most effective?',
+            question: 'Which factor most directly explains rapid urbanization in sub-Saharan Africa today?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Gentrification of inner-city neighborhoods',
+              'Suburban sprawl driven by automobile ownership',
+              'Rural-to-urban migration driven by lack of rural economic opportunities',
+              'Government-planned new capital cities'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 2,
+            explanation: 'Rural-to-urban migration is the primary driver. Rural push factors (lack of jobs, services) and urban pull factors (perceived opportunities) are driving millions to cities like Lagos, Nairobi, and Kinshasa.'
           }
         ]
       }
     }
   ]
-}
+};

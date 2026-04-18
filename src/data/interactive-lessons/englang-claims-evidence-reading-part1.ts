@@ -2,26 +2,47 @@ export const englangClaimsEvidenceReadingPart1Data = {
   topicSlug: 'englang-claims-evidence-reading',
   sections: [
     {
-      id: 'englangc1-intro',
+      id: 'elcer1-intro',
       type: 'text' as const,
       content: `
-# ✍️ Claims & Evidence in Reading
+# 📖 Claims and Evidence in Reading
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Identifying What an Author Argues and How They Support It**
 
-Claims & Evidence in Reading is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Reading Arguments Like a Rhetorician
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Claims & Evidence in Reading |
-| **Key concept 2** | A critical component of understanding Claims & Evidence in Reading |
-| **Key concept 3** | An essential element that connects Claims & Evidence in Reading to broader themes |
+When you read a nonfiction passage on AP Lang, do not just ask, "What is this about?"
+Ask:
+- What is the author claiming?
+- What evidence supports that claim?
+- Is the evidence credible and sufficient?
+- How effectively is the claim developed?
+
+---
+
+## Types of Claims You Will Encounter
+
+| Claim Type | What It Does | Signal Words |
+|-----------|--------------|--------------|
+| **Factual claim** | Asserts what is true | "is," "are," "did" |
+| **Value claim** | Judges what is good/bad, right/wrong | "better," "ethical," "unjust" |
+| **Policy claim** | Recommends action | "should," "must," "ought" |
+| **Causal claim** | Links cause and effect | "because," "leads to," "results in" |
+
+### Example Passage Snippet
+"Schools should start no earlier than 8:30 AM because adolescent sleep cycles shift later during puberty, and districts that adopted later start times saw attendance and test scores rise."
+
+- Main claim: Schools should start later (policy claim)
+- Supporting reason: Teen sleep cycles shift (causal claim)
+- Evidence: District outcomes improved (data-based support)
+
+> 🔑 On AP multiple-choice, wrong answers often confuse **topic** with **claim**. Topic = broad subject. Claim = specific arguable assertion.
       `
     },
     {
-      id: 'englangc1-quiz1',
+      id: 'elcer1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +50,163 @@ Claims & Evidence in Reading is a fundamental topic in AP English Language. This
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Claims & Evidence in Reading?',
+            question: 'Which statement is a policy claim?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Claims & Evidence in Reading',
-              'A mathematical formula',
-              'A literary technique'
+              'Teenagers often get less sleep than adults.',
+              'Schools that start later report fewer tardies.',
+              'School start times should be moved to 8:30 AM or later.',
+              'Later start times are more common in urban districts.'
             ],
-            correctAnswer: 1,
-            explanation: 'Claims & Evidence in Reading focuses on understanding key principles and patterns within AP English Language.'
+            correctAnswer: 2,
+            explanation: 'Policy claims advocate action and are usually signaled by words like "should" or "must." "Schools should be moved..." explicitly proposes a change, making it a policy claim.'
           },
           {
-            question: 'Why is Claims & Evidence in Reading important in AP English Language?',
+            question: 'In rhetorical reading, what is the difference between topic and claim?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'They mean the same thing.',
+              'Topic is broad subject; claim is specific arguable assertion about that subject.',
+              'Topic is always emotional; claim is always factual.',
+              'Claim is broad; topic is narrow.'
             ],
             correctAnswer: 1,
-            explanation: 'Claims & Evidence in Reading is a key topic in AP English Language that connects to multiple course themes.'
+            explanation: 'Topic names what the text is about (e.g., education policy). Claim states what the author argues about that topic (e.g., schools should start later). AP questions often test this distinction.'
           }
         ]
       }
     },
     {
-      id: 'englangc1-content',
+      id: 'elcer1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Evidence Types in Passages
 
-### Key concept 1
-The foundational principle underlying Claims & Evidence in Reading. Understanding this concept is essential for mastering Claims & Evidence in Reading in AP English Language.
+| Evidence Type | Strength | What to Watch For |
+|--------------|----------|-------------------|
+| **Statistics/data** | Strong if sourced and contextualized | Sample size, source credibility, date |
+| **Expert testimony** | Strong if expertise is relevant | Is the expert qualified in THIS field? |
+| **Historical example** | Moderate-strong | Is the comparison truly analogous? |
+| **Anecdote** | Vivid but limited | Does one story stand in for many cases? |
+| **Hypothetical scenario** | Useful but speculative | Is it plausible and relevant? |
 
-### Key concept 2
-A critical component of understanding Claims & Evidence in Reading. This builds on the previous concept and connects to broader themes in the course.
+### Reading for Evidence Quality
+Use these checks:
+1. **Relevance**: Does this evidence directly support the claim?
+2. **Sufficiency**: Is there enough evidence, or only one example?
+3. **Credibility**: Is the source trustworthy?
+4. **Representativeness**: Is this typical, or cherry-picked?
 
-### Key concept 3
-An essential element that connects Claims & Evidence in Reading to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Common Weaknesses in AP Passages
+- Overgeneralizing from one anecdote
+- Using outdated statistics without context
+- Appealing to authority outside the expert's domain
+- Presenting correlation as proof of causation
+
+### Your Annotation Strategy
+Mark passages like this:
+- C = claim
+- E = evidence
+- Co = commentary (analysis connecting evidence to claim)
+- CA = counterargument
+- R = rebuttal
+
+This gives you a map of the argument before answering questions.
       `
     },
     {
-      id: 'englangc1-input',
+      id: 'elcer1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Claims & Evidence in Reading?
+1) A claim that recommends action using words like "should" is a _______ claim.
 
-2) What concept describes a critical component of understanding Claims & Evidence in Reading?
+2) Evidence must be both relevant and _______ to be persuasive.
 
-3) Name the term for an essential element that connects Claims & Evidence in Reading to broader themes.
-
-Use the exact term from this part.
+3) In annotation shorthand, the letter pair used for counterargument is _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Claims & Evidence in Reading), Key concept 2 (A critical component of understanding Claims & Evidence in Reading), and Key concept 3 (An essential element that connects Claims & Evidence in Reading to broader themes).'
+        correctAnswers: ['policy', 'sufficient', 'CA'],
+        hint1: 'It proposes policy/action.',
+        hint2: 'Enough quantity and depth.',
+        hint3: 'Counterargument initials.',
+        explanation: 'Policy claims advocate action. Evidence must be sufficient. CA = counterargument.'
       }
     },
     {
-      id: 'englangc1-dropdown',
+      id: 'elcer1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Evaluate the Support** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Claims & Evidence in Reading is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: '"My uncle quit social media and felt happier, so social media harms everyone." The weakness is ___',
+            options: ['Overgeneralization from anecdotal evidence', 'Lack of policy recommendation', 'Too many statistics', 'No emotional appeal']
           },
           {
-            label: 'A critical component of understanding Claims & Evidence in Reading describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: '"A 2025 longitudinal study of 15,000 students found..." This is strongest as ___',
+            options: ['Data-based evidence with strong credibility potential', 'Anecdotal support only', 'Circular reasoning', 'Pathos only']
           },
           {
-            label: 'An essential element that connects Claims & Evidence in Reading to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: '"Because two variables rise together, one causes the other." This likely commits ___',
+            options: ['Correlation-causation error', 'Concession', 'Ethos appeal', 'Rogerian structure']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Claims & Evidence in Reading. Key concept 2 — A critical component of understanding Claims & Evidence in Reading. Key concept 3 — An essential element that connects Claims & Evidence in Reading to broader themes.'
+        correctAnswers: ['Overgeneralization from anecdotal evidence', 'Data-based evidence with strong credibility potential', 'Correlation-causation error'],
+        hint1: 'One uncle is not everyone.',
+        hint2: 'Large longitudinal sample is strong data.',
+        hint3: 'Association is not automatic causation.',
+        explanation: 'Single anecdote overgeneralizes. Large long-term study is credible data. Correlation does not prove causation.'
       }
     },
     {
-      id: 'englangc1-strategy',
+      id: 'elcer1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Claims & Evidence in Reading
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Claims & Evidence in Reading.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- In MC passages, find the **main claim** first, then map each paragraph's support
+- Distinguish **what the author says** from **how well it is supported**
+- Watch for distractors that cite details not tied to the central claim
+- Evaluate source credibility and whether evidence is representative
+- If a question asks "the primary purpose of paragraph 4," think function: evidence, concession, rebuttal, transition, etc.
+- Fast annotation with C/E/CA/R saves time and improves accuracy
       `
     },
     {
-      id: 'englangc1-applied',
+      id: 'elcer1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Claims & Evidence in Reading on a free-response question. The best approach is:',
+            question: 'An author argues that urban parks reduce crime. She cites one neighborhood where crime fell after a park opened, but gives no broader data. Which evaluation is strongest?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'The evidence is conclusive because the example is vivid.',
+              'The evidence is suggestive but insufficient; one case cannot establish a general causal claim.',
+              'The argument is invalid because anecdotes are never allowed.',
+              'The claim is strong because it includes pathos.'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'A single case can illustrate a possibility but cannot prove a broad causal claim. Strong support would require wider data, controls, and repeated results across contexts.'
           },
           {
-            question: 'When studying Claims & Evidence in Reading, which strategy is most effective?',
+            question: 'A passage begins with a policy claim, then presents statistics, then acknowledges critics, then explains why the policy still stands. What is the best structural description?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Narrative only',
+              'Claim → Evidence → Concession → Rebuttal',
+              'Description → Definition → Anecdote',
+              'Counterclaim → Refutation → No thesis'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'The sequence matches a standard argumentative progression: state claim, support it, acknowledge opposing views, and rebut them. Recognizing this structure helps answer rhetorical function questions.'
           }
         ]
       }
     }
   ]
-}
+};

@@ -5,19 +5,55 @@ export const apushGildedAgePart1Data = {
       id: 'apushgil1-intro',
       type: 'text' as const,
       content: `
-# 🇺🇸 The Gilded Age & Progressive Era
+# 🇺🇸 The Gilded Age
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Industrialization, Immigration & Inequality (1870s–1900)**
 
-The Gilded Age & Progressive Era is a fundamental topic in AP US History. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Big Business & Industrial Titans |
+| Labor Movement |
+| Immigration & Urbanization |
+| 📌 Political Machines & Corruption |
+| Farmers' Populist Movement |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying The Gilded Age & Progressive Era |
-| **Key concept 2** | A critical component of understanding The Gilded Age & Progressive Era |
-| **Key concept 3** | An essential element that connects The Gilded Age & Progressive Era to broader themes |
+> 🔑 **Key Concept:** Mark Twain coined "Gilded Age" — glittering on the surface but corrupt underneath. The AP exam focuses on the **tension between rapid economic growth and extreme inequality**, and how workers, farmers, and immigrants responded.
+      `
+    },
+    {
+      id: 'apushgil1-business',
+      type: 'text' as const,
+      content: `
+## 📖 Big Business & Industrial Titans
+
+### The Second Industrial Revolution
+
+| Innovation | Impact |
+|-----------|--------|
+| **Steel** (Bessemer process) | Enabled skyscrapers, railroads, bridges |
+| **Railroads** | Transcontinental Railroad completed 1869; created national markets; standardized time zones |
+| **Oil** | John D. Rockefeller's Standard Oil; kerosene → gasoline |
+| **Electricity** | Thomas Edison (light bulb, power stations); transformed urban life |
+| **Telephone** | Alexander Graham Bell (1876); revolutionized communication |
+
+### The "Captains of Industry" / "Robber Barons"
+
+| Industrialist | Company / Industry | Key Strategy | Controversy |
+|---|---|---|---|
+| **Andrew Carnegie** | Carnegie Steel | **Vertical integration** — controlled every stage from iron mines to finished steel | Homestead Strike (1892); gave away \$350M in philanthropy |
+| **John D. Rockefeller** | Standard Oil | **Horizontal integration** — bought out competitors to create monopoly; trusts | Controlled 90% of U.S. oil refining by 1880 |
+| **Cornelius Vanderbilt** | Railroads | Consolidated competing rail lines | Stock manipulation; cut-throat competition |
+| **J.P. Morgan** | Banking / Finance | Financed mergers; bailed out U.S. government (1895) | Enormous concentration of financial power |
+
+### Key Economic Concepts
+
+- **Vertical integration:** One company controls all steps of production (Carnegie: mines → railroads → mills → sales)
+- **Horizontal integration:** One company buys all competitors at the same level (Rockefeller: bought rival refineries)
+- **Trusts:** Legal arrangement where multiple companies are managed by a single board — used to create monopolies
+- **Social Darwinism:** Applied Darwin's "survival of the fittest" to economics — wealth = merit; poverty = personal failure
+- **Gospel of Wealth:** Carnegie's essay arguing the rich had a duty to use their wealth for the public good (libraries, universities)
       `
     },
     {
@@ -29,144 +65,143 @@ The Gilded Age & Progressive Era is a fundamental topic in AP US History. This p
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of The Gilded Age & Progressive Era?',
+            question: 'The key difference between vertical and horizontal integration is:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within The Gilded Age & Progressive Era',
-              'A mathematical formula',
-              'A literary technique'
+              'Vertical integration controls all stages of production, while horizontal integration eliminates competitors at the same stage',
+              'Vertical integration is legal while horizontal integration is always illegal',
+              'Vertical integration applies only to agriculture while horizontal applies to manufacturing',
+              'Vertical integration reduces costs while horizontal integration always increases them'
             ],
-            correctAnswer: 1,
-            explanation: 'The Gilded Age & Progressive Era focuses on understanding key principles and patterns within AP US History.'
+            correctAnswer: 0,
+            explanation: 'Carnegie\'s vertical integration meant owning everything from iron ore mines to steel mills to railroads that shipped the product. Rockefeller\'s horizontal integration meant buying out all other oil refineries until Standard Oil had a near-monopoly. Both strategies concentrated economic power but in different ways.'
           },
           {
-            question: 'Why is The Gilded Age & Progressive Era important in AP US History?',
+            question: 'Social Darwinism was used during the Gilded Age primarily to:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Justify extreme wealth inequality by arguing that economic success reflected natural superiority',
+              'Promote government regulation of monopolies and trusts',
+              'Support labor unions\' demands for higher wages and shorter hours',
+              'Advocate for immigration restrictions based on scientific evidence'
             ],
-            correctAnswer: 1,
-            explanation: 'The Gilded Age & Progressive Era is a key topic in AP US History that connects to multiple course themes.'
+            correctAnswer: 0,
+            explanation: 'Social Darwinists like Herbert Spencer and William Graham Sumner applied Darwin\'s evolution theory to society, arguing that the wealthy were "naturally" superior and the poor were "unfit." This ideology was used to oppose government regulation, labor protections, and social welfare programs — claiming they interfered with natural selection.'
           }
         ]
       }
     },
     {
-      id: 'apushgil1-content',
+      id: 'apushgil1-labor',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Labor, Immigration & Political Machines
 
-### Key concept 1
-The foundational principle underlying The Gilded Age & Progressive Era. Understanding this concept is essential for mastering The Gilded Age & Progressive Era in AP US History.
+### The Labor Movement
 
-### Key concept 2
-A critical component of understanding The Gilded Age & Progressive Era. This builds on the previous concept and connects to broader themes in the course.
+| Organization / Event | Details |
+|---------------------|---------|
+| **Knights of Labor** | Open to all workers (including women, African Americans); sought 8-hour day; declined after Haymarket (1886) |
+| **AFL (American Federation of Labor)** | Samuel Gompers; skilled workers only; craft unions; "bread and butter" goals (wages, hours, conditions) |
+| **Haymarket Affair** (1886) | Chicago labor rally; bomb killed police; 8 anarchists convicted; public turned against labor |
+| **Homestead Strike** (1892) | Carnegie Steel; Pinkerton guards vs. steelworkers; violent; union crushed |
+| **Pullman Strike** (1894) | Railroad workers; Eugene V. Debs; federal troops broke the strike; court injunction used against unions |
 
-### Key concept 3
-An essential element that connects The Gilded Age & Progressive Era to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### The "New Immigration" (1880s–1920s)
+
+- **Old immigrants** (pre-1880): Northern/Western Europe (Britain, Germany, Ireland, Scandinavia)
+- **New immigrants** (1880s+): Southern/Eastern Europe (Italy, Poland, Russia, Greece) + China, Japan
+- Settled in **ethnic urban neighborhoods** (Little Italy, Chinatown)
+- Faced **nativism**: Chinese Exclusion Act (1882) — first law banning immigration by nationality
+- **Ellis Island** (New York, 1892) — processing center for European immigrants
+- **Angel Island** (San Francisco) — harsh processing for Asian immigrants
+
+### Political Machines
+
+- **Tammany Hall** (New York City) — led by **Boss Tweed**
+- Provided services to immigrants (jobs, housing, food) in exchange for **votes**
+- Rampant corruption — graft, kickbacks, election fraud
+- **Thomas Nast** — political cartoonist who exposed Tammany Hall corruption
       `
     },
     {
       id: 'apushgil1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying The Gilded Age & Progressive Era?
+1) What business strategy did John D. Rockefeller use to control 90% of oil refining by buying out all competitors?
 
-2) What concept describes a critical component of understanding The Gilded Age & Progressive Era?
+2) What 1882 law was the first federal law to ban immigration based on nationality?
 
-3) Name the term for an essential element that connects The Gilded Age & Progressive Era to broader themes.
+3) What labor organization led by Samuel Gompers focused on practical "bread and butter" gains for skilled workers?
 
-Use the exact term from this part.
+Use the exact historical term.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying The Gilded Age & Progressive Era), Key concept 2 (A critical component of understanding The Gilded Age & Progressive Era), and Key concept 3 (An essential element that connects The Gilded Age & Progressive Era to broader themes).'
+        correctAnswers: ['horizontal integration', 'Chinese Exclusion Act', 'American Federation of Labor'],
+        hint1: 'Buying competitors at the same level of production — ___ integration',
+        hint2: 'Banned immigration from a specific country',
+        hint3: 'AFL — American ___ of ___',
+        explanation: 'Horizontal integration eliminated competitors at the same stage of production (Rockefeller bought rival refineries). The Chinese Exclusion Act (1882) reflected growing nativism and remained in effect until 1943. The AFL (founded 1886) focused on achievable goals for skilled craft workers.'
       }
     },
     {
       id: 'apushgil1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying The Gilded Age & Progressive Era is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Andrew Carnegie\'s essay arguing the wealthy must use their fortunes for public good was called the ___',
+            options: ['Gospel of Wealth', 'Social Darwinism', 'Communist Manifesto', 'Wealth of Nations']
           },
           {
-            label: 'A critical component of understanding The Gilded Age & Progressive Era describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'The 1894 railroad strike led by Eugene V. Debs was the ___',
+            options: ['Pullman Strike', 'Homestead Strike', 'Haymarket Affair', 'Great Railroad Strike']
           },
           {
-            label: 'An essential element that connects The Gilded Age & Progressive Era to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'The corrupt New York City political machine exposed by Thomas Nast was ___',
+            options: ['Tammany Hall', 'Pendleton Hall', 'Carnegie Hall', 'Faneuil Hall']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying The Gilded Age & Progressive Era. Key concept 2 — A critical component of understanding The Gilded Age & Progressive Era. Key concept 3 — An essential element that connects The Gilded Age & Progressive Era to broader themes.'
+        correctAnswers: ['Gospel of Wealth', 'Pullman Strike', 'Tammany Hall'],
+        hint1: 'Carnegie donated \$350 million to libraries, universities, and parks',
+        hint2: 'Federal troops and a court injunction were used to break this strike',
+        hint3: 'Led by Boss Tweed; controlled NYC politics through patronage and graft',
+        explanation: 'Carnegie\'s Gospel of Wealth (1889) argued philanthropy was the rich\'s duty — critics called it hypocritical given his brutal labor practices. The Pullman Strike (1894) showed the federal government would side with business against labor. Tammany Hall exemplified Gilded Age political corruption.'
       }
-    },
-    {
-      id: 'apushgil1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of The Gilded Age & Progressive Era.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP US History for higher scores.
-      `
     },
     {
       id: 'apushgil1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain The Gilded Age & Progressive Era on a free-response question. The best approach is:',
+            question: 'Which of the following BEST explains why the federal government generally sided with business over labor during the Gilded Age?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Courts used injunctions and the Sherman Antitrust Act against unions (not monopolies), and politicians depended on industrial donors for campaign funding',
+              'Constitutional amendments explicitly prohibited labor unions',
+              'Workers voluntarily chose not to organize because wages were rising rapidly',
+              'The federal government had no legal authority to intervene in labor disputes'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'Ironically, the Sherman Antitrust Act (1890), intended to break up monopolies, was initially used more against labor unions (as "conspiracies in restraint of trade") than against corporations. Politicians depended on wealthy industrialists for campaign support, and the prevailing ideology of laissez-faire economics discouraged government intervention on workers\' behalf.'
           },
           {
-            question: 'When studying The Gilded Age & Progressive Era, which strategy is most effective?',
+            question: 'A historian comparing the "old" immigration (pre-1880) with the "new" immigration (1880s–1920s) would note that the MOST significant difference was:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'New immigrants came predominantly from Southern and Eastern Europe, faced greater nativist hostility, and were more likely to settle in urban ethnic enclaves',
+              'Old immigrants settled exclusively in rural areas while new immigrants all became factory workers',
+              'New immigrants were primarily Protestant while old immigrants were Catholic',
+              'Old immigrants faced no discrimination while new immigrants were universally welcomed'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 0,
+            explanation: 'The "new" immigrants from Italy, Poland, Russia, and other Southern/Eastern European nations faced intense prejudice due to their Catholic or Jewish faith, unfamiliar languages, and perceived cultural differences. They concentrated in cities, forming ethnic neighborhoods, and organizations like the American Protective Association campaigned against them — a nativism that culminated in the restrictive Immigration Acts of the 1920s.'
           }
         ]
       }

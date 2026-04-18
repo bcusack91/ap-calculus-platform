@@ -2,26 +2,66 @@ export const whEastAsianEmpiresPart1Data = {
   topicSlug: 'wh-east-asian-empires',
   sections: [
     {
-      id: 'wheastas1-intro',
+      id: 'wheae1-intro',
       type: 'text' as const,
       content: `
-# 🌏 East Asian Empires & Isolation
+# 🌍 East Asian Empires (c. 1200–1450)
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — China, Japan, Korea & Southeast Asia**
 
-East Asian Empires & Isolation is a fundamental topic in AP World History. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Song Dynasty Innovations |
+| The Yuan (Mongol) Dynasty |
+| Japan: Feudalism & Shoguns |
+| 📌 Korea & Southeast Asia |
+| Cultural Connections |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying East Asian Empires & Isolation |
-| **Key concept 2** | A critical component of understanding East Asian Empires & Isolation |
-| **Key concept 3** | An essential element that connects East Asian Empires & Isolation to broader themes |
+> 🔑 **Key Concept:** The AP exam focuses on how East Asian societies developed distinct political systems while sharing **Confucian values, Chinese cultural influence, and interconnected trade networks**. Compare China's centralized bureaucracy with Japan's decentralized feudalism.
       `
     },
     {
-      id: 'wheastas1-quiz1',
+      id: 'wheae1-china',
+      type: 'text' as const,
+      content: `
+## 📖 Chinese Dynasties (1200–1450)
+
+### Song Dynasty (960–1279) — Economic Golden Age
+
+| Achievement | Significance |
+|------------|-------------|
+| **Neo-Confucianism** | Zhu Xi blended Confucianism with Buddhist/Daoist elements; emphasized self-cultivation, social harmony, and hierarchical relationships |
+| **Civil service exams** | Expanded access (theoretically open to all men); tested Confucian classics; created scholar-gentry elite |
+| **Economic revolution** | First paper money (*jiaozi*); joint-stock companies; massive iron/steel production |
+| **Agriculture** | Champa rice (fast-growing variety from Vietnam); population boom; southern China became economic center |
+| **Women's status** | Foot binding spread among elites; Neo-Confucian emphasis on female subordination; women's property rights declined |
+
+### Yuan Dynasty (1271–1368) — Mongol Rule
+
+| Feature | Details |
+|---------|---------|
+| **Founded by** | **Kublai Khan** (grandson of Genghis Khan) |
+| **Ethnic hierarchy** | Mongols at top; Central Asians second; northern Chinese third; southern Chinese at bottom |
+| **Trade** | Revitalized Silk Road; welcomed foreign merchants (Marco Polo); expanded maritime trade |
+| **Governance** | Used non-Chinese administrators to prevent Chinese resistance; suspended civil service exams initially |
+| **Fall** | Flooding, famine, plague, and **Red Turban Rebellion** → **Ming Dynasty** founded by Zhu Yuanzhang (1368) |
+
+### Ming Dynasty (1368–1644) — Restoration & Expansion
+
+| Feature | Details |
+|---------|---------|
+| **Restoration** | Restored Chinese rule; revived Confucian traditions; rebuilt the Great Wall |
+| **Zheng He voyages** (1405–1433) | Massive treasure fleets (300+ ships) explored Indian Ocean; reached East Africa; demonstrated Chinese power |
+| **Ended exploration** | After 1433, Ming emperors ended voyages; turned inward; focused on internal threats (Mongols) |
+| **Culture** | Porcelain production peaked; Forbidden City built in Beijing; Neo-Confucian orthodoxy |
+
+> ⚠️ **AP Alert:** Zheng He's voyages vs. European exploration is a classic AP comparison. Zheng He sailed earlier, with much larger ships, but China **chose to stop** exploring. Europe's fragmented, competitive states drove continued expansion. This contrast helps explain why Europe, not China, colonized the world.
+      `
+    },
+    {
+      id: 'wheae1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,144 +69,144 @@ East Asian Empires & Isolation is a fundamental topic in AP World History. This 
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of East Asian Empires & Isolation?',
+            question: 'The Ming Dynasty\'s decision to end Zheng He\'s voyages after 1433 is historically significant because it:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within East Asian Empires & Isolation',
-              'A mathematical formula',
-              'A literary technique'
+              'Demonstrates how political decisions, not just capability, shaped global history — China voluntarily withdrew from maritime exploration that later defined European power',
+              'Proved that maritime exploration was economically unprofitable for all civilizations',
+              'Was caused by military defeat at the hands of European navies',
+              'Had no long-term consequences for global power dynamics'
             ],
-            correctAnswer: 1,
-            explanation: 'East Asian Empires & Isolation focuses on understanding key principles and patterns within AP World History.'
+            correctAnswer: 0,
+            explanation: 'China had the world\'s most advanced navy in 1433 — far larger and more sophisticated than anything in Europe. But Confucian officials saw the voyages as wasteful and the Ming court shifted resources to defending against Mongol threats. This voluntary withdrawal left the Indian Ocean open for Portuguese and then other European powers, fundamentally shaping the next 500 years of history.'
           },
           {
-            question: 'Why is East Asian Empires & Isolation important in AP World History?',
+            question: 'Under the Yuan Dynasty, Kublai Khan used non-Chinese administrators primarily because:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'He wanted to prevent ethnically Chinese officials from gaining enough power to organize resistance against Mongol rule',
+              'There were no educated Chinese people available for government service',
+              'Non-Chinese administrators were always more competent than Chinese scholars',
+              'The Confucian examination system had never existed before Mongol rule'
             ],
-            correctAnswer: 1,
-            explanation: 'East Asian Empires & Isolation is a key topic in AP World History that connects to multiple course themes.'
+            correctAnswer: 0,
+            explanation: 'The Mongols were a tiny minority ruling a vast Chinese population. By placing Central Asians and other non-Chinese in key positions, Kublai Khan reduced the risk of Chinese elites mobilizing against Mongol rule. He also suspended the civil service examinations for a time, further marginalizing the Chinese scholar-gentry class.'
           }
         ]
       }
     },
     {
-      id: 'wheastas1-content',
+      id: 'wheae1-japan',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Japan & the Sinosphere
 
-### Key concept 1
-The foundational principle underlying East Asian Empires & Isolation. Understanding this concept is essential for mastering East Asian Empires & Isolation in AP World History.
+### Japanese Feudalism (c. 1185–1600)
 
-### Key concept 2
-A critical component of understanding East Asian Empires & Isolation. This builds on the previous concept and connects to broader themes in the course.
+| Feature | Details |
+|---------|---------|
+| **Emperor** | Ceremonial figurehead; real power held by military rulers |
+| **Shogun** | Supreme military commander; ruled through a bakufu (military government) |
+| **Daimyo** | Regional lords who controlled territories; commanded samurai |
+| **Samurai** | Warrior class bound by **bushido** (code of honor: loyalty, martial skill, honor, ritual suicide — seppuku) |
+| **Peasants** | 80%+ of population; rice farmers; lowest status but economically essential |
 
-### Key concept 3
-An essential element that connects East Asian Empires & Isolation to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+**Key comparison:** Japan's feudal system resembled European feudalism (decentralized, land-based, warrior elites) but developed independently.
+
+### Korea: Koryo & Choson Dynasties
+
+| Feature | Details |
+|---------|---------|
+| **Koryo Dynasty** (918–1392) | Adopted Chinese civil service exams, Buddhism, Confucianism; invented **metal movable type** (before Gutenberg!) |
+| **Mongol influence** | Korea became a Mongol vassal state; maintained some autonomy |
+| **Choson Dynasty** (1392–1897) | Neo-Confucian reforms; **hangul** alphabet invented (1443) to increase literacy |
+
+### Southeast Asia
+
+- **Khmer Empire** (Cambodia) — **Angkor Wat**; Hindu-Buddhist temple complex; massive hydraulic engineering (reservoirs)
+- **Srivijaya** (Indonesia) — Buddhist maritime empire controlling the Strait of Malacca; key to Indian Ocean trade
+- **Majapahit** (Java) — Hindu-Buddhist kingdom; controlled spice trade; later Islamized through merchant contact
+- **Dai Viet** (Vietnam) — Confucian governance adopted from China; resisted Chinese political control while accepting cultural influence
       `
     },
     {
-      id: 'wheastas1-input',
+      id: 'wheae1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying East Asian Empires & Isolation?
+1) What Chinese admiral led massive treasure fleets across the Indian Ocean between 1405 and 1433?
 
-2) What concept describes a critical component of understanding East Asian Empires & Isolation?
+2) What Japanese warrior code emphasized loyalty, honor, martial skill, and ritual suicide (seppuku)?
 
-3) Name the term for an essential element that connects East Asian Empires & Isolation to broader themes.
+3) What Korean alphabet, invented in 1443, was designed to increase literacy among common people?
 
-Use the exact term from this part.
+Use the exact historical term.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying East Asian Empires & Isolation), Key concept 2 (A critical component of understanding East Asian Empires & Isolation), and Key concept 3 (An essential element that connects East Asian Empires & Isolation to broader themes).'
+        correctAnswers: ['Zheng He', 'bushido', 'hangul'],
+        hint1: 'His fleet included ships up to 400 feet long — dwarfing European vessels',
+        hint2: 'The samurai code — "way of the warrior"',
+        hint3: 'Still used in both North and South Korea today',
+        explanation: 'Zheng He\'s voyages (1405–1433) demonstrated China\'s unmatched naval power before the Ming court chose to end exploration. Bushido shaped Japanese warrior culture for centuries and still influences Japanese society. Hangul was a revolutionary innovation — a phonetic alphabet designed to be easy to learn, created by King Sejong.'
       }
     },
     {
-      id: 'wheastas1-dropdown',
+      id: 'wheae1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying East Asian Empires & Isolation is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'The fast-growing rice variety imported from Vietnam that fueled Song Dynasty population growth was ___',
+            options: ['Champa rice', 'Basmati rice', 'Wild rice', 'Jasmine rice']
           },
           {
-            label: 'A critical component of understanding East Asian Empires & Isolation describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'The massive Hindu-Buddhist temple complex built by the Khmer Empire in Cambodia was ___',
+            options: ['Angkor Wat', 'Forbidden City', 'Taj Mahal', 'Borobudur']
           },
           {
-            label: 'An essential element that connects East Asian Empires & Isolation to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'The military commander who held real political power in feudal Japan (while the emperor was a figurehead) was the ___',
+            options: ['Shogun', 'Daimyo', 'Samurai', 'Emperor']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying East Asian Empires & Isolation. Key concept 2 — A critical component of understanding East Asian Empires & Isolation. Key concept 3 — An essential element that connects East Asian Empires & Isolation to broader themes.'
+        correctAnswers: ['Champa rice', 'Angkor Wat', 'Shogun'],
+        hint1: 'Imported from Southeast Asia; allowed multiple harvests per year',
+        hint2: 'The world\'s largest religious monument',
+        hint3: 'Title meaning "barbarian-subduing generalissimo"',
+        explanation: 'Champa rice\'s fast growth cycle allowed double-cropping, fueling the Song population boom. Angkor Wat demonstrates Indian cultural influence in Southeast Asia (Hindu then Buddhist). The shogunate system defined Japanese governance for nearly 700 years.'
       }
     },
     {
-      id: 'wheastas1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of East Asian Empires & Isolation.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'wheastas1-applied',
+      id: 'wheae1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain East Asian Empires & Isolation on a free-response question. The best approach is:',
+            question: 'Which comparison BEST captures the relationship between China and other East Asian societies during 1200–1450?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Japan, Korea, and Vietnam selectively adopted Chinese cultural elements (Confucianism, writing, governance models) while maintaining distinct political structures and cultural identities',
+              'China militarily conquered and directly governed Japan, Korea, and Vietnam throughout this period',
+              'East Asian societies had no contact with China and developed entirely independently',
+              'Japan, Korea, and Vietnam completely replaced their own cultures with Chinese culture'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'The concept of the "Sinosphere" (Chinese cultural sphere) is key: Korea adopted civil service exams and Neo-Confucianism but also invented hangul. Japan borrowed Chinese writing and Buddhism but developed a feudal political system unlike China\'s centralized bureaucracy. Vietnam adopted Confucian governance while fiercely resisting Chinese political control. This pattern of selective borrowing is a crucial AP concept.'
           },
           {
-            question: 'When studying East Asian Empires & Isolation, which strategy is most effective?',
+            question: 'An AP question compares Japanese feudalism with European feudalism. The MOST accurate statement would be:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Both developed decentralized systems with warrior elites (samurai/knights), regional lords (daimyo/lords), and peasant farmers, though they emerged independently with distinct cultural expressions',
+              'Japanese feudalism was directly borrowed from European feudalism through trade contacts',
+              'The two systems were completely dissimilar with no comparable features',
+              'Both systems were centralized monarchies with powerful kings controlling all territory'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 0,
+            explanation: 'Japanese and European feudalism are a classic AP comparison: both featured decentralized power, military aristocracies bound by codes of honor (bushido/chivalry), hereditary land control, and a large peasant class. However, they developed independently — demonstrating how similar political structures can emerge in different civilizations facing similar conditions (weak central government, need for local military defense).'
           }
         ]
       }

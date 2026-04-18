@@ -7,17 +7,42 @@ export const apushCivilWarPart1Data = {
       content: `
 # 🇺🇸 The Civil War
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Causes, Secession & Early War**
 
-The Civil War is a fundamental topic in AP US History. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Sectional Crisis of the 1850s |
+| Secession & the Confederacy |
+| Military Strategy & Key Battles |
+| 📌 Emancipation & Its Impact |
+| The Home Front |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying The Civil War |
-| **Key concept 2** | A critical component of understanding The Civil War |
-| **Key concept 3** | An essential element that connects The Civil War to broader themes |
+> 🔑 **Key Concept:** The AP exam emphasizes that the Civil War was fundamentally about **slavery** — its expansion into new territories was the central issue that broke the political system and led to secession.
+      `
+    },
+    {
+      id: 'apushciv1-causes',
+      type: 'text' as const,
+      content: `
+## 📖 The Sectional Crisis (1850–1861)
+
+### The Road to Disunion
+
+| Event | Date | Significance |
+|-------|------|-------------|
+| **Compromise of 1850** | 1850 | California admitted as free state; stronger Fugitive Slave Act; popular sovereignty in Utah/New Mexico territories |
+| **Fugitive Slave Act** | 1850 | Required Northerners to help return escaped enslaved people; angered abolitionists; pushed moderates toward anti-slavery |
+| **Uncle Tom's Cabin** | 1852 | Harriet Beecher Stowe's novel personalized slavery's horrors for Northern readers |
+| **Kansas-Nebraska Act** | 1854 | Stephen Douglas's law allowed **popular sovereignty** in Kansas/Nebraska — effectively repealed the Missouri Compromise line |
+| **"Bleeding Kansas"** | 1855–56 | Pro- and anti-slavery settlers fought violently; John Brown's Pottawatomie Massacre |
+| **Dred Scott v. Sandford** | 1857 | Supreme Court ruled: enslaved people are not citizens; Congress **cannot** ban slavery in territories; Missouri Compromise unconstitutional |
+| **Lincoln-Douglas Debates** | 1858 | Abraham Lincoln challenged Stephen Douglas for Illinois Senate; Lincoln argued slavery was morally wrong; Douglas defended popular sovereignty |
+| **John Brown's Raid** | 1859 | Attempted to seize federal arsenal at Harpers Ferry to arm enslaved people; failed; Brown executed; became martyr in the North, terrorist in the South |
+| **Election of 1860** | 1860 | Lincoln won with **zero Southern electoral votes**; purely sectional victory; South Carolina seceded within weeks |
+
+> ⚠️ **AP Alert:** The Dred Scott decision and Kansas-Nebraska Act destroyed the political center. By ruling that Congress couldn't restrict slavery in territories, the Court invalidated 30+ years of compromise — making the Civil War increasingly inevitable.
       `
     },
     {
@@ -29,144 +54,145 @@ The Civil War is a fundamental topic in AP US History. This part introduces the 
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of The Civil War?',
+            question: 'The Kansas-Nebraska Act (1854) was most controversial because it:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within The Civil War',
-              'A mathematical formula',
-              'A literary technique'
+              'Effectively repealed the Missouri Compromise by allowing popular sovereignty on slavery in territories north of the 36°30\' line',
+              'Banned slavery in all new territories acquired from Mexico',
+              'Required all states to accept fugitive slave laws',
+              'Granted citizenship to all free Black people in the United States'
             ],
-            correctAnswer: 1,
-            explanation: 'The Civil War focuses on understanding key principles and patterns within AP US History.'
+            correctAnswer: 0,
+            explanation: 'Stephen Douglas\'s Kansas-Nebraska Act allowed settlers in Kansas and Nebraska to vote on whether to allow slavery — even though both territories were north of the Missouri Compromise line (36°30\'), where slavery had been banned since 1820. This effectively destroyed the compromise and led to violent conflict in Kansas.'
           },
           {
-            question: 'Why is The Civil War important in AP US History?',
+            question: 'The Dred Scott decision (1857) intensified the sectional crisis MOST directly by:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Ruling that Congress had no power to ban slavery in any territory, eliminating the possibility of legislative compromise',
+              'Granting citizenship to all African Americans in the United States',
+              'Ordering the immediate emancipation of all enslaved people in border states',
+              'Upholding the constitutionality of the Missouri Compromise'
             ],
-            correctAnswer: 1,
-            explanation: 'The Civil War is a key topic in AP US History that connects to multiple course themes.'
+            correctAnswer: 0,
+            explanation: 'Chief Justice Taney\'s ruling declared that enslaved people were property protected by the Fifth Amendment, Congress could not restrict slavery in territories, and Black people (free or enslaved) could never be U.S. citizens. By removing Congress\'s ability to compromise on slavery\'s expansion, the decision pushed the nation closer to war.'
           }
         ]
       }
     },
     {
-      id: 'apushciv1-content',
+      id: 'apushciv1-war',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## The Civil War (1861–1865)
 
-### Key concept 1
-The foundational principle underlying The Civil War. Understanding this concept is essential for mastering The Civil War in AP US History.
+### Secession & Sides
 
-### Key concept 2
-A critical component of understanding The Civil War. This builds on the previous concept and connects to broader themes in the course.
+- **11 Confederate states** seceded (SC first, Dec. 1860); President: **Jefferson Davis**
+- **4 border states** (MO, KY, MD, DE) — slave states that stayed in the Union; Lincoln handled them carefully
+- **Union advantages:** Larger population (22M vs. 9M, 3.5M enslaved); industrial capacity; railroad network; naval superiority
+- **Confederate advantages:** Defensive war (fighting on home soil); skilled military officers (Robert E. Lee); motivation to protect their way of life
 
-### Key concept 3
-An essential element that connects The Civil War to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Emancipation Proclamation (Jan. 1, 1863)
+
+| Feature | Details |
+|---------|---------|
+| **What it did** | Declared enslaved people in **rebel states** free (did NOT free those in border states) |
+| **Military purpose** | Allowed African Americans to enlist in Union army; ~180,000 Black soldiers served |
+| **Diplomatic purpose** | Prevented Britain and France from recognizing the Confederacy (couldn\'t support a pro-slavery nation) |
+| **Limitations** | Only applied to areas the Union didn\'t control; full abolition required the **13th Amendment** (1865) |
+
+> 🔑 **AP Connection:** The Emancipation Proclamation transformed the war from a fight to preserve the Union into a fight to **end slavery**. This is a critical turning point on the AP exam.
+
+### Key Battles
+
+| Battle | Date | Significance |
+|--------|------|-------------|
+| **Fort Sumter** | Apr. 1861 | First shots of the war; Confederate attack on federal fort in Charleston harbor |
+| **Antietam** | Sept. 1862 | Bloodiest single day (23,000 casualties); Union "victory" gave Lincoln political cover to issue Emancipation Proclamation |
+| **Gettysburg** | July 1863 | Turning point; Lee's invasion of the North failed; ~50,000 total casualties over 3 days |
+| **Vicksburg** | July 1863 | Union gained control of the Mississippi River; split the Confederacy |
+| **Appomattox** | Apr. 1865 | Lee surrendered to Grant; effective end of the war |
       `
     },
     {
       id: 'apushciv1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying The Civil War?
+1) What document, issued on January 1, 1863, declared enslaved people in rebel states to be free?
 
-2) What concept describes a critical component of understanding The Civil War?
+2) What July 1863 battle is considered the turning point of the Civil War after Lee's failed invasion of the North?
 
-3) Name the term for an essential element that connects The Civil War to broader themes.
+3) What constitutional amendment, ratified in 1865, permanently abolished slavery throughout the United States?
 
-Use the exact term from this part.
+Use the exact historical term.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying The Civil War), Key concept 2 (A critical component of understanding The Civil War), and Key concept 3 (An essential element that connects The Civil War to broader themes).'
+        correctAnswers: ['Emancipation Proclamation', 'Battle of Gettysburg', '13th Amendment'],
+        hint1: 'Two words — Lincoln\'s proclamation about emancipation',
+        hint2: 'A battle in Pennsylvania — about 50,000 casualties over 3 days',
+        hint3: 'The ___th Amendment',
+        explanation: 'The Emancipation Proclamation (1863) transformed the war\'s purpose. The Battle of Gettysburg (July 1863) was Lee\'s last major offensive into the North. The 13th Amendment (1865) accomplished what the Proclamation could not — permanently ending slavery everywhere in the United States.'
       }
     },
     {
       id: 'apushciv1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Events** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying The Civil War is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'The 1857 Supreme Court case that ruled enslaved people could never be citizens was ___',
+            options: ['Dred Scott v. Sandford', 'Marbury v. Madison', 'McCulloch v. Maryland', 'Worcester v. Georgia']
           },
           {
-            label: 'A critical component of understanding The Civil War describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'The September 1862 battle that was the bloodiest single day of the war was ___',
+            options: ['Antietam', 'Gettysburg', 'Vicksburg', 'Fort Sumter']
           },
           {
-            label: 'An essential element that connects The Civil War to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'The concept allowing territorial settlers to vote on whether to permit slavery was called ___',
+            options: ['Popular sovereignty', 'Manifest Destiny', 'Nullification', 'Judicial review']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying The Civil War. Key concept 2 — A critical component of understanding The Civil War. Key concept 3 — An essential element that connects The Civil War to broader themes.'
+        correctAnswers: ['Dred Scott v. Sandford', 'Antietam', 'Popular sovereignty'],
+        hint1: 'Chief Justice Taney wrote the majority opinion',
+        hint2: 'About 23,000 casualties in Maryland; gave Lincoln cover for emancipation',
+        hint3: 'Advocated by Stephen Douglas; applied in Kansas-Nebraska Act',
+        explanation: 'Dred Scott (1857) was one of the worst Supreme Court decisions in history. Antietam (Sept. 1862) produced 23,000 casualties in a single day. Popular sovereignty — letting settlers decide on slavery — led to violent conflict in Kansas ("Bleeding Kansas").'
       }
-    },
-    {
-      id: 'apushciv1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of The Civil War.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP US History for higher scores.
-      `
     },
     {
       id: 'apushciv1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain The Civil War on a free-response question. The best approach is:',
+            question: 'Lincoln delayed issuing the Emancipation Proclamation until after the Battle of Antietam primarily because:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'He needed a Union military success so the Proclamation would appear as a position of strength rather than desperation',
+              'The Constitution required congressional approval before any executive order could take effect',
+              'He was waiting for the Confederate states to voluntarily abolish slavery',
+              'The border states had already agreed to gradual emancipation'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'Lincoln had drafted the Proclamation in July 1862 but his advisors cautioned that issuing it after Union defeats would look desperate. Antietam — while not a clear victory — stopped Lee\'s invasion and gave Lincoln the political credibility to reframe the war as a fight against slavery.'
           },
           {
-            question: 'When studying The Civil War, which strategy is most effective?',
+            question: 'Which statement BEST captures the historical significance of the Civil War?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'It resolved the question of whether states could secede, destroyed slavery, and established the supremacy of the federal government over the states',
+              'It had no lasting impact because Reconstruction quickly reversed all wartime gains',
+              'It was primarily a conflict over tariff policy between industrial and agricultural regions',
+              'It demonstrated that compromise was always possible between the North and South'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 0,
+            explanation: 'The Civil War permanently settled three fundamental questions: (1) secession is unconstitutional, (2) slavery is abolished (13th Amendment), and (3) federal authority supersedes state authority. These outcomes reshaped American government and society, though the promises of equality remained unfulfilled for another century.'
           }
         ]
       }

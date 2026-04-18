@@ -2,26 +2,42 @@ export const englangRhetoricalSituationPart1Data = {
   topicSlug: 'englang-rhetorical-situation',
   sections: [
     {
-      id: 'englangr1-intro',
+      id: 'elrs1-intro',
       type: 'text' as const,
       content: `
-# ✍️ The Rhetorical Situation
+# 🎯 The Rhetorical Situation (Reading)
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Analyzing How Writers Respond to Context, Audience, and Purpose**
 
-The Rhetorical Situation is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Defining the Rhetorical Situation
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying The Rhetorical Situation |
-| **Key concept 2** | A critical component of understanding The Rhetorical Situation |
-| **Key concept 3** | An essential element that connects The Rhetorical Situation to broader themes |
+The **rhetorical situation** is the set of circumstances that shapes a text. Every piece of writing exists within a situation that includes:
+
+| Component | Description | Key Questions |
+|-----------|-----------|---------------|
+| **Exigence** | The issue, problem, or need that prompts writing | What motivated this text? What problem does it address? |
+| **Speaker** | The person communicating | What is their background? What perspective do they bring? |
+| **Audience** | The intended readers/listeners | Who is this for? What do they already know or believe? |
+| **Purpose** | The goal of the communication | Is this meant to persuade, inform, entertain, or call to action? |
+| **Context** | The circumstances surrounding the text | What historical, cultural, or social factors are at play? |
+
+> 🔑 **Exigence** is the most frequently tested and least understood element. It is the specific trigger — the event, situation, or problem — that makes the writer feel compelled to communicate.
+
+---
+
+## Exigence in Action
+
+| Text | Exigence |
+|------|---------|
+| Martin Luther King Jr., "Letter from Birmingham Jail" | Fellow clergymen criticized his activism as "unwise and untimely" |
+| Rachel Carson, *Silent Spring* | Widespread, unchecked pesticide use was harming ecosystems |
+| Declaration of Independence | Britain continued to violate colonists' rights without redress |
       `
     },
     {
-      id: 'englangr1-quiz1',
+      id: 'elrs1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +45,165 @@ The Rhetorical Situation is a fundamental topic in AP English Language. This par
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of The Rhetorical Situation?',
+            question: 'What is the "exigence" of a text?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within The Rhetorical Situation',
-              'A mathematical formula',
-              'A literary technique'
+              'The author biography',
+              'The issue, event, or need that prompted the writer to communicate',
+              'The final paragraph of the text',
+              'The number of rhetorical devices used'
             ],
             correctAnswer: 1,
-            explanation: 'The Rhetorical Situation focuses on understanding key principles and patterns within AP English Language.'
+            explanation: 'Exigence is the specific trigger for writing — the problem, event, or situation that makes the writer feel compelled to respond. Without exigence, there is no reason for the text to exist.'
           },
           {
-            question: 'Why is The Rhetorical Situation important in AP English Language?',
+            question: 'A newspaper publishes an editorial the day after a school shooting, calling for new gun legislation. What is the exigence?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'The newspaper industry',
+              'The school shooting — the immediate event prompting the editorial',
+              'The editorial board',
+              'Gun legislation in general'
             ],
             correctAnswer: 1,
-            explanation: 'The Rhetorical Situation is a key topic in AP English Language that connects to multiple course themes.'
+            explanation: 'The school shooting is the specific event that prompted the editorial. It is the urgent issue that makes the writer feel compelled to act. This is the exigence — the trigger for the communication.'
           }
         ]
       }
     },
     {
-      id: 'englangr1-content',
+      id: 'elrs1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## How the Rhetorical Situation Shapes a Text
 
-### Key concept 1
-The foundational principle underlying The Rhetorical Situation. Understanding this concept is essential for mastering The Rhetorical Situation in AP English Language.
+Writers do not make choices in a vacuum. Every element of the rhetorical situation influences the text:
 
-### Key concept 2
-A critical component of understanding The Rhetorical Situation. This builds on the previous concept and connects to broader themes in the course.
+### Audience Shapes Tone and Diction
+| Audience | Likely Tone | Diction |
+|----------|-----------|---------|
+| Academic peers | Formal, objective | Technical terminology |
+| General public | Accessible, engaging | Everyday language |
+| Hostile audience | Conciliatory, measured | Careful, diplomatic phrasing |
+| Sympathetic audience | Passionate, direct | Emotionally charged language |
 
-### Key concept 3
-An essential element that connects The Rhetorical Situation to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Purpose Shapes Structure
+| Purpose | Structure |
+|---------|----------|
+| Persuade | Claim → Evidence → Counterargument → Rebuttal |
+| Inform | Introduction → Explanation → Examples → Summary |
+| Call to action | Problem → Urgency → Solution → Call to action |
+
+### Context Shapes Content
+- A speech during wartime emphasizes patriotism and sacrifice
+- An essay during an economic crisis focuses on jobs and financial security
+- A letter during a social movement appeals to justice and equality
+
+## Reading Strategy: SOAPSTone
+
+| Letter | Stands For | Question |
+|--------|-----------|----------|
+| **S** | Speaker | Who is speaking? |
+| **O** | Occasion | What is the occasion (exigence)? |
+| **A** | Audience | Who is the intended audience? |
+| **P** | Purpose | What is the purpose? |
+| **S** | Subject | What is the subject? |
+| **Tone** | Tone | What is the tone? |
       `
     },
     {
-      id: 'englangr1-input',
+      id: 'elrs1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying The Rhetorical Situation?
+1) The problem or event that prompts a writer to communicate is called the _______.
 
-2) What concept describes a critical component of understanding The Rhetorical Situation?
+2) When writing for a hostile audience, a writer will likely adopt a _______ tone.
 
-3) Name the term for an essential element that connects The Rhetorical Situation to broader themes.
-
-Use the exact term from this part.
+3) The SOAPSTone reading strategy stands for Speaker, Occasion, Audience, Purpose, Subject, and _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying The Rhetorical Situation), Key concept 2 (A critical component of understanding The Rhetorical Situation), and Key concept 3 (An essential element that connects The Rhetorical Situation to broader themes).'
+        correctAnswers: ['exigence', 'conciliatory', 'Tone'],
+        hint1: 'The trigger or urgency behind the text.',
+        hint2: 'Trying to reconcile rather than confront.',
+        hint3: 'The final letter in SOAPSTone.',
+        explanation: 'Exigence = the trigger. Conciliatory for hostile audiences. SOAPSTone ends with Tone.'
       }
     },
     {
-      id: 'englangr1-dropdown',
+      id: 'elrs1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Element** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying The Rhetorical Situation is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'In "Letter from Birmingham Jail," the clergymen who criticized MLK are the ___',
+            options: ['Audience (the people he is addressing)', 'Exigence', 'Context', 'Purpose']
           },
           {
-            label: 'A critical component of understanding The Rhetorical Situation describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'The Civil Rights Movement of the 1960s is the ___ for many of MLK writings',
+            options: ['Context (historical/social circumstances)', 'Audience', 'Purpose', 'Tone']
           },
           {
-            label: 'An essential element that connects The Rhetorical Situation to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A scientist writing for a general magazine would use ___ diction compared to a peer-reviewed journal',
+            options: ['More accessible, everyday', 'More technical, specialized', 'Identical', 'More formal and Latin-based']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying The Rhetorical Situation. Key concept 2 — A critical component of understanding The Rhetorical Situation. Key concept 3 — An essential element that connects The Rhetorical Situation to broader themes.'
+        correctAnswers: ['Audience (the people he is addressing)', 'Context (historical/social circumstances)', 'More accessible, everyday'],
+        hint1: 'He is writing TO the clergymen.',
+        hint2: 'The broader historical movement.',
+        hint3: 'General readers need simpler language.',
+        explanation: 'Clergymen = audience. Civil Rights Movement = context. General magazine = accessible diction.'
       }
     },
     {
-      id: 'englangr1-strategy',
+      id: 'elrs1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Rhetorical Situation
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of The Rhetorical Situation.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- ALWAYS start your rhetorical analysis by identifying the **rhetorical situation** (speaker, audience, exigence, purpose, context)
+- **Exigence** is the most commonly tested element — know it cold
+- Explain how the situation SHAPES the writer's choices (don't just list elements)
+- Use **SOAPSTone** as a pre-reading checklist for any passage
+- The AP rubric rewards connecting rhetorical choices to purpose and audience
+- Context questions test whether you understand WHY a text was written at that particular moment
       `
     },
     {
-      id: 'englangr1-applied',
+      id: 'elrs1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain The Rhetorical Situation on a free-response question. The best approach is:',
+            question: 'Frederick Douglass gave his speech "What to the Slave Is the Fourth of July?" on July 5, 1852, to a predominantly white abolitionist audience. What is the strategic significance of the DATE?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'It was a convenient scheduling decision',
+              'Speaking the day after July 4th highlights the hypocrisy of celebrating freedom while millions remain enslaved',
+              'He wanted to avoid crowds on July 4th',
+              'The date has no rhetorical significance'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Douglass deliberately leveraged the context of Independence Day to sharpen his argument. The juxtaposition of celebrating liberty while slavery exists makes the hypocrisy undeniable. This is the rhetorical situation shaping the text.'
           },
           {
-            question: 'When studying The Rhetorical Situation, which strategy is most effective?',
+            question: 'An author writes an opinion piece in the New York Times about income inequality. If the same author published the same argument in an academic economics journal, what would MOST likely change?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'The topic and thesis',
+              'The diction, tone, and level of technical detail — adjusted for a different audience',
+              'Nothing — good writing works for all audiences',
+              'Only the title'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Different audiences require different approaches. A newspaper audience expects accessible language and concrete examples. An academic audience expects technical terminology, citations, and formal tone. The audience shapes the writer-s choices.'
           }
         ]
       }
     }
   ]
-}
+};

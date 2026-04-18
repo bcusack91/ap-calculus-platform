@@ -1,175 +1,144 @@
 export const englitLongerFiction2Part1Data = {
-  topicSlug: 'englit-longer-fiction-2',
+  topicSlug: "englit-longer-fiction-2",
   sections: [
     {
-      id: 'englitlo1-intro',
+      id: "englitlo1-intro",
       type: 'text' as const,
-      content: `
-# 📖 Longer Fiction: Themes & Motifs
-
-**Part 1 of 7 — Core Concepts**
-
-Longer Fiction: Themes & Motifs is a fundamental topic in AP English Literature. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
-
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Longer Fiction: Themes & Motifs |
-| **Key concept 2** | A critical component of understanding Longer Fiction: Themes & Motifs |
-| **Key concept 3** | An essential element that connects Longer Fiction: Themes & Motifs to broader themes |
-      `
+      content: "# 📖 Longer Fiction II\n\n**Part 1 of 7 - Core Concepts, Analysis Skills, and AP Lit Application**\n\n---\n\n## Why Longer Fiction II Matters\n\nIn long narratives, secondary structures like subplots and foreshadowing become major interpretive evidence.\n\n| Core Concept | What To Notice | Why It Matters |\n|---|---|---|\n| **Subplot** | Secondary storyline interacting with main plot | Subplots can mirror or complicate themes |\n| **Foreshadowing** | Early clues about later developments | Shapes expectations and interpretive framing |\n| **Narrative Tension** | Sustained uncertainty and stakes | Drives reader engagement and thematic pressure |\n\n> AP Lit rewards interpretation supported by textual evidence, not plot summary."
     },
     {
-      id: 'englitlo1-quiz1',
+      id: "englitlo1-quiz1",
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: "**Concept Check**",
       exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of Longer Fiction: Themes & Motifs?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within Longer Fiction: Themes & Motifs',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'Longer Fiction: Themes & Motifs focuses on understanding key principles and patterns within AP English Literature.'
-          },
-          {
-            question: 'Why is Longer Fiction: Themes & Motifs important in AP English Literature?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'Longer Fiction: Themes & Motifs is a key topic in AP English Literature that connects to multiple course themes.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "Which statement best reflects the role of Subplot in literary analysis?",
+                  "options": [
+                        "A subplot is irrelevant filler.",
+                        "A subplot can deepen or challenge the central argument of the novel.",
+                        "A subplot must involve new main characters only.",
+                        "A subplot is the same as setting description."
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Subplot helps readers interpret meaning and authorial choice, not just identify a feature."
+            },
+            {
+                  "question": "What is usually the strongest AP Lit analytical move?",
+                  "options": [
+                        "Retell the plot in sequence",
+                        "Name literary devices without interpretation",
+                        "Connect textual details to a defensible interpretation about meaning",
+                        "Focus only on historical background"
+                  ],
+                  "correctAnswer": 2,
+                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+            }
+      ]
+}
     },
     {
-      id: 'englitlo1-content',
+      id: "englitlo1-content",
       type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
-
-### Key concept 1
-The foundational principle underlying Longer Fiction: Themes & Motifs. Understanding this concept is essential for mastering Longer Fiction: Themes & Motifs in AP English Literature.
-
-### Key concept 2
-A critical component of understanding Longer Fiction: Themes & Motifs. This builds on the previous concept and connects to broader themes in the course.
-
-### Key concept 3
-An essential element that connects Longer Fiction: Themes & Motifs to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+      content: "## Building Interpretation in Longer Fiction II\n\n### Analytical Workflow\n1. Identify a pattern in language, structure, or characterization\n2. Explain how that pattern shapes tone, perspective, or tension\n3. Connect the pattern to a broader thematic claim\n\n| Strong Commentary Move | Example Frame |\n|---|---|\n| Pattern + meaning | \"By emphasizing foreshadowing, the text suggests...\" |\n| Tension or contrast | \"Although the speaker appears X, narrative tension reveals...\" |\n| Form and effect | \"This structural choice shifts the reader from...to...\" |\n\n### Common Pitfalls\n- Device listing without explanation\n- Theme statements with no textual support\n- Summary replacing analysis\n- Overly absolute claims that ignore complexity\n\nAdvanced AP analysis explains how seemingly minor narrative strands intensify central conflicts."
     },
     {
-      id: 'englitlo1-input',
+      id: "englitlo1-input",
       type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the foundational principle underlying Longer Fiction: Themes & Motifs?
-
-2) What concept describes a critical component of understanding Longer Fiction: Themes & Motifs?
-
-3) Name the term for an essential element that connects Longer Fiction: Themes & Motifs to broader themes.
-
-Use the exact term from this part.
-      `,
+      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Longer Fiction: Themes & Motifs), Key concept 2 (A critical component of understanding Longer Fiction: Themes & Motifs), and Key concept 3 (An essential element that connects Longer Fiction: Themes & Motifs to broader themes).'
-      }
+      "boxes": 3,
+      "correctAnswers": [
+            "subplot",
+            "foreshadowing",
+            "narrative tension"
+      ],
+      "hint1": "Concept 1: Subplot",
+      "hint2": "Concept 2: Foreshadowing",
+      "hint3": "Concept 3: Narrative Tension",
+      "explanation": "Subplot, Foreshadowing, and Narrative Tension are core vocabulary for this unit."
+}
     },
     {
-      id: 'englitlo1-dropdown',
+      id: "englitlo1-dropdown",
       type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
+      content: "**Apply the Concept**",
       exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Longer Fiction: Themes & Motifs is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Longer Fiction: Themes & Motifs describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Longer Fiction: Themes & Motifs to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Longer Fiction: Themes & Motifs. Key concept 2 — A critical component of understanding Longer Fiction: Themes & Motifs. Key concept 3 — An essential element that connects Longer Fiction: Themes & Motifs to broader themes.'
-      }
+      "dropdowns": [
+            {
+                  "label": "Subplot in analysis usually refers to ___",
+                  "options": [
+                        "A secondary storyline that interacts with main themes",
+                        "Any random scene",
+                        "The final sentence only",
+                        "A vocabulary list"
+                  ]
+            },
+            {
+                  "label": "The best AP paragraph usually includes ___",
+                  "options": [
+                        "Claim, evidence, and commentary",
+                        "Plot summary only",
+                        "Device name lists",
+                        "Vocabulary definitions only"
+                  ]
+            },
+            {
+                  "label": "A defensible interpretation should be ___",
+                  "options": [
+                        "Text-supported and specific",
+                        "Purely personal with no evidence",
+                        "A broad moral lesson only",
+                        "A dictionary definition"
+                  ]
+            }
+      ],
+      "correctAnswers": [
+            "A secondary storyline that interacts with main themes",
+            "Claim, evidence, and commentary",
+            "Text-supported and specific"
+      ],
+      "hint1": "Think how subplot functions in meaning-making.",
+      "hint2": "Interpretation must be supported.",
+      "hint3": "Specific textual support is key.",
+      "explanation": "Strong AP analysis treats subplot as an interpretive tool, then develops claims through evidence and commentary."
+}
     },
     {
-      id: 'englitlo1-strategy',
+      id: "englitlo1-strategy",
       type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Longer Fiction: Themes & Motifs.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Literature for higher scores.
-      `
+      content: "## AP Exam Strategy: Longer Fiction II\n\n- Start with a claim about how subplot or foreshadowing shapes meaning\n- Use short quotations and explain them in context\n- Track contrast, shifts, and patterns across the whole passage\n- Avoid pure summary; prioritize interpretation\n- Qualify claims when text is ambiguous\n- Show how secondary plot elements reinforce or complicate the main claim."
     },
     {
-      id: 'englitlo1-applied',
+      id: "englitlo1-applied",
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: "**AP-Style Application**",
       exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain Longer Fiction: Themes & Motifs on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying Longer Fiction: Themes & Motifs, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "A student identifies foreshadowing in a passage but does not explain effect. What is the best revision?",
+                  "options": [
+                        "Add more plot details",
+                        "Explain how foreshadowing shapes tone or theme in that moment",
+                        "Replace all quotes with summary",
+                        "Switch to biographical information only"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+            },
+            {
+                  "question": "Which thesis move is strongest for AP Lit?",
+                  "options": [
+                        "Make an absolute claim with no nuance",
+                        "Advance a specific, defensible claim about how narrative tension contributes to meaning",
+                        "Retell the plot in one sentence",
+                        "List three literary terms without argument"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+            }
+      ]
+}
     }
   ]
-}
+};

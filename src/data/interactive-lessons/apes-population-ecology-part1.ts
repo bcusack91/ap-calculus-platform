@@ -2,26 +2,45 @@ export const apesPopulationEcologyPart1Data = {
   topicSlug: 'apes-population-ecology',
   sections: [
     {
-      id: 'apespopu1-intro',
+      id: 'apespe1-intro',
       type: 'text' as const,
       content: `
-# 🌿 Population Ecology
+# 🐾 Population Ecology
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Growth Models and Carrying Capacity**
 
-Population Ecology is a fundamental topic in AP Environmental Science. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Population Growth Models
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Population Ecology |
-| **Key concept 2** | A critical component of understanding Population Ecology |
-| **Key concept 3** | An essential element that connects Population Ecology to broader themes |
+| Model | Shape | Equation | Description |
+|-------|-------|----------|-----------|
+| **Exponential (J-curve)** | J-shaped | dN/dt = rN | Unlimited resources; population grows without limit |
+| **Logistic (S-curve)** | S-shaped | dN/dt = rN(K-N)/K | Growth slows as population approaches carrying capacity (K) |
+
+### Key Variables
+
+| Symbol | Meaning |
+|--------|---------|
+| **N** | Population size |
+| **r** | Intrinsic rate of natural increase (birth rate - death rate) |
+| **K** | Carrying capacity (maximum population an environment can sustain) |
+| **dN/dt** | Rate of population change over time |
+
+> 🔑 **AP Key Point:** Maximum growth rate in logistic growth occurs at **N = K/2** (half the carrying capacity). This is when (K-N)/K = 0.5, so the growth rate is rN/2.
+
+---
+
+## Reproductive Strategies
+
+| Strategy | Characteristics | Examples |
+|----------|---------------|---------|
+| **r-selected** | Many offspring, little parental care, small body, short lifespan | Insects, bacteria, mice, weeds |
+| **K-selected** | Few offspring, high parental care, large body, long lifespan | Elephants, whales, humans, eagles |
       `
     },
     {
-      id: 'apespopu1-quiz1',
+      id: 'apespe1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +48,150 @@ Population Ecology is a fundamental topic in AP Environmental Science. This part
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Population Ecology?',
+            question: 'In logistic growth, population growth rate is HIGHEST when:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Population Ecology',
-              'A mathematical formula',
-              'A literary technique'
+              'The population is near zero',
+              'The population is at carrying capacity (K)',
+              'The population is at K/2 (half of carrying capacity)',
+              'Resources are completely depleted'
             ],
-            correctAnswer: 1,
-            explanation: 'Population Ecology focuses on understanding key principles and patterns within AP Environmental Science.'
+            correctAnswer: 2,
+            explanation: 'At N = K/2, the logistic equation produces maximum growth rate. Below K/2, population is too small for maximum growth. Above K/2, resources become limiting and growth slows.'
           },
           {
-            question: 'Why is Population Ecology important in AP Environmental Science?',
+            question: 'An r-selected species would most likely:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Produce few offspring with extensive parental care',
+              'Have a long lifespan and large body size',
+              'Produce many offspring with little parental care',
+              'Be found mainly in stable, predictable environments'
             ],
-            correctAnswer: 1,
-            explanation: 'Population Ecology is a key topic in AP Environmental Science that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'r-selected species maximize reproductive rate (r): many offspring, little care, rapid maturity. They thrive in unstable environments where they can quickly fill available resources.'
           }
         ]
       }
     },
     {
-      id: 'apespopu1-content',
+      id: 'apespe1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Density-Dependent vs. Density-Independent Factors
 
-### Key concept 1
-The foundational principle underlying Population Ecology. Understanding this concept is essential for mastering Population Ecology in AP Environmental Science.
+| Type | Definition | Examples |
+|------|-----------|---------|
+| **Density-dependent** | Impact increases as population density increases | Competition, predation, disease, parasitism |
+| **Density-independent** | Impact is the same regardless of population size | Natural disasters, weather, fire, drought |
 
-### Key concept 2
-A critical component of understanding Population Ecology. This builds on the previous concept and connects to broader themes in the course.
+## Species Interactions
 
-### Key concept 3
-An essential element that connects Population Ecology to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Interaction | Species A | Species B | Example |
+|------------|----------|----------|---------|
+| **Mutualism** | Benefits (+) | Benefits (+) | Bee and flower; clownfish and anemone |
+| **Commensalism** | Benefits (+) | Unaffected (0) | Barnacles on whales; birds nesting in trees |
+| **Parasitism** | Benefits (+) | Harmed (−) | Tapeworm in host; tick on deer |
+| **Predation** | Benefits (+) | Harmed (−) | Wolf eating rabbit |
+| **Competition** | Harmed (−) | Harmed (−) | Two species competing for same food |
+
+### Competitive Exclusion Principle
+Two species competing for the **exact same niche** cannot coexist indefinitely — one will outcompete the other. Species coexist through **niche partitioning** (dividing resources).
       `
     },
     {
-      id: 'apespopu1-input',
+      id: 'apespe1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Population Ecology?
+1) The maximum population size an environment can sustain indefinitely is called the _______ capacity (K).
 
-2) What concept describes a critical component of understanding Population Ecology?
+2) In logistic growth, the maximum growth rate occurs at N = K/_______.
 
-3) Name the term for an essential element that connects Population Ecology to broader themes.
-
-Use the exact term from this part.
+3) Factors whose impact increases with population density (like disease and competition) are called _______-dependent factors.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Population Ecology), Key concept 2 (A critical component of understanding Population Ecology), and Key concept 3 (An essential element that connects Population Ecology to broader themes).'
+        correctAnswers: ['carrying', '2', 'density'],
+        hint1: 'The upper limit on population size.',
+        hint2: 'Half of K.',
+        hint3: 'They depend on how dense the population is.',
+        explanation: 'Carrying capacity (K) = maximum sustainable population. Maximum growth at K/2. Density-dependent factors intensify with crowding.'
       }
     },
     {
-      id: 'apespopu1-dropdown',
+      id: 'apespe1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Interaction** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Population Ecology is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'A clownfish living in a sea anemone — both benefit. This is ___',
+            options: ['Mutualism (+/+)', 'Commensalism (+/0)', 'Parasitism (+/−)', 'Competition (−/−)']
           },
           {
-            label: 'A critical component of understanding Population Ecology describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A drought killing organisms regardless of population density is a ___ factor',
+            options: ['Density-independent', 'Density-dependent', 'K-selected', 'r-selected']
           },
           {
-            label: 'An essential element that connects Population Ecology to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Elephants (few offspring, long lifespan, extensive parental care) are ___',
+            options: ['K-selected', 'r-selected', 'Pioneer species', 'Keystone species']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Population Ecology. Key concept 2 — A critical component of understanding Population Ecology. Key concept 3 — An essential element that connects Population Ecology to broader themes.'
+        correctAnswers: ['Mutualism (+/+)', 'Density-independent', 'K-selected'],
+        hint1: 'Both species benefit.',
+        hint2: 'Weather does not care about population density.',
+        hint3: 'Few offspring, lots of investment.',
+        explanation: 'Clownfish/anemone = mutualism. Drought = density-independent. Elephants = K-selected (few offspring, high care).'
       }
     },
     {
-      id: 'apespopu1-strategy',
+      id: 'apespe1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Population Ecology
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Population Ecology.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Environmental Science for higher scores.
+- Be able to sketch and label J-curve (exponential) vs S-curve (logistic)
+- **Maximum growth at K/2** is one of the most tested concepts on the AP exam
+- Know how to calculate growth rate: if K=1000 and N=500, growth is at its maximum
+- r-selected vs K-selected: know examples and which strategy is favored in different environments
+- **Invasive species** are often r-selected: they reproduce rapidly in new environments without predators
+- Species interactions: know the +/+, +/0, +/−, −/− notation system
       `
     },
     {
-      id: 'apespopu1-applied',
+      id: 'apespe1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Population Ecology on a free-response question. The best approach is:',
+            question: 'A population of deer has a carrying capacity of 800. At what population size would you expect the fastest population growth?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '100 deer',
+              '400 deer',
+              '600 deer',
+              '800 deer'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Maximum growth occurs at K/2 = 800/2 = 400. At this point, resources are still ample enough to support high birth rates, but the population is large enough for significant total reproduction.'
           },
           {
-            question: 'When studying Population Ecology, which strategy is most effective?',
+            question: 'An invasive species introduced to an island with no predators initially shows J-shaped exponential growth. What will MOST likely happen next?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Growth will continue exponentially forever',
+              'The population will crash after overshooting carrying capacity due to resource depletion',
+              'The population will immediately stabilize at carrying capacity',
+              'The population will decline due to natural predators evolving'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Without predators, the population overshoots K, depletes resources, and then crashes. This boom-and-bust pattern is common for invasive species and can cause permanent ecosystem damage.'
           }
         ]
       }
     }
   ]
-}
+};

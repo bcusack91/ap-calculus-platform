@@ -2,26 +2,69 @@ export const csa2dArraysPart1Data = {
   topicSlug: 'csa-2d-arrays',
   sections: [
     {
-      id: 'csa2darr1-intro',
+      id: 'csa2da1-intro',
       type: 'text' as const,
       content: `
-# 💻 2D Array Algorithms
+# 🔢 2D Array Algorithms
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Row/Column Processing, Searching, and Modifying**
 
-2D Array Algorithms is a fundamental topic in AP Computer Science A. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Processing Individual Rows or Columns
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying 2D Array Algorithms |
-| **Key concept 2** | A critical component of understanding 2D Array Algorithms |
-| **Key concept 3** | An essential element that connects 2D Array Algorithms to broader themes |
+### Sum of a Specific Row
+\`\`\`java
+public int rowSum(int[][] matrix, int row) {
+    int sum = 0;
+    for (int c = 0; c < matrix[row].length; c++) {
+        sum += matrix[row][c];
+    }
+    return sum;
+}
+\`\`\`
+
+### Sum of a Specific Column
+\`\`\`java
+public int colSum(int[][] matrix, int col) {
+    int sum = 0;
+    for (int r = 0; r < matrix.length; r++) {
+        sum += matrix[r][col];
+    }
+    return sum;
+}
+\`\`\`
+
+> 🔑 **Row processing** fixes the row index and loops over columns. **Column processing** fixes the column index and loops over rows.
+
+---
+
+## Finding a Value in a 2D Array
+
+\`\`\`java
+public boolean contains(int[][] matrix, int target) {
+    for (int r = 0; r < matrix.length; r++) {
+        for (int c = 0; c < matrix[r].length; c++) {
+            if (matrix[r][c] == target) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+\`\`\`
+
+| Algorithm | Approach |
+|-----------|---------|
+| **Row sum/avg** | Fix row, loop columns |
+| **Column sum/avg** | Fix column, loop rows |
+| **Search** | Nested loops, return true if found |
+| **Count matches** | Nested loops, increment counter |
+| **Find max/min** | Initialize with [0][0], compare all |
       `
     },
     {
-      id: 'csa2darr1-quiz1',
+      id: 'csa2da1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +72,177 @@ export const csa2dArraysPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of 2D Array Algorithms?',
+            question: 'To sum all elements in column 2 of a 2D array, which loop structure is correct?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within 2D Array Algorithms',
-              'A mathematical formula',
-              'A literary technique'
+              'for (int c = 0; c < matrix[2].length; c++) sum += matrix[2][c];',
+              'for (int r = 0; r < matrix.length; r++) sum += matrix[r][2];',
+              'for (int r = 0; r < matrix[0].length; r++) sum += matrix[2][r];',
+              'for (int c = 0; c < matrix.length; c++) sum += matrix[c][c];'
             ],
             correctAnswer: 1,
-            explanation: '2D Array Algorithms focuses on understanding key principles and patterns within AP Computer Science A.'
+            explanation: 'To process a specific column, fix the column index (2) and loop over all rows. matrix[r][2] gives the element in row r, column 2 for each row.'
           },
           {
-            question: 'Why is 2D Array Algorithms important in AP Computer Science A?',
+            question: 'How many elements are checked in the WORST case when searching a 3x4 2D array?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              '3',
+              '4',
+              '7',
+              '12'
             ],
-            correctAnswer: 1,
-            explanation: '2D Array Algorithms is a key topic in AP Computer Science A that connects to multiple course themes.'
+            correctAnswer: 3,
+            explanation: 'In the worst case (value not found), every element is checked. A 3x4 array has 3 x 4 = 12 elements. Linear search on a 2D array is O(rows x cols).'
           }
         ]
       }
     },
     {
-      id: 'csa2darr1-content',
+      id: 'csa2da1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Modifying 2D Array Elements
 
-### Key concept 1
-The foundational principle underlying 2D Array Algorithms. Understanding this concept is essential for mastering 2D Array Algorithms in AP Computer Science A.
+### Multiply All Elements by 2
+\`\`\`java
+for (int r = 0; r < matrix.length; r++) {
+    for (int c = 0; c < matrix[r].length; c++) {
+        matrix[r][c] *= 2;
+    }
+}
+\`\`\`
 
-### Key concept 2
-A critical component of understanding 2D Array Algorithms. This builds on the previous concept and connects to broader themes in the course.
+### Replace Negatives with Zero
+\`\`\`java
+for (int r = 0; r < matrix.length; r++) {
+    for (int c = 0; c < matrix[r].length; c++) {
+        if (matrix[r][c] < 0) {
+            matrix[r][c] = 0;
+        }
+    }
+}
+\`\`\`
 
-### Key concept 3
-An essential element that connects 2D Array Algorithms to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Diagonal Elements
+
+\`\`\`java
+// Main diagonal (row == col): top-left to bottom-right
+// Only works for square matrices!
+for (int i = 0; i < matrix.length; i++) {
+    System.out.println(matrix[i][i]);
+}
+\`\`\`
+
+## Edge Elements (Border)
+\`\`\`java
+// An element is on the edge if:
+// r == 0 (first row), r == rows-1 (last row),
+// c == 0 (first col), c == cols-1 (last col)
+for (int r = 0; r < matrix.length; r++) {
+    for (int c = 0; c < matrix[r].length; c++) {
+        if (r == 0 || r == matrix.length - 1 ||
+            c == 0 || c == matrix[r].length - 1) {
+            // This element is on the border
+        }
+    }
+}
+\`\`\`
       `
     },
     {
-      id: 'csa2darr1-input',
+      id: 'csa2da1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying 2D Array Algorithms?
+1) To process a single row, fix the _______ index and loop over columns.
 
-2) What concept describes a critical component of understanding 2D Array Algorithms?
+2) Diagonal elements in a square matrix satisfy the condition row == _______.
 
-3) Name the term for an essential element that connects 2D Array Algorithms to broader themes.
-
-Use the exact term from this part.
+3) An element is on the border of a 2D array if its row or column index equals 0 or the _______ valid index.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying 2D Array Algorithms), Key concept 2 (A critical component of understanding 2D Array Algorithms), and Key concept 3 (An essential element that connects 2D Array Algorithms to broader themes).'
+        correctAnswers: ['row', 'col', 'last'],
+        hint1: 'Keep the row the same, vary the column.',
+        hint2: 'Same row number and column number.',
+        hint3: 'The maximum index (length - 1).',
+        explanation: 'Fix row to process a row. Diagonal: row == col. Border: index is 0 or last.'
       }
     },
     {
-      id: 'csa2darr1-dropdown',
+      id: 'csa2da1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**2D Array Algorithms** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying 2D Array Algorithms is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'To find the maximum in a 2D array, initialize max with ___ and compare all elements',
+            options: ['matrix[0][0]', '0', 'Integer.MAX_VALUE', '-1']
           },
           {
-            label: 'A critical component of understanding 2D Array Algorithms describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Processing the main diagonal of a square matrix requires ___ loop(s)',
+            options: ['One loop (for i: matrix[i][i])', 'Two nested loops', 'Three nested loops', 'No loops']
           },
           {
-            label: 'An essential element that connects 2D Array Algorithms to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'An enhanced for loop on a 2D array int[][] m: "for (int[] row : m)" gives each row as ___',
+            options: ['A 1D int array', 'A single int', 'An ArrayList', 'A 2D array']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying 2D Array Algorithms. Key concept 2 — A critical component of understanding 2D Array Algorithms. Key concept 3 — An essential element that connects 2D Array Algorithms to broader themes.'
+        correctAnswers: ['matrix[0][0]', 'One loop (for i: matrix[i][i])', 'A 1D int array'],
+        hint1: 'Use an actual element as the starting comparison.',
+        hint2: 'Diagonal means row index equals column index.',
+        hint3: 'The outer array contains 1D arrays (rows).',
+        explanation: 'Max init with [0][0]. Diagonal needs one loop. Enhanced for gives 1D rows.'
       }
     },
     {
-      id: 'csa2darr1-strategy',
+      id: 'csa2da1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: 2D Array Algorithms
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of 2D Array Algorithms.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Computer Science A for higher scores.
+- **Row processing** = fix row, vary column. **Column processing** = fix column, vary row
+- Use \`matrix[r].length\` (not \`matrix[0].length\`) in the inner loop — handles jagged arrays
+- Searching a 2D array is just nested linear search
+- Know how to find: sum, average, max, min for the whole array, a specific row, or a specific column
+- Diagonal, border, and neighbor-checking are common FRQ patterns
+- When modifying elements, use standard for loops (not enhanced for)
       `
     },
     {
-      id: 'csa2darr1-applied',
+      id: 'csa2da1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain 2D Array Algorithms on a free-response question. The best approach is:',
+            question: 'int[][] m = {{1,2,3},{4,5,6},{7,8,9}};\nWhat is the sum of the main diagonal?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '12',
+              '15',
+              '18',
+              '45'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Main diagonal: m[0][0]=1, m[1][1]=5, m[2][2]=9. Sum = 1 + 5 + 9 = 15.'
           },
           {
-            question: 'When studying 2D Array Algorithms, which strategy is most effective?',
+            question: 'How many border elements does a 4x5 2D array have?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '14',
+              '16',
+              '18',
+              '20'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 0,
+            explanation: 'Border = perimeter. Top row: 5, bottom row: 5, left column (minus corners): 2, right column (minus corners): 2. Total: 5 + 5 + 2 + 2 = 14. Formula: 2(rows + cols) - 4.'
           }
         ]
       }
     }
   ]
-}
+};

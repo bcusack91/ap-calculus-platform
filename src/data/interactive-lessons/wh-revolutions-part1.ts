@@ -5,171 +5,142 @@ export const whRevolutionsPart1Data = {
       id: 'whrevolu1-intro',
       type: 'text' as const,
       content: `
-# 🌏 Revolutions & Independence Movements
+# ⚔️ Revolutions & Independence Movements
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Latin American & Nationalist Revolutions**
 
-Revolutions & Independence Movements is a fundamental topic in AP World History. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Causes of Revolutionary Movements |
+| Latin American Independence |
+| Simón Bolívar & José de San Martín |
+| Nationalism in Europe |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Revolutions & Independence Movements |
-| **Key concept 2** | A critical component of understanding Revolutions & Independence Movements |
-| **Key concept 3** | An essential element that connects Revolutions & Independence Movements to broader themes |
+> 🔑 **Key Concept:** The AP exam connects Latin American independence movements to both the **Enlightenment** and the **Haitian Revolution**. You must understand how colonial social hierarchies (peninsulares, creoles, mestizos) shaped who led revolts and why.
+      `
+    },
+    {
+      id: 'whrevolu1-causes',
+      type: 'text' as const,
+      content: `
+## 📖 Causes of Revolutionary Movements
+
+### Why Did Latin America Revolt?
+
+Multiple factors converged in the early 1800s:
+
+| Factor | Explanation |
+|---|---|
+| **Enlightenment ideas** | Locke's natural rights and Rousseau's popular sovereignty inspired colonial elites |
+| **American & French Revolutions** | Provided successful models of overthrowing imperial rule |
+| **Haitian Revolution (1804)** | Proved that even enslaved people could win independence |
+| **Napoleon's invasion of Spain (1808)** | Removed the Spanish king, creating a power vacuum in the colonies |
+| **Colonial social hierarchy** | Creoles (American-born Spaniards) resented peninsulares (European-born) who held all top positions |
+
+### The Colonial Social Hierarchy
+
+| Group | Description | Political Power |
+|---|---|---|
+| **Peninsulares** | Born in Spain/Portugal | Held all top government positions |
+| **Creoles** | European descent, born in the Americas | Wealthy landowners but excluded from power |
+| **Mestizos/Mulattoes** | Mixed European-indigenous or European-African | Limited rights |
+| **Indigenous & Enslaved Africans** | Majority of the population | No political power |
+
+> 🔑 **AP Connection:** The **creoles** led most independence movements — they were wealthy and educated enough to organize revolts, but resentful of being excluded from political power by peninsulares.
       `
     },
     {
       id: 'whrevolu1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: `**Concept Check** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Revolutions & Independence Movements?',
+            question: 'Which social group led most Latin American independence movements in the early 1800s?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Revolutions & Independence Movements',
-              'A mathematical formula',
-              'A literary technique'
+              'Peninsulares — European-born Spaniards who held all colonial government positions',
+              'Creoles — American-born people of European descent who were wealthy but excluded from political power',
+              'Indigenous peoples who sought to restore pre-Columbian empires and political systems',
+              'Enslaved Africans following the model of the Haitian Revolution'
             ],
             correctAnswer: 1,
-            explanation: 'Revolutions & Independence Movements focuses on understanding key principles and patterns within AP World History.'
+            explanation: 'Creoles led most independence movements because they had the wealth, education, and social connections to organize revolts, but resented being excluded from top government positions (reserved for peninsulares). Simón Bolívar and José de San Martín were both creoles.'
           },
           {
-            question: 'Why is Revolutions & Independence Movements important in AP World History?',
+            question: 'How did Napoleon\'s invasion of Spain in 1808 contribute to Latin American independence movements?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Napoleon sent French armies to Latin America to enforce colonial control more strictly',
+              'It removed the Spanish king from power, creating a legitimacy crisis and power vacuum that colonial leaders exploited',
+              'Napoleon freed all enslaved people in Spanish colonies, inspiring loyalty to France',
+              'It had no effect — Latin American independence movements began centuries earlier'
             ],
             correctAnswer: 1,
-            explanation: 'Revolutions & Independence Movements is a key topic in AP World History that connects to multiple course themes.'
+            explanation: 'When Napoleon deposed the Spanish king Ferdinand VII and placed his brother on the throne, colonists questioned whether they owed loyalty to a French-imposed ruler. This legitimacy crisis provided the opening for creole leaders to declare independence while claiming to act in the name of the rightful king.'
           }
         ]
       }
     },
     {
-      id: 'whrevolu1-content',
+      id: 'whrevolu1-leaders',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## 📖 Key Independence Leaders
 
-### Key concept 1
-The foundational principle underlying Revolutions & Independence Movements. Understanding this concept is essential for mastering Revolutions & Independence Movements in AP World History.
+### Simón Bolívar (1783–1830) — "The Liberator"
+- Creole from Venezuela, educated in Europe, deeply influenced by Enlightenment
+- Led independence of **Venezuela, Colombia, Ecuador, Peru, and Bolivia**
+- Dreamed of a united South American republic (Gran Colombia) — ultimately failed due to regional rivalries
+- Famous "Jamaica Letter" (1815) analyzed why Latin American unity was difficult
 
-### Key concept 2
-A critical component of understanding Revolutions & Independence Movements. This builds on the previous concept and connects to broader themes in the course.
+### José de San Martín (1778–1850)
+- Argentine general who liberated **Argentina, Chile, and Peru**
+- Famous crossing of the Andes Mountains (1817) to liberate Chile
+- Met Bolívar in Guayaquil (1822) — ceded leadership and retired
 
-### Key concept 3
-An essential element that connects Revolutions & Independence Movements to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Mexico: Hidalgo & Morelos
+- **Father Miguel Hidalgo** (1810) — priest who launched Mexico's independence with the "Grito de Dolores"; led a peasant/indigenous uprising; executed 1811
+- **José María Morelos** — continued Hidalgo's movement; also executed
+- **Agustín de Iturbide** (1821) — conservative creole who actually achieved Mexican independence with a coalition (Plan de Iguala)
+
+### Brazil: A Unique Path
+- **Peaceful independence** (1822) — when Portugal's king returned to Europe, his son **Pedro I** declared Brazil independent and became emperor
+- No major war; preserved the monarchy until 1889
+
+> 🔑 **AP Connection:** Compare Mexico's **bottom-up** revolution (starting with indigenous/peasant uprising under Hidalgo) with the **top-down** approach in South America (creole elites like Bolívar) and Brazil's **peaceful** transition. The AP exam tests why outcomes differed.
       `
     },
     {
-      id: 'whrevolu1-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the foundational principle underlying Revolutions & Independence Movements?
-
-2) What concept describes a critical component of understanding Revolutions & Independence Movements?
-
-3) Name the term for an essential element that connects Revolutions & Independence Movements to broader themes.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Revolutions & Independence Movements), Key concept 2 (A critical component of understanding Revolutions & Independence Movements), and Key concept 3 (An essential element that connects Revolutions & Independence Movements to broader themes).'
-      }
-    },
-    {
-      id: 'whrevolu1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Revolutions & Independence Movements is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Revolutions & Independence Movements describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Revolutions & Independence Movements to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Revolutions & Independence Movements. Key concept 2 — A critical component of understanding Revolutions & Independence Movements. Key concept 3 — An essential element that connects Revolutions & Independence Movements to broader themes.'
-      }
-    },
-    {
-      id: 'whrevolu1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Revolutions & Independence Movements.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whrevolu1-applied',
+      id: 'whrevolu1-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: `**Check Your Understanding** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Revolutions & Independence Movements on a free-response question. The best approach is:',
+            question: 'How did Brazil\'s path to independence differ from most other Latin American nations?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Brazil achieved independence through a prolonged guerrilla war lasting over 20 years',
+              'Brazil\'s independence was relatively peaceful — the Portuguese prince declared independence and became emperor without a major war',
+              'Brazil was the only Latin American nation to remain a colony until the 20th century',
+              'Brazil\'s independence was led by indigenous peoples rather than creole elites'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Unlike the violent revolutions elsewhere in Latin America, Brazil\'s independence was largely peaceful. When King João VI returned to Portugal in 1821, his son Pedro stayed in Brazil and declared independence in 1822, becoming Emperor Pedro I. Brazil remained a monarchy until 1889.'
           },
           {
-            question: 'When studying Revolutions & Independence Movements, which strategy is most effective?',
+            question: 'What was the main reason Bolívar\'s dream of a united South American republic (Gran Colombia) failed?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Spain reconquered the territory immediately after Bolívar\'s death in 1830',
+              'Regional rivalries, geographic barriers, and competing interests among local elites led to fragmentation',
+              'The United States invaded Gran Colombia to prevent a rival power from emerging',
+              'Bolívar voluntarily dissolved the union to create smaller, more democratic nations'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Gran Colombia (Venezuela, Colombia, Ecuador) dissolved due to regional rivalries, geographic distances, and competing interests among local creole elites who preferred governing their own territories. The Andes and Amazon created natural divisions, and local caudillos (strongmen) carved out independent power bases.'
           }
         ]
       }
     }
   ]
-}
+};

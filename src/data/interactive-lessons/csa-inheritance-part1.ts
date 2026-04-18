@@ -2,26 +2,71 @@ export const csaInheritancePart1Data = {
   topicSlug: 'csa-inheritance',
   sections: [
     {
-      id: 'csainher1-intro',
+      id: 'csaih1-intro',
       type: 'text' as const,
       content: `
-# 💻 Inheritance
+# 🧬 Inheritance
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Superclasses, Subclasses, and the extends Keyword**
 
-Inheritance is a fundamental topic in AP Computer Science A. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## What Is Inheritance?
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Inheritance |
-| **Key concept 2** | A critical component of understanding Inheritance |
-| **Key concept 3** | An essential element that connects Inheritance to broader themes |
+Inheritance lets a class (subclass) inherit fields and methods from another class (superclass), enabling code reuse and an "is-a" relationship.
+
+\`\`\`java
+public class Animal {              // Superclass
+    private String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String speak() {
+        return "...";
+    }
+}
+
+public class Dog extends Animal {  // Subclass
+    private String breed;
+
+    public Dog(String name, String breed) {
+        super(name);              // Call superclass constructor
+        this.breed = breed;
+    }
+
+    public String speak() {       // Override superclass method
+        return "Woof!";
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+}
+\`\`\`
+
+> 🔑 **"Is-a" relationship:** A Dog IS-A Animal. The subclass inherits all public methods from the superclass but NOT the constructors and NOT private fields directly.
+
+---
+
+## Key Inheritance Rules
+
+| Rule | Detail |
+|------|--------|
+| **extends** | Keyword to declare inheritance: \`class Dog extends Animal\` |
+| **super()** | Calls superclass constructor; MUST be first line in subclass constructor |
+| **Inherits** | All public/protected methods and fields |
+| **Cannot access** | Private fields of superclass (use getters instead) |
+| **Single inheritance** | A class can extend only ONE superclass |
       `
     },
     {
-      id: 'csainher1-quiz1',
+      id: 'csaih1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +74,170 @@ Inheritance is a fundamental topic in AP Computer Science A. This part introduce
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Inheritance?',
+            question: 'What must be the FIRST statement in a subclass constructor?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Inheritance',
-              'A mathematical formula',
-              'A literary technique'
+              'this()',
+              'super() or super(args) — a call to the superclass constructor',
+              'The instance variable assignments',
+              'A print statement'
             ],
             correctAnswer: 1,
-            explanation: 'Inheritance focuses on understanding key principles and patterns within AP Computer Science A.'
+            explanation: 'The superclass constructor must run before any subclass code executes. super() or super(args) must be the very first line. If omitted, Java inserts super() (no-arg) automatically.'
           },
           {
-            question: 'Why is Inheritance important in AP Computer Science A?',
+            question: 'A subclass can directly access private instance variables of the superclass. True or false?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'True — subclasses inherit everything',
+              'False — private fields are not accessible even to subclasses; use getters',
+              'True — but only if the subclass is in the same file',
+              'False — subclasses cannot access any superclass members'
             ],
             correctAnswer: 1,
-            explanation: 'Inheritance is a key topic in AP Computer Science A that connects to multiple course themes.'
+            explanation: 'Private means private to ALL other classes, including subclasses. The subclass must use the public getter methods inherited from the superclass to access private data.'
           }
         ]
       }
     },
     {
-      id: 'csainher1-content',
+      id: 'csaih1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Method Overriding
 
-### Key concept 1
-The foundational principle underlying Inheritance. Understanding this concept is essential for mastering Inheritance in AP Computer Science A.
+\`\`\`java
+public class Animal {
+    public String speak() {
+        return "...";
+    }
+}
 
-### Key concept 2
-A critical component of understanding Inheritance. This builds on the previous concept and connects to broader themes in the course.
+public class Cat extends Animal {
+    @Override
+    public String speak() {     // Same name, same parameters
+        return "Meow!";
+    }
+}
 
-### Key concept 3
-An essential element that connects Inheritance to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+Animal a = new Cat();
+System.out.println(a.speak());  // "Meow!" — runtime type determines method
+\`\`\`
+
+### Overriding vs Overloading
+
+| Feature | Overriding | Overloading |
+|---------|-----------|-------------|
+| **Where** | Subclass redefines superclass method | Same class, multiple methods |
+| **Signature** | Same name AND same parameters | Same name, DIFFERENT parameters |
+| **Return type** | Must be same (or subtype) | Can be different |
+| **Determined at** | Runtime (dynamic binding) | Compile time (static binding) |
+
+## Using super to Call Overridden Methods
+
+\`\`\`java
+public class Dog extends Animal {
+    @Override
+    public String speak() {
+        return super.speak() + " Woof!"; // Calls Animal.speak() first
+    }
+}
+\`\`\`
       `
     },
     {
-      id: 'csainher1-input',
+      id: 'csaih1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Inheritance?
+1) The keyword _______ is used to declare that a class inherits from another class.
 
-2) What concept describes a critical component of understanding Inheritance?
+2) A call to the superclass constructor using _______ must be the first line of the subclass constructor.
 
-3) Name the term for an essential element that connects Inheritance to broader themes.
-
-Use the exact term from this part.
+3) When a subclass provides its own version of an inherited method with the same signature, this is called method _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Inheritance), Key concept 2 (A critical component of understanding Inheritance), and Key concept 3 (An essential element that connects Inheritance to broader themes).'
+        correctAnswers: ['extends', 'super()', 'overriding'],
+        hint1: 'class Subclass ______ Superclass',
+        hint2: 'Calls the parent constructor.',
+        hint3: 'To override = to replace with a new version.',
+        explanation: 'extends for inheritance. super() calls parent constructor. Method overriding = same signature in subclass.'
       }
     },
     {
-      id: 'csainher1-dropdown',
+      id: 'csaih1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Concept** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Inheritance is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Dog extends Animal means Dog ___ Animal',
+            options: ['IS-A (inheritance relationship)', 'HAS-A (composition relationship)', 'USES-A (dependency)', 'REPLACES']
           },
           {
-            label: 'A critical component of understanding Inheritance describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Two methods: speak() and speak(int volume) in the same class demonstrate ___',
+            options: ['Overloading (same name, different parameters)', 'Overriding (subclass redefines)', 'Inheritance', 'Encapsulation']
           },
           {
-            label: 'An essential element that connects Inheritance to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Animal a = new Dog("Rex", "Lab"); a.speak() calls the ___ version of speak()',
+            options: ['Dog (subclass) version — determined at runtime', 'Animal (superclass) version — determined at compile time', 'Neither — compile error', 'Both versions sequentially']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Inheritance. Key concept 2 — A critical component of understanding Inheritance. Key concept 3 — An essential element that connects Inheritance to broader themes.'
+        correctAnswers: ['IS-A (inheritance relationship)', 'Overloading (same name, different parameters)', 'Dog (subclass) version — determined at runtime'],
+        hint1: 'A Dog is a type of Animal.',
+        hint2: 'Same name but different parameter list.',
+        hint3: 'The actual object type (Dog) determines the method.',
+        explanation: 'extends = IS-A. Same name, different params = overloading. Runtime type determines which overridden method runs.'
       }
     },
     {
-      id: 'csainher1-strategy',
+      id: 'csaih1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Inheritance
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Inheritance.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Computer Science A for higher scores.
+- **super() must be first** in the subclass constructor — if not present, Java auto-inserts \`super()\` (and the superclass MUST have a no-arg constructor or it fails)
+- Private fields are NOT directly accessible in subclasses — always use getters
+- **Overriding** = same signature in subclass; **Overloading** = different parameters
+- The runtime (actual) type determines which overridden method runs, NOT the declared type
+- FRQ 4 is always about inheritance/polymorphism — be comfortable writing subclasses
+- Remember: constructors are NOT inherited
       `
     },
     {
-      id: 'csainher1-applied',
+      id: 'csaih1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Inheritance on a free-response question. The best approach is:',
+            question: 'class Vehicle { }\nclass Car extends Vehicle {\n    public Car() { /* no super() call */ }\n}\nWhat happens?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Compile error because super() is missing',
+              'Java automatically inserts super() as the first line, calling Vehicle no-arg constructor',
+              'Runtime error',
+              'The Car object has no connection to Vehicle'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'If you do not write super() or super(args), Java automatically inserts super() (no-arg) as the first line. Since Vehicle has a default no-arg constructor, this compiles and runs fine.'
           },
           {
-            question: 'When studying Inheritance, which strategy is most effective?',
+            question: 'class A { public int calc() { return 1; } }\nclass B extends A { public int calc() { return 2; } }\nA obj = new B();\nSystem.out.println(obj.calc());\nWhat is printed?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '1',
+              '2',
+              'Compile error',
+              '0'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'The declared type is A but the actual (runtime) type is B. Method overriding uses dynamic binding — the runtime type B determines which calc() runs. Output: 2.'
           }
         ]
       }
     }
   ]
-}
+};

@@ -2,26 +2,62 @@ export const microGovernmentInterventionPart1Data = {
   topicSlug: 'micro-government-intervention',
   sections: [
     {
-      id: 'microgov1-intro',
+      id: 'microgi1-intro',
       type: 'text' as const,
       content: `
-# 💰 Government Intervention
+# 💰 Government Intervention in Markets
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Price Controls and Their Consequences**
 
-Government Intervention is a fundamental topic in AP Microeconomics. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Why Do Governments Intervene?
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Government Intervention |
-| **Key concept 2** | A critical component of understanding Government Intervention |
-| **Key concept 3** | An essential element that connects Government Intervention to broader themes |
+Markets sometimes produce outcomes society considers **unfair** or **inefficient**. Governments intervene through:
+
+| Tool | Purpose | Example |
+|------|---------|---------|
+| **Price ceilings** | Keep prices affordable for consumers | Rent control |
+| **Price floors** | Guarantee minimum income for producers | Minimum wage |
+| **Taxes** | Raise revenue or discourage consumption | Excise tax on cigarettes |
+| **Subsidies** | Encourage production/consumption | Agricultural subsidies |
+
+---
+
+## Price Ceilings
+
+A **price ceiling** is a legally imposed **maximum price** — sellers cannot charge above it.
+
+### When Does It Matter?
+
+| Ceiling Position | Effect |
+|-----------------|--------|
+| **Above equilibrium** | Not binding — no effect, market operates normally |
+| **Below equilibrium** | **Binding** — creates a **shortage** (Qd > Qs) |
+
+When a price ceiling is binding:
+- **Quantity traded = Qs** (the smaller of Qd and Qs)
+- **Consumer surplus**: Some consumers benefit from lower prices, but others can't find the good
+- **Deadweight loss** is created because mutually beneficial trades don't occur
+
+> 🔑 **Classic AP Example:** Rent control — ceiling below equilibrium rent creates housing shortage. Landlords reduce maintenance, waitlists grow, and black markets emerge.
+
+---
+
+## Price Floors
+
+A **price floor** is a legally imposed **minimum price** — buyers cannot pay below it.
+
+| Floor Position | Effect |
+|---------------|--------|
+| **Below equilibrium** | Not binding — no effect |
+| **Above equilibrium** | **Binding** — creates a **surplus** (Qs > Qd) |
+
+> 🔑 **Classic AP Example:** Minimum wage above equilibrium creates unemployment (surplus of labor). Employers hire fewer workers than they would at the equilibrium wage.
       `
     },
     {
-      id: 'microgov1-quiz1',
+      id: 'microgi1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,144 +65,165 @@ Government Intervention is a fundamental topic in AP Microeconomics. This part i
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Government Intervention?',
+            question: 'A binding price ceiling set below equilibrium will result in:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Government Intervention',
-              'A mathematical formula',
-              'A literary technique'
+              'A surplus of the good',
+              'A shortage of the good',
+              'No change in quantity traded',
+              'An increase in supply'
             ],
             correctAnswer: 1,
-            explanation: 'Government Intervention focuses on understanding key principles and patterns within AP Microeconomics.'
+            explanation: 'Below equilibrium, Qd > Qs at the ceiling price, creating a shortage. The quantity actually traded equals Qs (the short side of the market).'
           },
           {
-            question: 'Why is Government Intervention important in AP Microeconomics?',
+            question: 'The government sets a minimum wage of $12/hour in a market where the equilibrium wage is $10/hour. This will likely cause:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'A shortage of workers at $12/hour',
+              'An increase in the quantity of labor demanded',
+              'Unemployment among low-skill workers',
+              'No effect because $12 > $10'
             ],
-            correctAnswer: 1,
-            explanation: 'Government Intervention is a key topic in AP Microeconomics that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'A minimum wage above equilibrium is a binding price floor. At $12, Qs of labor > Qd of labor, creating a surplus of workers — unemployment.'
           }
         ]
       }
     },
     {
-      id: 'microgov1-content',
+      id: 'microgi1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Taxes: Excise Taxes and Tax Incidence
 
-### Key concept 1
-The foundational principle underlying Government Intervention. Understanding this concept is essential for mastering Government Intervention in AP Microeconomics.
+An **excise tax** is a per-unit tax on a good. Key principles:
 
-### Key concept 2
-A critical component of understanding Government Intervention. This builds on the previous concept and connects to broader themes in the course.
+### Tax Incidence — Who Really Pays?
 
-### Key concept 3
-An essential element that connects Government Intervention to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+The **statutory incidence** (who writes the check) differs from the **economic incidence** (who bears the burden):
+
+$$\\text{Tax burden} \\propto \\frac{1}{\\text{Elasticity}}$$
+
+| Condition | Who bears more burden? |
+|-----------|----------------------|
+| Demand is more inelastic than supply | **Consumers** bear more |
+| Supply is more inelastic than demand | **Producers** bear more |
+| Perfectly inelastic demand | Consumers bear **all** the tax |
+| Perfectly inelastic supply | Producers bear **all** the tax |
+
+> ⚠️ **AP Trap:** It does NOT matter whether the tax is levied on buyers or sellers — the economic incidence is identical either way. The more inelastic side always bears more burden.
+
+### Effect on Graph
+
+- Tax on sellers → supply shifts **left** (up) by the tax amount
+- New equilibrium: higher consumer price, lower producer price
+- **Deadweight loss** = triangle between old and new equilibrium quantities
       `
     },
     {
-      id: 'microgov1-input',
+      id: 'microgi1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Government Intervention?
+1) A binding price ceiling creates a _______ (shortage/surplus).
 
-2) What concept describes a critical component of understanding Government Intervention?
+2) A binding price floor creates a _______ (shortage/surplus).
 
-3) Name the term for an essential element that connects Government Intervention to broader themes.
-
-Use the exact term from this part.
+3) The side of the market with more _______ demand or supply bears more of the tax burden. (elastic/inelastic)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Government Intervention), Key concept 2 (A critical component of understanding Government Intervention), and Key concept 3 (An essential element that connects Government Intervention to broader themes).'
+        correctAnswers: ['shortage', 'surplus', 'inelastic'],
+        hint1: 'Ceiling below equilibrium: Qd > Qs.',
+        hint2: 'Floor above equilibrium: Qs > Qd.',
+        hint3: 'The less responsive side cannot escape the tax.',
+        explanation: 'Ceilings below equilibrium create shortages (Qd > Qs). Floors above equilibrium create surpluses (Qs > Qd). The more inelastic side bears more tax burden because they are less able to change behavior.'
       }
     },
     {
-      id: 'microgov1-dropdown',
+      id: 'microgi1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Policy Identification** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Government Intervention is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Rent control is an example of a ___',
+            options: ['Price ceiling', 'Price floor', 'Excise tax', 'Subsidy']
           },
           {
-            label: 'A critical component of understanding Government Intervention describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Minimum wage is an example of a ___',
+            options: ['Price floor', 'Price ceiling', 'Excise tax', 'Quota']
           },
           {
-            label: 'An essential element that connects Government Intervention to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A $2 per gallon tax on gasoline is an example of a ___',
+            options: ['Excise tax', 'Price ceiling', 'Price floor', 'Subsidy']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Government Intervention. Key concept 2 — A critical component of understanding Government Intervention. Key concept 3 — An essential element that connects Government Intervention to broader themes.'
+        correctAnswers: ['Price ceiling', 'Price floor', 'Excise tax'],
+        hint1: 'It sets a maximum rent landlords can charge.',
+        hint2: 'It sets a minimum wage employers must pay.',
+        hint3: 'It is a per-unit tax on a specific good.',
+        explanation: 'Rent control = price ceiling (max price). Minimum wage = price floor (min price). Per-gallon gas tax = excise tax.'
       }
     },
     {
-      id: 'microgov1-strategy',
+      id: 'microgi1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Subsidies and Quotas
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Government Intervention.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+### Subsidies
+A **subsidy** is a per-unit payment from the government to producers or consumers:
+- Shifts supply **right** (down) by the subsidy amount
+- Increases quantity traded, decreases consumer price
+- Creates **deadweight loss** (overproduction beyond efficient quantity)
+- Government cost = subsidy × quantity
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Microeconomics for higher scores.
+### Quotas
+A **quota** limits the quantity of a good that can be produced or imported:
+- Creates an artificial shortage → raises price
+- Benefits domestic producers at expense of consumers
+- Creates deadweight loss similar to a tariff
+
+### Tariffs
+A **tariff** is a tax on imports:
+- Raises the domestic price above world price
+- Domestic producers produce more, consumers buy less
+- Government collects tariff revenue
+- Creates deadweight loss from production inefficiency + consumption inefficiency
       `
     },
     {
-      id: 'microgov1-applied',
+      id: 'microgi1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Government Intervention on a free-response question. The best approach is:',
+            question: 'If the demand for insulin is perfectly inelastic and a $5 excise tax is imposed, who bears the tax burden?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Producers bear all of the burden',
+              'Consumers bear all of the burden',
+              'Consumers and producers share equally',
+              'Neither — the tax creates no burden'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'With perfectly inelastic demand, consumers cannot reduce quantity demanded in response to a price increase. They bear 100% of the tax — the consumer price rises by the full $5.'
           },
           {
-            question: 'When studying Government Intervention, which strategy is most effective?',
+            question: 'A city imposes rent control. Which outcome is LEAST likely?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Long waiting lists for apartments',
+              'Landlords reducing maintenance spending',
+              'An increase in the supply of rental housing',
+              'Black market or under-the-table payments'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 2,
+            explanation: 'Rent control (price ceiling below equilibrium) reduces the profitability of providing housing, discouraging new construction and maintenance — supply decreases or stagnates, not increases.'
           }
         ]
       }

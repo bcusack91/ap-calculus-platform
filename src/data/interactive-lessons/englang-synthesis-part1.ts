@@ -2,26 +2,51 @@ export const englangSynthesisPart1Data = {
   topicSlug: 'englang-synthesis',
   sections: [
     {
-      id: 'englangs1-intro',
+      id: 'elsyn1-intro',
       type: 'text' as const,
       content: `
-# ✍️ Synthesis Skills
+# 🧷 Synthesis Writing
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Combining Multiple Sources into One Coherent Argument**
 
-Synthesis Skills is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## What Is Synthesis?
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Synthesis Skills |
-| **Key concept 2** | A critical component of understanding Synthesis Skills |
-| **Key concept 3** | An essential element that connects Synthesis Skills to broader themes |
+In AP Lang, **synthesis** means building your own argument by integrating information from multiple provided sources.
+
+You are not summarizing each source separately. You are:
+1. Taking a defensible position
+2. Selecting relevant source evidence
+3. Combining sources to support your line of reasoning
+4. Explaining your own analysis between source references
+
+> 🔑 Sources are tools, not substitutes for your thinking.
+
+---
+
+## Synthesis vs Summary
+
+| Summary | Synthesis |
+|--------|-----------|
+| Reports what each source says | Combines source ideas to advance YOUR claim |
+| Source-by-source organization | Claim-driven organization |
+| Minimal analysis | Sustained commentary and reasoning |
+| "Source A says... Source B says..." | "Given A and C, we can infer..." |
+
+## Core Source Moves
+
+| Move | Example |
+|------|---------|
+| **Corroborate** | Source B confirms Source A trend |
+| **Qualify** | Source D introduces a condition/exception |
+| **Complicate** | Source F challenges a simplistic conclusion |
+| **Concede** | Acknowledge valid concerns from opposing source |
+| **Synthesize** | Combine two sources to make a stronger inference |
       `
     },
     {
-      id: 'englangs1-quiz1',
+      id: 'elsyn1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +54,160 @@ Synthesis Skills is a fundamental topic in AP English Language. This part introd
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Synthesis Skills?',
+            question: 'What is the biggest difference between summary and synthesis on AP Lang?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Synthesis Skills',
-              'A mathematical formula',
-              'A literary technique'
+              'Summary uses quotations while synthesis does not',
+              'Synthesis organizes around your claim and combines source ideas to support reasoning',
+              'Summary is always longer than synthesis',
+              'Synthesis ignores sources'
             ],
             correctAnswer: 1,
-            explanation: 'Synthesis Skills focuses on understanding key principles and patterns within AP English Language.'
+            explanation: 'Synthesis is claim-driven. You use sources as evidence within your own argument structure, rather than reporting each source in isolation.'
           },
           {
-            question: 'Why is Synthesis Skills important in AP English Language?',
+            question: 'Which sentence demonstrates true synthesis?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              '"Source A is about schools. Source B is about money."',
+              '"Source A says homework helps. Source B says homework hurts."',
+              '"While Source A shows gains from structured homework, Source B indicates diminishing returns after 90 minutes, suggesting schools should cap nightly assignments."',
+              '"I agree with Source C because it sounds right."'
             ],
-            correctAnswer: 1,
-            explanation: 'Synthesis Skills is a key topic in AP English Language that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'This sentence combines two sources, identifies relationship (qualification), and draws a policy inference. That is synthesis, not summary.'
           }
         ]
       }
     },
     {
-      id: 'englangs1-content',
+      id: 'elsyn1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Building a Synthesis Essay
 
-### Key concept 1
-The foundational principle underlying Synthesis Skills. Understanding this concept is essential for mastering Synthesis Skills in AP English Language.
+### Step-by-Step Plan
+1. Read prompt and define the task precisely
+2. Skim sources, marking each source's position and evidence type
+3. Group sources by idea (not by source letter)
+4. Draft thesis with qualification
+5. Build body paragraphs around reasons, integrating 2+ sources per body when possible
 
-### Key concept 2
-A critical component of understanding Synthesis Skills. This builds on the previous concept and connects to broader themes in the course.
+### Source Integration Techniques
 
-### Key concept 3
-An essential element that connects Synthesis Skills to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Technique | Sentence Pattern |
+|----------|------------------|
+| Attribute briefly | "As Source C notes,..." |
+| Compare sources | "Unlike Source E, Source B suggests..." |
+| Pair with commentary | "Source A's data indicates X, which supports..." |
+| Use as concession | "Although Source D raises valid concerns..." |
+
+### Common Synthesis Mistakes
+- Source parade (one paragraph per source)
+- Over-quoting with little analysis
+- Misreading source claim
+- Using sources without connecting to thesis
+- Failing to address counterarguments from sources
+
+## Minimum Source Requirement
+AP synthesis requires use of at least **three** sources. Strong essays integrate more where relevant and accurate.
+
+> Better to analyze 3-4 sources deeply than to mention 6 sources superficially.
       `
     },
     {
-      id: 'englangs1-input',
+      id: 'elsyn1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Synthesis Skills?
+1) In synthesis, essays should be organized by _______ rather than by source letter.
 
-2) What concept describes a critical component of understanding Synthesis Skills?
+2) Combining two sources to draw a stronger inference is to _______ sources.
 
-3) Name the term for an essential element that connects Synthesis Skills to broader themes.
-
-Use the exact term from this part.
+3) AP synthesis requires at least _______ sources.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Synthesis Skills), Key concept 2 (A critical component of understanding Synthesis Skills), and Key concept 3 (An essential element that connects Synthesis Skills to broader themes).'
+        correctAnswers: ['claim', 'synthesize', 'three'],
+        hint1: 'Your line of reasoning drives structure.',
+        hint2: 'Blend source insights into one argument move.',
+        hint3: 'Minimum number required by task.',
+        explanation: 'Synthesis is claim-driven. You synthesize sources. AP requires at least three sources.'
       }
     },
     {
-      id: 'englangs1-dropdown',
+      id: 'elsyn1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Choose the Stronger Source Move** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Synthesis Skills is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Best paragraph strategy in synthesis essay:',
+            options: ['Reason-based paragraphs integrating multiple sources', 'One paragraph per source in source-letter order', 'Only summary of each source', 'No source attribution']
           },
           {
-            label: 'A critical component of understanding Synthesis Skills describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: '"Source B supports Source A claim about costs, but Source F qualifies this by showing long-term savings." This is ___',
+            options: ['Corroboration plus qualification', 'Narrative sequencing', 'Pure summary', 'Ad hominem']
           },
           {
-            label: 'An essential element that connects Synthesis Skills to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'After citing a source, strongest next step is ___',
+            options: ['Commentary explaining how evidence advances your thesis', 'Another quote immediately', 'A new unrelated claim', 'End the paragraph']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Synthesis Skills. Key concept 2 — A critical component of understanding Synthesis Skills. Key concept 3 — An essential element that connects Synthesis Skills to broader themes.'
+        correctAnswers: ['Reason-based paragraphs integrating multiple sources', 'Corroboration plus qualification', 'Commentary explaining how evidence advances your thesis'],
+        hint1: 'Organize by your reasoning, not by source list.',
+        hint2: 'One source supports, one adds condition.',
+        hint3: 'Analysis is where AP points are earned.',
+        explanation: 'Strong synthesis integrates sources around claims, uses relationships among sources, and provides commentary after citation.'
       }
     },
     {
-      id: 'englangs1-strategy',
+      id: 'elsyn1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Synthesis
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Synthesis Skills.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- Build thesis first, then select sources that serve it
+- Group sources by idea clusters before drafting
+- Use source attribution efficiently; do not over-quote
+- Include at least one source-based concession/rebuttal move
+- Keep paragraphs claim-centered, not source-centered
+- Always explain source significance with commentary
       `
     },
     {
-      id: 'englangs1-applied',
+      id: 'elsyn1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Synthesis Skills on a free-response question. The best approach is:',
+            question: 'A student uses five sources but spends most of essay summarizing each one. Why is this likely low-scoring?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Using five sources is too many',
+              'Synthesis requires claim-driven integration and analysis, not source-by-source summary',
+              'AP prefers only one source',
+              'Summary is always penalized automatically'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Source quantity does not guarantee quality. AP scoring prioritizes coherent argument and effective source integration with commentary.'
           },
           {
-            question: 'When studying Synthesis Skills, which strategy is most effective?',
+            question: 'Which thesis best fits synthesis expectations?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '"This topic has many opinions."',
+              '"Given evidence of short-term costs (Sources A, C) and long-term gains (Sources D, F), districts should adopt phased transit reform with equity safeguards."',
+              '"Source B is interesting."',
+              '"I will summarize all sources."'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'This thesis is specific, qualified, and source-aware. It signals an argumentative path that synthesizes evidence with nuance.'
           }
         ]
       }
     }
   ]
-}
+};

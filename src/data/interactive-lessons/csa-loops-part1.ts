@@ -2,26 +2,50 @@ export const csaLoopsPart1Data = {
   topicSlug: 'csa-loops',
   sections: [
     {
-      id: 'csaloops1-intro',
+      id: 'csalp1-intro',
       type: 'text' as const,
       content: `
-# 💻 Advanced Loop Patterns
+# 🔄 Loops (Advanced)
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Nested Loops, Loop Analysis, and String Processing**
 
-Advanced Loop Patterns is a fundamental topic in AP Computer Science A. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Nested Loops
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Advanced Loop Patterns |
-| **Key concept 2** | A critical component of understanding Advanced Loop Patterns |
-| **Key concept 3** | An essential element that connects Advanced Loop Patterns to broader themes |
+\`\`\`java
+// Print a 3x4 grid of stars
+for (int row = 0; row < 3; row++) {
+    for (int col = 0; col < 4; col++) {
+        System.out.print("* ");
+    }
+    System.out.println();  // New line after each row
+}
+\`\`\`
+
+Output:
+\`\`\`
+* * * *
+* * * *
+* * * *
+\`\`\`
+
+> 🔑 **Nested loop execution count:** If the outer loop runs M times and the inner loop runs N times per outer iteration, the inner body runs **M x N** times total.
+
+---
+
+## Loop Analysis Table
+
+| Outer i | Inner j values | Operations |
+|---------|---------------|-----------|
+| i = 0 | j = 0, 1, 2, 3 | 4 operations |
+| i = 1 | j = 0, 1, 2, 3 | 4 operations |
+| i = 2 | j = 0, 1, 2, 3 | 4 operations |
+| **Total** | | **12 operations** |
       `
     },
     {
-      id: 'csaloops1-quiz1',
+      id: 'csalp1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +53,180 @@ Advanced Loop Patterns is a fundamental topic in AP Computer Science A. This par
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Advanced Loop Patterns?',
+            question: 'What is printed?\nfor (int i = 1; i <= 3; i++) {\n    for (int j = 1; j <= i; j++) {\n        System.out.print("*");\n    }\n    System.out.println();\n}',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Advanced Loop Patterns',
-              'A mathematical formula',
-              'A literary technique'
+              '***\n***\n***',
+              '*\n**\n***',
+              '***\n**\n*',
+              '*\n*\n*'
             ],
             correctAnswer: 1,
-            explanation: 'Advanced Loop Patterns focuses on understanding key principles and patterns within AP Computer Science A.'
+            explanation: 'i=1: j goes 1 to 1 (one star). i=2: j goes 1 to 2 (two stars). i=3: j goes 1 to 3 (three stars). The inner loop count depends on the outer loop variable, creating a triangle.'
           },
           {
-            question: 'Why is Advanced Loop Patterns important in AP Computer Science A?',
+            question: 'A nested loop where the outer runs n times and inner runs n times has what total complexity?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'n operations',
+              '2n operations',
+              'n squared operations',
+              'n + 1 operations'
             ],
-            correctAnswer: 1,
-            explanation: 'Advanced Loop Patterns is a key topic in AP Computer Science A that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'When both loops run n times, the inner body executes n x n = n squared times. This is O(n squared) complexity — important for understanding algorithm efficiency.'
           }
         ]
       }
     },
     {
-      id: 'csaloops1-content',
+      id: 'csalp1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## String Processing with Loops
 
-### Key concept 1
-The foundational principle underlying Advanced Loop Patterns. Understanding this concept is essential for mastering Advanced Loop Patterns in AP Computer Science A.
+### Reversing a String
+\`\`\`java
+String original = "hello";
+String reversed = "";
+for (int i = original.length() - 1; i >= 0; i--) {
+    reversed += original.substring(i, i + 1);
+}
+// reversed = "olleh"
+\`\`\`
 
-### Key concept 2
-A critical component of understanding Advanced Loop Patterns. This builds on the previous concept and connects to broader themes in the course.
+### Checking for a Palindrome
+\`\`\`java
+public boolean isPalindrome(String s) {
+    for (int i = 0; i < s.length() / 2; i++) {
+        String left = s.substring(i, i + 1);
+        String right = s.substring(s.length() - 1 - i, s.length() - i);
+        if (!left.equals(right)) {
+            return false;
+        }
+    }
+    return true;
+}
+\`\`\`
 
-### Key concept 3
-An essential element that connects Advanced Loop Patterns to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Counting Characters
+\`\`\`java
+public int countChar(String s, String target) {
+    int count = 0;
+    for (int i = 0; i < s.length(); i++) {
+        if (s.substring(i, i + 1).equals(target)) {
+            count++;
+        }
+    }
+    return count;
+}
+\`\`\`
+
+## Sentinel-Controlled Loops
+\`\`\`java
+Scanner input = new Scanner(System.in);
+int sum = 0;
+int value = input.nextInt();
+while (value != -1) {    // -1 is the sentinel value
+    sum += value;
+    value = input.nextInt();
+}
+\`\`\`
       `
     },
     {
-      id: 'csaloops1-input',
+      id: 'csalp1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Advanced Loop Patterns?
+1) In a nested loop where the outer runs 5 times and the inner runs 4 times, the inner body executes _______ times total.
 
-2) What concept describes a critical component of understanding Advanced Loop Patterns?
+2) To get character at index i of a String in the AP subset, use s.substring(i, i + _______).
 
-3) Name the term for an essential element that connects Advanced Loop Patterns to broader themes.
-
-Use the exact term from this part.
+3) A special value that signals the end of input in a while loop is called a _______ value.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Advanced Loop Patterns), Key concept 2 (A critical component of understanding Advanced Loop Patterns), and Key concept 3 (An essential element that connects Advanced Loop Patterns to broader themes).'
+        correctAnswers: ['20', '1', 'sentinel'],
+        hint1: '5 x 4 = ?',
+        hint2: 'substring takes (start, end) where end is exclusive.',
+        hint3: 'It guards or watches for the stopping condition.',
+        explanation: '5 x 4 = 20 total inner executions. substring(i, i+1) extracts one character. Sentinel = stopping signal value.'
       }
     },
     {
-      id: 'csaloops1-dropdown',
+      id: 'csalp1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Analyze the Loop** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Advanced Loop Patterns is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'A loop that prints * then ** then *** (growing triangle) requires the inner loop bound to depend on ___',
+            options: ['The outer loop variable (j <= i)', 'A constant value', 'The array length', 'A random number']
           },
           {
-            label: 'A critical component of understanding Advanced Loop Patterns describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'To traverse a String character by character, loop from i = 0 to ___',
+            options: ['i < s.length()', 'i <= s.length()', 'i < s.length() - 1', 'i < s.size()']
           },
           {
-            label: 'An essential element that connects Advanced Loop Patterns to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'The time complexity of a nested loop with independent bounds (both O(n)) is ___',
+            options: ['O(n squared)', 'O(n)', 'O(2n)', 'O(log n)']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Advanced Loop Patterns. Key concept 2 — A critical component of understanding Advanced Loop Patterns. Key concept 3 — An essential element that connects Advanced Loop Patterns to broader themes.'
+        correctAnswers: ['The outer loop variable (j <= i)', 'i < s.length()', 'O(n squared)'],
+        hint1: 'Each row has stars equal to the row number.',
+        hint2: 'Indices go from 0 to length-1.',
+        hint3: 'n times n = n squared.',
+        explanation: 'Triangle: inner depends on outer. String traversal: i < length(). Nested loops: O(n) x O(n) = O(n squared).'
       }
     },
     {
-      id: 'csaloops1-strategy',
+      id: 'csalp1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Advanced Loops
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Advanced Loop Patterns.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Computer Science A for higher scores.
+- **Trace nested loops systematically** — write a table of outer and inner variable values
+- Know that inner loop count = outer iterations x inner iterations
+- String processing: always use \`substring(i, i+1)\` to get a single character in the AP subset
+- **Common error:** using \`i <= s.length()\` instead of \`i < s.length()\` (StringIndexOutOfBoundsException)
+- Palindrome and reversal are classic FRQ patterns — practice these
+- If the inner loop bound depends on the outer variable, the total count is a triangular series
       `
     },
     {
-      id: 'csaloops1-applied',
+      id: 'csalp1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Advanced Loop Patterns on a free-response question. The best approach is:',
+            question: 'What is the value of result after this code?\nString s = "abcabc";\nint result = 0;\nfor (int i = 0; i < s.length(); i++) {\n    if (s.substring(i, i+1).equals("a")) {\n        result++;\n    }\n}',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '1',
+              '2',
+              '3',
+              '6'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The loop checks each character. "a" appears at index 0 and index 3. So result = 2.'
           },
           {
-            question: 'When studying Advanced Loop Patterns, which strategy is most effective?',
+            question: 'How many total stars are printed?\nfor (int i = 1; i <= 4; i++) {\n    for (int j = 1; j <= i; j++) {\n        System.out.print("*");\n    }\n}',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '4',
+              '10',
+              '16',
+              '8'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'i=1: 1 star. i=2: 2 stars. i=3: 3 stars. i=4: 4 stars. Total: 1+2+3+4 = 10 stars. This is a triangular number series.'
           }
         ]
       }
     }
   ]
-}
+};

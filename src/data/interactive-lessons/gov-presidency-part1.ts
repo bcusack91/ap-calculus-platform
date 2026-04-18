@@ -1,175 +1,80 @@
 export const govPresidencyPart1Data = {
   topicSlug: 'gov-presidency',
   sections: [
-    {
-      id: 'govpresi1-intro',
-      type: 'text' as const,
-      content: `
+    {id:'govpresi1-intro',type:'text' as const,content:`
 # 🏛️ The Presidency
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Powers, Roles & Executive Authority**
 
-The Presidency is a fundamental topic in AP US Government. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Formal vs. Informal Powers |
+| Roles of the President |
+| Executive Orders & Agreements |
+| Checks on Presidential Power |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying The Presidency |
-| **Key concept 2** | A critical component of understanding The Presidency |
-| **Key concept 3** | An essential element that connects The Presidency to broader themes |
-      `
-    },
-    {
-      id: 'govpresi1-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of The Presidency?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within The Presidency',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'The Presidency focuses on understanding key principles and patterns within AP US Government.'
-          },
-          {
-            question: 'Why is The Presidency important in AP US Government?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'The Presidency is a key topic in AP US Government that connects to multiple course themes.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'govpresi1-content',
-      type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
+> 🔑 **Key Concept:** The AP exam distinguishes between the president's **formal powers** (enumerated in Article II) and **informal powers** (developed through practice and precedent). The expansion of presidential power is a central AP theme.
+`},
+    {id:'govpresi1-powers',type:'text' as const,content:`
+## 📖 Formal vs. Informal Presidential Powers
 
-### Key concept 1
-The foundational principle underlying The Presidency. Understanding this concept is essential for mastering The Presidency in AP US Government.
+### Formal (Constitutional) Powers — Article II
 
-### Key concept 2
-A critical component of understanding The Presidency. This builds on the previous concept and connects to broader themes in the course.
+| Power | Details |
+|---|---|
+| **Commander in Chief** | Head of the military (but only Congress can declare war) |
+| **Treaty power** | Negotiate treaties (requires 2/3 Senate ratification) |
+| **Appointment power** | Appoint Cabinet, ambassadors, federal judges (requires Senate confirmation) |
+| **Veto power** | Reject legislation (Congress can override with 2/3 in both chambers) |
+| **Pardon power** | Grant pardons and reprieves for federal offenses (cannot pardon state crimes or impeachments) |
+| **State of the Union** | Report to Congress on the state of the nation |
 
-### Key concept 3
-An essential element that connects The Presidency to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'govpresi1-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+### Informal Powers (Developed Through Practice)
 
-1) What term refers to the foundational principle underlying The Presidency?
+| Power | Details |
+|---|---|
+| **Executive orders** | Directives that have the force of law without congressional approval (e.g., Truman's desegregation of the military, 1948) |
+| **Executive agreements** | International agreements that do NOT require Senate ratification (unlike treaties) |
+| **Signing statements** | Written comments when signing a bill — can signal how the president intends to interpret or enforce the law |
+| **Bully pulpit** | Using media access and public visibility to shape public opinion and pressure Congress |
+| **Executive privilege** | Claiming confidentiality for presidential communications (limited by *United States v. Nixon*, 1974) |
+| **Party leader** | Head of their political party; influences party platform and fundraising |
 
-2) What concept describes a critical component of understanding The Presidency?
+> 🔑 **AP Connection:** The AP exam frequently tests the difference between **executive orders** (domestic directives) and **executive agreements** (international agreements that bypass Senate ratification). Both expand presidential power beyond what Article II explicitly grants.
+`},
+    {id:'govpresi1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
+      {question:'How do executive agreements differ from formal treaties?',options:['Executive agreements require approval from 2/3 of the Senate, while treaties only need a simple majority vote','Executive agreements are international agreements that do NOT require Senate ratification, while treaties require approval by 2/3 of the Senate','Executive agreements can only be used for domestic policy, while treaties are used for all international relations','There is no legal difference — executive agreements and treaties are identical in all respects'],correctAnswer:1,explanation:'Executive agreements allow the president to make binding international commitments without the 2/3 Senate vote required for treaties. This makes them faster and politically easier — presidents have used far more executive agreements than formal treaties. However, they can be reversed by subsequent presidents.'},
+      {question:'Which of the following is an example of the president using the "bully pulpit"?',options:['The president vetoing a bill passed by Congress and returning it with objections','The president giving a nationally televised address to build public support for a policy, pressuring Congress to act','The president issuing a pardon for a federal crime committed by a political ally','The president appointing a new Supreme Court justice after a vacancy occurs on the bench'],correctAnswer:1,explanation:'The "bully pulpit" (coined by Theodore Roosevelt) refers to the president\'s unique ability to command media attention and use it to shape public opinion. By going directly to the American people — through speeches, press conferences, or social media — the president can pressure Congress to support their agenda.'}
+    ]}},
+    {id:'govpresi1-checks',type:'text' as const,content:`
+## 📖 Checks on Presidential Power
 
-3) Name the term for an essential element that connects The Presidency to broader themes.
+The Constitution and political practice provide several checks on the president:
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying The Presidency), Key concept 2 (A critical component of understanding The Presidency), and Key concept 3 (An essential element that connects The Presidency to broader themes).'
-      }
-    },
-    {
-      id: 'govpresi1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying The Presidency is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding The Presidency describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects The Presidency to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying The Presidency. Key concept 2 — A critical component of understanding The Presidency. Key concept 3 — An essential element that connects The Presidency to broader themes.'
-      }
-    },
-    {
-      id: 'govpresi1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
+| Check | Branch | Details |
+|---|---|---|
+| **Override veto** | Congress | 2/3 vote in both chambers |
+| **Power of the purse** | Congress | Only Congress can appropriate funds — president cannot spend without authorization |
+| **Impeachment** | Congress | House impeaches (majority vote); Senate tries and convicts (2/3 vote) |
+| **Senate confirmation** | Congress | Appointments require Senate approval (can block nominees) |
+| **War Powers Resolution (1973)** | Congress | President must notify Congress within 48 hours of deploying troops; 60-day limit without congressional authorization |
+| **Judicial review** | Judiciary | Courts can strike down executive orders and actions as unconstitutional |
+| **United States v. Nixon (1974)** | Judiciary | Executive privilege is limited — the president cannot withhold evidence in criminal proceedings |
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of The Presidency.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+### Impeachment — Process
+1. House Judiciary Committee investigates and drafts articles of impeachment
+2. Full House votes on articles (simple majority to impeach)
+3. Senate conducts trial presided by the Chief Justice
+4. 2/3 Senate vote required to convict and remove from office
+5. **Historical record:** Andrew Johnson (1868), Bill Clinton (1998), and Donald Trump (2019, 2021) were impeached by the House but not convicted by the Senate; Nixon resigned before impeachment vote
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP US Government for higher scores.
-      `
-    },
-    {
-      id: 'govpresi1-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain The Presidency on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying The Presidency, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
-    }
+> 🔑 **AP Connection:** The War Powers Resolution and United States v. Nixon are **essential cases**. The former attempts to limit presidential military power; the latter established that executive privilege has limits.
+`},
+    {id:'govpresi1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
+      {question:'What was the constitutional significance of United States v. Nixon (1974)?',options:['It established that the president has absolute executive privilege and communications can never be subpoenaed','It ruled that executive privilege exists but is not absolute — the president cannot withhold evidence needed in criminal proceedings','It gave Congress the power to appoint special prosecutors to investigate the president without judicial oversight','It eliminated the president\'s pardon power for all crimes related to their time in office'],correctAnswer:1,explanation:'In United States v. Nixon, the Supreme Court unanimously ruled that while executive privilege is a legitimate presidential power, it is not absolute. President Nixon was required to turn over White House tape recordings subpoenaed for a criminal investigation (Watergate). This established that no person — including the president — is above the law.'},
+      {question:'What is the primary purpose of the War Powers Resolution (1973)?',options:['To give the president unlimited authority to deploy military forces anywhere in the world without restriction','To limit the president\'s ability to commit U.S. forces to military action without congressional authorization — requiring notification within 48 hours and a 60-day limit','To require the president to personally lead military forces in any armed conflict involving U.S. troops','To abolish the president\'s role as Commander in Chief and transfer military authority entirely to Congress'],correctAnswer:1,explanation:'The War Powers Resolution was passed over Nixon\'s veto in response to the Vietnam War, which escalated without a formal declaration of war. It requires the president to notify Congress within 48 hours of deploying troops and limits deployment to 60 days (extendable to 90) without congressional authorization. Its effectiveness is debated.'}
+    ]}}
   ]
-}
+};

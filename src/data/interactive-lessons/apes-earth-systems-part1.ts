@@ -2,26 +2,45 @@ export const apesEarthSystemsPart1Data = {
   topicSlug: 'apes-earth-systems',
   sections: [
     {
-      id: 'apeseart1-intro',
+      id: 'apeses1-intro',
       type: 'text' as const,
       content: `
-# 🌿 Earth Systems & Resources
+# 🌎 Earth Systems & Resources
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — The Geosphere, Hydrosphere, Atmosphere, and Biosphere**
 
-Earth Systems & Resources is a fundamental topic in AP Environmental Science. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Earth's Four Spheres
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Earth Systems & Resources |
-| **Key concept 2** | A critical component of understanding Earth Systems & Resources |
-| **Key concept 3** | An essential element that connects Earth Systems & Resources to broader themes |
+| Sphere | What It Includes | Key Interactions |
+|--------|-----------------|-----------------|
+| **Geosphere** | Rocks, minerals, soil, tectonic plates | Provides nutrients through weathering; volcanic activity affects atmosphere |
+| **Hydrosphere** | Oceans, rivers, lakes, groundwater, ice | Water cycle connects all spheres; ocean currents regulate climate |
+| **Atmosphere** | Gases surrounding Earth (N₂ 78%, O₂ 21%, trace gases) | Greenhouse effect; weather; filters UV radiation |
+| **Biosphere** | All living organisms | Photosynthesis, decomposition, nutrient cycling |
+
+> 🔑 **AP Key Point:** Environmental science studies the **interactions** between these spheres. Most AP questions ask how a change in one sphere affects others.
+
+---
+
+## Plate Tectonics
+
+| Boundary Type | Motion | Features | Hazards |
+|--------------|--------|----------|---------|
+| **Divergent** | Plates move apart | Mid-ocean ridges, rift valleys | Mild earthquakes, volcanic activity |
+| **Convergent** | Plates move together | Mountains, trenches, subduction zones | Strong earthquakes, volcanoes, tsunamis |
+| **Transform** | Plates slide past each other | Fault lines | Earthquakes (San Andreas Fault) |
+
+### Rock Cycle
+
+Igneous → (weathering/erosion) → Sedimentary → (heat/pressure) → Metamorphic → (melting) → Igneous
+
+Soil formation depends on: **parent material, climate, organisms, topography, time** (ClORPT)
       `
     },
     {
-      id: 'apeseart1-quiz1',
+      id: 'apeses1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +48,149 @@ Earth Systems & Resources is a fundamental topic in AP Environmental Science. Th
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Earth Systems & Resources?',
+            question: 'At a convergent plate boundary where an oceanic plate meets a continental plate, the oceanic plate subducts because:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Earth Systems & Resources',
-              'A mathematical formula',
-              'A literary technique'
+              'Oceanic plates are less dense than continental plates',
+              'Oceanic plates are denser than continental plates',
+              'Continental plates are thinner than oceanic plates',
+              'Oceanic plates are pushed by mid-ocean ridges'
             ],
             correctAnswer: 1,
-            explanation: 'Earth Systems & Resources focuses on understanding key principles and patterns within AP Environmental Science.'
+            explanation: 'Oceanic crust is denser (basalt) than continental crust (granite), so it subducts (sinks) beneath the continental plate at convergent boundaries, creating trenches and volcanic arcs.'
           },
           {
-            question: 'Why is Earth Systems & Resources important in AP Environmental Science?',
+            question: 'Which set of factors determines soil formation?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Temperature and precipitation only',
+              'Parent material, climate, organisms, topography, and time',
+              'Rock type and mineral content only',
+              'Latitude and altitude only'
             ],
             correctAnswer: 1,
-            explanation: 'Earth Systems & Resources is a key topic in AP Environmental Science that connects to multiple course themes.'
+            explanation: 'Soil formation (pedogenesis) depends on all five ClORPT factors: Climate, Organisms, Relief (topography), Parent material, and Time.'
           }
         ]
       }
     },
     {
-      id: 'apeseart1-content',
+      id: 'apeses1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Soil Composition & Horizons
 
-### Key concept 1
-The foundational principle underlying Earth Systems & Resources. Understanding this concept is essential for mastering Earth Systems & Resources in AP Environmental Science.
+| Horizon | Name | Description |
+|---------|------|-----------|
+| **O** | Organic | Decomposing leaves and organisms (humus) |
+| **A** | Topsoil | Mineral soil + organic matter; most fertile; root zone |
+| **B** | Subsoil | Accumulation of leached minerals (clay, iron, aluminum) |
+| **C** | Parent material | Weathered bedrock fragments |
+| **R** | Bedrock | Unweathered solid rock |
 
-### Key concept 2
-A critical component of understanding Earth Systems & Resources. This builds on the previous concept and connects to broader themes in the course.
+### Soil Properties
 
-### Key concept 3
-An essential element that connects Earth Systems & Resources to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Property | Description | Why It Matters |
+|----------|-----------|---------------|
+| **Texture** | Proportion of sand, silt, clay | Affects drainage and nutrient-holding capacity |
+| **Permeability** | How fast water moves through soil | Sandy = fast drainage; clay = slow, waterlogged |
+| **Porosity** | Total pore space in soil | Higher porosity = more water/air storage |
+| **pH** | Acidity or alkalinity (ideal: 6.0–7.0 for most crops) | Affects nutrient availability |
+| **CEC** | Cation Exchange Capacity | Higher CEC = better nutrient retention |
       `
     },
     {
-      id: 'apeseart1-input',
+      id: 'apeses1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Earth Systems & Resources?
+1) The most fertile soil horizon where most plant roots grow is the _______ horizon (also called topsoil).
 
-2) What concept describes a critical component of understanding Earth Systems & Resources?
+2) The five factors of soil formation are abbreviated as _______ (Climate, Organisms, Relief, Parent material, Time).
 
-3) Name the term for an essential element that connects Earth Systems & Resources to broader themes.
-
-Use the exact term from this part.
+3) At divergent plate boundaries, plates move _______ from each other.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Earth Systems & Resources), Key concept 2 (A critical component of understanding Earth Systems & Resources), and Key concept 3 (An essential element that connects Earth Systems & Resources to broader themes).'
+        correctAnswers: ['A', 'ClORPT', 'apart'],
+        hint1: 'The first mineral soil layer below the O horizon.',
+        hint2: 'An acronym for the five soil-forming factors.',
+        hint3: 'The opposite of convergent.',
+        explanation: 'A horizon = topsoil (most fertile). ClORPT = soil formation factors. Divergent = plates moving apart (creating mid-ocean ridges).'
       }
     },
     {
-      id: 'apeseart1-dropdown',
+      id: 'apeses1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concept** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Earth Systems & Resources is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'The San Andreas Fault in California is a ___ plate boundary',
+            options: ['Transform', 'Divergent', 'Convergent', 'Subduction']
           },
           {
-            label: 'A critical component of understanding Earth Systems & Resources describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Sandy soil has ___ permeability and ___ nutrient retention',
+            options: ['High permeability and low nutrient retention', 'Low permeability and high nutrient retention', 'High permeability and high nutrient retention', 'Low permeability and low nutrient retention']
           },
           {
-            label: 'An essential element that connects Earth Systems & Resources to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A volcanic eruption releasing ash into the atmosphere is an interaction between ___',
+            options: ['Geosphere and atmosphere', 'Hydrosphere and biosphere', 'Atmosphere and biosphere', 'Hydrosphere and geosphere']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Earth Systems & Resources. Key concept 2 — A critical component of understanding Earth Systems & Resources. Key concept 3 — An essential element that connects Earth Systems & Resources to broader themes.'
+        correctAnswers: ['Transform', 'High permeability and low nutrient retention', 'Geosphere and atmosphere'],
+        hint1: 'Plates sliding past each other.',
+        hint2: 'Sand particles are large with big pores.',
+        hint3: 'Rocks releasing material into the air.',
+        explanation: 'San Andreas = transform (sliding). Sandy soil = drains fast but loses nutrients. Volcanic ash = geosphere-atmosphere interaction.'
       }
     },
     {
-      id: 'apeseart1-strategy',
+      id: 'apeses1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Earth Systems
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Earth Systems & Resources.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Environmental Science for higher scores.
+- Questions often present a **scenario** and ask you to identify which spheres interact
+- Know soil horizons O-A-B-C-R and their characteristics
+- Plate tectonics: associate boundary types with specific hazards and landforms
+- Soil texture triangle: sand (large, drains fast) → silt (medium) → clay (small, holds water)
+- **Loam** (mix of sand, silt, clay) is ideal for agriculture
       `
     },
     {
-      id: 'apeseart1-applied',
+      id: 'apeses1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Earth Systems & Resources on a free-response question. The best approach is:',
+            question: 'A farmer notices poor crop growth in soil with very high clay content. The MOST likely cause is:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Too much drainage causing drought stress',
+              'Waterlogging due to low permeability of clay',
+              'Insufficient mineral content in clay soils',
+              'Clay soil is too acidic for any crop growth'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Clay particles are very small with tiny pore spaces, resulting in low permeability. Water drains slowly, causing waterlogging that suffocates plant roots and inhibits growth.'
           },
           {
-            question: 'When studying Earth Systems & Resources, which strategy is most effective?',
+            question: 'The 2010 eruption of Eyjafjallajokull in Iceland melted glaciers (causing floods), released ash (disrupting air travel), and destroyed vegetation. This event demonstrates:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'An interaction limited to the geosphere',
+              'Interactions among all four Earth spheres',
+              'Only hydrosphere-atmosphere interactions',
+              'That volcanic events have no lasting impact'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Geosphere (eruption), hydrosphere (glacier melting/floods), atmosphere (ash cloud), and biosphere (vegetation destruction) — all four spheres were affected by this single event.'
           }
         ]
       }
     }
   ]
-}
+};

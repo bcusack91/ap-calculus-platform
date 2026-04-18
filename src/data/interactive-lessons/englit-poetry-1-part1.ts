@@ -1,175 +1,144 @@
 export const englitPoetry1Part1Data = {
-  topicSlug: 'englit-poetry-1',
+  topicSlug: "englit-poetry-1",
   sections: [
     {
-      id: 'englitpo1-intro',
+      id: "englitpo1-intro",
       type: 'text' as const,
-      content: `
-# 📖 Poetry: Imagery & Diction
-
-**Part 1 of 7 — Core Concepts**
-
-Poetry: Imagery & Diction is a fundamental topic in AP English Literature. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
-
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Poetry: Imagery & Diction |
-| **Key concept 2** | A critical component of understanding Poetry: Imagery & Diction |
-| **Key concept 3** | An essential element that connects Poetry: Imagery & Diction to broader themes |
-      `
+      content: "# 🌿 Poetry Analysis I\n\n**Part 1 of 7 - Core Concepts, Analysis Skills, and AP Lit Application**\n\n---\n\n## Why Poetry Analysis I Matters\n\nPoetry analysis begins with close attention to voice and language patterns, not paraphrase.\n\n| Core Concept | What To Notice | Why It Matters |\n|---|---|---|\n| **Speaker** | Constructed voice in the poem | Speaker position shapes meaning |\n| **Tone** | Attitude toward subject or audience | Tone movement reveals argument development |\n| **Imagery** | Sensory language and detail clusters | Imagery patterns support thematic claims |\n\n> AP Lit rewards interpretation supported by textual evidence, not plot summary."
     },
     {
-      id: 'englitpo1-quiz1',
+      id: "englitpo1-quiz1",
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: "**Concept Check**",
       exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of Poetry: Imagery & Diction?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within Poetry: Imagery & Diction',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'Poetry: Imagery & Diction focuses on understanding key principles and patterns within AP English Literature.'
-          },
-          {
-            question: 'Why is Poetry: Imagery & Diction important in AP English Literature?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'Poetry: Imagery & Diction is a key topic in AP English Literature that connects to multiple course themes.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "Which statement best reflects the role of Speaker in literary analysis?",
+                  "options": [
+                        "The speaker is always the poet.",
+                        "The speaker is a textual persona that may differ from the poet.",
+                        "Speaker analysis is unnecessary in AP poetry.",
+                        "Speaker means only grammatical subject."
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Speaker helps readers interpret meaning and authorial choice, not just identify a feature."
+            },
+            {
+                  "question": "What is usually the strongest AP Lit analytical move?",
+                  "options": [
+                        "Retell the plot in sequence",
+                        "Name literary devices without interpretation",
+                        "Connect textual details to a defensible interpretation about meaning",
+                        "Focus only on historical background"
+                  ],
+                  "correctAnswer": 2,
+                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+            }
+      ]
+}
     },
     {
-      id: 'englitpo1-content',
+      id: "englitpo1-content",
       type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
-
-### Key concept 1
-The foundational principle underlying Poetry: Imagery & Diction. Understanding this concept is essential for mastering Poetry: Imagery & Diction in AP English Literature.
-
-### Key concept 2
-A critical component of understanding Poetry: Imagery & Diction. This builds on the previous concept and connects to broader themes in the course.
-
-### Key concept 3
-An essential element that connects Poetry: Imagery & Diction to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+      content: "## Building Interpretation in Poetry Analysis I\n\n### Analytical Workflow\n1. Identify a pattern in language, structure, or characterization\n2. Explain how that pattern shapes tone, perspective, or tension\n3. Connect the pattern to a broader thematic claim\n\n| Strong Commentary Move | Example Frame |\n|---|---|\n| Pattern + meaning | \"By emphasizing tone, the text suggests...\" |\n| Tension or contrast | \"Although the speaker appears X, imagery reveals...\" |\n| Form and effect | \"This structural choice shifts the reader from...to...\" |\n\n### Common Pitfalls\n- Device listing without explanation\n- Theme statements with no textual support\n- Summary replacing analysis\n- Overly absolute claims that ignore complexity\n\nStrong interpretations track tonal movement and image clusters across the poem."
     },
     {
-      id: 'englitpo1-input',
+      id: "englitpo1-input",
       type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the foundational principle underlying Poetry: Imagery & Diction?
-
-2) What concept describes a critical component of understanding Poetry: Imagery & Diction?
-
-3) Name the term for an essential element that connects Poetry: Imagery & Diction to broader themes.
-
-Use the exact term from this part.
-      `,
+      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Poetry: Imagery & Diction), Key concept 2 (A critical component of understanding Poetry: Imagery & Diction), and Key concept 3 (An essential element that connects Poetry: Imagery & Diction to broader themes).'
-      }
+      "boxes": 3,
+      "correctAnswers": [
+            "speaker",
+            "tone",
+            "imagery"
+      ],
+      "hint1": "Concept 1: Speaker",
+      "hint2": "Concept 2: Tone",
+      "hint3": "Concept 3: Imagery",
+      "explanation": "Speaker, Tone, and Imagery are core vocabulary for this unit."
+}
     },
     {
-      id: 'englitpo1-dropdown',
+      id: "englitpo1-dropdown",
       type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
+      content: "**Apply the Concept**",
       exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Poetry: Imagery & Diction is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Poetry: Imagery & Diction describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Poetry: Imagery & Diction to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Poetry: Imagery & Diction. Key concept 2 — A critical component of understanding Poetry: Imagery & Diction. Key concept 3 — An essential element that connects Poetry: Imagery & Diction to broader themes.'
-      }
+      "dropdowns": [
+            {
+                  "label": "Speaker in analysis usually refers to ___",
+                  "options": [
+                        "The poem internal voice or persona",
+                        "The poet legal name only",
+                        "A random character from another text",
+                        "The publication city"
+                  ]
+            },
+            {
+                  "label": "The best AP paragraph usually includes ___",
+                  "options": [
+                        "Claim, evidence, and commentary",
+                        "Plot summary only",
+                        "Device name lists",
+                        "Vocabulary definitions only"
+                  ]
+            },
+            {
+                  "label": "A defensible interpretation should be ___",
+                  "options": [
+                        "Text-supported and specific",
+                        "Purely personal with no evidence",
+                        "A broad moral lesson only",
+                        "A dictionary definition"
+                  ]
+            }
+      ],
+      "correctAnswers": [
+            "The poem internal voice or persona",
+            "Claim, evidence, and commentary",
+            "Text-supported and specific"
+      ],
+      "hint1": "Think how speaker functions in meaning-making.",
+      "hint2": "Interpretation must be supported.",
+      "hint3": "Specific textual support is key.",
+      "explanation": "Strong AP analysis treats speaker as an interpretive tool, then develops claims through evidence and commentary."
+}
     },
     {
-      id: 'englitpo1-strategy',
+      id: "englitpo1-strategy",
       type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Poetry: Imagery & Diction.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Literature for higher scores.
-      `
+      content: "## AP Exam Strategy: Poetry Analysis I\n\n- Start with a claim about how speaker or tone shapes meaning\n- Use short quotations and explain them in context\n- Track contrast, shifts, and patterns across the whole passage\n- Avoid pure summary; prioritize interpretation\n- Qualify claims when text is ambiguous\n- Map tone changes and connect them to shifts in imagery and claim."
     },
     {
-      id: 'englitpo1-applied',
+      id: "englitpo1-applied",
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: "**AP-Style Application**",
       exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain Poetry: Imagery & Diction on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying Poetry: Imagery & Diction, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "A student identifies tone in a passage but does not explain effect. What is the best revision?",
+                  "options": [
+                        "Add more plot details",
+                        "Explain how tone shapes tone or theme in that moment",
+                        "Replace all quotes with summary",
+                        "Switch to biographical information only"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+            },
+            {
+                  "question": "Which thesis move is strongest for AP Lit?",
+                  "options": [
+                        "Make an absolute claim with no nuance",
+                        "Advance a specific, defensible claim about how imagery contributes to meaning",
+                        "Retell the plot in one sentence",
+                        "List three literary terms without argument"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+            }
+      ]
+}
     }
   ]
-}
+};

@@ -5,171 +5,204 @@ export const whIslamicEmpiresPart1Data = {
       id: 'whislami1-intro',
       type: 'text' as const,
       content: `
-# 🌏 Islamic Empires (1450–1750)
+# 🕌 Islamic Empires (1450–1750)
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — The Ottoman, Safavid & Mughal Empires**
 
-Islamic Empires (1450–1750) is a fundamental topic in AP World History. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 The Three Gunpowder Empires |
+| Ottoman Empire — Structure & Expansion |
+| Safavid Empire — Shi'a Identity |
+| Mughal Empire — Religious Diversity |
+| Decline & Comparison |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Islamic Empires (1450–1750) |
-| **Key concept 2** | A critical component of understanding Islamic Empires (1450–1750) |
-| **Key concept 3** | An essential element that connects Islamic Empires (1450–1750) to broader themes |
+> 🔑 **Key Concept:** The AP exam groups the Ottomans, Safavids, and Mughals as **"Gunpowder Empires"** because their power rested on firearms technology. You must compare how each empire handled **religious diversity, legitimacy, and governance**.
+
+---
+
+### What You'll Master in Part 1
+- How gunpowder technology transformed Islamic empires
+- Key rulers and their policies toward religious minorities
+- Similarities and differences across the three empires
+- How these empires connected to global trade networks
+      `
+    },
+    {
+      id: 'whislami1-ottoman',
+      type: 'text' as const,
+      content: `
+## 📖 The Ottoman Empire (c. 1299–1922)
+
+The Ottomans built one of the most powerful and long-lasting empires in world history, spanning southeastern Europe, western Asia, and North Africa.
+
+### Rise & Expansion
+
+| Period | Key Events |
+|---|---|
+| **1299** | Osman I founds the Ottoman dynasty in Anatolia |
+| **1453** | Mehmed II conquers Constantinople → renamed Istanbul; ends the Byzantine Empire |
+| **1520–1566** | **Suleiman the Magnificent** — empire reaches greatest extent |
+| **1529** | Siege of Vienna — Ottoman expansion into Europe halted |
+
+### Government & Administration
+
+- **Sultan** held absolute political and religious authority (title: *Caliph* after 1517 conquest of Egypt)
+- **Devshirme system** — Christian boys from the Balkans were recruited, converted to Islam, and trained as elite soldiers (**Janissaries**) or administrators
+- **Millet system** — religious minorities (Christians, Jews) governed their own communities in exchange for taxes and loyalty
+- **Provincial governors (pashas)** administered distant regions with significant autonomy
+
+### Economy
+- Controlled key trade routes between Europe and Asia
+- **Istanbul** became a cosmopolitan center of commerce
+- Revenue from the spice trade, textiles, and taxation of conquered peoples
+
+> 🔑 **AP Connection:** The devshirme and millet systems are **heavily tested**. The devshirme shows how empires used enslaved/recruited populations for governance, while the millet system demonstrates Ottoman religious tolerance as a governance strategy.
       `
     },
     {
       id: 'whislami1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: `**Concept Check** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Islamic Empires (1450–1750)?',
+            question: 'What was the primary purpose of the Ottoman devshirme system?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Islamic Empires (1450–1750)',
-              'A mathematical formula',
-              'A literary technique'
+              'To recruit and train Christian boys as elite soldiers and administrators loyal to the Sultan',
+              'To convert Muslim subjects to Christianity through forced education programs',
+              'To collect agricultural taxes from peasant farmers across the Balkans',
+              'To establish diplomatic embassies in European capitals for trade negotiations'
             ],
-            correctAnswer: 1,
-            explanation: 'Islamic Empires (1450–1750) focuses on understanding key principles and patterns within AP World History.'
+            correctAnswer: 0,
+            explanation: 'The devshirme recruited Christian boys — primarily from the Balkans — who were converted to Islam, educated, and trained to serve as Janissary soldiers or government administrators. Their loyalty was directly to the Sultan since they had no local family ties.'
           },
           {
-            question: 'Why is Islamic Empires (1450–1750) important in AP World History?',
+            question: 'Under the Ottoman millet system, how were non-Muslim religious communities governed?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'They were forced to convert or face execution under strict Sharia law',
+              'They could govern their own internal affairs (marriage, education, disputes) in exchange for paying special taxes',
+              'They had full political equality with Muslims and held seats in the imperial council',
+              'They were confined to specific urban quarters and banned from participating in trade'
             ],
             correctAnswer: 1,
-            explanation: 'Islamic Empires (1450–1750) is a key topic in AP World History that connects to multiple course themes.'
+            explanation: 'The millet system allowed religious communities (Greek Orthodox Christians, Armenian Christians, Jews) self-governance in personal matters like marriage, education, and civil disputes. In return, they paid the jizya (a tax on non-Muslims). This is an example of pragmatic religious tolerance as a governance strategy.'
+          },
+          {
+            question: 'Which event in 1453 is considered a turning point in world history and a key marker of the Ottoman rise?',
+            options: [
+              'The Ottoman defeat at the Battle of Lepanto against a European coalition',
+              'The fall of Constantinople to Mehmed II, ending the Byzantine Empire',
+              'The signing of the Treaty of Karlowitz with European powers',
+              'The completion of the Hagia Sophia as an Ottoman mosque'
+            ],
+            correctAnswer: 1,
+            explanation: 'Mehmed II\'s conquest of Constantinople in 1453 ended the 1,100-year-old Byzantine Empire and gave the Ottomans control of a strategic crossroads between Europe and Asia. The city was renamed Istanbul and became the Ottoman capital.'
           }
         ]
       }
     },
     {
-      id: 'whislami1-content',
+      id: 'whislami1-safavid',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## 📖 The Safavid Empire (1501–1736)
 
-### Key concept 1
-The foundational principle underlying Islamic Empires (1450–1750). Understanding this concept is essential for mastering Islamic Empires (1450–1750) in AP World History.
+The Safavids ruled Persia (modern-day Iran) and established **Twelver Shi'a Islam** as the state religion — creating a lasting religious identity that distinguishes Iran from its Sunni neighbors to this day.
 
-### Key concept 2
-A critical component of understanding Islamic Empires (1450–1750). This builds on the previous concept and connects to broader themes in the course.
+### Key Features
 
-### Key concept 3
-An essential element that connects Islamic Empires (1450–1750) to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Ruler | Period | Significance |
+|---|---|---|
+| **Shah Ismail I** | 1501–1524 | Founded the dynasty; forced conversion to Shi'a Islam |
+| **Shah Abbas I ("the Great")** | 1588–1629 | Military modernization; new capital at Isfahan; height of Safavid power |
+
+### Government & Society
+- **Shah** held absolute authority, claiming descent from Shi'a Imams
+- **Qizilbash** — Turkic tribal warriors who provided military power (later replaced by slave soldiers similar to Janissaries)
+- **Isfahan** became one of the world's most beautiful cities — "Isfahan is half the world" was a common saying
+- Women in elite households had **more legal protections** than in Ottoman or Mughal society (property rights, divorce rights)
+
+### Conflict with Ottomans
+- The Safavid-Ottoman rivalry was both **territorial and religious** — Shi'a vs. Sunni
+- This conflict shaped the geopolitics of the Middle East for centuries
+- Battle of Chaldiran (1514): Ottomans defeated Safavids using superior firearms
+
+> 🔑 **AP Connection:** The Safavid-Ottoman rivalry illustrates how **religious differences** (Shi'a vs. Sunni) drove interstate conflict, a pattern the AP exam frequently tests.
       `
     },
     {
-      id: 'whislami1-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the foundational principle underlying Islamic Empires (1450–1750)?
-
-2) What concept describes a critical component of understanding Islamic Empires (1450–1750)?
-
-3) Name the term for an essential element that connects Islamic Empires (1450–1750) to broader themes.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Islamic Empires (1450–1750)), Key concept 2 (A critical component of understanding Islamic Empires (1450–1750)), and Key concept 3 (An essential element that connects Islamic Empires (1450–1750) to broader themes).'
-      }
-    },
-    {
-      id: 'whislami1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Islamic Empires (1450–1750) is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Islamic Empires (1450–1750) describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Islamic Empires (1450–1750) to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Islamic Empires (1450–1750). Key concept 2 — A critical component of understanding Islamic Empires (1450–1750). Key concept 3 — An essential element that connects Islamic Empires (1450–1750) to broader themes.'
-      }
-    },
-    {
-      id: 'whislami1-strategy',
+      id: 'whislami1-mughal',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## 📖 The Mughal Empire (1526–1857)
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Islamic Empires (1450–1750).
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+The Mughals ruled the Indian subcontinent, governing a vast and religiously diverse population of Hindus, Muslims, Sikhs, and others.
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP World History for higher scores.
+### Key Rulers
+
+| Ruler | Period | Legacy |
+|---|---|---|
+| **Babur** | 1526–1530 | Founded the dynasty; descended from both Timur and Genghis Khan |
+| **Akbar** | 1556–1605 | **Most tested ruler** — policy of religious tolerance (*sulh-i-kul* = "universal peace"); abolished the jizya tax on Hindus; married Hindu Rajput princesses |
+| **Shah Jahan** | 1628–1658 | Built the **Taj Mahal**; lavish architectural patronage |
+| **Aurangzeb** | 1658–1707 | **Reversed** Akbar's tolerance; reinstated jizya; expanded territory but destabilized the empire |
+
+### Religious Diversity as a Governance Challenge
+- Akbar's approach: **inclusion** — appointed Hindu generals (Rajputs), created the syncretic religion *Din-i-Ilahi*, held interfaith debates (Ibadat Khana)
+- Aurangzeb's approach: **exclusion** — destroyed Hindu temples, imposed strict Islamic law, triggered rebellions (Marathas, Sikhs)
+
+### Economy & Culture
+- Controlled Indian Ocean trade in textiles, spices, and gems
+- **Mughal miniature painting** blended Persian and Indian artistic traditions
+- Architecture: Taj Mahal, Red Fort, Jama Masjid
+
+> 🔑 **AP Connection:** The AP exam loves the **Akbar vs. Aurangzeb comparison** — it tests how different approaches to governing diverse populations produced dramatically different outcomes.
       `
     },
     {
-      id: 'whislami1-applied',
+      id: 'whislami1-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: `**Check Your Understanding** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Islamic Empires (1450–1750) on a free-response question. The best approach is:',
+            question: 'How did Mughal Emperor Akbar\'s religious policies differ from those of Aurangzeb?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Akbar promoted religious tolerance and abolished the jizya tax, while Aurangzeb reimposed it and enforced strict Islamic law',
+              'Akbar converted to Hinduism and banned Islam, while Aurangzeb promoted interfaith dialogue',
+              'Both rulers maintained identical policies of strict religious enforcement throughout their reigns',
+              'Akbar expanded the empire through military conquest, while Aurangzeb focused exclusively on domestic reforms'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'Akbar practiced sulh-i-kul (universal peace), abolished the jizya on non-Muslims, and appointed Hindus to high positions. Aurangzeb reversed these policies — reimposing the jizya, destroying Hindu temples, and enforcing strict Islamic law — which provoked rebellions and weakened the empire.'
           },
           {
-            question: 'When studying Islamic Empires (1450–1750), which strategy is most effective?',
+            question: 'Which of the following BEST explains why the Safavid Empire is historically significant?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'It was the first empire to abolish slavery in the Middle East',
+              'It established Shi\'a Islam as Iran\'s state religion, creating a lasting sectarian identity',
+              'It conquered Constantinople and ended the Byzantine Empire in 1453',
+              'It was the largest land-based empire in world history at its peak'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Shah Ismail I made Twelver Shi\'a Islam the state religion in 1501, forcibly converting the previously Sunni population of Persia. This created the Shi\'a identity of modern Iran and deepened the Sunni-Shi\'a divide that continues today.'
+          },
+          {
+            question: 'What common factor gave the Ottoman, Safavid, and Mughal empires their military advantage, earning them the label "Gunpowder Empires"?',
+            options: [
+              'Their extensive use of cavalry from Central Asian steppe traditions',
+              'Their adoption of firearms and cannon technology, which enabled conquest of larger territories',
+              'Their alliance with European powers who supplied advanced weapons',
+              'Their invention of gunpowder through independent scientific research'
+            ],
+            correctAnswer: 1,
+            explanation: 'All three empires leveraged gunpowder weapons — cannons for sieges and firearms for infantry — to conquer and control vast territories. The Ottomans used massive cannons at Constantinople (1453), the Mughals used them at the Battle of Panipat (1526), and the Safavids adopted them after their defeat at Chaldiran (1514).'
           }
         ]
       }
     }
   ]
-}
+};

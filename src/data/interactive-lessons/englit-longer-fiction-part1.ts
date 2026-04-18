@@ -1,175 +1,144 @@
 export const englitLongerFictionPart1Data = {
-  topicSlug: 'englit-longer-fiction',
+  topicSlug: "englit-longer-fiction",
   sections: [
     {
-      id: 'englitlo1-intro',
+      id: "englitlo1-intro",
       type: 'text' as const,
-      content: `
-# 📖 Longer Fiction: Novel Analysis
-
-**Part 1 of 7 — Core Concepts**
-
-Longer Fiction: Novel Analysis is a fundamental topic in AP English Literature. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
-
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Longer Fiction: Novel Analysis |
-| **Key concept 2** | A critical component of understanding Longer Fiction: Novel Analysis |
-| **Key concept 3** | An essential element that connects Longer Fiction: Novel Analysis to broader themes |
-      `
+      content: "# 📚 Longer Fiction\n\n**Part 1 of 7 - Core Concepts, Analysis Skills, and AP Lit Application**\n\n---\n\n## Why Longer Fiction Matters\n\nLonger fiction requires tracking patterns across larger narrative spans rather than treating moments in isolation.\n\n| Core Concept | What To Notice | Why It Matters |\n|---|---|---|\n| **Character Arc** | Development across major plot stages | Change or stasis often encodes meaning |\n| **Structure** | Arrangement of chapters and perspective | Structure guides interpretation and suspense |\n| **Theme** | Complex central concerns | Theme emerges through sustained patterns |\n\n> AP Lit rewards interpretation supported by textual evidence, not plot summary."
     },
     {
-      id: 'englitlo1-quiz1',
+      id: "englitlo1-quiz1",
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: "**Concept Check**",
       exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of Longer Fiction: Novel Analysis?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within Longer Fiction: Novel Analysis',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'Longer Fiction: Novel Analysis focuses on understanding key principles and patterns within AP English Literature.'
-          },
-          {
-            question: 'Why is Longer Fiction: Novel Analysis important in AP English Literature?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'Longer Fiction: Novel Analysis is a key topic in AP English Literature that connects to multiple course themes.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "Which statement best reflects the role of Character Arc in literary analysis?",
+                  "options": [
+                        "Character arc means listing events in order.",
+                        "Character arc examines how values, choices, or self-understanding shift over the narrative.",
+                        "Character arc is irrelevant if the plot is exciting.",
+                        "Character arc is only physical movement between places."
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Character Arc helps readers interpret meaning and authorial choice, not just identify a feature."
+            },
+            {
+                  "question": "What is usually the strongest AP Lit analytical move?",
+                  "options": [
+                        "Retell the plot in sequence",
+                        "Name literary devices without interpretation",
+                        "Connect textual details to a defensible interpretation about meaning",
+                        "Focus only on historical background"
+                  ],
+                  "correctAnswer": 2,
+                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+            }
+      ]
+}
     },
     {
-      id: 'englitlo1-content',
+      id: "englitlo1-content",
       type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
-
-### Key concept 1
-The foundational principle underlying Longer Fiction: Novel Analysis. Understanding this concept is essential for mastering Longer Fiction: Novel Analysis in AP English Literature.
-
-### Key concept 2
-A critical component of understanding Longer Fiction: Novel Analysis. This builds on the previous concept and connects to broader themes in the course.
-
-### Key concept 3
-An essential element that connects Longer Fiction: Novel Analysis to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+      content: "## Building Interpretation in Longer Fiction\n\n### Analytical Workflow\n1. Identify a pattern in language, structure, or characterization\n2. Explain how that pattern shapes tone, perspective, or tension\n3. Connect the pattern to a broader thematic claim\n\n| Strong Commentary Move | Example Frame |\n|---|---|\n| Pattern + meaning | \"By emphasizing structure, the text suggests...\" |\n| Tension or contrast | \"Although the speaker appears X, theme reveals...\" |\n| Form and effect | \"This structural choice shifts the reader from...to...\" |\n\n### Common Pitfalls\n- Device listing without explanation\n- Theme statements with no textual support\n- Summary replacing analysis\n- Overly absolute claims that ignore complexity\n\nEffective essays connect local details to broader narrative development over time."
     },
     {
-      id: 'englitlo1-input',
+      id: "englitlo1-input",
       type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the foundational principle underlying Longer Fiction: Novel Analysis?
-
-2) What concept describes a critical component of understanding Longer Fiction: Novel Analysis?
-
-3) Name the term for an essential element that connects Longer Fiction: Novel Analysis to broader themes.
-
-Use the exact term from this part.
-      `,
+      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Longer Fiction: Novel Analysis), Key concept 2 (A critical component of understanding Longer Fiction: Novel Analysis), and Key concept 3 (An essential element that connects Longer Fiction: Novel Analysis to broader themes).'
-      }
+      "boxes": 3,
+      "correctAnswers": [
+            "character arc",
+            "structure",
+            "theme"
+      ],
+      "hint1": "Concept 1: Character Arc",
+      "hint2": "Concept 2: Structure",
+      "hint3": "Concept 3: Theme",
+      "explanation": "Character Arc, Structure, and Theme are core vocabulary for this unit."
+}
     },
     {
-      id: 'englitlo1-dropdown',
+      id: "englitlo1-dropdown",
       type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
+      content: "**Apply the Concept**",
       exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Longer Fiction: Novel Analysis is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Longer Fiction: Novel Analysis describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Longer Fiction: Novel Analysis to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Longer Fiction: Novel Analysis. Key concept 2 — A critical component of understanding Longer Fiction: Novel Analysis. Key concept 3 — An essential element that connects Longer Fiction: Novel Analysis to broader themes.'
-      }
+      "dropdowns": [
+            {
+                  "label": "Character Arc in analysis usually refers to ___",
+                  "options": [
+                        "How development over time shapes meaning",
+                        "How many chapters a book has",
+                        "Only publication date facts",
+                        "A one-word moral"
+                  ]
+            },
+            {
+                  "label": "The best AP paragraph usually includes ___",
+                  "options": [
+                        "Claim, evidence, and commentary",
+                        "Plot summary only",
+                        "Device name lists",
+                        "Vocabulary definitions only"
+                  ]
+            },
+            {
+                  "label": "A defensible interpretation should be ___",
+                  "options": [
+                        "Text-supported and specific",
+                        "Purely personal with no evidence",
+                        "A broad moral lesson only",
+                        "A dictionary definition"
+                  ]
+            }
+      ],
+      "correctAnswers": [
+            "How development over time shapes meaning",
+            "Claim, evidence, and commentary",
+            "Text-supported and specific"
+      ],
+      "hint1": "Think how character arc functions in meaning-making.",
+      "hint2": "Interpretation must be supported.",
+      "hint3": "Specific textual support is key.",
+      "explanation": "Strong AP analysis treats character arc as an interpretive tool, then develops claims through evidence and commentary."
+}
     },
     {
-      id: 'englitlo1-strategy',
+      id: "englitlo1-strategy",
       type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Longer Fiction: Novel Analysis.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Literature for higher scores.
-      `
+      content: "## AP Exam Strategy: Longer Fiction\n\n- Start with a claim about how character arc or structure shapes meaning\n- Use short quotations and explain them in context\n- Track contrast, shifts, and patterns across the whole passage\n- Avoid pure summary; prioritize interpretation\n- Qualify claims when text is ambiguous\n- Use moments from beginning, middle, and end to show development."
     },
     {
-      id: 'englitlo1-applied',
+      id: "englitlo1-applied",
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: "**AP-Style Application**",
       exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain Longer Fiction: Novel Analysis on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying Longer Fiction: Novel Analysis, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "A student identifies structure in a passage but does not explain effect. What is the best revision?",
+                  "options": [
+                        "Add more plot details",
+                        "Explain how structure shapes tone or theme in that moment",
+                        "Replace all quotes with summary",
+                        "Switch to biographical information only"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+            },
+            {
+                  "question": "Which thesis move is strongest for AP Lit?",
+                  "options": [
+                        "Make an absolute claim with no nuance",
+                        "Advance a specific, defensible claim about how theme contributes to meaning",
+                        "Retell the plot in one sentence",
+                        "List three literary terms without argument"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+            }
+      ]
+}
     }
   ]
-}
+};

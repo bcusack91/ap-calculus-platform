@@ -2,26 +2,49 @@ export const englangClaimsEvidenceWritingPart1Data = {
   topicSlug: 'englang-claims-evidence-writing',
   sections: [
     {
-      id: 'englangc1-intro',
+      id: 'elcew1-intro',
       type: 'text' as const,
       content: `
-# ✍️ Claims & Evidence in Writing
+# 🛠️ Claims and Evidence in Writing
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Crafting Defensible Claims and Supporting Them Effectively**
 
-Claims & Evidence in Writing is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Defensible Claims
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Claims & Evidence in Writing |
-| **Key concept 2** | A critical component of understanding Claims & Evidence in Writing |
-| **Key concept 3** | An essential element that connects Claims & Evidence in Writing to broader themes |
+On AP argument essays, your claim must be:
+
+| Quality | What It Means |
+|--------|----------------|
+| **Clear** | Readers know exactly what you argue |
+| **Debatable** | Reasonable people could disagree |
+| **Specific** | Narrow enough to support in one essay |
+| **Qualified** | Not absolute when complexity exists |
+
+### Weak vs Strong Claims
+- Weak: "Technology is bad."
+- Better: "While educational technology improves access, schools should limit passive screen-based instruction to preserve discussion-based learning."
+
+---
+
+## Building an Evidence Set
+
+Use a balanced evidence mix:
+
+| Evidence Type | Best Use |
+|--------------|----------|
+| Historical example | Show precedent/pattern |
+| Current event | Show relevance and urgency |
+| Research/statistics | Establish measurable support |
+| Hypothetical scenario | Test logic of policy outcomes |
+| Literary/cultural reference | Add conceptual depth |
+
+> 🔑 AP readers reward evidence that is **specific and explained**, not just dropped into paragraphs.
       `
     },
     {
-      id: 'englangc1-quiz1',
+      id: 'elcew1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +52,168 @@ Claims & Evidence in Writing is a fundamental topic in AP English Language. This
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Claims & Evidence in Writing?',
+            question: 'Which claim is most defensible for an AP argument essay?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Claims & Evidence in Writing',
-              'A mathematical formula',
-              'A literary technique'
+              '"All social media is evil and should be banned immediately everywhere."',
+              '"Social media has both benefits and risks, and schools should teach digital literacy to reduce harm."',
+              '"Social media exists."',
+              '"People use phones a lot."'
             ],
             correctAnswer: 1,
-            explanation: 'Claims & Evidence in Writing focuses on understanding key principles and patterns within AP English Language.'
+            explanation: 'This claim is specific, debatable, and qualified. It recognizes complexity and proposes a concrete policy response, which supports nuanced development.'
           },
           {
-            question: 'Why is Claims & Evidence in Writing important in AP English Language?',
+            question: 'What is the biggest problem with evidence "Everyone I know agrees with me"?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'It is too formal',
+              'It is anecdotal and unrepresentative',
+              'It uses a concession',
+              'It has too much data'
             ],
             correctAnswer: 1,
-            explanation: 'Claims & Evidence in Writing is a key topic in AP English Language that connects to multiple course themes.'
+            explanation: 'A personal social circle is a narrow sample and cannot support broad claims. AP arguments need representative examples, credible sources, or well-developed reasoning beyond personal consensus.'
           }
         ]
       }
     },
     {
-      id: 'englangc1-content',
+      id: 'elcew1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Commentary: The Most Important Step
 
-### Key concept 1
-The foundational principle underlying Claims & Evidence in Writing. Understanding this concept is essential for mastering Claims & Evidence in Writing in AP English Language.
+Evidence does not speak for itself. You must explain:
+- Why this evidence matters
+- How it supports your claim
+- What inference the reader should draw
 
-### Key concept 2
-A critical component of understanding Claims & Evidence in Writing. This builds on the previous concept and connects to broader themes in the course.
+### Commentary Frame
+\`\`\`
+Evidence: [specific fact/example]
+Interpretation: This demonstrates that...
+Connection: Therefore, this supports my claim that...
+\`\`\`
 
-### Key concept 3
-An essential element that connects Claims & Evidence in Writing to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Integrating Counterarguments
+
+Strong AP essays include an opposing view and response.
+
+| Move | Sentence Starter |
+|------|------------------|
+| Concession | "Admittedly, ..." |
+| Qualification | "This concern is valid in cases where..." |
+| Rebuttal | "However, this objection overlooks..." |
+
+### Example Paragraph Spine
+1. Topic claim
+2. Evidence 1 + commentary
+3. Evidence 2 + commentary
+4. Counterargument + rebuttal
+5. Link back to thesis
+
+## Avoiding Common Failures
+- Claim too broad to prove
+- Evidence list with no analysis
+- Repetition of same evidence type
+- Counterargument mentioned but never answered
+- Conclusion that introduces new evidence
       `
     },
     {
-      id: 'englangc1-input',
+      id: 'elcew1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Claims & Evidence in Writing?
+1) A claim that avoids absolute language and acknowledges complexity is _______.
 
-2) What concept describes a critical component of understanding Claims & Evidence in Writing?
+2) The explanation that links evidence back to your claim is called _______.
 
-3) Name the term for an essential element that connects Claims & Evidence in Writing to broader themes.
-
-Use the exact term from this part.
+3) "Admittedly" usually signals a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Claims & Evidence in Writing), Key concept 2 (A critical component of understanding Claims & Evidence in Writing), and Key concept 3 (An essential element that connects Claims & Evidence in Writing to broader themes).'
+        correctAnswers: ['qualified', 'commentary', 'concession'],
+        hint1: 'Not all-or-nothing.',
+        hint2: 'Your analytical bridge.',
+        hint3: 'Acknowledging part of the opposing view.',
+        explanation: 'Qualified claims show nuance. Commentary connects evidence to argument. "Admittedly" signals concession.'
       }
     },
     {
-      id: 'englangc1-dropdown',
+      id: 'elcew1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Choose the Stronger Move** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Claims & Evidence in Writing is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Best evidence set for a policy essay on public transit:',
+            options: ['City ridership data + budget analysis + commuter case study', 'Only personal opinion', 'Only one anecdote', 'No evidence, just moral language']
           },
           {
-            label: 'A critical component of understanding Claims & Evidence in Writing describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'After presenting evidence, the next strongest move is to add ___',
+            options: ['Commentary explaining significance', 'A random quote', 'A new unrelated claim', 'A rhetorical question only']
           },
           {
-            label: 'An essential element that connects Claims & Evidence in Writing to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A claim that says "always" and "never" is often rhetorically ___',
+            options: ['Vulnerable/overstated', 'Sophisticated', 'Unquestionable', 'Ideal for every topic']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Claims & Evidence in Writing. Key concept 2 — A critical component of understanding Claims & Evidence in Writing. Key concept 3 — An essential element that connects Claims & Evidence in Writing to broader themes.'
+        correctAnswers: ['City ridership data + budget analysis + commuter case study', 'Commentary explaining significance', 'Vulnerable/overstated'],
+        hint1: 'Blend quantitative and contextual evidence.',
+        hint2: 'Interpretation is the key AP skill.',
+        hint3: 'Absolute claims are easy to attack.',
+        explanation: 'Best support is mixed and specific. Commentary is essential. Absolute language weakens defensibility.'
       }
     },
     {
-      id: 'englangc1-strategy',
+      id: 'elcew1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Claims & Evidence in Writing
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Claims & Evidence in Writing.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- Write a claim that is specific, debatable, and qualified
+- Use at least 2-3 distinct evidence types across essay
+- Prioritize commentary over evidence-dumping
+- Include one meaningful concession/rebuttal sequence
+- Use evidence you can explain deeply, not just name-drop
+- End each body paragraph by reconnecting to thesis
       `
     },
     {
-      id: 'englangc1-applied',
+      id: 'elcew1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Claims & Evidence in Writing on a free-response question. The best approach is:',
+            question: 'A student includes four statistics in one paragraph but only one sentence of explanation. Why is this weak?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Statistics are never persuasive',
+              'Insufficient commentary leaves unclear how evidence supports the claim',
+              'Too much ethos',
+              'AP forbids numbers in essays'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'AP readers value analysis. Without commentary, evidence becomes a list rather than an argument. The writer must explain significance, inference, and claim connection.'
           },
           {
-            question: 'When studying Claims & Evidence in Writing, which strategy is most effective?',
+            question: 'Which thesis is strongest?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '"Homework is bad."',
+              '"Because moderate practice can reinforce learning but excessive assignments harm sleep and equity, schools should cap nightly homework at grade-specific limits."',
+              '"Homework exists in many countries."',
+              '"Students and teachers disagree sometimes."'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'This thesis is nuanced, qualified, and policy-oriented. It acknowledges tradeoffs while proposing a concrete, defensible action.'
           }
         ]
       }
     }
   ]
-}
+};

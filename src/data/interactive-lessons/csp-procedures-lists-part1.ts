@@ -2,26 +2,53 @@ export const cspProceduresListsPart1Data = {
   topicSlug: 'csp-procedures-lists',
   sections: [
     {
-      id: 'cspproce1-intro',
+      id: 'csppl1-intro',
       type: 'text' as const,
       content: `
-# 🖥️ Procedures & Lists
+# 📝 Procedures & Lists
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — List Operations, Traversals, and Procedure Design**
 
-Procedures & Lists is a fundamental topic in AP CS Principles. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Lists in AP CSP
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Procedures & Lists |
-| **Key concept 2** | A critical component of understanding Procedures & Lists |
-| **Key concept 3** | An essential element that connects Procedures & Lists to broader themes |
+A **list** (also called an array) stores an ordered collection of values.
+
+\`\`\`
+// AP CSP pseudocode uses 1-based indexing!
+myList ← ["apple", "banana", "cherry"]
+DISPLAY(myList[1])    // "apple" (index 1 is the first element)
+DISPLAY(myList[3])    // "cherry"
+\`\`\`
+
+> ⚠️ **AP CSP lists are 1-indexed** (first element at index 1). Most programming languages are 0-indexed.
+
+---
+
+## List Operations
+
+| Operation | Pseudocode | Effect |
+|-----------|-----------|--------|
+| **Access** | \`list[i]\` | Get element at index i |
+| **Assign** | \`list[i] ← value\` | Set element at index i |
+| **Insert** | \`INSERT(list, i, value)\` | Insert value at index i, shifting others right |
+| **Append** | \`APPEND(list, value)\` | Add value to the end of the list |
+| **Remove** | \`REMOVE(list, i)\` | Remove element at index i, shifting others left |
+| **Length** | \`LENGTH(list)\` | Number of elements in the list |
+
+### Example
+\`\`\`
+scores ← [90, 85, 78]
+APPEND(scores, 92)           // [90, 85, 78, 92]
+INSERT(scores, 2, 88)        // [90, 88, 85, 78, 92]
+REMOVE(scores, 1)            // [88, 85, 78, 92]
+DISPLAY(LENGTH(scores))      // 4
+\`\`\`
       `
     },
     {
-      id: 'cspproce1-quiz1',
+      id: 'csppl1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +56,193 @@ Procedures & Lists is a fundamental topic in AP CS Principles. This part introdu
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Procedures & Lists?',
+            question: 'In AP CSP pseudocode, what index is the FIRST element of a list?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Procedures & Lists',
-              'A mathematical formula',
-              'A literary technique'
+              'Index 0',
+              'Index 1',
+              'Index -1',
+              'It varies'
             ],
             correctAnswer: 1,
-            explanation: 'Procedures & Lists focuses on understanding key principles and patterns within AP CS Principles.'
+            explanation: 'AP CSP pseudocode uses 1-based indexing. The first element is at index 1, the second at index 2, etc. This is different from most programming languages which use 0-based indexing.'
           },
           {
-            question: 'Why is Procedures & Lists important in AP CS Principles?',
+            question: 'list ← [10, 20, 30]\nINSERT(list, 2, 15)\nWhat is the list now?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              '[10, 15, 20, 30]',
+              '[10, 20, 15, 30]',
+              '[15, 10, 20, 30]',
+              '[10, 20, 30, 15]'
             ],
-            correctAnswer: 1,
-            explanation: 'Procedures & Lists is a key topic in AP CS Principles that connects to multiple course themes.'
+            correctAnswer: 0,
+            explanation: 'INSERT(list, 2, 15) inserts 15 at index 2. The existing elements at indices 2 and 3 shift right. Result: [10, 15, 20, 30]. The list grows by one element.'
           }
         ]
       }
     },
     {
-      id: 'cspproce1-content',
+      id: 'csppl1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## List Traversal
 
-### Key concept 1
-The foundational principle underlying Procedures & Lists. Understanding this concept is essential for mastering Procedures & Lists in AP CS Principles.
+### FOR EACH Loop
+\`\`\`
+total ← 0
+FOR EACH score IN scores
+{
+    total ← total + score
+}
+average ← total / LENGTH(scores)
+\`\`\`
 
-### Key concept 2
-A critical component of understanding Procedures & Lists. This builds on the previous concept and connects to broader themes in the course.
+### Index-Based Loop
+\`\`\`
+i ← 1
+REPEAT UNTIL (i > LENGTH(scores))
+{
+    DISPLAY(scores[i])
+    i ← i + 1
+}
+\`\`\`
 
-### Key concept 3
-An essential element that connects Procedures & Lists to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Common List Algorithms
+
+### Find the Maximum
+\`\`\`
+PROCEDURE findMax(list)
+{
+    max ← list[1]
+    FOR EACH item IN list
+    {
+        IF (item > max)
+        {
+            max ← item
+        }
+    }
+    RETURN max
+}
+\`\`\`
+
+### Filter a List
+\`\`\`
+PROCEDURE getPositives(list)
+{
+    result ← []
+    FOR EACH item IN list
+    {
+        IF (item > 0)
+        {
+            APPEND(result, item)
+        }
+    }
+    RETURN result
+}
+\`\`\`
+
+### Swap Two Elements
+\`\`\`
+temp ← list[i]
+list[i] ← list[j]
+list[j] ← temp
+\`\`\`
       `
     },
     {
-      id: 'cspproce1-input',
+      id: 'csppl1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Procedures & Lists?
+1) APPEND(list, value) adds the value to the _______ of the list.
 
-2) What concept describes a critical component of understanding Procedures & Lists?
+2) REMOVE(list, i) removes the element at index i and shifts remaining elements _______.
 
-3) Name the term for an essential element that connects Procedures & Lists to broader themes.
-
-Use the exact term from this part.
+3) To swap two list elements without losing data, you need a _______ variable.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Procedures & Lists), Key concept 2 (A critical component of understanding Procedures & Lists), and Key concept 3 (An essential element that connects Procedures & Lists to broader themes).'
+        correctAnswers: ['end', 'left', 'temp'],
+        hint1: 'Appending goes to the back.',
+        hint2: 'They fill the gap left behind.',
+        hint3: 'Temporarily holds one value during the swap.',
+        explanation: 'APPEND adds to end. REMOVE shifts left. Swap needs temp variable.'
       }
     },
     {
-      id: 'cspproce1-dropdown',
+      id: 'csppl1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**List Operations** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Procedures & Lists is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'After list ← [5, 10, 15], APPEND(list, 20), LENGTH(list) returns ___',
+            options: ['4', '3', '20', '5']
           },
           {
-            label: 'A critical component of understanding Procedures & Lists describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'To process every element in a list without needing the index, use ___',
+            options: ['FOR EACH loop', 'Index-based loop only', 'Binary search', 'REMOVE operation']
           },
           {
-            label: 'An essential element that connects Procedures & Lists to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'list ← [1, 2, 3]; REMOVE(list, 2); list is now ___',
+            options: ['[1, 3]', '[1, 2]', '[2, 3]', '[1, 2, 3]']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Procedures & Lists. Key concept 2 — A critical component of understanding Procedures & Lists. Key concept 3 — An essential element that connects Procedures & Lists to broader themes.'
+        correctAnswers: ['4', 'FOR EACH loop', '[1, 3]'],
+        hint1: 'Started with 3, added 1.',
+        hint2: 'FOR EACH gives each value directly.',
+        hint3: 'Index 2 in 1-based indexing is the second element (2).',
+        explanation: '3 + 1 = 4. FOR EACH for simple traversal. Remove index 2 removes the value 2.'
       }
     },
     {
-      id: 'cspproce1-strategy',
+      id: 'csppl1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Procedures & Lists
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Procedures & Lists.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP CS Principles for higher scores.
+- **Lists are 1-indexed** on the AP exam — first element is list[1], NOT list[0]
+- Know all list operations: access, assign, INSERT, APPEND, REMOVE, LENGTH
+- INSERT shifts elements RIGHT (list grows). REMOVE shifts elements LEFT (list shrinks)
+- The swap algorithm (using temp) appears frequently — memorize it
+- Common patterns: sum/average, find max/min, filter, count matches
+- FOR EACH is read-only for the loop variable — changes to the variable do NOT change the list
       `
     },
     {
-      id: 'cspproce1-applied',
+      id: 'csppl1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Procedures & Lists on a free-response question. The best approach is:',
+            question: 'list ← [3, 1, 4, 1, 5]\nWhat does this procedure return?\nPROCEDURE mystery(list)\n{\n    count ← 0\n    FOR EACH item IN list\n    {\n        IF (item > 2)\n        { count ← count + 1 }\n    }\n    RETURN count\n}',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '2',
+              '3',
+              '5',
+              '4'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The procedure counts elements greater than 2. Checking: 3>2 (yes), 1>2 (no), 4>2 (yes), 1>2 (no), 5>2 (yes). Count = 3.'
           },
           {
-            question: 'When studying Procedures & Lists, which strategy is most effective?',
+            question: 'What is displayed?\nlist ← [10, 20, 30]\nlist[2] ← list[1] + list[3]\nDISPLAY(list[2])',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '20',
+              '30',
+              '40',
+              '50'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 2,
+            explanation: 'list[1] = 10 and list[3] = 30. list[2] gets 10 + 30 = 40. Remember: 1-indexed, so list[1] is the first element.'
           }
         ]
       }
     }
   ]
-}
+};

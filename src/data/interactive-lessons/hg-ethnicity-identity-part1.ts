@@ -2,26 +2,43 @@ export const hgEthnicityIdentityPart1Data = {
   topicSlug: 'hg-ethnicity-identity',
   sections: [
     {
-      id: 'hgethnic1-intro',
+      id: 'hgei1-intro',
       type: 'text' as const,
       content: `
 # 🌍 Ethnicity, Race & Identity
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — How Identity Shapes Geography**
 
-Ethnicity, Race & Identity is a fundamental topic in AP Human Geography. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Key Definitions
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Ethnicity, Race & Identity |
-| **Key concept 2** | A critical component of understanding Ethnicity, Race & Identity |
-| **Key concept 3** | An essential element that connects Ethnicity, Race & Identity to broader themes |
+| Term | Definition | Key Point |
+|------|-----------|-----------|
+| **Ethnicity** | Shared cultural heritage (language, religion, customs) | Learned and cultural, not biological |
+| **Race** | Classification based on physical characteristics | Socially constructed, varies by society |
+| **Nationality** | Legal belonging to a nation-state | Citizenship and political identity |
+| **Nation** | Group sharing culture and identity | May or may not have a state (Kurds, Palestinians) |
+| **Nation-state** | A state whose territory matches a single nation | Ideal: Japan, Iceland; rare in practice |
+
+> 🔑 **AP Key Point:** The AP exam tests the distinction between **race** (physical appearance, socially constructed) and **ethnicity** (cultural identity, learned). Know that these are geographic because they create spatial patterns.
+
+---
+
+## Ethnic Conflict & Spatial Patterns
+
+| Concept | Definition | Example |
+|---------|-----------|---------|
+| **Segregation** | Spatial separation of ethnic groups | Apartheid South Africa, US housing patterns |
+| **Ethnic enclave** | Concentration of one ethnicity in a neighborhood | Chinatowns, Little Italys |
+| **Ethnic cleansing** | Forced removal of an ethnic group | Bosnia (1990s), Rwanda (1994) |
+| **Gerrymandering** | Drawing political boundaries to dilute ethnic voting power | Historically used against Black voters in US |
+| **Centripetal force** | Something that unifies a state | Shared language, national anthem |
+| **Centrifugal force** | Something that divides a state | Ethnic tension, separatist movements |
       `
     },
     {
-      id: 'hgethnic1-quiz1',
+      id: 'hgei1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +46,151 @@ Ethnicity, Race & Identity is a fundamental topic in AP Human Geography. This pa
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Ethnicity, Race & Identity?',
+            question: 'The Kurds are considered a "nation without a state" because they:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Ethnicity, Race & Identity',
-              'A mathematical formula',
-              'A literary technique'
+              'Have no shared cultural identity',
+              'Share cultural identity but lack an independent sovereign state',
+              'All live within the borders of one country',
+              'Have voluntarily given up claims to territory'
             ],
             correctAnswer: 1,
-            explanation: 'Ethnicity, Race & Identity focuses on understanding key principles and patterns within AP Human Geography.'
+            explanation: 'The Kurds share a common language, culture, and identity (they ARE a nation) but are divided across Turkey, Iraq, Iran, and Syria — they lack their own nation-state.'
           },
           {
-            question: 'Why is Ethnicity, Race & Identity important in AP Human Geography?',
+            question: 'Ethnic enclaves like Chinatown in San Francisco primarily result from:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Government-mandated residential zones',
+              'Chain migration and desire to maintain cultural connections',
+              'Random settlement patterns',
+              'Environmental factors like climate preferences'
             ],
             correctAnswer: 1,
-            explanation: 'Ethnicity, Race & Identity is a key topic in AP Human Geography that connects to multiple course themes.'
+            explanation: 'Ethnic enclaves form through chain migration (following family/friends) and the desire to maintain cultural practices, language, food, and social support networks.'
           }
         ]
       }
     },
     {
-      id: 'hgethnic1-content',
+      id: 'hgei1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Race as a Social Construct
 
-### Key concept 1
-The foundational principle underlying Ethnicity, Race & Identity. Understanding this concept is essential for mastering Ethnicity, Race & Identity in AP Human Geography.
+Race categories vary across cultures and time periods:
+- In the US, racial categories have changed dramatically across census history
+- Brazil has dozens of recognized racial categories vs the US system of 5-6
+- **Race is NOT biologically determined** — genetic variation within racial groups is greater than between them
 
-### Key concept 2
-A critical component of understanding Ethnicity, Race & Identity. This builds on the previous concept and connects to broader themes in the course.
+### How Ethnicity Creates Geographic Patterns
 
-### Key concept 3
-An essential element that connects Ethnicity, Race & Identity to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+1. **Residential patterns** — ethnic neighborhoods, segregation, redlining
+2. **Voting districts** — gerrymandering to concentrate or dilute minority votes
+3. **Conflict zones** — ethnic boundaries that do not align with political borders
+4. **Migration patterns** — chain migration creates ethnic clusters
+5. **Cultural landscapes** — religious buildings, signage, food, architecture reflect ethnic presence
+
+### Centripetal vs. Centrifugal Forces
+
+| Force Type | Effect | Examples |
+|-----------|--------|----------|
+| **Centripetal** | Unifies | Shared language, religion, external threats, national symbols |
+| **Centrifugal** | Divides | Ethnic conflict, linguistic differences, economic inequality, separatism |
       `
     },
     {
-      id: 'hgethnic1-input',
+      id: 'hgei1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Ethnicity, Race & Identity?
+1) Forces that unify a country (shared language, patriotism) are called _______ forces.
 
-2) What concept describes a critical component of understanding Ethnicity, Race & Identity?
+2) Forces that divide a country (ethnic tension, separatism) are called _______ forces.
 
-3) Name the term for an essential element that connects Ethnicity, Race & Identity to broader themes.
-
-Use the exact term from this part.
+3) A country where the territory of the state matches the territory of a single nation is called a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Ethnicity, Race & Identity), Key concept 2 (A critical component of understanding Ethnicity, Race & Identity), and Key concept 3 (An essential element that connects Ethnicity, Race & Identity to broader themes).'
+        correctAnswers: ['centripetal', 'centrifugal', 'nation-state'],
+        hint1: 'Pulls toward the center.',
+        hint2: 'Pushes away from the center.',
+        hint3: 'One nation, one state.',
+        explanation: 'Centripetal = unifying forces. Centrifugal = dividing forces. Nation-state = political boundaries match cultural/national boundaries.'
       }
     },
     {
-      id: 'hgethnic1-dropdown',
+      id: 'hgei1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Concept** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Ethnicity, Race & Identity is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'A national anthem played before sports events to promote unity is a ___ force',
+            options: ['Centripetal', 'Centrifugal', 'Neither']
           },
           {
-            label: 'A critical component of understanding Ethnicity, Race & Identity describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Quebec separatism in Canada is a ___ force',
+            options: ['Centrifugal', 'Centripetal', 'Neither']
           },
           {
-            label: 'An essential element that connects Ethnicity, Race & Identity to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Drawing voting districts to minimize the political power of a minority group is called ___',
+            options: ['Gerrymandering', 'Devolution', 'Balkanization', 'Irredentism']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Ethnicity, Race & Identity. Key concept 2 — A critical component of understanding Ethnicity, Race & Identity. Key concept 3 — An essential element that connects Ethnicity, Race & Identity to broader themes.'
+        correctAnswers: ['Centripetal', 'Centrifugal', 'Gerrymandering'],
+        hint1: 'Promotes national pride and unity.',
+        hint2: 'A movement to separate from the country.',
+        hint3: 'Manipulating district boundaries.',
+        explanation: 'National anthem = centripetal (unifying). Separatism = centrifugal (dividing). Gerrymandering = manipulating district lines for political advantage.'
       }
     },
     {
-      id: 'hgethnic1-strategy',
+      id: 'hgei1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Ethnicity & Identity
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Ethnicity, Race & Identity.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Human Geography for higher scores.
+- Distinguish **ethnicity** (cultural) from **race** (physical characteristics, socially constructed)
+- Know examples of **stateless nations**: Kurds, Palestinians, Basques, Tibetans, Roma
+- **Balkanization** = breaking a state into smaller ethnic territories (named after the Balkans)
+- **Irredentism** = wanting to annex territory in another state because your ethnic group lives there
+- On FRQs, always give **specific real-world examples** — not generic descriptions
       `
     },
     {
-      id: 'hgethnic1-applied',
+      id: 'hgei1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Ethnicity, Race & Identity on a free-response question. The best approach is:',
+            question: 'Russia annexing Crimea in 2014, partly justified by the presence of ethnic Russians there, is an example of:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Devolution',
+              'Irredentism',
+              'Balkanization',
+              'Supranationalism'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Irredentism = a state claiming territory in another state because of ethnic ties. Russia claimed Crimea partly because ethnic Russians were a majority there.'
           },
           {
-            question: 'When studying Ethnicity, Race & Identity, which strategy is most effective?',
+            question: 'Yugoslavia breaking apart into Bosnia, Croatia, Serbia, Slovenia, and other states based on ethnic lines is an example of:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Supranationalism',
+              'Devolution',
+              'Balkanization',
+              'Gerrymandering'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 2,
+            explanation: 'Balkanization = the fragmentation of a state into smaller states along ethnic lines. The term literally comes from the breakup of states in the Balkan region of Europe.'
           }
         ]
       }
     }
   ]
-}
+};

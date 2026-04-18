@@ -2,26 +2,40 @@ export const apesAtmosphericPollutionPart1Data = {
   topicSlug: 'apes-atmospheric-pollution',
   sections: [
     {
-      id: 'apesatmo1-intro',
+      id: 'apesap1-intro',
       type: 'text' as const,
       content: `
-# 🌿 Atmospheric Pollution
+# 🏭 Atmospheric Pollution
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Air Pollutants, Smog, and Ozone**
 
-Atmospheric Pollution is a fundamental topic in AP Environmental Science. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Primary vs Secondary Pollutants
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Atmospheric Pollution |
-| **Key concept 2** | A critical component of understanding Atmospheric Pollution |
-| **Key concept 3** | An essential element that connects Atmospheric Pollution to broader themes |
+| Type | Definition | Examples |
+|------|-----------|---------|
+| **Primary** | Emitted directly from a source | CO, SO₂, NO, particulate matter (PM), VOCs |
+| **Secondary** | Formed by chemical reactions in the atmosphere | Ozone (O₃), sulfuric acid (H₂SO₄), nitric acid |
+
+---
+
+## Major Air Pollutants (EPA Criteria Pollutants)
+
+| Pollutant | Source | Health/Environmental Effect |
+|-----------|--------|---------------------------|
+| **CO (carbon monoxide)** | Incomplete combustion (vehicles) | Binds to hemoglobin; reduces oxygen delivery |
+| **SO₂ (sulfur dioxide)** | Burning coal, volcanic eruptions | Acid rain, respiratory problems |
+| **NOₓ (nitrogen oxides)** | Vehicle exhaust, power plants | Acid rain, smog formation |
+| **PM (particulate matter)** | Combustion, dust, construction | Lung damage, reduced visibility |
+| **O₃ (ground-level ozone)** | Secondary: UV + NOₓ + VOCs | Respiratory damage, crop damage |
+| **Pb (lead)** | Formerly gasoline; paint, smelters | Neurotoxin, developmental damage in children |
+
+> 🔑 **Ozone paradox:** Ground-level O₃ is a harmful pollutant (smog), but stratospheric O₃ is beneficial (blocks UV radiation). "Good up high, bad nearby."
       `
     },
     {
-      id: 'apesatmo1-quiz1',
+      id: 'apesap1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +43,160 @@ Atmospheric Pollution is a fundamental topic in AP Environmental Science. This p
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Atmospheric Pollution?',
+            question: 'Ground-level ozone is a secondary pollutant because:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Atmospheric Pollution',
-              'A mathematical formula',
-              'A literary technique'
+              'It is emitted directly from car exhaust pipes',
+              'It forms from chemical reactions between NOₓ and VOCs in the presence of sunlight',
+              'It is the same as stratospheric ozone',
+              'It comes from volcanic eruptions'
             ],
             correctAnswer: 1,
-            explanation: 'Atmospheric Pollution focuses on understanding key principles and patterns within AP Environmental Science.'
+            explanation: 'Ground-level ozone is NOT emitted directly. It forms when nitrogen oxides (NOₓ) react with volatile organic compounds (VOCs) in the presence of UV sunlight — making it a secondary pollutant.'
           },
           {
-            question: 'Why is Atmospheric Pollution important in AP Environmental Science?',
+            question: 'Which statement about ozone is correct?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'All ozone is harmful to human health',
+              'Ground-level ozone is harmful; stratospheric ozone protects against UV',
+              'Stratospheric ozone causes respiratory problems',
+              'Ground-level ozone protects against UV radiation'
             ],
             correctAnswer: 1,
-            explanation: 'Atmospheric Pollution is a key topic in AP Environmental Science that connects to multiple course themes.'
+            explanation: 'Stratospheric ozone (good up high) filters harmful UV radiation. Ground-level ozone (bad nearby) is a component of smog that damages lungs and crops.'
           }
         ]
       }
     },
     {
-      id: 'apesatmo1-content',
+      id: 'apesap1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Types of Smog
 
-### Key concept 1
-The foundational principle underlying Atmospheric Pollution. Understanding this concept is essential for mastering Atmospheric Pollution in AP Environmental Science.
+| Type | Formation | Location | Worst Time |
+|------|----------|----------|-----------|
+| **Industrial (London/gray) smog** | SO₂ + particulates from coal burning + fog | Cold, humid climates | Winter mornings |
+| **Photochemical (LA/brown) smog** | NOₓ + VOCs + sunlight → O₃ | Warm, sunny cities with traffic | Summer afternoons |
 
-### Key concept 2
-A critical component of understanding Atmospheric Pollution. This builds on the previous concept and connects to broader themes in the course.
+### Thermal Inversions
+- Normally: warm air rises, carrying pollutants upward
+- **Inversion:** Layer of warm air traps cool air (and pollutants) near the surface
+- Makes smog much worse; dangerous for people with respiratory conditions
 
-### Key concept 3
-An essential element that connects Atmospheric Pollution to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Acid Deposition (Acid Rain)
+
+| Step | Process |
+|------|---------|
+| 1 | SO₂ and NOₓ emitted from coal plants and vehicles |
+| 2 | React with water vapor: SO₂ → H₂SO₄; NOₓ → HNO₃ |
+| 3 | Fall as acid rain, snow, fog, or dry particles |
+| 4 | Effects: lake acidification, forest damage, building/statue erosion |
+
+- Normal rain pH: ~5.6 (slightly acidic due to dissolved CO₂)
+- Acid rain pH: < 5.0 (can be as low as 4.0)
+
+## Stratospheric Ozone Depletion
+- **Cause:** CFCs (chlorofluorocarbons) from refrigerants, aerosol cans
+- CFCs release chlorine atoms that destroy O₃ molecules catalytically
+- One Cl atom can destroy ~100,000 O₃ molecules
+- **Montreal Protocol (1987):** International treaty phasing out CFCs — major success story
       `
     },
     {
-      id: 'apesatmo1-input',
+      id: 'apesap1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Atmospheric Pollution?
+1) Photochemical smog contains ground-level _______ and forms on warm, sunny days in cities with heavy traffic.
 
-2) What concept describes a critical component of understanding Atmospheric Pollution?
+2) The international treaty that successfully phased out CFCs to protect the ozone layer is the _______ Protocol.
 
-3) Name the term for an essential element that connects Atmospheric Pollution to broader themes.
-
-Use the exact term from this part.
+3) Acid rain is caused primarily by _______ dioxide and nitrogen oxides reacting with water vapor.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Atmospheric Pollution), Key concept 2 (A critical component of understanding Atmospheric Pollution), and Key concept 3 (An essential element that connects Atmospheric Pollution to broader themes).'
+        correctAnswers: ['ozone', 'Montreal', 'sulfur'],
+        hint1: 'O₃ — the secondary pollutant in brown smog.',
+        hint2: 'Named after a city in Canada.',
+        hint3: 'SO₂ — produced by burning coal.',
+        explanation: 'Photochemical smog = ground-level ozone. Montreal Protocol (1987) = CFC phase-out. Acid rain = SO₂ + NOₓ + H₂O.'
       }
     },
     {
-      id: 'apesatmo1-dropdown',
+      id: 'apesap1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concept** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Atmospheric Pollution is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'A layer of warm air trapping pollutants near the ground is called a ___',
+            options: ['Thermal inversion', 'Greenhouse effect', 'Ozone hole', 'Acid deposition']
           },
           {
-            label: 'A critical component of understanding Atmospheric Pollution describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'CO emitted from a car tailpipe is a ___ pollutant',
+            options: ['Primary', 'Secondary', 'Stratospheric', 'Natural']
           },
           {
-            label: 'An essential element that connects Atmospheric Pollution to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Coal-burning smog in cold, foggy cities with SO₂ and particulates is ___ smog',
+            options: ['Industrial (gray/London)', 'Photochemical (brown/LA)', 'Volcanic', 'Stratospheric']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Atmospheric Pollution. Key concept 2 — A critical component of understanding Atmospheric Pollution. Key concept 3 — An essential element that connects Atmospheric Pollution to broader themes.'
+        correctAnswers: ['Thermal inversion', 'Primary', 'Industrial (gray/London)'],
+        hint1: 'Warm air on top, cool polluted air trapped below.',
+        hint2: 'Emitted directly, not formed by reactions.',
+        hint3: 'Think London fog + coal smoke.',
+        explanation: 'Thermal inversion traps pollutants. CO = primary (emitted directly). Coal + fog = industrial/London smog.'
       }
     },
     {
-      id: 'apesatmo1-strategy',
+      id: 'apesap1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Atmospheric Pollution
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Atmospheric Pollution.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Environmental Science for higher scores.
+- Know the 6 EPA criteria pollutants and their sources
+- **Primary vs secondary:** if it forms from a chemical reaction in the atmosphere, it is secondary
+- Industrial smog (SO₂, cold, coal) vs photochemical smog (O₃, hot, cars) — know conditions for each
+- Clean Air Act (1970) regulates criteria pollutants; Montreal Protocol (1987) addresses CFCs
+- Acid rain: SO₂ + NOₓ → acids; effects on lakes, forests, buildings
+- The ozone layer is RECOVERING thanks to the Montreal Protocol — a rare environmental success
       `
     },
     {
-      id: 'apesatmo1-applied',
+      id: 'apesap1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Atmospheric Pollution on a free-response question. The best approach is:',
+            question: 'A city surrounded by mountains experiences a thermal inversion during winter. Residents report increased respiratory problems. The primary reason is:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Mountain winds are bringing in clean air from rural areas',
+              'Warm air aloft traps cold air and pollutants near the surface, preventing dispersion',
+              'The mountains block UV radiation needed to form ozone',
+              'Cold air naturally contains fewer oxygen molecules'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'During a thermal inversion, warm air acts as a lid above cool surface air, trapping pollutants (CO, PM, SO₂) at ground level. Mountains worsen this by preventing horizontal air movement.'
           },
           {
-            question: 'When studying Atmospheric Pollution, which strategy is most effective?',
+            question: 'The Montreal Protocol is considered one of the most successful environmental agreements because:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'It eliminated all air pollution worldwide',
+              'It successfully phased out CFCs, allowing the ozone layer to begin recovering',
+              'It ended all fossil fuel use',
+              'It reversed global warming completely'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'The Montreal Protocol (1987) achieved near-universal ratification and successfully phased out CFC production. The ozone layer is now slowly recovering and is expected to return to pre-1980 levels by mid-century.'
           }
         ]
       }
     }
   ]
-}
+};

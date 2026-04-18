@@ -7,17 +7,39 @@ export const apushColonialAmericaPart1Data = {
       content: `
 # 🇺🇸 Colonial America
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — European Settlements & Colonial Regions**
 
-Colonial America is a fundamental topic in AP US History. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+### Topics in This Part
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Colonial America |
-| **Key concept 2** | A critical component of understanding Colonial America |
-| **Key concept 3** | An essential element that connects Colonial America to broader themes |
+| Section |
+|---------|
+| 📖 Spanish, French & Dutch Colonies |
+| The Three English Colonial Regions |
+| Jamestown & the Virginia Colony |
+| 📌 New England: Puritans & Plymouth |
+| Middle & Southern Colonies Compared |
+
+> 🔑 **Key Concept:** The AP exam expects you to compare the **three colonial regions** (New England, Middle, Southern) by their economies, demographics, labor systems, and religious motivations.
+      `
+    },
+    {
+      id: 'apushcol1-european',
+      type: 'text' as const,
+      content: `
+## 📖 European Colonial Strategies
+
+Different European powers established colonies with very different goals and methods:
+
+| Power | Colonial Strategy | Key Colonies | Relationship with Natives |
+|-------|------------------|--------------|--------------------------|
+| **Spain** | Extraction of gold/silver; encomienda labor system; Catholic missions | New Spain (Mexico), Florida, Southwest | Conquest and forced labor; mestizo population |
+| **France** | Fur trade; small settlements; Jesuit missionaries | New France (Quebec, Louisiana) | Generally cooperative (trade alliances); intermarriage |
+| **Netherlands** | Trade-focused; Dutch West India Company; religious tolerance | New Netherland (New York/New Jersey) | Trade partnerships; purchased Manhattan (1626) |
+| **England** | Permanent agricultural settlements; joint-stock companies; diverse motives | Virginia, Massachusetts, Pennsylvania | Varied — from early cooperation to violent conflict |
+
+> 🔑 **AP Connection:** The exam frequently asks you to compare colonial approaches. Key contrast: **Spain** used conquest and forced labor while **France** focused on trade partnerships with relatively few settlers.
       `
     },
     {
@@ -29,144 +51,141 @@ Colonial America is a fundamental topic in AP US History. This part introduces t
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Colonial America?',
+            question: 'Which European power\'s colonial strategy relied most heavily on the fur trade and maintaining cooperative relationships with Native Americans?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Colonial America',
-              'A mathematical formula',
-              'A literary technique'
+              'Spain — which focused on mining and the encomienda system',
+              'France — which built trade alliances and had relatively few settlers',
+              'England — which established large agricultural settlements',
+              'Portugal — which focused on the African slave trade exclusively'
             ],
             correctAnswer: 1,
-            explanation: 'Colonial America focuses on understanding key principles and patterns within AP US History.'
+            explanation: 'France\'s colonial strategy in North America centered on the fur trade, requiring cooperation with Native American trappers and hunters. French colonies had far fewer settlers than English colonies, which contributed to more cooperative (though still unequal) relationships.'
           },
           {
-            question: 'Why is Colonial America important in AP US History?',
+            question: 'The encomienda system in Spanish colonies was significant because it:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Granted colonists the right to force Native Americans to labor on their land',
+              'Established representative assemblies in all Spanish territories',
+              'Created a system of free public education for indigenous peoples',
+              'Prohibited the importation of enslaved Africans to the Americas'
             ],
-            correctAnswer: 1,
-            explanation: 'Colonial America is a key topic in AP US History that connects to multiple course themes.'
+            correctAnswer: 0,
+            explanation: 'The encomienda system granted Spanish colonists (encomenderos) the right to demand tribute and labor from indigenous peoples in exchange for supposed protection and Christian instruction. In practice, it amounted to forced labor and was a major driver of indigenous population decline.'
           }
         ]
       }
     },
     {
-      id: 'apushcol1-content',
+      id: 'apushcol1-regions',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## The Three English Colonial Regions
 
-### Key concept 1
-The foundational principle underlying Colonial America. Understanding this concept is essential for mastering Colonial America in AP US History.
+### Comparing the Regions
 
-### Key concept 2
-A critical component of understanding Colonial America. This builds on the previous concept and connects to broader themes in the course.
+| Feature | New England | Middle Colonies | Southern Colonies |
+|---------|-------------|----------------|-------------------|
+| **Colonies** | Massachusetts, Connecticut, Rhode Island, New Hampshire | New York, New Jersey, Pennsylvania, Delaware | Virginia, Maryland, Carolina, Georgia |
+| **Economy** | Shipbuilding, fishing, timber, trade | "Breadbasket" — wheat, diverse commerce | Tobacco, rice, indigo; plantation agriculture |
+| **Labor** | Family farms; some indentured servants | Mixed — family farms, artisans, merchants | Indentured servants → enslaved Africans |
+| **Religion** | Puritan (Congregationalist); religious conformity | Diverse — Quakers, Dutch Reformed, Lutheran | Anglican (Church of England) |
+| **Society** | Tight-knit towns; town meetings; high literacy | Ethnically diverse; urban centers (Philadelphia) | Hierarchical; planter elite; dispersed settlements |
+| **Founding motive** | Religious freedom (for Puritans) | Trade and religious tolerance | Economic profit (cash crops) |
 
-### Key concept 3
-An essential element that connects Colonial America to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Jamestown (1607)
+- First permanent English settlement
+- Founded by the **Virginia Company** (joint-stock company)
+- Nearly failed — "starving time" (winter 1609–10)
+- Saved by **John Rolfe's** cultivation of tobacco (1612)
+- **House of Burgesses** (1619) — first representative assembly in America
+- First enslaved Africans arrived in 1619
+
+### Plymouth (1620) & Massachusetts Bay (1630)
+- **Pilgrims** (Separatists) founded Plymouth; signed the **Mayflower Compact** (self-governance)
+- **Puritans** founded Massachusetts Bay under **John Winthrop** — "City upon a Hill"
+- Puritan society: theocratic tendencies, strict moral codes, emphasis on education (Harvard founded 1636)
       `
     },
     {
       id: 'apushcol1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Colonial America?
+1) What was the first representative assembly in the English colonies, established in Virginia in 1619?
 
-2) What concept describes a critical component of understanding Colonial America?
+2) What agreement, signed aboard ship in 1620, established self-government for the Plymouth Colony?
 
-3) Name the term for an essential element that connects Colonial America to broader themes.
+3) What cash crop saved the Jamestown colony from economic failure?
 
-Use the exact term from this part.
+Use the exact historical term.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Colonial America), Key concept 2 (A critical component of understanding Colonial America), and Key concept 3 (An essential element that connects Colonial America to broader themes).'
+        correctAnswers: ['House of Burgesses', 'Mayflower Compact', 'tobacco'],
+        hint1: 'Two words — a legislative "House" in Virginia',
+        hint2: 'Named after the ship the Pilgrims sailed on',
+        hint3: 'A plant cultivated by John Rolfe starting in 1612',
+        explanation: 'The House of Burgesses (1619) was the first elected legislative body in British America. The Mayflower Compact (1620) was a foundational document of self-governance signed by the Pilgrims. Tobacco became Virginia\'s primary cash crop and economic lifeline.'
       }
     },
     {
       id: 'apushcol1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Colonial Regions** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Colonial America is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Plantation agriculture using enslaved labor was most associated with the ___',
+            options: ['Southern Colonies', 'New England Colonies', 'Middle Colonies', 'French Colonies']
           },
           {
-            label: 'A critical component of understanding Colonial America describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'The "breadbasket colonies" known for wheat production and ethnic diversity were the ___',
+            options: ['Middle Colonies', 'Southern Colonies', 'New England Colonies', 'Spanish Colonies']
           },
           {
-            label: 'An essential element that connects Colonial America to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Town meetings and Puritan religious conformity characterized the ___',
+            options: ['New England Colonies', 'Middle Colonies', 'Southern Colonies', 'Dutch Colonies']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Colonial America. Key concept 2 — A critical component of understanding Colonial America. Key concept 3 — An essential element that connects Colonial America to broader themes.'
+        correctAnswers: ['Southern Colonies', 'Middle Colonies', 'New England Colonies'],
+        hint1: 'Virginia, Maryland, and the Carolinas relied on cash crops',
+        hint2: 'Pennsylvania, New York, New Jersey, Delaware',
+        hint3: 'Massachusetts, Connecticut, Rhode Island, New Hampshire',
+        explanation: 'The Southern Colonies developed a plantation economy reliant on enslaved labor. The Middle Colonies were called the "breadbasket" for their wheat production and attracted diverse immigrant groups. New England was defined by Puritan religious culture and town-meeting democracy.'
       }
-    },
-    {
-      id: 'apushcol1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Colonial America.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP US History for higher scores.
-      `
     },
     {
       id: 'apushcol1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Colonial America on a free-response question. The best approach is:',
+            question: 'Which of the following BEST explains why the Southern Colonies developed a labor system based on enslaved Africans rather than the indentured servant model used earlier?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Bacon\'s Rebellion (1676) showed the dangers of a large class of discontented former indentured servants, making enslaved labor seem more controllable to planters',
+              'The English government banned indentured servitude in 1660',
+              'Enslaved Africans arrived in the Southern Colonies before any indentured servants did',
+              'Southern colonists morally preferred slavery to indentured servitude from the beginning'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'Bacon\'s Rebellion (1676) — in which poor former indentured servants and enslaved people joined together to rebel against Virginia\'s elite — alarmed planters. They increasingly turned to race-based chattel slavery as a way to create a permanent, legally distinct labor force that could not earn freedom and rebel as citizens.'
           },
           {
-            question: 'When studying Colonial America, which strategy is most effective?',
+            question: 'John Winthrop\'s 1630 sermon describing Massachusetts Bay as a "city upon a hill" reflected which of the following beliefs?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'That religious diversity should be encouraged in all the colonies',
+              'That the Puritan colony should serve as a model godly community for the world',
+              'That Massachusetts should become the economic center of British North America',
+              'That democratic self-governance was more important than religious purity'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Winthrop\'s "city upon a hill" sermon expressed the Puritan belief that their colony should be an exemplary Christian community that the world would watch and emulate. This concept of American exceptionalism has resonated throughout U.S. history and appears frequently on the AP exam.'
           }
         ]
       }

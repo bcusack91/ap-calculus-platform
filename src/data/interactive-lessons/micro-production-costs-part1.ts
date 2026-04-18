@@ -2,26 +2,46 @@ export const microProductionCostsPart1Data = {
   topicSlug: 'micro-production-costs',
   sections: [
     {
-      id: 'micropro1-intro',
+      id: 'microprod1-intro',
       type: 'text' as const,
       content: `
 # 💰 Production & Costs
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Cost Curves and Production Decisions**
 
-Production & Costs is a fundamental topic in AP Microeconomics. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## The Production Function
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Production & Costs |
-| **Key concept 2** | A critical component of understanding Production & Costs |
-| **Key concept 3** | An essential element that connects Production & Costs to broader themes |
+A **production function** shows the relationship between inputs and outputs:
+
+| Workers | Total Product (TP) | Marginal Product (MP) | Average Product (AP) |
+|---------|-------------------|----------------------|---------------------|
+| 0 | 0 | — | — |
+| 1 | 10 | 10 | 10.0 |
+| 2 | 24 | 14 | 12.0 |
+| 3 | 36 | 12 | 12.0 |
+| 4 | 44 | 8 | 11.0 |
+| 5 | 48 | 4 | 9.6 |
+| 6 | 48 | 0 | 8.0 |
+
+### Diminishing Marginal Returns
+
+> 🔑 **Law of Diminishing Marginal Returns:** As more units of a variable input (labor) are added to a fixed input (capital), **MP eventually declines**.
+
+In the table: MP peaks at worker 2 (14 units), then decreases. This is NOT because workers are lazier — it's because each worker has less capital to work with.
+
+### MP and AP Relationship
+
+- When **MP > AP**: AP is rising
+- When **MP < AP**: AP is falling  
+- When **MP = AP**: AP is at its maximum
+
+> Think of it like a batting average: if your next at-bat (marginal) is above your average, your average rises.
       `
     },
     {
-      id: 'micropro1-quiz1',
+      id: 'microprod1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,144 +49,165 @@ Production & Costs is a fundamental topic in AP Microeconomics. This part introd
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Production & Costs?',
+            question: 'Based on the table, diminishing marginal returns begin with which worker?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Production & Costs',
-              'A mathematical formula',
-              'A literary technique'
+              'The 1st worker',
+              'The 2nd worker',
+              'The 3rd worker',
+              'The 4th worker'
             ],
-            correctAnswer: 1,
-            explanation: 'Production & Costs focuses on understanding key principles and patterns within AP Microeconomics.'
+            correctAnswer: 2,
+            explanation: 'MP increases from worker 1 (10) to worker 2 (14), then decreases at worker 3 (12). Diminishing marginal returns begin with worker 3 — the first worker whose MP is lower than the previous.'
           },
           {
-            question: 'Why is Production & Costs important in AP Microeconomics?',
+            question: 'If marginal product is above average product, average product is:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Falling',
+              'Rising',
+              'At its maximum',
+              'Equal to zero'
             ],
             correctAnswer: 1,
-            explanation: 'Production & Costs is a key topic in AP Microeconomics that connects to multiple course themes.'
+            explanation: 'When MP > AP, each additional unit adds more than the average — pulling the average up. Like a test score above your class average raising the class average.'
           }
         ]
       }
     },
     {
-      id: 'micropro1-content',
+      id: 'microprod1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Cost Curves
 
-### Key concept 1
-The foundational principle underlying Production & Costs. Understanding this concept is essential for mastering Production & Costs in AP Microeconomics.
+### Fixed vs. Variable Costs
 
-### Key concept 2
-A critical component of understanding Production & Costs. This builds on the previous concept and connects to broader themes in the course.
+| Cost Type | Changes with Output? | Examples |
+|-----------|---------------------|----------|
+| **Fixed (FC)** | No | Rent, insurance, salaries of managers |
+| **Variable (VC)** | Yes | Raw materials, hourly wages, electricity |
+| **Total (TC)** | TC = FC + VC | All costs combined |
 
-### Key concept 3
-An essential element that connects Production & Costs to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Per-Unit Cost Curves
+
+| Curve | Formula | Shape |
+|-------|---------|-------|
+| **AFC** | FC / Q | Always decreasing (spreading fixed costs) |
+| **AVC** | VC / Q | U-shaped — falls then rises |
+| **ATC** | TC / Q = AFC + AVC | U-shaped — falls then rises |
+| **MC** | ΔTC / ΔQ | U-shaped — falls then rises |
+
+### Critical Relationships
+
+$$MC \\text{ intersects AVC and ATC at their minimum points}$$
+
+Why? Same logic as MP/AP:
+- When MC < ATC → ATC is falling (adding units cheaper than average)
+- When MC > ATC → ATC is rising (adding units costlier than average)
+- When MC = ATC → ATC is at minimum
       `
     },
     {
-      id: 'micropro1-input',
+      id: 'microprod1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Production & Costs?
+1) Total cost equals fixed cost plus _______ cost.
 
-2) What concept describes a critical component of understanding Production & Costs?
+2) MC intersects ATC at ATC's _______ point.
 
-3) Name the term for an essential element that connects Production & Costs to broader themes.
-
-Use the exact term from this part.
+3) AFC always _______ as output increases because fixed costs are spread over more units. (increases/decreases)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Production & Costs), Key concept 2 (A critical component of understanding Production & Costs), and Key concept 3 (An essential element that connects Production & Costs to broader themes).'
+        correctAnswers: ['variable', 'minimum', 'decreases'],
+        hint1: 'TC = FC + ??',
+        hint2: 'MC crosses ATC at the bottom of the U-shape.',
+        hint3: 'Same fixed cost divided by larger Q.',
+        explanation: 'TC = FC + VC. MC = ATC at minimum ATC (bottom of the U). AFC = FC/Q always falls as Q increases (spreading fixed costs).'
       }
     },
     {
-      id: 'micropro1-dropdown',
+      id: 'microprod1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Cost Classification** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Production & Costs is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Monthly rent for a factory is a ___ cost',
+            options: ['Fixed', 'Variable', 'Marginal', 'Sunk']
           },
           {
-            label: 'A critical component of understanding Production & Costs describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Hourly wages for production workers are a ___ cost',
+            options: ['Variable', 'Fixed', 'Average', 'Opportunity']
           },
           {
-            label: 'An essential element that connects Production & Costs to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'The cost of producing one additional unit is the ___ cost',
+            options: ['Marginal', 'Fixed', 'Average', 'Total']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Production & Costs. Key concept 2 — A critical component of understanding Production & Costs. Key concept 3 — An essential element that connects Production & Costs to broader themes.'
+        correctAnswers: ['Fixed', 'Variable', 'Marginal'],
+        hint1: 'It doesn\'t change with output.',
+        hint2: 'More workers = more total wage cost.',
+        hint3: 'The change in total cost from one more unit.',
+        explanation: 'Rent = fixed (same regardless of output). Hourly wages = variable (more output = more hours). Marginal cost = ΔTC/ΔQ.'
       }
     },
     {
-      id: 'micropro1-strategy',
+      id: 'microprod1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Short Run vs. Long Run
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Production & Costs.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+| Time Period | Definition | Key Feature |
+|------------|-----------|-------------|
+| **Short run** | At least one input is fixed | Fixed costs exist; diminishing returns |
+| **Long run** | All inputs are variable | No fixed costs; can change plant size |
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Microeconomics for higher scores.
+### Economies and Diseconomies of Scale
+
+In the long run, the **LRATC** (Long-Run Average Total Cost) curve shows:
+
+| Region | ATC Behavior | Cause |
+|--------|-------------|-------|
+| **Economies of scale** | LRATC falls | Specialization, bulk purchasing, better technology |
+| **Constant returns** | LRATC flat | Neither advantage nor disadvantage of size |
+| **Diseconomies of scale** | LRATC rises | Coordination problems, bureaucracy |
+
+> 🔑 **Minimum efficient scale** = the smallest output where LRATC reaches its minimum. This determines whether an industry naturally has many small firms or few large ones.
       `
     },
     {
-      id: 'micropro1-applied',
+      id: 'microprod1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Production & Costs on a free-response question. The best approach is:',
+            question: 'If a firm\'s MC is $6 and ATC is $8, we know that ATC is:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Rising',
+              'Falling',
+              'At its minimum',
+              'Equal to AVC'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'When MC ($6) < ATC ($8), each additional unit costs less than the current average, pulling the average DOWN. ATC is falling.'
           },
           {
-            question: 'When studying Production & Costs, which strategy is most effective?',
+            question: 'A firm doubles all inputs and output more than doubles. This firm is experiencing:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Diminishing marginal returns',
+              'Economies of scale',
+              'Diseconomies of scale',
+              'Constant returns to scale'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'When doubling all inputs more than doubles output, per-unit costs fall — this is economies of scale. LRATC is declining in this region.'
           }
         ]
       }

@@ -1,175 +1,79 @@
 export const govCivilRightsPart1Data = {
   topicSlug: 'gov-civil-rights',
   sections: [
-    {
-      id: 'govcivil1-intro',
-      type: 'text' as const,
-      content: `
-# 🏛️ Civil Rights
+    {id:'govcivr1-intro',type:'text' as const,content:`
+# ✊ Civil Rights
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Equal Protection & the Struggle for Equality**
 
-Civil Rights is a fundamental topic in AP US Government. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 14th Amendment & Equal Protection |
+| Segregation & Brown v. Board |
+| Civil Rights Movement & Legislation |
+| Affirmative Action |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Civil Rights |
-| **Key concept 2** | A critical component of understanding Civil Rights |
-| **Key concept 3** | An essential element that connects Civil Rights to broader themes |
-      `
-    },
-    {
-      id: 'govcivil1-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of Civil Rights?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within Civil Rights',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'Civil Rights focuses on understanding key principles and patterns within AP US Government.'
-          },
-          {
-            question: 'Why is Civil Rights important in AP US Government?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'Civil Rights is a key topic in AP US Government that connects to multiple course themes.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'govcivil1-content',
-      type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
+> 🔑 **Key Concept:** Civil rights are about **equal treatment** and protection against discrimination. The AP exam centers on the 14th Amendment's **Equal Protection Clause** and how it has been applied through landmark Supreme Court cases and civil rights legislation.
+`},
+    {id:'govcivr1-14th',type:'text' as const,content:`
+## 📖 The 14th Amendment & Equal Protection
 
-### Key concept 1
-The foundational principle underlying Civil Rights. Understanding this concept is essential for mastering Civil Rights in AP US Government.
+### Equal Protection Clause (1868)
+"No State shall... deny to any person within its jurisdiction the **equal protection of the laws**."
 
-### Key concept 2
-A critical component of understanding Civil Rights. This builds on the previous concept and connects to broader themes in the course.
+### Levels of Scrutiny
+Courts use different standards to evaluate laws that treat groups differently:
 
-### Key concept 3
-An essential element that connects Civil Rights to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'govcivil1-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+| Level | When Applied | Government Must Show | Example |
+|---|---|---|---|
+| **Strict scrutiny** | Race, national origin, religion | Law serves a *compelling* government interest AND is *narrowly tailored* | Racial segregation laws (almost always struck down) |
+| **Intermediate scrutiny** | Gender, sex | Law serves an *important* government interest AND is *substantially related* | VMI admitting women (*United States v. Virginia*, 1996) |
+| **Rational basis** | Economic regulation, age, disability | Law is *rationally related* to a *legitimate* government interest | Minimum age for driving (almost always upheld) |
 
-1) What term refers to the foundational principle underlying Civil Rights?
+### From Segregation to Equality
 
-2) What concept describes a critical component of understanding Civil Rights?
+| Era | Key Development |
+|---|---|
+| **1865–1870** | 13th (abolished slavery), 14th (equal protection, due process), 15th (voting rights regardless of race) Amendments |
+| **1896** | *Plessy v. Ferguson* — "separate but equal" doctrine; upheld racial segregation |
+| **1954** | **Brown v. Board of Education** — overturned Plessy; segregation in public schools is inherently unconstitutional |
+| **1964** | **Civil Rights Act** — banned discrimination in public accommodations, employment, federally funded programs |
+| **1965** | **Voting Rights Act** — banned literacy tests and other obstacles to voting; federal oversight of elections in states with histories of discrimination |
 
-3) Name the term for an essential element that connects Civil Rights to broader themes.
+> 🔑 **AP Connection:** Brown v. Board of Education is a **required case**. You must know that it overturned Plessy v. Ferguson's "separate but equal" doctrine and that Chief Justice Warren's unanimous opinion declared segregation inherently unconstitutional under the 14th Amendment.
+`},
+    {id:'govcivr1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
+      {question:'What standard of judicial review does the Supreme Court apply when evaluating laws that classify people by race?',options:['Rational basis review — the lowest standard, requiring only a rational connection to a legitimate purpose','Intermediate scrutiny — requiring the law to serve an important government interest','Strict scrutiny — the highest standard, requiring the law to serve a compelling government interest and be narrowly tailored to achieve it','No standard — racial classifications are automatically unconstitutional without any judicial review'],correctAnswer:2,explanation:'Strict scrutiny is the highest level of judicial review and is applied to laws that classify people by race, national origin, or religion. Under this standard, the government must prove the law serves a compelling interest AND is narrowly tailored — an extremely high bar that racial classifications almost never pass.'},
+      {question:'How did Brown v. Board of Education (1954) change constitutional law?',options:['It affirmed the "separate but equal" doctrine established in Plessy v. Ferguson as constitutional','It overturned Plessy v. Ferguson, ruling that racial segregation in public schools is inherently unconstitutional because separate facilities are inherently unequal','It banned all private schools from operating in the United States','It established the right to private school vouchers funded by state tax dollars'],correctAnswer:1,explanation:'Brown unanimously overturned the "separate but equal" doctrine of Plessy v. Ferguson (1896). Chief Justice Earl Warren wrote that segregation in public education generates "a feeling of inferiority" and that "separate educational facilities are inherently unequal." This became the legal foundation for desegregation across all public institutions.'}
+    ]}},
+    {id:'govcivr1-legislation',type:'text' as const,content:`
+## 📖 Civil Rights Legislation
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Civil Rights), Key concept 2 (A critical component of understanding Civil Rights), and Key concept 3 (An essential element that connects Civil Rights to broader themes).'
-      }
-    },
-    {
-      id: 'govcivil1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Civil Rights is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Civil Rights describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Civil Rights to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Civil Rights. Key concept 2 — A critical component of understanding Civil Rights. Key concept 3 — An essential element that connects Civil Rights to broader themes.'
-      }
-    },
-    {
-      id: 'govcivil1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
+### Civil Rights Act of 1964
+| Title | Protection |
+|---|---|
+| **Title II** | Banned discrimination in **public accommodations** (hotels, restaurants, theaters) |
+| **Title VI** | Banned discrimination in **federally funded programs** |
+| **Title VII** | Banned employment discrimination based on race, color, religion, sex, or national origin; created the **EEOC** (Equal Employment Opportunity Commission) |
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Civil Rights.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+- Constitutional basis: **Commerce Clause** (upheld in *Heart of Atlanta Motel v. United States*, 1964)
+- Significance: First comprehensive federal law banning racial discrimination in private businesses
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP US Government for higher scores.
-      `
-    },
-    {
-      id: 'govcivil1-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain Civil Rights on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying Civil Rights, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
-    }
+### Voting Rights Act of 1965
+- Banned **literacy tests** and other discriminatory voting practices
+- **Preclearance provision (Section 5)** — states with histories of voter discrimination had to get federal approval before changing voting laws
+- *Shelby County v. Holder (2013)* — Supreme Court struck down the formula used to determine which states needed preclearance, effectively weakening the Act
+
+### 24th Amendment (1964)
+- Abolished **poll taxes** in federal elections (later extended to all elections by *Harper v. Virginia*, 1966)
+
+> 🔑 **AP Connection:** The Commerce Clause justification for the Civil Rights Act is heavily tested. Congress used its power to regulate interstate commerce to reach private businesses — since a motel or restaurant serving interstate travelers affects commerce.
+`},
+    {id:'govcivr1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
+      {question:'On what constitutional basis did Congress justify the Civil Rights Act of 1964\'s ban on discrimination in private businesses?',options:['The First Amendment\'s protection of freedom of association and peaceful assembly','The Commerce Clause — discrimination in hotels, restaurants, and businesses serving interstate travelers substantially affects interstate commerce','The president\'s executive authority under Article II to regulate private sector employment practices','The 14th Amendment directly, which prohibits private citizens from discriminating against each other'],correctAnswer:1,explanation:'The 14th Amendment only applies to STATE action (government discrimination), not private conduct. To reach private businesses, Congress relied on the Commerce Clause — arguing that racial discrimination in hotels and restaurants substantially affected interstate commerce. The Supreme Court upheld this reasoning in Heart of Atlanta Motel v. United States (1964).'},
+      {question:'What was the impact of Shelby County v. Holder (2013) on the Voting Rights Act?',options:['It strengthened the Voting Rights Act by expanding federal oversight to all 50 states','It struck down the formula used to determine which states required federal preclearance for voting law changes, effectively weakening federal oversight of elections in states with histories of voter discrimination','It upheld every provision of the Voting Rights Act and rejected all challenges to its constitutionality','It banned all forms of voter identification requirements as unconstitutional under the 15th Amendment'],correctAnswer:1,explanation:'The Court ruled 5-4 that the preclearance formula (Section 4) was based on outdated data and therefore unconstitutional. Without a valid formula, Section 5\'s preclearance requirement became unenforceable. Critics argued this opened the door to new voter suppression tactics in states previously covered by the Act.'}
+    ]}}
   ]
-}
+};

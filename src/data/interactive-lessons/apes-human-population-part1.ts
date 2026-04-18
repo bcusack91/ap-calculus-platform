@@ -2,26 +2,43 @@ export const apesHumanPopulationPart1Data = {
   topicSlug: 'apes-human-population',
   sections: [
     {
-      id: 'apeshuma1-intro',
+      id: 'apeshp1-intro',
       type: 'text' as const,
       content: `
-# 🌿 Human Population Dynamics
+# 👥 Human Population Dynamics
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Growth, Demographics, and the Demographic Transition**
 
-Human Population Dynamics is a fundamental topic in AP Environmental Science. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Population Growth
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Human Population Dynamics |
-| **Key concept 2** | A critical component of understanding Human Population Dynamics |
-| **Key concept 3** | An essential element that connects Human Population Dynamics to broader themes |
+| Metric | Definition | Formula/Value |
+|--------|-----------|--------------|
+| **Global population** | Current world population | ~8 billion (2024) |
+| **Growth rate** | Annual % increase | ~1.0% (declining from peak of 2.1% in 1968) |
+| **Doubling time** | Years to double at current rate | Rule of 70: 70 / growth rate (%) |
+| **CBR** | Crude birth rate (births per 1,000 people per year) | Varies: ~8 (Japan) to ~40+ (Niger) |
+| **CDR** | Crude death rate (deaths per 1,000 per year) | Varies: ~3 (Qatar) to ~15+ (Sierra Leone) |
+| **NIR** | Natural increase rate | NIR = CBR - CDR |
+
+> 🔑 **Rule of 70:** Doubling time = 70 / growth rate. If a country grows at 2%/year, it doubles in 35 years.
+
+---
+
+## Demographic Transition Model
+
+| Stage | Birth Rate | Death Rate | Population Growth | Description |
+|-------|-----------|-----------|------------------|-----------|
+| **1: Pre-industrial** | High | High | Low/stable | Subsistence farming; high infant mortality |
+| **2: Transitioning** | High | Declining | Rapid increase | Better sanitation, medicine; births still high |
+| **3: Industrial** | Declining | Low | Slowing growth | Education, urbanization, contraception access |
+| **4: Post-industrial** | Low | Low | Low/stable | Developed nations; birth rate ~ death rate |
+| **5: Decline** | Very low | Low | Negative growth | Below-replacement fertility (Japan, Germany) |
       `
     },
     {
-      id: 'apeshuma1-quiz1',
+      id: 'apeshp1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +46,155 @@ Human Population Dynamics is a fundamental topic in AP Environmental Science. Th
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Human Population Dynamics?',
+            question: 'A country has a crude birth rate of 35 and a crude death rate of 10. Using the Rule of 70, what is the approximate doubling time?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Human Population Dynamics',
-              'A mathematical formula',
-              'A literary technique'
+              '2 years',
+              '28 years',
+              '35 years',
+              '70 years'
             ],
             correctAnswer: 1,
-            explanation: 'Human Population Dynamics focuses on understanding key principles and patterns within AP Environmental Science.'
+            explanation: 'Growth rate = (CBR - CDR) / 10 = (35 - 10) / 10 = 2.5%. Doubling time = 70 / 2.5 = 28 years. This rapid doubling is typical of Stage 2 countries.'
           },
           {
-            question: 'Why is Human Population Dynamics important in AP Environmental Science?',
+            question: 'Which stage of the demographic transition has the FASTEST population growth?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Stage 1 (pre-industrial)',
+              'Stage 2 (transitioning)',
+              'Stage 3 (industrial)',
+              'Stage 4 (post-industrial)'
             ],
             correctAnswer: 1,
-            explanation: 'Human Population Dynamics is a key topic in AP Environmental Science that connects to multiple course themes.'
+            explanation: 'Stage 2 has the fastest growth because death rates decline (better medicine, sanitation) while birth rates remain high, creating a large gap between births and deaths.'
           }
         ]
       }
     },
     {
-      id: 'apeshuma1-content',
+      id: 'apeshp1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Age Structure Diagrams
 
-### Key concept 1
-The foundational principle underlying Human Population Dynamics. Understanding this concept is essential for mastering Human Population Dynamics in AP Environmental Science.
+| Shape | Meaning | Example Countries |
+|-------|---------|------------------|
+| **Expansive (wide base)** | High birth rate; rapid growth | Nigeria, Ethiopia |
+| **Stationary (column)** | Birth rate = death rate; stable | United States, France |
+| **Constrictive (narrow base)** | Below-replacement fertility; declining | Japan, Germany, Italy |
 
-### Key concept 2
-A critical component of understanding Human Population Dynamics. This builds on the previous concept and connects to broader themes in the course.
+### Total Fertility Rate (TFR)
+- Average number of children per woman
+- **Replacement-level fertility:** ~2.1 children per woman (needed to maintain population)
+- Sub-Saharan Africa: TFR ~4.5
+- Europe: TFR ~1.5 (below replacement)
 
-### Key concept 3
-An essential element that connects Human Population Dynamics to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Factors Affecting Birth Rates
+
+| Factor | Effect on Birth Rate |
+|--------|---------------------|
+| **Education (especially women)** | Decreases — most powerful predictor |
+| **Access to contraception** | Decreases |
+| **Urbanization** | Decreases (children cost more in cities) |
+| **Cultural/religious norms** | Can increase or decrease |
+| **Government policies** | Can promote or discourage births |
+| **Infant mortality** | High infant mortality → higher birth rates |
       `
     },
     {
-      id: 'apeshuma1-input',
+      id: 'apeshp1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Human Population Dynamics?
+1) The Rule of 70 states that doubling time equals 70 divided by the _______ rate.
 
-2) What concept describes a critical component of understanding Human Population Dynamics?
+2) Replacement-level fertility is approximately _______ children per woman.
 
-3) Name the term for an essential element that connects Human Population Dynamics to broader themes.
-
-Use the exact term from this part.
+3) The most powerful factor in reducing birth rates is _______ of women.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Human Population Dynamics), Key concept 2 (A critical component of understanding Human Population Dynamics), and Key concept 3 (An essential element that connects Human Population Dynamics to broader themes).'
+        correctAnswers: ['growth', '2.1', 'education'],
+        hint1: 'The annual percentage increase.',
+        hint2: 'Just above 2 to account for infant mortality.',
+        hint3: 'Knowledge is power — this demographic factor is most predictive.',
+        explanation: 'Rule of 70: doubling time = 70/growth rate. Replacement fertility = ~2.1. Education of women is the strongest predictor of declining birth rates.'
       }
     },
     {
-      id: 'apeshuma1-dropdown',
+      id: 'apeshp1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Scenario** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Human Population Dynamics is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Japan has a TFR of 1.3 and an aging population. Its age structure diagram is ___',
+            options: ['Constrictive (narrow base)', 'Expansive (wide base)', 'Stationary (column)', 'Irregular']
           },
           {
-            label: 'A critical component of understanding Human Population Dynamics describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A country with high birth rates AND high death rates and slow growth is in Stage ___',
+            options: ['Stage 1 (pre-industrial)', 'Stage 2 (transitioning)', 'Stage 3 (industrial)', 'Stage 4 (post-industrial)']
           },
           {
-            label: 'An essential element that connects Human Population Dynamics to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A country growing at 1% per year will double its population in approximately ___ years',
+            options: ['70 years', '35 years', '100 years', '10 years']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Human Population Dynamics. Key concept 2 — A critical component of understanding Human Population Dynamics. Key concept 3 — An essential element that connects Human Population Dynamics to broader themes.'
+        correctAnswers: ['Constrictive (narrow base)', 'Stage 1 (pre-industrial)', '70 years'],
+        hint1: 'Below-replacement fertility = fewer young people.',
+        hint2: 'Both rates are high, so growth is minimal.',
+        hint3: '70 / 1 = ?',
+        explanation: 'Japan = constrictive (TFR below 2.1). High birth + high death = Stage 1. 70/1 = 70 years doubling time.'
       }
     },
     {
-      id: 'apeshuma1-strategy',
+      id: 'apeshp1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Human Population
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Human Population Dynamics.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Environmental Science for higher scores.
+- **Rule of 70 calculations** appear frequently — practice dividing 70 by various growth rates
+- Know how to read and interpret age structure diagrams — what shape means what
+- The demographic transition model is one of the most tested concepts in APES
+- **Stage 2 = fastest growth** (death rates drop but birth rates remain high)
+- Know that educating women is the single most effective way to reduce fertility rates
+- Understand that some countries (Japan, Germany) face challenges from declining populations (aging workforce, pension funding)
       `
     },
     {
-      id: 'apeshuma1-applied',
+      id: 'apeshp1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Human Population Dynamics on a free-response question. The best approach is:',
+            question: 'A developing country invests heavily in rural health clinics and childhood vaccinations. In the short term, this will MOST likely cause the country to move from:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Stage 1 to Stage 2 (death rates drop while birth rates stay high)',
+              'Stage 2 to Stage 4 (immediate stabilization)',
+              'Stage 4 to Stage 5 (population decline)',
+              'Stage 3 to Stage 1 (regression)'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'Improving healthcare reduces death rates (especially infant mortality) while birth rates remain high in the short term, causing rapid population growth characteristic of Stage 2.'
           },
           {
-            question: 'When studying Human Population Dynamics, which strategy is most effective?',
+            question: 'Two countries each have 10 million people. Country A grows at 1% per year and Country B at 3% per year. After 70 years, Country B will have approximately:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'The same population as Country A',
+              'Twice the population of Country A',
+              'Four times the population of Country A',
+              'Eight times the population of Country A'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 2,
+            explanation: 'Country A: doubles once in 70 years (70/1) = 20M. Country B: doubles every ~23 years (70/3), so 3 doublings in 70 years = 10M → 20M → 40M → 80M. 80M/20M = 4 times as large.'
           }
         ]
       }
     }
   ]
-}
+};

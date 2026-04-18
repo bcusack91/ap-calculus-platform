@@ -2,26 +2,46 @@ export const englangArgumentStructurePart1Data = {
   topicSlug: 'englang-argument-structure',
   sections: [
     {
-      id: 'englanga1-intro',
+      id: 'elas1-intro',
       type: 'text' as const,
       content: `
-# ✍️ Argument Structure
+# 🏗️ Argument Structure
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — How Arguments Are Organized and Developed**
 
-Argument Structure is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## The Architecture of an Argument
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Argument Structure |
-| **Key concept 2** | A critical component of understanding Argument Structure |
-| **Key concept 3** | An essential element that connects Argument Structure to broader themes |
+Every effective argument has a clear structure. Understanding structure helps you both ANALYZE texts and WRITE your own arguments.
+
+### Classical Argument Structure (Aristotelian)
+
+| Section | Purpose | Typical Location |
+|---------|---------|-----------------|
+| **Introduction (Exordium)** | Hook the reader, establish context | Opening paragraph |
+| **Narration (Narratio)** | Provide background information | Early paragraphs |
+| **Proposition (Propositio)** | State the thesis/main claim | End of intro or beginning of body |
+| **Confirmation (Confirmatio)** | Present evidence supporting the claim | Body paragraphs |
+| **Refutation (Refutatio)** | Address and refute counterarguments | Before or after confirmation |
+| **Conclusion (Peroratio)** | Summarize and make final appeal | Closing paragraph |
+
+---
+
+## Other Argument Structures
+
+| Structure | Pattern | Best For |
+|-----------|---------|----------|
+| **Rogerian** | Find common ground → Present your side → Propose compromise | Controversial topics with a hostile audience |
+| **Toulmin** | Claim → Evidence → Warrant (underlying assumption) | Analytical arguments requiring logical rigor |
+| **Problem-Solution** | Describe problem → Propose solution → Address objections | Policy arguments |
+| **Cause-Effect** | Identify causes → Show effects → Argue for action | Causal claims |
+
+> 🔑 On the AP exam, you need to recognize these structures in texts you READ and use effective structure in essays you WRITE.
       `
     },
     {
-      id: 'englanga1-quiz1',
+      id: 'elas1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +49,161 @@ Argument Structure is a fundamental topic in AP English Language. This part intr
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Argument Structure?',
+            question: 'In classical argument structure, the section where the writer addresses and counters opposing viewpoints is called the:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Argument Structure',
-              'A mathematical formula',
-              'A literary technique'
+              'Narration',
+              'Confirmation',
+              'Refutation',
+              'Exordium'
             ],
-            correctAnswer: 1,
-            explanation: 'Argument Structure focuses on understanding key principles and patterns within AP English Language.'
+            correctAnswer: 2,
+            explanation: 'The refutation (refutatio) is where the writer acknowledges opposing arguments and explains why they are wrong or less compelling. This is distinct from the confirmation, where the writer presents supporting evidence.'
           },
           {
-            question: 'Why is Argument Structure important in AP English Language?',
+            question: 'When writing to a hostile audience about a controversial topic, which argument structure is most appropriate?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Classical — lead with your strongest claims immediately',
+              'Rogerian — find common ground before presenting your position',
+              'Problem-Solution — focus only on the problem',
+              'No structure needed — just state your opinion'
             ],
             correctAnswer: 1,
-            explanation: 'Argument Structure is a key topic in AP English Language that connects to multiple course themes.'
+            explanation: 'The Rogerian structure is designed for controversial topics. By finding common ground first, the writer reduces defensiveness in a hostile audience before carefully introducing their position. This builds trust before persuading.'
           }
         ]
       }
     },
     {
-      id: 'englanga1-content',
+      id: 'elas1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## The Toulmin Model in Detail
 
-### Key concept 1
-The foundational principle underlying Argument Structure. Understanding this concept is essential for mastering Argument Structure in AP English Language.
+The **Toulmin model** breaks arguments into components that reveal the underlying logic:
 
-### Key concept 2
-A critical component of understanding Argument Structure. This builds on the previous concept and connects to broader themes in the course.
+| Component | Role | Example |
+|-----------|------|---------|
+| **Claim** | What you are arguing | "Schools should start later." |
+| **Evidence** | Data supporting the claim | "Studies show teens perform better after 8:30 AM." |
+| **Warrant** | The logical bridge connecting evidence to claim | "School schedules should align with student performance data." |
+| **Backing** | Support for the warrant | "Educational research consistently shows policy should be evidence-based." |
+| **Qualifier** | Limits the scope of the claim | "In most cases..." or "For high school students specifically..." |
+| **Rebuttal** | Addresses exceptions or objections | "While earlier start times benefit working parents..." |
 
-### Key concept 3
-An essential element that connects Argument Structure to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Why Warrants Matter
+The **warrant** is often unstated — it is the assumption connecting evidence to claim. Identifying unstated warrants is a key analytical skill.
+
+**Example:**
+- Claim: "We should ban soda in schools."
+- Evidence: "Childhood obesity rates have doubled."
+- Warrant (unstated): "Schools have a responsibility to promote student health. Soda contributes to obesity."
+
+If the audience does not share the warrant, the argument fails — even if the evidence is strong.
+
+## Transitions That Signal Structure
+| Transition | Signals |
+|-----------|---------|
+| "Furthermore," "Moreover" | Additional support (confirmation) |
+| "However," "On the other hand" | Counterargument or concession |
+| "Therefore," "Consequently" | Conclusion from evidence |
+| "Despite this," "Nevertheless" | Rebuttal after concession |
       `
     },
     {
-      id: 'englanga1-input',
+      id: 'elas1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Argument Structure?
+1) In the Toulmin model, the unstated assumption connecting evidence to a claim is called the _______.
 
-2) What concept describes a critical component of understanding Argument Structure?
+2) The argument structure that begins by finding common ground with the audience is called _______.
 
-3) Name the term for an essential element that connects Argument Structure to broader themes.
-
-Use the exact term from this part.
+3) A word like "however" or "on the other hand" signals a shift to a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Argument Structure), Key concept 2 (A critical component of understanding Argument Structure), and Key concept 3 (An essential element that connects Argument Structure to broader themes).'
+        correctAnswers: ['warrant', 'Rogerian', 'counterargument'],
+        hint1: 'The logical bridge or underlying assumption.',
+        hint2: 'Named after psychologist Carl Rogers.',
+        hint3: 'The opposing side of the argument.',
+        explanation: 'Warrant = unstated assumption. Rogerian = common ground first. "However" = counterargument.'
       }
     },
     {
-      id: 'englanga1-dropdown',
+      id: 'elas1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Identify the Argument Component** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Argument Structure is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: '"For high school students specifically, later start times improve outcomes." The phrase "for high school students specifically" is a ___',
+            options: ['Qualifier (limits the scope of the claim)', 'Warrant', 'Rebuttal', 'Evidence']
           },
           {
-            label: 'A critical component of understanding Argument Structure describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: '"While earlier start times benefit working parents, research shows the academic gains for students far outweigh the scheduling inconvenience." This sentence is a ___',
+            options: ['Concession and rebuttal', 'Thesis statement', 'Narration', 'Evidence only']
           },
           {
-            label: 'An essential element that connects Argument Structure to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: '"Therefore, the school board should implement a 9:00 AM start time beginning next fall." This sentence is a ___',
+            options: ['Policy claim / call to action', 'Evidence', 'Warrant', 'Narration']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Argument Structure. Key concept 2 — A critical component of understanding Argument Structure. Key concept 3 — An essential element that connects Argument Structure to broader themes.'
+        correctAnswers: ['Qualifier (limits the scope of the claim)', 'Concession and rebuttal', 'Policy claim / call to action'],
+        hint1: '"Specifically" restricts the claim.',
+        hint2: '"While...but" = concede then refute.',
+        hint3: '"Should implement" = advocate action.',
+        explanation: 'Qualifier limits scope. While/but = concession-rebuttal. "Should" = policy claim.'
       }
     },
     {
-      id: 'englanga1-strategy',
+      id: 'elas1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Argument Structure
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Argument Structure.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- For the **rhetorical analysis** essay, identify how the writer structures the argument
+- For the **argument** essay, use clear structural organization (intro → body with evidence → counterargument → conclusion)
+- Identify **warrants** in texts you analyze — what unstated assumptions is the writer relying on?
+- Use **transitions** to make your argument structure explicit
+- Always include **refutation** — addressing counterarguments shows sophistication
+- The AP rubric values "a line of reasoning" — each paragraph should logically build on the previous one
       `
     },
     {
-      id: 'englanga1-applied',
+      id: 'elas1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Argument Structure on a free-response question. The best approach is:',
+            question: 'A student argues: "Electric cars reduce emissions (evidence). Therefore, everyone should buy one (claim)." What is the unstated warrant?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Electric cars are expensive',
+              'Reducing emissions is important, and individual purchasing decisions can collectively address the problem',
+              'Electric cars are faster than gas cars',
+              'There is no warrant in this argument'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The warrant is the unstated assumption bridging evidence to claim: that reducing emissions matters AND that consumer choices can meaningfully address the problem. Without these assumptions, the evidence does not logically lead to the claim.'
           },
           {
-            question: 'When studying Argument Structure, which strategy is most effective?',
+            question: 'A writer addressing gun control for a politically divided audience would most benefit from which structure?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Classical — state the thesis immediately and argue forcefully',
+              'Rogerian — establish common ground (e.g., everyone wants safety) before introducing the position',
+              'No structure — just list statistics',
+              'Cause-effect only'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'With a divided or hostile audience, leading with common ground (Rogerian structure) reduces defensiveness. Starting with shared values (safety, protecting families) before introducing policy positions makes the audience more receptive.'
           }
         ]
       }
     }
   ]
-}
+};

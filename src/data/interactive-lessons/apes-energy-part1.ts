@@ -2,26 +2,54 @@ export const apesEnergyPart1Data = {
   topicSlug: 'apes-energy',
   sections: [
     {
-      id: 'apesener1-intro',
+      id: 'apesen1-intro',
       type: 'text' as const,
       content: `
-# 🌿 Energy Concepts & Conservation
+# ⚡ Energy Concepts & Resources
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Energy Sources, Efficiency, and Environmental Impact**
 
-Energy Concepts & Conservation is a fundamental topic in AP Environmental Science. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Global Energy Mix
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Energy Concepts & Conservation |
-| **Key concept 2** | A critical component of understanding Energy Concepts & Conservation |
-| **Key concept 3** | An essential element that connects Energy Concepts & Conservation to broader themes |
+| Source | Share of Global Energy | Type |
+|--------|----------------------|------|
+| **Oil (petroleum)** | ~31% | Non-renewable fossil fuel |
+| **Coal** | ~27% | Non-renewable fossil fuel |
+| **Natural gas** | ~24% | Non-renewable fossil fuel |
+| **Hydroelectric** | ~7% | Renewable |
+| **Nuclear** | ~4% | Non-renewable (but low carbon) |
+| **Wind/Solar/Other renewables** | ~7% | Renewable |
+
+> 🔑 **Fossil fuels provide ~82% of global energy.** Transitioning to renewables is essential for reducing greenhouse gas emissions.
+
+---
+
+## Energy Concepts
+
+| Concept | Definition |
+|---------|-----------|
+| **Energy efficiency** | Percentage of energy input that does useful work (not lost as heat) |
+| **First Law of Thermodynamics** | Energy cannot be created or destroyed, only transformed |
+| **Second Law of Thermodynamics** | Every energy transformation increases entropy (disorder); some energy always lost as heat |
+| **Net energy** | Total energy output minus energy input to produce it |
+| **EROI** | Energy Return on Investment: energy output / energy input |
+
+### Energy Efficiency Examples
+
+| System | Approximate Efficiency |
+|--------|----------------------|
+| Incandescent bulb | ~5% (95% lost as heat) |
+| LED bulb | ~20-30% |
+| Gasoline car engine | ~20-25% |
+| Electric vehicle | ~85-90% |
+| Natural gas power plant | ~40-60% |
+| Coal power plant | ~33-40% |
       `
     },
     {
-      id: 'apesener1-quiz1',
+      id: 'apesen1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +57,151 @@ Energy Concepts & Conservation is a fundamental topic in AP Environmental Scienc
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Energy Concepts & Conservation?',
+            question: 'The Second Law of Thermodynamics states that:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Energy Concepts & Conservation',
-              'A mathematical formula',
-              'A literary technique'
+              'Energy can be created from nothing',
+              'Every energy transformation loses some energy as waste heat',
+              'Energy efficiency can reach 100%',
+              'Entropy decreases with each energy transfer'
             ],
             correctAnswer: 1,
-            explanation: 'Energy Concepts & Conservation focuses on understanding key principles and patterns within AP Environmental Science.'
+            explanation: 'The Second Law states that every energy transformation increases entropy — some useful energy is always converted to waste heat, making 100% efficiency impossible.'
           },
           {
-            question: 'Why is Energy Concepts & Conservation important in AP Environmental Science?',
+            question: 'Approximately what percentage of global energy comes from fossil fuels?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'About 50%',
+              'About 65%',
+              'About 82%',
+              'About 95%'
             ],
-            correctAnswer: 1,
-            explanation: 'Energy Concepts & Conservation is a key topic in AP Environmental Science that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'Oil (~31%) + coal (~27%) + natural gas (~24%) = ~82% of global energy comes from fossil fuels, making the energy transition one of the biggest environmental challenges.'
           }
         ]
       }
     },
     {
-      id: 'apesener1-content',
+      id: 'apesen1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Cogeneration and Energy Conservation
 
-### Key concept 1
-The foundational principle underlying Energy Concepts & Conservation. Understanding this concept is essential for mastering Energy Concepts & Conservation in AP Environmental Science.
+| Strategy | Description | Benefit |
+|----------|-----------|---------|
+| **Cogeneration (CHP)** | Using waste heat from electricity generation for heating | Increases overall efficiency to 80%+ |
+| **Energy Star appliances** | Certified high-efficiency devices | Reduce household energy use 10-50% |
+| **Building insulation** | Reducing heat loss through walls, windows, roofs | Reduces heating/cooling energy needs |
+| **Smart grid** | Digital technology managing electricity distribution | Reduces waste, integrates renewables |
 
-### Key concept 2
-A critical component of understanding Energy Concepts & Conservation. This builds on the previous concept and connects to broader themes in the course.
+## Carbon Footprint
 
-### Key concept 3
-An essential element that connects Energy Concepts & Conservation to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- Total greenhouse gas emissions from an individual, organization, or activity
+- Measured in tons of CO₂ equivalent (CO₂e) per year
+- Average American: ~16 tons CO₂e/year (global average: ~4.5 tons)
+- Largest contributions: transportation, home energy, food
+
+## Environmental Justice and Energy
+- Low-income communities and communities of color disproportionately bear pollution from power plants and refineries
+- This intersection of social justice and environmental impact is called **environmental justice**
+- Clean energy transition can help address these inequities
       `
     },
     {
-      id: 'apesener1-input',
+      id: 'apesen1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Energy Concepts & Conservation?
+1) The three fossil fuels are oil (petroleum), coal, and natural _______.
 
-2) What concept describes a critical component of understanding Energy Concepts & Conservation?
+2) Using waste heat from electricity generation for building heating is called _______ (or combined heat and power).
 
-3) Name the term for an essential element that connects Energy Concepts & Conservation to broader themes.
-
-Use the exact term from this part.
+3) The total greenhouse gas emissions of an individual or organization measured in tons of CO₂ equivalent is called a carbon _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Energy Concepts & Conservation), Key concept 2 (A critical component of understanding Energy Concepts & Conservation), and Key concept 3 (An essential element that connects Energy Concepts & Conservation to broader themes).'
+        correctAnswers: ['gas', 'cogeneration', 'footprint'],
+        hint1: 'The cleanest-burning fossil fuel.',
+        hint2: 'CHP = Combined Heat and Power.',
+        hint3: 'The impact you leave on the climate.',
+        explanation: 'Natural gas = third fossil fuel. Cogeneration = using waste heat. Carbon footprint = total GHG emissions.'
       }
     },
     {
-      id: 'apesener1-dropdown',
+      id: 'apesen1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Concept** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Energy Concepts & Conservation is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'An incandescent bulb converts only ~5% of electricity to light. The rest is lost as heat. This illustrates ___',
+            options: ['Low energy efficiency and the Second Law of Thermodynamics', 'High energy efficiency', 'The First Law of Thermodynamics only', 'Cogeneration']
           },
           {
-            label: 'A critical component of understanding Energy Concepts & Conservation describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A coal plant near a low-income neighborhood causing disproportionate health impacts is an example of ___',
+            options: ['An environmental justice issue', 'Normal market economics', 'Energy efficiency', 'Net energy gain']
           },
           {
-            label: 'An essential element that connects Energy Concepts & Conservation to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'EROI (Energy Return on Investment) measures ___',
+            options: ['How much energy you get out compared to how much you put in', 'The financial cost of energy', 'The pollution per unit of energy', 'The efficiency of light bulbs']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Energy Concepts & Conservation. Key concept 2 — A critical component of understanding Energy Concepts & Conservation. Key concept 3 — An essential element that connects Energy Concepts & Conservation to broader themes.'
+        correctAnswers: ['Low energy efficiency and the Second Law of Thermodynamics', 'An environmental justice issue', 'How much energy you get out compared to how much you put in'],
+        hint1: '95% waste heat = very inefficient.',
+        hint2: 'Pollution burden falls on vulnerable communities.',
+        hint3: 'Output divided by input.',
+        explanation: '5% efficiency = low (2nd Law). Disproportionate pollution = environmental justice. EROI = energy out / energy in.'
       }
     },
     {
-      id: 'apesener1-strategy',
+      id: 'apesen1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Energy
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Energy Concepts & Conservation.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Environmental Science for higher scores.
+- Know the **global energy mix** — fossil fuels dominate at ~82%
+- Understand energy efficiency and be able to calculate it (useful output / total input x 100)
+- The **Second Law of Thermodynamics** explains why 100% efficiency is impossible
+- **Cogeneration** is the classic example of improving efficiency
+- Know EROI: high EROI = efficient energy source. Oil used to have EROI of 100:1, now closer to 10:1
+- Environmental justice questions are increasingly common on the AP exam
       `
     },
     {
-      id: 'apesener1-applied',
+      id: 'apesen1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Energy Concepts & Conservation on a free-response question. The best approach is:',
+            question: 'Replacing all incandescent bulbs in a building with LEDs would:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Increase energy use because LEDs cost more',
+              'Reduce energy use by 75-80% for lighting while providing the same light output',
+              'Have no effect on energy consumption',
+              'Eliminate all electricity needs for the building'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'LEDs are 20-30% efficient vs. 5% for incandescent bulbs. For the same light output, LEDs use roughly 75-80% less electricity, significantly reducing energy demand and costs.'
           },
           {
-            question: 'When studying Energy Concepts & Conservation, which strategy is most effective?',
+            question: 'The most effective way to reduce total energy consumption in the United States would be:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Building more coal power plants',
+              'Increasing energy efficiency in transportation and buildings',
+              'Increasing oil drilling in new locations',
+              'Extending daylight saving time'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Energy efficiency is the cheapest, fastest way to reduce consumption. Improving vehicle fuel economy, building insulation, and appliance efficiency can dramatically reduce demand without reducing quality of life.'
           }
         ]
       }
     }
   ]
-}
+};

@@ -2,26 +2,48 @@ export const cspDataPart1Data = {
   topicSlug: 'csp-data',
   sections: [
     {
-      id: 'cspdata1-intro',
+      id: 'cspd1-intro',
       type: 'text' as const,
       content: `
-# 🖥️ Data & Information
+# 📊 Data
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Collection, Processing, and Extracting Information**
 
-Data & Information is a fundamental topic in AP CS Principles. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Data, Information, and Knowledge
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Data & Information |
-| **Key concept 2** | A critical component of understanding Data & Information |
-| **Key concept 3** | An essential element that connects Data & Information to broader themes |
+| Level | Definition | Example |
+|-------|-----------|---------|
+| **Data** | Raw, unprocessed facts and figures | 72, 68, 75, 80, 65 |
+| **Information** | Data that has been organized or analyzed | "The average temperature this week was 72F" |
+| **Knowledge** | Understanding derived from information | "Temperatures are trending warmer this spring" |
+
+> 🔑 **Data alone is not useful.** It must be processed, cleaned, and analyzed to produce meaningful information that supports decision-making.
+
+---
+
+## Data Collection
+
+### Sources of Data
+- **Surveys and forms**: Directly asking people
+- **Sensors**: Temperature, GPS, accelerometer
+- **Web scraping**: Extracting data from websites
+- **APIs**: Accessing data programmatically from services
+- **Transaction logs**: Purchases, login records
+
+### Metadata
+**Metadata** is data about data. It describes properties of the actual data without containing the data itself.
+
+| Data | Metadata |
+|------|----------|
+| A photo | Date taken, camera model, GPS coordinates, file size |
+| An email | Sender, recipient, timestamp, subject line |
+| A song file | Artist, album, duration, bit rate, file format |
       `
     },
     {
-      id: 'cspdata1-quiz1',
+      id: 'cspd1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +51,156 @@ Data & Information is a fundamental topic in AP CS Principles. This part introdu
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Data & Information?',
+            question: 'Which of the following is an example of metadata for a digital photo?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Data & Information',
-              'A mathematical formula',
-              'A literary technique'
+              'The colors of the pixels in the image',
+              'The subject of the photo',
+              'The date, time, and GPS location where the photo was taken',
+              'The artistic style of the photo'
             ],
-            correctAnswer: 1,
-            explanation: 'Data & Information focuses on understanding key principles and patterns within AP CS Principles.'
+            correctAnswer: 2,
+            explanation: 'Metadata is data ABOUT the data. The date, time, and GPS location describe properties of the photo file, not the content of the image itself.'
           },
           {
-            question: 'Why is Data & Information important in AP CS Principles?',
+            question: 'What is the difference between data and information?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'They are the same thing',
+              'Data is processed and organized; information is raw',
+              'Data is raw facts; information is data that has been processed to be meaningful',
+              'Information is always numerical; data is always text'
             ],
-            correctAnswer: 1,
-            explanation: 'Data & Information is a key topic in AP CS Principles that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'Data is raw and unorganized (e.g., a list of numbers). Information is data that has been processed, organized, or analyzed to have meaning (e.g., the average of those numbers).'
           }
         ]
       }
     },
     {
-      id: 'cspdata1-content',
+      id: 'cspd1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Cleaning and Processing Data
 
-### Key concept 1
-The foundational principle underlying Data & Information. Understanding this concept is essential for mastering Data & Information in AP CS Principles.
+Real-world data is often messy. Before analysis, you must:
 
-### Key concept 2
-A critical component of understanding Data & Information. This builds on the previous concept and connects to broader themes in the course.
+| Issue | Problem | Solution |
+|-------|---------|----------|
+| **Missing values** | Some fields are blank | Remove row, fill with default, or estimate |
+| **Duplicates** | Same record appears twice | Remove duplicate entries |
+| **Inconsistent format** | "NY", "New York", "new york" | Standardize to one format |
+| **Outliers** | Values far from normal range | Investigate — keep if valid, remove if error |
+| **Wrong data type** | Age stored as text "25" | Convert to number 25 |
 
-### Key concept 3
-An essential element that connects Data & Information to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Extracting Information from Data
+
+### Common Analyses
+- **Filtering**: Show only records matching a condition
+- **Sorting**: Arrange by a specific field
+- **Aggregation**: Calculate sum, average, count, min, max
+- **Grouping**: Categorize records by a shared attribute
+- **Visualization**: Charts, graphs, maps to reveal patterns
+
+### Correlation vs Causation
+- **Correlation**: Two variables change together (ice cream sales and drownings both rise in summer)
+- **Causation**: One variable directly causes the other
+- **Key rule**: Correlation does NOT imply causation. A hidden third variable (confounding variable) may explain both
       `
     },
     {
-      id: 'cspdata1-input',
+      id: 'cspd1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Data & Information?
+1) Data about data — such as the date a photo was taken or the artist of a song — is called _______.
 
-2) What concept describes a critical component of understanding Data & Information?
+2) When two variables change together but one does not cause the other, the relationship is a _______.
 
-3) Name the term for an essential element that connects Data & Information to broader themes.
-
-Use the exact term from this part.
+3) Removing duplicate records and standardizing formats is part of _______ the data.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Data & Information), Key concept 2 (A critical component of understanding Data & Information), and Key concept 3 (An essential element that connects Data & Information to broader themes).'
+        correctAnswers: ['metadata', 'correlation', 'cleaning'],
+        hint1: 'Meta = about.',
+        hint2: 'They are correlated but not causally linked.',
+        hint3: 'Making the data clean and consistent.',
+        explanation: 'Metadata = data about data. Correlation = related but not causal. Cleaning = preparing data for analysis.'
       }
     },
     {
-      id: 'cspdata1-dropdown',
+      id: 'cspd1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Concept** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Data & Information is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'A list of raw test scores with no analysis is ___',
+            options: ['Data (raw, unprocessed)', 'Information (processed)', 'Knowledge (understanding)', 'Metadata']
           },
           {
-            label: 'A critical component of understanding Data & Information describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: '"Students who study more tend to score higher" is a statement about ___',
+            options: ['Correlation', 'Causation (proven)', 'Metadata', 'Data cleaning']
           },
           {
-            label: 'An essential element that connects Data & Information to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'The file size and resolution of an image are examples of ___',
+            options: ['Metadata', 'Data', 'Information', 'Knowledge']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Data & Information. Key concept 2 — A critical component of understanding Data & Information. Key concept 3 — An essential element that connects Data & Information to broader themes.'
+        correctAnswers: ['Data (raw, unprocessed)', 'Correlation', 'Metadata'],
+        hint1: 'Just raw numbers with no context.',
+        hint2: 'Tendency, not proven causal link.',
+        hint3: 'Attributes of the file itself, not the content.',
+        explanation: 'Raw scores = data. Study/score relationship = correlation. File attributes = metadata.'
       }
     },
     {
-      id: 'cspdata1-strategy',
+      id: 'cspd1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Data
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Data & Information.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP CS Principles for higher scores.
+- Know the hierarchy: **Data → Information → Knowledge**
+- **Metadata** questions are common — remember it is data ABOUT data, not the content itself
+- **Correlation vs causation** appears nearly every year — always look for confounding variables
+- Data cleaning is necessary because real data has errors, duplicates, and inconsistencies
+- Know how filtering, sorting, and aggregation extract meaning from datasets
+- Large datasets can reveal patterns not visible in small samples
       `
     },
     {
-      id: 'cspdata1-applied',
+      id: 'cspd1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Data & Information on a free-response question. The best approach is:',
+            question: 'A study finds that cities with more firefighters also have more fires. What is the best explanation?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Firefighters cause fires',
+              'This is causation — more firefighters lead to more fires',
+              'This is correlation — larger cities have both more firefighters AND more fires',
+              'The data must be wrong'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 2,
+            explanation: 'City size is the confounding variable. Larger cities have more of everything — more firefighters AND more fires. The correlation does not mean firefighters cause fires. This is a classic AP CSP question.'
           },
           {
-            question: 'When studying Data & Information, which strategy is most effective?',
+            question: 'A dataset has 10,000 rows. Some rows have "USA", others "United States", others "US" in the country field. What should be done first?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Analyze the data as-is',
+              'Delete all rows with inconsistent values',
+              'Clean the data by standardizing the country field to one format',
+              'Add more data to fix the inconsistency'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 2,
+            explanation: 'Data cleaning requires standardizing inconsistent formats. All three values refer to the same country so they should be unified to one standard form before analysis.'
           }
         ]
       }
     }
   ]
-}
+};

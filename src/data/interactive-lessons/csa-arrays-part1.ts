@@ -2,26 +2,67 @@ export const csaArraysPart1Data = {
   topicSlug: 'csa-arrays',
   sections: [
     {
-      id: 'csaarray1-intro',
+      id: 'csaas1-intro',
       type: 'text' as const,
       content: `
-# 💻 Array Algorithms
+# 📊 Array Algorithms
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Searching, Shifting, and Array Manipulation**
 
-Array Algorithms is a fundamental topic in AP Computer Science A. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Linear Search
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Array Algorithms |
-| **Key concept 2** | A critical component of understanding Array Algorithms |
-| **Key concept 3** | An essential element that connects Array Algorithms to broader themes |
+\`\`\`java
+public int linearSearch(int[] arr, int target) {
+    for (int i = 0; i < arr.length; i++) {
+        if (arr[i] == target) {
+            return i;  // Return index of target
+        }
+    }
+    return -1;  // Not found
+}
+\`\`\`
+
+| Property | Detail |
+|----------|--------|
+| **Best case** | Target is at index 0: 1 comparison |
+| **Worst case** | Target not found: n comparisons |
+| **Average case** | n/2 comparisons |
+| **Works on** | Sorted or unsorted arrays |
+
+---
+
+## Shifting Elements
+
+### Removing an Element (Shift Left)
+\`\`\`java
+// Remove element at index 2 from {10, 20, 30, 40, 50}
+// Shift elements left to fill the gap
+for (int i = 2; i < arr.length - 1; i++) {
+    arr[i] = arr[i + 1];
+}
+// Result: {10, 20, 40, 50, 50}
+// Note: array size unchanged; last element duplicated
+\`\`\`
+
+### Inserting an Element (Shift Right)
+\`\`\`java
+// Insert 25 at index 2 in {10, 20, 30, 40, 50}
+// Shift elements right first (start from end!)
+for (int i = arr.length - 1; i > 2; i--) {
+    arr[i] = arr[i - 1];
+}
+arr[2] = 25;
+// Result: {10, 20, 25, 30, 40}
+// Note: last element (50) is lost
+\`\`\`
+
+> 🔑 **Shifting direction matters!** Shift LEFT = go forward. Shift RIGHT = go backward to avoid overwriting.
       `
     },
     {
-      id: 'csaarray1-quiz1',
+      id: 'csaas1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +70,177 @@ Array Algorithms is a fundamental topic in AP Computer Science A. This part intr
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Array Algorithms?',
+            question: 'In a linear search, what is returned if the target is NOT found in the array?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Array Algorithms',
-              'A mathematical formula',
-              'A literary technique'
+              '0',
+              'null',
+              '-1',
+              'The last element'
             ],
-            correctAnswer: 1,
-            explanation: 'Array Algorithms focuses on understanding key principles and patterns within AP Computer Science A.'
+            correctAnswer: 2,
+            explanation: 'By convention, linear search returns -1 to indicate the target was not found. This is because 0 is a valid index, so it cannot be used as a "not found" indicator.'
           },
           {
-            question: 'Why is Array Algorithms important in AP Computer Science A?',
+            question: 'When inserting an element into an array by shifting right, you should start the shift from:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'The beginning of the array',
+              'The insertion point',
+              'The end of the array (working backward)',
+              'The middle of the array'
             ],
-            correctAnswer: 1,
-            explanation: 'Array Algorithms is a key topic in AP Computer Science A that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'Shifting right starting from the end prevents overwriting data. If you start from the insertion point, each shift overwrites the next element before it can be moved.'
           }
         ]
       }
     },
     {
-      id: 'csaarray1-content',
+      id: 'csaas1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Reversing an Array
 
-### Key concept 1
-The foundational principle underlying Array Algorithms. Understanding this concept is essential for mastering Array Algorithms in AP Computer Science A.
+\`\`\`java
+public void reverse(int[] arr) {
+    for (int i = 0; i < arr.length / 2; i++) {
+        int temp = arr[i];
+        arr[i] = arr[arr.length - 1 - i];
+        arr[arr.length - 1 - i] = temp;
+    }
+}
+\`\`\`
 
-### Key concept 2
-A critical component of understanding Array Algorithms. This builds on the previous concept and connects to broader themes in the course.
+Key insight: Only loop through **half** the array. Swap element i with element (length - 1 - i).
 
-### Key concept 3
-An essential element that connects Array Algorithms to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Consecutive Pairs
+
+\`\`\`java
+// Check if any consecutive elements are equal
+public boolean hasConsecutiveDuplicates(int[] arr) {
+    for (int i = 0; i < arr.length - 1; i++) {
+        if (arr[i] == arr[i + 1]) {
+            return true;
+        }
+    }
+    return false;
+}
+\`\`\`
+
+> ⚠️ Loop to \`arr.length - 1\` (not \`arr.length\`) when comparing arr[i] with arr[i + 1] to avoid ArrayIndexOutOfBoundsException.
+
+## Selection Sort (AP Exam Reference)
+
+\`\`\`java
+for (int i = 0; i < arr.length - 1; i++) {
+    int minIdx = i;
+    for (int j = i + 1; j < arr.length; j++) {
+        if (arr[j] < arr[minIdx]) {
+            minIdx = j;
+        }
+    }
+    // Swap arr[i] and arr[minIdx]
+    int temp = arr[i];
+    arr[i] = arr[minIdx];
+    arr[minIdx] = temp;
+}
+\`\`\`
       `
     },
     {
-      id: 'csaarray1-input',
+      id: 'csaas1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Array Algorithms?
+1) Linear search checks each element one by one and has worst-case complexity of _______ comparisons for an array of n elements.
 
-2) What concept describes a critical component of understanding Array Algorithms?
+2) When comparing consecutive pairs arr[i] and arr[i+1], the loop should run to arr.length - _______.
 
-3) Name the term for an essential element that connects Array Algorithms to broader themes.
-
-Use the exact term from this part.
+3) To swap two values, you need a _______ variable to hold one value temporarily.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Array Algorithms), Key concept 2 (A critical component of understanding Array Algorithms), and Key concept 3 (An essential element that connects Array Algorithms to broader themes).'
+        correctAnswers: ['n', '1', 'temp'],
+        hint1: 'It may need to check every single element.',
+        hint2: 'Stopping one before the end prevents going out of bounds.',
+        hint3: 'A holding variable for the swap.',
+        explanation: 'Linear search = O(n) worst case. Loop to length - 1 for consecutive pairs. temp variable for swapping.'
       }
     },
     {
-      id: 'csaarray1-dropdown',
+      id: 'csaas1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Choose the Algorithm** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Array Algorithms is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'To find if a value exists in an unsorted array, use ___',
+            options: ['Linear search', 'Binary search', 'Selection sort first', 'Hash lookup']
           },
           {
-            label: 'A critical component of understanding Array Algorithms describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'When reversing an array in-place, the loop runs ___',
+            options: ['arr.length / 2 times', 'arr.length times', 'arr.length - 1 times', '1 time']
           },
           {
-            label: 'An essential element that connects Array Algorithms to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Selection sort finds the minimum of the unsorted portion and ___',
+            options: ['Swaps it to the front of the unsorted portion', 'Inserts it at the end', 'Deletes it', 'Copies the entire array']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Array Algorithms. Key concept 2 — A critical component of understanding Array Algorithms. Key concept 3 — An essential element that connects Array Algorithms to broader themes.'
+        correctAnswers: ['Linear search', 'arr.length / 2 times', 'Swaps it to the front of the unsorted portion'],
+        hint1: 'Binary search requires a sorted array.',
+        hint2: 'Swap pairs from both ends toward the middle.',
+        hint3: 'Select the minimum, place it in position.',
+        explanation: 'Unsorted = linear search. Reverse loops halfway. Selection sort = find min, swap to front.'
       }
     },
     {
-      id: 'csaarray1-strategy',
+      id: 'csaas1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Array Algorithms
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Array Algorithms.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Computer Science A for higher scores.
+- **Linear search** returns -1 for not found — check the return value in conditionals
+- **Shifting arrays** is a very common FRQ task — know both left and right shifts
+- When shifting RIGHT, start from the END to avoid overwriting
+- **Reversing** only needs length/2 iterations — do not double-swap!
+- Know how to write a **swap** using a temp variable — this is fundamental
+- Selection sort and insertion sort are on the AP quick reference — know how they work
       `
     },
     {
-      id: 'csaarray1-applied',
+      id: 'csaas1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Array Algorithms on a free-response question. The best approach is:',
+            question: 'After running this code on arr = {1, 2, 3, 4, 5}, what is the array?\nfor (int i = 0; i < arr.length - 1; i++) {\n    arr[i] = arr[i + 1];\n}',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '{2, 3, 4, 5, 5}',
+              '{1, 1, 2, 3, 4}',
+              '{5, 4, 3, 2, 1}',
+              '{2, 3, 4, 5, 1}'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'This shifts all elements LEFT by one position. arr[0]=arr[1]=2, arr[1]=arr[2]=3, arr[2]=arr[3]=4, arr[3]=arr[4]=5. The last element (arr[4]) remains 5. Result: {2,3,4,5,5}.'
           },
           {
-            question: 'When studying Array Algorithms, which strategy is most effective?',
+            question: 'How many comparisons does selection sort make on an array of 5 elements?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '5',
+              '10',
+              '25',
+              '4'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Pass 1: 4 comparisons. Pass 2: 3 comparisons. Pass 3: 2 comparisons. Pass 4: 1 comparison. Total: 4+3+2+1 = 10. For n elements: n(n-1)/2 comparisons.'
           }
         ]
       }
     }
   ]
-}
+};

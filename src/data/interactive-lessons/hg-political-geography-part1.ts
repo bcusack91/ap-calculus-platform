@@ -2,26 +2,45 @@ export const hgPoliticalGeographyPart1Data = {
   topicSlug: 'hg-political-geography',
   sections: [
     {
-      id: 'hgpoliti1-intro',
+      id: 'hgpg1-intro',
       type: 'text' as const,
       content: `
-# 🌍 Political Geography & Territoriality
+# 🌍 Political Geography & Boundaries
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — States, Nations, and Borders**
 
-Political Geography & Territoriality is a fundamental topic in AP Human Geography. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Key Political Concepts
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Political Geography & Territoriality |
-| **Key concept 2** | A critical component of understanding Political Geography & Territoriality |
-| **Key concept 3** | An essential element that connects Political Geography & Territoriality to broader themes |
+| Term | Definition | Example |
+|------|-----------|---------|
+| **State** | Defined territory with sovereignty | France, Japan, Brazil |
+| **Nation** | Cultural group sharing identity | Kurds, Basques, Tibetans |
+| **Nation-state** | State = one nation | Iceland, Japan (approximately) |
+| **Multinational state** | Multiple nations within one state | Russia, Nigeria, India |
+| **Stateless nation** | Nation without its own state | Kurds, Palestinians, Roma |
+| **Sovereignty** | Supreme authority within a territory | Control over laws, borders, military |
+
+> 🔑 **AP Key Point:** The AP exam frequently asks you to distinguish between states, nations, and nation-states. A STATE is a political entity; a NATION is a cultural group.
+
+---
+
+## Types of Boundaries
+
+| Type | Based On | Example |
+|------|---------|---------|
+| **Physical/natural** | Landforms or water | Rio Grande (US-Mexico), Himalayas (India-China) |
+| **Cultural/ethnographic** | Language, religion, ethnicity | India-Pakistan (religion-based, 1947) |
+| **Geometric** | Straight lines (latitude/longitude) | US-Canada at 49 degrees N, most African borders |
+| **Antecedent** | Drawn BEFORE significant settlement | US-Canada border |
+| **Subsequent** | Drawn AFTER cultural patterns develop | India-Pakistan border (1947) |
+| **Superimposed** | Forced by outside authority | Most colonial African borders |
+| **Relic** | No longer functions but still visible | Berlin Wall, Great Wall of China |
       `
     },
     {
-      id: 'hgpoliti1-quiz1',
+      id: 'hgpg1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +48,152 @@ Political Geography & Territoriality is a fundamental topic in AP Human Geograph
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Political Geography & Territoriality?',
+            question: 'Most borders in Africa are geometric because:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Political Geography & Territoriality',
-              'A mathematical formula',
-              'A literary technique'
+              'African leaders preferred straight-line borders',
+              'European colonial powers drew borders with little regard for ethnic boundaries',
+              'The terrain in Africa is flat and featureless',
+              'International law requires geometric borders for new states'
             ],
             correctAnswer: 1,
-            explanation: 'Political Geography & Territoriality focuses on understanding key principles and patterns within AP Human Geography.'
+            explanation: 'European colonial powers at the Berlin Conference (1884-85) drew straight-line boundaries across Africa that ignored existing ethnic, linguistic, and cultural boundaries — these are superimposed geometric borders.'
           },
           {
-            question: 'Why is Political Geography & Territoriality important in AP Human Geography?',
+            question: 'The former border between East and West Berlin is best classified as a:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Antecedent boundary',
+              'Superimposed boundary that became a relic boundary',
+              'Natural boundary',
+              'Geometric boundary'
             ],
             correctAnswer: 1,
-            explanation: 'Political Geography & Territoriality is a key topic in AP Human Geography that connects to multiple course themes.'
+            explanation: 'The Berlin Wall was superimposed (imposed by Cold War powers) and is now a relic boundary (no longer functions as a border but physical traces and cultural impacts remain).'
           }
         ]
       }
     },
     {
-      id: 'hgpoliti1-content',
+      id: 'hgpg1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Boundary Disputes
 
-### Key concept 1
-The foundational principle underlying Political Geography & Territoriality. Understanding this concept is essential for mastering Political Geography & Territoriality in AP Human Geography.
+| Type | Description | Example |
+|------|-----------|---------|
+| **Definitional** | Disagreement over the legal language of a treaty | Maritime boundary disputes over exclusive economic zones |
+| **Locational** | Agreement on definition but disagreement on where the line falls | India-China border in the Himalayas |
+| **Operational** | Disagreement over how the boundary functions | US-Mexico: border enforcement policies |
+| **Allocational** | Disagreement over resource use at the boundary | Water rights along the Colorado River |
 
-### Key concept 2
-A critical component of understanding Political Geography & Territoriality. This builds on the previous concept and connects to broader themes in the course.
+### Frontier vs. Boundary
 
-### Key concept 3
-An essential element that connects Political Geography & Territoriality to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- **Boundary**: Precise legal line separating states (modern concept)
+- **Frontier**: A zone of transition rather than a sharp line (historical concept; few remain today)
+- Antarctica and parts of the ocean floor are among the last true frontiers
+
+### United Nations Convention on the Law of the Sea (UNCLOS)
+
+| Zone | Distance from Coast | Rights |
+|------|---------------------|--------|
+| **Territorial sea** | 0–12 nautical miles | Full sovereignty |
+| **Contiguous zone** | 12–24 nautical miles | Limited enforcement |
+| **Exclusive Economic Zone (EEZ)** | 0–200 nautical miles | Resource extraction rights |
       `
     },
     {
-      id: 'hgpoliti1-input',
+      id: 'hgpg1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Political Geography & Territoriality?
+1) The supreme authority of a state to govern within its territory is called _______.
 
-2) What concept describes a critical component of understanding Political Geography & Territoriality?
+2) Boundaries drawn by outside powers without regard for local populations are called _______ boundaries.
 
-3) Name the term for an essential element that connects Political Geography & Territoriality to broader themes.
-
-Use the exact term from this part.
+3) Boundaries drawn before significant human settlement of an area are called _______ boundaries.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Political Geography & Territoriality), Key concept 2 (A critical component of understanding Political Geography & Territoriality), and Key concept 3 (An essential element that connects Political Geography & Territoriality to broader themes).'
+        correctAnswers: ['sovereignty', 'superimposed', 'antecedent'],
+        hint1: 'The defining feature of an independent state.',
+        hint2: 'Often created by colonial powers.',
+        hint3: 'Drawn before the cultural landscape developed.',
+        explanation: 'Sovereignty = supreme governing authority. Superimposed = forced by outsiders (colonial borders). Antecedent = drawn before significant settlement.'
       }
     },
     {
-      id: 'hgpoliti1-dropdown',
+      id: 'hgpg1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Boundary** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Political Geography & Territoriality is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'The 49th parallel dividing the US and Canada is a ___ boundary',
+            options: ['Geometric', 'Physical/natural', 'Cultural/ethnographic', 'Superimposed']
           },
           {
-            label: 'A critical component of understanding Political Geography & Territoriality describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'The Rio Grande separating the US and Mexico is a ___ boundary',
+            options: ['Physical/natural', 'Geometric', 'Cultural', 'Relic']
           },
           {
-            label: 'An essential element that connects Political Geography & Territoriality to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'India and China disagreeing on the exact position of their border in the Himalayas is a ___ dispute',
+            options: ['Locational', 'Definitional', 'Operational', 'Allocational']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Political Geography & Territoriality. Key concept 2 — A critical component of understanding Political Geography & Territoriality. Key concept 3 — An essential element that connects Political Geography & Territoriality to broader themes.'
+        correctAnswers: ['Geometric', 'Physical/natural', 'Locational'],
+        hint1: 'A straight line based on latitude.',
+        hint2: 'A river forms the border.',
+        hint3: 'They know the definition but disagree on where exactly the line falls.',
+        explanation: '49th parallel = geometric (straight line). Rio Grande = physical (river). India-China = locational (disagreement on where the line is in mountainous terrain).'
       }
     },
     {
-      id: 'hgpoliti1-strategy',
+      id: 'hgpg1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Political Geography
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Political Geography & Territoriality.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Human Geography for higher scores.
+- **State vs nation vs nation-state** — the most commonly confused terms on the exam
+- Know the Berlin Conference (1884-85) and its impact on African borders
+- Boundary disputes: know all 4 types and be able to identify real-world examples
+- UNCLOS zones (12 nm territorial, 200 nm EEZ) are increasingly tested
+- The South China Sea dispute involves overlapping EEZ claims and artificial island building
       `
     },
     {
-      id: 'hgpoliti1-applied',
+      id: 'hgpg1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Political Geography & Territoriality on a free-response question. The best approach is:',
+            question: 'Two countries share a river border. Country A wants to build a dam, but Country B argues this will reduce their water supply. This is best classified as:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'A definitional boundary dispute',
+              'An allocational boundary dispute',
+              'A locational boundary dispute',
+              'A superimposed boundary issue'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Allocational disputes involve disagreements over how resources at or near the boundary are distributed. Water rights disputes between countries sharing rivers are a classic example.'
           },
           {
-            question: 'When studying Political Geography & Territoriality, which strategy is most effective?',
+            question: 'China building artificial islands in the South China Sea to extend its territorial claims is primarily aimed at expanding its:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Contiguous zone for immigration enforcement',
+              'Exclusive Economic Zone for resource extraction',
+              'Cultural influence in Southeast Asia',
+              'Antecedent boundary claims'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'By building artificial islands, China aims to extend its EEZ claims to access valuable fishing grounds, oil/gas deposits, and shipping lanes — an allocational boundary dispute at massive scale.'
           }
         ]
       }
     }
   ]
-}
+};

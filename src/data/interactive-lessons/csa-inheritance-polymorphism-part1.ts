@@ -2,26 +2,58 @@ export const csaInheritancePolymorphismPart1Data = {
   topicSlug: 'csa-inheritance-polymorphism',
   sections: [
     {
-      id: 'csainher1-intro',
+      id: 'csaip1-intro',
       type: 'text' as const,
       content: `
-# 💻 Inheritance & Polymorphism
+# 🔮 Polymorphism
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Dynamic Binding, Type Casting, and Object Hierarchies**
 
-Inheritance & Polymorphism is a fundamental topic in AP Computer Science A. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## What Is Polymorphism?
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Inheritance & Polymorphism |
-| **Key concept 2** | A critical component of understanding Inheritance & Polymorphism |
-| **Key concept 3** | An essential element that connects Inheritance & Polymorphism to broader themes |
+Polymorphism means "many forms." A superclass reference can hold a subclass object, and the correct overridden method is called at runtime.
+
+\`\`\`java
+Animal a1 = new Dog("Rex", "Lab");
+Animal a2 = new Cat("Whiskers");
+
+// Both are declared as Animal, but:
+a1.speak();  // "Woof!" — Dog version
+a2.speak();  // "Meow!" — Cat version
+\`\`\`
+
+> 🔑 **Compile-time type** (declared type) determines WHAT methods can be called. **Runtime type** (actual type) determines WHICH version of an overridden method runs.
+
+---
+
+## Compile-Time vs Runtime Type
+
+\`\`\`java
+Animal a = new Dog("Rex", "Lab");
+//  ^         ^
+//  |         Runtime type: Dog
+//  Compile-time type: Animal
+\`\`\`
+
+| Check | Uses | Determines |
+|-------|------|-----------|
+| **Compile-time** | Declared type | Which methods are LEGAL to call |
+| **Runtime** | Actual type | Which OVERRIDDEN version runs |
+
+\`\`\`java
+Animal a = new Dog("Rex", "Lab");
+a.speak();     // OK: speak() exists in Animal, Dog version runs
+a.getName();   // OK: getName() exists in Animal
+// a.getBreed(); // COMPILE ERROR: getBreed() not in Animal
+\`\`\`
+
+The compiler only knows \`a\` is an Animal. Even though the actual object is a Dog, you cannot call Dog-specific methods through an Animal reference without casting.
       `
     },
     {
-      id: 'csainher1-quiz1',
+      id: 'csaip1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +61,173 @@ Inheritance & Polymorphism is a fundamental topic in AP Computer Science A. This
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Inheritance & Polymorphism?',
+            question: 'Animal a = new Dog("Rex"); Which type determines what methods can be called?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Inheritance & Polymorphism',
-              'A mathematical formula',
-              'A literary technique'
+              'Dog (the runtime type)',
+              'Animal (the compile-time / declared type)',
+              'Both equally',
+              'Neither — all methods are always available'
             ],
             correctAnswer: 1,
-            explanation: 'Inheritance & Polymorphism focuses on understanding key principles and patterns within AP Computer Science A.'
+            explanation: 'The compile-time type (Animal) determines which methods are LEGAL to call. You can only call methods defined in Animal. The runtime type (Dog) determines which VERSION of overridden methods runs.'
           },
           {
-            question: 'Why is Inheritance & Polymorphism important in AP Computer Science A?',
+            question: 'Given Animal a = new Dog("Rex"); calling a.speak() invokes which version?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Animal speak() because a is declared as Animal',
+              'Dog speak() because the actual object is a Dog',
+              'Both versions in sequence',
+              'Compile error'
             ],
             correctAnswer: 1,
-            explanation: 'Inheritance & Polymorphism is a key topic in AP Computer Science A that connects to multiple course themes.'
+            explanation: 'This is dynamic binding (polymorphism). The runtime type (Dog) determines which overridden method executes. Even though a is declared as Animal, Dog speak() runs.'
           }
         ]
       }
     },
     {
-      id: 'csainher1-content',
+      id: 'csaip1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Polymorphism with Arrays and ArrayLists
 
-### Key concept 1
-The foundational principle underlying Inheritance & Polymorphism. Understanding this concept is essential for mastering Inheritance & Polymorphism in AP Computer Science A.
+\`\`\`java
+ArrayList<Animal> animals = new ArrayList<>();
+animals.add(new Dog("Rex", "Lab"));
+animals.add(new Cat("Whiskers"));
+animals.add(new Dog("Buddy", "Poodle"));
 
-### Key concept 2
-A critical component of understanding Inheritance & Polymorphism. This builds on the previous concept and connects to broader themes in the course.
+for (Animal a : animals) {
+    System.out.println(a.speak());
+}
+// Output: Woof! Meow! Woof!
+\`\`\`
 
-### Key concept 3
-An essential element that connects Inheritance & Polymorphism to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+This is the power of polymorphism: one loop processes different types of objects, each responding with its own behavior.
+
+## Type Casting
+
+\`\`\`java
+Animal a = new Dog("Rex", "Lab");
+
+// Downcasting: Animal -> Dog
+Dog d = (Dog) a;         // OK at runtime because a IS a Dog
+String breed = d.getBreed(); // Now we can call Dog-specific methods
+
+// Dangerous downcast:
+Animal a2 = new Cat("Whiskers");
+Dog d2 = (Dog) a2;       // ClassCastException at runtime!
+\`\`\`
+
+### instanceof Operator
+\`\`\`java
+if (a instanceof Dog) {
+    Dog d = (Dog) a;     // Safe cast
+    System.out.println(d.getBreed());
+}
+\`\`\`
+
+## The Object Class
+Every class in Java implicitly extends **Object**. This means every class inherits:
+- \`toString()\` — String representation
+- \`equals(Object obj)\` — equality check
       `
     },
     {
-      id: 'csainher1-input',
+      id: 'csaip1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Inheritance & Polymorphism?
+1) Polymorphism means a superclass reference can point to a _______ object.
 
-2) What concept describes a critical component of understanding Inheritance & Polymorphism?
+2) The compile-time type determines which methods are legal; the _______ type determines which overridden version runs.
 
-3) Name the term for an essential element that connects Inheritance & Polymorphism to broader themes.
-
-Use the exact term from this part.
+3) Every class in Java implicitly extends the _______ class.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Inheritance & Polymorphism), Key concept 2 (A critical component of understanding Inheritance & Polymorphism), and Key concept 3 (An essential element that connects Inheritance & Polymorphism to broader themes).'
+        correctAnswers: ['subclass', 'runtime', 'Object'],
+        hint1: 'A Dog can be referenced as an Animal.',
+        hint2: 'The actual object created at runtime.',
+        hint3: 'The universal base class in Java.',
+        explanation: 'Superclass refs can hold subclass objects. Runtime type determines method version. All classes extend Object.'
       }
     },
     {
-      id: 'csainher1-dropdown',
+      id: 'csaip1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Polymorphism in Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Inheritance & Polymorphism is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Animal a = new Dog(); a.getBreed() causes a ___',
+            options: ['Compile error (getBreed not in Animal)', 'Runtime error', 'Returns null', 'Returns the breed successfully']
           },
           {
-            label: 'A critical component of understanding Inheritance & Polymorphism describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'To safely downcast, first check with ___',
+            options: ['instanceof operator', 'equals() method', 'toString() method', 'getClass() method']
           },
           {
-            label: 'An essential element that connects Inheritance & Polymorphism to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'An ArrayList<Animal> can hold Dog objects because Dog ___ Animal',
+            options: ['IS-A (extends)', 'HAS-A', 'overloads', 'implements']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Inheritance & Polymorphism. Key concept 2 — A critical component of understanding Inheritance & Polymorphism. Key concept 3 — An essential element that connects Inheritance & Polymorphism to broader themes.'
+        correctAnswers: ['Compile error (getBreed not in Animal)', 'instanceof operator', 'IS-A (extends)'],
+        hint1: 'The compiler only sees Animal methods.',
+        hint2: 'Checks the runtime type before casting.',
+        hint3: 'Dog extends Animal = Dog IS-A Animal.',
+        explanation: 'Compiler uses declared type. instanceof for safe casting. IS-A = subclass stored in superclass reference.'
       }
     },
     {
-      id: 'csainher1-strategy',
+      id: 'csaip1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Polymorphism
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Inheritance & Polymorphism.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Computer Science A for higher scores.
+- **Compile-time type** = what the compiler sees (left side of =). Determines legal method calls
+- **Runtime type** = actual object (right side of new). Determines which overridden version runs
+- A superclass reference CANNOT call subclass-specific methods without casting
+- Polymorphism with arrays/ArrayLists is a common FRQ pattern — one loop, many types
+- instanceof is rarely tested but important for safe downcasting
+- Every class extends Object — toString() and equals() are inherited by ALL classes
       `
     },
     {
-      id: 'csainher1-applied',
+      id: 'csaip1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Inheritance & Polymorphism on a free-response question. The best approach is:',
+            question: 'class Shape { public double area() { return 0; } }\nclass Circle extends Shape { private double r; public Circle(double r) { this.r = r; } public double area() { return Math.PI * r * r; } }\nShape s = new Circle(5);\nWhat does s.area() return?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '0',
+              '78.54 (approximately Pi * 25)',
+              'Compile error',
+              'NullPointerException'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The runtime type is Circle, so Circle area() runs via polymorphism. area() returns Math.PI * 5 * 5 = 78.54 approximately. The Shape version (return 0) is overridden.'
           },
           {
-            question: 'When studying Inheritance & Polymorphism, which strategy is most effective?',
+            question: 'ArrayList<Shape> shapes contains Circle and Rectangle objects. Which is true about: for (Shape s : shapes) { s.area(); }',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Only Shape area() runs for all elements',
+              'Each element runs its own overridden area() based on actual type',
+              'Compile error because Shape is too general',
+              'Only Circle area() runs'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Polymorphism: each object in the list calls its own version of area(). Circles call Circle.area(), Rectangles call Rectangle.area(). This is the core benefit of polymorphism.'
           }
         ]
       }
     }
   ]
-}
+};

@@ -2,26 +2,43 @@ export const apesBiogeochemicalCyclesPart1Data = {
   topicSlug: 'apes-biogeochemical-cycles',
   sections: [
     {
-      id: 'apesbiog1-intro',
+      id: 'apesbc1-intro',
       type: 'text' as const,
       content: `
-# 🌿 Biogeochemical Cycles
+# 🔄 Biogeochemical Cycles
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Carbon, Nitrogen, Phosphorus, and Water Cycles**
 
-Biogeochemical Cycles is a fundamental topic in AP Environmental Science. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## The Carbon Cycle
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Biogeochemical Cycles |
-| **Key concept 2** | A critical component of understanding Biogeochemical Cycles |
-| **Key concept 3** | An essential element that connects Biogeochemical Cycles to broader themes |
+| Process | Direction | Description |
+|---------|-----------|-----------|
+| **Photosynthesis** | Atmosphere → Biosphere | Plants absorb CO₂ and convert to organic carbon |
+| **Cellular respiration** | Biosphere → Atmosphere | Organisms release CO₂ by burning glucose |
+| **Combustion** | Lithosphere → Atmosphere | Burning fossil fuels releases stored carbon |
+| **Decomposition** | Biosphere → Soil/Atmosphere | Dead organisms broken down, releasing CO₂ |
+| **Ocean absorption** | Atmosphere → Hydrosphere | Oceans absorb ~25% of atmospheric CO₂ |
+| **Fossilization** | Biosphere → Lithosphere | Dead organisms become fossil fuels over millions of years |
+
+> 🔑 **Human Impact:** Burning fossil fuels releases carbon that was stored underground for millions of years, increasing atmospheric CO₂ from ~280 ppm (pre-industrial) to ~420 ppm today.
+
+---
+
+## The Nitrogen Cycle
+
+| Process | What Happens | Organisms Involved |
+|---------|-------------|-------------------|
+| **Nitrogen fixation** | N₂ → NH₃ (ammonia) | Rhizobium bacteria in legume roots; lightning |
+| **Nitrification** | NH₃ → NO₂⁻ → NO₃⁻ (nitrate) | Nitrifying bacteria |
+| **Assimilation** | Plants absorb NO₃⁻ from soil | Plants, then consumers eat plants |
+| **Ammonification** | Dead organisms → NH₃ | Decomposer bacteria |
+| **Denitrification** | NO₃⁻ → N₂ (back to atmosphere) | Denitrifying bacteria |
       `
     },
     {
-      id: 'apesbiog1-quiz1',
+      id: 'apesbc1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +46,157 @@ Biogeochemical Cycles is a fundamental topic in AP Environmental Science. This p
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Biogeochemical Cycles?',
+            question: 'Which process converts atmospheric nitrogen (N₂) into a form usable by plants?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Biogeochemical Cycles',
-              'A mathematical formula',
-              'A literary technique'
+              'Denitrification',
+              'Nitrogen fixation',
+              'Nitrification',
+              'Ammonification'
             ],
             correctAnswer: 1,
-            explanation: 'Biogeochemical Cycles focuses on understanding key principles and patterns within AP Environmental Science.'
+            explanation: 'Nitrogen fixation converts atmospheric N₂ into ammonia (NH₃), which can then be converted to nitrate (NO₃⁻) by nitrifying bacteria and absorbed by plants.'
           },
           {
-            question: 'Why is Biogeochemical Cycles important in AP Environmental Science?',
+            question: 'Burning fossil fuels affects the carbon cycle by:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Removing carbon from the atmosphere',
+              'Releasing stored carbon from the lithosphere into the atmosphere',
+              'Converting CO₂ into oxygen',
+              'Increasing carbon fixation by plants'
             ],
             correctAnswer: 1,
-            explanation: 'Biogeochemical Cycles is a key topic in AP Environmental Science that connects to multiple course themes.'
+            explanation: 'Fossil fuels are carbon stored in the lithosphere over millions of years. Combustion releases this ancient carbon as CO₂ into the atmosphere, increasing the greenhouse effect.'
           }
         ]
       }
     },
     {
-      id: 'apesbiog1-content',
+      id: 'apesbc1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## The Phosphorus Cycle
 
-### Key concept 1
-The foundational principle underlying Biogeochemical Cycles. Understanding this concept is essential for mastering Biogeochemical Cycles in AP Environmental Science.
+| Feature | Detail |
+|---------|--------|
+| **Reservoir** | Rocks and sediments (NO atmospheric phase) |
+| **Release** | Weathering of phosphate-containing rocks |
+| **Uptake** | Plants absorb phosphate (PO₄³⁻) from soil |
+| **Transfer** | Passed through food chain; returned via decomposition |
+| **Long-term storage** | Ocean sediments → new rocks (takes millions of years) |
 
-### Key concept 2
-A critical component of understanding Biogeochemical Cycles. This builds on the previous concept and connects to broader themes in the course.
+> ⚠️ **Key difference:** Phosphorus does NOT have a gaseous phase — it only cycles through rock, soil, water, and organisms. This makes it the slowest biogeochemical cycle.
 
-### Key concept 3
-An essential element that connects Biogeochemical Cycles to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Human Disruptions to Nutrient Cycles
+
+| Cycle | Human Disruption | Environmental Effect |
+|-------|-----------------|---------------------|
+| **Carbon** | Fossil fuel combustion, deforestation | Increased atmospheric CO₂, climate change |
+| **Nitrogen** | Fertilizer use, fossil fuel burning | Eutrophication, dead zones, acid rain |
+| **Phosphorus** | Mining phosphate rock, fertilizer runoff | Eutrophication, algal blooms |
+| **Water** | Irrigation, dam building, deforestation | Altered water tables, reduced streamflow |
+
+### Eutrophication Process
+1. Excess nitrogen and phosphorus enter water (fertilizer runoff)
+2. Algal bloom — rapid algae growth
+3. Algae die and decompose
+4. Decomposition consumes dissolved oxygen
+5. **Hypoxic zone** (dead zone) — aquatic life suffocates
       `
     },
     {
-      id: 'apesbiog1-input',
+      id: 'apesbc1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Biogeochemical Cycles?
+1) Unlike carbon and nitrogen, the _______ cycle has NO gaseous/atmospheric phase.
 
-2) What concept describes a critical component of understanding Biogeochemical Cycles?
+2) When excess nutrients cause algal blooms and oxygen depletion in water, this is called _______.
 
-3) Name the term for an essential element that connects Biogeochemical Cycles to broader themes.
-
-Use the exact term from this part.
+3) The bacteria that convert atmospheric N₂ to ammonia are called nitrogen-_______ bacteria.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Biogeochemical Cycles), Key concept 2 (A critical component of understanding Biogeochemical Cycles), and Key concept 3 (An essential element that connects Biogeochemical Cycles to broader themes).'
+        correctAnswers: ['phosphorus', 'eutrophication', 'fixing'],
+        hint1: 'It cycles through rocks, soil, and water only.',
+        hint2: 'Nutrient enrichment of water bodies.',
+        hint3: 'They "fix" nitrogen from the air.',
+        explanation: 'Phosphorus has no gas phase. Eutrophication = nutrient enrichment → algal bloom → oxygen depletion. Nitrogen-fixing bacteria convert N₂ to NH₃.'
       }
     },
     {
-      id: 'apesbiog1-dropdown',
+      id: 'apesbc1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Process** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Biogeochemical Cycles is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Plants absorbing CO₂ and converting it to glucose is ___',
+            options: ['Photosynthesis', 'Cellular respiration', 'Decomposition', 'Combustion']
           },
           {
-            label: 'A critical component of understanding Biogeochemical Cycles describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Bacteria converting NO₃⁻ back to atmospheric N₂ is ___',
+            options: ['Denitrification', 'Nitrogen fixation', 'Nitrification', 'Ammonification']
           },
           {
-            label: 'An essential element that connects Biogeochemical Cycles to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Excessive fertilizer runoff causing algal blooms and fish kills demonstrates ___',
+            options: ['Eutrophication from nitrogen and phosphorus pollution', 'Normal carbon cycling', 'Primary ecological succession', 'Bioaccumulation of heavy metals']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Biogeochemical Cycles. Key concept 2 — A critical component of understanding Biogeochemical Cycles. Key concept 3 — An essential element that connects Biogeochemical Cycles to broader themes.'
+        correctAnswers: ['Photosynthesis', 'Denitrification', 'Eutrophication from nitrogen and phosphorus pollution'],
+        hint1: 'CO₂ + H₂O + sunlight → glucose + O₂.',
+        hint2: 'The reverse of nitrogen fixation.',
+        hint3: 'Nutrient pollution in water.',
+        explanation: 'Photosynthesis = CO₂ → glucose. Denitrification = NO₃⁻ → N₂. Fertilizer runoff → eutrophication → dead zones.'
       }
     },
     {
-      id: 'apesbiog1-strategy',
+      id: 'apesbc1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Biogeochemical Cycles
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Biogeochemical Cycles.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Environmental Science for higher scores.
+- Know the **reservoirs** and **fluxes** for each cycle (where is it stored? how does it move?)
+- Phosphorus = NO gas phase (only cycles through rock, soil, water, organisms)
+- **Eutrophication** is one of the most tested concepts — know the full process from fertilizer → dead zone
+- Human disruptions: fossil fuels (carbon), fertilizer (nitrogen + phosphorus), deforestation (all cycles)
+- The nitrogen cycle has the most bacterial steps — know the names and what each one does
       `
     },
     {
-      id: 'apesbiog1-applied',
+      id: 'apesbc1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Biogeochemical Cycles on a free-response question. The best approach is:',
+            question: 'A farmer plants a cover crop of clover (a legume) between growing seasons. This practice helps because:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Clover absorbs phosphorus from the atmosphere',
+              'Rhizobium bacteria in clover roots fix atmospheric nitrogen into the soil',
+              'Clover releases nitrogen gas back to the atmosphere',
+              'Clover prevents all water from entering the soil'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Legumes like clover have symbiotic Rhizobium bacteria in their root nodules that fix atmospheric N₂ into ammonia (NH₃), naturally fertilizing the soil without synthetic fertilizer.'
           },
           {
-            question: 'When studying Biogeochemical Cycles, which strategy is most effective?',
+            question: 'A large dead zone forms in the Gulf of Mexico each summer. The MOST likely cause is:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Oil spills from offshore drilling',
+              'Agricultural fertilizer runoff from the Mississippi River watershed causing eutrophication',
+              'Overfishing removing too many organisms',
+              'Natural volcanic activity on the ocean floor'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Nitrogen and phosphorus fertilizer runoff flows down the Mississippi River into the Gulf, causing massive algal blooms. When algae decompose, they consume dissolved oxygen, creating a hypoxic dead zone.'
           }
         ]
       }
     }
   ]
-}
+};

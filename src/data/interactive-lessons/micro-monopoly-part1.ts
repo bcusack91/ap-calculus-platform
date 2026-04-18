@@ -2,26 +2,54 @@ export const microMonopolyPart1Data = {
   topicSlug: 'micro-monopoly',
   sections: [
     {
-      id: 'micromon1-intro',
+      id: 'micromn1-intro',
       type: 'text' as const,
       content: `
 # 💰 Monopoly
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Single Sellers and Market Power**
 
-Monopoly is a fundamental topic in AP Microeconomics. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## What Creates a Monopoly?
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Monopoly |
-| **Key concept 2** | A critical component of understanding Monopoly |
-| **Key concept 3** | An essential element that connects Monopoly to broader themes |
+A **monopoly** is a market with a **single seller** and **high barriers to entry**:
+
+| Barrier Type | How It Works | Example |
+|-------------|-------------|---------|
+| **Legal/regulatory** | Government grants exclusive right | Patents, copyrights, licenses |
+| **Natural monopoly** | Huge economies of scale | Water utility, electric grid |
+| **Control of resources** | Sole access to key input | De Beers (historically) — diamonds |
+| **Network effects** | Value increases with users | Social media platforms |
+
+---
+
+## How Monopolies Differ from Competitive Firms
+
+| Feature | Perfect Competition | Monopoly |
+|---------|-------------------|----------|
+| Demand curve | Horizontal (price taker) | **Downward-sloping** (IS the market) |
+| MR vs. Price | MR = P | **MR < P** (must lower price for all to sell more) |
+| Profit rule | P = MC | **MR = MC** (then charge P on demand curve) |
+| Long-run profit | Zero | Can be **positive** (barriers block entry) |
+
+### Why Is MR < P for a Monopolist?
+
+To sell one more unit, the monopolist must lower the price on **all** units:
+
+| Q | Price | TR | MR |
+|---|-------|-----|-----|
+| 1 | $10 | $10 | $10 |
+| 2 | $9 | $18 | $8 |
+| 3 | $8 | $24 | $6 |
+| 4 | $7 | $28 | $4 |
+| 5 | $6 | $30 | $2 |
+
+MR falls **twice as fast** as the demand curve (for a linear demand).
       `
     },
     {
-      id: 'micromon1-quiz1',
+      id: 'micromn1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,144 +57,157 @@ Monopoly is a fundamental topic in AP Microeconomics. This part introduces the e
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Monopoly?',
+            question: 'For a monopolist, marginal revenue is less than price because:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Monopoly',
-              'A mathematical formula',
-              'A literary technique'
+              'The government taxes monopoly profits',
+              'Lowering price to sell more reduces revenue on all previous units',
+              'Monopolists always operate at a loss',
+              'Demand is perfectly elastic for monopolies'
             ],
             correctAnswer: 1,
-            explanation: 'Monopoly focuses on understanding key principles and patterns within AP Microeconomics.'
+            explanation: 'To sell the 3rd unit at $8, the monopolist also drops from $9 to $8 on the first two units — losing $2 on inframarginal units. MR = $6 < P = $8.'
           },
           {
-            question: 'Why is Monopoly important in AP Microeconomics?',
+            question: 'A monopoly can earn positive economic profit in the long run because:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'It produces at minimum ATC',
+              'Barriers to entry prevent new firms from competing away profits',
+              'The government subsidizes monopoly output',
+              'Demand is perfectly inelastic'
             ],
             correctAnswer: 1,
-            explanation: 'Monopoly is a key topic in AP Microeconomics that connects to multiple course themes.'
+            explanation: 'Unlike competitive markets where entry eliminates profits, monopoly barriers (patents, huge scale requirements, resource control) keep competitors out permanently.'
           }
         ]
       }
     },
     {
-      id: 'micromon1-content',
+      id: 'micromn1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## The Monopoly Graph
 
-### Key concept 1
-The foundational principle underlying Monopoly. Understanding this concept is essential for mastering Monopoly in AP Microeconomics.
+The monopolist maximizes profit in 3 steps:
 
-### Key concept 2
-A critical component of understanding Monopoly. This builds on the previous concept and connects to broader themes in the course.
+1. **Find quantity**: Where MR = MC → this is Q*
+2. **Find price**: Go UP to the demand curve at Q* → this is P*
+3. **Calculate profit**: Profit = (P* − ATC) × Q*
 
-### Key concept 3
-An essential element that connects Monopoly to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Deadweight Loss
+
+The monopolist produces where MR = MC, but charges P > MC:
+- Competitive output would be where **D = MC** (higher Q, lower P)
+- The triangle between competitive Q and monopoly Q is **deadweight loss**
+- Monopoly transfers some consumer surplus to **producer surplus** and destroys the rest
+
+### Key Inefficiencies
+
+| Type | Present? | Why? |
+|------|----------|------|
+| **Allocative inefficiency** | Yes | P > MC — underproducing |
+| **Productive inefficiency** | Yes | Not at minimum ATC |
+| **Deadweight loss** | Yes | Mutually beneficial trades lost |
       `
     },
     {
-      id: 'micromon1-input',
+      id: 'micromn1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Monopoly?
+1) A monopolist maximizes profit by producing where MR = _______.
 
-2) What concept describes a critical component of understanding Monopoly?
+2) For a linear demand curve, the MR curve has _______ the slope of the demand curve. (half/twice)
 
-3) Name the term for an essential element that connects Monopoly to broader themes.
-
-Use the exact term from this part.
+3) Monopoly creates deadweight loss because P > _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Monopoly), Key concept 2 (A critical component of understanding Monopoly), and Key concept 3 (An essential element that connects Monopoly to broader themes).'
+        correctAnswers: ['MC', 'twice', 'MC'],
+        hint1: 'Same profit-maximization rule as any firm.',
+        hint2: 'MR falls faster than demand.',
+        hint3: 'Price exceeds this, meaning too little is produced.',
+        explanation: 'Profit max: MR = MC. MR has twice the slope of demand (falls twice as fast). P > MC means allocative inefficiency — society values additional units more than they cost to produce.'
       }
     },
     {
-      id: 'micromon1-dropdown',
+      id: 'micromn1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Monopoly vs. Competition** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Monopoly is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Compared to perfect competition, a monopoly charges a ___ price',
+            options: ['Higher', 'Lower', 'The same', 'Indeterminate']
           },
           {
-            label: 'A critical component of understanding Monopoly describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Compared to perfect competition, a monopoly produces a ___ quantity',
+            options: ['Lower', 'Higher', 'The same', 'Indeterminate']
           },
           {
-            label: 'An essential element that connects Monopoly to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A monopoly\'s demand curve is ___',
+            options: ['Downward-sloping (the market demand curve)', 'Horizontal', 'Vertical', 'Upward-sloping']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Monopoly. Key concept 2 — A critical component of understanding Monopoly. Key concept 3 — An essential element that connects Monopoly to broader themes.'
+        correctAnswers: ['Higher', 'Lower', 'Downward-sloping (the market demand curve)'],
+        hint1: 'Monopolies restrict output to raise price.',
+        hint2: 'MR = MC at a lower Q than the competitive equilibrium.',
+        hint3: 'The monopoly IS the market — it faces market demand.',
+        explanation: 'Monopoly: higher P, lower Q vs. competition. The monopolist faces the entire market demand curve (downward-sloping).'
       }
     },
     {
-      id: 'micromon1-strategy',
+      id: 'micromn1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Natural Monopoly & Regulation
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Monopoly.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+A **natural monopoly** exists when one firm can serve the entire market at lower cost than multiple firms — ATC is still declining at market demand.
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Microeconomics for higher scores.
+### Regulatory Options
+
+| Approach | Price Set At | Result |
+|----------|-------------|--------|
+| **Unregulated** | MR = MC, charge P on D | Max profit, DWL |
+| **Fair-return (P = ATC)** | ATC | Zero profit, some DWL remains |
+| **Socially optimal (P = MC)** | MC | Allocatively efficient, but **firm makes a loss** (P < ATC) |
+
+> ⚠️ **AP Trap:** Setting P = MC for a natural monopoly eliminates deadweight loss BUT requires a government **subsidy** because the firm operates at a loss (MC < ATC when ATC is declining).
+
+Most regulated monopolies use **fair-return pricing** (P = ATC) as a compromise.
       `
     },
     {
-      id: 'micromon1-applied',
+      id: 'micromn1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Monopoly on a free-response question. The best approach is:',
+            question: 'A natural monopoly regulated at P = MC will:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Earn positive economic profit',
+              'Earn zero economic profit',
+              'Incur an economic loss requiring a subsidy',
+              'Produce the monopoly profit-maximizing quantity'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 2,
+            explanation: 'A natural monopoly has declining ATC. At P = MC, price is below ATC (since MC is below ATC when ATC is declining), so the firm incurs a loss and needs a subsidy to stay in business.'
           },
           {
-            question: 'When studying Monopoly, which strategy is most effective?',
+            question: 'A profit-maximizing monopolist produces where MR = MC and finds that P = $15, ATC = $12, and Q = 100. The monopolist\'s economic profit is:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '$300',
+              '$1,500',
+              '$1,200',
+              '$12'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 0,
+            explanation: 'Profit = (P − ATC) × Q = ($15 − $12) × 100 = $300.'
           }
         ]
       }

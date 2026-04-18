@@ -2,26 +2,65 @@ export const csaWritingClassesPart1Data = {
   topicSlug: 'csa-writing-classes',
   sections: [
     {
-      id: 'csawriti1-intro',
+      id: 'csawc1-intro',
       type: 'text' as const,
       content: `
-# 💻 Writing Classes
+# ✍️ Writing Classes
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Instance Variables, Constructors, and Methods**
 
-Writing Classes is a fundamental topic in AP Computer Science A. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Anatomy of a Java Class
+
+\`\`\`java
+public class Student {
+    // Instance variables (fields)
+    private String name;
+    private int grade;
+    private double gpa;
+
+    // Constructor
+    public Student(String name, int grade, double gpa) {
+        this.name = name;
+        this.grade = grade;
+        this.gpa = gpa;
+    }
+
+    // Accessor (getter) method
+    public String getName() {
+        return name;
+    }
+
+    // Mutator (setter) method
+    public void setGrade(int newGrade) {
+        grade = newGrade;
+    }
+
+    // toString method
+    public String toString() {
+        return name + " (Grade " + grade + ", GPA: " + gpa + ")";
+    }
+}
+\`\`\`
+
+> 🔑 **Encapsulation:** Instance variables should be \`private\`. Access them through \`public\` methods (getters/setters). This protects data from invalid modifications.
+
+---
+
+## Key Concepts
 
 | Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Writing Classes |
-| **Key concept 2** | A critical component of understanding Writing Classes |
-| **Key concept 3** | An essential element that connects Writing Classes to broader themes |
+|---------|-----------|
+| **Instance variable** | Data stored in each object; declared with \`private\` |
+| **Constructor** | Special method that initializes an object; same name as class |
+| **Accessor (getter)** | Returns value of a private field; no parameters |
+| **Mutator (setter)** | Changes value of a private field; void return type |
+| **this** | Refers to the current object; resolves name ambiguity |
       `
     },
     {
-      id: 'csawriti1-quiz1',
+      id: 'csawc1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +68,166 @@ Writing Classes is a fundamental topic in AP Computer Science A. This part intro
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Writing Classes?',
+            question: 'Why should instance variables be declared private?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Writing Classes',
-              'A mathematical formula',
-              'A literary technique'
+              'Private variables run faster than public ones',
+              'To enforce encapsulation and prevent direct access from outside the class',
+              'Java requires all variables to be private',
+              'Private variables use less memory'
             ],
             correctAnswer: 1,
-            explanation: 'Writing Classes focuses on understanding key principles and patterns within AP Computer Science A.'
+            explanation: 'Encapsulation (data hiding) is a core OOP principle. Making fields private forces users to go through methods, which can validate input and maintain object integrity.'
           },
           {
-            question: 'Why is Writing Classes important in AP Computer Science A?',
+            question: 'What is the purpose of the "this" keyword in a constructor?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'It creates a new object',
+              'It calls another constructor',
+              'It distinguishes the instance variable from the parameter with the same name',
+              'It makes the variable public'
             ],
-            correctAnswer: 1,
-            explanation: 'Writing Classes is a key topic in AP Computer Science A that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'When a parameter and instance variable have the same name, "this.name" refers to the instance variable and "name" refers to the parameter. This resolves the ambiguity.'
           }
         ]
       }
     },
     {
-      id: 'csawriti1-content',
+      id: 'csawc1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Constructor Details
 
-### Key concept 1
-The foundational principle underlying Writing Classes. Understanding this concept is essential for mastering Writing Classes in AP Computer Science A.
+\`\`\`java
+// No-argument (default) constructor
+public Student() {
+    name = "Unknown";
+    grade = 9;
+    gpa = 0.0;
+}
 
-### Key concept 2
-A critical component of understanding Writing Classes. This builds on the previous concept and connects to broader themes in the course.
+// Parameterized constructor
+public Student(String name, int grade, double gpa) {
+    this.name = name;
+    this.grade = grade;
+    this.gpa = gpa;
+}
+\`\`\`
 
-### Key concept 3
-An essential element that connects Writing Classes to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Constructor Rules
+- Same name as the class
+- **No return type** (not even void)
+- Called automatically when \`new\` is used
+- A class can have multiple constructors (**overloading**)
+- If you write NO constructors, Java provides a default no-arg constructor
+- If you write ANY constructor, Java does NOT provide the default
+
+## The toString() Method
+- Automatically called when an object is printed or concatenated with a String
+- Should return a meaningful String representation of the object
+
+\`\`\`java
+Student s = new Student("Alex", 11, 3.8);
+System.out.println(s);  // Calls s.toString() automatically
+// Output: Alex (Grade 11, GPA: 3.8)
+\`\`\`
       `
     },
     {
-      id: 'csawriti1-input',
+      id: 'csawc1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Writing Classes?
+1) A method that returns the value of a private instance variable is called an _______ (or getter).
 
-2) What concept describes a critical component of understanding Writing Classes?
+2) A method that modifies a private instance variable is called a _______ (or setter).
 
-3) Name the term for an essential element that connects Writing Classes to broader themes.
-
-Use the exact term from this part.
+3) The keyword _______ refers to the current object within a class.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Writing Classes), Key concept 2 (A critical component of understanding Writing Classes), and Key concept 3 (An essential element that connects Writing Classes to broader themes).'
+        correctAnswers: ['accessor', 'mutator', 'this'],
+        hint1: 'It accesses the data for you.',
+        hint2: 'It mutates (changes) the data.',
+        hint3: 'Used to distinguish instance variables from parameters.',
+        explanation: 'Accessor = getter. Mutator = setter. this = current object reference.'
       }
     },
     {
-      id: 'csawriti1-dropdown',
+      id: 'csawc1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Method** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Writing Classes is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'public String getName() { return name; } is a(n) ___',
+            options: ['Accessor (getter) method', 'Mutator (setter) method', 'Constructor', 'Static method']
           },
           {
-            label: 'A critical component of understanding Writing Classes describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A constructor has ___ return type',
+            options: ['No return type (not even void)', 'void', 'The class type', 'int']
           },
           {
-            label: 'An essential element that connects Writing Classes to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'If a class has no constructors written, Java provides ___',
+            options: ['A default no-argument constructor', 'A parameterized constructor', 'Nothing — the class cannot be instantiated', 'A static factory method']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Writing Classes. Key concept 2 — A critical component of understanding Writing Classes. Key concept 3 — An essential element that connects Writing Classes to broader themes.'
+        correctAnswers: ['Accessor (getter) method', 'No return type (not even void)', 'A default no-argument constructor'],
+        hint1: 'Returns data without modifying anything.',
+        hint2: 'Constructors are special — they have no return type at all.',
+        hint3: 'Java auto-generates one only if you write none.',
+        explanation: 'getName() = accessor. Constructors have no return type. Java provides default constructor only if none are written.'
       }
     },
     {
-      id: 'csawriti1-strategy',
+      id: 'csawc1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Writing Classes
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Writing Classes.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Computer Science A for higher scores.
+- **Encapsulation** is tested in every FRQ — always make instance variables private
+- Know the difference between accessor and mutator methods
+- Constructor questions often test: what happens if you write a parameterized constructor but no no-arg constructor? (Answer: \`new ClassName()\` will NOT compile)
+- toString() is automatically called by \`System.out.println()\` — know this for tracing output
+- The \`this\` keyword resolves parameter/field name conflicts
+- Practice writing complete classes from scratch — FRQ 2 is always a class design question
       `
     },
     {
-      id: 'csawriti1-applied',
+      id: 'csawc1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Writing Classes on a free-response question. The best approach is:',
+            question: 'A class has only this constructor: public Dog(String name) { this.name = name; }\nWhich statement will cause a compile error?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Dog d = new Dog("Rex");',
+              'Dog d = new Dog();',
+              'Dog d = new Dog("Buddy");',
+              'Dog d = new Dog("Max");'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Since a parameterized constructor exists, Java does NOT provide a default no-arg constructor. new Dog() has no matching constructor, so it fails to compile.'
           },
           {
-            question: 'When studying Writing Classes, which strategy is most effective?',
+            question: 'What is printed?\npublic class Point {\n    private int x, y;\n    public Point(int x, int y) { this.x = x; this.y = y; }\n    public String toString() { return "(" + x + "," + y + ")"; }\n}\nPoint p = new Point(3, 7);\nSystem.out.println("Location: " + p);',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Location: (3,7)',
+              'Location: Point@abc123',
+              'Compile error',
+              'Location: null'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 0,
+            explanation: 'String concatenation with an object calls toString() automatically. The toString() method returns "(3,7)", so the output is "Location: (3,7)".'
           }
         ]
       }
     }
   ]
-}
+};

@@ -2,26 +2,53 @@ export const csaExpressionsOperatorsPart1Data = {
   topicSlug: 'csa-expressions-operators',
   sections: [
     {
-      id: 'csaexpre1-intro',
+      id: 'csaeo1-intro',
       type: 'text' as const,
       content: `
-# 💻 Expressions & Operators
+# ➗ Expressions & Operators
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Arithmetic, Assignment, and the Modulus Operator**
 
-Expressions & Operators is a fundamental topic in AP Computer Science A. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Arithmetic Operators
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Expressions & Operators |
-| **Key concept 2** | A critical component of understanding Expressions & Operators |
-| **Key concept 3** | An essential element that connects Expressions & Operators to broader themes |
+| Operator | Operation | Example | Result |
+|----------|----------|---------|--------|
+| \`+\` | Addition | \`5 + 3\` | \`8\` |
+| \`-\` | Subtraction | \`10 - 4\` | \`6\` |
+| \`*\` | Multiplication | \`6 * 7\` | \`42\` |
+| \`/\` | Division | \`7 / 2\` | \`3\` (int) or \`3.5\` (double) |
+| \`%\` | Modulus (remainder) | \`7 % 3\` | \`1\` |
+
+> 🔑 **Modulus (%)** returns the remainder after division. It is essential for checking even/odd, extracting digits, and cycling through values.
+
+---
+
+## Modulus Use Cases
+
+| Expression | Result | Use Case |
+|-----------|--------|----------|
+| \`n % 2 == 0\` | true if n is even | Even/odd check |
+| \`n % 10\` | Last digit of n | Extracting ones digit |
+| \`n / 10\` | Removes last digit | Extracting tens digit (int division) |
+| \`n % 3 == 0\` | true if n divisible by 3 | Divisibility check |
+
+## Compound Assignment Operators
+
+| Operator | Equivalent To | Example |
+|----------|-------------|---------|
+| \`+=\` | \`x = x + n\` | \`x += 5;\` |
+| \`-=\` | \`x = x - n\` | \`x -= 3;\` |
+| \`*=\` | \`x = x * n\` | \`x *= 2;\` |
+| \`/=\` | \`x = x / n\` | \`x /= 4;\` |
+| \`%=\` | \`x = x % n\` | \`x %= 3;\` |
+| \`++\` | \`x = x + 1\` | \`x++;\` |
+| \`--\` | \`x = x - 1\` | \`x--;\` |
       `
     },
     {
-      id: 'csaexpre1-quiz1',
+      id: 'csaeo1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +56,160 @@ Expressions & Operators is a fundamental topic in AP Computer Science A. This pa
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Expressions & Operators?',
+            question: 'What is the value of 17 % 5?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Expressions & Operators',
-              'A mathematical formula',
-              'A literary technique'
+              '3',
+              '2',
+              '3.4',
+              '5'
             ],
             correctAnswer: 1,
-            explanation: 'Expressions & Operators focuses on understanding key principles and patterns within AP Computer Science A.'
+            explanation: '17 / 5 = 3 remainder 2. The modulus operator returns the remainder, so 17 % 5 = 2.'
           },
           {
-            question: 'Why is Expressions & Operators important in AP Computer Science A?',
+            question: 'After executing: int x = 10; x %= 3; what is x?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              '3',
+              '1',
+              '10',
+              '0'
             ],
             correctAnswer: 1,
-            explanation: 'Expressions & Operators is a key topic in AP Computer Science A that connects to multiple course themes.'
+            explanation: 'x %= 3 is equivalent to x = x % 3 = 10 % 3 = 1. The remainder when dividing 10 by 3 is 1.'
           }
         ]
       }
     },
     {
-      id: 'csaexpre1-content',
+      id: 'csaeo1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Order of Operations (Precedence)
 
-### Key concept 1
-The foundational principle underlying Expressions & Operators. Understanding this concept is essential for mastering Expressions & Operators in AP Computer Science A.
+| Priority | Operators | Description |
+|----------|----------|-----------|
+| 1 (highest) | \`()\` | Parentheses |
+| 2 | \`* / %\` | Multiplication, division, modulus |
+| 3 | \`+ -\` | Addition, subtraction |
+| 4 (lowest) | \`= += -=\` etc. | Assignment |
 
-### Key concept 2
-A critical component of understanding Expressions & Operators. This builds on the previous concept and connects to broader themes in the course.
+### Example Traces
 
-### Key concept 3
-An essential element that connects Expressions & Operators to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+\`\`\`java
+int result = 2 + 3 * 4;     // 2 + 12 = 14 (not 20)
+int result2 = (2 + 3) * 4;  // 5 * 4 = 20
+int result3 = 10 - 4 / 2;   // 10 - 2 = 8 (not 3)
+int result4 = 15 % 4 + 2;   // 3 + 2 = 5
+\`\`\`
+
+## String Concatenation with +
+
+\`\`\`java
+String name = "AP";
+int score = 5;
+System.out.println(name + " Score: " + score);
+// Output: AP Score: 5
+
+// Watch for this trick:
+System.out.println(1 + 2 + " cats");   // "3 cats" (1+2 computed first)
+System.out.println("cats " + 1 + 2);   // "cats 12" (string concat left to right)
+\`\`\`
       `
     },
     {
-      id: 'csaexpre1-input',
+      id: 'csaeo1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Expressions & Operators?
+1) The expression 23 % 5 evaluates to _______.
 
-2) What concept describes a critical component of understanding Expressions & Operators?
+2) In Java, multiplication and division have _______ precedence than addition and subtraction.
 
-3) Name the term for an essential element that connects Expressions & Operators to broader themes.
-
-Use the exact term from this part.
+3) The expression "Score: " + 3 + 4 evaluates to the string "_______".
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Expressions & Operators), Key concept 2 (A critical component of understanding Expressions & Operators), and Key concept 3 (An essential element that connects Expressions & Operators to broader themes).'
+        correctAnswers: ['3', 'higher', 'Score: 34'],
+        hint1: '23 / 5 = 4 remainder ?',
+        hint2: 'They are evaluated first, like in standard math.',
+        hint3: 'Once a String is involved, + concatenates left to right.',
+        explanation: '23 % 5 = 3. * / % have higher precedence. "Score: " + 3 + 4 = "Score: 3" + 4 = "Score: 34".'
       }
     },
     {
-      id: 'csaexpre1-dropdown',
+      id: 'csaeo1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Evaluate the Expression** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Expressions & Operators is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'The expression 2 + 3 * 4 evaluates to ___',
+            options: ['14', '20', '24', '12']
           },
           {
-            label: 'A critical component of understanding Expressions & Operators describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'To check if an integer n is even, use the condition ___',
+            options: ['n % 2 == 0', 'n / 2 == 0', 'n * 2 == 0', 'n + 2 == 0']
           },
           {
-            label: 'An essential element that connects Expressions & Operators to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'After int x = 5; x++; the value of x is ___',
+            options: ['6', '5', '4', '10']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Expressions & Operators. Key concept 2 — A critical component of understanding Expressions & Operators. Key concept 3 — An essential element that connects Expressions & Operators to broader themes.'
+        correctAnswers: ['14', 'n % 2 == 0', '6'],
+        hint1: 'Multiplication before addition.',
+        hint2: 'Even numbers have 0 remainder when divided by 2.',
+        hint3: '++ increments by 1.',
+        explanation: '3*4=12, then +2=14. n%2==0 checks even. x++ changes 5 to 6.'
       }
     },
     {
-      id: 'csaexpre1-strategy',
+      id: 'csaeo1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Expressions & Operators
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Expressions & Operators.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Computer Science A for higher scores.
+- **Modulus (%)** appears on almost every AP exam — know how to extract digits and check divisibility
+- Watch for **operator precedence** tricks — always evaluate * / % before + -
+- **String concatenation** with + is a classic trap: \`1 + 2 + " cats"\` vs \`"cats " + 1 + 2\`
+- Trace code step by step — do not try to evaluate complex expressions in your head all at once
+- Remember: integer division and modulus work together. \`123 / 10 = 12\` and \`123 % 10 = 3\`
       `
     },
     {
-      id: 'csaexpre1-applied',
+      id: 'csaeo1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Expressions & Operators on a free-response question. The best approach is:',
+            question: 'What does the following print?\nint n = 1234;\nSystem.out.println(n % 10);\nSystem.out.println(n / 10 % 10);',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '4 then 3',
+              '1 then 2',
+              '4 then 2',
+              '34 then 12'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'n % 10 = 1234 % 10 = 4 (ones digit). n / 10 = 123 (int division), then 123 % 10 = 3 (tens digit). This pattern extracts individual digits.'
           },
           {
-            question: 'When studying Expressions & Operators, which strategy is most effective?',
+            question: 'What is printed?\nSystem.out.println("Result: " + 5 + 3);\nSystem.out.println("Result: " + (5 + 3));',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Result: 53 then Result: 53',
+              'Result: 8 then Result: 8',
+              'Result: 53 then Result: 8',
+              'Result: 8 then Result: 53'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 2,
+            explanation: 'Line 1: "Result: " + 5 = "Result: 5", then + 3 = "Result: 53" (string concatenation). Line 2: (5 + 3) = 8 first (parentheses), then "Result: " + 8 = "Result: 8".'
           }
         ]
       }
     }
   ]
-}
+};

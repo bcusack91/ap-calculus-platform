@@ -1,175 +1,144 @@
 export const aasGreatMigrationHarlemPart1Data = {
-  topicSlug: 'aas-great-migration-harlem',
+  topicSlug: "aas-great-migration-harlem",
   sections: [
     {
-      id: 'aasgreat1-intro',
+      id: "aasgreat1-intro",
       type: 'text' as const,
-      content: `
-# ✊🏿 The Great Migration & Harlem Renaissance
-
-**Part 1 of 7 — Core Concepts**
-
-The Great Migration & Harlem Renaissance is a fundamental topic in AP African American Studies. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
-
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying The Great Migration & Harlem Renaissance |
-| **Key concept 2** | A critical component of understanding The Great Migration & Harlem Renaissance |
-| **Key concept 3** | An essential element that connects The Great Migration & Harlem Renaissance to broader themes |
-      `
+      content: "# 🚆 Great Migration and Harlem Renaissance\n\n**Part 1 of 7 - Historical Foundations, Evidence, and AP AAS Analysis**\n\n---\n\n## Core Focus: Great Migration and Harlem\n\nThe Great Migration transformed U.S. social geography and fueled new artistic and political movements, including the Harlem Renaissance.\n\n| Core Concept | What It Refers To | Why It Matters |\n|---|---|---|\n| **Migration** | Relocation from rural South to urban North/Midwest/West | Reshaped demographics, politics, and labor markets |\n| **Urban Transformation** | New neighborhood institutions and political networks | Created new forms of collective action |\n| **Cultural Renaissance** | Creative explosion in literature, music, and thought | Redefined Black modernity and public expression |\n\n> AP African American Studies emphasizes evidence-based interpretation across historical periods and disciplines."
     },
     {
-      id: 'aasgreat1-quiz1',
+      id: "aasgreat1-quiz1",
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: "**Concept Check**",
       exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of The Great Migration & Harlem Renaissance?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within The Great Migration & Harlem Renaissance',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'The Great Migration & Harlem Renaissance focuses on understanding key principles and patterns within AP African American Studies.'
-          },
-          {
-            question: 'Why is The Great Migration & Harlem Renaissance important in AP African American Studies?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'The Great Migration & Harlem Renaissance is a key topic in AP African American Studies that connects to multiple course themes.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "Which statement best reflects the significance of Migration?",
+                  "options": [
+                        "Migration had little effect on national politics.",
+                        "Migration changed electoral dynamics, labor structures, and urban political power.",
+                        "Harlem Renaissance was only entertainment with no political meaning.",
+                        "Urban transformation ended racial inequality."
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Migration is central because it helps explain continuity, change, and lived experience in context."
+            },
+            {
+                  "question": "Which approach best matches AP AAS historical reasoning?",
+                  "options": [
+                        "Treat events as isolated facts",
+                        "Connect evidence to causation, context, and consequences over time",
+                        "Rely only on memorized dates",
+                        "Avoid discussing competing interpretations"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "AP AAS rewards analysis that links evidence to historical processes, structures, and outcomes."
+            }
+      ]
+}
     },
     {
-      id: 'aasgreat1-content',
+      id: "aasgreat1-content",
       type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
-
-### Key concept 1
-The foundational principle underlying The Great Migration & Harlem Renaissance. Understanding this concept is essential for mastering The Great Migration & Harlem Renaissance in AP African American Studies.
-
-### Key concept 2
-A critical component of understanding The Great Migration & Harlem Renaissance. This builds on the previous concept and connects to broader themes in the course.
-
-### Key concept 3
-An essential element that connects The Great Migration & Harlem Renaissance to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+      content: "## Interpreting Great Migration and Harlem with Evidence\n\n### Historical Analysis Workflow\n1. Identify the central process or conflict in the period\n2. Locate key actors, institutions, and structural conditions\n3. Explain short- and long-term consequences\n\n| Strong Evidence Move | Example Frame |\n|---|---|\n| Contextualization | \"Within the context of urban transformation, this development...\" |\n| Causation | \"Because migration intensified, communities responded by...\" |\n| Continuity/change | \"Although conditions shifted, cultural renaissance remained...\" |\n\n### Common Pitfalls\n- Oversimplifying complex historical actors or motives\n- Ignoring regional variation and class/gender differences\n- Treating resistance as singular instead of multifaceted\n- Using modern assumptions without historical context\n\nStrong analysis connects migration conditions to creative production and institutional change."
     },
     {
-      id: 'aasgreat1-input',
+      id: "aasgreat1-input",
       type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the foundational principle underlying The Great Migration & Harlem Renaissance?
-
-2) What concept describes a critical component of understanding The Great Migration & Harlem Renaissance?
-
-3) Name the term for an essential element that connects The Great Migration & Harlem Renaissance to broader themes.
-
-Use the exact term from this part.
-      `,
+      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying The Great Migration & Harlem Renaissance), Key concept 2 (A critical component of understanding The Great Migration & Harlem Renaissance), and Key concept 3 (An essential element that connects The Great Migration & Harlem Renaissance to broader themes).'
-      }
+      "boxes": 3,
+      "correctAnswers": [
+            "migration",
+            "urban transformation",
+            "cultural renaissance"
+      ],
+      "hint1": "Concept 1: Migration",
+      "hint2": "Concept 2: Urban Transformation",
+      "hint3": "Concept 3: Cultural Renaissance",
+      "explanation": "Migration, Urban Transformation, and Cultural Renaissance are essential vocabulary in this topic."
+}
     },
     {
-      id: 'aasgreat1-dropdown',
+      id: "aasgreat1-dropdown",
       type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
+      content: "**Apply the Concept**",
       exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying The Great Migration & Harlem Renaissance is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding The Great Migration & Harlem Renaissance describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects The Great Migration & Harlem Renaissance to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying The Great Migration & Harlem Renaissance. Key concept 2 — A critical component of understanding The Great Migration & Harlem Renaissance. Key concept 3 — An essential element that connects The Great Migration & Harlem Renaissance to broader themes.'
-      }
+      "dropdowns": [
+            {
+                  "label": "Migration is best understood as ___",
+                  "options": [
+                        "Large-scale population movement reshaping social and political life",
+                        "A single rail policy",
+                        "A local weather event",
+                        "A census typo"
+                  ]
+            },
+            {
+                  "label": "A strong AP AAS claim should be ___",
+                  "options": [
+                        "Specific, contextualized, and evidence-based",
+                        "A broad slogan without support",
+                        "A list of names only",
+                        "A moral statement without history"
+                  ]
+            },
+            {
+                  "label": "The strongest historical analysis usually includes ___",
+                  "options": [
+                        "Cause, context, and consequence",
+                        "Dates only",
+                        "Summary only",
+                        "Personal opinion only"
+                  ]
+            }
+      ],
+      "correctAnswers": [
+            "Large-scale population movement reshaping social and political life",
+            "Specific, contextualized, and evidence-based",
+            "Cause, context, and consequence"
+      ],
+      "hint1": "Focus on historical function of migration.",
+      "hint2": "Claims must be defensible and supported.",
+      "hint3": "Historical reasoning links these elements.",
+      "explanation": "High-quality AP AAS responses combine precise claims with contextual evidence and causal reasoning."
+}
     },
     {
-      id: 'aasgreat1-strategy',
+      id: "aasgreat1-strategy",
       type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of The Great Migration & Harlem Renaissance.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP African American Studies for higher scores.
-      `
+      content: "## AP Exam Strategy: Great Migration and Harlem\n\n- Define migration in historical context before analyzing effects\n- Distinguish immediate outcomes from long-term structural consequences\n- Integrate social, political, cultural, and economic dimensions\n- Use specific evidence and avoid generalized claims\n- Acknowledge complexity across region, class, and gender where relevant\n- Pair demographic evidence with cultural and political consequences."
     },
     {
-      id: 'aasgreat1-applied',
+      id: "aasgreat1-applied",
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: "**AP-Style Application**",
       exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain The Great Migration & Harlem Renaissance on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying The Great Migration & Harlem Renaissance, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "A student mentions urban transformation but gives no context. What is the best revision?",
+                  "options": [
+                        "Add only one extra date",
+                        "Explain how urban transformation shaped policy, lived experience, and community response",
+                        "Replace with a modern analogy only",
+                        "Remove the concept entirely"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Concepts gain analytical value when tied to mechanisms, impacts, and historical context."
+            },
+            {
+                  "question": "Which thesis move is strongest in AP AAS writing?",
+                  "options": [
+                        "Make absolute claims with no qualification",
+                        "Advance a specific claim about how cultural renaissance changed and persisted over time",
+                        "List events in chronological order only",
+                        "Use one term repeatedly without evidence"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "The best theses are specific, historically grounded, and attentive to continuity and change."
+            }
+      ]
+}
     }
   ]
-}
+};

@@ -1,175 +1,144 @@
 export const aasTransatlanticSlaveTradePart1Data = {
-  topicSlug: 'aas-transatlantic-slave-trade',
+  topicSlug: "aas-transatlantic-slave-trade",
   sections: [
     {
-      id: 'aastrans1-intro',
+      id: "aastrans1-intro",
       type: 'text' as const,
-      content: `
-# ✊🏿 The Transatlantic Slave Trade
-
-**Part 1 of 7 — Core Concepts**
-
-The Transatlantic Slave Trade is a fundamental topic in AP African American Studies. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
-
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying The Transatlantic Slave Trade |
-| **Key concept 2** | A critical component of understanding The Transatlantic Slave Trade |
-| **Key concept 3** | An essential element that connects The Transatlantic Slave Trade to broader themes |
-      `
+      content: "# ⛓️ The Transatlantic Slave Trade\n\n**Part 1 of 7 - Historical Foundations, Evidence, and AP AAS Analysis**\n\n---\n\n## Core Focus: Transatlantic Slave Trade\n\nThe transatlantic slave trade was a large-scale system of forced transport, labor extraction, and racialized legal control.\n\n| Core Concept | What It Refers To | Why It Matters |\n|---|---|---|\n| **Middle Passage** | Ocean crossing under extreme violence and deprivation | Central site of mortality, trauma, and resistance |\n| **Chattel Slavery** | Legal system treating enslaved people as property | Institutionalized racialized exploitation |\n| **Human Commodification** | Reduction of people to saleable labor units | Explains economic logic and moral catastrophe of slavery |\n\n> AP African American Studies emphasizes evidence-based interpretation across historical periods and disciplines."
     },
     {
-      id: 'aastrans1-quiz1',
+      id: "aastrans1-quiz1",
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: "**Concept Check**",
       exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of The Transatlantic Slave Trade?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within The Transatlantic Slave Trade',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'The Transatlantic Slave Trade focuses on understanding key principles and patterns within AP African American Studies.'
-          },
-          {
-            question: 'Why is The Transatlantic Slave Trade important in AP African American Studies?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'The Transatlantic Slave Trade is a key topic in AP African American Studies that connects to multiple course themes.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "Which statement best reflects the significance of Middle Passage?",
+                  "options": [
+                        "The Middle Passage was usually comfortable transport.",
+                        "The Middle Passage involved extreme violence, confinement, disease, and mortality.",
+                        "Chattel slavery was temporary indenture with equal rights.",
+                        "Commodification had no role in plantation economies."
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Middle Passage is central because it helps explain continuity, change, and lived experience in context."
+            },
+            {
+                  "question": "Which approach best matches AP AAS historical reasoning?",
+                  "options": [
+                        "Treat events as isolated facts",
+                        "Connect evidence to causation, context, and consequences over time",
+                        "Rely only on memorized dates",
+                        "Avoid discussing competing interpretations"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "AP AAS rewards analysis that links evidence to historical processes, structures, and outcomes."
+            }
+      ]
+}
     },
     {
-      id: 'aastrans1-content',
+      id: "aastrans1-content",
       type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
-
-### Key concept 1
-The foundational principle underlying The Transatlantic Slave Trade. Understanding this concept is essential for mastering The Transatlantic Slave Trade in AP African American Studies.
-
-### Key concept 2
-A critical component of understanding The Transatlantic Slave Trade. This builds on the previous concept and connects to broader themes in the course.
-
-### Key concept 3
-An essential element that connects The Transatlantic Slave Trade to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+      content: "## Interpreting Transatlantic Slave Trade with Evidence\n\n### Historical Analysis Workflow\n1. Identify the central process or conflict in the period\n2. Locate key actors, institutions, and structural conditions\n3. Explain short- and long-term consequences\n\n| Strong Evidence Move | Example Frame |\n|---|---|\n| Contextualization | \"Within the context of chattel slavery, this development...\" |\n| Causation | \"Because middle passage intensified, communities responded by...\" |\n| Continuity/change | \"Although conditions shifted, human commodification remained...\" |\n\n### Common Pitfalls\n- Oversimplifying complex historical actors or motives\n- Ignoring regional variation and class/gender differences\n- Treating resistance as singular instead of multifaceted\n- Using modern assumptions without historical context\n\nStrong analysis connects legal structures and economic incentives to lived human consequences."
     },
     {
-      id: 'aastrans1-input',
+      id: "aastrans1-input",
       type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the foundational principle underlying The Transatlantic Slave Trade?
-
-2) What concept describes a critical component of understanding The Transatlantic Slave Trade?
-
-3) Name the term for an essential element that connects The Transatlantic Slave Trade to broader themes.
-
-Use the exact term from this part.
-      `,
+      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying The Transatlantic Slave Trade), Key concept 2 (A critical component of understanding The Transatlantic Slave Trade), and Key concept 3 (An essential element that connects The Transatlantic Slave Trade to broader themes).'
-      }
+      "boxes": 3,
+      "correctAnswers": [
+            "middle passage",
+            "chattel slavery",
+            "human commodification"
+      ],
+      "hint1": "Concept 1: Middle Passage",
+      "hint2": "Concept 2: Chattel Slavery",
+      "hint3": "Concept 3: Human Commodification",
+      "explanation": "Middle Passage, Chattel Slavery, and Human Commodification are essential vocabulary in this topic."
+}
     },
     {
-      id: 'aastrans1-dropdown',
+      id: "aastrans1-dropdown",
       type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
+      content: "**Apply the Concept**",
       exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying The Transatlantic Slave Trade is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding The Transatlantic Slave Trade describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects The Transatlantic Slave Trade to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying The Transatlantic Slave Trade. Key concept 2 — A critical component of understanding The Transatlantic Slave Trade. Key concept 3 — An essential element that connects The Transatlantic Slave Trade to broader themes.'
-      }
+      "dropdowns": [
+            {
+                  "label": "Middle Passage is best understood as ___",
+                  "options": [
+                        "A system reducing enslaved people to inheritable property status",
+                        "A diplomatic alliance",
+                        "A wage-labor contract",
+                        "A literacy campaign"
+                  ]
+            },
+            {
+                  "label": "A strong AP AAS claim should be ___",
+                  "options": [
+                        "Specific, contextualized, and evidence-based",
+                        "A broad slogan without support",
+                        "A list of names only",
+                        "A moral statement without history"
+                  ]
+            },
+            {
+                  "label": "The strongest historical analysis usually includes ___",
+                  "options": [
+                        "Cause, context, and consequence",
+                        "Dates only",
+                        "Summary only",
+                        "Personal opinion only"
+                  ]
+            }
+      ],
+      "correctAnswers": [
+            "A system reducing enslaved people to inheritable property status",
+            "Specific, contextualized, and evidence-based",
+            "Cause, context, and consequence"
+      ],
+      "hint1": "Focus on historical function of middle passage.",
+      "hint2": "Claims must be defensible and supported.",
+      "hint3": "Historical reasoning links these elements.",
+      "explanation": "High-quality AP AAS responses combine precise claims with contextual evidence and causal reasoning."
+}
     },
     {
-      id: 'aastrans1-strategy',
+      id: "aastrans1-strategy",
       type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of The Transatlantic Slave Trade.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP African American Studies for higher scores.
-      `
+      content: "## AP Exam Strategy: Transatlantic Slave Trade\n\n- Define middle passage in historical context before analyzing effects\n- Distinguish immediate outcomes from long-term structural consequences\n- Integrate social, political, cultural, and economic dimensions\n- Use specific evidence and avoid generalized claims\n- Acknowledge complexity across region, class, and gender where relevant\n- Use quantitative scale and personal narratives together for full historical interpretation."
     },
     {
-      id: 'aastrans1-applied',
+      id: "aastrans1-applied",
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: "**AP-Style Application**",
       exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain The Transatlantic Slave Trade on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying The Transatlantic Slave Trade, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "A student mentions chattel slavery but gives no context. What is the best revision?",
+                  "options": [
+                        "Add only one extra date",
+                        "Explain how chattel slavery shaped policy, lived experience, and community response",
+                        "Replace with a modern analogy only",
+                        "Remove the concept entirely"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Concepts gain analytical value when tied to mechanisms, impacts, and historical context."
+            },
+            {
+                  "question": "Which thesis move is strongest in AP AAS writing?",
+                  "options": [
+                        "Make absolute claims with no qualification",
+                        "Advance a specific claim about how human commodification changed and persisted over time",
+                        "List events in chronological order only",
+                        "Use one term repeatedly without evidence"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "The best theses are specific, historically grounded, and attentive to continuity and change."
+            }
+      ]
+}
     }
   ]
-}
+};

@@ -5,171 +5,141 @@ export const whIndustrialRevolutionPart1Data = {
       id: 'whindust1-intro',
       type: 'text' as const,
       content: `
-# 🌏 The Industrial Revolution
+# 🏭 The Industrial Revolution
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Origins, Technology & Social Transformation**
 
-The Industrial Revolution is a fundamental topic in AP World History. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Why Britain First? |
+| Key Inventions & Industries |
+| Social Effects of Industrialization |
+| Spread Beyond Britain |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying The Industrial Revolution |
-| **Key concept 2** | A critical component of understanding The Industrial Revolution |
-| **Key concept 3** | An essential element that connects The Industrial Revolution to broader themes |
+> 🔑 **Key Concept:** The AP exam wants you to explain **why** industrialization began in Britain specifically, and how it transformed **social structures, labor patterns, and the global economy**. Don't just list inventions — focus on causes and consequences.
+      `
+    },
+    {
+      id: 'whindust1-britain',
+      type: 'text' as const,
+      content: `
+## 📖 Why Did the Industrial Revolution Begin in Britain?
+
+Several unique factors converged in late 18th-century Britain:
+
+| Factor | Explanation |
+|---|---|
+| **Natural resources** | Abundant coal and iron ore; navigable rivers for transport |
+| **Agricultural revolution** | Enclosure movement and crop rotation increased food supply → population growth → surplus labor |
+| **Capital** | Profits from colonial trade and the Atlantic slave trade provided investment funds |
+| **Stable government** | Constitutional monarchy protected property rights and encouraged innovation |
+| **Geographic advantages** | Island nation with extensive coastline for trade; no internal tariff barriers |
+| **Culture of innovation** | Royal Society promoted science; patent laws rewarded inventors |
+
+### The Agricultural Revolution (Precondition)
+- **Enclosure Acts** — common lands were fenced off by wealthy landowners for commercial farming
+- **Impact:** More efficient agriculture BUT displaced small farmers, who migrated to cities seeking factory work
+- **New techniques:** Jethro Tull's seed drill, crop rotation (turnips/clover), selective animal breeding
+
+> 🔑 **AP Connection:** The AP exam emphasizes **causation** — the agricultural revolution created the surplus labor AND surplus food needed to sustain an industrial workforce. Enclosure was both productive and disruptive.
       `
     },
     {
       id: 'whindust1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: `**Concept Check** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of The Industrial Revolution?',
+            question: 'Which factor is MOST important in explaining why the Industrial Revolution began in Britain rather than in China or the Ottoman Empire?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within The Industrial Revolution',
-              'A mathematical formula',
-              'A literary technique'
+              'Britain had a larger population than any other country in the world by 1750',
+              'A combination of abundant coal/iron, capital from colonial trade, agricultural surplus, and a government that protected property rights and innovation',
+              'Britain was the only country in the world with access to navigable rivers for transportation',
+              'British workers were inherently more skilled and educated than workers elsewhere in the world'
             ],
             correctAnswer: 1,
-            explanation: 'The Industrial Revolution focuses on understanding key principles and patterns within AP World History.'
+            explanation: 'No single factor explains Britain\'s lead — it was the convergence of natural resources (coal, iron), investment capital (from colonial and slave trade profits), surplus labor (from agricultural enclosure), and institutional support (patent laws, property rights, stable government) that made Britain uniquely positioned for industrialization.'
           },
           {
-            question: 'Why is The Industrial Revolution important in AP World History?',
+            question: 'How did the enclosure movement contribute to industrialization in Britain?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'It provided factory owners with free land to build manufacturing facilities in rural areas',
+              'It displaced small farmers from common lands, creating a migrant labor force for urban factories while increasing agricultural output',
+              'It prevented urbanization by keeping the entire population tied to agricultural work on enclosed lands',
+              'It had no significant connection to industrialization and was purely an agricultural policy'
             ],
             correctAnswer: 1,
-            explanation: 'The Industrial Revolution is a key topic in AP World History that connects to multiple course themes.'
+            explanation: 'Enclosure consolidated common lands into privately owned, commercially farmed plots. This increased agricultural efficiency (more food to feed growing cities) but displaced small farmers and landless laborers, who migrated to cities where they became the factory labor force that powered industrialization.'
           }
         ]
       }
     },
     {
-      id: 'whindust1-content',
+      id: 'whindust1-tech',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## 📖 Key Inventions & Industries
 
-### Key concept 1
-The foundational principle underlying The Industrial Revolution. Understanding this concept is essential for mastering The Industrial Revolution in AP World History.
+### Textile Industry (First to Industrialize)
 
-### Key concept 2
-A critical component of understanding The Industrial Revolution. This builds on the previous concept and connects to broader themes in the course.
+| Invention | Inventor | Year | Impact |
+|---|---|---|---|
+| **Spinning Jenny** | James Hargreaves | 1764 | Multi-spindle spinning frame; increased thread output |
+| **Water Frame** | Richard Arkwright | 1769 | Water-powered spinning machine; moved production to factories |
+| **Power Loom** | Edmund Cartwright | 1785 | Mechanized weaving; completed the factory transition |
+| **Cotton Gin** | Eli Whitney | 1793 | Made cotton processing efficient; **increased demand for enslaved labor** in the American South |
 
-### Key concept 3
-An essential element that connects The Industrial Revolution to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Steam Power
+- **James Watt** improved the steam engine (1769) → freed factories from waterpower locations
+- Applied to **mining** (pumping water), **manufacturing** (powering machines), and **transport** (steam locomotives, steamships)
+- **George Stephenson's Rocket** (1829) — first practical steam locomotive; Liverpool-Manchester Railway (1830)
+
+### Iron & Steel
+- **Henry Bessemer** (1856) — Bessemer process for cheap mass-produced steel
+- Steel transformed construction (bridges, buildings, railways) and warfare
+
+### Social Effects
+- **Urbanization** — Manchester grew from 25,000 (1770) to 300,000+ (1850)
+- **Factory system** — workers performed repetitive tasks on fixed schedules for wages (replacing artisan production)
+- **Child labor** — children as young as 5 worked 12–16 hour days in mines and factories
+- **New social classes** — industrial capitalists (factory owners) and the urban working class (proletariat)
+
+> 🔑 **AP Connection:** The cotton gin is a key example of how technology in one region affected another — it made cotton profitable, which **intensified slavery** in the American South while fueling British textile factories.
       `
     },
     {
-      id: 'whindust1-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the foundational principle underlying The Industrial Revolution?
-
-2) What concept describes a critical component of understanding The Industrial Revolution?
-
-3) Name the term for an essential element that connects The Industrial Revolution to broader themes.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying The Industrial Revolution), Key concept 2 (A critical component of understanding The Industrial Revolution), and Key concept 3 (An essential element that connects The Industrial Revolution to broader themes).'
-      }
-    },
-    {
-      id: 'whindust1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying The Industrial Revolution is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding The Industrial Revolution describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects The Industrial Revolution to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying The Industrial Revolution. Key concept 2 — A critical component of understanding The Industrial Revolution. Key concept 3 — An essential element that connects The Industrial Revolution to broader themes.'
-      }
-    },
-    {
-      id: 'whindust1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of The Industrial Revolution.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whindust1-applied',
+      id: 'whindust1-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: `**Check Your Understanding** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain The Industrial Revolution on a free-response question. The best approach is:',
+            question: 'How did the invention of the cotton gin (1793) paradoxically affect slavery in the American South?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'It eliminated the need for enslaved labor by fully automating cotton production from planting to shipping',
+              'It made cotton processing more efficient, dramatically increasing cotton\'s profitability and therefore increasing demand for enslaved labor to grow more cotton',
+              'It had no effect on slavery because cotton was not a major crop in the American South',
+              'It directly caused the abolition of slavery by making manual labor economically unnecessary'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The cotton gin removed seeds from cotton 50x faster than by hand, making short-staple cotton enormously profitable. This drove massive expansion of cotton plantations across the Deep South and dramatically increased demand for enslaved labor — the enslaved population roughly doubled between 1790 and 1830.'
           },
           {
-            question: 'When studying The Industrial Revolution, which strategy is most effective?',
+            question: 'What was the most significant social consequence of factory-based industrialization in 19th-century Britain?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'The disappearance of the upper class as factory owners replaced the aristocracy entirely',
+              'Rapid urbanization, the emergence of a new industrial working class, and harsh labor conditions including widespread child labor',
+              'The complete elimination of agriculture as all workers moved to factories within a single generation',
+              'Universal access to education and healthcare provided by factory owners to all workers'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Industrialization triggered massive urbanization (Manchester grew 12x in 80 years), created a new working class living in overcrowded conditions, and relied heavily on child labor. These conditions eventually sparked reform movements, labor unions, and new political ideologies like socialism and Marxism.'
           }
         ]
       }
     }
   ]
-}
+};

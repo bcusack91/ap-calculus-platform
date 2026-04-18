@@ -1,175 +1,75 @@
 export const govBureaucracyPart1Data = {
   topicSlug: 'gov-bureaucracy',
   sections: [
-    {
-      id: 'govburea1-intro',
-      type: 'text' as const,
-      content: `
-# 🏛️ The Bureaucracy
+    {id:'govburea1-intro',type:'text' as const,content:`
+# 🏢 The Federal Bureaucracy
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Structure, Functions & Accountability**
 
-The Bureaucracy is a fundamental topic in AP US Government. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 What Is the Bureaucracy? |
+| Organization & Types of Agencies |
+| Iron Triangles & Issue Networks |
+| Bureaucratic Accountability |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying The Bureaucracy |
-| **Key concept 2** | A critical component of understanding The Bureaucracy |
-| **Key concept 3** | An essential element that connects The Bureaucracy to broader themes |
-      `
-    },
-    {
-      id: 'govburea1-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of The Bureaucracy?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within The Bureaucracy',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'The Bureaucracy focuses on understanding key principles and patterns within AP US Government.'
-          },
-          {
-            question: 'Why is The Bureaucracy important in AP US Government?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'The Bureaucracy is a key topic in AP US Government that connects to multiple course themes.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'govburea1-content',
-      type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
+> 🔑 **Key Concept:** The federal bureaucracy is the **unelected** administrative arm of government that implements policy. The AP exam focuses on how the bureaucracy is organized, how it exercises power through **rule-making**, and how Congress, the president, and the courts try to control it.
+`},
+    {id:'govburea1-structure',type:'text' as const,content:`
+## 📖 What Is the Federal Bureaucracy?
 
-### Key concept 1
-The foundational principle underlying The Bureaucracy. Understanding this concept is essential for mastering The Bureaucracy in AP US Government.
+The bureaucracy consists of all federal agencies, departments, and government corporations that implement and enforce laws passed by Congress. It employs roughly **2.1 million** civilian workers.
 
-### Key concept 2
-A critical component of understanding The Bureaucracy. This builds on the previous concept and connects to broader themes in the course.
+### Types of Bureaucratic Organizations
 
-### Key concept 3
-An essential element that connects The Bureaucracy to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'govburea1-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+| Type | Description | Examples |
+|---|---|---|
+| **Cabinet departments** | 15 major departments headed by secretaries appointed by the president | State, Defense, Treasury, Justice, Education |
+| **Independent agencies** | Agencies outside Cabinet departments, with specific missions | NASA, CIA, EPA |
+| **Independent regulatory commissions** | Regulate specific economic sectors; commissioners serve fixed, staggered terms for independence | FCC, SEC, FTC, FEC |
+| **Government corporations** | Government-owned but operate like businesses; provide services | U.S. Postal Service, Amtrak, FDIC |
 
-1) What term refers to the foundational principle underlying The Bureaucracy?
+### Bureaucratic Power: Rule-Making
+- Congress passes broad legislation → bureaucratic agencies write **regulations** (specific rules) to implement the law
+- Regulations have the **force of law** — they are legally binding
+- Example: Congress passes the Clean Air Act → the **EPA** writes specific regulations on emissions standards, pollution limits, and enforcement procedures
+- This is sometimes called **delegated authority** or **quasi-legislative power**
 
-2) What concept describes a critical component of understanding The Bureaucracy?
+> 🔑 **AP Connection:** The AP exam tests why Congress delegates so much power to the bureaucracy: Congress lacks the technical expertise and time to write highly specific regulations on complex topics (environmental science, financial markets, telecommunications).
+`},
+    {id:'govburea1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
+      {question:'Why are independent regulatory commissions (like the FCC and SEC) structured with fixed, staggered terms for commissioners?',options:['To ensure that all commissioners are from the same political party as the current president','To insulate the commissions from political pressure by preventing any single president from replacing all commissioners at once','To guarantee that commissioners serve for life, similar to federal judges under Article III','To allow Congress to directly appoint and remove commissioners without presidential involvement'],correctAnswer:1,explanation:'Fixed, staggered terms mean that commissioners\' terms overlap presidential administrations. A new president cannot immediately replace all commissioners — providing continuity and insulating regulatory decisions from short-term political pressure. This distinguishes independent regulatory commissions from Cabinet departments, whose heads serve at the president\'s pleasure.'},
+      {question:'What is "rule-making" and why is it a significant power of the federal bureaucracy?',options:['Rule-making is the process by which Congress writes legislation — bureaucratic agencies have no role in this process','Rule-making is the process by which bureaucratic agencies write specific regulations to implement broad congressional legislation — these regulations have the force of law','Rule-making refers to the Supreme Court\'s power to establish procedural rules for federal courts','Rule-making is the president\'s power to issue executive orders that override existing congressional legislation'],correctAnswer:1,explanation:'When Congress passes a law like the Clean Air Act, the text is broad. The EPA then writes detailed regulations (specific emissions limits, testing procedures, penalties) through rule-making. These regulations are legally binding — violating them carries the same consequences as violating the statute itself. This gives unelected bureaucrats significant policy-making power.'}
+    ]}},
+    {id:'govburea1-iron',type:'text' as const,content:`
+## 📖 Iron Triangles & Issue Networks
 
-3) Name the term for an essential element that connects The Bureaucracy to broader themes.
+### Iron Triangles (Subgovernments)
+A mutually beneficial relationship among three entities:
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying The Bureaucracy), Key concept 2 (A critical component of understanding The Bureaucracy), and Key concept 3 (An essential element that connects The Bureaucracy to broader themes).'
-      }
-    },
-    {
-      id: 'govburea1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying The Bureaucracy is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding The Bureaucracy describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects The Bureaucracy to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying The Bureaucracy. Key concept 2 — A critical component of understanding The Bureaucracy. Key concept 3 — An essential element that connects The Bureaucracy to broader themes.'
-      }
-    },
-    {
-      id: 'govburea1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
+| Actor | Role | What They Get |
+|---|---|---|
+| **Congressional committee** | Writes legislation and controls funding | Campaign contributions; expertise/information |
+| **Bureaucratic agency** | Implements policy | Budget increases; political support |
+| **Interest group** | Lobbies and provides information | Favorable regulations; policy influence |
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of The Bureaucracy.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+**Example:** Agriculture policy
+- House Agriculture Committee ↔ USDA ↔ American Farm Bureau Federation
+- Each benefits the other: the committee funds the USDA, the USDA implements farm policies favored by the Farm Bureau, and the Farm Bureau supports committee members' reelection
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP US Government for higher scores.
-      `
-    },
-    {
-      id: 'govburea1-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain The Bureaucracy on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying The Bureaucracy, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
-    }
+### Issue Networks
+- **More fluid and open** than iron triangles
+- Include media, think tanks, academics, multiple interest groups, and multiple congressional committees
+- Less stable relationships — participants change as issues evolve
+- Example: Healthcare policy involves insurance companies, hospitals, doctors' groups, AARP, pharmaceutical companies, HHS, multiple congressional committees, policy think tanks, and media
+
+> 🔑 **AP Connection:** The AP exam distinguishes iron triangles (stable, narrow, closed) from issue networks (fluid, broad, open). Be ready to give specific examples of each.
+`},
+    {id:'govburea1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
+      {question:'Which of the following best describes an "iron triangle" in American politics?',options:['A formal constitutional structure that divides power among the three branches of government equally','A mutually beneficial relationship among a congressional committee, a bureaucratic agency, and an interest group that work together to shape policy in a specific area','A diplomatic alliance between three nations that coordinates foreign policy and military strategy','The three levels of the federal court system: district courts, courts of appeals, and the Supreme Court'],correctAnswer:1,explanation:'Iron triangles are informal, stable alliances among (1) a congressional committee that controls funding, (2) a bureaucratic agency that implements policy, and (3) an interest group that lobbies and provides campaign support. Each actor benefits from the relationship, making these alliances resistant to change and often criticized for prioritizing narrow interests over the public good.'},
+      {question:'How do "issue networks" differ from "iron triangles"?',options:['Issue networks are legally established by Congress, while iron triangles are informal and unconstitutional','Issue networks are more fluid and open, involving many diverse participants (media, think tanks, multiple interest groups), while iron triangles are stable, narrow, three-way relationships','Issue networks only exist at the state level, while iron triangles only operate within the federal government','Issue networks are always more effective at shaping policy than iron triangles because they include more participants'],correctAnswer:1,explanation:'Issue networks are broader and more fluid than iron triangles. They include many actors — multiple interest groups, congressional committees, bureaucratic agencies, media organizations, think tanks, and academics — whose participation may change over time. Complex issues like healthcare or climate policy involve issue networks rather than simple three-way iron triangles.'}
+    ]}}
   ]
-}
+};

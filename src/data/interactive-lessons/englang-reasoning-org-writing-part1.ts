@@ -2,26 +2,49 @@ export const englangReasoningOrgWritingPart1Data = {
   topicSlug: 'englang-reasoning-org-writing',
   sections: [
     {
-      id: 'englangr1-intro',
+      id: 'elrow1-intro',
       type: 'text' as const,
       content: `
-# ✍️ Reasoning & Organization in Writing
+# 🧱 Reasoning and Organization in Writing
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Building a Coherent Line of Reasoning in Your Essays**
 
-Reasoning & Organization in Writing is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## What AP Readers Want
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Reasoning & Organization in Writing |
-| **Key concept 2** | A critical component of understanding Reasoning & Organization in Writing |
-| **Key concept 3** | An essential element that connects Reasoning & Organization in Writing to broader themes |
+High-scoring essays show a clear **line of reasoning**:
+- Thesis establishes direction
+- Each paragraph advances that direction
+- Transitions show logic between points
+- Counterargument is addressed
+- Conclusion reinforces implications
+
+---
+
+## Practical Essay Blueprint
+
+| Section | Goal |
+|--------|------|
+| Intro + thesis | Frame issue and present defensible claim |
+| Body 1 | Strongest reason + evidence + commentary |
+| Body 2 | Second reason + evidence + commentary |
+| Body 3 | Counterargument + rebuttal (or qualification) |
+| Conclusion | Synthesize reasoning and stakes |
+
+### Topic Sentence Formula
+\`\`\`
+[Reason statement] + [link to thesis]
+\`\`\`
+
+Example:
+"Because attendance policies shape both learning and equity, districts should replace punitive absence penalties with support-based interventions."
+
+> 🔑 Topic sentences are mini-claims. If they are vague, your reasoning chain weakens.
       `
     },
     {
-      id: 'englangr1-quiz1',
+      id: 'elrow1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +52,163 @@ Reasoning & Organization in Writing is a fundamental topic in AP English Languag
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Reasoning & Organization in Writing?',
+            question: 'Which feature most clearly indicates a coherent line of reasoning?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Reasoning & Organization in Writing',
-              'A mathematical formula',
-              'A literary technique'
+              'Many rhetorical questions',
+              'Paragraphs that each connect back to and develop the thesis',
+              'Advanced vocabulary in every sentence',
+              'A very long introduction'
             ],
             correctAnswer: 1,
-            explanation: 'Reasoning & Organization in Writing focuses on understanding key principles and patterns within AP English Language.'
+            explanation: 'Coherence depends on logical development: each paragraph must perform a clear argumentative function connected to the thesis. Style alone cannot substitute for reasoning structure.'
           },
           {
-            question: 'Why is Reasoning & Organization in Writing important in AP English Language?',
+            question: 'What is the best role of a counterargument paragraph?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Ignore opposing views to keep writing concise',
+              'Demonstrate awareness of complexity and strengthen your position through rebuttal or qualification',
+              'Replace the thesis with a new claim',
+              'Add unrelated examples'
             ],
             correctAnswer: 1,
-            explanation: 'Reasoning & Organization in Writing is a key topic in AP English Language that connects to multiple course themes.'
+            explanation: 'Addressing opposition shows maturity and strengthens credibility. Effective rebuttal demonstrates why your position remains stronger after considering alternatives.'
           }
         ]
       }
     },
     {
-      id: 'englangr1-content',
+      id: 'elrow1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Transition Logic
 
-### Key concept 1
-The foundational principle underlying Reasoning & Organization in Writing. Understanding this concept is essential for mastering Reasoning & Organization in Writing in AP English Language.
+Use transitions to mark reasoning relationships:
 
-### Key concept 2
-A critical component of understanding Reasoning & Organization in Writing. This builds on the previous concept and connects to broader themes in the course.
+| Relationship | Transition Examples |
+|-------------|---------------------|
+| Addition | furthermore, moreover, in addition |
+| Contrast | however, by contrast, nevertheless |
+| Cause | because, since, given that |
+| Effect | therefore, consequently, thus |
+| Qualification | admittedly, while, to be sure |
+| Emphasis | indeed, notably, crucially |
 
-### Key concept 3
-An essential element that connects Reasoning & Organization in Writing to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Paragraph Coherence Moves
+- Repeat core terms (e.g., equity, access, sustainability)
+- Use pronouns with clear antecedents
+- End paragraph by linking to thesis
+- Open next paragraph with logical continuation
+
+## Common Organization Problems
+
+| Problem | Revision Move |
+|--------|----------------|
+| Paragraph drift (off-topic) | Rewrite topic sentence around claim |
+| Evidence pile-up | Add commentary after each piece |
+| Abrupt jumps | Insert transition + logic sentence |
+| Weak conclusion | Synthesize implications, do not summarize only |
+
+### Conclusion Upgrade Formula
+\`\`\`
+Restate thesis with nuance -> synthesize key reasons -> explain stakes/implications
+\`\`\`
       `
     },
     {
-      id: 'englangr1-input',
+      id: 'elrow1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Reasoning & Organization in Writing?
+1) A sentence that states the paragraph's reason and links it to the thesis is a _______ sentence.
 
-2) What concept describes a critical component of understanding Reasoning & Organization in Writing?
+2) The transition "therefore" signals a logical _______.
 
-3) Name the term for an essential element that connects Reasoning & Organization in Writing to broader themes.
-
-Use the exact term from this part.
+3) A counterargument paragraph should include a _______ or qualification to strengthen your position.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Reasoning & Organization in Writing), Key concept 2 (A critical component of understanding Reasoning & Organization in Writing), and Key concept 3 (An essential element that connects Reasoning & Organization in Writing to broader themes).'
+        correctAnswers: ['topic', 'effect', 'rebuttal'],
+        hint1: 'It starts the paragraph claim.',
+        hint2: 'What follows from prior reasons.',
+        hint3: 'You respond to opposition with this.',
+        explanation: 'Topic sentence frames reasoning. "Therefore" indicates effect/conclusion. Counterarguments need rebuttal or qualification.'
       }
     },
     {
-      id: 'englangr1-dropdown',
+      id: 'elrow1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Choose the Best Organizational Move** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Reasoning & Organization in Writing is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'If paragraph 2 feels disconnected from thesis, the first fix is to revise the ___',
+            options: ['Topic sentence and claim link', 'Title only', 'Font size', 'Conclusion punctuation']
           },
           {
-            label: 'A critical component of understanding Reasoning & Organization in Writing describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: '"Admittedly" followed by "however" typically signals ___',
+            options: ['Concession then rebuttal', 'Narrative flashback', 'Definition sequence', 'Cause-effect only']
           },
           {
-            label: 'An essential element that connects Reasoning & Organization in Writing to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A strong conclusion should primarily ___',
+            options: ['Synthesize reasoning and explain stakes', 'Introduce new evidence', 'Repeat intro word-for-word', 'Add unrelated anecdotes']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Reasoning & Organization in Writing. Key concept 2 — A critical component of understanding Reasoning & Organization in Writing. Key concept 3 — An essential element that connects Reasoning & Organization in Writing to broader themes.'
+        correctAnswers: ['Topic sentence and claim link', 'Concession then rebuttal', 'Synthesize reasoning and explain stakes'],
+        hint1: 'Paragraph focus starts there.',
+        hint2: 'Acknowledge then respond.',
+        hint3: 'Show why your argument matters.',
+        explanation: 'Disconnected paragraph = topic sentence issue. "Admittedly...however" marks concession/rebuttal. Conclusions should synthesize and project implications.'
       }
     },
     {
-      id: 'englangr1-strategy',
+      id: 'elrow1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Reasoning & Organization in Writing
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Reasoning & Organization in Writing.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- Build essay around 2-3 clear reasons, not many shallow points
+- Make topic sentences explicit mini-claims tied to thesis
+- Use transitions to reveal logic (cause, contrast, qualification)
+- Add commentary after each evidence unit
+- Include at least one counterargument response
+- End with implications: what follows if your claim is accepted?
       `
     },
     {
-      id: 'englangr1-applied',
+      id: 'elrow1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Reasoning & Organization in Writing on a free-response question. The best approach is:',
+            question: 'A student essay has strong evidence but reads like disconnected points. What revision would most improve line of reasoning?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Add more quotations only',
+              'Insert clear topic sentences and transitions showing relationships among claims',
+              'Replace all short sentences with long ones',
+              'Use more advanced vocabulary'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The issue is coherence, not evidence quantity. Topic sentences and transitions make the argument-s logical structure explicit and help readers follow the reasoning chain.'
           },
           {
-            question: 'When studying Reasoning & Organization in Writing, which strategy is most effective?',
+            question: 'Which paragraph order best supports a persuasive line of reasoning?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Counterargument first, then random examples, then thesis',
+              'Thesis, reason 1, reason 2, counterargument/rebuttal, synthesis conclusion',
+              'Only one long paragraph with many ideas',
+              'Conclusion first, intro last'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'This order creates progressive logic: state claim, develop support, test against opposition, and synthesize implications. It reflects coherent argumentative structure AP readers value.'
           }
         ]
       }
     }
   ]
-}
+};

@@ -2,26 +2,41 @@ export const apesAgricultureLandPart1Data = {
   topicSlug: 'apes-agriculture-land',
   sections: [
     {
-      id: 'apesagri1-intro',
+      id: 'apesal1-intro',
       type: 'text' as const,
       content: `
-# 🌿 Agriculture & Land Use
+# 🌾 Agriculture & Land Use
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Farming Practices and Environmental Impacts**
 
-Agriculture & Land Use is a fundamental topic in AP Environmental Science. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Agricultural Revolution Timeline
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Agriculture & Land Use |
-| **Key concept 2** | A critical component of understanding Agriculture & Land Use |
-| **Key concept 3** | An essential element that connects Agriculture & Land Use to broader themes |
+| Revolution | Period | Key Changes |
+|-----------|--------|------------|
+| **First Agricultural Revolution** | ~10,000 years ago | Shift from hunter-gatherer to farming; domestication of plants and animals |
+| **Second (Industrial)** | 1700s-1800s | Mechanization; seed drill, crop rotation, selective breeding |
+| **Green Revolution** | 1960s-1970s | High-yield crop varieties, synthetic fertilizers, pesticides, irrigation |
+
+---
+
+## Farming Methods
+
+| Method | Description | Environmental Impact |
+|--------|-----------|---------------------|
+| **Monoculture** | Growing one crop over large area | Depletes soil nutrients; vulnerable to pests; requires more pesticides |
+| **Polyculture** | Growing multiple crops together | Better pest control; maintains soil health; more resilient |
+| **No-till farming** | Seeds planted without plowing | Reduces soil erosion; preserves soil structure |
+| **Contour plowing** | Plowing along hillside contours | Reduces water runoff and soil erosion |
+| **Terracing** | Cutting flat steps into hillsides | Prevents erosion on steep slopes |
+| **Crop rotation** | Alternating crops seasonally | Restores soil nutrients; breaks pest cycles |
+| **Cover crops** | Planting non-harvest crops between seasons | Prevents erosion; adds nitrogen (legumes) |
+| **Integrated Pest Management (IPM)** | Combines biological, cultural, chemical controls | Reduces pesticide use; targets pests precisely |
       `
     },
     {
-      id: 'apesagri1-quiz1',
+      id: 'apesal1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +44,151 @@ Agriculture & Land Use is a fundamental topic in AP Environmental Science. This 
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Agriculture & Land Use?',
+            question: 'The Green Revolution increased crop yields primarily through:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Agriculture & Land Use',
-              'A mathematical formula',
-              'A literary technique'
+              'Organic farming methods and traditional seed saving',
+              'High-yield crop varieties, synthetic fertilizers, and pesticides',
+              'Genetically modified organisms only',
+              'Switching from agriculture to hunting and gathering'
             ],
             correctAnswer: 1,
-            explanation: 'Agriculture & Land Use focuses on understanding key principles and patterns within AP Environmental Science.'
+            explanation: 'The Green Revolution (1960s-70s) used high-yield varieties (especially wheat and rice), synthetic fertilizers, pesticides, and irrigation to dramatically increase food production in developing nations.'
           },
           {
-            question: 'Why is Agriculture & Land Use important in AP Environmental Science?',
+            question: 'Which soil conservation method involves plowing along the natural contour of a hillside rather than up and down?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Terracing',
+              'Contour plowing',
+              'No-till farming',
+              'Strip cropping'
             ],
             correctAnswer: 1,
-            explanation: 'Agriculture & Land Use is a key topic in AP Environmental Science that connects to multiple course themes.'
+            explanation: 'Contour plowing follows the natural curves of the terrain, creating ridges that slow water runoff and reduce soil erosion on slopes.'
           }
         ]
       }
     },
     {
-      id: 'apesagri1-content',
+      id: 'apesal1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Environmental Impacts of Agriculture
 
-### Key concept 1
-The foundational principle underlying Agriculture & Land Use. Understanding this concept is essential for mastering Agriculture & Land Use in AP Environmental Science.
+| Impact | Cause | Consequence |
+|--------|-------|------------|
+| **Soil erosion** | Plowing, deforestation, overgrazing | Loss of topsoil; sedimentation in waterways |
+| **Salinization** | Irrigation in arid areas | Salt buildup makes soil infertile |
+| **Waterlogging** | Over-irrigation | Roots suffocate; soil becomes compacted |
+| **Desertification** | Overgrazing, deforestation, poor farming | Fertile land becomes desert |
+| **Eutrophication** | Fertilizer runoff (N and P) | Algal blooms; dead zones in water |
+| **Pesticide resistance** | Overuse of pesticides | Pests evolve resistance; requires more chemicals |
+| **Bioaccumulation** | Persistent pesticides (DDT) | Toxins concentrate up the food chain |
 
-### Key concept 2
-A critical component of understanding Agriculture & Land Use. This builds on the previous concept and connects to broader themes in the course.
+## Genetically Modified Organisms (GMOs)
 
-### Key concept 3
-An essential element that connects Agriculture & Land Use to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Pros | Cons |
+|------|------|
+| Higher yields | Potential biodiversity loss |
+| Pest resistance (Bt crops) | Gene flow to wild relatives |
+| Drought tolerance | Corporate seed dependency |
+| Reduced pesticide use for some crops | Consumer health concerns (debated) |
+| Nutrient enhancement (Golden Rice) | May encourage monoculture |
       `
     },
     {
-      id: 'apesagri1-input',
+      id: 'apesal1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Agriculture & Land Use?
+1) Growing a single crop over a large area is called _______, which depletes soil nutrients and increases pest vulnerability.
 
-2) What concept describes a critical component of understanding Agriculture & Land Use?
+2) Salt buildup in soil from irrigation in arid climates is called _______.
 
-3) Name the term for an essential element that connects Agriculture & Land Use to broader themes.
-
-Use the exact term from this part.
+3) The practice that combines biological, cultural, and limited chemical controls to manage pests is called _______ Pest Management.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Agriculture & Land Use), Key concept 2 (A critical component of understanding Agriculture & Land Use), and Key concept 3 (An essential element that connects Agriculture & Land Use to broader themes).'
+        correctAnswers: ['monoculture', 'salinization', 'Integrated'],
+        hint1: 'Mono = one type of crop.',
+        hint2: 'Water evaporates, leaving salt behind.',
+        hint3: 'IPM stands for...',
+        explanation: 'Monoculture = one crop. Salinization = salt buildup from irrigation. IPM = Integrated Pest Management.'
       }
     },
     {
-      id: 'apesagri1-dropdown',
+      id: 'apesal1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Practice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Agriculture & Land Use is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'A farmer plants clover (a legume) between corn seasons to restore nitrogen. This is ___',
+            options: ['Using cover crops and crop rotation', 'Monoculture farming', 'Slash-and-burn agriculture', 'Hydroponics']
           },
           {
-            label: 'A critical component of understanding Agriculture & Land Use describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'DDT concentrating in bald eagle tissues at higher levels than in their fish prey is ___',
+            options: ['Bioaccumulation/biomagnification', 'Eutrophication', 'Salinization', 'Desertification']
           },
           {
-            label: 'An essential element that connects Agriculture & Land Use to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Cutting flat terraces into steep hillsides to farm without erosion is ___',
+            options: ['Terracing', 'Contour plowing', 'No-till farming', 'Strip mining']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Agriculture & Land Use. Key concept 2 — A critical component of understanding Agriculture & Land Use. Key concept 3 — An essential element that connects Agriculture & Land Use to broader themes.'
+        correctAnswers: ['Using cover crops and crop rotation', 'Bioaccumulation/biomagnification', 'Terracing'],
+        hint1: 'Legumes fix nitrogen; planting between seasons.',
+        hint2: 'Toxins concentrate as you move up trophic levels.',
+        hint3: 'Creating flat steps on slopes.',
+        explanation: 'Clover between corn = cover crop/rotation. DDT in eagles = bioaccumulation. Flat steps on hillsides = terracing.'
       }
     },
     {
-      id: 'apesagri1-strategy',
+      id: 'apesal1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Agriculture
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Agriculture & Land Use.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Environmental Science for higher scores.
+- Know specific soil conservation practices and what problem each one addresses
+- **Green Revolution trade-offs** are commonly tested: increased yield but increased environmental impact
+- Understand IPM as the preferred approach over heavy pesticide use
+- Salinization and waterlogging are caused by IRRIGATION (a common FRQ topic)
+- Bioaccumulation vs biomagnification: bioaccumulation = within one organism; biomagnification = increasing concentration up food chain
       `
     },
     {
-      id: 'apesagri1-applied',
+      id: 'apesal1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Agriculture & Land Use on a free-response question. The best approach is:',
+            question: 'A region in sub-Saharan Africa experiences overgrazing and drought. Over time, the grassland turns into barren, unproductive land. This process is called:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Eutrophication',
+              'Salinization',
+              'Desertification',
+              'Bioaccumulation'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 2,
+            explanation: 'Desertification is the degradation of drylands into desert-like conditions, caused by overgrazing, deforestation, and poor agricultural practices combined with drought.'
           },
           {
-            question: 'When studying Agriculture & Land Use, which strategy is most effective?',
+            question: 'A farmer practicing IPM would FIRST:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Apply broad-spectrum pesticides across all fields',
+              'Monitor pest populations and use biological controls before resorting to targeted pesticide application',
+              'Plant genetically identical monoculture crops',
+              'Eliminate all insects from the farm'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'IPM prioritizes monitoring and prevention: biological controls (natural predators), habitat manipulation, and resistant varieties before using targeted (not broad-spectrum) pesticides as a last resort.'
           }
         ]
       }
     }
   ]
-}
+};

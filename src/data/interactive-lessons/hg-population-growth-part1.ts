@@ -2,26 +2,45 @@ export const hgPopulationGrowthPart1Data = {
   topicSlug: 'hg-population-growth',
   sections: [
     {
-      id: 'hgpopula1-intro',
+      id: 'hgpop1-intro',
       type: 'text' as const,
       content: `
-# 🌍 Population Growth & Decline
+# 🌍 Population & Growth Patterns
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Understanding Global Population Dynamics**
 
-Population Growth & Decline is a fundamental topic in AP Human Geography. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Key Population Measures
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Population Growth & Decline |
-| **Key concept 2** | A critical component of understanding Population Growth & Decline |
-| **Key concept 3** | An essential element that connects Population Growth & Decline to broader themes |
+| Measure | Definition | Formula |
+|---------|-----------|---------|
+| **Crude Birth Rate (CBR)** | Births per 1,000 people per year | (Births / Total Pop) × 1,000 |
+| **Crude Death Rate (CDR)** | Deaths per 1,000 people per year | (Deaths / Total Pop) × 1,000 |
+| **Rate of Natural Increase (RNI)** | Annual population growth from births vs deaths | (CBR − CDR) / 10 = % |
+| **Total Fertility Rate (TFR)** | Average children per woman over her lifetime | Typically 1.0–7.0 |
+| **Infant Mortality Rate (IMR)** | Deaths of infants < 1 year per 1,000 live births | Key development indicator |
+| **Doubling Time** | Years for population to double | ~70 / RNI% |
+
+> 🔑 **AP Key Point:** RNI does NOT include migration. Net migration must be added separately for total population change.
+
+---
+
+## The Demographic Transition Model (DTM)
+
+The DTM explains how countries move from high birth/death rates to low birth/death rates through **4 (or 5) stages**:
+
+| Stage | CBR | CDR | RNI | Characteristics | Example |
+|-------|-----|-----|-----|----------------|---------|
+| **1** | High | High | ~0% | Pre-industrial; disease, famine | No modern countries |
+| **2** | High | **Falling** | **High** | Improved sanitation, medicine | Sub-Saharan Africa |
+| **3** | **Falling** | Low | Moderate | Urbanization, education, contraception | India, Brazil |
+| **4** | Low | Low | ~0% | Post-industrial; gender equity | USA, France |
+| **5** | **Very low** | Low | **Negative** | Below-replacement TFR (<2.1) | Japan, Germany |
       `
     },
     {
-      id: 'hgpopula1-quiz1',
+      id: 'hgpop1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +48,167 @@ Population Growth & Decline is a fundamental topic in AP Human Geography. This p
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Population Growth & Decline?',
+            question: 'In Stage 2 of the Demographic Transition Model, population grows rapidly because:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Population Growth & Decline',
-              'A mathematical formula',
-              'A literary technique'
+              'CBR and CDR are both declining at equal rates',
+              'CDR drops sharply while CBR remains high',
+              'CBR increases rapidly due to government incentives',
+              'Immigration exceeds emigration'
             ],
             correctAnswer: 1,
-            explanation: 'Population Growth & Decline focuses on understanding key principles and patterns within AP Human Geography.'
+            explanation: 'Stage 2 is characterized by a sharp decline in CDR (due to improved medicine, sanitation, food supply) while CBR stays high — creating a large gap and rapid natural increase.'
           },
           {
-            question: 'Why is Population Growth & Decline important in AP Human Geography?',
+            question: 'A country has a CBR of 32 and CDR of 8. Its Rate of Natural Increase is:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              '0.24%',
+              '2.4%',
+              '24%',
+              '4.0%'
             ],
             correctAnswer: 1,
-            explanation: 'Population Growth & Decline is a key topic in AP Human Geography that connects to multiple course themes.'
+            explanation: 'RNI = (CBR − CDR) / 10 = (32 − 8) / 10 = 2.4%. Its doubling time would be approximately 70 / 2.4 ≈ 29 years.'
+          },
+          {
+            question: 'Which stage of the DTM is associated with below-replacement fertility (TFR < 2.1)?',
+            options: [
+              'Stage 2',
+              'Stage 3',
+              'Stage 4',
+              'Stage 5'
+            ],
+            correctAnswer: 3,
+            explanation: 'Stage 5 features TFR well below replacement level (2.1), leading to population decline. Countries like Japan, South Korea, and Italy are experiencing this.'
           }
         ]
       }
     },
     {
-      id: 'hgpopula1-content',
+      id: 'hgpop1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Population Pyramids
 
-### Key concept 1
-The foundational principle underlying Population Growth & Decline. Understanding this concept is essential for mastering Population Growth & Decline in AP Human Geography.
+Population pyramids (age-sex diagrams) visually represent a country's age and gender structure:
 
-### Key concept 2
-A critical component of understanding Population Growth & Decline. This builds on the previous concept and connects to broader themes in the course.
+| Shape | Stage | What It Tells You |
+|-------|-------|------------------|
+| **Wide base, narrow top** | Stage 2 | High birth rates, low life expectancy, rapid growth |
+| **Rectangular / column** | Stage 4 | Low birth & death rates, stable population |
+| **Inverted / top-heavy** | Stage 5 | Aging population, declining births, potential shrinkage |
+| **Bulge in middle** | Varies | Baby boom generation or large working-age cohort |
 
-### Key concept 3
-An essential element that connects Population Growth & Decline to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Dependency Ratio
+
+The dependency ratio measures the proportion of non-working-age population (under 15 and over 64) to working-age population (15–64), multiplied by 100.
+
+- **High youth dependency** → need schools, healthcare for children (Stage 2-3 countries)
+- **High elderly dependency** → need pensions, elder care (Stage 4-5 countries)
       `
     },
     {
-      id: 'hgpopula1-input',
+      id: 'hgpop1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Population Growth & Decline?
+1) The model that describes the transition from high birth/death rates to low birth/death rates is called the Demographic _______ Model.
 
-2) What concept describes a critical component of understanding Population Growth & Decline?
+2) A TFR below 2.1 is called _______-replacement fertility.
 
-3) Name the term for an essential element that connects Population Growth & Decline to broader themes.
-
-Use the exact term from this part.
+3) The approximate doubling time for a population with 2% growth is _______ years.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Population Growth & Decline), Key concept 2 (A critical component of understanding Population Growth & Decline), and Key concept 3 (An essential element that connects Population Growth & Decline to broader themes).'
+        correctAnswers: ['Transition', 'below', '35'],
+        hint1: 'Four-to-five stage model of population change.',
+        hint2: 'Fertility is too low to maintain population size.',
+        hint3: 'Doubling time ≈ 70 / growth rate.',
+        explanation: 'The Demographic Transition Model describes stages of population change. Below-replacement = TFR < 2.1. Doubling time = 70/2 = 35 years.'
       }
     },
     {
-      id: 'hgpopula1-dropdown',
+      id: 'hgpop1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the DTM Stage** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Population Growth & Decline is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Japan has a TFR of 1.3, aging population, and declining total population. This is ___',
+            options: ['Stage 5', 'Stage 4', 'Stage 3', 'Stage 2']
           },
           {
-            label: 'A critical component of understanding Population Growth & Decline describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Nigeria has a CBR of 36, CDR of 12, and rapid population growth. This is ___',
+            options: ['Stage 2', 'Stage 3', 'Stage 4', 'Stage 5']
           },
           {
-            label: 'An essential element that connects Population Growth & Decline to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A population pyramid with a very wide base tapering sharply indicates ___',
+            options: ['High birth rate with low life expectancy', 'Low birth rate with high life expectancy', 'Equal birth and death rates', 'An aging population']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Population Growth & Decline. Key concept 2 — A critical component of understanding Population Growth & Decline. Key concept 3 — An essential element that connects Population Growth & Decline to broader themes.'
+        correctAnswers: ['Stage 5', 'Stage 2', 'High birth rate with low life expectancy'],
+        hint1: 'Below-replacement TFR and population decline.',
+        hint2: 'High CBR + rapidly falling CDR = rapid growth.',
+        hint3: 'Lots of young people, few old people.',
+        explanation: 'Japan = Stage 5 (below-replacement fertility). Nigeria = Stage 2 (high CBR, falling CDR). Wide-base pyramid = many children, few elderly.'
       }
     },
     {
-      id: 'hgpopula1-strategy',
+      id: 'hgpop1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Malthus vs. Modern Population Theory
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Population Growth & Decline.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+| Thinker | Argument |
+|---------|---------|
+| **Thomas Malthus** (1798) | Population grows geometrically; food grows arithmetically → inevitable famine |
+| **Ester Boserup** | Necessity is the mother of invention — population pressure drives agricultural innovation |
+| **Neo-Malthusians** | Earth has carrying capacity limits (resources, climate, water) |
+| **Cornucopians** | Technology and human ingenuity will always find solutions |
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Human Geography for higher scores.
+### AP Exam Strategies for Population Questions
+
+- Always identify the **DTM stage** first — it frames everything else
+- RNI does NOT include migration — read carefully
+- "Natural increase" vs "total growth" — know the difference
+- Population pyramids: read the SHAPE, not just the numbers
+- Know anti-natalist (China one-child) vs pro-natalist (France child subsidies) policies
       `
     },
     {
-      id: 'hgpopula1-applied',
+      id: 'hgpop1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Population Growth & Decline on a free-response question. The best approach is:',
+            question: 'Country X has a CBR of 12, CDR of 14, and a net immigration rate of 5 per 1,000. Country X total population is:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Increasing, because immigration offsets natural decrease',
+              'Decreasing, because CDR exceeds CBR',
+              'Stable, because births equal deaths',
+              'Cannot be determined from this data'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'Natural change = CBR minus CDR = 12 minus 14 = negative 2 per 1,000. But net immigration = +5 per 1,000. Total change = negative 2 + 5 = +3 per 1,000. Population is increasing.'
           },
           {
-            question: 'When studying Population Growth & Decline, which strategy is most effective?',
+            question: 'Ester Boserup would most likely respond to Malthus by arguing that:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Population growth will inevitably outpace food production',
+              'Population pressure stimulates innovation and intensification of agriculture',
+              'Governments must limit population growth through strict policy',
+              'Resource depletion is unavoidable regardless of technology'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Boserup argued that population growth DRIVES agricultural innovation — people find new techniques (irrigation, terracing, fertilizers) when they need to feed more people.'
           }
         ]
       }
     }
   ]
-}
+};

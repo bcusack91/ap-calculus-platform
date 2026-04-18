@@ -2,26 +2,46 @@ export const cspVariablesControlPart1Data = {
   topicSlug: 'csp-variables-control',
   sections: [
     {
-      id: 'cspvaria1-intro',
+      id: 'cspvc1-intro',
       type: 'text' as const,
       content: `
-# 🖥️ Variables & Control Structures
+# 🔧 Variables & Control Structures
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Variables, Assignments, Conditionals, and Loops**
 
-Variables & Control Structures is a fundamental topic in AP CS Principles. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Variables and Assignment
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Variables & Control Structures |
-| **Key concept 2** | A critical component of understanding Variables & Control Structures |
-| **Key concept 3** | An essential element that connects Variables & Control Structures to broader themes |
+In the AP CSP pseudocode:
+\`\`\`
+score ← 0           // Assign 0 to score
+name ← "Alice"      // Assign "Alice" to name
+score ← score + 10  // Update score (now 10)
+\`\`\`
+
+| Concept | Pseudocode | Meaning |
+|---------|-----------|---------|
+| **Assignment** | \`x ← 5\` | Store 5 in variable x |
+| **Update** | \`x ← x + 1\` | Add 1 to current value of x |
+| **Display** | \`DISPLAY(x)\` | Show value of x on screen |
+
+> 🔑 The **left arrow (←)** means "gets the value of." It is NOT an equality check — it is an assignment. The right side is evaluated first, then stored in the left side.
+
+---
+
+## Data Types
+
+| Type | Examples | Operations |
+|------|---------|-----------|
+| **Number** | 42, 3.14, -7 | +, -, *, /, MOD |
+| **String** | "hello", "123" | Concatenation, length |
+| **Boolean** | true, false | AND, OR, NOT |
+| **List** | [1, 2, 3] | Access, insert, append, remove |
       `
     },
     {
-      id: 'cspvaria1-quiz1',
+      id: 'cspvc1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +49,184 @@ Variables & Control Structures is a fundamental topic in AP CS Principles. This 
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Variables & Control Structures?',
+            question: 'After these statements, what is the value of x?\nx ← 5\ny ← x\nx ← 10',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Variables & Control Structures',
-              'A mathematical formula',
-              'A literary technique'
+              'x = 5, y = 10',
+              'x = 10, y = 10',
+              'x = 10, y = 5',
+              'x = 5, y = 5'
             ],
-            correctAnswer: 1,
-            explanation: 'Variables & Control Structures focuses on understanding key principles and patterns within AP CS Principles.'
+            correctAnswer: 2,
+            explanation: 'Line 1: x gets 5. Line 2: y gets the current value of x (5). Line 3: x gets 10. Changing x later does NOT change y — y already stored its own copy of 5.'
           },
           {
-            question: 'Why is Variables & Control Structures important in AP CS Principles?',
+            question: 'What does x ← x + 1 do?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Checks if x equals x + 1',
+              'Creates a new variable called x + 1',
+              'Adds 1 to the current value of x and stores the result back in x',
+              'Causes an error because x cannot equal x + 1'
             ],
-            correctAnswer: 1,
-            explanation: 'Variables & Control Structures is a key topic in AP CS Principles that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'The right side (x + 1) is evaluated first using the current value of x. The result is then stored back in x.This is an update, not an equation.'
           }
         ]
       }
     },
     {
-      id: 'cspvaria1-content',
+      id: 'cspvc1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Conditionals (Selection)
 
-### Key concept 1
-The foundational principle underlying Variables & Control Structures. Understanding this concept is essential for mastering Variables & Control Structures in AP CS Principles.
+\`\`\`
+IF (condition)
+{
+    // Runs if condition is true
+}
+ELSE
+{
+    // Runs if condition is false
+}
+\`\`\`
 
-### Key concept 2
-A critical component of understanding Variables & Control Structures. This builds on the previous concept and connects to broader themes in the course.
+### Comparison Operators
+| Operator | Meaning |
+|----------|---------|
+| = | Equal to |
+| ≠ | Not equal to |
+| > | Greater than |
+| < | Less than |
+| ≥ | Greater than or equal to |
+| ≤ | Less than or equal to |
 
-### Key concept 3
-An essential element that connects Variables & Control Structures to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Boolean Operators
+| Operator | Description |
+|----------|-----------|
+| **AND** | True only if BOTH are true |
+| **OR** | True if at LEAST one is true |
+| **NOT** | Reverses true/false |
+
+## Loops (Iteration)
+
+### REPEAT n TIMES
+\`\`\`
+REPEAT 5 TIMES
+{
+    DISPLAY("Hello")
+}
+// Displays "Hello" five times
+\`\`\`
+
+### REPEAT UNTIL (condition)
+\`\`\`
+x ← 1
+REPEAT UNTIL (x > 5)
+{
+    DISPLAY(x)
+    x ← x + 1
+}
+// Displays: 1, 2, 3, 4, 5
+\`\`\`
+
+> ⚠️ REPEAT UNTIL checks the condition BEFORE each iteration. If the condition is already true, the loop body never executes.
       `
     },
     {
-      id: 'cspvaria1-input',
+      id: 'cspvc1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Variables & Control Structures?
+1) The assignment operator in AP CSP pseudocode is the _______ arrow (←).
 
-2) What concept describes a critical component of understanding Variables & Control Structures?
+2) The Boolean operator that returns true only when BOTH conditions are true is _______.
 
-3) Name the term for an essential element that connects Variables & Control Structures to broader themes.
-
-Use the exact term from this part.
+3) REPEAT UNTIL checks the condition _______ each iteration (not after).
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Variables & Control Structures), Key concept 2 (A critical component of understanding Variables & Control Structures), and Key concept 3 (An essential element that connects Variables & Control Structures to broader themes).'
+        correctAnswers: ['left', 'AND', 'before'],
+        hint1: 'Points from right to left.',
+        hint2: 'Both must be true.',
+        hint3: 'Pre-check, like a while loop.',
+        explanation: 'Left arrow for assignment. AND = both true. REPEAT UNTIL checks before running.'
       }
     },
     {
-      id: 'cspvaria1-dropdown',
+      id: 'cspvc1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Evaluate the Expression** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Variables & Control Structures is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'NOT (true AND false) evaluates to ___',
+            options: ['true', 'false', 'error', 'null']
           },
           {
-            label: 'A critical component of understanding Variables & Control Structures describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: '(5 > 3) OR (2 > 10) evaluates to ___',
+            options: ['true', 'false', 'error', 'null']
           },
           {
-            label: 'An essential element that connects Variables & Control Structures to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'After: x ← 3, x ← x * x, the value of x is ___',
+            options: ['9', '3', '6', '27']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Variables & Control Structures. Key concept 2 — A critical component of understanding Variables & Control Structures. Key concept 3 — An essential element that connects Variables & Control Structures to broader themes.'
+        correctAnswers: ['true', 'true', '9'],
+        hint1: 'true AND false = false. NOT false = true.',
+        hint2: 'OR needs at least one true. 5 > 3 is true.',
+        hint3: 'x = 3, then x = 3 * 3 = 9.',
+        explanation: 'NOT(false) = true. OR with one true = true. 3 * 3 = 9.'
       }
     },
     {
-      id: 'cspvaria1-strategy',
+      id: 'cspvc1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Variables & Control
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Variables & Control Structures.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP CS Principles for higher scores.
+- **Trace code carefully** — write down variable values after each line
+- Assignment (←) is NOT equality — the right side is evaluated first
+- Know De Morgan: NOT(A AND B) = NOT A OR NOT B; NOT(A OR B) = NOT A AND NOT B
+- REPEAT UNTIL is like a while loop that continues UNTIL the condition becomes true (opposite of while)
+- Every IF needs a corresponding condition; nested IFs test conditions in order
+- Swapping two variables requires a temp variable: temp ← a, a ← b, b ← temp
       `
     },
     {
-      id: 'cspvaria1-applied',
+      id: 'cspvc1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Variables & Control Structures on a free-response question. The best approach is:',
+            question: 'What is displayed?\nx ← 10\ny ← 20\ntemp ← x\nx ← y\ny ← temp\nDISPLAY(x)\nDISPLAY(y)',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '10 then 20',
+              '20 then 10',
+              '20 then 20',
+              '10 then 10'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'This is the classic swap algorithm. temp saves x (10). x gets y (20). y gets temp (10). Result: x=20, y=10. The temp variable prevents losing a value during the swap.'
           },
           {
-            question: 'When studying Variables & Control Structures, which strategy is most effective?',
+            question: 'count ← 0\nREPEAT UNTIL (count ≥ 3)\n{\n    count ← count + 1\n}\nDISPLAY(count)',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '2',
+              '3',
+              '4',
+              '0'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'count starts at 0. Loop: 0 < 3 (run, count=1), 1 < 3 (run, count=2), 2 < 3 (run, count=3), 3 >= 3 (stop). Display: 3.'
           }
         ]
       }
     }
   ]
-}
+};

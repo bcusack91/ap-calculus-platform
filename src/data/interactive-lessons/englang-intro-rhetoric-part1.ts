@@ -2,26 +2,50 @@ export const englangIntroRhetoricPart1Data = {
   topicSlug: 'englang-intro-rhetoric',
   sections: [
     {
-      id: 'englangi1-intro',
+      id: 'elir1-intro',
       type: 'text' as const,
       content: `
-# ✍️ Introduction to Rhetoric
+# 🗣️ Introduction to Rhetoric
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — What Rhetoric Is, Why It Matters, and How Writers Persuade**
 
-Introduction to Rhetoric is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## What Is Rhetoric?
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Introduction to Rhetoric |
-| **Key concept 2** | A critical component of understanding Introduction to Rhetoric |
-| **Key concept 3** | An essential element that connects Introduction to Rhetoric to broader themes |
+**Rhetoric** is the art of effective communication — the study of how writers and speakers use language to achieve a purpose with a specific audience.
+
+Every act of communication involves choices:
+- **What** to say
+- **How** to say it
+- **Who** you are saying it to
+- **Why** you are saying it
+
+> 🔑 Rhetoric is not about tricking people. It is about making **strategic choices** to communicate effectively. A doctor explaining a diagnosis, a lawyer presenting a case, and a student writing an essay all use rhetoric.
+
+---
+
+## The Rhetorical Triangle
+
+| Element | Question | Focus |
+|---------|----------|-------|
+| **Speaker/Writer** | Who is communicating? | Credibility, tone, perspective |
+| **Audience** | Who is being addressed? | Values, expectations, knowledge level |
+| **Subject/Message** | What is being communicated? | Claims, evidence, ideas |
+| **Purpose** | Why is this being communicated? | Persuade, inform, entertain, call to action |
+| **Context** | When and where? | Historical moment, cultural setting, medium |
+
+### Example Analysis
+A climate scientist writing a policy brief for Congress:
+- **Speaker**: Expert with scientific authority
+- **Audience**: Legislators who need actionable recommendations
+- **Subject**: Climate data and policy proposals
+- **Purpose**: Persuade Congress to act on climate legislation
+- **Context**: Amid growing public concern about extreme weather
       `
     },
     {
-      id: 'englangi1-quiz1',
+      id: 'elir1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +53,152 @@ Introduction to Rhetoric is a fundamental topic in AP English Language. This par
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Introduction to Rhetoric?',
+            question: 'Which best defines rhetoric?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Introduction to Rhetoric',
-              'A mathematical formula',
-              'A literary technique'
+              'Using complicated language to confuse an audience',
+              'The art of using language effectively to communicate and persuade',
+              'A type of formal debate with strict rules',
+              'The study of grammar and punctuation'
             ],
             correctAnswer: 1,
-            explanation: 'Introduction to Rhetoric focuses on understanding key principles and patterns within AP English Language.'
+            explanation: 'Rhetoric is the study and practice of effective communication. It encompasses how speakers and writers make strategic choices about language, structure, and appeal to achieve their purpose with a specific audience.'
           },
           {
-            question: 'Why is Introduction to Rhetoric important in AP English Language?',
+            question: 'A nonprofit writes a fundraising email to past donors during the holiday season. Which element of the rhetorical situation is the "holiday season"?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Speaker',
+              'Audience',
+              'Purpose',
+              'Context'
             ],
-            correctAnswer: 1,
-            explanation: 'Introduction to Rhetoric is a key topic in AP English Language that connects to multiple course themes.'
+            correctAnswer: 3,
+            explanation: 'Context refers to the circumstances surrounding the communication — the time, place, and cultural moment. The holiday season creates a context where donors may be more generous and charitable.'
           }
         ]
       }
     },
     {
-      id: 'englangi1-content',
+      id: 'elir1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## The Three Appeals (Aristotle)
 
-### Key concept 1
-The foundational principle underlying Introduction to Rhetoric. Understanding this concept is essential for mastering Introduction to Rhetoric in AP English Language.
+Aristotle identified three strategies writers and speakers use to persuade:
 
-### Key concept 2
-A critical component of understanding Introduction to Rhetoric. This builds on the previous concept and connects to broader themes in the course.
+| Appeal | Targets | Strategy | Example |
+|--------|---------|----------|---------|
+| **Ethos** | Credibility | Establish trust and authority | "As a 20-year veteran firefighter, I can tell you..." |
+| **Pathos** | Emotions | Evoke feelings (sympathy, fear, pride) | "Imagine a child going to bed hungry every night..." |
+| **Logos** | Logic | Use evidence, data, reasoning | "Studies show that 73% of participants improved..." |
 
-### Key concept 3
-An essential element that connects Introduction to Rhetoric to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### How They Work Together
+Effective rhetoric rarely relies on just one appeal. A strong argument typically:
+1. Establishes the writer as credible (**ethos**)
+2. Presents logical evidence (**logos**)
+3. Connects emotionally with the audience (**pathos**)
+
+### Important Distinction
+- **Rhetorical analysis** = examining HOW a writer persuades (what you do on the AP exam)
+- **Argumentation** = actually building your OWN persuasive argument
+
+On the AP English Language exam, you will do BOTH.
       `
     },
     {
-      id: 'englangi1-input',
+      id: 'elir1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Introduction to Rhetoric?
+1) The appeal to credibility and trust is called _______.
 
-2) What concept describes a critical component of understanding Introduction to Rhetoric?
+2) The appeal to logic, evidence, and reasoning is called _______.
 
-3) Name the term for an essential element that connects Introduction to Rhetoric to broader themes.
-
-Use the exact term from this part.
+3) The appeal to emotions is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Introduction to Rhetoric), Key concept 2 (A critical component of understanding Introduction to Rhetoric), and Key concept 3 (An essential element that connects Introduction to Rhetoric to broader themes).'
+        correctAnswers: ['ethos', 'logos', 'pathos'],
+        hint1: 'Think "ethics" — the character of the speaker.',
+        hint2: 'Think "logic" — data and evidence.',
+        hint3: 'Think "pathetic" (original meaning: relating to feelings).',
+        explanation: 'Ethos = credibility. Logos = logic/evidence. Pathos = emotion. These are the three Aristotelian appeals.'
       }
     },
     {
-      id: 'englangi1-dropdown',
+      id: 'elir1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Identify the Appeal** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Introduction to Rhetoric is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: '"According to a Harvard study, students who read daily score 23% higher on standardized tests." This uses ___',
+            options: ['Logos (evidence and statistics)', 'Ethos (credibility)', 'Pathos (emotion)', 'None of the above']
           },
           {
-            label: 'A critical component of understanding Introduction to Rhetoric describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: '"As a board-certified physician with 15 years of experience..." This establishes ___',
+            options: ['Ethos (speaker credibility)', 'Logos (logical reasoning)', 'Pathos (emotional appeal)', 'Context']
           },
           {
-            label: 'An essential element that connects Introduction to Rhetoric to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: '"Every day, thousands of families face the heartbreaking choice between food and medicine." This uses ___',
+            options: ['Pathos (emotional appeal)', 'Logos (statistical evidence)', 'Ethos (authority)', 'None of the above']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Introduction to Rhetoric. Key concept 2 — A critical component of understanding Introduction to Rhetoric. Key concept 3 — An essential element that connects Introduction to Rhetoric to broader themes.'
+        correctAnswers: ['Logos (evidence and statistics)', 'Ethos (speaker credibility)', 'Pathos (emotional appeal)'],
+        hint1: 'Statistics and study results = logic.',
+        hint2: 'Credentials and experience = trust.',
+        hint3: '"Heartbreaking" targets feelings.',
+        explanation: 'Harvard study with data = logos. Physician credentials = ethos. "Heartbreaking choice" = pathos.'
       }
     },
     {
-      id: 'englangi1-strategy',
+      id: 'elir1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Rhetoric
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Introduction to Rhetoric.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- Always identify the **rhetorical situation** first: speaker, audience, purpose, context
+- The three appeals (ethos, logos, pathos) appear on EVERY rhetorical analysis essay
+- Do not just NAME the appeal — explain HOW it works and WHY the writer chose it
+- Context matters: the same argument changes meaning in different historical moments
+- The AP exam rewards analysis of how rhetorical choices serve the writer's purpose
+- Practice identifying appeals in everyday texts: ads, editorials, speeches, social media
       `
     },
     {
-      id: 'englangi1-applied',
+      id: 'elir1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Introduction to Rhetoric on a free-response question. The best approach is:',
+            question: 'A politician gives a speech at a veterans memorial on Memorial Day, citing her own military service and sharing stories of fallen soldiers. Which appeals is she PRIMARILY using?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Logos only — she is presenting factual evidence',
+              'Ethos and pathos — her service establishes credibility while the stories evoke emotion',
+              'Pathos only — she is just making people cry',
+              'None — memorial speeches are not rhetorical'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Her military service establishes ethos (she has firsthand credibility). Stories of fallen soldiers evoke pathos (grief, patriotism, gratitude). The Memorial Day context amplifies both appeals. Effective rhetoric layers multiple appeals.'
           },
           {
-            question: 'When studying Introduction to Rhetoric, which strategy is most effective?',
+            question: 'Why is understanding the AUDIENCE essential to rhetorical analysis?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'The audience determines the word count',
+              'Writers make strategic choices based on the audience values, knowledge, and expectations',
+              'The audience writes the response',
+              'All audiences respond to rhetoric in the same way'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Writers tailor their choices to their audience. A scientist writes differently for peer reviewers than for a general magazine. Understanding who the audience is reveals WHY the writer made specific rhetorical choices.'
           }
         ]
       }
     }
   ]
-}
+};

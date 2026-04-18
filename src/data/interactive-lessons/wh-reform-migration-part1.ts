@@ -5,171 +5,143 @@ export const whReformMigrationPart1Data = {
       id: 'whreform1-intro',
       type: 'text' as const,
       content: `
-# 🌏 Reform, Migration & Global Movements
+# 🌍 Reform, Migration & Global Movements
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Abolition, Suffrage & Mass Migration**
 
-Reform, Migration & Global Movements is a fundamental topic in AP World History. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Abolition of Slavery |
+| Women's Suffrage Movements |
+| Global Migration Patterns |
+| Nationalist Movements |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Reform, Migration & Global Movements |
-| **Key concept 2** | A critical component of understanding Reform, Migration & Global Movements |
-| **Key concept 3** | An essential element that connects Reform, Migration & Global Movements to broader themes |
+> 🔑 **Key Concept:** The AP exam tests how industrialization and Enlightenment ideals drove **reform movements** (abolition, suffrage, labor rights) and **mass migration** patterns that reshaped global demographics in the 19th century.
+      `
+    },
+    {
+      id: 'whreform1-abolition',
+      type: 'text' as const,
+      content: `
+## 📖 Abolition of Slavery & Serfdom
+
+### Timeline of Abolition
+
+| Year | Event |
+|---|---|
+| **1794** | French Revolution abolishes slavery (restored by Napoleon in 1802) |
+| **1804** | Haiti — first nation founded by formerly enslaved people |
+| **1807** | Britain bans the **slave trade** (not slavery itself) |
+| **1833** | British Emancipation Act — slavery abolished throughout the British Empire |
+| **1861** | Russia emancipates the serfs (Tsar Alexander II) |
+| **1863** | U.S. Emancipation Proclamation (full abolition via 13th Amendment, 1865) |
+| **1888** | **Brazil** — last Western Hemisphere nation to abolish slavery |
+
+### Causes of Abolition
+- **Enlightenment ideas** — natural rights philosophy undermined moral justification for slavery
+- **Religious movements** — Quakers and Evangelical Christians led abolition campaigns (William Wilberforce in Britain)
+- **Economic shift** — industrial capitalism needed free wage laborers and consumer markets, not enslaved workers
+- **Slave resistance** — the Haitian Revolution demonstrated that slavery could be overthrown by force
+- **Political pressure** — abolition societies organized public campaigns, petitions, and consumer boycotts (e.g., boycotting slave-produced sugar)
+
+### After Abolition — New Coercive Systems
+Abolition did not end exploitation. New labor systems replaced slavery:
+- **Sharecropping** (U.S. South) — formerly enslaved people worked land in exchange for a share of crops, often trapped in debt
+- **Indentured labor** — millions of Indian, Chinese, and Japanese workers contracted to work on plantations in the Caribbean, South Africa, Southeast Asia, and Pacific islands
+- **Convict leasing** (U.S.) — imprisoned people (disproportionately Black) leased to private companies for forced labor
+
+> 🔑 **AP Connection:** The AP exam tests **continuity and change** — slavery was abolished, but coercive labor systems persisted in new forms. Be ready to compare old and new forms of labor exploitation.
       `
     },
     {
       id: 'whreform1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: `**Concept Check** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Reform, Migration & Global Movements?',
+            question: 'Which of the following BEST illustrates the concept of "continuity and change" in labor systems after the abolition of slavery?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Reform, Migration & Global Movements',
-              'A mathematical formula',
-              'A literary technique'
+              'Formerly enslaved people immediately gained full economic equality and political rights after abolition in every country',
+              'New coercive labor systems like sharecropping, indentured servitude, and convict leasing replaced slavery but maintained many exploitative features',
+              'All forms of forced labor completely disappeared worldwide within a decade of Britain\'s 1833 Emancipation Act',
+              'Abolition was universally opposed and slavery was quickly reinstated in every nation that attempted to end it'
             ],
             correctAnswer: 1,
-            explanation: 'Reform, Migration & Global Movements focuses on understanding key principles and patterns within AP World History.'
+            explanation: 'While the formal institution of slavery was abolished, exploitative labor systems persisted. Sharecropping in the U.S. South trapped former slaves in debt cycles; indentured servants from India and China replaced enslaved workers on Caribbean plantations; convict leasing (predominantly targeting Black Americans) was forced labor under another name.'
           },
           {
-            question: 'Why is Reform, Migration & Global Movements important in AP World History?',
+            question: 'Which factor was LEAST significant in the abolition of the Atlantic slave trade?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Enlightenment philosophy asserting natural rights and human equality undermined slavery\'s moral legitimacy',
+              'Economic arguments that free wage labor was more productive than enslaved labor for industrial capitalism',
+              'Voluntary decisions by West African kingdoms to stop participating in the slave trade for moral reasons',
+              'The success of the Haitian Revolution proving that enslaved people could overthrow their enslavers by force'
             ],
-            correctAnswer: 1,
-            explanation: 'Reform, Migration & Global Movements is a key topic in AP World History that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'While some African leaders opposed the slave trade, many West African kingdoms (Dahomey, Asante) continued participating because it provided them with European goods and weapons. The primary drivers of abolition were European/American movements combining Enlightenment ideas, religious activism (Quakers), economic arguments, and enslaved peoples\' own resistance.'
           }
         ]
       }
     },
     {
-      id: 'whreform1-content',
+      id: 'whreform1-migration',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## 📖 Global Migration Patterns (1750–1900)
 
-### Key concept 1
-The foundational principle underlying Reform, Migration & Global Movements. Understanding this concept is essential for mastering Reform, Migration & Global Movements in AP World History.
+Industrialization drove the **largest mass migration in human history** up to that point:
 
-### Key concept 2
-A critical component of understanding Reform, Migration & Global Movements. This builds on the previous concept and connects to broader themes in the course.
+### Major Migration Flows
 
-### Key concept 3
-An essential element that connects Reform, Migration & Global Movements to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Flow | Numbers | Push/Pull Factors |
+|---|---|---|
+| **Europe → Americas** | ~50 million (1800–1914) | Pushed by poverty, famine (Irish Potato Famine, 1845), religious persecution; pulled by land, jobs, freedom |
+| **China → Southeast Asia, Americas** | ~2.5 million+ | Pushed by Taiping Rebellion, poverty; pulled by gold rushes, railroad construction |
+| **India → Caribbean, E. Africa, Pacific** | ~1.5 million+ | Indentured labor replacing enslaved workers on sugar plantations |
+| **Rural → Urban (within countries)** | Hundreds of millions | Agricultural mechanization pushed; factory jobs pulled |
+
+### Impact of Migration
+- **Cultural exchange** — Chinatowns, Little Italys, and ethnic enclaves formed in cities worldwide
+- **Nativism** — hostility toward immigrants; Chinese Exclusion Act (U.S., 1882)
+- **Diaspora communities** — maintained cultural ties to homelands while adapting to new societies
+- **Demographic transformation** — the Americas, Australia, and New Zealand were fundamentally reshaped by European immigration
+
+> 🔑 **AP Connection:** The AP exam connects migration to both **push factors** (famine, war, poverty) and **pull factors** (economic opportunity, religious freedom). You must also address how receiving societies **responded** — often with xenophobia and exclusionary laws.
       `
     },
     {
-      id: 'whreform1-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the foundational principle underlying Reform, Migration & Global Movements?
-
-2) What concept describes a critical component of understanding Reform, Migration & Global Movements?
-
-3) Name the term for an essential element that connects Reform, Migration & Global Movements to broader themes.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Reform, Migration & Global Movements), Key concept 2 (A critical component of understanding Reform, Migration & Global Movements), and Key concept 3 (An essential element that connects Reform, Migration & Global Movements to broader themes).'
-      }
-    },
-    {
-      id: 'whreform1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Reform, Migration & Global Movements is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Reform, Migration & Global Movements describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Reform, Migration & Global Movements to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Reform, Migration & Global Movements. Key concept 2 — A critical component of understanding Reform, Migration & Global Movements. Key concept 3 — An essential element that connects Reform, Migration & Global Movements to broader themes.'
-      }
-    },
-    {
-      id: 'whreform1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Reform, Migration & Global Movements.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whreform1-applied',
+      id: 'whreform1-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: `**Check Your Understanding** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Reform, Migration & Global Movements on a free-response question. The best approach is:',
+            question: 'What was the most significant "push factor" driving Irish migration to the United States in the 1840s–1850s?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'The Irish government offered financial incentives for citizens to emigrate to the United States',
+              'The Great Famine (1845–1852), caused by a potato blight that destroyed the primary food source for the Irish poor',
+              'British colonial authorities forcibly deported Irish citizens to the Americas as punishment for political activity',
+              'The discovery of gold in California attracted Irish miners who sought rapid wealth'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The Great Famine (An Gorta Mór) killed approximately 1 million Irish people and drove another 1 million+ to emigrate — primarily to the United States. The potato blight destroyed the crop that the Irish poor depended on, while British land policies and grain exports exacerbated the crisis.'
           },
           {
-            question: 'When studying Reform, Migration & Global Movements, which strategy is most effective?',
+            question: 'How did the system of indentured labor that emerged after abolition connect to global migration patterns?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Indentured labor had no connection to migration — all workers stayed in their home countries',
+              'Millions of Indian, Chinese, and Japanese workers were contracted to work on plantations in the Caribbean, Africa, and Pacific islands, replacing formerly enslaved laborers',
+              'Indentured labor exclusively moved workers from Africa to Europe for factory employment',
+              'Indentured labor was identical to chattel slavery in every legal and practical aspect'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'After abolition, plantation owners recruited indentured workers — primarily from India and China — on multi-year contracts. Over 1.5 million Indians alone were sent to British colonies in the Caribbean (Trinidad, Guyana), East Africa, and the Pacific. While technically voluntary and temporary, conditions were often exploitative and workers had limited freedom.'
           }
         ]
       }
     }
   ]
-}
+};

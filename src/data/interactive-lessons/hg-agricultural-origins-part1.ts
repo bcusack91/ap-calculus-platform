@@ -2,26 +2,45 @@ export const hgAgriculturalOriginsPart1Data = {
   topicSlug: 'hg-agricultural-origins',
   sections: [
     {
-      id: 'hgagricu1-intro',
+      id: 'hgao1-intro',
       type: 'text' as const,
       content: `
-# 🌍 Origins & Diffusion of Agriculture
+# 🌍 Agricultural Origins & Hearths
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — The First Agricultural Revolution**
 
-Origins & Diffusion of Agriculture is a fundamental topic in AP Human Geography. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Agricultural Revolutions
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Origins & Diffusion of Agriculture |
-| **Key concept 2** | A critical component of understanding Origins & Diffusion of Agriculture |
-| **Key concept 3** | An essential element that connects Origins & Diffusion of Agriculture to broader themes |
+| Revolution | When | Key Change |
+|-----------|------|-----------|
+| **First (Neolithic)** | ~10,000 BCE | Shift from hunting/gathering to farming |
+| **Second** | 1700s–1900s | Mechanization, crop rotation, enclosure movement |
+| **Third (Green)** | 1960s–1980s | High-yield seeds, chemical fertilizers, irrigation |
+
+> 🔑 **AP Key Point:** The AP exam tests **where** agriculture originated (hearths), **why** it spread (diffusion), and **how** each revolution changed society.
+
+---
+
+## Agricultural Hearths
+
+Agriculture was independently invented in multiple locations:
+
+| Hearth | Region | Key Crops/Animals |
+|--------|--------|------------------|
+| **Fertile Crescent** | SW Asia (Iraq/Syria) | Wheat, barley, sheep, goats |
+| **Nile Valley** | Egypt | Wheat, flax |
+| **Indus Valley** | South Asia | Cotton, zebu cattle |
+| **Yellow River** | East Asia | Rice, millet, pigs |
+| **Mesoamerica** | Central America | Maize (corn), squash, beans |
+| **Andes** | South America | Potatoes, llamas, alpacas |
+
+> These hearths are examples of **independent invention** — agriculture was NOT spread from a single origin.
       `
     },
     {
-      id: 'hgagricu1-quiz1',
+      id: 'hgao1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +48,147 @@ Origins & Diffusion of Agriculture is a fundamental topic in AP Human Geography.
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Origins & Diffusion of Agriculture?',
+            question: 'The Fertile Crescent is located in modern-day:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Origins & Diffusion of Agriculture',
-              'A mathematical formula',
-              'A literary technique'
+              'Southwest Asia (Iraq/Syria region)',
+              'Southeast Asia',
+              'Sub-Saharan Africa',
+              'Central America'
             ],
-            correctAnswer: 1,
-            explanation: 'Origins & Diffusion of Agriculture focuses on understanding key principles and patterns within AP Human Geography.'
+            correctAnswer: 0,
+            explanation: 'The Fertile Crescent spans parts of modern Iraq, Syria, Lebanon, and Turkey — it is in Southwest Asia, one of the earliest agricultural hearths.'
           },
           {
-            question: 'Why is Origins & Diffusion of Agriculture important in AP Human Geography?',
+            question: 'The First Agricultural Revolution is significant because it:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Introduced mechanized farming equipment',
+              'Shifted humans from nomadic hunting to settled farming',
+              'Introduced genetically modified crops worldwide',
+              'Caused the Industrial Revolution directly'
             ],
             correctAnswer: 1,
-            explanation: 'Origins & Diffusion of Agriculture is a key topic in AP Human Geography that connects to multiple course themes.'
+            explanation: 'The Neolithic (First Agricultural) Revolution ~10,000 BCE shifted human societies from nomadic hunter-gatherers to settled agricultural communities — the foundation of civilization.'
           }
         ]
       }
     },
     {
-      id: 'hgagricu1-content',
+      id: 'hgao1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## How Agriculture Spread
 
-### Key concept 1
-The foundational principle underlying Origins & Diffusion of Agriculture. Understanding this concept is essential for mastering Origins & Diffusion of Agriculture in AP Human Geography.
+From each hearth, agricultural practices spread through **diffusion**:
 
-### Key concept 2
-A critical component of understanding Origins & Diffusion of Agriculture. This builds on the previous concept and connects to broader themes in the course.
+| Diffusion Type | How It Worked | Example |
+|---------------|--------------|---------|
+| **Relocation** | Farmers migrated, bringing seeds and techniques | Bantu migration spread farming across Africa |
+| **Contagious** | Neighboring peoples adopted farming from observation | Grain farming spread across the Fertile Crescent |
+| **Stimulus** | The IDEA of farming spread, but crops/methods adapted locally | Different grains domesticated in different climates |
 
-### Key concept 3
-An essential element that connects Origins & Diffusion of Agriculture to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Consequences of the First Agricultural Revolution
+
+1. **Sedentary settlements** — permanent villages, then cities
+2. **Population growth** — reliable food surplus supported more people
+3. **Social stratification** — surplus led to specialization, elites, inequality
+4. **Environmental change** — deforestation, irrigation, soil depletion
+5. **Gender roles shifted** — women often became primary farmers in early societies
       `
     },
     {
-      id: 'hgagricu1-input',
+      id: 'hgao1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Origins & Diffusion of Agriculture?
+1) The First Agricultural Revolution is also called the _______ Revolution.
 
-2) What concept describes a critical component of understanding Origins & Diffusion of Agriculture?
+2) Locations where agriculture was independently invented are called agricultural _______.
 
-3) Name the term for an essential element that connects Origins & Diffusion of Agriculture to broader themes.
-
-Use the exact term from this part.
+3) The spread of farming techniques from hearths to other regions is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Origins & Diffusion of Agriculture), Key concept 2 (A critical component of understanding Origins & Diffusion of Agriculture), and Key concept 3 (An essential element that connects Origins & Diffusion of Agriculture to broader themes).'
+        correctAnswers: ['Neolithic', 'hearths', 'diffusion'],
+        hint1: 'Named for the New Stone Age.',
+        hint2: 'Multiple independent origins worldwide.',
+        hint3: 'The spread of ideas and practices across space.',
+        explanation: 'The Neolithic Revolution = First Agricultural Revolution. Hearths = locations of independent invention. Diffusion = the spread of agricultural practices.'
       }
     },
     {
-      id: 'hgagricu1-dropdown',
+      id: 'hgao1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Hearth** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Origins & Diffusion of Agriculture is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Maize (corn), squash, and beans were first domesticated in ___',
+            options: ['Mesoamerica', 'Fertile Crescent', 'Yellow River valley', 'Indus Valley']
           },
           {
-            label: 'A critical component of understanding Origins & Diffusion of Agriculture describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Wheat, barley, sheep, and goats were first domesticated in ___',
+            options: ['Fertile Crescent', 'Nile Valley', 'Mesoamerica', 'Andes']
           },
           {
-            label: 'An essential element that connects Origins & Diffusion of Agriculture to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Potatoes, llamas, and alpacas were first domesticated in ___',
+            options: ['Andes (South America)', 'Indus Valley', 'Yellow River valley', 'Fertile Crescent']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Origins & Diffusion of Agriculture. Key concept 2 — A critical component of understanding Origins & Diffusion of Agriculture. Key concept 3 — An essential element that connects Origins & Diffusion of Agriculture to broader themes.'
+        correctAnswers: ['Mesoamerica', 'Fertile Crescent', 'Andes (South America)'],
+        hint1: 'Central America and modern-day Mexico.',
+        hint2: 'Southwest Asia between the Tigris and Euphrates.',
+        hint3: 'High-altitude South America.',
+        explanation: 'Mesoamerica = maize/beans/squash. Fertile Crescent = wheat/barley/sheep. Andes = potatoes/llamas.'
       }
     },
     {
-      id: 'hgagricu1-strategy',
+      id: 'hgao1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Agricultural Geography
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Origins & Diffusion of Agriculture.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Human Geography for higher scores.
+- **Know all 6 major hearths** and their key domesticates — this is frequently tested
+- Connect agricultural revolutions to population changes (DTM stages)
+- The Second Agricultural Revolution enabled the Industrial Revolution (fewer farmers needed = urban labor supply)
+- The Green Revolution (Third) saved millions from famine but also caused environmental issues
+- Be prepared to discuss **positive AND negative** consequences of each revolution
       `
     },
     {
-      id: 'hgagricu1-applied',
+      id: 'hgao1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Origins & Diffusion of Agriculture on a free-response question. The best approach is:',
+            question: 'The fact that maize was domesticated in Mesoamerica and rice in East Asia demonstrates:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Independent invention of agriculture in multiple hearths',
+              'That all agriculture originated from one source',
+              'Colonial diffusion of crop knowledge',
+              'That climate has no effect on crop domestication'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'Different crops were domesticated independently in different regions — this is independent invention, NOT diffusion from a single origin.'
           },
           {
-            question: 'When studying Origins & Diffusion of Agriculture, which strategy is most effective?',
+            question: 'The Green Revolution of the 1960s-1980s primarily increased food production through:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Expansion of farmland through deforestation',
+              'High-yield crop varieties, chemical fertilizers, and irrigation',
+              'Return to traditional farming methods',
+              'Genetic modification and cloning'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'The Green Revolution (Third Agricultural Revolution) used scientific advances — especially high-yield varieties of wheat and rice, along with chemical inputs and irrigation — to dramatically increase yields in developing countries.'
           }
         ]
       }
     }
   ]
-}
+};

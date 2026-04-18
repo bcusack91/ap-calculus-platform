@@ -2,26 +2,55 @@ export const englangDictionSyntaxPart1Data = {
   topicSlug: 'englang-diction-syntax',
   sections: [
     {
-      id: 'englangd1-intro',
+      id: 'elds1-intro',
       type: 'text' as const,
       content: `
-# ✍️ Diction & Syntax
+# 🧩 Diction and Syntax
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — The Two Core Levers of Rhetorical Style**
 
-Diction & Syntax is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Diction: Choosing the Right Words
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Diction & Syntax |
-| **Key concept 2** | A critical component of understanding Diction & Syntax |
-| **Key concept 3** | An essential element that connects Diction & Syntax to broader themes |
+**Diction** is deliberate word choice. Word-level decisions shape clarity, tone, and persuasion.
+
+### Diction Dimensions
+
+| Dimension | Spectrum | Impact |
+|----------|----------|--------|
+| **Register** | Formal <-> informal | Signals audience and context |
+| **Connotation** | Positive <-> neutral <-> negative | Influences emotional response |
+| **Specificity** | Abstract <-> concrete | Controls vividness and precision |
+| **Technicality** | Everyday <-> specialized jargon | Signals expertise, may limit accessibility |
+
+### Example
+- Neutral: "The policy changed."
+- Charged: "The policy was dismantled."
+- Positive spin: "The policy was modernized."
+
+Same event, different connotations.
+
+---
+
+## Syntax: Arranging the Words
+
+**Syntax** is sentence structure. It controls pacing, emphasis, and coherence.
+
+| Syntax Choice | Effect |
+|--------------|--------|
+| Short sentence | Urgency, punch, emphasis |
+| Long periodic sentence | Complexity, suspense, control |
+| Parallel structure | Rhythm, memorability |
+| Inversion | Emphasis on unusual element |
+| Fragment (intentional) | Dramatic effect |
+| Repetition | Reinforcement, momentum |
+
+> 🔑 Diction answers "which words?" Syntax answers "in what arrangement?" Together they produce rhetorical force.
       `
     },
     {
-      id: 'englangd1-quiz1',
+      id: 'elds1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +58,162 @@ Diction & Syntax is a fundamental topic in AP English Language. This part introd
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Diction & Syntax?',
+            question: 'What is the best definition of connotation?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Diction & Syntax',
-              'A mathematical formula',
-              'A literary technique'
+              'The dictionary definition of a word',
+              'The emotional/cultural associations a word carries beyond its literal meaning',
+              'The grammatical role of a word in a sentence',
+              'The number of syllables in a word'
             ],
             correctAnswer: 1,
-            explanation: 'Diction & Syntax focuses on understanding key principles and patterns within AP English Language.'
+            explanation: 'Connotation refers to implied associations and emotional coloring beyond denotation. For example, "slim" and "skinny" may denote similar body size but carry different connotations.'
           },
           {
-            question: 'Why is Diction & Syntax important in AP English Language?',
+            question: 'A writer uses three long explanatory sentences followed by "Enough." The final one-word sentence primarily creates:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Confusion',
+              'Syntactic emphasis and abrupt rhetorical force',
+              'Technical precision',
+              'Narrative neutrality'
             ],
             correctAnswer: 1,
-            explanation: 'Diction & Syntax is a key topic in AP English Language that connects to multiple course themes.'
+            explanation: 'The sudden contraction from long syntax to a one-word sentence creates contrast and emphasis. It signals emotional intensity and decisiveness.'
           }
         ]
       }
     },
     {
-      id: 'englangd1-content',
+      id: 'elds1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Analyzing Diction and Syntax Together
 
-### Key concept 1
-The foundational principle underlying Diction & Syntax. Understanding this concept is essential for mastering Diction & Syntax in AP English Language.
+Strong AP analysis shows how these features interact.
 
-### Key concept 2
-A critical component of understanding Diction & Syntax. This builds on the previous concept and connects to broader themes in the course.
+### Example Passage
+"For decades, we postponed difficult choices, deferred hard truths, and disguised structural failures as temporary setbacks. Today, that pretense ends."
 
-### Key concept 3
-An essential element that connects Diction & Syntax to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- Diction: "postponed," "deferred," "disguised" imply avoidance
+- Parallel syntax (three-part series) accumulates indictment
+- Short final sentence delivers finality and urgency
+
+### Common Pairings and Effects
+
+| Diction + Syntax | Typical Rhetorical Effect |
+|------------------|--------------------------|
+| Concrete diction + short clauses | Immediacy, visceral impact |
+| Abstract diction + long periodic syntax | Intellectual authority, reflective depth |
+| Loaded diction + repetition | Intensified emotional pressure |
+| Formal diction + balanced syntax | Credibility and control |
+
+## Avoiding Superficial Analysis
+
+Weak: "The author uses diction and syntax to persuade."
+
+Strong: "By pairing charged verbs ('exploit,' 'abandon') with clipped declaratives, the writer casts institutional actors as morally culpable and pushes readers toward urgent reform."
+
+### Quick AP Checklist
+1. Identify specific word patterns (charged, technical, concrete)
+2. Identify sentence patterns (length, repetition, structure)
+3. Explain audience effect
+4. Link to purpose
       `
     },
     {
-      id: 'englangd1-input',
+      id: 'elds1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Diction & Syntax?
+1) Diction refers to word _______.
 
-2) What concept describes a critical component of understanding Diction & Syntax?
+2) Syntax refers to sentence _______.
 
-3) Name the term for an essential element that connects Diction & Syntax to broader themes.
-
-Use the exact term from this part.
+3) A three-part repeated grammatical sequence is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Diction & Syntax), Key concept 2 (A critical component of understanding Diction & Syntax), and Key concept 3 (An essential element that connects Diction & Syntax to broader themes).'
+        correctAnswers: ['choice', 'structure', 'parallelism'],
+        hint1: 'Which words are selected.',
+        hint2: 'How those words are arranged.',
+        hint3: 'Same grammatical pattern repeated.',
+        explanation: 'Diction = choice of words. Syntax = sentence structure. Repeated grammar = parallelism.'
       }
     },
     {
-      id: 'englangd1-dropdown',
+      id: 'elds1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Diagnose the Effect** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Diction & Syntax is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Replacing "asked" with "demanded" changes diction by adding ___',
+            options: ['More forceful, confrontational connotation', 'More neutrality', 'More technical precision', 'No rhetorical difference']
           },
           {
-            label: 'A critical component of understanding Diction & Syntax describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A long sentence that postpones the main clause until the end is a ___ sentence',
+            options: ['Periodic', 'Fragmented', 'Run-on', 'Simple']
           },
           {
-            label: 'An essential element that connects Diction & Syntax to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Formal diction plus balanced syntax most often projects ___',
+            options: ['Authority and composure', 'Comic chaos', 'Childlike spontaneity', 'Randomness']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Diction & Syntax. Key concept 2 — A critical component of understanding Diction & Syntax. Key concept 3 — An essential element that connects Diction & Syntax to broader themes.'
+        correctAnswers: ['More forceful, confrontational connotation', 'Periodic', 'Authority and composure'],
+        hint1: 'Demanding is stronger than asking.',
+        hint2: 'Main clause delayed.',
+        hint3: 'Controlled language builds credibility.',
+        explanation: '"Demanded" intensifies connotation. Delayed main clause = periodic. Formal balance projects authority.'
       }
     },
     {
-      id: 'englangd1-strategy',
+      id: 'elds1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Diction and Syntax
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Diction & Syntax.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- Pair diction and syntax in your analysis; they are strongest together
+- Quote short, high-impact words rather than long blocks
+- Note sentence-length contrasts for pacing/emphasis analysis
+- Use precise terms: periodic, parallelism, anaphora, loaded diction, concrete imagery
+- Explain effect on audience and purpose every time
+- Quality beats quantity: 2 strong analyses > 8 vague device labels
       `
     },
     {
-      id: 'englangd1-applied',
+      id: 'elds1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Diction & Syntax on a free-response question. The best approach is:',
+            question: 'A writer describes pollution using words like "poisoned," "choked," and "scarred," then follows with short commands: "Look. Listen. Act." What is the combined rhetorical effect?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Neutral description and detached tone',
+              'Loaded diction plus clipped syntax to create alarm and urgency',
+              'Technical precision for scientific objectivity',
+              'Humor and irony'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The diction is emotionally charged and negative, framing pollution as active harm. The short imperative syntax accelerates pace and pushes readers toward immediate response.'
           },
           {
-            question: 'When studying Diction & Syntax, which strategy is most effective?',
+            question: 'Which analysis best meets AP expectations?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '"The author uses words and sentences."',
+              '"The syntax is varied."',
+              '"Through formal diction and periodic syntax, the writer delays key claims to build anticipation, reinforcing a controlled, authoritative argument."',
+              '"The passage sounds good."'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 2,
+            explanation: 'This response names specific choices and explains how they produce rhetorical effect tied to argument control. It demonstrates the precision and linkage AP analysis requires.'
           }
         ]
       }
     }
   ]
-}
+};

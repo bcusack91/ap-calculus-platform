@@ -2,26 +2,44 @@ export const englangToneVoiceAnalysisPart1Data = {
   topicSlug: 'englang-tone-voice-analysis',
   sections: [
     {
-      id: 'englangt1-intro',
+      id: 'eltva1-intro',
       type: 'text' as const,
       content: `
-# ✍️ Tone & Voice Analysis
+# 🎙️ Tone and Voice Analysis
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Distinguishing Authorial Attitude from Stylistic Persona**
 
-Tone & Voice Analysis is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Tone vs Voice
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Tone & Voice Analysis |
-| **Key concept 2** | A critical component of understanding Tone & Voice Analysis |
-| **Key concept 3** | An essential element that connects Tone & Voice Analysis to broader themes |
+Students often confuse these terms. They are related but distinct:
+
+| Term | Definition | Guiding Question |
+|------|------------|------------------|
+| **Tone** | The author's attitude toward subject or audience | How does the writer feel? |
+| **Voice** | The distinctive persona/style through which ideas are expressed | Who is this writer on the page? |
+
+### Tone Can Shift
+A passage might move from:
+- Concerned -> urgent
+- Skeptical -> hopeful
+- Detached -> indignant
+
+Tracking tone shifts is a core AP skill.
+
+### Voice Is More Stable
+Voice reflects recurring stylistic identity:
+- Conversational and witty
+- Formal and analytical
+- Reflective and meditative
+- Polemical and confrontational
+
+> 🔑 Tone is often local (sentence/paragraph level), while voice is global (whole-text style identity).
       `
     },
     {
-      id: 'englangt1-quiz1',
+      id: 'eltva1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +47,163 @@ Tone & Voice Analysis is a fundamental topic in AP English Language. This part i
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Tone & Voice Analysis?',
+            question: 'Which statement best distinguishes tone from voice?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Tone & Voice Analysis',
-              'A mathematical formula',
-              'A literary technique'
+              'Tone and voice are exact synonyms.',
+              "Tone is the writer's attitude; voice is the writer's stylistic persona.",
+              'Voice changes every paragraph, while tone stays fixed.',
+              'Tone only applies to fiction, voice only to nonfiction.'
             ],
             correctAnswer: 1,
-            explanation: 'Tone & Voice Analysis focuses on understanding key principles and patterns within AP English Language.'
+            explanation: 'Tone describes attitude (e.g., ironic, urgent, hopeful). Voice describes broader stylistic identity (e.g., formal, witty, authoritative). Tone can shift quickly; voice tends to persist across a text.'
           },
           {
-            question: 'Why is Tone & Voice Analysis important in AP English Language?',
+            question: 'A speaker begins calm and measured, then becomes outraged after listing injustices. This is best described as:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'A voice collapse',
+              'A tone shift from measured to indignant',
+              'A logical fallacy',
+              'A change in audience'
             ],
             correctAnswer: 1,
-            explanation: 'Tone & Voice Analysis is a key topic in AP English Language that connects to multiple course themes.'
+            explanation: 'The speaker-s attitude changes from measured to indignant, which is a tone shift. The underlying voice may remain the same (e.g., formal and authoritative) even as tone evolves.'
           }
         ]
       }
     },
     {
-      id: 'englangt1-content',
+      id: 'eltva1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## How Writers Create Tone and Voice
 
-### Key concept 1
-The foundational principle underlying Tone & Voice Analysis. Understanding this concept is essential for mastering Tone & Voice Analysis in AP English Language.
+### Diction and Connotation
+| Word Pair | Tone Difference |
+|-----------|-----------------|
+| "slim" vs "skinny" | positive vs negative nuance |
+| "assertive" vs "aggressive" | confident vs hostile |
+| "economical" vs "cheap" | prudent vs stingy |
 
-### Key concept 2
-A critical component of understanding Tone & Voice Analysis. This builds on the previous concept and connects to broader themes in the course.
+### Syntax and Rhythm
+- Long periodic sentences can sound formal, reflective, or controlled
+- Short declaratives can sound forceful, urgent, or blunt
+- Repetition can sound passionate, insistent, or obsessive
 
-### Key concept 3
-An essential element that connects Tone & Voice Analysis to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Figurative and Structural Cues
+- Irony can create sardonic or skeptical tone
+- Rhetorical questions can create confrontational or invitational tone
+- Strategic concessions can create fair-minded, balanced voice
+
+## Tone Vocabulary (Use Precise Words)
+
+| Weak Term | Stronger Alternatives |
+|-----------|-----------------------|
+| "nice" | conciliatory, warm, appreciative |
+| "mean" | scornful, caustic, contemptuous |
+| "sad" | elegiac, mournful, somber |
+| "angry" | indignant, outraged, accusatory |
+| "serious" | earnest, grave, resolute |
+
+### AP Writing Move
+Do not just label tone. Explain progression:
+"The author shifts from cautiously analytical to sharply accusatory, a turn that mirrors the essay's movement from diagnosis to moral indictment."
       `
     },
     {
-      id: 'englangt1-input',
+      id: 'eltva1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Tone & Voice Analysis?
+1) The writer's attitude toward the subject is called _______.
 
-2) What concept describes a critical component of understanding Tone & Voice Analysis?
+2) The writer's recurring stylistic persona is called _______.
 
-3) Name the term for an essential element that connects Tone & Voice Analysis to broader themes.
-
-Use the exact term from this part.
+3) A shift from calm to outraged is a tone _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Tone & Voice Analysis), Key concept 2 (A critical component of understanding Tone & Voice Analysis), and Key concept 3 (An essential element that connects Tone & Voice Analysis to broader themes).'
+        correctAnswers: ['tone', 'voice', 'shift'],
+        hint1: 'Attitude toward topic/audience.',
+        hint2: 'The "who" of the writing persona.',
+        hint3: 'Movement from one attitude to another.',
+        explanation: 'Tone = attitude. Voice = stylistic persona. Movement between attitudes = tone shift.'
       }
     },
     {
-      id: 'englangt1-dropdown',
+      id: 'eltva1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Identify Tone and Voice Moves** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Tone & Voice Analysis is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: '"I once believed this system was fair. I no longer can." This likely signals a tone of ___',
+            options: ['Disillusionment / sober reconsideration', 'Celebratory optimism', 'Comic detachment', 'Technical neutrality']
           },
           {
-            label: 'A critical component of understanding Tone & Voice Analysis describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Consistent use of precise terms, balanced concessions, and formal syntax contributes most to ___',
+            options: ['An authoritative analytical voice', 'A chaotic voice', 'A playful comic tone only', 'No rhetorical effect']
           },
           {
-            label: 'An essential element that connects Tone & Voice Analysis to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Replacing "angry" with "indignant" in analysis improves ___',
+            options: ['Precision of tone vocabulary', 'Sentence length', 'Plot summary', 'Grammar correctness only']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Tone & Voice Analysis. Key concept 2 — A critical component of understanding Tone & Voice Analysis. Key concept 3 — An essential element that connects Tone & Voice Analysis to broader themes.'
+        correctAnswers: ['Disillusionment / sober reconsideration', 'An authoritative analytical voice', 'Precision of tone vocabulary'],
+        hint1: 'The writer abandons prior trust.',
+        hint2: 'Formal balance + precision = authority.',
+        hint3: 'Specific tone words are stronger on AP.',
+        explanation: '"I no longer can" suggests disillusionment. Formal precision builds authoritative voice. "Indignant" is more exact than "angry."'
       }
     },
     {
-      id: 'englangt1-strategy',
+      id: 'eltva1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Tone and Voice
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Tone & Voice Analysis.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- Use precise tone adjectives (indignant, sardonic, elegiac) rather than vague words
+- Identify WHERE tone shifts and explain WHY that shift matters
+- Distinguish local tone effects from overall voice identity
+- Support tone claims with diction/syntax evidence, not intuition
+- In essays, connect tone evolution to argument progression
+- Avoid over-labeling: 1-2 accurate tone terms are better than a long list
       `
     },
     {
-      id: 'englangt1-applied',
+      id: 'eltva1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Tone & Voice Analysis on a free-response question. The best approach is:',
+            question: 'A writer opens with neutral policy summary, then recounts victims stories, then ends with "Silence is complicity." What is the best description?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Tone remains neutral throughout',
+              'Tone shifts from analytical to morally urgent, intensifying persuasive force',
+              'Voice disappears in the conclusion',
+              'The ending is irrelevant to tone'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The passage moves from detached analysis toward urgent moral judgment. This tonal escalation aligns with persuasive intent: inform first, then compel ethical response.'
           },
           {
-            question: 'When studying Tone & Voice Analysis, which strategy is most effective?',
+            question: 'Which AP analysis sentence is strongest?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '"The tone is serious."',
+              '"The author has a voice."',
+              '"Through clipped declaratives and charged verbs, the speaker adopts an indignant tone that culminates in a direct call for accountability."',
+              '"The tone is formal and informal."'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 2,
+            explanation: 'This choice identifies concrete language features, uses precise tone vocabulary, and links style to rhetorical effect. That is the depth AP analysis requires.'
           }
         ]
       }
     }
   ]
-}
+};

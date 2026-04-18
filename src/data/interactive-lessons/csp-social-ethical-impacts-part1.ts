@@ -2,26 +2,45 @@ export const cspSocialEthicalImpactsPart1Data = {
   topicSlug: 'csp-social-ethical-impacts',
   sections: [
     {
-      id: 'cspsocia1-intro',
+      id: 'cspsei1-intro',
       type: 'text' as const,
       content: `
-# 🖥️ Social & Ethical Impacts
+# ⚖️ Social & Ethical Impacts of Computing
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Privacy, Surveillance, Intellectual Property, and Responsibility**
 
-Social & Ethical Impacts is a fundamental topic in AP CS Principles. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Privacy in the Digital Age
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Social & Ethical Impacts |
-| **Key concept 2** | A critical component of understanding Social & Ethical Impacts |
-| **Key concept 3** | An essential element that connects Social & Ethical Impacts to broader themes |
+Every digital interaction generates data. The tension between **convenience** and **privacy** is a defining issue of modern computing.
+
+| Scenario | Convenience | Privacy Concern |
+|----------|-----------|----------------|
+| **Location services** | Maps, directions, local recommendations | Company tracks everywhere you go |
+| **Smart speakers** | Hands-free control, quick answers | Device may record conversations |
+| **Social media** | Stay connected, share experiences | Platform sells behavioral data to advertisers |
+| **Fitness trackers** | Health monitoring | Insurance companies could access health data |
+| **Email scanning** | Better spam filtering | Provider reads email content for ad targeting |
+
+> 🔑 **Privacy trade-offs** are everywhere. Users often give up personal data in exchange for free or convenient services without fully understanding what they are agreeing to.
+
+---
+
+## Government Surveillance vs Individual Privacy
+
+| Argument FOR Surveillance | Argument FOR Privacy |
+|--------------------------|---------------------|
+| National security and counter-terrorism | Constitutional right to privacy |
+| Crime prevention | Surveillance can be abused by authorities |
+| Public safety | Chilling effect on free speech |
+| Finding missing persons | Disproportionate impact on marginalized groups |
+
+There is no single right answer — this is an ongoing societal debate.
       `
     },
     {
-      id: 'cspsocia1-quiz1',
+      id: 'cspsei1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +48,164 @@ Social & Ethical Impacts is a fundamental topic in AP CS Principles. This part i
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Social & Ethical Impacts?',
+            question: 'What is the primary trade-off users make when using free online services?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Social & Ethical Impacts',
-              'A mathematical formula',
-              'A literary technique'
+              'Speed for accuracy',
+              'Personal data and privacy for convenience and free access',
+              'Security for simplicity',
+              'Storage space for processing power'
             ],
             correctAnswer: 1,
-            explanation: 'Social & Ethical Impacts focuses on understanding key principles and patterns within AP CS Principles.'
+            explanation: 'Free services (social media, email, search) are funded by advertising. Companies collect user data to target ads. Users trade privacy and personal data for free access to the service.'
           },
           {
-            question: 'Why is Social & Ethical Impacts important in AP CS Principles?',
+            question: 'What is a "chilling effect" in the context of surveillance?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Surveillance makes computers run slower',
+              'People self-censor and avoid free expression because they know they are being watched',
+              'Surveillance lowers the temperature of data centers',
+              'It refers to cold storage of digital data'
             ],
             correctAnswer: 1,
-            explanation: 'Social & Ethical Impacts is a key topic in AP CS Principles that connects to multiple course themes.'
+            explanation: 'When people know they are being surveilled, they may avoid expressing controversial opinions, organizing protests, or engaging in lawful but sensitive activities. This self-censorship is the chilling effect.'
           }
         ]
       }
     },
     {
-      id: 'cspsocia1-content',
+      id: 'cspsei1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Intellectual Property
 
-### Key concept 1
-The foundational principle underlying Social & Ethical Impacts. Understanding this concept is essential for mastering Social & Ethical Impacts in AP CS Principles.
+**Intellectual property (IP)** refers to creations of the mind protected by law.
 
-### Key concept 2
-A critical component of understanding Social & Ethical Impacts. This builds on the previous concept and connects to broader themes in the course.
+| Protection | What It Covers | Duration |
+|-----------|---------------|----------|
+| **Copyright** | Creative works (books, music, code, art) | Life of author + 70 years |
+| **Patent** | Inventions and processes | 20 years |
+| **Trademark** | Brands, logos, slogans | Indefinite (if maintained) |
 
-### Key concept 3
-An essential element that connects Social & Ethical Impacts to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Software Licensing
+
+| License Type | Permissions |
+|-------------|------------|
+| **Proprietary** | Cannot view, modify, or distribute source code |
+| **Open source** | Can view, modify, and distribute source code |
+| **Creative Commons** | Flexible: author chooses what is allowed (share, modify, commercial use) |
+| **Public domain** | No restrictions — free for any use |
+
+## Responsibility in Computing
+
+### Who is responsible when technology causes harm?
+- **Developers** who create systems without adequate testing or bias checks
+- **Companies** that deploy technology without considering negative impacts
+- **Users** who misuse technology for harmful purposes
+- **Government** for regulation (or lack thereof)
+
+### Ethical Considerations for Developers
+- Consider potential misuse of your software
+- Test for bias across demographic groups
+- Protect user data and privacy by default
+- Be transparent about data collection and use
+- Report security vulnerabilities responsibly
       `
     },
     {
-      id: 'cspsocia1-input',
+      id: 'cspsei1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Social & Ethical Impacts?
+1) Legal protection for creative works like books, music, and software is called _______.
 
-2) What concept describes a critical component of understanding Social & Ethical Impacts?
+2) Software that allows anyone to view, modify, and share the source code is called _______ source.
 
-3) Name the term for an essential element that connects Social & Ethical Impacts to broader themes.
-
-Use the exact term from this part.
+3) The trade-off between personal _______ and convenience is a central issue in modern computing.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Social & Ethical Impacts), Key concept 2 (A critical component of understanding Social & Ethical Impacts), and Key concept 3 (An essential element that connects Social & Ethical Impacts to broader themes).'
+        correctAnswers: ['copyright', 'open', 'privacy'],
+        hint1: 'The right to copy the work.',
+        hint2: 'The source code is open to all.',
+        hint3: 'Keeping personal information private.',
+        explanation: 'Copyright protects creative works. Open source = freely available code. Privacy vs convenience is the key trade-off.'
       }
     },
     {
-      id: 'cspsocia1-dropdown',
+      id: 'cspsei1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Protection** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Social & Ethical Impacts is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'A unique invention for a new type of battery is protected by a ___',
+            options: ['Patent', 'Copyright', 'Trademark', 'Creative Commons']
           },
           {
-            label: 'A critical component of understanding Social & Ethical Impacts describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A logo and brand name (like the Nike swoosh) is protected by a ___',
+            options: ['Trademark', 'Patent', 'Copyright', 'Public domain']
           },
           {
-            label: 'An essential element that connects Social & Ethical Impacts to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'An author releases a book that anyone can share but not sell commercially. This uses ___',
+            options: ['Creative Commons license', 'Public domain', 'Patent', 'Proprietary license']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Social & Ethical Impacts. Key concept 2 — A critical component of understanding Social & Ethical Impacts. Key concept 3 — An essential element that connects Social & Ethical Impacts to broader themes.'
+        correctAnswers: ['Patent', 'Trademark', 'Creative Commons license'],
+        hint1: 'Inventions get patents.',
+        hint2: 'Brand identity protection.',
+        hint3: 'Flexible licensing with specific conditions.',
+        explanation: 'Inventions = patent. Brands = trademark. Selective sharing = Creative Commons.'
       }
     },
     {
-      id: 'cspsocia1-strategy',
+      id: 'cspsei1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Social & Ethical Impacts
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Social & Ethical Impacts.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP CS Principles for higher scores.
+- Know the **privacy vs convenience** trade-off — free services collect data for targeted ads
+- Be able to argue BOTH sides of surveillance vs privacy debates
+- **Copyright** (creative works), **Patent** (inventions), **Trademark** (brands) — know the differences
+- Know software license types: proprietary, open source, Creative Commons, public domain
+- Ethical questions often have no single "right" answer — show you understand BOTH sides
+- The AP exam tests whether you can identify stakeholders and impacts, not whether you pick a "correct" side
       `
     },
     {
-      id: 'cspsocia1-applied',
+      id: 'cspsei1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Social & Ethical Impacts on a free-response question. The best approach is:',
+            question: 'A developer creates an app and releases it under an open-source license. What can users do?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Only use the app; they cannot see the code',
+              'View, modify, and redistribute the source code',
+              'Nothing — open source means the app is not functional',
+              'Only use it for educational purposes'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Open source means the source code is freely available. Users can view it, modify it, and distribute their modifications. This enables collaboration, transparency, and community-driven improvement.'
           },
           {
-            question: 'When studying Social & Ethical Impacts, which strategy is most effective?',
+            question: 'A company collects user location data and sells it to advertisers without informing users. Which ethical principle is violated?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Copyright law',
+              'Transparency and informed consent regarding data collection',
+              'Open-source licensing',
+              'Patent protection'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Users should be informed about what data is collected and how it is used. Selling location data without disclosure violates the principle of transparency and informed consent — a key privacy issue.'
           }
         ]
       }
     }
   ]
-}
+};

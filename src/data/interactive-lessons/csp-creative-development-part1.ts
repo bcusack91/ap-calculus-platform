@@ -2,26 +2,43 @@ export const cspCreativeDevelopmentPart1Data = {
   topicSlug: 'csp-creative-development',
   sections: [
     {
-      id: 'cspcreat1-intro',
+      id: 'cspcd1-intro',
       type: 'text' as const,
       content: `
-# 🖥️ Creative Development
+# 💡 Creative Development
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Program Design, Collaboration, and Development Process**
 
-Creative Development is a fundamental topic in AP CS Principles. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## The Development Process
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Creative Development |
-| **Key concept 2** | A critical component of understanding Creative Development |
-| **Key concept 3** | An essential element that connects Creative Development to broader themes |
+Creating software is not a straight line from idea to finished product. It is an **iterative** process involving planning, designing, coding, testing, and refining.
+
+| Phase | Description | Example |
+|-------|-----------|---------|
+| **Investigating** | Define the problem and gather requirements | Survey users about what features they need |
+| **Designing** | Plan the solution using pseudocode, flowcharts | Draw a flowchart for the checkout process |
+| **Prototyping** | Build an initial working version | Create a basic version with core features only |
+| **Testing** | Verify correctness and find bugs | Run the program with edge cases |
+| **Reflecting** | Evaluate and improve | Collect feedback, plan next iteration |
+
+> 🔑 **Iterative development** means repeating these phases. After reflecting, you go back to investigating or designing to improve.
+
+---
+
+## Program Design with Purpose
+
+Every program is designed to solve a problem or express a creative idea.
+
+- **Purpose**: What the program is intended to do
+- **Function**: How the program behaves and what it produces
+- **Input**: Data the user provides (clicks, text, sensor data)
+- **Output**: What the program displays or produces (text, graphics, sound)
       `
     },
     {
-      id: 'cspcreat1-quiz1',
+      id: 'cspcd1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +46,164 @@ Creative Development is a fundamental topic in AP CS Principles. This part intro
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Creative Development?',
+            question: 'Which best describes iterative development?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Creative Development',
-              'A mathematical formula',
-              'A literary technique'
+              'Writing all code at once and testing only at the end',
+              'Repeating cycles of designing, prototyping, testing, and refining',
+              'Having one person write the entire program alone',
+              'Copying code from existing programs without changes'
             ],
             correctAnswer: 1,
-            explanation: 'Creative Development focuses on understanding key principles and patterns within AP CS Principles.'
+            explanation: 'Iterative development revisits the design and implementation multiple times. Each cycle adds features, fixes bugs, and improves the product based on feedback.'
           },
           {
-            question: 'Why is Creative Development important in AP CS Principles?',
+            question: 'What is the "purpose" of a program?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'The programming language it is written in',
+              'The number of lines of code it contains',
+              'The problem it solves or the creative idea it expresses',
+              'The speed at which it runs'
             ],
-            correctAnswer: 1,
-            explanation: 'Creative Development is a key topic in AP CS Principles that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'A program purpose describes what it is intended to do — the problem it solves for users or the creative expression it enables.'
           }
         ]
       }
     },
     {
-      id: 'cspcreat1-content',
+      id: 'cspcd1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Collaboration in Development
 
-### Key concept 1
-The foundational principle underlying Creative Development. Understanding this concept is essential for mastering Creative Development in AP CS Principles.
+Working with others produces better programs because diverse perspectives identify blind spots, generate more creative solutions, and catch more errors.
 
-### Key concept 2
-A critical component of understanding Creative Development. This builds on the previous concept and connects to broader themes in the course.
+### Collaboration Benefits
+- **Diverse perspectives** catch edge cases one person might miss
+- **Code review** improves quality and finds bugs early
+- **Pair programming** combines a "driver" (types code) and a "navigator" (plans logic)
+- **Consultation** with users ensures the program meets real needs
 
-### Key concept 3
-An essential element that connects Creative Development to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Documentation and Comments
+
+\`\`\`
+// This function calculates the average score
+// Input: a list of numeric scores
+// Output: the mean value as a decimal
+PROCEDURE calculateAverage(scores)
+{
+    sum ← 0
+    FOR EACH score IN scores
+    {
+        sum ← sum + score
+    }
+    RETURN sum / LENGTH(scores)
+}
+\`\`\`
+
+Documentation helps:
+- Others understand your code
+- You remember your own logic later
+- Teams work together effectively
+
+## Acknowledging Code Sources
+When using code written by others (libraries, APIs, open-source), always credit the original author. This is both ethical and often legally required.
       `
     },
     {
-      id: 'cspcreat1-input',
+      id: 'cspcd1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Creative Development?
+1) The process of repeating design-prototype-test-refine cycles is called _______ development.
 
-2) What concept describes a critical component of understanding Creative Development?
+2) In pair programming, the person who types the code is called the _______.
 
-3) Name the term for an essential element that connects Creative Development to broader themes.
-
-Use the exact term from this part.
+3) Written explanations of what code does, placed inside the source code, are called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Creative Development), Key concept 2 (A critical component of understanding Creative Development), and Key concept 3 (An essential element that connects Creative Development to broader themes).'
+        correctAnswers: ['iterative', 'driver', 'comments'],
+        hint1: 'You iterate (repeat) the process.',
+        hint2: 'They drive the keyboard.',
+        hint3: 'They comment on what the code does.',
+        explanation: 'Iterative = repeated cycles. Driver = types code. Comments = in-code documentation.'
       }
     },
     {
-      id: 'cspcreat1-dropdown',
+      id: 'cspcd1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Phase** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Creative Development is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Drawing a flowchart before writing code belongs to the ___ phase',
+            options: ['Designing', 'Testing', 'Investigating', 'Reflecting']
           },
           {
-            label: 'A critical component of understanding Creative Development describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Running the program with unusual inputs to find bugs is the ___ phase',
+            options: ['Testing', 'Designing', 'Prototyping', 'Investigating']
           },
           {
-            label: 'An essential element that connects Creative Development to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Gathering user feedback after a release belongs to the ___ phase',
+            options: ['Reflecting', 'Prototyping', 'Designing', 'Testing']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Creative Development. Key concept 2 — A critical component of understanding Creative Development. Key concept 3 — An essential element that connects Creative Development to broader themes.'
+        correctAnswers: ['Designing', 'Testing', 'Reflecting'],
+        hint1: 'Planning the solution visually.',
+        hint2: 'Looking for errors and edge cases.',
+        hint3: 'Evaluating the finished product.',
+        explanation: 'Flowcharts = design. Bug-finding = testing. Feedback evaluation = reflecting.'
       }
     },
     {
-      id: 'cspcreat1-strategy',
+      id: 'cspcd1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Creative Development
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Creative Development.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP CS Principles for higher scores.
+- The Create Performance Task requires you to describe the **purpose**, **function**, and **development process** of your program
+- Know the difference between **purpose** (why it exists) and **function** (what it does)
+- Collaboration questions test whether you understand the BENEFITS (diverse perspectives, bug-catching) not just that teamwork exists
+- Always document your code — the AP exam tests your ability to explain your code in writing
+- Remember: iterative development is the correct approach. Waterfall (all planning then all coding) is NOT the expected answer
       `
     },
     {
-      id: 'cspcreat1-applied',
+      id: 'cspcd1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Creative Development on a free-response question. The best approach is:',
+            question: 'A student builds an app, gets feedback from friends, redesigns the interface, and releases a new version. This process illustrates:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Linear development',
+              'Iterative development',
+              'Parallel processing',
+              'Abstraction'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Building, getting feedback, redesigning, and releasing again is a textbook example of iterative development — repeating the cycle to improve the product.'
           },
           {
-            question: 'When studying Creative Development, which strategy is most effective?',
+            question: 'Which is the BEST reason to collaborate on a programming project?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'It reduces the total amount of code needed',
+              'Different perspectives help identify problems and generate creative solutions',
+              'It eliminates all bugs in the final product',
+              'It makes the program run faster'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Diverse perspectives are the primary benefit of collaboration. Different team members bring different experiences, helping catch edge cases and produce more creative solutions.'
           }
         ]
       }
     }
   ]
-}
+};

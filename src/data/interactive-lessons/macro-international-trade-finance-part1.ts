@@ -1,175 +1,84 @@
 export const macroInternationalTradeFinancePart1Data = {
   topicSlug: 'macro-international-trade-finance',
   sections: [
-    {
-      id: 'macroint1-intro',
-      type: 'text' as const,
-      content: `
-# 📈 International Trade & Finance
+    {id:'macrointr1-intro',type:'text' as const,content:`
+# 🌐 International Trade & Finance
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Exchange Rates & the Balance of Payments**
 
-International Trade & Finance is a fundamental topic in AP Macroeconomics. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Exchange Rates |
+| Supply & Demand for Currencies |
+| Balance of Payments |
+| Trade Deficits & Surpluses |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying International Trade & Finance |
-| **Key concept 2** | A critical component of understanding International Trade & Finance |
-| **Key concept 3** | An essential element that connects International Trade & Finance to broader themes |
-      `
-    },
-    {
-      id: 'macroint1-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of International Trade & Finance?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within International Trade & Finance',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'International Trade & Finance focuses on understanding key principles and patterns within AP Macroeconomics.'
-          },
-          {
-            question: 'Why is International Trade & Finance important in AP Macroeconomics?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'International Trade & Finance is a key topic in AP Macroeconomics that connects to multiple course themes.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'macroint1-content',
-      type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
+> 🔑 **Key Concept:** The AP exam tests exchange rate determination through **supply and demand for currencies** in the foreign exchange (forex) market, and how changes in exchange rates affect **net exports** and the broader economy. You must also understand the **balance of payments** accounts.
+`},
+    {id:'macrointr1-exchange',type:'text' as const,content:`
+## 📖 Exchange Rates
 
-### Key concept 1
-The foundational principle underlying International Trade & Finance. Understanding this concept is essential for mastering International Trade & Finance in AP Macroeconomics.
+### Key Definitions
+- **Exchange rate:** The price of one currency in terms of another (e.g., $1 = 110 yen)
+- **Appreciation:** A currency increases in value (buys more foreign currency)
+- **Depreciation:** A currency decreases in value (buys less foreign currency)
 
-### Key concept 2
-A critical component of understanding International Trade & Finance. This builds on the previous concept and connects to broader themes in the course.
+### Effects of Currency Changes
 
-### Key concept 3
-An essential element that connects International Trade & Finance to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'macroint1-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+| Dollar... | U.S. Exports | U.S. Imports | Net Exports | AD |
+|---|---|---|---|---|
+| **Appreciates** (stronger) | More expensive for foreigners → exports ↓ | Cheaper for Americans → imports ↑ | ↓ (deficit widens) | Shifts LEFT |
+| **Depreciates** (weaker) | Cheaper for foreigners → exports ↑ | More expensive for Americans → imports ↓ | ↑ (deficit narrows) | Shifts RIGHT |
 
-1) What term refers to the foundational principle underlying International Trade & Finance?
+### What Causes Currency Appreciation/Depreciation?
 
-2) What concept describes a critical component of understanding International Trade & Finance?
+| Factor | Effect on Dollar |
+|---|---|
+| **Higher U.S. interest rates** | Dollar APPRECIATES — foreign investors buy dollars to invest in higher-return U.S. assets (demand for dollars rises) |
+| **Higher U.S. inflation** | Dollar DEPRECIATES — U.S. goods become relatively more expensive (demand for dollars falls) |
+| **Stronger U.S. economy (growth)** | Dollar APPRECIATES — attracted foreign investment increases demand for dollars |
+| **Increased demand for U.S. exports** | Dollar APPRECIATES — foreigners need dollars to buy U.S. goods |
+| **U.S. trade deficit** | Dollar DEPRECIATES — more dollars flow out to buy imports than flow in from exports |
 
-3) Name the term for an essential element that connects International Trade & Finance to broader themes.
+> 🔑 **AP Connection:** The AP exam frequently asks: "If U.S. interest rates rise relative to other countries, what happens to the dollar?" Answer: Dollar APPRECIATES because foreign investors demand more dollars to invest in higher-yield U.S. assets → demand for dollars rises in the forex market → dollar value rises.
+`},
+    {id:'macrointr1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
+      {question:'If the U.S. dollar appreciates (increases in value) relative to the Japanese yen, what happens to U.S. exports to Japan?',options:['U.S. exports to Japan increase because American goods become cheaper for Japanese buyers','U.S. exports to Japan decrease because American goods become more expensive for Japanese buyers when priced in yen','U.S. exports are unaffected by exchange rate changes because they are priced in dollars','U.S. exports to Japan increase because a stronger dollar signals a healthier American economy'],correctAnswer:1,explanation:'When the dollar appreciates against the yen, each dollar costs more yen. U.S. goods — priced in dollars — become more expensive for Japanese consumers when converted to yen. A $10 product that previously cost 1,100 yen (at $1 = 110 yen) now costs 1,300 yen (at $1 = 130 yen). This price increase reduces U.S. exports to Japan.'},
+      {question:'If inflation in the United States rises significantly higher than inflation in Europe, what is the most likely effect on the dollar-euro exchange rate?',options:['The dollar appreciates because higher inflation signals a stronger, growing economy','The dollar depreciates because U.S. goods become relatively more expensive, reducing foreign demand for dollars','The exchange rate does not change because inflation affects only domestic prices, not currency values','The euro depreciates because European investors prefer to hold assets in higher-inflation currencies'],correctAnswer:1,explanation:'Higher U.S. inflation makes American goods more expensive relative to European goods. Foreign buyers shift from U.S. products to cheaper European alternatives → demand for dollars falls (fewer foreigners need dollars to buy U.S. goods) → the dollar depreciates relative to the euro. Additionally, U.S. consumers buy more imports (now relatively cheaper) → supply of dollars in the forex market increases → further dollar depreciation.'}
+    ]}},
+    {id:'macrointr1-bop',type:'text' as const,content:`
+## 📖 Balance of Payments
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying International Trade & Finance), Key concept 2 (A critical component of understanding International Trade & Finance), and Key concept 3 (An essential element that connects International Trade & Finance to broader themes).'
-      }
-    },
-    {
-      id: 'macroint1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying International Trade & Finance is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding International Trade & Finance describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects International Trade & Finance to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying International Trade & Finance. Key concept 2 — A critical component of understanding International Trade & Finance. Key concept 3 — An essential element that connects International Trade & Finance to broader themes.'
-      }
-    },
-    {
-      id: 'macroint1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
+The balance of payments records ALL economic transactions between a country and the rest of the world.
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of International Trade & Finance.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+| Account | Includes | Example |
+|---|---|---|
+| **Current account** | Trade in goods & services, investment income, net transfers | U.S. imports oil (trade); U.S. company earns profits from a foreign factory (income); foreign aid sent abroad (transfer) |
+| **Capital/Financial account** | Purchase/sale of financial assets and real assets | Foreign investor buys U.S. Treasury bonds; American company builds a factory in Mexico |
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Macroeconomics for higher scores.
-      `
-    },
-    {
-      id: 'macroint1-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain International Trade & Finance on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying International Trade & Finance, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
-    }
+### Key Rule: Current Account + Capital Account = 0
+
+If a country has a **current account deficit** (imports > exports), it must have a **capital account surplus** (more foreign investment flowing IN).
+
+### Why?
+- When the U.S. buys more goods from abroad than it sells (current account deficit), dollars flow out to foreign sellers
+- Those foreign sellers (or their governments) use those dollars to buy U.S. assets (Treasury bonds, stocks, real estate) — creating a capital account surplus
+- The U.S. current account deficit (≈ $800B+) is financed by foreign purchases of U.S. assets
+
+### Trade Deficits — Good or Bad?
+| Argument: Deficits Are Concerning | Argument: Deficits Are Not Necessarily Bad |
+|---|---|
+| U.S. manufacturing jobs lost to imports | Consumers benefit from cheaper imported goods |
+| Growing foreign debt (foreigners own more U.S. assets) | Capital inflows fund domestic investment |
+| Dependence on foreign lending | Strong dollar attracts foreign investment |
+
+> 🔑 **AP Connection:** The relationship between the current account and capital account is critical: **if one is in deficit, the other must be in surplus** (they sum to zero). This is tested in both multiple-choice and FRQ.
+`},
+    {id:'macrointr1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
+      {question:'If the United States has a current account deficit of $500 billion, what must be true about its capital (financial) account?',options:['The capital account must also be in deficit by $500 billion — both accounts move in the same direction','The capital account must be in surplus of approximately $500 billion — the two accounts must balance to zero','The capital account is unrelated to the current account and can be in either surplus or deficit independently','The capital account is always zero because the United States does not allow foreign investment in domestic assets'],correctAnswer:1,explanation:'The balance of payments must balance: Current Account + Capital Account ≈ 0. If the current account has a $500B deficit (the U.S. imports more than it exports), the capital account must show a roughly $500B surplus (foreign investment flowing into the U.S. exceeds U.S. investment flowing abroad). The dollars sent abroad to buy imports come back as foreign purchases of U.S. stocks, bonds, and real estate.'},
+      {question:'The Federal Reserve raises U.S. interest rates. What is the expected effect on the U.S. dollar and net exports?',options:['The dollar depreciates and net exports increase because lower rates attract foreign investment','The dollar appreciates and net exports decrease — higher rates attract foreign capital (increasing demand for dollars), but the stronger dollar makes U.S. exports more expensive and imports cheaper','The dollar is unaffected because the Federal Reserve cannot influence exchange rates through interest rate policy','The dollar depreciates and net exports decrease because higher rates cause a recession that reduces all economic activity'],correctAnswer:1,explanation:'Higher U.S. interest rates → higher returns on U.S. financial assets → foreign investors buy more U.S. assets → they need dollars to do so → demand for dollars rises in the forex market → dollar appreciates. However, a stronger dollar makes U.S. exports more expensive for foreigners (exports ↓) and foreign imports cheaper for Americans (imports ↑) → net exports decrease → AD shifts left. This is one way monetary policy affects the economy through the exchange rate channel.'}
+    ]}}
   ]
-}
+};

@@ -2,26 +2,62 @@ export const csa2dArrayPart1Data = {
   topicSlug: 'csa-2d-array',
   sections: [
     {
-      id: 'csa2darr1-intro',
+      id: 'csa2d1-intro',
       type: 'text' as const,
       content: `
-# 💻 2D Arrays
+# 🔢 2D Arrays
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Declaration, Access, and Row-Column Traversal**
 
-2D Arrays is a fundamental topic in AP Computer Science A. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## What Is a 2D Array?
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying 2D Arrays |
-| **Key concept 2** | A critical component of understanding 2D Arrays |
-| **Key concept 3** | An essential element that connects 2D Arrays to broader themes |
+A 2D array is an "array of arrays" — think of it as a table with rows and columns.
+
+\`\`\`java
+// Declaration and initialization
+int[][] grid = new int[3][4];  // 3 rows, 4 columns (all 0s)
+
+int[][] matrix = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+
+// Accessing elements
+int val = matrix[1][2];  // Row 1, Column 2 = 6
+matrix[0][0] = 10;       // Set top-left to 10
+\`\`\`
+
+### Visual Layout
+
+|  | Col 0 | Col 1 | Col 2 |
+|--|-------|-------|-------|
+| **Row 0** | 1 | 2 | 3 |
+| **Row 1** | 4 | 5 | 6 |
+| **Row 2** | 7 | 8 | 9 |
+
+> 🔑 **First index = row, Second index = column.** \`matrix[row][col]\` — always row first!
+
+---
+
+## Dimensions
+
+\`\`\`java
+int rows = matrix.length;       // Number of rows (3)
+int cols = matrix[0].length;    // Number of columns in row 0 (3)
+\`\`\`
+
+| Property | Syntax | Description |
+|----------|--------|-----------|
+| **Number of rows** | \`arr.length\` | Length of the outer array |
+| **Number of columns** | \`arr[0].length\` | Length of the first inner array |
+| **Total elements** | rows x cols | 3 x 3 = 9 elements |
       `
     },
     {
-      id: 'csa2darr1-quiz1',
+      id: 'csa2d1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +65,173 @@ export const csa2dArrayPart1Data = {
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of 2D Arrays?',
+            question: 'int[][] grid = new int[4][5]; How many total elements does grid have?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within 2D Arrays',
-              'A mathematical formula',
-              'A literary technique'
+              '4',
+              '5',
+              '9',
+              '20'
             ],
-            correctAnswer: 1,
-            explanation: '2D Arrays focuses on understanding key principles and patterns within AP Computer Science A.'
+            correctAnswer: 3,
+            explanation: '4 rows x 5 columns = 20 total elements. grid.length = 4 (rows), grid[0].length = 5 (columns).'
           },
           {
-            question: 'Why is 2D Arrays important in AP Computer Science A?',
+            question: 'What is matrix[2][0] in the matrix {{1,2,3},{4,5,6},{7,8,9}}?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              '3',
+              '7',
+              '1',
+              '4'
             ],
             correctAnswer: 1,
-            explanation: '2D Arrays is a key topic in AP Computer Science A that connects to multiple course themes.'
+            explanation: 'matrix[2][0] means row 2, column 0. Row 2 is {7, 8, 9}. Column 0 of that row is 7.'
           }
         ]
       }
     },
     {
-      id: 'csa2darr1-content',
+      id: 'csa2d1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Traversing a 2D Array
 
-### Key concept 1
-The foundational principle underlying 2D Arrays. Understanding this concept is essential for mastering 2D Arrays in AP Computer Science A.
+### Row-Major Order (Standard)
+\`\`\`java
+for (int r = 0; r < matrix.length; r++) {
+    for (int c = 0; c < matrix[r].length; c++) {
+        System.out.print(matrix[r][c] + " ");
+    }
+    System.out.println();
+}
+// Output: 1 2 3
+//         4 5 6
+//         7 8 9
+\`\`\`
 
-### Key concept 2
-A critical component of understanding 2D Arrays. This builds on the previous concept and connects to broader themes in the course.
+### Column-Major Order
+\`\`\`java
+for (int c = 0; c < matrix[0].length; c++) {
+    for (int r = 0; r < matrix.length; r++) {
+        System.out.print(matrix[r][c] + " ");
+    }
+    System.out.println();
+}
+// Output: 1 4 7
+//         2 5 8
+//         3 6 9
+\`\`\`
 
-### Key concept 3
-An essential element that connects 2D Arrays to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Enhanced For Loop
+\`\`\`java
+for (int[] row : matrix) {
+    for (int val : row) {
+        System.out.print(val + " ");
+    }
+    System.out.println();
+}
+\`\`\`
+
+| Traversal | Outer Loop | Inner Loop | Order |
+|-----------|-----------|-----------|-------|
+| **Row-major** | Rows | Columns | Left to right, top to bottom |
+| **Column-major** | Columns | Rows | Top to bottom, left to right |
       `
     },
     {
-      id: 'csa2darr1-input',
+      id: 'csa2d1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying 2D Arrays?
+1) To get the number of rows in a 2D array arr, use arr._______.
 
-2) What concept describes a critical component of understanding 2D Arrays?
+2) To get the number of columns, use arr[0]._______.
 
-3) Name the term for an essential element that connects 2D Arrays to broader themes.
-
-Use the exact term from this part.
+3) In matrix[r][c], the first index represents the _______ and the second represents the column.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying 2D Arrays), Key concept 2 (A critical component of understanding 2D Arrays), and Key concept 3 (An essential element that connects 2D Arrays to broader themes).'
+        correctAnswers: ['length', 'length', 'row'],
+        hint1: 'Outer array length.',
+        hint2: 'Inner array length.',
+        hint3: 'Row comes first, then column.',
+        explanation: 'arr.length = rows. arr[0].length = columns. First index = row.'
       }
     },
     {
-      id: 'csa2darr1-dropdown',
+      id: 'csa2d1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**2D Array Access** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying 2D Arrays is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Row-major traversal visits elements in order ___',
+            options: ['Left to right, top to bottom (row by row)', 'Top to bottom, left to right (column by column)', 'Diagonal only', 'Random order']
           },
           {
-            label: 'A critical component of understanding 2D Arrays describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'In the enhanced for loop "for (int[] row : matrix)", each row is ___',
+            options: ['A 1D array (one row of the matrix)', 'A single integer', 'The row index', 'A 2D array']
           },
           {
-            label: 'An essential element that connects 2D Arrays to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'new int[3][4] creates a grid with ___ total elements',
+            options: ['12', '7', '3', '4']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying 2D Arrays. Key concept 2 — A critical component of understanding 2D Arrays. Key concept 3 — An essential element that connects 2D Arrays to broader themes.'
+        correctAnswers: ['Left to right, top to bottom (row by row)', 'A 1D array (one row of the matrix)', '12'],
+        hint1: 'Process each row from left to right.',
+        hint2: 'Each element of the outer array is a row (1D array).',
+        hint3: '3 rows times 4 columns.',
+        explanation: 'Row-major = row by row (L to R). Each row is a 1D array. 3 x 4 = 12 elements.'
       }
     },
     {
-      id: 'csa2darr1-strategy',
+      id: 'csa2d1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: 2D Arrays
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of 2D Arrays.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Computer Science A for higher scores.
+- Always remember: **arr[row][col]** — row FIRST
+- \`arr.length\` = rows, \`arr[0].length\` = columns
+- Row-major vs column-major traversal is regularly tested
+- Enhanced for loop: outer variable is a 1D array (the row), inner variable is the element
+- Common operations: sum all elements, find max/min, count matches, process specific row/column
+- FRQ 4 often involves 2D arrays — practice traversal patterns thoroughly
       `
     },
     {
-      id: 'csa2darr1-applied',
+      id: 'csa2d1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain 2D Arrays on a free-response question. The best approach is:',
+            question: 'What is the sum of all elements in this 2D array?\nint[][] m = {{1, 2}, {3, 4}, {5, 6}};\nint sum = 0;\nfor (int[] row : m) {\n    for (int val : row) {\n        sum += val;\n    }\n}',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '15',
+              '21',
+              '6',
+              '12'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: '1 + 2 + 3 + 4 + 5 + 6 = 21. The enhanced for loop visits every element in row-major order and adds each to sum.'
           },
           {
-            question: 'When studying 2D Arrays, which strategy is most effective?',
+            question: 'int[][] grid = new int[2][3];\nWhat is grid[1][2]?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '0',
+              '2',
+              'null',
+              'ArrayIndexOutOfBoundsException'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 0,
+            explanation: 'new int[2][3] creates a 2x3 grid filled with default int values (0). grid[1][2] is a valid index (row 1, col 2) and its value is 0.'
           }
         ]
       }
     }
   ]
-}
+};

@@ -2,26 +2,42 @@ export const apesBiodiversityConservationPart1Data = {
   topicSlug: 'apes-biodiversity-conservation',
   sections: [
     {
-      id: 'apesbiod1-intro',
+      id: 'apescon1-intro',
       type: 'text' as const,
       content: `
-# 🌿 Biodiversity Conservation
+# 🛡️ Biodiversity Conservation
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Threats, Legislation, and Conservation Strategies**
 
-Biodiversity Conservation is a fundamental topic in AP Environmental Science. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Major Threats to Biodiversity (HIPPCO)
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Biodiversity Conservation |
-| **Key concept 2** | A critical component of understanding Biodiversity Conservation |
-| **Key concept 3** | An essential element that connects Biodiversity Conservation to broader themes |
+| Threat | Description | Example |
+|--------|-----------|---------|
+| **H** — Habitat loss | Destruction, fragmentation, degradation | Deforestation for agriculture |
+| **I** — Invasive species | Non-native species outcompeting natives | Burmese pythons in Florida Everglades |
+| **P** — Population growth | More humans = more resource demand | Urban sprawl converting wildlife habitat |
+| **P** — Pollution | Chemical and physical degradation | Pesticides thinning raptor eggshells |
+| **C** — Climate change | Shifting temperatures and weather | Coral bleaching from ocean warming |
+| **O** — Overexploitation | Overharvesting beyond replacement | Overfishing of bluefin tuna |
+
+> 🔑 **#1 threat:** Habitat loss and fragmentation is the leading cause of species decline worldwide.
+
+---
+
+## Endangered Species Legislation
+
+| Law | Year | Key Provisions |
+|-----|------|---------------|
+| **Endangered Species Act (ESA)** | 1973 | Protects listed threatened/endangered species; prohibits "take"; requires habitat protection |
+| **CITES** | 1975 | Intl treaty regulating trade of endangered species and products (ivory, pelts) |
+| **Lacey Act** | 1900 | Prohibits trade in illegally captured wildlife |
+| **Marine Mammal Protection Act** | 1972 | Protects whales, dolphins, seals from harassment or killing |
       `
     },
     {
-      id: 'apesbiod1-quiz1',
+      id: 'apescon1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +45,153 @@ Biodiversity Conservation is a fundamental topic in AP Environmental Science. Th
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Biodiversity Conservation?',
+            question: 'The single greatest threat to global biodiversity is:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Biodiversity Conservation',
-              'A mathematical formula',
-              'A literary technique'
+              'Climate change',
+              'Overhunting',
+              'Habitat loss and fragmentation',
+              'Invasive species'
             ],
-            correctAnswer: 1,
-            explanation: 'Biodiversity Conservation focuses on understanding key principles and patterns within AP Environmental Science.'
+            correctAnswer: 2,
+            explanation: 'While all HIPPCO factors matter, habitat loss (through deforestation, agriculture, urbanization) is the #1 cause of species decline. Fragmentation isolates populations, reducing genetic diversity.'
           },
           {
-            question: 'Why is Biodiversity Conservation important in AP Environmental Science?',
+            question: 'CITES is an international treaty that:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Sets carbon emission limits for countries',
+              'Regulates international trade of endangered species',
+              'Establishes national parks in developing countries',
+              'Funds renewable energy projects'
             ],
             correctAnswer: 1,
-            explanation: 'Biodiversity Conservation is a key topic in AP Environmental Science that connects to multiple course themes.'
+            explanation: 'CITES (Convention on International Trade in Endangered Species) regulates cross-border trade of threatened species and their products to prevent overexploitation.'
           }
         ]
       }
     },
     {
-      id: 'apesbiod1-content',
+      id: 'apescon1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Conservation Strategies
 
-### Key concept 1
-The foundational principle underlying Biodiversity Conservation. Understanding this concept is essential for mastering Biodiversity Conservation in AP Environmental Science.
+| Strategy | Description | Example |
+|----------|-----------|---------|
+| **Protected areas** | National parks, wildlife refuges, marine reserves | Yellowstone NP; Great Barrier Reef Marine Park |
+| **Habitat corridors** | Strips connecting fragmented habitats | Wildlife overpasses; riparian buffers |
+| **Captive breeding** | Breeding endangered species in captivity for release | California condor program |
+| **Seed banks** | Storing seeds of diverse plant species | Svalbard Global Seed Vault (Norway) |
+| **Bioremediation** | Using organisms to clean up contaminated sites | Bacteria degrading oil spills |
+| **Ecotourism** | Tourism that funds conservation and local communities | Gorilla trekking in Rwanda |
 
-### Key concept 2
-A critical component of understanding Biodiversity Conservation. This builds on the previous concept and connects to broader themes in the course.
+### Habitat Corridors
+- Connect isolated habitat patches so species can migrate and maintain genetic diversity
+- Reduce edge effects (drying, wind, invasive species at habitat boundaries)
+- Example: Yellowstone to Yukon corridor for grizzly bear and wolf migration
 
-### Key concept 3
-An essential element that connects Biodiversity Conservation to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Invasive Species Management
+| Approach | Method |
+|----------|--------|
+| **Prevention** | Inspection and quarantine at borders; ballast water treatment |
+| **Early detection** | Monitoring programs to catch invaders early |
+| **Control** | Mechanical removal, targeted herbicides/pesticides, biological control |
+| **Biological control** | Introducing natural predators (risky — can become invasive themselves) |
       `
     },
     {
-      id: 'apesbiod1-input',
+      id: 'apescon1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Biodiversity Conservation?
+1) The acronym HIPPCO stands for Habitat loss, Invasive species, Population growth, Pollution, Climate change, and _______.
 
-2) What concept describes a critical component of understanding Biodiversity Conservation?
+2) The US law that protects threatened and endangered species by prohibiting "take" is the _______ Species Act.
 
-3) Name the term for an essential element that connects Biodiversity Conservation to broader themes.
-
-Use the exact term from this part.
+3) Strips of habitat connecting isolated patches to allow wildlife movement are called habitat _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Biodiversity Conservation), Key concept 2 (A critical component of understanding Biodiversity Conservation), and Key concept 3 (An essential element that connects Biodiversity Conservation to broader themes).'
+        correctAnswers: ['Overexploitation', 'Endangered', 'corridors'],
+        hint1: 'Harvesting more than the population can replace.',
+        hint2: 'Passed in 1973.',
+        hint3: 'They create a path between habitat fragments.',
+        explanation: 'HIPPCO: O = Overexploitation. ESA = Endangered Species Act (1973). Corridors connect fragmented habitats.'
       }
     },
     {
-      id: 'apesbiod1-dropdown',
+      id: 'apescon1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Strategy** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Biodiversity Conservation is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Breeding California condors in zoos and releasing them into the wild is ___',
+            options: ['Captive breeding and reintroduction', 'Biological control', 'Bioremediation', 'Habitat restoration']
           },
           {
-            label: 'A critical component of understanding Biodiversity Conservation describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Burmese pythons in the Florida Everglades eating native wildlife represents the ___  threat in HIPPCO',
+            options: ['Invasive species (I)', 'Habitat loss (H)', 'Overexploitation (O)', 'Pollution (P)']
           },
           {
-            label: 'An essential element that connects Biodiversity Conservation to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'The Svalbard Global Seed Vault stores seeds to preserve ___',
+            options: ['Genetic diversity of crop and wild plants', 'Endangered animal species', 'Marine biodiversity', 'Soil microorganisms']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Biodiversity Conservation. Key concept 2 — A critical component of understanding Biodiversity Conservation. Key concept 3 — An essential element that connects Biodiversity Conservation to broader themes.'
+        correctAnswers: ['Captive breeding and reintroduction', 'Invasive species (I)', 'Genetic diversity of crop and wild plants'],
+        hint1: 'Raising endangered species to boost wild populations.',
+        hint2: 'Non-native predator in a new ecosystem.',
+        hint3: 'Seeds contain the genetic information of plants.',
+        explanation: 'Condor = captive breeding. Burmese pythons = invasive species. Seed vault = preserving genetic diversity of plants.'
       }
     },
     {
-      id: 'apesbiod1-strategy',
+      id: 'apescon1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Conservation
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Biodiversity Conservation.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Environmental Science for higher scores.
+- Know HIPPCO and be able to identify which threat applies to a scenario
+- **ESA** is the most commonly tested legislation — know what "take" means (harass, harm, pursue, wound, kill)
+- Habitat corridors and edge effects are frequently tested concepts
+- Understand trade-offs: captive breeding is expensive and may not address root cause (habitat loss)
+- Biological control can backfire — the introduced predator can become invasive itself (cane toads in Australia)
       `
     },
     {
-      id: 'apesbiod1-applied',
+      id: 'apescon1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Biodiversity Conservation on a free-response question. The best approach is:',
+            question: 'A highway divides a forest, isolating two populations of deer. The BEST long-term solution to maintain genetic diversity is:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Hunting deer on one side to reduce competition',
+              'Building a wildlife overpass or underpass to reconnect the habitat',
+              'Introducing deer from another continent',
+              'Paving over the remaining forest for development'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'A wildlife crossing (overpass/underpass) serves as a habitat corridor, allowing gene flow between the two isolated populations and maintaining genetic diversity.'
           },
           {
-            question: 'When studying Biodiversity Conservation, which strategy is most effective?',
+            question: 'DDT, a pesticide, caused bald eagle populations to decline because it thinned their eggshells through bioaccumulation. This threat falls under which HIPPCO category?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Habitat loss',
+              'Invasive species',
+              'Pollution',
+              'Overexploitation'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 2,
+            explanation: 'DDT is a chemical pollutant that bioaccumulated in the food chain. It was banned in the US in 1972, and bald eagle populations have since recovered — a conservation success story.'
           }
         ]
       }
     }
   ]
-}
+};

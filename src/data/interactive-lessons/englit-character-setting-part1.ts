@@ -1,175 +1,144 @@
 export const englitCharacterSettingPart1Data = {
-  topicSlug: 'englit-character-setting',
+  topicSlug: "englit-character-setting",
   sections: [
     {
-      id: 'englitch1-intro',
+      id: "englitch1-intro",
       type: 'text' as const,
-      content: `
-# 📖 Character & Setting in Drama
-
-**Part 1 of 7 — Core Concepts**
-
-Character & Setting in Drama is a fundamental topic in AP English Literature. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
-
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Character & Setting in Drama |
-| **Key concept 2** | A critical component of understanding Character & Setting in Drama |
-| **Key concept 3** | An essential element that connects Character & Setting in Drama to broader themes |
-      `
+      content: "# 🏛️ Character and Setting\n\n**Part 1 of 7 - Core Concepts, Analysis Skills, and AP Lit Application**\n\n---\n\n## Why Character and Setting Matters\n\nIn prose fiction, character and setting are inseparable. Where a character lives and what pressures they face often explain what they do.\n\n| Core Concept | What To Notice | Why It Matters |\n|---|---|---|\n| **Characterization** | Actions, dialogue, and narration reveal motives | Character choices drive interpretation |\n| **Setting** | Place, time, and social conditions shape behavior | Setting creates constraints and possibilities |\n| **Conflict** | Internal and external struggles | Conflict often clarifies values and theme |\n\n> AP Lit rewards interpretation supported by textual evidence, not plot summary."
     },
     {
-      id: 'englitch1-quiz1',
+      id: "englitch1-quiz1",
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: "**Concept Check**",
       exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of Character & Setting in Drama?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within Character & Setting in Drama',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'Character & Setting in Drama focuses on understanding key principles and patterns within AP English Literature.'
-          },
-          {
-            question: 'Why is Character & Setting in Drama important in AP English Literature?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'Character & Setting in Drama is a key topic in AP English Literature that connects to multiple course themes.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "Which statement best reflects the role of Characterization in literary analysis?",
+                  "options": [
+                        "Characterization means listing physical traits only.",
+                        "Characterization reveals values and motives through choices under pressure.",
+                        "Characterization is the same as plot summary.",
+                        "Characterization is only relevant in drama."
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Characterization helps readers interpret meaning and authorial choice, not just identify a feature."
+            },
+            {
+                  "question": "What is usually the strongest AP Lit analytical move?",
+                  "options": [
+                        "Retell the plot in sequence",
+                        "Name literary devices without interpretation",
+                        "Connect textual details to a defensible interpretation about meaning",
+                        "Focus only on historical background"
+                  ],
+                  "correctAnswer": 2,
+                  "explanation": "AP Lit scoring prioritizes claim + evidence + commentary. Devices matter only when linked to interpretation."
+            }
+      ]
+}
     },
     {
-      id: 'englitch1-content',
+      id: "englitch1-content",
       type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
-
-### Key concept 1
-The foundational principle underlying Character & Setting in Drama. Understanding this concept is essential for mastering Character & Setting in Drama in AP English Literature.
-
-### Key concept 2
-A critical component of understanding Character & Setting in Drama. This builds on the previous concept and connects to broader themes in the course.
-
-### Key concept 3
-An essential element that connects Character & Setting in Drama to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+      content: "## Building Interpretation in Character and Setting\n\n### Analytical Workflow\n1. Identify a pattern in language, structure, or characterization\n2. Explain how that pattern shapes tone, perspective, or tension\n3. Connect the pattern to a broader thematic claim\n\n| Strong Commentary Move | Example Frame |\n|---|---|\n| Pattern + meaning | \"By emphasizing setting, the text suggests...\" |\n| Tension or contrast | \"Although the speaker appears X, conflict reveals...\" |\n| Form and effect | \"This structural choice shifts the reader from...to...\" |\n\n### Common Pitfalls\n- Device listing without explanation\n- Theme statements with no textual support\n- Summary replacing analysis\n- Overly absolute claims that ignore complexity\n\nStrong essays show how environmental pressures and social context influence character decisions rather than treating setting as background decoration."
     },
     {
-      id: 'englitch1-input',
+      id: "englitch1-input",
       type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the foundational principle underlying Character & Setting in Drama?
-
-2) What concept describes a critical component of understanding Character & Setting in Drama?
-
-3) Name the term for an essential element that connects Character & Setting in Drama to broader themes.
-
-Use the exact term from this part.
-      `,
+      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Character & Setting in Drama), Key concept 2 (A critical component of understanding Character & Setting in Drama), and Key concept 3 (An essential element that connects Character & Setting in Drama to broader themes).'
-      }
+      "boxes": 3,
+      "correctAnswers": [
+            "characterization",
+            "setting",
+            "conflict"
+      ],
+      "hint1": "Concept 1: Characterization",
+      "hint2": "Concept 2: Setting",
+      "hint3": "Concept 3: Conflict",
+      "explanation": "Characterization, Setting, and Conflict are core vocabulary for this unit."
+}
     },
     {
-      id: 'englitch1-dropdown',
+      id: "englitch1-dropdown",
       type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
+      content: "**Apply the Concept**",
       exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Character & Setting in Drama is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Character & Setting in Drama describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Character & Setting in Drama to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Character & Setting in Drama. Key concept 2 — A critical component of understanding Character & Setting in Drama. Key concept 3 — An essential element that connects Character & Setting in Drama to broader themes.'
-      }
+      "dropdowns": [
+            {
+                  "label": "Characterization in analysis usually refers to ___",
+                  "options": [
+                        "How textual details construct motive and value",
+                        "A summary of setting facts only",
+                        "A list of unrelated adjectives",
+                        "The publication date"
+                  ]
+            },
+            {
+                  "label": "The best AP paragraph usually includes ___",
+                  "options": [
+                        "Claim, evidence, and commentary",
+                        "Plot summary only",
+                        "Device name lists",
+                        "Vocabulary definitions only"
+                  ]
+            },
+            {
+                  "label": "A defensible interpretation should be ___",
+                  "options": [
+                        "Text-supported and specific",
+                        "Purely personal with no evidence",
+                        "A broad moral lesson only",
+                        "A dictionary definition"
+                  ]
+            }
+      ],
+      "correctAnswers": [
+            "How textual details construct motive and value",
+            "Claim, evidence, and commentary",
+            "Text-supported and specific"
+      ],
+      "hint1": "Think how characterization functions in meaning-making.",
+      "hint2": "Interpretation must be supported.",
+      "hint3": "Specific textual support is key.",
+      "explanation": "Strong AP analysis treats characterization as an interpretive tool, then develops claims through evidence and commentary."
+}
     },
     {
-      id: 'englitch1-strategy',
+      id: "englitch1-strategy",
       type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Character & Setting in Drama.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Literature for higher scores.
-      `
+      content: "## AP Exam Strategy: Character and Setting\n\n- Start with a claim about how characterization or setting shapes meaning\n- Use short quotations and explain them in context\n- Track contrast, shifts, and patterns across the whole passage\n- Avoid pure summary; prioritize interpretation\n- Qualify claims when text is ambiguous\n- Tie setting details directly to character decisions and thematic stakes."
     },
     {
-      id: 'englitch1-applied',
+      id: "englitch1-applied",
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: "**AP-Style Application**",
       exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain Character & Setting in Drama on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying Character & Setting in Drama, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "A student identifies setting in a passage but does not explain effect. What is the best revision?",
+                  "options": [
+                        "Add more plot details",
+                        "Explain how setting shapes tone or theme in that moment",
+                        "Replace all quotes with summary",
+                        "Switch to biographical information only"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Evidence earns value through interpretation. Explain effect, not just identification."
+            },
+            {
+                  "question": "Which thesis move is strongest for AP Lit?",
+                  "options": [
+                        "Make an absolute claim with no nuance",
+                        "Advance a specific, defensible claim about how conflict contributes to meaning",
+                        "Retell the plot in one sentence",
+                        "List three literary terms without argument"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "High-scoring theses are specific, defensible, and tied to textual method and meaning."
+            }
+      ]
+}
     }
   ]
-}
+};

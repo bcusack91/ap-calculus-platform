@@ -5,171 +5,148 @@ export const whLandBasedEmpiresPart1Data = {
       id: 'whlandba1-intro',
       type: 'text' as const,
       content: `
-# 🌏 Land-Based Empires (1450–1750)
+# 🏰 Land-Based Empires (1450–1750)
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Imperial Expansion & Administration**
 
-Land-Based Empires (1450–1750) is a fundamental topic in AP World History. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
+
+| Section |
+|---------|
+| 📖 How Empires Expanded |
+| Ming China & the Qing Transition |
+| Russian Empire Expansion |
+| Comparing Imperial Administration |
+
+> 🔑 **Key Concept:** The AP exam tests how empires **legitimized** their rule, **administered** diverse populations, and **expanded** through both military conquest and bureaucratic systems. Focus on comparing strategies across empires.
+
+---
+
+### What You'll Master in Part 1
+- How land-based empires expanded and consolidated power
+- Ming China's tributary system and the Manchu Qing conquest
+- Russian expansion under Ivan IV and Peter the Great
+- Comparative analysis of imperial administration systems
+      `
+    },
+    {
+      id: 'whlandba1-ming',
+      type: 'text' as const,
+      content: `
+## 📖 Ming China (1368–1644) & the Qing Transition
+
+### The Ming Dynasty
+
+| Feature | Details |
+|---|---|
+| **Founded** | 1368 by Zhu Yuanzhang (Hongwu Emperor) after overthrowing Mongol Yuan dynasty |
+| **Capital** | Beijing; constructed the **Forbidden City** |
+| **Government** | Centralized bureaucracy; reinstituted the **civil service exam** based on Confucian classics |
+| **Economy** | Silver-based economy; global trade in silk, porcelain, tea |
+| **Zheng He Voyages** | 1405–1433: massive naval expeditions across Indian Ocean; discontinued by later emperors |
 
 ### Key Concepts
+- **Tributary system** — neighboring states (Korea, Vietnam, Japan) sent tribute to the Ming court, acknowledging Chinese cultural superiority in exchange for trade access
+- **Haijin** — maritime trade ban (partially enforced); reflected Confucian suspicion of merchant class
+- **Silver trade** — massive inflow from Spanish American mines (via Manila galleon trade) transformed China's economy but created dependency
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Land-Based Empires (1450–1750) |
-| **Key concept 2** | A critical component of understanding Land-Based Empires (1450–1750) |
-| **Key concept 3** | An essential element that connects Land-Based Empires (1450–1750) to broader themes |
+### The Qing Conquest (1644)
+- **Manchu** people from Manchuria conquered Ming China during a period of internal rebellion
+- Maintained Chinese bureaucratic structures but imposed Manchu customs:
+  - **Queue hairstyle** — mandatory for Chinese men as a sign of submission
+  - **Banner system** — Manchu military/administrative units
+  - **Kangxi Emperor** (1661–1722) — exemplified successful integration of Manchu and Chinese traditions
+
+> 🔑 **AP Connection:** The Ming-to-Qing transition illustrates the AP theme of **continuity and change** — the Qing kept the exam system and Confucian governance but imposed new ethnic hierarchies.
       `
     },
     {
       id: 'whlandba1-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: `**Concept Check** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Land-Based Empires (1450–1750)?',
+            question: 'After the Qing Manchu conquered Ming China in 1644, how did they handle the existing Chinese governmental system?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Land-Based Empires (1450–1750)',
-              'A mathematical formula',
-              'A literary technique'
+              'They largely maintained the Confucian civil service exam system while adding Manchu ethnic hierarchies and cultural requirements',
+              'They abolished all Chinese institutions and replaced them entirely with Manchu tribal governance structures',
+              'They created a fully democratic system granting equal rights to both Manchu and Han Chinese populations',
+              'They decentralized all authority and eliminated the role of the emperor in daily governance'
             ],
-            correctAnswer: 1,
-            explanation: 'Land-Based Empires (1450–1750) focuses on understanding key principles and patterns within AP World History.'
+            correctAnswer: 0,
+            explanation: 'The Qing adopted a pragmatic approach: they kept the proven civil service exam and Confucian bureaucracy (continuity) but imposed Manchu customs like the queue hairstyle and maintained Manchu dominance through the banner system (change). This is a classic AP example of continuity and change in transitions of power.'
           },
           {
-            question: 'Why is Land-Based Empires (1450–1750) important in AP World History?',
+            question: 'What role did silver play in the Ming Chinese economy during the 15th–17th centuries?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Silver was irrelevant because China relied on a barter economy for all transactions',
+              'China exported massive quantities of silver to Europe in exchange for manufactured goods',
+              'Silver flowed into China from the Americas and Japan, becoming the basis of the Chinese tax system and commercial economy',
+              'The Ming government banned silver entirely and used only copper coins for currency'
             ],
-            correctAnswer: 1,
-            explanation: 'Land-Based Empires (1450–1750) is a key topic in AP World History that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'The Ming Single Whip Reform required taxes to be paid in silver, creating massive demand. Silver flowed into China from Spanish mines in the Americas (via the Manila galleon trade) and from Japan. This made China\'s economy dependent on global silver flows — when supplies declined in the early 1600s, it contributed to the Ming collapse.'
           }
         ]
       }
     },
     {
-      id: 'whlandba1-content',
+      id: 'whlandba1-russia',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## 📖 Russian Empire Expansion
 
-### Key concept 1
-The foundational principle underlying Land-Based Empires (1450–1750). Understanding this concept is essential for mastering Land-Based Empires (1450–1750) in AP World History.
+### From Muscovy to Empire
 
-### Key concept 2
-A critical component of understanding Land-Based Empires (1450–1750). This builds on the previous concept and connects to broader themes in the course.
+| Ruler | Period | Key Developments |
+|---|---|---|
+| **Ivan III ("the Great")** | 1462–1505 | Threw off Mongol (Golden Horde) rule; consolidated Muscovite state |
+| **Ivan IV ("the Terrible")** | 1547–1584 | First to use the title **Tsar** (from Caesar); expanded into Siberia; created the Oprichnina (secret police/terror) |
+| **Peter the Great** | 1682–1725 | **Westernization** — reformed military, government, and culture; built St. Petersburg as a "window to Europe" |
 
-### Key concept 3
-An essential element that connects Land-Based Empires (1450–1750) to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Methods of Expansion & Control
+- **Eastward** — Cossack explorers (like Yermak) pushed into Siberia for fur trade; Russia reached the Pacific by the 1640s
+- **Serfdom** — Peasants were bound to the land and to noble landlords; serfdom **intensified** under the Romanovs (Law Code of 1649)
+- **Peter's Westernization** — forced nobles to shave beards, adopt Western dress, and serve in the military or government; created a professional army modeled on European forces; established a navy
+
+### Comparison: Russia vs. Other Empires
+- Like the Ottomans, Russia used a **service nobility** — elites owed their status to the state, not to independent feudal power
+- Unlike China's exam-based meritocracy, Russia relied on **hereditary nobility** tied to land ownership and military service
+
+> 🔑 **AP Connection:** Peter the Great's Westernization is a key example of **cultural borrowing as a state-building strategy**. The AP exam tests whether students can analyze WHY rulers adopted foreign practices and what resistance they faced.
       `
     },
     {
-      id: 'whlandba1-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the foundational principle underlying Land-Based Empires (1450–1750)?
-
-2) What concept describes a critical component of understanding Land-Based Empires (1450–1750)?
-
-3) Name the term for an essential element that connects Land-Based Empires (1450–1750) to broader themes.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Land-Based Empires (1450–1750)), Key concept 2 (A critical component of understanding Land-Based Empires (1450–1750)), and Key concept 3 (An essential element that connects Land-Based Empires (1450–1750) to broader themes).'
-      }
-    },
-    {
-      id: 'whlandba1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Land-Based Empires (1450–1750) is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Land-Based Empires (1450–1750) describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Land-Based Empires (1450–1750) to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Land-Based Empires (1450–1750). Key concept 2 — A critical component of understanding Land-Based Empires (1450–1750). Key concept 3 — An essential element that connects Land-Based Empires (1450–1750) to broader themes.'
-      }
-    },
-    {
-      id: 'whlandba1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Land-Based Empires (1450–1750).
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whlandba1-applied',
+      id: 'whlandba1-quiz2',
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: `**Check Your Understanding** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Land-Based Empires (1450–1750) on a free-response question. The best approach is:',
+            question: 'Which of the following BEST describes Peter the Great\'s primary motivation for Westernizing Russia?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'A genuine desire to improve literacy and living standards for Russian peasants',
+              'Strengthening Russia\'s military and economic competitiveness with European powers',
+              'Converting Russia from Eastern Orthodoxy to Western Catholicism',
+              'Establishing democratic institutions modeled on the English Parliament'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Peter\'s Westernization was primarily about **power and security**. After seeing Russia\'s military weaknesses firsthand (especially against the Ottomans and Swedes), he adopted Western military technology, shipbuilding, and administrative practices to make Russia a competitive European power. He had no interest in democracy or changing the Orthodox Church.'
           },
           {
-            question: 'When studying Land-Based Empires (1450–1750), which strategy is most effective?',
+            question: 'How did the Chinese tributary system differ from Russian methods of controlling conquered territories?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'China used a tribute system where neighboring states acknowledged Chinese cultural superiority in exchange for trade, while Russia imposed direct rule through military garrisons and serfdom',
+              'Both empires used identical methods of democratic local governance in all territories',
+              'Russia relied on cultural superiority claims while China used military force exclusively',
+              'Neither empire expanded beyond its original borders during this period'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 0,
+            explanation: 'China\'s tributary system was based on cultural prestige — neighboring states maintained autonomy while performing rituals of submission. Russia, by contrast, imposed direct control through Cossack settlement, military outposts, and the extension of serfdom into conquered territories like Siberia.'
           }
         ]
       }
     }
   ]
-}
+};

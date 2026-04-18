@@ -7,17 +7,38 @@ export const microExternalitiesPublicGoodsPart1Data = {
       content: `
 # 💰 Externalities & Public Goods
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Market Failures from Spillover Effects**
 
-Externalities & Public Goods is a fundamental topic in AP Microeconomics. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## What Are Externalities?
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Externalities & Public Goods |
-| **Key concept 2** | A critical component of understanding Externalities & Public Goods |
-| **Key concept 3** | An essential element that connects Externalities & Public Goods to broader themes |
+An **externality** occurs when a market transaction affects a **third party** who is not directly involved in the transaction:
+
+| Type | Definition | Example | Effect on Market |
+|------|-----------|---------|-----------------|
+| **Negative externality** | Cost imposed on third parties | Factory pollution affecting nearby residents | Market **overproduces** — too much output |
+| **Positive externality** | Benefit conferred on third parties | Flu vaccines protect unvaccinated population | Market **underproduces** — too little output |
+| **Negative externality of consumption** | Harm from consuming | Secondhand smoke from cigarettes | Overconsumption |
+| **Positive externality of consumption** | Benefit from consuming | Education raises productivity for employers | Underconsumption |
+
+> 🔑 **Key Insight:** Externalities cause **market failure** because the market price does not reflect the **full social cost** or **full social benefit** of a good.
+
+---
+
+## The Graph: MSC, MSB, and Deadweight Loss
+
+When a **negative production externality** exists:
+
+- **MPC** (Marginal Private Cost) = supply curve as firms see it
+- **MSC** (Marginal Social Cost) = MPC + external cost
+- **MSC lies above MPC** by the amount of the external cost
+
+The market equilibrium is at MPC = D (demand), but the **socially optimal** quantity is where MSC = D.
+
+$$\\text{Deadweight Loss} = \\frac{1}{2} \\times (Q_{market} - Q_{optimal}) \\times (\\text{External cost per unit})$$
+
+For a **positive production externality**, the MSC lies **below** MPC, and the market underproduces.
       `
     },
     {
@@ -29,26 +50,37 @@ Externalities & Public Goods is a fundamental topic in AP Microeconomics. This p
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Externalities & Public Goods?',
+            question: 'A chemical plant dumps waste into a river, harming downstream fisheries. This is an example of:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Externalities & Public Goods',
-              'A mathematical formula',
-              'A literary technique'
+              'A positive externality of production',
+              'A negative externality of production',
+              'A positive externality of consumption',
+              'An efficient market outcome'
             ],
             correctAnswer: 1,
-            explanation: 'Externalities & Public Goods focuses on understanding key principles and patterns within AP Microeconomics.'
+            explanation: 'The chemical plant imposes costs (polluted water) on third parties (fisheries) as a byproduct of production — a classic negative externality of production.'
           },
           {
-            question: 'Why is Externalities & Public Goods important in AP Microeconomics?',
+            question: 'When a negative production externality exists, the free market will produce:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Less than the socially optimal quantity',
+              'Exactly the socially optimal quantity',
+              'More than the socially optimal quantity',
+              'An indeterminate quantity'
+            ],
+            correctAnswer: 2,
+            explanation: 'With a negative externality, MPC < MSC, so the market equilibrium quantity exceeds the socially optimal quantity — the market overproduces because firms do not bear the full cost.'
+          },
+          {
+            question: 'The vertical distance between the MSC and MPC curves represents:',
+            options: [
+              'Consumer surplus',
+              'The per-unit external cost',
+              'Producer surplus',
+              'The tax rate'
             ],
             correctAnswer: 1,
-            explanation: 'Externalities & Public Goods is a key topic in AP Microeconomics that connects to multiple course themes.'
+            explanation: 'MSC = MPC + external cost per unit. The vertical gap between the two curves equals the per-unit external cost imposed on third parties.'
           }
         ]
       }
@@ -57,116 +89,140 @@ Externalities & Public Goods is a fundamental topic in AP Microeconomics. This p
       id: 'microext1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Public Goods and the Free-Rider Problem
 
-### Key concept 1
-The foundational principle underlying Externalities & Public Goods. Understanding this concept is essential for mastering Externalities & Public Goods in AP Microeconomics.
+### Characteristics of Goods
 
-### Key concept 2
-A critical component of understanding Externalities & Public Goods. This builds on the previous concept and connects to broader themes in the course.
+Goods are classified by two properties:
 
-### Key concept 3
-An essential element that connects Externalities & Public Goods to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Property | Definition |
+|----------|-----------|
+| **Rival** | One person's consumption reduces availability for others |
+| **Excludable** | Sellers can prevent non-payers from consuming |
+
+This creates four types:
+
+| | Excludable | Non-excludable |
+|---|---|---|
+| **Rival** | **Private good** (pizza, clothing) | **Common resource** (ocean fish, clean air) |
+| **Non-rival** | **Club good** (cable TV, toll road) | **Public good** (national defense, streetlights) |
+
+### The Free-Rider Problem
+
+**Public goods** are both non-rival and non-excludable. This creates the **free-rider problem**: rational individuals will consume the good without paying, since they cannot be excluded.
+
+Because of free riders, **private markets will underprovide public goods** — or not provide them at all. This is why governments typically provide public goods funded through taxation.
+
+### Common Resources and the Tragedy of the Commons
+
+**Common resources** are rival but non-excludable. Because no one can be excluded, individuals overconsume, leading to depletion. Examples:
+- Overfishing in international waters
+- Overgrazing on shared pastureland
+- Traffic congestion on public roads
       `
     },
     {
       id: 'microext1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Externalities & Public Goods?
+1) When a negative externality exists and the market overproduces, the MSC curve lies _______ the MPC curve. (above/below)
 
-2) What concept describes a critical component of understanding Externalities & Public Goods?
+2) A good that is non-rival and non-excludable is called a _______ good.
 
-3) Name the term for an essential element that connects Externalities & Public Goods to broader themes.
-
-Use the exact term from this part.
+3) The problem where rational individuals consume without paying for a non-excludable good is called the _______  problem.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Externalities & Public Goods), Key concept 2 (A critical component of understanding Externalities & Public Goods), and Key concept 3 (An essential element that connects Externalities & Public Goods to broader themes).'
+        correctAnswers: ['above', 'public', 'free-rider'],
+        hint1: 'Think about whether social cost is higher or lower than private cost.',
+        hint2: 'National defense is the classic example.',
+        hint3: 'These individuals get benefits without contributing.',
+        explanation: 'MSC lies above MPC because the external cost is added. Public goods are non-rival + non-excludable. The free-rider problem occurs when people benefit without paying.'
       }
     },
     {
       id: 'microext1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Market Failure** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Externalities & Public Goods is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Factory pollution harming a nearby town is a ___',
+            options: ['Negative production externality', 'Positive production externality', 'Public good problem', 'Common resource problem']
           },
           {
-            label: 'A critical component of understanding Externalities & Public Goods describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Overfishing in international waters is an example of ___',
+            options: ['Tragedy of the commons', 'Free-rider problem', 'Positive externality', 'Club good inefficiency']
           },
           {
-            label: 'An essential element that connects Externalities & Public Goods to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'National defense cannot be provided efficiently by markets because of the ___',
+            options: ['Free-rider problem', 'Tragedy of the commons', 'Negative externality', 'Prisoner\'s dilemma']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Externalities & Public Goods. Key concept 2 — A critical component of understanding Externalities & Public Goods. Key concept 3 — An essential element that connects Externalities & Public Goods to broader themes.'
+        correctAnswers: ['Negative production externality', 'Tragedy of the commons', 'Free-rider problem'],
+        hint1: 'The factory is the producer; the town is the third party bearing costs.',
+        hint2: 'Ocean fish are rival but non-excludable.',
+        hint3: 'People cannot be excluded from national defense.',
+        explanation: 'Factory pollution = negative production externality. Overfishing = tragedy of the commons (common resource overuse). National defense = free-rider problem (public good).'
       }
     },
     {
       id: 'microext1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Correcting Externalities: Policy Solutions
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Externalities & Public Goods.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+### Government Interventions
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Microeconomics for higher scores.
+| Externality Type | Policy Solution | How It Works |
+|-----------------|----------------|-------------|
+| Negative production | **Per-unit tax** (Pigouvian tax) | Tax = external cost → shifts MPC up to MSC |
+| Positive production | **Per-unit subsidy** | Subsidy = external benefit → shifts MPC down to MSC |
+| Negative consumption | **Excise tax** | Raises price to reflect social cost |
+| Positive consumption | **Subsidy to consumers** | Lowers price to encourage optimal consumption |
+
+### The Coase Theorem
+
+If **property rights are clearly defined** and **transaction costs are low**, private parties can negotiate to resolve externalities without government intervention.
+
+Example: If a factory has the right to pollute, fisheries downstream can pay the factory to reduce output. If fisheries have the right to clean water, the factory must compensate them.
+
+> ⚠️ **AP Trap:** The Coase Theorem requires LOW transaction costs and CLEAR property rights. If either condition fails, private negotiation will not work.
       `
     },
     {
       id: 'microext1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Externalities & Public Goods on a free-response question. The best approach is:',
+            question: 'A Pigouvian tax on a good with a negative production externality will:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Increase the equilibrium quantity to the socially optimal level',
+              'Decrease the equilibrium quantity to the socially optimal level',
+              'Have no effect on the equilibrium quantity',
+              'Eliminate all producer surplus'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'A Pigouvian tax equal to the external cost per unit shifts MPC up to MSC, reducing quantity from the market equilibrium to the socially optimal level and eliminating deadweight loss.'
           },
           {
-            question: 'When studying Externalities & Public Goods, which strategy is most effective?',
+            question: 'Which of the following is a requirement for the Coase Theorem to hold?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Government must set the tax rate correctly',
+              'Transaction costs must be low and property rights clearly defined',
+              'The externality must be positive rather than negative',
+              'There must be no free riders in the market'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'The Coase Theorem states that private negotiation can resolve externalities IF property rights are clearly defined AND transaction costs are low.'
           }
         ]
       }

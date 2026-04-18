@@ -2,26 +2,43 @@ export const cspFaultToleranceSecurityPart1Data = {
   topicSlug: 'csp-fault-tolerance-security',
   sections: [
     {
-      id: 'cspfault1-intro',
+      id: 'cspfts1-intro',
       type: 'text' as const,
       content: `
-# 🖥️ Fault Tolerance & Security
+# 🛡️ Fault Tolerance & Security
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Redundancy, Encryption, and Network Security**
 
-Fault Tolerance & Security is a fundamental topic in AP CS Principles. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Fault Tolerance
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Fault Tolerance & Security |
-| **Key concept 2** | A critical component of understanding Fault Tolerance & Security |
-| **Key concept 3** | An essential element that connects Fault Tolerance & Security to broader themes |
+**Fault tolerance** is the ability of a system to continue operating when a component fails.
+
+### Redundancy
+The primary method for achieving fault tolerance is **redundancy** — having backup components or paths.
+
+| Type | Description | Example |
+|------|-----------|---------|
+| **Path redundancy** | Multiple routes between nodes | Internet routing around a failed link |
+| **Data redundancy** | Multiple copies of data | Cloud backups, RAID drives |
+| **Hardware redundancy** | Backup equipment | Redundant servers, power supplies |
+
+### Internet Redundancy
+
+\`\`\`
+    A ---- B ---- C
+    |      |      |
+    D ---- E ---- F
+\`\`\`
+
+If the link between B and C fails, data can route A → B → E → F → C or A → D → E → F → C. Multiple paths ensure no single failure brings down the network.
+
+> 🔑 The Internet was designed with redundancy so that **no single point of failure** can take down the entire network. Packets automatically reroute around failed links.
       `
     },
     {
-      id: 'cspfault1-quiz1',
+      id: 'cspfts1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +46,157 @@ Fault Tolerance & Security is a fundamental topic in AP CS Principles. This part
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Fault Tolerance & Security?',
+            question: 'In a network with redundant paths, what happens when one link fails?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Fault Tolerance & Security',
-              'A mathematical formula',
-              'A literary technique'
+              'All communication stops immediately',
+              'Data is automatically rerouted through alternative paths',
+              'The failed link repairs itself',
+              'Users must manually select a new path'
             ],
             correctAnswer: 1,
-            explanation: 'Fault Tolerance & Security focuses on understanding key principles and patterns within AP CS Principles.'
+            explanation: 'Routers automatically detect failed links and reroute packets through alternative paths. This is the key benefit of redundancy — the network continues to function despite failures.'
           },
           {
-            question: 'Why is Fault Tolerance & Security important in AP CS Principles?',
+            question: 'Which network design is MORE fault tolerant?\nA: Each node connected to exactly one other node (chain)\nB: Each node connected to multiple other nodes (mesh)',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'A — simpler is more reliable',
+              'B — multiple connections provide alternative paths if one fails',
+              'Both are equally fault tolerant',
+              'Neither is fault tolerant'
             ],
             correctAnswer: 1,
-            explanation: 'Fault Tolerance & Security is a key topic in AP CS Principles that connects to multiple course themes.'
+            explanation: 'A mesh network (B) has multiple paths between nodes. If one connection fails, data can take another route. A chain network has single points of failure — one broken link disconnects part of the network.'
           }
         ]
       }
     },
     {
-      id: 'cspfault1-content',
+      id: 'cspfts1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Cybersecurity Fundamentals
 
-### Key concept 1
-The foundational principle underlying Fault Tolerance & Security. Understanding this concept is essential for mastering Fault Tolerance & Security in AP CS Principles.
+### Encryption
+**Encryption** transforms readable data (plaintext) into unreadable data (ciphertext) to protect it from unauthorized access.
 
-### Key concept 2
-A critical component of understanding Fault Tolerance & Security. This builds on the previous concept and connects to broader themes in the course.
+| Type | Keys | Speed | Use Case |
+|------|------|-------|----------|
+| **Symmetric** | One shared key for encrypt and decrypt | Fast | Encrypting stored data |
+| **Asymmetric** | Public key (encrypt) + Private key (decrypt) | Slower | Secure communication, HTTPS |
 
-### Key concept 3
-An essential element that connects Fault Tolerance & Security to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### How HTTPS Uses Both
+1. Browser gets web server public key (asymmetric)
+2. Browser encrypts a session key with the public key
+3. Server decrypts session key with its private key
+4. Both sides use the session key (symmetric) for fast communication
+
+## Common Threats
+
+| Threat | Description |
+|--------|-----------|
+| **Phishing** | Fake emails/sites tricking users into giving up passwords |
+| **Malware** | Software designed to damage or gain unauthorized access |
+| **DDoS** | Distributed Denial of Service — flooding a server with traffic |
+| **Man-in-the-middle** | Attacker intercepts communication between two parties |
+| **Keylogger** | Records everything typed, capturing passwords |
+| **Ransomware** | Encrypts user files and demands payment to unlock |
       `
     },
     {
-      id: 'cspfault1-input',
+      id: 'cspfts1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Fault Tolerance & Security?
+1) Having multiple backup paths or components so a system continues working after a failure is called _______.
 
-2) What concept describes a critical component of understanding Fault Tolerance & Security?
+2) Encryption that uses one shared key for both encryption and decryption is called _______ encryption.
 
-3) Name the term for an essential element that connects Fault Tolerance & Security to broader themes.
-
-Use the exact term from this part.
+3) An attack that tricks users into revealing passwords through fake emails or websites is called _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Fault Tolerance & Security), Key concept 2 (A critical component of understanding Fault Tolerance & Security), and Key concept 3 (An essential element that connects Fault Tolerance & Security to broader themes).'
+        correctAnswers: ['redundancy', 'symmetric', 'phishing'],
+        hint1: 'Extra copies/paths as backup.',
+        hint2: 'The same (symmetric) key used both ways.',
+        hint3: 'Fishing for your information.',
+        explanation: 'Redundancy = backup components. Symmetric = one shared key. Phishing = fake emails/sites.'
       }
     },
     {
-      id: 'cspfault1-dropdown',
+      id: 'cspfts1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Security Classification** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Fault Tolerance & Security is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'HTTPS uses ___ encryption for the initial key exchange',
+            options: ['Asymmetric (public/private key pair)', 'Symmetric (shared key)', 'No encryption', 'Caesar cipher']
           },
           {
-            label: 'A critical component of understanding Fault Tolerance & Security describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A DDoS attack works by ___',
+            options: ['Flooding a server with traffic so it cannot serve legitimate users', 'Stealing passwords', 'Encrypting user files', 'Guessing passwords']
           },
           {
-            label: 'An essential element that connects Fault Tolerance & Security to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A network where every node connects to every other node is the MOST ___',
+            options: ['Fault tolerant (maximum redundancy)', 'Vulnerable', 'Efficient', 'Simple']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Fault Tolerance & Security. Key concept 2 — A critical component of understanding Fault Tolerance & Security. Key concept 3 — An essential element that connects Fault Tolerance & Security to broader themes.'
+        correctAnswers: ['Asymmetric (public/private key pair)', 'Flooding a server with traffic so it cannot serve legitimate users', 'Fault tolerant (maximum redundancy)'],
+        hint1: 'Public key encrypts, private key decrypts.',
+        hint2: 'Denial of service = denying access by overloading.',
+        hint3: 'Maximum connections = maximum backup paths.',
+        explanation: 'HTTPS starts with asymmetric. DDoS floods servers. Full mesh = most fault tolerant.'
       }
     },
     {
-      id: 'cspfault1-strategy',
+      id: 'cspfts1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Fault Tolerance & Security
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Fault Tolerance & Security.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP CS Principles for higher scores.
+- **Redundancy** is the #1 fault tolerance mechanism — multiple paths and backups
+- Know symmetric (one key, fast) vs asymmetric (two keys, secure key exchange)
+- HTTPS uses BOTH: asymmetric for initial handshake, symmetric for ongoing communication
+- Know common attacks: phishing, malware, DDoS, man-in-the-middle
+- A single point of failure means the system is NOT fault tolerant at that point
+- More connections in a network = more redundancy = more fault tolerant
       `
     },
     {
-      id: 'cspfault1-applied',
+      id: 'cspfts1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Fault Tolerance & Security on a free-response question. The best approach is:',
+            question: 'A company stores customer data on a single server with no backups. A hard drive fails. What is the result?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Data is automatically recovered from the cloud',
+              'Customer data is permanently lost because there is no redundancy',
+              'The data can be recovered from RAM',
+              'The operating system recreates the data'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Without redundancy (backups, RAID, etc.), a single hardware failure causes permanent data loss. This is why redundancy is critical for fault tolerance.'
           },
           {
-            question: 'When studying Fault Tolerance & Security, which strategy is most effective?',
+            question: 'Alice wants to send a secure message to Bob. She encrypts it with Bob public key. Who can decrypt it?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Anyone with the public key',
+              'Only Bob, using his private key',
+              'Only Alice, using her private key',
+              'No one — public key encryption cannot be decrypted'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'In asymmetric encryption, data encrypted with the public key can ONLY be decrypted with the corresponding private key. Only Bob has his private key, so only Bob can read the message.'
           }
         ]
       }
     }
   ]
-}
+};

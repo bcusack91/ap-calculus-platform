@@ -2,26 +2,46 @@ export const csaUsingObjectsPart1Data = {
   topicSlug: 'csa-using-objects',
   sections: [
     {
-      id: 'csausing1-intro',
+      id: 'csauo1-intro',
       type: 'text' as const,
       content: `
-# 💻 Using Objects & Methods
+# 🏗️ Using Objects
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Creating Objects, Calling Methods, and References**
 
-Using Objects & Methods is a fundamental topic in AP Computer Science A. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Objects vs. Primitives
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Using Objects & Methods |
-| **Key concept 2** | A critical component of understanding Using Objects & Methods |
-| **Key concept 3** | An essential element that connects Using Objects & Methods to broader themes |
+| Feature | Primitive | Object (Reference Type) |
+|---------|----------|----------------------|
+| **Storage** | Stores the actual value | Stores a reference (memory address) |
+| **Types** | int, double, boolean, char | String, Scanner, ArrayList, custom classes |
+| **Default value** | 0, 0.0, false | \`null\` |
+| **Comparison** | == compares values | == compares references; use .equals() for content |
+| **Methods** | None | Has methods you can call |
+
+---
+
+## Creating Objects with Constructors
+
+\`\`\`java
+// Syntax: ClassName objectName = new ClassName(arguments);
+Scanner input = new Scanner(System.in);
+String greeting = new String("hello");
+ArrayList<Integer> numbers = new ArrayList<Integer>();
+\`\`\`
+
+### The \`new\` Keyword
+- Allocates memory for the object
+- Calls the **constructor** to initialize it
+- Returns a reference to the new object
+
+> 🔑 **null** means a reference variable does not point to any object. Calling a method on null causes a **NullPointerException**.
       `
     },
     {
-      id: 'csausing1-quiz1',
+      id: 'csauo1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +49,159 @@ Using Objects & Methods is a fundamental topic in AP Computer Science A. This pa
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Using Objects & Methods?',
+            question: 'What happens when you write: String s = null; s.length();',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Using Objects & Methods',
-              'A mathematical formula',
-              'A literary technique'
+              'Returns 0',
+              'Returns -1',
+              'Throws a NullPointerException',
+              'Compile error'
             ],
-            correctAnswer: 1,
-            explanation: 'Using Objects & Methods focuses on understanding key principles and patterns within AP Computer Science A.'
+            correctAnswer: 2,
+            explanation: 'null means s does not reference any String object. Calling .length() on null triggers a NullPointerException at runtime because there is no object to call the method on.'
           },
           {
-            question: 'Why is Using Objects & Methods important in AP Computer Science A?',
+            question: 'Which of the following correctly creates a new object?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Scanner sc = Scanner(System.in);',
+              'Scanner sc = new Scanner(System.in);',
+              'new Scanner sc = Scanner(System.in);',
+              'Scanner sc = new Scanner;'
             ],
             correctAnswer: 1,
-            explanation: 'Using Objects & Methods is a key topic in AP Computer Science A that connects to multiple course themes.'
+            explanation: 'Object creation syntax: Type name = new Type(args); The new keyword is required before the constructor call, and parentheses are required even with no arguments.'
           }
         ]
       }
     },
     {
-      id: 'csausing1-content',
+      id: 'csauo1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Reference vs. Value
 
-### Key concept 1
-The foundational principle underlying Using Objects & Methods. Understanding this concept is essential for mastering Using Objects & Methods in AP Computer Science A.
+\`\`\`java
+// Primitives: independent copies
+int a = 5;
+int b = a;    // b is a COPY of a
+b = 10;       // a is still 5
 
-### Key concept 2
-A critical component of understanding Using Objects & Methods. This builds on the previous concept and connects to broader themes in the course.
+// Objects: shared references
+int[] arr1 = {1, 2, 3};
+int[] arr2 = arr1;    // arr2 points to the SAME array
+arr2[0] = 99;         // arr1[0] is now 99 too!
+\`\`\`
 
-### Key concept 3
-An essential element that connects Using Objects & Methods to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Aliasing
+When two variables reference the same object, they are **aliases**. Changing the object through one variable affects the other.
+
+## Method Calls
+
+| Type | Syntax | Example |
+|------|--------|---------|
+| **Instance method** | \`object.method(args)\` | \`str.length()\` |
+| **Static method** | \`ClassName.method(args)\` | \`Math.sqrt(16)\` |
+| **Constructor** | \`new ClassName(args)\` | \`new ArrayList<>()\` |
+
+### Static Methods (Class Methods)
+- Called on the **class**, not on an object
+- \`Math.abs(-5)\`, \`Math.pow(2, 3)\`, \`Math.random()\`
+- No object needed: \`Math.max(a, b)\`
       `
     },
     {
-      id: 'csausing1-input',
+      id: 'csauo1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Using Objects & Methods?
+1) A reference variable that points to no object has the value _______.
 
-2) What concept describes a critical component of understanding Using Objects & Methods?
+2) When two variables reference the same object, they are called _______.
 
-3) Name the term for an essential element that connects Using Objects & Methods to broader themes.
-
-Use the exact term from this part.
+3) Static methods like Math.abs() are called on the _______ itself, not on an instance.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Using Objects & Methods), Key concept 2 (A critical component of understanding Using Objects & Methods), and Key concept 3 (An essential element that connects Using Objects & Methods to broader themes).'
+        correctAnswers: ['null', 'aliases', 'class'],
+        hint1: 'The absence of an object reference.',
+        hint2: 'Two names for the same underlying object.',
+        hint3: 'Math.abs() — Math is a ___, not an object.',
+        explanation: 'null = no object. Aliases = two references to same object. Static methods are called on the class.'
       }
     },
     {
-      id: 'csausing1-dropdown',
+      id: 'csauo1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Concept** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Using Objects & Methods is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Math.random() returns a value in the range ___',
+            options: ['0.0 (inclusive) to 1.0 (exclusive)', '0 to 100', '1 to 10', '-1.0 to 1.0']
           },
           {
-            label: 'A critical component of understanding Using Objects & Methods describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'int[] a = {1,2,3}; int[] b = a; b[0] = 9; After this, a[0] is ___',
+            options: ['9 (aliases reference the same array)', '1 (b is an independent copy)', '0 (reset to default)', 'Compile error']
           },
           {
-            label: 'An essential element that connects Using Objects & Methods to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Calling a method on a null reference causes a ___',
+            options: ['NullPointerException', 'ArrayIndexOutOfBoundsException', 'Compile error', 'The method returns null']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Using Objects & Methods. Key concept 2 — A critical component of understanding Using Objects & Methods. Key concept 3 — An essential element that connects Using Objects & Methods to broader themes.'
+        correctAnswers: ['0.0 (inclusive) to 1.0 (exclusive)', '9 (aliases reference the same array)', 'NullPointerException'],
+        hint1: 'A double from 0 up to but not including 1.',
+        hint2: 'Both variables point to the same array in memory.',
+        hint3: 'No object to call the method on.',
+        explanation: 'Math.random() returns [0.0, 1.0). Arrays are reference types (aliases). null.method() = NullPointerException.'
       }
     },
     {
-      id: 'csausing1-strategy',
+      id: 'csauo1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Using Objects
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Using Objects & Methods.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Computer Science A for higher scores.
+- **Aliasing** is commonly tested — know that assigning one array/object to another creates a shared reference, not a copy
+- **NullPointerException** is the most common runtime error on the AP exam
+- Know Math class static methods: \`abs\`, \`pow\`, \`sqrt\`, \`random\`, \`max\`, \`min\`
+- Math.random() returns [0.0, 1.0) — to get a random int from 0 to n-1: \`(int)(Math.random() * n)\`
+- Understand the difference between instance methods (called on objects) and static methods (called on classes)
       `
     },
     {
-      id: 'csausing1-applied',
+      id: 'csauo1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Using Objects & Methods on a free-response question. The best approach is:',
+            question: 'Which expression generates a random integer in the range [1, 6] (simulating a die roll)?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '(int)(Math.random() * 6)',
+              '(int)(Math.random() * 6) + 1',
+              '(int)(Math.random() * 7)',
+              'Math.random() * 6 + 1'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Math.random() * 6 gives [0.0, 6.0). Casting to int gives {0,1,2,3,4,5}. Adding 1 gives {1,2,3,4,5,6} — a proper die roll simulation.'
           },
           {
-            question: 'When studying Using Objects & Methods, which strategy is most effective?',
+            question: 'What is printed?\nString a = "hello";\nString b = a;\na = "world";\nSystem.out.println(b);',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '"world"',
+              '"hello"',
+              'null',
+              'Compile error'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Strings are immutable. When a = "world" is executed, a points to a new String object "world", but b still points to the original "hello". Reassigning a does not affect b.'
           }
         ]
       }
     }
   ]
-}
+};

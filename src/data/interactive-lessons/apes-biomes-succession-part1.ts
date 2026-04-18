@@ -2,26 +2,32 @@ export const apesBiomesSuccessionPart1Data = {
   topicSlug: 'apes-biomes-succession',
   sections: [
     {
-      id: 'apesbiom1-intro',
+      id: 'apesbs1-intro',
       type: 'text' as const,
       content: `
-# 🌿 Biomes & Ecological Succession
+# 🌍 Biomes & Ecological Succession
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Terrestrial and Aquatic Biomes**
 
-Biomes & Ecological Succession is a fundamental topic in AP Environmental Science. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Terrestrial Biomes
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Biomes & Ecological Succession |
-| **Key concept 2** | A critical component of understanding Biomes & Ecological Succession |
-| **Key concept 3** | An essential element that connects Biomes & Ecological Succession to broader themes |
+| Biome | Climate | Key Features | Biodiversity |
+|-------|---------|-------------|-------------|
+| **Tropical rainforest** | Hot, wet year-round | Tallest canopy, most diverse biome | Highest |
+| **Tropical savanna** | Hot, distinct wet/dry seasons | Grassland with scattered trees, fire-adapted | High |
+| **Desert** | Hot or cold, <25 cm rain/yr | Sparse vegetation, extreme temperature swings | Low |
+| **Temperate grassland** | Moderate temps, 25-75 cm rain | Deep fertile soil (great for agriculture) | Moderate |
+| **Temperate forest** | Moderate, distinct seasons | Deciduous trees, autumn leaf drop | Moderate-High |
+| **Boreal forest (taiga)** | Cold, long winters | Coniferous trees (spruce, pine, fir) | Low-Moderate |
+| **Tundra** | Very cold, permafrost | No trees; mosses, lichens, low shrubs | Low |
+
+> 🔑 **Biome distribution** is primarily determined by **temperature** and **precipitation** — this is why biomes form latitudinal bands.
       `
     },
     {
-      id: 'apesbiom1-quiz1',
+      id: 'apesbs1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +35,154 @@ Biomes & Ecological Succession is a fundamental topic in AP Environmental Scienc
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Biomes & Ecological Succession?',
+            question: 'Which biome has the deepest, most fertile soil and has been largely converted to agriculture?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Biomes & Ecological Succession',
-              'A mathematical formula',
-              'A literary technique'
+              'Tropical rainforest',
+              'Temperate grassland',
+              'Boreal forest',
+              'Tundra'
             ],
             correctAnswer: 1,
-            explanation: 'Biomes & Ecological Succession focuses on understanding key principles and patterns within AP Environmental Science.'
+            explanation: 'Temperate grasslands (prairies) have deep, nutrient-rich soil formed by centuries of grass growth and decomposition. Most have been converted to farmland (US Great Plains, Ukraine).'
           },
           {
-            question: 'Why is Biomes & Ecological Succession important in AP Environmental Science?',
+            question: 'The tundra biome is characterized by:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Dense deciduous forest and moderate rainfall',
+              'Permafrost, no trees, and extremely cold temperatures',
+              'Hot temperatures and sparse rainfall',
+              'Coniferous trees and long cold winters'
             ],
             correctAnswer: 1,
-            explanation: 'Biomes & Ecological Succession is a key topic in AP Environmental Science that connects to multiple course themes.'
+            explanation: 'Tundra has permanently frozen subsoil (permafrost), no trees (too cold and windy), extreme cold, and short growing seasons. Found in Arctic regions and high mountain tops.'
           }
         ]
       }
     },
     {
-      id: 'apesbiom1-content',
+      id: 'apesbs1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Ecological Succession
 
-### Key concept 1
-The foundational principle underlying Biomes & Ecological Succession. Understanding this concept is essential for mastering Biomes & Ecological Succession in AP Environmental Science.
+| Type | Starting Point | Process | Example |
+|------|---------------|---------|---------|
+| **Primary succession** | Bare rock/new surface (no soil) | Pioneer species → soil development → complex community | Lava flow, retreating glacier |
+| **Secondary succession** | Disturbed area (soil remains) | Faster recovery since soil exists | After fire, abandoned farm, hurricane |
 
-### Key concept 2
-A critical component of understanding Biomes & Ecological Succession. This builds on the previous concept and connects to broader themes in the course.
+### Succession Stages (Primary)
 
-### Key concept 3
-An essential element that connects Biomes & Ecological Succession to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+1. **Pioneer species** arrive: lichens, mosses break down rock
+2. **Soil develops** from weathered rock + dead organisms
+3. **Grasses and herbs** colonize the new thin soil
+4. **Shrubs and small trees** outcompete grasses for light
+5. **Climax community** established: mature forest or stable ecosystem
+
+### Key Terms
+
+| Term | Definition |
+|------|-----------|
+| **Pioneer species** | First to colonize; tolerant of harsh conditions (lichens, mosses) |
+| **Climax community** | Stable, mature endpoint of succession |
+| **Disturbance** | Event that disrupts the ecosystem (fire, flood, logging) |
+| **Resilience** | Ability to recover after disturbance |
+| **Resistance** | Ability to withstand disturbance without changing |
       `
     },
     {
-      id: 'apesbiom1-input',
+      id: 'apesbs1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Biomes & Ecological Succession?
+1) Succession that begins on bare rock with no soil is called _______ succession.
 
-2) What concept describes a critical component of understanding Biomes & Ecological Succession?
+2) The first organisms to colonize a disturbed or new area are called _______ species.
 
-3) Name the term for an essential element that connects Biomes & Ecological Succession to broader themes.
-
-Use the exact term from this part.
+3) The stable, mature endpoint of succession is called the _______ community.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Biomes & Ecological Succession), Key concept 2 (A critical component of understanding Biomes & Ecological Succession), and Key concept 3 (An essential element that connects Biomes & Ecological Succession to broader themes).'
+        correctAnswers: ['primary', 'pioneer', 'climax'],
+        hint1: 'Starts from scratch — no soil at all.',
+        hint2: 'Lichens and mosses are classic examples.',
+        hint3: 'The final, stable stage.',
+        explanation: 'Primary succession = starts on bare rock. Pioneer species = first colonizers. Climax community = stable endpoint of succession.'
       }
     },
     {
-      id: 'apesbiom1-dropdown',
+      id: 'apesbs1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Scenario** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Biomes & Ecological Succession is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'An abandoned parking lot gradually being overtaken by weeds, then shrubs, then trees is ___',
+            options: ['Secondary succession', 'Primary succession', 'A climax community', 'Ecological resistance']
           },
           {
-            label: 'A critical component of understanding Biomes & Ecological Succession describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Lichens growing on newly exposed rock after a glacier retreats is ___',
+            options: ['Primary succession', 'Secondary succession', 'A disturbance event', 'Ecological resilience']
           },
           {
-            label: 'An essential element that connects Biomes & Ecological Succession to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A biome with coniferous trees, cold winters, and acidic soils is the ___',
+            options: ['Boreal forest (taiga)', 'Temperate grassland', 'Tropical savanna', 'Tundra']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Biomes & Ecological Succession. Key concept 2 — A critical component of understanding Biomes & Ecological Succession. Key concept 3 — An essential element that connects Biomes & Ecological Succession to broader themes.'
+        correctAnswers: ['Secondary succession', 'Primary succession', 'Boreal forest (taiga)'],
+        hint1: 'Soil already exists under the pavement.',
+        hint2: 'Starting from bare rock — no prior soil.',
+        hint3: 'Think Canada and Russia — spruce and pine.',
+        explanation: 'Parking lot = secondary (soil present). Bare rock after glacier = primary. Coniferous + cold = taiga/boreal forest.'
       }
     },
     {
-      id: 'apesbiom1-strategy',
+      id: 'apesbs1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Biomes & Succession
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Biomes & Ecological Succession.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Environmental Science for higher scores.
+- Know how to read a **climate diagram** (climograph) showing temperature and precipitation to identify biomes
+- Primary vs secondary succession: the KEY difference is whether **soil is present**
+- Fire is NOT always bad — many ecosystems (grasslands, chaparral, pine forests) are **fire-adapted** and NEED periodic burning
+- **Invasive species** can disrupt succession by outcompeting native species
+- Permafrost thawing due to climate change releases methane — a positive feedback loop
       `
     },
     {
-      id: 'apesbiom1-applied',
+      id: 'apesbs1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Biomes & Ecological Succession on a free-response question. The best approach is:',
+            question: 'After a forest fire destroys the vegetation but leaves the soil intact, regrowth follows secondary succession. Which will likely appear FIRST?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Mature oak and maple trees',
+              'Fast-growing grasses and wildflowers',
+              'Lichens growing on rock surfaces',
+              'Dense shrub thickets'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'In secondary succession (soil present), fast-growing herbaceous plants (grasses, wildflowers) colonize first, followed by shrubs, then pioneer trees, then mature forest.'
           },
           {
-            question: 'When studying Biomes & Ecological Succession, which strategy is most effective?',
+            question: 'Climate change is causing permafrost in the tundra to thaw, releasing methane. This is a concern because:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Methane cools the atmosphere and could cause an ice age',
+              'Methane is a potent greenhouse gas creating a positive feedback loop of more warming',
+              'Thawing permafrost increases tundra biodiversity',
+              'Methane has no effect on climate'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Methane is a potent greenhouse gas. Warming thaws permafrost → releases methane → more warming → more thawing. This is a positive feedback loop that accelerates climate change.'
           }
         ]
       }
     }
   ]
-}
+};

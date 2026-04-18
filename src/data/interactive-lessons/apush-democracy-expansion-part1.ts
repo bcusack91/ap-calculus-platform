@@ -5,19 +5,50 @@ export const apushDemocracyExpansionPart1Data = {
       id: 'apushdem1-intro',
       type: 'text' as const,
       content: `
-# 🇺🇸 Democracy & Westward Expansion
+# 🇺🇸 Democracy & Expansion
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Jacksonian Democracy & Manifest Destiny**
 
-Democracy & Westward Expansion is a fundamental topic in AP US History. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Jacksonian Democracy |
+| Indian Removal & the Trail of Tears |
+| Manifest Destiny |
+| 📌 Westward Expansion & Its Consequences |
+| The Market Revolution |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Democracy & Westward Expansion |
-| **Key concept 2** | A critical component of understanding Democracy & Westward Expansion |
-| **Key concept 3** | An essential element that connects Democracy & Westward Expansion to broader themes |
+> 🔑 **Key Concept:** The AP exam tests how expanding democracy for white men coincided with the dispossession of Native Americans and the expansion of slavery — revealing deep contradictions in the era's ideals.
+      `
+    },
+    {
+      id: 'apushdem1-jackson',
+      type: 'text' as const,
+      content: `
+## 📖 Jacksonian Democracy (1828–1840s)
+
+**Andrew Jackson's** presidency (1829–37) represented a dramatic expansion of political participation — but only for **white men**.
+
+### Key Features of Jacksonian Democracy
+
+| Feature | Details |
+|---------|---------|
+| **Expanded suffrage** | Most states eliminated property requirements for white male voters by the 1830s |
+| **Spoils system** | Jackson rewarded political supporters with government jobs ("to the victor belong the spoils") |
+| **Opposition to the National Bank** | Jackson vetoed the recharter of the Second Bank of the United States (1832); saw it as a tool of the wealthy elite |
+| **Nullification Crisis** | South Carolina (led by John C. Calhoun) declared federal tariffs null and void; Jackson threatened military force; resolved by compromise tariff (1833) |
+| **Indian Removal** | Forced relocation of southeastern Native nations to Indian Territory (Oklahoma) |
+
+> ⚠️ **AP Alert:** The AP exam often asks you to evaluate whether Jacksonian Democracy was truly "democratic." Key tension: it expanded democracy for white men while simultaneously dispossessing Native Americans and doing nothing to end slavery.
+
+### Indian Removal Act (1830) & Trail of Tears
+
+- Jackson signed the **Indian Removal Act** (1830) — authorized forced relocation of Native nations east of the Mississippi
+- **Cherokee Nation v. Georgia** (1831) and **Worcester v. Georgia** (1832) — Supreme Court (Chief Justice Marshall) ruled in favor of Cherokee sovereignty
+- Jackson allegedly responded: "John Marshall has made his decision; now let him enforce it"
+- **Trail of Tears** (1838–39): ~16,000 Cherokee forced to march to Oklahoma; ~4,000 died from disease, exposure, and starvation
+- Also affected: Choctaw, Creek, Chickasaw, and Seminole nations
       `
     },
     {
@@ -29,144 +60,139 @@ Democracy & Westward Expansion is a fundamental topic in AP US History. This par
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Democracy & Westward Expansion?',
+            question: 'Jackson\'s veto of the Second Bank of the United States was significant because it:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Democracy & Westward Expansion',
-              'A mathematical formula',
-              'A literary technique'
+              'Demonstrated presidential power to challenge Congress and the economic elite on behalf of "common" voters',
+              'Led to immediate economic prosperity and eliminated all national debt',
+              'Was overridden by a two-thirds vote in both houses of Congress',
+              'Established the Federal Reserve System that exists today'
             ],
-            correctAnswer: 1,
-            explanation: 'Democracy & Westward Expansion focuses on understanding key principles and patterns within AP US History.'
+            correctAnswer: 0,
+            explanation: 'Jackson\'s Bank Veto (1832) was both an assertion of executive power and a populist statement against what he called a "monster" institution that benefited the wealthy. He argued the Bank was unconstitutional despite the Supreme Court ruling otherwise in McCulloch v. Maryland (1819).'
           },
           {
-            question: 'Why is Democracy & Westward Expansion important in AP US History?',
+            question: 'The significance of Worcester v. Georgia (1832) lies in the fact that:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'The Supreme Court recognized Cherokee sovereignty, but President Jackson defied the ruling and proceeded with removal',
+              'It established the principle of judicial review for the first time',
+              'It ruled that all Native American treaties were legally void',
+              'It gave Congress the power to regulate Native American trade'
             ],
-            correctAnswer: 1,
-            explanation: 'Democracy & Westward Expansion is a key topic in AP US History that connects to multiple course themes.'
+            correctAnswer: 0,
+            explanation: 'In Worcester v. Georgia, Chief Justice Marshall ruled that Georgia had no authority over Cherokee lands. Jackson\'s refusal to enforce the decision exposed the limits of judicial power when the executive branch refuses to act — a key AP concept about checks and balances.'
           }
         ]
       }
     },
     {
-      id: 'apushdem1-content',
+      id: 'apushdem1-manifest',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Manifest Destiny & Westward Expansion
 
-### Key concept 1
-The foundational principle underlying Democracy & Westward Expansion. Understanding this concept is essential for mastering Democracy & Westward Expansion in AP US History.
+**Manifest Destiny** — the belief that American expansion across the continent was inevitable, justified, and divinely ordained.
 
-### Key concept 2
-A critical component of understanding Democracy & Westward Expansion. This builds on the previous concept and connects to broader themes in the course.
+### Key Expansion Events
 
-### Key concept 3
-An essential element that connects Democracy & Westward Expansion to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Event | Date | Details |
+|-------|------|---------|
+| **Louisiana Purchase** | 1803 | Doubled U.S. territory; $15 million from France; raised constitutional questions (no explicit power to buy territory) |
+| **Missouri Compromise** | 1820 | Admitted Missouri (slave) and Maine (free); banned slavery above 36°30' line in Louisiana Territory |
+| **Texas Annexation** | 1845 | Republic of Texas (independent since 1836) annexed as slave state |
+| **Oregon Treaty** | 1846 | U.S. and Britain split Oregon Territory at 49th parallel |
+| **Mexican-American War** | 1846–48 | U.S. provoked war; Treaty of Guadalupe Hidalgo → U.S. gained California, Nevada, Utah, Arizona, New Mexico |
+| **Gadsden Purchase** | 1853 | Bought strip of land from Mexico for a southern railroad route |
+
+### The Market Revolution (1800s–1840s)
+
+Alongside territorial expansion, the **Market Revolution** transformed the American economy:
+
+- **Transportation:** Erie Canal (1825), steamboats, railroads connected interior to markets
+- **Industry:** Textile mills in New England (Lowell system — employed young women); interchangeable parts (Eli Whitney)
+- **Agriculture:** Cotton gin (1793) → cotton boom → increased demand for enslaved labor in the South
+- **Result:** North industrialized; South deepened its dependence on slavery and cotton — setting the stage for sectional conflict
       `
     },
     {
       id: 'apushdem1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Democracy & Westward Expansion?
+1) What term describes the belief that American westward expansion was inevitable and divinely ordained?
 
-2) What concept describes a critical component of understanding Democracy & Westward Expansion?
+2) What 1820 agreement admitted Missouri as a slave state and Maine as a free state?
 
-3) Name the term for an essential element that connects Democracy & Westward Expansion to broader themes.
+3) What was the forced march of ~16,000 Cherokee to Indian Territory in which ~4,000 died called?
 
-Use the exact term from this part.
+Use the exact historical term.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Democracy & Westward Expansion), Key concept 2 (A critical component of understanding Democracy & Westward Expansion), and Key concept 3 (An essential element that connects Democracy & Westward Expansion to broader themes).'
+        correctAnswers: ['Manifest Destiny', 'Missouri Compromise', 'Trail of Tears'],
+        hint1: 'Two words — America\'s "destiny" was "manifest" (obvious)',
+        hint2: 'The ___ Compromise of 1820',
+        hint3: 'Trail of ___',
+        explanation: 'Manifest Destiny was coined by journalist John O\'Sullivan in 1845. The Missouri Compromise (1820) temporarily resolved the slavery-in-territories debate. The Trail of Tears (1838–39) forcibly relocated Cherokee and other nations to present-day Oklahoma.'
       }
     },
     {
       id: 'apushdem1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Events** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Democracy & Westward Expansion is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'The 1803 land deal that doubled U.S. territory was the ___',
+            options: ['Louisiana Purchase', 'Gadsden Purchase', 'Treaty of Guadalupe Hidalgo', 'Oregon Treaty']
           },
           {
-            label: 'A critical component of understanding Democracy & Westward Expansion describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Andrew Jackson\'s practice of rewarding political allies with government jobs was called the ___',
+            options: ['Spoils system', 'Merit system', 'Civil service', 'Patronage Act']
           },
           {
-            label: 'An essential element that connects Democracy & Westward Expansion to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'The invention that dramatically increased cotton production and slavery\'s expansion was the ___',
+            options: ['Cotton gin', 'Spinning jenny', 'Power loom', 'Steam engine']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Democracy & Westward Expansion. Key concept 2 — A critical component of understanding Democracy & Westward Expansion. Key concept 3 — An essential element that connects Democracy & Westward Expansion to broader themes.'
+        correctAnswers: ['Louisiana Purchase', 'Spoils system', 'Cotton gin'],
+        hint1: 'Purchased from Napoleon\'s France for $15 million',
+        hint2: '"To the victor belong the ___"',
+        hint3: 'Invented by Eli Whitney in 1793',
+        explanation: 'The Louisiana Purchase (1803) was Thomas Jefferson\'s biggest achievement despite his strict-constructionist concerns. The spoils system rewarded loyalty over competence. The cotton gin (1793) made short-staple cotton profitable, causing cotton production — and slavery — to explode across the Deep South.'
       }
-    },
-    {
-      id: 'apushdem1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Democracy & Westward Expansion.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP US History for higher scores.
-      `
     },
     {
       id: 'apushdem1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Democracy & Westward Expansion on a free-response question. The best approach is:',
+            question: 'Which of the following BEST explains why the Mexican-American War (1846–48) intensified the national debate over slavery?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'The vast new territories acquired from Mexico forced Congress to decide whether slavery would expand westward, reopening the conflict the Missouri Compromise had temporarily resolved',
+              'Mexico demanded that the U.S. abolish slavery as a condition of the peace treaty',
+              'American soldiers refused to fight unless slavery was abolished in the new territories',
+              'The war was fought primarily to free enslaved people in Mexican territory'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'The Treaty of Guadalupe Hidalgo added over 500,000 square miles to the U.S. The question of whether slavery would be allowed in these new territories (raised by the Wilmot Proviso in 1846) reignited sectional tensions that had been managed since the Missouri Compromise — ultimately leading to the Compromise of 1850, the Kansas-Nebraska Act, and the Civil War.'
           },
           {
-            question: 'When studying Democracy & Westward Expansion, which strategy is most effective?',
+            question: 'A critic of Jacksonian Democracy in 1835 might MOST convincingly argue that:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Expanding voting rights for white men while forcibly removing Native Americans revealed the era\'s democracy was built on racial exclusion',
+              'Jackson\'s policies successfully achieved equality for all Americans regardless of race',
+              'The Second Bank of the United States should have been given even more power',
+              'Property requirements for voting should have been made stricter to prevent mob rule'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 0,
+            explanation: 'The central contradiction of the Jacksonian era was the simultaneous expansion of democracy for white men and the violent exclusion of Native Americans, enslaved African Americans, and women. This paradox — democratic ideals applied selectively — is a core AP theme.'
           }
         ]
       }

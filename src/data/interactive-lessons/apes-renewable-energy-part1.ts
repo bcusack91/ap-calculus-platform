@@ -2,26 +2,41 @@ export const apesRenewableEnergyPart1Data = {
   topicSlug: 'apes-renewable-energy',
   sections: [
     {
-      id: 'apesrene1-intro',
+      id: 'apesre1-intro',
       type: 'text' as const,
       content: `
-# 🌿 Renewable Energy Sources
+# 🌞 Renewable Energy
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Solar, Wind, Hydro, and Other Renewables**
 
-Renewable Energy Sources is a fundamental topic in AP Environmental Science. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Renewable Energy Sources
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Renewable Energy Sources |
-| **Key concept 2** | A critical component of understanding Renewable Energy Sources |
-| **Key concept 3** | An essential element that connects Renewable Energy Sources to broader themes |
+| Source | How It Works | Share of Global Electricity |
+|--------|------------|----------------------------|
+| **Solar PV** | Photovoltaic cells convert sunlight directly to electricity | ~4% (fastest growing) |
+| **Wind** | Turbines convert kinetic energy of wind to electricity | ~7% |
+| **Hydroelectric** | Falling water spins turbines in dams | ~16% (largest renewable source) |
+| **Biomass** | Burning organic material (wood, crops, waste) | ~2% |
+| **Geothermal** | Heat from Earth interior drives steam turbines | ~0.3% |
+| **Hydrogen fuel cells** | H₂ + O₂ → electricity + H₂O | Emerging technology |
+
+---
+
+## Solar Energy
+
+| Type | Description | Application |
+|------|-----------|------------|
+| **Photovoltaic (PV)** | Semiconductor cells convert sunlight to electricity | Rooftop panels, solar farms |
+| **Concentrated Solar Power (CSP)** | Mirrors focus sunlight to heat fluid and drive turbines | Large desert installations |
+| **Passive solar** | Building design that maximizes natural heating/lighting | South-facing windows, thermal mass |
+
+> 🔑 **Solar is now the cheapest source of new electricity** in most of the world, with costs declining ~90% since 2010.
       `
     },
     {
-      id: 'apesrene1-quiz1',
+      id: 'apesre1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +44,161 @@ Renewable Energy Sources is a fundamental topic in AP Environmental Science. Thi
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Renewable Energy Sources?',
+            question: 'Which renewable energy source currently generates the MOST electricity globally?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Renewable Energy Sources',
-              'A mathematical formula',
-              'A literary technique'
+              'Solar PV',
+              'Wind',
+              'Hydroelectric',
+              'Geothermal'
             ],
-            correctAnswer: 1,
-            explanation: 'Renewable Energy Sources focuses on understanding key principles and patterns within AP Environmental Science.'
+            correctAnswer: 2,
+            explanation: 'Hydroelectric power generates ~16% of global electricity, making it the largest renewable source. However, solar and wind are growing much faster and will likely surpass hydro in coming decades.'
           },
           {
-            question: 'Why is Renewable Energy Sources important in AP Environmental Science?',
+            question: 'A key advantage of renewable energy sources over fossil fuels is:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'They all work 24 hours a day regardless of conditions',
+              'They produce little to no greenhouse gas emissions during operation',
+              'They require no land whatsoever',
+              'They have unlimited energy storage built in'
             ],
             correctAnswer: 1,
-            explanation: 'Renewable Energy Sources is a key topic in AP Environmental Science that connects to multiple course themes.'
+            explanation: 'Renewables produce little to no CO₂ during operation (some lifecycle emissions from manufacturing). However, intermittency (solar depends on sun, wind on wind) remains a challenge.'
           }
         ]
       }
     },
     {
-      id: 'apesrene1-content',
+      id: 'apesre1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Wind Energy
 
-### Key concept 1
-The foundational principle underlying Renewable Energy Sources. Understanding this concept is essential for mastering Renewable Energy Sources in AP Environmental Science.
+| Pros | Cons |
+|------|------|
+| No emissions during operation | Intermittent (depends on wind) |
+| Low operating costs | Bird and bat mortality |
+| Small land footprint (base only) | Visual and noise concerns |
+| Can coexist with farming | Not suitable everywhere |
 
-### Key concept 2
-A critical component of understanding Renewable Energy Sources. This builds on the previous concept and connects to broader themes in the course.
+## Hydroelectric Energy
 
-### Key concept 3
-An essential element that connects Renewable Energy Sources to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Pros | Cons |
+|------|------|
+| No emissions during operation | Dams block fish migration (salmon) |
+| Reliable, controllable output | Flooding displaces communities and ecosystems |
+| Water storage for irrigation/flood control | Sediment trapped behind dam (downstream erosion) |
+| Long lifespan (50+ years) | Methane from decomposing submerged vegetation |
+
+## Other Renewables
+
+| Source | Pros | Cons |
+|--------|------|------|
+| **Geothermal** | Reliable 24/7; very low emissions | Location-limited (volcanic/tectonic areas) |
+| **Biomass** | Carbon-neutral if sustainably harvested; uses waste | Air pollution when burned; land use competition |
+| **Tidal/Wave** | Predictable; enormous energy potential | Technology immature; marine ecosystem impacts |
+
+## Key Challenge: Intermittency and Storage
+- Solar and wind are intermittent — they only generate when the sun shines or wind blows
+- Solutions: battery storage, pumped hydro storage, grid interconnection, demand response
+- Cost of lithium-ion batteries has dropped ~90% since 2010
       `
     },
     {
-      id: 'apesrene1-input',
+      id: 'apesre1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Renewable Energy Sources?
+1) The renewable energy source that is the fastest growing globally is _______ photovoltaic.
 
-2) What concept describes a critical component of understanding Renewable Energy Sources?
+2) A major environmental concern with hydroelectric dams is blocking _______ migration (especially salmon).
 
-3) Name the term for an essential element that connects Renewable Energy Sources to broader themes.
-
-Use the exact term from this part.
+3) The main challenge with solar and wind energy is _______ — they only generate when conditions are right.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Renewable Energy Sources), Key concept 2 (A critical component of understanding Renewable Energy Sources), and Key concept 3 (An essential element that connects Renewable Energy Sources to broader themes).'
+        correctAnswers: ['solar', 'fish', 'intermittency'],
+        hint1: 'PV panels on rooftops and in large farms.',
+        hint2: 'Dams block river pathways for aquatic species.',
+        hint3: 'The sun does not always shine; wind does not always blow.',
+        explanation: 'Solar PV = fastest growing. Dams block fish migration. Intermittency = solar/wind only work when conditions are right.'
       }
     },
     {
-      id: 'apesrene1-dropdown',
+      id: 'apesre1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Source** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Renewable Energy Sources is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Using heat from deep within the Earth to generate electricity is ___',
+            options: ['Geothermal energy', 'Solar energy', 'Biomass energy', 'Tidal energy']
           },
           {
-            label: 'A critical component of understanding Renewable Energy Sources describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A concern specific to wind turbines is ___',
+            options: ['Bird and bat mortality', 'Acid mine drainage', 'Radioactive waste', 'Oil spills']
           },
           {
-            label: 'An essential element that connects Renewable Energy Sources to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Building south-facing windows and using thermal mass for natural heating is ___',
+            options: ['Passive solar design', 'Active solar (PV)', 'Concentrated solar power', 'Geothermal heating']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Renewable Energy Sources. Key concept 2 — A critical component of understanding Renewable Energy Sources. Key concept 3 — An essential element that connects Renewable Energy Sources to broader themes.'
+        correctAnswers: ['Geothermal energy', 'Bird and bat mortality', 'Passive solar design'],
+        hint1: 'Heat from Earth (geo = earth, thermal = heat).',
+        hint2: 'Flying animals colliding with spinning blades.',
+        hint3: 'No panels or technology — just building design.',
+        explanation: 'Geothermal = Earth heat. Wind turbines = bird/bat kills. Passive solar = using building design for natural heating.'
       }
     },
     {
-      id: 'apesrene1-strategy',
+      id: 'apesre1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Renewable Energy
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Renewable Energy Sources.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Environmental Science for higher scores.
+- Know the pros and cons of EACH renewable source — AP FRQs require discussing trade-offs
+- **Hydroelectric** is the largest current renewable but has significant ecosystem impacts
+- Solar and wind are intermittent — know the storage solutions (batteries, pumped hydro)
+- Understand that "renewable" does not mean "zero impact" — all sources have trade-offs
+- **Geothermal** is only feasible in geologically active areas (Iceland, western US)
+- Hydrogen fuel cells produce only water as a byproduct — but hydrogen must be produced first
       `
     },
     {
-      id: 'apesrene1-applied',
+      id: 'apesre1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Renewable Energy Sources on a free-response question. The best approach is:',
+            question: 'A community wants to build a dam for hydroelectric power. Which environmental impact should they MOST consider?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Increased air pollution from burning water',
+              'Disruption of river ecosystems, fish migration, and sediment transport',
+              'Radioactive waste from turbine operation',
+              'Depletion of water from the water cycle'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Dams fundamentally alter river ecosystems: they block fish migration (salmon), trap sediment (causing downstream erosion), flood habitats, and change downstream water temperature and flow.'
           },
           {
-            question: 'When studying Renewable Energy Sources, which strategy is most effective?',
+            question: 'The biggest barrier to achieving 100% renewable electricity from solar and wind is:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Solar and wind produce too much greenhouse gas',
+              'Intermittency — requiring energy storage or backup for when sun and wind are unavailable',
+              'They are too expensive compared to coal',
+              'There is not enough sunlight or wind on Earth'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Solar and wind are intermittent — they only generate power when conditions allow. Grid-scale battery storage, pumped hydro, and geographic diversity are key solutions to this challenge.'
           }
         ]
       }
     }
   ]
-}
+};

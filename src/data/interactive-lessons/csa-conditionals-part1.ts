@@ -2,26 +2,50 @@ export const csaConditionalsPart1Data = {
   topicSlug: 'csa-conditionals',
   sections: [
     {
-      id: 'csacondi1-intro',
+      id: 'csaco1-intro',
       type: 'text' as const,
       content: `
-# 💻 Conditionals & Control Flow
+# 🔀 Conditionals (Advanced)
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Nested Ifs, Complex Conditions, and Common Patterns**
 
-Conditionals & Control Flow is a fundamental topic in AP Computer Science A. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Nested If Statements
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Conditionals & Control Flow |
-| **Key concept 2** | A critical component of understanding Conditionals & Control Flow |
-| **Key concept 3** | An essential element that connects Conditionals & Control Flow to broader themes |
+\`\`\`java
+int temp = 75;
+boolean isSunny = true;
+
+if (temp > 70) {
+    if (isSunny) {
+        System.out.println("Go to the beach!");
+    } else {
+        System.out.println("Stay in and read.");
+    }
+} else {
+    System.out.println("Too cold for outdoor activities.");
+}
+\`\`\`
+
+> 🔑 **Nested ifs** create conditions within conditions. The inner if only runs when the outer if is true. Trace these from the outside in.
+
+---
+
+## Equivalent Conditions
+
+Many conditions can be rewritten in different ways:
+
+| Original | Equivalent | Why |
+|----------|-----------|-----|
+| \`if (x > 0) { return true; } else { return false; }\` | \`return x > 0;\` | The boolean expression IS the result |
+| \`if (flag == true)\` | \`if (flag)\` | flag is already boolean |
+| \`if (flag == false)\` | \`if (!flag)\` | Negating is cleaner |
+| \`if (x >= 0 && x <= 100)\` | Range check: 0 to 100 | Common pattern for bounds checking |
       `
     },
     {
-      id: 'csacondi1-quiz1',
+      id: 'csaco1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +53,174 @@ Conditionals & Control Flow is a fundamental topic in AP Computer Science A. Thi
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Conditionals & Control Flow?',
+            question: 'What is printed?\nint x = 5; int y = 10;\nif (x < y) {\n    if (x + y > 20) {\n        System.out.println("A");\n    } else {\n        System.out.println("B");\n    }\n} else {\n    System.out.println("C");\n}',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Conditionals & Control Flow',
-              'A mathematical formula',
-              'A literary technique'
+              'A',
+              'B',
+              'C',
+              'AB'
             ],
             correctAnswer: 1,
-            explanation: 'Conditionals & Control Flow focuses on understanding key principles and patterns within AP Computer Science A.'
+            explanation: 'x < y (5 < 10) is true, so we enter the outer if. Then x + y > 20 (15 > 20) is false, so the inner else executes and prints "B".'
           },
           {
-            question: 'Why is Conditionals & Control Flow important in AP Computer Science A?',
+            question: 'Which is equivalent to: if (done == true) return true; else return false;',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'return true;',
+              'return done;',
+              'return !done;',
+              'return false;'
             ],
             correctAnswer: 1,
-            explanation: 'Conditionals & Control Flow is a key topic in AP Computer Science A that connects to multiple course themes.'
+            explanation: 'Since done is already a boolean, the entire if/else just returns done as-is. If done is true, it returns true. If done is false, it returns false. So return done; is equivalent.'
           }
         ]
       }
     },
     {
-      id: 'csacondi1-content',
+      id: 'csaco1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Common Conditional Patterns
 
-### Key concept 1
-The foundational principle underlying Conditionals & Control Flow. Understanding this concept is essential for mastering Conditionals & Control Flow in AP Computer Science A.
+### 1. Finding Min/Max
+\`\`\`java
+int max;
+if (a > b) {
+    max = a;
+} else {
+    max = b;
+}
+// Equivalent: int max = Math.max(a, b);
+\`\`\`
 
-### Key concept 2
-A critical component of understanding Conditionals & Control Flow. This builds on the previous concept and connects to broader themes in the course.
+### 2. Absolute Value
+\`\`\`java
+int absVal;
+if (x < 0) {
+    absVal = -x;
+} else {
+    absVal = x;
+}
+// Equivalent: int absVal = Math.abs(x);
+\`\`\`
 
-### Key concept 3
-An essential element that connects Conditionals & Control Flow to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### 3. Clamping a Value
+\`\`\`java
+// Keep score between 0 and 100
+if (score > 100) {
+    score = 100;
+} else if (score < 0) {
+    score = 0;
+}
+\`\`\`
+
+### 4. Dangling Else Problem
+\`\`\`java
+if (x > 0)
+    if (y > 0)
+        System.out.println("Both positive");
+else
+    System.out.println("This is the INNER else!");
+// The else matches the NEAREST unmatched if (the inner one)
+\`\`\`
       `
     },
     {
-      id: 'csacondi1-input',
+      id: 'csaco1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Conditionals & Control Flow?
+1) In a dangling else situation, the else always pairs with the _______ unmatched if.
 
-2) What concept describes a critical component of understanding Conditionals & Control Flow?
+2) The statement if (flag == true) can be simplified to if (_______).
 
-3) Name the term for an essential element that connects Conditionals & Control Flow to broader themes.
-
-Use the exact term from this part.
+3) Math.abs(-7) returns _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Conditionals & Control Flow), Key concept 2 (A critical component of understanding Conditionals & Control Flow), and Key concept 3 (An essential element that connects Conditionals & Control Flow to broader themes).'
+        correctAnswers: ['nearest', 'flag', '7'],
+        hint1: 'The closest one that does not already have an else.',
+        hint2: 'The variable itself is already true or false.',
+        hint3: 'Absolute value removes the negative sign.',
+        explanation: 'Dangling else → nearest if. flag == true simplifies to flag. Math.abs(-7) = 7.'
       }
     },
     {
-      id: 'csacondi1-dropdown',
+      id: 'csaco1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Simplify the Code** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Conditionals & Control Flow is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'if (x > 0) return true; else return false; simplifies to ___',
+            options: ['return x > 0;', 'return true;', 'return false;', 'return x;']
           },
           {
-            label: 'A critical component of understanding Conditionals & Control Flow describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'To check if x is between 1 and 100 inclusive, use ___',
+            options: ['x >= 1 && x <= 100', 'x >= 1 || x <= 100', 'x > 1 && x < 100', '1 < x < 100']
           },
           {
-            label: 'An essential element that connects Conditionals & Control Flow to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'In Java, 1 < x < 100 is ___',
+            options: ['A compile error (Java does not support chained comparisons)', 'Valid syntax for a range check', 'Equivalent to x >= 1 && x <= 100', 'A runtime exception']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Conditionals & Control Flow. Key concept 2 — A critical component of understanding Conditionals & Control Flow. Key concept 3 — An essential element that connects Conditionals & Control Flow to broader themes.'
+        correctAnswers: ['return x > 0;', 'x >= 1 && x <= 100', 'A compile error (Java does not support chained comparisons)'],
+        hint1: 'The boolean expression is the return value.',
+        hint2: 'AND ensures both bounds are satisfied.',
+        hint3: 'Java requires explicit comparisons connected by && or ||.',
+        explanation: 'Return the boolean directly. Use && for range checks. Java does not support chained comparisons like Python.'
       }
     },
     {
-      id: 'csacondi1-strategy',
+      id: 'csaco1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Conditionals
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Conditionals & Control Flow.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Computer Science A for higher scores.
+- **Trace nested ifs** from the outside in — do not skip levels
+- The **dangling else** is a trick question favorite — else matches the nearest unmatched if
+- Simplify boolean returns: \`if (cond) return true; else return false;\` → \`return cond;\`
+- \`Math.abs()\`, \`Math.max()\`, \`Math.min()\` are allowed on the AP exam — know them
+- Watch for conditions that are always true or always false (tautologies/contradictions)
+- Common error: using \`1 < x < 100\` — Java requires \`x > 1 && x < 100\`
       `
     },
     {
-      id: 'csacondi1-applied',
+      id: 'csaco1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Conditionals & Control Flow on a free-response question. The best approach is:',
+            question: 'What is printed?\nint a = 3, b = 7, c = 5;\nif (a > b)\n    if (a > c)\n        System.out.println("A largest");\nelse\n    System.out.println("Not A");\nSystem.out.println("Done");',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'A largest then Done',
+              'Not A then Done',
+              'Done',
+              'A largest then Not A then Done'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 2,
+            explanation: 'a > b (3 > 7) is false, so the outer if body is skipped entirely. The else belongs to the INNER if (dangling else), so it is also skipped. Only "Done" prints.'
           },
           {
-            question: 'When studying Conditionals & Control Flow, which strategy is most effective?',
+            question: 'Which method call returns the larger of two values x and y?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Math.max(x, y)',
+              'Math.abs(x, y)',
+              'Math.min(x, y)',
+              'Math.pow(x, y)'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 0,
+            explanation: 'Math.max(x, y) returns the larger value. Math.min returns the smaller. Math.abs returns absolute value of one number. Math.pow computes x raised to the y power.'
           }
         ]
       }
     }
   ]
-}
+};

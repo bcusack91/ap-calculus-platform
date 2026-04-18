@@ -2,26 +2,43 @@ export const hgCultureDiffusionPart1Data = {
   topicSlug: 'hg-culture-diffusion',
   sections: [
     {
-      id: 'hgcultur1-intro',
+      id: 'hgcd1-intro',
       type: 'text' as const,
       content: `
-# 🌍 Cultural Patterns & Processes
+# 🌍 Cultural Landscape & Diffusion
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — How Culture Spreads Across Space**
 
-Cultural Patterns & Processes is a fundamental topic in AP Human Geography. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Types of Cultural Diffusion
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Cultural Patterns & Processes |
-| **Key concept 2** | A critical component of understanding Cultural Patterns & Processes |
-| **Key concept 3** | An essential element that connects Cultural Patterns & Processes to broader themes |
+| Diffusion Type | Definition | Example |
+|---------------|-----------|---------|
+| **Relocation** | People physically move, bringing culture | Immigrants bringing cuisine to new countries |
+| **Expansion — Hierarchical** | Spreads from authority/influential nodes | Fashion trends from Paris/Milan to world |
+| **Expansion — Contagious** | Spreads to nearby places like a disease | Spread of Islam across Arabian Peninsula |
+| **Expansion — Stimulus** | Core idea adopted but modified locally | McDonald menu variations worldwide |
+
+> 🔑 **AP Key Point:** The AP exam LOVES asking you to classify diffusion examples. Always identify: WHO spread it, HOW it spread, and whether the IDEA was modified.
+
+---
+
+## Cultural Concepts
+
+| Term | Definition |
+|------|-----------|
+| **Culture trait** | Single element of culture (chopsticks, handshake) |
+| **Culture complex** | Related group of traits (religion includes beliefs, rituals, architecture) |
+| **Culture region** | Area sharing common traits (the Bible Belt, Latin America) |
+| **Cultural landscape** | Physical imprint of culture on the land (buildings, farms, signs) |
+| **Acculturation** | Adopting traits of a dominant culture while retaining some own |
+| **Assimilation** | Fully adopting a new culture, losing original identity |
+| **Syncretism** | Blending of two cultures into something new |
       `
     },
     {
-      id: 'hgcultur1-quiz1',
+      id: 'hgcd1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +46,150 @@ Cultural Patterns & Processes is a fundamental topic in AP Human Geography. This
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Cultural Patterns & Processes?',
+            question: 'McDonald serving teriyaki burgers in Japan is an example of:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Cultural Patterns & Processes',
-              'A mathematical formula',
-              'A literary technique'
+              'Stimulus diffusion — the concept was adopted but modified',
+              'Relocation diffusion — the restaurant physically moved',
+              'Contagious diffusion — it spread to nearby locations',
+              'Acculturation of Japanese cuisine'
             ],
-            correctAnswer: 1,
-            explanation: 'Cultural Patterns & Processes focuses on understanding key principles and patterns within AP Human Geography.'
+            correctAnswer: 0,
+            explanation: 'The core concept (fast food restaurant) was adopted, but the menu was modified to fit local tastes. This is stimulus diffusion — the idea spreads but is changed in the process.'
           },
           {
-            question: 'Why is Cultural Patterns & Processes important in AP Human Geography?',
+            question: 'Spanish colonizers building Catholic churches throughout Latin America is an example of:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Contagious diffusion',
+              'Hierarchical diffusion from an authority',
+              'Stimulus diffusion',
+              'Independent invention'
             ],
             correctAnswer: 1,
-            explanation: 'Cultural Patterns & Processes is a key topic in AP Human Geography that connects to multiple course themes.'
+            explanation: 'The Spanish colonial government and Catholic Church (authority figures) imposed Catholicism on colonized populations — a top-down spread from powerful institutions.'
           }
         ]
       }
     },
     {
-      id: 'hgcultur1-content',
+      id: 'hgcd1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Cultural Landscape
 
-### Key concept 1
-The foundational principle underlying Cultural Patterns & Processes. Understanding this concept is essential for mastering Cultural Patterns & Processes in AP Human Geography.
+The **cultural landscape** (coined by Carl Sauer) is the visible imprint of human activity on the physical environment:
 
-### Key concept 2
-A critical component of understanding Cultural Patterns & Processes. This builds on the previous concept and connects to broader themes in the course.
+| Element | Examples |
+|---------|---------|
+| **Architecture** | Mosques, churches, temples; colonial vs indigenous styles |
+| **Language on signs** | Bilingual street signs, ethnic neighborhood markers |
+| **Land use patterns** | Long-lot system (French), metes-and-bounds (English) |
+| **Agriculture** | Terraced rice paddies, center-pivot irrigation circles |
+| **Transportation** | Road grids (planned cities) vs organic street patterns |
 
-### Key concept 3
-An essential element that connects Cultural Patterns & Processes to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Folk vs. Popular Culture
+
+| Feature | Folk Culture | Popular Culture |
+|---------|-------------|----------------|
+| **Origin** | Anonymous, traditional | Known source, mass-produced |
+| **Diffusion** | Slow, relocation | Fast, hierarchical (media) |
+| **Distribution** | Clustered, isolated | Widespread, global |
+| **Example** | Amish quilting, Navajo weaving | Blue jeans, K-pop, TikTok |
       `
     },
     {
-      id: 'hgcultur1-input',
+      id: 'hgcd1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Cultural Patterns & Processes?
+1) When immigrants bring their food traditions to a new country, this is _______ diffusion.
 
-2) What concept describes a critical component of understanding Cultural Patterns & Processes?
+2) When a group adopts elements of a dominant culture while keeping some of their own traditions, this is called _______.
 
-3) Name the term for an essential element that connects Cultural Patterns & Processes to broader themes.
-
-Use the exact term from this part.
+3) Buildings, signs, and land use patterns that reflect a society culture are called the _______ landscape.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Cultural Patterns & Processes), Key concept 2 (A critical component of understanding Cultural Patterns & Processes), and Key concept 3 (An essential element that connects Cultural Patterns & Processes to broader themes).'
+        correctAnswers: ['relocation', 'acculturation', 'cultural'],
+        hint1: 'People physically relocate.',
+        hint2: 'A middle ground between isolation and full assimilation.',
+        hint3: 'The visible imprint of human activity.',
+        explanation: 'Relocation diffusion = moving and bringing culture. Acculturation = partial adoption of new culture. Cultural landscape = visible human imprint on the land.'
       }
     },
     {
-      id: 'hgcultur1-dropdown',
+      id: 'hgcd1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Diffusion Type** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Cultural Patterns & Processes is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'A new social media trend spreads from celebrities to their followers worldwide. This is ___',
+            options: ['Hierarchical diffusion', 'Relocation diffusion', 'Contagious diffusion', 'Stimulus diffusion']
           },
           {
-            label: 'A critical component of understanding Cultural Patterns & Processes describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'A disease spreading from one town to neighboring towns is most like ___',
+            options: ['Contagious diffusion', 'Hierarchical diffusion', 'Stimulus diffusion', 'Relocation diffusion']
           },
           {
-            label: 'An essential element that connects Cultural Patterns & Processes to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'An immigrant neighborhood keeping its original language and food traditions is an example of ___',
+            options: ['Ethnic enclave maintaining culture through relocation diffusion', 'Assimilation into dominant culture', 'Stimulus diffusion of cuisine', 'Hierarchical diffusion']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Cultural Patterns & Processes. Key concept 2 — A critical component of understanding Cultural Patterns & Processes. Key concept 3 — An essential element that connects Cultural Patterns & Processes to broader themes.'
+        correctAnswers: ['Hierarchical diffusion', 'Contagious diffusion', 'Ethnic enclave maintaining culture through relocation diffusion'],
+        hint1: 'From influential people to their followers.',
+        hint2: 'Spreads to nearby places first.',
+        hint3: 'People who relocated brought their culture with them.',
+        explanation: 'Celebrity trends = hierarchical (top-down). Disease-like spread = contagious (neighbor-to-neighbor). Immigrant neighborhoods = relocation (brought culture by moving).'
       }
     },
     {
-      id: 'hgcultur1-strategy',
+      id: 'hgcd1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Cultural Geography
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Cultural Patterns & Processes.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Human Geography for higher scores.
+- **Diffusion classification** is one of the most tested topics — practice with real-world examples
+- Folk culture = small scale, traditional, clustered; Popular culture = mass-produced, global, widespread
+- **Cultural landscape** questions often show a photo and ask you to identify cultural elements
+- Know the difference between **acculturation** (partial) vs **assimilation** (complete) vs **syncretism** (blending)
+- **Globalization** = the spread of popular culture worldwide; can lead to cultural homogenization
       `
     },
     {
-      id: 'hgcultur1-applied',
+      id: 'hgcd1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Cultural Patterns & Processes on a free-response question. The best approach is:',
+            question: 'A photo shows a street with signs in both English and Chinese, Buddhist temples next to modern shops, and a mix of traditional and Western dress. This cultural landscape BEST illustrates:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Complete cultural assimilation',
+              'Cultural syncretism and acculturation',
+              'Isolated folk culture preservation',
+              'Hierarchical diffusion of Western culture only'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The mix of cultural elements (dual-language signs, religious and commercial buildings, traditional and modern clothing) shows acculturation (partial adoption) and syncretism (blending of cultures).'
           },
           {
-            question: 'When studying Cultural Patterns & Processes, which strategy is most effective?',
+            question: 'Which is the BEST example of popular culture diffusing through contagious diffusion?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'A celebrity launching a fashion line that fans worldwide adopt',
+              'A viral TikTok dance spreading from person to person across a school',
+              'Traditional pottery-making techniques passed down in a village',
+              'A government mandating a national language'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'A viral trend spreading person-to-person (like a contagion) through direct contact/observation is contagious diffusion. Celebrity fashion = hierarchical. Pottery = folk tradition. Government mandate = forced.'
           }
         ]
       }
     }
   ]
-}
+};

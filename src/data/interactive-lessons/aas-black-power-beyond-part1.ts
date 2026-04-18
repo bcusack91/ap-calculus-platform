@@ -1,175 +1,144 @@
 export const aasBlackPowerBeyondPart1Data = {
-  topicSlug: 'aas-black-power-beyond',
+  topicSlug: "aas-black-power-beyond",
   sections: [
     {
-      id: 'aasblack1-intro',
+      id: "aasblack1-intro",
       type: 'text' as const,
-      content: `
-# ✊🏿 Black Power & Beyond
-
-**Part 1 of 7 — Core Concepts**
-
-Black Power & Beyond is a fundamental topic in AP African American Studies. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
-
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Black Power & Beyond |
-| **Key concept 2** | A critical component of understanding Black Power & Beyond |
-| **Key concept 3** | An essential element that connects Black Power & Beyond to broader themes |
-      `
+      content: "# ⚡ Black Power and Beyond\n\n**Part 1 of 7 - Historical Foundations, Evidence, and AP AAS Analysis**\n\n---\n\n## Core Focus: Black Power and Beyond\n\nBlack Power movements emphasized autonomy, community control, and structural transformation in response to limits of earlier reforms.\n\n| Core Concept | What It Refers To | Why It Matters |\n|---|---|---|\n| **Self-Determination** | Community control and autonomy in political/social life | Expanded movement goals beyond formal desegregation |\n| **Institution Building** | Independent schools, health programs, and cultural centers | Translated ideology into local infrastructure |\n| **Political Reframing** | Shift in language around power, identity, and liberation | Reshaped national debate on race and justice |\n\n> AP African American Studies emphasizes evidence-based interpretation across historical periods and disciplines."
     },
     {
-      id: 'aasblack1-quiz1',
+      id: "aasblack1-quiz1",
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: "**Concept Check**",
       exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of Black Power & Beyond?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within Black Power & Beyond',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'Black Power & Beyond focuses on understanding key principles and patterns within AP African American Studies.'
-          },
-          {
-            question: 'Why is Black Power & Beyond important in AP African American Studies?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'Black Power & Beyond is a key topic in AP African American Studies that connects to multiple course themes.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "Which statement best reflects the significance of Self-Determination?",
+                  "options": [
+                        "Black Power rejected all community service work.",
+                        "Black Power included political critique alongside concrete community programs.",
+                        "Institution building had no practical impact.",
+                        "Self-determination referred only to foreign policy."
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Self-Determination is central because it helps explain continuity, change, and lived experience in context."
+            },
+            {
+                  "question": "Which approach best matches AP AAS historical reasoning?",
+                  "options": [
+                        "Treat events as isolated facts",
+                        "Connect evidence to causation, context, and consequences over time",
+                        "Rely only on memorized dates",
+                        "Avoid discussing competing interpretations"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "AP AAS rewards analysis that links evidence to historical processes, structures, and outcomes."
+            }
+      ]
+}
     },
     {
-      id: 'aasblack1-content',
+      id: "aasblack1-content",
       type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
-
-### Key concept 1
-The foundational principle underlying Black Power & Beyond. Understanding this concept is essential for mastering Black Power & Beyond in AP African American Studies.
-
-### Key concept 2
-A critical component of understanding Black Power & Beyond. This builds on the previous concept and connects to broader themes in the course.
-
-### Key concept 3
-An essential element that connects Black Power & Beyond to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
+      content: "## Interpreting Black Power and Beyond with Evidence\n\n### Historical Analysis Workflow\n1. Identify the central process or conflict in the period\n2. Locate key actors, institutions, and structural conditions\n3. Explain short- and long-term consequences\n\n| Strong Evidence Move | Example Frame |\n|---|---|\n| Contextualization | \"Within the context of institution building, this development...\" |\n| Causation | \"Because self-determination intensified, communities responded by...\" |\n| Continuity/change | \"Although conditions shifted, political reframing remained...\" |\n\n### Common Pitfalls\n- Oversimplifying complex historical actors or motives\n- Ignoring regional variation and class/gender differences\n- Treating resistance as singular instead of multifaceted\n- Using modern assumptions without historical context\n\nStrong analysis compares continuity with civil rights strategies while identifying new priorities."
     },
     {
-      id: 'aasblack1-input',
+      id: "aasblack1-input",
       type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the foundational principle underlying Black Power & Beyond?
-
-2) What concept describes a critical component of understanding Black Power & Beyond?
-
-3) Name the term for an essential element that connects Black Power & Beyond to broader themes.
-
-Use the exact term from this part.
-      `,
+      content: "**Vocabulary Recall**\\n\\n1) Term A: _______\\n\\n2) Term B: _______\\n\\n3) Term C: _______",
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Black Power & Beyond), Key concept 2 (A critical component of understanding Black Power & Beyond), and Key concept 3 (An essential element that connects Black Power & Beyond to broader themes).'
-      }
+      "boxes": 3,
+      "correctAnswers": [
+            "self-determination",
+            "institution building",
+            "political reframing"
+      ],
+      "hint1": "Concept 1: Self-Determination",
+      "hint2": "Concept 2: Institution Building",
+      "hint3": "Concept 3: Political Reframing",
+      "explanation": "Self-Determination, Institution Building, and Political Reframing are essential vocabulary in this topic."
+}
     },
     {
-      id: 'aasblack1-dropdown',
+      id: "aasblack1-dropdown",
       type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
+      content: "**Apply the Concept**",
       exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Black Power & Beyond is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Black Power & Beyond describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Black Power & Beyond to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Black Power & Beyond. Key concept 2 — A critical component of understanding Black Power & Beyond. Key concept 3 — An essential element that connects Black Power & Beyond to broader themes.'
-      }
+      "dropdowns": [
+            {
+                  "label": "Self-Determination is best understood as ___",
+                  "options": [
+                        "Collective autonomy through political and community control",
+                        "A campaign slogan with no strategy",
+                        "A private business merger",
+                        "A judicial doctrine only"
+                  ]
+            },
+            {
+                  "label": "A strong AP AAS claim should be ___",
+                  "options": [
+                        "Specific, contextualized, and evidence-based",
+                        "A broad slogan without support",
+                        "A list of names only",
+                        "A moral statement without history"
+                  ]
+            },
+            {
+                  "label": "The strongest historical analysis usually includes ___",
+                  "options": [
+                        "Cause, context, and consequence",
+                        "Dates only",
+                        "Summary only",
+                        "Personal opinion only"
+                  ]
+            }
+      ],
+      "correctAnswers": [
+            "Collective autonomy through political and community control",
+            "Specific, contextualized, and evidence-based",
+            "Cause, context, and consequence"
+      ],
+      "hint1": "Focus on historical function of self-determination.",
+      "hint2": "Claims must be defensible and supported.",
+      "hint3": "Historical reasoning links these elements.",
+      "explanation": "High-quality AP AAS responses combine precise claims with contextual evidence and causal reasoning."
+}
     },
     {
-      id: 'aasblack1-strategy',
+      id: "aasblack1-strategy",
       type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Black Power & Beyond.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP African American Studies for higher scores.
-      `
+      content: "## AP Exam Strategy: Black Power and Beyond\n\n- Define self-determination in historical context before analyzing effects\n- Distinguish immediate outcomes from long-term structural consequences\n- Integrate social, political, cultural, and economic dimensions\n- Use specific evidence and avoid generalized claims\n- Acknowledge complexity across region, class, and gender where relevant\n- Analyze both rhetoric and programmatic initiatives to show full movement scope."
     },
     {
-      id: 'aasblack1-applied',
+      id: "aasblack1-applied",
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: "**AP-Style Application**",
       exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain Black Power & Beyond on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying Black Power & Beyond, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
+      "questions": [
+            {
+                  "question": "A student mentions institution building but gives no context. What is the best revision?",
+                  "options": [
+                        "Add only one extra date",
+                        "Explain how institution building shaped policy, lived experience, and community response",
+                        "Replace with a modern analogy only",
+                        "Remove the concept entirely"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "Concepts gain analytical value when tied to mechanisms, impacts, and historical context."
+            },
+            {
+                  "question": "Which thesis move is strongest in AP AAS writing?",
+                  "options": [
+                        "Make absolute claims with no qualification",
+                        "Advance a specific claim about how political reframing changed and persisted over time",
+                        "List events in chronological order only",
+                        "Use one term repeatedly without evidence"
+                  ],
+                  "correctAnswer": 1,
+                  "explanation": "The best theses are specific, historically grounded, and attentive to continuity and change."
+            }
+      ]
+}
     }
   ]
-}
+};

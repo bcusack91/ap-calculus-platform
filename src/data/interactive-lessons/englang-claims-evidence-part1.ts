@@ -2,26 +2,49 @@ export const englangClaimsEvidencePart1Data = {
   topicSlug: 'englang-claims-evidence',
   sections: [
     {
-      id: 'englangc1-intro',
+      id: 'elce1-intro',
       type: 'text' as const,
       content: `
-# ✍️ Claims & Evidence
+# 📋 Claims and Evidence
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Building and Evaluating Arguments**
 
-Claims & Evidence is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## What Is a Claim?
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Claims & Evidence |
-| **Key concept 2** | A critical component of understanding Claims & Evidence |
-| **Key concept 3** | An essential element that connects Claims & Evidence to broader themes |
+A **claim** is a statement that asserts something to be true. It is the foundation of any argument.
+
+| Claim Type | Definition | Example |
+|-----------|-----------|---------|
+| **Factual** | Asserts something is true or false | "The Earth revolves around the Sun." |
+| **Value** | Asserts something is good/bad, right/wrong | "Universal healthcare is a moral imperative." |
+| **Policy** | Advocates for a specific action or change | "The voting age should be lowered to 16." |
+| **Causal** | Asserts cause-and-effect | "Social media use increases anxiety in teenagers." |
+
+### Thesis vs. Claim
+- A **thesis** is your MAIN claim — the central argument of your essay
+- **Supporting claims** are smaller arguments that back up the thesis
+- Each body paragraph should have its own supporting claim
+
+---
+
+## What Counts as Evidence?
+
+| Evidence Type | Strength | Example |
+|--------------|----------|---------|
+| **Statistics/Data** | Strong — measurable, specific | "67% of respondents reported improvement" |
+| **Expert testimony** | Strong — authoritative | "Dr. Martinez, a leading epidemiologist, states..." |
+| **Historical examples** | Moderate-Strong | "The New Deal created 4 million jobs in its first year" |
+| **Anecdotes** | Moderate — vivid but limited | "My neighbor lost her job during the recession" |
+| **Analogies** | Moderate — clarifying but imperfect | "Schools are like ecosystems — remove one element and the whole system suffers" |
+| **Personal experience** | Weak alone — strengthened by other evidence | "In my experience as a teacher..." |
+
+> 🔑 **Strong arguments** combine multiple types of evidence. A statistic provides credibility; an anecdote makes it relatable; expert testimony adds authority.
       `
     },
     {
-      id: 'englangc1-quiz1',
+      id: 'elce1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +52,158 @@ Claims & Evidence is a fundamental topic in AP English Language. This part intro
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Claims & Evidence?',
+            question: '"The school board should require financial literacy courses for all high school students." What type of claim is this?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Claims & Evidence',
-              'A mathematical formula',
-              'A literary technique'
+              'Factual — it states a fact',
+              'Value — it makes a judgment about good or bad',
+              'Policy — it advocates for a specific action',
+              'Causal — it asserts cause and effect'
             ],
-            correctAnswer: 1,
-            explanation: 'Claims & Evidence focuses on understanding key principles and patterns within AP English Language.'
+            correctAnswer: 2,
+            explanation: 'The word "should" signals a policy claim — it advocates for a specific change or action. Policy claims propose what ought to be done, not just what is true or what is right.'
           },
           {
-            question: 'Why is Claims & Evidence important in AP English Language?',
+            question: 'Which type of evidence is generally considered weakest when used alone?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Statistical data from peer-reviewed research',
+              'Expert testimony from a recognized authority',
+              'A single personal anecdote without supporting data',
+              'Historical evidence from documented events'
             ],
-            correctAnswer: 1,
-            explanation: 'Claims & Evidence is a key topic in AP English Language that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'A single anecdote is vivid and relatable but represents only one case. It does not demonstrate a broader pattern. Anecdotes are most effective when paired with statistics or expert testimony that confirm the pattern.'
           }
         ]
       }
     },
     {
-      id: 'englangc1-content',
+      id: 'elce1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Evaluating Evidence Quality
 
-### Key concept 1
-The foundational principle underlying Claims & Evidence. Understanding this concept is essential for mastering Claims & Evidence in AP English Language.
+Not all evidence is created equal. Strong evidence is:
 
-### Key concept 2
-A critical component of understanding Claims & Evidence. This builds on the previous concept and connects to broader themes in the course.
+| Criterion | Questions to Ask |
+|-----------|-----------------|
+| **Relevant** | Does this evidence directly support the claim? |
+| **Sufficient** | Is there enough evidence, or is it one isolated example? |
+| **Accurate** | Is the data current and from a reliable source? |
+| **Representative** | Does it reflect the broader situation, or is it cherry-picked? |
 
-### Key concept 3
-An essential element that connects Claims & Evidence to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Commentary: The Bridge Between Evidence and Claim
+
+Evidence alone is not an argument. You need **commentary** — your analysis of how the evidence supports the claim.
+
+**Weak**: "Studies show that reading improves test scores." (evidence with no analysis)
+
+**Strong**: "A 2019 Stanford study found that students who read 30 minutes daily scored 15% higher on standardized tests. This data suggests that consistent reading practice builds the comprehension skills tested on these exams, supporting the case for dedicated reading time in schools."
+
+### Counterarguments
+Strong arguments **acknowledge and refute** opposing views:
+
+| Strategy | Example |
+|----------|---------|
+| **Concession** | "While cost is a legitimate concern..." |
+| **Rebuttal** | "...the long-term savings outweigh the initial investment by 3-to-1" |
+| **Qualification** | "This solution may not work for every district, but for urban schools specifically..." |
       `
     },
     {
-      id: 'englangc1-input',
+      id: 'elce1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Claims & Evidence?
+1) A claim that advocates for a specific action or change (often using "should") is called a _______ claim.
 
-2) What concept describes a critical component of understanding Claims & Evidence?
+2) Your analysis of HOW evidence supports a claim is called _______.
 
-3) Name the term for an essential element that connects Claims & Evidence to broader themes.
-
-Use the exact term from this part.
+3) Acknowledging an opposing view before refuting it is called a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Claims & Evidence), Key concept 2 (A critical component of understanding Claims & Evidence), and Key concept 3 (An essential element that connects Claims & Evidence to broader themes).'
+        correctAnswers: ['policy', 'commentary', 'concession'],
+        hint1: 'Policy = what should be done.',
+        hint2: 'Your voice analyzing the evidence.',
+        hint3: 'Conceding a point before arguing against it.',
+        explanation: 'Policy claims = "should" statements. Commentary = analysis. Concession = acknowledging the other side.'
       }
     },
     {
-      id: 'englangc1-dropdown',
+      id: 'elce1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Evaluate the Evidence** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Claims & Evidence is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: '"My cousin did not go to college and became a successful entrepreneur, so college is unnecessary." This evidence is weak because it is ___',
+            options: ['Not representative — one anecdote does not prove a general rule', 'Not relevant to the topic', 'Too formal', 'Based on expert opinion']
           },
           {
-            label: 'A critical component of understanding Claims & Evidence describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: '"A 2023 Pew Research study of 10,000 adults found that 72% support the policy." This evidence is strong because it is ___',
+            options: ['Sufficient and representative — large sample from a credible source', 'Based on a single experience', 'An emotional anecdote', 'A personal opinion']
           },
           {
-            label: 'An essential element that connects Claims & Evidence to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: '"While opponents argue the policy is too expensive, the Congressional Budget Office projects it will save $50 billion over ten years." This sentence uses ___',
+            options: ['Concession and rebuttal', 'Only pathos', 'Only ethos', 'Only anecdote']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Claims & Evidence. Key concept 2 — A critical component of understanding Claims & Evidence. Key concept 3 — An essential element that connects Claims & Evidence to broader themes.'
+        correctAnswers: ['Not representative — one anecdote does not prove a general rule', 'Sufficient and representative — large sample from a credible source', 'Concession and rebuttal'],
+        hint1: 'One person is not everyone.',
+        hint2: '10,000 people from Pew = solid data.',
+        hint3: '"While opponents argue" = concession; CBO data = rebuttal.',
+        explanation: 'Single anecdote = unrepresentative. Pew study = strong data. "While...but" = concession + rebuttal.'
       }
     },
     {
-      id: 'englangc1-strategy',
+      id: 'elce1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Claims and Evidence
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Claims & Evidence.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- Every argument paragraph needs: **claim + evidence + commentary**
+- On the argument essay, use at least 2-3 types of evidence (statistics, examples, expert testimony)
+- ALWAYS include commentary — evidence without explanation earns minimal credit
+- Address counterarguments to show sophistication
+- The AP rubric specifically rewards "concession and rebuttal" in the argument essay
+- Evaluate source credibility: peer-reviewed research > news articles > personal blogs
       `
     },
     {
-      id: 'englangc1-applied',
+      id: 'elce1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Claims & Evidence on a free-response question. The best approach is:',
+            question: 'A student writes: "Homework should be eliminated because I hate doing it and my friends agree." What is the primary weakness of this argument?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'The claim is well-supported but needs formatting',
+              'The evidence is entirely personal and anecdotal, with no data, expert testimony, or representative examples',
+              'The grammar is incorrect',
+              'Homework cannot be discussed in academic writing'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The argument relies solely on personal feelings and a small, unrepresentative sample (friends). A strong argument would include research data, educational expert opinions, and representative studies on homework effectiveness.'
           },
           {
-            question: 'When studying Claims & Evidence, which strategy is most effective?',
+            question: 'Which of the following demonstrates effective use of concession and rebuttal?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '"My opponents are wrong about everything."',
+              '"While some studies suggest moderate homework benefits younger students, the overwhelming evidence for high schoolers shows diminishing returns beyond 90 minutes."',
+              '"Homework is bad because students do not like it."',
+              '"I believe homework should be optional."'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'This sentence concedes that some evidence supports moderate homework ("While some studies suggest...") before rebutting with stronger evidence for the writer-s position. This demonstrates sophistication and fair-mindedness.'
           }
         ]
       }
     }
   ]
-}
+};

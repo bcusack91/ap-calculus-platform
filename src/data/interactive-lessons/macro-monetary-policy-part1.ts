@@ -1,175 +1,84 @@
 export const macroMonetaryPolicyPart1Data = {
   topicSlug: 'macro-monetary-policy',
   sections: [
-    {
-      id: 'macromon1-intro',
-      type: 'text' as const,
-      content: `
-# 📈 Monetary Policy & The Federal Reserve
+    {id:'macromone1-intro',type:'text' as const,content:`
+# 🏦 Monetary Policy
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — The Federal Reserve & Interest Rates**
 
-Monetary Policy & The Federal Reserve is a fundamental topic in AP Macroeconomics. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 The Federal Reserve System |
+| Tools of Monetary Policy |
+| How Monetary Policy Works |
+| Limitations of Monetary Policy |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Monetary Policy & The Federal Reserve |
-| **Key concept 2** | A critical component of understanding Monetary Policy & The Federal Reserve |
-| **Key concept 3** | An essential element that connects Monetary Policy & The Federal Reserve to broader themes |
-      `
-    },
-    {
-      id: 'macromon1-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of Monetary Policy & The Federal Reserve?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within Monetary Policy & The Federal Reserve',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'Monetary Policy & The Federal Reserve focuses on understanding key principles and patterns within AP Macroeconomics.'
-          },
-          {
-            question: 'Why is Monetary Policy & The Federal Reserve important in AP Macroeconomics?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'Monetary Policy & The Federal Reserve is a key topic in AP Macroeconomics that connects to multiple course themes.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'macromon1-content',
-      type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
+> 🔑 **Key Concept:** Monetary policy is conducted by the **Federal Reserve** (the Fed) to control the **money supply** and **interest rates**. The AP exam tests the three main tools and the **chain of causation** from Fed action → interest rates → investment → AD → output & price level.
+`},
+    {id:'macromone1-fed',type:'text' as const,content:`
+## 📖 The Federal Reserve System
 
-### Key concept 1
-The foundational principle underlying Monetary Policy & The Federal Reserve. Understanding this concept is essential for mastering Monetary Policy & The Federal Reserve in AP Macroeconomics.
+### Structure
+- **Board of Governors** — 7 members, 14-year terms, appointed by the president (confirmed by Senate)
+- **Chair of the Fed** — 4-year term; most powerful economic policymaker (currently Jerome Powell)
+- **12 Regional Federal Reserve Banks** — serve as the "bankers' bank"
+- **Federal Open Market Committee (FOMC)** — makes monetary policy decisions; meets ~8 times per year
 
-### Key concept 2
-A critical component of understanding Monetary Policy & The Federal Reserve. This builds on the previous concept and connects to broader themes in the course.
+### Tools of Monetary Policy
 
-### Key concept 3
-An essential element that connects Monetary Policy & The Federal Reserve to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'macromon1-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+| Tool | Description | Expansionary (↓ rates) | Contractionary (↑ rates) |
+|---|---|---|---|
+| **Open Market Operations (OMO)** | Buying/selling government bonds (most common tool) | **Buy bonds** → injects money into banking system | **Sell bonds** → removes money from banking system |
+| **Federal Funds Rate (target)** | Interest rate banks charge each other for overnight loans | **Lower** the target rate | **Raise** the target rate |
+| **Discount Rate** | Interest rate the Fed charges banks for direct loans | **Lower** the discount rate | **Raise** the discount rate |
+| **Reserve Requirement** | % of deposits banks must hold in reserve (rarely changed) | **Lower** the reserve ratio → banks can lend more | **Raise** the reserve ratio → banks must hold more |
 
-1) What term refers to the foundational principle underlying Monetary Policy & The Federal Reserve?
+### Open Market Operations — How They Work
 
-2) What concept describes a critical component of understanding Monetary Policy & The Federal Reserve?
+**Fed BUYS bonds (expansionary):**
+1. Fed purchases government bonds from banks/public
+2. Fed pays with newly created money → bank reserves INCREASE
+3. More reserves → banks can lend more → money supply INCREASES
+4. More money available → interest rates FALL
+5. Lower rates → more borrowing, investment, and consumption → AD shifts RIGHT
 
-3) Name the term for an essential element that connects Monetary Policy & The Federal Reserve to broader themes.
+**Fed SELLS bonds (contractionary):**
+The reverse — money flows OUT of the banking system → fewer reserves → less lending → money supply decreases → interest rates rise → AD shifts left
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Monetary Policy & The Federal Reserve), Key concept 2 (A critical component of understanding Monetary Policy & The Federal Reserve), and Key concept 3 (An essential element that connects Monetary Policy & The Federal Reserve to broader themes).'
-      }
-    },
-    {
-      id: 'macromon1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Monetary Policy & The Federal Reserve is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Monetary Policy & The Federal Reserve describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Monetary Policy & The Federal Reserve to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Monetary Policy & The Federal Reserve. Key concept 2 — A critical component of understanding Monetary Policy & The Federal Reserve. Key concept 3 — An essential element that connects Monetary Policy & The Federal Reserve to broader themes.'
-      }
-    },
-    {
-      id: 'macromon1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
+> 🔑 **AP Connection:** OMO is the Fed's **primary tool**. "Buy bonds" = expansionary = lower rates. "Sell bonds" = contractionary = higher rates. The AP exam tests this chain of causation in nearly every FRQ set.
+`},
+    {id:'macromone1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
+      {question:'If the Federal Reserve wants to combat a recession, which action should it take?',options:['Sell government bonds on the open market to remove money from the banking system','Buy government bonds on the open market to increase bank reserves, expand the money supply, and lower interest rates','Raise the federal funds rate target to discourage excessive borrowing and spending','Increase the reserve requirement so banks hold more deposits and lend less'],correctAnswer:1,explanation:'To fight a recession, the Fed uses expansionary monetary policy. Buying bonds injects money into the banking system → bank reserves increase → banks can lend more → money supply grows → interest rates fall → businesses and consumers borrow and spend more → AD shifts right → output increases and unemployment falls. Selling bonds, raising rates, or increasing reserve requirements would all be contractionary — making the recession worse.'},
+      {question:'What is the "federal funds rate" and why is it important for monetary policy?',options:['The interest rate the federal government pays on the national debt, which determines total government borrowing costs','The interest rate banks charge each other for overnight loans of reserves — it is the Fed\'s primary interest rate target and influences all other interest rates in the economy','The rate of return on U.S. Treasury bonds sold to foreign governments and sovereign wealth funds','The interest rate charged to consumers on federal student loans and FHA mortgages'],correctAnswer:1,explanation:'The federal funds rate is the rate banks charge each other for overnight lending of reserves. The FOMC sets a target for this rate and uses open market operations to achieve it. The federal funds rate is crucial because it serves as the benchmark for all other interest rates in the economy — when it changes, rates on mortgages, auto loans, business loans, and credit cards adjust accordingly.'}
+    ]}},
+    {id:'macromone1-limits',type:'text' as const,content:`
+## 📖 Limitations of Monetary Policy
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Monetary Policy & The Federal Reserve.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+| Limitation | Explanation |
+|---|---|
+| **Liquidity trap** | Interest rates near 0% — the Fed can't lower them further. Buying bonds injects money but doesn't stimulate spending because rates can't go negative (effectively). Japan experienced this for decades. |
+| **Pushing on a string** | The Fed can make money available, but it can't FORCE banks to lend or businesses to borrow during deep recessions — pessimism may override low rates |
+| **Time lags** | Monetary policy takes 6–18 months to fully affect the economy |
+| **Political independence** | The Fed must resist pressure from politicians who want lower rates before elections |
+| **Stagflation dilemma** | When inflation AND unemployment are both high (SRAS shift left), monetary policy can only address one problem at a time |
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Macroeconomics for higher scores.
-      `
-    },
-    {
-      id: 'macromon1-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain Monetary Policy & The Federal Reserve on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying Monetary Policy & The Federal Reserve, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
-    }
+### Monetary Policy vs. Fiscal Policy
+
+| Feature | Monetary Policy | Fiscal Policy |
+|---|---|---|
+| **Who** | Federal Reserve (independent) | Congress + President |
+| **Tools** | OMO, interest rates, reserve req. | Taxes, spending |
+| **Speed of action** | FOMC can act quickly | Slow (legislative process, debate) |
+| **Time to take effect** | 6–18 month lag | Variable — spending faster than tax changes |
+| **Political pressure** | Insulated (14-year terms) | Highly political |
+
+> 🔑 **AP Connection:** A very common AP FRQ: "The economy is in a recession. Identify ONE fiscal policy and ONE monetary policy action to address it, and explain the chain of causation for each." You must be able to answer both.
+`},
+    {id:'macromone1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
+      {question:'What is a "liquidity trap" and why does it limit the effectiveness of monetary policy?',options:['A situation where the government traps excess liquidity by raising taxes, making monetary policy unnecessary','A situation where interest rates are already near zero, so the Fed cannot lower them further to stimulate borrowing and spending — expansionary monetary policy becomes ineffective','A requirement that banks hold all deposits in liquid form, preventing any lending to businesses','A trade restriction that traps foreign currency within domestic markets, destabilizing exchange rates'],correctAnswer:1,explanation:'When interest rates hit near-zero (the "zero lower bound"), the Fed\'s primary tool — lowering rates — is exhausted. Buying bonds still injects money, but banks may simply hold excess reserves instead of lending (pessimistic about repayment), and businesses may not borrow even at near-zero rates (pessimistic about future demand). This is "pushing on a string." The Fed responded to this constraint after 2008 with unconventional tools like quantitative easing (QE).'},
+      {question:'What is the key advantage of monetary policy over fiscal policy in responding to economic downturns?',options:['Monetary policy is always more effective than fiscal policy at increasing aggregate demand and reducing unemployment','The Federal Reserve can act quickly without legislative approval, while fiscal policy requires Congress to pass legislation — a slow political process','Monetary policy directly increases government spending, while fiscal policy can only change interest rates','The Fed has unlimited resources to fund economic stimulus, while Congress is constrained by the federal budget'],correctAnswer:1,explanation:'The FOMC can adjust interest rates at any of its 8 annual meetings (or in emergency sessions between meetings) without needing Congressional approval. Fiscal policy requires bills to be introduced, debated, amended, passed by both chambers, and signed by the president — a process that can take months or years. This speed advantage is why monetary policy is often the first line of defense against recessions.'}
+    ]}}
   ]
-}
+};

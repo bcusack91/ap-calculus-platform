@@ -2,26 +2,49 @@ export const cspSafeComputingPart1Data = {
   topicSlug: 'csp-safe-computing',
   sections: [
     {
-      id: 'cspsafec1-intro',
+      id: 'cspsc1-intro',
       type: 'text' as const,
       content: `
-# 🖥️ Safe Computing Practices
+# 🔒 Safe Computing
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Privacy, Authentication, and Online Safety**
 
-Safe Computing Practices is a fundamental topic in AP CS Principles. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Personal Data and Privacy
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Safe Computing Practices |
-| **Key concept 2** | A critical component of understanding Safe Computing Practices |
-| **Key concept 3** | An essential element that connects Safe Computing Practices to broader themes |
+### What Is PII?
+**Personally Identifiable Information (PII)** is data that can identify a specific individual.
+
+| Direct PII | Indirect PII |
+|-----------|-------------|
+| Full name | ZIP code |
+| Social Security number | Date of birth |
+| Email address | Gender |
+| Phone number | Browsing history |
+| Home address | Purchase history |
+| Biometric data | Location data |
+
+> 🔑 **Indirect PII** alone may not identify a person, but **combining** multiple pieces of indirect PII often can. ZIP code + date of birth + gender can uniquely identify 87% of Americans.
+
+---
+
+## How Data Is Collected
+
+| Method | Example |
+|--------|---------|
+| **Cookies** | Websites track browsing behavior across sessions |
+| **Location services** | GPS data from mobile devices |
+| **Social media** | Posts, likes, friend connections |
+| **Transactions** | Credit card purchases, online orders |
+| **Search history** | Queries entered into search engines |
+| **IoT devices** | Smart speakers, fitness trackers |
+
+Companies collect this data for targeted advertising, product improvement, and analytics. Users often agree to data collection through **Terms of Service** agreements that many do not read.
       `
     },
     {
-      id: 'cspsafec1-quiz1',
+      id: 'cspsc1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +52,163 @@ Safe Computing Practices is a fundamental topic in AP CS Principles. This part i
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Safe Computing Practices?',
+            question: 'Which combination of indirect PII could potentially identify a specific person?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Safe Computing Practices',
-              'A mathematical formula',
-              'A literary technique'
+              'Favorite color and preferred music genre',
+              'ZIP code, date of birth, and gender',
+              'The weather in their city',
+              'The brand of phone they use'
             ],
             correctAnswer: 1,
-            explanation: 'Safe Computing Practices focuses on understanding key principles and patterns within AP CS Principles.'
+            explanation: 'Research shows ZIP code + date of birth + gender can uniquely identify 87% of Americans. Each piece alone is not identifying, but combined they narrow down to one person.'
           },
           {
-            question: 'Why is Safe Computing Practices important in AP CS Principles?',
+            question: 'What is the primary purpose of cookies on websites?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'To protect against viruses',
+              'To speed up the internet connection',
+              'To track user behavior and preferences across sessions',
+              'To encrypt all website data'
             ],
-            correctAnswer: 1,
-            explanation: 'Safe Computing Practices is a key topic in AP CS Principles that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'Cookies are small files stored by websites on your computer. They track browsing behavior, remember login status, and enable personalized advertising by following users across sites.'
           }
         ]
       }
     },
     {
-      id: 'cspsafec1-content',
+      id: 'cspsc1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Authentication and Authorization
 
-### Key concept 1
-The foundational principle underlying Safe Computing Practices. Understanding this concept is essential for mastering Safe Computing Practices in AP CS Principles.
+### Authentication Methods
+| Method | What You | Example |
+|--------|---------|---------|
+| **Know** | Knowledge factor | Password, PIN, security question |
+| **Have** | Possession factor | Phone (for SMS code), security key |
+| **Are** | Biometric factor | Fingerprint, face scan, iris scan |
 
-### Key concept 2
-A critical component of understanding Safe Computing Practices. This builds on the previous concept and connects to broader themes in the course.
+### Multi-Factor Authentication (MFA)
+Using TWO OR MORE different factors together. Example: password (know) + phone code (have).
 
-### Key concept 3
-An essential element that connects Safe Computing Practices to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Strong Password Practices
+- Use long, unique passwords for each account
+- Combine uppercase, lowercase, numbers, and symbols
+- NEVER reuse passwords across sites
+- Use a password manager to store them securely
+
+## Authorization vs Authentication
+| Concept | Question Answered |
+|---------|-----------------|
+| **Authentication** | "Who are you?" (Verify identity) |
+| **Authorization** | "What are you allowed to do?" (Verify permissions) |
+
+## Digital Footprint
+Everything you do online creates a **digital footprint** — a trail of data including:
+- Posts, comments, and likes on social media
+- Websites visited and searches made
+- Emails sent and received
+- Files uploaded and downloaded
+
+> ⚠️ Your digital footprint is largely **permanent**. Deleted posts may still exist in backups, screenshots, or cached versions. Future employers and colleges may review it.
       `
     },
     {
-      id: 'cspsafec1-input',
+      id: 'cspsc1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Safe Computing Practices?
+1) Data that can identify a specific individual is called Personally _______ Information (PII).
 
-2) What concept describes a critical component of understanding Safe Computing Practices?
+2) Using a password (something you know) PLUS a phone code (something you have) is called _______-factor authentication.
 
-3) Name the term for an essential element that connects Safe Computing Practices to broader themes.
-
-Use the exact term from this part.
+3) The trail of data created by your online activity is called your digital _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Safe Computing Practices), Key concept 2 (A critical component of understanding Safe Computing Practices), and Key concept 3 (An essential element that connects Safe Computing Practices to broader themes).'
+        correctAnswers: ['Identifiable', 'multi', 'footprint'],
+        hint1: 'PII = Personally ___ Information.',
+        hint2: 'Multiple factors combined.',
+        hint3: 'Like footprints in sand, but digital.',
+        explanation: 'PII = Personally Identifiable Information. Multi-factor = 2+ auth methods. Digital footprint = online trail.'
       }
     },
     {
-      id: 'cspsafec1-dropdown',
+      id: 'cspsc1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Concept** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Safe Computing Practices is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'A fingerprint scan is an example of ___ authentication',
+            options: ['Something you ARE (biometric)', 'Something you KNOW', 'Something you HAVE', 'Multi-factor by itself']
           },
           {
-            label: 'A critical component of understanding Safe Computing Practices describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Checking if a logged-in user has permission to delete files is ___',
+            options: ['Authorization', 'Authentication', 'Encryption', 'Compression']
           },
           {
-            label: 'An essential element that connects Safe Computing Practices to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Using the same password on every website is dangerous because ___',
+            options: ['If one site is breached, all accounts are compromised', 'Passwords expire faster', 'Websites reject reused passwords', 'It slows down login times']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Safe Computing Practices. Key concept 2 — A critical component of understanding Safe Computing Practices. Key concept 3 — An essential element that connects Safe Computing Practices to broader themes.'
+        correctAnswers: ['Something you ARE (biometric)', 'Authorization', 'If one site is breached, all accounts are compromised'],
+        hint1: 'Biometrics = body-based identification.',
+        hint2: 'Already logged in — now checking permissions.',
+        hint3: 'One breach unlocks everything.',
+        explanation: 'Fingerprint = biometric. Permission check = authorization. Password reuse = cascade risk.'
       }
     },
     {
-      id: 'cspsafec1-strategy',
+      id: 'cspsc1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Safe Computing
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Safe Computing Practices.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP CS Principles for higher scores.
+- Know what **PII** is — and that INDIRECT PII combined can identify someone
+- Three auth factors: know (password), have (phone), are (fingerprint)
+- **Multi-factor** = two DIFFERENT factors (password + password is NOT multi-factor)
+- **Authentication** (who are you?) vs **Authorization** (what can you do?) — know the difference
+- Digital footprint is largely permanent — even deleted content may persist
+- Cookies track behavior; Terms of Service often grant data collection rights
       `
     },
     {
-      id: 'cspsafec1-applied',
+      id: 'cspsc1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Safe Computing Practices on a free-response question. The best approach is:',
+            question: 'A website requires both a password and a fingerprint to log in. This is an example of:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Single-factor authentication',
+              'Multi-factor authentication (knowledge + biometric)',
+              'Authorization',
+              'Encryption'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Password = something you know. Fingerprint = something you are. Using two DIFFERENT factors = multi-factor authentication. This is much more secure than a password alone.'
           },
           {
-            question: 'When studying Safe Computing Practices, which strategy is most effective?',
+            question: 'A data breach exposes millions of users email addresses and hashed passwords. Users who reused that password on other sites are at risk because:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'The breach also affects other websites directly',
+              'Attackers can try those credentials on other services (credential stuffing)',
+              'Email addresses become invalid after a breach',
+              'Hashed passwords cannot be cracked'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'If stolen credentials work on other sites (because the user reused the password), attackers gain access to multiple accounts. This is called credential stuffing and is why password reuse is dangerous.'
           }
         ]
       }
     }
   ]
-}
+};

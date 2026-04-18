@@ -2,26 +2,64 @@ export const csaArraylistUsagePart1Data = {
   topicSlug: 'csa-arraylist-usage',
   sections: [
     {
-      id: 'csaarray1-intro',
+      id: 'csaalu1-intro',
       type: 'text' as const,
       content: `
-# 💻 ArrayList Algorithms
+# 📋 ArrayList Algorithms
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Removing, Searching, and Common Patterns**
 
-ArrayList Algorithms is a fundamental topic in AP Computer Science A. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## The Remove-While-Traversing Trap
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying ArrayList Algorithms |
-| **Key concept 2** | A critical component of understanding ArrayList Algorithms |
-| **Key concept 3** | An essential element that connects ArrayList Algorithms to broader themes |
+\`\`\`java
+// BUGGY: Skips elements after removal!
+ArrayList<String> words = new ArrayList<>();
+// words = ["cat", "dog", "cat", "bird"]
+for (int i = 0; i < words.size(); i++) {
+    if (words.get(i).equals("cat")) {
+        words.remove(i);
+        // After removing index 0: ["dog", "cat", "bird"]
+        // i becomes 1, skipping "dog" -> misses second "cat"!
+    }
+}
+\`\`\`
+
+### Three Correct Solutions
+
+\`\`\`java
+// Solution 1: Decrement i after removal
+for (int i = 0; i < words.size(); i++) {
+    if (words.get(i).equals("cat")) {
+        words.remove(i);
+        i--;  // Recheck this index
+    }
+}
+
+// Solution 2: Traverse backward
+for (int i = words.size() - 1; i >= 0; i--) {
+    if (words.get(i).equals("cat")) {
+        words.remove(i);  // Removal does not affect earlier indices
+    }
+}
+
+// Solution 3: Use while loop
+int i = 0;
+while (i < words.size()) {
+    if (words.get(i).equals("cat")) {
+        words.remove(i);  // Do NOT increment i
+    } else {
+        i++;
+    }
+}
+\`\`\`
+
+> 🔑 **Backward traversal** is the safest and simplest approach for removing elements, since removing a later element does not affect the indices of earlier ones.
       `
     },
     {
-      id: 'csaarray1-quiz1',
+      id: 'csaalu1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +67,182 @@ ArrayList Algorithms is a fundamental topic in AP Computer Science A. This part 
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of ArrayList Algorithms?',
+            question: 'Why does removing elements while traversing forward cause bugs?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within ArrayList Algorithms',
-              'A mathematical formula',
-              'A literary technique'
+              'The ArrayList becomes null after removal',
+              'Elements shift left, so the next element moves to the current index and gets skipped',
+              'The remove method does not work inside loops',
+              'Forward loops are always slower than backward loops'
             ],
             correctAnswer: 1,
-            explanation: 'ArrayList Algorithms focuses on understanding key principles and patterns within AP Computer Science A.'
+            explanation: 'When you remove element at index i, all later elements shift left by one. The element that was at i+1 is now at i. When i increments, it skips that element.'
           },
           {
-            question: 'Why is ArrayList Algorithms important in AP Computer Science A?',
+            question: 'Which traversal direction avoids the remove-while-traversing bug without extra logic?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Forward (i = 0 to size)',
+              'Backward (i = size-1 to 0)',
+              'Random order',
+              'Every other element'
             ],
             correctAnswer: 1,
-            explanation: 'ArrayList Algorithms is a key topic in AP Computer Science A that connects to multiple course themes.'
+            explanation: 'Traversing backward means removals only affect indices AFTER the current position (which have already been processed). No elements are skipped.'
           }
         ]
       }
     },
     {
-      id: 'csaarray1-content',
+      id: 'csaalu1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Common ArrayList Algorithms
 
-### Key concept 1
-The foundational principle underlying ArrayList Algorithms. Understanding this concept is essential for mastering ArrayList Algorithms in AP Computer Science A.
+### Finding the Maximum
+\`\`\`java
+public int findMax(ArrayList<Integer> list) {
+    int max = list.get(0);
+    for (int i = 1; i < list.size(); i++) {
+        if (list.get(i) > max) {
+            max = list.get(i);
+        }
+    }
+    return max;
+}
+\`\`\`
 
-### Key concept 2
-A critical component of understanding ArrayList Algorithms. This builds on the previous concept and connects to broader themes in the course.
+### Removing All Occurrences
+\`\`\`java
+public void removeAll(ArrayList<String> list, String target) {
+    for (int i = list.size() - 1; i >= 0; i--) {
+        if (list.get(i).equals(target)) {
+            list.remove(i);
+        }
+    }
+}
+\`\`\`
 
-### Key concept 3
-An essential element that connects ArrayList Algorithms to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Building a Filtered List
+\`\`\`java
+public ArrayList<Integer> getEvens(ArrayList<Integer> list) {
+    ArrayList<Integer> evens = new ArrayList<>();
+    for (int val : list) {
+        if (val % 2 == 0) {
+            evens.add(val);
+        }
+    }
+    return evens;
+}
+\`\`\`
+
+### Removing Duplicates
+\`\`\`java
+public ArrayList<String> removeDups(ArrayList<String> list) {
+    ArrayList<String> result = new ArrayList<>();
+    for (String s : list) {
+        if (!result.contains(s)) {
+            result.add(s);
+        }
+    }
+    return result;
+}
+\`\`\`
       `
     },
     {
-      id: 'csaarray1-input',
+      id: 'csaalu1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying ArrayList Algorithms?
+1) When removing elements from an ArrayList in a forward loop, you must _______ the index after each removal to avoid skipping.
 
-2) What concept describes a critical component of understanding ArrayList Algorithms?
+2) The safest way to remove elements while traversing is to iterate _______.
 
-3) Name the term for an essential element that connects ArrayList Algorithms to broader themes.
-
-Use the exact term from this part.
+3) To check if an ArrayList contains a specific value, use the _______ method.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying ArrayList Algorithms), Key concept 2 (A critical component of understanding ArrayList Algorithms), and Key concept 3 (An essential element that connects ArrayList Algorithms to broader themes).'
+        correctAnswers: ['decrement', 'backward', 'contains'],
+        hint1: 'i-- after removal.',
+        hint2: 'Start from the end and go down.',
+        hint3: 'Returns true if the value is in the list.',
+        explanation: 'Decrement i after removal. Backward traversal is safest. contains() checks for membership.'
       }
     },
     {
-      id: 'csaarray1-dropdown',
+      id: 'csaalu1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Choose the Pattern** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying ArrayList Algorithms is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'To build a new list with only elements matching a condition, use the ___ pattern',
+            options: ['Filter (create new list, add matching elements)', 'Remove (delete non-matching from original)', 'Sort (reorder elements)', 'Swap (exchange elements)']
           },
           {
-            label: 'A critical component of understanding ArrayList Algorithms describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'list.set(i, newVal) ___ the size of the ArrayList',
+            options: ['Does not change (replaces in place)', 'Increases by 1', 'Decreases by 1', 'Doubles']
           },
           {
-            label: 'An essential element that connects ArrayList Algorithms to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'enhanced for loop on an ArrayList should NOT be used when you need to ___',
+            options: ['Remove elements during traversal', 'Read each element', 'Print each element', 'Calculate a sum']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying ArrayList Algorithms. Key concept 2 — A critical component of understanding ArrayList Algorithms. Key concept 3 — An essential element that connects ArrayList Algorithms to broader themes.'
+        correctAnswers: ['Filter (create new list, add matching elements)', 'Does not change (replaces in place)', 'Remove elements during traversal'],
+        hint1: 'Create a new list and selectively add.',
+        hint2: 'set() replaces; it does not insert.',
+        hint3: 'Enhanced for loop cannot safely remove.',
+        explanation: 'Filter pattern builds new list. set() replaces in place (same size). Enhanced for cannot remove safely.'
       }
     },
     {
-      id: 'csaarray1-strategy',
+      id: 'csaalu1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: ArrayList Algorithms
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of ArrayList Algorithms.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Computer Science A for higher scores.
+- The **remove-while-traversing** bug is one of the most commonly tested topics
+- Always compare Strings with \`.equals()\`, never \`==\`
+- Know three solutions: backward loop, i-- after remove, while loop with conditional increment
+- FRQ tip: if the question says "remove all X," traverse backward
+- The enhanced for loop is read-only for modification purposes — do not add or remove
+- \`list.remove(i)\` returns the removed element — useful for moving elements between lists
       `
     },
     {
-      id: 'csaarray1-applied',
+      id: 'csaalu1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain ArrayList Algorithms on a free-response question. The best approach is:',
+            question: 'ArrayList<Integer> nums = [3, 5, 3, 8, 3]. After removing all 3s with a backward loop, what remains?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '[5, 8]',
+              '[3, 5, 8]',
+              '[5, 3, 8]',
+              '[5, 8, 3]'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'Backward traversal: i=4 (3, remove), i=3 (8, keep), i=2 (3, remove), i=1 (5, keep), i=0 (3, remove). Result: [5, 8]. All three 3s are correctly removed.'
           },
           {
-            question: 'When studying ArrayList Algorithms, which strategy is most effective?',
+            question: 'What is returned by this method for list = [1, 2, 3, 4, 5]?\npublic ArrayList<Integer> mystery(ArrayList<Integer> list) {\n    ArrayList<Integer> result = new ArrayList<>();\n    for (int val : list) {\n        if (val % 2 == 0) {\n            result.add(val);\n        }\n    }\n    return result;\n}',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '[1, 3, 5]',
+              '[2, 4]',
+              '[1, 2, 3, 4, 5]',
+              '[]'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'The method filters for even numbers (val % 2 == 0). 2 and 4 are even. Result: [2, 4]. This is the filter pattern — build a new list with matching elements.'
           }
         ]
       }
     }
   ]
-}
+};

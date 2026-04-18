@@ -1,175 +1,84 @@
 export const macroAdAsPart1Data = {
   topicSlug: 'macro-ad-as',
   sections: [
-    {
-      id: 'macroada1-intro',
-      type: 'text' as const,
-      content: `
+    {id:'macroads1-intro',type:'text' as const,content:`
 # 📈 Aggregate Demand & Aggregate Supply
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — The AD-AS Model**
 
-Aggregate Demand & Aggregate Supply is a fundamental topic in AP Macroeconomics. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Aggregate Demand (AD) |
+| Short-Run Aggregate Supply (SRAS) |
+| Long-Run Aggregate Supply (LRAS) |
+| Macroeconomic Equilibrium & Gaps |
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Aggregate Demand & Aggregate Supply |
-| **Key concept 2** | A critical component of understanding Aggregate Demand & Aggregate Supply |
-| **Key concept 3** | An essential element that connects Aggregate Demand & Aggregate Supply to broader themes |
-      `
-    },
-    {
-      id: 'macroada1-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'Which of the following best describes the main focus of Aggregate Demand & Aggregate Supply?',
-            options: [
-              'An unrelated topic',
-              'The core principles and patterns within Aggregate Demand & Aggregate Supply',
-              'A mathematical formula',
-              'A literary technique'
-            ],
-            correctAnswer: 1,
-            explanation: 'Aggregate Demand & Aggregate Supply focuses on understanding key principles and patterns within AP Macroeconomics.'
-          },
-          {
-            question: 'Why is Aggregate Demand & Aggregate Supply important in AP Macroeconomics?',
-            options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
-            ],
-            correctAnswer: 1,
-            explanation: 'Aggregate Demand & Aggregate Supply is a key topic in AP Macroeconomics that connects to multiple course themes.'
-          }
-        ]
-      }
-    },
-    {
-      id: 'macroada1-content',
-      type: 'text' as const,
-      content: `
-## Core Concepts — Deeper Dive
+> 🔑 **Key Concept:** The AD-AS model is the **most important graph** in AP Macroeconomics. You must understand why AD slopes downward, why SRAS slopes upward, why LRAS is vertical, and how shifts in these curves create **recessionary** or **inflationary** gaps.
+`},
+    {id:'macroads1-ad',type:'text' as const,content:`
+## 📖 Aggregate Demand (AD)
 
-### Key concept 1
-The foundational principle underlying Aggregate Demand & Aggregate Supply. Understanding this concept is essential for mastering Aggregate Demand & Aggregate Supply in AP Macroeconomics.
+AD shows the **total quantity of goods and services demanded** at each price level.
 
-### Key concept 2
-A critical component of understanding Aggregate Demand & Aggregate Supply. This builds on the previous concept and connects to broader themes in the course.
+### Why AD Slopes Downward (3 Effects)
 
-### Key concept 3
-An essential element that connects Aggregate Demand & Aggregate Supply to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'macroada1-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+| Effect | Explanation |
+|---|---|
+| **Wealth effect (real balances)** | Higher price level → purchasing power of savings falls → consumers buy less |
+| **Interest rate effect** | Higher price level → people need more money → interest rates rise → investment and consumption fall |
+| **Net export effect** | Higher price level → domestic goods more expensive relative to foreign goods → exports fall, imports rise → net exports decrease |
 
-1) What term refers to the foundational principle underlying Aggregate Demand & Aggregate Supply?
+### Shifters of AD (anything that changes C, I, G, or Xn at every price level)
 
-2) What concept describes a critical component of understanding Aggregate Demand & Aggregate Supply?
+| Shifter | AD Shifts Right (Increases) | AD Shifts Left (Decreases) |
+|---|---|---|
+| **Consumer confidence** | Consumers feel optimistic → spend more | Consumers feel pessimistic → spend less |
+| **Investment** | Lower interest rates, business optimism | Higher interest rates, business pessimism |
+| **Government spending** | Increases in G (stimulus, infrastructure) | Cuts in G (austerity) |
+| **Taxes** | Tax cuts → more disposable income | Tax increases → less disposable income |
+| **Net exports** | Foreign economies grow → buy more U.S. exports | Dollar appreciates → U.S. exports become more expensive |
+| **Money supply** | Central bank increases money supply → lower interest rates | Central bank decreases money supply → higher interest rates |
 
-3) Name the term for an essential element that connects Aggregate Demand & Aggregate Supply to broader themes.
+> 🔑 **AP Connection:** The three reasons AD slopes downward (wealth, interest rate, net export effects) are a **very common** free-response question. Don't confuse these with demand for a single product — AD is about the ENTIRE economy.
+`},
+    {id:'macroads1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
+      {question:'According to the interest rate effect, why does aggregate demand decrease when the price level rises?',options:['Higher prices cause central banks to print more money, which floods the economy with excess currency','A higher price level increases the demand for money, which raises interest rates, which reduces consumer spending and business investment','Higher prices make domestic goods more competitive internationally, increasing exports','A higher price level increases consumers\' wealth, leading them to save more and spend less on all goods and services'],correctAnswer:1,explanation:'The interest rate effect works through money demand: when the price level rises, people need more money for transactions → they withdraw savings or sell bonds → interest rates rise → borrowing becomes more expensive → businesses invest less and consumers reduce spending on interest-sensitive purchases (cars, homes). This is one of three reasons AD slopes downward.'},
+      {question:'Which of the following would shift the AD curve to the RIGHT (increase aggregate demand)?',options:['An increase in personal income tax rates that reduces household disposable income by 5%','A decline in consumer confidence following a major stock market crash','An increase in government infrastructure spending on highways and bridges','An appreciation of the U.S. dollar that makes American exports more expensive for foreign buyers'],correctAnswer:2,explanation:'Increased government spending (G) directly increases aggregate demand because G is a component of AD (= C + I + G + Xn). More infrastructure spending means more demand for construction materials, equipment, and labor at every price level, shifting AD right. Tax increases, falling confidence, and dollar appreciation would all shift AD LEFT.'}
+    ]}},
+    {id:'macroads1-as',type:'text' as const,content:`
+## 📖 Aggregate Supply
 
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Aggregate Demand & Aggregate Supply), Key concept 2 (A critical component of understanding Aggregate Demand & Aggregate Supply), and Key concept 3 (An essential element that connects Aggregate Demand & Aggregate Supply to broader themes).'
-      }
-    },
-    {
-      id: 'macroada1-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The foundational principle underlying Aggregate Demand & Aggregate Supply is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
-          },
-          {
-            label: 'A critical component of understanding Aggregate Demand & Aggregate Supply describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
-          },
-          {
-            label: 'An essential element that connects Aggregate Demand & Aggregate Supply to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Aggregate Demand & Aggregate Supply. Key concept 2 — A critical component of understanding Aggregate Demand & Aggregate Supply. Key concept 3 — An essential element that connects Aggregate Demand & Aggregate Supply to broader themes.'
-      }
-    },
-    {
-      id: 'macroada1-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
+### Short-Run Aggregate Supply (SRAS)
+- Slopes **upward** — higher price levels incentivize firms to produce more because prices of outputs rise faster than input costs (which are "sticky" in the short run)
+- **Shifters of SRAS:** input prices (wages, energy, raw materials), productivity, supply shocks, business taxes, regulations, subsidies
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Aggregate Demand & Aggregate Supply.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+| If... | SRAS shifts... |
+|---|---|
+| Input prices RISE (oil prices surge) | LEFT (less supplied at each price level) |
+| Productivity INCREASES (new technology) | RIGHT (more supplied at each price level) |
+| Business taxes INCREASE | LEFT (higher costs → produce less) |
+| Positive supply shock (bumper crop) | RIGHT |
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Macroeconomics for higher scores.
-      `
-    },
-    {
-      id: 'macroada1-applied',
-      type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'A student needs to explain Aggregate Demand & Aggregate Supply on a free-response question. The best approach is:',
-            options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
-          },
-          {
-            question: 'When studying Aggregate Demand & Aggregate Supply, which strategy is most effective?',
-            options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
-            ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
-          }
-        ]
-      }
-    }
+### Long-Run Aggregate Supply (LRAS)
+- **Vertical** at the full-employment level of output (potential GDP / Yf)
+- In the long run, output is determined by resources and technology, NOT the price level
+- Shifts right with **economic growth** (more resources, better technology)
+
+### Macroeconomic Equilibrium & Gaps
+
+| Situation | Description | Gap |
+|---|---|---|
+| **Equilibrium at Yf** | AD intersects SRAS at the LRAS line | No gap (full employment) |
+| **Output < Yf** | Actual GDP below potential | **Recessionary gap** — unemployment above natural rate |
+| **Output > Yf** | Actual GDP above potential (unsustainable) | **Inflationary gap** — unemployment below natural rate; prices rising |
+
+> 🔑 **AP Connection:** You MUST be able to draw and label the AD-AS model with all three curves (AD, SRAS, LRAS), identify recessionary and inflationary gaps, and show how fiscal/monetary policy shifts AD to close these gaps.
+`},
+    {id:'macroads1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
+      {question:'In the AD-AS model, a sudden increase in oil prices would primarily cause:',options:['AD to shift right, increasing both output and the price level (demand-pull inflation)','SRAS to shift left, increasing the price level while decreasing output (stagflation/cost-push inflation)','LRAS to shift right, increasing the economy\'s long-run potential output permanently','AD to shift left, decreasing both output and the price level simultaneously (deflation)'],correctAnswer:1,explanation:'Oil is a major input cost for virtually all industries. A surge in oil prices raises production costs across the economy, shifting SRAS to the LEFT. The result: higher price level AND lower output — a combination called stagflation. This is cost-push inflation, and it creates a policy dilemma: fighting inflation (tight policy) worsens unemployment, and fighting unemployment (expansionary policy) worsens inflation.'},
+      {question:'If the economy is in a recessionary gap (actual output below potential GDP), what is true about unemployment?',options:['The unemployment rate equals the natural rate of unemployment because the economy is at full employment','The unemployment rate is below the natural rate because firms are hoarding workers to prepare for recovery','The unemployment rate exceeds the natural rate of unemployment because there is positive cyclical unemployment','The unemployment rate is exactly 0% because recessionary gaps only affect production, not employment'],correctAnswer:2,explanation:'In a recessionary gap, actual GDP < potential GDP (Yf). This means the economy is producing below its capacity, and unemployment is above the natural rate. The excess unemployment is cyclical unemployment — caused by insufficient aggregate demand. At full employment (Yf), cyclical unemployment = 0 and unemployment equals only frictional + structural (the natural rate, ~4–5%).'}
+    ]}}
   ]
-}
+};

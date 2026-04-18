@@ -2,26 +2,42 @@ export const microPerfectCompetitionPart1Data = {
   topicSlug: 'micro-perfect-competition',
   sections: [
     {
-      id: 'microper1-intro',
+      id: 'micropc1-intro',
       type: 'text' as const,
       content: `
 # 💰 Perfect Competition
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — The Benchmark Market Structure**
 
-Perfect Competition is a fundamental topic in AP Microeconomics. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Characteristics of Perfect Competition
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Perfect Competition |
-| **Key concept 2** | A critical component of understanding Perfect Competition |
-| **Key concept 3** | An essential element that connects Perfect Competition to broader themes |
+| Condition | Description |
+|-----------|-------------|
+| **Many buyers & sellers** | No single firm can influence the market price |
+| **Identical products** | Consumers see no difference between sellers' goods |
+| **Perfect information** | All participants know prices and product quality |
+| **Free entry and exit** | No barriers — firms can enter/leave freely |
+| **Price taker** | Each firm accepts the market price as given |
+
+Because the firm is a price taker, its **demand curve is perfectly elastic** (horizontal) at the market price. Every unit sells at the same price.
+
+### Revenue in Perfect Competition
+
+Since P is constant for a competitive firm:
+
+| Revenue Concept | Formula | In Perfect Competition |
+|----------------|---------|----------------------|
+| Total Revenue (TR) | P × Q | Straight line through origin |
+| Average Revenue (AR) | TR / Q | AR = P (horizontal line) |
+| Marginal Revenue (MR) | ΔTR / ΔQ | **MR = P** (also horizontal) |
+
+> 🔑 **Critical AP Fact:** In perfect competition, **D = AR = MR = P**. This simplifies all profit analysis — the demand curve, MR curve, AR curve, and price are all the same horizontal line.
       `
     },
     {
-      id: 'microper1-quiz1',
+      id: 'micropc1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,144 +45,168 @@ Perfect Competition is a fundamental topic in AP Microeconomics. This part intro
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Perfect Competition?',
+            question: 'In perfect competition, a firm\'s demand curve is:',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Perfect Competition',
-              'A mathematical formula',
-              'A literary technique'
+              'Downward-sloping like the market demand',
+              'Perfectly elastic (horizontal) at the market price',
+              'Perfectly inelastic (vertical)',
+              'Upward-sloping'
             ],
             correctAnswer: 1,
-            explanation: 'Perfect Competition focuses on understanding key principles and patterns within AP Microeconomics.'
+            explanation: 'A price taker can sell any quantity at the market price — if it charges above, it sells nothing; below is unnecessary. Demand is perfectly elastic (horizontal).'
           },
           {
-            question: 'Why is Perfect Competition important in AP Microeconomics?',
+            question: 'For a perfectly competitive firm, marginal revenue equals:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Marginal cost',
+              'Average total cost',
+              'The market price',
+              'Zero'
             ],
-            correctAnswer: 1,
-            explanation: 'Perfect Competition is a key topic in AP Microeconomics that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'Since the firm sells every unit at the same market price, each additional unit adds exactly P to total revenue. MR = P.'
           }
         ]
       }
     },
     {
-      id: 'microper1-content',
+      id: 'micropc1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Profit Maximization: The MR = MC Rule
 
-### Key concept 1
-The foundational principle underlying Perfect Competition. Understanding this concept is essential for mastering Perfect Competition in AP Microeconomics.
+Every firm maximizes profit (or minimizes loss) by producing where **MR = MC**:
 
-### Key concept 2
-A critical component of understanding Perfect Competition. This builds on the previous concept and connects to broader themes in the course.
+In perfect competition, since MR = P:
 
-### Key concept 3
-An essential element that connects Perfect Competition to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+$$\\text{Produce where } P = MC$$
+
+### Three Profit Scenarios
+
+| If at MR = MC... | Condition | Result |
+|-------------------|-----------|--------|
+| **P > ATC** | Revenue per unit > cost per unit | **Economic profit** |
+| **P = ATC** | Revenue per unit = cost per unit | **Normal profit** (break even) |
+| **ATC > P > AVC** | Covers variable costs, not fixed | **Economic loss** (but still produce in short run) |
+| **P < AVC** | Can't even cover variable costs | **Shut down** |
+
+### The Shutdown Rule
+
+$$\\text{Shut down if } P < AVC$$
+
+Why? If P < AVC, the firm loses MORE by operating than by shutting down. When shut down, losses = fixed costs only.
+
+> 🔑 The firm's **short-run supply curve** is the portion of the MC curve **above AVC**.
       `
     },
     {
-      id: 'microper1-input',
+      id: 'micropc1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Perfect Competition?
+1) A perfectly competitive firm maximizes profit where P = _______.
 
-2) What concept describes a critical component of understanding Perfect Competition?
+2) The firm should shut down in the short run if P falls below _______.
 
-3) Name the term for an essential element that connects Perfect Competition to broader themes.
-
-Use the exact term from this part.
+3) D = AR = MR = _______ in perfect competition.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Perfect Competition), Key concept 2 (A critical component of understanding Perfect Competition), and Key concept 3 (An essential element that connects Perfect Competition to broader themes).'
+        correctAnswers: ['MC', 'AVC', 'P'],
+        hint1: 'Profit max: MR = MC, and MR = P.',
+        hint2: 'Below this, the firm loses more by operating.',
+        hint3: 'All four are the same horizontal line.',
+        explanation: 'Produce where P = MC (since MR = P). Shut down if P < AVC. In perfect competition, D = AR = MR = P — all equal.'
       }
     },
     {
-      id: 'microper1-dropdown',
+      id: 'micropc1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Profit Analysis** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Perfect Competition is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'When P > ATC at the profit-maximizing quantity, the firm earns ___',
+            options: ['Economic profit', 'Normal profit', 'Economic loss', 'Zero revenue']
           },
           {
-            label: 'A critical component of understanding Perfect Competition describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'When ATC > P > AVC, the firm should ___ in the short run',
+            options: ['Continue producing', 'Shut down immediately', 'Raise its price', 'Double production']
           },
           {
-            label: 'An essential element that connects Perfect Competition to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'The short-run supply curve of a competitive firm is the MC curve above ___',
+            options: ['AVC', 'ATC', 'MR', 'AFC']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Perfect Competition. Key concept 2 — A critical component of understanding Perfect Competition. Key concept 3 — An essential element that connects Perfect Competition to broader themes.'
+        correctAnswers: ['Economic profit', 'Continue producing', 'AVC'],
+        hint1: 'Revenue per unit exceeds cost per unit.',
+        hint2: 'The firm covers variable costs and some fixed costs.',
+        hint3: 'Below this curve, the firm shuts down.',
+        explanation: 'P > ATC → profit. ATC > P > AVC → loss but continue (covers some fixed costs). Supply curve = MC above AVC (shutdown point).'
       }
     },
     {
-      id: 'microper1-strategy',
+      id: 'micropc1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## Long-Run Equilibrium
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Perfect Competition.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+In the long run, free entry and exit drive economic profit to **zero**:
 
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Microeconomics for higher scores.
+1. If firms earn **profit** → new firms **enter** → market supply shifts right → price falls
+2. If firms suffer **losses** → some firms **exit** → market supply shifts left → price rises
+3. **Long-run equilibrium**: P = MC = minimum ATC
+
+### Long-Run Efficiency
+
+| Efficiency Type | Achieved? | Because |
+|----------------|-----------|---------|
+| **Allocative** | ✅ Yes | P = MC |
+| **Productive** | ✅ Yes | Produces at minimum ATC |
+
+> Perfect competition is the **benchmark of efficiency**. All other market structures are compared to it.
+
+### The Long-Run Supply Curve
+
+| Industry Type | Long-Run Supply | Why |
+|--------------|----------------|-----|
+| **Constant-cost** | Horizontal | Entry/exit doesn't change input prices |
+| **Increasing-cost** | Upward-sloping | More firms raise input prices |
+| **Decreasing-cost** | Downward-sloping | More firms lower input prices (rare) |
       `
     },
     {
-      id: 'microper1-applied',
+      id: 'micropc1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Perfect Competition on a free-response question. The best approach is:',
+            question: 'If firms in a perfectly competitive industry are currently earning economic profit, what will happen in the long run?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Firms will raise prices to increase profits further',
+              'New firms enter, supply increases, price falls until profit equals zero',
+              'Existing firms will merge to form a monopoly',
+              'Nothing — profits persist indefinitely'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'Free entry means profit attracts new firms → supply shifts right → market price falls → each firm\'s profit shrinks until P = min ATC and economic profit = 0.'
           },
           {
-            question: 'When studying Perfect Competition, which strategy is most effective?',
+            question: 'A competitive firm has P = $8, ATC = $10, and AVC = $7. The firm should:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Shut down because it is making a loss',
+              'Continue producing because P > AVC',
+              'Raise its price above $10',
+              'Increase output to cover fixed costs'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'P ($8) > AVC ($7), so the firm covers all variable costs and $1 toward fixed costs. Shutting down would mean losing ALL fixed costs. It\'s better to produce and minimize losses.'
           }
         ]
       }

@@ -2,26 +2,55 @@ export const englangDevelopingArgumentsPart1Data = {
   topicSlug: 'englang-developing-arguments',
   sections: [
     {
-      id: 'englangd1-intro',
+      id: 'elda1-intro',
       type: 'text' as const,
       content: `
-# ✍️ Developing Arguments
+# 🧠 Developing Arguments
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Moving from Initial Claim to Sophisticated Reasoning**
 
-Developing Arguments is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## From Opinion to Argument
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Developing Arguments |
-| **Key concept 2** | A critical component of understanding Developing Arguments |
-| **Key concept 3** | An essential element that connects Developing Arguments to broader themes |
+An opinion says what you think.
+An argument demonstrates WHY your claim should persuade others.
+
+### Argument Development Ladder
+
+| Stage | Description |
+|------|-------------|
+| **Assertion** | Initial claim stated |
+| **Support** | Evidence introduced |
+| **Analysis** | Evidence interpreted |
+| **Qualification** | Limits/conditions acknowledged |
+| **Synthesis** | Counterviews integrated into stronger final position |
+
+> 🔑 High AP scores come from development across stages, not from assertion alone.
+
+---
+
+## Building a Reasoned Position
+
+### Start with a Defensible Thesis
+Weak: "Standardized testing is bad."
+Strong: "While standardized tests can provide broad benchmarking data, over-reliance on test scores distorts curriculum and should be balanced with performance-based assessment."
+
+### Expand with Reasons
+Use 2-3 core reasons:
+1. Educational quality effects
+2. Equity implications
+3. Policy feasibility
+
+### Support with Layered Evidence
+- Statistics for scope
+- Examples for concreteness
+- Counterexample for qualification
+- Policy comparison for practicality
       `
     },
     {
-      id: 'englangd1-quiz1',
+      id: 'elda1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +58,161 @@ Developing Arguments is a fundamental topic in AP English Language. This part in
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Developing Arguments?',
+            question: 'What most distinguishes a developed argument from a simple opinion?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Developing Arguments',
-              'A mathematical formula',
-              'A literary technique'
+              'Longer sentences',
+              'Evidence, analysis, and qualification that build a coherent line of reasoning',
+              'Stronger emotional language only',
+              'More rhetorical questions'
             ],
             correctAnswer: 1,
-            explanation: 'Developing Arguments focuses on understanding key principles and patterns within AP English Language.'
+            explanation: 'Argument development requires support and reasoning progression: claim -> evidence -> analysis -> qualification. Opinion alone lacks this structure.'
           },
           {
-            question: 'Why is Developing Arguments important in AP English Language?',
+            question: 'Why does qualification improve argument quality?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'It makes the thesis weaker by avoiding commitment',
+              'It acknowledges complexity and prevents overstatement',
+              'It removes need for evidence',
+              'It shifts focus away from audience'
             ],
             correctAnswer: 1,
-            explanation: 'Developing Arguments is a key topic in AP English Language that connects to multiple course themes.'
+            explanation: 'Qualification demonstrates intellectual honesty and nuance. It strengthens credibility by showing awareness of limits and exceptions rather than making absolute claims.'
           }
         ]
       }
     },
     {
-      id: 'englangd1-content',
+      id: 'elda1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Development Moves That Raise Scores
 
-### Key concept 1
-The foundational principle underlying Developing Arguments. Understanding this concept is essential for mastering Developing Arguments in AP English Language.
+### 1. Deepen, Do Not Just Add
+Instead of adding many points, deepen fewer points with stronger analysis.
 
-### Key concept 2
-A critical component of understanding Developing Arguments. This builds on the previous concept and connects to broader themes in the course.
+### 2. Use Counterargument Strategically
+| Move | Purpose |
+|------|---------|
+| Concession | Shows fairness |
+| Rebuttal | Protects thesis |
+| Qualification | Refines claim |
 
-### Key concept 3
-An essential element that connects Developing Arguments to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### 3. Connect Paragraphs Logically
+End each paragraph by forecasting the next reasoning step.
+
+Example transition:
+"If curricular narrowing is one cost of test overuse, equity disparities reveal an even deeper systemic consequence."
+
+### 4. Project Implications
+Ask: If my argument is accepted, what follows?
+- Policy implications
+- Ethical implications
+- Social consequences
+
+## Common Development Problems
+- Repeating thesis in different words
+- Evidence without interpretation
+- Counterargument as token mention
+- No progression in reasoning
+- Ending without implications
       `
     },
     {
-      id: 'englangd1-input',
+      id: 'elda1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Developing Arguments?
+1) Moving from claim to evidence to interpretation builds a line of _______.
 
-2) What concept describes a critical component of understanding Developing Arguments?
+2) A nuanced argument often avoids absolute language by using _______.
 
-3) Name the term for an essential element that connects Developing Arguments to broader themes.
-
-Use the exact term from this part.
+3) A concession should usually be followed by a _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Developing Arguments), Key concept 2 (A critical component of understanding Developing Arguments), and Key concept 3 (An essential element that connects Developing Arguments to broader themes).'
+        correctAnswers: ['reasoning', 'qualification', 'rebuttal'],
+        hint1: 'Logical chain in argument.',
+        hint2: 'Adds conditions/limits.',
+        hint3: 'Response that defends your position.',
+        explanation: 'Claim-evidence-analysis forms line of reasoning. Qualification adds nuance. Concession is strongest with rebuttal.'
       }
     },
     {
-      id: 'englangd1-dropdown',
+      id: 'elda1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Choose the Stronger Development Move** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Developing Arguments is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Best revision for "Testing is bad" thesis:',
+            options: ['Qualified claim balancing benefits and harms with policy direction', 'Add exclamation marks', 'Repeat "bad" three times', 'Remove thesis entirely']
           },
           {
-            label: 'A critical component of understanding Developing Arguments describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'If paragraph includes data but no explanation, the missing element is ___',
+            options: ['Commentary/analysis', 'Topic sentence', 'Grammar only', 'Audience']
           },
           {
-            label: 'An essential element that connects Developing Arguments to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'A conclusion that projects policy and ethical consequences shows ___',
+            options: ['Argument development depth', 'Plot summary', 'Source paraphrase', 'Narrative exposition']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Developing Arguments. Key concept 2 — A critical component of understanding Developing Arguments. Key concept 3 — An essential element that connects Developing Arguments to broader themes.'
+        correctAnswers: ['Qualified claim balancing benefits and harms with policy direction', 'Commentary/analysis', 'Argument development depth'],
+        hint1: 'Nuance + direction > blunt assertion.',
+        hint2: 'Interpret what the data means.',
+        hint3: 'Implications extend reasoning beyond recap.',
+        explanation: 'Qualified thesis is stronger. Data needs commentary. Implications signal deeper argument development.'
       }
     },
     {
-      id: 'englangd1-strategy',
+      id: 'elda1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Developing Arguments
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Developing Arguments.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- Focus on depth: 2-3 well-developed reasons are enough
+- After each evidence point, add explicit interpretation
+- Qualify claims to show complexity and control
+- Use concession/rebuttal to strengthen credibility
+- Build transitions that show progression, not repetition
+- End with implications to demonstrate mature reasoning
       `
     },
     {
-      id: 'englangd1-applied',
+      id: 'elda1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Developing Arguments on a free-response question. The best approach is:',
+            question: 'A student essay has clear thesis and examples but little analysis. Which revision most improves argument development?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Add more examples without explanation',
+              'Insert commentary that explains how each example supports the thesis and acknowledges limitations',
+              'Use more emotional language',
+              'Cut the thesis'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'The missing piece is analysis. Commentary and qualification turn examples into reasoning, which is essential for high-scoring development.'
           },
           {
-            question: 'When studying Developing Arguments, which strategy is most effective?',
+            question: 'Which thesis is most development-ready?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '"Technology is bad."',
+              '"Although automation increases productivity in some sectors, labor policy must pair innovation with retraining protections to prevent concentrated worker displacement."',
+              '"Technology changes society."',
+              '"People disagree about automation."'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'This thesis is specific, qualified, and policy-oriented. It contains built-in complexity, making it easier to develop with layered reasons and counterarguments.'
           }
         ]
       }
     }
   ]
-}
+};

@@ -2,26 +2,42 @@ export const hgUrbanChallengesPart1Data = {
   topicSlug: 'hg-urban-challenges',
   sections: [
     {
-      id: 'hgurbanc1-intro',
+      id: 'hguc1-intro',
       type: 'text' as const,
       content: `
 # 🌍 Urban Challenges & Sustainability
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Problems of Rapid Urbanization**
 
-Urban Challenges & Sustainability is a fundamental topic in AP Human Geography. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Challenges in the Developing World
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Urban Challenges & Sustainability |
-| **Key concept 2** | A critical component of understanding Urban Challenges & Sustainability |
-| **Key concept 3** | An essential element that connects Urban Challenges & Sustainability to broader themes |
+| Challenge | Description | Example |
+|-----------|-----------|---------|
+| **Squatter settlements** | Informal housing built on land without permission | Favelas (Brazil), slums (Mumbai) |
+| **Inadequate infrastructure** | Lack of clean water, sanitation, electricity | ~1 billion people in slums worldwide |
+| **Traffic congestion** | Rapid growth outpaces transportation planning | Jakarta, Cairo, Lagos |
+| **Air/water pollution** | Industrial and vehicle emissions, untreated sewage | Delhi air quality, Ganges River pollution |
+| **Urban sprawl** | Unplanned expansion consuming agricultural land | Peri-urban growth around African cities |
+
+> 🔑 **Squatter settlements** (also called informal settlements or shanty towns) are NOT always negative — they often develop their own economies, social networks, and infrastructure over time.
+
+---
+
+## Challenges in the Developed World
+
+| Challenge | Description | Example |
+|-----------|-----------|---------|
+| **Suburban sprawl** | Low-density, car-dependent development | American Sun Belt cities (Phoenix, Houston) |
+| **Inner-city decay** | Loss of industry, jobs, and population from city centers | Detroit, Cleveland (deindustrialization) |
+| **Gentrification** | Displacement of lower-income residents by affluent newcomers | Brooklyn, San Francisco |
+| **Brownfields** | Contaminated former industrial sites | Rust Belt factory sites |
+| **Housing affordability** | Rising costs excluding lower-income residents | San Francisco, London, Sydney |
       `
     },
     {
-      id: 'hgurbanc1-quiz1',
+      id: 'hguc1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +45,145 @@ Urban Challenges & Sustainability is a fundamental topic in AP Human Geography. 
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Urban Challenges & Sustainability?',
+            question: 'Which term describes informal housing built without legal ownership of the land?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Urban Challenges & Sustainability',
-              'A mathematical formula',
-              'A literary technique'
+              'Gentrified housing',
+              'Squatter settlements',
+              'Edge city developments',
+              'Planned unit developments'
             ],
             correctAnswer: 1,
-            explanation: 'Urban Challenges & Sustainability focuses on understanding key principles and patterns within AP Human Geography.'
+            explanation: 'Squatter settlements (favelas, slums, shanty towns) are built on land the residents do not legally own, typically on the urban periphery of rapidly growing developing-world cities.'
           },
           {
-            question: 'Why is Urban Challenges & Sustainability important in AP Human Geography?',
+            question: 'Deindustrialization in cities like Detroit primarily caused:',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'Rapid population growth from immigration',
+              'Loss of manufacturing jobs and population decline',
+              'Gentrification of all neighborhoods',
+              'Increased demand for downtown housing'
             ],
             correctAnswer: 1,
-            explanation: 'Urban Challenges & Sustainability is a key topic in AP Human Geography that connects to multiple course themes.'
+            explanation: 'When factories closed or relocated, cities like Detroit lost their economic base, leading to job losses, population decline, abandoned buildings, and fiscal crises.'
           }
         ]
       }
     },
     {
-      id: 'hgurbanc1-content',
+      id: 'hguc1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Urban Sustainability Initiatives
 
-### Key concept 1
-The foundational principle underlying Urban Challenges & Sustainability. Understanding this concept is essential for mastering Urban Challenges & Sustainability in AP Human Geography.
+| Strategy | How It Works | Example |
+|----------|-------------|---------|
+| **Smart growth** | Compact, walkable, mixed-use development | Portland, Oregon urban growth boundary |
+| **New Urbanism** | Designing walkable neighborhoods with diverse housing | Seaside, Florida; Celebration, Florida |
+| **Greenbelts** | Protected open space around cities limiting sprawl | London Green Belt (established 1947) |
+| **Transit-oriented development** | Building dense housing near public transit stations | Curitiba, Brazil BRT system |
+| **Mixed-use zoning** | Combining residential, commercial, and retail in one area | Many European city centers |
 
-### Key concept 2
-A critical component of understanding Urban Challenges & Sustainability. This builds on the previous concept and connects to broader themes in the course.
-
-### Key concept 3
-An essential element that connects Urban Challenges & Sustainability to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Measuring Urban Sustainability
+- **Ecological footprint**: How much land/resources a city population requires
+- **Urban heat island effect**: Cities are warmer than surrounding rural areas due to concrete, asphalt, reduced vegetation
+- **Brownfield redevelopment**: Converting contaminated industrial sites to new uses
       `
     },
     {
-      id: 'hgurbanc1-input',
+      id: 'hguc1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Urban Challenges & Sustainability?
+1) Protected open space around a city designed to limit sprawl is called a _______.
 
-2) What concept describes a critical component of understanding Urban Challenges & Sustainability?
+2) The phenomenon where cities are warmer than surrounding rural areas is the urban _______ island effect.
 
-3) Name the term for an essential element that connects Urban Challenges & Sustainability to broader themes.
-
-Use the exact term from this part.
+3) Compact, walkable, mixed-use urban planning is called _______ growth.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Urban Challenges & Sustainability), Key concept 2 (A critical component of understanding Urban Challenges & Sustainability), and Key concept 3 (An essential element that connects Urban Challenges & Sustainability to broader themes).'
+        correctAnswers: ['greenbelt', 'heat', 'smart'],
+        hint1: 'London has a famous one.',
+        hint2: 'Concrete and asphalt absorb and radiate this.',
+        hint3: 'The opposite of suburban sprawl.',
+        explanation: 'Greenbelts = protected open space. Urban heat island = cities warmer than rural areas. Smart growth = compact, walkable, mixed-use.'
       }
     },
     {
-      id: 'hgurbanc1-dropdown',
+      id: 'hguc1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Solution** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Urban Challenges & Sustainability is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Curitiba, Brazil rapid bus transit system is an example of ___',
+            options: ['Transit-oriented development', 'Smart growth', 'Gentrification', 'Suburban sprawl']
           },
           {
-            label: 'A critical component of understanding Urban Challenges & Sustainability describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'Portland urban growth boundary is an example of ___',
+            options: ['Smart growth / greenbelt policy', 'New Urbanism', 'Gentrification', 'Edge city development']
           },
           {
-            label: 'An essential element that connects Urban Challenges & Sustainability to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Converting an abandoned factory into apartments and shops is ___',
+            options: ['Brownfield redevelopment', 'Urban sprawl', 'Deindustrialization', 'Squatter settlement']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Urban Challenges & Sustainability. Key concept 2 — A critical component of understanding Urban Challenges & Sustainability. Key concept 3 — An essential element that connects Urban Challenges & Sustainability to broader themes.'
+        correctAnswers: ['Transit-oriented development', 'Smart growth / greenbelt policy', 'Brownfield redevelopment'],
+        hint1: 'Building around public transit.',
+        hint2: 'A boundary limiting outward growth.',
+        hint3: 'Reusing contaminated industrial land.',
+        explanation: 'Curitiba BRT = transit-oriented development. Portland UGB = smart growth. Reusing old factories = brownfield redevelopment.'
       }
     },
     {
-      id: 'hgurbanc1-strategy',
+      id: 'hguc1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Urban Geography
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Urban Challenges & Sustainability.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Human Geography for higher scores.
+When analyzing urban challenges on the AP exam:
+1. **Identify whether the city is in a developing or developed country** — challenges differ significantly
+2. **Connect challenges to urbanization causes** — rapid rural-to-urban migration drives informal settlements
+3. **Know the models** — be ready to apply Burgess, Hoyt, Harris-Ullman, Griffin-Ford, or De Blij
+4. **Solutions require trade-offs** — gentrification improves neighborhoods but displaces residents
+5. **Use specific examples** — name real cities (Mumbai, Lagos, Detroit, Portland) in FRQ answers
       `
     },
     {
-      id: 'hgurbanc1-applied',
+      id: 'hguc1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Urban Challenges & Sustainability on a free-response question. The best approach is:',
+            question: 'A city builds high-density apartments and stores within walking distance of a new metro station. This best illustrates:',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Transit-oriented development',
+              'Suburban sprawl',
+              'Counter-urbanization',
+              'Urban decay'
             ],
-            correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'Transit-oriented development concentrates dense, mixed-use development around public transit stations to reduce car dependency and promote walkability.'
           },
           {
-            question: 'When studying Urban Challenges & Sustainability, which strategy is most effective?',
+            question: 'Gentrification in a neighborhood is MOST likely to result in:',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'Decreased property values and tax revenue',
+              'Displacement of lower-income residents due to rising costs',
+              'Increased availability of affordable housing',
+              'A decrease in the neighborhood population'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'Gentrification raises property values, rents, and the cost of living, often displacing long-term lower-income residents who can no longer afford the neighborhood.'
           }
         ]
       }
     }
   ]
-}
+};

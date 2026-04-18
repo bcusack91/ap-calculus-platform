@@ -2,26 +2,50 @@ export const csaVariablesTypesPart1Data = {
   topicSlug: 'csa-variables-types',
   sections: [
     {
-      id: 'csavaria1-intro',
+      id: 'csavt1-intro',
       type: 'text' as const,
       content: `
-# 💻 Variables & Data Types
+# 📦 Variables & Data Types
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Primitive Types, Declarations, and Casting**
 
-Variables & Data Types is a fundamental topic in AP Computer Science A. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Primitive Data Types in Java
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying Variables & Data Types |
-| **Key concept 2** | A critical component of understanding Variables & Data Types |
-| **Key concept 3** | An essential element that connects Variables & Data Types to broader themes |
+| Type | Size | Range / Description | Example |
+|------|------|-------------------|---------|
+| **int** | 32 bits | -2,147,483,648 to 2,147,483,647 | \`int count = 42;\` |
+| **double** | 64 bits | Decimal numbers (floating-point) | \`double gpa = 3.95;\` |
+| **boolean** | 1 bit | \`true\` or \`false\` only | \`boolean passed = true;\` |
+| **char** | 16 bits | Single Unicode character | \`char grade = 'A';\` |
+
+> 🔑 **AP CSA focuses on int, double, and boolean.** These three primitives appear on nearly every exam.
+
+---
+
+## Declaring and Initializing Variables
+
+\`\`\`java
+// Declaration (no value yet)
+int score;
+
+// Initialization (assigning a value)
+score = 95;
+
+// Declaration + initialization in one step
+double price = 19.99;
+boolean isValid = true;
+\`\`\`
+
+### Naming Conventions
+- **camelCase** for variables and methods: \`studentName\`, \`calculateAverage()\`
+- **PascalCase** for classes: \`Student\`, \`ArrayList\`
+- **ALL_CAPS** for constants: \`final int MAX_SIZE = 100;\`
       `
     },
     {
-      id: 'csavaria1-quiz1',
+      id: 'csavt1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +53,154 @@ Variables & Data Types is a fundamental topic in AP Computer Science A. This par
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of Variables & Data Types?',
+            question: 'What is the result of: int x = 7 / 2;',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within Variables & Data Types',
-              'A mathematical formula',
-              'A literary technique'
+              'x = 3.5',
+              'x = 3',
+              'x = 4',
+              'Compile error'
             ],
             correctAnswer: 1,
-            explanation: 'Variables & Data Types focuses on understanding key principles and patterns within AP Computer Science A.'
+            explanation: 'Integer division in Java truncates the decimal. 7 / 2 = 3 (not 3.5) because both operands are ints, so the result is an int with the fractional part discarded.'
           },
           {
-            question: 'Why is Variables & Data Types important in AP Computer Science A?',
+            question: 'Which declaration is valid in Java?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'int 2ndPlace = 5;',
+              'double my-score = 9.5;',
+              'boolean isReady = true;',
+              'String char = "hello";'
             ],
-            correctAnswer: 1,
-            explanation: 'Variables & Data Types is a key topic in AP Computer Science A that connects to multiple course themes.'
+            correctAnswer: 2,
+            explanation: 'Variable names cannot start with a digit (2ndPlace), cannot contain hyphens (my-score), and cannot be reserved words (char). isReady follows valid camelCase naming rules.'
           }
         ]
       }
     },
     {
-      id: 'csavaria1-content',
+      id: 'csavt1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Type Casting
 
-### Key concept 1
-The foundational principle underlying Variables & Data Types. Understanding this concept is essential for mastering Variables & Data Types in AP Computer Science A.
+| Cast Type | Description | Example | Result |
+|-----------|-----------|---------|--------|
+| **Widening (implicit)** | Smaller type to larger; automatic | \`double d = 5;\` | \`d = 5.0\` |
+| **Narrowing (explicit)** | Larger type to smaller; requires cast | \`int n = (int) 3.9;\` | \`n = 3\` (truncated) |
 
-### Key concept 2
-A critical component of understanding Variables & Data Types. This builds on the previous concept and connects to broader themes in the course.
+### Integer Division vs. Double Division
 
-### Key concept 3
-An essential element that connects Variables & Data Types to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+\`\`\`java
+int a = 7 / 2;           // 3 (integer division truncates)
+double b = 7 / 2;        // 3.0 (still integer division, then widened)
+double c = 7.0 / 2;      // 3.5 (one operand is double, so double division)
+double d = (double) 7 / 2; // 3.5 (cast forces double division)
+\`\`\`
+
+## The \`final\` Keyword
+
+\`\`\`java
+final double TAX_RATE = 0.08;  // Cannot be reassigned
+TAX_RATE = 0.10;  // COMPILE ERROR!
+\`\`\`
+
+A \`final\` variable is a **constant** — its value cannot change after initialization.
       `
     },
     {
-      id: 'csavaria1-input',
+      id: 'csavt1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying Variables & Data Types?
+1) In Java, dividing two integers (7 / 2) gives _______ because the decimal is truncated.
 
-2) What concept describes a critical component of understanding Variables & Data Types?
+2) To force 7 / 2 to produce 3.5, you can cast one operand: (______) 7 / 2.
 
-3) Name the term for an essential element that connects Variables & Data Types to broader themes.
-
-Use the exact term from this part.
+3) The keyword _______ makes a variable constant (its value cannot be changed).
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying Variables & Data Types), Key concept 2 (A critical component of understanding Variables & Data Types), and Key concept 3 (An essential element that connects Variables & Data Types to broader themes).'
+        correctAnswers: ['3', 'double', 'final'],
+        hint1: 'Integer division drops the fractional part.',
+        hint2: 'Cast to the type that supports decimals.',
+        hint3: 'This keyword means the value is set once and cannot be reassigned.',
+        explanation: '7 / 2 = 3 (integer division). (double) 7 / 2 = 3.5. final = constant.'
       }
     },
     {
-      id: 'csavaria1-dropdown',
+      id: 'csavt1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Classify the Type** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying Variables & Data Types is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'The expression (int) 4.9 evaluates to ___',
+            options: ['4 (truncation, not rounding)', '5 (rounded up)', '4.9 (unchanged)', 'Compile error']
           },
           {
-            label: 'A critical component of understanding Variables & Data Types describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: 'The variable declaration double x = 10; performs a ___ cast',
+            options: ['Widening (implicit) cast from int to double', 'Narrowing (explicit) cast', 'No casting occurs', 'Illegal operation']
           },
           {
-            label: 'An essential element that connects Variables & Data Types to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'The correct Java naming convention for a variable is ___',
+            options: ['camelCase (studentAge)', 'PascalCase (StudentAge)', 'snake_case (student_age)', 'ALL_CAPS (STUDENT_AGE)']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying Variables & Data Types. Key concept 2 — A critical component of understanding Variables & Data Types. Key concept 3 — An essential element that connects Variables & Data Types to broader themes.'
+        correctAnswers: ['4 (truncation, not rounding)', 'Widening (implicit) cast from int to double', 'camelCase (studentAge)'],
+        hint1: 'Casting to int truncates, it does not round.',
+        hint2: 'int fits inside double without data loss.',
+        hint3: 'Variables start lowercase; each subsequent word capitalized.',
+        explanation: '(int) 4.9 = 4 (truncated). int to double = widening. Java variables use camelCase.'
       }
     },
     {
-      id: 'csavaria1-strategy',
+      id: 'csavt1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Variables & Types
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of Variables & Data Types.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP Computer Science A for higher scores.
+- **Integer division** is tested heavily — always check if both operands are ints
+- Remember: casting to int TRUNCATES (drops decimal), it does NOT round
+- \`double d = 7 / 2;\` is a common trick — the division happens FIRST as int (= 3), then widens to 3.0
+- Know that \`final\` prevents reassignment but the AP exam rarely tests it directly
+- Trace code carefully: pay attention to what TYPE each variable is declared as
       `
     },
     {
-      id: 'csavaria1-applied',
+      id: 'csavt1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain Variables & Data Types on a free-response question. The best approach is:',
+            question: 'What is printed?\nint a = 10;\nint b = 3;\ndouble result = a / b;\nSystem.out.println(result);',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              '3.3333333333333335',
+              '3.0',
+              '3',
+              '3.33'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'a / b is integer division (both ints): 10 / 3 = 3. Then 3 is widened to 3.0 when stored in the double variable result. The decimal division never happens.'
           },
           {
-            question: 'When studying Variables & Data Types, which strategy is most effective?',
+            question: 'Which code correctly computes the average of three int test scores as a double?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              'double avg = score1 + score2 + score3 / 3;',
+              'double avg = (score1 + score2 + score3) / 3;',
+              'double avg = (double)(score1 + score2 + score3) / 3;',
+              'int avg = (score1 + score2 + score3) / 3.0;'
             ],
-            correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            correctAnswer: 2,
+            explanation: 'Option C casts the sum to double before dividing, ensuring double division. Option A has order-of-operations error. Option B does integer division. Option D has a type mismatch.'
           }
         ]
       }
     }
   ]
-}
+};

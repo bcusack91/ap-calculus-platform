@@ -2,26 +2,49 @@ export const englangSynthesisEssayPart1Data = {
   topicSlug: 'englang-synthesis-essay',
   sections: [
     {
-      id: 'englangs1-intro',
+      id: 'else1-intro',
       type: 'text' as const,
       content: `
-# ✍️ The Synthesis Essay
+# 📝 The Synthesis Essay
 
-**Part 1 of 7 — Core Concepts**
+**Part 1 of 7 — Executing a High-Scoring AP Synthesis Response Under Time Pressure**
 
-The Synthesis Essay is a fundamental topic in AP English Language. This part introduces the essential concepts and vocabulary you need to master for the AP exam.
+---
 
-### Key Concepts
+## Time-Smart Synthesis Workflow
 
-| Concept | Description |
-|---------|-------------|
-| **Key concept 1** | The foundational principle underlying The Synthesis Essay |
-| **Key concept 2** | A critical component of understanding The Synthesis Essay |
-| **Key concept 3** | An essential element that connects The Synthesis Essay to broader themes |
+Recommended 40-minute plan:
+
+| Minutes | Task |
+|--------|------|
+| 0-5 | Read prompt, define task, annotate source positions |
+| 5-10 | Group sources, draft thesis + paragraph plan |
+| 10-33 | Write intro + body paragraphs + concession/rebuttal |
+| 33-40 | Write conclusion, revise for clarity, source accuracy |
+
+---
+
+## What the Rubric Rewards
+
+| Rubric Category | High-Scoring Features |
+|-----------------|-----------------------|
+| **Thesis** | Defensible, specific, responsive to prompt |
+| **Evidence/Commentary** | Accurate source use, strong integration, clear analysis |
+| **Sophistication** | Nuance, qualification, complexity, strategic style |
+
+### Core Body Paragraph Template
+1. Topic claim
+2. Source evidence (A)
+3. Commentary
+4. Source evidence (B or contrast source)
+5. Commentary + synthesis move
+6. Link to thesis
+
+> 🔑 You are not writing about sources. You are writing an argument with sources.
       `
     },
     {
-      id: 'englangs1-quiz1',
+      id: 'else1-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,147 +52,164 @@ The Synthesis Essay is a fundamental topic in AP English Language. This part int
       exercise: {
         questions: [
           {
-            question: 'Which of the following best describes the main focus of The Synthesis Essay?',
+            question: 'What is the best use of source material in a synthesis essay?',
             options: [
-              'An unrelated topic',
-              'The core principles and patterns within The Synthesis Essay',
-              'A mathematical formula',
-              'A literary technique'
+              'Quote full paragraphs to prove you read carefully',
+              'Use concise source references and prioritize your commentary',
+              'Mention all sources once without analysis',
+              'Avoid attribution to save time'
             ],
             correctAnswer: 1,
-            explanation: 'The Synthesis Essay focuses on understanding key principles and patterns within AP English Language.'
+            explanation: 'High-scoring essays use sources efficiently and devote most space to analysis. Long quotations reduce room for reasoning and often weaken control.'
           },
           {
-            question: 'Why is The Synthesis Essay important in AP English Language?',
+            question: 'What is the biggest advantage of grouping sources before writing?',
             options: [
-              'It is not important',
-              'It connects to multiple units and is frequently tested on the AP exam',
-              'It is only relevant to one question',
-              'It has been removed from the curriculum'
+              'It helps memorize source letters only',
+              'It enables claim-centered organization and smoother synthesis',
+              'It guarantees sophistication automatically',
+              'It eliminates need for thesis'
             ],
             correctAnswer: 1,
-            explanation: 'The Synthesis Essay is a key topic in AP English Language that connects to multiple course themes.'
+            explanation: 'Grouping by idea lets you integrate sources around argumentative reasons, avoiding source-by-source summary and producing stronger structure.'
           }
         ]
       }
     },
     {
-      id: 'englangs1-content',
+      id: 'else1-content',
       type: 'text' as const,
       content: `
-## Core Concepts — Deeper Dive
+## Intro and Conclusion Strategy
 
-### Key concept 1
-The foundational principle underlying The Synthesis Essay. Understanding this concept is essential for mastering The Synthesis Essay in AP English Language.
+### Intro Goals
+- Establish issue quickly
+- Signal complexity (if appropriate)
+- State defensible thesis
 
-### Key concept 2
-A critical component of understanding The Synthesis Essay. This builds on the previous concept and connects to broader themes in the course.
+### Conclusion Goals
+- Synthesize key reasoning (not repeat intro verbatim)
+- Reassert stakes and implications
+- End with controlled rhetorical force
 
-### Key concept 3
-An essential element that connects The Synthesis Essay to broader themes. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+## Source Attribution Options
+
+| Style | Example |
+|------|---------|
+| Parenthetical | "Public trust declines when transparency drops" (Source C). |
+| Integrated | "As Source E's survey indicates, trust rises when..." |
+| Comparative | "Unlike Source B, Source F emphasizes..." |
+
+## Common Pitfalls on Timed Synthesis
+- Mislabeling or misreading a source
+- Claim drift (thesis changes mid-essay)
+- Source mentions without commentary
+- Ignoring strongest opposing source
+- Conclusion that adds unrelated new claim
+
+### Rapid Revision Checklist
+1. Thesis still clear and defensible?
+2. At least three sources used accurately?
+3. Each source followed by commentary?
+4. Counterargument addressed?
+5. Paragraph transitions logical?
       `
     },
     {
-      id: 'englangs1-input',
+      id: 'else1-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the foundational principle underlying The Synthesis Essay?
+1) In a timed synthesis essay, sources should be grouped by _______ rather than summarized one-by-one.
 
-2) What concept describes a critical component of understanding The Synthesis Essay?
+2) After source evidence, the highest-value next move is analytical _______.
 
-3) Name the term for an essential element that connects The Synthesis Essay to broader themes.
-
-Use the exact term from this part.
+3) A strong conclusion should restate stakes and _______.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: K',
-        hint3: 'Starts with: K',
-        explanation: 'Expected answers: Key concept 1 (The foundational principle underlying The Synthesis Essay), Key concept 2 (A critical component of understanding The Synthesis Essay), and Key concept 3 (An essential element that connects The Synthesis Essay to broader themes).'
+        correctAnswers: ['idea', 'commentary', 'implications'],
+        hint1: 'Group by argument reason/theme.',
+        hint2: 'Your explanation of meaning.',
+        hint3: 'Why your argument matters going forward.',
+        explanation: 'Group by ideas, not source order. Commentary earns points. Conclusions should project implications.'
       }
     },
     {
-      id: 'englangs1-dropdown',
+      id: 'else1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Select the Higher-Scoring Choice** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The foundational principle underlying The Synthesis Essay is called ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'None of these']
+            label: 'Best paragraph sequence in synthesis:',
+            options: ['Claim -> Source evidence -> Commentary -> Additional source relation -> Commentary', 'Source A summary -> Source B summary -> Source C summary', 'Quotes only', 'Personal anecdote only']
           },
           {
-            label: 'A critical component of understanding The Synthesis Essay describes ___',
-            options: ['Key concept 1', 'Key concept 2', 'Key concept 3', 'All of these']
+            label: '"Unlike Source D, Source B suggests..." is a move that ___',
+            options: ['Compares sources to deepen analysis', 'Avoids using sources', 'Summarizes without purpose', 'Introduces plagiarism']
           },
           {
-            label: 'An essential element that connects The Synthesis Essay to broader themes is known as ___',
-            options: ['Key concept 3', 'Key concept 1', 'Key concept 2', 'None of these']
+            label: 'Most effective revision in final 5 minutes is ___',
+            options: ['Fix thesis clarity and ensure commentary follows each source', 'Add extra long quotes', 'Rewrite entire intro from scratch', 'Change topic completely']
           }
         ],
-        correctAnswers: ['Key concept 1', 'Key concept 2', 'Key concept 3'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key concept 1 — The foundational principle underlying The Synthesis Essay. Key concept 2 — A critical component of understanding The Synthesis Essay. Key concept 3 — An essential element that connects The Synthesis Essay to broader themes.'
+        correctAnswers: ['Claim -> Source evidence -> Commentary -> Additional source relation -> Commentary', 'Compares sources to deepen analysis', 'Fix thesis clarity and ensure commentary follows each source'],
+        hint1: 'Reasoning should lead, sources should support.',
+        hint2: 'Comparison is core synthesis behavior.',
+        hint3: 'Thesis + commentary quality drives score.',
+        explanation: 'High-scoring paragraphs are claim-centered with layered source analysis. Source comparison strengthens synthesis. Final revision should prioritize thesis and commentary quality.'
       }
     },
     {
-      id: 'englangs1-strategy',
+      id: 'else1-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## AP Exam Strategy: Synthesis Essay Execution
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key concept 1** with **Key concept 2** — while related, they address different aspects of The Synthesis Essay.
-- **Key concept 3** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about core concepts, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect core concepts to broader themes in AP English Language for higher scores.
+- Spend up to 10 minutes planning source clusters and thesis
+- Use short source references; reserve space for analysis
+- Integrate at least one source relationship move (corroborate/qualify/contrast)
+- Address a meaningful counter-source argument
+- Keep argument line consistent from intro to conclusion
+- In final minutes, fix clarity and source-commentary balance
       `
     },
     {
-      id: 'englangs1-applied',
+      id: 'else1-applied',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**AP-Style Application** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student needs to explain The Synthesis Essay on a free-response question. The best approach is:',
+            question: 'A student has 8 minutes left and has a full draft with weak commentary. Best use of remaining time?',
             options: [
-              'Write a one-word answer',
-              'Define key terms, provide specific examples, and connect to course themes',
-              'Copy the question back',
-              'Leave it blank'
+              'Add two more quotes from unused sources',
+              'Strengthen analysis after existing source references and sharpen thesis wording',
+              'Rewrite essay completely',
+              'Delete all source citations'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response questions require definitions, examples, and connections to broader themes.'
+            explanation: 'At this stage, improving commentary and thesis clarity yields the biggest rubric gain. More quotes without analysis rarely helps.'
           },
           {
-            question: 'When studying The Synthesis Essay, which strategy is most effective?',
+            question: 'Which sentence best demonstrates synthesis sophistication?',
             options: [
-              'Memorize without understanding',
-              'Create connections between concepts and use real-world examples',
-              'Skip this topic entirely',
-              'Only study the night before'
+              '"Source A says one thing and Source B says another."',
+              '"Sources A and C support immediate reform, but Source F caution about implementation suggests a phased model that preserves urgency while reducing disruption."',
+              '"Many sources are interesting."',
+              '"I used four sources."'
             ],
             correctAnswer: 1,
-            explanation: 'Active engagement with concepts through connections and examples leads to deeper understanding.'
+            explanation: 'This response integrates multiple sources, acknowledges tension, and resolves it through a qualified policy inference. That is sophisticated synthesis reasoning.'
           }
         ]
       }
     }
   ]
-}
+};
