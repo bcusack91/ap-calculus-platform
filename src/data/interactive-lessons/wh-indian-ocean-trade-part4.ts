@@ -2,171 +2,184 @@ export const whIndianOceanTradePart4Data = {
   topicSlug: 'wh-indian-ocean-trade',
   sections: [
     {
-      id: 'whindian4-intro',
+      id: 'whiot4-intro',
       type: 'text' as const,
       content: `
-# 🌏 Indian Ocean Trade Networks
+# 🌊 Indian Ocean Trade Networks
 
-**Part 4 of 7 — Connections & Interactions**
+**Part 4 of 7 — Zheng He's Voyages and Chinese Maritime Power**
 
-Indian Ocean Trade Networks connects to other topics in AP World History. Understanding these connections reveals how different processes interact.
+---
 
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Interconnection** | How Indian Ocean Trade Networks links to other course topics |
-| **Scale interaction** | How Indian Ocean Trade Networks operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of Indian Ocean Trade Networks can reinforce or modify the original process |
+> 🔑 **Key Concept:** Chinese Admiral Zheng He led 7 massive expeditions into the Indian Ocean (1405-1433), reaching the Persian Gulf, Arabian Peninsula, and East Africa with fleets of up to 317 ships. AP questions focus on the voyages' purpose, their discontinuation after 1433, and what the Chinese withdrawal demonstrates about political decisions and global history.
       `
     },
     {
-      id: 'whindian4-quiz1',
+      id: 'whiot4-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: `**Concept Check** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Indian Ocean Trade Networks connects to other course topics through:',
+            question: 'Zheng He\'s voyages differed from European exploration most fundamentally in that:',
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              'Zheng He\'s expeditions were diplomatic tribute missions designed to demonstrate Chinese imperial power and receive acknowledgment of Chinese authority, while European exploration was driven by commercial profit motives and led to territorial conquest and colonization — different purposes producing different consequences',
+              'Zheng He\'s ships were smaller and less capable than contemporary Portuguese vessels',
+              'Both Zheng He and European explorers had identical commercial and colonial goals',
+              'Zheng He colonized territories while European explorers only established trade posts',
             ],
-            correctAnswer: 1,
-            explanation: 'Topics in AP World History are interconnected through shared processes, causes, and outcomes.'
+            correctAnswer: 0,
+            explanation: 'The purpose distinction is the key AP difference: Zheng He brought Chinese goods as gifts and took home tribute and exotic animals (as symbols of imperial reach), not commercial profit; he established diplomatic acknowledgment of Chinese superiority, not trade posts or colonies. European exploration was driven by commercial profit and led to territorial control and coercive labor systems. Different purposes → different methods → different consequences.'
           },
           {
-            question: 'A feedback loop in Indian Ocean Trade Networks means:',
+            question: 'The discontinuation of Zheng He\'s voyages after 1433 demonstrates which AP principle?',
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              'Political and institutional factors, not technological or commercial conditions, determine whether capabilities are used or abandoned — China had the technological capability to continue and expand maritime exploration but Confucian officials\' political opposition to maritime commerce, combined with the death of the sponsoring emperor, resulted in the deliberate abandonment of a technology that could have made China the dominant global maritime power',
+              'China discontinued the voyages because its ships were technologically inferior and unsustainable',
+              'The voyages ended because all potential trading partners had been visited',
+              'China\'s isolation from global trade was geographically determined rather than politically chosen',
             ],
-            correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            correctAnswer: 0,
+            explanation: 'This is one of AP World History\'s most important points: the discontinuation of Chinese maritime exploration was a POLITICAL CHOICE, not a technological or geographic inevitability. Chinese ships in 1433 were larger and more capable than Portuguese ships of the same era. The choice to discontinue was made by Confucian officials who saw maritime commerce as un-Confucian and expensive. The divergence between Chinese retreat and European expansion from the same starting point demonstrates that political decisions, not technology, determine global power trajectories.'
           }
         ]
       }
     },
     {
-      id: 'whindian4-content',
+      id: 'whiot4-content',
       type: 'text' as const,
       content: `
-## Connections & Interactions — Deeper Dive
+## 📖 Zheng He's Voyages
 
-### Interconnection
-How Indian Ocean Trade Networks links to other course topics. Understanding this concept is essential for mastering Indian Ocean Trade Networks in AP World History.
+> **The Voyages: Scale and Scope**
 
-### Scale interaction
-How Indian Ocean Trade Networks operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+| Feature | Details |
+|---------|---------|
+| **Commander** | Zheng He — Muslim Chinese eunuch admiral of the Imperial Court |
+| **Period** | 1405-1433 (7 expeditions) |
+| **Fleet size** | Up to 317 ships; largest individual ships ~400 feet (baochuan "treasure ships") |
+| **Geographic reach** | Southeast Asia, India, Persian Gulf, Arabia, East Africa |
+| **Purpose** | Tribute collection, diplomatic display, demonstration of Chinese power |
 
-### Feedback loop
-How outcomes of Indian Ocean Trade Networks can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+> **Purpose and Character**
+
+Zheng He's voyages were NOT primarily commercial:
+
+- **Tribute system:** Visited foreign rulers and received tribute (recognition of Chinese imperial authority)
+- **Diplomatic display:** Demonstrated Chinese power and sophistication to foreign rulers
+- **Gift exchange:** Brought Chinese goods (silk, porcelain); returned with exotic animals (giraffes presented as qilin/unicorns), ambassadors, exotic goods
+- **NOT conquest:** Zheng He did not colonize or establish territorial control; he established diplomatic relationships
+
+> **Why They Were Discontinued**
+
+After the Yongle Emperor's death (1424), the voyages were scaled back and finally stopped after 1433:
+
+- **Confucian opposition:** Scholar-bureaucrats saw maritime trade and overseas engagement as un-Confucian; "barbarian" goods not worth the cost
+- **Cost:** Maintaining enormous fleets was expensive; Confucian officials preferred investment in agricultural stability
+- **Northern threats:** Mongolian pressure on northern borders required military resources; maritime power seemed less urgent
+- **Institutional shift:** Yongle Emperor (who sponsored voyages) succeeded by less interested emperors; eunuch faction (Zheng He's patrons) lost political influence
+
+> **AP Comparison Anchor**
+
+- **Zheng He vs. Portuguese exploration:** Same era; opposite decisions; Chinese ships were larger and more capable; European exploration led to colonization; Chinese exploration was discontinued — demonstrates that technology ≠ historical destiny
+- **Chinese haijin (maritime prohibitions):** China periodically banned private maritime trade, limiting Chinese commercial expansion and eventually ceding maritime commerce leadership to other powers
       `
     },
     {
-      id: 'whindian4-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to how Indian Ocean Trade Networks links to other course topics?
-
-2) What concept describes how Indian Ocean Trade Networks operates differently at local, national, and global scales?
-
-3) Name the term for how outcomes of Indian Ocean Trade Networks can reinforce or modify the original process.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How Indian Ocean Trade Networks links to other course topics), Scale interaction (How Indian Ocean Trade Networks operates differently at local, national, and global scales), and Feedback loop (How outcomes of Indian Ocean Trade Networks can reinforce or modify the original process).'
-      }
-    },
-    {
-      id: 'whindian4-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'How Indian Ocean Trade Networks links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
-          },
-          {
-            label: 'How Indian Ocean Trade Networks operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
-          },
-          {
-            label: 'How outcomes of Indian Ocean Trade Networks can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
-          }
-        ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How Indian Ocean Trade Networks links to other course topics. Scale interaction — How Indian Ocean Trade Networks operates differently at local, national, and global scales. Feedback loop — How outcomes of Indian Ocean Trade Networks can reinforce or modify the original process.'
-      }
-    },
-    {
-      id: 'whindian4-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of Indian Ocean Trade Networks.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whindian4-applied',
+      id: 'whiot4-input',
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: `**Applied Recall: 3-Question Sprint** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between Indian Ocean Trade Networks and other units earns higher scores because:',
+            question: 'Confucian opposition to maritime trade and exploration was based primarily on:',
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              'The Confucian value system\'s prioritization of agricultural production and social stability over commerce — merchants and commercial activity were ranked lowest in the Confucian social hierarchy, and overseas engagement was seen as both wasteful of resources better devoted to agricultural stability and potentially destabilizing to the social order',
+              'Confucian scholars opposed exploration because they believed the ocean was spiritually dangerous',
+              'The opposition was purely economic — officials thought exploration was unprofitable',
+              'Confucian officials supported exploration but opposed the specific methods Zheng He used',
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            correctAnswer: 0,
+            explanation: 'Confucian social hierarchy (scholars → farmers → artisans → merchants) structurally devalued commercial activity. Maritime trade expansion benefited the eunuch faction (which sponsored Zheng He) and merchant interests — both groups Confucian officials opposed. The opposition to maritime exploration was not simply about the ocean — it was about which social groups (merchants, eunuchs) would benefit from expansion and which (scholar-officials, agriculturalists) would lose relative power and resources.'
           },
           {
-            question: 'If Indian Ocean Trade Networks produces outcomes that further intensify the original process, this is:',
+            question: 'Comparing the scale of Zheng He\'s fleet (317 ships, largest ~400 feet) to contemporary Portuguese vessels (1-10 ships, ~70-90 feet each) demonstrates:',
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              'That Chinese maritime technology in the early 15th century significantly exceeded European capability — making the Chinese decision to discontinue maritime expansion even more historically significant, since China had superior means to extend global reach but chose not to, while Portugal with inferior technology pursued expansion with world-historical consequences',
+              'Portuguese ships were actually larger and more capable than Chinese vessels',
+              'Both fleets were approximately equal in size and capability',
+              'Fleet size is irrelevant to understanding the historical significance of either expedition',
             ],
-            correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            correctAnswer: 0,
+            explanation: 'The scale comparison exists to make a specific AP analytical point: when we ask "why did Europe rather than China colonize the world?" the answer is NOT "European technological superiority." Chinese maritime technology was clearly superior. The answer is political and institutional — China made a deliberate political choice to retreat from maritime expansion; European states made political choices to intensify it. Technology created opportunity; politics determined whether the opportunity was seized.'
+          },
+          {
+            question: 'Zheng He\'s voyages reached East Africa (modern Kenya, Tanzania) in the 1420s, decades before Vasco da Gama arrived at East African ports. What does this demonstrate for AP?',
+            options: [
+              'That East African Swahili coast civilizations were already integrated into global commercial and diplomatic networks centered on the Indian Ocean before European arrival — da Gama arrived at the edge of a sophisticated existing commercial world, not a previously isolated region',
+              'Zheng He\'s arrival in East Africa was the first contact between Africa and any non-African civilization',
+              'East African civilizations had no commercial activity before Zheng He\'s arrival',
+              'Zheng He\'s visit to East Africa established a Chinese colonial empire in Africa',
+            ],
+            correctAnswer: 0,
+            explanation: 'This point directly connects to the broader AP narrative about pre-European Indian Ocean commerce: when da Gama arrived at Malindi (Kenya) in 1498, he encountered an existing commercial civilization integrated into Indian Ocean networks for centuries, that had hosted Chinese fleets decades earlier, and that was commercially more sophisticated than his small Portuguese fleet. European "discovery" of East Africa was discovery of somewhere that was already well-connected to the rest of the world.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'whiot4-dropdown',
+      type: 'dropdown-select' as const,
+      content: `**Match the Idea: Evidence to Claim**`,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'The seasonal reversing winds that enabled regular Indian Ocean navigation were the ___',
+            options: ['Monsoon winds', 'Trade winds', 'Jet stream', 'Doldrums']
+          },
+          {
+            label: 'The East African coastal city-states that blended Bantu and Arab/Islamic culture were the ___',
+            options: ['Swahili city-states', 'Aztec city-states', 'Mongol khanates', 'Indian Ocean sultanates']
+          },
+          {
+            label: 'The Chinese admiral who led 7 massive expeditions into the Indian Ocean c. 1405-1433 was ___',
+            options: ['Zheng He', 'Kublai Khan', 'Vasco da Gama', 'Henry the Navigator']
+          }
+        ],
+        correctAnswers: ['Monsoon winds', 'Swahili city-states', 'Zheng He'],
+        hint1: 'Seasonal wind patterns — reversal twice per year — enabled regular navigation',
+        hint2: 'East African ports — Kilwa, Mombasa — Islamic + Bantu cultural synthesis',
+        hint3: 'Chinese Muslim admiral — 62 ships — 7 expeditions — discontinued after 1433',
+        explanation: 'Monsoon winds were the technological foundation of Indian Ocean commerce — they made regular, predictable navigation possible across enormous distances. The Swahili city-states are the model of how Indian Ocean trade produced cultural synthesis in East Africa. Zheng He\'s voyages demonstrate Chinese maritime capability and the political decision to discontinue it — one of history\'s most consequential non-events.'
+      }
+    },
+    {
+      id: 'whiot4-applied',
+      type: 'multiple-choice' as const,
+      content: `**AP-Style Application** 🎯`,
+      exercise: {
+        questions: [
+          {
+            question: 'The contrast between China\'s haijin (maritime prohibition policies) and European expansion demonstrates which AP theme?',
+            options: [
+              'State policies can decisively accelerate or retard historical processes that technology and commercial opportunity make possible — China\'s periodic bans on private maritime trade ceded maritime commerce to other powers; European states\' active sponsorship of exploration accelerated it; demonstrating that political will, not just capability, shapes historical trajectories',
+              'Maritime prohibitions had no impact on Chinese commercial development',
+              'European states also had maritime prohibition policies similar to China\'s',
+              'Technology alone, not state policy, determines maritime commercial success',
+            ],
+            correctAnswer: 0,
+            explanation: 'Chinese maritime prohibition policy (haijin) is AP\'s clearest example of how states can retard development that private actors would otherwise pursue. When China periodically banned maritime trade (as it did in the 15th-16th centuries), Chinese merchants continued trading illegally or through Southeast Asian intermediaries — demonstrating both the commercial demand and the state\'s ability to partially suppress it. The comparison to active European state sponsorship of exploration shows opposite ends of the state policy spectrum.'
+          },
+          {
+            question: 'For AP, the most important significance of Zheng He\'s voyages is:',
+            options: [
+              'They demonstrate that Chinese maritime capability significantly exceeded European capability in the early 15th century, making the subsequent divergence — China withdrawing from maritime expansion while Europe extended it — a product of political choices rather than technological or geographic necessity, challenging any deterministic narrative of European global dominance',
+              'The voyages are significant because they were the first maritime expeditions in history',
+              'Zheng He\'s voyages are primarily significant as examples of Chinese commercial expansion',
+              'The voyages demonstrate that China was always inferior to Europe in maritime technology',
+            ],
+            correctAnswer: 0,
+            explanation: 'The meta-significance of Zheng He for AP: his voyages undermine any argument that European global dominance was technologically or geographically inevitable. In 1405-1433, China had larger ships, larger fleets, and was exploring farther than any European state. The divergence that followed was politically constructed — China\'s political withdrawal and Europe\'s political investment in exploration — not a natural expression of inherent capabilities. AP rewards arguments that recognize historical contingency against historical inevitability.'
           }
         ]
       }

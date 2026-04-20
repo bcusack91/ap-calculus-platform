@@ -2,171 +2,185 @@ export const whAmericasAfrica1200Part2Data = {
   topicSlug: 'wh-americas-africa-1200',
   sections: [
     {
-      id: 'whameric2-intro',
+      id: 'whaaf2-intro',
       type: 'text' as const,
       content: `
-# 🌏 The Americas & Africa (1200–1450)
+# 🌎 Americas & Africa (c. 1200–1450)
 
-**Part 2 of 7 — Key Processes**
+**Part 2 of 7 — The Aztec (Mexica) Empire**
 
-Understanding the processes related to The Americas & Africa (1200–1450) helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in The Americas & Africa (1200–1450) |
-| **Process 2** | A secondary process that shapes outcomes in The Americas & Africa (1200–1450) |
-| **Cause and effect** | The relationship between actions and outcomes in The Americas & Africa (1200–1450) |
+> 🔑 **Key Concept:** The Aztec Empire (c. 1345-1521) was a tributary empire in Mesoamerica that controlled central Mexico through military conquest and tribute extraction. AP questions focus on how the Aztecs organized their empire, their religious practices, and the factors that enabled Spanish conquest.
       `
     },
     {
-      id: 'whameric2-quiz1',
+      id: 'whaaf2-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: `**Concept Check** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in The Americas & Africa (1200–1450)?',
+            question: 'The Aztec tributary system was distinct from direct colonial rule because:',
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              'Conquered peoples maintained their own rulers and paid tribute to Tenochtitlan rather than being directly administered by Aztec officials, reducing governance costs while extracting wealth',
+              'The Aztec Empire directly administered all territory',
+              'No tribute was extracted from conquered peoples',
+              'Conquered peoples became full Aztec citizens with equal rights',
             ],
-            correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            correctAnswer: 0,
+            explanation: 'The tributary model reduced administrative costs but had a key vulnerability: conquered peoples who resented tribute demands were potential allies for external enemies — a fact Hernán Cortés exploited by allying with the Tlaxcalans in 1519.'
           },
           {
-            question: 'Understanding cause and effect in The Americas & Africa (1200–1450) helps students:',
+            question: 'Tenochtitlan (the Aztec capital) was remarkable primarily because:',
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              'Built on an island in Lake Texcoco, it housed 200,000+ people and was connected to the mainland by causeways — larger than any contemporary European city, with sophisticated urban infrastructure',
+              'It was the largest city in pre-Columbian North America with no urban infrastructure',
+              'It was a nomadic camp that moved seasonally',
+              'It had a larger population than all of Europe combined',
             ],
-            correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            correctAnswer: 0,
+            explanation: 'Tenochtitlan\'s urban sophistication was comparable to contemporary European capitals: floating garden agriculture (chinampas), aqueducts, markets (tianguis), temples, palaces. Spanish conquistadors described it with awe. Its island location made it easily defended but also ultimately a trap during the 1521 siege.'
           }
         ]
       }
     },
     {
-      id: 'whameric2-content',
+      id: 'whaaf2-content',
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## 📖 The Aztec Empire
 
-### Process 1
-The primary mechanism that drives patterns in The Americas & Africa (1200–1450). Understanding this concept is essential for mastering The Americas & Africa (1200–1450) in AP World History.
+> **Political Organization**
 
-### Process 2
-A secondary process that shapes outcomes in The Americas & Africa (1200–1450). This builds on the previous concept and connects to broader themes in the course.
+| Feature | Details |
+|---------|---------|
+| **Capital** | Tenochtitlan (modern Mexico City); built on island in Lake Texcoco |
+| **Founded** | c. 1345; Triple Alliance formed 1428 (Mexica + Texcoco + Tlacopan) |
+| **Governance** | Tributary system — conquered peoples paid tribute; kept local rulers |
+| **Agriculture** | Chinampas (floating gardens) in Lake Texcoco; intensive maize cultivation |
+| **Trade** | Pochteca (long-distance merchant class); markets in Tlatelolco |
 
-### Cause and effect
-The relationship between actions and outcomes in The Americas & Africa (1200–1450). This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+> **Religion and Human Sacrifice**
+
+Aztec religion centered on maintaining cosmic order through blood sacrifice:
+
+- Sun god Huitzilopochtli required human blood to rise each day
+- Scale of sacrifice was extraordinary: Templo Mayor dedication (1487) may have involved thousands of sacrificial victims
+- Victims primarily were prisoners of war — creating incentive for "Flower Wars" (ritual wars designed to capture rather than kill enemies)
+- AP note: Human sacrifice was real and significant, but should be contextualized — Aztec religion was sophisticated, with complex cosmology and calendrical systems
+
+> **Factors Enabling Spanish Conquest (1521)**
+
+Why did ~500 Spaniards conquer an empire of millions?
+
+1. **Indigenous allies:** Tlaxcalans and other tribute-resentful peoples allied with Cortés
+2. **Disease:** Smallpox epidemic 1520 killed enormous numbers including Aztec emperor Cuitláhuac
+3. **Technology:** Spanish horses, steel armor, and firearms gave significant tactical advantage
+4. **Psychological disruption:** Cortés\'s capture of Moctezuma II paralyzed decision-making
+5. **Siege warfare:** Final siege of Tenochtitlan 1521 cut off food and water supplies
+
+> **AP Comparison Anchor**
+
+- **Aztec vs. Inca:** Both tributary empires; Inca had more direct administrative control (mit\'a system, road network); Aztec relied more on tribute with local rulers intact
+- **Both fell to Spanish:** Similar factors — disease, indigenous allies, European technology
       `
     },
     {
-      id: 'whameric2-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the primary mechanism that drives patterns in The Americas & Africa (1200–1450)?
-
-2) What concept describes a secondary process that shapes outcomes in The Americas & Africa (1200–1450)?
-
-3) Name the term for the relationship between actions and outcomes in The Americas & Africa (1200–1450).
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in The Americas & Africa (1200–1450)), Process 2 (A secondary process that shapes outcomes in The Americas & Africa (1200–1450)), and Cause and effect (The relationship between actions and outcomes in The Americas & Africa (1200–1450)).'
-      }
-    },
-    {
-      id: 'whameric2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The primary mechanism that drives patterns in The Americas & Africa (1200–1450) is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
-          },
-          {
-            label: 'A secondary process that shapes outcomes in The Americas & Africa (1200–1450) describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
-          },
-          {
-            label: 'The relationship between actions and outcomes in The Americas & Africa (1200–1450) is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in The Americas & Africa (1200–1450). Process 2 — A secondary process that shapes outcomes in The Americas & Africa (1200–1450). Cause and effect — The relationship between actions and outcomes in The Americas & Africa (1200–1450).'
-      }
-    },
-    {
-      id: 'whameric2-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of The Americas & Africa (1200–1450).
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whameric2-applied',
+      id: 'whaaf2-input',
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: `**Applied Recall: 3-Question Sprint** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: 'The Aztec "Flower Wars" (ritual wars to capture enemies for sacrifice) were significant because they:',
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              'Created a cycle where wars were fought to acquire sacrificial victims, which required more wars, while simultaneously training warriors — but at the political cost of keeping potential allies permanently hostile',
+              'Were purely ceremonial with no actual violence',
+              'Strengthened relationships between the Aztecs and their neighbors',
+              'Were the primary method of territory expansion',
             ],
-            correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            correctAnswer: 0,
+            explanation: 'The Flower War system was strategically counterproductive: it maintained permanent enmity with neighboring states (especially the Tlaxcalans, never conquered by the Aztecs despite centuries of warfare) who then became Cortés\'s most important allies. The religious system requiring ongoing sacrifice created the political conditions that enabled the empire\'s conquest.'
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: 'Aztec chinampas (floating garden agriculture) demonstrated:',
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              'How pre-Columbian peoples adapted agricultural technology to challenging wetland environments, producing remarkable food yields that supported the large urban population of Tenochtitlan without depleting soil fertility',
+              'That the Aztecs had no agricultural knowledge',
+              'That floating gardens were only possible with European technology',
+              'That Aztec agriculture was inferior to European farming in every respect',
             ],
-            correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            correctAnswer: 0,
+            explanation: 'Chinampas were sophisticated agricultural engineering: raised beds in the lake, fertilized by lake sediment and human waste, continuously productive without the soil depletion that plagued European slash-and-burn agriculture. They represent indigenous technological achievement comparable to any contemporary civilization.'
+          },
+          {
+            question: 'Smallpox\'s role in the Spanish conquest of the Aztec Empire demonstrates which AP concept?',
+            options: [
+              'That biological factors (disease) can decisively alter the outcomes of political and military conflicts — the 1520 epidemic killed more Aztec defenders than Spanish weapons and disrupted political leadership at the critical moment of the conquest',
+              'That disease had no role in the Spanish conquest',
+              'That the Spanish deliberately introduced smallpox as a weapon',
+              'That epidemics only affect non-European populations',
+            ],
+            correctAnswer: 0,
+            explanation: 'Smallpox arrived in 1520 during a Spanish retreat, killing Aztec emperor Cuitláhuac and devastating the population defending Tenochtitlan. The convergence of disease + indigenous allies + Spanish military technology + political disruption (Moctezuma\'s capture) created a perfect storm that overwhelmed an otherwise formidable empire. No single factor explains the conquest — AP rewards multi-causal analysis.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'whaaf2-dropdown',
+      type: 'dropdown-select' as const,
+      content: `**Match the Idea: Evidence to Claim**`,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'The Aztec capital built on an island in Lake Texcoco, housing 200,000+ people, was ___',
+            options: ['Tenochtitlan', 'Cuzco', 'Tlaxcala', 'Chichen Itza']
+          },
+          {
+            label: 'The Aztec system of raised agricultural beds in lakes that produced high food yields was ___',
+            options: ['Chinampas', 'Mit\'a', 'Slash-and-burn', 'Terrace farming']
+          },
+          {
+            label: 'The Aztec ritual wars designed to capture enemies for sacrifice rather than kill them were called ___',
+            options: ['Flower Wars', 'Holy Wars', 'Tributary Wars', 'Conquest Wars']
+          }
+        ],
+        correctAnswers: ['Tenochtitlan', 'Chinampas', 'Flower Wars'],
+        hint1: 'Aztec capital — island in Lake Texcoco — modern Mexico City',
+        hint2: 'Floating gardens — intensive lake agriculture',
+        hint3: 'Ritual warfare — capture for sacrifice — kept Tlaxcala hostile',
+        explanation: 'Tenochtitlan\'s urban sophistication challenged European assumptions about non-European civilization. Chinampas demonstrate indigenous agricultural ingenuity. Flower Wars maintained the sacrificial system but at the political cost of permanent neighboring hostility — a strategic liability exploited by Cortés.'
+      }
+    },
+    {
+      id: 'whaaf2-applied',
+      type: 'multiple-choice' as const,
+      content: `**AP-Style Application** 🎯`,
+      exercise: {
+        questions: [
+          {
+            question: 'An AP prompt asks: "What factors explain the Spanish conquest of the Aztec Empire?" Which answer best demonstrates historical complexity?',
+            options: [
+              'The conquest resulted from multiple intersecting factors — Spanish military technology, indigenous allies (Tlaxcalans resentful of Aztec tribute demands), disease (smallpox 1520), and Aztec political disruption — with no single factor sufficient alone: thousands of Tlaxcalan warriors were more decisive than the few hundred Spanish soldiers',
+              'The conquest was inevitable because Aztec civilization was primitive',
+              'Spanish weapons alone explain the conquest',
+              'The Aztecs voluntarily surrendered without resistance',
+            ],
+            correctAnswer: 0,
+            explanation: 'Multi-causal explanation with appropriate weighting is the AP standard. Noting that indigenous allies were numerically more important than Spanish soldiers directly challenges the "superior European technology" narrative while still acknowledging technology\'s role. This type of nuanced, multi-factor analysis with appropriate emphasis is what earns AP complexity points.'
+          },
+          {
+            question: 'Comparing the Aztec and Inca empires, which statement is most historically accurate?',
+            options: [
+              'Both were large tributary empires that fell to Spanish conquest in the 1520s-1530s through similar combinations of indigenous allies, disease, and European technology, but the Inca had more direct administrative infrastructure (road network, mit\'a labor system, quipus for record-keeping) while the Aztec relied more heavily on tribute from semi-autonomous conquered states',
+              'The two empires had identical governance systems',
+              'The Inca were never conquered by Europeans',
+              'The Aztec had more sophisticated administrative infrastructure than the Inca',
+            ],
+            correctAnswer: 0,
+            explanation: 'This comparison earns AP points by identifying both similarity (tributary empires, similar conquest vulnerabilities) and meaningful difference (degree of administrative integration). The Inca road system and mit\'a labor draft represented more direct imperial control than the Aztec tributary model — a difference that affected both how each empire functioned and how Spanish conquest proceeded (Pizarro vs. Cortés used different strategies).'
           }
         ]
       }

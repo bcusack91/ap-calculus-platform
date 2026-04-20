@@ -9,15 +9,15 @@ export const whEastAsianEmpiresPart7Data = {
 
 **Part 7 of 7 — AP Review**
 
-Comprehensive review of East Asian Empires & Isolation for the AP exam. Focus on key concepts, common question types, and exam strategies.
+    Final AP review of high-yield ideas, common question traps, and answer construction patterns.
 
 ### Key Concepts
 
 | Concept | Description |
 |---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for East Asian Empires & Isolation |
-| **Common question types** | The most frequent ways East Asian Empires & Isolation is tested on the AP exam |
-| **Exam strategy** | Approaches for answering East Asian Empires & Isolation questions effectively |
+    | **Anchor vocabulary** | Terms you should deploy precisely in MCQ/SAQ/LEQ responses |
+    | **Prompt pattern recognition** | Identifying what kind of reasoning the question asks for |
+    | **Scoring-aware writing** | Structuring responses to maximize AP rubric points |
       `
     },
     {
@@ -29,26 +29,26 @@ Comprehensive review of East Asian Empires & Isolation for the AP exam. Focus on
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for East Asian Empires & Isolation is:',
+            question: 'Which vocabulary pair is most useful for describing East Asian state legitimacy?',
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              'mercantilism and plantation',
+              'civil service examination and Neo-Confucianism',
+              'factory and proletariat',
+              'encomienda and creole'
             ],
             correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            explanation: 'Those terms directly capture how East Asian states organized governance and ideological legitimacy in this period.'
           },
           {
-            question: 'AP multiple-choice questions about East Asian Empires & Isolation often test:',
+            question: 'A prompt asks: "Evaluate the extent to which East Asian states were isolated from 1450 to 1750." What does it require?',
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              'A simple yes/no answer with one fact',
+              'A qualified argument using both evidence of regulation and evidence of continued contact',
+              'A biography of one ruler',
+              'A list of vocabulary terms with no argument'
             ],
             correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            explanation: '"Evaluate the extent" signals nuanced judgment, not absolute claims. You should weigh both sides with evidence.'
           }
         ]
       }
@@ -59,65 +59,108 @@ Comprehensive review of East Asian Empires & Isolation for the AP exam. Focus on
       content: `
 ## AP Review — Deeper Dive
 
-### Key vocabulary
-Essential terms and definitions for East Asian Empires & Isolation. Understanding this concept is essential for mastering East Asian Empires & Isolation in AP World History.
+> **Anchor Vocabulary**
 
-### Common question types
-The most frequent ways East Asian Empires & Isolation is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+    High-yield terms to use precisely:
 
-### Exam strategy
-Approaches for answering East Asian Empires & Isolation questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+    - **Neo-Confucianism**
+    - **civil service examinations**
+    - **sakoku**
+    - **shogunate / daimyo / samurai**
+    - **tributary system**
+    - **selective adaptation**
+
+> **Common AP Prompt Types**
+
+    Most common AP asks:
+
+    - **Causation:** Why did states regulate contact?
+    - **Comparison:** How did China and Japan differ in political organization?
+    - **CCOT:** What changed and what remained stable from 1200-1750?
+    - **Evaluation:** To what extent was East Asia "isolated"?
+
+> **AP Comparison Anchor**
+
+    Rubric-friendly response skeleton:
+
+    1. Make a historically defensible thesis.
+    2. Use at least two specific pieces of evidence.
+    3. Explain how each example supports the claim.
+    4. Add complexity (qualification, comparison, or long-term consequence).
       `
     },
     {
       id: 'wheastas7-input',
-      type: 'input-boxes' as const,
+      type: 'multiple-choice' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to essential terms and definitions for East Asian Empires & Isolation?
-
-2) What concept describes the most frequent ways East Asian Empires & Isolation is tested on the AP exam?
-
-3) Name the term for approaches for answering East Asian Empires & Isolation questions effectively.
-
-Use the exact term from this part.
+**Applied Recall: 3-Question Sprint** 🎯
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for East Asian Empires & Isolation), Common question types (The most frequent ways East Asian Empires & Isolation is tested on the AP exam), and Exam strategy (Approaches for answering East Asian Empires & Isolation questions effectively).'
+        questions: [
+          {
+            question: 'What term describes high-value AP vocabulary like Neo-Confucianism, sakoku, and tributary system that should be deployed precisely in responses?',
+            options: [
+              'Anchor vocabulary',
+              'Prompt pattern recognition',
+              'Scoring-aware writing',
+              'Chronological memorization'
+            ],
+            correctAnswer: 0,
+            explanation: 'Anchor vocabulary terms are the specific historical language that signals to AP readers you understand the content at a sophisticated level — not just surface facts.'
+          },
+          {
+            question: 'Recognizing whether an AP prompt asks for causation, comparison, or CCOT analysis is called what?',
+            options: [
+              'Prompt pattern recognition',
+              'Anchor vocabulary',
+              'Scoring-aware writing',
+              'Guessing'
+            ],
+            correctAnswer: 0,
+            explanation: 'Prompt pattern recognition saves time on exam day: once you identify the reasoning type demanded, you can deploy the right argument structure immediately.'
+          },
+          {
+            question: 'Structuring an AP response to include a defensible thesis, specific evidence, reasoning, and complexity demonstrates what?',
+            options: [
+              'Scoring-aware writing',
+              'Anchor vocabulary',
+              'Prompt pattern recognition',
+              'Fact dumping'
+            ],
+            correctAnswer: 0,
+            explanation: 'Scoring-aware writing means knowing the rubric and deliberately building each element into your response — thesis, evidence, reasoning, and at least one complexity move.'
+          }
+        ]
       }
     },
     {
       id: 'wheastas7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Idea: Evidence to Claim**
+
+Select the concept that best matches each description.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Essential terms and definitions for East Asian Empires & Isolation is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
+            label: 'High-value terms to use accurately in responses are ___',
+            options: ['Anchor vocabulary', 'Prompt pattern recognition', 'Scoring-aware writing', 'chronological memorization']
           },
           {
-            label: 'The most frequent ways East Asian Empires & Isolation is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
+            label: 'Recognizing whether a prompt asks for causation, comparison, or evaluation is ___',
+            options: ['Anchor vocabulary', 'Prompt pattern recognition', 'Scoring-aware writing', 'guessing']
           },
           {
-            label: 'Approaches for answering East Asian Empires & Isolation questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
+            label: 'Writing to maximize AP rubric points is ___',
+            options: ['Scoring-aware writing', 'Anchor vocabulary', 'Prompt pattern recognition', 'fact dumping']
           }
         ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
+        correctAnswers: ['Anchor vocabulary', 'Prompt pattern recognition', 'Scoring-aware writing'],
         hint1: 'This is the first key concept from the lesson.',
         hint2: 'This is the second key concept from the lesson.',
         hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for East Asian Empires & Isolation. Common question types — The most frequent ways East Asian Empires & Isolation is tested on the AP exam. Exam strategy — Approaches for answering East Asian Empires & Isolation questions effectively.'
+        explanation: 'Use this sequence on exam day: know the terms, decode the prompt, then write to the rubric.'
       }
     },
     {
@@ -127,15 +170,14 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of East Asian Empires & Isolation.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+    - A good essay is not just "many facts"; it is argument + evidence + reasoning.
+    - Avoid absolute language like "completely isolated" unless the evidence truly supports it.
+    - Vocabulary without context does not earn analysis credit.
 
 ### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP World History for higher scores.
+    - For LEQ prompts, draft a one-line thesis before writing body paragraphs.
+    - In each paragraph, include at least one named policy, ruler, or institution.
+    - Reserve your final sentence for significance (regional or global consequence).
       `
     },
     {
@@ -147,26 +189,26 @@ Use the exact term from this part.
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about East Asian Empires & Isolation. You should:',
+            question: 'An unfamiliar stimulus asks about East Asia. Best first response?',
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              'Ignore the source and write memorized content',
+              'Apply known reasoning patterns (causation/comparison/CCOT) and anchor vocabulary to the new evidence',
+              'Assume the prompt is a trick and skip it',
+              'Write only a definition paragraph'
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            explanation: 'AP questions frequently use new stimuli; transfer skills matter more than memorizing one exact scenario.'
           },
           {
-            question: 'For free-response questions on East Asian Empires & Isolation, the most common mistake is:',
+            question: 'Which paragraph move most improves AP free-response scoring?',
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              'Use broad generalizations and avoid named evidence',
+              'State a claim, cite one specific East Asian example, and explain how it proves the claim',
+              'Write long introductions with no thesis',
+              'End each paragraph with a repeated definition'
             ],
             correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            explanation: 'This is the exact claim-evidence-reasoning pattern AP rubrics reward.'
           }
         ]
       }

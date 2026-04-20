@@ -9,15 +9,15 @@ export const whEastAsianEmpiresPart2Data = {
 
 **Part 2 of 7 — Key Processes**
 
-Understanding the processes related to East Asian Empires & Isolation helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+This part focuses on the mechanisms that shaped East Asia from c. 1200-1750: state-building, selective borrowing, and controlled foreign contact.
 
 ### Key Concepts
 
 | Concept | Description |
 |---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in East Asian Empires & Isolation |
-| **Process 2** | A secondary process that shapes outcomes in East Asian Empires & Isolation |
-| **Cause and effect** | The relationship between actions and outcomes in East Asian Empires & Isolation |
+| **Confucian state-building** | Bureaucratic governance using examination systems, hierarchy, and social order |
+| **Selective adaptation** | Borrowing ideas or technologies from outsiders while preserving local institutions |
+| **Isolation as strategy** | Restricting external contact to maintain domestic stability and elite control |
       `
     },
     {
@@ -29,26 +29,26 @@ Understanding the processes related to East Asian Empires & Isolation helps expl
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in East Asian Empires & Isolation?',
+            question: 'Which policy best illustrates "Confucian state-building" in Ming and Qing China?',
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              'Expanding civil service examinations based on Confucian classics',
+              'Abolishing bureaucracy and relying only on hereditary nobility',
+              'Creating a fully democratic parliament',
+              'Ending all state-sponsored education'
             ],
-            correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            correctAnswer: 0,
+            explanation: 'Ming and Qing rulers used exam-selected scholar-officials to staff government. This reinforced hierarchy, administrative continuity, and elite legitimacy rooted in Confucian norms.'
           },
           {
-            question: 'Understanding cause and effect in East Asian Empires & Isolation helps students:',
+            question: 'Tokugawa sakoku policies are best understood as:',
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              'A complete and permanent end to all outside contact',
+              'A strategic regulation of trade and religion to reduce threats to shogunal rule',
+              'An attempt to copy European absolutism directly',
+              'A policy designed to encourage Japanese overseas colonies'
             ],
             correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            explanation: 'Tokugawa Japan still traded in limited ways (for example through Nagasaki/Dejima). The key idea is controlled contact to preserve political order, not absolute isolation.'
           }
         ]
       }
@@ -59,65 +59,110 @@ Understanding the processes related to East Asian Empires & Isolation helps expl
       content: `
 ## Key Processes — Deeper Dive
 
-### Process 1
-The primary mechanism that drives patterns in East Asian Empires & Isolation. Understanding this concept is essential for mastering East Asian Empires & Isolation in AP World History.
+> **Confucian State-Building**
 
-### Process 2
-A secondary process that shapes outcomes in East Asian Empires & Isolation. This builds on the previous concept and connects to broader themes in the course.
+    In China and Korea, rulers used Confucian ideas to justify hierarchy and centralized administration.
 
-### Cause and effect
-The relationship between actions and outcomes in East Asian Empires & Isolation. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+    - **China (Ming/Qing):** examination bureaucracy, legal codes, and ritual order
+    - **Korea (Choson):** Neo-Confucian reforms, civil exams, and yangban elite authority
+
+    This process produced stable governments, but also reinforced social stratification.
+
+> **Selective Adaptation**
+
+    East Asian states borrowed externally when useful, but filtered those influences through local priorities.
+
+    - Japan borrowed Chinese writing and Buddhism while keeping a warrior-led feudal order.
+    - Korea used Chinese administrative ideas while developing **hangul** as a uniquely Korean script.
+
+    AP theme connection: cultural diffusion is rarely simple imitation; it is negotiated and strategic.
+
+> **AP Comparison Anchor**
+
+    Rulers often restricted outsiders to manage domestic threats:
+
+    - Tokugawa limits on missionaries and most Europeans reduced fear of rebellion and foreign influence.
+    - Late Ming turn inward redirected resources from maritime projection to frontier defense.
+
+    Cause-effect pattern to remember:
+
+    $$
+    	ext{Political insecurity} \rightarrow \text{regulated contact} \rightarrow \text{stability (short term)} \rightarrow \text{reduced global leverage (long term)}
+    $$
       `
     },
     {
       id: 'wheastas2-input',
-      type: 'input-boxes' as const,
+      type: 'multiple-choice' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the primary mechanism that drives patterns in East Asian Empires & Isolation?
-
-2) What concept describes a secondary process that shapes outcomes in East Asian Empires & Isolation?
-
-3) Name the term for the relationship between actions and outcomes in East Asian Empires & Isolation.
-
-Use the exact term from this part.
+**Applied Recall: 3-Question Sprint** 🎯
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in East Asian Empires & Isolation), Process 2 (A secondary process that shapes outcomes in East Asian Empires & Isolation), and Cause and effect (The relationship between actions and outcomes in East Asian Empires & Isolation).'
+        questions: [
+          {
+            question: 'In China and Korea, what governance system selected officials through Confucian examinations and justified hierarchy?',
+            options: [
+              'Confucian state-building',
+              'Feudal decentralization',
+              'Isolation as strategy',
+              'Selective adaptation'
+            ],
+            correctAnswer: 0,
+            explanation: 'Confucian state-building produced stable meritocratic bureaucracies in Ming/Qing China and Choson Korea, though it also reinforced social stratification.'
+          },
+          {
+            question: 'Korea\'s adoption of Chinese civil service exams while also creating the hangul alphabet best illustrates which process?',
+            options: [
+              'Selective adaptation',
+              'Isolation as strategy',
+              'Confucian state-building',
+              'Cultural replacement'
+            ],
+            correctAnswer: 0,
+            explanation: 'Selective adaptation captures how East Asian states borrowed external ideas while preserving local institutions and identity — a key AP diffusion concept.'
+          },
+          {
+            question: 'The Tokugawa shogunate\'s limits on missionaries and most Europeans best illustrates which process?',
+            options: [
+              'Isolation as strategy',
+              'Selective adaptation',
+              'Confucian state-building',
+              'Industrial nationalism'
+            ],
+            correctAnswer: 0,
+            explanation: 'Tokugawa foreign policy reflects isolation as strategy: regulated contact to manage political threats, maintaining domestic order at the cost of global engagement.'
+          }
+        ]
       }
     },
     {
       id: 'wheastas2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Idea: Evidence to Claim**
+
+Select the concept that best matches each description.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The primary mechanism that drives patterns in East Asian Empires & Isolation is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
+            label: 'Ming/Qing reliance on exam-selected scholar-officials is an example of ___',
+            options: ['Confucian state-building', 'Selective adaptation', 'Isolation as strategy', 'military feudal decentralization']
           },
           {
-            label: 'A secondary process that shapes outcomes in East Asian Empires & Isolation describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
+            label: 'Korea adopting Chinese institutions while creating hangul best illustrates ___',
+            options: ['Confucian state-building', 'Selective adaptation', 'Isolation as strategy', 'total cultural replacement']
           },
           {
-            label: 'The relationship between actions and outcomes in East Asian Empires & Isolation is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
+            label: 'Tokugawa restrictions on missionaries and most foreign contact are best categorized as ___',
+            options: ['Isolation as strategy', 'Confucian state-building', 'Selective adaptation', 'industrial nationalism']
           }
         ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in East Asian Empires & Isolation. Process 2 — A secondary process that shapes outcomes in East Asian Empires & Isolation. Cause and effect — The relationship between actions and outcomes in East Asian Empires & Isolation.'
+        correctAnswers: ['Confucian state-building', 'Selective adaptation', 'Isolation as strategy'],
+        hint1: 'Think bureaucracy and the exam system.',
+        hint2: 'Think borrowed, but not copied wholesale.',
+        hint3: 'Think controlled contact for regime security.',
+        explanation: 'These categories help you classify AP stimulus sources quickly: governance model, diffusion pattern, and foreign-policy strategy.'
       }
     },
     {
@@ -127,15 +172,14 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of East Asian Empires & Isolation.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+    - Do not treat East Asia as uniformly "closed". Most states regulated contact rather than ending it entirely.
+    - Do not assume borrowing means cultural loss. Selective adaptation often strengthened local identity.
+    - Avoid writing that Confucianism was only social philosophy; it was also administrative infrastructure.
 
 ### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP World History for higher scores.
+    - In SAQs/LEQs, pair one process with one concrete example (for example, exams in Qing China or sakoku in Tokugawa Japan).
+    - For comparison prompts, use one sentence for similarity and one for difference.
+    - Link political decisions to long-term global consequences (for example, maritime withdrawal and later European advantage).
       `
     },
     {
@@ -147,26 +191,26 @@ Use the exact term from this part.
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: 'A historian argues that Ming China had the capability for oceanic dominance but did not sustain it. Which evidence best supports that claim?',
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              'The Ming expanded the civil service exams to include naval engineering as a required subject',
+              'Zheng He led massive expeditions, but court priorities later shifted toward internal security and frontier defense',
+              'Ming emperors were defeated repeatedly by Portuguese fleets in the South China Sea',
+              'China lacked shipbuilding technology before 1500'
             ],
             correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            explanation: 'The key causation point is policy choice, not technological inability. Ming fleets demonstrated capacity, but priorities changed.'
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: 'Which statement best explains why Tokugawa isolation should be called "strategic" rather than "absolute"?',
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              'Japan prohibited all domestic markets and internal mobility',
+              'Japan fully opened every port but restricted military imports',
+              'Japan maintained limited, monitored trade while restricting destabilizing foreign influences',
+              'Japan had no interest in political stability'
             ],
-            correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            correctAnswer: 2,
+            explanation: 'Tokugawa leaders allowed tightly controlled exchange in select locations. That pattern reflects regulation for stability, not complete isolation.'
           }
         ]
       }

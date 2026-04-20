@@ -33,7 +33,7 @@ Multiple factors converged in the early 1800s:
 
 | Factor | Explanation |
 |---|---|
-| **Enlightenment ideas** | Locke's natural rights and Rousseau's popular sovereignty inspired colonial elites |
+| **Enlightenment ideas** | Locke's natural rights and Rousseau\'s popular sovereignty inspired colonial elites |
 | **American & French Revolutions** | Provided successful models of overthrowing imperial rule |
 | **Haitian Revolution (1804)** | Proved that even enslaved people could win independence |
 | **Napoleon's invasion of Spain (1808)** | Removed the Spanish king, creating a power vacuum in the colonies |
@@ -108,7 +108,7 @@ Multiple factors converged in the early 1800s:
 - **Peaceful independence** (1822) — when Portugal's king returned to Europe, his son **Pedro I** declared Brazil independent and became emperor
 - No major war; preserved the monarchy until 1889
 
-> 🔑 **AP Connection:** Compare Mexico's **bottom-up** revolution (starting with indigenous/peasant uprising under Hidalgo) with the **top-down** approach in South America (creole elites like Bolívar) and Brazil's **peaceful** transition. The AP exam tests why outcomes differed.
+> 🔑 **AP Connection:** Compare Mexico's **bottom-up** revolution (starting with indigenous/peasant uprising under Hidalgo) with the **top-down** approach in South America (creole elites like Bolívar) and Brazil\'s **peaceful** transition. The AP exam tests why outcomes differed.
       `
     },
     {

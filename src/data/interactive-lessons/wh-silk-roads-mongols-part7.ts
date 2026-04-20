@@ -2,26 +2,27 @@ export const whSilkRoadsMongolsPart7Data = {
   topicSlug: 'wh-silk-roads-mongols',
   sections: [
     {
-      id: 'whsilkro7-intro',
+      id: 'whsrm7-intro',
       type: 'text' as const,
       content: `
-# 🌏 Silk Roads & Mongol Empires
+# 🐉 Silk Roads & the Mongols (c. 1200–1450)
 
-**Part 7 of 7 — AP Review**
+**Part 7 of 7 — AP Review & Exam Mastery**
 
-Comprehensive review of Silk Roads & Mongol Empires for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 High-Yield Vocabulary |
+| Common AP Prompt Patterns |
+| Evidence Deployment Strategies |
+| 📌 Pulling It All Together |
 
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Silk Roads & Mongol Empires |
-| **Common question types** | The most frequent ways Silk Roads & Mongol Empires is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Silk Roads & Mongol Empires questions effectively |
+> 🔑 **Key Concept:** Silk Roads & Mongols content appears in every section of the AP exam — MCQ, SAQ, LEQ, and DBQ. Key prompt patterns include evaluating the Mongol Empire's impact (destruction vs. connectivity), CCOT for Silk Road trade, and comparing the Mongols to other empire-builders.
       `
     },
     {
-      id: 'whsilkro7-quiz1',
+      id: 'whsrm7-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,144 +30,172 @@ Comprehensive review of Silk Roads & Mongol Empires for the AP exam. Focus on ke
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Silk Roads & Mongol Empires is:',
+            question: 'An AP SAQ asks: "Briefly explain ONE way the Mongol Empire affected long-distance trade c. 1200-1350." Which response earns full credit?',
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              'The Mongol Empire\'s unification of Central Asian territory created the Pax Mongolica, which reduced political fragmentation and robbery along the Silk Roads, enabling merchants like Marco Polo to travel from Italy to China — stimulating unprecedented Eurasian commercial and cultural exchange',
+              'The Mongols stopped all trade by destroying every city along the Silk Road',
+              'The Mongols had no impact on trade',
+              'Trade only increased after the Mongols were defeated'
             ],
-            correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'This SAQ response earns full credit: specific effect (Pax Mongolica), specific mechanism (reduced fragmentation and robbery), specific evidence (Marco Polo\'s travels), and implicit reasoning (connecting mechanism to outcome). Three-part structure: claim + evidence + reasoning = full SAQ credit.'
           },
           {
-            question: 'AP multiple-choice questions about Silk Roads & Mongol Empires often test:',
+            question: 'An AP LEQ prompt asks: "Evaluate the overall impact of the Mongol Empire on Eurasian civilizations c. 1200-1400." What\'s the best complexity move?',
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              'Acknowledge that the same empire produced contradictory outcomes simultaneously — destruction of cities and populations AND creation of trade networks; plague transmission AND technology diffusion — and argue that this paradox makes simple positive or negative assessments historically inadequate',
+              'Argue that the Mongol Empire was entirely negative',
+              'Argue that the Mongol Empire was entirely positive',
+              'Avoid discussing the Black Death to keep the argument simple'
             ],
-            correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            correctAnswer: 0,
+            explanation: 'The Mongol paradox IS the complexity point: destruction (Baghdad, 40 million dead) AND connection (Pax Mongolica, technology transfer, Marco Polo). Any essay that treats the Mongols as simply "destructive" or simply "connecting" fails the complexity standard. The AP exam specifically rewards students who can hold contradictory truths about the same historical phenomenon.'
           }
         ]
       }
     },
     {
-      id: 'whsilkro7-content',
+      id: 'whsrm7-content',
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## 📖 AP Review: Vocabulary & Exam Strategy
 
-### Key vocabulary
-Essential terms and definitions for Silk Roads & Mongol Empires. Understanding this concept is essential for mastering Silk Roads & Mongol Empires in AP World History.
+> **Must-Know Vocabulary**
 
-### Common question types
-The most frequent ways Silk Roads & Mongol Empires is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+- **Pax Mongolica** — "Mongol Peace"; relative safety on Silk Road routes enabling unprecedented commercial exchange (and plague spread)
+- **Yam system** — Mongol postal relay network; communication and commercial infrastructure
+- **Composite bow** — Mongol military technology; powerful and accurate from horseback
+- **Ulus system** — Division of empire among Genghis Khan's sons → four competing khanates
+- **Il-Khanate** — Mongol khanate in Persia; converted to Islam (Ghazan Khan, 1295)
+- **Yuan Dynasty** — Mongol khanate in China; Kublai Khan; Marco Polo's employer
+- **Golden Horde** — Mongol khanate ruling Russia 1240–1480
+- **Ain Jalut (1260)** — Mamluk defeat of Mongols; first major Mongol military loss
+- **Paiza** — Mongol imperial pass granting merchants imperial protection
+- **Caravanserai** — Roadside inn for caravans; commercial infrastructure
 
-### Exam strategy
-Approaches for answering Silk Roads & Mongol Empires questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'whsilkro7-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+> **Common AP Prompt Patterns**
 
-1) What term refers to essential terms and definitions for Silk Roads & Mongol Empires?
+- **Causation:** Why were the Mongols able to conquer such vast territories so rapidly?
+- **Evaluation:** To what extent did the Mongol Empire benefit Eurasian civilizations?
+- **CCOT:** What changed and what continued in Silk Road trade c. 1200–1450?
+- **Comparison:** How did Mongol governance differ across the four khanates?
+- **Complexity:** How did the same Mongol networks simultaneously enable commerce and plague?
 
-2) What concept describes the most frequent ways Silk Roads & Mongol Empires is tested on the AP exam?
+> **AP Comparison Anchor**
 
-3) Name the term for approaches for answering Silk Roads & Mongol Empires questions effectively.
+**Evidence tiers for Mongol impact essays:**
 
-Use the exact term from this part.
+| Effect | Positive Evidence | Negative Evidence |
+|--------|------------------|-------------------|
+| Commerce | Marco Polo's travels; Pax Mongolica increased trade volume | Black Death spread along same routes |
+| Culture | Technology diffusion (gunpowder, compass, paper west); Persian art flourished under Il-Khanate | Baghdad's libraries destroyed; Central Asian cities depopulated |
+| Politics | Connected rulers through yam system; diplomatic exchange | Killed 30-40 million; destroyed states from China to Poland |
+| Long-term | Technological diffusion enabled European expansion | Demographic collapse set back development for generations |
       `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Silk Roads & Mongol Empires), Common question types (The most frequent ways Silk Roads & Mongol Empires is tested on the AP exam), and Exam strategy (Approaches for answering Silk Roads & Mongol Empires questions effectively).'
-      }
     },
     {
-      id: 'whsilkro7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Essential terms and definitions for Silk Roads & Mongol Empires is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
-          },
-          {
-            label: 'The most frequent ways Silk Roads & Mongol Empires is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
-          },
-          {
-            label: 'Approaches for answering Silk Roads & Mongol Empires questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Silk Roads & Mongol Empires. Common question types — The most frequent ways Silk Roads & Mongol Empires is tested on the AP exam. Exam strategy — Approaches for answering Silk Roads & Mongol Empires questions effectively.'
-      }
-    },
-    {
-      id: 'whsilkro7-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Silk Roads & Mongol Empires.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whsilkro7-applied',
+      id: 'whsrm7-input',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Applied Recall: 3-Question Sprint** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Silk Roads & Mongol Empires. You should:',
+            question: 'For an AP MCQ about what the Mongols\' success reveals about sedentary vs. nomadic military capacity, which answer is strongest?',
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              'Nomadic cavalry advantages (mobility, composite bow, coordinated maneuver) consistently overcame sedentary armies\' numerical superiority until gunpowder weapons (eventually diffused from China) gave sedentary states the ability to project force without requiring direct cavalry engagement',
+              'Sedentary armies always defeated nomadic armies in open battle',
+              'Nomadic peoples were always militarily superior to all sedentary civilizations',
+              'The Mongols succeeded only because of divine intervention'
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            correctAnswer: 0,
+            explanation: 'This answer demonstrates AP-level sophistication: it explains the mechanism (mobility + bow), acknowledges the eventual reversal (gunpowder), and implies a longer causal chain (technology diffusion via trade networks eventually empowered sedentary states against nomadic cavalry). The pattern of nomadic military advantage ending with gunpowder is a major AP Unit 3 theme.'
           },
           {
-            question: 'For free-response questions on Silk Roads & Mongol Empires, the most common mistake is:',
+            question: 'When analyzing a primary source from the Mongol period (like Marco Polo\'s account), which sourcing move earns the most DBQ credit?',
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              'Considering both the source\'s PURPOSE (a Venetian merchant describing China\'s commercial opportunities to European readers) and its LIMITATIONS (Marco Polo may have exaggerated wealth to enhance his own reputation; some scholars debate how much of China he actually visited)',
+              'Simply summarizing what the source says without analysis',
+              'Accepting the source as completely accurate without questioning perspective',
+              'Rejecting the source entirely because it\'s not written by a Chinese author'
             ],
-            correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            correctAnswer: 0,
+            explanation: 'AP DBQ sourcing requires: identifying who wrote it, why (purpose), for whom (audience), and what that means for reliability. Marco Polo\'s account was written to entertain and inform European readers about Asian commercial opportunities — this purpose may have encouraged exaggeration, while his long residence at Kublai Khan\'s court provides genuine insider access. Both dimensions (value and limitation) earn sourcing credit.'
+          },
+          {
+            question: 'The most accurate one-sentence summary of the Mongol Empire\'s historical significance is:',
+            options: [
+              'The Mongol Empire simultaneously created the most destructive military campaign and the most connected trade network in medieval history, diffusing world-changing technologies while transmitting the most deadly pandemic — demonstrating that historical forces of this magnitude are always contradictory in their consequences',
+              'The Mongol Empire was purely destructive with no lasting positive contributions',
+              'The Mongol Empire was the greatest positive force in world history',
+              'The Mongol Empire had no lasting impact after its collapse'
+            ],
+            correctAnswer: 0,
+            explanation: 'This summary captures the AP complexity standard: it acknowledges both massive destruction AND massive connection, identifies specific examples of each (military campaign vs. trade network; technology diffusion vs. plague), and articulates a principle (forces of this magnitude are always contradictory). Complexity is not about balance for its own sake — it\'s about accurate historical description of genuinely contradictory phenomena.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'whsrm7-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+**Match the Idea: Evidence to Claim**
+
+Match each AP vocabulary term to its correct definition.
+      `,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'The Mongol imperial pass granting merchants protection and access to yam relay stations was called a ___',
+            options: ['Paiza', 'Yam', 'Ulus', 'Kurultai']
+          },
+          {
+            label: 'The 1260 battle where Mamluk forces stopped Mongol westward expansion into North Africa was ___',
+            options: ['Ain Jalut', 'Baghdad', 'Ain Jalut', 'Tours']
+          },
+          {
+            label: 'The system dividing the Mongol Empire among Genghis Khan\'s sons — creating competing khanates — was the ___',
+            options: ['Ulus system', 'Yam system', 'Pax Mongolica', 'Kurultai']
+          }
+        ],
+        correctAnswers: ['Paiza', 'Ain Jalut', 'Ulus system'],
+        hint1: 'Merchant passport — granted Mongol imperial protection',
+        hint2: 'Battle in Palestine — Mamluks vs. Mongols — 1260',
+        hint3: 'Division inheritance — four khanates — seeds of fragmentation',
+        explanation: 'The paiza was the commercial passport that made the Pax Mongolica practically accessible to merchants. Ain Jalut (1260) was the turning point that stopped Mongol westward expansion and demonstrated that the Mongols could be defeated. The ulus system\'s division of the empire among competing heirs planted the structural seeds of the empire\'s eventual fragmentation.'
+      }
+    },
+    {
+      id: 'whsrm7-applied',
+      type: 'multiple-choice' as const,
+      content: `
+**AP-Style Application** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'An AP essay asks you to connect Silk Roads & Mongols content to the Age of Exploration (Unit 4). What is the strongest connection argument?',
+            options: [
+              'The Mongol period\'s technology diffusion (compass enabling navigation, gunpowder enabling military conquest) AND Ottoman control of Silk Road western endpoints (motivating European sea-route search) created the material conditions and commercial incentives for European maritime exploration — making the Mongol Empire a structural cause of the Age of Exploration despite the two periods being separated by generations',
+              'The two periods are unconnected',
+              'European explorers were unaware of Asian wealth before the Age of Exploration',
+              'The Ottoman Empire had no impact on European commercial motivations'
+            ],
+            correctAnswer: 0,
+            explanation: 'This connection argument earns maximum complexity/contextualization credit: it identifies a multi-step causal chain (Mongol technology diffusion → navigation tools; Ottoman expansion → commercial motivation → exploration), explains the mechanism (not just that there\'s a connection, but HOW), and connects across AP units. This is the kind of cross-unit reasoning that separates 4s from 5s.'
+          },
+          {
+            question: 'For AP DBQ analysis, a document showing a Mongol ruler granting commercial privileges to merchants is MOST useful for arguing:',
+            options: [
+              'That Mongol rulers recognized the economic benefits of facilitating commerce and used imperial authority to create conditions that made long-distance trade feasible — demonstrating that Pax Mongolica commercial benefits were deliberate policy, not accidental byproducts of conquest',
+              'That Mongol rulers were exclusively motivated by altruistic desire to help merchants',
+              'That all trade during this period was state-controlled by Mongol officials',
+              'That merchants had no freedom under Mongol rule'
+            ],
+            correctAnswer: 0,
+            explanation: 'Document analysis in AP DBQ requires connecting the document to an argument. A merchant-privilege document demonstrates: (1) deliberate Mongol commercial policy, (2) the mechanism of Pax Mongolica (imperial protection, not just absence of conflict), (3) the economic sophistication of Mongol governance. Using the document to support a specific claim with reasoning (not just summarizing it) is the AP DBQ skill.'
           }
         ]
       }

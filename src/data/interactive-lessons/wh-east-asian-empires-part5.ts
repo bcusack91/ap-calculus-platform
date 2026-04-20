@@ -9,15 +9,15 @@ export const whEastAsianEmpiresPart5Data = {
 
 **Part 5 of 7 — Change Over Time**
 
-East Asian Empires & Isolation has evolved over time. Understanding historical and contemporary changes helps explain current patterns and predict future trends.
+    In AP World, strong writing tracks both what changed and what persisted. This part builds a timeline from Song/Mongol/Ming transitions through Qing and Tokugawa developments.
 
 ### Key Concepts
 
 | Concept | Description |
 |---------|-------------|
-| **Continuity** | Aspects of East Asian Empires & Isolation that have remained stable over time |
-| **Change** | How East Asian Empires & Isolation has transformed due to new forces and conditions |
-| **Trend** | The direction of change in East Asian Empires & Isolation over time |
+    | **Continuity** | Structures that persist (for example hierarchy, bureaucratic governance traditions) |
+    | **Transformation** | Major institutional or policy shifts over time |
+    | **Turning point** | A development that redirects later trajectories |
       `
     },
     {
@@ -29,26 +29,26 @@ East Asian Empires & Isolation has evolved over time. Understanding historical a
       exercise: {
         questions: [
           {
-            question: 'Studying change over time in East Asian Empires & Isolation helps:',
+            question: 'Which is the best example of continuity across multiple Chinese dynasties?',
             options: [
-              'Only with history classes',
-              'Explain current patterns and predict future developments',
-              'Nothing',
-              'Memorize dates'
+              'Long-term use of scholar-official governance grounded in Confucian norms',
+              'Permanent abolition of central administration',
+              'Complete disappearance of social hierarchy',
+              'End of state involvement in taxation'
             ],
-            correctAnswer: 1,
-            explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.'
+            correctAnswer: 0,
+            explanation: 'While dynasties changed, bureaucratic governance and Confucian legitimacy remained central over long stretches of Chinese history.'
           },
           {
-            question: 'Continuity in East Asian Empires & Isolation means:',
+            question: 'Which development is best treated as a turning point in East Asian maritime history?',
             options: [
-              'Everything changes',
-              'Some aspects have remained stable despite other changes',
-              'Nothing ever happened',
-              'The topic is boring'
+              'Song-era urban market growth',
+              'Ming court termination of large state-sponsored oceanic voyages after Zheng He',
+              'Routine peasant tax collection',
+              'Continuation of local fishing economies'
             ],
             correctAnswer: 1,
-            explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.'
+            explanation: 'Ending expeditionary voyages marked a strategic shift with major long-term implications for global maritime competition.'
           }
         ]
       }
@@ -59,65 +59,105 @@ East Asian Empires & Isolation has evolved over time. Understanding historical a
       content: `
 ## Change Over Time — Deeper Dive
 
-### Continuity
-Aspects of East Asian Empires & Isolation that have remained stable over time. Understanding this concept is essential for mastering East Asian Empires & Isolation in AP World History.
+> **Continuity**
 
-### Change
-How East Asian Empires & Isolation has transformed due to new forces and conditions. This builds on the previous concept and connects to broader themes in the course.
+    Persistent features across periods:
 
-### Trend
-The direction of change in East Asian Empires & Isolation over time. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+    - Confucian social hierarchy and gender norms in elite ideology
+    - State concern with agrarian taxation and social order
+    - Strategic balancing of internal control and external engagement
+
+> **Transformation**
+
+    Important shifts:
+
+    - Yuan conquest introduced Mongol rule and ethnic ranking
+    - Ming restoration reasserted Han-led rule and revived Confucian institutions
+    - Tokugawa consolidation formalized status order and tightened foreign regulation
+
+> **AP Comparison Anchor**
+
+    Use turning points to explain "before vs after":
+
+    $$
+    	ext{Before: outward maritime projection} \rightarrow \text{Decision point} \rightarrow \text{After: inward strategic emphasis}
+    $$
+
+    AP tip: naming a turning point is not enough; explain why it changed later outcomes.
       `
     },
     {
       id: 'wheastas5-input',
-      type: 'input-boxes' as const,
+      type: 'multiple-choice' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to aspects of East Asian Empires & Isolation that have remained stable over time?
-
-2) What concept describes how East Asian Empires & Isolation has transformed due to new forces and conditions?
-
-3) Name the term for the direction of change in East Asian Empires & Isolation over time.
-
-Use the exact term from this part.
+**Applied Recall: 3-Question Sprint** 🎯
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
-        hint1: 'Starts with: C',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: T',
-        explanation: 'Expected answers: Continuity (Aspects of East Asian Empires & Isolation that have remained stable over time), Change (How East Asian Empires & Isolation has transformed due to new forces and conditions), and Trend (The direction of change in East Asian Empires & Isolation over time).'
+        questions: [
+          {
+            question: 'Which term refers to long-term persistence of political or social structures across periods?',
+            options: [
+              'Continuity',
+              'Transformation',
+              'Turning point',
+              'Random variation'
+            ],
+            correctAnswer: 0,
+            explanation: 'Continuity means key structures persist over time — like Confucian social hierarchy persisting across the Yuan, Ming, and Qing dynasties despite political change at the top.'
+          },
+          {
+            question: 'The Tokugawa consolidation formalizing the status order and tightening foreign regulation is an example of what?',
+            options: [
+              'Transformation',
+              'Continuity',
+              'Turning point',
+              'Static pattern'
+            ],
+            correctAnswer: 0,
+            explanation: 'This is a major institutional shift — a transformation — even if it preserved some prior social norms. Transformations explain how states change while maintaining some continuity.'
+          },
+          {
+            question: 'The Ming decision to end Zheng He\'s voyages is most useful in an AP essay as what type of analytical tool?',
+            options: [
+              'A turning point that redirected later global power dynamics',
+              'A continuity showing China\'s consistent maritime policy',
+              'A transformation with no global significance',
+              'Background context with no causal role'
+            ],
+            correctAnswer: 0,
+            explanation: 'The end of Zheng He\'s voyages is a turning point: it redirected Chinese maritime capacity inward, leaving the Indian Ocean open for later European dominance. AP rewards turning-point arguments that link to downstream consequences.'
+          }
+        ]
       }
     },
     {
       id: 'wheastas5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Idea: Evidence to Claim**
+
+Select the concept that best matches each description.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Aspects of East Asian Empires & Isolation that have remained stable over time is called ___',
-            options: ['Continuity', 'Change', 'Trend', 'None of these']
+            label: 'Long-term persistence of a political or social structure is ___',
+            options: ['Continuity', 'Transformation', 'Turning point', 'random variation']
           },
           {
-            label: 'How East Asian Empires & Isolation has transformed due to new forces and conditions describes ___',
-            options: ['Continuity', 'Change', 'Trend', 'All of these']
+            label: 'A major shift in institutions or policy over time is ___',
+            options: ['Continuity', 'Transformation', 'Turning point', 'static pattern']
           },
           {
-            label: 'The direction of change in East Asian Empires & Isolation over time is known as ___',
-            options: ['Trend', 'Continuity', 'Change', 'None of these']
+            label: 'A development that redirects later outcomes is a ___',
+            options: ['Turning point', 'Continuity', 'Transformation', 'background condition']
           }
         ],
-        correctAnswers: ['Continuity', 'Change', 'Trend'],
+        correctAnswers: ['Continuity', 'Transformation', 'Turning point'],
         hint1: 'This is the first key concept from the lesson.',
         hint2: 'This is the second key concept from the lesson.',
         hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Continuity — Aspects of East Asian Empires & Isolation that have remained stable over time. Change — How East Asian Empires & Isolation has transformed due to new forces and conditions. Trend — The direction of change in East Asian Empires & Isolation over time.'
+        explanation: 'Distinguish persistence, shift, and pivot events. AP readers reward that precision in CCOT writing.'
       }
     },
     {
@@ -127,15 +167,14 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Continuity** with **Change** — while related, they address different aspects of East Asian Empires & Isolation.
-- **Trend** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+    - "Change over time" does not mean everything changed; include continuity evidence.
+    - Do not equate one dynasty change with complete social reset.
+    - A turning point must have downstream consequences, not just chronology.
 
 ### AP Strategy Moves
-- When you see questions about change over time, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect change over time to broader themes in AP World History for higher scores.
+    - Use a timeline anchor in your thesis ("from Yuan rule to Ming restoration...").
+    - Pair one continuity example with one transformation example in each body paragraph.
+    - Add one sentence evaluating significance (why the change mattered beyond East Asia).
       `
     },
     {
@@ -147,26 +186,26 @@ Use the exact term from this part.
       exercise: {
         questions: [
           {
-            question: 'An AP question asks how East Asian Empires & Isolation has changed in the last 50 years. A strong answer would:',
+            question: 'A strong CCOT paragraph about East Asia (1200-1750) should:',
             options: [
-              'Say nothing has changed',
-              'Identify specific changes, explain their causes, and note what has remained constant',
-              'Only list dates',
-              'Make up information'
+              'List only rulers in chronological order',
+              'Explain one major transformation and one continuity using concrete evidence',
+              'Focus only on one event with no broader trend',
+              'Avoid causation to stay concise'
             ],
             correctAnswer: 1,
-            explanation: 'Strong AP answers address both change AND continuity, explaining causes and consequences of transformation.'
+            explanation: 'AP CCOT scoring rewards balanced reasoning: change, continuity, and evidence-based explanation.'
           },
           {
-            question: 'A trend in East Asian Empires & Isolation shows acceleration in recent decades. The most likely explanation is:',
+            question: 'Which claim best identifies a turning point with clear significance?',
             options: [
-              'Random chance',
-              'New technologies, policies, or conditions intensifying existing processes',
-              'The data is wrong',
-              'Nothing has changed'
+              'The Ming ended Zheng He voyages, narrowing sustained state maritime projection and reshaping later global competition',
+              'A scholar passed the exam in one province',
+              'A good harvest occurred in one year',
+              'A ruler issued routine tax guidance'
             ],
-            correctAnswer: 1,
-            explanation: 'Accelerating trends are typically driven by new forces (technology, policy, globalization) intensifying existing processes.'
+            correctAnswer: 0,
+            explanation: 'This links a policy decision to broad long-term outcomes, which is what makes it a true turning point argument.'
           }
         ]
       }

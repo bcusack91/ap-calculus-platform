@@ -160,7 +160,7 @@ Use the exact historical term.
           },
           {
             label: 'The Inca system of mandatory labor service for state projects was called ___',
-            options: ["Mit'a", 'Tribute', 'Feudalism', 'Manorialism']
+              options: ["Mit'a", 'Tribute', 'Feudalism', 'Manorialism']
           }
         ],
         correctAnswers: ['Cahokia', 'Swahili city-states', "Mit'a"],

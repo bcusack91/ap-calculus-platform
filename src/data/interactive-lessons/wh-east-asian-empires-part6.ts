@@ -9,15 +9,15 @@ export const whEastAsianEmpiresPart6Data = {
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Apply East Asian Empires & Isolation concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+    Use AP-style historical reasoning with mini datasets, claim-evidence-reasoning, and source-aware analysis.
 
 ### Key Concepts
 
 | Concept | Description |
 |---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to East Asian Empires & Isolation |
-| **Argumentation** | Making evidence-based claims about East Asian Empires & Isolation |
-| **Spatial reasoning** | Using geographic thinking to analyze East Asian Empires & Isolation |
+    | **Source reading** | Identifying what evidence a stimulus provides and what it does not |
+    | **Evidence chain** | Connecting claim -> specific evidence -> historical reasoning |
+    | **Context framing** | Situating evidence in broader AP themes and chronology |
       `
     },
     {
@@ -29,26 +29,26 @@ Apply East Asian Empires & Isolation concepts to data interpretation and analyti
       exercise: {
         questions: [
           {
-            question: 'When interpreting data about East Asian Empires & Isolation, the first step is:',
+            question: 'When reading an AP stimulus table about East Asian trade, the first move should be to:',
             options: [
-              'Jump to conclusions',
+              'write a thesis before reading numbers',
               'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
-            ],
-            correctAnswer: 0,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
-          },
-          {
-            question: 'An evidence-based argument about East Asian Empires & Isolation requires:',
-            options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
+              'assume the largest number proves causation',
+              'summarize the topic without using data'
             ],
             correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
+            explanation: 'Start by reading axes/categories/timeframe and identifying patterns before interpreting causes.'
+          },
+          {
+            question: 'Which response best models an evidence chain?',
+            options: [
+              'A broad claim with no named examples',
+              'A clear claim, one named East Asia example, and an explanation of why it supports the claim',
+              'Three facts listed without a central argument',
+              'A restatement of the prompt'
+            ],
+            correctAnswer: 1,
+            explanation: 'AP writing quality comes from linking a precise claim to specific evidence and explicit reasoning.'
           }
         ]
       }
@@ -59,65 +59,107 @@ Apply East Asian Empires & Isolation concepts to data interpretation and analyti
       content: `
 ## Problem-Solving Workshop — Deeper Dive
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to East Asian Empires & Isolation. Understanding this concept is essential for mastering East Asian Empires & Isolation in AP World History.
+> **Source Reading**
 
-### Argumentation
-Making evidence-based claims about East Asian Empires & Isolation. This builds on the previous concept and connects to broader themes in the course.
+    For each source, identify:
 
-### Spatial reasoning
-Using geographic thinking to analyze East Asian Empires & Isolation. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+    - What the source directly shows
+    - What must be inferred
+    - What cannot be concluded from this source alone
+
+> **Evidence Chain**
+
+    Template:
+
+    $$
+    	ext{Claim} \rightarrow \text{Named evidence} \rightarrow \text{Reasoning (historical significance)}
+    $$
+
+    Example claim: Tokugawa foreign policy prioritized domestic order.
+    Evidence: regulated contact through specific ports and restrictions on missionaries.
+    Reasoning: this reduced perceived political/religious threats to shogunal authority.
+
+> **AP Comparison Anchor**
+
+    Strong AP answers place East Asia in wider patterns:
+
+    - comparison with European maritime expansion
+    - links to silver flows and global trade networks
+    - ties to later pressures from industrialized states
       `
     },
     {
       id: 'wheastas6-input',
-      type: 'input-boxes' as const,
+      type: 'multiple-choice' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to analyzing maps, graphs, and tables related to East Asian Empires & Isolation?
-
-2) What concept describes making evidence-based claims about East Asian Empires & Isolation?
-
-3) Name the term for using geographic thinking to analyze East Asian Empires & Isolation.
-
-Use the exact term from this part.
+**Applied Recall: 3-Question Sprint** 🎯
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to East Asian Empires & Isolation), Argumentation (Making evidence-based claims about East Asian Empires & Isolation), and Spatial reasoning (Using geographic thinking to analyze East Asian Empires & Isolation).'
+        questions: [
+          {
+            question: 'What skill involves identifying what a source directly supports vs. what must be inferred?',
+            options: [
+              'Source reading',
+              'Evidence chain',
+              'Context framing',
+              'Narrative drift'
+            ],
+            correctAnswer: 0,
+            explanation: 'Source reading means parsing the stimulus carefully: what does it show directly, what can be inferred, and what cannot be concluded from this source alone.'
+          },
+          {
+            question: 'Which term describes the AP writing structure: Claim → Named Evidence → Historical Reasoning?',
+            options: [
+              'Evidence chain',
+              'Source reading',
+              'Context framing',
+              'Unsupported assertion'
+            ],
+            correctAnswer: 0,
+            explanation: 'The evidence chain is the core AP argument structure. Each body paragraph should follow this sequence to earn full analysis credit.'
+          },
+          {
+            question: 'Connecting East Asian evidence to European maritime expansion and silver flows exemplifies which skill?',
+            options: [
+              'Context framing',
+              'Source reading',
+              'Evidence chain',
+              'Single-fact recall'
+            ],
+            correctAnswer: 0,
+            explanation: 'Context framing situates your evidence in wider chronological or thematic patterns — exactly the move that earns complexity points on the AP exam.'
+          }
+        ]
       }
     },
     {
       id: 'wheastas6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Idea: Evidence to Claim**
+
+Select the concept that best matches each description.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to East Asian Empires & Isolation is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: 'Identifying what a source directly supports is ___',
+            options: ['Source reading', 'Evidence chain', 'Context framing', 'narrative drift']
           },
           {
-            label: 'Making evidence-based claims about East Asian Empires & Isolation describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: 'Claim -> named evidence -> reasoning is an ___',
+            options: ['Source reading', 'Evidence chain', 'Context framing', 'unsupported assertion']
           },
           {
-            label: 'Using geographic thinking to analyze East Asian Empires & Isolation is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: 'Placing East Asia evidence into wider chronology/themes is ___',
+            options: ['Context framing', 'Source reading', 'Evidence chain', 'single-fact recall']
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to East Asian Empires & Isolation. Argumentation — Making evidence-based claims about East Asian Empires & Isolation. Spatial reasoning — Using geographic thinking to analyze East Asian Empires & Isolation.'
+        correctAnswers: ['Source reading', 'Evidence chain', 'Context framing'],
+        hint1: 'Stimulus first.',
+        hint2: 'Argument structure.',
+        hint3: 'Big-picture placement.',
+        explanation: 'Use this sequence in timed writing: parse source, build chain, frame context.'
       }
     },
     {
@@ -127,15 +169,14 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of East Asian Empires & Isolation.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+    - Evidence is not the same as explanation; you need both.
+    - One source rarely proves an entire historical argument by itself.
+    - Context is not background fluff; it must sharpen interpretation.
 
 ### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP World History for higher scores.
+    - Annotate prompts for command words: compare, evaluate, explain, identify.
+    - Underline two named examples before writing your thesis.
+    - Check each paragraph for this minimum: one claim, one specific example, one why-it-matters sentence.
       `
     },
     {
@@ -147,26 +188,26 @@ Use the exact term from this part.
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about East Asian Empires & Isolation and asked to identify a trend. You should:',
+            question: 'You are given a chart showing shifts in major East Asian trade ports over time. What is the best first analytical sentence?',
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              'This chart proves all East Asian governments had identical policies.',
+              'The chart suggests changing trade concentration, but we need policy evidence to explain why.',
+              'The largest number always means the strongest empire.',
+              'Charts are less useful than narrative sources, so this can be ignored.'
             ],
             correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
+            explanation: 'This answer reads the pattern while correctly limiting inference until supporting evidence is added.'
           },
           {
-            question: 'A free-response question asks you to use evidence to support an argument about East Asian Empires & Isolation. The best approach is:',
+            question: 'A DBQ asks whether East Asian isolation policies were effective. Which thesis approach is strongest?',
             options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
+              'They were either completely effective or complete failures in every way.',
+              'They improved internal stability in the short term but reduced flexibility in a changing global system.',
+              'Isolation policies were similar to all European policies.',
+              'There is no evidence either way.'
             ],
             correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            explanation: 'This thesis is nuanced, evaluative, and sets up evidence for both short-term and long-term analysis.'
           }
         ]
       }

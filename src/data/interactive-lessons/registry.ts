@@ -5145,6 +5145,18 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'AP Review', loader: () => import('./wh-global-tapestry-part7').then(m => m.whGlobalTapestryPart7Data) }
     ],
   },
+  'wh-developments-east-asia': {
+    completionDestination: 'complete',
+    parts: [
+      { title: 'Core Concepts', loader: () => import('./wh-developments-east-asia-part1').then(m => m.whDevelopmentsEastAsiaPart1Data) },
+      { title: 'Key Processes', loader: () => import('./wh-developments-east-asia-part2').then(m => m.whDevelopmentsEastAsiaPart2Data) },
+      { title: 'Patterns & Examples', loader: () => import('./wh-developments-east-asia-part3').then(m => m.whDevelopmentsEastAsiaPart3Data) },
+      { title: 'Connections & Interactions', loader: () => import('./wh-developments-east-asia-part4').then(m => m.whDevelopmentsEastAsiaPart4Data) },
+      { title: 'Change Over Time', loader: () => import('./wh-developments-east-asia-part5').then(m => m.whDevelopmentsEastAsiaPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./wh-developments-east-asia-part6').then(m => m.whDevelopmentsEastAsiaPart6Data) },
+      { title: 'AP Review', loader: () => import('./wh-developments-east-asia-part7').then(m => m.whDevelopmentsEastAsiaPart7Data) }
+    ],
+  },
   'wh-dar-al-islam': {
     completionDestination: 'complete',
     parts: [
@@ -5335,6 +5347,78 @@ const interactiveLessonRegistry: Record<string, InteractiveTopicConfig> = {
       { title: 'Change Over Time', loader: () => import('./wh-reform-migration-part5').then(m => m.whReformMigrationPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./wh-reform-migration-part6').then(m => m.whReformMigrationPart6Data) },
       { title: 'AP Review', loader: () => import('./wh-reform-migration-part7').then(m => m.whReformMigrationPart7Data) }
+    ],
+  },
+  'wh-world-wars': {
+    completionDestination: 'complete',
+    parts: [
+      { title: 'Core Concepts', loader: () => import('./wh-world-wars-part1').then(m => m.whWorldWarsPart1Data) },
+      { title: 'Key Processes', loader: () => import('./wh-world-wars-part2').then(m => m.whWorldWarsPart2Data) },
+      { title: 'Patterns & Examples', loader: () => import('./wh-world-wars-part3').then(m => m.whWorldWarsPart3Data) },
+      { title: 'Connections & Interactions', loader: () => import('./wh-world-wars-part4').then(m => m.whWorldWarsPart4Data) },
+      { title: 'Change Over Time', loader: () => import('./wh-world-wars-part5').then(m => m.whWorldWarsPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./wh-world-wars-part6').then(m => m.whWorldWarsPart6Data) },
+      { title: 'AP Review', loader: () => import('./wh-world-wars-part7').then(m => m.whWorldWarsPart7Data) }
+    ],
+  },
+  'wh-mass-atrocities': {
+    completionDestination: 'complete',
+    parts: [
+      { title: 'Core Concepts', loader: () => import('./wh-mass-atrocities-part1').then(m => m.whMassAtrocitiesPart1Data) },
+      { title: 'Key Processes', loader: () => import('./wh-mass-atrocities-part2').then(m => m.whMassAtrocitiesPart2Data) },
+      { title: 'Patterns & Examples', loader: () => import('./wh-mass-atrocities-part3').then(m => m.whMassAtrocitiesPart3Data) },
+      { title: 'Connections & Interactions', loader: () => import('./wh-mass-atrocities-part4').then(m => m.whMassAtrocitiesPart4Data) },
+      { title: 'Change Over Time', loader: () => import('./wh-mass-atrocities-part5').then(m => m.whMassAtrocitiesPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./wh-mass-atrocities-part6').then(m => m.whMassAtrocitiesPart6Data) },
+      { title: 'AP Review', loader: () => import('./wh-mass-atrocities-part7').then(m => m.whMassAtrocitiesPart7Data) }
+    ],
+  },
+  'wh-cold-war-decolonization': {
+    completionDestination: 'complete',
+    parts: [
+      { title: 'Core Concepts', loader: () => import('./wh-cold-war-decolonization-part1').then(m => m.whColdWarDecolonizationPart1Data) },
+      { title: 'Key Processes', loader: () => import('./wh-cold-war-decolonization-part2').then(m => m.whColdWarDecolonizationPart2Data) },
+      { title: 'Patterns & Examples', loader: () => import('./wh-cold-war-decolonization-part3').then(m => m.whColdWarDecolonizationPart3Data) },
+      { title: 'Connections & Interactions', loader: () => import('./wh-cold-war-decolonization-part4').then(m => m.whColdWarDecolonizationPart4Data) },
+      { title: 'Change Over Time', loader: () => import('./wh-cold-war-decolonization-part5').then(m => m.whColdWarDecolonizationPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./wh-cold-war-decolonization-part6').then(m => m.whColdWarDecolonizationPart6Data) },
+      { title: 'AP Review', loader: () => import('./wh-cold-war-decolonization-part7').then(m => m.whColdWarDecolonizationPart7Data) }
+    ],
+  },
+  'wh-newly-independent-states': {
+    completionDestination: 'complete',
+    parts: [
+      { title: 'Core Concepts', loader: () => import('./wh-newly-independent-states-part1').then(m => m.whNewlyIndependentStatesPart1Data) },
+      { title: 'Key Processes', loader: () => import('./wh-newly-independent-states-part2').then(m => m.whNewlyIndependentStatesPart2Data) },
+      { title: 'Patterns & Examples', loader: () => import('./wh-newly-independent-states-part3').then(m => m.whNewlyIndependentStatesPart3Data) },
+      { title: 'Connections & Interactions', loader: () => import('./wh-newly-independent-states-part4').then(m => m.whNewlyIndependentStatesPart4Data) },
+      { title: 'Change Over Time', loader: () => import('./wh-newly-independent-states-part5').then(m => m.whNewlyIndependentStatesPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./wh-newly-independent-states-part6').then(m => m.whNewlyIndependentStatesPart6Data) },
+      { title: 'AP Review', loader: () => import('./wh-newly-independent-states-part7').then(m => m.whNewlyIndependentStatesPart7Data) }
+    ],
+  },
+  'wh-globalization-tech': {
+    completionDestination: 'complete',
+    parts: [
+      { title: 'Core Concepts', loader: () => import('./wh-globalization-tech-part1').then(m => m.whGlobalizationTechPart1Data) },
+      { title: 'Key Processes', loader: () => import('./wh-globalization-tech-part2').then(m => m.whGlobalizationTechPart2Data) },
+      { title: 'Patterns & Examples', loader: () => import('./wh-globalization-tech-part3').then(m => m.whGlobalizationTechPart3Data) },
+      { title: 'Connections & Interactions', loader: () => import('./wh-globalization-tech-part4').then(m => m.whGlobalizationTechPart4Data) },
+      { title: 'Change Over Time', loader: () => import('./wh-globalization-tech-part5').then(m => m.whGlobalizationTechPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./wh-globalization-tech-part6').then(m => m.whGlobalizationTechPart6Data) },
+      { title: 'AP Review', loader: () => import('./wh-globalization-tech-part7').then(m => m.whGlobalizationTechPart7Data) }
+    ],
+  },
+  'wh-challenges-21st-century': {
+    completionDestination: 'complete',
+    parts: [
+      { title: 'Core Concepts', loader: () => import('./wh-challenges-21st-century-part1').then(m => m.whChallenges21stCenturyPart1Data) },
+      { title: 'Key Processes', loader: () => import('./wh-challenges-21st-century-part2').then(m => m.whChallenges21stCenturyPart2Data) },
+      { title: 'Patterns & Examples', loader: () => import('./wh-challenges-21st-century-part3').then(m => m.whChallenges21stCenturyPart3Data) },
+      { title: 'Connections & Interactions', loader: () => import('./wh-challenges-21st-century-part4').then(m => m.whChallenges21stCenturyPart4Data) },
+      { title: 'Change Over Time', loader: () => import('./wh-challenges-21st-century-part5').then(m => m.whChallenges21stCenturyPart5Data) },
+      { title: 'Problem-Solving Workshop', loader: () => import('./wh-challenges-21st-century-part6').then(m => m.whChallenges21stCenturyPart6Data) },
+      { title: 'AP Review', loader: () => import('./wh-challenges-21st-century-part7').then(m => m.whChallenges21stCenturyPart7Data) }
     ],
   },
   'apush-native-societies-exploration': {

@@ -19,7 +19,7 @@ export const whEastAsianEmpiresPart1Data = {
 | 📌 Korea & Southeast Asia |
 | Cultural Connections |
 
-> 🔑 **Key Concept:** The AP exam focuses on how East Asian societies developed distinct political systems while sharing **Confucian values, Chinese cultural influence, and interconnected trade networks**. Compare China's centralized bureaucracy with Japan's decentralized feudalism.
+> 🔑 **Key Concept:** The AP exam focuses on how East Asian societies developed distinct political systems while sharing **Confucian values, Chinese cultural influence, and interconnected trade networks**. Compare China's centralized bureaucracy with Japan\'s decentralized feudalism.
       `
     },
     {
@@ -28,7 +28,7 @@ export const whEastAsianEmpiresPart1Data = {
       content: `
 ## 📖 Chinese Dynasties (1200–1450)
 
-### Song Dynasty (960–1279) — Economic Golden Age
+> **Song Dynasty (960–1279) — Economic Golden Age**
 
 | Achievement | Significance |
 |------------|-------------|
@@ -36,9 +36,9 @@ export const whEastAsianEmpiresPart1Data = {
 | **Civil service exams** | Expanded access (theoretically open to all men); tested Confucian classics; created scholar-gentry elite |
 | **Economic revolution** | First paper money (*jiaozi*); joint-stock companies; massive iron/steel production |
 | **Agriculture** | Champa rice (fast-growing variety from Vietnam); population boom; southern China became economic center |
-| **Women's status** | Foot binding spread among elites; Neo-Confucian emphasis on female subordination; women's property rights declined |
+| **Women's status** | Foot binding spread among elites; Neo-Confucian emphasis on female subordination; women\'s property rights declined |
 
-### Yuan Dynasty (1271–1368) — Mongol Rule
+> **Yuan Dynasty (1271–1368) — Mongol Rule**
 
 | Feature | Details |
 |---------|---------|
@@ -48,7 +48,7 @@ export const whEastAsianEmpiresPart1Data = {
 | **Governance** | Used non-Chinese administrators to prevent Chinese resistance; suspended civil service exams initially |
 | **Fall** | Flooding, famine, plague, and **Red Turban Rebellion** → **Ming Dynasty** founded by Zhu Yuanzhang (1368) |
 
-### Ming Dynasty (1368–1644) — Restoration & Expansion
+> **Ming Dynasty (1368–1644) — Restoration & Expansion**
 
 | Feature | Details |
 |---------|---------|
@@ -57,7 +57,7 @@ export const whEastAsianEmpiresPart1Data = {
 | **Ended exploration** | After 1433, Ming emperors ended voyages; turned inward; focused on internal threats (Mongols) |
 | **Culture** | Porcelain production peaked; Forbidden City built in Beijing; Neo-Confucian orthodoxy |
 
-> ⚠️ **AP Alert:** Zheng He's voyages vs. European exploration is a classic AP comparison. Zheng He sailed earlier, with much larger ships, but China **chose to stop** exploring. Europe's fragmented, competitive states drove continued expansion. This contrast helps explain why Europe, not China, colonized the world.
+> ⚠️ **AP Alert:** Zheng He's voyages vs. European exploration is a classic AP comparison. Zheng He sailed earlier, with much larger ships, but China **chose to stop** exploring. Europe\'s fragmented, competitive states drove continued expansion. This contrast helps explain why Europe, not China, colonized the world.
       `
     },
     {
@@ -99,7 +99,7 @@ export const whEastAsianEmpiresPart1Data = {
       content: `
 ## Japan & the Sinosphere
 
-### Japanese Feudalism (c. 1185–1600)
+> **Japanese Feudalism (c. 1185–1600)**
 
 | Feature | Details |
 |---------|---------|
@@ -111,7 +111,7 @@ export const whEastAsianEmpiresPart1Data = {
 
 **Key comparison:** Japan's feudal system resembled European feudalism (decentralized, land-based, warrior elites) but developed independently.
 
-### Korea: Koryo & Choson Dynasties
+> **Korea: Koryo & Choson Dynasties**
 
 | Feature | Details |
 |---------|---------|
@@ -119,7 +119,7 @@ export const whEastAsianEmpiresPart1Data = {
 | **Mongol influence** | Korea became a Mongol vassal state; maintained some autonomy |
 | **Choson Dynasty** (1392–1897) | Neo-Confucian reforms; **hangul** alphabet invented (1443) to increase literacy |
 
-### Southeast Asia
+> **AP Comparison Anchor**
 
 - **Khmer Empire** (Cambodia) — **Angkor Wat**; Hindu-Buddhist temple complex; massive hydraulic engineering (reservoirs)
 - **Srivijaya** (Indonesia) — Buddhist maritime empire controlling the Strait of Malacca; key to Indian Ocean trade
@@ -129,32 +129,53 @@ export const whEastAsianEmpiresPart1Data = {
     },
     {
       id: 'wheae1-input',
-      type: 'input-boxes' as const,
+      type: 'multiple-choice' as const,
       content: `
-**Applied Recall** ✍️
-
-1) What Chinese admiral led massive treasure fleets across the Indian Ocean between 1405 and 1433?
-
-2) What Japanese warrior code emphasized loyalty, honor, martial skill, and ritual suicide (seppuku)?
-
-3) What Korean alphabet, invented in 1443, was designed to increase literacy among common people?
-
-Use the exact historical term.
+**Applied Recall: 3-Question Sprint** 🎯
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Zheng He', 'bushido', 'hangul'],
-        hint1: 'His fleet included ships up to 400 feet long — dwarfing European vessels',
-        hint2: 'The samurai code — "way of the warrior"',
-        hint3: 'Still used in both North and South Korea today',
-        explanation: 'Zheng He\'s voyages (1405–1433) demonstrated China\'s unmatched naval power before the Ming court chose to end exploration. Bushido shaped Japanese warrior culture for centuries and still influences Japanese society. Hangul was a revolutionary innovation — a phonetic alphabet designed to be easy to learn, created by King Sejong.'
+        questions: [
+          {
+            question: 'What Chinese admiral led massive treasure fleets across the Indian Ocean between 1405 and 1433?',
+            options: [
+              'Zheng He',
+              'Kublai Khan',
+              'Yongle Emperor',
+              'Marco Polo'
+            ],
+            correctAnswer: 0,
+            explanation: 'Zheng He\'s voyages (1405–1433) demonstrated China\'s unmatched naval power before the Ming court chose to end exploration. His fleet included ships up to 400 feet long — dwarfing European vessels.'
+          },
+          {
+            question: 'What Japanese warrior code emphasized loyalty, honor, martial skill, and ritual suicide (seppuku)?',
+            options: [
+              'Bushido',
+              'Shinto',
+              'Neo-Confucianism',
+              'Sakoku'
+            ],
+            correctAnswer: 0,
+            explanation: 'Bushido — "the way of the warrior" — shaped Japanese warrior culture for centuries and still influences Japanese society today.'
+          },
+          {
+            question: 'What Korean alphabet, invented in 1443, was designed to increase literacy among common people?',
+            options: [
+              'Hangul',
+              'Kanji',
+              'Hiragana',
+              'Hanja'
+            ],
+            correctAnswer: 0,
+            explanation: 'Hangul was a revolutionary phonetic alphabet, easy to learn, created by King Sejong — still used in both North and South Korea today.'
+          }
+        ]
       }
     },
     {
       id: 'wheae1-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match the Concepts** 🔍
+**Match the Idea: Evidence to Claim**
       `,
       exercise: {
         dropdowns: [

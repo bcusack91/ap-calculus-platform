@@ -437,6 +437,7 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'gov-voting-elections': () => import('./gov-voting-elections'),
   'gov-parties-interest-groups': () => import('./gov-parties-interest-groups'),
   'gov-media-technology': () => import('./gov-media-technology'),
+  'wh-developments-east-asia': () => import('./wh-developments-east-asia'),
   'wh-global-tapestry': () => import('./wh-global-tapestry'),
   'wh-dar-al-islam': () => import('./wh-dar-al-islam'),
   'wh-silk-roads-mongols': () => import('./wh-silk-roads-mongols'),

@@ -33,17 +33,89 @@ async function main() {
   })
   console.log('  ✓ Category: The Global Tapestry')
 
+  const developmentsEastAsiaTextContent = `# Developments in East Asia (c. 1200-1450)
+
+This topic examines how East Asian societies combined shared cultural influences with distinct political institutions during the Global Tapestry era.
+
+## Why This Topic Matters on AP World
+
+- It appears in comparison, causation, and continuity/change prompts.
+- It establishes key Unit 1 patterns: state-building, cultural diffusion, and regional diversity.
+- It helps explain why East Asia was connected but not politically uniform.
+
+## 1) Song China: State Power and Economic Expansion
+
+- Song rule relied on a large bureaucratic apparatus selected through civil service examinations.
+- Neo-Confucian thought reinforced hierarchy, moral order, and elite governance norms.
+- Commercial growth expanded markets, urban centers, and long-distance trade.
+- Agricultural gains, including Champa rice adoption, supported demographic growth.
+
+## 2) Yuan Transition and Regional Effects
+
+- Mongol conquest replaced Song rule with the Yuan dynasty.
+- Political authority shifted, but China remained deeply connected to Afro-Eurasian exchange.
+- Dynastic transition is a key AP change-over-time example in Unit 1.
+
+## 3) East Asia Beyond China
+
+### Japan
+
+- Japan developed decentralized feudal military institutions (shogun, daimyo, samurai).
+- This contrasted with China's centralized bureaucratic model.
+
+### Korea
+
+- Korean elites adopted many Chinese intellectual and administrative traditions.
+- Korea retained its own political identity while participating in a broader East Asian cultural sphere.
+
+### Vietnam and Regional States
+
+- Confucian influence and Chinese cultural models spread, but local rulers adapted institutions to local conditions.
+
+## 4) Core AP Patterns
+
+| Pattern | East Asian Evidence | AP Skill Connection |
+|---|---|---|
+| Shared cultural sphere | Confucian learning, writing systems, and diplomatic norms spread regionally | Comparison and context |
+| Political diversity | Centralized Chinese bureaucracy vs Japanese feudal structure | Comparison |
+| Continuity and change | Persistent Confucian influence with major dynastic transitions | CCOT |
+
+## 5) High-Yield Terms
+
+- Neo-Confucianism
+- Civil service examinations
+- Tributary system
+- Song and Yuan dynasties
+- Feudal Japan (shogun, daimyo, samurai)
+- Selective adaptation
+
+## 6) AP Writing Tips
+
+1. For comparison, provide one similarity and one difference with specific evidence.
+2. For causation, identify the mechanism (for example, conquest, policy, or ideology).
+3. For continuity/change, pair one long-term continuity with one major shift.
+
+## Quick Check
+
+- How did Chinese influence shape neighboring societies without making them politically identical?
+- Why is Song China often cited as a major center of premodern commercial development?
+- What changed politically with the Song-to-Yuan transition, and what remained continuous?`
+
   await prisma.topic.upsert({
     where: { slug: 'wh-developments-east-asia' },
-    update: {},
+    update: {
+      title: 'Developments in East Asia',
+      description: 'Song political and economic growth, Neo-Confucianism, Yuan transition, and regional comparison with Japan and Korea',
+      textContent: developmentsEastAsiaTextContent,
+    },
     create: {
       slug: 'wh-developments-east-asia',
       title: 'Developments in East Asia',
-      description: 'Song Dynasty innovations, Neo-Confucianism, Japanese feudalism, and Korean kingdoms',
+      description: 'Song political and economic growth, Neo-Confucianism, Yuan transition, and regional comparison with Japan and Korea',
       order: 1,
       categoryId: unit1.id,
       isPremium: false,
-      textContent: `# 🏯 Developments in East Asia\n\nStudy the Song Dynasty (960–1279): innovations (gunpowder, compass, printing), Neo-Confucianism, the tribute system, Japanese feudalism and the shogunate, Korean Goryeo and Joseon dynasties, and the influence of Chinese culture across East Asia.`,
+      textContent: developmentsEastAsiaTextContent,
     },
   })
 
@@ -145,9 +217,15 @@ async function main() {
     },
   })
 
+  const eastAsianRussianTextContent = `# 🏯 East Asian & Russian Empires (c. 1450-1750)\n\nThis topic asks you to compare how major land-based empires in East Asia and Eurasia built power, managed diversity, and interacted with global trade.\n\n## Why This Topic Matters on AP World\n\n- It appears in **comparison**, **causation**, and **CCOT** prompts.\n- It links Unit 3 (land-based empires) to Unit 4 (transoceanic networks).\n- It helps explain later global power shifts.\n\n## 1) Ming and Qing China\n\n### Ming (1368-1644): Restoration and selective outward projection\n\n- Reasserted Han-led imperial rule after the Yuan.\n- Rebuilt and expanded state institutions grounded in Confucian governance.\n- Sponsored **Zheng He** voyages (1405-1433), projecting prestige across the Indian Ocean.\n- Later shifted resources toward internal stability and frontier defense.\n\n### Qing (1644-1912): Conquest dynasty with adaptive governance\n\n- Manchu rulers preserved many Confucian institutions to legitimize rule over a majority Han population.\n- Expanded territory (Xinjiang, Tibet, Mongolia) and managed a multiethnic empire.\n- Balanced military power with bureaucratic continuity.\n\n### AP Comparison Move\n\nChina maintained a highly centralized bureaucratic model, but dynastic transitions still mattered for ethnicity, territorial strategy, and state priorities.\n\n## 2) Tokugawa Japan (1600-1868)\n\n- Political authority rested with the **shogunate**, while the emperor remained symbolic.\n- Social order was structured (samurai, peasants, artisans, merchants).\n- **Sakoku** policies regulated foreign contact to reduce political and religious threats.\n- Contact was controlled, not eliminated: limited trade continued through designated channels.\n\n### AP Causation Move\n\nTokugawa restrictions are best read as a regime-stability strategy: short-term order and control, with long-term trade and strategic implications.\n\n## 3) Russia in the Early Modern Era\n\n- Expanded across Siberia, creating a vast contiguous land empire.\n- Under rulers like **Peter the Great**, selectively imported Western military and administrative techniques.\n- Maintained autocratic rule while modernizing parts of state capacity.\n\n### AP Comparison Move\n\nRussia and Qing China both governed huge multiethnic territories, but each used distinct combinations of military coercion, elite integration, and administrative adaptation.\n\n## 4) Big Patterns You Should Be Able to Explain\n\n| Pattern | East Asia / Eurasia Example | Why It Matters |\n|---|---|---|\n| **State centralization** | Ming/Qing bureaucracy | Supports comparison with decentralized systems like Tokugawa domains |\n| **Selective adaptation** | Russia westernizing military methods; East Asia borrowing while preserving local institutions | Shows diffusion is strategic, not passive |\n| **Regulated interaction** | Tokugawa contact limits; post-Zheng-He Ming priorities | Connects domestic politics to global consequences |\n\n## 5) High-Yield Terms\n\n- Civil service examination system\n- Neo-Confucianism\n- Sakoku\n- Shogun / daimyo\n- Multiethnic empire\n- Selective adaptation\n\n## 6) AP Exam Strategy\n\n1. For **comparison** prompts, always provide one similarity and one difference.\n2. For **causation** prompts, connect policy choices to concrete outcomes.\n3. For **CCOT** prompts, include both continuity (for example, hierarchy/governance structures) and change (for example, foreign policy shifts).\n\n## Quick Check\n\n- Why did some East Asian states regulate foreign contact despite active regional trade networks?\n- How did centralized bureaucracy in China differ from Tokugawa political organization?\n- To what extent did Russia and Qing China face similar imperial governance challenges?`
+
   await prisma.topic.upsert({
     where: { slug: 'wh-east-asian-empires' },
-    update: {},
+    update: {
+      title: 'East Asian & Russian Empires',
+      description: 'Ming and Qing China, Tokugawa Japan, and the expansion of the Russian Empire',
+      textContent: eastAsianRussianTextContent,
+    },
     create: {
       slug: 'wh-east-asian-empires',
       title: 'East Asian & Russian Empires',
@@ -155,7 +233,7 @@ async function main() {
       order: 2,
       categoryId: unit3.id,
       isPremium: false,
-      textContent: `# 🏯 East Asian & Russian Empires\n\nExplore Ming Dynasty (Zheng He voyages, Great Wall reconstruction, isolationism), Qing Dynasty (Manchu rule, Kangxi Emperor), Tokugawa Japan (sakoku isolationism, social hierarchy), and Russian Empire expansion under Ivan IV, Peter the Great, and Catherine the Great.`,
+      textContent: eastAsianRussianTextContent,
     },
   })
 

@@ -2,26 +2,27 @@ export const whDarAlIslamPart3Data = {
   topicSlug: 'wh-dar-al-islam',
   sections: [
     {
-      id: 'whdarali3-intro',
+      id: 'whdai3-intro',
       type: 'text' as const,
       content: `
-# 🌏 Dar al-Islam & the Islamic World
+# 🌍 Dar al-Islam (c. 1200–1450)
 
-**Part 3 of 7 — Patterns & Examples**
+**Part 3 of 7 — Islamic Trade Networks**
 
-This part examines specific patterns and real-world examples related to Dar al-Islam & the Islamic World. Case studies help illustrate abstract concepts.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Islam & the Indian Ocean |
+| Trans-Saharan Trade under Muslim Control |
+| The Role of Arabic as a Lingua Franca |
+| 📌 How Trade Built Dar al-Islam |
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial pattern** | The geographic distribution related to Dar al-Islam & the Islamic World |
-| **Case study** | A specific real-world example that illustrates Dar al-Islam & the Islamic World |
-| **Comparison** | Analyzing similarities and differences across examples of Dar al-Islam & the Islamic World |
+> 🔑 **Key Concept:** Islamic merchants dominated Afro-Eurasian trade networks c. 700–1450. Arabic served as both a religious and commercial language across the Indian Ocean, trans-Saharan routes, and Central Asian Silk Roads. Understanding how commerce built and reinforced the Islamic world is central to AP Unit 1.
       `
     },
     {
-      id: 'whdarali3-quiz1',
+      id: 'whdai3-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,144 +30,174 @@ This part examines specific patterns and real-world examples related to Dar al-I
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: 'Muslim merchants dominated Indian Ocean trade c. 700–1450 primarily because:',
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              'They combined expertise in monsoon wind navigation, access to Arabic as a shared commercial language, and Islamic legal institutions (like contracts and credit) that facilitated long-distance trade across cultural boundaries',
+              'They were the only group with access to sailing vessels in this period',
+              'The Quran required all Muslims to become merchants',
+              'They conquered and militarily controlled all Indian Ocean port cities'
             ],
-            correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            correctAnswer: 0,
+            explanation: 'Muslim merchants\' dominance combined technological (navigation), linguistic (Arabic), legal (Islamic commercial law including contracts, partnerships, and credit instruments), and religious factors. Islam\'s prohibition on usury (interest) led to creative financial instruments like *suftaja* (bills of exchange) that facilitated long-distance commerce.'
           },
           {
-            question: 'Comparing examples of Dar al-Islam & the Islamic World across regions helps:',
+            question: 'The role of Arabic as a lingua franca across Dar al-Islam was significant for trade because:',
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              'It provided a shared commercial and legal language that allowed Muslim merchants from Morocco to Southeast Asia to conduct business, write contracts, and resolve disputes using shared Islamic law',
+              'It forced all non-Arab Muslims to abandon their native languages entirely',
+              'Arabic was the only language spoken in the Islamic world',
+              'It was adopted by Chinese and European merchants as their primary trade language'
             ],
-            correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            correctAnswer: 0,
+            explanation: 'Arabic\'s role as the language of the Quran gave it religious authority, but its commercial role was equally significant: shared legal concepts, contract forms, and financial instruments allowed Muslim merchants across vast distances to trade with built-in trust mechanisms that non-Muslim merchants lacked.'
           }
         ]
       }
     },
     {
-      id: 'whdarali3-content',
+      id: 'whdai3-content',
       type: 'text' as const,
       content: `
-## Patterns & Examples — Deeper Dive
+## 📖 Islamic Trade Networks
 
-### Spatial pattern
-The geographic distribution related to Dar al-Islam & the Islamic World. Understanding this concept is essential for mastering Dar al-Islam & the Islamic World in AP World History.
+> **The Indian Ocean Islamic Trading World**
 
-### Case study
-A specific real-world example that illustrates Dar al-Islam & the Islamic World. This builds on the previous concept and connects to broader themes in the course.
+Muslim merchants built the most sophisticated commercial network in the pre-modern world:
 
-### Comparison
-Analyzing similarities and differences across examples of Dar al-Islam & the Islamic World. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+| Feature | Details |
+|---------|---------|
+| **Diasporic communities** | Muslim merchants established communities (*funduqs*) in port cities across India, East Africa, and Southeast Asia |
+| **Financial instruments** | *Suftaja* (bills of exchange) allowed merchants to transfer credit without carrying gold |
+| **Islamic partnerships** | *Mudaraba* — a commercial partnership where one partner provides capital, another provides labor; profits shared; not riba (usury) |
+| **Key goods** | Spices (Southeast Asia) → India → Arabia → Europe; textiles (India) → East Africa; porcelain (China) → Islamic world and beyond |
+
+> **Trans-Saharan Trade: Islamic Connectivity**
+
+After Arab conquests of North Africa (7th–8th centuries), Islamic merchants and Berber nomads dominated trans-Saharan trade:
+
+- **Berber intermediaries:** Tuareg and other Berber people served as caravan guides and intermediaries between North African merchants and sub-Saharan sources of gold
+- **Key commodities:** Gold (Ghana/Mali → North Africa → Europe); salt (Saharan mines → sub-Saharan Africa); enslaved people (West Africa → North Africa)
+- **Islamic urban centers:** Timbuktu, Djenné, Kumbi Saleh — cities at the Saharan interface became major commercial AND scholarly centers
+- **Mansa Musa's hajj (1324–1325):** His pilgrimage to Mecca, accompanied by thousands of servants and enormous quantities of gold, demonstrated Mali\'s wealth to the Islamic world and destabilized Mediterranean gold markets
+
+> **Arabic as Commercial Infrastructure**
+
+Arabic unified the Islamic commercial world through:
+
+- **Shared legal framework:** Islamic commercial law (*fiqh al-muamalat*) governed contracts, partnerships, and disputes across thousands of miles
+- **Shared accounting:** Arabic numerals and accounting systems standardized record-keeping
+- **Shared trust network:** A Muslim merchant in Cairo could trust another in Calicut based on shared religious and legal norms
+- **Diplomatic language:** Letters between Islamic rulers were written in Arabic regardless of their native tongue
+
+> **AP Comparison Anchor**
+
+- **Islamic trade vs. Chinese trade:** Both used established routes; China's tributary system controlled trade politically, while Islamic merchants operated more independently through private commercial networks
+- **Role of religion in commerce:** Islam's commercial law directly facilitated trade (partnerships, contracts, credit) — religion was not separate from economics but embedded in commercial practice
       `
     },
     {
-      id: 'whdarali3-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the geographic distribution related to Dar al-Islam & the Islamic World?
-
-2) What concept describes a specific real-world example that illustrates Dar al-Islam & the Islamic World?
-
-3) Name the term for analyzing similarities and differences across examples of Dar al-Islam & the Islamic World.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to Dar al-Islam & the Islamic World), Case study (A specific real-world example that illustrates Dar al-Islam & the Islamic World), and Comparison (Analyzing similarities and differences across examples of Dar al-Islam & the Islamic World).'
-      }
-    },
-    {
-      id: 'whdarali3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The geographic distribution related to Dar al-Islam & the Islamic World is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
-          },
-          {
-            label: 'A specific real-world example that illustrates Dar al-Islam & the Islamic World describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
-          },
-          {
-            label: 'Analyzing similarities and differences across examples of Dar al-Islam & the Islamic World is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
-          }
-        ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to Dar al-Islam & the Islamic World. Case study — A specific real-world example that illustrates Dar al-Islam & the Islamic World. Comparison — Analyzing similarities and differences across examples of Dar al-Islam & the Islamic World.'
-      }
-    },
-    {
-      id: 'whdarali3-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of Dar al-Islam & the Islamic World.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whdarali3-applied',
+      id: 'whdai3-input',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Applied Recall: 3-Question Sprint** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of Dar al-Islam & the Islamic World. The strongest response would:',
+            question: 'The mudaraba commercial partnership in Islamic law was significant for long-distance trade because:',
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              'It allowed a capital provider and a traveling merchant to share risk and profit without violating Islam\'s prohibition on interest (riba), creating a legal framework for financing long-distance voyages',
+              'It gave the Islamic government direct control over all merchant profits',
+              'It was identical to European feudal contracts',
+              'It only applied to trade within the Arabian Peninsula'
             ],
-            correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            correctAnswer: 0,
+            explanation: 'The mudaraba solved a key problem: how to finance long-distance trade without charging interest (prohibited by Islam). By structuring commerce as a profit-sharing partnership rather than a loan, Islamic law enabled sophisticated commercial finance that facilitated Indian Ocean and trans-Saharan trade.'
           },
           {
-            question: 'A pattern observed in Dar al-Islam & the Islamic World is consistent across multiple world regions. This suggests:',
+            question: 'Timbuktu\'s significance in the trans-Saharan trade network c. 1200–1450 was that it:',
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              'Served simultaneously as a major commercial hub for gold and salt trade AND as a center of Islamic scholarship, demonstrating the inseparability of commercial and intellectual life in Dar al-Islam',
+              'Was exclusively a military fortress with no commercial function',
+              'Was the capital of the Abbasid Caliphate relocated to West Africa',
+              'Was the origin point of Islam\'s expansion into sub-Saharan Africa through military conquest'
             ],
-            correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            correctAnswer: 0,
+            explanation: 'Timbuktu exemplifies how trade and scholarship co-existed in Islamic commercial cities. The Sankore Mosque and Timbuktu\'s university attracted scholars from across the Islamic world, funded by the wealth generated by trans-Saharan commerce. AP questions often use Timbuktu to demonstrate the cultural dimensions of trade networks.'
+          },
+          {
+            question: 'Mansa Musa\'s 1324–1325 hajj to Mecca is significant for AP World History because it:',
+            options: [
+              'Demonstrated the integration of Mali Empire into the Islamic world, the extraordinary wealth of sub-Saharan African kingdoms, and the connectivity of trans-Saharan trade networks — while his gold spending destabilized Mediterranean economies for years',
+              'Was the first time any African ruler had traveled to the Middle East',
+              'Resulted in the Mali Empire converting from Christianity to Islam',
+              'Was primarily a military campaign disguised as a religious pilgrimage'
+            ],
+            correctAnswer: 0,
+            explanation: 'Mansa Musa\'s hajj serves multiple AP functions: evidence of Mali\'s integration into Dar al-Islam, evidence of sub-Saharan African economic power, and evidence of gold\'s role in trans-Saharan trade. His reportedly massive gold giveaways in Cairo caused inflation that affected Mediterranean gold prices for over a decade — concrete evidence of West African economic weight.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'whdai3-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+**Match the Idea: Evidence to Claim**
+
+Match each trade concept to its correct definition.
+      `,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'The Islamic commercial partnership that allowed profit-sharing without charging interest was ___',
+            options: ['Mudaraba', 'Waqf', 'Suftaja', 'Riba']
+          },
+          {
+            label: 'The West African city that served as both a trans-Saharan trade hub and a major Islamic scholarly center was ___',
+            options: ['Timbuktu', 'Kilwa', 'Baghdad', 'Cairo']
+          },
+          {
+            label: 'The Mali ruler whose 1324 hajj demonstrated sub-Saharan African wealth to the entire Islamic world was ___',
+            options: ['Mansa Musa', 'Sundiata Keita', 'Askia Muhammad', 'Mansa Wali']
+          }
+        ],
+        correctAnswers: ['Mudaraba', 'Timbuktu', 'Mansa Musa'],
+        hint1: 'Islamic commercial partnership — profit sharing, not interest',
+        hint2: 'West African city — gold trade and Islamic scholarship',
+        hint3: 'Mali ruler — hajj caused Mediterranean gold inflation',
+        explanation: 'The mudaraba partnership embedded Islamic legal principles into commercial practice. Timbuktu represents the convergence of commerce and scholarship that characterized Islamic urban centers at trade crossroads. Mansa Musa\'s hajj is the most powerful single piece of evidence for sub-Saharan African wealth and Islamic connectivity in the AP Unit 1 period.'
+      }
+    },
+    {
+      id: 'whdai3-applied',
+      type: 'multiple-choice' as const,
+      content: `
+**AP-Style Application** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'An AP prompt asks: "Evaluate the role of religion in facilitating trade across Dar al-Islam c. 700–1450." Which argument is most historically sophisticated?',
+            options: [
+              'Islam played a multifaceted role in facilitating trade: the shared Arabic language and legal framework (Islamic commercial law) reduced transaction costs across vast distances, while Muslim merchants\' religious networks provided trust mechanisms that non-Muslims lacked — making religion an active commercial infrastructure rather than merely a cultural backdrop',
+              'Religion had no impact on trade — merchants only cared about profits regardless of religion',
+              'Islam restricted trade by prohibiting commerce with non-Muslims',
+              'Trade occurred despite Islam\'s religious rules rather than because of them'
+            ],
+            correctAnswer: 0,
+            explanation: 'This argument is sophisticated because it goes beyond "Muslims were merchants" to explain the MECHANISM: shared language → reduced communication costs; shared law → enforceable contracts across borders; shared religious identity → trust networks enabling credit. Religion was economic infrastructure, not just cultural context.'
+          },
+          {
+            question: 'How did the trans-Saharan trade network under Islamic merchants differ from the Indian Ocean network?',
+            options: [
+              'Trans-Saharan trade required animal transport (camels) across land, was primarily organized around gold-salt exchange, and relied on Berber intermediaries, while Indian Ocean trade used monsoon-driven ships and was more directly controlled by Arab and Indian Muslim merchant communities',
+              'The trans-Saharan network was larger and more economically significant than the Indian Ocean network',
+              'Both networks were identical in their use of sailing vessels and commodities',
+              'The Indian Ocean network was entirely controlled by Chinese merchants, not Muslims'
+            ],
+            correctAnswer: 0,
+            explanation: 'Contrasting the two networks is a classic AP comparison. Key differences: transport technology (camels vs. ships), primary commodities (gold/salt vs. spices/textiles), intermediary groups (Berber nomads vs. Arab/Indian merchants), and geographic scale. Both connected Islamic commercial civilization, but through very different mechanisms.'
           }
         ]
       }

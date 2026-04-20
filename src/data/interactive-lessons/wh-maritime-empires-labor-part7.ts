@@ -2,171 +2,186 @@ export const whMaritimeEmpiresLaborPart7Data = {
   topicSlug: 'wh-maritime-empires-labor',
   sections: [
     {
-      id: 'whmariti7-intro',
+      id: 'whmelf7-intro',
       type: 'text' as const,
       content: `
-# 🌏 Maritime Empires & Labor Systems
+# ⚓ Maritime Empires & Labor Systems (c. 1450–1750)
 
-**Part 7 of 7 — AP Review**
+**Part 7 of 7 — AP Review and Exam Mastery**
 
-Comprehensive review of Maritime Empires & Labor Systems for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Maritime Empires & Labor Systems |
-| **Common question types** | The most frequent ways Maritime Empires & Labor Systems is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Maritime Empires & Labor Systems questions effectively |
+> 🔑 **Key Concept:** Maritime empires and labor systems content appears heavily in AP MCQ, SAQ, and LEQ questions. Key themes: comparing colonial labor systems, evaluating the causes and consequences of the Atlantic slave trade, and connecting colonial economies to global commercial networks. Mastering vocabulary and causal chains enables high AP scores.
       `
     },
     {
-      id: 'whmariti7-quiz1',
+      id: 'whmelf7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: `**Concept Check** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Maritime Empires & Labor Systems is:',
+            question: 'An AP SAQ asks: "Briefly explain ONE difference between chattel slavery and indentured servitude." Which response earns full credit?',
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              'Chattel slavery was permanent and heritable — enslaved people were legal property with no rights, and their children inherited enslaved status; indentured servitude was a fixed-term contract (typically 4-7 years) after which workers were legally free, though conditions were often brutal and contracts frequently violated in practice',
+              'Listing multiple differences without developing any single one with evidence',
+              'Arguing both systems were identical with no meaningful differences',
+              'Describing only the similarities without addressing the actual difference asked',
             ],
-            correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'Full SAQ credit requires: claim (one clear difference) + evidence (specific features of each system) + implicit reasoning (this difference matters because...). The response identifies the key structural difference (permanent/heritable vs. fixed-term/contractual) with sufficient specific detail. SAQ responses that try to cover everything typically score less well than those that develop ONE point thoroughly with evidence.'
           },
           {
-            question: 'AP multiple-choice questions about Maritime Empires & Labor Systems often test:',
+            question: 'For an AP LEQ evaluating the causes of the Atlantic slave trade\'s expansion, which thesis earns the highest score?',
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              'The Atlantic slave trade\'s 17th-18th century expansion resulted from converging structural factors: plantation crop demand (sugar, tobacco, cotton) created economic incentive; indigenous labor collapse created supply-side necessity; Portuguese slave-trading networks made supply available; and the legal construction of racial slavery reduced long-term costs by making enslaved status heritable — no single factor is sufficient; the convergence of all four explains the trade\'s specific scale and character',
+              'European racial hatred alone explains the slave trade\'s expansion',
+              'Economic incentives alone explain the slave trade with no other factors',
+              'The Atlantic slave trade expanded entirely due to African selling of captives',
             ],
-            correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            correctAnswer: 0,
+            explanation: 'This thesis earns full AP credit: it identifies multiple causes, explains the mechanism of each, uses specific evidence (plantation crops, indigenous collapse, Portuguese networks, racial heredity), and argues for convergence rather than single-cause explanation. AP LEQ theses should make an argument about WHAT explains the historical phenomenon and WHY the explanation is accurate — not just list factors.'
           }
         ]
       }
     },
     {
-      id: 'whmariti7-content',
+      id: 'whmelf7-content',
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## 📖 AP Review: Maritime Empires & Labor Systems
 
-### Key vocabulary
-Essential terms and definitions for Maritime Empires & Labor Systems. Understanding this concept is essential for mastering Maritime Empires & Labor Systems in AP World History.
+> **Must-Know Vocabulary**
 
-### Common question types
-The most frequent ways Maritime Empires & Labor Systems is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+- **Estado da India** — Portuguese Indian Ocean trading-post empire; charged cartaz (protection fees)
+- **Encomienda** — Spanish colonial labor grant; colonist had rights to indigenous labor
+- **Mita (colonial)** — Forced labor draft for silver mines; Inca mit'a repurposed by Spanish
+- **Chattel slavery** — Legal ownership of persons; heritable; increasingly racialized (African-descended = enslaved)
+- **Debt peonage** — Workers bound by unpayable debts; continued after formal slavery/encomienda abolished
+- **Indentured servitude** — Fixed-term contract labor; used after British emancipation 1833 for plantation replacements
+- **Haitian Revolution (1791-1804)** — Only successful large-scale slave revolt; first Black republic; Toussaint L'Ouverture
+- **Cultuurstelsel** — Dutch forced cultivation system in Java; required 1/5 of land for export crops
+- **Zamindari system** — Mughal tax farmers; made permanent landlords by British Permanent Settlement 1793
+- **Middle Passage** — Atlantic crossing of slave ships; 15-20% mortality; 12.5M total transported
 
-### Exam strategy
-Approaches for answering Maritime Empires & Labor Systems questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+> **Common AP Prompt Patterns**
+
+- **Comparison:** How did Spanish encomienda and chattel slavery differ as labor systems?
+- **Causation:** What caused the expansion of the Atlantic slave trade in the 17th-18th centuries?
+- **CCOT:** How did colonial labor systems change c. 1450-1750?
+- **Evaluation:** What factors contributed to the abolition of the slave trade and slavery?
+- **Complexity:** How did enslaved peoples resist their condition? How did resistance affect the slave trade?
+
+> **AP Causal Chain: Labor Systems**
+
+Disease → indigenous population collapse → labor shortage → encomienda inadequate for plantation crops → African enslaved labor demanded → Atlantic slave trade expands → 12.5M enslaved Africans → plantation economies (sugar, tobacco, cotton) → triangle trade → global commodity economy → industrial demand for free labor → abolition movements → emancipation (Britain 1833, US 1865, Brazil 1888)
+
+> **AP Comparison Quick Reference**
+
+| Labor System | Who Was Coerced | Legal Status | Key Region | Replaced By |
+|-------------|----------------|-------------|-----------|------------|
+| Encomienda | Indigenous | Theoretically free; coerced | Spanish Americas | Repartimiento, then debt peonage |
+| Chattel slavery | Enslaved Africans | Property; no rights | Caribbean, Brazil, US South | Indentured servitude (British) |
+| Mita (colonial) | Indigenous | Labor draft; nominal wage | Peru/Bolivia | Abolished 1812 |
+| Debt peonage | Indigenous/mestizo | Nominally free; bound by debt | Spanish Americas | Persisted post-independence |
+| Indentured servitude | South Asian, Chinese | Contract worker; legal rights post-term | British Empire | Voluntary labor markets |
       `
     },
     {
-      id: 'whmariti7-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to essential terms and definitions for Maritime Empires & Labor Systems?
-
-2) What concept describes the most frequent ways Maritime Empires & Labor Systems is tested on the AP exam?
-
-3) Name the term for approaches for answering Maritime Empires & Labor Systems questions effectively.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Maritime Empires & Labor Systems), Common question types (The most frequent ways Maritime Empires & Labor Systems is tested on the AP exam), and Exam strategy (Approaches for answering Maritime Empires & Labor Systems questions effectively).'
-      }
-    },
-    {
-      id: 'whmariti7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Essential terms and definitions for Maritime Empires & Labor Systems is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
-          },
-          {
-            label: 'The most frequent ways Maritime Empires & Labor Systems is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
-          },
-          {
-            label: 'Approaches for answering Maritime Empires & Labor Systems questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Maritime Empires & Labor Systems. Common question types — The most frequent ways Maritime Empires & Labor Systems is tested on the AP exam. Exam strategy — Approaches for answering Maritime Empires & Labor Systems questions effectively.'
-      }
-    },
-    {
-      id: 'whmariti7-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Maritime Empires & Labor Systems.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whmariti7-applied',
+      id: 'whmelf7-input',
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: `**Applied Recall: 3-Question Sprint** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Maritime Empires & Labor Systems. You should:',
+            question: 'An AP DBQ includes a document from a British abolitionist and a document from a plantation owner both discussing slavery in 1800. What is the most sophisticated comparison of these documents\' perspectives?',
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              'Both documents address the same phenomenon (slavery) from perspectives shaped by their authors\' economic relationships to the institution: the abolitionist\'s perspective is shaped by moral and religious commitment to human equality; the plantation owner\'s by economic dependence on enslaved labor and the legal/ideological framework of racial hierarchy — neither is "objective," but both reveal real aspects of how the institution was understood by different constituencies',
+              'The abolitionist\'s document is completely reliable while the plantation owner\'s is worthless',
+              'Both documents are equally unreliable because both authors had personal interests',
+              'The plantation owner\'s document should be dismissed because slavery was wrong',
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            correctAnswer: 0,
+            explanation: 'Sophisticated DBQ document comparison avoids both naive objectivity (assuming one document is simply "true") and nihilism (assuming all documents are equally unreliable). The abolitionist document reveals how humanitarian arguments were constructed; the plantation document reveals the ideological justifications slaveholders used. Both tell us something real about the period; both are shaped by their authors\' positions. AP rewards analysis that uses documents as evidence of both their subject matter AND their historical context.'
           },
           {
-            question: 'For free-response questions on Maritime Empires & Labor Systems, the most common mistake is:',
+            question: 'The most important AP lesson from studying maritime empires and labor systems is:',
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              'That early modern global commerce was structurally dependent on human exploitation — the profits that drove European maritime expansion, the commodities that created global trade networks, and the silver that connected regional economies all rested on coerced labor of indigenous Americans, enslaved Africans, and colonized Asian peoples — making "globalization" and "exploitation" inseparable features of this period',
+              'Maritime expansion and labor coercion were unrelated phenomena that happened simultaneously by coincidence',
+              'Global commerce was beneficial for all participants in the early modern period',
+              'Labor coercion was a minor feature of early modern global trade that can be separated from the commercial story',
             ],
-            correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            correctAnswer: 0,
+            explanation: 'The AP meta-lesson: early modern globalization was inseparable from human exploitation. This is not a moral judgment that makes the history "bad" — it is a factual description of the structural relationships that made the system function. Silver flowed to China because Potosí\'s miners were coerced; sugar fed European consumers because Caribbean enslaved laborers had no wages; spices reached European markets because Portuguese cannons enforced payment of protection fees. Understanding these structural connections is required for accurate AP historical analysis.'
+          },
+          {
+            question: 'Which AP comparison best demonstrates the relationship between colonial labor systems and global trade networks?',
+            options: [
+              'Colonial labor systems (encomienda, chattel slavery, forced cultivation) were the production mechanisms of global commodity chains: Potosí mita labor produced the silver that flowed to China; Caribbean plantation slavery produced the sugar consumed in Europe; Javanese forced cultivation produced the coffee exported to Dutch markets — demonstrating that global trade networks were not simply commercial exchanges but were structured by coercive labor relations at the point of production',
+              'Global trade networks and labor systems were entirely independent phenomena',
+              'All global commodity trade relied on fully free labor markets with no coercion',
+              'Labor coercion was more significant than commercial exchange in this period',
+            ],
+            correctAnswer: 0,
+            explanation: 'This comparison demonstrates AP\'s most important analytical connection for this period: global trade networks were not abstract commercial phenomena but were concretely embodied in specific labor relationships. The global economy was built on the bodies of coerced workers. Tracing the connection from labor system to commodity to trade route to consumption demonstrates the analytical skill AP World History most rewards: connecting specific evidence to broader structural patterns across multiple regions and periods.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'whmelf7-dropdown',
+      type: 'dropdown-select' as const,
+      content: `**Match the Idea: Evidence to Claim**`,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'The Portuguese Indian Ocean empire of trading posts and armed ships was the ___',
+            options: ['Estado da India', 'British East India Company', 'Dutch VOC', 'Mughal Empire']
+          },
+          {
+            label: 'The Spanish colonial labor system granting individuals rights to indigenous workers was the ___',
+            options: ['Encomienda', 'Millet system', 'Devshirme', 'Zamindari system']
+          },
+          {
+            label: 'The labor system where workers were bound to land through impossible-to-repay debts was ___',
+            options: ['Debt peonage', 'Indentured servitude', 'Mit\'a labor', 'Chattel slavery']
+          }
+        ],
+        correctAnswers: ['Estado da India', 'Encomienda', 'Debt peonage'],
+        hint1: 'Portuguese Indian Ocean trading-post empire — armed ships charging protection fees',
+        hint2: 'Spanish colonial labor grant — individual colonists — indigenous workers',
+        hint3: 'Bound labor through unpayable debt — hacienda system — ongoing coercion',
+        explanation: 'The Estado da India was the Portuguese model of empire: not territorial control but commercial monopoly enforced by armed ships. The encomienda gave individual Spanish colonists direct rights to indigenous labor. Debt peonage was the long-term mechanism that kept workers bound to haciendas long after encomienda was officially abolished.'
+      }
+    },
+    {
+      id: 'whmelf7-applied',
+      type: 'multiple-choice' as const,
+      content: `**AP-Style Application** 🎯`,
+      exercise: {
+        questions: [
+          {
+            question: 'For an AP CCOT on colonial labor systems c. 1450-1750, which argument best identifies the most significant change?',
+            options: [
+              'The most significant change was the progressive racialization of coerced labor: early colonial systems (encomienda) used indigenous political categories and maintained theoretical legal rights; by 1700, chattel slavery had made African descent legally synonymous with enslaved status, heritable and permanent — transforming labor coercion from a political category into a racial one that would shape American societies for centuries',
+              'Colonial labor systems were static throughout the period with no significant changes',
+              'The most significant change was the replacement of all coerced labor with free market wages',
+              'Labor systems became progressively less coercive throughout the colonial period',
+            ],
+            correctAnswer: 0,
+            explanation: 'The racialization of labor coercion is the most historically significant change for CCOT analysis because it had the longest-lasting consequences: early colonial systems were coercive but not permanently racial; by 1700, racial chattel slavery had created legal categories that shaped American societies into the 20th century. CCOT arguments should identify changes with lasting consequences, not just any change — and the shift from politically-defined to racially-defined labor exploitation fits this criterion perfectly.'
+          },
+          {
+            question: 'An AP question asks whether free trade or coerced labor better explains early modern global commercial expansion. Which argument earns the most credit?',
+            options: [
+              'Both free trade and coerced labor were essential and interconnected features of early modern global commerce: free trade mechanisms (joint-stock companies, international commercial law, currency exchange) organized the commercial networks, but those networks were profitably only because coerced labor (slavery, encomienda, forced cultivation) minimized production costs — the "free" commercial system rested on fundamentally unfree labor, making the distinction analytically misleading',
+              'Free trade principles alone explain early modern commercial expansion',
+              'Coerced labor alone explains early modern commercial expansion',
+              'Free trade and coerced labor were mutually exclusive phenomena that cannot be analyzed together',
+            ],
+            correctAnswer: 0,
+            explanation: 'This argument earns AP complexity credit by refusing the false choice: the question\'s framing implies "either/or" but the historical reality was "both/and" — and the two were structurally interconnected rather than separate. The commercial networks of the Dutch VOC and British East India Company operated according to free trade principles; their profitability depended on coerced production of commodities. Identifying this structural connection and refusing the false dichotomy is the AP sophistication move.'
           }
         ]
       }

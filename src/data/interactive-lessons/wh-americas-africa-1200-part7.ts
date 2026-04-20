@@ -2,171 +2,185 @@ export const whAmericasAfrica1200Part7Data = {
   topicSlug: 'wh-americas-africa-1200',
   sections: [
     {
-      id: 'whameric7-intro',
+      id: 'whaaf7-intro',
       type: 'text' as const,
       content: `
-# 🌏 The Americas & Africa (1200–1450)
+# 🌎 Americas & Africa (c. 1200–1450)
 
-**Part 7 of 7 — AP Review**
+**Part 7 of 7 — AP Review and Exam Mastery**
 
-Comprehensive review of The Americas & Africa (1200–1450) for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for The Americas & Africa (1200–1450) |
-| **Common question types** | The most frequent ways The Americas & Africa (1200–1450) is tested on the AP exam |
-| **Exam strategy** | Approaches for answering The Americas & Africa (1200–1450) questions effectively |
+> 🔑 **Key Concept:** Americas and Africa content appears in MCQ, SAQ, and LEQ questions focusing on the sophistication of pre-contact civilizations, trade network connections, and the causes and consequences of European contact. AP questions test your ability to compare civilizations across regions and evaluate the role of trade in state formation.
       `
     },
     {
-      id: 'whameric7-quiz1',
+      id: 'whaaf7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: `**Concept Check** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for The Americas & Africa (1200–1450) is:',
+            question: 'What was the primary source of Mali Empire\'s wealth?',
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              'Control of trans-Saharan gold-salt trade routes, taxing the exchange of West African gold for North African salt — making Mali rulers among the wealthiest in the world c. 1300-1400',
+              'Agricultural production with no trade dimension',
+              'Maritime trade with China and India',
+              'Tribute extracted through military conquest alone',
             ],
-            correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'The gold-salt trade is the economic foundation of Mali and Songhai: West Africa had gold but needed salt (essential for food preservation); the Sahara had salt but needed gold. Controlling the exchange points made Mali and later Songhai extraordinarily wealthy rulers.'
           },
           {
-            question: 'AP multiple-choice questions about The Americas & Africa (1200–1450) often test:',
+            question: 'Mansa Musa\'s 1324 hajj (pilgrimage to Mecca) is historically significant for AP because:',
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              'It demonstrated West African Islamic civilization\'s extraordinary wealth and sophistication to the broader Islamic world and eventually to European cartographers — placing Mali on European maps and stimulating interest in direct African trade',
+              'It had no impact outside Mali',
+              'It was the first hajj ever made by a sub-Saharan African',
+              'It caused the collapse of Egyptian trade',
             ],
-            correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            correctAnswer: 0,
+            explanation: 'Mansa Musa\'s pilgrimage put West Africa on the global mental map: his gift-giving in Cairo was so lavish it depressed gold prices, and his retinue of 60,000 was unprecedented. European maps began marking Mali as a source of gold after 1324 — stimulating eventual Portuguese interest in finding sea routes to West African gold.'
           }
         ]
       }
     },
     {
-      id: 'whameric7-content',
+      id: 'whaaf7-content',
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## 📖 AP Review: Americas & Africa Key Terms
 
-### Key vocabulary
-Essential terms and definitions for The Americas & Africa (1200–1450). Understanding this concept is essential for mastering The Americas & Africa (1200–1450) in AP World History.
+> **Must-Know Vocabulary**
 
-### Common question types
-The most frequent ways The Americas & Africa (1200–1450) is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+- **Tenochtitlan** — Aztec capital; island city; population 200,000+
+- **Chinampas** — Aztec floating gardens; intensive lake agriculture
+- **Flower Wars** — Aztec ritual warfare to capture prisoners for sacrifice
+- **Mit'a** — Inca labor tax; communities owed labor not money
+- **Quipu** — Inca knotted-string record-keeping system
+- **Cuzco** — Inca capital; "navel of the world"
+- **Mansa Musa** — Mali emperor whose 1324 hajj demonstrated West African wealth globally
+- **Timbuktu** — Mali/Songhai center of Islamic scholarship; University of Sankore
+- **Great Zimbabwe** — Southern African stone-walled urban complex; gold trade center
+- **Swahili Coast** — East African city-states integrated into Indian Ocean trade network
+- **Kilwa** — Major Swahili city; controlled Zimbabwe gold exports
 
-### Exam strategy
-Approaches for answering The Americas & Africa (1200–1450) questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+> **Common AP Prompt Patterns**
+
+- **Comparison:** How did the Aztec and Inca empires compare in their political organization?
+- **Causation:** What factors allowed the Spanish to conquer large American empires with small forces?
+- **CCOT:** How did trade affect state formation in Africa c. 1000-1450?
+- **Complexity:** How were pre-Columbian American civilizations similar to and different from contemporary Asian and European civilizations?
+
+> **AP Comparison Anchor**
+
+**Quick facts for comparison essays:**
+
+| Civilization | Location | Key Feature | Trade Connection | Fell to |
+|-------------|---------|------------|-----------------|--------|
+| Aztec | Mesoamerica | Tributary empire; human sacrifice | Regional Mesoamerican | Spanish, 1521 |
+| Inca | Andes | Road network; mit'a labor | Regional Andean | Spanish, 1533 |
+| Mali | West Africa | Gold-salt trade; Islamic scholarship | Trans-Saharan | Internal decline |
+| Songhai | West Africa | Larger than Mali; Timbuktu | Trans-Saharan | Moroccan invasion, 1591 |
+| Great Zimbabwe | Southern Africa | Stone architecture; gold trade | Indian Ocean | Decline c. 1450 |
+| Swahili Cities | East Africa | Indian Ocean ports; Islamic | Indian Ocean | Portuguese disruption c. 1500 |
       `
     },
     {
-      id: 'whameric7-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to essential terms and definitions for The Americas & Africa (1200–1450)?
-
-2) What concept describes the most frequent ways The Americas & Africa (1200–1450) is tested on the AP exam?
-
-3) Name the term for approaches for answering The Americas & Africa (1200–1450) questions effectively.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for The Americas & Africa (1200–1450)), Common question types (The most frequent ways The Americas & Africa (1200–1450) is tested on the AP exam), and Exam strategy (Approaches for answering The Americas & Africa (1200–1450) questions effectively).'
-      }
-    },
-    {
-      id: 'whameric7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Essential terms and definitions for The Americas & Africa (1200–1450) is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
-          },
-          {
-            label: 'The most frequent ways The Americas & Africa (1200–1450) is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
-          },
-          {
-            label: 'Approaches for answering The Americas & Africa (1200–1450) questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for The Americas & Africa (1200–1450). Common question types — The most frequent ways The Americas & Africa (1200–1450) is tested on the AP exam. Exam strategy — Approaches for answering The Americas & Africa (1200–1450) questions effectively.'
-      }
-    },
-    {
-      id: 'whameric7-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of The Americas & Africa (1200–1450).
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whameric7-applied',
+      id: 'whaaf7-input',
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: `**Applied Recall: 3-Question Sprint** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about The Americas & Africa (1200–1450). You should:',
+            question: 'Timbuktu\'s University of Sankore demonstrates which historical principle?',
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              'That Islamic learning and scholarship spread through trade networks — the same trans-Saharan routes that carried gold and salt also carried scholars, books, and Islamic intellectual traditions, making Timbuktu a center of Islamic scholarship comparable to Cairo or Baghdad',
+              'Timbuktu was primarily a military fortress with no educational function',
+              'Islamic scholarship only flourished in the Middle East',
+              'West African rulers had no interest in education or scholarship',
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            correctAnswer: 0,
+            explanation: 'Timbuktu shows the dual nature of Islamic trade networks: they transmitted both goods (gold, salt) and ideas (scholarship, religious practice, legal traditions). The University of Sankore\'s 25,000 students and its manuscripts on astronomy, law, and medicine demonstrate that sub-Saharan African Islamic civilization was fully integrated into the broader Islamic intellectual world.'
           },
           {
-            question: 'For free-response questions on The Americas & Africa (1200–1450), the most common mistake is:',
+            question: 'Great Zimbabwe\'s most important significance for AP World History is:',
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              'It demonstrates that sub-Saharan Africa had sophisticated urban civilizations with long-distance trade connections to the Indian Ocean network — challenging narratives of pre-European Africa as isolated and undeveloped',
+              'Great Zimbabwe was built by European or Middle Eastern peoples',
+              'It had no connection to any trade networks',
+              'It was smaller and less sophisticated than any other contemporary civilization',
             ],
-            correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            correctAnswer: 0,
+            explanation: 'AP frequently tests the significance of Great Zimbabwe precisely because it challenges Eurocentric narratives. The stone architecture (no mortar, built entirely from stacked granite), the scale (housing 10,000+), and the imported Chinese porcelain (direct evidence of Indian Ocean connections) all demonstrate indigenous African urban and commercial sophistication.'
+          },
+          {
+            question: 'The Swahili Coast city-states\' cultural character (blending Bantu African and Arab/Islamic elements) best demonstrates which AP concept?',
+            options: [
+              'Cultural syncretism through trade contact — when trade networks bring together peoples with different cultural traditions, new hybrid cultures emerge that blend elements from multiple sources, as seen in Swahili language (Bantu grammar + Arabic vocabulary) and religious practice (Islamic faith + African communal traditions)',
+              'Cultural exchange always destroys local cultures',
+              'The Swahili cities adopted Arab culture while completely abandoning African traditions',
+              'Trade contact never produces cultural change',
+            ],
+            correctAnswer: 0,
+            explanation: 'Swahili culture is a model AP example of trade-driven cultural synthesis: not "conquered" by Arab/Islamic culture but selectively incorporating Arabic vocabulary, Islamic religious practice, and stone architecture while maintaining Bantu linguistic structures and African communal social practices. This selective syncretism is characteristic of how trade-contact cultural exchange works.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'whaaf7-dropdown',
+      type: 'dropdown-select' as const,
+      content: `**Match the Idea: Evidence to Claim**`,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'Match Term 1 for AP Review and Exam Mastery',
+            options: ['Key Term A', 'Key Term B', 'Key Term C', 'Key Term D']
+          },
+          {
+            label: 'Match Term 2 for AP Review and Exam Mastery',
+            options: ['Key Term B', 'Key Term A', 'Key Term C', 'Key Term D']
+          },
+          {
+            label: 'Match Term 3 for AP Review and Exam Mastery',
+            options: ['Key Term C', 'Key Term A', 'Key Term B', 'Key Term D']
+          }
+        ],
+        correctAnswers: ['Key Term A', 'Key Term B', 'Key Term C'],
+        hint1: 'Think about the primary feature of this concept',
+        hint2: 'Consider the governance or economic function',
+        hint3: 'Recall the long-term historical consequence',
+        explanation: 'Review the key terms in the content section above to reinforce these AP vocabulary connections for Americas & Africa (c. 1200–1450) Part 7.'
+      }
+    },
+    {
+      id: 'whaaf7-applied',
+      type: 'multiple-choice' as const,
+      content: `**AP-Style Application** 🎯`,
+      exercise: {
+        questions: [
+          {
+            question: 'An AP LEQ asks you to evaluate the significance of AP Review and Exam Mastery. Which thesis best demonstrates historical complexity?',
+            options: [
+              'While ap review and exam mastery involved both continuity and change, the most significant historical development was the way it both reflected and transformed existing power structures — creating new institutions that built on older patterns while responding to new challenges',
+              'The topic had no historical significance whatsoever',
+              'Everything changed immediately with no continuity',
+              'Only military factors explain historical change in this period',
+            ],
+            correctAnswer: 0,
+            explanation: 'Strong AP theses acknowledge both change and continuity, explain mechanisms rather than just outcomes, and connect specific evidence to broader historical arguments. Recognizing complexity within apparent simplicity is the hallmark of high-scoring AP responses.'
+          },
+          {
+            question: 'Which comparison best demonstrates AP historical reasoning about Americas & Africa (c. 1200–1450)?',
+            options: [
+              'Comparing americas & africa (c. 1200–1450) to other contemporary civilizations reveals both universal patterns (all complex societies face similar administrative and legitimation challenges) and specific variations (different environmental, cultural, and economic contexts produce different institutional solutions)',
+              'All civilizations are completely identical',
+              'Comparison is never useful in historical analysis',
+              'Only differences matter in historical comparison — similarities are irrelevant',
+            ],
+            correctAnswer: 0,
+            explanation: 'AP comparison questions reward arguments that identify both similarities and differences AND explain why those similarities and differences exist. Using comparison to generate broader principles about human societies — rather than just listing similarities and differences — earns the highest AP scores.'
           }
         ]
       }

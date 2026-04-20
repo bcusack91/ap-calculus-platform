@@ -2,26 +2,27 @@ export const whSilkRoadsMongolsPart2Data = {
   topicSlug: 'wh-silk-roads-mongols',
   sections: [
     {
-      id: 'whsilkro2-intro',
+      id: 'whsrm2-intro',
       type: 'text' as const,
       content: `
-# 🌏 Silk Roads & Mongol Empires
+# 🐉 Silk Roads & the Mongols (c. 1200–1450)
 
-**Part 2 of 7 — Key Processes**
+**Part 2 of 7 — The Mongol Empire: Rise & Expansion**
 
-Understanding the processes related to Silk Roads & Mongol Empires helps explain how and why patterns develop. This part explores the mechanisms driving key phenomena.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Genghis Khan & Mongol Military Methods |
+| The Structure of the Mongol Empire |
+| Conquests: China, Persia, Europe |
+| 📌 Why the Mongols Succeeded |
 
-| Concept | Description |
-|---------|-------------|
-| **Process 1** | The primary mechanism that drives patterns in Silk Roads & Mongol Empires |
-| **Process 2** | A secondary process that shapes outcomes in Silk Roads & Mongol Empires |
-| **Cause and effect** | The relationship between actions and outcomes in Silk Roads & Mongol Empires |
+> 🔑 **Key Concept:** The Mongol Empire (c. 1206–1368) was the largest contiguous land empire in world history. AP questions ask you to explain HOW the Mongols conquered so much so quickly, and WHY their empire had contradictory effects — both destroying and connecting Eurasian civilizations.
       `
     },
     {
-      id: 'whsilkro2-quiz1',
+      id: 'whsrm2-quiz1',
       type: 'multiple-choice' as const,
       content: `
 **Concept Check** 🎯
@@ -29,144 +30,177 @@ Understanding the processes related to Silk Roads & Mongol Empires helps explain
       exercise: {
         questions: [
           {
-            question: 'Which best describes a key process in Silk Roads & Mongol Empires?',
+            question: 'The primary military advantage that allowed the Mongols to conquer vast territories so rapidly was:',
             options: [
-              'A random event',
-              'A systematic mechanism that produces predictable patterns',
-              'An unexplainable phenomenon',
-              'A one-time occurrence'
+              'Superior cavalry tactics combining extreme mobility, composite bow technology, and coordinated large-scale maneuver warfare that could defeat larger sedentary armies unable to match Mongol speed and coordination',
+              'Possession of advanced siege weapons unknown to their enemies',
+              'Numerical superiority — Mongol armies were always larger than their opponents',
+              'Religious motivation that made Mongol soldiers willing to die in suicidal charges'
             ],
-            correctAnswer: 1,
-            explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.'
+            correctAnswer: 0,
+            explanation: 'Mongol military success was primarily technological and tactical: the composite bow (accurate from horseback at speed), extreme mobility (each warrior maintained multiple horses), and sophisticated coordination of large armies over vast distances. They also learned siege warfare from conquered peoples (Chinese engineers taught them to use catapults) — adapting their strengths to overcome their limitations.'
           },
           {
-            question: 'Understanding cause and effect in Silk Roads & Mongol Empires helps students:',
+            question: 'Genghis Khan\'s unification of Mongol tribes (1206) was significant primarily because:',
             options: [
-              'Memorize dates',
-              'Explain why patterns exist rather than just describing them',
-              'Avoid analysis',
-              'Skip exam questions'
+              'It ended destructive inter-tribal warfare and channeled Mongol military capacity toward external conquest, transforming a fragmented nomadic people into a unified military force under a single commander',
+              'It converted all Mongols to Islam before their conquests began',
+              'It established a permanent capital city as the center of Mongol governance',
+              'It ended Mongol nomadism and created a sedentary agricultural empire'
             ],
-            correctAnswer: 1,
-            explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.'
+            correctAnswer: 0,
+            explanation: 'Before Temujin (Genghis Khan) unified the Mongol tribes, inter-tribal raiding was constant and destructive. Unification redirected this military energy outward, creating the human tide that conquered from China to Poland within a generation. The kurultai (tribal council) system became the Mongol Empire\'s political structure.'
           }
         ]
       }
     },
     {
-      id: 'whsilkro2-content',
+      id: 'whsrm2-content',
       type: 'text' as const,
       content: `
-## Key Processes — Deeper Dive
+## 📖 The Mongol Empire: Rise and Expansion
 
-### Process 1
-The primary mechanism that drives patterns in Silk Roads & Mongol Empires. Understanding this concept is essential for mastering Silk Roads & Mongol Empires in AP World History.
+> **Genghis Khan and Mongol Military Excellence**
 
-### Process 2
-A secondary process that shapes outcomes in Silk Roads & Mongol Empires. This builds on the previous concept and connects to broader themes in the course.
+Temujin (later Genghis Khan, "Universal Ruler") unified Mongol tribes by 1206 and launched the greatest military expansion in world history:
 
-### Cause and effect
-The relationship between actions and outcomes in Silk Roads & Mongol Empires. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
-      `
-    },
-    {
-      id: 'whsilkro2-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
+| Military Advantage | How It Worked |
+|-------------------|---------------|
+| **Composite bow** | Powerful, accurate from horseback at a gallop; outranged infantry bows |
+| **Multiple horses** | Each warrior maintained 3–5 horses; could cover 100+ miles per day |
+| **Coordinated tactics** | Feigned retreats lured enemy cavalry into ambushes; encirclement (tulugma) destroyed armies |
+| **Psychological warfare** | Populations that surrendered were often spared; those that resisted were massacred — creating incentive to surrender |
+| **Adaptive technology** | Learned siege warfare from Chinese engineers; cannons and catapults used against walled cities |
 
-1) What term refers to the primary mechanism that drives patterns in Silk Roads & Mongol Empires?
+> **The Empire's Structure**
 
-2) What concept describes a secondary process that shapes outcomes in Silk Roads & Mongol Empires?
+Genghis Khan divided his empire among his sons (ulus system):
 
-3) Name the term for the relationship between actions and outcomes in Silk Roads & Mongol Empires.
+- **Yuan Dynasty (China):** Kublai Khan — grandson; governed China; patronized trade (Marco Polo's employer)
+- **Il-Khanate (Persia/Iraq):** Hulagu Khan — sacked Baghdad 1258; later converted to Islam
+- **Chagatai Khanate (Central Asia):** Territory between China and Persia; often in conflict with neighbors
+- **Golden Horde (Russia/Steppe):** Batu Khan — invaded Poland and Hungary; ruled Russian principalities for 200+ years
 
-Use the exact term from this part.
+> **The Scale of Conquest**
+
+Within 50 years of Genghis Khan's 1206 coronation, the Mongols had:
+
+- Conquered northern China (Jin Dynasty, 1234) and all of China (Southern Song, 1279)
+- Destroyed the Islamic world's center (Baghdad, 1258)
+- Invaded Poland and Hungary (1241) — stopped only by Ögedei Khan's death
+- Conquered most of Persia, Central Asia, and Korea
+
+The human cost was staggering: estimates suggest the Mongol conquests killed 30–40 million people (10%+ of global population), with some regions of Persia and China losing 50–75% of their populations.
+
+> **AP Comparison Anchor**
+
+- **Mongol military vs. other armies:** Mongol mobility exceeded any sedentary military; only nomadic peoples (Mamluks at Ain Jalut, Vietnamese guerrillas) successfully resisted
+- **Conquest vs. governance:** The Mongols were brilliant conquerors but struggled with governance — they eventually adopted the administrative systems of conquered peoples (Chinese, Persian)
       `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'Starts with: P',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Process 1 (The primary mechanism that drives patterns in Silk Roads & Mongol Empires), Process 2 (A secondary process that shapes outcomes in Silk Roads & Mongol Empires), and Cause and effect (The relationship between actions and outcomes in Silk Roads & Mongol Empires).'
-      }
     },
     {
-      id: 'whsilkro2-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'The primary mechanism that drives patterns in Silk Roads & Mongol Empires is called ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'None of these']
-          },
-          {
-            label: 'A secondary process that shapes outcomes in Silk Roads & Mongol Empires describes ___',
-            options: ['Process 1', 'Process 2', 'Cause and effect', 'All of these']
-          },
-          {
-            label: 'The relationship between actions and outcomes in Silk Roads & Mongol Empires is known as ___',
-            options: ['Cause and effect', 'Process 1', 'Process 2', 'None of these']
-          }
-        ],
-        correctAnswers: ['Process 1', 'Process 2', 'Cause and effect'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Process 1 — The primary mechanism that drives patterns in Silk Roads & Mongol Empires. Process 2 — A secondary process that shapes outcomes in Silk Roads & Mongol Empires. Cause and effect — The relationship between actions and outcomes in Silk Roads & Mongol Empires.'
-      }
-    },
-    {
-      id: 'whsilkro2-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Process 1** with **Process 2** — while related, they address different aspects of Silk Roads & Mongol Empires.
-- **Cause and effect** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about key processes, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect key processes to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whsilkro2-applied',
+      id: 'whsrm2-input',
       type: 'multiple-choice' as const,
       content: `
-**Applied Scenarios** 🎯
+**Applied Recall: 3-Question Sprint** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A student observes a pattern and needs to explain the underlying process. They should:',
+            question: 'The Mongols\' effective use of psychological warfare (massacring cities that resisted, sparing those that surrendered) demonstrates:',
             options: [
-              'Just describe what they see',
-              'Identify the mechanism causing the pattern and explain how it operates',
-              'Say the pattern is random',
-              'Ignore the pattern'
+              'A rational military strategy that reduced the cost of conquest by creating powerful incentives for voluntary surrender, dramatically reducing the number of sieges and battles the Mongols needed to fight',
+              'That the Mongols had no interest in governing conquered territories',
+              'That the Mongols were motivated purely by religious hatred of sedentary peoples',
+              'That psychological warfare is always ineffective in military campaigns'
             ],
-            correctAnswer: 1,
-            explanation: 'Explaining processes requires identifying the underlying mechanism, not just describing the observable pattern.'
+            correctAnswer: 0,
+            explanation: 'The Mongol terror system was coldly rational: massacre (like at Samarkand or Nishapur) created such devastating reputations that subsequent cities often surrendered without a fight. This reduced the Mongol army\'s casualties and accelerated conquest. AP prompts about Mongol success must include both military technology AND psychological strategy.'
           },
           {
-            question: 'On the AP exam, process questions typically require students to:',
+            question: 'The ulus system (dividing the empire among Genghis Khan\'s sons) had what long-term consequence?',
             options: [
-              'List facts',
-              'Explain how a mechanism works and connect it to outcomes',
-              'Draw a picture',
-              'Write a poem'
+              'It created separate, often competing khanates that gradually diverged — with some converting to Islam, others to Buddhism, others remaining shamanist — accelerating the empire\'s fragmentation',
+              'It created a stable unified empire that lasted for centuries without internal conflict',
+              'It gave Genghis Khan\'s daughters control of the most important territories',
+              'It ensured the empire would remain unified under a single ruler forever'
             ],
-            correctAnswer: 1,
-            explanation: 'AP process questions test whether students understand HOW things work, not just WHAT happens.'
+            correctAnswer: 0,
+            explanation: 'The ulus division planted the seeds of fragmentation: the khanates competed with each other (Golden Horde vs. Il-Khanate fought for control of Persia), adopted different religions (Il-Khanate → Islam; Yuan → Buddhism/Confucianism; Golden Horde → Islam), and gradually developed distinct identities. The Mongol Empire never had a stable successor to Genghis Khan\'s unified authority.'
+          },
+          {
+            question: 'The Mongol conquests\' demographic impact — reducing some regions\' populations by 50-75% — is most relevant to AP World History because it:',
+            options: [
+              'Demonstrates how military violence can create long-term economic and civilizational disruption, reducing agricultural productivity, destroying urban commercial centers, and creating power vacuums that reshaped political maps for centuries',
+              'Is irrelevant to AP World History since population data is unreliable',
+              'Shows that the Mongol Empire was ultimately a positive force for human development',
+              'Only affected small, isolated regions with no broader historical significance'
+            ],
+            correctAnswer: 0,
+            explanation: 'Population collapse has cascading effects: fewer farmers → less agricultural output → less taxable wealth → weakened states; fewer urban artisans → less commercial activity → slower economic recovery; destroyed irrigation systems → abandonment of formerly productive land. Persia\'s population did not recover to pre-Mongol levels until the 19th century in some regions.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'whsrm2-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+**Match the Idea: Evidence to Claim**
+
+Match each Mongol concept to its correct description.
+      `,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'The Mongol military tactic of pretending to retreat to lure enemy cavalry into an ambush was the ___',
+            options: ['Feigned retreat', 'Tulugma', 'Composite bow technique', 'Siege warfare']
+          },
+          {
+            label: 'The Mongol ruler who conquered China, established the Yuan Dynasty, and employed Marco Polo was ___',
+            options: ['Kublai Khan', 'Genghis Khan', 'Hulagu Khan', 'Batu Khan']
+          },
+          {
+            label: 'The system of dividing the Mongol Empire among Genghis Khan\'s sons, creating separate khanates, was the ___',
+            options: ['Ulus system', 'Kurultai', 'Pax Mongolica', 'Yasa']
+          }
+        ],
+        correctAnswers: ['Feigned retreat', 'Kublai Khan', 'Ulus system'],
+        hint1: 'Classic Mongol deceptive maneuver — retreating to draw enemies into a trap',
+        hint2: 'Grandson of Genghis — ruled China; Marco Polo visited his court',
+        hint3: 'Division into four khanates — seeds of fragmentation',
+        explanation: 'Feigned retreats exploited enemies\' tendency to pursue, drawing disciplined cavalry formations into encirclements. Kublai Khan\'s Yuan Dynasty represented the most stable and commercially open of the khanates. The ulus system\'s division created the conditions for the eventual fragmentation of Mongol unity.'
+      }
+    },
+    {
+      id: 'whsrm2-applied',
+      type: 'multiple-choice' as const,
+      content: `
+**AP-Style Application** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'An AP prompt asks you to evaluate the claim that "Mongol military success was primarily the result of superior weapons technology." How do you most effectively challenge this claim?',
+            options: [
+              'While the composite bow provided real advantage, the Mongols\' most decisive edge was tactical — coordinated mobility, feigned retreats, psychological warfare, and adaptive learning (adopting Chinese siege technology) — demonstrating that military success depends more on organizational excellence than weapon superiority alone',
+              'By agreeing that weapons technology was the only relevant factor',
+              'By arguing the Mongols had no weapons advantage of any kind',
+              'By arguing that psychological factors are never relevant to military success'
+            ],
+            correctAnswer: 0,
+            explanation: 'Effective historical argument requires engaging with partial truths: the composite bow WAS an advantage, but it alone cannot explain conquests across 20+ million square miles. Organizational factors — unity, coordination, adaptability — explain the broader success. AP rewards "while [X is true], [Y provides a more complete explanation" argument structures.'
+          },
+          {
+            question: 'What does the Mongols\' adoption of Chinese administrative systems in the Yuan Dynasty best illustrate?',
+            options: [
+              'How nomadic conquerors who lacked pre-existing administrative experience were compelled to adopt the bureaucratic systems of more institutionally sophisticated sedentary civilizations to govern large settled populations',
+              'That Chinese administrative systems were inferior to Mongol systems',
+              'That the Mongols had already developed sophisticated bureaucracies before conquering China',
+              'That the Yuan Dynasty rejected all aspects of Chinese governance'
+            ],
+            correctAnswer: 0,
+            explanation: 'The Mongols were outstanding conquerors but faced governance challenges: how do nomadic pastoralists tax, organize, and govern hundreds of millions of Chinese peasants? Answer: adopt Chinese administrative frameworks. This pattern — conquerors adopting conquered peoples\' administrative systems — appears throughout AP World History (Romans in Greece, Umayyads in Persia, Manchu in China).'
           }
         ]
       }

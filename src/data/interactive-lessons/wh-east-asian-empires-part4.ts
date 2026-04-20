@@ -9,15 +9,15 @@ export const whEastAsianEmpiresPart4Data = {
 
 **Part 4 of 7 — Connections & Interactions**
 
-East Asian Empires & Isolation connects to other topics in AP World History. Understanding these connections reveals how different processes interact.
+    This part connects East Asian developments to AP World themes: land-based empires, maritime exchange, and global shifts in power.
 
 ### Key Concepts
 
 | Concept | Description |
 |---------|-------------|
-| **Interconnection** | How East Asian Empires & Isolation links to other course topics |
-| **Scale interaction** | How East Asian Empires & Isolation operates differently at local, national, and global scales |
-| **Feedback loop** | How outcomes of East Asian Empires & Isolation can reinforce or modify the original process |
+    | **Cross-unit linkage** | How East Asia evidence supports arguments in multiple units |
+    | **Scale shift** | How the same policy has local, regional, and global consequences |
+    | **Reinforcing cycle** | Outcomes that strengthen the original policy direction |
       `
     },
     {
@@ -29,26 +29,26 @@ East Asian Empires & Isolation connects to other topics in AP World History. Und
       exercise: {
         questions: [
           {
-            question: 'East Asian Empires & Isolation connects to other course topics through:',
+            question: 'Which option best demonstrates a cross-unit linkage in AP World History?',
             options: [
-              'No connections exist',
-              'Shared processes, causes, and outcomes',
-              'Random coincidence',
-              'Administrative categories only'
+              'Comparing Tokugawa social order with Song technological growth in isolation from all global context',
+              'Using Ming maritime withdrawal to explain later European dominance in Indian Ocean trade',
+              'Arguing East Asia had no relationship to world trade networks',
+              'Describing Qing rule without any causation or comparison'
             ],
             correctAnswer: 1,
-            explanation: 'Topics in AP World History are interconnected through shared processes, causes, and outcomes.'
+            explanation: 'This explicitly links East Asian policy decisions to later global outcomes, which is the kind of synthesis AP prompts reward.'
           },
           {
-            question: 'A feedback loop in East Asian Empires & Isolation means:',
+            question: 'Which is an example of a reinforcing cycle in Tokugawa Japan?',
             options: [
-              'The process stops',
-              'Outcomes reinforce or modify the original process',
-              'Nothing changes',
-              'The exam skips this topic'
+              'Expanded foreign missionary activity increased political openness',
+              'Restrictions reduced foreign influence, which helped preserve the social order that justified continued restrictions',
+              'Open immigration created pressure for stricter border controls',
+              'Peasant revolts immediately overthrew the shogunate in the 17th century'
             ],
             correctAnswer: 1,
-            explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.'
+            explanation: 'That is a positive feedback cycle: policy outcomes strengthened the political rationale for keeping the policy in place.'
           }
         ]
       }
@@ -59,65 +59,105 @@ East Asian Empires & Isolation connects to other topics in AP World History. Und
       content: `
 ## Connections & Interactions — Deeper Dive
 
-### Interconnection
-How East Asian Empires & Isolation links to other course topics. Understanding this concept is essential for mastering East Asian Empires & Isolation in AP World History.
+> **Cross-Unit Linkage**
 
-### Scale interaction
-How East Asian Empires & Isolation operates differently at local, national, and global scales. This builds on the previous concept and connects to broader themes in the course.
+    East Asian evidence appears in multiple AP units:
 
-### Feedback loop
-How outcomes of East Asian Empires & Isolation can reinforce or modify the original process. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+    - **Unit 3 (Land-based empires):** Qing governance, Tokugawa political order
+    - **Unit 4 (Transoceanic):** controlled maritime contact and trade regulation
+    - **Unit 6 (Industrial consequences):** later pressure on East Asian states from industrial powers
+
+> **Scale Shift**
+
+    One policy can look different at each scale:
+
+    - **Local:** merchants in Nagasaki interact with limited foreign trade
+    - **State:** Tokugawa regime preserves internal hierarchy and political control
+    - **Global:** reduced Japanese participation in early modern oceanic expansion
+
+> **AP Comparison Anchor**
+
+    Example:
+
+    $$
+    	ext{Foreign restrictions} \rightarrow \text{greater domestic control} \rightarrow \text{elite confidence in restrictions} \rightarrow \text{continued restrictions}
+    $$
+
+    AP skill: identify whether a historical process is self-reinforcing or self-limiting.
       `
     },
     {
       id: 'wheastas4-input',
-      type: 'input-boxes' as const,
+      type: 'multiple-choice' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to how East Asian Empires & Isolation links to other course topics?
-
-2) What concept describes how East Asian Empires & Isolation operates differently at local, national, and global scales?
-
-3) Name the term for how outcomes of East Asian Empires & Isolation can reinforce or modify the original process.
-
-Use the exact term from this part.
+**Applied Recall: 3-Question Sprint** 🎯
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'Starts with: I',
-        hint2: 'Starts with: S',
-        hint3: 'Starts with: F',
-        explanation: 'Expected answers: Interconnection (How East Asian Empires & Isolation links to other course topics), Scale interaction (How East Asian Empires & Isolation operates differently at local, national, and global scales), and Feedback loop (How outcomes of East Asian Empires & Isolation can reinforce or modify the original process).'
+        questions: [
+          {
+            question: 'What term describes using East Asian evidence to support claims across multiple AP units?',
+            options: [
+              'Cross-unit linkage',
+              'Scale shift',
+              'Reinforcing cycle',
+              'Periodization only'
+            ],
+            correctAnswer: 0,
+            explanation: 'Cross-unit linkage is an AP synthesis skill: connecting East Asian evidence (e.g., Ming maritime policy) to outcomes in other units like transoceanic expansion.'
+          },
+          {
+            question: 'What term describes analyzing the same policy at local, state, and global levels?',
+            options: [
+              'Scale shift',
+              'Cross-unit linkage',
+              'Reinforcing cycle',
+              'Single-cause reasoning'
+            ],
+            correctAnswer: 0,
+            explanation: 'Scale shift means evaluating how a single policy (like Tokugawa restrictions) looks different depending on whether you examine it locally, at the state level, or globally.'
+          },
+          {
+            question: 'A process where policy outcomes strengthen the original policy direction is called what?',
+            options: [
+              'Reinforcing cycle',
+              'Scale shift',
+              'Cross-unit linkage',
+              'Counterexample'
+            ],
+            correctAnswer: 0,
+            explanation: 'Reinforcing cycles are important in AP causation reasoning: outcomes that loop back to amplify the original cause (e.g., isolation → stability → continued isolation).'
+          }
+        ]
       }
     },
     {
       id: 'wheastas4-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Idea: Evidence to Claim**
+
+Select the concept that best matches each description.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'How East Asian Empires & Isolation links to other course topics is called ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'None of these']
+            label: 'Using East Asian evidence to support claims in multiple AP units is ___',
+            options: ['Cross-unit linkage', 'Scale shift', 'Reinforcing cycle', 'periodization only']
           },
           {
-            label: 'How East Asian Empires & Isolation operates differently at local, national, and global scales describes ___',
-            options: ['Interconnection', 'Scale interaction', 'Feedback loop', 'All of these']
+            label: 'Analyzing the same policy at local, state, and global levels is ___',
+            options: ['Cross-unit linkage', 'Scale shift', 'Reinforcing cycle', 'single-cause reasoning']
           },
           {
-            label: 'How outcomes of East Asian Empires & Isolation can reinforce or modify the original process is known as ___',
-            options: ['Feedback loop', 'Interconnection', 'Scale interaction', 'None of these']
+            label: 'A process where policy outcomes strengthen the original policy is a ___',
+            options: ['Reinforcing cycle', 'Scale shift', 'Cross-unit linkage', 'counterexample']
           }
         ],
-        correctAnswers: ['Interconnection', 'Scale interaction', 'Feedback loop'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Interconnection — How East Asian Empires & Isolation links to other course topics. Scale interaction — How East Asian Empires & Isolation operates differently at local, national, and global scales. Feedback loop — How outcomes of East Asian Empires & Isolation can reinforce or modify the original process.'
+        correctAnswers: ['Cross-unit linkage', 'Scale shift', 'Reinforcing cycle'],
+        hint1: 'Think synthesis.',
+        hint2: 'Think scale.',
+        hint3: 'Think feedback dynamics.',
+        explanation: 'This triad mirrors AP historical reasoning skills: synthesis, scale analysis, and causation dynamics.'
       }
     },
     {
@@ -127,15 +167,14 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Interconnection** with **Scale interaction** — while related, they address different aspects of East Asian Empires & Isolation.
-- **Feedback loop** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+    - Students often mention another unit without truly connecting evidence and causation.
+    - "Global" claims need explicit mechanisms, not just broad statements.
+    - Reinforcing cycles are not inevitable forever; political shocks can break them.
 
 ### AP Strategy Moves
-- When you see questions about connections & interactions, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect connections & interactions to broader themes in AP World History for higher scores.
+    - In LEQs, include at least one sentence that links East Asia to another region or process.
+    - Name the scale in your sentence stem ("At the global level...", "At the state level...").
+    - Use arrows in your planning notes to track causal chains before writing.
       `
     },
     {
@@ -147,26 +186,26 @@ Use the exact term from this part.
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, demonstrating connections between East Asian Empires & Isolation and other units earns higher scores because:',
+            question: 'Which thesis is most likely to earn complexity points on an AP LEQ about East Asia (1450-1750)?',
             options: [
-              'The exam is random',
-              'It shows deeper understanding and analytical thinking',
-              'It wastes time',
-              'Connections are never tested'
+              'East Asia was isolated and therefore unimportant to world history.',
+              'East Asian states regulated foreign contact for domestic stability, but those choices also shaped global trade patterns and later power balances.',
+              'All East Asian empires followed identical policies and had identical outcomes.',
+              'The only relevant development in East Asia was agriculture.'
             ],
             correctAnswer: 1,
-            explanation: 'The AP exam rewards students who can connect concepts across units — demonstrating synthesis and analytical depth.'
+            explanation: 'This thesis includes causation, qualification, and global connection rather than a single simplistic claim.'
           },
           {
-            question: 'If East Asian Empires & Isolation produces outcomes that further intensify the original process, this is:',
+            question: 'A prompt asks for effects of Tokugawa foreign policy at different scales. Which answer structure is strongest?',
             options: [
-              'A negative feedback loop',
-              'A positive feedback loop — outcomes reinforce the process',
-              'An unrelated event',
-              'A one-time occurrence'
+              'Only discuss local merchant life in one sentence',
+              'Only discuss global trade and ignore Japan entirely',
+              'Organize by local effects, then state-level political effects, then global effects',
+              'List five unrelated facts without analysis'
             ],
-            correctAnswer: 1,
-            explanation: 'A positive feedback loop intensifies: the outcome amplifies the original process, creating a cycle.'
+            correctAnswer: 2,
+            explanation: 'This structure directly addresses scale and demonstrates organized historical reasoning.'
           }
         ]
       }

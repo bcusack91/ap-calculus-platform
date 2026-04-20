@@ -2,171 +2,186 @@ export const whExplorationColumbianExchangePart7Data = {
   topicSlug: 'wh-exploration-columbian-exchange',
   sections: [
     {
-      id: 'whexplor7-intro',
+      id: 'whex7-intro',
       type: 'text' as const,
       content: `
-# 🌏 Exploration & the Columbian Exchange
+# 🚢 Age of Exploration & the Columbian Exchange
 
-**Part 7 of 7 — AP Review**
+**Part 7 of 7 — AP Review and Exam Mastery**
 
-Comprehensive review of Exploration & the Columbian Exchange for the AP exam. Focus on key concepts, common question types, and exam strategies.
+---
 
-### Key Concepts
-
-| Concept | Description |
-|---------|-------------|
-| **Key vocabulary** | Essential terms and definitions for Exploration & the Columbian Exchange |
-| **Common question types** | The most frequent ways Exploration & the Columbian Exchange is tested on the AP exam |
-| **Exam strategy** | Approaches for answering Exploration & the Columbian Exchange questions effectively |
+> 🔑 **Key Concept:** Exploration and Columbian Exchange content appears in MCQ, SAQ, LEQ, and DBQ questions. Key prompt types: causes of European exploration, consequences of the Columbian Exchange for different groups, comparison of colonial labor systems, and how global trade networks transformed c. 1450-1750. Mastering specific evidence and causal chains is essential for AP success.
       `
     },
     {
-      id: 'whexplor7-quiz1',
+      id: 'whex7-quiz1',
       type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
+      content: `**Concept Check** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'The most important exam strategy for Exploration & the Columbian Exchange is:',
+            question: 'An AP SAQ asks: "Briefly explain ONE cause of European maritime exploration c. 1450-1550." Which response earns full credit?',
             options: [
-              'Guess randomly',
-              'Know key terms, use specific examples, and connect to course themes',
-              'Skip these questions',
-              'Only memorize definitions'
+              'European merchants\' desire to access Asian spice and luxury goods markets without paying Ottoman tolls on overland routes motivated Portuguese investment in African coastal exploration (seeking an ocean route to India via the Cape of Good Hope) — demonstrating that commercial motivation was a primary driver of systematic exploration',
+              'Listing all possible causes without explaining any single one in depth',
+              'Arguing only religious motivation explains European exploration without connecting to commercial factors',
+              'Describing exploration outcomes without explaining what caused the exploration to occur',
             ],
-            correctAnswer: 1,
-            explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.'
+            correctAnswer: 0,
+            explanation: 'Full SAQ credit requires: claim (desire to bypass Ottoman tolls) + evidence (Portuguese Cape route exploration) + reasoning (commercial motivation drove systematic state investment). The response answers ONE cause specifically rather than trying to list everything — focused, evidenced, reasoned. SAQ responses that try to cover everything typically earn less credit than those that develop ONE cause thoroughly.'
           },
           {
-            question: 'AP multiple-choice questions about Exploration & the Columbian Exchange often test:',
+            question: 'For an AP LEQ about the Columbian Exchange\'s consequences, which complexity argument earns the highest score?',
             options: [
-              'Random trivia',
-              'Application of concepts to new scenarios',
-              'Spelling',
-              'Personal opinions'
+              'The Columbian Exchange had fundamentally different consequences for different peoples simultaneously: while New World crops were beginning to increase Old World food security and population, disease was catastrophically reducing Native American populations by 50-90% — demonstrating that historical processes have uneven and contradictory effects on different groups at the same time',
+              'The exchange was uniformly beneficial for all peoples who participated in it',
+              'The exchange was uniformly catastrophic for all peoples who encountered it',
+              'Only one type of consequence (crop exchange OR disease) was significant',
             ],
-            correctAnswer: 1,
-            explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.'
+            correctAnswer: 0,
+            explanation: 'AP complexity is not about being artificially "balanced" — it\'s about accurately representing historical reality. The same Columbian Exchange → potatoes feeding European peasants AND smallpox killing Native Americans simultaneously. Identifying these contradictory, simultaneous effects on different groups demonstrates that you understand how historical processes actually work: unevenly, with winners and losers, and with consequences that vary dramatically depending on where you are standing.'
           }
         ]
       }
     },
     {
-      id: 'whexplor7-content',
+      id: 'whex7-content',
       type: 'text' as const,
       content: `
-## AP Review — Deeper Dive
+## 📖 AP Review: Exploration & Columbian Exchange
 
-### Key vocabulary
-Essential terms and definitions for Exploration & the Columbian Exchange. Understanding this concept is essential for mastering Exploration & the Columbian Exchange in AP World History.
+> **Must-Know Vocabulary**
 
-### Common question types
-The most frequent ways Exploration & the Columbian Exchange is tested on the AP exam. This builds on the previous concept and connects to broader themes in the course.
+- **Columbian Exchange** — Exchange of crops, animals, diseases, peoples between Americas and Old World after 1492
+- **Caravel** — Portuguese ship with lateen sails; enabled Atlantic and coastal exploration
+- **Encomienda** — Spanish grant of indigenous labor to colonists; coercive labor system
+- **Mita (colonial)** — Forced labor draft for Potosí silver mines; Spanish repurposing of Inca mit'a
+- **Casta system** — Spanish colonial racial hierarchy; legal status determined by racial identity
+- **Potosí** — Bolivian silver mine; largest in colonial world; drove global silver circulation
+- **Manila Galleon** — Pacific silver-for-silk trade route; connected Americas and Asia
+- **Triangle trade** — Atlantic three-legged circuit: European goods → African enslaved people → American commodities
+- **Syncretism** — Cultural blending; e.g., Our Lady of Guadalupe, Santería, Candomblé
+- **Maroon communities** — Free communities of escaped enslaved peoples; Quilombo dos Palmares (Brazil), Jamaican Maroons
 
-### Exam strategy
-Approaches for answering Exploration & the Columbian Exchange questions effectively. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+> **Common AP Prompt Patterns**
+
+- **Causation:** Why did European states invest in maritime exploration c. 1450-1550?
+- **Evaluation:** What were the most significant consequences of the Columbian Exchange?
+- **Comparison:** Compare Spanish and Portuguese colonial models c. 1500-1750
+- **CCOT:** How did global trade networks change c. 1450-1750?
+- **Complexity:** How did the Columbian Exchange's consequences differ for different peoples?
+
+> **AP Causal Chain to Memorize**
+
+Ottoman trade route control → European commercial motivation → caravel technology + state sponsorship → Portuguese African coast exploration → Vasco da Gama India 1498 → Columbus Americas 1492 → Columbian Exchange → disease + indigenous collapse → labor shortage → enslaved African labor → Atlantic slave trade → global commodity economy (silver, sugar, tobacco) → Manila Galleon → Chinese demand for silver → first global economy c. 1600
+
+> **AP Comparison Table**
+
+| Feature | Spanish Colonial System | Portuguese Colonial System |
+|---------|------------------------|---------------------------|
+| Primary geography | Americas | Africa, Asia, Brazil |
+| Labor system | Encomienda, mita, hacienda | Plantation (Brazil), trading posts (Asia) |
+| Key commodity | Silver (Potosí) | Spices, sugar |
+| Indigenous relations | Direct control, casta system | Trading partnerships (Asia); plantation (Brazil) |
+| Religious mission | Massive conversion effort | Less systematic outside Brazil |
       `
     },
     {
-      id: 'whexplor7-input',
-      type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to essential terms and definitions for Exploration & the Columbian Exchange?
-
-2) What concept describes the most frequent ways Exploration & the Columbian Exchange is tested on the AP exam?
-
-3) Name the term for approaches for answering Exploration & the Columbian Exchange questions effectively.
-
-Use the exact term from this part.
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'Starts with: K',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: E',
-        explanation: 'Expected answers: Key vocabulary (Essential terms and definitions for Exploration & the Columbian Exchange), Common question types (The most frequent ways Exploration & the Columbian Exchange is tested on the AP exam), and Exam strategy (Approaches for answering Exploration & the Columbian Exchange questions effectively).'
-      }
-    },
-    {
-      id: 'whexplor7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Essential terms and definitions for Exploration & the Columbian Exchange is called ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'None of these']
-          },
-          {
-            label: 'The most frequent ways Exploration & the Columbian Exchange is tested on the AP exam describes ___',
-            options: ['Key vocabulary', 'Common question types', 'Exam strategy', 'All of these']
-          },
-          {
-            label: 'Approaches for answering Exploration & the Columbian Exchange questions effectively is known as ___',
-            options: ['Exam strategy', 'Key vocabulary', 'Common question types', 'None of these']
-          }
-        ],
-        correctAnswers: ['Key vocabulary', 'Common question types', 'Exam strategy'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Key vocabulary — Essential terms and definitions for Exploration & the Columbian Exchange. Common question types — The most frequent ways Exploration & the Columbian Exchange is tested on the AP exam. Exam strategy — Approaches for answering Exploration & the Columbian Exchange questions effectively.'
-      }
-    },
-    {
-      id: 'whexplor7-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Key vocabulary** with **Common question types** — while related, they address different aspects of Exploration & the Columbian Exchange.
-- **Exam strategy** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about ap review, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect ap review to broader themes in AP World History for higher scores.
-      `
-    },
-    {
-      id: 'whexplor7-applied',
+      id: 'whex7-input',
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: `**Applied Recall: 3-Question Sprint** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'On the AP exam, a question presents a scenario you have never seen before about Exploration & the Columbian Exchange. You should:',
+            question: 'An AP DBQ includes a document from a Spanish Dominican friar describing indigenous suffering under the encomienda. The most sophisticated sourcing analysis would:',
             options: [
-              'Panic',
-              'Apply the key concepts and processes you learned to analyze the new scenario',
-              'Skip it',
-              'Write about something else'
+              'Note that the friar\'s religious vocation gave him direct access to indigenous communities (credibility from proximity) while his reform agenda (advocating for New Laws limiting encomienda) shaped his emphasis on suffering rather than other aspects of the system — making the document both valuable evidence of conditions and a product of a specific advocacy purpose',
+              'Dismiss the document entirely because the friar had a religious agenda',
+              'Accept the document as completely objective because friars were neutral observers',
+              'Ignore the author\'s purpose and focus only on the document\'s factual content',
             ],
-            correctAnswer: 1,
-            explanation: 'The AP exam tests application — use your knowledge of concepts and processes to analyze unfamiliar scenarios.'
+            correctAnswer: 0,
+            explanation: 'Sophisticated AP sourcing holds two truths simultaneously: the document has real evidentiary value (the friar witnessed conditions others didn\'t document) AND its content reflects a specific agenda (advocacy for indigenous protection). "Having an agenda" doesn\'t mean "making things up" — it means the document\'s framing, emphasis, and selection reflect the author\'s purpose. Both the value and the limitation are worth noting. AP DBQ sourcing earns credit by explaining HOW the source\'s context affects what it tells us and what it omits.'
           },
           {
-            question: 'For free-response questions on Exploration & the Columbian Exchange, the most common mistake is:',
+            question: 'An AP question asks you to compare the Columbian Exchange to the Black Death as historical demographic events. Which argument is most sophisticated?',
             options: [
-              'Writing too clearly',
-              'Being too vague and not using specific examples or key vocabulary',
-              'Showing too much knowledge',
-              'Answering the question directly'
+              'Both demonstrate how disease transmission via exchange networks produces catastrophic demographic consequences, but in opposite regional directions: the Black Death reduced Old World populations by 30-50%; the Columbian Exchange simultaneously reduced New World populations by 50-90% while beginning to increase Old World populations via new food crops — the same mechanism (disease via exchange) produced regionally opposite outcomes',
+              'The two events are too different chronologically to compare meaningfully',
+              'Only the Black Death involved significant disease transmission via trade networks',
+              'The Columbian Exchange and Black Death had identical global demographic consequences',
             ],
-            correctAnswer: 1,
-            explanation: 'The most common FRQ mistake is vagueness — AP graders look for specific terms, definitions, and concrete examples.'
+            correctAnswer: 0,
+            explanation: 'This cross-period comparison demonstrates analytical sophistication: same mechanism (disease via exchange networks) + different contexts (immunologically naive Americas; new food crops flowing to Old World simultaneously) = regionally opposite demographic outcomes. AP rewards arguments that use comparison to generate a broader principle (how exchange networks transmit disease) and then show how the same principle operates differently in different historical contexts.'
+          },
+          {
+            question: 'What is the most significant AP skill demonstrated by analyzing how American silver connected Peru, Spain, and China in a single economic circuit?',
+            options: [
+              'Tracing global commodity chains across regional boundaries demonstrates that "world history" by 1600 involved genuine global economic integration — a Peruvian indigenous miner\'s forced labor, a Spanish merchant\'s commercial calculation, and a Chinese official\'s tax policy were all parts of a single interconnected system, not three separate regional stories',
+              'This analysis only demonstrates knowledge of Spanish colonial history',
+              'Global economic connections are only relevant for modern (post-1900) history',
+              'Analyzing commodity chains requires only economic knowledge with no social dimension',
+            ],
+            correctAnswer: 0,
+            explanation: 'The Potosí-Manila-China silver circuit is AP\'s proof that global history existed before the 20th century. Understanding this requires crossing the boundaries between Latin American history, European colonial history, and Chinese institutional history — which is exactly what AP World History\'s "world" framing demands. The ability to trace connections across regions, periods, and social groups is the core AP World History analytical skill.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'whex7-dropdown',
+      type: 'dropdown-select' as const,
+      content: `**Match the Idea: Evidence to Claim**`,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'The Portuguese ship innovation with lateen sails enabling Atlantic exploration was the ___',
+            options: ['Caravel', 'Galleon', 'Dhow', 'Junk']
+          },
+          {
+            label: 'The Spanish colonial labor grant giving colonists rights to indigenous workers was the ___',
+            options: ['Encomienda', 'Millet system', 'Mansabdar system', 'Devshirme']
+          },
+          {
+            label: 'The Pacific trade route connecting American silver to Chinese silk markets was the ___',
+            options: ['Manila Galleon trade', 'Triangle trade', 'Indian Ocean trade', 'Silk Road']
+          }
+        ],
+        correctAnswers: ['Caravel', 'Encomienda', 'Manila Galleon trade'],
+        hint1: 'Portuguese ship — lateen sails — could sail against the wind',
+        hint2: 'Spanish colonial labor system — grant to colonists — de facto forced labor',
+        hint3: 'Pacific silver route — Acapulco to Manila — American silver for Asian goods',
+        explanation: 'The caravel enabled systematic Atlantic and coastal African exploration by Portugal. The encomienda was the primary mechanism of Spanish colonial labor extraction from indigenous peoples. The Manila Galleon trade completed global commercial connectivity by linking the Atlantic and Pacific systems through the silver-for-silk exchange.'
+      }
+    },
+    {
+      id: 'whex7-applied',
+      type: 'multiple-choice' as const,
+      content: `**AP-Style Application** 🎯`,
+      exercise: {
+        questions: [
+          {
+            question: 'For an AP comparison between indigenous labor systems and African slavery in colonial Americas, which argument best demonstrates complexity?',
+            options: [
+              'Both were coercive labor systems serving colonial extraction, but they differed in their legal status (enslaved Africans were chattel with no legal personhood; indigenous workers under mita/encomienda had theoretically defined legal rights, however violated in practice), racial basis (African slavery was increasingly racial; indigenous labor was political-tributary), and demographic trajectory (indigenous populations declined; African populations in the Americas grew)',
+              'Indigenous labor systems and African slavery were identical in every respect',
+              'African slavery was always more brutal than any form of indigenous coerced labor',
+              'Both systems had equal legal protections for workers',
+            ],
+            correctAnswer: 0,
+            explanation: 'This comparison earns complexity credit by identifying meaningful structural differences within a broader similarity (both were coercive): the legal distinction (chattel vs. tributary); the racial basis (African slavery became increasingly racial while indigenous coercion maintained political-tributary framing); and the demographic difference (indigenous decline vs. African growth in the Americas). These structural differences had different long-term consequences — and AP rewards recognizing that.'
+          },
+          {
+            question: 'The most important AP lesson from studying European exploration and the Columbian Exchange is:',
+            options: [
+              'That the same historical process (European commercial expansion) simultaneously created European wealth, devastated indigenous American populations, built African diaspora communities through forced migration, and transformed Old World agriculture — demonstrating that major historical transformations are never simple stories of progress or decline but involve multiple simultaneous, contradictory outcomes for different peoples',
+              'European exploration was a simple story of European progress and civilization-spreading',
+              'The Columbian Exchange was purely negative with no beneficial consequences for anyone',
+              'World history after 1492 is too complex to analyze with the AP framework',
+            ],
+            correctAnswer: 0,
+            explanation: 'The meta-lesson of the Age of Exploration for AP is that the same historical process has radically different meanings depending on where you\'re standing: European commercial prosperity; Native American demographic catastrophe; African diaspora creation; Old World agricultural transformation. This multi-perspective framing — asking "beneficial for whom? catastrophic for whom?" — is the analytical stance AP World History rewards across all periods and topics.'
           }
         ]
       }

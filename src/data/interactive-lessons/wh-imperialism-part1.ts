@@ -116,7 +116,7 @@ export const whImperialismPart1Data = {
 - An estimated **10 million Congolese** died from murder, starvation, and disease under Leopold's rule
 - International outcry (led by E.D. Morel and Roger Casement) eventually forced Belgium to take control from Leopold in 1908
 
-> 🔑 **AP Connection:** Leopold's Congo is the AP exam's primary example of imperial **exploitation and brutality**. The Berlin Conference illustrates how European powers imposed arbitrary boundaries with devastating long-term consequences.
+> 🔑 **AP Connection:** Leopold's Congo is the AP exam\'s primary example of imperial **exploitation and brutality**. The Berlin Conference illustrates how European powers imposed arbitrary boundaries with devastating long-term consequences.
       `
     },
     {

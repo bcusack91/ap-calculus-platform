@@ -9,15 +9,15 @@ export const whEastAsianEmpiresPart3Data = {
 
 **Part 3 of 7 — Patterns & Examples**
 
-This part examines specific patterns and real-world examples related to East Asian Empires & Isolation. Case studies help illustrate abstract concepts.
+    This part turns big ideas into specific AP World evidence by using case studies from China, Japan, Korea, and Vietnam.
 
 ### Key Concepts
 
 | Concept | Description |
 |---------|-------------|
-| **Spatial pattern** | The geographic distribution related to East Asian Empires & Isolation |
-| **Case study** | A specific real-world example that illustrates East Asian Empires & Isolation |
-| **Comparison** | Analyzing similarities and differences across examples of East Asian Empires & Isolation |
+    | **Core pattern** | A repeated regional trend (for example, centralized China vs decentralized Japan) |
+    | **Case study evidence** | A specific empire, policy, or event used to support an argument |
+    | **Comparative reasoning** | Explaining both similarity and difference across societies |
       `
     },
     {
@@ -29,26 +29,26 @@ This part examines specific patterns and real-world examples related to East Asi
       exercise: {
         questions: [
           {
-            question: 'Why do geographers/analysts use case studies?',
+            question: 'Which option is the strongest AP case-study evidence for state-led economic expansion in East Asia before 1450?',
             options: [
-              'They are easier than analysis',
-              'They provide concrete examples that illustrate abstract concepts',
-              'They replace all other methods',
-              'They are required by law'
+              'Song China expanded commerce with paper money, urban markets, and high iron production',
+              'Europe had many castles and local lords',
+              'The Aztecs developed tribute systems in Mesoamerica',
+              'Mali controlled trans-Saharan gold routes'
             ],
-            correctAnswer: 1,
-            explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.'
+            correctAnswer: 0,
+            explanation: 'This directly supports the East Asian claim and includes concrete evidence (paper money, production growth, commercial expansion).'
           },
           {
-            question: 'Comparing examples of East Asian Empires & Isolation across regions helps:',
+            question: 'A valid comparison of Ming China and Tokugawa Japan would state that both:',
             options: [
-              'Nothing',
-              'Identify universal patterns and unique local variations',
-              'Confuse students',
-              'Waste time'
+              'eliminated social hierarchy and expanded democratic participation',
+              'used policies to regulate foreign contact, but under different political systems',
+              'adopted Islam as state religion to facilitate Indian Ocean trade',
+              'relied on the same feudal military structure'
             ],
             correctAnswer: 1,
-            explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).'
+            explanation: 'Ming and Tokugawa governments both controlled foreign interaction, but Ming China remained a centralized bureaucratic empire while Tokugawa Japan was a military shogunate.'
           }
         ]
       }
@@ -59,65 +59,100 @@ This part examines specific patterns and real-world examples related to East Asi
       content: `
 ## Patterns & Examples — Deeper Dive
 
-### Spatial pattern
-The geographic distribution related to East Asian Empires & Isolation. Understanding this concept is essential for mastering East Asian Empires & Isolation in AP World History.
+> **Political Organization Diverged**
 
-### Case study
-A specific real-world example that illustrates East Asian Empires & Isolation. This builds on the previous concept and connects to broader themes in the course.
+    - **China (Ming/Qing):** centralized imperial bureaucracy
+    - **Japan (Tokugawa):** decentralized feudal order under a shogun
 
-### Comparison
-Analyzing similarities and differences across examples of East Asian Empires & Isolation. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+    AP use: explain why shared Confucian influence did not produce identical political systems.
+
+> **Cultural Borrowing Was Selective**
+
+    - **Korea:** civil exams and Neo-Confucian norms, but also **hangul** for vernacular literacy
+    - **Vietnam:** Confucian administration with persistent local identity and resistance to direct control
+
+    AP use: support claims about cultural diffusion plus local agency.
+
+> **AP Comparison Anchor**
+
+    - **Ming retreat from long-distance voyages** after Zheng He
+    - **European persistence in maritime expansion**
+
+    AP use: compare state priorities and connect decisions to later global power shifts.
       `
     },
     {
       id: 'wheastas3-input',
-      type: 'input-boxes' as const,
+      type: 'multiple-choice' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to the geographic distribution related to East Asian Empires & Isolation?
-
-2) What concept describes a specific real-world example that illustrates East Asian Empires & Isolation?
-
-3) Name the term for analyzing similarities and differences across examples of East Asian Empires & Isolation.
-
-Use the exact term from this part.
+**Applied Recall: 3-Question Sprint** 🎯
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: C',
-        hint3: 'Starts with: C',
-        explanation: 'Expected answers: Spatial pattern (The geographic distribution related to East Asian Empires & Isolation), Case study (A specific real-world example that illustrates East Asian Empires & Isolation), and Comparison (Analyzing similarities and differences across examples of East Asian Empires & Isolation).'
+        questions: [
+          {
+            question: 'What term describes repeated AP patterns such as centralized China vs. decentralized feudal Japan?',
+            options: [
+              'Core pattern',
+              'Case study evidence',
+              'Comparative reasoning',
+              'Random anomaly'
+            ],
+            correctAnswer: 0,
+            explanation: 'A core pattern is a repeated regional trend. Identifying it helps you organize AP arguments around structural similarities or contrasts.'
+          },
+          {
+            question: 'Using Tokugawa sakoku as proof in an AP argument is an example of what?',
+            options: [
+              'Case study evidence',
+              'Core pattern',
+              'Comparative reasoning',
+              'Unsupported assertion'
+            ],
+            correctAnswer: 0,
+            explanation: 'Case study evidence means deploying a concrete named example to support a broader claim — exactly what AP rubrics reward.'
+          },
+          {
+            question: 'Explaining both similarity and difference between Ming China and Tokugawa Japan is called what?',
+            options: [
+              'Comparative reasoning',
+              'Case study evidence',
+              'Core pattern',
+              'Chronological listing'
+            ],
+            correctAnswer: 0,
+            explanation: 'Comparative reasoning requires both/and structure: identifying similarity first, then difference, with evidence for each.'
+          }
+        ]
       }
     },
     {
       id: 'wheastas3-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Idea: Evidence to Claim**
+
+Select the concept that best matches each description.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The geographic distribution related to East Asian Empires & Isolation is called ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'None of these']
+            label: 'A repeated regional trend (such as centralized China vs feudal Japan) is a ___',
+            options: ['Core pattern', 'Case study evidence', 'Comparative reasoning', 'random anomaly']
           },
           {
-            label: 'A specific real-world example that illustrates East Asian Empires & Isolation describes ___',
-            options: ['Spatial pattern', 'Case study', 'Comparison', 'All of these']
+            label: 'Using Tokugawa sakoku as proof in an argument is using ___',
+            options: ['Core pattern', 'Case study evidence', 'Comparative reasoning', 'unsupported assertion']
           },
           {
-            label: 'Analyzing similarities and differences across examples of East Asian Empires & Isolation is known as ___',
-            options: ['Comparison', 'Spatial pattern', 'Case study', 'None of these']
+            label: 'Explaining both similarity and difference between Ming China and Tokugawa Japan is ___',
+            options: ['Comparative reasoning', 'Case study evidence', 'Core pattern', 'chronological listing']
           }
         ],
-        correctAnswers: ['Spatial pattern', 'Case study', 'Comparison'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial pattern — The geographic distribution related to East Asian Empires & Isolation. Case study — A specific real-world example that illustrates East Asian Empires & Isolation. Comparison — Analyzing similarities and differences across examples of East Asian Empires & Isolation.'
+        correctAnswers: ['Core pattern', 'Case study evidence', 'Comparative reasoning'],
+        hint1: 'Think trend language.',
+        hint2: 'Think concrete proof.',
+        hint3: 'Think both/and comparison writing.',
+        explanation: 'Strong AP work separates trend identification, evidence selection, and comparison logic instead of blending them vaguely.'
       }
     },
     {
@@ -127,15 +162,14 @@ Use the exact term from this part.
 ## Common Misconceptions and Exam Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial pattern** with **Case study** — while related, they address different aspects of East Asian Empires & Isolation.
-- **Comparison** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+    - A list of facts is not analysis unless each fact supports a claim.
+    - Comparison requires both similarity and difference; one without the other is incomplete.
+    - Avoid region drift: keep evidence tied to East Asia unless the prompt asks for cross-region comparison.
 
 ### AP Strategy Moves
-- When you see questions about patterns & examples, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect patterns & examples to broader themes in AP World History for higher scores.
+    - Build paragraphs in this sequence: claim -> evidence -> reasoning.
+    - Use named evidence (Zheng He, hangul, sakoku, civil examinations) instead of broad statements.
+    - In MCQs, eliminate answers that are true historically but not responsive to the prompt's region/timeframe.
       `
     },
     {
@@ -147,26 +181,26 @@ Use the exact term from this part.
       exercise: {
         questions: [
           {
-            question: 'An AP question asks you to provide TWO examples of East Asian Empires & Isolation. The strongest response would:',
+            question: 'A student claims East Asia was culturally uniform because China was influential. Which response best rebuts that claim?',
             options: [
-              'Use two examples from the same place',
-              'Use examples from different regions to show the concept operates across contexts',
-              'Make up fictional examples',
-              'Provide only one example'
+              'Agree, because all East Asian states copied Chinese institutions exactly',
+              'Cite Japanese feudal governance and Korean hangul as evidence of local variation within Chinese influence',
+              'Argue only that geography explains everything',
+              'Avoid examples and focus on definitions'
             ],
             correctAnswer: 1,
-            explanation: 'Using examples from different regions demonstrates broader understanding and the universality of the concept.'
+            explanation: 'This option directly uses specific evidence to show selective adaptation rather than total uniformity.'
           },
           {
-            question: 'A pattern observed in East Asian Empires & Isolation is consistent across multiple world regions. This suggests:',
+            question: 'Which pair is best for an AP comparison sentence about state structure?',
             options: [
-              'Coincidence',
-              'An underlying process that operates at a global scale',
-              'The data is wrong',
-              'Local factors only'
+              'Ming China and Tokugawa Japan, because both are East Asian but institutionally different',
+              'Ming China and ancient Athens, because both are premodern societies',
+              'Tokugawa Japan and Aztec Mexico, because both had warriors',
+              'Qing China and Song China, because they are from different continents'
             ],
-            correctAnswer: 1,
-            explanation: 'Consistent patterns across regions suggest a systematic process rather than coincidence.'
+            correctAnswer: 0,
+            explanation: 'This pair keeps regional context constant while highlighting meaningful institutional differences, which produces a stronger comparison argument.'
           }
         ]
       }
