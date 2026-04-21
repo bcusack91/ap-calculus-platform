@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import {
   generateAPChemDiagnosticTest,
@@ -13,6 +13,7 @@ import {
   type APChemDiagnosticResults,
 } from '@/data/ap-chemistry-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
@@ -64,6 +65,12 @@ interface HistoryEntry {
 export default function APChemDiagnosticPage() {
   const { status } = useSession()
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const challengeToken = searchParams.get('challenge')
+  const challengeFormRaw = Number(searchParams.get('challengeForm'))
+  const challengeForm = Number.isFinite(challengeFormRaw) && challengeFormRaw >= 1
+    ? challengeFormRaw
+    : null
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
   const [testData, setTestData] = useState<APChemDiagnosticTestData | null>(null)
@@ -74,6 +81,7 @@ export default function APChemDiagnosticPage() {
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
+  const [challengeSubmitted, setChallengeSubmitted] = useState(false)
   const [showReference, setShowReference] = useState(false)
   const [katexReady, setKatexReady] = useState(false)
 
@@ -121,7 +129,7 @@ export default function APChemDiagnosticPage() {
       })
       .filter((f): f is number => typeof f === 'number' && f >= 1 && f <= TOTAL_FORMS)
 
-    const form = pickNextForm(previousForms)
+    const form = (challengeForm ?? pickNextForm(previousForms)) as (1|2|3|4|5|6|7|8|9|10)
     const data = generateAPChemDiagnosticTest(form)
     // Shuffle options so correct answer position is randomized
     data.questions.forEach((q) => {
@@ -134,8 +142,9 @@ export default function APChemDiagnosticPage() {
     setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))
     setTimeRemaining(data.timeLimitMinutes * 60)
+    setChallengeSubmitted(false)
     setPhase('testing')
-  }, [history])
+  }, [history, challengeForm])
 
   const handleFinish = useCallback(async () => {
     if (!testData) return
@@ -175,6 +184,24 @@ export default function APChemDiagnosticPage() {
       }
 
       // Add flashcards for recommended (weak) topics
+
+      if (challengeToken) {
+        const challengeRes = await fetch(`/api/diagnostic-challenges/${challengeToken}/submit`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            category: `ap-chem-diagnostic-${diagnosticResults.form}`,
+            score: diagnosticResults.percentage,
+            correct: diagnosticResults.totalCorrect,
+            total: diagnosticResults.totalQuestions,
+            apScore: diagnosticResults.estimatedAPScore,
+          }),
+        })
+        if (challengeRes.ok) {
+          setChallengeSubmitted(true)
+        }
+      }
+
       if (diagnosticResults.recommendedTopics.length > 0) {
         fetch('/api/flashcards/add-from-missed', {
           method: 'POST',
@@ -185,7 +212,7 @@ export default function APChemDiagnosticPage() {
     } catch {
       // Silent fail
     }
-  }, [testData, answers])
+  }, [testData, answers, challengeToken])
 
   // Loading state
   if (status === 'loading') {
@@ -472,7 +499,17 @@ export default function APChemDiagnosticPage() {
             </div>
 
             {/* Review Test */}
-            {testData && (
+            
+          <DiagnosticChallengeCard
+            category={`ap-chem-diagnostic-${results.form ?? 1}`}
+            score={results.percentage}
+            correct={results.totalCorrect}
+            total={results.totalQuestions}
+            apScore={Math.max(1, Math.min(5, results.estimatedAPScore))}
+            currentChallengeToken={challengeToken}
+            challengeSubmitted={challengeSubmitted}
+          />
+          {testData && (
               <DiagnosticReview
                 questions={testData.questions}
                 answers={answers}

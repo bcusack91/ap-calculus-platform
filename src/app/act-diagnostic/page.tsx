@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import {
   generateACTDiagnosticTest,
@@ -13,6 +13,7 @@ import {
   type ACTDiagnosticResults,
 } from '@/data/act-practice/diagnostic-generator'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 
 function formatTime(seconds: number): string {
@@ -33,6 +34,12 @@ interface HistoryEntry {
 export default function ACTDiagnosticPage() {
   const { status } = useSession()
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const challengeToken = searchParams.get('challenge')
+  const challengeFormRaw = Number(searchParams.get('challengeForm'))
+  const challengeForm = Number.isFinite(challengeFormRaw) && challengeFormRaw >= 1
+    ? challengeFormRaw
+    : null
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
   const [testData, setTestData] = useState<ACTDiagnosticTestData | null>(null)
@@ -43,6 +50,7 @@ export default function ACTDiagnosticPage() {
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
+  const [challengeSubmitted, setChallengeSubmitted] = useState(false)
 
   useEffect(() => {
     if (status === 'unauthenticated') router.push('/auth/signin?callbackUrl=/act-diagnostic')
@@ -76,7 +84,7 @@ export default function ACTDiagnosticPage() {
     const previousForms = history
       .map(h => Number((h.results as Record<string, unknown> | null)?.form))
       .filter((f): f is number => Number.isFinite(f))
-    const form = pickNextForm(previousForms)
+    const form = (challengeForm ?? pickNextForm(previousForms)) as (1|2|3|4|5|6|7|8|9|10)
     const data = await generateACTDiagnosticTest({ form })
     // Shuffle options so correct answer position is randomized
     data.questions.forEach((q) => {
@@ -86,7 +94,7 @@ export default function ACTDiagnosticPage() {
     })
         setTestData(data); setCurrentIndex(0); setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>())); setTimeRemaining(data.timeLimitMinutes * 60); setPhase('testing'); setLoading(false)
-  }, [history])
+  }, [history, challengeForm])
 
   const handleFinish = useCallback(async () => {
     if (!testData) return
@@ -104,6 +112,24 @@ export default function ACTDiagnosticPage() {
       if (histRes.ok) { const histData = await histRes.json(); setHistory(histData.attempts ?? []) }
 
       // Add flashcards for recommended (weak/moderate) topics
+
+      if (challengeToken) {
+        const challengeRes = await fetch(`/api/diagnostic-challenges/${challengeToken}/submit`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            category: `act-diagnostic-${diagnosticResults.form}`,
+            score: diagnosticResults.percentage,
+            correct: diagnosticResults.totalCorrect,
+            total: diagnosticResults.totalQuestions,
+            apScore: Math.max(1, Math.min(5, Math.ceil(diagnosticResults.percentage / 20))),
+          }),
+        })
+        if (challengeRes.ok) {
+          setChallengeSubmitted(true)
+        }
+      }
+
       if (diagnosticResults.recommendedTopics.length > 0) {
         fetch('/api/flashcards/add-from-missed', {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -111,7 +137,7 @@ export default function ACTDiagnosticPage() {
         }).catch(() => {})
       }
     } catch { /* silent */ }
-  }, [testData, answers])
+  }, [testData, answers, challengeToken])
 
   if (status === 'loading') {
     return (
@@ -293,6 +319,16 @@ export default function ACTDiagnosticPage() {
           </div>
 
           {/* Review Test */}
+          
+          <DiagnosticChallengeCard
+            category={`act-diagnostic-${results.form ?? 1}`}
+            score={results.percentage}
+            correct={results.totalCorrect}
+            total={results.totalQuestions}
+            apScore={Math.max(1, Math.min(5, Math.ceil((results.percentage ?? 0) / 20)))}
+            currentChallengeToken={challengeToken}
+            challengeSubmitted={challengeSubmitted}
+          />
           {testData && (
             <DiagnosticReview
               questions={testData.questions}

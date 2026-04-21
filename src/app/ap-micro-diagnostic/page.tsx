@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import {
   generateAPMicroDiagnosticTest,
@@ -12,6 +12,7 @@ import {
   type APMicroDiagnosticResults,
 } from '@/data/ap-micro-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 
 function formatTime(seconds: number): string {
@@ -32,6 +33,12 @@ interface HistoryEntry {
 export default function APMicroDiagnosticPage() {
   const { status } = useSession()
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const challengeToken = searchParams.get('challenge')
+  const challengeFormRaw = Number(searchParams.get('challengeForm'))
+  const challengeForm = Number.isFinite(challengeFormRaw) && challengeFormRaw >= 1
+    ? challengeFormRaw
+    : null
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
   const [testData, setTestData] = useState<APMicroDiagnosticTestData | null>(null)
@@ -42,6 +49,7 @@ export default function APMicroDiagnosticPage() {
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
+  const [challengeSubmitted, setChallengeSubmitted] = useState(false)
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -72,7 +80,7 @@ export default function APMicroDiagnosticPage() {
 
   const startTest = useCallback(() => {
     const previousForms = history.map(h => { const r = h.results as Record<string, unknown> | null; return Number(r?.form) }).filter((f): f is number => Number.isFinite(f) && f >= 1)
-    const form = pickNextForm(previousForms)
+    const form = (challengeForm ?? pickNextForm(previousForms)) as (1|2|3|4|5|6|7|8|9|10)
     const data = generateAPMicroDiagnosticTest(form)
     // Shuffle options so correct answer position is randomized
     data.questions.forEach((q) => {
@@ -85,8 +93,9 @@ export default function APMicroDiagnosticPage() {
     setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))
     setTimeRemaining(data.timeLimitMinutes * 60)
+    setChallengeSubmitted(false)
     setPhase('testing')
-  }, [history])
+  }, [history, challengeForm])
 
   const handleFinish = useCallback(async () => {
     if (!testData) return
@@ -111,11 +120,29 @@ export default function APMicroDiagnosticPage() {
       })
       const histRes = await fetch('/api/ap-micro-diagnostic/history')
       if (histRes.ok) { const histData = await histRes.json(); setHistory(histData.attempts ?? []) }
+
+      if (challengeToken) {
+        const challengeRes = await fetch(`/api/diagnostic-challenges/${challengeToken}/submit`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            category: `ap-micro-diagnostic-${diagnosticResults.form}`,
+            score: diagnosticResults.percentage,
+            correct: diagnosticResults.totalCorrect,
+            total: diagnosticResults.totalQuestions,
+            apScore: diagnosticResults.estimatedAPScore,
+          }),
+        })
+        if (challengeRes.ok) {
+          setChallengeSubmitted(true)
+        }
+      }
+
       if (diagnosticResults.recommendedTopics.length > 0) {
         fetch('/api/flashcards/add-from-missed', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ topicSlugs: diagnosticResults.recommendedTopics.map((t: { slug: string }) => t.slug) }) }).catch(() => {})
       }
     } catch { /* silent */ }
-  }, [testData, answers])
+  }, [testData, answers, challengeToken])
 
   if (status === 'loading') {
     return (
@@ -215,6 +242,16 @@ export default function APMicroDiagnosticPage() {
             <div className="rounded-2xl border border-red-200 bg-red-50 p-5 dark:border-red-800 dark:bg-red-900/20"><h4 className="mb-2 font-semibold text-red-800 dark:text-red-300">📚 Areas to Improve</h4><ul className="space-y-1 text-sm text-red-700 dark:text-red-400">{results.weakAreas.length > 0 ? results.weakAreas.map(w => <li key={w}>• {w}</li>) : <li>Great job — no major weak areas!</li>}</ul></div>
           </div>
 
+          
+          <DiagnosticChallengeCard
+            category={`ap-micro-diagnostic-${results.form ?? 1}`}
+            score={results.percentage}
+            correct={results.totalCorrect}
+            total={results.totalQuestions}
+            apScore={Math.max(1, Math.min(5, results.estimatedAPScore))}
+            currentChallengeToken={challengeToken}
+            challengeSubmitted={challengeSubmitted}
+          />
           {testData && <DiagnosticReview questions={testData.questions} answers={answers} domainNames={Object.fromEntries(testData.domains.map(d => [d.id, d.name]))} />}
 
           {results.recommendedTopics.length > 0 && (

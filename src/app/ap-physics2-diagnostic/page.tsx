@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import {
   generateAPPhysics2DiagnosticTest,
@@ -12,6 +12,7 @@ import {
   type APPhysics2DiagnosticResults,
 } from '@/data/ap-physics-2-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 import { shuffleOptions } from '@/lib/shuffle-options'
 
@@ -33,6 +34,12 @@ interface HistoryEntry {
 export default function APPhysics2DiagnosticPage() {
   const { status } = useSession()
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const challengeToken = searchParams.get('challenge')
+  const challengeFormRaw = Number(searchParams.get('challengeForm'))
+  const challengeForm = Number.isFinite(challengeFormRaw) && challengeFormRaw >= 1
+    ? challengeFormRaw
+    : null
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
   const [testData, setTestData] = useState<APPhysics2DiagnosticTestData | null>(null)
@@ -43,6 +50,7 @@ export default function APPhysics2DiagnosticPage() {
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
+  const [challengeSubmitted, setChallengeSubmitted] = useState(false)
   const [showReference, setShowReference] = useState(false)
 
   useEffect(() => {
@@ -74,7 +82,7 @@ export default function APPhysics2DiagnosticPage() {
     const previousForms = history
       .map(h => Number((h.results as Record<string, unknown> | null)?.form))
       .filter((f): f is number => Number.isFinite(f) && f >= 1)
-    const form = pickNextForm(previousForms)
+    const form = (challengeForm ?? pickNextForm(previousForms)) as (1|2|3|4|5|6|7|8|9|10)
     const data = generateAPPhysics2DiagnosticTest(form)
     // Shuffle options so correct answer position is randomized
     data.questions.forEach((q) => {
@@ -84,7 +92,7 @@ export default function APPhysics2DiagnosticPage() {
     })
         setTestData(data); setCurrentIndex(0); setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>())); setTimeRemaining(data.timeLimitMinutes * 60); setPhase('testing')
-  }, [history])
+  }, [history, challengeForm])
 
   const handleFinish = useCallback(async () => {
     if (!testData) return
@@ -102,6 +110,24 @@ export default function APPhysics2DiagnosticPage() {
       if (histRes.ok) { const histData = await histRes.json(); setHistory(histData.attempts ?? []) }
 
       // Add flashcards for recommended (weak) topics
+
+      if (challengeToken) {
+        const challengeRes = await fetch(`/api/diagnostic-challenges/${challengeToken}/submit`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            category: `ap-physics2-diagnostic-${diagnosticResults.form}`,
+            score: diagnosticResults.percentage,
+            correct: diagnosticResults.totalCorrect,
+            total: diagnosticResults.totalQuestions,
+            apScore: diagnosticResults.estimatedAPScore,
+          }),
+        })
+        if (challengeRes.ok) {
+          setChallengeSubmitted(true)
+        }
+      }
+
       if (diagnosticResults.recommendedTopics.length > 0) {
         fetch('/api/flashcards/add-from-missed', {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -109,7 +135,7 @@ export default function APPhysics2DiagnosticPage() {
         }).catch(() => {})
       }
     } catch { /* silent */ }
-  }, [testData, answers])
+  }, [testData, answers, challengeToken])
 
   if (status === 'loading') {
     return (
@@ -263,6 +289,16 @@ export default function APPhysics2DiagnosticPage() {
           </div>
 
           {/* Review Test */}
+          
+          <DiagnosticChallengeCard
+            category={`ap-physics2-diagnostic-${results.form ?? 1}`}
+            score={results.percentage}
+            correct={results.totalCorrect}
+            total={results.totalQuestions}
+            apScore={Math.max(1, Math.min(5, results.estimatedAPScore))}
+            currentChallengeToken={challengeToken}
+            challengeSubmitted={challengeSubmitted}
+          />
           {testData && (
             <DiagnosticReview
               questions={testData.questions}

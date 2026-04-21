@@ -62,6 +62,47 @@ model User {
   asyncChallengesReceived   AsyncChallenge[]              @relation("AsyncChallengeRecipient")
   satTestAttempts           SatTestAttempt[]
   mcatTestAttempts          McatTestAttempt[]
+  diagnosticChallenges       DiagnosticChallenge[]
+  diagnosticChallengeEntries DiagnosticChallengeEntry[]
+}
+
+model DiagnosticChallenge {
+  id                 String                     @id @default(cuid())
+  token              String                     @unique @default(cuid())
+  creatorId          String
+  diagnosticCategory String
+  diagnosticForm     Int
+  creatorScore       Int
+  creatorCorrect     Int
+  creatorTotal       Int
+  creatorAPScore     Int
+  creatorName        String
+  visibility         String                     @default("public")
+  entries            DiagnosticChallengeEntry[]
+  createdAt          DateTime                   @default(now())
+  expiresAt          DateTime
+  creator            User                       @relation(fields: [creatorId], references: [id], onDelete: Cascade)
+
+  @@index([token])
+  @@index([creatorId])
+  @@index([expiresAt])
+}
+
+model DiagnosticChallengeEntry {
+  id          String              @id @default(cuid())
+  challengeId String
+  userId      String
+  displayName String
+  score       Int
+  correct     Int
+  total       Int
+  apScore     Int
+  completedAt DateTime            @default(now())
+  challenge   DiagnosticChallenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+  user        User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([challengeId, userId])
+  @@index([challengeId])
 }
 
 model Account {

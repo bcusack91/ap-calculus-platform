@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import {
   generateMCATDiagnosticTest,
@@ -12,6 +12,7 @@ import {
 } from '@/data/mcat-practice/diagnostic-generator'
 import { trackCustomEvent } from '@/lib/analytics'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 
 const MCAT_DIAGNOSTIC_SEEN_KEY = 'mcat-diagnostic-seen-v1'
@@ -229,6 +230,9 @@ function DataVisual({
 export default function MCATDiagnosticPage() {
   const { status } = useSession()
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const challengeToken = searchParams.get('challenge')
+  // MCAT has a single form — challengeForm not used
 
   type PlanTopicStatus = {
     slug: string
@@ -266,6 +270,7 @@ export default function MCATDiagnosticPage() {
     { id: string; category: string; results: string; createdAt: string }[]
   >([])
   const [planStatus, setPlanStatus] = useState<PlanStatus | null>(null)
+  const [challengeSubmitted, setChallengeSubmitted] = useState(false)
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -339,6 +344,7 @@ export default function MCATDiagnosticPage() {
     setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))
     setTimeRemaining(data.timeLimitMinutes * 60)
+    setChallengeSubmitted(false)
     setPhase('testing')
   }, [])
 
@@ -409,10 +415,27 @@ export default function MCATDiagnosticPage() {
         const statusData = await statusRes.json()
         setPlanStatus(statusData)
       }
+
+      if (challengeToken) {
+        const challengeRes = await fetch(`/api/diagnostic-challenges/${challengeToken}/submit`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            category: 'mcat-full-diagnostic-1',
+            score: diagnosticResults.percentage,
+            correct: diagnosticResults.totalCorrect,
+            total: diagnosticResults.totalQuestions,
+            apScore: Math.max(1, Math.min(5, Math.ceil(diagnosticResults.percentage / 20))),
+          }),
+        })
+        if (challengeRes.ok) {
+          setChallengeSubmitted(true)
+        }
+      }
     } catch {
       // Silent fail
     }
-  }, [testData, answers])
+  }, [testData, answers, challengeToken])
 
   // Loading state
   if (status === 'loading') {
@@ -739,7 +762,17 @@ export default function MCATDiagnosticPage() {
             </div>
 
             {/* Review Test */}
-            {testData && (
+            
+          <DiagnosticChallengeCard
+            category="mcat-full-diagnostic-1"
+            score={results.percentage}
+            correct={results.totalCorrect}
+            total={results.totalQuestions}
+            apScore={Math.max(1, Math.min(5, Math.ceil((results.percentage ?? 0) / 20)))}
+            currentChallengeToken={challengeToken}
+            challengeSubmitted={challengeSubmitted}
+          />
+          {testData && (
               <DiagnosticReview
                 questions={testData.questions}
                 answers={answers}

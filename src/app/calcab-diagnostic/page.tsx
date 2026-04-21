@@ -2,9 +2,10 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy'
 import 'katex/dist/katex.min.css'
 import { shuffleOptions } from '@/lib/shuffle-options'
@@ -51,6 +52,12 @@ interface HistoryEntry {
 export default function CalcABDiagnosticPage() {
   const { status } = useSession()
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const challengeToken = searchParams.get('challenge')
+  const challengeFormRaw = Number(searchParams.get('challengeForm'))
+  const challengeForm = Number.isFinite(challengeFormRaw) && challengeFormRaw >= 1 && challengeFormRaw <= TOTAL_FORMS
+    ? challengeFormRaw
+    : null
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
   const [testData, setTestData] = useState<CalcABDiagnosticTestData | null>(null)
@@ -62,6 +69,7 @@ export default function CalcABDiagnosticPage() {
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
   const [katexReady, setKatexReady] = useState(false)
+  const [challengeSubmitted, setChallengeSubmitted] = useState(false)
 
   useEffect(() => { preloadKatex().then(() => setKatexReady(true)) }, [])
 
@@ -104,7 +112,7 @@ export default function CalcABDiagnosticPage() {
       })
       .filter((f): f is number => f !== undefined && f >= 1 && f <= 10) as (1|2|3|4|5|6|7|8|9|10)[]
 
-    const form = pickNextForm(previousForms)
+    const form = challengeForm ? (challengeForm as 1|2|3|4|5|6|7|8|9|10) : pickNextForm(previousForms)
     const data = generateCalcABDiagnosticTest(form)
     // Shuffle options so correct answer position is randomized
     data.questions.forEach((q) => {
@@ -117,8 +125,9 @@ export default function CalcABDiagnosticPage() {
     setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))
     setTimeRemaining(data.timeLimitMinutes * 60)
+    setChallengeSubmitted(false)
     setPhase('testing')
-  }, [history])
+  }, [history, challengeForm])
 
   const handleFinish = useCallback(async () => {
     if (!testData) return
@@ -149,6 +158,24 @@ export default function CalcABDiagnosticPage() {
           strengths: diagnosticResults.strengths.join(', '),
         }),
       })
+
+      if (challengeToken) {
+        const challengeRes = await fetch(`/api/diagnostic-challenges/${challengeToken}/submit`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            category: `calcab-diagnostic-${diagnosticResults.form}`,
+            score: diagnosticResults.percentage,
+            correct: diagnosticResults.totalCorrect,
+            total: diagnosticResults.totalQuestions,
+            apScore: diagnosticResults.estimatedAPScore,
+          }),
+        })
+        if (challengeRes.ok) {
+          setChallengeSubmitted(true)
+        }
+      }
+
       const histRes = await fetch('/api/calcab-diagnostic/history')
       if (histRes.ok) {
         const histData = await histRes.json()
@@ -164,7 +191,7 @@ export default function CalcABDiagnosticPage() {
         }).catch(() => {})
       }
     } catch { /* silent */ }
-  }, [testData, answers])
+  }, [testData, answers, challengeToken])
 
   if (status === 'loading') {
     return (
@@ -301,6 +328,7 @@ export default function CalcABDiagnosticPage() {
   /* ── RESULTS ── */
   if (phase === 'results' && results) {
     const apScoreEmoji = results.estimatedAPScore >= 4 ? '🎉' : results.estimatedAPScore >= 3 ? '👍' : '📚'
+    const attemptCategory = `calcab-diagnostic-${results.form}`
 
     return (
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-violet-50 py-8 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
@@ -325,6 +353,16 @@ export default function CalcABDiagnosticPage() {
                 <p className="text-xs text-gray-500 dark:text-gray-400">{results.percentage >= 80 ? 'Excellent' : results.percentage >= 60 ? 'Good' : 'Needs Review'}</p>
               </div>
             </div>
+
+            <DiagnosticChallengeCard
+              category={attemptCategory}
+              score={results.percentage}
+              correct={results.totalCorrect}
+              total={results.totalQuestions}
+              apScore={results.estimatedAPScore}
+              currentChallengeToken={challengeToken}
+              challengeSubmitted={challengeSubmitted}
+            />
 
             {/* Domain Breakdown */}
             <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">

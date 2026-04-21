@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import {
   generateGrade8MathDiagnosticTest,
@@ -13,6 +13,7 @@ import {
   type Grade8MathResults,
 } from '@/data/grade8-math-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
 
 function formatTime(seconds: number): string {
@@ -33,6 +34,12 @@ interface HistoryEntry {
 export default function Grade8MathDiagnosticPage() {
   const { status } = useSession()
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const challengeToken = searchParams.get('challenge')
+  const challengeFormRaw = Number(searchParams.get('challengeForm'))
+  const challengeForm = Number.isFinite(challengeFormRaw) && challengeFormRaw >= 1
+    ? challengeFormRaw
+    : null
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
   const [testData, setTestData] = useState<Grade8MathTestData | null>(null)
@@ -43,6 +50,7 @@ export default function Grade8MathDiagnosticPage() {
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
+  const [challengeSubmitted, setChallengeSubmitted] = useState(false)
 
   useEffect(() => {
     if (status === 'unauthenticated') router.push('/auth/signin?callbackUrl=/grade8-math-diagnostic')
@@ -73,7 +81,7 @@ export default function Grade8MathDiagnosticPage() {
     const previousForms = history
       .map(h => Number((h.results as Record<string, unknown> | null)?.form))
       .filter((f): f is number => Number.isFinite(f))
-    const form = pickNextForm(previousForms)
+    const form = (challengeForm ?? pickNextForm(previousForms)) as (1|2|3|4|5|6|7|8|9|10)
     const data = generateGrade8MathDiagnosticTest(form)
     // Shuffle options so correct answer position is randomized
     data.questions.forEach((q) => {
@@ -83,7 +91,7 @@ export default function Grade8MathDiagnosticPage() {
     })
         setTestData(data); setCurrentIndex(0); setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>())); setTimeRemaining(data.timeLimitMinutes * 60); setPhase('testing')
-  }, [history])
+  }, [history, challengeForm])
 
   const handleFinish = useCallback(async () => {
     if (!testData) return
@@ -99,8 +107,25 @@ export default function Grade8MathDiagnosticPage() {
       })
       const histRes = await fetch('/api/grade8-math-diagnostic/history')
       if (histRes.ok) { const histData = await histRes.json(); setHistory(histData.attempts ?? []) }
+
+      if (challengeToken) {
+        const challengeRes = await fetch(`/api/diagnostic-challenges/${challengeToken}/submit`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            category: `grade8-math-diagnostic-${diagnosticResults.form}`,
+            score: diagnosticResults.percentage,
+            correct: diagnosticResults.totalCorrect,
+            total: diagnosticResults.totalQuestions,
+            apScore: Math.max(1, Math.min(5, Math.ceil(diagnosticResults.percentage / 20))),
+          }),
+        })
+        if (challengeRes.ok) {
+          setChallengeSubmitted(true)
+        }
+      }
     } catch { /* silent */ }
-  }, [testData, answers])
+  }, [testData, answers, challengeToken])
 
   if (status === 'loading') {
     return (
@@ -245,6 +270,16 @@ export default function Grade8MathDiagnosticPage() {
           </div>
 
           {/* Review Test */}
+          
+          <DiagnosticChallengeCard
+            category={`grade8-math-diagnostic-${results.form ?? 1}`}
+            score={results.percentage}
+            correct={results.totalCorrect}
+            total={results.totalQuestions}
+            apScore={Math.max(1, Math.min(5, Math.ceil((results.percentage ?? 0) / 20)))}
+            currentChallengeToken={challengeToken}
+            challengeSubmitted={challengeSubmitted}
+          />
           {testData && (
             <DiagnosticReview
               questions={testData.questions}

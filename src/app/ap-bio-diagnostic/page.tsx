@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import {
   generateAPBioDiagnosticTest,
@@ -12,6 +12,7 @@ import {
   type APBioDiagnosticResults,
 } from '@/data/ap-biology-diagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 import { shuffleOptions } from '@/lib/shuffle-options'
 
@@ -45,6 +46,12 @@ interface HistoryEntry {
 export default function APBioDiagnosticPage() {
   const { status } = useSession()
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const challengeToken = searchParams.get('challenge')
+  const challengeFormRaw = Number(searchParams.get('challengeForm'))
+  const challengeForm = Number.isFinite(challengeFormRaw) && challengeFormRaw >= 1
+    ? challengeFormRaw
+    : null
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
   const [testData, setTestData] = useState<APBioDiagnosticTestData | null>(null)
@@ -55,6 +62,7 @@ export default function APBioDiagnosticPage() {
   const [timeRemaining, setTimeRemaining] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const [history, setHistory] = useState<HistoryEntry[]>([])
+  const [challengeSubmitted, setChallengeSubmitted] = useState(false)
   const [showReference, setShowReference] = useState(false)
 
   useEffect(() => {
@@ -98,7 +106,7 @@ export default function APBioDiagnosticPage() {
       })
       .filter((f): f is number => typeof f === 'number')
 
-    const form = pickNextForm(previousForms)
+    const form = (challengeForm ?? pickNextForm(previousForms)) as (1|2|3|4|5|6|7|8|9|10)
     const data = generateAPBioDiagnosticTest(form)
     // Shuffle options so correct answer position is randomized
     data.questions.forEach((q) => {
@@ -111,8 +119,9 @@ export default function APBioDiagnosticPage() {
     setAnswers(new Array(data.questions.length).fill(null))
     setEliminatedOptions(Array.from({ length: data.questions.length }, () => new Set<number>()))
     setTimeRemaining(data.timeLimitMinutes * 60)
+    setChallengeSubmitted(false)
     setPhase('testing')
-  }, [history])
+  }, [history, challengeForm])
 
   const handleFinish = useCallback(async () => {
     if (!testData) return
@@ -152,6 +161,24 @@ export default function APBioDiagnosticPage() {
       }
 
       // Add flashcards for recommended (weak) topics
+
+      if (challengeToken) {
+        const challengeRes = await fetch(`/api/diagnostic-challenges/${challengeToken}/submit`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            category: `ap-bio-diagnostic-${diagnosticResults.form}`,
+            score: diagnosticResults.percentage,
+            correct: diagnosticResults.totalCorrect,
+            total: diagnosticResults.totalQuestions,
+            apScore: diagnosticResults.estimatedAPScore,
+          }),
+        })
+        if (challengeRes.ok) {
+          setChallengeSubmitted(true)
+        }
+      }
+
       if (diagnosticResults.recommendedTopics.length > 0) {
         fetch('/api/flashcards/add-from-missed', {
           method: 'POST',
@@ -162,7 +189,7 @@ export default function APBioDiagnosticPage() {
     } catch {
       // Silent fail
     }
-  }, [testData, answers])
+  }, [testData, answers, challengeToken])
 
   // Loading state
   if (status === 'loading') {
@@ -451,7 +478,17 @@ export default function APBioDiagnosticPage() {
             </div>
 
             {/* Review Test */}
-            {testData && (
+            
+          <DiagnosticChallengeCard
+            category={`ap-bio-diagnostic-${results.form ?? 1}`}
+            score={results.percentage}
+            correct={results.totalCorrect}
+            total={results.totalQuestions}
+            apScore={Math.max(1, Math.min(5, results.estimatedAPScore))}
+            currentChallengeToken={challengeToken}
+            challengeSubmitted={challengeSubmitted}
+          />
+          {testData && (
               <DiagnosticReview
                 questions={testData.questions}
                 answers={answers}

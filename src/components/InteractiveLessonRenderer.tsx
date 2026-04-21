@@ -4167,58 +4167,140 @@ function DropdownExercise({
     answers[index] === correctAnswer
   )
 
+  const filledCount = answers.filter(a => a !== '').length
+  const allFilled = filledCount === dropdowns.length
+
   return (
     <div className="space-y-6">
       <FadeInText content={section.content} />
-      
-      <div className="space-y-4">
+
+      <div className="space-y-3">
         {dropdowns.map((dropdown: ExerciseDropdown, index: number) => {
           const isCorrect = answers[index] === correctAnswersList[index]
-          const showFeedback = validated && answers[index]
-          
+          const showFeedback = validated && answers[index] !== ''
+          const isAnswered = answers[index] !== ''
+
           const dropdownLabel = dropdown.label || dropdown.text
+          // Many lessons author labels as fill-in-the-blank prompts ending with
+          // ": ___" or just "___". Detect that, strip it from the visible text,
+          // and render a stylized blank glyph instead so the prompt still reads
+          // like a fill-in but doesn't show a tacky colon + raw underscores.
+          const hadBlank = !!dropdownLabel && /_{2,}\s*$/.test(dropdownLabel.trim())
+          const cleanedLabel = dropdownLabel
+            ? dropdownLabel
+                .replace(/[\s:]*_{2,}\s*$/g, '')
+                .replace(/[\s:]+$/g, '')
+                .trim()
+            : ''
+
+          // Build state-driven classes for the row card
+          const rowStateClass = showFeedback
+            ? isCorrect
+              ? 'border-green-300 bg-green-50/60 dark:border-green-700/60 dark:bg-green-900/15'
+              : 'border-red-300 bg-red-50/60 dark:border-red-700/60 dark:bg-red-900/15'
+            : isAnswered
+              ? 'border-purple-300 bg-purple-50/40 dark:border-purple-700/50 dark:bg-purple-900/10'
+              : 'border-gray-200 bg-white hover:border-purple-200 hover:bg-purple-50/30 dark:border-gray-700 dark:bg-gray-800/40 dark:hover:border-purple-700/50 dark:hover:bg-purple-900/10'
+
+          const badgeStateClass = showFeedback
+            ? isCorrect
+              ? 'bg-green-500 text-white ring-green-200 dark:ring-green-900/40'
+              : 'bg-red-500 text-white ring-red-200 dark:ring-red-900/40'
+            : isAnswered
+              ? 'bg-purple-600 text-white ring-purple-200 dark:ring-purple-900/40'
+              : 'bg-gray-100 text-gray-600 ring-gray-100 dark:bg-gray-700 dark:text-gray-300 dark:ring-gray-700'
+
+          const selectStateClass = showFeedback
+            ? isCorrect
+              ? 'border-green-400 bg-white text-green-900 focus:ring-green-200 dark:bg-gray-900 dark:text-green-200 dark:border-green-600'
+              : 'border-red-400 bg-white text-red-900 focus:ring-red-200 dark:bg-gray-900 dark:text-red-200 dark:border-red-600'
+            : 'border-gray-300 bg-white text-gray-900 focus:ring-purple-200 focus:border-purple-500 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-600 dark:focus:border-purple-400'
+
           return (
-            <div key={index} className="flex items-center gap-4">
-              {dropdownLabel && <span className="text-xl font-semibold"><InlineLatex text={dropdownLabel + ':'} /></span>}
-              <select
-                value={answers[index]}
-                onChange={(e) => {
-                  const newAnswers = [...answers]
-                  newAnswers[index] = e.target.value
-                  setAnswers(newAnswers)
-                  setValidated(false)
-                }}
-                className={`px-4 py-2 text-lg border-2 rounded-lg focus:ring-2 ${
-                  showFeedback
-                    ? isCorrect
-                      ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
-                      : 'border-red-500 bg-red-50 dark:bg-red-900/20'
-                    : 'border-gray-300'
-                } focus:ring-purple-200`}
-                disabled={isComplete || showAnswer}
-              >
-                <option value="">Select...</option>
-                {randomizedOptions[index].map((option: string) => (
-                  <option key={option} value={option}>{option}</option>
-                ))}
-              </select>
-              {showFeedback && (
-                <span className="text-2xl">
-                  {isCorrect ? '✓' : '✗'}
-                </span>
-              )}
+            <div
+              key={index}
+              className={`group rounded-xl border-2 px-5 py-4 transition-all duration-200 ${rowStateClass}`}
+            >
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+                {/* Numbered badge */}
+                <div
+                  className={`flex h-9 w-9 flex-none items-center justify-center rounded-full text-sm font-bold ring-4 transition-colors ${badgeStateClass}`}
+                  aria-hidden="true"
+                >
+                  {showFeedback ? (isCorrect ? '✓' : '✗') : index + 1}
+                </div>
+
+                {/* Prompt label */}
+                {cleanedLabel && (
+                  <div className="flex-1 text-lg font-semibold text-gray-900 dark:text-gray-100 sm:text-xl">
+                    <InlineLatex text={cleanedLabel} />
+                    {hadBlank && (
+                      <span
+                        aria-hidden="true"
+                        className="mx-2 inline-block h-[3px] w-14 rounded-full bg-gradient-to-r from-purple-400 to-purple-300 dark:from-purple-500 dark:to-purple-600 sm:w-16"
+                        style={{ verticalAlign: '-0.15em' }}
+                      />
+                    )}
+                  </div>
+                )}
+
+                {/* Custom-styled select */}
+                <div className="relative flex-none">
+                  <select
+                    value={answers[index]}
+                    onChange={(e) => {
+                      const newAnswers = [...answers]
+                      newAnswers[index] = e.target.value
+                      setAnswers(newAnswers)
+                      setValidated(false)
+                    }}
+                    className={`w-full appearance-none rounded-lg border-2 py-2.5 pl-4 pr-10 text-base font-medium shadow-sm transition-all focus:outline-none focus:ring-2 sm:min-w-[14rem] sm:text-lg ${selectStateClass} ${(isComplete || showAnswer) ? 'cursor-not-allowed opacity-70' : 'cursor-pointer'}`}
+                    disabled={isComplete || showAnswer}
+                    aria-label={cleanedLabel ? `Choose for: ${cleanedLabel}` : `Choice ${index + 1}`}
+                  >
+                    <option value="" disabled>Choose an answer…</option>
+                    {randomizedOptions[index].map((option: string) => (
+                      <option key={option} value={option}>{option}</option>
+                    ))}
+                  </select>
+                  {/* Chevron */}
+                  <svg
+                    className="pointer-events-none absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-500 dark:text-gray-400"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.06l3.71-3.83a.75.75 0 111.08 1.04l-4.25 4.39a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
             </div>
           )
         })}
       </div>
 
       {!isComplete && !showAnswer && (
-        <button
-          onClick={handleSubmit}
-          className="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg text-lg transition-colors"
-        >
-          Check Answers
-        </button>
+        <div className="space-y-3">
+          {/* Progress indicator */}
+          <div className="flex items-center justify-between text-sm font-medium text-gray-600 dark:text-gray-400">
+            <span>{filledCount} of {dropdowns.length} answered</span>
+            <div className="flex gap-1.5">
+              {dropdowns.map((_, i) => (
+                <span
+                  key={i}
+                  className={`h-1.5 w-6 rounded-full transition-colors ${answers[i] ? 'bg-purple-500' : 'bg-gray-200 dark:bg-gray-700'}`}
+                />
+              ))}
+            </div>
+          </div>
+          <button
+            onClick={handleSubmit}
+            disabled={!allFilled}
+            className={`w-full rounded-lg py-3 text-lg font-bold text-white shadow-md transition-all ${allFilled ? 'bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 hover:shadow-lg active:scale-[0.99]' : 'cursor-not-allowed bg-gray-300 dark:bg-gray-700'}`}
+          >
+            {allFilled ? 'Check Answers' : `Pick all ${dropdowns.length} to continue`}
+          </button>
+        </div>
       )}
 
       {showHint && attempts === 1 && !isFullyCorrect && (
@@ -4251,16 +4333,23 @@ function DropdownExercise({
             ✓ Correct answers:
           </p>
           <ul className="space-y-2 text-lg text-green-800 dark:text-green-300">
-            {dropdowns.map((dropdown: ExerciseDropdown, index: number) => (
-              <li key={index}>
-                {dropdown.label && <><InlineLatex text={dropdown.label} />: </>}<strong><InlineLatex text={correctAnswersList[index]} /></strong>
-                {dropdown.explanation && (
-                  <p className="text-sm text-green-700 dark:text-green-400 mt-1 ml-4">
-                    <InlineLatex text={dropdown.explanation} />
-                  </p>
-                )}
-              </li>
-            ))}
+            {dropdowns.map((dropdown: ExerciseDropdown, index: number) => {
+              const rawLabel = dropdown.label || ''
+              const cleanLabel = rawLabel
+                .replace(/[\s:]*_{2,}\s*$/g, '')
+                .replace(/[\s:]+$/g, '')
+                .trim()
+              return (
+                <li key={index}>
+                  {cleanLabel && <><InlineLatex text={cleanLabel} />: </>}<strong><InlineLatex text={correctAnswersList[index]} /></strong>
+                  {dropdown.explanation && (
+                    <p className="text-sm text-green-700 dark:text-green-400 mt-1 ml-4">
+                      <InlineLatex text={dropdown.explanation} />
+                    </p>
+                  )}
+                </li>
+              )
+            })}
           </ul>
           {exercise.explanation && (
             <p className="text-lg text-green-800 dark:text-green-300 mt-4">
@@ -4271,8 +4360,9 @@ function DropdownExercise({
       )}
 
       {isFullyCorrect && (
-        <div className="text-center text-2xl font-bold text-green-600 dark:text-green-400 animate-bounce">
-          ✓ Excellent work! All correct! 🎉
+        <div className="flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 px-6 py-4 text-2xl font-bold text-green-700 shadow-sm dark:from-green-900/30 dark:to-emerald-900/30 dark:text-green-300">
+          <span className="animate-bounce">🎉</span>
+          <span>Excellent work — all correct!</span>
         </div>
       )}
     </div>

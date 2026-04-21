@@ -2,11 +2,12 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { generateDiagnosticTest, rebuildRecommendedTopics } from '@/data/sat-practice/diagnostic-generator'
 import type { DiagnosticResults, DiagnosticTestData, DomainResult } from '@/data/sat-practice/diagnostic-generator'
 import DiagnosticTest, { DiagnosticResultsView } from '@/components/SATDiagnostic'
 import DiagnosticReview from '@/components/DiagnosticReview'
+import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { InArticleAd } from '@/components/ad-banner'
 import 'katex/dist/katex.min.css'
 import { shuffleOptions } from '@/lib/shuffle-options'
@@ -14,6 +15,8 @@ import { shuffleOptions } from '@/lib/shuffle-options'
 export default function SATDiagnosticPage() {
   const { status } = useSession()
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const challengeToken = searchParams.get('challenge')
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
   const [testData, setTestData] = useState<DiagnosticTestData | null>(null)
@@ -23,6 +26,7 @@ export default function SATDiagnosticPage() {
     { id: string; category: string; results: Record<string, unknown>; weakAreas?: string; strengths?: string; createdAt: string }[]
   >([])
   const [viewingHistory, setViewingHistory] = useState(false)
+  const [challengeSubmitted, setChallengeSubmitted] = useState(false)
 
   // Reconstruct full DiagnosticResults from a stored history entry
   const reconstructResults = useCallback(
@@ -117,11 +121,28 @@ export default function SATDiagnosticPage() {
             }),
           }).catch(() => {})
         }
+
+        if (challengeToken) {
+          const challengeRes = await fetch(`/api/diagnostic-challenges/${challengeToken}/submit`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              category: 'sat-full-diagnostic-1',
+              score: diagnosticResults.percentage,
+              correct: diagnosticResults.totalCorrect,
+              total: diagnosticResults.totalQuestions,
+              apScore: Math.max(1, Math.min(5, Math.ceil(diagnosticResults.percentage / 20))),
+            }),
+          })
+          if (challengeRes.ok) {
+            setChallengeSubmitted(true)
+          }
+        }
       } catch {
         // Silent fail
       }
     },
-    [],
+    [challengeToken],
   )
 
   if (status === 'loading') {
@@ -185,6 +206,18 @@ export default function SATDiagnosticPage() {
             }}
             onGoToStudy={() => router.push('/dashboard')}
           />
+
+          <div className="mt-6 max-w-3xl mx-auto">
+            <DiagnosticChallengeCard
+              category="sat-full-diagnostic-1"
+              score={results.percentage}
+              correct={results.totalCorrect}
+              total={results.totalQuestions}
+              apScore={Math.max(1, Math.min(5, Math.ceil(results.percentage / 20)))}
+              currentChallengeToken={challengeToken}
+              challengeSubmitted={challengeSubmitted}
+            />
+          </div>
 
           {/* How the cycle works */}
           <div className="mt-8 max-w-3xl mx-auto">
