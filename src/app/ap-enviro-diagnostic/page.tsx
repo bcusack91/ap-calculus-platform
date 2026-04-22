@@ -113,7 +113,7 @@ export default function APEnviroDiagnosticPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           category: `ap-enviro-diagnostic-${testData.form}`,
-          results: { form: diagnosticResults.form, totalCorrect: diagnosticResults.totalCorrect, totalQuestions: diagnosticResults.totalQuestions, percentage: diagnosticResults.percentage, estimatedAPScore: diagnosticResults.estimatedAPScore, domains: diagnosticResults.domains, recommendedTopics: diagnosticResults.recommendedTopics },
+          results: { review: { questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map(d => [d.id, d.name])) }, form: diagnosticResults.form, totalCorrect: diagnosticResults.totalCorrect, totalQuestions: diagnosticResults.totalQuestions, percentage: diagnosticResults.percentage, estimatedAPScore: diagnosticResults.estimatedAPScore, domains: diagnosticResults.domains, recommendedTopics: diagnosticResults.recommendedTopics },
           weakAreas: diagnosticResults.weakAreas,
           strengths: diagnosticResults.strengths.join(', '),
         }),
@@ -335,7 +335,7 @@ export default function APEnviroDiagnosticPage() {
             <h3 className="mb-3 text-sm font-medium text-gray-500 uppercase dark:text-gray-400">Most Recent Result</h3>
             <div className="flex items-center justify-between">
               <div><p className="text-3xl font-bold text-lime-600 dark:text-lime-400">{String(lastResult.estimatedAPScore ?? '—')}/5</p><p className="text-sm text-gray-500 dark:text-gray-400">Estimated AP Score</p></div>
-              <div className="text-right"><p className="text-sm text-gray-600 dark:text-gray-400">{String(lastResult.totalCorrect ?? '—')}/{String(lastResult.totalQuestions ?? '—')} correct</p><p className="text-xs text-gray-400">{new Date(history[0].createdAt).toLocaleDateString()}</p></div>
+              <div className="text-right"><p className="text-sm text-gray-600 dark:text-gray-400">{String(lastResult.totalCorrect ?? '—')}/{String(lastResult.totalQuestions ?? '—')} correct</p><p className="text-xs text-gray-400">{new Date(history[0].createdAt).toLocaleDateString()}<br /><Link href={`/diagnostic-review/${history[0].id}`} className="mt-1 inline-block text-xs font-semibold text-purple-600 hover:underline dark:text-purple-400" onClick={(e) => e.stopPropagation()}>Review past attempt →</Link></p></div>
             </div>
           </div>
         )}
@@ -380,10 +380,10 @@ export default function APEnviroDiagnosticPage() {
               {history.slice(1, 8).map(h => {
                 const parsed = h.results as Record<string, unknown>
                 return (
-                  <div key={h.id} className="flex items-center justify-between rounded-lg bg-gray-50 p-3 dark:bg-gray-700/50">
+                  <Link key={h.id} href={`/diagnostic-review/${h.id}`} className="flex items-center justify-between rounded-lg bg-gray-50 p-3 dark:bg-gray-700/50 cursor-pointer transition hover:bg-gray-100 dark:hover:bg-gray-600/60 hover:shadow-sm">
                     <div className="flex items-center gap-3"><span className="text-sm font-semibold text-gray-700 dark:text-gray-300">Score: {String(parsed?.estimatedAPScore ?? '—')}/5</span><span className="text-xs text-gray-500 dark:text-gray-400">Form {String(parsed?.form ?? '?')}</span></div>
                     <span className="text-xs text-gray-400">{new Date(h.createdAt).toLocaleDateString()}</span>
-                  </div>
+                  </Link>
                 )
               })}
             </div>

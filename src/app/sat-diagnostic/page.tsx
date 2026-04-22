@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
+import Link from 'next/link'
 import { generateDiagnosticTest, rebuildRecommendedTopics } from '@/data/sat-practice/diagnostic-generator'
 import type { DiagnosticResults, DiagnosticTestData, DomainResult } from '@/data/sat-practice/diagnostic-generator'
 import DiagnosticTest, { DiagnosticResultsView } from '@/components/SATDiagnostic'
@@ -94,6 +95,7 @@ export default function SATDiagnosticPage() {
           body: JSON.stringify({
             category: 'sat-full-diagnostic',
             results: JSON.stringify({
+              review: testData ? { questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map(d => [d.id, d.name])) } : undefined,
               totalCorrect: diagnosticResults.totalCorrect,
               totalQuestions: diagnosticResults.totalQuestions,
               percentage: diagnosticResults.percentage,
@@ -268,7 +270,7 @@ export default function SATDiagnosticPage() {
                 Back to Menu
               </button>
               <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                Results from {new Date(history[0].createdAt).toLocaleDateString()}
+                Results from {new Date(history[0].createdAt).toLocaleDateString()}<br /><Link href={`/diagnostic-review/${history[0].id}`} className="mt-1 inline-block text-xs font-semibold text-purple-600 hover:underline dark:text-purple-400" onClick={(e) => e.stopPropagation()}>Review past attempt →</Link>
               </p>
             </div>
             <DiagnosticResultsView
@@ -417,17 +419,16 @@ export default function SATDiagnosticPage() {
                 {history.slice(1, 6).map(h => {
                   const parsed = (h.results ?? {}) as unknown as Record<string, unknown>
                   return (
-                    <div
-                      key={h.id}
-                      className="flex items-center justify-between rounded-lg bg-gray-50 p-3 dark:bg-gray-700/50"
-                    >
+                    <Link
+                      key={h.id} href={`/diagnostic-review/${h.id}`}
+                      className="flex items-center justify-between rounded-lg bg-gray-50 p-3 dark:bg-gray-700/50 cursor-pointer transition hover:bg-gray-100 dark:hover:bg-gray-600/60 hover:shadow-sm">
                       <span className="text-sm text-gray-700 dark:text-gray-300">
                         Score: {String(parsed.estimatedScore ?? '—')}
                       </span>
                       <span className="text-xs text-gray-400 dark:text-gray-400">
                         {new Date(h.createdAt).toLocaleDateString()}
                       </span>
-                    </div>
+                    </Link>
                   )
                 })}
               </div>
