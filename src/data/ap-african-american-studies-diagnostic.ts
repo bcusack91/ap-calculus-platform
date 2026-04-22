@@ -63,25 +63,25 @@ const AP_AFRICANAMERICANSTUDIES_DOMAINS: APAfricanAmericanStudiesDomain[] = [
   {
     id: 'origins-diaspora',
     name: 'Origins of the African Diaspora',
-    topicSlugs: ['aas-african-kingdoms', 'aas-origins-diaspora', 'aas-transatlantic-slave-trade'],
+    topicSlugs: ['aas-african-kingdoms', 'aas-transatlantic-slave-trade'],
     questionTarget: 3,
   },
   {
     id: 'freedom-enslavement',
     name: 'Freedom, Enslavement & Resistance',
-    topicSlugs: ['aas-slavery-in-america', 'aas-resistance-abolition', 'aas-freedom-enslavement'],
+    topicSlugs: ['aas-slavery-in-america', 'aas-resistance-abolition'],
     questionTarget: 3,
   },
   {
     id: 'practice-freedom',
     name: 'The Practice of Freedom',
-    topicSlugs: ['aas-reconstruction-jim-crow', 'aas-great-migration-harlem', 'aas-wwi-wwii-era', 'aas-practice-freedom'],
+    topicSlugs: ['aas-reconstruction-jim-crow', 'aas-great-migration-harlem', 'aas-wwi-wwii-era'],
     questionTarget: 3,
   },
   {
     id: 'movements-debates',
     name: 'Movements & Debates',
-    topicSlugs: ['aas-civil-rights-movement', 'aas-black-power-beyond', 'aas-contemporary-issues', 'aas-movements-debates'],
+    topicSlugs: ['aas-civil-rights-movement', 'aas-black-power-beyond', 'aas-contemporary-issues'],
     questionTarget: 3,
   }
 ]

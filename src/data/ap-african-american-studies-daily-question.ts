@@ -6,19 +6,15 @@ import { generateExitQuiz } from '@/data/exit-quizzes'
 
 const TOPIC_SLUGS = [
   'aas-african-kingdoms',
-  'aas-origins-diaspora',
   'aas-transatlantic-slave-trade',
   'aas-slavery-in-america',
   'aas-resistance-abolition',
-  'aas-freedom-enslavement',
   'aas-reconstruction-jim-crow',
   'aas-great-migration-harlem',
   'aas-wwi-wwii-era',
-  'aas-practice-freedom',
   'aas-civil-rights-movement',
   'aas-black-power-beyond',
   'aas-contemporary-issues',
-  'aas-movements-debates',
 ]
 
 function dayOfYear(): number {

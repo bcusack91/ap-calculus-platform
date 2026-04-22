@@ -10,26 +10,23 @@ const sprint: StudyPlanTemplate = {
     ...weekTasks(0, [
       { title: 'Take Diagnostic', type: 'QUIZ' as const, dayOfWeek: 0 },
       { title: 'African Kingdoms Review', type: 'LESSON' as const, topicSlug: 'aas-african-kingdoms', dayOfWeek: 1 },
-      { title: 'Origins of Diaspora Review', type: 'LESSON' as const, topicSlug: 'aas-origins-diaspora', dayOfWeek: 2 },
       { title: 'Transatlantic Slave Trade Review', type: 'LESSON' as const, topicSlug: 'aas-transatlantic-slave-trade', dayOfWeek: 3 },
       { title: 'Slavery in America Review', type: 'LESSON' as const, topicSlug: 'aas-slavery-in-america', dayOfWeek: 4 },
       { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 },
     ]),
     ...weekTasks(1, [
       { title: 'Resistance & Abolition Review', type: 'LESSON' as const, topicSlug: 'aas-resistance-abolition', dayOfWeek: 0 },
-      { title: 'Freedom & Enslavement Review', type: 'LESSON' as const, topicSlug: 'aas-freedom-enslavement', dayOfWeek: 2 },
       { title: 'Reconstruction & Jim Crow Review', type: 'LESSON' as const, topicSlug: 'aas-reconstruction-jim-crow', dayOfWeek: 4 },
       { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 },
     ]),
     ...weekTasks(2, [
       { title: 'WWI & WWII Era Review', type: 'LESSON' as const, topicSlug: 'aas-wwi-wwii-era', dayOfWeek: 0 },
-      { title: 'Practice of Freedom Review', type: 'LESSON' as const, topicSlug: 'aas-practice-freedom', dayOfWeek: 2 },
       { title: 'Civil Rights Movement Review', type: 'LESSON' as const, topicSlug: 'aas-civil-rights-movement', dayOfWeek: 4 },
       { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 },
     ]),
     ...weekTasks(3, [
       { title: 'Contemporary Issues Review', type: 'LESSON' as const, topicSlug: 'aas-contemporary-issues', dayOfWeek: 0 },
-      { title: 'Movements Today Review', type: 'LESSON' as const, topicSlug: 'aas-movements-debates', dayOfWeek: 2 },
+      { title: 'Black Power & Beyond Review', type: 'LESSON' as const, topicSlug: 'aas-black-power-beyond', dayOfWeek: 2 },
       { title: 'Full Practice Exam', type: 'PRACTICE' as const, dayOfWeek: 3 },
       { title: 'Final Review', type: 'CUSTOM' as const, dayOfWeek: 5 },
     ]),
@@ -45,7 +42,6 @@ const standard: StudyPlanTemplate = {
     ...weekTasks(0, [
       { title: 'Take Diagnostic', type: 'QUIZ' as const, dayOfWeek: 0 },
       { title: 'African Kingdoms', type: 'LESSON' as const, topicSlug: 'aas-african-kingdoms', dayOfWeek: 1 },
-      { title: 'Origins of Diaspora', type: 'LESSON' as const, topicSlug: 'aas-origins-diaspora', dayOfWeek: 3 },
       { title: 'Flashcards', type: 'FLASHCARD' as const, dayOfWeek: 5 },
     ]),
     ...weekTasks(1, [
@@ -56,7 +52,6 @@ const standard: StudyPlanTemplate = {
     ]),
     ...weekTasks(2, [
       { title: 'Resistance & Abolition', type: 'LESSON' as const, topicSlug: 'aas-resistance-abolition', dayOfWeek: 0 },
-      { title: 'Freedom & Enslavement', type: 'LESSON' as const, topicSlug: 'aas-freedom-enslavement', dayOfWeek: 2 },
       { title: 'Topic Quiz', type: 'QUIZ' as const, dayOfWeek: 4 },
       { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 },
     ]),
@@ -68,7 +63,6 @@ const standard: StudyPlanTemplate = {
     ]),
     ...weekTasks(4, [
       { title: 'WWI & WWII Era', type: 'LESSON' as const, topicSlug: 'aas-wwi-wwii-era', dayOfWeek: 0 },
-      { title: 'Practice of Freedom', type: 'LESSON' as const, topicSlug: 'aas-practice-freedom', dayOfWeek: 2 },
       { title: 'Topic Quiz', type: 'QUIZ' as const, dayOfWeek: 4 },
       { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 },
     ]),
@@ -80,7 +74,6 @@ const standard: StudyPlanTemplate = {
     ]),
     ...weekTasks(6, [
       { title: 'Contemporary Issues', type: 'LESSON' as const, topicSlug: 'aas-contemporary-issues', dayOfWeek: 0 },
-      { title: 'Movements Today', type: 'LESSON' as const, topicSlug: 'aas-movements-debates', dayOfWeek: 2 },
       { title: 'Topic Quiz', type: 'QUIZ' as const, dayOfWeek: 4 },
       { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 },
     ]),
@@ -109,13 +102,13 @@ const comprehensive: StudyPlanTemplate = {
   durationWeeks: 16, targetImprovement: '2–3 AP score points', weeklyHours: '8–10 hours', difficulty: 'Advanced',
   tasks: [
     ...weekTasks(0, [{ title: 'Take Diagnostic', type: 'QUIZ' as const, dayOfWeek: 0 }, { title: 'Set Goals & Review Syllabus', type: 'CUSTOM' as const, dayOfWeek: 2 }, { title: 'African Kingdoms', type: 'LESSON' as const, topicSlug: 'aas-african-kingdoms', dayOfWeek: 4 }]),
-    ...weekTasks(1, [{ title: 'Origins of Diaspora', type: 'LESSON' as const, topicSlug: 'aas-origins-diaspora', dayOfWeek: 0 }, { title: 'Transatlantic Slave Trade', type: 'LESSON' as const, topicSlug: 'aas-transatlantic-slave-trade', dayOfWeek: 2 }, { title: 'Practice Problems', type: 'PRACTICE' as const, dayOfWeek: 4 }, { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 }]),
+    ...weekTasks(1, [{ title: 'Transatlantic Slave Trade', type: 'LESSON' as const, topicSlug: 'aas-transatlantic-slave-trade', dayOfWeek: 2 }, { title: 'Practice Problems', type: 'PRACTICE' as const, dayOfWeek: 4 }, { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 }]),
     ...weekTasks(2, [{ title: 'Slavery in America', type: 'LESSON' as const, topicSlug: 'aas-slavery-in-america', dayOfWeek: 0 }, { title: 'Resistance & Abolition', type: 'LESSON' as const, topicSlug: 'aas-resistance-abolition', dayOfWeek: 2 }, { title: 'Practice Problems', type: 'PRACTICE' as const, dayOfWeek: 4 }, { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 }]),
-    ...weekTasks(3, [{ title: 'Freedom & Enslavement', type: 'LESSON' as const, topicSlug: 'aas-freedom-enslavement', dayOfWeek: 0 }, { title: 'Reconstruction & Jim Crow', type: 'LESSON' as const, topicSlug: 'aas-reconstruction-jim-crow', dayOfWeek: 2 }, { title: 'Practice Problems', type: 'PRACTICE' as const, dayOfWeek: 4 }, { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 }]),
+    ...weekTasks(3, [{ title: 'Reconstruction & Jim Crow', type: 'LESSON' as const, topicSlug: 'aas-reconstruction-jim-crow', dayOfWeek: 2 }, { title: 'Practice Problems', type: 'PRACTICE' as const, dayOfWeek: 4 }, { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 }]),
     ...weekTasks(4, [{ title: 'Great Migration & Harlem', type: 'LESSON' as const, topicSlug: 'aas-great-migration-harlem', dayOfWeek: 0 }, { title: 'WWI & WWII Era', type: 'LESSON' as const, topicSlug: 'aas-wwi-wwii-era', dayOfWeek: 2 }, { title: 'Practice Problems', type: 'PRACTICE' as const, dayOfWeek: 4 }, { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 }]),
-    ...weekTasks(5, [{ title: 'Practice of Freedom', type: 'LESSON' as const, topicSlug: 'aas-practice-freedom', dayOfWeek: 0 }, { title: 'Civil Rights Movement', type: 'LESSON' as const, topicSlug: 'aas-civil-rights-movement', dayOfWeek: 2 }, { title: 'Practice Problems', type: 'PRACTICE' as const, dayOfWeek: 4 }, { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 }]),
+    ...weekTasks(5, [{ title: 'Civil Rights Movement', type: 'LESSON' as const, topicSlug: 'aas-civil-rights-movement', dayOfWeek: 2 }, { title: 'Practice Problems', type: 'PRACTICE' as const, dayOfWeek: 4 }, { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 }]),
     ...weekTasks(6, [{ title: 'Black Power & Beyond', type: 'LESSON' as const, topicSlug: 'aas-black-power-beyond', dayOfWeek: 0 }, { title: 'Contemporary Issues', type: 'LESSON' as const, topicSlug: 'aas-contemporary-issues', dayOfWeek: 2 }, { title: 'Practice Problems', type: 'PRACTICE' as const, dayOfWeek: 4 }, { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 }]),
-    ...weekTasks(7, [{ title: 'Movements Today', type: 'LESSON' as const, topicSlug: 'aas-movements-debates', dayOfWeek: 0 }, { title: 'Practice Problems', type: 'PRACTICE' as const, dayOfWeek: 4 }, { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 }]),
+    ...weekTasks(7, [{ title: 'Practice Problems', type: 'PRACTICE' as const, dayOfWeek: 4 }, { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 }]),
     ...weekTasks(8, [{ title: 'Mid-Course Practice Exam', type: 'PRACTICE' as const, dayOfWeek: 0 }, { title: 'Review Results', type: 'CUSTOM' as const, dayOfWeek: 2 }, { title: 'Target Weak Areas', type: 'CUSTOM' as const, dayOfWeek: 4 }, { title: 'Comprehensive Flashcard Drill', type: 'FLASHCARD' as const, dayOfWeek: 5 }]),
     ...weekTasks(9, [{ title: 'Practice Problems', type: 'PRACTICE' as const, dayOfWeek: 4 }, { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 }]),
     ...weekTasks(10, [{ title: 'Practice Problems', type: 'PRACTICE' as const, dayOfWeek: 4 }, { title: 'Flashcard Review', type: 'FLASHCARD' as const, dayOfWeek: 5 }]),

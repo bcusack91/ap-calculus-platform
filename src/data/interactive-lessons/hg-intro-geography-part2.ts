@@ -5,19 +5,46 @@ export const hgIntroGeographyPart2Data = {
       id: 'hgintrog2-intro',
       type: 'text' as const,
       content: `
-# 🌍 Introduction to Geography
+# 🗺️ Maps and Spatial Data
 
-**Part 2 of 7 — Maps and Spatial Data**
+**Part 2 of 7 — Maps, Projections, and Geospatial Technology**
 
-Maps are the geographer's primary tool for visualizing and analyzing spatial data. Different map types serve different purposes, from reference maps showing locations to thematic maps displaying patterns.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 Reference vs. Thematic Maps |
+| Map Projections & Distortion |
+| 📌 Six Thematic Map Types |
+| GIS, GPS, Remote Sensing |
 
-| Concept | Description |
-|---------|-------------|
-| **Thematic map** | A map that displays a particular theme or pattern across space |
-| **GIS** | Geographic Information System — technology for analyzing spatial data |
-| **Map projection** | A method of representing Earth's curved surface on a flat map |
+> 🔑 **Key Concept:** Every map lies. The question is **how** it lies — what it preserves, what it distorts, and whose story it tells. AP graders reward students who can name the map *type* and explain its *trade-offs*.
+      `
+    },
+    {
+      id: 'hgintrog2-types',
+      type: 'text' as const,
+      content: `
+## 📖 Reference vs. Thematic Maps
+
+| Family | Purpose | Examples |
+|--------|---------|----------|
+| **Reference maps** | Show *where* things are (locations) | Road atlas, political map, topographic (USGS quad), plat map |
+| **Thematic maps** | Show *spatial patterns* of a variable | Choropleth, isoline, dot density, graduated symbol, cartogram |
+
+### Map Projections — The Trade-Off Triangle
+
+A flat sheet cannot perfectly represent a sphere. Every projection sacrifices at least one of: **shape (conformality)**, **area**, **distance**, or **direction**.
+
+| Projection | Preserves | Distorts | Famous Use |
+|------------|-----------|----------|------------|
+| **Mercator** (1569) | Shape, direction (rhumb lines = straight) | Area (Greenland looks larger than Africa!) | Marine navigation, Google Maps web tiles |
+| **Peters / Gall-Peters** | Area | Shape (continents look stretched) | Used by activists to highlight Global South size |
+| **Robinson** | A compromise — no property exactly | All slightly | National Geographic 1988–98, AP textbooks |
+| **Goode's Homolosine** | Area | Cuts oceans (interrupted) | Showing global crop, climate, biome data |
+| **Polar / Azimuthal** | Direction from center | Areas at edges | Air-route maps, U.N. flag |
+
+> ⚠️ **AP Alert:** Mercator is NOT "wrong" — it is *correct for what it preserves* (angles, for navigation). The AP exam tests whether you know which projection fits which **purpose**.
       `
     },
     {
@@ -29,113 +56,138 @@ Maps are the geographer's primary tool for visualizing and analyzing spatial dat
       exercise: {
         questions: [
           {
-            question: 'What is a thematic map?',
+            question: "A teacher wants to show students that Africa (30.4 million km²) is roughly 14× larger than Greenland (2.2 million km²). The most appropriate projection is:",
             options: [
-              'A map showing political boundaries',
-              'A map displaying a particular pattern or theme',
-              'A map used for navigation',
-              'A map showing elevation'
+              "Mercator — it preserves shape",
+              "Gall-Peters — it preserves area",
+              "Robinson — it is a balanced compromise",
+              "Polar azimuthal — it is centered on the equator"
             ],
             correctAnswer: 1,
-            explanation: 'Thematic maps display specific themes or patterns like population density, climate, or economic activity.'
+            explanation: "Equal-area (Gall-Peters) projections faithfully represent the relative *areas* of landmasses, exposing Mercator's high-latitude inflation."
           },
           {
-            question: 'What does GIS stand for?',
+            question: "An airline planning a great-circle route from Anchorage to Stockholm should use a:",
             options: [
-              'Global Information Service',
-              'Geographic Information System',
-              'General Internet Source',
-              'Geological Investigation Software'
+              "Mercator projection",
+              "Robinson projection",
+              "Polar (azimuthal) projection",
+              "Gall-Peters projection"
             ],
-            correctAnswer: 1,
-            explanation: 'GIS stands for Geographic Information System — it allows layering and analysis of spatial data.'
+            correctAnswer: 2,
+            explanation: "Great-circle routes between high-latitude cities pass near the pole. A polar/azimuthal projection preserves true direction and distance from a central point — ideal for polar flight planning."
           }
         ]
       }
     },
     {
-      id: 'hgintrog2-content',
+      id: 'hgintrog2-thematic',
       type: 'text' as const,
       content: `
-## Maps and Spatial Data — Deeper Dive
+## 📌 The Six Thematic Map Types You Must Recognize
 
-### Thematic map
-A map that displays a particular theme or pattern across space. Understanding this concept is essential for mastering Introduction to Geography in AP Human Geography.
+| Type | Shows | Best For | Watch Out For |
+|------|-------|----------|---------------|
+| **Choropleth** | Colored or shaded regions, usually by enumeration unit (county, state) | Rates and ratios (% obese, GDP/capita) | "Modifiable Areal Unit Problem" — bigger units hide local variation |
+| **Isoline / Isopleth** | Lines of equal value (contours) | Continuous data (elevation, temperature, rainfall) | Reading interpolation between lines |
+| **Dot density** | One dot = N units of the variable | Raw counts and clustering (population, dairy farms) | Dot placement is symbolic, not exact |
+| **Graduated / proportional symbol** | Symbol size scales with magnitude | Comparing totals across cities (oil exports, MLB attendance) | Bigger circles = bigger value, but humans underestimate area |
+| **Cartogram** | Areas resized to reflect a variable | Dramatizing disparities (electoral votes, COVID deaths) | Distorts shape; can mislead casual viewers |
+| **Flow-line** | Arrows of varying width | Movements (migration corridors, trade flows) | Cluttered if too many flows |
 
-### GIS
-Geographic Information System — technology for analyzing spatial data. This builds on the previous concept and connects to broader themes in the course.
+### Choropleth Pitfalls
 
-### Map projection
-A method of representing Earth's curved surface on a flat map. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+- **Use rates, not raw counts.** A choropleth of "total people with diabetes" just looks like a population map. Use **prevalence (%)** instead.
+- **Choose intervals carefully.** Equal interval, quantile, and natural breaks (Jenks) classifications can make the same data look very different.
+- **Beware ecological fallacy** — a state with high average X does not mean every individual is high in X.
       `
     },
     {
       id: 'hgintrog2-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall (exact-term answers)** ✍️
 
-1) What term refers to a map that displays a particular theme or pattern across space?
+1) A USGS topographic quad shows elevation using continuous brown lines. What thematic map type uses lines connecting points of equal value?
 
-2) What concept describes geographic Information System — technology for analyzing spatial data?
+2) A map shrinks Greenland to a sliver and balloons China to fill half the Northern Hemisphere because each country is sized by its 2024 population. What thematic map type is this?
 
-3) Name the term for a method of representing Earth's curved surface on a flat map.
+3) A reporter shades U.S. counties by COVID-19 case rate per 100,000 residents. What thematic map type is this?
 
-Use the exact term from this part.
+Use the exact term from the lesson.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Thematic map', 'GIS', 'Map projection'],
-        hint1: 'Starts with: T',
-        hint2: 'Starts with: G',
-        hint3: 'Starts with: M',
-        explanation: 'Expected answers: Thematic map (A map that displays a particular theme or pattern across space), GIS (Geographic Information System — technology for analyzing spatial data), and Map projection (A method of representing Earth\'s curved surface on a flat map).'
+        correctAnswers: ["Isoline", "Cartogram", "Choropleth"],
+        hint1: "Also called isopleth. Think contour lines.",
+        hint2: "Distorts area, not value. Common in election coverage.",
+        hint3: "Color-shaded enumeration units. The most common thematic map.",
+        explanation: "Isoline — equal-value lines (contours). Cartogram — units resized by data value. Choropleth — shaded enumeration units showing rates/ratios."
       }
+    },
+    {
+      id: 'hgintrog2-tech',
+      type: 'text' as const,
+      content: `
+## 🛰️ GIS, GPS & Remote Sensing — Modern Geospatial Tech
+
+| Technology | What It Does | AP-Worthy Examples |
+|------------|--------------|--------------------|
+| **GIS (Geographic Information System)** | Layers spatial data (vector + raster) for analysis and mapping | Detroit overlays foreclosure, school district, and crime layers to plan blight removal |
+| **GPS (Global Positioning System)** | 24+ satellites give absolute position (lat/long/elev) | Uber/Lyft routing, precision agriculture (auto-steer tractors) |
+| **Remote sensing** | Imagery from satellites, aircraft, drones | Landsat tracks Amazon deforestation; MODIS tracks crop yields |
+| **GNSS (broader GPS)** | GPS + Russian GLONASS + EU Galileo + China BeiDou | Smartphone navigation in urban canyons |
+| **Geotagging / VGI** | User-supplied location data on photos, tweets, OpenStreetMap | Crisis Mappers used VGI after the 2010 Haiti earthquake |
+| **Spatial big data** | Aggregated cell-phone, credit-card, social-media flows | Tracking pandemic mobility (Apple/Google reports during COVID-19) |
+
+> 🔑 **Why This Matters:** The 2020 CED added an entire topic (1.3) on **the power of geographic data**. Expect MCQs on which technology produced what kind of dataset, and FRQs asking the **ethical** trade-offs (privacy, surveillance, data divides).
+      `
     },
     {
       id: 'hgintrog2-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Tool** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'A map that displays a particular theme or pattern across space is called ___',
-            options: ['Thematic map', 'GIS', 'Map projection', 'None of these']
+            label: "John Deere tractors auto-steer rows 2 cm apart by combining satellite signals with on-board sensors. Core technology: ___",
+            options: ["GPS", "Choropleth", "Cartogram", "Mercator projection"]
           },
           {
-            label: 'Geographic Information System — technology for analyzing spatial data describes ___',
-            options: ['Thematic map', 'GIS', 'Map projection', 'All of these']
+            label: "After Hurricane Maria, NASA's MODIS satellite measured pre/post nighttime light to estimate Puerto Rico's blackout extent. Core technology: ___",
+            options: ["Remote sensing", "GIS overlay analysis", "Volunteered Geographic Information (VGI)", "GPS"]
           },
           {
-            label: 'A method of representing Earth\'s curved surface on a flat map is known as ___',
-            options: ['Map projection', 'Thematic map', 'GIS', 'None of these']
+            label: "Detroit's Land Bank stacks foreclosure, vacancy, school-quality, and crime layers in ArcGIS to prioritize demolitions. Core technology: ___",
+            options: ["GIS", "GPS", "Cartogram", "Polar projection"]
           }
         ],
-        correctAnswers: ['Thematic map', 'GIS', 'Map projection'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Thematic map — A map that displays a particular theme or pattern across space. GIS — Geographic Information System — technology for analyzing spatial data. Map projection — A method of representing Earth\'s curved surface on a flat map.'
+        correctAnswers: ["GPS", "Remote sensing", "GIS"],
+        hint1: "Satellite-based positioning.",
+        hint2: "Imagery captured from above without physical contact.",
+        hint3: "Layered spatial analysis software.",
+        explanation: "GPS = position. Remote sensing = sensor imagery from satellites/drones. GIS = layered spatial data analysis. The trio underpins all modern AP-relevant geospatial work."
       }
     },
     {
       id: 'hgintrog2-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## ⚡ Common Misconceptions & AP Strategy
 
 ### Misconceptions to Avoid
-- Don\'\'t confuse **Thematic map** with **GIS** — while related, they address different aspects of Introduction to Geography.
-- **Map projection** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+- **"Mercator is wrong"** — it is *appropriate for navigation*. The exam wants the **purpose-projection match**, not a verdict.
+- **GPS ≠ GIS**. GPS is a positioning service; GIS is layered analysis software. Confusing them is a frequent FRQ point loss.
+- **Choropleth ≠ raw counts**. Always use rates, percentages, or per-capita values; otherwise the map is just a population map.
+- **Remote sensing is not "Google Maps."** It is the satellite/aerial *imagery* underneath — Landsat, Sentinel, MODIS, NOAA — separate from the routing service.
 
 ### AP Strategy Moves
-- When you see questions about maps and spatial data, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect maps and spatial data to broader themes in AP Human Geography for higher scores.
+- For map-stimulus MCQs: **identify the type first** (choropleth? isoline? cartogram?), then ask "what variable, what unit, what classification."
+- For projection MCQs: ask **"what is preserved? what is distorted?"** — match to the purpose described.
+- For tech FRQs: name the **technology + the data it produces + one ethical concern** (e.g., "GPS pings → individual mobility data → privacy / surveillance").
+- For "appropriate map type" FRQs: 4-mark answers usually require *naming the type AND defending the choice with a specific data property* (continuous vs. discrete, rate vs. count).
       `
     },
     {
@@ -147,26 +199,26 @@ Use the exact term from this part.
       exercise: {
         questions: [
           {
-            question: 'A cartographer needs to show population density across the US. The best choice is:',
+            question: "A public-health team wants to map daily PM2.5 air-pollution readings across Los Angeles County. The pollution varies smoothly across space. The most appropriate thematic map type is:",
             options: [
-              'A reference map showing state capitals',
-              'A thematic choropleth map with shading by density',
-              'A road map with highway numbers',
-              'A topographic map with elevation contours'
+              "Choropleth shaded by ZIP code",
+              "Isoline (isopleth) map of equal pollution values",
+              "Cartogram with ZIP codes resized by population",
+              "Dot density map with one dot per resident"
             ],
             correctAnswer: 1,
-            explanation: 'A choropleth (thematic) map uses color shading to show variations in population density across regions.'
+            explanation: "PM2.5 is a continuous field (it doesn't 'jump' at ZIP boundaries). Isolines best represent continuous phenomena; choropleth would impose artificial breaks at administrative units."
           },
           {
-            question: 'A city planner layers crime data, income levels, and school locations to identify underserved areas. This technology is:',
+            question: "An MCQ stimulus shows a map with U.S. states resized so larger states represent more 2020 electoral votes. Texas and Florida balloon while Wyoming and Vermont shrink. This is a:",
             options: [
-              'GIS — overlaying multiple data layers for spatial analysis',
-              'GPS — pinpointing exact coordinates',
-              'Remote sensing — collecting satellite imagery',
-              'Cartography — drawing maps by hand'
+              "Choropleth map",
+              "Cartogram",
+              "Isoline map",
+              "Mercator projection"
             ],
-            correctAnswer: 0,
-            explanation: 'GIS allows combining multiple spatial data layers to reveal patterns and inform decisions.'
+            correctAnswer: 1,
+            explanation: "Resizing units to reflect a variable while distorting their shape is the defining feature of a cartogram — useful for dramatizing political weight or other counts."
           }
         ]
       }
