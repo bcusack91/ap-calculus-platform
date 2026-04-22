@@ -337,6 +337,12 @@ export default function SATDiagnosticPage() {
                   <p className="text-xs text-gray-400 dark:text-gray-400">
                     {new Date(history[0].createdAt).toLocaleDateString()}
                   </p>
+                  <Link
+                    href={`/diagnostic-review/${history[0].id}`}
+                    className="mt-1 inline-block text-xs font-semibold text-purple-600 hover:underline dark:text-purple-400"
+                  >
+                    Review past attempt →
+                  </Link>
                 </div>
               </div>
               <button
