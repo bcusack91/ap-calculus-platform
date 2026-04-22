@@ -4,6 +4,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 1 — Core Concepts
   {
     id: 'govburea-ent-1',
+    partTitle: 'Core Concepts',
     partNumber: 1,
     question: "Which best describes the constitutional foundations and four primary types of federal agencies?",
     options: [
@@ -17,6 +18,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govburea-ent-2',
+    partTitle: 'Core Concepts',
     partNumber: 1,
     question: "How did the civil service evolve from spoils system to modern Schedule F?",
     options: [
@@ -31,6 +33,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 2 — Key Processes
   {
     id: 'govburea-ent-3',
+    partTitle: 'Key Processes',
     partNumber: 2,
     question: "Which best describes the APA 1946 notice-and-comment rulemaking process?",
     options: [
@@ -44,6 +47,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govburea-ent-4',
+    partTitle: 'Key Processes',
     partNumber: 2,
     question: "How does the MAJOR QUESTIONS DOCTRINE affect agency authority?",
     options: [
@@ -58,6 +62,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 3 — Patterns & Examples
   {
     id: 'govburea-ent-5',
+    partTitle: 'Patterns & Examples',
     partNumber: 3,
     question: "Which best describes the founding and key statutory authorities of the Environmental Protection Agency (EPA)?",
     options: [
@@ -71,6 +76,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govburea-ent-6',
+    partTitle: 'Patterns & Examples',
     partNumber: 3,
     question: "How does the Federal Reserve System differ from typical Cabinet departments?",
     options: [
@@ -85,6 +91,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 4 — Connections & Interactions
   {
     id: 'govburea-ent-7',
+    partTitle: 'Connections & Interactions',
     partNumber: 4,
     question: "Which best describes the major tools Congress uses to oversee the federal bureaucracy?",
     options: [
@@ -98,6 +105,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govburea-ent-8',
+    partTitle: 'Connections & Interactions',
     partNumber: 4,
     question: "How do iron triangles differ from issue networks in shaping policy?",
     options: [
@@ -112,6 +120,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 5 — Change Over Time
   {
     id: 'govburea-ent-9',
+    partTitle: 'Change Over Time',
     partNumber: 5,
     question: "Which best describes the SPOILS SYSTEM era and its end?",
     options: [
@@ -125,6 +134,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govburea-ent-10',
+    partTitle: 'Change Over Time',
     partNumber: 5,
     question: "How did the MODERN ERA (2001-present) reshape the federal bureaucracy?",
     options: [
@@ -139,6 +149,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 6 — Problem-Solving Workshop
   {
     id: 'govburea-ent-11',
+    partTitle: 'Problem-Solving Workshop',
     partNumber: 6,
     question: "Apply the 5-step framework to LOPER BRIGHT v. RAIMONDO (2024). What is the strongest analysis?",
     options: [
@@ -152,6 +163,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govburea-ent-12',
+    partTitle: 'Problem-Solving Workshop',
     partNumber: 6,
     question: "Which AP Gov foundational documents are most relevant to bureaucracy questions and how do they apply?",
     options: [
@@ -166,6 +178,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 7 — AP Review
   {
     id: 'govburea-ent-13',
+    partTitle: 'AP Review',
     partNumber: 7,
     question: "Which best summarizes the high-yield dates from PENDLETON ACT 1883 to LOPER BRIGHT 2024?",
     options: [
@@ -179,6 +192,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govburea-ent-14',
+    partTitle: 'AP Review',
     partNumber: 7,
     question: "Which best describes how modern SCOTUS doctrine constrains the administrative state?",
     options: [
@@ -213,6 +227,6 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 4, partTitle: 'Connections & Interactions' },
     { partNumber: 5, partTitle: 'Change Over Time' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

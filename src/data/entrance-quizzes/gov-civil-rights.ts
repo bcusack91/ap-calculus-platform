@@ -3,6 +3,7 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 const questions: EntranceQuizQuestion[] = [
   {
     id: 'govcivr-ent-1a',
+    partNumber: 1,
     partTitle: 'Part 1 of 7 — Core Concepts',
     question: "What does the 14TH AMENDMENT EQUAL PROTECTION CLAUSE (1868) require, and which TIER OF SCRUTINY applies to RACIAL classifications?",
     options: [
@@ -16,6 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govcivr-ent-1b',
+    partNumber: 1,
     partTitle: 'Part 1 of 7 — Core Concepts',
     question: "What is the difference between CIVIL RIGHTS and CIVIL LIBERTIES?",
     options: [
@@ -29,6 +31,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govcivr-ent-2a',
+    partNumber: 2,
     partTitle: 'Part 2 of 7 — Key Processes',
     question: "What were the key Titles of the CIVIL RIGHTS ACT 1964 and how did it use the COMMERCE CLAUSE to reach private discrimination?",
     options: [
@@ -42,6 +45,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govcivr-ent-2b',
+    partNumber: 2,
     partTitle: 'Part 2 of 7 — Key Processes',
     question: "How did affirmative action doctrine evolve from BAKKE 1978 to GRUTTER 2003 to SFFA v. HARVARD 2023?",
     options: [
@@ -55,6 +59,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govcivr-ent-3a',
+    partNumber: 3,
     partTitle: 'Part 3 of 7 — Patterns & Examples',
     question: "What was the holding of BROWN v. BOARD OF EDUCATION (1954), and how did it overrule PLESSY v. FERGUSON (1896)?",
     options: [
@@ -68,6 +73,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govcivr-ent-3b',
+    partNumber: 3,
     partTitle: 'Part 3 of 7 — Patterns & Examples',
     question: "How did GENDER EQUALITY doctrine evolve from REED v. REED (1971) to CRAIG v. BOREN (1976) to US v. VIRGINIA (1996) to BOSTOCK (2020)?",
     options: [
@@ -81,6 +87,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govcivr-ent-4a',
+    partNumber: 4,
     partTitle: 'Part 4 of 7 — Connections & Interactions',
     question: "How did SHELBY COUNTY v. HOLDER (2013) gut Voting Rights Act Section 5 preclearance, and what subsequent voting rights cases (Brnovich 2021, Allen v. Milligan 2023) shape the post-Shelby landscape?",
     options: [
@@ -94,6 +101,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govcivr-ent-4b',
+    partNumber: 4,
     partTitle: 'Part 4 of 7 — Connections & Interactions',
     question: "How did the marriage equality trajectory unfold from LAWRENCE v. TEXAS (2003) to WINDSOR (2013) to OBERGEFELL (2015) to RESPECT FOR MARRIAGE ACT (2022)?",
     options: [
@@ -107,6 +115,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govcivr-ent-5a',
+    partNumber: 5,
     partTitle: 'Part 5 of 7 — Change Over Time',
     question: "How did the CIVIL RIGHTS MOVEMENT (1954-1968) sequence unfold from BROWN v. BOARD 1954 → MONTGOMERY 1955 → LITTLE ROCK 1957 → SIT-INS 1960 → FREEDOM RIDES 1961 → BIRMINGHAM 1963 → CRA 1964 → SELMA 1965 → VRA 1965 → MLK ASSASSINATED 1968 → FHA 1968?",
     options: [
@@ -120,6 +129,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govcivr-ent-5b',
+    partNumber: 5,
     partTitle: 'Part 5 of 7 — Change Over Time',
     question: "How did POST-CRM EXPANSION (1968-2000s) extend civil rights to GENDER, DISABILITY, and LGBTQ+ persons?",
     options: [
@@ -133,6 +143,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govcivr-ent-6a',
+    partNumber: 6,
     partTitle: 'Part 6 of 7 — Problem-Solving Workshop',
     question: "Apply the 5-step framework to ALLEN v. MILLIGAN (2023). Why did Roberts 5-4 surprisingly UPHOLD VRA Section 2 vote dilution claim against Alabama's congressional map?",
     options: [
@@ -146,6 +157,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govcivr-ent-6b',
+    partNumber: 6,
     partTitle: 'Part 6 of 7 — Problem-Solving Workshop',
     question: "How does the LETTER FROM BIRMINGHAM JAIL (Martin Luther King Jr., April 16 1963) defend NONVIOLENT DIRECT ACTION + CIVIL DISOBEDIENCE, and why is it a required AP Government foundational document?",
     options: [
@@ -159,6 +171,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govcivr-ent-7a',
+    partNumber: 7,
     partTitle: 'Part 7 of 7 — AP Review',
     question: "What is the holding of BROWN v. BOARD OF EDUCATION (1954), the required AP Government SCOTUS case for civil rights?",
     options: [
@@ -172,6 +185,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govcivr-ent-7b',
+    partNumber: 7,
     partTitle: 'Part 7 of 7 — AP Review',
     question: "Match key civil rights events to their years: 14TH AM, 19TH AM, BROWN v. BOARD, CRA, VRA, OBERGEFELL, SFFA, ALLEN v. MILLIGAN.",
     options: [
@@ -194,14 +208,14 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
   return shuffled
 }
 
-export function getEntranceQuizParts(): { partTitle: string }[] {
+export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partTitle: 'Part 1 of 7 — Core Concepts' },
-    { partTitle: 'Part 2 of 7 — Key Processes' },
-    { partTitle: 'Part 3 of 7 — Patterns & Examples' },
-    { partTitle: 'Part 4 of 7 — Connections & Interactions' },
-    { partTitle: 'Part 5 of 7 — Change Over Time' },
-    { partTitle: 'Part 6 of 7 — Problem-Solving Workshop' },
-    { partTitle: 'Part 7 of 7 — AP Review' },
+    { partNumber: 1, partTitle: 'Core Concepts' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples' },
+    { partNumber: 4, partTitle: 'Connections & Interactions' },
+    { partNumber: 5, partTitle: 'Change Over Time' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

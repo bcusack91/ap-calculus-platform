@@ -67,13 +67,13 @@ export const govPartiesInterestGroupsPart2Data = {
 
 ### Modern Presidential Nomination
 
-```
+\`\`\`
 Year before  →  Year of election
 ─────────────────────────────────────────────
 Invisible    →  IA → NH → NV → SC → Super → Remaining → Convention → General
 Primary         (early states)    Tuesday   states                   election
                                   (~12-15)
-```
+\`\`\`
 
 ### Invisible Primary (1+ year before)
 

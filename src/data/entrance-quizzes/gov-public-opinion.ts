@@ -4,6 +4,8 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 1 — Core Concepts
   {
     id: 'govpubli-ent-1',
+    partNumber: 1,
+    partTitle: 'Core Concepts',
     question: "What are the THREE DIMENSIONS of PUBLIC OPINION?",
     options: [
       'Salience (importance), intensity (strength), stability (durability)',
@@ -16,6 +18,8 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govpubli-ent-2',
+    partNumber: 1,
+    partTitle: 'Core Concepts',
     question: "Which AGENT of POLITICAL SOCIALIZATION is STRONGEST, accounting for ~70% of children sharing parents' party identification?",
     options: [
       'Family',
@@ -29,6 +33,8 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 2 — Key Processes
   {
     id: 'govpubli-ent-3',
+    partNumber: 2,
+    partTitle: 'Key Processes',
     question: "Which BRITISH POLITICAL THINKER articulated the TRUSTEE MODEL of representation in his 1774 SPEECH TO ELECTORS OF BRISTOL?",
     options: [
       'Edmund Burke',
@@ -41,6 +47,8 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govpubli-ent-4',
+    partNumber: 2,
+    partTitle: 'Key Processes',
     question: "Which AMENDMENT lowered the VOTING AGE from 21 to 18 during the Vietnam War?",
     options: [
       '26th Amendment (1971)',
@@ -54,6 +62,8 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 3 — Patterns & Examples
   {
     id: 'govpubli-ent-5',
+    partNumber: 3,
+    partTitle: 'Patterns & Examples',
     question: "Which DEMOGRAPHIC GROUP has been the MOST LOYAL Democratic constituency since the 1964 Civil Rights Act, voting ~85-90% Democratic in presidential elections?",
     options: [
       'Black Americans',
@@ -66,6 +76,8 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govpubli-ent-6',
+    partNumber: 3,
+    partTitle: 'Patterns & Examples',
     question: "What is the DIPLOMA DIVIDE in modern American politics?",
     options: [
       'White college graduates increasingly Democratic + White non-college increasingly Republican',
@@ -79,6 +91,8 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 4 — Connections
   {
     id: 'govpubli-ent-7',
+    partNumber: 4,
+    partTitle: 'Connections & Interactions',
     question: "What is the 1972 theory by McCombs + Shaw that media tells us 'WHAT TO THINK ABOUT' (issue salience)?",
     options: [
       'Agenda-setting',
@@ -91,6 +105,8 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govpubli-ent-8',
+    partNumber: 4,
+    partTitle: 'Connections & Interactions',
     question: "Which podcast became central to TRUMP's 2024 victory, hosting a 3-hour Trump interview late October + endorsing Trump night before election?",
     options: [
       'The Joe Rogan Experience',
@@ -104,6 +120,8 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 5 — Change Over Time
   {
     id: 'govpubli-ent-9',
+    partNumber: 5,
+    partTitle: 'Change Over Time',
     question: "What 2000 Robert Putnam book documented the DECLINE in CIVIC ENGAGEMENT + SOCIAL CAPITAL alongside trust decline?",
     options: [
       'Bowling Alone',
@@ -116,6 +134,8 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govpubli-ent-10',
+    partNumber: 5,
+    partTitle: 'Change Over Time',
     question: "Which 2015 Supreme Court case established the CONSTITUTIONAL RIGHT to SAME-SEX MARRIAGE nationwide?",
     options: [
       'Obergefell v. Hodges',
@@ -129,6 +149,8 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 6 — Problem-Solving Workshop
   {
     id: 'govpubli-ent-11',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
     question: "Which FEDERALIST PAPER (Madison 1787) defends the EXTENDED REPUBLIC + REPRESENTATION + DIVERSITY as remedy for FACTIONS?",
     options: [
       'Federalist 10',
@@ -141,6 +163,8 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govpubli-ent-12',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
     question: "What is MOTIVATED REASONING in political psychology (Kunda 1990; Lodge + Taber 2000)?",
     options: [
       'Tendency to process information in ways that confirm prior beliefs/identities',
@@ -154,6 +178,8 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 7 — AP Review
   {
     id: 'govpubli-ent-13',
+    partNumber: 7,
+    partTitle: 'AP Review',
     question: "What is the AP FRQ TEMPLATE for PUBLIC OPINION + POLLING questions?",
     options: [
       'SCAR (Specifics + Concepts + Application + Reasoning)',
@@ -166,6 +192,8 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govpubli-ent-14',
+    partNumber: 7,
+    partTitle: 'AP Review',
     question: "What is Alexander Bickel's CONCEPT for the tension between LIFETIME-TENURED unelected JUDGES striking down DEMOCRATICALLY-ENACTED LAWS?",
     options: [
       'Counter-majoritarian difficulty',
@@ -187,12 +215,14 @@ export const generateEntranceQuiz = (): EntranceQuizQuestion[] => {
   return shuffled
 }
 
-export const getEntranceQuizParts = () => [
-  { partTitle: 'Part 1: Core Concepts' },
-  { partTitle: 'Part 2: Key Processes' },
-  { partTitle: 'Part 3: Patterns & Examples' },
-  { partTitle: 'Part 4: Connections & Interactions' },
-  { partTitle: 'Part 5: Change Over Time' },
-  { partTitle: 'Part 6: Problem-Solving Workshop' },
-  { partTitle: 'Part 7: AP Review' },
-]
+export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
+  return [
+    { partNumber: 1, partTitle: 'Core Concepts' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples' },
+    { partNumber: 4, partTitle: 'Connections & Interactions' },
+    { partNumber: 5, partTitle: 'Change Over Time' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
+  ]
+}

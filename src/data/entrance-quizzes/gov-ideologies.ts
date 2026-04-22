@@ -3,6 +3,7 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 const questions: EntranceQuizQuestion[] = [
   {
     id: 'govideol-ent-1a',
+    partNumber: 1,
     partTitle: 'Part 1 of 7 — Core Concepts',
     question: "What is POLITICAL IDEOLOGY, and how do the LEFT-RIGHT 1-D SPECTRUM + NOLAN CHART 2-D map American ideologies?",
     options: [
@@ -16,6 +17,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govideol-ent-1b',
+    partNumber: 1,
     partTitle: 'Part 1 of 7 — Core Concepts',
     question: "What is POLITICAL SOCIALIZATION, and what are its KEY AGENTS in approximate order of influence?",
     options: [
@@ -29,6 +31,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govideol-ent-2a',
+    partNumber: 2,
     partTitle: 'Part 2 of 7 — Key Processes',
     question: "How do POLLS measure public opinion + what are the FAMOUS HISTORICAL FAILURES (Literary Digest 1936, Truman-Dewey 1948, Trump 2016/2020)?",
     options: [
@@ -42,6 +45,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govideol-ent-2b',
+    partNumber: 2,
     partTitle: 'Part 2 of 7 — Key Processes',
     question: "What is the difference between KEYNESIAN and SUPPLY-SIDE economic ideologies, and which presidents/policies exemplify each?",
     options: [
@@ -55,6 +59,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govideol-ent-3a',
+    partNumber: 3,
     partTitle: 'Part 3 of 7 — Patterns & Examples',
     question: "What are the major DEMOGRAPHIC PATTERNS in American voting (gender gap, racial, diploma divide, religion, urban-rural, generational)?",
     options: [
@@ -68,6 +73,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govideol-ent-3b',
+    partNumber: 3,
     partTitle: 'Part 3 of 7 — Patterns & Examples',
     question: "What is POLARIZATION, and how do ELITE vs MASS + PARTISAN SORTING + AFFECTIVE POLARIZATION + PEW TYPOLOGY map this phenomenon?",
     options: [
@@ -81,6 +87,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govideol-ent-4a',
+    partNumber: 4,
     partTitle: 'Part 4 of 7 — Connections & Interactions',
     question: "How does ideology IDEOLOGY × POLITICAL PARTIES — what are DEMOCRATIC + REPUBLICAN coalitions and KEY INSURGENT FACTIONS (Tea Party, MAGA, Squad, Never Trump)?",
     options: [
@@ -94,6 +101,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govideol-ent-4b',
+    partNumber: 4,
     partTitle: 'Part 4 of 7 — Connections & Interactions',
     question: "How do MEDIA outlets reflect + reinforce ideology (FOX, MSNBC, CNN, NPR, NYT, WSJ, talk radio, Newsmax/OAN, social media, podcasts)?",
     options: [
@@ -107,6 +115,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govideol-ent-5a',
+    partNumber: 5,
     partTitle: 'Part 5 of 7 — Change Over Time',
     question: "What is the THREE-MAJOR-REALIGNMENT sequence (1932 NEW DEAL, 1964-1980 SOUTHERN SHIFT, 2016 EDUCATIONAL REALIGNMENT) and their coalitional consequences?",
     options: [
@@ -120,6 +129,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govideol-ent-5b',
+    partNumber: 5,
     partTitle: 'Part 5 of 7 — Change Over Time',
     question: "How did the CONSERVATIVE RESURGENCE (1968-2008) develop from GOLDWATER 1964 → NIXON 1968 → REAGAN 1980 → BUSH 41+43 → GINGRICH 1994 → CONTRACT WITH AMERICA?",
     options: [
@@ -133,6 +143,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govideol-ent-6a',
+    partNumber: 6,
     partTitle: 'Part 6 of 7 — Problem-Solving Workshop',
     question: "Apply the 5-step framework to TRUMP 2016 + 2024 victories + populist-nationalist Republican realignment.",
     options: [
@@ -146,6 +157,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govideol-ent-6b',
+    partNumber: 6,
     partTitle: 'Part 6 of 7 — Problem-Solving Workshop',
     question: "How did the TEA PARTY MOVEMENT 2009-2016 emerge + transform into MAGA, and what were its KEY ORGANIZATIONS + EVENTS + IMPACT?",
     options: [
@@ -159,6 +171,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govideol-ent-7a',
+    partNumber: 7,
     partTitle: 'Part 7 of 7 — AP Review',
     question: "Compare REQUIRED AP FOUNDATIONAL DOCUMENTS for ideology: FEDERALIST 10 (Madison) vs BRUTUS 1 (Anti-Federalist) vs LETTER FROM BIRMINGHAM JAIL (MLK Jr. 1963).",
     options: [
@@ -172,6 +185,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govideol-ent-7b',
+    partNumber: 7,
     partTitle: 'Part 7 of 7 — AP Review',
     question: "Match key political ideology + realignment terms to definitions: NOLAN CHART, POLITICAL SOCIALIZATION, REALIGNMENT, AFFECTIVE POLARIZATION, DIPLOMA DIVIDE, GENDER GAP, ORIGINALISM, KEYNESIAN.",
     options: [
@@ -194,14 +208,14 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
   return shuffled
 }
 
-export function getEntranceQuizParts(): { partTitle: string }[] {
+export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partTitle: 'Part 1 of 7 — Core Concepts' },
-    { partTitle: 'Part 2 of 7 — Key Processes' },
-    { partTitle: 'Part 3 of 7 — Patterns & Examples' },
-    { partTitle: 'Part 4 of 7 — Connections & Interactions' },
-    { partTitle: 'Part 5 of 7 — Change Over Time' },
-    { partTitle: 'Part 6 of 7 — Problem-Solving Workshop' },
-    { partTitle: 'Part 7 of 7 — AP Review' },
+    { partNumber: 1, partTitle: 'Core Concepts' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples' },
+    { partNumber: 4, partTitle: 'Connections & Interactions' },
+    { partNumber: 5, partTitle: 'Change Over Time' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

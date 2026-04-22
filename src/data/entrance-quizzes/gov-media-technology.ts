@@ -4,6 +4,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
   // Part 1: Core Concepts
   {
     id: 'govmedia-ent-1',
+    partTitle: 'Core Concepts',
     partNumber: 1,
     question: "Harold LASSWELL (1948) identified FOUR FUNCTIONS of media. Which is NOT one of them?",
     options: [
@@ -17,6 +18,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
   },
   {
     id: 'govmedia-ent-2',
+    partTitle: 'Core Concepts',
     partNumber: 1,
     question: "NEW YORK TIMES CO. v. SULLIVAN (1964) established what STANDARD for DEFAMATION suits by PUBLIC OFFICIALS?",
     options: [
@@ -31,6 +33,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
   // Part 2: Key Processes
   {
     id: 'govmedia-ent-3',
+    partTitle: 'Key Processes',
     partNumber: 2,
     question: "DOMINION VOTING SYSTEMS v. FOX NEWS (April 18, 2023) settled for HOW MUCH related to 2020 election fraud claims?",
     options: [
@@ -44,6 +47,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
   },
   {
     id: 'govmedia-ent-4',
+    partTitle: 'Key Processes',
     partNumber: 2,
     question: "The MUELLER REPORT (April 18, 2019) confirmed that RUSSIA's INTERNET RESEARCH AGENCY (IRA) interfered in the 2016 election by:",
     options: [
@@ -58,6 +62,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
   // Part 3: Patterns & Examples
   {
     id: 'govmedia-ent-5',
+    partTitle: 'Patterns & Examples',
     partNumber: 3,
     question: "Eli PARISER (2011) coined which TERM describing how ALGORITHMIC CURATION creates information silos?",
     options: [
@@ -71,6 +76,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
   },
   {
     id: 'govmedia-ent-6',
+    partTitle: 'Patterns & Examples',
     partNumber: 3,
     question: "REPUBLICAN TRUST in MASS MEDIA collapsed from approximately ~41% in 1997 to approximately WHAT % in 2024 per Gallup polling?",
     options: [
@@ -85,6 +91,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
   // Part 4: Connections & Interactions
   {
     id: 'govmedia-ent-7',
+    partTitle: 'Connections & Interactions',
     partNumber: 4,
     question: "On MAY 2, 2022, Politico published an UNPRECEDENTED leak of WHICH SCOTUS DOCUMENT?",
     options: [
@@ -98,6 +105,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
   },
   {
     id: 'govmedia-ent-8',
+    partTitle: 'Connections & Interactions',
     partNumber: 4,
     question: "Approximately how many FOIA REQUESTS are RECEIVED by FEDERAL AGENCIES per FISCAL YEAR (recent years)?",
     options: [
@@ -112,6 +120,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
   // Part 5: Change Over Time
   {
     id: 'govmedia-ent-9',
+    partTitle: 'Change Over Time',
     partNumber: 5,
     question: "On AUGUST 4, 1987, the FCC under REAGAN ELIMINATED which 1949 RULE that had required broadcasters to present BALANCED views on controversial issues?",
     options: [
@@ -125,6 +134,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
   },
   {
     id: 'govmedia-ent-10',
+    partTitle: 'Change Over Time',
     partNumber: 5,
     question: "The TELECOMMUNICATIONS ACT of 1996 included which LANDMARK PROVISION (now known as the '26 WORDS that CREATED the INTERNET')?",
     options: [
@@ -139,6 +149,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
   // Part 6: Problem-Solving Workshop
   {
     id: 'govmedia-ent-11',
+    partTitle: 'Problem-Solving Workshop',
     partNumber: 6,
     question: "Per SECTION 230 of CDA 1996, the KEY PHRASE about platforms is approximately HOW MANY WORDS (per Kosseff 2019)?",
     options: [
@@ -152,6 +163,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
   },
   {
     id: 'govmedia-ent-12',
+    partTitle: 'Problem-Solving Workshop',
     partNumber: 6,
     question: "FEDERALIST 10 by JAMES MADISON addresses the PROBLEM of FACTION through which mechanism?",
     options: [
@@ -166,6 +178,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
   // Part 7: AP Review
   {
     id: 'govmedia-ent-13',
+    partTitle: 'AP Review',
     partNumber: 7,
     question: "CITIZENS UNITED v. FEC (2010) held that CORPORATIONS + UNIONS have a 1st AMENDMENT RIGHT to:",
     options: [
@@ -179,6 +192,7 @@ export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
   },
   {
     id: 'govmedia-ent-14',
+    partTitle: 'AP Review',
     partNumber: 7,
     question: "MOODY v. NETCHOICE + NETCHOICE v. PAXTON (July 1, 2024) — what did SCOTUS DECIDE?",
     options: [
@@ -201,14 +215,14 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
   return shuffled
 }
 
-export function getEntranceQuizParts() {
+export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partTitle: 'Core Concepts' },
-    { partTitle: 'Key Processes' },
-    { partTitle: 'Patterns & Examples' },
-    { partTitle: 'Connections & Interactions' },
-    { partTitle: 'Change Over Time' },
-    { partTitle: 'Problem-Solving Workshop' },
-    { partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: 'Core Concepts' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples' },
+    { partNumber: 4, partTitle: 'Connections & Interactions' },
+    { partNumber: 5, partTitle: 'Change Over Time' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

@@ -112,7 +112,7 @@ export const govPartiesInterestGroupsPart3Data = {
 
 **THEODORE LOWI (1969)** — The End of Liberalism — coined "iron triangles"; argued sub-governments dominate policy areas:
 
-```
+\`\`\`
         CONGRESSIONAL COMMITTEE
        (subcommittee actually)
               /  \\
@@ -121,7 +121,7 @@ export const govPartiesInterestGroupsPart3Data = {
            /        \\
    BUREAUCRATIC ── INTEREST
        AGENCY       GROUP
-```
+\`\`\`
 
 **KEY DYNAMIC** — 3 actors share interests + exchange resources:
 - **COMMITTEE** wants reelection + campaign donations + member benefits

@@ -4,6 +4,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 1 — Core Concepts
   {
     id: 'govparti-ent-1',
+    partNumber: 1,
     partTitle: 'Core Concepts',
     question: "Which 1951 LAW formulated by MAURICE DUVERGER predicts that SINGLE-MEMBER DISTRICT PLURALITY (SMDP) electoral systems FAVOR a TWO-PARTY system?",
     options: ["Olson's Law", "Madison's Law", "Duverger's Law", "Dahl's Law"],
@@ -12,6 +13,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govparti-ent-2',
+    partNumber: 1,
     partTitle: 'Core Concepts',
     question: "Which 1965 BOOK by MANCUR OLSON established the COLLECTIVE ACTION PROBLEM + FREE RIDER + SELECTIVE BENEFITS framework for understanding INTEREST GROUP formation?",
     options: ['Who Governs?', 'The Logic of Collective Action', 'The Power Elite', 'Bowling Alone'],
@@ -21,6 +23,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 2 — Key Processes
   {
     id: 'govparti-ent-3',
+    partNumber: 2,
     partTitle: 'Key Processes',
     question: "Which 2008 BOOK by COHEN, KAROL, NOEL + ZALLER argued that PARTY ELITES (not voters) effectively CONTROL PRESIDENTIAL NOMINATIONS through the INVISIBLE PRIMARY?",
     options: ['Why Parties?', 'The Party Decides', 'Polarized America', 'Off Center'],
@@ -29,6 +32,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govparti-ent-4',
+    partNumber: 2,
     partTitle: 'Key Processes',
     question: "Which 2010 DC CIRCUIT COURT decision created SUPER PACs by allowing UNLIMITED INDIVIDUAL CONTRIBUTIONS to INDEPENDENT EXPENDITURE-ONLY PACs?",
     options: ['Buckley v. Valeo', 'Citizens United v. FEC', 'SpeechNow.org v. FEC', 'McCutcheon v. FEC'],
@@ -38,6 +42,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 3 — Patterns & Examples
   {
     id: 'govparti-ent-5',
+    partNumber: 3,
     partTitle: 'Patterns & Examples',
     question: "Which 1969 BOOK by THEODORE LOWI argued that the EXPLOSION of INTEREST GROUPS produced HYPERPLURALISM + IRON TRIANGLES that PARALYZE government and undermine DEMOCRATIC ACCOUNTABILITY?",
     options: ['The End of Liberalism', 'Who Governs?', 'The Power Elite', 'The Semisovereign People'],
@@ -46,6 +51,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govparti-ent-6',
+    partNumber: 3,
     partTitle: 'Patterns & Examples',
     question: 'Which 1956 BOOK by C. WRIGHT MILLS argued that AMERICAN POLITICS is dominated by an INTERLOCKING ELITE of CORPORATE + MILITARY + POLITICAL leaders rather than COMPETING INTEREST GROUPS?',
     options: ['Who Governs?', 'The Power Elite', 'The End of Liberalism', 'The Semisovereign People'],
@@ -55,6 +61,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 4 — Connections & Interactions
   {
     id: 'govparti-ent-7',
+    partNumber: 4,
     partTitle: 'Connections & Interactions',
     question: "Which 2012 STUDY by IYENGAR, SOOD + LELKES established AFFECTIVE POLARIZATION (emotional dislike of out-party) as more powerful than IDEOLOGICAL POLARIZATION in modern American politics?",
     options: ['Affect, Not Ideology', 'The Big Sort', 'Asymmetric Politics', 'Off Center'],
@@ -63,6 +70,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govparti-ent-8',
+    partNumber: 4,
     partTitle: 'Connections & Interactions',
     question: "Which 1971 ARTICLE by GEORGE STIGLER established AGENCY CAPTURE — the theory that REGULATORY AGENCIES come to serve the INTERESTS of REGULATED INDUSTRIES rather than the PUBLIC?",
     options: ['The Theory of Economic Regulation', 'Iron Triangles in Action', 'The Captured Economy', 'Public Choice'],
@@ -72,6 +80,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 5 — Change Over Time
   {
     id: 'govparti-ent-9',
+    partNumber: 5,
     partTitle: 'Change Over Time',
     question: "Which 2010 SCOTUS DECISION fundamentally TRANSFORMED CAMPAIGN FINANCE by holding CORPORATIONS have 1ST AMENDMENT speech rights for INDEPENDENT POLITICAL EXPENDITURES?",
     options: ['Buckley v. Valeo (1976)', 'McConnell v. FEC (2003)', 'Citizens United v. FEC (2010)', 'McCutcheon v. FEC (2014)'],
@@ -80,6 +89,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govparti-ent-10',
+    partNumber: 5,
     partTitle: 'Change Over Time',
     question: 'Which 2000 BOOK by ROBERT PUTNAM documented the DECLINE of CIVIC ENGAGEMENT + SOCIAL CAPITAL in America since the 1960s?',
     options: ['The Great Disruption', 'Bowling Alone', 'Diminished Democracy', 'Coming Apart'],
@@ -89,6 +99,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 6 — Problem-Solving Workshop
   {
     id: 'govparti-ent-11',
+    partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
     question: "In FEDERALIST 10 (1787), MADISON argued the CURE for the MISCHIEFS of FACTION is creating a LARGE, EXTENDED REPUBLIC because:",
     options: [
@@ -102,6 +113,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govparti-ent-12',
+    partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
     question: "In FEDERALIST 51 (1788), MADISON's most famous principle for CONSTITUTIONAL DESIGN is:",
     options: [
@@ -116,6 +128,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 7 — AP Review
   {
     id: 'govparti-ent-13',
+    partNumber: 7,
     partTitle: 'AP Review',
     question: 'Which 2018 SCOTUS DECISION held PUBLIC EMPLOYEES CANNOT be required to PAY UNION DUES — overruled Abood v. Detroit BoE 1977 + significantly weakened public sector unions?',
     options: ['Abood v. Detroit BoE', 'Friedrichs v. CTA', 'Janus v. AFSCME', 'Harris v. Quinn'],
@@ -124,6 +137,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govparti-ent-14',
+    partNumber: 7,
     partTitle: 'AP Review',
     question: 'Which 1976 SCOTUS DECISION established the "MONEY = SPEECH" framework — struck SPENDING LIMITS as 1st Amendment violation but UPHELD CONTRIBUTION LIMITS as anti-corruption measure?',
     options: ['Buckley v. Valeo (1976)', 'First National Bank v. Bellotti (1978)', 'McConnell v. FEC (2003)', 'Citizens United v. FEC (2010)'],
@@ -145,14 +159,14 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
   return shuffle(allQuestions)
 }
 
-export function getEntranceQuizParts() {
+export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partTitle: 'Core Concepts' },
-    { partTitle: 'Key Processes' },
-    { partTitle: 'Patterns & Examples' },
-    { partTitle: 'Connections & Interactions' },
-    { partTitle: 'Change Over Time' },
-    { partTitle: 'Problem-Solving Workshop' },
-    { partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: 'Core Concepts' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples' },
+    { partNumber: 4, partTitle: 'Connections & Interactions' },
+    { partNumber: 5, partTitle: 'Change Over Time' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

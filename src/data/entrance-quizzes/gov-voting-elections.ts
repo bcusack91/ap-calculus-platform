@@ -4,6 +4,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 1 — Core Concepts
   {
     id: 'govvotin-ent-1',
+    partNumber: 1,
     partTitle: 'Core Concepts',
     question: 'Which AMENDMENT lowered the VOTING AGE from 21 to 18 in 1971 during the VIETNAM WAR?',
     options: ['15th Amendment', '19th Amendment', '24th Amendment', '26th Amendment'],
@@ -12,6 +13,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govvotin-ent-2',
+    partNumber: 1,
     partTitle: 'Core Concepts',
     question: 'How many ELECTORAL VOTES are needed to WIN the PRESIDENCY?',
     options: ['250', '270', '300', '538'],
@@ -21,6 +23,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 2 — Key Processes
   {
     id: 'govvotin-ent-3',
+    partNumber: 2,
     partTitle: 'Key Processes',
     question: 'Which 2010 SCOTUS DECISION held CORPORATIONS HAVE 1ST AMENDMENT RIGHTS for INDEPENDENT POLITICAL EXPENDITURES?',
     options: ['Buckley v. Valeo', 'McConnell v. FEC', 'Citizens United v. FEC', 'McCutcheon v. FEC'],
@@ -29,6 +32,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govvotin-ent-4',
+    partNumber: 2,
     partTitle: 'Key Processes',
     question: 'Who was the MASSACHUSETTS GOVERNOR (1812) whose name became associated with PARTISAN DISTRICT MANIPULATION (salamander-shaped district)?',
     options: ['John Hancock', 'Samuel Adams', 'Elbridge Gerry', 'John Adams'],
@@ -38,6 +42,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 3 — Patterns & Examples
   {
     id: 'govvotin-ent-5',
+    partNumber: 3,
     partTitle: 'Patterns & Examples',
     question: 'Which 1932 PRESIDENT created the NEW DEAL COALITION that dominated American politics until 1968?',
     options: ['Herbert Hoover', 'Franklin D. Roosevelt', 'Harry Truman', 'Woodrow Wilson'],
@@ -46,6 +51,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govvotin-ent-6',
+    partNumber: 3,
     partTitle: 'Patterns & Examples',
     question: 'In 2024, what was the GENDER GAP pattern in the presidential election?',
     options: ['Men +13 Harris; Women +12 Trump', 'Women +13 Harris; Men +12 Trump', 'No gender gap', 'Both genders supported Trump equally'],
@@ -55,6 +61,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 4 — Connections
   {
     id: 'govvotin-ent-7',
+    partNumber: 4,
     partTitle: 'Connections & Interactions',
     question: 'Whose famous 1992 CAMPAIGN SLOGAN — "It\'s the economy, stupid" — captured RETROSPECTIVE ECONOMIC VOTING?',
     options: ['George H.W. Bush', 'Ross Perot', 'James Carville', 'Bill Clinton'],
@@ -63,6 +70,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govvotin-ent-8',
+    partNumber: 4,
     partTitle: 'Connections & Interactions',
     question: 'When ONE PARTY controls the WHITE HOUSE + SENATE + HOUSE, this is called a:',
     options: ['Divided government', 'Parliamentary majority', 'Trifecta', 'Coalition government'],
@@ -72,6 +80,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 5 — Change Over Time
   {
     id: 'govvotin-ent-9',
+    partNumber: 5,
     partTitle: 'Change Over Time',
     question: 'Which 1965 LANDMARK LEGISLATION restored BLACK VOTING ACCESS by banning literacy tests + creating PRECLEARANCE?',
     options: ['Civil Rights Act 1957', 'Civil Rights Act 1964', 'Voting Rights Act 1965', 'Help America Vote Act 2002'],
@@ -80,6 +89,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govvotin-ent-10',
+    partNumber: 5,
     partTitle: 'Change Over Time',
     question: 'In what year was the 26TH AMENDMENT (lowering voting age to 18) RATIFIED?',
     options: ['1965', '1968', '1971', '1976'],
@@ -89,6 +99,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 6 — Problem-Solving Workshop
   {
     id: 'govvotin-ent-11',
+    partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
     question: 'Which FEDERALIST PAPER (Madison 1787) defended the EXTENDED REPUBLIC + REPRESENTATION as remedy for FACTIONS?',
     options: ['Federalist 10', 'Federalist 51', 'Federalist 70', 'Federalist 78'],
@@ -97,6 +108,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govvotin-ent-12',
+    partNumber: 6,
     partTitle: 'Problem-Solving Workshop',
     question: 'Which FEDERALIST PAPER (Hamilton 1788) argued the SENATE should be INSULATED FROM POPULAR PASSIONS because PEOPLE DON\'T ALWAYS REASON RIGHT?',
     options: ['Federalist 10', 'Federalist 51', 'Federalist 71', 'Federalist 78'],
@@ -106,6 +118,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   // Part 7 — AP Review
   {
     id: 'govvotin-ent-13',
+    partNumber: 7,
     partTitle: 'AP Review',
     question: 'Which JURIST coined the term "COUNTER-MAJORITARIAN DIFFICULTY" to describe judicial review tension with democracy?',
     options: ['Earl Warren', 'Antonin Scalia', 'Alexander Bickel', 'John Marshall'],
@@ -114,6 +127,7 @@ const allQuestions: EntranceQuizQuestion[] = [
   },
   {
     id: 'govvotin-ent-14',
+    partNumber: 7,
     partTitle: 'AP Review',
     question: 'In the SCAR template for AP FRQ writing, what does the "C" stand for?',
     options: ['Compare alternatives', 'Cite evidence', 'Connect to context', 'Critique the question'],
@@ -135,14 +149,14 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
   return shuffle(allQuestions)
 }
 
-export function getEntranceQuizParts() {
+export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partTitle: 'Core Concepts' },
-    { partTitle: 'Key Processes' },
-    { partTitle: 'Patterns & Examples' },
-    { partTitle: 'Connections & Interactions' },
-    { partTitle: 'Change Over Time' },
-    { partTitle: 'Problem-Solving Workshop' },
-    { partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: 'Core Concepts' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples' },
+    { partNumber: 4, partTitle: 'Connections & Interactions' },
+    { partNumber: 5, partTitle: 'Change Over Time' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }
