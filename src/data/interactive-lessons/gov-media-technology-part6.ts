@@ -5,168 +5,212 @@ export const govMediaTechnologyPart6Data = {
       id: 'govmedia6-intro',
       type: 'text' as const,
       content: `
-# 🏛️ The Media & Technology
+# 📱 Media, Technology & Politics
 
 **Part 6 of 7 — Problem-Solving Workshop**
 
-Apply The Media & Technology concepts to data interpretation and analytical scenarios. Practice the types of questions seen on the AP exam.
+---
 
-### Key Concepts
+| Section |
+|---|
+| 5-step framework for media + technology FRQ analysis |
+| Worked example 1: Section 230 reform vs 1st Amendment + platform liability |
+| Worked example 2: AI deepfakes regulation + 1st Amendment + foreign interference |
+| Worked example 3: TikTok PAFACAA + foreign ownership + national security |
+| Foundational documents (Federalist 10 + 51 + 78 + Brutus 1) |
 
-| Concept | Description |
-|---------|-------------|
-| **Data interpretation** | Analyzing maps, graphs, and tables related to The Media & Technology |
-| **Argumentation** | Making evidence-based claims about The Media & Technology |
-| **Spatial reasoning** | Using geographic thinking to analyze The Media & Technology |
+> 🔑 Key idea: AP GOVERNMENT MEDIA + TECHNOLOGY FRQs require SYSTEMATIC ANALYSIS using 5-STEP FRAMEWORK — (1) IDENTIFY the CONSTITUTIONAL/POLICY ISSUE (1st Amendment + speech regulation + foreign interference + national security + privacy + algorithmic accountability + market regulation); (2) ANALYZE PRECEDENTS + FOUNDATIONAL DOCUMENTS (Federalist 10/51/78/Brutus 1; key cases NYT v. Sullivan 1964 actual malice + Pentagon Papers 1971 prior restraint + Branzburg v. Hayes 1972 reporter's privilege + Reno v. ACLU 1997 internet 1st Amendment + Citizens United 2010 corporate independent expenditures + Moody v. NetChoice 2024 + NetChoice v. Paxton 2024 platform content moderation); (3) APPLY PRINCIPLES (1st Amendment fundamental + content-neutral preferred + viewpoint discrimination disfavored + strict scrutiny for content-based + intermediate for content-neutral + commercial speech less protected + national security balanced + foreign interference compelling interest); (4) CONSIDER COUNTERARGUMENTS (1st Amendment absolutism vs reasonable regulation + government power vs private platform power + foreign vs domestic distinction + adult vs minor protection + national security vs civil liberties + market vs regulation); (5) CONCLUDE with IMPLICATIONS (institutional design + democratic values + balancing competing interests + future challenges + comparative perspectives EU DSA 2022); 3 WORKED EXAMPLES walk through Section 230 reform + AI deepfakes + TikTok PAFACAA; FOUNDATIONAL DOCUMENTS — Federalist 10 (Madison faction control extended republic) + Federalist 51 (Madison separated powers + checks balances) + Federalist 78 (Hamilton judicial review least dangerous branch) + Brutus 1 (Anti-Federalist concerns about federal power + judicial overreach + standing army). Each example demonstrates SCAR template (Situation + Constitutional/Statutory framework + Application/Analysis + Resolution/Implications).
       `
-    },
-    {
-      id: 'govmedia6-quiz1',
-      type: 'multiple-choice' as const,
-      content: `
-**Concept Check** 🎯
-      `,
-      exercise: {
-        questions: [
-          {
-            question: 'When interpreting data about The Media & Technology, the first step is:',
-            options: [
-              'Jump to conclusions',
-              'Identify what the data shows and note any patterns or trends',
-              'Ignore the data',
-              'Only look at the title'
-            ],
-            correctAnswer: 0,
-            explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.'
-          },
-          {
-            question: 'An evidence-based argument about The Media & Technology requires:',
-            options: [
-              'Just opinions',
-              'A clear claim supported by specific evidence and reasoning',
-              'No evidence',
-              'Only emotional appeals'
-            ],
-            correctAnswer: 1,
-            explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).'
-          }
-        ]
-      }
     },
     {
       id: 'govmedia6-content',
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## 5-Step Framework for Media + Technology FRQs
 
-### Data interpretation
-Analyzing maps, graphs, and tables related to The Media & Technology. Understanding this concept is essential for mastering The Media & Technology in AP US Government.
+| Step | Action |
+|---|---|
+| **1. IDENTIFY** | What is the CONSTITUTIONAL/POLICY ISSUE? (1st Am + speech + foreign interference + national security + privacy + algorithms + market) |
+| **2. ANALYZE PRECEDENTS** | Apply foundational documents (Fed 10/51/78/Brutus 1) + key cases (Sullivan 1964 + Pentagon Papers 1971 + Branzburg 1972 + Reno 1997 + Citizens United 2010 + Moody 2024) |
+| **3. APPLY PRINCIPLES** | 1st Am fundamental; content-neutral preferred; viewpoint discrimination disfavored; strict scrutiny content-based; intermediate content-neutral |
+| **4. COUNTERARGUMENTS** | Consider opposing views (1st Am absolutism vs reasonable regulation; government vs private power; foreign vs domestic; minor vs adult protection) |
+| **5. CONCLUDE** | Implications for institutional design + democratic values + balancing interests + future challenges + comparative perspectives |
 
-### Argumentation
-Making evidence-based claims about The Media & Technology. This builds on the previous concept and connects to broader themes in the course.
+## Worked Example 1: Section 230 Reform vs 1st Amendment + Platform Liability
 
-### Spatial reasoning
-Using geographic thinking to analyze The Media & Technology. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Situation
+**SECTION 230 of CDA 1996** ("26 words that created the internet" Kosseff 2019) provides PLATFORMS IMMUNITY from liability for USER-GENERATED CONTENT. Should Congress REFORM Section 230 to make platforms LIABLE for harmful content (misinformation + harassment + foreign interference + extremism)?
+
+### Constitutional/Statutory Framework
+- **SECTION 230(c)(1)** — "No provider or user of an interactive computer service shall be treated as the publisher or speaker of any information provided by another information content provider"
+- **SECTION 230(c)(2)** — Good Samaritan immunity for content moderation in good faith
+- **1st AMENDMENT** — Free speech + press; private platforms generally NOT state actors (Manhattan Community Access Corp. v. Halleck 2019)
+- **MOODY v. NETCHOICE 2024 + NETCHOICE v. PAXTON 2024** — SCOTUS struck FL/TX content moderation laws; affirmed platform editorial discretion as 1st Amendment-protected
+- **GONZALEZ v. GOOGLE 2023** — SCOTUS punted on Section 230 + algorithmic recommendation; sent back without ruling
+
+### Application/Analysis
+- **PROPONENTS of REFORM** — Section 230 enables harm without accountability; platforms are de facto publishers; misinformation + harassment + foreign interference + radicalization undermine democracy
+- **EARN IT Act + PACT Act + KOSA proposals** — narrow Section 230; require content moderation transparency; CSAM enforcement; minor protections
+- **OPPONENTS of REFORM** — 1st Amendment protects platform editorial decisions; reform would chill speech + force over-removal; harm small platforms unable to bear liability; favor large incumbents (Facebook + Google + X)
+- **EU DSA 2022** model — Digital Services Act requires content moderation transparency + risk assessment + audited compliance; could inform US approach
+
+### Resolution/Implications
+- **BALANCING TEST** — preserve 1st Amendment + platform editorial discretion + small platform competition AND address algorithmic amplification + foreign interference + minor protection + transparency
+- **POSSIBLE COMPROMISE** — narrow exceptions (CSAM + foreign interference + algorithmic transparency for political ads + KOSA-style minor protections) without wholesale repeal
+- **INSTITUTIONAL DESIGN** — Congressional action vs FTC enforcement vs state legislation (preempted by Section 230 currently); EU model demonstrates feasibility but requires significant institutional capacity
+- **FOUNDATIONAL DOCUMENTS** — FEDERALIST 10 (Madison) faction control through extended republic + structural mechanisms vs FEDERALIST 51 separation of powers + checks; current era requires NEW STRUCTURAL MECHANISMS for digital age
+
+## Worked Example 2: AI Deepfakes Regulation + 1st Amendment + Foreign Interference
+
+### Situation
+**AI-GENERATED DEEPFAKES** + **VOICE CLONING** threaten elections — January 2024 NEW HAMPSHIRE ROBOCALLS impersonated President Biden urging voters not to vote in primary; **TAYLOR SWIFT DEEPFAKES** January 2024; SHOULD Congress + FCC + states REGULATE AI deepfakes in political contexts?
+
+### Constitutional/Statutory Framework
+- **1st AMENDMENT** — protects political speech as core; satire + parody historically protected
+- **NYT v. SULLIVAN 1964** — actual malice standard for public officials; difficult to apply to AI
+- **STATE LAWS** — TX (2019 first state) + CA + MN + WA + others banned election deepfakes; ~20 states have deepfake laws
+- **FCC** — declared AI voice robocalls illegal under Telephone Consumer Protection Act 1991 (Feb 2024)
+- **FEC** — divided on regulating AI political ads; July 2024 declined to pursue rulemaking
+- **EU AI ACT 2024** — comprehensive AI regulation; deepfake disclosure requirements
+
+### Application/Analysis
+- **REGULATION PROPONENTS** — election integrity + voter manipulation + foreign interference (Russia/China/Iran 2024); compelling interest in fair elections; deepfakes are FALSE FACTUAL STATEMENTS not protected opinion
+- **REGULATION OPPONENTS** — chilling political speech + satire + parody (SNL deepfakes for comedy); enforcement challenges + viewpoint discrimination concerns; difficult line-drawing
+- **NARROW APPROACH** — disclosure requirements + harm-based actions (defamation + impersonation + fraud) rather than content bans
+- **FOREIGN INTERFERENCE** — special compelling interest; foreign actors lack 1st Amendment protections (Bluman v. FEC 2012)
+
+### Resolution/Implications
+- **BALANCING** — narrow content-neutral disclosure requirements + harm-based enforcement + foreign interference focus + voter education
+- **CONSTITUTIONAL CONCERNS** — content-based bans face strict scrutiny; satire + parody must be protected
+- **INSTITUTIONAL** — federal preemption questions; FCC + FEC + state coordination; civil + criminal enforcement
+- **FOUNDATIONAL DOCUMENTS** — FEDERALIST 78 (Hamilton) judicial review will protect 1st Amendment from regulatory overreach + BRUTUS 1 (Anti-Federalist) skepticism of federal power; democratic accountability requires informed electorate (which AI deepfakes undermine)
+
+## Worked Example 3: TikTok PAFACAA + Foreign Ownership + National Security
+
+### Situation
+**PROTECTING AMERICANS FROM FOREIGN ADVERSARY CONTROLLED APPLICATIONS ACT (PAFACAA)** — signed by President Biden April 24, 2024; requires ByteDance (Chinese parent) to DIVEST TikTok within ~270 days (Jan 19, 2025) or face US BAN. Is this constitutional + appropriate?
+
+### Constitutional/Statutory Framework
+- **1st AMENDMENT** — 170M American TikTok users have free speech + association interests
+- **NATIONAL SECURITY** — Chinese government data access concerns + algorithm manipulation potential
+- **CFIUS** (Committee on Foreign Investment in the United States) — historical foreign investment review
+- **MONTANA TIKTOK BAN 2023** — Federal court enjoined as 1st Amendment violation (preliminary injunction Nov 2023)
+- **TIKTOK v. GARLAND** — TikTok sued PAFACAA; DC Circuit upheld Dec 6 2024; SCOTUS expedited review
+- **BLUMAN v. FEC 2012** — foreign nationals lack 1st Amendment electoral participation rights
+
+### Application/Analysis
+- **GOVERNMENT POSITION** — compelling national security interest in foreign adversary control of major communication platform + data access + algorithmic manipulation; narrow targeting of foreign ownership not content
+- **TIKTOK + USERS POSITION** — content-based effect (170M users' speech); foreign ownership inadequate basis under 1st Amendment; less restrictive alternatives available (data localization + algorithm transparency)
+- **PRECEDENT** — Bluman v. FEC 2012 distinguishes foreign electoral participation; PAFACAA targets ownership not content
+- **NATIONAL SECURITY DEFERENCE** — courts traditionally defer to political branches on national security (Korematsu 1944 historical lesson) but balance with civil liberties
+- **TECHNOLOGY ALTERNATIVES** — data localization + algorithm audit + content moderation requirements as less restrictive
+
+### Resolution/Implications
+- **BALANCING TEST** — compelling national security interest + narrow tailoring (ownership not content) + intermediate scrutiny appropriate
+- **JANUARY 19 2025 DEADLINE** — Trump 2nd term will determine enforcement (Trump previously sought TikTok ban 2020 then later opposed PAFACAA citing campaign reach)
+- **PRECEDENT IMPLICATIONS** — opens door to similar foreign adversary regulations; could affect other Chinese apps + Russian + Iranian
+- **FOUNDATIONAL DOCUMENTS** — FEDERALIST 51 (Madison) checks + balances apply between branches in national security; FEDERALIST 78 (Hamilton) judicial review must balance individual rights with national security; BRUTUS 1 (Anti-Federalist) warned against unchecked federal power including national security overreach
+
+## Foundational Documents Application
+
+| Document | Application to Media/Technology |
+|---|---|
+| **FEDERALIST 10 (Madison)** | Faction control through extended republic + structural mechanisms; modern application — fragmented media ecosystem + filter bubbles undermine extended republic logic by allowing factions to never encounter opposing views |
+| **FEDERALIST 51 (Madison)** | Separation of powers + checks + balances; modern application — congressional + executive + judicial roles in media regulation; balance between branches |
+| **FEDERALIST 78 (Hamilton)** | Judicial review as "least dangerous branch"; modern application — SCOTUS protection of 1st Amendment from regulatory overreach (Moody/Paxton 2024) but also enforcement of compelling interests (PAFACAA/TikTok) |
+| **BRUTUS 1 (Anti-Federalist)** | Skepticism of federal power + judicial overreach + standing army; modern application — concerns about federal regulation of media + platforms + national security overreach + state vs federal preemption |
+
+> 🔑 Key takeaway: AP MEDIA + TECHNOLOGY FRQs require SYSTEMATIC 5-STEP FRAMEWORK — (1) IDENTIFY constitutional/policy issue + (2) ANALYZE precedents + foundational documents + (3) APPLY principles + (4) CONSIDER counterarguments + (5) CONCLUDE with implications; 3 WORKED EXAMPLES — (1) SECTION 230 REFORM vs 1st Amendment (Section 230(c)(1) immunity + Moody/Paxton 2024 affirmed platform editorial discretion + Gonzalez v. Google 2023 punted; EARN IT/PACT/KOSA reforms; EU DSA 2022 model; balance preserve 1st Am + address algorithmic amplification + foreign interference + minor protection); (2) AI DEEPFAKES (NH Biden robocalls Jan 2024 + Taylor Swift Jan 2024; ~20 state laws; FCC Feb 2024 illegal under TCPA 1991; FEC declined July 2024; EU AI Act 2024; balance content-neutral disclosure + harm-based enforcement + foreign interference Bluman v. FEC 2012); (3) TIKTOK PAFACAA April 24 2024 (170M users + ByteDance Chinese; Montana 2023 federal court enjoined; TikTok v. Garland DC Circuit upheld Dec 6 2024; Bluman v. FEC 2012 foreign distinction; intermediate scrutiny + Jan 19 2025 deadline + Trump 2nd term enforcement); FOUNDATIONAL DOCUMENTS — Federalist 10 (Madison faction extended republic; modern fragmented media undermines) + Federalist 51 (Madison separation/checks; branches in regulation) + Federalist 78 (Hamilton judicial review least dangerous; SCOTUS balance 1st Am + compelling interests) + Brutus 1 (Anti-Federalist federal power skepticism; concerns federal regulation + state preemption + national security overreach); SCAR template — Situation + Constitutional/Statutory + Application/Analysis + Resolution/Implications.
       `
+    },
+    {
+      id: 'govmedia6-quiz',
+      type: 'multiple-choice' as const,
+      content: `**Concept Check** 🎯`,
+      exercise: {
+        questions: [
+          {
+            question: "Which 1996 LAW provides PLATFORMS IMMUNITY from LIABILITY for USER-GENERATED CONTENT and is described as the '26 WORDS that CREATED the INTERNET' (Kosseff 2019), with current REFORM PROPOSALS (EARN IT + PACT + KOSA) seeking to NARROW it while OPPONENTS argue REFORM would CHILL SPEECH + harm SMALL PLATFORMS?",
+            options: [
+              "SECTION 230 of COMMUNICATIONS DECENCY ACT 1996 — landmark INTERNET LAW that provides INTERACTIVE COMPUTER SERVICES (platforms + ISPs + websites) IMMUNITY from LIABILITY for USER-GENERATED CONTENT; Section 230(c)(1) states 'No provider or user of an interactive computer service shall be treated as the publisher or speaker of any information provided by another information content provider'; Section 230(c)(2) provides GOOD SAMARITAN IMMUNITY for content moderation in good faith (covers actions to remove or restrict access to material considered obscene + lewd + harassing + objectionable); described by JEFF KOSSEFF (2019 The Twenty-Six Words That Created the Internet) as the '26 WORDS that CREATED the INTERNET' — enabled platforms (Facebook + Google + YouTube + Twitter + Wikipedia + Reddit + Yelp + Amazon + Etsy + millions of small platforms + forums + comment sections) without fear of crushing liability for user content; PASSED as part of TELECOMMUNICATIONS ACT 1996 with bipartisan support (Sen. Wyden D-OR + Rep. Cox R-CA primary sponsors) responding to PRODIGY case (1995) which held platform editorial = publisher liability and CompuServe case (1991) which held no editorial = no liability; perverse incentive to NOT moderate; Section 230 reversed this; CURRENT REFORM PROPOSALS — EARN IT ACT (Eliminating Abusive and Rampant Neglect of Interactive Technologies; targets CSAM by removing 230 immunity for state CSAM claims; Sen. Graham R-SC + Sen. Blumenthal D-CT) + PACT ACT (Platform Accountability and Consumer Transparency; transparency requirements + appeals process; Sen. Schatz D-HI + Sen. Thune R-SD) + KOSA (Kids Online Safety Act; minor protections + duty of care; Sen. Blumenthal + Sen. Blackburn R-TN); REFORM PROPONENTS — Section 230 enables harm without accountability + algorithmic amplification + misinformation + harassment + foreign interference + radicalization undermine democracy + minors harmed; REFORM OPPONENTS — 1st Amendment protects platform editorial decisions (Moody v. NetChoice 2024 + NetChoice v. Paxton 2024 affirmed) + reform would chill speech + force over-removal + harm small platforms (favor large incumbents Facebook/Google/X who can afford liability); GONZALEZ v. GOOGLE 2023 SCOTUS punted on whether Section 230 applies to algorithmic recommendation; Justice Thomas + Justice Gorsuch have suggested Section 230 reform; BIDEN ADMINISTRATION + TRUMP both criticized Section 230 from different angles (Biden — too much harmful content; Trump — too much conservative censorship); EU DSA 2022 (Digital Services Act) provides ALTERNATIVE MODEL — content moderation transparency + risk assessment + audited compliance for very large online platforms (VLOPs ~17 designated); could inform US approach; central case for AP Government understanding of internet regulation + 1st Amendment + platform power + reform debates",
+              "There is no Section 230 of CDA 1996 of any kind during the entire period in any region of the United States with no internet law providing interactive computer services immunity from liability for user content, no Section 230(c)(1) provider/speaker, no (c)(2) Good Samaritan moderation good faith, no Kosseff 2019 26 words created internet description, no enabling Facebook/Google/YouTube/Twitter/Wikipedia/Reddit/Yelp/Amazon/Etsy + small platforms, no Telecommunications Act 1996 bipartisan Wyden D-OR + Cox R-CA responding to Prodigy 1995 + CompuServe 1991 perverse incentive reversal, no current reform proposals EARN IT (Graham R-SC + Blumenthal D-CT CSAM state claims) + PACT (Schatz D-HI + Thune R-SD transparency + appeals) + KOSA (Blumenthal + Blackburn R-TN minor protections), no proponents (algorithmic amplification + misinformation + harassment + foreign interference + radicalization + minors) vs opponents (1st Am Moody/Paxton 2024 + chill speech + over-removal + harm small platforms favor incumbents), no Gonzalez v. Google 2023 SCOTUS punted algorithmic + Thomas/Gorsuch reform suggestions, no Biden/Trump bipartisan criticism from different angles, no EU DSA 2022 alternative VLOP ~17 designated audited compliance model, and no Section 230 of any kind during the entire period in any region",
+              "ESPIONAGE ACT 1917 (rather than Section 230 of CDA 1996) of any kind under any circumstance with no internet platform immunity, no 26 words created internet, no current reform proposals, no 1st Amendment debates, and no proper Section 230 analysis of any kind during the entire period in any region of the United States during the period",
+              "DIGITAL MILLENNIUM COPYRIGHT ACT 1998 (rather than Section 230 of CDA 1996) of any kind under any circumstance with no platform immunity for user content (rather than copyright safe harbors), no 26 words, no current reform proposals analysis, and no proper Section 230 analysis of any kind during the entire period in any region of the United States during the period",
+            ],
+            correctAnswer: 0,
+            explanation: 'SECTION 230 of CDA 1996 — landmark internet law providing INTERACTIVE COMPUTER SERVICES (platforms + ISPs + websites) IMMUNITY from liability for user-generated content; Section 230(c)(1) "no provider or user of an interactive computer service shall be treated as the publisher or speaker of any information provided by another information content provider"; (c)(2) Good Samaritan immunity for content moderation in good faith; Kosseff 2019 "26 words that created the internet"; enabled Facebook + Google + YouTube + Twitter + Wikipedia + Reddit + Yelp + Amazon + Etsy + small platforms; passed as part of Telecommunications Act 1996 (Wyden D-OR + Cox R-CA) responding to Prodigy 1995 perverse incentive; CURRENT REFORM — EARN IT (Graham/Blumenthal CSAM) + PACT (Schatz/Thune transparency) + KOSA (Blumenthal/Blackburn minors); PROPONENTS — algorithmic amplification + misinformation + foreign interference + minors; OPPONENTS — 1st Am (Moody/Paxton 2024) + chill speech + harm small platforms; Gonzalez v. Google 2023 SCOTUS punted on algorithmic recommendation; Biden + Trump bipartisan criticism (different angles); EU DSA 2022 alternative model.'
+          }
+        ]
+      }
     },
     {
       id: 'govmedia6-input',
       type: 'input-boxes' as const,
-      content: `
-**Applied Recall (exact term answers)** ✍️
-
-1) What term refers to analyzing maps, graphs, and tables related to The Media & Technology?
-
-2) What concept describes making evidence-based claims about The Media & Technology?
-
-3) Name the term for using geographic thinking to analyze The Media & Technology.
-
-Use the exact term from this part.
-      `,
+      content: `**Sprint quiz**`,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'Starts with: D',
-        hint2: 'Starts with: A',
-        hint3: 'Starts with: S',
-        explanation: 'Expected answers: Data interpretation (Analyzing maps, graphs, and tables related to The Media & Technology), Argumentation (Making evidence-based claims about The Media & Technology), and Spatial reasoning (Using geographic thinking to analyze The Media & Technology).'
+        questions: [
+          {
+            prompt: "DATE PAFACAA (PROTECTING AMERICANS FROM FOREIGN ADVERSARY CONTROLLED APPLICATIONS ACT) was SIGNED by PRESIDENT BIDEN requiring ByteDance to DIVEST TikTok:",
+            answer: "April 24, 2024",
+            acceptableAnswers: ["April 24, 2024", "April 24 2024", "Apr 24 2024", "Apr 24, 2024", "4/24/2024", "4/24/24", "April 2024", "Apr 2024", "April 24"],
+            hint: "APRIL 24, 2024 — President Biden signed PAFACAA (Protecting Americans from Foreign Adversary Controlled Applications Act) as part of EMERGENCY SUPPLEMENTAL APPROPRIATIONS ACT 2024 (HR 815; included Ukraine + Israel + Indo-Pacific aid + TikTok provisions); requires BYTEDANCE (Chinese parent) to DIVEST TIKTOK within 270 DAYS (deadline JANUARY 19, 2025; one day before Trump inauguration Jan 20) or face US BAN (app stores prohibited from distributing + ISPs from hosting); 170M AMERICAN TIKTOK USERS affected; rationale — NATIONAL SECURITY + Chinese government data access + algorithmic manipulation potential + foreign adversary control of major communication platform; TIKTOK v. GARLAND lawsuit — DC CIRCUIT upheld December 6, 2024 (3-0 panel including conservative Senior Judge Ginsburg + Judge Rao + Judge Srinivasan) finding national security justified; SCOTUS GRANTED CERTIORARI Dec 18 2024; ARGUMENT JANUARY 10, 2025; SCOTUS UPHELD UNANIMOUSLY January 17, 2025; TikTok briefly went dark Jan 18-19 2025; Trump signed EXECUTIVE ORDER Jan 20 2025 ordering 75-day non-enforcement to seek deal; ongoing situation; central case for foreign ownership + 1st Amendment + national security + Bluman v. FEC 2012 distinction."
+          },
+          {
+            prompt: "SECTION 230 of CDA 1996 KEY PHRASE describing it (Kosseff 2019 book title; ___ WORDS that CREATED the INTERNET):",
+            answer: '26',
+            acceptableAnswers: ['26', 'twenty-six', 'twenty six'],
+            hint: '26 WORDS that CREATED the INTERNET — JEFF KOSSEFF (2019 Cornell University Press) book title describing SECTION 230(c)(1) of COMMUNICATIONS DECENCY ACT 1996; the 26 words: "No provider or user of an interactive computer service shall be treated as the publisher or speaker of any information provided by another information content provider"; PROVIDES INTERACTIVE COMPUTER SERVICES (platforms + ISPs + websites) IMMUNITY from LIABILITY for USER-GENERATED CONTENT; Section 230(c)(2) provides GOOD SAMARITAN IMMUNITY for content moderation in good faith; passed as part of TELECOMMUNICATIONS ACT 1996 (bipartisan Sen. Wyden D-OR + Rep. Cox R-CA primary sponsors); enabled FACEBOOK + GOOGLE + YOUTUBE + TWITTER + WIKIPEDIA + REDDIT + YELP + AMAZON + ETSY + millions of small platforms; CURRENT REFORM PROPOSALS — EARN IT + PACT + KOSA; PROPONENTS argue Section 230 enables harm + algorithmic amplification + misinformation + foreign interference; OPPONENTS argue reform chills speech + harms small platforms; central case for AP Government internet regulation analysis.'
+          },
+          {
+            prompt: "SCOTUS 2024 CASES (cited together) striking down FLORIDA + TEXAS social media CONTENT MODERATION laws (TWO cases):",
+            answer: 'Moody v. NetChoice and NetChoice v. Paxton',
+            acceptableAnswers: ['Moody v. NetChoice and NetChoice v. Paxton', 'NetChoice v. Paxton and Moody v. NetChoice', 'Moody and Paxton', 'Moody v. NetChoice; NetChoice v. Paxton', 'Moody/Paxton', 'Moody and NetChoice v. Paxton', 'Moody v NetChoice and NetChoice v Paxton'],
+            hint: 'MOODY v. NETCHOICE 2024 + NETCHOICE v. PAXTON 2024 — companion SCOTUS cases decided JULY 1, 2024 (per Justice Kagan); UNANIMOUSLY 9-0 VACATED + REMANDED 11th Circuit + 5th Circuit decisions on FLORIDA SB 7072 (2021) + TEXAS HB 20 (2021) social media content moderation laws; both state laws prohibited platforms from removing political viewpoints + required transparency + ban deplatforming politicians; FLORIDA passed after Trump banned Jan 2021 + TEXAS framed as combating Big Tech censorship; SCOTUS ruled lower courts INADEQUATELY ANALYZED 1st Amendment claims using FACIAL CHALLENGE standards; AFFIRMED platforms have 1st AMENDMENT EDITORIAL DISCRETION (citing Miami Herald v. Tornillo 1974); KAGAN majority emphasized "expressive product" of content moderation = 1st Amendment-protected; CONCURRENCES — Justice Barrett + Justice Jackson + Justice Thomas + Justice Alito (skeptical of platform 1st Amendment claims); SIGNIFICANT IMPLICATIONS — affirmed Section 230 + platform editorial discretion + struck partisan attempts to control content moderation; relevant to ongoing Section 230 reform debates + EARN IT/PACT/KOSA proposals + future state regulation attempts.'
+          }
+        ]
       }
     },
     {
       id: 'govmedia6-dropdown',
       type: 'dropdown-select' as const,
-      content: `
-**Fill in the Blanks** 🔍
-      `,
+      content: `**Match each MEDIA + TECH PROBLEM-SOLVING ELEMENT to its EXAMPLE.**`,
       exercise: {
         dropdowns: [
           {
-            label: 'Analyzing maps, graphs, and tables related to The Media & Technology is called ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'None of these']
+            label: "SECTION 230 REFORM PROBLEM — _______:",
+            options: ['EARN IT/PACT/KOSA proposals narrow Section 230 immunity (Sen. Graham/Blumenthal CSAM + Sen. Schatz/Thune transparency + Sen. Blumenthal/Blackburn minor protections); proponents algorithmic harm/misinformation/minors; opponents 1st Am Moody/Paxton 2024 + chill speech + harm small platforms; EU DSA 2022 alternative model VLOP audited compliance', 'NH Biden robocalls Jan 2024 + Taylor Swift deepfakes Jan 2024 + ~20 state laws + FCC Feb 2024 illegal under TCPA 1991 + FEC declined July 2024 + EU AI Act 2024; Bluman v. FEC 2012 foreign distinction; balance content-neutral disclosure + harm-based enforcement + foreign interference focus', 'Biden signed April 24 2024 (HR 815 emergency supplemental); ByteDance divest within 270 days (deadline Jan 19 2025); 170M American users; TikTok v. Garland DC Circuit upheld Dec 6 2024 + SCOTUS unanimous Jan 17 2025 + brief darkness Jan 18-19 + Trump EO Jan 20 75-day non-enforcement', 'Federalist 10 (Madison faction extended republic; modern fragmented media undermines) + Federalist 51 (Madison separation/checks; branches regulation) + Federalist 78 (Hamilton judicial review least dangerous; SCOTUS 1st Am + compelling interests) + Brutus 1 (Anti-Federalist federal power skepticism; state preemption + national security overreach concerns)']
           },
           {
-            label: 'Making evidence-based claims about The Media & Technology describes ___',
-            options: ['Data interpretation', 'Argumentation', 'Spatial reasoning', 'All of these']
+            label: "AI DEEPFAKES PROBLEM — _______:",
+            options: ['EARN IT/PACT/KOSA proposals narrow Section 230 immunity (Sen. Graham/Blumenthal CSAM + Sen. Schatz/Thune transparency + Sen. Blumenthal/Blackburn minor protections); proponents algorithmic harm/misinformation/minors; opponents 1st Am Moody/Paxton 2024 + chill speech + harm small platforms; EU DSA 2022 alternative model VLOP audited compliance', 'NH Biden robocalls Jan 2024 + Taylor Swift deepfakes Jan 2024 + ~20 state laws + FCC Feb 2024 illegal under TCPA 1991 + FEC declined July 2024 + EU AI Act 2024; Bluman v. FEC 2012 foreign distinction; balance content-neutral disclosure + harm-based enforcement + foreign interference focus', 'Biden signed April 24 2024 (HR 815 emergency supplemental); ByteDance divest within 270 days (deadline Jan 19 2025); 170M American users; TikTok v. Garland DC Circuit upheld Dec 6 2024 + SCOTUS unanimous Jan 17 2025 + brief darkness Jan 18-19 + Trump EO Jan 20 75-day non-enforcement', 'Federalist 10 (Madison faction extended republic; modern fragmented media undermines) + Federalist 51 (Madison separation/checks; branches regulation) + Federalist 78 (Hamilton judicial review least dangerous; SCOTUS 1st Am + compelling interests) + Brutus 1 (Anti-Federalist federal power skepticism; state preemption + national security overreach concerns)']
           },
           {
-            label: 'Using geographic thinking to analyze The Media & Technology is known as ___',
-            options: ['Spatial reasoning', 'Data interpretation', 'Argumentation', 'None of these']
+            label: "TIKTOK PAFACAA PROBLEM — _______:",
+            options: ['EARN IT/PACT/KOSA proposals narrow Section 230 immunity (Sen. Graham/Blumenthal CSAM + Sen. Schatz/Thune transparency + Sen. Blumenthal/Blackburn minor protections); proponents algorithmic harm/misinformation/minors; opponents 1st Am Moody/Paxton 2024 + chill speech + harm small platforms; EU DSA 2022 alternative model VLOP audited compliance', 'NH Biden robocalls Jan 2024 + Taylor Swift deepfakes Jan 2024 + ~20 state laws + FCC Feb 2024 illegal under TCPA 1991 + FEC declined July 2024 + EU AI Act 2024; Bluman v. FEC 2012 foreign distinction; balance content-neutral disclosure + harm-based enforcement + foreign interference focus', 'Biden signed April 24 2024 (HR 815 emergency supplemental); ByteDance divest within 270 days (deadline Jan 19 2025); 170M American users; TikTok v. Garland DC Circuit upheld Dec 6 2024 + SCOTUS unanimous Jan 17 2025 + brief darkness Jan 18-19 + Trump EO Jan 20 75-day non-enforcement', 'Federalist 10 (Madison faction extended republic; modern fragmented media undermines) + Federalist 51 (Madison separation/checks; branches regulation) + Federalist 78 (Hamilton judicial review least dangerous; SCOTUS 1st Am + compelling interests) + Brutus 1 (Anti-Federalist federal power skepticism; state preemption + national security overreach concerns)']
           }
         ],
-        correctAnswers: ['Data interpretation', 'Argumentation', 'Spatial reasoning'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Data interpretation — Analyzing maps, graphs, and tables related to The Media & Technology. Argumentation — Making evidence-based claims about The Media & Technology. Spatial reasoning — Using geographic thinking to analyze The Media & Technology.'
+        correctAnswers: ['EARN IT/PACT/KOSA proposals narrow Section 230 immunity (Sen. Graham/Blumenthal CSAM + Sen. Schatz/Thune transparency + Sen. Blumenthal/Blackburn minor protections); proponents algorithmic harm/misinformation/minors; opponents 1st Am Moody/Paxton 2024 + chill speech + harm small platforms; EU DSA 2022 alternative model VLOP audited compliance', 'NH Biden robocalls Jan 2024 + Taylor Swift deepfakes Jan 2024 + ~20 state laws + FCC Feb 2024 illegal under TCPA 1991 + FEC declined July 2024 + EU AI Act 2024; Bluman v. FEC 2012 foreign distinction; balance content-neutral disclosure + harm-based enforcement + foreign interference focus', 'Biden signed April 24 2024 (HR 815 emergency supplemental); ByteDance divest within 270 days (deadline Jan 19 2025); 170M American users; TikTok v. Garland DC Circuit upheld Dec 6 2024 + SCOTUS unanimous Jan 17 2025 + brief darkness Jan 18-19 + Trump EO Jan 20 75-day non-enforcement'],
+        hint1: 'SECTION 230 REFORM — Section 230 of CDA 1996 (Kosseff 2019 "26 words"); EARN IT Act (Sen. Graham R-SC + Sen. Blumenthal D-CT; targets CSAM by removing 230 immunity for state CSAM claims) + PACT Act (Sen. Schatz D-HI + Sen. Thune R-SD; transparency requirements + appeals process) + KOSA (Sen. Blumenthal + Sen. Blackburn R-TN; minor protections + duty of care); REFORM PROPONENTS — Section 230 enables harm + algorithmic amplification + misinformation + foreign interference + minors; OPPONENTS — 1st Amendment platform editorial discretion (Moody v. NetChoice 2024 + NetChoice v. Paxton 2024 affirmed) + reform would chill speech + force over-removal + harm small platforms (favor large incumbents); GONZALEZ v. GOOGLE 2023 SCOTUS punted; EU DSA 2022 alternative model (VLOP transparency + risk assessment + audited compliance).',
+        hint2: 'AI DEEPFAKES — January 2024 NH ROBOCALLS impersonated President Biden urging voters not to vote in primary (Steve Kramer paid $6M FCC fine 2024) + Taylor Swift DEEPFAKES January 2024 viral on X; ~20 STATE LAWS (TX 2019 first + CA + MN + WA + others) ban election deepfakes; FCC declared AI voice robocalls illegal under TCPA 1991 (February 2024); FEC declined to pursue rulemaking July 2024; EU AI ACT 2024 comprehensive regulation + deepfake disclosure; BLUMAN v. FEC 2012 foreign nationals lack 1st Am electoral rights distinguishes foreign interference; balance — narrow content-neutral DISCLOSURE requirements + harm-based actions (defamation + impersonation + fraud) + foreign interference focus + voter education; satire + parody must remain protected; content-based bans face strict scrutiny.',
+        hint3: 'TIKTOK PAFACAA — Protecting Americans from Foreign Adversary Controlled Applications Act signed by Biden April 24, 2024 (part of HR 815 Emergency Supplemental Appropriations Act); requires BYTEDANCE (Chinese parent) to DIVEST TIKTOK within 270 days (deadline JANUARY 19, 2025; one day before Trump inauguration); 170M American users; TIKTOK v. GARLAND lawsuit — DC Circuit UPHELD December 6, 2024 (3-0 panel including Ginsburg + Rao + Srinivasan); SCOTUS GRANTED CERTIORARI Dec 18 2024 + ARGUMENT Jan 10 2025 + UPHELD UNANIMOUSLY Jan 17 2025; TikTok briefly DARK Jan 18-19 2025; Trump signed EO Jan 20 2025 ordering 75-day non-enforcement to seek deal; central case for foreign ownership + 1st Amendment + national security + Bluman v. FEC 2012 foreign distinction.'
       }
-    },
-    {
-      id: 'govmedia6-strategy',
-      type: 'text' as const,
-      content: `
-## Common Misconceptions and Exam Strategy
-
-### Misconceptions to Avoid
-- Don\'\'t confuse **Data interpretation** with **Argumentation** — while related, they address different aspects of The Media & Technology.
-- **Spatial reasoning** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
-
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP US Government for higher scores.
-      `
     },
     {
       id: 'govmedia6-applied',
       type: 'multiple-choice' as const,
-      content: `
-**Applied Scenarios** 🎯
-      `,
+      content: `**Applied AP Practice**`,
       exercise: {
         questions: [
           {
-            question: 'You are given a data table about The Media & Technology and asked to identify a trend. You should:',
+            question: "An AP FRQ asks students to APPLY the 5-STEP PROBLEM-SOLVING FRAMEWORK to ANALYZE Section 230 reform + AI deepfakes regulation + TikTok PAFACAA, INTEGRATING foundational documents (Federalist 10/51/78 + Brutus 1) + key cases (Sullivan 1964 + Reno 1997 + Citizens United 2010 + Moody v. NetChoice 2024 + Bluman v. FEC 2012) and ARGUING for institutional design that BALANCES 1st Amendment + national security + minor protection + foreign interference + algorithmic accountability. Which response BEST SYNTHESIZES the analysis?",
             options: [
-              'Pick random numbers',
-              'Look for consistent increases, decreases, or patterns across the data',
-              'Ignore the table',
-              'Only read the first row'
+              "COMPREHENSIVE SYNTHESIS using 5-STEP FRAMEWORK: (1) IDENTIFY — modern media + technology raises COMPLEX CONSTITUTIONAL/POLICY ISSUES at intersection of 1st Amendment + national security + privacy + algorithmic accountability + foreign interference + market regulation + minor protection; (2) ANALYZE PRECEDENTS — KEY CASES — NYT v. Sullivan 1964 (actual malice for public officials; foundational press freedom) + Pentagon Papers 1971 (prior restraint extraordinary; press freedom national security) + Branzburg v. Hayes 1972 (no constitutional reporter's privilege) + Reno v. ACLU 1997 (internet receives FULL 1st Amendment protection; struck CDA indecency) + Citizens United v. FEC 2010 (corporate independent expenditures protected; reshaped campaign finance) + Bluman v. FEC 2012 (foreign nationals lack 1st Amendment electoral rights) + Manhattan Community Access v. Halleck 2019 (private platforms generally not state actors) + Gonzalez v. Google 2023 (punted on Section 230 + algorithmic recommendation) + Moody v. NetChoice 2024 + NetChoice v. Paxton 2024 (UNANIMOUS 9-0 affirmed platform editorial discretion + struck FL/TX content moderation laws) + TikTok v. Garland 2025 (UNANIMOUS upheld PAFACAA Jan 17 2025); FOUNDATIONAL DOCUMENTS — FEDERALIST 10 (Madison faction control extended republic) + FEDERALIST 51 (Madison separation/checks balance) + FEDERALIST 78 (Hamilton judicial review least dangerous branch) + BRUTUS 1 (Anti-Federalist federal power skepticism); (3) APPLY PRINCIPLES — 1st AMENDMENT FUNDAMENTAL with content-neutral preferred + viewpoint discrimination disfavored + strict scrutiny content-based + intermediate content-neutral + commercial speech less protected + national security balanced + foreign interference compelling interest distinction; (4) COUNTERARGUMENTS — 1st Amendment ABSOLUTISM vs reasonable regulation + government power vs private platform power + foreign vs domestic distinction (Bluman v. FEC 2012) + adult vs minor protection + national security vs civil liberties + market vs regulation + state vs federal preemption (Section 230 currently preempts state laws affecting platforms); (5) CONCLUDE — 3 WORKED EXAMPLES demonstrate balanced approach: SECTION 230 REFORM — preserve 1st Amendment + platform editorial discretion (Moody/Paxton 2024 affirmed) + small platform competition AND address algorithmic amplification + foreign interference + minor protection + transparency through narrow exceptions (CSAM + foreign + algorithmic transparency for political ads + KOSA-style minor protections; EU DSA 2022 model); AI DEEPFAKES — narrow content-neutral DISCLOSURE requirements + harm-based actions (defamation + impersonation + fraud + TCPA 1991 voice cloning) + foreign interference focus (Bluman 2012) + voter education while preserving satire + parody (NH Biden robocalls Jan 2024 + Taylor Swift Jan 2024 + Steve Kramer $6M FCC fine 2024 + ~20 state laws + FCC Feb 2024 + FEC July 2024 + EU AI Act 2024); TIKTOK PAFACAA — compelling national security interest + narrow tailoring (ownership not content; intermediate scrutiny) + Bluman foreign distinction (Biden signed April 24 2024 + ByteDance divest 270 days deadline Jan 19 2025 + DC Circuit Dec 6 2024 + SCOTUS unanimous Jan 17 2025 + Trump EO Jan 20 2025 75-day); FOUNDATIONAL DOCUMENTS application — FEDERALIST 10 (faction control through extended republic) — modern application: fragmented media ecosystem + filter bubbles undermine extended republic logic by allowing factions to never encounter opposing views; requires NEW STRUCTURAL MECHANISMS for digital age; FEDERALIST 51 (separation of powers + checks/balances) — congressional + executive (FCC + FTC + DOJ) + judicial (SCOTUS) + state roles in media regulation; balance between branches preserves accountability; FEDERALIST 78 (judicial review as least dangerous branch) — SCOTUS protection of 1st Amendment from regulatory overreach (Moody/Paxton 2024) + enforcement of compelling interests (PAFACAA upheld); judicial review as essential check; BRUTUS 1 (Anti-Federalist skepticism) — concerns about federal regulation of media + platforms + national security overreach + state preemption + due process protections; INSTITUTIONAL DESIGN ARGUMENT — modern media-politics requires NUANCED FRAMEWORK that (1) PRESERVES core 1st Amendment protections (Sullivan + Pentagon Papers + Reno + Citizens United + Moody/Paxton) + (2) ADDRESSES legitimate concerns (foreign interference + algorithmic harm + minor protection + transparency) through (3) NARROW + CONTENT-NEUTRAL + HARM-BASED + DISCLOSURE-FOCUSED interventions rather than broad content regulation + (4) MAINTAINS distinction between FOREIGN ADVERSARIES (PAFACAA + Bluman 2012) and DOMESTIC speech (full 1st Amendment) + (5) BALANCES federal/state preemption + administrative agency role + judicial review + congressional oversight; FUTURE CHALLENGES — (1) AI EVOLUTION beyond current deepfakes (autonomous agents + generative content explosion + voice cloning + video manipulation) requires ongoing regulatory adaptation; (2) PLATFORM POWER concentration (Facebook + Google + YouTube + TikTok + X dominate) raises antitrust + competition concerns separate from speech; (3) FOREIGN INTERFERENCE evolution (Russia + China + Iran + non-state actors) requires intelligence community + DHS + FBI + State coordination + private sector partnership; (4) MEDIA ECONOMIC SUSTAINABILITY (local journalism collapse ~2,500 papers since 2005 + nonprofit news ~440+ + journalist safety + economic models) threatens watchdog function critical to democratic accountability; (5) COMPARATIVE PERSPECTIVES (EU DSA 2022 + EU AI Act 2024 + UK Online Safety Act 2023 + Australian News Media Bargaining Code 2021) provide INSTITUTIONAL EXAMPLES that US can adapt; OVERALL ASSESSMENT — modern media-technology challenges DEMAND systematic problem-solving approaches grounded in CONSTITUTIONAL PRINCIPLES + HISTORICAL UNDERSTANDING + COMPARATIVE INSTITUTIONAL ANALYSIS + EMPIRICAL EVIDENCE; democratic deliberation requires SHARED FACTUAL BASIS + DIVERSE VIEWPOINTS + ACCOUNTABILITY mechanisms; FOUNDATIONAL DOCUMENTS provide GUIDING PRINCIPLES (faction control + separation of powers + judicial review + skepticism of unchecked power) but require CREATIVE APPLICATION to digital age; SCOTUS will continue to play CENTRAL ROLE in adjudicating disputes (Moody/Paxton 2024 + TikTok 2025 demonstrate active engagement); CONGRESSIONAL ACTION + AGENCY ENFORCEMENT + STATE EXPERIMENTATION + JUDICIAL REVIEW must work in COMPLEMENTARY rather than CONFLICTING ways; CIVIL SOCIETY (journalism + nonprofits + media literacy + academic research + citizen engagement) plays ESSENTIAL ROLE alongside formal institutions; FUTURE depends on whether AMERICAN INSTITUTIONS + ACTORS can adapt to digital age while preserving DEMOCRATIC VALUES (free expression + accountability + deliberation + factual basis + diverse viewpoints + minority rights + majority rule).",
+              "There is no comprehensive synthesis of any kind during the entire period in any region of the United States with no 5-step framework analysis (identify + analyze precedents + apply principles + counterarguments + conclude), no key cases (Sullivan 1964 + Pentagon Papers 1971 + Branzburg 1972 + Reno 1997 + Citizens United 2010 + Bluman 2012 + Halleck 2019 + Gonzalez 2023 + Moody/Paxton 2024 + TikTok 2025), no foundational documents (Federalist 10 + 51 + 78 + Brutus 1) application, no principles (1st Am fundamental + content-neutral + viewpoint discrimination + strict/intermediate scrutiny + commercial + national security + foreign distinction), no counterarguments analysis, no 3 worked examples Section 230 reform (EARN IT/PACT/KOSA + EU DSA 2022) + AI deepfakes (NH Biden robocalls + Taylor Swift + Kramer $6M FCC + ~20 states + FCC Feb 2024 + FEC July 2024 + EU AI Act 2024) + TikTok PAFACAA (Biden April 24 2024 + ByteDance + 170M users + Jan 19 2025 deadline + DC Circuit Dec 6 2024 + SCOTUS unanimous Jan 17 2025 + Trump EO Jan 20 2025 75-day), no institutional design argument (preserve + address + narrow content-neutral harm-based disclosure + foreign distinction + federal/state balance), no future challenges (AI evolution + platform power concentration + foreign interference evolution + media economic sustainability ~2,500 papers since 2005/nonprofit ~440+/journalist safety + comparative EU DSA 2022/EU AI Act 2024/UK Online Safety 2023/Australian News Bargaining 2021), no overall assessment SCOTUS central role + congressional/agency/state/judicial complementary + civil society essential + democratic values free expression + accountability + deliberation + factual basis + diverse viewpoints + minority rights + majority rule, and no comprehensive synthesis of any kind during the entire period in any region",
+              "MEDIA-TECHNOLOGY ISSUES HAVE NO RELATIONSHIP to FOUNDATIONAL DOCUMENTS or CONSTITUTIONAL PRINCIPLES (rather than complex constitutional issues at intersection of 1st Amendment + national security + privacy + algorithmic accountability + foreign interference + market regulation + minor protection requiring systematic 5-step framework analysis grounded in foundational documents + key cases) of any kind under any circumstance with no framework, no documents, no cases, no synthesis, and no proper comprehensive synthesis of any kind during the entire period in any region of the United States during the period",
+              "There is NO 5-STEP FRAMEWORK for ANALYZING MEDIA-TECHNOLOGY ISSUES (rather than identify + analyze precedents + apply principles + counterarguments + conclude approach demonstrated through Section 230 reform + AI deepfakes + TikTok PAFACAA worked examples) of any kind under any circumstance with no framework, no documents, no cases, no synthesis, and no proper comprehensive synthesis of any kind during the entire period in any region of the United States during the period",
             ],
-            correctAnswer: 1,
-            explanation: 'Trend identification requires examining the entire dataset for consistent patterns of change.'
-          },
-          {
-            question: 'A free-response question asks you to use evidence to support an argument about The Media & Technology. The best approach is:',
-            options: [
-              'State your opinion without evidence',
-              'Make a clear claim, cite specific data or examples, and explain how they support your argument',
-              'Copy the question',
-              'Write about a different topic'
-            ],
-            correctAnswer: 1,
-            explanation: 'AP free-response answers require a clear thesis, specific supporting evidence, and explanation of how evidence supports the argument.'
+            correctAnswer: 0,
+            explanation: '5-STEP FRAMEWORK applied to 3 examples: (1) IDENTIFY — 1st Am + national security + privacy + algorithms + foreign interference + market + minors; (2) ANALYZE PRECEDENTS — Sullivan 1964 actual malice + Pentagon Papers 1971 prior restraint + Branzburg 1972 no privilege + Reno 1997 internet full 1st Am + Citizens United 2010 + Bluman 2012 foreign distinction + Halleck 2019 platforms not state actors + Gonzalez 2023 punted Section 230 algorithmic + Moody/Paxton 2024 unanimous affirmed platform editorial + TikTok 2025 unanimous PAFACAA + Federalist 10/51/78 + Brutus 1; (3) APPLY PRINCIPLES — content-neutral preferred + strict scrutiny content-based + intermediate content-neutral + commercial speech less + national security balanced + foreign compelling; (4) COUNTERARGUMENTS — absolutism vs regulation + government vs platform power + foreign vs domestic + minor vs adult + state vs federal preemption; (5) CONCLUDE — Section 230 reform (EARN IT/PACT/KOSA + EU DSA 2022 model) + AI deepfakes (NH Biden + Taylor Swift + Kramer $6M FCC + ~20 states + FCC Feb 2024 + FEC July 2024 + EU AI Act 2024 narrow disclosure + harm-based + foreign focus) + TikTok PAFACAA (Biden April 24 2024 + ByteDance 270 days + DC Circuit Dec 6 2024 + SCOTUS Jan 17 2025 + Trump EO Jan 20 2025 75-day; intermediate scrutiny + Bluman foreign). FUTURE — AI evolution + platform concentration + foreign interference + media sustainability ~2,500 papers since 2005/nonprofit ~440+ + comparative EU DSA 2022/EU AI Act 2024/UK Online Safety 2023.'
           }
         ]
       }
