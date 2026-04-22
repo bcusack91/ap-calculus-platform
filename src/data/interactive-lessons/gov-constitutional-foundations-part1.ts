@@ -1,86 +1,187 @@
 export const govConstitutionalFoundationsPart1Data = {
   topicSlug: 'gov-constitutional-foundations',
   sections: [
-    {id:'govconst1-intro',type:'text' as const,content:`
+    {
+      id: 'govconst1-intro',
+      type: 'text' as const,
+      content: `
 # 🏛️ Constitutional Foundations
 
-**Part 1 of 7 — The Constitution & Founding Principles**
+**Part 1 of 7 — Core Concepts**
 
 ---
 
 | Section |
-|---------|
-| 📖 Enlightenment Influences |
-| The Articles of Confederation |
-| Constitutional Convention & Key Compromises |
-| Ratification Debate: Federalists vs. Anti-Federalists |
+|---|
+| Enlightenment foundations (Locke, Montesquieu, Hobbes) |
+| Foundational documents (Declaration, Articles, Constitution) |
+| Five required AP foundational documents |
+| Federalists vs. Anti-Federalists |
 
-> 🔑 **Key Concept:** The AP exam heavily tests the **philosophical foundations** of the Constitution (Locke, Montesquieu, Rousseau) and the **compromises** that made ratification possible. You must know both the Federalist AND Anti-Federalist arguments.
-`},
-    {id:'govconst1-influences',type:'text' as const,content:`
-## 📖 Enlightenment Foundations
-
-The Constitution was built on ideas from Enlightenment thinkers:
+> 🔑 Key idea: The U.S. Constitution (drafted summer 1787, ratified June 1788, effective March 4, 1789) was the product of a sustained Enlightenment debate over the proper sources of legitimate political authority and the proper structure of government to secure liberty without producing tyranny — a debate that continues to shape American constitutional argument today.
+      `
+    },
+    {
+      id: 'govconst1-content',
+      type: 'text' as const,
+      content: `
+## Enlightenment Foundations
 
 | Thinker | Key Idea | Constitutional Application |
 |---|---|---|
-| **John Locke** | Natural rights (life, liberty, property); social contract; consent of the governed | Declaration of Independence; purpose of government is to protect rights |
-| **Montesquieu** | Separation of powers into branches | Three branches: legislative, executive, judicial |
-| **Rousseau** | Popular sovereignty — government authority from the people | "We the People"; republican government |
+| **John Locke** (*Second Treatise of Government*, 1689) | Natural rights (life, liberty, property); government rests on the consent of the governed; the right to alter or abolish a government that violates the social contract | Declaration of Independence ("Life, Liberty, and the pursuit of Happiness"); 9th Amendment (unenumerated rights); 5th and 14th Amendments (due process protection of life, liberty, and property) |
+| **Baron de Montesquieu** (*The Spirit of the Laws*, 1748) | Separation of powers among legislative, executive, and judicial branches; checks and balances among them | Articles I (Congress), II (President), III (Courts); checks and balances throughout (veto, override, judicial review, advice and consent, impeachment) |
+| **Thomas Hobbes** (*Leviathan*, 1651) | Without government there is a "state of nature" — a war of all against all in which life is "solitary, poor, nasty, brutish, and short"; people consent to a sovereign to provide order | Preamble ("insure domestic Tranquility, provide for the common defence") — government as the necessary alternative to anarchy |
+| **Jean-Jacques Rousseau** (*The Social Contract*, 1762) | Popular sovereignty: legitimate political authority comes from the "general will" of the people | Preamble ("We the People"); Article I, § 2 (House directly elected); 17th Amendment (direct election of senators) |
 
-### Key Documents Before the Constitution
-- **Magna Carta (1215)** — limited the power of the English king; established rule of law
-- **English Bill of Rights (1689)** — parliamentary supremacy; protected individual rights
-- **Articles of Confederation (1781)** — first U.S. government; deliberately weak central government
+## Foundational Documents
 
-### Why the Articles Failed
-| Problem | Detail |
-|---|---|
-| **No executive branch** | No president to enforce laws |
-| **No national judiciary** | No courts to settle disputes between states |
-| **No taxing power** | Congress could request money but not compel states to pay |
-| **Unanimous consent for amendments** | Nearly impossible to change anything |
-| **Shays' Rebellion (1786–87)** | Armed uprising in Massachusetts that Congress couldn't suppress — demonstrated need for stronger government |
-
-> 🔑 **AP Connection:** Shays' Rebellion is a key turning point — it convinced leaders like Madison and Hamilton that the Articles were too weak and that a Constitutional Convention was necessary.
-`},
-    {id:'govconst1-quiz1',type:'multiple-choice' as const,content:`**Concept Check** 🎯`,exercise:{questions:[
-      {question:'Which Enlightenment thinker\'s ideas most directly influenced the Constitution\'s separation of powers into three branches?',options:['John Locke, who argued for natural rights and consent of the governed','Montesquieu, who argued that governmental power should be divided among separate branches to prevent tyranny','Thomas Hobbes, who argued for a strong absolute sovereign to prevent chaos','Adam Smith, who argued for free-market economics and limited government regulation'],correctAnswer:1,explanation:'Montesquieu\'s The Spirit of the Laws (1748) argued that liberty is best protected when governmental power is divided among legislative, executive, and judicial branches that can check each other. The Framers directly applied this principle in Articles I, II, and III of the Constitution.'},
-      {question:'Why did Shays\' Rebellion (1786–87) convince many American leaders that the Articles of Confederation needed to be replaced?',options:['The rebellion proved that individual states were too powerful and needed to be abolished entirely','The rebellion demonstrated that the national government under the Articles was too weak to maintain order, collect taxes, or raise an army to respond to domestic crises','The rebellion was led by foreign powers seeking to reclaim American territory after the Revolution','The rebellion succeeded in establishing a military dictatorship that the Articles could not prevent'],correctAnswer:1,explanation:'Shays\' Rebellion — an armed uprising by debt-ridden Massachusetts farmers — exposed the Articles\' fatal weakness: Congress had no power to tax, no standing army, and no executive to respond. The national government had to rely on state militias. This crisis directly motivated the calling of the Constitutional Convention in 1787.'}
-    ]}},
-    {id:'govconst1-compromises',type:'text' as const,content:`
-## 📖 Constitutional Convention & Key Compromises
-
-The 1787 Constitutional Convention in Philadelphia produced the Constitution through several critical compromises:
-
-### The Great Compromise (Connecticut Compromise)
-| Plan | Proposed By | Details |
+| Document | Date | Significance |
 |---|---|---|
-| **Virginia Plan** | James Madison | Bicameral legislature; both chambers based on **population** (favored large states) |
-| **New Jersey Plan** | William Paterson | Unicameral legislature; **equal representation** for each state (favored small states) |
-| **Great Compromise** | Roger Sherman | Bicameral: **House** based on population + **Senate** with equal representation (2 per state) |
+| **Declaration of Independence** | July 4, 1776 (Jefferson primary author) | Asserted natural-rights philosophy and the right of revolution; severed colonial ties to Great Britain; basis of subsequent American claims about the moral foundations of constitutional government |
+| **Articles of Confederation** | Drafted 1777, ratified 1781 | First U.S. national constitution; created a "league of friendship" among sovereign states with a weak unicameral Congress (no executive, no national judiciary, no power to tax, no power to regulate commerce, no power to enforce laws); replaced by Constitution after Shays\' Rebellion (1786–87) demonstrated its weakness |
+| **U.S. Constitution** | Drafted Philadelphia Convention May–Sept 1787; ratified June 21, 1788 (NH 9th state); effective March 4, 1789 | Created a federal republic with separated powers, checks and balances, enumerated and implied federal powers, and a stronger national government — designed to remedy the failures of the Articles |
+| **Bill of Rights** | Drafted 1789, ratified Dec 15, 1791 | First 10 amendments; protections against federal government action (originally); negotiated by Anti-Federalists in exchange for ratification |
+| **Federalist Papers** | Oct 1787 – Aug 1788 | 85 essays by Hamilton, Madison, and Jay (under "Publius") urging New York ratification; canonical interpretive source for the Constitution's original meaning |
 
-### Three-Fifths Compromise
-- Question: Should enslaved people be counted for representation in the House?
-- **Southern states** wanted to count them (more representatives) but not tax them
-- **Northern states** objected to counting people who had no rights
-- **Compromise:** Each enslaved person counted as **3/5 of a person** for representation AND taxation
-- This gave slaveholding states disproportionate political power until the Civil War
+## Five Required AP Foundational Documents
 
-### Electoral College
-- Compromise between election by Congress vs. direct popular vote
-- Each state gets electors equal to its total congressional representation (House + Senate)
-- Designed to balance popular will with state-level representation and prevent "mob rule" (as the Framers saw it)
+| Document | Author/Date | Core Argument |
+|---|---|---|
+| **Declaration of Independence** | Jefferson, July 4, 1776 | Natural rights + consent of the governed + right of revolution against tyranny |
+| **Articles of Confederation** | Drafted 1777, ratified 1781 | Confederation of sovereign states with a weak central government |
+| **U.S. Constitution** | Drafted 1787, effective 1789 | Federal republic with separated powers, checks and balances, and enumerated federal authority |
+| **Federalist No. 10** | Madison, Nov 22, 1787 | A large republic is the best protection against the "mischiefs of faction" because it dilutes factional influence and forces coalition-building |
+| **Federalist No. 51** | Madison, Feb 6, 1788 | Separation of powers and checks and balances ("ambition must be made to counteract ambition") protect liberty: "If men were angels, no government would be necessary" |
 
-### Commerce & Slave Trade Compromise
-- Congress could regulate interstate and foreign commerce but could NOT ban the slave trade for **20 years** (until 1808)
-- No export taxes (protecting Southern agricultural exports)
+## Federalists vs. Anti-Federalists
 
-> 🔑 **AP Connection:** The Three-Fifths Compromise and Electoral College are **heavily tested**. The AP exam asks how these compromises shaped American political development and whose interests they served.
-`},
-    {id:'govconst1-quiz2',type:'multiple-choice' as const,content:`**Check Your Understanding** 🎯`,exercise:{questions:[
-      {question:'What problem did the Great Compromise (Connecticut Compromise) resolve at the Constitutional Convention?',options:['The dispute between Northern and Southern states over whether enslaved people should be counted for taxation purposes','The conflict between large and small states over congressional representation — creating a bicameral legislature with population-based House and equal-representation Senate','The question of whether the president should be elected by Congress or by direct popular vote','The disagreement over whether the federal government should have the power to levy taxes on imports and exports'],correctAnswer:1,explanation:'The Great Compromise merged the Virginia Plan (representation by population) and New Jersey Plan (equal representation). The result was a bicameral Congress: the House of Representatives based on population (favoring large states) and the Senate with two senators per state (protecting small states).'},
-      {question:'How did the Three-Fifths Compromise affect political power in the early United States?',options:['It gave Northern industrial states more representatives in Congress because they had larger free populations','It gave slaveholding Southern states disproportionate representation in the House by counting enslaved people (who could not vote) toward population totals','It had no practical effect because enslaved people were counted equally in all states regardless of the compromise','It reduced the South\'s political power by excluding all enslaved people from census counts'],correctAnswer:1,explanation:'By counting each enslaved person as 3/5 of a person for apportionment, the compromise inflated Southern states\' representation in the House (and the Electoral College, which is based on total congressional seats). This gave the South outsized political power despite enslaved people having no voting rights — a structural advantage that persisted until the 13th Amendment (1865).'}
-    ]}}
+| Issue | Federalists | Anti-Federalists |
+|---|---|---|
+| Strength of central government | Strong national government needed (commerce, defense, debt) | Strong central government threatens liberty; states should retain primary authority |
+| Representation | Indirect representation through elected officials filters popular passion | Direct representation by people who share constituents\' lives is essential |
+| Bill of Rights | Unnecessary (federal government has only enumerated powers) and dangerous (might imply unenumerated powers are unprotected) | Essential — without explicit protection, federal government will trample individual rights |
+| Key writers | Hamilton (NY), Madison (VA), Jay (NY) — *Federalist Papers* (1787-88) | "Brutus" (likely Robert Yates, NY), "Cato" (likely George Clinton, NY), Patrick Henry (VA), George Mason (VA), Mercy Otis Warren (MA) |
+| AP-required document | *Federalist No. 10* and *No. 51* | *Brutus No. 1* (Oct 18, 1787) |
+| Outcome | Constitution ratified June 1788 (with promise of Bill of Rights) | Won concession of Bill of Rights (ratified Dec 1791); many Anti-Federalist concerns absorbed into 9th and 10th Amendments |
+
+> 🔑 Key takeaway: The Constitution is a compromise document — between large states and small states, between slave and free states, between Federalists and Anti-Federalists, and between competing Enlightenment theories of government. Reading it well requires holding all of these tensions in mind.
+      `
+    },
+    {
+      id: 'govconst1-quiz',
+      type: 'multiple-choice' as const,
+      content: `**Concept Check — Foundational Documents** 🎯`,
+      exercise: {
+        questions: [
+          {
+            question: 'Which best describes the central argument of *Federalist No. 10* (Madison, November 22, 1787)?',
+            options: [
+              "James Madison argued that the greatest danger to popular government is 'faction' — a number of citizens 'united and actuated by some common impulse of passion, or of interest, adverse to the rights of other citizens, or to the permanent and aggregate interests of the community' — and that the proposed large extended republic is the best institutional remedy for the mischiefs of faction because (1) the size and diversity of the country makes it harder for any single faction to form a national majority, (2) representation through elected officials filters and refines popular passion, and (3) competition among multiple factions forces coalition-building rather than tyrannical majority rule",
+              'James Madison argued that the greatest danger to popular government is the existence of any government at all and that the United States should abolish all federal authority with no Congress, no presidency, and no Supreme Court of any kind during the entire period from 1788 onward in any region of the United States during the period',
+              "James Madison argued that the greatest danger to popular government is the absence of a hereditary monarch and that the United States should adopt a king with no Congress, no presidency, and no Supreme Court of any kind during the entire period from 1788 onward in any region of the United States during the period",
+              "There was no Federalist No. 10 of any kind during the entire period from 1787 onward in any region of the United States with no Madison, no faction argument, no extended-republic argument, and no representation argument of any kind during the entire period in any region"
+            ],
+            correctAnswer: 0,
+            explanation: 'Federalist No. 10 (Madison, Nov 22 1787) central argument: faction = greatest danger → large extended republic is the cure (size/diversity prevents national majority faction + representation filters passion + multi-faction competition forces coalition).'
+          },
+          {
+            question: 'Which best describes the relationship between the Articles of Confederation (1781) and the U.S. Constitution (1789)?',
+            options: [
+              "The Articles of Confederation (drafted 1777, ratified 1781) created a 'league of friendship' among sovereign states with a weak unicameral Congress that lacked the power to tax (had to requisition states), to regulate interstate commerce, to enforce laws, to maintain a standing army, or to create a national executive or judiciary; this structure proved inadequate to address the post-Revolutionary debt crisis, interstate economic disputes, and Shays\' Rebellion (1786-87, Massachusetts farmers protesting debt collection); the Philadelphia Convention (May-September 1787) was called to revise the Articles but instead drafted an entirely new Constitution that created a federal republic with enumerated and implied federal powers, separated powers (executive + legislative + judicial), and a stronger national government — ratified June 21, 1788 (NH 9th state); effective March 4, 1789",
+              'The Articles of Confederation and the U.S. Constitution had no relationship of any kind with no league of friendship, no Shays\' Rebellion, no Philadelphia Convention, and no Constitutional ratification of any kind during the entire period in any region',
+              "The Articles of Confederation created a strong central government and the U.S. Constitution weakened it with no Shays' Rebellion, no Philadelphia Convention, and no enumerated/implied federal powers of any kind during the entire period in any region of the United States",
+              "There were no Articles of Confederation and no U.S. Constitution of any kind during the entire period from 1777 through 1789 in any region of the United States with no league of friendship, no Shays' Rebellion, and no Philadelphia Convention of any kind during the entire period in any region"
+            ],
+            correctAnswer: 0,
+            explanation: 'Articles (1781) → Constitution (1789): Articles = league of friendship + weak Congress (no tax/commerce/enforce/army/exec/judiciary); inadequate (post-Rev debt + interstate disputes + Shays 1786-87) → Philadelphia Convention May-Sept 1787 (called to revise; drafted new) → Constitution = federal republic + enumerated/implied powers + separated powers → ratified June 21 1788 (NH 9th); effective March 4 1789.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'govconst1-input',
+      type: 'input-boxes' as const,
+      content: `**Term Sprint — name the foundational concept**`,
+      exercise: {
+        questions: [
+          {
+            prompt: 'The Enlightenment thinker whose Two Treatises of Government (1689) provided the natural-rights philosophy underlying the Declaration of Independence.',
+            answer: 'John Locke',
+            acceptableAnswers: ['John Locke', 'Locke'],
+            hint: '"Life, liberty, and property" — Jefferson adapted to "Life, Liberty, and the pursuit of Happiness."'
+          },
+          {
+            prompt: 'The 1786-87 Massachusetts uprising of indebted farmers that demonstrated the inadequacy of the Articles of Confederation and helped trigger the Philadelphia Convention.',
+            answer: "Shays' Rebellion",
+            acceptableAnswers: ["Shays' Rebellion", 'Shays Rebellion', "Shays's Rebellion", 'Shay\'s Rebellion'],
+            hint: 'Led by Continental Army veteran Daniel Shays.'
+          },
+          {
+            prompt: 'The Anti-Federalist essay (Oct 18, 1787) arguing that a large extended republic is incompatible with self-government — the AP-required Anti-Federalist document.',
+            answer: 'Brutus No. 1',
+            acceptableAnswers: ['Brutus No. 1', 'Brutus 1', 'Brutus No 1', 'Brutus Number 1'],
+            hint: 'The author was likely New York judge Robert Yates.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'govconst1-dropdown',
+      type: 'dropdown-select' as const,
+      content: `**Match each Enlightenment thinker to the constitutional element they most influenced.**`,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'The thinker whose Spirit of the Laws (1748) provided the doctrine of separation of powers among legislative, executive, and judicial branches: ___',
+            options: ['Locke', 'Montesquieu', 'Hobbes', 'Rousseau']
+          },
+          {
+            label: 'The thinker whose Second Treatise of Government (1689) provided natural-rights philosophy and the right of revolution: ___',
+            options: ['Locke', 'Montesquieu', 'Hobbes', 'Rousseau']
+          },
+          {
+            label: 'The thinker whose Social Contract (1762) provided the principle of popular sovereignty ("We the People"): ___',
+            options: ['Locke', 'Montesquieu', 'Hobbes', 'Rousseau']
+          }
+        ],
+        correctAnswers: ['Montesquieu', 'Locke', 'Rousseau'],
+        hint1: 'Articles I/II/III separation of powers traces to Montesquieu.',
+        hint2: 'Declaration\'s natural rights traces to Locke.',
+        hint3: 'Preamble\'s "We the People" traces to Rousseau\'s general will.',
+        explanation: 'Locke = natural rights + consent of governed; Montesquieu = separation of powers; Hobbes = sovereign authority over state of nature; Rousseau = popular sovereignty + general will.'
+      }
+    },
+    {
+      id: 'govconst1-applied',
+      type: 'multiple-choice' as const,
+      content: `**Applied AP Practice — Argumentative Essay Setup**`,
+      exercise: {
+        questions: [
+          {
+            question: 'An AP argumentative essay asks: "Develop an argument that explains whether the Federalists or the Anti-Federalists were more correct about the dangers facing the new republic." Which response demonstrates the strongest use of foundational documents?',
+            options: [
+              "The Anti-Federalist arguments in *Brutus No. 1* (Oct 18, 1787) — that a large extended republic of competing factions cannot sustain the civic virtue, common interest, and direct representation that self-government requires, and that consolidated federal authority will inevitably erode state authority and individual liberty — have proven more prescient than Madison's Federalist No. 10 optimism: the federal government has dramatically expanded relative to states (post-New Deal commerce-clause doctrine, post-1965 civil-rights enforcement, post-1965 Great Society programs), the Bill of Rights that Anti-Federalists demanded as the price of ratification (ratified Dec 1791) has proven essential to liberty, and contemporary American politics displays exactly the factional polarization Madison hoped the extended republic would dilute — though Federalists were correct that a stronger union was needed for economic integration, national defense, and constitutional stability",
+              'Neither the Federalists nor the Anti-Federalists were correct about anything of any kind with no Brutus No. 1, no Federalist No. 10, no Bill of Rights, no commerce-clause expansion, and no factional polarization of any kind during the entire period in any region',
+              'The Federalists and Anti-Federalists were entirely identical in their arguments with no meaningful differences of any kind during the entire period from 1787 through 1791 in any region of the United States during the period in any region of the country',
+              'There were no Federalists, no Anti-Federalists, no Brutus No. 1, no Federalist No. 10, no Bill of Rights, and no ratification debate of any kind during the entire period from 1787 through 1791 in any region of the United States with no foundational documents of any kind during the period'
+            ],
+            correctAnswer: 0,
+            explanation: 'Strong AP argumentative essay: takes a position (Anti-Federalists more prescient) + uses required foundational documents (Brutus No. 1 + Federalist No. 10) + provides specific evidence (Bill of Rights ratification + commerce-clause expansion + Great Society + factional polarization) + acknowledges counterargument (Federalists correct on union/defense/stability).'
+          },
+          {
+            question: 'Which AP "complexity" claim best illuminates the Constitution as a compromise document?',
+            options: [
+              "The Constitution is the product of multiple, partially-incompatible compromises: (1) the Connecticut Compromise (between large-state Virginia Plan / proportional representation and small-state New Jersey Plan / equal representation) created a bicameral Congress with proportional House and equal Senate; (2) the Three-Fifths Compromise (Article I, § 2, clause 3) counted enslaved persons as 3/5 of a person for purposes of House representation and direct taxation, embedding slavery in the Constitution; (3) the slave-trade compromise (Article I, § 9, clause 1) prohibited Congress from banning the international slave trade until 1808; (4) the Federalist–Anti-Federalist compromise yielded the Bill of Rights; (5) the Electoral College emerged from disputes over executive selection — making the Constitution simultaneously a triumph of constitutional engineering and a document deeply marked by 18th-century slavery, sectional rivalry, and elite skepticism of direct democracy",
+              "The Constitution had no compromises of any kind with no Connecticut Compromise, no Three-Fifths Compromise, no slave-trade compromise, no Bill of Rights compromise, and no Electoral College compromise of any kind during the entire period in any region of the United States during the period in any region of the country",
+              "The Constitution was a single drafter's work with no compromises of any kind during the entire period from 1787 through 1791 in any region of the United States with no Connecticut Compromise, no Three-Fifths Compromise, and no slave-trade compromise of any kind during the entire period in any region",
+              "There was no Constitution of any kind during the entire period from 1787 through 1791 in any region of the United States with no Connecticut Compromise, no Three-Fifths Compromise, no slave-trade compromise, no Bill of Rights, and no Electoral College of any kind during the entire period in any region"
+                ],
+            correctAnswer: 0,
+            explanation: 'AP complexity: Constitution = product of multiple compromises — Connecticut (large vs. small states → bicameral) + Three-Fifths (slavery in representation/taxation) + slave-trade (1808 sunset) + Federalist/Anti-Federalist (Bill of Rights) + Electoral College → triumph of engineering AND document marked by slavery, sectional rivalry, elite skepticism.'
+          }
+        ]
+      }
+    }
   ]
-};
+}
