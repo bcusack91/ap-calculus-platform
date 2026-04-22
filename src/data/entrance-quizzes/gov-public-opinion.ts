@@ -1,39 +1,198 @@
-/**
- * Entrance Quiz — Public Opinion & Political Socialization (AP US Government)
- * 14 questions · 7 parts (2 per part)
- */
-
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 
-const questions: EntranceQuizQuestion[] = [
-  { id: 'govp-ent-1a', question: 'Which of the following best describes the main focus of Public Opinion & Political Socialization?', options: ['An unrelated topic', 'The core principles and patterns within Public Opinion & Political Socialization', 'A mathematical formula', 'A literary technique'], correctIndex: 1, explanation: 'Public Opinion & Political Socialization focuses on understanding key principles and patterns within AP US Government.', partNumber: 1, partTitle: 'Core Concepts' },
-  { id: 'govp-ent-1b', question: 'Why is Public Opinion & Political Socialization important in AP US Government?', options: ['It is not important', 'It connects to multiple units and is frequently tested on the AP exam', 'It is only relevant to one question', 'It has been removed from the curriculum'], correctIndex: 1, explanation: 'Public Opinion & Political Socialization is a key topic in AP US Government that connects to multiple course themes.', partNumber: 1, partTitle: 'Core Concepts' },
-  { id: 'govp-ent-2a', question: 'Which best describes a key process in Public Opinion & Political Socialization?', options: ['A random event', 'A systematic mechanism that produces predictable patterns', 'An unexplainable phenomenon', 'A one-time occurrence'], correctIndex: 1, explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.', partNumber: 2, partTitle: 'Key Processes' },
-  { id: 'govp-ent-2b', question: 'Understanding cause and effect in Public Opinion & Political Socialization helps students:', options: ['Memorize dates', 'Explain why patterns exist rather than just describing them', 'Avoid analysis', 'Skip exam questions'], correctIndex: 1, explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.', partNumber: 2, partTitle: 'Key Processes' },
-  { id: 'govp-ent-3a', question: 'Why do geographers/analysts use case studies?', options: ['They are easier than analysis', 'They provide concrete examples that illustrate abstract concepts', 'They replace all other methods', 'They are required by law'], correctIndex: 1, explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.', partNumber: 3, partTitle: 'Patterns & Examples' },
-  { id: 'govp-ent-3b', question: 'Comparing examples of Public Opinion & Political Socialization across regions helps:', options: ['Nothing', 'Identify universal patterns and unique local variations', 'Confuse students', 'Waste time'], correctIndex: 1, explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).', partNumber: 3, partTitle: 'Patterns & Examples' },
-  { id: 'govp-ent-4a', question: 'Public Opinion & Political Socialization connects to other course topics through:', options: ['No connections exist', 'Shared processes, causes, and outcomes', 'Random coincidence', 'Administrative categories only'], correctIndex: 1, explanation: 'Topics in AP US Government are interconnected through shared processes, causes, and outcomes.', partNumber: 4, partTitle: 'Connections & Interactions' },
-  { id: 'govp-ent-4b', question: 'A feedback loop in Public Opinion & Political Socialization means:', options: ['The process stops', 'Outcomes reinforce or modify the original process', 'Nothing changes', 'The exam skips this topic'], correctIndex: 1, explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.', partNumber: 4, partTitle: 'Connections & Interactions' },
-  { id: 'govp-ent-5a', question: 'Studying change over time in Public Opinion & Political Socialization helps:', options: ['Only with history classes', 'Explain current patterns and predict future developments', 'Nothing', 'Memorize dates'], correctIndex: 1, explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.', partNumber: 5, partTitle: 'Change Over Time' },
-  { id: 'govp-ent-5b', question: 'Continuity in Public Opinion & Political Socialization means:', options: ['Everything changes', 'Some aspects have remained stable despite other changes', 'Nothing ever happened', 'The topic is boring'], correctIndex: 1, explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.', partNumber: 5, partTitle: 'Change Over Time' },
-  { id: 'govp-ent-6a', question: 'When interpreting data about Public Opinion & Political Socialization, the first step is:', options: ['Jump to conclusions', 'Identify what the data shows and note any patterns or trends', 'Ignore the data', 'Only look at the title'], correctIndex: 0, explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'govp-ent-6b', question: 'An evidence-based argument about Public Opinion & Political Socialization requires:', options: ['Just opinions', 'A clear claim supported by specific evidence and reasoning', 'No evidence', 'Only emotional appeals'], correctIndex: 1, explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'govp-ent-7a', question: 'The most important exam strategy for Public Opinion & Political Socialization is:', options: ['Guess randomly', 'Know key terms, use specific examples, and connect to course themes', 'Skip these questions', 'Only memorize definitions'], correctIndex: 1, explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'govp-ent-7b', question: 'AP multiple-choice questions about Public Opinion & Political Socialization often test:', options: ['Random trivia', 'Application of concepts to new scenarios', 'Spelling', 'Personal opinions'], correctIndex: 1, explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.', partNumber: 7, partTitle: 'AP Review' }
+const allQuestions: EntranceQuizQuestion[] = [
+  // Part 1 — Core Concepts
+  {
+    id: 'govpubli-ent-1',
+    question: "What are the THREE DIMENSIONS of PUBLIC OPINION?",
+    options: [
+      'Salience (importance), intensity (strength), stability (durability)',
+      'Height, weight, color',
+      'Left, right, center',
+      'Past, present, future'
+    ],
+    correctIndex: 0,
+    explanation: 'PUBLIC OPINION = aggregate of individual attitudes; THREE DIMENSIONS: SALIENCE (importance to respondents), INTENSITY (strength of feeling), STABILITY (durability over time).'
+  },
+  {
+    id: 'govpubli-ent-2',
+    question: "Which AGENT of POLITICAL SOCIALIZATION is STRONGEST, accounting for ~70% of children sharing parents' party identification?",
+    options: [
+      'Family',
+      'Media',
+      'Peers',
+      'Religion'
+    ],
+    correctIndex: 0,
+    explanation: 'FAMILY is the STRONGEST agent of political socialization — ~70% of children share parents\' party identification by age 12; transmits party ID + religious affiliation + basic political identification through childhood.'
+  },
+  // Part 2 — Key Processes
+  {
+    id: 'govpubli-ent-3',
+    question: "Which BRITISH POLITICAL THINKER articulated the TRUSTEE MODEL of representation in his 1774 SPEECH TO ELECTORS OF BRISTOL?",
+    options: [
+      'Edmund Burke',
+      'John Locke',
+      'Thomas Hobbes',
+      'John Stuart Mill'
+    ],
+    correctIndex: 0,
+    explanation: 'EDMUND BURKE 1774 SPEECH TO ELECTORS OF BRISTOL articulated the TRUSTEE MODEL — "Your representative owes you, not his industry only, but his judgment"; rejected delegate model; Burke lost his next election (1780) for independent voting on Catholic emancipation + Irish trade.'
+  },
+  {
+    id: 'govpubli-ent-4',
+    question: "Which AMENDMENT lowered the VOTING AGE from 21 to 18 during the Vietnam War?",
+    options: [
+      '26th Amendment (1971)',
+      '24th Amendment (1964)',
+      '19th Amendment (1920)',
+      '15th Amendment (1870)'
+    ],
+    correctIndex: 0,
+    explanation: '26th AMENDMENT (1971) lowered voting age from 21 to 18 during Vietnam War ("old enough to fight, old enough to vote"); ratified in fastest amendment process in US history (3 months 8 days); expanded electorate by ~11M young voters.'
+  },
+  // Part 3 — Patterns & Examples
+  {
+    id: 'govpubli-ent-5',
+    question: "Which DEMOGRAPHIC GROUP has been the MOST LOYAL Democratic constituency since the 1964 Civil Rights Act, voting ~85-90% Democratic in presidential elections?",
+    options: [
+      'Black Americans',
+      'Hispanic Americans',
+      'Asian Americans',
+      'White Americans'
+    ],
+    correctIndex: 0,
+    explanation: 'BLACK AMERICANS — most loyal Dem constituency since Civil Rights Act 1964 + Voting Rights Act 1965 (LBJ); ~85-90% Dem in presidential elections; Trump made gains with Black men 2024 (~22%) but Black women 90%+ Dem.'
+  },
+  {
+    id: 'govpubli-ent-6',
+    question: "What is the DIPLOMA DIVIDE in modern American politics?",
+    options: [
+      'White college graduates increasingly Democratic + White non-college increasingly Republican',
+      'College graduates always Republican + non-graduates always Democratic',
+      'Education has no effect on vote choice',
+      'College students vote at higher rates than non-students'
+    ],
+    correctIndex: 0,
+    explanation: 'DIPLOMA DIVIDE = sorting by 4-year college degree central to modern alignment; White college → Dem (Harris 56-42 2024); White non-college → Rep (Trump 67-32 2024); ~37 pt swing among White non-college since 1992; central to Trump GOP coalition; suburban college women fled GOP under Trump.'
+  },
+  // Part 4 — Connections
+  {
+    id: 'govpubli-ent-7',
+    question: "What is the 1972 theory by McCombs + Shaw that media tells us 'WHAT TO THINK ABOUT' (issue salience)?",
+    options: [
+      'Agenda-setting',
+      'Framing',
+      'Priming',
+      'Cultivation theory'
+    ],
+    correctIndex: 0,
+    explanation: 'AGENDA-SETTING (McCombs + Shaw 1972 Chapel Hill Study) — media tells us WHAT TO THINK ABOUT (issue salience); doesn\'t necessarily change opinions but determines which issues voters consider important; foundational media effects research.'
+  },
+  {
+    id: 'govpubli-ent-8',
+    question: "Which podcast became central to TRUMP's 2024 victory, hosting a 3-hour Trump interview late October + endorsing Trump night before election?",
+    options: [
+      'The Joe Rogan Experience',
+      'Pod Save America',
+      'The Daily',
+      'This American Life'
+    ],
+    correctIndex: 0,
+    explanation: 'JOE ROGAN EXPERIENCE — #1 Spotify podcast worldwide (~50M listeners); hosted 3-hour Trump interview late October 2024; Rogan endorsed Trump night before election; Trump did manosphere podcast circuit (Theo Von, Andrew Schulz, Lex Fridman, Shawn Ryan); central to Trump young men gains (won 18-29 men by ~14 pts vs Biden +13 in 2020 = ~27 pt swing).'
+  },
+  // Part 5 — Change Over Time
+  {
+    id: 'govpubli-ent-9',
+    question: "What 2000 Robert Putnam book documented the DECLINE in CIVIC ENGAGEMENT + SOCIAL CAPITAL alongside trust decline?",
+    options: [
+      'Bowling Alone',
+      'The Federalist Papers',
+      'The American Voter',
+      'The Affluent Society'
+    ],
+    correctIndex: 0,
+    explanation: 'BOWLING ALONE (Putnam 2000) — used dramatic image of declining bowling LEAGUES (more bowling than ever but fewer leagues) as metaphor for declining civic engagement; documented decline in PTA + Elks + Rotary + church + voting + family meals + bridge clubs; argued TV + suburbanization + women workforce + generational change drove decline.'
+  },
+  {
+    id: 'govpubli-ent-10',
+    question: "Which 2015 Supreme Court case established the CONSTITUTIONAL RIGHT to SAME-SEX MARRIAGE nationwide?",
+    options: [
+      'Obergefell v. Hodges',
+      'Lawrence v. Texas',
+      'United States v. Windsor',
+      'Bowers v. Hardwick'
+    ],
+    correctIndex: 0,
+    explanation: 'OBERGEFELL v. HODGES (2015) — Justice Anthony Kennedy 5-4 majority opinion struck down state same-sex marriage bans; established 14th Amendment Due Process + Equal Protection requires marriage equality; followed Goodridge 2003 (Massachusetts), Lawrence 2003 (sodomy), Windsor 2013 (DOMA federal definition); same-sex marriage support transformed 12% (1988) → 71% (2024).'
+  },
+  // Part 6 — Problem-Solving Workshop
+  {
+    id: 'govpubli-ent-11',
+    question: "Which FEDERALIST PAPER (Madison 1787) defends the EXTENDED REPUBLIC + REPRESENTATION + DIVERSITY as remedy for FACTIONS?",
+    options: [
+      'Federalist 10',
+      'Federalist 51',
+      'Federalist 70',
+      'Federalist 78'
+    ],
+    correctIndex: 0,
+    explanation: 'FEDERALIST 10 (Madison 1787) — defines FACTION = "citizens united by common impulse of passion or interest adversed to rights of other citizens or aggregate interests"; rejects eliminating factions (would destroy liberty); argues large republic + representation + diversity controls faction effects; representatives "REFINE AND ENLARGE the public views."'
+  },
+  {
+    id: 'govpubli-ent-12',
+    question: "What is MOTIVATED REASONING in political psychology (Kunda 1990; Lodge + Taber 2000)?",
+    options: [
+      'Tendency to process information in ways that confirm prior beliefs/identities',
+      'Logical analysis of all available evidence',
+      'Random information processing without bias',
+      'Mathematical computation of probabilities'
+    ],
+    correctIndex: 0,
+    explanation: 'MOTIVATED REASONING (Kunda 1990; Lodge + Taber 2000) — tendency to process information in ways that confirm prior beliefs/identities; differential standards for accepting vs rejecting info; explains why partisans see same data differently (61% Reps still doubt 2020 election; climate denial concentrated among Reps; COVID vaccine refusal correlated with Rep ID; hostile media perception both sides).'
+  },
+  // Part 7 — AP Review
+  {
+    id: 'govpubli-ent-13',
+    question: "What is the AP FRQ TEMPLATE for PUBLIC OPINION + POLLING questions?",
+    options: [
+      'SCAR (Specifics + Concepts + Application + Reasoning)',
+      'BCEF (Background + Context + Evidence + Fact)',
+      'PIES (Physical + Intellectual + Emotional + Social)',
+      'PEMDAS (Parentheses + Exponents + Multiplication + Division + Addition + Subtraction)'
+    ],
+    correctIndex: 0,
+    explanation: 'SCAR TEMPLATE for AP Public Opinion FRQ: S = SPECIFICS (dates, names, percentages, examples, polls); C = CONCEPTS (3-5 relevant concepts EXPLICITLY by name); A = APPLICATION (apply concepts to specific situation); R = REASONING (causal chain, counterarguments, broader context, predict consequences).'
+  },
+  {
+    id: 'govpubli-ent-14',
+    question: "What is Alexander Bickel's CONCEPT for the tension between LIFETIME-TENURED unelected JUDGES striking down DEMOCRATICALLY-ENACTED LAWS?",
+    options: [
+      'Counter-majoritarian difficulty',
+      'Bully pulpit',
+      'Permanent campaign',
+      'Negative partisanship'
+    ],
+    correctIndex: 0,
+    explanation: 'COUNTER-MAJORITARIAN DIFFICULTY (Bickel THE LEAST DANGEROUS BRANCH 1962) — tension between lifetime-tenured unelected judges striking down democratically-enacted laws + claim that judiciary is "least dangerous branch" per Federalist 78; Roberts Court partly motivated by legitimacy concerns (NFIB v. Sebelius 2012 protected ACA partly to preserve legitimacy; Dobbs 2022 reversed Roe DESPITE ~60% public support).'
+  },
 ]
 
-export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return [...questions].sort(() => Math.random() - 0.5)
+export const generateEntranceQuiz = (): EntranceQuizQuestion[] => {
+  const shuffled = [...allQuestions]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  return shuffled
 }
 
-export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
-  return [
-    { partNumber: 1, partTitle: 'Core Concepts' },
-    { partNumber: 2, partTitle: 'Key Processes' },
-    { partNumber: 3, partTitle: 'Patterns & Examples' },
-    { partNumber: 4, partTitle: 'Connections & Interactions' },
-    { partNumber: 5, partTitle: 'Change Over Time' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review' }
-  ]
-}
+export const getEntranceQuizParts = () => [
+  { partTitle: 'Part 1: Core Concepts' },
+  { partTitle: 'Part 2: Key Processes' },
+  { partTitle: 'Part 3: Patterns & Examples' },
+  { partTitle: 'Part 4: Connections & Interactions' },
+  { partTitle: 'Part 5: Change Over Time' },
+  { partTitle: 'Part 6: Problem-Solving Workshop' },
+  { partTitle: 'Part 7: AP Review' },
+]
