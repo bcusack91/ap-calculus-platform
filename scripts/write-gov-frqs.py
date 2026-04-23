@@ -1,0 +1,433 @@
+#!/usr/bin/env python3
+"""
+Rewrite src/data/ap-us-gov-frq/questions.ts with substantive,
+research-grounded AP US Government & Politics FRQ prompts.
+
+Preserves the existing TypeScript interfaces and named exports
+(apUSGovFRQs, getApUSGovFRQs, getLongFRQs, getShortFRQs,
+generateFullExamFRQs returning {long, short, totalPoints, totalTime}).
+
+Produces 4 LONG (~7 pts, 4 parts) + 4 SHORT (~3-4 pts, 3 parts)
+gold-standard FRQs anchored in named SCOTUS cases, Federalist papers,
+landmark statutes, and primary citations from 1787 through 2024.
+"""
+from __future__ import annotations
+import os, json
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT  = os.path.join(ROOT, "src", "data", "ap-us-gov-frq", "questions.ts")
+
+
+def js(s): return json.dumps(s, ensure_ascii=False)
+
+
+def part(label, prompt, max_pts, rubric_items, sample):
+    rubric_lines = ",\n          ".join(
+        f"{{ points: {pts}, description: {js(desc)}, keywords: {json.dumps(kw, ensure_ascii=False)} }}"
+        for pts, desc, kw in rubric_items
+    )
+    return (
+        f"      {{\n"
+        f"        label: {js(label)},\n"
+        f"        prompt: {js(prompt)},\n"
+        f"        maxPoints: {max_pts},\n"
+        f"        rubric: [\n          {rubric_lines}\n        ],\n"
+        f"        sampleAnswer: {js(sample)},\n"
+        f"      }}"
+    )
+
+
+def frq(id_, type_, unit, title, prompt, parts, total, time, calc=False):
+    parts_str = ",\n".join(parts)
+    return (
+        f"  {{\n"
+        f"    id: {js(id_)},\n"
+        f"    type: '{type_}' as const,\n"
+        f"    unit: {unit},\n"
+        f"    title: {js(title)},\n"
+        f"    prompt: {js(prompt)},\n"
+        f"    parts: [\n{parts_str}\n    ],\n"
+        f"    totalPoints: {total},\n"
+        f"    timeRecommendation: {js(time)},\n"
+        f"    calculatorAllowed: {str(calc).lower()},\n"
+        f"  }}"
+    )
+
+
+# ============================================================================
+# LONG FRQs — Argumentative / Concept-Application style, 7 pts, 4 parts
+# ============================================================================
+
+LONG_1 = frq(
+    "gov-long-1", "long", 1,
+    "Federalism: From McCulloch to Shelby County",
+    "Federalism — the constitutional division of powers between the national and state governments — has been continually contested through landmark Supreme Court decisions, congressional statutes, and intergovernmental funding. Use your knowledge of US government and the documents and cases of the AP US Government required curriculum to answer the following.",
+    [
+        part("(a)",
+             "Define federalism, distinguishing it from unitary and confederal systems, and identify ONE provision of the Constitution that establishes federalism.",
+             1,
+             [(1, "Defines federalism as constitutional division of power between national and state governments; contrasts with unitary/confederal; cites a specific clause (10th Amendment, Supremacy Clause Art. VI, Necessary and Proper Clause Art. I §8)",
+                  ["federalism", "division of power", "national", "state", "unitary", "confederal", "10th Amendment", "Supremacy Clause", "Article VI", "Necessary and Proper", "elastic clause"])],
+             "Federalism is the constitutional division of sovereign authority between a national government and constituent state governments, each acting directly on citizens within its sphere. It contrasts with a unitary system (all authority concentrated nationally, as in the United Kingdom) and a confederal system (states are sovereign and the central government is their agent, as under the Articles of Confederation 1781-1789). The Tenth Amendment (1791) provides the textual anchor: 'The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people.'"),
+        part("(b)",
+             "Explain how *McCulloch v. Maryland* (1819) established the doctrines of implied powers and national supremacy, identifying the constitutional clauses on which Chief Justice Marshall relied.",
+             2,
+             [(1, "Identifies implied-powers doctrine grounded in the Necessary and Proper Clause (Article I, Section 8); references Marshall's opinion and Second Bank of the United States",
+                  ["McCulloch v. Maryland", "1819", "Marshall", "implied powers", "Necessary and Proper Clause", "Article I", "Section 8", "Second Bank", "Hamilton"]),
+              (1, "Identifies national supremacy doctrine grounded in the Supremacy Clause (Article VI); explains 'the power to tax involves the power to destroy' and Maryland could not tax the bank",
+                  ["supremacy", "Article VI", "supreme law of the land", "power to tax", "power to destroy", "Maryland", "preempt"])],
+             "In *McCulloch v. Maryland* (1819), Chief Justice John Marshall's unanimous opinion held that Congress could charter the Second Bank of the United States even though banking is not enumerated in Article I, because the Necessary and Proper Clause (Art. I §8 cl. 18) authorizes Congress to choose 'appropriate' means to execute its enumerated powers — establishing the doctrine of implied powers (the position Hamilton had defended in 1791 against Jefferson). Marshall further held that Maryland's tax on the bank's notes was unconstitutional under the Supremacy Clause (Art. VI cl. 2): because 'the power to tax involves the power to destroy,' a state may not impede a legitimately created federal instrumentality. The decision is the cornerstone of national supremacy and broad federal authority."),
+        part("(c)",
+             "Explain how *United States v. Lopez* (1995) marked a constraint on the broad reading of federal commerce power, AND identify ONE other modern federalism case that limited federal authority over the states.",
+             2,
+             [(1, "Explains *Lopez* (1995) struck down the Gun-Free School Zones Act as exceeding the Commerce Clause; identifies the 'substantial effects' test and Rehnquist's opinion",
+                  ["United States v. Lopez", "1995", "Commerce Clause", "Gun-Free School Zones Act", "1990", "substantial effects", "Rehnquist", "non-economic", "limits"]),
+              (1, "Identifies a second case constraining federal power: *Printz v. United States* (1997) anti-commandeering re: Brady Act; *NFIB v. Sebelius* (2012) Medicaid expansion; *Shelby County v. Holder* (2013) VRA preclearance",
+                  ["Printz v. United States", "1997", "Brady Act", "anti-commandeering", "NFIB v. Sebelius", "2012", "Medicaid expansion", "Shelby County v. Holder", "2013", "Voting Rights Act", "preclearance"])],
+             "*United States v. Lopez* (1995) struck down the Gun-Free School Zones Act of 1990 as exceeding Congress's Commerce Clause power. Chief Justice Rehnquist's majority held that to be regulated, an activity must (1) involve the channels of interstate commerce, (2) involve instrumentalities of interstate commerce, or (3) substantially affect interstate commerce. Possessing a gun in a local school zone met none of these tests — the first significant Commerce Clause limit on Congress in nearly 60 years. *Printz v. United States* (1997) further limited federal power by striking the Brady Handgun Violence Prevention Act's mandate that local sheriffs perform background checks, articulating the anti-commandeering doctrine: the federal government cannot conscript state or local officials to enforce federal regulatory programs."),
+        part("(d)",
+             "Develop an argument that EITHER fiscal federalism (federal grants and conditions on aid) OR cooperative federalism has SUBSTANTIALLY ALTERED the balance the Founders established. Use specific evidence (programs, statutes, or cases).",
+             2,
+             [(1, "States a clear, defensible thesis taking a side",
+                  ["thesis", "argument", "claim", "alters", "preserves", "substantially"]),
+              (1, "Provides at least two pieces of specific historical/case evidence (e.g., South Dakota v. Dole 1987 drinking age; ARRA 2009; New Deal cooperative federalism 1933; ACA Medicaid expansion 2010; No Child Left Behind 2001; categorical vs block grants)",
+                  ["South Dakota v. Dole", "1987", "21st Amendment", "drinking age", "highway funds", "categorical grants", "block grants", "unfunded mandate", "ARRA", "2009", "ACA", "Medicaid", "No Child Left Behind", "2001", "ESSA", "2015"])],
+             "Thesis: Fiscal federalism has substantially altered the Founders' balance by allowing the national government to direct policy in domains the Tenth Amendment reserved to the states, even when Congress lacks direct regulatory authority. Evidence: (1) In *South Dakota v. Dole* (1987) the Supreme Court upheld a federal statute conditioning 5% of highway funds on states raising the drinking age to 21 — the Twenty-First Amendment (1933) reserved alcohol regulation to the states, but Congress effectively achieved a national drinking age through the spending power. (2) The American Recovery and Reinvestment Act (2009) routed roughly $250 billion through state governments with detailed conditions on education, transportation, and healthcare — making state agencies into administrators of federal priorities. While *NFIB v. Sebelius* (2012) found one limit (states could refuse Medicaid expansion), the broader pattern of categorical grants and conditional spending has shifted the practical center of gravity toward Washington in ways the Framers, who debated the bank in 1791 over far smaller stakes, did not anticipate."),
+    ],
+    7, "~25 minutes",
+)
+
+
+LONG_2 = frq(
+    "gov-long-2", "long", 3,
+    "First Amendment Religion Clauses: Establishment and Free Exercise",
+    "The First Amendment's two religion clauses — 'Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof' — have generated decades of contested Supreme Court doctrine, especially as applied to public schools, employment, and government accommodations. Use your knowledge of US government to answer the following.",
+    [
+        part("(a)",
+             "Explain how *Engel v. Vitale* (1962) applied the Establishment Clause to public schools, and identify the constitutional mechanism by which the First Amendment binds states.",
+             1,
+             [(1, "Explains *Engel* (1962) struck down state-composed school prayer; identifies incorporation through the Fourteenth Amendment Due Process Clause (Cantwell 1940 / Everson 1947)",
+                  ["Engel v. Vitale", "1962", "Establishment Clause", "school prayer", "Regents", "incorporation", "Fourteenth Amendment", "Due Process Clause", "Cantwell", "1940", "Everson", "1947"])],
+             "*Engel v. Vitale* (1962), one of the foundational AP-required cases, struck down New York's daily 'Regents Prayer' on the grounds that government-composed prayers in public schools violate the Establishment Clause, even when participation is technically voluntary. The First Amendment originally bound only Congress (\"Congress shall make no law…\"); the Court applied the Establishment Clause to states through the doctrine of selective incorporation via the Fourteenth Amendment's Due Process Clause — extending earlier incorporation steps in *Cantwell v. Connecticut* (1940, free exercise) and *Everson v. Board of Education* (1947, establishment)."),
+        part("(b)",
+             "Explain how *Wisconsin v. Yoder* (1972) protected free-exercise rights, and explain how the Supreme Court's standard for free-exercise claims changed after *Employment Division v. Smith* (1990).",
+             2,
+             [(1, "Explains *Yoder* (1972): Amish families exempt from compulsory school past 8th grade; balancing test of state interest vs. burden on religious practice",
+                  ["Wisconsin v. Yoder", "1972", "Amish", "compulsory education", "free exercise", "compelling interest", "Sherbert", "1963", "balancing test"]),
+              (1, "Explains *Smith* (1990) replaced the Sherbert/Yoder compelling-interest test with neutral-and-generally-applicable rule; cites Religious Freedom Restoration Act 1993 as congressional response",
+                  ["Employment Division v. Smith", "1990", "peyote", "neutral", "generally applicable", "compelling interest abandoned", "Scalia", "Religious Freedom Restoration Act", "RFRA", "1993", "Boerne", "1997"])],
+             "*Wisconsin v. Yoder* (1972) held that Old Order Amish families were exempt under the Free Exercise Clause from a Wisconsin compulsory-education law that required school attendance until age 16; the Court applied the *Sherbert v. Verner* (1963) balancing test, requiring the state to show a *compelling interest* and that the law was the *least restrictive means*. Eighteen years later, *Employment Division v. Smith* (1990), authored by Justice Scalia, replaced this with a far less protective standard: a *neutral, generally applicable* law does not violate the Free Exercise Clause even if it incidentally burdens religion (the case involved Native American sacramental peyote use). Congress responded with the Religious Freedom Restoration Act (RFRA, 1993), restoring the Sherbert standard against federal action; *City of Boerne v. Flores* (1997) limited RFRA's applicability to the federal government but Congress reapplied it to federal law (with consequences in *Burwell v. Hobby Lobby*, 2014)."),
+        part("(c)",
+             "Explain ONE way recent Supreme Court decisions (2010–2024) have shifted the line between the Establishment and Free Exercise Clauses.",
+             2,
+             [(1, "Identifies a specific recent case: *Hobby Lobby* (2014), *Trinity Lutheran v. Comer* (2017), *Espinoza v. Montana* (2020), *Carson v. Makin* (2022), *Kennedy v. Bremerton* (2022), or *Groff v. DeJoy* (2023)",
+                  ["Hobby Lobby", "2014", "Trinity Lutheran", "2017", "Espinoza", "2020", "Carson v. Makin", "2022", "Kennedy v. Bremerton", "2022", "Groff v. DeJoy", "2023", "Lemon", "1971"]),
+              (1, "Explains how the case shifted doctrine (e.g., abandoning Lemon test, expanding free-exercise / public-funding access for religious institutions, narrowing Establishment Clause)",
+                  ["Lemon test", "Lemon v. Kurtzman", "1971", "history and tradition", "endorsement test", "Sandra Day O'Connor", "playing in joints", "neutrality"])],
+             "*Kennedy v. Bremerton School District* (2022) marked a substantial shift: Justice Gorsuch's majority held that a public-school football coach who knelt at midfield to pray after games was protected by the Free Exercise and Free Speech Clauses, and the school district's discipline of him violated those clauses. Critically, Gorsuch explicitly rejected the *Lemon v. Kurtzman* (1971) test (which had required laws to have a secular purpose, primary effect that neither advances nor inhibits religion, and no excessive entanglement) along with O'Connor's endorsement-test gloss, replacing them with an inquiry into 'historical practices and understandings.' Combined with *Carson v. Makin* (2022, holding Maine could not exclude religious schools from a tuition-aid program), the post-2022 doctrine treats *exclusion* of religious practice from public spaces and public benefits as the principal constitutional concern — a substantial reorientation from the Lemon-era worry about state *endorsement*."),
+        part("(d)",
+             "Develop an argument that EITHER the Roberts Court has properly rebalanced the religion clauses OR has disturbed long-settled neutrality. Use at least TWO required-document or required-case evidence sources.",
+             2,
+             [(1, "Clear thesis taking a side",
+                  ["thesis", "rebalanced", "disturbed", "neutrality", "argument"]),
+              (1, "Two pieces of specific evidence (required cases: Engel 1962, Lemon 1971, Wisconsin v. Yoder 1972, Hobby Lobby 2014, Kennedy 2022; or relevant Federalist 10/51, Letter from Birmingham Jail)",
+                  ["Engel", "1962", "Lemon", "1971", "Yoder", "1972", "Hobby Lobby", "2014", "Kennedy", "2022", "Federalist 51", "Madison", "Memorial and Remonstrance"])],
+             "Thesis: The Roberts Court has disturbed the long-settled neutrality framework by replacing the *Lemon v. Kurtzman* (1971) test with a 'history and tradition' approach that systematically advantages religious actors over non-religious ones. Evidence (1): *Engel v. Vitale* (1962) established that even non-coercive, non-denominational state-sponsored prayer in public schools violates the Establishment Clause — a holding *Kennedy v. Bremerton* (2022) substantially narrows by recharacterizing a coach's audible midfield prayer with players present as 'private speech.' Evidence (2): James Madison's *Memorial and Remonstrance Against Religious Assessments* (1785) and his arguments in *Federalist No. 51* about the importance of separating spheres of authority articulate exactly the structural neutrality the Lemon test attempted to operationalize; the post-2022 framework, by approving public funding flows to religious institutions (*Carson v. Makin*, 2022) and by reframing Establishment-Clause limits as discrimination against religion, departs from this structural separation in favor of a substantive preference for religious accommodation."),
+    ],
+    7, "~25 minutes",
+)
+
+
+LONG_3 = frq(
+    "gov-long-3", "long", 3,
+    "Civil Rights, Equal Protection, and the Voting Rights Act",
+    "The Fourteenth Amendment's Equal Protection Clause (1868) and the Voting Rights Act of 1965 transformed American civil rights law, but the relationship between judicial doctrine and federal voting protections has continued to evolve. Use your knowledge of US government to answer the following.",
+    [
+        part("(a)",
+             "Explain how *Brown v. Board of Education* (1954) overturned *Plessy v. Ferguson* (1896), and identify the constitutional clause that grounded the decision.",
+             1,
+             [(1, "Identifies Equal Protection Clause of the 14th Amendment; explains *Brown* (1954) overturned 'separate but equal' from *Plessy* (1896); references Warren's unanimous opinion and Doll Studies (Clark)",
+                  ["Brown v. Board of Education", "1954", "Plessy v. Ferguson", "1896", "separate but equal", "Equal Protection Clause", "Fourteenth Amendment", "Earl Warren", "unanimous", "Topeka", "Kenneth Clark"])],
+             "*Brown v. Board of Education of Topeka* (1954) was a unanimous decision authored by Chief Justice Earl Warren that held racially segregated public schools violate the Equal Protection Clause of the Fourteenth Amendment. The decision overturned the 'separate but equal' doctrine established in *Plessy v. Ferguson* (1896), which had upheld Louisiana's railway-segregation statute. Warren's opinion drew on Kenneth and Mamie Clark's 1940s 'doll studies' to conclude that 'separate educational facilities are inherently unequal' — explicitly rejecting Plessy's premise that segregation could be implemented without inflicting a stamp of inferiority."),
+        part("(b)",
+             "Explain how the Civil Rights Act of 1964 and the Voting Rights Act of 1965 each used a different constitutional foundation to attack Jim Crow.",
+             2,
+             [(1, "Identifies CRA 1964 Title II grounded in the Commerce Clause as upheld in *Heart of Atlanta Motel v. United States* (1964) and Title VII (employment); names Lyndon B. Johnson's signing",
+                  ["Civil Rights Act", "1964", "Title II", "Title VII", "Commerce Clause", "Heart of Atlanta Motel v. United States", "1964", "Lyndon B. Johnson", "public accommodations"]),
+              (1, "Identifies VRA 1965 grounded in the 15th Amendment enforcement power; describes Section 5 preclearance and Section 4 coverage formula; references Selma 1965 / Bloody Sunday",
+                  ["Voting Rights Act", "1965", "Fifteenth Amendment", "Section 5", "preclearance", "Section 4", "coverage formula", "Selma", "Bloody Sunday", "literacy tests", "DOJ"])],
+             "The Civil Rights Act of 1964, signed by President Lyndon B. Johnson, attacked private discrimination through the Commerce Clause: Title II banned racial discrimination in hotels, restaurants, and other public accommodations affecting interstate commerce, and the Supreme Court upheld this approach in *Heart of Atlanta Motel v. United States* (1964). Title VII similarly used commerce authority to prohibit employment discrimination. The Voting Rights Act of 1965 — passed after the March 1965 Selma-to-Montgomery 'Bloody Sunday' attacks — was instead grounded in the Fifteenth Amendment's enforcement power. Section 5 required jurisdictions identified by Section 4's 'coverage formula' (states and counties with histories of voter suppression) to obtain *preclearance* from the U.S. Department of Justice or the U.S. District Court for D.C. before changing any voting rule, banning literacy tests in covered jurisdictions and dramatically expanding Black voter registration in the Deep South."),
+        part("(c)",
+             "Explain how *Shelby County v. Holder* (2013) altered the operation of the Voting Rights Act of 1965, AND describe ONE specific consequence in state voting laws after the decision.",
+             2,
+             [(1, "Explains *Shelby County* (2013): Roberts opinion struck down Section 4(b) coverage formula as exceeding Congress's enforcement power, effectively suspending Section 5 preclearance",
+                  ["Shelby County v. Holder", "2013", "Roberts", "Section 4", "coverage formula", "Section 5", "preclearance", "Fifteenth Amendment", "equal sovereignty", "Ginsburg dissent"]),
+              (1, "Provides specific post-Shelby evidence: Texas voter ID 2013, North Carolina HB 589 / *NC NAACP v. McCrory* 2016, Georgia SB 202 (2021), Brnovich v. DNC 2021",
+                  ["Texas voter ID", "2013", "North Carolina", "HB 589", "NC NAACP v. McCrory", "2016", "Georgia SB 202", "2021", "Brnovich v. DNC", "2021", "polling places closed"])],
+             "*Shelby County v. Holder* (2013), authored by Chief Justice Roberts, struck down Section 4(b) of the Voting Rights Act — the *coverage formula* that determined which jurisdictions were subject to Section 5 preclearance — as exceeding Congress's Fifteenth Amendment enforcement authority because it relied on 1965-era data to constrain modern state sovereignty. Without an updated coverage formula (which Congress has not enacted), Section 5 preclearance is effectively dormant. Within 24 hours, Texas implemented its strict voter-ID law (previously blocked by DOJ); North Carolina enacted HB 589 (2013), which the Fourth Circuit struck down in *NC NAACP v. McCrory* (2016) as having targeted Black voters 'with almost surgical precision.' In 2021, Georgia's SB 202 added new voter-ID requirements for absentee ballots, restricted drop boxes, and shortened runoff windows — changes that under the pre-*Shelby* regime would have required preclearance."),
+        part("(d)",
+             "Develop an argument that EITHER the post-1954 Supreme Court has been the principal protector of civil rights OR Congress has been the principal protector. Use at least TWO required cases or documents.",
+             2,
+             [(1, "Clear thesis taking a side",
+                  ["thesis", "Court", "Congress", "principal protector", "argument"]),
+              (1, "Two pieces of specific evidence (required cases: Brown 1954, Heart of Atlanta 1964, Shelby 2013, Bostock 2020, Loving 1967; required documents: Letter from Birmingham Jail, Federalist 10/51)",
+                  ["Brown", "1954", "Heart of Atlanta", "1964", "Shelby", "2013", "Bostock", "2020", "Loving v. Virginia", "1967", "Letter from Birmingham Jail", "Civil Rights Act 1964", "Voting Rights Act 1965"])],
+             "Thesis: Congress, not the Court, has been the principal protector of civil rights — the Court has set important boundary markers but has alternately advanced and retreated, while Congress's statutory framework has produced the most durable and broadly applicable protections. Evidence (1): *Brown v. Board of Education* (1954) declared school segregation unconstitutional, but ten years of 'all deliberate speed' produced little integration; the Civil Rights Act of 1964 and Voting Rights Act of 1965 — passed by elected majorities under President Johnson — produced rapid, measurable change in school desegregation, public accommodations, and Black voter registration. Evidence (2): The Court's later decision in *Shelby County v. Holder* (2013) suspended VRA Section 5 preclearance, allowing immediate state-level voting restrictions; meanwhile, the Court's *Bostock v. Clayton County* (2020) decision protecting LGBTQ+ workers from employment discrimination *interpreted Title VII* of the 1964 Civil Rights Act — meaning even that landmark progress operated inside a congressional statutory framework. As Dr. Martin Luther King argued in his *Letter from Birmingham Jail* (1963), legal change required both branches working together, but the legislative branch supplied the durable architecture."),
+    ],
+    7, "~25 minutes",
+)
+
+
+LONG_4 = frq(
+    "gov-long-4", "long", 2,
+    "Presidential Power, Congressional Checks, and Judicial Review",
+    "The Constitution divides war and emergency powers between Congress (Article I) and the President (Article II), but practical authority has shifted markedly across the twentieth and twenty-first centuries — and the courts have intervened at key inflection points. Use your knowledge of US government to answer the following.",
+    [
+        part("(a)",
+             "Identify TWO formal (constitutional) and ONE informal power of the President in foreign policy or national security.",
+             1,
+             [(1, "Names two formal constitutional powers (Commander in Chief Art. II §2; treaty-making with 2/3 Senate Art. II §2; appointing ambassadors Art. II §2; veto Art. I §7) AND one informal power (executive agreements, executive orders, bully pulpit, signing statements)",
+                  ["Commander in Chief", "Article II", "treaty", "two-thirds Senate", "ambassadors", "veto", "executive agreement", "executive order", "bully pulpit", "signing statement", "United States v. Curtiss-Wright", "1936"])],
+             "Two formal powers: (1) Commander in Chief of the armed forces (Article II, Section 2) — controlling military deployment and tactical decisions; (2) the treaty-making power (Article II, Section 2), subject to two-thirds Senate ratification. One informal power: *executive agreements* — international compacts negotiated and concluded by the President without Senate ratification. The Supreme Court endorsed broad presidential foreign-affairs authority in *United States v. Curtiss-Wright Export Corp.* (1936); modern presidents conclude many more executive agreements than treaties, including the JCPOA (2015) and the Paris Climate Agreement (2016)."),
+        part("(b)",
+             "Explain how *Youngstown Sheet & Tube v. Sawyer* (1952) defined the limits of presidential emergency power, and identify the constitutional principle on which the Court relied.",
+             2,
+             [(1, "Identifies the case: Truman seized steel mills during the Korean War; Court struck the seizure as exceeding presidential authority",
+                  ["Youngstown Sheet & Tube v. Sawyer", "1952", "Truman", "steel mills", "Korean War", "seizure", "Hugo Black"]),
+              (1, "Identifies the constitutional principle (separation of powers / Article I lawmaking authority); references Justice Jackson's three-tier framework",
+                  ["separation of powers", "Article I", "lawmaking", "Robert Jackson", "concurrence", "three categories", "Taft-Hartley", "Congress", "exclusive presidential", "low ebb"])],
+             "*Youngstown Sheet & Tube v. Sawyer* (1952) struck down President Truman's executive-order seizure of the nation's steel mills during a Korean War-era labor dispute. Justice Hugo Black's majority opinion held the seizure unconstitutional because Congress, not the President, possesses the legislative power, and Congress had enacted the Taft-Hartley Act (1947) providing other procedures for labor emergencies — meaning Truman's order conflicted with Congress's chosen approach. The opinion rests on the structural principle of separation of powers: Article I's vesting of 'all legislative powers' in Congress denies the President a free-floating emergency lawmaking authority. Justice Robert Jackson's enormously influential concurrence laid out a three-tier framework — presidential authority is at its *maximum* when Congress has authorized action, in a *zone of twilight* when Congress is silent, and at its *lowest ebb* when Congress has prohibited the action (Truman's case)."),
+        part("(c)",
+             "Explain how the War Powers Resolution (1973) attempted to constrain presidential war-making power, AND identify ONE limit on its actual effectiveness.",
+             2,
+             [(1, "Explains the War Powers Resolution 1973: 48-hour notice + 60-day deployment limit + 30-day withdrawal absent congressional authorization; passed over Nixon's veto",
+                  ["War Powers Resolution", "1973", "Nixon", "veto override", "48 hours", "60 days", "30 days", "withdrawal", "Vietnam", "AUMF"]),
+              (1, "Identifies a real-world limitation: presidents from Reagan through Biden have asserted constitutional non-applicability; Libya 2011 (Obama); ongoing AUMF 2001/2002; lack of judicial enforcement; political question doctrine",
+                  ["Libya", "2011", "Obama", "Reagan", "Grenada", "1983", "AUMF", "2001", "2002", "political question", "non-justiciable", "Iran missile strike", "2020", "Trump"])],
+             "The War Powers Resolution (1973), passed by Congress over President Nixon's veto in the wake of the Vietnam War, requires the President to (1) consult with Congress 'in every possible instance' before introducing armed forces into hostilities, (2) report to Congress within 48 hours of any deployment, and (3) terminate the deployment within 60 days (extendable 30 more) absent specific congressional authorization. In practice, every president from Ford through Biden has questioned the Resolution's constitutionality. President Obama's 2011 Libya intervention exceeded the 60-day clock without congressional authorization; the administration argued the air operation did not constitute 'hostilities.' Federal courts have generally treated war-powers disputes as non-justiciable political questions (e.g., *Campbell v. Clinton*, 2000), leaving enforcement essentially political — and the broad post-9/11 AUMFs (2001, 2002) have been invoked to authorize operations far afield from their original scope."),
+        part("(d)",
+             "Develop an argument that the modern presidency has EITHER properly responded to legitimate national-security needs OR has accumulated powers in tension with the Constitution. Use at least TWO required cases or documents.",
+             2,
+             [(1, "Clear thesis taking a side",
+                  ["thesis", "modern presidency", "national security", "tension", "argument", "Schlesinger", "imperial presidency"]),
+              (1, "Two pieces of specific evidence: required cases (Youngstown 1952; Korematsu 1944; Trump v. Hawaii 2018; Trump v. United States 2024); required documents (Federalist 70 Hamilton energy in the executive; Federalist 51 checks)",
+                  ["Federalist 70", "Hamilton", "energy in the executive", "Federalist 51", "checks and balances", "Youngstown", "1952", "Korematsu", "1944", "Trump v. Hawaii", "2018", "Trump v. United States", "2024"])],
+             "Thesis: The modern presidency has accumulated powers in growing tension with the Constitution's structural design — even as some accumulation responds to genuine security challenges, the trajectory documented from *Korematsu* through *Trump v. United States* has weakened the checks Hamilton and Madison built. Evidence (1): Hamilton in *Federalist No. 70* defended 'energy in the executive' as essential, but argued such energy was constrained by enumeration, election, and impeachment; Madison's *Federalist No. 51* rested liberty on the proposition that 'ambition must be made to counteract ambition.' Evidence (2): The arc from *Korematsu v. United States* (1944, deferring to wartime executive racial classification) through *Youngstown* (1952, marking a temporary boundary) to *Trump v. Hawaii* (2018, deferring substantially to a national-security travel order) and *Trump v. United States* (2024, recognizing broad presidential immunity for official acts) demonstrates a ratchet of judicial deference that converts emergency rationales into structural authority — exactly the dynamic Madison warned against."),
+    ],
+    7, "~25 minutes",
+)
+
+
+# ============================================================================
+# SHORT FRQs — Concept Application / Quantitative Analysis / SCOTUS
+# Comparison style, 3-4 pts, 3 parts
+# ============================================================================
+
+SHORT_1 = frq(
+    "gov-short-1", "short", 5,
+    "Concept Application: Voting Rights and Federalism",
+    "After *Shelby County v. Holder* (2013) suspended the operation of Section 5 preclearance under the Voting Rights Act of 1965, several states enacted new voter-identification, mail-ballot, and redistricting laws. Civil rights advocates challenged a number of these under Section 2 of the VRA and the Equal Protection Clause; some challenges succeeded (e.g., *NC NAACP v. McCrory*, 2016), while others did not (e.g., *Brnovich v. DNC*, 2021).",
+    [
+        part("(a)",
+             "Identify the constitutional or statutory basis on which Section 2 of the Voting Rights Act of 1965 challenges discriminatory voting practices, and describe the legal standard *Brnovich v. DNC* (2021) applied.",
+             1,
+             [(1, "Identifies VRA Section 2 results-based test (1982 amendments after *Mobile v. Bolden* 1980); explains *Brnovich* (2021) Alito factors raising the bar for vote-denial claims",
+                  ["VRA Section 2", "results test", "1982 amendment", "Mobile v. Bolden", "1980", "Brnovich v. DNC", "2021", "Alito", "guideposts", "totality of circumstances", "out-of-precinct ballots", "ballot collection"])],
+             "Section 2 of the Voting Rights Act of 1965 (substantially rewritten in 1982 after *Mobile v. Bolden*, 1980) prohibits voting practices that result in racial discrimination, judged under a totality-of-circumstances test rather than requiring discriminatory intent. *Brnovich v. DNC* (2021), authored by Justice Alito, upheld two Arizona laws (out-of-precinct ballot rejection and a ballot-collection ban) and articulated five 'guideposts' for Section 2 vote-denial claims that, in practice, raise the threshold for plaintiffs — including the size of the burden, the degree of departure from standard 1982 voting practices, and the availability of other voting opportunities."),
+        part("(b)",
+             "Explain how the structure of American federalism enables state-by-state variation in voting rules, citing a relevant constitutional provision.",
+             1,
+             [(1, "Cites Article I Section 4 (Elections Clause) reserving 'times, places, and manner' to states subject to congressional override; or 10th Amendment reserved powers",
+                  ["Elections Clause", "Article I", "Section 4", "times places and manner", "10th Amendment", "reserved powers", "state legislatures"])],
+             "The Constitution's Elections Clause (Article I, Section 4) provides that 'The Times, Places and Manner of holding Elections for Senators and Representatives, shall be prescribed in each State by the Legislature thereof; but the Congress may at any time by Law make or alter such Regulations.' This default state authority — combined with the Tenth Amendment's reservation of unenumerated powers — explains why voter ID, mail-ballot, and registration rules vary substantially across states unless Congress legislates a uniform standard, as it did in the National Voter Registration Act (1993) and Help America Vote Act (2002)."),
+        part("(c)",
+             "Describe ONE political-action strategy a national civil-rights organization could pursue to expand voting access despite *Shelby* and *Brnovich*, and identify ONE limit on that strategy's effectiveness.",
+             1,
+             [(1, "Identifies a strategy (litigation under Section 2 / Equal Protection; congressional lobbying for VRAA / John Lewis Act; ballot initiatives in initiative states; state-court litigation under state constitutions e.g., *Allen v. Milligan* 2023; voter mobilization) AND a specific limit (Senate filibuster on VRAA; standing/Brnovich threshold; *Moore v. Harper* 2023; Article III standing)",
+                  ["John Lewis Voting Rights Advancement Act", "filibuster", "Section 2 litigation", "Allen v. Milligan", "2023", "ballot initiative", "state constitution", "Moore v. Harper", "2023", "voter mobilization", "Souls to the Polls"])],
+             "A national organization can pursue parallel state-court litigation under state constitutional protections more generous than the federal floor — Pennsylvania's 2018 *League of Women Voters v. Commonwealth* invalidated a partisan gerrymander under the state constitution after federal claims foundered. The principal limit is the Supreme Court's 2023 decision in *Moore v. Harper*: while it rejected the strongest version of the 'independent state legislature theory,' it left federal courts with authority to review state-court election rulings, and the Court has not constrained partisan gerrymandering at the federal level (*Rucho v. Common Cause*, 2019). Congressional reform — the John Lewis Voting Rights Advancement Act — has repeatedly stalled in the Senate filibuster."),
+    ],
+    3, "~20 minutes",
+)
+
+
+SHORT_2 = frq(
+    "gov-short-2", "short", 5,
+    "Quantitative Analysis: Partisan Polarization (Pew Research Center, 1994–2022)",
+    "The Pew Research Center has tracked Americans' political values across ten waves from 1994 to 2022. Pew reports the median Democrat and median Republican on a 10-question values index. In 1994 the medians overlapped substantially; by 2017, only ~3% of Republicans were more liberal than the median Democrat (down from 23% in 1994), and only ~1% of Democrats were more conservative than the median Republican (down from 17% in 1994). Affective polarization (warmth toward one's own party minus warmth toward the other party, on a 0-100 thermometer) roughly doubled between 1978 and 2020 (Iyengar et al. 2019, Annual Review of Political Science).",
+    [
+        part("(a)",
+             "Identify ONE specific trend the Pew data describe, and identify the source of the affective-polarization measure.",
+             1,
+             [(1, "Names a specific trend (median ideology divergence; collapse of overlap; growing affective polarization); names ANES feeling thermometer / Iyengar et al. 2019",
+                  ["polarization", "median Democrat", "median Republican", "overlap", "affective polarization", "feeling thermometer", "ANES", "American National Election Studies", "Iyengar", "2019", "Pew", "2017", "2022"])],
+             "The Pew data show a sharp decline in ideological overlap between the two parties' rank-and-file: between 1994 and 2017, the share of Republicans more liberal than the median Democrat fell from 23% to about 3%, and the share of Democrats more conservative than the median Republican fell from 17% to about 1%. The affective-polarization figures come from the American National Election Studies (ANES) feeling-thermometer items, analyzed in Iyengar, Lelkes, Levendusky, Malhotra, and Westwood's 2019 *Annual Review of Political Science* synthesis."),
+        part("(b)",
+             "Describe ONE political institution affected by polarization and explain a specific consequence.",
+             1,
+             [(1, "Identifies a specific institution (Senate filibuster, presidential nominations, House Rules Committee, congressional committee jurisdiction) and a documented consequence (declining cross-party legislation; Garland nomination 2016; Kavanaugh 2018; nuclear option 2013; reconciliation as primary route)",
+                  ["Senate filibuster", "cloture", "60 votes", "nuclear option", "2013", "Reid", "2017", "McConnell", "Garland", "2016", "Kavanaugh", "2018", "reconciliation", "ACA", "2010", "Trump v. United States nominations"])],
+             "The Senate's confirmation process for federal judges has been transformed by polarization. After Majority Leader Harry Reid invoked the 'nuclear option' in 2013 (eliminating the 60-vote cloture threshold for executive and lower-court nominations), Majority Leader Mitch McConnell extended it in 2017 to Supreme Court nominations after refusing to hold hearings on Merrick Garland's 2016 nomination. The result: lifetime federal judges can now be confirmed on near-party-line votes — a significant departure from the cross-party coalitions that had historically confirmed nominees like Justice Antonin Scalia (98-0, 1986) and Justice Ruth Bader Ginsburg (96-3, 1993)."),
+        part("(c)",
+             "Explain ONE structural feature of American government that political scientists argue *amplifies* polarization, citing a specific example or scholar.",
+             1,
+             [(1, "Identifies a feature (closed primaries; partisan gerrymandering; safe House districts; party media ecosystems / Levendusky 2013; sorted parties / Levendusky 2009; nationalization of state elections / Hopkins 2018)",
+                  ["closed primary", "primary election", "partisan gerrymandering", "Rucho v. Common Cause", "2019", "safe district", "Levendusky", "2009", "2013", "sorted parties", "Hopkins", "2018", "nationalization", "Fiorina", "Abrams"])],
+             "Closed-primary nomination systems amplify polarization by giving party-base voters — typically the most ideologically extreme — disproportionate influence over candidate selection. Matthew Levendusky's *The Partisan Sort* (2009) documented that elite cues from increasingly distinct parties have led ordinary voters to align their issue positions with their party identification, narrowing the cross-cutting cleavages that once moderated American politics. Daniel Hopkins's *The Increasingly United States* (2018) further shows that nationalization — voters now treat state elections as referendums on national parties — converts local races into ideological proxy battles, reinforcing the patterns Pew documents."),
+    ],
+    3, "~20 minutes",
+)
+
+
+SHORT_3 = frq(
+    "gov-short-3", "short", 4,
+    "SCOTUS Comparison: Citizens United (2010) and a Required Foundational Case",
+    "*Citizens United v. Federal Election Commission* (2010) struck down portions of the Bipartisan Campaign Reform Act of 2002 (BCRA, 'McCain-Feingold') that restricted independent political expenditures by corporations and unions. Justice Kennedy's 5-4 majority opinion held that political speech does not lose First Amendment protection 'simply because its source is a corporation.'",
+    [
+        part("(a)",
+             "Identify the constitutional clause on which the *Citizens United* (2010) majority relied, and explain how it overturned *Austin v. Michigan Chamber of Commerce* (1990).",
+             1,
+             [(1, "Identifies First Amendment Free Speech Clause; explains *Citizens United* overturned *Austin* (1990) which had upheld restrictions on independent corporate expenditures",
+                  ["First Amendment", "Free Speech Clause", "Citizens United", "2010", "Austin v. Michigan Chamber of Commerce", "1990", "Kennedy", "BCRA", "McCain-Feingold", "2002", "independent expenditures"])],
+             "*Citizens United v. FEC* (2010) was decided under the First Amendment's Free Speech Clause. Justice Kennedy's majority held that the government may not, consistent with the First Amendment, restrict independent political expenditures by corporations, unions, or other associations. The decision overturned *Austin v. Michigan Chamber of Commerce* (1990), which had upheld a Michigan ban on corporate independent expenditures based on a state interest in preventing 'corrosive and distorting effects' of corporate wealth — a rationale Kennedy rejected as unconstitutional anti-distortion."),
+        part("(b)",
+             "Identify a relevant required foundational case (e.g., *Buckley v. Valeo*, 1976) and explain how *Citizens United* (2010) extended OR departed from that case's reasoning.",
+             1,
+             [(1, "Names *Buckley v. Valeo* (1976); explains the contribution/expenditure distinction; applies it to *Citizens United*",
+                  ["Buckley v. Valeo", "1976", "contribution", "expenditure", "FECA", "1974", "anti-corruption", "appearance of corruption", "quid pro quo", "money is speech"])],
+             "*Buckley v. Valeo* (1976) addressed the Federal Election Campaign Act of 1971 (amended 1974) and drew a foundational distinction: limits on direct campaign *contributions* could be justified by anti-corruption interests, but limits on *independent expenditures* burdened core political speech and were unconstitutional. *Citizens United* (2010) applied — and substantially extended — Buckley's logic by holding that the same protection extended to *corporate* independent expenditures and by narrowing the cognizable government interest to *quid pro quo* corruption (or its appearance), excluding broader concerns about disproportionate influence. Critics argue Citizens United's narrow corruption definition departed from Buckley's recognition that the 'appearance' of corruption was a serious government interest."),
+        part("(c)",
+             "Describe ONE specific way *Citizens United* (2010) reshaped campaign finance, and identify ONE concrete piece of post-2010 evidence.",
+             1,
+             [(1, "Identifies a specific change (rise of Super PACs after *SpeechNow.org v. FEC* 2010 D.C. Cir.; dark money via 501(c)(4)s; partisan-spending escalation); cites OpenSecrets / FEC data",
+                  ["Super PAC", "SpeechNow.org v. FEC", "2010", "D.C. Circuit", "501(c)(4)", "dark money", "OpenSecrets", "FEC", "2012 election", "2024 election", "billion", "Crossroads GPS"])],
+             "Combined with the D.C. Circuit's *SpeechNow.org v. FEC* (2010) decision (decided weeks after *Citizens United*), the ruling enabled the rise of Super PACs — independent-expenditure-only committees that may accept unlimited contributions from individuals, corporations, and unions. According to OpenSecrets, Super PAC spending rose from essentially zero in 2008 to roughly $600 million in 2012 and over $2.7 billion in the 2020 cycle. 501(c)(4) social-welfare organizations (e.g., Crossroads GPS) channeled additional 'dark money' that does not require donor disclosure — a structural shift the FEC's 1974-era disclosure regime was not designed to capture."),
+    ],
+    3, "~20 minutes",
+)
+
+
+SHORT_4 = frq(
+    "gov-short-4", "short", 1,
+    "Argumentative: Judicial Review and Democratic Legitimacy",
+    "Judicial review — the power of federal courts to invalidate acts of Congress, the executive, and state governments as unconstitutional — was established in *Marbury v. Madison* (1803) but is not explicitly granted in the Constitution. Its democratic legitimacy has been debated since Alexander Hamilton's defense in *Federalist No. 78* (1788).",
+    [
+        part("(a)",
+             "Identify the holding and constitutional reasoning of *Marbury v. Madison* (1803).",
+             1,
+             [(1, "Identifies *Marbury* (1803): Marshall established judicial review by striking Section 13 of Judiciary Act 1789; cites Article III + 'It is emphatically the province and duty of the judicial department to say what the law is.'",
+                  ["Marbury v. Madison", "1803", "John Marshall", "judicial review", "Section 13", "Judiciary Act of 1789", "Article III", "writ of mandamus", "province and duty", "supremacy of the Constitution"])],
+             "*Marbury v. Madison* (1803), authored by Chief Justice John Marshall, established the principle of judicial review by striking down Section 13 of the Judiciary Act of 1789 — which had purported to give the Supreme Court original jurisdiction to issue writs of mandamus — as inconsistent with Article III's grant of original jurisdiction. Marshall reasoned that 'It is emphatically the province and duty of the judicial department to say what the law is,' and that when a statute conflicts with the Constitution, the courts must apply the Constitution as the supreme law. The decision is foundational despite the Constitution's silence on the power to invalidate acts of Congress."),
+        part("(b)",
+             "Explain how Hamilton's *Federalist No. 78* (1788) defends judicial review as compatible with republican government.",
+             1,
+             [(1, "Cites *Federalist 78* — judiciary as 'least dangerous branch'; courts have 'neither force nor will, but merely judgment'; life tenure protects independence",
+                  ["Federalist 78", "Hamilton", "1788", "least dangerous branch", "neither force nor will", "judgment", "life tenure", "good behavior", "independence", "judicial review"])],
+             "Hamilton in *Federalist No. 78* argued that the judiciary 'will always be the least dangerous to the political rights of the Constitution' because it 'has no influence over either the sword or the purse … and can take no active resolution whatever. It may truly be said to have neither FORCE nor WILL, but merely judgment.' Judicial review is consistent with — indeed required by — popular sovereignty: the Constitution is the people's act, statutes are agents' acts, and courts must enforce the principal's instructions. Life tenure during 'good behavior' (Article III) insulates judges from political pressures, allowing the impartial application of constitutional limits."),
+        part("(c)",
+             "Develop an argument that EITHER judicial review is essential to constitutional democracy OR that it permits an unaccountable judiciary to override majority rule. Use at least ONE additional required case or document.",
+             1,
+             [(1, "Clear thesis taking a side AND uses one additional required case or document (Brown 1954; Roe 1973 / Dobbs 2022; Citizens United 2010; Federalist 10/51; Letter from Birmingham Jail; Lincoln First Inaugural)",
+                  ["thesis", "judicial review", "essential", "unaccountable", "Brown", "1954", "Dobbs", "2022", "Roe", "1973", "Federalist 10", "Federalist 51", "Lincoln", "First Inaugural"])],
+             "Thesis: Judicial review is essential to constitutional democracy because the Constitution's enumerated rights and structural limits cannot enforce themselves. *Brown v. Board of Education* (1954) is decisive evidence: a unanimous Court invalidated state-imposed school segregation that no Southern legislature would have voluntarily ended, vindicating the Fourteenth Amendment's Equal Protection Clause against entrenched majority preferences in those states. Madison in *Federalist No. 51* explicitly defended an independent judiciary as part of the institutional architecture for ensuring that 'a dependence on the people' would be supplemented by 'auxiliary precautions' against majority tyranny. Without judicial review, the rights guarantees of the Bill of Rights and Reconstruction Amendments would depend entirely on the very legislatures most likely to violate them."),
+    ],
+    3, "~20 minutes",
+)
+
+
+HEADER = '''/**
+ * AP US Government & Politics — FRQ Practice Question Pool
+ * AUTO-GENERATED by scripts/write-gov-frqs.py
+ *
+ * Format mirrors College Board AP US Government FRQ exam:
+ * 4 LONG (Argumentative / Concept-Application, ~25 min, 7 pts) +
+ * 4 SHORT (Concept Application / Quantitative / SCOTUS Comparison,
+ * ~20 min, 3 pts), each with multiple parts. Sample answers and rubrics
+ * are anchored in named SCOTUS cases, Federalist papers, and primary citations
+ * from 1787 through 2024.
+ */
+
+export interface FRQRubricItem {
+  points: number
+  description: string
+  keywords: string[]
+}
+
+export interface FRQPart {
+  label: string
+  prompt: string
+  maxPoints: number
+  rubric: FRQRubricItem[]
+  sampleAnswer: string
+}
+
+export interface USGovFRQ {
+  id: string
+  type: 'long' | 'short'
+  unit: number
+  title: string
+  prompt: string
+  parts: FRQPart[]
+  totalPoints: number
+  timeRecommendation: string
+  calculatorAllowed: boolean
+}
+
+'''
+
+
+FOOTER = '''
+
+export const apUSGovFRQs: USGovFRQ[] = [...longFRQs, ...shortFRQs]
+
+export function getApUSGovFRQs(): USGovFRQ[] {
+  return apUSGovFRQs
+}
+
+export function getLongFRQs(): USGovFRQ[] {
+  return longFRQs
+}
+
+export function getShortFRQs(): USGovFRQ[] {
+  return shortFRQs
+}
+
+export function generateFullExamFRQs(): {
+  long: USGovFRQ[]
+  short: USGovFRQ[]
+  totalPoints: number
+  totalTime: string
+} {
+  const shuffle = <T>(arr: T[]): T[] => {
+    const copy = [...arr]
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[copy[i], copy[j]] = [copy[j], copy[i]]
+    }
+    return copy
+  }
+
+  const selectedLong = shuffle(longFRQs).slice(0, 2)
+  const selectedShort = shuffle(shortFRQs).slice(0, 2)
+  const totalPoints = [...selectedLong, ...selectedShort].reduce((s, f) => s + f.totalPoints, 0)
+
+  return {
+    long: selectedLong,
+    short: selectedShort,
+    totalPoints,
+    totalTime: '100 min',
+  }
+}
+'''
+
+
+def main():
+    long_block = "const longFRQs: USGovFRQ[] = [\n" + ",\n".join([LONG_1, LONG_2, LONG_3, LONG_4]) + "\n]\n"
+    short_block = "const shortFRQs: USGovFRQ[] = [\n" + ",\n".join([SHORT_1, SHORT_2, SHORT_3, SHORT_4]) + "\n]\n"
+    with open(OUT, "w", encoding="utf-8") as f:
+        f.write(HEADER + long_block + "\n" + short_block + FOOTER)
+    print(f"Wrote {OUT}")
+
+
+if __name__ == "__main__":
+    main()
