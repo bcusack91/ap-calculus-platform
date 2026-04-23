@@ -5,137 +5,178 @@ export const hgIntroGeographyPart6Data = {
       id: 'hgintrog6-intro',
       type: 'text' as const,
       content: `
-# 🌍 Introduction to Geography
+# 🛠️ Problem-Solving Workshop
 
-**Part 6 of 7 — Problem-Solving Workshop**
+**Part 6 of 7 — Stimulus Analysis & FRQ Skills**
 
-This workshop focuses on applying geographic concepts to real-world scenarios. You'll practice using spatial analysis, identifying region types, and analyzing diffusion patterns in context.
+---
 
-### Key Concepts
+| Section |
+|---------|
+| 📖 The 4 AP Geographic Skills |
+| 📌 Working a Map Stimulus |
+| Working a Data Table |
+| Common FRQ Pitfalls |
 
-| Concept | Description |
-|---------|-------------|
-| **Spatial analysis** | The process of examining locations, patterns, and relationships across space |
-| **Pattern recognition** | Identifying recurring spatial arrangements in geographic data |
-| **Geographic inquiry** | Asking and answering questions about spatial phenomena |
+> 🔑 **Key Concept:** APHG FRQs are scored against **5 disciplinary skills**: concepts & processes, spatial relationships, data analysis, source analysis, and scale analysis. Each verb in a stem ("identify," "describe," "explain," "compare") points to a specific skill — and a specific number of points.
+      `
+    },
+    {
+      id: 'hgintrog6-skills',
+      type: 'text' as const,
+      content: `
+## 📖 AP Geographic Skills (College Board CED)
+
+| Skill | What It Asks | Common Verbs |
+|-------|-------------|--------------|
+| **1. Concepts & Processes** | Apply geographic vocabulary | *Define, Identify* |
+| **2. Spatial Relationships** | Patterns, distributions, networks across space | *Describe, Explain a pattern* |
+| **3. Data Analysis** | Interpret quantitative data (tables, graphs, choropleth) | *Describe a trend, Calculate a rate* |
+| **4. Source Analysis** | Use a non-data source (map, image, text) | *Describe a feature, Explain meaning* |
+| **5. Scale Analysis** | Connect scales of analysis (global ↔ local) | *Compare, Explain at different scales* |
+
+### The FRQ Verb Cheat-Sheet
+
+| Verb | Effort | Pitfall |
+|------|--------|---------|
+| **Identify** | A fact, in 1 sentence | Don't over-explain |
+| **Define** | The textbook definition | Use exact AP vocab |
+| **Describe** | A feature/pattern/trend in your own words | Must use quantitative or place-specific detail from the stimulus |
+| **Explain** | Why it happens — cause/effect | Must connect cause → effect with a connector word |
+| **Compare** | Similarities AND differences | Earn the point only if you say "both…" or "while X…, Y…" |
+
+> ⚠️ **AP Alert:** A *describe* answer cites the stimulus; an *explain* answer adds **a mechanism** (because…, which leads to…). Confusing the two is the #1 lost-point error.
       `
     },
     {
       id: 'hgintrog6-quiz1',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check** 🎯
+**FRQ Verb Recognition** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'Which question best represents geographic inquiry?',
+            question: "An FRQ stem says: 'Explain ONE reason that physiological density may better indicate population pressure than arithmetic density.' To earn the point, the answer MUST include:",
             options: [
-              'When did Rome fall?',
-              'Why do cities develop along rivers?',
-              'Who invented the telephone?',
-              'What is photosynthesis?'
+              "A definition of arithmetic density only",
+              "A cause-and-effect mechanism connecting arable-land scarcity to pressure on resources",
+              "A list of three countries with high arithmetic density",
+              "A choropleth map sketch"
             ],
             correctAnswer: 1,
-            explanation: 'Geographic inquiry asks about spatial relationships — why certain phenomena occur in certain locations.'
+            explanation: "'Explain' requires a cause→effect mechanism. The answer must connect arable-land scarcity to actual pressure (food, water, jobs) — not just define terms."
           },
           {
-            question: 'Identifying clusters of fast-food restaurants near highway exits demonstrates:',
+            question: "An FRQ stem says: 'Describe the spatial pattern of Walmart store openings between 1962 and 1990 shown in the map.' To earn the point, the answer must:",
             options: [
-              'Historical analysis',
-              'Spatial pattern recognition',
-              'Chemical analysis',
-              'Literary criticism'
+              "Use evidence from the map (e.g., 'stores cluster in the South-Central U.S., expanding outward from Arkansas')",
+              "Explain why Sam Walton chose Bentonville",
+              "Compare Walmart to Target's expansion",
+              "Identify the year Walmart became publicly traded"
             ],
-            correctAnswer: 1,
-            explanation: 'Recognizing that businesses cluster near transportation nodes is spatial pattern recognition.'
+            correctAnswer: 0,
+            explanation: "'Describe' a pattern means cite the stimulus — what is visible on the map. Explanation/comparison/identification are different verbs and earn different points."
           }
         ]
       }
     },
     {
-      id: 'hgintrog6-content',
+      id: 'hgintrog6-mapstim',
       type: 'text' as const,
       content: `
-## Problem-Solving Workshop — Deeper Dive
+## 📌 Working a Map Stimulus — Step-by-Step
 
-### Spatial analysis
-The process of examining locations, patterns, and relationships across space. Understanding this concept is essential for mastering Introduction to Geography in AP Human Geography.
+When given any APHG map (choropleth, dot, isoline, flow-line, cartogram):
 
-### Pattern recognition
-Identifying recurring spatial arrangements in geographic data. This builds on the previous concept and connects to broader themes in the course.
+| Step | What to Do | Example Phrase |
+|------|------------|----------------|
+| 1 | **Identify the map type** | "This is a choropleth showing GDP per capita." |
+| 2 | **Identify scale** | "Scale of analysis is national (country-level data)." |
+| 3 | **Read the legend & units** | "Categories range from < $5,000 to > $50,000." |
+| 4 | **Describe the pattern** | "High GDP clusters in North America, Western Europe, East Asia, Australia." |
+| 5 | **Note exceptions** | "Russia and several Gulf states are exceptions to a regional pattern." |
+| 6 | **Connect to a process** | "The pattern reflects industrialization (Rostow), colonial trade flows, and core-periphery position (Wallerstein)." |
 
-### Geographic inquiry
-Asking and answering questions about spatial phenomena. This is frequently tested on the AP exam and connects to multiple units in the curriculum.
+### Working a Data Table
+
+| Step | Move |
+|------|------|
+| 1 | Read column headers + units |
+| 2 | Identify the highest and lowest value (give the number AND the country/region) |
+| 3 | Compute a simple change ("From 2000 → 2020, X grew by ___%") |
+| 4 | Note an outlier |
+| 5 | Tie back to a HG concept (DTM, agricultural density, urban primacy) |
+
+> 🔑 **Why This Matters:** Most stimulus FRQs lose points because students *describe* without **using the stimulus** — name the country, the value, or the visible pattern, every time.
       `
     },
     {
       id: 'hgintrog6-input',
       type: 'input-boxes' as const,
       content: `
-**Applied Recall (exact term answers)** ✍️
+**Applied Recall** ✍️
 
-1) What term refers to the process of examining locations, patterns, and relationships across space?
+1) Which AP verb requires a *cause-and-effect mechanism* in the answer? (one word)
 
-2) What concept describes identifying recurring spatial arrangements in geographic data?
+2) Which AP verb requires citing direct evidence from a stimulus, but not necessarily explaining causes? (one word)
 
-3) Name the term for asking and answering questions about spatial phenomena.
-
-Use the exact term from this part.
+3) Which AP verb requires both similarities and differences between two cases? (one word)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Spatial analysis', 'Pattern recognition', 'Geographic inquiry'],
-        hint1: 'Starts with: S',
-        hint2: 'Starts with: P',
-        hint3: 'Starts with: G',
-        explanation: 'Expected answers: Spatial analysis (The process of examining locations, patterns, and relationships across space), Pattern recognition (Identifying recurring spatial arrangements in geographic data), and Geographic inquiry (Asking and answering questions about spatial phenomena).'
+        correctAnswers: ["Explain", "Describe", "Compare"],
+        hint1: "Cause → effect language. \"Because…\"",
+        hint2: "What you *see* in the stimulus.",
+        hint3: "Both… while X… Y…",
+        explanation: "Explain = mechanism (cause/effect). Describe = use stimulus evidence. Compare = similarities AND differences (use 'both' / 'while')."
       }
     },
     {
       id: 'hgintrog6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Fill in the Blanks** 🔍
+**Match the Stimulus Move** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The process of examining locations, patterns, and relationships across space is called ___',
-            options: ['Spatial analysis', 'Pattern recognition', 'Geographic inquiry', 'None of these']
+            label: "A flow-line map of remittances from the U.S. to Mexico → Step 1: identify map type as ___",
+            options: ["Flow-line", "Choropleth", "Cartogram", "Dot"]
           },
           {
-            label: 'Identifying recurring spatial arrangements in geographic data describes ___',
-            options: ['Spatial analysis', 'Pattern recognition', 'Geographic inquiry', 'All of these']
+            label: "A table showing TFR dropping from 6.5 (1960) to 2.1 (2020) in Mexico → tie to which HG model?",
+            options: ["Demographic Transition Model", "Concentric Zone Model", "Rostow's Stages", "Christaller's Central Place Theory"]
           },
           {
-            label: 'Asking and answering questions about spatial phenomena is known as ___',
-            options: ['Geographic inquiry', 'Spatial analysis', 'Pattern recognition', 'None of these']
+            label: "A choropleth of GDP per capita with North America + Western Europe in the highest bin → tie to which HG framework?",
+            options: ["Wallerstein's World-Systems Theory", "Borchert's Epochs", "Burgess Concentric Zone Model", "Rostow Stages of Development"]
           }
         ],
-        correctAnswers: ['Spatial analysis', 'Pattern recognition', 'Geographic inquiry'],
-        hint1: 'This is the first key concept from the lesson.',
-        hint2: 'This is the second key concept from the lesson.',
-        hint3: 'This is the third key concept from the lesson.',
-        explanation: 'Spatial analysis — The process of examining locations, patterns, and relationships across space. Pattern recognition — Identifying recurring spatial arrangements in geographic data. Geographic inquiry — Asking and answering questions about spatial phenomena.'
+        correctAnswers: ["Flow-line", "Demographic Transition Model", "Wallerstein's World-Systems Theory"],
+        hint1: "Arrows indicate direction & volume of movement.",
+        hint2: "Falling birth + death rates over time.",
+        hint3: "Core / semi-periphery / periphery.",
+        explanation: "Flow-line maps use arrows for movement. Falling TFR fits the DTM. Global income disparity by region maps onto Wallerstein's core-periphery framework."
       }
     },
     {
       id: 'hgintrog6-strategy',
       type: 'text' as const,
       content: `
-## Common Misconceptions and Exam Strategy
+## ⚡ FRQ Pitfalls
 
-### Misconceptions to Avoid
-- Don\'\'t confuse **Spatial analysis** with **Pattern recognition** — while related, they address different aspects of Introduction to Geography.
-- **Geographic inquiry** is often misunderstood — remember its precise definition for the AP exam.
-- Make sure to distinguish between similar-sounding terms; the AP exam tests precise knowledge.
+### Top 5 Lost-Point Errors (per AP Reader notes)
+1. **Defining a term when the stem said *Explain*** — gives away half the point.
+2. **Vague pattern words** ("a lot," "everywhere") instead of named places & numbers.
+3. **Using a region that doesn't fit the data** ("the Middle East has high X" when the map shows Sub-Saharan Africa).
+4. **Confusing scales** — mixing global and local in the same answer without saying so.
+5. **Skipping a model name** when one is obviously relevant (DTM, Christaller, Wallerstein, Burgess, von Thünen).
 
-### AP Strategy Moves
-- When you see questions about problem-solving workshop, start by identifying which key concept is being tested.
-- For free-response questions, always define the term first, then explain with a specific example.
-- Use process of elimination on multiple-choice: if two answers seem similar, identify the precise distinction.
-- Connect problem-solving workshop to broader themes in AP Human Geography for higher scores.
+### Universal FRQ Template
+> "[Term] is [definition]. In this stimulus, [specific evidence from map/table]. This occurs *because* [mechanism], *which leads to* [outcome]. At the [scale] scale, this pattern matches [named geographer / model]."
+
+Use that skeleton on every "explain" prompt.
       `
     },
     {
@@ -147,26 +188,26 @@ Use the exact term from this part.
       exercise: {
         questions: [
           {
-            question: 'A geographer notices that dialect boundaries in the US follow the Appalachian Mountains. This shows:',
+            question: "An FRQ provides a cartogram of the world resized by carbon emissions. The stem says: *Compare* carbon emissions between sub-Saharan Africa and East Asia at the global scale. The strongest 1-point answer would:",
             options: [
-              'Physical geography can create barriers that shape cultural regions',
-              'Dialects are unrelated to geography',
-              'Mountains have no effect on culture',
-              'All Americans speak the same dialect'
+              "State that carbon emissions are bad for the climate",
+              "Note that East Asia is much larger on the cartogram than sub-Saharan Africa, indicating substantially higher emissions, while both regions trail North America",
+              "Explain the Kyoto Protocol",
+              "Define cartogram"
             ],
-            correctAnswer: 0,
-            explanation: 'Physical barriers like mountains can limit interaction, creating distinct cultural regions on either side.'
+            correctAnswer: 1,
+            explanation: "'Compare' demands at least one similarity AND one difference, citing the stimulus. The correct answer references the visible difference (East Asia >> sub-Saharan Africa) and a similarity (both below North America)."
           },
           {
-            question: 'To study the impact of a new highway on nearby businesses, a geographer would most likely use:',
+            question: "An FRQ asks: *Explain ONE reason* the U.S. has lower agricultural density than Vietnam. Which response would earn the point?",
             options: [
-              'GIS to overlay highway routes with business locations and revenue data',
-              'A historical textbook about road construction',
-              'A chemistry lab to test pavement materials',
-              'A literary analysis of highway poetry'
+              "The U.S. produces more food than Vietnam.",
+              "U.S. farms use heavy mechanization (combines, GPS-guided tractors), so fewer farmers are needed per arable km², while Vietnamese rice paddies remain labor-intensive.",
+              "Agricultural density measures farmers per arable land.",
+              "The U.S. has larger arable land than Vietnam."
             ],
-            correctAnswer: 0,
-            explanation: 'GIS is the ideal tool for combining multiple spatial data layers to analyze the geographic impact of infrastructure.'
+            correctAnswer: 1,
+            explanation: "Only option B provides cause→effect: mechanization replaces labor → fewer farmers per arable km². Defining the term or stating a fact does not satisfy the *explain* verb."
           }
         ]
       }

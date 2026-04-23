@@ -144,7 +144,7 @@ export default function SATDiagnosticPage() {
         // Silent fail
       }
     },
-    [challengeToken],
+    [challengeToken, testData],
   )
 
   if (status === 'loading') {
