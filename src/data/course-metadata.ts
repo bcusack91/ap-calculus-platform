@@ -74,14 +74,38 @@ export function getCourseMetadata(slug: string) {
  * Courses listed here will link to their hub page instead of /courses/[slug].
  */
 export const courseHubPaths: Record<string, string> = {
+  // AP courses
+  'ap-african-american-studies': '/ap-african-american-studies',
+  'ap-biology': '/ap-biology',
   'ap-calculus-ab': '/ap-calculus-ab',
   'ap-calculus-bc': '/ap-calculus-bc',
   'ap-chemistry': '/ap-chemistry',
-  'ap-biology': '/ap-biology',
-  'ap-statistics': '/ap-statistics',
-  'ap-psychology': '/ap-psychology',
+  'ap-computer-science-a': '/ap-computer-science-a',
+  // NOTE: DB slug uses "principles" but the route folder is /ap-cs-principles
+  'ap-computer-science-principles': '/ap-cs-principles',
+  'ap-english-language': '/ap-english-language',
+  'ap-english-literature': '/ap-english-literature',
+  'ap-environmental-science': '/ap-environmental-science',
+  'ap-human-geography': '/ap-human-geography',
+  'ap-macroeconomics': '/ap-macroeconomics',
+  'ap-microeconomics': '/ap-microeconomics',
   'ap-physics-1': '/ap-physics-1',
   'ap-physics-2': '/ap-physics-2',
+  'ap-physics-c-em': '/ap-physics-c-em',
+  'ap-physics-c-mechanics': '/ap-physics-c-mechanics',
+  'ap-precalculus': '/ap-precalculus',
+  'ap-psychology': '/ap-psychology',
+  'ap-statistics': '/ap-statistics',
+  'ap-us-government': '/ap-us-government',
+  'ap-us-history': '/ap-us-history',
+  'ap-world-history': '/ap-world-history',
+  // Math courses
+  'algebra-1': '/algebra-1',
+  'algebra-2': '/algebra-2',
+  'geometry': '/geometry',
+  'pre-algebra': '/pre-algebra',
+  'grade-8-math': '/grade-8-math',
+  // Other
   'organic-chemistry': '/organic-chemistry',
   'sat-prep': '/sat',
   'act-prep': '/act',
