@@ -179,7 +179,12 @@ export function scoreAPPhysicsCEM(
 
   const recommendedTopics: APPhysicsCEMRecommendedTopic[] = []
 
-  for (const wd of domainResults.filter(d => d.level === 'weak')) {
+  // Prioritize by exam weight (questionTarget) so highest-impact topics surface first.
+  const examWeight = (id: string) => AP_PHYSICS_C_EM_DOMAINS.find(d => d.id === id)?.questionTarget ?? 0
+  const weakDomainResults = [...domainResults.filter(d => d.level === 'weak')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
+  const moderateDomainResults = [...domainResults.filter(d => d.level === 'moderate')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
+
+  for (const wd of weakDomainResults) {
     const domainDef = AP_PHYSICS_C_EM_DOMAINS.find(d => d.id === wd.domainId)
     if (!domainDef) continue
     const missedSlugs = new Set<string>()
@@ -196,7 +201,7 @@ export function scoreAPPhysicsCEM(
     }
   }
 
-  for (const md of domainResults.filter(d => d.level === 'moderate')) {
+  for (const md of moderateDomainResults) {
     if (recommendedTopics.length >= 5) break
     const domainDef = AP_PHYSICS_C_EM_DOMAINS.find(d => d.id === md.domainId)
     if (!domainDef) continue

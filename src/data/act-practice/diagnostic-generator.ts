@@ -475,10 +475,16 @@ export function scoreACTDiagnostic(
   const strengths = domainResults.filter(d => d.level === 'strong').map(d => d.domainName)
 
   // Build recommended topics from missed questions (canonicalized to slugs with entrance quizzes)
+  // Cap at 5 and prioritize by exam weight (questionCount).
+  const MAX_RECOMMENDED = 5
+  const examWeight = (id: string) => DIAGNOSTIC_DOMAINS.find(d => d.id === id)?.questionCount ?? 0
   const recommendedTopics: ACTRecommendedTopic[] = []
   const addedSlugs = new Set<string>()
+  const weakDomainResults = [...domainResults.filter(d => d.level === 'weak')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
+  const moderateDomainResults = [...domainResults.filter(d => d.level === 'moderate')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
 
-  for (const domain of domainResults.filter(d => d.level === 'weak')) {
+  for (const domain of weakDomainResults) {
+    if (recommendedTopics.length >= MAX_RECOMMENDED) break
     const domainDef = DIAGNOSTIC_DOMAINS.find(d => d.id === domain.domainId)
     if (!domainDef) continue
     const missedSlugs = new Set<string>()
@@ -493,15 +499,15 @@ export function scoreACTDiagnostic(
     })
     const slugs = missedSlugs.size > 0 ? [...missedSlugs].slice(0, 2) : domainDef.slugs.slice(0, 2).map(canonicalizeSlug)
     for (const slug of slugs) {
-      if (recommendedTopics.length < 7 && !addedSlugs.has(slug)) {
+      if (recommendedTopics.length < MAX_RECOMMENDED && !addedSlugs.has(slug)) {
         addedSlugs.add(slug)
         recommendedTopics.push({ slug, name: slugToName(slug), domainId: domain.domainId, priority: 'high' })
       }
     }
   }
 
-  for (const domain of domainResults.filter(d => d.level === 'moderate')) {
-    if (recommendedTopics.length >= 7) break
+  for (const domain of moderateDomainResults) {
+    if (recommendedTopics.length >= MAX_RECOMMENDED) break
     const domainDef = DIAGNOSTIC_DOMAINS.find(d => d.id === domain.domainId)
     if (!domainDef) continue
     const missedSlugs = new Set<string>()
@@ -535,7 +541,7 @@ export function scoreACTDiagnostic(
     weakAreas,
     moderateAreas,
     strengths,
-    recommendedTopics: recommendedTopics.slice(0, 7),
+    recommendedTopics: recommendedTopics.slice(0, MAX_RECOMMENDED),
   }
 }
 

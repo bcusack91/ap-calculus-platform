@@ -176,11 +176,25 @@ export function scoreGrade8MathDiagnostic(form: number, questions: Grade8MathQue
   const weakAreas = domainResults.filter(d => d.level === 'weak').map(d => d.domainName)
   const moderateAreas = domainResults.filter(d => d.level === 'moderate').map(d => d.domainName)
   const strengths = domainResults.filter(d => d.level === 'strong').map(d => d.domainName)
+  // Cap at 5 recommendations and prioritize: weak before moderate, then by exam weight desc.
   const recommendedTopics: Grade8MathRecommendedTopic[] = []
-  domainResults.filter(d => d.level === 'weak' || d.level === 'moderate').forEach(d => {
+  const MAX_RECOMMENDED = 5
+  const domainWeight = (id: string) => GRADE8_MATH_DOMAINS.find(dom => dom.id === id)?.questionTarget ?? 0
+  const sortedNeed = domainResults
+    .filter(d => d.level === 'weak' || d.level === 'moderate')
+    .sort((a, b) => {
+      if (a.level !== b.level) return a.level === 'weak' ? -1 : 1
+      return domainWeight(b.domainId) - domainWeight(a.domainId)
+    })
+  for (const d of sortedNeed) {
+    if (recommendedTopics.length >= MAX_RECOMMENDED) break
     const domain = GRADE8_MATH_DOMAINS.find(dom => dom.id === d.domainId)!
-    domain.topicSlugs.forEach(slug => { recommendedTopics.push({ slug, name: slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '), domainId: d.domainId, priority: d.level === 'weak' ? 'high' : 'medium' }) })
-  })
+    for (const slug of domain.topicSlugs) {
+      if (recommendedTopics.length >= MAX_RECOMMENDED) break
+      if (recommendedTopics.some(r => r.slug === slug)) continue
+      recommendedTopics.push({ slug, name: slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '), domainId: d.domainId, priority: d.level === 'weak' ? 'high' : 'medium' })
+    }
+  }
   return { form, totalCorrect, totalQuestions, percentage: pct, estimatedLevel, domains: domainResults, weakAreas, moderateAreas, strengths, recommendedTopics }
 }
 

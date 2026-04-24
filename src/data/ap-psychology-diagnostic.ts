@@ -258,8 +258,10 @@ export function scoreAPPsychDiagnostic(
   // prioritize weak first, cap at 5 total
   const recommendedTopics: APPsychRecommendedTopic[] = []
 
-  const weakDomains = domainResults.filter(d => d.level === 'weak')
-  const moderateDomains = domainResults.filter(d => d.level === 'moderate')
+  // Prioritize by exam weight (questionTarget) so highest-impact topics surface first.
+  const examWeight = (id: string) => AP_PSYCH_DOMAINS.find(d => d.id === id)?.questionTarget ?? 0
+  const weakDomains = [...domainResults.filter(d => d.level === 'weak')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
+  const moderateDomains = [...domainResults.filter(d => d.level === 'moderate')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
 
   for (const wd of weakDomains) {
     const domainDef = AP_PSYCH_DOMAINS.find(d => d.id === wd.domainId)

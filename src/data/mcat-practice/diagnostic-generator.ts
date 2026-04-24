@@ -1870,8 +1870,14 @@ export function scoreMCATDiagnostic(
   const moderateAreas = domainResults.filter(d => d.level === 'moderate').map(d => d.domainName)
   const strengths = domainResults.filter(d => d.level === 'strong').map(d => d.domainName)
 
+  // Prioritize by exam weight (questionCount) so highest-impact topics surface first.
+  const examWeight = (id: string) => DIAGNOSTIC_DOMAINS.find(dom => dom.id === id)?.questionCount ?? 0
   const recommendedTopics = domainResults
     .filter(d => d.level === 'weak' || d.level === 'moderate')
+    .sort((a, b) => {
+      if (a.level !== b.level) return a.level === 'weak' ? -1 : 1
+      return examWeight(b.domainId) - examWeight(a.domainId)
+    })
     .flatMap(d => {
       const domain = DIAGNOSTIC_DOMAINS.find(dom => dom.id === d.domainId)
       return (domain?.slugs ?? []).map(slug => ({
@@ -1937,6 +1943,7 @@ export function scoreMCATDiagnostic(
     weakAreas,
     moderateAreas,
     strengths,
-    recommendedTopics,
+    // Cap recommendations at 5 to maximize student engagement on the next diagnostic cycle.
+    recommendedTopics: recommendedTopics.slice(0, 5),
   }
 }

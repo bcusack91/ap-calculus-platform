@@ -220,12 +220,19 @@ function canonicalizeSlug(slug: string): string {
 export function rebuildRecommendedTopics(
   domains: DomainResult[],
 ): DiagnosticResults['recommendedTopics'] {
+  const MAX_RECOMMENDED = 5
+  // Prioritize by exam weight (questionCount) so highest-impact topics surface first.
+  const examWeight = (id: string) => DIAGNOSTIC_DOMAINS.find(d => d.id === id)?.questionCount ?? 0
   const recommendedTopics: DiagnosticResults['recommendedTopics'] = []
   const addedSlugs = new Set<string>()
-  for (const domain of domains.filter(d => d.level === 'weak')) {
+  const weakDomains = [...domains.filter(d => d.level === 'weak')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
+  const moderateDomains = [...domains.filter(d => d.level === 'moderate')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
+  for (const domain of weakDomains) {
+    if (recommendedTopics.length >= MAX_RECOMMENDED) break
     const domainDef = DIAGNOSTIC_DOMAINS.find(d => d.id === domain.domainId)
     if (!domainDef) continue
     for (const slug of domainDef.slugs) {
+      if (recommendedTopics.length >= MAX_RECOMMENDED) break
       const canonical = canonicalizeSlug(slug)
       if (!addedSlugs.has(canonical)) {
         addedSlugs.add(canonical)
@@ -233,10 +240,12 @@ export function rebuildRecommendedTopics(
       }
     }
   }
-  for (const domain of domains.filter(d => d.level === 'moderate')) {
+  for (const domain of moderateDomains) {
+    if (recommendedTopics.length >= MAX_RECOMMENDED) break
     const domainDef = DIAGNOSTIC_DOMAINS.find(d => d.id === domain.domainId)
     if (!domainDef) continue
     for (const slug of domainDef.slugs) {
+      if (recommendedTopics.length >= MAX_RECOMMENDED) break
       const canonical = canonicalizeSlug(slug)
       if (!addedSlugs.has(canonical)) {
         addedSlugs.add(canonical)
@@ -380,12 +389,18 @@ export function analyzeDiagnosticResults(
   const moderateAreas = domains.filter(d => d.level === 'moderate').map(d => d.domainName)
   const strengths = domains.filter(d => d.level === 'strong').map(d => d.domainName)
 
-  // Build recommended topics - weak domains first, then moderate
+  // Build recommended topics - weak domains first, then moderate, capped at 5 and prioritized by exam weight
+  const MAX_RECOMMENDED = 5
+  const examWeight = (id: string) => DIAGNOSTIC_DOMAINS.find(d => d.id === id)?.questionCount ?? 0
   const recommendedTopics: DiagnosticResults['recommendedTopics'] = []
   const addedSlugs = new Set<string>()
-  for (const domain of domains.filter(d => d.level === 'weak')) {
+  const weakDomainResults = [...domains.filter(d => d.level === 'weak')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
+  const moderateDomainResults = [...domains.filter(d => d.level === 'moderate')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
+  for (const domain of weakDomainResults) {
+    if (recommendedTopics.length >= MAX_RECOMMENDED) break
     const domainDef = DIAGNOSTIC_DOMAINS.find(d => d.id === domain.domainId)!
     for (const slug of domainDef.slugs) {
+      if (recommendedTopics.length >= MAX_RECOMMENDED) break
       const canonical = canonicalizeSlug(slug)
       if (!addedSlugs.has(canonical)) {
         addedSlugs.add(canonical)
@@ -393,9 +408,11 @@ export function analyzeDiagnosticResults(
       }
     }
   }
-  for (const domain of domains.filter(d => d.level === 'moderate')) {
+  for (const domain of moderateDomainResults) {
+    if (recommendedTopics.length >= MAX_RECOMMENDED) break
     const domainDef = DIAGNOSTIC_DOMAINS.find(d => d.id === domain.domainId)!
     for (const slug of domainDef.slugs) {
+      if (recommendedTopics.length >= MAX_RECOMMENDED) break
       const canonical = canonicalizeSlug(slug)
       if (!addedSlugs.has(canonical)) {
         addedSlugs.add(canonical)

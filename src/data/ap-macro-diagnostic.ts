@@ -181,7 +181,11 @@ export function scoreAPMacroDiagnostic(
   const strengths = domainResults.filter(d => d.level === 'strong').map(d => d.domainName)
 
   const recommendedTopics: APMacroRecommendedTopic[] = []
-  for (const wd of domainResults.filter(d => d.level === 'weak')) {
+  // Prioritize by exam weight (questionTarget) so highest-impact topics surface first.
+  const examWeight = (id: string) => AP_MACRO_DOMAINS.find(d => d.id === id)?.questionTarget ?? 0
+  const weakDomainResults = [...domainResults.filter(d => d.level === 'weak')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
+  const moderateDomainResults = [...domainResults.filter(d => d.level === 'moderate')].sort((a, b) => examWeight(b.domainId) - examWeight(a.domainId))
+  for (const wd of weakDomainResults) {
     const domainDef = AP_MACRO_DOMAINS.find(d => d.id === wd.domainId)
     if (!domainDef) continue
     const missedSlugs = new Set<string>()
@@ -189,7 +193,7 @@ export function scoreAPMacroDiagnostic(
     const slugs = missedSlugs.size > 0 ? [...missedSlugs].slice(0, 2) : domainDef.topicSlugs.slice(0, 2)
     for (const slug of slugs) { if (recommendedTopics.length < 5) recommendedTopics.push({ slug, name: slugToReadableName(slug), domainId: wd.domainId, priority: 'high' }) }
   }
-  for (const md of domainResults.filter(d => d.level === 'moderate')) {
+  for (const md of moderateDomainResults) {
     if (recommendedTopics.length >= 5) break
     const domainDef = AP_MACRO_DOMAINS.find(d => d.id === md.domainId)
     if (!domainDef) continue
