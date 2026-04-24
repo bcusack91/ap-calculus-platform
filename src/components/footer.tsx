@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import { EmailCapture } from '@/components/email-capture'
+import { getCourseHref } from '@/data/course-metadata'
 
 const footerLinks = {
   'Courses': [
-    { name: 'AP Calculus AB', href: '/courses/ap-calculus-ab' },
-    { name: 'AP Calculus BC', href: '/courses/ap-calculus-bc' },
-    { name: 'AP Physics 1', href: '/courses/ap-physics-1' },
-    { name: 'AP Chemistry', href: '/courses/ap-chemistry' },
-    { name: 'AP Biology', href: '/courses/ap-biology' },
+    { name: 'AP Calculus AB', href: getCourseHref('ap-calculus-ab') },
+    { name: 'AP Calculus BC', href: getCourseHref('ap-calculus-bc') },
+    { name: 'AP Physics 1', href: getCourseHref('ap-physics-1') },
+    { name: 'AP Chemistry', href: getCourseHref('ap-chemistry') },
+    { name: 'AP Biology', href: getCourseHref('ap-biology') },
     { name: 'All Courses', href: '/topics' },
   ],
   'Features': [

@@ -104,6 +104,10 @@ export const courseHubPaths: Record<string, string> = {
   'algebra-2': '/algebra-2',
   'geometry': '/geometry',
   'pre-algebra': '/pre-algebra',
+  'grade-4-math': '/grade-4-math',
+  'grade-5-math': '/grade-5-math',
+  'grade-6-math': '/grade-6-math',
+  'grade-7-math': '/grade-7-math',
   'grade-8-math': '/grade-8-math',
   // Other
   'organic-chemistry': '/organic-chemistry',

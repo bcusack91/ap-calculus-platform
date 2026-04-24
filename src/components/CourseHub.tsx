@@ -116,6 +116,7 @@ export type HubUnitColor =
   | 'orange'
   | 'violet'
   | 'sky'
+  | 'red'
 
 const UNIT_TITLE_COLORS: Record<HubUnitColor, string> = {
   indigo: 'text-indigo-700 dark:text-indigo-400',
@@ -130,6 +131,7 @@ const UNIT_TITLE_COLORS: Record<HubUnitColor, string> = {
   orange: 'text-orange-700 dark:text-orange-400',
   violet: 'text-violet-700 dark:text-violet-400',
   sky: 'text-sky-700 dark:text-sky-400',
+  red: 'text-red-700 dark:text-red-400',
 }
 const UNIT_CHECK_COLORS: Record<HubUnitColor, string> = {
   indigo: 'text-indigo-500',
@@ -144,6 +146,7 @@ const UNIT_CHECK_COLORS: Record<HubUnitColor, string> = {
   orange: 'text-orange-500',
   violet: 'text-violet-500',
   sky: 'text-sky-500',
+  red: 'text-red-500',
 }
 
 export type HubAccent =
