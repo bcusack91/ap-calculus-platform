@@ -74,7 +74,7 @@ const AP_PHYSICS1_DOMAINS: APPhysics1Domain[] = [
 
 export { AP_PHYSICS1_DOMAINS }
 
-interface PoolQuestion {
+export interface PoolQuestion {
   question: string
   options: string[]
   correctAnswer: number
@@ -83,7 +83,7 @@ interface PoolQuestion {
   topicSlug: string
 }
 
-const questionPool: PoolQuestion[] = [
+export const AP_PHYSICS1_QUESTION_POOL: PoolQuestion[] = [
   // ---- Kinematics ----
   { question: 'An object is thrown vertically upward. At the highest point, its acceleration is:', options: ['Zero', '9.8 m/s² downward', '9.8 m/s² upward', 'Dependent on the initial velocity'], correctAnswer: 1, explanation: 'Near Earth\'s surface, the acceleration due to gravity is always 9.8 m/s² downward, regardless of velocity.', domain: 'kinematics', topicSlug: 'one-dimensional-motion' },
   { question: 'A car accelerates uniformly from rest to 20 m/s in 5 seconds. How far does it travel?', options: ['50 m', '100 m', '25 m', '200 m'], correctAnswer: 0, explanation: 'd = ½at² = ½(4)(25) = 50 m. Or d = (v₀ + v)t/2 = (0 + 20)(5)/2 = 50 m.', domain: 'kinematics', topicSlug: 'one-dimensional-motion' },
@@ -255,7 +255,7 @@ export function generateAPPhysics1DiagnosticTest(form: number): APPhysics1Diagno
   const questions: APPhysics1DiagnosticQuestion[] = []
 
   for (const domain of AP_PHYSICS1_DOMAINS) {
-    const pool = questionPool.filter(q => q.domain === domain.id)
+    const pool = AP_PHYSICS1_QUESTION_POOL.filter(q => q.domain === domain.id)
     // Seed uniquely per form + domain so each form gets a different selection
     const shuffled = seededShuffle(pool, form * 7919 + domain.id.charCodeAt(0) * 31)
     const selected = shuffled.slice(0, domain.questionTarget)
@@ -333,7 +333,7 @@ export function pickNextForm(previousForms: number[]): number {
   return last >= TOTAL_FORMS ? 1 : last + 1
 }
 
-const SLUG_LABELS: Record<string, string> = {
+export const AP_PHYSICS1_SLUG_LABELS: Record<string, string> = {
   'one-dimensional-motion': '1D Motion & Free Fall',
   'two-dimensional-motion': '2D Motion & Projectiles',
   'newtons-first-second-laws': 'Newton\'s First and Second Laws',
@@ -353,5 +353,5 @@ const SLUG_LABELS: Record<string, string> = {
 }
 
 function slugToReadableName(slug: string): string {
-  return SLUG_LABELS[slug] ?? slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+  return AP_PHYSICS1_SLUG_LABELS[slug] ?? slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 }
