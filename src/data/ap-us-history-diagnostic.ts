@@ -64,37 +64,37 @@ const AP_USHISTORY_DOMAINS: APUsHistoryDomain[] = [
     id: 'period-1-2',
     name: 'Periods 1–2 (1491–1754)',
     topicSlugs: ['apush-native-societies-exploration', 'apush-colonial-america', 'apush-colonial-society-conflicts'],
-    questionTarget: 2,
+    questionTarget: 5,
   },
   {
     id: 'period-3',
     name: 'Period 3 (1754–1800)',
     topicSlugs: ['apush-revolution-independence', 'apush-constitution-early-republic'],
-    questionTarget: 2,
+    questionTarget: 5,
   },
   {
     id: 'period-4',
     name: 'Period 4 (1800–1848)',
     topicSlugs: ['apush-democracy-expansion', 'apush-reform-movements'],
-    questionTarget: 2,
+    questionTarget: 5,
   },
   {
     id: 'period-5',
     name: 'Period 5 (1844–1877)',
     topicSlugs: ['apush-civil-war', 'apush-reconstruction'],
-    questionTarget: 2,
+    questionTarget: 5,
   },
   {
     id: 'period-6',
     name: 'Period 6 (1865–1898)',
     topicSlugs: ['apush-gilded-age'],
-    questionTarget: 2,
+    questionTarget: 4,
   },
   {
     id: 'period-7',
     name: 'Period 7 (1890–1945)',
     topicSlugs: ['apush-progressivism-wwi', 'apush-depression-wwii'],
-    questionTarget: 3,
+    questionTarget: 4,
   }
 ]
 
@@ -147,7 +147,7 @@ export function generateAPUsHistoryDiagnosticTest(form: number): APUsHistoryDiag
     questions: seededShuffle(questions, rng),
     domains: AP_USHISTORY_DOMAINS,
     totalQuestions: questions.length,
-    timeLimitMinutes: 35,
+    timeLimitMinutes: 55,
   }
 }
 

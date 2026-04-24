@@ -46,10 +46,10 @@ $$\\text{HCl}(aq) + \\text{NaOH}(aq) \\rightarrow \\text{NaCl}(aq) + \\text{H}_2
 $$\\text{H}^+(aq) + \\text{Cl}^-(aq) + \\text{Na}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{Na}^+(aq) + \\text{Cl}^-(aq) + \\text{H}_2\\text{O}(l)$$
 
 **Cancel spectators:**
-$$\text{H}^+(aq) + \cancel{\text{Cl}^-(aq)} + \cancel{\text{Na}^+(aq)} + \text{OH}^-(aq) \rightarrow \cancel{\text{Na}^+(aq)} + \cancel{\text{Cl}^-(aq)} + \text{H}_2\text{O}(l)$$
+$$\\text{H}^+(aq) + \cancel{\\text{Cl}^-(aq)} + \cancel{\\text{Na}^+(aq)} + \\text{OH}^-(aq) \\rightarrow \cancel{\\text{Na}^+(aq)} + \cancel{\\text{Cl}^-(aq)} + \\text{H}_2\\text{O}(l)$$
 
 **Net ionic:**
-$$\boxed{\text{H}^+(aq) + \text{OH}^-(aq) \rightarrow \text{H}_2\text{O}(l)}$$
+$$\\boxed{\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)}$$
 
 
 ---
@@ -84,7 +84,7 @@ $$\\text{CH}_3\\text{COOH}(aq) + \\text{NaOH}(aq) \\rightarrow \\text{NaCH}_3\\t
 $$\\text{CH}_3\\text{COOH}(aq) + \\text{Na}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{Na}^+(aq) + \\text{CH}_3\\text{COO}^-(aq) + \\text{H}_2\\text{O}(l)$$
 
 **Net ionic** (cancel Na⁺):
-$$\boxed{\text{CH}_3\text{COOH}(aq) + \text{OH}^-(aq) \rightarrow \text{CH}_3\text{COO}^-(aq) + \text{H}_2\text{O}(l)}$$
+$$\\boxed{\\text{CH}_3\\text{COOH}(aq) + \\text{OH}^-(aq) \\rightarrow \\text{CH}_3\\text{COO}^-(aq) + \\text{H}_2\\text{O}(l)}$$
 
 
 ---
@@ -112,7 +112,7 @@ $$\\text{HCl}(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_4\\text{Cl}(aq)$$
 $$\\text{H}^+(aq) + \\text{Cl}^-(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_4^+(aq) + \\text{Cl}^-(aq)$$
 
 **Net ionic** (cancel Cl⁻):
-$$\boxed{\text{H}^+(aq) + \text{NH}_3(aq) \rightarrow \text{NH}_4^+(aq)}$$
+$$\\boxed{\\text{H}^+(aq) + \\text{NH}_3(aq) \\rightarrow \\text{NH}_4^+(aq)}$$
 
 
 ---

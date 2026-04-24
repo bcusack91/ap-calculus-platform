@@ -76,43 +76,43 @@ const AP_HUMAN_GEO_DOMAINS: APHumanGeoDomain[] = [
     id: 'thinking-geographically',
     name: 'Thinking Geographically',
     topicSlugs: ['hg-intro-geography', 'hg-spatial-concepts'],
-    questionTarget: 3,
+    questionTarget: 4,
   },
   {
     id: 'population-migration',
     name: 'Population & Migration',
     topicSlugs: ['hg-population-distribution', 'hg-population-growth', 'hg-migration'],
-    questionTarget: 3,
+    questionTarget: 4,
   },
   {
     id: 'cultural-patterns',
     name: 'Cultural Patterns & Processes',
     topicSlugs: ['hg-culture-diffusion', 'hg-language-religion', 'hg-ethnicity-identity'],
-    questionTarget: 3,
+    questionTarget: 4,
   },
   {
     id: 'political-patterns',
     name: 'Political Patterns & Processes',
     topicSlugs: ['hg-political-geography', 'hg-political-power'],
-    questionTarget: 3,
+    questionTarget: 4,
   },
   {
     id: 'agriculture',
     name: 'Agriculture & Rural Land-Use',
     topicSlugs: ['hg-agricultural-origins', 'hg-agricultural-practices'],
-    questionTarget: 3,
+    questionTarget: 4,
   },
   {
     id: 'cities-urban',
     name: 'Cities & Urban Land-Use',
     topicSlugs: ['hg-urbanization', 'hg-urban-challenges'],
-    questionTarget: 3,
+    questionTarget: 4,
   },
   {
     id: 'industrialization-development',
     name: 'Industrialization & Economic Development',
     topicSlugs: ['hg-industrialization', 'hg-globalization-trade'],
-    questionTarget: 3,
+    questionTarget: 4,
   },
 ]
 
@@ -175,7 +175,7 @@ export function generateAPHumanGeoDiagnosticTest(form: number): APHumanGeoDiagno
     questions: shuffledQuestions,
     domains: AP_HUMAN_GEO_DOMAINS,
     totalQuestions: shuffledQuestions.length,
-    timeLimitMinutes: 35,
+    timeLimitMinutes: 55,
   }
 }
 

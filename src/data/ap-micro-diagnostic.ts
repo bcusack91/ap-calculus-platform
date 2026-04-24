@@ -64,37 +64,37 @@ const AP_MICRO_DOMAINS: APMicroDomain[] = [
     id: 'basic-concepts',
     name: 'Basic Economic Concepts',
     topicSlugs: ['micro-scarcity-marginal-analysis', 'micro-supply-demand'],
-    questionTarget: 3,
+    questionTarget: 5,
   },
   {
     id: 'supply-demand',
     name: 'Supply & Demand',
     topicSlugs: ['micro-demand-supply-equilibrium', 'micro-elasticity', 'micro-government-intervention'],
-    questionTarget: 3,
+    questionTarget: 5,
   },
   {
     id: 'production-cost',
     name: 'Production, Cost & Perfect Competition',
     topicSlugs: ['micro-production-costs', 'micro-perfect-competition'],
-    questionTarget: 3,
+    questionTarget: 4,
   },
   {
     id: 'imperfect-competition',
     name: 'Imperfect Competition',
     topicSlugs: ['micro-monopoly', 'micro-monopolistic-oligopoly'],
-    questionTarget: 3,
+    questionTarget: 4,
   },
   {
     id: 'factor-markets',
     name: 'Factor Markets',
     topicSlugs: ['micro-labor-markets', 'micro-factor-markets'],
-    questionTarget: 3,
+    questionTarget: 5,
   },
   {
     id: 'market-failure',
     name: 'Market Failure & Government',
     topicSlugs: ['micro-externalities-public-goods', 'micro-market-failure'],
-    questionTarget: 3,
+    questionTarget: 4,
   }
 ]
 
@@ -147,7 +147,7 @@ export function generateAPMicroDiagnosticTest(form: number): APMicroDiagnosticTe
     questions: seededShuffle(questions, rng),
     domains: AP_MICRO_DOMAINS,
     totalQuestions: questions.length,
-    timeLimitMinutes: 35,
+    timeLimitMinutes: 55,
   }
 }
 

@@ -52,7 +52,7 @@ Only **aqueous strong electrolytes** are written as separated ions:
 
 ### The Six Strong Acids (memorize these!)
 
-$$\boxed{\text{HCl, HBr, HI, HNO}_3\text{, H}_2\text{SO}_4\text{, HClO}_4}$$
+$$\\boxed{\\text{HCl, HBr, HI, HNO}_3\\text{, H}_2\\text{SO}_4\\text{, HClO}_4}$$
 
 > 💡 **Tip:** Memorize these six strong acids — everything else is weak. A common mnemonic: **HCl, HBr, HI** (the binary acids) + **HNO₃, H₂SO₄, HClO₄** (the oxy-acids).
 
@@ -61,7 +61,7 @@ $$\boxed{\text{HCl, HBr, HI, HNO}_3\text{, H}_2\text{SO}_4\text{, HClO}_4}$$
 
 ### Strong Bases
 
-$$\boxed{\text{LiOH, NaOH, KOH, Ca(OH)}_2\text{, Sr(OH)}_2\text{, Ba(OH)}_2}$$
+$$\\boxed{\\text{LiOH, NaOH, KOH, Ca(OH)}_2\\text{, Sr(OH)}_2\\text{, Ba(OH)}_2}$$
 
 
 ---
@@ -116,7 +116,7 @@ To determine if an ionic compound is $(aq)$ or $(s)$, use the solubility rules:
 
 > **Problem:** Write the complete ionic equation for:
 >
-> $$\text{AgNO}_3(aq) + \text{NaCl}(aq) \rightarrow \text{AgCl}(s) + \text{NaNO}_3(aq)$$
+> $$\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{NaNO}_3(aq)$$
 
 > **Solution:**
 
@@ -137,7 +137,7 @@ To determine if an ionic compound is $(aq)$ or $(s)$, use the solubility rules:
 
 ### Step 2: Write the complete ionic equation
 
-$$\boxed{\text{Ag}^+(aq) + \text{NO}_3^-(aq) + \text{Na}^+(aq) + \text{Cl}^-(aq) \rightarrow \text{AgCl}(s) + \text{Na}^+(aq) + \text{NO}_3^-(aq)}$$
+$$\\boxed{\\text{Ag}^+(aq) + \\text{NO}_3^-(aq) + \\text{Na}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s) + \\text{Na}^+(aq) + \\text{NO}_3^-(aq)}$$
 
 
 ---

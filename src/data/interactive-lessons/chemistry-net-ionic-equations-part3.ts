@@ -64,7 +64,7 @@ $$\\text{Ag}^+(aq) + \\cancel{\\text{NO}_3^-(aq)} + \\cancel{\\text{Na}^+(aq)} +
 
 ### Net Ionic Equation
 
-$$\boxed{\text{Ag}^+(aq) + \text{Cl}^-(aq) \rightarrow \text{AgCl}(s)}$$
+$$\\boxed{\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s)}$$
 
 This is the simplest representation showing only what **changes**.
       `

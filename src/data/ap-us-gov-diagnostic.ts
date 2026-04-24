@@ -64,31 +64,31 @@ const AP_USGOV_DOMAINS: APUsGovDomain[] = [
     id: 'foundations',
     name: 'Foundations of American Democracy',
     topicSlugs: ['gov-constitutional-foundations', 'gov-federalism', 'gov-separation-of-powers'],
-    questionTarget: 3,
+    questionTarget: 5,
   },
   {
     id: 'branches',
     name: 'Interactions Among Branches',
     topicSlugs: ['gov-congress', 'gov-presidency', 'gov-judiciary', 'gov-bureaucracy'],
-    questionTarget: 3,
+    questionTarget: 5,
   },
   {
     id: 'civil-liberties-rights',
     name: 'Civil Liberties & Civil Rights',
     topicSlugs: ['gov-civil-liberties', 'gov-civil-rights'],
-    questionTarget: 3,
+    questionTarget: 5,
   },
   {
     id: 'political-ideology',
     name: 'Political Ideologies & Beliefs',
     topicSlugs: ['gov-ideologies', 'gov-public-opinion'],
-    questionTarget: 3,
+    questionTarget: 5,
   },
   {
     id: 'political-participation',
     name: 'Political Participation',
     topicSlugs: ['gov-voting-elections', 'gov-parties-interest-groups', 'gov-media-technology'],
-    questionTarget: 3,
+    questionTarget: 5,
   }
 ]
 
@@ -141,7 +141,7 @@ export function generateAPUsGovDiagnosticTest(form: number): APUsGovDiagnosticTe
     questions: seededShuffle(questions, rng),
     domains: AP_USGOV_DOMAINS,
     totalQuestions: questions.length,
-    timeLimitMinutes: 35,
+    timeLimitMinutes: 50,
   }
 }
 

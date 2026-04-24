@@ -64,37 +64,37 @@ const AP_WORLDHISTORY_DOMAINS: APWorldHistoryDomain[] = [
     id: 'global-tapestry',
     name: 'The Global Tapestry (1200–1450)',
     topicSlugs: ['wh-global-tapestry', 'wh-dar-al-islam'],
-    questionTarget: 3,
+    questionTarget: 5,
   },
   {
     id: 'networks-exchange',
     name: 'Networks of Exchange (1200–1450)',
     topicSlugs: ['wh-silk-roads-mongols', 'wh-indian-ocean-trade', 'wh-americas-africa-1200'],
-    questionTarget: 3,
+    questionTarget: 5,
   },
   {
     id: 'land-based-empires',
     name: 'Land-Based Empires (1450–1750)',
     topicSlugs: ['wh-land-based-empires', 'wh-islamic-empires', 'wh-east-asian-empires'],
-    questionTarget: 2,
+    questionTarget: 4,
   },
   {
     id: 'transoceanic',
     name: 'Transoceanic Interconnections (1450–1750)',
     topicSlugs: ['wh-exploration-columbian-exchange', 'wh-maritime-empires-labor', 'wh-transoceanic'],
-    questionTarget: 2,
+    questionTarget: 4,
   },
   {
     id: 'revolutions',
     name: 'Revolutions (1750–1900)',
     topicSlugs: ['wh-enlightenment-political-revolutions', 'wh-industrial-revolution', 'wh-revolutions'],
-    questionTarget: 3,
+    questionTarget: 5,
   },
   {
     id: 'consequences',
     name: 'Consequences of Industrialization (1750–1900)',
     topicSlugs: ['wh-consequences-industrialization', 'wh-imperialism', 'wh-reform-migration'],
-    questionTarget: 2,
+    questionTarget: 4,
   }
 ]
 
@@ -147,7 +147,7 @@ export function generateAPWorldHistoryDiagnosticTest(form: number): APWorldHisto
     questions: seededShuffle(questions, rng),
     domains: AP_WORLDHISTORY_DOMAINS,
     totalQuestions: questions.length,
-    timeLimitMinutes: 35,
+    timeLimitMinutes: 55,
   }
 }
 

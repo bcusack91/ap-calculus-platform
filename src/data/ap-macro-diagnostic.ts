@@ -64,37 +64,37 @@ const AP_MACRO_DOMAINS: APMacroDomain[] = [
     id: 'basic-concepts',
     name: 'Basic Economic Concepts',
     topicSlugs: ['macro-scarcity-opportunity-cost', 'macro-comparative-advantage'],
-    questionTarget: 3,
+    questionTarget: 5,
   },
   {
     id: 'measurement',
     name: 'Economic Indicators & GDP',
     topicSlugs: ['macro-gdp-growth', 'macro-unemployment-inflation'],
-    questionTarget: 3,
+    questionTarget: 5,
   },
   {
     id: 'national-income',
     name: 'National Income & Price Determination',
     topicSlugs: ['macro-ad-as', 'macro-multiplier-effect', 'macro-phillips-curve'],
-    questionTarget: 3,
+    questionTarget: 4,
   },
   {
     id: 'financial-sector',
     name: 'Financial Sector',
     topicSlugs: ['macro-money-banking', 'macro-monetary-policy'],
-    questionTarget: 3,
+    questionTarget: 4,
   },
   {
     id: 'stabilization',
     name: 'Stabilization Policies',
     topicSlugs: ['macro-fiscal-policy', 'macro-fiscal-policy-tools'],
-    questionTarget: 3,
+    questionTarget: 5,
   },
   {
     id: 'international',
     name: 'International Trade & Finance',
     topicSlugs: ['macro-open-economy', 'macro-international-trade-finance'],
-    questionTarget: 3,
+    questionTarget: 4,
   }
 ]
 
@@ -147,7 +147,7 @@ export function generateAPMacroDiagnosticTest(form: number): APMacroDiagnosticTe
     questions: seededShuffle(questions, rng),
     domains: AP_MACRO_DOMAINS,
     totalQuestions: questions.length,
-    timeLimitMinutes: 35,
+    timeLimitMinutes: 55,
   }
 }
 

@@ -64,25 +64,25 @@ const AP_AFRICANAMERICANSTUDIES_DOMAINS: APAfricanAmericanStudiesDomain[] = [
     id: 'origins-diaspora',
     name: 'Origins of the African Diaspora',
     topicSlugs: ['aas-african-kingdoms', 'aas-transatlantic-slave-trade'],
-    questionTarget: 3,
+    questionTarget: 7,
   },
   {
     id: 'freedom-enslavement',
     name: 'Freedom, Enslavement & Resistance',
     topicSlugs: ['aas-slavery-in-america', 'aas-resistance-abolition'],
-    questionTarget: 3,
+    questionTarget: 7,
   },
   {
     id: 'practice-freedom',
     name: 'The Practice of Freedom',
     topicSlugs: ['aas-reconstruction-jim-crow', 'aas-great-migration-harlem', 'aas-wwi-wwii-era'],
-    questionTarget: 3,
+    questionTarget: 6,
   },
   {
     id: 'movements-debates',
     name: 'Movements & Debates',
     topicSlugs: ['aas-civil-rights-movement', 'aas-black-power-beyond', 'aas-contemporary-issues'],
-    questionTarget: 3,
+    questionTarget: 6,
   }
 ]
 
@@ -135,7 +135,7 @@ export function generateAPAfricanAmericanStudiesDiagnosticTest(form: number): AP
     questions: seededShuffle(questions, rng),
     domains: AP_AFRICANAMERICANSTUDIES_DOMAINS,
     totalQuestions: questions.length,
-    timeLimitMinutes: 35,
+    timeLimitMinutes: 50,
   }
 }
 

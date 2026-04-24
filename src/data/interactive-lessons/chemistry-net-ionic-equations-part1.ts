@@ -42,7 +42,7 @@ A **molecular equation** (also called a formula equation) shows all reactants an
 
 ### Example
 
-$$\boxed{\text{AgNO}_3(aq) + \text{NaCl}(aq) \rightarrow \text{AgCl}(s) + \text{NaNO}_3(aq)}$$
+$$\\boxed{\\text{AgNO}_3(aq) + \\text{NaCl}(aq) \\rightarrow \\text{AgCl}(s) + \\text{NaNO}_3(aq)}$$
 
 
 ---
@@ -90,7 +90,7 @@ To move beyond molecular equations, you must know which substances **dissociate*
 | Strong bases | NaOH, KOH, Ca(OH)₂, Ba(OH)₂ |
 | Soluble ionic compounds | NaCl, KNO₃, AgNO₃ (any soluble salt) |
 
-$$\boxed{\text{NaCl}(aq) \rightarrow \text{Na}^+(aq) + \text{Cl}^-(aq)}$$
+$$\\boxed{\\text{NaCl}(aq) \\rightarrow \\text{Na}^+(aq) + \\text{Cl}^-(aq)}$$
 
 
 ---

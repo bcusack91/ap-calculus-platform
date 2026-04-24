@@ -51,7 +51,7 @@ Some double-replacement reactions produce an **unstable compound** that decompos
 $$2\\text{HCl}(aq) + \\text{Na}_2\\text{CO}_3(aq) \\rightarrow 2\\text{NaCl}(aq) + \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)$$
 
 **Net ionic:**
-$$\boxed{2\text{H}^+(aq) + \text{CO}_3^{2-}(aq) \rightarrow \text{H}_2\text{O}(l) + \text{CO}_2(g)}$$
+$$\\boxed{2\\text{H}^+(aq) + \\text{CO}_3^{2-}(aq) \\rightarrow \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)}$$
 
 > 💡 **Tip:** The fizzing you see when acid hits baking soda is CO₂ gas escaping!
       `

@@ -57,7 +57,7 @@ When two ionic compounds in solution are mixed:
 
 **Result:** AgCl precipitates!
 
-$$\boxed{\text{Ag}^+(aq) + \text{Cl}^-(aq) \rightarrow \text{AgCl}(s)}$$
+$$\\boxed{\\text{Ag}^+(aq) + \\text{Cl}^-(aq) \\rightarrow \\text{AgCl}(s)}$$
       `
     },
     {
@@ -87,7 +87,7 @@ $$\boxed{\text{Ag}^+(aq) + \text{Cl}^-(aq) \rightarrow \text{AgCl}(s)}$$
 
 All precipitation reactions follow the same net ionic pattern:
 
-$$\boxed{\text{cation}(aq) + \text{anion}(aq) \rightarrow \text{insoluble salt}(s)}$$
+$$\\boxed{\\text{cation}(aq) + \\text{anion}(aq) \\rightarrow \\text{insoluble salt}(s)}$$
 
 > 🔑 **Key Concept:** The spectator ions are always the "other" pair that forms a soluble compound.
       `
@@ -98,7 +98,7 @@ $$\boxed{\text{cation}(aq) + \text{anion}(aq) \rightarrow \text{insoluble salt}(
       content: `
 ## 🧪 Multi-Step Example
 
-> **Problem:** Mix $\text{FeCl}_3(aq) + 3\text{NaOH}(aq) \rightarrow$ ? Write the net ionic equation.
+> **Problem:** Mix $\\text{FeCl}_3(aq) + 3\\text{NaOH}(aq) \\rightarrow$ ? Write the net ionic equation.
 
 > **Solution:**
 
@@ -128,13 +128,13 @@ $$\\text{FeCl}_3(aq) + 3\\text{NaOH}(aq) \\rightarrow \\text{Fe(OH)}_3(s) + 3\\t
 $$\\text{Fe}^{3+}(aq) + 3\\text{Cl}^-(aq) + 3\\text{Na}^+(aq) + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(s) + 3\\text{Na}^+(aq) + 3\\text{Cl}^-(aq)$$
 
 **Cancel spectators:**
-$$\text{Fe}^{3+}(aq) + \cancel{3\text{Cl}^-(aq)} + \cancel{3\text{Na}^+(aq)} + 3\text{OH}^-(aq) \rightarrow \text{Fe(OH)}_3(s) + \cancel{3\text{Na}^+(aq)} + \cancel{3\text{Cl}^-(aq)}$$
+$$\\text{Fe}^{3+}(aq) + \cancel{3\\text{Cl}^-(aq)} + \cancel{3\\text{Na}^+(aq)} + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(s) + \cancel{3\\text{Na}^+(aq)} + \cancel{3\\text{Cl}^-(aq)}$$
 
 
 ---
 
 ### Step 5: Net ionic equation
-$$\boxed{\text{Fe}^{3+}(aq) + 3\text{OH}^-(aq) \rightarrow \text{Fe(OH)}_3(s)}$$
+$$\\boxed{\\text{Fe}^{3+}(aq) + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(s)}$$
 
 **Charge check:** (+3) + 3(−1) = 0 on left; 0 on right ✓
       `
