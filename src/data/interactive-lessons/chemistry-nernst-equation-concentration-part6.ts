@@ -45,7 +45,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 > ⚠️ **Common Pitfalls:**
 > 1. **Forgetting to exclude solids/liquids from Q**
 > 2. **Using 0.0592 at temperatures other than 25°C**
-> 3. **Confusing log and ln** ($\ln K = 2.303\log K$)
+> 3. **Confusing log and ln** ($\\ln K = 2.303\\log K$)
 > 4. **Getting Q upside down** (products over reactants!)
       `
     },

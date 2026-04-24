@@ -35,7 +35,7 @@ export const chemGibbsFreeEnergyPart5Data = {
       content: `
 ## ⚡ The Non-Standard Free Energy Equation
 
-$$\boxed{\Delta G = \Delta G° + RT\ln Q}$$
+$$\\boxed{\\Delta G = \\Delta G° + RT\\ln Q}$$
 
 | Symbol | Meaning |
 |--------|---------|
@@ -83,7 +83,7 @@ This is how we derived the $\\Delta G°$–$K$ relationship!
 ---
 
 ### The Big Picture
-> ⚠️ **Warning:** Don't confuse $\Delta G°$ and $\Delta G$ — they answer different questions:
+> ⚠️ **Warning:** Don't confuse $\\Delta G°$ and $\\Delta G$ — they answer different questions:
 - $\\Delta G°$ tells you WHERE equilibrium lies (the value of $K$)
 - $\\Delta G$ tells you WHICH DIRECTION the reaction will go from current conditions
 - A reaction with $\\Delta G° > 0$ can still proceed forward if $Q$ is small enough

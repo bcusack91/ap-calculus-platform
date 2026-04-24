@@ -33,7 +33,7 @@ export const chemPhotoelectronSpectroscopyPart1Data = {
 
 PES is based on the **photoelectric effect**, discovered by Einstein in 1905. When a photon of sufficient energy strikes an atom, it can eject an electron. The fundamental equation is:
 
-$$\boxed{E_{photon} = BE + KE}$$
+$$\\boxed{E_{photon} = BE + KE}$$
 
 Where:
 - **$E_{photon}$** = energy of the incoming photon (known and controlled)
@@ -42,7 +42,7 @@ Where:
 
 By rearranging:
 
-$$\boxed{BE = E_{photon} - KE}$$
+$$\\boxed{BE = E_{photon} - KE}$$
 
 > 🔑 **Key Concept:** This equation is the foundation of all PES analysis. You control the photon energy, measure the kinetic energy, and calculate the binding energy.
 

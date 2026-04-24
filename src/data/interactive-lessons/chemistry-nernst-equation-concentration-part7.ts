@@ -57,7 +57,7 @@ $$\\Delta G° \\xleftrightarrow{-nF} E° \\xleftrightarrow{0.0592/n} \\log K \\x
 | Fuel cell | Continuous | H₂/O₂ | Reactants fed in |
 | Concentration | Until equal | Same-metal | E° = 0 |
 
-> 🔑 **Key Concept:** Know any one of $\Delta G°$, $E°$, or $K$ — and you can calculate the other two. This "thermodynamic triangle" unifies equilibrium, electrochemistry, and thermodynamics.
+> 🔑 **Key Concept:** Know any one of $\\Delta G°$, $E°$, or $K$ — and you can calculate the other two. This "thermodynamic triangle" unifies equilibrium, electrochemistry, and thermodynamics.
       `
     },
     {

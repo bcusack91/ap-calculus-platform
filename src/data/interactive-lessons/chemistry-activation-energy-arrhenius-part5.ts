@@ -12,7 +12,7 @@ export const chemActivationEnergyArrheniusPart5Data = {
 
 ### When You Have Just Two Data Points
 
-$$\ln\frac{k_2}{k_1} = \frac{E_a}{R}\left(\frac{1}{T_1} - \frac{1}{T_2}\right)$$
+$$\\ln\\frac{k_2}{k_1} = \\frac{E_a}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right)$$
 
 | Given | Can Solve For |
 |-------|--------------|

@@ -35,7 +35,7 @@ export const chemGibbsFreeEnergyPart4Data = {
       content: `
 ## 🔑 The Key Equation
 
-$$\boxed{\Delta G° = -RT\ln K}$$
+$$\\boxed{\\Delta G° = -RT\\ln K}$$
 
 | Symbol | Meaning | Value/Units |
 |--------|---------|-------------|
@@ -54,12 +54,12 @@ $$\boxed{\Delta G° = -RT\ln K}$$
 | $\\Delta G° < 0$ | $K > 1$ | Products favored at equilibrium |
 | $\\Delta G° = 0$ | $K = 1$ | Neither favored |
 | $\\Delta G° > 0$ | $K < 1$ | Reactants favored at equilibrium |
-> 🔑 **Key Concept:** The sign of $\Delta G°$ tells you the position of equilibrium — whether products ($K > 1$) or reactants ($K < 1$) are favored.
+> 🔑 **Key Concept:** The sign of $\\Delta G°$ tells you the position of equilibrium — whether products ($K > 1$) or reactants ($K < 1$) are favored.
 ---
 
 ### Important Nuance
 
-> ⚠️ **Warning:** $\Delta G° < 0$ does **NOT** mean the reaction goes to completion. It means $K > 1$, so products are **favored**, but reactants are still present at equilibrium.
+> ⚠️ **Warning:** $\\Delta G° < 0$ does **NOT** mean the reaction goes to completion. It means $K > 1$, so products are **favored**, but reactants are still present at equilibrium.
       `
     },
     {
@@ -68,14 +68,14 @@ $$\boxed{\Delta G° = -RT\ln K}$$
       content: `
 ## 📌 Solving for K from ΔG°
 
-$$\boxed{K = e^{-\Delta G°/(RT)}}$$
+$$\\boxed{K = e^{-\\Delta G°/(RT)}}$$
 
 
 ---
 
 ### Worked Example
 
-> **Problem:** Find $K$ at 25°C for a reaction with $\Delta G° = -5.40$ kJ/mol.
+> **Problem:** Find $K$ at 25°C for a reaction with $\\Delta G° = -5.40$ kJ/mol.
 
 > **Solution:**
 

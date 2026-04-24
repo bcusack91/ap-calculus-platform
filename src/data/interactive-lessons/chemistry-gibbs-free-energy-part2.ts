@@ -100,9 +100,9 @@ $$\\Delta G = (\\text{positive}) - T(\\text{positive})$$
 
 For Cases 3 and 4, the temperature where $\\Delta G = 0$:
 
-$$\boxed{T_{\text{crossover}} = \frac{\Delta H}{\Delta S}}$$
+$$\\boxed{T_{\\text{crossover}} = \\frac{\\Delta H}{\\Delta S}}$$
 
-> 💡 **Tip:** This equation only gives a physically meaningful (positive) temperature when $\Delta H$ and $\Delta S$ have the **same sign** (Cases 3 and 4).
+> 💡 **Tip:** This equation only gives a physically meaningful (positive) temperature when $\\Delta H$ and $\\Delta S$ have the **same sign** (Cases 3 and 4).
       `
     },
     {

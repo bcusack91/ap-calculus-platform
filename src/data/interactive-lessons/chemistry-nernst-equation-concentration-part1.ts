@@ -124,7 +124,7 @@ As a galvanic cell operates:
       content: `
 ## 🧪 Worked Example — Daniell Cell
 
-> **Problem:** For the Daniell cell: $\text{Zn}(s) + \text{Cu}^{2+}(aq) \rightarrow \text{Zn}^{2+}(aq) + \text{Cu}(s)$, with $E° = +1.10$ V, $n = 2$, $T = 298$ K. Find $E$ when $[\text{Zn}^{2+}] = 0.10$ M and $[\text{Cu}^{2+}] = 2.0$ M.
+> **Problem:** For the Daniell cell: $\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$, with $E° = +1.10$ V, $n = 2$, $T = 298$ K. Find $E$ when $[\\text{Zn}^{2+}] = 0.10$ M and $[\\text{Cu}^{2+}] = 2.0$ M.
 
 > **Solution:**
 

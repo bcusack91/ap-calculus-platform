@@ -19,7 +19,7 @@ export const chemAcidBaseTitrationsPart1Data = {
 | **Equivalence point** | Moles of acid = moles of base |
 | **Endpoint** | Indicator changes color (ideally ≈ equivalence point) |
 
-$$n_{acid} \times \text{(acid ratio)} = n_{base} \times \text{(base ratio)}$$
+$$n_{acid} \\times \\text{(acid ratio)} = n_{base} \\times \\text{(base ratio)}$$
 
 > 🔑 **Why this matters:** Titrations appear on nearly every AP Chemistry exam — both in multiple choice and as multi-part free-response questions.
 

@@ -39,7 +39,7 @@ $$G = H - TS$$
 
 The **change** in Gibbs free energy at constant temperature:
 
-$$\boxed{\Delta G = \Delta H - T\Delta S}$$
+$$\\boxed{\\Delta G = \\Delta H - T\\Delta S}$$
 
 > 🔑 **Key Equation:** This is the master equation of Gibbs free energy — it combines enthalpy and entropy into a single criterion for spontaneity.
 
@@ -59,7 +59,7 @@ $$-T\\Delta S_{\\text{universe}} = \\Delta H_{\\text{sys}} - T\\Delta S_{\\text{
 
 Since $\\Delta S_{\\text{universe}} > 0$ for spontaneous processes:
 
-$$\boxed{\Delta G < 0 \quad \text{(spontaneous)}}$$
+$$\\boxed{\\Delta G < 0 \\quad \\text{(spontaneous)}}$$
       `
     },
     {
@@ -89,7 +89,7 @@ $$\boxed{\Delta G < 0 \quad \text{(spontaneous)}}$$
 
 "Free energy" is the maximum amount of energy **available to do useful work** (non-$PV$ work) in a reaction.
 
-$$\boxed{w_{\text{max}} = \Delta G}$$
+$$\\boxed{w_{\\text{max}} = \\Delta G}$$
 
 If $\\Delta G = -100$ kJ, the reaction can do at most 100 kJ of useful work.
       `
@@ -104,14 +104,14 @@ From $\\Delta G = \\Delta H - T\\Delta S$, we see that temperature affects spont
 
 - At **low temperatures**: $\\Delta H$ dominates ($T\\Delta S$ is small)
 - At **high temperatures**: $T\\Delta S$ dominates ($T\\Delta S$ is large)
-> ⚠️ **Warning:** Temperature must always be in **Kelvin** in thermodynamic equations. Also ensure $\Delta H$ and $T\Delta S$ use the **same units** (both kJ or both J).
+> ⚠️ **Warning:** Temperature must always be in **Kelvin** in thermodynamic equations. Also ensure $\\Delta H$ and $T\\Delta S$ use the **same units** (both kJ or both J).
 ---
 
 ### The Crossover Temperature
 
 When $\\Delta G = 0$ (equilibrium):
 
-$$\boxed{T = \frac{\Delta H}{\Delta S}}$$
+$$\\boxed{T = \\frac{\\Delta H}{\\Delta S}}$$
 
 This is the temperature at which the reaction switches between spontaneous and nonspontaneous.
 

@@ -15,7 +15,7 @@ export const chemActivationEnergyArrheniusPart6Data = {
 | Feature | Without Catalyst | With Catalyst |
 |---------|-----------------|---------------|
 | $E_a$ | Higher | **Lower** (new pathway) |
-| $\Delta H$ | Unchanged | **Unchanged** |
+| $\\Delta H$ | Unchanged | **Unchanged** |
 | $K$ (equilibrium constant) | Value X | **Still X** (unchanged!) |
 | Rate | Slower | **Faster** (both directions equally) |
 

@@ -87,7 +87,7 @@ The system wants to reach **equilibrium** (equal concentrations). It does this b
       content: `
 ## 🧪 Worked Example — Copper Concentration Cell
 
-> **Problem:** A Cu/Cu²⁺ concentration cell at 25°C has $[\text{Cu}^{2+}]_{\text{left}} = 0.010$ M (dilute, anode) and $[\text{Cu}^{2+}]_{\text{right}} = 1.0$ M (concentrated, cathode). Given $n = 2$ (from $\text{Cu}^{2+} + 2e^- \rightarrow \text{Cu}$) and $E° = 0$, calculate the cell potential.
+> **Problem:** A Cu/Cu²⁺ concentration cell at 25°C has $[\\text{Cu}^{2+}]_{\\text{left}} = 0.010$ M (dilute, anode) and $[\\text{Cu}^{2+}]_{\\text{right}} = 1.0$ M (concentrated, cathode). Given $n = 2$ (from $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$) and $E° = 0$, calculate the cell potential.
 
 > **Solution:**
 

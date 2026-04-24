@@ -15,7 +15,7 @@ export const chemAcidBaseTheoriesPhPart5Data = {
 | Type | Example | Key Calculation |
 |------|---------|-----------------|
 | Strong monoprotic acid | 0.025 M HCl | $[H^+] = 0.025$ M, pH = 1.60 |
-| Strong diprotic acid | 0.010 M $H_2SO_4$ | $[H^+] \approx 0.020$ M |
+| Strong diprotic acid | 0.010 M $H_2SO_4$ | $[H^+] \\approx 0.020$ M |
 | Strong base (Group 1) | 0.010 M NaOH | $[OH^-] = 0.010$ M, pOH = 2.00 |
 | Strong base (Group 2) | 0.005 M $Ba(OH)_2$ | $[OH^-] = 0.010$ M |
 

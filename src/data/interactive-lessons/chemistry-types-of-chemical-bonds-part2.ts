@@ -179,11 +179,11 @@ The number of bonds an atom typically forms = **8 minus the number of valence el
 
 **Bond energy** is the energy required to break one mole of a particular bond in the gas phase:
 
-$$\boxed{\text{A—B}(g) \rightarrow \text{A}(g) + \text{B}(g) \quad \Delta H = \text{bond energy} > 0}$$
+$$\\boxed{\\text{A—B}(g) \\rightarrow \\text{A}(g) + \\text{B}(g) \\quad \\Delta H = \\text{bond energy} > 0}$$
 
 Breaking bonds always requires energy (endothermic). Forming bonds always releases energy (exothermic).
 
-> 💡 **Tip:** Bond energy is always the energy required to **break** a bond (endothermic, $\Delta H > 0$). Forming the same bond **releases** the same amount of energy (exothermic).
+> 💡 **Tip:** Bond energy is always the energy required to **break** a bond (endothermic, $\\Delta H > 0$). Forming the same bond **releases** the same amount of energy (exothermic).
 
 
 ---

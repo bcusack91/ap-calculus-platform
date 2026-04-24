@@ -121,7 +121,7 @@ where $n$ = overall order. As order increases by 1, the power of M decreases by 
       content: `
 ## ⚗️ Zero-Order Reactions
 
-$$\boxed{\text{Rate} = k}$$
+$$\\boxed{\\text{Rate} = k}$$
 
 - Rate is **constant** — independent of concentration
 - Units of $k$: **M/s**
@@ -153,10 +153,10 @@ Decomposition of NH₃ on a hot tungsten surface: Rate = k. The tungsten surface
 
 ### First-Order ($n = 1$)
 
-$$\boxed{\text{Rate} = k[A]}$$
+$$\\boxed{\\text{Rate} = k[A]}$$
 
 - Units of $k$: **s⁻¹**
-- Half-life: $\boxed{t_{1/2} = \frac{0.693}{k}}$ (**independent** of concentration!)
+- Half-life: $\\boxed{t_{1/2} = \\frac{0.693}{k}}$ (**independent** of concentration!)
 - Examples: Radioactive decay, many decomposition reactions
 
 > 💡 **Tip:** First-order half-life is **constant** — it doesn't depend on how much reactant you start with. This makes it uniquely useful for radioactive decay and pharmacokinetics.
@@ -166,7 +166,7 @@ $$\boxed{\text{Rate} = k[A]}$$
 
 ### Second-Order ($n = 2$)
 
-$$\boxed{\text{Rate} = k[A]^2 \quad \text{or} \quad \text{Rate} = k[A][B]}$$
+$$\\boxed{\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]}$$
 
 - Units of $k$: **M⁻¹s⁻¹** (for both cases)
 - Half-life: $t_{1/2} = \\frac{1}{k[A]_0}$ (depends on concentration)

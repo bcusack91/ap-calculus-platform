@@ -49,7 +49,7 @@ The $\\text{Cl}^-$ from NaCl shifts the equilibrium **left** (Le Chatelier\'s), 
 - In pure water: $K_{sp} = s \\cdot s = s^2$, so $s = \\sqrt{K_{sp}}$
 - In 0.10 M NaCl: $K_{sp} = s \\cdot (s + 0.10)$
 
-Since $s \ll 0.10$:
+Since $s \\ll 0.10$:
 
 $$\\boxed{s \\approx \\frac{K_{sp}}{[\\text{common ion}]}}$$
 

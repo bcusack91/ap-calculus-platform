@@ -15,7 +15,7 @@ export const chemBufferSolutionsHendersonHasselbalchPart7Data = {
 | Concept | Key Formula or Rule |
 |---------|-------------------|
 | Buffer composition | Weak acid + conjugate base (or weak base + conjugate acid) |
-| pH calculation | $pH = pK_a + \log([A^-]/[HA])$ |
+| pH calculation | $pH = pK_a + \\log([A^-]/[HA])$ |
 | Adding acid/base | Step 1: Stoichiometry → Step 2: Henderson-Hasselbalch |
 | Effective range | p$K_a$ ± 1 |
 | Max capacity | When $[HA] = [A^-]$ (pH = p$K_a$) |

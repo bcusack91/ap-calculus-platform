@@ -151,11 +151,11 @@ A substance is described. Identify its bond type.`,
 
 > **Problem:** Calculate the electronegativity difference and classify each bond.
 
-**1.** $\Delta\chi$ for C—Cl (C: 2.5, Cl: 3.0). Enter the value.
+**1.** $\\Delta\\chi$ for C—Cl (C: 2.5, Cl: 3.0). Enter the value.
 
 **2.** Classify the C—Cl bond as "nonpolar covalent", "polar covalent", or "ionic".
 
-**3.** $\Delta\chi$ for Na—F (Na: 0.9, F: 4.0). Enter the value.
+**3.** $\\Delta\\chi$ for Na—F (Na: 0.9, F: 4.0). Enter the value.
 
 *Round all answers to 3 significant figures.*
       `,

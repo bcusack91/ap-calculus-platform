@@ -39,9 +39,9 @@ For the general reaction:
 
 $$aA + bB \\rightleftharpoons cC + dD$$
 
-$$\\boxed{Q_c = \frac{[C]^c[D]^d}{[A]^a[B]^b}} \quad \text{(using current concentrations)}$$
+$$\\boxed{Q_c = \\frac{[C]^c[D]^d}{[A]^a[B]^b}} \\quad \\text{(using current concentrations)}$$
 
-$$\\boxed{Q_p = \frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}} \quad \text{(using current pressures)}$$
+$$\\boxed{Q_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}} \\quad \\text{(using current pressures)}$$
 
 
 ---
@@ -70,11 +70,11 @@ $$\\boxed{Q_p = \frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}} \quad \text{(using curren
       content: `
 ## 🔢 Calculating Q
 
-> **Problem:** For $\text{N}_2(g) + 3\,\text{H}_2(g) \rightleftharpoons 2\,\text{NH}_3(g)$, $K_c = 0.50$ at 400°C. Current concentrations: $[\text{N}_2] = 1.0$ M, $[\text{H}_2] = 2.0$ M, $[\text{NH}_3] = 3.0$ M. Calculate $Q$ and predict the direction of shift.
+> **Problem:** For $\\text{N}_2(g) + 3\,\\text{H}_2(g) \\rightleftharpoons 2\,\\text{NH}_3(g)$, $K_c = 0.50$ at 400°C. Current concentrations: $[\\text{N}_2] = 1.0$ M, $[\\text{H}_2] = 2.0$ M, $[\\text{NH}_3] = 3.0$ M. Calculate $Q$ and predict the direction of shift.
 
 > **Solution:**
 >
-> $$\\boxed{Q_c = \frac{[\text{NH}_3]^2}{[\text{N}_2][\text{H}_2]^3} = \frac{(3.0)^2}{(1.0)(2.0)^3} = \frac{9.0}{8.0} = 1.125}$$
+> $$\\boxed{Q_c = \\frac{[\\text{NH}_3]^2}{[\\text{N}_2][\\text{H}_2]^3} = \\frac{(3.0)^2}{(1.0)(2.0)^3} = \\frac{9.0}{8.0} = 1.125}$$
 >
 > Since $Q_c = 1.125 > K_c = 0.50$:
 > - The system has **too many products** relative to equilibrium

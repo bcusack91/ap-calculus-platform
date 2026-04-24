@@ -48,7 +48,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 > 💡 **Tip:** When the rate ratio is not a clean power, use logarithms:
 
-$$\boxed{m = \frac{\log(\text{Rate ratio})}{\log(\text{Concentration ratio})}}$$
+$$\\boxed{m = \\frac{\\log(\\text{Rate ratio})}{\\log(\\text{Concentration ratio})}}$$
       `
     },
     {

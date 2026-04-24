@@ -15,9 +15,9 @@ export const chemActivationEnergyArrheniusPart7Data = {
 | Equation | When to Use |
 |----------|-------------|
 | $k = Ae^{-E_a/RT}$ | Conceptual — how $k$ depends on T and $E_a$ |
-| $\ln k = -\frac{E_a}{R}\cdot\frac{1}{T} + \ln A$ | Graphical — slope of $\ln k$ vs $1/T$ |
-| $\ln\frac{k_2}{k_1} = \frac{E_a}{R}(\frac{1}{T_1} - \frac{1}{T_2})$ | Two data points — find $E_a$, $k$, or $T$ |
-| $E_a(\text{forward}) = E_a(\text{reverse}) + \Delta H$ | Energy diagram relationships |
+| $\\ln k = -\\frac{E_a}{R}\\cdot\\frac{1}{T} + \\ln A$ | Graphical — slope of $\\ln k$ vs $1/T$ |
+| $\\ln\\frac{k_2}{k_1} = \\frac{E_a}{R}(\\frac{1}{T_1} - \\frac{1}{T_2})$ | Two data points — find $E_a$, $k$, or $T$ |
+| $E_a(\\text{forward}) = E_a(\\text{reverse}) + \\Delta H$ | Energy diagram relationships |
 
 > 🔑 **Why this matters:** AP Chemistry free-response questions often combine energy diagrams, Arrhenius calculations, and catalyst effects in a single multi-part problem.
 

@@ -15,7 +15,7 @@ export const chemAcidBaseTheoriesPhPart6Data = {
 | Problem Type | Skills Combined |
 |-------------|-----------------|
 | Theory identification | Arrhenius vs. Brønsted-Lowry vs. Lewis |
-| Multi-step pH | Dilution → dissociation → $-\log$ |
+| Multi-step pH | Dilution → dissociation → $-\\log$ |
 | Conceptual reasoning | Very dilute acid pH limits |
 | Conjugate pair analysis | Identifying donors/acceptors |
 

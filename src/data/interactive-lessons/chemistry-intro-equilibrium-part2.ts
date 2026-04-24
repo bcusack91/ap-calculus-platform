@@ -41,7 +41,7 @@ $$aA + bB \\rightleftharpoons cC + dD$$
 
 The equilibrium constant expression is:
 
-$$\boxed{K_c = \frac{[C]^c[D]^d}{[A]^a[B]^b}}$$
+$$\\boxed{K_c = \\frac{[C]^c[D]^d}{[A]^a[B]^b}}$$
 
 
 ---
@@ -73,14 +73,14 @@ $$K_c = \\frac{[\\text{NH}_3]^2}{[\\text{N}_2][\\text{H}_2]^3}$$
 
 For gaseous reactions, we can use partial pressures instead of concentrations:
 
-$$\boxed{K_p = \frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}}$$
+$$\\boxed{K_p = \\frac{(P_C)^c(P_D)^d}{(P_A)^a(P_B)^b}}$$
 
 
 ---
 
 ### Relationship Between $K_c$ and $K_p$
 
-$$\boxed{K_p = K_c(RT)^{\Delta n}}$$
+$$\\boxed{K_p = K_c(RT)^{\\Delta n}}$$
 
 Where:
 - $R = 0.08206$ L·atm/(mol·K)
@@ -105,7 +105,7 @@ $$K_p = K_c(RT)^{-2}$$
 
 ### Special Case: $\\Delta n = 0$
 
-> 💡 **Tip:** When $\Delta n = 0$, then $K_p = K_c$ because $(RT)^0 = 1$. This is a useful shortcut on the AP exam!
+> 💡 **Tip:** When $\\Delta n = 0$, then $K_p = K_c$ because $(RT)^0 = 1$. This is a useful shortcut on the AP exam!
       `
     },
     {
@@ -185,7 +185,7 @@ At equilibrium: $[\\text{H}_2] = 0.10$ M, $[\\text{I}_2] = 0.20$ M, $[\\text{HI}
       content: `
 ## 🧪 Worked Example: Converting $K_c$ to $K_p$
 
-> **Problem:** For $\text{N}_2(g) + 3\,\text{H}_2(g) \rightleftharpoons 2\,\text{NH}_3(g)$, $K_c = 0.500$ at $T = 400$ K. Find $K_p$.
+> **Problem:** For $\\text{N}_2(g) + 3\,\\text{H}_2(g) \\rightleftharpoons 2\,\\text{NH}_3(g)$, $K_c = 0.500$ at $T = 400$ K. Find $K_p$.
 
 > **Solution:**
 
@@ -197,7 +197,7 @@ $$K_p = 0.500 \\times (32.82)^{-2} = 0.500 \\times \\frac{1}{1077.4}$$
 
 $$K_p = 0.500 \\times 9.28 \\times 10^{-4} = 4.64 \\times 10^{-4}$$
 
-> ⚠️ **Warning:** Notice that $K_p < K_c$ when $\Delta n < 0$ (fewer moles of gas on the product side). Always check the sign of $\Delta n$ before converting!
+> ⚠️ **Warning:** Notice that $K_p < K_c$ when $\\Delta n < 0$ (fewer moles of gas on the product side). Always check the sign of $\\Delta n$ before converting!
       `
     },
     {

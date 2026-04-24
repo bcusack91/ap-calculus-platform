@@ -46,7 +46,7 @@ $$\\text{HCl}(aq) + \\text{NaOH}(aq) \\rightarrow \\text{NaCl}(aq) + \\text{H}_2
 $$\\text{H}^+(aq) + \\text{Cl}^-(aq) + \\text{Na}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{Na}^+(aq) + \\text{Cl}^-(aq) + \\text{H}_2\\text{O}(l)$$
 
 **Cancel spectators:**
-$$\\text{H}^+(aq) + \cancel{\\text{Cl}^-(aq)} + \cancel{\\text{Na}^+(aq)} + \\text{OH}^-(aq) \\rightarrow \cancel{\\text{Na}^+(aq)} + \cancel{\\text{Cl}^-(aq)} + \\text{H}_2\\text{O}(l)$$
+$$\\text{H}^+(aq) + \\cancel{\\text{Cl}^-(aq)} + \\cancel{\\text{Na}^+(aq)} + \\text{OH}^-(aq) \\rightarrow \\cancel{\\text{Na}^+(aq)} + \\cancel{\\text{Cl}^-(aq)} + \\text{H}_2\\text{O}(l)$$
 
 **Net ionic:**
 $$\\boxed{\\text{H}^+(aq) + \\text{OH}^-(aq) \\rightarrow \\text{H}_2\\text{O}(l)}$$

@@ -35,7 +35,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 **Step 1:** Draw the Lewis structure (show all bonds and lone pairs).
 
 **Step 2:** For each atom of interest, count electron domains:
-$$\boxed{\text{Steric Number} = \text{bonded atoms} + \text{lone pairs}}$$
+$$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
 
 **Step 3:** Assign hybridization:
 | Steric Number | Hybridization | Geometry | Angle |

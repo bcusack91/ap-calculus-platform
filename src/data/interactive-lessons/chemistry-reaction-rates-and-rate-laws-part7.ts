@@ -33,14 +33,14 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 
 For $aA + bB \\rightarrow cC + dD$:
 
-$$\boxed{\text{Rate} = -\frac{1}{a}\frac{\Delta[A]}{\Delta t} = +\frac{1}{c}\frac{\Delta[C]}{\Delta t}}$$
+$$\\boxed{\\text{Rate} = -\\frac{1}{a}\\frac{\\Delta[A]}{\\Delta t} = +\\frac{1}{c}\\frac{\\Delta[C]}{\\Delta t}}$$
 
 
 ---
 
 ### Rate Law
 
-$$\boxed{\text{Rate} = k[A]^m[B]^n}$$
+$$\\boxed{\\text{Rate} = k[A]^m[B]^n}$$
 
 - Determined **experimentally** (not from coefficients)
 - $k$ depends on temperature only
@@ -53,7 +53,7 @@ $$\boxed{\text{Rate} = k[A]^m[B]^n}$$
 
 ### Units of k
 
-$$\boxed{\text{Units} = \text{M}^{1-(m+n)}\text{s}^{-1}}$$
+$$\\boxed{\\text{Units} = \\text{M}^{1-(m+n)}\\text{s}^{-1}}$$
 
 
 ---

@@ -128,7 +128,7 @@ $$\\text{FeCl}_3(aq) + 3\\text{NaOH}(aq) \\rightarrow \\text{Fe(OH)}_3(s) + 3\\t
 $$\\text{Fe}^{3+}(aq) + 3\\text{Cl}^-(aq) + 3\\text{Na}^+(aq) + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(s) + 3\\text{Na}^+(aq) + 3\\text{Cl}^-(aq)$$
 
 **Cancel spectators:**
-$$\\text{Fe}^{3+}(aq) + \cancel{3\\text{Cl}^-(aq)} + \cancel{3\\text{Na}^+(aq)} + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(s) + \cancel{3\\text{Na}^+(aq)} + \cancel{3\\text{Cl}^-(aq)}$$
+$$\\text{Fe}^{3+}(aq) + \\cancel{3\\text{Cl}^-(aq)} + \\cancel{3\\text{Na}^+(aq)} + 3\\text{OH}^-(aq) \\rightarrow \\text{Fe(OH)}_3(s) + \\cancel{3\\text{Na}^+(aq)} + \\cancel{3\\text{Cl}^-(aq)}$$
 
 
 ---

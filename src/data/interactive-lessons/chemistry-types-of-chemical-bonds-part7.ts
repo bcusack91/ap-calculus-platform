@@ -143,7 +143,7 @@ Always connect your answer to the **underlying model**:
 
 When comparing ionic compounds, always invoke Coulomb\'s law:
 
-$$\boxed{F \propto \frac{q_1 \times q_2}{r^2}}$$
+$$\\boxed{F \\propto \\frac{q_1 \\times q_2}{r^2}}$$
 
 Specify **which charges** and **which radii** you're comparing. The AP exam rewards specific, quantitative reasoning.
 
@@ -273,9 +273,9 @@ Identify the primary bond type and predict a key property.`,
       type: 'input-box' as const,
       content: `### Final Challenge — Apply What You've Learned
 
-**1.** What type of bond forms between two fluorine atoms in $\text{F}_2$? (Enter "nonpolar covalent", "polar covalent", or "ionic")
+**1.** What type of bond forms between two fluorine atoms in $\\text{F}_2$? (Enter "nonpolar covalent", "polar covalent", or "ionic")
 
-**2.** In the compound $\text{LiF}$, which element gains the electron? (Enter "Li" or "F")
+**2.** In the compound $\\text{LiF}$, which element gains the electron? (Enter "Li" or "F")
 
 **3.** How many valence electrons does nitrogen ($Z = 7$) have?`,
       exercise: {

@@ -18,15 +18,15 @@ export const chemActivationEnergyArrheniusPart2Data = {
 | Y-axis height of products | Potential energy of products | Ending level |
 | Peak height | Transition state energy | Highest point on curve |
 | $E_a$ (forward) | Activation energy | Peak − Reactants |
-| $\Delta H$ | Enthalpy change | Products − Reactants |
+| $\\Delta H$ | Enthalpy change | Products − Reactants |
 
-> 🔑 **Why this matters:** Energy diagrams appear frequently on the AP exam — you must be able to read, label, and calculate $E_a$ and $\Delta H$ from them.
+> 🔑 **Why this matters:** Energy diagrams appear frequently on the AP exam — you must be able to read, label, and calculate $E_a$ and $\\Delta H$ from them.
 
 ---
 
 ### What You'll Master in Part 2
 - Labeling all parts of an energy diagram (reactants, products, $E_a$, transition state)
-- Distinguishing exothermic ($\Delta H < 0$) from endothermic ($\Delta H > 0$) diagrams
+- Distinguishing exothermic ($\\Delta H < 0$) from endothermic ($\\Delta H > 0$) diagrams
 - Calculating forward and reverse activation energies from diagram data`
     },
     {

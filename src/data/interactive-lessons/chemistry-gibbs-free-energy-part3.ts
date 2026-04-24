@@ -42,16 +42,16 @@ The free energy change when **one mole** of a compound is formed from its **elem
 
 ### The Master Equation
 
-$$\boxed{\Delta G°_{\text{rxn}} = \sum n \cdot \Delta G°_f(\text{products}) - \sum m \cdot \Delta G°_f(\text{reactants})}$$
+$$\\boxed{\\Delta G°_{\\text{rxn}} = \\sum n \\cdot \\Delta G°_f(\\text{products}) - \\sum m \\cdot \\Delta G°_f(\\text{reactants})}$$
 
 
 ---
 
 ### Key Rule
 
-$$\boxed{\Delta G°_f = 0 \text{ for all elements in their standard states}}$$
+$$\\boxed{\\Delta G°_f = 0 \\text{ for all elements in their standard states}}$$
 
-> 🔑 **Key Concept:** Same convention as $\Delta H°_f$ — elements in their standard states are the reference point.
+> 🔑 **Key Concept:** Same convention as $\\Delta H°_f$ — elements in their standard states are the reference point.
 
 
 ---
@@ -76,7 +76,7 @@ $$\boxed{\Delta G°_f = 0 \text{ for all elements in their standard states}}$$
       content: `
 ## 🧪 Worked Example
 
-> **Problem:** Calculate $\Delta G°$ for: $\text{CH}_4(g) + 2\text{O}_2(g) \rightarrow \text{CO}_2(g) + 2\text{H}_2\text{O}(l)$
+> **Problem:** Calculate $\\Delta G°$ for: $\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(l)$
 
 | Substance | $\\Delta G°_f$ (kJ/mol) |
 |-----------|----------------------|
@@ -193,7 +193,7 @@ Both methods give the same answer at 25°C.
 ### Common AP Mistake
 
 > ⚠️ **Warning:** Students often confuse these three quantities. Remember:
-> - $\Delta H°_f$ and $\Delta G°_f$ are **zero** for elements in standard states
+> - $\\Delta H°_f$ and $\\Delta G°_f$ are **zero** for elements in standard states
 > - $S°$ is **NOT zero** — it is always positive at $T > 0$ K
       `
     },

@@ -30,7 +30,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 
 The **first ionization energy (IE₁)** of an element is directly related to the PES spectrum:
 
-$$\boxed{IE_1 = \text{binding energy of the outermost (valence) electron}}$$
+$$\\boxed{IE_1 = \\text{binding energy of the outermost (valence) electron}}$$
 
 The **rightmost peak** on a PES spectrum (lowest binding energy) corresponds to the outermost subshell. The binding energy of this peak equals the first ionization energy.
 

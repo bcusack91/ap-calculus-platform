@@ -70,7 +70,7 @@ Both CaCO₃ and CaO are solids — they are excluded. Only the gaseous CO₂ ap
 
 $$\\text{H}_2\\text{O}(l) \\rightleftharpoons \\text{H}^+(aq) + \\text{OH}^-(aq)$$
 
-$$\boxed{K_w = [\text{H}^+][\text{OH}^-] = 1.0 \times 10^{-14} \text{ at 25°C}}$$
+$$\\boxed{K_w = [\\text{H}^+][\\text{OH}^-] = 1.0 \\times 10^{-14} \\text{ at 25°C}}$$
 
 Liquid water is excluded from the expression.
       `
@@ -148,7 +148,7 @@ As long as some solid is present:
 
 ### Aqueous Species ARE Included
 
-> ⚠️ **Warning:** Don\'t confuse dissolved species with liquids! $\text{H}_2\text{O}(l)$ is excluded, but $\text{Na}^+(aq)$ is included.
+> ⚠️ **Warning:** Don\'t confuse dissolved species with liquids! $\\text{H}_2\\text{O}(l)$ is excluded, but $\\text{Na}^+(aq)$ is included.
 
 - $\\text{H}_2\\text{O}(l)$ → pure liquid → **excluded**
 - $\\text{Na}^+(aq)$ → dissolved species → **included**

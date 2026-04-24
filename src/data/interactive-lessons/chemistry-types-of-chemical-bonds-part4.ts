@@ -104,7 +104,7 @@ Linus Pauling developed the most widely used electronegativity scale:
 
 The **electronegativity difference** ($\\Delta\\chi$) between two bonded atoms determines the bond type:
 
-$$\boxed{\Delta\chi = |\chi_A - \chi_B|}$$
+$$\\boxed{\\Delta\\chi = |\chi_A - \chi_B|}$$
 
 | $\\Delta\\chi$ Range | Bond Type | Electron Distribution |
 |---------------------|-----------|----------------------|
@@ -160,7 +160,7 @@ Chlorine ($\\chi = 3.0$) is more electronegative than hydrogen ($\\chi = 2.1$), 
 
 A polar bond has a **dipole moment** ($\\mu$), which is a vector pointing from the positive end toward the negative end:
 
-$$\boxed{\mu = q \times d}$$
+$$\\boxed{\\mu = q \\times d}$$
 
 where $q$ is the magnitude of the partial charge and $d$ is the bond length.
 
@@ -241,9 +241,9 @@ Even bonds classified as "ionic" have some covalent character, and vice versa. T
       type: 'input-box' as const,
       content: `### Part 4 Practice — Electronegativity and Polarity
 
-**1.** Calculate $\Delta\chi$ for an O—H bond. (O: $\chi = 3.5$, H: $\chi = 2.1$. Enter to 3 significant figures.)
+**1.** Calculate $\\Delta\\chi$ for an O—H bond. (O: $\\chi = 3.5$, H: $\\chi = 2.1$. Enter to 3 significant figures.)
 
-**2.** In the bond H—F, which atom carries the partial negative charge ($\delta^-$)? (Enter "H" or "F")
+**2.** In the bond H—F, which atom carries the partial negative charge ($\\delta^-$)? (Enter "H" or "F")
 
 **3.** Calculate $\\Delta\\chi$ for a Na—Cl bond. (Na: $\\chi = 0.9$, Cl: $\\chi = 3.0$. Enter to 3 significant figures.)`,
       exercise: {

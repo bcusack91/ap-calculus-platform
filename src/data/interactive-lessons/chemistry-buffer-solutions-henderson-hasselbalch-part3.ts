@@ -12,9 +12,9 @@ export const chemBufferSolutionsHendersonHasselbalchPart3Data = {
 
 ### The Henderson-Hasselbalch Equation
 
-$$pH = pK_a + \log\frac{[A^-]}{[HA]}$$
+$$pH = pK_a + \\log\\frac{[A^-]}{[HA]}$$
 
-| Ratio $[A^-]/[HA]$ | $\log$ term | pH vs p$K_a$ |
+| Ratio $[A^-]/[HA]$ | $\\log$ term | pH vs p$K_a$ |
 |--------------------|------------|--------------|
 | 10 : 1 | +1 | pH = p$K_a$ + 1 |
 | 1 : 1 | 0 | **pH = p$K_a$** |

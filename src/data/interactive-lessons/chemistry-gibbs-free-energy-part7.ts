@@ -55,7 +55,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 ---
 
 ### Critical Relationships
-> ⚠️ **Warning:** Notice the distinction — $\Delta G°$ (with °) predicts equilibrium position, while $\Delta G$ (without °) predicts reaction direction.
+> ⚠️ **Warning:** Notice the distinction — $\\Delta G°$ (with °) predicts equilibrium position, while $\\Delta G$ (without °) predicts reaction direction.
 - $\\Delta G° < 0 \\Leftrightarrow K > 1$ (products favored)
 - $\\Delta G° = 0 \\Leftrightarrow K = 1$
 - $\\Delta G° > 0 \\Leftrightarrow K < 1$ (reactants favored)

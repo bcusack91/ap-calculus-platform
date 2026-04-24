@@ -179,7 +179,7 @@ When one s orbital mixes with **one** p orbital, two equivalent **sp hybrid orbi
 
 ### The Quick Rule
 
-$$\boxed{\text{Hybridization} = \text{based on number of electron domains (steric number)}}$$
+$$\\boxed{\\text{Hybridization} = \\text{based on number of electron domains (steric number)}}$$
 
 | Electron Domains | Hybridization |
 |-----------------|---------------|

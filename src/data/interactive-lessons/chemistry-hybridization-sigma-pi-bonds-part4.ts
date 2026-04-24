@@ -46,7 +46,7 @@ For the atom in question, count:
 - Each triple bond = 1 domain
 - Each lone pair = 1 domain
 
-$$\boxed{\text{Steric Number} = \text{bonded atoms} + \text{lone pairs}}$$
+$$\\boxed{\\text{Steric Number} = \\text{bonded atoms} + \\text{lone pairs}}$$
 
 ### Step 3: Match Steric Number to Hybridization
 

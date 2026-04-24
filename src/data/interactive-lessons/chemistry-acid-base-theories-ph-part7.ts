@@ -18,7 +18,7 @@ export const chemAcidBaseTheoriesPhPart7Data = {
 | pH/pOH | $pH + pOH = 14$ |
 | Strong acids | $[H^+]$ = concentration (complete dissociation) |
 | Conjugate pairs | Acid → conjugate base + $H^+$ |
-| $K_w$ | $[H^+][OH^-] = 1.0 \times 10^{-14}$ at 25°C |
+| $K_w$ | $[H^+][OH^-] = 1.0 \\times 10^{-14}$ at 25°C |
 
 > 🔑 **Why this matters:** This review mirrors the AP exam format — expect questions that require you to connect theory, calculations, and conceptual reasoning in a single problem.
 

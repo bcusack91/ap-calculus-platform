@@ -78,7 +78,7 @@ This is why we call it **dynamic** equilibrium.
 
 ### At Equilibrium
 
-$$\boxed{\text{Rate}_{\text{forward}} = \text{Rate}_{\text{reverse}}}$$
+$$\\boxed{\\text{Rate}_{\\text{forward}} = \\text{Rate}_{\\text{reverse}}}$$
 
 - Concentrations of reactants and products remain **constant** (not necessarily equal!)
 - The ratio $[\\text{products}]/[\\text{reactants}]$ stays fixed at a given temperature
