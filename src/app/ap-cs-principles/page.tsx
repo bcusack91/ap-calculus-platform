@@ -43,6 +43,18 @@ const features = [
     stats: '~35 questions · 30 min',
   },
   {
+    title: 'Unit Tests',
+    description: 'Drill a single AP unit at a time. 5 units · 4 different variations each — perfect for end-of-unit review.',
+    href: '/ap-csp-unit-tests',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2M9 12h6M9 16h6" />
+      </svg>
+    ),
+    color: 'from-teal-500 to-cyan-500',
+    stats: '5 units · 4 variations',
+  },
+  {
     title: 'Flashcards',
     description: 'Review key terms and concepts with spaced-repetition flashcards.',
     href: '/flashcards?course=ap-cs-principles',

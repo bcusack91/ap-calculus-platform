@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import APPhysics1UnitTestsClient from './ui'
+import UnitTestsClient from '@/components/UnitTestsClient'
+import { AP_PHYSICS1_UNIT_TESTS_CONFIG } from '@/data/unit-tests/ap-physics-1'
 
 export const metadata: Metadata = {
   title: 'AP Physics 1 Unit Tests | Study Mondo',
@@ -15,5 +16,17 @@ export const metadata: Metadata = {
 }
 
 export default function APPhysics1UnitTestsPage() {
-  return <APPhysics1UnitTestsClient />
+  return (
+    <UnitTestsClient
+      config={AP_PHYSICS1_UNIT_TESTS_CONFIG}
+      theme={{
+        bgGradient:
+          'bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900',
+        badgeClass:
+          'bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700 dark:bg-blue-900/40 dark:text-blue-300',
+        accentBlock:
+          'border-blue-200 bg-blue-50 text-blue-900 dark:border-blue-800 dark:bg-blue-900/20 dark:text-blue-200',
+      }}
+    />
+  )
 }

@@ -41,7 +41,7 @@ const features = [
   },
   {
     title: 'Unit Tests',
-    description: 'Drill a single AP unit at a time. 7 units · 4 different variations each — perfect for end-of-unit review.',
+    description: 'Drill a single AP unit at a time. 8 units · 4 different variations each — perfect for end-of-unit review.',
     href: '/ap-physics1-unit-tests',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -49,7 +49,7 @@ const features = [
       </svg>
     ),
     color: 'from-sky-500 to-indigo-500',
-    stats: '7 units · 4 variations · 12 Q each',
+    stats: '8 units · 4 variations · 12 Q each',
   },
   {
     title: 'Flashcards',

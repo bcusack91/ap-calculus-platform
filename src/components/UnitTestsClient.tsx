@@ -3,14 +3,16 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import Link from 'next/link'
 import {
-  AP_PHYSICS1_UNITS,
-  UNIT_TEST_VARIANTS,
   generateUnitTest,
   scoreUnitTest,
-  type APPhysics1Unit,
-  type APPhysics1UnitTestData,
-  type APPhysics1UnitTestResults,
-} from '@/data/ap-physics1-unit-tests'
+  variantCountFor,
+  getQuestionsPerVariant,
+  getUnitPoolSize,
+  type CourseUnitTestConfig,
+  type UnitDef,
+  type UnitTestData,
+  type UnitTestResults,
+} from '@/lib/unit-tests/engine'
 import { shuffleOptions } from '@/lib/shuffle-options'
 
 type Phase = 'menu' | 'testing' | 'results'
@@ -44,19 +46,29 @@ function levelStyles(level: 'strong' | 'moderate' | 'weak') {
   }
 }
 
-export default function APPhysics1UnitTestsClient() {
+export interface UnitTestsClientProps {
+  config: CourseUnitTestConfig
+  /** Page-level theme (mostly used for the menu hero gradient + back link). */
+  theme?: {
+    bgGradient?: string         // tailwind classes
+    badgeClass?: string         // tailwind classes for the menu badge
+    accentBlock?: string        // tailwind classes for the info block at bottom
+  }
+}
+
+export default function UnitTestsClient({ config, theme }: UnitTestsClientProps) {
+  const variantCount = variantCountFor(config)
   const [phase, setPhase] = useState<Phase>('menu')
-  const [activeUnit, setActiveUnit] = useState<APPhysics1Unit | null>(null)
+  const [activeUnit, setActiveUnit] = useState<UnitDef | null>(null)
   const [activeVariant, setActiveVariant] = useState<number>(1)
-  const [testData, setTestData] = useState<APPhysics1UnitTestData | null>(null)
-  const [results, setResults] = useState<APPhysics1UnitTestResults | null>(null)
+  const [testData, setTestData] = useState<UnitTestData | null>(null)
+  const [results, setResults] = useState<UnitTestResults | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<(number | null)[]>([])
   const [timeRemaining, setTimeRemaining] = useState(0)
   const [reviewing, setReviewing] = useState(false)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
-  // Stop timer when leaving testing phase
   useEffect(() => {
     if (phase !== 'testing') {
       if (timerRef.current) {
@@ -81,25 +93,27 @@ export default function APPhysics1UnitTestsClient() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
 
-  const startTest = useCallback((unit: APPhysics1Unit, variant: number) => {
-    const data = generateUnitTest(unit.id, variant)
-    // Randomize option positions per question (still deterministic per question)
-    data.questions.forEach(q => {
-      const s = shuffleOptions(q.options, q.correctAnswer, `${unit.id}-${variant}-${q.question}`)
-      q.options = s.options
-      q.correctAnswer = s.correctIndex
-    })
-    setActiveUnit(unit)
-    setActiveVariant(variant)
-    setTestData(data)
-    setResults(null)
-    setCurrentIndex(0)
-    setAnswers(new Array(data.questions.length).fill(null))
-    setTimeRemaining(data.timeLimitMinutes * 60)
-    setReviewing(false)
-    setPhase('testing')
-    if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [])
+  const startTest = useCallback(
+    (unit: UnitDef, variant: number) => {
+      const data = generateUnitTest(config, unit.id, variant)
+      data.questions.forEach(q => {
+        const s = shuffleOptions(q.options, q.correctAnswer, `${config.courseSlug}-${unit.id}-${variant}-${q.question}`)
+        q.options = s.options
+        q.correctAnswer = s.correctIndex
+      })
+      setActiveUnit(unit)
+      setActiveVariant(variant)
+      setTestData(data)
+      setResults(null)
+      setCurrentIndex(0)
+      setAnswers(new Array(data.questions.length).fill(null))
+      setTimeRemaining(data.timeLimitMinutes * 60)
+      setReviewing(false)
+      setPhase('testing')
+      if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
+    },
+    [config],
+  )
 
   const handleFinish = useCallback(() => {
     if (!testData) return
@@ -107,11 +121,11 @@ export default function APPhysics1UnitTestsClient() {
     answers.forEach((a, i) => {
       if (a !== null) answersRecord[i] = a
     })
-    const r = scoreUnitTest(testData, answersRecord)
+    const r = scoreUnitTest(config, testData, answersRecord)
     setResults(r)
     setPhase('results')
     if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [testData, answers])
+  }, [testData, answers, config])
 
   const goToMenu = useCallback(() => {
     setPhase('menu')
@@ -121,28 +135,46 @@ export default function APPhysics1UnitTestsClient() {
     setReviewing(false)
   }, [])
 
+  const reviewHrefForTopic = useCallback(
+    (topicSlug: string) =>
+      config.reviewHrefForTopic
+        ? config.reviewHrefForTopic(topicSlug)
+        : `/courses/${config.courseSlug}/${topicSlug}`,
+    [config],
+  )
+
+  const bgGradient =
+    theme?.bgGradient ??
+    'bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900'
+  const badgeClass =
+    theme?.badgeClass ??
+    'bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700 dark:bg-blue-900/40 dark:text-blue-300'
+  const accentBlock =
+    theme?.accentBlock ??
+    'border-blue-200 bg-blue-50 text-blue-900 dark:border-blue-800 dark:bg-blue-900/20 dark:text-blue-200'
+
   /* ------------------------------ MENU ------------------------------ */
   if (phase === 'menu') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <div className={`min-h-screen ${bgGradient}`}>
         <section className="container py-12 sm:py-16">
           <div className="mx-auto max-w-4xl text-center">
             <Link
-              href="/ap-physics-1"
+              href={config.courseHubHref}
               className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:underline dark:text-blue-400"
             >
-              ← Back to AP Physics 1
+              ← Back to {config.courseTitle}
             </Link>
-            <div className="mt-4 mb-3 inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700 dark:bg-blue-900/40 dark:text-blue-300">
+            <div className={`mt-4 mb-3 inline-flex items-center gap-2 rounded-full ${badgeClass}`}>
               📝 Unit Tests
             </div>
             <h1 className="mb-3 text-3xl font-black tracking-tight text-gray-900 sm:text-4xl md:text-5xl dark:text-white">
-              AP Physics 1 Unit Tests
+              {config.courseTitle} Unit Tests
             </h1>
             <p className="mx-auto max-w-2xl text-base text-gray-600 sm:text-lg dark:text-gray-400">
               Pick a unit to drill it head-on. Each unit has{' '}
               <span className="font-semibold text-gray-800 dark:text-gray-200">
-                {UNIT_TEST_VARIANTS} different test variations
+                {variantCount} different test variations
               </span>{' '}
               so you can keep retaking until you master it.
             </p>
@@ -151,17 +183,24 @@ export default function APPhysics1UnitTestsClient() {
 
         <section className="container pb-16">
           <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-2">
-            {AP_PHYSICS1_UNITS.map(unit => (
-              <UnitCard key={unit.id} unit={unit} onStart={v => startTest(unit, v)} />
+            {config.units.map(unit => (
+              <UnitCard
+                key={unit.id}
+                unit={unit}
+                variantCount={variantCount}
+                qPerVariant={getQuestionsPerVariant(config, unit.id)}
+                poolSize={getUnitPoolSize(config, unit.id)}
+                onStart={v => startTest(unit, v)}
+              />
             ))}
           </div>
 
-          <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-blue-200 bg-blue-50 p-6 text-sm text-blue-900 dark:border-blue-800 dark:bg-blue-900/20 dark:text-blue-200">
+          <div className={`mx-auto mt-10 max-w-3xl rounded-2xl border p-6 text-sm ${accentBlock}`}>
             <p className="font-semibold">How unit tests work</p>
             <ul className="mt-2 list-inside list-disc space-y-1">
-              <li>~12 multiple-choice questions per test, focused on a single AP unit.</li>
-              <li>{UNIT_TEST_VARIANTS} variations per unit — pick a fresh variation any time you retake.</li>
-              <li>{`18-minute timer (about 90 seconds per question — the same pacing as the AP exam).`}</li>
+              <li>Focused on a single AP unit, between a single-topic quiz and the full diagnostic.</li>
+              <li>{variantCount} variations per unit — pick a fresh variation any time you retake.</li>
+              <li>Roughly 90 seconds per question — the same pacing as the AP exam.</li>
               <li>You&apos;ll get a unit-level score, recommended topics to review, and a question-by-question explanation.</li>
             </ul>
           </div>
@@ -176,7 +215,7 @@ export default function APPhysics1UnitTestsClient() {
     const answered = answers.filter(a => a !== null).length
     const progressPct = Math.round((answered / testData.questions.length) * 100)
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <div className={`min-h-screen ${bgGradient}`}>
         <section className="container py-8 sm:py-10">
           <div className="mx-auto max-w-3xl">
             <div className="mb-4 flex items-center justify-between">
@@ -274,7 +313,6 @@ export default function APPhysics1UnitTestsClient() {
               )}
             </div>
 
-            {/* Question-jump grid */}
             <div className="mt-6 flex flex-wrap gap-2">
               {testData.questions.map((_, i) => {
                 const filled = answers[i] !== null
@@ -306,10 +344,10 @@ export default function APPhysics1UnitTestsClient() {
   /* ----------------------------- RESULTS ---------------------------- */
   if (phase === 'results' && results && testData && activeUnit) {
     const styles = levelStyles(results.level)
-    const nextVariant = (activeVariant % UNIT_TEST_VARIANTS) + 1
+    const nextVariant = (activeVariant % variantCount) + 1
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <div className={`min-h-screen ${bgGradient}`}>
         <section className="container py-12">
           <div className="mx-auto max-w-3xl">
             <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm dark:border-gray-700 dark:bg-gray-800">
@@ -334,7 +372,7 @@ export default function APPhysics1UnitTestsClient() {
                     {results.recommendedTopics.map(t => (
                       <li key={t.slug}>
                         <Link
-                          href={`/courses/ap-physics-1/${t.slug}`}
+                          href={reviewHrefForTopic(t.slug)}
                           className="text-amber-900 underline-offset-2 hover:underline dark:text-amber-100"
                         >
                           → {t.name}
@@ -435,15 +473,19 @@ export default function APPhysics1UnitTestsClient() {
 
 function UnitCard({
   unit,
+  variantCount,
+  qPerVariant,
+  poolSize,
   onStart,
 }: {
-  unit: APPhysics1Unit
+  unit: UnitDef
+  variantCount: number
+  qPerVariant: number
+  poolSize: number
   onStart: (variant: number) => void
 }) {
-  const variants = useMemo(
-    () => Array.from({ length: UNIT_TEST_VARIANTS }, (_, i) => i + 1),
-    [],
-  )
+  const variants = useMemo(() => Array.from({ length: variantCount }, (_, i) => i + 1), [variantCount])
+  const lowPool = poolSize > 0 && poolSize < qPerVariant * 2
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md dark:border-gray-700 dark:bg-gray-800">
       <div className="mb-3 flex items-start justify-between gap-3">
@@ -458,7 +500,15 @@ function UnitCard({
         </span>
       </div>
       <h3 className="mb-1 text-lg font-bold text-gray-900 dark:text-white">{unit.name}</h3>
-      <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">{unit.description}</p>
+      <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">{unit.description}</p>
+      <p className="mb-4 text-xs font-medium text-gray-500 dark:text-gray-400">
+        {qPerVariant} questions · ~{Math.max(5, Math.round(qPerVariant * 1.5))} min
+        {lowPool && (
+          <span className="ml-2 rounded bg-amber-50 px-1.5 py-0.5 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300">
+            small bank — variations may overlap
+          </span>
+        )}
+      </p>
 
       <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
         Pick a variation

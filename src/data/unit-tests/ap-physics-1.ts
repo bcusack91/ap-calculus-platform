@@ -1,0 +1,110 @@
+/**
+ * AP Physics 1 Unit Tests config (uses the shared unit-test engine).
+ */
+
+import {
+  AP_PHYSICS1_QUESTION_POOL,
+  AP_PHYSICS1_SLUG_LABELS,
+} from '@/data/ap-physics-1-diagnostic'
+import type { CourseUnitTestConfig, UnitDef } from '@/lib/unit-tests/engine'
+
+export const AP_PHYSICS1_UNITS: UnitDef[] = [
+  {
+    id: 'kinematics',
+    unitNumber: 1,
+    name: 'Unit 1: Kinematics',
+    shortName: 'Kinematics',
+    description: '1D & 2D motion, free fall, projectiles, and motion graphs.',
+    topicSlugs: ['one-dimensional-motion', 'two-dimensional-motion'],
+    exam_weight: '10–15%',
+    color: 'from-blue-500 to-cyan-500',
+    icon: '🚀',
+  },
+  {
+    id: 'dynamics',
+    unitNumber: 2,
+    name: 'Unit 2: Dynamics (Newton\u2019s Laws)',
+    shortName: 'Dynamics',
+    description: 'Forces, free-body diagrams, friction, and Newton\u2019s laws.',
+    topicSlugs: ['newtons-first-second-laws', 'friction'],
+    exam_weight: '12–18%',
+    color: 'from-indigo-500 to-purple-500',
+    icon: '🧲',
+  },
+  {
+    id: 'circular-motion-gravity',
+    unitNumber: 3,
+    name: 'Unit 3: Circular Motion & Gravitation',
+    shortName: 'Circular & Gravity',
+    description: 'Uniform circular motion, centripetal force, and gravitation.',
+    topicSlugs: ['uniform-circular-motion', 'universal-gravitation'],
+    exam_weight: '4–6%',
+    color: 'from-purple-500 to-pink-500',
+    icon: '🪐',
+  },
+  {
+    id: 'energy',
+    unitNumber: 4,
+    name: 'Unit 4: Energy',
+    shortName: 'Energy',
+    description: 'Work, kinetic & potential energy, conservation of energy, power.',
+    topicSlugs: ['work-and-kinetic-energy', 'conservation-of-energy'],
+    exam_weight: '20–28%',
+    color: 'from-emerald-500 to-teal-500',
+    icon: '⚡',
+  },
+  {
+    id: 'momentum',
+    unitNumber: 5,
+    name: 'Unit 5: Momentum',
+    shortName: 'Momentum',
+    description: 'Linear momentum, impulse, and elastic / inelastic collisions.',
+    topicSlugs: ['momentum-and-impulse', 'collisions'],
+    exam_weight: '12–18%',
+    color: 'from-amber-500 to-orange-500',
+    icon: '💥',
+  },
+  {
+    id: 'simple-harmonic-motion',
+    unitNumber: 6,
+    name: 'Unit 6: Simple Harmonic Motion',
+    shortName: 'Simple Harmonic Motion',
+    description: 'Springs, pendulums, period & frequency, and energy in SHM.',
+    topicSlugs: ['introduction-to-shm', 'energy-in-shm'],
+    exam_weight: '4–6%',
+    color: 'from-rose-500 to-pink-500',
+    icon: '🌊',
+  },
+  {
+    id: 'torque-rotation',
+    unitNumber: 7,
+    name: 'Unit 7: Torque & Rotational Motion',
+    shortName: 'Torque & Rotation',
+    description: 'Torque, rotational equilibrium, rotational kinematics, and angular momentum.',
+    topicSlugs: ['torque-and-equilibrium', 'angular-momentum'],
+    exam_weight: '10–16%',
+    color: 'from-violet-500 to-fuchsia-500',
+    icon: '🔄',
+  },
+  {
+    id: 'fluids',
+    unitNumber: 8,
+    name: 'Unit 8: Fluids',
+    shortName: 'Fluids',
+    description: 'Fluid pressure, Pascal\u2019s principle, buoyancy, Archimedes, continuity, and Bernoulli.',
+    topicSlugs: ['fluid-pressure', 'buoyancy', 'fluid-dynamics'],
+    exam_weight: '10–15%',
+    color: 'from-cyan-500 to-blue-500',
+    icon: '💧',
+  },
+]
+
+export const AP_PHYSICS1_UNIT_TESTS_CONFIG: CourseUnitTestConfig = {
+  courseSlug: 'ap-physics-1',
+  courseHubHref: '/ap-physics-1',
+  courseTitle: 'AP Physics 1',
+  unitTestRoute: '/ap-physics1-unit-tests',
+  units: AP_PHYSICS1_UNITS,
+  pool: AP_PHYSICS1_QUESTION_POOL,
+  slugLabels: AP_PHYSICS1_SLUG_LABELS,
+}
